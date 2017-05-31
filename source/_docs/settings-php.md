@@ -114,25 +114,9 @@ Yes, but only if at least one other file (e.g. `settings.php`) is present within
 
 Depending on your use case, there are three possibilities:
 
- - For web only actions, like redirects, check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live):
+ - For web only actions, like redirects, check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/docs/redirects/#redirect-to-www) guide for examples.
 
-        // Pantheon - web only.
-        if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
-          // Only on dev web environment.
-          if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'dev') {
-            // Custom code.
-          }
-        }
-
- - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live:
-
-        // Pantheon - all operations.
-        if (defined('PANTHEON_ENVIRONMENT')) {
-          // Only on dev environment.
-          if (PANTHEON_ENVIRONMENT == 'dev') {
-            // Custom code.
-          }
-        }
+ - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/redis) guide for examples for [Drupal 8](https://pantheon.io/docs/redis#drupal-8-sites) or [Drupal 7](/docs/redis#drupal-7-sites)
 
  - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/docs/read-environment-config/) for more information.
 
@@ -158,18 +142,19 @@ Pantheon automatically injects database credentials into the site environment; i
 
 #### Where do I set or modify the `drupal_hash_salt` value in Drupal 7?
 
-There can be an occassion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
-```
-   // All Pantheon Environments.
-   if (defined('PANTHEON_ENVIRONMENT')) {
-     // Set your custom hash salt value.
-     $custom_hash_salt = '';
-     // Extract Pressflow settings into a php object.
-     $pressflow_settings = json_decode($_SERVER['PRESSFLOW_SETTINGS']);
-     $pressflow_settings->drupal_hash_salt = $custom_hash_salt;
-     $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow_settings);
-    }
-```
+There can be an occasion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
+
+
+    // All Pantheon Environments.
+    if (defined('PANTHEON_ENVIRONMENT')) {
+      // Set your custom hash salt value.
+      $custom_hash_salt = '';
+      // Extract Pressflow settings into a php object.
+      $pressflow_settings = json_decode($_SERVER['PRESSFLOW_SETTINGS']);
+      $pressflow_settings->drupal_hash_salt = $custom_hash_salt;
+      $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow_settings);
+     }
+
 
 #### Where can I get a copy of a default.settings.php?
 
