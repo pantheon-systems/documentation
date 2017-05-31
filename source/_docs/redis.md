@@ -36,7 +36,15 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**.
 
-2. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
+2. Install and activate the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4><p markdown="1">You **must** activate the module before proceeding.
+    </p></div>
+
+    You can install and enable the module from the command line using [Terminus](/docs/terminus):
+
+        terminus remote:drush <site>.<env> -- en redis -y
 
 3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
 
@@ -69,7 +77,9 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**.
 
-2. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org.
+2. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/docs/terminus):
+
+        terminus remote:drush <site>.<env> -- en redis -y
 
 3. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
  - `redis_client_host`
