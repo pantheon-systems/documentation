@@ -155,18 +155,34 @@ There are multiple reasons that 503 errors might occur when updating:
 
 - Timeouts are another cause of 503 errors, though they are much less likely to occur if you are using the Pantheon domains. If the operation takes more than 60 seconds, you might see a timeout occur.
 
-### Upstream does not match Pantheon, but Process to Resolve Conflicts Locally responds with 'Already-up-to-date'.
+### Process to Resolve Conflicts Locally responds with 'Already-up-to-date'
+If you know your site's core codebase does not match Pantheon's upstream, and attempts to resolve it locally do not work because your site repository is seen as up-to-date, you may need to manually overwrite core files. We only recommend this method as an absolute last resort.
 
-If you know that the core codebase does not match Pantheon, but attempts to resolve it locally do not work because the codebase is seen as up-to-date, you may need to manually overwrite the code locally and push the code back to Pantheon.
+1. Download an archive of the Pantheon upstream:
 
-1. Download the upstream from the Pantheon repo that corresponds to your CMS.
-2. Using a file manager (Finder for MacOS or </something> for Windows) copy all of the contents of the downloaded upstream to your branch excluding the paths where custom code is set.   
+    * <a href="https://github.com/pantheon-systems/WordPress/archive/master.zip">WordPress <span class="glyphicons glyphicons-download-alt"></span></a>
+    * <a href="https://github.com/pantheon-systems/drops-8/archive/master.zip">Drupal 8 <span class="glyphicons glyphicons-download-alt"></span></a>
+    * <a href="https://github.com/pantheon-systems/drops-7/archive/master.zip)">Drupal 7 <span class="glyphicons glyphicons-download-alt"></span></a>
 
-Drupal 7 /sites
-Drupal 8 /sites and /modules
-Wordpress /wp-content and wp-config.php
+2. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) using [Terminus](/docs/terminus) (replace `<site>`):
 
-3. Add and Commit the files using Git.
-4. Push the code back to Pantheon using git push origin <branchname>.
+        `terminus connection:info <site>.dev --fields='Git Command' --format=string`
 
+3. Checkout a new branch (optional):
 
+        git checkout -b updates
+
+4. Use a file manager, such as [Finder for MacOS](https://support.apple.com/en-us/HT201732) or [File Explorer for Windows](https://support.microsoft.com/en-us/help/17217/windows-10-whats-changed-in-file-explorer), to copy the contents of the downloaded archive to your site repository excluding paths where custom code is set.
+
+  Exclude at least the following directories when copying, in addition to any other paths your site uses to store custom code:
+
+    * Wordpress: `/wp-content` and `wp-config.php`
+    * Drupal 8: `/sites` and `/modules`
+    * Drupal 7: `/sites`
+
+5. Stage, commit, and push your changes to Pantheon:
+
+        git commit -am "Replace core files with Pantheon upstream"
+        git push origin updates
+
+6. Test changes on a Multidev environment and [merge the update](/docs/multidev/#merge-code) branch into the Dev environment, then deploy up to Test and Live.
