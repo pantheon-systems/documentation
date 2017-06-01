@@ -53,7 +53,7 @@ To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get 
 terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
 ```
 
-Drupal 8 will not run locally without a hash salt, so make sure to set one in `settings.local.php` :
+Drupal 8 will not run locally without a hash salt, but it need not be the same one set on the Pantheon platform; any sufficiently long random string will do. Make sure to set one in `settings.local.php` :
 ```
 $settings['hash_salt'] = '$HASH_SALT';
 ```
