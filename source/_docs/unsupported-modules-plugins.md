@@ -353,6 +353,24 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 **Issue #3**: The Wordfence firewall installs a file called `.user.ini` that includes `wordfence-waf.php` from the absolute path which uses the application container's ID. These paths will change from time to time due to routine platform maintenance. When a container is migrated and when this plugin is deployed to another environment the absolute path is no longer valid resulting in a WSOD. This has been [reported as an issue](https://wordpress.org/support/topic/set-auto_prepend_file-path-relatively/) within the plugin support forum.
 <hr>
 
+### [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/)
+
+**Issue #1**: This plugin attempts to access PHP native sessions [before WordPress has been bootstrapped](https://wordpress.org/support/topic/plugin-starts-before-wordpress/), which prevents the Pantheon PHP native sessions plugin from being called. This leads to a 500 error when authenticating with external services.
+
+**Solution**: While *not recommended*, you can add the following lines to `wp-config.php` before the first call to `session_start`:
+
+```
+if (defined( "PANTHEON_BINDING" )) { 
+  include_once( "/srv/bindings/". PANTHEON_BINDING ."/code/wp-blog-header.php" ); 
+}
+```
+
+**Please note:** You will need to make this change every timethat the plugin is updated.
+
+**Issue #2**: This plugin creates a session on every page, which can prevent [page level caching](https://wordpress.org/support/topic/cannot-cache-pages-due-to-sessions-on-every-page-with-wsl-plugin/).
+
+<hr>
+
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
 **Issue #1**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
