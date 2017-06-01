@@ -249,7 +249,7 @@ p, h1, h2, h3, h4, h5, h6, a, ol, ul {
   font-weight:normal;
 }
 .article a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #0093c9;
 }
 .changelog-sidebar a {
