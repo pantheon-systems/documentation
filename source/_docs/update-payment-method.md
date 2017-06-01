@@ -4,7 +4,7 @@ description: Learn how to update a credit card as a payment method for your Pant
 tags: [billing]
 categories: []
 ---
-Easily add a new credit card or edit the existing payment method of a site from within the Dashboard.
+Easily add a new credit card or edit the existing payment method of a site from within the Site Dashboard, under **Settings**.
 
 ## Update an Existing Card
 
