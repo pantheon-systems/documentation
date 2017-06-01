@@ -19,7 +19,7 @@ For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server 
 
 The following articles include techniques and configurations for `settings.php` on Pantheon:
 
-- [Reading Pantheon Environment Configuration](/docs/read-environment-config) (including domain\_access)
+- [Reading Pantheon Environment Configuration](/docs/read-environment-config) (including domain_access)
 - [Redis as a Caching Backend](/docs/redis)
 - [Redirect incoming requests](/docs/redirects) (including WWW and non-WWW, requiring HTTPS)
 - [SSO and Identity Federation](/docs/sso) (LDAP TLS certificate configuration)
@@ -31,7 +31,7 @@ Use these configuration snippets to specify a local configuration that will be i
 ### Drupal 8
 Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
-    ​// Local development configuration.
+    // Local development configuration.
     if (!defined('PANTHEON_ENVIRONMENT')) {
       // Database.
       $databases['default']['default'] = array(
@@ -62,7 +62,7 @@ $settings['hash_salt'] = '$HASH_SALT';
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p>Replace <code>^www\.yoursite\.com$</code> with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.</p>
+<p markdown="1">Replace `^www.yoursite.com$` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.</p>
 </div>
 ```
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -73,8 +73,8 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.panth.io";
 
     # Replace value with custom domain(s) added in the site Dashboard
-    $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
-    $settings['trusted_host_patterns'][] = '^yoursite\.com$';
+    $settings['trusted_host_patterns'][] = '^.+.yoursite.com$';
+    $settings['trusted_host_patterns'][] = '^yoursite.com$';
   }
 }
 ```
@@ -82,7 +82,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Drupal 7
 
-    ​// Local development configuration.
+    // Local development configuration.
     if (!defined('PANTHEON_ENVIRONMENT')) {
       // Database.
       $databases['default']['default'] = array(
@@ -112,108 +112,18 @@ Yes, but only if at least one other file (e.g. `settings.php`) is present within
 
 #### How can I write logic based on the Pantheon server environment?
 
-Depending on your use case, there are two possibilities:
+Depending on your use case, there are three possibilities:
 
-For web only actions, like redirects, check for the existence of $\_SERVER['PANTHEON\_ENVIRONMENT']. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
+ - For web only actions, like redirects, check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/docs/redirects/#redirect-to-www) guide for examples.
 
-    // Pantheon - web only.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
-      // Only on dev web environment.
-      if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'dev') {
-        // Custom code.
-      }
-    }
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdown="1">`$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/redirects/#command-line-conditionals), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
+    </div>
 
-For actions that should take place on every environment, such as Redis caching, use the constant ​PANTHEON\_ENVIRONMENT. Again, it will contain Dev, Test, or Live.
+ - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/redis) guide for examples for [Drupal 8](/docs/redis#drupal-8-sites) or [Drupal 7](/docs/redis#drupal-7-sites).
 
-    // Pantheon - all operations.
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Only on dev environment.
-      if (PANTHEON_ENVIRONMENT == 'dev') {
-        // Custom code.
-      }
-    }
-
-As an example, here's how you can hard-code your Drupal 7 caching configuration and Google Analytics based on the environment. To learn more, see [Defining variables in a site's settings.php $conf array](https://drupal.org/node/1525472).
-
-    // All Pantheon Environments.
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Drupal caching in test and live environments.
-      if (in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
-        // Anonymous caching - enabled.
-        $conf['cache'] = 1;
-        // Block caching - enabled.
-        $conf['block_cache'] = 1;
-        // Expiration of cached pages - 15 minutes.
-        $conf['page_cache_maximum_age'] = 900;
-        // Aggregate and compress CSS files in Drupal - on.
-        $conf['preprocess_css'] = 1;
-        // Aggregate JavaScript files in Drupal - on.
-        $conf['preprocess_js'] = 1;
-      }
-      // Drupal caching on dev environment, and all multidevs
-      else {
-        // Anonymous caching.
-        $conf['cache'] = 0;
-        // Block caching - disabled.
-        $conf['block_cache'] = 0;
-        // Expiration of cached pages - none.
-        $conf['page_cache_maximum_age'] = 0;
-        // Aggregate and compress CSS files in Drupal - off.
-        $conf['preprocess_css'] = 0;
-        // Aggregate JavaScript files in Drupal - off.
-        $conf['preprocess_js'] = 0;
-      }
-
-      // Minimum cache lifetime - always none.
-      $conf['cache_lifetime'] = 0;
-      // Cached page compression - always off.
-      $conf['page_compression'] = 0;
-
-
-      if (PANTHEON_ENVIRONMENT == 'dev') {
-        // Google Analytics.
-        $conf['googleanalytics_account'] = 'UA-XXXXXXXX-X';
-      }
-      else if (PANTHEON_ENVIRONMENT == 'test') {
-        // Google Analytics.
-        $conf['googleanalytics_account'] = 'UA-XXXXXXXX-Y';
-      }
-      else if (PANTHEON_ENVIRONMENT == 'live') {
-        // Google Analytics.
-        $conf['googleanalytics_account'] = 'UA-XXXXXXXX-Z';
-      }
-    }
-
-The Drupal 8 [configuration override system](https://www.drupal.org/node/1928898) uses the global `$config` variable:
-
-    // All Pantheon Environments.
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Drupal caching in test and live environments.
-      if (in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
-        // Expiration of cached pages - 15 minutes.
-        $config['system.performance']['cache']['page']['max_age'] = 900;
-        // Aggregate and compress CSS files in Drupal - on.
-        $config['system.performance']['css']['preprocess'] = true;
-        // Aggregate JavaScript files in Drupal - on.
-        $config['system.performance']['js']['preprocess'] = true;
-        // Google Analytics.
-        $config['google_analytics.settings']['account'] = 'UA-xxxxxxx-xx';
-      }
-      // Drupal caching on dev environment, and all multidevs
-      else {
-        // Expiration of cached pages - none.
-        $config['system.performance']['cache']['page']['max_age'] = 0;
-        // Aggregate and compress CSS files in Drupal - off.
-        $config['system.performance']['css']['preprocess'] = false;
-        // Aggregate JavaScript files in Drupal - off.
-        $config['system.performance']['js']['preprocess'] = false;
-      }
-    }
-
-#### How can I read the Pantheon environmental configuration, like database credentials?
-
-See [Reading the Pantheon Environment Configuration](/docs/read-environment-config).
+ - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/docs/read-environment-config/) for more information, or see our [Redis](/docs/redis) guide for examples for [Drupal 8](/docs/redis#drupal-8-sites) or [Drupal 7](/docs/redis#drupal-7-sites) sites. 
 
 #### Why does Drupal report that `settings.php` is not protected? I can't change the permissions on `settings.php`.
 
@@ -233,18 +143,19 @@ Pantheon automatically injects database credentials into the site environment; i
 
 #### Where do I set or modify the `drupal_hash_salt` value in Drupal 7?
 
-There can be an occassion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
-```
-   // All Pantheon Environments.
-   if (defined('PANTHEON_ENVIRONMENT')) {
-     // Set your custom hash salt value.
-     $custom_hash_salt = '';
-     // Extract Pressflow settings into a php object.
-     $pressflow_settings = json_decode($_SERVER['PRESSFLOW_SETTINGS']);
-     $pressflow_settings->drupal_hash_salt = $custom_hash_salt;
-     $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow_settings);
-    }
-```
+There can be an occasion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
+
+
+    // All Pantheon Environments.
+    if (defined('PANTHEON_ENVIRONMENT')) {
+      // Set your custom hash salt value.
+      $custom_hash_salt = '';
+      // Extract Pressflow settings into a php object.
+      $pressflow_settings = json_decode($_SERVER['PRESSFLOW_SETTINGS']);
+      $pressflow_settings->drupal_hash_salt = $custom_hash_salt;
+      $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow_settings);
+     }
+
 
 #### Where can I get a copy of a default.settings.php?
 
