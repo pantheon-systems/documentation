@@ -94,13 +94,13 @@ Add the following lines to `settings.php` so that the Drupal module can locate S
 For Drupal 7 sites:
 ```php
 # Provide universal absolute path to the installation.
-$conf['simplesamlphp_auth_installdir'] = $_SERVER['HOME'] .'/code/private/simplesamlphp-1.14.x';
+$conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.14.x';
 ```
 
 For Drupal 8 sites:
 ```php
 # Provide universal absolute path to the installation.
-$settings['simplesamlphp_dir'] = $_SERVER['HOME'] .'/code/private/simplesamlphp-1.14.x';
+$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.14.x';
 ```
 
 You can now enable and configure the module. If SAML authentication fails because of a configuration error, look at the watchdog log to see why.
