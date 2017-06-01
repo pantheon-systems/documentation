@@ -117,4 +117,7 @@ For further learning, we recommend the following resources:
 - [GitKraken - Git GUI Client](https://www.gitkraken.com/)
 - [GitHub Desktop - Git GUI Client](https://desktop.github.com/)
 
-For Pantheon-specific Git questions, see the [Git FAQs](/docs/git-faq/).
+For Pantheon-specific Git questions, see the following:
+
+- [Git FAQs](/docs/git-faq/)
+- [Undo Git Commits](/docs/undo-commits/)
