@@ -93,16 +93,12 @@ Add the following lines to `settings.php` so that the Drupal module can locate S
 
 For Drupal 7 sites:
 ```php
-# Decode Pantheon Settings
-$ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
 # Provide universal absolute path to the installation.
-$conf['simplesamlphp_auth_installdir'] = '/srv/bindings/'. $ps['conf']['pantheon_binding'] .'/code/private/simplesamlphp-1.14.x';
+$conf['simplesamlphp_auth_installdir'] = $_SERVER['HOME'] .'/code/private/simplesamlphp-1.14.x';
 ```
 
 For Drupal 8 sites:
 ```php
-# Decode Pantheon Settings
-$ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
 # Provide universal absolute path to the installation.
 $settings['simplesamlphp_dir'] = $_SERVER['HOME'] .'/code/private/simplesamlphp-1.14.x';
 ```
