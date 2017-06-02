@@ -15,7 +15,7 @@ date: 5/30/2017
 
 ## What you will build
 
-This guide will cover how to configure an existing Jenkins server to work with sites on the Pantheon platform. Because we want to submit pull requests and take advantage of existing GitHub and Jenkins integration, we will configure GitHub as the main code repository. When we push code to the GitHub repo, it will trigger Jenkins to test our code changes on a multidev environment. Jenkins will let us know if changes have passed and are ready to merge into the master branch on Pantheon. When we merge, Jenkins will run tests again against Pantheon's master branch.
+This guide will cover how to configure an existing Jenkins server to work with sites on the Pantheon platform. Because we want to submit pull requests and take advantage of existing GitHub and Jenkins integration, we will configure GitHub as the main code repository. When we push code to the GitHub repo, it will trigger Jenkins to test our code changes on a multidev environment. Jenkins will run tests against both the pull request and Pantheon's master branch and display the results.
 
 ## What you’ll need
 
@@ -31,7 +31,7 @@ This guide will cover how to configure an existing Jenkins server to work with s
 
 ## Step 1: Local Project instantiation
 
-1. From your local terminal, use Composer to make a new local project based on our example, which contains Drupal 8, behat, and other configuration settings. In this example our project is call called "jenkins-int":
+1. From your local terminal, use Composer to make a new local project based on our example, which contains Drupal 8, behat, and other configuration settings. In this example our project is call called "my-site":
 
 ```nohighlight
 SITE="my-site"
@@ -85,18 +85,17 @@ git push --force pantheon master
 3. Then complete the installation on Pantheon.
 
 ```nohighlight
-terminus build-env:site-install --site-mail="<your email>" --site-name="My Drupal Site" --account-mail="<your email>" --account-name="admin" $SITE.dev
+terminus build:env:install --site-mail="<your email>" --site-name="My Drupal Site" --account-mail="<your email>" --account-name="admin" $SITE.dev
 ```
 
 5. Verify the site is installed and working.
 ```nohighlight
-terminus dashboard:view $SITE
+terminus env:view $SITE.dev
 ```
 
 Now the master branch of GitHub, your local, and Pantheon are in sync.
 
-## Step 4: Create Jenkins Project #1
-This Project tracks changes to all branches except the master branch. We will clone this to create a second project which tracks only the master branch changes and pushes the code to Pantheon. 
+## Step 4: Create Jenkins Project
 
 1. Log into the Jenkins dashboard as an admin user. Click "New Item."
 
@@ -137,7 +136,7 @@ terminus auth:login --machine-token=${TERMINUS_TOKEN}
 Verifies the dev site is awake and in git mode.
 ```nohighlight
 echo "Waking Dev environment."
-terminus env:wake -n ${SITE_ID}.devterminus env:wake -n $SITE_ID.dev
+terminus env:wake -n ${SITE_ID}.dev
 ```
 
 ```nohighlight
@@ -148,7 +147,7 @@ Jenkins creates a multidev and pushes the new code to this environment
 ```nohighlight
 echo "Creating multidev"
 cd ${WORKSPACE}
-terminus build-env:create ${SITE_ID}.dev ci-${BUILD_ID} --yes
+terminus build:env:create ${SITE_ID}.dev ci-${BUILD_ID} --yes
 ```
 
 ```nohighlight
@@ -173,14 +172,14 @@ Label: ${ENV,var="GIT_BRANCH"}
 Execute Shell Tasks:
 ```nohighlight
 echo "Merging multi-dev changes to master"
-terminus build-env:merge -n ${SITE_ID}.ci-${BUILD_ID} --yes
+terminus build:env:merge -n ${SITE_ID}.ci-${BUILD_ID} --yes
 ```
 And a final cleanup task:
 ```nohighlight
 echo "Cleaning up multidev & branches"
 git -C ${WORKSPACE} remote remove pantheon
 git -C ${WORKSPACE} remote prune origin
-terminus build-env:delete ${SITE_ID} '^ci-.*' --keep=2 --delete-branch
+terminus build:env:delete:ci --keep=2 --delete-branch
 ```
 
 ## Step 6: Add Post-build Actions
@@ -220,4 +219,4 @@ If a test fails, you can see the details by clicking the job, then "Console Outp
 
 
 ## Conclusion
-If you are used to using only with the Pantheon repository, be sure to push to your new origin repo on GitHub from now on. You can still add the Pantheon repo as a remote, to take advantage of Multidev and work on your own environment. As you add new features, continue to add new tests.
+If you usually use only the Pantheon repository, be sure to now push to your new origin repo on GitHub. You can still add the Pantheon repo as a remote to take advantage of Multidev and work on your own environment. As you add new features, continue to add new tests.
