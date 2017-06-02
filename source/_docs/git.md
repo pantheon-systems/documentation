@@ -94,6 +94,29 @@ Go back to your site's Dev tab in Pantheon, click the URL under "Development sit
 
 ## Troubleshooting
 
+### Authenticity/Fingerprint Prompts
+
+If your machine has not previously connected to the server you may be prompted when attempting to `git clone` your site similar to the following:
+
+```
+The authenticity of host '[codeserver.dev.UUID.drush.in]:2222 ([IP.ADDRESS]:2222)' can't be established.
+RSA key fingerprint is SHA256:yPEkh1Amd9WFBSP5syXD5rhUByTjaKBxQnlb5CahZZE.
+Are you sure you want to continue connecting (yes/no)?
+```
+You can safely type `yes` and press enter to add the server's SSH key fingerprint to your machine's *known_hosts* file. This and future git operations should now complete successfully without reprompting you.
+
+Note: If your site migrates to a new container you'll get prompted again.  
+
+You can, however, easily tell your machine to automatically trust all Pantheon "**.drush.in" servers by disabling the "StrictHostKeyChecking" option in your SSH configuration file.
+
+Just edit your *~/.ssh/config* file and add the following lines to disable prompting for "**.drush.in":
+
+```
+Host *.drush.in
+    StrictHostKeyChecking no
+```
+Now, requests to any "**.drush.in" server address should automatically accept the server's SSH key fingerprint without prompting you.
+
 ### Git Connection is Slow
 
 Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol results in the fastest connections. For OS X/Linux, add the following to your SSH config (~/.ssh/config):
