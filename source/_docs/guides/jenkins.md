@@ -179,7 +179,7 @@ And a final cleanup task:
 echo "Cleaning up multidev & branches"
 git -C ${WORKSPACE} remote remove pantheon
 git -C ${WORKSPACE} remote prune origin
-terminus build:env:delete:ci --keep=2 --delete-branch
+terminus build:env:delete:ci ${SITE_ID} --keep=2 --delete-branch
 ```
 
 ## Step 6: Add Post-build Actions
