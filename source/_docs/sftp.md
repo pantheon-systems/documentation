@@ -85,7 +85,7 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 
 ### I can't connect via SFTP to the site.
 
-Make sure your site has not [spun down after being idle](/docs/application-containers/#idle-containers). Simply visit the site in your web browser and let it fully load then try connecting again.
+Make sure your site has not [spun down after being idle](/docs/application-containers/#idle-containers). Visit the site in your web browser and let it fully load then try connecting again.
 
 If your site is not idle and your [SFTP settings are correct](/docs/sftp/#sftp-connection-information) (including SFTP mode and port `2222`) you may be on a network that restricts what outbound ports you can access. An example may be an office or public wifi that only allows web traffic on port `80` (HTTPS)  and `443` (HTTPS).
 
@@ -106,8 +106,10 @@ This is by design. Please see [Using the Pantheon Workflow
 ### SFTP changes do not show up in the Site Dashboard.
 Uncommitted SFTP changes may not be recognized by the Dev environment when the Site Dashboard is open in multiple tabs or windows. Close all windows and tabs then access the Site Dashboard in a single tab to resolve.
 
-### My SFTP client takes a long time to connect.
+### How do I find my site's Binding path?
+You should not manually set the "Remote Path" in your SFTP client's settings. Instead, leave the Remote Path blank and you will automatically be redirected to the proper directory when logging in.
 
+### My SFTP client takes a long time to connect.
 Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol will result in the fastest connections. For OSX/Linux, add the following to your ssh config (~/.ssh/config):
 
     Host *.drush.in
