@@ -193,6 +193,8 @@ Access support history for chats in the User or Site Dashboards by selecting **S
 #### Can I start a chat session via email?
 No. Initiate chats via the Pantheon User or Site Dashboards.
 
+#### I can't access the Pantheon Dashboard login page, can I contact support via email?
+Yes. You can contact us via email: helpdesk@pantheon.io. 
 
 #### Can I respond to an existing chat message via email?
 Yes. Reply directly to the email thread to continue an existing chat session and update the chat history on the Dashboard.
