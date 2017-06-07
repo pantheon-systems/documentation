@@ -55,6 +55,13 @@ Enterprise Organizations can use the same process to assume ownership of a site;
 ### Pantheon Partners
 The site owner is the person who pays for the site. You'll need to update the payment method to change the owner.
 
+## Roles and Permissions
+Change Management is an [organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all [Partner](https://pantheon.io/agencies/pantheon-for-agencies), [EDU](https://pantheon.io/edu) and [Enterprise](https://pantheon.io/pantheon-enterprise) Organizations.
+
+Sites that do not fit the above description will not be able to restrict access or assign specific user roles, such as **Administrator** or **Developer**.
+
+For details on this feature, see [Role-Based Permissions & Change Management](/docs/change-management).
+
 ## Add a Supporting Organization
 
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
@@ -71,8 +78,3 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
  ![Add a supporting organization button](/source/docs/assets/images/dashboard/multi_org1.png)
  ![Confirm supporting organization](/source/docs/assets/images/dashboard/multi_org2.png)
-
-## See Also
-[Role-Based Permissions & Change Management](/docs/change-management/)
-
-[Organizations](/docs/organizations/)
