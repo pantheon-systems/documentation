@@ -75,7 +75,7 @@ Once your message is ready, click **Commit**.
 
 ## Reverting Modified Files via SFTP
 
-Toggling the **Connection Mode** setting from your site's dashboard from **SFTP** to **Git**, without first committing your files, will discard all uncommitted changes and leave the latest version from repository. This can be useful when you have many changes you wish to undo or if it would otherwise be difficult to manually revert all the changes. (You could then revert back to **SFTP** mode and continue work as needed.)
+Toggling the **Connection Mode** setting from your site's dashboard from **SFTP** to **Git**, without first committing your files, will discard all uncommitted changes and leave the latest versions from your site's Git repository. This can be useful when you have many changes you wish to undo or if it would otherwise be difficult to manually revert all the changes. (You could then revert back to **SFTP** mode and continue work as needed.)
 
 ## SFTP Clients
 
