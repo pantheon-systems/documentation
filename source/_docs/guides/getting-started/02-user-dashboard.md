@@ -20,16 +20,16 @@ image: getting-started-Largethumb
 In this lesson, we’re going to explore the User Dashboard.
 
 **Watch the video:**
-<div class="panel panel-video panel-guide">
+<div class="panel panel-drop panel-guide">
 <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
 </div>
 
-<div class="panel panel-video panel-guide" id="accordion">
-  <div class="panel-heading panel-video-heading">
-    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> User Dashboard Glossary (Optional)</h3></a>
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> User Dashboard Glossary (Optional)</h3></a>
   </div>
-<div id="user-dashboard-tour" class="collapse" style="padding:10px;">
-<div markdown="1">
+<div id="user-dashboard-tour" class="collapse">
+<div class="panel-inner" markdown="1">
 - **<span class="glyphicons glyphicons-more-windows" aria-hidden="true"></span> Sites:** Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
 
  - **<span class="glyphicons glyphicons-plus" aria-hidden="true"></span> Create New Site:** Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
