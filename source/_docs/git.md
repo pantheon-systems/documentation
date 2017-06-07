@@ -128,7 +128,7 @@ Be aware that you're disabling a security feature, and trusting your DNS system 
 </p>
 </div>
 
-Open `~/.ssh/config` (create a new file if one does not exist) and add the following lines:
+Open `~/.ssh/config` (or create a new file if one does not exist) and add the following lines:
 
 ```
 Host *.drush.in
