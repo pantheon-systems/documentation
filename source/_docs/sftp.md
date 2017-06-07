@@ -13,7 +13,7 @@ SFTP mode allows you to develop directly on Pantheon and can be a major time-sav
   <h5>Commit frequently and keep in mind:</h5>
   <ul>
     <li>SFTP changes to code that have not been committed will <strong> not be saved in backups and not included in deployments</strong> as they are not part of your code repository yet.</li>
-    <li>Changing your site's connection mode from SFTP to Git will discard all uncommitted files.  Be sure to commit any files you wish to keep before changing connection mode.</li>
+    <li>Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.</li>
     <li>The connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.</li>
     <li>Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.</li>
     <li>You won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</li>
@@ -73,9 +73,13 @@ Once your message is ready, click **Commit**.
 <p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p>
 </div>
 
-## Reverting Modified Files via SFTP
+## Discard & Abandon SFTP Changes
 
-Toggling the **Connection Mode** setting from your site's dashboard from **SFTP** to **Git**, without first committing your files, will discard all uncommitted changes and leave the latest versions from your site's Git repository. This can be useful when you have many changes you wish to undo or if it would otherwise be difficult to manually revert all the changes. (You could then revert back to **SFTP** mode and continue work as needed.)
+Toggle the **Connection Mode** from **SFTP** to **Git** to discard all SFTP changes that have not been committed, such as the 119 file changes shown here:
+
+![SFTP changes ready to commit](/source/docs/assets/images/dashboard/sftp-enabled.png)
+
+This can be useful when you have many changes you wish to undo or if it would otherwise be difficult to manually revert all the changes. Toggle back to **SFTP** mode when you're ready to resume SFTP development.
 
 ## SFTP Clients
 
