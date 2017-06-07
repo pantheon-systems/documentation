@@ -94,9 +94,8 @@ Go back to your site's Dev tab in Pantheon, click the URL under "Development sit
 
 ## Troubleshooting
 
-### Authenticity/Fingerprint Prompts
-
-If your local computer has not previously connected to Pantheon's platform, you may be prompted when running `git` commands that interact with the server to accept the host key:
+### Authenticity & Fingerprint Prompts
+Initial connections from your local computer to a site's codebase on Pantheon after running `git` commands will prompt you to confirm the connection:
 
 ```
 The authenticity of host '[codeserver.dev.UUID.drush.in]:2222 ([IP.ADDRESS]:2222)' can't be established.
@@ -104,19 +103,18 @@ RSA key fingerprint is SHA256:yPEkh1Amd9WFBSP5syXD5rhUByTjaKBxQnlb5CahZZE.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-You can safely type `yes` and press enter to add the server's SSH key fingerprint to your computer's `known_hosts` file. This and future git operations should now complete successfully without prompting you.
+You can safely type `yes` and press enter to add the server's SSH key fingerprint to your computer's `known_hosts` file. Additional connections to this specific Pantheon container will complete successfully without prompts. However, you will be prompted to confirm connections following a container migration, which is part of regular maintenance on the platform. See the following Pro Tip to automatically accept all Pantheon connections.  
 
-**Note:** If your site migrates to a new container, there will be a new key and  you'll be prompted again to trust it.
+<div class="panel panel-drop panel-guide" id="accordion">
 
-<div class="panel panel-video panel-guide" id="accordion">
-
-<div class="panel-heading panel-video-heading">
-<a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-keys">
-<h3 class="panel-title panel-video-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> More on Host Keys </h3>
-</a>
+<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-keys">
+<div class="panel-heading panel-drop-heading">
+<h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Pro Tip: Trust All Pantheon Hosts</h3>
 </div>
+</a>
 
-<div id="host-keys" class="collapse" markdown="1">
+<div id="host-keys" class="collapse">
+<div class="panel-inner" markdown="1">
 The key fingerprint is a representation of the public key, used by the remote server to identify itself. These public keys, along with private keys, form a **keypair** used by the [Diffie-Hellman key exchnage](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) to encrypt communication between you and the server.
 
 On a standard server system, the server administrator would publish their host keys and fingerprints publicly, so clients could match them to the keys presented at these prompts. On Pantheon however, application servers are created and destroyed too rapidly to maintain a public key list.
@@ -140,7 +138,7 @@ Host *.drush.in
 Now, requests to any `**.drush.in` server address should automatically accept the server's SSH key fingerprint without prompting you.
 
 </div>
-
+</div>
 </div>
 
 
