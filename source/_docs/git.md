@@ -96,26 +96,53 @@ Go back to your site's Dev tab in Pantheon, click the URL under "Development sit
 
 ### Authenticity/Fingerprint Prompts
 
-If your machine has not previously connected to the server you may be prompted when attempting to `git clone` your site similar to the following:
+If your local computer has not previously connected to Pantheon's platform, you may be prompted when running `git` commands that interact with the server to accept the host key:
 
 ```
 The authenticity of host '[codeserver.dev.UUID.drush.in]:2222 ([IP.ADDRESS]:2222)' can't be established.
 RSA key fingerprint is SHA256:yPEkh1Amd9WFBSP5syXD5rhUByTjaKBxQnlb5CahZZE.
 Are you sure you want to continue connecting (yes/no)?
 ```
-You can safely type `yes` and press enter to add the server's SSH key fingerprint to your machine's *known_hosts* file. This and future git operations should now complete successfully without reprompting you.
 
-Note: If your site migrates to a new container you'll get prompted again.  
+You can safely type `yes` and press enter to add the server's SSH key fingerprint to your computer's `known_hosts` file. This and future git operations should now complete successfully without prompting you.
 
-You can, however, easily tell your machine to automatically trust all Pantheon "**.drush.in" servers by disabling the "StrictHostKeyChecking" option in your SSH configuration file.
+**Note:** If your site migrates to a new container, there will be a new key and  you'll be prompted again to trust it.
 
-Just edit your *~/.ssh/config* file and add the following lines to disable prompting for "**.drush.in":
+<div class="panel" id="accordion">
+
+<div class="panel-heading ">
+<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-keys"><h3 class="panel-title" style="cursor:pointer;">Tell Me More </h3></a>
+</div>
+
+<div id="host-keys" class="collapse" markdown="1">
+The key fingerprint is a representation of the public key, used by the remote server to identify itself. These public keys, along with private keys, form a **keypair** used by the [Diffie-Hellman key exchnage](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) to encrypt communication between you and the server.
+
+On a standard server system, the server administrator would publish their host keys and fingerprints publicly, so clients could match them to the keys presented at these prompts. On Pantheon however, application servers are created and destroyed too rapidly to maintain a public key list.
+
+You can, however, easily tell your machine to automatically trust all Pantheon `**.drush.in` servers by disabling the `StrictHostKeyChecking` option in your SSH configuration file.
+
+<div class="alert alert-danger" role="alert">
+<h4 class="info">Warning</h4>
+<p markdown="1">
+Be aware that you're disabling a security feature, and trusting your DNS system to always point you to the right IP addresses.
+</p>
+</div>
+
+Open `~/.ssh/config` and add the follownig lines:
 
 ```
 Host *.drush.in
     StrictHostKeyChecking no
 ```
-Now, requests to any "**.drush.in" server address should automatically accept the server's SSH key fingerprint without prompting you.
+
+Now, requests to any `**.drush.in` server address should automatically accept the server's SSH key fingerprint without prompting you.
+
+</div>
+
+</div>
+
+
+
 
 ### Git Connection is Slow
 
