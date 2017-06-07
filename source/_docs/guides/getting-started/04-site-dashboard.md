@@ -47,9 +47,9 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
 
 4. Take a few minutes to familiarize yourself with the other tabs and links on the Site Dashboard, or click below for a guided tour:
 
-    <div class="panel panel-video panel-guide" id="accordion">
-      <div class="panel-heading panel-video-heading">
-        <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#site-dashboard-tour"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-facetime-video"></span> Watch: Site Dashboard</h3></a>
+    <div class="panel panel-drop panel-guide" id="accordion">
+      <div class="panel-heading panel-drop-heading">
+        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#site-dashboard-tour"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-facetime-video"></span> Watch: Site Dashboard</h3></a>
       </div>
       <div id="site-dashboard-tour" class="collapse" style="padding:10px;">
         <script src="//fast.wistia.com/embed/medias/pb8s59wuij.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_pb8s59wuij videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>

@@ -22,7 +22,7 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 **Watch the video:**
 
-<div class="panel panel-video panel-guide">
+<div class="panel panel-drop panel-guide">
 <script src="//fast.wistia.com/embed/medias/wvj88wfy1x.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_wvj88wfy1x videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
 </div>
 
@@ -45,16 +45,18 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 4. Consider creating a backup before proceeding:
 
-    <div class="panel panel-video panel-guide" id="accordion">
-      <div class="panel-heading panel-video-heading">
-         <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#create-backup"><h3 class="panel-title panel-video-title" style="cursor:pointer;">Create Backup (optional)</h3></a>
+    <div class="panel panel-drop panel-guide" id="accordion">
+      <div class="panel-heading panel-drop-heading">
+         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#create-backup"><h3 class="panel-title panel-drop-title" style="cursor:pointer;">Create Backup (optional)</h3></a>
       </div>
-      <div id="create-backup" class="collapse" style="padding:10px;" markdown="1">
-        The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
+      <div id="create-backup" class="collapse">
+        <div class="panel-inner" markdown="1">
+          The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
 
-        1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
-        2. Click **Create New Backup**.
-        3. Click **<span class="glyphicons glyphicons-refresh"></span> Deploys** to return to the lesson.
+          1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
+          2. Click **Create New Backup**.
+          3. Click **<span class="glyphicons glyphicons-refresh"></span> Deploys** to return to the lesson.
+        </div>
      </div>
     </div>
 
