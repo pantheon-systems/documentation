@@ -108,10 +108,12 @@ You can safely type `yes` and press enter to add the server's SSH key fingerprin
 
 **Note:** If your site migrates to a new container, there will be a new key and  you'll be prompted again to trust it.
 
-<div class="panel" id="accordion">
+<div class="panel panel-video panel-guide" id="accordion">
 
-<div class="panel-heading ">
-<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-keys"><h3 class="panel-title" style="cursor:pointer;">Tell Me More </h3></a>
+<div class="panel-heading panel-video-heading">
+<a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-keys">
+<h3 class="panel-title panel-video-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> More on Host Keys </h3>
+</a>
 </div>
 
 <div id="host-keys" class="collapse" markdown="1">
