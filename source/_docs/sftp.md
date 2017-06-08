@@ -75,7 +75,7 @@ Once your message is ready, click **Commit**.
 
 ## Discard & Abandon SFTP Changes
 
-Toggle the **Connection Mode** from **SFTP** to **Git** to discard all SFTP changes that have not been committed, such as the 119 file changes shown here:
+Toggle the **Connection Mode** from **SFTP** to **Git** to *permanently* discard all SFTP changes that have not been committed, such as the 119 file changes shown here:
 
 ![SFTP changes ready to commit](/source/docs/assets/images/dashboard/sftp-enabled.png)
 
