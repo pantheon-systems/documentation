@@ -157,3 +157,28 @@ Send files using SFTP:
 - Run `put -r ./*` to transfer the files up
 
 You can also transfer a single file or a single directory at a time instead of transferring every file, every time.
+
+## Local Configuration Files
+You'll need to configure database credentials matching your local database to develop locally. You don't want to manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`) because you could easily commit that change to version control and trigger a connection error on Dev when pushing to Pantheon.
+
+Instead, we recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by git, it won't be found on Pantheon but it will be applied when you run the site locally.
+
+Pantheon's Drupal 8 and WordPress upstreams apply `settings.local.php` or `wp-config-local.php` when found and ignore them from git without additional steps required. All you need to do is create a `settings.local.php` or `wp-config-local.php` file then use it to configure your local setup.
+
+However, Drupal 7 users will need to include it within their `settings.php` file:
+
+```
+/**
+ * Include a local settings file if it exists. D7 only
+ */
+$local_settings = dirname(__FILE__) . '/settings.local.php';
+if (file_exists($local_settings)) {
+  include $local_settings;
+}
+```
+
+Drupal 7 users will also need to exclude the local configuration file from git by adding the following to `.gitignore`:
+
+```
+sites/*/settings.local.php
+```
