@@ -36,7 +36,7 @@ New Relic's Dashboard starts with a high-level breakdown of application performa
 
 Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the databse](/docs/debug-mysql-new-relic/) could be the result of  slow queries, or an elevated volume of queries overall.
 
-You can find more information on using New Relic to investigate specific areas of performance below:
+For more information on using New Relic's features, we encourage you to read  the [New Relic APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic to investigate specific areas of performance below:
 
 - [Measuring PHP7 Performance with New Relic](https://pantheon.io/blog/measuring-php-7-performance-new-relic-nobsbenchmarks)
 - [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
