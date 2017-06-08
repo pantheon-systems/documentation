@@ -58,16 +58,20 @@ pantheon-backup-to-s3.sh
 S3BUCKET=""
 # Optionally specify bucket region
 S3BUCKETREGION=""
-# The Pantheon terminus user
+# The Pantheon terminus user (email address)
 TERMINUSUSER=""
 # Site names to backup (e.g. 'site-one site-two')
 SITENAMES=""
 # Site environments to backup (any combination of dev, test and live)
-SITEENVS="live"
+SITEENVS="dev live"
 # Site elements to backup (any combination of files, database and code)
-SITEELEMENTS="database files"
+SITEELEMENTS="code database files"
 # Local backup directory (must exist, requires trailing slash)
-BACKUPDIR=""
+BACKUPDIR="<local-path-to-folder>/"
+# Add a date and unique string to the filename
+BACKUPDATE=$(date +%Y%m%d%s)
+# This sets the proper file extension
+EXTENSION="tar.gz"
 
 # connect to terminus
 terminus auth:login $TERMINUS_USER
@@ -75,25 +79,27 @@ terminus auth:login $TERMINUS_USER
 # iterate through sites to backup
 for thissite in $SITENAMES; do
 
-	# iterate through current site environments
-	for thisenv in $SITEENVS; do
+    # iterate through current site environments
+    for thisenv in $SITEENVS; do
 
-		# iterate through current site elements
-		for thiselement in $SITEELEMENTS; do
-			terminus backup:create $thissite.$thisenv --element=$thiselement
+        # iterate through current site elements
+        for thiselement in $SITEELEMENTS; do
+            terminus backup:create $thissite.$thisenv --element=$thiselement
 
-			# download current site backups
-		terminus backup:get $thissite.$thisenv --element=$thiselement --to=$BACKUPDIR
-		done
+            # download current site backups
+        terminus backup:get $thissite.$thisenv --element=$thiselement --to=$BACKUPDIR$SITENAMES.$SITEENVS.$BACKUPDATE.$thiselement.$EXTENSION
 
-	done
+        done
+
+    done
 done
-
+echo $BACKUPDIR
 # sync the local backup directory to aws s3
 if [ -z "${S3BUCKETREGION}" ]; then
-	aws s3 sync $BACKUPDIR s3://$S3BUCKET
+    aws s3 sync $BACKUPDIR s3://$S3BUCKET
 else
   aws s3 sync $BACKUPDIR s3://$S3BUCKET --region $S3BUCKETREGION
+
 fi</code></pre>
 
 ### Via the Dashboard
