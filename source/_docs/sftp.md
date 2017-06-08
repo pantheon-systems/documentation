@@ -13,6 +13,7 @@ SFTP mode allows you to develop directly on Pantheon and can be a major time-sav
   <h5>Commit frequently and keep in mind:</h5>
   <ul>
     <li>SFTP changes to code that have not been committed will <strong> not be saved in backups and not included in deployments</strong> as they are not part of your code repository yet.</li>
+    <li>Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.</li>
     <li>The connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.</li>
     <li>Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.</li>
     <li>You won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</li>
@@ -67,11 +68,18 @@ Write a helpful commit message to go with your changes. This will make maintaini
 
 Once your message is ready, click **Commit**.
 
-
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p>
 </div>
+
+## Discard & Abandon SFTP Changes
+
+Toggle the **Connection Mode** from **SFTP** to **Git** to *permanently* discard all SFTP changes that have not been committed, such as the 119 file changes shown here:
+
+![SFTP changes ready to commit](/source/docs/assets/images/dashboard/sftp-enabled.png)
+
+This can be useful when you have many changes you wish to undo or if it would otherwise be difficult to manually revert all the changes. Toggle back to **SFTP** mode when you're ready to resume SFTP development.
 
 ## SFTP Clients
 
