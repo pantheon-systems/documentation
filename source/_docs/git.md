@@ -141,16 +141,6 @@ Now, requests to any `*.drush.in` server address should automatically accept the
 </div>
 </div>
 
-
-
-
-### Git Connection is Slow
-
-Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol results in the fastest connections. For OS X/Linux, add the following to your SSH config (~/.ssh/config):
-
-    Host *.drush.in
-        KexAlgorithms diffie-hellman-group1-sha1
-
 ## Additional Resources
 
 For further learning, we recommend the following resources:
