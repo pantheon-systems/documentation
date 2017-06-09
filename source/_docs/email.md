@@ -47,28 +47,6 @@ Here are some popular email services you can use on the platform and their corre
 [SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. For more information, see [Using SendGrid To Deliver Email](/docs/guides/sendgrid/).
 
 ### SMTP Providers & Configurations
-Use the following integration methods for Drupal and WordPress to configure an external SMTP service:
-
-<ul class="nav nav-tabs" role="tablist">
-  <li class="active" role="presentation"><a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal 7/8</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="drupal">
-    Once you have chosen your SMTP provider, install and configure Drupal's <a href="https://drupal.org/project/smtp">SMTP Authentication Support</a> module.
-
-    <div class="alert alert-info" role="alert">
-      <h4 class="info">Note</h4>
-        <p>Support for Drupal 8 is in Beta. <a href="https://www.drupal.org/project/smtp"> SMTP Authentication Support</a> module.</p>
-    </div>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
-    Once you have chosen your SMTP provider, install and configure Wordpress's <a href="https://wordpress.org/plugins/wp-mail-smtp/">WP Mail SMTP</a> plugin.
-  </div>
-</div>
-
 Customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amazon SES, Mandrill, and other externally hosted SMTP based email providers.
 
 Since we block traffic on ports 25, 465 and 587, here’s a list of popular email providers and the additional ports which will work on Pantheon. We suggest you refer to the corresponding documentation for any updated information.
@@ -106,6 +84,29 @@ Since we block traffic on ports 25, 465 and 587, here’s a list of popular emai
 
 If you do not find your service provider in the table above, check with their support and/or documentation.
 
+Use the following integration methods for Drupal and WordPress to configure an external SMTP service:
+
+<ul class="nav nav-tabs" role="tablist">
+  <li class="active" role="presentation"><a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal 7/8</a></li>
+  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="drupal">
+    Once you have chosen your SMTP provider, install and configure Drupal's <a href="https://drupal.org/project/smtp">SMTP Authentication Support</a> module.
+
+    <div class="alert alert-info" role="alert">
+      <h4 class="info">Note</h4>
+        <p>The SMTP Authentication Support module for Drupal 8 is currently in Beta, support may be limited. </p>
+    </div>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp">
+    Once you have chosen your SMTP provider, install and configure Wordpress's <a href="https://wordpress.org/plugins/wp-mail-smtp/">WP Mail SMTP</a> plugin.
+  </div>
+</div>
+
+
 ## Troubleshooting
 
 ### Failed Opening `MimeMailSystem__SmtpMailSystem.mail.inc` or `HTMLMailSystem__SmtpMailSystem.mail.inc`
@@ -135,7 +136,6 @@ In order to fight spam, Pantheon blocks traffic on popular email ports 25, 465, 
 
 As consumers of cloud infrastructure, we don’t have control over our IP ranges and they are subject to change without our notice. Publishing an SPF record would imply assurance on our end that it can work, which would be very difficult to guarantee given these circumstances. We take the decision of what we support and what we don’t very seriously, and at this time we’re not in a position to support SPF records.
 
-At this time we do not support email off the platform, and recommend using a third-party solution like those listed above instead.
 
 ### Why does my Gmail user name and password not work?
 
