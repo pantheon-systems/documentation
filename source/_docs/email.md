@@ -10,53 +10,44 @@ Pantheon does not host inboxes for incoming mail. We recommend using an external
 
 ## Outgoing Email
 
-For outgoing emails, your site can use one of the three configurations explained below. Pantheon strongly recommends Approach 1 to ensure high-deliverability (that emails reach inboxes).
+For outgoing emails, we recommend integrating a third-party service provider that supports a REST API configuration. You can use a SMTP configuration, but because SMTP requests are associated with dynamic outgoing IPs there can be negative impacts to deliverability. For a detailed comparison between API configurations and SMTP, see [this related blog post from SendGrid](https://sendgrid.com/blog/web-api-or-smtp-relay-how-should-you-send-your-mail/).
 
-#### Approach 1: High-deliverability service via REST API
 
-Most popular email services provide both REST API or an SMTP relay host to send emails. Use a REST API to ensure high-deliverability.
+### REST API Providers
 
-[SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. For more information, see [Using SendGrid To Deliver Email](/docs/guides/sendgrid/).
+Here are some popular email services you can use on the platform and their corresponding Drupal or WordPress integration method:
 
-The table below lists popular email services and their Drupal module or Wordpress plugin which uses REST API.
-
-<table class="table table-condensed table-bordered">
+<table class="table table-responsive table-bordered">
     <thead class="thead-inverse">
       <tr>
         <th scope="row" class="thead-inverse">Provider</th>
-        <th></th>
+        <th>Integration</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <th scope="row" class="thead-inverse">SendGrid</th>
-        <td><a href="https://www.drupal.org/project/sendgrid_integration" target="_blank">Drupal</a> | <a target="_blank" href="https://wordpress.org/plugins/sendgrid-email-delivery-simplified/">Wordpress</a></td>
+        <td scope="row" class="thead-inverse">SendGrid</td>
+        <td><a href="https://www.drupal.org/project/sendgrid_integration" target="blank">Drupal</a> | <a target="blank" href="https://wordpress.org/plugins/sendgrid-email-delivery-simplified/">WordPress</a></td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Mandrill</th>
-        <td><a href="https://www.drupal.org/project/mandrill" target="_blank">Drupal</a> | <a target="_blank" href="https://wordpress.org/plugins/wpmandrill/">Wordpress</a></td>
+        <td scope="row" class="thead-inverse">Mandrill</td>
+        <td><a href="https://www.drupal.org/project/mandrill" target="blank">Drupal</a> | <a target="blank" href="https://wordpress.org/plugins/wpmandrill/">WordPress</a></td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Mailgun</th>
-        <td><a href="https://www.drupal.org/project/mailgun" target="_blank">Drupal</a> | <a target="_blank" href="https://wordpress.org/plugins/mailgun/">Wordpress</a></td>
+        <td scope="row" class="thead-inverse">Mailgun</td>
+        <td><a href="https://www.drupal.org/project/mailgun" target="blank">Drupal</a> | <a target="blank" href="https://wordpress.org/plugins/mailgun/">WordPress</a></td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">SparkPost</th>
-        <td><a href="https://www.drupal.org/project/sparkpost" target="_blank">Drupal</a> | <a target="_blank" href="https://wordpress.org/plugins/sparkpost/">Wordpress</a></td>
+        <td scope="row" class="thead-inverse">SparkPost</td>
+        <td><a href="https://www.drupal.org/project/sparkpost" target="blank">Drupal</a> | <a target="blank" href="https://wordpress.org/plugins/sparkpost/">WordPress</a></td>
       </tr>
     </tbody>
 </table>
 
-#### Approach 2 : High-deliverability service via SMTP
+[SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. For more information, see [Using SendGrid To Deliver Email](/docs/guides/sendgrid/).
 
-Using a plugin/ module is the most popular way to integrate with a high-deliverability service provider.
-
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>In order to fight spam, Pantheon blocks traffic on popular email ports 25, 465, and 587. Your emails will not be processed if you use any of these 3 ports. Most of the email services provide ports other than 25, 465 and 587 which can be used while configuring your SMTP plugin/ module. So, ensure that your service provider allows traffic on a port other than 25, 465 and 587 and that you have correctly configured your plugin/ module to use that port.</p>
-</div>
-
-Use the below information for Drupal and WordPress to configure the external service.
+### SMTP Providers & Configurations
+Use the following integration methods for Drupal and WordPress to configure an external SMTP service:
 
 <ul class="nav nav-tabs" role="tablist">
   <li class="active" role="presentation"><a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal 7/8</a></li>
@@ -115,18 +106,9 @@ Since we block traffic on ports 25, 465 and 587, here’s a list of popular emai
 
 If you do not find your service provider in the table above, kindly check with their support/ documentation.
 
-#### Approach 3: Pantheon via Local MTA (may result in emails not being delivered)
-
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Pantheon recommends using a third-party email provider. (see Approach 1 and 2).  Failure to do so will result in significant delays and/or deleted messages.</p>
-</div>
-
-For outgoing email, your site can send mail using the local MTA (postfix). However, speed and deliverability (messages erroneously blocked or marked as spam) will not be guaranteed since your messages will be coming from an anonymous cloud server.  
-
 ## Troubleshooting
 
-#### Failed Opening `MimeMailSystem__SmtpMailSystem.mail.inc` or `HTMLMailSystem__SmtpMailSystem.mail.inc`
+### Failed Opening `MimeMailSystem__SmtpMailSystem.mail.inc` or `HTMLMailSystem__SmtpMailSystem.mail.inc`
 
 This is a common error with the SMTP Authentication Support module. It can be fixed in a few steps:
 
@@ -143,13 +125,18 @@ This is a common error with the SMTP Authentication Support module. It can be fi
 See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
 ## Frequently Asked Questions
+### Can I use Pantheon's local MTA (postfix)?
+We strongly recommend that you do not use the local MTA (postfix) for deliverability concerns. Instead, we recommend using a third-party email service provider as described above.  
 
-#### Can Pantheon provide, publish, or support SPF records?
+### What ports are blocked by Pantheon?
+In order to fight spam, Pantheon blocks traffic on popular email ports 25, 465, and 587. Your emails will not be processed if you use any of these ports. Make sure that your service provider allows traffic on a port other than 25, 465 and 587 and that you have correctly configured your site to use that port.
+
+### Can Pantheon provide, publish, or support SPF records?
 
 As consumers of cloud infrastructure, we don’t have control over our IP ranges and they are subject to change without our notice. Publishing an SPF record would imply assurance on our end that it can work, which would be very difficult to guarantee given these circumstances. We take the decision of what we support and what we don’t very seriously, so at this time we’re not in a position to do that due to sustainably.
 
 At this time we do not support email off the platform, and recommend using a third-party solution like those listed above instead.
 
-#### Why does my Gmail user name and password not work?
+### Why does my Gmail user name and password not work?
 
 Please see Google's help article: [My client isn't accepting my username and password](https://support.google.com/mail/answer/14257?p=client_login&rd=1).
