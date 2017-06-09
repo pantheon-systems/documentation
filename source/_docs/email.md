@@ -73,7 +73,7 @@ Customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amaz
 
 Since we block traffic on ports 25, 465 and 587, here’s a list of popular email providers and the additional ports which will work on Pantheon. We suggest you refer to the corresponding documentation for any updated information.
 
-<table class="table table-condensed table-bordered">
+<table class="table table-responsive table-bordered">
     <thead class="thead-inverse">
       <tr>
         <th scope="row" class="thead-inverse">Provider</th>
@@ -82,24 +82,24 @@ Since we block traffic on ports 25, 465 and 587, here’s a list of popular emai
     </thead>
     <tbody>
       <tr>
-        <th scope="row" class="thead-inverse">SendGrid</th>
-        <td><a href="https://sendgrid.com/docs/Classroom/Basics/Email_Infrastructure/smtp_ports.html" target="_blank">2525</a></td>
+        <td>SendGrid</td>
+        <td><a href="https://sendgrid.com/docs/Classroom/Basics/Email_Infrastructure/smtp_ports.html" target="blank">2525</a></td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Mandrill</th>
-        <td><a href="https://mandrill.zendesk.com/hc/en-us/articles/205582167-Which-SMTP-ports-can-I-use-" target="_blank">2525</a></td>
+        <td>Mandrill</td>
+        <td><a href="https://mandrill.zendesk.com/hc/en-us/articles/205582167-Which-SMTP-ports-can-I-use-" target="blank">2525</a></td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Mailgun</th>
-        <td><a href="http://blog.mailgun.com/25-465-587-what-port-should-i-use/" target="_blank">2525</a></td>
+        <td>Mailgun</td>
+        <td><a href="http://blog.mailgun.com/25-465-587-what-port-should-i-use/" target="blank">2525</a></td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">SparkPost</th>
-        <td><a href="https://www.sparkpost.com/docs/faq/smtp-connection-problems/" target="_blank">2525</a></td>
+        <td>SparkPost</td>
+        <td><a href="https://www.sparkpost.com/docs/faq/smtp-connection-problems/" target="blank">2525</a></td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Amazon SES</th>
-        <td><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html" target="_blank">2587 (STARTTS), 2465 (TLSWRAPPER)</a></td>
+        <td>Amazon SES</td>
+        <td><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html" target="blank">2587 (STARTTS), 2465 (TLSWRAPPER)</a></td>
       </tr>
     </tbody>
 </table>
