@@ -11,6 +11,30 @@ Enterprise, Agency, and EDU organizations can create and update sites from a com
 <p markdown="1">We do not recommend Custom Upstreams for Drupal 8 sites managed by Composer at this time. For an alternative workflow, checkout [Using GitHub Pull Requests with Composer and Drupal 8](/docs/guides/github-pull-requests/).</p>
 </div>
 
+## Benefits
+
+### Standardize Design and Functionality Across Many Sites
+Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
+
+Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
+
+> Learn how the web team at Weill Cornell Medical College used Custom Upstreams to rescue 100+ websites from design anarchy in [this case study](https://pantheon.io/resources/weill-cornell-drupal-distribution-case-study).
+
+### Efficient Update Strategy
+Not only does this workflow free up developer time, it establishes a sustainable and scalable process for handling updates across massive site portfolios.
+
+New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
+
+<p style="text-align:center" markdown="1">
+![Custom upstream update strategy](/source/docs/assets/images/update-diagram.svg)
+</p>
+> See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
+
+### Scale Client Services
+Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Custom Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
+
+> Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
+
 ## Workflow Overview
 There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
 <div class="upstream-overview-outter-clear">
@@ -59,30 +83,6 @@ There are three levels of repositories in play here, and updates flow "downstrea
       The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily.</p>
     </div>
 </div>
-
-## Benefits
-
-### Standardize Design and Functionality Across Many Sites
-Custom Upstreams act as a scaffold for new sites, allowing developers and site owners of any skill level to kickoff projects at warp speed.
-
-Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
-
-> Learn how the web team at Weill Cornell Medical College used Custom Upstreams to rescue 100+ websites from design anarchy in [this case study](https://pantheon.io/resources/weill-cornell-drupal-distribution-case-study).
-
-### Efficient Update Strategy
-Not only does this workflow free up developer time, it establishes a sustainable and scalable process for handling updates across massive site portfolios.
-
-New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
-
-<p style="text-align:center" markdown="1">
-![Custom upstream update strategy](/source/docs/assets/images/update-diagram.svg)
-</p>
-> See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
-
-### Scale Client Services
-Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Custom Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
-
-> Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
 
 
 ## Terminology
