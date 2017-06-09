@@ -10,7 +10,7 @@ Pantheon does not host inboxes for incoming mail. We recommend using an external
 
 ## Outgoing Email
 
-For outgoing emails, we recommend integrating a third-party service provider that supports a REST API configuration. You can use a SMTP configuration, but because SMTP requests are associated with dynamic outgoing IPs there can be negative impacts to deliverability. For a detailed comparison between API configurations and SMTP, see [this related blog post from SendGrid](https://sendgrid.com/blog/web-api-or-smtp-relay-how-should-you-send-your-mail/).
+For outgoing emails, we recommend integrating a third-party service provider that supports a REST API configuration. You can use an SMTP configuration, but because SMTP requests are associated with dynamic outgoing IPs there can be negative impacts to deliverability. For a detailed comparison between API configurations and SMTP, see [this related blog post from SendGrid](https://sendgrid.com/blog/web-api-or-smtp-relay-how-should-you-send-your-mail/).
 
 
 ### REST API Providers
@@ -69,7 +69,7 @@ Use the following integration methods for Drupal and WordPress to configure an e
   </div>
 </div>
 
-Customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amazon SES, Mandrill, or other externally hosted SMTP based email providers.
+Customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amazon SES, Mandrill, and other externally hosted SMTP based email providers.
 
 Since we block traffic on ports 25, 465 and 587, here’s a list of popular email providers and the additional ports which will work on Pantheon. We suggest you refer to the corresponding documentation for any updated information.
 
@@ -104,7 +104,7 @@ Since we block traffic on ports 25, 465 and 587, here’s a list of popular emai
     </tbody>
 </table>
 
-If you do not find your service provider in the table above, kindly check with their support/ documentation.
+If you do not find your service provider in the table above, check with their support and/or documentation.
 
 ## Troubleshooting
 
@@ -126,14 +126,14 @@ See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
 ## Frequently Asked Questions
 ### Can I use Pantheon's local MTA (postfix)?
-We strongly recommend that you do not use the local MTA (postfix) for deliverability concerns. Instead, we recommend using a third-party email service provider as described above.  
+We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
 
 ### What ports are blocked by Pantheon?
 In order to fight spam, Pantheon blocks traffic on popular email ports 25, 465, and 587. Your emails will not be processed if you use any of these ports. Make sure that your service provider allows traffic on a port other than 25, 465 and 587 and that you have correctly configured your site to use that port.
 
 ### Can Pantheon provide, publish, or support SPF records?
 
-As consumers of cloud infrastructure, we don’t have control over our IP ranges and they are subject to change without our notice. Publishing an SPF record would imply assurance on our end that it can work, which would be very difficult to guarantee given these circumstances. We take the decision of what we support and what we don’t very seriously, so at this time we’re not in a position to do that due to sustainably.
+As consumers of cloud infrastructure, we don’t have control over our IP ranges and they are subject to change without our notice. Publishing an SPF record would imply assurance on our end that it can work, which would be very difficult to guarantee given these circumstances. We take the decision of what we support and what we don’t very seriously, and at this time we’re not in a position to support SPF records.
 
 At this time we do not support email off the platform, and recommend using a third-party solution like those listed above instead.
 
