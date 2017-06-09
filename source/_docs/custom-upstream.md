@@ -11,7 +11,6 @@ Enterprise, Agency, and EDU organizations can create and update sites from a com
 <p markdown="1">We do not recommend Custom Upstreams for Drupal 8 sites managed by Composer at this time. For an alternative workflow, checkout [Using GitHub Pull Requests with Composer and Drupal 8](/docs/guides/github-pull-requests/).</p>
 </div>
 
-
 ## Benefits
 
 ### Standardize Design and Functionality Across Many Sites
@@ -35,18 +34,6 @@ New features and functionality can be continuously developed in the Custom Upstr
 Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Custom Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
 
 > Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
-
-
-## Terminology
-Here are definitions for commonly used terms:
-
-* **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
-* **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
-* **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
-* **Repository**: A collection of files packaged in a single directory under version control.
-* **Remote Repository**: A remote version control location, e.g. residing on GitHub or BitBucket.
-* **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
-* **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
 
 ## Workflow Overview
 There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
@@ -96,6 +83,18 @@ There are three levels of repositories in play here, and updates flow "downstrea
       The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily.</p>
     </div>
 </div>
+
+
+## Terminology
+Here are definitions for commonly used terms:
+
+* **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
+* **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
+* **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
+* **Repository**: A collection of files packaged in a single directory under version control.
+* **Remote Repository**: A remote version control location, e.g. residing on GitHub or BitBucket.
+* **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
+* **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
 
 ## Next Steps
 
