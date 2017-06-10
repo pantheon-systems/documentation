@@ -1,5 +1,5 @@
 ---
-title: Continuous Integration with CircleCI
+title: Continuous Integration with Bitbucket and CircleCI
 description: How to integrate Pantheon with CircleCI and Bitbucket.
 tags: [siteintegrations]
 type: guide
@@ -62,7 +62,7 @@ git commit -m "Initial commit."
 
 1. Create a new Bitbucket repository.
 
-![Bitbucket Dashboard](/source/docs/assets/images/integrations/bb_repo.png)
+![Bitbucket Dashboard](/source/docs/assets/images/integrations/bitbucket/bb_repo.png)
 
 
 2. Next, follow the instructions Bitbucket presents to push the existing code to the new remote repository:
