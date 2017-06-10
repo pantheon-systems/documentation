@@ -10,7 +10,7 @@ This module is extremely lightweight and efficient. It provides general methods 
 
 It should always be enabled for all sites on Pantheon and should not cause adverse effects if you export the site locally or to another environment.
 
-The code for the API module is available within our upstream repositories:
+The code for the API module is available within our upstream repositories, in the `modules/pantheon` directory:
 
 - [Drupal 6](https://github.com/pantheon-systems/drops-6/tree/master/modules/pantheon)
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon)

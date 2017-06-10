@@ -2345,7 +2345,7 @@ h1[id] {
     background-color: #DDE5E7 !important;
     background-image: none !important;
 }
-.panel-video {
+.panel-drop {
   border: solid 10px #eef2f3;
   border-radius: 0px;
 }
@@ -2354,13 +2354,13 @@ h1[id] {
   margin-right: auto;
   max-width: 800px;
 }
-.panel-video-heading {
+.panel-drop-heading {
   background-color: #eef2f3;
   border-radius: 0px;
   border-color: #eef2f3 !important;
   padding:20px;
 }
-h3.panel-video-title {
+h3.panel-drop-title {
   text-decoration: none;
   color: #000 !important;
   font-weight: 700;
@@ -2369,10 +2369,13 @@ h3.panel-video-title {
   font-size: 14px;
   line-height: 1;
 }
-a.panel-video-title {
+a.panel-drop-title {
   text-decoration: none;
+  cursor: pointer;
 }
-
+.panel-inner {
+  padding: 20px;
+}
 .panel-heading .accordion-toggle:before {
     font-family: 'Glyphicons Halflings';
     content: "\e114";

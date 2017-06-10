@@ -13,6 +13,7 @@ SFTP mode allows you to develop directly on Pantheon and can be a major time-sav
   <h5>Commit frequently and keep in mind:</h5>
   <ul>
     <li>SFTP changes to code that have not been committed will <strong> not be saved in backups and not included in deployments</strong> as they are not part of your code repository yet.</li>
+    <li>Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.</li>
     <li>The connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.</li>
     <li>Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.</li>
     <li>You won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</li>
@@ -67,11 +68,18 @@ Write a helpful commit message to go with your changes. This will make maintaini
 
 Once your message is ready, click **Commit**.
 
-
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p>
 </div>
+
+## Discard & Abandon SFTP Changes
+
+Toggle the **Connection Mode** from **SFTP** to **Git** to *permanently* discard all SFTP changes that have not been committed, such as the 119 file changes shown here:
+
+![SFTP changes ready to commit](/source/docs/assets/images/dashboard/sftp-enabled.png)
+
+This can be useful when you have many changes you wish to undo or if it would otherwise be difficult to manually revert all the changes. Toggle back to **SFTP** mode when you're ready to resume SFTP development.
 
 ## SFTP Clients
 
@@ -85,7 +93,7 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 
 ### I can't connect via SFTP to the site.
 
-Make sure your site has not [spun down after being idle](/docs/application-containers/#idle-containers). Simply visit the site in your web browser and let it fully load then try connecting again.
+Make sure your site has not [spun down after being idle](/docs/application-containers/#idle-containers). Visit the site in your web browser and let it fully load then try connecting again.
 
 If your site is not idle and your [SFTP settings are correct](/docs/sftp/#sftp-connection-information) (including SFTP mode and port `2222`) you may be on a network that restricts what outbound ports you can access. An example may be an office or public wifi that only allows web traffic on port `80` (HTTPS)  and `443` (HTTPS).
 
@@ -106,8 +114,10 @@ This is by design. Please see [Using the Pantheon Workflow
 ### SFTP changes do not show up in the Site Dashboard.
 Uncommitted SFTP changes may not be recognized by the Dev environment when the Site Dashboard is open in multiple tabs or windows. Close all windows and tabs then access the Site Dashboard in a single tab to resolve.
 
-### My SFTP client takes a long time to connect.
+### How do I find my site's Binding path?
+You should not manually set the "Remote Path" in your SFTP client's settings. Instead, leave the Remote Path blank and you will automatically be redirected to the proper directory when logging in.
 
+### My SFTP client takes a long time to connect.
 Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol will result in the fastest connections. For OSX/Linux, add the following to your ssh config (~/.ssh/config):
 
     Host *.drush.in
