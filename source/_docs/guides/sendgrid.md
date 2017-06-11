@@ -89,6 +89,10 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the Send Test E-mail configuration field and click **Save configuration** to test.
 
+<div class="alert alert-info" role="alert">
+      <h4 class="info">Note</h4>
+      <p>Pantheon blocks ports 25, 465, and 587 to fight SPAM. Visit <a href="https://pantheon.io/docs/email/#what-ports-are-blocked-by-pantheon" target="_blank">Email on Pantheon</a> to learn more. </p>
+    </div>
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
