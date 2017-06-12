@@ -24,7 +24,7 @@ This operation writes the archive to Pantheon's filesystem in a web accessible l
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p markdown="1">We reccomend using a random hash for the archive filename for security. Archive dumps contain sensitive information, so they should not be exposed using guessable filename patterns (like `BACKUP` or recent dates). We also advise prompt removal of archive files once you've completed the migration.</p>
+<p markdown="1">We recommend using a random hash for the archive filename for security. Archive dumps contain sensitive information, so they should not be exposed using guessable filename patterns (like `BACKUP` or recent dates). We also advise prompt removal of archive files once you've completed the migration.</p>
 </div>
 
 Click **Continue Migration** and follow all remaining instructions within the guided migration process.
