@@ -10,7 +10,7 @@ contributors:
   - rvtraveller
 date: 9/8/2015
 ---
-Email is a necessity when running a website, whether it’s used with a simple contact form or to manage subscription based services, odds are you’re going to need it. Users may want to receive notices of content updates, have sales receipts sent to them, update their password or membership information, and more. Email is the most effective way of communicating with a site's user base, but it does no good if these messages are filtered and marked as spam.
+Email is a necessity when running a website, whether it's used with a simple contact form or to manage subscription based services, odds are you’re going to need it. Users may want to receive notices of content updates, have sales receipts sent to them, update their password or membership information, and more. Email is the most effective way of communicating with a site's user base, but it does no good if these messages are filtered and marked as spam.
 
 One of the most common reasons that email gets blocked is because it originates from a website hosted by a third party service, like Pantheon. In order to ensure this doesn't happen to you, we at Pantheon highly encourage using your own email server or a service provider such as SendGrid.
 
@@ -91,7 +91,7 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 
 <div class="alert alert-info" role="alert">
       <h4 class="info">Note</h4>
-      <p>Pantheon blocks ports 25, 465, and 587 to fight SPAM. Visit <a href="https://pantheon.io/docs/email/#what-ports-are-blocked-by-pantheon" target="_blank">Email on Pantheon</a> to learn more. </p>
+      <p markdown="1">Pantheon blocks ports `25`, `465`, and `587` to fight SPAM. Visit [Email on Pantheon](/docs/email/#what-ports-are-blocked-by-pantheon) to learn more. </p>
     </div>
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
