@@ -43,7 +43,7 @@ If your database and code compressed are less than 256MB you can exclude the fil
 
 1. Use [Terminus](/docs/terminus) and the `--tar-options` flag:
 
-        terminus drush <site>.<env> ard --tar-options="--exclude=code/sites/default/files" --destination=code/sites/default/files/<RANDOM_HASH>.tgz
+        terminus drush <site>.<env> -- ard --tar-options="--exclude=sites/default/files" --destination=code/sites/default/files/<RANDOM_HASH>.tgz
 
 2. Click **Continue Migration**.
 3. Provide the web accessible URL for your site archive (e.g. `https://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`) and select **Import Archive**.
