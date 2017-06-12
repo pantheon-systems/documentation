@@ -4,57 +4,54 @@ description: Learn how to build sites using the WordPress and Drupal admin inter
 tags: [admin]
 categories: []
 ---
+Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/docs/git/) or working in the WordPress or Drupal admin interface in [SFTP](/docs/sftp/) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/docs/multidev/)) in **SFTP** mode.
 
-Pantheon supports two development workflows; editing and committing code from the command line using git commits, and using the WordPress or Drupal admin interface to configure your site, and/or uploading file changes using an [SFTP client](/docs/sftp). This document covers the latter.
+## SFTP Mode
+1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud"></span> Multidev** tab of your Pantheon Site Dashboard.
+2. Click **SFTP**, next to Connection Mode:
+
+  ![SFTP Mode](/source/docs/assets/images/dashboard/connection-mode-sftp.png)
+
+
+Operations that require write access to the codebase must be executed while the site is in SFTP mode, such as:
 
 <table class="table  table-bordered table-responsive">
   <thead>
     <tr>
-      <th>Task</th>
-      <th>Connection Mode</th>
-      <th>Example</th>
+      <th>Example Operation</th>
+      <th>Connection Mode Required</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Work in the admin interface</td>
+      <td>Activate a new theme in site admin</td>
       <td>SFTP</td>
-      <td>Activate a new theme</td>
     </tr>
     <tr>
-      <td>Push commits made locally from the commandline with git</td>
-      <td>Git</td>
-      <td markdown="1">`git push origin master`</td>
+      <td>Upload a new module or plugin using an SFTP client</td>
+      <td>SFTP</td>
+    </tr>
+    <tr>
+      <td markdown="1">`terminus remote:drush <site>.<env> -- pm-enable hsts --yes` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run Drush commands with <a href='/docs/terminus'>Terminus</a>. For details, see <a href='/docs/drush'>Drupal Drush Command-Line Utility</a>."><em class="fa fa-info-circle"></em></a></td>
+      <td>SFTP</td>
+    </tr>
+    <tr>
+      <td markdown="1">`terminus remote:wp <site>.<env> -- plugin install lh-hsts --activate` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run WP-CLI commands with <a href='/docs/terminus'>Terminus</a>. For details, see <a href='/docs/wp-cli'>Using WP-CLI On The Pantheon Platform</a>."><em class="fa fa-info-circle"></em></a></td>
+      <td>SFTP</td>
     </tr>
   </tbody>
 </table>
 
+## WordPress Dashboard
+WordPress' admin interface has built in tools to manage plugins and themes, allowing you to install and manage popular themes and plugins from the main WordPress.org repository.
 
-## Ensure SFTP Mode
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p markdown="1">Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support) and [Applying Upstream Updates](/docs/upstream-updates).</p>
+</div>
 
-On the Pantheon Site Dashboard, under the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab, is the **Connection Mode** box. The two options are **SFTP** and **Git**. When working with your Drupal or WordPress admin interface, make sure your mode is set to **SFTP**:
-
-![SFTP Mode](/source/docs/assets/images/dashboard/connection-mode-sftp.png)
-
-### SFTP Mode: Advantages & Considerations
-
-When using Pantheon's SFTP mode to develop directly on your Dev environment, you have several options in addition to using a SFTP client to manage your code. In this mode, the website has access to write to its codebase, meaning built-in admin tools are open to function, as are some novel command-line capabilities. You can:
-
-- Use the `wp-admin` web interface to manage your WordPress code.
-- Install and update modules and themes with Drupal's update manager.
-- Take advantage of command line tools like [WP-CLI](/docs/wp-cli/) or [Drush](/docs/drush/) through [Terminus](/docs/terminus/) for managing code.
-
-While in SFTP Mode, changes made to the codebase are "staged", as visible on in the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab:
-
-![Pending changes in SFTP mode](/source/docs/assets/images/dashboard/dev-code-pendingchanges-commit.png)
-
-Before switching back to Git mode, you must commit these changes.
-
-##  Manage WordPress Plugins and Themes
-
-WordPress' admin interface has built in tools to manage plugins and themes, allowing you to search and install popular code from the main WordPress.org repository on your site. When your Pantheon Dev environment is in SFTP mode, you can use these capabilities to manage the code in your Dev environment. It works for plugins and themes.
-
-1. From the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab of your Pantheon Site Dashboard, click **Visit Development Site**, then navigate to the `wp-admin`  page:
+### Manage Plugins and Themes
+1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud pull-left"></span> Multidev** tab of your Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-new-window-alt"></span> Site Admin**, then login if you have not done so already.
 
 2. WordPress will let you know when there are plugin updates available:
 
@@ -69,19 +66,24 @@ WordPress' admin interface has built in tools to manage plugins and themes, allo
     ![Install a new WordPress theme](/source/docs/assets/images/wp-new-theme.png)
 
 
-You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved and allow you to deploy it out to the Test and Live environments.
+You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live.
 
-### FTP Credentials Pop-up
-
-If, while working with plugins or themes, you're prompted for FTP or SFTP credentials, you're most likely in Git mode. You should *never* have to enter credentials into the WordPress admin:
+### Connection Information Prompt
+Prompts asking for connection information will occur in the WordPress Dashboard when the site is set to the wrong connection mode:
 
 ![WordPress Credential Prompt](/source/docs/assets/images/wp-ftp-prompt.png)
 
-## Install Drupal Modules and Themes
+You should *never* have to enter credentials into the WordPress Dashboard. Visit the Site Dashboard and set the environment's connection mode to **SFTP**, then try again.
 
-Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface). When in SFTP mode this will work seamlessly on Pantheon.
+## Drupal Admin Interface
+Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface).
 
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p markdown="1">Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support) and [Applying Upstream Updates](/docs/upstream-updates).</p>
+</div>
 
+### Install a New Module
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
 <!-- Active tab -->
@@ -140,31 +142,30 @@ Make sure the module has a version marked `8.x-*` before installing it on a Drup
 </div>
 
 
-You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will keep it saved, and allow you to deploy it out to the Test and Live environments.
+You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live.
 
-### FTP Credentials Pop-up
-
-If, while updating modules or themes, you're prompted to enter FTP credentials, refer back to the Pantheon Site Dashboard to ensure SFTP mode. You should never have to enter FTP or SFTP credentials to Drupal's admin area:
+### Connection Information Prompt
+Prompts asking for connection information will occur in the Drupal Admin interface when the site is set to the wrong connection mode:
 
 ![Drupal Credential Prompt](/source/docs/assets/images/drupal-ftp-prompt.png)
 
+You should *never* have to enter credentials into the Drupal Admin interface. Visit the Site Dashboard and set the environment's connection mode to **SFTP**, then try again.
 
-## Install Code with Terminus: the Pantheon CLI
 
-Perhaps the most powerful way to leverage the capabilities of on-server development with Pantheon is through the use of [Terminus, our command-line interface](/docs/terminus/). This section is for developers who are CLI savvy.
+## Command Line Tools
+Perhaps the most powerful way to leverage the capabilities of on-server development is to use command line tools such as WP-CLI and Drush, which can be executed on Pantheon via [Terminus](/docs/terminus/).
 
-Assuming you've already set up and authenticated with [Terminus](/docs/terminus/), and your Pantheon Dev environment is in SFTP mode, you can use `drush` or `wp-cli` to install code very quickly.
+### Install & Authenticate Terminus
+In order to run WP-CLI or Drush commands on Pantheon's development environments, you'll need use our very own command line tool, Terminus:
 
-```nohighlight
-joshk@steppinrazor ~$ terminus site:list
-+-----------------------+-----------+---------------+---------------------------+
-| Site | Framework | Service Level | UUID |
-+-----------------------+-----------+---------------+---------------------------+
-| bensons-big-demo | wordpress | free | f8277b1a-ed45-4390-a257-8dda0b50ff21 |
-| community-plumbing-20 | drupal | free | 17cff28f-e6ec-4a9e-97ce-cee418070490 |
-+-----------------------+-----------+---------------+---------------------------+
-```
-### Drush Example
+1. Install [Terminus](/docs/terminus):
+
+        curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+2. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard** > **Account** > **Machine Tokens**, then authenticate Terminus:
+
+        terminus auth:login --machine-token=‹machine-token›
+### Download Contrib Modules with Drush
+SFTP mode supports [Drush](https://github.com/drush-ops/drush/), the command-line interface for Drupal. For example, you can download multiple contrib modules and a theme to the Dev environment:
 
 ```nohighlight
 joshk@steppinrazor ~$ terminus drush <site>.<env> -- dl pathauto devel admin_menu zen search_api search_api_solr
@@ -185,14 +186,16 @@ Project search_api contains 3 modules: search_api_views, search_api_facetapi, se
 Project search_api_solr (7.x-1.4) downloaded to [success]
 /srv/bindings/.../code/sites/all/modules/search_api_solr.
 ```
-That just downloaded five modules and a theme in under a minute. Pretty cool.
+You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live:
 
-### WP-CLI Example
+```
+terminus env:commit <site>.<env> --message="Download pathauto devel admin_menu zen search_api search_api_solr"
+```
 
-WordPress has a similar capability:
-
+### Install WordPress Plugins with WP-CLI
+SFTP mode supports [WP-CLI](https://make.wordpress.org/cli/handbook/), the official command line tool for interfacing with WordPress sites. For example, you can install multiple plugins on the Dev environment:
 ```nohighlight
-joshk@steppinrazor ~$ terminus wp <site>.<env> -- plugin install akismet wordpress-seo jetpack google-sitemap-generator
+joshk@steppinrazor ~$ terminus remote:wp bensons-big-demo.dev -- plugin install akismet wordpress-seo jetpack google-sitemap-generator
 Running wp plugin install akismet wordpress-seo jetpack google-sitemap-generator on bensons-big-demo-dev
 dev.f8277b1a-ed45-4390-a257-8d@appserver.dev.f8277b1a-ed45-4390-a257-8dda0b50ff21.drush.in's password:
 Installing Akismet (3.0.0)
@@ -216,7 +219,18 @@ Unpacking the package...
 Installing the plugin...
 Plugin installed successfully.
 ```
+You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live:
 
+```
+terminus env:commit <site>.<env> --message="Install akismet wordpress-seo jetpack google-sitemap-generator"
+```
+
+## Commit SFTP Changes
+While in SFTP Mode, changes made to the codebase are "staged", as visible on in the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab:
+
+![Pending changes in SFTP mode](/source/docs/assets/images/dashboard/dev-code-pendingchanges-commit.png)
+
+Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.
 
 ## Troubleshooting
 
