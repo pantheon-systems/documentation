@@ -19,7 +19,7 @@ As an added bonus, you’ll be able to funnel all dev and testing emails to a si
 
 ## Installation
 
-Download and install as usual. You can use [SFTP](/docs/sftp/) on Pantheon or the [Drupal UI](/docs/cms-admin#install-drupal-modules-and-themes) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
+Download and install as usual. You can use [SFTP](/docs/sftp/) on Pantheon or the [Drupal UI](/docs/cms-admin/#drupal-admin-interface) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
 
 I chose [Drupal 7 as a start state](/docs/start-state/#importing-an-existing-site) and performed a [git clone](/docs/git/) of my Pantheon site.
 ```nohighlight
