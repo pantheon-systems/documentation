@@ -19,7 +19,7 @@ As an added bonus, you’ll be able to funnel all dev and testing emails to a si
 
 ## Installation
 
-Download and install as usual. You can use [SFTP](/docs/sftp/) on Pantheon or the [Drupal UI](/docs/more-sftp/#install-modules-and-themes-with-update-manager) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
+Download and install as usual. You can use [SFTP](/docs/sftp/) on Pantheon or the [Drupal UI](/docs/cms-admin#install-drupal-modules-and-themes) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
 
 I chose [Drupal 7 as a start state](/docs/start-state/#importing-an-existing-site) and performed a [git clone](/docs/git/) of my Pantheon site.
 ```nohighlight
@@ -153,5 +153,5 @@ Requesting a new account fires off two emails: one to the requestor and another 
 
 ![Email showing the reroute was successful](/source/docs/assets/images/reroute-email-confirmation.png)
 
-##See Also  
+##See Also
 [Manage Email Handling for Development or Testing](https://www.drupal.org/node/201981)
