@@ -8,39 +8,17 @@ Pantheon's Site Dashboard provides two connection modes to support various devel
 
 ## SFTP Mode
 1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud"></span> Multidev** tab of your Pantheon Site Dashboard.
-2. Click **SFTP**, next to Connection Mode:
+2.Next to Connection Mode, click **SFTP**:
 
   ![SFTP Mode](/source/docs/assets/images/dashboard/connection-mode-sftp.png)
 
 
 Operations that require write access to the codebase must be executed while the site is in SFTP mode, such as:
 
-<table class="table  table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th>Example Operation</th>
-      <th>Connection Mode Required</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Activate a new theme in site admin</td>
-      <td>SFTP</td>
-    </tr>
-    <tr>
-      <td>Upload a new module or plugin using an SFTP client</td>
-      <td>SFTP</td>
-    </tr>
-    <tr>
-      <td markdown="1">`terminus remote:drush <site>.<env> -- pm-enable hsts --yes` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run Drush commands with <a href='/docs/terminus'>Terminus</a>. For details, see <a href='/docs/drush'>Drupal Drush Command-Line Utility</a>."><em class="fa fa-info-circle"></em></a></td>
-      <td>SFTP</td>
-    </tr>
-    <tr>
-      <td markdown="1">`terminus remote:wp <site>.<env> -- plugin install lh-hsts --activate` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run WP-CLI commands with <a href='/docs/terminus'>Terminus</a>. For details, see <a href='/docs/wp-cli'>Using WP-CLI On The Pantheon Platform</a>."><em class="fa fa-info-circle"></em></a></td>
-      <td>SFTP</td>
-    </tr>
-  </tbody>
-</table>
+ - Activating a new theme in the site admin,
+ - Uploading a new module or plugin using an SFTP client,
+ - Remote Drush commands, like `terminus remote:drush <site>.<env> -- pm-enable hsts --yes` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run Drush commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/drush/'>Drupal Drush Command-Line Utility</a>."><em class="fa fa-info-circle"></em></a>
+ - Remote WP-CLI commands, like `terminus remote:wp <site>.<env> -- plugin install lh-hsts --activate` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>."><em class="fa fa-info-circle"></em></a>
 
 ## WordPress Dashboard
 WordPress' admin interface has built in tools to manage plugins and themes, allowing you to install and manage popular themes and plugins from the main WordPress.org repository.
@@ -51,7 +29,7 @@ WordPress' admin interface has built in tools to manage plugins and themes, allo
 </div>
 
 ### Manage Plugins and Themes
-1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud pull-left"></span> Multidev** tab of your Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-new-window-alt"></span> Site Admin**, then login if you have not done so already.
+1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud"></span> Multidev** tab of your Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-new-window-alt"></span> Site Admin**, then login if you have not done so already.
 
 2. WordPress will let you know when there are plugin updates available:
 
