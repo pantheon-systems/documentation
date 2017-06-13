@@ -66,7 +66,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 3. With the basic variables defined, set up base config:
 
         $config = array (
-          'baseurlpath' => 'https://'. $host .'/simplesaml/',
+          'baseurlpath' => 'https://'. $host .':443/simplesaml/', // SAML should always connect via 443
           'certdir' => 'cert/',
           'loggingdir' => 'log/',
           'datadir' => 'data/',
