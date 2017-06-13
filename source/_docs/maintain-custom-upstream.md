@@ -19,7 +19,7 @@ Regardless of what type of update you're preparing for release, you'll want to t
 2. Name your site.
 3. Select your organization from the dropdown menu.
 4. Click **Create Site**.
-5. Select your Custom Upstream from the Organization Distribution framework options.
+5. Select the desired repository from the Custom Upstream options.
 6. Click **Visit your Pantheon Dashboard**.
 7. Click **Visit Development Site** and complete the installation process for the selected framework.
 
