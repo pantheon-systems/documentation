@@ -60,7 +60,7 @@ Follow development best practice workflows by [authenticating via SSH key for pa
 
 ## Committing SFTP Changes
 
-Even though you are unable to use Git to push remotely with SFTP mode enabled, you still need to commit your changes to save them, or push them to Test/Live. **Commit early and commit often**.
+Even though you are unable to use Git to push remotely with SFTP mode enabled, you still need to commit your changes to save them, or push them to Test/Live. **Commit early and commit often**.  Commits that are too large can exceed the 2 minute time limit and fail to complete. In those cases, temporarily remove some of your code changes (new modules or plugins), then try again.
 
 After you have made a change to your code, you will see a message that appears below the comment box to let you know you have some changes that are not in your repository. Clicking the notification message expands the listing of the pending changes.
 
