@@ -36,7 +36,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
 2. Select **<span class="glyphicons glyphicons-plus" aria-hidden="true"></span> Create New Site**. You’ll be asked to name this site and, if you’re part of an agency, associate this site with your organization.
 
-3. Select **Continue** to choose from the available default site frameworks and public distributions.
+3. Select **Continue** to choose from the available site frameworks.
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>

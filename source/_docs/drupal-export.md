@@ -24,7 +24,7 @@ When preparing a site for export, there are a few best practices to follow:
 
 To log back into your imported site that is in maintenance mode, just go to /user/login and login as UID 1 (the first administrative user).
 
-<div class="alert alert-danger" role="alert"><h4 class="info">Warning </h4><p>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if you use a site or distribution that relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</p></div>
+<div class="alert alert-danger" role="alert"><h4 class="info">Warning </h4><p>Importing automatically upgrades to the latest version of core. It's a best practice to keep core up-to-date to benefit from security and bug fixes, but if your site relies on an outdated version of core, you may experience incompatibilities. If you experience issues, see the troubleshooting documentation for your <a href="https://codex.wordpress.org/Updating_WordPress#Troubleshooting">WordPress</a> or <a href="https://www.drupal.org/troubleshooting"> Drupal</a> upstream.</p></div>
 
 ## Create Archive Using Backup and Migrate
 Create single-file archives for sites hosted elsewhere or locally with the [Backup and Migrate](https://www.drupal.org/project/backup_migrate) module. When creating the archive, choose to backup your **entire site (code, files, & DB)**. Download the archive and/or send it to NodeSquirrel for a publicly accessible URL.
