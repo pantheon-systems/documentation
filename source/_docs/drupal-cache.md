@@ -16,7 +16,7 @@ Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 minutes, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
 
-On Pantheon, this value defaults to 15 minutes. This is done on the first cache-clear operation on the site; immediately after installing the site, you may see this set to `&lt;no caching&gt;`. In this case, press the "Clear all caches" button, or select the page cache maximum age from the available selections.
+On Pantheon, this value defaults to 15 minutes. This is done on the first cache-clear operation on the site; immediately after installing the site, you may see this set to `<no caching>`. In this case, press the "Clear all caches" button, or select the page cache maximum age from the available selections.
 
 Note that Drupal 8 has no setting to configure the minimum cache lifetime.
 
