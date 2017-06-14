@@ -5,9 +5,9 @@ tags: [variables, workflow]
 categories: [drupal8]
 contributors: [peter-pantheon, rachelwhitton]
 ---
-The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev and any Multidev). This approach prevents debugging output and potentially harmful performance settings from being deployed to staging and production environments (Test and Live).
+The following instructions enable Twig debugging and set development-friendly performance options across Pantheon's pre-production environments (Dev & Multidevs). This approach prevents debugging output and potentially harmful performance settings from being deployed to staging and production environments (Test and Live).
 
-## Enable Twig Debugging on Dev and any Multidev
+## Enable Twig Debugging on Dev & Multidevs
 Pantheon handles the inclusion of service configuration files for pre-production and production environments [within our Drupal 8 upstream](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L31-L48). The [default file provided](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) has everything you need, so enabling Twig debugging is simple:
 
 1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/docs/git/#clone-your-site-codebase) or via [Terminus](/docs/terminus):
@@ -26,7 +26,7 @@ Pantheon handles the inclusion of service configuration files for pre-production
 
  ```
  git commit -am "Create pre-production service config file and enable Twig debug"
- git push origin master
+ git push -u origin master
  ```
 
 4. Clear caches on Dev within the Site Dashboard or via [Terminus](/docs/terminus):
@@ -54,6 +54,73 @@ Pantheon handles the inclusion of service configuration files for pre-production
 
 
 For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/docs/services-yml).
+
+
+## Enable Cacheability Debugging on Dev & Multidevs
+1. Add the [`sites/default/services.pantheon.preproduction.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) file to your project if you have not done so already.
+
+ This service file is used to manage settings across Pantheon's development environments, like Dev and Multidevs. Settings in this file are not applied to production environments, like Test and Live.
+
+2. Enable Drupal 8's [CacheableResponseInterface](https://www.drupal.org/docs/8/api/responses/cacheableresponseinterface#debugging) to help debug cache by setting the `http.response.debug_cacheability_headers` parameter to `true`:
+
+ ```yaml
+ parameter:
+   http.response.debug_cacheability_headers: true
+ ```
+
+3. Stage, commit, and push your changes to Pantheon:
+
+  ```
+  git commit -am "Pre-production enable cacheability debug service"
+  git push
+  ```
+
+4. Verify service setting and debug cache behavior by inspecting response headers on a development environment URL. If enabled, cacheabile responses will return `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts` headers such as:
+
+  ```bash
+  $ curl -I http://dev-cacheability-headers.pantheonsite.io/
+  HTTP/1.1 200 OK
+  Content-Language: en
+  Content-Type: text/html; charset=UTF-8
+  Expires: Sun, 19 Nov 1978 05:00:00 GMT
+  Server: nginx
+  Surrogate-Key-Raw:
+  X-Content-Type-Options: nosniff
+  X-Drupal-Cache: HIT
+  X-Drupal-Cache-Contexts: languages:language_interface route theme url.path.parent url.query_args url.site user.node_grants:view user.permissions user.roles:authenticated
+  X-Drupal-Cache-Tags: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.frontpage http_response node_list rendered
+  X-Drupal-Dynamic-Cache: MISS
+  X-Frame-Options: SAMEORIGIN
+  X-Generator: Drupal 8 (https://www.drupal.org)
+  X-Pantheon-Styx-Hostname: styx636a566b
+  X-Styx-Req-Id: styx-35a1aba57d002221875c6b7e2cc1b39c
+  X-Ua-Compatible: IE=edge
+  Via: 1.1 varnish
+  Fastly-Debug-Digest: de79e86995a4c200acef87d424acfbe0b7b74842553937c077e63c540cf738fc
+  Cache-Control: no-cache, must-revalidate, post-check=0, pre-check=0
+  Transfer-Encoding: chunked
+  Accept-Ranges: bytes
+  Date: Wed, 14 Jun 2017 20:59:54 GMT
+  Via: 1.1 varnish
+  Age: 0
+  Connection: keep-alive
+  X-Served-By: cache-ord1722-ORD, cache-atl6231-ATL
+  X-Cache: MISS, MISS
+  X-Cache-Hits: 0, 0
+  X-Timer: S1497473994.059642,VS0,VE51
+  Vary: Accept-Encoding, Cookie, Cookie
+  ```
+
+For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/docs/services-yml).
+
+
+### Troubleshoot 503 Response: Header Overflow
+Responses with HTTP headers that exceed 10k return 503 Header Overflow errors. If you get this error after enabling cacheability debugging, disable it in the offending service file (e.g. `sites/default/services.pantheon.preproduction.yml`):
+
+```yaml
+parameter:
+  http.response.debug_cacheability_headers: false
+```
 
 ## Override System Performance Settings Per Environment
 
