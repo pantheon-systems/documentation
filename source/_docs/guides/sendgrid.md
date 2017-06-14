@@ -91,7 +91,7 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 
 <div class="alert alert-info" role="alert">
       <h4 class="info">Note</h4>
-      <p markdown="1">Pantheon blocks ports `25`, `465`, and `587` to fight SPAM. Visit [Email on Pantheon](/docs/email/#what-ports-are-blocked-by-pantheon) to learn more. </p>
+      <p markdown="1">Pantheon blocks ports `25`, `465`, and `587` to fight SPAM. Visit <a href="/docs/email/#what-ports-are-blocked-by-pantheon" data-proofer-ignore>Email on Pantheon</a> to learn more. </p>
     </div>
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
