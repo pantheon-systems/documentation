@@ -63,10 +63,10 @@ For more information on Pantheon's service configuration files for Drupal, refer
 
 2. Enable Drupal 8's [CacheableResponseInterface](https://www.drupal.org/docs/8/api/responses/cacheableresponseinterface#debugging) to help debug cache by setting the `http.response.debug_cacheability_headers` parameter to `true`:
 
- ```yaml
- parameter:
-   http.response.debug_cacheability_headers: true
- ```
+    ```yaml
+    parameter:
+     http.response.debug_cacheability_headers: true
+    ```
 
 3. Stage, commit, and push your changes to Pantheon:
 
@@ -163,7 +163,7 @@ parameter:
 
  ```
  git commit -am "Override system performance configurations per env"
- git push origin master
+ git push
  ```
 
 
