@@ -75,52 +75,26 @@ For more information on Pantheon's service configuration files for Drupal, refer
   git push
   ```
 
-4. Verify service setting and debug cache behavior by inspecting response headers on a development environment URL. If enabled, cacheabile responses will return `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts` headers such as:
+4. Verify service setting and debug cache behavior by inspecting response headers on a development environment URL. If enabled, cacheable responses will return `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts` headers such as:
 
   ```bash
-  $ curl -I http://dev-cacheability-headers.pantheonsite.io/
-  HTTP/1.1 200 OK
-  Content-Language: en
-  Content-Type: text/html; charset=UTF-8
-  Expires: Sun, 19 Nov 1978 05:00:00 GMT
-  Server: nginx
-  Surrogate-Key-Raw:
-  X-Content-Type-Options: nosniff
-  X-Drupal-Cache: HIT
+  $ curl -I http://dev-cacheability-headers.pantheonsite.io/ | grep -E 'X-Drupal-Cache-Context|X-Drupal-Cache-Tags'
   X-Drupal-Cache-Contexts: languages:language_interface route theme url.path.parent url.query_args url.site user.node_grants:view user.permissions user.roles:authenticated
   X-Drupal-Cache-Tags: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.frontpage http_response node_list rendered
-  X-Drupal-Dynamic-Cache: MISS
-  X-Frame-Options: SAMEORIGIN
-  X-Generator: Drupal 8 (https://www.drupal.org)
-  X-Pantheon-Styx-Hostname: styx636a566b
-  X-Styx-Req-Id: styx-35a1aba57d002221875c6b7e2cc1b39c
-  X-Ua-Compatible: IE=edge
-  Via: 1.1 varnish
-  Fastly-Debug-Digest: de79e86995a4c200acef87d424acfbe0b7b74842553937c077e63c540cf738fc
-  Cache-Control: no-cache, must-revalidate, post-check=0, pre-check=0
-  Transfer-Encoding: chunked
-  Accept-Ranges: bytes
-  Date: Wed, 14 Jun 2017 20:59:54 GMT
-  Via: 1.1 varnish
-  Age: 0
-  Connection: keep-alive
-  X-Served-By: cache-ord1722-ORD, cache-atl6231-ATL
-  X-Cache: MISS, MISS
-  X-Cache-Hits: 0, 0
-  X-Timer: S1497473994.059642,VS0,VE51
-  Vary: Accept-Encoding, Cookie, Cookie
   ```
 
 For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/docs/services-yml).
 
 
 ### Troubleshoot 503 Response: Header Overflow
-Responses with HTTP headers that exceed 10k return 503 Header Overflow errors. If you get this error after enabling cacheability debugging, disable it in the offending service file (e.g. `sites/default/services.pantheon.preproduction.yml`):
+Responses with HTTP headers that exceed 10k return 503 Header Overflow errors. If you get this error after enabling cacheability debugging, disable it in the appropriate service file (e.g. `sites/default/services.pantheon.preproduction.yml`):
 
 ```yaml
 parameter:
   http.response.debug_cacheability_headers: false
 ```
+
+This issue can be found in varying circumstances, such as many fields on a content type that makes HTTP headers really long. For more information on cache tags, see [Cache tags](https://www.drupal.org/docs/8/api/cache-api/cache-tags).
 
 ## Override System Performance Settings Per Environment
 
