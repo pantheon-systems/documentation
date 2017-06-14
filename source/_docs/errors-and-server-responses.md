@@ -44,6 +44,8 @@ We recommend disabling Basic Auth to see if it works, and then re-enabling it. H
 ### 503 Header Overflow
 "Header overflow" The new Pantheon Global Edge size limit for cookies (as sent in the request `"Cookie: .."` header) is 10K. If more than that is sent, all cookies will be dropped and the request will continue to be processed as if no cookies had been sent at all. The header `"X-Cookies-Dropped: 1"` will be added to the request and response indicating that these have been truncated. You can either ignore this scenario in your PHP code or handle it (perhaps by displaying a custom error page).
 
+This response can also occur on Drupal 8 sites using the cacheability debug service, which can generate HTTP headers (e.g. `X-Drupal-Cache-Tags` and `X-Drupal-Cache-Contexts`) that exceed size limits. For details, see [Environment-Specific Configurations for Drupal 8](/docs/environment-specific-config-d8/#troubleshoot-503-response-header-overflow).
+
 ### Pantheon 503 Target in Maintenance
 "The web site you were looking for is currently undergoing maintenance." This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
