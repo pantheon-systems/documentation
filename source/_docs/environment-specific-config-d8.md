@@ -94,7 +94,7 @@ parameter:
   http.response.debug_cacheability_headers: false
 ```
 
-This issue can be found in varying conditions while Drupal generates a response, such as many fields on a content type which can make HTTP headers really long. For more information on cache tags, see [Cache tags](https://www.drupal.org/docs/8/api/cache-api/cache-tags).
+This issue can be caused by a number of scenarios related to cache tags, such as many fields on a content type causing Drupal to generate really long HTTP headers. For more information on cache tags, see [Cache tags](https://www.drupal.org/docs/8/api/cache-api/cache-tags).
 
 ## Override System Performance Settings Per Environment
 
