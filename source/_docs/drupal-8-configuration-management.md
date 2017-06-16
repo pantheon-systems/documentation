@@ -8,6 +8,16 @@ Managing configuration is an extremely important part of any team website projec
 
 Pantheon supports the [Drupal 8 Configuration Management system](https://www.drupal.org/documentation/administer/config) and defaults configuration into the `sites/default/config` directory for each Pantheon Drupal 8 site. You can export your configuration into that directory directly using Drush's config-export command or indirectly using Drupal's UI to download the configuration and then use SFTP/Git to place the configuration in `sites/default/config`. For more information on how this all works, check out Matt Cheney and David Strauss' presentation on [Drupal 8 CMI on Managed Workflow at Drupalcon Amsterdam](https://www.youtube.com/watch?v=eg2dtPFyGxs).
 
+<div class="panel panel-drop" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#d8-config-video"><h3 class="panel-title panel-drop-title" style="cursor:pointer;">Show me how </h3></a>
+  </div>
+  <div id="d8-config-video" class="collapse">
+    <script src="//fast.wistia.com/embed/medias/oczdbaylm0.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_oczdbaylm0 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+  </div>
+</div>
+
+
 ## Basic Workflow
 
 1.  With the Development environment in SFTP mode, export your configuration to code:
