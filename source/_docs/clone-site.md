@@ -64,5 +64,6 @@ If your database and code compressed are less than 256MB you can exclude the fil
 Go the to files directory of your existing site and check if the site archive was generated successfully. Visiting the archive link with a browser should download the files automatically. You may need to run the `drush ard` command from [above](#drupal) again if you can't find the site archive.
 
 ## See Also
+- <a href="https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank">The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span></a>
 - [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)
 - [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)

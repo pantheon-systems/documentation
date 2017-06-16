@@ -96,7 +96,8 @@ You can upload each of your archive files separately, or package the archives wi
 
 Only provide one `.sql` file; if multiple are present the import will fail.
 
-## Next Steps
+## See Also
+* <a href="https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank">The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span></a>
 - [Migrate Sites to Pantheon](/docs/migrate)
 - [Migrate Sites to Pantheon: Manual Method Outside of the Pantheon Dashboard](/docs/migrate-manual/)
 - [Migrate to Pantheon: WordPress Site Networks](/docs/wordpress-site-networks/)

@@ -106,6 +106,7 @@ Automatic merge went well; stopped before committing as requested</code></pre>
 Follow any remaining steps within [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual) such as adding your MySQL database or uploading files.
 
 ## See Also
+* <a href="https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank">The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span></a>
 * [Starting with Git](/docs/git/)
 * [Accessing MySQL Databases](/docs/mysql-access/)
 * [rsync and SFTP](/docs/rsync-and-sftp/)

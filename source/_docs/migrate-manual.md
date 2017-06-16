@@ -146,6 +146,7 @@ terminus site:import <site> <url>
 Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our Long Term Support (LTS) partners: [Tag1 Consulting](https://tag1consulting.com/) or [myDropWizard](https://www.mydropwizard.com/drupal-6-lts). Both of these partners are experienced in supporting sites on the Pantheon platform and specialize in maintaining security and site functionality for Drupal 6 sites. Should you need to keep your site running on D6, you will be in excellent hands working with them.
 
 ## See Also
+* <a href="https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank">The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span></a>
 * [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)
 * [Developing on Pantheon Directly with SFTP Mode](/docs/sftp/)
 * [Starting with Git](/docs/git/)
