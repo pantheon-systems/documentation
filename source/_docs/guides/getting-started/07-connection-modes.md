@@ -27,7 +27,7 @@ In this lesson, we’ll learn how to connect to your Dev environment and change 
     <p>Dev is the only environment on Pantheon where you can add or change code, so it’s the only place you can access and change your Connection Mode.
     </p></div>
 
-On Pantheon, you can connect and work via [Git](https://git-scm.com/), or you can connect and work via SFTP.
+On Pantheon, you can connect and work via <a href="https://git-scm.com/">Git <span class="glyphicons glyphicons-new-window-alt"></span></a>, or you can connect and work via SFTP.
 
 ##Git Connection Mode
 
