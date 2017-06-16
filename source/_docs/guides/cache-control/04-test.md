@@ -18,13 +18,13 @@ editpath: cache/04-test.md
 ---
 Every response served by the platform is accompanied by a number of headers. These are the same headers that Pantheon's Global CDN uses when determining if and for how long to cache content.
 
-<div class="panel panel-video panel-guide">
+<div class="panel panel-drop panel-guide">
   <script src="//fast.wistia.com/embed/medias/pugjxn19gi.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_pugjxn19gi videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
 </div>
 
-<div class="panel panel-video panel-guide" id="accordion">
-  <div class="panel-heading panel-video-heading">
-    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#http-headers"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> HTTP Header Glossary (Optional)</h3></a>
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#http-headers"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> HTTP Header Glossary (Optional)</h3></a>
   </div>
   <div id="http-headers" class="collapse" style="padding:10px;">
     <div markdown="1">

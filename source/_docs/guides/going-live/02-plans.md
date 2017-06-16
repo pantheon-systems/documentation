@@ -67,9 +67,9 @@ You can either invite a business owner to pay or you can use your own credit car
   </div>
 </div>
 
-<div class="panel panel-video panel-guide" id="accordion">
-  <div class="panel-heading panel-video-heading">
-    <a class="accordion-toggle panel-video-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific1"><h3 class="panel-title panel-video-title" style="cursor:pointer;"><i class="fa fa-graduation-cap" style="line-height:.9"></i> Level Up: Load and Performance Test (Optional)</h3></a>
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific1"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><i class="fa fa-graduation-cap" style="line-height:.9"></i> Level Up: Load and Performance Test (Optional)</h3></a>
   </div>
   <div id="host-specific1" class="collapse" style="padding:10px;">
     <div markdown="1">
