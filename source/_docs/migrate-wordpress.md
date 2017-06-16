@@ -80,7 +80,7 @@ You'll need to [manually migrate](/docs/migrate-manual) site archives that excee
 Most migrations are completed within two hours. The migration time depends solely on the size of your site, so be aware that it may take more or less time than estimated. We will send you an email once your migration is complete. If there are any issues with the migration, we will notify you by email.
 
 ## See Also
-
+- <a href="https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank">The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span></a>
 - [Migrate to Pantheon: WordPress Site Networks](/docs/migrate-wordpress-site-networks)
 - [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)
 - [Platform Considerations](/docs/platform-considerations)
