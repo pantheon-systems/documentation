@@ -29,9 +29,9 @@ In this lesson, we learn about the Dev, Test, Live workflow and explore a Panthe
     <p>Agencies have access to additional development environments under the <strong><span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev</strong> tab.
     </p></div>
 
-    **Dev**
+    **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev**
     
-    By default, you’ll find yourself on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
+    By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
 
     Within the safety of this isolated environment, you can edit code and make updates to your site. In fact, all development on your Pantheon sites starts here.
 
@@ -63,7 +63,7 @@ In this lesson, we learn about the Dev, Test, Live workflow and explore a Panthe
   </div>
 <div id="site-dashboard-tour" class="collapse">
 <div class="panel-inner" markdown="1">
- <div markdown="1">- **Workflows:** View workflows that are active or recently completed.
+    - **Workflows:** View workflows that are active or recently completed.
 
       - **<span class="glyphicons glyphicons-group" aria-hidden="true"></span> Team:** Add or remove Team Members, as well as Supporting Organizations.
 
