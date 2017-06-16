@@ -269,6 +269,9 @@ define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
 ```
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/docs/assuming-write-access/#create-a-symbolic-link).
 
+### [Bookly](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/)
+**Issue**: The sessions are implemented in a way that will still not allow it to function with the WP Native Sessions plugin either installed as a regular plugin or a mu-plugin. 
+
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 **Issue**: This plugin utilizes a static value, `$_SERVER['SERVER_NAME']`, instead of `$_SERVER['HTTP_HOST']` which is generated dynamically.
 
