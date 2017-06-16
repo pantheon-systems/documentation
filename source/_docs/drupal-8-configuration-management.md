@@ -10,7 +10,7 @@ Pantheon supports the [Drupal 8 Configuration Management system](https://www.dru
 
 <div class="panel panel-drop" id="accordion">
   <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#d8-config-video"><h3 class="panel-title panel-drop-title" style="cursor:pointer;">Show me how </h3></a>
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#d8-config-video"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-facetime-video"></span> Watch: Configuration Management in Drupal </h3></a>
   </div>
   <div id="d8-config-video" class="collapse">
     <script src="//fast.wistia.com/embed/medias/oczdbaylm0.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_oczdbaylm0 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
