@@ -18,7 +18,7 @@ editpath: 04-site-dashboard.md
 image: getting-started-Largethumb
 ---
 
-In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Test, Live workflow.
+In this lesson, we'll explore the Site Dashboard and learn about the Dev, Test, Live workflow.
 
 1. Navigate back to the Pantheon **Site Dashboard**.
 
@@ -26,7 +26,7 @@ In this lesson, you’ll explore the Site Dashboard and learn about the Dev, Tes
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p>Agencies have access to additional development environments under the <strong><a href="/docs/multidev"><span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev</a></strong> tab.
+    <p>Agencies have access to additional development environments under the <strong><span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev</strong> tab.
     </p></div>
 
   By default, you’ll find yourself on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
