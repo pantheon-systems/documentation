@@ -47,7 +47,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
     <div class="panel panel-drop panel-guide" id="accordion">
       <div class="panel-heading panel-drop-heading">
-         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-deploy"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Deploy a Site on Pantheon</h3></a>
+         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-deploy"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Deploy a Site on Pantheon (optional)</h3></a>
        </div>
        <div id="understand-deploy" class="collapse">
          <div class="panel-inner" markdown="1">
