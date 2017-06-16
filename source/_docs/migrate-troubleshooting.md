@@ -154,6 +154,6 @@ If multiple `settings.php` files are present the import will fail. Pantheon does
 
 ## See Also
 * <a href="https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank">The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span></a>
- * [Migrate Sites to Pantheon](/docs/migrate)
- * [Log Files on Pantheon](/docs/logs/)
- * [Using the Pantheon Workflow](/docs/pantheon-workflow)
+* [Migrate Sites to Pantheon](/docs/migrate)
+* [Log Files on Pantheon](/docs/logs/)
+* [Using the Pantheon Workflow](/docs/pantheon-workflow)
