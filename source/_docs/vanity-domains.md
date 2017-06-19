@@ -11,12 +11,19 @@ The Vanity domain can either be a subdomain of your primary site (`sites.mydomai
 If a subdomain of your primary site is configured, a newly created site named "supersite" will then have a Dev environment URL of `dev-supersite.sites.mydomain.com`. If a dedicated domain name is used, the site would instead have a Dev environment URL of `dev-supersite.mypantheonprojects.com`.
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p><strong>Pantheon Partners:</strong> Running your agency's primary site on Pantheon is <strong>free</strong>, as is the option to add an SSL. This means you can use your primary site as an HTTPS endpoint at no cost. This offer is available to Pantheon Partner organizations exclusively. For more information, see <a href="/docs/enable-https-vanity-domain">Enable HTTPS for Sites Using a Custom Vanity Domain</a>.</p>
+<p><strong>Pantheon Partners:</strong> Running your agency's primary site on Pantheon is <strong>free</strong>, as is the option to add SSL encryption. This means you can use your primary site as an HTTPS endpoint at no cost. This offer is available to Pantheon Partner organizations exclusively. For more information, see <a href="/docs/enable-https-vanity-domain">Enable HTTPS for Sites Using a Custom Vanity Domain</a>.</p>
 </div>
 
 ## Request the Vanity Domain
 
 From your Organization Dashboard, go to Dashboard and [submit a support request](/docs/getting-support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
+
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">We recommend using a separate domain from your production site. This prevents any security issues related to domain-specific cookies. Even the same domain under a different TLD (`.com`, `.net`, etc) would suffice.
+</p>
+</div>
 
 ## Create a Wildcard CNAME Record
 
