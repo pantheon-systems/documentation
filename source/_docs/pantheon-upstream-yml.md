@@ -5,15 +5,13 @@ tags: [pantheonyml, infrastructure]
 categories: []
 ---
 
-Hook into platform workflows and add advanced site configuration via the `pantheon.yml` file. In addition, the upstream repository for a site may define default values for these configuration properties in a `pantheon.upstream.yml` file.
-
-The `pantheon.upstream.yml` file may contain any of the settings described in the [Advanced Configuration](/docs/pantheon-yml/#advanced-site-configuration) section of the [pantheon.yml file documentation](/docs/pantheon-yml). The `api_version` property is mandetory in `pantheon.upstream.yml` file, just as it is in `pantheon.yml`.
+The `pantheon.upstream.yml` file contains default values for the configuration settings stored in the `pantheon.yml` file. `pantheon.upstream.yml` may contain any of the settings described in the [Advanced Configuration](/docs/pantheon-yml/#advanced-site-configuration) section of the [pantheon.yml file documentation](/docs/pantheon-yml). The `api_version` property is mandetory in `pantheon.upstream.yml` file, just as it is in `pantheon.yml`.
 
 The `pantheno.upstream.yml` file cannot define any Quicksilver workflows.
 
 If a property such as `php_version` is defined in `pantheon.upstream.yml`, then its value will be used only if the `pantheon.yml` file does not define the same property. Configuration will always be taken from `pantheon.yml` whenever it exists there.
 
-The `pantheon.upstream.yml` file should only be edited in the upstream repository where it is defined; configuration changes for a specific site should be made with the `pantheon.yml` file. See the [Create a Custom Upstream](/docs/create-custom-upstream) documentation for information on how to set up an upstream.
+The `pantheon.upstream.yml` file may only be edited in the upstream repository where it is defined; configuration changes for a specific site should be made with the `pantheon.yml` file. See the [Create a Custom Upstream](/docs/create-custom-upstream) documentation for information on how to set up an upstream. Similarly, an upstream should not define a `pantheon.yml` file; it should place configuration settings in `pantheon.upstream.yml` instead.
 
 ### Example File Contents
 
