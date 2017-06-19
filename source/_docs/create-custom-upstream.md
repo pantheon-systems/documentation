@@ -69,6 +69,8 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     </div>
     </div>
 
+3. Examine the [pantheon.upstream.yml](/docs/pantheon-upstream-yml) file, and customize the settings as desired for your upstream. Confirm that the upstream repository does **not** contain a `pantheon.yml` file. If one exists, it should be removed.
+
 ## Grant Pantheon Access (Privately Hosted Repositories Only)
 For privately hosted repositories, create a dedicated user with read-only access to the repository. The password should only contain alphanumeric characters, depending on your host's password limitations.
 

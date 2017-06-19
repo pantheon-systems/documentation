@@ -7,6 +7,7 @@ categories: []
 
 Hook into platform workflows and add advanced site configuration via the `pantheon.yml` file. To get started, create a new file named `pantheon.yml` in the root of your site's code repository. Refer to [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) for example configurations. Refer to the [Pantheon Cloud Integration Examples](https://github.com/pantheon-systems/quicksilver-examples) repository for example scripts for use with Quicksilver Platform Hooks.
 
+The advanced site configuration properties define how your Pantheon environments will behave. Default values for these properties may also be stored in a [pantheon.upstream.yml](/docs/pantheon-upstream-yml) file. The `pantheon.upstream.yml` file should only be edited in the upstream repository where it is defined. In the repository for a Pantheon site, changes should only be made to the `pantheon.yml` file, as described below.
 
 ## Advanced Site Configuration
 ### Required Properties
