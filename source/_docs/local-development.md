@@ -167,7 +167,7 @@ Instead, we recommend using a local configuration file (e.g. `settings.local.php
 
 ### Drupal 8 and WordPress
 
-Pantheon's Drupal 8 and WordPress upstreams apply `settings.local.php` or `wp-config-local.php` when found and ignore them from git without additional steps required. All you need to do is create a `settings.local.php` or `wp-config-local.php` file then use it to configure your local setup.
+Pantheon's [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/f1e72395cbc3bc76768eaec725a4e7fa18848cf3/sites/default/settings.php#L17) and [WordPress](https://github.com/pantheon-systems/WordPress/blob/344fc6e61998f44806d25eb6232dd068055b532b/wp-config.php#L18) upstreams apply `settings.local.php` or `wp-config-local.php` when found and ignore them from git without additional steps required. All you need to do is create a `settings.local.php` or `wp-config-local.php` file then use it to configure your local setup.
 
 ### Drupal 7
 
