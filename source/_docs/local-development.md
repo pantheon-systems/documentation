@@ -37,25 +37,22 @@ You will need to transfer each one from Pantheon to your local environment.
 
 The first step is to get a `git clone` of your code from Pantheon to your local computer.
 
-### Step 1: Go to Your Site Dashboard
+1. Go to Your Site Dashboard, and log in to Pantheon and load the Dashboard for the site you want to work on.
 
-Log in to Pantheon and load the Dashboard for the site you want to work on.
+2. At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
 
-### Step 2: Copy the Git Clone Command
+    ![Copy Past Git Clone](/source/docs/assets/images/dashboard/git-string.png)<br />
 
-At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:<br />
-![Copy Past Git Clone](/source/docs/assets/images/dashboard/git-string.png)<br />
+3. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
 
-### Step 3: Run Git Clone
+    ```nohighlight
+    git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
+    ```
+    If everything worked correctly, you will see Git fetching the data:
 
-On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
+    ![Git Clone During](/source/docs/assets/images/git_clone.png)<br />
 
-```nohighlight
-git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
-```
-If everything worked correctly, you will see Git fetching the data:<br />
-![Git Clone During](/source/docs/assets/images/git_clone.png)<br />
-If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+    If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Get the Database
 
@@ -63,30 +60,34 @@ If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup
 From within the Site Dashboard:
 
 1. Create an on-demand backup by selecting **Database / Files** > **Export** > **Export Database**.
+
 2. Download the scheduled or on-demand backup by selecting **Backups** > **Backup Log** > **Database download link**.
+
 3. Import the database into your local environment using a MySQL client:
 
-````sql
-$ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
-````
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</p></div>
+    ````sql
+    $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
+    ````
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p>Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</p></div>
 
 ### Via Terminus
-Create and get the database by running the following Terminus commands:
 
-```nohighlight
-terminus backup:create <site>.<env> --element=db
-terminus backup:get <site>.<env> --element=db
-```
+1. Create and get the database with Terminus commands:
+
+    ```nohighlight
+    terminus backup:create <site>.<env> --element=db
+    terminus backup:get <site>.<env> --element=db
+    ```
 
 
-Import the archive into your local MySQL database using the following command:
+2. Import the archive into your local MySQL database using the following command:
 
-````sql
-$ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
-````
+    ````sql
+    $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
+    ````
+
 ## Get the Files
 
 For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/docs/rsync-and-sftp/).
@@ -159,26 +160,32 @@ Send files using SFTP:
 You can also transfer a single file or a single directory at a time instead of transferring every file, every time.
 
 ## Local Configuration Files
+
 You'll need to configure database credentials matching your local database to develop locally. You don't want to manually change these details in your primary configuration file (e.g. `settings.php` or `wp-config.php`) because you could easily commit that change to version control and trigger a connection error on Dev when pushing to Pantheon.
 
 Instead, we recommend using a local configuration file (e.g. `settings.local.php` or `wp-config-local.php`) that is excluded from version control and included by `settings.php` or `wp-config.php` when found. Since the local configuration file is ignored by git, it won't be found on Pantheon but it will be applied when you run the site locally.
 
+### Drupal 8 and WordPress
+
 Pantheon's Drupal 8 and WordPress upstreams apply `settings.local.php` or `wp-config-local.php` when found and ignore them from git without additional steps required. All you need to do is create a `settings.local.php` or `wp-config-local.php` file then use it to configure your local setup.
 
-However, Drupal 7 users will need to include it within their `settings.php` file:
+### Drupal 7
 
-```
-/**
- * Include a local settings file if it exists. D7 only
- */
-$local_settings = dirname(__FILE__) . '/settings.local.php';
-if (file_exists($local_settings)) {
-  include $local_settings;
-}
-```
+1. Drupal 7 users will need to specify a local settings file  within their `settings.php` file:
 
-Drupal 7 users will also need to exclude the local configuration file from git by adding the following to `.gitignore`:
+    ```
+    /**
+     * Include a local settings file if it exists. D7 only
+     */
+    $local_settings = dirname(__FILE__) . '/settings.local.php';
+    if (file_exists($local_settings)) {
+      include $local_settings;
+    }
+    ```
 
-```
-sites/*/settings.local.php
-```
+2. You will also need to exclude the local configuration file from git, by adding the following to `.gitignore`:
+
+    ```
+    sites/*/settings.local.php
+    ```
+
