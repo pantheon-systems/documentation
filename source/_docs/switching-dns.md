@@ -14,7 +14,7 @@ There are some scenarios (e.g. a redesigned site) where you may want to switch a
 
 ## Prepare The New Site
 
-For information on preparing your site for launch, please review our [Going Live best practices](/docs/going-live/).
+For information on preparing your site for launch, please review our [Going Live best practices](/docs/guides/going-live/).
 
 ### Select a site plan
 

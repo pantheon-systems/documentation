@@ -236,7 +236,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 ### [Varnish](https://www.drupal.org/project/varnish)
 **Issue**: Conflicts with the existing platform configuration.
 
-**Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache/)
+**Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Cache Control Manual: Cache a Page](/docs/guides/cache/hit/)
 <hr>
 
 ### [Views data export](https://www.drupal.org/project/views_data_export)

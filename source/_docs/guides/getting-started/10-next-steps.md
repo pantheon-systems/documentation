@@ -23,7 +23,7 @@ But this is just the tip of the iceberg. Ready to learn more? Here are just some
 - Set up a [Local Development](/docs/local-development) environment (We like [Kalabox](/docs/kalabox/), but you can use anything you want).
 - If you’re on a team, start using [Multidev environments](/docs/multidev).
 - Install [Terminus](/docs/terminus), and start interacting with Pantheon from the command line.
-- Take your site live! Just follow this [Going Live checklist](/docs/going-live).
+- Take your site live! Just follow this [Going Live Guide](/docs/guides/going-live).
 
 
 <iframe frameborder="0" width="100%" height="300px" src="https://www.getfeedback.com/r/12z1fMzn?page={{page.url}}&topic={{page.categories|last}}"></iframe>

@@ -46,7 +46,7 @@ If you are experiencing issues with theme images not refreshing, you can manuall
 To make sure there are not any other errors within Drupal that may be preventing images from being cached, see if there are any `drupal_set_message()` calls are being sent to the page. If you are doing theme development, also make sure that the `drupal_set_message()` errors are not being suppressed in the theme.
 
 ## No HTTP Cache Headers in Drupal
-If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/drupal-cache). Once you have completed this step, go back and check the HTTP headers to verify that Pantheon's Global CDN is working.
+If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/guides/cache/hit/). Once you have completed this step, go back and check the HTTP headers to verify that Pantheon's Global CDN is working.
 
 If you are still getting `no-cache, must-revalidate, post-check=0, pre-check=0` as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) disables page caching. Also check to see if messages are present in page templates; themes could have removed them to suppress user facing messages.
 
