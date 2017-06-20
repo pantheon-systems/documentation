@@ -63,6 +63,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
       $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
 
       $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
+      $settings['cache_prefix']['default'] = 'pantheon-redis'; 
 
       // Always set the fast backend for bootstrap, discover and config, otherwise this gets lost when redis is enabled.
       $settings['cache']['bins']['bootstrap'] = 'cache.backend.chainedfast';
