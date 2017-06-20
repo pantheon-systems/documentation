@@ -21,6 +21,11 @@ Now that you've upgraded to a paid plan, we're ready to connect a Custom Domain 
 
 If your project requires use of a custom certification (e.g. extended validation) refer to our [legacy HTTPS service](/docs/enable-https/) for this part of the going live procedure, then pick up on the next lesson of this guide.
 
+**Watch the video:**
+<div class="panel panel-drop panel-guide">
+<script src="//fast.wistia.com/embed/medias/h840dbemsi.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_h840dbemsi videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+</div>
+
 ## Add Domain(s) to the Live Environment
 1. From the Site Dashboard, select the **<span class="glyphicons glyphicons-cardio"></span> Live** tab, and click **<span class="glyphicons glyphicons-global"></span> Domains & HTTPS**.
 2. Click the **Connect a Domain** button and enter the bare domain (e.g. `example.com`) then click **Connect Domain**. We recommend you repeat this step for the `www` subdomain - even if you do not plan to use it as your primary domain.
