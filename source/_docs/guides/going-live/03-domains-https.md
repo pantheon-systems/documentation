@@ -34,15 +34,15 @@ If your project requires use of a custom certification (e.g. extended validation
 ## Avoid HTTPS Interruption (Optional)
 Domains added to the Site Dashboard that are pointing to an existing site and accessible via HTTPS have the option to prove ownership and pre-provision certificates in order to avoid HTTPS service interruption.
 
-This will kick off the automated task of generating your domain's HTTPS certificate, allowing you to switch DNS destinations from your existing site to your new Pantheon site without downtime. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**:
-
-![Domain & HTTPS Status: Prove Ownership](/source/docs/assets/images/dashboard/domains/prove-ownership.png)
+Once this step is complete, your domain's HTTPS certificate(s) will automatically begin generating. When the certificate is ready you can switch DNS destinations from your existing site to your new Pantheon site without downtime.
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
 Skipping this step may result in service interruption for existing sites that require or expect HTTPS.
 </div>
 
+1. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**.
+2. Upload the file to your live site.
 
     <div class="panel panel-drop panel-guide" id="accordion">
       <div class="panel-heading panel-drop-heading">
@@ -59,7 +59,7 @@ Skipping this step may result in service interruption for existing sites that re
       </div>
     </div>
 
-2. Return to the Site Dashboard on Pantheon and refresh the **<span class="glyphicons glyphicons-global"></span> Domains & HTTPS** page.
+3. Return to the Site Dashboard on Pantheon and refresh the **<span class="glyphicons glyphicons-global"></span> Domains & HTTPS** page.
 
   Once the certificates have been provisioned, you may safely continue without fear of HTTPS service interruption.
 
@@ -67,9 +67,7 @@ Skipping this step may result in service interruption for existing sites that re
 ## Configure DNS
 1. Domains that have not been routed to Pantheon will indicate **Action Required** in the Site Dashboard, like so:
 
-  ![Domain & HTTPS Status: Action Required](/source/docs/assets/images/dashboard/domains-status-action-required.png)
-
-  Click the **DNS Recommendations** button next to your domain.
+  ![Domain & HTTPS Status: Action Required](/source/docs/assets/images/dashboard/domains/domains-status-action-required.png)
 
 2. In a separate window, login to the DNS host for the domain and configure the recommended records.
 
@@ -88,9 +86,9 @@ Skipping this step may result in service interruption for existing sites that re
       </div>
     </div>
 
-Unless you went through the steps to prove domain ownership to pre-provision certificates, you'll see HTTPS upgrade in progress within an hour of pointing DNS to Pantheon:
+Unless you went through the steps to prove domain ownership to pre-provision certificates, you'll see HTTPS in progress within an hour of pointing DNS to Pantheon:
 
-  ![Domain & HTTPS Status: Upgrading](/source/docs/assets/images/dashboard/domains-status-upgrading.png)
+  ![Domain & HTTPS Status: Upgrading](/source/docs/assets/images/dashboard/domains/https-provisioning.png)
 
 Once DNS is configured and your certificates are done provisioning, the status should indicate successful configuration:
 
