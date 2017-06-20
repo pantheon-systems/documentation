@@ -16,6 +16,7 @@ Be sure that you have a:
 
 ## Configure DNS Records on 1&1
 ### A/AAAA Records
+
 1. Click **Domain Center** from the Domains panel.
 2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Edit DNS Settings**.
 3. Click the **Other IP address** option from the IP address (A Record) menu.

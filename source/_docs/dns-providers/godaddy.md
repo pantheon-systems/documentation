@@ -10,6 +10,7 @@ editpath: dns-providers/godaddy.md/
 ## Before You Begin
 Be sure that you have a:
 
+
 - Registered domain name using GoDaddy to host DNS
 - [Paid Pantheon plan](/docs/guides/going-live/plans/)
 - [Domain connected](/docs/guides/going-live/domains/) to the target Pantheon environment (typically Live)
