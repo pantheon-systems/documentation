@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your eNom domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/enom.md/
+editpath: dns-providers/enom.md/
 ---
 ## Before You Begin
 Be sure that you have a:

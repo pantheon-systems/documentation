@@ -1,11 +1,11 @@
 ---
-title: Name.com Domain Configuration
-provider: Name.com
+title: Microsoft Domain Configuration
+provider: Microsoft
 dnsprovider: true
-description: Learn how to point your Name.com domain to a Pantheon site.
+description: Learn how to point your Microsoft domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/name-com.md/
+editpath: dns-providers/microsoft.md/
 ---
 ## Before You Begin
 Be sure that you have a:

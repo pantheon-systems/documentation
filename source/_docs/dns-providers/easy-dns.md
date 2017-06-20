@@ -1,11 +1,11 @@
 ---
-title: Hover Domain Configuration
-provider: Hover
+title: Easy DNS Domain Configuration
+provider: Easy DNS
 dnsprovider: true
-description: Learn how to point your Hover domain to a Pantheon site.
+description: Learn how to point your Easy DNS domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/hover.md/
+editpath: dns-providers/easy-dns.md/
 ---
 ## Before You Begin
 Be sure that you have a:

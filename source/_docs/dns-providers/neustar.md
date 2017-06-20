@@ -1,11 +1,11 @@
 ---
-title: Bluehost Domain Configuration
-provider: Bluehost
+title: Neustar UltraDNS Domain Configuration
+provider: Neustar UltraDNS
 dnsprovider: true
-description: Learn how to point your Bluehost domain to a Pantheon site.
+description: Learn how to point your Neustar UltraDNS domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/bluehost.md/
+editpath: dns-providers/neustar.md/
 ---
 ## Before You Begin
 Be sure that you have a:

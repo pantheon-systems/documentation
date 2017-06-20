@@ -136,6 +136,9 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
               else
             grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"$guide"]("$url"/docs/"$guide")\n" >> comment.txt
             fi
+          elif ls -R source/_docs/dns-providers | grep '^\<'"${doc:27: -3}"'\>'
+            then
+              grep -- '\<'"${doc:27: -3}"'\>' comment.txt || echo -n "-\u0020[/"${doc:27: -3}"]("$url"/docs/"${doc:27: -3}")\n" >> comment.txt
           else
             grep -- '\<'"${doc:8: -3}"'\>' comment.txt || echo -n "-\u0020[/"${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
         fi

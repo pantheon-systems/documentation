@@ -1,11 +1,11 @@
 ---
-title: Neustar UltraDNS Domain Configuration
-provider: Neustar UltraDNS
+title: DNSimple Domain Configuration
+provider: Akamai
 dnsprovider: true
-description: Learn how to point your Neustar UltraDNS domain to a Pantheon site.
+description: Learn how to point your DNSimple domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/neustar.md/
+editpath: dns-providers/dnsimple.md/
 ---
 ## Before You Begin
 Be sure that you have a:

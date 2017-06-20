@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your GoDaddy domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/godaddy.md/
+editpath: dns-providers/godaddy.md/
 ---
 ## Before You Begin
 Be sure that you have a:

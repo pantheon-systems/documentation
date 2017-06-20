@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your DreamHost domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/dreamhost.md/
+editpath: dns-providers/dreamhost.md/
 ---
 ## Before You Begin
 Be sure that you have a:

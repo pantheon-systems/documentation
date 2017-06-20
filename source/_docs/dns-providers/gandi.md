@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your Gandi domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/gandi.md/
+editpath: dns-providers/gandi.md/
 ---
 ## Before You Begin
 Be sure that you have a:

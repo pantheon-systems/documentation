@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your Dyn domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/dyn.md/
+editpath: dns-providers/dyn.md/
 ---
 ## Before You Begin
 Be sure that you have a:

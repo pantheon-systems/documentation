@@ -1,11 +1,11 @@
 ---
-title: HostGator Domain Configuration
-provider: HostGator
+title: Akamai Domain Configuration
+provider: Akamai
 dnsprovider: true
-description: Learn how to point your HostGator domain to a Pantheon site.
+description: Learn how to point your Akamai domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/hostgator.md/
+editpath: dns-providers/akamai.md/
 ---
 ## Before You Begin
 Be sure that you have a:

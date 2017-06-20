@@ -1,11 +1,11 @@
 ---
-title: Cloudflare Domain Configuration
-provider: Cloudflare
+title: Hover Domain Configuration
+provider: Hover
 dnsprovider: true
-description: Learn how to point your Cloudflare domain to a Pantheon site.
+description: Learn how to point your Hover domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/cloudflare.md/
+editpath: dns-providers/hover.md/
 ---
 ## Before You Begin
 Be sure that you have a:

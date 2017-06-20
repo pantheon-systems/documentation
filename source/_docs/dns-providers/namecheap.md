@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your Namecheap domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/namecheap.md/
+editpath: dns-providers/namecheap.md/
 ---
 ## Before You Begin
 Be sure that you have a:

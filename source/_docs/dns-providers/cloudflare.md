@@ -1,11 +1,11 @@
 ---
-title: DNS Made Easy Domain Configuration
-provider: DNS Made Easy
+title: Cloudflare Domain Configuration
+provider: Cloudflare
 dnsprovider: true
-description: Learn how to point your DNS Made Easy domain to a Pantheon site.
+description: Learn how to point your Cloudflare domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/dns-made-easy.md/
+editpath: dns-providers/cloudflare.md/
 ---
 ## Before You Begin
 Be sure that you have a:

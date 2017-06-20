@@ -1,11 +1,11 @@
 ---
-title: DNSimple Domain Configuration
-provider: Akamai
+title: Name.com Domain Configuration
+provider: Name.com
 dnsprovider: true
-description: Learn how to point your DNSimple domain to a Pantheon site.
+description: Learn how to point your Name.com domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/dnsimple.md/
+editpath: dns-providers/name-com.md/
 ---
 ## Before You Begin
 Be sure that you have a:

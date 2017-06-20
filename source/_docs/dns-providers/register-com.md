@@ -1,20 +1,20 @@
 ---
-title: 123 Reg Domain Configuration
-provider: Google
+title: Register.com Domain Configuration
+provider: Register.com
 dnsprovider: true
-description: Learn how to point your 123 Reg domain to a Pantheon site.
+description: Learn how to point your Register.com domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/123-reg.md/
+editpath: dns-providers/register-com.md/
 ---
 ## Before You Begin
 Be sure that you have a:
 
-- Registered domain name using 123 Reg to host DNS
+- Registered domain name using Cloudflare to host DNS
 - [Paid Pantheon plan](/docs/guides/going-live/plans/)
 - [Domain connected](/docs/guides/going-live/domains/) to the target Pantheon environment (typically Live)
 
-## Configure DNS Records on 123 Reg
+## Configure DNS Records on Cloudflare
 ### A Record
 1. Click **DNS** in the menu bar.
 2. Select **A** from the dropdown menu.

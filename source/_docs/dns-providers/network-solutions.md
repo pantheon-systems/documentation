@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your Network Solutions domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/network-solutions.md/
+editpath: dns-providers/network-solutions.md/
 ---
 ## Before You Begin
 Be sure that you have a:

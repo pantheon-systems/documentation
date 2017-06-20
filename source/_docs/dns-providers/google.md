@@ -1,11 +1,11 @@
 ---
-title: Route 53 Domain Configuration
-provider: Route 53
+title: Google Domain Configuration
+provider: Google
 dnsprovider: true
-description: Learn how to point your Route 53 domain to a Pantheon site.
+description: Learn how to point your Google domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: going-live/domains/route-53.md/
+editpath: dns-providers/google.md/
 ---
 ## Before You Begin
 Be sure that you have a:
