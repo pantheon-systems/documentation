@@ -54,12 +54,12 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
   # Update CTA edit link so that the current branch is used
-  sed -i '18s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
+  sed -i '26s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
   sed -i '33s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
   sed -i '15s/master/'"$CIRCLE_BRANCH"'/g' source/_views/video.html
   sed -i '27s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
   sed -i '29s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
-  sed -i '20i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
+  sed -i '31i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
   sed -i '35i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/terminuspage.html
   sed -i '17i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/video.html
   sed -i '32i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/guide.html
