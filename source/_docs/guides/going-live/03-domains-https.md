@@ -31,7 +31,7 @@ If your project requires use of a custom certification (e.g. extended validation
 
   You must [purchase the domain from some third-party registrar](https://whois.icann.org/en/domain-name-registration-process) in order to connect it to Pantheon. Once registered, click **Recheck Domain Details** to refresh the configuration status of your domain in the Site Dashboard.
 
-## Avoid HTTPS Interruption (Optional)
+## Prove Ownership (Optional)
 Domains added to the Site Dashboard that are pointing to an existing site and accessible via HTTPS have the option to prove ownership and pre-provision certificates in order to avoid HTTPS service interruption.
 
 Once this step is complete, your domain's HTTPS certificate(s) will automatically begin generating. When the certificate is ready you can switch DNS destinations from your existing site to your new Pantheon site without downtime.
@@ -92,9 +92,8 @@ Unless you went through the steps to prove domain ownership to pre-provision cer
 
 Once DNS is configured and your certificates are done provisioning, the status should indicate successful configuration:
 
-![Domain & HTTPS Status: Successfully Secured and Routed](/source/docs/assets/images/dashboard/domains-status-secured.png)
+![Domain & HTTPS Status: Successfully Secured and Routed](/source/docs/assets/images/dashboard/domains/domain-success.png)
 
-![Domain & HTTPS Status: Successfully Routed](/source/docs/assets/images/dashboard/domains-status-success.png)
 
 
 ## Frequently Asked Questions
