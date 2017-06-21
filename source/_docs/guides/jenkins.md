@@ -29,6 +29,7 @@ You will need:
     
     Verify you can run Terminus, Drush and Composer commands to test.
 - Be sure the default Jenkins user has a private key in its $HOME/.ssh directory that has a matching user on with a public key installed on Pantheon. Clone a Pantheon site to the Jenkins user's home directory to test.
+- The Jenkins user's git user name and email mail should be set in **Manage Jenkins**, **Configure System**
 - In the Jenkins user's $HOME/.ssh/config (if this file doesn't exist, create it), add these two lines:
 ``` 
  Host *
@@ -63,8 +64,6 @@ You will need:
     git init
     git add -A .
     git commit -m "Initial commit."
-    git config --global user.email "Your Email"
-    git config --global user.name "Your Name"
     ```
    
 ### Create and configure a GitHub Repository
@@ -157,7 +156,9 @@ After saving both, your credentials will be accessible for secure use.
 
 7. Click ```Test Connection``` and you should see the GitHub username which created the token.
 
-## Step 5: Create Jenkins Project
+8. Click Save.
+
+## Create Jenkins Project
 
 ## Configure Jenkins
 
@@ -177,9 +178,9 @@ After saving both, your credentials will be accessible for secure use.
 
     - **Repository URL**: The path to the .git file of your repository, e.g. `https://github.com/YOUR-ORG/YOUR-PROJECT.git`
     - **Name**: `origin`
-    - **Refspec**: `+refs/heads/*:refs/remotes/origin/*`
+    - **Refspec**: blank
     - **Branch specifier**: `origin/*`
-    - **Additional Behaviours**: Add **Prune stale remote-tracking branches**, and **Clean after checkout**:
+    - **Additional Behaviours**: Add **Prune stale remote-tracking branches**:
 
     ![SCM view](/source/docs/assets/images/integrations/jenkins/scm_settings.png)
 
@@ -190,7 +191,7 @@ After saving both, your credentials will be accessible for secure use.
 
 7. In the **Properties Content** field, add the following variable one per line, with no quotation marks:
 
-    - **SITE_ID=** your site name:
+    - **SITE_ID=**your-site-name:
 
     ![Env vars view](/source/docs/assets/images/integrations/jenkins/env_vars.png)
 
@@ -198,9 +199,11 @@ After saving both, your credentials will be accessible for secure use.
   
 ### Add Build Steps
 
-Under the **Build** tab is a button labeled **Add build step**. These tasks will execute in sequence, and the job will quit if any fail. Add these in separate build steps, selecting **Execute shell** for all but step 5.
+Under the **Build** tab is a button labeled **Add build step**. These tasks will execute in sequence, and the job will quit if any fail. Add these in separate build steps, selecting **Execute shell** for all but steps 1 and 5.
 
-1. Jenkins logs into Pantheon:
+1. Set build status to "pending" on GitHub commit
+
+2. Jenkins logs into Pantheon:
 
     ```nohighlight
     #!/bin/bash
@@ -208,7 +211,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
     terminus auth:login --machine-token=${TERMINUS_TOKEN}
     ```
 
-2. Verifies the dev site is awake and in git mode. Note that these are separate build steps:
+3. Verifies the dev site is awake and in git mode. Note that these are separate build steps:
 
     ```nohighlight
     echo "Waking Dev environment."
@@ -220,7 +223,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
     terminus connection:set ${SITE_ID}.dev git
     ```
 
-3. Jenkins creates a multidev and pushes the new code to this environment
+4. Jenkins creates a multidev and pushes the new code to this environment
 
     ```nohighlight
     echo "Creating multidev"
@@ -234,14 +237,14 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
     terminus drush ${SITE_ID}.ci-${BUILD_ID} cr
     ```
 
-4. Then the test suite we include with the example is run.
+5. Then the test suite we include with the example is run.
 
     ```nohighlight
     echo "Running behat"
     TERMINUS_ENV=ci-$BUILD_ID TERMINUS_SITE=$SITE_ID $WORKSPACE/tests/scripts/run-behat
     ```
 
-5. Add one **Conditional step (single)** build task, to merge the code from the Pantheon multidev to the pantheon/master, i.e. your dev site on Pantheon. This will only happen when changing the master branch.
+6. Add one **Conditional step (single)** build task, to merge the code from the Pantheon multidev to the pantheon/master, i.e. your dev site on Pantheon. This will only happen when changing the master branch.
 
     - Under **Run?** select **Regular expression match**.
 
@@ -259,13 +262,13 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
     Your conditional step should look like this:
     ![Conditional Step](/source/docs/assets/images/integrations/jenkins-conditional.png)
 
-6. Finally, a cleanup task:
+7. Finally, a cleanup task:
 
     ```nohighlight
     echo "Cleaning up multidev & branches"
     git -C ${WORKSPACE} remote remove pantheon
     git -C ${WORKSPACE} remote prune origin
-    terminus build:env:delete:ci ${SITE_ID} --keep=2 --delete-branch
+    terminus build:env:delete:ci ${SITE_ID} --keep=2  --yes
     ```
 
 ### Add Post-build Actions
@@ -279,6 +282,8 @@ Under **Post-build Actions** is another button labelled **Add post-build action*
  - **Commit context**: "From GitHub property with fallback to job name".
 
  - **Status Result**: "One of default messages and statuses".
+ 
+ - **Status backref**: "Backref to the build"
 
 Finally, hit **Save** to complete the configuration of your Jenkins build process.
 
