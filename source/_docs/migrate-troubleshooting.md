@@ -97,6 +97,12 @@ Next, check [log files](https://pantheon.io/docs/logs/) to help identify and fix
 
 **Solution:** Ensure that the archive contains a valid MySQL database dump.
 
+### Could not import database from PHPMyAdmin
+
+**Cause:** PHPMyAdmin version 4.2 can create a database dump Drupal 8 is unable to import.
+
+**Solution:** This issue is documented on [Drupal.org](https://www.drupal.org/node/2496331). Edit the DB dump as described [here](https://www.drupal.org/node/2496331#comment-10029863).
+
 ### Multiple file directories found within the import archive. ###
 
 **Cause:** The migration tool found more than one potential location for files within the archive. This error also occurs if Drupal's private files directory is not placed within the public directory (`sites/default/files/private`).
