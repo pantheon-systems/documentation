@@ -1523,8 +1523,9 @@ margin-bottom: 40px !important;  }
 
 @media (min-width: 992px) {
 
-  .container-fluid .container-navsearch-box {
+  .container-navsearch-box-guide {
     width: 97%;
+    position:relative;
   }
   .pio-docs-masthead .lead {
     width: 80%;
