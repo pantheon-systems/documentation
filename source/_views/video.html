@@ -1,9 +1,10 @@
 {% extends "default" %}
 {% block content_wrapper %}
-<div id="video" class="article col-md-9 mb-70">
-  <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">{{ page.title }}</h1>
-
-  <p class="article-subhead">{{ page.description }}</p>
+<div class="container">
+  <div class="row">
+    <div id="video" class="article col-md-9 mb-70">
+      <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">{{ page.title }}</h1>
+      <p class="article-subhead">{{ page.description }}</p>
       <div class="share-buttons">
         {% set fullpath = page.url|replace({'/docs': '/_docs', '/_guides': '/guides', '/_videos': '/vidoes'}) %}
         <div class="dropdown">
@@ -26,43 +27,29 @@
               js.id = id;
               js.src = "https://platform.twitter.com/widgets.js";
               fjs.parentNode.insertBefore(js, fjs);
-
               t._e = [];
               t.ready = function(f) {
                 t._e.push(f);
               };
-
               return t;
           }(document, "script", "twitter-wjs"));
         </script>
         <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}?text=%40getpantheon%20doc%3A%20{{ page.title|url_encode }}"></a>
         <script async defer src="https://slackin.pantheon.io/slackin.js"></script><br>
-
       </div>
-
-
-
-    <div class="hero-video__video">
-      <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-    </div>
-
-    <div>
+      <div class="hero-video__video">
+        <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+      </div>
+      <div>
         {{ page.blocks.content|raw }}
+      </div>
     </div>
-
-
-</div>
-<div class="article col-md-3">
+    <div class="article col-md-3">
       {% include 'author-info.twig' %}
-
-
-<!--     {% include ("sidebarnav.html") %} -->
-<!--    <h4>Related</h4>
-    <ul class="related">
-      <li><a href="/docs/machine-tokens">Creating and Revoking Machine Tokens</a></li>
-    	<li><a href="/docs/guides/wordpress-automated-testing">Automated Testing WordPress with Behat</a></li>
-    	<li><a href="/docs/guides/wordpress-commandline">Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI</a></li>
-    </ul>-->
+    </div>
+    <div class="col-md-12">
+      <iframe style="theme-progress-bar:#fff;" frameborder="0" width="100%" height="300px" src="https://www.getfeedback.com/r/12z1fMzn?page={{page.url}}&topic={{page.categories|last}}"></iframe>
+    </div>
+  </div>
 </div>
-<iframe frameborder="0" width="100%" height="300px" src="https://www.getfeedback.com/r/12z1fMzn?page={{page.url}}&topic={{page.categories|last}}"></iframe>
 {% endblock %}

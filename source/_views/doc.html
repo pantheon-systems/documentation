@@ -1,78 +1,74 @@
 {% extends "default" %}
 {% block content_wrapper %}
-<div class="container content">
+<div class="container">
   {% if page.earlyaccess %}
     <div class="row">
       <div id="earlyaccessoutter" class="alert devbar alert-dismissible" role="alert">
          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
          <h3 class="devbar">Early Access Doc</h3>
          <p class="devbar">{{ page.earlynote }}<p>
-       </div>
-     </div>
-   {% endif %}
-  <div class="row">
-  <div id="doc" class="article col-md-9 md-70">
-    {% if page.dnsprovider %}
-    <div style="row">
-          <ul class="pio-breadcrumb" style="margin-top:-10px;">
-              <a id="back" href="/docs/guides/going-live/domains-https/" style="text-decoration:none!important;"> Back</a>
-            </ul>
-    </div>
-    {% endif %}
-    <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">{{ page.title }}</h1>
-    <p class="article-subhead">{{ page.description }}</p>
-    {% if page.contributors %}
-    {% set contributor_list = page.contributors %}
-    <p><small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small></p>
-    {% endif %}
-
-            {% set fullpath = page.url|replace({'/docs': '/_docs', '/_guides': '/guides', '/_videos': '/vidoes'}) %}
-            <div class="dropdown">
-            <button class="btn btn-contribute dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                <i class="fa fa-github"></i> Contribute
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              {% if page.editpath %}
-                <li><a href="https://github.com/pantheon-systems/documentation/edit/master/source/_docs/{{ page.editpath }}" target="blank">Edit This Page</a></li>
-              {% else %}
-                <li><a href="https://github.com/pantheon-systems/documentation/edit/master/source/{{ fullpath |trim('/')}}.md" target="blank">Edit This Page</a></li>
-              {% endif %}
-              <li><a href="https://github.com/pantheon-systems/documentation/issues/new?title={{page.title}}%20Doc%20Update%20&body=Re%3A%20%5B{{page.title}}%5D(https%3A%2F%2Fpantheon.io{{page.url}})%0A%0APriority%20(Low‚%20Medium‚%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content" target="blank">Report Doc Issue</a></li>
-              <li><a href="https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=Priority%20(Low‚%20Medium‚%20High)%3A%0A%0A%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=new%20doc" target="blank">Suggest New Content</a></li>
-              </ul>
-            </div>
-            <script>
-              window.twttr = (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0],
-                  t = window.twttr || {};
-                if (d.getElementById(id)) return t;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js, fjs);
-
-                t._e = [];
-                t.ready = function(f) {
-                  t._e.push(f);
-                };
-
-                return t;
-            }(document, "script", "twitter-wjs"));
-          </script>
-          <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}?text=%40getpantheon%20doc%3A%20{{ page.title|url_encode }}"></a>
-          <script async defer src="https://slackin.pantheon.io/slackin.js"></script><br>
-
-      <div style="margin-top:15px;margin-bottom:45px;">
-          {{ page.blocks.content|raw }}
-
-
       </div>
-  </div>
-  <div class="article col-md-3">
+    </div>
+  {% endif %}
+  <div class="row">
+    <div id="doc" class="article col-md-9 md-70">
+      {% if page.dnsprovider %}
+      <div style="row">
+        <ul class="pio-breadcrumb" style="margin-top:-10px;">
+          <a id="back" href="/docs/guides/going-live/domains-https/" style="text-decoration:none!important;"> Back</a>
+        </ul>
+      </div>
+      {% endif %}
+      <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">{{ page.title }}</h1>
+      <p class="article-subhead">{{ page.description }}</p>
+      {% if page.contributors %}
+      {% set contributor_list = page.contributors %}
+      <p><small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small></p>
+      {% endif %}
+      {% set fullpath = page.url|replace({'/docs': '/_docs', '/_guides': '/guides', '/_videos': '/vidoes'}) %}
+      <div class="dropdown">
+        <button class="btn btn-contribute dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <i class="fa fa-github"></i> Contribute
+          <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          {% if page.editpath %}
+            <li><a href="https://github.com/pantheon-systems/documentation/edit/master/source/_docs/{{ page.editpath }}" target="blank">Edit This Page</a></li>
+          {% else %}
+            <li><a href="https://github.com/pantheon-systems/documentation/edit/master/source/{{ fullpath |trim('/')}}.md" target="blank">Edit This Page</a></li>
+          {% endif %}
+          <li><a href="https://github.com/pantheon-systems/documentation/issues/new?title={{page.title}}%20Doc%20Update%20&body=Re%3A%20%5B{{page.title}}%5D(https%3A%2F%2Fpantheon.io{{page.url}})%0A%0APriority%20(Low‚%20Medium‚%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content" target="blank">Report Doc Issue</a></li>
+          <li><a href="https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=Priority%20(Low‚%20Medium‚%20High)%3A%0A%0A%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=new%20doc" target="blank">Suggest New Content</a></li>
+        </ul>
+      </div>
+      <script>
+        window.twttr = (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+          if (d.getElementById(id)) return t;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+          t._e = [];
+          t.ready = function(f) {
+            t._e.push(f);
+          };
+          return t;
+        }(document, "script", "twitter-wjs"));
+      </script>
+      <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}?text=%40getpantheon%20doc%3A%20{{ page.title|url_encode }}"></a>
+      <script async defer src="https://slackin.pantheon.io/slackin.js"></script><br>
+      <div style="margin-top:15px;margin-bottom:45px;">
+        {{ page.blocks.content|raw }}
+      </div>
+    </div>
+    <div class="article col-md-3">
       {% include ("sidebarnav.html") %}
+    </div>
+    <div class="col-md-12">
+      <iframe style="theme-progress-bar:#fff!important;" frameborder="0" width="100%" height="300px" src="https://www.getfeedback.com/r/12z1fMzn?page={{page.url}}&topic={{page.categories|last}}"></iframe>
+    </div>
   </div>
 </div>
-</div>
-<iframe frameborder="0" width="100%" height="300px" src="https://www.getfeedback.com/r/12z1fMzn?page={{page.url}}&topic={{page.categories|last}}"></iframe>
 {% endblock %}

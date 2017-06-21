@@ -2,6 +2,7 @@
 title: Going Live
 subtitle: Next Steps
 golive: true
+survey: true
 anchorid: launch-check
 generator: pagination
 layout: guide

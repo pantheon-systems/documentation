@@ -59,6 +59,9 @@
           {{ page.blocks.content|raw }}
           <div class="terminus-pager">
             <hr>
+            {% if page.survey %}
+              <iframe style="theme-progress-bar:#fff;" frameborder="0" width="100%" height="300px" src="https://www.getfeedback.com/r/12z1fMzn?page={{page.url}}&topic={{page.categories|last}}"></iframe>
+            {% endif %}
             {% if page.nexturl %}
             <ul class="pagination pager-guides" style="float:right;"><li><a href="/docs/{{ page.nexturl }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Continue</a></li></ul>
             {% endif %}
