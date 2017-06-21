@@ -4,7 +4,6 @@ description: How to configure continuous integration for a Drupal site on Panthe
 tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
-draft: true
 date: 6/20/2017
 ---
 
