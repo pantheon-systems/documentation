@@ -288,6 +288,7 @@ h1.title {
   line-height: 46px;
   margin-bottom: 30px;
   margin-top:30px;
+  margin-left:15px;
 }
 h2.subtitle {
   font-family: Avenir-Light;
@@ -565,7 +566,7 @@ input[type="search"] {
   -ms-transition: all 0.30s ease-in-out;
   -o-transition: all 0.30s ease-in-out;
   outline: none;
-  padding: 9px 35px;
+  padding: 9px 55px;
   margin: 0;
   border: none;
   background: #78868E;
@@ -1043,7 +1044,7 @@ span#changelog-rsaquo {
 .navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
     top: auto;
-    width: 354px;
+    width: 400px;
     top:87px;
 }
 .navbar-nav .dropdown:hover .dropdown-menu li > a {
@@ -1521,6 +1522,10 @@ margin-bottom: 40px !important;  }
 }
 
 @media (min-width: 992px) {
+
+  .container-fluid .container-navsearch-box {
+    width: 97%;
+  }
   .pio-docs-masthead .lead {
     width: 80%;
     font-size: 30px;
@@ -1928,10 +1933,13 @@ color: #222222;
 }
 @media (min-width: 992px) and (max-width: 1201px){
 .pio-docs-sidebar.affix-bottom {
+  width: 250px !important;
 }
     .pio-docs-sidebar.affix-top {
+      width: 250px !important;
     }
     .pio-docs-sidebar.affix {
+      width: 250px !important;
 }
 .navbar-nav {
 
@@ -3221,8 +3229,8 @@ border-radius: 0px;
   display: none !important;
 }
 .has-feedback .form-control-feedback {
-  margin-top: 5px;
-  left: 7px;
+  margin-top: 4px;
+  left:10px;
 }
 /* Google Custom Search Engine button */
 input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus{
@@ -3448,7 +3456,7 @@ display: block;
   color: #44525E;
   text-decoration: none;
   border-right: 4px solid #DDE5E7;
-  padding:10px 10px 10px 30px;
+  padding:10px 10px 10px 40px;
 
 }
 .manual-guide-toc .active-trail > li > a:hover {
@@ -3460,7 +3468,7 @@ display: block;
   background-color: #EEF2F3;
   color: #44525E;
   border-right: 4px solid #DDE5E7;
-  padding:10px 10px 10px 30px;
+  padding:10px 10px 10px 40px;
 
 
 }
@@ -3468,7 +3476,7 @@ display: block;
   color: #44525E;
   text-decoration: none;
   border-right: 4px solid #DDE5E7;
-  padding:10px 10px 10px 30px;
+  padding:10px 10px 10px 40px;
 
 }
 .manual-guide-toc .active-trail > li > a:hover {
@@ -3480,7 +3488,7 @@ display: block;
   background-color: #EEF2F3;
   color: #44525E;
   border-right: 4px solid #DDE5E7;
-  padding:10px 10px 10px 30px;
+  padding:10px 10px 10px 40px;
 
 
 }
@@ -3495,7 +3503,7 @@ display: block;
   background-color: #EEF2F3;
   color: #44525E;
   border-right: 4px solid #DDE5E7;
-  padding:10px 10px 10px 30px;
+  padding:10px 10px 10px 40px;
 
 
 }
@@ -3533,7 +3541,7 @@ display: block;
 
 }
 .manual-guide-toc a {
-  padding:10px 10px 10px 30px;
+  padding:10px 10px 10px 40px;
   display: block;
 }
 .manual-guide-toc .child a {
@@ -4444,7 +4452,6 @@ a.cta:after {
   margin: 0 !important;
   padding: 12px !important;
   display: inline-block !important;
-  line-height: 1 !important;/;
   background: none;
   height: 100%;
 }
@@ -5031,13 +5038,9 @@ opacity: 0.9;
     margin-bottom: 30px;
   }
   .navbar-nav .dropdown .dropdown-menu li > a {
+    font-size: 13px;
     color: #fff;
-    font-family: Avenir-Heavy;
-    font-size: 14px;
-    color: #fff;
-    letter-spacing: 0px;
     line-height: 16px;
-    text-transform: initial;
     display: inline-block;
   }
   .navbar-nav .dropdown .dropdown-menu li {
@@ -5064,6 +5067,9 @@ opacity: 0.9;
     text-decoration: none;
     color:#EFD01B;
   }
+  .navbar-nav .dropdown:hover .dropdown-menu li > a {
+    font-family: Avenir-Light !important;
+  }
   .navbar-nav .dropdown .dropdown-menu li {
     margin-bottom: 15px;
     text-transform: initial;
@@ -5073,6 +5079,9 @@ opacity: 0.9;
   }
   #dropmenu .active-trail {
     color:#EFD01B !important;
+  }
+  .pio-docs-nav li.create-account a.cta.cta-yellow {
+    padding-left: 30px !important;
   }
   .navbar-nav {
     background:#44525E;
@@ -5088,19 +5097,20 @@ opacity: 0.9;
   .sub-menu-bottom,
   .sub-menu-top {
     padding: 15px 30px;
+    margin-top: -10px;
   }
   input[type="search"], input[type="search"]:focus {
-    padding: 10px 0px 0px 20px;
-    background-color: #283239;
+    padding: 0px 0px 0px 45px;
+    background-color: #181d21;
     margin-bottom: 10px;
   }
   .has-feedback .form-control-feedback {
-    margin-top: 5px;
-    font-size: 80%;
-}
+    margin-top: -5px;
+        font-size: 80%;
+        margin-left: -5px;
+    }
 .navsearch-container {
-    background: #283239;
-    padding: 8px;
+    background: #181d21;
     z-index: 10001;
     padding-top:15px;
   }
@@ -5111,17 +5121,18 @@ div.navsearch-container {
       top: inherit !important;
   }
   .pio-docs-nav .navbar-nav > li > a {
-    padding: 13px 30px 10px !important;
-    font-size: 16px !important;
+    padding: 12px 30px 10px !important;
+    font-size: 13px !important;
   }
   .pio-docs-nav li.create-account {
     padding:0!important;
   }
+
   .pio-docs-nav li.create-account a.cta.cta-yellow {
     background:none !important;
     color: #fff !important;
-    font-size: 16px !important;
-    padding-left: 40px !important;
+    font-size: 13px !important;
+    padding-left: 40px;
     padding-bottom: 0px !important;
 }
   .pio-docs-nav li.create-account a.cta.cta-yellow:hover {
@@ -5154,13 +5165,10 @@ div.navsearch-container {
     padding-bottom: 20px;
   }
   #navbar > ul > li {
-    padding: 10px 0px 0px 10px;
-  }
-  #navbar .create-account a {
-    padding-top: 20px !important;
+    padding: 0px;
   }
   .navbar-nav .dropdown > a:after {
-    top:10px;
+    line-height: .7 !important;
   }
   .navbar-nav .dropdown {
   }
@@ -5216,4 +5224,18 @@ div.navsearch-container {
 .upstream li {
   line-height: 1.35;
   padding-bottom: 4px;
+}
+.container-fluid {
+  padding: 0px !important;
+}
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+.container {
+  padding-left: 0px;
+}
+.row-fluid {
+  margin-left: -15px;
+  margin-right:-15px;
 }

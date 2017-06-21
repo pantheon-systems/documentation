@@ -1,8 +1,4 @@
 {% extends "default" %}
   {% block content_wrapper %}
-    <article>
-        <div>
-            {{ page.blocks.content|raw }}
-        </div>
-    </article>
+    {{ page.blocks.content|raw }}
   {% endblock %}

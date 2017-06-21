@@ -365,7 +365,11 @@ terminusCompareApp.filter('search', function() {
             </ul>
             <div class="navsearch-container">
               <div class="navsearch form-group has-feedback">
-                <div class="container container-navsearch-box">
+                {% if page.layout == "guide"  %}
+                  <div class="container-fluid container-navsearch-box">
+                {% else %}
+                  <div class="container container-navsearch-box">
+                {% endif %}
                   {% include("search_box.html") %}
                   <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
                   <span class="sr-only">(search)</span>

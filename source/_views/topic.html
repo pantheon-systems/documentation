@@ -1,23 +1,25 @@
 {% extends "default" %}
 {% block content_wrapper %}
-<!-- container -->
-<h1 style="margin-left:15px;margin-top:15px;">{{ page.title }}</h1>
-<div class="col-md-12">
-{% if page.getstarted %}
-  {% include("topics/get-started.html") %}
-{% elseif page.develop %}
-  {% include("topics/develop.html") %}
-{% elseif page.golive %}
-  {% include("topics/go-live.html") %}
-{% elseif page.platform %}
-{% include("topics/platform.html") %}
-{% elseif page.automate %}
-  {% include("topics/automate.html") %}
-{% elseif page.performance %}
-  {% include("topics/performance.html") %}
-{% elseif page.manage %}
-  {% include("topics/manage.html") %}
-{% elseif page.troubleshoot %}
-  {% include("topics/troubleshoot.html") %}
-{% endif %}
+<div class="container">
+  <div class="row">
+    <h1 style="margin-left:15px;margin-bottom:20px;margin-top:0px;">{{ page.title }}</h1>
+    {% if page.getstarted %}
+      {% include("topics/get-started.html") %}
+    {% elseif page.develop %}
+      {% include("topics/develop.html") %}
+    {% elseif page.golive %}
+      {% include("topics/go-live.html") %}
+    {% elseif page.platform %}
+    {% include("topics/platform.html") %}
+    {% elseif page.automate %}
+      {% include("topics/automate.html") %}
+    {% elseif page.performance %}
+      {% include("topics/performance.html") %}
+    {% elseif page.manage %}
+      {% include("topics/manage.html") %}
+    {% elseif page.troubleshoot %}
+      {% include("topics/troubleshoot.html") %}
+    {% endif %}
+  </div>
+</div>
 {% endblock %}
