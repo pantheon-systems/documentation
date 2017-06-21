@@ -11,6 +11,7 @@ contributors:
   - suzannealdrich
 date: 6/1/2015
 ---
+
 More and more, it's expected that websites run under HTTPS to appear professional, and for any site which uses a CMS, securing administrative login credentials should be a priority. Now that HTTPS is in the mix for search engine rankings, even sites that don't handle sensitive information have good reason to want HTTPS.
 
 Historically, running HTTPS required additional cost and complexity due to the need to obtain a certificate. However, thanks to a concerted effort by many providers, these barriers are being eliminated, and it is now possible for anyone to offer secure encrypted transport as the default for their website.

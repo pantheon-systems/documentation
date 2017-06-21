@@ -10,7 +10,6 @@ editpath: dns-providers/cloudflare.md/
 ## Before You Begin
 Be sure that you have a:
 
-
 - Registered domain name using Cloudflare to host DNS
 - [Paid Pantheon plan](/docs/guides/going-live/plans/)
 - [Domain connected](/docs/guides/going-live/domains-https/) to the target Pantheon environment (typically Live)

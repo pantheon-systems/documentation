@@ -124,7 +124,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
       if [[ $doc =~ $doc_path ]]
         then
         export guide=${doc:13: -3}
-        if ls -R source/_docs/guides | grep '^\<'"${guide##*/}"'\>'
+        if ls -R source/_docs/guides | grep '^\<'"${guide##*/}"'\>.md$'
           then
             export guide_file=${guide##*/}
             if [[ ${guide_file:0:2}  == 01 ]]
@@ -136,7 +136,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
               else
             grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"$guide"]("$url"/docs/"$guide")\n" >> comment.txt
             fi
-          elif ls -R source/_docs/dns-providers | grep '^\<'"${doc:27: -3}"'\>'
+          elif ls -R source/_docs/dns-providers | grep '^\<'"${doc:27: -3}"'\>.md$'
             then
               grep -- '\<'"${doc:27: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:27: -3}"]("$url"/docs/"${doc:27: -3}")\n" >> comment.txt
           else
