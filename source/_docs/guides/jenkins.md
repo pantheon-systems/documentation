@@ -89,7 +89,7 @@ Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite th
 1. From your local terminal, use terminus to create a site on Pantheon:
 
     ```nohighlight
-    terminus site:create $SITE "My Site" "Drupal 8" --org "My Team"
+    terminus site:create $SITE "My Site" "Drupal 8" --org="My Team"
     terminus connection:set $SITE.dev git
     ```
 
