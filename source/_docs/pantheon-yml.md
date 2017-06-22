@@ -16,6 +16,8 @@ You must define the `api_version` property for the `pantheon.yml` configuration 
 api_version: 1
 ```
 
+This property must also be defined in the `pantheon.upstream.yml` file present in any upstream repository.
+
 ### Protected Web Paths
 
 If you have files or directories inside of your docroot that you'd like to protect from public web access, use `protected_web_paths`. For example, if you add the following `pantheon.yml` to the root of your site's codebase:
