@@ -236,7 +236,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 ### [Varnish](https://www.drupal.org/project/varnish)
 **Issue**: Conflicts with the existing platform configuration.
 
-**Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Cache Control Manual: Cache a Page](/docs/guides/cache/hit/)
+**Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache/)
 <hr>
 
 ### [Views data export](https://www.drupal.org/project/views_data_export)
@@ -363,8 +363,8 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 **Solution**: While *not recommended*, you can add the following lines to `wp-config.php` before the first call to `session_start`:
 
 ```
-if (defined( "PANTHEON_BINDING" )) {
-  include_once( "/srv/bindings/". PANTHEON_BINDING ."/code/wp-blog-header.php" );
+if (defined( "PANTHEON_BINDING" )) { 
+  include_once( "/srv/bindings/". PANTHEON_BINDING ."/code/wp-blog-header.php" ); 
 }
 ```
 
