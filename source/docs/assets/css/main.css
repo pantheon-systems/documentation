@@ -354,6 +354,7 @@ h3.changelog {
 }
 .pio-docs-sidebar {
   position: sticky;
+  top: 110px;
 }
 .pio-docs-sidebar #toc h4 {
   margin-top: 35px;
@@ -1733,6 +1734,7 @@ margin-bottom: 40px !important;  }
 .pio-docs-sidebar.affix {
   overflow: scroll;
   max-height: 90%;
+
 }
 
 .tocify-hide {
@@ -1957,7 +1959,6 @@ margin-right: 20px;
  /* Widen the fixed sidebar */
   .pio-docs-sidebar.affix,
   .pio-docs-sidebar.affix-bottom {
-      top: 110px;
 
   }
   .pio-docs-sidebar.affix {
