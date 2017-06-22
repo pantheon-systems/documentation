@@ -7,7 +7,7 @@ contributors:
  - ataylorme
 ---
 
-The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml) file allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments.
+The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml) file or in the [pantheon.upstream.yml](/docs/pantheon-upstream-yml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments.
 
 ### Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
@@ -16,12 +16,12 @@ This is especially useful for third party dependencies, such as those installed 
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>One-click Dashboard updates are not compatible with the nested <code>web</code> docroot, and you'll need to manually maintain core updates. We recommend using a <a href="https://pantheon.io/docs/custom-upstream/">Custom Upstream</a>.</p>
+<p>One-click Dashboard updates are only compatible with the nested <code>web</code> docroot feature when the `web_docroot` property is set in the `pantheon.upstream.yml` file of the upstream. We recommend using a <a href="https://pantheon.io/docs/custom-upstream/">Custom Upstream</a> if you would like to continue to utilize Dashboard updates.</p>
 </div>
 
 ## One-Time Setup
 
-Below we recommend using Git, but you can also use SFTP to set your site up for nested docroot.
+If you wish to stop using One-click Dashboard updates, and instead intend to update your site with Composer, then you may create a site with a nested docroot by adjusting your `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.
 
 ### Define Nested Docroot in pantheon.yml
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):

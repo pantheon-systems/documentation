@@ -5,13 +5,20 @@ tags: [pantheonyml, infrastructure]
 categories: []
 ---
 
-The `pantheon.upstream.yml` file is used when working with [Custom Upstreams](/docs/custom-upstream/). It contains default values for the configuration settings stored in the `pantheon.yml` file. `pantheon.upstream.yml` may contain any of the settings described in the [Advanced Configuration](/docs/pantheon-yml/#advanced-site-configuration) section of the [pantheon.yml file documentation](/docs/pantheon-yml). The `api_version` property is mandatory in `pantheon.upstream.yml` file, just as it is in `pantheon.yml`.
+The `pantheon.upstream.yml` file is used when working with [Custom Upstreams](/docs/custom-upstream/). It contains default values for the configuration settings stored in the `pantheon.yml` file. `pantheon.upstream.yml` may contain any of the settings described in the [Advanced Configuration](/docs/pantheon-yml/#advanced-site-configuration) section of the [pantheon.yml file documentation](/docs/pantheon-yml). The `pantheon.upstream.yml` file cannot define any Quicksilver workflows.
 
-The `pantheon.upstream.yml` file cannot define any Quicksilver workflows.
+The `api_version` property is mandatory in `pantheon.upstream.yml` file, just as it is in `pantheon.yml`.
 
 If a property such as `php_version` is defined in `pantheon.upstream.yml`, then its value will be used only if the `pantheon.yml` file does not define the same property. Configuration options will always be taken from `pantheon.yml` first, and fallback to the upstream file when not present.
 
-The `pantheon.upstream.yml` file may only be edited in the upstream repository where it is defined; configuration changes for a specific site should be made with the `pantheon.yml` file. See the [Create a Custom Upstream](/docs/create-custom-upstream) documentation for information on how to set up an upstream. Similarly, an upstream should not define a `pantheon.yml` file; it should place configuration settings in `pantheon.upstream.yml` instead.
+The `pantheon.upstream.yml` file should only be edited in the upstream repository where it is defined. See the [Create a Custom Upstream](/docs/create-custom-upstream) documentation for information on how to set up an upstream. Similarly, an upstream should not define a `pantheon.yml` file; it should place all configuration settings in `pantheon.upstream.yml` instead. Keeping the configuration settings defined by the upstream in a separate file form the configuration settings that are specific to the site prevents merge conflicts when an upstream needs to change its default pantheon configuration.
+
+To avoid accidentally changing a `pantheon.upstream.yml` file in a Pantheon site, it is recommended that upstream repositories that contain a `pantheon.upstream.yml` file should also list it in the upstream's `.gitignore` file. When modifying `pantheon.upstream.yml` in the upstream, it will then be necessary to force-add it prior to committing with git.
+
+```bash
+$ git add -f pantheon.upstream.yml
+$ git commit -n "Change the default php version for this upstream to 7.0"
+```
 
 ### Example File Contents
 

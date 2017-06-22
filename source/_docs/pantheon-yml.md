@@ -7,7 +7,7 @@ categories: []
 
 Hook into platform workflows and add advanced site configuration via the `pantheon.yml` file. To get started, create a new file named `pantheon.yml` in the root of your site's code repository. Refer to [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) for example configurations. Refer to the [Pantheon Cloud Integration Examples](https://github.com/pantheon-systems/quicksilver-examples) repository for example scripts for use with Quicksilver Platform Hooks.
 
-The advanced site configuration properties define how your Pantheon environments will behave. Default values for these properties may also be stored in a [pantheon.upstream.yml](/docs/pantheon-upstream-yml) file. The `pantheon.upstream.yml` file should only be edited in the upstream repository where it is defined. In the repository for a Pantheon site, changes should only be made to the `pantheon.yml` file, as described below.
+The advanced site configuration properties define how your Pantheon environments will behave. Default values for these properties may also be stored in a [pantheon.upstream.yml](/docs/pantheon-upstream-yml) file. The `pantheon.upstream.yml` file should only be edited in the upstream repository where it is defined. When configuring a specific Pantheon site, changes should only be made to the `pantheon.yml` file, as described below.
 
 ## Advanced Site Configuration
 ### Required Properties
@@ -38,13 +38,15 @@ That will ensure that if someone visits `https://example.com/example.txt` or `ht
 
 ### Nested Docroot
 
-If you'd like to nest your docroot one level beneath your code repository in a directory named `web`, you may do so with the following `pantheon.yml`:
+If you'd like to nest your docroot one level beneath your code repository in a directory named `web`, you may do so with the following property:
 
 ```yaml
 web_docroot: true
 ```
 
 The name of the nested directory is not configurable.
+
+The `web_docroot` property should only be set in the upstream's `pantheon.upstream.yml` file. If a site stipulates a different docroot than its upstream, then it must also relocate all of its docroot files to the new location, which would prevent the site from applying future updates from its upstream. To continue to use the dashboard update feature, a site should use an upstream that already maintains a relocated document root. 
 
 For more information, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot).
 
@@ -57,6 +59,8 @@ Add `php_version` to the top level of the `pantheon.yml` file to configure the P
 php_version: 7.0
 ```
 If you are upgrading to PHP 7, you may need to make changes to your site's codebase for compatibility. If you use Drupal, you need to [switch to Drush version 7 or higher](https://pantheon.io/docs/drush-versions/#configure-drush-version). For more information, see [Upgrade PHP Versions](/docs/php-versions).
+
+In general, it is best to not set the php_version in a site's `pantheon.yml`; instead, leave php_version property out of your `pantheon.yml` file and accept the version set in the upstream's `pantheon.upstream.yml` file. This will allow the php version used in the site to automatically bump up whenever the version is changed in the upstream. If a site needs to stay on a lower version of php due to limitations of specific modules or plugins that it is using, for example, then it should define the php version it needs in its `pantheon.yml` file. If this is done, then the version of php set by the upstream will thereafter be ignored.
 
 ### Drush Version
 Add `drush_version` to the top level of the `pantheon.yml` file to configure the Drush version used when making calls remotely on Pantheon:
