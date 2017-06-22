@@ -18,12 +18,6 @@ editpath: going-live/04-redirects.md
 ---
 Once you have DNS configured and HTTPS provisioned, you're ready to redirect incoming requests to a primary domain name (e.g.`www.example.com` or `example.com`). Standardizing on a single URL prevents content duplication across domains for improved SEO.
 
-**Watch the video:**
-
-<div class="panel panel-drop panel-guide">
-<script src="//fast.wistia.com/embed/medias/fof9qie645.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_fof9qie645 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-</div>
-
 ## Redirect to HTTPS with WWW
 Replace `example.com` in the following snippet, then add it to the bottom of your site's `settings.php` or `wp-config.php` file:
 

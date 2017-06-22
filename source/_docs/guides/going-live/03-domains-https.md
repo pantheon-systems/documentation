@@ -2,6 +2,7 @@
 title: Going Live
 subtitle: Domains & HTTPS
 golive: true
+guidetoc: true
 anchorid: domains
 generator: pagination
 layout: guide
@@ -34,7 +35,7 @@ Skipping this step will result in service interruption for existing sites that r
 </div>
 
 1. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**.
-2. Upload the file to your live site.
+2. Upload the file to your existing live site.
 3. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 
   Once the certificate(s) has been provisioned, you may safely continue without fear of HTTPS service interruption.
@@ -53,7 +54,7 @@ Skipping this step will result in service interruption for existing sites that r
         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
       </div>
       <div id="host-specific" class="collapse" style="padding:10px;">
-        <ul class="top-docs top-docs-2col">
+        <ul class="top-docs top-docs-2col docs-2col-panel">
           {% for doc in data.docs_tags.providers %}
             {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
               <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
@@ -83,7 +84,10 @@ The action required message may be due to one of the following:
   - **DNS changes need some time to take effect:** Check the current state of DNS propagation from different parts of the world using this [free web tool](https://www.whatsmydns.net/).
   -  **AAAA records not detected:** There are two AAAA records for improved uptime and reliability. Ensure you've added both AAAA records for the bare domain (e.g., example.com) to route IPv6 traffic to your site.
   - **Old DNS records detected:** If in addition to the correct DNS records, you also have old records, make sure to delete the old records.
+### Can I bring my own certificate?
+No, but you shouldn't need to buy a dedicated certificate or worry about renewals. For example, wildcard certificates aren't necessary to secure communications for multiple domains launched on Pantheon because we will automatically deploy certificates for all domains on your site.
 
+If bringing your own certificate is a hard requirement (e.g., extended validation), then we recommend terminating HTTPS through a 3rd-party CDN service provider.
 ### What About Personal Plans?
 We share Let's Encrypt's goal to make HTTPS the standard for all sites on the internet, which means making it the standard for all sites on Pantheon. However, at this time we're focused on our existing HTTPS customers (Pro plans and above), and there's a considerable amount of work in making sure the new solution meets their needs, and that we are able to deprecate the legacy edge.
 

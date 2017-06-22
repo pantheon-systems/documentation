@@ -352,6 +352,9 @@ h3.changelog {
 #toc {
   margin-bottom: 50px;
 }
+.pio-docs-sidebar {
+  position: sticky;
+}
 .pio-docs-sidebar #toc h4 {
   margin-top: 35px;
 }
@@ -1729,7 +1732,6 @@ margin-bottom: 40px !important;  }
 /* By default it's not affixed in mobile views, so undo that */
 .pio-docs-sidebar.affix {
   overflow: scroll;
-  position: static;
   max-height: 90%;
 }
 
@@ -1894,16 +1896,16 @@ color: #222222;
 /* Show and affix the side nav when space allows it */
 @media (min-width: 1500px){
 .pio-docs-sidebar.affix-bottom {
-    width: 250px !important;
+    /*width: 250px !important;*/
     /*margin-left: 50px;*/
 }
     .pio-docs-sidebar.affix-top {
-        width: 250px !important;
+      /*width: 250px !important;*/
         /*margin-left: 50px;*/
 
     }
     .pio-docs-sidebar.affix {
-        width: 250px !important;
+      /*width: 250px !important;*/
         /*margin-left: 50px;*/
 
 }
@@ -1916,15 +1918,15 @@ color: #222222;
 }
 @media (min-width: 1202px) and (max-width: 1499px){
 .pio-docs-sidebar.affix-bottom {
-    width: 250px !important;
+  /*width: 250px !important;*/
     /*margin-left: 40px;*/
 }
     .pio-docs-sidebar.affix-top {
-        width: 250px !important;
+      /*width: 250px !important;*/
         /*margin-left: 40px;*/
     }
     .pio-docs-sidebar.affix {
-        width: 250px !important;
+      /*width: 250px !important;*/
         /*margin-left: 40px;*/
 
 }
@@ -1934,13 +1936,13 @@ color: #222222;
 }
 @media (min-width: 992px) and (max-width: 1201px){
 .pio-docs-sidebar.affix-bottom {
-  width: 250px !important;
+  /*width: 250px !important;*/
 }
     .pio-docs-sidebar.affix-top {
-      width: 250px !important;
+      /*width: 250px !important;*/
     }
     .pio-docs-sidebar.affix {
-      width: 250px !important;
+      /*width: 250px !important;*/
 }
 .navbar-nav {
 
@@ -1955,7 +1957,6 @@ margin-right: 20px;
  /* Widen the fixed sidebar */
   .pio-docs-sidebar.affix,
   .pio-docs-sidebar.affix-bottom {
-      position: fixed;
       top: 110px;
 
   }
@@ -1965,11 +1966,10 @@ margin-right: 20px;
 
  }
   .pio-docs-sidebar.affix {
-    position: fixed; /* Undo the static from mobile first approach */
+    /*position: fixed; /* Undo the static from mobile first approach */
   }
   .pio-docs-sidebar.affix-top {
-    position: fixed;
-    width: 250px !important;
+    /*width: 250px !important;*/
   }
   .pio-docs-sidebar.affix-bottom {
   }
@@ -2358,6 +2358,9 @@ h1[id] {
 .panel-drop {
   border: solid 10px #eef2f3;
   border-radius: 0px;
+}
+.docs-2col-panel {
+  padding: 15px 15px 0px !important;
 }
 .panel-guide {
   margin-left: auto;
