@@ -42,12 +42,12 @@ Since you're in fixin' mode, take some time to optimize performance using Redis 
 ### [Enable Redis](/docs/redis/#enable-redis)
 Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
-### [Configure Caching](/docs/guides/cache/hit/)
+### [Configure Caching](/docs/varnish/)
 Maximize performance on Pantheon by configuring your site's performance settings.
 
 Serving anonymous traffic from virtual memory allows a cached response to be returned to the browser without needing to access the application server, which in turns frees up resources to build more dynamic requests.
 
-### [Test Cache](/docs/guides/cache/test/)
+### [Test Cache](/docs/test-varnish/)
 Learn how to test whether or not a page is being served from Pantheon's global CDN by examining the HTTP headers from a response using curl.
     </div>
   </div>
