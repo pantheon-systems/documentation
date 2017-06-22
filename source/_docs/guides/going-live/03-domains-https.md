@@ -1,6 +1,6 @@
 ---
 title: Going Live
-subtitle: Domains & HTTPS
+subtitle: Domains / HTTPS
 golive: true
 guidetoc: true
 anchorid: domains
@@ -20,7 +20,7 @@ editpath: going-live/03-domains-https.md
 ---
 Now that you've upgraded to a paid plan, we're ready to connect a custom domain in the Pantheon Site Dashboard. [Free & Managed HTTPS](/docs/free-https/) is automatically provisioned for each new Custom Domain added to an environment using Let's Encrypt.
 
-## Add Domain(s) to the Live Environment
+## Connect Domain
 1. From the Pantheon Site Dashboard, select the **<span class="glyphicons glyphicons-cardio"></span> Live** tab, and click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Connect Domain** button and enter the bare domain (e.g., `example.com`) then click **Connect Domain**. We recommend you repeat this step for the `www` subdomain, even if you don't plan to use it as your primary domain.
 
@@ -74,7 +74,7 @@ Once DNS is configured and your certificates are provisioned, the status should 
 
 
 
-## Frequently Asked Questions
+## FAQs
 ### How can I take advantage of Free & Automated HTTPS on existing sites?
 Existing sites already Live on Pantheon can access Free & Automated HTTPS by configuring DNS as recommended in the Dashboard.
 

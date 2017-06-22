@@ -354,7 +354,7 @@ h3.changelog {
 }
 .pio-docs-sidebar {
   position: sticky;
-  top: 110px;
+  top: 110px !important;
 }
 .pio-docs-sidebar #toc h4 {
   margin-top: 35px;

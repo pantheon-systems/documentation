@@ -19,6 +19,7 @@ editpath: going-live/02-plans.md
 
 The first step to launching your site on Pantheon is to upgrade your free Sandbox site to a paid plan. Once the site has been upgraded, you'll have access to features like Custom Domains and Free & Automated HTTPS.
 
+## Manage Billing
 You can invite a business owner to pay or you can use your own credit card to pay for the monthly subscription:
 
 <!-- Nav tabs -->
