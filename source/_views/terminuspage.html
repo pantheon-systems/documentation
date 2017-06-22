@@ -1,7 +1,7 @@
 {% extends "default" %}
 {% block content_wrapper %}
-</div><!--close main container-->
-</div><!--close row-->
+<div class="container-fluid">
+  <div class="row">
 <div class="col-md-12 mb-70" style="margin-top:-30px;padding-right:50px;padding-left:0px;">
   {% include("terminus_navbar.html") %}
   {% if page.terminustoc %}
@@ -71,6 +71,5 @@
 
 </div>
 </div>
-<div class="container">
-  <div class="row">
+</div></div>
 {% endblock %}

@@ -43,7 +43,7 @@ sculpin_content_types:
             - contributors
     cachecontrolpages:
         type: path
-        path: docs/guides/cache-control
+        path: docs/guides/cache
         permalink: pretty
         singular_name: cachecontrolpage
         enabled: true

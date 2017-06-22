@@ -365,7 +365,7 @@ terminusCompareApp.filter('search', function() {
             </ul>
             <div class="navsearch-container">
               <div class="navsearch form-group has-feedback">
-                {% if page.layout == "guide"  %}
+                {% if (page.layout == "guide") or (page.layout == "terminuspage")  %}
                   <div class="container-fluid container-navsearch-box-guide">
                 {% else %}
                   <div class="container container-navsearch-box">

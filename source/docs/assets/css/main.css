@@ -5070,6 +5070,7 @@ opacity: 0.9;
   }
   .navbar-nav .dropdown:hover .dropdown-menu li > a {
     font-family: Avenir-Light !important;
+    font-size: 13px;
   }
   .navbar-nav .dropdown .dropdown-menu li {
     margin-bottom: 15px;
@@ -5102,7 +5103,6 @@ opacity: 0.9;
   }
   input[type="search"], input[type="search"]:focus {
     padding: 0px 0px 0px 45px;
-    background-color: #181d21;
     margin-bottom: 10px;
   }
   .has-feedback .form-control-feedback {
@@ -5111,7 +5111,6 @@ opacity: 0.9;
         margin-left: -5px;
     }
 .navsearch-container {
-    background: #181d21;
     z-index: 10001;
     padding-top:15px;
   }
