@@ -70,7 +70,7 @@ You will need:
 
 1. From the GitHub dashboard, [create a new repository](https://github.com/new), without creating a `README` or `.gitignore` file.
 
-    ![New empty repository](/source/docs/assets/images/integrations/jenkins/new_repo.png)
+    ![New empty repository](/source/docs/assets/images/integrations/new_repo.png)
 
 
 2. From your local command line, connect your local project to this repository as `origin`, and push the code to the master branch. Remember to replace the URL path:
@@ -122,7 +122,7 @@ Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite th
 
 1. From the main Jenkins menu on the left side, select **Credentials**, then **System**. Click on **Global credentials**, then **Add Credentials**. Here we will add our GitHub and Terminus tokens.
 
-    ![Credentials Page](/source/docs/assets/images/integrations/jenkins/credentials.png)
+    ![Credentials Page](/source/docs/assets/images/integrations/credentials.png)
 
 2. In a new browser tab, go to your GitHub account. Go to [Settings](https://github.com/settings/profile). Under **Developer Settings** click on **Personal access tokens**  and generate a new token. This should have all **repo**  and **admin:repo-hook** options:
 
@@ -151,7 +151,7 @@ Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite th
 
     After saving both, your credentials will be accessible for secure use.
 
-    ![Credentials Page](/source/docs/assets/images/integrations/jenkins/2_credentials.png)
+    ![Credentials Page](/source/docs/assets/images/integrations/2_credentials.png)
 
     <div class="alert alert-info" role="alert">
     <h4 class="info">Note</h4>
@@ -173,11 +173,11 @@ Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite th
 
 1. Log into the Jenkins dashboard as an admin user. Click on **New Item**.
 
-    ![Jenkins dashboard](/source/docs/assets/images/integrations/jenkins/jenkins_dash.png)
+    ![Jenkins dashboard](/source/docs/assets/images/integrations/jenkins_dash.png)
 
 2. Give the project a name with no spaces. Select **Freestyle Project** and click **OK** to save.
 
-    ![New Jenkins project](/source/docs/assets/images/integrations/jenkins/new_job.png)
+    ![New Jenkins project](/source/docs/assets/images/integrations/new_job.png)
 
 3. The next page lets you configure options for this project. In the **General** tab, select "GitHub project" and enter the repository URL (e.g. `https://github.com/YOUR-ORG/YOUR-PROJECT`).
 
@@ -189,7 +189,7 @@ Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite th
     - **Branch specifier**: `origin/*`
     - **Additional Behaviours**: Add **Prune stale remote-tracking branches**:
 
-    ![SCM view](/source/docs/assets/images/integrations/jenkins/scm_settings.png)
+    ![SCM view](/source/docs/assets/images/integrations/scm_settings.png)
 
 5. We want code changes to trigger our build (as opposed to setting up a periodic build, for example). Under **Build Triggers**, Check the box labelled, "GitHub hook trigger for GITScm polling".
 
@@ -203,7 +203,7 @@ Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite th
 
     - **SITE_ID=**your-site-name
 
-    ![Env vars view](/source/docs/assets/images/integrations/jenkins/env_vars.png)
+    ![Env vars view](/source/docs/assets/images/integrations/env_vars.png)
 
 9. Check "Use secret text(s) or file(s)" option. A new button called **Bindings** will appear. add a secret text binding. Name it **TERMINUS_TOKEN** and select the Terminus secret text credential from the dropdown:
 
@@ -301,11 +301,11 @@ Finally, hit **Save** to complete the configuration of your Jenkins build proces
 
 Now on your local computer, create a new branch and makes a change to it. When you commit and push to GitHub, a build should initiate. You should see the results of the test, which link to the Jenkins job:
 
-![Passing Github test](/source/docs/assets/images/integrations/jenkins/test_pass.png)
+![Passing Github test](/source/docs/assets/images/integrations/test_pass.png)
 
 If a test fails, you can see the details by clicking the job, then "Console Output"
 
-![Job Details](/source/docs/assets/images/integrations/jenkins/job_details.png)
+![Job Details](/source/docs/assets/images/integrations/job_details.png)
 
 
 ## Conclusion
