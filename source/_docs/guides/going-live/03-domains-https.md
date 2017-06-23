@@ -29,9 +29,9 @@ We recommend you repeat this process for the `www` subdomain, even if you don't 
 
 ### Existing Sites
 #### Verify your domain to provision HTTPS (Optional)
-If you add a domain to the Pantheon Site Dashboard that is pointing to an existing HTTPS site you will be guided to to  verify domain ownership and pre-provision certificates in order to avoid an HTTPS service interruption. This is optional and you can skip directly to updating DNS if you are okay with you waiting up to an hour for HTTPS to be ready.
+If you add a domain to the Pantheon Site Dashboard that is pointing to an existing HTTPS site you will be guided to to  verify domain ownership and pre-provision certificates in order to avoid an HTTPS service interruption. This is optional and you can skip directly to updating DNS if you are okay waiting up to an hour for HTTPS to be ready.
 
-After verifying domain ownership your domain's HTTPS certificate(s) will automatically begin generating and be deployed to Pantheon’s Global CDN within an hour. When a certificate is ready you can switch DNS destinations from your existing site to your new Pantheon site without HTTPS interruption.
+After verifying domain ownership, your domain's HTTPS certificate(s) will automatically begin generating and be deployed to Pantheon’s Global CDN within an hour. When a certificate is ready you can switch DNS destinations from your existing site to your new Pantheon site without HTTPS interruption.
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
