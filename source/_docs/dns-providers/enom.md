@@ -35,13 +35,6 @@ The CNAME record is required if you wish to include `www` within your site's pri
 2. Enter **www** in the **Host Name** field, select **CNAME** for the **Record Type** then enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Address** field.
 4. Click **Save**.
 
-### TXT Record
-The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
-
-1. Click **New Row**.
-2. Leave the **Host Name** field blank, select **TXT** for the **Record Type** then enter the record value provided by Pantheon in the **Address** field.
-3. Click **Save**.
-
 ## eNom Docs
 
 <a href="https://www.enom.com/kb/kb/kb_0002_change-host-records.htm" target="blank">Change Host Records - Forward, Redirect or Point Your Domain/Sub-Domain

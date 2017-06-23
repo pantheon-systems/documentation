@@ -29,13 +29,16 @@ Keep this page open and login to your <a href="https://portal.dynect.net/login/"
 2. Navigate to **Simple Editor** > **Records**.
 3. Select **A** from the record type dropdown menu.
 4. Enter the A record value provided by Pantheon in the **IP Address** field.
-5. Set the TTL to **1/2 Hour**.
+5. Select desired Time to Live (TTL).
+
+    {% include("ttl.twig") %}
+
 6. Click **Add**.
 
 ### AAAA Records
 1. Select **AAAA** from the record type dropdown menu.
 2. Enter the first AAAA record value provided by Pantheon in the **IP Address** field.
-3. Set the TTL to **1/2 Hour**.
+3. Select desired Time to Live (TTL).
 4. Click **Add**.
 5. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
@@ -44,15 +47,7 @@ The CNAME record is required if you wish to include `www` within your site's pri
 
 1. Select **CNAME** from the record type dropdown menu.
 2. Enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Cname** field.
-3. Set the TTL to **1/2 Hour**.
-4. Click **Add**.
-
-### TXT Record
-The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
-
-1. Select **TXT** from the record type dropdown menu.
-2. Enter the record value provided by Pantheon in the **Value** field.
-3. Set the TTL to **1/2 Hour**.
+3. Select desired Time to Live (TTL).
 4. Click **Add**.
 
 ## Dyn Docs

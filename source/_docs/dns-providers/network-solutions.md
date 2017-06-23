@@ -30,13 +30,16 @@ Keep this page open and login to your <a href="https://godaddy.com/" target="bla
 3. Click **Change Where Domain Points**, then select **Advanced DNS**.
 4. In the IP Address (A records) section, click **Edit A Records**.
 4. Enter **@** in the **Host** field and enter the A record value provided by Pantheon in the **Value** field.
-5. Set the TTL to **1/2 Hour**.
+5. Select desired Time to Live (TTL).
+
+    {% include("ttl.twig") %}
+
 6. Click **Save Changes**.
 
 ### AAAA Records
 1. Click the **Add New Record** button and select **AAAA** from the type dropdown menu.
 2. Enter **@** in the **Host** field and enter the first AAAA record value provided by Pantheon in the **Value** field.
-3. Set the TTL to **1/2 Hour**.
+3. Select desired Time to Live (TTL).
 4. Click **Save**.
 5. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
@@ -45,16 +48,8 @@ The CNAME record is required if you wish to include `www` within your site's pri
 
 1. In the Host Aliases (CNAME Records) section, click **Edit CNAME Records**.
 2. Enter **www** in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Aliases** field.
-3. Set the TTL to **1/2 Hour**.
+3. Select desired Time to Live (TTL).
 4. Click **Continue**, then **Save Changes**.
-
-### TXT Record
-The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
-
-1. Click the **Add New Record** button and select **TXT** from the type dropdown menu.
-2. Leave the **Host** field blank and enter the record value provided by Pantheon in the **Value** field.
-3. Set the TTL to **1/2 Hour**.
-4. Click **Save**.
 
 
 ## Network Solutions Docs

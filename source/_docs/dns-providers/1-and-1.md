@@ -36,15 +36,6 @@ The CNAME record is required if you wish to include `www` within your site's pri
 8. Click **Save**, then **Yes** to confirm.
 
 
-### TXT Record
-The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
-
-1. Click **Domain Center** from the Domains panel.
-2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Edit DNS Settings**.
-3.
-4. Enter the TXT record value provided by Pantheon
-
-
 ## 1&1 Docs
 
 * <a href="https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586" target="blank">Manage Domains – DNS <span class="glyphicons glyphicons-new-window-alt"></span></a>
