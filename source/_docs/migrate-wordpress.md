@@ -11,7 +11,7 @@ The following scenarios are exceptions to the recommended process and require [m
 - You want to preserve the site's existing Git history
 - [WordPress Site Networks](/docs/migrate-wordpress-site-networks)
 - You can't install a plugin on your existing site (e.g. WordPress.com)
-- [Your site doesn't have a public URL (e.g. a local installation) and it's archive exceeds 500MB.](#frequently-asked-questions)
+- [Your site doesn't have a public URL (e.g. a local installation)](#frequently-asked-questions).
 
 ## Migrate Your Site to Pantheon
 
@@ -63,7 +63,15 @@ If you are logged in with one identity and re-authenticate a different account, 
 Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 
 ### Import Failed
+
+#### CDN Blocking POST requests
+
 This error can occur on sites using a content delivery network (CDN) service that is not configured to allow the POST HTTP method. Resolve this issue by [temporarily setting POST as an allowed HTTP method within the CDN's configuration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesAllowedHTTPMethods) and restart the migration process. Once the site has been successfully migrated, the POST HTTP method can be disabled.
+
+#### Very Large Site Footprints
+
+Imports can also fail for very large sites, which may time out while importing. In these cases, initiate the migration again from the source site, and the transfer should pick up where it left off.
+
 ## Frequently Asked Questions
 
 #### How do I migrate a local site to Pantheon?
