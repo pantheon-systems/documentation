@@ -47,7 +47,7 @@ Skipping this step will result in service interruption for existing sites that r
 
   Once the certificate(s) has been provisioned, you may safely continue without fear of HTTPS service interruption.
 
-#### Test locally before configuring DNS
+#### Test locally before configuring DNS (Optional)
 1. Once you have verified ownership of the domain, navigate to **Domain Details** and copy the A record value provided in the Pantheon Site Dashboard.
 2. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file with the IP address from the previous step followed by the domain name, for example:
 
