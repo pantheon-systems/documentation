@@ -24,7 +24,7 @@ Be sure that you have a:
 
 4. Click **Save**.
 ### CNAME Record
-The CNAME record is only required if you wish to include `www` within your site's primary domain name.
+The CNAME record is required if you wish to include `www` within your site's primary domain name.
 
 1. Click **Domain Center** from the Domains panel.
 2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Create Subdomain**.

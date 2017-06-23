@@ -39,7 +39,7 @@ Keep this page open and login to your <a href="https://www.gandi.net/login" targ
 5. Repeat steps 1-5 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
 ### CNAME Record
-The CNAME record is only required if you wish to include `www` within your site's primary domain name.
+The CNAME record is required if you wish to include `www` within your site's primary domain name.
 
 1. Click the **Add** button and select **CNAME** from the type dropdown menu.
 2. Set the TTL to **1/2 Hour**.

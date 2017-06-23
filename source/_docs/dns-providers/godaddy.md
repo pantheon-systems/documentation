@@ -40,7 +40,7 @@ Keep this page open and login to your <a href="https://godaddy.com/" target="bla
 5. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
 ### CNAME Record
-The CNAME record is only required if you wish to include `www` within your site's primary domain name.
+The CNAME record is required if you wish to include `www` within your site's primary domain name.
 
 1. Click the **Add** button and select **CNAME** from the Type dropdown menu.
 2. Enter **www** in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Points to** field.
