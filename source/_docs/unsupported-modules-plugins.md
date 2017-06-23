@@ -272,7 +272,7 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 <hr>
 
 ### [Bookly](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/)
-**Issue**: Sessions are implemented in a way that will not allow it to function with the WP Native Sessions plugin, either installed as a regular plugin or an mu-plugin.
+**Issue**: Sessions are implemented in a way that will not allow it to function with the WP Native Sessions plugin, either installed as a regular plugin or an mu-plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/incompatibility-with-wp-native-sessions/).
 
 <hr>
 
@@ -363,8 +363,8 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 **Solution**: While *not recommended*, you can add the following lines to `wp-config.php` before the first call to `session_start`:
 
 ```
-if (defined( "PANTHEON_BINDING" )) { 
-  include_once( "/srv/bindings/". PANTHEON_BINDING ."/code/wp-blog-header.php" ); 
+if (defined( "PANTHEON_BINDING" )) {
+  include_once( "/srv/bindings/". PANTHEON_BINDING ."/code/wp-blog-header.php" );
 }
 ```
 
