@@ -4,6 +4,7 @@ provider: Name.com
 dnsprovider: true
 description: Learn how to point your Name.com domain to a Pantheon site.
 tags: [providers]
+draft: true
 permalink: docs/:basename/
 editpath: dns-providers/name-com.md/
 ---

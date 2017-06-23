@@ -2,6 +2,7 @@
 title: DNS Made Easy Domain Configuration
 provider: DNS Made Easy
 dnsprovider: true
+draft: true
 description: Learn how to point your DNS Made Easy domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/

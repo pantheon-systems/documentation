@@ -2,6 +2,7 @@
 title: Route 53 Domain Configuration
 provider: Route 53
 dnsprovider: true
+draft: true
 description: Learn how to point your Route 53 domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
