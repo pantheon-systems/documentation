@@ -149,3 +149,10 @@ WordPress sometimes includes database schema changes in major releases. When you
 [`wp site *`](https://developer.wordpress.org/cli/commands/site/) is an entire set of commands for managing sites on a WordPress Multisite Network. Use [`wp site create`](https://developer.wordpress.org/cli/commands/site/create/) to create a new site on the network, [`wp site list`](https://developer.wordpress.org/cli/commands/site/list/) to see all available sites on the network, or [`wp site empty`](https://developer.wordpress.org/cli/commands/site/empty/) to clear a site of its posts and comments (while retaining options, users, and other configuration details).
 
 The super admin is a user role unique to WordPress Networks. Like the name indicates, super admins are “super administrators”, and have unrestricted access on every site on the network. Need to add or remove a super admin from your Multisite Network? [`wp super-admin add`](https://developer.wordpress.org/cli/commands/super-admin/add/) and [`remove`](https://developer.wordpress.org/cli/commands/super-admin/remove/) have you covered.
+
+## Troubleshooting
+
+### "Error: Site not found." When Running Terminus Commands
+
+These errors often stem from the `DOMAIN_CURRENT_SITE` variable not being set conditionally, based on environment. Refer to [this section](/docs/create-wordpress-site-networks/#modify-domain_current_site) of our [Getting Started with WordPress Site Networks](/docs/create-wordpress-site-networks/) guide for more information.
+
