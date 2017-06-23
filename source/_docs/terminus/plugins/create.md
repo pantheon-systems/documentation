@@ -6,6 +6,8 @@ terminuscreate: true
 terminustoc: true
 type: terminuspage
 layout: terminuspage
+nexturl: terminus/updates/
+previousurl: terminus/plugins/directory/
 permalink: docs/terminus/plugins/:basename/
 image: terminus-thumbLarge
 ---
@@ -329,11 +331,3 @@ There is no published Plugin API documentation yet, so the best way to learn how
 A slightly more complete version of the plugin created in this guide can be found at:
 [https://github.com/pantheon-systems/terminus-plugin-example](https://github.com/pantheon-systems/terminus-plugin-example
 )
-
-
-<div class="terminus-pager">
-  <hr>
-  <a style="float:left;" href="/docs/terminus/plugins/directory"><span class="terminus-pager-lsaquo">&lsaquo;</span>Plugin Directory</a>
-
-  <a style="float:right;" href="/docs/terminus/updates"><span class="terminus-pager-rsaquo">&rsaquo;</span>Version Updates</a>
-</div>

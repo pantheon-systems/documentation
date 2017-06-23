@@ -4,6 +4,8 @@ subtitle: Plugin Directory
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+nexturl: terminus/plugins/create/
+previousurl: terminus/plugins/
 permalink: docs/terminus/plugins/:basename/
 image: terminus-thumbLarge
 ---
@@ -145,10 +147,4 @@ The following plugins are supported for Terminus 1.0:
       </div>
     </div>
   </div>
-</div>
-<div class="terminus-pager">
-  <hr>
-  <a style="float:left;" href="/docs/terminus/plugins"><span class="terminus-pager-lsaquo">&lsaquo;</span>Manage Plugins</a>
-  <a style="float:right;" href="/docs/terminus/plugins/create"><span class="terminus-pager-rsaquo">&rsaquo;</span>Create Plugins</a>
-
 </div>

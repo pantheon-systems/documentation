@@ -4,6 +4,8 @@ subtitle: Extend with Plugins
 terminuspage: true
 type: terminuspage
 layout: terminuspage
+nexturl: terminus/plugins/directory/
+previousurl: terminus/commands/
 permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
 ---
@@ -56,9 +58,3 @@ Extend the functionality of Terminus and add commands by installing third party 
 Delete the plugin from the `$HOME/.terminus/plugins` directory. Download the latest version of the plugin and move the plugin directory into the `$HOME/.terminus/plugins` directory.
 ## Uninstall Plugins
 Delete the plugin from the `$HOME/.terminus/plugins` directory.
-
-<div class="terminus-pager">
-  <hr>
-  <a style="float:left;" href="/docs/terminus/commands"><span class="terminus-pager-lsaquo">&lsaquo;</span>Commands</a>
-  <a style="float:right;" href="/docs/terminus/plugins/directory"><span class="terminus-pager-rsaquo">&rsaquo;</span>Plugin Directory</a>
-</div>

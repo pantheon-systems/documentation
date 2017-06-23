@@ -355,6 +355,7 @@ h3.changelog {
 .pio-docs-sidebar {
   position: sticky;
   top: 110px !important;
+  margin-bottom: 90px;
 }
 .pio-docs-sidebar #toc h4 {
   margin-top: 35px;
@@ -1354,12 +1355,10 @@ margin-bottom: 40px !important;  }
     }
     .guide-nav {
       margin-top:0px!important;
-      padding-right:10px!important;
       padding-left:10px!important;
     }
     .guide-doc-body {
       border-left:none!important;
-      padding-right:10px!important;
       padding-left:10px!important;
     }
 }
@@ -1893,6 +1892,13 @@ color: #222222;
   .pio-docs-theme-toggle {
     display: block;
   }
+}
+.guide-content-well  {
+   border-bottom: .1em solid #eef2f3;
+}
+.survey-pio-outter {
+  padding: 0px;
+  background-color: #fff;
 }
 
 /* Show and affix the side nav when space allows it */
@@ -3451,7 +3457,11 @@ display: block;
   font-size:16px !important;
 
 }
-
+div.col-md-3.manual-guide-toc {
+  /*position: sticky;
+  top: 130px;
+  margin-bottom: 90px;*/
+}
 .invisible-manual-toc {
   background: #fff !important;
   height:10px;
@@ -3568,10 +3578,10 @@ display: block;
 
 }
 .guide-nav {
-  margin-top:-30px;padding-right:50px;padding-left:0px;
+  margin-top:-30px;padding-left:0px;padding-right:0px;
 }
 .guide-doc-body {
-padding-left:50px;
+padding-left:30px;
 border-left: solid 2px #eef2f3;
 
 }
@@ -3615,7 +3625,11 @@ li.terminus-usage {
   line-height: .7;
   font-weight: bold;
 }
+.terminus-pager {
+  padding:20px;
+  text-align:center;
 
+}
 .terminus-pager a {
   text-decoration: none;
 }
@@ -4621,6 +4635,12 @@ a.topic-info-link {
   }
   .row-topics-list.row-topics-list-main > div {
     max-width:100%;
+  }
+  div.col-md-3.manual-guide-toc {
+    position: relative;
+    margin-bottom: 0px;
+    top: 0px;
+    margin-right: 15px;
   }
 }
 @media (max-width: 400px) {

@@ -6,6 +6,8 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
+nexturl: terminus/examples/
+previousurl: terminus/
 image: terminus-thumbLarge
 ---
 Terminus is available for Mac OS X, Linux, and Windows 7 and 10.
@@ -79,10 +81,3 @@ curl: (60) SSL certificate problem: unable to get local issuer certificate
 ```
 
 To resolve, save a copy of the [latest CA certificate](https://curl.haxx.se/docs/caextract.html) to a new file named `cacert.perm` then add `curl.cainfo = "[path_to_file]\cacert.pem"` to your `php.ini` file. If you're running XAMPP, you can add the `cacert.pem` file within the `xampp\php\extras\ssl` directory.
-
-
-<div class="terminus-pager">
-  <hr>
-  <a style="float:left;" href="/docs/terminus"><span class="terminus-pager-lsaquo">&lsaquo;</span>Getting Started</a>
-  <a style="float:right;" href="/docs/terminus/examples"><span class="terminus-pager-rsaquo">&rsaquo;</span>Example Usage</a>
-</div>

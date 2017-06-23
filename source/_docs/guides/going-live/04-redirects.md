@@ -12,7 +12,7 @@ use:
 permalink: docs/guides/going-live/redirects/
 nexturl: guides/going-live/launch-check/
 nextpage: Final Launch Check
-previousurl: guides/going-live/redirects/
+previousurl: guides/going-live/domains-https/
 previouspage: Enable HTTPS
 editpath: going-live/04-redirects.md
 ---
