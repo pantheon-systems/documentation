@@ -1828,7 +1828,7 @@ color: #222222;
 .pio-docs-sidebar .nav > .active:hover > a,
 .pio-docs-sidebar .nav > .active:focus > a {
   padding-left: 18px;
-  color: #0093c9;
+  color: #44525E;
   background-color: #f5f5f5!important;
   border-right: 5px solid #0093c9;
   font-weight: 600;
@@ -3561,7 +3561,7 @@ div.manual-guide-toc.active-trail li > a:hover {
   display: block;
 }
 .manual-guide-toc .child a {
-  padding:10px 10px 10px 50px;
+  padding:10px 10px 10px 70px;
 
 }
 .manual-guide-toc .child a:hover {
@@ -3577,7 +3577,7 @@ div.manual-guide-toc.active-trail li > a:hover {
   display: block;
 }
 .manual-guide-toc .child a {
-  padding:10px 10px 10px 50px;
+  padding:10px 10px 10px 70px;
 
 }
 .manual-guide-toc .child a:hover {
@@ -3658,16 +3658,20 @@ li.terminus-usage {
 }
 .terminus-plugin {
   margin: 10px;
+  flex: 1;
+  overflow: overlay;
 }
 .pantheon-official {
-  float: right;
-  position: relative;
+  min-width: 70px;
+  margin: 0px;
+  padding: 0px;
 }
 .pantheon-official p {
   margin: 0px;
   padding: 0px 10px;
-  font-size: 11px;
   color: #78868e;
+  font-size: xx-small;
+  text-align: center;
 }
 
 .nav-tabs {
@@ -4565,12 +4569,11 @@ a.cta.cta-black-on-yellow:after:hover {
 .plugin-dir {
   background-image: none !important;
   border: 1px solid #A4BBC1;
-  min-height: 230px !important;
+  min-height: 265px !important;
   padding: 0px 8px 0px 8px;
+  margin-bottom:20px;
 }
 .get-plugin {
-  position: absolute;
-  bottom: 15px;
 }
 .row-topics-list .topic-info {
   margin: 0 15px 30px;
@@ -5302,4 +5305,11 @@ div.navsearch-container {
   ul.manual-guide-toc > li > a:hover {
       margin-right: 0px;
   }
+}
+.terminus-dir-row {
+  -webkit-justify-content: flex-start; /* Safari */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
 }
