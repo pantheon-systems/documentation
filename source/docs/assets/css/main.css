@@ -353,12 +353,15 @@ h3.changelog {
   margin-bottom: 50px;
 }
 .pio-docs-sidebar {
+  top: 130px !important;
   position: sticky;
-  top: 110px !important;
-  margin-bottom: 90px;
+  margin-top: -25px;
+
 }
 .pio-docs-sidebar #toc h4 {
   margin-top: 35px;
+  font-family: Avenir-Light;
+  font-size: 20px;
 }
 .share-buttons {
   margin-bottom: 20px;
@@ -417,8 +420,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke: 1px transparent;
   font-smoothing: antialiased;
-  padding-top: 160px;
   background-color: #fff;
+  padding-top:160px;
   color: #333;
   min-height: 100%;
   margin: 0;
@@ -1731,15 +1734,16 @@ margin-bottom: 40px !important;  }
 
 /* By default it's not affixed in mobile views, so undo that */
 .pio-docs-sidebar.affix {
-  overflow: scroll;
-  max-height: 90%;
-
+  max-height: 100vh;
+  overflow-y: scroll;
+  overflow-x: visible;
 }
 
 .tocify-hide {
   display: none !important;
 }
-
+.tocify {
+}
 
 /* First level of nav */
 .pio-docs-sidenav {
@@ -1895,6 +1899,10 @@ color: #222222;
 }
 .guide-content-well  {
    border-bottom: .1em solid #eef2f3;
+}
+.doc-content-well {
+  padding-bottom:50px;
+
 }
 .survey-pio-outter {
   padding: 0px;
@@ -3434,6 +3442,11 @@ display: block;
 
 
 }
+
+.manual-toc .child ul > a {
+  padding: 10px 10px 10px 50px;
+  font-size: medium;
+}
 .manual-toc ul {
 
 }
@@ -3450,7 +3463,7 @@ display: block;
 
 }
 .manual-guide-toc ul {
-
+  line-height: normal;
 }
 .manual-guide-toc li {
   list-style-type:none;
@@ -3458,9 +3471,9 @@ display: block;
 
 }
 div.col-md-3.manual-guide-toc {
-  /*position: sticky;
+  position: sticky;
   top: 130px;
-  margin-bottom: 90px;*/
+  margin-bottom: 90px;
 }
 .invisible-manual-toc {
   background: #fff !important;
@@ -3531,7 +3544,7 @@ div.col-md-3.manual-guide-toc {
   background-color: #EEF2F3;
   color: #44525E;
   border-right: 4px solid #DDE5E7;
-  padding:10px 10px 10px 30px;
+  padding:10px 10px 10px 40px;
 
 
 }
@@ -3540,19 +3553,19 @@ div.col-md-3.manual-guide-toc {
 
 }
 .manual-toc a {
-  padding:10px 10px 10px 30px;
+  padding:10px 10px 10px 40px;
   display: block;
 }
-.manual-toc .child a {
-  padding:10px 10px 10px 40px;
+.manual-guide-toc .child a {
+  padding:10px 10px 10px 50px;
 
 }
-.manual-toc .child a:hover {
-  padding:10px 10px 10px 40px;
+.manual-guide-toc .child a:hover {
+  padding:10px 10px 10px 50px;
 
 }
-.manual-toc .child .active-trail {
-  padding:10px 10px 10px 40px !important;
+.manual-guide-toc .child .active-trail {
+  padding:10px 10px 10px 50px !important;
 
 }
 .manual-guide-toc a {
@@ -3560,15 +3573,15 @@ div.col-md-3.manual-guide-toc {
   display: block;
 }
 .manual-guide-toc .child a {
-  padding:10px 10px 10px 40px;
+  padding:10px 10px 10px 50px;
 
 }
 .manual-guide-toc .child a:hover {
-  padding:10px 10px 10px 40px;
+  padding:10px 10px 10px 50px;
 
 }
 .manual-guide-toc .child .active-trail {
-  padding:10px 10px 10px 40px !important;
+  padding:10px 10px 10px 50px !important;
 
 }
 
@@ -5258,6 +5271,8 @@ div.navsearch-container {
 }
 .container {
   padding-left: 0px;
+  padding-right: 0px;
+
 }
 .row-fluid {
   margin-left: -15px;

@@ -62,11 +62,7 @@
               {{ page.blocks.content|raw }}
             </div>
             {% if page.terminustoc %}
-              <div style="" class="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
-                <div id="toc">
-                  <h4>Contents</h4>
-                </div>
-              </div>
+              {% include ("sidebarnav.html") %}
             {% endif %}
           </div>
             {% if (page.previousurl) or (page.nexturl) %}

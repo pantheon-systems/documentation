@@ -5,28 +5,37 @@
     <div class="col-md-9 mb-70" style="margin-top:-20px;">
       <h1>Pantheon Changelog<br />{% if page.changelogmain is not defined %}<small>{{page.title}}</small></h1>{% endif %}
       {{ page.blocks.content|raw }}
-      {% if page.changelogmain is not defined %}
-      <div class="text-center">
-        <ul class="pagination">
-          {% if not page.next_post %}
-          {% set newer_disabled = 'disabled' %}
-          {% set newer_url = page.url %}
-          {% else %}
-          {% set newer_url = page.next_post.url %}
-          {% endif %}
-          <li class="{{ newer_disabled }}"><a href="{{ newer_url }}">Newer</a></li>
-          {% if not page.previous_post %}
-          {% set older_disabled = 'disabled' %}
-          {% set older_url = page.url %}
-          {% else %}
-          {% set older_url = page.previous_post.url %}
-          {% endif %}
-          <li class="{{ older_disabled }}"><a href="{{ older_url }}" title="{{ page.previous_post.title }}">Older</a></li>
-        </ul>
-      </div>
-      {% endif %}
     </div>
       {% include ("sidebarnav.html") %}
+  </div>
+  <div class="row terminus-pager col-md-12">
+    {% if page.changelogmain is not defined %}
+      {% if page.previous_post %}
+      {% set older_url = page.previous_post.url %}
+          <ul class="pagination pull-left pager-guides">
+            <li><a href="{{ older_url }}" title="{{ page.previous_post.title }}"><span class="terminus-pager-lsaquo">&lsaquo;</span> Older</a></li>
+          </ul>
+      {% endif %}
+      {% if page.next_post %}
+        {% set newer_url = page.next_post.url %}
+        <ul class="pager-guides pagination pull-right">
+          <li><a href="{{ newer_url }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Newer</a></li>
+        </ul>
+      {% endif %}
+    {% else %}
+      {% if page.pagination.previous_page %}
+        {% set older_url = page.pagination.previous_page.url|trim('.html') %}
+        <ul class="pagination pull-left pager-guides">
+          <li><a href="{{ older_url }}" title="{{ page.previous_post.title }}"><span class="terminus-pager-lsaquo">&lsaquo;</span> Older</a></li>
+        </ul>
+      {% endif %}
+      {% if page.pagination.next_page %}
+        {% set newer_url = page.pagination.next_page.url|trim('.html') %}
+        <ul class="pager-guides pagination pull-right">
+          <li><a href="{{ newer_url }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Newer</a></li>
+        </ul>
+      {% endif %}
+    {% endif %}
   </div>
 </div>
 {% endblock %}
