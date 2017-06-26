@@ -129,6 +129,30 @@ The following command will permanently delete all uncommitted SFTP changes. If y
 <figure><pre id="mass-update-apply"><code class="command bash" data-lang="bash">terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb</code></pre></figure>
 </div>
 
+## Switch Upstreams
+Every site has an upstream assigned in order to deliver [one-click updates](/docs/upstream-update/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration.
+### Move an existing site to a Custom Upstream
+<p class="instruction">If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>, you can use Terminus to switch existing sites over to the common codebase:</p>
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-set">Copy</button>
+<figure><pre id="upstream-set"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My Org Upstream"</code></pre></figure>
+</div>
+<p class="instruction">To see all available upstreams, run:</p>
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-list">Copy</button>
+<figure><pre id="upstream-list"><code class="command bash" data-lang="bash">terminus upstream:list</code></pre></figure>
+</div>
+### Set Empty Upstream for Composer Managed Sites
+<p markdown="1" class="instruction">If you would like to stop receiving one-click updates in the Pantheon Site Dashboard because you're applying updates with Composer, set the upstream to empty:</p>
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-empty">Copy</button>
+<figure><pre id="upstream-empty"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "Empty"</code></pre></figure>
+</div>
+### What if my site stores files in a non-standard directory?
+[TODO If you're using a nested doc root...]
+
+### Can I try this on a Multidev?
+No, the new upstream is applied to the entire site across all environments. But don't worry, the platform will keep things on track by disallowing changes that will break the site. [TODO confirm language w/product]
 
 ## Deploying Code
 <p class="instruction">When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:</p>
