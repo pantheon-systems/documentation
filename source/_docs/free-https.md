@@ -2,6 +2,8 @@
 title: Free and Automated HTTPS
 description: Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt
 tags: [dns, security]
+earlyaccess: true
+earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
 Pantheon's new [Global CDN](/docs/global-cdn) (content delivery network) provides Free and Automated HTTPS for every site launched on the platform using [Let's Encrypt](https://letsencrypt.org). For instructions, see [Launch Essentials](/docs/guides/launch/).
 
