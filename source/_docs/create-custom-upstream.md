@@ -1,11 +1,14 @@
 ---
-title: Create a Custom Upstream
+title: Early Access: Create a Custom Upstream
 description: Connect a remote repository with Pantheon to use as a starting point for new sites.
 tags: [tools, workflow]
-categories: []
+earlyaccess: true
+earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
+Pantheon is rolling out a new self-serve feature to support creating Custom Upstreams in the Organization Dashboard. Once created, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
 
-The following steps will help you get a Custom Upstream ready for prime time within your organization. Once completed, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
+## Eligibility
+Access to this feature is currently invite only. If you are not in this group but are eager to try it out, you can request early access and we will consider this on a case-by-case basis. [TODO ADD LINK TO REQUEST INVITE]
 
 ## Create and Host the Repository Remotely
 Custom Upstream repositories must be hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/).
@@ -77,20 +80,25 @@ For private GitLab repositories, please ensure the user has the ["reporter" perm
 
 If your repository is publicly accessible, you can skip this step.
 
-## Submit Upstream Information
-[Contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the Custom Upstream:
+## Connect Repository to Pantheon
+1. Access the **<span class="upstreams-regular"></span> Upstreams** page in your Pantheon Organization Dashboard.
+2. Click the **<span class="glyphicons glyphicons-plus"></span> Add Custom Upstream** button.
+3. Enter the following information about the Custom Upstream:
 
-- **Upstream Name**
-- **Description**: (Optional) Less than 200 characters, plain text
-- **URL of Logo**: (Optional) Recommended size is 70x80px
-- **URL of Upstream Repository**: Must end in `.git` (e.g. `https://github.com/pantheon-systems/documentation.git` or `https://bitbucket.org/pantheon-systems/documentation.git`)
-- **Repository Authentication**: Only required if the repository is hosted privately
- - Refer to the user [created above](#grant-pantheon-access-privately-hosted-repositories-only), and provide `username:password` or a [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) if supported by your repository hosting provider.
-- **Repository Branch**: Typically `master`
-- **Visibility**: Public (allow this upstream to be used by any Pantheon user) or Private (only allow members of your organization to use this upstream)
-- **Initial Connection Mode**: Git or SFTP
-- **Framework**: Drupal 6, Drupal 7, Drupal 8, Drupal 8 Backdrop, WordPress, WordPress Multisite
+  * **Name**
+  * **Upstream Repository URL**: Must end in `.git` (Example: `user@repovendor.com:sub/file.git`)
+  * **Repository Authentication (private repositories only)**: Only required if the repository is hosted privately
+    * Refer to the user [created above](/docs/create-custom-upstream/#grant-pantheon-access-privately-hosted-repositories-only), and provide `username:password` or a [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) if supported by your repository hosting provider.
+  * **Framework**: Drupal 6 / Drupal 7, Drupal 8, Drupal 8 Backdrop, WordPress, WordPress Multisite
+  * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
+4. Click **Create**.
+## Edit Custom Upstream Settings
+1. From your Organization Dashboard, click the **<span class="upstreams-regular"></span> Upstreams** tab.
+2. Click **Edit** next to the existing upstream requiring an update.
+3. Make desired updates
 
+## Switch Site Upstreams
+[TODO crosslink to terminus site:upstream:set]
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)
