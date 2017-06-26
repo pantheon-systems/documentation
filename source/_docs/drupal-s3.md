@@ -116,9 +116,9 @@ Before you begin:
   <pre><code class="bash hljs">terminus drush &lt;site&gt;.&lt;env&gt; -- en libraries s3fs -y</code></pre>
 
   Get the <a href="https://github.com/aws/aws-sdk-php/releases">AWS SDK Library 2.x</a>:
-  <pre><code class="php hljs">terminus drush &lt;site&gt;.&lt;env&gt; -- make --no-core ~/code/sites/all/modules/s3fs/s3fs.make ~/code/
+  <pre><code class="php hljs">terminus drush &lt;site&gt;.&lt;env&gt; -- make --no-core code/sites/all/modules/s3fs/s3fs.make code/
   //or if you have a contrib subfolder for modules use:
-  //terminus drush &lt;site&gt;.&lt;env&gt; -- make --no-core ~/code/sites/all/modules/contrib/s3fs/s3fs.make ~/code/</code></pre>
+  //terminus drush &lt;site&gt;.&lt;env&gt; -- make --no-core code/sites/all/modules/contrib/s3fs/s3fs.make code/</code></pre>
   The above command will add the AWS SDK version 2.x library into the <code>sites/all/libraries/awssdk2</code> directory.
  </div>
   <div role="tabpanel" class="tab-pane" id="d8s3fs">
