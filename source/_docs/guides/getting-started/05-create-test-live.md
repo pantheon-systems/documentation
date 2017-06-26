@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 subtitle: Create Test & Live
-guidepage: true
+getstarted: true
 anchorid: create-test-live
 generator: pagination
 layout: guide
@@ -10,11 +10,11 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/create-test-live/
-nexturl: getting-started/clone-live-to-dev/
+nexturl: guides/getting-started/clone-live-to-dev/
 nextpage: Clone Live to Dev
-previousurl: getting-started/site-dashboard/
+previousurl: guides/getting-started/site-dashboard/
 previouspage: Site Dashboard
-editpath: 05-create-test-live.md
+editpath: getting-started/05-create-test-live.md
 image: getting-started-Largethumb
 ---
 In this lesson, we’re going to to create our Test site and our Live site, which we just learned about in the previous lesson.

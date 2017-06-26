@@ -8,26 +8,8 @@ pagination:
 use:
     - posts
 ---
-  {% for post in page.pagination.items %}
+{% for post in page.pagination.items %}
   <h2 style="font-size:32px;"><a href="{{ post.url }}">{{ post.title }}</a></h2>
   {{ post.blocks.content|replace({"h2": "h3"})|replace({"h3": "h4"})|raw}}
   <hr>
-  {% endfor %}
-  <div class="text-center">
-    <ul class="pagination">
-      {% if not page.pagination.previous_page %}
-      {% set older_disabled = 'disabled' %}
-      {% set older_url = page.url|trim('.html') %}
-      {% else %}
-      {% set older_url = page.pagination.previous_page.url|trim('.html') %}
-      {% endif %}
-      <li class="{{ older_disabled }}"><a href="{{ older_url }}" title="{{ page.previous_post.title }}">Newer</a></li>
-      {% if not page.pagination.next_page %}
-      {% set newer_disabled = 'disabled' %}
-      {% set newer_url = page.url|trim('.html') %}
-      {% else %}
-      {% set newer_url = page.pagination.next_page.url|trim('.html') %}
-      {% endif %}
-      <li class="{{ newer_disabled }}"><a href="{{ newer_url }}">Older</a></li>
-    </ul>
-</div>
+{% endfor %}

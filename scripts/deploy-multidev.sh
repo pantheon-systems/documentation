@@ -54,15 +54,17 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
   # Update CTA edit link so that the current branch is used
-  sed -i '18s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
-  sed -i '33s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
-  sed -i '15s/master/'"$CIRCLE_BRANCH"'/g' source/_views/video.html
-  sed -i '27s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
+  sed -i '36s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
+  sed -i '38s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
+  sed -i '29s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
+  sed -i '31s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
+  sed -i '16s/master/'"$CIRCLE_BRANCH"'/g' source/_views/video.html
   sed -i '29s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
-  sed -i '20i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
-  sed -i '35i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/terminuspage.html
-  sed -i '17i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/video.html
-  sed -i '32i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/guide.html
+  sed -i '31s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
+  sed -i '41i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
+  sed -i '34i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/terminuspage.html
+  sed -i '18i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/video.html
+  sed -i '34i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/guide.html
 
 
   # Regenerate sculpin to reflect new redirect logic
@@ -124,7 +126,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
       if [[ $doc =~ $doc_path ]]
         then
         export guide=${doc:13: -3}
-        if ls -R source/_docs/guides | grep '^\<'"${guide##*/}"'\>'
+        if ls -R source/_docs/guides | grep '^\<'"${guide##*/}"'\>.md$'
           then
             export guide_file=${guide##*/}
             if [[ ${guide_file:0:2}  == 01 ]]
@@ -136,6 +138,9 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
               else
             grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"$guide"]("$url"/docs/"$guide")\n" >> comment.txt
             fi
+          elif ls -R source/_docs/dns-providers | grep '^\<'"${doc:27: -3}"'\>.md$'
+            then
+              grep -- '\<'"${doc:27: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:27: -3}"]("$url"/docs/"${doc:27: -3}")\n" >> comment.txt
           else
             grep -- '\<'"${doc:8: -3}"'\>' comment.txt || echo -n "-\u0020[/"${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
         fi

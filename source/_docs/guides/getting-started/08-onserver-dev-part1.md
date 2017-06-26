@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 subtitle: On Server Dev, Part 1
-guidepage: true
+getstarted: true
 anchorid: onserver-dev-part1
 generator: pagination
 layout: guide
@@ -10,11 +10,11 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/onserver-dev-part1/
-nexturl: getting-started/onserver-dev-part2/
+nexturl: guides/getting-started/onserver-dev-part2/
 nextpage: On-Server Dev, Part 2
-previousurl: getting-started/connection-modes/
+previousurl: guides/getting-started/connection-modes/
 previouspage: Connection Modes
-editpath: 08-onserver-dev-part1.md
+editpath: getting-started/08-onserver-dev-part1.md
 image: getting-started-Largethumb
 ---
 
@@ -33,7 +33,7 @@ In this lesson, we’re going to work directly on the server. We’ll make chang
 
 3. Install a _new_ theme (i.e., do not activate/enable a theme that came pre-packaged with your site).
 
- If you need help with this step, please reference the <a href="https://codex.wordpress.org/Using_Themes#Adding_New_Themes_using_the_Administration_Panels">WordPress Codex<span class="glyphicons glyphicons-new-window-alt"></span></a> or <a href="https://www.drupal.org/docs/user_guide/en/extend-theme-install.html"> for installing a new theme.
+ If you need help with this step, please reference the <a href="https://codex.wordpress.org/Using_Themes#Adding_New_Themes_using_the_Administration_Panels">WordPress Codex <span class="glyphicons glyphicons-new-window-alt"></span></a> or <a href="https://www.drupal.org/docs/user_guide/en/extend-theme-install.html"><span class="glyphicons glyphicons-new-window-alt"></span></a> Drupal Documentation</a> for installing a new theme.
 
 4. Activate/enable the new theme you just installed in Step 3. Now view your site to confirm the theme change.
 

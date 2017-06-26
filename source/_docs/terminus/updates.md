@@ -6,6 +6,7 @@ terminustoc: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
+previousurl: terminus/plugins/create/
 image: terminus-thumbLarge
 ---
 <div class="container col-md-12" ng-app="terminusReleaseApp" ng-controller="terminusReleaseCtrl">
@@ -31,8 +32,4 @@ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/ma
     <md ng-model="release.body"></md>
     <hr>
   </div>
-</div>
-<div class="terminus-pager">
-  <hr>
-  <a style="float:left;" href="/docs/terminus/plugins/create"><span class="terminus-pager-lsaquo">&lsaquo;</span>Create Plugins</a>
 </div>

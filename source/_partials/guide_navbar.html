@@ -1,10 +1,10 @@
-<div class="col-md-2 manual-guide-toc" role="navigation">
-  <button type="button" style="padding:0px;margin-top:-1px;margin-right:20px;"class="navbar-toggle" data-toggle="collapse" data-target="#guide-collapse">
+<div class="col-md-3 manual-guide-toc" role="navigation">
+  <button type="button" class="navbar-toggle" style="margin-top:-15px;padding-right:20px;" data-toggle="collapse" data-target="#guide-collapse">
     <span class="sr-only">Toggle navigation</span>
     <i class="fa fa-bars"></i>
   </button>
-  <h3 style="font-weight:bold;font-family:Avenir-Light;padding:0px 0px 10px 30px;">{{ page.title }}</h3>
-  <div class="collapse navbar-collapse" style="margin-right:0px;padding-left:0px;padding-right:0px;"id="guide-collapse">
+  <h3 style="font-size:24px;margin-top:40px;padding:0px 0px 10px 40px;">{{ page.title }}</h3>
+  <div class="collapse navbar-collapse" id="guide-collapse">
     <ul id="manual-guide-toc" class="manual-guide-toc">
       {% for item in page.pagination.items %}
         <li><a id="docs-guides-{{ item.anchorid }}" href="{{ item.url }}">{{ item.subtitle }}</a></li>

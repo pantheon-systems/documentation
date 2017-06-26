@@ -41,3 +41,14 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
+    launchpages:
+        type: path
+        path: docs/guides/launch
+        permalink: pretty
+        singular_name: launchpage
+        enabled: true
+        layout: guide
+        taxonomies:
+            - categories
+            - tags
+            - contributors

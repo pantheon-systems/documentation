@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 subtitle: Connection Modes
-guidepage: true
+getstarted: true
 anchorid: connection-modes
 generator: pagination
 layout: guide
@@ -10,11 +10,11 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/connection-modes/
-nexturl: getting-started/onserver-dev-part1/
+nexturl: guides/getting-started/onserver-dev-part1/
 nextpage: On-Server Dev, Part 1
-previousurl: getting-started/clone-live-to-dev/
+previousurl: guides/getting-started/clone-live-to-dev/
 previouspage: Clone Live to Dev
-editpath: 07-connection-modes.md
+editpath: getting-started/07-connection-modes.md
 image: getting-started-Largethumb
 ---
 

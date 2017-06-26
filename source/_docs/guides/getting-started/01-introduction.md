@@ -6,16 +6,16 @@ tags: [getstarted]
 layout: guide
 type: guide
 anchorid: getting-started
-guidepage: true
+getstarted: true
 generator: pagination
 pagination:
     provider: data.gettingstartedpages
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/
-nexturl: getting-started/user-dashboard/
+nexturl: guides/getting-started/user-dashboard/
 nextpage: User Dashboard
-editpath: 01-introduction.md
+editpath: getting-started/01-introduction.md
 completiontime: 1 hour
 image: getting-started-Largethumb
 ---

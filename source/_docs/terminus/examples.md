@@ -6,6 +6,8 @@ terminuspage: true
 terminustoc: true
 type: terminuspage
 layout: terminuspage
+nexturl: terminus/commands/
+previousurl: terminus/install/
 permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
 ---
@@ -199,9 +201,3 @@ terminus dashboard:view $SITE.dev</code></pre>
 </div>
 
 The Site Dashboard will open once the reset procedure has completed.
-
-<div class="terminus-pager col-md-12">
-  <hr>
-      <a style="float:left;" href="/docs/terminus/install"><span class="terminus-pager-lsaquo">&lsaquo;</span>Installation</a>
-      <a style="float:right;" href="/docs/terminus/commands"><span class="terminus-pager-rsaquo">&rsaquo;</span>Commands</a>
-</div>

@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 subtitle: Create New Site
-guidepage: true
+getstarted: true
 anchorid: create-new-site
 generator: pagination
 layout: guide
@@ -10,11 +10,11 @@ pagination:
 use:
     - gettingstartedpages
 permalink: docs/guides/getting-started/create-new-site/
-nexturl: getting-started/site-dashboard/
+nexturl: guides/getting-started/site-dashboard/
 nextpage: Site Dashboard
-previousurl: getting-started/user-dashboard/
+previousurl: guides/getting-started/user-dashboard/
 previouspage: User Dashboard
-editpath: 03-create-new-site.md
+editpath: getting-started/03-create-new-site.md
 image: getting-started-Largethumb
 ---
 In this lesson, we’re going to create and configure a new WordPress or Drupal site.
