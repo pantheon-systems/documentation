@@ -3661,18 +3661,6 @@ li.terminus-usage {
   flex: 1;
   overflow: overlay;
 }
-.pantheon-official {
-  min-width: 70px;
-  margin: 0px;
-  padding: 0px;
-}
-.pantheon-official p {
-  margin: 0px;
-  padding: 0px 10px;
-  color: #78868e;
-  font-size: xx-small;
-  text-align: center;
-}
 
 .nav-tabs {
   padding-left: 20px;
@@ -3917,6 +3905,9 @@ p.devbar>a:hover{
     float: left;
     text-align: center;
     width: 100%;
+  }
+  .flex-panel-item {
+    max-width: 100% !important;
   }
 }
 
@@ -4573,13 +4564,8 @@ a.cta.cta-black-on-yellow:after:hover {
   padding: 0px 8px 0px 8px;
   margin-bottom:20px;
 }
-.get-plugin {
-}
 .row-topics-list .topic-info {
   margin: 0 15px 30px;
-}
-.plugin-title {
-  margin-top: 20px;
 }
 
 /*.topic-info > a.topic-info-link {
@@ -4598,13 +4584,6 @@ a.cta.cta-black-on-yellow:after:hover {
   background-repeat: no-repeat;
   background-position: center;
   margin-top:25px;
-}
-.main-topic-info__plugin-image {
-  height: 35px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top:15px;
 }
 .topic-info__image {
   float:left;
@@ -5312,4 +5291,77 @@ div.navsearch-container {
   flex-flow: row wrap;
   justify-content: space-around;
 
+}
+.flex-panel-group {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+.flex-panel-item {
+  flex: 1 1 25%;
+  margin: 15px 5px;
+  max-width: 32%;
+}
+.flex-panel-body {
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 10px;
+  padding: 20px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.flex-panel-title {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.plugin-title {
+  margin-top: 10px;
+  font-size:larger;
+  align-self: flex-start;
+
+}
+.main-topic-info__plugin-image {
+  align-self: flex-end;
+}
+.pantheon-official {
+  color: #78868e;
+  font-size: xx-small;
+  align-self: flex-end;
+  margin:0px;
+  text-align: center;
+}
+.pantheon-official img, .pantheon-official p {
+  margin: 0px;
+}
+.pantheon-official p {
+  min-width: 70px;
+}
+.get-plugin {
+  max-width: 120px;
+}
+.text-warning {
+  color: #f0ad4e;
+}
+.text-info {
+  color:#5bc0de;
+}
+blockquote.block-info {
+  border: 1px solid #ddd;
+  border-left-color: #5bc0de;
+  border-left-width: 5px;
+  border-radius: 4px;
+
+}
+.block-info h3 {
+    margin-top: 0;
 }
