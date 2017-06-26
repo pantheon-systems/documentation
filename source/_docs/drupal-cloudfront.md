@@ -54,7 +54,7 @@ The first step in setting up CloudFront on your Drupal site is to create a new C
 4. View the image in a new tab. If the URL reflects the domain provided by CloudFront, your assets are coming from the CloudFront distribution. If it reflects the domain name of your site and doesn't mention the CDN domain, go back to the beginning and complete the steps again.
 
 ## Troubleshoot
-### Cannot Retrieve Content
+### CloudFront Unable to Connect to Pantheon
 If you find that CloudFront is unable to receive content from the origin (Pantheon) for HTTPS traffic, it's likely due to the Host HTTP header forwarded in the request. To resolve, switch Forward Headers behaviors setting from "All" to "None".
 
 ## See Also

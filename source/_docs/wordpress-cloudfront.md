@@ -125,5 +125,5 @@ Now for the final step: turning on Amazon CloudFront. These combined services wi
 You're now sent to the CloudFront Distributions page. You will notice that your distribution is enabled and the status is "In Progress". The amount of time this initial setup takes depends on the size of your media library. Once complete, Amazon CloudFront will serve all of your media.
 
 ## Troubleshoot
-### Cannot Retrieve Content
+### CloudFront Unable to Connect to Pantheon
 If you find that CloudFront is unable to receive content from the origin (Pantheon) for HTTPS traffic, it's likely due to the Host HTTP header forwarded in the request. To resolve, switch Forward Headers behaviors setting from "All" to "None".
