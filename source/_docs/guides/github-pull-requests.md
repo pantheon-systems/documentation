@@ -18,7 +18,7 @@ This guide describes how to use GitHub and Circle CI with Composer to implement 
       <div class="flex-panel-title">
         <h3 class="plugin-title">GitHub</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/github-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;" >
+          <img alt="GitHub Logo" src="/source/docs/assets/images/github-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;" >
           <p class="pantheon-official">GitHub</p>
         </div>
       </div>
@@ -30,7 +30,7 @@ This guide describes how to use GitHub and Circle CI with Composer to implement 
       <div class="flex-panel-title">
         <h3 class="plugin-title">CircleCI</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/circleci-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;>
+          <img alt="CircleCI Logo" src="/source/docs/assets/images/circleci-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;>
           <p class="pantheon-official">CircleCI</p>
         </div>
       </div>
@@ -42,7 +42,7 @@ This guide describes how to use GitHub and Circle CI with Composer to implement 
       <div class="flex-panel-title">
         <h3 class="plugin-title">Composer</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/composer-logo.svg" style="max-width:40px; class="main-topic-info__plugin-image" >
+          <img alt="Composer Logo" src="/source/docs/assets/images/composer-logo.svg" style="max-width:40px; class="main-topic-info__plugin-image" >
           <p class="pantheon-official">GitHub</p>
         </div>
       </div>

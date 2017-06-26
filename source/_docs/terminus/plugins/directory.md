@@ -19,7 +19,7 @@ The following plugins are supported for Terminus 1.0:
       <div class="flex-panel-title">
         <h3 class="plugin-title">Build Tools</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+          <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
           <p class="pantheon-official">Pantheon Official</p>
         </div>
       </div>
@@ -33,7 +33,7 @@ The following plugins are supported for Terminus 1.0:
       <div class="flex-panel-title">
         <h3 class="plugin-title">Composer</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+        <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
           <p class="pantheon-official">Pantheon Official</p>
         </div>
       </div>
@@ -47,7 +47,7 @@ The following plugins are supported for Terminus 1.0:
       <div class="flex-panel-title">
         <h3 class="plugin-title">Drupal Console</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+        <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
           <p class="pantheon-official">Pantheon Official</p>
         </div>
       </div>
@@ -71,7 +71,7 @@ The following plugins are supported for Terminus 1.0:
       <div class="flex-panel-title">
         <h3 class="plugin-title">Mass Update</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+        <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
           <p class="pantheon-official">Pantheon Official</p>
         </div>
       </div>
@@ -95,7 +95,7 @@ The following plugins are supported for Terminus 1.0:
       <div class="flex-panel-title">
         <h3 class="plugin-title">Quicksilver</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+        <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
           <p class="pantheon-official">Pantheon Official</p>
         </div>
       </div>
@@ -109,7 +109,7 @@ The following plugins are supported for Terminus 1.0:
       <div class="flex-panel-title">
         <h3 class="plugin-title">Rsync</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+        <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
           <p class="pantheon-official">Pantheon Official</p>
         </div>
       </div>
@@ -123,7 +123,7 @@ The following plugins are supported for Terminus 1.0:
       <div class="flex-panel-title">
         <h3 class="plugin-title">Quicksilver</h3>
         <div class="pantheon-official">
-          <img src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+        <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
           <p class="pantheon-official">Pantheon Official</p>
         </div>
       </div>
