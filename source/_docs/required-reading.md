@@ -24,7 +24,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Cron for WordPress](/docs/wordpress-cron) or [Cron for Drupal](/docs/drupal-cron)
 
 ## Launch
-- [Going Live](/docs/go-live)
+- [Launch Essentials](/docs/guides/launch)
 - [Domains and DNS](/docs/domains)
 
 ## Run

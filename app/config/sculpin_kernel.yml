@@ -41,11 +41,11 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
-    goinglivepages:
+    launchpages:
         type: path
-        path: docs/guides/going-live
+        path: docs/guides/launch
         permalink: pretty
-        singular_name: goinglivepage
+        singular_name: launchpage
         enabled: true
         layout: guide
         taxonomies:

@@ -11,8 +11,8 @@ editpath: dns-providers/1-and-1.md/
 Be sure that you have a:
 
 - Registered domain name using 1&1 to host DNS
-- [Paid Pantheon plan](/docs/guides/going-live/plans/)
-- [Domain connected](/docs/guides/going-live/domains-https/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/docs/guides/launch/plans/)
+- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Configure DNS Records on 1&1
 ### A/AAAA Records
@@ -45,5 +45,5 @@ The CNAME record is required if you wish to include `www` within your site's pri
 
 ## Next Steps
 
-* [Going Live: Domains & HTTPS](/docs/guides/going-live/domains-https/)
-* [Going Live: Redirect to a Primary Domain](/docs/guides/going-live/redirects/)
+* [Launch Essentials: Domains & HTTPS](/docs/guides/launch/domains/)
+* [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/)

@@ -13,26 +13,26 @@
       {% if page.previous_post %}
       {% set older_url = page.previous_post.url %}
           <ul class="pagination pull-left pager-guides">
-            <li><a href="{{ older_url }}" title="{{ page.previous_post.title }}"><span class="terminus-pager-lsaquo">&lsaquo;</span> Older</a></li>
+            <li><a href="{{ older_url }}" title="{{ page.previous_post.title }}"><span class="terminus-pager-lsaquo">&lsaquo;</span> Newer</a></li>
           </ul>
       {% endif %}
       {% if page.next_post %}
         {% set newer_url = page.next_post.url %}
         <ul class="pager-guides pagination pull-right">
-          <li><a href="{{ newer_url }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Newer</a></li>
+          <li><a href="{{ newer_url }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Older</a></li>
         </ul>
       {% endif %}
     {% else %}
       {% if page.pagination.previous_page %}
         {% set older_url = page.pagination.previous_page.url|trim('.html') %}
         <ul class="pagination pull-left pager-guides">
-          <li><a href="{{ older_url }}" title="{{ page.previous_post.title }}"><span class="terminus-pager-lsaquo">&lsaquo;</span> Older</a></li>
+          <li><a href="{{ older_url }}" title="{{ page.previous_post.title }}"><span class="terminus-pager-lsaquo">&lsaquo;</span> Newer</a></li>
         </ul>
       {% endif %}
       {% if page.pagination.next_page %}
         {% set newer_url = page.pagination.next_page.url|trim('.html') %}
         <ul class="pager-guides pagination pull-right">
-          <li><a href="{{ newer_url }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Newer</a></li>
+          <li><a href="{{ newer_url }}"><span class="terminus-pager-rsaquo">&rsaquo;</span> Older</a></li>
         </ul>
       {% endif %}
     {% endif %}

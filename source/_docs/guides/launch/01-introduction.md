@@ -1,21 +1,21 @@
 ---
-title: Going Live
+title: Launch Essentials
 subtitle: Introduction
-description: Essential guide to launching sites on Pantheon like you're in a 55-foot tall jungle-walking robot exoskeleton, killin it.
+description: Tips and tricks for launching sites on Pantheon like you're in a 55-foot tall jungle-walking robot exoskeleton, killin it.
 tags: [golive]
 layout: guide
 type: guide
 anchorid: introduction
-golive: true
+launch: true
 generator: pagination
 pagination:
-    provider: data.goinglivepages
+    provider: data.launchpages
 use:
-    - goinglivepages
-permalink: docs/guides/going-live/
-nexturl: guides/going-live/plans/
+    - launchpages
+permalink: docs/guides/launch/
+nexturl: guides/launch/plans/
 nextpage: Upgrade Site Plan
-editpath: going-live/01-introduction.md
+editpath: launch/01-introduction.md
 ---
 Welcome! This guide will help you take a site live on Pantheon.
 

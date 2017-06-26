@@ -109,7 +109,7 @@
     window.addEventListener("load", setActivetrail);
   </script>
 {% endif %}
-{% if page.golive %}
+{% if page.launch %}
   <script type="text/javascript">
     function setActivetrail() {
       aaObj = document.getElementById('manual-guide-toc').getElementsByTagName('a');
@@ -120,6 +120,9 @@
             $('#docs-guides-introduction').removeClass('active-trail');
           }
           if(/\/domains.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-introduction').removeClass('active-trail');
+          }
+          if(/\/configure-dns.*/.test(aaObj[i].href)>=1) {
             $('#docs-guides-introduction').removeClass('active-trail');
           }
           if(/\/https.*/.test(aaObj[i].href)>=1) {
