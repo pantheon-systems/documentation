@@ -72,9 +72,9 @@ In this lesson, we'll redirect incoming requests to a primary domain name (e.g.,
       </div>
     </div>
 
-7. Upload the configuration file to Pantheon using your SFTP client.
+6. Upload the configuration file to Pantheon using your SFTP client.
 
-8. Return to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Pantheon Site Dashboard. The files you just changed will be highlighted in yellow.
+7. Return to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Pantheon Site Dashboard. The files you just changed will be highlighted in yellow.
 
 
 8. Add a commit message, then click **Commit** to add these files to your Dev environment.
