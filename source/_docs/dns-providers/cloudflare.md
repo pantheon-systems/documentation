@@ -44,6 +44,12 @@ The CNAME record is required if you wish to include `www` within your site's pri
 5. Click **Add Record**.
 
 
+## FAQs
+### Can I stack Cloudflare's CDN ontop of Pantheon's Global CDN?
+We only recommend this if you are using CloudFlare's WAF tools or other features may want to keep CloudFlare in their stack. There are no known issues with layering CloudFlare and the Global CDN together, but we strongly recommend you enforce HTTPS in Cloudflare **and** within WordPress or Drupal to avoid mixed content warnings and infinite redirect errors.
+
+Within Cloudflare, set SSL mode to Full and enable Automatic HTTPS Rewrites. For details on how to enforce HTTPS in your CMS, see [Redirect to a Primary Domain](/docs/guides/launch/redirects/).
+
 ## Cloudflare Docs
 
 * <a href="https://support.cloudflare.com/hc/en-us/articles/200169046-How-do-I-add-a-CNAME-record-" target="blank">How do I add a CNAME record? <span class="glyphicons glyphicons-new-window-alt"></span></a>
