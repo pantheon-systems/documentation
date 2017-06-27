@@ -36,42 +36,103 @@ That's all there is to it—the script will do all the work.
 
 Here's the browser version of the script:
 
-```
-<style>
-.green { color: green; font-family: monospace;}
-.red { color: red; font-family: monospace;}
-</style>
-<h1>Pantheon MyISAM to InnoDB engine converter</h1>
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">PHP 5</a></li>
+  <!-- 2nd Tab Nav -->
+  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">PHP 7</a></li>
+</ul>
 
-<?php
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor"><pre><code>&lt;style&gt;
+  .green { color: green; font-family: monospace;}
+  .red { color: red; font-family: monospace;}
+&lt;/style&gt;
+
+&lt;h1&gt;Pantheon MyISAM to InnoDB engine converter&lt;/h1&gt;
+
+&lt;?php
 /*
- * Use this script ONLY if you are a Pantheon customer. 
- * ONLY RUN THIS SCRIPT IN DEV!
- */
+* Use this script ONLY if you are a Pantheon customer.
+* ONLY RUN THIS SCRIPT IN DEV!
+*/
 $mysqli = @new mysqli($_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT'], $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME']);
+
 if ($mysqli->connect_errno) {
-    echo "<h1>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."</h1>\n";
-    die(1);
+  echo "&lt;h1&gt;Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."&lt;/h1&gt;\n";
+  die(1);
 }
+
 $results = $mysqli->query("show tables;");
+
 if ($results===false or $mysqli->connect_errno) {
-    echo "<h1>MySQL error: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."</h1>\n";
-    die(2);
+  echo "&lt;h1&gt;MySQL error: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."&lt;/h1&gt;\n";
+  die(2);
 }
+
 while ($row= $results->fetch_assoc())
 {
-    $sql = "SHOW TABLE STATUS WHERE Name = '{$row['Tables_in_pantheon']}'";
-    $thisTable = $mysqli->query($sql)->fetch_assoc();
-    if ($thisTable['Engine']==='MyISAM') {
-        $sql = "alter table " . $row['Tables_in_pantheon'] . " ENGINE = InnoDB;";
-        echo $row['Tables_in_pantheon'] . " is using the " . $thisTable['Engine'] . " Engine. <span class='red'>[ Changing ]</span> <br />\n";
-        $mysqli->query($sql);           
-    } else {
-        echo $row['Tables_in_pantheon'] . ' is already using the ' . $thisTable['Engine'] . " Engine. <span class='green'>[ Ignoring ]</span> <br />\n";
-    }   
+  $sql = "SHOW TABLE STATUS WHERE Name = '{$row['Tables_in_pantheon']}'";
+  $thisTable = $mysqli->query($sql)->fetch_assoc();
+
+  if ($thisTable['Engine']==='MyISAM') {
+    $sql = "alter table " . $row['Tables_in_pantheon'] . " ENGINE = InnoDB;";
+    echo $row['Tables_in_pantheon'] . " is using the " . $thisTable['Engine'] . " Engine. <span class='red'>[ Changing ]</span> <br />\n";
+    $mysqli->query($sql);
+  } else {
+    echo $row['Tables_in_pantheon'] . ' is already using the ' . $thisTable['Engine'] . " Engine. <span class='green'>[ Ignoring ]</span> <br />\n";
+  }
 };
-die(0);
-```
+
+die(0);</code></pre>
+</div>
+<!-- 2nd pane content -->
+<div role="tabpanel" class="tab-pane" id="tab-2-anchor"><pre><code>&lt;style&gt;
+  .green { color: green; font-family: monospace;}
+  .red { color: red; font-family: monospace;}
+&lt;/style&gt;
+
+&lt;h1&gt;Pantheon MyISAM to InnoDB engine converter&lt;/h1&gt;
+
+&lt;?php
+/*
+* Use this script ONLY if you are a Pantheon customer.
+* ONLY RUN THIS SCRIPT IN DEV!
+*/
+$mysqli = @new mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME'], $_ENV['DB_PORT']);
+
+if ($mysqli->connect_errno) {
+  echo "&lt;h1&gt;Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."&lt;/h1&gt;\n";
+  die(1);
+}
+
+$results = $mysqli->query("show tables;");
+
+if ($results===false or $mysqli->connect_errno) {
+  echo "&lt;h1&gt;MySQL error: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."&lt;/h1&gt;\n";
+  die(2);
+}
+
+while ($row= $results->fetch_assoc())
+{
+  $sql = "SHOW TABLE STATUS WHERE Name = '{$row['Tables_in_pantheon']}'";
+  $thisTable = $mysqli->query($sql)->fetch_assoc();
+
+  if ($thisTable['Engine']==='MyISAM') {
+    $sql = "alter table " . $row['Tables_in_pantheon'] . " ENGINE = InnoDB;";
+    echo $row['Tables_in_pantheon'] . " is using the " . $thisTable['Engine'] . " Engine. <span class='red'>[ Changing ]</span> <br />\n";
+    $mysqli->query($sql);
+  } else {
+    echo $row['Tables_in_pantheon'] . ' is already using the ' . $thisTable['Engine'] . " Engine. <span class='green'>[ Ignoring ]</span> <br />\n";
+  }
+};
+
+die(0);</code></pre>
+</div>
+</div>
 
 ##Advanced Method via Command Line
 
@@ -89,7 +150,7 @@ Here is the command line script:
 ```
 <?php
 /*
- * Use this version if you are NOT a Pantheon customer. 
+ * Use this version if you are NOT a Pantheon customer.
  */
 $db = array();
 /*
@@ -124,10 +185,10 @@ while ($row= $results->fetch_assoc()) {
     if ($thisTable['Engine']==='MyISAM') {
         $sql = "alter table " . $row['Tables_in_' . $db['database']]. " ENGINE = InnoDB;";
         echo "Changing {$row['Tables_in_' . $db['database']]} from {$thisTable['Engine']} to InnoDB.\n";
-        $mysqli->query($sql);        
+        $mysqli->query($sql);
     } else {
         echo $row['Tables_in_' . $db['database']] . ' is of the Engine Type ' . $thisTable['Engine'] . ".\n";
-        echo "Not changing to InnoDB.\n\n"; 
+        echo "Not changing to InnoDB.\n\n";
     }
 }
 die(0);
