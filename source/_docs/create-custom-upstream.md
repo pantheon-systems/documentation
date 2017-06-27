@@ -8,15 +8,44 @@ earlynote: The documentation on this page discusses features and options that ar
 Pantheon is rolling out a new self-serve feature to support creating Custom Upstreams in the Organization Dashboard. Once created, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
 
 ## Eligibility
-Access to this feature is currently invite only. If you are not in this group but are eager to try it out, you can request early access and we will consider this on a case-by-case basis. [TODO ADD LINK TO REQUEST INVITE]
+Access to this feature is currently invite only for Agency and Enterprise Organizations. If you are not in this group but are eager to try it out, you can request early access and we will consider this on a case-by-case basis.
+
+**TODO ADD LINK TO REQUEST INVITE**
 
 ## Create and Host the Repository Remotely
-Custom Upstream repositories must be hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/).
+Custom Upstream repositories must be hosted on [GitHub](https://github.com/) or [BitBucket](https://bitbucket.org/). If you need to use an alternate repository hosting service provider, please let us know.
 
-This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Updates are tracked here and distributed downstream to sites within your organization.
+**TODO ADD LINK TO ALTSERVICE PROVIDER REQUEST (Goes to support or the same link as the invite?)**
 
-You can start by creating an empty repository on your preferred git hosting provider, or you can use an existing repository. Once you have the repository hosted remotely, clone it to your local computer. For help getting started, check out [GitHub's Hello World guide](https://guides.github.com/activities/hello-world/).
+This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
 
+Choose your preferred Git host:
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#gh" aria-controls="gh" role="tab" data-toggle="tab">GitHub</a></li>
+  <li role="presentation"><a href="#bb" aria-controls="bb" role="tab" data-toggle="tab">Bitbucket</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div markdown="1" role="tabpanel" class="tab-pane active" id="gh">
+  1. <a href="https://github.com/join" target=blank>Sign up for a GitHub account</a> if you do not have one already.
+  2. [Log in to GitHub](https://github.com/login/).
+  3. If this is your first time logging into GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New Repository**](https://github.com/new) from the Repository sidebar on the right.
+  4. Name the repository.
+  5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+  6. Click **Create Repository**.
+  </div>
+  <div markdown="1" role="tabpanel" class="tab-pane" id="bb">
+  1. <a href="https://bitbucket.org/account/signup/" target=blank>Sign up for a Bitbucket account <span class="glyphicons glyphicons-new-window-alt"></span></a> if you do not have one already.
+  2. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
+  3. Click [**Create a Repository**](https://bitbucket.org/repo/create).
+  4. Name the repository.
+  5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+  6. Click **Create Repository**.
+  </div>
+</div>
 
 ## Pull in Core from Pantheon's Upstream
 To avoid incompatibilities, you must track Pantheon's corresponding upstream repository within the Custom Upstream.
@@ -80,6 +109,22 @@ For private GitLab repositories, please ensure the user has the ["reporter" perm
 
 If your repository is publicly accessible, you can skip this step.
 
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#gh-auth" aria-controls="gh-auth" role="tab" data-toggle="tab">GitHub</a></li>
+  <li role="presentation"><a href="#bb-auth" aria-controls="bb-auth" role="tab" data-toggle="tab">Bitbucket</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="gh-auth">
+    GitHub instructions to create a private user for pantheon
+  </div>
+  <div role="tabpanel" class="tab-pane" id="bb-auth">
+    Bitbucket instructions to create a private user for pantheon
+  </div>
+</div>
+
 ## Connect Repository to Pantheon
 1. Access the **<span class="upstreams-regular"></span> Upstreams** page in your Pantheon Organization Dashboard.
 2. Click the **<span class="glyphicons glyphicons-plus"></span> Add Custom Upstream** button.
@@ -98,7 +143,9 @@ If your repository is publicly accessible, you can skip this step.
 2. Click **Edit** next to the existing upstream requiring an update.
 3. Make desired updates
 
-## Switch Site Upstreams
+### Switching the Repository URL on an Existing
+
+## Switch Site Upstream
 [TODO explain and crosslink to [terminus site:upstream:set](/docs/terminus/examples/#switch-upstreams)]
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)

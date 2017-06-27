@@ -13,6 +13,7 @@ image: terminus-thumbLarge
 ---
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.
+
 ### Upstream Updates (Core)
 Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
 
@@ -130,7 +131,7 @@ The following command will permanently delete all uncommitted SFTP changes. If y
 </div>
 
 ## Switch Upstreams
-Every site has an upstream assigned in order to deliver [one-click updates](/docs/upstream-update/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration.
+Every site has an upstream assigned in order to deliver [one-click updates](/docs/upstream-updates/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration.
 ### Move an existing site to a Custom Upstream
 <p class="instruction">If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>, you can use Terminus to switch existing sites over to the common codebase:</p>
 <div class="copy-snippet">
@@ -143,6 +144,9 @@ Every site has an upstream assigned in order to deliver [one-click updates](/doc
 <figure><pre id="upstream-list"><code class="command bash" data-lang="bash">terminus upstream:list</code></pre></figure>
 </div>
 ### Set Empty Upstream for Composer Managed Sites
+Add tabs for empty-7 empty-wordpress
+
+
 <p markdown="1" class="instruction">If you would like to stop receiving one-click updates in the Pantheon Site Dashboard because you're applying updates with Composer, set the upstream to empty:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-empty">Copy</button>
@@ -152,7 +156,17 @@ Every site has an upstream assigned in order to deliver [one-click updates](/doc
 [TODO If you're using a nested doc root...]
 
 ### Can I try this on a Multidev?
+Yes you can try it out, it's the same process as a regular update.
+
 No, the new upstream is applied to the entire site across all environments. But don't worry, the platform will keep things on track by disallowing changes that will break the site. [TODO confirm language w/product]
+
+### main point
+Switching the upstream does not attempt a merge - you have to go in and apply the updates. This is the biggest reason why this is a safe operation.
+
+
+essentially i'm changing a remote
+which is perfectly safe in git, until you pull
+
 
 ## Deploying Code
 <p class="instruction">When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:</p>
