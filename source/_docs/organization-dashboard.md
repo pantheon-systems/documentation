@@ -47,6 +47,9 @@ At the Sites tab, the left panel contains groups of filters for limiting the sit
 </div>
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
 
+### Code Status
+This filter shows which sites have core updates available, which ones are up to date, and which ones are unknown (e.g., managed by Composer). At this time, Organizations with over 800 sites do not have access to this filter, as they will time out loading.
+
 ## Add Users to Your Organization
 
 1. Click on the **People tab**.
