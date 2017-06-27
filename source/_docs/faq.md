@@ -142,8 +142,7 @@ You'll need the plugin. [More information on sessions](/docs/wordpress-sessions/
 ## Caching and Performance
 
 ### Can I use other CDNs with Pantheon?
-Yes. We recommend that you redirect all traffic to HTTPS at your CDN and in your CMS. Check your CDN for how to redirect all traffic to HTTPS. 
-
+Yes. We recommend that you redirect all traffic to HTTPS at your CDN and configure your CMS to assume all site visitors are using HTTPS. Check your CDN for how to redirect all traffic to HTTPS.
 ### What version of Apache Solr does Pantheon run?
 
 We're currently testing out integration strategies for Solr with our next-generation infrastructure. When we deploy it, it will almost certainly be the latest stable Solr available at that time.
