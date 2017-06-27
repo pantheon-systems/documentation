@@ -1,0 +1,24 @@
+---
+use: [articles]
+title: Search
+layout: default
+---
+{% block content_wrapper %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 search-results" style="margin-left: 50px;">
+      <script>
+        function parseParamsFromUrl() {
+        var queryString = window.location.search;
+            queryString = queryString.substring(6);
+            queryString = queryString.split("+").join(" ");
+        return queryString;
+        }
+        var urlParams = parseParamsFromUrl();
+        document.getElementById('piodocsearch').setAttribute('value', urlParams);
+      </script>
+      <gcse:searchresults-only linkTarget="_self"></gcse:searchresults-only>
+    </div>
+  </div>
+</div>
+{% endblock %}
