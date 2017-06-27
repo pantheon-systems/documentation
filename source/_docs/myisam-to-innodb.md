@@ -29,7 +29,8 @@ ALTER TABLE table_name ENGINE=InnoDB;
 1. Save the code in a file with the extension .php and SFTP it up to your site.
 2. Place it in the code directory of your website.
 3. Point a browser to your newly created script that's located in the root directory of your Dev environment:
-https://your.dev.url.gotpantheon.com/filename.php
+
+    https://your.dev.url.gotpantheon.com/filename.php
 
 That's all there is to it—the script will do all the work.
 
