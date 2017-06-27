@@ -1,8 +1,6 @@
 ---
 title: Platform Upgrade in Progress
 description: Details on the current infrastructure maintenance.
-earlyaccess: true
-earlynote: The documentation on this page discusses infrastructure maintenance which is rolled out in phases. Your site may have already gone through the upgrade or it may be in queue to receive the upgrade.
 ---
 Pantheon’s multi-tenant platform uses containers and runs on top of dedicated infrastructure. To ensure improved performance and security of this infrastructure, it periodically needs maintenance and upgrade.
 
