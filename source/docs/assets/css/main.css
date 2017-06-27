@@ -5387,6 +5387,8 @@ width: 100% !important;
 }
 .algolia-autocomplete {
   display: block !important;
+  left: 0px !important;
+
 }
 .algolia-autocomplete .algolia-docsearch-suggestion--highlight{
   background-color: #EFD01B!important;
