@@ -99,6 +99,6 @@ If your repository is publicly accessible, you can skip this step.
 3. Make desired updates
 
 ## Switch Site Upstreams
-[TODO crosslink to terminus site:upstream:set]
+[TODO explain and crosslink to [terminus site:upstream:set](/docs/terminus/examples/#switch-upstreams)]
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)
