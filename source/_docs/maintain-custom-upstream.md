@@ -114,12 +114,16 @@ Updates will become available to sites downstream as one-click updates within an
 </div>
 
 
-### Tips and Tricks
-#### Use the Pantheon Workflow
+## Tips and Tricks
+### Use the Pantheon Workflow
 To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow) to push up to Test and Live environments. Checkout <a href="/docs/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments" data-proofer-ignore>our guide</a> for an example of generating content from the command line.
 
-#### Sample a Few Sites
+### Sample a Few Sites
 For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/docs/multidev) environment. Once things look good, release the update to all.
+
+### Upstream Configuration File
+Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. For details, see [Pantheon YAML Configuration Files](/docs/pantheon-yml/).
+
 
 ## Troubleshoot
 ### Resolve Conflicts

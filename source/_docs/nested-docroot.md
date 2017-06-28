@@ -7,7 +7,7 @@ contributors:
  - ataylorme
 ---
 
-The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml) file or in the [pantheon.upstream.yml](/docs/pantheon-upstream-yml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments.
+The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml/#site-local-configurations-pantheon.yml) file or in the [pantheon.upstream.yml](/docs/pantheon-yml/#custom-upstream-configurations-pantheon.upstream.yml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments.
 
 ### Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
@@ -16,12 +16,33 @@ This is especially useful for third party dependencies, such as those installed 
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>One-click Dashboard updates are only compatible with the nested <code>web</code> docroot feature when the `web_docroot` property is set in the `pantheon.upstream.yml` file of the upstream. We recommend using a <a href="https://pantheon.io/docs/custom-upstream/">Custom Upstream</a> if you would like to continue to utilize Dashboard updates.</p>
+<p markdown="1">One-click Dashboard updates are only compatible with the nested `web` docroot feature when the `web_docroot` property is set in the `pantheon.upstream.yml` file of the upstream. We recommend using a [Custom Upstream](/docs/custom-upstream/) if you would like to continue to utilize Dashboard updates.</p>
 </div>
 
 ## One-Time Setup
 
-If you wish to stop using One-click Dashboard updates, and instead intend to update your site with Composer, then you may create a site with a nested docroot by adjusting your `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.
+If you wish to stop using One-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/docs/terminus):
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d7-set-upstream" aria-controls="d7-set-upstream" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li role="presentation"><a href="#d8-set-upstream" aria-controls="d8-set-upstream" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#wp-set-upstream" aria-controls="wp-set-upstream" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div markdown="1" role="tabpanel" class="tab-pane active" id="d7-set-upstream">
+    <pre><code class="bash hljs">terminus site:upstream:set empty-7 <site> empty</code></pre>
+  </div>
+  <div markdown="1" role="tabpanel" class="tab-pane" id="d8-set-upstream">
+    <pre><code class="bash hljs">terminus site:upstream:set <site> empty</code></pre>
+  </div>
+  <div markdown="1" role="tabpanel" class="tab-pane" id="wp-set-upstream">
+    <pre><code class="bash hljs">terminus site:upstream:set <site> empty-wordpress</code></pre>
+  </div>
+</div>
+
+Then you may enable nested docroot by adjusting your site's `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.
 
 ### Define Nested Docroot in pantheon.yml
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):
@@ -43,7 +64,7 @@ If you wish to stop using One-click Dashboard updates, and instead intend to upd
 6. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site-with-a-nested-docroot) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site-to-use-a-nested-docroot) below.
 
 ### Create a New Site with a Nested Docroot
-If your site utilizes a [Custom Upstream](/docs/custom-upstream/) with a `pantheon.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
+If your site utilizes a [Custom Upstream](/docs/custom-upstream/) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
 
 ### Convert an Existing Site to Use a Nested Docroot
 You'll need to move the CMS code into the `web` subdirectory, either manually or by using one of the commands below:
