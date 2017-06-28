@@ -5404,3 +5404,8 @@ width: 100% !important;
 .docsearch {
   margin-right: 20px!important;
 }
+@supports (-ms-ime-align: auto){
+  .pio-docs-sidebar {
+    right: 0px;
+  }
+}
