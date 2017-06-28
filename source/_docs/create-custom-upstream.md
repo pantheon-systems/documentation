@@ -8,15 +8,11 @@ earlynote: The documentation on this page discusses features and options that ar
 Pantheon is rolling out a new self-serve feature to support creating Custom Upstreams in the Organization Dashboard. Once created, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
 
 ## Eligibility
-Access to this feature is currently invite only for Agency and Enterprise Organizations. If you are not in this group but are eager to try it out, you can request early access and we will consider this on a case-by-case basis.
+Access to this feature is currently invite only for Agency and Enterprise Organizations. Repositories must be hosted on [GitHub](https://github.com/) or [BitBucket](https://bitbucket.org/). If you would like early access to this feature, or if you need to use an alternate repository hosting provider, please let us know.
 
 **TODO ADD LINK TO REQUEST INVITE**
 
 ## Create and Host the Repository Remotely
-Custom Upstream repositories must be hosted on [GitHub](https://github.com/) or [BitBucket](https://bitbucket.org/). If you need to use an alternate repository hosting service provider, please let us know.
-
-**TODO ADD LINK TO ALTSERVICE PROVIDER REQUEST (Goes to support or the same link as the invite?)**
-
 This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
 
 Choose your preferred Git host:
@@ -38,12 +34,27 @@ Choose your preferred Git host:
   6. Click **Create Repository**.
   </div>
   <div markdown="1" role="tabpanel" class="tab-pane" id="bb">
-  1. <a href="https://bitbucket.org/account/signup/" target=blank>Sign up for a Bitbucket account <span class="glyphicons glyphicons-new-window-alt"></span></a> if you do not have one already.
+  1. [Sign up for a Bitbucket account](https://bitbucket.org/account/signup/) if you do not have one already.
   2. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
   3. Click [**Create a Repository**](https://bitbucket.org/repo/create).
   4. Name the repository.
   5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
   6. Click **Create Repository**.
+  7. Copy the repository URL (HTTPS), found on the top right of the page:
+
+    ![Bitbucket Repo URL](/source/docs/assets/images/bitbucket-repo-url.png)
+
+  8. Clone the repository to your local from the command line (replace the URL):
+
+    ```
+    git clone https://pantheondocs@bitbucket.org/pantheondocs/agency-custom-upstream.git
+    ```
+
+  9. Navigate to the repository's root directory:
+
+    ```
+    cd agency-custom-upstream
+    ```
   </div>
 </div>
 

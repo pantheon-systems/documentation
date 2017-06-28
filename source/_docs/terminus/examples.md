@@ -143,6 +143,7 @@ Every site has an upstream assigned in order to deliver [one-click updates](/doc
 <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-list">Copy</button>
 <figure><pre id="upstream-list"><code class="command bash" data-lang="bash">terminus upstream:list</code></pre></figure>
 </div>
+
 ### Set Empty Upstream for Composer Managed Sites
 Add tabs for empty-7 empty-wordpress
 
