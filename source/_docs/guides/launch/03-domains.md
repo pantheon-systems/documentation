@@ -40,7 +40,7 @@ Skipping this step will result in service interruption for existing sites that r
 3. Select **Details** next to the bare domain.
 4. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**.
 5. Serve the file from your existing live site.
-6. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
+6. Return to the Pantheon Site Dashboard and click the **Check Validation File** button.
 
 After verifying domain ownership, your domain's HTTPS certificate(s) will automatically begin generating and be deployed to Pantheon’s Global CDN within an hour.
 
