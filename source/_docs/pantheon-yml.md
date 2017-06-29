@@ -1,19 +1,19 @@
 ---
 title: Pantheon YAML Configuration Files
-description: Learn how to use a site-local configuration file to manage advanced settings at the site level and how to set default configurations across all sites running a Custom Upstream.
+description: Learn how to use a site level configuration file to manage advanced settings at the site level and how to set default configurations across all sites running a Custom Upstream.
 tags: [pantheonyml, infrastructure]
 categories: []
 ---
-Hook into platform workflows and advanced site configurations using Pantheon's YAML configuration files, `pantheon.upstream.yml` and `pantheon.yml`. Both configuration files utilize the same set of properties that define how your Pantheon environments will behave.
+Hook into platform workflows and advanced site configurations using Pantheon's YAML configuration files, `pantheon.upstream.yml` and `pantheon.yml`. The `pantheon.upstream.yml` file is used to set default configurations for sites created from a [Custom Upstream](/docs/custom-upstream/), while the `pantheon.yml` file is used to manage configurations for one particular site. Both configuration files utilize the same set of properties that define how your Pantheon environments will behave.
 
-Default values for these properties are set in a `pantheon.upstream.yml` file in an Custom Upstream repository and applied across all sites running that Custom Upstream. The `pantheon.yml` file is used to override the default values set upstream for site-local configurations.
+When the same configuration value is defined in both files, the value from `pantheon.yml` will override the value from `pantheon.upstream.yml`.
 
 Keeping the configuration settings defined upstream in a separate file form the configuration settings that are specific to the site prevents merge conflicts when a Custom Upstream needs to change its default Pantheon configuration.
 
 ## Custom Upstream Configurations: pantheon.upstream.yml
 The `pantheon.upstream.yml` file is used when working with [Custom Upstreams](/docs/custom-upstream/). It sets default values for advanced site configurations to be used downstream.
 
-This upstream file may contain any of the properties described below but it cannot define any Quicksilver workflows. If a property such as `php_version` is defined upstream, then its value will be used only for sites that do not define the same property in their site-local `pantheon.yml` file.
+This upstream file may contain [any of the properties described below](#advanced-site-configuration) but it cannot define any Quicksilver workflows. If a property such as `php_version` is defined upstream, then its value will be used only for sites that do not define the same property in their site level `pantheon.yml` file.
 
 ### Create and Maintain
 Create the `pantheon.upstream.yml` in the root directory of an Organization's Custom Upstream. This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.

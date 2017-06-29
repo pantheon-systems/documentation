@@ -67,7 +67,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     git merge pantheon-drops-7/master
     git push origin master</code></pre>
     </div>
-    </div><br>
+    </div>
 
 ## Grant Pantheon Access (Privately Hosted Repositories Only)
 For privately hosted repositories, create a dedicated user with read-only access to the repository. The password should only contain alphanumeric characters, depending on your host's password limitations.
