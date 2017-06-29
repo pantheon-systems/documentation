@@ -106,7 +106,7 @@ All libraries will evaluated by Pantheon's Operations Team on a case-by-case bas
 No. This is not within our [scope of support](/docs/getting-support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
 
 #### How long does the process take?
-This depends on the library that you would like to be installed, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved, along with an expected timeline.
+This depends on the library that you would like to be installed, the impact it could possibly have on a system, roadmap and organizational goals.
 
 It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
 
