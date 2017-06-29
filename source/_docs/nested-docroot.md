@@ -7,7 +7,7 @@ contributors:
  - ataylorme
 ---
 
-The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml/#site-local-configurations-pantheon.yml) file or in the [pantheon.upstream.yml](/docs/pantheon-yml/#custom-upstream-configurations-pantheon.upstream.yml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments.
+The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml/#site-local-configurations-pantheonyml) file or in the [pantheon.upstream.yml](/docs/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments.
 
 ### Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
