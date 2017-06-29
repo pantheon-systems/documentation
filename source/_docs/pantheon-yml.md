@@ -1,6 +1,6 @@
 ---
 title: Pantheon YAML Configuration Files
-description: Learn how to use a site level configuration file to manage advanced settings at the site level and how to set default configurations across all sites running a Custom Upstream.
+description: Learn how to use a site level configuration file to manage advanced settings per site and how to set default configurations for sites running a Custom Upstream.
 tags: [pantheonyml, infrastructure]
 categories: []
 ---
