@@ -152,7 +152,7 @@ All feature requests will evaluated by Pantheon's Operations Team on a case-by-c
 
 
 ### How long does the process take?
-This depends on the feature requested, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved, along with an expected timeline.
+This depends on the feature requested, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved.
 
 It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
 
