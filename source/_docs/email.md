@@ -49,7 +49,7 @@ Here are some popular email services you can use on the platform and their corre
 ### SMTP Providers & Configurations
 Customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amazon SES, Mandrill, and other externally hosted SMTP based email providers.
 
-Since we block traffic on ports 25, 465 and 587, here’s a list of popular email providers and the additional ports which will work on Pantheon. We suggest you refer to the corresponding documentation for any updated information.
+Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. Here’s a list of popular email providers and the alternate ports which Pantheon recommends:
 
 <table class="table table-responsive table-bordered">
     <thead class="thead-inverse">
@@ -129,8 +129,8 @@ See [available patch](https://drupal.org/node/1369736#comment-5644064).
 ### Can I use Pantheon's local MTA (postfix)?
 We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
 
-### What ports are blocked by Pantheon?
-In order to fight spam, Pantheon blocks traffic on popular email ports 25, 465, and 587. Your emails will not be processed if you use any of these ports. Make sure that your service provider allows traffic on a port other than 25, 465 and 587 and that you have correctly configured your site to use that port.
+### What ports are recommended by Pantheon?
+Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. Make sure that your service provider allows traffic on a port other than those mentioned and that you have correctly configured your site to use that port.
 
 ### Can Pantheon provide, publish, or support SPF records?
 
