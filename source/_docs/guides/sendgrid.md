@@ -87,7 +87,7 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
 
      <div class="alert alert-info" role="alert">
        <h4 class="info">Note</h4>
-       <p markdown="1">Pantheon blocks ports `25`, `465`, and `587` to fight spam. For details, see <a href="/docs/email/#what-ports-are-blocked-by-pantheon" data-proofer-ignore>Email on Pantheon</a>. </p>
+       <p markdown="1">Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/docs/email/) </p>
      </div>
 
 5. Provide your site-specific SendGrid credentials and click **Save configuration**.  
