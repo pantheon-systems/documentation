@@ -1910,6 +1910,7 @@ li.tocify-item {
 .survey-pio-outter {
   padding: 0px;
   background-color: #fff;
+  margin-bottom: -10px;
 }
 
 /* Show and affix the side nav when space allows it */
