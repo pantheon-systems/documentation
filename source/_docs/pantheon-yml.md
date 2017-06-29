@@ -44,7 +44,7 @@ The `pantheon.upstream.yml` file should contain default content similar to the e
 api_version: 1
 php_version: 7.0
 ```
-## Site-local Configurations: pantheon.yml
+## Site Level Configurations: pantheon.yml
 Use `pantheon.yml` when configuring a specific Pantheon site. Create a new file named `pantheon.yml` in the root of your site's code repository. Refer to [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) for example configurations. Refer to the [Pantheon Cloud Integration Examples](https://github.com/pantheon-systems/quicksilver-examples) repository for example scripts for use with Quicksilver Platform Hooks.
 
 The advanced site configuration properties define how your Pantheon environments will behave.
