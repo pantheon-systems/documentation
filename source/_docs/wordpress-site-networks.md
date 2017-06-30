@@ -35,7 +35,7 @@ The choice between running classic single-site WordPress or WordPress in Multisi
 
 ### 2. Choose between subdirectories and subdomains
 
-When configuring WordPress Multisite, you’ll be need to choose between using subdirectories or subdomains. You’re choosing between `mydomain.com/first-site` / `mydomain.com/second-site` or `first-site.mydomain.com` / `second-site.mydomain.com`.
+When configuring WordPress Multisite, you’ll need to choose between using subdirectories or subdomains. You’re choosing between `mydomain.com/first-site` / `mydomain.com/second-site` or `first-site.mydomain.com` / `second-site.mydomain.com`.
 
 The key differences are:
 - Custom domains can be mapped to sites on subdomains or in subdirectories, but subdirectories can’t be mapped to sites on subdomains.
