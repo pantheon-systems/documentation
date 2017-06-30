@@ -40,7 +40,7 @@ There is also a handy setting which alerts a user when they are about to go on c
 
 Now add our other users by clicking the green **Add Users** button at the top right of the admin page. Users can have different roles, allowing them, for example, to administrate schedules or alert policies. For these team members, we assign the role of **Responder**. Each member then can set up their own alert policies, or you can for them.
 
-![Adding new user](/source/docs/assets/images/integrations/pagerduty/new_user.png)
+![Adding new user](/source/docs/assets/images/integrations/pg-new-user.png)
 
 ## Create Schedule
 
@@ -50,11 +50,11 @@ Because I want to be the "backstop" for alerts, I will insert myself in the firs
 
 Next I will click **Add another layer** and add my two other teammates. This will create a weekly rotation, and in the **Step 2** area, I can change that to Monthly or create a custom rotation. In **Step 3** I can determine when the first handoff occurs. Add your users accordingly.
 
-![Team schedule](/source/docs/assets/images/integrations/pagerduty/schedule.png)
+![Team schedule](/source/docs/assets/images/integrations/pg-schedule.png)
 
 At the top of the page, name this schedule **Default**, then click **<span class="glyphicons glyphicons-check"></span>Create Schedule** to complete the schedule. At the bottom of the page, you can see the **Final Schedule** which indicates who is currently the first point of contact.
 
-![Final Schedule](/source/docs/assets/images/integrations/pagerduty/final_schedule.png)
+![Final Schedule](/source/docs/assets/images/integrations/pg-final-schedule.png)
 
 ## Create Escalation policy
 
@@ -62,7 +62,7 @@ When an incident is created, PagerDuty uses an escalation policy to determine wh
 
 A default escalation policy should exist. Under **Configuration**, click on **Escalation Policies**, then click on your **Default** policy. Click the **Edit Escalation Policy** button at the top right, and add the **Default** schedule we created. Click **Save** to complete this simple Escalation policy:
 
-![Escalation Policy](/source/docs/assets/images/integrations/pagerduty/escalation.png)
+![Escalation Policy](/source/docs/assets/images/integrations/pg-escalation.png)
 
 ## Add Services
 
@@ -76,7 +76,7 @@ In this case we want New Relic to alert us when a critical event occurs.
 
 2. Go to **Alerts**, then select **Channels and groups** and click **PagerDuty** to create a new PagerDuty channel. The application will ask for permission to access PagerDuty. Enter your PagerDuty username and password. 
 
-    ![NR Authorization](/source/docs/assets/images/integrations/pagerduty/authorize.png)
+    ![NR Authorization](/source/docs/assets/images/integrations/pg-authorize.png)
 
 3. You will be prompted to give the service a name and select the escalation policy. Enter **New Relic** for the name and select **default** for the policy.
 
@@ -86,7 +86,7 @@ In this case we want New Relic to alert us when a critical event occurs.
 
 1. For this two-way integration, you will use PagerDuty extensions. In the PagerDuty navigation, go to **Configuration** and select **Extensions**. Then select **New Extension**
 
-    ![Add slack extension](/source/docs/assets/images/integrations/pagerduty/extensions.png)
+    ![Add slack extension](/source/docs/assets/images/integrations/pg-extensions.png)
 
 2. For the new service, use the following configuration:
  - Select **Slack** as extension type
@@ -97,19 +97,19 @@ In this case we want New Relic to alert us when a critical event occurs.
 
 3. Click Authorize. 
 
-    ![Completed slack extension](/source/docs/assets/images/integrations/pagerduty/slack_extension.png)
+    ![Completed slack extension](/source/docs/assets/images/integrations/pg-slack-extension.png)
 
 4. Select the channel to which you’d like PagerDuty to send messages and then Authorize the integration. Choose a channel that is actively used.
 
-    ![CSlack authorization](/source/docs/assets/images/integrations/pagerduty/authorize_slack.png)
+    ![CSlack authorization](/source/docs/assets/images/integrations/pg-authorize-slack.png)
 
 5. Now return to the PagerDuty **Configuration** menu and select **Services**. Here, you can manually trigger an incident by selecting the gear icon and choosing **New Incident**.
 
 You will see a notification in Slack that an incident has been triggered, and the first point of contact in the escalation will receive a notification according to their settings. You can resolve the issue via Slack or the PagerDuty dashboard.
 
-![CSlack authorization](/source/docs/assets/images/integrations/pagerduty/slack_notification.png)
+![CSlack authorization](/source/docs/assets/images/integrations/pg-slack-notification.png)
 
-![CSlack authorization](/source/docs/assets/images/integrations/pagerduty/email_notification.png)
+![CSlack authorization](/source/docs/assets/images/integrations/pg-email-notification.png)
 
 ## Conclusion
 There are many other ways to enhance the integration we created. See PagerDuty documentation about phone and helpdesk integration, post-mortem reporting, and also be sure to download their mobile application.
