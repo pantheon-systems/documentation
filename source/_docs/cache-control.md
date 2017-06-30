@@ -22,7 +22,8 @@ You can use a variety of mechanisms to determine which responses from your Drupa
 // $build is a render array.
 $build['#cache']['max-age'] = 0;
   </code></pre>
-  Drupal 8 will "bubble up" this information so that if an small block on a page requires a cache max age of zero, the entire page will be uncacheable.
+  Drupal 8 will "bubble up" this information so that if any small block on a page requires a cache max age of zero, the entire page will be uncacheable.
+Currently [Cache Control Override](https://www.drupal.org/project/cache_control_override) module is required for this feature to behave correctly.
   </div>
   <div role="tabpanel" class="tab-pane" id="d7">
   <br>
