@@ -136,7 +136,7 @@ Every site has an upstream assigned in order to deliver [one-click updates](/doc
 <p class="instruction">If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>, you can use Terminus to switch existing sites over to the common codebase:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-set">Copy</button>
-<figure><pre id="upstream-set"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My Org Upstream"</code></pre></figure>
+<figure><pre id="upstream-set"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My Custom Upstream"</code></pre></figure>
 </div>
 <p class="instruction">To see all available upstreams, run:</p>
 <div class="copy-snippet">
@@ -145,9 +145,6 @@ Every site has an upstream assigned in order to deliver [one-click updates](/doc
 </div>
 
 ### Set Empty Upstream for Composer Managed Sites
-Add tabs for empty-7 empty-wordpress
-
-
 <p markdown="1" class="instruction">If you would like to stop receiving one-click updates in the Pantheon Site Dashboard because you're applying updates with Composer, set the upstream to empty:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-empty">Copy</button>
