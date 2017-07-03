@@ -56,7 +56,7 @@ Once you have installed WP-CLI on your local machine you can configure PHPStorm 
 5. Select **SFTP** for type and click **OK**.
 ![Add web server PHPStorm](/source/docs/assets/images/add-web-server-phpstorm.png)
 
-### Deployment Configuration: Connection Tab
+### Connection Tab
 
 Using your site's [SFTP connection information](/docs/sftp#sftp-connection-information) to configure the Connection tab:
 
@@ -72,7 +72,7 @@ Click the **Test SFTP Connection...** button and make sure the connection is suc
 
 ![Add web server PHPStorm](/source/docs/assets/images/phpstorm-deployment-connection-test-sftp-success.png)
 
-### Deployment Configuration: Mappings Tab
+### Mappings Tab
 
 Provide the file paths within the Mappings tab to allow correspondence between project folders:
 
