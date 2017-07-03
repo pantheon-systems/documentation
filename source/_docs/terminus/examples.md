@@ -146,25 +146,37 @@ Every site has an upstream assigned in order to deliver [one-click updates](/doc
 
 ### Set Empty Upstream for Composer Managed Sites
 <p markdown="1" class="instruction">If you would like to stop receiving one-click updates in the Pantheon Site Dashboard because you're applying updates with Composer, set the upstream to empty:</p>
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-empty">Copy</button>
-<figure><pre id="upstream-empty"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "Empty"</code></pre></figure>
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d7-set-upstream" aria-controls="d7-set-upstream" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li role="presentation"><a href="#d8-set-upstream" aria-controls="d8-set-upstream" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#wp-set-upstream" aria-controls="wp-set-upstream" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div markdown="1" role="tabpanel" class="tab-pane active" id="d7-set-upstream">
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#d7-empty">Copy</button>
+      <figure><pre id="d7-empty"><code class="command bash hljs" data-lang="bash">terminus site:upstream:set &lt;site&gt; empty-7</code></pre></figure>
+    </div>
+  </div>
+  <div markdown="1" role="tabpanel" class="tab-pane" id="d8-set-upstream">
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#d8-empty">Copy</button>
+      <figure><pre id="d8-empty"><code class="command bash hljs" data-lang="bash">terminus site:upstream:set &lt;site&gt; empty</code></pre></figure>
+    </div>
+  </div>
+  <div markdown="1" role="tabpanel" class="tab-pane" id="wp-set-upstream">
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#wp-empty">Copy</button>
+      <figure><pre id="wp-empty"><code class="command bash hljs" data-lang="bash">terminus site:upstream:set &lt;site&gt; empty-wordpress</code></pre></figure>
+    </div>
+  </div>
 </div>
-### What if my site stores files in a non-standard directory?
-[TODO If you're using a nested doc root...]
 
-### Can I try this on a Multidev?
-Yes you can try it out, it's the same process as a regular update.
-
-No, the new upstream is applied to the entire site across all environments. But don't worry, the platform will keep things on track by disallowing changes that will break the site. [TODO confirm language w/product]
-
-### main point
-Switching the upstream does not attempt a merge - you have to go in and apply the updates. This is the biggest reason why this is a safe operation.
-
-
-essentially i'm changing a remote
-which is perfectly safe in git, until you pull
-
+### Bring in Updates from the New Upstream
+Switching the upstream does not directly modify code. This operation provides updates from the new upstream to the site, but it does not attempt to merge those updates automatically. After a new upstream is set, you must [apply updates](#upstream-updates-core).
 
 ## Deploying Code
 <p class="instruction">When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:</p>

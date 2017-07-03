@@ -184,7 +184,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
           4. Click **Create** and copy the new password.
           5. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
-          6. Enter the label and paste your Bitbucket app password.
+          6. The username field should already be populated, based on the repository URL. Paste your new Bitbucket app password.
           </div>
         </div>
 
@@ -192,18 +192,21 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
 4. Click **Create**.
-## Edit Settings
+## Edit Existing Custom Upstream Settings
 If you would like to change the name or description of your Custom Upstream:
+
 1. From your Organization Dashboard, click the **<span class="upstreams-regular"></span> Upstreams** tab.
 2. Click **Settings** next to the existing upstream requiring an update.
 3. Make desired updates.
 4. Click **Update**.
 ### Switch the Repository URL
-At this time, we do not support changing the repository URL (source) on existing Custom Upstreams. If there is a new URL you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/examples/#switch-upstreams):
+At this time, we do not support changing the repository URL (source) on existing Custom Upstreams. If there is a new URL you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
 
 ```
 terminus site:upstream:set my-site "My New Custom Upstream"
 ```
+
+After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/docs/terminus/examples/#switch-upstreams).
 
 Once all sites have been updated to track the new Custom Upstream, you can safely delete the old one:
 
