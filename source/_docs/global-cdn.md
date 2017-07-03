@@ -102,7 +102,7 @@ Look for site thumbnails that show **Global CDN Upgrade Available** in your User
         192.123.456.789 example.com
         ```
 
-      4. Test your site locally by entering your domain in the browser. Once you have finished testing, remove the edits made to your hosts file.
+      4. Test HTTPS locally by entering your domain in the browser. If the site is accessible over HTTPS, the test was successful. Remove the edits made to your hosts file once you have finished testing.
 
 
 3. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS provider to use the provided IP addresses.
@@ -119,9 +119,33 @@ Look up your DNS provider with this free web tool: <a href="https://mxtoolbox.co
 Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
 </div>
 
+4. If your site relied on the www-redirector provided on our Legacy service, you will need to redirect incoming requests within `wp-config.php` or `settings.php` (replace `example.com`):
+
+  ```
+    // Require https with www
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+      ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+      // Check if Drupal or WordPress is running via command line
+      (php_sapi_name() != "cli")) {
+      if ($_SERVER['HTTP_HOST'] != 'www.example.com' ||
+          !isset($_SERVER['HTTP_X_SSL']) ||
+          $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+        header('HTTP/1.0 301 Moved Permanently');
+        header('Location: https://www.example.com'. $_SERVER['REQUEST_URI']);
+        exit();
+      }
+    }
+  ```
+
 For more information on HTTPS see our detailed docs on the [Let's Encrypt HTTPS solution](/docs/free-https).
 
 ## Frequently Asked Quesitons
+
+### Is the www-redirector service still available?
+No, if your site previously relied on this service on Legacy you will need to [redirect requests via PHP](/docs/guides/launch/redirects/).
+
+### Are vanity domains supported on Global CDN?
+You can upgrade a site to Global CDN that is using [vanity domains](/docs/vanity-domains/), but Free and automated HTTPS will not work for the vanity domain. Only custom domains will have HTTPS provisioned.
 
 ### I already have a CDN - should I switch?
 Pantheon's Global CDN has some advantages over solutions some customers may already have in place:
