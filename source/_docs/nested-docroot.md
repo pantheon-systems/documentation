@@ -32,13 +32,13 @@ If you wish to stop using One-click Dashboard updates on a particular site, and 
 <!-- Tab panes -->
 <div class="tab-content">
   <div markdown="1" role="tabpanel" class="tab-pane active" id="d7-set-upstream">
-    <pre><code class="bash hljs">terminus site:upstream:set empty-7 <site> empty</code></pre>
+    <pre><code class="bash hljs">terminus site:upstream:set &lt;site&gt; empty-7</code></pre>
   </div>
   <div markdown="1" role="tabpanel" class="tab-pane" id="d8-set-upstream">
-    <pre><code class="bash hljs">terminus site:upstream:set <site> empty</code></pre>
+    <pre><code class="bash hljs">terminus site:upstream:set &lt;site&gt; empty</code></pre>
   </div>
   <div markdown="1" role="tabpanel" class="tab-pane" id="wp-set-upstream">
-    <pre><code class="bash hljs">terminus site:upstream:set <site> empty-wordpress</code></pre>
+    <pre><code class="bash hljs">terminus site:upstream:set &lt;site&gt; empty-wordpress</code></pre>
   </div>
 </div>
 
