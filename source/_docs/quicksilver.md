@@ -31,6 +31,9 @@ If you add the following after the previous snippet, we'll also run that script 
 
 Specify the workflows you want to hook into (e.g. `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to root of your site's docroot.
 
+<h4 class="info">Note</h4>
+<p>If your site is using a nested docroot structure, the scripts directory needs to be located within the docroot.</p></div>
+
 ## Type of Scripts
 
 `webphp`: Runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/docs/timeouts/), and cannot be batched.
