@@ -22,7 +22,7 @@ DNS configurations for paid sites that use the `gotpantheon.com` or `pantheon.io
 
 ## Platform Domains as CDN Origin
 
-Customers frequently use CDNs on top of Pantheon, and are free to use platform domains for this purpose. They can rely on Pantheon's HTTPS edge to ensure secure communication between their CDN provider and their "origin" instance on Pantheon. For an example of this use case, see [Adding HTTPS For Free With Cloudflare](/docs/guides/cloudflare-enable-https/).
+Customers frequently use CDNs on top of Pantheon, and are free to use platform domains for this purpose. They can rely on Pantheon's HTTPS edge to ensure secure communication between their CDN provider and their "origin" instance on Pantheon. For an example of this use case, see [Adding HTTPS For Free With Cloudflare](/docs/cloudflare/).
 
 If you use the platform in this way, you cannot use legacy platform domains and must update your configuration to use a `pantheonsite.io` domain.
 

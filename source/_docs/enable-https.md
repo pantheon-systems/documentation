@@ -10,7 +10,7 @@ Adding HTTPS to your site is a completely self-serve option; Pantheon does not p
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p>Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above; see our <a href="https://pantheon.io/pricing-comparison">pricing page</a> for details. All plans can <a href="/docs/guides/cloudflare-enable-https/">enable HTTPS with Cloudflare's Universal SSL</a>.
+<p>Enable HTTPS before updating DNS. HTTPS for custom domains is available for Professional plans and above; see our <a href="https://pantheon.io/pricing-comparison">pricing page</a> for details. All plans can <a href="/docs/cloudflare">enable HTTPS with Cloudflare's Universal SSL</a>.
 </p>
 </div>
 

@@ -104,7 +104,7 @@ All modern browsers and operating systems are supported. For details, see the **
 ### What about CloudFlare or other CDNs?
 Many customers currently take advantage of CloudFlare's awesome Universal SSL offering to get free HTTPS service for their website. If you are _just_ using CloudFlare for the HTTPS service, you can switch to the Global CDN and get an upgrade in performance and SSLLabs score.
 
-However, customers using CloudFlare's WAF tools or other features may want to keep CloudFlare in their stack. There are no known issues with layering CloudFlare and the Global CDN together, but we strongly recommend you enforce HTTPS in Cloudflare and within WordPress or Drupal to avoid mixed content.
+However, customers using CloudFlare's WAF tools or other features may want to keep CloudFlare in their stack. We still recommend upgrading your Pantheon site to the Global CDN as this will improve cache hitrates and performance. There are no known issues with layering CloudFlare and the Global CDN together. For details, see [Cloudflare Domain Configuration](/docs/cloudflare/).
 
 ### What level of encryption is provided?
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
@@ -132,7 +132,7 @@ It is possible you may see a certificate mismatch in your browser if your DNS ch
 This server response occurs when a request exceeds the 10K size limit for cookies. For details, see [Errors and Server Responses](/docs/errors-and-server-responses#503-header-overflow).
 
 ### Infinite Redirect Loops
-Sites using Cloudflare's free universal SSL will experience redirect errors if the SSL mode is set to **Flexible**. This mode can also result in mixed content and privacy warnings from the browser. To resolve, log into Cloudflare and click **Crypto**, then set the SSL to **Full**.
+Sites using Cloudflare's free universal SSL will experience redirect errors if the SSL mode is set to **Flexible**. This mode can also result in mixed content and privacy warnings from the browser. To resolve, [configure Cloudflare as described here](/docs/cloudflare/#configure-dns-for-stacked-cloudflare-cdn).
 
 Redirect errors can also be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic. For details, see [Redirect Incoming Requests](/docs/redirects/#troubleshooting).
 

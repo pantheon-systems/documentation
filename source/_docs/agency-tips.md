@@ -27,8 +27,7 @@ The [Power Users](/docs/power-users) group is a great place to read about advanc
 The Agency and Community team at Pantheon produced a [six part training series](https://pantheon.io/agency-training-series-part-1) that starts with an introduction and moves into power tools and advanced workflows.
 
 ## HTTPS
-There are currently two ways to enable HTTPS for a site on Pantheon. The first is to obtain a static IP address for the site and upload an SSL certificate. For details, see [Enable Secure HTTPS Communication](/docs/enable-https/). The second is to terminate HTTPS with a third-party service, such as a CDN. For details, see [Adding HTTPS For Free With Cloudflare](/docs/guides/cloudflare-enable-https/).
-
+Follow along with our [Launch Essentials](/docs/guides/launch/) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
 
 ## Solr
 All plans except for the Personal plan can enable [Solr](/docs/solr) for search indexing. For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr), [Enabling Solr with Drupal](/docs/solr-drupal) or [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
