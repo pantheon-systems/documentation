@@ -51,12 +51,26 @@ Your connection data is as follows:
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
 
 There is also a one-click option so you can connect with a GUI client. The main directory listing includes Pantheon, logs, environment data and configuration. Your website is in the `code` directory. For instance, in Mac OS Cyberduck:
- ![Cyberduck Example](/source/docs/assets/images/cyberduck-example.png)<br />
+
+![Cyberduck Example](/source/docs/assets/images/cyberduck-example.png)
+
 Get the instructions for other [SFTP clients](/docs/sftp#sftp-clients).
 
 
 ## Authenticating
-Follow development best practice workflows by [authenticating via SSH key for password-less access](/docs/ssh-keys). Alternatively, you may use your Pantheon Dashboard password when prompted, however larger agencies with multiple developers who login frequently may cause access issues across the organization. To avoid potential authentication failures, we strongly recommend using SSH keys. For details, see <a href="/docs/organization-faq#why-do-login-attempts-fail-for-all-users-across-my-organization-simultaneously?" data-proofer-ignore>Pantheon Organizations FAQs</a>.
+
+### SSH Keys
+To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on. For more details, see [Generate and Add SSH Keys](/docs/ssh-keys/).
+
+## Dashboard Credentials
+Alternatively, you may use your Pantheon Dashboard password when prompted.  
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">If you login via social login (Connect with Google) or Single-Sign On (SSO) and you'd like to authenticate using a password, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password) to add a password to your account.</p>
+</div>
+
+Larger agencies with multiple developers using password authentication who login frequently may see access issues across the organization. To avoid potential authentication failures, we strongly recommend using SSH keys. For details, see <a href="/docs/organization-faq#why-do-login-attempts-fail-for-all-users-across-my-organization-simultaneously?" data-proofer-ignore>Pantheon Organizations FAQs</a>.
 
 ## Committing SFTP Changes
 
@@ -104,6 +118,12 @@ A simple way to test for outbound network restrictions is to load a special web 
 If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port `2222` outbound. Contact your network administrators to allow outbound access on port `2222`. Advanced users may also be comfortable [establishing an SSH tunnel through another server](/docs/port-2222/) instead.
 
 If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related.  Be sure to double-check or re-enter your [SFTP settings](/docs/sftp/#sftp-connection-information), including SFTP mode and port `2222`. Contact Pantheon Support if you still have trouble.
+
+### I can't login to SFTP with my Password
+
+If you login with Google Single Sign-On to your Pantheon Dashboard you will not have a Pantheon Dashboard password on file. *(Using your Google password won't work, and is not recommended!)* You can create a dashboard password by logging out of the Pantheon Dashboard and then clicking the "[Forgot your password?](https://dashboard.pantheon.io/reset-password)" link from the login screen. Enter your email address and click the request button to send a one-time password reset link to you via email. That link will allow you to set a new password that you will then be able to use in your SFTP client.
+
+Note: [Authenticating via SSH keys](/docs/ssh-keys) is still the preferred and recommended solution.
 
 ### I can't write to my codebase on Test or Live.
 
