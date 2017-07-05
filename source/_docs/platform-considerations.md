@@ -53,6 +53,12 @@ Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure
 
 See [the email documentation](/docs/email) for more details and suggestions.
 
+## Write Access on Environments
+
+For DEV environments in SFTP mode, the entire codebase is writable.  However the platform is designed to keep the codebase under version control.  This means that the only writable path is to the filesystem which is `sites/default/files` for Drupal sites and `wp-content/uploads` for Wordpress sites.  
+
+This means that any modules for Drupal or plugins for Wordpress that neeed to write to the codebase and [assume write access](https://pantheon.io/docs/assuming-write-access/), need a symlink added so that they will instead write the necessary data to the filesystem.
+
 ## Streaming Media
 
 Because Pantheon does not provide [transcoding](https://en.wikipedia.org/wiki/Transcoding#Re-encoding.2Frecoding), bandwidth-adaptive media delivery, or support for large files (see below), [streaming media](https://en.wikipedia.org/wiki/Streaming_media) is not possible directly from the platform.
