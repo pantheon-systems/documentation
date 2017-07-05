@@ -42,7 +42,11 @@ The <span class="glyphicons glyphicons-alert text-warning"></span> icon within t
         <ul class="top-docs top-docs-2col docs-2col-panel">
           {% for doc in data.docs_tags.providers %}
             {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-              <li><a href="{{ doc.url }}/#cname-record">{{ doc.provider }}</a></li>
+              {% if (doc.meta.provider == "Cloudflare") %}
+                <li><a href="{{ doc.url }}#configure-dns-records-on-cloudflare">{{ doc.provider }}</a></li>
+              {% else %}
+                <li><a href="{{ doc.url }}#cname-record">{{ doc.provider }}</a></li>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </ul>
@@ -61,7 +65,11 @@ The <span class="glyphicons glyphicons-alert text-warning"></span> icon within t
         <ul class="top-docs top-docs-2col docs-2col-panel">
           {% for doc in data.docs_tags.providers %}
             {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-              <li><a data-proofer-ignore href="{{ doc.url }}/#aaaaa-records">{{ doc.provider }}</a></li>
+              {% if (doc.meta.provider == "Cloudflare") %}
+                <li><a href="{{ doc.url }}#configure-dns-records-on-cloudflare">{{ doc.provider }}</a></li>
+              {% else %}
+                <li><a href="{{ doc.url }}#aaaaa-records">{{ doc.provider }}</a></li>
+              {% endif %}
             {% endif %}
           {% endfor %}
         </ul>

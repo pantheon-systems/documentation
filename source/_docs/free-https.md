@@ -132,7 +132,7 @@ It is possible you may see a certificate mismatch in your browser if your DNS ch
 This server response occurs when a request exceeds the 10K size limit for cookies. For details, see [Errors and Server Responses](/docs/errors-and-server-responses#503-header-overflow).
 
 ### Infinite Redirect Loops
-Sites using Cloudflare's free universal SSL will experience redirect errors if the SSL mode is set to **Flexible**. This mode can also result in mixed content and privacy warnings from the browser. To resolve, [configure Cloudflare as described here](/docs/cloudflare/#configure-dns-for-stacked-cloudflare-cdn).
+Sites using Cloudflare's free universal SSL will experience redirect errors if the SSL mode is set to **Flexible**. This mode can also result in mixed content and privacy warnings from the browser. To resolve, [configure Cloudflare as described here](/docs/cloudflare/#stack-cloudflares-cdn-with-pantheon-and-configure-dns).
 
 Redirect errors can also be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic. For details, see [Redirect Incoming Requests](/docs/redirects/#troubleshooting).
 
