@@ -155,3 +155,6 @@ The action required message may be due to one of the following:
   - **DNS changes can take some time to take effect:** Check the current state of DNS propagation from different parts of the world using this [free web tool](https://www.whatsmydns.net/).
   -  **AAAA records not detected:**: Ensure you've added both AAAA records for the bare domain (e.g. `example.com`) to route IPv6 traffic to your site. There are two AAAA records for improved uptime and reliability. They may look similar, but the addresses are distinct.
   - **Old DNS records detected:** If you also have old records in addition to the new ones, make sure to delete the old records.
+
+### Can I use other CDNs with Pantheon Global CDN?
+Yes. We recommend that you redirect all traffic to HTTPS at your CDN and configure your CMS to assume all site visitors are using HTTPS. Check your CDN for how to redirect all traffic to HTTPS.
