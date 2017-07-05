@@ -51,16 +51,18 @@ Your connection data is as follows:
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
 
 There is also a one-click option so you can connect with a GUI client. The main directory listing includes Pantheon, logs, environment data and configuration. Your website is in the `code` directory. For instance, in Mac OS Cyberduck:
- ![Cyberduck Example](/source/docs/assets/images/cyberduck-example.png)<br />
+
+![Cyberduck Example](/source/docs/assets/images/cyberduck-example.png)
+
 Get the instructions for other [SFTP clients](/docs/sftp#sftp-clients).
 
 
-## Authenticating via SSH
+## Authenticating
 
-Follow development best practice workflows by [authenticating via SSH key for password-less access](/docs/ssh-keys). 
+### SSH Keys
+To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on. For more details, see [Generate and Add SSH Keys](/docs/ssh-keys/).
 
-## Authenticating via Password
-
+## Dashboard Credentials
 Alternatively, you may use your Pantheon Dashboard password when prompted.  (If you login with Google Single-Sign on and therefore don't have a password set please see our [troubleshooting tip](/docs/sftp/#i-cant-login-via-sftp-with-my-password) below.
 
 Larger agencies with multiple developers using password authentication who login frequently may see access issues across the organization. To avoid potential authentication failures, we strongly recommend using SSH keys. For details, see <a href="/docs/organization-faq#why-do-login-attempts-fail-for-all-users-across-my-organization-simultaneously?" data-proofer-ignore>Pantheon Organizations FAQs</a>.
