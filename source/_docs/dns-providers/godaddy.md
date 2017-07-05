@@ -25,6 +25,9 @@ Keep this page open and login to your <a href="https://godaddy.com/" target="bla
 
 ## Configure DNS Records on GoDaddy
 ### A Record
+
+![Example A record](/source/docs/assets/images/godaddy-dns-a-record.png)
+
 1. Click your GoDaddy profile in the top right menu bar and select **Manage My Domains**.
 2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Manage DNS**.
 3. Click the **Add** button and select **A** from the type dropdown menu.
@@ -36,6 +39,9 @@ Keep this page open and login to your <a href="https://godaddy.com/" target="bla
 6. Click **Save**.
 
 ### AAAA Records
+
+![Example AAAAA record](/source/docs/assets/images/godaddy-dns-aaaa-record.png)
+
 1. Click the **Add** button and select **AAAA** from the type dropdown menu.
 2. Enter **@** in the **Host** field and enter the first AAAA record value provided by Pantheon in the **Points to** field.
 3. Select desired Time to Live (TTL).
@@ -44,6 +50,8 @@ Keep this page open and login to your <a href="https://godaddy.com/" target="bla
 
 ### CNAME Record
 The CNAME record is required if you wish to include `www` within your site's primary domain name.
+
+![Example CNAME record](/source/docs/assets/images/godaddy-dns-cname-record.png)
 
 1. Click the **Add** button and select **CNAME** from the Type dropdown menu.
 2. Enter **www** in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Points to** field.
