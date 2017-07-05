@@ -119,7 +119,7 @@ Look up your DNS provider with this free web tool: <a href="https://mxtoolbox.co
 Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
 </div>
 
-4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/docs/guides/launch/redirects/) (replace `example.com`).
+4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/docs/guides/launch/redirects/).
 
 For more information on HTTPS see our detailed docs on the [Let's Encrypt HTTPS solution](/docs/free-https).
 
