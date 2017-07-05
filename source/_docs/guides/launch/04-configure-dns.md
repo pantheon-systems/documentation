@@ -68,7 +68,7 @@ The <span class="glyphicons glyphicons-alert text-warning"></span> icon within t
               {% if (doc.meta.provider == "Cloudflare") %}
                 <li><a href="{{ doc.url }}#configure-dns-records-on-cloudflare">{{ doc.provider }}</a></li>
               {% else %}
-                <li><a href="{{ doc.url }}#aaaaa-records">{{ doc.provider }}</a></li>
+                <li><a data-proofer-ignore  href="{{ doc.url }}#aaaaa-records">{{ doc.provider }}</a></li>
               {% endif %}
             {% endif %}
           {% endfor %}
