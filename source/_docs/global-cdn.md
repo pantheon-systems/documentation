@@ -165,4 +165,4 @@ The action required message may be due to one of the following:
   - **Old DNS records detected:** If you also have old records in addition to the new ones, make sure to delete the old records.
 
 ### Can I use other CDNs with Pantheon Global CDN?
-Yes. We recommend that you redirect all traffic to HTTPS at your CDN and configure your CMS to assume all site visitors are using HTTPS. Check your CDN for how to redirect all traffic to HTTPS.
+Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application.
