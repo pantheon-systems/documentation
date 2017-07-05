@@ -142,7 +142,7 @@ You'll need the plugin. [More information on sessions](/docs/wordpress-sessions/
 ## Caching and Performance
 
 ### Can I use other CDNs with Pantheon?
-Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer CDN and assuming HTTPS in the application.
+Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer CDN and assuming HTTPS in the application.Check your CDN for how to redirect all traffic to HTTPS.
 
 ### What version of Apache Solr does Pantheon run?
 
