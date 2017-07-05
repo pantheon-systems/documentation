@@ -32,7 +32,7 @@ Unless you're paying for advanced features or if you have custom configurations 
 1. Select **DNS** from the menu bar.
 2. Select **CNAME** from the dropdown menu.
 3. Enter `www` in the **Name** field and paste the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
-4. Create another **CNAME** record for the bare domain (e.g. `example.com`) and use the CNAME record value from the previous step (e.g. `live-example.pantheonsite.io`).
+4. Create a **CNAME** record for the bare domain (e.g. `example.com`) using the value from the previous step (e.g. `live-example.pantheonsite.io`).
 5. Select desired Time to Live (TTL).
 
   {% include("ttl.twig") %}
@@ -50,7 +50,7 @@ If you need access to paid features, you can configure Cloudflare's CDN as an ad
 1. Click **DNS** in the menu bar.
 2. Select **CNAME** from the dropdown menu.
 3. Enter `www` in the **Name** field and paste the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
-4. Create another **CNAME** record for the bare domain (e.g. `example.com`) and use the CNAME record value from the previous step (e.g. `live-example.pantheonsite.io`).
+4. Create a **CNAME** record for the bare domain (e.g. `example.com`) using the value from the previous step (e.g. `live-example.pantheonsite.io`).
 5. Select desired Time to Live (TTL).
 
   {% include("ttl2.twig") %}
