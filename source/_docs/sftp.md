@@ -119,11 +119,8 @@ If you **cannot** access that web page then your network or firewall is likely p
 
 If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related.  Be sure to double-check or re-enter your [SFTP settings](/docs/sftp/#sftp-connection-information), including SFTP mode and port `2222`. Contact Pantheon Support if you still have trouble.
 
-### I can't login to SFTP with my Password
-
-If you login with Google Single Sign-On to your Pantheon Dashboard you will not have a Pantheon Dashboard password on file. *(Using your Google password won't work, and is not recommended!)* You can create a dashboard password by logging out of the Pantheon Dashboard and then clicking the "[Forgot your password?](https://dashboard.pantheon.io/reset-password)" link from the login screen. Enter your email address and click the request button to send a one-time password reset link to you via email. That link will allow you to set a new password that you will then be able to use in your SFTP client.
-
-Note: [Authenticating via SSH keys](/docs/ssh-keys) is still the preferred and recommended solution.
+### I registered my Pantheon account via Google. How do I connect to SFTP?
+We recommend [adding an SSH Key](/docs/ssh-keys/), which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
 
 ### I can't write to my codebase on Test or Live.
 
@@ -202,5 +199,3 @@ Run the address through [IP WHOIS Lookup](https://www.whatismyip.com/ip-whois-lo
 
 Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.
 
-### I registered my Pantheon account via Google. How do I connect to SFTP?
-We recommend [adding an SSH Key](/docs/ssh-keys/), which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
