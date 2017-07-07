@@ -24,7 +24,7 @@ If you are managing a high profile site, using PagerDuty is an excellent way to 
 1. <a href="https://signup.pagerduty.com/accounts/new" target=blank>Sign up for a PagerDuty account <span class="glyphicons glyphicons-new-window-alt"></span></a> if you do not have one already. This is a paid service, but you can get started for free on a 14-day trial.
 
 2. Login to your PagerDuty account and go to **Configuration** > **Users**.
-3. Setup your user profile and contact information. Add your name, a job title, your time zone, phone number, SMS number add an email address:
+3. Setup your user profile and contact information. Add your name, a job title, your time zone, phone number, SMS number and an email address:
 
   ![New User](/source/docs/assets/images/pagerduty/pg-user-contact.png)
 
