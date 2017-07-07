@@ -31,13 +31,12 @@ If you add the following after the previous snippet, we'll also run that script 
 
 Specify the workflows you want to hook into (e.g. `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to root of your site's docroot.
 
-## Type of Scripts
+## Script Type and Location
 
-`webphp`: Runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/docs/timeouts/), and cannot be batched.
+Quicksilver currently supports `webphp` scripting, which runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/docs/timeouts/), and cannot be batched. In the future we may add additional types.
 
 We recommend setting up a dedicated directory in the docroot (e.g. `private/scripts`) for tracking these files. If your site uses a [nested docroot](/docs/nested-docroot/), the scripts directory needs to be located in the  `web` subdirectory of your site's code repository (e.g. `web/private/scripts`).
 
-In the future we may add additional types.
 
 ## Hooks
 
