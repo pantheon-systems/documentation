@@ -2,8 +2,11 @@
 title: Deployment Infrastructure Upgrade
 description: Details on the current infrastructure upgrade.
 ---
-If your site dashboard displays **Deployment Infrastructure Upgrade**, the below section will address your questions and concerns.
+If your site dashboard displays the following **Deployment Infrastructure Upgrade** notice, we recommend waiting to make code changes until maintenance completes:
 
+![deployment infrastructure upgrade](/source/docs/assets/images/upgrade-notice.png)
+
+Refer to the following FAQs for more details and if you have concerns surrounding this process.
 ## Frequently Asked Questions
 
 ### Does it affect my site uptime?
