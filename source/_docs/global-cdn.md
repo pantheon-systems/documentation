@@ -123,7 +123,7 @@ Check the current state of DNS propagation from different parts of the world usi
 
 For more information on HTTPS see our detailed docs on the [Let's Encrypt HTTPS solution](/docs/free-https).
 
-## Frequently Asked Quesitons
+## Frequently Asked Questions
 
 ### Is the www-redirector service still available?
 No, if your site previously relied on this service on Legacy you will need to [redirect requests via PHP](/docs/guides/launch/redirects/).
