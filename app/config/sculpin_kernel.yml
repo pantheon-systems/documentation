@@ -52,3 +52,14 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
+    pagerdutypages:
+        type: path
+        path: docs/guides/pagerduty
+        permalink: pretty
+        singular_name: pagerdutypage
+        enabled: true
+        layout: guide
+        taxonomies:
+            - categories
+            - tags
+            - contributors
