@@ -17,10 +17,8 @@ editpath: pagerduty/05-slack.md
 In this lesson, we'll add the Slack extension to PagerDuty so your team can acknowledge and resolve incidents within a channel.
 
 1. Login to your PagerDuty account and go to **Configuration** > **Extensions**, then click **+ New Extension**.
-2. Select **Slack** from the dropdown menu, add a name, select service, then click **Authorize**:
-
-
 2. For the new service, use the following configuration:
+
  - Select **Slack** as extension type
  - Enter "example.com" as the name of the extension
  - Select **example.com** as the service
