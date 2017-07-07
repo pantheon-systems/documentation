@@ -1,12 +1,14 @@
 ---
-title: Configuring JetBrains PhpStorm IDE with WordPress on Pantheon
-description: Best practices and recommendations for building a WordPress site using JetBrains PhpStorm.
+title: Configuring PhpStorm to create WordPress Plugins on Pantheon
+description: Configure a local environment for building a WordPress plugin or theme using JetBrains PhpStorm.
 tags: [local]
 categories: [wordpress]
 ---
 ## Overview
 
-[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that can be configured to work with WordPress sites, allowing users to easily build and maintain their code.
+[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that can be configured to work with WordPress sites, allowing users to easily build and maintain custom plugins.
+
+This doc will set you up with a local environment in PhpStorm to create your custom plugins and themes. If you're looking to use PhpStorm to manage code for an entire site, [click here](/docs/wordpress-phpstorm/).
 
 For detailed information, see [WordPress Development using PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/WordPress+Development+using+PhpStorm). This document focuses on integrating and showcasing the PhpStorm workflow and is current as of PhpStorm version 2017.1.4.
 
@@ -24,8 +26,8 @@ Copy your site code to your local workstation using [SFTP](/docs/sftp#sftp-conne
 2. Click **Create New Project** from the startup window or go to **File Menu > New Project...** if you have an existing project open.
 3. Name your project.
 4. Select **WordPress Plugin** as the project type on the left sidebar.
-5. Specify or browse to the file path to save your project's files. This is where PhpStorm will store it's "working files", and should be separate from your WordPress directory.
-6. Specify or browse to the root directory for your local WordPress site, and click **Create*:*
+5. Specify or browse to the file path to save your project's files. This is where PhpStorm will store its "working files", and should be separate from your WordPress directory.
+6. Specify or browse to the root directory for your local WordPress site, and click **Create**:
 
     ![Configuring wp-cli path for PhpStorm](/source/docs/assets/images/phpstorm-new-project-wordpress-plugin-screen.png)
 
