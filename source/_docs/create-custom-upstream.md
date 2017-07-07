@@ -85,7 +85,7 @@ If your repository is publicly accessible, you can skip this step.
 - **URL of Logo**: (Optional) Recommended size is 70x80px
 - **URL of Upstream Repository**: Must end in `.git` (e.g. `https://github.com/pantheon-systems/documentation.git` or `https://bitbucket.org/pantheon-systems/documentation.git`)
 - **Repository Authentication**: Only required if the repository is hosted privately
- - Refer to the user [created above](#grant-pantheon-access-privately-hosted-repositories-only), and provide `username:password` or a [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) if supported by your repository hosting provider.
+ - Refer to the user [created above](#grant-pantheon-access-privately-hosted-repositories-only), and provide `username:password` or a [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) if supported by your repository hosting provider. Docs Team: Clarify that username must not be email address, but actual username. Password can only be alphanumeric - no special characters. 
 - **Repository Branch**: Typically `master`
 - **Visibility**: Public (allow this upstream to be used by any Pantheon user) or Private (only allow members of your organization to use this upstream)
 - **Initial Connection Mode**: Git or SFTP
