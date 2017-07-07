@@ -1,11 +1,35 @@
 ---
-title: Platform Upgrade in Progress
-description: Details on the current infrastructure maintenance.
+title: Deployment Infrastructure Upgrade
+description: Details on the current infrastructure upgrade.
 ---
-Pantheon’s multi-tenant platform uses containers and runs on top of dedicated infrastructure. To ensure improved performance and security of this infrastructure, it periodically needs maintenance and upgrade.
+If your site dashboard displays **Deployment Infrastructure Upgrade**, the below section will address your questions and concerns.
 
-If your site dashboard displays the **This site is currently undergoing maintenance message**, we recommend waiting to make code changes until maintenance completes. The maintenance window can be anywhere from 10 to 30 minutes depending on several factors, including the size of your site components (code, database, files), time of the day, etc.
+## Frequently Asked Questions
 
-We have built redundancy and fail-over to ensure your site will be available during maintenance.
+### Does it affect my site uptime?
+
+No. We can ensure you that there will be zero downtime on your site.
+
+### What features are affected?
+
+During this upgrade, services related to development may be interrupted. Thus, as a caution, you should delay the activity require the following:
+
+- Making changes using SFTP mode
+- Pushing code with git
+- Merging from multi-dev
+- Cloning a database across environments
+- Creating new multi-devs
+- Deploying to LIVE environment
+
+### How long will the upgrade take?
+
+For most of the sites, we estimate the upgrade to complete in under 30 minutes. However, for some sites with large databases, the upgrade my take longer.
+
+If you have questions around timing and duration of the upgrade, kindly contact Support.
+
+### What are you upgrading?
+
+This upgrade is for the underlying infrastructure only. This upgrade does not change any runtime or software versions and there are no change to the behavior of Pantheon. Other that this brief interruption, there is no impact to the users.
+
 
 Do not hesitate to contact support if you have any additional questions or concerns.
