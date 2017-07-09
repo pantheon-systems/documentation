@@ -25,6 +25,10 @@ Plugins with session-using code are relying on PHP's default session manager, wh
 ### Install WordPress Native PHP Sessions Plugin
 If `$_SESSIONs` are necessary for your application, install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
 
+<!---
+The reason to use this method over standard installation is? e.g. plugins in the mu-plugin/ path load automagically and also do not appear in the list of plugins which protects it from accidental deactivation/deletion. 
+-->
+
 1. Save the [installation script](https://gist.github.com/greg-1-anderson/dd033d820d0a9d2659e6)  locally within your current $PATH as `add-php-sessions-plugin.php`
 2. Make the file executable:
 
