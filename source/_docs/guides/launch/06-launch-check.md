@@ -15,6 +15,7 @@ previouspage: Redirect to a Primary Domain
 nexturl: guides/launch/next-steps/
 nextpage: Next Steps
 editpath: launch/05-launch-check.md
+image: getting-started-Largethumb
 ---
 ## Enable and Schedule Weekly Backups
 1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard then click **Backup Schedule**.

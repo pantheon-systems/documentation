@@ -16,6 +16,7 @@ nextpage: Configure DNS and HTTPS
 previousurl: guides/launch/plans/
 previouspage: Upgrade Site Plan
 editpath: launch/03-domains.md
+image: getting-started-Largethumb
 ---
 In this lesson we'll connect the bare and `www` domains to Pantheon's Live environment.
 

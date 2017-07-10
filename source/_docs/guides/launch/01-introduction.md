@@ -16,6 +16,7 @@ permalink: docs/guides/launch/
 nexturl: guides/launch/plans/
 nextpage: Upgrade Site Plan
 editpath: launch/01-introduction.md
+image: getting-started-Largethumb
 ---
 Welcome! This guide will help you take a site live on Pantheon.
 

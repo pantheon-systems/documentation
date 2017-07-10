@@ -15,6 +15,7 @@ nextpage: Domains & HTTPS
 previousurl: guides/launch/
 previouspage: Introduction
 editpath: launch/02-plans.md
+image: getting-started-Largethumb
 ---
 In this lesson, we'll upgrade from a free Sandbox site to a paid plan by adding your billing information or by inviting a business owner to pay.
 

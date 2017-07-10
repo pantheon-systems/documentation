@@ -16,6 +16,7 @@ nextpage: Redirect to a Primary Domain
 previousurl: guides/launch/domains/
 previouspage: Connect a Domain to Live
 editpath: launch/04-configure-dns.md
+image: getting-started-Largethumb
 ---
 In this lesson we'll configure DNS and provision HTTPS on Pantheon. For details, see [Free and Managed HTTPS](/docs/free-https/).
 

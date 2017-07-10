@@ -15,7 +15,7 @@ nextpage: Create Test & Live
 previousurl: guides/getting-started/create-new-site/
 previouspage: Create New Site
 editpath: getting-started/04-site-dashboard.md
-image: getting-started-Largethumb
+image: launchGuide-twitterLarge
 ---
 
 In this lesson, we'll explore the Site Dashboard and learn about the Dev, Test, Live workflow.

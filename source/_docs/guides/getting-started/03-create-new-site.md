@@ -15,7 +15,7 @@ nextpage: Site Dashboard
 previousurl: guides/getting-started/user-dashboard/
 previouspage: User Dashboard
 editpath: getting-started/03-create-new-site.md
-image: getting-started-Largethumb
+image: launchGuide-twitterLarge
 ---
 In this lesson, we’re going to create and configure a new WordPress or Drupal site.
 

@@ -15,7 +15,7 @@ nextpage: Next Steps
 previousurl: guides/getting-started/onserver-dev-part1/
 previouspage: On-Server Dev, Part 1
 editpath: getting-started/09-onserver-dev-part2.md
-image: getting-started-Largethumb
+image: launchGuide-twitterLarge
 ---
 
 In this lesson, we’re going to edit code directly. We’ll commit our edits to **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev**, review in **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test**, and deploy to **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live**. Let’s get started!

@@ -15,7 +15,7 @@ nextpage: Create New Site
 previousurl: guides/getting-started/
 previouspage: Introduction
 editpath: getting-started/02-user-dashboard.md
-image: getting-started-Largethumb
+image: launchGuide-twitterLarge
 ---
 In this lesson, we’re going to explore the User Dashboard.
 
