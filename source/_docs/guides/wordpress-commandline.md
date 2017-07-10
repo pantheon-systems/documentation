@@ -1,7 +1,7 @@
 ---
 title: Create a WordPress Site From the Command Line Using Terminus and WP-CLI
 description: Learn how to install and use Terminus and WP-CLI to control a WordPress site on Pantheon.
-tags: [devterminus, create]
+tags: [devterminus, create, moreguides]
 categories: []
 type: guide
 permalink: docs/guides/:basename/

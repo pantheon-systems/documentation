@@ -4645,6 +4645,8 @@ a.topic-info-link {
   .manual-guide-toc .active-trail {
     background-color: #f5f5f5!important;
   }
+  .flex-panel-item-platform-integrations {
+  }
 }
 @media (max-width: 400px) {
   .topic-info .topic-info__image {
@@ -5295,14 +5297,11 @@ div.navsearch-container {
 .flex-panel-group {
   display: flex;
   flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  margin-bottom: 50px;
+  margin-left: -15px;
 }
 .flex-panel-item {
-  flex: 1 1 25%;
-  margin: 15px 5px;
-  max-width: 32%;
+  flex: 1 30%;
+  margin: 0px 0px 15px 15px;
 }
 .flex-panel-body {
   justify-content: space-between;
@@ -5312,7 +5311,6 @@ div.navsearch-container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin: 0 10px;
   padding: 20px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -5332,6 +5330,8 @@ div.navsearch-container {
 }
 .main-topic-info__plugin-image {
   align-self: flex-end;
+  margin: 0px !important;
+  border-radius:4px;
 }
 .pantheon-official {
   color: #78868e;
@@ -5339,6 +5339,60 @@ div.navsearch-container {
   align-self: flex-end;
   margin:0px;
   text-align: center;
+}
+.platform-integrations {
+  color: #78868e;
+  font-size: xx-small;
+  margin:0px;
+  align-self: center;
+  text-align: center;
+}
+.flex-panel-item-platform-integrations {
+  flex: 1 1 0%;
+  margin: 0px 0px 15px 15px;
+}
+.flex-panel-item-platform-integrations>a:hover {
+  text-decoration: none!important;
+}
+.flex-panel-body-platform-integrations:hover {
+  background: #FFFFFF;
+  border: 1px solid #A4BBC1;
+  box-shadow: 0px 0px 11px
+}
+.flex-panel-body-platform-integrations {
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.flex-panel-body-pantheon-workflows {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.pantheon-workflows {
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  border-radius:4px;
+}
+.pantheon-workflows>h3 {
+  margin-top: 15px;
+  font-family: Avenir-Light;
+}
+.pantheon-workflows:hover {
+  background: #FFFFFF;
+  border: 1px solid #A4BBC1;
+  box-shadow: 0px 0px 11px;
+  border-radius: 5px;
+}
+.flex-panel-body-pantheon-workflows>a:hover{
+  text-decoration: none!important;
 }
 .pantheon-official img, .pantheon-official p {
   margin: 0px;
