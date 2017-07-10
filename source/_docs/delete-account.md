@@ -27,7 +27,8 @@ The next step is to delete the associated credit cards. For more information, se
 From your Account Dashboard, select **Account**, and click **Delete Account**. Click the red **Delete Account** button, and enter the verification text to confirm.
 
 ## Frequently Asked Questions
-
-####Can I come back to the platform later?
+###Why is my site still accessible after it's been deleted?
+Your site may still be accessible for a temporary period of time because the platform does not clear cache upon site deletion. To avoid this behavior, clear cache before deleting the site.
+###Can I come back to the platform later?
 
 Of course. That's why the first step in this process is to backup and export your site. To restore your site from a backup, see [Restoring a Backup](/docs/restore-environment-backup).
