@@ -1,7 +1,7 @@
 ---
 title: Prevent Spamming During Drupal Debugging and Testing
 description: Set up the Drupal reroute_email module on your Pantheon Drupal site.
-tags: [workflow]
+tags: [workflow, moreguides]
 categories: [drupal]
 type: guide
 permalink: docs/guides/:basename/

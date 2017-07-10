@@ -15,7 +15,7 @@ nextpage: On-Server Dev, Part 1
 previousurl: guides/getting-started/clone-live-to-dev/
 previouspage: Clone Live to Dev
 editpath: getting-started/07-connection-modes.md
-image: getting-started-Largethumb
+image: launchGuide-twitterLarge
 ---
 
 In this lesson, we’ll learn how to connect to your Dev environment and change code.

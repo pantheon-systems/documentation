@@ -4587,11 +4587,11 @@ a.cta.cta-black-on-yellow:after:hover {
 }
 .topic-info__image {
   float:left;
-  width: 120px;
-  margin:15px;
+  min-width: 70px;
   background-size:contain;
   background-repeat:no-repeat;
   background-position:center;
+  margin: 0px;
 }
 .topic-info .topic-info__image {
   width: 30%;
@@ -4600,8 +4600,9 @@ a.cta.cta-black-on-yellow:after:hover {
   margin:0;
 }
 a.topic-info-link {
-  display:inline-block;
+  display: inline-block;
   width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -4645,6 +4646,8 @@ a.topic-info-link {
   .manual-guide-toc .active-trail {
     background-color: #f5f5f5!important;
   }
+  .flex-panel-item-platform-integrations {
+  }
 }
 @media (max-width: 400px) {
   .topic-info .topic-info__image {
@@ -4665,12 +4668,14 @@ a.topic-info-link {
   padding-left: 0;
 }
 .topic-info__title {
-  font-family: Avenir-Heavy;
+  font-family: Avenir-Light;
   font-size: 20px;
   color: #0093c9;
   line-height: 25px;
+  text-align: left;
   margin-top: 0;
 }
+
 .main-topic-info__title {
   font-family: Avenir-Light;
   font-size: 32px;
@@ -4686,6 +4691,11 @@ a.topic-info-link {
   color: #313945;
   line-height: 1.5;
   font-weight:300;
+  text-align: left;
+  margin: 0px;
+}
+.topic-info__description-well {
+  margin-left: 25px;
 }
 .main-topic-info__description {
   font-family: Avenir-Light;
@@ -4693,6 +4703,7 @@ a.topic-info-link {
   color: #313945;
   line-height: 1.5;
   font-weight:300;
+  margin: 0px !important;
 
 }
 
@@ -4774,13 +4785,43 @@ a:focus {
   font-family: Avenir-Light;
   font-size: 22px;
 }
+.guide-cta__text {
+  flex-basis: inherit;
+  flex:4;
+  padding:0px!important;
+  border-radius:0px 4px 4px 0px;
+  align-self: center;
+}
+.guide-cta__text_inner {
+  padding: 25px !important;
+  margin-top: -30px;
+}
+.guide-cta-feature-image {
+  padding: 0px;
+}
+.home-guide-cta-feature-image > img {
+  padding: 30px 0px 0px 10px;
+  margin: 0px;
+  border-radius:4px 0px 0px 4px;
+}
+.guide-cta-feature-image > img {
+  padding: 0px;
+  margin: 0px;
+  border-radius:4px 0px 0px 4px;
+}
 .guide-cta-landing {
-  background-color: #0093c9;
   padding: 30px;
+  display:flex;
+  padding:0px;
+  border: 1px solid #B5C0C3;
+  border-radius: 4px;
+  color:#333;
 }
 .guide-cta-landing:hover {
-box-shadow: 0px 0px 11px 0px rgba(120,134,142,0.62);
-opacity: 0.9;
+  background: #FFFFFF;
+  border: 1px solid #A4BBC1;
+  box-shadow: 0px 0px 11px;
+  border-radius: 5px;
 }
 
 .subtopic-groups > h3 {
@@ -4814,26 +4855,23 @@ opacity: 0.9;
 .hero-video__guide-cta-title {
   font-family: Avenir-Light;
   font-size: 32px;
-  color: #fff;
   line-height: 43px;
-  margin-bottom: 20px;
-  margin-top: 0;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  color: #0093c9;
 
 }
 .hero-video__guide-cta-subtitle {
   font-family: AvenirLT-Medium;
-  color: #fff !important;
   line-height: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 0px;
 
 }
 .hero-video__guide-cta-subtitle > a {
-  color: #fff;
 }
 #guide-cta > a:hover {
   text-decoration:none;
   opacity: 0.65;
-  color:#fff !important;
 
 }
 .hero-video__subtitle {
@@ -5295,14 +5333,12 @@ div.navsearch-container {
 .flex-panel-group {
   display: flex;
   flex-flow: row wrap;
-  align-items: stretch;
-  justify-content: flex-start;
-  margin-bottom: 50px;
+  margin-left: -15px;
 }
 .flex-panel-item {
-  flex: 1 1 25%;
-  margin: 15px 5px;
-  max-width: 32%;
+  flex: 1 30%;
+  margin: 0px 0px 15px 15px;
+  color: #333;
 }
 .flex-panel-body {
   justify-content: space-between;
@@ -5312,7 +5348,6 @@ div.navsearch-container {
   display: flex;
   flex-direction: column;
   height: 100%;
-  margin: 0 10px;
   padding: 20px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -5332,6 +5367,8 @@ div.navsearch-container {
 }
 .main-topic-info__plugin-image {
   align-self: flex-end;
+  margin: 0px !important;
+  border-radius:4px;
 }
 .pantheon-official {
   color: #78868e;
@@ -5339,6 +5376,104 @@ div.navsearch-container {
   align-self: flex-end;
   margin:0px;
   text-align: center;
+}
+.platform-integrations {
+  color: #78868e;
+  font-size: xx-small;
+  margin:0px;
+  align-self: center;
+  text-align: center;
+}
+.flex-panel-item-home {
+  flex: 1 1 0%;
+  margin: 0px 0px 15px 15px;
+  border: 1px solid #B5C0C3;
+  border-radius: 4px;
+  color: #333;
+}
+.flex-panel-item-home:hover {
+    background: #FFFFFF;
+    border: 1px solid #A4BBC1;
+    box-shadow: 0px 0px 11px;
+    border-radius: 4px;
+}
+.flex-panel-item-platform-integrations {
+  flex: 1 1 0%;
+  margin: 0px 0px 15px 15px;
+  color: #333;
+  min-width: 350px;
+}
+.flex-panel-item-platform-integrations-guides {
+  flex: 1 1 0%;
+  margin: 0px 0px 15px 15px;
+  color: #333;
+}
+.flex-panel-item-guides-landing {
+  flex: 1;
+  margin: 0px 0px 15px 15px;
+  color: #333;
+}
+
+.flex-panel-item-platform-integrations>a:hover {
+  text-decoration: none!important;
+}
+.flex-panel-body-platform-integrations:hover {
+  background: #FFFFFF;
+  border: 1px solid #A4BBC1;
+  box-shadow: 0px 0px 11px
+}
+.flex-panel-body-platform-integrations {
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.flex-panel-body-home {
+  text-align: center;
+  border-radius: 4px;
+  display:flex;
+  height: 100%;
+}
+.flex-panel-main-body-inner {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-panel-body-inner {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+.flex-panel-body-pantheon-workflows {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.pantheon-workflows {
+  border: 1px solid #B5C0C3;
+  padding: 20px;
+  border-radius:4px;
+}
+.pantheon-workflows>h3 {
+  margin-top: 15px;
+  font-family: Avenir-Light;
+}
+.pantheon-workflows:hover {
+  background: #FFFFFF;
+  border: 1px solid #A4BBC1;
+  box-shadow: 0px 0px 11px;
+  border-radius: 5px;
+}
+.flex-panel-body-pantheon-workflows>a:hover{
+  text-decoration: none!important;
 }
 .pantheon-official img, .pantheon-official p {
   margin: 0px;

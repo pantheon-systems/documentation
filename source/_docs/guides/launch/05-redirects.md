@@ -15,6 +15,7 @@ nextpage: Final Launch Check
 previousurl: guides/launch/configure-dns/
 previouspage: Configure DNS and HTTPS
 editpath: launch/04-redirects.md
+image: getting-started-Largethumb
 ---
 In this lesson, we'll redirect incoming requests to a primary domain name (e.g., `www.example.com` or `example.com`). Standardizing on a single URL prevents content duplication across domains for improved SEO.
 

@@ -1,7 +1,7 @@
 ---
 title: Using GitHub Pull Requests with Composer and Drupal 8
 description: Use GitHub and Composer to manage modules and other dependencies for Drupal 8 sites on Pantheon.
-tags: [workflow]
+tags: [workflow, moreguides]
 categories: [drupal8]
 type: guide
 permalink: docs/guides/:basename/
