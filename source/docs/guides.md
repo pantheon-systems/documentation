@@ -4,9 +4,8 @@ use: [guides, guides_tags]
 title: Guides
 ---
 <h1 style="margin-top:0px;font-family: 'AvenirLT-Black';">Guides</h1>
-<h2>Pantheon Workflows</h2>
 <div class="flex-panel-group">
-  <div class="flex-panel-item-platform-integrations">
+  <div class="flex-panel-item-guides-landing">
       <div class="flex-panel-body-pantheon-workflows">
       <a href="/docs/guides/getting-started/">
         <div class="pantheon-workflows">
@@ -16,7 +15,7 @@ title: Guides
         </a>
       </div>
   </div>
-  <div class="flex-panel-item-platform-integrations">
+  <div class="flex-panel-item-guides-landing">
       <div class="flex-panel-body-pantheon-workflows">
       <a href="/docs/guides/launch/">
         <div class="pantheon-workflows">
@@ -26,20 +25,10 @@ title: Guides
         </a>
       </div>
   </div>
-  <div class="flex-panel-item-platform-integrations">
-      <div class="flex-panel-body-pantheon-workflows">
-      <a href="/docs/terminus/">
-        <div class="pantheon-workflows">
-          <img alt="Terminus" src="/source/docs/assets/images/terminus-thumbLarge.png" class="main-topic-info__plugin-image" >
-          <h3>Terminus Manual</h3>
-        </div>
-        </a>
-      </div>
-  </div>
 </div>
-<h2>Platform Integrations</h2>
+<h2>Platform Integration Guides</h2>
 <div class="flex-panel-group">
-  <div class="flex-panel-item-platform-integrations">
+  <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/deploybot/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
@@ -48,7 +37,7 @@ title: Guides
       </div>
     </a>
   </div>
-  <div class="flex-panel-item-platform-integrations">
+  <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/guides/jenkins/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
@@ -57,7 +46,7 @@ title: Guides
       </div>
     </a>
   </div>
-  <div class="flex-panel-item-platform-integrations">
+  <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/guides/jira/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
@@ -68,7 +57,7 @@ title: Guides
   </div>
 </div>
 <div class="flex-panel-group">
-  <div class="flex-panel-item-platform-integrations">
+  <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/guides/new-relic-deploys/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
@@ -77,7 +66,7 @@ title: Guides
       </div>
     </a>
   </div>
-  <div class="flex-panel-item-platform-integrations">
+  <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/guides/pagerduty/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
@@ -86,7 +75,7 @@ title: Guides
       </div>
     </a>
   </div>
-  <div class="flex-panel-item-platform-integrations">
+  <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/guides/pingdom-uptime-check/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">

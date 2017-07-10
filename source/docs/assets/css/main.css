@@ -4587,11 +4587,11 @@ a.cta.cta-black-on-yellow:after:hover {
 }
 .topic-info__image {
   float:left;
-  width: 120px;
-  margin:15px;
+  min-width: 70px;
   background-size:contain;
   background-repeat:no-repeat;
   background-position:center;
+  margin: 0px;
 }
 .topic-info .topic-info__image {
   width: 30%;
@@ -4672,8 +4672,10 @@ a.topic-info-link {
   font-size: 20px;
   color: #0093c9;
   line-height: 25px;
+  text-align: left;
   margin-top: 0;
 }
+
 .main-topic-info__title {
   font-family: Avenir-Light;
   font-size: 32px;
@@ -4689,6 +4691,11 @@ a.topic-info-link {
   color: #313945;
   line-height: 1.5;
   font-weight:300;
+  text-align: left;
+  margin: 0px;
+}
+.topic-info__description-well {
+  margin-left: 25px;
 }
 .main-topic-info__description {
   font-family: Avenir-Light;
@@ -4696,6 +4703,7 @@ a.topic-info-link {
   color: #313945;
   line-height: 1.5;
   font-weight:300;
+  margin: 0px !important;
 
 }
 
@@ -5395,6 +5403,17 @@ div.navsearch-container {
   color: #333;
   min-width: 350px;
 }
+.flex-panel-item-platform-integrations-guides {
+  flex: 1 1 0%;
+  margin: 0px 0px 15px 15px;
+  color: #333;
+}
+.flex-panel-item-guides-landing {
+  flex: 1;
+  margin: 0px 0px 15px 15px;
+  color: #333;
+}
+
 .flex-panel-item-platform-integrations>a:hover {
   text-decoration: none!important;
 }
@@ -5418,8 +5437,20 @@ div.navsearch-container {
 .flex-panel-body-home {
   text-align: center;
   border-radius: 4px;
-  padding: 10px;
   display:flex;
+  height: 100%;
+}
+.flex-panel-main-body-inner {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-panel-body-inner {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
 }
 .flex-panel-body-pantheon-workflows {
   text-align: center;
