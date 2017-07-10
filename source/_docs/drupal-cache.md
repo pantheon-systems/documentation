@@ -6,15 +6,32 @@ categories: [drupal]
 ---
 To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.
 
-## Drupal 8
+## Drupal 8 Performance Configuration
 
+Visit `/admin/config/development/performance` for Drupal's performance settings.
+
+### Caching
+![Drupal 8 Caching options](/source/docs/assets/images/d8-cache-config.png)  
+**This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
+
+Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 minutes, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
+
+On Pantheon, this value defaults to 15 minutes. This is done on the first cache-clear operation on the site; immediately after installing the site, you may see this set to `<no caching>`. In this case, press the "Clear all caches" button, or select the page cache maximum age from the available selections.
+
+Note that Drupal 8 has no setting to configure the minimum cache lifetime.
+
+### Bandwidth Optimization
+ ![Drupal 8 aggregate CSS and JS files](/source/docs/assets/images/d8-aggregate-css-js.png)<br />
+On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
+
+### Cache Tags
 At this time, Varnish purging based on [cache tags](https://www.drupal.org/developing/api/8/cache/tags) is not supported. For configuration instructions, see [Drupal 8 Performance and Varnish Caching Settings](/docs/drupal-8-cache).
 
 ## Drupal 7 Performance Configuration
 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
-## Caching
+### Caching
 ![Drupal 7 Caching options](/source/docs/assets/images/d7-cache-config.png)  
 Unless needed for development, you should always enable "Cache pages for anonymous users". Without it, your Drupal site will have to rebuild every page and Varnish will not cache your site. If possible, enable "Cache blocks" as well to increase performance for logged-in users.
 
@@ -28,7 +45,7 @@ Minimum caching lifetime forces cached content to continue to exist before it c
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 minutes, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
 
-## Bandwidth Optimization
+### Bandwidth Optimization
  ![Drupal 7 compressed cached pages](/source/docs/assets/images/compress-cached-pages.png)<br />
 On Pantheon, the "Compress cached pages" setting should not checked, as pages are already compressed with gzip.  <br />
  ![Drupal 7 aggregate CSS and JS files](/source/docs/assets/images/aggregate-css-js.png)<br />
