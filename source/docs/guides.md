@@ -3,6 +3,7 @@ layout: taxon
 use: [guides, guides_tags]
 title: Guides
 ---
+<h1 style="margin-top:0px;font-family: 'AvenirLT-Black';">Guides</h1>
 <h2>Pantheon Workflows</h2>
 <div class="flex-panel-group">
   <div class="flex-panel-item-platform-integrations">
