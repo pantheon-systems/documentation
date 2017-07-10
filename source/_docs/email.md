@@ -77,7 +77,7 @@ Configuring mail to use port 25, 465 or 587 is strongly discouraged because they
       </tr>
       <tr>
         <td>Amazon SES</td>
-        <td><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html" target="blank">2587 (STARTTS), 2465 (TLSWRAPPER)</a></td>
+        <td><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html" target="blank">2587 (STARTLS), 2465 (TLSWRAPPER)</a></td>
       </tr>
     </tbody>
 </table>
