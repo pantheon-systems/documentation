@@ -4852,12 +4852,21 @@ a:focus {
   margin-bottom: 20px;
   margin-top: 0;
 }
-.hero-video__guide-cta-title {
+.hero-video__guide-main-topic-title {
   font-family: Avenir-Light;
   font-size: 32px;
   line-height: 43px;
   margin-bottom: 5px;
   margin-top: 15px;
+  color: #0093c9;
+
+}
+.hero-video__guide-cta-title {
+  font-family: Avenir-Light;
+  font-size: 32px;
+  line-height: 43px;
+  margin-bottom: 5px;
+  margin-top: 5px;
   color: #0093c9;
 
 }
