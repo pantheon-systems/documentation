@@ -18,7 +18,7 @@ Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
 </p></div>
 
 ## Upgrade Your Site
-Before you change your PHP version, ensure that your CMS and all of your themes, modules and plugins are up-to-date. Older software is more likely to contain code that is incompatible with recent PHP versions.
+Before you change your PHP version, ensure that your CMS and all of your themes, modules and plugins are up-to-date. Older software is more likely to contain code that is incompatible with recent PHP versions. You can apply CMS core updates [through the dashboard](/docs/upstream-updates/#apply-upstream-updates-via-the-site-dashboard) or [Terminus](/docs/upstream-updates/#apply-upstream-updates-via-terminus). Plugin, theme, and module updates can be performed from the CMS [admin panel](/docs/cms-admin/) or through [Terminus](/docs/terminus/examples/#module-theme-and-plugin-updates).
 
 ## Configure PHP Version
 Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. When using SFTP mode, navigate to the `code` directory. Your `pantheon.yml` file will look like the following:
