@@ -2941,7 +2941,6 @@ pre code .hljs,
   }
 }
 
-
 /*
 * Customizer
 *
@@ -5559,4 +5558,7 @@ width: 100% !important;
 }
 .secure {
   color: #0b8043 !important;
+}
+h2>.glyphicons {
+  vertical-align: text-bottom;
 }

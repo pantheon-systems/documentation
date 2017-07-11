@@ -18,45 +18,45 @@ editpath: getting-started/04-site-dashboard.md
 image: launchGuide-twitterLarge
 ---
 
-In this lesson, we learn about the Dev, Test, Live workflow and explore a Pantheon Site Dashboard. 
+In this lesson, we learn about the Dev, Test, Live workflow and explore a Pantheon Site Dashboard.
 
 1. Navigate back to the Pantheon **Site Dashboard**.
 
-  Every Pantheon site comes with 3 separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
+Every Pantheon site comes with 3 separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p>Agencies have access to additional development environments under the <strong><span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev</strong> tab.
-    </p></div>
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p>Agencies have access to additional development environments under the <strong><span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev</strong> tab.
+</p></div>
 
-    **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev**
-    
-    By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
+##<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev
 
-    Within the safety of this isolated environment, you can edit code and make updates to your site. In fact, all development on your Pantheon sites starts here.
+By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
 
-    **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test**
-    
-    This environment is for reviewing the changes made in your Dev environment with the most recent content from your live site.
+Within the safety of this isolated environment, you can edit code and make updates to your site. In fact, all development on your Pantheon sites starts here.
 
-    To use the Test environment for this purpose, you first push new code “up” from your Dev environment and clone recent content “down” from your Live environment.
+##<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test
 
-    <p style="text-align:center;">
-    <img align="center" src="/source/docs/assets/images/workflow.png" style="max-width:650px;" alt="Pantheon Workflow">
-    </p>
+This environment is for reviewing the changes made in your Dev environment with the most recent content from your live site.
 
-    **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live**
-    
-    This environment is for your live site, where content creators actively post and upload media files.
+To use the Test environment for this purpose, you first push new code “up” from your Dev environment and clone recent content “down” from your Live environment.
 
-    After passing review, you push your new code “up” from the Test environment to this Live environment.
+<p style="text-align:center;">
+<img align="center" src="/source/docs/assets/images/workflow.png" style="max-width:650px;" alt="Pantheon Workflow">
+</p>
+
+##<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live
+
+This environment is for your live site, where content creators actively post and upload media files.
+
+After passing review, you push your new code “up” from the Test environment to this Live environment.
 
 **Watch the video:**
 <div class="panel panel-drop panel-guide">
 <script src="//fast.wistia.com/embed/medias/pb8s59wuij.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_pb8s59wuij videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
 </div>
 
-  
+
 <div class="panel panel-drop panel-guide" id="accordion">
   <div class="panel-heading panel-drop-heading">
     <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#site-dashboard-tour"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Site Dashboard Glossary (Optional)</h3></a>
@@ -112,7 +112,7 @@ In this lesson, we learn about the Dev, Test, Live workflow and explore a Panthe
         - **Backup Log:** View existing backups of the environment. Click the <span class="glyphicons glyphicons-download-alt" aria-hidden="true"></span> download icon to download individual archives within a backup.
 
         - **Backup Schedule:** Schedule daily or weekly automatic backups of the environment. (This feature is only available on paid plans.)
-        
+
         - **New Relic:** Use this server-side performance monitoring tool to identify bottlenecks and optimize your site.
 </div>
 </div>
