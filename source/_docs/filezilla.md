@@ -35,7 +35,7 @@ Under the **Advanced** Tab, leave the Remote Directory blank.
 
 ### Authentication
 
-Select from one of the following **Login Type:** options in the General tab:
+Select from one of the following **Logon Type:** options in the General tab:
 
  - For **SSH Key-Based** authentication set the **Logon Type:** dropdown to "Key file". In the **Key file:** box enter the path to or browse and select your private SSH key (usually named `id_rsa`) associated with the public key loaded into your User Dashboard.
 
