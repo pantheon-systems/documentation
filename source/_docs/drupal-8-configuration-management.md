@@ -54,6 +54,9 @@ Using Terminus, you can complete the above process from the command line.
 ## Configuration Tools for Drupal 8
 With [Drupal 8](https://pantheon.io/drupal-8), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.
 
+## Config Direct Save Module
+If you prefer to use a GUI to manage configuration management, try the Config Direct Save Module, available on [Drupal.org](https://www.drupal.org/project/config_direct_save). Activating this module creates a new **Update** menu option under your configuration menu. This module can make backups of configurations (when you check the backup check box) and override the sync (all files with old configuration) by the new configurations (replace all configurations files).
+
 ## Drush Config Workflow
 Even with tools, a project needs to make a plan to manage the configuration workflow. To help projects get started, Pantheon has set up a public repository called [Drush Config Workflow](https://github.com/pantheon-systems/drush-config-workflow). This repository contains documentation on a couple of different configuration workflows that can be used during different phases of a project.
 
