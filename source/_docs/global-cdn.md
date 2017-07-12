@@ -39,11 +39,6 @@ Upgrading to the Global CDN is available for most Professional and Business leve
   </thead>
   <tbody>
     <tr>
-      <th>Plans</th>
-      <td>Pro and Above</td>
-      <td>Pro and Above</td>
-    </tr>
-    <tr>
       <th>Price</th>
       <td>$30/mo surcharge</td>
       <td>Included</td>
