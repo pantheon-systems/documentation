@@ -10,14 +10,12 @@ permalink: docs/sitemap.xml
     <priority>0.8</priority>
   </url>
   {% for doc in data.docs %}
-    {% if doc.meta.noindex is not defined %}
-      <url>
-        <loc>{{ site.site_url }}{{ doc.url }}</loc>
-        <lastmod>{{ doc.date|date('Y-m-d') }}</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-      </url>
-    {% endif %}
+  <url>
+    <loc>{{ site.site_url }}{{ doc.url }}</loc>
+    <lastmod>{{ doc.date|date('Y-m-d') }}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
   {% endfor %}
   {% for guide in data.guides %}
   <url>

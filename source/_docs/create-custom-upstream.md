@@ -1,5 +1,5 @@
 ---
-title: Early Access: Create a Custom Upstream
+title: Create a Custom Upstream
 description: Connect a remote repository with Pantheon to use as a starting point for new sites.
 tags: [tools, workflow]
 earlyaccess: true
@@ -8,9 +8,7 @@ earlynote: The documentation on this page discusses features and options that ar
 Pantheon is rolling out a new self-serve feature to support creating Custom Upstreams in the Organization Dashboard. Once created, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
 
 ## Eligibility
-Access to this feature is currently invite only for Agency and Enterprise Organizations. Repositories must be hosted on [GitHub](https://github.com/) or [BitBucket](https://bitbucket.org/). If you would like early access to this feature, or if you need to use an alternate repository hosting provider, please let us know.
-
-**TODO ADD LINK TO REQUEST INVITE**
+Access to this feature is currently invite only for organizations. Repositories must be hosted on [GitHub](https://github.com/) or [BitBucket](https://bitbucket.org/). [Contact us](https://pantheon.io/agencies/learn-pantheon?docs) for early access to this feature. If you need to use an alternate repository hosting provider, let us know in the form.
 
 ## Create and Host the Repository Remotely
 This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
@@ -82,21 +80,25 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <ul class="nav nav-tabs" role="tablist">
       <li id="wptab1" role="presentation" class="active"><a href="#wp1" aria-controls="wp1" role="tab" data-toggle="tab">WordPress</a></li>
       <li id="d8tab1" role="presentation"><a href="#d81" aria-controls="d81" role="tab" data-toggle="tab">Drupal 8</a></li>
-      <li id="d7tab1" role="presentation"><a href="#d71" aria-controls="d71" role="tab" data-toggle="tab">Drupal 7</a></li>
+      <li id="d7tab1" role="presentation"><a href="#d71" aria-controls="d71" role="tab" data-toggle="tab"> Drupal 7</a></li>
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp1">
-    <pre id="git-pull-wp"><code class="command hljs" data-lang="hljs">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
+    <div class="tab-content no-border">
+    <div role="tabpanel" class="tab-pane active" id="wp1"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#wp1copy">Copy</button>
+    <figure><pre id="wp1copy"><code class="command bash" data-lang="bash">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre></figure>
     </div>
-    <div role="tabpanel" class="tab-pane" id="d81">
-    <pre id="git-pull-drops-8"><code class="command hljs" data-lang="hljs">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
     </div>
-    <div role="tabpanel" class="tab-pane" id="d71">
-    <pre id="git-pull-drops-7"><code class="command hljs" data-lang="hljs">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
+    <div role="tabpanel" class="tab-pane" id="d81"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#d81copy">Copy</button>
+    <figure><pre id="d81copy"><code class="command bash" data-lang="bash">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre></figure></div>
     </div>
-    </div><br>
+    <div role="tabpanel" class="tab-pane" id="d71"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#d71copy">Copy</button>
+    <figure><pre id="d71copy"><code class="command bash" data-lang="bash">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre></figure></div>
+    </div>
+    </div>
 
 2. Now that the Custom Upstream repository is tracking the corresponding Pantheon core upstream, we can pull in core:
     <!-- Nav tabs -->
@@ -107,24 +109,27 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp">
-    <pre id="git-pull-wp"><code class="command hljs" data-lang="hljs">git checkout master
+    <div class="tab-content no-border">
+    <div role="tabpanel" class="tab-pane active" id="wp"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#wp2copy">Copy</button>
+    <figure><pre id="wp2copy"><code class="command bash" data-lang="bash">git checkout master
     git fetch pantheon-wordpress
     git merge pantheon-wordpress/master
-    git push origin master</code></pre>
+    git push origin master</code></pre></figure></div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="d8">
-    <pre id="git-pull-drops-8"><code class="command hljs" data-lang="hljs">git checkout master
+    <div role="tabpanel" class="tab-pane" id="d8"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#d82copy">Copy</button>
+    <figure><pre id="d82copy"><code class="command bash" data-lang="bash">git checkout master
     git fetch pantheon-drops-8
     git merge pantheon-drops-8/master
-    git push origin master</code></pre>
+    git push origin master</code></pre></figure></div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="d7">
-    <pre id="git-pull-drops-7"><code class="command hljs" data-lang="hljs">git checkout master
+    <div role="tabpanel" class="tab-pane" id="d7"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#d72copy">Copy</button>
+    <figure><pre id="d72copy"><code class="command bash" data-lang="bash">git checkout master
     git fetch pantheon-drops-7
     git merge pantheon-drops-7/master
-    git push origin master</code></pre>
+    git push origin master</code></pre></figure></div>
     </div>
     </div>
 
@@ -134,7 +139,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 3. Enter the following information about the Custom Upstream:
 
     * **Name**
-    * **Upstream Repository URL**: The HTTPS URL, which must end in `.git`:
+    * **Upstream Repository URL**:
 
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
@@ -200,11 +205,11 @@ If you would like to change the name or description of your Custom Upstream:
 3. Make desired updates.
 4. Click **Update**.
 ### Switch the Repository URL
-At this time, we do not support changing the repository URL (source) on existing Custom Upstreams. If there is a new URL you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
+You cannot modify the repository URL on existing Custom Upstreams. If there is a new URL you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
 
-```
-terminus site:upstream:set my-site "My New Custom Upstream"
-```
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus1copy">Copy</button>
+<figure><pre id="terminus1copy"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My New Custom Upstream"</code></pre></figure></div>
 
 After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/docs/terminus/examples/#switch-upstreams).
 
