@@ -18,11 +18,6 @@ Pantheon's new [Global CDN](/docs/global-cdn) (content delivery network) provide
   </thead>
   <tbody>
     <tr>
-      <th>Plans</th>
-      <td>Pro and Above</td>
-      <td>Pro and Above</td>
-    </tr>
-    <tr>
       <th>Price</th>
       <td>$30/mo per environment</td>
       <td>Free for Live Environments</td>
