@@ -34,3 +34,11 @@ We monitor the U.S. Government National Vulnerability Database for announcements
 
 #### How are you ensuring that SSL and TLS 1.0 are not introduced into your environment?  
 We have a number of controls in place to ensure insecure protocols are not introduced into our environment.  They include developer training on the end of support for insecure protocols, a software development review/approval process before deploying to production, and periodic vulnerability scans.
+
+#### Is there a certificate authority bundle available on the pantheon containers?
+Yes!  Pantheon maintains `/etc/ssl/certs/ca-bundle.crt`.  This is useful if you are using a module which needs to verify the certificate of another server. (The [CAS](https://www.drupal.org/project/cas) module is an example.) You can verify the existance of this file via SFTP:
+
+```
+sftp> ls -l /etc/ssl/certs/ca-bundle.crt
+-r--r--r--    0 0        0          257263 Mar 22 11:51 /etc/ssl/certs/ca-bundle.crt
+```
