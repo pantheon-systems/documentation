@@ -55,9 +55,9 @@ See [the email documentation](/docs/email) for more details and suggestions.
 
 ## Write Access on Environments
 
-For DEV environments in SFTP mode, the entire codebase is writable.  However the platform is designed to keep the codebase under version control.  This means that the only writable path is to the filesystem which is `sites/default/files` for Drupal sites and `wp-content/uploads` for Wordpress sites.  
+For Dev environments in SFTP mode, the entire codebase is writable. However the platform is designed to keep only the codebase under version control.  This means that the only writable to the file system is `sites/default/files` for Drupal sites and `wp-content/uploads` for WordPress sites.
 
-This means that any modules for Drupal or plugins for Wordpress that neeed to write to the codebase and [assume write access](https://pantheon.io/docs/assuming-write-access/), need a symlink added so that they will instead write the necessary data to the filesystem.
+Any modules for Drupal or plugins for WordPress that need to write to the codebase (and assume write access) need a symlink added so that they will instead write to the file system. For more information, read [Using Extensions That Assume Write Access](/docs/assuming-write-access/).
 
 ## Streaming Media
 
