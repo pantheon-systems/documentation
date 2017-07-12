@@ -88,7 +88,7 @@ Existing sites already Live on Pantheon can access Free & Automated HTTPS by con
 The action required message may be due to one of the following:
 
   - **DNS changes need some time to take effect:** Check the current state of DNS propagation from different parts of the world using this [free web tool](https://www.whatsmydns.net/).
-  -  **AAAA records not detected:** There are two AAAA records for improved uptime and reliability. Ensure you've added both AAAA records for the bare domain (e.g., example.com) to route IPv6 traffic to your site.
+  -  **AAAA records not detected:** There are two AAAA records for improved uptime and reliability. Because Let's Encrypt defaults to IPv6 first, incorrect or incomplete AAAA records will prevent the upgrade from completing. Ensure you've added both AAAA records for the bare domain (e.g., example.com) to route IPv6 traffic to your site.
   - **Old DNS records detected:** If in addition to the correct DNS records, you also have old records, make sure to delete the old records.
 
 ### Can I bring my own certificate?
