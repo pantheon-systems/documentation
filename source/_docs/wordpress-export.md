@@ -5,7 +5,18 @@ tags: [export]
 categories: [wordpress]
 ---
 
-The process of [manually migrating](/docs/migrate-manual/) a WordPress site to Pantheon requires a copy of your site code, files, and database. Depending on the limitations of your previous host, you may find it helpful to create archives files to copy locally before importing to Pantheon. This page covers how to create those archives.
+For most WordPress sites moving to Pantheon, we suggest you follow the recommended process at [Migrate to Pantheon: WordPress](/docs/migrate-wordpress), which uses the Pantheon Migration plugin.
+
+The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/migrate-manual/) the site:
+
+- You want to preserve the site's existing Git history
+- [WordPress Site Networks](/docs/wordpress-site-networks)
+- You can't install our migration plugin on your existing site (e.g. WordPress.com)
+- [Your site doesn't have a public URL (e.g. a local installation)](/docs/migrate-wordpress/#frequently-asked-questions)
+
+The process of manually migrating a WordPress site to Pantheon requires a copy of your site code, files, and database.
+
+Depending on the limitations of your previous host, you may find it helpful to create archives files to copy locally before importing to Pantheon. This page covers how to create those archives.
 
 ## Archive Types
 
