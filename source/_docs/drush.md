@@ -425,7 +425,6 @@ See the [Drush Migrate documentation](https://drupal.org/node/1561820) for detai
    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
      ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live')) {
        $uri = 'https://www.example.com';
-     }
    }
    $options['uri'] = $uri;
  ```
