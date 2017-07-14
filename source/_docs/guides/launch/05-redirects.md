@@ -39,7 +39,7 @@ In this lesson, we'll redirect incoming requests to a primary domain name (e.g.,
         $canonical_domain = $_SERVER['HTTP_HOST'];
       }
       
-      $base_url = 'https://'. $canonical_domain;
+      $base_url = 'https://'. $canonical_domain;  // For the redirect and Drupal 7
       if ($_SERVER['HTTP_HOST'] != $canonical_domain
           || !isset($_SERVER['HTTP_X_SSL'])
           || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
@@ -47,8 +47,9 @@ In this lesson, we'll redirect incoming requests to a primary domain name (e.g.,
         header('Location: '. $base_url . $_SERVER['REQUEST_URI']);
         exit();
       }
+      define('WP_SITEURL', $base_url);  // For WordPress
       if (is_array($settings)) {
-        $settings['trusted_host_patterns'] = array('^'. preg_quote($canonical_domain) .'$');
+        $settings['trusted_host_patterns'] = array('^'. preg_quote($canonical_domain) .'$');  // For Drupal 8
       }
     }
     </code></pre>
