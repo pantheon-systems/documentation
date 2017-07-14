@@ -47,7 +47,9 @@ In this lesson, we'll redirect incoming requests to a primary domain name (e.g.,
         header('Location: '. $base_url . $_SERVER['REQUEST_URI']);
         exit();
       }
-      $settings['trusted_host_patterns'] = array('^'. preg_quote($canonical_domain) .'$');
+      if (is_array($settings)) {
+        $settings['trusted_host_patterns'] = array('^'. preg_quote($canonical_domain) .'$');
+      }
     }
     </code></pre>
 
