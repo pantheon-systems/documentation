@@ -15,7 +15,7 @@ You can use a variety of mechanisms to determine which responses from your Drupa
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d8">
+  <div role="tabpanel" class="tab-pane active" id="d8" markdown="1">
   <br>
   <p><a href="https://www.drupal.org/developing/api/8/render/arrays/cacheability">Drupal 8's system of cacheability metadata</a> is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with: </p>
   <pre><code class="php hljs">
