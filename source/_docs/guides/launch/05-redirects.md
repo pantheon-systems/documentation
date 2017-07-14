@@ -26,52 +26,30 @@ In this lesson, we'll redirect incoming requests to a primary domain name (e.g.,
   If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
 
 4. Now open the `code` folder in your SFTP client, and download your site's `settings.php` (Drupal) or `wp-config.php` (WordPress) file.
-5. Edit your configuration file by adding the following snippet for the desired redirect (replace `example.com`):
+5. Edit your configuration file by adding the following snippet for the desired redirect (replace `www.example.com`):
 
-    <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#www" aria-controls="www" role="tab" data-toggle="tab">Redirect to HTTPS with www</a></li>
-      <li role="presentation"><a href="#non-www" aria-controls="non-www" role="tab" data-toggle="tab">Redirect to HTTPS without WWW</a></li>
-    </ul>
-
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="www">
-      <br>
-      <pre><code class="php hljs">
-    // Require https with www
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
-      // Check if Drupal or WordPress is running via command line
-      (php_sapi_name() != "cli")) {
-      if ($_SERVER['HTTP_HOST'] != 'www.example.com' ||
-          !isset($_SERVER['HTTP_X_SSL']) ||
-          $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+    <pre><code class="php hljs">
+    // Redirect to https://$canonical_domain/
+    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+      if ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+        // Edit www.example.com to be the desired, canonical domain.
+        // Remove www to always redirect to non-www.
+        $canonical_domain = 'www.example.com';
+      } else {
+        $canonical_domain = $_SERVER['HTTP_HOST'];
+      }
+      
+      $base_url = 'https://'. $canonical_domain;
+      if ($_SERVER['HTTP_HOST'] != $canonical_domain
+          || !isset($_SERVER['HTTP_X_SSL'])
+          || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
         header('HTTP/1.0 301 Moved Permanently');
-        header('Location: https://www.example.com'. $_SERVER['REQUEST_URI']);
+        header('Location: '. $base_url . $_SERVER['REQUEST_URI']);
         exit();
       }
+      $settings['trusted_host_patterns'] = array('^'. preg_quote($canonical_domain) .'$');
     }
-      </code></pre>
-      </div>
-      <div role="tabpanel" class="tab-pane" id="non-www">
-      <br>
-      <pre><code class="php hljs">
-    // Require https without www
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
-      // Check if Drupal or WordPress is running via command line
-      (php_sapi_name() != "cli")) {
-      if ($_SERVER['HTTP_HOST'] == 'www.example.com' ||
-          !isset($_SERVER['HTTP_X_SSL']) ||
-          $_SERVER['HTTP_X_SSL'] != 'ON' ) {
-        header('HTTP/1.0 301 Moved Permanently');
-        header('Location: https://example.com'. $_SERVER['REQUEST_URI']);
-        exit();
-      }
-    }
-      </code></pre>
-      </div>
-    </div>
+    </code></pre>
 
 6. Upload the configuration file to Pantheon using your SFTP client.
 
