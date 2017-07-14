@@ -14,7 +14,7 @@ previousurl: guides/launch/redirects/
 previouspage: Redirect to a Primary Domain
 nexturl: guides/launch/next-steps/
 nextpage: Next Steps
-editpath: launch/05-launch-check.md
+editpath: launch/06-launch-check.md
 image: getting-started-Largethumb
 ---
 ## Enable and Schedule Weekly Backups

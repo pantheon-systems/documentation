@@ -13,7 +13,7 @@ use:
 permalink: docs/guides/launch/next-steps/
 previousurl: guides/launch/launch-check/
 previouspage: Final Launch Check
-editpath: launch/06-next-steps.md
+editpath: launch/07-next-steps.md
 image: getting-started-Largethumb
 ---
 Congrats!! You just launched a site on Pantheon. This is a big deal. Revel in your glory.
