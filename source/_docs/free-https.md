@@ -56,8 +56,8 @@ Pantheon's new [Global CDN](/docs/global-cdn) (content delivery network) provide
     </tr>
     <tr>
       <th>Ciphers</th>
-      <td>Weak 3DES cipher</td>
-      <td>No 3DES cipher</td>
+      <td>Allows weak 3DES cipher</td>
+      <td>Strong ciphers only</td>
     </tr>
     <tr>
       <th>Delivery</th>
@@ -101,10 +101,10 @@ No, existing sites that require HTTPS can prove ownership of the domain to pre-p
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
-### What about CloudFlare or other CDNs?
-Many customers currently take advantage of CloudFlare's awesome Universal SSL offering to get free HTTPS service for their website. If you are _just_ using CloudFlare for the HTTPS service, you can switch to the Global CDN and get an upgrade in performance and SSLLabs score.
+### What about Cloudflare or other CDNs?
+Many customers currently take advantage of Cloudflare's awesome Universal SSL offering to get free HTTPS service for their website. If you are _just_ using Cloudflare for the HTTPS service, you can switch to the Global CDN and get an upgrade in performance and SSLLabs score.
 
-However, customers using CloudFlare's WAF tools or other features may want to keep CloudFlare in their stack. There are no known issues with layering CloudFlare and the Global CDN together, but we strongly recommend you enforce HTTPS in Cloudflare and within WordPress or Drupal to avoid mixed content.
+However, customers using Cloudflare's WAF tools or other features may want to keep Cloudflare in their stack. There are no known issues with layering Cloudflare and the Global CDN together, but we strongly recommend you enforce HTTPS in Cloudflare and within WordPress or Drupal to avoid mixed content.
 
 ### What level of encryption is provided?
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
