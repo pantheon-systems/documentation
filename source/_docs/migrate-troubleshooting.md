@@ -142,7 +142,7 @@ If you'd like your existing Drupal site to get one-click updates from your [Cust
 
 ### What if I can't use drush on my existing Drupal site?
 
-As an alternative to `drush` you can follow this doc to [manually migrate](/docs/drupal-export).your Drupal site.
+As an alternative to `drush` you can manually export and migrate. For details, see [Export an Existing Drupal Site](/docs/drupal-export).
 
 ### Are database table prefixes supported?
 
