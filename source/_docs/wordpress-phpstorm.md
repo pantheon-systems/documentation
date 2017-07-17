@@ -6,15 +6,13 @@ categories: [wordpress]
 ---
 ## Overview
 
-[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that can be configured to work with WordPress sites, allowing users to easily build and maintain custom plugins.
-
-This doc will set you up with a local environment in PhpStorm to create your custom plugins and themes. If you're looking to use PhpStorm to manage code for an entire site, [click here](/docs/wordpress-phpstorm/).
+[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that can be configured to work with WordPress sites, allowing users to easily build and maintain custom plugins. This doc will set you up with a local environment in PhpStorm to create your custom plugins and themes.
 
 For detailed information, see [WordPress Development using PhpStorm](https://confluence.jetbrains.com/display/PhpStorm/WordPress+Development+using+PhpStorm). This document focuses on integrating and showcasing the PhpStorm workflow and is current as of PhpStorm version 2017.1.4.
 
 ## Create a WordPress site
 
-If you do not already have one, [create a new WordPress site](/docs/launch-wordpress/) on Pantheon.
+If you do not already have one, [create a new WordPress site](/docs/launch-wordpress/) on Pantheon. This will be your empty site, in which to develop your new plugin or theme.
 
 ## Clone the Code Repository
 
@@ -71,8 +69,8 @@ Use your site's [SFTP connection information](/docs/sftp#sftp-connection-informa
 1. Root Path: Click the **Autodetect** button and the Root Path should be automatically populated:
 
     ![Add web server PhpStorm](/source/docs/assets/images/phpstorm-deployment-connection-tab.png)
-    <div class="alert alert-info" role="alert">
-    <h4 class="info">Note</h4>
+    <div class="alert alert-danger" role="alert">
+    <h4 class="warning">Warning</h4>
     <p markdown="1">PhpStorm does not allow the Root Path to be left blank. Because the Pantheon platform sometimes migrates sites across app servers without warning, you will need to update the root path any time the binding path changes for your Dev environment.</p>
     </div>
 
@@ -93,5 +91,4 @@ Provide the file paths within the Mappings tab to allow correspondence between p
 
 Go to **Tools Menu** > **Deployment** > **Automatic Upload**.
 
-You are now ready to begin editing your code. Any files you change and save locally will be automatically uploaded to your Pantheon development environment.Once your code is complete, you can deploy your work into Test and then ultimately to Live from your Pantheon Dashboard.
-
+You are now ready to begin editing your code. Any files you change and save locally will be automatically uploaded to your Pantheon development environment.
