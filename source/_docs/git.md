@@ -141,6 +141,23 @@ Now, requests to any `*.drush.in` server address should automatically accept the
 </div>
 </div>
 
+### Checking out code using GUI Clients
+
+SourceTree and other Git GUI clients generally prompt for a Source URL that is over HTTP or HTTPS to the repository to check out the site code. Pantheon does not provide Git repository access over HTTP(s) and instead provide  a 'Git over SSH' URL, for example:
+```nohighlight
+git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
+```
+
+Many Git GUI clients, such as SourceTree, do actually support the use of `ssh://` URLs to clone the code base. 
+
+To configure this URL in SourceTree simply remove the `git clone` and the trailing space and 'my-site' name off the end of the command provided in the **Connection Info** section of your Pantheon Dashboard.
+
+* Source URL: `ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git
+* Destination Path: *Directory where you want to check out the repository*
+* Name: *my-site*
+
+Alternatively, you can simply clone the repository using the `git clone` and then use the "Add Existing Local Repository" to point to the checked out directory.
+
 ## Additional Resources
 
 For further learning, we recommend the following resources:
