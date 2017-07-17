@@ -101,7 +101,7 @@ After passing review, you push your new code “up” from the Test environment 
 
     - **Wipe:** Reset the database and files, and start fresh with your codebase.
 
-    - **<span class="glyphicons glyphicons-warning-sign" aria-hidden="true"></span> Errors:** Check this page to see if there are any critical PHP errors on your site. You can find more error logs by connecting via SFTP.
+- **<span class="glyphicons glyphicons-warning-sign" aria-hidden="true"></span> Errors:** Check this page to see if there are any critical PHP errors on your site. You can find more error logs by connecting via SFTP.
 
 - **<span class="glyphicons glyphicons-home" aria-hidden="true"></span> Domains:** Add custom domains to your site. (This feature is only available on paid plans.)
 
