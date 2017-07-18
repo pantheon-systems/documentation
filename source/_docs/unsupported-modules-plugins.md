@@ -300,6 +300,11 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution**: Reload the page and you'll see that the plugin was activated successfully.
 <hr>
 
+### [Maintenance Mode] (https://wordpress.org/plugins/lj-maintenance-mode/)
+**Issue**: Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
+
+**Solution**: If you are locked out of your site, wp-login.php will still function and you can login to disable the maintenance mode.
+
 ### [Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/)
 **Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 <hr>
