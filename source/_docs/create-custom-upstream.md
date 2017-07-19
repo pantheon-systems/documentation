@@ -8,7 +8,10 @@ earlynote: The documentation on this page discusses features and options that ar
 Pantheon is rolling out a new self-serve feature to support creating Custom Upstreams in the Organization Dashboard. Once created, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
 
 ## Eligibility
-Access to this feature is currently invite only for organizations. Repositories must be hosted on [GitHub](https://github.com/) or [BitBucket](https://bitbucket.org/). [Contact us](https://pantheon.io/agencies/learn-pantheon?docs) for early access to this feature. If you need to use an alternate repository hosting provider, let us know in the form.
+Access to this feature is currently invite only for organizations. Repositories must be hosted on [GitHub](https://github.com/) or [BitBucket](https://bitbucket.org/). Contact us for early access to this feature. If you need to use an alternate repository hosting provider, let us know in the form.
+
+<a href="https://pantheon.io/agencies/learn-pantheon?docs" class="cta">Contact Us</a>
+
 
 ## Create and Host the Repository Remotely
 This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
