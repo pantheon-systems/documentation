@@ -2,18 +2,78 @@
 title: Create a Custom Upstream
 description: Connect a remote repository with Pantheon to use as a starting point for new sites.
 tags: [tools, workflow]
-categories: []
+earlyaccess: true
+earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
+Pantheon is rolling out a new self-serve feature to support creating Custom Upstreams in the Organization Dashboard. Once created, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
 
-The following steps will help you get a Custom Upstream ready for prime time within your organization. Once completed, members of the organization will be able to create new sites from the common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream).
+## Eligibility
+Access to this feature is currently invite only for organizations. Repositories must be hosted on [GitHub](https://github.com/) or [BitBucket](https://bitbucket.org/). Contact us for early access to this feature. If you need to use an alternate repository hosting provider, let us know in the form.
+
+<a href="https://pantheon.io/agencies/learn-pantheon?docs" class="cta">Contact Us</a>
+
 
 ## Create and Host the Repository Remotely
-Custom Upstream repositories must be hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/).
+This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.
 
-This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Updates are tracked here and distributed downstream to sites within your organization.
+Choose your preferred Git host:
 
-You can start by creating an empty repository on your preferred git hosting provider, or you can use an existing repository. Once you have the repository hosted remotely, clone it to your local computer. For help getting started, check out [GitHub's Hello World guide](https://guides.github.com/activities/hello-world/).
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#gh" aria-controls="gh" role="tab" data-toggle="tab">GitHub</a></li>
+  <li role="presentation"><a href="#bb" aria-controls="bb" role="tab" data-toggle="tab">Bitbucket</a></li>
+</ul>
 
+<!-- Tab panes -->
+<div class="tab-content">
+  <div markdown="1" role="tabpanel" class="tab-pane active" id="gh">
+  1. <a href="https://github.com/join" target=blank>Sign up for a GitHub account</a> if you do not have one already.
+  2. [Log in to GitHub](https://github.com/login/).
+  3. If this is your first time logging into GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New Repository**](https://github.com/new) from the Repository sidebar on the right.
+  4. Name the repository.
+  5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+  6. Click **Create Repository**.
+  7. Copy the repository URL (HTTPS), found in the Quick setup section:
+
+    ![GitHub Repo URL](/source/docs/assets/images/github-repo-url.png)
+
+  8. Clone the repository to your local from the command line (replace the URL):
+
+    ```
+    git clone https://github.com/pantheondocs/agency-custom-upstream.git
+    ```
+
+  9. Navigate to the repository's root directory:
+
+    ```
+    cd agency-custom-upstream
+    ```
+
+  </div>
+  <div markdown="1" role="tabpanel" class="tab-pane" id="bb">
+  1. [Sign up for a Bitbucket account](https://bitbucket.org/account/signup/) if you do not have one already.
+  2. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
+  3. Click [**Create a Repository**](https://bitbucket.org/repo/create).
+  4. Name the repository.
+  5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+  6. Click **Create Repository**.
+  7. Copy the repository URL (HTTPS), found on the top right of the page:
+
+    ![Bitbucket Repo URL](/source/docs/assets/images/bitbucket-repo-url.png)
+
+  8. Clone the repository to your local from the command line (replace the URL):
+
+    ```
+    git clone https://pantheondocs@bitbucket.org/pantheondocs/agency-custom-upstream.git
+    ```
+
+  9. Navigate to the repository's root directory:
+
+    ```
+    cd agency-custom-upstream
+    ```
+  </div>
+</div>
 
 ## Pull in Core from Pantheon's Upstream
 To avoid incompatibilities, you must track Pantheon's corresponding upstream repository within the Custom Upstream.
@@ -23,21 +83,25 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     <ul class="nav nav-tabs" role="tablist">
       <li id="wptab1" role="presentation" class="active"><a href="#wp1" aria-controls="wp1" role="tab" data-toggle="tab">WordPress</a></li>
       <li id="d8tab1" role="presentation"><a href="#d81" aria-controls="d81" role="tab" data-toggle="tab">Drupal 8</a></li>
-      <li id="d7tab1" role="presentation"><a href="#d71" aria-controls="d71" role="tab" data-toggle="tab">Drupal 7</a></li>
+      <li id="d7tab1" role="presentation"><a href="#d71" aria-controls="d71" role="tab" data-toggle="tab"> Drupal 7</a></li>
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp1">
-    <pre id="git-pull-wp"><code class="command hljs" data-lang="hljs">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
+    <div class="tab-content no-border">
+    <div role="tabpanel" class="tab-pane active" id="wp1"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#wp1copy">Copy</button>
+    <figure><pre id="wp1copy"><code class="command bash" data-lang="bash">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre></figure>
     </div>
-    <div role="tabpanel" class="tab-pane" id="d81">
-    <pre id="git-pull-drops-8"><code class="command hljs" data-lang="hljs">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
     </div>
-    <div role="tabpanel" class="tab-pane" id="d71">
-    <pre id="git-pull-drops-7"><code class="command hljs" data-lang="hljs">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
+    <div role="tabpanel" class="tab-pane" id="d81"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#d81copy">Copy</button>
+    <figure><pre id="d81copy"><code class="command bash" data-lang="bash">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre></figure></div>
     </div>
-    </div><br>
+    <div role="tabpanel" class="tab-pane" id="d71"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#d71copy">Copy</button>
+    <figure><pre id="d71copy"><code class="command bash" data-lang="bash">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre></figure></div>
+    </div>
+    </div>
 
 2. Now that the Custom Upstream repository is tracking the corresponding Pantheon core upstream, we can pull in core:
     <!-- Nav tabs -->
@@ -48,49 +112,115 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp">
-    <pre id="git-pull-wp"><code class="command hljs" data-lang="hljs">git checkout master
+    <div class="tab-content no-border">
+    <div role="tabpanel" class="tab-pane active" id="wp"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#wp2copy">Copy</button>
+    <figure><pre id="wp2copy"><code class="command bash" data-lang="bash">git checkout master
     git fetch pantheon-wordpress
     git merge pantheon-wordpress/master
-    git push origin master</code></pre>
+    git push origin master</code></pre></figure></div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="d8">
-    <pre id="git-pull-drops-8"><code class="command hljs" data-lang="hljs">git checkout master
+    <div role="tabpanel" class="tab-pane" id="d8"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#d82copy">Copy</button>
+    <figure><pre id="d82copy"><code class="command bash" data-lang="bash">git checkout master
     git fetch pantheon-drops-8
     git merge pantheon-drops-8/master
-    git push origin master</code></pre>
+    git push origin master</code></pre></figure></div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="d7">
-    <pre id="git-pull-drops-7"><code class="command hljs" data-lang="hljs">git checkout master
+    <div role="tabpanel" class="tab-pane" id="d7"><div class="copy-snippet">
+    <button class="btn btn-default btn-clippy" data-clipboard-target="#d72copy">Copy</button>
+    <figure><pre id="d72copy"><code class="command bash" data-lang="bash">git checkout master
     git fetch pantheon-drops-7
     git merge pantheon-drops-7/master
-    git push origin master</code></pre>
+    git push origin master</code></pre></figure></div>
     </div>
     </div>
 
-## Grant Pantheon Access (Privately Hosted Repositories Only)
-For privately hosted repositories, create a dedicated user with read-only access to the repository. The password should only contain alphanumeric characters, depending on your host's password limitations.
+## Connect Repository to Pantheon
+1. Access the **<span class="upstreams-regular"></span> Upstreams** page in your Pantheon Organization Dashboard.
+2. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button.
+3. Enter the following information about the Custom Upstream:
 
-For private GitLab repositories, please ensure the user has the ["reporter" permissions level](https://docs.gitlab.com/ce/user/permissions.html#permissions).
+    * **Name**
+    * **Upstream Repository URL**:
 
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#gh-https" aria-controls="gh-auth" role="tab" data-toggle="tab">GitHub</a></li>
+          <li role="presentation"><a href="#bb-https" aria-controls="bb-auth" role="tab" data-toggle="tab">Bitbucket</a></li>
+        </ul>
 
-If your repository is publicly accessible, you can skip this step.
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="gh-https" markdown="1">
+            ![GitHub HTTPS Repo URL](/source/docs/assets/images/github-https-url.png)
+          </div>
+          <div role="tabpanel" class="tab-pane" id="bb-https" markdown="1">
+          ![Bitbucket HTTPS Repo URL](/source/docs/assets/images/bitbucket-https-url.png)
+          </div>
+        </div>
 
-## Submit Upstream Information
-[Contact support](/docs/getting-support) with the subject: "Product submission for [organization]" and include the following information about the Custom Upstream:
+    * **Authenticate (private repositories only)**: For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
-- **Upstream Name**
-- **Description**: (Optional) Less than 200 characters, plain text
-- **URL of Logo**: (Optional) Recommended size is 70x80px
-- **URL of Upstream Repository**: Must end in `.git` (e.g. `https://github.com/pantheon-systems/documentation.git` or `https://bitbucket.org/pantheon-systems/documentation.git`)
-- **Repository Authentication**: Only required if the repository is hosted privately
- - Refer to the user [created above](#grant-pantheon-access-privately-hosted-repositories-only), and provide `username:password` or a [token](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/) if supported by your repository hosting provider.
-- **Repository Branch**: Typically `master`
-- **Visibility**: Public (allow this upstream to be used by any Pantheon user) or Private (only allow members of your organization to use this upstream)
-- **Initial Connection Mode**: Git or SFTP
-- **Framework**: Drupal 6, Drupal 7, Drupal 8, Drupal 8 Backdrop, WordPress, WordPress Multisite
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active"><a href="#gh-auth" aria-controls="gh-auth" role="tab" data-toggle="tab">GitHub</a></li>
+          <li role="presentation"><a href="#bb-auth" aria-controls="bb-auth" role="tab" data-toggle="tab">Bitbucket</a></li>
+        </ul>
 
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="gh-auth" markdown="1">
+          1. Go to GitHub to [generate a personal access token](https://github.com/settings/tokens).
+          2. Click **Generate new token**.
+          3. Confirm your password if prompted.
+          4. Enter a token description, such as "pantheon read my custom upstream"
+          5. Select "repo" as the scope:
+
+            ![GitHub generate token](/source/docs/assets/images/github-token.png)
+
+          6. Click **Generate token** and copy the new token to your clipboard.
+          7. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
+          8. Paste your new GitHub access token.
+          </div>
+          <div role="tabpanel" class="tab-pane" id="bb-auth" markdown="1">
+          1. Go to Bitbucket to generate an [app password](https://bitbucket.org/account/admin/app-passwords).
+          2. Click **Create app password**.
+          3. Enter a label and select the `"Repositories:Read"` permission:
+
+            ![Bitbucket app password](/source/docs/assets/images/bitbucket-app-password.png)
+
+          4. Click **Create** and copy the new password.
+          5. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
+          6. The username field should already be populated, based on the repository URL. Paste your new Bitbucket app password.
+          </div>
+        </div>
+
+    * **Framework**: Drupal 6 / Drupal 7, Drupal 8, WordPress, WordPress Site Network
+    * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+
+4. Click **Create**.
+## Edit Existing Custom Upstream Settings
+If you would like to change the name or description of your Custom Upstream:
+
+1. From your Organization Dashboard, click the **<span class="upstreams-regular"></span> Upstreams** tab.
+2. Click **Settings** next to the existing upstream requiring an update.
+3. Make desired updates.
+4. Click **Update**.
+### Switch the Repository URL
+You cannot modify the repository URL on existing Custom Upstreams. If there is a new URL you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
+
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus1copy">Copy</button>
+<figure><pre id="terminus1copy"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My New Custom Upstream"</code></pre></figure></div>
+
+After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/docs/terminus/examples/#switch-upstreams).
+
+Once all sites have been updated to track the new Custom Upstream, you can safely delete the old one:
+
+1. From your Organization Dashboard, click the **<span class="upstreams-regular"></span> Upstreams** tab.
+2. Click **Settings** next to the existing upstream requiring an update.
+3. Click **Delete**.
 
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)
