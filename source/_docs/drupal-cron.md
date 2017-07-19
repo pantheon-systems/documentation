@@ -38,6 +38,8 @@ Alternatively, you can run all scheduled cron tasks with the following [Terminus
 terminus drush <site>.<env> -- cron
 ```
 
+Here's some change, wherein I've described a solution to an issue brought up with this doc.
+
 To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
 ![Reports--->Recent Log Messages](/source/docs/assets/images/recent-log-reports.png)
 If cron has run recently, entries will appear in the log. The two entries in the screenshot below show that cron has run and a cron task called "cron\_example".
