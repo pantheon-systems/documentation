@@ -225,7 +225,6 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 1. From your Organization Dashboard, click the **<span class="upstreams-regular"></span> Upstreams** tab.
 2. Click **Settings** next to the existing upstream requiring an update.
 3. Click **Delete**.
-### Merge Conflicts
 
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)
