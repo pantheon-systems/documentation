@@ -137,9 +137,13 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     </div>
 
 ## Connect Repository to Pantheon
-1. Access the **<span class="upstreams-regular"></span> Upstreams** page in your Pantheon Organization Dashboard.
-2. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button.
-3. Enter the following information about the Custom Upstream:
+1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization:
+
+  ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
+
+2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button.
+4. Enter the following information about the Custom Upstream:
 
     * **Name**
     * **Upstream Repository URL**:
@@ -221,6 +225,7 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 1. From your Organization Dashboard, click the **<span class="upstreams-regular"></span> Upstreams** tab.
 2. Click **Settings** next to the existing upstream requiring an update.
 3. Click **Delete**.
+### Merge Conflicts
 
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)
