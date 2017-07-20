@@ -226,6 +226,8 @@ If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>,
   <figure><pre id="upstream-set"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My Custom Upstream"</code></pre></figure>
   </div>
 
+As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.   
+
   <div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">To set an empty upstream for Composer managed sites, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/#one-time-setup).</p></div>
 
 After setting the upstream, you must bring in the new codebase by applying updates to the site. For details on how to apply updates, see the [example usage above](#applying-updates).
