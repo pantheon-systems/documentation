@@ -137,9 +137,13 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     </div>
 
 ## Connect Repository to Pantheon
-1. Access the **<span class="upstreams-regular"></span> Upstreams** page in your Pantheon Organization Dashboard.
-2. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button.
-3. Enter the following information about the Custom Upstream:
+1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization:
+
+  ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
+
+2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button.
+4. Enter the following information about the Custom Upstream:
 
     * **Name**
     * **Upstream Repository URL**:
@@ -196,17 +200,32 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
           </div>
         </div>
 
-    * **Framework**: Drupal 6 / Drupal 7, Drupal 8, WordPress, WordPress Site Network
+    * **Framework**: Drupal 7, Drupal 8, or WordPress
     * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
 4. Click **Create**.
 ## Edit Existing Custom Upstream Settings
 If you would like to change the name or description of your Custom Upstream:
 
-1. From your Organization Dashboard, click the **<span class="upstreams-regular"></span> Upstreams** tab.
-2. Click **Settings** next to the existing upstream requiring an update.
-3. Make desired updates.
-4. Click **Update**.
+1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization.
+2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+3. Click **Settings** next to the existing upstream requiring an update.
+4. Make desired changes, then click **Update**.
+
+### Initial Connection Mode
+The default connection mode for new sites created from a Custom Upstream is Git for WordPress and Drupal 7. Drupal 8 defaults to the SFTP connection mode.
+
+Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
+
+1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization.
+2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+3. Click **Settings** next to the existing upstream requiring an update.
+4. Select the desired connection mode, then click **Update**:
+
+  ![Modify initial connection mode](/source/docs/assets/images/dashboard/initial-connection-mode.png)
+
+New sites created from this Custom Upstream will use this connection mode by default going forward.
+
 ### Switch the Repository URL
 You cannot modify the repository URL on existing Custom Upstreams. If there is a new URL you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
 
@@ -218,9 +237,9 @@ After a site's upstream has been changed, you will need to merge changes as a on
 
 Once all sites have been updated to track the new Custom Upstream, you can safely delete the old one:
 
-1. From your Organization Dashboard, click the **<span class="upstreams-regular"></span> Upstreams** tab.
-2. Click **Settings** next to the existing upstream requiring an update.
-3. Click **Delete**.
+1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization.
+2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+3. Click **Settings** next to the existing upstream, then click **Delete**.
 
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)
