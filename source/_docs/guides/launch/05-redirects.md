@@ -38,7 +38,7 @@ In this lesson, we'll redirect incoming requests to a primary domain name (e.g.,
     <!-- Tab panes -->
     <div class="tab-content">
     <div role="tabpanel" class="tab-pane active" id="wp">
-    <p markdown="1">Comment out existing code that sets `WP_SITEURL`, such as [Line 79 in Pantheon's WordPress upstream](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L79), otherwise you will get a PHP notice. Then add the following to the end of your `wp-config.php` file (replace `www.example.com`):</p>
+    <p markdown="1">Add the following to `wp-config.php` (replace `www.example.com`):</p>
     <pre id="git-pull-wp"><code class="php hljs" data-lang="hljs">if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
       // Redirect to https://$primary_domain/ in the Live environment
       if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live'):
