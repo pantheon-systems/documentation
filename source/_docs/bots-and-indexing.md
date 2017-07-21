@@ -58,6 +58,20 @@ Google's search engine now [crawls the HTTPS equivalents of HTTP pages](https://
  - Enable HTTPS for your domain, either [using your own certificate](/docs/enable-https) or for [free using Cloudflare](/docs/guides/cloudflare-enable-https/).
  - Add the `X-Robots-Tag: noindex` header to responses resulting from HTTPS requests. Note that this will not fix existing indexed results from Google, and is a preventative solution rather than a reactionary, for users who don't want to serve over HTTPS.
 
+ For WordPress, add the following action within your theme's `functions.php` file:
+
+ ```
+ /**
+ * Do not index HTTPS requests
+ */
+ add_action('send_headers', 'noindex_https');
+ function noindex_https() {
+   if (isset($_SERVER['HTTP_X_SSL']) || $_SERVER['HTTPS_X_SSL'] == 'ON'){
+     header('X-Robots-Tag: noindex');
+   }
+ }
+ ```
+
 ### Sitemaps Produce a White Screen of Death (WSOD)
 Some modules or plugins are configured by default to fetch all URLs at once during sitemap generation which can result in a blank white page (WSOD) due to exceeding PHP's memory limit. To resolve this issue, adjust the plugin or module configuration so that URLs are fetched individually instead of all at once.
 
