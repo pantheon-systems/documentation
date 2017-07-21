@@ -19,6 +19,14 @@ image: getting-started-Largethumb
 ---
 In this lesson, we'll redirect incoming requests to a primary domain name (e.g., `www.example.com` or `example.com`). Standardizing on a single URL prevents content duplication across domains for improved SEO.
 
+**Watch the video:**
+
+<div class="panel panel-drop panel-guide">
+<script src="//fast.wistia.com/embed/medias/un4yaehi81.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_un4yaehi81 videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+</div>
+
+**Try it:**
+
 1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 2. Click **<span class="glyphicons glyphicons-info-sign" aria-hidden="true"></span>  SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
