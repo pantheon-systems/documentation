@@ -7,7 +7,7 @@ tags: [providers]
 permalink: docs/:basename/
 editpath: dns-providers/cloudflare.md/
 ---
-You can use Cloudflare for DNS only or stack it as a CDN on top of Pantheon's Global CDN. We recommend using Cloudflare for DNS only. If you have a paid Cloudflare plan, however, or have custom Cloudflare configurations (e.g. many page rules) you'd like to keep, then ensure you follow the guide below to enforce HTTPS to prevent any issues.
+You can use Cloudflare for DNS only or stack it as a CDN on top of Pantheon's Global CDN. We recommend using Cloudflare for DNS only. If you have a paid Cloudflare plan to use features like their WAF or have custom Cloudflare configurations (e.g. many page rules) you'd like to keep, however, then ensure you follow the guide below to enforce HTTPS to prevent any issues.
 
 ## Before You Begin
 Be sure that you have a:
@@ -24,12 +24,14 @@ Identify DNS values to point your domain to Pantheon:
 3. Login to your <a href="https://www.cloudflare.com/a/login" target="blank">Cloudflare account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
 
 ## Configure DNS Records on Cloudflare
-Cloudflare offers the ability to use a CNAME for the "root" domain for your site through something they call CNAME Flattening. We recommend you take advantage of this feature as it frees you up from being tied to a single IP address. Apply one of the following configurations according to your site's CDN requirements at Cloudflare.
+Cloudflare offers "CNAME Flattening" that allows use of a CNAME for all domains, including bare domains.  We recommend using CNAMES for all DNS records, as it frees you up from being tied to a single IP address.
 
-### Disable Cloudflare's CDN and Configure DNS
-Unless you're paying for advanced features or if you have custom configurations (e.g. many page rules) you'd like to keep, turn off Cloudflare's CDN so that only DNS hosting services are used:
+### Option 1: Use Cloudflare for DNS Only (Recommended)
+This configuration routes traffic to Pantheon's Global CDN exclusively. Unless you're paying for advanced Cloudflare features or if you have custom configurations (e.g. many page rules) you'd like to keep, turn off Cloudflare's CDN so that only DNS hosting services are used:
 
-1. Select **DNS** from the menu bar.
+![Example DNS only](/source/docs/assets/images/cloudflare-dns-only.png)
+
+1. Select **DNS** from the Cloudflare menu bar.
 2. Select **CNAME** from the dropdown menu.
 3. Enter `www` in the **Name** field and paste the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
 4. Create a **CNAME** record for the bare domain (e.g. `example.com`) using the value from the previous step (e.g. `live-example.pantheonsite.io`).
@@ -40,35 +42,18 @@ Unless you're paying for advanced features or if you have custom configurations 
 6. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 7. Click **Add Record**.
 
-  ![Example DNS only](/source/docs/assets/images/cloudflare-dns-only.png)
 
-This configuration routes traffic to Pantheon's Global CDN exclusively.
 
-### Stack Cloudflare's CDN with Pantheon and Configure DNS
-If you need access to paid features, you can configure Cloudflare's CDN as an additional layer to Pantheon's Global CDN service:
+### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
+You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
 
-1. Click **DNS** in the menu bar.
-2. Select **CNAME** from the dropdown menu.
-3. Enter `www` in the **Name** field and paste the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
-4. Create a **CNAME** record for the bare domain (e.g. `example.com`) using the value from the previous step (e.g. `live-example.pantheonsite.io`).
-5. Select desired Time to Live (TTL).
-
-  {% include("ttl2.twig") %}
-
-6. Click **Add Record**.
-7. Select **Crypto** from the menu bar and set the SSL mode to **Full**:
+1. Select **Crypto** from the Cloudflare menu bar and set SSL mode to **Full** (or potentially Full, Strict), but not Flexible.
   ![Enable SSL](/source/docs/assets/images/cloudflare-ssl.png)
-8. Scroll down and enable Automatic HTTPS Rewrites in the **Crypto** settings:
+2. Scroll down and enable **Always use HTTPS**
+3. Scroll down and enable **Automatic HTTPS Rewrites**
   ![Cloudflare Always HTTPS](/source/docs/assets/images/cloudflare-always-https.png)
-
-    <div class="alert alert-danger">
-    <h4 class="info">Warning</h4>
-    <p markdown="1">To avoid mixed content warnings in the browser, you must redirect requests to HTTPS within Cloudflare as described here in addition to [redirecting via PHP within WordPress or Drupal as described in the next steps](/docs/guides/launch/redirects/).</p>
-    </div>
-
-## Cloudflare Docs
-
-* <a href="https://support.cloudflare.com/hc/en-us/articles/227227647-How-do-I-use-Automatic-HTTPS-Rewrites-" target="blank">How do I use Automatic HTTPS Rewrites?<span class="glyphicons glyphicons-new-window-alt"></span></a>
+4. [Redirect to HTTPS via PHP within WordPress or Drupal](/docs/guides/launch/redirects/).
+5. Proceed with DNS configuration as describe in Option 1, but make sure the cloud is toggled orange, not gray.
 
 
 ## Next Steps
