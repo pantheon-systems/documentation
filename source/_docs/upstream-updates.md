@@ -49,17 +49,18 @@ For details, see [Terminus Mass Update Plugin](https://github.com/pantheon-syste
 ## Apply Upstream Updates Manually from the Command Line and Resolve Merge Conflicts
 If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. You'll need to manually resolve the conflict using the command line and a text editor.
 
-1. Navigate to a [local clone of your site repository](/docs/git/#clone-your-site-codebase) using the command line, then add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to a [local clone of your site repository](/docs/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
       <li id="wptab-1conflict" role="presentation" class="active"><a href="#wp-1conflict" aria-controls="wp-1conflict" role="tab" data-toggle="tab">WordPress</a></li>
       <li id="d8tab-1conflict" role="presentation"><a href="#d8-1conflict" aria-controls="d81" role="tab" data-toggle="tab">Drupal 8</a></li>
       <li id="d7tab-1conflict" role="presentation"><a href="#d7-1conflict" aria-controls="d7-1conflict" role="tab" data-toggle="tab">Drupal 7</a></li>
+      <li id="d7tab-1conflict" role="presentation"><a href="#custom1-conflict" aria-controls="custom1-conflict" role="tab" data-toggle="tab">Custom Upstream</a></li>
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content">
+    <div class="tab-content no-border">
     <div role="tabpanel" class="tab-pane active" id="wp-1conflict">
     <pre id="git-pull-wp"><code>git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
     </div>
@@ -69,7 +70,11 @@ If the automated core update doesn't appear to be working, it's possible there a
     <div role="tabpanel" class="tab-pane" id="d7-1conflict">
     <pre id="git-pull-drops-7"><code data-lang="">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
     </div>
-    </div><br>
+    <div role="tabpanel" class="tab-pane" id="custom1-conflict">
+    <p markdown="1" class="instruction">Replace the remote name (`custom-upstream-example`) and repository URL (`git://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:</p>
+    <pre id="git-pull-custom"><code data-lang="">git remote add  custom-upstream-example git://github.com/example-org/custom-upsream-example.git</code></pre>
+    </div>
+    </div>
 
 2. Pull down changes from the appropriate upstream:
 
@@ -78,10 +83,11 @@ If the automated core update doesn't appear to be working, it's possible there a
      <li role="presentation" class="active"><a href="#wp-2conflict" aria-controls="wp-2conflict" role="tab" data-toggle="tab">WordPress</a></li>
      <li role="presentation"><a href="#d8-2conflict" aria-controls="d8-2conflict" role="tab" data-toggle="tab">Drupal 8</a></li>
      <li role="presentation"><a href="#d7-2conflict" aria-controls="d7-2conflict" role="tab" data-toggle="tab">Drupal 7</a></li>
+     <li role="presentation"><a href="#custom-2conflict" aria-controls="custom-2conflict" role="tab" data-toggle="tab">Custom Upstream</a></li>
      </ul>
 
      <!-- Tab panes -->
-     <div class="tab-content">
+     <div class="tab-content no-border">
      <div role="tabpanel" class="tab-pane active" id="wp-2conflict">
      <pre><code>git fetch pantheon-wordpress
     git rebase pantheon-wordpress/master</code></pre>
@@ -94,7 +100,12 @@ If the automated core update doesn't appear to be working, it's possible there a
      <pre><code>git fetch pantheon-drops-7
     git rebase pantheon-drops-7/master</code></pre>
      </div>
-     </div><br>
+     <div role="tabpanel" class="tab-pane" id="custom-2conflict">    
+     <p markdown="1" class="instruction">Replace the remote name (`custom-upstream-example`):</p>
+     <pre><code>git fetch custom-upstream-example
+    git rebase custom-upstream-example/master</code></pre>
+     </div>
+     </div>
 
 3. If a conflict is introduced, use the output provided to resolve. For example:
 

@@ -56,8 +56,8 @@ Pantheon's new [Global CDN](/docs/global-cdn) (content delivery network) provide
     </tr>
     <tr>
       <th>Ciphers</th>
-      <td>Weak 3DES cipher</td>
-      <td>No 3DES cipher</td>
+      <td>Allows weak 3DES cipher</td>
+      <td>Strong ciphers only</td>
     </tr>
     <tr>
       <th>Delivery</th>
@@ -101,10 +101,12 @@ No, existing sites that require HTTPS can prove ownership of the domain to pre-p
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
+
 ### What about CloudFlare or other CDNs?
 Many customers currently take advantage of Cloudflare's Universal SSL offering to get free HTTPS service for their website. If you are _just_ using Cloudflare for the HTTPS service, you can switch to the Global CDN and get an upgrade in performance and SSL Labs score.
 
-However, customers using Cloudflare's WAF tools or other features may want to keep Cloudflare in their stack. We still recommend upgrading your Pantheon site to the Global CDN as this will improve cache hitrates and performance. If you do layer Cloudflare and the Global CDN refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
+However, customers using Cloudflare's WAF tools or other features may want to keep Cloudflare in their stack. We still recommend upgrading your Pantheon site to the Global CDN as this will improve cache hit rates and performance. If you do layer Cloudflare and the Global CDN refer to [Cloudflare Domain Configuration](/docs/cloudflare/) for more details.
+
 
 ### What level of encryption is provided?
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).

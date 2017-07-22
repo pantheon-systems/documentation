@@ -142,7 +142,7 @@ If you'd like your existing Drupal site to get one-click updates from your [Cust
 
 ### What if I can't use drush on my existing Drupal site?
 
-As an alternative to `drush` you can use the [Backup and Migrate](/docs/drupal-export#create-archive-using-backup-and-migrate) module. Also see [manually create an archive](/docs/drupal-export#manually-create-archive).
+As an alternative to `drush` you can manually export and migrate. For details, see [Export an Existing Drupal Site](/docs/drupal-export).
 
 ### Are database table prefixes supported?
 

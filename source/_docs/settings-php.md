@@ -168,11 +168,11 @@ You can view examples at the [pantheon-settings-examples repo](https://github.co
 
 #### Are table prefixes supported?
 
-For information about table prefixes on Pantheon, see [Export an Existing Drupal Site](/docs/drupal-export#export-the-database).
+For information about table prefixes on Pantheon, see [Export an Existing Drupal Site](/docs/drupal-export#create-database-archive).
 
 #### Why is the Status tab showing that my configuration file is not protected and that I need to create a settings.php file?
 
-Drupal doesn’t ship with a `settings.php` in place; as the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. Once you have created a `settings.php` file, the `settings.php` area of the report should change to green.
+Drupal doesn't ship with a `settings.php` in place; as the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. Once you have created a `settings.php` file, the `settings.php` area of the report should change to green.
 
 #### Can I edit settings.pantheon.php?
 No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.

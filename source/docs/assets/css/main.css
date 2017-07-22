@@ -5557,9 +5557,22 @@ width: 100% !important;
     right: 0px;
   }
 }
+.upstreams-regular {
+  content: url('/docs/assets/images/upstreams-regular.svg');
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.4; vertical-align: top; margin-right: 2px; margin-left: 3px; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
 .secure {
   color: #0b8043 !important;
 }
 h2>.glyphicons {
   vertical-align: text-bottom;
+}
+.no-border {
+  border: none !important;
+}
+.nav-tabs>li>a {
+  text-decoration: none;
 }

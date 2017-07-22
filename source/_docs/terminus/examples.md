@@ -13,8 +13,11 @@ image: terminus-thumbLarge
 ---
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.
+
 ### Upstream Updates (Core)
 Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
+
+<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">For instructions on how to resolve merge conflicts, see [Upstream Updates](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts)</p></div>
 
 <p class="instruction">List available upstream updates:</p>
 <div class="copy-snippet">
@@ -129,7 +132,6 @@ The following command will permanently delete all uncommitted SFTP changes. If y
 <figure><pre id="mass-update-apply"><code class="command bash" data-lang="bash">terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb</code></pre></figure>
 </div>
 
-
 ## Deploying Code
 <p class="instruction">When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:</p>
 <div class="copy-snippet">
@@ -201,3 +203,31 @@ terminus dashboard:view $SITE.dev</code></pre>
 </div>
 
 The Site Dashboard will open once the reset procedure has completed.
+
+## Switch Upstreams
+Every site has an upstream assigned in order to deliver [one-click updates](/docs/upstream-updates/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
+
+* Convert existing sites from a default framework to a [Custom Upstream](/docs/custom-upstream/).
+* Convert existing sites from one Custom Upstream to another, for reasons like:
+  * Repository has been migrated from Bitbucket to Github, or vice versa.
+  * Code has been refactored and moved to a new repository.
+* Set an empty upstream to disable one-click updates for sites managed by Composer.
+
+To see all available upstreams, run:
+
+  <div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-list">Copy</button>
+  <figure><pre id="upstream-list"><code class="command bash" data-lang="bash">terminus upstream:list</code></pre></figure></div>
+
+If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>, you can use Terminus to switch existing sites over to the common codebase:
+
+  <div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-set">Copy</button>
+  <figure><pre id="upstream-set"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My Custom Upstream"</code></pre></figure>
+  </div>
+
+As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.   
+
+  <div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">To set an empty upstream for Composer managed sites, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/#one-time-setup).</p></div>
+
+After setting the upstream, you must bring in the new codebase by applying updates to the site. For details on how to apply updates, see the [example usage above](#applying-updates).
