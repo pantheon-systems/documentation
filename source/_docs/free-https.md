@@ -102,9 +102,9 @@ No, existing sites that require HTTPS can prove ownership of the domain to pre-p
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### What about CloudFlare or other CDNs?
-Many customers currently take advantage of CloudFlare's awesome Universal SSL offering to get free HTTPS service for their website. If you are _just_ using CloudFlare for the HTTPS service, you can switch to the Global CDN and get an upgrade in performance and SSLLabs score.
+Many customers currently take advantage of Cloudflare's Universal SSL offering to get free HTTPS service for their website. If you are _just_ using Cloudflare for the HTTPS service, you can switch to the Global CDN and get an upgrade in performance and SSL Labs score.
 
-However, customers using CloudFlare's WAF tools or other features may want to keep CloudFlare in their stack. We still recommend upgrading your Pantheon site to the Global CDN as this will improve cache hitrates and performance. There are no known issues with layering CloudFlare and the Global CDN together. For details, see [Cloudflare Domain Configuration](/docs/cloudflare/).
+However, customers using Cloudflare's WAF tools or other features may want to keep Cloudflare in their stack. We still recommend upgrading your Pantheon site to the Global CDN as this will improve cache hitrates and performance. If you do layer Cloudflare and the Global CDN refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
 
 ### What level of encryption is provided?
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
