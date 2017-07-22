@@ -7,7 +7,7 @@ tags: [providers]
 permalink: docs/:basename/
 editpath: dns-providers/cloudflare.md/
 ---
-You can stack Cloudflare as a CDN on top of Pantheon's Global CDN, or use Cloudflare for DNS only. We recommend Cloudflare as a CDN only if you're paying for advanced features like a WAF, or if you have custom Cloudflare configurations (e.g. many page rules) you'd like to keep.
+You can use Cloudflare for DNS only or stack it as a CDN on top of Pantheon's Global CDN. We recommend using Cloudflare for DNS only. If you have a paid Cloudflare plan, however, or have custom Cloudflare configurations (e.g. many page rules) you'd like to keep, then ensure you follow the guide below to enforce HTTPS to prevent any issues.
 
 ## Before You Begin
 Be sure that you have a:
