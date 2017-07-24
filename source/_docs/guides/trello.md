@@ -141,7 +141,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 4. Return to the issue in Trello to see a message from our machine user:
 
-    ![Trello card](/source/docs/assets/images/integrations/trello-card.png)
+    ![Trello card](/source/docs/assets/images/integrations/trello/trello-card.png)
 
 ## Conclusion
 In this guide, we covered a simple integration between Trello and Pantheon. There are other ways to connect your Trello with your development workflow on Pantheon if you also use an external repository such as [GitHub](http://help.trello.com/article/1065-using-the-github-power-up). This integrations work in the opposite direction, allowing you to attach pull requests, issues, and commits directly to your Trello cards, from the Trello dashboard. Using and extending integrations like these will provide clarity into work being performed by you and your team, while speeding up the development process.
