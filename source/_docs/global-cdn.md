@@ -77,7 +77,7 @@ Lower-level documentation for custom implementation of caching strategies is als
 
 ## Enabling the Global CDN
 
-If you don't see action required in your Domains / HTTPS tool, please open a support chat to enable the upgrade.
+If you don't see action required in your Domains / HTTPS tool, please [contact support](/docs/getting-support) to enable the upgrade.
 
 ### Upgrade Your Site
 
