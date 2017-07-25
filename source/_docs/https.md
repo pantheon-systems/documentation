@@ -108,7 +108,7 @@ Refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
 ### Certificate Mismatch Browser Warning
 If your DNS changes propagate before certificates are fully deployed across the CDN, it's possible to see a certificate mismatch. To avoid this situation, wait a full 60 minutes from starting the upgrade to updating DNS. If you see a certificate mismatch, you can simply wait it out (up to 60 minutes), though you may also be able to see the new service in action more quickly using a different browser or incognito window.
 
-## HTTPS doesn't provision with Sucuri's default settings
+### HTTPS doesn't provision with Sucuri's default settings
 
 By default Sucuri blocks serving the challenges needed to verify domain ownership and issue Let's Encrypt certificates. Contact Sucuri support and request they enable the "Forward Certificate Validation" setting, which allows HTTPS provisioning to complete successfully. Note you'll want to keep this setting enabled, so the certificate will always renew automatically.
 
