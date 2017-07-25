@@ -62,7 +62,7 @@ No. Pantheon provides an infrastructure for professional web developers at agenc
 
 ### Can Pantheon run sites on highly available server clusters?
 
-Yes. Pantheon sites run on a highly available clustered infrastructure. The primary upstream provider is Rackspace.
+Yes. Pantheon sites run on a highly available clustered infrastructure. The primary upstream provider is Google Cloud Platform.
 
 ### Can I use my own Git repository (e.g GitHub)?
 
