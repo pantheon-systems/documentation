@@ -1,13 +1,12 @@
 ---
-title: Early Access: Pantheon Global CDN
-earlyaccess: true
+title: Pantheon Global CDN
 description: Improve Site Performance and Security
 earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
 
-Pantheon is rolling out a Global CDN as a core platform offering, with improved performance and security for customer sites. The Global CDN includes over 20 global points of presence where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org). This doc describes how existing customers can opt-in to this new set of features.
+Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 30+ global POPS (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org).
 
-## Pantheon's Global CDN
+## Fast HTTPS Translates to Revenue
 Research has shown that each second of latency in rendering a site results in approxomately a 10% drop-off in user engagement. With more and more traffic coming through mobile devices (and their networks), meeting user expectations for performance can be a real challenge.
 
 On top of that, Google and others are now directly factoring in performance and security as part of their SEO weighting algorithms. Browser makers are beginning to show obtrusive warnings for any login page or other form submission that happens "in the clear" over plain HTTP.
@@ -26,9 +25,9 @@ In early testing we saw multi-second speedups even within the continental US. In
 ![Example before and after page load time](/docs/assets/images/global-cdn-time-to-load.png)
 
 ## Eligibility
-Upgrading to the Global CDN is available for most Professional and Business level sites.
+Open a support chat to enable the upgrade.
 
-## Global CDN vs Legacy
+## Feature Comparison
 <table class="table  table-bordered table-responsive">
   <thead>
     <tr>
@@ -40,7 +39,7 @@ Upgrading to the Global CDN is available for most Professional and Business leve
   <tbody>
     <tr>
       <th>Price</th>
-      <td>$30/mo surcharge</td>
+      <td>$30/mo surcharge for HTTPS</td>
       <td>Included</td>
     </tr>
     <tr>
@@ -70,8 +69,9 @@ Upgrading to the Global CDN is available for most Professional and Business leve
 
 Developers looking to take advantage of the granular cache clearing capabilities of the Global CDN are encouraged to start with our CMS integrations:
 
+
 - WordPress: [Pantheon Advanced Page Cache](https://github.com/pantheon-systems/pantheon-advanced-page-cache)
-- Drupal: D7 and D8 modules coming soon
+- Drupal: D7 and D8 [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
 
 Lower-level documentation for custom implementation of caching strategies is also coming soon. Please [contact our enablement team](https://pantheon.io/agencies/learn-pantheon) if you are interested in implementing a custom cache strategy.
 
@@ -85,11 +85,9 @@ Look for site thumbnails that show **Global CDN Upgrade Available** in your User
 1. Click the **Start Upgrade** button from the Site Dashboard.
 2. It can take up to an hour for the new certificate to deploy across the entire CDN. If you want to avoid any possible hiccoughs you can wait 60 minutes before updating DNS.
 
-  ![Domains and HTTPS action required](/source/docs/assets/images/dashboard/domains-action-required.png)
-
   If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change:
 
-      1. Click the "Show DNS Recommendations" button next to your site's bare domain.
+      1. Click the "Details" button next to your site's bare domain.
       2. Copy the "A" record's IP address provided for the site's bare domain.
       3. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file with the IP address from the previous step followed by the domain name, for example:
 
@@ -100,11 +98,11 @@ Look for site thumbnails that show **Global CDN Upgrade Available** in your User
       4. Test HTTPS locally by entering your domain in the browser. If the site is accessible over HTTPS with a <span class="secure glyphicons glyphicons-lock"></span> [Secure status](https://support.google.com/chrome/answer/95617?hl=en), the test was successful. Remove the edits made to your hosts file once you have finished testing.
 
 
-3. Click **Show DNS Recommendations** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS provider to use the provided IP addresses.
+3. Click **Details** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS host to use the provided values.
 
     <div class="alert alert-info">
     <h4 class="info">Pro Tip</h4>
-Look up your DNS provider with this free web tool: <a href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
+Look up your DNS host with this free web tool: <a href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
 </div>
 
   DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) configured for the domain's DNS records. Most records update more quickly, and you can track the progress of DNS propagation.
@@ -116,15 +114,12 @@ Check the current state of DNS propagation from different parts of the world usi
 
 4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/docs/guides/launch/redirects/).
 
-For more information on HTTPS see our detailed docs on the [Let's Encrypt HTTPS solution](/docs/https).
+For more details, see [HTTPS on Pantheon's Global CDN](/docs/https).
 
 ## Frequently Asked Questions
 
-### Is the www-redirector service still available?
-No, if your site previously relied on this service on Legacy you will need to [redirect requests via PHP](/docs/guides/launch/redirects/).
-
-### Are vanity domains supported on Global CDN?
-You can upgrade a site to Global CDN that is using [vanity domains](/docs/vanity-domains/), but Free and automated HTTPS will not work for the vanity domain. Only custom domains will have HTTPS provisioned.
+### Is there a deadline to ugprade?
+Ultimately the Global CDN will be the default for every site on Pantheon. We encourage customers to upgrade as soon as they have time to do the changes.
 
 ### I already have a CDN - should I switch?
 Pantheon's Global CDN has some advantages over solutions some customers may already have in place:
@@ -136,24 +131,20 @@ Pantheon's Global CDN has some advantages over solutions some customers may alre
 
 Even if you want to retain your existing CDN because of specific features they provide, the upgrade will improve your end-user experience, as your custom CDN will be able to pull pages and assets from a nearby Pantheon Global CDN location, rather than the origin datacenter.
 
+### Is the www-redirector service still available?
+No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/docs/guides/launch/redirects/) to your site's configuration file (wp-config.php or settings.php).
+
+### Are vanity domains supported?
+You can upgrade a site to Global CDN that is using [vanity domains](/docs/vanity-domains/), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
+
 ### What about Cloudflare?
 See [Cloudflare Domain Configuration](/docs/cloudflare/).
-
-### Is the Global CDN mandatory?
-Currently we are in the early access phase, but ultimately the Global CDN will be the default for every site on Pantheon. We encourage customers to upgrade as soon as they have time to do the changes.
 
 ### Is the CDN configurable?
 No, we pre-configured the CDN so you don’t have to hassle with configuration, and we can guarantee performance and uptime. The Global CDN's behavior is the same as our legacy cache which is heavily optimized for Drupal and WordPress sites, and serves billions of pages monthly, except it's globally distributed.
 
 ### Do I get access to hit rates or other statistics?
 Hit rates or other statistics are not currently available.
-
-### Why does the Domains and HTTPS tool indicate action required even though I've updated DNS records?
-The action required message may be due to one of the following:
-
-  - **DNS changes can take some time to take effect:** Check the current state of DNS propagation from different parts of the world using this [free web tool](https://www.whatsmydns.net/).
-  -  **AAAA records not detected:**: Ensure you've added both AAAA records for the bare domain (e.g. `example.com`) to route IPv6 traffic to your site. There are two AAAA records for improved uptime and reliability. They may look similar, but the addresses are distinct.
-  - **Old DNS records detected:** If you also have old records in addition to the new ones, make sure to delete the old records.
 
 ### Can I use other CDNs with Pantheon Global CDN?
 Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
