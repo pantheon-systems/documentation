@@ -69,7 +69,7 @@ terminus drush my-drupal-8-site.dev -- migrate-import --all
 
 ## Updating DNS
 
-If your source site is on Pantheon and has your domain name pointing to it, you will need to follow special steps to move the domain name to the new site. For details, see [Switching DNS From One Pantheon Site to Another](/docs/switching-dns/). Otherwise, follow instructions within the Site Dashboard when [adding a domain](/docs/domains).
+If your source site is on Pantheon and has your domain name pointing to it, you will need to follow special steps to move the domain name to the new site. For details, see [Switching DNS From One Pantheon Site to Another](/docs/switching-dns/). Otherwise, follow instructions within the Site Dashboard when [adding a domain](/docs/guides/launch/domains/).
 
 
 ## See Also

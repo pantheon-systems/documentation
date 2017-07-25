@@ -80,4 +80,4 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Redirect Incoming Requests](/docs/redirects).
+For more examples of redirecting via PHP, see [Redirect Incoming Requests](/docs/guides/launch/redirects/).

@@ -47,11 +47,6 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 [Redis](/docs/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
-[HTTPS](/docs/enable-https/) is a standard for establishing an encrypted link between your Pantheon site and a client (e.g. web browser). You should enable HTTPS on a custom domain, e.g., www.example.com, if you are transmitting any sensitive data.  
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p>Only enable HTTPS for your Live environment. It is not needed in Dev or Test.</p></div>
-
 ####How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will now see all the available add-ons for your site.
 

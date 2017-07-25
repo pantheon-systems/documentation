@@ -84,7 +84,7 @@ Learn more about the [Pantheon Workflow](/docs/pantheon-workflow/).
 All PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](/docs/php-errors/).
 
 ## Domains / HTTPS
-Use the [Domains/HTTPS tab](/docs/domains) to add the custom domain(s) you would like pointed to this environment. You can also enable or disable HTTPS for an environment. If you choose to enable HTTPS, you must generate a private key and get your certificate from a recognized certificate authority. For more details, see [Enable Secure HTTPS Communication](/docs/enable-https/).
+Use the [Domains/HTTPS tab](/docs/guides/launch/domains/) to connect custom domain(s) and provision HTTPS. For more details, see [HTTPS on Pantheon's Global CDN](/docs/https/).
 
 ## Backups
 On this tab you can create backups, restore from an existing backup, or view the backup log to see a list of your prior backups. For detailed information, see [Backups](/docs/backups).
