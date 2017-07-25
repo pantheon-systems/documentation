@@ -34,6 +34,11 @@ From your Pantheon Dashboard:
 
 Your **code** is all custom and contributed modules or plugins, themes, and libraries. Code **does not** include files not under version control, like images uploaded to `sites/default/files` or `wp-content/uploads`.
 
+Please be sure to check the contents of the codebase for existing `.gitignore` files.  To be compatible with the platform, using the Pantheon version is advised.  Otherwise, attempts to import files to restricted paths could break the import process.
+
+See the platform-provided verions for [Wordpress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
+
+
 You can use either SFTP or Git to import your code. If you'd like to retain existing Git History, then please see [Migrating Sites to Pantheon: Preserve Existing Git History](/docs/migrate-preserve-history).
 
 ### Import Code via SFTP
