@@ -33,7 +33,7 @@ Also, Pantheon includes the [PECL OAuth](http://us.php.net/oauth) PHP extension.
 
 Pantheon is a cloud platform, so there are some considerations that you should be aware of.  
 
-Pantheon provides a single dedicated incoming IP address for sites with custom SSL certificates. Each dedicated IP is assigned by the datacenter.  
+Pantheon provides a single shared unique IP address for sites using [Free and Automated HTTPS](/docs/https/).  
 
 Pantheon does not have a mechanism for providing a dedicated outbound IP address. This is important to know if you are using a firewall with IP-based rules.  
 

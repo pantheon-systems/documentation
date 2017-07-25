@@ -47,7 +47,7 @@ See [Reading the Pantheon Environment Configuration](/docs/read-environment-conf
 
 ### How do I perform redirection?
 
-See [Redirect Incoming Requests](/docs/redirects).
+See [Redirect Incoming Requests](/docs/redirects/).
 
 ### Where do I specify database credentials?
 

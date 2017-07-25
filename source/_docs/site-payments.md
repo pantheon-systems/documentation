@@ -23,8 +23,8 @@ Depending on the plan you choose, you'll get access to additional features like 
 
 Developing your site and enjoying the advanced features like Workflow, Team Management, and [New Relic Pro](/docs/new-relic) can all be accessed for free; however, there are also premium features that require you to have a payment method associated with your site.
 
-For example, when enabling HTTPS you are prompted to update your site's plan:
- ![To enable SSL - choose at least a Pro plan](/source/docs/assets/images/dashboard/update-plan-prompt-https.png)
+For example, when connecting a domain you are prompted to update your site's plan:
+ ![connect domain - upgrade plan](/source/docs/assets/images/dashboard/update-plan-prompt-https.png)
 Clicking the message takes you to the Billing page to either select a plan or to enter your payment information.
 
 

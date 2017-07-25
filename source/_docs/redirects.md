@@ -28,7 +28,7 @@ Some advantages of redirecting via PHP instead of `.htaccess` include:
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, add a hostname with a matching record to an environment on the <a href="/docs/domains#step-2-add-domains-to-the-site-environment" data-proofer-ignore> site's Dashboard</a>.</p>
+<p>Automatic resolution of domains is not supported. For each domain that you want to resolve to Pantheon, add a hostname with a matching record to an environment on the <a href="/docs/guides/launch/domains/" data-proofer-ignore> site's Dashboard</a>.</p>
 </div>
 
 ### Command Line Conditionals
@@ -71,7 +71,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
 
 ### Redirect from www to the Bare Domain
 
-If you prefer to use the bare domain, use the following code block and run your DNS settings through a service that supports CNAME flattening. For details, see <a href="/docs/domains/#step-3-configure-your-dns" data-proofer-ignore>Domains and DNS</a>.
+If you prefer to use the bare domain, use the following code block and run your DNS settings through a service that supports CNAME flattening. For details, see <a href="/docs/guides/launch/domains/" data-proofer-ignore>Domains and DNS</a>.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>

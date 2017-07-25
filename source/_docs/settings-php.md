@@ -123,7 +123,7 @@ Depending on your use case, there are three possibilities:
 
  - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/redis) guide for examples for [Drupal 8](/docs/redis#drupal-8-sites) or [Drupal 7](/docs/redis#drupal-7-sites).
 
- - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/docs/read-environment-config/) for more information, or see our [Redis](/docs/redis) guide for examples for [Drupal 8](/docs/redis#drupal-8-sites) or [Drupal 7](/docs/redis#drupal-7-sites) sites. 
+ - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/docs/read-environment-config/) for more information, or see our [Redis](/docs/redis) guide for examples for [Drupal 8](/docs/redis#drupal-8-sites) or [Drupal 7](/docs/redis#drupal-7-sites) sites.
 
 #### Why does Drupal report that `settings.php` is not protected? I can't change the permissions on `settings.php`.
 
@@ -193,4 +193,3 @@ Could not find a Drupal settings.php file at ./sites/default/settings.php
 ```
 
 To resolve, add a default or empty `sites/default/settings.php` to your site's code.
-

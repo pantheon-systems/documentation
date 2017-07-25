@@ -72,7 +72,6 @@ For launch, run:
 terminus domain:add <site>.live www.example-network.com
 terminus domain:add <site>.live example-network.com
 ```
-Bare domains on live require a [redirect to remove `www.`](/docs/redirects/#redirect-to-a-common-domain) added to `wp-config.php`, and [special DNS configuration](/docs/domains/#serving-sites-from-bare-domains).
 
 Add the above subdomains to your domain name host for the domain, using the recommended settings from the Site Dashboard's domain panel for each environment (except for the case linked directly above).
 
