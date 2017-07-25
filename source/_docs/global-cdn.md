@@ -77,8 +77,7 @@ Lower-level documentation for custom implementation of caching strategies is als
 
 ## Enabling the Global CDN
 
-### Find Eligible Sites in the Dashboard
-Look for site thumbnails that show **Global CDN Upgrade Available** in your User Dashboard or use the **Global CDN Upgrade** search facet in the [Organization Dashboard](/docs/organization-dashboard/#filter-sites) to filter eligible sites.
+If you don't see action required in your Domains / HTTPS tool, please open a support chat to enable the upgrade.
 
 ### Upgrade Your Site
 
