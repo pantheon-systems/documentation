@@ -1,5 +1,5 @@
 ---
-title: Free and Automated HTTPS on Pantheon's Global CDN
+title: HTTPS on Pantheon's Global CDN
 description: Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt
 tags: [dns, security]
 ---
