@@ -160,3 +160,7 @@ Emoji support is available on WordPress and Drupal 8. On Drupal 7 sites, emojis 
     PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x94\xB4\x0D\x0A...'
 
 The `utf8mb4` character encoding needed for emojis is not supported on Drupal 7 sites on our platform. The provided workaround on drupal.org is not possible on Pantheon as it would cause adverse effects on other sites, since all sites share the same `my.cnf` configuration. To resolve this issue, consider the [Strip 4-byte UTF8](https://www.drupal.org/project/strip_utf8mb4) module to reject overly long byte sequences.
+
+## Domain limitations
+
+The Pantheon dashboard limits the maximum number of domains that can be registered per environment to 200. This should only be of note for sites that are using Drupal with Domain Access and WordPress Site Networks.
