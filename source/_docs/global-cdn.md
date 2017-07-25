@@ -5,14 +5,14 @@ description: Improve Site Performance and Security
 earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
 
-Pantheon is rolling out a Global CDN as a core platform offering, with improved performance and security for customer sites. The Global CDN includes over 20 global points of presence where site pages and assets are cached, plus [free managed HTTPS](/docs/free-https) using [Let's Encrypt](https://letsencrypt.org). This doc describes how existing customers can opt-in to this new set of features.
+Pantheon is rolling out a Global CDN as a core platform offering, with improved performance and security for customer sites. The Global CDN includes over 20 global points of presence where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org). This doc describes how existing customers can opt-in to this new set of features.
 
 ## Pantheon's Global CDN
 Research has shown that each second of latency in rendering a site results in approxomately a 10% drop-off in user engagement. With more and more traffic coming through mobile devices (and their networks), meeting user expectations for performance can be a real challenge.
 
 On top of that, Google and others are now directly factoring in performance and security as part of their SEO weighting algorithms. Browser makers are beginning to show obtrusive warnings for any login page or other form submission that happens "in the clear" over plain HTTP.
 
-Pantheon is helping developers solve both of these challenges with one elegant solution: an integrated performance-first content delivery network which includes [free managed HTTPS service](/docs/free-https). Faster pages, all HTTPS, all the time.
+Pantheon is helping developers solve both of these challenges with one elegant solution: an integrated performance-first content delivery network which includes [free managed HTTPS service](/docs/https). Faster pages, all HTTPS, all the time.
 
 ## How Does It Work?
 This new service takes Pantheon's traditional high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we can now terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
@@ -61,7 +61,7 @@ Upgrading to the Global CDN is available for most Professional and Business leve
     <tr>
       <th>HTTPS Service</th>
       <td>BYO Cert</td>
-      <td markdown="1">[Free and Managed](/docs/free-https)</td>
+      <td markdown="1">[Free and Managed](/docs/https)</td>
     </tr>
   </tbody>
 </table>
@@ -116,7 +116,7 @@ Check the current state of DNS propagation from different parts of the world usi
 
 4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/docs/guides/launch/redirects/).
 
-For more information on HTTPS see our detailed docs on the [Let's Encrypt HTTPS solution](/docs/free-https).
+For more information on HTTPS see our detailed docs on the [Let's Encrypt HTTPS solution](/docs/https).
 
 ## Frequently Asked Questions
 
@@ -129,7 +129,7 @@ You can upgrade a site to Global CDN that is using [vanity domains](/docs/vanity
 ### I already have a CDN - should I switch?
 Pantheon's Global CDN has some advantages over solutions some customers may already have in place:
 
-1. It includes [free and automatic HTTPS service](/docs/free-https)
+1. It includes [free and automatic HTTPS service](/docs/https)
 2. It is heavily optimized for website performance
 3. It is configured, maintained, and supported by Pantheon
 4. It is available at no additional cost

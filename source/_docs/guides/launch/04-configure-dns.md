@@ -18,7 +18,7 @@ previouspage: Connect a Domain to Live
 editpath: launch/04-configure-dns.md
 image: getting-started-Largethumb
 ---
-In this lesson we'll configure DNS and provision HTTPS on Pantheon. For details, see [Free and Managed HTTPS](/docs/free-https/).
+In this lesson we'll configure DNS and provision HTTPS on Pantheon. For details, see [Free and Managed HTTPS](/docs/https/).
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
