@@ -4,7 +4,9 @@ description: Learn how to use Custom Upstreams to free up developer time.
 tags: [tools, workflow]
 categories: []
 ---
-Enterprise, Agency, and EDU organizations can create and update sites from a common codebase using a Custom Upstream, which can be selected by members of an organization during site creation. If you don’t have a [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies) or [EDU](https://pantheon.io/edu) account you can create one for free. Customers interested in [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) can [reach out](https://pantheon.io/pantheon-enterprise) to our accounts team.
+Custom Upstreams are a feature of a Pantheon organization account, not the individual user account. If you are a digital agency servicing clients, or potentially a reseller of Pantheon as part of a managed solution, you can get started for free with an  organization account via [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies). Custom Upstream acccess is granted for agencies following [a training workshop](https://pantheon.io/agencies/learn-pantheon?docs).
+
+For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) or [Pantheon EDU+](https://pantheon.io/pantheon-edu-plus) accounts. You can learn my and reach out to our accounts team using the forms on the pages linked here.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
