@@ -79,6 +79,7 @@ Generally, use of Composer is optional; however, some Drupal modules, such as th
 
     <br>
 2.  Generate a [machine token](/docs/machine-tokens/) and [log in with Terminus](/docs/terminus/install/#authenticate).
+3.  [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb)
 
 ## Set Up a New Project
 
