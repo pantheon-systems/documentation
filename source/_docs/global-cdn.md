@@ -6,13 +6,6 @@ earlynote: The documentation on this page discusses features and options that ar
 
 Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 30+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org).
 
-## Fast HTTPS Translates to Revenue
-Research has shown that each second of latency in rendering a site results in approxomately a 10% drop-off in user engagement. With more and more traffic coming through mobile devices (and their networks), meeting user expectations for performance can be a real challenge.
-
-On top of that, Google and others are now directly factoring in performance and security as part of their SEO weighting algorithms. Browser makers are beginning to show obtrusive warnings for any login page or other form submission that happens "in the clear" over plain HTTP.
-
-Pantheon is helping developers solve both of these challenges with one elegant solution: an integrated performance-first content delivery network which includes [free managed HTTPS service](/docs/https). Faster pages, all HTTPS, all the time.
-
 ## How Does It Work?
 This new service takes Pantheon's traditional high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we can now terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
 
