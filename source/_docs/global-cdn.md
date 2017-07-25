@@ -4,7 +4,7 @@ description: Improve Site Performance and Security
 earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
 
-Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 30+ global POPS (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 30+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org).
 
 ## Fast HTTPS Translates to Revenue
 Research has shown that each second of latency in rendering a site results in approxomately a 10% drop-off in user engagement. With more and more traffic coming through mobile devices (and their networks), meeting user expectations for performance can be a real challenge.
