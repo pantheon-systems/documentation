@@ -55,7 +55,7 @@ You can index your site under your production domain once it's added to the Live
 Google's search engine now [crawls the HTTPS equivalents of HTTP pages](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Since Pantheon provides a shared certificate for platform domains (`*.pantheonsite.io`), this change in indexing behavior may result in mismatch security warnings within Google search results. To resolve this issue, do one of the following:
 
  - Create a sitemap that contains only HTTP links.
- - Enable HTTPS for your domain, either [using your own certificate](/docs/enable-https) or for [free using Cloudflare](/docs/guides/cloudflare-enable-https/).
+ - Follow our [Launch Essentials](/docs/guides/launch/) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
  - Add the `X-Robots-Tag: noindex` header to responses resulting from HTTPS requests. Note that this will not fix existing indexed results from Google, and is a preventative solution rather than a reactionary, for users who don't want to serve over HTTPS.
 
 ### Sitemaps Produce a White Screen of Death (WSOD)

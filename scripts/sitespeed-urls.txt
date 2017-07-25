@@ -1,6 +1,6 @@
 https://pantheon.io/docs
 https://pantheon.io/docs/changelog/
 https://pantheon.io/docs/guides
-https://pantheon.io/docs/guides/cloudflare-enable-https
+https://pantheon.io/docs/guides/jenkins
 https://pantheon.io/docs/categories/developing/
 https://pantheon.io/docs/wordpress-redis/

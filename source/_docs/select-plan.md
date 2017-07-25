@@ -36,15 +36,13 @@ A plan upgrade will result in a prorated charge to your account; A prorated cred
 The following should be considered before downgrading your site from a paid plan to Sandbox:
 
 * All domains added to Pantheon environments will be removed. If you decide to return to a paid plan in the future, you will need to add the domains again in desired environments.
-* HTTPS will be disabled and certificates will be removed. If you decide to re-enable HTTPS in the future, you must re-upload your certificate, intermediary certificates, and your key.
 
 ### Downgrade to Personal
 The following should be considered before switching to a Personal plan:
 
 * [Redis](/docs/redis) addon service will be disabled.
 * [Solr](/docs/solr) addon service will be disabled.
-* HTTPS will be disabled and certificates will be removed. If you decide to re-enable HTTPS in the future, you must upgrade your plan or [enable HTTPS with Cloudflare's Universal SSL](/docs/guides/cloudflare-enable-https).
-* You must update your DNS records after HTTPS is disabled. Follow the updated DNS recommendations found within the **Domains** tool on the Site Dashboard.
+
 
 Before moving to a Personal plan, we recommend preparing the site by disabling Redis and Solr from within WordPress or Drupal.
 #### Disable Redis

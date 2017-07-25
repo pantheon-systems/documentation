@@ -137,11 +137,7 @@ Pantheon's Global CDN has some advantages over solutions some customers may alre
 Even if you want to retain your existing CDN because of specific features they provide, the upgrade will improve your end-user experience, as your custom CDN will be able to pull pages and assets from a nearby Pantheon Global CDN location, rather than the origin datacenter.
 
 ### What about Cloudflare?
-Many customers currently take advantage of Cloudflare's awesome Universal SSL offering to get free HTTPS service for their website. If you are _just_ using Cloudflare for the HTTPS service, you can switch to the Global CDN and get an upgrade in performance and SSLLabs score.
-
-However, customers using Cloudflare's WAF tools or other features may want to keep Cloudflare in their stack. We still recommend upgrading your Pantheon site to the Global CDN as this will improve cache hitrates and performance. There are no known issues with layering Cloudflare and the Global CDN together. Ignore the DNS recommendations and action required notices from the Site Dashboard, and use the [configuration described in our related guide](/docs/guides/cloudflare-enable-https/) instead.
-
-To use Cloudflare as a DNS hosting provider and Pantheon's Global CDN and Managed HTTPS service, configure DNS as recommended in the Site Dashboard and disable Cloudflare's CDN by toggling the cloud icon to grey so it's disabled.
+See [Cloudflare Domain Configuration](/docs/cloudflare/).
 
 ### Is the Global CDN mandatory?
 Currently we are in the early access phase, but ultimately the Global CDN will be the default for every site on Pantheon. We encourage customers to upgrade as soon as they have time to do the changes.
