@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Redirect to a Primary Domain
+subtitle: Redirect for SEO and Security
 launch: true
 anchorid: redirects
 generator: pagination
@@ -28,7 +28,9 @@ In this lesson, we'll redirect incoming requests to a primary domain name (e.g.,
 **Try it:**
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
+
 2. Click **<span class="glyphicons glyphicons-info-sign" aria-hidden="true"></span>  SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
+
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
   If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
