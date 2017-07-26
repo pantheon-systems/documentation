@@ -35,7 +35,7 @@ Some legitimate [bots/crawlers/proxies](https://useragent.openadmintools.com/) (
      10.208.128.192 - - [26/Jul/2013:15:31:03 +0000] "GET / HTTP/1.1" 500 109 "-" "checks.panopta.com" 0.126 "5.63.145.72, 10.183.252.21, 127.0.0.1,127.0.0.1"
 
 ## Indexing Your Pantheon Site
-It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/docs/platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/docs/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
+It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/docs/domains/#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/docs/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
 
 ```
 User-agent: *
@@ -80,4 +80,4 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Redirect Incoming Requests](/docs/redirects/).
+For more examples of redirecting via PHP, see [Domains and Redirects](/docs/domains/#redirect-to-https-and-the-primary-domain).

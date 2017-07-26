@@ -30,7 +30,7 @@ If you are also developing locally and need to configure WordPress for your desk
 
 Depending on your use case, there are two possibilities.
 
-For web only actions, like [redirects](/docs/redirects), check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
+For web only actions, like [redirects](/docs/domains/#redirects), check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/%24_SERVER-environment?footer=minimal"></script>
 
@@ -47,7 +47,7 @@ See [Reading the Pantheon Environment Configuration](/docs/read-environment-conf
 
 ### How do I perform redirection?
 
-See [Redirect Incoming Requests](/docs/redirects/).
+See [Domains and Redirects](/docs/domains/).
 
 ### Where do I specify database credentials?
 
