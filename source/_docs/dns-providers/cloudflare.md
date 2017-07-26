@@ -50,11 +50,10 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 1. Select **Crypto** from the Cloudflare menu bar and set SSL mode to **Full** (or potentially Full, Strict), but not Flexible.
   ![Enable SSL](/source/docs/assets/images/cloudflare-ssl.png)
 2. Scroll down and enable **Always use HTTPS**
-3. Scroll down and enable **Automatic HTTPS Rewrites**
   ![Cloudflare Always HTTPS](/source/docs/assets/images/cloudflare-always-https.png)
-4. [Redirect to HTTPS via PHP within WordPress or Drupal](/docs/guides/launch/redirects/).
+3. Scroll down and enable **Automatic HTTPS Rewrites**
+4. Remove existing redirects configured via PHP in `settings.php` or `wp-config.php`.
 5. Proceed with DNS configuration as describe in Option 1, but make sure the cloud is toggled orange, not gray.
-
 
 ## Next Steps
 
