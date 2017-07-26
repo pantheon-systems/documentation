@@ -20,7 +20,7 @@ Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding 
 ## Custom domains
 Custom domains are domains registered at a third-party provider, for which you control DNS configurations. Connect a custom domain to the Site Dashboard and point DNS at Pantheon to trigger the [automated process of provisioning HTTPS](/docs/https/).
 
-Follow the process described in [Launch Essentials](/docs/guides/launch/) to connect a custom domain and configure DNS. A paid plan is required to connect custom domains to an environment in the Pantheon Site Dashboard, up to the following limits:
+A paid plan is required to connect custom domains to an environment in the Pantheon Site Dashboard, up to the following limits:
 
 <table class="table table-condensed table-bordered">
   <thead class="thead-inverse">
@@ -52,7 +52,7 @@ Follow the process described in [Launch Essentials](/docs/guides/launch/) to con
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment. Automatic resolution of domains and wildcards are not supported.</p></div>
+<p markdown="1">Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment, as described in [Launch Essentials](/docs/guides/launch/). Automatic resolution of domains and wildcards are not supported.</p></div>
 
 ### Primary domain
 A primary domain refers to a single custom domain used to serve responses, regardless of originating URL of a request (e.g., `https://www.example.com`). Configure the primary domain as part of the going live process described in [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/).
