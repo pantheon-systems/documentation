@@ -276,6 +276,13 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 
 <hr>
 
+### [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/)
+**Issue**: A low value set for "Check link every X hours" can consume a large amount of server resources.
+
+**Solution**: Ensure that the value is set for the default of 72 hours or greater.
+
+<hr>
+
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 **Issue**: This plugin utilizes a static value, `$_SERVER['SERVER_NAME']`, instead of `$_SERVER['HTTP_HOST']` which is generated dynamically.
 
