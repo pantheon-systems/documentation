@@ -52,8 +52,8 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 2. Scroll down and enable **Always use HTTPS**
   ![Cloudflare Always HTTPS](/source/docs/assets/images/cloudflare-always-https.png)
 3. Scroll down and enable **Automatic HTTPS Rewrites**
-4. Proceed with DNS configuration as describe in Option 1, but make sure the cloud is toggled orange, not gray.
-
+4. Remove existing redirects configured via PHP in `settings.php` or `wp-config.php`.
+5. Proceed with DNS configuration as describe in Option 1, but make sure the cloud is toggled orange, not gray.
 
 ## Next Steps
 
