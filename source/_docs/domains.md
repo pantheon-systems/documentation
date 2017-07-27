@@ -1,31 +1,31 @@
 ---
 title: Domains and Redirects
-description: Understand platform and custom domains and learn how to redirect requests to an alternate Drupal or WordPress domain via PHP.
+description: Understand how domains work on Pantheon and how to redirect requests in PHP for WordPress and Drupal.
 tags: [redirects, variables, dns]
 categories: []
 ---
-A domain is the name used by a web address to access a particular site per it's DNS configuration. DNS is the main naming system for the internet. It takes any domain name, such as `pantheon.io` and ties it to an IP address, like `23.185.0.2`.
+A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.awesomesite.com` into machine-readable IP addresses like `127.0.0.1`. All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
 
 ## Platform domains
-Pantheon issues multiple platform domains per site, to be used during initial development. Each environment (Multidevs, Dev, Test, and Live) is bound to it's own unique domain name, matching the following patterns:
+Pantheon issues platform domains for all environments. Each environment (Dev, Test, Live, each Multidev) is accessible via the platform domain, matching the following patterns:
 
 - dev-site-name.pantheonsite.io
 - test-site-name.pantheonsite.io
 - live-site-name.pantheonsite.io
 - multidev-env-site-name.pantheonsite.io
 
-All platform domains are available over HTTPS to support the best practice of configuring a site to assume users are visiting via HTTPS. Developing the site to assume HTTPS from the start prevents additional work at launch.  
+All platform domains are available over HTTPS. Redirecting to HTTPS during development and testing is a good best practice to ensure you are ready to go live with HTTPS.
 
 ### robots.txt
-Pantheon serves a default robots.txt that disallows crawlers on platform domains (`/*.pantheonsite.io`, `/*.pantheon.io`, `/*.gotpantheon.com`, and `/*.sites.my-agency.com`). Crawlers are allowed on the Live environment to requests served with a custom domain (e.g., `www.example.com`). If you attempt to access your live environment with a platform-issued domain, even if you have a domain associated with the environment, the default robots.txt will be served.
+Pantheon serves a default robots.txt that disallows crawlers on platform domains (`/*.pantheonsite.io`, `/*.pantheon.io`, `/*.gotpantheon.com`, and `/*.sites.my-agency.com`). Crawlers are allowed on the Live environment for requests served with a custom domain (e.g., `www.example.com`). If you attempt to access your Live environment with a platform domain, even if you have a domain associated with the environment, the default robots.txt will be served.
 
 Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding a custom domain to an environment other than Live will not permit crawlers to that environment.
 
 ## Custom domains
 
-Custom domains are domains registered at a third-party provider, for which you control DNS configurations. Connect a custom domain to the Site Dashboard and point DNS at Pantheon to trigger the [automated process of provisioning HTTPS](/docs/https/).
+If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar. Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/docs/https/).
 
-A paid plan is required to connect custom domains to an environment in the Pantheon Site Dashboard, up to the following limits:
+A paid plan is required to connect custom domains to your site, up to the following limits:
 
 <table class="table table-condensed table-bordered">
   <thead class="thead-inverse">
@@ -57,36 +57,28 @@ A paid plan is required to connect custom domains to an environment in the Panth
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment, as described in [Launch Essentials](/docs/guides/launch/). Automatic resolution of domains and wildcards are not supported.</p></div>
+<p markdown="1">Add all domains (example.com and www.example.com are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/docs/guides/launch/). Automatic resolution of domains and wildcards are not supported.</p></div>
 
 ### Primary domain
-Pantheon uses the term "primary domain" to refer to a single domain used to serve all traffic to a site. For example, configuring `https://www.example.com` as the primary domain means that requests to `http://example.com`, `http://www.example.com`, `https://example.com/`, etc. all get redirected to `https://www.example.com`. Configure the primary domain as part of the going live process described in [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/).
+Pantheon uses the term "primary domain" to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other domain connected to the environment) all get redirected to `www.example.com`. Configure the primary domain as part of the going live process described in [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/).
 
-We recommend using the www subdomain prefix for all sites. While it’s good for visitors and DNS to resolve both www and the domain itself, it's best practice to choose one or the other and redirect from www to non-www (or vice versa, your call). This optimizes SEO by avoiding duplicate content and prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time.
+Choosing a primary domain is a best practice for SEO, by avoiding duplicate content. It also prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time.
 
 ## Vanity domains for organizations
-Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default Platform domain (`pantheonsite.io`).
+Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default platform domain (`pantheonsite.io`).
 
 For details, see [Vanity Domains](/docs/vanity-domains/).
 
 ## Redirects
-It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application.
+It's often useful to redirect requests to a different domain or path. While it's technically possible to use Drupal or WordPress to perform the redirect, it's faster and more efficient to redirect without having to fully bootstrap your web application. You can accomplish this efficiency by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
 <p markdown="1">Redirects should be managed in PHP, since `.htaccess` is ignored. For details, see [Using PHP as an htaccess Alternative](/docs/htaccess/).</p>
 </div>
 
-### Command line conditionals
-All redirect logic run on Pantheon environments should include the `php_sapi_name() != "cli"` conditional statement to see if WordPress or Drupal is running via the command line. Otherwise, redirects kill the PHP process before Drush and WP-CLI is executed resulting in a silent failure:
-
-```bash
-[notice] Command: <site>.<env> -- 'drush <command>' [Exit: 1]
-[error]
-```
-
 ### Redirect to HTTPS and the primary domain
-Configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php`:
+It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php`:
 
 {% include("redirects.twig")%}
 
@@ -179,6 +171,13 @@ Drupal sites can force lowercase letters using the following:
 </div>
 
 ### Troubleshoot redirects
+### Failed cache clears, search and replace, or Drush and WP-CLI operations
+All redirect logic should include the `php_sapi_name() != "cli"` conditional statement to see if WordPress or Drupal is running via the command line. Drush and WP-CLI are used by the platform for operations like cache clearing and search and replace, so it is important to only redirect web requests, otherwise the redirect will kill the PHP process before Drush or WP-CLI is executed, resulting in a silent failure:
+
+```bash
+[notice] Command: <site>.<env> -- 'drush <command>' [Exit: 1]
+[error]
+```
 #### Infinite redirect loops
 Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file. Resolve this error by replacing the offending redirect logic with the [recommended code samples in the above section](/docs/domains/#redirect-to-https-and-the-primary-domain) and for your specific use case.
 #### Mixed-mode browser warnings
