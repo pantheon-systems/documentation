@@ -118,7 +118,7 @@ Depending on your use case, there are three possibilities:
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p markdown="1">`$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#command-line-conditionals), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
+    <p markdown="1">`$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshoot-redirects), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
     </div>
 
  - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/redis) guide for examples for [Drupal 8](/docs/redis#drupal-8-sites) or [Drupal 7](/docs/redis#drupal-7-sites).
