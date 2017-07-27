@@ -61,7 +61,7 @@ Use [Terminus](/docs/terminus) to run `wp search-replace` to converts URLs from 
 terminus remote:wp <site>.<env> -- search-replace 'https://www.example.com' 'https://www.example.com' --all-tables --verbose
 ```
 #### Drupal
-Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-command). Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
+Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-commands). Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
 
 ## Clear Caches
 Clear Drupal and WordPress object caches in the [database and/or in Redis](/docs/redis/#clear-cache)) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
