@@ -69,7 +69,7 @@ The most common causes are:
 
 - Missing sites/default/settings.php
 - [PHP fatal errors](/docs/php-errors/)
-- [Invalid redirection logic in settings.php](/docs/redirects/)
+- [Invalid redirection logic in settings.php](/docs/domains/#redirect-to-https-and-the-primary-domain)
 - Setting a cron key in Elysia Cron's settings: `admin/config/system/cron/settings`
 
 ### What is the maximum execution time of cron?

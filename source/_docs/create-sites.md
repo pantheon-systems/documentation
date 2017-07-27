@@ -13,7 +13,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p>The site name will be prefixed to all <a href="/docs/platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>.
+    <p>The site name will be prefixed to all <a href="/docs/domains/#platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>.
     </p></div>
 3.  If applicable, affiliate the site with an [organization](/docs/organization-dashboard/#new-sites).
 4.  Click **Create Site**.

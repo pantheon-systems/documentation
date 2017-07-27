@@ -21,7 +21,7 @@ The following articles include techniques and configurations for `settings.php` 
 
 - [Reading Pantheon Environment Configuration](/docs/read-environment-config) (including domain_access)
 - [Redis as a Caching Backend](/docs/redis)
-- [Redirect incoming requests](/docs/redirects) (including WWW and non-WWW, requiring HTTPS)
+- [Domains and Redirects](/docs/domains/#redirects)
 - [SSO and Identity Federation](/docs/sso) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development
@@ -114,11 +114,11 @@ Yes, but only if at least one other file (e.g. `settings.php`) is present within
 
 Depending on your use case, there are three possibilities:
 
- - For web only actions, like redirects, check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/docs/redirects/#redirect-to-www) guide for examples.
+ - For web only actions, like redirects, check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/docs/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p markdown="1">`$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/redirects/#command-line-conditionals), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
+    <p markdown="1">`$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshoot-redirects), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
     </div>
 
  - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/redis) guide for examples for [Drupal 8](/docs/redis#drupal-8-sites) or [Drupal 7](/docs/redis#drupal-7-sites).
