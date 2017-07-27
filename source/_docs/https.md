@@ -50,7 +50,7 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
     <tr>
       <th>Protocol</th>
       <td>TLS 1.1 & 1.2</td>
-      <td>TLS 1.2 with [SNI](#server-name-indication-sni)</td>
+      <td>TLS 1.2 with SNI</td>
     </tr>
     <tr>
       <th>Ciphers</th>
@@ -124,19 +124,3 @@ TLS (Transport Layer Security) is a protocol for secure HTTP connections. It rep
 
 ### Server Name Indication (SNI)
 Server name indication (SNI) is the technology replacing the expensive, legacy load balancers and allows multiple secure (HTTPS) websites to be served off the same IP address, without requiring all those sites to use the same certificate.
-
-## Known Issues
-
-### Certificate Mismatch Browser Warning
-It is possible you may see a certificate mismatch in your browser if your DNS changes propogate before the new certificates are fully deployed across the CDN. If this is the case, you can simply wait it out (up to 60 minutes), though you may also be able to see the new service in action more quickly using a different browser or incognito window.
-
-### 503 Header Overflow
-This server response occurs when a request exceeds the 10K size limit for cookies. For details, see [Errors and Server Responses](/docs/errors-and-server-responses#503-header-overflow).
-
-### Infinite Redirect Loops
-Sites using Cloudflare's free universal SSL will experience redirect errors if the SSL mode is set to **Flexible**. This mode can also result in mixed content and privacy warnings from the browser. To resolve, <a href="/docs/cloudflare/#stack-cloudflares-cdn-with-pantheon-and-configure-dns" data-proofer-ignore>configure Cloudflare as described here</a>.
-
-Redirect errors can also be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic. For details, see [Redirect Incoming Requests](/docs/domains/#troubleshoot-redirects).
-
-### Moz Pro 804 HTTPS SSL error
-Currently, Moz Pro is unable to crawl sites using Server Name Indication (SNI). For information on beta access to SNI support, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
