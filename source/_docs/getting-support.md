@@ -6,6 +6,8 @@ categories: []
 ---
 
 ## Support Features and Response Times
+The majority of Pantheon's support is provided in the context of a particular website or project. Because of that, the type of support available varies according to whether you are paying for a site individually, or using Pantheon as an Agency, EDU, or Enterprise customer.
+
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#sites" aria-controls="sites" role="tab" data-toggle="tab">Pay-per-site</a></li>
@@ -90,8 +92,9 @@ categories: []
   </div>
 </div>
 
+All users of the platform can recieve customer service and support for non-site-related questions via any avalable medium regardless of account type.
 
-## Chat Support
+## Real Time Chat Support
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
 
 1. From your Site or User Dashboard, click **Support**.
