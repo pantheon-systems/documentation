@@ -1,19 +1,23 @@
 ---
-title: Replace Links Referencing IP:PORT in Drupal
+title: Fix Broken Links in Drupal
 description: Learn how to update Drupal site links so the URL references the correct file path and domain name.
 tags: [debugcode]
 categories: [drupal]
 ---
+
+## Scenario: Referencing IP:Port instead of Domain / Base URL ##
+
 When editing content, links can be inserted that don't reflect the site's domain name. For example, an image URL appears as https://192.237.142.203:5555/files/cernettes.gif instead of https://www.example.com/files/cernettes.gif.
 
 The link may work at first, but will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
 
-**Solution**:
+### How to Solve: ###
 
-Set the `$base_url` per environment in settings.php and clear caches.
+Replace and Set the `$base_url` per environment in settings.php with the correct Domain or Base URL. 
+Perform clear caches after.
 
 
-## Background
+### Explanation / Background: ###
 
 Sometimes, the `$base_url`, if not explicitly set, is the URL from which the asset was loaded. If a module cache is populated on a Drush Cron run from the CLI, this can be the app-container IP which is dynamic and will ultimately become a broken link. The current resolution is to set `$base_url` per environment in settings.php and clear caches. There are some notes about this in the [Pathologic documentation](https://www.drupal.org/node/257026).
 
@@ -38,4 +42,14 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
     }
 }
 ````
-Try customizing that snippet for your purposes and putting in your settings.php, and then clearing caches. All cached IP:PORT references will be wiped out, and repopulated with the correct base URL in the future.
+
+Try customizing that snippet for your purposes and putting it to your settings.php. Then perform to clear caches. 
+All cached IP:PORT references will be wiped out, and repopulated with the correct base URL in the future.
+
+
+## See Also
+
+[Private Paths](/docs/private-paths/)
+
+[Non-Standard File Paths](/docs/non-standard-file-paths/)
+
