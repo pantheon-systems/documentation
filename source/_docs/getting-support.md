@@ -67,12 +67,12 @@ The majority of Pantheon's support is provided in the context of a particular we
         <tr>
           <td>
             Chat Support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></a><br>
+            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br>
             Full Stack Support
           </td>
           <td>
             Chat support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></a><br>
+            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br>
             Full Stack Support
           </td>
           <td>
