@@ -38,13 +38,16 @@ categories: []
         </td>
         <td>
           Chat Support<br>
-          Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via support chat)."><em class="fa fa-info-circle"></em></a>
+          Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br>
+          Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via support chat)."><em class="fa fa-info-circle"></em></a><br>
+          Full Stack Support
         </td>
         <td>
           Chat Support<br>
-          Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="2 hours"><em class="fa fa-info-circle"></em></a><br>
-          Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a> <br>
-          Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="30 minute response time 24/7 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a>
+          Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="2 hour response time, 24/7/365."><em class="fa fa-info-circle"></em></a><br>
+          Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a> <br>
+          Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="30 minute response time 24/7/365 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br>
+          Full Stack Support
         </td>
       </tr>
     </tbody>
@@ -62,23 +65,25 @@ categories: []
         <tr>
           <td>
             Chat Support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Available for sites on Business plans and above."><em class="fa fa-info-circle">
+            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></a><br>
+            Full Stack Support
           </td>
           <td>
             Chat support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Available for sites on Business plans and above."><em class="fa fa-info-circle">
+            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></a><br>
+            Full Stack Support
           </td>
           <td>
             Chat Support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="2 hours"><em class="fa fa-info-circle"></em></a><br>
-            Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a> <br>
-            Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="30 minute response time 24/7 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a>
+            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br>
+            Full Stack Support
           </td>
           <td>
             Chat Support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="2 hours"><em class="fa fa-info-circle"></em></a><br>
-            Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a> <br>
-            Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="30 minute response time 24/7 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a>
+            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="2 hour response time, 24/7/365."><em class="fa fa-info-circle"></em></a><br>
+            Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a> <br>
+            Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="30 minute response time 24/7/365 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br>
+            Full Stack Support
           </td>
         </tr>
     </table>
@@ -87,7 +92,7 @@ categories: []
 
 
 ## Chat Support
-Start a chat with our Support Team to request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
+Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
 
 1. From your Site or User Dashboard, click **Support**.
 2. Click **Launch Chat**, then click **New Conversation**.
@@ -117,18 +122,21 @@ The ticket support feature is available to certain plans and account types. For 
   - Links to screenshots or screencasts of the behavior, if necessary.
 5. Click **Open Ticket**
 
+## Pantheon On-Call
+Elite sites and organizations who opt for Priority Enterprise Support (see below) can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call has a response time SLA of 30 minutes and immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+
+## Priority Enterprise Support
+Priority Enterprise Support is a blanket support plan which can be purchased for any organization. It covers all team members and sites, adding a 2-hour SLA for ticket responses and the ability to trigger Pantheon's on-call emergency system described above. (Learn more)[https://pantheon.io/priority-enterprise-support].
+
 ## Scope of Support
 
-We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. For details on ways to contact our Support team and review support features, visit [Getting Support](/docs/getting-support).
+We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. 
 
-- We don't touch client code.
-Your site code belongs to you. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility not to overwrite the upstream. If you do, updates on the Dashboard will cause conflicts that you must [resolve manually](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts) with Git.
+- We don't touch client code. Your site code belongs to you. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility not to overwrite the upstream. If you do, updates on the Dashboard will cause conflicts that you must [resolve manually](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts) with Git.
 
 - Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/docs/maintain-custom-upstream/) by the upstream maintainer each time the project releases a new version.
 
 - We don’t maintain the integrity of the site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
-
-- We love adding features, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
 
 - Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](/docs/troubleshoot/) to get you underway.
 
@@ -142,14 +150,25 @@ Your site code belongs to you. Pantheon provides updates to the upstream for the
 
 - If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
 
-If you need a professional to provide development support for your site, use Pantheon's [Agency Finder](https://pantheon.io/agencies/agency-finder) to search for qualified partners you can trust.
+### Platform Support
+
+We provide technical support for all user interfaces of the Pantheon product, as well as compatibility with the Drupal and WordPress CMSs. While we cannot guarantee that every Drupal module or WordPress plugin will work, we take responsibility for the availability and proper functionality of the platform. If there's something wrong there, we will fix it. 
+
+We are also happy to help developers learn the ins and outs of making their sites work great on Pantheon, and have a large number of tutorials for common development scenarios. We also do our best to answer most questions about development practices or techniques. 
+
+### Full Stack Support
+
+Customers with Full Stack support get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
+
+Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring. Full Stack Support can help troubleshoot networking issues and other problems that can be difficult to resolve from the outside.
+
+This level of support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, use Pantheon's [Agency Finder](https://pantheon.io/agencies/agency-finder) to search for qualified partners you can trust.
 
 ## Feature Requests
 
 We value your feedback! If you feel there's something we can do to improve our platform, like adding a new [external Library](/docs/external-libraries), or a dashboard feature, contact support and let us know. Include a description of your use case, and a link to the website for any library or other third-party included in your request.
 
-All feature requests will evaluated by Pantheon's Operations Team on a case-by-case basis.
-
+All feature requests will evaluated by Pantheon's product and engineering teams on a case-by-case basis. We love adding new capabilities, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
 
 ### How long does the process take?
 This depends on the feature requested, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved.
@@ -173,16 +192,13 @@ Keep the following tips in mind when opening a new support ticket or chat:
 ## FAQs
 #### Is there a support number we can call? If so, is this service available for every plan?
 
-For **Elite plans** and customers with **Priority Enterprise Support** only, 24/7 emergency support is available post-launch, and we provide an emergency support number to page on duty engineers. For more details, see the [Elite Plan Support Overview](https://pantheon.io/resources/pantheon-support-datasheet) or learn more about [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support).
+**Elite plans** and customers with **Priority Enterprise Support** can access Pantheon on-call, which has an emergency 800-number. For more details, see the [Elite Plan Support Overview](https://pantheon.io/resources/pantheon-support-datasheet) or learn more about [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support).
 
 ####If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 You can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting paying sites.
 
 ####Is 24/7 phone support available for Business plans?
 No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Business plans. Elite plans and Priority Enterprise Support customers have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
-
-#### What is Priority Enterprise Support?
-For organizations that want the highest level of support for their whole team, [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support) provides the assurance of SLA-backed 24/7/365 emergency support, expedited responses to standard tickets, and expert onboarding and training. To learn more, see [Using Priority Enterprise Support](/docs/priority-enterprise-support) or [contact Sales](https://pantheon.io/contact-us) for more information.
 
 ####What if I can't login to the Pantheon Dashboard?
 If you are unable to login, try [resetting your password](https://dashboard.pantheon.io/reset-password).
@@ -192,7 +208,6 @@ Access support history for chats in the User or Site Dashboards by selecting **S
 
 #### Can I start a chat session via email?
 No. Initiate chats via the Pantheon User or Site Dashboards.
-
 
 #### Can I respond to an existing chat message via email?
 Yes. Reply directly to the email thread to continue an existing chat session and update the chat history on the Dashboard.
