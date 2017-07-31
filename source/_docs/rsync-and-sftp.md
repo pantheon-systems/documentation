@@ -25,7 +25,7 @@ There are a number of GUI SFTP clients available, such as [FileZilla](https://fi
 
 [Connection information](/docs/sftp#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 
-Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and [site UUID](/docs/sites#site-uuid) to connect; copy/pasting this example exactly will not work.
+Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and [site UUID](/docs/sites#site-uuid) to connect; copy/pasting this example exactly as is will not work.
 
     export ENV=dev
     # Usually dev, test, or live
@@ -43,7 +43,7 @@ Here's an example of using a command-line SFTP client to connect to a site envir
 
 rsync is also available, but it is a more advanced tool that requires experience with the command line.
 
-Substitute your target environment and site UUID to connect; copying/pasting this example exactly will not work.
+Substitute your target environment and site UUID to connect; copying/pasting this example exactly as is will not work.
 
     export ENV=dev
     # Usually dev, test, or live
