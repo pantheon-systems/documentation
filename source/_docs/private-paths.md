@@ -51,7 +51,7 @@ To configure, go to **Administration** > **Configuration** > **Media** > **File 
 
 ### Resolving Warning: file_put_contents(private:///.htaccess)
 
-If you receive the above error, make sure that the private path for code or files exists in your repository.  If you are configuring a private path for code, you'll need to create the private directory first and commit via Git or create via SFTP and commit via Pantheon Dashboard.  Once the directory has been created and committed, resubmit your changes via file systems settings page in your Drupal Admin interface.
+If you receive the above error, make sure you that the private path for code or files exists in your repository. If you are configuring a private path for code, you'll need to start from your Dev environment and create the private directory and commit via Git or create via SFTP and commit via Pantheon Dashboard. Once the directory has been created and committed, you can deploy to Test and Live to deploy the new directory. Once the directory exists you can resubmit your changes via the file systems settings page in your Drupal Admin interface for each environment.
 
 ### Selectively Exposing Code
 
