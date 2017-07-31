@@ -4,7 +4,7 @@ description: Use SSO to centrally manage user identities and provide seamless in
 tags: [security, tools]
 categories: []
 ---
-Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of single sign-on (SSO) solutions. Learn more about [Single Sign-On for Pantheon Organization](/docs/sso-organizations/).
+Many organizations need to centrally manage their user's identities and provide seamless integration across multiple applications. Numerous Pantheon customers, including higher educational institutions, school districts, local governments, and other groups use a variety of single sign-on (SSO) solutions. Learn more about [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/).
 
 Pantheon’s flexible infrastructure does not restrict protocols or ports used for communication. There are no outbound restrictions (protocol, port, etc.) for traffic from Pantheon to external services.
 
