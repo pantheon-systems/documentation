@@ -13,7 +13,7 @@ Drupal: `sites/default/files/private`
 WordPress: `wp-content/uploads/private`
 
 **Private Path for Code (Version Controlled)**  
-Drupal and WordPress: `/private`   
+Drupal and WordPress: `private`   
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
@@ -21,12 +21,12 @@ Drupal and WordPress: `/private`
 </div>
 
 ## Private Path for Code
-Store data that should be version controlled, such as [Quicksilver](/docs/quicksilver/) scripts, within the `/private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `/private`. If you're connecting via Git, use the `/private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
+Store data that should be version controlled, such as [Quicksilver](/docs/quicksilver/) scripts, within the `private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `private`. If you're connecting via Git, use the `private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
 
 ## Private Path for Files
 When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](https://lockr.io/) to automatically encrypt and secure keys on distributed platforms such as Pantheon. You can integrate this service using the [Lockr plugin](https://wordpress.org/plugins/lockr/) for WordPress and the [Lockr module](https://www.drupal.org/project/lockr) for Drupal. For more details, see this [related blog post](https://pantheon.io/blog/key-drupal-security).
 
-Alternatively, you can store sensitive data in a JSON or ini-style text file within the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) directories. These directories are symbolically linked to Valhalla and can also be accessed from the `/files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
+Alternatively, you can store sensitive data in a JSON or ini-style text file within the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) directories. These directories are symbolically linked to Valhalla and can also be accessed from the `files` directory when connecting via SFTP. This allows secure data to be distributed to other environments, while keeping it out of version control. You can then read the data from `settings.php` or `wp-config.php`, like so:
 ```
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
   $json_text = file_get_contents('sites/default/files/private/stripe_live.json');
@@ -51,7 +51,7 @@ To configure, go to **Administration** > **Configuration** > **Media** > **File 
 
 ### Resolving Warning: file_put_contents(private:///.htaccess)
 
-If you receive the above error, you may need to visit and resubmit the file systems settings page in your Drupal Admin interface.
+If you receive the above error, make sure that the private path for code or files exists in your repository.  If you are configuring a private path for code, you'll need to create the private directory first and commit via Git or create via SFTP and commit via Pantheon Dashboard.  Once the directory has been created and committed, resubmit your changes via file systems settings page in your Drupal Admin interface.
 
 ### Selectively Exposing Code
 
