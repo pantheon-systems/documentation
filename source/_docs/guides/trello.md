@@ -6,8 +6,6 @@ type: guide
 permalink: docs/guides/:basename/
 date: 5/4/2017
 contributors: scottmassey
-
-test site https://trello.com/webteam865/members
 ---
 
 [Trello](https://trello.com) is a simple yet powerful project management tool which helps teams to collaborate on projects in an agile framework. Trello lends itself to not only web projects, but also helps businesses keep [other](https://trello.com/inspiration) internal tasks and objectives organized.
