@@ -122,7 +122,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 1. In Asana, grab the task ID you are working on, which is last part of the open task's url.
 
-    ![Asana task ID](/source/docs/assets/images/integrations/asana/card-id.png)
+    ![Asana task ID](/source/docs/assets/images/integrations/asana/task-id.png)
 
 3. Push a code change that contains the task ID in the commit message in brackets. This workflow will trigger `asana_integration.php` script, which will search commits for possible issue IDs and comment in the Asana task when found.
 
