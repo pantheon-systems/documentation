@@ -96,7 +96,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
     ``` bash
     mkdir private
     mkdir private/scripts
-    curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/pivotal-tracker/pivotal_integration.php --output ./private/scripts/pivotal.php
+    curl https://raw.githubusercontent.com/pantheon-systems/quicksilver-examples/master/pivotal-tracker/pivotal_integration.php --output ./private/scripts/pivotal_integration.php
     ```
 
 4. Create a `pantheon.yml` file if one doesn't already exist in your root directory.
@@ -110,7 +110,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
         after:
           - type: webphp
             description: Pivotal Integration
-            script: private/pivotal_integration.php
+            script: private/scripts/pivotal_integration.php
     ```
 
     <div class="alert alert-info">
@@ -120,7 +120,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
 
-        git commit -am "Create private/pivotal_integration.php and configure platform hooks"
+        git commit -am "Create private/scripts/pivotal_integration.php and configure platform hooks"
         git push origin master
 
 ## Test Pivotal Tracker Integration on Pantheon
