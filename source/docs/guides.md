@@ -88,7 +88,16 @@ title: Guides
     <a href="/docs/guides/pivotal-tracker/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
-          <img alt="New Relic" src="/source/docs/assets/images/logos/pivotal.png" class="main-topic-info__plugin-image" >
+          <img alt="Pivotal Tracker" src="/source/docs/assets/images/logos/pivotal.png" class="main-topic-info__plugin-image" >
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="flex-panel-item-platform-integrations-guides">
+    <a href="/docs/guides/trello/">
+      <div class="flex-panel-body-platform-integrations">
+        <div class="platform-integrations">
+          <img alt="Trello" src="/source/docs/assets/images/logos/trello.png" class="main-topic-info__plugin-image" >
         </div>
       </div>
     </a>

@@ -7,7 +7,6 @@ permalink: docs/guides/:basename/
 date: 5/4/2017
 contributors: scottmassey
 ---
-
 [Trello](https://trello.com) is a simple yet powerful project management tool which helps teams to collaborate on projects in an agile framework. Trello lends itself to not only web projects, but also helps businesses keep [other](https://trello.com/inspiration) internal tasks and objectives organized.
 
 In this guide, we'll use a Trello instance with a site on Pantheon. When changes are pushed to Pantheon that reference a Trello card's unique ID, the commit message will appear in the card.
@@ -28,11 +27,13 @@ Be sure that you:
 ## Create a Machine User in Trello
 Start by creating a new machine user in your Trello instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
-1. If you haven't created a team already, login to your Trello instance and click <i class="fa fa-plus"></i>, found in the upper panel, then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create**.
+1. If you haven't done so already, create a team. Login to your Trello instance and click <i class="fa fa-plus"></i>, found in the upper panel, then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create**:
 
     ![Create a team](/source/docs/assets/images/integrations/trello/new-team.png)
 
-2. If you have a team, select it from your dashboard, and then underneath **Add Members** select **Add by name or email**.
+    If you already have a team, select it from your dashboard.
+
+2. Under **Add Members**, select **Add by name or email**.
 
 3. Enter a name and email address for the machine user, which acts as the intermediary between Trello and the Pantheon Site Dashboard.
 
@@ -40,22 +41,24 @@ Start by creating a new machine user in your Trello instance. This user is refer
 
     ![Create an automation user](/source/docs/assets/images/integrations/trello/add-member.png)
 
-4. Verify the team with the automation user is assigned to the relevant board.
+4. Login as the new "Automation User" and make sure you're a team member on the relevant board:
 
     ![Add a team](/source/docs/assets/images/integrations/trello/team-board.png)
 
-5. Get the machine user's API key and token [here](https://trello.com/app-key). Save these for the next steps.
+5. Copy the machine user's API key from [here](https://trello.com/app-key), then click the link to manually generate a Token:
+
+    ![Copy developer api key](/source/docs/assets/images/integrations/trello/developer-keys.png)
+
+    Save your key and token, to be used in the next section.
 
 ## Securely Store User Credentials on Pantheon
 Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/docs/private-paths/#private-path-for-files) of Pantheon's filesystem.
 
 We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
 
-In the commands below, replace `<site>` with your site name, `<user>` with your Trello machine account username, and `<password>` with its password.
+1. First, let's check for existing secrets using Terminus (replace `<site>` with your site name):
 
-1. First, let's check for existing secrets using Terminus:
-
-        SITE=<site_name>
+        SITE=<site>
         terminus secrets:list $SITE.dev
 
   If no existing keys are found, execute the following to create a new `secrets.json` file and upload it to Pantheon:
@@ -68,12 +71,13 @@ In the commands below, replace `<site>` with your site name, `<user>` with your 
 
   Otherwise, continue to the next step.
 
-2. NOTE: may not need this: Use Terminus to write your machine username in the private `secrets.json` file:
+2. Use Terminus to store the Automation User's API key in the the private `secrets.json` file (replace `<API key>`):
+
         terminus secrets:set $SITE.dev trello_key '<API key>'
 
-3. Write the machine user's api-key to the private `secrets.json` file:
+3. Use Terminus to store the Automation User's token in the the private `secrets.json` file (replace `<Token>`):
 
-        terminus secrets:set $SITE.dev trello_token '<API token>'
+        terminus secrets:set $SITE.dev trello_token '<Token>'
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -127,17 +131,19 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 ## Test Trello Integration on Pantheon
 
-1. Create a test issue in an existing or new Trello project. Take note of the issue ID, which is located in the Trello card's url.
+1. Create a test issue in an existing or new Trello project. Copy the issue ID, which is located in the Trello card's URL:
 
     ![Trello card ID](/source/docs/assets/images/integrations/trello/card-id.png)
 
-2. Optional: In a separate terminal window, run `terminus workflow:watch` to see the next process unfold in real time.
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    In a separate teriminal window, run <code>terminus workflow:watch $SITE</code> to see the process unfold in real time (optional).</div>
 
-3. Push a code change that contains the Trello card ID in the commit message in brackets. This workflow will trigger `trello_integration.php` script, which will search commits for possible issue IDs and comment in Trello when found.
+2. Push a code change to Pantheon containing the Trello card ID in the commit message in brackets (e.g., [4K2zqr1A]). This workflow will trigger `trello_integration.php` script, which will search commits for possible issue IDs and comment in Trello when found.
 
-        git commit -m "[6myMQsIk] This commit fixes the font type."
+        git commit -m "[4K2zqr1A]: Require wp-redis as dropin via Composer"
 
-4. Return to the issue in Trello to see a message from our machine user:
+3. Return to the issue in Trello to see a message from our machine user:
 
     ![Trello card](/source/docs/assets/images/integrations/trello/trello-card.png)
 
