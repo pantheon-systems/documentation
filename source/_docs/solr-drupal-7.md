@@ -1,12 +1,14 @@
 ---
-title: Enabling Solr with Drupal
-description: Detailed information on using Apache Solr with Drupal.
-tags: [siteintegrations, addons]
+title: Enabling Solr with Drupal 7
+description: Detailed information on using Apache Solr with Drupal 7.
+tags: [siteintegrations, addons, search index, solr]
 categories: [drupal]
 ---
 [Apache Solr](/docs/solr) is a system for indexing and searching site content. First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
 
 This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with Drupal.
+
+For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
 
 ## Installing Solr for Drupal
 ### 1. Apply Upstream Updates
@@ -18,8 +20,6 @@ Two contributed modules are supported by Pantheon that interface with Pantheon's
 
 - [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.x and 6.x-1.x
 - [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.x
-
-For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
 
 For most users, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.  
 
