@@ -60,6 +60,12 @@ A stable release for Drupal 8 is not yet available for the [SendGrid Integration
  ```nohighlight
  terminus drush <site>.<env> -- en sendgrid_integration -y
  ```
+ 
+ Access the composer manager page `/admin/config/system/composer-manager` and click "Reuild composer.json file" button.
+ 
+ ```nohighlight
+ terminus drush <site>.<env> -- composer-manager update --no-dev
+ ```
 
 2.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
 
