@@ -11,16 +11,15 @@ Cron will always run unless all jobs are specifically set to 'Off' via Elysia or
 Both Drupal core and many contributed modules have tasks that need to be performed on a regular basis. You can configure when and how often cron executes the tasks.
 
 ## Pantheon Cron Execution
+Pantheon executes cron once an hour on every environment to allow Drupal to perform scheduled tasks. This generally occurs within 5 to 10 minutes of half past each hour: 4:30pm, 5:30pm, 6:30pm, etc.
 
-For every site environment, Pantheon executes cron once an hour to allow Drupal to perform any scheduled tasks. The run is generally within 5 to 10 minutes of half past each hour: 4:30pm, 5:30pm, 6:30pm, etc.
-
-For other sites, cron is triggered via a browser/page request or crontab. In the Pantheon platform, cron is triggered by a drush command:
+Typically cron is triggered via a browser/page request or crontab. However, Pantheon uses the following to automatically trigger cron on the platform:
 ```bash
 drush pantheon_cron 3600
 ```
-Technically, the command bootstraps your site and invoke [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7), which is just like how normal Drupal cron runs.
+Technically, the command bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7), similar to how Drupal cron runs normally.
 
-## Managing Cron
+## Manage Cron
 
 You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
@@ -38,7 +37,7 @@ To ensure that cron tasks have been run, check the reports via the Drupal Admin
 If cron has run recently, entries will appear in the log. The two entries in the screenshot below show that cron has run and a cron task called "cron\_example".
 ![Cron log entry in reports](/source/docs/assets/images/drupal-reports.png)
 
-### How Can I Schedule Cron to Run More Often?
+### Run Cron More Often
 
 While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, the platform will automatically execute `drush pantheon_cron 3600` once an hour, usually within 5 to 10 minutes of half past each hour (4:30pm, 5:30pm, 6:30pm, etc).
 
@@ -57,18 +56,14 @@ As an alternative solution if you have anything that is executing a cron on yo
 Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/). You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron](https://drupal.org/project/EasyCron) module. The unique URL to kick off cron externally can be found at `/admin/config/system/cron`
 
 
-## Disabling Cron
+## Disable Cron
+Pantheon's cron execution cannot be disabled and will run every hour on all environments, even if cron is disabled in Drupal. Using a module like Elysia Cron will allow more granular control of what happens when Drupal cron runs.
 
-Pantheon's system cron cannot be disabled and will run Drupal cron every hour, even if cron is disabled in Drupal. Using a module like Elysia Cron will allow more granular control of what happens when Drupal cron runs.
+You can disable cron via admin interface at `/admin/system/config/cron`. Select **Never** from the "Run cron every" drop-down menu, then save the configuration.
 
-Drupal cron can be disabled via admin interface `/admin/system/config/cron`. 
-Select **Never** from the "Run cron every" drop-down menu, then save the configuration.
 ![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>		
-<p>In Drupal, setting the value to "Never" will be ignored; system cron will always run at least hourly.		</p>
-</div>
+This configuration disables cron execution in Drupal, but it does not affect Pantheon's cron execution at the platform level.
 
 ## Troubleshooting Cron
 
