@@ -115,12 +115,12 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
 <hr>
-### [IMCE 6.x](https://www.drupal.org/node/251024)
+### [IMCE 6.x](https://www.drupal.org/node/251024) and [IMCE 7.x](https://www.drupal.org/project/imce/releases/7.x-1.11)
 **Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
 
 **Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Redis) is used for operations on highly populated directories:
 
-1. [Enable Redis](/docs/redis), otherwise the database cache is utilized.
+1. [Enable Redis](/docs/redis), otherwise the database cache is utilized. (Depending on your site's configuration, you may not net to enable Redis.)
 2. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
 
  ```
