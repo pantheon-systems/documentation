@@ -55,8 +55,6 @@ title: Guides
       </div>
     </a>
   </div>
-</div>
-<div class="flex-panel-group">
   <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/guides/new-relic-deploys/">
       <div class="flex-panel-body-platform-integrations">
@@ -66,6 +64,8 @@ title: Guides
       </div>
     </a>
   </div>
+</div>
+<div class="flex-panel-group">
   <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/guides/pagerduty/">
       <div class="flex-panel-body-platform-integrations">
@@ -80,6 +80,15 @@ title: Guides
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
           <img alt="Pingdom" src="/source/docs/assets/images/logos/pingdom.png" class="main-topic-info__plugin-image" >
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="flex-panel-item-platform-integrations-guides">
+    <a href="/docs/guides/pivotal-tracker/">
+      <div class="flex-panel-body-platform-integrations">
+        <div class="platform-integrations">
+          <img alt="New Relic" src="/source/docs/assets/images/logos/pivotal.png" class="main-topic-info__plugin-image" >
         </div>
       </div>
     </a>
