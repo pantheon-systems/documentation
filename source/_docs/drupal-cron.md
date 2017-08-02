@@ -14,16 +14,11 @@ Both Drupal core and many contributed modules have tasks that need to be perfor
 
 For every site environment, Pantheon executes cron once an hour to allow Drupal to perform any scheduled tasks. The run is generally within 5 to 10 minutes of half past each hour: 4:30pm, 5:30pm, 6:30pm, etc.
 
-To do that, Pantheon internally invokes `drush pantheon_cron 3600`.
-
-This bootstraps your site and invokes [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7).
-
-Pantheon's system cron cannot be disabled and will run Drupal cron every hour, even if cron is disabled in Drupal. Using a module like Elysia Cron will allow more granular control of what happens when Drupal cron runs.
-
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>		
-<p>In Drupal, setting the value to "Never" will be ignored; system cron will always run at least hourly.		</p>
-</div>
+For other sites, cron is triggered via a browser/page request or crontab. In the Pantheon platform, cron is triggered by a drush command:
+```bash
+drush pantheon_cron 3600
+```
+Technically, the command bootstraps your site and invoke [drupal\_cron\_run](https://api.drupal.org/api/drupal/includes!common.inc/function/drupal_cron_run/7), which is just like how normal Drupal cron runs.
 
 ## Managing Cron
 
@@ -61,6 +56,20 @@ As an alternative solution if you have anything that is executing a cron on yo
 
 Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/). You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron](https://drupal.org/project/EasyCron) module. The unique URL to kick off cron externally can be found at `/admin/config/system/cron`
 
+
+## Disabling Cron
+
+Pantheon's system cron cannot be disabled and will run Drupal cron every hour, even if cron is disabled in Drupal. Using a module like Elysia Cron will allow more granular control of what happens when Drupal cron runs.
+
+Drupal cron can be disabled via admin interface `/admin/system/config/cron`. 
+Select **Never** from the "Run cron every" drop-down menu, then save the configuration.
+![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
+
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>		
+<p>In Drupal, setting the value to "Never" will be ignored; system cron will always run at least hourly.		</p>
+</div>
+
 ## Troubleshooting Cron
 
 ### Why didn't cron run?
@@ -84,10 +93,7 @@ You can also use [Terminus](/docs/terminus/) to see when cron was last run with 
 ```bash
 terminus drush <site>.<env> -- wd-show --type='cron'
 ```
-### Can I prevent Drupal Cron from running?
 
-Yes, from within Drupal at `admin/system/config/cron`, select **Never** from the "Run cron every" drop-down menu, then save the configuration. However, Pantheon system cron will run every hour and there is no way to disable it.
-![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
 ## Resources
 
 - [Drupal.org Community Documentation - Set up Cron](https://www.drupal.org/docs/7/setting-up-cron/overview)
