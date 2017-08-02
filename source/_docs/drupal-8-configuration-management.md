@@ -51,25 +51,6 @@ Using Terminus, you can complete the above process from the command line.
 7.  `terminus drush <site>.live -- cim -y`
 8.  `open live-mysite.pantheonsite.io`
 
-### Relocating the Configuration Directory
-
-Configuration files can contain sensitive information. Pantheon protects the default configuration directories specified by our upstream, but the conventional way to protect these files is to locate them outside of the site document root. Following this convention may help make site configuration easier to manage. This is possible on Pantheon by [relocating the document root](https://pantheon.io/docs/nested-docroot/). After implementing the `pantheon.yml` and confirming the relocation is successful, the configuration directories can be moved by modifying the `settings.php`:
-
-```php
-/**
- * Place the config directory outside of the Drupal root.
- */
-$config_directories = array(
-  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
-);
-```
-
-Care should be taken to ensure that this code is added after the settings.pantheon.php is included; otherwise, the `CONFIG_SYNC_DIRECTORY` will be overwritten with the Pantheon default value. The configuration directory must exist before this variable is changed. If the configuration directory currently exists in the default location, it can be relocated using `git mv`:
-
-```
-$ git mv web/sites/default/files/config .
-```
-
 ## Configuration Tools for Drupal 8
 With [Drupal 8](https://pantheon.io/drupal-8), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.
 
@@ -93,4 +74,32 @@ Additionally, the [three-way merge page](https://github.com/pantheon-systems/dru
 ### Installation Script
 If you would like to try out any of the example scenarios presented in the repository, there is also a handy installation script that will quickly set up a local environment for you to use. It can be used to either clone a Pantheon site locally, or it can create both sites locally. Instructions on how to use the script are detailed on the [installation page](https://github.com/pantheon-systems/drush-config-workflow/blob/master/INSTALL.md).
 
+## Relocated Configuration Directory
+Configuration files can contain sensitive information. Drupal takes some measures to protect the default configuration directory, but the conventional way to secure these files is to locate them outside of the document root so they are not web accessible. Following this convention may help make site configuration easier to manage.
+### Before you Begin
+- Follow [one-time setup instructions](/docs/nested-docroot/#one-time-setup) to enable nested docroot on a new or existing Drupal 8 site
 
+### Configure and Relocate
+After implementing a nested docroot, set a new path (`/config`) for configuration directories by adding the following to `settings.php`:
+
+```php
+/**
+ * Place the config directory outside of the Drupal root.
+ */
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
+);
+```
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">Care should be taken to ensure that this code is added after the `settings.pantheon.php` is included; otherwise, the `CONFIG_SYNC_DIRECTORY` will be overwritten with the Pantheon default value. The configuration directory must exist before this variable is changed.</p>
+</div>
+
+Relocate the configuration directory for the default location using `git mv`:
+
+```
+$ git mv web/sites/default/files/config .
+```
+
+For additional details, see [this blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root).
