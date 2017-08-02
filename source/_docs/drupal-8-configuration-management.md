@@ -73,3 +73,33 @@ Additionally, the [three-way merge page](https://github.com/pantheon-systems/dru
 
 ### Installation Script
 If you would like to try out any of the example scenarios presented in the repository, there is also a handy installation script that will quickly set up a local environment for you to use. It can be used to either clone a Pantheon site locally, or it can create both sites locally. Instructions on how to use the script are detailed on the [installation page](https://github.com/pantheon-systems/drush-config-workflow/blob/master/INSTALL.md).
+
+## Relocated Configuration Directory
+Configuration files can contain sensitive information. Drupal takes some measures to protect the default configuration directory, but the conventional way to secure these files is to locate them outside of the document root so they are not web accessible. Following this convention may help make site configuration easier to manage.
+### Before you Begin
+- Follow [one-time setup instructions](/docs/nested-docroot/#one-time-setup) to enable nested docroot on a new or existing Drupal 8 site
+
+### Configure and Relocate
+After implementing a nested docroot, set a new path (`/config`) for configuration directories by adding the following to `settings.php`:
+
+```php
+/**
+ * Place the config directory outside of the Drupal root.
+ */
+$config_directories = array(
+  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
+);
+```
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">Care should be taken to ensure that this code is added after the `settings.pantheon.php` is included; otherwise, the `CONFIG_SYNC_DIRECTORY` will be overwritten with the Pantheon default value. The configuration directory must exist before this variable is changed.</p>
+</div>
+
+Relocate the configuration directory for the default location using `git mv`:
+
+```
+$ git mv web/sites/default/files/config .
+```
+
+For additional details, see [this blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root).
