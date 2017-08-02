@@ -10,7 +10,7 @@ However, some plugins or themes will use `session_start()` or PHP's `$_SESSION` 
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p>Given the variety of implementations, this plugin will not solve all <code>$_SESSION</code> based issues and errors. If you use this plugin and still have issues, modify the code within your theme or plugin that calls <code>$_SESSION</code> to remove this functionality or use an alternative.</p>
+<p markdown="1">Given the variety of implementations, this plugin will not solve all `$_SESSION` based issues and errors. If you use this plugin and still have issues, modify the code within your theme or plugin that calls `$_SESSION` to remove this functionality or use an alternative.</p>
 </div>
 
 ## Troubleshooting Session Errors
@@ -25,29 +25,41 @@ Plugins with session-using code are relying on PHP's default session manager, wh
 ### Install WordPress Native PHP Sessions Plugin
 If `$_SESSIONs` are necessary for your application, install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
 
-1. Save the [installation script](https://gist.github.com/greg-1-anderson/dd033d820d0a9d2659e6)  locally within your current $PATH as `add-php-sessions-plugin.php`
-2. Make the file executable:
+1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
 
- ```
- chmod +x add-php-sessions-plugin.php
- ```
-
-3. Login with [Terminus](/docs/terminus/):
-
- ```
- terminus auth:login --email <email address>
+ ```nohighlight
+ terminus connection:set <site>.<env> sftp
  ```
 
-4. Execute the installation script on your site:
+2. Install and activate  [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=wp+native-php-sessions`) or with Terminus:
 
- ```
- php add-php-sessions-plugin.php <site>
+ ```nohighlight
+ terminus wp <site>.<env> -- plugin install wp-native-php-sessions --activate
  ```
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Replace <code>&lt;site&gt;</code> with your Pantheon site name.</p>
-</div>
+3. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
+
+ ```nohighlight
+ terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Install WordPress Native PHP Sessions plugin"
+ ```
+
+4. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
+
+ ```nohighlight
+ terminus wp <site>.test -- plugin activate wp-native-php-sessions
+ ```
+
+5. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
+
+ ```nohighlight
+ terminus env:deploy <site>.live --cc --note="Install WordPress Native PHP Sessions plugin"
+ ```
+
+6. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
+
+ ```nohighlight
+ terminus wp <site>.live -- plugin activate wp-native-php-sessions
+ ```
 
 Once enabled, your functionality will "just work". For more information, see [Fix WordPress PHP Session Problems on Pantheon with a Script](https://pantheon.io/blog/fix-wordpress-php-session-problems-pantheon-script).
 
@@ -64,4 +76,4 @@ curl -Is https://www.getpantheon.com|grep PHPSESS|wc -l
 
 You should substitute your site URL in there, but the desired output is "0" (zero).
 
-If your site is overly agressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on WordPress.org to alert the author to the problem and share your solution.
+If your site is overly aggressively starting sessions, you should search through the codebase for references to `session_start()` or `$_SESSION` to see where it is happening and develop a workaround. If the code is in a community plugin, open an issue on WordPress.org to alert the author to the problem and share your solution.
