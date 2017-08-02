@@ -23,13 +23,14 @@ Here is an example of a code snippet to set the `$base_url` per environment:
 ````
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain/ in the Live environment
-  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live'):
+  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     /** Replace www.example.com with your registered domain name */
     $primary_domain = 'www.example.com';
-  else:
+  }
+  else {
     // Redirect to HTTPS on every Pantheon environment.
     $primary_domain = $_SERVER['HTTP_HOST'];
-  endif;
+  }
   $base_url = 'https://'. $primary_domain;
   if ($_SERVER['HTTP_HOST'] != $primary_domain
       || !isset($_SERVER['HTTP_X_SSL'])
