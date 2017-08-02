@@ -126,10 +126,10 @@ The ticket support feature is available to certain plans and account types. For 
 5. Click **Open Ticket**
 
 ## Pantheon On-Call
-Elite sites and organizations who opt for Priority Enterprise Support (see below) can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call has a response time SLA of 30 minutes and immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+Elite sites and organizations who opt for [Priority Enterprise Support](#pantheon-enterprise-support) can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call has a response time SLA of 30 minutes and immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Priority Enterprise Support
-Priority Enterprise Support is a blanket support plan which can be purchased for any organization. It covers all team members and sites, adding a 2-hour SLA for ticket responses and the ability to trigger Pantheon's on-call emergency system described above. (Learn more)[https://pantheon.io/priority-enterprise-support].
+Priority Enterprise Support is a blanket support plan which can be purchased for any organization. It covers all team members and sites, adding a 2-hour SLA for ticket responses and the ability to trigger Pantheon's on-call emergency system described above. [Learn more](https://pantheon.io/priority-enterprise-support).
 
 ## Scope of Support
 
