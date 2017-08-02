@@ -12,7 +12,7 @@
 <p markdown="1">Add the following to <code>wp-config.php</code> (replace <code>www.example.com</code>):</p>
 <pre id="git-pull-wp"><code class="php hljs" data-lang="hljs">if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain/ in the Live environment
-  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live'){
+  if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     /** Replace www.example.com with your registered domain name */
     $primary_domain = 'www.example.com';
   }
