@@ -110,7 +110,7 @@ For more details, see [HTTPS on Pantheon's Global CDN](/docs/https).
 
 ## Frequently Asked Questions
 
-### Is there a deadline to ugprade?
+### Is there a deadline to upgrade?
 Ultimately the Global CDN will be the default for every site on Pantheon. We encourage customers to upgrade as soon as they have time to do the changes.
 
 ### I already have a CDN - should I switch?
