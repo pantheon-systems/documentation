@@ -122,7 +122,7 @@ If your DNS changes propagate before certificates are fully deployed across the 
 
 ### HTTPS doesn't provision with Sucuri's default settings
 
-By default Sucuri blocks serving the challenges needed to verify domain ownership and issue Let's Encrypt certificates. Contact Sucuri support and request they enable the "Forward Certificate Validation" setting, which allows HTTPS provisioning to complete successfully. Note you'll want to keep this setting enabled, so the certificate will always renew automatically.
+For details, see [Configure Custom HTTPS Certificate with Stacked CDNs](/docs/custom-https#sucuri).
 
 ### Moz Pro 804 HTTPS SSL error
 Moz Pro is unable to crawl sites using Server Name Indication (SNI). For information on beta access to SNI support, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
