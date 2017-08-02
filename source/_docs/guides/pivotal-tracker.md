@@ -153,7 +153,5 @@ If code is automatically tested and deployed when pushed to the origin repositor
   [Delivers #148528125] Small bug fix.
 ```
 
-Optionally, you may want to use the `terminus workflows watch` command to get immediate debugging feedback.
-
 ## Conclusion
 In this guide, we covered a simple but time-saving integration between [Pivotal Tracker](https://www.pivotaltracker.com) and Pantheon. There are similar ways to integrate other project management applications using [Quicksilver hooks](https://github.com/pantheon-systems/quicksilver-examples). Additionally, you can use continuous integration tools such as [CircleCI](https://pantheon.io/docs/guides/github-pull-requests/) if you use an external repository such as GitHub. Using these integrations will give clarity into work being performed across your team, while saving time by automating your development workflow.
