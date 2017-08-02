@@ -21,7 +21,7 @@ All plans except for a Personal plan can use Solr. Solr is available to Sandbox 
 
 ## Using Solr with WordPress or Drupal
 
-For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr), [Enabling Solr with Drupal](/docs/solr-drupal) or [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
+For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr), [Enabling Solr with Drupal 7](/docs/solr-drupal-7) or [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
 
 ## Known Limitations of Pantheon's Solr Service
 
