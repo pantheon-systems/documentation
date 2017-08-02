@@ -17,10 +17,12 @@ previouspage: Introduction
 editpath: launch/02-plans.md
 image: getting-started-Largethumb
 ---
-In this lesson, we'll upgrade from a free Sandbox site to a paid plan by adding your billing information or by inviting a business owner to pay.
+The first step to launching your site on Pantheon is to upgrade your free Sandbox site to a paid plan. Once the site has been upgraded, you'll have access to features like Custom Domains and free, automated HTTPS.
+
+You can invite a business owner to pay or you can use your own credit card to pay for the monthly subscription:
 
 ## Use Your Own Card
-If you plan to pay for the site or if you want to wait to transfer ownership, you can add your own payment method now:
+If you plan to pay for the site or if you want to wait to transfer ownership, you can skip the invite process and add your own payment method to the site.
 
 1. From the Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
 2. Go to the **Billing** tab and select a payment method, then click **Update Payment Method**. You can add a new card or choose from cards already associated with your user account.

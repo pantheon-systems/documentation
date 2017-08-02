@@ -25,7 +25,9 @@ image: getting-started-Largethumb
 For more information on this feature, see [Backups Tool](/docs/backups/).
 
 ## Review Status Reports
-Launch with confidence by taking advantage of Pantheon's static site analysis service for Drupal and WordPress.
+Launch with confidence by taking advantage of Pantheon's static site analysis service for Drupal and WordPress. Status reports are found in the Site Dashboard within the **Status** tab.
+
+This automated report checks for exploited patterns in code, shows database stats, reveals PHP errors, and much more. You'll even find best practice recommendations to configure cache for improved performance.
 
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 2. Navigate to the **<span class="glyphicons glyphicons-info-sign"></span> Status** page.

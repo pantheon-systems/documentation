@@ -17,7 +17,7 @@ previouspage: Configure DNS and HTTPS
 editpath: launch/05-redirects.md
 image: getting-started-Largethumb
 ---
-In this lesson, we'll redirect incoming requests to a primary domain name (e.g., `www.example.com` or `example.com`). Standardizing on a single URL prevents content duplication across domains for improved SEO.
+Once you have DNS configured and HTTPS provisioned, you're ready to redirect incoming requests to a primary domain name (e.g.www.example.com or example.com). Standardizing on a single URL prevents content duplication across domains for improved SEO.
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 2. Click **<span class="glyphicons glyphicons-info-sign" aria-hidden="true"></span>  SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.

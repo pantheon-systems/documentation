@@ -24,7 +24,7 @@ Welcome! This guide will help you take a site live on Pantheon.
 
 * Upgrade a site to a paid plan
 * Add a custom domain to Pantheon
-* Enable Free & Automatic HTTPS
+* Enable free, automated HTTPS
 * Redirect traffic to your primary domain (e.g., `www.example.com` or `example.com`)
 
 To get started, you need to [create your Live environment](/docs/guides/getting-started/create-test-live/) and have a registered domain name where you can control DNS settings.

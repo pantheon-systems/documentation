@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Configure DNS and HTTPS
+subtitle: Configure DNS
 launch: true
 anchorid: dns
 generator: pagination
@@ -18,21 +18,15 @@ previouspage: Connect a Domain to Live
 editpath: launch/04-configure-dns.md
 image: getting-started-Largethumb
 ---
-In this lesson we'll configure DNS and provision HTTPS on Pantheon. For details, see [Free and Managed HTTPS](/docs/https/).
+1. Domains that haven’t been routed to Pantheon will indicate action required on the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page, like so:
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-If your site is already live and requires HTTPS, return to <a href="/docs/guides/launch/domains">Connect a Domain to Live</a> and complete the steps to pre-provision HTTPS before updating DNS to avoid downtime.
-</div>
+  ![Action Required configure DNS](/source/docs/assets/images/dashboard/domains-action-required.png)
 
-## Configure DNS
-The <span class="glyphicons glyphicons-alert text-warning"></span> icon within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page indicates that the domain has not been properly routed to Pantheon. The following actions are required:
+2. Click the **Details** button next to your domain.
+3. In a separate window, log in to the DNS host for the domain and configure the recommended records.
+4. Copy the value provided in the Pantheon Site Dashboard for the required A record, then use it to create an A record wherever you manage DNS.
 
-1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
-2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
-3. Select **Details** next to the `www` domain.
-4. In a separate window, log in to the DNS host for the domain.
-5. Copy the value provided in the Pantheon Site Dashboard for the required CNAME record (e.g., `live-yoursite.pantheonsite.io`), then use it to create a CNAME record wherever you manage DNS.
+  Repeat this step for both of the required AAAA records. If you also connected the  www subdomain, navigate to the domain details to get the required CNAME value.
 
     <div class="panel panel-drop panel-guide" id="accordion">
       <div class="panel-heading panel-drop-heading">
@@ -42,50 +36,20 @@ The <span class="glyphicons glyphicons-alert text-warning"></span> icon within t
         <ul class="top-docs top-docs-2col docs-2col-panel">
           {% for doc in data.docs_tags.providers %}
             {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-              {% if (doc.meta.provider == "Cloudflare") %}
-                <li><a href="{{ doc.url }}#configure-dns-records-on-cloudflare">{{ doc.provider }}</a></li>
-              {% else %}
-                <li><a href="{{ doc.url }}#cname-record">{{ doc.provider }}</a></li>
-              {% endif %}
+              <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
       </div>
     </div>
 
-6. Return to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page in the Pantheon Site Dashboard.
-7. Click **Details** next to the bare domain.
-8. Copy the value provided in the Pantheon Site Dashboard for the required A record, then use it to create an A record wherever you manage DNS.
-
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific-2"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
-      </div>
-      <div id="host-specific-2" class="collapse" style="padding:10px;">
-        <ul class="top-docs top-docs-2col docs-2col-panel">
-          {% for doc in data.docs_tags.providers %}
-            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-              {% if (doc.meta.provider == "Cloudflare") %}
-                <li><a href="{{ doc.url }}#configure-dns-records-on-cloudflare">{{ doc.provider }}</a></li>
-              {% else %}
-                <li><a data-proofer-ignore  href="{{ doc.url }}#aaaaa-records">{{ doc.provider }}</a></li>
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-
-    Repeat this step for **both** of the required AAAA records.
-
-## Provision HTTPS
-The process to provision certificates kicks off automatically after the domain has been successfully routed to Pantheon, indicated by the following notice:
+Unless you completed the steps to prove domain ownership and pre-provision certificates, you'll see HTTPS in progress within an hour of pointing DNS to Pantheon:
 
 <blockquote class="block-info">
 <h3 class="info">HTTPS</h3>
 <span class="glyphicons glyphicons-history text-info"></span> Your DNS configuration is correct, and certificate provisioning is queued to start for this domain.</blockquote>
 
-Both the bare domain and the `www` domain will be accessible over HTTPS once the HTTPS status turns green (which may take up to an hour):
+Once DNS is configured and your certificates are provisioned, the status should indicate successful configuration:
 
 <blockquote class="block-success">
 <h3 class="info">HTTPS</h3>
