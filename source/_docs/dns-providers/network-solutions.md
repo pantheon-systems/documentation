@@ -38,7 +38,7 @@ Keep this page open and login to your <a href="https://www.networksolutions.com"
     {% include("ttl.twig") %}
 
 7. Click **Save Changes**.
-8. Once changes are saved, the CNAME section of the Advanced DNS interface should look like this:
+8. Once changes are saved, the section of the Advanced DNS interface for A records should look like this:
 
   ![Network Solutions Final CNAME](/source/docs/assets/images/dns/networksolutions/final-a.png)
 
@@ -53,7 +53,7 @@ The CNAME record is required if you wish to include `www` within your site's pri
 
 3. Select desired Time to Live (TTL).
 4. Click **Continue**, then **Save Changes**.
-5. Once changes are saved, the CNAME section of the Advanced DNS interface should look like this:
+5. Once changes are saved, the section of the Advanced DNS interface for CNAME records should look like this:
 
   ![Network Solutions Final CNAME](/source/docs/assets/images/dns/networksolutions/final-cname.png)
 
