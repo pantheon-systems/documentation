@@ -13,11 +13,45 @@ We base our Drupal 7 repository on the canonical source from drupal.org, and the
 - [Drupal 8](https://github.com/pantheon-systems/drops-8) <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Install Requires SFTP Mode"><em class="fa fa-info-circle"></em></a>
 - [Drupal 7](https://github.com/pantheon-systems/drops-7)
 
+## Public Distributions
+We include a growing number of "Drupal products" as available upstreams on Pantheon. These are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.		
+
+<div class="alert alert-info" role="alert">		
+<h4 class="info">Note</h4>		
+<p>Public distributions are not maintained by Pantheon. If the upstream is out of date, contact the maintainer through <a href="https://www.drupal.org">Drupal.org</a> or the distribution's GitHub issue queue.		
+</p></div>		
+
+- CiviCRM Starter Kit: [Code Repository](https://github.com/kreynen/civicrm-starterkit-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=3b754bc2-48f8-4388-b5b5-2631098d03de)
+- DKAN: [Code Repository](https://github.com/NuCivic/dkan-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=d7370d7e-46fb-4b10-b79f-942b5abf51de)
+- Commerce Kickstart: [Code Repository](https://github.com/commerceguys/kickstart-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=8a662dde-53d6-4fdb-8eac-eea9f5848d00)
+- OpenAid: [Code Repository](https://bitbucket.org/joelsteidl/openaid-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=2adff196-4672-44c9-af2a-4590963b90d8)
+- Atrium: [Code Repository](https://github.com/phase2/openatrium-drops-6) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=31bc4254-be20-4e8d-afe6-6c585e58435a)
+- OpenIdeaL: [Code Repository](https://github.com/linnovate/openideal-on-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=86112161-4cb2-410f-8bb1-8a1fb4f56dae)
+- Open Outreach: [Code Repository](https://github.com/nedjo/openoutreach-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=4c17f505-05d0-4b79-b38a-0bc548405a10)
+- OpenPublic: [Code Repository](https://github.com/phase2/openpublic-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=b459145b-8771-4597-8b84-684a3d93dce0)
+- Panopoly: [Code Repository](https://github.com/populist/panopoly-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=175cce4f-fa3f-4426-b1a6-e0fae9e19f2e)
+- Plato Típico: [Code Repository](https://github.com/enzolutions/plato_tipico) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=216f85b2-620b-470d-9597-f64ade76dc9a)
+- Pushtape: [Code Repository](https://github.com/zirafa/pushtape-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=f141b5e0-a614-4294-a86c-6c24df9bf6c5)
+- RedHen Raiser: [Code Repository](https://github.com/thinkshout/redhenraiser-drops-7) | [Install](https://dashboard.pantheon.io/sites/create?upstream_id=10d6937e-1dd2-4490-9950-11867ba43597)
+
 ## Product UUID
 There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all available products, run the following [Terminus](/docs/terminus/) command:
+
 ```
 $ terminus upstream:list
 ```
+
+## Create Sites with Terminus
+Create new sites with [Terminus, the Pantheon CLI](/docs/terminus/). Run `terminus site:create <site> <label> <upstream>` to create a new site using the desired upstream, like so:
+
+```
+$ terminus site:create my-new-panopoly-site "My New Panopoly Site" "Panopoly"
+ [notice] Creating a new site...
+ [notice] Deploying CMS...
+ [notice] Deployed CMS
+$ terminus dashboard:view my-new-panopoly-site
+```
+
 
 ## Importing an Existing Site
 
