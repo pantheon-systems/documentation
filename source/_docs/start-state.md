@@ -23,18 +23,18 @@ We include a growing number of "Drupal products" as available upstreams on Panth
 
 Use the following direct links to create a new site on Pantheon from a public distribution:
 
-- [CiviCRM Starter Kit](https://dashboard.pantheon.io/sites/create?upstream_id=3b754bc2-48f8-4388-b5b5-2631098d03de) | [View on GitHub](https://github.com/kreynen/civicrm-starterkit-drops-7)
-- [DKAN](https://dashboard.pantheon.io/sites/create?upstream_id=3b754bc2-48f8-4388-b5b5-2631098d03de) | [View on GitHub](https://github.com/NuCivic/dkan-drops-7)
-- [Commerce Kickstart](https://dashboard.pantheon.io/sites/create?upstream_id=8a662dde-53d6-4fdb-8eac-eea9f5848d00) | [View on GitHub](https://github.com/commerceguys/kickstart-drops-7)
-- [OpenAid](https://dashboard.pantheon.io/sites/create?upstream_id=2adff196-4672-44c9-af2a-4590963b90d8) | [View on GitHub](https://bitbucket.org/joelsteidl/openaid-drops-7)
-- [Atrium](https://dashboard.pantheon.io/sites/create?upstream_id=31bc4254-be20-4e8d-afe6-6c585e58435a) | [View on GitHub](https://github.com/phase2/openatrium-drops-6)
-- [OpenIdeaL](https://dashboard.pantheon.io/sites/create?upstream_id=86112161-4cb2-410f-8bb1-8a1fb4f56dae) | [View on GitHub](https://github.com/linnovate/openideal-on-drops-7)
-- [Open Outreach](https://dashboard.pantheon.io/sites/create?upstream_id=4c17f505-05d0-4b79-b38a-0bc548405a10) | [View on GitHub](https://github.com/nedjo/openoutreach-drops-7)
-- [OpenPublic](https://dashboard.pantheon.io/sites/create?upstream_id=b459145b-8771-4597-8b84-684a3d93dce0) | [View on GitHub](https://github.com/phase2/openpublic-drops-7)
-- [Panopoly](https://dashboard.pantheon.io/sites/create?upstream_id=175cce4f-fa3f-4426-b1a6-e0fae9e19f2e) | [View on GitHub](https://github.com/populist/panopoly-drops-7)
-- [Plato Típico](https://dashboard.pantheon.io/sites/create?upstream_id=216f85b2-620b-470d-9597-f64ade76dc9a) | [View on GitHub](https://github.com/enzolutions/plato_tipico)
-- [Pushtape](https://dashboard.pantheon.io/sites/create?upstream_id=f141b5e0-a614-4294-a86c-6c24df9bf6c5) | [View on GitHub](https://github.com/zirafa/pushtape-drops-7)
-- [RedHen Raiser](https://dashboard.pantheon.io/sites/create?upstream_id=10d6937e-1dd2-4490-9950-11867ba43597) | [View on GitHub](https://github.com/thinkshout/redhenraiser-drops-7)
+- [CiviCRM Starter Kit](https://dashboard.pantheon.io/sites/create?upstream_id=3b754bc2-48f8-4388-b5b5-2631098d03de) [<i class="fa fa-github"></i>](https://github.com/kreynen/civicrm-starterkit-drops-7)
+- [DKAN](https://dashboard.pantheon.io/sites/create?upstream_id=3b754bc2-48f8-4388-b5b5-2631098d03de) [<i class="fa fa-github"></i>](https://github.com/NuCivic/dkan-drops-7)
+- [Commerce Kickstart](https://dashboard.pantheon.io/sites/create?upstream_id=8a662dde-53d6-4fdb-8eac-eea9f5848d00) [<i class="fa fa-github"></i>](https://github.com/commerceguys/kickstart-drops-7)
+- [OpenAid](https://dashboard.pantheon.io/sites/create?upstream_id=2adff196-4672-44c9-af2a-4590963b90d8) [<i class="fa fa-github"></i>](https://bitbucket.org/joelsteidl/openaid-drops-7)
+- [Atrium](https://dashboard.pantheon.io/sites/create?upstream_id=31bc4254-be20-4e8d-afe6-6c585e58435a) [<i class="fa fa-github"></i>](https://github.com/phase2/openatrium-drops-6)
+- [OpenIdeaL](https://dashboard.pantheon.io/sites/create?upstream_id=86112161-4cb2-410f-8bb1-8a1fb4f56dae) [<i class="fa fa-github"></i>](https://github.com/linnovate/openideal-on-drops-7)
+- [Open Outreach](https://dashboard.pantheon.io/sites/create?upstream_id=4c17f505-05d0-4b79-b38a-0bc548405a10) [<i class="fa fa-github"></i>](https://github.com/nedjo/openoutreach-drops-7)
+- [OpenPublic](https://dashboard.pantheon.io/sites/create?upstream_id=b459145b-8771-4597-8b84-684a3d93dce0) [<i class="fa fa-github"></i>](https://github.com/phase2/openpublic-drops-7)
+- [Panopoly](https://dashboard.pantheon.io/sites/create?upstream_id=175cce4f-fa3f-4426-b1a6-e0fae9e19f2e) [<i class="fa fa-github"></i>](https://github.com/populist/panopoly-drops-7)
+- [Plato Típico](https://dashboard.pantheon.io/sites/create?upstream_id=216f85b2-620b-470d-9597-f64ade76dc9a) [<i class="fa fa-github"></i>](https://github.com/enzolutions/plato_tipico)
+- [Pushtape](https://dashboard.pantheon.io/sites/create?upstream_id=f141b5e0-a614-4294-a86c-6c24df9bf6c5) [<i class="fa fa-github"></i>](https://github.com/zirafa/pushtape-drops-7)
+- [RedHen Raiser](https://dashboard.pantheon.io/sites/create?upstream_id=10d6937e-1dd2-4490-9950-11867ba43597) [<i class="fa fa-github"></i>](https://github.com/thinkshout/redhenraiser-drops-7)
 
 ## Product UUID
 There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all available products, run the following [Terminus](/docs/terminus/) command:
