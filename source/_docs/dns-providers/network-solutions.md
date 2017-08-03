@@ -29,28 +29,57 @@ Keep this page open and login to your <a href="https://www.networksolutions.com"
 2. Select the domain you want to point to Pantheon, then click **Manage**.
 3. Click **Change Where Domain Points**, then select **Advanced DNS**.
 4. In the IP Address (A records) section, click **Edit A Records**.
-4. Enter **@** in the **Host** field and enter the A record value provided by Pantheon in the **Value** field.
-5. Select desired Time to Live (TTL).
+5. The domain likely has a few default values for `www` and the bare domain. Paste the IP address provided by Pantheon in the Numeric IP field for the existing `@ (None)` record, then delete any default records like so:
+
+  ![Network Solutions Edit A Records](/source/docs/assets/images/dns/networksolutions/default-a-records.png)
+
+6. Select desired Time to Live (TTL).
 
     {% include("ttl.twig") %}
 
-6. Click **Save Changes**.
+7. Click **Save Changes**.
+8. Once changes are saved, the section of the Advanced DNS interface for A records should look like this:
 
-### AAAA Records
-1. Click the **Add New Record** button and select **AAAA** from the type dropdown menu.
-2. Enter **@** in the **Host** field and enter the first AAAA record value provided by Pantheon in the **Value** field.
-3. Select desired Time to Live (TTL).
-4. Click **Save**.
-5. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
+  ![Network Solutions Final CNAME](/source/docs/assets/images/dns/networksolutions/final-a.png)
+
 
 ### CNAME Record
 The CNAME record is required if you wish to include `www` within your site's primary domain name.
 
 1. In the Host Aliases (CNAME Records) section, click **Edit CNAME Records**.
-2. Enter **www** in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Aliases** field.
+2. Enter **www** in the **Alias** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Other Host** field:
+
+  ![Network Solutions CNAME](/source/docs/assets/images/dns/networksolutions/create-cname.png)
+
 3. Select desired Time to Live (TTL).
 4. Click **Continue**, then **Save Changes**.
+5. Once changes are saved, the section of the Advanced DNS interface for CNAME records should look like this:
 
+  ![Network Solutions Final CNAME](/source/docs/assets/images/dns/networksolutions/final-cname.png)
+
+
+### AAAA Records
+Network Solutions does not allow you to configure AAAA (IPv6) records within their domain management interface. In order to add AAAA (IPv6) records, you must send an email to **ipv6req@networksolutions.com** with the desired values so their support team can configure the records on your behalf. Copy the values of each AAAA record provided by Pantheon, then send a request similar to the following:
+
+> Hello,
+>
+Can you create two AAAA IPv6 records on my domain, example.com, using the following values:
+>
+>
+>
+> example.com pointing to 2620:12a:8000::2
+>
+> example.com pointing to 2620:12a:8001::2
+>
+>
+>
+These records look the same, but they're different (8000 vs 8001).
+>
+Thanks
+
+
+#### Name Server Records
+Network Solutions assigns their own default name severs, such as `ns70.worldnic.com`. Continue using any existing configurations for name server records as these records dictate where DNS is hosted for the domain. Pantheon does not provide DNS hosting services and we cannot give recommendations on where to point name servers. Do not attempt to configure DNS values provided by Pantheon as name server records.
 
 ## Network Solutions Docs
 
