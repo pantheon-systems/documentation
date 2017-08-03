@@ -24,9 +24,7 @@ Pantheon is free for developers. Our live site plans currently start as low as $
 
 
 ### Where are the Pantheon servers located?
-All Pantheon servers are currently located in the United States. We have plans to expand to Europe, but we don't have an ETA for when they will be available for end-users.
-
-Pantheon's new [Global CDN](/docs/global-cdn/) serves content from 30+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https/) using [Let's Encrypt](https://letsencrypt.org/).
+Our data center is in the United States, but Pantheon's [Global CDN](/docs/global-cdn/) serves content from 30+ POPs (points of presence) distributed around the world. We also have plans to add data centers in Europe, which would speed up authenticated traffic for end-users there, but we don't have an ETA for that expansion.
 
 ### Can I run other applications on Pantheon?
 
