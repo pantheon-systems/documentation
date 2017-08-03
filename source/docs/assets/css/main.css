@@ -5576,3 +5576,6 @@ h2>.glyphicons {
 .nav-tabs>li>a {
   text-decoration: none;
 }
+.ml-5 {
+  margin-left: 5px;
+}
