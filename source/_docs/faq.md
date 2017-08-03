@@ -24,12 +24,7 @@ Pantheon is free for developers. Our live site plans currently start as low as $
 
 
 ### Where are the Pantheon servers located?
-
-All Pantheon servers are currently located in the United States. We have plans to expand to Europe, but we don't have an ETA for when they will be available for end-users.
-
-You can use a [CDN](/docs/content-delivery-network/) for rapidly serving files from multiple locations. In most cases, sites running on Pantheon in the U.S. perform faster than sites running on local hosting, even if the user is halfway around the world.
-
-Transatlantic hops in are usually 200-300ms, while Pantheon can usually speed up site page load times by seconds.
+Our data center is in the United States, but Pantheon's [Global CDN](/docs/global-cdn/) serves content from 30+ POPs (points of presence) distributed around the world. We also have plans to add data centers in Europe, which would speed up authenticated traffic for end-users there, but we don't have an ETA for that expansion.
 
 ### Can I run other applications on Pantheon?
 
