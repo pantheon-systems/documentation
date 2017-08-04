@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Final Launch Checks
+subtitle: Launch Checks
 launch: true
 anchorid: launch-check
 generator: pagination
@@ -18,7 +18,7 @@ editpath: launch/06-launch-check.md
 image: getting-started-Largethumb
 ---
 ## Enable and Schedule Weekly Backups
-1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard then click **Backup Schedule**.
+1. Click **<span class="glyphicons glyphicons-cloud-upload"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard then click **Backup Schedule**.
 2. Toggle to **Enable** if needed, then pick the day you want to create weekly backups on and click **Update Weekly Backup Schedule**.
 3. Repeat these steps for the **<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-cardio"></span> Live** environments.
 

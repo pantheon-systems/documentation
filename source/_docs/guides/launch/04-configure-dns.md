@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Configure DNS and HTTPS
+subtitle: Configure DNS and Provision HTTPS
 launch: true
 anchorid: dns
 generator: pagination
@@ -18,15 +18,15 @@ previouspage: Connect a Domain to Live
 editpath: launch/04-configure-dns.md
 image: getting-started-Largethumb
 ---
-In this lesson we'll configure DNS and provision HTTPS on Pantheon. For details, see [Free and Managed HTTPS](/docs/https/).
+In this lesson we'll configure DNS and provision [free, automated HTTPS](/docs/https/) on Pantheon.
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
-If your site is already live and requires HTTPS, return to <a href="/docs/guides/launch/domains">Connect a Domain to Live</a> and complete the steps to pre-provision HTTPS before updating DNS to avoid downtime.
+<p markdown="1">If your site is already live and requires HTTPS, return to [Connect a Domain Name](/docs/guides/launch/domains/) and complete the steps to pre-provision HTTPS before updating DNS to avoid downtime.</p>
 </div>
 
 ## Configure DNS
-The <span class="glyphicons glyphicons-alert text-warning"></span> icon within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page indicates that the domain has not been properly routed to Pantheon. The following actions are required:
+The <span class="glyphicons glyphicons-alert text-warning"></span> icon within the Domains / HTTPS page indicates that the domain has not been properly routed to Pantheon. The following actions are required:
 
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
@@ -42,11 +42,7 @@ The <span class="glyphicons glyphicons-alert text-warning"></span> icon within t
         <ul class="top-docs top-docs-2col docs-2col-panel">
           {% for doc in data.docs_tags.providers %}
             {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-              {% if (doc.meta.provider == "Cloudflare") %}
-                <li><a href="{{ doc.url }}#configure-dns-records-on-cloudflare">{{ doc.provider }}</a></li>
-              {% else %}
-                <li><a href="{{ doc.url }}#cname-record">{{ doc.provider }}</a></li>
-              {% endif %}
+              <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
@@ -59,24 +55,20 @@ The <span class="glyphicons glyphicons-alert text-warning"></span> icon within t
 
     <div class="panel panel-drop panel-guide" id="accordion">
       <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific-2"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
+        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
       </div>
-      <div id="host-specific-2" class="collapse" style="padding:10px;">
+      <div id="host-specific" class="collapse" style="padding:10px;">
         <ul class="top-docs top-docs-2col docs-2col-panel">
           {% for doc in data.docs_tags.providers %}
             {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-              {% if (doc.meta.provider == "Cloudflare") %}
-                <li><a href="{{ doc.url }}#configure-dns-records-on-cloudflare">{{ doc.provider }}</a></li>
-              {% else %}
-                <li><a data-proofer-ignore  href="{{ doc.url }}#aaaaa-records">{{ doc.provider }}</a></li>
-              {% endif %}
+              <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
             {% endif %}
           {% endfor %}
         </ul>
       </div>
     </div>
 
-    Repeat this step for **both** of the required AAAA records.
+Repeat this step for _both_ of the required AAAA records.
 
 ## Provision HTTPS
 The process to provision certificates kicks off automatically after the domain has been successfully routed to Pantheon, indicated by the following notice:
