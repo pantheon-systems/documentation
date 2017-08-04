@@ -19,8 +19,8 @@ image: getting-started-Largethumb
 ---
 In this lesson, we'll redirect all traffic to a primary domain via HTTPS, which is a best practice for security and SEO. This means if you choose `www.example.com` as your primary domain, then if a visitor types in `example.com` into their browser (or any other domain you have connected to your site), they will end up on `https://www.example.com`.
 
-1. Navigate to **[](){data-proofer-ignore .dash-icons .glyphicons-embed-close} Code** in the **[](){data-proofer-ignore .dash-icons .glyphicons-wrench} Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
-2. Click **[](){data-proofer-ignore .dash-icons .glyphicons-info-sign} SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
+2. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
   If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
@@ -32,14 +32,14 @@ In this lesson, we'll redirect all traffic to a primary domain via HTTPS, which 
 
 6. Upload the configuration file to Pantheon using your SFTP client.
 
-7. Return to the **[](){data-proofer-ignore .dash-icons .glyphicons-wrench} Dev** tab of your Pantheon Site Dashboard. The files you just changed will be highlighted in yellow.
+7. Return to the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Pantheon Site Dashboard. The files you just changed will be highlighted in yellow.
 
 
 8. Add a commit message, then click **Commit** to add these files to your Dev environment.
 
-9. Deploy your changes to the **[](){data-proofer-ignore .dash-icons .glyphicons-equalizer} Test** environment and then up to the **[](){data-proofer-ignore .dash-icons .glyphicons-cardio} Live** environment.
+9. Deploy your changes to the **<span class="glyphicons glyphicons-equalizer"></span> Test** environment and then up to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment.
 
-10. Navigate to the **[](){data-proofer-ignore .dash-icons .glyphicons-cardio} Live** environment and click **[](){data-proofer-ignore .dash-icons .glyphicons-new-window-alt} Visit Live Site** to test the redirect logic.
+10. Navigate to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment and click **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Live Site** to test the redirect logic.
 
 <div class="panel panel-drop panel-guide" id="accordion">
   <div class="panel-heading panel-drop-heading">

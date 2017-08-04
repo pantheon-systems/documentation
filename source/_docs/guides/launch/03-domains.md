@@ -21,10 +21,10 @@ image: getting-started-Largethumb
 In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live environment.
 
 ## Connect Domain
-1. Access the **[](){data-proofer-ignore .dash-icons .glyphicons-cardio} Live** environment in your Pantheon Site Dashboard.
-2. Navigate to the **[](){data-proofer-ignore .dash-icons .glyphicons-global} Domains / HTTPS** page.
+1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 3. Select **Connect Domain** and enter the `www` domain (e.g., `www.example.com`) then click **Connect Domain**.
-4. Click **[](){data-proofer-ignore .dash-icons .glyphicons-arrow-left} Back to Domains/HTTPS**.
+4. Click **<span class="glyphicons glyphicons-arrow-left"></span> Back to Domains/HTTPS**.
 5. Select **Connect Domain** and enter the bare domain (e.g., `example.com`) then click **Connect Domain**.
 
 ## Existing Sites
@@ -36,12 +36,12 @@ Sites that already have HTTPS working can  pre-provision certificates and avoid 
 <p markdown="1">Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.</p>
 </div>
 
-1. Access the **[](){data-proofer-ignore .dash-icons .glyphicons-cardio} Live** environment in your Pantheon Site Dashboard.
-2. Navigate to the **[](){data-proofer-ignore .dash-icons .glyphicons-global} Domains / HTTPS** page.
+1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 3. Select **Details** next to the bare domain.
-4. Click **[](){data-proofer-ignore .dash-icons .glyphicons-download-alt} Download File**.
+4. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**.
 5. Serve the file from your existing live site.
-6. Return to the Pantheon Site Dashboard and refresh the **[](){data-proofer-ignore .dash-icons .glyphicons-global} Domains / HTTPS** page.
+6. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 
 After verifying domain ownership, your domain's HTTPS certificate(s) will automatically begin generating and be deployed to Pantheon’s Global CDN within an hour.
 
@@ -55,11 +55,11 @@ When a certificate is ready you can switch DNS destinations from your existing s
   Ready to launch like the pros?
   Before updating DNS, you can validate HTTPS configuration for the domain is ready on Pantheon by testing locally:
 
-  1. Access the **[](){data-proofer-ignore .dash-icons .glyphicons-cardio} Live** environment in your Pantheon Site Dashboard.
-  2. Navigate to the **[](){data-proofer-ignore .dash-icons .glyphicons-global} Domains / HTTPS** page.
+  1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+  2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
   3. Select **Details** next to the bare domain.
   4. Copy the A record value provided in the Pantheon Site Dashboard.
-  5. Add a line to your [local hosts [](){data-proofer-ignore .dash-icons .glyphicons-new-window-alt}](https://en.wikipedia.org/wiki/Hosts_(file)) file with the IP address from the previous step followed by the domain name, for example:
+  5. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)){.external} file with the IP address from the previous step followed by the domain name, for example:
 
           192.123.456.789 example.com
 

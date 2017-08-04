@@ -18,17 +18,17 @@ editpath: launch/06-launch-check.md
 image: getting-started-Largethumb
 ---
 ## Enable and Schedule Weekly Backups
-1. Click **[](){data-proofer-ignore .dash-icons .glyphicons-cloud-upload} Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard then click **Backup Schedule**.
+1. Click **<span class="glyphicons glyphicons-cloud-upload"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard then click **Backup Schedule**.
 2. Toggle to **Enable** if needed, then pick the day you want to create weekly backups on and click **Update Weekly Backup Schedule**.
-3. Repeat these steps for the **[](){data-proofer-ignore .dash-icons .glyphicons-equalizer} Test** and **[](){data-proofer-ignore .dash-icons .glyphicons-cardio} Live** environments.
+3. Repeat these steps for the **<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-cardio"></span> Live** environments.
 
 For more information on this feature, see [Backups Tool](/docs/backups/).
 
 ## Review Status Reports
 Launch with confidence by taking advantage of Pantheon's static site analysis service for Drupal and WordPress.
 
-1. Access the **[](){data-proofer-ignore .dash-icons .glyphicons-cardio} Live** environment in your Pantheon Site Dashboard.
-2. Navigate to the **[](){data-proofer-ignore .dash-icons .glyphicons-info-sign} Status** page.
+1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
+2. Navigate to the **<span class="glyphicons glyphicons-info-sign"></span> Status** page.
 3. The automated report will check for exploited patterns in code, shows database stats, reveals PHP errors, and much more.
 
   **Shoot for all green, but at the very least be sure and fix all errors and review every notice.**

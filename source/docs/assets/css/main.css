@@ -5588,20 +5588,6 @@ a.external[href]::after {
 a:focus, a:hover {
   text-decoration: none;
 }
-.dash-icons {
-  color:inherit;
-  pointer-events: none;
-  display: inline-block;
-  font-family: 'Glyphicons Regular';
-  font-style: normal;
-  font-weight: normal;
-  line-height: 1.4;
-  vertical-align: top;
-  margin-right: 2px;
-  margin-left: 3px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 .checklist-icons {
   color:inherit;
   pointer-events: none;
