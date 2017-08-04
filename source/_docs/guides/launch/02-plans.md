@@ -22,7 +22,7 @@ In this lesson, we'll upgrade from a free account to a paid plan by adding billi
 ## Use Your Own Card
 If you plan to pay for the site or if you want to wait to transfer ownership, you can add your own payment method now:
 
-1. From the Pantheon Site Dashboard, click **[](){.dash-icons .glyphicons-cogwheel} Settings**.
+1. From the Pantheon Site Dashboard, click **[](){data-proofer-ignore .dash-icons .glyphicons-cogwheel} Settings**.
 2. Go to the **Billing** tab and select a payment method, then click **Update Payment Method**. You can add a new card or choose from cards already associated with your user account.
 3. Select the desired [plan](https://pantheon.io/pricing/){.external} from the **Plan** tab, then click **Update Plan**.
 
@@ -39,7 +39,7 @@ The user who pays for the site becomes the site owner. Agencies maintain access 
 </div>
 
 
-1. From the Pantheon Site Dashboard, click **[](){.dash-icons .glyphicons-cogwheel} Settings**.
+1. From the Pantheon Site Dashboard, click **[](){data-proofer-ignore .dash-icons .glyphicons-cogwheel} Settings**.
 2. Click **Invite a business owner to pay for this site**.
 3. Enter the intended site owner’s email and select the desired plan.
 

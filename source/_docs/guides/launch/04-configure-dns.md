@@ -26,10 +26,10 @@ In this lesson we'll configure DNS and provision [free, automated HTTPS](/docs/h
 </div>
 
 ## Configure DNS
-The [](){.dash-icons .glyphicons-alert .text-warning} icon within the Domains / HTTPS page indicates that the domain has not been properly routed to Pantheon. The following actions are required:
+The [](){data-proofer-ignore .dash-icons .glyphicons-alert .text-warning} icon within the Domains / HTTPS page indicates that the domain has not been properly routed to Pantheon. The following actions are required:
 
-1. Access the **[](){.dash-icons .glyphicons-cardio} Live** environment in your Pantheon Site Dashboard.
-2. Navigate to the **[](){.dash-icons .glyphicons-global} Domains / HTTPS** page.
+1. Access the **[](){data-proofer-ignore .dash-icons .glyphicons-cardio} Live** environment in your Pantheon Site Dashboard.
+2. Navigate to the **[](){data-proofer-ignore .dash-icons .glyphicons-global} Domains / HTTPS** page.
 3. Select **Details** next to the `www` domain.
 4. In a separate window, log in to the DNS host for the domain.
 5. Copy the value provided in the Pantheon Site Dashboard for the required CNAME record (e.g., `live-yoursite.pantheonsite.io`), then use it to create a CNAME record wherever you manage DNS.
@@ -49,7 +49,7 @@ The [](){.dash-icons .glyphicons-alert .text-warning} icon within the Domains / 
       </div>
     </div>
 
-6. Return to the **[](){.dash-icons .glyphicons-global} Domains / HTTPS** page in the Pantheon Site Dashboard.
+6. Return to the **[](){data-proofer-ignore .dash-icons .glyphicons-global} Domains / HTTPS** page in the Pantheon Site Dashboard.
 7. Click **Details** next to the bare domain.
 8. Copy the value provided in the Pantheon Site Dashboard for the required A record, then use it to create an A record wherever you manage DNS.
 
