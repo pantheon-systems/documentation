@@ -17,23 +17,21 @@ previouspage: Introduction
 editpath: launch/02-plans.md
 image: getting-started-Largethumb
 ---
-The first step to launching your site on Pantheon is to upgrade your free Sandbox site to a paid plan. Once the site has been upgraded, you'll have access to features like Custom Domains and free, automated HTTPS.
-
-You can invite a business owner to pay or you can use your own credit card to pay for the monthly subscription:
+In this lesson, we'll upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.
 
 ## Use Your Own Card
-If you plan to pay for the site or if you want to wait to transfer ownership, you can skip the invite process and add your own payment method to the site.
+If you plan to pay for the site or if you want to wait to transfer ownership, you can add your own payment method now:
 
-1. From the Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
+1. From the Pantheon Site Dashboard, click **[](){.dash-icons .glyphicons-cogwheel} Settings**.
 2. Go to the **Billing** tab and select a payment method, then click **Update Payment Method**. You can add a new card or choose from cards already associated with your user account.
-3. Select the desired plan from the **Plan** tab, then click **Update Plan**.
+3. Select the desired [plan](https://pantheon.io/pricing/){.external} from the **Plan** tab, then click **Update Plan**.
 
-As the site owner, you'll receive an email confirming the change to the site. After the site billing is processed, you'll receive an updated invoice.
+As the site owner, you’ll receive an email confirming the change to the site. After the site billing is processed, you’ll receive an updated invoice.
 
 ## Invite a Business Owner to Pay   
 This is the most common way agencies handle billing. The invitation will guide the recipient through adding their payment method to the site for the designated plan.
 
-The user who pays for the site is the owner thereafter. Agencies maintain access by being associated as a Supporting Organization.  
+The user who pays for the site becomes the site owner. Agencies maintain access by being associated as a Supporting Organization.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -41,7 +39,7 @@ The user who pays for the site is the owner thereafter. Agencies maintain access
 </div>
 
 
-1. From the Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
+1. From the Pantheon Site Dashboard, click **[](){.dash-icons .glyphicons-cogwheel} Settings**.
 2. Click **Invite a business owner to pay for this site**.
 3. Enter the intended site owner’s email and select the desired plan.
 

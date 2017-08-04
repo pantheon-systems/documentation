@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Redirect to a Primary Domain
+subtitle: Redirect for SEO and Security
 launch: true
 anchorid: redirects
 generator: pagination
@@ -17,29 +17,29 @@ previouspage: Configure DNS and HTTPS
 editpath: launch/05-redirects.md
 image: getting-started-Largethumb
 ---
-Once you have DNS configured and HTTPS provisioned, you're ready to redirect incoming requests to a primary domain name (e.g.www.example.com or example.com). Standardizing on a single URL prevents content duplication across domains for improved SEO.
+In this lesson, we'll redirect all traffic to a primary domain via HTTPS, which is a best practice for security and SEO. This means if you choose `www.example.com` as your primary domain, then if a visitor types in `example.com` into their browser (or any other domain you have connected to your site), they will end up on `https://www.example.com`.
 
-1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
-2. Click **<span class="glyphicons glyphicons-info-sign" aria-hidden="true"></span>  SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
+1. Navigate to **[](){.dash-icons .glyphicons-embed-close} Code** in the **[](){.dash-icons .glyphicons-wrench} Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
+2. Click **[](){.dash-icons .glyphicons-info-sign} SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
   If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
 
-4. Open the `code` folder in your SFTP client, and download your site's `settings.php` (Drupal) or `wp-config.php` (WordPress) file.
-5. Edit your configuration file as described for your site's framework:
+4. Now open the `code` folder in your SFTP client, and download your site's `settings.php` (Drupal) or `wp-config.php` (WordPress) file.
+5. Edit your configuration file by adding the following snippet for the desired redirect (replace `example.com`):
 
   {% include("redirects.twig")%}
 
 6. Upload the configuration file to Pantheon using your SFTP client.
 
-7. Return to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Pantheon Site Dashboard. The files you just changed will be highlighted in yellow.
+7. Return to the **[](){.dash-icons .glyphicons-wrench} Dev** tab of your Pantheon Site Dashboard. The files you just changed will be highlighted in yellow.
 
 
 8. Add a commit message, then click **Commit** to add these files to your Dev environment.
 
-9. Deploy your changes to the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** environment and then up to the **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live** environment.
+9. Deploy your changes to the **[](){.dash-icons .glyphicons-equalizer} Test** environment and then up to the **[](){.dash-icons .glyphicons-cardio} Live** environment.
 
-10. Navigate to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment and click **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Live Site** to test the redirect logic.
+10. Navigate to the **[](){.dash-icons .glyphicons-cardio} Live** environment and click **[](){.dash-icons .glyphicons-new-window-alt} Visit Live Site** to test the redirect logic.
 
 <div class="panel panel-drop panel-guide" id="accordion">
   <div class="panel-heading panel-drop-heading">
@@ -49,6 +49,9 @@ Once you have DNS configured and HTTPS provisioned, you're ready to redirect inc
     <div markdown="1">
 ## Ready to launch like the pros?
 Now that you're redirecting requests to a single, primary domain, it's the perfect time to setup a availability monitoring service to watch over it like an automated hawk.
+
+### [Send an HSTS Header for Increased Security](/docs/hsts/)
+Install a plugin or module to prevent cookie hijacking and get an A+ rating from SSL Labs.
 
 ### [Setup Availability Monitoring](/docs/new-relic/#configure-ping-monitors-for-availability)
 New Relic provides a free availability monitoring service that sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails.

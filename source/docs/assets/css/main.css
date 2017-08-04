@@ -5498,7 +5498,7 @@ div.navsearch-container {
   max-width: 120px;
 }
 .text-warning {
-  color: #f0ad4e;
+  color: #f0ad4e !important;
 }
 .text-info {
   color:#5bc0de;
@@ -5575,6 +5575,46 @@ h2>.glyphicons {
 }
 .nav-tabs>li>a {
   text-decoration: none;
+}
+a.external[href]::after {
+  content: "\E390";
+  font-family: 'Glyphicons Regular';
+  top: 2px;
+  position: relative;
+  margin-left: 2px;
+  text-decoration: none;
+
+}
+a:focus, a:hover {
+  text-decoration: none;
+}
+.dash-icons {
+  color:inherit;
+  pointer-events: none;
+  display: inline-block;
+  font-family: 'Glyphicons Regular';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.4;
+  vertical-align: top;
+  margin-right: 2px;
+  margin-left: 3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.checklist-icons {
+  color:inherit;
+  pointer-events: none;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'Glyphicons Halflings';
+  line-height: 1.4;
+  vertical-align: top;
+  margin-right: 2px;
+  margin-left: 3px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .ml-5 {
   margin-left: 5px;
