@@ -14,7 +14,7 @@ If you feel that you reached one of these messages in error, [contact support](/
 
 ### Pantheon 401 Unauthorized
 
-This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/docs/lock-environment). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.  
+This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/docs/security). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.  
 
 In some circumstances, a 401 can be triggered inadvertently if a site environment is locked, and a user passes the HTTP auth but the site sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 

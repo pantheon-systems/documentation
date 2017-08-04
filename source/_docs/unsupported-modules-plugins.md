@@ -45,7 +45,7 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 ### [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
 **Issue**: This contrib module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
 
-**Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Locking Your Site](/docs/lock-environment#troubleshoot).
+**Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Security on the Pantheon Dashboard](/docs/security/#troubleshoot).
 
 <hr>
 ### [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
@@ -108,7 +108,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 ### [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
  **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
 
- **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Locking Your Site](/docs/lock-environment#troubleshoot).
+ **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Security on the Pantheon Dashboard](/docs/security/#troubleshoot).
 <hr>
 
 ### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)
@@ -376,8 +376,8 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 **Solution**: While *not recommended*, you can add the following lines to `wp-config.php` before the first call to `session_start`:
 
 ```
-if (defined( "PANTHEON_BINDING" )) { 
-  include_once( "/srv/bindings/". PANTHEON_BINDING ."/code/wp-blog-header.php" ); 
+if (defined( "PANTHEON_BINDING" )) {
+  include_once( "/srv/bindings/". PANTHEON_BINDING ."/code/wp-blog-header.php" );
 }
 ```
 

@@ -43,7 +43,7 @@ The site default PHP version is applied to every environment unless a PHP versio
 If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can [contact support](/docs/getting-support) from your Dashboard.
 
 ##Security Indicator
-This indicates if your site is public or locked. You can set a common password for accessing this environment to add an extra layer of security to prevent unwanted access to this environment. Learn more about [Locking Your Site](/docs/lock-environment/).
+This indicates if your site is public or locked. You can set a common password for accessing this environment to add an extra layer of security to prevent unwanted access to this environment. Learn more about [Security on the Pantheon Dashboard](/docs/security/).
 
 ## Connection Information
 Here you can find the [SSH clone URL](/docs/git/), [Database Connection Information](/docs/mysql-access/), and [SFTP](/docs/sftp/) connection information.
@@ -90,7 +90,7 @@ Use the [Domains/HTTPS tab](/docs/guides/launch/domains/) to connect custom doma
 On this tab you can create backups, restore from an existing backup, or view the backup log to see a list of your prior backups. For detailed information, see [Backups](/docs/backups).
 
 ## Security
-Set a common password for accessing an environment to add an extra layer of security to prevent unwanted access to an environment. For more details, see [Locking Your Site](/docs/lock-environment/).
+Set a common password for accessing an environment to add an extra layer of security to prevent unwanted access to an environment. For more details, see [Security on the Pantheon Dashboard](/docs/security/).
 
 ## Site UUID
 Every user, organization, product and site is assigned a UUID which is internal to Pantheon. The site UUID is found within the URL for the site Dashboard and resembles the following:
