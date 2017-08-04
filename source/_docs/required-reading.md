@@ -33,7 +33,6 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Varnish Caching for High Performance with Drupal and WordPress](/docs/varnish)
 - [Redis as a Caching Backend](/docs/redis)
 - [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache)
-- [Content Delivery Network (CDN) for File Distribution](/docs/content-delivery-network/)
 - [SSO and Identity Federation on Pantheon](/docs/sso/)
 - [Backup Creation](/docs/backups)
 
