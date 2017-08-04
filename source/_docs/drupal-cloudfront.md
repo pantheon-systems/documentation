@@ -59,6 +59,5 @@ If you find that CloudFront is unable to receive content from the origin (Panthe
 
 ## See Also
 
-- [Content Delivery Network (CDN) for File Distribution](/docs/content-delivery-network/)
 - [CDN Developer's Article](http://wimleers.com/article/easy-drupal-cdn-integration-for-fun-and-profit)
 - [CDN Module](https://drupal.org/project/CDN)
