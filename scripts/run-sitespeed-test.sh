@@ -10,6 +10,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   export normalize_branch="${normalize_branch:0:11}"
   # Remove - to avoid failures
   export normalize_branch="${normalize_branch//[-_]}"
+  export normalize_branch="${normalize_branch,,}"
   export url=`vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`docs
   export url=https${url:4}
 
