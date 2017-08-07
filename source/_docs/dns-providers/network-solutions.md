@@ -7,6 +7,10 @@ tags: [providers]
 permalink: docs/:basename/
 editpath: dns-providers/network-solutions.md/
 ---
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p>Network Solutions does not support AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports IPv6.</p></div>
+
 ## Before You Begin
 Be sure that you have a:
 
@@ -59,27 +63,7 @@ The CNAME record is required if you wish to include `www` within your site's pri
 
 
 ### AAAA Records
-Network Solutions does not allow you to configure AAAA (IPv6) records within their domain management interface. In order to add AAAA (IPv6) records, you must send an email to **ipv6req@networksolutions.com** with the desired values so their support team can configure the records on your behalf. Copy the values of each AAAA record provided by Pantheon, then send a request similar to the following:
-
-> Hello,
->
-Can you create two AAAA IPv6 records on my domain, example.com, using the following values:
->
->
->
-> example.com pointing to 2620:12a:8000::2
->
-> example.com pointing to 2620:12a:8001::2
->
->
->
-These records look the same, but they're different (8000 vs 8001).
->
-Thanks
-
-
-#### Name Server Records
-Network Solutions assigns their own default name severs, such as `ns70.worldnic.com`. Continue using any existing configurations for name server records as these records dictate where DNS is hosted for the domain. Pantheon does not provide DNS hosting services and we cannot give recommendations on where to point name servers. Do not attempt to configure DNS values provided by Pantheon as name server records.
+Unfortunately, Network Solutions does not support AAAA records, which means you can't route IPv6 traffic to your bare domain with Network Solutions. Failure to route IPv6 traffic to your site can negatively impact performance, especially for mobile devices. If you'd like to add AAAA records, then consider transferring your domain or name server to another DNS host.
 
 ## Network Solutions Docs
 
