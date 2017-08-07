@@ -20,14 +20,16 @@ After selecting **[Migrate Existing Site](https://dashboard.pantheon.io/sites/mi
 terminus drush <site>.<env> -- ard --destination=code/sites/default/files/<RANDOM_HASH>.tgz
 ```
 
-This operation writes the archive to Pantheon's filesystem in a web accessible location (e.g. `https://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`). In this example, `<RANDOM_HASH>` is any long string. On Mac and Linux systems, you can use `openssl rand -hex 20` to generate a 20 character hexidecimal hash.
+This operation writes the Drupal archive to Pantheon's filesystem in a web accessible location (e.g. `https://env-site-name.pantheonsite.io/sites/default/files/<RANDOM_HASH>.tgz`). In this example, `<RANDOM_HASH>` is any long string. On Mac and Linux systems, you can use `openssl rand -hex 20` to generate a 20 character hexidecimal hash.
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p markdown="1">We recommend using a random hash for the archive filename for security. Archive dumps contain sensitive information, so they should not be exposed using guessable filename patterns (like `BACKUP` or recent dates). We also advise prompt removal of archive files once you've completed the migration.</p>
+<p markdown="1">We recommend using a random hash for the archive filename for security. Archive dumps contain sensitive information, so they should not be exposed using guessable filename patterns (like `BACKUP` or recent dates).</p>
 </div>
 
 Click **Continue Migration** and follow all remaining instructions within the guided migration process.
+
+**Be sure to delete the Drupal archive file (`<RANDOM_HASH>.tgz`) from your source site after cloning the site.**
 
 ### Troubleshooting
 
@@ -58,6 +60,11 @@ If your database and code compressed are less than 256MB you can exclude the fil
  <p>URL Imports have a file size limit of 500MB. If your import fails, download the backup, decompress contents locally, and <a href="/docs/rsync-and-sftp">upload your files directly using rsync or SFTP</a>.</p>
  </div>
 </li></ol>
+10. Be sure to delete the Drupal archive dump file from your source site after cloning the site.
+
+#### Drush archive missing code or files
+
+If you have an existing archive (tgz) file in *sites/default/files* the `drush ard` command may generate an archive without all expected components. Delete all archives and try running `drush ard` again.
 
 #### HTTP 404 error: Unable to download the archive
 
