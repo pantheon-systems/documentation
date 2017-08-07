@@ -147,6 +147,8 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 You can modify this patch according to your needs, such as performing an operation post upload and/or specifying a particular cache bin.
 
+### [LiveReload](https://www.drupal.org/project/livereload)
+**Issue**: This module triggers heavy load on the application server as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7 and Drupal 8.
 <hr>
 ### [Live CSS](https://www.drupal.org/project/live_css)
 **Issue**: This module requires write access to the site's codebase for editing CSS files, which is not granted on Test and Live environments by design.
