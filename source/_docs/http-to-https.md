@@ -1,6 +1,6 @@
 ---
-title: Switching Sites from HTTP to Secure HTTPS
-description: Best practice HTTPS configurations for WordPress and Drupal to fix mixed-content browser warnings and excessive redirects.
+title: Switching Sites from HTTP to HTTPS
+description: Best-practice HTTPS configurations for WordPress and Drupal to fix mixed-content browser warnings and excessive redirects.
 tags: [security]
 ---
 Connect a custom domain to the Site Dashboard and point DNS at Pantheon to trigger the automated process of provisioning HTTPS. The platform will deploy a certificate for your custom domain to the target environment (typically Live) at which point, HTTPS is enabled. For details, see [Free and Automated HTTPS](/docs/https/).
@@ -25,7 +25,7 @@ Start by testing a simple HTML or Text file in your browser with HTTPS on your c
 
 Requests bounced from HTTPS to HTTP indicate test failure. Remove existing redirects to HTTP within the site's framework (e.g., `wp-config.php` or `settings.php`) in addition to CDN configurations if applicable (e.g., page rules in Cloudflare).
 
-Mixed-content warnings in the browser are expected at this stage; such issues will be visible in Chrome as an HTTPS URL with a “Secure” label and a small warning icon:
+Mixed-content warnings in the browser are expected at this stage; such issues will be visible in Chrome as an HTTPS URL with either no “Secure” label *or* a “Secure” label and a small warning icon:
 
 ![Mixed content browser warnings](/source/docs/assets/images/mixed-content-console-error.png)
 
