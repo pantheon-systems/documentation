@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision :shell, inline: <<SCRIPT
   set -ex
   phantomjs --webdriver=8643 &> /dev/null &
-  su vagrant -c 'cd #{path} && composer install && bundler && npm install;
+  su vagrant -c 'cd #{path} && composer self-update && composer install && bundler && npm install;
   grunt
   vendor/pantheon-systems/terminus/bin/terminus list > source/docs/assets/terminus/commands.json --format=json
   curl https://api.github.com/repos/pantheon-systems/terminus/releases > source/docs/assets/terminus/releases.json
