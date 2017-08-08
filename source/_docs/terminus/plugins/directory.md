@@ -114,14 +114,14 @@ The following plugins are supported for Terminus 1.0:
         </div>
       </div>
       <p class="topic-info__description">Author: <a href="https://github.com/greg-1-anderson">Greg Anderson</a></p>
-      <p class="topic-info__description">Install Quicksilver webhooks from the <a href="https://github.com/pantheon-systems/quicksilver-examples">Quicksilver examples</a>, or a personal collection.</p>
-      <a href="https://github.com/pantheon-systems/terminus-quicksilver-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
+      <p class="topic-info__description">Quickly copy files to and from a Pantheon site..</p>
+      <a href="https://github.com/pantheon-systems/terminus-rsync-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
     </div>
   </div>
   <div class="flex-panel-item">
     <div class="flex-panel-body">
       <div class="flex-panel-title">
-        <h3 class="plugin-title">Quicksilver</h3>
+        <h3 class="plugin-title">Secrets</h3>
         <div class="pantheon-official">
         <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
           <p class="pantheon-official">Pantheon Official</p>
