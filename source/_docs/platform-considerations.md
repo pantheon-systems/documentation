@@ -39,6 +39,14 @@ We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-dru
 
 Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported.
 
+### Domain Masking or URL Forwarding
+Domain masking allows you to serve two entirely different and separate sites over a single common domain. For example, using one system as a front end for marketing efforts and another for blog content:
+
+* Main Site: `https://www.example-site.com/`
+* Blog: `https://www.example-site.com/blog/`
+
+In and of itself, Pantheon does not support this kind of setup. Each site on the platform must have its own unique domain. However, this configuration can be achieved using an external service such as CloudFront, StackPath, Fastly, etc.
+
 ## Highly Populated Directories
 
 If you have individual directories with tens of thousands of files (e.g. an image repository) it may be necessary to refactor this file structure to see good performance on Pantheon. The danger zone begins at around 50,000 files in a single directory, and performance drops off suddenly at over 100,000 files.
