@@ -106,9 +106,17 @@ Use an FTP client that supports SFTP, such as FileZilla. Find your Dev environme
 
 ### Import Files using Rsync
 
-Rsync is an excellent method for transferring a large number of files. After doing an initial rsync, subsequent rsyncs will only transfer the latest changes.
+Rsync is an excellent method for transferring a large number of files. After performing an initial rsync, subsequent jobs will only transfer the latest changes. This can help minimize the amount of time a site is in an unpredictable state (or offline) during the final step of migration, as it allows you to bring over only new content rather than re-copying every single file.
 
-The rsync script below is useful when dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's Dev environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off.
+We recommend looking into the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a helper when doing these operations, as the number of command line arguments and specifics of directory structure make it easy for human error to impact your operation.
+
+To sync your current directory to Pantheon:
+
+```bash
+terminus rsync my_site.dev:files .
+```
+
+When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's Dev environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
 
 
 ```bash
