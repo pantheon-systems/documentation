@@ -45,7 +45,7 @@ Domain masking allows you to serve two entirely different and separate sites ove
 * Main Site: `https://www.example-site.com/`
 * Blog: `https://www.example-site.com/blog/`
 
-In and of itself, Pantheon does not support this kind of setup. Each site on the platform must have it's own unique domain. However, this can be attained by using an external service such as CloudFront, StackPath, Fastly, etc.
+In and of itself, Pantheon does not support this kind of setup. Each site on the platform must have its own unique domain. However, this configuration can be achieved using an external service such as CloudFront, StackPath, Fastly, etc.
 
 ## Highly Populated Directories
 
