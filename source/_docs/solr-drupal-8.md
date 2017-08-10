@@ -33,7 +33,8 @@ composer require "drupal/search_api_pantheon ~1.0" --prefer-dist
 You should now have the Search API Pantheon module installed along with it's dependencies. Commit the changes and push to Pantheon.
 
 ```
-git commit -am "Require drupal/search_api_pantheon ~1.0"
+git add .
+git commit -m "Require drupal/search_api_pantheon ~1.0"
 git push origin master
 ```
 
