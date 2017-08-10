@@ -19,7 +19,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 **Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/docs/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
 <hr>
 ### [AdvAgg - Advanced CSS/JS Aggregation](https://www.drupal.org/project/advagg)
-**Issue**: We do not recommend using AdvAgg as it can cause conflicts with Varnish caching leading to various errors, such as `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for css files are not getting through` or `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for js files are not getting through`.
+**Issue**: We do not recommend using AdvAgg as it can cause conflicts with page caching leading to various errors, such as `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for css files are not getting through` or `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for js files are not getting through`.
 <hr>
 ### [Apache Solr Multilingual](https://www.drupal.org/project/apachesolr_multilingual)
 **Issue**: When the Apache Solr Multilingual module is enabled, the default class variable set by the Pantheon Apache Solr module is changed, and the site will be unable to connect to the Solr server.
@@ -53,13 +53,13 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 
 <hr>
 ### [Boost](https://www.drupal.org/project/boost)
-**Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust Varnish infrastructure that caches pages for anonymous visitors at the highest possible performance. See [Working with Varnish](/docs/varnish).
+**Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust page caching infrastructure that returns pages for anonymous visitors at the highest possible performance. See [Pantheon's Global CDN](/docs/global-cdn).
 
 <hr>
 ### [Cache Expiration](https://www.drupal.org/project/expire)
-**Issue**: Unfortunately, there is no way to selectively purge the Varnish cache.
+**Issue**: This module doesn't support Pantheon's granular cache clearing and header system.
 
-**Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
+**Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass page caching.
 
 <hr>
 ### [CKFinder](https://www.drupal.org/project/wysiwyg_ckfinder)
@@ -161,7 +161,7 @@ You can modify this patch according to your needs, such as performing an operati
 <hr>
 
 ### [Mobile Tools](https://www.drupal.org/project/mobile_tools)
-**Issue**: Conflicts with Varnish. See [this thread](https://www.drupal.org/node/1976162#comment-7411366) for details.
+**Issue**: Conflicts with platform page caches. See [this thread](https://www.drupal.org/node/1976162#comment-7411366) for details.
 <hr>
 
 ### [Node export webforms](https://www.drupal.org/project/node_export_webforms)
@@ -173,7 +173,7 @@ Customers have also reported success by making the export path [configurable](ht
 <hr>
 
 ### [Node Gallery](https://www.drupal.org/project/node_gallery)
-**Issue**: Using Node Gallery with Plupload attaches cookies to image uploads for authentication purposes. This conflicts with our Varnish configuration as we strip all cookies for images, CSS, and JS files to improve performance.
+**Issue**: Using Node Gallery with Plupload attaches cookies to image uploads for authentication purposes. This conflicts with our page cache configuration as we strip all cookies for images, CSS, and JS files to improve performance.
 <hr>
 ### [Pathologic](https://www.drupal.org/project/pathologic)
  **Issue**: The path of the base URL is changed and cached by the module itself.
@@ -181,7 +181,7 @@ Customers have also reported success by making the export path [configurable](ht
  **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
 
 ### [Persistent Login](https://www.drupal.org/project/persistent_login)
-**Issue**: This module attaches per-user cookies that conflict with our Varnish configuration.
+**Issue**: This module attaches per-user cookies that conflict with our page cache configuration.
 
 
 **Solution**: Follow the remedy provided within the [module's documentation of the issue on Drupal.org](https://www.drupal.org/node/1306214), which is to alter the code to prefix the cookie name with `SESS`.
@@ -238,7 +238,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 ### [Varnish](https://www.drupal.org/project/varnish)
 **Issue**: Conflicts with the existing platform configuration.
 
-**Solution**: Update Drupal performance settings to set the TTL and have Varnish serve requests. See [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache/)
+**Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. See [Pantheon's Global CDN](/docs/global-cdn/)
 <hr>
 
 ### [Views data export](https://www.drupal.org/project/views_data_export)
@@ -294,9 +294,9 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 <hr>
 
 ### Caching Plugins (e.g. [Batcache](https://wordpress.org/plugins/batcache/), [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/), or [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/))
-**Issue**: Conflicts with Varnish.
+**Issue**: Conflicts with platform-level page caching.
 
-**Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass Varnish.
+**Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass the platform page cache.
 <hr>
 
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/)
@@ -362,7 +362,7 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 
 <hr>
 ### [Wordfence](https://wordpress.org/plugins/wordfence/)
-**Issue #1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with Varnish.
+**Issue #1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with platform-level page caching.
 
 **Solution**: Disable Wordfence-generated cookies by disabling Live Traffic within the Wordfence options page. See the  [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
 
@@ -394,7 +394,7 @@ if (defined( "PANTHEON_BINDING" )) {
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
 
-**Issue #2**: WPML adds a cookie that forces anonymous traffic to bypass Varnish cache. This negatively impacts performance, especially on high traffic sites, and is a [known issue](https://wpml.org/forums/topic/varinish-not-caching-our-site-because-of-icl-current_language-cookie/#post-1046103) with the plugin.
+**Issue #2**: WPML adds a cookie that forces anonymous traffic to bypass the platform-level page cache. This negatively impacts performance, especially on high traffic sites, and is a [known issue](https://wpml.org/forums/topic/varinish-not-caching-our-site-because-of-icl-current_language-cookie/#post-1046103) with the plugin.
 
 ## WordPress Functions
 
