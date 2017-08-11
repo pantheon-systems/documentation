@@ -5605,3 +5605,8 @@ a:focus, a:hover {
 .ml-5 {
   margin-left: 5px;
 }
+.asana {
+  border: solid 1px;
+  border-radius: 50%;
+  padding: 1px 4px;
+}
