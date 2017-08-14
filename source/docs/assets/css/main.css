@@ -5417,7 +5417,7 @@ div.navsearch-container {
   min-width: 350px;
 }
 .flex-panel-item-platform-integrations-guides {
-  flex: 1 1 0%;
+  flex: 2 30%;
   margin: 0px 0px 15px 15px;
   color: #333;
 }

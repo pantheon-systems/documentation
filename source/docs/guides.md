@@ -29,6 +29,15 @@ title: Guides
 <h2>Platform Integration Guides</h2>
 <div class="flex-panel-group">
   <div class="flex-panel-item-platform-integrations-guides">
+    <a href="/docs/guides/asana/">
+      <div class="flex-panel-body-platform-integrations">
+        <div class="platform-integrations">
+          <img alt="Asana" src="/source/docs/assets/images/logos/asana.png" class="main-topic-info__plugin-image" >
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/deploybot/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
@@ -64,8 +73,6 @@ title: Guides
       </div>
     </a>
   </div>
-</div>
-<div class="flex-panel-group">
   <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/guides/pagerduty/">
       <div class="flex-panel-body-platform-integrations">
