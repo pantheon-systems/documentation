@@ -97,7 +97,7 @@ Learn how to use [bots and indexing](/docs/bots-and-indexing/) in a way that doe
 
 ## See Also
 - [Hot Fixes](/docs/hotfixes/)
-- [What is the "pantheon_api.module"](/docs/pantheon_api-module)
+- [What is the "pantheon_api.module"](/docs/modules#pantheon-api)
 - [Email on Pantheon](/docs/email/)
 - [Domains and Redirects](/docs/domains/)
 - [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/)
