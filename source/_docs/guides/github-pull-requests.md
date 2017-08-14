@@ -43,7 +43,7 @@ This guide describes how to use GitHub and Circle CI with Composer to implement 
         <h3 class="plugin-title">Composer</h3>
         <div class="pantheon-official">
           <img alt="Composer Logo" src="/source/docs/assets/images/composer-logo.svg" style="max-width:40px; class="main-topic-info__plugin-image" >
-          <p class="pantheon-official">GitHub</p>
+          <p class="pantheon-official">Composer</p>
         </div>
       </div>
       <p class="topic-info__description"><a href="https://getcomposer.org">Composer</a> is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a project. For example, Composer may be used to install the modules and themes used by a Drupal site.</p>
