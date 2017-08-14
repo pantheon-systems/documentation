@@ -1,108 +1,42 @@
 ---
 title: Pantheon Modules
-description: Details on specific Drupal modules developed and maintained plugins for the Pantheon Website Management Platform workflow.
+description: Details on specific Drupal modules developed and maintained for the Pantheon Website Management Platform workflow.
+contributors: [eabquina]
 tags: [siteintegrations, infrastructure, cacheedge]
-categories: [modules, drupal]
 ---
+Pantheon maintains several modules to extend and integrate Drupal on the platform. For real time discussion of these modules, find Pantheon developers in our [Power Users Slack channel](/docs/power-users/).
 
-Pantheon supplies a few modules with all sites to provide better integration with the platform. 
-These are listed as it was sponsored, built by one of our members, or started the initial development of the module. 
-We also list down the namespace, versions and links on where to get them in Drupal.org.
+## [Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
+The Advanced Page Cache module attaches [Drupal's cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) to a response so that Pantheon's [Global CDN](/docs/global-cdn/) edge service can granularly clear new content as it is saved. The Global CDN can detect when underlying data changes, such as nodes and taxonomy terms, then clear pages containing that entity. For details, see [this blog post](https://pantheon.io/blog/pantheon-advanced-page-cache-drupal-cache-metadata-global-cdn).
 
 
-## Pantheon API
+## [LCache](https://www.drupal.org/project/lcache)
+LCache is a module that applies the tiered caching model of multi-core processors (with local L1 and central L2 caches) to web applications. This allows scaling cache read access independently of network throughput. The current production implementation uses APCu as L1 and the database as L2.
 
-(D6, D7) [pantheon_api](https://github.com/pantheon-systems/drops-6/tree/master/modules/pantheon/pantheon_api)
+## [Site Audit](https://www.drupal.org/project/site_audit)
+Static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members. For more details, see [Launch Check - Drupal Performance and Configuration Analysis](/docs/drupal-launch-check/).
 
-Learn how to incorporate pantheon_api.module, Pantheon's internal API modules, on your Drupal sites.
+## [Search API Pantheon (Drupal 8)](https://www.drupal.org/project/search_api_pantheon)
+This module is meant to simplify the usage of [Search API](https://www.drupal.org/project/search_api) and [Search API Solr](https://www.drupal.org/project/search_api_solr) on Pantheon. Search API Solr provides the ability to connect to any Solr server by providing numerous configuration options. This module automatically sets the Solr connection options by extending the plugin from Search API Solr. The module also changes the connection information between Pantheon environments. Doing so eliminates the need to do extra work setting up Solr servers for each environment.
 
-This module is extremely lightweight and efficient. It provides general methods your site needs to access aspects of the internal Pantheon API. This is necessary for clearing caches from our reverse-proxy/edge cache, as well as provisioning new Solr cores and other features.
-It should always be enabled for all sites on Pantheon and should not cause adverse effects if you export the site locally or to another environment.
+## [Drupal 8 Cache Backport (Drupal 7)](https://www.drupal.org/project/d8cache)
+Drupal 8 Cache Backport is a module that brings Drupal 8 cache tags and cache max-age back to Drupal 7 (If there is interest, cache contexts will follow).
 
-The code for the API module is available within our upstream repositories, in the `modules/pantheon` directory:
+## [Generate Errors (Drupal 7)](https://www.drupal.org/project/generate_errors)
+Interface which allows you to generate various errors to test system behaviors like custom errors and server responses.
 
-- [Drupal 6](https://github.com/pantheon-systems/drops-6/tree/master/modules/pantheon)
-- [Drupal 7](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon)
+## [Pantheon Module (Drupal 7)](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon)
+This module provides general methods your site needs to access aspects of the internal Pantheon API. This is necessary for clearing caches from our reverse-proxy/edge cache, as well as provisioning new Solr cores and other features. It should always be enabled for all sites on Pantheon and should not cause adverse effects if you export the site locally or to another environment.
 
 Currently, there is no API module available for Drupal 8.
 
+The code for the API module is available within our upstream repositories, in the `modules/pantheon` directory. The functionality of this module is provided in three parts: Apache Solr, Pantheon Platform API, and Login.
 
-## Login 
+### [Pantheon Platform API](https://github.com/pantheon-systems/drops-7/blob/master/modules/pantheon/pantheon_api/pantheon_api.info)
+This module provides general methods your site needs to access aspects of the internal Pantheon API. This is necessary for clearing caches and other common workflows on the platform.
 
-(D6, D7) [pantheon_login](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_login)
+### [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
+This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Apache Solr on Pantheon](/docs/solr/).
 
-Login integration for your site and the Pantheon control panel
-
-
-## Advanced Page Cache
-
-(D7, D8) [pantheon_advanced_page_cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
-
-Pantheon Advanced Page Cache module is a bridge between Drupal cache metadata and the Pantheon Global CDN.
-
-Just by turning on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed) this module will clear only the relevant pages from the edge cache.
-
-
-## Apache Solr Pantheon
-
-(D7) [pantheon_apachesolr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
-
-Apache Solr is a system for indexing and searching site content. First, you will need to add the Index Server to your site. From your Dashboard, go to Settings > Add Ons > Apache Solr Index Server: Add.
-
-This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with Drupal.
-
-For instructions on how to run Solr on Drupal 7, see [Enabling Solr on Drupal 8.](https://pantheon.io/docs/solr-drupal-7/)
-
-
-## Search API Pantheon
-
-(D8) [search_api_pantheon](https://www.drupal.org/project/search_api_pantheon)
-
-This module is meant to simplify the usage of Search API and Search API Solr on Pantheon. Search API Solr provides the ability to connect to any Solr server by providing numerous configuration options.
-
-For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8.](https://pantheon.io/docs/solr-drupal-8/)
-
-
-## Drupal 8 Cache Backport 
-
-(D7) [d8cache](https://www.drupal.org/project/d8cache)
-
-Drupal 8 Cache Backport is a module that brings Drupal 8 cache tags and cache max-age back to Drupal 7 (If there is interest, cache contexts will follow).
-
-
-## LCache
-
-(D8) [lcache](https://www.drupal.org/project/lcache)
-
-LCache is a module that applies the tiered caching model of multi-core processors (with local L1 and central L2 caches) to web applications. This allows scaling cache read access independently of network throughput. The current production implementation uses APCu as L1 and the database as L2.
-
-
-## Generate Errors 
-
-(D7) [generate_errors](https://www.drupal.org/project/generate_errors)
-
-
-## Site Audit
-
-(D7, D8) [site_audit](https://www.drupal.org/project/site_audit)
-
-Site Audit is a Drupal static site analysis platform that generates reports with actionable best practice recommendations.
-
-
-## Panopoly
-
-(D7, D8) [panopoly](https://www.drupal.org/project/panopoly)
-
-Panopoly is powerful base distribution of Drupal powered by lots of Chaos Tools and Panels magic. 
-
-The distribution is designed to be both a general foundation for site building and a base framework upon which to build other Drupal distributions.
-
-
-## 
-
-Please feel free to contact us if you have any concerns with this module.
-
-
-## See Also:
-
-[Unsupported Modules](https://pantheon.io/docs/unsupported-modules-plugins/#drupal-modules)
+### [Login](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_login)
+Provides login integration between Drupal and the Pantheon Site Dashboard.

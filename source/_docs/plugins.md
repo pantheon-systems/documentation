@@ -4,7 +4,7 @@ description: Details on specific WordPress plugins developed and maintained for 
 tags: [siteintegrations, infrastructure, cacheedge]
 categories: []
 ---
-Pantheon maintains multiple plugins to facilitate its workflow within WordPress. Please feel free to contact us if you have any concerns with these plugins.
+Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these modules, find Pantheon developers in our [Power Users Slack channel](/docs/power-users/).
 
 ## [Pantheon Must-Use Plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon)
 This must-use plugin is vital to the operation of your site on the platform and must not be removed from your codebase. Consider it a part of WordPress core, and do not hack it. The permanent activation of this plugin will not interfere with your local environment.
