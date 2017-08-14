@@ -36,6 +36,18 @@ At your DNS provider, create a wildcard CNAME record pointing to our edge. If yo
 
  - **Environment URLs are permanent.** If an organization is removed as the supporting organization, any environment created during its association will keep the original URL after removal. Paid sites can add custom domains to any environment, as a workaround for those wishing to use different URL's after launch and disassociation of the site with the organization.
 
+ - To ensure maximum uptime, configure DNS of Custom domains (e.g., `www.example.com` on Live) using the environment's Platform domain for the CNAME record value as recommended within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page, never a Vanity domain:
+
+    <div class="alert alert-danger">
+      <h4 class="info"><span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration</h4>
+      <p markdown="1">![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)</p>
+    </div>
+
+    <div class="alert alert-success">
+      <h4 class="info"><span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration</h4>
+      <p markdown="1">![Correct vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/correct-vanity-cname-dns.png)</p>
+    </div>
+
 
 ## Security Considerations
 
