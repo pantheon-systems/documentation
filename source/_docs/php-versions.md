@@ -38,7 +38,7 @@ The next time you [push your changes](/docs/git#push-changes-to-pantheon) back t
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Kalabox does not recognize the pantheon.yml file. The PHP version is instead set in a kalabox.yml file. For reference see: [Pantheon on Kalabox Documentation](http://pantheon.kalabox.io/en/stable/users/config/#pantheon). 
+<p markdown="1">Kalabox does not recognize the `pantheon.yml` file. The PHP version is instead set in a `kalabox.yml` file. For reference see: [Pantheon on Kalabox Documentation](http://pantheon.kalabox.io/en/stable/users/config/#pantheon).
 </p></div>
 
 ### Verify Changes
