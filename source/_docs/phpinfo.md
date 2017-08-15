@@ -28,9 +28,9 @@ Drupal makes the phpinfo available to privileged users at: `https://example.com/
 4. Delete the file immediately so you do not expose sensitive information, such as a password, to connect to the DB.
 
 
-## Use Terminus
+## Terminus
 
-[Terminus](/docs/terminus/) is a great way to check these values.  The command syntax is as follows:
+As an alternative to exposing these values on a web accessible URL, you can use [Terminus](/docs/terminus/) to check these values:
 
 ```
 terminus remote:drush <SITE>.<ENV> -- ev "print(phpinfo())"
