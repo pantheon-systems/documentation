@@ -34,9 +34,9 @@ At your DNS provider, create a wildcard CNAME record pointing to our edge. If yo
 
  - After adding a custom Vanity domain to your organization, some workflow operations such as restoring an environment from a backup or changing the PHP version, can cause site domain URLs in other environments to unexpectedly change from the Pantheon domain to the custom domain.
 
- - **Environment URLs are permanent.** If an organization is removed as the supporting organization, any environment created during its association will keep the original URL after removal. Paid sites can add custom domains to any environment, as a workaround for those wishing to use different URL's after launch and disassociation of the site with the organization.
+ - **Environment URLs are permanent.** If an organization is removed as the supporting organization, any environment created during its association will keep the original URL after removal. Paid sites can add custom domains to any environment, as a workaround for those wishing to use different URLs after launch and disassociation of the site with the organization.
 
- - To ensure maximum uptime, configure DNS of Custom domains (e.g., `www.example.com` on Live) using the environment's Platform domain for the CNAME record value as recommended within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page, never a Vanity domain:
+ - **Do not configure DNS for custom domains using Vanity domain values** Even after configuring a vanity domain, your custom domain CNAME records should *always* point to the platform domain values, as recommended within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page. Vanity domains are designed to be viewed by end users, not added into records for other domains.
 
     <div class="alert alert-danger">
       <h4 class="info"><span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration</h4>
