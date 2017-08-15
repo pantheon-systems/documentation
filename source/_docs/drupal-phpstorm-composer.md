@@ -5,7 +5,15 @@ tags: []
 categories: [drupal8]
 ---
 
-This article explains how to use [Composer](https://getcomposer.org/) to install extensions for your Drupal 8 site on Pantheon using the [Composer integration](https://confluence.jetbrains.com/display/PhpStorm/Composer+Support+in+PhpStorm) in [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/). Composer, if you haven't used it before, is a package manager used to manage dependencies such as code libraries and vendor SDKs in most modern modular PHP projects. It is a core part of Drupal since version 8 as Drupal 8 relies on packages that are distributed through Composer and its default repository [Packagist](https://packagist.org/). Composer is a CLI tool but with the PhpStorm integration you can do everything directly in your IDE and don't have to fall back to the command line for managing your Drupal site on Pantheon.
+This article explains how to use [Composer](https://getcomposer.org/) to install extensions for your Drupal 8 site on Pantheon using the [Composer integration](https://confluence.jetbrains.com/display/PhpStorm/Composer+Support+in+PhpStorm) in [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/).
+
+## Why Composer?
+
+Composer, if you haven't used it before, is a package manager used to manage dependencies such as code libraries and vendor SDKs in most modern modular PHP projects. It is a core part of Drupal since version 8 as Drupal 8 relies on packages that are distributed through Composer and its default repository [Packagist](https://packagist.org/).
+
+Both Drupal and Wordpress predate Composer and are not deeply intertwined so it is still possible to set up a Wordpress or Drupal site without Composer, however working with the package manager has its benefits: Dependencies such as modules and themes can easily and explicitly be added, removed and updated in bulk through the same interface, developers know where to look for the currently installed versions and there are warnings for incompatibilities. Composer works great for complex chains of dependencies, when using custom upstreams and while cooperating with other developers as the `composer.lock` file ensures that the same versions of dependencies are installed in every environment even if they're not in version control.
+
+Composer is a CLI tool, but with the built-in PhpStorm integration you can do everything directly in a single place, your IDE, and don't have to fall back to the command line for managing your Drupal site on Pantheon, making it easier for developers who prefer visual tooling.
 
 ## Prerequisites
 
@@ -107,4 +115,4 @@ Now it's time to deploy and test your newly installed module. Here's how to do t
 
 6. Drupal might ask you to install required modules as well. Confirm with **Continue**.
 
-Congratulations, your Pathauto module is installed and ready to use!
+Pathauto module is now installed and ready to use. You can install other Drupal modules and themes in the same manner.
