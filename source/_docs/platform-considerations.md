@@ -163,8 +163,4 @@ You can reactivate a site with a single click. Simply visit the site's Dashboard
 
 ## Emoji Support
 
-Emoji support is available on WordPress and Drupal 8. On Drupal 7 sites, emojis will return this database error:
-
-    PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x94\xB4\x0D\x0A...'
-
-The `utf8mb4` character encoding needed for emojis is not supported on Drupal 7 sites on our platform. The provided workaround on drupal.org is not possible on Pantheon as it would cause adverse effects on other sites, since all sites share the same `my.cnf` configuration. To resolve this issue, consider the [Strip 4-byte UTF8](https://www.drupal.org/project/strip_utf8mb4) module to reject overly long byte sequences.
+Emoji support is available for WordPress, Drupal 7 and 8 sites. If you experience any issues on Drupal 7, please review the configuration settings described in the following [article on Drupal.org](https://www.drupal.org/node/2754539)
