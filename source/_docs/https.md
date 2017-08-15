@@ -84,17 +84,19 @@ High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of th
 Upgrade your site to the Global CDN and then send the [HSTS header](/docs/hsts/) .
 
 ### Can I bring my own certificate?
-No, but you shouldn't need to buy a dedicated certificate or worry about renewals. For example, wildcard certificates aren't necessary to secure communications for multiple domains, because we will automatically deploy certificates for all domains on your site.
+No, but you shouldn't need to buy a dedicated certificate or worry about renewals. For example, wildcard certificates aren't necessary to secure communications for multiple domains, because we will automatically deploy certificates for all domains on your site. The certificates provided by Pantheon on the Global CDN provide end-to-end encryption. Even though certificates are shared, they are still secure. Concerns with shared certificates are cosmetic.
 
 Some customers have purchased expensive certificates, often through an upsell from the certificate authority. Unfortunately, an expensive certificate does not mean increased security. If in doubt, we encourage you to test your site with SSL Labs, compare it to this [A+ report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io), and share it with your client.
 
-If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider.
+If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider like Cloudflare, CloudFront, StackPath, Fastly, etc.
 
 ### Is HTTPS encryption end-to-end?
 Yes! HTTPS is terminated at the CDN edge and traffic is encrypted all the way to the individual application container. This is an improvement over our legacy system that terminated all encryption at the load balancer, and a huge upgrade over setups which use a "mixed mode" strategy of terminating HTTPS at the CDN and then back-ending to the origin over unencrypted clear text communication.
 
 ### Will HTTPS be available for my site throughout the upgrade process?
 Yes! As long as your are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
+
+Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/configure-dns/) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
@@ -104,6 +106,8 @@ Refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
 
 
 ## Known Issues
+### HTTPS doesn't provision with incorrect AAAA configurations
+HTTPS will not kick off provisioning if the Site Dashboard detects incorrect values set on AAAA records. Once you update the records using the recommended values, HTTPS will start to provision automatically. The values for AAAA records look similar, but they are distinct.
 
 ### Certificate Mismatch Browser Warning
 If your DNS changes propagate before certificates are fully deployed across the CDN, it's possible to see a certificate mismatch. To avoid this situation, wait a full 60 minutes from starting the upgrade to updating DNS. If you see a certificate mismatch, you can simply wait it out (up to 60 minutes), though you may also be able to see the new service in action more quickly using a different browser or incognito window.
