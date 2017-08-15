@@ -69,6 +69,11 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 
 Rotated log files are archived within the `/logs` directory on application servers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">When appservers are migrated as a regular part of platform maintainence, log files are destroyed as they are appserver-specific.  Consider <a href="/#automate-downloading-logs" data-proofer-ignore>automating the collection</a> of logs regularly to maintain historical log data.</p>
+</div>
+
 ## Access Logs Via SFTP
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
