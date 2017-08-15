@@ -26,3 +26,13 @@ Drupal makes the phpinfo available to privileged users at: `https://example.com/
 3. Visit the file in a web browser to view phpinfo.
  ![obscure-phpinfo-filename](/source/docs/assets/images/obscure-phpinfo-delete-immediately.png)
 4. Delete the file immediately so you do not expose sensitive information, such as a password, to connect to the DB.
+
+
+## Terminus
+
+As an alternative to exposing these values on a web accessible URL, you can use [Terminus](/docs/terminus/) to check these values:
+
+```
+terminus remote:drush <SITE>.<ENV> -- ev "print(phpinfo())"
+```
+
