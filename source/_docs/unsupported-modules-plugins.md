@@ -327,6 +327,15 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 An alternative solution is to [create a symbolic link](/docs/assuming-write-access/#create-a-symbolic-link).
 <hr>
 
+### [Query Monitor](https://wordpress.org/plugins/query-monitor/)
+**Issue**: Creates a symlink with an absolute path which will only work on the exact appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environment.
+
+**Alternatives**:
+Pantheon has tools in place to monitor database queries:
+[MySQL Slow Log](https://pantheon.io/docs/mysql-slow-log/)
+[MySQL Troubleshooting with New Relic Pro](https://pantheon.io/docs/debug-mysql-new-relic/)
+<hr>
+
 ### [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/)
 **Issue**: Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use ["SERVER_NAME"] instead of the recommended ["HTTP_HOST"]. See [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
 
