@@ -328,7 +328,7 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 <hr>
 
 ### [Query Monitor](https://wordpress.org/plugins/query-monitor/)
-**Issue**: Creates a symlink with an absolute path which will only work on the exact appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environment.
+**Issue**: Creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments.
 
 **Alternatives**:
 Pantheon has tools in place to monitor database queries:
