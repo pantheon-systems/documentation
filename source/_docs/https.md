@@ -107,7 +107,7 @@ Refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
 
 ## Known Issues
 ### HTTPS doesn't provision with incorrect AAAA configurations
-HTTPS will not kick off provisioning if the Site Dashboard detects incorrect values set on AAAA records. Once you update the records using the recommended values, HTTPS will start to provision automatically. The values for AAAA records look similar, but they are distinct.
+Pantheon cannot not begin provisioning HTTPS if the Site Dashboard detects incorrect values set on AAAA records. Once you update the records using the recommended values, HTTPS will start to provision automatically. The values for AAAA records look similar, but they are distinct.
 
 ### Certificate Mismatch Browser Warning
 If your DNS changes propagate before certificates are fully deployed across the CDN, it's possible to see a certificate mismatch. To avoid this situation, wait a full 60 minutes from starting the upgrade to updating DNS. If you see a certificate mismatch, you can simply wait it out (up to 60 minutes), though you may also be able to see the new service in action more quickly using a different browser or incognito window.
