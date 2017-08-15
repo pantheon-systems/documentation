@@ -76,6 +76,13 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
         <td></td>
         <td></td>
       </tr>
+      <tr>
+        <td>Add custom upstreams</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
     </tbody>
   </table>
 
