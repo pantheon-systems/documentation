@@ -308,7 +308,7 @@ Long-running Drush commands that produce no output will cause the SSH gateway to
 ## Known Limitations
 - Crontab: Currently, there is no way to manage Crontab on Pantheon. If you need a way to set up your own Cron interval, you can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register).
 - The following Drush commands are not supported and will not work on Pantheon sites:
-  - `sql-sync-pipe` See: [Transfer Database Content Using Drush on Pantheon](#transfer-database-content-using-drush-on-pantheon)
+  - `sql-sync-pipe`. Use `sql-sync` instead.
   - `sql-cli` (`sqlc`) and `sql-query` (`sqlq`) See: [Run SQL Queries Using Drush on Pantheon](#run-sql-queries-using-drush-on-pantheon)
   - `php-eval` (`eval`, `ev`) See: [Execute PHP Code Using Drush on Pantheon](#execute-php-code-using-drush-on-pantheon)
 - Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:

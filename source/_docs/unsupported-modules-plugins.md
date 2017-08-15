@@ -215,7 +215,7 @@ ini_set('arg_separator.output', '&');
 <hr>
 
 ### [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)
-This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/drush#use-registry-rebuild-on-pantheon) for details on how to use Registry Rebuild on Pantheon.
+This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/drush#registry-rebuild) for details on how to use Registry Rebuild on Pantheon.
 <hr>
 
 ### [Schema](https://www.drupal.org/project/schema)
