@@ -163,4 +163,4 @@ You can reactivate a site with a single click. Simply visit the site's Dashboard
 
 ## Emoji Support
 
-Emoji support is available for WordPress, Drupal 7 and 8 sites. If you experience any issues on Drupal 7, please review the configuration settings described in the following [article on Drupal.org](https://www.drupal.org/node/2754539)
+Emoji support is available for WordPress, Drupal 7 and 8 sites. If you experience any issues on Drupal 7, please review the configuration settings described in the following [article on Drupal.org](https://www.drupal.org/node/2754539).
