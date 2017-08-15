@@ -3392,6 +3392,26 @@ display: block;
   color: #d83f48;
   font-size: 28px;
 }
+.alert-icon {
+  top: 4px !important;
+}
+.alert-success {
+  background-image: none !important;
+    border-color: #3c763d;
+    border-left-width: 8px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-radius: 0px;
+    background-color: #dff0d8 !important;
+    color: #3c763d !important;
+    font-size: 18px;
+    line-height: 29px;
+    font-family: Avenir-Light;
+}
+.alert-success h4 {
+  font-size: 28px;
+}
 .alert h4,
 #doc .alert h4 {
   margin-top: 0px;
