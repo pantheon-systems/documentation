@@ -20,6 +20,10 @@ Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/d
 
 Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/docs/organization-dashboard/). Automated user provisioning isn't available.
 
+### External Members
+
+New and existing members outside the organization are not redirected to the configured IdP. There is no change in behavior when logging in. An external member is anyone in the organization using an email address on a different domain than what's configured for SSO (e.g., `@gmail.com`).
+
 ## Configure your IdP
 
 Refer to your IdP for general SAML 2.0 setup instructions.
