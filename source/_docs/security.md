@@ -1,30 +1,30 @@
 ---
-title: Security on the Pantheon Dashboard
-description: Learn how to keep your work hidden from the public for Drupal or WordPress site development or updates.
+title: Lock Environments with the Dashboard Security Tool
+description: Learn how to use the Security tool in the Site Dashboard to keep your work hidden from the public for Drupal or WordPress site development.
 tags: [security]
 categories: []
 ---
-There are occasions while you are working on your Drupal site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
+There are occasions while you are working on your site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
 
-This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is _private_ the requesting client will have to supply the authentication credentials you set in order to access the site.
+This can be done by putting a username and password on the environment similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p>When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.</p>
 </div>
 
+![Lock environment](/source/docs/assets/images/dashboard/lock-environment.png)
+
 ## Password Protect Your Site's Environments
 
 
 You have the ability to password protect any of the available environments.
 
-- Select the environment (e.g. Dev).
-- Select **Security**.
-- Select **Locked**.
-- Choose a username and password.
-- Click **Lock Environment**.
-
-![Lock environment](/source/docs/assets/images/dashboard/lock-environment.png)
+1. Select the environment (e.g., **<span class="glyphicon glyphicon-wrench"></span> Dev**).
+2. Select **<span class="glyphicon glyphicon-keys"></span> Security**.
+3. Select **Locked**.
+4. Provide a username and password.
+5. Click **Lock Environment**.
 
 If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
 
@@ -66,4 +66,3 @@ Alternatively, you can resolve 403 errors by using [Terminus](/docs/terminus) to
     <pre><code class="bash hljs">terminus remote:drush &lt;site&gt;.&lt;env&gt; -- pm-disable basic_auth -y</code></pre>
   </div>
 </div>
-
