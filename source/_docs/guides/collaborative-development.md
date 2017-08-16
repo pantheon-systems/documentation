@@ -117,7 +117,17 @@ As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickst
  For example, a site running Drupal 7, `https://github.com/pantheon-systems/drops-7` will change to `git://github.com/pantheon-systems/drops-7.git master` in the Git command used to pull in the upstream.  
  ![Pantheon Dashboard about site tab](/source/docs/assets/images/dashboard/pantheon-dashboard-settings-about-site-upstream.png)
 4. At the root of your local clone of the site repository, run
-`git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master`, replacing the upstream URL with the one you copied from the Site Dashboard and modified, if you need something other than Drupal 7.
+```nohighlight
+git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master
+```
+
+NOTE: 
+For versions of Git 2.9+ the Git command above would be:
+```nohighlight
+git pull --no-rebase -Xtheirs --allow-unrelated-histories --squash git://github.com/pantheon-systems/drops-7.git master
+```
+
+If you need something other than Drupal 7 in the above command, replace the upstream URL with the one you copied from the Site Dashboard and modified.
 
 Once executed, that command will pull in the Pantheon core files, but not commit them; you will be able to do a final review before doing so. You will see this message when it's done:
 
