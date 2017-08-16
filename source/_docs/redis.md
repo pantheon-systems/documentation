@@ -1,6 +1,6 @@
 ---
-title: Redis as a Caching Backend
-description: Understand how to use Redis as a caching mechanism for your Pantheon Drupal or WordPress site.
+title: Installing Redis on Drupal
+description: Understand how to use Redis as a caching mechanism for your Pantheon Drupal site.
 tags: [cacheapp, addons]
 categories: []
 ---
@@ -26,11 +26,6 @@ Enable Redis cache server from your Pantheon Site Dashboard by going to **Settin
 | Elite | **Yes**      |
 
 ---
-
-
-### WordPress Sites
-
-For detailed information, see [Installing Redis on WordPress](/docs/wordpress-redis).
 
 ### Drupal 8 Sites
 
