@@ -18,7 +18,7 @@ nextpage: Upgrade Site Plan
 editpath: launch/01-introduction.md
 image: getting-started-Largethumb
 ---
-Welcome! This guide will help you take a site live on Pantheon.
+Welcome! This guide will help you take a site live on Pantheon. This is an irrelevant change, to use for a demonstration.
 
 **In this guide, you’ll learn how to:**
 
