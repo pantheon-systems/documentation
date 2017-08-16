@@ -126,6 +126,9 @@ This is a common error with the SMTP Authentication Support module. It can be fi
 See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
 ## Frequently Asked Questions
+### Can I access the mail logs for my site?
+No. The mail logs are not accessible.
+
 ### Can I use Pantheon's local MTA (postfix)?
 We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
 
