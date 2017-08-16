@@ -126,11 +126,12 @@ This is a common error with the SMTP Authentication Support module. It can be fi
 See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
 ## Frequently Asked Questions
-### Can I access the mail logs for my site?
-No. The mail logs are not accessible.
 
 ### Can I use Pantheon's local MTA (postfix)?
 We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
+
+### Can I access the mail logs for my site?
+No, mail logs are not available for download and we do not recommend using the local MTA (postfix). 
 
 ### What ports are recommended by Pantheon?
 Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. Make sure that your service provider allows traffic on a port other than those mentioned and that you have correctly configured your site to use that port.
