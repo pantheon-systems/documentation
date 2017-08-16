@@ -58,7 +58,7 @@ Enable Redis cache server from your Pantheon Site Dashboard by going to **Settin
       $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
 
       $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
-      $settings['cache_prefix']['default'] = 'pantheon-redis'; 
+      $settings['cache_prefix']['default'] = 'pantheon-redis';
 
       // Always set the fast backend for bootstrap, discover and config, otherwise this gets lost when redis is enabled.
       $settings['cache']['bins']['bootstrap'] = 'cache.backend.chainedfast';
@@ -131,7 +131,7 @@ redis> keys *
  3) "pantheon-rediscache_bootstrap:bootstrap_modules"
  4) "pantheon-rediscache_menu:menu_item:b38e608d4f709b7c1fcb6ac5f6dd2ab72a9a034"
 ```
-If Redis is configured properly, it should output appropriate keys. If it returns nothing (empty), proceed to the [Troubleshooting](/docs/redis/#troubleshooting) section below.
+If Redis is configured properly, it should output appropriate keys. If it returns nothing (empty), proceed to the [Troubleshooting](/docs/drupal-redis/#troubleshooting) section below.
 
 To check if a specific key exists, you can pass the `exists` command. For example:
 

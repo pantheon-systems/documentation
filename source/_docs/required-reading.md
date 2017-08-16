@@ -31,7 +31,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [New Relic Pro](/docs/new-relic)
 - [Applying Upstream Updates](/docs/upstream-updates)
 - [Varnish Caching for High Performance with Drupal and WordPress](/docs/varnish)
-- [Redis as a Caching Backend](/docs/redis)
+- [Redis as a Caching Backend](/docs/drupal-redis)
 - [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache)
 - [SSO and Identity Federation on Pantheon](/docs/sso/)
 - [Backup Creation](/docs/backups)

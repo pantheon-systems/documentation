@@ -45,7 +45,7 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 [New Relic Pro](/docs/new-relic) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
-[Redis](/docs/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
+[Redis](/docs/drupal-redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 ####How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will now see all the available add-ons for your site.

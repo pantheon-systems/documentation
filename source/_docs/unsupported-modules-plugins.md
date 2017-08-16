@@ -120,7 +120,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 **Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Redis) is used for operations on highly populated directories:
 
-1. [Enable Redis](/docs/redis), otherwise the database cache is utilized. (Depending on your site's configuration, you may not net to enable Redis.)
+1. [Enable Redis](/docs/drupal-redis), otherwise the database cache is utilized. (Depending on your site's configuration, you may not net to enable Redis.)
 2. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
 
  ```
