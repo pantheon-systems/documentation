@@ -102,7 +102,7 @@ No. We do not have plans to add this feature. However, it is possible to run a s
 
 ### How do I increase the maximum execution time limit for a PHP script?
 
-The best way to do this by calling the PHP function [set\_time\_limit()](https://secure.php.net/manual/en/function.set-time-limit.php) in your routine that takes more time.
+The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/docs/timeouts/) documentation and it cannot be increased.  If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success. 
 
 ### Can I Host a Multilingual Site?
 
