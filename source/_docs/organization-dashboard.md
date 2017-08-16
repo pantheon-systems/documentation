@@ -4,7 +4,7 @@ description: Detailed information on how to add users and sites to your organiza
 tags: [manage]
 categories: []
 ---
-The Organization Dashboard is where you manage all your sites in a single location. You can access support requests, add or remove organizational team members, and manage new or existing sites.
+The Organization Dashboard is where Organization Administrators and Team Members manage all their sites in a single location. If you are an Administrator or Team Member for your Organization, you can access support requests, add or remove organizational team members, and manage new or existing sites.
 
 ## Add Sites to Your Organization
 
@@ -14,17 +14,20 @@ While creating a new site, any user in your [organization](/docs/organizations/)
 
 ### Existing Sites
 
-From the Site Dashboard you want to add:
-
+From the Site Dashboard, the Site Owner will want to:
 
 1. Click **Team**.
 2. Click **Add Supporting Organization**.
 3. Search for your Organization.
 4. Click **Add**.
 
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4><p> If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/getting-support/) to transfer sites to your Organization.</p>
+</div>
+
 
 ## Manage Site Teams
-If you need to add developers as full team members to a site, or outside contractors to individual sites, you'll need to add them to the site team:
+If you need to add developers as full team members to a site, or outside contractors to individual sites, the Organization Administrator or existing Site Team Member will need to add them to the site team:
 
 1. Check the box next to the site or sites you want to add the user to.
 2. Click **Team** and **Add a team member**.
@@ -51,6 +54,8 @@ To remove tags, select the site(s) you want to remove and follow the procedure a
 This filter shows which sites have core updates available, which ones are up to date, and which ones are unknown (e.g., managed by Composer). At this time, Organizations with over 800 sites do not have access to this filter, as they will time out loading.
 
 ## Add Users to Your Organization
+
+Organization Administrators can add members to the Organization Team as follows:
 
 1. Click on the **People tab**.
 2. Click **Add user**.
