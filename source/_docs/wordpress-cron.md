@@ -14,7 +14,9 @@ WP-Cron is similar in nature to Cron, but differs in a couple of very important 
 
 Plugins and themes can add tasks to be executed at regular intervals. For example, if you have a plugin that scans Twitter for your tweets and then incorporates them into comments, it's most likely done with a WP-Cron job.  WP-Cron opens up a whole new world of things that a WordPress powered site can do.
 
-The major difference between Cron and WP-Cron is how WP-Cron is triggered. Cron is a system process that runs every minute and looks for tasks to execute. WP-Cron, because it is a web-based system, can only run when someone visits the site. Therefore, when someone navigates to your WordPress site, WP-Cron checks to see if anything needs to be done. Thanks to the WordPress core developers, it does this in a way that does not adversely affect the performance of your site.
+### How is WP-Cron triggered?
+
+The major difference between Cron and WP-Cron is how WP-Cron is triggered. Cron is a system process that runs every minute and looks for tasks to execute. WP-Cron, because it is a web-based system, can only run when [someone visits the site](https://stackoverflow.com/questions/12895706/when-does-wp-cron-php-run-in-wordpress). Therefore, when someone navigates to your WordPress site, WP-Cron checks to see if anything needs to be done. Thanks to the WordPress core developers, it does this in a way that does not adversely affect the performance of your site.
 
 ### Problems With Low Traffic Sites
 Low traffic WordPress sites may experience skipped tasks when this feature is triggered by visitors. If people aren't visiting your site, WP-Cron can't execute. This doesn't mean your page will be slow from previous jobs when someone eventually does visit your site. Regardless of how many tasks WP-Cron has to execute, they are run in the background so your site's performance is not adversely affected.
