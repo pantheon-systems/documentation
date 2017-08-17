@@ -175,14 +175,16 @@ Once the Pantheon dashboard finishes committing the code, visit your project pag
 
 ## Update Your Project
 
-When using the Composer workflow, you should *never* use the Pantheon dashboard to update changes from your upstream, nor should you ever merge code from one environment to another. All code updates will be done using Composer. Composer commands (e.g. `composer update`) may be run directly against your Pantheon multidev environments using the Terminus Composer plugin.
+When using the Composer workflow, you should *never* use the Pantheon dashboard to update changes from your upstream, nor should you ever merge code from one environment to another. All code updates will be done using Composer.
 
 If you would like to copy the commands used in the examples below directly into your terminal, export environment variables to define your site name and multidev environment:
 ```
 export SITE=my-pantheon-project
 export ENV=pr-slogan
 ```
-If your site is very simple, you can update it directly on the platform.
+
+### Terminus Composer Update
+Composer commands (e.g. `composer update`) may be run directly against your Pantheon multidev environments using the Terminus Composer plugin. If your site is very simple, you can update it directly on the platform.
 
 1.  Using Terminus, update your site with Composer:
 
@@ -198,7 +200,8 @@ If your site is very simple, you can update it directly on the platform.
 
     ![Commit updated files](/source/docs/assets/images/pr-workflow/commit-composer-update.png)
 
-If you have added a few contrib modules, though, it is likely that Composer will run out of memory while updating your site. In this instance, you should update your site locally.
+### Local Composer Update
+If you have added a few contrib modules, though, it is likely that Composer will run out of memory while updating your site directly on the platform with Terminus. In this instance, you should update your site locally.
 
 1. Clone your GitHub project locally:
 
