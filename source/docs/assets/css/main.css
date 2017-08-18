@@ -5421,6 +5421,7 @@ div.navsearch-container {
   align-self: flex-end;
   margin: 0px !important;
   border-radius:4px;
+  max-height: 70px;
 }
 .pantheon-official {
   color: #78868e;
@@ -5456,7 +5457,7 @@ div.navsearch-container {
   min-width: 350px;
 }
 .flex-panel-item-platform-integrations-guides {
-  flex: 2 30%;
+  flex: 1 200px;
   margin: 0px 0px 15px 15px;
   color: #333;
 }

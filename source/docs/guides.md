@@ -10,7 +10,7 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
       <div class="flex-panel-body-pantheon-workflows">
       <a href="/docs/guides/quickstart/">
         <div class="pantheon-workflows">
-          <img alt="Quick Start" src="/source/docs/assets/images/launchGuide-twitterLarge.png" class="main-topic-info__plugin-image" >
+          <img alt="Quickstart" src="/source/docs/assets/images/launchGuide-twitterLarge.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
         <h3>Quick Start</h3>
         </div>
         </a>
@@ -20,7 +20,7 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
       <div class="flex-panel-body-pantheon-workflows">
       <a href="/docs/guides/launch/">
         <div class="pantheon-workflows">
-          <img alt="Launch Essentials" src="/source/docs/assets/images/getting-started-Largethumb.png" class="main-topic-info__plugin-image" >
+          <img alt="Launch Essentials" src="/source/docs/assets/images/getting-started-Largethumb.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
           <h3>Launch Essentials</h3>
         </div>
         </a>
@@ -33,7 +33,7 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
     <a href="/docs/guides/build-tools/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
-          <img alt="GitHub" src="/source/docs/assets/images/logos/github-composer-circle.png" style="max-width:70%;" class="main-topic-info__plugin-image">
+          <img alt="GitHub" src="/source/docs/assets/images/logos/github-composer-circle.png" style="max-height:140px;" class="main-topic-info__plugin-image">
         </div>
       </div>
     </a>
@@ -90,6 +90,15 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
           <img alt="PagerDuty" src="/source/docs/assets/images/logos/pagerduty.png" class="main-topic-info__plugin-image" >
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="flex-panel-item-platform-integrations-guides">
+    <a href="/docs/drupal-phpstorm-composer/">
+      <div class="flex-panel-body-platform-integrations">
+        <div class="platform-integrations">
+          <img alt="PHPStorm" src="/source/docs/assets/images/logos/phpstorm.png" class="main-topic-info__plugin-image" >
         </div>
       </div>
     </a>
