@@ -4,7 +4,7 @@ description: A walkthrough of how to enable WP-Redis on your Pantheon WordPress 
 tags: [cacheapp, addons]
 categories: [wordpress]
 ---
-Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
+Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website. This doc covers WordPress, but you can refer to [Installing Redis on Drupal](/docs/drupal-redis/) for your Drupal sites.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
