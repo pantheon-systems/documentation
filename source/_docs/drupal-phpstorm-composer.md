@@ -3,6 +3,7 @@ title: Installing Composer-based extensions on a Pantheon Drupal 8 site using Je
 description:
 tags: []
 categories: [drupal8]
+contributors: [LukasRos]
 ---
 
 This article explains how to use [Composer](https://getcomposer.org/) to install extensions for your Drupal 8 site on Pantheon using the [Composer integration](https://confluence.jetbrains.com/display/PhpStorm/Composer+Support+in+PhpStorm) in [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/).
@@ -22,7 +23,7 @@ The following description assumes that you have PhpStorm installed on your compu
 ## Clone the Code Repository and Create A PhpStorm Project
 
 1. Open PhpStorm, and in the _Welcome to PhpStorm_ screen choose **Check out from Version Control** and **Git**.
-   
+
    ![Welcome to PhpStorm](/source/docs/assets/images/integrations/phpstorm/Welcome_to_PhpStorm.png)
 
 2. From the Pantheon dashboard for your Drupal site, switch to _Git Connection Mode_. Your site should remain in this mode while you're working offline with Git in PhpStorm. Then, copy the URL from Git Connection Info. Note that you only need the URL (from `ssh://` to `.git`), not the full `git` command).
