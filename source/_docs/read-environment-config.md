@@ -73,7 +73,7 @@ Place [Domain Access setup routine](https://www.drupal.org/node/1096962) at the
       extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
       // All $conf variables and Redis configuration go after extract()
 
-      // If using Redis add appropriate settings per /docs/redis/#using-redis-with-drupal-7.x-and-6.x
+      // If using Redis add appropriate settings per /docs/drupal-redis/#using-redis-with-drupal-7.x-and-6.x
 
       // Add other $conf variables, for example for Fast 404 pages
 

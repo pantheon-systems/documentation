@@ -64,7 +64,7 @@ terminus remote:wp <site>.<env> -- search-replace 'http://www.example.com' 'http
 Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-commands). Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
 
 ## Clear Caches
-Clear Drupal and WordPress object caches in the [database and/or in Redis](/docs/redis/#clear-cache)) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
+Clear Drupal and WordPress object caches in the [database and/or in Redis](/docs/drupal-redis/#clear-cache)) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
 
 At this point, all visitors to the site should be able to securely access all pages over HTTPS with no browser warnings.
 ## Redirect to HTTPS and the primary domain

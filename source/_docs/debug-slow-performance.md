@@ -103,7 +103,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
  ![New Relic most time consuming queries](/source/docs/assets/images/new-relic-most-time-consuming-queries.png)<br />
 Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.  
 
-One of the services Pantheon offers is [Redis as a caching backend](/docs/redis/), which is a key-value store and is optimized for this type of work. For a real world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.pantheon.io/blog/why-we-recommend-redis-caching-backend).​
+One of the services Pantheon offers is [Redis as a caching backend](/docs/drupal-redis/), which is a key-value store and is optimized for this type of work. For a real world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.pantheon.io/blog/why-we-recommend-redis-caching-backend).​
 
 ### WordPress Caching Note
 There is no built-in caching in WordPress. Pantheon offers Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-cache plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon#edge-cache) is included within the `mu-plugins` directory of our repository, which helps the edge cache (Varnish) communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up the site and may even slow it down.
@@ -117,7 +117,7 @@ There are a large number of caches involved in every single request, including:
 
 - [Varnish](/docs/varnish) - Spread out across multiple servers, and the cache is not shared between servers.
 - [APC](/docs/alternative-php-cache/) - PHP has it's own opcode cache, which is not shared between application servers.
-- [drupal](https://drupal.org/node/326504) and [Redis](/docs/redis/) - Shared between your servers, but caches do expire and will need to be regenerated.
+- [drupal](https://drupal.org/node/326504) and [Installing Redis on Drupal](/docs/drupal-redis/) - Shared between your servers, but caches do expire and will need to be regenerated.
 ​​Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 ## Too Much Traffic
