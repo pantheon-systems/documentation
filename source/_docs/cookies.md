@@ -8,10 +8,13 @@ categories: []
 ## Disable Caching for Specific Pages
 You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response:
 ```
-//Set or replace $regex_path_match accordingly
+// Set or replace $regex_path_match accordingly
+// Example: anything in /news/ directory
+$regex_path_match = '#^/news/?#';
+
 if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
   $domain =  $_SERVER['HTTP_HOST'];
-  setcookie('NO_CACHE', '1', time()+0, '/path-to-page', $domain);
+  setcookie('NO_CACHE', '1', time()+0, '/news/', $domain);
 }
 ```
 As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
