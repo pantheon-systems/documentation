@@ -29,7 +29,10 @@ Currently [Cache Control Override](https://www.drupal.org/project/cache_control_
   <br>
   <p>Here is an example of a global way to determine a Drupal response's cacheability. Use the <code>$conf</code> global variable to set <code>Cache-Control: max-age=0</code>:</p>
   <pre><code class="php hljs">
-  // Set or replace $regex_path_match accordingly.
+  // Set or replace $regex_path_match accordingly
+  // Example: anything in the /news/ directory
+  $regex_path_match = '#^/news/?#';
+
   if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
     drupal_page_is_cacheable(FALSE);
     $conf['page_cache_maximum_age'] = 0;
@@ -40,7 +43,10 @@ Currently [Cache Control Override](https://www.drupal.org/project/cache_control_
   <br>
   <p>Set <code>Cache-Control: max-age=0</code> by hooking into <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers"><code>send_headers</code></a>. This will override <code>max-age</code> configured within the <a href="/docs/wordpress-cache-plugin">Pantheon Cache</a> plugin for all matching requests: </p>
   <pre><code class="php hljs">
-  //Set or replace $regex_path_match accordingly
+  // Set or replace $regex_path_match accordingly
+  // Example: anything in the /news/ directory
+  $regex_path_match = '#^/news/?#';
+  
   if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
   	add_action( 'send_headers', 'add_header_nocache', 15 );
   }
