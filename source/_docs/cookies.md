@@ -14,7 +14,7 @@ For example, this block sets `NO_CACHE` for all pages in the `/news/` directory.
 
 ```
 // Set or replace $regex_path_match accordingly
-// Example: anything in /news/ directory
+// Example: anything in the /news/ directory
 $regex_path_match = '#^/news/?#';
 
 if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
