@@ -6,7 +6,12 @@ categories: []
 ---
 
 ## Disable Caching for Specific Pages
-You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response:
+You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response.
+
+For example, this block sets `NO_CACHE` for all pages in the `/news/` directory.
+
+**Be sure the path in your `setcookie()` line is properly set to restrict the cookie to the specific directory.**
+
 ```
 // Set or replace $regex_path_match accordingly
 // Example: anything in /news/ directory
