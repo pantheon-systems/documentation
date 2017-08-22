@@ -113,7 +113,7 @@ We recommend looking into the [Terminus Rsync Plugin](https://github.com/pantheo
 To sync your current directory to Pantheon:
 
 ```bash
-terminus rsync my_site.dev:files .
+terminus rsync . my_site.dev:files
 ```
 
 When using Rsync manually, the script below is useful for dealing with transfers being interrupted due to connectivity issues. It uploads files to your Pantheon site's Dev environment. If an error occurs during transfer, it waits 180 seconds and picks up where it left off:
