@@ -149,19 +149,16 @@ After deleting a Multidev environment from your site, you'll need to manually [r
 You may encounter situations where New Relic's Browser agent may interfere with other systems. For example, the JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve many errors by disabling New Relic's Browser monitoring agent.
 
 In this example we'll disable it on all AMP pages.
-
-Start by strategizing and testing logic to identify AMP pages based on your site's implementation. Once confirmed, place AMP isolating logic within the first conditional statement of the example below. Then disable New Relic's Browser monitoring by setting `newrelic_disable_autorum` to `FALSE` only if the current request is an AMP page:
-
 ```php
 if (extension_loaded('newrelic')) {
-  // Add AMP page identifying logic here that would, for example,
-  // set variable $amp to TRUE or FALSE. If $amp is true, disable new relic
-  if ($amp) {
-    newrelic_disable_autorum (FALSE);
-    newrelic_ignore_transaction();
-  }
+  newrelic_disable_autorum (FALSE);
+  newrelic_ignore_transaction();
 }
 ```
+
+It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal 8, this can be done using an event subscriber that listens to the `kernel.request` event for instance. 
+
+To isolate the disabling of New Relic to only AMP pages, custom logic will be required to identify AMP requests. The example above will cause New Relic to be disabled on all pages, irrespective of of their type.
 
 ### APM Availability Monitoring Alerts and False Positive Downtime Events
 When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false positive Downtime events for your site.
