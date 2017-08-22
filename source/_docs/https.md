@@ -98,36 +98,8 @@ Yes! As long as your are following the Dashboard DNS recommendations before star
 
 Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/configure-dns/) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
-### Will all of my custom domains be included?
-A paid plan is required to connect custom domains to your site, up to the following limits:
-
-<table class="table table-condensed table-bordered">
-  <thead class="thead-inverse">
-    <tr>
-      <th scope="row" class="thead-inverse"></th>
-      <th>Personal</th>
-      <th>Professional</th>
-      <th>Business</th>
-      <th>Elite</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row" class="thead-inverse">Custom Domain Limit (per site)</th>
-      <td>5</td>
-      <td>25</td>
-      <td>100</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th scope="row" class="thead-inverse">Free and managed HTTPS</th>
-      <td>✓</td>
-      <td>✓</td>
-      <td>✓</td>
-      <td>✓</td>
-    </tr>
-  </tbody>
-</table>
+### How many custom domains are supported?
+{% include("content/tables/custom-domains-limit.html") %}
 
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
