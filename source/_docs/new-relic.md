@@ -145,8 +145,10 @@ After deleting a Multidev environment from your site, you'll need to manually [r
 3. Wait until the color-coded health status turns gray, then select the app's gear icon.
 4. Select **Delete app**, and click the confirmation button.
 
-### AMP Validation Errors
-New Relic's Browser agent JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve validation errors by disabling New Relic's Browser monitoring agent on all AMP pages.
+### Disable New Relic Browser Monitoring Agent
+You may encounter situations where New Relic's Browser agent may interfere with other systems. For example, the JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve many errors by disabling New Relic's Browser monitoring agent.
+
+In this example we'll disable it on all AMP pages.
 
 Start by strategizing and testing logic to identify AMP pages based on your site's implementation. Once confirmed, place AMP isolating logic within the first conditional statement of the example below. Then disable New Relic's Browser monitoring by setting `newrelic_disable_autorum` to `FALSE` only if the current request is an AMP page:
 
