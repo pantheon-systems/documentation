@@ -25,35 +25,7 @@ Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding 
 
 If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar. Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/docs/https/).
 
-A paid plan is required to connect custom domains to your site, up to the following limits:
-
-<table class="table table-condensed table-bordered">
-  <thead class="thead-inverse">
-    <tr>
-      <th scope="row" class="thead-inverse"></th>
-      <th>Personal</th>
-      <th>Professional</th>
-      <th>Business</th>
-      <th>Elite</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row" class="thead-inverse">Custom Domain Limit (per site)</th>
-      <td>5</td>
-      <td>25</td>
-      <td>100</td>
-      <td>200</td>
-    </tr>
-    <tr>
-      <th scope="row" class="thead-inverse">Free and managed HTTPS</th>
-      <td>✓</td>
-      <td>✓</td>
-      <td>✓</td>
-      <td>✓</td>
-    </tr>
-  </tbody>
-</table>
+{% include("content/tables/custom-domains-limit.html") %}
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>

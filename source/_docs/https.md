@@ -98,6 +98,9 @@ Yes! As long as your are following the Dashboard DNS recommendations before star
 
 Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/configure-dns/) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
+### How many custom domains are supported?
+{% include("content/tables/custom-domains-limit.html") %}
+
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
