@@ -1,20 +1,20 @@
 ---
-title: Getting Started
+title: Quickstart
 subtitle: Create New Site
-getstarted: true
+quickstart: true
 anchorid: create-new-site
 generator: pagination
 layout: guide
 pagination:
-    provider: data.gettingstartedpages
+    provider: data.quickstartpages
 use:
-    - gettingstartedpages
-permalink: docs/guides/getting-started/create-new-site/
-nexturl: guides/getting-started/site-dashboard/
+    - quickstartpages
+permalink: docs/guides/quickstart/create-new-site/
+nexturl: guides/quickstart/site-dashboard/
 nextpage: Site Dashboard
-previousurl: guides/getting-started/user-dashboard/
+previousurl: guides/quickstart/user-dashboard/
 previouspage: User Dashboard
-editpath: getting-started/03-create-new-site.md
+editpath: quickstart/03-create-new-site.md
 image: launchGuide-twitterLarge
 ---
 In this lesson, we’re going to create and configure a new WordPress or Drupal site.

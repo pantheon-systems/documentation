@@ -20,7 +20,7 @@ Congrats!! You just launched a site on Pantheon. This is a big deal. Revel in yo
 
 When you're ready to launch another site, use this best-practice checklist to establish a repeatable going live procedure.
 ## Best Practice Checklist for Going Live
-<span class="checklist-icons glyphicon-unchecked"></span> [Create the Live environment](/docs/guides/getting-started/create-test-live/)<br>
+<span class="checklist-icons glyphicon-unchecked"></span> [Create the Live environment](/docs/guides/quickstart/create-test-live/)<br>
 <span class="checklist-icons glyphicon-unchecked"></span> [Upgrade Site Plan](/docs/guides/launch/plans/)<br>
 <span class="checklist-icons glyphicon-unchecked"></span> [Activate New Relic Pro](/docs/new-relic/#activate-new-relic-apm-pro)<br>
 <span class="checklist-icons glyphicon-unchecked"></span> [Load and Performance Test](/docs/load-and-performance-testing/)<br>

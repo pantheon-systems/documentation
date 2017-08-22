@@ -1,20 +1,20 @@
 ---
-title: Getting Started
+title: Quickstart
 subtitle: Create Test & Live
-getstarted: true
+quickstart: true
 anchorid: create-test-live
 generator: pagination
 layout: guide
 pagination:
-    provider: data.gettingstartedpages
+    provider: data.quickstartpages
 use:
-    - gettingstartedpages
-permalink: docs/guides/getting-started/create-test-live/
-nexturl: guides/getting-started/clone-live-to-dev/
+    - quickstartpages
+permalink: docs/guides/quickstart/create-test-live/
+nexturl: guides/quickstart/clone-live-to-dev/
 nextpage: Clone Live to Dev
-previousurl: guides/getting-started/site-dashboard/
+previousurl: guides/quickstart/site-dashboard/
 previouspage: Site Dashboard
-editpath: getting-started/05-create-test-live.md
+editpath: quickstart/05-create-test-live.md
 image: launchGuide-twitterLarge
 ---
 In this lesson, we’re going to to create our Test site and our Live site, which we just learned about in the previous lesson.
@@ -30,7 +30,7 @@ In this lesson, we’re going to to create our Test site and our Live site, whic
 <div class="alert alert-danger" role="alert">
   <h4 class="info">Warning</h4>
   <p>If you haven’t completed the installation of your Dev site, return to <a href=
-  "/docs/guides/getting-started/create-new-site">Create New Site</a>, and do this now, before proceeding.</p>
+  "/docs/guides/quickstart/create-new-site">Create New Site</a>, and do this now, before proceeding.</p>
 </div>
 
 1. Navigate to your Site Dashboard and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab. Here you’ll have access to your Test environment, but it hasn’t been created yet. Do this now by clicking **Create Test Environment**.

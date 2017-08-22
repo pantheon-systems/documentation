@@ -1,21 +1,21 @@
 ---
-title: Getting Started
+title: Quickstart
 subtitle: Introduction
 description: The Getting Started Guide is designed to get you started on Pantheon.
 tags: [getstarted]
 layout: guide
 type: guide
-anchorid: getting-started
-getstarted: true
+anchorid: quickstart
+quickstart: true
 generator: pagination
 pagination:
-    provider: data.gettingstartedpages
+    provider: data.quickstartpages
 use:
-    - gettingstartedpages
-permalink: docs/guides/getting-started/
-nexturl: guides/getting-started/user-dashboard/
+    - quickstartpages
+permalink: docs/guides/quickstart/
+nexturl: guides/quickstart/user-dashboard/
 nextpage: User Dashboard
-editpath: getting-started/01-introduction.md
+editpath: quickstart/01-introduction.md
 completiontime: 1 hour
 image: launchGuide-twitterLarge
 ---

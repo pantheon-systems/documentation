@@ -1,20 +1,20 @@
 ---
-title: Getting Started
+title: Quickstart
 subtitle: Clone Live to Dev
-getstarted: true
+quickstart: true
 anchorid: clone-live-to-dev
 generator: pagination
 layout: guide
 pagination:
-    provider: data.gettingstartedpages
+    provider: data.quickstartpages
 use:
-    - gettingstartedpages
-permalink: docs/guides/getting-started/clone-live-to-dev/
-nexturl: guides/getting-started/connection-modes/
+    - quickstartpages
+permalink: docs/guides/quickstart/clone-live-to-dev/
+nexturl: guides/quickstart/connection-modes/
 nextpage: Connection Modes
-previousurl: guides/getting-started/create-test-live/
+previousurl: guides/quickstart/create-test-live/
 previouspage: Create Test & Live
-editpath: getting-started/06-clone-live-to-dev.md
+editpath: quickstart/06-clone-live-to-dev.md
 image: launchGuide-twitterLarge
 ---
 

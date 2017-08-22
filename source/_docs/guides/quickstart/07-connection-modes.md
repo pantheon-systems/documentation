@@ -1,20 +1,20 @@
 ---
-title: Getting Started
+title: Quickstart
 subtitle: Connection Modes
-getstarted: true
+quickstart: true
 anchorid: connection-modes
 generator: pagination
 layout: guide
 pagination:
-    provider: data.gettingstartedpages
+    provider: data.quickstartpages
 use:
-    - gettingstartedpages
-permalink: docs/guides/getting-started/connection-modes/
-nexturl: guides/getting-started/onserver-dev-part1/
+    - quickstartpages
+permalink: docs/guides/quickstart/connection-modes/
+nexturl: guides/quickstart/onserver-dev-part1/
 nextpage: On-Server Dev, Part 1
-previousurl: guides/getting-started/clone-live-to-dev/
+previousurl: guides/quickstart/clone-live-to-dev/
 previouspage: Clone Live to Dev
-editpath: getting-started/07-connection-modes.md
+editpath: quickstart/07-connection-modes.md
 image: launchGuide-twitterLarge
 ---
 

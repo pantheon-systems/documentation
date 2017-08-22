@@ -1,20 +1,20 @@
 ---
-title: Getting Started
+title: Quickstart
 subtitle: Site Dashboard
-getstarted: true
+quickstart: true
 anchorid: site-dashboard
 generator: pagination
 layout: guide
 pagination:
-    provider: data.gettingstartedpages
+    provider: data.quickstartpages
 use:
-    - gettingstartedpages
-permalink: docs/guides/getting-started/site-dashboard/
-nexturl: guides/getting-started/create-test-live/
+    - quickstartpages
+permalink: docs/guides/quickstart/site-dashboard/
+nexturl: guides/quickstart/create-test-live/
 nextpage: Create Test & Live
-previousurl: guides/getting-started/create-new-site/
+previousurl: guides/quickstart/create-new-site/
 previouspage: Create New Site
-editpath: getting-started/04-site-dashboard.md
+editpath: quickstart/04-site-dashboard.md
 image: launchGuide-twitterLarge
 ---
 

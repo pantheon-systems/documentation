@@ -1,20 +1,20 @@
 ---
-title: Getting Started
+title: Quickstart
 subtitle: User Dashboard
 anchorid: user-dashboard
 layout: guide
-getstarted: true
+quickstart: true
 generator: pagination
 pagination:
-    provider: data.gettingstartedpages
+    provider: data.quickstartpages
 use:
-    - gettingstartedpages
-permalink: docs/guides/getting-started/user-dashboard/
-nexturl: guides/getting-started/create-new-site/
+    - quickstartpages
+permalink: docs/guides/quickstart/user-dashboard/
+nexturl: guides/quickstart/create-new-site/
 nextpage: Create New Site
-previousurl: guides/getting-started/
+previousurl: guides/quickstart/
 previouspage: Introduction
-editpath: getting-started/02-user-dashboard.md
+editpath: quickstart/02-user-dashboard.md
 image: launchGuide-twitterLarge
 ---
 In this lesson, we’re going to explore the User Dashboard.

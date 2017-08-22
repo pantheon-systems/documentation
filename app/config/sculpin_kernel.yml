@@ -30,11 +30,11 @@ sculpin_content_types:
             - tags
             - contributors
 
-    gettingstartedpages:
+    quickstartpages:
         type: path
-        path: docs/guides/getting-started
+        path: docs/guides/quickstart
         permalink: pretty
-        singular_name: gettingstartedpage
+        singular_name: quickstartpage
         enabled: true
         layout: guide
         taxonomies:
