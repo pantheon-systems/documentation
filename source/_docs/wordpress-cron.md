@@ -100,7 +100,7 @@ Once you have disabled WP-Cron, you will need a service that calls a URL at regu
 Any of the above services will get the job done. By disabling WP-Cron, you have turned off the automatic checking and calling of the `wp-cron.php` script. You will now have to call that URL yourself using one of the services above. With most of them, it is as easy as this:
 
 1. Set up an account
-2. Set up a job that calls `https://yourdomain.tld/wp-cron.php?doing_wp_cron=1`
+2. Set up a job that calls `https://yourdomain.tld/wp-cron.php?doing_wp_cron`
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
@@ -108,11 +108,13 @@ Any of the above services will get the job done. By disabling WP-Cron, you have 
 
 Depending on what service you use, you may have the ability to set up multiple jobs at different times. Creating a single job that calls your site's `wp-cron.php` script every 15 minutes is all you should need. WP-Cron will take care of the rest. If you create new schedules that need to be run more often than once every 15 minutes, you will need to adjust your job accordingly.
 
+It's important that you do not add a value to the `doing_wp_cron` query variable; it must be empty for the cron to work properly.
+
 ### Using Your Own Server
 If you administer your own server, you can use the cron service to make a call to the `wp-cron.php` script. You will have to learn how to properly set up a Cron job and use something like `wget` or `curl` to fetch a web page. Unless you take special precautions, it is not any safer to use your own server vs. a web-based cron service; however, it does give you more control.
 
 ### Security
-For the most part, `wp-cron.php` is secure. There are only two parameters you can pass in that will affect the script (`doing_wp_cron=1` and `doing_ajax=1`). These two `$_GET` values are not filtered; they are only used as flags and not as input for a process or variable. Beyond that, all input is ignored.
+For the most part, `wp-cron.php` is secure. There is only one parameter you can pass in that will affect the script (`doing_wp_cron`). This `$_GET` value is not filtered; it is only used as a flag and not as input for a process or variable. Beyond that, all input is ignored.
 
 While no script on a server attached to the Internet is 100% secure, `wp-cron.php` currently does not have any known vulnerabilities or exploits.
 
