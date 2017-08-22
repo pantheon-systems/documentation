@@ -22,7 +22,7 @@ From the Site Dashboard, the Site Owner will want to:
 4. Click **Add**.
 
 <div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p> If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/getting-support/) to transfer sites to your Organization.</p>
+<h4 class="info">Note</h4><p markdown="1"> If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/getting-support/) to transfer sites to your Organization.</p>
 </div>
 
 
