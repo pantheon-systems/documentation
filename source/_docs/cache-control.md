@@ -25,27 +25,37 @@ $build['#cache']['max-age'] = 0;
   Drupal 8 will "bubble up" this information so that if any small block on a page requires a cache max age of zero, the entire page will be uncacheable.
 Currently [Cache Control Override](https://www.drupal.org/project/cache_control_override) module is required for this feature to behave correctly.
   </div>
-  <div role="tabpanel" class="tab-pane" id="d7">
+  <div role="tabpanel" class="tab-pane" id="d7" markdown="1">
   <br>
-  <p>Here is an example of a global way to determine a Drupal response's cacheability. Use the <code>$conf</code> global variable to set <code>Cache-Control: max-age=0</code>:</p>
-  <pre><code class="php hljs">
-  // Set or replace $regex_path_match accordingly
-  // Example: anything in the /news/ directory
-  $regex_path_match = '#^/news/?#';
+  <p markdown="1">Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:</p>
 
+  ```php
+  /*
+  Set or replace $regex_path_match accordingly
+  Example: to omit anything in the /news/ directory, set
+  $regex_path_match = '#^/news/?#';
+  We don't set this variable for you, so YOU MUST define it yourself.
+  */
   if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
     drupal_page_is_cacheable(FALSE);
     $conf['page_cache_maximum_age'] = 0;
   }
-  </code></pre>
+  ```
+
+  <p markdown="1"> This example code will not work until you edit it to define `$regex_path_match`.</p>
+
   </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
+  <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
   <br>
-  <p>Set <code>Cache-Control: max-age=0</code> by hooking into <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers"><code>send_headers</code></a>. This will override <code>max-age</code> configured within the <a href="/docs/wordpress-cache-plugin">Pantheon Cache</a> plugin for all matching requests: </p>
-  <pre><code class="php hljs">
-  // Set or replace $regex_path_match accordingly
-  // Example: anything in the /news/ directory
+  <p markdown="1">Set `Cache-Control: max-age=0` by hooking into <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers"><code>send_headers</code></a>. This will override `max-age` configured within the <a href="/docs/wordpress-cache-plugin">Pantheon Cache</a> plugin for all matching requests: </p>
+
+  ```php
+  /*
+  Set or replace $regex_path_match accordingly
+  Example: to omit anything in the /news/ directory, set
   $regex_path_match = '#^/news/?#';
+  We don't set this variable for you, so YOU MUST define it yourself.
+  */
   
   if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
   	add_action( 'send_headers', 'add_header_nocache', 15 );
@@ -53,7 +63,8 @@ Currently [Cache Control Override](https://www.drupal.org/project/cache_control_
   function add_header_nocache() {
   	header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
   }
-  </code></pre>
+  ```
+  <p markdown="1"> This example code will not work until you edit it to define `$regex_path_match`.</p>
   </div>
 </div>
 
