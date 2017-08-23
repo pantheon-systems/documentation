@@ -7,10 +7,10 @@ title: Guides
 <div class="flex-panel-group">
   <div class="flex-panel-item-guides-landing">
       <div class="flex-panel-body-pantheon-workflows">
-      <a href="/docs/guides/getting-started/">
+      <a href="/docs/guides/quickstart/">
         <div class="pantheon-workflows">
-          <img alt="Getting Started" src="/source/docs/assets/images/launchGuide-twitterLarge.png" class="main-topic-info__plugin-image" >
-        <h3>Getting Started</h3>
+          <img alt="Quickstart" src="/source/docs/assets/images/launchGuide-twitterLarge.png" class="main-topic-info__plugin-image" >
+        <h3>Quickstart</h3>
         </div>
         </a>
       </div>

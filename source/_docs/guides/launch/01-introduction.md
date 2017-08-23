@@ -27,7 +27,7 @@ Welcome! This guide will help you take a site live on Pantheon.
 * Enable free, automated HTTPS
 * Redirect traffic to a single domain (e.g., `www.example.com` or `example.com`)
 
-To get started, you need to [create your Live environment](/docs/guides/getting-started/create-test-live/) and have a registered domain name where you can control DNS settings.
+To get started, you need to [create your Live environment](/docs/guides/quickstart/create-test-live/) and have a registered domain name where you can control DNS settings.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>

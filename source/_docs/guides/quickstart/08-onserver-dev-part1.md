@@ -1,20 +1,20 @@
 ---
-title: Getting Started
+title: Quickstart
 subtitle: On Server Dev, Part 1
-getstarted: true
+quickstart: true
 anchorid: onserver-dev-part1
 generator: pagination
 layout: guide
 pagination:
-    provider: data.gettingstartedpages
+    provider: data.quickstartpages
 use:
-    - gettingstartedpages
-permalink: docs/guides/getting-started/onserver-dev-part1/
-nexturl: guides/getting-started/onserver-dev-part2/
+    - quickstartpages
+permalink: docs/guides/quickstart/onserver-dev-part1/
+nexturl: guides/quickstart/onserver-dev-part2/
 nextpage: On-Server Dev, Part 2
-previousurl: guides/getting-started/connection-modes/
+previousurl: guides/quickstart/connection-modes/
 previouspage: Connection Modes
-editpath: getting-started/08-onserver-dev-part1.md
+editpath: quickstart/08-onserver-dev-part1.md
 image: launchGuide-twitterLarge
 ---
 

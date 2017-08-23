@@ -1,19 +1,19 @@
 ---
-title: Getting Started
+title: Quickstart
 subtitle: Next Steps
-getstarted: true
+quickstart: true
 anchorid: next-steps
 generator: pagination
 survey: true
 layout: guide
 pagination:
-    provider: data.gettingstartedpages
+    provider: data.quickstartpages
 use:
-    - gettingstartedpages
-permalink: docs/guides/getting-started/next-steps/
-previousurl: guides/getting-started/onserver-dev-part2
+    - quickstartpages
+permalink: docs/guides/quickstart/next-steps/
+previousurl: guides/quickstart/onserver-dev-part2
 previouspage: On-Server Dev, Part 2
-editpath: getting-started/10-next-steps.md
+editpath: quickstart/10-next-steps.md
 image: launchGuide-twitterLarge
 ---
 
