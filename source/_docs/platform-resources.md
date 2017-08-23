@@ -54,6 +54,27 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>471</td>
         <td>1024</td>
       </tr>
+      <tr>
+        <th scope="row" class="thead-inverse">Storage</th>
+        <td>Up to 5GB</td>
+        <td>20GB</td>
+        <td>30GB</td>
+        <td>100+GB</td>
+      </tr>
+      <tr>
+        <th scope="row" class="thead-inverse">New Relic</th>
+        <td>Included</td>
+        <td>Included</td>
+        <td>Included</td>
+        <td>Included</td>
+      </tr>
+      <tr>
+        <th scope="row" class="thead-inverse">Domain Limits</th>
+        <td>Up to 5 domains free</td>
+        <td>Up to 25 domains free</td>
+        <td>Up to 100 domains free</td>
+        <td>Up to 200 domains free</td>
+      </tr>
     </tbody>
 </table>
 <tr> <p style="font-size:12px"> * All memory sizes shown in MB</p style>
