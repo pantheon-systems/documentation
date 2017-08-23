@@ -92,7 +92,7 @@ The majority of Pantheon's support is provided in the context of a particular we
   </div>
 </div>
 
-All users of the platform can recieve customer service and support for non-site-related questions via any avalable medium regardless of account type.
+All users of the platform can recieve customer service and support for non-site-related questions via any available medium regardless of account type.
 
 ## Real Time Chat Support
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
@@ -112,7 +112,7 @@ Start a chat with our Support Team to ask questions or request assistance on iss
 </div>
 
 ## Ticket Support
-The ticket support feature is available to certain plans and account types. For details, refer to the [support feature table above](#support-features-and-response-times).
+The ticket support feature is available to certain plans and account types. For details, refer to the [support feature table above](#support-features-and-response-times).  Tickets are associated to the site from which the ticket is opened.  Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
 1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
 2. Choose the **ticket type**.
