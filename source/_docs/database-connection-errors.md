@@ -4,7 +4,7 @@ description: Drupal Pressflow core, WordPress core, and the causes and solutions
 tags: [debugdb]
 categories: [troubleshoot]
 ---
-There is an issue connecting to the Pantheon databse if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
+There is an issue connecting to the Pantheon database if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
  ![Can't connect to local MySQL server through socket](/source/docs/assets/images/mysql-connection-error.png)
 
 ```sql
