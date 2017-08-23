@@ -1,7 +1,7 @@
 ---
 title: Quickstart
 subtitle: Introduction
-description: The Getting Started Guide is designed to get you started on Pantheon.
+description: The Quickstart guide is designed to get you started on Pantheon.
 tags: [getstarted]
 layout: guide
 type: guide
