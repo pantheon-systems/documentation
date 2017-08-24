@@ -129,7 +129,7 @@ You may want to remove these modules after you launch your site, or use more adv
 <div class="alert alert-info">
   <h4 class="info">Note</h4>
   <p markdown="1">
-  You may have heard that some Drupal 8 developers are [using Composer](https://pantheon.io/docs/composer-drupal-8/) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
+  You may have heard that some Drupal 8 developers are [using Composer](https://pantheon.io/docs/composer/) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
   </p>
 </div>
 
