@@ -81,27 +81,42 @@
     window.addEventListener("load", setActivetrail);
   </script>
 {% endif %}
-{% if page.cache %}
+{% if page.buildtools %}
   <script type="text/javascript">
     function setActivetrail() {
       aaObj = document.getElementById('manual-guide-toc').getElementsByTagName('a');
       for(i=0;i<aaObj.length;i++) {
         if(document.location.href.indexOf(aaObj[i].href)>=0 ){
           aaObj[i].className='active-trail';
-          if(/\/hit.*/.test(aaObj[i].href)>=1) {
-            $('#docs-guides-cache').removeClass('active-trail');
+          if(/\/create-project.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
           }
-          if(/\/miss.*/.test(aaObj[i].href)>=1) {
-            $('#docs-guides-cache').removeClass('active-trail');
+          if(/\/project-page.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
           }
-          if(/\/test.*/.test(aaObj[i].href)>=1) {
-            $('#docs-guides-cache').removeClass('active-trail');
+          if(/\/create-pr.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
           }
-          if(/\/troubleshoot.*/.test(aaObj[i].href)>=1) {
-            $('#docs-guides-cache').removeClass('active-trail');
+          if(/\/configure.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
           }
-          if(/\/cc.*/.test(aaObj[i].href)>=1) {
-            $('#docs-guides-cache').removeClass('active-trail');
+          if(/\/update.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
+          }
+          if(/\/extend.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
+          }
+          if(/\/custom-theme.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
+          }
+          if(/\/custom-block.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
+          }
+          if(/\/behat.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
+          }
+          if(/\/merge.*/.test(aaObj[i].href)>=1) {
+            $('#docs-guides-build-tools').removeClass('active-trail');
           }
         }
       }

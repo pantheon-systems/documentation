@@ -63,3 +63,14 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
+    buildtoolspages:
+        type: path
+        path: docs/guides/build-tools
+        permalink: pretty
+        singular_name: buildtoolspage
+        enabled: true
+        layout: guide
+        taxonomies:
+            - categories
+            - tags
+            - contributors

@@ -14,7 +14,7 @@ The latest version of Pantheon's CLI, [Terminus](/docs/terminus/), incorporates 
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">The following does **not** pertain to Composer managed sites. For information about using Composer to manage Drupal 8 sites, see [Using GitHub Pull Requests with Composer and Drupal 8](/docs/guides/github-pull-requests/).</p></div>
+<p markdown="1">The following does **not** pertain to Composer managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/docs/guides/build-tools/).</p></div>
 
 ## Installing Terminus
 Installing Terminus is a fairly straight forward process. Just follow [these instructions](/docs/terminus/install/).

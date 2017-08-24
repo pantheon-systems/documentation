@@ -15,7 +15,7 @@ For corporate or higher education customers, Custom Upstreams is included in all
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">We do not recommend Custom Upstreams for Drupal 8 sites managed by Composer at this time. For an alternative workflow, checkout [Using GitHub Pull Requests with Composer and Drupal 8](/docs/guides/github-pull-requests/).</p>
+<p markdown="1">We do not recommend Custom Upstreams for Drupal 8 sites managed by Composer at this time. For an alternative workflow, checkout [Build Tools Guide](/docs/guides/build-tools/).</p>
 </div>
 
 ## Benefits
