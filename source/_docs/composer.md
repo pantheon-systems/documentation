@@ -1,180 +1,90 @@
 ---
-title: Managing Custom Code with Composer
-description: Understand how to manage custom plugins and themes for WordPress sites using Composer.
-tags: [workflow]
-categories: []
+title: Composer Fundamentals and Workflows
+description: Start with Composer basics then explore suggested workflows for WordPress and Drupal sites on Pantheon.
+tags: [automation, workflow]
 ---
-Extending WordPress or Drupal with custom code is a common part of the development lifecycle. In order to optimize workflows, it's essential that custom plugins, modules, and themes are maintained independently from your sites and projects so they're easily reused.
+Composer is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a WordPress or Drupal site. At it's primary level, Composer needs:
+
+- A list of dependencies
+- A place to put the dependencies
+
+Understanding how Composer can be used independent of Drupal or WordPress is a good place to learn more about the general concepts. For a summary of basic usage, see [Composer's own documentation](https://getcomposer.org/doc/01-basic-usage.md).
 
 <div class="enablement">
   <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Automation Training</h4></a>
   <p>Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
 </div>
 
-We recommend managing custom code as plugins or modules within individual repositories and hosting each one remotely on a service such as [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org), or [GitLab](https://about.gitlab.com/). You can then use Composer to manage and organize the software needed for your project to run, including custom plugins or modules.
+## Dependencies
+Composer encourages a mental model where code not written specifically for a given project is a dependency. Only files unique to the project are tracked as part of the project's main source repository, also referred to as the canonical site repository. Dependencies for WordPress and Drupal include core, plugins, contrib modules, themes, and libraries. A single dependency, such as a theme, is referred to as a package.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).</p>
+### Drupal and WordPress Package Repositories
+By default, Composer can only see packages listed on [The PHP Package Repository](https://packagist.org/) which do not include Drupal or WordPress packages. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides it's own respective package repository so dependencies can be managed by Composer:
+
+- WordPress: [https://wpackagist.org](https://wpackagist.org)
+- Drupal 8: [https://packages.drupal.org/8](https://packages.drupal.org/8)
+- Drupal 7: [https://packages.drupal.org/7](https://packages.drupal.org/7)
+
+Site's created from Pantheon's example repositories will include the appropriate package repository within the `composer.json` file.
+
+## Nested Docroot
+The docroot is the directory from which your site is served. Without Composer, Pantheon defaults the docroot to the root directory of the site's codebase. In order to require core as a project dependency, a recommended best practice for Composer managed sites, it must be installed in a subdirectory like `web`. This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml` file. For details, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).
+
+Here's a
+
+
+## GitHub Pull Requests
+Use GitHub and Circle CI with Composer to implement a collaborative, team-based Continuous Integration workflow using pull requests for a site on Pantheon.
+
+<div class="flex-panel-group">
+  <div class="flex-panel-item">
+    <div class="flex-panel-body">
+      <div class="flex-panel-title">
+        <h4 class="info" style="margin-top:10px;font-size:larger">GitHub</h3>
+        <div class="pantheon-official">
+          <img alt="GitHub Logo" src="/source/docs/assets/images/github-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;">
+          <p class="pantheon-official"></p>
+        </div>
+      </div>
+      <p class="topic-info__description"><a href="https://github.org">GitHub</a> is an online service that provides cloud storage Git repositories that may be cloned and used locally, or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
+    </div>
+  </div>
+  <div class="flex-panel-item">
+    <div class="flex-panel-body">
+      <div class="flex-panel-title">
+        <h4 class="info" style="margin-top:10px;font-size:larger">CircleCI</h3>
+        <div class="pantheon-official">
+          <img alt="CircleCI Logo" src="/source/docs/assets/images/circleci-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;">
+          <p class="pantheon-official"></p>
+        </div>
+      </div>
+      <p class="topic-info__description"><a href="https://circleci.com">CircleCI</a> provides hosted services to run automated tests for a project, and GitHub provides an integration to run these tests to whenever a change is submitted. The process of testing each set of changed files prior to merging them into the main branch is called continuous integration.</p>
+    </div>
+  </div>
 </div>
-## Before You Begin
-1. Install [Composer](https://getcomposer.org/doc/00-intro.md).
-2. Move custom code to individual repositories, and host them on [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org), or [GitLab](https://about.gitlab.com/).
-3. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):
+### Source Repository and Artifact Deployment
+Only files unique to the project are tracked as part of the project's main source repository on GitHub. Once a change is committed, CiricleCI uses Composer to compile requirements and deploy the entire site artifact to Pantheon (either on a Multidev or to Dev):
 
- ```nohighlight
- $ terminus connection:set <site>.<env> git
- ```
+![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)
 
-4. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you haven't already.
+GitHub Pull requests (PRs) are a formalized way of reviewing and merging a proposed set of changes to a codebase. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before merging the PR to accept changes.
 
-## Initialize Composer
-Run `composer init` from within the root directory of your site's codebase and use the interactive setup guide to initiate Composer. Enter `dev` when prompted for `Minimum Stability []:` and `yes` when asked if you would like to add the vendor directory to your `.gitignore` file.
+In this workflow, a [Multidev](/docs/multidev/) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
 
-### Define Composer Packages
-Run `git status` after initializing your project with Composer, to verify your working state. You should have one modified file (`.gitignore`) and one untracked file (`composer.json`). For additional details, see [Creating your very own Composer Package](https://knpuniversity.com/screencast/question-answer-day/create-composer-package).
+![Multidev PR workflow](/source/docs/assets/images/pr-workflow/github-pr-diagram.png)
 
-**WordPress**: Open `composer.json` using your preferred text editor and define a new package to require your custom code:  
+### Automated Tests
+It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, GitHub will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
 
-```json
-"repositories": {
-  "my-custom-plugin": {
-    "type": "package",
-    "package": {
-      "name": "rachelwhitton/my-custom-plugin",
-      "type": "wordpress-plugin",
-      "version": "dev-master",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/rachelwhitton/my-custom-plugin.git",
-        "reference": "master"
-      }
-    }
-  }
-}
-```
+## Custom Upstreams
 
-**Drupal**: Open `composer.json` using your preferred text editor and define a new package to require your custom code:  
+## Terminology
+Here are definitions for commonly used terms:
 
-```json
-"repositories": {
-  "my-custom-module": {
-    "type": "package",
-    "package": {
-      "name": "rachelwhitton/my-custom-module",
-      "type": "drupal-module",
-      "version": "dev-master",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/rachelwhitton/my-custom-module",
-        "reference": "master"
-      }
-    }
-  }
-}
-```
-
-Next, add the [packagist.org](https://packagist.org/) repository and require [`composer/installers`](https://github.com/composer/installers) along with your custom plugin/module:
-
-```json
-"repositories": {
-  "my-custom-plugin": {
-    "type": "package",
-    "package": {
-      "name": "gh-user/my-custom-plugin",
-      "type": "wordpress-plugin",
-      "version": "dev-master",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/gh-user/my-custom-plugin.git",
-        "reference": "master"
-      }
-    }
-  },
-  "packagist": {
-    "type": "composer",
-    "url": "https://packagist.org/"
-  }
-},
-"require-dev": {
-  "gh-user/my-custom-plugin": "dev-master"
-},
-"require": {
-  "composer/installers": "^1.0.21"
-}
-```
-`composer/installers` allows you to define installation paths for package types, such as plugins for WordPress:
-```json
-"extra": {
-  "installer-paths": {
-    "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-    "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-    "wp-content/themes/{$name}/": ["type:wordpress-theme"]
-  }
-```
-
-Or modules for Drupal:
-
-```json
-"extra": {
-  "installer-paths": {
-    "sites/all/themes/{$name}/": ["type:drupal-theme"],
-    "sites/all/modules/{$name}/": ["type:drupal-module"]
-  }
-}
-```
-Run `composer install` to install your custom code into the appropriate directory. Use `git status` to verify your local state, then commit and push your code to Pantheon:
-```
-git status
-git commit -Am "Initiate composer, require custom code"
-git push origin master
-```
-
-## Remote Composer Operations
-
-Using [Terminus](/docs/terminus) and the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin), it is possible to run Composer commands on your Pantheon sites directly.
-
-1. Install the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin).
-2. Set the Dev environment's connection mode to SFTP from within the Site Dashboard or via [Terminus](/docs/terminus):
-
- ```nohighlight
- $ terminus connection:set <site>.<env> sftp
- ```
-3. Run Composer commands through Terminus:
-
- ```nohighlight
- $ terminus composer <site>.<env> -- update
- ```
-
-## Drupal Resources
-
-- [packages.drupal.org](https://www.drupal.org/docs/develop/using-composer/using-packagesdrupalorg), a Composer repository for Drupal. It provides all projects from Drupal.org as packages for Composer.
-- [Using Composer with a Relocated Document Root](https://pantheon.io/blog/using-composer-relocated-document-root-pantheon)
-- [Example drops-8 Composer site](https://github.com/pantheon-systems/example-drops-8-composer), the Pantheon version of [drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project).
-- [Composer Tools & Frameworks for Drupal](https://www.slideshare.net/GetPantheon/composer-tools-and-frameworks-for-drupal-20-may)
-- Manage patches with [cweagans/composer-patches](https://github.com/cweagans/composer-patches)
-
-## WordPress Resources
-- [WordPress Packagist](https://wpackagist.org), mirrors the WordPress plugin and theme directories as a Composer repository.
--  Manage drop-ins with [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer)
-
- ```json
- "require": {
-   "composer/installers": "^1.0.21",
-   "koodimonni/composer-dropin-installer": "*",
-   "wpackagist-plugin/wp-cfm": "1.*",
-   "wpackagist-plugin/wp-redis": "0.4.0"
-   },
-   "extra": {
-     "installer-paths": {
-       "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-       "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-       "wp-content/themes/{$name}/": ["type:wordpress-theme"]
-       },
-     "dropin-paths": {
-        "wp-content": [
-        "package:wpackagist-plugin/wp-redis:object-cache.php"
-      ]
-    }
-  }
- ```
+* **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
+* **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
+* **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
+* **Repository**: A collection of files packaged in a single directory under version control.
+* **Remote Repository**: A central version control location, e.g. residing on GitHub or BitBucket.
+* **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
+* **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.

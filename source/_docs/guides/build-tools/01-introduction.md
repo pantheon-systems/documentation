@@ -22,43 +22,9 @@ completiontime: 1 hour
 ---
 This guide describes how to use GitHub and Circle CI with Composer to implement a collaborative, team-based Continuous Integration workflow using pull requests for a Drupal 8 site on Pantheon.
 
-<div class="flex-panel-group">
-  <div class="flex-panel-item">
-    <div class="flex-panel-body">
-      <div class="flex-panel-title">
-        <h3 class="plugin-title">GitHub</h3>
-        <div class="pantheon-official">
-          <img alt="GitHub Logo" src="/source/docs/assets/images/github-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;" >
-          <p class="pantheon-official">GitHub</p>
-        </div>
-      </div>
-      <p class="topic-info__description"><a href="https://github.org">GitHub</a> is an online service that provides cloud storage Git repositories that may be cloned and used locally, or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
-    </div>
-  </div>
-  <div class="flex-panel-item">
-    <div class="flex-panel-body">
-      <div class="flex-panel-title">
-        <h3 class="plugin-title">CircleCI</h3>
-        <div class="pantheon-official">
-          <img alt="CircleCI Logo" src="/source/docs/assets/images/circleci-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;>
-          <p class="pantheon-official">CircleCI</p>
-        </div>
-      </div>
-      <p class="topic-info__description"><a href="https://circleci.com">CircleCI</a> provides hosted services to run automated tests for a project, and GitHub provides an integration to run these tests to whenever a change is submitted. The process of testing each set of changed files prior to merging them into the main branch is called continuous integration.</p>
-    </div>
-  </div>
-  <div class="flex-panel-item">
-    <div class="flex-panel-body">
-      <div class="flex-panel-title">
-        <h3 class="plugin-title">Composer</h3>
-        <div class="pantheon-official">
-          <img alt="Composer Logo" src="/source/docs/assets/images/composer-logo.svg" style="max-width:40px; class="main-topic-info__plugin-image" >
-          <p class="pantheon-official">Composer</p>
-        </div>
-      </div>
-      <p class="topic-info__description"><a href="https://getcomposer.org">Composer</a> is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a project. For example, Composer may be used to install the modules and themes used by a Drupal site.</p>
-    </div>
-  </div>
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">If you are considering adopting a Composer workflow, start by [learning the fundamentals](/docs/composer/) and identifying which of the two workflows best meets your use case ([GitHub Pull Request](/docs/composer/#github-pull-request) or [Custom Upstream](/docs/composer/#custom-upstream)). **The following content pertains to the GitHub Pull Request use case only.**</p>
 </div>
 
 <div class="enablement">
