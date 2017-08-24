@@ -16,7 +16,7 @@ pagination:
 use:
     - buildtoolspages
 permalink: docs/guides/build-tools/
-nexturl: guides/build-tools/user-dashboard/
+nexturl: guides/build-tools/create-project/
 editpath: build-tools/01-introduction.md
 completiontime: 1 hour
 ---
@@ -24,7 +24,7 @@ This guide describes how to use GitHub and Circle CI with Composer to implement 
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">If you are considering adopting a Composer workflow, start by [learning the fundamentals](/docs/composer/) and identifying which of the two workflows best meets your use case ([GitHub Pull Request](/docs/composer/#github-pull-request) or [Custom Upstream](/docs/composer/#custom-upstream)). **The following content pertains to the GitHub Pull Request use case only.**</p>
+<p markdown="1">If you are considering adopting a Composer workflow, start by [learning the fundamentals](/docs/composer/) and identifying which of the two workflows best meets your use case ([Source and Artifact](/docs/composer/#source-and-artifact-workflow) or [Custom Upstream](/docs/composer/#custom-upstream-workflow)).</p>
 </div>
 
 <div class="enablement">

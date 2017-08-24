@@ -77,7 +77,7 @@ This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using S
  terminus connection:set <site>.<env> git
  ```
 
-2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) and [initialize Composer](/docs/composer/#initialize-composer) with `composer init`, if you have not done so already.
+2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) if you have not done so already.
 
 3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
 

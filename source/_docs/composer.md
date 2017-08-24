@@ -18,24 +18,20 @@ Understanding how Composer can be used independent of Drupal or WordPress is a g
 ## Dependencies
 Composer encourages a mental model where code not written specifically for a given project is a dependency. Only files unique to the project are tracked as part of the project's main source repository, also referred to as the canonical site repository. Dependencies for WordPress and Drupal include core, plugins, contrib modules, themes, and libraries. A single dependency, such as a theme, is referred to as a package.
 
-### Drupal and WordPress Package Repositories
-By default, Composer can only see packages listed on [The PHP Package Repository](https://packagist.org/) which do not include Drupal or WordPress packages. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides it's own respective package repository so dependencies can be managed by Composer:
+By default, Composer can only see packages listed on [The PHP Package Repository](https://packagist.org/) which do not include Drupal or WordPress packages. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides it's own respective package repository so dependencies can be managed with Composer:
 
 - WordPress: [https://wpackagist.org](https://wpackagist.org)
 - Drupal 8: [https://packages.drupal.org/8](https://packages.drupal.org/8)
 - Drupal 7: [https://packages.drupal.org/7](https://packages.drupal.org/7)
 
-Site's created from Pantheon's example repositories will include the appropriate package repository within the `composer.json` file.
+Site's created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file.
 
 ## Nested Docroot
-The docroot is the directory from which your site is served. Without Composer, Pantheon defaults the docroot to the root directory of the site's codebase. In order to require core as a project dependency, a recommended best practice for Composer managed sites, it must be installed in a subdirectory like `web`. This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml` file. For details, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).
+The docroot is the directory from which your site is served. Without Composer, Pantheon defaults the docroot to the root directory of the site's codebase. In order to require core as a project dependency, a recommended best practice for Composer managed sites, it must be installed in a subdirectory such as `web`.
 
-Here's a
+This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml` file. For details, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).
 
-
-## GitHub Pull Requests
-Use GitHub and Circle CI with Composer to implement a collaborative, team-based Continuous Integration workflow using pull requests for a site on Pantheon.
-
+## Source and Artifact Workflow
 <div class="flex-panel-group">
   <div class="flex-panel-item">
     <div class="flex-panel-body">
@@ -62,29 +58,35 @@ Use GitHub and Circle CI with Composer to implement a collaborative, team-based 
     </div>
   </div>
 </div>
-### Source Repository and Artifact Deployment
-Only files unique to the project are tracked as part of the project's main source repository on GitHub. Once a change is committed, CiricleCI uses Composer to compile requirements and deploy the entire site artifact to Pantheon (either on a Multidev or to Dev):
+
+Only files unique to the project are tracked as part of the project's main "source" repository on GitHub, which requires an abstraction layer to compile dependencies and deploy an entire "artifact" to the site repository on Pantheon. The abstraction layer is facilitated by CirlceCI in the Pantheon maintained examples, but the principles are the same for other continuous integration service providers.
+
+Composer is used to fetch dependencies declared by the project as part of a CircleCI build step. This ensures that the final composed build results are installed on Pantheon:
 
 ![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)
 
-GitHub Pull requests (PRs) are a formalized way of reviewing and merging a proposed set of changes to a codebase. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before merging the PR to accept changes.
+### GitHub Pull Requests
+One advantage of managing code this way is that it keeps the change sets (differences) for pull requests as small as possible. If a pull request upgrades several dependencies, only the dependency metadata file will change; the actual code changes in the upgraded dependencies themselves are not shown.
+
+GitHub pull requests (PRs) are a formalized way of reviewing and merging a proposed set of changes to the source repository. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before merging the PR to accept changes.
 
 In this workflow, a [Multidev](/docs/multidev/) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
 
 ![Multidev PR workflow](/source/docs/assets/images/pr-workflow/github-pr-diagram.png)
 
 ### Automated Tests
+
 It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, GitHub will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
 
-## Custom Upstreams
+### Scaling Considerations
+We recommend the "source" and "artifact" workflow for single site use cases, and for most use cases involving larger site portfolios such as EDUs. You can create a scaffold repository based off our example repositories and customize it to your liking, then use the scaffold to create new sites similar to how you would create the codebase for a [Custom Upstream](/docs/custom-upstream/).
 
-## Terminology
-Here are definitions for commonly used terms:
+However, unlike Custom Upstreams this method does not support one-click updates in the Site Dashboard. Adopting this workflow means forgoing all other update techniques in favor of Composer. If your use case requires an simpler update strategy for non-technical site admins, this workflow could present problems scaling or at the very least require additional training for your development team.
 
-* **Upstream**: A repository that acts as a parent for another repository, like [Pantheon's WordPress Upstream](https://github.com/pantheon-systems/wordpress). The next two definitions are specific types of Upstreams.
-* **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
-* **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
-* **Repository**: A collection of files packaged in a single directory under version control.
-* **Remote Repository**: A central version control location, e.g. residing on GitHub or BitBucket.
-* **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
-* **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
+## Custom Upstream Workflow
+It is possible to preserve the functionality of Pantheon's one-click updates in the Site Dashboard for Composer managed sites, however it's use case is quite narrow. Your scaffold repository based off our example repositories would need to commit all dependencies to the Custom Upstream repository. Updates via Composer would only happen at the Custom Upstream repository level, which would then trickle down to sites created from the Custom Upstream as one-click updates.
+
+This workflow has one very serious shortcoming, that is site-specific dependencies are likely to cause a lot of conflicts. The practical use case for this workflow is for a large group of sites that require a single set of dependencies. You should only use this method if you don’t intend to use site specific themes, modules, or plugins downstream.
+
+## Next Steps
+Follow the [Build Tools Guide](/docs/guides/build-tools/) to create WordPress or Drupal sites managed by Composer based off Pantheon's example repositories.
