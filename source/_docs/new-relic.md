@@ -203,7 +203,7 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 #### Can I disable New Relic for a specific environment?
 
-You can only associate New Relic Pro per site and all environments (`DEV`, `TEST`, `LIVE`). We don't recommend turning off New Relic in any one environment, as it removes the ability for troubleshooting the site for errors or performance issues.
+We don't recommend turning off New Relic for any one environment, as it removes the ability for troubleshooting the site for errors or performance issues.
 
 Often when developers want to disable New Relic, they believe it to be the cause of a performance issue. Our experience shows that this is rarely the case, and disabling it makes it impossible for our Customer Success Engineers to help diagnose an issue.
   
