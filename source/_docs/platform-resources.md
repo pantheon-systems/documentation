@@ -75,9 +75,17 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>Up to 100 domains free</td>
         <td>Up to 200 domains free</td>
       </tr>
+      <tr>
+      <th scope="row" class="thead-inverse">Multidev <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Sites of any plan size that are part of an organization also have access to Multidev""><em class="fa fa-info-circle"></em></a>
+      </th>
+        <td>  </td>
+        <td>  </td>
+        <td> ✓ </td>
+        <td> ✓ </td>
+      </tr>
     </tbody>
 </table>
-<tr> <p style="font-size:12px"> * All memory sizes shown in MB</p style>
+<tr> <p style="font-size:12px"> All memory sizes shown in MB</p style>
 
 ## Glossary
 
