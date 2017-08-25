@@ -84,8 +84,8 @@ The platform resources provided to your website depend on your current plan. Pan
       </tr>
     </tbody>
 </table>
-<tr> <p style="font-size:12px"> All memory sizes shown in MB</p style>
-<tr> <p style="font-size:12px" markdown="1"> * Sites of any plan size that are part of an [organization](/docs/organizations/) also have access to [Multidev](/docs/multidev/). </p style>
+<tr> <p style="font-size:12px" markdown="1"> All memory sizes shown in MB<br>
+* Sites of any plan size that are part of an [organization](/docs/organizations/) also have access to [Multidev](/docs/multidev/). </p style>
 
 ## Glossary
 
