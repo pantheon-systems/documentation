@@ -58,12 +58,15 @@ Enable Redis cache server from your Pantheon Site Dashboard by going to **Settin
       $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
 
       $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
-      $settings['cache_prefix']['default'] = 'pantheon-redis';
+      $settings['cache_prefix']['default'] = VERSION . ':pantheon-redis'; // Version prefix to avoid bugs when upgrading
 
       // Always set the fast backend for bootstrap, discover and config, otherwise this gets lost when redis is enabled.
       $settings['cache']['bins']['bootstrap'] = 'cache.backend.chainedfast';
       $settings['cache']['bins']['discovery'] = 'cache.backend.chainedfast';
       $settings['cache']['bins']['config']    = 'cache.backend.chainedfast';
+      
+      // Set Redis to not get the cache_form (no performance difference).
+      $settings['cache']['bins']['form']      = 'cache.backend.database';
     }
     ```
 
