@@ -12,7 +12,7 @@ use:
 permalink: docs/guides/build-tools/configure/
 nexturl: guides/build-tools/update/
 previousurl: guides/build-tools/create-pr/
-editpath: build-tools/04-create-pr.md
+editpath: build-tools/04-configure.md
 ---
 While it is possible to configure your site by editing the exported configuration files, doing so is only convenient for properties whose location and format are already known. For most users, using the Drupal admin interface to set up the site's configuration is much more convenient.
 
