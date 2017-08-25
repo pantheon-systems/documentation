@@ -201,6 +201,12 @@ New Relic Pro is automatically provisioned for your site. Unfortunately, you can
 
 Because Pantheon's runtime matrix runs your application across many containers simultaneously, it's common to see old containers with no reporting data as your application shifts around. This is not a cause for concern.
 
+#### Can I disable New Relic for a specific environment?
+
+We don't recommend turning off New Relic for any one environment, as it removes the ability for troubleshooting the site for errors or performance issues.
+
+Often when developers want to disable New Relic, they believe it to be the cause of a performance issue. Our experience shows that this is rarely the case, and disabling it makes it impossible for our Customer Success Engineers to help diagnose an issue.
+  
 
 ## See Also
 - [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
