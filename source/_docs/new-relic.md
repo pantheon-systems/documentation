@@ -203,9 +203,7 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 #### Can I disable New Relic for a specific environment?
 
-We don't recommend turning off New Relic for any one environment, as it removes the ability for troubleshooting the site for errors or performance issues.
-
-Often when developers want to disable New Relic, they believe it to be the cause of a performance issue. Our experience shows that this is rarely the case, and disabling it makes it impossible for our Customer Success Engineers to help diagnose an issue.
+We don't recommend turning off New Relic for any one environment, as it makes troubleshooting the site for errors or performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems.
   
 
 ## See Also
