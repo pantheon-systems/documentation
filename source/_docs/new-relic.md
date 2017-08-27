@@ -34,7 +34,7 @@ New Relic's Dashboard starts with a high-level breakdown of application performa
 2. Database Queries (MySQL or Redis)
 3. External Requests (e.g. calls to third pary APIs)
 
-Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the databse](/docs/debug-mysql-new-relic/) could be the result of  slow queries, or an elevated volume of queries overall.
+Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the databse](/docs/debug-mysql-new-relic/) could be the result of slow queries, or an elevated volume of queries overall.
 
 For more information on using New Relic's features, we encourage you to read  the [New Relic APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic to investigate specific areas of performance below:
 
@@ -203,7 +203,7 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 #### Can I disable New Relic for a specific environment?
 
-We don't recommend turning off New Relic for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/docs/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
+We don't recommend turning off New Relic for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/docs/wp-config-php/).
   
 
 ## See Also
