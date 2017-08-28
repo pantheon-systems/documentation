@@ -62,26 +62,39 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>100+GB</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">New Relic</th>
-        <td>Included</td>
-        <td>Included</td>
-        <td>Included</td>
-        <td>Included</td>
+        <th scope="row" class="thead-inverse">Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a></th>
+        <td>5</td>
+        <td>25</td>
+        <td>100</td>
+        <td>200</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Domain Limits</th>
-        <td>Up to 5 domains free</td>
-        <td>Up to 25 domains free</td>
-        <td>Up to 100 domains free</td>
-        <td>Up to 200 domains free</td>
+        <th scope="row" class="thead-inverse">Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a></th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
       </tr>
       <tr>
-      <th scope="row" class="thead-inverse">Multidev <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Sites of any plan size that are part of an organization also have access to Multidev""><em class="fa fa-info-circle"></em></a>
-      </th>
-        <td>  </td>
-        <td>  </td>
-        <td> ✓ </td>
-        <td> ✓ </td>
+        <th scope="row" class="thead-inverse">New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a></th>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <th scope="row" class="thead-inverse">Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/drupal-redis/'>Installing Redis</a>."><em class="fa fa-info-circle"></em></a></th>
+        <td></td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+      <th scope="row" class="thead-inverse">Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle"></em></a></th>
+        <td></td>
+        <td></td>
+        <td>✓</td>
+        <td>✓</td>
       </tr>
     </tbody>
 </table>
