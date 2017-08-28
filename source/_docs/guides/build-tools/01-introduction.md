@@ -20,44 +20,98 @@ nexturl: guides/build-tools/create-project/
 editpath: build-tools/01-introduction.md
 completiontime: 1 hour
 ---
-This guide describes how to use GitHub and Circle CI with Composer to implement a collaborative, team-based Continuous Integration workflow using pull requests for a Drupal 8 site on Pantheon.
+This guide describes how to use build tools such as GitHub and CircleCI with Composer to implement a collaborative, team-based Continuous Integration workflow using pull requests for WordPress, Drupal 8, and Drupal 7 sites on Pantheon.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">If you are considering adopting a Composer workflow, start by [learning the fundamentals](/docs/composer/) and identifying which of the two workflows best meets your use case ([Source and Artifact](/docs/composer/#source-and-artifact-workflow) or [Custom Upstream](/docs/composer/#custom-upstream-workflow)).</p>
+<div class="flex-panel-group">
+  <div class="flex-panel-item">
+    <div class="flex-panel-body">
+      <div class="flex-panel-title">
+        <h4 class="info" style="margin-top:10px;font-size:larger">GitHub</h3>
+        <div class="pantheon-official">
+          <img alt="GitHub Logo" src="/source/docs/assets/images/github-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;">
+          <p class="pantheon-official"></p>
+        </div>
+      </div>
+      <p class="topic-info__description"><a href="https://github.org">GitHub</a> is an online service that provides cloud storage Git repositories that may be cloned and used locally, or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
+    </div>
+  </div>
+  <div class="flex-panel-item">
+    <div class="flex-panel-body">
+      <div class="flex-panel-title">
+        <h4 class="info" style="margin-top:10px;font-size:larger">CircleCI</h3>
+        <div class="pantheon-official">
+          <img alt="CircleCI Logo" src="/source/docs/assets/images/circleci-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;">
+          <p class="pantheon-official"></p>
+        </div>
+      </div>
+      <p class="topic-info__description"><a href="https://circleci.com">CircleCI</a> provides hosted services to run automated tests for a project, and GitHub provides an integration to run these tests to whenever a change is submitted. The process of testing each set of changed files prior to merging them into the main branch is called continuous integration.</p>
+    </div>
+  </div>
+  <div class="flex-panel-item">
+    <div class="flex-panel-body">
+      <div class="flex-panel-title">
+        <h4 class="info" style="margin-top:10px;font-size:larger">Composer</h3>
+        <div class="pantheon-official">
+          <img alt="Composer Logo" src="/source/docs/assets/images/composer-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;">
+          <p class="pantheon-official"></p>
+        </div>
+      </div>
+      <p class="topic-info__description"><a href="/docs/composer/">Composer</a> is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a project. For example, Composer may be used to install the plugins, modules and themes used by a Drupal or WordPress site.</p>
+    </div>
+  </div>
 </div>
 
 <div class="enablement">
- <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Get DevOps Training</h4></a>
- <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
- </div>
+  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Get DevOps Training</h4></a>
+  <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
+</div>
 
-*Pull requests* are a formalized way of reviewing and merging a proposed set of changes to a codebase. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before *merging* the pull request.
+## Source and Artifact Workflow
+Only files unique to the project are tracked as part of the project's main "source" repository on GitHub, which requires an abstraction layer to compile dependencies and deploy an entire "artifact" to the site repository on Pantheon. The abstraction layer is facilitated by CirlceCI in the Pantheon maintained examples, but the principles are the same for other continuous integration service providers.
 
-In the workflow set up in this guide, a multidev environment is created for each pull request branch. Work in these environments can also be committed back to the same branch for review on GitHub. When done, the result is merged into the dev environment.
-
-![Multidev PR workflow](/source/docs/assets/images/pr-workflow/multidev-git-pr-workflow.png)
-
-It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, GitHub will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
-
-When using GitHub and Composer to manage a Drupal site, only those files unique to the project are part of the project's main repository. Composer is used to fetch the external code needed by the project; a process running on CircleCI executes Composer, and ensures that the final composed build results are installed on Pantheon:
+Composer is used to fetch dependencies declared by the project as part of a CircleCI build step. This ensures that the final composed build results are installed on Pantheon:
 
 ![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)
 
-One advantage of managing code this way is that it keeps the change sets (differences) for pull requests as small as possible. If a pull request upgrades several external projects, only the external dependency metadata file will change; the actual code changes in the upgraded projects themselves are not shown.
-
-Generally, use of Composer is optional; however, some Drupal modules, such as the Address module require the use of Composer. If a site needs just one module that requires Composer, then it should manage all of its modules with Composer.
-
 ## Before You Begin
 
-1.  To prepare your system for local development, install:
+1. Start by [learning Composer fundamentals](/docs/composer/).
+2. To prepare your system for local development, install:
 
-    - [Composer](https://getcomposer.org).
-    - [Terminus](/docs/terminus/install/).
-    - The [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin#installation).
-    - The [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin#installation).
-    - The [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin#installation).
+    - [Composer](https://getcomposer.org)
+    - Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>$HOME</code> and install there:
 
-    <br>
-2.  Generate a [machine token](/docs/machine-tokens/) and [log in with Terminus](/docs/terminus/install/#authenticate).
-3.  [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb)
+        <div class="copy-snippet">
+          <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
+          <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+        </div>
+
+        - [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard** > **Account** > **Machine Tokens**, then authenticate Terminus:
+
+            <div class="copy-snippet">
+              <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth">Copy</button>
+              <figure><pre id="mac-mt-auth"><code class="command bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
+            </div>
+
+    - The [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin):
+
+        <div class="copy-snippet">
+          <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-plugin">Copy</button>
+          <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-composer-plugin/archive/1.0.0.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
+        </div>
+
+    - The [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin):
+
+        <div class="copy-snippet">
+          <button class="btn btn-default btn-clippy" data-clipboard-target="#console-plugin">Copy</button>
+          <figure><pre id="console-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-drupal-console-plugin/archive/1.0.2.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
+        </div>
+
+    - The [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
+
+        <div class="copy-snippet">
+          <button class="btn btn-default btn-clippy" data-clipboard-target="#build-tools-plugin">Copy</button>
+          <figure><pre id="build-tools-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-build-tools-plugin/archive/2.0.0-alpha2.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
+        </div>
+
+3. [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb).
