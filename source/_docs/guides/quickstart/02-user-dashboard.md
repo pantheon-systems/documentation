@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: Quick Start
 subtitle: User Dashboard
 anchorid: user-dashboard
 layout: guide

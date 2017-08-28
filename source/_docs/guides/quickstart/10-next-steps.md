@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: Quick Start
 subtitle: Next Steps
 quickstart: true
 anchorid: next-steps

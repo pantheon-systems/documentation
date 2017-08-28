@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: Quick Start
 subtitle: Site Dashboard
 quickstart: true
 anchorid: site-dashboard

@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: Quick Start
 subtitle: Connection Modes
 quickstart: true
 anchorid: connection-modes

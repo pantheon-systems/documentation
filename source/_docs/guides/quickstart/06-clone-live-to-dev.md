@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: Quick Start
 subtitle: Clone Live to Dev
 quickstart: true
 anchorid: clone-live-to-dev
