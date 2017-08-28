@@ -35,31 +35,31 @@ The platform resources provided to your website depend on your current plan. Pan
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">PHP Memory Limit</th>
-        <td>256</td>
-        <td>256</td>
-        <td>512</td>
-        <td>up to 1024</td>
+        <td>256MB</td>
+        <td>256MB</td>
+        <td>512MB</td>
+        <td>up to 1024MB</td>
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">MySQL Buffer Pool</th>
-        <td>128</td>
-        <td>512</td>
-        <td>1024</td>
-        <td>2014+</td>
+        <td>128MB</td>
+        <td>512MB</td>
+        <td>1024MB</td>
+        <td>2014MB+</td>
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">Redis Cache Size</th>
         <td>n/a</td>
-        <td>235</td>
-        <td>471</td>
-        <td>1024</td>
+        <td>235MB</td>
+        <td>471MB</td>
+        <td>1024MB</td>
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">Storage</th>
-        <td>Up to 5GB</td>
+        <td>5GB</td>
         <td>20GB</td>
         <td>30GB</td>
-        <td>100+GB</td>
+        <td>100GB+</td>
       </tr>
       <tr>
         <th scope="row" class="thead-inverse">Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a></th>
@@ -98,7 +98,6 @@ The platform resources provided to your website depend on your current plan. Pan
       </tr>
     </tbody>
 </table>
-<tr> <p style="font-size:12px"> All memory sizes shown in MB</p style>
 
 ## Glossary
 
