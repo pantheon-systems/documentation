@@ -156,7 +156,7 @@ if (extension_loaded('newrelic')) {
 }
 ```
 
-It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal 8, this can be done using an event subscriber that listens to the `kernel.request` event for instance. 
+It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal 8, this can be done using an event subscriber that listens to the `kernel.request` event for instance.
 
 To isolate the disabling of New Relic to only AMP pages, custom logic will be required to identify AMP requests. The example above will cause New Relic to be disabled on all pages, irrespective of of their type.
 
@@ -203,8 +203,8 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 #### Can I disable New Relic for a specific environment?
 
-We don't recommend turning off New Relic for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](https://pantheon.io/docs/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
-  
+We don't recommend turning off New Relic for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also <a href="/docs/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment" data-proofer-ignore>write logic based on the environment</a>.
+
 
 ## See Also
 - [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
