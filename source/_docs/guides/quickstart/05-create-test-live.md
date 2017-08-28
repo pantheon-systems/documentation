@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: Quick Start
 subtitle: Create Test & Live
 quickstart: true
 anchorid: create-test-live

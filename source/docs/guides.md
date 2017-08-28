@@ -9,8 +9,8 @@ title: Guides
       <div class="flex-panel-body-pantheon-workflows">
       <a href="/docs/guides/quickstart/">
         <div class="pantheon-workflows">
-          <img alt="Quickstart" src="/source/docs/assets/images/launchGuide-twitterLarge.png" class="main-topic-info__plugin-image" >
-        <h3>Quickstart</h3>
+          <img alt="Quick Start" src="/source/docs/assets/images/launchGuide-twitterLarge.png" class="main-topic-info__plugin-image" >
+        <h3>Quick Start</h3>
         </div>
         </a>
       </div>

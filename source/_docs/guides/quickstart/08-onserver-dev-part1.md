@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: Quick Start
 subtitle: On Server Dev, Part 1
 quickstart: true
 anchorid: onserver-dev-part1

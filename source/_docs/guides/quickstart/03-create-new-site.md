@@ -1,5 +1,5 @@
 ---
-title: Quickstart
+title: Quick Start
 subtitle: Create New Site
 quickstart: true
 anchorid: create-new-site
