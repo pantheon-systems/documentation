@@ -14,7 +14,26 @@ nexturl: guides/build-tools/configure/
 previousurl: guides/build-tools/create-project/
 editpath: build-tools/03-create-pr.md
 ---
-When using the Composer pull request workflow, you should never modify your dev environment. Always begin by creating a new pull request to work in. This can be done easily from GitHub, as described below. Presently, there is no way to create a pull request from the Pantheon dashboard.
+This section demonstrates a Composer based Pull Request workflow on Pantheon by making a simple code change on a feature branch then opening a request to accept that change into master.
+
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+     <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-cd"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Continuous Delivery</h3></a>
+   </div>
+   <div id="understand-cd" class="collapse">
+     <div class="panel-inner" markdown="1">
+     Continuous delivery requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress. Anything that keeps your application from deploying code to production is considered a blocker.
+
+     Production code is tracked by the master branch on GitHub and it is assumed to be production ready. Development work is done on a feature branch first, then proposed to master in the form of a pull request so it can be tested and reviewed before it's accepted.
+
+     The master branch is automatically built and deployed to the Dev environment. Feature branches are automatically built and deployed to individual Multidev environments:
+
+    ![Continuous delivery diagram](/source/docs/assets/images/pr-workflow/cd-diagram.png)
+
+    </div>
+   </div>
+ </div>
+
 
 1.  From your GitHub project page, click on the 'config' directory. Find the file named `system.site.yml`, click on it, and use the edit pencil to open an editor:
 

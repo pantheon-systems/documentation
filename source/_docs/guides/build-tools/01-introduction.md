@@ -20,7 +20,6 @@ use:
 permalink: docs/guides/build-tools/
 nexturl: guides/build-tools/create-project/
 editpath: build-tools/01-introduction.md
-completiontime: 1 hour
 ---
 This guide describes how to use build tools such as GitHub and CircleCI with Composer to implement a collaborative, team-based Continuous Integration workflow using pull requests for WordPress, Drupal 8, and Drupal 7 sites on Pantheon.
 
@@ -34,7 +33,7 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
           <p class="pantheon-official"></p>
         </div>
       </div>
-      <p class="topic-info__description" markdown="1">[GitHub](https://github.org){.external} is an online service that provides cloud storage Git repositories that may be cloned and used locally, or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
+      <p class="topic-info__description" markdown="1">[GitHub](https://github.com){.external} is an online service that provides cloud storage Git repositories that may be cloned and used locally, or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
     </div>
   </div>
   <div class="flex-panel-item">
@@ -77,48 +76,45 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
 ## Before You Begin
 
-1. Start by [learning Composer fundamentals](/docs/composer/).
-2. To prepare your system for local development, install:
+1. Install [Composer](https://getcomposer.org){.external}
+2. Install the most recent release of [Terminus](/docs/terminus/):
 
-    - [Composer](https://getcomposer.org){.external}
-    - Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>$HOME</code> and install there:
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
+      <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+    </div>
 
-        <div class="copy-snippet">
-          <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
-          <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
-        </div>
+3. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create){.external}, then authenticate Terminus:
 
-        - [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create){.external} from **User Dashboard** > **Account** > **Machine Tokens**, then authenticate Terminus:
+      <div class="copy-snippet">
+        <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth">Copy</button>
+        <figure><pre id="mac-mt-auth"><code class="command bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
+      </div>
 
-            <div class="copy-snippet">
-              <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth">Copy</button>
-              <figure><pre id="mac-mt-auth"><code class="command bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
-            </div>
+4. Install the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin){.external}:
 
-    - The [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin){.external}:
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-plugin">Copy</button>
+      <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-composer-plugin/archive/1.0.0.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
+    </div>
 
-        <div class="copy-snippet">
-          <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-plugin">Copy</button>
-          <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-composer-plugin/archive/1.0.0.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
-        </div>
+5. Install the [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin){.external}:
 
-    - The [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin){.external}:
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#console-plugin">Copy</button>
+      <figure><pre id="console-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-drupal-console-plugin/archive/1.0.2.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
+    </div>
 
-        <div class="copy-snippet">
-          <button class="btn btn-default btn-clippy" data-clipboard-target="#console-plugin">Copy</button>
-          <figure><pre id="console-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-drupal-console-plugin/archive/1.0.2.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
-        </div>
+6. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin){.external}:
 
-    - The [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin){.external}:
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#build-tools-plugin">Copy</button>
+      <figure><pre id="build-tools-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-build-tools-plugin/archive/1.3.9.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
+    </div>
 
-        <div class="copy-snippet">
-          <button class="btn btn-default btn-clippy" data-clipboard-target="#build-tools-plugin">Copy</button>
-          <figure><pre id="build-tools-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-build-tools-plugin/archive/1.3.9.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
-        </div>
-
-3. [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.
+7. [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p markdow="1">If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub user. Nice! Way to be ahead of the game.</p>
+    <p markdow="1">If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.</p>
     </div>

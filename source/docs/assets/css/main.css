@@ -326,13 +326,10 @@ ul {
   line-height: 29px;
 }
 p{
-  margin: 0 0 10px;
+  margin: 0 0 20px;
   color:#44525E;
   font-size: 18px;
   line-height: 29px;
-}
-li>p {
-  margin: 0px;
 }
 .instruction {  /*smaller margin-bottom on paragraphs preceeding code snippets*/
   margin-bottom: 5px;
@@ -5610,9 +5607,6 @@ h2>.glyphicons {
 }
 .no-border {
   border: none !important;
-}
-.nav-tabs {
-  margin: 10px 0px;
 }
 .nav-tabs>li>a {
   text-decoration: none;

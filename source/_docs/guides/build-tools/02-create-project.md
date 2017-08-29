@@ -51,14 +51,14 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
         <p class="instruction" markdown="1">Replace `pantheon-d7-composer-project` with the name of your new site:</p>
         <div class="copy-snippet">
           <button class="btn btn-default btn-clippy" data-clipboard-target="#d7-create">Copy</button>
-          <figure><pre id="d7-create"><code class="command bash" data-lang="bash">terminus build:project:create d7 pantheon-d7-composer-project --stability=alpha</code></pre></figure>
+          <figure><pre id="d7-create"><code class="command bash" data-lang="bash">terminus build:project:create d7 pantheon-d7-composer-project --stability=dev</code></pre></figure>
         </div>
       </div>
       <div markdown="1" role="tabpanel" class="tab-pane" id="wp">
         <p class="instruction" markdown="1">Replace `pantheon-wp-composer-project` with the name of your new site:</p>
         <div class="copy-snippet">
           <button class="btn btn-default btn-clippy" data-clipboard-target="#wp-create">Copy</button>
-          <figure><pre id="wp-create"><code class="command bash" data-lang="bash">terminus build:project:create wp pantheon-wp-composer-project --stability=alpha</code></pre></figure>
+          <figure><pre id="wp-create"><code class="command bash" data-lang="bash">terminus build:project:create wp pantheon-wp-composer-project --stability=dev</code></pre></figure>
         </div>
       </div>
     </div>
@@ -67,15 +67,42 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
 
     ![Create Project Prompts](/source/docs/assets/images/pr-workflow/build-env-create-project-prompts.png)
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <div markdown="1">
-    Pantheon's composer based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
+    <div class="panel panel-drop panel-guide" id="accordion">
+      <div class="panel-heading panel-drop-heading">
+        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#troubleshoot-install"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Troubleshooting</h3></a>
+      </div>
+      <div id="troubleshoot-install" class="collapse" markdown="1" style="padding:10px;">
+      ### Composer Content-Length Mismatch and/or Degraded Mode
+      If you encounter an issue such as:
 
-      * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues){.external}
-      * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues){.external}
-      * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues){.external}
-    </div>
+      ```php
+      The "https://packagist.org/packages.json" file could not be downloaded: failed to open stream: Operation timed out
+      Retrying with degraded mode, check https://getcomposer.org/doc/articles/troubleshooting.md#degraded-mode for more info
+      The "https://packagist.org/packages.json" file could not be downloaded: failed to open stream: Operation timed out
+      https://packagist.org could not be fully loaded, package information was loaded from the local cache and may be out of date
+
+
+      [Composer\Downloader\TransportException]
+      Content-Length mismatch
+
+
+      create-project [-s|--stability STABILITY] [--prefer-source] [--prefer-dist] [--repository REPOSITORY] [--repository-url REPOSITORY-URL] [--dev] [--no-dev] [--no-custom-installers] [--no-scripts] [--no-progress] [--no-secure-http] [--keep-vcs] [--no-install] [--ignore-platform-reqs] [--] [<package>] [<directory>] [<version>]
+
+      [error]  Command `composer create-project --working-dir=/private/var/folders/lp/7_1gh83s5mn9lwfjvqqlf1lm0000gn/T/local-sitevPumRP pantheon-systems/example-wordpress-composer pantheon-wp-composer-project -n --stability dev` failed with exit code 1
+      ```
+
+     This indicates a network level issue related to the security settings of your modem. We recommend contacting your Internet Service Provider (ISP) and asking them to change the modem's security mode to TKIP/AES. Additionally, you can help mitigate network issues by using a non-standard channel with less activity/noise.
+
+     ### Your requirements could not be resolved to an installable set of packages
+     Check the output for the recommended fix. For example, PHP 7.0 is required for WordPress. Once you have resolved the issues as suggested by Composer try the command again.
+
+     ### Additional Support
+     Pantheon's composer based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
+
+       * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues){.external}
+       * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues){.external}
+       * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues){.external}
+      </div>
     </div>
 
 4. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on GitHub:
@@ -91,3 +118,41 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
   If you click on the CircleCI badge, you can watch your project's initial test run. Once your tests successfully complete, the orange CircleCI "no builds" badge will become a green "passing" badge:
 
   ![Passing Project Page](/source/docs/assets/images/pr-workflow/passing-project-page.png)
+
+    <div class="panel panel-drop panel-guide" id="accordion">
+      <div class="panel-heading panel-drop-heading">
+        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#troubleshoot-ci"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Troubleshooting</h3></a>
+      </div>
+      <div id="troubleshoot-ci" class="collapse" markdown="1" style="padding:10px;">
+      ### CI None
+
+      ![No CI detected](/source/docs/assets/images/pr-workflow/no-ci.png)
+
+      1. Create a [CircleCI personal API token](https://circleci.com/account/api){.external} and export the value to the `CIRCLE_TOKEN` environment variable (replace `[REDACTED]`):
+
+          <div class="copy-snippet">
+          <button class="btn btn-default btn-clippy" data-clipboard-target="#circle-token2">Copy</button>
+          <figure><pre id="circle-token2"><code class="command bash" data-lang="bash">export CIRCLE_TOKEN=[REDACTED]</code></pre></figure>
+          </div>
+
+      2. Create a [GitHub personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/){.external} and export the value to the `CIRCLE_TOKEN` environment variable (replace `[REDACTED]`):
+
+          <div class="copy-snippet">
+          <button class="btn btn-default btn-clippy" data-clipboard-target="#github-token2">Copy</button>
+          <figure><pre id="github-token2"><code class="command bash" data-lang="bash">export GITHUB_TOKEN=[REDACTED]</code></pre></figure>
+          </div>
+      3.  Configure CircleCI by running the following command (replace `<site_name>` and `<githuborg/site_name>`):
+
+          <div class="copy-snippet">
+          <button class="btn btn-default btn-clippy" data-clipboard-target="#ci-configure">Copy</button>
+          <figure><pre id="ci-configure"><code class="command bash" data-lang="bash">terminus build:ci:configure &lt;site_name&gt; &lt;githuborg/site_name&gt;</code></pre></figure>
+          </div>
+
+      ### Additional Support
+      Pantheon's composer based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
+
+       * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues){.external}
+       * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues){.external}
+       * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues){.external}
+      </div>
+    </div>
