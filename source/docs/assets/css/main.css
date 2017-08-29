@@ -3737,9 +3737,8 @@ p.devbar>a:hover{
 }
 .label {
   display: inline-block !important;
-  vertical-align: top !important;
+  vertical-align: text-bottom;
   margin-left: 4px;
-  padding: .2em .6em .2em;
 }
 .label-info {
   background-color: #0093c9;
@@ -5611,6 +5610,9 @@ h2>.glyphicons {
 }
 .no-border {
   border: none !important;
+}
+.nav-tabs {
+  margin: 10px 0px;
 }
 .nav-tabs>li>a {
   text-decoration: none;
