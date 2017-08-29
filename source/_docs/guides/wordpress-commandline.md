@@ -56,7 +56,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 <div class="alert alert-info">
   <h4 class="info">Note</h4>
   <p markdown="1">
-    The next few secions of this guide use the example variables `tesa-site-wp` and `"Terminus Demo Site"` as the site name and label. Make sure to replace each instance, as well as other variables like the site URL and user/password combinations, with your desired values.
+    The next few secions of this guide use the example variables `tessa-site-wp` and `"Terminus Demo Site"` as the site name and label. Make sure to replace each instance, as well as other variables like the site URL and user/password combinations, with your desired values.
   </p>
 </div>
 
