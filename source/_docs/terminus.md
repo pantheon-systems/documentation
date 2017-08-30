@@ -14,6 +14,7 @@ image: terminus-thumbLarge
 Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
 
 <a href="/docs/terminus/install">Install Terminus</a> on Mac OS X, Linux, and Windows 7 and 10. For details on legacy versions of Terminus, see [Legacy Terminus Versions](/docs/terminus/get-started/legacy).
+
 ## Usage
 
 Use Terminus to perform these and other operations:  
@@ -23,6 +24,8 @@ Use Terminus to perform these and other operations:
 - Clone one environment to another
 - Check for and apply upstream updates
 - Deploy code from one environment to another
+
+{% include("content/ctas/automate-enablement.html") %}
 
 ## Contribute
 
