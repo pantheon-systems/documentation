@@ -10,18 +10,30 @@ You can use regular expression(s) to determine if the current request (`$_SERVER
 
 For example, this block sets `NO_CACHE` for all pages in the `/news/` directory.
 
-**Be sure the path in your `setcookie()` line is properly set to restrict the cookie to the specific directory.**
 
 ```
-// Set or replace $regex_path_match accordingly
-// Example: anything in the /news/ directory
-$regex_path_match = '#^/news/?#';
+/*
+ * Set or replace $friendly_path accordingly.
+ *
+ * We don't set this variable for you, so you must define it
+ * yourself per your specific use case before the following conditional.
+ *
+ * Example: anything in the /news/ directory
+ *
+ * $friendly_path = '/news/';
+ */
 
-if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
+$friendly_path = '/some-directory-here/';
+
+if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
   $domain =  $_SERVER['HTTP_HOST'];
-  setcookie('NO_CACHE', '1', time()+0, '/news/', $domain);
+  setcookie('NO_CACHE', '1', time()+0, $friendly_path, $domain);
 }
 ```
+
+
+**Be sure the `friendly_path` variable is properly set to restrict the cookie to the specific directory.**
+
 As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
 
 ## Cache-varying Cookies
@@ -31,7 +43,7 @@ First, check to see if the cookie is set within the incoming request. If the coo
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>If the value has already been set, do not set the cookie again in the response. Varnish cannot cache a response that contains a <code>Set-Cookie:</code> header.
+<p markdown="1">If the value has already been set, do not set the cookie again in the response. Varnish cannot cache a response that contains a `Set-Cookie:` header.
 </p></div>
 
 If the value is **not** set, respond with `setcookie()` to serve cached content for subsequent requests within the defined cookie lifetime.

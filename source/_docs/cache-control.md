@@ -29,40 +29,48 @@ You can use a variety of mechanisms to determine which responses from your Drupa
   Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
 
   ```php
-  /**
-  * Set $regex_path_match accordingly. For example, to exclude
-  * pages in the /news/ path from cache, set:
-  *
-  *   $regex_path_match = '#^/news/?#';
-  *
-  * We don't set this variable for you, so you must define it
-  * yourself per your specific use case before the following conditional.
-  **/
-   if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
-     drupal_page_is_cacheable(FALSE);
-     $conf['page_cache_maximum_age'] = 0;
-   }
+  /*
+   * Set $regex_path_match accordingly.
+   *
+   * We don't set this variable for you, so you must define it
+   * yourself per your specific use case before the following conditional.
+   *
+   * For example, to exclude pages in the /news/ path from cache, set:
+   *
+   *   $regex_path_match = '#^/news/?#';
+   */
+
+  $regex_path_match = '#^/some-directory-here/?#';
+
+  if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
+    drupal_page_is_cacheable(FALSE);
+    $conf['page_cache_maximum_age'] = 0;
+  }
   ```
   </div>
   <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
   Set `Cache-Control: max-age=0` by hooking into <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers"><code>send_headers</code></a>. This will override `max-age` configured within the <a href="/docs/wordpress-cache-plugin">Pantheon Cache</a> plugin for all matching requests:
 
   ```php
-  /**
-  * Set $regex_path_match accordingly. For example, to exclude
-  * pages in the /news/ path from cache, set:
-  *
-  *   $regex_path_match = '#^/news/?#';
-  *
-  * We don't set this variable for you, so you must define it
-  * yourself per your specific use case before the following conditional.
-  **/
-   if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
-     add_action( 'send_headers', 'add_header_nocache', 15 );
-   }
-   function add_header_nocache() {
-  	 header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
-   }
+  /*
+   * Set $regex_path_match accordingly.
+   *
+   * We don't set this variable for you, so you must define it
+   * yourself per your specific use case before the following conditional.
+   *
+   * For example, to exclude pages in the /news/ path from cache, set:
+   *
+   *   $regex_path_match = '#^/news/?#';
+   */
+
+  $regex_path_match = '#^/some-directory-here/?#';
+
+  if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
+    add_action( 'send_headers', 'add_header_nocache', 15 );
+  }
+  function add_header_nocache() {
+        header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
+  }
   ```
   </div>
 </div>
