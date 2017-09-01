@@ -131,7 +131,7 @@ See [available patch](https://drupal.org/node/1369736#comment-5644064).
 We strongly recommend that you do not use the local MTA (postfix) as described [above](#outgoing-email). Instead, we recommend using a third-party email service provider.
 
 ### Can I access the mail logs for my site?
-No, mail logs are not available for download and we do not recommend using the local MTA (postfix). 
+No, mail logs are not available for download and we do not recommend using the local MTA (postfix).
 
 ### What ports are recommended by Pantheon?
 Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. Make sure that your service provider allows traffic on a port other than those mentioned and that you have correctly configured your site to use that port.
@@ -146,7 +146,6 @@ Please see Google's help article: [My client isn't accepting my username and pas
 
 ### Can I use Microsoft Exchange or Office 365 for my emails?
 
-Offce 365 have ports 25 and 587 by default. They also have different options for sending like via [SMTP client, Direct send or SMTP relay](https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4?ui=en-US&rs=en-US&ad=US). The document outlines limitations and configuration to know what will work for your application.
+Offce 365 uses ports `25` and `587` by default, and different options for sending via SMTP client, Direct send or SMTP relay. [This document](https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4?ui=en-US&rs=en-US&ad=US){.external} outlines the limitations and configurations of each, to know what will work for your application.
 
-Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if its [configured at your email server.](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx?f=255&MSPPError=-2147217396). Check your organizations Microsoft Exchange settings on what will be allowed by your system.
-
+Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if its [configured at your email server](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx?f=255&MSPPError=-2147217396){.external}. Check your organization's Microsoft Exchange settings on what's allowed by your system.
