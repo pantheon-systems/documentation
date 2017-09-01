@@ -81,7 +81,7 @@ echo 'show tables;' | $(drush @pantheon.SITENAME.ENV sql-connect)
 Or, you can use Terminus as follows:
 
 ```bash
-terminus drush SITENAME.ENV sql-query "SELECT * FROM users WHERE uid=1"
+terminus drush SITENAME.ENV -- sql-query "SELECT * FROM users WHERE uid=1"
 ```
 
 ## Execute PHP Code Using Drush on Pantheon
