@@ -140,7 +140,13 @@ Configuring mail to use port 25, 465 or 587 is strongly discouraged because they
 
 As consumers of cloud infrastructure, we don’t have control over our IP ranges and they are subject to change without our notice. Publishing an SPF record would imply assurance on our end that it can work, which would be very difficult to guarantee given these circumstances. We take the decision of what we support and what we don’t very seriously, and at this time we’re not in a position to support SPF records.
 
-
 ### Why does my Gmail user name and password not work?
 
 Please see Google's help article: [My client isn't accepting my username and password](https://support.google.com/mail/answer/14257?p=client_login&rd=1).
+
+### Can I use Microsoft Exchange or Office 365 for my emails?
+
+Offce 365 have ports 25 and 587 by default. They also have different options for sending like via [SMTP client, Direct send or SMTP relay](https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4?ui=en-US&rs=en-US&ad=US). The document outlines limitations and configuration to know what will work for your application.
+
+Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if its [configured at your email server.](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx?f=255&MSPPError=-2147217396). Check your organizations Microsoft Exchange settings on what will be allowed by your system.
+
