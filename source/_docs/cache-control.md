@@ -16,38 +16,62 @@ You can use a variety of mechanisms to determine which responses from your Drupa
 <!-- Tab panes -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="d8" markdown="1">
-  <br>
-  <p><a href="https://www.drupal.org/developing/api/8/render/arrays/cacheability">Drupal 8's system of cacheability metadata</a> is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with: </p>
-  <pre><code class="php hljs">
-// $build is a render array.
-$build['#cache']['max-age'] = 0;
-  </code></pre>
-  Drupal 8 will "bubble up" this information so that if any small block on a page requires a cache max age of zero, the entire page will be uncacheable.
-Currently [Cache Control Override](https://www.drupal.org/project/cache_control_override) module is required for this feature to behave correctly.
+  [Drupal 8's system of cacheability metadata](https://www.drupal.org/developing/api/8/render/arrays/cacheability) is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with:
+
+  ```php
+  // $build is a render array.
+  $build['#cache']['max-age'] = 0;
+  ```
+
+  Drupal 8 will "bubble up" this information so that if any small block on a page requires a cache max age of zero, the entire page will be uncacheable. Currently [Cache Control Override](https://www.drupal.org/project/cache_control_override) module is required for this feature to behave correctly.
   </div>
-  <div role="tabpanel" class="tab-pane" id="d7">
-  <br>
-  <p>Here is an example of a global way to determine a Drupal response's cacheability. Use the <code>$conf</code> global variable to set <code>Cache-Control: max-age=0</code>:</p>
-  <pre><code class="php hljs">
-  // Set or replace $regex_path_match accordingly.
+  <div role="tabpanel" class="tab-pane" id="d7" markdown="1">
+  Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
+
+  ```php
+  /*
+   * Set $regex_path_match accordingly.
+   *
+   * We don't set this variable for you, so you must define it
+   * yourself per your specific use case before the following conditional.
+   *
+   * For example, to exclude pages in the /news/ path from cache, set:
+   *
+   *   $regex_path_match = '#^/news/?#';
+   */
+
+  $regex_path_match = '#^/some-directory-here/?#';
+
   if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
     drupal_page_is_cacheable(FALSE);
     $conf['page_cache_maximum_age'] = 0;
   }
-  </code></pre>
+  ```
   </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
-  <br>
-  <p>Set <code>Cache-Control: max-age=0</code> by hooking into <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers"><code>send_headers</code></a>. This will override <code>max-age</code> configured within the <a href="/docs/wordpress-cache-plugin">Pantheon Cache</a> plugin for all matching requests: </p>
-  <pre><code class="php hljs">
-  //Set or replace $regex_path_match accordingly
+  <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
+  Set `Cache-Control: max-age=0` by hooking into <a href="https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers"><code>send_headers</code></a>. This will override `max-age` configured within the <a href="/docs/wordpress-cache-plugin">Pantheon Cache</a> plugin for all matching requests:
+
+  ```php
+  /*
+   * Set $regex_path_match accordingly.
+   *
+   * We don't set this variable for you, so you must define it
+   * yourself per your specific use case before the following conditional.
+   *
+   * For example, to exclude pages in the /news/ path from cache, set:
+   *
+   *   $regex_path_match = '#^/news/?#';
+   */
+
+  $regex_path_match = '#^/some-directory-here/?#';
+
   if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
-  	add_action( 'send_headers', 'add_header_nocache', 15 );
+    add_action( 'send_headers', 'add_header_nocache', 15 );
   }
   function add_header_nocache() {
-  	header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
+        header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
   }
-  </code></pre>
+  ```
   </div>
 </div>
 

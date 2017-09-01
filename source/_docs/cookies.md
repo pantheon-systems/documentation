@@ -6,14 +6,34 @@ categories: []
 ---
 
 ## Disable Caching for Specific Pages
-You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response:
+You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response.
+
+For example, this block sets `NO_CACHE` for all pages in the `/news/` directory.
+
+
 ```
-//Set or replace $regex_path_match accordingly
-if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
+/*
+ * Set or replace $friendly_path accordingly.
+ *
+ * We don't set this variable for you, so you must define it
+ * yourself per your specific use case before the following conditional.
+ *
+ * Example: anything in the /news/ directory
+ *
+ * $friendly_path = '/news/';
+ */
+
+$friendly_path = '/some-directory-here/';
+
+if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
   $domain =  $_SERVER['HTTP_HOST'];
-  setcookie('NO_CACHE', '1', time()+0, '/path-to-page', $domain);
+  setcookie('NO_CACHE', '1', time()+0, $friendly_path, $domain);
 }
 ```
+
+
+**Be sure the `friendly_path` variable is properly set to restrict the cookie to the specific directory.**
+
 As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
 
 ## Cache-varying Cookies
@@ -23,7 +43,7 @@ First, check to see if the cookie is set within the incoming request. If the coo
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>If the value has already been set, do not set the cookie again in the response. Varnish cannot cache a response that contains a <code>Set-Cookie:</code> header.
+<p markdown="1">If the value has already been set, do not set the cookie again in the response. Varnish cannot cache a response that contains a `Set-Cookie:` header.
 </p></div>
 
 If the value is **not** set, respond with `setcookie()` to serve cached content for subsequent requests within the defined cookie lifetime.
