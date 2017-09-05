@@ -61,10 +61,11 @@ You are now ready to start work based on the state of the live site.
 
 3. Create new branch and start working:
 
+    ```
     git checkout -b hotfix
 
     git commit -a -m "Hotfix issue xyz"
-
+    ```
 
 ## Generate a New Hotfix Test Tag
 
