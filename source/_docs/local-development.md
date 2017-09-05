@@ -6,6 +6,11 @@ categories: []
 ---
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. We recommend using Kalabox for local development, which allows you to easily achieve a high standard of parity with Pantheon environments. For details, see [Local Development with Kalabox](/docs/kalabox).
 
+<div class="enablement">
+  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Agency DevOps Training</h4></a>
+  <p>Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's DevOps training can accelerate your workflow.</p>
+</div>
+
 Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/docs/multidev/) instead of local development.
 
 ## Before You Begin
@@ -167,7 +172,7 @@ Instead, we recommend using a local configuration file (e.g. `settings.local.php
 
 ### Drupal 8 and WordPress
 
-Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L11-L20) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations. 
+Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L11-L20) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
 
 This file is ignored by the `.gitignore` file  in [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore#L3) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore#L8) so that local configurations do not get pushed to Pantheon. Simply create the file on your local computer, and manage configurations accordingly.
 
@@ -190,4 +195,3 @@ This file is ignored by the `.gitignore` file  in [WordPress](https://github.com
     ```
     sites/*/settings.local.php
     ```
-
