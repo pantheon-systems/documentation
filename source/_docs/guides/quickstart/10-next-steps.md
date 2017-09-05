@@ -27,5 +27,6 @@ But this is just the tip of the iceberg. Ready to learn more? Here are just some
 - Take your site live! Just follow this [Launch Essentials](/docs/guides/launch).
 
 <div class="enablement">
-  <p>Are you an agency? Accelerate your journey to workflow nirvana with help from the experts at Pantheon. Check out our <a href="https://pantheon.io/agencies/learn-pantheon?docs">DevOps training program</a>.</p>
+  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Are you an agency?</h4></a>
+  <p>Accelerate your journey to workflow nirvana with help from the experts at Pantheon. Check out our <a href="https://pantheon.io/agencies/learn-pantheon?docs">DevOps training program</a>.</p>
 </div>
