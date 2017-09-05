@@ -10,6 +10,11 @@ This will provision Apache Solr containers for every environment for your site. 
 
 For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
 
+<div class="enablement">
+  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Get DevOps Training</h4></a>
+  <p>Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
+</div>
+
 ## Installing Solr for Drupal
 ### 1. Apply Upstream Updates
 Use [one-click updates](/docs/upstream-updates) to make sure you are running the latest version of Drupal core.
