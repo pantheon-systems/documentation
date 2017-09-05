@@ -6,6 +6,11 @@ tags: [git]
 ---
 Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
+<div class="enablement">
+  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Agency DevOps Training</h4></a>
+  <p>Dev/Test/Live, parallel feature development with Multidev, hotfix workflows, and more! Learn how Pantheon's DevOps training can accelerate your workflow.</p>
+</div>
+
 ## Install Git
 
 Select your operating system and the download will automatically begin:

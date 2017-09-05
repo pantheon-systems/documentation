@@ -6,6 +6,11 @@ categories: []
 ---
 Extending WordPress or Drupal with custom code is a common part of the development lifecycle. In order to optimize workflows, it's essential that custom plugins, modules, and themes are maintained independently from your sites and projects so they're easily reused.
 
+<div class="enablement">
+  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Automation Training</h4></a>
+  <p>Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
+</div>
+
 We recommend managing custom code as plugins or modules within individual repositories and hosting each one remotely on a service such as [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org), or [GitLab](https://about.gitlab.com/). You can then use Composer to manage and organize the software needed for your project to run, including custom plugins or modules.
 
 <div class="alert alert-info">

@@ -10,6 +10,11 @@ Support for Kalabox is provided via their [GitHub issue queue](https://github.co
 
 Visit the [Kalabox documentation site](http://pantheon.kalabox.io/en/stable/) for more detailed information on the [Kalabox GUI](http://pantheon.kalabox.io/en/stable/users/gui/) and [development tools](http://pantheon.kalabox.io/en/stable/users/tooling/).
 
+<div class="enablement">
+  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Local Development Training</h4></a>
+  <p>Install and start using Kalabox with help from Pantheon experts. Check out our custom DevOps training for agencies.</p>
+</div>
+
 ## Installation
 Installation is as simple as grabbing the latest release from [kalabox.io](http://www.kalabox.io/) and installing it. There are OS specific details in the [Kalabox Documentation](http://docs.kalabox.io/en/stable/users/install/) if necessary.
 

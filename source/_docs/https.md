@@ -5,6 +5,11 @@ tags: [dns, security]
 ---
 Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform. For instructions and go live best practices, see [Launch Essentials](/docs/guides/launch/).
 
+<div class="enablement">
+  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Agency DevOps Training</h4></a>
+  <p>Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
+</div>
+
 ## Feature Comparison
 <table class="table  table-bordered table-responsive">
   <thead>
