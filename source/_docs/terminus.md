@@ -30,8 +30,6 @@ Use Terminus to perform these and other operations:
 - Check for and apply upstream updates
 - Deploy code from one environment to another
 
-{% include("content/ctas/automate-enablement.html") %}
-
 ## Contribute
 
 <div class="alert alert-info">

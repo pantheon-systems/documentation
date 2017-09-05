@@ -28,8 +28,6 @@ All plans except for a Personal plan can use Solr. Solr is available to Sandbox 
 
 For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr), [Enabling Solr with Drupal 7](/docs/solr-drupal-7) or [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
 
-{% include("content/ctas/performance-enablement.html") %}
-
 ## Known Limitations of Pantheon's Solr Service
 
 - Anything that takes more than 5 seconds to send to the Solr server to be indexed will timeout, which will block indexing. For example, large documents attached to Drupal nodes. In these cases, the developer must work with the content or code to exempt the nodes and/or files from being indexed. [Check Index and Batch sizes](#apache-solr-vocabulary) for possible scenarios or more time-outs.
