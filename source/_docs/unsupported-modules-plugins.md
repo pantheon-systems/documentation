@@ -403,8 +403,6 @@ if (defined( "PANTHEON_BINDING" )) {
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
 
-**Issue #2**: WPML adds a cookie that forces anonymous traffic to bypass the platform-level page cache. This negatively impacts performance, especially on high traffic sites, and is a [known issue](https://wpml.org/forums/topic/varinish-not-caching-our-site-because-of-icl-current_language-cookie/#post-1046103) with the plugin.
-
 ## WordPress Functions
 
 ### [add_management_page()](https://developer.wordpress.org/reference/functions/add_management_page/)
