@@ -129,7 +129,7 @@ If the site owner did not receive the confirmation email, you can re-send the li
 3. Click **Send my reset link**.
 
 ### New Relic data is not showing on the Pantheon Site Dashboard
-Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/), may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension, or add the following sites as trusted (whitelisted):
+Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/), may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension, or add the following sites as trusted (whitelisted):
 
  - dashboard.pantheon.io
  - rpm.newrelic.com

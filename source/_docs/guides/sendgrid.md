@@ -60,9 +60,9 @@ A stable release for Drupal 8 is not yet available for the [SendGrid Integration
  ```nohighlight
  terminus drush <site>.<env> -- en sendgrid_integration -y
  ```
- 
+
  Access the composer manager page `/admin/config/system/composer-manager` and click "Reuild composer.json file" button.
- 
+
  ```nohighlight
  terminus drush <site>.<env> -- composer-manager update --no-dev
  ```
@@ -112,7 +112,7 @@ You can explore the Statistics and Email Reports from within your site's account
 
 ## Congratulations!
 
-You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check out SendGrid’s [Email Infrastructure Guide](https://sendgrid.com/email-infrastructure-guide/) for advanced tips on how to create and publish DNS records for increased deliverability.
+You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check out SendGrid’s [Email Infrastructure Guide](https://go.sendgrid.com/SendGrid-Infrastructure-Guide.html) for advanced tips on how to create and publish DNS records for increased deliverability.
 
 ## Troubleshooting
 In some cases, other WordPress plugins can conflict with the Sendgrid plugin and cause it to use PHPMailer instead of SendGrid.  One such plugin is called [iLightBox](https://codecanyon.net/item/ilightbox-revolutionary-lightbox-for-wordpress/3939523).

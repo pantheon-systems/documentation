@@ -167,7 +167,7 @@ You can modify this patch according to your needs, such as performing an operati
 ### [Node export webforms](https://www.drupal.org/project/node_export_webforms)
 **Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
 
-**Solution**: Use [drush](https://drushcommands.com/drush-8x/webform/webform-export//), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
+**Solution**: Use [drush](https://drushcommands.com/drush-8x/webform/webform-export/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
 Customers have also reported success by making the export path [configurable](https://www.drupal.org/node/2221651).
 <hr>
