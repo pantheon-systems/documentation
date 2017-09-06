@@ -1,6 +1,6 @@
 ---
 title: Build Tools
-subtitle: Configure Site via the Admin Interface
+subtitle: Configuration Management
 buildtools: true
 anchorid: configure
 generator: pagination
@@ -14,18 +14,50 @@ nexturl: guides/build-tools/update/
 previousurl: guides/build-tools/create-pr/
 editpath: build-tools/04-configure.md
 ---
-While it is possible to configure your site by editing the exported configuration files, doing so is only convenient for properties whose location and format are already known. For most users, using the Drupal admin interface to set up the site's configuration is much more convenient.
+In this lesson, we'll use the Configuration Management system within the Drupal Admin interface to set block placements for our example site.
 
-1.  As an illustrative example, we will set the block placements for our example site. As a site administrator, navigate to **Structure** -> **Block layout**. Disable the **Tools** block and move the **Search** block to the header. Save your changes with the **Save blocks** button.
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+     <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-config"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Configuration Management</h3></a>
+   </div>
+   <div id="understand-config" class="collapse">
+     <div class="panel-inner" markdown="1">
+    ### Configuration Management
+    While it is possible to configure your site by directly editing the exported configuration files (as we did in the [previous lesson](/docs/guides/build-tools/create-pr/)), it's only easy for properties with a known location and format. Most of the time, it's far more convenient to use the [Configuration Management system within the Drupal admin interface](/docs/drupal-8-configuration-management/).
 
-    ![Block placements](/source/docs/assets/images/pr-workflow/block-placements.png)
+    After making configuration changes in the Admin interface, settings are updated in the database. The Configuration Management system allows you to commit settings stored in the database to code so they can be easily tracked and applied to other environments.
+    </div>
+  </div>
+</div>
 
-2.  Once you have made these changes, the configuration settings will be updated in the database; we would like to commit them to our GitHub repository. To do this, it is first necessary to update the configuration yaml files on the filesystem.
+1. As a site administrator, navigate to **Structure** > **Block layout**. Disable the **Tools** block and move the **Search** block to the header. Save your changes with the **Save blocks** button at the bottom of the page.
 
-    Go to **Configuration** -> **Development** -> **Configuration Synchronization**. Note the warning displayed on this page about modified configuration. This means that your recent configuration changes would be erased if you synchronized your configuration at this time. We want to go the other direction, which we can do by clicking on the **Update** tab. The update function is provided by the `config_direct_save` module, which is installed and enabled by default in the Drupal 8 template project used by the `build-env:create-project` command. From this panel, select the `sync` source and click **Update configuration**:
+  ![Block placements](/source/docs/assets/images/pr-workflow/block-placements.png)
 
-    ![Update configuration](/source/docs/assets/images/pr-workflow/update-configuration.png)
+2. Go to **Configuration** > **Development** > **Configuration Synchronization**:
 
-    Visit your site's Pantheon dashboard, and go to the `pr-slogan` multidev page. Note that there are a handful of modified files here ready to be committed now. Type in a brief description of what you changed, and click **Commit**.
+  ![Configuration synchronization](/source/docs/assets/images/pr-workflow/configuration-synchronize-warning.png)
 
-Once the Pantheon dashboard finishes committing the code, visit your project page on GitHub. Go to your `slogan` pull request. Note that your commit has been added to this pull request, and the CircleCI status indicates that your tests are running. Whenever you commit files from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the GitHub repository, and this commit will be pushed back to the canonical repository. GitHub will then start a new CircleCI build, and the build results will once again be pushed to the existing multidev environment that was created for this branch. You may continue working in this environment, making multiple changes, and committing updates whenever you would like your tests to run again.
+  Note the warning displayed on this page about modified configuration. This means that your recent configuration changes would be erased if you synchronized your configuration at this time.
+
+3. Click **Update** and select the **sync** source, then click **Update configuration** to export configuration changes from the database to yaml files in your site's codebase:
+
+  ![Update configuration](/source/docs/assets/images/pr-workflow/update-configuration.png)
+
+4. Return to your open Pull Request in GitHub and use the link provided in the comment to open the associated Multidev environment on the Pantheon Site Dashboard:
+
+  ![Visit multidev environment](/source/docs/assets/images/pr-workflow/visit-multidev.png)
+
+5. The sync operation made changes to a number of configuration files that we now need to commit to version control. Enter a message describing the configuration change and click **Commit**:
+
+  ![Commit exported config](/source/docs/assets/images/pr-workflow/commit-export.png)
+
+6. Return to your open Pull Request in GitHub. Note that your commit has been added to this pull request, and the CircleCI status indicates that your tests are running:
+
+  ![Commit exported config](/source/docs/assets/images/pr-workflow/commit-added.png)
+
+  Whenever you commit files from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the GitHub repository, and this commit will be pushed back to the canonical repository.
+
+  GitHub will then start a new CircleCI build, and the build results will once again be pushed to the existing Multidev environment that was created for this branch.
+
+  You may continue working in this environment, making multiple changes, and committing updates whenever you would like your tests to run again.
