@@ -15,6 +15,10 @@ The best solution is to communicate with the maintainer of the module or plugin 
 ## Create a Symbolic Link
 
 1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/docs/git/#install-git) and [clone the code](/docs/git/#clone-your-site-codebase) locally if you have not done so already.
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4><p markdown="1">We advise against making symlinks in SFTP mode or uploading them over SFTP. Your SFTP client may upload a static file instead, and creating symlinks with the SFTP cli is inconsistent.</p></div>
+
 2. From your terminal, `cd` to the site code repository, and create a symlink for the standard files path:
 
  ```bash
