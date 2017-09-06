@@ -65,4 +65,4 @@ If you have added a few contrib modules, though, it is likely that Composer will
     git push -u origin drupal-8.3.7
     ```
 
-4. Create a pull request on GitHub, and merge it once you are done testing.
+4. Create a Pull Request on GitHub, and merge it once you are done testing.

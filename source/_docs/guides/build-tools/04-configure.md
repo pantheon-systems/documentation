@@ -52,7 +52,7 @@ In this lesson, we'll use the Configuration Management system within the Drupal 
 
   ![Commit exported config](/source/docs/assets/images/pr-workflow/commit-export.png)
 
-6. Return to your open Pull Request in GitHub. Note that your commit has been added to this pull request, and the CircleCI status indicates that your tests are running:
+6. Return to your open Pull Request in GitHub. Note that your commit has been added to this Pull Request, and the CircleCI status indicates that your tests are running:
 
   ![Commit exported config](/source/docs/assets/images/pr-workflow/commit-added.png)
 

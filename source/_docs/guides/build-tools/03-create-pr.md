@@ -24,7 +24,7 @@ This section demonstrates GitHub's Pull Request workflow for Pantheon by making 
      <div class="panel-inner" markdown="1">
      Continuous delivery requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress. Anything that keeps your application from deploying code to production is considered a blocker.
 
-     Production code is tracked by the master branch on GitHub and it is assumed to be production ready. Development work is done on a feature branch first, then proposed to master in the form of a pull request so it can be tested and reviewed before it's accepted.
+     Production code is tracked by the master branch on GitHub and it is assumed to be production ready. Development work is done on a feature branch first, then proposed to master in the form of a Pull Request so it can be tested and reviewed before it's accepted.
 
      The master branch is automatically built and deployed to the Dev environment. Feature branches are automatically built and deployed to individual Multidev environments:
 
@@ -59,15 +59,15 @@ This section demonstrates GitHub's Pull Request workflow for Pantheon by making 
      </div>
 
 
-4. Click **Create pull request**:
+4. Click **Create Pull Request**:
 
-    ![Slogan pull request](/source/docs/assets/images/pr-workflow/slogan-pull-request.png)
+    ![Slogan Pull Request](/source/docs/assets/images/pr-workflow/slogan-pull-request.png)
 
-    As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Mutidev site URL (e.g., `pr-slogan-my-pantheon-project.pantheonsite.io`). The pull request page conveniently shows the messages from each commit on the branch:
+    As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Mutidev site URL (e.g., `pr-slogan-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
 
-    ![Passed pull request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
+    ![Passed Pull Request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
 
-5. Click on the **Visit Site** button to access the Mutidev site URL. Note that the slogan you entered in your pull request branch has been imported and is visible in the site header:
+5. Click on the **Visit Site** button to access the Mutidev site URL. Note that the slogan you entered in your Pull Request branch has been imported and is visible in the site header:
 
     ![Site initial login](/source/docs/assets/images/pr-workflow/pr-slogan-site.png)
 
