@@ -7,7 +7,7 @@ categories: []
 Custom Upstreams are a feature of a Pantheon organization account, not the individual user account. If you are a digital agency servicing clients, or potentially a reseller of Pantheon as part of a managed solution, you can get started for free with an  organization account via [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies). Custom Upstream acccess is granted for agencies following [a training workshop](https://pantheon.io/agencies/learn-pantheon?docs).
 
 <div class="enablement">
-  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Accelerate Your Workflow</h4></a>
+  <h4 class="info" markdown="1">[Accelerate Your Workflow](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Improve your agency's development efficiency with custom DevOps training from Pantheon experts.</p>
 </div>
 

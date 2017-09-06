@@ -253,6 +253,11 @@ p, h1, h2, h3, h4, h5, h6, a, ol, ul {
 }
 .enablement h4 {
   color: #0093c9;
+  font-size: 22px;
+}
+h4.info > a.external[href]::after {
+  margin-left: 7px;
+  top: 3px !important;
 }
 .enablement h4:hover{
   opacity: 0.65;

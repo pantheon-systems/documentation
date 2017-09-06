@@ -62,9 +62,9 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
   </div>
 </div>
 
-<div class="enablement">
-  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Get DevOps Training</h4></a>
-  <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
+<div class="enablement" markdown="1">
+  <h4 class="info" markdown="1">[Automation Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+  Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
 </div>
 
 ## Source and Artifact Workflow
