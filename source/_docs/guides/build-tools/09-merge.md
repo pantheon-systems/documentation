@@ -11,8 +11,8 @@ pagination:
 use:
     - buildtoolspages
 permalink: docs/guides/build-tools/merge/
-previousurl: guides/build-tools/behat/
-editpath: build-tools/10-merge.md
+previousurl: guides/build-tools/tests/
+editpath: build-tools/09-merge.md
 ---
 Once you have completed work on your Pull Request, it will be ready to merge back in to the master branch.
 
