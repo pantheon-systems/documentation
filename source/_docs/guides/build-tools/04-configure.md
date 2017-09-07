@@ -56,7 +56,7 @@ In this lesson, we'll use the Configuration Management system within the Drupal 
 
   ![Commit exported config](/source/docs/assets/images/pr-workflow/commit-added.png)
 
-Whenever you commit files from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the source repository, and this commit will be pushed back to the canonical repository on GitHub:
+Whenever you commit changes from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the source repository, and this commit will be pushed back to the canonical repository on GitHub:
 
 <p class="text-center" markdown="1">![Sync commit from Pantheon to GitHub](/source/docs/assets/images/pr-workflow/pantheon-circle-github.png)</p>
 

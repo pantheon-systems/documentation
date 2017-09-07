@@ -14,34 +14,62 @@ nexturl: guides/build-tools/custom-theme/
 previousurl: guides/build-tools/update/
 editpath: build-tools/06-extend.md
 ---
-In this workflow, Composer should also always be used to install new modules and themes on your site. Never use the Drupal **Extend** -> **Install new module** feature or `drush pm-download`, as neither of these techniques modify the `composer.json` file. Modules added using these methods will disappear the next time the build artifacts are pushed to your Pantheon multidev environment.
+Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/docs/guides/build-tools/create-pr/).
 
-1.  In this example, we'll install [Pathauto](https://www.drupal.org/project/pathauto) on a Pantheon multidev environment using the Terminus Composer Plugin.
+Export environment variables to define your site name and multidev environment so you can easily copy and paste the example commands in the next sections (replace `pantheon-d8-composer-project`):
 
-    ```bash
-    terminus composer $SITE.$ENV -- require drupal/pathauto
-    ```
+<div class="copy-snippet">
+  <button class="btn btn-default btn-clippy" data-clipboard-target="#export-var">Copy</button>
+  <figure><pre id="export-var"><code class="command bash" data-lang="bash">export SITE=pantheon-d8-composer-project
+  export ENV=pr-slogan</code></pre></figure>
+</div>
+
+## Install a Contrib Module
+1. Use Composer locally to add the [Pathauto](https://www.drupal.org/project/pathauto){.external} module as a dependency on the existing `slogan` branch:
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto">Copy</button>
+      <figure><pre id="pathauto"><code class="command bash" data-lang="bash">git checkout slogan
+      composer require drupal/pathauto</code></pre></figure>
+    </div>
 
     Note that the dependencies of pathauto, token and ctools, are also installed:
 
     ![Composer require pathauto](/source/docs/assets/images/pr-workflow/composer-require-pathauto.png)
 
-2.  You can now visit the **Extend** page in the Drupal admin interface to enable pathauto. This operation may also be done on the command line using Drush:
+2. Commit the updated `composer.json` and `composer.lock` files and push your work to the `slogan` branch on GitHub:
 
-    ```bash
-    terminus drush $SITE.$ENV -- pm-enable pathauto --yes
-    ```
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto-git-commit-push">Copy</button>
+      <figure><pre id="pathauto-git-commit-push"><code class="command bash" data-lang="bash">git add composer.*
+      git commit -m "Install drupal/pathauto ^1.0"
+      git push origin slogan</code></pre></figure>
+    </div>
 
-3.  In Drupal 8, the set of enabled modules is also part of the exportable configuration set. That means we can track enabled modules in Composer with the  **Update** tab in the **Configuration Synchronization** section of the Drupal admin interface, as we did in step 2 of the [Configure Your Site Through Drupal's Admin Interface](/docs/guides/build-tools/configure/) section. Alternately, this same operation may be done from the command line using Terminus and Drush:
+    ![Commit composer.json and composer.lock](/source/docs/assets/images/pr-workflow/commit-pathauto.png)
 
-    ```bash
-    terminus drush $SITE.$ENV -- config-export --yes
-    ```
+3. Enable the Pathauto module on the Pantheon Multidev environment from the command line using Terminus and Drush:
 
-4.  You can also commit your changes from the command line with Terminus:
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto-enable">Copy</button>
+      <figure><pre id="pathauto-enable"><code class="command bash" data-lang="bash">terminus drush $SITE.$ENV -- pm-enable pathauto --yes</code></pre></figure>
+    </div>
 
-    ```bash
-    terminus env:commit $SITE.$ENV --message="Install and enable pathauto"
-    ```
+4. You can use the [method described in an earlier lesson](/docs/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
-    The information needed to install and enable pathauto and its dependencies is now committed to your GitHub repository. The modules sources themselves, however, will not be part of this commit.
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto-export-config">Copy</button>
+      <figure><pre id="pathauto-export-config"><code class="command bash" data-lang="bash">terminus drush $SITE.$ENV -- config-export --yes</code></pre></figure>
+    </div>
+
+
+5. Commit your changes in Pantheon from the command line with Terminus:
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto-export-config-commit">Copy</button>
+      <figure><pre id="pathauto-export-config-commit"><code class="command bash" data-lang="bash">terminus env:commit $SITE.$ENV --message="Install and enable pathauto"</code></pre></figure>
+    </div>
+
+    ![enable export config and commit](/source/docs/assets/images/pr-workflow/export-module-enable-config.png)
+
+Use this process to install any new dependency required by your project. The site should *never* use Drupal's **Extend** -> **Install new module** feature or `drush pm-download`, as neither of these techniques modify the `composer.json` file. Modules added using these methods will disappear the next time the build artifacts are pushed to your Pantheon Multidev environment. You must use Composer to install new modules exclusively.

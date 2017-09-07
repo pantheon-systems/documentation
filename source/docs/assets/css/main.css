@@ -743,6 +743,9 @@ pre code {
 code.command::before {
     content: "$ ";
 }
+code.sftp-command::before {
+    content: "sftp> ";
+}
 
 /* Keep code small in tables on account of limited space */
 .table code {

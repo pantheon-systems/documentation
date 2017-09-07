@@ -14,7 +14,7 @@ nexturl: guides/build-tools/extend/
 previousurl: guides/build-tools/configure/
 editpath: build-tools/05-update.md
 ---
-In this lesson, we'll take a closer look at how to manage code in a Composer workflow.
+In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
 
 <div class="panel panel-drop panel-guide" id="accordion">
   <div class="panel-heading panel-drop-heading">
@@ -67,9 +67,7 @@ The next section will be done from the command line, to prepare your local:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#cd-project">Copy</button>
-      <figure><pre id="cd-project"><code class="command bash" data-lang="bash">cd pantheon-d8-composer-project
-      export SITE=pantheon-d8-composer-project
-      export ENV=pr-slogan</code></pre></figure>
+      <figure><pre id="cd-project"><code class="command bash" data-lang="bash">cd pantheon-d8-composer-project</code></pre></figure>
     </div>
 
 4. Install dependencies with Composer:
@@ -79,15 +77,14 @@ The next section will be done from the command line, to prepare your local:
       <figure><pre id="composer-install"><code class="command bash" data-lang="bash">composer install</code></pre></figure>
     </div>
 
-## Composer Update
-Adopting a Composer workflow means forgoing all other update techniques. The site should *never* receive Pantheon's One-click updates in the Pantheon Site Dashboard and you should no longer use the Drupal Admin interface to update modules, themes, or libraries (or any other method not mentioned). These type of code updates will be done using Composer exclusively going forward.
-
-1. Update Drupal core with Composer:
+## Update Core
+1. Install the current Drupal 8 stable version of core released on drupal.org using Composer:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-update-cmd">Copy</button>
       <figure><pre id="composer-update-cmd"><code class="command bash" data-lang="bash">composer update drupal/core</code></pre></figure>
     </div>
+
 2. Run `git diff composer.lock` to see the updated dependency details:
 
   ![composer diff core](/source/docs/assets/images/pr-workflow/composer-lock-diff.png)
@@ -100,4 +97,4 @@ Adopting a Composer workflow means forgoing all other update techniques. The sit
 
   ![Composer update pr](/source/docs/assets/images/pr-workflow/composer-update-pr.png)
 
-Use this process to update any dependency required by your project's `composer.json` file.
+Use this process to update any dependency required by your project's `composer.json` file. The site should *never* receive Pantheon's One-click updates in the Pantheon Site Dashboard, Drupal's Admin interface, or Drush to update core, as none of these techniques modify the `composer.json` file. You must update core using Composer exclusively.
