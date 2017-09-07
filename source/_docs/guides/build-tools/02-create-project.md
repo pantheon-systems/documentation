@@ -10,7 +10,7 @@ pagination:
 use:
     - buildtoolspages
 permalink: docs/guides/build-tools/create-project/
-nexturl: guides/build-tools/create-pr/
+nexturl: guides/build-tools/new-pr/
 previousurl: guides/build-tools/
 editpath: build-tools/02-create-project.md
 ---

@@ -11,7 +11,7 @@ use:
     - buildtoolspages
 permalink: docs/guides/build-tools/configure/
 nexturl: guides/build-tools/update/
-previousurl: guides/build-tools/create-pr/
+previousurl: guides/build-tools/new-pr/
 editpath: build-tools/04-configure.md
 ---
 In this lesson, we'll use the Configuration Management system within the Drupal Admin interface to set block placements for our example site.
@@ -23,7 +23,7 @@ In this lesson, we'll use the Configuration Management system within the Drupal 
    <div id="understand-config" class="collapse">
      <div class="panel-inner" markdown="1">
     ### Configuration Management
-    While it is possible to configure your site by directly editing the exported configuration files (as we did in the [previous lesson](/docs/guides/build-tools/create-pr/)), it's only easy for properties with a known location and format. Most of the time, it's far more convenient to use the [Configuration Management system within the Drupal admin interface](/docs/drupal-8-configuration-management/).
+    While it is possible to configure your site by directly editing the exported configuration files (as we did in the [previous lesson](/docs/guides/build-tools/new-pr/)), it's only easy for properties with a known location and format. Most of the time, it's far more convenient to use the [Configuration Management system within the Drupal admin interface](/docs/drupal-8-configuration-management/).
 
     After making configuration changes in the Admin interface, settings are updated in the database. The Configuration Management system allows you to commit settings stored in the database to code so they can be easily tracked and applied to other environments.
     </div>

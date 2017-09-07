@@ -1,18 +1,18 @@
 ---
 title: Build Tools
-subtitle: Create a Pull Request
+subtitle: Start a Pull Request
 buildtools: true
-anchorid: create-pr
+anchorid: new-pr
 generator: pagination
 layout: guide
 pagination:
     provider: data.buildtoolspages
 use:
     - buildtoolspages
-permalink: docs/guides/build-tools/create-pr/
+permalink: docs/guides/build-tools/new-pr/
 nexturl: guides/build-tools/configure/
 previousurl: guides/build-tools/create-project/
-editpath: build-tools/03-create-pr.md
+editpath: build-tools/03-new-pr.md
 ---
 This section demonstrates GitHub's Pull Request workflow for Pantheon by making a simple code change on a feature branch then opening a Pull Request to accept that change into master.
 
@@ -53,7 +53,7 @@ The master branch is automatically built and deployed to the Dev environment. Fe
        </div>
        <div id="understand-branch-names" class="collapse">
          <div class="panel-inner" markdown="1">
-         Be sure to use unique branch names for each feature branch; the Multidev environment created on Pantheon is named after your branch. Since there is a limit to the number of characters that may be used in a Pantheon Multidev name, your environments may conflict if you always use the branch name that GitHub suggests. For details, see [Multidev](/docs/multidev/#what-are-the-naming-conventions-for-branches).
+         Be sure to use unique branch names for each feature branch; the Multidev environment created on Pantheon is named after your branch. Since there is a limit to the number of characters that may be used in a Pantheon Multidev name, your environments may conflict if you always use the branch name that GitHub suggests. For details, see <a href="/docs/multidev/#what-are-the-naming-conventions-for-branches" data-proofer-ignore>Multidev</a>).
         </div>
        </div>
      </div>

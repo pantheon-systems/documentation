@@ -14,7 +14,7 @@ nexturl: guides/build-tools/custom-theme/
 previousurl: guides/build-tools/update/
 editpath: build-tools/06-extend.md
 ---
-Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/docs/guides/build-tools/create-pr/).
+Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/docs/guides/build-tools/new-pr/).
 
 Export environment variables to define your site name and multidev environment so you can easily copy and paste the example commands in the next sections (replace `pantheon-d8-composer-project`):
 

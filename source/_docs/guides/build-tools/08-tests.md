@@ -9,10 +9,10 @@ pagination:
     provider: data.buildtoolspages
 use:
     - buildtoolspages
-permalink: docs/guides/build-tools/test/
-previousurl: guides/build-tools/custom-block/
+permalink: docs/guides/build-tools/tests/
+previousurl: guides/build-tools/custom-theme/
 nexturl: guides/build-tools/merge/
-editpath: build-tools/08-test.md
+editpath: build-tools/08-tests.md
 ---
 
 As you have already seen, the template project used to create your site included some basic [Behat](http://behat.org/en/latest/) tests that cover some of Drupal's basic capabilities. You can customize these tests or add more to suit your purposes. The file `code/tests/behat-pantheon.yml` controls where tests files are stored. By default, `code/tests/features` and `code/tests/site-features` are the defined search location, but you may add more directories if you would like to organize your tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run.
