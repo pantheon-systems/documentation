@@ -28,19 +28,28 @@ If you haven't already, set up Terminus, the Pantheon CLI, using Composer as des
 
 ## Import Your Archive
 
-Importing a Drush site archive as we've prepared it above is easy. First you'll authenticate into Pantheon with Terminus:
-```bash
-terminus auth:login --email=<email> --machine-token=<machine_token>
-```
-You're now ready to perform command-line operations with Pantheon! For instance, you can run `terminus site:list` to get a list of your existing sites.
+Importing a Drush site archive as we've prepared it above is easy. 
 
-Start an import:
+1. Authenticate into Pantheon with Terminus:
 
-```nohighlight
-terminus site:import <site> <url>
-```
-Before starting an import make sure you have an existing site on your account first.
-At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your Dashboard.
+   ```bash
+   terminus auth:login --email=<email> --machine-token=<machine_token>
+   ```
+
+   You're now ready to perform command-line operations with Pantheon! For instance, you can run `terminus site:list` to get a list of your existing sites.
+
+2. Start an import:
+
+   ```nohighlight
+   terminus site:import <site> <url>
+   ```
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4><p markdown="1">
+    Before starting an import make sure you have an existing site on your account.
+    </p></div>
+
+  At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your Dashboard.
 
 ## Automate Imports
 
