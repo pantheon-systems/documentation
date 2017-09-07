@@ -11,7 +11,7 @@ One of the easiest ways to move an existing Drupal site to Pantheon is to import
 There are a few things you'll need in order to make this work:
 
 1. A Pantheon account with at least one free Dev site slot open. [Pantheon is free](https://dashboard.pantheon.io/register), and if you need an extra Dev site to try this out, just ask and we'll be happy to grant you one.
-2. A working local Drush installation that is up to date with 5.x or 6.x stable.
+2. A working local Drush installation that is up to date with 7.x or 8.x stable.
 3. Drush access to your existing Drupal site.
 
 ## Generate a Drush Archive
@@ -35,10 +35,11 @@ terminus auth:login --email=<email> --machine-token=<machine_token>
 You're now ready to perform command-line operations with Pantheon! For instance, you can run `terminus site:list` to get a list of your existing sites.
 
 Start an import:
+
 ```nohighlight
 terminus site:import <site> <url>
 ```
-
+Before starting an import make sure you have an existing site on your account first.
 At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your Dashboard.
 
 ## Automate Imports
