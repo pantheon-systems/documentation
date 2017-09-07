@@ -67,12 +67,12 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
   Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
 </div>
 
-## Source and Artifact Workflow
+## Artifact Deployment
 Only files unique to the project are tracked as part of the project's main "source" repository on GitHub, which requires an abstraction layer to compile dependencies and deploy an entire "artifact" to the site repository on Pantheon. The abstraction layer is facilitated by CirlceCI in the Pantheon maintained examples, but the principles are the same for other continuous integration service providers.
 
 Composer is used to fetch dependencies declared by the project as part of a CircleCI build step. This ensures that the final composed build results are installed on Pantheon:
 
-![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)
+<p class="text-center" markdown="1">![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)</p>
 
 ## Before You Begin
 

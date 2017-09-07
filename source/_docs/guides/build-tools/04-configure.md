@@ -56,8 +56,12 @@ In this lesson, we'll use the Configuration Management system within the Drupal 
 
   ![Commit exported config](/source/docs/assets/images/pr-workflow/commit-added.png)
 
-  Whenever you commit files from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the GitHub repository, and this commit will be pushed back to the canonical repository.
+Whenever you commit files from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the source repository, and this commit will be pushed back to the canonical repository on GitHub:
 
-  GitHub will then start a new CircleCI build, and the build results will once again be pushed to the existing Multidev environment that was created for this branch.
+<p class="text-center" markdown="1">![Sync commit from Pantheon to GitHub](/source/docs/assets/images/pr-workflow/pantheon-circle-github.png)</p>
 
-  You may continue working in this environment, making multiple changes, and committing updates whenever you would like your tests to run again.
+GitHub will then start a new CircleCI build, and the build results will once again be pushed to the existing Multidev environment that was created for this branch:
+
+<p class="text-center" markdown="1">![Sync commit from GitHub to Pantheon Multidev](/source/docs/assets/images/pr-workflow/github-circle-multidev.png)</p>
+
+You may continue working in this environment, making multiple changes, and committing updates whenever you would like your tests to run again.

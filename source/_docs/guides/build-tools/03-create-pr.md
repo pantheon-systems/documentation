@@ -14,7 +14,12 @@ nexturl: guides/build-tools/configure/
 previousurl: guides/build-tools/create-project/
 editpath: build-tools/03-create-pr.md
 ---
-This section demonstrates GitHub's Pull Request workflow for Pantheon by making a simple code change on a feature branch then opening a request to accept that change into master.
+This section demonstrates GitHub's Pull Request workflow for Pantheon by making a simple code change on a feature branch then opening a Pull Request to accept that change into master.
+
+The master branch is automatically built and deployed to the Dev environment. Feature branches are automatically built and deployed to individual Multidev environments:
+
+<p class="text-center" markdown="1">![Continuous delivery diagram](/source/docs/assets/images/pr-workflow/github-circle-pantheon.png)</p>
+
 
 <div class="panel panel-drop panel-guide" id="accordion">
   <div class="panel-heading panel-drop-heading">
@@ -25,11 +30,6 @@ This section demonstrates GitHub's Pull Request workflow for Pantheon by making 
      Continuous delivery requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress. Anything that keeps your application from deploying code to production is considered a blocker.
 
      Production code is tracked by the master branch on GitHub and it is assumed to be production ready. Development work is done on a feature branch first, then proposed to master in the form of a Pull Request so it can be tested and reviewed before it's accepted.
-
-     The master branch is automatically built and deployed to the Dev environment. Feature branches are automatically built and deployed to individual Multidev environments:
-
-    ![Continuous delivery diagram](/source/docs/assets/images/pr-workflow/cd-diagram.png)
-
     </div>
    </div>
  </div>
@@ -63,11 +63,21 @@ This section demonstrates GitHub's Pull Request workflow for Pantheon by making 
 
     ![Slogan Pull Request](/source/docs/assets/images/pr-workflow/slogan-pull-request.png)
 
-    As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Mutidev site URL (e.g., `pr-slogan-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
+    <div class="panel panel-drop panel-guide" id="accordion">
+      <div class="panel-heading panel-drop-heading">
+         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-builds"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-watch"></span> Builds</h3></a>
+       </div>
+       <div id="understand-builds" class="collapse">
+         <div class="panel-inner" markdown="1">
+         As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Mutidev site URL (e.g., `pr-slogan-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
 
-    ![Passed Pull Request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
+         ![Passed Pull Request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
 
-5. Click on the **Visit Site** button to access the Mutidev site URL. Note that the slogan you entered in your Pull Request branch has been imported and is visible in the site header:
+        </div>
+       </div>
+     </div>
+
+5. Wait for the build on CircleCI to leave a comment, then click on the **Visit Site** button to access the Mutidev site URL. Note that the slogan you entered in your Pull Request branch has been imported and is visible in the site header:
 
     ![Site initial login](/source/docs/assets/images/pr-workflow/pr-slogan-site.png)
 

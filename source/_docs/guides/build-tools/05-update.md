@@ -14,55 +14,90 @@ nexturl: guides/build-tools/extend/
 previousurl: guides/build-tools/configure/
 editpath: build-tools/05-update.md
 ---
+In this lesson, we'll take a closer look at how to manage code in a Composer workflow.
 
-When using the Composer workflow, you should *never* use the Pantheon dashboard to update changes from your upstream, nor should you ever merge code from one environment to another. All code updates will be done using Composer.
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+     <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-composer"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Composer</h3></a>
+   </div>
+   <div id="understand-composer" class="collapse">
+     <div class="panel-inner" markdown="1">
+    ### Composer Fundamentals
+    Composer is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a WordPress or Drupal site. At it's primary level, Composer needs:
 
-If you would like to copy the commands used in the examples below directly into your terminal, export environment variables to define your site name and multidev environment:
-```
-export SITE=my-pantheon-project
-export ENV=pr-slogan
-```
+    - A list of dependencies
+    - A place to put the dependencies
 
-### Terminus Composer Update
-Composer commands (e.g. `composer update`) may be run directly against your Pantheon multidev environments using the Terminus Composer plugin. If your site is very simple, you can update it directly on the platform.
+    Understanding how Composer can be used independent of Drupal or WordPress is a good place to learn more about the general concepts. For a summary of basic usage, see [Composer's own documentation](https://getcomposer.org/doc/01-basic-usage.md){.external}.
 
-1.  Using Terminus, update your site with Composer:
+    <div class="enablement">
+      <h4 class="info" markdown="1">[Automation Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+      <p>Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
+    </div>
 
-    ```bash
-    terminus composer $SITE.$ENV -- update
-    ```
+    ### Dependencies
+    Composer encourages a mental model where code not written specifically for a given project is a dependency. Only files unique to the project are tracked as part of the project's main source repository, also referred to as the canonical site repository. Dependencies for WordPress and Drupal include core, plugins, contrib modules, themes, and libraries. A single dependency, such as a theme, is referred to as a package.
 
-    The example below shows a site that was installed with Drupal 8.3.0, and updated to Drupal 8.3.1 after that version was released using Composer.
+    By default, Composer can only see packages listed on The PHP Package Repository which do not include Drupal or WordPress packages. Additional repositories must be configured for Composer to use packages not found in the default repository. Each framework provides it's own respective package repository so dependencies can be managed with Composer:
 
-    ![Update configuration](/source/docs/assets/images/pr-workflow/composer-update.png)
+    - WordPress: [https://wpackagist.org](https://wpackagist.org){.external}
+    - Drupal 8: [https://packages.drupal.org/8](https://packages.drupal.org/8){.external}
+    - Drupal 7: [https://packages.drupal.org/7](https://packages.drupal.org/7){.external}
 
-2.  Visit your Pantheon dashboard and commit your changes:
+    Site's created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file.
+    </div>
+  </div>
+</div>
 
-    ![Commit updated files](/source/docs/assets/images/pr-workflow/commit-composer-update.png)
+## Local Setup
+The next section will be done from the command line, to prepare your local:
 
-### Local Composer Update
-If you have added a few contrib modules, though, it is likely that Composer will run out of memory while updating your site directly on the platform with Terminus. In this instance, you should update your site locally.
+1. Navigate to the **Code** tab of the GitHub repository, then click **Clone or download** and copy the repository URL:
 
-1. Clone your GitHub project locally:
+  ![Clone repository](/source/docs/assets/images/pr-workflow/clone.png)
 
-    ```bash
-    git clone git@github.com:my-username/my-pantheon-project.git
-    cd my-pantheon-project
-    ```
+2. Open a terminal application and clone the GitHub repository (replace `<github-url>`):
 
-2. Update your site with composer:
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-clone">Copy</button>
+      <figure><pre id="git-clone"><code class="command bash" data-lang="bash">git clone &lsaquo;github-url&rsaquo;</code></pre></figure>
+    </div>
 
-    ```bash
-    composer update
-    ```
+3. Navigate to the repository's root and export the following environment variables so you can copy the commands used in the next section (replace `pantheon-d8-composer-project`):
 
-3. Commit the updated `composer.json` and `composer.lock` files and push a new branch up to GitHub:
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#cd-project">Copy</button>
+      <figure><pre id="cd-project"><code class="command bash" data-lang="bash">cd pantheon-d8-composer-project
+      export SITE=pantheon-d8-composer-project
+      export ENV=pr-slogan</code></pre></figure>
+    </div>
 
-    ```bash
-    git checkout -b drupal-8.3.7
-    git add .
-    git commit -m "Update to Drupal 8.3.7."
-    git push -u origin drupal-8.3.7
-    ```
+4. Install dependencies with Composer:
 
-4. Create a Pull Request on GitHub, and merge it once you are done testing.
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-install">Copy</button>
+      <figure><pre id="composer-install"><code class="command bash" data-lang="bash">composer install</code></pre></figure>
+    </div>
+
+## Composer Update
+Adopting a Composer workflow means forgoing all other update techniques. The site should *never* receive Pantheon's One-click updates in the Pantheon Site Dashboard and you should no longer use the Drupal Admin interface to update modules, themes, or libraries (or any other method not mentioned). These type of code updates will be done using Composer exclusively going forward.
+
+1. Update Drupal core with Composer:
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-update-cmd">Copy</button>
+      <figure><pre id="composer-update-cmd"><code class="command bash" data-lang="bash">composer update drupal/core</code></pre></figure>
+    </div>
+2. Run `git diff composer.lock` to see the updated dependency details:
+
+  ![composer diff core](/source/docs/assets/images/pr-workflow/composer-lock-diff.png)
+
+3. Commit the updated `composer.lock` file and push a new branch up to GitHub, for example:
+
+  ![Stage commit and push new branch](/source/docs/assets/images/pr-workflow/update-drupal-core.png)
+
+4. Create a Pull Request on GitHub, and merge it once you are done testing:
+
+  ![Composer update pr](/source/docs/assets/images/pr-workflow/composer-update-pr.png)
+
+Use this process to update any dependency required by your project's `composer.json` file.

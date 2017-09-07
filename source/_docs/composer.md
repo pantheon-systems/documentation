@@ -72,7 +72,7 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 
 In this workflow, a [Multidev](/docs/multidev/) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
 
-![Multidev PR workflow](/source/docs/assets/images/pr-workflow/cd-diagram.png)
+![Multidev PR workflow](/source/docs/assets/images/pr-workflow/github-circle-pantheon.png)
 
 ### Automated Tests
 
