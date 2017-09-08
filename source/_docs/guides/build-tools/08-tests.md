@@ -21,11 +21,11 @@ The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-c
 ## Extending the Example Test Suite
 The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/docs/guides/build-tools/new-pr/) has been applied to the associated Multidev environment:
 
-1. Create a new branch from master:
+1. Checkout the `slogan` pr from the previous lesson:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#git-branch">Copy</button>
-      <figure><pre id="git-branch"><code class="command bash" data-lang="bash">  git checkout -b behat-new-features master</code></pre></figure>
+      <figure><pre id="git-branch"><code class="command bash" data-lang="bash">  git checkout slogan</code></pre></figure>
     </div>
 
 2.  Create the directory `tests/site-features` and add a new file called `slogan.feature` containing:
@@ -62,13 +62,13 @@ The following is an example of how to increase test coverage for your project by
     ```
     By following this pattern, you can add similar tests to confirm that the most important features of your site remain functional. To save time on test runs, remove the example tests that cover basic Drupal features, and only run tests on your core functionality.
 
-3.  Commit your new files to a feature branch and push to GitHub to create a new Pull Request for peer review:
+3.  Commit your new files to the `slogan` branch and push to GitHub for peer review:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#git-push">Copy</button>
       <figure><pre id="git-push"><code class="command bash" data-lang="bash">git add .
       git commit -m "Add tests/site-features for content UI and slogan"
-      git push origin behat</code></pre></figure>
+      git push origin slogan</code></pre></figure>
     </div>
 
 ### Behat Test Artifacts
