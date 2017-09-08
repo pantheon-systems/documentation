@@ -40,6 +40,17 @@ Replace all instances of `examplesite` with your site name as it appears on the 
 
 When defining a single term, you can highlight it in bold text, as we did above in the [Formatting In Copy](#formatting-in-copy) section. For a doc that introduces several new terms or concepts, use a definition list:
 
+
+<table class="table table-condensed table-bordered">
+    <thread class="thread-inverse">
+      <tr>
+        <th>Markdown</th>
+        <th>Rendered</th>
+      </tr>
+    </thread>
+    <tbody>
+      <tr markdown="1">
+        <td>
 ```html
 <dl>
 <dt>Term</dt>
@@ -48,15 +59,19 @@ When defining a single term, you can highlight it in bold text, as we did above 
 <dd>Description of the new term.</dd>
 </dl>
 ```
+        </td>
+        <td>
+        <dl>
+        <dt>Term</dt>
+        <dd>Definition.</dd>
+        <dt>Another Term</dt>
+        <dd>Description of the new term.</dd>
+        </dl>
+      </tr>
+    </tbody>
+</table>
 
-Which is rendered like this:
 
-<dl>
-<dt>Term</dt>
-<dd>Definition.</dd>
-<dt>Another Term</dt>
-<dd>Description of the new term.</dd>
-</dl>
 
 ### Emphasis
 
@@ -112,15 +127,29 @@ There are two ways to identify code and/or command line input/output:
 
 2. Code fences:
 
-	    ```bash
-	    terminus site:create myawesomesite
-	    ```
-
-   Which are rendered as:
-
-    ```bash
+    <table class="table table-condensed table-bordered">
+      <thread class="thread-inverse">
+        <tr>
+          <th>Markdown</th>
+          <th>Rendered</th>
+        </tr>
+      </thread>
+      <tbody>
+        <tr markdown="1">
+          <td>
+        <pre><code data-lang="hljs markdown">```bash
     terminus site:create myawesomesite
-    ```
+    ```</code></pre>
+          </td>
+          <td>
+        ```bash
+        terminus site:create myawesomesite
+        ```
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
 
 TODO: Determine what style of prompt we want command snippets to use, and how to implement them.
 
@@ -162,36 +191,66 @@ There are two types of callouts used in our docs, notes and warnings.
 
 ### Notes
 
+<table class="table table-condensed table-bordered">
+    <thread class="thread-inverse">
+      <tr>
+        <th>Markdown</th>
+        <th>Rendered</th>
+      </tr>
+    </thread>
+    <tbody>
+      <tr markdown="1">
+        <td>
+```
 <div class="alert alert-info">
 <h4 class="info">Note</h4><p markdown="1">
 Notes should identify important pieces of information the reader shouldn't miss.
 </p>
 </div>
+```
+        </td>
+        <td>
+        <div class="alert alert-info">
+        <h4 class="info">Note</h4><p markdown="1">
+        Notes should identify important pieces of information the reader shouldn't miss.
+        </p>
+        </div>
+      </tr>
+    </tbody>
+</table>
 
-```
-<div class="alert alert-info">
-<h4 class="info">Note</h4><p markdown="1">
-Notes should identify important pieces of information the reader shouldn't miss.
-</p>
-</div>
-```
 ### Warnings
 
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p markdown="1">
-Warnings cover information critical to the reader, and highlight potential dangers, especially those that can cause data loss.
-</p>
-</div>
 
+<table class="table table-condensed table-bordered">
+    <thread class="thread-inverse">
+      <tr>
+        <th>Markdown</th>
+        <th>Rendered</th>
+      </tr>
+    </thread>
+    <tbody>
+      <tr markdown="1">
+        <td>
 ```
 <div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p markdown="1">
+<h4 class="info">Warning</h4><p markdown="1">
 Warnings cover information critical to the reader, and highlight potential dangers, especially those that can cause data loss.
 </p>
 </div>
 ```
+        </td>
+        <td>
+        <div class="alert alert-danger" role="alert">
+        <h4 class="info">Warning</h4>
+        <p markdown="1">
+        Warnings cover information critical to the reader, and highlight potential dangers, especially those that can cause data loss.
+        </p>
+        </div>
+      </tr>
+    </tbody>
+</table>
+
 
 ### Tabs
 
@@ -199,53 +258,52 @@ When working on a document that will cover steps for multiple CMSs, use tabs whe
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-<!-- Active tab -->
-<li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
-<!-- 2nd Tab Nav -->
-<li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-<!-- 3rd Tab Nav -->
-<li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
+    <!-- Active tab -->
+    <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+
+    <!-- 2nd Tab Nav -->
+    <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
+
+    <!-- 3rd Tab Nav -->
+    <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-Here's our WordPress specific command:
+    <!-- Active pane content -->
+    <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+    Here's our WordPress specific command:
+    ```
+    terminus blah blah wordpress
+    ```
+    </div>
 
-```
-terminus blah blah wordpress
-```
+    <!-- 2nd pane content -->
+    <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+    Here's our Drupal 8 specific command:
+    ```
+    terminus yadda yadda drupal-8
+    ```
+    </div>
 
-</div>
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
-
-Here's our Drupal 8 specific command:
-
-```
-terminus yadda yadda drupal-8
-```
-
-</div>
-<!-- 3rd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
-Here's our Drupal 8 specific command:
-
-```
-terminus bloop bleep drupal-7
-```
-
-</div>
+    <!-- 3rd pane content -->
+    <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+    Here's our Drupal 8 specific command:
+    ```
+    terminus bloop bleep drupal-7
+    ```
+    </div>
 </div>
 
 
+## Screenshots
 
+Screenshots are used to reference GUI instructions. Screenshots of terminal commands or output should *not* be used. Please submit screenshots without lines, circles, arrows, or other callouts added to them.
 
 
 ## See Also
 
 If you can, end your doc with links to external resources that the reader can use to improve the reader's comprehension, or to guides on logical next steps in a common development workflow.
 
- - [An internal guide with a relative link](/docs/get-started)  
+ - [An internal guide with a relative link](/docs/get-started)
  - [An external guide with a full URL](http://writing.rocks/)
