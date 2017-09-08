@@ -67,8 +67,6 @@ This page demonstrates how to create a custom theme from the default [Bartik](ht
       <figure><pre id="terminus-commit-template"><code class="command bash" data-lang="bash">terminus env:commit $SITE.$ENV --message="Generate subtheme files [ci skip]"</code></pre></figure>
     </div>
 
-    Keep the second terminal window open for upcoming `sftp>` commands. Use the first terminal for upcoming shell `$` commands.
-
 5. Run the following command to copy the `regions:` section of Bartik's default info file to your new custom theme's info file:
 
     <div class="copy-snippet">
