@@ -16,7 +16,7 @@ editpath: build-tools/08-tests.md
 ---
 The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. Drupal 8 uses  [Behat](http://behat.org/en/latest/){.external} and the WordPress example uses [WordHat](https://wordhat.info/){.external}.
 
-The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/tests/behat-pantheon.yml){.external} sets the path for a project's collection of Behat tests.Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run on CircleCI.
+The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/tests/behat-pantheon.yml){.external} file sets the path for a project's collection of Behat tests.Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run on CircleCI.
 
 ## Extending the Example Test Suite
 The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/docs/guides/build-tools/new-pr/) has been applied to the associated Multidev environment:
