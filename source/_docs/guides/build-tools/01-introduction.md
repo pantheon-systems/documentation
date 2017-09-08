@@ -74,6 +74,19 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
 <p class="text-center" markdown="1">![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)</p>
 
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+   <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-pr"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Pull Requests</h3></a>
+ </div>
+ <div id="understand-pr" class="collapse">
+   <div class="panel-inner" markdown="1">
+    One advantage of managing code this way is that it keeps the change sets (differences) for pull requests as small as possible. If a pull request upgrades several dependencies, only the dependency metadata file will change; the actual code changes in the upgraded dependencies themselves are not shown.
+
+    GitHub pull requests (PRs) are a formalized way of reviewing and merging a proposed set of changes to the source repository. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before merging the PR to accept changes.
+    </div>
+  </div>
+</div>
+
 ## Before You Begin
 
 1. Install [Composer](https://getcomposer.org){.external}
@@ -95,21 +108,21 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-plugin">Copy</button>
-      <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-composer-plugin/archive/1.0.0.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
+      <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1</code></pre></figure>
     </div>
 
 5. Install the [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin){.external}:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#console-plugin">Copy</button>
-      <figure><pre id="console-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-drupal-console-plugin/archive/1.0.2.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
+      <figure><pre id="console-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1</code></pre></figure>
     </div>
 
 6. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin){.external}:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#build-tools-plugin">Copy</button>
-      <figure><pre id="build-tools-plugin"><code class="command bash" data-lang="bash">curl https://github.com/pantheon-systems/terminus-build-tools-plugin/archive/1.3.9.tar.gz -L | tar -C ~/.terminus/plugins -xvz</code></pre></figure>
+      <figure><pre id="build-tools-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:~1</code></pre></figure>
     </div>
 
 7. [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.

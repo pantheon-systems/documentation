@@ -271,7 +271,6 @@ h4.info > a.external[href]::after {
   margin-bottom: 20px;
 }
 .article a {
-  text-decoration: underline;
   color: #0093c9;
 }
 .changelog-sidebar a {

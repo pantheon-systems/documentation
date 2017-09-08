@@ -73,6 +73,10 @@ The master branch is automatically built and deployed to the Dev environment. Fe
 
          ![Passed Pull Request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
 
+         ### Automated Tests
+         It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, GitHub will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
+
+
         </div>
        </div>
      </div>

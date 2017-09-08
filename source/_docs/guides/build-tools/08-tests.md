@@ -14,7 +14,6 @@ previousurl: guides/build-tools/custom-theme/
 nexturl: guides/build-tools/merge/
 editpath: build-tools/08-tests.md
 ---
-
 As you have already seen, the template project used to create your site included some basic [Behat](http://behat.org/en/latest/) tests that cover some of Drupal's basic capabilities. You can customize these tests or add more to suit your purposes. The file `code/tests/behat-pantheon.yml` controls where tests files are stored. By default, `code/tests/features` and `code/tests/site-features` are the defined search location, but you may add more directories if you would like to organize your tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run.
 
 To confirm that your site's configuration has been applied to the test site, add a test to check that the site slogan is correct.

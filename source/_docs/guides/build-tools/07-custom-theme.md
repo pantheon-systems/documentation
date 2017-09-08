@@ -60,37 +60,30 @@ This page demonstrates how to create a custom theme from the default [Bartik](ht
         </div>
       </div>
 
-4. Open a second terminal window and run the following command to open an SFTP session from the command line:
+4. Commit theme files generated in the last command to the Multidev environment, either from the Site Dashboard or from the command line. We don't _need_ this particular commit to be built by CircleCI, so we'll add `[ci skip]` to the commit message to skip:
 
     <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-sftp-connect">Copy</button>
-      <figure><pre id="terminus-sftp-connect"><code class="command bash" data-lang="bash">`terminus connection:info $SITE.$ENV --fields='SFTP Command' --format=string`</code></pre></figure>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-commit-template">Copy</button>
+      <figure><pre id="terminus-commit-template"><code class="command bash" data-lang="bash">terminus env:commit $SITE.$ENV --message="Generate subtheme files [ci skip]"</code></pre></figure>
     </div>
 
     Keep the second terminal window open for upcoming `sftp>` commands. Use the first terminal for upcoming shell `$` commands.
 
-5. Run the following `sftp>` command to download your new custom theme directory:
-
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-sftp-get-custom-info">Copy</button>
-      <figure><pre id="terminus-sftp-get-custom-info"><code class="sftp-command bash" data-lang="bash">get -r code/web/themes/custom/ web/themes/custom/</code></pre></figure>
-    </div>
-
-6. Run the following shell `$` command to copy the `regions:` section of Bartik's default info file to your new custom theme's info file:
+5. Run the following command to copy the `regions:` section of Bartik's default info file to your new custom theme's info file:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#regions-copy">Copy</button>
       <figure><pre id="regions-copy"><code class="command bash" data-lang="bash">cat web/core/themes/bartik/bartik.info.yml | sed -n -e '/regions:/,$p' >> web/themes/custom/amazing_theme/amazing_theme.info.yml</code></pre></figure>
     </div>
 
-7. Copy the logo over from Bartik to your custom theme using the following shell `$` command:
+7. Copy the logo over from Bartik to your custom theme:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#put-logo">Copy</button>
       <figure><pre id="put-logo"><code class="command bash" data-lang="bash">cp web/core/themes/bartik/logo.svg web/themes/custom/amazing_theme/logo.svg</code></pre></figure>
     </div>
 
-8. Create a file named `amazing_theme.libraries.yml` and add the provided content by running the following shell `$` command:
+8. Create a file named `amazing_theme.libraries.yml` and add the provided content:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#create-library">Copy</button>
@@ -101,7 +94,7 @@ This page demonstrates how to create a custom theme from the default [Bartik](ht
             css/main.css: {}" > web/themes/custom/amazing_theme/amazing_theme.libraries.yml</code></pre></figure>
     </div>
 
-9. Create a new `css` directory for your custom theme along with a new file named `main.css` inside it. To test that your theme is working, add some very obvious styling such as an orange border around the content region, shown in the example shell `$` command below:
+9. Create a new `css` directory for your custom theme along with a new file named `main.css` inside it. To test that your theme is working, add some very obvious styling such as an orange border around the content region:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#create-css-file">Copy</button>
@@ -111,14 +104,14 @@ This page demonstrates how to create a custom theme from the default [Bartik](ht
     </div>
 
 
-10. Upload changes to your custom theme using the following `sftp>` command, then close the SFTP session using the `bye` command:
+10. Commit changes to your custom theme and push up to GitHub:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#upload-all-custom-theme">Copy</button>
       <figure><pre id="upload-all-custom-theme"><code class="sftp-command bash" data-lang="bash">put -r web/themes/custom/amazing_theme code/web/themes/custom</code></pre></figure>
     </div>
 
-11. Use Terminus with Drupal Console and Drush to active your new theme and rebuild the cache:
+11. Once the build finishes from the last step, active your new theme and rebuild the cache:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-drupal-theme-install">Copy</button>
@@ -146,9 +139,7 @@ This page demonstrates how to create a custom theme from the default [Bartik](ht
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto-export-config-commit">Copy</button>
-      <figure><pre id="pathauto-export-config-commit"><code class="command bash" data-lang="bash">terminus env:commit $SITE.$ENV --message="Install and activate custom theme"</code></pre></figure>
+      <figure><pre id="pathauto-export-config-commit"><code class="command bash" data-lang="bash">terminus env:commit $SITE.$ENV --message="Activate new custom theme"</code></pre></figure>
     </div>
 
-14. Return to GitHub and compare the `custom-theme` branch against `master`. You should see a single commit able to merge. Click **Create Pull Request** and go through your team's standard peer review process.
-
-  ![GitHub PR for new theme](/source/docs/assets/images/pr-workflow/github-new-theme.png)
+14. Return to GitHub and compare the `custom-theme` branch against `master`. You should see a few commits that are able to be merged. Click **Create Pull Request** and go through your team's standard peer review process.
