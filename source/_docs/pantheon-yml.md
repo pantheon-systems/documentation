@@ -9,7 +9,7 @@ Hook into platform workflows and advanced site configurations using Pantheon's Y
 When the same configuration value is defined in both files, the value from `pantheon.yml` will override the value from `pantheon.upstream.yml`.
 
 <div class="enablement">
-  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Quicksilver Cloud Hooks Training</h4></a>
+  <h4 class="info" markdown="1">[Quicksilver Cloud Hooks Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Set up existing scripts and write your own with help from our experts. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
 </div>
 

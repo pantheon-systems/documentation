@@ -7,7 +7,7 @@ categories: [wordpress]
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 <div class="enablement">
-  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Agency DevOps Training</h4></a>
+  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}
   <p>Learn industry best practices for WordPress caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
 </div>
 
@@ -77,7 +77,7 @@ This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using S
  terminus connection:set <site>.<env> git
  ```
 
-2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) and [initialize Composer](/docs/composer/#initialize-composer) with `composer init`, if you have not done so already.
+2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) if you have not done so already.
 
 3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
 

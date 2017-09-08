@@ -50,7 +50,7 @@ Your WordPress application is now set up to send email through SendGrid! Complet
 Two methods can be used to integrate SendGrid with your Drupal site: API or SMTP.
 #### Considerations
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
-- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](https://pantheon.io/docs/composer/).
+- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/docs/composer/).
 
 ### SendGrid API Integration
 A stable release for Drupal 8 is not yet available for the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module. However, the development release seems to work fairly well. Use with caution.

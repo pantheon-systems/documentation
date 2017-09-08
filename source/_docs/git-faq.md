@@ -8,7 +8,7 @@ contributors: mrfelton
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
 <div class="enablement">
-  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Get DevOps Training</h4></a>
+  <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
 </div>
 

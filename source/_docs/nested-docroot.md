@@ -12,7 +12,7 @@ The docroot is the directory from which your site is served. On Pantheon, this d
 ### Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
 
-This is especially useful for third party dependencies, such as those installed and managed via [Composer](https://getcomposer.org/).
+This is especially useful for third party dependencies, such as those installed and managed via [Composer](/docs/composer/).
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>

@@ -7,7 +7,7 @@ earlynote: The documentation on this page discusses features and options that ar
 Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 30+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org).
 
 <div class="enablement">
-  <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Agency DevOps Training</h4></a>
+  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}
   <p>Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
 </div>
 
@@ -72,7 +72,7 @@ Developers looking to take advantage of the granular cache clearing capabilities
 - WordPress: [Pantheon Advanced Page Cache](https://github.com/pantheon-systems/pantheon-advanced-page-cache)
 - Drupal: D7 and D8 [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
 
-Lower-level documentation for custom implementation of caching strategies is also coming soon. Please [contact our enablement team](https://pantheon.io/agencies/learn-pantheon) if you are interested in implementing a custom cache strategy.
+Lower-level documentation for custom implementation of caching strategies is also coming soon. Please [contact our enablement team](https://pantheon.io/agencies/learn-pantheon?docs){.external} if you are interested in implementing a custom cache strategy.
 
 ## Enabling the Global CDN
 

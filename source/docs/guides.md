@@ -30,7 +30,7 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
 <h2>Platform Integration Guides</h2>
 <div class="flex-panel-group">
   <div class="flex-panel-item-platform-integrations-guides">
-    <a href="/docs/guides/github-pull-requests/">
+    <a href="/docs/guides/build-tools/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
           <img alt="GitHub" src="/source/docs/assets/images/logos/github-composer-circle.png" style="max-width:70%;" class="main-topic-info__plugin-image">
