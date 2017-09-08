@@ -303,12 +303,6 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 <hr>
 
-### [JetPack](https://wordpress.org/plugins/jetpack/)
-**Issue**: JetPack installs successsfully, but throws a 503 error. For details, see [https://github.com/Automattic/jetpack/issues/3546](https://github.com/Automattic/jetpack/issues/3546).
-
-**Solution**: Reload the page and you'll see that the plugin was activated successfully.
-<hr>
-
 ### [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
 **Issue**: Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
 
