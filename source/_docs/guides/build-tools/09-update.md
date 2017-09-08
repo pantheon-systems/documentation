@@ -4,15 +4,15 @@ subtitle: Update Your Project
 buildtools: true
 anchorid: update
 generator: pagination
+survey: true
 layout: guide
 pagination:
     provider: data.buildtoolspages
 use:
     - buildtoolspages
 permalink: docs/guides/build-tools/update/
-nexturl: guides/build-tools/custom-theme/
-previousurl: guides/build-tools/extend/
-editpath: build-tools/06-update.md
+previousurl: guides/build-tools/custom-theme/
+editpath: build-tools/09-update.md
 ---
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
 

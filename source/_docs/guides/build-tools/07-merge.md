@@ -1,8 +1,7 @@
 ---
 title: Build Tools
-subtitle: Merge your Pull Request
+subtitle: Merge Your Work
 buildtools: true
-survey: true
 anchorid: merge
 generator: pagination
 layout: guide
@@ -12,7 +11,8 @@ use:
     - buildtoolspages
 permalink: docs/guides/build-tools/merge/
 previousurl: guides/build-tools/tests/
-editpath: build-tools/09-merge.md
+nexturl: guides/build-tools/custom-theme/
+editpath: build-tools/07-merge.md
 ---
 This lesson demonstrates the final process of the Pull Request workflow, merging. After completing an internal peer review process for a given Pull Request, work is considered ready for production and accepted into the master branch.
 
@@ -26,4 +26,4 @@ This lesson demonstrates the final process of the Pull Request workflow, merging
 
     When your Pull Request is merged, one more test run will be started to test the result of combining the code and configuration from your Pull Request with the master branch. Once this test passes, the configuration for your site will be applied to the Dev environment, and the corresponding Multidev environment will be deleted. Note that database content is not merged; make sure that you have exported your configuration before merging your Pull Request to ensure that configuration changes are not lost.
 
-You may now use the [Pantheon dev / test / live workflow](https://pantheon.io/docs/pantheon-workflow/) to deploy your site as usual.
+You may now use the [Pantheon dev / test / live workflow](https://pantheon.io/docs/pantheon-workflow/) to deploy your site as usual. Continue reading this guide to learn how to manage core updates and create a custom theme.

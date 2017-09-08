@@ -1,6 +1,6 @@
 ---
 title: Build Tools
-subtitle: Configuration Management
+subtitle: Manage Configuration
 buildtools: true
 anchorid: configure
 generator: pagination

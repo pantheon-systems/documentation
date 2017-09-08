@@ -1,6 +1,6 @@
 ---
 title: Build Tools
-subtitle: Test Suite
+subtitle: Write a New Test
 buildtools: true
 anchorid: behat
 generator: pagination
@@ -10,9 +10,9 @@ pagination:
 use:
     - buildtoolspages
 permalink: docs/guides/build-tools/tests/
-previousurl: guides/build-tools/custom-theme/
+previousurl: guides/build-tools/extend/
 nexturl: guides/build-tools/merge/
-editpath: build-tools/08-tests.md
+editpath: build-tools/06-tests.md
 ---
 The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. Drupal 8 uses  [Behat](http://behat.org/en/latest/){.external} and the WordPress example uses [WordHat](https://wordhat.info/){.external}.
 
@@ -21,11 +21,11 @@ The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-c
 ## Extending the Example Test Suite
 The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/docs/guides/build-tools/new-pr/) has been applied to the associated Multidev environment:
 
-1. Checkout the `slogan` pr from the previous lesson:
+1. Pull down commits added to the `slogan` branch from the previous lesson:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#git-branch">Copy</button>
-      <figure><pre id="git-branch"><code class="command bash" data-lang="bash">  git checkout slogan</code></pre></figure>
+      <figure><pre id="git-branch"><code class="command bash" data-lang="bash">git pull origin slogan</code></pre></figure>
     </div>
 
 2.  Create the directory `tests/site-features` and add a new file called `slogan.feature` containing:
