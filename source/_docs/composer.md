@@ -24,8 +24,16 @@ Composer looks within the [The PHP Package Repository](https://packagist.org/) f
 - Drupal 8: [https://packages.drupal.org/8](https://packages.drupal.org/8)
 - Drupal 7: [https://packages.drupal.org/7](https://packages.drupal.org/7)
 
-Site's created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file.
+Site's created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file such, as [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/composer.json#L6-L11){.external}:
 
+```json
+"repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+```
 ## Managing Core as a Project Dependency
 Sites managed with Composer should use the nested docroot feature, which allows core to be installed within the `web` subdirectory instead of the default root directory of the site's codebase. A nested docroot is the simplest path towards reliable core updates in a Composer workflow.
 
