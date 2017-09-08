@@ -30,7 +30,7 @@ The next section will be done from the command line, to prepare your local:
       <figure><pre id="git-clone"><code class="command bash" data-lang="bash">git clone &lsaquo;github-url&rsaquo;</code></pre></figure>
     </div>
 
-3. Navigate to the repository's root and export the following environment variables so you can copy the commands used in the next section (replace `pantheon-d8-composer-project`):
+3. Navigate to the repository's root (replace `pantheon-d8-composer-project`):
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#cd-project">Copy</button>
