@@ -151,11 +151,7 @@ There are two ways to identify code and/or command line input/output:
     </table>
 
 
-TODO: Determine what style of prompt we want command snippets to use, and how to implement them.
-
-Terminal output is formated separately from commands, to differentiate to the reader what they should copy into their terminal from what they should expect to see after execution.
-
-TODO: Brainstorm on how we want to format and implement terminal output.
+Terminal examples should not include bash prompts in the copy. The output of succesful terminal commands, which do not need to be copied or searched, can be included as [screenshots](#screenshots)
 
 
 #### Syntax Highlighting
@@ -173,16 +169,6 @@ Most of the code snippets in our documentation is PHP. Good code is also documen
 * must manually edit.
 */
 ```
-
-### File Excerpts
-
-File Excerpts show example code to use in your site code base, scripts, or other files.
-
-TODO: Brainstorm on how to format and implement file excerpts.
-
- - Should have line numbers
- - Would be nice to be able to set which number they start at
- - Consider an optional copy button, which we could choose to not use when example data needs additional formatting.
 
 
 ## Callouts and Tabs
@@ -298,8 +284,24 @@ When working on a document that will cover steps for multiple CMSs, use tabs whe
 
 ## Screenshots
 
-Screenshots are used to reference GUI instructions. Screenshots of terminal commands or output should *not* be used. Please submit screenshots without lines, circles, arrows, or other callouts added to them.
+Screenshots are used to reference GUI instructions. Screenshots of terminal commands should *not* be used, only output. Please submit screenshots without lines, circles, arrows, or other callouts added to them.
 
+
+## Panels
+
+Expandable panels can be used for extraneous but useful information, troubleshooting sections, or any other block of information you want to include, but would be too long or can be skipped over by a large portion of readers. You can use the source of the empty panel below as a template.
+
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Panel Title</h3></a>
+  </div>
+  <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+  ### Panel Content Header
+
+  Note that the panel content header is also used in the table of contents.
+
+  </div>
+</div>
 
 ## See Also
 
