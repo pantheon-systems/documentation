@@ -7,7 +7,7 @@ categories: []
 Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL Database](/docs/mysql-access).
 
 <div class="enablement">
-  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}
+  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Tune your site (or sites!) for optimal performance with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and build awesome websites.</p>
 </div>
 
