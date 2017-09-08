@@ -10,19 +10,47 @@ pagination:
 use:
     - buildtoolspages
 permalink: docs/guides/build-tools/extend/
-nexturl: guides/build-tools/custom-theme/
-previousurl: guides/build-tools/update/
-editpath: build-tools/06-extend.md
+nexturl: guides/build-tools/update/
+previousurl: guides/build-tools/configure/
+editpath: build-tools/05-extend.md
 ---
 Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/docs/guides/build-tools/new-pr/).
 
-Export environment variables to define your site name and multidev environment so you can easily copy and paste the example commands in the next sections (replace `pantheon-d8-composer-project`):
+## Local Setup
+The next section will be done from the command line, to prepare your local:
 
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#export-var">Copy</button>
-  <figure><pre id="export-var"><code class="command bash" data-lang="bash">export SITE=pantheon-d8-composer-project
-  export ENV=pr-slogan</code></pre></figure>
-</div>
+1. Navigate to the **Code** tab of the GitHub repository, then click **Clone or download** and copy the repository URL:
+
+  ![Clone repository](/source/docs/assets/images/pr-workflow/clone.png)
+
+2. Open a terminal application and clone the GitHub repository (replace `<github-url>`):
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-clone">Copy</button>
+      <figure><pre id="git-clone"><code class="command bash" data-lang="bash">git clone &lsaquo;github-url&rsaquo;</code></pre></figure>
+    </div>
+
+3. Navigate to the repository's root and export the following environment variables so you can copy the commands used in the next section (replace `pantheon-d8-composer-project`):
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#cd-project">Copy</button>
+      <figure><pre id="cd-project"><code class="command bash" data-lang="bash">cd pantheon-d8-composer-project</code></pre></figure>
+    </div>
+
+4. Install dependencies with Composer:
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-install">Copy</button>
+      <figure><pre id="composer-install"><code class="command bash" data-lang="bash">composer install</code></pre></figure>
+    </div>
+
+5. Export local environment variables to define your site name and Multidev environment to easily copy and paste example commands in the next sections (replace `pantheon-d8-composer-project`):
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#export-var1">Copy</button>
+      <figure><pre id="export-var1"><code class="command bash" data-lang="bash">export SITE=pantheon-d8-composer-project
+      export ENV=pr-slogan</code></pre></figure>
+    </div>
 
 ## Install a Contrib Module
 1. Use Composer locally to add the [Pathauto](https://www.drupal.org/project/pathauto){.external} module as a dependency on the existing `slogan` branch:

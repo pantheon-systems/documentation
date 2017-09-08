@@ -1,6 +1,6 @@
 ---
 title: Build Tools
-subtitle: Behat Tests
+subtitle: Test Suite
 buildtools: true
 anchorid: behat
 generator: pagination
@@ -14,11 +14,21 @@ previousurl: guides/build-tools/custom-theme/
 nexturl: guides/build-tools/merge/
 editpath: build-tools/08-tests.md
 ---
-As you have already seen, the template project used to create your site included some basic [Behat](http://behat.org/en/latest/) tests that cover some of Drupal's basic capabilities. You can customize these tests or add more to suit your purposes. The file `code/tests/behat-pantheon.yml` controls where tests files are stored. By default, `code/tests/features` and `code/tests/site-features` are the defined search location, but you may add more directories if you would like to organize your tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run.
+The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. Drupal 8 uses  [Behat](http://behat.org/en/latest/){.external} and the WordPress example uses [WordHat](https://wordhat.info/){.external}.
 
-To confirm that your site's configuration has been applied to the test site, add a test to check that the site slogan is correct.
+The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/tests/behat-pantheon.yml){.external} sets the path for a project's collection of Behat tests.Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run on CircleCI.
 
-1.  Create the directory `code/tests/site-features` and create a new file inside it called `slogan.feature`. Add the following contents:
+## Extending the Example Test Suite
+The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/docs/guides/build-tools/new-pr/) has been applied to the associated Multidev environment:
+
+1. Create a new branch from master:
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-branch">Copy</button>
+      <figure><pre id="git-branch"><code class="command bash" data-lang="bash">  git checkout -b behat-new-features master</code></pre></figure>
+    </div>
+
+2.  Create the directory `tests/site-features` and add a new file called `slogan.feature` containing:
 
     ```bash
     Feature: Confirm that configuration was applied
@@ -31,9 +41,10 @@ To confirm that your site's configuration has been applied to the test site, add
         Given I am on "/"
         Then I should see "Making the world amazing"
     ```
-It's a relatively simple tasks to add new tests that exercise your site through its interface. For example, the figure below demonstrates testing that an administrator can create a new page on the site.
 
-2.  Create a new file called `content-ui.feature`, and save it in the `code/tests/site-features` folder. Give it the following contents:
+    It's a relatively simple tasks to add new tests that exercise your site through its interface. For example, the figure below demonstrates testing that an administrator can create a new page on the site.
+
+2.  Create a new file called `content-ui.feature` within the `tests/site-features` directory containing:
 
     ```bash
     Feature: Create Content through Drupal Content UI
@@ -51,10 +62,17 @@ It's a relatively simple tasks to add new tests that exercise your site through 
     ```
     By following this pattern, you can add similar tests to confirm that the most important features of your site remain functional. To save time on test runs, remove the example tests that cover basic Drupal features, and only run tests on your core functionality.
 
-3.  Upload your new tests over SFTP, and commit them on the multidev Site Dashboard.
+3.  Commit your new files to a feature branch and push to GitHub to create a new Pull Request for peer review:
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-push">Copy</button>
+      <figure><pre id="git-push"><code class="command bash" data-lang="bash">git add .
+      git commit -m "Add tests/site-features for content UI and slogan"
+      git push origin behat</code></pre></figure>
+    </div>
 
 ### Behat Test Artifacts
 
 If you create content through a Behat `And I press` phrase, it usually will not be automatically deleted when your test run is complete. Tests that execute custom or non-standard forms may create content that Behat does not know how to remove automatically, and tests that are validated by the existence of this content may show false positives on multiple runs, since the content was created previously.
 
-If you write these sorts of tests, consider writing tests to delete the content they create, to avoid many copies of the same test content from piling up in your multidev environment.
+If you write these sorts of tests, consider writing tests to delete the content they create, to avoid many copies of the same test content from piling up in your Multidev environment.

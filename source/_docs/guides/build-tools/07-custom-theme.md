@@ -14,17 +14,17 @@ nexturl: guides/build-tools/tests/
 previousurl: guides/build-tools/extend/
 editpath: build-tools/07-custom-theme.md
 ---
-This page demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik){.external} theme using the Terminus Drush Console plugin. For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming){.external} on drupal.org.
+This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik){.external} theme using the Terminus Drush Console plugin. For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming){.external} on drupal.org.
 
-1. Start by creating a new branch from your local and pushing it up to GitHub (`custom-theme`):
+1. Start by creating a new branch based off the tip of master, then push it up to GitHub (replace `custom-theme`):
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#git-branch">Copy</button>
-      <figure><pre id="git-branch"><code class="command bash" data-lang="bash">git checkout -b custom-theme
+      <figure><pre id="git-branch"><code class="command bash" data-lang="bash">git checkout -b custom-theme master
       git push origin custom-theme</code></pre></figure>
     </div>
 
-2. Wait for CircleCI to build a new Pantheon Multidev environment (`pr-custom-t`), then export environment variables to define your site name and Multidev environment to easily copy and paste example commands in the next sections (replace `pantheon-d8-composer-project`):
+2. Export local environment variables to define your site name and Multidev environment to easily copy and paste example commands in the next sections (replace `pantheon-d8-composer-project`):
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#export-var1">Copy</button>
@@ -33,7 +33,7 @@ This page demonstrates how to create a custom theme from the default [Bartik](ht
     </div>
 
 
-3. Use the `generate:theme` command as shown below to start the process of creating a subtheme:
+3. Wait for CircleCI to build a new Pantheon Multidev environment (`pr-custom-t`), then use the `generate:theme` command as shown below to start the process of creating a subtheme:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#drush-generate-theme">Copy</button>
@@ -67,7 +67,15 @@ This page demonstrates how to create a custom theme from the default [Bartik](ht
       <figure><pre id="terminus-commit-template"><code class="command bash" data-lang="bash">terminus env:commit $SITE.$ENV --message="Generate subtheme files [ci skip]"</code></pre></figure>
     </div>
 
-5. Run the following command to copy the `regions:` section of Bartik's default info file to your new custom theme's info file:
+5. Pull down your last commit from GitHub to your local:
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-pull">Copy</button>
+      <figure><pre id="git-pull"><code class="command bash" data-lang="bash">git pull origin custom-theme</code></pre></figure>
+    </div>
+
+
+6. Run the following command to copy the `regions:` section of Bartik's default info file to your new custom theme's info file:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#regions-copy">Copy</button>
@@ -105,8 +113,9 @@ This page demonstrates how to create a custom theme from the default [Bartik](ht
 10. Commit changes to your custom theme and push up to GitHub:
 
     <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#upload-all-custom-theme">Copy</button>
-      <figure><pre id="upload-all-custom-theme"><code class="sftp-command bash" data-lang="bash">put -r web/themes/custom/amazing_theme code/web/themes/custom</code></pre></figure>
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#commit-all-custom-theme">Copy</button>
+      <figure><pre id="commit-all-custom-theme"><code class="command bash" data-lang="bash">git commit -m="Create amazing theme css and library files"
+      git push origin origin custom-theme</code></pre></figure>
     </div>
 
 11. Once the build finishes from the last step, active your new theme and rebuild the cache:
