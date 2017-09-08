@@ -304,9 +304,9 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 <hr>
 
 ### [JetPack](https://wordpress.org/plugins/jetpack/)
-**Issue**: JetPack installs successsfully, but throws a 503 error. For details, see [https://github.com/Automattic/jetpack/issues/3546](https://github.com/Automattic/jetpack/issues/3546).
+**Issue**: JetPack installs successsfully, but throws a 503 error. For details, see [https://github.com/Automattic/jetpack/issues/3546](https://github.com/Automattic/jetpack/issues/3546). Happens for Jetpack versions earlier than 5.1
 
-**Solution**: Reload the page and you'll see that the plugin was activated successfully.
+**Solution**: Reload the page and you'll see that the plugin was activated successfully. Update Jetpack to version 5.1+ to avoid this permanently.
 <hr>
 
 ### [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
