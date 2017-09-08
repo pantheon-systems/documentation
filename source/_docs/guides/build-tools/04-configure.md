@@ -10,7 +10,7 @@ pagination:
 use:
     - buildtoolspages
 permalink: docs/guides/build-tools/configure/
-nexturl: guides/build-tools/update/
+nexturl: guides/build-tools/extend/
 previousurl: guides/build-tools/new-pr/
 editpath: build-tools/04-configure.md
 ---
