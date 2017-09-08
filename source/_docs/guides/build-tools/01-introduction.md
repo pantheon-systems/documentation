@@ -74,32 +74,6 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
 <p class="text-center" markdown="1">![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)</p>
 
-GitHub's master branch is automatically built and deployed to the Dev environment. Feature branches are automatically built and deployed to individual Multidev environments:
-
-<p class="text-center" markdown="1">![Continuous delivery diagram](/source/docs/assets/images/pr-workflow/github-circle-pantheon.png)</p>
-
-Whenever you commit changes from the Pantheon dashboard, the commit will be reduced to contain only those files that belong in the source repository, and this commit will be pushed back to the canonical repository on GitHub:
-
-<p class="text-center" markdown="1">![Sync commit from Pantheon to GitHub](/source/docs/assets/images/pr-workflow/pantheon-circle-github.png)</p>
-
-GitHub will then start a new CircleCI build, and the build results will once again be pushed to the existing Multidev environment that was created for this branch:
-
-<p class="text-center" markdown="1">![Sync commit from GitHub to Pantheon Multidev](/source/docs/assets/images/pr-workflow/github-circle-multidev.png)</p>
-
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-     <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-cd"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Continuous Delivery</h3></a>
-   </div>
-   <div id="understand-cd" class="collapse">
-     <div class="panel-inner" markdown="1">
-     Continuous delivery requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress. Anything that keeps your application from deploying code to production is considered a blocker.
-
-     Production code is tracked by the master branch on GitHub and it is assumed to be production ready. Development work is done on a feature branch first, then proposed to master in the form of a Pull Request so it can be tested and reviewed before it's accepted.
-    </div>
-   </div>
- </div>
-
-
 ## Before You Begin
 
 1. Install [Composer](https://getcomposer.org){.external}
