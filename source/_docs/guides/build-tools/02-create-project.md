@@ -70,7 +70,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
       [error]  Command `composer create-project --working-dir=/private/var/folders/lp/7_1gh83s5mn9lwfjvqqlf1lm0000gn/T/local-sitevPumRP pantheon-systems/example-wordpress-composer pantheon-wp-composer-project -n --stability dev` failed with exit code 1
       ```
 
-     This indicates a network level issue related to the security settings of your modem. We recommend contacting your Internet Service Provider (ISP) and asking them to change the modem's security mode to TKIP/AES. Additionally, you can help mitigate network issues by using a non-standard channel with less activity/noise.
+     This indicates a network level issue. We recommend contacting your Internet Service Provider (ISP) for support. One way to reduce connection woes is to use a non-standard channel with less activity/noise on wireless modems.
 
      ### Your requirements could not be resolved to an installable set of packages
      Check the output for the recommended fix. For example, PHP 7.0 is required for WordPress. Once you have resolved the issues as suggested by Composer try the command again.
