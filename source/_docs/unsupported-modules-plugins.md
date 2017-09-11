@@ -393,7 +393,7 @@ if (defined( "PANTHEON_BINDING" )) {
 <hr>
 
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
-**Issue #1**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
+**Issue**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
 
