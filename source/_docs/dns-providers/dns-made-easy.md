@@ -14,6 +14,14 @@ Be sure that you have a:
 - [Paid Pantheon plan](/docs/guides/launch/plans/)
 - [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
+## Locate Pantheon's DNS Values
+Identify DNS values to point your domain to Pantheon:
+
+1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
+2. Click the **Details** button next to your domain.
+
+Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmadeeasy.com/){.external} in a new tab before you continue.
+
 ## Configure DNS Records on DNS Made Easy
 ### A Record
 1. Click **DNS** in the menu bar and select the domain you wish to configure.
