@@ -11,7 +11,7 @@ image: terminus-thumbLarge
 ---
 <div class="alert alert-info" markdown="1">
 <h4 class="info">Note</h4>
-If you would like addition information for a given command (e.g., available `--fields` or `--format` options) run the command with the `--help` option in your terminal.
+If you would like additional information for a given command (e.g., available `--fields` or `--format` options) run the command with the `--help` option in your terminal.
 </div>
 
 <!--Note: The contents of the command reference table cannot be edited in the docs project. This table is automatically generated using Terminus (terminus list --format=json). Submit feedback and report issues related to the contents of this table on the Terminus repo: https://github.com/pantheon-systems/terminus/issues -->
