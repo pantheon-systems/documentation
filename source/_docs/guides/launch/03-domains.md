@@ -29,7 +29,7 @@ In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live e
 
 ## Existing Sites
 ### Avoid HTTPS Interruption
-Sites that already have HTTPS working can  pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
+Sites that already have HTTPS working can pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
@@ -69,3 +69,5 @@ When a certificate is ready you can switch DNS destinations from your existing s
   7. When you finish testing, remove the edits made to your hosts file.
   </div>
 </div>
+### Maintenance Window
+If you are unable to prove domain ownership, you will not be able to pre-provision HTTPS to prevent service interruption. In these cases, we recommend completing the next section ([Configure DNS](/docs/guides/launch/configure-dns/)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.
