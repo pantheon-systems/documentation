@@ -41,6 +41,12 @@ Sites that already have HTTPS working can pre-provision certificates and avoid H
 3. Select **Details** next to the bare domain.
 4. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**.
 5. Serve the file from your existing live site. Drupal 7 users can use the [Lets Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge) module to easily serve the contents of the challenge file.
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdown="1">The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.</p>
+    </div>
+
 6. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 
 After verifying domain ownership, your domain's HTTPS certificate(s) will automatically begin generating and be deployed to Pantheon’s Global CDN within an hour.
