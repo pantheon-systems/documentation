@@ -18,8 +18,8 @@ Be sure that you have a:
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
 
-1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-home"></span> Domains & HTTPS**.
-2. Click the **DNS Recommendations** button next to your domain.
+1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
+2. Click the **Details** button next to your domain.
 
 Keep this page open and login to your <a href="https://www.namecheap.com/myaccount/login.aspx" target="blank">Namecheap account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
 
