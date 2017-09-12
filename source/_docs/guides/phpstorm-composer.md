@@ -6,7 +6,7 @@ permalink: docs/guides/:basename/
 tags: [siteintegrations]
 contributors: [LukasRos, rachelwhitton]
 ---
-[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/){.external} is a commercial PHP IDE that you can configure to work with your Pantheon sites. This guide explains how to use the [Composer integration](https://confluence.jetbrains.com/display/PhpStorm/Composer+Support+in+PhpStorm){.external} integration of JetBrains PhpStrom to install Drupal 8 dependencies.
+[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/){.external} is a commercial PHP IDE that you can configure to work with your Pantheon sites. This guide explains how to use the [Composer integration](https://confluence.jetbrains.com/display/PhpStorm/Composer+Support+in+PhpStorm){.external} of JetBrains PhpStrom to install Drupal 8 dependencies.
 
 ## Before You Begin
 Be sure that you:
