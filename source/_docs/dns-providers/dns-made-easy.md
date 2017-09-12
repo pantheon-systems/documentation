@@ -50,7 +50,7 @@ Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmade
 The CNAME record is required if you wish to include `www` within your site's primary domain name.
 
 1. Within the **CNAME** table, click <span class="glyphicon glyphicon-plus"></span> to add a new record.
-2. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon in the **Domain name** field followed by a trailing dot (e.g. `live-example.pantheonsite.io.`)
+2. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon in the **Domain name** field **followed by a trailing dot** (e.g. `live-example.pantheonsite.io.`)
 3. Select desired Time to Live (TTL).
 4. Click **Submit**:
 
