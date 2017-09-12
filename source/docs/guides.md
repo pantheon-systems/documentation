@@ -95,7 +95,7 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
     </a>
   </div>
   <div class="flex-panel-item-platform-integrations-guides">
-    <a href="/docs/drupal-phpstorm-composer/">
+    <a href="/docs/guides/phpstorm-composer/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
           <img alt="PHPStorm" src="/source/docs/assets/images/logos/phpstorm.png" class="main-topic-info__plugin-image" >
