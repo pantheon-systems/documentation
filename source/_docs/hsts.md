@@ -84,7 +84,7 @@ Once you've enabled the module or plugin, you should immediately configure the `
   <dd>The time, in seconds, that the browser should remember that this site is only to be accessed using HTTPS.</dd>
   <dt>includeSubDomains</dt>
   <dd>Optional, but usually advisable. If this optional parameter is specified, this HSTS rule applies to all of your site's subdomains as well.</dd>
-  <dt><code>preload</code></dt>
+  <dt>preload</dt>
   <dd>Optional, Not part of the specification. A list of domains that get Strict Transport Security enabled automatically, baked into the browser.</dd>
 </dl>
 
