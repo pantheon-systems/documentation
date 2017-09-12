@@ -25,7 +25,10 @@ Download the module via Terminus Drush
 
 And then Enable the site
 
-```terminus drush <site-name>.<env> -- en clamav -y```
+```
+terminus drush <site-name>.<env> -- en clamav -y
+terminus drush <site-name>.<env> -- vset clamav_mode 1
+```
 
 
 ### [Upload Scanner for WordPress](https://wordpress.org/plugins/upload-scanner) ###
