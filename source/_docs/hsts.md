@@ -5,14 +5,10 @@ tags: [security]
 ---
 After you have required HTTPS for all pages by adding the [necessary redirect](/docs/domains/#redirect-to-https-and-the-primary-domain), set the HTTP Strict Transport Security (HSTS) header to standardize all client connections on HTTPS and prevent use of HTTP.
 
-## What is HSTS?
-
+## Configure HSTS Headers
 The HTTP Strict-Transport-Security response header (often abbreviated as **HSTS**) is a website security feature that tells browsers to only communicate using HTTPS, instead of HTTP.
 
-Not only does this header help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/), it will help protect your website against protocol downgrade attacks and cookie hijacking.
-
-## Install HSTS for Your CMS
-
+Not only does this header help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/){.external}, it will help protect your website against protocol downgrade attacks and cookie hijacking.
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <!-- Active tab -->
@@ -28,7 +24,7 @@ Not only does this header help you get an A+ SSL rating from [SSL Labs](https://
 
 <!-- Active pane content -->
 <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/docs/terminus):
+Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/){.external} plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/docs/terminus/):
 
 ```bash
 terminus remote:wp <site>.<env> -- plugin install lh-hsts --activate
@@ -43,7 +39,7 @@ Strict-Transport-Security: max-age=15984000; includeSubDomains; preload
 
 <!-- 2nd pane content -->
 <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
-1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-modules) or with [Terminus](/docs/terminus):
+1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts){.external} module using the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-modules){.external} or with [Terminus](/docs/terminus/):
 
     ```bash
     terminus remote:drush <site>.<env> -- pm-enable hsts --yes
@@ -61,7 +57,7 @@ strict-transport-security: max-age=31536000
 
 <!-- 3rd pane content -->
 <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
-1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/7/extending-drupal/installing-modules) or with [Terminus](/docs/terminus):
+1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts){.external} module using the [Drupal interface](https://www.drupal.org/docs/7/extending-drupal/installing-modules){.external} or with [Terminus](/docs/terminus):
 
   ```bash
   terminus remote:drush <site>.<env> -- pm-enable hsts --yes
@@ -81,26 +77,25 @@ strict-transport-security: max-age=15552000
 
 
 ## Configure Attributes
+Once you've enabled the module or plugin, you should immediately configure the `strict-transport-security` header attributes as appropriate for your site. There are three attributes to configure for the strict-transport-security header:
 
-Once you've enabled the module or plugin, you should immediately configure the strict-transport-security header attributes as are best for your site.
+<dl>
+  <dt>max-age=&lt;expire-time&gt;</dt>
+  <dd>The time, in seconds, that the browser should remember that this site is only to be accessed using HTTPS.</dd>
+  <dt>includeSubDomains</dt>
+  <dd>Optional, but usually advisable. If this optional parameter is specified, this HSTS rule applies to all of your site's subdomains as well.</dd>
+  <dt><code>preload</code></dt>
+  <dd>Optional, Not part of the specification. A list of domains that get Strict Transport Security enabled automatically, baked into the browser.</dd>
+</dl>
 
-There are three attributes to configure for the strict-transport-security header:
+How you configure or include these attributes raises the rigor of the security that your HSTS effort provides. As an example, this is the `strict-transport-security` header as used by `whitehouse.gov`:
 
- - `max-age=<expire-time>`: The time, in seconds, that the browser should remember that this site is only to be accessed using HTTPS.
-
-
- - `includeSubDomains`: Optional, but usually advisable. If this optional parameter is specified, this HSTS rule applies to all of your site's subdomains as well.
-
-
- - `preload`: Optional, Not part of the specification. The Chrome browser security team created an “HSTS preload list”: a list of domains baked into Chrome that get Strict Transport Security enabled automatically, even for the first visit. Firefox, Safari, Opera, and Edge also incorporate Chrome’s HSTS preload list, making this feature shared across major browsers.
-
-How you configure or include these attributes raises the rigor of the security that your HSTS effort provides. As an example, this is the strict-transport-security header as used by `whitehouse.gov`:
-
-`Strict-Transport-Security: max-age=31536000;includeSubdomains;preload`
+```http
+Strict-Transport-Security: max-age=31536000;includeSubdomains;preload
+```
 
 ## See Also
-
 For additional details on this header, see:
 
- - [HTTP Strict Transport Security Cheat Sheet](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet)
- - [The CIO Council](https://https.cio.gov/hsts/) overview on HSTS.
+ - [HTTP Strict Transport Security Cheat Sheet](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet){.external}
+ - [The CIO Council](https://https.cio.gov/hsts/){.external} overview on HSTS.
