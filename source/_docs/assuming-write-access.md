@@ -8,13 +8,13 @@ Some modules and plugins create files within hard-coded paths outside of the sta
 
 The best solution is to communicate with the maintainer of the module or plugin and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround to avoid failures on Test and Live.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">The instructions for creating a symlink are supported on Mac and Linux machines only. Windows users may follow Microsoft documentation for [creating symlinks using mklink /j](https://technet.microsoft.com/en-us/library/cc753194.aspx) or create symlinks within a virtual machine.</p>
-</div>
 ## Create a Symbolic Link
 
 1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/docs/git/#install-git) and [clone the code](/docs/git/#clone-your-site-codebase) locally if you have not done so already.
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4><p markdown="1">We do not recommend creating symlinks over SFTP due to inconsistencies amongst clients. The following is for Mac and Linux only. Windows users may refer to Microsoft documentation for [creating symlinks using mklink /j](https://technet.microsoft.com/en-us/library/cc753194.aspx){.external} or create symlinks within a virtual machine.</p></div>
+
 2. From your terminal, `cd` to the site code repository, and create a symlink for the standard files path:
 
  ```bash
