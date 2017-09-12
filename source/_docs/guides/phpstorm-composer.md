@@ -33,7 +33,7 @@ Be sure that you:
 5. Reply **Yes** when PhpStorm asks whether you want to open the project.
 
 ## Initialize Composer
-1. After opening the project, check the event log by clicking the message icon from the lower left side of the window. Click **Initialize**:
+1. After opening the project, check the event log by clicking the message icon from the lower right side of the window. Click **Initialize**:
 
   ![Composer init PhpStorm](/source/docs/assets/images/integrations/phpstorm/initcomposer-popup.png)
 
