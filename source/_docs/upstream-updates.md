@@ -168,7 +168,11 @@ There are multiple reasons that 503 errors might occur when updating:
 
 
 ### Process to Resolve Conflicts Locally responds with 'Already-up-to-date'
-If you know your site's core codebase does not match Pantheon's upstream, and attempts to resolve it locally do not work because your site repository is seen as up-to-date, you may need to manually overwrite core files. We only recommend this method as an absolute last resort.
+If you know your site's core codebase does not match Pantheon's upstream, and attempts to resolve it locally do not work because your site repository is seen as up-to-date, you may need to manually overwrite core files. We only recommend this method as an absolute last resort. A common reason to end up in this state is that core updates have been merged, but a revert commit has been applied on top of the core updates, causing Git to believe all updates have been applied when the code does not actually match. This happens because the dashboard is only checking for the inclusions of commits in the history that match the upstream.
+
+<div class="alert alert-danger" role="alert">
+    This process is destructive. Any core patches applied will be removed when overwriting core with our upstreams. This is normally not an issue, but if the site includes core patches, they will need to be re-applied.
+</div>
 
 1. Download an archive of the Pantheon upstream:
 
@@ -192,9 +196,11 @@ If you know your site's core codebase does not match Pantheon's upstream, and at
     * Drupal 8: `/sites` and `/modules`
     * Drupal 7: `/sites`
 
-5. Stage, commit, and push your changes to Pantheon:
+5. Review changes using `git diff`. Core patches may need to be re-applied. This will also reveal what changes were previously missing.
+
+6. Stage, commit, and push your changes to Pantheon:
 
         git commit -am "Replace core files with Pantheon upstream"
         git push origin updates
 
-6. Test changes on a Multidev environment and [merge the update](/docs/multidev/#merge-code) branch into the Dev environment, then deploy up to Test and Live.
+7. If multidev is available, test changes on a Multidev environment and [merge the update](/docs/multidev/#merge-code) branch into the Dev environment, then deploy up to Test and Live.
