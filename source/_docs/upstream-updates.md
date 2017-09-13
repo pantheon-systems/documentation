@@ -167,28 +167,21 @@ There are multiple reasons that 503 errors might occur when updating:
 - Timeouts are another cause of 503 errors, though they are much less likely to occur if you are using the Pantheon domains. If the operation takes more than 60 seconds, you might see a timeout occur.
 
 
-### Process to Resolve Conflicts Locally responds with 'Already-up-to-date'
-If you know your site's core codebase does not match Pantheon's upstream, and attempts to resolve it locally do not work because your site repository is seen as up-to-date, you may need to manually overwrite core files. We only recommend this method as an *absolute last* resort. A common reason to end up in this state is that core updates have been merged, but a revert commit has been applied on top of the core updates, causing Git to believe all updates have been applied when the code does not actually match. This happens because the dashboard is only checking for the inclusions of commits in the history that match the upstream.
+### Attempts to Resolve Conflicts Respond with 'Already-up-to-date'
+If you know your site's core codebase does not match Pantheon's upstream, and attempts to resolve it locally do not work because your site repository is seen as up-to-date, you may need to manually overwrite core files.
+
+We only recommend this method as an *absolute last* resort. A common reason to end up in this state is that core updates have been merged, but a revert commit has been applied on top of the core updates, causing Git to believe all updates have been applied when the code does not actually match. This happens because the Dashboard is only checking for the inclusions of commits in the history that match the upstream.
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p markdown="1">
-    This process is destructive. Any core patches applied will be removed when overwriting core with our upstreams. This is normally not an issue, but if the site includes core patches, they will need to be re-applied.
-</p>
+<p markdown="1">This process is destructive. Any custom code will be removed when overwriting core with our upstreams. This is normally not an issue, but if the site includes core patches, they will need to be re-applied.</p>
 </div>
-
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#user-dashboard-tour"><h4 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> I'm aware of the risks, and want to procceed.</h3></a>
-  </div>
-<div id="user-dashboard-tour" class="collapse">
-<div class="panel-inner" markdown="1">
 
 1. Download an archive of the Pantheon upstream:
 
     * <a href="https://github.com/pantheon-systems/WordPress/archive/master.zip">WordPress <span class="glyphicons glyphicons-download-alt"></span></a>
     * <a href="https://github.com/pantheon-systems/drops-8/archive/master.zip">Drupal 8 <span class="glyphicons glyphicons-download-alt"></span></a>
-    * <a href="https://github.com/pantheon-systems/drops-7/archive/master.zip)">Drupal 7 <span class="glyphicons glyphicons-download-alt"></span></a>
+    * <a href="https://github.com/pantheon-systems/drops-7/archive/master.zip">Drupal 7 <span class="glyphicons glyphicons-download-alt"></span></a>
 
 2. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) using [Terminus](/docs/terminus) (replace `<site>`):
 
@@ -214,7 +207,3 @@ If you know your site's core codebase does not match Pantheon's upstream, and at
         git push origin updates
 
 7. If multidev is available, test changes on a Multidev environment and [merge the update](/docs/multidev/#merge-code) branch into the Dev environment, then deploy up to Test and Live.
-
-</div>
-</div>
-</div>
