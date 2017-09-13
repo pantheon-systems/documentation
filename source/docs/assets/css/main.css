@@ -271,10 +271,6 @@ h4.info > a.external[href]::after {
   margin-bottom: 20px;
 }
 .article a {
-<<<<<<< HEAD
-=======
-  text-decoration: none;
->>>>>>> Copy edit and css tweak for download icon
   color: #0093c9;
 }
 .changelog-sidebar a {
