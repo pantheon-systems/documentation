@@ -60,7 +60,7 @@ Some modules and plugins verify that the target directory exists using `is_dir()
 If a symlinked folder doesn't show the proper contents, doublecheck that the path is correct. In Bash, `ls -l` will show symlinks paths:
 
 ```shell
-user@hostname:~/projects/myawesomesite/wp-content/uploads$ ls -l
+$ ls -l
 
 lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/images/
 ```
