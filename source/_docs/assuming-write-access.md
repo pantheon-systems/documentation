@@ -24,6 +24,13 @@ The best solution is to communicate with the maintainer of the module or plugin 
  git add .
  ```
 
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdown="1">
+    The `ln` command is sensitive to the **working directory**, the folder your prompt is currently sitting in. The example above assumes you're in the main directory of your local git repository.
+    </p>
+    </div>
+
 3. Run `git status` to review your current index.
 4. Commit your changes:
 
@@ -43,7 +50,22 @@ The best solution is to communicate with the maintainer of the module or plugin 
 7. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
 ## Troubleshooting
+
+### Modules That Verify Directories
+
 Some modules and plugins verify that the target directory exists using `is_dir()` which returns bool(false) if the directory is a symlink. It may help to patch the module/plugin to use `is_link()` instead of `is_dir()`.
 
-## See Also		
-For more details on creating symbolic links on Mac/Linux, see [this thread](https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).		
+### Incorrect Symlink Paths
+
+If a symlinked folder doesn't show the proper contents, doublecheck that the path is correct. In Bash, `ls -l` will show symlinks paths:
+
+```shell
+user@hostname:~/projects/myawesomesite/wp-content/uploads$ ls -l
+
+lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/images/
+```
+
+Try changing the working directory in which you create the symlink, using `../` to refer to directories above the working directory, and `./` to refer to the currect directory.
+
+## See Also
+For more details on creating symbolic links on Mac/Linux, see [this thread](https://apple.stackexchange.com/questions/115646/how-can-i-create-a-symbolic-link-in-terminal).
