@@ -3,6 +3,10 @@ title: Style Guide
 description: Formatting rules and guidelines for Pantheon's open-source documentation.
 contributors: [alexfornuto, rachelwhitton]
 ---
+
+All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide){.external}. This document serves to define and detail the style conventions used in Pantheon's DocumentationDefinition
+
+
 ## Content Types
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are generally paginated and designed to walk the reader through a specific concept or task.
 
@@ -173,7 +177,7 @@ Use relative paths when linking to other pages of the docs site.
 
 ## Code
 ### Inline
-Used for file names, variables, commands, and such that are inline within paragraphs:
+Used for file names, variables, commands, and output, inline within paragraphs:
 
 <div class="style-example" markdown="1">
 Inline code styling using backticks, like `$EXAMPLE`.
@@ -240,7 +244,7 @@ There are two types of callouts used in our docs, notes and warnings:
   <h4 class="info">Note</h4>
   <p markdown="1">Notes should identify important pieces of information the reader shouldn't miss.</p>
 </div>
-<hr class="source-code">    
+<hr class="source-code">
 ```html
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
@@ -255,7 +259,7 @@ There are two types of callouts used in our docs, notes and warnings:
   <h4 class="info">Warning</h4>
   <p markdown="1">Warnings cover information critical to the reader, and highlight potential dangers, especially those that can cause data loss.</p>
 </div>
-<hr class="source-code">    
+<hr class="source-code">
 ```html
 <div class="alert alert-danger" role="alert">
   <h4 class="info">Warning</h4>
@@ -315,7 +319,7 @@ When working on a document that will cover steps for multiple CMSs, use tabs whe
     ```
     </div>
 </div>
-<hr class="source-code">    
+<hr class="source-code">
 ```html
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
@@ -392,7 +396,7 @@ Terminal screenshots should only be used to demonstrate intended output:
 </div>
 
 ## Panels
-Use panels for extraneous but useful information such as troubleshooting sections or pro tips that would be distracting or can be skipped over by a large portion of readers. This is primarily used in an effort to promote readability of a page. Well, and videos.
+Use panels for extraneous but useful information such as troubleshooting sections or pro tips that would be distracting or can be skipped over by a large portion of readers. This is primarily used in an effort to promote readability of a page.
 
 <div class="style-example" markdown="1">
 <div class="panel panel-drop panel-guide" id="accordion">
@@ -407,7 +411,7 @@ Use panels for extraneous but useful information such as troubleshooting section
   Note that the info class is required to keep the content header out of the table of contents.
   </div>
 </div>
-<hr class="source-code">    
+<hr class="source-code">
 ```html
 <div class="panel panel-drop panel-guide" id="accordion">
   <div class="panel-heading panel-drop-heading">
@@ -432,7 +436,7 @@ End with some links to related docs or external resources concerning logical nex
 ## See Also {.info}
 - [An internal link](/docs/guides/)
 - [An external link](https://pantheon.io/blog/){.external}
-<hr class="source-code">    
+<hr class="source-code">
 ```markdown
 ## See Also
 - [An internal link](/docs/guides/)
