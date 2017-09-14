@@ -232,6 +232,8 @@ Additionally, you can manually trigger a full Pantheon backup job for any site e
 ```bash
 terminus backup:get <site>.<env> --file=<filename> --element=<element>
 ```
+See also [Backup and Migrate as unsupported](https://pantheon.io/docs/unsupported-modules-plugins/#backup-and-migrate)
+
 ### What Can I Do During Backups?
 
 From the Backup Log tab on the Site Dashboard, you can see the status of currently running backups for your code, database, and files:
