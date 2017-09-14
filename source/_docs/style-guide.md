@@ -155,10 +155,10 @@ Do not specify a target tab or window for external, or any other links, leaving 
 #### Internal Links
 Use relative paths when linking to other pages of the docs site.
 <div class="style-example" markdown="1">
-[Quick Start](/docs/guides/quick-start/)
+[Quick Start](/docs/guides/quickstart/)
 <hr class="source-code">
 ```markdown
-[Quick Start](/docs/guides/quick-start/)
+[Quick Start](/docs/guides/quickstart/)
 ```
 </div>
 
