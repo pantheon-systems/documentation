@@ -38,7 +38,7 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 ### [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
 **Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/docs/backups/#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
-**Solution**: You can use the automated backups that are available on the Dashboard for each environment. If you want to access your backups and copy it to your own repository (Amazon S3, FTP server, etc), consider using a bash script. You can do that by running it in your local system, or use an external server, or a service that runs cron jobs for you. See [Access Backups](/docs/backups/#access-backups).
+**Solution**: You can use the automated backups that are available on the Dashboard for each environment. If you want to access your backups and copy it to your own repository (Amazon S3, FTP server, etc), consider using a bash script. You can do that by running it in your local system, or use an external server, or a service that runs cron jobs for you. See [Access Backups](/docs/backups/#access-backups) for more details.
 
 <hr>
 ### [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
