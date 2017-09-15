@@ -149,7 +149,7 @@ If something didn't work and you'd like to start over, you can cancel the site m
 ## Frequently Asked Questions (FAQs)
 
 #### How do I migrate a local site to Pantheon?
-You can import a WordPress or Drupal site archive via URL (within file size limits) using [Terminus](/docs/terminus):
+You can import a WordPress or Drupal site archive via URL (within file size limits) by uploading the archive to a web-accessible location (like DropBox or Google Drive), and using [Terminus](/docs/terminus):
 
 ```bash
 terminus site:import <site> <url>
