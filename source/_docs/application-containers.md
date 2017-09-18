@@ -26,7 +26,7 @@ Attempts to remotely access services, such as MySQL or SFTP connections, will fa
 - All environments contain a (PHP-FPM) and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/docs/phpinfo).
   - Packages: LDAP, SOAP, GD, Mcrypt, MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
   - Extensions: APC, New Relic PHP agent, OAuth, Redis
-  - [short\_open\_tag](https://secure.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support `<? ?>` syntax; use `<?php />` instead)
+  - [short\_open\_tag](https://secure.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support `<? ?>` syntax; use `<?php ?>` instead)
   - Maximum PHP execution time and other timeouts can be configured as noted in [Timeouts on Pantheon](/docs/timeouts/).
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB. This cannot be changed.
   - WordPress migrations via `wp-cli` may require [changing the WP_MAX_MEMORY_LIMIT constant](https://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP).
