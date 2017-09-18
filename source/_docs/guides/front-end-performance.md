@@ -56,7 +56,7 @@ Other important headers include:
 #### Checking for Common Cache Busters
 Not every from Drupal or WordPress response will be cacheable. Here are some of the reasons you may find your pages aren't caching.
 
-- Cookies! Especially in WordPress it is common for plugins to add their own cookies in such a way that breaks full page caching. [Check that any cookies used by your site will play well with Varnish.](/docs/caching-advanced-topics/#pantheons-varnish-cookie-handling) The cookies your site sends are included in the response headers we looked at above.
+- Cookies! Especially in WordPress it is common for plugins to add their own cookies in such a way that breaks full page caching. <a href="/docs/caching-advanced-topics/#pantheons-varnish-cookie-handling" data-proofer-ignore>Check that any cookies used by your site will play well with Varnish.</a> The cookies your site sends are included in the response headers we looked at above.
 - Authenticated traffic. The session cookie of a logged in user causes bypassing of the full page cache.
 - Mistakes in custom code. Developers new to the Drupal 8 caching API sometimes reach a point of frustration and just do something like this: `$form['#cache'] = ['max-age' => 0];` A developer might add a snippet of code like that to disable caching for one block and not realized they've disabled caching for the whole page. See the [Drupal documentation](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays){.external} for more details. You can search your custom code for "#cache" to find places where you've interacted with the Cache API.
 - Forgetting.
@@ -70,7 +70,7 @@ Not every from Drupal or WordPress response will be cacheable. Here are some of 
 ### Speeding up Drupal and WordPress
 When you are bypassing the Global CDN and talking straight you Drupal and WordPress there are a number of tools available to make sure your responses are fast.
 
-- PHP7: Drupal and WordPress run significantly faster on PHP7 compared to PHP5. [Switching version on Pantheon is easy.](/docs/php-version/)
+- PHP7: Drupal and WordPress run significantly faster on PHP7 compared to PHP5. [Switching version on Pantheon is easy.](/docs/php-versions/)
 - Sites loading a lot of content can benefit from an object cache like Redis. Adding Redis is easy with both [Drupal](/docs/drupal-redis/) and [WordPress](/docs/wordpress-redis/).
 - [New Relic](/docs/new-relic/) a tool for monitoring performance and finding slow spots is included on every Pantheon site. Use it when your site is not sending uncached pages fast enough.
 - There are toolbars for both [Drupal](https://www.drupal.org/project/devel){.external} and [WordPress](https://wordpress.org/plugins/debug-bar/){.external} that provide stats like the number of queries, amount of memory, and response time. These can be helpful for real time debugging.
