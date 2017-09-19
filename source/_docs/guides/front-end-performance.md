@@ -269,3 +269,22 @@ You'll also want to explore minimizing HTML output from Drupal and WordPress.
 Many of us have a build step, for tasks like compiling Sass, as part of our development workflow. Adding a minification step when generating resources is easy. For CSS use [CSSNano](https://github.com/ben-eb/cssnano){.external} and for JavaScript use [UglifyJS](https://github.com/mishoo/UglifyJS2){.external} or [Closure Compiler](https://developers.google.com/closure/compiler/){.external}.
 
 These can be used with common build tools, such as [Grunt](https://gruntjs.com/){.external} or [gulp](https://gulpjs.com/){.external}, or a GUI tool like [CodeKit](https://codekitapp.com/){.external}. No matter how you do it you should be minifying your resources (HTML, CSS and JavaScript) for every site.
+
+## Leverage Browser Caching
+While a CDN can bring resources closer to the browser, there's no faster cache than the one in the browser itself. But, unlike a CDN, it's not possible to directly invalidate browser caches, so we use some techniques that get the same effect.
+
+Here are some ways to maximize use of browser caching:
+
+- Use externally hosted Javascript libraries and fonts. While some speed tests will show this as taking
+  extra time, a real-world browser is likely to have major libraries and fonts already cached.
+- Disable CSS and Javascript aggregation. With HTTP/2 and compression (both built into Global CDN),
+  these provide limited benefits and harm browser cache hit rates by creating overlapping aggregated files.
+  This causes the browser to download the same content multiple times via each aggregated group.
+- Deliver static files with long cache lifetimes (via Cache-Control headers). Pantheon automatically uses a one-year lifetime.
+- Include static files with [cache-busting query strings](https://stackoverflow.com/a/9692722).
+  This prevents the long Cache-Control lifetime for static files from breaking pages when the CSS and Javascript change.
+  [Drupal automatically does this for CSS and Javascript](https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module),
+  and [WordPress provides a parameter for a version when enqueuing CSS and Javascript](https://wordimpress.com/wordpress-css-and-js-cache-busting/).
+- For files included in pages without cache-busting query strings (like images), it's better to upload a new file (and delete the old one) instead of replacing the existing file.
+  The new filename will cause clients to get the new file, even if they have a cached version of the older one
+  (which is likely given the one-year cache lifetimes for static files on Pantheon).
