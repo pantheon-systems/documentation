@@ -117,6 +117,128 @@ Your main options for smushing are:
 - Smuch elsewhere in the cloud: Use a plugin or module for sending images for your size to a 3rd party smusher and bringing them back.
 - Smushing at the CDN level: The Pantheon Global CDN does not yet offer this service but if you have stacked your own CDN configuration in front of the Pantheon CDN, you might have this service available to you.
 
+## Remove Render-Blocking JavaScript and CSS
+This rule is triggered when stylesheets or scripts are loaded before content is rendered above-the-fold. These occurrences are flagged because it means the site is spending unnecessary time loading resources for the entire page while only a portion is needed.
+
+### Inline Critical Styles and Defer Stylesheets
+Stylesheets requested during page load block content rendering while a CSS Object Model (CCSOM) is created. The best way to remedy render-blocking CSS is to identify critical styles for your above-the-fold content using a tool like [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/){.external}.
+
+Once you know what critical styles are needed, they should be applied inline within the `<head>` tag. Then you can safely defer the stylesheet to be applied after page load, either somewhere in the `<footer>` tag or just before the closing `</body>` tag.
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress Plugin</a></li>
+
+  <!-- 2nd Tab Nav -->
+  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal Module</a></li>
+
+  <!-- 3nd Tab Nav -->
+  <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Manually Defer</a></li>
+
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+Use the [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} plugin and the following configuration in your site's `wp-config.php` file:
+
+
+```php
+define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
+```
+
+The following blog post walks through how to use results from the [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/){.external} with the Autoptimize plugin so that you have inline critical styles with a deferred stylesheet: [How to Use the Autoptimize “Inline and Defer CSS” Option](https://www.wpfaster.org/blog/how-to-use-autoptimize-inline-and-defer-css-option){.external}
+  </div>
+
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+Drupal sites can use the [AdvAgg](https://www.drupal.org/project/advagg){.external} contrib module, however we're still exploring preferred configurations. PR's to this page are most welcomed. Check out the [Drupal 8 docs](https://www.drupal.org/docs/8/modules/advanced-cssjs-aggregation/advanced-aggregates){.external} for more information.
+  </div>
+
+  <!-- 3rd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+Use an inline script in the `<body>` tag, similar to the following in order to defer local or external stylesheets alike (replace `gaanalytics` and `//www.google-analytics.com/analytics.js` appropriately):
+
+```javascript
+<script type="text/javascript">
+  function deferStylesAtOnload() {
+    var link = document.createElement("link");
+    link.rel  = 'stylesheet';
+    link.type = 'text/css';
+    link.href = '/stylesheet.css';
+    link.media = 'all';
+    document.body.appendChild(link);
+  }
+  if (window.addEventListener)
+    window.addEventListener("load", deferStylesAtOnload, false);
+  else if (window.attachEvent)
+    window.attachEvent("onload", deferStylesAtOnload);
+  else window.onload = deferStylesAtOnload;
+</script>
+```
+  </div>
+</div>
+
+### Defer All JavaScript
+For JavaScript, we suggest deferring everything as a first pass. Whatever script cannot be deferred should be loaded asynchronously so the page rendering continues without interruption.
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-1-ids2" role="presentation" class="active"><a href="#tab-1-anchor2" aria-controls="tab-1-anchor2" role="tab" data-toggle="tab">WordPress Plugin</a></li>
+
+  <!-- 2nd Tab Nav -->
+  <li id="tab-2-ids2" role="presentation"><a href="#tab-2-anchor2" aria-controls="tab-2-anchor2" role="tab" data-toggle="tab">Drupal Module</a></li>
+
+  <!-- 3nd Tab Nav -->
+  <li id="tab-3-id2" role="presentation"><a href="#tab-3-anchor2" aria-controls="tab-3-anchor2" role="tab" data-toggle="tab">Manually Defer</a></li>
+
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor2" markdown="1">
+    Install the [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} plugin as described in the previous section. Go to `/wp-admin/options-general.php?page=autoptimize` and put a check next to **Optimize JavaScript Code?**
+
+    Enabling this setting will automatically defer JavaScript resources. For more information, see the [Plugin's FAQ](https://wordpress.org/plugins/autoptimize/#faq){.external}.
+  </div>
+
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-2-anchor2" markdown="1">
+    Drupal sites can use the [AdvAgg](https://www.drupal.org/project/advagg){.external} contrib module and the [Advanced Aggregates Modifier](https://www.drupal.org/docs/8/modules/advanced-cssjs-aggregation/advanced-aggregates-modifier){.external} submodule, however we're still exploring preferred configurations. PR's to this page are most welcomed. Check out the [Drupal 8 docs](https://www.drupal.org/docs/8/modules/advanced-cssjs-aggregation/advanced-aggregates){.external} for more information.
+  </div>
+
+  <!-- 3rd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-3-anchor2" markdown="1">
+Use an inline script in the `<body>` tag, similar to the following in order to defer scripts (replace `gaanalytics` and `//www.google-analytics.com/analytics.js` appropriately):
+
+```javascript
+<script type="text/javascript">
+  function deferJSAtOnload() {
+    var gaanalytics = document.createElement("script");
+    gaanalytics.src = "//www.google-analytics.com/analytics.js";
+    document.body.appendChild(gaanalytics);
+  }
+  if (window.addEventListener)
+    window.addEventListener("load", deferJSAtOnload, false);
+  else if (window.attachEvent)
+    window.attachEvent("onload", deferJSAtOnload);
+  else window.onload = deferJSAtOnload;
+</script>
+```
+  </div>
+</div>
+
+#### New Relic Agent
+Leave the New Relic script enabled in the `<head>` tag. Once you resolve all page rule violations for Google's test, you should see results like this:
+
+![Results](/source/docs/assets/images/speed-test-external-script.png)
+
+New Relic requires the script be placed in this tag, and it is not known to impact performance. For details on placement of this tag, see [New Relic's doc](https://docs.newrelic.com/docs/browser/new-relic-browser/page-load-timing-resources/instrumentation-browser-monitoring#javascript-placement){.external}. For details on Pantheon's free New Relic service offering, see [New Relic APM Pro](/docs/new-relic/).
+
 ## Avoid Landing Page Redirects
 A redirect will add at least one extra HTTP request-response cycle. As a result, eliminating extraneous redirects can make your website more snappy. Despite your best efforts it still may be necessary to include the occasional [redirect to a primary domain](/docs/guides/launch/redirects/) using HTTPS with or without the WWW.
 
