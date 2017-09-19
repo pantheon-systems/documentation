@@ -279,7 +279,7 @@ Here are some ways to maximize use of browser caching:
   extra time, a real-world browser is likely to have major libraries and fonts already cached.
 - Disable CSS and Javascript aggregation. With HTTP/2 and compression (both built into Global CDN),
   these provide limited benefits and harm browser cache hit rates by creating overlapping aggregated files.
-  This causes the browser to download the same content multiple times via each aggregated group.
+  The aggregation then causes the browser to download the same content multiple times via each aggregated group.
 - Deliver static files with long cache lifetimes (via Cache-Control headers). Pantheon automatically uses a one-year lifetime.
 - Include static files with [cache-busting query strings](https://stackoverflow.com/a/9692722).
   This prevents the long Cache-Control lifetime for static files from breaking pages when the CSS and Javascript change.
