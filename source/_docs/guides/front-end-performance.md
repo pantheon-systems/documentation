@@ -26,16 +26,49 @@ There are many different ways to measure page speed and performance. This guide 
 - Avoid landing page redirects
 - Leverage Browser Caching
 
-
 ## Reduce server response time for initial HTML
-Leverage caching on Pantheon to reduce the time it takes for a browser to get an initial response from your site.  
-### Full-page caching on a CDN
-To get a high score from a website speed grader you will need a cached copy of the HTML physically close to the machine doing the testing. Waiting for a response to come from across the ocean is a nonstarter. Pantheon uses a Global CDN with points of presence on every continent (well, except Antarctica... for now).
+Leverage caching with Pantheon's Global CDN to reduce the time it takes for a browser to get an initial response from your site.
 
-![Global CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-mobile.png)
+### Full-page caching
+To get a high score from a website speed grader, you will need a cached copy of the HTML physically close to the machine doing the testing. Waiting for a response to come from across the ocean is a nonstarter.
 
-#### Checking if full page caching is working on your site
-Let’s first see if your website is getting the benefit of full page caching is by looking at the HTTP headers. One easy way to look at the response headers your site is sending is by opening up Chrome Developer Tools.
+Pantheon’s Global Edge provides an out-of-the box Content Delivery Network (CDN) with performance and security benefits for every site, regardless of service level. This allows sites to scale for higher traffic with faster response times by serving anonymous visitors cached content from the closest point of presence (POP) instead of processing the request at the application level.
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li id="globaltab1" role="presentation" class="active"><a href="#global" aria-controls="global" role="tab" data-toggle="tab">Global</a></li>
+  <li id="natab1" role="presentation"><a href="#na" aria-controls="na" role="tab" data-toggle="tab">North America</a></li>
+  <li id="eutab1" role="presentation"><a href="#eu" aria-controls="eu" role="tab" data-toggle="tab">Europe</a></li>
+  <li id="asiatab1" role="presentation"><a href="#asia" aria-controls="asia" role="tab" data-toggle="tab">Asia</a></li>
+  <li id="austab1" role="presentation"><a href="#aus" aria-controls="asia" role="tab" data-toggle="tab">Australia</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content no-border">
+<div role="tabpanel" class="tab-pane active" id="global" markdown="1">
+![Global CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map.png)
+</div>
+<div role="tabpanel" class="tab-pane" id="na" markdown="1">
+![North America CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-na.png)
+<p class="pop-desc">Ashburn, Atlanta, Boston, Chicago, Dallas, Denver, Los Angeles, Miami, Minneapolis, Montreal, New York, San Jose, Seattle, Toronto</p>
+</div>
+<div role="tabpanel" class="tab-pane" id="eu" markdown="1">
+![Europe CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-eu.png)
+<p class="pop-desc">Amsterdam, Franfurt 2X, London 2X, Madrid, Paris, Stockholm</p>
+</div>
+<div role="tabpanel" class="tab-pane" id="asia" markdown="1">
+![Asia CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-asia.png)
+<p class="pop-desc">Dubai, Hong Kong, Osaka, Singapore, Tokyo</p>
+</div>
+<div role="tabpanel" class="tab-pane" id="aus" markdown="1">
+![Australia CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-aus.png)
+<p class="pop-desc">Auckland, Brisbane, Melbourne, Perth, Sydney, Wellington</p>
+</div>
+</div>
+
+
+#### Validate full-page caching
+Check the HTTP headers in a response to see if the page is cached. One easy way to do this is with Chrome's Developer tools:
 
 ![Check headers in chrome](/source/docs/assets/images/guides/front-end-performance/ChromeHeaders.gif)
 
