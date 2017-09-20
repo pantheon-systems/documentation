@@ -114,7 +114,7 @@ When you are bypassing the Global CDN and talking straight you Drupal and WordPr
 - For debugging deep and complex server-side performance problems you might need to run your site locally with profiler like [Blackfire](https://blackfire.io/){.external}.
 
 ## Compress Images
-To ensure image downloading does not unnecessarily block page load try the following...
+To ensure image downloading does not unnecessarily block page load try the following.
 ### Send text instead
 Many design elements on a page are best loaded as SVGs (Scalable Vector Graphics) rather than JPGs or GIFs. SVGs have the benefit of often looking better than JPGs or GIFs (because they are scale to any screensize) Also, because they are simply text, you have the option of including them inline with HTML. Inlining an SVG like your website's logo reduces the number of total requests needed to serve the page.
 
