@@ -13,6 +13,7 @@ contributors:
   - rachelwhitton
   - dwayne
   - dgorton
+  - dts
 ---
 Nobody likes a slow site. In this guide we’ll explore how to speed up front end performance to ensure that visitors to your site stay engaged and have the best experience.  
 
