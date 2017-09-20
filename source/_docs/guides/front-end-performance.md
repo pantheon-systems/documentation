@@ -51,7 +51,7 @@ Pantheon’s Global Edge provides an out-of-the box Content Delivery Network (CD
 <div role="tabpanel" class="tab-pane" id="na" markdown="1">
 ![North America CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-na.png)
 <p class="pop-desc">Ashburn, Atlanta, Boston, Chicago, Dallas, Denver, Los Angeles, Miami, Minneapolis, Montreal, New York, San Jose, Seattle, Toronto</p>
-</div>
+</div>/
 <div role="tabpanel" class="tab-pane" id="eu" markdown="1">
 ![Europe CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-eu.png)
 <p class="pop-desc">Amsterdam, Franfurt 2X, London 2X, Madrid, Paris, Stockholm</p>
@@ -70,19 +70,22 @@ Pantheon’s Global Edge provides an out-of-the box Content Delivery Network (CD
 #### Validate full-page caching
 Check the HTTP headers in a response to see if the page is cached. One easy way to do this is with Chrome's Developer tools:
 
-![Check headers in chrome](/source/docs/assets/images/guides/front-end-performance/ChromeHeaders.gif)
+![Check headers in chrome](/source/docs/assets/images/guides/front-end-performance/inspect-network.gif)
 
-To open Developers Tools you can select "inspect" from the right-click menu. Or you can select View > Developer > Developer Tools from the application menu.
-
-With Developer Tools open, click on the Network tab and refresh the page. In the Network tab you will see all of the HTTP requests necessary to display your page.
-
-The first listed is the initial HTML file. Click on that row for more information, including the HTTP request and response headers. Look for the "Age" header. Any number greater than zero indicates that this response was cached. Great! The number indicates how many seconds that cache has been there.
+1. Right click somewhere on the page.
+2. Select **Inspect**.
+3. Open the **Network** tab, then refresh the page. This allows you to review all of the HTTP requests necessary to display your page.
+4. Select the first row, which is a request for the initial HTML file.
+5. Look for the **Age** header. Any number greater than zero indicates that this page resposne was served to the browser from cache. Great! The number indicates how many seconds that cache has been there.
 
 Other important headers include:
 
-- cache-control: This header should include a max-age that is the maximum number of seconds that the cache can be kept.
-- surrogate-key-raw: If you have the Pantheon Advance Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external} or [module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external} installed you should see metadata including the the content ids for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again.
-- x-served-by: This header indicates where your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you physically located in Los Angeles you will also see LAX, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Los Angeles.
+<dt>cache-control</dt>
+<dd markdown="1">This header should include a `max-age` that is the maximum number of seconds that the cache can be kept.</dd>
+<dt>surrogate-key-raw</dt>
+<dd>If you have the Pantheon Advance Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external} or [module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external} installed you should see metadata including the the content ids for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again.</dd>
+<dt>x-served-by</dt>
+<dd>This header indicates where your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you're physically located in Austin you will also see DFW, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Dallas.</dd>
 
 ![Chrome network headers](/source/docs/assets/images/guides/front-end-performance/chrome-network-headers.png)
 
