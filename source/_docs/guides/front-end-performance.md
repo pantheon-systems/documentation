@@ -47,7 +47,7 @@ The first listed is the initial HTML file. Click on that row for more informatio
 Other important headers include:
 
 - cache-control: This header should include a max-age that is the maximum number of seconds that the cache can be kept.
-- surrogate-key-raw: If you have the Pantheon Advance Page Cache ![plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or ![module](https://www.drupal.org/project/pantheon_advanced_page_cache) installed you should see metadata including the the content ids for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again.
+- surrogate-key-raw: If you have the Pantheon Advance Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external} or [module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external} installed you should see metadata including the the content ids for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again.
 - x-served-by: This header indicates where your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you physically located in Los Angeles you will also see LAX, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Los Angeles.
 
 ![Chrome network headers](/source/docs/assets/images/guides/front-end-performance/chrome-network-headers.png)
