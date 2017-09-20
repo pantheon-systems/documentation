@@ -51,7 +51,7 @@ Pantheon’s Global Edge provides an out-of-the box Content Delivery Network (CD
 <div role="tabpanel" class="tab-pane" id="na" markdown="1">
 ![North America CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-na.png)
 <p class="pop-desc">Ashburn, Atlanta, Boston, Chicago, Dallas, Denver, Los Angeles, Miami, Minneapolis, Montreal, New York, San Jose, Seattle, Toronto</p>
-</div>/
+</div>
 <div role="tabpanel" class="tab-pane" id="eu" markdown="1">
 ![Europe CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-eu.png)
 <p class="pop-desc">Amsterdam, Franfurt 2X, London 2X, Madrid, Paris, Stockholm</p>
