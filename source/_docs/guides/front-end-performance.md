@@ -12,12 +12,11 @@ contributors:
   - ataylorme
   - rachelwhitton
   - dwayne
+  - dgorton
 ---
-Nobody likes a slow site.  Think about how many sites you have abandoned within the first 5 seconds because it does not load fast enough.  Think of how many times have you abandoned a shopping cart thanks to very slow response times giving you enough time to talk yourself out of it.  Visitors to any site expect it to load immediately and any interaction to be instantaneous.  
+Nobody likes a slow site. In this guide we’ll explore how to speed up front end performance to ensure that visitors to your site stay engaged and have the best experience.  
 
-In this guide we’ll explore how to speed up front end performance to ensure that visitors to your site stay engaged and have the best experience.  
-
-There are a lot of ways we could measure page speed and overall performance. We will be tuning for the metrics set forth from the [Think With Google](https://www.thinkwithgoogle.com/){.external} team. These include:
+There are many different ways to measure page speed and performance. This guide will be tuning for the metrics set forth from the [Think With Google](https://www.thinkwithgoogle.com/){.external} team. These include:
 
 - Reducing server response time
 - How to Compress Images
