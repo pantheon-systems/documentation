@@ -12,12 +12,11 @@ contributors:
   - ataylorme
   - rachelwhitton
   - dwayne
+  - dgorton
 ---
-Nobody likes a slow site.  Think about how many sites you have abandoned within the first 5 seconds because it does not load fast enough.  Think of how many times have you abandoned a shopping cart thanks to very slow response times giving you enough time to talk yourself out of it.  Visitors to any site expect it to load immediately and any interaction to be instantaneous.  
+Nobody likes a slow site. In this guide we’ll explore how to speed up front end performance to ensure that visitors to your site stay engaged and have the best experience.  
 
-In this guide we’ll explore how to speed up front end performance to ensure that visitors to your site stay engaged and have the best experience.  
-
-There are a lot of ways we could measure page speed and overall performance. We will be tuning for the metrics set forth from the [Think With Google](https://www.thinkwithgoogle.com/){.external} team. These include:
+There are many different ways to measure page speed and performance. This guide will be tuning for the metrics set forth from the [Think With Google](https://www.thinkwithgoogle.com/){.external} team. These include:
 
 - Reducing server response time
 - How to Compress Images
@@ -28,9 +27,9 @@ There are a lot of ways we could measure page speed and overall performance. We 
 
 
 ## Reduce server response time for initial HTML
-In this lesson we will be exploring ways to better leverage caching on Pantheon to reduce the time it takes for a browser to get an initial response from your site.  
+Leverage caching on Pantheon to reduce the time it takes for a browser to get an initial response from your site.  
 ### Full-page caching on a CDN
-To get a high score from a website speed grader you will need a cached copy of the HTML physically close to the machine doing the testing. Waiting for a response to come from across the ocean is a nonstarter. This is why the Pantheon uses a Global CDN with points of presence on every continent (ok, nearly every continent. It'll be a while before we get one on Antarctica).
+To get a high score from a website speed grader you will need a cached copy of the HTML physically close to the machine doing the testing. Waiting for a response to come from across the ocean is a nonstarter. Pantheon uses a Global CDN with points of presence on every continent (well, except Antarctica... for now).
 
 ![Global CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-mobile.png)
 
@@ -41,24 +40,25 @@ Let’s first see if your website is getting the benefit of full page caching is
 
 To open Developers Tools you can select "inspect" from the right-click menu. Or you can select View > Developer > Developer Tools from the application menu.
 
-With Developer Tools open, click on the Network tab and refresh the page. In this network tab you will see all of the HTTP requests necessary to display your webpage. The first in the list will be the initial HTML response. Click on that row for more information. There you will see information about that request including the HTTP request and response headers.
+With Developer Tools open, click on the Network tab and refresh the page. In the Network tab you will see all of the HTTP requests necessary to display your page. 
 
-We are looking for the "Age" header. A number greater than zero indicates that this response was cached. The number indicates how many seconds that cache has been there.
+The first listed is the initial HTML file. Click on that row for more information, including the HTTP request and response headers. Look for the "Age" header. Any number greater than zero indicates that this response was cached. Great! The number indicates how many seconds that cache has been there.
 
 Other important headers include:
 
 - cache-control: This header should include a max-age that is the maximum number of seconds that the cache can be kept.
-- surrogate-key-raw: If you have the Pantheon Advance Page Cache module or plugin installed you should see metadata including the the content ids for what was displayed on this page. By including this metadata this page can be cleared from cache when those posts are saved again.
-- x-served-by: This header indicates where your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you physically located in Los Angeles you will also see LAX. So this response went from the primary datacenter to a cached copy in Chicago to a cached copy in Los Angeles.
+- surrogate-key-raw: If you have the Pantheon Advance Page Cache ![plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or ![module](https://www.drupal.org/project/pantheon_advanced_page_cache) installed you should see metadata including the the content ids for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again.
+- x-served-by: This header indicates where your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you physically located in Los Angeles you will also see LAX, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Los Angeles.
 
 ![Chrome network headers](/source/docs/assets/images/guides/front-end-performance/chrome-network-headers.png)
 
 #### Checking for Common Cache Busters
-Not every from Drupal or WordPress response will be cacheable. Here are some of the reasons you may find your pages aren't caching.
+Not every response from Drupal or WordPress may be cached. Common reasons pages aren't caching include:
 
-- Cookies! Especially in WordPress it is common for plugins to add their own cookies in such a way that breaks full page caching. <a href="/docs/caching-advanced-topics/#pantheons-varnish-cookie-handling" data-proofer-ignore>Check that any cookies used by your site will play well with Varnish.</a> The cookies your site sends are included in the response headers we looked at above.
+- Cookies! Especially in WordPress it is common for plugins to add their own cookies in such a way that breaks full page caching. <a href="/docs/caching-advanced-topics/#pantheons-varnish-cookie-handling" data-proofer-ignore>Check that any cookies used by your site will play well with Varnish.</a> The cookies your site sends are included in the response headers we examined above.
 - Authenticated traffic. The session cookie of a logged in user causes bypassing of the full page cache.
 - Mistakes in custom code. Developers new to the Drupal 8 caching API sometimes reach a point of frustration and just do something like this: `$form['#cache'] = ['max-age' => 0];` A developer might add a snippet of code like that to disable caching for one block and not realized they've disabled caching for the whole page. See the [Drupal documentation](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays){.external} for more details. You can search your custom code for "#cache" to find places where you've interacted with the Cache API.
+      - WordPress - can we add an example?
 - Forgetting.
   - In Drupal it is very easy to turn off page caching and forget to turn it back on. Check that you have full page caching turned on at /admin/config/development/performance
       - Drupal - how do we quickly double check this is turned on?  Can we add terminus/drush command example here?
