@@ -124,7 +124,6 @@ Ask the designers on your team if any of the elements intended to be loaded as i
   - [Drupal module](https://www.drupal.org/project/rrssb){.external}
   - [WordPress plugin](https://wordpress.org/plugins/rrssb/){.external}
 - [Flat Icon.](https://www.flaticon.com/){.external}
-- More?
 
 ### Load images only when they will be visible in the browser (lazy loading)
 Lazy loading images is a method, implemented via JavaScript, that saves both server bandwidth and lowers load times of your site by delaying the loading of images in the browser until they appear in the viewport.
