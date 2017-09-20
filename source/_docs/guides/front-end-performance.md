@@ -19,17 +19,16 @@ Nobody likes a slow site. In this guide we’ll explore how to speed up front en
 
 There are many different ways to measure page speed and performance. This guide will be tuning for the metrics set forth from the [Think With Google](https://www.thinkwithgoogle.com/){.external} team. These include:
 
-- Reducing server response time
-- How to Compress Images
-- Minify Resources such as HTML, CSS, and JavaScript
-- Eliminate render-blocking JavaScript and CSS in above-the-fold content
-- Avoid landing page redirects
+- Reduce Server Response Time
+- Compress Images
+- Deliver Efficient CSS and JavaScript
+- Avoid Redirects
 - Leverage Browser Caching
 
-## Reduce server response time for initial HTML
+## Reduce Server Response Time
 Leverage caching with Pantheon's Global CDN to reduce the time it takes for a browser to get an initial response from your site.
 
-### Full-page caching
+### Full-Page Caching
 To get a high score from a website speed grader, you will need a cached copy of the HTML physically close to the machine doing the testing. Waiting for a response to come from across the ocean is a nonstarter.
 
 Pantheon’s Global Edge provides an out-of-the box Content Delivery Network (CDN) with performance and security benefits for every site, regardless of service level. This allows sites to scale for higher traffic with faster response times by serving anonymous visitors cached content from the closest point of presence (POP) instead of processing the request at the application level.
@@ -67,7 +66,7 @@ Pantheon’s Global Edge provides an out-of-the box Content Delivery Network (CD
 </div>
 
 
-#### Validate full-page caching
+#### Validate Full-Page Caching
 Check the HTTP headers in a response to see if the page is cached. One easy way to do this is with Chrome's Developer tools:
 
 ![Check headers in chrome](/source/docs/assets/images/guides/front-end-performance/inspect-network.gif)
@@ -114,8 +113,8 @@ When you are bypassing the Global CDN and talking straight you Drupal and WordPr
 - For debugging deep and complex server-side performance problems you might need to run your site locally with profiler like [Blackfire](https://blackfire.io/){.external}.
 
 ## Compress Images
-To ensure image downloading does not unnecessarily block page load try the following.
-### Send text instead
+To ensure image downloading does not block page load try the following.
+### Send Text Instead
 Many design elements on a page are best loaded as SVGs (Scalable Vector Graphics) rather than JPGs or GIFs. SVGs have the benefit of often looking better than JPGs or GIFs (because they are scale to any screensize) Also, because they are simply text, you have the option of including them inline with HTML. Inlining an SVG like your website's logo reduces the number of total requests needed to serve the page.
 
 Ask the designers on your team if any of the elements intended to be loaded as images were created in Adobe Illustrator or another program that can easily export SVGs. Social sharing links are often good candidates here and there are freely available packs of SVG icons on the web like:
@@ -125,7 +124,7 @@ Ask the designers on your team if any of the elements intended to be loaded as i
   - [WordPress plugin](https://wordpress.org/plugins/rrssb/){.external}
 - [Flat Icon.](https://www.flaticon.com/){.external}
 
-### Load images only when they will be visible in the browser (lazy loading)
+### Load Images Only when Visible (Lazy Loading)
 Lazy loading images is a method, implemented via JavaScript, that saves both server bandwidth and lowers load times of your site by delaying the loading of images in the browser until they appear in the viewport.
 
 [In Drupal 8 the bLazy module is a popular choice.](https://www.drupal.org/project/blazy){.external}
@@ -135,17 +134,18 @@ Lazy loading images is a method, implemented via JavaScript, that saves both ser
 [https://plugins.jquery.com/lazyload/](https://plugins.jquery.com/lazyload/){.external}
 [https://appelsiini.net/projects/lazyload/](https://appelsiini.net/projects/lazyload/){.external}
 
-### Send only as many pixels as are needed
+### Send Only as Many Pixels as Needed
 Your content editors might upload a wallpaper-sized image that will only be ever seen at thumbnail size by your site visitors. To avoid sending a 4000x4000 pixel image to an element that will never be bigger than 200x200 pixels, make sure to configure Drupal Core's image styles.
+NEED WORDPRESS / DRUPAL EXAMPLES
 
-Especially with sites built with Responsive Design, there are often images where the size will grow and shrink by a large amount depending on the device and browser size. One of the newer HTML elements, picture, addresses this scenario in ways that the older img tag did not.
+Especially with Responsive Design sites, there are often images where the size will grow and shrink by a large amount depending on the device and browser size. One of the newer HTML elements, picture, addresses this scenario in ways that the older img tag did not.
 
 Explanation of picture tag
 
 Support for the picture tag is built into Drupal 8 Core as "Responsive Image" module. A backport of that module is available for Drupal 7. WordPress added support as of 4.4.
 
-### Send only as many bytes as needed
-Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great option here available natively in PHP.
+### Send Only as Many Bytes as Needed
+Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option.
 
 Your main options for smushing are:
 
@@ -153,12 +153,12 @@ Your main options for smushing are:
 - Smuch elsewhere in the cloud: Use a plugin or module for sending images for your size to a 3rd party smusher and bringing them back.
 - Smushing at the CDN level: The Pantheon Global CDN does not yet offer this service but if you have stacked your own CDN configuration in front of the Pantheon CDN, you might have this service available to you.
 
-## Efficient JavaScript and CSS delivery
+## Deliver Efficient CSS and JavaScript
 Drupal and WordPress Core both allow for themes and modules/plugins to add individual CSS and JavaScript files to any given page (or every single page). To handle this norm in a way that ensures stable functionality, both systems default to serving each one of those .css and .js files separately, usually  in HTML <head> tag.
 
 Loading everything separately and early in the page rendering process ensures that the effect of each file is taken on the first page rendering. It also nearly guarantees a slower than necessary page load. Fully optimizing all of the JavaScript and CSS on an already-built site is usually more work than can be done in one sitting. Though there are some easy wins that you should make sure you are getting.
 
-### Load only what you need
+### Load Only What is Needed
 Many sites load CSS and JavaScript files not used on the given page and not used on any page. Look at your theme and ask if there are any custom scripts or styles not being used anywhere.
 
 To load custom scripts and styles only on relevant pages, use the appropriate APIs of Drupal and WordPress
@@ -199,8 +199,8 @@ function contextual_page_attachments(array &$page) {
   </div>
 </div>
 
-### Use as few requests as possible
-Once you have eliminated code that is not needed. Make sure the code being loaded comes in as few requests as possible. Drupal Core has the ability to "aggregate" CSS and JavaScript. When turned on, Drupal will combine individual CSS and Javascript files in a smaller number of bigger files. This easy optimization can be done at "admin/config/development/performance"
+### Use as Few Requests as Possible
+Once you have eliminated code that is not needed, make sure the code being loaded comes in as few requests as possible. Drupal Core has the ability to "aggregate" CSS and JavaScript. When turned on, Drupal will combine individual CSS and Javascript files in a smaller number of bigger files. This easy optimization can be done at "admin/config/development/performance"
 
 ![Drupal performance admin interface](/source/docs/assets/images/guides/front-end-performance/drops-performance.png)
 
@@ -249,7 +249,7 @@ If you want to make the number of files as low as possible, try [Advanced Aggreg
   </div>
 </div>
 
-### Make your assets as small as possible
+### Make Assets as Small as Possible
 In addition to making as few requests as possible to load styling and scripts, the loaded files should be as small as possible. Both Drupal's Advanced Aggregation and WordPress' Autoptimize have options for further minifying or "uglifying" your CSS and Javascript.
 
 #### Local Minification
@@ -257,21 +257,21 @@ Many of us have a build step, for tasks like compiling Sass, as part of our deve
 
 These can be used with common build tools, such as [Grunt](https://gruntjs.com/){.external} or [gulp](https://gulpjs.com/){.external}, or a GUI tool like [CodeKit](https://codekitapp.com/){.external}. No matter how you do it you should be minifying your resources (HTML, CSS and JavaScript) for every site.
 
-### Load your assets after the browser renders the page
+### Load Assets after the Browser Renders the Page
 Performance graders will call out CSS and Javascript that blocks the rendering of the page. Usually these styles and scripts are in the <head> tag of your webpage. Many can be moved from the top of the HTML to the bottom so that the browser is able to first render the page without processing them.
 
 WordPress and Drupal option have core API's for declaring whether an asset should be in the header or footer. For instance, WordPress' [wp_enqueue_script()](https://developer.wordpress.org/reference/functions/wp_enqueue_script/){.external} function can be given an argument to say that a script should go in the footer. [Similarly Drupal has the concept of "scope" for header and footer. For a detailed look at how Drupal works under the hood, see the Lullabot blog.](https://www.lullabot.com/articles/javascript-aggregation-in-drupal-7){.external}
 
 While you can use those core APIs directly to move load files as late as possible, Drupal's Advanced Aggregation and WordPress' Autoptimize make it easy to do this task without custom code.
 
-### Load the critical pieces as early as possible
+### Load the Critical Pieces as Early as Possible
 For some CSS styles it is not sensible to load them after the first HTML rendering. Without some styling your site may look bad. Inlining critical CSS means finding the CSS rules that will be used by the top of your webpage and including those rules in the same HTML response that first comes back from the server (rather than in a separate style sheet). This means the browser doesn't have to wait for an additional request to start applying styles.
 
 You can identify critical styles for your above-the-fold content using a tool like [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/){.external} and then again use Drupal's Advanced Aggregation and WordPress' Autoptimize to load the critical styles within the HTML.
 
 Be careful with this technique because you are making a tradeoff. By making every single HTML response include inline styles you make that initial response be a larger amount of data to load. This slight slowdown in initial loading is totally acceptable as long as it is slight. Having the bulk of your CSS in separate files means those files can be cached by the browser. If all of the CSS rules moved from separate files to inline then none of your CSS would be cached by the browser and performance would suffer.
 
-## Avoid Landing Page Redirects
+## Avoid Redirects
 A redirect will add at least one extra HTTP request-response cycle. As a result, eliminating extraneous redirects can make your website more snappy. Despite your best efforts it still may be necessary to include the occasional [redirect to a primary domain](/docs/guides/launch/redirects/) using HTTPS with or without the WWW.
 
 Other considerations:
