@@ -3,7 +3,6 @@ title: Google Domain Configuration
 provider: Google
 dnsprovider: true
 description: Learn how to point your Google domain to a Pantheon site.
-draft: true
 tags: [providers]
 permalink: docs/:basename/
 editpath: dns-providers/google.md/
@@ -11,49 +10,53 @@ editpath: dns-providers/google.md/
 ## Before You Begin
 Be sure that you have a:
 
-
-- Registered domain name using Cloudflare to host DNS
+- Registered domain name using Google Domains to host DNS
 - [Paid Pantheon plan](/docs/guides/launch/plans/)
 - [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
-## Configure DNS Records on Cloudflare
+## Locate Pantheon's DNS Values
+Identify DNS values to point your domain to Pantheon:
+
+1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
+2. Click the **Details** button next to your domain.
+
+Keep this page open and login to your [Google Domains account](https://domains.google.com/registrar){.external} <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
+
+## Configure DNS Records on Google Domains
 ### A Record
-1. Click **DNS** in the menu bar.
-2. Select **A** from the dropdown menu.
-4. Enter **@** in the **Name** field and enter the A record value provided by Pantheon in the **IPv4 Address** field.
-5. Set the TTL to **30 minutes**.
-6. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
-6. Click **Add Record**.
+1. Select the **Configure DNS** icon within the Google Domains interface:
+
+  ![Google configure dns](/source/docs/assets/images/google-config-dns.png)
+
+2. Scroll to the **Custom resource records** section.
+3. Enter **@** in the **Host** field and provide the A record value provided by Pantheon in the **IPv4** field.
+4. Set desired Time to Live (TTL).
+
+    {% include("ttl.twig") %}
+
+5. Click **Add** to create the record.
+
+![Google configure ipv4](/source/docs/assets/images/google-a-record.png)
+
 
 ### AAAA Records
-1. Select **AAAA** from the dropdown menu.
-2. Enter **@** in the **Name** field and enter the A record value provided by Pantheon in the **IPv6 Address** field.
-3. Set the TTL to **30 minutes**.
-4. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
-5. Click **Add Record**.
-6. Repeat steps 1-5 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
+
+1. Within the same section (**Custom resource records**), change the record type from **A** to **AAAA**.
+2. Enter **@** in the **Host** field and provide the first AAAA record value provided by Pantheon in the **IPv6 address** field.
+3. Click the **+** icon to the right of the IPv6 field then enter the second AAAA record provided by Pantheon in the **IPv6 address** field.
+4. Set desired Time to Live (TTL), then click **Add** to create the record.
+
+![Google configure ipv6](/source/docs/assets/images/google-aaaa.png)
+
 
 ### CNAME Record
 The CNAME record is required if you wish to include `www` within your site's primary domain name.
 
-1. Select **CNAME** from the dropdown menu.
-2. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
-3. Set the TTL to **30 minutes**.
-4. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
-5. Click **Add Record**.
+1. Within the same section (**Custom resource records**), change the record type from **A** to **CNAME**.
+2. Enter `www` in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
+3. Set desired Time to Live (TTL), then click **Add** to create the record.
 
-### TXT Record
-The TXT record is only required if you need to prove ownership of your domain in order to pre-provision certificates to avoid HTTPS service interruption.
-
-1. Select **TXT** from the dropdown menu.
-2. Leave the **Name** field blank and enter the record value provided by Pantheon in the **TXT Content** field.
-3. Set the TTL to **30 minutes**.
-4. Click **Add Record**.
-
-## Cloudflare Docs
-
-* <a href="https://support.cloudflare.com/hc/en-us/articles/200169046-How-do-I-add-a-CNAME-record-" target="blank">How do I add a CNAME record? <span class="glyphicons glyphicons-new-window-alt"></span></a>
-* <a href="https://support.cloudflare.com/hc/en-us/articles/200169096-How-do-I-add-A-records-" target="blank">How do I add A records? <span class="glyphicons glyphicons-new-window-alt"></span></a>
+![Google configure cname](/source/docs/assets/images/google-cname.png)
 
 ## Next Steps
 
