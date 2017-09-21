@@ -392,10 +392,9 @@ If you want to make the number of files as low as possible, try [Advanced Aggreg
 
 <div markdown="1" class="alert alert-info">
   <h4 class="info">Note</h4>
-The Pantheon Global CDN includes support for HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.<br/><br/>
-It has been long speculated that with the rise of ubiquitous HTTP/2, the recommendation for aggregating CSS files will go away. In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP2 connection would be more performant than aggregated files.<br/><br/>
-In our testing, the behavior is not so clean. If you have a site that performs better with aggregation off, please send us your waterfall graph and we will consider updating this guidance.<br/><br/>
-We also expect that this recommendation could change if our underlying Global CDN architecture adds Brotli and QUIC (or equivalent enhancements).<br/><br/>
+The Pantheon Global CDN includes HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.<br/><br/>
+The Drupal community has long speculated whether HTTP/2 will make CSS and JavaScript aggregation irrelevant. (In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP/2 connection would be more performant than aggregated files.)<br/><br/>
+In our testing, HTTP/2 makes disaggregated files much faster than they were before, but still not as fast as aggregated files. As HTTP/2 and related technologies mature, we will revisit this recommendation.<br/><br/>
 </div>
 
 ### Make Assets as Small as Possible
