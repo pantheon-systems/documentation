@@ -112,7 +112,7 @@ The following describes the expected cache behavior for sites running the Panthe
 #### Cookies
 Cookies are included in the response headers we examined previously. They can include sessions for authenticated traffic to logged in users, which can invalidate cache. For WordPress, it's common for plugins to add their own cookies in such a way that breaks full-page caching.
 
-For reference, here are all the cookie patters configured to bust cache across Pantheon's Global CDN:
+For reference, here are all the cookie patterns configured to bust cache across Pantheon's Global CDN:
 
 ```vcl
 NO_CACHE
@@ -131,6 +131,9 @@ wp-resetpass-[A-Za-z0-9_]+
 (wp_)?woocommerce[A-Za-z0-9_-]+
 ```
 
+You can see the cookies used on your site by going to the "Application" tab under Chrome's Developer Tools.
+
+![Chrome cookies](/source/docs/assets/images/guides/front-end-performance/chrome-cookies.png)
 
 #### Unintentional Cache Invalidation
 Try to walk yourself through the content rendering tree, considering any custom or contrib code that may be affecting the directives set in the HTTP headers of a response.
