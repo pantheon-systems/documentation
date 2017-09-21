@@ -34,12 +34,7 @@ There are many different ways to measure page speed and performance. This guide 
 ![Acing Google's speed test](/source/docs/assets/images/guides/front-end-performance/ace-it.png)
 
 ## Quick Response Time
-<dt>Waiting</dt>
-<dd markdown="1">Also known as Time To First Byte (TTFB), the amount of time (in milliseconds) it takes for the server to respond to a request.</dd>
-<dt>First Meaningful Paint</dt>
-<dd>The time it takes to render above-the-fold content, also referred to as Time To First Paint (TTFP).</dd>
-
-It's no longer a debate that TTFB and TTFP are critical performance indicators, with a direct correlation to how Google ranks pages. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds. Of course, there's much more to Google's ranking than just these two aspects but if a page falls down even one or two ranks you start to see drastic hits to CTR and conversion rates. People leave your site, and most aren't likely to come back.
+The amount of time it takes for a site to respond, **Time To First Byte** (TTFB), along with the time it takes a page to render meaningful content above the fold, **Time To First Paint** (TTFP), are both proven factors for Google's page rankings. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds. Of course, there's much more to Google's ranking than just these two aspects but if a page falls down even one or two ranks you start to see drastic hits to CTR and conversion rates. People leave your site, and most aren't likely to come back.
 
 ### Pantheon's Global CDN
 Reduce page rendering speeds from seconds to sub-seconds by caching content _and_ resources alike across 40+ points of presence (POPs) on Pantheon's Global CDN. Each POP is like a footprint in the digital neighborhood of the person browsing the site, caching not only the resources (e.g., CSS and JavaScript) needed to render the page, but also the page's final HTML output to the browser. Going to the closest physical POP to serve a request means the visitor doesn't have to wait as long to see the first meaningful paint.
@@ -117,6 +112,26 @@ The following describes the expected cache behavior for sites running the Panthe
 #### Cookies
 Cookies are included in the response headers we examined previously. They can include sessions for authenticated traffic to logged in users, which can invalidate cache. For WordPress, it's common for plugins to add their own cookies in such a way that breaks full-page caching.
 
+For reference, here are all the cookie patters configured to bust cache across Pantheon's Global CDN:
+
+```vcl
+NO_CACHE
+S+ESS[a-z0-9]+
+fbs[a-z0-9_]+
+SimpleSAML[A-Za-z]+
+PHPSESSID
+wordpress[A-Za-z0-9_]*
+wp-[A-Za-z0-9_]+
+comment_author_[a-z0-9_]+
+duo_wordpress_auth_cookie
+duo_secure_wordpress_auth_cookie
+bp_completed_create_steps # BuddyPress cookie used when creating groups
+bp_new_group_id # BuddyPress cookie used when creating groups
+wp-resetpass-[A-Za-z0-9_]+
+(wp_)?woocommerce[A-Za-z0-9_-]+
+```
+
+
 #### Unintentional Cache Invalidation
 Try to walk yourself through the content rendering tree, considering any custom or contrib code that may be affecting the directives set in the HTTP headers of a response.
 
@@ -143,7 +158,7 @@ Try to walk yourself through the content rendering tree, considering any custom 
   add_action( 'send_headers', 'add_header_maxage' );
   function add_header_maxage() {
     // some logic that accidentally invalidates full-page cache
-      header('Cache Control: max-age=3600');
+      header('Cache Control: max-age=0');
   }
   ```
    See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers){.external} for more details.
@@ -218,7 +233,7 @@ See our blog post for an example of [62% performance gains after upgrading](http
 Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Installing Redis on Drupal](/docs/drupal-redis/) and [Installing Redis on WordPress](/docs/wordpress-redis/).
 
 #### Monitor Performance with New Relic
-Use [New Relic](/docs/new-relic/) to monitoring performance if your site isn't sending uncached pages fast enough. This service is provided for free on every Pantheon site, but you must activate it.
+If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/docs/new-relic/) for help identifying bottlenecks.
 
 #### Helper Tools
 There are toolbars for both Drupal and WordPress that provide stats like the number of queries, amount of memory, and response time. These can be helpful for real time debugging.
@@ -393,7 +408,7 @@ If you want to make the number of files as low as possible, try [Advanced Aggreg
 <div markdown="1" class="alert alert-info">
   <h4 class="info">Note</h4>
 The Pantheon Global CDN includes HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.<br/><br/>
-The Drupal community has long speculated whether HTTP/2 will make CSS and JavaScript aggregation irrelevant. (In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP/2 connection would be more performant than aggregated files.)<br/><br/>
+The web community has long speculated whether HTTP/2 will make CSS and JavaScript aggregation irrelevant. (In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP/2 connection would be more performant than one big inline CSS statement that's been aggregated.)<br/><br/>
 In our testing, HTTP/2 makes disaggregated files much faster than they were before, but still not as fast as aggregated files. As HTTP/2 and related technologies mature, we will revisit this recommendation.<br/><br/>
 </div>
 
