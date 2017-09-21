@@ -275,7 +275,7 @@ For debugging deep and complex server-side performance problems you might need t
 While images are not render blocking, they do need to be loaded as soon as they are visible. However, they will block the `onload` DOM event resulting in longer waits and more spinners. Use the following techniques for handling images.
 
 ### Send Text Instead
-Many design elements on a page are best loaded as SVGs (Scalable Vector Graphics) rather than JPGs or GIFs. SVGs have the benefit of often looking better than JPGs or GIFs (because they are scale to any screen-size). Also, because they are simply text, you have the option of including them inline with HTML. Inlining an SVG, like your website's logo, reduces the number of total requests needed to serve the page.
+Many design elements on a page are best loaded as SVGs (Scalable Vector Graphics) rather than JPGs or GIFs. SVGs have the benefit of often looking better than JPGs or GIFs (because they scale to any screen-size). Also, because they are simply text, you have the option of including them inline with HTML. Inlining an SVG, like your website's logo, reduces the number of total requests needed to serve the page.
 
 Ask the designers on your team if any of the elements intended to be loaded as images were created in Adobe Illustrator, Sketch, or any another application that can easily export SVGs.
 
@@ -287,7 +287,7 @@ Lazy loading images is a method, implemented via JavaScript, that saves both ser
 Try the [BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/){.external} plugin for WordPress and the [Image Lazyloader](https://www.drupal.org/project/lazyloader){.external} module for Drupal.
 
 ### Send Only as Many Pixels as Needed
-Images are expected to grow and shrink by large amounts according to device and browser size, but it's overkill to use a 4000x4000 pixel image within an element that will never render larger than 200x200 pixels.
+Images might be expected to grow and shrink by large amounts according to device and browser size, but it's overkill to use a 4000x4000 pixel image within an element that will never render larger than 200x200 pixels.
 
 One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that the older `<img>` tag did not. Drupal 8 and WordPress core support this tag by default. Drupal 7 support has been backported to the [Picture](https://www.drupal.org/project/picture){.external} module.
 
@@ -296,7 +296,7 @@ Use this new HTML tag to define a size attribute appropriate for the given layou
 ### Send Only as Many Bytes as Needed
 Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option.
 
-The Pantheon Global CDN does not offer image optimization as a feature, but sites that rely on a third part CDN service provider for this can continue doing so by stacking their CDN configuration in front of Pantheon's.
+The Pantheon Global CDN does not offer image optimization as a feature, but sites that rely on a third-party CDN service provider might have the option of smushing at the CDN level.
 
 For images that are a part of your theme or module/plugin, you can smush them before committing them to Git with an application like [ImageOptim](https://imageoptim.com/mac){.external}.
 
@@ -308,7 +308,7 @@ Loading everything separately and early in the page rendering process ensures th
 Fully optimizing all of the JavaScript and CSS on an already-built site is usually more work than can be done in one sitting. Though there are some easy wins that you should make sure you are getting.
 
 ### Load Only What is Needed
-Many sites load CSS and JavaScript files not used on the given page and not used on any page. Look at your theme and ask if there are any custom scripts or styles not being used anywhere.
+Many sites load CSS and JavaScript files not used on the given page and not used on any page. Look at your theme and remove custom scripts or styles not being used anywhere.
 
 To load custom scripts and styles only on relevant pages, use the appropriate APIs of Drupal and WordPress:
 
@@ -332,7 +332,7 @@ If the file you are adding is not relevant for all pages on your site, be sure t
 
   <!-- 2nd pane content -->
   <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
-In Drupal 7 it was possible to use the functions `drupal_add_css()` and `drupal_add_js()` to add assets. Often these functions were misused to add assets to every single page on the site. In Drupal 8, you should use the `#attached` property on Render arrays:
+In Drupal 7 it was possible to use the functions `drupal_add_css()` and `drupal_add_js()` to add assets. Often these functions were misused to add assets to every single page on the site. Those functions were removed from Drupal 8. Now the `#attached` property on Render arrays (which is also available in Drupal 7) is the technique to use:
 
 ```php
 // From core/modules/contextual/contextual.module.
@@ -411,7 +411,7 @@ Performance graders will call out CSS and Javascript that blocks the rendering o
 
 WordPress and Drupal option have core API's for declaring whether an asset should be in the header or footer. For instance, WordPress' [wp_enqueue_script()](https://developer.wordpress.org/reference/functions/wp_enqueue_script/){.external} function can be given an argument to say that a script should go in the footer.
 
-Similarly Drupal has the concept of `scope` for header and footer. For a detailed look at how Drupal works under the hood, take a look at this [blog post from Lullabot](https://www.lullabot.com/articles/javascript-aggregation-in-drupal-7){.external}
+Similarly Drupal has the concept of `scope` for header and footer. For a detailed look at how Drupal works under the hood, take a look at this [blog post from Lullabot](https://www.lullabot.com/articles/javascript-aggregation-in-drupal-7){.external}.
 
 While you can use those core APIs directly to move load files as late as possible, Drupal's Advanced Aggregation and WordPress' Autoptimize make it easy to do this task without custom code.
 
