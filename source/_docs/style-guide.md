@@ -118,11 +118,24 @@ Export local environment variables to define your site name and Multidev environ
 </div>
 
 ### Bold
+
+Bold is used for navigational elements within a given interface:
+
 <div class="style-example" markdown="1">
 Go to **Account** > **Secutiry** > **Personal Access Tokens**.
 <hr class="source-code">
 ```markdown
 Go to **Account** > **Secutiry** > **Personal Access Tokens**.
+```
+</div>
+
+Bold is also used when defining new terms, in cases where the [Definition List](#definition-list) doesn't fit:
+
+<div class="style-example" markdown="1">
+**Transport Layer Security** (TLS) refers to a set of cryptographic security protocols used to encrypt network traffic.
+<hr class="source-code">
+```markdown
+**Transport Layer Security** (TLS) refers to a set of cryptographic security protocols used to encrypt network traffic.
 ```
 </div>
 
