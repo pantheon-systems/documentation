@@ -50,28 +50,28 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
   <li id="natab1" role="presentation"><a href="#na" aria-controls="na" role="tab" data-toggle="tab">North America</a></li>
   <li id="eutab1" role="presentation"><a href="#eu" aria-controls="eu" role="tab" data-toggle="tab">Europe</a></li>
   <li id="asiatab1" role="presentation"><a href="#asia" aria-controls="asia" role="tab" data-toggle="tab">Asia</a></li>
-  <li id="austab1" role="presentation"><a href="#aus" aria-controls="asia" role="tab" data-toggle="tab">Australia</a></li>
+  <li id="austab1" role="presentation"><a href="#aus" aria-controls="asia" role="tab" data-toggle="tab">Australia & New Zealand</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content no-border">
 <div role="tabpanel" class="tab-pane active" id="global" markdown="1">
-![Global CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map.png)
+![Global CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map.png){.cdn-map-container}
 </div>
 <div role="tabpanel" class="tab-pane" id="na" markdown="1">
-![North America CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-na.png)
+![North America CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-na.png){.cdn-map-container}
 <p class="pop-desc">Ashburn, Atlanta, Boston, Chicago, Dallas, Denver, Los Angeles, Miami, Minneapolis, Montreal, New York, San Jose, Seattle, Toronto</p>
 </div>
 <div role="tabpanel" class="tab-pane" id="eu" markdown="1">
-![Europe CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-eu.png)
+![Europe CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-eu.png){.cdn-map-container}
 <p class="pop-desc">Amsterdam, Franfurt 2X, London 2X, Madrid, Paris, Stockholm</p>
 </div>
 <div role="tabpanel" class="tab-pane" id="asia" markdown="1">
-![Asia CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-asia.png)
+![Asia CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-asia.png){.cdn-map-container}
 <p class="pop-desc">Dubai, Hong Kong, Osaka, Singapore, Tokyo</p>
 </div>
 <div role="tabpanel" class="tab-pane" id="aus" markdown="1">
-![Australia CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-aus.png)
+![Australia CDN Map](/source/docs/assets/images/guides/front-end-performance/cdn-map-aus.png){.cdn-map-container}
 <p class="pop-desc">Auckland, Brisbane, Melbourne, Perth, Sydney, Wellington</p>
 </div>
 </div>
