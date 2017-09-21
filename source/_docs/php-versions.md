@@ -71,7 +71,7 @@ Modify `pantheon.yml` until valid and commit the fix before attempting to push a
 
 #### SFTP Mode
 
-When you upload a new or modified `pantheon.yml` file in SFTP mode, your side dashboard will detect the changes:
+When you upload a new or modified `pantheon.yml` file in SFTP mode, your site dashboard will detect the changes:
 
 ![The Site Dashboard sees changes to pantheon.yml](/source/docs/assets/images/dashboard/pantheon-yml-changes-sftp.png)
 
