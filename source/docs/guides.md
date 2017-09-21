@@ -26,6 +26,26 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
         </a>
       </div>
   </div>
+  <div class="flex-panel-item-guides-landing">
+      <div class="flex-panel-body-pantheon-workflows">
+      <a href="/docs/guides/front-end-performance/">
+        <div class="pantheon-workflows">
+          <img alt="Front End Performance" src="/source/docs/assets/images/CDN-speedTest-docs-guide.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
+        <h3>Front End Performance</h3>
+        </div>
+        </a>
+      </div>
+  </div>
+  <div class="flex-panel-item-guides-landing">
+      <div class="flex-panel-body-pantheon-workflows">
+      <a href="/docs/terminus/">
+        <div class="pantheon-workflows">
+          <img alt="Terminus Manual" src="/source/docs/assets/images/terminus-thumbLarge.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
+        <h3>Terminus Manual</h3>
+        </div>
+        </a>
+      </div>
+  </div>
 </div>
 <h2>Platform Integration Guides</h2>
 <div class="flex-panel-group">
