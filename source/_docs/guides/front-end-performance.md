@@ -41,7 +41,7 @@ There are many different ways to measure page speed and performance. This guide 
 
 It's no longer a debate that TTFB and TTFP are critical performance indicators, with a direct correlation to how Google ranks pages. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds. Of course, there's much more to Google's ranking than just these two aspects but if a page falls down even one or two ranks you start to see drastic hits to CTR and conversion rates. People leave your site, and most aren't likely to come back.
 
-### Full-Page Caching
+### Pantheon's Global CDN
 Reduce page rendering speeds from seconds to sub-seconds by caching content _and_ resources alike across 40+ points of presence (POPs) on Pantheon's Global CDN. Each POP is like a footprint in the digital neighborhood of the person browsing the site, caching not only the resources (e.g., CSS and JavaScript) needed to render the page, but also the page's final HTML output to the browser. Going to the closest physical POP to serve a request means the visitor doesn't have to wait as long to see the first meaningful paint.
 
 <!-- Nav tabs -->
@@ -75,6 +75,10 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
 <p class="pop-desc">Auckland, Brisbane, Melbourne, Perth, Sydney, Wellington</p>
 </div>
 </div>
+
+### Full Page Caching
+
+Pantheon is designed to store cached copies of the full HTML pages coming out of Drupal and WordPress core by default. If non-logged in visitors to your site are not getting a near-instant delivery of HTML from the cache in our Global CDN, something is wrong. Full page cache depends on the HTTP Headers coming out of your site.
 
 ### Review Response Caching
 The following describes the expected cache behavior for sites running the Pantheon Advance Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external} or [module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external}. If you find that your page is not served from cache with similar headers and values, examine the response using Google's Developer tools and consult the next section for common cache busters and potential culprits.
