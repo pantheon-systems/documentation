@@ -1,7 +1,7 @@
 ---
 title: Front End Performance
 description: Learn how to ace an online speed test with Pantheon's Global CDN.
-tags: [siteintegrations, moreguides]
+tags: [siteintegrations]
 categories: []
 type: guide
 image: CDN-speedTest-docs-guide
@@ -16,6 +16,12 @@ contributors:
   - dts
 ---
 Nobody likes a slow site. In this guide we’ll explore how to speed up front end performance to ensure that visitors to your site stay engaged and have the best experience.  
+
+<div class="enablement">
+ <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Agency DevOps Training</h4></a>
+ <p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
+</div>
+
 
 There are many different ways to measure page speed and performance. This guide will be tuning for the metrics set forth by [Google's mobile speed test](https://testmysite.thinkwithgoogle.com/){.external}:
 
@@ -380,19 +386,12 @@ If you want to make the number of files as low as possible, try [Advanced Aggreg
   </div>
 </div>
 
-<div class="alert alert-info">
+<div markdown="1" class="alert alert-info">
   <h4 class="info">Note</h4>
-  <p markdown="1">
-  The Pantheon Global CDN includes support for HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.<br>
-
-  It has been long speculated that with the rise of ubiquitous HTTP/2, the recommendation for aggregating CSS files will go away. In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP2 connection would be more performant than aggregated files.<br>
-
-
-  In our testing, the behavior is not so clean. If you have a site that performs better with aggregation off, please send us your waterfall graph and we will consider updating this guidance.<br>
-
-
-  We also expect that this recommendation could change if our underlying Global CDN architecture adds Brotli and QUIC (or equivalent enhancements).
-  </p>
+The Pantheon Global CDN includes support for HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.<br/><br/>
+It has been long speculated that with the rise of ubiquitous HTTP/2, the recommendation for aggregating CSS files will go away. In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP2 connection would be more performant than aggregated files.<br/><br/>
+In our testing, the behavior is not so clean. If you have a site that performs better with aggregation off, please send us your waterfall graph and we will consider updating this guidance.<br/><br/>
+We also expect that this recommendation could change if our underlying Global CDN architecture adds Brotli and QUIC (or equivalent enhancements).<br/><br/>
 </div>
 
 ### Make Assets as Small as Possible
