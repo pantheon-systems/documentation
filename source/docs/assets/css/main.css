@@ -5462,7 +5462,7 @@ div.navsearch-container {
   color: #333;
 }
 .flex-panel-item-guides-landing {
-  flex: 1;
+  flex: 1 48%;
   margin: 0px 0px 15px 15px;
   color: #333;
 }
@@ -5687,4 +5687,15 @@ hr.source-code::after {
     letter-spacing: 1px;
     content: "Source";
     margin-top: 10px;
+}
+.no-border {
+  border: none!important;
+}
+.pop-desc {
+  font-size: smaller;
+  color: gray;
+  margin-top:-30px;
+}
+.cdn-map-container {
+  background-color: #313945;
 }

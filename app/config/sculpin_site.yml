@@ -5,7 +5,7 @@ title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
 site_url: https://pantheon.io
-assets_version: 10.11
+assets_version: 10.12
 
 #######################################################################################################
 # The contributors. Include your info here, under the "contributors" key, using the following template:
@@ -274,3 +274,15 @@ contributors:
     bio: API, Cloud & Integration Expert
     avatar: //avatars3.githubusercontent.com/u/192050
     github: //github.com/LukasRos
+  dgorton:
+    name: Drew Gorton
+    twitter: dgorton
+    bio: Director, Agency and Community Outreach
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/d0d17cbd-a445-4a69-bdc7-62b39bb90069.jpeg
+    github: //github.com/dgorton
+  dts:
+    name: David Strauss
+    twitter: DavidStrauss
+    bio: CTO & Co-Founder
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/david_0.jpg
+    github: //github.com/davidstrauss

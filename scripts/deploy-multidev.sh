@@ -54,7 +54,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
   # Update CTA edit link so that the current branch is used
-  sed -i '36s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
+  sed -i '40s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
   sed -i '38s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
   sed -i '29s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
   sed -i '31s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
