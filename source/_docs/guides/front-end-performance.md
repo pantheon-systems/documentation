@@ -76,7 +76,7 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
 Pantheon is designed to store cached copies of the full HTML pages coming out of Drupal and WordPress core by default. If non-logged in visitors to your site are not getting a near-instant delivery of HTML from the cache in our Global CDN, something is wrong. Full page cache depends on the HTTP Headers coming out of your site.
 
 ### Review Response Caching
-The following describes the expected cache behavior for sites running the Pantheon Advance Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external} or [module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external}. If you find that your page is not served from cache with similar headers and values, examine the response using Google's Developer tools and consult the next section for common cache busters and potential culprits.
+The following describes the expected cache behavior for sites running the Pantheon Advance Page Cache [WordPress plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external} or [Drupal module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external}. If you find that your page is not served from cache with similar headers and values, examine the response using Google's Developer tools and consult the next section for common cache busters and potential culprits.
 
 <dt>age</dt>
 <dd markdown="1">The number of seconds cache has been available to serve the request. Any number greater than zero indicates that this response was served to the browser from cache.</dd>
