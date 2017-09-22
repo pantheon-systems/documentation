@@ -30,11 +30,10 @@ There are many different ways to measure page speed and performance. This guide 
 - Compress Images
 - Deliver Efficient CSS and JavaScript
 - Avoid Redirects
-- Leverage Browser Caching
 
 ![Acing Google's speed test](/source/docs/assets/images/guides/front-end-performance/ace-it.png)
 
-## Quick Response Time
+## Reduce Server Response Time
 The amount of time it takes for a site to respond, **Time To First Byte** (TTFB), along with the time it takes a page to render meaningful content above the fold, **Time To First Paint** (TTFP), are both proven factors for Google's page rankings. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds.
 
 Of course, there's much more to Google's ranking than just these two aspects but if a page falls down even one or two ranks you start to see drastic hits to CTR and conversion rates. People leave your site, and most aren't likely to come back.
@@ -74,7 +73,7 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
 </div>
 </div>
 
-Each POP is like a footprint in the digital neighborhood of the person browsing the site, caching not only the resources (e.g., CSS and JavaScript) needed to render the page, but also the page's final HTML output to the browser. Going to the closest physical POP to serve a request means the visitor doesn't have to wait as long to see the first meaningful paint.
+Each POP caches all the resources (e.g., CSS and JavaScript) needed to render the page, including the HTML output. Using the closest physical POP to serve a request means the visitor doesn't have to wait as long to see the first meaningful paint (TTFP).
 
 ### Full Page Caching
 
@@ -304,7 +303,7 @@ Ask the designers on your team if any of the elements intended to be loaded as i
 Social sharing links are often good candidates here and are freely available in packs, such as Ridiculously Responsive Social Sharing Buttons for [WordPress](https://wordpress.org/plugins/rrssb/){.external} or [Drupal](https://www.drupal.org/project/rrssb){.external}.
 
 ### Lazy Load Images
-Lazy loading images is a method, implemented via JavaScript, that saves both server bandwidth and lowers load times of your site by delaying the loading of images in the browser until they appear in the viewport.
+Lazy loading images is a JavaScript technique that saves bandwidth and lowers load times by delaying the loading of images until they appear in the viewport. 
 
 Try the [BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/){.external} plugin for WordPress and the [Image Lazyloader](https://www.drupal.org/project/lazyloader){.external} module for Drupal.
 
@@ -316,7 +315,7 @@ One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that t
 Use this new HTML tag to define a size attribute appropriate for the given layout at a particular screen-size.
 
 ### Send Only as Many Bytes as Needed
-Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option.
+Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option to do so.
 
 The Pantheon Global CDN does not offer image optimization as a feature, but sites that rely on a third-party CDN service provider might have the option of smushing at the CDN level.
 
@@ -330,7 +329,7 @@ Loading everything separately and early in the page rendering process ensures th
 Fully optimizing all of the JavaScript and CSS on an already-built site is usually more work than can be done in one sitting. Though there are some easy wins that you should make sure you are getting.
 
 ### Load Only What is Needed
-Many sites load CSS and JavaScript files not used on the given page and not used on any page. Look at your theme and remove custom scripts or styles not being used anywhere.
+Many sites load CSS and JavaScript files not used on the given page and not used on any page. Look at your theme and remove unused scripts or styles.
 
 To load custom scripts and styles only on relevant pages, use the appropriate APIs of Drupal and WordPress:
 
@@ -420,7 +419,7 @@ In our testing, HTTP/2 makes disaggregated files much faster than they were befo
 </div>
 
 ### Make Assets as Small as Possible
-In addition to making as few requests as possible to load styling and scripts, the loaded files should be as small as possible. Both Drupal's Advanced Aggregation and WordPress' Autoptimize have options for further minifying or "uglifying" your CSS and Javascript.
+In addition to making as few requests as possible to load styling and scripts, the loaded files should be as small as possible. Both Drupal's [Advanced Aggregation](https://www.drupal.org/project/advagg){.external} and WordPress' [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} have options for further minifying or "uglifying" your CSS and Javascript.
 
 #### Local Minification
 Many of us have a build step, for tasks like compiling Sass, as part of our development workflow. Adding a minification step when generating resources is easy. For CSS use [CSSNano](https://github.com/ben-eb/cssnano){.external} and for JavaScript use [UglifyJS](https://github.com/mishoo/UglifyJS2){.external} or [Closure Compiler](https://developers.google.com/closure/compiler/){.external}.
@@ -434,19 +433,19 @@ WordPress and Drupal option have core API's for declaring whether an asset shoul
 
 Similarly Drupal has the concept of `scope` for header and footer. For a detailed look at how Drupal works under the hood, take a look at this [blog post from Lullabot](https://www.lullabot.com/articles/javascript-aggregation-in-drupal-7){.external}.
 
-While you can use those core APIs directly to move load files as late as possible, Drupal's Advanced Aggregation and WordPress' Autoptimize make it easy to do this task without custom code.
+While you can use those core APIs directly to move load files as late as possible, Drupal's [Advanced Aggregation](https://www.drupal.org/project/advagg){.external} and WordPress' [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} make it easy to do this task without custom code.
 
 #### Defer and Async Script Attributes
 For JavaScript, we suggest deferring as much as possible until after the `onload` DOM event has completed so rendering isn't blocked. Whatever script cannot be deferred should be loaded asynchronously so the page rendering continues without interruption.
 
-For more details on these script attributes, see [this article by Daniel Imms](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html){.external}.
+For more details on the `<script async>` and `<script defer>` attributes, see [this article by Daniel Imms](http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html){.external}.
 
 ### Load the Critical Pieces as Early as Possible
 For some CSS styles it is not sensible to load them after the first HTML rendering. Without some styling your site may look bad. Inlining critical CSS means finding the CSS rules that will be used by the top of your webpage and including those rules in the same HTML response that first comes back from the server (rather than in a separate style sheet). This means the browser doesn't have to wait for an additional request to start applying styles.
 
-You can identify critical styles for your above-the-fold content using a tool like [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/){.external} and then again use Drupal's Advanced Aggregation module and WordPress' Autoptimize plugin to load the critical styles within the HTML.
+You can identify critical styles for your above-the-fold content using a tool like [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/){.external} and then again use Drupal's [Advanced Aggregation](https://www.drupal.org/project/advagg){.external} module and WordPress' [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} plugin to load the critical styles within the HTML.
 
-Be careful with this technique because you are making a tradeoff. By making every single HTML response include inline styles you make that initial response be a larger amount of data to load. This slight slowdown in initial loading is totally acceptable as long as it is slight. Having the bulk of your CSS in separate files means those files can be cached by the browser. If all of the CSS rules moved from separate files to inline then none of your CSS would be cached by the browser and performance would suffer.
+Be careful with this technique because you are making a tradeoff. By making every single HTML response include inline styles you make that initial response be a larger amount of data to load. This slight slowdown in initial loading is acceptable as long as it is slight. Having the bulk of your CSS in separate files means those files can be cached by the browser. If all of the CSS rules moved from separate files to inline then none of the CSS would be cached by the browser and performance would suffer.
 
 ### Load Resources Once
 While a CDN can bring resources closer to the browser, there's no faster cache than the one in the browser itself. However unlike a CDN, it's not possible to directly invalidate browser caches. We recommend the following techniques to achieve maximum browser caching:
