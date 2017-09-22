@@ -14,6 +14,7 @@ contributors:
   - dwayne
   - dgorton
   - dts
+  - davidneedham
 ---
 Nobody likes a slow site. In this guide we’ll explore how to speed up front end performance to ensure that visitors to your site stay engaged and have the best experience.  
 
@@ -134,8 +135,7 @@ wp-resetpass-[A-Za-z0-9_]+
 (wp_)?woocommerce[A-Za-z0-9_-]+
 ```
 
-You can see the cookies used on your site by going to the "Application" tab under Chrome's Developer Tools.
-
+You can see the cookies used on your site by going to the "Application" tab under Chrome's Developer Tools:
 ![Chrome cookies](/source/docs/assets/images/guides/front-end-performance/chrome-cookies.jpg)
 
 #### Unintentional Cache Invalidation
