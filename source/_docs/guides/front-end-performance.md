@@ -80,10 +80,13 @@ The following describes the expected cache behavior for sites running the Panthe
 
 <dt>age</dt>
 <dd markdown="1">The number of seconds cache has been available to serve the request. Any number greater than zero indicates that this response was served to the browser from cache.</dd>
+<br />
 <dt>cache-control</dt>
 <dd markdown="1">This header should include a `max-age` that is the maximum number of seconds that the cache can be kept.</dd>
+<br />
 <dt>surrogate-key-raw</dt>
 <dd>Metadata including the the content IDs for what was displayed on this page. This metadata instructs this page to be cleared from cache when any of those posts are saved again.</dd>
+<br />
 <dt>x-served-by</dt>
 <dd>This header indicates which POP your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you're physically located in Austin you will also see DFW, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Dallas.</dd>
 
