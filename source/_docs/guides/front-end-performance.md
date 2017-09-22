@@ -313,7 +313,7 @@ Images might be expected to grow and shrink by large amounts according to device
 
 One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that the older `<img>` tag did not. Drupal 8 and WordPress core support this tag by default. Drupal 7 support has been backported to the [Picture](https://www.drupal.org/project/picture){.external} module.
 
-Use this new HTML tag to define a size attribute appropriate for the given layout at a particular screen-size.
+Use this new [HTML Tag](https://www.w3schools.com/tags/tag_picture.asp){.external} to define a size attribute appropriate for the given layout at a particular screen-size.
 
 ```php
   <picture>
