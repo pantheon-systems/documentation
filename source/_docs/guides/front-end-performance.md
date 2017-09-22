@@ -40,7 +40,7 @@ The amount of time it takes for a site to respond, **Time To First Byte** (TTFB)
 Of course, there's much more to Google's ranking than just these two aspects but if a page falls down even one or two ranks you start to see drastic hits to CTR and conversion rates. People leave your site, and most aren't likely to come back.
 
 ### Pantheon's Global CDN
-Reduce page rendering speeds from seconds to sub-seconds by caching content _and_ resources alike across 40+ points of presence (POPs) on Pantheon's Global CDN. Each POP is like a footprint in the digital neighborhood of the person browsing the site, caching not only the resources (e.g., CSS and JavaScript) needed to render the page, but also the page's final HTML output to the browser. Going to the closest physical POP to serve a request means the visitor doesn't have to wait as long to see the first meaningful paint.
+Reduce page rendering speeds from seconds to sub-seconds by caching content _and_ resources alike across 40+ points of presence (POPs) on Pantheon's Global CDN.
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
@@ -73,6 +73,8 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
 <p class="pop-desc">Auckland, Brisbane, Melbourne, Perth, Sydney, Wellington</p>
 </div>
 </div>
+
+Each POP is like a footprint in the digital neighborhood of the person browsing the site, caching not only the resources (e.g., CSS and JavaScript) needed to render the page, but also the page's final HTML output to the browser. Going to the closest physical POP to serve a request means the visitor doesn't have to wait as long to see the first meaningful paint.
 
 ### Full Page Caching
 
