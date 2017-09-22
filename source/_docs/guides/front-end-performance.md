@@ -188,8 +188,8 @@ $form['#cache'] = ['max-age' => 0];
   </div>
 </div>
 
-#### Lost or Forgotten Configuration
-Working across many environments in a distributed manner such as Pantheon presents opportunity for configuration to get lost along the way. Using tools like WP-CFM and Drupal 8's Configuration Management System to track configuration alongside code will mitigate these issues, but mistakes do happen. Double-check your site's default caching configurations:
+#### Incorrect Configuration
+Working across many environments presents opportunities for configuration changes to get lost or for configurations to never be set correctly in the first place. Using tools like [WP-CFM](https://wordpress.org/plugins/wp-cfm/){.external} and Drupal 8's [Configuration Management System](https://www.drupal.org/docs/8/configuration-management/managing-your-sites-configuration){.external} to track configuration alongside code will mitigate these issues, but mistakes do happen. Double-check your site's default caching configurations:
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
