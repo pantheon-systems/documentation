@@ -35,7 +35,9 @@ There are many different ways to measure page speed and performance. This guide 
 ![Acing Google's speed test](/source/docs/assets/images/guides/front-end-performance/ace-it.png)
 
 ## Quick Response Time
-The amount of time it takes for a site to respond, **Time To First Byte** (TTFB), along with the time it takes a page to render meaningful content above the fold, **Time To First Paint** (TTFP), are both proven factors for Google's page rankings. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds. Of course, there's much more to Google's ranking than just these two aspects but if a page falls down even one or two ranks you start to see drastic hits to CTR and conversion rates. People leave your site, and most aren't likely to come back.
+The amount of time it takes for a site to respond, **Time To First Byte** (TTFB), along with the time it takes a page to render meaningful content above the fold, **Time To First Paint** (TTFP), are both proven factors for Google's page rankings. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds. 
+
+Of course, there's much more to Google's ranking than just these two aspects but if a page falls down even one or two ranks you start to see drastic hits to CTR and conversion rates. People leave your site, and most aren't likely to come back.
 
 ### Pantheon's Global CDN
 Reduce page rendering speeds from seconds to sub-seconds by caching content _and_ resources alike across 40+ points of presence (POPs) on Pantheon's Global CDN. Each POP is like a footprint in the digital neighborhood of the person browsing the site, caching not only the resources (e.g., CSS and JavaScript) needed to render the page, but also the page's final HTML output to the browser. Going to the closest physical POP to serve a request means the visitor doesn't have to wait as long to see the first meaningful paint.
@@ -135,7 +137,7 @@ wp-resetpass-[A-Za-z0-9_]+
 (wp_)?woocommerce[A-Za-z0-9_-]+
 ```
 
-You can see the cookies used on your site under the "Application" tab in Chrome's Developer Tools.
+You can see the cookies used on your site under the **Application** tab in Chrome's Developer Tools.
 
 #### Unintentional Cache Invalidation
 Try to walk yourself through the content rendering tree, considering any custom or contrib code that may be affecting the directives set in the HTTP headers of a response.
