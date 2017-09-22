@@ -205,7 +205,7 @@ Working across many environments in a distributed manner such as Pantheon presen
 <div class="tab-content">
   <!-- Active pane content -->
   <div role="tabpanel" class="tab-pane active" id="wp-config-get" markdown="1">
-  The Pantheon Page Cache plugin is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL and max-age:
+  The Pantheon Page Cache plugin is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
 
   1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
   2. Review the Time to Live, which translates to `max-age`.
