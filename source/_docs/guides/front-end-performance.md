@@ -315,6 +315,13 @@ One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that t
 
 Use this new HTML tag to define a size attribute appropriate for the given layout at a particular screen-size.
 
+```php
+  <picture>
+      <source srcset="small.jpg" media="(max-width: 768px)">
+      <source srcset="normal.jpg">
+      <img srcset="normal.jpg" alt="Default Image Size">
+  </picture>
+```
 ### Send Only as Many Bytes as Needed
 Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option.
 
