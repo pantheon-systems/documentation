@@ -312,8 +312,15 @@ Images might be expected to grow and shrink by large amounts according to device
 
 One of the newer HTML5 tags, `<picture>`, addresses this scenario in ways that the older `<img>` tag did not. Drupal 8 and WordPress core support this tag by default. Drupal 7 support has been backported to the [Picture](https://www.drupal.org/project/picture){.external} module.
 
-Use this new HTML tag to define a size attribute appropriate for the given layout at a particular screen-size.
+Use this new [HTML Tag](https://www.w3schools.com/tags/tag_picture.asp){.external} to define a size attribute appropriate for the given layout at a particular screen-size.
 
+```php
+  <picture>
+      <source srcset="small.jpg" media="(max-width: 768px)">
+      <source srcset="normal.jpg">
+      <img srcset="normal.jpg" alt="Default Image Size">
+  </picture>
+```
 ### Send Only as Many Bytes as Needed
 Resizing an image so that you only send 200x200 pixels instead of 4000x4000 is a good start. The next step is ensuring that the file containing those 200 pixels is as small as it could possibly be without reducing the image quality. This task is commonly called "smushing" and unfortunately there is not a great native PHP option to do so.
 
