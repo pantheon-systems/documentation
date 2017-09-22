@@ -135,8 +135,7 @@ wp-resetpass-[A-Za-z0-9_]+
 (wp_)?woocommerce[A-Za-z0-9_-]+
 ```
 
-You can see the cookies used on your site by going to the "Application" tab under Chrome's Developer Tools:
-![Chrome cookies](/source/docs/assets/images/guides/front-end-performance/chrome-cookies.jpg)
+You can see the cookies used on your site under the "Application" tab in Chrome's Developer Tools.
 
 #### Unintentional Cache Invalidation
 Try to walk yourself through the content rendering tree, considering any custom or contrib code that may be affecting the directives set in the HTTP headers of a response.
