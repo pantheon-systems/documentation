@@ -283,15 +283,15 @@ There are toolbars for both Drupal and WordPress that provide stats like the num
   ![Debug Bar WordPress](/source/docs/assets/images/guides/front-end-performance/debug-bar.png)
   </div>
 
-  <!-- 2nd pane content -->
+<!-- 2nd pane content -->
   <div role="tabpanel" class="tab-pane" id="drupal-helpers" markdown="1">
-  Download and enable modules from the `devel` package:
+  The `webprofiler` module is provided by [Devel](https://www.drupal.org/project/devel){.external} and generates a helpful toolbar at the bottom which can dig into performance and caching behaviors.
 
   ![Devel Drupal](/source/docs/assets/images/drupal8-commandline--webprofiler.png)
-
-  You can read more about this package of modules on [drupal.org](https://www.drupal.org/project/devel){.external}.
+  
   </div>
 </div>
+
 
 For debugging deep and complex server-side performance problems you might need to run your site locally with profiler like [Blackfire](https://blackfire.io/){.external}.
 
