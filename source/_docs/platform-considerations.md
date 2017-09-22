@@ -139,6 +139,10 @@ For details, see [Using PHP as an htaccess Alternative](/docs/htaccess).
 
 Pantheon does not currently support modifying the nginx.conf per site, as we run a highly tuned universal configuration file.  All of the containers run a standard profile, and we have opted to keep this configuration to keep the nginx.conf lean.
 
+## Database Stored Procedures
+
+MySQL stored procedures are not supported on the platform. Due to the nature of the platform, there is no guarantee that they will  persist or saved following a database migration. You can avoid use of stored procedure by using parameterized queries or Object Relational Mapping.
+
 ## Oracle Database Drivers
 
 Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
