@@ -35,7 +35,7 @@ There are many different ways to measure page speed and performance. This guide 
 ![Acing Google's speed test](/source/docs/assets/images/guides/front-end-performance/ace-it.png)
 
 ## Quick Response Time
-The amount of time it takes for a site to respond, **Time To First Byte** (TTFB), along with the time it takes a page to render meaningful content above the fold, **Time To First Paint** (TTFP), are both proven factors for Google's page rankings. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds. 
+The amount of time it takes for a site to respond, **Time To First Byte** (TTFB), along with the time it takes a page to render meaningful content above the fold, **Time To First Paint** (TTFP), are both proven factors for Google's page rankings. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds.
 
 Of course, there's much more to Google's ranking than just these two aspects but if a page falls down even one or two ranks you start to see drastic hits to CTR and conversion rates. People leave your site, and most aren't likely to come back.
 
@@ -216,17 +216,15 @@ Working across many environments in a distributed manner such as Pantheon presen
 
   <!-- 2nd pane content -->
   <div role="tabpanel" class="tab-pane" id="drupal-config-get" markdown="1">
-In Drupal it is very easy to turn off page caching and forget to turn it back on. Use [Terminus](/docs/terminus/) to check and edit caching configurations:
+In Drupal it is very easy to turn off page caching and forget to turn it back on.
 
-```
-terminus drush <site>.<env> -- config-get system.performance
-```
+1. Navigate to **Configuration** > **Development** > **Performance** within Drupal's Admin Interface.
+2. Review **Page cache maximum age**:
 
-If you notice a configuration needs to be changed, use `config-edit` for example:
+![Drupal Performance settings](/source/docs/assets/images/guides/front-end-performance/d8-cache.png)
 
-```
-terminus drush <site>.<env> -- config-set system.performance css.preprocess 1
-```
+The Drupal 8 default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
+
   </div>
 </div>
 
@@ -288,7 +286,7 @@ There are toolbars for both Drupal and WordPress that provide stats like the num
   The `webprofiler` module is provided by [Devel](https://www.drupal.org/project/devel){.external} and generates a helpful toolbar at the bottom which can dig into performance and caching behaviors.
 
   ![Devel Drupal](/source/docs/assets/images/drupal8-commandline--webprofiler.png)
-  
+
   </div>
 </div>
 
