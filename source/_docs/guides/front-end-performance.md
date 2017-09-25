@@ -19,7 +19,7 @@ contributors:
 Nobody likes a slow site. In this guide we’ll explore how to speed up front end performance to ensure that visitors to your site stay engaged and have the best experience.  
 
 <div class="enablement">
- <a href="https://pantheon.io/agencies/learn-pantheon?docs"><h4 class="info">Agency DevOps Training</h4></a>
+  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
  <p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
 </div>
 
@@ -303,7 +303,7 @@ Ask the designers on your team if any of the elements intended to be loaded as i
 Social sharing links are often good candidates here and are freely available in packs, such as Ridiculously Responsive Social Sharing Buttons for [WordPress](https://wordpress.org/plugins/rrssb/){.external} or [Drupal](https://www.drupal.org/project/rrssb){.external}.
 
 ### Lazy Load Images
-Lazy loading images is a JavaScript technique that saves bandwidth and lowers load times by delaying the loading of images until they appear in the viewport. 
+Lazy loading images is a JavaScript technique that saves bandwidth and lowers load times by delaying the loading of images until they appear in the viewport.
 
 Try the [BJ Lazy Load](https://wordpress.org/plugins/bj-lazy-load/){.external} plugin for WordPress and the [Image Lazyloader](https://www.drupal.org/project/lazyloader){.external} module for Drupal.
 
