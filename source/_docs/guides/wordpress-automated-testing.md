@@ -6,7 +6,7 @@ categories: []
 type: guide
 permalink: docs/guides/:basename/
 deprecated: true
-deprecatednote: This guide uses a repository that is no longer maintained. While it remains available for historical reference, you should not attempt to follow it with a new site.
+deprecatednote: This guide is deprecated and no longer maintained or supported. You are welcome to submit contributions if you have additional insight, however we've switched to using <a href="https://github.com/paulgibbs/behat-wordpress-extension/" class="external">WordHat</a> for Behat testing in our newly created <a href="https://github.com/pantheon-systems/example-wordpress-composer" class="external">WordPress Composer Example Repo</a>.
 contributors:
   - ari
 date: 3/31/2015

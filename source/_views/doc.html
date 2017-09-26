@@ -15,10 +15,10 @@
   {% if page.deprecated %}
   <div class="row" style="margin-bottom:15px;">
     <div class="col-md-12">
-      <div id="deprecatedoutter" class="alert depbar" role="alert" style="border: 1px solid #B5C0C3;border-radius: 4px;">
-
-       <h3 class="depbar">Deprecated</h3>
-       <p class="depbar">{{page.deprecatednote}}</p>
+      <div id="earlyaccessoutter" class="alert depbar alert-dismissible" role="alert" style="border-radius: 4px;">
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close" data-original-title="" title=""><span aria-hidden="true">×</span></button>
+       <h3 class="depbar">Deprecated Doc</h3>
+       <p class="depbar">{{page.deprecatednote | raw }}</p>
      </div>
     </div>
   </div>
