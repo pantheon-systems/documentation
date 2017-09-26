@@ -1,10 +1,12 @@
 ---
 title: Automated Testing for WordPress with Behat
-description: Understand how to use Behat to write automated tests for your Pantheon WordPress Drupal or WordPress sites.
+description: DEPRECATED - Understand how to use Behat to write automated tests for your Pantheon WordPress Drupal or WordPress sites.
 tags: [siteintegrations, moreguides]
 categories: []
 type: guide
 permalink: docs/guides/:basename/
+deprecated: true
+deprecatednote: This guide is deprecated and no longer maintained or supported. You are welcome to submit contributions if you have additional insight, however we've switched to using <a href="https://github.com/paulgibbs/behat-wordpress-extension/" class="external">WordHat</a> for Behat testing in our newly created <a href="https://github.com/pantheon-systems/example-wordpress-composer" class="external">WordPress Composer Example Repo</a>.
 contributors:
   - ari
 date: 3/31/2015
@@ -177,7 +179,7 @@ After seeing that the test failed, I visited the home page and realized it was b
 ```nohighlight
 terminus wp <site>.<env> -- core install --url=https://test-withrobots.pantheonsite.io \
                            --title="Test With Robots" \
-                           --admin_user=admin --admin_password=something_incredibly_secure \  
+                           --admin_user=admin --admin_password=something_incredibly_secure \
                            --admin_email=test@example.com
 ```
 I get the following output:

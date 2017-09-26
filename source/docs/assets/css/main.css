@@ -3729,6 +3729,22 @@ p.devbar>a{
 p.devbar>a:hover{
   opacity: 0.65;
 }
+.depbar {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  border-radius: 0px;
+}
+.depbar h3, .depbar p {
+  color: #8a6d3b;
+  margin-top: 10px;
+}
+p.depbar>a{
+  color:#8a6d3b!important;
+  font-weight:bolder!important;
+}
+p.depbar>a:hover{
+  opacity: 0.65;
+}
 #earlyaccessoutter {
   padding: 25px;
   margin-bottom: 30px;
