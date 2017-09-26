@@ -5,77 +5,55 @@ tags: [addons, siteintegrations]
 categories: [drupal8]
 contributors: [peter-pantheon]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
-
-This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with Drupal.
+[Apache Solr](/docs/solr) is a system for indexing and searching site content.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
 </div>
 
-## Install Solr on Drupal 8
+## Before You Begin
+Be sure that you:
 
-### Apply Upstream Updates
-Use [one-click updates](/docs/upstream-updates) to make sure you are running the latest version of Drupal core.
+* Enable Solr in the Pantheon Site Dashboard: **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
+* Install [Composer](https://getcomposer.org/){.external}
+* Create a Composer managed site on Pantheon following the [Build Tools](/docs/guides/build-tools/) guide
+
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p markdown="1">Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) guide. Since one module relies on [Solarium](http://www.solarium-project.org/){.external}, an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750){.external}.</p>
+</div>
+
+## Install Solr on Drupal 8
 
 ### Install the Search API Pantheon Module
 
-[Search API Pantheon](https://www.drupal.org/project/search_api_pantheon) is a contributed module supported by Pantheon that interfaces with Pantheon's Solr service. This module may be in beta, but you can use it.
-
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Manual Install</a></li>
-
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Composer</a></li>
-
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-
-1.  The Search API Pantheon Module requires the [Solarium](http://www.solarium-project.org/) PHP library. Refer to [Drupal's documentation](https://www.drupal.org/docs/8/modules/libraries-api-8x/installing-an-external-library-that-is-required-by-a-contributed) if you're unfamiliar with adding external libraries to Drupal.
-
-2.  [Install](/docs/cms-admin/#install-a-new-module) the [Search API Pantheon Module](https://www.drupal.org/project/search_api_pantheon) from the Drupal admin interface.
-
-  </div>
-
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
-If your site is built using the methodologies described in our [Build Tools](https://pantheon.io/docs/guides/build-tools/) guide, you can use the steps below to add the Search API Pantheon Module and [Solarium](http://www.solarium-project.org/) library to your build dependencies. Solarium is a Solr client library for PHP and is not Drupal-specific.
-
-1.  Run the following command from within the site's root directory to register Drupal.org as a provider of Composer packages:
+1. Navigate to the project's root directory on your local, then checkout a new branch from master:
 
     ```
-    composer config repositories.drupal composer https://packages.drupal.org/8
+    git checkout -b solr master
     ```
 
-2.  Next, require the Search API Pantheon module:
+2.  Add the Search API Pantheon module as a required dependency:
 
     ```
     composer require "drupal/search_api_pantheon ~1.0" --prefer-dist
     ```
 
-3.  You should now have the Search API Pantheon module installed along with it's dependencies. Commit the changes and push to Pantheon.
+3.  You should now have the Search API Pantheon module installed along with it's dependencies. Run `git status` to make sure you see the expected result (only two files modified). Commit the changes to `composer.json` and `composer.lock` and push to GitHub:
 
     ```
-    git add .
-    git commit -m "Require drupal/search_api_pantheon ~1.0"
-    git push origin master
+    git commit -am "Require drupal/search_api_pantheon ~1.0"
+    git push origin solr
     ```
 
-  </div>
-
-</div>
+    ![Require search API output](/source/docs/assets/images/composer-require-search_api_pantheon.png)
 
 
+4.  Return to GitHub and compare your feature branch against `master`. The remaining sections should be completed on the Multidev environment created as part of the PR's build process. Once configured, export the code and deploy as described in [Build Tools](/docs/guides/build-tools/).
 
 ## Configure Solr
-To configure the connection with Pantheon, set the [site's connection mode](/docs/sftp/#sftp-mode) to SFTP and complete the following on the Dev environment:
+To configure the connection with Pantheon, set the [connection mode](/docs/sftp/#sftp-mode) to SFTP and complete the following on the Multidev environment:
 
 ### Enable Modules
 Enable the Search API Pantheon module via the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-contributed-modules-find-import-enable-configure-drupal-8#enable_your_mod). When prompted, click **Continue** to enable the [Search API](https://www.drupal.org/project/search_api) and [Search API Solr](https://www.drupal.org/project/search_api_solr) modules:
@@ -106,7 +84,7 @@ After adding fields the configuration, make sure the index is full by clicking *
 It is a best practice in Drupal 8 to export your changes to `yml` files. You can quickly export configuration changes via [Terminus](/docs/terminus):
 
 ```
-terminus drush <site>.dev -- config-export -y
+terminus drush <site>.solr -- config-export -y
 ```
 
 ### Search the Index
