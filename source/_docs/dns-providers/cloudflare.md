@@ -81,7 +81,7 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
 ## Restrict Content Based on Geographical Location
 
-If you are using Cloudflare's IP Geolocation feature you will need to read the `CF-IPCountry` header, and set `Vary: CF-IPCountry` on all responses. 
+If you are using Cloudflare's IP Geolocation feature you will need to read the `CF-IPCountry` header and set `Vary: CF-IPCountry` on all responses. 
 
 ## Next Steps
 
