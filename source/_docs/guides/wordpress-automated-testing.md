@@ -1,6 +1,6 @@
 ---
 title: Automated Testing for WordPress with Behat
-description: Understand how to use Behat to write automated tests for your Pantheon WordPress Drupal or WordPress sites.
+description: DEPRECATED - Understand how to use Behat to write automated tests for your Pantheon WordPress Drupal or WordPress sites.
 tags: [siteintegrations, moreguides]
 categories: []
 type: guide
