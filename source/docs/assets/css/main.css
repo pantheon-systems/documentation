@@ -3729,6 +3729,20 @@ p.devbar>a{
 p.devbar>a:hover{
   opacity: 0.65;
 }
+
+#DeprecationHeader
+.depbar {
+  background-color: #c7cacc;
+  border-radius: 0px;
+}
+.depbar h3, .depbar p {
+  color: #000000;
+  margin-top: 10px;
+}
+p.depbar>a:hover{
+  opacity: 0.65;
+}
+
 #earlyaccessoutter {
   padding: 25px;
   margin-bottom: 30px;

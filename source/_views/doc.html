@@ -12,6 +12,17 @@
     </div>
   </div>
   {% endif %}
+  {% if page.deprecated %}
+  <div class="row" style="margin-bottom:15px;">
+    <div class="col-md-12">
+      <div id="deprecatedoutter" class="alert depbar" role="alert" style="border: 1px solid #B5C0C3;border-radius: 4px;">
+
+       <h3 class="depbar">Deprecated</h3>
+       <p class="depbar">{{page.deprecatednote}}</p>
+     </div>
+    </div>
+  </div>
+  {% endif %}
   <div class="row doc-content-well">
     <div id="doc" class="article col-md-9 md-70">
       {% if page.dnsprovider %}

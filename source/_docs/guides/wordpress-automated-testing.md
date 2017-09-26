@@ -5,6 +5,8 @@ tags: [siteintegrations, moreguides]
 categories: []
 type: guide
 permalink: docs/guides/:basename/
+deprecated: true
+deprecatednote: This guide uses a repository that is no longer maintained. While it remains available for historical reference, you should not attempt to follow it with a new site.
 contributors:
   - ari
 date: 3/31/2015
@@ -177,7 +179,7 @@ After seeing that the test failed, I visited the home page and realized it was b
 ```nohighlight
 terminus wp <site>.<env> -- core install --url=https://test-withrobots.pantheonsite.io \
                            --title="Test With Robots" \
-                           --admin_user=admin --admin_password=something_incredibly_secure \  
+                           --admin_user=admin --admin_password=something_incredibly_secure \
                            --admin_email=test@example.com
 ```
 I get the following output:
