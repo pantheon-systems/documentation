@@ -141,7 +141,7 @@ Pantheon does not currently support modifying the nginx.conf per site, as we run
 
 ## Database Stored Procedures
 
-MySQL stored procedures are not supported on the platform. Due to the nature of the platform, there is no guarantee that they will  persist or saved following a database migration. You can avoid use of stored procedure by using parameterized queries or Object Relational Mapping.
+MySQL stored procedures are not supported. Due to the nature of the platform, there is no guarantee that they will  persist following a database migration. You can avoid the use of stored procedures by using parameterized queries or [object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping){.external}.
 
 ## Oracle Database Drivers
 
