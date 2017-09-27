@@ -12,7 +12,7 @@ Pantheon's infrastructure is based on a grid model. We serve our customers by pr
 
 Every environment for your site (Dev, Test, Live) runs on its own container. In the case of a Live site, at the Business level and above you can have [multiple containers](#multiple-application-containers) serving your site.
 ### Idle Containers
-Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. Upon receiving a web request, the environments are spun up, usually within 30 seconds.
+Pantheon containers spin down (sleep) after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. Upon receiving a web request, the environments are spun up, usually within 30 seconds.
 
 Attempts to remotely access services, such as MySQL or SFTP connections, will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/docs/terminus) command:
 <div class="copy-snippet">
