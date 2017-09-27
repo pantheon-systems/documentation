@@ -391,6 +391,16 @@ if (defined( "PANTHEON_BINDING" )) {
 
 <hr>
 
+### [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)
+
+**Issue #1**: This plugin requires write access to a cache folder in `wp-content/cache`, which is not granted on Test and Live environments by design.
+
+**Solution**: Symlink `wp-content/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access)
+
+**Issue #2**: This plugin is using `is_dir` to verfiy the target directory which will return false if the directory is a symlink. This will cause permission error in deleting cache files.
+
+<hr>
+
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
 **Issue**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
