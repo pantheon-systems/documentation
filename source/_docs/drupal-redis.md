@@ -79,6 +79,13 @@ Enable Redis cache server from your Pantheon Site Dashboard by going to **Settin
 
 4. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
 
+
+
+BLahhh balhhh belllllle blee blooo
+
+
+
+
 ### Drupal 7 Sites
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**.
