@@ -5,80 +5,89 @@ tags: [addons, siteintegrations]
 categories: [drupal8]
 contributors: [peter-pantheon]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
-
-This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with Drupal.
+[Apache Solr](/docs/solr) is a system for indexing and searching site content.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
 </div>
 
+## Before You Begin
+Be sure that you:
+
+* Enable Solr in the Pantheon Site Dashboard: **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
+* Install [Composer](https://getcomposer.org/){.external}
+* Create a Composer managed site on Pantheon following the [Build Tools](/docs/guides/build-tools/) guide
+
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p markdown="1">Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) guide. Since one module relies on [Solarium](http://www.solarium-project.org/){.external}, an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750){.external}.</p>
+</div>
+
 ## Install Solr on Drupal 8
 
-### 1. Apply Upstream Updates
-Use [one-click updates](/docs/upstream-updates) to make sure you are running the latest version of Drupal core.
+### Install the Search API Pantheon Module
 
-### 2. Install the Search API Pantheon Module Using Composer
+1. Navigate to the project's root directory on your local computer, then checkout a new branch from master:
 
-[Search API Pantheon](https://www.drupal.org/project/search_api_pantheon) is a contributed module supported by Pantheon that interfaces with Pantheon's Solr service. This module may be in beta, but you can use it.
+    ```
+    git checkout -b solr master
+    ```
 
-Composer is the best way to install this module because this module relies on [Solarium](http://www.solarium-project.org/). Solarium is a Solr client library for PHP and is not Drupal-specific. Run the following command from within the site's root directory to register Drupal.org as a provider of Composer packages:
+2.  Add the Search API Pantheon module as a required dependency:
 
-```
-composer config repositories.drupal composer https://packages.drupal.org/8
-```
+    ```
+    composer require "drupal/search_api_pantheon ~1.0" --prefer-dist
+    ```
 
-Next, require the Search API Pantheon module:
+3.  You should now have the Search API Pantheon module installed along with it's dependencies. Run `git status` to make sure you see the expected result (only two files modified). Commit the changes to `composer.json` and `composer.lock` and push to GitHub:
 
-```
-composer require "drupal/search_api_pantheon ~1.0" --prefer-dist
-```
+    ```
+    git commit -am "Require drupal/search_api_pantheon ~1.0"
+    git push origin solr
+    ```
 
-You should now have the Search API Pantheon module installed along with it's dependencies. Commit the changes and push to Pantheon.
+    ![Require search API output](/source/docs/assets/images/composer-require-search_api_pantheon.png)
 
-```
-git add .
-git commit -m "Require drupal/search_api_pantheon ~1.0"
-git push origin master
-```
 
-### 3. Configure Solr
-To configure the connection with Pantheon, set the [site's connection mode](/docs/sftp/#sftp-mode) to SFTP and complete the following on the Dev environment:
+4.  Return to GitHub and compare your feature branch against `master`. The remaining sections should be completed on the Multidev environment created as part of the PR's build process. Once configured, export the code and deploy as described in [Build Tools](/docs/guides/build-tools/).
 
-#### Enable Modules
+## Configure Solr
+To configure the connection with Pantheon, set the [connection mode](/docs/sftp/#sftp-mode) to SFTP and complete the following on the Multidev environment:
+
+### Enable Modules
 Enable the Search API Pantheon module via the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-contributed-modules-find-import-enable-configure-drupal-8#enable_your_mod). When prompted, click **Continue** to enable the [Search API](https://www.drupal.org/project/search_api) and [Search API Solr](https://www.drupal.org/project/search_api_solr) modules:
 
 
-#### Disable Drupal Core's Search Module (Optional)
+### Disable Drupal Core's Search Module (Optional)
 If you are using Search API, then you probably will not be using Drupal Core's Search module. Uninstall the Search core module from `/admin/modules/uninstall` to avoid confusion in further configuration steps.
 
-#### Add Search Server
+### Add The Search Server
 Navigate to  `/admin/config/search/search-api/add-server` and configure the following, then click **Save**:
 
 * Server name: Pantheon
 * Backend: Solr
 * Solr Connector: Pantheon
-* Schema file: modules/search_api_solr/solr-conf/4.x/schema.xml (recommended)
+* Schema file: `modules/search_api_solr/solr-conf/4.x/schema.xml` (recommended)
 
 
 You can name the server anything you want but using something like "Pantheon" is a good way to remember where the connection goes. The Search API module provides schema files for each version of Solr (4, 5, and 6). You can customize schema files by copying these examples to your own custom module and editing them. If you are just getting started, we recommend selecting the file for Solr 4.
 
-#### Add Search Index
+### Add Search Index
 Navigate to `admin/config/search/search-api/add-index` and name your index, then choose a data source. If this is your first time using Search API, start by selecting **Content** as a data source. This option will index articles, basic pages, and other node types you have configured.
 
 Select **Pantheon** as the server, then click **Save and add fields**. Add fields to be included in the index and click **Done**.
 
 After adding fields the configuration, make sure the index is full by clicking **Index now** or by running cron.
 
-#### Export Configuration
+### Export Configuration
 It is a best practice in Drupal 8 to export your changes to `yml` files. You can quickly export configuration changes via [Terminus](/docs/terminus):
 
 ```
-terminus drush <site>.dev -- config-export -y
+terminus drush <site>.solr -- config-export -y
 ```
 
-#### Search the Index
+### Search the Index
 To actually search your index you will need a module like [Search API Pages](https://www.drupal.org/project/search_api_page), which allows for the configuration of search forms on their own pages.
 
 
