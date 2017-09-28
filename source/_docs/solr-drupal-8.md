@@ -28,7 +28,7 @@ Be sure that you:
 
 ### Install the Search API Pantheon Module
 
-1. Navigate to the project's root directory on your local, then checkout a new branch from master:
+1. Navigate to the project's root directory on your local computer, then checkout a new branch from master:
 
     ```
     git checkout -b solr master
@@ -62,13 +62,13 @@ Enable the Search API Pantheon module via the [Drupal interface](https://www.dru
 ### Disable Drupal Core's Search Module (Optional)
 If you are using Search API, then you probably will not be using Drupal Core's Search module. Uninstall the Search core module from `/admin/modules/uninstall` to avoid confusion in further configuration steps.
 
-### Add Search Server
+### Add The Search Server
 Navigate to  `/admin/config/search/search-api/add-server` and configure the following, then click **Save**:
 
 * Server name: Pantheon
 * Backend: Solr
 * Solr Connector: Pantheon
-* Schema file: modules/search_api_solr/solr-conf/4.x/schema.xml (recommended)
+* Schema file: `modules/search_api_solr/solr-conf/4.x/schema.xml` (recommended)
 
 
 You can name the server anything you want but using something like "Pantheon" is a good way to remember where the connection goes. The Search API module provides schema files for each version of Solr (4, 5, and 6). You can customize schema files by copying these examples to your own custom module and editing them. If you are just getting started, we recommend selecting the file for Solr 4.
