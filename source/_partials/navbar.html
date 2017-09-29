@@ -183,6 +183,34 @@
     window.addEventListener("load", setActivetrail);
   </script>
 {% endif %}
+{% if page.gitwordpress %}
+<script type="text/javascript">
+    function setActivetrail() {
+        aaObj = document.getElementById('manual-guide-toc').getElementsByTagName('a');
+        for(i=0;i<aaObj.length;i++) {
+            if(document.location.href.indexOf(aaObj[i].href)>=0 ){
+                aaObj[i].className='active-trail';
+                if(/\/monitor.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-introduction').removeClass('active-trail');
+                }
+                if(/\/schedule.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-introduction').removeClass('active-trail');
+                }
+                if(/\/notify.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-introduction').removeClass('active-trail');
+                }
+                if(/\/slack.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-introduction').removeClass('active-trail');
+                }
+                if(/\/next-steps.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-introduction').removeClass('active-trail');
+                }
+            }
+        }
+    }
+    window.addEventListener("load", setActivetrail);
+</script>
+{% endif %}
 <script>
 var terminusCompareApp = angular.module('terminusCompareApp', ['ngMaterial']);
 var terminusLatestRelease = angular.module("terminusLatestReleaseApp", ['yaru22.md']);

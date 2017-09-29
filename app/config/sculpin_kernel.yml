@@ -74,3 +74,14 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
+    gitwordpresspages:
+            type: path
+            path: docs/guides/git-wordpress
+            permalink: pretty
+            singular_name: gitwordpresspage
+            enabled: true
+            layout: guide
+            taxonomies:
+                - categories
+                - tags
+                - contributors
