@@ -50,7 +50,7 @@ header("Content-Security-Policy: upgrade-insecure-requests;");
 header("Content-Security-Policy-Report-Only: img-src https:; script-src https: 'unsafe-inline'; style-src https: 'unsafe-inline';");
 ```
 
-Use this as temporary solution while working to fix each problem at it's origin.
+Use this as temporary solution while working to fix each problem at its origin.
 ### Database cleanup
 Use the following techniques to replace insecure references to your domain in the site's database. The result should be that the browser loads pages of your WordPress or Drupal site securely with no warnings.
 
