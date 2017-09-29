@@ -11,9 +11,9 @@ pagination:
 use:
     - gitwordpresspages
 permalink: docs/guides/git-wordpress/adding-media/
-nexturl: guides/build-tools/update-plugins/
-previousurl: guides/build-tools/parent-child-theme/
-editpath: build-tools/04-configure.md
+nexturl: guides/git-wordpress/update-plugins/
+previousurl: guides/git-wordpress/parent-child-theme/
+editpath: git-wordpress/04-configure.md
 ---
 In our theme settings, let’s upload a custom logo. I spent a few days in Photoshop making this one, feel free to save it to your desktop and use it for this guide:
 

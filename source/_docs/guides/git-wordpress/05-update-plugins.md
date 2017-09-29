@@ -10,10 +10,9 @@ pagination:
     provider: data.gitwordpresspages
 use:
     - gitwordpresspages
-permalink: docs/guides/build-tools/update-plugins/
-nexturl: guides/build-tools/tests/
-previousurl: guides/build-tools/adding-media/
-editpath: build-tools/05-update-plugins.md
+permalink: docs/guides/git-wordpress/update-plugins/
+previousurl: guides/git-wordpress/adding-media/
+editpath: git-wordpress/05-update-plugins.md
 ---
 Plugins can be easily updated. As long as the site is in SFTP mode on the dashboard, clicking “Update Now” will download and update the plugins code.
 

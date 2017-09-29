@@ -12,7 +12,7 @@ use:
 permalink: docs/guides/git-wordpress/create-site/
 nexturl: guides/git-wordpress/parent-child-theme/
 previousurl: guides/git-wordpress/
-editpath: build-tools/02-create-site.md
+editpath: git-wordpress/02-create-site.md
 ---
 ## Adding plugins and themes though the WP UI
 
