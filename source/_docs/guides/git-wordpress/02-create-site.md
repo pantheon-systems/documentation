@@ -22,7 +22,7 @@ Now let’s add some plugins. Since we are using SFTP (the extra “S” means �
 
 On the left admin menu, select “Plugins” and “Add New.” 
 
-![Add new plugin](source/docs/assets/images/guides/git-wordpress/add-new-plugin.png)
+![Add new plugin](/source/docs/assets/images/guides/git-wordpress/add-new-plugin.png)
 
 Then enter “WPFormes Lite” into the search bar. When the plugin appears, click “Install.” 
 
