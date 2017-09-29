@@ -79,9 +79,9 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
 7. Repeat this process for the `www` subdomain.
 
-## Restrict Content Based on Geographical Location
+## Restrict Content Based on Geographic Location
 
-If you are using Cloudflare's IP Geolocation feature you will need to read the `CF-IPCountry` header and set `Vary: CF-IPCountry` on all responses. 
+If you're using Cloudflare's IP Geolocation feature, you will need to read the `CF-IPCountry` header and set `Vary: CF-IPCountry` on all responses.
 
 ## Next Steps
 
