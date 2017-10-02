@@ -68,9 +68,12 @@ Open a support chat to enable the upgrade.
 
 ### Full Cache Clearing
 
-There are several ways to clear the entire Global CDN cache for an [environment](/docs/pantheon-workflow/) of a site:
+There are several ways to clear the entire Global CDN cache for any [environment](/docs/pantheon-workflow/) of a site:
 
 * Click the "Clear Caches" button on the Pantheon dashboard.
+
+  ![Clear Cache Button](/source/docs/assets/images/clear-cache-button.png)
+
 * For Drupal 7 and WordPress, enable [Pantheon API integration](/docs/clear-caches/) and use the native CMS functionality (via the CMS dashboard or command-line tools).
 * For all versions of Drupal and WordPress, skip full cache clearing and go right to granular clearing (below).
 
