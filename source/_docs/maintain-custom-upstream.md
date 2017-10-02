@@ -104,7 +104,7 @@ Regardless of what type of update you're preparing for release, you'll want to t
 
 7. Click the **Create Environment** button next to the `core-update` branch.
 
-8. Use this new Multidev environment to evaluate your `core-update` branch. When you're ready to release, merge the branch into master and push to your remote repository on GitHub or Gitbucket.  
+8. Use this new Multidev environment to evaluate your `core-update` branch. When you're ready to release, merge the branch into master and push to your remote repository on GitHub or Bitbucket.  
 
 Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin. For more details, see [Apply Upstream Updates](/docs/upstream-updates).
 
