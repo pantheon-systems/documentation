@@ -28,7 +28,7 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
   </div>
   <div class="flex-panel-item-guides-landing">
       <div class="flex-panel-body-pantheon-workflows">
-      <a href="/docs/guides/front-end-performance/">
+      <a href="/docs/guides/frontend-performance/">
         <div class="pantheon-workflows">
           <img alt="Front End Performance" src="/source/docs/assets/images/CDN-speedTest-docs-guide.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
         <h3>Front End Performance</h3>

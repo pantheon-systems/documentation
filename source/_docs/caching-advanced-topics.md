@@ -22,7 +22,7 @@ This allows users to immediately see comments or changes they've made, even if t
 
 ## Ignoring GET Parameters
 
-For the purpose of optimizing cache hits for identical content, Varnish ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application server. The double-underscore prefix for parameter keys and cookie names is a standard convention used by front-end code to indicate a value that can be safely ignored on the back-end.
+For the purpose of optimizing cache hits for identical content, Varnish ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application server. The double-underscore prefix for parameter keys and cookie names is a standard convention used by frontend code to indicate a value that can be safely ignored on the back-end.
 
 For example, <tt>?__dynamic_id=1234</tt> is ignored, while <tt>?dynamic_id=1234</tt> and <tt>?_dynamic_id</tt> are considered distinct pages.
 
@@ -49,11 +49,11 @@ Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to na
 WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Pantheon Session WordPress plugin") plugin. It is designed to handle the naming properly.
 
 ### Session and Cookie Lifetime
-Pantheon allows developers to control the length of sessions. There are two pieces; the lifetime of the cookie and the lifetime of the session itself.  
+Pantheon allows developers to control the length of sessions. There are two pieces; the lifetime of the cookie and the lifetime of the session itself.
 
-The cookie lifetime is configured using the PHP setting [session.cookie\_lifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime). If set to 0, the cookie is deleted when the user closes their browser. Set to 2,000,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.  
+The cookie lifetime is configured using the PHP setting [session.cookie\_lifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime). If set to 0, the cookie is deleted when the user closes their browser. Set to 2,000,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
 
-Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes%21session.inc/function/_drupal_session_garbage_collection/7) uses the PHP setting [session.gc\_maxlifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime) when deleting expired sessions from the sessions database table. Set to 200,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.  
+Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes%21session.inc/function/_drupal_session_garbage_collection/7) uses the PHP setting [session.gc\_maxlifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime) when deleting expired sessions from the sessions database table. Set to 200,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
 
 For additional details and examples on how to set cookie lifetimes and garbage collection manually, see ​​the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
 
@@ -76,8 +76,8 @@ We recommend handling mobile detection using Responsive Web Design (RWD) techniq
 **Issue**
 Implementing the mobile site on a different domain, subdomain, or subdirectory from the desktop site.
 
-**Recommended Solution**  
-While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. You can simplify things significantly by using responsive web design and serving desktop and mobile on the same URL. **Responsive web design is Google’s recommended configuration.**  
+**Recommended Solution**
+While Google supports multiple mobile site configurations, creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. You can simplify things significantly by using responsive web design and serving desktop and mobile on the same URL. **Responsive web design is Google’s recommended configuration.**
 
 More information on mobile site best practices can be found in the Google official developer documentation:
 
