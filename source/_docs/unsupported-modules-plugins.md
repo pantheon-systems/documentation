@@ -397,7 +397,7 @@ if (defined( "PANTHEON_BINDING" )) {
 
 **Solution**: Symlink `wp-content/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access)
 
-**Issue #2**: This plugin is using `is_dir` to verfiy the target directory which will return false if the directory is a symlink. This will cause permission error in deleting cache files.
+**Issue #2**: This plugin uses `is_dir` to verfiy the target directory, which will return false if the directory is a symlink. This causes a permissions error when deleting cache files.
 
 <hr>
 
