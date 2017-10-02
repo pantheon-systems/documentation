@@ -227,7 +227,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 <hr>
 
 ### [Simple OAuth / OAuth 2.0](https://www.drupal.org/project/simple_oauth)
-**Issue**: The module requires very specific permissions set for the folder and the keys to be uploaded. Using Private or non-standard filepaths won't work. It is not possible to change these in LIVE or TEST environment.
+**Issue**: The module requires a very specific set of permissions for the folder and the keys to be uploaded. Using Private or non-standard filepaths won't work. It is not possible to change these in LIVE or TEST environment.
 
 **Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
 <hr>
