@@ -100,6 +100,9 @@ if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
   }
 }
 ```
+
+This is also a good time to configure [Redirects to HTTPS](/docs/http-to-https/#redirect-to-https-and-the-primary-domain), if desired.
+
 ### Caveats for Creating a Network through WordPress Dashboard
 
 WordPress Site Networks can also be created from the WordPress Dashboard by following the [instructions at the codex](https://codex.wordpress.org/Create_A_Network).
