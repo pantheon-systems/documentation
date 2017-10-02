@@ -29,7 +29,7 @@ This operation writes the Drupal archive to Pantheon's filesystem in a web acces
 
 Click **Continue Migration** and follow all remaining instructions within the guided migration process.
 
-**Be sure to delete the Drupal archive file (`<RANDOM_HASH>.tgz`) from your source site after cloning the site.**
+**Be sure to delete the Drupal archive file (`<RANDOM_HASH>.tgz`) from your source site after cloning the site, using SFTP to access your site's files.**
 
 ### Troubleshooting
 
@@ -60,7 +60,7 @@ If your database and code compressed are less than 256MB you can exclude the fil
  <p>URL Imports have a file size limit of 500MB. If your import fails, download the backup, decompress contents locally, and <a href="/docs/rsync-and-sftp">upload your files directly using rsync or SFTP</a>.</p>
  </div>
 </li></ol>
-10. Be sure to delete the Drupal archive dump file from your source site after cloning the site.
+10. Be sure to delete the Drupal archive dump file from your source site after cloning the site, using SFTP to access your site's file.
 
 #### Drush archive missing code or files
 
