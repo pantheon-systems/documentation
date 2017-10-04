@@ -19,7 +19,7 @@ Replace `'plupload_temporary_uri'` with the applicable module or theme setting u
 
 ```
 if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
-  $conf['plupload_temporary_uri'] = $_SERVER['HOME'] . '/tmp';
+  $conf['plupload_temporary_uri'] ='private://tmp';
 }
 ```
 
@@ -34,7 +34,7 @@ update_option('some_tmp_settings', $_SERVER['HOME'] . '/tmp');
 <p>While this technique can work, it comes with a strong caution. Using the filesystem for <code>/tmp</code> requests is not a fail-safe alternative.</p></div>
 
 ### WordPress
-Create a `tmp/` directory within the `wp-content/uploads/` directory and add the following to `wp-config.php`:  
+Create a `tmp/` directory within the `wp-content/uploads/` directory and add the following to `wp-config.php`:
 
 ```
 define('WP_TEMP_DIR', ABSPATH . 'wp-content/uploads/tmp');
