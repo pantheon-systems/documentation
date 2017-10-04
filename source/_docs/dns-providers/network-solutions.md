@@ -48,7 +48,7 @@ Keep this page open and login to your <a href="https://www.networksolutions.com"
 
 
 ### CNAME Record
-The CNAME record is required if you wish to include `www` within your site's primary domain name.
+A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. In the Host Aliases (CNAME Records) section, click **Edit CNAME Records**.
 2. Enter **www** in the **Alias** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Other Host** field:

@@ -50,7 +50,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 
 
 ### CNAME Record
-The CNAME record is required if you wish to include `www` within your site's primary domain name.
+A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. Within the same section (**Custom resource records**), change the record type from **A** to **CNAME**.
 2. Enter `www` in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
