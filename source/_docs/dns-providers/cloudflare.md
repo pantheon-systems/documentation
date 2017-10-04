@@ -83,6 +83,14 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
 If you're using Cloudflare's IP Geolocation feature, you will need to read the `CF-IPCountry` header and set `Vary: CF-IPCountry` on all responses.
 
+## Troubleshooting
+
+### My website is down with ERR_SSL_VERSION_OR_CIPHER_MISMATCH error message ###
+
+When visiting your site and encounter "This web page is not available", you should see the Error code: *ERR_SSL_VERSION_OR_CIPHER_MISMATCH*. This usually happen if the browser is not able to negotiate a connection with Cloudflare while CDN (Orange Cloud) is enabled. 
+
+To fix this, make sure to disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange) as mentioned in [Option 1](/docs/cloudflare/#configure-dns-records-on-cloudflare) instructions. This way, you are just serving web-pages using the [Pantheon Global CDN](/docs/global-cdn) which is better over-all.
+
 ## Next Steps
 
 * [Launch Essentials: Domains & HTTPS](/docs/guides/launch/domains/)
