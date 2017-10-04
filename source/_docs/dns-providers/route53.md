@@ -47,7 +47,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
   ![Route 53 aaaa records](/source/docs/assets/images/route53-aaaa-records.png)
 
 ### CNAME Record
-The CNAME record is required if you wish to include `www` within your site's primary domain name.
+A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. Click **Create Record Set** to add a new record, then select **CNAME - Canonical name** for the record type.
 2. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon in the **Value** field (e.g. `live-example.pantheonsite.io`)

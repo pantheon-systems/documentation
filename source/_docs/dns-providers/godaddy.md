@@ -49,7 +49,7 @@ Keep this page open and login to your <a href="https://godaddy.com/" target="bla
 5. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
 ### CNAME Record
-The CNAME record is required if you wish to include `www` within your site's primary domain name.
+A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 ![Example CNAME record](/source/docs/assets/images/godaddy-dns-cname-record.png)
 
