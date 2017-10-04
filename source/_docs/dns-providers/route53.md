@@ -29,7 +29,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 3. Leave the **Name** field blank and enter the A record value provided by Pantheon in the **Value** field.
 4. Select desired Time to Live (TTL).
 
-  {% include("ttl.twig") %}a
+  {% include("ttl.twig") %}
 
 5. Click **Create**:
 
