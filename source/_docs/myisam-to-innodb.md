@@ -134,11 +134,11 @@ die(0);</code></pre>
 </div>
 </div>
 
-##Advanced Method via Command Line
+## Advanced Method via Command Line
 
 If you want to run the script from the command line instead of adding it to your codebase, use this script.
 
-###Before You Begin
+### Before You Begin
 
 Make sure you have:
 
@@ -180,7 +180,7 @@ if ($results===false or $mysqli->connect_errno) {
     die(2);
 }
 while ($row= $results->fetch_assoc()) {
-    $sql = "SHOW TABLE STATUS WHERE Name = '{$row['Tables_in_' . $db['database']]'";
+    $sql = "SHOW TABLE STATUS WHERE Name = '{$row['Tables_in_' . $db['database']]}'";
     $thisTable = $mysqli->query($sql)->fetch_assoc();
     if ($thisTable['Engine']==='MyISAM') {
         $sql = "alter table " . $row['Tables_in_' . $db['database']]. " ENGINE = InnoDB;";
