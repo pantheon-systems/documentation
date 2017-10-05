@@ -4,14 +4,14 @@ description: Learn how to use Custom Upstreams to free up developer time.
 tags: [tools, workflow]
 categories: []
 ---
-Custom Upstreams are a feature of a Pantheon organization account, not the individual user account. If you are a digital agency servicing clients, or potentially a reseller of Pantheon as part of a managed solution, you can get started for free with an  organization account via [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies). Custom Upstream access is granted for agencies following [a training workshop](https://pantheon.io/agencies/learn-pantheon?docs).
+Custom Upstreams are a feature of a Pantheon organization account, not the individual user account. If you are a digital agency servicing clients, or a [reseller of Pantheon](/agencies/reseller) as part of a managed solution, you can get started for free with an organization account via [Pantheon for Agencies](/agencies/pantheon-for-agencies). Custom Upstream access is granted for agencies and resellers following [a training workshop](https://pantheon.io/agencies/learn-pantheon?docs).
 
 <div class="enablement">
-  <h4 class="info" markdown="1">[Accelerate Your Workflow](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+  <h4 class="info" markdown="1">[Accelerate Your Workflow](/agencies/learn-pantheon?docs){.external}</h4>
   <p>Improve your agency's development efficiency with custom DevOps training from Pantheon experts.</p>
 </div>
 
-For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) or [Pantheon EDU+](https://pantheon.io/pantheon-edu-plus) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](/pantheon-enterprise) or [Pantheon EDU+](/pantheon-edu-plus) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -25,7 +25,7 @@ Custom Upstreams act as a scaffold for new sites, allowing developers and site o
 
 Instead of repeating the same technical work on each individual site, you can build and maintain a common user interface with unified branding and functionality once, in a single source.
 
-> Learn how the web team at Weill Cornell Medical College used Custom Upstreams to rescue 100+ websites from design anarchy in [this case study](https://pantheon.io/resources/weill-cornell-drupal-distribution-case-study).
+> Learn how the web team at Weill Cornell Medical College used Custom Upstreams to rescue 100+ websites from design anarchy in [this case study](/resources/weill-cornell-drupal-distribution-case-study).
 
 ### Efficient Update Strategy
 Not only does this workflow free up developer time, it establishes a sustainable and scalable process for handling updates across massive site portfolios.
@@ -35,12 +35,12 @@ New features and functionality can be continuously developed in the Custom Upstr
 <p style="text-align:center" markdown="1">
 ![Custom upstream update strategy](/source/docs/assets/images/update-diagram.svg)
 </p>
-> See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
+> See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
 
 ### Scale Client Services
 Spend less time doing non-core activities and reclaim lost billable hours where it counts most. Custom Upstreams help improve support efficiency by empowering non-technical clients and junior developers to handle lower-level support issues, such as creating a new site or applying updates. This gives advanced developers more time to focus on higher-level support work and new features.
 
-> Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](https://pantheon.io/resources/kalamuna-pantheon-drupal-agency-case-study).
+> Hear from Kalamuna how this process liberates developers and empowers newbies to provide ridiculously awesome support in [this case study](/resources/kalamuna-pantheon-drupal-agency-case-study).
 
 ## Workflow Overview
 There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
