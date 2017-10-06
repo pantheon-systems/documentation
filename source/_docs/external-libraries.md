@@ -67,19 +67,33 @@ The [Apache Tika](https://tika.apache.org//) toolkit detects and extracts metada
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
 
-### Drupal Tika Configuration
+### Drupal 7 Tika Configuration
 
-Once you have downloaded and installed the ApacheSolr Attachments module (apachesolr_attachments), you'll need to configure the module's settings.
+Once you have downloaded and installed the ApacheSolr Attachments module ([apachesolr_attachments](https://www.drupal.org/project/apachesolr_attachments)), you'll need to configure the module's settings.
 
-Go to the Tika settings page at: `/admin/config/search/apachesolr/attachments` and enter the following fields:
+1. Go to the Tika settings page at: `/admin/config/search/apachesolr/attachments` and enter the following fields:
 
-**Extract Using:** Tika (local java application)
-**Tika Directory Path:** `/srv/bin`
-**Tika jar file:** tika-app-1.1.jar
+   * **Extract Using:** Tika (local java application)
+   * **Tika Directory Path:** `/srv/bin`
+   * **Tika jar file:** tika-app-1.1.jar
 
-The last step is to verify that your site is able to extract text from documents. Click **Test your Tika Attachments** under the Actions section.
+2. Verify that your site is able to extract text from documents. Click **Test your Tika Attachments** under the Actions section.
 
-If everything is working correctly, you will see a _"Text can be successfully extracted"_ success message.
+If everything is working correctly, you will see the success message "Text can be successfully extracted".
+
+### Drupal 8 Tika Configuration
+
+Download and install the Search API Attachments module ([search_api_attachments]((https://www.drupal.org/project/search_api_attachments)), then configure the module's settings.
+
+1. Go to the Search API Attachments settings page at: `/admin/config/search/search_api_attachments` and enter the following fields:
+
+   * **Extraction method:** Tika Extractor
+   * **Path to java executable:** `java`
+   * **Path to Tika .jar file:** `/srv/bin/tika-app-1.1.jar`
+
+2. Verify that your site is able to extract text from documents. Click **Submit and test extraction**.
+
+If everything is working correctly, you will see the success message "Extracted data: Congratulations! The extraction seems working! Yay!".
 
 ### WordPress Tika Configuration
 There are no known plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that claims you can use it; however, we are still testing it to make sure it works.
