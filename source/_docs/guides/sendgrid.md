@@ -53,18 +53,16 @@ Two methods can be used to integrate SendGrid with your Drupal site: API or SMTP
 - API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/docs/composer/).
 
 ### SendGrid API Integration
-A stable release for Drupal 8 is not yet available for the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module. However, the development release seems to work fairly well. Use with caution.
 
-1.  Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p markdown="1">The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) guide. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea){.external} file.</p>
+</div>
 
- ```nohighlight
- terminus drush <site>.<env> -- en sendgrid_integration -y
- ```
-
- Access the composer manager page `/admin/config/system/composer-manager` and click "Reuild composer.json file" button.
+1.  Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using Composer:
 
  ```nohighlight
- terminus drush <site>.<env> -- composer-manager update --no-dev
+composer require drupal/sendgrid_integration
  ```
 
 2.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
