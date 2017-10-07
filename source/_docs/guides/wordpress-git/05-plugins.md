@@ -1,6 +1,7 @@
 ---
-title: Intro to Git with WordPress
+title: WordPress & Git
 subtitle: Manage Plugins
+description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
 gitwordpress: true
 anchorid: plugins
 survey: true
@@ -13,6 +14,7 @@ use:
 permalink: docs/guides/wordpress-git/plugins/
 previousurl: guides/wordpress-git/wp-uploads/
 editpath: wordpress-git/05-plugins.md
+image: git-commit-thumb
 ---
 Plugins can be easily updated. As long as the site is in SFTP mode on the dashboard, clicking “Update Now” will download and update the plugins code.
 

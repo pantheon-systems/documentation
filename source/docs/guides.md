@@ -51,7 +51,7 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
       <a href="/docs/guides/build-tools/">
         <div class="pantheon-workflows">
           <img alt="Build Tools" src="/source/docs/assets/images/buildToolsGuide-thumb.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
-        <h3>Build Tools</h3>
+        <h3>GitHub Pull Request Workflow</h3>
         </div>
         </a>
       </div>

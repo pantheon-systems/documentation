@@ -1,8 +1,7 @@
 ---
-title: Intro to Git with WordPress
+title: WordPress & Git
 subtitle: Stop Cowboy Coding
 description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
-tags: [moreguides]
 layout: guide
 type: guide
 anchorid: wordpress-git
@@ -15,6 +14,7 @@ use:
 permalink: docs/guides/wordpress-git/
 nexturl: guides/wordpress-git/wp-admin/
 editpath: wordpress-git/01-introduction.md
+image: git-commit-thumb
 ---
 Don’t use Git? No problem -- you can stick to a simple set of tools, and still take advantage of some of Git’s powerful features. This guide will walk you through building a WordPress site using your favorite FTP client, text editor, and our platform’s built in Git-based version control.
 

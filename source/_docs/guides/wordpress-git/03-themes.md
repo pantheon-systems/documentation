@@ -1,6 +1,7 @@
 ---
-title: Intro to Git with WordPress
+title: WordPress & Git
 subtitle: Manage Themes
+description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
 gitwordpress: true
 anchorid: themes
 generator: pagination
@@ -13,6 +14,7 @@ permalink: docs/guides/wordpress-git/themes/
 nexturl: guides/wordpress-git/wp-uploads/
 previousurl: guides/wordpress-git/wp-admin/
 editpath: wordpress-git/03-themes.md
+image: git-commit-thumb
 ---
 Next, let’s install a theme. We could use the UI, exactly like we did with our plugins, but let’s assume you have a theme downloaded you want to use. In this example, I have saved the Bento theme to my desktop. Please do the same.
 

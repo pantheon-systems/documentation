@@ -1,6 +1,7 @@
 ---
-title: Intro to Git with WordPress
+title: WordPress & Git
 subtitle: Upload Files
+description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
 gitwordpress: true
 anchorid: configure
 generator: pagination
@@ -13,6 +14,7 @@ permalink: docs/guides/wordpress-git/wp-uploads/
 nexturl: guides/wordpress-git/plugins/
 previousurl: guides/wordpress-git/themes/
 editpath: wordpress-git/04-wp-uploads.md
+image: git-commit-thumb
 ---
 In our theme settings, let’s upload a custom logo. I spent a few days in Photoshop making this one, feel free to save it to your desktop and use it for this guide:
 

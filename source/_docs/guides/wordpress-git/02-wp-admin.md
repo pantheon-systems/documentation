@@ -1,6 +1,7 @@
 ---
-title: Intro to Git with WordPress
+title: WordPress & Git
 subtitle: Use the WordPress Dashboard
+description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
 anchorid: wp-admin
 layout: guide
 gitwordpress: true
@@ -13,6 +14,7 @@ permalink: docs/guides/wordpress-git/wp-admin/
 nexturl: guides/wordpress-git/themes/
 previousurl: guides/wordpress-git/
 editpath: wordpress-git/02-wp-admin.md
+image: git-commit-thumb
 ---
 ## Adding plugins and themes though the WP UI
 
