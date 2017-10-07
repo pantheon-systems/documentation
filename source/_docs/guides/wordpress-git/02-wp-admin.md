@@ -1,18 +1,18 @@
 ---
-title: Git and WordPress on Pantheon
-subtitle: Adding plugins and themes though the WP UI
-anchorid: git-wordpress
+title: Intro to Git with WordPress
+subtitle: Use the WordPress Dashboard
+anchorid: wp-admin
 layout: guide
-gitwordpresspage: true
+gitwordpress: true
 generator: pagination
 pagination:
     provider: data.gitwordpresspages
 use:
     - gitwordpresspages
-permalink: docs/guides/git-wordpress/create-site/
-nexturl: guides/git-wordpress/parent-child-theme/
-previousurl: guides/git-wordpress/
-editpath: git-wordpress/02-create-site.md
+permalink: docs/guides/wordpress-git/wp-admin/
+nexturl: guides/wordpress-git/themes/
+previousurl: guides/wordpress-git/
+editpath: wordpress-git/02-wp-admin.md
 ---
 ## Adding plugins and themes though the WP UI
 
@@ -20,11 +20,11 @@ Now let’s add some plugins. Since we are using SFTP (the extra “S” means �
 
 ![Enable SFTP Mode](/source/docs/assets/images/guides/git-wordpress/sftp-mode.png)
 
-On the left admin menu, select “Plugins” and “Add New.” 
+On the left admin menu, select “Plugins” and “Add New.”
 
 ![Add new plugin](/source/docs/assets/images/guides/git-wordpress/add-new-plugin.png)
 
-Then enter “WPFormes Lite” into the search bar. When the plugin appears, click “Install.” 
+Then enter “WPFormes Lite” into the search bar. When the plugin appears, click “Install.”
 
 ![Install WP-Forms plugin](/source/docs/assets/images/guides/git-wordpress/install-wp-forms.png)
 

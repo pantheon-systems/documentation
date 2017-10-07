@@ -1,21 +1,20 @@
 ---
-title: Use Git, FTP and WordPress Together on Pantheon
-subtitle: Stop Cowboy Coding, Keep your Favorite Tools
-description: Use your favorite tools: the WordPress admin UI, an FTP client, and a text editor and work quickly, safely and easily on the cloud.
-tags: [develop]
-contributors: scottmassey
+title: Intro to Git with WordPress
+subtitle: Stop Cowboy Coding
+description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
+tags: [moreguides]
 layout: guide
 type: guide
-anchorid: git-wordpress
+anchorid: wordpress-git
 gitwordpress: true
 generator: pagination
 pagination:
     provider: data.gitwordpresspages
 use:
     - gitwordpresspages
-permalink: docs/guides/git-wordpress/
-nexturl: guides/git-wordpress/create-site/
-editpath: git-wordpress/01-introduction.md
+permalink: docs/guides/wordpress-git/
+nexturl: guides/wordpress-git/wp-admin/
+editpath: wordpress-git/01-introduction.md
 ---
 Don’t use Git? No problem -- you can stick to a simple set of tools, and still take advantage of some of Git’s powerful features. This guide will walk you through building a WordPress site using your favorite FTP client, text editor, and our platform’s built in Git-based version control.
 
@@ -62,15 +61,14 @@ Here are a few FTP clients and text editors you can successfully complete this g
 ##About your Local Environment
 You: “Ok, yay, let’s do this. Let me fire up and configure my local development environment, give me one to three hours.”
 
-Hold it right there. Sites on Pantheon each include a dev, test, and live environments, and as the name implies, dev is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities. 
+Hold it right there. Sites on Pantheon each include a dev, test, and live environments, and as the name implies, dev is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities.
 
 Using our dev environment means fewer surprises, since it is guaranteed to be consistent with production. It also means you can immediately share a link to a running website with anyone who needs to see work in progress. Finally, it’s all set up with a workflow to help you make ongoing updates to the production site (running in the live environment) without ever putting it at risk of disruption or downtime.
 
 ## Create A New WordPress Site
 
 Create a Pantheon account and spin up a site. It’s pretty straightforward to do, and here are detailed instructions.
-Select WordPress as your start state. 
+Select WordPress as your start state.
 After the site and infrastructure are completely spun up, click the “Site Admin” button and finish the steps to create a site.
 
 ![Launch site admin page](/source/docs/assets/images/guides/git-wordpress/launch-admin.png)
-

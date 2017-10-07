@@ -1,24 +1,24 @@
 ---
-title: Git and WordPress on Pantheon
-subtitle: Installing a Parent Theme and Creating a Child Theme
-gitwordpresspage: true
-anchorid: parent-child-theme
+title: Intro to Git with WordPress
+subtitle: Manage Themes
+gitwordpress: true
+anchorid: themes
 generator: pagination
 layout: guide
 pagination:
     provider: data.gitwordpresspages
 use:
     - gitwordpresspages
-permalink: docs/guides/git-wordpress/parent-child-theme/
-nexturl: guides/git-wordpress/adding-media/
-previousurl: guides/git-wordpress/create-site/
-editpath: build-tools/03-parent-child-theme.md
+permalink: docs/guides/wordpress-git/themes/
+nexturl: guides/wordpress-git/wp-uploads/
+previousurl: guides/wordpress-git/wp-admin/
+editpath: wordpress-git/03-themes.md
 ---
 Next, let’s install a theme. We could use the UI, exactly like we did with our plugins, but let’s assume you have a theme downloaded you want to use. In this example, I have saved the Bento theme to my desktop. Please do the same.
 
 ![Download Bento Theme](/source/docs/assets/images/guides/git-wordpress/download-bento.png)
 
-Now let’s make sure we have our FTP client setup. In Transmit, click the “+” sign to add a new site. 
+Now let’s make sure we have our FTP client setup. In Transmit, click the “+” sign to add a new site.
 
 ![New Transmit Site](/source/docs/assets/images/guides/git-wordpress/transmit-new-site.png)
 
@@ -79,7 +79,7 @@ function bento_child_enqueue_styles() {
 ```
 
 Now we should have a working child theme. From the WordPress Dashboard, navigate to Appearance and you should see both your parent Bento theme and your child theme. Activate the child theme.
- 
+
 ![Installed Chile theme](/source/docs/assets/images/guides/git-wordpress/all-installed-themes.png)
 
 Now let’s make a few small changes to our theme. Add these CSS snippets into our style.css:

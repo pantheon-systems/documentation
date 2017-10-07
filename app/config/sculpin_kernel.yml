@@ -76,7 +76,7 @@ sculpin_content_types:
             - contributors
     gitwordpresspages:
             type: path
-            path: docs/guides/git-wordpress
+            path: docs/guides/wordpress-git
             permalink: pretty
             singular_name: gitwordpresspage
             enabled: true

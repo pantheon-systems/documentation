@@ -1,18 +1,18 @@
 ---
-title: Git and WordPress on Pantheon
-subtitle: Updating Plugins using the admin dashboard
-subtitle: Add a New Module
-gitwordpresspage: false
-anchorid: extend
+title: Intro to Git with WordPress
+subtitle: Manage Plugins
+gitwordpress: true
+anchorid: plugins
+survey: true
 generator: pagination
 layout: guide
 pagination:
     provider: data.gitwordpresspages
 use:
     - gitwordpresspages
-permalink: docs/guides/git-wordpress/update-plugins/
-previousurl: guides/git-wordpress/adding-media/
-editpath: git-wordpress/05-update-plugins.md
+permalink: docs/guides/wordpress-git/plugins/
+previousurl: guides/wordpress-git/wp-uploads/
+editpath: wordpress-git/05-plugins.md
 ---
 Plugins can be easily updated. As long as the site is in SFTP mode on the dashboard, clicking “Update Now” will download and update the plugins code.
 
