@@ -83,7 +83,7 @@ If everything is working correctly, you will see the success message "Text can b
 
 ### Drupal 8 Tika Configuration
 
-Download and install the Search API Attachments module ([search_api_attachments]((https://www.drupal.org/project/search_api_attachments)), then configure the module's settings.
+Download and install the Search API Attachments module ([search_api_attachments](https://www.drupal.org/project/search_api_attachments)), then configure the module's settings.
 
 1. Go to the Search API Attachments settings page at: `/admin/config/search/search_api_attachments` and enter the following fields:
 
