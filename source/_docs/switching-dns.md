@@ -29,7 +29,20 @@ Also, check `settings.php` or `wp-config.php` and comment out any hardcoded redi
 HTTPS can take up to an hour to provision after you switch DNS to the new site, so you may want to plan a maintenance window accordingly.
 
 ### Determine the New DNS Records
-Because the same domain cannot be added to more than one environment, you will need to use temporary domain names to determine the DNS records. Temporarily add something like `example-new.com` and `www.example-new.com` to the new site's Live environment to see the required DNS records.
+Because the same domain cannot be added to more than one environment, you will need to determine the DNS records of the new site's Live environment by using `dig` command for Unix-based system (Linux or Mac OS X) or `nslookup` command for Windows. You can also use an online DNS lookup tool.
+
+* Go to the new site's Live environment and get the Platform domain. `(e.g. live-my-site.pantheonsite.io)`
+
+```bash
+# For Unix-based systems (Linux or Mac OS X)
+dig live-my-site.pantheonsite.io +short
+
+# For Windows OS
+nslookup -type=A live-my-site.pantheonsite.io
+```
+
+* The output IP should look like this: `23.185.0.*`
+
 
 ## Prepare your DNS Settings
 ### Lower the Time to Live (TTL)
