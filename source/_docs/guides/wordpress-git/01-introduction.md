@@ -1,6 +1,6 @@
 ---
 title: WordPress & Git
-subtitle: Stop Cowboy Coding
+subtitle: Introduction
 description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
 layout: guide
 type: guide
@@ -16,59 +16,65 @@ nexturl: guides/wordpress-git/wp-admin/
 editpath: wordpress-git/01-introduction.md
 image: git-commit-thumb
 ---
-Don’t use Git? No problem -- you can stick to a simple set of tools, and still take advantage of some of Git’s powerful features. This guide will walk you through building a WordPress site using your favorite FTP client, text editor, and our platform’s built in Git-based version control.
+This guide walks you through WordPress cloud development using your favorite SFTP client and text editor, along with the WordPress Dashboard on Pantheon's Git-based platform. Don’t use Git? No problem -- you can stick to a simple set of tools, and still take advantage of some of Git’s powerful features.
 
-Why should you use git?
-
-* Be more organized: Any kind of collaboration is easier and safer with version control. You can work in parallel with others and not be stepping on toes. Even working alone, you can have many features in progress on a site, but without risking the stability of the current site.
-* Understand why your site is slow: Because there is a recorded timeline of changes, allowing you to move forward or back, similar to a document’s “Undo” function.
-* Get hacked less: It is a much more secure way to move code around, meaning you can lock down your production environment, because you are never touching the code directly, you are deploying it securely with git.
-
-Using Git is a big step away from the bad habits of “Cowboy Coding” and a leap towards professional development best practice. For growing agencies and developers, it isn’t an option, it is inevitable. And here is the easiest way to embrace your destiny as a WordPress professional.
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
+      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Benefits of Git</h3>
+    </a>
+  </div>
+  <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+  ### Collaborate  {.info}
+  Any kind of collaboration is easier and safer with version control. You can work in parallel with others and not be stepping on toes. Even working alone, you can have many features in progress on a site, but without risking the stability of the current site.
+  ### Security  {.info}
+  It is a much more secure way to move code around, meaning you can lock down your production environment, because you are never touching the code directly, you are deploying it securely with git.
+  ### History  {.info}
+  Understand why your site is slow: Because there is a recorded timeline of changes, allowing you to move forward or back, similar to a document’s “Undo” function.
+  ### Best Practice  {.info}
+  Using Git is a big step away from the bad habits of Cowboy Coding <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Cowboy Coding" data-content="Developing directly on the production environment, a poor practice."><em class="fa fa-info-circle"></em></a> and a leap towards professional development best practice. For growing agencies and developers, it isn’t an option, it is inevitable. And here is the easiest way to embrace your destiny as a WordPress professional.
+  </div>
+</div>
 
 ## Before You Begin
+Make sure that you have a:
 
-For editing text, this guide uses Atom as well as the WordPress UI. Below are other options that should work interchangeably with this guide. IDEs such as PHPStorm will also work, but contain many more features which are a bit outside of the scope of this guide.
+* WordPress site on Pantheon
+* Text editor and SFTP client on your local, such as:
 
-For an FTP client, this guide uses Transmit. Feel free to use what you are comfortable with. For fastest development, choose an FTP client that uploads on save, and allows you to authenticate with an SSH key. Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon dashboard password.
+    <table class="table  table-bordered table-responsive">
+      <thead>
+        <tr>
+          <th>SFTP Client</th>
+          <th>Text Editor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr markdown="1">
+          <td>[Transmit](https://panic.com/transmit/){.external}</td>
+          <td>[Atom](https://atom.io/){.external}</td>
+        </tr>
+        <tr markdown="1">
+          <td>[Cyberduck](https://cyberduck.io/){.external}</td>
+          <td>[Sublime](https://www.sublimetext.com/){.external}</td>
+        </tr>
+        <tr markdown="1">
+          <td>[Filezilla](https://filezilla-project.org/){.external}</td>
+          <td>[TextMate](https://macromates.com/){.external}</td>
+        </tr>
+      </tbody>
+    </table>
 
-Here are a few FTP clients and text editors you can successfully complete this guide with.
-
-<table class="table  table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th>FTP Client</th>
-      <th>Text Editor</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Transmit</td>
-      <td>Atom</td>
-    </tr>
-    <tr>
-      <td>Cyberduck</td>
-      <td>Sublime</td>
-    </tr>
-    <tr>
-      <td>Filezilla</td>
-      <td>TextMate</td>
-    </tr>
-  </tbody>
-</table>
+This guide uses Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/docs/ssh-keys/). Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon dashboard password.
 
 
-##About your Local Environment
-You: “Ok, yay, let’s do this. Let me fire up and configure my local development environment, give me one to three hours.”
+## Cloud Development Environment
+>Ok, yay, let’s do this. Let me fire up and configure my local development environment, give me one to three hours. -- You, probably.
 
-Hold it right there. Sites on Pantheon each include a dev, test, and live environments, and as the name implies, dev is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities.
+Hold it right there. Sites on Pantheon each include **<span class="glyphicons glyphicons-wrench"></span> Dev**, **<span class="glyphicons glyphicons-equalizer"></span> Test**, and **<span class="glyphicons glyphicons-cardio"></span> Live** environments -- and as the name implies, **<span class="glyphicons glyphicons-wrench"></span> Dev** is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities.
 
-Using our dev environment means fewer surprises, since it is guaranteed to be consistent with production. It also means you can immediately share a link to a running website with anyone who needs to see work in progress. Finally, it’s all set up with a workflow to help you make ongoing updates to the production site (running in the live environment) without ever putting it at risk of disruption or downtime.
+Using the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment means you can:
 
-## Create A New WordPress Site
-
-Create a Pantheon account and spin up a site. It’s pretty straightforward to do, and here are detailed instructions.
-Select WordPress as your start state.
-After the site and infrastructure are completely spun up, click the “Site Admin” button and finish the steps to create a site.
-
-![Launch site admin page](/source/docs/assets/images/guides/git-wordpress/launch-admin.png)
+* Build in a known state with fewer surprises, since **<span class="glyphicons glyphicons-wrench"></span> Dev** is the same as **<span class="glyphicons glyphicons-cardio"></span> Live**.
+* Share work in progress with a web accessible URL (e.g., `example-dev.pantheonsite.io`)
+* Stop Cowboy Coding <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Cowboy Coding" data-content="Developing directly on the production environment, a poor practice."><em class="fa fa-info-circle"></em></a>
