@@ -44,15 +44,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 7. Click **Add Record**.
 
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
-You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
-
-1. Select **Crypto** from the Cloudflare menu bar and set SSL mode to **Full** (or potentially Full, Strict), but not Flexible.
-  ![Enable SSL](/source/docs/assets/images/cloudflare-ssl.png)
-2. Scroll down and enable **Always use HTTPS**
-  ![Cloudflare Always HTTPS](/source/docs/assets/images/cloudflare-always-https.png)
-3. Scroll down and enable **Automatic HTTPS Rewrites**
-4. Remove existing redirects configured via PHP in `settings.php` or `wp-config.php`.
-5. Proceed with DNS configuration as describe in Option 1, but make sure the cloud is toggled orange, not gray.
+For details, see [Using a Third Party CDN](/docs/third-party-cdns#cloudflare).
 
 
 ## CAA Records (Optional)
