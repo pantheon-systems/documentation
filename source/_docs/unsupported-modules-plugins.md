@@ -445,11 +445,11 @@ The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles
 * `edit_plugins`
 * `edit_themes`
 
-## Paid Plugins or Licenses
+## Paid Plugins, Modules or Themes with Licenses
 
-In general, licensed or paid plugins, modules or themes are allowed for use in Pantheon. For their use, consider platform constrants or conflicts that will arise due to the nature of the platform. Licensing issues are for Customers to Resolve, as per the terms of their plugin or themes.
+In general, licensed or paid plugins, modules or themes are allowed for use in Pantheon. Licensing issues are for Customers to Resolve, as per the terms of their plugin, module or themes. You can also get direct support from their providers or developers. 
 
-Paid tools or licenses usually get direct support from developers. It is also used to get updates directly online. Most of the time, you update your code in DEV, and just commit the changes to TEST and LIVE.
+Licenses are also used to get updates directly online. You can assign your keys in the DEV environment to get the changes as it is writable. 
 
 ### One Domain Registration 
 
