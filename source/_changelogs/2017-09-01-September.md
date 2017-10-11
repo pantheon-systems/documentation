@@ -16,7 +16,9 @@ This Pantheon-made [Plugin](https://wordpress.org/plugins/wp-native-php-sessions
 
 ## Documentation
 ![Frontend Performance](/source/docs/assets/images/CDN-speedTest-docs-guide.png)
+
 [Frontend Performance Guide](/docs/guides/frontend-performance/)
+
 Learn how to ace an online speed test with Pantheon's Global CDN.
 
 ### New Articlesi
