@@ -73,7 +73,7 @@ In general, licensed or paid plugins, modules or themes are allowed for use in P
 
 Licenses are also used to get updates directly online. You can assign your keys in the DEV environment to get the changes as it is writable. 
 
-For plugin, themes or module specific cases related to licenses, we have a [list of issues and solutions](/docs/unsupported-modules-plugins/).
+For plugin, themes or module specific cases related to licenses, check our [list of issues and solutions](/docs/unsupported-modules-plugins/) for unsupported modules or plugins.
 
 ## Streaming Media
 
