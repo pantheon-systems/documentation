@@ -8,7 +8,7 @@ Pantheon's Site Dashboard provides two connection modes to support various devel
 
 ## SFTP Mode
 1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud"></span> Multidev** tab of your Pantheon Site Dashboard.
-2.Next to Connection Mode, click **SFTP**:
+2. Next to Connection Mode, click **SFTP**:
 
   ![SFTP Mode](/source/docs/assets/images/dashboard/connection-mode-sftp.png)
 
