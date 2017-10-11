@@ -65,7 +65,7 @@ In addition to changes made from the WordPress or Drupal interface, you can view
  ![Kalabox add new site](/source/docs/assets/images/kalabox-action-push.png)
 
 2. Enter a commit message.
-3. Choose whether to pull database and files, and click **Submit**.
+3. Choose whether to push database and files, and click **Submit**.
 
 ## Work Offline With Kalabox
 
