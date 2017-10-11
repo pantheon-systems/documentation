@@ -154,6 +154,8 @@ Each manual and automatic backup can be directly restored to that environment fr
 ## About Your Code Archives
 Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment.
 
+For a clear visual of the Git repo contents, you can use a free tool like [Sourcetree](https://www.sourcetreeapp.com/) to inspect the branches that the repo contains. 
+
 ## Backup Log
 The backup log displays a list of existing backups for that environment. You can also create a new backup or restore your site from an existing backup.
 
