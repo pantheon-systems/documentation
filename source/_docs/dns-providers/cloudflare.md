@@ -42,6 +42,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
 6. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 7. Click **Add Record**.
+8. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Domains and Redirects](https://pantheon.io/docs/redirects/) for more information.
 
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
 You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
