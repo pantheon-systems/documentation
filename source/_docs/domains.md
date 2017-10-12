@@ -36,10 +36,12 @@ If you don't already own a domain name, register one with a third-party provider
 <h4 class="info">Note</h4>
 <p markdown="1">Add all domains (example.com and www.example.com are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/docs/guides/launch/). Automatic resolution of domains and wildcards are not supported.</p></div>
 
+The Site Dashboard will provide recommended domain settings after you have added your custom domain. We recommend using CNAME records for subdomains, but if your use case requires you to use A/AAAA records, you can add a placeholder bare domain like example.com, not www.example.com, to the Pantheon dashboard to get the A/AAAA records. 
+
 ### Primary domain
 Pantheon uses the term "primary domain" to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other domain connected to the environment) all get redirected to `www.example.com`. Configure the primary domain as part of the going live process described in [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/).
 
-Choosing a primary domain is a best practice for SEO, by avoiding duplicate content. It also prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time.
+Redirecting all traffic to a primary domain is a best practice for SEO since it avoids duplicate content. It also prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time, and it can make it easier to measure and monitor website traffic.
 
 ## Vanity domains for organizations
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default platform domain (`pantheonsite.io`).
