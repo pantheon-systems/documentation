@@ -128,6 +128,6 @@ For this example, that means we only care about changes made to the `composer.js
 
   ![Open PR](/source/docs/assets/images/integrations/phpstorm/open-pr.png)
 
-6. The commit will be built by CirlceCI and deployed to a new Multidev environment on Pantheon. Check the PR for a new comment containing links to the Multidev environment and site.
+6. The commit will be built by CircleCI and deployed to a new Multidev environment on Pantheon. Check the PR for a new comment containing links to the Multidev environment and site.
 
 Follow your teams standard review process for accepting changes into master, which is built and deployed to Dev.
