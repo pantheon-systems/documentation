@@ -15,13 +15,11 @@ New Relic on Pantheon has been updated to version 7.5.0.199. You can read the re
 This Pantheon-made [Plugin](https://wordpress.org/plugins/wp-native-php-sessions/) for WordPress has been updated to version 0.6.3, which fixes [this](https://github.com/pantheon-systems/wp-native-php-sessions/issues/74) issue regarding boolean conditions.
 
 ## Documentation
-![Frontend Performance](/source/docs/assets/images/CDN-speedTest-docs-guide.png)
-
 [Frontend Performance Guide](/docs/guides/frontend-performance/)
 
 Learn how to ace an online speed test with Pantheon's Global CDN.
 
-### New Articlesi
+### New Articles
 [PhpStorm for Composer Managed Drupal 8 Sites](/docs/guides/phpstorm-composer/)
 
 
