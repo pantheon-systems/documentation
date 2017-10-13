@@ -46,19 +46,28 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
         </a>
       </div>
   </div>
-</div>
-<h2>Platform Integration Guides</h2>
-<div class="flex-panel-group">
-  <div class="flex-panel-item-platform-integrations-guides">
-    <a href="/docs/guides/build-tools/">
-      <div class="flex-panel-body-platform-integrations">
-        <div class="platform-integrations">
-          <img alt="GitHub" src="/source/docs/assets/images/logos/github-composer-circle.png" style="max-height:140px;" class="main-topic-info__plugin-image">
+  <div class="flex-panel-item-guides-landing">
+      <div class="flex-panel-body-pantheon-workflows">
+      <a href="/docs/guides/build-tools/">
+        <div class="pantheon-workflows">
+          <img alt="Build Tools" src="/source/docs/assets/images/buildToolsGuide-thumb.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
+        <h3>GitHub Pull Request Workflow</h3>
         </div>
+        </a>
       </div>
-    </a>
+  </div>
+  <div class="flex-panel-item-guides-landing">
+      <div class="flex-panel-body-pantheon-workflows">
+      <a href="/docs/guides/wordpress-git/">
+        <div class="pantheon-workflows">
+          <img alt="WordPress & Git" src="/source/docs/assets/images/git-commit-thumb.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
+        <h3>WordPress & Git</h3>
+        </div>
+        </a>
+      </div>
   </div>
 </div>
+<h2>Platform Integration Guides</h2>
 <div class="flex-panel-group">
   <div class="flex-panel-item-platform-integrations-guides">
     <a href="/docs/guides/asana/">
