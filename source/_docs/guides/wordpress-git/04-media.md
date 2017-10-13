@@ -1,19 +1,19 @@
 ---
-title: WordPress & Git
-subtitle: Upload Files
-description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
+title: WordPress Development
+subtitle: Upload Media
+description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 gitwordpress: true
-anchorid: configure
+anchorid: media
 generator: pagination
 layout: guide
 pagination:
     provider: data.gitwordpresspages
 use:
     - gitwordpresspages
-permalink: docs/guides/wordpress-git/wp-uploads/
-nexturl: guides/wordpress-git/plugins/
+permalink: docs/guides/wordpress-git/media/
+nexturl: guides/wordpress-git/next-steps/
 previousurl: guides/wordpress-git/themes/
-editpath: wordpress-git/04-wp-uploads.md
+editpath: wordpress-git/04-media.md
 image: git-commit-thumb
 ---
 In our theme settings, let’s upload a custom logo. I spent a few days in Photoshop making this one, feel free to save it to your desktop and use it for this guide:

@@ -1,9 +1,9 @@
 ---
-title: WordPress & Git
-subtitle: Manage Plugins
-description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
+title: WordPress Development
+subtitle: Next Steps
+description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 gitwordpress: true
-anchorid: plugins
+anchorid: next-steps
 survey: true
 generator: pagination
 layout: guide
@@ -11,17 +11,11 @@ pagination:
     provider: data.gitwordpresspages
 use:
     - gitwordpresspages
-permalink: docs/guides/wordpress-git/plugins/
+permalink: docs/guides/wordpress-git/next-steps/
 previousurl: guides/wordpress-git/wp-uploads/
-editpath: wordpress-git/05-plugins.md
+editpath: wordpress-git/05-next-steps.md
 image: git-commit-thumb
 ---
-Plugins can be easily updated. As long as the site is in SFTP mode on the dashboard, clicking “Update Now” will download and update the plugins code.
-
-![Update Akismet Plugin from WordPress Dashboard](/source/docs/assets/images/guides/git-wordpress/update-plugin.png)
-
-Then I will see the changes and commit them from the site dashboard.
-
 
 ## Moving changes to test and live
 We only made changes to our dev environment, so the next step would be to push all of these changes, along with any configuration changes that are stored in the database. These steps are all described here.

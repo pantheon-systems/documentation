@@ -190,16 +190,16 @@
         for(i=0;i<aaObj.length;i++) {
             if(document.location.href.indexOf(aaObj[i].href)>=0 ){
                 aaObj[i].className='active-trail';
-                if(/\/wp-admin.*/.test(aaObj[i].href)>=1) {
+                if(/\/plugins.*/.test(aaObj[i].href)>=1) {
                     $('#docs-guides-wordpress-git').removeClass('active-trail');
                 }
                 if(/\/themes.*/.test(aaObj[i].href)>=1) {
                     $('#docs-guides-wordpress-git').removeClass('active-trail');
                 }
-                if(/\/wp-uploads.*/.test(aaObj[i].href)>=1) {
+                if(/\/media.*/.test(aaObj[i].href)>=1) {
                     $('#docs-guides-wordpress-git').removeClass('active-trail');
                 }
-                if(/\/plugins.*/.test(aaObj[i].href)>=1) {
+                if(/\/next-steps.*/.test(aaObj[i].href)>=1) {
                     $('#docs-guides-wordpress-git').removeClass('active-trail');
                 }
             }

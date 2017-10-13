@@ -1,9 +1,10 @@
 ---
-title: WordPress & Git
+title: WordPress Development 101
 subtitle: Introduction
-description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
+description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 layout: guide
 type: guide
+contributors: [scottmassey, rachelwhitton]
 anchorid: wordpress-git
 gitwordpress: true
 generator: pagination
@@ -12,11 +13,13 @@ pagination:
 use:
     - gitwordpresspages
 permalink: docs/guides/wordpress-git/
-nexturl: guides/wordpress-git/wp-admin/
+nexturl: guides/wordpress-git/plugins/
 editpath: wordpress-git/01-introduction.md
 image: git-commit-thumb
 ---
-This guide walks you through WordPress cloud development using your favorite SFTP client and text editor, along with the WordPress Dashboard on Pantheon's Git-based platform. Don’t use Git? No problem -- you can stick to a simple set of tools, and still take advantage of some of Git’s powerful features.
+This is a beginner's guide to WordPress development on Pantheon's Git-based platform. Don’t use Git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.
+
+Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and text editor without compromising use of the WordPress Dashboard.
 
 <div class="panel panel-drop panel-guide" id="accordion">
   <div class="panel-heading panel-drop-heading">
@@ -65,8 +68,7 @@ Make sure that you have a:
       </tbody>
     </table>
 
-This guide uses Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/docs/ssh-keys/). Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon dashboard password.
-
+Demonstrations throughout this guide use Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/docs/ssh-keys/). Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon account password to sign in, when prompted.
 
 ## Cloud Development Environment
 >Ok, yay, let’s do this. Let me fire up and configure my local development environment, give me one to three hours. -- You, probably.

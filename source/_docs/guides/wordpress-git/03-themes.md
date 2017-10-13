@@ -1,7 +1,7 @@
 ---
-title: WordPress & Git
+title: WordPress Development
 subtitle: Manage Themes
-description: Use your favorite tools: the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on the cloud.
+description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 gitwordpress: true
 anchorid: themes
 generator: pagination
@@ -11,8 +11,8 @@ pagination:
 use:
     - gitwordpresspages
 permalink: docs/guides/wordpress-git/themes/
-nexturl: guides/wordpress-git/wp-uploads/
-previousurl: guides/wordpress-git/wp-admin/
+nexturl: guides/wordpress-git/media/
+previousurl: guides/wordpress-git/plugins/
 editpath: wordpress-git/03-themes.md
 image: git-commit-thumb
 ---
