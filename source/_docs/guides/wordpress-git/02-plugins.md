@@ -79,7 +79,7 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
       <div id="unique-anchor2" class="collapse" markdown="1" style="padding:10px;">
       ### [WordPress Native PHP Sessions](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}
 
-      Resolve errors with code (themes, modules or plugins) that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
+      Resolve errors with code that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
 
       ### [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/){.external}
 
