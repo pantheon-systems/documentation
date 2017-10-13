@@ -23,7 +23,7 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
   ![Add new plugin](/source/docs/assets/images/guides/git-wordpress/sftp-mode.png)
 
-3. On the left admin menu, select **Plugins** then **Add New**.
+3. On the left admin menu, select **Plugins**, then **Add New**.
 4. Search for the **Pantheon Advanced Page Cache** plugin, then click **Install Now**:
 
 
@@ -44,7 +44,7 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
     If you encounter a prompt for FTP credentials, you're either working on the wrong environment or you're using the wrong connection mode. Don't try to authenticate FTP prompts within the WordPress Dashboard, it won't work (by design). Using the WordPress Dashboard to add or modify code is only allowed using the **SFTP** connection mode on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment.
 
-4. Return to the Pantheon Site Dashboard and click the yellow notification to review file changes as a result of our actions in the WordPress Dashboard:
+5. Return to the Pantheon Site Dashboard and click the yellow notification to review file changes as a result of our actions in the WordPress Dashboard:
 
   ![View file changes prompt](/source/docs/assets/images/guides/git-wordpress/file-changes.png)
 
@@ -53,7 +53,7 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
   ![View advanced page cache plugin files](/source/docs/assets/images/guides/git-wordpress/view-advanced-page-cache.png)
 
-5. Rather than piling a bunch of changes on top of this plugin, get into the habit of saving code in small incremental amounts with meaningful commit messages.
+6. Rather than piling a bunch of changes on top of this plugin, get into the habit of saving code in small incremental amounts with meaningful commit messages.
 
   Write a message that summarizes your work to let your team (and your future self) know what these changes do and which feature(s) they pertain to. For example, _Add Pantheon Advanced Page Cache plugin Version: 0.2.0_ is much better than _New plugin_ or _asdfasdf_.
 
@@ -89,4 +89,4 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
       </div>
     </div>
 
-Bam. You just nailed our first demonstration of using version control with WordPress on Pantheon sites. Follow this same approach to update plugins and for any other development tasks you normally handle in the WordPress Dashboard.
+Bam! You just nailed our first demonstration of using version control with WordPress on Pantheon sites. Follow this same approach to update plugins and for any other development tasks you normally handle in the WordPress Dashboard.

@@ -31,4 +31,6 @@ Consider how you would like to manage configuration, which refers to anything in
 You can repeat configuration steps manually, but there's no fun in that. We recommend using WP-CFM to handle site configuration. For details, see [WordPress Configuration Management (WP-CFM)](/docs/wp-cfm/).
 
 ## Conclusion
-This covered the basics of using Git on Pantheon with WordPress. Regardless of whether you prefer an FTP client, and IDE, or the command line, Pantheon believes that developers should be able to use the tools that let you work the fastest, without sacrificing quality or security.
+This covers the basics of using Git on Pantheon with WordPress. Regardless of whether you prefer an FTP client, and IDE, or the command line, Pantheon believes that developers should be able to use the tools that let you work the fastest, without sacrificing quality or security.
+
+If you decide down the road that you would like to work locally and make commits using Git directly, you can read our [Starting With Git](/docs/git/) documentation.

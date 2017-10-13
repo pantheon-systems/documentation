@@ -29,13 +29,13 @@ Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and 
   </div>
   <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
   ### Collaborate  {.info}
-  Any kind of collaboration is easier and safer with version control. You can work in parallel with others and not be stepping on toes. Even working alone, you can have many features in progress on a site, but without risking the stability of the current site.
+  Any kind of collaboration is easier and safer with version control. You can work in parallel with others and not step on any toes. Even working alone, you can have many features in progress on a site, but without risking the stability of the current site.
   ### Security  {.info}
-  It is a much more secure way to move code around, meaning you can lock down your production environment, because you are never touching the code directly, you are deploying it securely with git.
+  Version control creates a more secure way to move code around. You can lock down your production environment, because you are never touching the code directly; you're deploying it securely with git.
   ### History  {.info}
   Understand why your site is slow: Because there is a recorded timeline of changes, allowing you to move forward or back, similar to a document’s “Undo” function.
   ### Best Practice  {.info}
-  Using Git is a big step away from the bad habits of Cowboy Coding <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Cowboy Coding" data-content="Developing directly on the production environment, a poor practice."><em class="fa fa-info-circle"></em></a> and a leap towards professional development best practice. For growing agencies and developers, it isn’t an option, it is inevitable. And here is the easiest way to embrace your destiny as a WordPress professional.
+  Using Git is a big step away from the bad habits of Cowboy Coding <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Cowboy Coding" data-content="Developing directly on the production environment, a poor practice."><em class="fa fa-info-circle"></em></a> and a leap towards professional development best practice. For growing agencies and developers, it isn’t an option, it's inevitable. And here is the easiest way to embrace your destiny as a WordPress professional.
   </div>
 </div>
 
@@ -43,7 +43,7 @@ Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and 
 Make sure that you have a:
 
 * WordPress site on Pantheon
-* Text editor and SFTP client on your local, such as:
+* A text editor and SFTP client on your local computer, such as:
 
     <table class="table  table-bordered table-responsive">
       <thead>
@@ -73,7 +73,7 @@ Demonstrations throughout this guide use Atom and Transmit. For fastest developm
 ## Cloud Development Environment
 >Ok, yay, let’s do this. Let me fire up and configure my local development environment, give me one to three hours. -- You, probably.
 
-Hold it right there. Sites on Pantheon each include **<span class="glyphicons glyphicons-wrench"></span> Dev**, **<span class="glyphicons glyphicons-equalizer"></span> Test**, and **<span class="glyphicons glyphicons-cardio"></span> Live** environments -- and as the name implies, **<span class="glyphicons glyphicons-wrench"></span> Dev** is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities.
+*Hold it right there*. Sites on Pantheon each include **<span class="glyphicons glyphicons-wrench"></span> Dev**, **<span class="glyphicons glyphicons-equalizer"></span> Test**, and **<span class="glyphicons glyphicons-cardio"></span> Live** environments -- and as the name implies, **<span class="glyphicons glyphicons-wrench"></span> Dev** is already set up for development purposes! Rather than managing and maintaining a LAMP stack on  your local computer, you can do your work in the cloud, directly on our platform, with zero setup and no ongoing responsibilities.
 
 Using the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment means you can:
 
