@@ -16,18 +16,23 @@ previousurl: guides/wordpress-git/themes/
 editpath: wordpress-git/04-media.md
 image: git-commit-thumb
 ---
-In our theme settings, let’s upload a custom logo. I spent a few days in Photoshop making this one, feel free to save it to your desktop and use it for this guide:
+In this lesson, we'll demonstrate how media files are handled on Pantheon. Media refers to anything in the `wp-content/uploads/` directory, which is intentionally excluded from version control. Git isn't needed to manage content like this, so we won't use version control in this lesson.
 
-![New Logo](/source/docs/assets/images/guides/git-wordpress/logo-wp-git-demo.png)
+1. Let's upload a custom logo in the WordPress Dashboard. Feel free to use this example:
 
-Go to the WordPress Dashboard and select Appearance, Customize and Site Identity, and upload the file. Click “Save and Publish.”
+  ![New Logo](/source/docs/assets/images/guides/git-wordpress/logo-wp-git-demo.png)
 
-![Uploaded Logo](/source/docs/assets/images/guides/git-wordpress/logo-upload.png)
+2. Within the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment's WordPress Dashboard, navigate to **Appearance** > **Customize** > **Site Identity** then upload a new logo.
+3. Click **Save and Publish**:
 
-Now if we look at our dashboard, we would expect to see that new file waiting to be committed. But you will notice it is not. This is because the theme places that file in wp-content/uploads directory.
+  ![Uploaded Logo](/source/docs/assets/images/guides/git-wordpress/logo-upload.png)
 
-![WP-Uploads file directory](/source/docs/assets/images/guides/git-wordpress/uploads.png)
+4. Refresh the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment's site URL and you should see your changes reflected.
 
-Files in wp-content/uploads  are not tracked by Git for a few reasons. The most important reason is that content creators will need the ability to upload files here in the live environment, and references to these files are often stored in the database either as wp_options or in the content of posts. Uploads are really content not code, so Pantheon ignores this directory when it comes to git.
+  If you expected this change to show up as a pending change, ready to be committed - that's not how this kind of content works. It's not code; there won't be any changes in the Pantheon Site Dashboard to submit to version control since media is ignored by Git.
 
-This can lead to some tricky situations around deploying changes to a live running site. The only safe way to do this is to always treat the live site as the “source of truth” for content (since anyone could put up a new post at any time). Deployment workflows that include content changes are another topic we cover elsewhere. There are lots of options, but no one-size-fits all solutions.
+  Use your FTP client to upload media to the file directory (`wp-content/uploads/`) outside the WordPress Dashboard:
+
+  ![WP-Uploads file directory](/source/docs/assets/images/guides/git-wordpress/uploads.png)
+
+  For more information on managing files across environments, see [Use the Pantheon Workflow](/docs/pantheon-workflow/).
