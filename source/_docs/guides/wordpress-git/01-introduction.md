@@ -43,7 +43,7 @@ Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and 
 Make sure that you have a:
 
 * WordPress site on Pantheon
-* A text editor and SFTP client on your local computer, such as:
+* Text editor and SFTP client on your local computer, such as:
 
     <table class="table  table-bordered table-responsive">
       <thead>
