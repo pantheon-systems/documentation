@@ -16,7 +16,7 @@ Older software is more likely to contain code that is incompatible with recent P
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
 ### Available PHP Versions
-Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
+Available PHP versions are 5.3, 5.5, 5.6, 7.0, and 7.1.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
