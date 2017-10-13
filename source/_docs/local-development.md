@@ -13,6 +13,8 @@ While Pantheon provides several options for on-server development, local develop
 
 Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/docs/multidev/) instead of local development.
 
+If you have a complete site done in your local machine and wish to upload to Pantheon, review the [Migrate from Local Machine to Pantheon](/docs/migrate-local) page.
+
 ## Before You Begin
 Be sure you have:
 
