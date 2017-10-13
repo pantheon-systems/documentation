@@ -67,6 +67,14 @@ For Dev environments in SFTP mode, the entire codebase is writable. However the 
 
 Any modules for Drupal or plugins for WordPress that need to write to the codebase (and assume write access) need a symlink added so that they will instead write to the file system. For more information, read [Using Extensions That Assume Write Access](/docs/assuming-write-access/).
 
+## Paid Plugins, Modules or Themes with Licenses
+ 
+In general, licensed or paid plugins, modules or themes are allowed for use in Pantheon. Licensing issues are for Customers to Resolve, as per the terms of their plugin, module or themes. You can also get direct support from their providers or developers. 
+
+Licenses are also used to get updates directly online. You can assign your keys in the DEV environment to get the changes as it is writable. 
+
+For plugin, themes or module specific cases related to licenses, check our [list of issues and solutions](/docs/unsupported-modules-plugins/) for unsupported modules or plugins.
+
 ## Streaming Media
 
 Because Pantheon does not provide [transcoding](https://en.wikipedia.org/wiki/Transcoding#Re-encoding.2Frecoding), bandwidth-adaptive media delivery, or support for large files (see below), [streaming media](https://en.wikipedia.org/wiki/Streaming_media) is not possible directly from the platform.
