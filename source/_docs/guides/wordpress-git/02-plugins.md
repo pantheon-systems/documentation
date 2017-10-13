@@ -1,7 +1,7 @@
 ---
 title: WordPress Development
 subtitle: Install Plugins
-description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
+description: Beginners guide on how to use the WordPress Dashboard, an FTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 anchorid: plugins
 layout: guide
 gitwordpress: true
@@ -16,7 +16,7 @@ previousurl: guides/wordpress-git/
 editpath: wordpress-git/02-plugins.md
 image: git-commit-thumb
 ---
-This lesson demonstrates how develop using the WordPress Dashboard in SFTP mode. We'll install a few plugins and submit each one to version control as individual commits.
+This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mode. We'll install a few plugins and submit each one to version control as individual commits.
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 2. Now log in to your Dev site by clicking the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** button.
@@ -25,6 +25,7 @@ This lesson demonstrates how develop using the WordPress Dashboard in SFTP mode.
 
 3. On the left admin menu, select **Plugins** then **Add New**.
 4. Search for the **Pantheon Advanced Page Cache** plugin, then click **Install Now**:
+
 
   ![Install Pantheon Advanced Page Cache plugin](/source/docs/assets/images/guides/git-wordpress/install-advanced-page-cache.png)
 
