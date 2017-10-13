@@ -5,74 +5,62 @@ tags: [cms]
 categories: []
 ---
 
+
 # Background
 
-With the rise of Decoupled CMS architecture (aka “headless”), the traditionally “monolithic” CMSs that Drupal and WordPress have now changed. It has become easier to implement separate frontend component that communicates with the CMS via API.
+With the rise of Decoupled CMS architecture (aka “headless”), the traditionally “monolithic” CMSs that Drupal and WordPress are have now changed. Content as a Service or CaaS means to have an application that manages your content into feeds or services that other applications or properties can consume. It is now easier to implement separate frontend components or frameworks that communicates with the CMS via API.
 
-The way this work is that the CMS expose a REST API for reading or submitting data over the web. The most common data format used is [JSON](http://www.json.org/) which supported out-of-the-box for Drupal and WordPress. These together form your "Web Services".
+Common feature is that, the CMS application exposes a REST API, which allows reading or submitting data over the web. The most common data format used is [JSON](http://www.json.org/) which supported out-of-the-box for Drupal and WordPress. These together form your "Web Services".
 
-## Use Cases ##
-
-The most common use-cases for CMS as an API are the following:
-
-Static: the user-facing website is built via a static site generator that pulls from the CMS, allowing clean, elegant markup. Little to no end-user interactivity, but great for beautiful and scalable sites.
-
-Hybrid: a portion of the website is highly interactive and communicates with the CMS via API. This is great for advanced editorial tools, calculators, or dashboards.
-
-Single page app: the end-user experience is a complete application-in-browser, usually leveraging one of the newer JS frameworks such as Angular, Ember, or Backbone. 
-
-Native app: the frontend is a native mobile app. Users may or may not also interact directly with the website.
-
-CMS2: you can even decouple a CMS with another CMS! This allows you to create a strong separation of concerns between content and layout/presentation, while still using familiar tools for both.
-
+To know more of the different use-cases possible, check our [Decoupled CMS page](/decoupled-cms) 
 
 ## Considerations ##
 
+Pantheon supports only [one application per site](/docs/platform-considerations/#one-application-per-site) and only for Drupal or WordPress applications. 
+
+Database access is intended for both debugging or importing large databases. Exposing database connection for external applications use is not recommended. The REST API components of Drupal or WordPress is ideal instead of building your own application. See more information and read our [database access page](/docs/mysql-access/)
+
 ### What is REST?
 
-Web Services make it possible for external applications to interact with our application. This aims to enable a "CRUD" for your site, which is to CREATE, READ, UPDATE or DELETE content in your site but through HTTP Requests only. 
-This is different rather than doing everything via the database. 
+Web Services make it possible for external applications to interact with our application. This aims to enable a "CRUD" for your site, which is to CREATE, READ, UPDATE or DELETE content in your site but through HTTP Requests only. This is different rather than connecting directly to the database. 
 
-REST is one of the most popular ways of making Web Services work. There are other formats such as SOAP or XML-RPC, but the REST is the most commonly implemented among CMSes like WordPress and Drupal. 
+[REST or RESTful web services](https://en.wikipedia.org/wiki/Representational_state_transfer) is one of the most popular ways of making Web Services work. There are other formats such as SOAP or XML-RPC, but REST is the most commonly implemented among CMSes like WordPress and Drupal. 
 
 REST utilizes HTTP methods, such as GET, POST, and DELETE to perform the CRUD operations needed for the site. The most common use of REST interfaces are for mobile applications that needs to read and write data to your site's database.
 
 
 ## Drupal 8 RESTful Web Services API
 
-With the release of Drupal 8, Web Services have been implemented to core with the following modules:
+With the release of Drupal 8, Web Services have been implemented to core through different modules.
 
 ### Core Modules ### 
 
-RESTful Web Services (rest)
-Exposes entities and other resources via a RESTful web API. It depends on the Serialization module for the serialization of data that is sent to and from the API.
+* **RESTful Web Services (rest)** - Exposes entities and other resources via a RESTful web API. It depends on the Serialization module for the serialization of data that is sent to and from the API.
 
-Serialization (serialization)
-Provides a service for serialization of data to and from formats such as JSON and XML.
+* **Serialization (serialization)** - Provides a service for serialization of data to and from formats such as JSON and XML.
 
-Hypertext Application Language (hal)
-Extends the Serialization module to provide the HAL hypermedia format. This is what is used as the primary format in Drupal 8 Core. It only adds two reserved keywords, ‘_links’ for link relations (also used by Github's Pull Request API) and ‘_embedded’ for embedded resources. The HAL hypermedia format can be encoded in both JSON and XML. For more details see the initial HAL proposal.
+* **Hypertext Application Language (hal)** - Extends the Serialization module to provide the HAL hypermedia format. This is what is used as the primary format in Drupal 8 Core. It only adds two reserved keywords, `_links` for link relations (also used by Github's Pull Request API) and `_embedded` for embedded resources. The HAL hypermedia format can be encoded in both JSON and XML.
 
-HTTP Basic Authentication (basic_auth)
-This module implements basic user authentication using the HTTP Basic authentication provider. It facilitates the use of an username and password for authentication when making calls to the REST API. It is required for the examples shown in this blog post, and I would advise configuring SSL if you use it in production. For anyone looking for a more secure option, check out the contributed OAuth module which already has a Drupal 8 release.
+* **HTTP Basic Authentication (basic_auth)** - This module implements basic user authentication using the HTTP Basic authentication provider. It facilitates the use of a username and password for authentication when making calls to the REST API. It is advised to enable SSL if to use it in production.
 
 ### Resources Configuration ###
 
-Once enabled, the default behavior makes node entity resources available for GET, POST, PATCH and DELETE operations. There is support for basic or cookie authentication, and alos the use of HAL or JSON formats. The default settings are found in a YAML configuration file in your files directory: sites/default/files/config_XXXX/active/rest.settings.yml. To enable REST for other entities (e.g. users, files, or fields), you need to add the required configuration to this file. 
+By default, not all resources or endpoints are enabled. You may need to individually enable GET, POST, PATCH and DELETE operations for each web service like node entity or user. Read about the overview and steps for the configuration on the [API overview page](https://www.drupal.org/docs/8/api/restful-web-services-api/restful-web-services-api-overview).
 
-There is a new contribute module called [REST UI](https://drupal.org/project/restui) which provides the admin interface for enabling or disabling resources, serialization formats and authentication providers.
+There is a contributed module called [REST UI](https://drupal.org/project/restui) which provides an admin interface for enabling or disabling resources, serialization formats and authentication providers. Use this to quickly manage and save your configuration.
 
 ### Resource using Views ###
 
-Because Views is also part of core, you can easily make a JSON resource once REST and Serialization modules are also enabled. Just create a view and select "REST export" as its display type. Name the path as you like.
-Use Filter Criterias to extract content as you like it (e.g., /json/articles?nid=5). You can also use Contextual Filters if we want to just append the end of the path (e.g., rest/views/articles/1) for filtering results. 
-Make sure to save the view, and then try accessing the URL directly in your browser or your test tools, which return JSON by default.
+Because Views is also part of core, you make a JSON resource once REST and Serialization modules are also enabled. Just create a view and select "REST export" as its display type. Name the path as you like.
+
+* Use Filter Criterias to extract content as you like it (e.g., `/json/articles?nid=5`). 
+* You can also use Contextual Filters if we want to just append the end of the path (e.g., `rest/views/articles/1`) for filtering results. 
 
 ### Example Requests ###
 
-To create a node entity, we must send a POST to /entity/node with the Content-Type header set to application/hal+json and declare the required type and title fields in the request BODY.
-If you have Basic Authentication enabled, you need to set headers PHP_AUTH_USER and PHP_AUTH_PW to authenticate as our user.
+To create a node entity, we must send a POST request to `/entity/node` with the `Content-Type` header set to `application/hal+json` and declare the required type and title fields in the request `BODY`.
 
+If you have Basic Authentication enabled, you need to set headers `PHP_AUTH_USER` and `PHP_AUTH_PW` to authenticate as our user.
 
 ## Drupal 7 Modules ##
 
@@ -84,56 +72,61 @@ Web Services are implemented through various plugins in Drupal 7.
 
 Service module have several integration features, and other web service format. It also has [several supporting modules](https://www.drupal.org/node/750036) that extend Drupal 7 functionalities be made available to the API.
 
-Note: While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource) module to simple create a views_json output, which can serve as a simple GET request resource.
+Note: While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource) module.
 
 ## WordPress REST API
 
 Since Wordpress 4.7, the [REST API plugin](https://wordpress.org/plugins/rest-api/) is no longer needed as it is now part of Core.
 The complete list of resources about WP REST API is found in the [handbook](https://developer.wordpress.org/rest-api/)
 
-To extract site posts for example, send a GET request to /wp-json/wp/v2/posts. 
+* To extract site posts for example, send a GET request to /wp-json/wp/v2/posts. 
 
-To update a user with ID 4: Send a PUT request to /wp-json/wp/v2/users/4. 
+* To update a user with ID 4: Send a PUT request to /wp-json/wp/v2/users/4. 
 
-To extract site posts but filter with a search term “awesome”?  GET /wp-json/wp/v2/posts?filter[s]=awesome 
+* To extract site posts but filter with a search term “awesome”?  GET /wp-json/wp/v2/posts?filter[s]=awesome 
 
-Get involved or see older versions of the plugin. Visit WP REST API Team site [http://v2.wp-api.org/](http://v2.wp-api.org/)
+* Get involved or see older versions of the plugin. Visit WP REST API Team site [http://v2.wp-api.org/](http://v2.wp-api.org/)
 
-## Contenta CMS ##
+## Other Frameworks, Builds or Distributions 
+
+You can [use custom upstreams](/docs/custom-upstream/), [make your own build](/docs/guides/build-tools/) or [install distributions](/docs/start-state/) that may serve as a CMS API. 
+
+Unless there are some platform related issues, Pantheon does not support features or the code behind custom applications you may use. 
+
+### Contenta CMS 
 
 [Contenta](http://www.contentacms.org/) is an API-First Drupal distribution. It provides a standard platform that is API ready for building front-end applications. Contenta intends to ease the pain of using, or simply trying, decoupled Drupal. 
 
-### Installation ###
-
-You need to use [Composer](/docs/composer) to create a project. 
+To install, you need to use [Composer](/docs/composer) to create a project. 
 ```composer create-project contentacms/contenta-jsonapi-project MYPROJECT --stability dev --no-interaction```
 
-Continue to install Drupal like normal. 
+For issues or support, you may refer to the current [Github repository](https://github.com/contentacms/contenta_jsonapi)
 
 
-## Deploying your CMS API site in Pantheon ##
+## Deploying your CMS API site in Pantheon
 
-After you have developed your complete CMS API service, deploy site just like any other site in Pantheon platform. Read about the [Pantheon Workflow](/docs/pantheon-workflow)
+There are no differences when deploying a CMS API than a normal site. You may follow our [Launch Essentials](/docs/guides/launch/) guide to get started, and also refer to the [Pantheon Workflow](/docs/pantheon-workflow) page for how to deploy your coe or manage your content.
 
-### Development Tools ###
-To test or troubleshoot your REST API means to test the GET, POST or DELETE methods through HTTP. The most commonly used tools are the following:
+Make sure to check the [Best Practice Checklist for Going Live](/docs/guides/launch/next-steps/) and activate other features like [New Relic](/docs/new-relic/) for monitoring, or enabling [Solr]{/docs/solr) and [Redis](/docs/redis/)
 
-[Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) 
+You can also write scripts in [Guzzle](http://docs.guzzlephp.org/en/latest/), which is a great tool (and included in Drupal 8 Core) for testing. You can also use cURL via the command line or PHP.
 
-[Dev HTTP Client](https://chrome.google.com/webstore/detail/dev-http-client/aejoelaoggembcahagimdiliamlcdmfm/related)
+### Pantheon Global CDN ###
 
-[Restlet Client](https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm)
+All sites will benefit from the use of [Global CDN](/global-cdn/), a core platform offering for improved performance and security. It enables an advanced caching mechanism, and have free and automated HTTPS by default.
 
-Note: These are Chrome Plugin tools which usually have a counterpart for other browsers
-
-You can also write scripts in [Guzzle](http://docs.guzzlephp.org/en/latest/), which is a great tool (and included in Drupal 8 Core). You can also use cURL via the command line or PHP.
-
-
-### Edge Cache ###
+To learn more, read our [Global CDN documentation](/docs/global-cdn/)
 
 <!-- How does Global CDN cache REST API resources -->
 
-### Object Caching ###
+### Performance Monitoring ###
+
+<!-- With New Relic enabled, page requests appear as transactions and not sessions for REST API resources retrieved. 
+The best way to monitor its performance is to remember the most common transactions, hooks or name patterns that appear in the logs. -->
+
+<!-- New Relic REST API patterns here -->
+
+### Redis and Object Caching ###
 
 <!-- tips on how Object Cache is best used for REST API CMS -->
 
@@ -141,22 +134,22 @@ You can also write scripts in [Guzzle](http://docs.guzzlephp.org/en/latest/), wh
 
 <!-- example cases for using Solr Search with CMS API -->
 
-### Performance Monitoring ###
-
-With New Relic enabled, page requests appear as transactions and not sessions for REST API resources retrieved. 
-The best way to monitor its performance is to remember the most common transactions, hooks or name patterns that appear in the logs.
-
-<!-- New Relic REST API patterns here -->
-
-
-
 
 ## Frequently Asked Questions ##
 
+### How can I troubleshoot my CMS API? ###
+
+To test or troubleshoot your REST API means to test the GET, POST or DELETE methods through HTTP. The most commonly used tools are the following:
+
+* [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en) 
+* [Dev HTTP Client](https://chrome.google.com/webstore/detail/dev-http-client/aejoelaoggembcahagimdiliamlcdmfm/related)
+* [Restlet Client](https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm)
+
+Note: These are Chrome Plugin tools which usually have a counterpart for other browsers
+
 ### Can I place a single page app in my root directory? ###
 
-Yes, but instead of using index.html, we use override.html as the default page to be loaded. It is also possible to have sub-directory that contains singe-page apps with HTML, JS or CSS files.
-However, these are treated the same way as other Static assets are in the platform.
+Yes, but instead of using index.html, we use override.html as the default page to be loaded. It is also possible to have sub-directory that contains singe-page apps with HTML, JS or CSS files. For deployment, these are treated the same way with other static assets in the platform.
 
 
 ## Known Issues ##
@@ -164,19 +157,18 @@ However, these are treated the same way as other Static assets are in the platfo
 <!-- CORS issues -->
 
 
-
 ## See Also
-[https://pantheon.io/decoupled-cms](https://pantheon.io/decoupled-cms)
-[https://pantheon.io/blog/decoupled-architecture-wordpress-and-drupal](https://pantheon.io/blog/decoupled-architecture-wordpress-and-drupal)
-[https://pantheon.io/what-know-about-decoupled-cms-recording](https://pantheon.io/what-know-about-decoupled-cms-recording)
+* [https://pantheon.io/decoupled-cms](decoupled-cms)
+* [https://pantheon.io/blog/decoupled-architecture-wordpress-and-drupal](/blog/decoupled-architecture-wordpress-and-drupal)
+* [https://pantheon.io/what-know-about-decoupled-cms-recording](/what-know-about-decoupled-cms-recording)
 
 ## References
 Drupal 8
-https://www.drupal.org/docs/8/api/restful-web-services-api/restful-web-services-api-overview
-https://drupalize.me/blog/201401/introduction-restful-web-services-drupal-8
-https://drupalize.me/blog/201402/your-first-restful-view-drupal-8
+* [https://www.drupal.org/docs/8/api/restful-web-services-api/restful-web-services-api-overview](https://www.drupal.org/docs/8/api/restful-web-services-api/restful-web-services-api-overview)
+* [https://drupalize.me/blog/201401/introduction-restful-web-services-drupal-8](https://drupalize.me/blog/201401/introduction-restful-web-services-drupal-8)
+* [https://drupalize.me/blog/201402/your-first-restful-view-drupal-8](https://drupalize.me/blog/201402/your-first-restful-view-drupal-8)
 
 WordPress
-https://wordpress.org/plugins/rest-api/
-https://developer.wordpress.org/rest-api/
-http://v2.wp-api.org/](http://v2.wp-api.org/
+* [https://wordpress.org/plugins/rest-api/](https://wordpress.org/plugins/rest-api/)
+* [https://developer.wordpress.org/rest-api/](https://developer.wordpress.org/rest-api/)
+* [http://v2.wp-api.org/](http://v2.wp-api.org/](http://v2.wp-api.org/](http://v2.wp-api.org/)
