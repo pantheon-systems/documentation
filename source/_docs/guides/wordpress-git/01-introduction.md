@@ -17,7 +17,7 @@ nexturl: guides/wordpress-git/plugins/
 editpath: wordpress-git/01-introduction.md
 image: git-commit-thumb
 ---
-This is a beginner's guide to WordPress development on Pantheon's Git-based platform. Don’t use Git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.
+This guide demonstrates how FTP users can build WordPress sites on Pantheon's git-based platform. Don't use git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.
 
 Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and text editor without compromising use of the WordPress Dashboard.
 
