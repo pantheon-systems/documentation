@@ -354,9 +354,15 @@ Pantheon has tools in place to monitor database queries:
 <hr>
 
 ### [UNLOQ Two Factor Authentication (2FA)](https://wordpress.org/plugins/unloq/)
+**Issue**: Login page shows an error `This widget does not work on this domain` after deploying plugin to the site. The API key is stored directly in the database, and there is no Dashboard UI section to set this up or change. If you activated the plugin and cloned your database to a different environment, this will be overwritten and would encounter this error.
+
+**Solution**: As a workaround, manually change 'unloq_credentials' key in 'wp_options' table. You can also re-create an application by resetting your plugin installation (deactivate, delete entries etc.,)
+
 **Issue**: When we activate the plugin it wants us to ensure that .htaccess is writeable as an error message
 
-**Solution**: The platform uses NGINX which ignores .htaccess file and only used by Apache. [See Docs here](/docs/htaccess/). There are other plugins that we recommend as found in our [two-factor authentication (2FA) guide](/docs/guides/two-factor-authentication/#set-up-two-factor-authentication-with-wordpress-single-site)
+**Solution**: TEST/LIVE are not writable by default and the platform uses NGINX which ignores .htaccess file and only used by Apache. [See Docs here](/docs/htaccess/). 
+
+There are other plugins that you can use as found in our [two-factor authentication (2FA) guide](/docs/guides/two-factor-authentication/#set-up-two-factor-authentication-with-wordpress-single-site)
 
 <hr>
 
