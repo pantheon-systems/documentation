@@ -38,9 +38,10 @@ The choice between running classic single-site WordPress or WordPress in Multisi
 When configuring WordPress Multisite, you’ll need to choose between using subdirectories or subdomains. You’re choosing between `mydomain.com/first-site` / `mydomain.com/second-site` or `first-site.mydomain.com` / `second-site.mydomain.com`.
 
 The key differences are:
-- Custom domains can be mapped to sites on subdomains or in subdirectories, but subdirectories can’t be mapped to sites on subdomains.
-- Using subdomains will require you to set up your own DNS and add each domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `pantheon.io` namespace for site networks.
-- Serving subdomains over SSL requires a wildcard SSL certificate, or individual SSL certificates for each subdomain.
+
+ - Custom domains can be mapped to sites on subdomains or in subdirectories, but subdirectories can’t be mapped to sites on subdomains.
+ - Using subdomains will require you to set up your own DNS and add each domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `pantheon.io` namespace for site networks.
+ - Serving subdomains over SSL requires a wildcard SSL certificate, or individual SSL certificates for each subdomain.
 
 ### 3. Users are shared
 
