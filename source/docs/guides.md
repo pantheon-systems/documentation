@@ -60,7 +60,7 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
       <div class="flex-panel-body-pantheon-workflows">
       <a href="/docs/guides/wordpress-git/">
         <div class="pantheon-workflows">
-          <img alt="WordPress & Git" src="/source/docs/assets/images/git-commit-thumb.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
+          <img alt="WordPress Development" src="/source/docs/assets/images/git-commit-thumb.png" style="max-height:200px;" class="main-topic-info__plugin-image" >
         <h3>WordPress & Git</h3>
         </div>
         </a>
