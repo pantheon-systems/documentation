@@ -60,14 +60,33 @@ Use [Terminus](/docs/terminus) to run `wp search-replace` to converts URLs from 
 ```
 terminus remote:wp <site>.<env> -- search-replace 'http://www.example.com' 'https://www.example.com' --all-tables --verbose
 ```
-##### Via Dashboard
-Another option that will work for most WordPress sites is to clone the Live database down to Test - and then clone it back to Live, ensuring you select the desired URL conversion and to Convert URLs' Protocol to HTTPS.
 
 #### Drupal
-Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-commands). Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
+Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-commands).
 
-#### Via Dashboard
-Another option that will work for most sites is to clone the Live database down to Test - and then clone it back to Live, ensuring you select the desired 
+Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
+
+**Via Dashboard**
+
+If don't have Terminus installed, or are unfamiliar with working in the command line, you can replace the URLs from the Pantheon Dashboard.
+
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">This will not work for Multisite installations, and can result in data loss on sites with active transactions, as well as other non-standard configurations.</p>
+</div>
+
+1. From the **Test** environment, clone your database from Live:
+
+    ![Cloning the Live Database to Test](/source/docs/assets/images/dashboard/clone-live-to-test.png)
+
+    <div class="alert alert-danger" role="alert">
+      <h4 class="info">Warning</h4>
+      <p markdown="1">Be *sure* that you are cloning in the right direction. If you accidentally replace your Live environment's database, you can lose data.</p>
+    </div>
+
+2. Now, from the **Live** environment, clone your database back from Test, making sure to select "https" under **Convert URLs' Protocol to:**:
+
+    ![Cloning the Test database to Live, while converting URLs](/source/docs/assets/images/dashboard/clone-test-to-live.png)
 
 ## Clear Caches
 Clear Drupal and WordPress object caches in the [database and/or in Redis](/docs/drupal-redis/#clear-cache)) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
@@ -102,7 +121,7 @@ Location: https://www.example.com/
 
 You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/redirects/) to investigate redirect behaviors as an alternative to cURL:
 
-![Varvy Redirects example.com](/source/docs/assets/images/varvy-redirect-mapper.png)  
+![Varvy Redirects example.com](/source/docs/assets/images/varvy-redirect-mapper.png)
 
 Check all configured services when looking for redirects to remove, like page rules on some external CDN.
 
