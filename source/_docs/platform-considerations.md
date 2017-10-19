@@ -159,6 +159,14 @@ Pantheon does not currently support any PHP frameworks outside of Drupal and Wor
 ## Unsupported Drupal Modules and WordPress Plugins
 See [Modules and Plugins with Known Issues](/docs/unsupported-modules-plugins) for an up-to-date list of modules and plugins that do not work with or are not supported by Pantheon.
 
+## Paid Plugins, Modules or Themes with Licenses
+ 
+In general, licensed or paid plugins, modules or themes are allowed for use in Pantheon. Licensing issues are for Customers to Resolve, as per the terms of their plugin, module or themes. You can also get direct support from their providers or developers. 
+
+Licenses are also used to get updates directly online. You can assign your keys in the DEV environment to get the changes as it is writable. 
+
+For plugin, themes or module specific cases related to licenses, check our list [Unsupported Drupal Modules and WordPress Plugins](/docs/unsupported-modules-plugins/) 
+
 ## Inactive Site Freezing
 
 Sandbox sites that are over four months old that have not had code commits or other Git activity for three months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
