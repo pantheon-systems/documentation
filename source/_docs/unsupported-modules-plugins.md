@@ -291,9 +291,22 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 <hr>
 
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
-**Issue**: This plugin utilizes a static value, `$_SERVER['SERVER_NAME']`, instead of `$_SERVER['HTTP_HOST']` which is generated dynamically.
+**Issue**: This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change overtime during routine platform maintenance.  
 
-**Solution**: Add the following to `wp-config.php`: `$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];`
+**Solution**: Add the following to `wp-config.php`:
+
+```
+$_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
+
+if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+  if (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] === 'ON') {
+    $_SERVER['SERVER_PORT'] = 443;
+  }
+  else {
+    $_SERVER['SERVER_PORT'] = 80;
+  }
+}
+```
 
 For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
 <hr>
