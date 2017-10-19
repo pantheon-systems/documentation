@@ -140,4 +140,12 @@ The following plugins are supported for Terminus 1.0:
       <a href="https://github.com/terminus-plugin-project/terminus-site-status-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
     </div>
   </div>
+    <div class="flex-panel-item">
+    <div class="flex-panel-body">
+      <h3 class="plugin-title">Newrelic Data</h3>
+      <p class="topic-info__description">Author: <a href="https://github.com/fusionx1">Paul de Paula</a></p>
+      <p class="topic-info__description">Displays the newrelic overview per site or organization</p>
+      <a href="https://github.com/fusionx1/terminus-get-newrelic" class="btn-primary btn get-plugin">Get Plugin</a>
+    </div>
+  </div>
 </div>
