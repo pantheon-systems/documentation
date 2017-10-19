@@ -145,3 +145,57 @@ WP Redis is a drop-in plugin that should only be loaded using the installation m
 
 ### Redis Server is Gone
 Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
+
+## Frequently Asked Questions
+
+#### What happens when Redis reaches maxmemory?
+
+The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up), keeping in mind our `maxmemory-policy` is `allkeys-lru`.
+
+#### Is Redis set up as an LRU cache?
+
+We are using [allkeys-lru](https://redis.io/topics/lru-cache). Here is the Redis configuration file for your Live environment:
+
+```nohighlight
+cat redis.conf
+port 11455
+timeout 300
+loglevel notice
+logfile /srv/bindings/xxxxxxxxx/logs/redis.log
+databases 16
+save 900 1
+save 300 10
+save 60 10000
+rdbcompression yes
+dbfilename dump.rdb
+dir /srv/bindings/xxxxxxxxx/data/
+requirepass 278801a71e2c4264b7d7b155def62bea
+maxclients 1024
+maxmemory 964689920
+maxmemory-policy allkeys-lru
+appendonly no
+appendfsync everysec
+no-appendfsync-on-rewrite no
+list-max-ziplist-entries 512
+list-max-ziplist-value 64
+set-max-intset-entries 512
+activerehashing yes
+```
+
+#### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
+
+Yes. There is a `redis.log` file that is available on the Redis container for each environment. You can see where the log files and configuration reside:
+
+```nohighlight
+$ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
+sftp> ls -la
+-rw-r--r-- 1 11455 11455 18 Oct 06 05:16 .bash_logout -rw-r--r-- 1 11455 11455 193 Oct 06 05:16 .bash_profile -rw-r--r-- 1 11455 11455 231 Oct 06 05:16 .bashrc -rw-r--r-- 1 0 0 0 Mar 10 19:46 .pantheonssh_login drwxr-x--- 2 0 11455 4096 Nov 10 07:55 certs
+-rw-r--r-- 1 0 0 42 Mar 10 09:46 chef.stamp drwx------ 2 11455 11455 4096 Mar 10 19:46 data
+drwxrwx--- 2 0 11455 4096 Nov 10 07:55 logs
+-rw------- 1 0 0 2677 Mar 10 09:46 metadata.json -rw-r----- 1 0 11455 531 Nov 10 07:55 redis.conf drwxrwx--- 2 0 11455 4096 Mar 10 09:46 tmp
+sftp> ls -la logs/
+-rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log sftp>
+```
+#### I restored my site (or imported a database backup) and now my site won't come back.
+
+When you replace the database with one that doesn't match the redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the dashboard. To resolve the issue, [flush your redis cache from the command line](#clear-cache).
