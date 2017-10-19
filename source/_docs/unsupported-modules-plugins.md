@@ -365,9 +365,20 @@ Pantheon has tools in place to monitor database queries:
 
 **Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
 <hr>
+
+### [UNLOQ Two Factor Authentication (2FA)](https://wordpress.org/plugins/unloq/)
+**Issue**: `This widget does not work on this domain` error message shown after deploying plugin across environments on Pantheon. This is because the API credentials used on the original environment are being used on a new environment URL, which is not allowed by the plugin. This is by design.
+
+**Solution**: Manually change `unloq_credentials` key in the`wp_options` table. Alternatively, you can re-create an application by resetting your plugin installation (deactivate, delete entries, etc.).
+
+For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/docs/guides/two-factor-authentication/#set-up-two-factor-authentication-with-wordpress-single-site).
+
+<hr>
+
 ### [Visual Composer: Page Builder](https://vc.wpbakery.com/)
 **Issue**: This plugin requires write access to the site's codebase for editing files, which is not granted on Test and Live environments by design.
 <hr>
+
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
 **Issue #1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
