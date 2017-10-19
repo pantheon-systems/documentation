@@ -103,6 +103,17 @@ Yes! As long as your are following the Dashboard DNS recommendations before star
 
 Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/configure-dns/) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
+<div class="alert alert-info" markdown="1">
+<h4 class="info">Note</h4>
+You cannot pre-provision HTTPS if:
+
+ - You cannot host the provided verification file on the current site.
+ - Your current server doesn't support files without extension names (like IIS with .NET)
+
+If you do not already have HTTPS, there's _no need_ to pre-provision.
+
+</div>
+
 ### How many custom domains are supported?
 {% include("content/tables/custom-domains-limit.html") %}
 
