@@ -2501,17 +2501,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pantheon-systems/terminus.git",
-                "reference": "57fe5b55e8d9a4a4cea2f1cd4074d1fdfaae51bc"
+                "reference": "7cfced9d82263805d31fc77dba23d1ef99aa0abf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/57fe5b55e8d9a4a4cea2f1cd4074d1fdfaae51bc",
-                "reference": "57fe5b55e8d9a4a4cea2f1cd4074d1fdfaae51bc",
+                "url": "https://api.github.com/repos/pantheon-systems/terminus/zipball/7cfced9d82263805d31fc77dba23d1ef99aa0abf",
+                "reference": "7cfced9d82263805d31fc77dba23d1ef99aa0abf",
                 "shasum": ""
             },
             "require": {
                 "composer/semver": "^1.4",
-                "consolidation/annotated-command": "^2.4.5",
                 "consolidation/robo": "^1.1.0",
                 "guzzlehttp/guzzle": "^6.2",
                 "php": ">=5.5.9",
@@ -2555,7 +2554,7 @@
                 "terminus",
                 "wordpress"
             ],
-            "time": "2017-08-17T17:51:07+00:00"
+            "time": "2017-10-17T19:08:12+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
