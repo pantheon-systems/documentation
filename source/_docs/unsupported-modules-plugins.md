@@ -291,7 +291,7 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 <hr>
 
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
-**Issue**: This plugin utilizes `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` which has the static internal platform values. 
+**Issue**: This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change overtime during routine platform maintenance.  
 
 **Solution**: Add the following to `wp-config.php`:
 
