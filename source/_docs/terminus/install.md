@@ -10,7 +10,7 @@ nexturl: terminus/examples/
 previousurl: terminus/
 image: terminus-thumbLarge
 ---
-Terminus is available for Mac OS X, Linux, and Windows 7-10.
+Terminus is available for Mac OS X, Linux, and Windows 7 and 10.
 ## Requirements
 
 * PHP Version 5.5.9 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php))
