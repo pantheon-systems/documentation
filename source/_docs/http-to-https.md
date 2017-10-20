@@ -63,7 +63,7 @@ terminus remote:wp <site>.<env> -- search-replace 'http://www.example.com' 'http
 
 **Via Dashboard**
 
-If don't have Terminus installed, or are unfamiliar with working in the command line, you can replace the URLs from the Pantheon Dashboard.
+If don't have Terminus installed, or are unfamiliar with working in the command line, WordPress sites have the option to replace the URLs from the Pantheon Dashboard.
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
