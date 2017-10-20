@@ -61,11 +61,6 @@ Use [Terminus](/docs/terminus) to run `wp search-replace` to converts URLs from 
 terminus remote:wp <site>.<env> -- search-replace 'http://www.example.com' 'https://www.example.com' --all-tables --verbose
 ```
 
-#### Drupal
-Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-commands).
-
-Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
-
 **Via Dashboard**
 
 If don't have Terminus installed, or are unfamiliar with working in the command line, you can replace the URLs from the Pantheon Dashboard.
@@ -87,6 +82,12 @@ If don't have Terminus installed, or are unfamiliar with working in the command 
 2. Now, from the **Live** environment, clone your database back from Test, making sure to select "https" under **Convert URLs' Protocol to:**:
 
     ![Cloning the Test database to Live, while converting URLs](/source/docs/assets/images/dashboard/clone-test-to-live.png)
+
+#### Drupal
+Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-commands).
+
+Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
+
 
 ## Clear Caches
 Clear Drupal and WordPress object caches in the [database and/or in Redis](/docs/drupal-redis/#clear-cache)) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
