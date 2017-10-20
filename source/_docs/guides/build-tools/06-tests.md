@@ -42,7 +42,7 @@ The following is an example of how to increase test coverage for your project by
         Then I should see "Making the world amazing"
     ```
 
-    It's a relatively simple tasks to add new tests that exercise your site through its interface. For example, the figure below demonstrates testing that an administrator can create a new page on the site.
+    It's a relatively simple task to add new tests that exercise your site through its interface. For example, the figure below demonstrates testing that an administrator can create a new page on the site.
 
 2.  Create a new file called `content-ui.feature` within the `tests/site-features` directory containing:
 
