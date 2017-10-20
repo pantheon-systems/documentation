@@ -61,10 +61,6 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   sed -i '16s/master/'"$CIRCLE_BRANCH"'/g' source/_views/video.html
   sed -i '29s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
   sed -i '31s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
-  sed -i '41i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/doc.html
-  sed -i '34i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/terminuspage.html
-  sed -i '18i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/video.html
-  sed -i '34i\'"<li><a href="https://github.com/pantheon-systems/documentation/upload/$CIRCLE_BRANCH/source/docs/assets/images" target="blank">Upload New Images</a></li>"'\' source/_views/guide.html
 
 
   # Regenerate sculpin to reflect new redirect logic
