@@ -138,6 +138,9 @@ By default Sucuri blocks serving the challenges needed to verify domain ownershi
 ### Moz Pro 804 HTTPS SSL error
 Moz Pro is unable to crawl sites using Server Name Indication (SNI). For information on beta access to SNI support, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
 
+### Drupal text challenge file gets 403 - permission denied on Apache
+Drupal core has a line in the htaccess file that disallows apache to serve dot files/folders.  The text challenge provided in the Pantheon dashboard to pre-provision the cert requires that you add a .well-known folder into the root of your site.  We recommend using this contrib module to workaround this issue - https://www.drupal.org/project/letsencrypt_challenge
+
 ## Glossary
 ### HTTPS
 HTTPS encrypts and decrypts requests. For more information, see [this Google resource](https://support.google.com/webmasters/answer/6073543?hl=en).
