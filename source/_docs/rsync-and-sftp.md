@@ -66,7 +66,7 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress. If your serving the site from a [nested docroot](/docs/nested-docroot/), then the these paths will be within the <code>web</code> directory and you'll need to modidfy the rsync source argument path</p>
+<p markdown="1">Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress. If you're serving the site from a [nested docroot](/docs/nested-docroot/), these paths will be within the <code>web</code> directory. You'll need to modidfy the rsync source argument path.</p>
 </div>
 
 ## Examples
