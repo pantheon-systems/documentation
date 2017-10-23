@@ -123,6 +123,9 @@ All modern browsers and operating systems are supported. For details, see the **
 ### What about Cloudflare?
 Refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
 
+### For how long are Let's Encrypt certificates valid and what happens when they expire?
+Let's Encrypt certificates are valid for 90 days and are automatically updated on the platform before they expire.
+
 
 ## Known Issues
 ### HTTPS doesn't provision with incorrect AAAA configurations
