@@ -379,6 +379,9 @@ For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authenticat
 **Issue**: This plugin requires write access to the site's codebase for editing files, which is not granted on Test and Live environments by design.
 <hr>
 
+### [Weather Station](https://wordpress.org/plugins/live-weather-station/)
+**Issue**:  This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
+
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
 **Issue #1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
