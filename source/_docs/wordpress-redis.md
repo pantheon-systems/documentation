@@ -138,6 +138,38 @@ OK
 (integer) 0
 >
 ```
+### Find a Specific Key
+
+If you need to find a specific key, you can use search patterns that contain globs. For example:
+
+```bash
+redis> KEYS *a*
+$17
+englash bigkahuna
+redis> KEYS engl?sh
+$23
+englosh englash english
+redis> KEYS engl[ia]sh
+$15
+englash english
+```
+### Clear Cache
+
+Pass the `flushall` command to clear all keys from the cache:
+
+```bash
+redis> flushall
+OK
+```
+### Check the Number of Keys in Cache
+
+To check the number of keys in the cache, you can use the `DBSIZE` command. The following is sample output:
+
+```bash
+redis> DBSIZE
+:0
+```
+
 ## Troubleshooting
 
 ### Cannot Activate the Redis Plugin
