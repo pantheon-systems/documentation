@@ -66,7 +66,7 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Regardless of which platform you are using, WordPress or Drupal, your files need to be in the <code>/files</code> directory. This directory maps to <code>sites/default/files</code> for Drupal and <code>wp-content/uploads</code> for WordPress.</p>
+<p markdown="1">Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/docs/nested-docroot/).</p>
 </div>
 
 ## Examples
