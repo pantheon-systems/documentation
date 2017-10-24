@@ -250,7 +250,7 @@ There are toolbars for both Drupal and WordPress that provide stats like the num
   <li id="tab-1-id" role="presentation" class="active"><a href="#wp-helpers" aria-controls="wp-helpers" role="tab" data-toggle="tab">WordPress</a></li>
 
   <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#drupal-helpers" aria-controls="drupal-helpers" role="tab" data-toggle="tab">Drupal</a></li>
+  <li id="tab-2-id" role="presentation"><a href="#drupal-helpers" aria-controls="drupal-helpers" role="tab" data-toggle="tab">Drupal 8</a></li>
 </ul>
 
 <!-- Tab panes -->
