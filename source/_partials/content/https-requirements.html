@@ -1,0 +1,10 @@
+<h3>Requirements for Automated Certificate Renewal</h3>
+<ul>
+  <li>All A/AAAA records must point to a server that serves Pantheon's acme-challenge response (e.g., <code>http://23.185.0.1/.well-known/acme-challenge/[variableDataHere]</code>).</li>
+  <li>Authority Name Servers must serve mixed-case lookups.</li>
+  <li>Authority Name Servers must not fail CAA lookups.</li>
+  <li>CAA records must either 1) not exist for the domain and its parent domains or 2) authorize Let's Encrypt.</li>
+  <li>CNAMEs must follow the above requirements.</li>
+  <li>DNAMEs must not be used.</li>
+</ul>
+<p>Please check this doc periodically as requirements may be added or removed.</p>
