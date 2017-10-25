@@ -9,7 +9,10 @@ Pantheon supports [WordPress Site Networks](https://codex.wordpress.org/Glossary
 
 Running a WordPress Site Network requires a special configuration that is only available on [Elite plans](https://pantheon.io/pantheon-elite-plans), and only Pantheon employees have the ability to create the sites and add you to the team. [Complete this form](https://pantheon.io/pantheon-elite-plans) if you have questions about the network you’d like to host on Pantheon.
 
-Setting up a site network on top of a vanilla WordPress installation is not supported.
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p markdown="1">Setting up a site network on top of a vanilla WordPress installation is not supported. It must be created by a Pantheon employee.</p>
+</div>
 
 ## Supported Use Cases
 We support clients running a network of functionally-similar sites. This includes, but is not limited to, networks of:
