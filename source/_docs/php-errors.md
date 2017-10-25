@@ -112,7 +112,7 @@ PHP Exceptions are errors, and depending on the severity and whether they are ha
 ## Undefined Function Error
 Normally a request to Drupal or WordPress starts by reading the `index.php` file at the root directory, which then bootstraps <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Bootstrap" data-content="Loading sequence for an application, or the process of loading necessary functionality."><em class="fa fa-info-circle"></em></a> the site.
 
-However, when a PHP file is requested directly (e.g., `https://example.com/path/to/phpfile.php`) the `index.php` file and the bootstrap process are skipped. Instead, the PHP file is executed on it's own. Any function included but not defined by the file causes a `Call to undefined function` fatal error when the PHP file is requested directly.
+However, when a PHP file is requested directly (e.g., `https://example.com/path/to/phpfile.php`) the `index.php` file and the bootstrap process are skipped. Instead, the PHP file is executed on it's own and any function included but not defined by the file will cause a `Call to undefined function` fatal error.
 
 For example, in the following error PHP reports the `phpfile.php` file at line `xx` for calling `some_function()`, which has not yet been defined: `Call to undefined function  [some_function()] in [path/to/phpfile.php:xx]`
 
