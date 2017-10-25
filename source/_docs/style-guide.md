@@ -353,7 +353,7 @@ When working on a document that will cover steps for multiple CMSs, use tabs whe
     Here's our WordPress specific copy, and an example snippet:
     ```php
     /**
-     * Some WordPress 8 specific thing
+     * Some WordPress specific thing
      *
      */
     ```
