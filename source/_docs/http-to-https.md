@@ -37,9 +37,9 @@ Configure your site to assume users are visiting via HTTPS and the site’s prim
 ### Reveal violations in bulk
 There are more than a few ways to identify mixed-content violations across your site, but Google Chrome is arguably one of the fastest and simplest. Right click on a page showing as insecure and select inspect, then review the console.
 
-Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/), for those preferential to GUIs.
+Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/){.external}, for those preferential to GUIs.
 
-Fans of the command line might find [mixed-content-scan by Bramus](https://github.com/bramus/mixed-content-scan) helpful.
+Fans of the command line might find [mixed-content-scan by Bramus](https://github.com/bramus/mixed-content-scan){.external} helpful.
 ### Hotfix violations in bulk
 If you're in a bind and need a quick fix, set the `Content-Security-Policy` header to `upgrade-insecure-requests` to upgrade all HTTP resources to the HTTPS protocol client-side, on the fly:
 
@@ -54,43 +54,64 @@ Use this as temporary solution while working to fix each problem at its origin.
 ### Database cleanup
 Use the following techniques to replace insecure references to your domain in the site's database. The result should be that the browser loads pages of your WordPress or Drupal site securely with no warnings.
 
-#### WordPress
-Use [Terminus](/docs/terminus) to run `wp search-replace` to converts URLs from HTTP to HTTPS:
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
 
-```
-terminus remote:wp <site>.<env> -- search-replace 'http://www.example.com' 'https://www.example.com' --all-tables --verbose
-```
+  <!-- 2nd Tab Nav -->
+  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal</a></li>
+</ul>
 
-**Via Dashboard**
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+  **Via Plugin**
 
-If don't have Terminus installed, or are unfamiliar with working in the command line, WordPress sites have the option to replace the URLs from the Pantheon Dashboard.
+  You can use the [Really Simple SSL](https://wordpress.org/plugins/really-simple-ssl/){.external} plugin to automatically detect and fix mixed content messages. For additional details, see [this related blog post](https://pantheon.io/blog/how-get-rid-those-pesky-mixed-content-messages-wordpress){.external}.
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">This will not work for Multisite installations, and can result in data loss on sites with active transactions, as well as other non-standard configurations.</p>
+  **Via WP-CLI**
+
+  If you'd rather not add another plugin to the site you can use [Terminus](/docs/terminus) to run `wp search-replace` to converts URLs from HTTP to HTTPS:
+
+  ```
+  terminus remote:wp <site>.<env> -- search-replace 'http://www.example.com' 'https://www.example.com' --all-tables --verbose
+  ```
+
+  **Via Site Dashboard**
+
+  If don't have Terminus installed, or are unfamiliar with working in the command line, WordPress sites have the option to replace the URLs from the Pantheon Dashboard.
+
+  <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p markdown="1">This will not work for Multisite installations, and can result in data loss on sites with active transactions, as well as other non-standard configurations.</p>
+  </div>
+
+  1. From the **Test** environment, clone your database from Live:
+
+      ![Cloning the Live Database to Test](/source/docs/assets/images/dashboard/clone-live-to-test.png)
+
+      <div class="alert alert-danger" role="alert">
+        <h4 class="info">Warning</h4>
+        <p markdown="1">Be *sure* that you are cloning in the right direction. If you accidentally replace your Live environment's database, you can lose data.</p>
+      </div>
+
+  2. Now, from the **Live** environment, clone your database back from Test, making sure to select "https" under **Convert URLs' Protocol to:**:
+
+      ![Cloning the Test database to Live, while converting URLs](/source/docs/assets/images/dashboard/clone-test-to-live.png)
+  </div>
+
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar){.external} by [adding custom Drush command](/docs/drush/#add-custom-drush-commands){.external}.
+
+  Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8){.external} to fetch data from entities in the database that may include insecure references.
+  </div>
 </div>
 
-1. From the **Test** environment, clone your database from Live:
-
-    ![Cloning the Live Database to Test](/source/docs/assets/images/dashboard/clone-live-to-test.png)
-
-    <div class="alert alert-danger" role="alert">
-      <h4 class="info">Warning</h4>
-      <p markdown="1">Be *sure* that you are cloning in the right direction. If you accidentally replace your Live environment's database, you can lose data.</p>
-    </div>
-
-2. Now, from the **Live** environment, clone your database back from Test, making sure to select "https" under **Convert URLs' Protocol to:**:
-
-    ![Cloning the Test database to Live, while converting URLs](/source/docs/assets/images/dashboard/clone-test-to-live.png)
-
-#### Drupal
-Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-commands).
-
-Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
-
-
 ## Clear Caches
-Clear Drupal and WordPress object caches in the [database and/or in Redis](/docs/drupal-redis/#clear-cache)) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
+Clear Drupal and WordPress object caches in the [database and/or in Redis](/docs/drupal-redis/#clear-cache) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
 
 At this point, all visitors to the site should be able to securely access all pages over HTTPS with no browser warnings.
 ## Redirect to HTTPS and the primary domain
@@ -120,7 +141,7 @@ Content-Type: text/html; charset=UTF-8
 Location: https://www.example.com/
 ```
 
-You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/redirects/) to investigate redirect behaviors as an alternative to cURL:
+You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/redirects/){.external} to investigate redirect behaviors as an alternative to cURL:
 
 ![Varvy Redirects example.com](/source/docs/assets/images/varvy-redirect-mapper.png)
 
