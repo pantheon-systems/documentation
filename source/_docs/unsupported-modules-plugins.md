@@ -271,9 +271,16 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 **Issue**: Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
 **Solution**: Configure Autoptimize to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`) by adding the following to `wp-config.php`:
-```
+
+```php
+/** Changes location where Autoptimize stores optimized files */
 define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
 ```
+
+Be sure to add this configuration _above_ the comment to stop editing:
+
+![Autoptimize configuration](/source/docs/assets/images/autoptimize-config.png)
+
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/docs/assuming-write-access/#create-a-symbolic-link).
 
 <hr>
