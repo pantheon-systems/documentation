@@ -41,6 +41,41 @@ Once enabled, the following header will be sent in responses:
 ```http
 Strict-Transport-Security: max-age=15984000; includeSubDomains; preload
 ```
+
+  <div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
+      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Troubleshooting</h3>
+    </a>
+  </div>
+  <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+  ### Nested Docroot {.info}
+
+  Site's using our [nested docroot](/docs/nested-docroot/) feature to serve WordPress from a subdirectory will experience a redirect loop upon activation of the LH HSTS plugin:
+
+  ![LH HSTS redirect loop on nested docroot](/source/docs/assets/images/lh-hsts-redirect-loop.png)
+
+  There is an [open issue](https://wordpress.org/support/topic/broken-website-9/){.external} to address the problem with currently no known workaround.
+
+  As an alternative for sites served from a subdirectory, we recommend disabling the LH HSTS plugin and using a custom PHP function <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Custom PHP Functions" data-content="Best practice would be to write a custom plugin for the following since it is related to the functionality of your site, not it's design or layout. However, you can add the custom function to a Child Theme's function.php file as a quick fix. Keep in mind, managing this functionality within the theme's functions.php file means it will not persist when swapping themes."><em class="fa fa-info-circle"></em></a> to send the HSTS header:
+
+  ```php
+  /**
+  *
+  * Example custom function to add the HSTS header while rendering a response.
+  *
+  **/
+  add_action( 'send_headers', 'add_header_hsts' );
+  function add_header_hsts() {
+      header('Strict-Transport-Security: max-age=15984000; includeSubDomains; preload');
+  }
+  ```
+
+  See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers){.external} for more details.
+
+  </div>
+  </div>
+
 </div>
 
 <!-- 2nd pane content -->
