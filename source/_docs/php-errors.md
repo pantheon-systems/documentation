@@ -114,7 +114,7 @@ Normally a request to Drupal or WordPress starts by reading the `index.php` file
 
 However, when a PHP file is requested directly (e.g., `https://example.com/path/to/phpfile.php`) the `index.php` file and the bootstrap process are skipped. Instead, the PHP file is executed on it's own. Any function included but not defined by the file causes a `Call to undefined function` fatal error when the PHP file is requested directly.
 
-Errors referencing an undefined function are triggered when PHP is instructed to execute a function prior to it's declaration. For example, in the following error PHP reports the `phpfile.php` file at line `xx` for calling `some_function()`, which has not yet been defined: `Call to undefined function  [some_function()] in [path/to/phpfile.php:xx]`
+For example, in the following error PHP reports the `phpfile.php` file at line `xx` for calling `some_function()`, which has not yet been defined: `Call to undefined function  [some_function()] in [path/to/phpfile.php:xx]`
 
 ### Troubleshooting
 Use the following debugging techniques to investigate undefined function error messages:
