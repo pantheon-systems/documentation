@@ -78,6 +78,8 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 ## Let's Encrypt Certificates
 [Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically adds your site's domains to a shared Let's Encrypt certificate, and always renew it automatically, with no additional cost.
 
+{% include("content/https-requirements.html")%}
+
 ## Frequently Asked Questions
 ### How do I upgrade my existing Pantheon site?
 Make the switch on an existing Pantheon site by updating DNS for your domains. If you don't see action required, open a support chat to get the upgrade enabled.
