@@ -88,7 +88,7 @@ Here's a breakdown of what errors are shown and where:
 
 To learn more about PHP error logs, see [Log Files on Pantheon](/docs/logs).
 
-## PHP Errors Slow Down a Site
+## Performance Hits
 
 An error, no matter what severity, is a problem that needs to be addressed. Any PHP error, even a notice, will drastically reduce the speed of PHP execution. Even if you don't see the error in your browser, and even if you explicitly disable logging, every single PHP error will slow your site down.  
 
@@ -103,13 +103,31 @@ Best practice is to fix every notice, warning, and error as you discover them. I
 
 See [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does-php-run-faster-without-warnings/1869185#1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
-## PHP Unhandled Exceptions on Pantheon
+## Unhandled Exceptions
 
 ​A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the [PHP documentation on Exceptions.](https://secure.php.net/manual/en/language.exceptions.php).
 
 PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon Dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
-## Handling Undefined Index Notices for PHP Variables
+## Undefined Function Error
+Normally a request to Drupal or WordPress starts by reading the `index.php` file at the root directory, which then bootstraps <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Bootstrap" data-content="Loading sequence for an application, or the process of loading necessary functionality."><em class="fa fa-info-circle"></em></a> the site.
+
+However, when a PHP file is requested directly (e.g., `https://example.com/path/to/phpfile.php`) the `index.php` file and the bootstrap process are skipped. Instead, the PHP file is executed on it's own. Any function included but not defined by the file causes a `Call to undefined function` fatal error when the PHP file is requested directly.
+
+Errors referencing an undefined function are triggered when PHP is instructed to execute a function prior to it's declaration. For example, in the following error PHP reports the `phpfile.php` file at line `xx` for calling `some_function()`, which has not yet been defined: `Call to undefined function  [some_function()] in [path/to/phpfile.php:xx]`
+
+### Troubleshooting
+Use the following debugging techniques to investigate undefined function error messages:
+
+- Search for the offending function elsewhere in the codebase to make sure it's defined somewhere in the project.
+- Check the reported PHP file at full bootstrap. Rather than accessing the reported PHP file directly (e.g., `https://example.com/path/to/phpfile.php`), browse to a page that includes the file (e.g., `https://example.com/some-page/`) to see if the same error occurs with the site fully bootstrapped.
+- Review [`nginx-access.log`](/docs/logs/) for requests to the reported PHP file.
+
+If you see direct requests to PHP files causing fatal undefined function errors (often caused by bot traffic), use the `pantheon.yml` configuration file to set protected web paths. For details, see [Pantheon YAML Configuration Files](/docs/pantheon-yml/#protected-web-paths). This stops the file from being web accessible while keeping the file available to PHP during bootstrap. When accessed directly, protected paths and files return a 403 Access Denied server response.
+
+We also recommend submitting a sitemap and instructing bots to only crawl designated paths set in `robots.txt`. For details, see [Bots and Indexing on Pantheon](/docs/bots-and-indexing/).
+
+## Undefined Index Notices
 
 When you import your site or enable some new modules, PHP notices may be reported on your Dev site that have never been reported before. These notices are now being made apparent because of the Dev environment's strict error reporting level.
 
