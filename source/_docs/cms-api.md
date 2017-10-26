@@ -97,10 +97,10 @@ Unless there are some platform related issues, Pantheon does not support feature
 
 [Contenta](http://www.contentacms.org/) is an API-First Drupal distribution. It provides a standard platform that is API ready for building front-end applications. Contenta intends to ease the pain of using, or simply trying, decoupled Drupal. 
 
-To install, you need to use [Composer](/docs/composer) to create a project. 
-```composer create-project contentacms/contenta-jsonapi-project MYPROJECT --stability dev --no-interaction```
+To get started, see the distro [Github repository](https://github.com/contentacms/contenta_jsonapi) and learn how to install. 
+The demo site is hosted in Pantheon via the link: [http://live-contentacms.pantheonsite.io](http://live-contentacms.pantheonsite.io)
 
-For issues or support, you may refer to the current [Github repository](https://github.com/contentacms/contenta_jsonapi)
+You may see the sample repository of [Contenta CMS Demo here](https://github.com/contentacms/contenta_jsonapi_demo). It uses the [Composer Drops 8](https://github.com/pantheon-systems/example-drops-8-composer) example repository as base.
 
 
 ## Deploying your CMS API site in Pantheon
@@ -119,18 +119,18 @@ To learn more, read our [Global CDN documentation](/docs/global-cdn/)
 
 <!-- How does Global CDN cache REST API resources -->
 
-### Performance Monitoring ###
+<!-- ### Performance Monitoring ### -->
 
 <!-- With New Relic enabled, page requests appear as transactions and not sessions for REST API resources retrieved. 
 The best way to monitor its performance is to remember the most common transactions, hooks or name patterns that appear in the logs. -->
 
 <!-- New Relic REST API patterns here -->
 
-### Redis and Object Caching ###
+<!-- ### Redis and Object Caching ### -->
 
 <!-- tips on how Object Cache is best used for REST API CMS -->
 
-### Solr Search with API ###
+<!-- ### Solr Search with API ### -->
 
 <!-- example cases for using Solr Search with CMS API -->
 
@@ -150,11 +150,6 @@ Note: These are Chrome Plugin tools which usually have a counterpart for other b
 ### Can I place a single page app in my root directory? ###
 
 Yes, but instead of using index.html, we use override.html as the default page to be loaded. It is also possible to have sub-directory that contains singe-page apps with HTML, JS or CSS files. For deployment, these are treated the same way with other static assets in the platform.
-
-
-## Known Issues ##
-
-<!-- CORS issues -->
 
 
 ## See Also
