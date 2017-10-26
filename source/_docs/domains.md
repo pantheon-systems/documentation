@@ -57,7 +57,7 @@ It's often useful to redirect requests to a different domain or path. While it's
 </div>
 
 ### Redirect to HTTPS and the primary domain
-It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php`:
+It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in [`settings.php`](/docs/settings-php/) or [`wp-config.php`](/docs/wp-config-php/):
 
 {% include("redirects.twig")%}
 
