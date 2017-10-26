@@ -18,9 +18,6 @@ We do not prevent you from installing and using these plugins/modules; however, 
 ### [Adaptive Image Styles](https://www.drupal.org/project/ais)
 **Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/docs/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
 <hr>
-### [AdvAgg - Advanced CSS/JS Aggregation](https://www.drupal.org/project/advagg)
-**Issue**: We do not recommend using AdvAgg as it can cause conflicts with page caching leading to various errors, such as `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for css files are not getting through` or `Adv CSS/JS Agg – HTTP Request	Error	HTTP requests to advagg for js files are not getting through`.
-<hr>
 ### [Apache Solr Multilingual](https://www.drupal.org/project/apachesolr_multilingual)
 **Issue**: When the Apache Solr Multilingual module is enabled, the default class variable set by the Pantheon Apache Solr module is changed, and the site will be unable to connect to the Solr server.
 
