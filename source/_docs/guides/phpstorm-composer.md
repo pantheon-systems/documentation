@@ -13,7 +13,7 @@ Be sure that you:
 
 * Install [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/){.external}
 * Install [Composer](https://getcomposer.org/){.external}
-* Create a Composer managed site on Pantheon following the [Build Tools](/docs/guides/build-tools/) guide
+* Create a Composer managed following the [Build Tools](/docs/guides/build-tools/) guide, which describes how to use build tools such as [GitHub](https://github.com/){.external} and [CircleCI](https://circleci.com/){.external} with [Composer](/docs/composer/) on Pantheon.
 
 ## Create A New Project
 
