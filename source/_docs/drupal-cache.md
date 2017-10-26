@@ -30,11 +30,9 @@ Note that Drupal 8 has no setting to configure the minimum cache lifetime.
 On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
 ### Cache Tags
+Drupal 8 introduced a [cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api){.external} system that allows internal and external caches to be cleared in very granular fashion as data is changed. For instance, if `node 123` where resaved, caches that depends upon that node, like the full page cache of the page `mysite.com/node/123`, should be cleared.
 
-Drupal 8 introduced a [cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) system that allows internal and external caches to be cleared in very granular fashion as data is changed.
-For instance, if node 123 where resaved, caches that depends upon that node, like the full page cache of the page mysite.com/node/123, should be cleared.
-The module [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) uses Drupal 8's cache metadata to communicate with the [Pantheon Global CDN](https://pantheon.io/docs/global-cdn/).
-The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
+This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache){.external} module, which uses Drupal 8's cache metadata to communicate with the [Pantheon Global CDN](/docs/global-cdn/). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache){.external}.
 
 ## Drupal 7 Performance Configuration
 
