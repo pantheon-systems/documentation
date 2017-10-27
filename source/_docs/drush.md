@@ -132,6 +132,10 @@ Replace `SITENAME` with your Pantheon site name, and `example.com` with the corr
 
 ## Troubleshooting
 
+### Reading the Pantheon Environment from Drush
+
+Since Drush does not run via the webserver, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, please see [our documentation on using the $_SERVER superglobal in custom code](/docs/read-environment-config/#using-$_server)
+
 ### Terminus Drush Silent Failure
 The following silent failure occurs when executing `terminus drush` commands on environments that use redirect logic without checking to see if Drupal is running via the command line:
 
@@ -320,8 +324,8 @@ Long-running Drush commands that produce no output will cause the SSH gateway to
  To resolve this error, conditionally set `$uri` based on the environment in `drushrc.php`, such as:
 
  ```
-   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-     ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live')) {
+   if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
+     ($_ENV['PANTHEON_ENVIRONMENT'] === 'live')) {
        $uri = 'https://www.example.com';
    }
    $options['uri'] = $uri;
@@ -332,5 +336,5 @@ Long-running Drush commands that produce no output will cause the SSH gateway to
  ```
  __ROOT__/drush/drushrc.php
  __ROOT__/../drush/drushrc.php
- __ROOT__/sites/all/drush/drushrc.php
+ __ROOT__/sites/default/drushrc.php
  ```
