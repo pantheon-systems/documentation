@@ -23,7 +23,7 @@ We do not prevent you from installing and using these plugins/modules; however, 
 
 If you have already enabled the Apache Solr Multilingual module and found that your site can no longer connect to the Solr server, you will need to first disable and uninstall the module. Next, disable and re-enable the Pantheon Apache Solr module. This will add the class variable back so your site can connect to the Solr server again.
 <hr>
-### [Aquia Search](https://www.drupal.org/project/acquia_search)
+### [Acquia Search](https://www.drupal.org/project/acquia_search)
 **Issue**: If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.
 
 **Solution**: Delete the Acquia Solr modules from the codebase and then disable and re-enable the Pantheon Apache Solr module.
