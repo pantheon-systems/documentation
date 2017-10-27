@@ -1,5 +1,5 @@
 ---
-title: WordPress Development
+title: Using Git with FTP & WordPress
 subtitle: Upload Media
 description: Beginners guide on how to use the WordPress Dashboard, an FTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 gitwordpress: true
@@ -11,7 +11,7 @@ pagination:
 use:
     - gitwordpresspages
 permalink: docs/guides/wordpress-git/media/
-nexturl: guides/wordpress-git/next-steps/
+nexturl: guides/wordpress-git/remove-editor/
 previousurl: guides/wordpress-git/themes/
 editpath: wordpress-git/04-media.md
 image: git-commit-thumb

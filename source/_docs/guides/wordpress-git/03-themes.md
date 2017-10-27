@@ -1,5 +1,5 @@
 ---
-title: WordPress Development
+title: Using Git with FTP & WordPress
 subtitle: Manage Themes
 description: Beginners guide on how to use the WordPress Dashboard, an FTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 gitwordpress: true
@@ -17,7 +17,8 @@ previousurl: guides/wordpress-git/plugins/
 editpath: wordpress-git/03-themes.md
 image: git-commit-thumb
 ---
-This lesson demonstrates how to utilize Git while developing over SFTP with a local file client and text editor. We'll upload a new theme, create a child theme, and make some example customizations to the stylesheet -- all while submitting our work to version control along the way in sensibly grouped commits.
+This lesson demonstrates how to utilize Git while developing over SFTP with a local file client and text editor. Often, premium plugins or themes need to be downloaded from the plugin provider and uploaded to your site. In this example, we will replicate that by uploading a new theme, creating a child theme, and then finally make some example customizations to the stylesheet -- all while submitting our work to version control along the way in sensibly grouped commits.
+
 
 ## Upload a Theme
 1. Download the [Bento](https://wordpress.org/themes/bento/){.external} theme from WordPress.org to your local machine.
