@@ -1,7 +1,7 @@
 ---
-title: Using Git with FTP & WordPress
+title: Using Git with SFTP & WordPress
 subtitle: Install Plugins
-description: Beginners guide on how to use the WordPress Dashboard, an FTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
+description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 anchorid: plugins
 layout: guide
 gitwordpress: true

@@ -1,7 +1,7 @@
 ---
-title: Using Git with FTP & WordPress
+title: Using Git with SFTP & WordPress
 subtitle: Add Git to Your Workflow
-description: Beginners guide on how to use the WordPress Dashboard, an FTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
+description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 layout: guide
 type: guide
 contributors: [scottmassey, rachelwhitton]
@@ -17,9 +17,9 @@ nexturl: guides/wordpress-git/plugins/
 editpath: wordpress-git/01-introduction.md
 image: git-commit-thumb
 ---
-This guide demonstrates how FTP users can build WordPress sites on Pantheon's git-based platform. Don't use git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.
+This guide demonstrates how SFTP users can build WordPress sites on Pantheon's git-based platform. Don't use git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.
 
-Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and text editor without compromising use of the WordPress Dashboard or adding a lot of complexity to your workflow. But first, why should you use git, when FTP and a text editor has been working fine? Here are a few reasons why:
+Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and text editor without compromising use of the WordPress Dashboard or adding a lot of complexity to your workflow. But first, why should you use git, when SFTP and a text editor has been working fine? Here are a few reasons why:
 
 <div class="panel panel-drop panel-guide" id="accordion">
   <div class="panel-heading panel-drop-heading">
