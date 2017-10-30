@@ -14,7 +14,7 @@ permalink: docs/guides/wordpress-git/plugins/
 nexturl: guides/wordpress-git/themes/
 previousurl: guides/wordpress-git/
 editpath: wordpress-git/02-plugins.md
-image: git-commit-thumb
+image: git-sftp-wp-docs-guide
 ---
 This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mode. We'll install a few plugins and submit each one to version control as individual commits.
 

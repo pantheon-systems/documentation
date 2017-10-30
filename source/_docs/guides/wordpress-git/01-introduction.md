@@ -15,7 +15,7 @@ use:
 permalink: docs/guides/wordpress-git/
 nexturl: guides/wordpress-git/plugins/
 editpath: wordpress-git/01-introduction.md
-image: git-commit-thumb
+image: git-sftp-wp-docs-guide
 ---
 This guide demonstrates how SFTP users can build WordPress sites on Pantheon's git-based platform. Don't use git? No problem -- we'll show you how easy it is to use by demonstrating workflows for various development tasks, such as adding a new theme or plugin.
 

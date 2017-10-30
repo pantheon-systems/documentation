@@ -14,7 +14,7 @@ use:
 permalink: docs/guides/wordpress-git/next-steps/
 previousurl: guides/wordpress-git/media/
 editpath: wordpress-git/06-next-steps.md
-image: git-commit-thumb
+image: git-sftp-wp-docs-guide
 ---
 
 ## Deploy Code from Dev
