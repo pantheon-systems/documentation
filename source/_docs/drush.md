@@ -346,7 +346,7 @@ Long-running Drush commands that produce no output will cause the SSH gateway to
 
  The most reliable locations to put `drushrc.php` files are:
 
- ```
+ ```php
  __ROOT__/drush/drushrc.php
  __ROOT__/../drush/drushrc.php
  __ROOT__/sites/default/drushrc.php
