@@ -174,9 +174,9 @@ Customers have also reported success by making the export path [configurable](ht
 ### [Pathologic](https://www.drupal.org/project/pathologic)
  **Issue**: The path of the base URL is changed and cached by the module itself.
 
- **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site’s cache after importing the data.
+ **Solution**: The [documentation on Drupal.org](https://drupal.org/node/257026) for the module mentions the issues and the remedy, which is a cache clear operation. If you are unable to exclude cached data from your dumps or avoid migrating cache data, you should clear your site's cache after importing the data.
  
- Additionally, Pathologic can cause the change of base urls in a domain access configuration based on the value of `$options['url']` in the site Drush config. This is set to the first domain listed on an environment by default on Pantheon, which can result in unexpected root domains being written to the cache. See [our Drush documentation for more information about overriding this value](/docs/drush/#known-limitations).
+ Additionally, Pathologic can cause the change of base URLs in a domain access configuration based on the value of `$options['url']` in the site Drush config. This is set to the first domain listed on an environment by default on Pantheon, which can result in unexpected root domains being written to the cache. See [our Drush documentation](/docs/drush/#known-limitations) for more information about overriding this value.
 
 ### [Persistent Login](https://www.drupal.org/project/persistent_login)
 **Issue**: This module attaches per-user cookies that conflict with our page cache configuration.
