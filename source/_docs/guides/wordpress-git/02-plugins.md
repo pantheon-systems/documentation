@@ -1,5 +1,5 @@
 ---
-title: WordPress Development
+title: Using Git with FTP & WordPress
 subtitle: Install Plugins
 description: Beginners guide on how to use the WordPress Dashboard, an FTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 anchorid: plugins
@@ -24,23 +24,11 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
   ![Add new plugin](/source/docs/assets/images/guides/git-wordpress/sftp-mode.png)
 
 3. On the left admin menu, select **Plugins**, then **Add New**.
-4. Search for the **Pantheon Advanced Page Cache** plugin, then click **Install Now**:
+4. Search for the **Yoast** plugin, then click **Install Now**:
 
 
-  ![Install Pantheon Advanced Page Cache plugin](/source/docs/assets/images/guides/git-wordpress/install-advanced-page-cache.png)
+  ![Install Pantheon Advanced Page Cache plugin](/source/docs/assets/images/guides/git-wordpress/install-yoast.png)
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
-          <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Learn more about this plugin</h3>
-        </a>
-      </div>
-      <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
-      ### [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}
-
-      Automatically clear related pages from [Pantheon's Global CDN](/docs/global-cdn/) when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
-      </div>
-    </div>
 
     If you encounter a prompt for FTP credentials, you're either working on the wrong environment or you're using the wrong connection mode. Don't try to authenticate FTP prompts within the WordPress Dashboard, it won't work (by design). Using the WordPress Dashboard to add or modify code is only allowed using the **SFTP** connection mode on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment.
 
@@ -51,18 +39,19 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
   You should see the following files for our recently installed plugin:
 
-  ![View advanced page cache plugin files](/source/docs/assets/images/guides/git-wordpress/view-advanced-page-cache.png)
+  ![View advanced page cache plugin files](/source/docs/assets/images/guides/git-wordpress/view-yoast.png)
 
 6. Rather than piling a bunch of changes on top of this plugin, get into the habit of saving code in small incremental amounts with meaningful commit messages.
 
-  Write a message that summarizes your work to let your team (and your future self) know what these changes do and which feature(s) they pertain to. For example, _Add Pantheon Advanced Page Cache plugin Version: 0.2.0_ is much better than _New plugin_ or _asdfasdf_.
+  Write a message that summarizes your work to let your team (and your future self) know what these changes do and which feature(s) they pertain to. For example, _Add Yoast plugin Version: 5.7_ is much better than _New plugin_ or _asdfasdf_.
 
   Click **Commit** to submit work from the WordPress Dashboard to Git in the Site Dashboard:
 
-  ![Commit advanced page cache plugin files](/source/docs/assets/images/guides/git-wordpress/commit-advanced-page-cache.png)
+  ![Commit advanced page cache plugin files](/source/docs/assets/images/guides/git-wordpress/commit-yoast.png)
 
-6. For practice, add the following plugins next, each with their own commit message:
+7. For practice, add these plugins next, each with their own commit message. These plugins allow your site to take advantage of some of Pantheon's performance optimizations:
 
+     - Pantheon Advanced Page Cache
      - WordPress Native PHP Sessions
      - Pantheon HUD
 
@@ -77,9 +66,14 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
         </a>
       </div>
       <div id="unique-anchor2" class="collapse" markdown="1" style="padding:10px;">
+      
+      ### [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}
+      
+      Automatically clear related pages from [Pantheon's Global CDN](https://pantheon.io/docs/global-cdn/) when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
+      
       ### [WordPress Native PHP Sessions](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}
 
-      Resolve errors with code that relies on PHP's default session manager. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
+      This plugin provides a more scalable way to handle sessions than PHP's default session manager. Some plugins will require this to run on Pantheon's distributed infrastructure. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
 
       ### [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/){.external}
 
