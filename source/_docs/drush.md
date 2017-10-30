@@ -25,9 +25,11 @@ There are two ways to obtain the aliases, either with Terminus or through the Da
 
 ### Download with Terminus, the Pantheon CLI
 Authenticate Terminus with [machine tokens](/docs/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
+
 ```nohighlight
 $ terminus aliases
 ```
+
 ### Download Using the Dashboard
 Download your Pantheon site aliases to manually update your local aliases file:
 
@@ -132,6 +134,10 @@ Replace `SITENAME` with your Pantheon site name, and `example.com` with the corr
 
 ## Troubleshooting
 
+### Reading the Pantheon Environment from Drush
+
+Since Drush does not run via the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, please see our documentation on <a href="/docs/read-environment-config/#using-$_server" data-proofer-ignore>using the $_SERVER superglobal in custom code</a>.
+
 ### Terminus Drush Silent Failure
 The following silent failure occurs when executing `terminus drush` commands on environments that use redirect logic without checking to see if Drupal is running via the command line:
 
@@ -161,6 +167,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
 ### Drush Commands on Remote Aliases Not Working from Inside Local Drupal Install
 
 Some Drush 5 commands need to be executed from outside the context of a local Drupal installation, due to a [known issue with Drush 5](https://github.com/drush-ops/drush/issues/313). The output from a Drush 5 command run in this context looks like the following:
+
 ```nohighlight
 $ drush @pantheon.SITENAME.ENV status
  PHP configuration : /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/php53.in
@@ -171,7 +178,9 @@ $ drush @pantheon.SITENAME.ENV status
  Drush : /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/drushrc.
  configuration php
 ```
+
 To make your Drush 5 commands work on Pantheon aliases, change your directory to a context outside of a working local Drupal installation:
+
 ```nohighlight
 $ pwd
 /Users/USERNAME/Sites/SITENAME
@@ -211,7 +220,9 @@ $ drush @pantheon.SITENAME.ENV status
  Temporary file : /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/tmp
  directory path
 ```
+
 ### Drush Error: "Unknown option: --db-url"
+
 ```nohighlight
 $ drush @pantheon.SITENAME.ENV cc all
 Unknown option: --db-url. See `drush help cache-clear` for available [error]
@@ -237,16 +248,21 @@ To resolve, add a default or empty `sites/default/settings.php` to your site's c
 ### Unable to Connect to MySQL Server
 
 Sometimes, you may encounter the following error when running Drush MySQL commands:
+
 ```nohighlight
 ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.dev.SITE_ID.drush.in' (61)
 ```
+
 This can happen when an inactive site has spun down. To resolve this error, wake environments by loading the home page or with the following [Terminus](/docs/terminus) command:
+
 ```nohighlight
 terminus env:wake SITENAME.ENV
 ```
+
 ### Unable to Connect to drush.in Hostnames (DNS)
 
 Some ISPs have issues resolving a drush.in hostname; if you're having trouble connecting to a drush.in hostname, you can use the `dig` command to investigate further.
+
 ```nohighlight
 $ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; Truncated, retrying in TCP mode.
@@ -297,6 +313,7 @@ appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in. 599 IN A 67.207.1
 ;; WHEN: Thu Aug 30 13:02:00 2012
 ;; MSG SIZE rcvd: 622
 ```
+
 In this example, Google's DNS is able to properly resolve the drush.in hostname.
 
 You can adjust your local settings to use Google's DNS (8.8.8.8 and 8.8.4.4) instead of the default provided by your ISP to properly resolve the hostnames.
@@ -320,8 +337,8 @@ Long-running Drush commands that produce no output will cause the SSH gateway to
  To resolve this error, conditionally set `$uri` based on the environment in `drushrc.php`, such as:
 
  ```
-   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-     ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live')) {
+   if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
+     ($_ENV['PANTHEON_ENVIRONMENT'] === 'live')) {
        $uri = 'https://www.example.com';
    }
    $options['uri'] = $uri;
@@ -329,8 +346,8 @@ Long-running Drush commands that produce no output will cause the SSH gateway to
 
  The most reliable locations to put `drushrc.php` files are:
 
- ```
+ ```php
  __ROOT__/drush/drushrc.php
  __ROOT__/../drush/drushrc.php
- __ROOT__/sites/all/drush/drushrc.php
+ __ROOT__/sites/default/drushrc.php
  ```
