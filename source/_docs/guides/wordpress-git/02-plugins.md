@@ -30,7 +30,7 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
   ![Install Pantheon Advanced Page Cache plugin](/source/docs/assets/images/guides/git-wordpress/install-yoast.png)
 
 
-    If you encounter a prompt for SFTP credentials, you're either working on the wrong environment or you're using the wrong connection mode. Don't try to authenticate SFTP prompts within the WordPress Dashboard, it won't work (by design). Using the WordPress Dashboard to add or modify code is only allowed using the **SFTP** connection mode on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment.
+    If you encounter a prompt for FTP credentials, you're either working on the wrong environment or you're using the wrong connection mode. Don't try to authenticate FTP prompts within the WordPress Dashboard, it won't work (by design). Using the WordPress Dashboard to add or modify code is only allowed using the **SFTP** connection mode on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment.
 
 5. Return to the Pantheon Site Dashboard and click the yellow notification to review file changes as a result of our actions in the WordPress Dashboard:
 
