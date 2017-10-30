@@ -1,7 +1,7 @@
 ---
-title: Using Git with FTP & WordPress
+title: Using Git with SFTP & WordPress
 subtitle: Manage Themes
-description: Beginners guide on how to use the WordPress Dashboard, an FTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
+description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 gitwordpress: true
 anchorid: themes
 guidetoc: true
@@ -23,13 +23,13 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 ## Upload a Theme
 1. Download the [Bento](https://wordpress.org/themes/bento/){.external} theme from WordPress.org to your local machine.
 2. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is still set to **SFTP**.
-3. Establish a secure connection from your local to Pantheon using an FTP client of your choice (this guide uses [Transmit](https://panic.com/transmit/){.external}).
+3. Establish a secure connection from your local to Pantheon using an SFTP client of your choice (this guide uses [Transmit](https://panic.com/transmit/){.external}).
 
   Click **SFTP Connection Info** then select the link to **Open in your default SFTP client**:
 
   ![Open in your default SFTP client](/source/docs/assets/images/guides/git-wordpress/sftp-connection-mode.png)
 
-  If you have already set up an SSH key, as recommended in the **Before You Begin** section of the [guide's introduction](/docs/guides/wordpress-git/#before-you-begin), you should see a new window open for your FTP client where you can see local files and remote files on Pantheon. In Transmit, local files are managed on the left and Pantheon's on the right:
+  If you have already set up an SSH key, as recommended in the **Before You Begin** section of the [guide's introduction](/docs/guides/wordpress-git/#before-you-begin), you should see a new window open for your SFTP client where you can see local files and remote files on Pantheon. In Transmit, local files are managed on the left and Pantheon's on the right:
 
   ![Open in your default SFTP client window](/source/docs/assets/images/guides/git-wordpress/sftp-connection-mode-client.png)
 
@@ -82,7 +82,7 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 
   ![create beneto-child theme stylesheet](/source/docs/assets/images/guides/git-wordpress/bento-child-css.png)
 
-4. If you don't already have your FTP client configured to use your preferred text editor, you can do that now. Here's how we configured Transmit so that double-clicking a file opens it up for edits in [Atom](https://atom.io/){.external} (**Transmit** > **Preferences** > **Files** from the app menu):
+4. If you don't already have your SFTP client configured to use your preferred text editor, you can do that now. Here's how we configured Transmit so that double-clicking a file opens it up for edits in [Atom](https://atom.io/){.external} (**Transmit** > **Preferences** > **Files** from the app menu):
 
   ![Transmit file config](/source/docs/assets/images/guides/git-wordpress/transmit-text-editor.png)
 

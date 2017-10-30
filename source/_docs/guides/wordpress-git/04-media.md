@@ -1,7 +1,7 @@
 ---
-title: Using Git with FTP & WordPress
+title: Using Git with SFTP & WordPress
 subtitle: Upload Media
-description: Beginners guide on how to use the WordPress Dashboard, an FTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
+description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
 gitwordpress: true
 anchorid: media
 generator: pagination
@@ -31,7 +31,7 @@ In this lesson, we'll demonstrate how media files are handled on Pantheon. Media
 
   If you expected this change to show up as a pending change, ready to be committed - that's not how this kind of content works. It's not code; there won't be any changes in the Pantheon Site Dashboard to submit to version control since media is ignored by Git.
 
-  Use your FTP client to upload media to the file directory (`wp-content/uploads/`) outside the WordPress Dashboard:
+  Use your SFTP client to upload media to the file directory (`wp-content/uploads/`) outside the WordPress Dashboard:
 
   ![WP-Uploads file directory](/source/docs/assets/images/guides/git-wordpress/uploads.png)
 
