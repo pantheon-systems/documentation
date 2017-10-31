@@ -27,6 +27,33 @@ Now your site’s Drush version is managed via `pantheon.yml`, so it’s in vers
 ### Available Drush Versions
 Available Drush versions are 5, 7, and 8.
 
+#### PHP Requirements
+
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Drush Version</th>
+        <th>Minimum PHP Version</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Drush 5</td>
+        <td>PHP 5.2.0+</td>
+      </tr>
+      <tr>
+        <td>Drush 7</td>
+        <td>PHP 5.3.0+</td>
+      </tr>
+      <tr>
+        <td>Drush 8</td>
+        <td>PHP 5.4.5+</td>
+      </tr>
+    </tbody>
+</table>
+
+See our guide on [Upgrading PHP Versions](/docs/php-versions/).
+
 ### Troubleshooting
 
 Sometimes even after updating the drush version in `pantheon.yml`, the correct version of drush is not called. This is usually caused by an outdated configuration file, `policy.drush.inc`, in your local `~/.drush` directory, overriding `pantheon.yml`. Remove the file, or comment out its contents, to resolve.
