@@ -36,6 +36,7 @@
     <title>{% block title %}{{ page.title }} | {{ site.title }}{% endblock %}</title>
     <meta name="description" content="{{ page.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="{{ site.site_url}}{{ page.url }}/" />
 
     <!-- Schema.org markup for Google+ -->
     <meta itemprop="name" content="{{ page.title}}">
