@@ -4,7 +4,7 @@ description: Configuring your Drupal or WordPress site to use the Pantheon Enter
 tags: [infrastructure, security]
 categories: []
 ---
-[Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) creates a secure tunnel between your firewall and your public facing website. This is available for customers with an Elite plan. [Contact us](https://pantheon.io/why-pantheon-enterprise) for more information.
+[Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) creates a secure tunnel between your firewall and your public facing website. This is available for sites within Enterprise and EDU+ organizations. [Contact us](https://pantheon.io/pantheon-enterprise) for more information.
 
 ![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
 
