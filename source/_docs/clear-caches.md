@@ -10,16 +10,14 @@ Pantheon extends the core functionality of caching mechanisms within WordPress a
 Drupal 6/7 sites must enable the [pantheon_api](/docs/modules#pantheon-module-drupal-7) module to send clear cache requests to Varnish within Drupal's Admin interface. Drupal 8 sites must clear Varnish via the Pantheon Dashboard.
 
 - From Drupal: `/admin/config/devel/performance` and click **Clear all Caches**
-- Via [Terminus](/docs/terminus/): `terminus drush <site>.<env> -- cc all`
+- Via [Terminus](/docs/terminus/): `terminus drush <site>.<env> -- cc all` or
+`terminus env:clear-cache <site>.<env>`
 - From the Pantheon Dashboard on the target environment: Click **Clear Caches**
 
 ## Clear Caches: WordPress
 - From the WordPress Admin menu, select **Settings > Pantheon Cache**. Click **Clear Cache** to clear all the caches.
-- Via the command line, run the following Terminus command:
-
- ```bash
- $ terminus site clear-cache
- ```
+- Via the command line, run the following Terminus command: `terminus wp <site>.env> -- cache flush` or
+`terminus env:clear-cache <site>.<env>`
 - From the Pantheon Dashboard: Click **Clear Caches**.
 
 ## Troubleshooting
