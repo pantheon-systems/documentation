@@ -8,7 +8,7 @@ categories: []
 
 With the rise of Decoupled (**headless**) CMS architecture, the traditionally “monolithic” CMSs  Drupal and WordPress are have now changed. Content as a Service (**CaaS**) means to have an application that manages your content into feeds or services that other applications or properties can consume. It is now easier to implement separate frontend components or frameworks that communicates with the CMS via an API.
 
-A Common feature is that the CMS application exposes a REST API, which allows reading or submitting data over the web. The most common data format used is [JSON](http://www.json.org/), which is supported out-of-the-box for Drupal and WordPress. These together form your "Web Services".
+The common feature of a CMS application is to expose a REST API, which allows reading or submitting data over the web. The most common data format used is [JSON](http://www.json.org/), which is supported out-of-the-box for Drupal and WordPress. These together form your "Web Services".
 
 To know more of the different use-cases possible, check our [Decoupled CMS page](/decoupled-cms)
 
@@ -20,7 +20,7 @@ Database access is intended for both debugging or importing large databases. Exp
 
 ### What is REST?
 
-Web Services make it possible for external applications to interact with our application. This aims to enable a **CRUD** for your site, which is to CREATE, READ, UPDATE or DELETE content in your site but through HTTP Requests only. This is different rather than connecting directly to the database.
+Web Services make it possible for external applications to interact with our application through HTTP Requests only, rather than connecting directly to the database.
 
 [REST or RESTful web services](https://en.wikipedia.org/wiki/Representational_state_transfer) is one of the most popular ways of making Web Services work. There are other formats such as SOAP or XML-RPC, but REST is the most commonly implemented among CMSes like WordPress and Drupal.
 
@@ -118,20 +118,20 @@ All sites will benefit from the use of [Global CDN](/global-cdn/), a core platfo
 
 To learn more, read our [Global CDN documentation](/docs/global-cdn/).
 
-<!-- How does Global CDN cache REST API resources -->
+<!-- How does Global CDN cache REST API resources, if there are any differences related to Varnish config, etc -->
 
-<!-- ### Performance Monitoring ### -->
+<!-- ### Performance Monitoring -->
 
 <!-- With New Relic enabled, page requests appear as transactions and not sessions for REST API resources retrieved.
 The best way to monitor its performance is to remember the most common transactions, hooks or name patterns that appear in the logs. -->
 
 <!-- New Relic REST API patterns here -->
 
-<!-- ### Redis and Object Caching ### -->
+<!-- ### Redis and Object Caching -->
 
 <!-- tips on how Object Cache is best used for REST API CMS -->
 
-<!-- ### Solr Search with API ### -->
+<!-- ### Solr Search with API -->
 
 <!-- example cases for using Solr Search with CMS API -->
 
