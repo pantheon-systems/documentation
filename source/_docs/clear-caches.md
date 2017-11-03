@@ -84,4 +84,10 @@ terminus env:clear-cache <site>.<env>
 
 ## Troubleshooting
 ### Clear Cache Fails in Dashboard or Terminus
-If you see a notification on the Dashboard indicating a failure to clear cache, this is usually due to a PHP error, redirect, or other code-related issue. While the Dashboard notification may not help much to debug, running the same command via [Terminus](/docs/terminus/) will likely provide actionable information (`terminus env:clear-cache`). Commenting out redirections in `settings.php`, `wp-config.php`, or elsewhere can isolate issues as well as resolving any fatal PHP errors.
+If you see a notification on the Dashboard indicating a failure to clear cache, this is usually due to a PHP error, redirect, or other code-related issue. While the Dashboard notification may not help much to debug, running the same command via [Terminus](/docs/terminus/) will likely provide actionable information.
+
+Some good troubleshooting first steps include:
+
+ - Commenting out redirections in `settings.php`, `wp-config.php`, or elsewhere.
+
+ - Resolve any fatal PHP errors.
