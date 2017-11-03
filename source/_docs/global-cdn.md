@@ -65,27 +65,9 @@ Open a support chat to enable the upgrade.
 </table>
 
 ## Cache Clearing
+We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external} or [module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external} to take advantage of the granular cache clearing capabilities of the Global CDN. Additionally, you can remove all pages from cache at once from the Site Dashboard, within the Site Admin, and even from the command line.
 
-### Full Cache Clearing
-
-There are several ways to clear the entire Global CDN cache for any [environment](/docs/pantheon-workflow/) of a site:
-
-* Click the "Clear Caches" button on the Pantheon dashboard.
-
-  ![Clear Cache Button](/source/docs/assets/images/clear-cache-button.png)
-
-* For Drupal 7 and WordPress, enable [Pantheon API integration](/docs/clear-caches/) and use the native CMS functionality (via the CMS dashboard or command-line tools).
-* For all versions of Drupal and WordPress, skip full cache clearing and go right to granular clearing (below).
-
-### Granular Cache Clearing
-
-Developers looking to take advantage of the granular cache clearing capabilities of the Global CDN are encouraged to start with our CMS integrations:
-
-
-- WordPress: [Pantheon Advanced Page Cache](https://github.com/pantheon-systems/pantheon-advanced-page-cache)
-- Drupal: D7 and D8 [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
-
-Lower-level documentation for custom implementation of caching strategies is also coming soon. Please [contact our enablement team](https://pantheon.io/agencies/learn-pantheon?docs){.external} if you are interested in implementing a custom cache strategy.
+For more details, see [Clearing Caches for Drupal and WordPress](/docs/clear-caches/).
 
 ## Enabling the Global CDN
 
