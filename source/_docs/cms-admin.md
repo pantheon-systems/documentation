@@ -232,4 +232,4 @@ define('FS_CHMOD_FILE', 644);
 
 Remove these lines to resolve.
 
-The `wp-content/upgrade`folder with read-only access can also cause this error. You can remove this folder or change the file permission to 755 to make it writable. WordPress stores temporary files to `wp-content/upgrade` folder when updating plugins or themes.
+A `wp-content/upgrade` folder with read-only access can also cause this error. You can remove this folder or change the file permission to `755` to make it writable. WordPress stores temporary files to the `wp-content/upgrade` folder when updating plugins or themes.
