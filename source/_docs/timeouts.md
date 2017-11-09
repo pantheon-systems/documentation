@@ -1,6 +1,6 @@
 ---
 title: Timeouts on Pantheon
-description: Detailed information about timeout errors on your Drupal site.
+description: Detailed information about timeout errors on your site.
 tags: [debugcode, services]
 categories: []
 ---
