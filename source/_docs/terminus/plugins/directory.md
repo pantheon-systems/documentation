@@ -9,9 +9,9 @@ previousurl: terminus/plugins/
 permalink: docs/terminus/plugins/:basename/
 image: terminus-thumbLarge
 ---
-Extend the functionality of Terminus and add commands by installing third party plugins.
+Extend the functionality of Terminus and add commands by installing <a href="https://github.com/terminus-plugin-project">third party plugins</a>.
 
-The following plugins are supported for Terminus 1.0:
+The following plugins are just a few of the most popular available for Terminus 1.x:
 
 <div class="flex-panel-group">
   <div class="flex-panel-item">
