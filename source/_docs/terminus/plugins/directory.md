@@ -9,7 +9,7 @@ previousurl: terminus/plugins/
 permalink: docs/terminus/plugins/:basename/
 image: terminus-thumbLarge
 ---
-Extend the functionality of Terminus and add commands by installing <a href="https://github.com/terminus-plugin-project">third party plugins</a>.
+Extend the functionality of Terminus and add commands by installing <a href="https://github.com/terminus-plugin-project">third party plugins</a> or <a href="https://pantheon.io/docs/terminus/plugins/create">create your own</a>.
 
 The following plugins are just a few of the most popular available for Terminus 1.x:
 
