@@ -115,7 +115,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#commit-all-custom-theme">Copy</button>
       <figure><pre id="commit-all-custom-theme"><code class="command bash" data-lang="bash">git commit -m="Create amazing theme css and library files"
-      git push origin origin custom-theme</code></pre></figure>
+      git push origin custom-theme</code></pre></figure>
     </div>
 
 11. Once the build finishes from the last step, active your new theme and rebuild the cache:
@@ -129,7 +129,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#env-view">Copy</button>
-      <figure><pre id="env-view"><code class="command bash" data-lang="bash">temrinus env:view $SITE.$ENV</code></pre></figure>
+      <figure><pre id="env-view"><code class="command bash" data-lang="bash">terminus env:view $SITE.$ENV</code></pre></figure>
     </div>
 
     ![Modified css](/source/docs/assets/images/pr-workflow/modified-css.png)
