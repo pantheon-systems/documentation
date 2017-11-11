@@ -54,7 +54,7 @@ In this lesson, we'll take a closer look at how to update dependencies in a Comp
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#update-core-commit">Copy</button>
       <figure><pre id="update-core-commit"><code class="command bash" data-lang="bash">git commit -m="Update to Drupal 8.3.7"
-      git push origin origin drupal-8.3.7</code></pre></figure>
+      git push origin drupal-8.3.7</code></pre></figure>
     </div>
 
 
