@@ -176,7 +176,7 @@ If your domain's DNS configuration relies on an existing MX or TXT record that i
 2. Do the same for the required AAAA values:
 
   ```
-  dig +short live-<example>.pantheonsite.io AAAA | tail -2
+  dig +short live-example.pantheonsite.io AAAA | tail -2
   ```
 
   ![dig example](/source/docs/assets/images/dig-example.png)
