@@ -180,5 +180,5 @@ A record:
 dig +short live-<example>.pantheonsite.io | tail -1
 
 AAAA records:
-dig +short live-<example>.pantheonsite}.io AAAA | tail -2
+dig +short live-<example>.pantheonsite.io AAAA | tail -2
 
