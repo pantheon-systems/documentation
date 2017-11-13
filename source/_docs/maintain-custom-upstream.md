@@ -50,7 +50,7 @@ Regardless of what type of update you're preparing for release, you'll want to t
 2. We'll need to do the same for your new test site on Pantheon. Let's grab the site's repository URL on Pantheon using [Terminus](/docs/terminus):
 
     ```command
-    terminus connection:info <site>.<dev> --field=git_url
+    terminus connection:info <site>.dev --field=git_url
     ```
 
 
