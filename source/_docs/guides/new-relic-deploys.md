@@ -83,4 +83,4 @@ In the commands below, replace `<site>` with your Pantheon site name.
 7. Once you've tested and confirmed there are no issues, deploy your new commit to Test and Live. From now on, your deploys will be recorded in New Relic.
 
 ## Conclusion
-This is a fast way to integrated New Relic and Pantheon. The [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.
+This is a fast way to integrate New Relic and Pantheon. The [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.
