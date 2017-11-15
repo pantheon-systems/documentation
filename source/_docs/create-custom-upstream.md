@@ -7,7 +7,7 @@ Pantheon Custom Upstreams are a self-serve feature available to anyone with acce
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Support Note</h4>
-<p>If you choose to use a custom upstream, please be aware that the [Scope of Support](docs/getting-support/#scope-of-support) is limited to verification that the upstream is connected properly to the platform.  We are unable to debug issues with the content or structure of the custom upstream.  While we encourage you to explore this great way to unify multiple sites, please be aware that the burden of testing and properly maintaining the upstream, and the negative impact if it is not done properly is inherited by your team.
+<p>If you choose to use a custom upstream, please be aware that the[Scope of Support](/docs/getting-support/#scope-of-support) is limited to verification that the upstream is connected properly to the platform.  We are unable to debug issues with the content or structure of the custom upstream.  While we encourage you to explore this great way to unify multiple sites, please be aware that the burden of testing and properly maintaining the upstream, and the negative impact if it is not done properly is inherited by your team.
 </p></div>
 
 
