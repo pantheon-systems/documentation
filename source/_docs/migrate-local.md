@@ -1,11 +1,11 @@
 ---
-title: Migrate Sites to Pantheon: From Local Machine
+title: Migrate Sites to Pantheon: From Your Local Machine
 description: Learn how to migrate locally hosted Drupal or WordPress site to Pantheon
 tags: [migrate, local]
 categories: []
 ---
 
-This page talks about sites developed from their local machine, ready to deploy on Pantheon.
+This page discusses sites developed from your local machine, ready to deploy on Pantheon.
 
 We recommend using [Kalabox](/docs/kalabox) because of its integrated features to the platform. For large teams/sites, we recommend using [Multidev](/docs/multidev) instead of local development.
 Read more on what will only work for [Local Development](/docs/local-development/)
@@ -20,7 +20,7 @@ To check what are the possible components, read our documentation page about [Pl
 
 ### Platform versus Local Configuration
 
-Review and compare Pantheon and your local configuration in terms of [Resources](docs/platform-resources/) or some [Timeouts configuration](/docs/timeouts) for differences.
+Review and compare Pantheon and your local configuration in terms of [Resources](/docs/platform-resources/) or some [Timeouts configuration](/docs/timeouts) for differences.
 
 Most are standard and not configurable and it is best to sync settings to your local machine.
 
