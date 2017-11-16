@@ -20,6 +20,7 @@ For corporate or higher education customers, Custom Upstreams is included in all
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
 <p markdown="1">If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/docs/composer/).</p>
+<p markdown="1">Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/getting-support/#custom-upstreams).
 </div>
 
 ## Benefits
