@@ -5,6 +5,11 @@ tags: [tools, workflow]
 ---
 Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/getting-support/#custom-upstreams).
+</div>
+
 
 ## Create and Host the Repository Remotely
 This remote repository serves as the central location for the development and maintenance of your Custom Upstream. Changes are tracked here and distributed downstream to sites within your Organization as one-click updates in the Site Dashboard.

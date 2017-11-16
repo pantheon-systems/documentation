@@ -133,31 +133,44 @@ Priority Enterprise Support is a blanket support plan which can be purchased for
 
 ## Scope of Support
 
-We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope. 
+We love helping developers succeed! We also have limits to the support we can provide. The key to a great relationship is clear expectations of our support scope.
 
-- We don't touch client code. Your site code belongs to you. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility not to overwrite the upstream. If you do, updates on the Dashboard will cause conflicts that you must [resolve manually](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts) with Git.
+### Code
+We don't touch client code. Your site code belongs to you. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility not to overwrite the upstream. If you do, updates on the Dashboard will cause conflicts that you must [resolve manually](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts) with Git.
 
-- Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/docs/maintain-custom-upstream/) by the upstream maintainer each time the project releases a new version.
+### Outdated Core
+Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/docs/maintain-custom-upstream/) by the upstream maintainer each time the project releases a new version.
 
-- We don’t maintain the integrity of the site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
+### Custom Upstreams
+If you choose to use a custom upstream, please be aware that the scope of support is limited to verification that the externally hosted upstream repository is properly connected to the platform.
 
-- Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](/docs/troubleshoot/) to get you underway.
+We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the burden of testing and [properly maintaining the Custom Upstream](/docs/maintain-custom-upstream/), and the negative impact if it is not done properly is inherited by your team.
 
-- If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
+### Security
+We don’t maintain the integrity of the site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 
-- Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/docs/errors-and-server-responses/) in your Development environment. If you [contact support](/docs/getting-support), include your findings and attach screenshots whenever possible.
+### Debugging
+Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](/docs/troubleshoot/) to get you underway.
 
-- We recommend development on the platform, rather than on a local environment. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, Apache vs NGINX, or server configuration. Pantheon is not responsible for resolving such issues.
+### Performance
+If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
 
-- Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials.
+### Intermittent Issues
+Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/docs/errors-and-server-responses/) in your Development environment. If you [contact support](/docs/getting-support), include your findings and attach screenshots whenever possible.
 
-- If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
+### Local Development
+We recommend development on the platform, rather than on a local environment. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, Apache vs NGINX, or server configuration. Pantheon is not responsible for resolving such issues.
+
+### Isolated Issues
+Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials.
+
+If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
 
 ### Platform Support
 
-We provide technical support for all user interfaces of the Pantheon product, as well as compatibility with the Drupal and WordPress CMSs. While we cannot guarantee that every Drupal module or WordPress plugin will work, we take responsibility for the availability and proper functionality of the platform. If there's something wrong there, we will fix it. 
+We provide technical support for all user interfaces of the Pantheon product, as well as compatibility with the Drupal and WordPress CMSs. While we cannot guarantee that every Drupal module or WordPress plugin will work, we take responsibility for the availability and proper functionality of the platform. If there's something wrong there, we will fix it.
 
-We are also happy to help developers learn the ins and outs of making their sites work great on Pantheon, and have a large number of tutorials for common development scenarios. We also do our best to answer most questions about development practices or techniques. 
+We are also happy to help developers learn the ins and outs of making their sites work great on Pantheon, and have a large number of tutorials for common development scenarios. We also do our best to answer most questions about development practices or techniques.
 
 ### Full Stack Support
 
