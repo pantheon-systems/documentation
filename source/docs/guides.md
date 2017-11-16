@@ -2,6 +2,7 @@
 layout: taxon
 use: [guides, guides_tags]
 title: Guides
+permalink: docs/guides/
 description: Pantheon step-by-step guides covering platform integrations, performance, workflows, and more.
 ---
 <h1 style="margin-top:0px;font-family: 'AvenirLT-Black';">Guides</h1>

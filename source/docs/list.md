@@ -1,6 +1,7 @@
 ---
 title: All Docs
 layout: taxon
+permalink: docs/list/
 use: [guides, docs]
 description: Browse all docs.
 ---

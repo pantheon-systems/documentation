@@ -1,5 +1,6 @@
 ---
 title: Automate & Integrate
+permalink: docs/automate/
 description: Automate your workflow and integrate with external tools.
 videoid: iazvxxlsja
 bullet1: Terminus
