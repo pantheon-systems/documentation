@@ -1,5 +1,5 @@
 ---
-title: Guide to WordPress Site Networks
+title: WordPress Site Networks
 subtitle: Best Practices and Common Issues
 description: Overview of WordPress multisite support on the Pantheon Platform.
 multisite: true
@@ -13,6 +13,7 @@ use:
 permalink: docs/guides/multisite/debug/
 previousurl: guides/multisite/workflow/
 editpath: multisite/05-debug.md
+image: multisite
 ---
 
 ## Using Composer with WordPress in nested docroot

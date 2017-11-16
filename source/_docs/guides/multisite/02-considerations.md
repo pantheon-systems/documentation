@@ -1,5 +1,5 @@
 ---
-title: Guide to WordPress Site Networks
+title: WordPress Site Networks
 subtitle: Site Network Considerations
 description: Overview of WordPress multisite support on the Pantheon Platform.
 anchorid: considerations
@@ -14,6 +14,7 @@ permalink: docs/guides/multisite/considerations/
 nexturl: guides/multisite/config/
 previousurl: guides/multisite/
 editpath: multisite/02-considerations.md
+image: multisite
 ---
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>

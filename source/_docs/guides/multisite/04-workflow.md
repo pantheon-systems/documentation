@@ -1,5 +1,5 @@
 ---
-title: Guide to WordPress Site Networks
+title: WordPress Site Networks
 subtitle: Site Networks + Pantheon Workflow
 description: Overview of WordPress multisite support on the Pantheon Platform.
 multisite: true
@@ -14,6 +14,7 @@ permalink: docs/guides/multisite/workflow/
 nexturl: guides/multisite/debug/
 previousurl: guides/multisite/config/
 editpath: multisite/04-workflow.md
+image: multisite
 ---
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>

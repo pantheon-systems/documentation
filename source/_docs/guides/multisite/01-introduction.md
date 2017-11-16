@@ -1,5 +1,5 @@
 ---
-title: Guide to WordPress Site Networks
+title: WordPress Site Networks
 subtitle: Introduction
 description: Overview of WordPress multisite support on the Pantheon Platform.
 layout: guide
@@ -15,6 +15,7 @@ use:
 permalink: docs/guides/multisite/
 nexturl: guides/multisite/considerations/
 editpath: multisite/01-introduction.md
+image: multisite
 ---
 
 ## What is a WordPress Site Network?
