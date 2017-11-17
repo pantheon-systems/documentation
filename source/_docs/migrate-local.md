@@ -10,7 +10,7 @@ This page discusses sites developed from your local machine, ready to deploy on 
 We recommend using [Kalabox](/docs/kalabox) because of its integrated features to the platform. For large teams/sites, we recommend using [Multidev](/docs/multidev) instead of local development.
 Read more on what will only work for [Local Development](/docs/local-development/)
 
-If you're site is existing or can be synced only, use the [Guided Migration method](/docs/migrate). For cases where the guided migration will not work, follow the [manual migration method](/docs/migrate-manual).
+If your site is already existing or hosted through a different provider, you can use the [Guided Migration method](/docs/migrate). For cases where the guided migration will not work, follow the [manual migration method](/docs/migrate-manual).
 
 
 ## Before you Begin
