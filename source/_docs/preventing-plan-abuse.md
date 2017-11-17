@@ -21,7 +21,7 @@ There is no mechanical "overage" process that will surprise you with a shock bil
 
 There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic:
 
- - Browsers/users that block cookies and javascript is not counted.
+ - Browsers/users that block cookies and javascript are not counted.
  - Users that close the browser before the tracking script loads are not counted.
  - Any page with a JavaScript error is not counted.
  - Automated traffic from bots or load testing is not counted.
@@ -48,15 +48,15 @@ Our onboarding team performs load tests prior to every Elite site launch, and we
 
 However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform. This is one of the reasons we ask customers to notify us of such tests as a courtesy. 
 
-## What About Legit Traffic Spikes?
+## What About Legitimate Traffic Spikes?
 
-We understand that the internet can make any website famous overnight and that this isn't under your control. Pantheon's platform is specifically designed to shine in this circumstance, and it's one of the main reasons people choose us to run their sites. 
+We understand that the internet can make any website famous overnight and that this isn't under your control. Pantheon's platform is specifically designed to shine under this circumstance, and it's one of the main reasons people choose us to run their sites. 
 
 Luckily, traffic spikes are easily discerned, and we take this into account when it comes to monitoring plan abuse. However, similar to the above, if a site is achieving internet fame on a regular basis, we reserve the right to right-size the sites plan in relation to the load it puts on the platform. 
 
 ## What About Denial of Service and Other Attacks?
 
-We are well aware that malignant actors can create a ton of traffic out of nowhere and that this is not a fair measure of what a customer should pay for. We are more than willing to investigate discrepancies between our traffic measurements and other site analytics on a case by case basis.
+We are well aware that malicious actors can create a ton of traffic out of nowhere and that this is not a fair measure of what a customer should pay for. We are more than willing to investigate discrepancies between our traffic measurements and other site analytics on a case by case basis.
 
 As above, in cases where these events are regular or sustained, we reserve the right to right-size a site plan. If a site's real load on the platform is consistently higher than what appears in end-user analytics, fairness demands that the site plan fit its usage.
 
