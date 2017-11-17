@@ -1,5 +1,5 @@
 ---
-title: How Does Pantheon Prevent Plan Abuse
+title: How Pantheon Prevents Plan Abuse
 description: Information on how Pantheon measures site traffic to prevent plan abuse
 tags: [pricing]
 categories: []
@@ -13,7 +13,7 @@ This includes not only HTML pages, but also responses in formats such as JSON an
 
 ## Does Pantheon Charge for Overages?
 
-Pantheon takes site plan abuse seriously, but we recognize that sometimes these situations are complecated. We always start with a conversation. If you are surprised by a notification of possible abuse, our team is ready, willing, and able to dig into the inevitable differences between our measurements of traffic served and any other analytics you may have.
+Pantheon takes site plan abuse seriously, but we recognize that sometimes these situations are complicated. We always start with a conversation. If you are surprised by a notification of possible abuse, our team is ready, willing, and able to dig into the inevitable differences between our measurements of traffic served and any other analytics you may have.
 
 There is no mechanical "overage" process that will surprise you with a shock bill for something that happened in the past. However, where there is a patern of consistent overage, we will seek to align site plans to their load on the platform on a go-forward basis. We reserve the right to terminate service for abusers who are unwilling to pick an appropriate plan.
 
@@ -38,13 +38,13 @@ However we do reserve the right to review individual sites that are excessive ba
 
 ## What About Bots?
 
-Pantheon makes a serous effort to discount automated traffic from crawlers and bots that would otherwise count towards your website's total traffic because they plase load on the platform. We do this by examining the user-agent of traffic, as well as the source IP address.
+Pantheon makes a serous effort to discount automated traffic from crawlers and bots that would otherwise count towards your website's total traffic because they place load on the platform. We do this by examining the user-agent of traffic, as well as the source IP address.
 
 We respect that you cannot control this kind of traffic, and that crawler traffic is actually _beneficial_ to sites. We are continually refining our model to ensure our traffic reports are as accurate as possible. We do not consider legitimate white-hat bot traffic a sign of plan abuse.
 
 ## What About Load Tests or Pen Tests?
 
-We perform load tests prior to every Elite site launch, and we encourage customers to load test prior to launching or releasing a big update. We also fully support customers who want to penitration test their site, which can result in significant spikes in traffic.
+We perform load tests prior to every Elite site launch, and we encourage customers to load test prior to launching or releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
 
 However, if you are load testing or pen testing in extreme excess of your plan, or are doing so a regular and repeated basis, we reserve the right to charge you for a plan that is appropriate to the load you are placing on the platform. This is one of the reasons we ask you to notify us of such tests as a courtesy. 
 
@@ -56,7 +56,7 @@ Luckily, traffic spikes are easily discerned, and we take this into account when
 
 ## What About Denial of Service and Other Attacks?
 
-We are well aware that malignant actors can create a ton of traffic out of nowhere, and that this is not a fair measure of what a customer should pay for. We are more than willing to investigate a discrepencies between our traffic measurements and other site analytics on a case by case basis.
+We are well aware that malignant actors can create a ton of traffic out of nowhere, and that this is not a fair measure of what a customer should pay for. We are more than willing to investigate a discrepancies between our traffic measurements and other site analytics on a case by case basis.
 
 As above, in cases where these events are regular or sustained, we reserve the right to right-size a site plan. If a site's real load on the platform is consistently higher than what appears in end-user analytics, fairness demands that the site plan fit its usage.
 
@@ -64,4 +64,4 @@ As above, in cases where these events are regular or sustained, we reserve the r
 
 Site traffic is rarely a black and white issue, and cases of clear plan abuse are outliers. We always start with a conversation, and are equipped to go deep in determining what is causing an excessive amount of traffic for your site.
 
-If you recieve a communication from us about possible plan abuse, don't panic. We will work with you to fully understand the situation and find solution, whether that involves shutting down a malicious bot, or adjusting your site's plan.
+If you receive a communication from us about possible plan abuse, don't panic. We will work with you to fully understand the situation and find solution, whether that involves shutting down a malicious bot, or adjusting your site's plan.
