@@ -15,44 +15,44 @@ This includes not only HTML pages, but also responses in formats such as JSON an
 
 Pantheon takes site plan abuse seriously, but we recognize that sometimes these situations are complicated. We always start with a conversation. If you are surprised by a notification of possible abuse, our team is ready, willing, and able to dig into the inevitable differences between our measurements of traffic served and any other analytics you may have.
 
-There is no mechanical "overage" process that will surprise you with a shock bill for something that happened in the past. However, where there is a patern of consistent overage, we will seek to align site plans to their load on the platform on a go-forward basis. We reserve the right to terminate service for abusers who are unwilling to pick an appropriate plan.
+There is no mechanical "overage" process that will surprise you with a shock bill for something that happened in the past. However, where there is a pattern of consistent overage, we will seek to align site plans to their load on the platform going forward. We reserve the right to terminate service for abusers who are unwilling to use an appropriate plan.
 
 ## Why Doesn't Pantheon's Traffic Match My Analytics?
 
 There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic:
 
  - Browsers/users that block cookies and javascript is not counted.
- - Users that leave your page before the tracking script loads are not counted.
- - Any page load with a JavaScript error is not counted.
+ - Users that close the browser before the tracking script loads are not counted.
+ - Any page with a JavaScript error is not counted.
  - Automated traffic from bots or load testing is not counted.
  - API requests and AJAX requests are not counted.
- - Analytics implementations can be highly variable and may (for good reason) not include all pages on a given website.
+ - Analytics implementations can be variable and may (for good reason) not include all pages on a given website.
 
 Due to the fact that analytics doesn't measure _traffic_, it's not a suitable metric to for determining platform abuse.
 
 ## What About Static Assets?
 
-Static requests for images, PDFs, CSS, JS, and the like are not included in our normal traffic metrics. Under normal CMS use-cases, these supporting requests to render HTML for browsers are not a concern.
+Static requests (images PDFs, CSS, JS, etc) are not included in our normal traffic metrics. Under regular CMS use-cases, these supporting requests to render HTML pages for users with browsers are not a concern.
 
-However we do reserve the right to review individual sites that are excessive bandwidth consumers in extreme cases. If sites are serving static assets at an excessive rate, this can be considered plan abuse.
+However we do reserve the right to review individual sites that are excessive bandwidth consumers. If sites are serving static assets at an excessive rate, this can be considered plan abuse.
 
 ## What About Bots?
 
-Pantheon makes a serous effort to discount automated traffic from crawlers and bots that would otherwise count towards your website's total traffic because they place load on the platform. We do this by examining the user-agent of traffic, as well as the source IP address.
+Pantheon makes a serous effort to exclude automated traffic from crawlers and bots that would otherwise count towards your website's total traffic because they place load on the platform. We do this by examining the user-agent of traffic, as well as the source IP address.
 
-We respect that you cannot control this kind of traffic, and that crawler traffic is actually _beneficial_ to sites. We are continually refining our model to ensure our traffic reports are as accurate as possible. We do not consider legitimate white-hat bot traffic a sign of plan abuse.
+We respect that you cannot control this kind of traffic, and that crawler traffic is _beneficial_ to sites. We are continually refining our model to ensure our traffic reports are as accurate as possible. We do not consider legitimate white-hat bot traffic a sign of plan abuse.
 
 ## What About Load Tests or Pen Tests?
 
-We perform load tests prior to every Elite site launch, and we encourage customers to load test prior to launching or releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
+Our onboarding team performs load tests prior to every Elite site launch, and we encourage customers to load test prior to releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
 
-However, if you are load testing or pen testing in extreme excess of your plan, or are doing so a regular and repeated basis, we reserve the right to charge you for a plan that is appropriate to the load you are placing on the platform. This is one of the reasons we ask you to notify us of such tests as a courtesy. 
+However, if you are load or pen testing in extreme excess of your plan limits, or do so a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform. This is one of the reasons we ask customers to notify us of such tests as a courtesy. 
 
 ## What About Legit Traffic Spikes?
 
 We understand that the internet can make any website famous overnight, and that this isn't under your control. Pantheon's platform is specifically designed to shine in this circumstance, and it's one of the main reasons people choose us to run their sites. 
 
-Luckily, traffic spikes are easily discerned, and we take this into account when it comes to monitoring plan abuse. However, similar to the above, if your site is achieving internet fame on a regular basis, we reserve the right to right-size the sites plan in relation to the load it puts on the platform. 
+Luckily, traffic spikes are easily discerned, and we take this into account when it comes to monitoring plan abuse. However, similar to the above, if a site is achieving internet fame on a regular basis, we reserve the right to right-size the sites plan in relation to the load it puts on the platform. 
 
 ## What About Denial of Service and Other Attacks?
 
