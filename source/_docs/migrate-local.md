@@ -7,43 +7,47 @@ categories: []
 
 This page discusses sites developed from your local machine, ready to deploy on Pantheon.
 
-We recommend using [Kalabox](/docs/kalabox) because of its integrated features to the platform. For large teams/sites, we recommend using [Multidev](/docs/multidev) instead of local development.
-Read more on what will only work for [Local Development](/docs/local-development/)
-
-If your site is already existing or hosted through a different provider, you can use the [Guided Migration method](/docs/migrate). For cases where the guided migration will not work, follow the [manual migration method](/docs/migrate-manual).
-
 
 ## Before you Begin
 
+Your local configuration may be radically different from Pantheon. Before migrating, refer to our [Platform Considerations](/docs/platform-considerations/).
+
 The Pantheon platform might have several differences on how your local machine works.
-To check what are the possible components, read our documentation page about [Platform Considerations](/docs/platform-considerations/).
+To check what are the possible components, read our documentation page about 
+
+### Considerations
+
+ - For large teams/sites, we recommend using [Multidev](/docs/multidev) instead of local development.
+
+ - If you're starting local development on a site that's already on Pantheon, start with out [Local Development](/docs/local-development/).
+
+ - If you're imporing a site that's already hosted on a server or is otherwise accessible from the internet, use the [Guided Migration method](/docs/migrate).
 
 ### Platform versus Local Configuration
 
-Review and compare Pantheon and your local configuration in terms of [Resources](/docs/platform-resources/) or some [Timeouts configuration](/docs/timeouts) for differences.
+ - Review and compare Pantheon and your local configuration against our [Platform Resources by Plan](/docs/platform-resources/). 
 
-Most are standard and not configurable and it is best to sync settings to your local machine.
+ - Review your code for compatibility with our [Timeouts on Pantheon](/docs/timeouts) doc. Most are timeouts are standard and not configurable. We suggest you first duplicate these settings to your local machine.
 
-### Create a new site
-
-You need to create a new site first in order to have a server available to upload your code, database and files. Follow our guide on how to [Create Sites](/docs/create-sites/).
-Make sure you have selected the correct application upstream be it either WordPress, Drupal 7 or Drupal 8.
-
-If you haven't done so, you may follow the steps for create a new site through *Step 1* in the next section.
 
 ## Create a New Pantheon Site
 
 From your Pantheon Account Dashboard:
 
 1. Choose **Migrate Existing Site**.
-2. Enter your current website URL.
-3. Choose your site type: Drupal 7, Drupal 8, WordPress, or a [Custom Upstream](/docs/custom-upstream/).
+
+2. Enter your current website URL. If you don't have a domain name yet set for the site... ?
+
+3. Choose your site type: Drupal 7, Drupal 8, or WordPress.
+
 4. Click **Continue**.
-5. Name your new Pantheon site.
-6. Select an organization for the site (optional).
-7. Click **Create Site**.
-..a **WordPress**: Click **Migrate Manually** and select **Yes** in the confirmation box.
-..b **Drupal**: Find the line "If your site archive is larger than 500MB it must be **manually migrated**." Click the link, then select **Yes** in the confirmation box.
+
+5. Name your new Pantheon site, and optionally select an organization, then click **Create Site**.
+
+6. If your local site is accessible from the internet, you can continue using the [Guided Migration](/docs/migrate/). Otherwise:
+
+ - **WordPress**: Click **Migrate Manually** and select **Yes** in the confirmation box.
+ - **Drupal**: Find the line "If your site archive is larger than 500MB it must be **manually migrated**." Click the link, then select **Yes** in the confirmation box.
 
 ### Drupal: Drush Import
 
