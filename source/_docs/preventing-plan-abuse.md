@@ -38,7 +38,7 @@ However we do reserve the right to review individual sites that are excessive ba
 
 ## What About Bots?
 
-Pantheon makes a serous effort to exclude automated traffic from crawlers and bots that would otherwise count towards your website's total traffic because they place load on the platform. We do this by examining the user-agent of traffic, as well as the source IP address.
+Pantheon makes a serious effort to exclude automated traffic from crawlers and bots that would otherwise count towards your website's total traffic because they place load on the platform. We do this by examining the user-agent of traffic, as well as the source IP address.
 
 We respect that you cannot control this kind of traffic, and that crawler traffic is _beneficial_ to sites. We are continually refining our model to ensure our traffic reports are as accurate as possible. We do not consider legitimate white-hat bot traffic a sign of plan abuse.
 
