@@ -17,10 +17,9 @@ Custom Upstreams are a feature of a Pantheon organization account, not the indiv
 
 For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) or [Pantheon EDU+](https://pantheon.io/pantheon-edu-plus) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
-<div class="alert alert-info">
+<div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/docs/composer/).</p>
-<p markdown="1">Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/getting-support/#custom-upstreams).
+<p markdown="1">Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see <a href="/docs/getting-support/#custom-upstreams" data-proofer-ignore>Get Support</a>. If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/docs/composer/).</p>
 </div>
 
 ## Benefits
