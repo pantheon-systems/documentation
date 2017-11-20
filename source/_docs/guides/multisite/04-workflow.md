@@ -21,48 +21,52 @@ image: multisite
 <p markdown="1">Setting up a site network on top of a vanilla WordPress installation is not supported. It must be created by a Pantheon employee.</p>
 </div>
 
-Now that you’re up and running with a Site Network on Pantheon, there are some important fundamentals to know.
+Now that you're up and running with a Site Network on Pantheon, there are some important fundamentals to know.
 
-## Creating Test and Live environments from dev
+## Creating Test and Live Environments from Dev
 
-After you’ve configured a WordPress Site Network in the Dev environment, you’ll quickly want to promote it to Test and then Live.
+After you've configured a WordPress Site Network in the Dev environment, you'll quickly want to promote it to Test and then Live.
 
-First, navigate to Test in the Site Dashboard and click **Create Test Environment**, or use Terminus. This operation will deploy the code, the database, and files to the Test environment.
+First, navigate to the Test environment in the Site Dashboard and click **Create Test Environment**, or use Terminus. This operation will deploy the code, the database, and files to the Test environment:
 
+```bash
+terminus env:deploy <site>.test
+```
 
-    terminus env:deploy <site>.test
+If you visit the Test environment at this point, it will show a database connection error. From the command line, perform a `wp search-replace` on the database:
 
-If you visit the Test environment at this point, it will show a database connection error. From the command line, perform a `wp search-replace` on the database.
+```bash
+terminus wp <site>.test -- search-replace $DEVDOMAIN $TESTDOMAIN --url=$DEVDOMAIN --network
+```
 
+To better understand what's going on, let's dive into `wp search-replace` with greater detail.
 
-    terminus wp <site>.test -- search-replace $DEVDOMAIN $TESTDOMAIN --url=$DEVDOMAIN --network
-
-To better understand what’s going on, let’s dive into `wp search-replace` with greater detail.
-
-## Using `wp search-replace` when moving a database between environments
+## Using `wp search-replace` When Moving a Database Between Environments
 
 For better or for worse, WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments.
 
-WP-CLI’s `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you’ll want to follow is:
+WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
 
-
-    wp search-replace <old-domain> <new-domain> --network --url=<old-domain>
+```bash
+wp search-replace <old-domain> <new-domain> --network --url=<old-domain>
+```
 
 In this example:
 
 - `<old-domain>` is the domain currently stored in the database.
-- `<new-domain>` is the new domain you’d like to replace the old domain with.
+- `<new-domain>` is the new domain you'd like to replace the old domain with.
 - `--network` tells WP-CLI to perform the procedure on all Site Network tables. Its default behavior is to limit search and replace to the current site.
-- `--url=<old-domain>` sets the request context, which is how WordPress knows which site to load. Without this, you’ll likely see “Error: Site not found.”
+- `--url=<old-domain>` sets the request context, which is how WordPress knows which site to load. Without this, you'll likely see “Error: Site not found.”
 
-[See the full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
+See the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/){.external} for all supported features.
 
 Using WP-CLI with Terminus is simply a matter of calling Terminus with the correct `<site>` and `<env>` arguments:
 
+```bash
+terminus wp <site>.<env> -- search-replace <old-domain> <new-domain> --network --url=<old-domain>
+```
 
-    terminus wp <site>.<env> -- search-replace
-
-Now that you’ve performed the search and replace on your database, WordPress will load in your Test environment.
+Now that you've performed the search and replace on your database, WordPress will load in your Test environment.
 
 ## Refreshing data from Live
 
