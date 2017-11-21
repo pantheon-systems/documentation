@@ -4,14 +4,14 @@ description: Detailed information on how to maintain Custom Upstreams and distri
 tags: [tools, workflow]
 categories: []
 ---
-Maintainer(s) of [Custom Upstreams](/docs/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. We recommend the following workflow to maintain Custom Upstreams on Pantheon.
+Maintainers of [Custom Upstreams](/docs/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. We recommend the following workflow to maintain Custom Upstreams on Pantheon.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
 <p markdown="1">Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).</p>
 </div>
 
-Regardless of what type of update you're preparing for release, you'll want to test things out before you distribute them out to other sites. You should have a remote repository for your Custom Upstream already in place and connected to Pantheon. If you do not, please [do so now](/docs/create-custom-upstream).
+Regardless of what type of update you're preparing for release, you'll want to test things out before you distribute them out to your sites. You should have a remote repository for your Custom Upstream already in place and connected to Pantheon. If you do not, please [do so now](/docs/create-custom-upstream).
 
 ## Create a Test Site on Pantheon
 
@@ -116,7 +116,7 @@ Updates will become available to sites downstream as one-click updates within an
 
 ## Tips and Tricks
 ### Use the Pantheon Workflow
-To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow) to push up to Test and Live environments. Checkout <a href="/docs/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments" data-proofer-ignore>our guide</a> for an example of generating content from the command line.
+To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow) to push up to your Test and Live environments. Checkout <a href="/docs/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments" data-proofer-ignore>our guide</a> for an example of generating content from the command line.
 
 ### Sample a Few Sites
 For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/docs/multidev) environment. Once things look good, release the update to all.
