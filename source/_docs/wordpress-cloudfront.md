@@ -4,7 +4,7 @@ description: Learn to set up and configure CloudFront CDN on your Pantheon WordP
 tags: [cacheedge, siteintegrations]
 categories: [wordpress]
 ---
-For most CDN use cases, Pantheon's [Global CDN](/docs/global-cdn) makes it unnecessary to add a third party CDN, such as Cloudfront. while technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
+Pantheon's [Global CDN](/docs/global-cdn) makes it unnecessary to add a third party CDN, such as Cloudfront, for most CDN use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
 
 Amazon CloudFront is a pull-only Content Distribution Network (CDN). All incoming requests for assets on a CloudFront enabled site will go through the CDN's cached version. If an asset has expired or is missing, a fresh copy is pulled from the the origin site directly.
 
