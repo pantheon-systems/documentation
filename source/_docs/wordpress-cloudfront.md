@@ -6,7 +6,7 @@ categories: [wordpress]
 ---
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Pantheon's free [Global CDN](/docs/global-cdn/) now makes it unnecessary to add a third party CDN, such as Cloudfront, for the vast majority of CDN use cases. Stacking another CDN on top of the Global CDN, while technically possible, adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it. </p></div>
+<p>Pantheon's free [Global CDN](/docs/global-cdn) now makes it unnecessary to add a third party CDN, such as Cloudfront, for the vast majority of CDN use cases. Stacking another CDN on top of the Global CDN, while technically possible, adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it. </p></div>
 
 Amazon CloudFront is a pull-only Content Distribution Network (CDN). All incoming requests for assets on a CloudFront enabled site will go through the CDN's cached version. If an asset has expired or is missing, a fresh copy is pulled from the the origin site directly.
 
