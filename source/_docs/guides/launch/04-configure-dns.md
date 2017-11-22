@@ -83,4 +83,15 @@ Both the bare domain and the `www` domain will be accessible over HTTPS once the
 <h3 class="info">HTTPS</h3>
 <span class="glyphicons glyphicons-ok text-success"></span> Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.</blockquote>
 
+## Addressing Let's Encrypt Rate Limits
+
+Pantheon requests new certificates frequently in order to add domains to existing certificates. This can potentially expose  organizations managing many domains to Let's Encrypt rate limits. While sites hosted on Pantheon are not subject to these lower limits, sites hosted off the platform may experience request failures. 
+
+If you encounter rate limits we recommend two approaches: 
+
+1) Ask Let's Encrypt to increase your rate limit
+https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform
+
+2) Add your Apex domain, e.g. example.edu, to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines), which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent. 
+
 {% include("content/https-requirements.html")%}
