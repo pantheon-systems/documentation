@@ -83,6 +83,9 @@ Your command will look like:
  ```
  mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
  ```
+ 
+ If you encounter connection-related error, the DB server could be in sleep mode. To resolve this, load the site homepage to wake up the site and try again. For more information, see [Troubleshooting MySQL Connections](docs//mysql-access/#troubleshooting-mysql-connections).
+ 
 3. After you run the command, the `.sql` file is imported into your Pantheon Dev environment database container.
 
 ## Step 4: Upload Your Files
