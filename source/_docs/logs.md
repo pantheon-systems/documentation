@@ -143,17 +143,17 @@ cd $HOME/site-logs
 ```
 Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and include the following:
 ```bash
-# Replace SITE with value from Dashboard URL
-SITE=xxxxxxxxxxx
+# Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
+SITE_UUID=xxxxxxxxxxx
 ENV=live
-for app_server in `dig +short appserver.$ENV.$SITE.drush.in`;
+for app_server in `dig +short appserver.$ENV.$SITE_UUID.drush.in`;
 do
-  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:logs/* app_server_$app_server
+  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:logs/* app_server_$app_server
 done
 
 # Include MySQL logs
-db_server=`dig dbserver.$ENV.$SITE.drush.in +short`
-rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@dbserver.$ENV.$SITE.drush.in:logs db_server_$db_server
+db_server=`dig dbserver.$ENV.$SITE_UUID.drush.in +short`
+rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@dbserver.$ENV.$SITE_UUID.drush.in:logs db_server_$db_server
 ```
 
 <div class="alert alert-info">
