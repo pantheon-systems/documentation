@@ -92,3 +92,4 @@ Most migrations are completed within two hours. The migration time depends solel
 - [Migrate to Pantheon: WordPress Site Networks](/docs/migrate-wordpress-site-networks)
 - [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual)
 - [Platform Considerations](/docs/platform-considerations)
+- [Installing Plugins on WordPress Dashboard](/docs/cms-admin/#wordpress-dashboard)
