@@ -20,8 +20,8 @@ This process uses Composer to manage modules and dependencies. Before proceeding
 
 In addition to Pantheon, you will need accounts at:
 
- - [GitHub](https://github.com)
- - [CircleCI](https://cicleci.com)
+ - [GitHub](https://github.com){.external}
+ - [CircleCI](https://circleci.com){.external}
 
 
 1.  Follow the [Before You Begin](/docs/guides/build-tools/#before-you-begin) section of the Build Tools guide to install Composer, Terminus, and the Terminus Build Tools plugin on your local computer, and create machine tokens for [GitHub](https://help.github.com/articles/creating-an-access-token-for-command-line-use/){.external} and [CircleCI](https://circleci.com/account/api){.external}. Export the tokens to your current terminal session, as described below.
@@ -60,61 +60,91 @@ In addition to Pantheon, you will need accounts at:
 
 ## Install Drupal Commerce in a New Branch
 
-1.  Move into the local repository for your site, and create a new branch:
+1. Move into the local repository for your site, and create a new branch:
 
         cd $SITENAME
         git checkout -b commerce
 
-    By installing Drupal Commerce in a new branch, we allow CircleCI tests to validate the changes before committing them to master.
+   By installing Drupal Commerce in a new branch, we allow CircleCI tests to validate the changes before committing them to master.
 
-2.  Use Composer to install the Commerce base:
+2. Use Composer to install the Commerce base:
 
-    ```bash
-    composer config repositories.commerce_base vcs https://github.com/drupalcommerce/commerce_base
-    composer require drupalcommerce/commerce_base dev-8.x-1.x
-    ```
+   ```bash
+   composer config repositories.commerce_base vcs https://github.com/drupalcommerce/commerce_base
+   composer require "drupalcommerce/commerce_base dev-8.x-1.x" "drupal/commerce:~2.0"  "drupal/admin_toolbar:~1.0"  "drupal/swiftmailer:~1.0"
+   ```
 
-3.  Running `git status` should show that the `composer.json` and `composer.lock` files have changed:
-
-    ![Git Status showing updated Composer files](/source/docs/assets/images/guides/drupal-8-commerce/git-status.png)
-
-4.  Commit the new files and push them to GitHub:
-
-    ```bash
-    git commit -am "add commerce_base to project"
-    git push origin commerce
-    ```
-
-5.  If you visit your new repository on GitHub, you can easily create a new Pull Request:
-
-    ![Click the button to create a new Pull Request](/source/docs/assets/images/guides/drupal-8-commerce/pr-button.png)
-
-6.  Once you create your Pull Request, you may notice that GitHub is already displaying the current status of the tests CircleCI began when you pushed the new branch up:
-
-    ![GitHub displaying CircleCI test status in the Pull Request](/source/docs/assets/images/guides/drupal-8-commerce/circle-tests.png)
-
-CircleCI will create a multidev environment for us, where we will continue.
-
-## Wipe The Database
-
-1.  From the Site Dashboard, go to the multidev environment:
-
-    ![The Multidev tab of the Site Dashbaord](/source/docs/assets/images/guides/drupal-8-commerce/multidev.png)
-
-2.  Under **Database / Files**, click **Wipe**. Follow the instructions to wipe the database for this environment:
-
-    <div class="alert alert-danger" role="alert">
-      <h4 class="info">Warning</h4>
-      <p markdown="1">Be *sure* you are on the corrent environment before you wipe the database, to avoid potential loss of data.</p>
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p markdown="1">The commands above include dependencies required but not listed for `commerce_base`. You can follow the [open GitHub issue](https://github.com/drupalcommerce/commerce_base/pull/7){.external} for more information.</p>
     </div>
 
-    ![Wipe the Multidev environments database](/source/docs/assets/images/guides/drupal-8-commerce/wipe-db.png)
+3. Running `git status` should show that the `composer.json` and `composer.lock` files have changed:
 
-3. Click on the **Visit Site** link and configure your site options through the Drupal installer:
+   ![Git Status showing updated Composer files](/source/docs/assets/images/guides/drupal-8-commerce/git-status.png)
 
-    ![Drupal Configuration](/source/docs/assets/images/guides/drupal-8-commerce/drupal-config.png)
+4. Commit the new files and push them to GitHub:
+
+   ```bash
+   git commit -am "add commerce_base to project"
+   git push origin commerce
+   ```
+
+5. If you visit your new repository on GitHub, you can easily create a new Pull Request:
+
+   ![Click the button to create a new Pull Request](/source/docs/assets/images/guides/drupal-8-commerce/pr-button.png)
+
+6. Once you create your Pull Request, you may notice that GitHub is already displaying the current status of the tests CircleCI began when you pushed the new branch up:
+
+   ![GitHub displaying CircleCI test status in the Pull Request](/source/docs/assets/images/guides/drupal-8-commerce/circle-tests.png)
+
+7. CircleCI will create several multidev environments while it conducts the tests included in the upstream repository. Wait for them to complete, to identify the environment on which we'll continue working:
+
+
+   ![Completed CI Tests](/source/docs/assets/images/guides/drupal-8-commerce/completed-tests.png)
+
+   In this example, the environment is `ci-5`.
+
+## Wipe The Database and Reinstall Drupal
+
+1. The build tools plugin we used at the start of this guide automatically installed Drupal for us. Now that we've installed the Commerce Base, we need to wipe the database and reinstall, without removing files from our file system. Use the following terminus command, replacing `ci-5` with the correct multidev name, identified in the previous section:
+
+   ```bash
+   terminus drush $SITENAME.ci-5 -- site-install commerce
+   ```
+
+   Review the last two lines of output to identify the username and password created 
+
+2. From the Site Dashboard, go to the multidev environment:
+
+   ![The Multidev tab of the Site Dashbaord](/source/docs/assets/images/guides/drupal-8-commerce/multidev.png)
+
+## Install Drupal & Export The Config
+
+1. Click on the **Visit Site** link and configure your site options through the Drupal installer:
+
+   ![Drupal Configuration](/source/docs/assets/images/guides/drupal-8-commerce/drupal-config.png)
+
+2. After you've completed the installer, you can verify the presence of Drupal Commerce by the icon in the admin panel:
+
+   ![Drupal Commerce Icon](/source/docs/assets/images/guides/drupal-8-commerce/commerce-module-icon.png)
+
+3. Go back to your local terminal, and use Terminus to run the Drush command `config-export`:
+
+   ```bash
+   terminus drush $SITENAME.<multidev> -- config-export -y
+   ```
+   Replace `<multidev>` with the name of your multidev environment. By default, it will start with `ci-`.
+
+4. On the Site Dashboard, you'll see that this command has created lots of new files:
+
+   ![New Files to Commit](/source/docs/assets/images/guides/drupal-8-commerce/config-export-changes.png)
+
+   Enter a relevant commit message and click **Commit**.
 
 ## Merge and Import to Live
+
+1. Back at GitHub, you're ready to merge your Pull Request.
 
 ## Conclusion
 
