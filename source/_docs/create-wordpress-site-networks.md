@@ -5,7 +5,7 @@ tags: [create]
 categories: [wordpress]
 ---
 
-WordPress site networks are accessible for Elite plans. Contact your Enterprise Onboarding Manager to enable a new network. You will receive an email from the platform informing you that your account has been added to the site. Once you have access to the site, follow the instructions below to get started.
+WordPress site networks are accessible for Elite plans. Existing WordPress sites on Pantheon cannot be converted to a network site, but can be migrated. Contact your Enterprise Onboarding Manager to discuss configuring a new network site. You will receive an email from the platform informing you that your account has been added to the site. Once you have access to the site, follow the instructions below to get started.
 
 ## Migrating Site Networks to Pantheon
 
