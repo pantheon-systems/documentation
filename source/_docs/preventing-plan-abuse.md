@@ -52,7 +52,7 @@ However, if you are load or pen testing in extreme excess of your plan limits, o
 
 We understand that the internet can make any website famous overnight and that this isn't under your control. Pantheon's platform is specifically designed to shine under this circumstance, and it's one of the main reasons people choose us to run their sites. 
 
-Luckily, traffic spikes are easily discerned, and we take this into account when it comes to monitoring plan abuse. However, similar to the above, if a site is achieving internet fame on a regular basis, we reserve the right to right-size the sites plan in relation to the load it puts on the platform. 
+Luckily, traffic spikes are easily discerned, and we take this into account when it comes to monitoring plan abuse. However, similar to the above, if a site is achieving internet fame on a regular basis, we reserve the right to right-size the site's plan in relation to the load it puts on the platform. 
 
 ## What About Denial of Service and Other Attacks?
 
@@ -64,4 +64,4 @@ As above, in cases where these events are regular or sustained, we reserve the r
 
 Site traffic is rarely a black and white issue, and cases of clear plan abuse are outliers. We always start with a conversation, and are equipped to go deep in determining what is causing an excessive amount of traffic for your site.
 
-If you receive a communication from us about possible plan abuse, don't panic. We will work with you to fully understand the situation and find solution, whether that involves shutting down a malicious bot, or adjusting your site's plan.
+If you receive a communication from us about possible plan abuse, don't panic. We will work with you to fully understand the situation and find a solution, whether that involves shutting down a malicious bot, or adjusting your site's plan.
