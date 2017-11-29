@@ -17,12 +17,18 @@ nexturl: guides/multisite/considerations/
 editpath: multisite/01-introduction.md
 image: multisite
 ---
+In this guide, you'll learn about WordPress Site Networks on Pantheon:
+
+- Introduction
+- Considerations
+- Configure
+- Workflows
+- Troubleshoot
 
 ## What is a WordPress Site Network?
+Pantheon supports [WordPress Site Networks](https://codex.wordpress.org/Glossary#Network){.external} (also known as WordPress Multisite) which lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Site Networks can make it much easier to fix bugs and deploy new features across all of those sites.
 
-Pantheon supports [WordPress Site Networks](https://codex.wordpress.org/Glossary#Network) (also known as WordPress Multisite) which lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Site Networks can make it much easier to fix bugs and deploy new features across all of those sites.
-
-Pantheon supports the most common use case for site networks: a common codebase which powers a set of related sites (examples to follow). Running a WordPress Site Network requires a special configuration that is only available on [Elite plans](https://pantheon.io/pantheon-elite-plans), and only Pantheon employees have the ability to create the sites and add you to the team. [Complete this form](https://pantheon.io/pantheon-elite-plans) if you have questions about the network you'd like to host on Pantheon.
+Pantheon supports the most common use case for site networks: a common codebase which powers a set of related sites (examples to follow). Running a WordPress Site Network requires a special configuration that is only available on [Elite plans](https://pantheon.io/pantheon-elite-plans){.external}, and only Pantheon employees have the ability to create the sites and add you to the team. [Complete this form](https://pantheon.io/pantheon-elite-plans){.external} if you have questions about the network you'd like to host on Pantheon.
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
@@ -31,7 +37,6 @@ Pantheon supports the most common use case for site networks: a common codebase 
 
 
 ## Which Use Cases Work Best on Pantheon?
-
 We support clients running a network of functionally similar sites. This includes, but is not limited to, networks of:
 
 - Blogs for faculty at a university
@@ -39,8 +44,9 @@ We support clients running a network of functionally similar sites. This include
 - Sections within a media publication
 
 ## Which Use Cases Are Unsupported?
-
-We do not support uses of WordPress Site Networks that run functionally different or uniquely owned sites on the same WordPress installation. This includes, but is not limited to:
+We do not support uses of WordPress Site Networks that run functionally-different or uniquely-owned sites on the same WordPress installation. This includes, but is not limited to:
 
 - Software as a service (SAAS) products
 - Agencies using one WordPress installation to support several customers
+
+Ready to create a WordPress Site Network? Before you do, read the next page to understand the important aspects you'll need to consider before you dive into the code.
