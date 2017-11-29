@@ -167,8 +167,20 @@ You can reactivate a site with a single click. Simply visit the site's Dashboard
 
 ## Emoji Support
 
-Emoji support is available on WordPress and Drupal 8. On Drupal 7 sites, emojis will return this database error:
+Emoji support is available out of the box on WordPress and Drupal 8. Drupal 7 sites can enable Emoji support by following this procedure:
 
-    PDOException: SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\xF0\x9F\x94\xB4\x0D\x0A...'
+For new _or_ existing Drupal 7 installs, add the following lines to `sites/default/settings.php`:
 
-The `utf8mb4` character encoding needed for emojis is not supported on Drupal 7 sites on our platform. The provided workaround on drupal.org is not possible on Pantheon as it would cause adverse effects on other sites, since all sites share the same `my.cnf` configuration. To resolve this issue, consider the [Strip 4-byte UTF8](https://www.drupal.org/project/strip_utf8mb4) module to reject overly long byte sequences.
+```php
+$databases['default']['default']['charset'] = 'utf8mb4';
+$databases['default']['default']['collation'] = 'utf8mb4_general_ci';
+```
+
+For existing sites that already have an active database, you then have to install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert){.external} module and convert the database. Start by making a [backup](/docs/backups/) of the site database, then place the site in maintenance mode. When ready, run the following command, replacing `<site>` with your site name, and `<env>` with the environment (usually `dev`):
+
+```bash
+terminus drush <site>.<env> -- utf8mb4-convert-databases
+```
+
+
+This will convert the database tables in the existing installation to the proper encoding to support emoji characters. After making the conversion, test it out by placing an emoji in the site text.
