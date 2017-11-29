@@ -176,10 +176,11 @@ $databases['default']['default']['charset'] = 'utf8mb4';
 $databases['default']['default']['collation'] = 'utf8mb4_general_ci';
 ```
 
-For existing sites that already have an active database, you then have to install the (UTF8MB4 Convert)[https://www.drupal.org/project/utf8mb4_convert] module and convert the database. Start by making a backup of the site database, then place the site in maintenance mode. When the coast is clear, run the following command:
+For existing sites that already have an active database, you then have to install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert){.external} module and convert the database. Start by making a [backup](/docs/backups/) of the site database, then place the site in maintenance mode. When ready, run the following command, replacing `<site>` with your site name, and `<env>` with the environment (usually `dev`):
 
-```sh
+```bash
 terminus drush <site>.<env> -- utf8mb4-convert-databases
 ```
 
-This should convert the database tabes in the existing install to the proper encoding to support emoji characters. After making the conversion, test it out by placing an emoji in the site text.
+
+This will convert the database tables in the existing installation to the proper encoding to support emoji characters. After making the conversion, test it out by placing an emoji in the site text.
