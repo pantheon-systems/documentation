@@ -4,6 +4,12 @@ description: Work locally and deploy to Pantheon using Kalabox.
 tags: [local]
 categories: []
 ---
+
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">Active development has been halted in favor of its successor, [Lando](https://github.com/lando/lando){.external}. Please review the [Lando documentation](https://docs.devwithlando.io/){.external} for more information.</p>
+</div>
+
 [Kalabox](http://www.kalabox.io/) is a Free and Open Source project allows you to quickly create and manage local environments that mirror site environments on Pantheon with the press of a button, including add on services such as Redis and Solr. Kalabox includes both an intuitive GUI and  command-line interface, and is powered by [Docker](https://www.docker.com/) under the hood.
 
 Support for Kalabox is provided via their [GitHub issue queue](https://github.com/kalabox/kalabox).
