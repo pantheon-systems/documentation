@@ -80,18 +80,6 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 
 {% include("content/https-requirements.html")%}
 
-
-### Addressing Let's Encrypt Rate Limits
-
-Pantheon requests new certificates frequently in order to add domains to existing certificates. This can potentially expose  organizations managing many domains to Let's Encrypt rate limits. While sites hosted on Pantheon are not subject to these lower limits, sites hosted off the platform may experience request failures.
-
-If you encounter rate limits we recommend either of two approaches:
-
-1) [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform){.external}.
-
-2) Add your apex domain, e.g. `example.edu`, to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines){.external}, which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
-
-
 ## Frequently Asked Questions
 ### How do I upgrade my existing Pantheon site?
 Make the switch on an existing Pantheon site by updating DNS for your domains. If you don't see action required, open a support chat to get the upgrade enabled.
@@ -158,6 +146,17 @@ Moz Pro is unable to crawl sites using Server Name Indication (SNI). For informa
 ### 403 Permission Denied (Drupal)
 The text challenge to pre-provision HTTPS on Pantheon requires adding a `.well-known` directory to the root of your site. However, Drupal core has a line in the `.htaccess` file that disallows Apache from serving dot files and folders, which returns a 403 permission denied response. If you see this error while trying to  pre-provision HTTPS on Drupal sites, use the [Let's Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge){.external} contrib module as a workaround.
 
+
+### Addressing Let's Encrypt Rate Limits
+
+Pantheon requests new certificates frequently in order to add domains to existing certificates. This can potentially expose  organizations managing many domains to Let's Encrypt rate limits. While sites hosted on Pantheon are not subject to these lower limits, sites hosted off the platform may experience request failures.
+
+If you encounter rate limits we recommend either of two approaches:
+
+1) [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform){.external}.
+
+2) Add your apex domain, e.g. `example.edu`, to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines){.external}, which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
+
 ## Glossary
 ### HTTPS
 HTTPS encrypts and decrypts requests. For more information, see [this Google resource](https://support.google.com/webmasters/answer/6073543?hl=en).
@@ -167,3 +166,4 @@ TLS (Transport Layer Security) is a protocol for secure HTTP connections. It rep
 
 ### Server Name Indication (SNI)
 Server name indication (SNI) is the technology replacing the expensive, legacy load balancers and allows multiple secure (HTTPS) websites to be served off the same IP address, without requiring all those sites to use the same certificate.
+
