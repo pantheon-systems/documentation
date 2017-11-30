@@ -36,7 +36,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 Please be sure to check the contents of the codebase for existing `.gitignore` files.  To be compatible with the platform, using the Pantheon version is advised.  Otherwise, attempts to import files to restricted paths could break the import process.
 
-See the platform-provided verions for [Wordpress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
+See the platform-provided versions for [Wordpress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
 
 
 You can use either SFTP or Git to import your code. If you'd like to retain existing Git History, then please see [Migrating Sites to Pantheon: Preserve Existing Git History](/docs/migrate-preserve-history).
@@ -76,15 +76,15 @@ The following instructions are for the command line MySQL client, but you can al
  ```
  mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
  ```
+
 2. From your terminal, `cd` into the directory containing your `.sql` file. Paste the connection string and append it with:
-`< database.sql`
-Your command will look like:
+`< database.sql`. Your command will look like:
 
  ```
  mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
  ```
 
-If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/docs/mysql-access/#troubleshooting-mysql-connections).
+   If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/docs/mysql-access/#troubleshooting-mysql-connections).
 
 3. After you run the command, the `.sql` file is imported into your Pantheon Dev environment database container.
 
