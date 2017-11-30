@@ -17,6 +17,8 @@ nexturl: guides/multisite/considerations/
 editpath: multisite/01-introduction.md
 image: multisite
 ---
+This guide covers the process of requesting, configuring, and maintaining a new WordPress Site Network on Pantheon. We'll also explore supported use cases, considerations and some common troubleshooting tips.
+
 ## About WordPress Site Networks
 Pantheon supports [WordPress Site Networks](https://codex.wordpress.org/Glossary#Network){.external} (also known as WordPress Multisite) which lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Site Networks can make it much easier to fix bugs and deploy new features across all of those sites.
 
