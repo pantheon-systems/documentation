@@ -16,147 +16,152 @@ previousurl: guides/multisite/considerations/
 editpath: multisite/03-config.md
 image: multisite
 ---
-{% include("content/notes/multisite.html") %}
-
-## Before you begin
-Prior to configuring a WordPress Site Network, there are two important preparation steps you need to take:
-
-1. [Complete this form](https://pantheon.io/pantheon-elite-plans){.external} and request a Pantheon employee set up a new WordPress Site Network for you.
-2. Review [Considerations](/docs/guides/multisite/considerations/) to understand the specific decisions you'll be making.
-
-Already have a WordPress Site Network that you'd like to import into Pantheon? See [Migrate to Pantheon: WordPress Site Networks](/docs/wordpress-site-networks/). The instructions below pertain only to new WordPress Site Networks.
-
-## Before you begin
-Under the hood, configuring a new WordPress Site Network does two things:
-
-
-1. Modifies the `wp-config.php` file to include additional constants (e.g. `MULTISITE`  and `DOMAIN_CURRENT_SITE`).
-2. Adds new global database tables. Subsequently, each site you add to your WordPress Site Network will create new database tables specific to the site.
-
-For the former, you'll need to set the [connection mode to SFTP](/docs/sftp#sftp-mode) for the Development environment. This allows the `wp-config.php` file to be modified.
-
-The expectation is that you haven't yet run the WordPress installer on your Pantheon site. If you visit the dev domain, you should get redirected to the web-based installer.
-
-Also, as we work through this guide, you'll notice Terminus example usage that includes `<site>` and `<env>` as placeholders. There are also other placeholders within `<>` brackets. Whenever you see these, you're expected to replace them with their correct values.
-
-## Creating a Site Network with Terminus and WP-CLI (Recommended)
-[Terminus](/docs/terminus) and WP-CLI lets you create a WordPress Site Network with the execution of a single command.
-
-First, make sure that Terminus is configured locally and you're authenticated with Pantheon.
-
-``` bash
-$ terminus whoami
-aghost@pantheon.io
-```
-
-Next, you have a small decision tree:
-
-1. If you haven't yet run the WordPress installer, use the `wp core multisite-install` command ([full documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/){.external}). This command both installs WordPress *and* converts the WordPress install to a WordPress Site Network.
-2. If you've already installed WordPress, use the `wp core multisite-convert` command ([full documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/){.external}). This command only modifies `wp-config.php` and creates the global database tables.
-
-In both cases, the default behavior is to create a Site Network with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag to either WP-CLI command.
-
-Once you're ready, install a new WordPress Site Network with Terminus by running:
-
-```bash
-terminus wp <site>.<env> -- core multisite-install --url=<url> --title=<site-title> --admin_user=<username> --admin_email=<email>
-```
-
-Make sure to include all required arguments, otherwise you'll seen an error.
-
-Or, convert an existing WordPress install to a WordPress Site Network by running:
-
-```bash
-  terminus wp <site>.<env> -- core multisite-convert
-```
-
-When you install a new WordPress Site Network, you should see output similar to this:
-
-```nohighlight
-$ terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="Site Networks" --admin_user=aghost --admin_email=aghost@pantheon.io
-Admin password: abcdefgnotarealpassword
-Created single site database tables.
-Set up multisite database tables.
-Added multisite constants to 'wp-config.php'.
-Success: Network installed. Don't forget to set up rewrite rules.
-```
-
-Et voila! Your WordPress Site Network is now installed.
-
-## Updating `wp-config.php` to handle multiple environments
-
-By default, WP-CLI will add a `DOMAIN_CURRENT_SITE` constant to your `wp-config.php`  file that fixes your WordPress Site Network to a specific URL. If you go back to your Pantheon dashboard, you'll see the modification made to the `wp-config.php` file.
-
-To make it easier for your code to move between environments, you can set the `DOMAIN_CURRENT_SITE` value conditionally based on the environment. When you use the following code snippet, make sure to replace the existing definition of the `DOMAIN_CURRENT_SITE` constant, and edit the placeholder values with their correct values.
+Next, we'll install and configure your new network. The expectation at this point in the guide is that you have a new WordPress Site Network created for you by Pantheon, but not yet installed. If you visit the Dev environment's site URL, you should be redirected to the web-based installer. If you do not yet have a WordPress Site Network, refer to the [introduction](/docs/guides/multisite/) page of this guide.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">Comment out/remove DOMAIN_CURRENT_SITE set by wp cli install command, otherwise php notice.</p>
+<p markdown="1">Adjust placeholders in code snippets as needed throughout this guide. This includes placeholders such as `<site>` and `<env>` within Terminus commands, in addition to placeholders wrapped in `<>` brackets within larger code blocks.</p>
 </div>
 
-```
-/**
- * Define DOMAIN_CURRENT_SITE conditionally.
- */
-if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-  switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
-    case 'live':
-      // Value should be the primary domain for the Site Network.
-      define( 'DOMAIN_CURRENT_SITE', 'live-<site>.pantheonsite.io' );
-      // Once you map a domain to Live, you can change DOMAIN_CURRENT_SITE
-      // define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
-      break;
-    case 'test':
-      define( 'DOMAIN_CURRENT_SITE', 'test-<site>.pantheonsite.io' );
-      break;
-    case 'dev':
-      define( 'DOMAIN_CURRENT_SITE', 'dev-<site>.pantheonsite.io' );
-      break;
-    default:
-      # Catch-all to accommodate default naming for multi-dev environments.
-      define( 'DOMAIN_CURRENT_SITE', $_ENV['PANTHEON_ENVIRONMENT'] . '-' . $_ENV['PANTHEON_SITE_NAME'] . '.pantheonsite.io' );
-      break;
-    }
-}
-```
+## Install the WordPress Site Network
+1. Install the most recent release of [Terminus](/docs/terminus/):
 
-The astute programmer will notice the ‘test' and ‘dev' cases are redundant. Feel free to remove if you don't need custom primary domain values for those environments.
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
+      <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+    </div>
 
-Generally, the key idea is that you're conditionally defining the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multi-Dev).
+2. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create){.external}, then authenticate Terminus:
 
-## Creating a Site Network through the WordPress Dashboard
+      <div class="copy-snippet">
+        <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth">Copy</button>
+        <figure><pre id="mac-mt-auth"><code class="command bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
+      </div>
 
-If you didn't use Terminus to install your WordPress Site Network, it can also be created from the WordPress Dashboard. Really though, you should give Terminus a try. What follows is an abbreviated version of the [WordPress Codex installation instructions](https://codex.wordpress.org/Create_A_Network).
+3. Make sure the site's connection mode is set to SFTP:
 
-When creating a Site Network through the WordPress Dashboard, the first step is to add the following constant to your `wp-config.php`:
+      <div class="copy-snippet">
+        <button class="btn btn-default btn-clippy" data-clipboard-target="#sftp">Copy</button>
+        <figure><pre id="sftp"><code class="command bash" data-lang="bash">terminus connection:set &lsaquo;site&rsaquo;.&lsaquo;env&rsaquo; sftp</code></pre></figure>
+      </div>
 
+4. Use Terminus to execute the `wp core multisite-install` command ([full documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/){.external}):
 
-    define( 'WP_ALLOW_MULTISITE', true );
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdown="1">The default behavior for this command is to create a Site Network with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.</p>
+    </div>
 
-Once you've told WordPress of your intent to create a Site Network, you'll see a new page in your WordPress Dashboard:
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#multisite-install">Copy</button>
+      <figure><pre id="multisite-install"><code class="command bash" data-lang="bash">  terminus wp &lsaquo;site&rsaquo;.&lsaquo;env&rsaquo; -- core multisite-install --url=&lsaquo;url&rsaquo; --title=&lsaquo;site-title&rsaquo; --admin_user=&lsaquo;username&rsaquo; --admin_email=&lsaquo;email&rsaquo;</code></pre></figure>
+    </div>
 
+    When you install a new WordPress Site Network, you should see a success notice similar to this:
 
-![WP Network Setup](/source/docs/assets/images/wp-network-setup.png)
+    ```bash
+    $ terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="Site Networks" --admin_user=aghost --admin_email=aghost@pantheon.io
+    Admin password: abcdefgnotarealpassword
+    Created single site database tables.
+    Set up multisite database tables.
+    Added multisite constants to 'wp-config.php'.
+    Success: Network installed. Dont forget to set up rewrite rules.
+    ```
 
-Copy the first block and add the constants to the `wp-config.php` file, right below where you added the `WP_ALLOW_MULTISITE` constant.
+Et voila! Your WordPress Site Network is now installed.
 
-As in the Terminus installation method example, instead of defining `DOMAIN_CURRENT_SITE` explicitly, you'll want to define it conditionally based on environment. See the section prior for those details.
+## Configure the WordPress Site Network
+The `wp core multisite-install` command we ran in the previous section modifies the `wp-config.php` file. One of those modifications sets the `DOMAIN_CURRENT_SITE` constant, which fixes your WordPress Site Network to a specific URL.
 
-Lastly, Ignore the second block of code (adding new `.htaccess` rules). Pantheon containers use Nginx + PHP-FPM, not Apache, and `.htaccess` files have no effect.
+In order for things to run smoothly on Pantheon, we need to adjust the configuration so that the `DOMAIN_CURRENT_SITE` constant is defined conditionally based on the given environment:
 
-Now, go back to your web browser and refresh the page. WordPress will redirect you to the log in screen. Once you log back in to WordPress, pat yourself on the back — you've completed the WordPress Site Network installation process.
+1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard.
+2. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
+3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
+  If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
+
+4. Now open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
+5. Locate the configuration added by WP-CLI, and comment out the line that sets `DOMAIN_CURRENT_SITE`. For example:
+
+  ```php
+  define( 'WP_ALLOW_MULTISITE', true );
+  define( 'MULTISITE', true );
+  define( 'SUBDOMAIN_INSTALL', false );
+  $base = '/';
+  # define( 'DOMAIN_CURRENT_SITE', 'example.com' );
+  define( 'PATH_CURRENT_SITE', '/' );
+  define( 'SITE_ID_CURRENT_SITE', 1 );
+  define( 'BLOG_ID_CURRENT_SITE', 1 );
+  ```
+
+6. Add the following code block to your `wp-config.php` file, under the lines mentioned in the previous step:
+
+  ```php
+  /**
+   * Define DOMAIN_CURRENT_SITE conditionally.
+   */
+  if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+    switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
+      case 'live':
+        // Value should be the primary domain for the Site Network.
+        define( 'DOMAIN_CURRENT_SITE', 'live-<site>.pantheonsite.io' );
+        // Once you map a domain to Live, you can change DOMAIN_CURRENT_SITE
+        // define( 'DOMAIN_CURRENT_SITE', 'example-network.com' );
+        break;
+      case 'test':
+        define( 'DOMAIN_CURRENT_SITE', 'test-<site>.pantheonsite.io' );
+        break;
+      case 'dev':
+        define( 'DOMAIN_CURRENT_SITE', 'dev-<site>.pantheonsite.io' );
+        break;
+      default:
+        # Catch-all to accommodate default naming for multi-dev environments.
+        define( 'DOMAIN_CURRENT_SITE', $_ENV['PANTHEON_ENVIRONMENT'] . '-' . $_ENV['PANTHEON_SITE_NAME'] . '.pantheonsite.io' );
+        break;
+      }
+  }
+  ```
+
+  The astute programmer will notice the `test` and `dev` cases are redundant. Feel free to remove if you don't intend to add custom domains to those environments. Generally, the key idea is that you're conditionally defining the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multi-Dev).
+
+7. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment once edits are complete.
 
 ## Developing the Site Network
-
-Congratulations again on setting up your first WordPress Site Network. You are on your way to glory!
-
-When logged in to the WordPress Dashboard, you'll see a new “My Sites” menu item in the toolbar.
+Congratulations on setting up your first WordPress Site Network. You are on your way to glory! When logged in to the WordPress Dashboard, you'll see a new **My Sites** menu item in the toolbar:
 
 
 ![Enabling the network](/source/docs/assets/images/wp-network-admin-sites.png)
 
-You will have one site — go ahead and create another if you'd like. If you chose to use WordPress Site Networks with subdirectories, you'll be able to access the site right away. If you chose to use subdomains, you'll need to map a custom hostname to the environment (@todo link to section in best practices) before you can access the new environment. Pantheon doesn't support sub-sub-domains of `pantheonsite.io`.
+You will have one site — go ahead and create another if you'd like. If you chose to use WordPress Site Networks with subdirectories, you'll be able to access the site right away. If you chose to use subdomains, you'll need to map a custom hostname to the environment before you can access the new environment.
+
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
+      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span>Mapping Custom Hostnames</h3>
+    </a>
+  </div>
+  <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+  ### Mapping Custom Hostnames (subdomain configurations only)
+  Upon installation and configuration the main site will load properly (e.g., `dev-<example>.pantheonsite.io`). However, additional network sites created will fail to load because `pantheonsite.io` doesn't support sub-sub-domains (e.g., `<new-sub-site>.dev-<example>.pantheonsite.io`). WordPress Site Networks using a subdomain configuration require custom domains to be mapped to each network site in order to load properly.
+
+  1. Access the domain's DNS settings wherever they are managed.
+  2. Create a wildcard CNAME `*.dev.example.com` that maps to the Dev environment's platform domain, `dev-<example>.pantheonsite.io`. Doing so ensures all hostnames mapped to the environment will load without additional DNS records.
+  3. Map domains to the Pantheon Dev environment via Terminus. For example:
+
+      ```bash
+      # add dev.example.com for the network's main site
+      terminus domain:add <site>.dev dev.example.com
+
+      # add subsite.example.com for a subsite on the network
+      terminus domain:add <site>.dev subsite.example.com
+      ```
+
+  4. Update the conditional `DOMAIN_CURRENT_SITE` definition in your `wp-config.php` file to accommodate the site's new domains.
+
+  Once these steps are complete, both sites on the WordPress Site Network should load over their new URLs.
+  </div>
+</div>
 
 Spend some additional time exploring the WordPress Network Dashboard to become familiar with the variety of additional settings you now have. Take a look at what options are available for each site you create, how to manage users across WordPress Multisite, and the grab bag of network settings.
 

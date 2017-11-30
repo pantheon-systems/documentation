@@ -16,8 +16,6 @@ previousurl: guides/multisite/config/
 editpath: multisite/04-workflow.md
 image: multisite
 ---
-{% include("content/notes/multisite.html") %}
-
 Now that you're up and running with a Site Network on Pantheon, there are some important fundamentals to know.
 
 ## Creating Test and Live Environments from Dev

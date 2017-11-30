@@ -15,8 +15,6 @@ previousurl: guides/multisite/workflow/
 editpath: multisite/05-debug.md
 image: multisite
 ---
-{% include("content/notes/multisite.html") %}
-
 ## WP-CLI Tips and Tricks
 ### Managing Site Networks
 The `wp site *` class of WP-CLI commands ([full documentation](https://developer.wordpress.org/cli/commands/site/){.external}) for managing the sites installed on your network. Here are some helpful ones:
@@ -32,29 +30,6 @@ WordPress sometimes includes database schema changes in releases. When you updat
 “Super admin” is a special designation for select users on a WordPress Site Network. While a user's role may vary between sites on the network, any user can be a super admin which gives them unrestricted access to every site on the network.
 
 Use `wp super-admin list` to list current super admins, and `wp super-admin add` or `wp super-admin remove` to add or remove them, respectively.
-
-
-### Mapping custom hostnames to environments
-WordPress Site Networks using subdomains will require unique hostnames for each additional site in the network. For those using subdirectories, unique hostnames are optional.
-
-Let's use a hypothetical Pantheon account called `treefarm`. This developer has created a WordPress Site Network in their Dev environment that has the domain `dev-treefarm.pantheonsite.io`. The main site on the network loads, so that works great.
-
-This developer then proceeds to create a second site on the network called “apple”. By default, WordPress will give this site a domain of `apple.dev-treefarm.pantheonsite.io`. However, the `pantheonsite.io` domain doesn't handle sub-sub-domains, so this second site won't load until there's a custom domain mapped to it.
-
-Fortunately, this developer has access to their DNS control panel.
-
-First, this developer creates a `*.dev.treefarm.com` wildcard CNAME record that maps to `dev-treefarm.pantheonsite.io`. Doing so ensures all hostnames mapped to the environment will load without additional DNS records.
-
-Second, this developer maps both domains to the Pantheon Dev environment:
-
-
-    # terminus domain:add <site>.<env> <domain-to-map>
-    terminus domain:add treefarm.dev dev.treefarm.com
-    terminus domain:add treefarm.dev apple.treefarm.com
-
-Lastly, this developer updates the conditional `DOMAIN_CURRENT_SITE` definition in their `wp-config.php` file to accommodate the site's new primary domain.
-
-Once these three steps are complete, both sites on the WordPress Site Network live at their new URLs.
 
 ## Troubleshooting
 ### Error: "Error establishing a database connection"
