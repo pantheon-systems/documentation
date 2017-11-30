@@ -15,6 +15,8 @@ previousurl: guides/multisite/workflow/
 editpath: multisite/05-debug.md
 image: multisite
 ---
+{% include("content/notes/multisite.html") %}
+
 ## WP-CLI Tips and Tricks
 ### Managing Site Networks
 The `wp site *` class of WP-CLI commands ([full documentation](https://developer.wordpress.org/cli/commands/site/){.external}) for managing the sites installed on your network. Here are some helpful ones:

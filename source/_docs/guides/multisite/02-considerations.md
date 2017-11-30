@@ -16,24 +16,12 @@ previousurl: guides/multisite/
 editpath: multisite/02-considerations.md
 image: multisite
 ---
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Setting up a site network on top of a vanilla WordPress installation is not supported. It must be created by a Pantheon employee.</p>
-</div>
+{% include("content/notes/multisite.html") %}
 
 Before you get started using WordPress Site Networks, there are a few key details to keep in mind.
 
 ## The Decision Is Permanent
 The choice between running classic single-site WordPress or a WordPress Site Network is permanent. Once you perform the initial configuration (which is relatively straightforward to do), it's technically challenging to switch back to single-site, and not supported on Pantheon.
-
-## Choose Between Subdirectories and Subdomains
-When configuring a WordPress Site Network, you'll need to choose between using subdirectories or subdomains. For example: `example.com/first-site` & `example.com/second-site` or `first-site.example.com` & `second-site.example.com`.
-
-The key differences are:
-
-- Custom domains can be mapped to sites on subdomains or in subdirectories, but subdirectories can't be mapped to sites on subdomains.
-- Using subdomains will require you to set up your own DNS and add each custom domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `pantheon.io` namespace for site networks.
-- Serving subdomains over SSL requires a wildcard SSL certificate, or individual SSL certificates for each subdomain. In choosing subdirectories, all sites share the same domain and SSL certificate.
 
 ## Users Are Shared
 User data is shared among all sites on a WordPress Site Network. If you were to create a user with a username of `janedoe`, she will have the only `janedoe` username across all of the sites. If you were to change her display name from “Jane Doe” to “J. Doe”, the change would apply everywhere her name is displayed, regardless of the site.
@@ -51,5 +39,14 @@ Themes can be enabled for activation on a per-site basis, or **network enabled**
 Note the difference between “enabling” and “activating”. Themes can be “enabled” for an entire network by the "super user" (network administrator), which then allows site administrators to activate the theme on individual sites they manage. When plugins are installed but not network activated, the site administrator has the ability to activate the plugin.
 
 Super users can also choose to activate plugins across the entire network; however, site administrators cannot override that activation. Plugins active across the entire network are stored within the `wp-content/plugins` and/or `wp-content/mu-plugins` directories and are **not** displayed within an individual site's plugins list. For more information, see [Multisite Network Administration: Plugins](https://codex.wordpress.org/Multisite_Network_Administration#Plugins){.external}.
+
+## Choose Between Subdirectories and Subdomains
+When configuring a WordPress Site Network, you'll need to choose between using subdirectories or subdomains. For example: `example.com/first-site` & `example.com/second-site` or `first-site.example.com` & `second-site.example.com`.
+
+The key differences are:
+
+- Custom domains can be mapped to sites on subdomains or in subdirectories, but subdirectories can't be mapped to sites on subdomains.
+- Using subdomains will require you to set up your own DNS and add each custom domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `pantheon.io` namespace for site networks.
+- Serving subdomains over SSL requires a wildcard SSL certificate, or individual SSL certificates for each subdomain. In choosing subdirectories, all sites share the same domain and SSL certificate.
 
 Now that you understand all of the important aspects to running a Site Network, the next section will take you through the full process of configuring one.

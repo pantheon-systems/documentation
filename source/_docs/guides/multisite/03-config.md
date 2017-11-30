@@ -16,14 +16,12 @@ previousurl: guides/multisite/considerations/
 editpath: multisite/03-config.md
 image: multisite
 ---
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Setting up a site network on top of a vanilla WordPress installation is not supported. It must be created by a Pantheon employee.</p>
-</div>
+{% include("content/notes/multisite.html") %}
 
-Prior to converting a single-site WordPress install to a WordPress Site Network, there are two important preparation steps you need to take:
+## Before you begin
+Prior to configuring a WordPress Site Network, there are two important preparation steps you need to take:
 
-1. Contact Pantheon support to make sure your plan supports WordPress Site Networks.
+1. [Complete this form](https://pantheon.io/pantheon-elite-plans){.external} and request a Pantheon employee set up a new WordPress Site Network for you.
 2. Review [Considerations](/docs/guides/multisite/considerations/) to understand the specific decisions you'll be making.
 
 Already have a WordPress Site Network that you'd like to import into Pantheon? See [Migrate to Pantheon: WordPress Site Networks](/docs/wordpress-site-networks/). The instructions below pertain only to new WordPress Site Networks.

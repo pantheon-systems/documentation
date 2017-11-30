@@ -16,10 +16,7 @@ previousurl: guides/multisite/config/
 editpath: multisite/04-workflow.md
 image: multisite
 ---
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Setting up a site network on top of a vanilla WordPress installation is not supported. It must be created by a Pantheon employee.</p>
-</div>
+{% include("content/notes/multisite.html") %}
 
 Now that you're up and running with a Site Network on Pantheon, there are some important fundamentals to know.
 
