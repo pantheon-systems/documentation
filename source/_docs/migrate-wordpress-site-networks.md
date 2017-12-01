@@ -10,7 +10,7 @@ categories: [wordpress]
 * [Download](https://git-scm.com/downloads) and install [Git](/docs/git/)
 * [Rsync or SFTP Client](/docs/rsync-and-sftp/)
 * [MySQL Client](/docs/mysql-access/)
-* A Pantheon employee must create a [WordPress Site Network](/docs/wordpress-site-networks/) for you.
+* A Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.
 
 ## Import the Codebase
 

@@ -85,3 +85,14 @@ sculpin_content_types:
                 - categories
                 - tags
                 - contributors
+    multisitepages:
+            type: path
+            path: docs/guides/multisite
+            permalink: pretty
+            singular_name: multisitepage
+            enabled: true
+            layout: guide
+            taxonomies:
+                - categories
+                - tags
+                - contributors

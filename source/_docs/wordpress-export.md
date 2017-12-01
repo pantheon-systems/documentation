@@ -9,7 +9,7 @@ In most situations, you shouldn't need to manually export your WordPress site in
 The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/migrate-manual/) the site:
 
 - You want to preserve the site's existing Git history
-- [WordPress Site Networks](/docs/wordpress-site-networks)
+- [WordPress Site Networks](/docs/guides/multisite)
 - You can't install our migration plugin on your existing site (e.g. WordPress.com)
 - [Your site doesn't have a public URL (e.g. a local installation)](/docs/migrate-wordpress/#frequently-asked-questions)
 

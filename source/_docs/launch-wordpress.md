@@ -49,4 +49,4 @@ You are ready to start development! Click the **Visit Development Site** button 
 - [Developing with SFTP](/docs/sftp)
 - [Starting with Git](/docs/git)
 - [Installing Plugins via WP Admin Interface](/docs/cms-admin)
-- [WordPress Site Networks](/docs/wordpress-site-networks/)
+- [WordPress Site Networks](/docs/guides/multisite/)
