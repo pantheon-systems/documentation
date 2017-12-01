@@ -11,7 +11,7 @@ pagination:
 use:
     - multisitepages
 permalink: docs/guides/multisite/config/
-nexturl: guides/multisite/workflow/
+nexturl: guides/multisite/workflows/
 previousurl: guides/multisite/considerations/
 editpath: multisite/03-config.md
 image: multisite

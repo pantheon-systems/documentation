@@ -10,10 +10,10 @@ pagination:
     provider: data.multisitepages
 use:
     - multisitepages
-permalink: docs/guides/multisite/workflow/
+permalink: docs/guides/multisite/workflows/
 nexturl: guides/multisite/debug/
 previousurl: guides/multisite/config/
-editpath: multisite/04-workflow.md
+editpath: multisite/04-workflows.md
 image: multisite
 ---
 Now that you're up and running with a Site Network on Pantheon, there are some important fundamentals to know.

@@ -11,7 +11,7 @@ pagination:
 use:
     - multisitepages
 permalink: docs/guides/multisite/debug/
-previousurl: guides/multisite/workflow/
+previousurl: guides/multisite/workflows/
 editpath: multisite/05-debug.md
 image: multisite
 ---
