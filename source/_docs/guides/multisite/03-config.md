@@ -42,7 +42,7 @@ Next, we'll install and configure your new network. The expectation at this poin
 
       <div class="copy-snippet">
         <button class="btn btn-default btn-clippy" data-clipboard-target="#sftp">Copy</button>
-        <figure><pre id="sftp"><code class="command bash" data-lang="bash">terminus connection:set &lsaquo;site&rsaquo;.&lsaquo;env&rsaquo; sftp</code></pre></figure>
+        <figure><pre id="sftp"><code class="command bash" data-lang="bash">terminus connection:set &lsaquo;site&rsaquo;.dev sftp</code></pre></figure>
       </div>
 
 4. Use Terminus to execute the `wp core multisite-install` command ([full documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/){.external}):
@@ -54,7 +54,7 @@ Next, we'll install and configure your new network. The expectation at this poin
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#multisite-install">Copy</button>
-      <figure><pre id="multisite-install"><code class="command bash" data-lang="bash">  terminus wp &lsaquo;site&rsaquo;.&lsaquo;env&rsaquo; -- core multisite-install --url=&lsaquo;url&rsaquo; --title=&lsaquo;site-title&rsaquo; --admin_user=&lsaquo;username&rsaquo; --admin_email=&lsaquo;email&rsaquo;</code></pre></figure>
+      <figure><pre id="multisite-install"><code class="command bash" data-lang="bash">terminus wp &lsaquo;site&rsaquo;.&lsaquo;env&rsaquo; -- core multisite-install --url=&lsaquo;url&rsaquo; --title=&lsaquo;site-title&rsaquo; --admin_user=&lsaquo;username&rsaquo; --admin_email=&lsaquo;email&rsaquo;</code></pre></figure>
     </div>
 
     When you install a new WordPress Site Network, you should see a success notice similar to this:
@@ -123,7 +123,7 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
   }
   ```
 
-  The astute programmer will notice the `test` and `dev` cases are redundant. Feel free to remove if you don't intend to add custom domains to those environments. Generally, the key idea is that you're conditionally defining the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multi-Dev).
+  The astute programmer will notice the `test` and `dev` cases are redundant. Feel free to remove if you don't intend to add custom domains to those environments. Generally, the key idea is that you're conditionally defining the `DOMAIN_CURRENT_SITE` constant based on the current Pantheon environment (Dev, Test, Live or Multidev).
 
 7. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment once edits are complete.
 

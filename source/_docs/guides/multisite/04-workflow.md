@@ -21,21 +21,27 @@ Now that you're up and running with a Site Network on Pantheon, there are some i
 ## Creating Test and Live Environments from Dev
 After you've configured a WordPress Site Network in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
 
-First, navigate to the Test environment in the Site Dashboard and click **Create Test Environment**, or use Terminus. This operation will deploy the code, the database, and files to the Test environment:
+1. Navigate to your Site Dashboard and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab.
+2. Click **Create Test Environment**.
 
-```bash
-terminus env:deploy <site>.test
-```
+  This takes a few moments.
 
-If you visit the Test environment at this point, it will show a database connection error. From the command line, perform a `wp search-replace` on the database:
+3. Now click **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Test Site**. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`. At this point, it will show a database connection error.
 
-```bash
-terminus wp <site>.test -- search-replace <dev-domain> <test-domain> --url=<dev-domain> --network
-```
+4. From the command line, perform a `wp search-replace` on the Test environment's database via Terminus:
+
+    <div class="copy-snippet">
+      <button class="btn btn-default btn-clippy" data-clipboard-target="#wp-search-replace-test">Copy</button>
+      <figure><pre id="wp-search-replace-test"><code class="command bash" data-lang="bash">terminus wp &lsaquo;site&rsaquo;.test -- search-replace &lsaquo;dev-domain&rsaquo; &lsaquo;test-domain&rsaquo; --url=&lsaquo;dev-domain&rsaquo; --network</code></pre></figure>
+    </div>
+
+    Ensure the database connection error is resolved on the Test environment's URL.
+
+5. Repeat this process for the Live environment.
 
 To better understand what's going on, let's dive into `wp search-replace` with greater detail.
 
-## Using `wp search-replace` When Moving a Database Between Environments
+## Deploying Across Environments
 For better or for worse, WordPress stores full URLs in the database. These URLs can be links within the post content, as well as configuration values. This implementation detail means you need to perform a search and replace procedure when moving a database between environments.
 
 WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
@@ -143,6 +149,4 @@ Ultimately, the key idea is to only perform a search and replace where you absol
 ## Go for Launch
 In reading through this guide and participating along the way, you're now fully up to speed on managing a WordPress Site Network on Pantheon. Check out the [Launch Essentials Guide](https://pantheon.io/docs/guides/launch/) when you're ready to push your site live — launching a WordPress Site Network isn't much different than launching a standard WordPress site.
 
-If you have suggestions on how we can improve this guide for the next reader, head on over to the [Pantheon Documentation repository](https://github.com/pantheon-systems/documentation) and open an issue with your feedback.
-
-Happy developing!
+Continue to the next page for some tips on how to manage networks and debug common issues.
