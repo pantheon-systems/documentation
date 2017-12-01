@@ -47,21 +47,20 @@ Regardless of what type of update you're preparing for release, you'll want to t
     </div>
     </div><br>
 
-2. We'll need to do the same for your new test site on Pantheon. Let's grab the site's repository URL on Pantheon using [Terminus](/docs/terminus):
+2. We'll need to do the same for your new test site on Pantheon. Let's grab the site's repository URL on Pantheon using [Terminus](/docs/terminus). Replace `<site>` with your site name:
 
     ```command
-    terminus connection:info <site>.<dev> --field=git_url
+    terminus connection:info <site>.dev --field=git_url
     ```
 
-
-  Replace `<git_url>` in the following command to add your new test site as a [remote](https://git-scm.com/docs/git-remote):
+3. Replace `<git_url>` in the following command to add your new test site as a [remote](https://git-scm.com/docs/git-remote):
 
     ```command
     git remote add pantheon-test <git_url>
     ```
 
 
-3. Checkout a new branch:
+4. Checkout a new branch:
 
     ```command
     git checkout -b core-update
@@ -69,7 +68,7 @@ Regardless of what type of update you're preparing for release, you'll want to t
 
     It's important to use feature branches when applying and testing updates. Updates applied on the master branch and pushed to the remote repository on GitHub or Bitbucket become available to individual sites downstream. Using a feature branch gives us a chance to reveal issues before distributing updates.
 
-4. Pull down Pantheon's core updates from the appropriate upstream:
+5. Pull down Pantheon's core updates from the appropriate upstream:
 
      <!-- Nav tabs -->
      <ul class="nav nav-tabs" role="tablist">
