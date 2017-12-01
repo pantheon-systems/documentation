@@ -44,7 +44,7 @@ Because it's a confusing error, it's helpful to understand how it's caused. This
 
 When you visit `mstest.dev` in your browser, you'll see the “Error establishing database connection” message. Essentially, WordPress displays an error message because it couldn't find the requested site in the `wp_blogs` table.
 
-Check out the [open WordPress.org Trac ticket](https://core.trac.wordpress.org/ticket/41424){.external} where this messaging message is being discussed, and will hopefully be improved in the future.
+Check out the [open WordPress.org Trac ticket](https://core.trac.wordpress.org/ticket/41424){.external} where this message is being discussed, and will hopefully be improved in the future.
 
 
 ### Error: “Site Not Found”
