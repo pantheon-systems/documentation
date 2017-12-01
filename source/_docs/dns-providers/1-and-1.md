@@ -20,9 +20,14 @@ Be sure that you have a:
 1. Click **Domain Center** from the Domains panel.
 2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Edit DNS Settings**.
 3. Click the **Other IP address** option from the IP address (A Record) menu.
-4. Enter the A record value provided by Pantheon in the IPv4 Address field and the AAAA record values in the IPv6 Address field. There are two AAAA records for improved uptime and reliability.
+4. Enter the A record value provided by Pantheon in the IPv4 Address field and either of the AAAA record values in the IPv6 Address field.
 
-4. Click **Save**.
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p markdown="1">Pantheon provides two AAAA records for improved uptime and reliability. Most DNS providers support adding multiple AAAA records, but 1&1 only allows you to add one AAAA record.</p>
+    </div>
+
+5. Click **Save**.
 ### CNAME Record
 A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
