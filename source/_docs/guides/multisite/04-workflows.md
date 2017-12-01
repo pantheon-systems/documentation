@@ -62,7 +62,7 @@ See the [full documentation](https://developer.wordpress.org/cli/commands/search
 Using WP-CLI with Terminus is simply a matter of calling Terminus with the correct `<site>` and `<env>` arguments:
 
 ```bash
-terminus wp <site>.<env> -- search-replace
+terminus wp <site>.<env> -- search-replace --network
 ```
 
 Now that you've performed the search and replace on your database, WordPress has the correct stored configuration.
