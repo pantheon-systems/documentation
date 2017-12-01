@@ -7,6 +7,10 @@ tags: [providers]
 permalink: docs/:basename/
 editpath: dns-providers/1-and-1.md/
 ---
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p>1&1 does not support adding multiple AAAA recrods for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports more than one IPv6 record per domain.</p></div>
+
 ## Before You Begin
 Be sure that you have a:
 
@@ -20,9 +24,11 @@ Be sure that you have a:
 1. Click **Domain Center** from the Domains panel.
 2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Edit DNS Settings**.
 3. Click the **Other IP address** option from the IP address (A Record) menu.
-4. Enter the A record value provided by Pantheon in the IPv4 Address field and the AAAA record values in the IPv6 Address field. There are two AAAA records for improved uptime and reliability.
+4. Enter the A record value provided by Pantheon in the IPv4 Address field and either of the AAAA record values in the IPv6 Address field. 
 
-4. Click **Save**.
+    Pantheon provides two AAAA records for improved uptime and reliability, however 1&1 only supports one IPv6 record per domain. If you'd like to add both AAAA records, then consider transferring your domain or name server to another DNS host.
+
+5. Click **Save**.
 ### CNAME Record
 A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
