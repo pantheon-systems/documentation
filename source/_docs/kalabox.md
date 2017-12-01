@@ -5,9 +5,9 @@ tags: [local]
 categories: []
 ---
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Active development has been halted in favor of its successor, [Lando](https://github.com/lando/lando){.external}. Please review the [Lando documentation](https://docs.devwithlando.io/){.external} for more information.</p>
+<div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">Active development for Kalabox has been halted in favor of its successor, Lando. For more details, refer to [Lando's documentation](https://docs.devwithlando.io/){.external}.</p>
 </div>
 
 [Kalabox](http://www.kalabox.io/) is a Free and Open Source project allows you to quickly create and manage local environments that mirror site environments on Pantheon with the press of a button, including add on services such as Redis and Solr. Kalabox includes both an intuitive GUI and  command-line interface, and is powered by [Docker](https://www.docker.com/) under the hood.
