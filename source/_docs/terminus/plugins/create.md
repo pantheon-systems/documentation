@@ -46,7 +46,7 @@ composer.json
 <h4 class="info">Note</h4>
 <p>The <code>name</code> attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist). </p></div>
 ### 3. Add Commands
-Each command in Terminus is defined by it’s own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
+Each command in Terminus is defined by its own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
 
 <p class="instruction">Create a <code>src</code> directory within your plugin directory:</p>
 <div class="copy-snippet">
@@ -77,7 +77,7 @@ class HelloCommand extends TerminusCommand
     }
 }</code></pre>
 
-You can name the command function anything you like, but it must be a public method. The comment above the command is also required. The first line is the help text that will be displayed when you run `terminus list`. The `@command hello` line tells Terminus that this function is a command and that it’s name is `hello`.
+You can name the command function anything you like, but it must be a public method. The comment above the command is also required. The first line is the help text that will be displayed when you run `terminus list`. The `@command hello` line tells Terminus that this function is a command and that its name is `hello`.
 
 <p class="instruction">The command should now be recognized and loaded by Terminus:</p>
 <div class="copy-snippet">
