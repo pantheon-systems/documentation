@@ -4,7 +4,7 @@ description: Learn how to change DNS details between Pantheon Drupal or WordPres
 tags: [dns]
 categories: []
 ---
-There are times when you may want to switch a domain's DNS from one Pantheon site to another. The same domain cannot be added to more than one environment at the same time, but t's possible to point a domain to another site with minimal impact to visitors.
+There are times when you may want to switch a domain's DNS from one Pantheon site to another. The same domain cannot be added to more than one environment at the same time, but it's possible to point a domain to another site with minimal impact to visitors.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
