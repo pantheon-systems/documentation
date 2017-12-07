@@ -69,7 +69,7 @@ The master branch is automatically built and deployed to the Dev environment. Fe
        </div>
        <div id="understand-builds" class="collapse">
          <div class="panel-inner" markdown="1">
-         As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Mutidev site URL (e.g., `pr-slogan-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
+         As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Multidev site URL (e.g., `pr-slogan-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
 
          ![Passed Pull Request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
 
@@ -81,7 +81,7 @@ The master branch is automatically built and deployed to the Dev environment. Fe
        </div>
      </div>
 
-5. Wait for the build on CircleCI to leave a comment, then click on the **Visit Site** button to access the Mutidev site URL. Note that the slogan you entered in your Pull Request branch has been imported and is visible in the site header:
+5. Wait for the build on CircleCI to leave a comment, then click on the **Visit Site** button to access the Multidev site URL. Note that the slogan you entered in your Pull Request branch has been imported and is visible in the site header:
 
     ![Site initial login](/source/docs/assets/images/pr-workflow/pr-slogan-site.png)
 
