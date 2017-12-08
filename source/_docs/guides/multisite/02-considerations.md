@@ -22,12 +22,17 @@ Before you get started using WordPress Site Networks, there are a few key detail
 The choice between running classic single-site WordPress or a WordPress Site Network is permanent. Once you perform the initial configuration (which is relatively straightforward to do), it's technically challenging to switch back to single-site, and not supported on Pantheon.
 
 ## Choose Between Subdirectories and Subdomains
-When configuring a WordPress Site Network, you'll need to choose between using subdirectories or subdomains. For example: `example.com/first-site` & `example.com/second-site` or `first-site.example.com` & `second-site.example.com`.
+When configuring a WordPress Site Network, you'll need to choose between using subdirectories or subdomains.
 
-The key differences are:
+Given two new sites with slugs `first-site` and `second-site`, each configuration will result in the following URLs:
+
+* Subdirectories: `example.com/first-site` and `example.com/second-site`.
+* Subdomains: `first-site.example.com` and `second-site.example.com`.
+
+The key functional differences are:
 
 - Custom domains can be mapped to sites on subdomains or in subdirectories, but subdirectories can't be mapped to sites on subdomains.
-- Using subdomains will require you to set up your own DNS and add each custom domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `pantheon.io` namespace for site networks.
+- Using subdomains will require you to set up your own DNS and add each custom domain to the Pantheon Dashboard for your site. Pantheon cannot provide separate subdomains in the `*.<env>-<site>.pantheonsite.io` namespace for Site Networks.
 - Serving subdomains over SSL requires a wildcard SSL certificate, or individual SSL certificates for each subdomain. In choosing subdirectories, all sites share the same domain and SSL certificate.
 
 ## Shared Users
