@@ -16,7 +16,9 @@ previousurl: guides/multisite/considerations/
 editpath: multisite/03-config.md
 image: multisite
 ---
-Next, we'll install and configure your new network. The expectation at this point in the guide is that you have a new WordPress Site Network created for you by Pantheon, but not yet installed. If you visit the Dev environment's site URL, you should be redirected to the web-based installer. If you do not yet have a WordPress Site Network, refer to the [introduction](/docs/guides/multisite/) page of this guide.
+You're just about to configure your WordPress Site Network.
+
+Our expectation at this point is that you have a new WordPress Site Network created for you by a Pantheon employee. If you do not yet have a WordPress Site Network, refer to the [introduction](/docs/guides/multisite/) page of this guide. When you visit the Dev environment's site URL, you should be redirected to WordPress' web-based installer.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -24,7 +26,10 @@ Next, we'll install and configure your new network. The expectation at this poin
 </div>
 
 ## Install the WordPress Site Network
-1. Install the most recent release of [Terminus](/docs/terminus/):
+
+Using [Terminus](/docs/terminus/) is our recommended way to install a WordPress Site Network.
+
+1. Install the most recent release of Terminus:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
