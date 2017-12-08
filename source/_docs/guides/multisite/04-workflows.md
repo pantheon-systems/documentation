@@ -16,7 +16,7 @@ previousurl: guides/multisite/config/
 editpath: multisite/04-workflows.md
 image: multisite
 ---
-Now that you're up and running with a Site Network on Pantheon, there are some important fundamentals to know.
+Now that you're up and running with a WordPress Site Network on Pantheon, there are some important fundamentals to know.
 
 ## Creating Test and Live Environments from Dev
 After you've configured a WordPress Site Network in the Dev environment, you'll quickly want to promote it to Test and then Live. Before you use these environments, you'll need to initialize them.
