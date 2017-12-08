@@ -54,7 +54,7 @@ $_SERVER['HTTPS'] = 'on';
 In templates, hard-coded, absolute URLs should use HTTPS for CSS, Javascript, and other resources. This won't break HTTP access; browsers are always happy to load resources over HTTPS, even if the page itself is HTTP. While testing, you may find it necessary to bust through the edge cache by adding something like `?cache-bust=1` to the end of a URL to verify the changes.
 
 ### Reveal violations in bulk
-There are more than a few ways to identify mixed-content violations across your site, but Google Chrome is one of the fastest and simplest. Right-click on a page showing as insecure and select inspect, then review the console.
+There are more than a few ways to identify mixed-content violations across your site, but Google Chrome is one of the fastest and simplest. Right click on a page showing as insecure and select inspect, then review the console.
 
 Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/){.external}. Fans of the command line might find [mixed-content-scan by Bramus](https://github.com/bramus/mixed-content-scan){.external} helpful.
 
