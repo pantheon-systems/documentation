@@ -1,19 +1,19 @@
 ---
-title: How Pantheon Prevents Plan Abuse
-description: Information on how Pantheon measures site traffic to prevent plan abuse
+title: Pageview Limits and Overages
+description: How to choose the right plan based on your site's traffic
 tags: [pricing]
 categories: []
 ---
 
 ## How We Measure Site Traffic
 
-Pantheon defines plan levels based on pageviews to help site owners pick the right plan based on expected or historical traffic. To prevent plan abuse, we measure requests served by the platform from the CMS. 
+Pantheon defines plan levels based on pageviews to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we measure requests served by the platform from the CMS. 
 
 This includes not only HTML pages, but also responses in formats such as JSON and XML that are sometimes not tracked by standard analytics suites. API calls count as traffic, and are considered part of a site's plan limit.
 
 ## Does Pantheon Charge for Overages?
 
-Pantheon takes site plan abuse seriously, but we recognize that sometimes these situations are complicated. We always start with a conversation. If you are surprised by a notification of possible abuse, our team is ready, willing, and able to dig into the inevitable differences between our measurements of traffic served and any other analytics you may have.
+Pantheon takes site plan limits seriously, but we recognize that sometimes these situations are complicated. We always start with a conversation. If you are surprised by a notification of possible abuse, our team is ready, willing, and able to dig into the inevitable differences between our measurements of traffic served and any other analytics you may have.
 
 There is no mechanical "overage" process that will surprise you with a shock bill for something that happened in the past. However, where there is a pattern of consistent overage, we will seek to align site plans to their load on the platform going forward. We reserve the right to terminate service for abusers who are unwilling to use an appropriate plan.
 
@@ -28,7 +28,7 @@ There are some inherent limitations with using an analytics suite (e.g. Google A
  - API requests and AJAX requests are not counted.
  - Analytics implementations can be variable and may (for good reason) not include all pages on a given website.
 
-Due to the fact that analytics doesn't measure _traffic_, it's not a suitable metric to for determining platform abuse.
+Due to the fact that analytics doesn't measure _traffic_, it's not a suitable metric for determining platform abuse.
 
 ## What About Static Assets?
 
