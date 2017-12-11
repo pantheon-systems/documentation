@@ -96,7 +96,7 @@ Download and install the Search API Attachments module ([search_api_attachments]
 If everything is working correctly, you will see the success message "Extracted data: Congratulations! The extraction seems working! Yay!".
 
 ### WordPress Tika Configuration
-There are no known plugins in the WordPress.org repository that will enable the use of Tika. There is a project on GitHub that claims you can use it; however, we are still testing it to make sure it works.
+There are no known plugins in the WordPress.org repository that will enable the use of Tika.
 
 ## ImageMagick
 
