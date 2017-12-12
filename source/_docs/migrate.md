@@ -107,9 +107,9 @@ For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-m
 ## Troubleshooting
 This section describes the causes of, and solution to the error messages that are displayed on the Site Dashboard if the migration fails to complete.
 
-If your code, database, and files have completed migrating, but your site is not working as you'd expect, please review [Pantheon Platform Considerations](/docs/platform-considerations/). For example, if your site uses PHP short tags, you'll need to convert them to standard PHP tags.
+If your code, database, and files have completed migrating, but your site is not working as you'd expect, please review [Pantheon Platform Considerations](/docs/platform-considerations/). For example, if your site uses [PHP short tags](/docs/platform-considerations/#php-short-tags), you'll need to convert them to standard PHP tags.
 
-Next, check [log files](https://pantheon.io/docs/logs/) to help identify and fix errors. Drupal or WordPress core is upgraded as part of migration, so you may have additional work to complete the upgrade.
+Next, check [log files](/docs/logs/) to help identify and fix errors. Drupal or WordPress core is upgraded as part of migration, so you may have additional work to complete the upgrade.
 
 ### Could not import code, the import file does not appear to contain a valid code directory. ###
 
@@ -235,16 +235,16 @@ Click your browser's back button from the Pantheon Dashboard and re-authenticate
 
 ### Import Failed in WordPress Migration
 #### CDN Blocking POST requests
-This error can occur on sites using a content delivery network (CDN) service that is not configured to allow the POST HTTP method. Resolve this issue by [temporarily setting POST as an allowed HTTP method within the CDN's configuration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesAllowedHTTPMethods) and restart the migration process. Once the site has been successfully migrated, the POST HTTP method can be disabled.
+This error can occur on sites using a content delivery network (CDN) service that is not configured to allow the POST HTTP method. Resolve this issue by [temporarily setting POST as an allowed HTTP method within the CDN's configuration](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-web-values-specify.html#DownloadDistValuesAllowedHTTPMethods) and restarting the migration process. Once the site has been successfully migrated, the POST HTTP method can be disabled.
 
 #### Very Large Site Footprints
 Imports can also fail for very large sites, which may time out while importing. In these cases, initiate the migration again from the source site, and the transfer should pick up where it left off.
 
 ### Drush archive missing code or files
-If you have an existing archive (tgz) file in *sites/default/files* the `drush ard` command may generate an archive without all expected components. Delete all archives and try running `drush ard` again.
+If you have an existing archive (tgz) file in `sites/default/files` the `drush ard` command may generate an archive without all expected components. Delete all archives and try running `drush ard` again.
 
 ### HTTP 404 error: Unable to download the archive
-Go the to files directory of your existing site and check if the site archive was generated successfully. Visiting the archive link with a browser should download the files automatically. You may need to run the `drush ard` command again if you can't find the site archive.
+Go the to files directory of your existing site and check if the site archive was generated successfully. If you're hosting the archive on a third party like Dropbox or Google Drive, confirm that it was uploaded successfully. Visiting the archive link with a browser should download the files automatically. You may need to run the `drush ard` command again if you can't find the site archive.
 
 
 ## Frequently Asked Questions (FAQs)
@@ -272,7 +272,7 @@ If your archive is larger than 256MB the Terminus operation to generate the arch
 Connection to appserver.<ENV>.<Site UUID>.drush.in closed by remote host.
 ```
 
-If your database and code compressed are less than 256MB you can exclude the files directory from export using the `--tar-options="--exclude=code/sites/default/files"` flag. Then you can download a backup of the files from the existing site and import the archive to the new site within **<span class="glyphicons glyphicons-server"></span> Database / Files** > **Import**.
+If your database and code compressed are less than 256MB you can exclude the files directory from export using the `--tar-options="--exclude=code/sites/default/files"` flag. Then you can download a backup of the files from the existing site and import the archive to the new site from the Site Dashboard, under **<span class="glyphicons glyphicons-server"></span> Database / Files** > **Import**.
 
 ### How do I migrate a local site to Pantheon?
 You can import a WordPress site archive via URL (within file size limits) using [Terminus](/docs/terminus):
@@ -299,10 +299,10 @@ If you'd like your existing Drupal site to get one-click updates from your [Cust
 As an alternative to `drush` you can manually export and migrate. For details, see [Export an Existing Drupal Site](/docs/drupal-export).
 
 ### Are database table prefixes supported?
-See [WordPress known issue](/docs/wordpress-known-issues/#table-prefixes).
+See [WordPress known issues](/docs/wordpress-known-issues/#table-prefixes).
 
 ### Is the MySQL MyISAM engine supported?
-No. If any of your database tables are using the MyISAM engine you'll need to convert them to InnoDB.
+No. If any of your database tables are using the MyISAM engine you'll need to [convert them to InnoDB](/docs/myisam-to-innodb/).
 
 ### Can I use multiple SQL files in the archive?
 If multiple SQL files are present the import will fail. Only provide one `.sql` file per site archive.
@@ -317,8 +317,8 @@ Follow the [standard procedure for migrating WordPress sites to Pantheon](#migra
 2. Unzip your site's backup point on your local machine.
 3. Remove the WP Engine remnants. There are a few files you'll need to remove:
   - Drop-in plugins (e.g. `wpengine-common`) located at: `\wp-content\mu-plugins`
-  - .gitattributes and .gitignore. from the root folder
-  - If object caching is enabled, the `object-cache.php` file located in `/wp-content`
+  - `.gitattributes` and `.gitignore` from the root folder
+  - If object caching is enabled, remove the `object-cache.php` file located in `/wp-content`.
 4. Replace existing `wp-config.php` with [Pantheon's `wp-config.php`](https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php) file. Preserve necessary logic from your existing file.
 5. Move the `mysql.sql` database out of the `wp-content` directory and into the project's root directory.
 6. Follow the procedure to [manually migrate](/docs/migrate-manual/) your site.
