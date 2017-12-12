@@ -2,6 +2,7 @@
 title: Composer Fundamentals and Workflows
 description: Start with Composer basics then explore suggested workflows for WordPress and Drupal sites on Pantheon.
 tags: [automation, workflow]
+searchboost: 150
 ---
 {% include("content/composer-fundamentals.html")%}
 ## Managing Core as a Project Dependency

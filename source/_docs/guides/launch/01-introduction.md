@@ -17,6 +17,7 @@ nexturl: guides/launch/plans/
 nextpage: Upgrade Site Plan
 editpath: launch/01-introduction.md
 image: getting-started-Largethumb
+searchboost: 150
 ---
 Welcome! This guide will help you take a site live on Pantheon.
 

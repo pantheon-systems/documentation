@@ -9,6 +9,7 @@ tags: [devterminus]
 permalink: docs/:basename/
 nexturl: terminus/install/
 image: terminus-thumbLarge
+searchboost: 200
 ---
 
 Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.

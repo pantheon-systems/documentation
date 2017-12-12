@@ -2,6 +2,7 @@
 title: Pantheon Global CDN
 description: Improve Site Performance and Security
 earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
+searchboost: 200
 ---
 
 Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 30+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org).

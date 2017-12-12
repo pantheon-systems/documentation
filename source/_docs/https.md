@@ -2,6 +2,7 @@
 title: HTTPS on Pantheon's Global CDN
 description: Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt
 tags: [dns, security]
+searchboost: 200
 ---
 Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform. For instructions and go live best practices, see [Launch Essentials](/docs/guides/launch/).
 
@@ -165,4 +166,3 @@ TLS (Transport Layer Security) is a protocol for secure HTTP connections. It rep
 
 ### Server Name Indication (SNI)
 Server name indication (SNI) is the technology replacing the expensive, legacy load balancers and allows multiple secure (HTTPS) websites to be served off the same IP address, without requiring all those sites to use the same certificate.
-
