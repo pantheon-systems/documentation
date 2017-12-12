@@ -3,6 +3,7 @@ title: Domains and Redirects
 description: Understand how domains work on Pantheon and how to redirect requests in PHP for WordPress and Drupal.
 tags: [redirects, variables, dns]
 categories: []
+searchboost: 150
 ---
 A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.example.com` into machine-readable IP addresses like 127.0.0.1. All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
 

@@ -7,6 +7,7 @@ type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/get-started/:basename/
 image: terminus-thumbLarge
+searchboost: 50
 ---
 <p class="instruction">The legacy version of Terminus is no longer supported. We strongly recommend that you use the <a href="/docs/terminus/install/">current version</a>. If your use case temporarily requires you to use this unsupported version, you may install <a href="https://github.com/pantheon-systems/terminus/releases/tag/0.13.6">legacy version 0.13.6</a> of Terminus using the following command:</p>
 <div class="copy-snippet">
