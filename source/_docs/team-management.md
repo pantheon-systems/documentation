@@ -56,7 +56,7 @@ Enterprise Organizations can use the same process to assume ownership of a site;
 The site owner is the person who pays for the site. You'll need to update the payment method to change the owner.
 
 ## Roles and Permissions
-Change Management is an [organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all [Partner](https://pantheon.io/agencies/pantheon-for-agencies), [EDU](https://pantheon.io/edu) and [Enterprise](https://pantheon.io/pantheon-enterprise) Organizations.
+Change Management is an [organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all Organizations.
 
 Sites that do not fit the above description will not be able to restrict access or assign specific user roles, such as **Administrator** or **Developer**.
 
