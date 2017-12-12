@@ -1,6 +1,6 @@
 ---
 title: Pageview Limits and Overages
-description: How to choose the right plan based on your site's traffic
+description: Information on how Pantheon measures site traffic
 tags: [pricing]
 categories: []
 ---
