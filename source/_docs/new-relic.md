@@ -128,14 +128,8 @@ If the site owner did not receive the confirmation email, you can re-send the li
 2. Enter the email address of the site owner.
 3. Click **Send my reset link**.
 
-### New Relic data is not showing on the Pantheon Site Dashboard
-Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/), may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension, or add the following sites as trusted (whitelisted):
 
- - dashboard.pantheon.io
- - rpm.newrelic.com
-
-
-#### Who is the New Relic account associated with?
+### Who is the New Relic account associated with?
 - If site owner is a user, the site owner's name and email address is used to create the New Relic account.
 - If site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. These users must be members of the organization.
 
