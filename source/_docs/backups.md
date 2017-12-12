@@ -64,8 +64,6 @@ TERMINUSUSER=""
 SITENAMES=""
 # Site environments to backup (any combination of dev, test and live)
 SITEENVS="dev live"
-# Site elements to backup (any combination of files, database and code)
-SITEELEMENTS="code database files"
 # Local backup directory (must exist, requires trailing slash)
 BACKUPDIR="<local-path-to-folder>/"
 # Add a date and unique string to the filename
@@ -78,22 +76,17 @@ terminus auth:login $TERMINUS_USER
 
 # iterate through sites to backup
 for thissite in $SITENAMES; do
+  # iterate through current site environments
+  for thisenv in $SITEENVS; do
+    # create backup
+    terminus backup:create $thissite.$thisenv
 
-    # iterate through current site environments
-    for thisenv in $SITEENVS; do
-
-        # iterate through current site elements
-        for thiselement in $SITEELEMENTS; do
-            terminus backup:create $thissite.$thisenv --element=$thiselement
-
-            # download current site backups
-        terminus backup:get $thissite.$thisenv --element=$thiselement --to=$BACKUPDIR$SITENAMES.$SITEENVS.$BACKUPDATE.$thiselement.$EXTENSION
-
-        done
-
-    done
+    # download current site backups
+    terminus backup:get $thissite.$thisenv --to=$BACKUPDIR$SITENAMES.$SITEENVS.$BACKUPDATE.$EXTENSION
+  done
 done
 echo $BACKUPDIR
+
 # sync the local backup directory to aws s3
 if [ -z "${S3BUCKETREGION}" ]; then
     aws s3 sync $BACKUPDIR s3://$S3BUCKET
@@ -154,7 +147,7 @@ Each manual and automatic backup can be directly restored to that environment fr
 ## About Your Code Archives
 Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment.
 
-For a clear visual of the Git repo contents, you can use a free tool like [Sourcetree](https://www.sourcetreeapp.com/) to inspect the branches that the repo contains. 
+For a clear visual of the Git repo contents, you can use a free tool like [Sourcetree](https://www.sourcetreeapp.com/) to inspect the branches that the repo contains.
 
 ## Backup Log
 The backup log displays a list of existing backups for that environment. You can also create a new backup or restore your site from an existing backup.
