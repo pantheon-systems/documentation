@@ -5,17 +5,21 @@ tags: [pricing]
 categories: []
 ---
 
+Unlike traditional providers where enough requests will crash the server, Pantheon's platform can absorb massive amounts of traffic. One of the main benefits of Pantheon is our ability to provide quality service and uptime under heavy traffic loads.
+
+However, this does mean that websites can run happily even though they are over their plan's traffic limit. If this is happening on a sustained basis, you may recieve notice from customer support that your site's plan isn't adequate to its needs, and an upgrade may be in order.
+
 ## How We Measure Site Traffic
 
-Pantheon defines plan levels based on pageviews to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we measure requests served by the platform from the CMS. 
+Pantheon defines plan levels based on pageviews to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform from the CMS. 
 
-This includes not only HTML pages, but also responses in formats such as JSON and XML that are sometimes not tracked by standard analytics suites. API calls count as traffic, and are considered part of a site's plan limit.
+This includes not only HTML pages served by the CMS, but also responses in formats such as JSON and XML that are not tracked by standard analytics suites. API calls and AJAX requests do count as traffic, and are considered against plan limits. If you are planning to run a high traffic decoupled or "headless" implementation, you should contact sales in advance to discuss pricing.
 
 ## Does Pantheon Charge for Overages?
 
-Pantheon takes site plan limits seriously, but we recognize that sometimes these situations are complicated. We always start with a conversation. If you are surprised by a notification of possible abuse, our team is ready, willing, and able to dig into the inevitable differences between our measurements of traffic served and any other analytics you may have.
+There is no mechanical "overage" process that will surprise you with a shock bill for something that happened in the past. However, where there is a pattern of consistent overage, we will align a site's plans with its load on the platform going forward. We reserve the right to terminate service for abusers who are unwilling to use an appropriate plan.
 
-There is no mechanical "overage" process that will surprise you with a shock bill for something that happened in the past. However, where there is a pattern of consistent overage, we will seek to align site plans to their load on the platform going forward. We reserve the right to terminate service for abusers who are unwilling to use an appropriate plan.
+Pantheon takes site plan limits seriously, but we recognize that sometimes these situations are complicated. We always start with a conversation. If you are surprised by a notice that your site is over its traffic limit, our team is ready, willing, and able to dig into the inevitable differences between our measurements of traffic served and any other analytics you may have.
 
 ## Why Doesn't Pantheon's Traffic Match My Analytics?
 
@@ -38,9 +42,9 @@ However we do reserve the right to review individual sites that are excessive ba
 
 ## What About Bots?
 
-Pantheon makes a serious effort to exclude automated traffic from crawlers and bots that would otherwise count towards your website's total traffic because they place load on the platform. We do this by examining the user-agent of traffic, as well as the source IP address.
+Although it places load on the platform, Pantheon excludes automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. We do this by examining the user-agent of traffic, as well as the source IP address.
 
-We respect that you cannot control this kind of traffic, and that crawler traffic is _beneficial_ to sites. We are continually refining our model to ensure our traffic reports are as accurate as possible. We do not consider legitimate white-hat bot traffic a sign of plan abuse.
+Having high performance responses to crawlers is _beneficial_ to SEO, which is one reson people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible.
 
 ## What About Load Tests or Pen Tests?
 
