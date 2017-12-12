@@ -59,7 +59,7 @@ From your Pantheon Dashboard:
      ![Choose Manual Drupal Migration](/source/docs/assets/images/dashboard/migrate-manual-drops.png)
     </div>
 
-   </div> 
+   </div>
 
 
 ## Import your Code
@@ -70,7 +70,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 If your codebase is already under version control with Git, and you wish to preserve your commit history. If you're not already under version control, you can still use this method to import your code, our skip down to [Import With SFTP](#import-code-with-sftp).
 
-Before you begin, we strongly suggest you first [configure SSH keys](/source/docs/ssh-keys) between your local computer and Pantheon.
+Before you begin, we strongly suggest you first [configure SSH keys](/docs/ssh-keys) between your local computer and Pantheon.
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
@@ -90,7 +90,7 @@ Before you begin, we strongly suggest you first [configure SSH keys](/source/doc
 
 3. Copy the SSH URL for the site repository, found in the <a href="/docs/git/#step-2-copy-the-git-clone-command" data-proofer-ignore>clone command</a>. *Do not copy* `git clone` or the site name.
 
-  If you're familiar with [Terminus](/source/docs/termiunus), you can use it to retrieve the URL as well. Replace `<sitename>` with the Site Name created earlier:
+  If you're familiar with [Terminus](/docs/terminus), you can use it to retrieve the URL as well. Replace `<sitename>` with the Site Name created earlier:
 
   ```bash
   terminus connection:info <sitename>.dev --field=git_url
@@ -141,7 +141,7 @@ Before you begin, we strongly suggest you first [configure SSH keys](/source/doc
   Automatic merge went well; stopped before committing as requested
   ```
 
-  If you haven't already configured [SSH Keys](/source/docs/ssh-lkeys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
+  If you haven't already configured [SSH Keys](/docs/ssh-keys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
 
 7. Run git commit to prepare the Pantheon core merge for pushing to the repository:
 
@@ -184,17 +184,17 @@ The codebase hierarchy for WordPress and Drupal is:
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+  <li id="wp-code-id" role="presentation" class="active"><a href="#wp-code" aria-controls="wp-code" role="tab" data-toggle="tab">WordPress</a></li>
 
   <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal</a></li>
+  <li id="drops-code-id" role="presentation"><a href="#drops-code" aria-controls="drops-code" role="tab" data-toggle="tab">Drupal</a></li>
 
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
   <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+  <div role="tabpanel" class="tab-pane active" id="wp-code" markdown="1">
 ```php
 ├── index.php
 ├── wp-activate.php
@@ -221,7 +221,7 @@ The codebase hierarchy for WordPress and Drupal is:
  </div>
 
   <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+  <div role="tabpanel" class="tab-pane" id="drops-code" markdown="1">
 ```php
 ├── includes
 ├── index.php
@@ -360,7 +360,6 @@ Anyone wishing to migrate a Drupal 6 site to Pantheon can work with one of our L
 
 ## See Also
 * <a href="https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank">The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span></a>
-* [Migrate Sites to Pantheon: Troubleshooting](/docs/migrate-troubleshooting)
 * [Developing on Pantheon Directly with SFTP Mode](/docs/sftp/)
 * [Starting with Git](/docs/git/)
 * [Accessing MySQL Databases](/docs/mysql-access/)

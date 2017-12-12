@@ -4,14 +4,15 @@ description: Detailed information on how to prepare and export your existing Wor
 tags: [export]
 categories: [wordpress]
 ---
-In most situations, you shouldn't need to manually export your WordPress site in order to migrate to Pantheon. Follow the recommended process within [Migrate to Pantheon: WordPress](/docs/migrate-wordpress), which uses the Pantheon Migration plugin.		
+In most situations, you shouldn't need to manually export your WordPress site in order to migrate to Pantheon. Follow the recommended process within [Migrate Sites to Pantheon](/docs/migrate/), which uses the Pantheon Migration plugin.		
 
-The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/migrate-manual/) the site:
+The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/migrate-manual/) the site:		
 
-- You want to preserve the site's existing Git history
-- [WordPress Site Networks](/docs/guides/multisite)
-- You can't install our migration plugin on your existing site (e.g. WordPress.com)
-- [Your site doesn't have a public URL (e.g. a local installation)](/docs/migrate-wordpress/#frequently-asked-questions)
+* **Large Drupal Site Archive**: Site archive is greater than the guided migration import limit of 500MB.
+* **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
+* **[WordPress Site Networks](/docs/migrate-wordpress-site-networks/)**
+* **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+* **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
 
 Prepare your site for manual migration by following the export methods described below.
 

@@ -39,7 +39,7 @@ This method uses a [Custom Upstream](/docs/custom-upstream), a feature available
 
 1. Create a [Custom Upstream](/docs/custom-upstream) based on the multisite configuration.
 
-2. [Archive](/docs/migrate#drupal) each of your sites.
+2. Archive each of your sites using `drush ard`.
 
 3. [Create a new site](https://dashboard.pantheon.io/sites/create) based on the upstream.
 

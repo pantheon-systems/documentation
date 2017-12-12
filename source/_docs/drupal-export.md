@@ -4,7 +4,7 @@ description: Detailed information on how to prepare and export your existing Dru
 tags: [export]
 categories: [drupal]
 ---
-In most situations, you shouldn't need to manually export your Drupal site in order to migrate to Pantheon. Follow the recommended process within [Migrate to Pantheon](/docs/migrate/#drupal), which uses `drush ard`.		
+In most situations, you shouldn't need to manually export your Drupal site in order to migrate to Pantheon. Follow the recommended process within [Migrate Sites to Pantheon](/docs/migrate/), which uses `drush ard`.		
 
 The following scenarios are exceptions to the recommended process and require [manually migrating](https://pantheon.io/docs/migrate-manual/) the site:
 
