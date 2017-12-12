@@ -116,7 +116,7 @@ Your first visit to New Relic must be via the **Go to New Relic** button. Once y
 If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic.
 
 1. Visit one of your site pages.
-2. Close the tab, wait for the New Relic data table to appear in your Pantheon Site Dashboard, under the **New Relic** tab.
+2. Close the tab, wait a few minutes.
 3. Click the **Go to New Relic** button.
 
 #### If you see "We're sorry, you haven't verified your email address yet."
