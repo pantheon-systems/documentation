@@ -21,7 +21,7 @@ The following articles include techniques and configurations for `settings.php` 
 
 - [Reading Pantheon Environment Configuration](/docs/read-environment-config) (including domain_access)
 - [Redis as a Caching Backend](/docs/drupal-redis)
-- [Domains and Redirects](/docs/domains/#redirects)
+- [Domains and Redirects](/docs/domains/#primary-domain)
 - [SSO and Identity Federation](/docs/sso) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development
@@ -118,7 +118,7 @@ Depending on your use case, there are three possibilities:
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p markdown="1">`$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshoot-redirects), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
+    <p markdown="1">`$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
     </div>
 
  - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/drupal-redis) guide for examples for [Drupal 8](/docs/drupal-redis#drupal-8-sites) or [Drupal 7](/docs/drupal-redis#drupal-7-sites).
