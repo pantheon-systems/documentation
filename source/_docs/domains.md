@@ -43,12 +43,12 @@ A custom domain requires specific DNS configurations to handle requests for your
 - A
 - AAAA (2)
 
-Some DNS service providers do not support AAAA records, which are used to map IPv6 addresses. IPv6 offers security benefits and performance gains, especially for mobile users. This is largely because the new protocol is capable of carrying larger packets, resulting in fewer roundtrips per request. We strongly recommend transferring DNS services to a provider that supports IPv6 in order to take advantage of these benefits.  
+Some DNS service providers do not support AAAA records, which are used to map IPv6 addresses. IPv6 offers security benefits and performance gains, especially for mobile users. This is largely because the new protocol is capable of carrying larger packets, resulting in fewer roundtrips per request. We strongly recommend transferring DNS services to a provider that supports IPv6 in order to take advantage of these benefits.
 
 For details on what values to use when configuring DNS, refer to [Launch Essentials](/docs/guides/launch/configure-dns/).
 
 ## Primary Domain
-Pantheon uses the term "primary domain" to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other domain connected to the environment) all get redirected to `www.example.com`.
+Pantheon uses the term **primary domain** to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other domain connected to the environment) all get redirected to `www.example.com`.
 
 Redirecting all traffic to a primary domain is a best practice for SEO since it avoids duplicate content. It also prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time, and it can make it easier to measure and monitor website traffic.
 
@@ -74,16 +74,16 @@ When using multiple snippets, be sure to step through the logic. This is particu
 To redirect from a subdomain to a specific area of the site, use the following:
 
 ```php
-    // Redirect subdomain to a specific path.
-    if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-      ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
-      // Check if Drupal or WordPress is running via command line
-      (php_sapi_name() != "cli")) {
-      $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
-      header('HTTP/1.0 301 Moved Permanently');
-      header("Location: $newurl");
-      exit();
-    }
+// Redirect subdomain to a specific path.
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
+  // Check if Drupal or WordPress is running via command line
+  (php_sapi_name() != "cli")) {
+  $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
+  header('HTTP/1.0 301 Moved Permanently');
+  header("Location: $newurl");
+  exit();
+}
 ```
 
 This will redirect requests like http://subdomain.yoursite.com/some/path to http://www.yoursite.com/subdomain/some/path.
@@ -93,51 +93,51 @@ The same technique works for single subdomain redirects. Just specify the path i
 #### Redirect From One Path to Another
 
 ```php
-    // 301 Redirect from /old to /new.
-    if (($_SERVER['REQUEST_URI'] == '/old') &&
-      // Check if Drupal or WordPress is running via command line
-      (php_sapi_name() != "cli")) {
-      header('HTTP/1.0 301 Moved Permanently');
-      header('Location: /new');
-      exit();
-    }
+// 301 Redirect from /old to /new.
+if (($_SERVER['REQUEST_URI'] == '/old') &&
+  // Check if Drupal or WordPress is running via command line
+  (php_sapi_name() != "cli")) {
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: /new');
+  exit();
+}
 ```
 #### Redirect Multiple Subdomains to a Single Domain
 
 ```php
-  // Redirect multiple subdomains to a single domain.
-  if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-    ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
-    // Check if Drupal or WordPress is running via command line
-    (php_sapi_name() != "cli")) {
-    if (in_array($_SERVER['HTTP_HOST'], array(
-      'sub1.youroldwebsite.com',
-      'sub2.youroldwebsite.com',
-      'sub3.youroldwebsite.com',
-      'sub4.youroldwebsite.com',
-      'sub5.youroldwebsite.com',
-    ))) {
-      header('HTTP/1.0 301 Moved Permanently');
-      header('Location: http://main.yournewwebsite.com'. $_SERVER['REQUEST_URI']);
-      exit();
-    }
-  }
+// Redirect multiple subdomains to a single domain.
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+  // Check if Drupal or WordPress is running via command line
+  (php_sapi_name() != "cli")) {
+  if (in_array($_SERVER['HTTP_HOST'], array(
+    'sub1.youroldwebsite.com',
+    'sub2.youroldwebsite.com',
+    'sub3.youroldwebsite.com',
+    'sub4.youroldwebsite.com',
+    'sub5.youroldwebsite.com',
+  ))) {
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: http://main.yournewwebsite.com'. $_SERVER['REQUEST_URI']);
+    exit();
+  }
+}
 ```
 #### Redirect Legacy UNIX-Style User Home Folder Paths
 
 When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
 
 ```php
-    $request_parts = explode('/', $_SERVER['REQUEST_URI']);
-    $legacy_username = $legacy_path = '';
-    if (isset($request_parts[1]) && strpos($request_parts[1], '~') === 0) {
-      $legacy_username = substr($request_parts[1], 1);
-      // If FALSE, then the request was just to the username.
-      $legacy_path = substr($_SERVER['REQUEST_URI'], (strlen($request_parts[1]) + 1));
-    }
-    if ($legacy_username) {
-      // Your custom logic.
-    }
+$request_parts = explode('/', $_SERVER['REQUEST_URI']);
+$legacy_username = $legacy_path = '';
+if (isset($request_parts[1]) && strpos($request_parts[1], '~') === 0) {
+  $legacy_username = substr($request_parts[1], 1);
+  // If FALSE, then the request was just to the username.
+  $legacy_path = substr($_SERVER['REQUEST_URI'], (strlen($request_parts[1]) + 1));
+}
+if ($legacy_username) {
+  // Your custom logic.
+}
 ```
 #### Redirect to Force Lowercase Letters
 WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core.
@@ -164,7 +164,7 @@ All redirect logic should include the `php_sapi_name() != "cli"` conditional sta
 [error]
 ```
 ### Infinite Redirect Loops
-Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file. Resolve this error by replacing the offending redirect logic with the [recommended code samples in the above section](/docs/domains/#redirect-to-https-and-the-primary-domain) and for your specific use case.
+Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file. Resolve this error by replacing the offending redirect logic with the [recommended code samples in the above section](#redirect-to-https-and-the-primary-domain) and for your specific use case.
 
 ### Mixed-mode Browser Warnings
 Replace `http://` in the site's database and configure your CMS to assume users are visiting via HTTPS and the site’s primary domain. Templates for example should reference HTTPS in absolute CSS and Javascript sources, even when accessed with HTTP.
