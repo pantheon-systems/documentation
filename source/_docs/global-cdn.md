@@ -141,4 +141,4 @@ No, we pre-configured the CDN so you don’t have to hassle with configuration, 
 Hit rates or other statistics are not currently available.
 
 ### Can I use other CDNs with Pantheon Global CDN?
-Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
+Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the GlobalCDN doesn't address. We recommend that you ensure you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
