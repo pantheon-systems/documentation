@@ -33,42 +33,26 @@ The <span class="glyphicons glyphicons-alert text-warning"></span> icon within t
 3. Select **Details** next to the `www` domain.
 4. In a separate window, log in to the DNS host for the domain.
 5. Copy the value provided in the Pantheon Site Dashboard for the required CNAME record (e.g., `live-yoursite.pantheonsite.io`), then use it to create a CNAME record wherever you manage DNS.
-
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
-      </div>
-      <div id="host-specific" class="collapse" style="padding:10px;">
-        <ul class="top-docs top-docs-2col docs-2col-panel">
-          {% for doc in data.docs_tags.providers %}
-            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-              <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-
 6. Return to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page in the Pantheon Site Dashboard.
 7. Click **Details** next to the bare domain.
-8. Copy the value provided in the Pantheon Site Dashboard for the required A record, then use it to create an A record wherever you manage DNS.
+8. Copy the value provided in the Pantheon Site Dashboard for the required A record, then use it to create an A record wherever you manage DNS. Repeat this step for _both_ of the AAAA records.
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific2"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
-      </div>
-      <div id="host-specific2" class="collapse" style="padding:10px;">
-        <ul class="top-docs top-docs-2col docs-2col-panel">
-          {% for doc in data.docs_tags.providers %}
-            {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-              <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
+For more detailed instructions pertaining to your specific DNS host, click below:
 
-Repeat this step for _both_ of the required AAAA records.
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific2"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
+  </div>
+  <div id="host-specific2" class="collapse" style="padding:10px;">
+    <ul class="top-docs top-docs-2col docs-2col-panel">
+      {% for doc in data.docs_tags.providers %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+          <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
 
 ## Provision HTTPS
 The process to provision certificates kicks off automatically after the domain has been successfully routed to Pantheon, indicated by the following notice:
