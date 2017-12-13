@@ -30,6 +30,8 @@ At your DNS provider, create a wildcard CNAME record pointing to our edge. If yo
 
 ## Effects and Considerations
 
+ - Existing sites created before configuring a Vanity domain will continue to use the default Platform domains and will not use the custom Vanity domain.
+
  - Sites associated with your organization will receive the custom Vanity domain for all environments (including Multidev) created while the organization remains a supporting organization.
 
  - After adding a custom Vanity domain to your organization, some workflow operations such as restoring an environment from a backup or changing the PHP version, can cause site domain URLs in other environments to unexpectedly change from the Pantheon domain to the custom domain.
