@@ -140,12 +140,11 @@ No, we pre-configured the CDN so you don’t have to hassle with configuration, 
 ### Do I get access to hit rates or other statistics?
 Hit rates or other statistics are not currently available.
 
-### Can I use other CDNs with Pantheon Global CDN?
-Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the GlobalCDN doesn't address. We recommend that you ensure you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
+### Can I use other CDNs with the Pantheon Global CDN?
+Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address. We recommend that you ensure you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
 
-### Can I stack Global CDN with my own Fastly account?
-
-You can, but as mentioned above you should identify a need for adding additional complexity first. If you're using Fastly TLS services with WordPress, you'll want to add a check for the `HTTP_FASTLY_SSL` header so that WordPress can build URLs to your CSS or JS assets correctly. Do this by placing a check in your `wp-config.php` file to override the SSL flag that's checked later:
+### Can I use my own Fastly account with the Pantheon Global CDN?
+You can, but as mentioned above you should identify a need for adding additional complexity first. If you're using Fastly TLS services with WordPress, you'll want to check for the `HTTP_FASTLY_SSL` header so that WordPress can build URLs to your CSS and JS assets correctly. Do this by adding the following to `wp-config.php`:
 
 ```php
 if (!empty( $SERVER['HTTP_FASTLY_SSL'])) {
