@@ -52,13 +52,14 @@ Currently, there are no known plugins that implement WKHTMLtoPDF directly. Howev
 
 In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
 
-PhantomJS is located at `/srv/bin/phantomjs` on your application server.
+PhantomJS (1.7.0) is located at `/srv/bin/phantomjs` on your application server.
+PhantomJS (2.1.1) is located at `/srv/bin/phantomjs-2.1.1` on your application server.
 
 ### Drupal PhantomJS Configuration
 
 Once you have downloaded and enabled the PhantomJS Capture module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `/admin/config/user-interface/phantomjs_capture` to specify the library path.
 
-**Path to phantomJS:** `/srv/bin/phantomjs`
+**Path to phantomJS:** `/srv/bin/phantomjs` or `/srv/bin/phantomjs-2.1.1`
 
 
 ## Apache Tika
