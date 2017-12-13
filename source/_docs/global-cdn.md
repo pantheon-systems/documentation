@@ -148,6 +148,6 @@ You can, but as mentioned above you should identify a need for adding additional
 
 ```php
 if (!empty( $SERVER['HTTP_FASTLY_SSL'])) {
-$SERVER['HTTPS'] = 'on';
+  $SERVER['HTTPS'] = 'on';
 }
 ```
