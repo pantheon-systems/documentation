@@ -3,6 +3,7 @@ title: CloudFront CDN Setup for WordPress
 description: Learn to set up and configure CloudFront CDN on your Pantheon WordPress site.
 tags: [cacheedge, siteintegrations]
 categories: [wordpress]
+searchboost: 50
 ---
 Pantheon's [Global CDN](/docs/global-cdn) makes it unnecessary to add a third party CDN, such as Cloudfront, for most CDN use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
 

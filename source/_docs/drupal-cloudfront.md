@@ -3,6 +3,7 @@ title: Setting Up CloudFront CDN with Drupal
 description: Instructions for setting up Amazon CloudFront CDN on your Drupal site.
 tags: [siteintegrations, cacheedge]
 categories: [drupal]
+searchboost: 50
 ---
 
 Pantheon's [Global CDN](/docs/global-cdn) makes it unnecessary to add a third party CDN, such as CloudFront, for most CDN use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
