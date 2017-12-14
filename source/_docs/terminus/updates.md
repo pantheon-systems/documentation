@@ -6,7 +6,7 @@ terminustoc: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
-previousurl: terminus/plugins/create/
+previousurl: terminus/configuration/
 image: terminus-thumbLarge
 ---
 <div class="container col-md-12" ng-app="terminusReleaseApp" ng-controller="terminusReleaseCtrl">

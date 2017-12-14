@@ -6,7 +6,7 @@ terminuscreate: true
 terminustoc: true
 type: terminuspage
 layout: terminuspage
-nexturl: terminus/updates/
+nexturl: terminus/configuration/
 previousurl: terminus/plugins/directory/
 permalink: docs/terminus/plugins/:basename/
 image: terminus-thumbLarge
