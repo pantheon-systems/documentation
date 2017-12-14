@@ -16,7 +16,9 @@ If you find yourself passing the same options to Terminus repeatedly, consider c
 
 ## What Can I Configure?
 
-Any command variable normally passed in the form of `--option=VALUE`. You can see all the available options for a command using the `terminus help COMMAND`:
+Any command variable normally passed in the form of `--option=VALUE`. Values stored will be available regardless of which alias you use to run the command. Default values stored this way will be overridden by those supplied on the command line.
+
+You can see all the available options for a command using the `terminus help COMMAND`:
 
 ![Terminus Help Command Example](/source/docs/assets/images/terminus-help-example.png)
 
@@ -36,7 +38,7 @@ command:
 
 The example above does two things:
 
- - When the command `terminus auth:login` is run, it will automaticaly provide the correct email address. This is useful if you find yourself logging in to multiple accounts frequently, and want to use your regular account by default.
+ - When the command `terminus auth:login` is run, it will automatically provide the correct email address. This is useful if you find yourself logging in to multiple accounts frequently, and want to use your regular account by default.
 
  - The Terminus Plugin [Pancakes](https://github.com/terminus-plugin-project/terminus-pancakes-plugin) lets you open your Pantheon site database with a SQL GUI client. Rather than define the app every time, this configuration will always use Sequel Pro, unless otherwise specified.
 
