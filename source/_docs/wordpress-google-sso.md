@@ -5,7 +5,7 @@ contributors: [danielbachhuber]
 tags: [siteintegrations, security]
 categories: [automate]
 ---
-If your organization uses Google Apps, WP SAML Auth lets your users sign into WordPress using their Google Account. This makes it much easier to manage user accounts; rather than recreate WordPress accounts for every user, you can treat Google Apps as your *Identity Provider* and have WordPress defer to Google when determining who should have access and who shouldn’t.
+If your organization uses Google Apps, WP SAML Auth lets your users sign into WordPress using their Google Account. This makes it much easier to manage user accounts; rather than recreate WordPress accounts for every user, you can treat Google Apps as your *Identity Provider* for *Single Sign-On* (SSO) and have WordPress defer to Google when determining who should have access and who shouldn’t.
 
 ## Before You Begin
 
@@ -28,7 +28,15 @@ Find the “SAML Apps” dashboard in the Google Apps admin, and click “Add a 
 
 ![Google Apps SAML No Apps](/source/docs/assets/images/wordpress-google-sso/google-admin-saml-apps.png)
 
+When the modal opens, you'll need to click "Setup My Own Custom App".
+
 ![Google Apps Enable SAML](/source/docs/assets/images/wordpress-google-sso/enable-sso-for-samle-application.png)
+
+On the Google IdP page, the key details are in the Option 1 section:
+
+* **SSO URL** - URL for WordPress to redirect to when initiating the SSO process. In the configuration snippet below, this URL will go in the `$value['idp']['singleSignOnService']['url']` variable.
+* **Entity ID** - How WordPress knows to recognize Google Apps. In the configuration snippet below, this value will go in the `$value['idp']['entityId']` variable.
+* **Certificate** - How Google Apps knows to trust a request coming from WordPress. Download and commmit this file to your `private` directory so it's inaccessible from the web. In the configuration snippet below, make sure to `file_get_contents()` this file into the `$value['idp']['x509cert']` variable.
 
 ![Google IdP Information](/source/docs/assets/images/wordpress-google-sso/google-idp-information.png)
 
