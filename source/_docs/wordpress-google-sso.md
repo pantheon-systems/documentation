@@ -1,19 +1,19 @@
 ---
 title: Using WP SAML Auth with Google Apps
-description: Using WP SAML Auth to configure a single sign-on system for Google Apps on your WordPress site.
+description: WP SAML Auth makes it possible to sign in to your WordPress site using Google Apps.
 contributors: [danielbachhuber]
 tags: [siteintegrations, security]
 categories: [automate]
 ---
-If your organization uses Google Apps, WP SAML Auth enables you to let users sign into WordPress using their Google Account. This can make it much easier to manage user accounts; rather than recreate WordPress accounts for every user, you can treat Google Apps as your *Identity Provider* and have WordPress defer to Google when determining who should have access and who shouldn’t.
+If your organization uses Google Apps, WP SAML Auth lets your users sign into WordPress using their Google Account. This makes it much easier to manage user accounts; rather than recreate WordPress accounts for every user, you can treat Google Apps as your *Identity Provider* and have WordPress defer to Google when determining who should have access and who shouldn’t.
 
 ## Before You Begin
-Set up should take you an hour or less; if you get stuck on some configuration error, please reach out.
 
-Creating a custom Google Apps SAML application requires a Google Apps administrator account. If you don’t have appropriate permissions, you’ll need to pair up with someone that does.
+First, setting up is a matter of applying the correct configuration. It should take an hour or less. If you get stuck on a configuration error along the way, please reach out.
+
+Second, creating a custom Google Apps SAML application requires a Google Apps administrator account. If you don’t have appropriate permissions, you’ll need to pair up with someone that does.
 
 Lastly, as you work through this process, there are two key SAML authentication terms to keep in mind:
-
 
 - **Identity Provider** - Where user information is housed (e.g. Google Apps).
 - **Service Provider** - Application depending on user information provided by the Identity Provider (e.g. WordPress).
@@ -25,7 +25,6 @@ You’ll see these in reference documentation, so it’s important to keep them 
 To use WP SAML Auth with Google Apps, you’ll need to first [create a custom SAML application](https://support.google.com/a/answer/6087519) and enable it for your users.
 
 Find the “SAML Apps” dashboard in the Google Apps admin, and click “Add a service/App to your domain”.
-
 
 ![Google Apps SAML No Apps](/source/docs/assets/images/wordpress-google-sso/google-admin-saml-apps.png)
 
