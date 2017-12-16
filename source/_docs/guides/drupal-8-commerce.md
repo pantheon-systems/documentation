@@ -34,6 +34,10 @@ In addition to Pantheon, you will need accounts at:
     export CIRCLE_TOKEN=yourcirclecitokenhere
     ```
 
+    - `SITENAME` will be used as the machine names of the Pantheon site and the GitHub repo created in this process
+    - `GITHUB_TOKEN` lets Terminus interact with your GitHub account to create the repository
+    - `CIRCLE_TOKEN` is used to configure CircleCI to push to Pantheon any time a push is made to the GitHUB repo
+
 ## Create A New Drupal 8 Site
 
 1.  Using the Terminus Build Tools plugin, create a new Drupal 8 site from the Pantheon [Example Drops 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository on GitHub:
@@ -41,13 +45,8 @@ In addition to Pantheon, you will need accounts at:
     ```bash
     terminus build:project:create pantheon-systems/example-drops-8-composer $SITENAME
     ```
+
     At this point *do not* go to the web interface to continue installation.
-
-2.  Use Terminus to retrieve the Git URL for your new site and pass it to an environment variable:
-
-    ```
-    export GITURL=`terminus connection:info $SITENAME.dev --field=git_url`
-    ```
 
 2.  You now have a repository on GitHub containing your new site. Clone a local copy to your `projects` folder:
 
@@ -64,7 +63,7 @@ In addition to Pantheon, you will need accounts at:
 
         cd $SITENAME
 
-2. Use Composer to install the Commerce base:
+2. Use Composer to install the [Commerce Installation Profile](https://github.com/drupalcommerce/commerce_base){.external}:
 
    ```bash
    composer config repositories.commerce_base vcs https://github.com/drupalcommerce/commerce_base
@@ -73,7 +72,7 @@ In addition to Pantheon, you will need accounts at:
 
     <div class="alert alert-info" role="alert">
     <h4 class="info">Note</h4>
-    <p markdown="1">The commands above include dependencies required but not listed for `commerce_base`. You can follow the [open GitHub issue](https://github.com/drupalcommerce/commerce_base/pull/7){.external} for more information.</p>
+    <p markdown="1">The commands above include dependencies required but not listed for `commerce_base`.  simpler once [a few Composer changes are made within the Commerce Installation Profile itself](https://github.com/drupalcommerce/commerce_base/pull/7){.external}.</p>
     </div>
 
 3. Running `git status` should show that the `composer.json` and `composer.lock` files have changed:
@@ -87,13 +86,15 @@ In addition to Pantheon, you will need accounts at:
    git push origin master
    ```
 
-5. Go to your newly created Site Dashboard. Under the <span class="glyphicons glyphicons-wrench"></span>**Dev** tab, click on <span class="glyphicons glyphicons-embed-close"></span>**Code**, then **install later**. You should now see your commit history. Once CircleCI completes the automated tests built into our upstream repository, it will commit the build assets and push them to Dev:
+5. From your [CircleCI Dashboard](https://circleci.com/dashboard){.external} you can see that tests are already being run on your new commit. Once they pass, CircleCI will push the changes to your Site Dashboard.
+
+6. Go to your newly created Site Dashboard. Under the <span class="glyphicons glyphicons-wrench"></span>**Dev** tab, click on <span class="glyphicons glyphicons-embed-close"></span>**Code**, then **install later**. You should now see your commit history. Once CircleCI completes the automated tests built into our repository, it will commit the build assets and push them to Dev:
 
     ![Build Assets on Dev](/source/docs/assets/images/guides/drupal-8-commerce/build-assets.png)
 
-## Wipe The Database and Reinstall Drupal
+## Reinstall Drupal
 
-1. The build tools plugin we used at the start of this guide automatically installed Drupal for us. Now that we've installed the Commerce Base, we need to wipe the database and reinstall, without removing files from our file system. Use Terminus to switch the connection mode to SFTP, then use Drush to reinstall:
+1. The Build Tools Plugin command we used earlier automatically installed Drupal's standard profile in the Dev envritonment for us. Now that we've installed the Commerce Profile, we want that installed instead. Using Terminus, we can run the Drush command `site-install` which will first clear the database of the Standard profile before installing Commerce. This Drush command requires that the system be in writable (SFTP) mode:
 
    ```bash
    terminus connection:set $SITENAME.dev sftp
@@ -108,7 +109,9 @@ In addition to Pantheon, you will need accounts at:
    ```
 
 
-2. Log in to your site admin dashboad. The presence of the **Commerce** button on the toolbar indicates a succefull install.
+2. Log in to your Drupal site in the Dev environment. The presence of the **Commerce** button on the toolbar indicates a succefull install:
+
+    ![Drupal Commerce in the Toolbar](/source/docs/assets/images/guides/drupal-8-commerce/commerce-button.png)
 
 ## Conclusion
 
