@@ -36,9 +36,9 @@ In addition to Pantheon, you will need accounts at:
 
     - `SITENAME` will be used as the machine names of the Pantheon site and the GitHub repo created in this process
     - `GITHUB_TOKEN` lets Terminus interact with your GitHub account to create the repository
-    - `CIRCLE_TOKEN` is used to configure CircleCI to push to Pantheon any time a push is made to the GitHUB repo
+    - `CIRCLE_TOKEN` is used to configure CircleCI to push to Pantheon any time a push is made to the GitHub repo
 
-## Create A New Drupal 8 Site
+## Create a New Drupal 8 Site
 
 1.  Using the Terminus Build Tools plugin, create a new Drupal 8 site from the Pantheon [Example Drops 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository on GitHub:
 
@@ -88,13 +88,13 @@ In addition to Pantheon, you will need accounts at:
 
 5. From your [CircleCI Dashboard](https://circleci.com/dashboard){.external} you can see that tests are already being run on your new commit. Once they pass, CircleCI will push the changes to your Site Dashboard.
 
-6. Go to your newly created Site Dashboard. Under the <span class="glyphicons glyphicons-wrench"></span>**Dev** tab, click on <span class="glyphicons glyphicons-embed-close"></span>**Code**, then **install later**. You should now see your commit history. Once CircleCI completes the automated tests built into our repository, it will commit the build assets and push them to Dev:
+6. Go to your newly created Site Dashboard. Under the <span class="glyphicons glyphicons-wrench"></span> **Dev** tab, click on <span class="glyphicons glyphicons-embed-close"></span> **Code**, then **install later**. You should now see your commit history. Once CircleCI completes the automated tests built into our repository, it will commit the build assets and push them to Dev:
 
     ![Build Assets on Dev](/source/docs/assets/images/guides/drupal-8-commerce/build-assets.png)
 
 ## Reinstall Drupal
 
-1. The Build Tools Plugin command we used earlier automatically installed Drupal's standard profile in the Dev envritonment for us. Now that we've installed the Commerce Profile, we want that installed instead. Using Terminus, we can run the Drush command `site-install` which will first clear the database of the Standard profile before installing Commerce. This Drush command requires that the system be in writable (SFTP) mode:
+1. The Build Tools Plugin command we used earlier automatically installed Drupal's standard profile in the Dev environment for us. Now that we've installed the Commerce profile, we want that installed instead. Using Terminus, we can run the Drush command `site-install` which will first clear the database of the Standard profile before installing Commerce. This Drush command requires that the system be in writable (SFTP) mode:
 
    ```bash
    terminus connection:set $SITENAME.dev sftp
