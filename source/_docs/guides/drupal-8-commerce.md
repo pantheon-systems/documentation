@@ -1,13 +1,13 @@
 ---
 title: Drupal Commerce on Drupal 8
-description: Use Composer to Install Drupal Commerce on Pantheon, using Drupal 8
+description: Use Composer to Install Drupal Commerce with Drupal 8, on Pantheon
 contributors: [alexfornuto, stevector]
 tags: [drupal, siteintegrations, moreguides]
 type: guide
 permalink: docs/guides/:basename/
 ---
 
-This guide covers installing Drupal 8 Commerce, a Drupal implementation designed specifically for e-commerce. At the end of this guide you will have a Drupal Commerce site, GitHub repository, and Circle CI configuration for testing.
+This guide covers installing [Drupal Commerce](https://drupalcommerce.org/){.external}, an e-commerce implementation designed specifically for Drupal. At the end of this guide you will have a Drupal Commerce site, GitHub repository, and Circle CI configuration for testing.
 
 
 ## Before You Begin
@@ -72,7 +72,7 @@ In addition to Pantheon, you will need accounts at:
 
     <div class="alert alert-info" role="alert">
     <h4 class="info">Note</h4>
-    <p markdown="1">The commands above include dependencies required but not listed for `commerce_base`.  simpler once [a few Composer changes are made within the Commerce Installation Profile itself](https://github.com/drupalcommerce/commerce_base/pull/7){.external}.</p>
+    <p markdown="1">The commands above include dependencies required but not listed for `commerce_base`. The command will be made simpler once [a few Composer changes are made within the Commerce Installation Profile itself](https://github.com/drupalcommerce/commerce_base/pull/7){.external}.</p>
     </div>
 
 3. Running `git status` should show that the `composer.json` and `composer.lock` files have changed:
@@ -115,7 +115,7 @@ In addition to Pantheon, you will need accounts at:
 
 ## Conclusion
 
-What you do next is up to you and your needs. Remember that you're now using composer to manage modules and dependencies for your site. Consider reading our [Composer Fundamentals and Workflows](/docs/composer) doc for more information.
+What you do next is up to you and your needs. Remember that you're now using Composer to manage core, modules, and dependencies for your site. Consider reading our [Composer Fundamentals and Workflows](/docs/composer) doc for more information.
 
 ##See Also
 
