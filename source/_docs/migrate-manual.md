@@ -216,8 +216,15 @@ The codebase hierarchy for WordPress and Drupal is:
     ├── index.php
     ├── mu-plugins
     ├── themes
-    ├── plugins 
+    ├── plugins
 ```
+
+To create an archive of your codebase in your home directory, excluding [files](#upload-your-files), run the following from your site's root directory:
+
+```bash
+tar -czf ~/wordpress.tar.gz --exclude=wp-content/uploads* .
+```
+
  </div>
 
   <!-- 2nd pane content -->
@@ -237,6 +244,13 @@ The codebase hierarchy for WordPress and Drupal is:
        └── settings.php
 └── themes
 ```
+
+To create an archive of your codebase in your home directory, excluding [files](#upload-your-files), run the following from your site's root directory:
+
+```bash
+tar -czf ~/drupal.tar.gz --exclude=sites/default/files* .
+```
+
   </div>
 </div>
 
@@ -247,22 +261,45 @@ The codebase hierarchy for WordPress and Drupal is:
 </div>
 
 
-## Add Database
+## Add The Database
 
 **Database** - a single `.sql` dump that contains the content and active state of the site's configurations.
 
 Your site's database should already be backed up into a single `.sql` dump that contains the content and active state of the site's configuration. If you haven't done so already, we recommend that you remove data from cache tables to make the `.sql` file smaller, which helps ensure a quick and successful import. If you're using WP-CLI, you can flush the cache easily with `wp cache flush` before creating the dump file.
 
-You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
+### Create an Archive
 
-If your `.sql` file is less than 500MB, you can use the Import tool on the Workflow tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
+The easiest method to create a database archive is with the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html){.external} utility. To reduce the size for a faster transfer, we recommend you compress the resulting archive with gzip:
+
+```bash
+mysqldump -uUSERNAME -pPASSWORD DATABASENAME > ~/db.sql
+gzip ~/db.sql
+```
+
+ - Replace `USERNAME` with a MySQL user with permissions to access your site's database.
+ - Replace `PASSWORD` with the MySQL user's password. You can also move `-p` to the end of the command and leave it blank, to be prompted for your password. This prevents your MySQL password from being visible on your terminal.
+ - Replace `DATABASE` with the name of your site database within MySQL.
+ - `~/db.sql` defines the output target to a file named `db.sql` in your user's home directory. Adjust to match your desired location.
+
+
+The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
+
+If your ardchive file is less than 500MB, you can use the Import tool on the Workflow tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an archive file larger than 500MB require the use of the command line:
 
 ### Import Database using the Pantheon Dashboard
 
 1. Select the **Dev** environment.
 2. Select **Database / Files**.
 3. Click **Import**.
-4. In the **MySQL database** field, paste the URL of the `sql` file or upload a local `sql` file, and press **Import**.
+4. If your database file is under 100MB, you can upload it directly. In the **MySQL database** field, click **File**, then **Choose File**. Select your local `sql` or `gz` file, then press **Import**.
+
+    ![Import MySQL database from file](/source/docs/assets/images/dashboard/import-mysql-file.png)
+
+  If your archive is less than 500MB, you can import it from URL. In the **MySQL database** field, paste the URL of the `sql` or `gz` file, and press **Import**.
+
+    ![Import MySQL Database from URL](/source/docs/assets/images/dashboard/import-mysql-url.png)
+
+    If your database is larget than 500MB, import your database as described in the next section.
 
 ### Import Database using a MySQL Client
 
@@ -285,9 +322,9 @@ The following instructions are for the command line MySQL client, but you can al
 
 3. After you run the command, the `.sql` file is imported into your Pantheon Dev environment database container.
 
-## Step 4: Upload Your Files
+## Upload Your Files
 
-Files refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. For information on highly populated directories, see [Platform Considerations](/docs/platform-considerations/#highly-populated-directories).
+**Files** refer to anything within `sites/default/files` for Drupal or `wp-content/uploads` for WordPress, which typically includes uploaded images, along with generated stylesheets, aggregated scripts, etc. For information on highly populated directories, see [Platform Considerations](/docs/platform-considerations/#highly-populated-directories).
 
 Files are not under Git version control and are stored separately from the site's code.
 
@@ -295,10 +332,43 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 ### Import Files using the Pantheon Dashboard
 
-1. Select the **Dev** environment.
-2. Select **Database / Files**.
-3. Click **Import**.
-4. In the **Archive of site files** field, paste the URL of your `zip` or `tar.gz` archive, or upload a local file and click **Import**.
+1. Export a tar.gz or .zip file of your files directory:
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <!-- Active tab -->
+      <li id="files-wp" role="presentation" class="active"><a href="#files-wp-anchor" aria-controls="files-wp-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+
+      <!-- 2nd Tab Nav -->
+      <li id="files-drops" role="presentation"><a href="#files-drops-anchor" aria-controls="files-drops-anchor" role="tab" data-toggle="tab">Drupal</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Active pane content -->
+      <div role="tabpanel" class="tab-pane active" id="files-wp-anchor" markdown="1">
+      Navigate to your WordPress site's root directory to run this command, which will create an archive file in your user's home directory:
+
+      ```bash
+      cd wp-content/uploads
+      tar -czf ~/files.tar.gz .
+      ```
+      </div>
+
+      <!-- 2nd pane content -->
+      <div role="tabpanel" class="tab-pane" id="files-drops-anchor" markdown="1">
+      Navigate to your Drupal site's root directory to run this command, which will create an archive file in your user's home directory:
+
+      ```bash
+      cd sites/default/files
+      tar -czf ~/files.tar.gz .
+      ```
+      </div>
+    </div>
+2. From the Pantheon Site Dashboard, select the **Dev** environment.
+3. Select **Database / Files**.
+4. Click **Import**.
+5. In the **Archive of site files** field, paste the URL of your `tar.gz` archive, or upload a local file and click **Import**.
 
 ### Import Files using SFTP
 
