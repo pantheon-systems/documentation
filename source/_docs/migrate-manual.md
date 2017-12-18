@@ -175,7 +175,7 @@ Before you begin, we strongly suggest you first [configure SSH keys](/docs/ssh-k
 
 
 ### Import Code with SFTP
-If you've already imported your code using git in the section above, you can skip to the [Add Database](#add-database) section.
+If you've already imported your code using git in the section above, you can skip to the [Add Database](#add-the-database) section.
 
 If you already have the codebase on your local computer, you can upload it directly over SFTP. Find the **Connection Info** from the Dev environment and use an SFTP client to add your code. You'll want to only add plugins, modules, and themes and not overwrite WordPress or Drupal core. For more information, see [Developing on Pantheon Directly with SFTP Mode](/docs/sftp/).
 
@@ -285,6 +285,7 @@ gzip ~/db.sql
 The resulting file will be named `db.sql.gz` You can use either the Pantheon Dashboard or a MySQL client to add your site's database.
 
 If your ardchive file is less than 500MB, you can use the Import tool on the Workflow tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an archive file larger than 500MB require the use of the command line:
+
 
 ### Import Database using the Pantheon Dashboard
 

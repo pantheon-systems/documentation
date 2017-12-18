@@ -59,7 +59,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
   If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 
   <div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>  
+  <h4 class="info">Note</h4>
   <p>The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see <a href="/docs/wordpress-sessions/">WordPress and PHP Sessions</a>.</p>
   </div>
 
@@ -296,7 +296,7 @@ If you'd like your existing WordPress site to get one-click updates from your [C
 If you'd like your existing Drupal site to get one-click updates from your [Custom Upstream](/docs/custom-upstream/), then the migration process will be slightly different. The general process will be the same as a vanilla Drupal site, but start with **Create New Site** instead of **Migrate existing site**. Then use `terminus site:import <site> <url>` to import your site archive, or follow the [Manual migration](/docs/migrate-manual) instructions if your site archive exceeds file size limits.
 
 ### What if I can't use drush on my existing Drupal site?
-As an alternative to `drush` you can manually export and migrate. For details, see [Export an Existing Drupal Site](/docs/drupal-export).
+As an alternative to `drush` you can manually export and migrate. For details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual).
 
 ### Are database table prefixes supported?
 See [WordPress known issues](/docs/wordpress-known-issues/#table-prefixes).
