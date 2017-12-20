@@ -109,47 +109,47 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
       <div class="tab-content">
         <!-- Active pane content -->
         <div role="tabpanel" class="tab-pane active" id="wp-code" markdown="1">
-        ```nohighlight
-        ├── index.php
-        ├── wp-activate.php
-        ├── wp-config.php
-        ├── wp-comments-post.php
-        ├── wp-blog-header.php
-        ├── wp-admin
-        ├── wp-cron.php
-        ├── wp-load.php
-        ├── wp-links-opml.php
-        ├── wp-includes
-        ├── xmlrpc.php
-        ├── wp-trackback.php
-        ├── wp-signup.php
-        ├── wp-settings.php
-        ├── wp-mail.php
-        ├── wp-login.php
-        ├── wp-content
-            ├── index.php
-            ├── mu-plugins
-            ├── themes
-            ├── plugins
-        ```
+          ```nohighlight
+          ├── index.php
+          ├── wp-activate.php
+          ├── wp-config.php
+          ├── wp-comments-post.php
+          ├── wp-blog-header.php
+          ├── wp-admin
+          ├── wp-cron.php
+          ├── wp-load.php
+          ├── wp-links-opml.php
+          ├── wp-includes
+          ├── xmlrpc.php
+          ├── wp-trackback.php
+          ├── wp-signup.php
+          ├── wp-settings.php
+          ├── wp-mail.php
+          ├── wp-login.php
+          ├── wp-content
+              ├── index.php
+              ├── mu-plugins
+              ├── themes
+              ├── plugins
+          ```
        </div>
         <!-- 2nd pane content -->
         <div role="tabpanel" class="tab-pane" id="drops-code" markdown="1">
-        ```nohighlight
-        ├── includes
-        ├── index.php
-        ├── misc
-        ├── modules
-        ├── profiles
-        ├── scripts
-        ├── sites
-            └── all
-               ├── modules
-               └── themes
-            └── default
-               └── settings.php
-        └── themes
-        ```
+          ```nohighlight
+          ├── includes
+          ├── index.php
+          ├── misc
+          ├── modules
+          ├── profiles
+          ├── scripts
+          ├── sites
+              └── all
+                 ├── modules
+                 └── themes
+              └── default
+                 └── settings.php
+          └── themes
+          ```
         </div>
       </div>
     </div>
