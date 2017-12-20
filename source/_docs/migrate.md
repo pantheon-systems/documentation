@@ -38,7 +38,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
     </div>
   </div>
 
-  1. Choose **Migrate Existing Site**.
+  1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
     ![Migrate Existing Site](/source/docs/assets/images/dashboard/migrate-existing-site.png)
   2. Enter your current website URL.
@@ -69,7 +69,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
   <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
   The recommended way to migrate Drupal sites from another host is to use `drush ard` to create an archive that can be easily imported.
 
-  1. Choose **Migrate Existing Site**.
+  1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
     ![Migrate Existing Site](/source/docs/assets/images/dashboard/migrate-existing-site.png)
   2. Enter your current website URL.
