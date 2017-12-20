@@ -168,7 +168,9 @@ You can view examples at the [pantheon-settings-examples repo](https://github.co
 
 #### Are table prefixes supported?
 
-For information about table prefixes on Pantheon, see [Export an Existing Drupal Site](/docs/drupal-export#create-database-archive).
+Pantheon injects the database configuration dynamically during bootstrap. In the `PRESSFLOW_SETTINGS` variable, the appropriate database connection information is passed in based upon the environment (Dev/Test/Live).
+
+You can technically use database prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your database configuration settings.
 
 #### Why is the Status tab showing that my configuration file is not protected and that I need to create a settings.php file?
 

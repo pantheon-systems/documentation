@@ -46,7 +46,7 @@ In order to use PHP Sessions with a WordPress site you will need to install the 
 Running a WordPress Site Network requires a special configuration that is only available on Elite plans. These sites can only be created by Pantheon employees. For details, see [WordPress Site Networks](/docs/guides/multisite/).
 
 ### Migration
-The guided migration process for WordPress is baked into the Pantheon User Dashboard - simply click **Migrate Existing Site** and select WordPress to get started. For details, see [Migrate to Pantheon: WordPress](/docs/migrate-wordpress).
+The guided migration process for WordPress is baked into the Pantheon User Dashboard - simply click **Migrate Existing Site** and select WordPress to get started. For details, see [Migrate Sites to Pantheon](/docs/migrate/).
 
 ## Drupal 8 and Composer
 Drupal 8 is the first version of Drupal to include Composer usage within Drupal Core itself. For details, see [Composer Fundamentals and Workflows](/docs/composer/).
