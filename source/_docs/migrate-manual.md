@@ -86,7 +86,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 
   ![Creating Your Site on Pantheon Complete for manual migration](/source/docs/assets/images/dashboard/migrate-manual-visit-your-site-dashboard.png)
 
-Now that you have an existing site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
+Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
 
 ## Import Your Code
 Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `wp-content/uploads` (WordPress) / `sites/default/files` (Drupal) directory, or any other static assets you do not want tracked by version control.
