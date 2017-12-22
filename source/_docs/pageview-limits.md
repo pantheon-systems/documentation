@@ -23,16 +23,18 @@ Pantheon takes site plan limits seriously, but we recognize that sometimes these
 
 ## Why Doesn't Pantheon's Traffic Match My Analytics?
 
-There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic:
+There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic. The following traffic will be collected in our logs, but will not be present in most analytics:
 
- - Browsers/users that block cookies and javascript are not counted.
- - Users that close the browser before the tracking script loads are not counted.
- - Any page with a JavaScript error is not counted.
- - Automated traffic from bots or load testing is not counted.
- - API requests and AJAX requests are not counted.
- - Analytics implementations can be variable and may (for good reason) not include all pages on a given website.
+ - API requests and AJAX requests.
+ - Browsers/users that block cookies or javascript, including adblockers.
+ - Users that close the browser before the tracking script loads.
+ - Any page with a JavaScript error.
+ - Content pre-fetching, by browsers or by [apps](https://www.facebook.com/business/help/1514372351922333).
+ - Automated traffic from bots or load testing.
 
-Due to the fact that analytics doesn't measure _traffic_, it's not a suitable metric for determining platform abuse.
+Finally, analytics implementations can be variable. It may be that your analytics isn't tracking all pageviews for good reason — e.g. you exclude CMS administrators to give you a view of "visitors only" — or possibly due to misconfiguration.
+
+Due to the fact that analytics doesn't measure _traffic_, it's not a suitable metric for determining platform use/abuse.
 
 ## What About Static Assets?
 
