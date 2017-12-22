@@ -5,11 +5,11 @@ contributors: [danielbachhuber]
 tags: [siteintegrations, security]
 categories: [automate]
 ---
-If your organization uses Google Apps, WP SAML Auth lets your users sign into WordPress using their Google Account. This makes it much easier to manage user accounts; rather than recreate WordPress accounts for every user, you can treat Google Apps as your *Identity Provider* for *Single Sign-On* (SSO) and have WordPress defer to Google when determining who should have access and who shouldn’t.
+If your organization uses Google Apps, WP SAML Auth lets your users sign into WordPress using their Google Account. This makes it much easier to manage user accounts; rather than recreate WordPress accounts for every user, you can treat Google Apps as your **Identity Provider** for **Single Sign-On** (SSO) and have WordPress defer to Google when determining who should have access and who shouldn’t.
 
 ## Before You Begin
 
-First, setting up is a matter of applying the correct configuration. It should take an hour or less. If you get stuck on a configuration error along the way, please reach out.
+First, setting up is a matter of applying the correct configuration. It should take an hour or less. If you get stuck on a configuration error along the way, please reach out by creating an issue on [this doc](https://github.com/pantheon-systems/documentation/issues/new?title=Using%20WP%20SAML%20Auth%20with%20Google%20Apps%20Doc%20Update%20&body=Re%3A%20%5BUsing%20WP%20SAML%20Auth%20with%20Google%20Apps%5D(https%3A%2F%2Fpantheon.io/docs/wordpress-google-sso/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20\&labels=fix%20content){.external} or the [plugin project](https://github.com/pantheon-systems/wp-saml-auth){.external} on GitHub.
 
 Second, creating a custom Google Apps SAML application requires a Google Apps administrator account. If you don’t have appropriate permissions, you’ll need to pair up with someone that does.
 
@@ -21,53 +21,53 @@ Lastly, as you work through this process, there are two key SAML authentication 
 You’ll see these in reference documentation, so it’s important to keep them straight so you know what configuration goes where.
 
 
-## 1. Create a custom Google Apps SAML application
-To use WP SAML Auth with Google Apps, you’ll need to first [create a custom SAML application](https://support.google.com/a/answer/6087519) and enable it for your users.
+## Create a Custom Google Apps SAML Application
+To use WP SAML Auth with Google Apps, you’ll need to first [create a custom SAML application](https://support.google.com/a/answer/6087519){.external} and enable it for your users.
 
-Find the “SAML Apps” dashboard in the Google Apps admin, and click “Add a service/App to your domain”.
+1. Find the **SAML Apps** dashboard in the Google Apps admin, and click **Add a service/App to your domain**.
 
-![Google Apps SAML No Apps](/source/docs/assets/images/wordpress-google-sso/google-admin-saml-apps.png)
+    ![Google Apps SAML No Apps](/source/docs/assets/images/wordpress-google-sso/google-admin-saml-apps.png)
 
-When the modal opens, you'll need to click "Setup My Own Custom App".
+2. When the modal opens, you'll need to click **Setup My Own Custom App**.
 
-![Google Apps Enable SAML](/source/docs/assets/images/wordpress-google-sso/enable-sso-for-samle-application.png)
+    ![Google Apps Enable SAML](/source/docs/assets/images/wordpress-google-sso/enable-sso-for-samle-application.png)
 
-On the Google IdP page, the key details are in the Option 1 section:
+3. On the Google IdP page, the key details are in the Option 1 section:
 
-* **SSO URL** - URL for WordPress to redirect to when initiating the SSO process. In the configuration snippet below, this URL will go in the `$value['idp']['singleSignOnService']['url']` variable.
-* **Entity ID** - How WordPress knows to recognize Google Apps. In the configuration snippet below, this value will go in the `$value['idp']['entityId']` variable.
-* **Certificate** - How Google Apps knows to trust a request coming from WordPress. Download and commmit this file to your `private` directory so it's inaccessible from the web. In the configuration snippet below, make sure to `file_get_contents()` this file into the `$value['idp']['x509cert']` variable.
+    * **SSO URL** - URL for WordPress to redirect to when initiating the SSO process. In the configuration snippet below, this URL will go in the `$value['idp']['singleSignOnService']['url']` variable.
+    * **Entity ID** - How WordPress knows to recognize Google Apps. In the configuration snippet below, this value will go in the `$value['idp']['entityId']` variable.
+    * **Certificate** - How Google Apps knows to trust a request coming from WordPress. Download and commmit this file to your `private` directory so it's inaccessible from the web. In the configuration snippet below, make sure to `file_get_contents()` this file into the `$value['idp']['x509cert']` variable.
 
-![Google IdP Information](/source/docs/assets/images/wordpress-google-sso/google-idp-information.png)
+    ![Google IdP Information](/source/docs/assets/images/wordpress-google-sso/google-idp-information.png)
 
-On the Basic Information page, add a name for your app that you'll be able to recognize in a year's time.
+4. On the Basic Information page, add a name for your app that you'll be able to recognize in a year's time.
 
-![Google App Name](/source/docs/assets/images/wordpress-google-sso/google-saml-app-name.png)
+    ![Google App Name](/source/docs/assets/images/wordpress-google-sso/google-saml-app-name.png)
 
-On the Service Provider Details page, the key details are:
+5. On the Service Provider Details page, the key details are:
 
-* **ACS URL** - URL for Google Apps to redirect back to once authentication has completed successfully. In the configuration snippet below, this URL wll go in the `$value['sp']['assertionConsumerService']['url']` variable.
-* **Entity ID** - How WordPress identifies itself to Google Apps. In the configuration snippet below, this value will go in the `$value['sp']['entityId']` variable.
+    * **ACS URL** - URL for Google Apps to redirect back to once authentication has completed successfully. In the configuration snippet below, this URL wll go in the `$value['sp']['assertionConsumerService']['url']` variable.
+    * **Entity ID** - How WordPress identifies itself to Google Apps. In the configuration snippet below, this value will go in the `$value['sp']['entityId']` variable.
 
-![Google App SAML Service Provider Details](/source/docs/assets/images/wordpress-google-sso/service-provider-details.png)
+    ![Google App SAML Service Provider Details](/source/docs/assets/images/wordpress-google-sso/service-provider-details.png)
 
-Lastly, on the Attribute Mapping page, you'll need to specify any attributes you'd like Google Apps to return in the SAML response, and then keys you'd like to use for those attributes.
+6. Lastly, on the Attribute Mapping page, you'll need to specify any attributes you'd like Google Apps to return in the SAML response, and then keys you'd like to use for those attributes.
 
-Without any additional configuration, WP SAML Auth understands this attribute mapping:
+    Without any additional configuration, WP SAML Auth understands this attribute mapping:
 
-* SAML IdP (Google Apps) -> WordPress
-* `mail` -> `user_email`
-* `uid` -> `user_login`
-* `first_name` -> `first_name`
-* `last_name` -> `last_name`
+    * SAML IdP (Google Apps) -> WordPress
+    * `mail` -> `user_email`
+    * `uid` -> `user_login`
+    * `first_name` -> `first_name`
+    * `last_name` -> `last_name`
 
-![Google App Attribute Mapping](/source/docs/assets/images/wordpress-google-sso/attribute-mapping.png)
+    ![Google App Attribute Mapping](/source/docs/assets/images/wordpress-google-sso/attribute-mapping.png)
 
-Hit save and your application is created!
+7. Hit save and your application is created!
 
-## 2. Configure WP SAML Auth to connect to Google Apps
+## Configure WP SAML Auth to connect to Google Apps
 
-Once you’ve created a custom Google Apps SAML application, you need to tell WP SAML Auth how to connect to it. WP SAML Auth’s settings are configured by filtering `wp_saml_auth_option`. In the example below, ‘wp-saml-auth’ is the test account; make sure you replace those with the appropriate values.
+Once you’ve created a custom Google Apps SAML application, you need to tell WP SAML Auth how to connect to it. WP SAML Auth’s settings are configured by filtering `wp_saml_auth_option`. In the example below, `wp-saml-auth` is the test account; make sure you replace all instances with the appropriate values.
 
 
     <?php
@@ -99,9 +99,10 @@ Once you’ve created a custom Google Apps SAML application, you need to tell WP
       return $value;
     });
 
-See WP SAML Auth's [annotated installation instructions](https://github.com/pantheon-systems/wp-saml-auth#installation) for explanation of all potential configuration options.
+See WP SAML Auth's [annotated installation instructions](https://github.com/pantheon-systems/wp-saml-auth#installation){.external} for explanation of all potential configuration options.
 
 ## Troubleshooting
-Google has a [dedicated support page](https://support.google.com/a/answer/6301076?hl=en) with errors you may see on any of their screens.
 
-[Open an issue](https://github.com/pantheon-systems/wp-saml-auth/issues) on the WP SAML Auth GitHub repo should you get stuck beyond what information is already online.
+ - Google has a [dedicated support page](https://support.google.com/a/answer/6301076?hl=en){.external} with errors you may see on any of their screens.
+
+ - [Open an issue](https://github.com/pantheon-systems/wp-saml-auth/issues){.external} on the WP SAML Auth GitHub repo should you get stuck beyond what information is already online.
