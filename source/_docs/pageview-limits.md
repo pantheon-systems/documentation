@@ -11,7 +11,7 @@ However, this does mean that websites can run happily even though they are over 
 
 ## How We Measure Site Traffic
 
-Pantheon defines plan levels based on pageviews to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform from the CMS. 
+Pantheon defines plan levels based on pageviews to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform from the CMS.
 
 This includes not only HTML pages served by the CMS, but also responses in formats such as JSON and XML that are not tracked by standard analytics suites. API calls and AJAX requests do count as traffic, and are considered against plan limits. If you are planning to run a high traffic decoupled or "headless" implementation, you should contact sales in advance to discuss pricing.
 
@@ -23,16 +23,18 @@ Pantheon takes site plan limits seriously, but we recognize that sometimes these
 
 ## Why Doesn't Pantheon's Traffic Match My Analytics?
 
-There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic:
+There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic. The following traffic will be collected in our logs, but will not be present in most analytics:
 
- - Browsers/users that block cookies and javascript are not counted.
- - Users that close the browser before the tracking script loads are not counted.
- - Any page with a JavaScript error is not counted.
- - Automated traffic from bots or load testing is not counted.
- - API requests and AJAX requests are not counted.
- - Analytics implementations can be variable and may (for good reason) not include all pages on a given website.
+ - API requests and AJAX requests.
+ - Browsers/users that block cookies or javascript, including adblockers.
+ - Users that close the browser before the tracking script loads.
+ - Any page with a JavaScript error.
+ - Content pre-fetching, by browsers or [apps](https://www.facebook.com/business/help/1514372351922333){.external}.
+ - Automated traffic from bots or load testing.
 
-Due to the fact that analytics doesn't measure _traffic_, it's not a suitable metric for determining platform abuse.
+Finally, analytics implementations can be variable. It may be that your analytics solution isn't tracking all pageviews for good reason. For example, you may exclude CMS administrators to give you a view of "visitors only". Misconfiguration may also play a factor.
+
+Due to the fact that analytics doesn't measure _traffic_, it's not a suitable metric for determining platform use/abuse.
 
 ## What About Static Assets?
 
@@ -50,13 +52,13 @@ Having high performance responses to crawlers is _beneficial_ to SEO, which is o
 
 Our onboarding team performs load tests prior to every Elite site launch, and we encourage customers to load test prior to releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
 
-However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform. This is one of the reasons we ask customers to notify us of such tests as a courtesy. 
+However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform. This is one of the reasons we ask customers to notify us of such tests as a courtesy.
 
 ## What About Legitimate Traffic Spikes?
 
-We understand that the internet can make any website famous overnight and that this isn't under your control. Pantheon's platform is specifically designed to shine under this circumstance, and it's one of the main reasons people choose us to run their sites. 
+We understand that the internet can make any website famous overnight and that this isn't under your control. Pantheon's platform is specifically designed to shine under this circumstance, and it's one of the main reasons people choose us to run their sites.
 
-Luckily, traffic spikes are easily discerned, and we take this into account when it comes to monitoring plan abuse. However, similar to the above, if a site is achieving internet fame on a regular basis, we reserve the right to right-size the site's plan in relation to the load it puts on the platform. 
+Luckily, traffic spikes are easily discerned, and we take this into account when it comes to monitoring plan abuse. However, similar to the above, if a site is achieving internet fame on a regular basis, we reserve the right to right-size the site's plan in relation to the load it puts on the platform.
 
 ## What About Denial of Service and Other Attacks?
 
