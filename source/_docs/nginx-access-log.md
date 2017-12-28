@@ -32,7 +32,7 @@ Add the following lines to the `goaccess.conf` file, located in either `/etc/`, 
 ```
 time-format %H:%M:%S
 date-format %d/%b/%Y
-log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
+log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%h,%^"
 ```
 ## Automate GoAccess Reports
 <p class="instruction">Download the following script to quickly pull a site's nginx log file and create an HTML report using GoAccess:</p>
