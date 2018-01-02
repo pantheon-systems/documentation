@@ -6,7 +6,7 @@ categories: []
 ---
 ## Verify Varnish is Working on Your Pantheon Site
 
-Use the [web utility](https://varnishcheck.getpantheon.com/) to check to see if Varnish is working on your Pantheon hosted website. This tool performs up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. Please note that this utillity does not check for cookies that are set in your frontend code (i.e. JavaScript). If you have any feedback, let us know by [contacting support](/docs/getting-support).
+Use the [web utility](https://varnishcheck.pantheon.io/) to check to see if Varnish is working on your Pantheon hosted website. This tool performs up to two web requests to your site and will check the headers to determine if Varnish can cache your site. If not, it will make recommendations specific to your site configuration. Please note that this utillity does not check for cookies that are set in your frontend code (i.e. JavaScript). If you have any feedback, let us know by [contacting support](/docs/getting-support).
 
 ## Test If Varnish Is Working by Reading HTTP Headers
 
