@@ -39,6 +39,7 @@ We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-dru
 
 Each site supports a single Drupal or WordPress application. Placing a WordPress application to behave as the blog for a Drupal site, for example, is unsupported.
 
+
 ### Domain Masking or URL Forwarding
 Domain masking allows you to serve two entirely different and separate sites over a single common domain. For example, using one system as a front end for marketing efforts and another for blog content:
 
@@ -46,6 +47,9 @@ Domain masking allows you to serve two entirely different and separate sites ove
 * Blog: `https://www.example-site.com/blog/`
 
 In and of itself, Pantheon does not support this kind of setup. Each site on the platform must have its own unique domain. However, this configuration can be achieved using an external service such as CloudFront, StackPath, Fastly, etc.
+
+### Additional Databases
+While you are able to import an additional database to an environment, only the Pantheon database will be presevered when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.
 
 ## Highly Populated Directories
 
