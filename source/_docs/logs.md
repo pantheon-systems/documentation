@@ -224,7 +224,7 @@ terminus drush <site>.<env> -- watchdog-show --tail
 
 ### My Drupal database logs are huge. Should I disable dblog?
 
-The best recommended practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.
+We do not recommend disabling dblog. Best practice is to find and resolve the problems. PHP notices, warnings, and errors mean more work for PHP, the database, and your site. If your logs are filling up with PHP messages, find and eliminate the root cause of the problems. The end result will be a faster site.
 
 ### How do I access logs in environments with multiple containers?
 
