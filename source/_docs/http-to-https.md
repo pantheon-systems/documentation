@@ -117,7 +117,7 @@ At this point, all visitors to the site should be able to securely access all pa
 
 ## Redirect to HTTPS and the primary domain
 
-As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/docs/hsts), instead of using a redirect.
+As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/docs/hsts), as well as a redirect.
 
 Configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
 
