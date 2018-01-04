@@ -96,6 +96,12 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 **Solution**: Pressflow settings can be [decoded in settings.php](/docs/read-environment-config/) to provide database credentials, but the module needs to be modified manually to use `$_ENV(["DB_PORT"]`.
 
 <hr>
+### [Front](https://www.drupal.org/project/front)
+**Issue**: The Drupal 7 version of the module disables caching for the front page.
+
+**Solution**: [Apply a patch to the module](https://www.drupal.org/project/front/issues/1854300#comment-12405090) to allow caching for anonymous users. Note that this patch doesn't work with the **Full** or **Redirect** options.
+
+<hr>
 ### [Global Redirect](https://www.drupal.org/project/globalredirect)
  **Issue**: Too many redirects error when site is in maintenance mode.
 
