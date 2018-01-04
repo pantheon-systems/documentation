@@ -99,7 +99,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 ### [Front](https://www.drupal.org/project/front)
 **Issue**: The Drupal 7 version of the module disables caching for the front page.
 
-**Solution**: [Apply a patch to the module](https://www.drupal.org/project/front/issues/1854300#comment-12405090) to allow caching for anonymous users.
+**Solution**: [Apply a patch to the module](https://www.drupal.org/project/front/issues/1854300#comment-12405090) to allow caching for anonymous users. Note that this patch doesn't work with the **Full** or **Redirect** options.
 
 <hr>
 ### [Global Redirect](https://www.drupal.org/project/globalredirect)
