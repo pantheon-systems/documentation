@@ -18,6 +18,7 @@ Verify current PHP settings from the Site Dashboard by clicking **Settings** > *
 ### Available PHP Versions
 Supported PHP versions are:
 
+- [7.2](https://v72-php-info.pantheonsite.io/)
 - [7.1](https://v71-php-info.pantheonsite.io/)
 - [7.0](https://v70-php-info.pantheonsite.io/)
 - [5.6](https://v56-php-info.pantheonsite.io/)
