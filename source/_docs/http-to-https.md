@@ -32,14 +32,32 @@ Mixed-content warnings in the browser are expected at this stage; such issues wi
 Continue once you're able to load a normal page of your WordPress or Drupal site with HTTPS without _redirecting_ (browser warnings are okay for now).
 
 ## Assume HTTPS within WordPress and Drupal
-Configure your site to assume users are visiting via HTTPS and the site’s primary domain. Templates for example should reference HTTPS in absolute CSS and Javascript sources, even when accessed with HTTP. While testing, you may find it necessary to bust through the edge cache by adding something like `?cache-bust=1` to the end of a URL.
+Configure your site to assume users are visiting via HTTPS. This will cause WordPress and Drupal to start generating URLs with HTTPS. By doing this, we avoiding storing further HTTP URLs in the database before we clean up existing ones.
+
+Add the following near the top of `wp-config.php` (WordPress) or `settings.php` (Drupal):
+
+```PHP
+// Detect non-HTTPS requests.
+if (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
+  // Only redirect for HTTP GET and HEAD.
+  if ($_SERVER['REQUEST_METHOD'] === 'GET' || $_SERVER['REQUEST_METHOD'] === 'HEAD') {
+    // Uncomment when the site is ready for HTTPS-only.
+    //http_response_code(301);
+    //header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+  }
+}
+
+// Assume browsers are visiting the site using HTTPS.
+$_SERVER['HTTPS'] = 'on';
+```
+
+In templates, hard-coded, absolute URLs should use HTTPS for CSS, Javascript, and other resources. This won't break HTTP access; browsers are always happy to load resources over HTTPS, even if the page itself is HTTP. While testing, you may find it necessary to bust through the edge cache by adding something like `?cache-bust=1` to the end of a URL to verify the changes.
 
 ### Reveal violations in bulk
-There are more than a few ways to identify mixed-content violations across your site, but Google Chrome is arguably one of the fastest and simplest. Right click on a page showing as insecure and select inspect, then review the console.
+There are more than a few ways to identify mixed-content violations across your site, but Google Chrome is one of the fastest and simplest. Right click on a page showing as insecure and select inspect, then review the console.
 
-Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/){.external}, for those preferential to GUIs.
+Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/){.external}. Fans of the command line might find [mixed-content-scan by Bramus](https://github.com/bramus/mixed-content-scan){.external} helpful.
 
-Fans of the command line might find [mixed-content-scan by Bramus](https://github.com/bramus/mixed-content-scan){.external} helpful.
 ### Hotfix violations in bulk
 If you're in a bind and need a quick fix, set the `Content-Security-Policy` header to `upgrade-insecure-requests` to upgrade all HTTP resources to the HTTPS protocol client-side, on the fly:
 
@@ -51,6 +69,7 @@ header("Content-Security-Policy-Report-Only: img-src https:; script-src https: '
 ```
 
 Use this as temporary solution while working to fix each problem at its origin.
+
 ### Database cleanup
 Use the following techniques to replace insecure references to your domain in the site's database. The result should be that the browser loads pages of your WordPress or Drupal site securely with no warnings.
 
