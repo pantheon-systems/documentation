@@ -16,7 +16,14 @@ Older software is more likely to contain code that is incompatible with recent P
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
 ### Available PHP Versions
-Available PHP versions are 5.3, 5.5, 5.6, 7.0, and 7.1.
+Supported PHP versions are:
+
+- [7.2](https://v72-php-info.pantheonsite.io/)
+- [7.1](https://v71-php-info.pantheonsite.io/)
+- [7.0](https://v70-php-info.pantheonsite.io/)
+- [5.6](https://v56-php-info.pantheonsite.io/)
+
+Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions. Pantheon also makes PHP [5.3](https://v53-php-info.pantheonsite.io/) and [5.5](https://v55-php-info.pantheonsite.io/) available on the platform, although these are end-of-life, and should not be used unless absolutely necessary.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
