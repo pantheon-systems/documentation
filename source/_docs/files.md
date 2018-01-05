@@ -34,7 +34,7 @@ The [Pantheon WordPress upstream](https://github.com/pantheon-systems/WordPress)
 
 ### Unable to create directory <path-to-folder>. Is the parent directory writable by the server?
 
-Sites migrated from other hosts may have custom or absolute paths in the "Store Uploads in This Folder" configuration. This can be resolved by replacing the correct configuration:
+Sites migrated from other hosts may have custom or absolute paths in the "Store Uploads in This Folder" configuration. This can be resolved by using the recommended configuration:
 
 1. In the WordPress Admin Dashboard and go to **Settings > Media** (`/wp-admin/options-media.php`)
 2. Go to **Uploading Files > Store uploads in this folder** and update the field to contain `wp-content/uploads` only.
