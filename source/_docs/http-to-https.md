@@ -114,7 +114,11 @@ Use the following techniques to replace insecure references to your domain in th
 Clear Drupal and WordPress object caches in the [database and/or in Redis](/docs/drupal-redis/#clear-cache) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
 
 At this point, all visitors to the site should be able to securely access all pages over HTTPS with no browser warnings.
+
 ## Redirect to HTTPS and the primary domain
+
+As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/docs/hsts), as well as a redirect.
+
 Configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
 
 {% include("redirects.twig") %}
