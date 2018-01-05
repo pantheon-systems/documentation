@@ -290,7 +290,15 @@ Most migrations are completed within two hours. The migration time depends solel
 Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly. See the Dropbox documentation: [How do I force a file or folder to download or render on dropbox.com?](https://www.dropbox.com/en/help/201)
 
 ### How do I use the Pantheon Migrations plugin with a custom WordPress upstream?
-If you'd like your existing WordPress site to get one-click updates from your [Custom Upstream](/docs/custom-upstream/), then the migration process will be slightly different. The general process will be the same as a vanilla WordPress site, but start with **Create New Site** instead of **Migrate existing site**. You'll need to manually generate a [machine token](/docs/machine-tokens/) to use with the [Pantheon Migrations plugin](https://wordpress.org/plugins/bv-pantheon-migration/).
+If you'd like your existing WordPress site to get one-click updates from your [Custom Upstream](/docs/custom-upstream/), then the migration process will be slightly different.
+
+1. The general process will be the same as a vanilla WordPress site, but start with **Create New Site** instead of **Migrate existing site**. 
+
+2. Name your new site, and be sure to add it to the organization with access to the custom upstream you want to use.
+
+3. On the next page, choose your Custom Upstream, and complete the installation.
+
+You can now proceed with the normal migration steps [outlined above](#migrate-existing-sites), starting at Step 8.
 
 ### How should I migrate a site with a custom Drupal-based upstream?
 If you'd like your existing Drupal site to get one-click updates from your [Custom Upstream](/docs/custom-upstream/), then the migration process will be slightly different. The general process will be the same as a vanilla Drupal site, but start with **Create New Site** instead of **Migrate existing site**. Then use `terminus site:import <site> <url>` to import your site archive, or follow the [Manual migration](/docs/migrate-manual) instructions if your site archive exceeds file size limits.
