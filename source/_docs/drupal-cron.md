@@ -63,7 +63,7 @@ You can disable cron via admin interface at `/admin/system/config/cron`. Select 
 
 ![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
 
-This configuration disables cron execution in Drupal, but it does not affect Pantheon's cron execution at the platform level.
+This configuration disables the ability to configure cron execution in Drupal.
 
 ## Troubleshooting Cron
 
