@@ -194,7 +194,7 @@ Many platforms, CDNs, and hosting providers require use of their DNS servers (na
 
 * Many large organizations and institutions have Information Technology departments that operate or configure DNS. If Pantheon required use of particular DNS servers, it would intefere with the ability to use Pantheon for the organization's websites.
 * Some people and organizations may want to digitally sign their DNS records using a system like [DNSSec](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions). While it would be technically possible for Pantheon to host records signed offline, it's much easier for interested organizations to operate their own DNS or choose a provider that supports the desired signing methods.
-legacy ones.
+* Advanced uses of DNS often require uncommon record types. If Pantheon required nameservers, it's unlikely that all of the desired record types would be available, particularly legacy ones.
 * Many organizations need to programmatically update their DNS records. Such needs include domain control validation for obtaining certificates (among others). Different DNS services support different update APIs, and it's unlikely Pantheon would ever be able to support them all.
 
 If your site doesn't have these advanced needs, there are free and inexpensive options outside of Pantheon. We recommend considering your domain registrar's DNS services, [Amazon Route 53](https://aws.amazon.com/route53/), [Google Cloud DNS](https://cloud.google.com/dns/), or [Cloudflare](https://woorkup.com/cloudflare-dns/).
