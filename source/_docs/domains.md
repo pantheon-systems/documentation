@@ -187,3 +187,14 @@ If your domain's DNS configuration relies on an existing MX or TXT record that i
   ![dig example](/source/docs/assets/images/dig-example.png)
 
 3. Create two AAAA records and one A record for the desired subdomain (e.g., `www`) using the values returned in the above two steps wherever you host DNS for the domain.
+
+## Why Pantheon Doesn't Provide DNS or Nameservers
+
+Many platforms, CDNs, and hosting providers require use of their DNS servers (nameservers) to support features like HTTPS. While this is convenient, it is also inflexible. Pantheon is designed to support more advanced deployments. Advanced deployments typically require the ability to configure CNAMES, A, and AAAA records with the DNS provider of the site owner's choice. If Pantheon provided (and required) specific nameservers, it would interfere with major use cases:
+
+* Many large organizations and institutions have Information Technology departments that operate or configure DNS. If Pantheon required use of particular DNS servers, it would intefere with the ability to use Pantheon for the organization's websites.
+* Some people and organizations may want to digitally sign their DNS records using a system like [DNSSec](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions). While it would be technically possible for Pantheon to host records signed offline, it's much easier for interested organizations to operate their own DNS or choose a provider that supports the desired signing methods.
+legacy ones.
+* Many organizations need to programmatically update their DNS records. Such needs include domain control validation for obtaining certificates (among others). Different DNS services support different update APIs, and it's unlikely Pantheon would ever be able to support them all.
+
+If your site doesn't have these advanced needs, there are free and inexpensive options outside of Pantheon. We recommend considering your domain registrar's DNS services, [Amazon Route 53](https://aws.amazon.com/route53/), [Google Cloud DNS](https://cloud.google.com/dns/), or [Cloudflare](https://woorkup.com/cloudflare-dns/).
