@@ -17,11 +17,11 @@ All plans except for a Personal plan can use Solr. Solr is available to Sandbox 
 
 | Plans        | Supported
 | ------------- |:-------------:|
-| Sandbox      | **Yes** |
+| Sandbox      | **Yes, for all environments** |
 | Personal      | No      |
-| Professional | **Yes**      |
-| Business | **Yes**      |
-| Elite | **Yes**      |
+| Professional | **Yes, for all environments**      |
+| Business | **Yes, for all environments**      |
+| Elite | **Yes, for all environments**      |
 
 
 ## Using Solr with WordPress or Drupal
