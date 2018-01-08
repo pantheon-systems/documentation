@@ -190,7 +190,9 @@ If your domain's DNS configuration relies on an existing MX or TXT record that i
 
 ## Why Pantheon Doesn't Provide DNS or Nameservers
 
-Many platforms, CDNs, and hosting providers require use of their DNS servers (nameservers) to support features like HTTPS. While this is convenient, it is also inflexible. Pantheon is designed to support more advanced deployments, and that requires allowing site owners to use the DNS provider of their choice. If Pantheon required specific nameservers, it would interfere with major use cases:
+Many platforms, CDNs, and hosting providers offer DNS servers (nameservers). While this is convenient, it is often inflexible. Providers that offer nameservers usually build other features (like HTTPS) in a way that will only work for customers who use the provided nameservers. This approach is fine until it interferes with more advanced deployments.
+
+Pantheon is built to support advanced website deployment needs, and that means allowing site owners to use the DNS provider of their choice. If Pantheon required specific nameservers, it would interfere with these major use cases (among others):
 
 * Many large organizations and institutions have Information Technology departments that operate or configure DNS. If Pantheon required use of particular DNS servers, it would intefere with the ability to use Pantheon for the organization's websites.
 * Some people and organizations may want to digitally sign their DNS records using a system like [DNSSec](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions). While it would be technically possible for Pantheon to host records signed offline, it's much easier for interested organizations to operate their own DNS or choose a provider that supports the desired signing methods.
