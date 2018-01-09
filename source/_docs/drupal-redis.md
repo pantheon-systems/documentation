@@ -200,8 +200,8 @@ Example of a block that will result in an **incorrectly configured cache backend
 
 
 ```
-if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-  $_SERVER['PANTHEON_ENVIRONMENT'] === 'live') {
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
+  $_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     // Use Redis for caching.
     $conf['redis_client_interface'] = 'PhpRedis';
     $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
@@ -226,7 +226,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 This conditional will be true for both web visits and Drush calls. All Redis cache backend settings, plus any other application configuration that should be true no matter the context, should always be enclosed in these types of conditional blocks on Pantheon.
 
-However, all redirection logic should remain nested in `isset($_SERVER['PANTHEON_ENVIRONMENT'])` conditionals, as you only want redirections to occur on web visits, not any Drush invocations.
+However, all redirection logic should remain nested in `isset($_ENV['PANTHEON_ENVIRONMENT'])` conditionals, as you only want redirections to occur on web visits, not any Drush invocations.
 
 In other words, don’t mix your application configuration and redirection logic together. You can have multiple logic blocks in your `settings.php` and it will fix these problems and will be easier for yourself and others to read and maintain.
 

@@ -18,7 +18,7 @@ Modules, plugins, and/or themes that override Pantheon's temporary directory con
 Replace `'plupload_temporary_uri'` with the applicable module or theme setting used to configure the temporary directory path. The following is an example for the Plupload module:
 
 ```
-if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   $conf['plupload_temporary_uri'] ='private://tmp';
 }
 ```
@@ -49,7 +49,7 @@ If you prefer to manage your temporary files privately, use the following to ens
 Create a `private/tmp/` directory within `sites/default/files/` and add the following to `settings.php`.  Replace `'plupload_temporary_uri'` with the applicable module or theme setting used to configure the temporary directory path.
 
 ```
-if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   $conf['plupload_temporary_uri'] = 'private://tmp';
 }
 ```
