@@ -57,13 +57,21 @@ Another very effective solution is to leverage a service such as [EasyCron](http
 
 
 ## Disable Cron
-Pantheon's cron execution cannot be disabled and will run every hour on all environments, even if cron is disabled in Drupal. Using a module like Elysia Cron will allow more granular control of what happens when Drupal cron runs.
+To disable Drupal's standard cron:
 
-You can disable cron via admin interface at `/admin/system/config/cron`. Select **Never** from the "Run cron every" drop-down menu, then save the configuration.
+1. Navigate to **Configuration** > **System** > **Cron** within the admin interface.
+2. Select **Never** from the "Run cron every" drop-down menu.
+3. Click **save configuration**:
 
-![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
+  ![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
 
-This configuration disables the ability to configure cron execution in Drupal.
+  <div class="alert alert-info">
+  <h4 class="info">Note</h4>
+  <p markdown="1">This configuration disables cron execution in Drupal, but it does not affect Pantheon's cron execution at the platform level which runs every hour on all environments.</p></div>
+
+Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} contrib module to extend the standard cron can globally disable it in the module's settings:  
+
+![disable cron globally by Elysia Cron](/source/docs/assets/images/disable_cron_elysia.png)
 
 ## Troubleshooting Cron
 
