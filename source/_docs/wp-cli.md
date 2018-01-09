@@ -65,8 +65,8 @@ Redirects kill the PHP process before WP-CLI is executed. You can resolve this e
 
 ```php
 // Require HTTPS, www.
-if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
+  ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') &&
   // Check if Drupal or WordPress is running via command line
   (php_sapi_name() != "cli")) {
   if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||

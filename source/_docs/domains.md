@@ -75,7 +75,7 @@ To redirect from a subdomain to a specific area of the site, use the following:
 
 ```php
 // Redirect subdomain to a specific path.
-if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
   ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
   // Check if Drupal or WordPress is running via command line
   (php_sapi_name() != "cli")) {
@@ -106,8 +106,8 @@ if (($_SERVER['REQUEST_URI'] == '/old') &&
 
 ```php
 // Redirect multiple subdomains to a single domain.
-if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-  ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live') &&
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
+  ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') &&
   // Check if Drupal or WordPress is running via command line
   (php_sapi_name() != "cli")) {
   if (in_array($_SERVER['HTTP_HOST'], array(

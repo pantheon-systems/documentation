@@ -306,7 +306,7 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 ```
 $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
 
-if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   if (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] === 'ON') {
     $_SERVER['SERVER_PORT'] = 443;
   }
