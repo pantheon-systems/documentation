@@ -57,29 +57,21 @@ Another very effective solution is to leverage a service such as [EasyCron](http
 
 
 ## Disable Cron
+To disable Drupal's standard cron:
 
-Pantheon's cron execution cannot be disabled and will run every hour on all environments, even if cron is disabled in Drupal. 
+1. Navigate to **Configuration** > **System** > **Cron** within the admin interface.
+2. Select **Never** from the "Run cron every" drop-down menu.
+3. Click **save configuration**:
 
-You can disable cron via admin interface at `/admin/system/config/cron`. Select **Never** from the "Run cron every" drop-down menu, then save the configuration.This configuration disables cron execution in Drupal, but it does not affect Pantheon's cron execution at the platform level.
+  ![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
 
-![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
+  <div class="alert alert-info">
+  <h4 class="info">Note</h4>
+  <p markdown="1">This configuration disables cron execution in Drupal, but it does not affect Pantheon's cron execution at the platform level which runs every hour on all environments.</p></div>
 
-This configuration disables the ability to configure cron execution in Drupal.
-
-[Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} gives you another way to disable cron in Drupal. Elysia Cron will allow more granular control of what happens when Drupal cron runs.
-
-To disable cron using Elysia, go to the module's settings, and check **Global disable**:
+Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} contrib module to extend the standard cron can globally disable it in the module's settings:  
 
 ![disable cron globally by Elysia Cron](/source/docs/assets/images/disable_cron_elysia.png)
-
-Then in the status tab, confirm that cron was disabled by clicking on the **Run cron** button, which should show an error message:
-
-![test_disabled cron globally by Elysia Cron](/source/docs/assets/images/test_elysia_disable.png)
-
-<div class="alert alert-info">
-    <h4 class="info">Note</h4><p markdown="1">
-    Elysia cron is only available for Drupal 7x version and is currently being ported to Drupal 8x.
-</p></div>
 
 ## Troubleshooting Cron
 
