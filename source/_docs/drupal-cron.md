@@ -68,11 +68,11 @@ This configuration disables the ability to configure cron execution in Drupal.
 
 [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} gives you another way to disable cron in Drupal. Elysia Cron will allow more granular control of what happens when Drupal cron runs.
 
-To disable the cron using Elysia, Go to settings,select Global disable and save configuration.
+To disable cron using Elysia, go to the module's settings, and check **Global disable**:
 
 ![disable cron globally by Elysia Cron](/source/docs/assets/images/disable_cron_elysia.png)
 
-Check the status of cron, notice that the cron was disabled and when you click on the Run Cron shows an error message.
+Then in the status tab, confirm that cron was disabled by clicking on the **Run cron** button, which should show an error message:
 
 ![test_disabled cron globally by Elysia Cron](/source/docs/assets/images/test_elysia_disable.png)
 
