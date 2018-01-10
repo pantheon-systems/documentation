@@ -146,7 +146,7 @@ From your local clone, run the `git apply` command as per Drupal.org, commit you
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](https://www.drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
-For detailed instructions, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual).
+For detailed instructions, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual).
 
 ### Can I use Git with SFTP mode?
 
