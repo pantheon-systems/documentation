@@ -9,6 +9,7 @@ permalink: docs/terminus/:basename/
 nexturl: terminus/examples/
 previousurl: terminus/
 image: terminus-thumbLarge
+searchboost: 100
 ---
 Terminus is available for Mac OS X, Linux, and Windows 7 and 10.
 ## Requirements

@@ -10,6 +10,7 @@ nexturl: terminus/configuration/
 previousurl: terminus/plugins/directory/
 permalink: docs/terminus/plugins/:basename/
 image: terminus-thumbLarge
+searchboost: 100
 ---
 Add new commands to Terminus by creating a plugin. The following explains how to create our [example plugin](https://github.com/pantheon-systems/terminus-plugin-example) to demonstrate how to add new commands.
 

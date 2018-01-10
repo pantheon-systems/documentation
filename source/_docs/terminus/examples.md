@@ -10,6 +10,7 @@ nexturl: terminus/commands/
 previousurl: terminus/install/
 permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
+searchboost: 100
 ---
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.

@@ -8,6 +8,7 @@ nexturl: terminus/plugins/directory/
 previousurl: terminus/commands/
 permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
+searchboost: 100
 ---
 Extend the functionality of Terminus and add commands by installing third party plugins.
 <div class="alert alert-info">
