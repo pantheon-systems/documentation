@@ -385,7 +385,7 @@ Pantheon has tools in place to monitor database queries:
 
 **Solution**: Manually change `unloq_credentials` key in the`wp_options` table. Alternatively, you can re-create an application by resetting your plugin installation (deactivate, delete entries, etc.).
 
-For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/docs/guides/two-factor-authentication/#set-up-two-factor-authentication-with-wordpress-single-site).
+For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/docs/guides/two-factor-authentication/#single-site-tfa).
 
 <hr>
 
