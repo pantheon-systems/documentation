@@ -7,6 +7,7 @@ permalink:  docs/videos/:basename/
 tags: [devterminus]
 type: video
 layout: video
+searchboost: 50
 ---
 
 You can interact with Pantheon using our command line interface—[Terminus](/docs/terminus). In doing so, you can work faster and more efficiently, automate repetitive tasks, and access additional functionality.

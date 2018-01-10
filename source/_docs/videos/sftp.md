@@ -6,6 +6,7 @@ contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [admin, sftpfiles]
 type: video
+searchboost: 50
 layout: video
 ---
 Pantheon allows you to quickly and easily write code or add modules and plugins directly on the platform using on-server development.

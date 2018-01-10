@@ -8,6 +8,7 @@ tags: [devdrush]
 type: video
 categories: [drupal]
 layout: video
+searchboost: 50
 ---
 [Drush](https://github.com/drush-ops/drush/) is a command line shell for running and scripting Drupal tasks. Let’s install it and explore some commands.
 

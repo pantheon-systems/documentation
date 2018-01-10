@@ -7,6 +7,7 @@ permalink:  docs/videos/:basename/
 tags: [local]
 type: video
 layout: video
+searchboost: 50
 ---
 
 Pantheon encourages on-server development. However, many developers prefer the speed and convenience of [local development](/docs/local-development) where sites run in virtual machines and don’t require Internet access.

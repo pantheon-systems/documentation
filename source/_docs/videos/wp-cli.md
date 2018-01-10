@@ -8,6 +8,7 @@ tags: [devwpcli]
 type: video
 categories: [wordpress]
 layout: video
+searchboost: 50
 ---
 WP-CLI is a set of command line tools for managing WordPress installations. Let’s install it and explore some commands.
 

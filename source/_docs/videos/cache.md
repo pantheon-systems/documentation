@@ -8,6 +8,7 @@ tags: [cacheedge]
 type: video
 categories: [develop, cli]
 layout: video
+searchboost: 50
 ---
 
 Caching is an important technique to utilize when developing a CMS application. Let’s look at what the platform offers in terms of front end and back end caching.  

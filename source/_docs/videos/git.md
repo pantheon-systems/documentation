@@ -8,6 +8,7 @@ tags: [git]
 type: video
 categories: [develop, cli]
 layout: video
+searchboost: 50
 ---
 Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
 

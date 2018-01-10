@@ -8,6 +8,7 @@ tags: [local]
 type: video
 categories: []
 layout: video
+searchboost: 50
 ---
 We recommend [Kalabox](/docs/kalabox) as an easy-to-use local development solution. Let’s explore why, install Kalabox, and configure a basic workflow.
 
