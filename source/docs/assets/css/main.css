@@ -4704,6 +4704,11 @@ a.topic-info-link {
   .flex-panel-item-platform-integrations {
   }
 }
+@media (max-width: 448px) {
+  #headless {
+    flex: 1 100% !important;
+  }
+}
 @media (max-width: 400px) {
   .topic-info .topic-info__image {
     background-position: center 20px;
