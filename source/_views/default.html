@@ -33,7 +33,7 @@
     <meta name="google-site-verification" content="n49gHyRyl90KIyeI1VgmjAMLIEchW4TCX8NsY8gmTI8" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{% block title %}{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }} | {{ site.title }}{% else %} | {{ site.title }}{% endif %}{% endblock %}</title>
+    <title data-addsearch="exclude">{% block title %}{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }} | {{ site.title }}{% else %} | {{ site.title }}{% endif %}{% endblock %}</title>
     <meta name="description" content="{{ page.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="{{ site.site_url}}{{ page.url }}" />
