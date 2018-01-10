@@ -8,6 +8,7 @@ nexturl: terminus/updates/
 previousurl: terminus/plugins/create/
 permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
+searchboost: 100
 ---
 If you find yourself passing the same options to Terminus repeatedly, consider creating a configuration file to provide default values for common options. The Terminus configuration file lives at `$HOME/.terminus/config.yml`.
 

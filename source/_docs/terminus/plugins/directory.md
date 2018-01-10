@@ -8,6 +8,7 @@ nexturl: terminus/plugins/create/
 previousurl: terminus/plugins/
 permalink: docs/terminus/plugins/:basename/
 image: terminus-thumbLarge
+searchboost: 100
 ---
 Extend the functionality of Terminus and add commands by installing <a href="https://github.com/terminus-plugin-project">third party plugins</a> or <a href="https://pantheon.io/docs/terminus/plugins/create">create your own</a>.
 

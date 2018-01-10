@@ -8,6 +8,7 @@ nexturl: terminus/plugins/
 previousurl: terminus/examples/
 permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
+searchboost: 100
 ---
 <div class="alert alert-info" markdown="1">
 <h4 class="info">Note</h4>

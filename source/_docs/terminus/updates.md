@@ -8,6 +8,7 @@ layout: terminuspage
 permalink: docs/terminus/:basename/
 previousurl: terminus/configuration/
 image: terminus-thumbLarge
+searchboost: 100
 ---
 <div class="container col-md-12" ng-app="terminusReleaseApp" ng-controller="terminusReleaseCtrl">
   <h2>Update to the Current Release {[{releases[0].name}]}</h2>
