@@ -88,7 +88,7 @@ Two-factor authentication is a helpful security practice because it prevents att
 <div class="tab-content">
   <!-- Active pane content -->
   <div role="tabpanel" class="tab-pane active" id="wp-org" markdown="1">
-  For an organization-wide solution, there are many different [WordPress plugins for single sign on](https://wordpress.org/plugins/tags/single-sign-on){.external} that can provide TFA capabilities. One of the service options we use internally at Pantheon is OneLogin, which has the [OneLogin SAML SSO](https://wordpress.org/plugins/onelogin-saml-sso/){.external} plugin. '
+  For an organization-wide solution, there are many different [WordPress plugins for single sign on](https://wordpress.org/plugins/tags/single-sign-on){.external} that can provide TFA capabilities. One of the service options we use internally at Pantheon is OneLogin, which has the [OneLogin SAML SSO](https://wordpress.org/plugins/onelogin-saml-sso/){.external} plugin.
 
   #### OneLogin Instructions
 
@@ -147,7 +147,7 @@ The Pantheon Dashboard offers social login with Google:
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1"></p>We recommend adding an [SSH Key][/docs/ssh-keys] to authenticate yourself on Pantheon for operations such as SFTP connections, which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit https://dashboard.pantheon.io/reset-password</p></div>
+<p markdown="1">We recommend adding an [SSH Key][/docs/ssh-keys] to authenticate yourself on Pantheon for operations such as SFTP connections, which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit https://dashboard.pantheon.io/reset-password</p></div>
 
 ### Single Sign-On for Orgs
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/).
