@@ -8,7 +8,7 @@ This article lists modules and plugins that may not function as expected or are 
 
 We do not prevent you from installing and using these plugins/modules; however, they may not work as expected and we cannot provide troubleshooting support.
 
-**Plugin & Module Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fpantheon.io/docs/unsupported-modules-plugins/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content){.external}; we're happy to help provide information that can lead to conflict resolutions between your code and the platform. If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/master/source/_docs/unsupported-modules-plugins.md){.external}.
+**Plugin & Module Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fpantheon.io/docs/modules-plugins-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content){.external}; we're happy to help provide information that can lead to conflict resolutions between your code and the platform. If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/master/source/_docs/modules-plugins-known-issues.md){.external}.
 
 ## Drupal Modules
 <hr>
@@ -158,10 +158,10 @@ You can modify this patch according to your needs, such as performing an operati
 **Issue**: This module requires write access to the site's codebase for editing CSS files, which is not granted on Test and Live environments by design.
 <hr>
 ### [Media](https://www.drupal.org/project/media)
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
 <hr>
 ### [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus)
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
 <hr>
 
 ### [Mobile Tools](https://www.drupal.org/project/mobile_tools)
@@ -169,7 +169,7 @@ You can modify this patch according to your needs, such as performing an operati
 <hr>
 
 ### [Node export webforms](https://www.drupal.org/project/node_export_webforms)
-**Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
 
 **Solution**: Use [drush](https://drushcommands.com/drush-8x/webform/webform-export/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
@@ -194,7 +194,7 @@ Customers have also reported success by making the export path [configurable](ht
  <hr>
 
 ### [Plupload](https://www.drupal.org/project/plupload)
-**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in settings.php. Example:
 ```
@@ -240,7 +240,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 <hr>
 
 ### [Taxonomy CSV](https://www.drupal.org/project/taxonomy_csv)
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
 <hr>
 
 ### [Twig Extensions](https://www.drupal.org/project/twig_extensions)
@@ -254,7 +254,7 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 <hr>
 
 ### [Views data export](https://www.drupal.org/project/views_data_export)
-**Issue**: This module requires the use of the `/tmp` directory. There is also a [patch](https://www.drupal.org/node/1782038) available, but we still cannot guarantee that the use of the `/tmp` directory will work successfully. See [Using the tmp Directory](/docs/unsupported-modules-plugins/#using-the-tmp-directory) section below for more information.
+**Issue**: This module requires the use of the `/tmp` directory. There is also a [patch](https://www.drupal.org/node/1782038) available, but we still cannot guarantee that the use of the `/tmp` directory will work successfully. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below for more information.
 
 **Solution**: A possible solution would be to set the export directory in `settings.php` to a `public://` stream wrapper location versus a `temporary://` one.  Example:
 ```

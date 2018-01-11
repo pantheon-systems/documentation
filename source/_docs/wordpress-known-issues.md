@@ -34,7 +34,7 @@ Pantheon supports designated use cases for [WordPress Site Networks](/docs/guide
 It's especially ill-advised to use Multisite to set up many distinct/separate sites — e.g. running different plugins, for different customers — on a single code installation.
 
 ## Unsupported Plugins
-See [Modules and Plugins with Known Issues](/docs/unsupported-modules-plugins) for an up-to-date list of modules and plugins that do not work with or are not supported by Pantheon.
+See [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues) for an up-to-date list of modules and plugins that do not work with or are not supported by Pantheon.
 
 ## Image uploads
 Since WordPress 4.5, a bug exists affecting the upload of large dimension images regardless of file size. See this [core issue](https://core.trac.wordpress.org/ticket/36534) for more information.
