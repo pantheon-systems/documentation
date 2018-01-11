@@ -75,6 +75,23 @@
     <meta name="addsearch-boost" content="{{ page.searchboost }}" />
     {% endif %}
 
+    <!-- Define content types for addsearch service provider -->
+    {% if page.type == "video" %}
+    <meta name="addsearch-category" content="Video" />
+    {% elseif page.type == "terminuspage" %}
+    <meta name="addsearch-category" content="Guide" />
+    {% elseif page.type == "guide" %}
+    <meta name="addsearch-category" content="Guide" />
+    {% elseif page.layout == "topic" %}
+    <meta name="addsearch-category" content="Topic Index" />
+    {% elseif page.layout == "taxon" %}
+    <meta name="addsearch-category" content="Topic Index" />
+    {% elseif page.changelog %}
+    <meta name="addsearch-category" content="Changelog" />
+    {% else %}
+    <meta name="addsearch-category" content="Doc" />
+    {% endif %}
+
     <!-- Twitter summary card with large image must be at least 280x150px -->
     <!-- Open Graph data -->
     <meta property="og:title" content="{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }}{% endif %}" />
