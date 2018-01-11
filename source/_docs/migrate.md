@@ -275,9 +275,15 @@ Connection to appserver.<ENV>.<Site UUID>.drush.in closed by remote host.
 If your database and code compressed are less than 256MB you can exclude the files directory from export using the `--tar-options="--exclude=code/sites/default/files"` flag. Then you can download a backup of the files from the existing site and import the archive to the new site from the Site Dashboard, under **<span class="glyphicons glyphicons-server"></span> Database / Files** > **Import**.
 
 ### How do I migrate a local site to Pantheon?
-When asked for your current site URL, enter `https://example.com` and continue. The Pantheon Migration plugin for WordPress does not support local sites. WordPress users must manually migrate. Drupal users can run the provided Drush command to generate an archive then upload it to a third party service like Dropbox to continue the standard migration procedure. If the archive file size exceeds 500MB you must migrate manually.
+When asked for your current site URL, enter `https://example.com` and continue.
 
-For details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual).
+**WordPress**
+
+The Pantheon Migration plugin for WordPress does not support local sites. WordPress users must [migrate manually](/docs/migrate-manual).
+
+**Drupal**
+
+Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/){.external} or [Google Drive](https://drive.google.com){.external}) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [migrate manually](/docs/migrate-manual).
 
 ### How long does the WordPress migration process take?
 Most migrations are completed within two hours. The migration time depends solely on the size of your site, so be aware that it may take more or less time than estimated. We will send you an email once your migration is complete. If there are any issues with the migration, we will notify you by email.
