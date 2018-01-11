@@ -4,6 +4,7 @@ subtitle: Considerations
 description: Overview of WordPress multisite support on the Pantheon Platform.
 anchorid: considerations
 layout: guide
+type: guide
 multisite: true
 generator: pagination
 pagination:

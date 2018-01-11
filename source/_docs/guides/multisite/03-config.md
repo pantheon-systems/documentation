@@ -6,6 +6,7 @@ multisite: true
 anchorid: config
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.multisitepages
 use:
