@@ -28,6 +28,11 @@ In order to focus internal development and engineering work, the Pantheon Dashbo
   </thead>
 </table>
 
+## Batch Uploads
+
+The [max execution time](/docs/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce/){.external} can encounter this limit.
+
+In this or similar instances, consider performing larger operations locally, them importing the code, files, and database back up to the platform.
 
 ## Multisite
 
@@ -49,7 +54,7 @@ Domain masking allows you to serve two entirely different and separate sites ove
 In and of itself, Pantheon does not support this kind of setup. Each site on the platform must have its own unique domain. However, this configuration can be achieved using an external service such as CloudFront, StackPath, Fastly, etc.
 
 ### Additional Databases
-While you are able to import an additional database to an environment, only the Pantheon database will be presevered when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.
+While you are able to import an additional database to an environment, only the Pantheon database will be persevered when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.
 
 ## Highly Populated Directories
 

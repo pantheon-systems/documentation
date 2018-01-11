@@ -394,7 +394,13 @@ For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authenticat
 <hr>
 
 ### [Weather Station](https://wordpress.org/plugins/live-weather-station/)
-**Issue**:  This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
+**Issue**: This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
+
+### [WooCommerce](https://wordpress.org/plugins/woocommerce/)
+**Issue**: The "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
+
+**Solution**: The suggested workaround is to clone the site locally, import the items, then sync the database back up to the platform.
+
 
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
 **Issue #1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
@@ -405,7 +411,7 @@ For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authenticat
 
     define('WP_MEMORY_LIMIT', '256M');
 
-**Issue #2**: WooZone writes to a cache folder in `wp-content/plugins/woozone/`, which is not editible in Test and Live
+**Issue #2**: WooZone writes to a cache folder in `wp-content/plugins/woozone/`, which is not editable in Test and Live
 
 **Solution**: Symlink `wp-content/plugins/woozone/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
