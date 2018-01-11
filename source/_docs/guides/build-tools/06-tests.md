@@ -13,6 +13,7 @@ permalink: docs/guides/build-tools/tests/
 previousurl: guides/build-tools/extend/
 nexturl: guides/build-tools/merge/
 editpath: build-tools/06-tests.md
+image: buildToolsGuide-thumb
 ---
 The Pantheon example projects include some basic tests to validate basic capabilities of the given framework. You can customize these tests and add more to fit your project needs. Drupal 8 uses  [Behat](http://behat.org/en/latest/){.external} and the WordPress example uses [WordHat](https://wordhat.info/){.external}.
 

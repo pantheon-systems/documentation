@@ -13,6 +13,7 @@ permalink: docs/guides/build-tools/new-pr/
 nexturl: guides/build-tools/configure/
 previousurl: guides/build-tools/create-project/
 editpath: build-tools/03-new-pr.md
+image: buildToolsGuide-thumb
 ---
 This section demonstrates GitHub's Pull Request workflow for Pantheon by making a simple code change on a feature branch then opening a Pull Request to accept that change into master.
 

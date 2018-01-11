@@ -13,6 +13,7 @@ permalink: docs/guides/build-tools/create-project/
 nexturl: guides/build-tools/new-pr/
 previousurl: guides/build-tools/
 editpath: build-tools/02-create-project.md
+image: buildToolsGuide-thumb
 ---
 In this section we'll use the Terminus Build Tools Plugin to create a new Pantheon Site, a corresponding GitHub repository, and configure CircleCI to run tests.
 

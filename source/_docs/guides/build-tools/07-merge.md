@@ -13,6 +13,7 @@ permalink: docs/guides/build-tools/merge/
 previousurl: guides/build-tools/tests/
 nexturl: guides/build-tools/custom-theme/
 editpath: build-tools/07-merge.md
+image: buildToolsGuide-thumb
 ---
 This lesson demonstrates the final process of the Pull Request workflow, merging. After completing an internal peer review process for a given Pull Request, work is considered ready for production and accepted into the master branch.
 

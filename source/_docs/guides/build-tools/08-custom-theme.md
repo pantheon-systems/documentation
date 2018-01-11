@@ -13,6 +13,7 @@ permalink: docs/guides/build-tools/custom-theme/
 nexturl: guides/build-tools/update/
 previousurl: guides/build-tools/merge/
 editpath: build-tools/08-custom-theme.md
+image: buildToolsGuide-thumb
 ---
 This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik){.external} theme using the Terminus Drush Console plugin. For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming){.external} on drupal.org.
 

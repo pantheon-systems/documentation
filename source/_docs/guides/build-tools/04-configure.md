@@ -13,6 +13,7 @@ permalink: docs/guides/build-tools/configure/
 nexturl: guides/build-tools/extend/
 previousurl: guides/build-tools/new-pr/
 editpath: build-tools/04-configure.md
+image: buildToolsGuide-thumb
 ---
 In this lesson, we'll use the Configuration Management system within the Drupal Admin interface to set block placements for our example site.
 
