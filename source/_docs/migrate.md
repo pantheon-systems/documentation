@@ -100,6 +100,7 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
 * **[WordPress Site Networks](/docs/migrate-wordpress-site-networks/)**
 * **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+* **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
 
 For more details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual/).
@@ -275,15 +276,28 @@ Connection to appserver.<ENV>.<Site UUID>.drush.in closed by remote host.
 If your database and code compressed are less than 256MB you can exclude the files directory from export using the `--tar-options="--exclude=code/sites/default/files"` flag. Then you can download a backup of the files from the existing site and import the archive to the new site from the Site Dashboard, under **<span class="glyphicons glyphicons-server"></span> Database / Files** > **Import**.
 
 ### How do I migrate a local site to Pantheon?
-When asked for your current site URL, enter `https://example.com` and continue.
+When asked for your current site URL, enter `https://example.com` and continue the migration procedure in the Site Dashboard.
 
-**WordPress**
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-1-id" role="presentation" class="active"><a href="#wp-local-migrate" aria-controls="wp-local-migrate" role="tab" data-toggle="tab">WordPress</a></li>
+  <!-- 2nd Tab Nav -->
+  <li id="tab-2-id" role="presentation"><a href="#drops-local-migrate" aria-controls="drops-local-migrate" role="tab" data-toggle="tab">Drupal</a></li>
+</ul>
 
-The Pantheon Migration plugin for WordPress does not support local sites. WordPress users must [migrate manually](/docs/migrate-manual).
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="wp-local-migrate" markdown="1">
+  The Pantheon Migration plugin for WordPress does not support local sites. WordPress users should [manually migrate](/docs/migrate-manual).
+  </div>
 
-**Drupal**
-
-Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/){.external} or [Google Drive](https://drive.google.com){.external}) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [migrate manually](/docs/migrate-manual).
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="drops-local-migrate" markdown="1">
+  Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/){.external} or [Google Drive](https://drive.google.com){.external}) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [manually migrate](/docs/migrate-manual).
+  </div>
+</div>
 
 ### How long does the WordPress migration process take?
 Most migrations are completed within two hours. The migration time depends solely on the size of your site, so be aware that it may take more or less time than estimated. We will send you an email once your migration is complete. If there are any issues with the migration, we will notify you by email.

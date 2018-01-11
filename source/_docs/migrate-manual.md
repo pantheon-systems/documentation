@@ -10,6 +10,7 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
 * **[WordPress Site Networks](/docs/guides/multisite/)**
 * **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+* **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
 
 <div class="alert alert-info">
