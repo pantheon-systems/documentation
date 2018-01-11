@@ -100,9 +100,10 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
 * **[WordPress Site Networks](/docs/migrate-wordpress-site-networks/)**
 * **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
+* **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
 
-For more details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual/).
+For more details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual/).
 
 ## Troubleshooting
 This section describes the causes of, and solution to the error messages that are displayed on the Site Dashboard if the migration fails to complete.
@@ -275,13 +276,28 @@ Connection to appserver.<ENV>.<Site UUID>.drush.in closed by remote host.
 If your database and code compressed are less than 256MB you can exclude the files directory from export using the `--tar-options="--exclude=code/sites/default/files"` flag. Then you can download a backup of the files from the existing site and import the archive to the new site from the Site Dashboard, under **<span class="glyphicons glyphicons-server"></span> Database / Files** > **Import**.
 
 ### How do I migrate a local site to Pantheon?
-You can import a WordPress site archive via URL (within file size limits) using [Terminus](/docs/terminus):
+When asked for your current site URL, enter `https://example.com` and continue the migration procedure in the Site Dashboard.
 
-```bash
-terminus site:import <site> <url>
-```
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-1-id" role="presentation" class="active"><a href="#wp-local-migrate" aria-controls="wp-local-migrate" role="tab" data-toggle="tab">WordPress</a></li>
+  <!-- 2nd Tab Nav -->
+  <li id="tab-2-id" role="presentation"><a href="#drops-local-migrate" aria-controls="drops-local-migrate" role="tab" data-toggle="tab">Drupal</a></li>
+</ul>
 
-You'll need to [manually migrate](/docs/migrate-manual) site archives that exceed 500MB.
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="wp-local-migrate" markdown="1">
+  The Pantheon Migration plugin for WordPress does not support local sites. WordPress users should [manually migrate](/docs/migrate-manual).
+  </div>
+
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="drops-local-migrate" markdown="1">
+  Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/){.external} or [Google Drive](https://drive.google.com){.external}) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [manually migrate](/docs/migrate-manual).
+  </div>
+</div>
 
 ### How long does the WordPress migration process take?
 Most migrations are completed within two hours. The migration time depends solely on the size of your site, so be aware that it may take more or less time than estimated. We will send you an email once your migration is complete. If there are any issues with the migration, we will notify you by email.
@@ -292,7 +308,7 @@ Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site 
 ### How do I use the Pantheon Migrations plugin with a custom WordPress upstream?
 If you'd like your existing WordPress site to get one-click updates from your [Custom Upstream](/docs/custom-upstream/), then the migration process will be slightly different.
 
-1. The general process will be the same as a vanilla WordPress site, but start with **Create New Site** instead of **Migrate existing site**. 
+1. The general process will be the same as a vanilla WordPress site, but start with **Create New Site** instead of **Migrate existing site**.
 
 2. Name your new site, and be sure to add it to the organization with access to the custom upstream you want to use.
 
@@ -304,7 +320,7 @@ You can now proceed with the normal migration steps [outlined above](#migrate-ex
 If you'd like your existing Drupal site to get one-click updates from your [Custom Upstream](/docs/custom-upstream/), then the migration process will be slightly different. The general process will be the same as a vanilla Drupal site, but start with **Create New Site** instead of **Migrate existing site**. Then use `terminus site:import <site> <url>` to import your site archive, or follow the [Manual migration](/docs/migrate-manual) instructions if your site archive exceeds file size limits.
 
 ### What if I can't use drush on my existing Drupal site?
-As an alternative to `drush` you can manually export and migrate. For details, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual).
+As an alternative to `drush` you can manually export and migrate. For details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual).
 
 ### Are database table prefixes supported?
 See [WordPress known issues](/docs/wordpress-known-issues/#table-prefixes).
