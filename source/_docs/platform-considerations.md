@@ -166,7 +166,7 @@ Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge
 Pantheon does not currently support any PHP frameworks outside of Drupal and WordPress. The platform is only optimized for Drupal or WordPress and no others. Although PHP will run, we can not assist you in getting the non-approved frameworks running in any way.
 
 ## Unsupported Drupal Modules and WordPress Plugins
-See [Modules and Plugins with Known Issues](/docs/unsupported-modules-plugins) for an up-to-date list of modules and plugins that do not work with or are not supported by Pantheon.
+See [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues) for an up-to-date list of modules and plugins that do not work with or are not supported by Pantheon.
 
 ## Inactive Site Freezing
 
