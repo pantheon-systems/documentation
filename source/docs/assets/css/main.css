@@ -280,12 +280,10 @@ h4.info > a.external[href]::after {
 }
 .changelog-wrapper a {
   color: #0093c9;
-  text-decoration: underline;
 }
 .changelog-sidebar a:hover{
   opacity: 0.65;
   color: #0093c9;
-  text-decoration: none;
 }
 .changelog-wrapper a:hover {
   opacity: 0.65;
