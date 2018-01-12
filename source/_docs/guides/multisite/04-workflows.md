@@ -86,7 +86,7 @@ Running into “Error: Site Not Found”? See [Troubleshoot](/docs/guides/multis
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">Because the WordPress object cache stores its data as key => value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends.</p>
+<p markdown="1">Because the WordPress object cache stores its data as key => value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends.  At this time, the caches must be flushed using Terminus and not the Pantheon dashboard.</p>
 </div>
 
 ## Refreshing data from Live
