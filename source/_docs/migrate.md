@@ -10,6 +10,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 - Upgrade to the latest version of WordPress or Drupal core
 - Clear all caches
 - Remove unneeded code, database tables, and files
+- Make sure to read our [platform considerations documentation](/platform-considerations/) and develop a plan to mitigate any obvious conflicts with the site needs or architecture.
 
 ## Migrate Existing Sites
 Pantheon provides a guided path for migrating existing sites to the platform, which begins by clicking the **Migrate Existing Site** button on the User Dashboard.
