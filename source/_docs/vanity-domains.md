@@ -57,6 +57,7 @@ If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.c
 
 * The sites on the subdomains may be able to read cookies set on your primary site.
 * If a site on the subdomain is reported as a malicious phishing/spam/malware site, it could prevent access to your main marketing site if Google/Norton/etc. block the site.
+* Vanity domains will not be able to use SSL as certificates cannot be provisioned for them at this time.  They will not render wtih HTTPS.
 
 
 ## Robots.txt with Custom Vanity Domains
