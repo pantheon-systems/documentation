@@ -8,10 +8,10 @@ searchboost: 150
 <div class="alert alert-danger" role="alert">
   <h4 class="info">Warning</h4>
   <p markdown="1">
-    Managing a Drupal 8 site with Composer is an all or nothing proposition. Our Drupal 8 upstream includes a `composer.json` and a fully built `/vendor` directory. When a site developer executes a `composer require anyone/anything:anyversion` within a site repository built from [drops-8](https://github.com/pantheon-systems/drops-8){.external}, this is effectively the same thing as [overwriting Drupal core](/undo-commits/).
+    Managing a Drupal 8 site with Composer is an all or nothing proposition. Our Drupal 8 upstream includes a `composer.json` and a fully built `/vendor` directory. When a site developer executes a `composer require anyone/anything:anyversion` within a site repository built from [drops-8](https://github.com/pantheon-systems/drops-8){.external}, this is effectively the same thing as [overwriting Drupal core](/docs/undo-commits/).
   </p>
   <p markdown="1">
-    Once a site with a `composer.json` and `/vendor` directory has a dependency added downstream using Composer, Pantheon's upstream update process will cease to work alltogether. All future updates will contain conflicts which are very time consuming and error prone to remediate. If you are working on a site that requires custom Composer libraries or you want to begin managing site modules via Composer, you need to fully convert the repository to a Composer managed workflow, [switch the site upstream to a blank upstream](/terminus/examples/#switch-upstreams), and cease using the dashboard upstream update feature.
+    Once a site with a `composer.json` and `/vendor` directory has a dependency added downstream using Composer, Pantheon's upstream update process will cease to work alltogether. All future updates will contain conflicts which are very time consuming and error prone to remediate. If you are working on a site that requires custom Composer libraries or you want to begin managing site modules via Composer, you need to fully convert the repository to a Composer managed workflow, [switch the site upstream to a blank upstream](/docs/terminus/examples/#switch-upstreams), and cease using the dashboard upstream update feature.
   </p>
 </div>
 ## Managing Core as a Project Dependency
