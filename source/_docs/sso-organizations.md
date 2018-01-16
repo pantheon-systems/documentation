@@ -26,18 +26,17 @@ New and existing members outside the organization are not redirected to the conf
 
 ## Configure your IdP
 
-Refer to your IdP for general SAML 2.0 setup instructions.
+Refer to your IdP for general SAML 2.0 setup instructions. In the examples below, replace `<Example-Org-Name>` with your organization name. Separate words with hyphens, and remember to append `SSO`.
 
 You will need to enter the following:
 
-1.  **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Example-Org-Name-SSO`
+1.  **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=<Example-Org-Name>-SSO`
 
-2.  **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Example-Org-Name-SSO`
+2.  **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:<Example-Org-Name>-SSO`
 
     <div class="alert alert-info" role="alert">
     <h4 class="info">Note</h4>
     <ul>
-    <li>Replace <code>Example-Org-Name</code> with your Pantheon organization name. Separate words with hyphens, and append 'SSO'.</li>
     <li> The connection name must start with an alphanumeric character and can only contain alphanumeric characters and hyphens (-).</li>
     <li> The max length for a connection name is 35 characters, including the appended 'SSO'.</li></ul>
     </div>
