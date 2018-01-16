@@ -77,7 +77,7 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 </table>
 
 ## Let's Encrypt Certificates
-[Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically adds your site's domains to a shared Let's Encrypt certificate, and always renew it automatically, with no additional cost.
+[Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically adds your site's domains to a shared Let's Encrypt certificate, and always renew it automatically, with no additional cost. Let's Encrypt issued certs are valid for 90 days and we renew them at least 30 days before expiration.
 
 {% include("content/https-requirements.html")%}
 
