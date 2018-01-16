@@ -5,6 +5,7 @@ tags: [siteintegrations]
 categories: [drupal7]
 contributors:
   - peter-pantheon
+  - alexfornuto
 date: 9/1/2016
 ---
 Pantheon's [Global CDN](/docs/global-cdn) makes it unnecessary to add a third party CDN for most use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
@@ -135,6 +136,12 @@ terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 
 <!-- 2nd pane content -->
 <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+
+<div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">As of the latest update to this doc, the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors){.external} module appears to be uninstallable. Refer to [this bug report](https://www.drupal.org/project/s3fs_cors/issues/2852333){.external} for more information.</p>
+</div>
+
 Before you begin:
 
  - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx){.external} locally.
