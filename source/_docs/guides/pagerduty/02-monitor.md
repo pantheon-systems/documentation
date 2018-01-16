@@ -2,6 +2,7 @@
 title: Incident Management
 subtitle: New Relic Ping Monitors
 layout: guide
+type: guide
 anchorid: monitor
 pagerduty: true
 generator: pagination

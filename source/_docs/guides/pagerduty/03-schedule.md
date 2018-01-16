@@ -5,6 +5,7 @@ pagerduty: true
 anchorid: schedule
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.pagerdutypages
 use:

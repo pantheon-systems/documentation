@@ -5,6 +5,7 @@ pagerduty: true
 anchorid: slack
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.pagerdutypages
 use:

@@ -6,6 +6,7 @@ gitwordpress: true
 anchorid: remove-editor
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.gitwordpresspages
 use:

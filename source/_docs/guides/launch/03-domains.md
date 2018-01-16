@@ -5,6 +5,7 @@ launch: true
 anchorid: domains
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.launchpages
 use:

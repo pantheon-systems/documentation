@@ -5,6 +5,7 @@ quickstart: true
 anchorid: site-dashboard
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.quickstartpages
 use:

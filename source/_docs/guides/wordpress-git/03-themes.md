@@ -7,6 +7,7 @@ anchorid: themes
 guidetoc: true
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.gitwordpresspages
 use:

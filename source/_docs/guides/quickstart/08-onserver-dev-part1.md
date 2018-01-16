@@ -5,6 +5,7 @@ quickstart: true
 anchorid: onserver-dev-part1
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.quickstartpages
 use:

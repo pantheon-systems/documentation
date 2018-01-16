@@ -5,6 +5,7 @@ pagerduty: true
 anchorid: notify
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.pagerdutypages
 use:

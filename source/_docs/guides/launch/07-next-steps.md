@@ -6,6 +6,7 @@ survey: true
 anchorid: launch-check
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.launchpages
 use:

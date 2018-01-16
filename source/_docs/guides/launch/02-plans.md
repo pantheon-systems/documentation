@@ -4,6 +4,7 @@ subtitle: Upgrade Site Plan
 layout: guide
 anchorid: plans
 launch: true
+type: guide
 generator: pagination
 pagination:
     provider: data.launchpages

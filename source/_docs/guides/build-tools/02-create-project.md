@@ -3,6 +3,7 @@ title: Build Tools
 subtitle: Create a New Project
 anchorid: create-project
 layout: guide
+type: guide
 buildtools: true
 generator: pagination
 pagination:

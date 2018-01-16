@@ -5,6 +5,7 @@ quickstart: true
 anchorid: connection-modes
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.quickstartpages
 use:
