@@ -5,6 +5,7 @@ quickstart: true
 anchorid: create-new-site
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.quickstartpages
 use:

@@ -6,6 +6,7 @@ pagerduty: true
 anchorid: next-steps
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.pagerdutypages
 use:

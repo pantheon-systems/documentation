@@ -5,6 +5,7 @@ buildtools: true
 anchorid: behat
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.buildtoolspages
 use:

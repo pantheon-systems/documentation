@@ -6,6 +6,7 @@ anchorid: next-steps
 generator: pagination
 survey: true
 layout: guide
+type: guide
 pagination:
     provider: data.quickstartpages
 use:

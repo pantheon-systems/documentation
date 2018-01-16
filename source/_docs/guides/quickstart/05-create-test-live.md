@@ -5,6 +5,7 @@ quickstart: true
 anchorid: create-test-live
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.quickstartpages
 use:

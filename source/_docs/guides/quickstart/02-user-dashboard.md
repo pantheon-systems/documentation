@@ -3,6 +3,7 @@ title: Quick Start
 subtitle: User Dashboard
 anchorid: user-dashboard
 layout: guide
+type: guide
 quickstart: true
 generator: pagination
 pagination:

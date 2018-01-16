@@ -5,6 +5,7 @@ launch: true
 anchorid: redirects
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.launchpages
 use:

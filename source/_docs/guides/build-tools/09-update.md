@@ -6,6 +6,7 @@ anchorid: update
 generator: pagination
 survey: true
 layout: guide
+type: guide
 pagination:
     provider: data.buildtoolspages
 use:
