@@ -4,6 +4,16 @@ description: Start with Composer basics then explore suggested workflows for Wor
 tags: [automation, workflow]
 searchboost: 150
 ---
+<div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">
+    Pantheon does recommend using Composer to manage a subset of project dependencies, such as libraries but not core. Doing so is especially problematic for Drupal 8 sites since Composer is used by core, meaning any change to `composer.json` or the `vendor` directory would result in massive merge conflicts when trying to update core via one-click updates in the Pantheon Site Dashboard.
+  </p><br>
+  <p markdown="1">
+    Managing sites with Composer is an all or nothing proposition. If you would like to begin managing dependencies with Composer, you need to fully convert the site to a Composer managed workflow and cease using the one-click updates provided by Pantheon.
+  </p>
+</div>
+
 {% include("content/composer-fundamentals.html")%}
 
 ## Managing Core as a Project Dependency
@@ -20,16 +30,6 @@ In this workflow, a [Multidev](/docs/multidev/) environment is created on Panthe
 We recommend the Pull Request workflow for single site use cases, and for most use cases involving larger site portfolios such as EDUs. You can create a "template" repository based off Pantheon's example repositories and customize it to your liking, then use the template to create new sites.
 
 However, this method does not support One-click updates in the Site Dashboard. Adopting this workflow means forgoing all other update techniques in favor of Composer. If your use case requires a simpler update strategy for non-technical site admins, this workflow could present problems scaling or at the very least require additional training for your development team.
-
-<div class="alert alert-danger" role="alert">
-  <h4 class="info">Warning</h4>
-  <p markdown="1">
-    Pantheon does not support using Composer to manage a subset of project dependencies, such as libraries but not core. Doing so is especially problematic for Drupal 8 sites since Composer is used by core, meaning any change to `composer.json` or the `vendor` directory would result in massive merge conflicts when trying to update core via one-click updates in the Pantheon Site Dashboard.
-  </p><br>
-  <p markdown="1">
-    Managing sites with Composer is an all or nothing proposition. If you would like to begin managing dependencies with Composer, you need to fully convert the site to a Composer managed workflow and cease using the one-click updates provided by Pantheon.
-  </p>
-</div>
 
 
 ## Custom Upstream Workflow
