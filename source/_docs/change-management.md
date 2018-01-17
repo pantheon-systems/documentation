@@ -14,7 +14,7 @@ These tables detail the actions each role can execute on each Dashboard.
 
 In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new sandboxes at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
 
-###Enterprise and Partner Organizations: Roles and Permissions
+###Organizations: Roles and Permissions
 
 <table class="table  table-bordered table-responsive">
     <thead>
