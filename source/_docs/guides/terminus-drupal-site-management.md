@@ -95,7 +95,7 @@ $ terminus dashboard <site>.<env>
 
 ![Dashboard in browser](/source/docs/assets/images/dashboard/terminus-cli-open-dash.png)
 
-Also, the status of each of the environments within the site can be seen using a `terminus site environments` command.
+Also, the status of each of the environments within the site can be seen using a `terminus env:list` command.
 
 ```nohighlight
 $ terminus env:list <site>
@@ -131,7 +131,7 @@ Not bad, eh? All this without a single GUI or web browser click! If you look at 
 
 ![The dashboard showing the code was deployed to the Dev environment](/docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
-Let's commit it all into the Git repo with the `terminus site code commit` command:
+Let's commit it all into the Git repo with the `terminus env:commit` command:
 
 ```nohighlight
 $ terminus env:commit <site>.<env> --message="Initial Commit"
@@ -167,7 +167,7 @@ Success: Successfully commited.
 
 ![The dashboard's showing the code was deployed to the Dev environment](/source/docs/assets/images/dashboard/terminus-commit-with-message.png)
 
-And finally, let's initialize the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using `env:deploy`.
+And finally, let's initialize the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using a `terminus env:deploy` command:
 
 ```nohighlight
 $ terminus env:deploy <site>.test --sync-content --cc --updatedb
