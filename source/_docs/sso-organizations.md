@@ -26,7 +26,7 @@ New and existing members outside the organization are not redirected to the conf
 
 ## Configure your IdP
 
-Refer to your IdP for general SAML 2.0 setup instructions. In the examples below, replace `<Example-Org-Name>` with your organization name. Separate words with hyphens, and remember to append `SSO`.
+Refer to your IdP for general SAML 2.0 setup instructions. In the examples below, replace `<Example-Org-Name>` with your organization name. Separate words with hyphens, and remember to append `-SSO`.
 
 You will need to enter the following:
 
