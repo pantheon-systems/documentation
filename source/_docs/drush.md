@@ -155,8 +155,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
   // Check if Drupal or WordPress is running via command line
   (php_sapi_name() != "cli")) {
   if ($_SERVER['HTTP_HOST'] != 'www.yoursite.com' ||
-      !isset($_SERVER['HTTP_X_SSL']) ||
-      $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+      !isset($_SERVER['HTTP_USER_AGENT_HTTPS']) ||
+      $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://www.yoursite.com'. $_SERVER['REQUEST_URI']);
     exit();
