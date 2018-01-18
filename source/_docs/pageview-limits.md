@@ -11,7 +11,7 @@ However, this does mean that websites can run happily even though they are over 
 
 ## How We Measure Site Traffic
 
-Pantheon defines plan levels based on pageviews to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform from the CMS.
+Pantheon defines plan levels based on pageviews to help site owners pick the right plan based on expected or historical traffic. To verify that sites receive traffic within their plan limit, we count requests served by the platform from the CMS. Cached responses count as pageviews.
 
 This includes not only HTML pages served by the CMS, but also responses in formats such as JSON and XML that are not tracked by standard analytics suites. API calls and AJAX requests do count as traffic, and are considered against plan limits. If you are planning to run a high traffic decoupled or "headless" implementation, you should contact sales in advance to discuss pricing.
 
@@ -70,4 +70,4 @@ As above, in cases where these events are regular or sustained, we reserve the r
 
 Site traffic is rarely a black and white issue, and cases of clear plan abuse are outliers. We always start with a conversation, and are equipped to go deep in determining what is causing an excessive amount of traffic for your site.
 
-If you receive a communication from us about possible plan abuse, don't panic. We will work with you to fully understand the situation and find a solution, whether that involves shutting down a malicious bot, or adjusting your site's plan.
+The Site Dashboard does not expose pageviews and our support engineers do not have the ability to determine pageviews at this time. If you receive a communication from us about possible plan abuse, don't panic. We will work with you to fully understand the situation and find a solution, whether that involves shutting down a malicious bot, or adjusting your site's plan.
