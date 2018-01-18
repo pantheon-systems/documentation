@@ -4,14 +4,20 @@ description: Detailed information on how to maintain Custom Upstreams and distri
 tags: [tools, workflow]
 categories: []
 ---
-Maintainers of [Custom Upstreams](/docs/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. We recommend the following workflow to maintain Custom Upstreams on Pantheon.
+Maintainers of [Custom Upstreams](/docs/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of what type of update you're preparing for release, you'll want to test things out before you distribute them out to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
 <p markdown="1">Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).</p>
 </div>
 
-Regardless of what type of update you're preparing for release, you'll want to test things out before you distribute them out to your sites. You should have a remote repository for your Custom Upstream already in place and connected to Pantheon. If you do not, please [do so now](/docs/create-custom-upstream).
+## Before You Begin
+Follow the procedure to [create a custom upstream](/docs/create-custom-upstream) so that you have:
+
+- A repository for your Custom Upstream hosted with your preferred provider (GitLab, BitBucket)
+- A local clone of that repository that tracks Pantheon's upstream as a remote
+- Pantheon's core code merged into your Custom Upstream repository
+- Your Custom Upstream repository connected to Pantheon
 
 ## Create a Test Site on Pantheon
 
@@ -103,7 +109,15 @@ Regardless of what type of update you're preparing for release, you'll want to t
 
 7. Click the **Create Environment** button next to the `core-update` branch.
 
-8. Use this new Multidev environment to evaluate your `core-update` branch. When you're ready to release, merge the branch into master and push to your remote repository on GitHub or Bitbucket.  
+8. Use this new Multidev environment to evaluate your `core-update` branch. When you're ready to release, merge the branch into master and push to your remote repository on GitHub or Bitbucket:
+
+    ```command
+    git checkout master
+    git merge --no-ff core-update
+    git push origin master
+    ```
+
+    This assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
 
 Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin. For more details, see [Apply Upstream Updates](/docs/upstream-updates).
 
