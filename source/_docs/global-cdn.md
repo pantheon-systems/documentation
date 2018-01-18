@@ -20,7 +20,7 @@ Additionally, the Global CDN has an improved cache strategy that eliminates Pant
 
 Finally, the Global CDN includes interfaces to dynamically expire selected content from the cache, rather than doing a full cache flush. There are basic implementations available as Drupal modules and WordPress plugins, as well as a developer API for implementing custom cache tagging/clearing behavior.
 
-In early testing we saw multi-second speedups even within the continental US. International users will benefit even more:
+In early testing we saw multi-second speedups in Visual Progress <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Visual Progress" data-content="The pace at which content renders on the visible page"><em class="fa fa-info-circle"></em></a> even within the continental US. International users will benefit even more:
 
 ![Example before and after page load time](/docs/assets/images/global-cdn-time-to-load.png)
 
