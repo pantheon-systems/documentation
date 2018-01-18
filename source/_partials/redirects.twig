@@ -22,8 +22,8 @@
   }
 
   if ($_SERVER['HTTP_HOST'] != $primary_domain
-      || !isset($_SERVER['HTTP_X_SSL'])
-      || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+      || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
+      || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
     # Name transaction "redirect" in New Relic for improved reporting (optional)
     if (extension_loaded('newrelic')) {
@@ -50,8 +50,8 @@
   }
 
   if ($_SERVER['HTTP_HOST'] != $primary_domain
-      || !isset($_SERVER['HTTP_X_SSL'])
-      || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+      || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
+      || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
     # Name transaction "redirect" in New Relic for improved reporting (optional)
     if (extension_loaded('newrelic')) {
@@ -82,8 +82,8 @@
   }
 
   if ($_SERVER['HTTP_HOST'] != $primary_domain
-      || !isset($_SERVER['HTTP_X_SSL'])
-      || $_SERVER['HTTP_X_SSL'] != 'ON' ) {
+      || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
+      || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
     # Name transaction "redirect" in New Relic for improved reporting (optional)
     if (extension_loaded('newrelic')) {
