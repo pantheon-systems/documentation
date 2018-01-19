@@ -58,6 +58,10 @@ See our guide on [Upgrading PHP Versions](/docs/php-versions/).
 
 Sometimes even after updating the drush version in `pantheon.yml`, the correct version of drush is not called. This is usually caused by an outdated configuration file, `policy.drush.inc`, in your local `~/.drush` directory, overriding `pantheon.yml`. Remove the file, or comment out its contents, to resolve.
 
+## Site-local Drush Usage
+If you need to specify a minor version or a version not available on the platform (such as Drush 9), you can add a site-local installation of Drush to your repository. This will redispatch Pantheon's platform Drush to the site-local installation. Do not select any major version of Drush lower than 8.
+
+For more information, see [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush){.external}.
 
 ## See Also
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
