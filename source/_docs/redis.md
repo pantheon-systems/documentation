@@ -383,7 +383,7 @@ Fatal error: require_once(): Failed opening required
 
 ### Drupal 6 Cache Backport
 
-If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport) module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6. See [INSTALL.TXT](http://drupalcode.org/project/cache_backport.git/blob_plain/HEAD:/INSTALL.txt) for how to configure Cache Backport.
+If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport){.external} module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6. See [INSTALL.TXT](http://drupalcode.org/project/cache_backport.git/blob_plain/HEAD:/INSTALL.txt){.external} for how to configure Cache Backport.
 
 If you see the following message:
 
@@ -402,11 +402,11 @@ $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 
 #### What happens when Redis reaches maxmemory?
 
-The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up), keeping in mind our `maxmemory-policy` is `allkeys-lru`.
+The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up){.external}, keeping in mind our `maxmemory-policy` is `allkeys-lru`.
 
 #### Is Redis set up as an LRU cache?
 
-We are using [allkeys-lru](https://redis.io/topics/lru-cache). Here is the Redis configuration file for your Live environment:
+We are using [allkeys-lru](https://redis.io/topics/lru-cache){.external}. Here is the Redis configuration file for your Live environment:
 
 ```nohighlight
 cat redis.conf
