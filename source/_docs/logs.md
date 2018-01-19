@@ -26,7 +26,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
       </tr>
       <tr>
         <th>nginx-access.log</th>
-        <td>60 days of logs</td>
+        <td>Up to 60 days of logs</td>
         <td  markdown="1">Webserver access log. **Do not consider canonical**, as this will be wiped if the application server is reset or rebuilt. See <a href="/docs/nginx-access-log">Parsing nginx Access Logs with GoAccess</a>.</td>
       </tr>
       <tr>
