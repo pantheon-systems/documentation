@@ -61,6 +61,8 @@ Sometimes even after updating the drush version in `pantheon.yml`, the correct v
 ## Site-local Drush Usage
 If you need to specify a minor version or a version not available on the platform (such as Drush 9), you can add a site-local installation of Drush to your repository. This will redispatch Pantheon's platform Drush to the site-local installation. Do not select any major version of Drush lower than 8.
 
+For more information, see [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush){.external}.
+
 ## See Also
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
 - [Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
