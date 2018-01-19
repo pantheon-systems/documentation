@@ -141,7 +141,7 @@ Two-factor authentication is a helpful security practice because it prevents att
 
 ## Pantheon Platform TFA
 ### Log in with Google
-The Pantheon Dashboard offers social login with Google:
+The Pantheon Dashboard offers social login with Google, which can be configured to use [Google TFA](https://www.google.com/landing/2step/):
 
 ![Connect with Google](/source/docs/assets/images/log-in-with-google.png)
 
