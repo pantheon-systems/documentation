@@ -147,7 +147,7 @@ The Pantheon Dashboard offers social login with Google, which can be configured 
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">We recommend adding an [SSH Key][/docs/ssh-keys] to authenticate yourself on Pantheon for operations such as SFTP connections, which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit https://dashboard.pantheon.io/reset-password</p></div>
+<p markdown="1">We recommend adding an [SSH Key](/docs/ssh-keys) to authenticate yourself on Pantheon for operations such as SFTP connections, which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password){.external}</p></div>
 
 ### Single Sign-On for Orgs
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/).
