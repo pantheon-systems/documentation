@@ -93,7 +93,7 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 
 ## Merge Code
 
-1. Select the environment that you want to merge into. For example, if you want to merge your work into master on Dev, click the Dev tab. Otherwise, select the branch environment.
+1. To merge code from a Multidev into the master branch on Dev, click the Dev tab. 
 2. Click **Merge**.
 3. Select the environment with commits that can be merged into the target.
 Instructions for using the command-line to merge the changes into the target are shown and can be pasted directly into the terminal without modification.
