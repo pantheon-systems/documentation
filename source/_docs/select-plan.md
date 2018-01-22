@@ -40,8 +40,8 @@ The following should be considered before downgrading your site from a paid plan
 ### Downgrade to Personal
 The following should be considered before switching to a Personal plan:
 
-* Redis addon service will be disabled for [WordPress](/docs/wordpress-redis/) and [Drupal](/docs/drupal-redis/).
-* [Solr](/docs/solr) addon service will be disabled.
+* The [Redis addon service](/docs/redis/) will be disabled.
+* The [Solr](/docs/solr) addon service will be disabled.
 
 
 Before moving to a Personal plan, we recommend preparing the site by disabling Redis and Solr from within WordPress or Drupal.
