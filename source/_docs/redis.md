@@ -8,20 +8,15 @@ Redis is an open-source, networked, in-memory, key-value data store that can be 
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Learn industry best practices for Drupal or WordPress caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
+  <p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
 </div>
-
-
 ## Benefits of Redis
-
 Most website frameworks like Drupal and WordPress use the database to cache internal application "objects" which can be expensive to generate (menu trees, filter results, etc.), and to keep cached page content. Since the database also handles many queries for normal page requests, it is the most common bottleneck causing increase load-times.
 
 Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
 ## Enable Redis
-
-Enable Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**.
-
+All plans except for a Personal plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
 | Plans         | Supported
 | ------------- |:-------------:|
@@ -32,7 +27,6 @@ Enable Redis cache server from your Pantheon Site Dashboard by going to **Settin
 | Elite         | **Yes**       |
 
 ---
-
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
@@ -49,16 +43,9 @@ Enable Redis cache server from your Pantheon Site Dashboard by going to **Settin
 <!-- Tab panes -->
 <div class="tab-content">
   <!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-Enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
-
-## Install Drop-in Plugin {.info}
-[WP Redis](https://wordpress.org/plugins/wp-redis/){.external} is loaded via a drop-in file, so there's no need to activate it on your WordPress sites. The following installation methods are supported:
-
-### Install via Symlink Drop-in {.info}
-This method will store object cache values persistently in Redis while preserving the standard procedures for applying plugin updates.
-
-1. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/){.external} plugin via SFTP or Git. To install via [Terminus](/docs/terminus), [set the connection mode to SFTP](/docs/sftp) then run:
+  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+  1. Enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+  2. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/){.external} plugin via SFTP or Git. To install via [Terminus](/docs/terminus), [set the connection mode to SFTP](/docs/sftp) then run:
 
     ```
     terminus wp <site>.<env> -- plugin install wp-redis
@@ -69,8 +56,7 @@ This method will store object cache values persistently in Redis while preservin
     ```
     terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
     ```
-
-2. Create a new file named `wp-content/object-cache.php` that contains the following:
+  3. Create a new file named `wp-content/object-cache.php` that contains the following:
 
     ```php
     <?php
@@ -79,8 +65,7 @@ This method will store object cache values persistently in Redis while preservin
     ```
 
     This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using SFTP or Git, commit the new file to the Dev environment.
-
-3. In the Dev environment's WordPress Dashboard, verify installation by selecting **Drop-ins** from the Plugins section:
+  4. In the Dev environment's WordPress Dashboard, verify installation by selecting **Drop-ins** from the Plugins section:
 
     ![The object-cache Drop-In Plugin](/docs/assets/images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
 
@@ -89,192 +74,180 @@ This method will store object cache values persistently in Redis while preservin
     ```
     terminus wp <site>.<env> -- plugin update wp-redis
     ```
+  <div class="alert alert-info">
+  <h4 class="info">Note</h4>
+  <p markdown="1">[WP Redis](https://wordpress.org/plugins/wp-redis/){.external} is loaded via a drop-in file, so there's no need to activate it on your WordPress sites.</p></div>
 
-### Install via Composer {.info}
+  <div class="panel panel-drop panel-guide" id="accordion">
+    <div class="panel-heading panel-drop-heading">
+       <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#advance-installs"><h3 class="panel-title panel-drop-title info" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Explore Advanced Install Methods (Optional)</h3></a>
+     </div>
+     <div id="advance-installs" class="collapse">
+       <div class="panel-inner" markdown="1">
+        #### Install via Composer {.info}
+        1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via Terminus:
 
-1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via Terminus:
+            ```
+            terminus connection:set <site>.<env> git
+            ```
+        2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) if you have not done so already.
+        3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer){.external}:
 
-    ```
-    terminus connection:set <site>.<env> git
-    ```
+            ```json
+            "repositories": {
+              "wpackagist": {
+                "type": "composer",
+                "url": "https://wpackagist.org"
+              }
+            },
+            "require": {
+              "composer/installers": "^1.0.21",
+              "koodimonni/composer-dropin-installer": "*",
+              "wpackagist-plugin/wp-redis": "0.6.0"
+              },
+              "extra": {
+                "installer-paths": {
+                  "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
+                  },
+                "dropin-paths": {
+                   "wp-content": [
+                   "package:wpackagist-plugin/wp-redis:object-cache.php"
+                 ]
+               }
+             }
+            ```
+        4. Run `composer install` to install WP Redis into the `wp-content` directory.
+        5. Use git status to verify your local state, then commit and push your code to Pantheon:
 
-2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) if you have not done so already.
+            ```bash
+            git status
+            git commit --all -m "Initiate composer, require custom code"
+            git push origin master
+            ```
+        </div>
+      </div>
+    </div>
+  </div>
 
-3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer){.external}:
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+  1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+  2. Install and activate the [Redis](https://www.drupal.org/project/redis){.external} module from Drupal.org.
 
-    ```json
-    "repositories": {
-      "wpackagist": {
-        "type": "composer",
-        "url": "https://wpackagist.org"
+      <div class="alert alert-info">
+      <h4 class="info">Note</h4><p markdown="1">You **must** activate the module before proceeding.
+      </p></div>
+
+      You can install and enable the module from the command line using [Terminus](/docs/terminus):
+
+          terminus remote:drush <site>.<env> -- en redis -y
+  3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
+
+      ```php
+      // Configure Redis
+
+      if (defined('PANTHEON_ENVIRONMENT')) {
+        // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
+        $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+
+        //phpredis is built into the Pantheon application container.
+        $settings['redis.connection']['interface'] = 'PhpRedis';
+        // These are dynamic variables handled by Pantheon.
+        $settings['redis.connection']['host']      = $_ENV['CACHE_HOST'];
+        $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
+        $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
+
+        $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
+        $settings['cache_prefix']['default'] = 'pantheon-redis';
+
+        // Always set the fast backend for bootstrap, discover and config, otherwise this gets lost when Redis is enabled.
+        $settings['cache']['bins']['bootstrap'] = 'cache.backend.chainedfast';
+        $settings['cache']['bins']['discovery'] = 'cache.backend.chainedfast';
+        $settings['cache']['bins']['config']    = 'cache.backend.chainedfast';
+
+        // Set Redis to not get the cache_form (no performance difference).
+        $settings['cache']['bins']['form']      = 'cache.backend.database';
       }
-    },
-    "require": {
-      "composer/installers": "^1.0.21",
-      "koodimonni/composer-dropin-installer": "*",
-      "wpackagist-plugin/wp-redis": "0.6.0"
-      },
-      "extra": {
-        "installer-paths": {
-          "wp-content/plugins/{$name}/": ["type:wordpress-plugin"]
-          },
-        "dropin-paths": {
-           "wp-content": [
-           "package:wpackagist-plugin/wp-redis:object-cache.php"
-         ]
-       }
-     }
-    ```
+      ```
+  4. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
+  </div>
 
-4. Run `composer install` to install WP Redis into the `wp-content` directory.
-5. Use git status to verify your local state, then commit and push your code to Pantheon:
+  <!-- 3rd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+  1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+  2. Add the [Redis](https://www.drupal.org/project/redis){.external} module from Drupal.org. You can install and enable the module from the command line using [Terminus](/docs/terminus):
 
-    ```bash
-    git status
-    git commit --all -m "Initiate composer, require custom code"
-    git push origin master
-    ```
+          terminus remote:drush <site>.<env> -- en redis -y
+  3. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
+      - `redis_client_host`
+      - `redis_client_port`
+      - `redis_client_password`
+  4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
 
+      ```php
+      // All Pantheon Environments.
+      if (defined('PANTHEON_ENVIRONMENT')) {
+        // Use Redis for caching.
+        $conf['redis_client_interface'] = 'PhpRedis';
+
+        // Point Drupal to the location of the Redis plugin.
+        $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
+        // If you've installed your plugin in a contrib directory, use this line instead:
+        // $conf['cache_backends'][] = 'sites/all/modules/contrib/redis/redis.autoload.inc';
+
+        $conf['cache_default_class'] = 'Redis_Cache';
+        $conf['cache_prefix'] = array('default' => 'pantheon-redis');
+
+        // Do not use Redis for cache_form (no performance difference).
+        $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+
+        // Use Redis for Drupal locks (semaphore).
+        $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
+        // Or if you've installed the redis module in a contrib subdirectory, use:
+        // $conf['lock_inc'] = 'sites/all/modules/contrib/redis/redis.lock.inc';
+
+      }
+      ```
+  7. Enable the module via `admin/build/modules`. This is necessary for cache clearing to work in all cases.
+  8. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
+  9. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
+  </div>
 </div>
-
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
-1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
-
-2. Install and activate the [Redis](https://www.drupal.org/project/redis){.external} module from Drupal.org.
-
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4><p markdown="1">You **must** activate the module before proceeding.
-    </p></div>
-
-    You can install and enable the module from the command line using [Terminus](/docs/terminus):
-
-        terminus remote:drush <site>.<env> -- en redis -y
-
-3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
-
-    ```php
-    // Configure Redis
-
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
-      $settings['container_yamls'][] = 'modules/redis/example.services.yml';
-
-      //phpredis is built into the Pantheon application container.
-      $settings['redis.connection']['interface'] = 'PhpRedis';
-      // These are dynamic variables handled by Pantheon.
-      $settings['redis.connection']['host']      = $_ENV['CACHE_HOST'];
-      $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
-      $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
-
-      $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
-      $settings['cache_prefix']['default'] = 'pantheon-redis';
-
-      // Always set the fast backend for bootstrap, discover and config, otherwise this gets lost when redis is enabled.
-      $settings['cache']['bins']['bootstrap'] = 'cache.backend.chainedfast';
-      $settings['cache']['bins']['discovery'] = 'cache.backend.chainedfast';
-      $settings['cache']['bins']['config']    = 'cache.backend.chainedfast';
-
-      // Set Redis to not get the cache_form (no performance difference).
-      $settings['cache']['bins']['form']      = 'cache.backend.database';
-    }
-    ```
-
-4. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
-</div>
-
-<!-- 3rd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
-1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
-
-2. Add the [Redis](https://www.drupal.org/project/redis){.external} module from Drupal.org. You can install and enable the module from the command line using [Terminus](/docs/terminus):
-
-        terminus remote:drush <site>.<env> -- en redis -y
-
-3. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
-     - `redis_client_host`
-     - `redis_client_port`
-     - `redis_client_password`<br><br>
-
-
-4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
-
-    ```php
-    // All Pantheon Environments.
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Use Redis for caching.
-      $conf['redis_client_interface'] = 'PhpRedis';
-
-      // Point Drupal to the location of the Redis plugin.
-      $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
-      // If you've installed your plugin in a contrib directory, use this line instead:
-      // $conf['cache_backends'][] = 'sites/all/modules/contrib/redis/redis.autoload.inc';
-
-      $conf['cache_default_class'] = 'Redis_Cache';
-      $conf['cache_prefix'] = array('default' => 'pantheon-redis');
-
-      // Do not use Redis for cache_form (no performance difference).
-      $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
-
-      // Use Redis for Drupal locks (semaphore).
-      $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
-      // Or if you've installed the redis module in a contrib subdirectory, use:
-      // $conf['lock_inc'] = 'sites/all/modules/contrib/redis/redis.lock.inc';
-
-    }
-    ```
-
-7. Enable the module via `admin/build/modules`. This is necessary for cache clearing to work in all cases.
-
-8. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
-
-9. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
-</div>
-</div>
-
 
 ## Use the Redis Command-Line Client
-
-You don't need to install anything to use Redis on Pantheon. However, if you want to manually connect to the Pantheon-hosted Redis server for debugging, you'll need to install Redis locally:
+You don't need to install anything locally to use Redis on Pantheon. However, if you want to manually connect to the Pantheon-hosted Redis server for debugging, you'll need to install Redis on your machine.
 
 1. Download Redis at [https://redis.io/download](https://redis.io/download){.external} and install it on your local computer.
-
 2. From the Site Dashboard, select the desired environment (Dev, Test, or Live).
-
 3. Click the **Connection Info** button, copy the Redis connection string, and run the command in your local terminal.
-
 4. To verify that Redis is working, use the Redis Connection Info from the Dashboard. Once you've logged in, execute the following command:
 
-    ```redis
-    redis> keys *
-    ```
+  ```bash
+  redis> keys *
+  ```
+  The command should return the existing Redis keys. Example:
 
-    The command should return the existing Redis keys. Example:
-
-    ```bash
-    redis> keys *
-     1) "pantheon-rediscache_menu:links:management:tree-data:en:27cbcc1096e9daf2c319c2c"
-     2) "pantheon-rediscache:features_module_info"
-     3) "pantheon-rediscache_bootstrap:bootstrap_modules"
-     4) "pantheon-rediscache_menu:menu_item:b38e608d4f709b7c1fcb6ac5f6dd2ab72a9a034"
-    ```
-
-    If Redis is configured properly, it should output appropriate keys. If it returns nothing (empty), proceed to the [Troubleshooting](#troubleshooting) section below.
-
+  ```bash
+  redis> keys *
+   1) "pantheon-rediscache_menu:links:management:tree-data:en:27cbcc1096e9daf2c319c2c"
+   2) "pantheon-rediscache:features_module_info"
+   3) "pantheon-rediscache_bootstrap:bootstrap_modules"
+   4) "pantheon-rediscache_menu:menu_item:b38e608d4f709b7c1fcb6ac5f6dd2ab72a9a034"
+  ```
+  If Redis is configured properly, it should output appropriate keys. If it returns nothing (empty), proceed to the [Troubleshooting](#troubleshooting) section below.
 5. To check if a specific key exists, you can pass the `exists` command. For example:
 
-    ```bash
-    redis> SET key1 "Hello"
-    OK
-    redis> EXISTS key1
-    (integer) 1
-    redis> EXISTS key2
-    (integer) 0
-    redis>
-    ```
+  ```bash
+  redis> SET key1 "Hello"
+  OK
+  redis> EXISTS key1
+  (integer) 1
+  redis> EXISTS key2
+  (integer) 0
+  redis>
+  ```
 
-## Find a Specific Key
-
+### Find a Specific Key
 If you need to find a specific key, you can use search patterns that contain globs. For example:
 
 ```bash
@@ -288,8 +261,7 @@ redis> KEYS engl[ia]sh
 $15
 englash english
 ```
-## Clear Cache
-
+### Clear Cache
 Pass the `flushall` command to clear all keys from the cache.
 
 ```bash
@@ -297,8 +269,7 @@ redis> flushall
 OK
 ```
 
-## Check the Number of Keys in Cache
-
+### Check the Number of Keys in Cache
 To check the number of keys in the cache, you can use the `DBSIZE` command. The following is sample output:
 
 ```bash
@@ -307,12 +278,10 @@ redis> DBSIZE
 ```
 
 ## Troubleshooting
-
-### Cannot Activate the Redis Plugin
+### Cannot Activate the Redis Plugin for WordPress
 WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
 
 ### RedisException: Redis server went away
-
 The following error occurs when Redis has not been enabled within the Site Dashboard:
 
 ```php
@@ -321,8 +290,7 @@ RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bi
 
 Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
 
-### Redis is enabled but there is no data
-
+### No Keys Found
 When the Dashboard status check reports that Redis is enabled but doesn't have any data (0 keys found), you'll want to confirm the logic behind the check for PANTHEON_ENVIRONMENT in your `settings.php` Redis cache configuration. Depending on the kind of test you're performing, you’ll get different results.
 
 Example of a block that will result in an **incorrectly configured cache backend**:
@@ -399,13 +367,10 @@ $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 ```
 
 ## Frequently Asked Questions
-
-#### What happens when Redis reaches maxmemory?
-
+### What happens when Redis reaches maxmemory?
 The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up){.external}, keeping in mind our `maxmemory-policy` is `allkeys-lru`.
 
-#### Is Redis set up as an LRU cache?
-
+### Is Redis set up as an LRU cache?
 We are using [allkeys-lru](https://redis.io/topics/lru-cache){.external}. Here is the Redis configuration file for your Live environment:
 
 ```nohighlight
@@ -434,6 +399,19 @@ set-max-intset-entries 512
 activerehashing yes
 ```
 
-#### I restored my site (or imported a database backup) and now my site won't come back.
+### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
+Yes. There is a `redis.log` file that is available on the Redis container for each environment. You can see where the log files and configuration reside:
 
-When you replace the database with one that doesn't match the redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the dashboard. To resolve the issue, [flush your redis cache from the command line](#clear-cache).
+```nohighlight
+$ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
+sftp> ls -la
+-rw-r--r-- 1 11455 11455 18 Oct 06 05:16 .bash_logout -rw-r--r-- 1 11455 11455 193 Oct 06 05:16 .bash_profile -rw-r--r-- 1 11455 11455 231 Oct 06 05:16 .bashrc -rw-r--r-- 1 0 0 0 Mar 10 19:46 .pantheonssh_login drwxr-x--- 2 0 11455 4096 Nov 10 07:55 certs
+-rw-r--r-- 1 0 0 42 Mar 10 09:46 chef.stamp drwx------ 2 11455 11455 4096 Mar 10 19:46 data
+drwxrwx--- 2 0 11455 4096 Nov 10 07:55 logs
+-rw------- 1 0 0 2677 Mar 10 09:46 metadata.json -rw-r----- 1 0 11455 531 Nov 10 07:55 redis.conf drwxrwx--- 2 0 11455 4096 Mar 10 09:46 tmp
+sftp> ls -la logs/
+-rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log sftp>
+```
+
+### Why won't my site work after importing a database backup?
+When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
