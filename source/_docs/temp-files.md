@@ -15,11 +15,11 @@ Drupal 7 sites do not have the option to set or override the system `/tmp` path.
 Modules, plugins, and/or themes that override Pantheon's temporary directory configuration are typically not supported within our distributed environment. However, you may be able to resolve issues by adjusting the setting used to configure the temporary directory path within the module, plugin and/or theme.
 
 ### Drupal
-Replace `'plupload_temporary_uri'` with the applicable module or theme setting used to configure the temporary directory path. The following is an example for the Plupload module:
+The following is an example for the [Plupload module](https://www.drupal.org/project/plupload){.external}: Replace `'plupload_temporary_uri'` with the applicable module or theme setting used to configure the temporary directory path.
 
 ```
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $conf['plupload_temporary_uri'] ='private://tmp';
+  $conf['plupload_temporary_uri'] ='sites/default/files/private';
 }
 ```
 
