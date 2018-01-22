@@ -404,18 +404,6 @@ Yes. There is a `redis.log` file that is available on the Redis container for ea
 
 ```nohighlight
 $ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
-sftp> ls -la
--rw-r--r-- 1 11455 11455 18 Oct 06 05:16 .bash_logout
--rw-r--r-- 1 11455 11455 193 Oct 06 05:16 .bash_profile
--rw-r--r-- 1 11455 11455 231 Oct 06 05:16 .bashrc
--rw-r--r-- 1 0 0 0 Mar 10 19:46 .pantheonssh_login
-drwxr-x--- 2 0 11455 4096 Nov 10 07:55 certs
--rw-r--r-- 1 0 0 42 Mar 10 09:46 chef.stamp
-drwx------ 2 11455 11455 4096 Mar 10 19:46 data
-drwxrwx--- 2 0 11455 4096 Nov 10 07:55 logs
--rw------- 1 0 0 2677 Mar 10 09:46 metadata.json
--rw-r----- 1 0 11455 531 Nov 10 07:55 redis.conf
-drwxrwx--- 2 0 11455 4096 Mar 10 09:46 tmp
 sftp> ls -la logs/
 -rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log
 sftp>
