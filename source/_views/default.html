@@ -42,8 +42,9 @@
     <meta itemprop="name" content="{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }} | {{ site.title }}{% else %} | {{ site.title }}{% endif %}">
 
     {% if page.image %}
+    // Use specified image when defined in the page's frontmatter
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png" />
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png" data-addsearch="no_crop"/>
     <meta itemprop="image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png">
     <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png" />
     {% elseif page.type == "video" %}
@@ -51,11 +52,21 @@
     <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb-video.png" />
     <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb-video.png">
     <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb-video.png" />
+    {% elseif page.type == "guide" %}
+    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb-guide.png" />
+    <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb-guide.png">
+    <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb-guide.png" />
+    {% elseif page.changelog %}
+    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb-changelog.png" />
+    <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb-changelog.png">
+    <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb-changelog.png" />
     {% else %}
     <meta name="twitter:card" content="summary">
-    <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb.png" />
-    <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb.png">
-    <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb.png" />
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb-doc.png" />
+    <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb-doc.png">
+    <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb-doc.png" />
     {% endif %}
 
     <!-- Twitter Card data -->
