@@ -43,4 +43,4 @@ Resolve errors with code (themes, modules or plugins) that relies on PHP's defau
 Provides support for SAML Authentication. The plugin comes bundled with the OneLogin SAML library and [SimpleSAMLphp](https://simplesamlphp.org/){.external}. For an example use case, see [Using WP SAML Auth with Google Apps](/docs/wordpress-google-sso/)
 
 ## [WP Redis](https://wordpress.org/plugins/wp-redis){.external}
-Provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Installing Redis on WordPress](/docs/wordpress-redis).
+Provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Installing Redis on Drupal or WordPress](/docs/redis/).

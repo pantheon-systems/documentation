@@ -7,7 +7,7 @@ categories: [wordpress]
 
 This article provides suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.
 
-* Use [Redis](/docs/wordpress-redis/). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to catch a lot of database queries in WordPress.
+* Use [Redis](/docs/redis/). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to catch a lot of database queries in WordPress.
 
 * Verify [Varnish](/docs/test-varnish) is working on your site.
 
@@ -29,7 +29,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * In your theme, use a simple PHP `include()` instead of WordPress' [get_template_part()](https://codex.wordpress.org/Function_Reference/get_template_part). The overhead is heavy if your use case is simply adding in another sub-template file. For example:
 
-        <?php get_template_part('content', 'sidebar'); ?>  
+        <?php get_template_part('content', 'sidebar'); ?>
         <?php include('content-sidebar.php'); ?>
 
 * If you have a custom plugin that retrieves a specific post (or posts), instead of using `wp_query()` to retrieve it, use the `get_post()` function. While wp_query has its uses, the [get_post](https://developer.wordpress.org/reference/functions/get_post/) function is built specifically to retrieve a WordPress Post object, and does so very efficiently.

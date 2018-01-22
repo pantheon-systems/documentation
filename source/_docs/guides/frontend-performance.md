@@ -236,7 +236,7 @@ If you haven't done so already, [make the switch to PHP7](/docs/php-versions/). 
 See our blog post for an example of [62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon){.external}.
 
 #### Enable Redis Object Caching
-Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Installing Redis on Drupal](/docs/drupal-redis/) and [Installing Redis on WordPress](/docs/wordpress-redis/).
+Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Installing Redis on Drupal or WordPress](/docs/redis/).
 
 #### Monitor Performance with New Relic
 If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/docs/new-relic/) for help identifying bottlenecks.

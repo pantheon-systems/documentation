@@ -83,7 +83,7 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>✓</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/drupal-redis/'>Installing Redis</a>."><em class="fa fa-info-circle"></em></a></th>
+        <th scope="row" class="thead-inverse">Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a></th>
         <td></td>
         <td>✓</td>
         <td>✓</td>
@@ -102,7 +102,7 @@ The platform resources provided to your website depend on your current plan. Pan
 ## Glossary
 
 **Application Containers**: Each application container is a separate deployment of your site's code. All Dev and Test environments for Personal and Professional sites have one container, and Test environments for Business and Elite sites have two containers. The Live environment for Elite sites may be scaled to multiple containers to handle more requests.
-<hr>   
+<hr>
 **PHP Concurrency**: The amount of simultaneous processes PHP can run within a given container. The number of requests your website can handle is a product of the number of containers, and each containers' concurrency, as well as your application performance (see below).
 <hr>
 **PHP Memory Limit**: The maximum amount of memory a single PHP process can use. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.
@@ -140,7 +140,7 @@ Calculating what this means for logged in users can be done by making a "time be
 
 The amount of time between users clicking (i.e. how frequently they need a new page) will vary a lot depending on your use case, but it's important to make an estimate.
 
-Example:  
+Example:
 If you're running an interactive user forum on a Business plan, you've tuned your site and know that your average backend response time is around 1500ms. You also know that broadly speaking the average user clicks a new link once every 20 seconds. Using this formula tells you that your Business plan should max out at around 200 concurrent users:
 
 `20 / 1.5 * 2 * 8 = 213`
@@ -153,5 +153,5 @@ There are many "under the hood" configuration values not show here, but these ar
 #### Is memory shared between containers?
 No, your database and application container resources are not shared. They operate in their own Linux user space with their own memory.
 
-#### Are the specs the same for all three environments (Dev/Test/Live)?  
+#### Are the specs the same for all three environments (Dev/Test/Live)?
 Yes they have the same infrastructure; however, Live environments on Business plans and above have multiple application containers, while Dev and Test environments have only one.

@@ -47,7 +47,7 @@ Some key differences of decoupled architecture include:
 Backend APIs running on Pantheon take advantage of the following platform features for optimal performance:
 
 * [**Global CDN**](/docs/global-cdn/): Cache backend API responses from WordPress or Drupal in 30+ global POPs (points of presence).
-* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see related [WordPress](/docs/wordpress-redis/) and [Drupal](/docs/drupal-redis/) documentation.
+* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Installing Redis on Drupal or WordPress](/docs/redis/).
 <!--todo: does solr belong here? help wanted describing the benefits of solr in context of decoupled site.]-->
 
 
