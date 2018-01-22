@@ -185,17 +185,13 @@ $databases['default']['default']['charset'] = 'utf8mb4';
 $databases['default']['default']['collation'] = 'utf8mb4_general_ci';
 ```
 
-For existing sites that already have an active database, you then have to install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert){.external} Drush command and convert the database. 
-
-Note that UTF8MB4 Convert is not a Drupal module that can be enabled. It is a Drush command and can be placed inside the  /sites/all/drush folder. Drush cache will need to be cleared before the command can be run.
-
-Drush cache can be cleared using the following Terminus command, replacing `<site>` with your site name, and `<env>` with the environment (usually `dev`):
+Existing sites that already have an active database must install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert){.external} Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. Once you've installed the command in `/sites/all/drush`, you must clear Drush cache for the new command to run. Clear Drush cache using [Terminus](/docs/terminus/):
 
 ```bash
 terminus drush <site>.<env> -- cc drush
 ```
 
-Start by making a [backup](/docs/backups/) of the site database, then place the site in maintenance mode. When ready, run the following command, replacing `<site>` with your site name, and `<env>` with the environment (usually `dev`):
+Start by making a [backup](/docs/backups/) of the site database, then place the site in maintenance mode and run the following:
 
 ```bash
 terminus drush <site>.<env> -- utf8mb4-convert-databases
