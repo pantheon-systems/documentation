@@ -366,6 +366,16 @@ You skipped a step; `settings.php` must include the cache\_backport files. Add t
 $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 ```
 
+### You have requested a non-existent service
+Drupal 8 sites using Composer as recommended by the [Build Tools](/docs/guides/build-tools/) guide will encounter the following error when configuring settings before the module is deployed to Pantheon:
+
+```php
+Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException:
+You have requested a non-existent service "cache.backend.redis".
+```
+
+Deploy the module to Pantheon to resolve this error.
+
 ## Frequently Asked Questions
 ### What happens when Redis reaches maxmemory?
 The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up){.external}, keeping in mind our `maxmemory-policy` is `allkeys-lru`.
