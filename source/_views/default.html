@@ -44,7 +44,7 @@
     {% if page.image %}
     <!-- Use specified image when defined in the page's frontmatter-->
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png" data-addsearch="no_crop"/>
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png"/>
     <meta itemprop="image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png">
     <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png" />
     {% elseif page.type == "video" %}
