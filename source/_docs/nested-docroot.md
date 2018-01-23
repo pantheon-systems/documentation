@@ -78,20 +78,126 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d7">
-  <pre><code class="bash hljs">
-  mkdir -p web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ web
-  </code></pre>
+  <div role="tabpanel" class="tab-pane active" id="d7" markdown="1">
+  ```bash
+  mkdir web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
+  ```
+
+  Here's a breakdown of the one-liner above:
+
+  ```bash
+  mkdir web
+  ```
+
+  Creates the nested webroot directory.
+
+  ```bash
+  git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
+  ```
+
+  Using git so that version control is aware, moves all required directories into the webroot directory.
+
+  Your directory structure should look like this afterwards:
+
+  ```nohighlight
+  ├── web
+    ├── includes
+    ├── misc
+    ├── modules
+    ├── profiles
+    ├── scripts
+    ├── sites
+        └── all
+            ├── modules
+            └── themes
+            └── default
+            └── settings.php
+    └── themes
+  ```
   </div>
-  <div role="tabpanel" class="tab-pane" id="d8">
-  <pre><code class="bash hljs">
-  mkdir web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor web
-  </code></pre>
+
+  <div role="tabpanel" class="tab-pane" id="d8" markdown="1">
+  ```bash
+  mkdir web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor index.php web
+  ```
+
+  Here's a breakdown of the one-liner above:
+
+  ```bash
+  mkdir web
+  ```
+
+  Creates the nested webroot directory.
+
+  ```bash
+  git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor index.php web
+  ```
+
+  Using git so that version control is aware, moves all required directories into the webroot directory.
+
+  Your directory structure should look like this afterwards:
+
+  ```nohighlight
+  ├── web
+    ├── core
+    ├── drush
+    ├── modules
+    ├── profiles
+    ├── sites
+        ├── default
+            ├── settings.php
+    ├── themes
+    ├── vendor
+    ├── index.php
+  ```
+
   </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
-  <pre><code class="bash hljs">
-  mkdir web && git mv -k $(find . -type f -maxdepth 1  | grep -v pantheon.yml) wp-includes wp-content wp-admin web
-  </code></pre>
+
+  <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
+  ```bash
+  mkdir web && git mv -k $(find . -type f -maxdepth 1  | grep -v pantheon.yml) wp-includes wp-content wp-admin ./*.php web
+  ```
+
+  Here's a breakdown of the one-liner above:
+
+  ```bash
+  mkdir web
+  ```
+
+  Creates the nested webroot directory.
+
+  ```bash
+  git mv -k $(find . -type f -maxdepth 1  | grep -v pantheon.yml) wp-includes wp-content wp-admin ./*.php web
+  ```
+
+  Using git so that version control is aware, moves all required directories into the webroot directory.
+
+  Your directory structure should like like this afterwards:
+
+  ```nohighlight
+  ├── web
+    ├── index.php
+    ├── wp-activate.php
+    ├── wp-config.php
+    ├── wp-comments-post.php
+    ├── wp-blog-header.php
+    ├── wp-admin
+    ├── wp-cron.php
+    ├── wp-load.php
+    ├── wp-links-opml.php
+    ├── wp-includes
+    ├── xmlrpc.php
+    ├── wp-trackback.php
+    ├── wp-signup.php
+    ├── wp-settings.php
+    ├── wp-mail.php
+    ├── wp-login.php
+    ├── wp-content
+      ├── index.php
+      ├── mu-plugins
+      ├── themes
+      ├── plugins
+  ```
   </div>
 </div>
 
