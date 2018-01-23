@@ -4,7 +4,7 @@
   <li>Authority Name Servers must serve mixed-case lookups.</li>
   <li>Authority Name Servers must not fail CAA lookups.</li>
   <li>CAA records must either 1) not exist for the domain and its parent domains or 2) authorize Let's Encrypt.</li>
-  <li>CNAMEs must follow the above requirements.</li>
+  <li>CNAMEs records must point to Pantheon's provided <a href="/docs/domains/#platform-domains">platform domain</a> for the target environment. Subdomains such as <code>www.example.com</code> do not require A/AAAA records.</li>
   <li>DNAMEs must not be used.</li>
 </ul>
 <p>Please check this doc periodically as requirements may be added or removed.</p>
