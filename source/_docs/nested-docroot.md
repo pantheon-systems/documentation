@@ -102,6 +102,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   ```nohighlight
   ├── web
     ├── includes
+    ├── index.php
     ├── misc
     ├── modules
     ├── profiles
