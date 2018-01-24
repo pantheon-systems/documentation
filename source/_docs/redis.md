@@ -367,14 +367,14 @@ $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 ```
 
 ### You have requested a non-existent service
-Drupal 8 sites using Composer as recommended by the [Build Tools](/docs/guides/build-tools/) guide will encounter the following error when configuring settings before the module is deployed to Pantheon:
+The following error occurs when modifying configurations for a module that has not been enabled yet:
 
 ```php
 Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException:
 You have requested a non-existent service "cache.backend.redis".
 ```
 
-Deploy the module to Pantheon to resolve this error.
+Install and enable the module to resolve.
 
 ## Frequently Asked Questions
 ### What happens when Redis reaches maxmemory?
