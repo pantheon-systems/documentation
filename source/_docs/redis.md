@@ -367,7 +367,7 @@ $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 ```
 
 ### You have requested a non-existent service
-The following error occurs when modifying configurations for a module that has not been enabled yet:
+The following error occurs when modifying configurations for the [Redis](https://www.drupal.org/project/redis){.external} module before it has been enabled:
 
 ```php
 Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException:
