@@ -10,7 +10,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 
 ## Get to Know Pantheon
 
-- [Quick Start](/docs/guides/quickstart/)  
+- [Quick Start](/docs/guides/quickstart/)
 - [Using the Pantheon Workflow](/docs/pantheon-workflow/)
 - [All About Application Containers](/docs/application-containers/)
 - [Platform Considerations](/docs/platform-considerations/)
@@ -31,7 +31,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [New Relic Pro](/docs/new-relic)
 - [Applying Upstream Updates](/docs/upstream-updates)
 - [Varnish Caching for High Performance with Drupal and WordPress](/docs/varnish)
-- [Redis as a Caching Backend](/docs/drupal-redis)
+- [Installing Redis on Drupal or WordPress](/docs/redis/)
 - [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache)
 - [SSO and Identity Federation on Pantheon](/docs/sso/)
 - [Backup Creation](/docs/backups)

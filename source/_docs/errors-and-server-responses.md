@@ -61,7 +61,7 @@ This error can be caused by sustained spikes in traffic (often caused by search 
 "The web page you were looking for could not be delivered." The MySQL database is not responding, possibly from being suspended and not resuming.
 
 ### Error 503 Service Unavailable
-This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/docs/timeouts/).
+This error generally occurs when a request timeouts. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/docs/timeouts/).
 
 If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP Basic Auth (the security username/password), then that's a misleading message; the best workaround is to disable the security option for the environment for testing.
 
