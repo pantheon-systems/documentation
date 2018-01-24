@@ -9,7 +9,7 @@ contributors:
 
 The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase. Specifying `web_docroot: true` in your <a href="/docs/pantheon-yml/#site-local-configurations-pantheonyml" data-proofer-ignore>pantheon.yml</a> file or in the <a href="/docs/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml" data-proofer-ignore>pantheon.upstream.yml</a> file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments.
 
-### Advantages and Use Cases
+## Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
 
 This is especially useful for third party dependencies, such as those installed and managed via [Composer](/docs/composer/).
@@ -19,8 +19,7 @@ This is especially useful for third party dependencies, such as those installed 
 <p markdown="1">One-click Dashboard updates are only compatible with the nested `web` docroot feature when the `web_docroot` property is set in the `pantheon.upstream.yml` file of the upstream. We recommend using a [Custom Upstream](/docs/custom-upstream/) if you would like to continue to utilize Dashboard updates.</p>
 </div>
 
-## One-Time Setup
-
+## Disable One-click Updates
 If you wish to stop using One-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/docs/terminus):
 
 <ul class="nav nav-tabs" role="tablist">
@@ -42,9 +41,10 @@ If you wish to stop using One-click Dashboard updates on a particular site, and 
   </div>
 </div>
 
-Then you may enable nested docroot by adjusting your site's `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.
 
-### Define Nested Docroot in pantheon.yml
+## Enable Nested Docroot
+Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.
+
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):
 
  ```
@@ -63,11 +63,11 @@ Then you may enable nested docroot by adjusting your site's `pantheon.yml` file.
 5. Add, commit, and push the `pantheon.yml` file with Git.
 6. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site-with-a-nested-docroot) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site-to-use-a-nested-docroot) below.
 
-### Create a New Site with a Nested Docroot
+### Create a New Site
 If your site utilizes a [Custom Upstream](/docs/custom-upstream/) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
 
-### Convert an Existing Site to Use a Nested Docroot
-You'll need to move the CMS code into the `web` subdirectory, either manually or by using one of the commands below:
+### Convert an Existing Site
+You'll need to move the CMS code into the `web` subdirectory, either manually or by using one of the commands below.
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
@@ -79,23 +79,12 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 <!-- Tab panes -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="d7" markdown="1">
+  [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the root directory:
+
   ```bash
   mkdir web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
   ```
-
-  Here's a breakdown of the one-liner above:
-
-  ```bash
-  mkdir web
-  ```
-
-  Creates the nested webroot directory.
-
-  ```bash
-  git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
-  ```
-
-  Using git so that version control is aware, moves all required directories into the webroot directory.
+  This command creates the `web` subdirectory then uses Git to move required files into the nested docroot.
 
   Your directory structure should look like this afterwards:
 
