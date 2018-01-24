@@ -67,7 +67,7 @@ Your file uploads (Drupal's `sites/default/files` and WordPress's `wp-content/up
 Filezilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/docs/winscp) (Windows).
 
 ### nodename nor servname provided, or not known
-The follow error is caused by an invalid hostname, most often the result of a typo: 
+The following error is caused by an invalid hostname, most often the result of a typo: 
 
 ```bash
 Error:            ssh_init: nodename nor servname provided, or not known
