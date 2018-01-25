@@ -79,12 +79,13 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 <!-- Tab panes -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="d7" markdown="1">
-  [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the root directory:
+  [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
-  mkdir web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
+  mkdir web
+  git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
   ```
-  This command creates the `web` subdirectory then uses Git to move required files into the nested docroot.
+  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
   Your directory structure should look like this afterwards:
 
@@ -107,23 +108,13 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 
   <div role="tabpanel" class="tab-pane" id="d8" markdown="1">
-  ```bash
-  mkdir web && git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor index.php web
-  ```
-
-  Here's a breakdown of the one-liner above:
+  [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
   mkdir web
-  ```
-
-  Creates the nested webroot directory.
-
-  ```bash
   git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor index.php web
   ```
-
-  Using git so that version control is aware, moves all required directories into the webroot directory.
+  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
   Your directory structure should look like this afterwards:
 
@@ -144,23 +135,13 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 
   <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
-  ```bash
-  mkdir web && git mv -k $(find . -type f -maxdepth 1  | grep -v pantheon.yml) wp-includes wp-content wp-admin ./*.php web
-  ```
-
-  Here's a breakdown of the one-liner above:
+  [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
   mkdir web
-  ```
-
-  Creates the nested webroot directory.
-
-  ```bash
   git mv -k $(find . -type f -maxdepth 1  | grep -v pantheon.yml) wp-includes wp-content wp-admin ./*.php web
   ```
-
-  Using git so that version control is aware, moves all required directories into the webroot directory.
+  These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
   Your directory structure should like like this afterwards:
 
