@@ -1,0 +1,59 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:5.6-apache-node-browsers
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: |
+            sudo npm install -g grunt-cli
+            npm install
+            composer install --no-interaction
+            sudo apt-get install rubygems build-essential rubygems-integration ruby-dev gcc ruby-dev libxslt-dev libxml2-dev zlib1g-dev
+            sudo gem install bundler
+            bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+            grunt
+            bin/sculpin generate
+      - run:
+          name: Some Stuff
+          command: |
+            for file in output_dev/docs/changelog/page/*html; do name="$(basename "$file" .html)"; mkdir -p output_dev/docs/changelog/page/"$name"; mv "$file" "output_dev/docs/changelog/page/"$name"/index.html"; done
+            cd output_dev && ln -s ./ source
+            cd ..
+            # Deploy Multidev environment
+            bash scripts/deploy-multidev.sh
+      - run:
+          name: Start Ghost Driver
+          command: phantomjs --webdriver=8643
+          background: true
+      - run:
+          name: Start Sculpin
+          command: bin/sculpin server
+          background: true
+      - run:
+          name: Test
+          command: |
+            echo
+            # Run sitespeed.io performance testing.
+            bash scripts/run-sitespeed-test.sh
+            # Run behat.
+            bin/behat
+            # Run a11y.
+            grunt test
+            # Look for merge conflicts.
+            scripts/merge_conflicts.sh
+            # Run htmlproofer.
+            bundler exec rake
+
+
+# caching for ~/.composer/cache needs to be done 
+# artifacts need to be done sitespeed-result
+# deployment command for master: bash scripts/deploy-live.sh
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
