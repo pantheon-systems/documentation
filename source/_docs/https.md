@@ -83,7 +83,7 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 
 ## Frequently Asked Questions
 ### How do I upgrade my existing Pantheon site?
-Make the switch on an existing Pantheon site by updating DNS for your domains. If you don't see action required, open a support chat to get the upgrade enabled.
+Make the switch on an existing Pantheon site by updating DNS for your domains. If your site doesn't have the new combined "Domains/HTTPS" tab, open a support chat to get the upgrade enabled
 
 ### What level of encryption is provided?
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
