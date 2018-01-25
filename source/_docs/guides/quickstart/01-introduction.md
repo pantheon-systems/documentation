@@ -19,7 +19,12 @@ editpath: quickstart/01-introduction.md
 completiontime: 1 hour
 image: launchGuide-twitterLarge
 ---
-Welcome! This guide is designed to get you started on Pantheon. If you'd prefer an instructor-led version of this, check out our <a href="https://pantheon.io/getting-started-pantheon" target="_blank">Getting Started on Pantheon</a> training.
+Welcome! This guide is designed to get you started on Pantheon.
+
+<div class="enablement" markdown="1">
+  <h4 class="info" markdown="1">[Getting Started Training](https://pantheon.io/getting-started-pantheon?docs){.external}</h4>
+  Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Agency and Community Success team.
+</div>
 
 In this guide, you'll learn how to:
 
