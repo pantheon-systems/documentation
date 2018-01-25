@@ -77,7 +77,7 @@ If you would like to try out any of the example scenarios presented in the repos
 ## Relocated Configuration Directory
 Configuration files can contain sensitive information. Drupal takes some measures to protect the default configuration directory, but the conventional way to secure these files is to locate them outside of the document root so they are not web accessible. Following this convention may help make site configuration easier to manage.
 ### Before you Begin
-- Follow [one-time setup instructions](/docs/nested-docroot/#one-time-setup) to enable nested docroot on a new or existing Drupal 8 site
+- Refer to [Serving Sites from the Web Subdirectory](/docs/nested-docroot/) to enable nested docroot on a new or existing Drupal 8 site.
 
 ### Configure and Relocate
 After implementing a nested docroot, set a new path (`/config`) for configuration directories by adding the following to `settings.php`:

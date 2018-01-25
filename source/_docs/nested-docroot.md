@@ -61,7 +61,7 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
   ```
 
 5. Add, commit, and push the `pantheon.yml` file with Git.
-6. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site-with-a-nested-docroot) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site-to-use-a-nested-docroot) below.
+6. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site) below.
 
 ### Create a New Site
 If your site utilizes a [Custom Upstream](/docs/custom-upstream/) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
