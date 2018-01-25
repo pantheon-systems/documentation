@@ -12,13 +12,17 @@ Every Pantheon site comes with three environments: Dev, Test, and Live. Separate
   <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
 </div>
 
-## Code Moves Up, Content Moves Down
+## Code VS Content
+
+One of the core concepts at the heart of the Pantheon workflow is the distinction between **code** and **files**.
+
+ - **Code** is the core of your CMS, plugins/modules, themes, css, javascript - anything that builds and shapes your site.
+ - **Content** is your files (static images, posts, PDF files), and the database itself.
+
+### Code Moves Up, Content Moves Down
 <img src="/source/docs/assets/images/workflow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">
 
-The core of the Pantheon workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
-
-- **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
-- **Content** includes files not under Git version control, like images, PDFs, and the database.
+The main process of the Pantheon workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/docs/files/) into our distributed filesystem, Valhalla, and [code](/docs/code/) on to the application servers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
 ### Commit Code in Dev
 
@@ -126,4 +130,6 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 MySQL imports tables sequentially, in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may be at the table letter G, for example, and the result is the semaphore table does not exist error. Once the import or clone operation has finished, the error should no longer appear.
 
 ## See Also
-[Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow){.external}
+ - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow){.external}
+ - [Your Site Code on Pantheon](/docs/code/)
+ - [Pantheon Filesystem](/docs/files/)
