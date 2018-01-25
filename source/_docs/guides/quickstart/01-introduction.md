@@ -21,6 +21,11 @@ image: launchGuide-twitterLarge
 ---
 Welcome! This guide is designed to get you started on Pantheon.
 
+<div class="enablement" markdown="1">
+  <h4 class="info" markdown="1">[Getting Started Training](https://pantheon.io/getting-started-pantheon?docs){.external}</h4>
+  Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
+</div>
+
 In this guide, you'll learn how to:
 
 - Create a free sandbox site on Pantheon
