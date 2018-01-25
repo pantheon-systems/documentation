@@ -186,7 +186,7 @@ At the bottom of any page, click **Permalink**. This will preserve the current t
 
 ### How much is New Relic APM Pro?
 
-Pantheon provides New Relic APM Pro for all sites at no cost. Purchase additional services or upgrade your New Relic account by reaching out to [pantheon@newrelic.com](mailto:pantheon@newrelic.com){.external}.
+Pantheon provides New Relic APM Pro for all sites at no cost. Purchase additional services or upgrade your New Relic account by reaching out to [sales@newrelic.com](mailto:sales@newrelic.com){.external}.
 
 ### Will turning on New Relic APM Pro slow my site down?
 
