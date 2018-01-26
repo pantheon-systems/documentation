@@ -4434,6 +4434,10 @@ p.depbar>a:hover{
   .cta a:hover {
     text-decoration: underline;
   }
+  .oh-description {
+    max-width: 560px;
+    margin: auto;
+  }
   #office-hours a:link, #office-hours a:visited {
     color: #181f22 !important;
     font-weight: 700;
