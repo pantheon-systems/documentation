@@ -4431,17 +4431,19 @@ p.depbar>a:hover{
     color: #181D21;
     line-height: 1.2;
   }
-  .office-hours a:hover {
-    text-decoration: none;
-  }
   .cta a:hover {
     text-decoration: underline;
   }
-  .office-hours a{
-    font-size: 14px;
-    line-height: 20px;
-    font-family: Avenir-Roman;
-    margin-bottom: 26px;
+  .oh-description {
+    max-width: 560px;
+    margin: auto;
+  }
+  #office-hours a:link, #office-hours a:visited {
+    color: #181f22 !important;
+    font-weight: 700;
+  }
+  #office-hours a:hover {
+    opacity: 0.65;
   }
   .office-hours h4{
     font-size: 20px;
