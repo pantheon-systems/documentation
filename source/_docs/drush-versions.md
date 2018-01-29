@@ -63,6 +63,15 @@ If you need to specify a minor version or a version not available on the platfor
 
 For more information, see [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush){.external}.
 
+## Upgrade you local drush 8.x-dev
+When working on drupal 8.4.x make sure to upgrade your composer to 8.x.dev to avoid errors/interruptions especially when using drush utilities and migration using migrate commands via drush.
+
+```
+"require": {
+        "drush/drush": "8.x-dev"
+    },
+```
+
 ## See Also
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
 - [Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
