@@ -96,7 +96,7 @@ No, but you shouldn't need to buy a dedicated certificate or worry about renewal
 
 Some customers have purchased expensive certificates, often through an upsell from the certificate authority. Unfortunately, an expensive certificate does not mean increased security. If in doubt, we encourage you to test your site with SSL Labs, compare it to this [A+ report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io), and share it with your client.
 
-If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider like Cloudflare, CloudFront, StackPath, Fastly, etc.
+If bringing your own certificate is a hard requirement, then we recommend terminating HTTPS through a 3rd-party CDN service provider like Cloudflare, CloudFront, StackPath, Fastly, etc. Configuration differs depending on provider, so please [contact support](https://pantheon.io/docs/getting-support/) to discuss your case.
 
 ### Is HTTPS encryption end-to-end?
 Yes! HTTPS is terminated at the CDN edge and traffic is encrypted all the way to the individual application container. This is an improvement over our legacy system that terminated all encryption at the load balancer, and a huge upgrade over setups which use a "mixed mode" strategy of terminating HTTPS at the CDN and then back-ending to the origin over unencrypted clear text communication.
