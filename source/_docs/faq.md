@@ -53,7 +53,7 @@ To learn more, see [Using the Pantheon Workflow](/docs/pantheon-workflow/).
 ## Developing Sites
 
 #### Does Pantheon offer professional services?
-No. Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Agency Finder](https://pantheon.io/agencies/agency-finder) for more information.
+No. Pantheon provides an infrastructure for professional web developers at agencies and development shops everywhere. We do not build sites or offer professional services. There is a rich ecosystem of Pantheon partners who provide Drupal and WordPress services. See the [Pantheon Agency Finder](https://pantheon.io/agencies/agency-match) for more information.
 
 ### Can Pantheon run sites on highly available server clusters?
 
