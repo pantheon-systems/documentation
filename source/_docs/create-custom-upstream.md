@@ -140,7 +140,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
   ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
 
 2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
-3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button.
+3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
 4. Enter the following information about the Custom Upstream:
 
     * **Name**
