@@ -6,7 +6,7 @@ categories: []
 ---
 Error messages in the cloud are served when Pantheon is unable to fulfill a request. Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Monitor plugins or modules that integrate external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal.  
+There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Monitor plugins or modules that integrate external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal.
 
 If you feel that you reached one of these messages in error, [contact support](/docs/getting-support) and provide the full URL and circumstances which led to the error.
 
@@ -14,12 +14,12 @@ If you feel that you reached one of these messages in error, [contact support](/
 
 ### Pantheon 401 Unauthorized
 
-This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/docs/security). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.  
+This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/docs/security). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.
 
 In some circumstances, a 401 can be triggered inadvertently if a site environment is locked, and a user passes the HTTP auth but the site sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 
 ### Pantheon 403 Forbidden
-"Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.  
+"Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.
 
 Pantheon also prevents public access via the webserver to private files, .htaccess, and directory listings.
 
@@ -71,6 +71,9 @@ If you get a generic Service Unavailable that is not styled like the above and y
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
 
 There are many things that could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
+
+### Error 561 No site detected
+"No site detected. Make sure your code is pulled into this environment." This typically occurs when a site has been created, but no CMS has been installed. You will also see this instead of a 403 "Directory listing denied" error, if you have no index file.
 
 ### Required Key Not Found
 When uploading an SSL certificate and you receive this message, it means you didn't paste in your private key. See [Loading SSH Keys](/docs/ssh-keys) for instructions.
