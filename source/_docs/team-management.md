@@ -10,6 +10,59 @@ Pantheon has powerful workflow tools that are packed with real-time features tha
 You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Site Dashboard.
 
 ![Team Management Window](/source/docs/assets/images/dashboard/team-modal.png)
+
+##Site Team Roles and Permissions
+
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Permissions</th>
+        <th>User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner orgs only"><em class="fa fa-info-circle"></em></a></th>
+        <th>Team Member </th>
+        <th>Developer  <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise orgs only"><em class="fa fa-info-circle"></em></a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Access the site Dashboard</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Work in Dev/Multidev environments</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Deploy to Test and Live</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Manage site-level team</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Delete sites or remove users from a site</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Manage a site's plan</td>
+        <td>✓<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="When an Org is the owner of a site, users in charge cannot change the site plan."><em class="fa fa-info-circle"></em></a></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
 ## Add a Team Member
 
 In the Team modal, enter the email address of the user and click **Add team member**.
