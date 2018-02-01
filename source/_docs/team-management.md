@@ -6,6 +6,95 @@ categories: []
 ---
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy.
 
+The Site Team generally consists of one Site Owner and any necessary Team Members. These roles have the following permissions:
+###Site-Level: Roles and Permissions
+
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Permissions</th>
+        <th>Owner </th>
+        <th>Team Member </th>
+       </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Access the site Dashboard</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Work on the site via SFTP or Git</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Connect to the site's database via MySQL</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Clone Database/Files between all environments </td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Deploy changes to Test and Live</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+          <td>Create and Delete <a href="/docs/multidev/">Multidev Environments</a><a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Business" data-content="Available on Business and Elite sites"><em class="fa fa-info-circle"></em></a></td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+          <td>Merge <a href="/docs/multidev/">Multidevs</a> into Dev<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Business" data-content="Available on Business and Elite sites"><em class="fa fa-info-circle"></em></a></td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+         <td>Access <a href="/docs/getting-support/">Pantheon Support</a></td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Enable New Relic</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Add/remove Team Members</td>
+        <td>✓</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Transfer Ownership</td>
+        <td>✓</td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td>Add/Remove Supporting Organizations</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Add Solr or Redis</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Manage a site's plan</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+Once a site has been associated with an [organization](/docs/organizations/), either through ownership or a relationship with a supporting organization, [Role-Based Permissions & Change Management](/docs/change-management) permissions are available.
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4><p>For Sites associated with an Organization, the Developers and Team-members from the Organization may manage Multidev Environments, while members of the Site Team will not be able to Create, Delete, or Merge commits from Multidevs.</p>
+</div>
+
 ## Manage Site Team Members
 You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Site Dashboard.
 
@@ -54,13 +143,6 @@ Enterprise Organizations can use the same process to assume ownership of a site;
 
 ### Pantheon Partners
 The site owner is the person who pays for the site. You'll need to update the payment method to change the owner.
-
-## Roles and Permissions
-Change Management is an [organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all Organizations.
-
-Sites that do not fit the above description will not be able to restrict access or assign specific user roles, such as **Administrator** or **Developer**.
-
-For details on this feature, see [Role-Based Permissions & Change Management](/docs/change-management).
 
 ## Add a Supporting Organization
 
