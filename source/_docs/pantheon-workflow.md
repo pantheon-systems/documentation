@@ -36,7 +36,7 @@ The main process of the Pantheon workflow is to move code up from Dev to Test to
   <div id="why-tab" class="collapse" markdown="1" style="padding:10px;">
   ### Why does Pantheon do this? {.info}
 
-  Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software){.external}". Specifically, we're of the opinion that version control is a critical component when building and maintaining a website. We've built a platform tailored specicfically to let you use version control to maintain all of your code, keep all of your files separate, and have all the test beds you need to make sure everything works before hit hits production.
+  Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software){.external}". Specifically, we're of the opinion that version control is a critical component when building and maintaining a website. We've built a platform tailored specicfically to let you use version control to maintain all of your code, keep all of your files separate, and have all the test beds you need to make sure everything works before changes hit production.
   </div>
 </div>
 
