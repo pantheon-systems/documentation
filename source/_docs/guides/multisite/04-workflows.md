@@ -48,7 +48,7 @@ For better or for worse, WordPress stores full URLs in the database. These URLs 
 WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
 
 ```bash
-terminus wp search-replace <old-domain> <new-domain> --network --url=<old-domain>
+terminus wp <site>.<env> -- search-replace <old-domain> <new-domain> --network --url=<old-domain>
 ```
 
 In this example:
@@ -73,13 +73,15 @@ If you use Redis as a persistent storage backend for your object cache, you'll n
 
 With Terminus and WP-CLI, you can flush cache globally with one operation:
 
-
+```bash
     terminus wp <site>.<env> -- cache flush
+```
 
 The Terminus command to clear all caches for an environment is:
 
-
+```bash
     terminus env:clear-cache <site>.<env>
+```
 
 Running into “Error: Site Not Found”? See [Troubleshoot](/docs/guides/multisite/debug/) for the cause and resolution.
 
@@ -134,7 +136,7 @@ In a stock WordPress install (e.g. no custom plugins), there are a few key place
 Try running `wp search-replace` against this limited subset of data:
 
 ```bash
-terminus wp <site>.<env> -- wp search-replace <old-domain> <new-domain> wp_blogs wp_site $(terminus wp <site>.<env> -- wp db tables "wp_*options" --network | paste -s -d ' ' -) --url=<old-domain>
+terminus wp <site>.<env> -- search-replace <old-domain> <new-domain> wp_blogs wp_site $(terminus wp <site>.<env> -- wp db tables "wp_*options" --network | paste -s -d ' ' -) --url=<old-domain>
 ```
 
 In this example:
