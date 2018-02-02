@@ -5,21 +5,24 @@ tags: [workflow, dashboard]
 categories: []
 ---
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
 </div>
 
-## Code VS Content
+## Components of a Site
+One of the core concepts at the heart of the Pantheon workflow is the distinction between **code** and **content**.
+### Code
+Code refers to anything version controlled by Git which includes core, custom and contributed modules or plugins, themes, and libraries.
 
-One of the core concepts at the heart of the Pantheon workflow is the distinction between **code** and **files**.
+{% include("content/code.html")%}
 
- - **Code** is the core of your CMS, plugins/modules, themes, css, javascript - anything that builds and shapes your site.
- - **Content** is your files (static images, posts, PDF files), and the database itself.
+### Content
+Content refers to your sites files and the database. In this context, files are static images and assets stored in the standard upload path `wp-content/uploads` for WordPress and `sites/all/default/files` for Drupal.
 
-### Code Moves Up, Content Moves Down
+## Code Moves Up, Content Moves Down
 <img src="/source/docs/assets/images/workflow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">
 
 The main process of the Pantheon workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/docs/files/) into our distributed filesystem, Valhalla, and [code](/docs/code/) on to the application servers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
