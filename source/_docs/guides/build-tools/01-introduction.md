@@ -109,7 +109,8 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-plugin">Copy</button>
-      <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1</code></pre></figure>
+      <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">mkdir -p $HOME/.terminus/plugins
+composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1</code></pre></figure>
     </div>
 
 5. Install the [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin){.external}:
