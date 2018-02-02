@@ -5,24 +5,44 @@ tags: [workflow, dashboard]
 categories: []
 ---
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
 </div>
 
+## Components of a Site
+One of the core concepts at the heart of the Pantheon workflow is the distinction between **code** and **content**.
+### Code
+Code refers to anything version controlled by Git which includes core, custom and contributed modules or plugins, themes, and libraries.
+
+{% include("content/code.html")%}
+
+### Content
+Content refers to your sites files and the database. In this context, files are static images and assets stored in the standard upload path `wp-content/uploads` for WordPress and `sites/all/default/files` for Drupal.
+
 ## Code Moves Up, Content Moves Down
 <img src="/source/docs/assets/images/workflow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">
 
-The core of the Pantheon workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev.
+The main process of the Pantheon workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/docs/files/) into our distributed filesystem, Valhalla, and [code](/docs/code/) on to the application servers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
-- **Code** includes plugins, modules, themes, CSS, JS—anything that's under Git version control.
-- **Content** includes files not under Git version control, like images, PDFs, and the database.
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#why-tab">
+      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-question-sign"></span> Why does Pantheon do this?</h3>
+    </a>
+  </div>
+  <div id="why-tab" class="collapse" markdown="1" style="padding:10px;">
+  ### Why does Pantheon do this? {.info}
+
+  Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software){.external}". Specifically, we're of the opinion that version control is a critical component when building and maintaining a website. We've built a platform tailored specicfically to let you use version control to maintain all of your code, keep all of your files separate, and have all the test beds you need to make sure everything works before changes hit production.
+  </div>
+</div>
 
 ### Commit Code in Dev
 
-Update code in the Dev environment via [SFTP](/docs/sftp/#sftp-mode) or [Git](/docs/git/).
+Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the workflow model we've described. Update code in the Dev environment via [SFTP](/docs/sftp/#sftp-mode) or [Git](/docs/git/).
 For more detailed information on developing directly in SFTP mode, please see the [guide](/docs/sftp/).
 
 ### Combine Code from Dev and Content from Live in Test
@@ -76,15 +96,15 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 ### WordPress
 
-* [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin: exports bundles of configuration to `.json` files in `wp-content/config`
-* [Advanced custom fields can be exported to code](https://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
+* [WP-CFM](https://wordpress.org/plugins/wp-cfm/){.external} plugin: exports bundles of configuration to `.json` files in `wp-content/config`
+* [Advanced custom fields can be exported to code](https://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/){.external}.
 
 
 ### Drupal
 
-* [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
-* [Views: Export to code](https://www.chapterthree.com/blog/howto-best-practices-for-embedding-views-code)
-* [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
+* [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x){.external}: Encapsulate changes into a custom module and apply them by running `update.php`. Great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
+* [Views: Export to code](https://www.chapterthree.com/blog/howto-best-practices-for-embedding-views-code){.external}
+* [Features](https://www.drupal.org/project/features){.external} module: Export sets of configuration like content types and fields to code as modules. 
 * Drupal 8 tackles configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/docs/drupal-8-configuration-management/).
 
 ## Understanding Write Permissions in Test and Live
@@ -126,4 +146,6 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 MySQL imports tables sequentially, in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may be at the table letter G, for example, and the result is the semaphore table does not exist error. Once the import or clone operation has finished, the error should no longer appear.
 
 ## See Also
-[Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
+ - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow){.external}
+ - [Your Site Code on Pantheon](/docs/code/)
+ - [Pantheon Filesystem](/docs/files/)

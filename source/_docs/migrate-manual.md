@@ -98,61 +98,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
       </a>
     </div>
     <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
-      The codebase is comprised of the following files and directories:
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
-        <!-- Active tab -->
-        <li id="wp-code-id" role="presentation" class="active"><a href="#wp-code" aria-controls="wp-code" role="tab" data-toggle="tab">WordPress</a></li>
-        <!-- 2nd Tab Nav -->
-        <li id="drops-code-id" role="presentation"><a href="#drops-code" aria-controls="drops-code" role="tab" data-toggle="tab">Drupal</a></li>
-      </ul>
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <!-- Active pane content -->
-        <div role="tabpanel" class="tab-pane active" id="wp-code" markdown="1">
-          ```nohighlight
-          ├── index.php
-          ├── wp-activate.php
-          ├── wp-config.php
-          ├── wp-comments-post.php
-          ├── wp-blog-header.php
-          ├── wp-admin
-          ├── wp-cron.php
-          ├── wp-load.php
-          ├── wp-links-opml.php
-          ├── wp-includes
-          ├── xmlrpc.php
-          ├── wp-trackback.php
-          ├── wp-signup.php
-          ├── wp-settings.php
-          ├── wp-mail.php
-          ├── wp-login.php
-          ├── wp-content
-              ├── index.php
-              ├── mu-plugins
-              ├── themes
-              ├── plugins
-          ```
-       </div>
-        <!-- 2nd pane content -->
-        <div role="tabpanel" class="tab-pane" id="drops-code" markdown="1">
-          ```nohighlight
-          ├── includes
-          ├── index.php
-          ├── misc
-          ├── modules
-          ├── profiles
-          ├── scripts
-          ├── sites
-              └── all
-                 ├── modules
-                 └── themes
-              └── default
-                 └── settings.php
-          └── themes
-          ```
-        </div>
-      </div>
+      {% include("content/code.html")%}
     </div>
   </div>
   <div class="alert alert-info">
