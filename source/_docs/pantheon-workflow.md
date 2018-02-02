@@ -29,7 +29,7 @@ The main process of the Pantheon workflow is to move code up from Dev to Test to
 
 ### Commit Code in Dev
 
-Update code in the Dev environment via [SFTP](/docs/sftp/#sftp-mode) or [Git](/docs/git/).
+Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the workflow model we've described. Update code in the Dev environment via [SFTP](/docs/sftp/#sftp-mode) or [Git](/docs/git/).
 For more detailed information on developing directly in SFTP mode, please see the [guide](/docs/sftp/).
 
 ### Combine Code from Dev and Content from Live in Test
