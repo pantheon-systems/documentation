@@ -9,7 +9,7 @@ categories: []
 ![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
 
 ## Configure
-[Contact support](/docs/getting-support) and follow the one-time setup, then provide the following for each of your remote services:
+[Contact support](/docs/getting-support) and provide the following for each of your remote services:
 
 * IP address
 * Port number
