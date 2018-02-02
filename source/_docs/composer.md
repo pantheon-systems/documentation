@@ -4,16 +4,6 @@ description: Start with Composer basics then explore suggested workflows for Wor
 tags: [automation, workflow]
 searchboost: 150
 ---
-<div class="alert alert-danger" role="alert">
-  <h4 class="info">Warning</h4>
-  <p markdown="1">
-    Pantheon does not recommend using Composer to manage a subset of project dependencies, such as libraries, but not core. Doing so is especially problematic for Drupal 8 sites since Composer is used by core, meaning any change to `composer.json` or the `vendor` directory would result in massive merge conflicts when trying to update core via one-click updates in the Pantheon Site Dashboard.
-  </p><br>
-  <p markdown="1">
-    Managing sites with Composer is an all or nothing proposition. If you want to begin managing dependencies with Composer, you need to fully convert the site to a Composer managed workflow and cease using the one-click updates provided by Pantheon.
-  </p>
-</div>
-
 {% include("content/composer-fundamentals.html")%}
 
 ## Managing Core as a Project Dependency
@@ -40,4 +30,9 @@ A Custom Upstream based off Pantheon's example repositories would need to commit
 This workflow has one very serious shortcoming, that is site-specific dependencies are likely to cause a lot of conflicts. The practical use case for this workflow is for a large group of sites that require a single set of dependencies. You should only use this method if you don’t intend to use site specific themes, modules, or plugins downstream.
 
 ## Next Steps
-Follow the [Build Tools Guide](/docs/guides/build-tools/) to start using Composer on Pantheon.
+Follow the [Build Tools Guide](/docs/guides/build-tools/) to learn best practices for Composer on Pantheon.
+
+### Partial Adoption
+If you're not ready to go all in with a Composer workflow and you want to see how it works on a smaller scale, follow the [Manage Some Dependencies with Composer](/docs/guides/partial-composer/) guide to get started.
+
+{% include("content/notes/partial-composer-adoption-warning.html") %}
