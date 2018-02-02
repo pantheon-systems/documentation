@@ -27,6 +27,19 @@ Content refers to your sites files and the database. In this context, files are 
 
 The main process of the Pantheon workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/docs/files/) into our distributed filesystem, Valhalla, and [code](/docs/code/) on to the application servers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#why-tab">
+      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-question-sign"></span> Why does Pantheon do this?</h3>
+    </a>
+  </div>
+  <div id="why-tab" class="collapse" markdown="1" style="padding:10px;">
+  ### Why does Pantheon do this? {.info}
+
+  Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software){.external}". Specifically, we're of the opinion that version control is a critical component when building and maintaining a website. We've built a platform tailored specicfically to let you use version control to maintain all of your code, keep all of your files separate, and have all the test beds you need to make sure everything works before hit hits production.
+  </div>
+</div>
+
 ### Commit Code in Dev
 
 Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the workflow model we've described. Update code in the Dev environment via [SFTP](/docs/sftp/#sftp-mode) or [Git](/docs/git/).
