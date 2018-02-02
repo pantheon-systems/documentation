@@ -45,6 +45,7 @@ Some customers have reported success using external Solr service providers for t
 
  - [IndexDepot](https://www.indexdepot.com/en/). For more information, see [Using IndexDepot With Pantheon Sites](/docs/indexdepot/).
  - [OpenSolr](https://opensolr.com/)
+ - [SearchStax](https://www.searchstax.com/)
  - [WebSolr](https://websolr.com/)
 
 ## Apache Solr Vocabulary
