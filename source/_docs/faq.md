@@ -24,7 +24,7 @@ Pantheon is free for developers. Our live site plans currently start as low as $
 
 
 ### Where are the Pantheon servers located?
-Our data center is in the United States, but Pantheon's [Global CDN](/docs/global-cdn/) serves content from 30+ POPs (points of presence) distributed around the world. We also have plans to add data centers in Europe, which would speed up authenticated traffic for end-users there, but we don't have an ETA for that expansion.
+Our data center is in the United States, but Pantheon's [Global CDN](/docs/global-cdn/) serves content from 40+ POPs (points of presence) distributed around the world. We also have plans to add data centers in Europe, which would speed up authenticated traffic for end-users there, but we don't have an ETA for that expansion.
 
 ### Can I run other applications on Pantheon?
 
@@ -102,7 +102,7 @@ No. We do not have plans to add this feature. However, it is possible to run a s
 
 ### How do I increase the maximum execution time limit for a PHP script?
 
-The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/docs/timeouts/) documentation and it cannot be increased.  If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success. 
+The upper time limit for PHP processing on the platform is 120 seconds. This is outlined in the [Timeouts](/docs/timeouts/) documentation and it cannot be increased.  If a script is processing a large amount of data, for example, we recommend that the process be done in smaller batches that can execute sequentially to ensure success.
 
 ### Can I Host a Multilingual Site?
 
