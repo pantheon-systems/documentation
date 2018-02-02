@@ -48,7 +48,7 @@ For better or for worse, WordPress stores full URLs in the database. These URLs 
 WP-CLI's `search-replace` command is a good tool for this job, in large part because it also gracefully handles URL references inside of PHP serialized data. The general pattern you'll want to follow is:
 
 ```bash
-wp search-replace <old-domain> <new-domain> --network --url=<old-domain>
+terminus wp search-replace <old-domain> <new-domain> --network --url=<old-domain>
 ```
 
 In this example:
@@ -101,7 +101,7 @@ terminus env:clone-content <site>.live dev
 Once the clone process is complete, you'll need to run `wp search-replace` to update all domain configuration references:
 
 ```bash
-wp search-replace <live-domain> <dev-domain> --network --url=<live-domain>
+terminus wp <site>.<env> -- search-replace <live-domain> <dev-domain> --network --url=<live-domain>
 ```
 
 Lastly, flush the cache for the entire Dev environment:
