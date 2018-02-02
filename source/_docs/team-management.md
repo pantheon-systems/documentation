@@ -44,12 +44,12 @@ The Site Team generally consists of one Site Owner and any necessary Team Member
         <td>✓</td>
       </tr>
       <tr>
-          <td>Create and Delete <a href="/docs/multidev/">Multidev Environments</a><a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Business" data-content="Available on Business and Elite sites"><em class="fa fa-info-circle"></em></a></td>
+          <td>Create and Delete <a href="/docs/multidev/">Multidev Environments</a> <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Business" data-content="Available on Business and Elite sites"><em class="fa fa-info-circle"></em></a></td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-          <td>Merge <a href="/docs/multidev/">Multidevs</a> into Dev<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Business" data-content="Available on Business and Elite sites"><em class="fa fa-info-circle"></em></a></td>
+          <td>Merge <a href="/docs/multidev/">Multidevs</a> into Dev <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Business" data-content="Available on Business and Elite sites"><em class="fa fa-info-circle"></em></a></td>
         <td>✓</td>
         <td>✓</td>
       </tr>
