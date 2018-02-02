@@ -74,13 +74,13 @@ If you use Redis as a persistent storage backend for your object cache, you'll n
 With Terminus and WP-CLI, you can flush cache globally with one operation:
 
 ```bash
-    terminus wp <site>.<env> -- cache flush
+terminus wp <site>.<env> -- cache flush
 ```
 
 The Terminus command to clear all caches for an environment is:
 
 ```bash
-    terminus env:clear-cache <site>.<env>
+terminus env:clear-cache <site>.<env>
 ```
 
 Running into “Error: Site Not Found”? See [Troubleshoot](/docs/guides/multisite/debug/) for the cause and resolution.
