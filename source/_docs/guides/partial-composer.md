@@ -88,7 +88,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
     1. Initialize composer to create a `composer.json` file with the Drupal 7 package repository:
 
       ```command
-      composer init --repository=https://packages.drupal.org/7 --no-interaction -s=alpha
+      composer init --repository=https://packages.drupal.org/7 --no-interaction
       ```
 
     2. Edit the `composer.json` to add extra configuration that specifies installation paths for Drupal modules, libraries, and themes:
@@ -101,7 +101,6 @@ Use the `init` command to create a `composer.json` file that includes the approp
                   "url": "https://packages.drupal.org/7"
               }
           ],
-          "minimum-stability": "alpha",
           "require": {},
           "extra": {
             "installer-paths": {
@@ -183,25 +182,22 @@ Use the `require` command to add new dependencies to your project, such as libra
 
   <!-- 2nd pane content -->
   <div role="tabpanel" class="tab-pane" id="d7-require-papc" markdown="1">
+  #### Install Site Local Drush
+  The following example shows you how to install a site local Drush. You can use this method to require contrb modules, themes, and libraries.
 
-  _**!!! @TODO: Drupal core was installed and pushing triggers warning about modifying core files. Is relocated docroot a pre-req for drupal sites?? What am i missing?? !!!!**_
-
-  #### Install a Contrib Module
   1. First, require the `composer/installers` package to support the installation paths configured in the previous section:
 
     ```command
     composer require composer/installers
     ```
-  2. Require the module, [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache){.external} for example, with Composer:
+  2. Require Drush with Composer:
 
     ```command
-    composer require drupal/pantheon_advanced_page_cache
+    composer require drush/drush
     ```
-  3. Review modified files using `git status`, you should see the module has been installed in the `sites/all/modules` directory like so:
+  3. Review modified files using `git status`:
 
-    ![Require drupal/pantheon_advanced_page_cache output](/source/docs/assets/images/guides/partial-composer/require-papc-module.png)
-
-    Note the Drupal 8 Cache Backport module was also installed.
+    ![Require drupal/pantheon_advanced_page_cache output](/source/docs/assets/images/guides/partial-composer/require-drush.png)
 
     If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing.
   4. Commit your work to version control with Git:
@@ -211,17 +207,13 @@ Use the `require` command to add new dependencies to your project, such as libra
     ```
 
     ```command
-    git commit -m "Require pantheon_advanced_page_cache and composer/installers"
+    git commit -m "Require drush and composer/installers"
     ```
   5. Push your changes to Pantheon:
 
     ```command
     git push origin master
     ```  
-  6. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard.
-  7. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
-  8. Navigate to **Modules** and enable Pantheon Advanced Page Cache.
-
   </div>
 </div>
 
