@@ -367,10 +367,6 @@ Pantheon has tools in place to monitor database queries:
 
 <hr>
 
-### [Sucuri Security](https://wordpress.org/plugins/sucuri-scanner/)
-**Issue**: Sucuri Scanner enforces absolute file paths for the data storage path and the container ID of the file path will change with routine platform maintenance.
-<hr>
-
 ### [Timthumb](https://code.google.com/p/timthumb/)
 **Issue**: TimThumb is no longer supported or maintained.
 <hr>
