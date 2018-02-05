@@ -9,7 +9,7 @@ By default, Pantheon runs Drush 8 on newly created Drupal sites.
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p markdown="1">
-When running Drush locally, we highly recommend running Drush version 8.1.16 or higher.
+When running Drush locally, we highly recommend running Drush version 8.1.15 or higher.
 </p></div>
 
 ## Terminus Drush and Local Drush
