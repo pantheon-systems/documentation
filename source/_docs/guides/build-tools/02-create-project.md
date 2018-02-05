@@ -76,6 +76,18 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
 
      ### Your requirements could not be resolved to an installable set of packages
      Check the output for the recommended fix. For example, PHP 7.0 is required for WordPress. Once you have resolved the issues as suggested by Composer try the command again.
+     
+     ### The site name is already taken on Pantheon.
+     If the user is not logged in or authentication is not valid, terminus build:project-create displays 
+       ```
+       BuildToolsCommand.php line 166:  
+           The site name exampleuniquesitename is already taken on Pantheon.
+       ```
+    Make sure you are logged in with the command
+    ```
+    $ terminus auth:whoami
+    ```
+    Create and add a new [Machine Token](https://pantheon.io/docs/machine-tokens/)
 
      ### Additional Support
      Pantheon's composer based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
