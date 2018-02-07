@@ -40,3 +40,5 @@ This module facilitates and debugs communication between Drupal and Pantheon's A
 
 ### [Login](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_login)
 Provides login integration between Drupal and the Pantheon Site Dashboard.
+
+View [details on specific WordPress plugins](/docs/plugins/) developed and maintained for the Pantheon Website Management Platform workflow.
