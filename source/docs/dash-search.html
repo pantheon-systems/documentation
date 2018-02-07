@@ -1,0 +1,47 @@
+---
+use: [articles]
+title: Search
+dashsearch: true
+permalink: docs/dash-search/
+layout: default
+---
+{% block content_wrapper %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 search-results" style="margin-left: 50px;">
+
+      <!-- Show a search field above results as well -->
+      <!--input type="text" class="addsearch" placeholder="Search Pantheon Docs" /-->
+
+      <!-- Custom script to grab query from URL and put into search bar -->
+      <script>
+        function parseParamsFromUrl() {
+        var queryString = window.location.search;
+            queryString = queryString.substring(11);
+            queryString = queryString.split("+").join(" ");
+        return queryString;
+        }
+        var urlParams = parseParamsFromUrl();
+        document.getElementById('piodocsearch').setAttribute('value', urlParams);
+      </script>
+
+      <!-- Search results will be rendered to this div -->
+      <div id="addsearch-results"></div>
+
+      <!-- AddSearch settings -->
+      <script>
+      window.addsearch_settings = {
+        display_url: true,
+        display_resultscount: true,
+        display_date: true,
+        display_sortby: true,
+        display_category: true
+      }
+      </script>
+
+      <!-- Script must be below search field and addsearch-results div -->
+      <script src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage"></script>
+    </div>
+  </div>
+</div>
+{% endblock %}
