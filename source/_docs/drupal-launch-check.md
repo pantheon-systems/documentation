@@ -54,8 +54,6 @@ You can also execute a full report in HTML format.
 ```bash
 terminus remote:drush <site>.<env> -- aa --skip=insights --html --bootstrap --detail --vendor=pantheon > report.html
 ```
-#### Is Launch Check available for Drupal 8 sites?
-Launch Check for Drupal 8 is currently in development and will be available at a later date.
 
 #### Are there plans to support Drupal 6 sites?
 At this time, there are no plans to support Drupal 6 with this tool.
