@@ -469,7 +469,11 @@ terminusCompareApp.filter('search', function() {
                 {% else %}
                   <div class="container container-navsearch-box">
                 {% endif %}
+                {% if page.dashsearch %}
+                  {% include("dash_search_box.html") %}
+                {% else %}
                   {% include("search_box.html") %}
+                {% endif %}
                   <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span>
                   <span class="sr-only">(search)</span>
                 </div>
