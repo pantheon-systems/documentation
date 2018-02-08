@@ -127,9 +127,6 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
 </div>
 
 ## Frequently Asked Questions
-### Can I place a single page app in my root directory?
-Yes, but instead of using `index.html`, we use `override.html` as the default page to be loaded. It is also possible to have a sub-directory that contains singe-page apps with HTML, JS or CSS files. For deployment, these are treated the same way as other static assets in the platform.
-
 ### Can I use other frameworks or distributions?
 You can use [custom upstreams](/docs/custom-upstream/), [make your own build](/docs/guides/build-tools/) or [install distributions](/docs/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org/){.external} (Drupal 8 API distribution) can be used on the platform.
 
