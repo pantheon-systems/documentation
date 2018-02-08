@@ -6,9 +6,17 @@ categories: []
 ---
 [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration){.external} creates a secure tunnel between your firewall and your public facing website. This is available for sites within Enterprise and EDU+ organizations. [Contact us](https://pantheon.io/pantheon-enterprise){.external} for more information.
 
+One of the affects of the elastic nature of Pantheon's platform is that sites are never hosted from a dedicated IP address. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. The Pantheon Enterprise Gateway provides a solution.
+
+## How It Works
+
 ![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
 
-## Configure
+In the diagram above, the site `live-customer.pantheonsite.io` contains two application containers. Container IP addresses are not constant, so direct connections aren't sustainable.
+
+The Pantheon Enterprise Gateway uses TLS encryption to create a tunnel from the application containers to a pair of [F5 load balancers](https://f5.com/glossary/load-balancer){.external}, offering a consistent IP address range from which requests are made to your local service.
+
+## Create an Enterprise Gateway
 [Contact support](/docs/getting-support) and provide the following for each of your remote services:
 
 * IP address
@@ -17,7 +25,15 @@ categories: []
    - Uppercase letters and underscores allowed
   -  Used for [PHP Constant](https://secure.php.net/manual/en/language.constants.php){.external} that will replace the numeric port number in your code
 
-Once setup is complete on our end, we'll provide you with the information you need to use the Pantheon Enterprise Gateway.
+Once setup is complete on our end, we'll provide you with the information you need to use the Pantheon Enterprise Gateway, including a PHP constant in the format `PANTHEON_SOIP_EXAMPLE`, where `EXAMPLE` is replaced with the service name you specify.
+
+## Configure Your Site
+
+Once the gateway has been established, you must update your code to direct requests to your external service to `localhost:PANTHEON_SOIP_EXAMPLE` or `127.0.0.1:PANTHEON_SOIP_EXAMPLE`.
+
+### PHP Constants as Port Numbers
+
+Once your Enterprise Gateway is configured, we update your site environment with the PHP constant `PANTHEON_SOIP_EXAMPLE`. This constant translates to the port number, internal to your Pantheon Site, through which your external service can be accessed.
 
 ###  Example Connections with PHP Constants
 
