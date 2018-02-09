@@ -6,6 +6,8 @@ categories: []
 ---
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these modules, find Pantheon developers in our [Power Users Slack channel](/docs/power-users/).
 
+Drupal users, see [Pantheon Modules](/docs/modules/) for details on Drupal modules developed and maintained for the Pantheon workflow.
+
 ## [Pantheon Must-Use Plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon){.external}
 This must-use plugin is vital to the operation of your site on the platform and must not be removed from your codebase. Consider it a part of WordPress core, and do not hack it. The permanent activation of this plugin will not interfere with your local environment.
 
@@ -44,5 +46,3 @@ Provides support for SAML Authentication. The plugin comes bundled with the OneL
 
 ## [WP Redis](https://wordpress.org/plugins/wp-redis){.external}
 Provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Installing Redis on Drupal or WordPress](/docs/redis/).
-
-View [details on specific Drupal modules](/docs/modules/) developed and maintained for the Pantheon Website Management Platform workflow.

@@ -6,6 +6,8 @@ tags: [siteintegrations, infrastructure, cacheedge]
 ---
 Pantheon maintains several modules to extend and integrate Drupal on the platform. For real time discussion of these modules, find Pantheon developers in our [Power Users Slack channel](/docs/power-users/).
 
+WordPress users, see [Pantheon Plugins](/docs/plugins/) for details on WordPress plugins developed and maintained for the Pantheon workflow.
+
 ## [Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
 The Advanced Page Cache module attaches [Drupal's cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) to a response so that Pantheon's [Global CDN](/docs/global-cdn/) edge service can granularly clear new content as it is saved. The Global CDN can detect when underlying data changes, such as nodes and taxonomy terms, then clear pages containing that entity. For details, see [this blog post](https://pantheon.io/blog/pantheon-advanced-page-cache-drupal-cache-metadata-global-cdn).
 
@@ -40,5 +42,3 @@ This module facilitates and debugs communication between Drupal and Pantheon's A
 
 ### [Login](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_login)
 Provides login integration between Drupal and the Pantheon Site Dashboard.
-
-View [details on specific WordPress plugins](/docs/plugins/) developed and maintained for the Pantheon Website Management Platform workflow.
