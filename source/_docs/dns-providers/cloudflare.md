@@ -17,13 +17,17 @@ Be sure that you have a:
 - [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
+
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">Even though the Pantheon Dashboard provides both A/AAAA records and CNAME records, for the best compatibility with Cloudflare we recommend using only the CNAME values. Ignore DNS values provided by Pantheon for A/AAAA records for the bare domain.</p>
+</div>
+
 Cloudflare offers **CNAME Flattening**, which allows use of a CNAME for all domains, including bare domains:
 
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **DNS Recommendations** button next to the `www` domain and copy the CNAME value (e.g. `live-example.pantheonsite.io`).
 3. Login to your <a href="https://www.cloudflare.com/a/login" target="blank">Cloudflare account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
-
-We recommend using this CNAME value for all DNS records (`www` and the bare domain), as it prevents association with a single IP address. Ignore DNS values provided by Pantheon for A/AAAA records for the bare domain.
 
 ## Configure DNS Records on Cloudflare
 
