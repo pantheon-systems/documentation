@@ -105,29 +105,35 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
         <figure><pre id="mac-mt-auth"><code class="command bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
       </div>
 
-4. Install the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin){.external}:
+4. Create the `$HOME/.terminus/plugins` directory if it does not already exist:
+
+      <div class="copy-snippet">
+        <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-install-mkdir">Copy</button>
+        <figure><pre id="terminus-plugin-install-mkdir"><code class="command bash" data-lang="bash">mkdir -p $HOME/.terminus/plugins</code></pre></figure>
+      </div>
+
+5. Install the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin){.external}:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-plugin">Copy</button>
-      <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">mkdir -p $HOME/.terminus/plugins
-composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1</code></pre></figure>
+      <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1</code></pre></figure>
     </div>
 
-5. Install the [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin){.external}:
+6. Install the [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin){.external}:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#console-plugin">Copy</button>
       <figure><pre id="console-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1</code></pre></figure>
     </div>
 
-6. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin){.external}:
+7. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin){.external}:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#build-tools-plugin">Copy</button>
       <figure><pre id="build-tools-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:~1</code></pre></figure>
     </div>
 
-7. [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.
+8. [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
