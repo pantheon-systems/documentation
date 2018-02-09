@@ -49,12 +49,6 @@ Secure integration with Pantheon Enterprise Gateway:
 127.0.0.1:PANTHEON_SOIP_LDAP_STAFF
 ```
 
-In cases where you cannot supply a direct PHP constant, consider wrapping it into a variable. For example:
-
-```PHP
-$ldaphost = “ldaps://127.0.0.1:” . PANTHEON_SOIP_LDAP;
-```
-
 ## Considerations
 
 <div class="alert alert-info" markdown="1">
