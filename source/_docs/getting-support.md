@@ -178,7 +178,7 @@ Customers with Full Stack support get an extra level of assistance for their dev
 
 Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring. Full Stack Support can help troubleshoot networking issues and other problems that can be difficult to resolve from the outside.
 
-This level of support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, use Pantheon's [Agency Finder](https://pantheon.io/agencies/agency-finder) to search for qualified partners you can trust.
+This level of support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match){.external} from Pantheon’s network of trusted partners.
 
 ## Feature Requests
 
