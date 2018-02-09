@@ -16,7 +16,7 @@ Multidev is development environments for teams and allows a developer to fork th
 
 **Easy workflow.** Developers on your team can use a standardized best-practice development workflow in the cloud through their Dashboard.
 
-**No more surprises.** Each developer on your team gets their own Multidev environment with the same configuration and stack as the Live environment. Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
+**No more surprises.** Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
 
 **A fork for every developer on your team.** Multidev gets new developers started quickly; you can’t have too many cooks in a Multidev kitchen.
 ![Pantheon standard workflow vs multidev](/source/docs/assets/images/multidev-workflow.png)​
