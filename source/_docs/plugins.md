@@ -44,3 +44,5 @@ Provides support for SAML Authentication. The plugin comes bundled with the OneL
 
 ## [WP Redis](https://wordpress.org/plugins/wp-redis){.external}
 Provides an alternative caching backend, taking work off the database, which is vital for scaling to a larger number of logged-in users. For more information, see [Installing Redis on Drupal or WordPress](/docs/redis/).
+
+View [details on specific Drupal modules](/docs/modules/) developed and maintained for the Pantheon Website Management Platform workflow.
