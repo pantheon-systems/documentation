@@ -18,9 +18,9 @@ Be sure that you have a:
 
 ## Locate Pantheon's DNS Values
 
-<div class="alert alert-danger" role="alert">
-  <h4 class="info">Warning</h4>
-  <p markdown="1">The following recommendations differ from those shown in the Site Dashboard. This is because Cloudflare supports CNAME Flattening, which prevents association with a single IP address. Ignore the DNS values provided in the Site Dashboard for A/AAAA records.</p>
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">The following recommendations differ from those shown in the Site Dashboard. This is because Cloudflare supports **CNAME Flattening**, which prevents association with a single IP address. Ignore the DNS values provided in the Site Dashboard for A/AAAA records.</p>
 </div>
 
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
