@@ -17,13 +17,15 @@ Be sure that you have a:
 - [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
-Cloudflare offers **CNAME Flattening**, which allows use of a CNAME for all domains, including bare domains:
+
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">The following recommendations differ from those shown in the Site Dashboard. This is because Cloudflare supports **CNAME Flattening**, which prevents association with a single IP address. Ignore the DNS values provided in the Site Dashboard for A/AAAA records.</p>
+</div>
 
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **DNS Recommendations** button next to the `www` domain and copy the CNAME value (e.g. `live-example.pantheonsite.io`).
 3. Login to your <a href="https://www.cloudflare.com/a/login" target="blank">Cloudflare account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
-
-We recommend using this CNAME value for all DNS records (`www` and the bare domain), as it prevents association with a single IP address. Ignore DNS values provided by Pantheon for A/AAAA records for the bare domain.
 
 ## Configure DNS Records on Cloudflare
 
@@ -42,7 +44,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
 6. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 7. Click **Add Record**.
-8. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Domains and Redirects](https://pantheon.io/docs/redirects/) for more information.
+8. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Domains and Redirects](/docs/domains/) for more information.
 
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
 You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
