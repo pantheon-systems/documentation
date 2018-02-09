@@ -18,12 +18,10 @@ Be sure that you have a:
 
 ## Locate Pantheon's DNS Values
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Even though the Pantheon Dashboard provides both A/AAAA records and CNAME records, for the best compatibility with Cloudflare we recommend using only the CNAME values. Ignore DNS values provided by Pantheon for A/AAAA records for the bare domain.</p>
+<div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">The following recommendations differ from those shown in the Site Dashboard. This is because Cloudflare supports CNAME Flattening, which prevents association with a single IP address. Ignore the DNS values provided in the Site Dashboard for A/AAAA records.</p>
 </div>
-
-Cloudflare offers **CNAME Flattening**, which allows use of a CNAME for all domains, including bare domains:
 
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **DNS Recommendations** button next to the `www` domain and copy the CNAME value (e.g. `live-example.pantheonsite.io`).
@@ -46,7 +44,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
 6. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 7. Click **Add Record**.
-8. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Domains and Redirects](/docs/redirects/) for more information.
+8. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Domains and Redirects](/docs/domains/) for more information.
 
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
 You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
