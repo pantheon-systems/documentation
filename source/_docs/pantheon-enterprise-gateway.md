@@ -29,7 +29,7 @@ Once setup is complete on our end, we'll provide you with the information you ne
 
 ## Configure Your Site
 
-Once the gateway has been established, you must update your code to direct requests to your external service to `localhost:PANTHEON_SOIP_EXAMPLE` or `127.0.0.1:PANTHEON_SOIP_EXAMPLE`.
+Once the gateway has been established, you must update your code to use it. This process varies depending on the modeules or plugins in use, and the type of service you're routing through the gateway.
 
 ### PHP Constants as Port Numbers
 
@@ -49,6 +49,12 @@ Secure integration with Pantheon Enterprise Gateway:
 ```nohighlight
 127.0.0.1:PANTHEON_SOIP_LDAP_STUDENTS
 127.0.0.1:PANTHEON_SOIP_LDAP_STAFF
+```
+
+In cases where you cannot supply a direct PHP constant, consider wrapping it into a variable. For example:
+
+```PHP
+$ldaphost = “ldaps://127.0.0.1:” . PANTHEON_SOIP_LDAP;
 ```
 
 ## Considerations
