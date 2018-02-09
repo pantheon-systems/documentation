@@ -6,6 +6,10 @@ categories: []
 ---
 Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these modules, find Pantheon developers in our [Power Users Slack channel](/docs/power-users/).
 
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">Drupal users, see [Pantheon Modules](/docs/modules/) for details on Drupal modules developed and maintained for the Pantheon workflow.</p></div>
+
 ## [Pantheon Must-Use Plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon){.external}
 This must-use plugin is vital to the operation of your site on the platform and must not be removed from your codebase. Consider it a part of WordPress core, and do not hack it. The permanent activation of this plugin will not interfere with your local environment.
 
