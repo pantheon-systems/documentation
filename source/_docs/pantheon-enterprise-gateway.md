@@ -6,13 +6,11 @@ categories: []
 ---
 [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration){.external} creates a secure tunnel between your firewall and your public facing website. This is available for sites within Enterprise and EDU+ organizations. [Contact us](https://pantheon.io/pantheon-enterprise){.external} for more information.
 
-One of the affects of the elastic nature of Pantheon's platform is that sites are never hosted from a dedicated IP address. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. The Pantheon Enterprise Gateway provides a solution.
+One of the affects of the elastic nature of Pantheon's platform is that sites have a [dynamic outgoing IP](/docs/outgoing-ips/). Container IP addresses are not constant, so direct connections aren't sustainable. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. The Pantheon Enterprise Gateway provides a solution.
 
 ## How It Works
 
 ![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
-
-In the diagram above, the site `live-customer.pantheonsite.io` contains two application containers. Container IP addresses are not constant, so direct connections aren't sustainable.
 
 The Pantheon Enterprise Gateway uses TLS encryption to create a tunnel from the application containers to a pair of [F5 load balancers](https://f5.com/glossary/load-balancer){.external}, offering a consistent IP address range from which requests are made to your local service.
 
