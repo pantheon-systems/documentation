@@ -393,6 +393,25 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**:
 
 ![Finish Manual Migration](/source/docs/assets/images/successfully-migrated.png)
+## Troubleshooting
+
+### Unable to pull Pantheon's upstream on existing Git repository
+
+You may see the following when trying to pull from Pantheon's upstream when you have an existing repository:
+
+```
+Not possible to fast-forward, aborting.
+```
+
+If you see this, it is possible your Git configuration is disallowing non-fastforward merges:
+
+```
+[pull]
+rebase = TRUE
+ff = only
+```
+
+In this case, you will want to remove `ff = only`. 
 
 ## See Also
 Check our standard migration procedure for related <a href="/docs/migrate#frequently-asked-questions-faqs" data-proofer-ignore>Frequently Asked Questions</a> and [Troubleshooting](/docs/migrate#troubleshooting) tips.
