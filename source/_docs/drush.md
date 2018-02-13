@@ -15,6 +15,11 @@ Drush-savvy developers should also install and utilize [Terminus](/docs/terminus
 
 You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
 
+Example:
+```nohighlight
+$ terminus aliases
+```
+
 ## Drush Versions
 For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/docs/drush-versions).
 
@@ -26,9 +31,6 @@ There are two ways to obtain the aliases, either with Terminus or through the Da
 ### Download with Terminus, the Pantheon CLI
 Authenticate Terminus with [machine tokens](/docs/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
-```nohighlight
-$ terminus aliases
-```
 
 ### Download Using the Dashboard
 Download your Pantheon site aliases to manually update your local aliases file:
@@ -65,9 +67,13 @@ drush @pantheon.SITENAME.ENV COMMAND
 </p>
 </div>
 
-#### Registry Rebuild
+### Registry Rebuild
 
 Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site. **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
+
+```bash
+terminus drush SITENAME.ENV -- rr
+```
 
 ## Run SQL Queries Using Drush on Pantheon
 
