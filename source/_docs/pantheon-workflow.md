@@ -5,7 +5,7 @@ tags: [workflow, dashboard]
 categories: []
 ---
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/). You may want to begin by reading our [Quick Start guide](/docs/guides/quickstart/).
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
