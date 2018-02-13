@@ -4,7 +4,7 @@ description: Detailed information on Launch Check, Drupal Performance and Config
 tags: [status]
 categories: [drupal7]
 ---
-Pantheon provides static site analysis as a service for Drupal 7 sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
+Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
 ![status tab on live environment](/source/docs/assets/images/dashboard/status-tab.png)
 
