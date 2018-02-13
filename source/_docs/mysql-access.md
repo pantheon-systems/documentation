@@ -117,7 +117,7 @@ Table prefixes are not supported or recommended by Pantheon. While the server wi
 
 #### Can I create a database in addition to the Pantheon database?
 
-No, only one database per site is provided and create privileges are not granted.
+No, only one database per site is provided. While create privileges are granted, any additional database will not survive regular maintenance operations.
 
 #### Can I put unique tables in the Pantheon database?
 
