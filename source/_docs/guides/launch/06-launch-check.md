@@ -32,6 +32,8 @@ Launch with confidence by taking advantage of Pantheon's static site analysis se
 2. Navigate to the **<span class="glyphicons glyphicons-info-sign"></span> Status** page.
 3. The automated report will check for exploited patterns in code, shows database stats, reveals PHP errors, and much more.
 
+For more information on what is included in these checks and how they work, see [Drupal Launch Check](/docs/drupal-launch-check/) and [WordPress Launch Check](/docs/wordpress-launch-check/).
+
   **Shoot for all green, but at the very least be sure and fix all errors and review every notice.**
 
 <div class="panel panel-drop panel-guide" id="accordion">
