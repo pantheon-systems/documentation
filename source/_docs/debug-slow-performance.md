@@ -83,7 +83,7 @@ The next performance killer is an excessive number of database queries per reque
  ![New Relic map tab](/source/docs/assets/images/new-relic-map.png)<br />
 Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high. In the upper-right, the average query duration is shown and is actually very respectable.
 
-Therefore, with an average of 110 queries taking 1.19 seconds means on average, each request spends .132 seconds in the database. A second example with the same query duration, but with 239 queries per request, means .28 seconds in the database. A final example with 421 queries per request averaging 2.66 milliseconds equals **1.1** seconds per request in the database—monstrously slow.
+Therefore, with an average of 110 queries taking 1.19 milliseconds means on average, each request spends .132 seconds in the database. A second example with the same query duration, but with 239 queries per request, means .28 seconds in the database. A final example with 421 queries per request averaging 2.66 milliseconds equals **1.1** seconds per request in the database—monstrously slow.
 
 Query count matters, so keep it low through caching and avoiding queries in loops.
 
