@@ -125,6 +125,10 @@ This is a common error with the SMTP Authentication Support module. It can be fi
 
 See [available patch](https://drupal.org/node/1369736#comment-5644064).
 
+### Unable to Send Mail with Amazon SES
+
+SES places new users into 'sandbox mode' to help prevent fraud and abuse. If you are having trouble sending mail and are using SES, confirm you are not in sandbox mode. For more information, [see AWS documentation on sandbox mode](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/request-production-access.html){.external}.
+
 ## Frequently Asked Questions
 
 ### Can I use Pantheon's local MTA (postfix)?
