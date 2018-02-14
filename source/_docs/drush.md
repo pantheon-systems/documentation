@@ -13,12 +13,8 @@ Refer to Drush's [install documentation](http://docs.drush.org/en/master/install
 
 Drush-savvy developers should also install and utilize [Terminus](/docs/terminus/), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
 
-You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
+You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/). For example, you can run `terminus drush <site>.<env> -- cc` instead of `drush @pantheon.SITENAME.dev cc drush`.
 
-Example:
-```nohighlight
-$ terminus aliases
-```
 
 ## Drush Versions
 For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/docs/drush-versions).
@@ -31,6 +27,9 @@ There are two ways to obtain the aliases, either with Terminus or through the Da
 ### Download with Terminus, the Pantheon CLI
 Authenticate Terminus with [machine tokens](/docs/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
+```nohighlight
+$ terminus aliases
+```
 
 ### Download Using the Dashboard
 Download your Pantheon site aliases to manually update your local aliases file:
