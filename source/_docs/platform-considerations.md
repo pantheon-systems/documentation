@@ -51,7 +51,7 @@ Domain masking allows you to serve two entirely different and separate sites ove
 * Main Site: `https://www.example-site.com/`
 * Blog: `https://www.example-site.com/blog/`
 
-Pantheon does not provide any mechanism to implement domian masking. You may be able to setup this using a thrird party service but Pantheon cannot assist with the configuration or support if you implement domain masking.
+Pantheon does not provide any mechanism to implement domain masking. You may be able to setup this using a third party service but Pantheon cannot assist with the configuration or support if you implement domain masking.
 
 In cases of redirection issues on sites with domain masking implemented, Pantheon cannot assist in debugging unless the domain masking is disabled.
 
