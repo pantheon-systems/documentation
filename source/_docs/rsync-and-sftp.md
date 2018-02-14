@@ -15,6 +15,8 @@ There are two mechanisms for transferring files: SFTP and rsync.
 <p>You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.</p>
 </div>
 
+{% include("content/auth.html")%}
+
 ## SFTP
 
 There are a number of GUI SFTP clients available, such as [FileZilla](https://filezilla-project.org), [WinSCP](https://winscp.net/eng/index.php), and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.
