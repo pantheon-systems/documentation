@@ -14,13 +14,15 @@ searchboost: 100
 Terminus is available for Mac OS X, Linux, and Windows 7 and 10.
 ## Requirements
 
-* PHP Version 5.5.9 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php))
+* PHP Version 5.5.9 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php)). You can check your PHP version by running `php -v` from a terminal application.
 * [PHP-CLI](http://www.php-cli.com/)
 * [PHP-CURL](https://secure.php.net/manual/en/curl.setup.php)
 * [Composer](https://getcomposer.org/download/)
 * Windows Only: Terminus requires a \*nix-like environment. If you don't already have a bash emulator, we recommend [Git for Windows](https://git-for-windows.github.io/).
 
   If you already have it configured and are regularly using it, we have seen some users find success with [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) (Windows 10 only).
+  
+  
 
 ## Install
 <p class="instruction">Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>$HOME</code> and install there:</p>
