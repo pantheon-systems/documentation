@@ -64,7 +64,7 @@ Pantheon uses Pressflow to automatically read the environmental configuration. I
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962) at the **end** of settings.php. For example, for Drupal 7:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962){.external} above any [Redis configurations](/docs/redis/#enable-redis) in `settings.php`. For example, for Drupal 7:
 
     // All Pantheon Environments.
     if (defined('PANTHEON_ENVIRONMENT')) {
