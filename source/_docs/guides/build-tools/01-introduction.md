@@ -98,7 +98,7 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
       <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
     </div>
     
-3. [Load your SSH key](/docs/ssh-keys) into your account.
+3. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 4. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create){.external}, then authenticate Terminus:
 
