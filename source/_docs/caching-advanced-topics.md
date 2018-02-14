@@ -34,6 +34,12 @@ For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/pantheo
 
 If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and log in. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
 
+## Manually Expiring Cache for Static Assets (e.g. CSS, JS, PDFs, Images)
+
+Pantheon sets a max-age header of 366 days on static assets. While these can be expired from the Pantheon Edge, an end user's browser or a CDN in front of Pantheon will cache the asset for a year - something neither site owners, site developers, or Pantheon can control.
+
+The simplest method for dealing with this is to ensure any new version of a static asset has a new name. This will force the user's browser to grab the new version of the asset.
+
 ## Using Your Own Session-Style Cookies
 
 Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, Varnish will not try to respond to the request from its cache or store the response.
