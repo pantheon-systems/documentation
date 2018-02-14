@@ -140,3 +140,21 @@ This functionality doesn't exist for WordPress sites, but there are a multitude 
 Calling external services during regular requests can be a performance problem. The time it takes to initiate the request then send and receive data is time spent waiting by visitors. Since PHP executes instructions sequentially, no other operation can be executed while the external connection is active. Also, if the external service goes down, your site will go down along with it.
 
 Sometimes these are necessary (e.g. getting a Twitter feed). The recommendation here is to avoid making external calls during regular requests as much as possible. As an alternative, you can make these calls via cron and store them in the database. The data can be refreshed with the desired frequency. The advantage is that even if the external service is slow or goes down your site won't be affected.
+
+## Memory Errors
+An _Allowed memory size of <bytes> exhausted_ or _Out of Memory_error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary from between [plans](/docs/platform-resources/), so sites that handle complex data, or with very large codebases will need more. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective. 
+
+Debugging memory issues can be challenging. Here are some things to consider when addressing memory issues: 
+
+- Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified. 
+- Debug code using a PHP extension, e.g. [Xdebug](https://xdebug.org/) to help refactor code that could be leaking memory. 
+- Enabling [Redis](/docs/redis/) will boost site performance by providing an in-memory backend caching. 
+- [Update PHP version](/docs/php-versions/)
+- Use New Relic to identify 
+
+
+### Drupal
+Disabling modules that are unneeded will help reduce memory usage.
+
+
+
