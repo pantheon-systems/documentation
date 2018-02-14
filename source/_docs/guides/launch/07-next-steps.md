@@ -30,7 +30,7 @@ When you're ready to launch another site, use this best-practice checklist to es
 <span class="checklist-icons glyphicon-unchecked"></span>  [Redirect to a Primary Domain](/docs/guides/launch/redirects/)<br>
 <span class="checklist-icons glyphicon-unchecked"></span> [Setup Availability Monitoring](/docs/new-relic/#configure-ping-monitors-for-availability)<br>
 <span class="checklist-icons glyphicon-unchecked"></span> [Enable and Schedule Weekly Backups](/docs/guides/launch/launch-check/)<br>
-<span class="checklist-icons glyphicon-unchecked"></span> [WordPress Launch Check](/docs/wordpress-launch-check/)<br>
+<span class="checklist-icons glyphicon-unchecked"></span> [WordPress Launch Check](/docs/wordpress-launch-check/) / [Drupal Launch Check](/docs/drupal-launch-check)<br>
 <span class="checklist-icons glyphicon-unchecked"></span> [Review Status Reports](/docs/guides/launch/launch-check/)<br>
 <span class="checklist-icons glyphicon-unchecked"></span> [Enable Redis](/docs/redis/#enable-redis)<br>
 <span class="checklist-icons glyphicon-unchecked"></span> [Configure Caching](/docs/varnish/)<br>
