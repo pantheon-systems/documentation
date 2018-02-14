@@ -27,6 +27,9 @@ Welcome! This guide will help you take a site live on Pantheon.
 * Add a custom domain
 * Enable free, automated HTTPS
 * Redirect traffic to a single domain (e.g., `www.example.com` or `example.com`)
+* Enable and schedule weekly backups
+* Review status reports
+* Optimize performance
 
 To get started, you need to [create your Live environment](/docs/guides/quickstart/create-test-live/) and have a registered domain name where you can control DNS settings.
 
