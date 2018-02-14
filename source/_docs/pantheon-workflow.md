@@ -4,8 +4,12 @@ description: Understand the Pantheon workflow, and how to use separate Dev, Test
 tags: [workflow, dashboard]
 categories: []
 ---
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">This page offers a high level description of the intended usage of Pantheon's Dev, Test, and Live workflow. After familiarizing yourself with the concepts described here, follow our step-by-step [Quick Start Guide](/docs/guides/quickstart) to practice the basics.</p>
+</div>
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/). You may want to begin by reading our [Quick Start guide](/docs/guides/quickstart/).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
