@@ -4,6 +4,10 @@ description: Understand the Pantheon workflow, and how to use separate Dev, Test
 tags: [workflow, dashboard]
 categories: []
 ---
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">This page offers a high level description of the intended usage of Pantheon's Dev, Test, and Live workflow. After familiarizing yourself with the concepts described here, follow our step-by-step [Quick Start Guide](/docs/guides/quickstart) to practice the basics.</p>
+</div>
 
 Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/docs/multidev/).
 
@@ -50,7 +54,7 @@ For more detailed information on developing directly in SFTP mode, please see th
 When you're ready to test a new set of changes, deploy your code from Dev.  At this point, you will be prompted to clone your content from the Live database.  This combines the code from Dev and the database values from Live in the Test environment to be absolutely certain that your deployment to Live will go as planned. Deploys are performed by adding a git tag to the last commit on the Test environment.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p markdown="1">While you are able to update Dev via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/docs/terminus/).</p>
 </div>
 
