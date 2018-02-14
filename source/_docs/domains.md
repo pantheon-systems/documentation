@@ -45,6 +45,8 @@ A custom domain requires specific DNS configurations to handle requests for your
 
 Some DNS service providers do not support AAAA records, which are used to map IPv6 addresses. IPv6 offers security benefits and performance gains, especially for mobile users. This is largely because the new protocol is capable of carrying larger packets, resulting in fewer roundtrips per request. We strongly recommend transferring DNS services to a provider that supports IPv6 in order to take advantage of these benefits.
 
+Some DNS service providers require expanded AAAA records. You can retrieve the expanded version for each AAAA record by using the [IPv6 conversion tool](http://ipv6-literal.com/){.external} and copying the "IPv6 longest" result.
+
 For details on what values to use when configuring DNS, refer to [Launch Essentials](/docs/guides/launch/configure-dns/).
 
 #### Nameservers
