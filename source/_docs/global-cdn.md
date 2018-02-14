@@ -5,7 +5,7 @@ earlynote: The documentation on this page discusses features and options that ar
 searchboost: 200
 ---
 
-Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 40+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's new [Global CDN](https://pantheon.io/global-cdn){.external} is a core platform offering, with improved performance and security for customer sites. Content is served from 40+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org){.external}.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
@@ -83,27 +83,27 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
 
       1. Click the "Details" button next to your site's bare domain.
       2. Copy the "A" record's IP address provided for the site's bare domain.
-      3. Add a line to your [local hosts file](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/) with the IP address from the previous step followed by the domain name, for example:
+      3. Add a line to your [local hosts file](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/){.external} with the IP address from the previous step followed by the domain name, for example:
 
         ```
         192.123.456.789 example.com
         ```
 
-      4. Test HTTPS locally by entering your domain in the browser. If the site is accessible over HTTPS with a <span class="secure glyphicons glyphicons-lock"></span> [Secure status](https://support.google.com/chrome/answer/95617?hl=en), the test was successful. Remove the edits made to your hosts file once you have finished testing.
+      4. Test HTTPS locally by entering your domain in the browser. If the site is accessible over HTTPS with a <span class="secure glyphicons glyphicons-lock"></span> [Secure status](https://support.google.com/chrome/answer/95617?hl=en){.external}, the test was successful. Remove the edits made to your hosts file once you have finished testing.
 
 
 3. Click **Details** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS host to use the provided values.
 
     <div class="alert alert-info">
     <h4 class="info">Pro Tip</h4>
-Look up your DNS host with this free web tool: <a href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
+Look up your DNS host with this free web tool: <a class="external" href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
 </div>
 
   DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) configured for the domain's DNS records. Most records update more quickly, and you can track the progress of DNS propagation.
 
       <div class="alert alert-info">
       <h4 class="info">Pro Tip</h4>
-Check the current state of DNS propagation from different parts of the world using this free web tool <a href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
+Check the current state of DNS propagation from different parts of the world using this free web tool <a class="external" href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
 </div>
 
 4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/docs/guides/launch/redirects/).
