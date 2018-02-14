@@ -83,13 +83,13 @@ Git instructions are shown in the Connection Mode of the code page. Each environ
 ## Edit Code
 Edit your content locally via [Git](/docs/git/) or utilize on-server development via [SFTP](/docs/sftp/) mode.
 ### SFTP Mode
-1. Navigate to the **Code** tabe of the target Multidev environment within the Site Dashboard.
+1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
 2. Set the connection mode to **SFTP** if it is not already set.
 3. Use the WordPress or Drupal admin interfaces to develop, or connect via SFTP using your preferred client.
 4. Type in a commit message for edits made via SFTP and click the **Commit** button.
 
 ### Git Mode
-1. Navigate to the **Code** tabe of the target Multidev environment within the Site Dashboard.
+1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
 2. Set the connection mode to **Git** if it is not already set.
 3. Select **Clone with Git** and copy the provided command. Paste the command in a terminal window to clone a copy of your site's code repository to your local.
 4. From within the project's root directory, view existing branches using `git branch -a`.
