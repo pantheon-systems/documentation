@@ -54,7 +54,7 @@ For more detailed information on developing directly in SFTP mode, please see th
 When you're ready to test a new set of changes, deploy your code from Dev.  At this point, you will be prompted to clone your content from the Live database.  This combines the code from Dev and the database values from Live in the Test environment to be absolutely certain that your deployment to Live will go as planned. Deploys are performed by adding a git tag to the last commit on the Test environment.
 
 <div class="alert alert-info" role="alert">
-<h3 class="info">Note</h3>
+<h4 class="info">Note</h4>
 <p markdown="1">While you are able to update Dev via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/docs/terminus/).</p>
 </div>
 
