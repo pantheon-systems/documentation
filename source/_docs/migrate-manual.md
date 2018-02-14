@@ -393,6 +393,30 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**:
 
 ![Finish Manual Migration](/source/docs/assets/images/successfully-migrated.png)
+## Troubleshooting
+
+### fatal: Not possible to fast-forward, aborting.
+This error may occur when trying to merge Pantheon's codebase into your existing repository as described earlier on this page in (step 5 of importing your code from the commandline)[/#from-the-command-line-with-git]:
+
+```
+Not possible to fast-forward, aborting.
+```
+
+Depending on your Git version, you may see the following error instead: 
+
+```
+fatal: refusing to merge unrelated histories
+```
+
+If you see this, it is possible your local Git configuration is disallowing non-fastforward merges:
+
+```
+[pull]
+rebase = TRUE
+ff = only
+```
+
+In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again. 
 
 ## See Also
 Check our standard migration procedure for related <a href="/docs/migrate#frequently-asked-questions-faqs" data-proofer-ignore>Frequently Asked Questions</a> and [Troubleshooting](/docs/migrate#troubleshooting) tips.
