@@ -28,7 +28,7 @@ If you prefer the command line, you can use [Terminus](/docs/terminus) to create
 
 ## Backup Schedule and Retention
 
-**Paid sites:** You can enable or disable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day the weekly backup is run.
+**Paid sites:** You can enable or disable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day the weekly backup is run, but not the time.
 
 **All sites:** You can run manual backups for free, and choose to keep them for one month or six months.
 
