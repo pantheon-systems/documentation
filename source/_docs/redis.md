@@ -141,7 +141,7 @@ All plans except for a Personal plan can use Redis. Redis is available to Sandbo
       You can install and enable the module from the command line using [Terminus](/docs/terminus):
 
           terminus remote:drush <site>.<env> -- en redis -y
-  3. Add the following Redis cache configuration to the **end** of `sites/default/settings.php`, after [Domain Access](/docs/read-environment-config/#domain-access) configurations. These are the **mandatory**, required Redis configurations for every site.
+  3. Add the following Redis cache configuration to the **end** of `sites/default/settings.php`. These are the **mandatory**, required Redis configurations for every site.
 
       ```php
       // Configure Redis
@@ -182,7 +182,7 @@ All plans except for a Personal plan can use Redis. Redis is available to Sandbo
       - `redis_client_host`
       - `redis_client_port`
       - `redis_client_password`
-  4. Add the following Redis cache configuration to the **end** of `sites/default/settings.php`, after [Domain Access](/docs/read-environment-config/#domain-access) configurations. These are the **mandatory**, required Redis configurations for every site.
+  4. Add the following Redis cache configuration to the **end** of `sites/default/settings.php`. These are the **mandatory**, required Redis configurations for every site.
 
       ```php
       // All Pantheon Environments.
