@@ -155,3 +155,6 @@ This is a partial example from a WordPress site homepage:
       string(14) "en-US,en;q=0.8"
       etc...
     }
+## FAQ
+### Can I Set My Own Environment Variables?
+No, it is not possible to set environment variables on Pantheon. A common solution for this is to use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private filesystem or use [Lockr](https://pantheon.io/docs/guides/lockr/) for maximum security.
