@@ -47,6 +47,14 @@ Feeling comfortable with WP-CLI? Here are a [few of many commands](https://devel
 * `wp media regenerate` - Regenerate image thumbnails for one or more attachments ([docs](https://developer.wordpress.org/cli/commands/media/regenerate/)).
 * `wp rewrite flush` - Flush rewrite rules to ensure newly registered rules are stored in the database ([docs](https://developer.wordpress.org/cli/commands/rewrite/flush/)).
 
+## Run SQL Queries Using WP-CLI on Pantheon
+
+Use the `wp db query` command via [Terminus](/docs/terminus/) to run SQL queries against the database on Pantheon:
+
+```bash
+terminus wp <site>.<env> -- db query "SELECT * FROM wp_users WHERE ID=1"
+```
+
 ## Extending WP-CLI With Subcommands
 
 WP-CLI has a framework for users to write their own commands. Learn about the [anatomy of a subcommand](https://github.com/wp-cli/wp-cli/wiki/Commands-Cookbook#anatomy) to solve your thorny problems with WP-CLI.
