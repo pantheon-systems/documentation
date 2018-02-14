@@ -84,3 +84,11 @@ The solution is to specify the parser in the request. Both the [Lucene](https://
 /select?q=ts_ol_full_text:property&fl=label,bundle,ts_ol_full_text&wt=json&defType=edismax
 ```  
 For details on supported query parsers, see [Query Syntax and Parsing]( https://cwiki.apache.org/confluence/display/solr/Query+Syntax+and+Parsing) and [Common Query Parameters](https://cwiki.apache.org/confluence/display/solr/Common+Query+Parameters#CommonQueryParameters-ThedefTypeParameter).
+
+### Supported Search Components
+
+The following Apache Solr search components are supported:
+
+* SpellCheckComponent
+* TermVectorComponent
+* TermsComponent
