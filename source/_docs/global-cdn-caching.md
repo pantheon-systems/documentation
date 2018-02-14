@@ -4,11 +4,11 @@ description: Configure and verify edge caching is working on your WordPress or D
 tags: [cacheedge]
 categories: []
 ---
-Pantheon's Global CDN supports caching to accelerate both static content and anonymous pages for sites on the platform. By serving data from cache servers all over the world, website visitors receive a response without waiting to access the application server. Clusters of these cache servers in each region are called "points of presence" or "POPs" (for short). When a website uses these POPs effectively, the site can free up its PHP workers and database to process more dynamic requests. Each POP can handle hundreds of thousands of requests per second, much more than a site's own PHP and database containers.
+Pantheon's Global CDN supports caching to accelerate both static content and anonymous pages for sites on the platform. By serving data from cache servers all over the world, website visitors receive a response without waiting to access the application server. Clusters of these cache servers in each region are called **points of presence** or **POPs** for short. When a website uses these POPs effectively, the site can free up its PHP workers and database to process more dynamic requests. Each POP can handle hundreds of thousands of requests per second, much more than a site's own PHP and database containers.
 
 Every site on Pantheon already uses the Global CDN; each HTTP request from a website visitor first goes to closest POP to see if there's a regional cache of the content. If the closest POP doesn't have the content, the request will then go to a POP near the origin (i.e. the PHP workers and database). If the content is cached anywhere in the world, the origin POP will have a copy. If neither POP has appropriate cache data, the request will continue to an application container worker, which will generate responses that may be cached on the way back to the browser.
 
-![Varnish Diagram](/source/docs/assets/images/varnish.png)
+![Varnish Diagram](/source/docs/assets/images/cdn-flow.png)
 
 The Global CDN can also improve the availability of your site. For example, if a PHP fatal error breaks your site, anonymous page requests can still be served by POPs, and end-users won't encounter errors or broken pages.
 
@@ -28,9 +28,9 @@ For detailed instructions on how to configure and optimize caching, see [Drupal'
 The most common issue with effectively using edge and CDN caching is troubleshooting situations where the cache should hit but doesn't. Here are some common mistakes that will cause cache misses.
 
 ### No HTTP Cache Headers in Drupal
-If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/drupal-cache). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
+If you have checked your HTTP headers and found that the cache is not working, make sure you have configured [Drupal's performance settings](/docs/drupal-cache) or [The WordPress Pantheon Cache Plugin](/docs/wordpress-cache-plugin/). Once you have completed this step, go back and check the HTTP headers to verify that Varnish is working.
 
-If you are still getting `no-cache, must-revalidate, post-check=0, pre-check=0` as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) disables page caching. Also check to see if messages are present in page templates; themes could have removed them to suppress user facing messages.
+If you are still getting `no-cache, must-revalidate, post-check=0, pre-check=0` as a response, check to see if any messages are being set - [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7){.external} disables page caching. Also check to see if messages are present in page templates; themes could have removed them to suppress user facing messages.
 
 ### Theme Images Not Refreshing
 If you are experiencing issues with theme images not refreshing, you can manually flush the cache by going to your Pantheon Dashboard and clicking the **Clear Caches** button.
@@ -40,7 +40,7 @@ To make sure there are not any other errors within Drupal that may be preventing
 
 ### Clearing Caches in Drupal Doesn't Update Content/Views
 
-If you have cleared caches using the Pantheon Dashboard and still see stale Views on your Drupal-powered site, it's possible that the Views cache has persisted. For the Views that need to be dynamic, check that those Views have caching enabled and cautiously disable some caching as necessary.
+If you have cleared caches using the Pantheon Dashboard and still see stale views on your Drupal-powered site, it's possible that the Views cache has persisted. For the views that need to be dynamic, check that those views have caching enabled and cautiously disable some caching as necessary.
 
 ### Debugging Cookies and the Global CDN
 
@@ -48,7 +48,7 @@ By default, Pantheon's Global CDN will ignore most cookies, preventing them from
 
 To test whether or not a cookie is preventing the CDN from caching, you can examine the headers output (Age, Max-Age, Cookie) via the following curl command:
 
-```nohighlight
+```bash
 $ curl -I dev.mysite.com
 HTTP/1.1 301 Moved Permanently
 cache-control: public, max-age=300
@@ -59,7 +59,7 @@ You will notice a max-age of 300, and if you run the command again, the "Age" fi
 
 If your output looks like the following (i.e. an Age of 0) after more than one request, check if a cookie is being set (with the Set-Cookie header). Setting cookies will prevent the CDN from caching that page:
 
-```nohighlight
+```bash
 $ curl -I dev.mysite.com
 HTTP/1.1 200 OK
 cache-control: public, max-age=900
