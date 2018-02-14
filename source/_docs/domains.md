@@ -171,6 +171,9 @@ Drupal sites can force lowercase letters using the following:
 </div>
 </div>
 
+## Switching Domains From One Pantheon Site to Another
+See our full documentation on this issue here: https://pantheon.io/docs/switching-dns/
+
 ## Vanity Domains for Organizations
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default platform domain (`pantheonsite.io`).
 
