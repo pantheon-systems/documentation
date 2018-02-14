@@ -57,6 +57,9 @@ earlynote: The documentation on this page discusses features and options that ar
 </div>
 
 ## Before You Begin
+
+This section should outline any steps or services required before started those detailed below. This is the optimal place to suggest docs to read first.
+
 <div class="style-example" markdown="1">
 ## Before You Begin {.info}
 To get started, you need to activate [New Relic APM Pro](/docs/new-relic/) on Pantheon:
@@ -443,7 +446,8 @@ Use panels for extraneous but useful information such as troubleshooting section
 
 
 ## See Also
-End with some links to related docs or external resources concerning logical next steps.
+
+This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
 
 <div class="style-example" markdown="1">
 ## See Also {.info}
