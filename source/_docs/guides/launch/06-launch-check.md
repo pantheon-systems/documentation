@@ -43,8 +43,11 @@ Launch with confidence by taking advantage of Pantheon's static site analysis se
 ## Ready to launch like the pros?
 Since you're in fixin' mode, take some time to optimize performance using Redis and Pantheon's global CDN.
 
-### Enable Redis
-Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own. For details, see [Installing Redis on Drupal or WordPress](/docs/redis/).
+### [Enable Redis](/docs/redis/)
+Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
+
+All plans except for a Personal plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
+
 
 ### [Configure Caching](/docs/varnish/)
 Maximize performance on Pantheon by configuring your site's performance settings.
