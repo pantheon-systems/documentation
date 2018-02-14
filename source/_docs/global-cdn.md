@@ -83,7 +83,7 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
 
       1. Click the "Details" button next to your site's bare domain.
       2. Copy the "A" record's IP address provided for the site's bare domain.
-      3. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file with the IP address from the previous step followed by the domain name, for example:
+      3. Add a line to your [local hosts file](https://www.howtogeek.com/howto/27350/beginner-geek-how-to-edit-your-hosts-file/) with the IP address from the previous step followed by the domain name, for example:
 
         ```
         192.123.456.789 example.com
