@@ -102,13 +102,6 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 **Solution**: [Apply a patch to the module](https://www.drupal.org/project/front/issues/1854300#comment-12405090) to allow caching for anonymous users. Note that this patch doesn't work with the **Full** or **Redirect** options.
 
 <hr>
-### [Global Redirect](https://www.drupal.org/project/globalredirect)
- **Issue**: Too many redirects error when site is in maintenance mode.
-
- **Solution**: Ensure that the "Frontpage Redirect Handler" is not checked in the Global Redirect administration page. Alternatively, [apply a patch to the module](https://www.drupal.org/node/1399024) to correct the issue.
-<hr>
-
-<hr>
 ### [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
  **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
 
