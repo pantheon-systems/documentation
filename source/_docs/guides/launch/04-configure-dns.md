@@ -21,8 +21,8 @@ image: getting-started-Largethumb
 ---
 In this lesson we'll configure DNS and provision [free, automated HTTPS](/docs/https/) on Pantheon.
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
 <p markdown="1">If your site is already live and requires HTTPS, return to [Connect a Domain Name](/docs/guides/launch/domains/) and complete the steps to pre-provision HTTPS before updating DNS to avoid downtime.</p>
 </div>
 
