@@ -208,3 +208,6 @@ If your domain's DNS configuration relies on an existing MX or TXT record that i
   ![dig example](/source/docs/assets/images/dig-example.png)
 
 3. Create two AAAA records and one A record for the desired subdomain (e.g., `www`) using the values returned in the above two steps wherever you host DNS for the domain.
+
+## See Also
+ - [Switching DNS From One Pantheon Site to Another](/docs/switching-dns/)
