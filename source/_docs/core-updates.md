@@ -146,6 +146,9 @@ If the automated core update doesn't appear to be working, it's possible there a
   git push origin master
   ```
 
+## Core Release Updates 
+Whenever there's a new release of core, ...
+
 ## Troubleshooting
 
 ### One-Click Updates Do Not Appear After Rewriting Git History
