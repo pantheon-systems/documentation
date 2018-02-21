@@ -1,6 +1,6 @@
 /*!
 * Pantheon Docs (http://pantheon.io/docs)
-* Copyright 2014 Pantheon, Inc.
+* Copyright 2018 Pantheon, Inc.
 * Licensed under the Creative Commons Attribution 3.0 Unported License. For
 * details, see http://creativecommons.org/licenses/by/3.0/.
 * Source Attribution: Twitter Bootstrap. THANKS!
@@ -366,6 +366,15 @@ h3.changelog {
   line-height: 18px;
   margin-bottom: 25px;
   margin-top: 0;
+}
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
 }
 #toc {
   margin-bottom: 50px;
