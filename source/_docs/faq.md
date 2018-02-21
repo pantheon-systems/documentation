@@ -134,6 +134,10 @@ Warning: session_start(): user session functions not defined
 
 You'll need the plugin. [More information on sessions](/docs/wordpress-sessions/).
 
+### Can I install a new Panopoly distribution?
+Yes. See [Public Distributions](/docs/start-state/#public-distributions) for details.
+
+
 ## Caching and Performance
 
 ### Can I use other CDNs with Pantheon?
