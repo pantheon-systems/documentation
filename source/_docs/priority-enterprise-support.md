@@ -5,18 +5,13 @@ tags: [tools]
 categories: []
 ---
 
-For organizations that want the highest level of support for their whole team, Priority Enterprise Support provides the assurance of SLA-backed 24/7/365 emergency support for downtime and business critical issues, expedited responses to standard support tickets, and expert onboarding and training.
+For organizations that want the highest level of support for their team, Priority Enterprise Support provides the assurance of SLA-backed 24/7/365 emergency support for downtime and business critical issues, expedited responses to standard support tickets, and expert onboarding and training. Priority Enterprise Support is limited to 10 members within Pantheon organizations, where enabled.
 
 Priority Enterprise Support is great for:
 
 - **Enterprise Organizations** who want the best support for developers across their organization
 - **Reseller Organizations** who want Pantheon on-call so they can provide even better service to their clients
 - **EDU+ Organizations** with a central IT team who want to provide Pantheon as a service across their institution
-
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Priority Enterprise Support is limited to 10 members within Pantheon organizations, where enabled.</p>
-</div>
 
 If you're interested in adding the Priority Enterprise Support feature, contact [Sales](https://pantheon.io/contact-us).
 
