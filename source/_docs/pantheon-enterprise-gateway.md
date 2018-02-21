@@ -26,7 +26,7 @@ Once setup is complete on our end, we'll provide you with the information you ne
 
 ## Configure Your Site
 
-Once the gateway has been established, you must update your code to use it. This process varies depending on the modeules or plugins in use, and the type of service you're routing through the gateway.
+Once the gateway has been established, you must update your code to use it. This process varies depending on the modules or plugins in use, and the type of service you're routing through the gateway.
 
 ### PHP Constants as Port Numbers
 
