@@ -9,7 +9,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Use [Redis](/docs/redis/). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to catch a lot of database queries in WordPress.
 
-* Verify [Varnish](/docs/test-varnish) is working on your site.
+* Verify [Global CDN caching](/docs/test-global-cdn-caching/) is working on your site.
 
 * Use [wp-cfm](/docs/wp-cfm/). It lets you store settings from the `wp_options` table in Git and pull it into the database. A lot of WordPress stuff is option-heavy and you can spend a lot of time trying to figure out what you missed between environments. This is true for all WordPress sites, but especially helpful on Pantheon where you have at least three environments you will need to reconfigure every time.
 

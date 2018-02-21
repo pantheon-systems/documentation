@@ -64,6 +64,6 @@ public function clean_term_cache( $term_ids, $taxonomy )
 ```
 
 ## See Also
-* [Testing Varnish](/docs/test-varnish/)
-* [Varnish Caching for High Performance](/docs/varnish)
+* [Testing Global CDN Caching](/docs/test-global-cdn-caching/)
+- [Global CDN Caching for High Performance](/docs/global-cdn-caching/)
 * [Installing Redis on Drupal or WordPress](/docs/redis/)

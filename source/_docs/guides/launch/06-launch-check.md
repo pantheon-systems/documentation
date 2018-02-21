@@ -51,12 +51,12 @@ Redis provides an alternative caching backend, taking that work off the database
 All plans except for a Personal plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
 
-### [Configure Caching](/docs/varnish/)
+### [Configure Caching](/docs/global-cdn-caching/)
 Maximize performance on Pantheon by configuring your site's performance settings.
 
 Serving anonymous traffic from virtual memory allows a cached response to be returned to the browser without needing to access the application server, which in turns frees up resources to build more dynamic requests.
 
-### [Test Cache](/docs/test-varnish/)
+### [Test Cache](/docs/test-global-cdn-caching/)
 Learn how to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using curl.
 </div>
 </div>
