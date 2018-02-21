@@ -110,10 +110,10 @@ X-Pantheon-Edge-Server: 108.166.58.245
 Vary: Accept-Encoding, Cookie
 </code></pre>
 
-The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Varnish](/docs/test-varnish).
+The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/docs/test-global-cdn-caching/).
 
 ## See Also
 * [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
 * [Working with Cookies on Pantheon](/docs/cookies)
-* [Testing Varnish](/docs/test-varnish/)
+* [Testing Global CDN Caching](/docs/test-global-cdn-caching/)
 * [Caching: Advanced Topics](/docs/caching-advanced-topics/)

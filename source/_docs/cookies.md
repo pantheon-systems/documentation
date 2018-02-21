@@ -89,5 +89,5 @@ Knowing this, you can choose to configure your code to listen for this header an
 ## See Also
 * [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
 * [Bypassing Cache with HTTP Headers](/docs/cache-control)
-* [Testing Varnish](/docs/test-varnish/)
+* [Testing Global CDN Caching](/docs/test-global-cdn-caching/)
 * [Caching: Advanced Topics](/docs/caching-advanced-topics/)

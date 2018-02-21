@@ -1,10 +1,10 @@
 ---
-title: Drupal Performance and Varnish Caching Settings
-description: Optimize Drupal and Varnish caching to maximize your site's performance.  
+title: Drupal Performance and Caching Settings
+description: Optimize Drupal and Global CDN caching to maximize your site's performance.
 tags: [cacheapp]
 categories: [drupal]
 ---
-To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.
+To maximize your site's performance on Pantheon and to take advantage of our [Global CDN caching](/docs/global-cdn-caching/), you'll need to configure your site's performance settings.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
@@ -16,7 +16,7 @@ To maximize your site's performance on Pantheon and to take advantage of our Var
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ### Caching
-![Drupal 8 Caching options](/source/docs/assets/images/d8-cache-config.png)  
+![Drupal 8 Caching options](/source/docs/assets/images/d8-cache-config.png)
 **This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 minutes, but this is something to consider. If you can set it to an hour, that's great for performance.
@@ -39,11 +39,11 @@ This functionality can be added via the [Pantheon Advanced Page Cache](https://w
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ### Caching
-![Drupal 7 Caching options](/source/docs/assets/images/d7-cache-config.png)  
-Unless needed for development, you should always enable "Cache pages for anonymous users". Without it, your Drupal site will have to rebuild every page and Varnish will not cache your site. If possible, enable "Cache blocks" as well to increase performance for logged-in users.
+![Drupal 7 Caching options](/source/docs/assets/images/d7-cache-config.png)
+Unless needed for development, you should always enable "Cache pages for anonymous users". Without it, your Drupal site will have to rebuild every page and the Pantheon Global CDN will not cache your site. If possible, enable "Cache blocks" as well to increase performance for logged-in users.
 
 ### Minimum Cache Lifetime
-![Drupal 7 minimum cache lifetime](/source/docs/assets/images/d7-min-cache-lifetime.png)  
+![Drupal 7 minimum cache lifetime](/source/docs/assets/images/d7-min-cache-lifetime.png)
 Minimum caching lifetime forces cached content to continue to exist before it can be flushed. If all caches are cleared, any content under the minimum cache lifetime will not be expunged. High traffic sites may want to set this to a non-zero value; when in doubt, set it to none.
 
 ### Expiration of Cached Pages
@@ -98,4 +98,4 @@ This setting controls whether or not to compile and cache your CSS and JavaScri
 Contributed modules like `views.module` and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should definitely look at implementing their cache settings to provide a good logged-in user experience.
 
 ## See Also
-- [Varnish Caching for High Performance](/docs/varnish)
+- [Global CDN Caching for High Performance](/docs/global-cdn-caching/)
