@@ -23,7 +23,7 @@ Attempts to remotely access services, such as MySQL or SFTP connections, will fa
 ## What's In an Application Container?
 
 - All containers are created equally; free accounts are not underpowered.
-- All environments contain a (PHP-FPM) and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/docs/phpinfo).
+- All environments contain a highly tuned PHP-FPM worker and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/docs/phpinfo).
   - Packages: LDAP, SOAP, GD, Mcrypt, MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
   - Extensions: APC, New Relic PHP agent, OAuth, Redis
   - [short\_open\_tag](https://secure.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support `<? ?>` syntax; use `<?php ?>` instead)
