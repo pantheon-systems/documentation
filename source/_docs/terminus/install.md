@@ -86,3 +86,46 @@ curl: (60) SSL certificate problem: unable to get local issuer certificate
 ```
 
 To resolve, save a copy of the [latest CA certificate](https://curl.haxx.se/docs/caextract.html) to a new file named `cacert.pem` then add `curl.cainfo = "[path_to_file]\cacert.pem"` to your `php.ini` file. If you're running XAMPP, you can add the `cacert.pem` file within the `xampp\php\extras\ssl` directory.
+
+### Windows 10 Installation issues
+
+**Problem:** PHP is not installed.
+
+**Solution:** Install PHP. Consider using a package such as [XAMMP](https://www.apachefriends.org/index.html){.external}, which provides a simple installation process.
+
+<hr>
+
+**Problem:** Composer is not installed.
+
+**Solution:** Install composer using the [.exe installer](https://getcomposer.org/doc/00-intro.md#installation-windows){.external}
+
+<hr>
+
+**Problem:** `curl: command not found`
+
+Installation fails because curl cannot be found:
+
+```bash
+User1@DESKTOP-UBJ92JO  /usr/bin
+$ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+bash: curl: command not found
+```
+**Solution:** [Install curl](https://stackoverflow.com/questions/9507353/how-do-i-install-set-up-and-use-curl-on-windows){.external}
+
+<hr>
+
+**Problem:** The Terminus install was successful, but the path was not set.
+
+Terminus was installed, but the installer was not able to write to your bin dir. 
+
+**Solutiom:** To enable the `terminus` command, add this alias to your [`.bash_profile` file](https://askubuntu.com/questions/969632/where-is-bash-profile-located-in-windows-subsystem-for-linux){.external}:
+
+```
+alias terminus=terminus=/c/Users/User1/vendor/bin/terminus
+```
+
+Or you can enable it by adding the directory the executable file is in to your path:
+
+```
+PATH="C:\Users\User1\vendor\bin:$PATH"
+```
