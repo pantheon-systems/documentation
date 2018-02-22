@@ -107,18 +107,18 @@ Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'..
 
 ## Frequently Asked Questions
 
-#### How can I access my MySQL slow query logs?
+### How can I access my MySQL slow query logs?
 
 Pantheon logs underperforming database queries using the [MySQL Slow Query Log](https://dev.mysql.com/doc/refman/5.5/en/slow-query-log.html). To access the log for your database, get the SFTP connection info for the environment in question. Then, replace the word "appserver" with "dbserver" in the connection string. The MySQL slow query logs are in the `logs` subdirectory.
 
-#### Are table prefixes supported?
+### Are table prefixes supported?
 
 Table prefixes are not supported or recommended by Pantheon. While the server will not prevent their creation or use, managing and supporting tables with prefixes is the developer's responsibility.
 
-#### Can I create a database in addition to the Pantheon database?
+### Can I create a database in addition to the Pantheon database?
 
 No, only one database per site is provided. While create privileges are granted, any additional database will not survive regular maintenance operations.
 
-#### Can I put unique tables in the Pantheon database?
+### Can I put unique tables in the Pantheon database?
 
 Pantheon places no restrictions on the contents of the database.
