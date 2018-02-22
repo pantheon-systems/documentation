@@ -65,11 +65,6 @@ Some web developers choose to aggregate all of their caching logic in one place,
       break;
     }
   }
-
-  if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
-    drupal_page_is_cacheable(FALSE);
-    $conf['page_cache_maximum_age'] = 0;
-  }
   ```
   </div>
   <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
