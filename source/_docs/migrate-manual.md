@@ -396,7 +396,7 @@ You should now have all three of the major components of your site imported into
 ## Troubleshooting
 
 ### fatal: Not possible to fast-forward, aborting.
-This error may occur when trying to merge Pantheon's codebase into your existing repository as described earlier on this page in (step 5 of importing your code from the commandline)[/#from-the-command-line-with-git]:
+This error may occur when trying to merge Pantheon's codebase into your existing repository as described earlier on this page in (step 5 of [importing your code from the commandline](#from-the-command-line-with-git):
 
 ```
 Not possible to fast-forward, aborting.
