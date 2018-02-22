@@ -92,7 +92,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
   // Loop through the patterns.
   foreach ($regex_path_patterns as $regex_path_pattern) {
-    if (preg_match($regex_path_match, $_SERVER['REQUEST_URI'])) {
+    if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
       add_action( 'send_headers', 'add_header_nocache', 15 );
 
       // No need to continue the loop once there's a match.
