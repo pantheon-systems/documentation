@@ -2,79 +2,37 @@
 title: HTTPS on Pantheon's Global CDN
 description: Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt
 tags: [dns, security]
+use:
+    - docs_tags
 searchboost: 200
 ---
-Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform. For instructions and go live best practices, see [Launch Essentials](/docs/guides/launch/).
+Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https){.external} for every site launched on the platform.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
 </div>
 
-## Feature Comparison
-<table class="table  table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Legacy</th>
-      <th>Managed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Price</th>
-      <td>$30/mo per environment</td>
-      <td>Free for Live Environments</td>
-    </tr>
-    <tr>
-      <th>Certificate type</th>
-      <td>Bring your own</td>
-      <td>Shared, issued by Let's Encrypt</td>
-    </tr>
-    <tr>
-      <th>Renewal</th>
-      <td>Up to you</td>
-      <td>Pantheon does it</td>
-    </tr>
-    <tr>
-      <th>Inbound IP</th>
-      <td>Static (unique/dedicated)</td>
-      <td>Static (shared)</td>
-    </tr>
-    <tr>
-      <th>Client Support</th>
-      <td>94.58% of browsers<br />Some very old browsers not supported
-      <sup><a href="https://caniuse.com/#search=TLS%201.1">1</a></sup></td>
-      <td>94.33% of browsers<br />Some very old browsers not supported
-      <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup></td>
-    </tr>
-    <tr>
-      <th><a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> Rating</th>
-      <td>A</td>
-      <td>A+ <a href="/docs/hsts/">with HSTS</a></td>
-    </tr>
-    <tr>
-      <th>Protocol</th>
-      <td>TLS 1.1 & 1.2</td>
-      <td>TLS 1.2 with SNI</td>
-    </tr>
-    <tr>
-      <th>Ciphers</th>
-      <td>Allows weak 3DES cipher</td>
-      <td>Strong ciphers only</td>
-    </tr>
-    <tr>
-      <th>Delivery</th>
-      <td>US Datacenter</td>
-      <td markdown="1">[Global CDN](/docs/global-cdn)</td>
-    </tr>
-    <tr>
-      <th>Encryption Endpoint</th>
-      <td>Load Balancer</td>
-      <td>Application Container</td>
-    </tr>
-  </tbody>
-</table>
+{% include("content/configure-dns.html")%}
+
+<p>For more detailed instructions pertaining to your specific DNS host, click below:</p>
+
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific2"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
+  </div>
+  <div id="host-specific2" class="collapse" style="padding:10px;">
+    <ul class="top-docs top-docs-2col docs-2col-panel">
+      {% for doc in data.docs_tags.providers %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+          <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% include("content/enable-https.html")%}
 
 ## Let's Encrypt Certificates
 [Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically adds your site's domains to a shared Let's Encrypt certificate, and always renew it automatically, with no additional cost. Let's Encrypt issued certs are valid for 90 days and we renew them at least 30 days before expiration.
