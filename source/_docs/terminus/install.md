@@ -118,7 +118,7 @@ bash: curl: command not found
 
 Terminus was installed, but the installer was not able to write to your bin dir. 
 
-**Solutiom:** To enable the `terminus` command, add this alias to your [`.bash_profile` file](https://askubuntu.com/questions/969632/where-is-bash-profile-located-in-windows-subsystem-for-linux){.external}:
+**Solution:** To enable the `terminus` command, add this alias to your [`.bash_profile` file](https://askubuntu.com/questions/969632/where-is-bash-profile-located-in-windows-subsystem-for-linux){.external}:
 
 ```
 alias terminus=terminus=/c/Users/User1/vendor/bin/terminus
