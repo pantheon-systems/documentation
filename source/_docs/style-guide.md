@@ -58,7 +58,7 @@ earlynote: The documentation on this page discusses features and options that ar
 
 ## Before You Begin
 
-This section should outline any steps or services required before started those detailed below. This is the optimal place to suggest docs to read first.
+This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
 <div class="style-example" markdown="1">
 ## Before You Begin {.info}
