@@ -96,7 +96,7 @@ If the cache lifetime is set to something that doesn't make sense for your traff
 ### Drupal Note
 See our [guidelines on Drupal's performance settings](/docs/drupal-cache/) for more details.
 
-Other caching systems that aren’t on by default that should be enabled include [block caching](/docs/drupal-cache/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
+Other caching systems that aren't on by default that should be enabled include [block caching](/docs/drupal-cache/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
 
 ### Using the Database to Cache in Drupal
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.
@@ -117,8 +117,7 @@ There are a large number of caches involved in every single request, including:
 
 - [Varnish](/docs/varnish) - Spread out across multiple servers, and the cache is not shared between servers.
 - [APC](/docs/alternative-php-cache/) - PHP has it's own opcode cache, which is not shared between application servers.
-- [drupal](https://drupal.org/node/326504) and [Redis](/docs/redis/) - Shared between your servers, but caches do expire and will need to be regenerated.
-​​Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
+- [Drupal](https://drupal.org/node/326504){.external} and [Redis](/docs/redis/) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 ## Too Much Traffic
 Of course, too much site traffic can be a problem if you just don't have enough resources.
@@ -131,7 +130,7 @@ If you've reached this point, it's probably time to consider upgrading your [Pan
 
 Both Drupal and WordPress rely on running regular maintenance tasks via a cron system that usually gets executed at the end of a request. The user is thus forced to wait for the cron to finish before they can actually see the page. Depending on what the cron is doing, this can be a short or extremely long wait (e.g. if the cron is calling external services to import content). As you can imagine, this is not desirable.
 
-For Drupal sites, Pantheon executes the cron every hour via drush regardless of the site's cron settings. There are various other configuration schemes you can use, as described in [Cron for Drupal](/docs/drupal-cron/).
+For Drupal sites, Pantheon executes the cron every hour via Drush regardless of the site's cron settings. There are various other configuration schemes you can use, as described in [Cron for Drupal](/docs/drupal-cron/).
 
 This functionality doesn't exist for WordPress sites, but there are a multitude of different configuration options available that allow for more flexibility when configuring cron. The entire list of options can be found in [Cron for WordPress](/docs/wordpress-cron/).
 
@@ -142,19 +141,19 @@ Calling external services during regular requests can be a performance problem. 
 Sometimes these are necessary (e.g. getting a Twitter feed). The recommendation here is to avoid making external calls during regular requests as much as possible. As an alternative, you can make these calls via cron and store them in the database. The data can be refreshed with the desired frequency. The advantage is that even if the external service is slow or goes down your site won't be affected.
 
 ## Memory Errors
-An _Allowed memory size of \<bytes\> exhausted_ or _Out of Memory_ error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary from between [plans](/docs/platform-resources/), so sites that handle complex data, or with very large codebases will need more. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective. 
+An *Allowed memory size of <bytes\> exhausted* or *Out of Memory* error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary between [plans](/docs/platform-resources/), so sites that handle complex or large data sets, use many modules or plugins, or use memory-intensive features will need to plan accordingly and obtain the proper plan to avoid memory overruns. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.
 
 Debugging memory issues can be challenging. Here are some things to consider when addressing memory issues: 
 
-- Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified. 
-- Debug code using a PHP extension, e.g. [Xdebug](https://xdebug.org/) to help refactor code that could be leaking memory. 
-- Enabling [Redis](/docs/redis/) will boost site performance by providing an in-memory backend caching. 
+- Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified
+- Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/){.external} or [XHProf](http://php.net/manual/en/book.xhprof.php){.external}) or to help refactor code that could be leaking memory
+- Enabling [Redis](/docs/redis/) could boost site performance by providing an in-memory backend caching
 - [Update PHP version](/docs/php-versions/)
 - Use [New Relic](/docs/new-relic/) to identify issues
 
 
 ### Drupal
-Disabling modules that are unneeded will help reduce memory usage.
+Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler){.external} module can help troubleshoot issues by logging peak memory usage.
 
 
 
