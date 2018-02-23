@@ -54,8 +54,8 @@ From your Site Dashboard, click **Settings**, then click **Add Ons**. You will s
 You can access New Relic Pro directly from the Site Dashboard, by clicking on **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
 
 
-#### Can I downgrade my site to a personal plan?
-Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. If you have HTTPS enabled on Professional plans and above, you will need to re-enable HTTPS and re-load your SSL certificate into Pantheon. For more information, see [Select a Plan](/docs/select-plan#upgrade-or-downgrade-plan).
+####Can I downgrade my site to a personal plan?
+Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. For more information, see [Select a Plan](/docs/select-plan#upgrade-or-downgrade-plan).
 
 ### Billing Tasks
 
