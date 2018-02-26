@@ -45,3 +45,6 @@ Now that you have a monitor setup in New Relic to periodically check your Panthe
   ![New Relic select entity](/source/docs/assets/images/pagerduty/new-relic-entity.png)
 
 8. Enter a name for the condition, like "Live Availability", and click **Create condition**.
+
+{% include("content/monitor-alerts.html")%}
+
