@@ -151,6 +151,7 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 - [Update PHP version](/docs/php-versions/)
 - Use [New Relic](/docs/new-relic/) to identify issues
 
+Please note that memory issues caused by custom code fall outside our [scope of support](/docs/getting-support/#scope-of-support).
 
 ### Drupal
 Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler){.external} module can help troubleshoot issues by logging peak memory usage.
