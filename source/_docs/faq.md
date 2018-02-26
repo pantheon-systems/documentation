@@ -145,7 +145,8 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 ### What version of Apache Solr does Pantheon run?
 
-All plans except for a Personal plan can use Solr. Solr is available to Sandbox plans for developmental purposes, but Solr will not be available going live on a Personal plan. The current version provided is Solr 3.6. For more information, see [Apache Solr on Pantheon](https://pantheon.io/docs/solr/). 
+We're currently testing out integration strategies for Solr with our next-generation infrastructure. When we deploy it, it will almost certainly be the latest stable Solr available at that time.
+
 
 ## Support
 
