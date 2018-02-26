@@ -155,5 +155,6 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 ### Drupal
 Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler){.external} module can help troubleshoot issues by logging peak memory usage.
 
-
+### WordPress
+Refer to [Debugging in WordPress](https://codex.wordpress.org/Debugging_in_WordPress){.external} from the WordPress.org Codex for information on debugging common issues.
 
