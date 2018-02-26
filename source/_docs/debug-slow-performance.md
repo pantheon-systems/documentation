@@ -126,17 +126,6 @@ If your site is already optimized to the best of your knowledge, including elimi
 
 If you've reached this point, it's probably time to consider upgrading your [Pantheon plan](/docs/select-plan/). We have a number of self-service options for scaling to your needs, but if you've already maxed out a self-service plan, then [Elite](https://pantheon.io/pricing#elite) is a good option.
 
-## Site Monitoring Alerts
-Services like Pingdom periodically reach out to sites with ping or HTTP requests to gauge availability. These types of tests can create false positives for a number of reasons, including:
-
-### Internet Routing
-A temporary routing issue between a particular monitoring service endpoint and one of our CDN Points of Presence (POPs) can result in an alert. The internet is a big place, and there's a lot of potential for intermittent packet loss between any two points, depending in the route taken. A single loss of access from one point to another does not always correlate to an issue with the site itself.
-
-Tools like [MTR](https://en.wikipedia.org/wiki/MTR_(software)){.external} can help to diagnose a routing issue. 
-
-### Idle Containers
-As we discuss in our doc [All About Application Containers](/docs/application-containers/#idle-containers), containers will spin down after approximately twelve hours of idle time (for a live environment on a paid plan). A web request will trigger a "wake up" on the environment, which usually occurs within 30 seconds. Monitoring pings sent between the initial request and the completed spin-up may fail, but do not necessarily indicate an issue.
-
 ## Running Cron Over Web Traffic
 
 Both Drupal and WordPress rely on running regular maintenance tasks via a cron system that usually gets executed at the end of a request. The user is thus forced to wait for the cron to finish before they can actually see the page. Depending on what the cron is doing, this can be a short or extremely long wait (e.g. if the cron is calling external services to import content). As you can imagine, this is not desirable.
