@@ -18,7 +18,7 @@ We include a growing number of "Drupal products" as available upstreams on Panth
 
 <div class="alert alert-info" role="alert">		
 <h4 class="info">Note</h4>		
-<p markdown="1">Public distributions are not maintained by Pantheon and fall outside of our [scope of support](/docs/getting-support/#scope-of-support). If the upstream is out of date, contact the maintainer through [Drupal.org](https://www.drupal.org){.external} or the distribution's GitHub issue queue.		
+<p markdown="1">Distributions not maintained by Pantheon fall outside of our [scope of support](/docs/getting-support/#scope-of-support). If the distribution is behind on core releases or any of its included plugins, you should contact the maintainer through [Drupal.org](https://www.drupal.org){.external} or the distribution's GitHub issue queue.		
 </p></div>		
 
 Use the following direct links to create a new site on Pantheon from a public distribution:
