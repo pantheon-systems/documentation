@@ -3,6 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:5.6-apache-node-browsers
+    working_directory: ~/documentation
     steps:
       - checkout
       - run:
