@@ -4,9 +4,12 @@
 # because this script would not be reach if deploy-multidev.
 # exited with an error on the branch name.
 
+# Create a slug from $CIRCLE_BRANCH_SLUG
+CIRCLE_BRANCH_SLUG=$(echo "$CIRCLE_BRANCH" | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
+
 # Test any branch except master, dev, test, or live
-if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRCLE_BRANCH" != "test" ] && [ "$CIRCLE_BRANCH" != "live" ] && ! [[ $CIRCLE_BRANCH =~ (pull\/.*) ]]; then
-  export normalize_branch="$CIRCLE_BRANCH"
+if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] && [ "$CIRCLE_BRANCH_SLUG" != "test" ] && [ "$CIRCLE_BRANCH_SLUG" != "live" ] && ! [[ $CIRCLE_BRANCH_SLUG =~ (pull\/.*) ]]; then
+  export normalize_branch="$CIRCLE_BRANCH_SLUG"
   export normalize_branch="${normalize_branch:0:11}"
   # Remove - to avoid failures
   export normalize_branch="${normalize_branch//[-_]}"

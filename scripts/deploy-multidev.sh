@@ -3,10 +3,14 @@
 # Note: This script uses CircleCI environment variables https://circleci.com/docs/environment-variables
 # Note: PRs from forks not yet supported, see: https://circleci.com/docs/fork-pr-builds
 
+# Create a slug from $CIRCLE_BRANCH_SLUG
+CIRCLE_BRANCH_SLUG=$(echo "$CIRCLE_BRANCH" | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
+
+
 # Deploy any branch except master, dev, test, or live
-if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRCLE_BRANCH" != "test" ] && [ "$CIRCLE_BRANCH" != "live" ] && ! [[ $CIRCLE_BRANCH =~ (pull\/.*) ]]; then
+if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] && [ "$CIRCLE_BRANCH_SLUG" != "test" ] && [ "$CIRCLE_BRANCH_SLUG" != "live" ] && ! [[ $CIRCLE_BRANCH_SLUG =~ (pull\/.*) ]]; then
   # Normalize branch name to adhere with Multidev requirements
-  export normalize_branch="$CIRCLE_BRANCH"
+  export normalize_branch="$CIRCLE_BRANCH_SLUG"
   export valid="^[-0-9a-z]" # allows digits 0-9, lower case a-z, and -
   if [[ $normalize_branch =~ $valid ]]; then
     export normalize_branch="${normalize_branch:0:11}"
@@ -54,13 +58,13 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
   # Update CTA edit link so that the current branch is used
-  sed -i '47s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
-  sed -i '49s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
-  sed -i '29s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
-  sed -i '31s/master/'"$CIRCLE_BRANCH"'/g' source/_views/terminuspage.html
-  sed -i '16s/master/'"$CIRCLE_BRANCH"'/g' source/_views/video.html
-  sed -i '29s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
-  sed -i '31s/master/'"$CIRCLE_BRANCH"'/g' source/_views/guide.html
+  sed -i '47s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
+  sed -i '49s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
+  sed -i '29s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/terminuspage.html
+  sed -i '31s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/terminuspage.html
+  sed -i '16s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/video.html
+  sed -i '29s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/guide.html
+  sed -i '31s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/guide.html
 
 
   # Regenerate sculpin to reflect new redirect logic
