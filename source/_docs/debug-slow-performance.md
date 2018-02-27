@@ -96,7 +96,7 @@ If the cache lifetime is set to something that doesn't make sense for your traff
 ### Drupal Note
 See our [guidelines on Drupal's performance settings](/docs/drupal-cache/) for more details.
 
-Other caching systems that aren't on by default that should be enabled include [block caching](/docs/drupal-cache/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
+Other caching systems that aren't on by default that should be enabled include [block caching](/docs/drupal-cache/), [Views](https://drupal.org/project/views){.external} result and query caching, and [Panels](https://drupal.org/project/panels){.external} caching.
 
 ### Using the Database to Cache in Drupal
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.
