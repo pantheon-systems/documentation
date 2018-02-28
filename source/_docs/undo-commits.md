@@ -26,7 +26,7 @@ Date: Fri Dec 6 15:37:24 2014 -0700
 
     Making a single change to a CSS file in a theme. But bootstrap has a commit?
 ```
-At this point you will have to revert your code back to the commit before core was overwritten. In this case before commit _9a11sd8f67af9679a6fsafasdf802834207489328_ when changes were made on _Date: Fri Dec 6 15:37:24 2014 -0700_.
+At this point you will have to revert your code back to the commit before core was overwritten. In this case before commit `9a11sd8f67af9679a6fsafasdf802834207489328` when changes were made on `Date: Fri Dec 6 15:37:24 2014 -0700`.
 
 Once you have that commit, you can begin to apply any changes you have made since the date core was overwritten. Updating each file with a copy from a backup is the best option.
 
