@@ -6,6 +6,11 @@ categories: []
 ---
 We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/docs/upstream-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
 
+<div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">Using `git revert` to revert an upstream update will result in the dashboard being unable to pull upstream updates. If an upstream update introduces a regression or bug, you should use `git reset --hard COMMIT_BEFORE_MERGE` so that the dashboard can accurately judge the state of your site repository and whether it is behind the upstream.</p>
+</div>
+
 ## Getting Started
 
 Before you start making any changes to the Git repository. Be sure to have a working clone as a backup, if you overwrite the core and re-write the Git log the changes will be permanent.
@@ -21,7 +26,7 @@ Date: Fri Dec 6 15:37:24 2014 -0700
 
     Making a single change to a CSS file in a theme. But bootstrap has a commit?
 ```
-At this point you will have to revert your code back to the commit before core was overwritten. In this case before commit _9a11sd8f67af9679a6fsafasdf802834207489328_ when changes were made on _Date: Fri Dec 6 15:37:24 2014 -0700_.
+At this point you will have to revert your code back to the commit before core was overwritten. In this case before commit `9a11sd8f67af9679a6fsafasdf802834207489328` when changes were made on `Date: Fri Dec 6 15:37:24 2014 -0700`.
 
 Once you have that commit, you can begin to apply any changes you have made since the date core was overwritten. Updating each file with a copy from a backup is the best option.
 
