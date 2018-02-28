@@ -8,35 +8,37 @@ Pantheon promotes the separation of configuration and code, especially where sec
 
 Database credentials, Redis authentication, and other configuration data is provided as part of the runtime container environment. It is present in PHP's `$_ENV` superglobal.
 
-    <?php var_dump($_ENV); ?>
-    array(13) {
-      ["FRAMEWORK"]=>
-      string(7) "drupal"
-      ["DOCROOT"]=>
-      string(1) "/"
-      ["FILEMOUNT"]=>
-      string(19) "sites/default/files"
-      ["DRUPAL_HASH_SALT"]=>
-      string(44) "xCoEVpEAOYv0OhG6QIpr+Z+oDIV+qwGcz79AAGssLlA="
-      ["DB_HOST"]=>
-      string(9) "XXX.XXX.XXX.XXX"
-      ["DB_PORT"]=>
-      string(5) "XXXXXX"
-      ["DB_USER"]=>
-      string(8) "pantheon"
-      ["DB_PASSWORD"]=>
-      string(32) "XXXXXXXXXXXXXXXXX"
-      ["DB_NAME"]=>
-      string(8) "pantheon"
-      ["PANTHEON_SITE"]=>
-      string(36) "97cf724f-fbe9-49ba-81be-1a3ab4807b98"
-      ["PANTHEON_SITE_NAME"]=>
-      string(15) "development-demo"
-      ["PANTHEON_ENVIRONMENT"]=>
-      string(3) "dev"
-      ["PANTHEON_INFRASTRUCTURE_ENVIRONMENT"]=>
-      string(6) "live"
-    }
+```php
+<?php var_dump($_ENV); ?>
+array(13) {
+  ["FRAMEWORK"]=>
+  string(7) "drupal"
+  ["DOCROOT"]=>
+  string(1) "/"
+  ["FILEMOUNT"]=>
+  string(19) "sites/default/files"
+  ["DRUPAL_HASH_SALT"]=>
+  string(44) "xCoEVpEAOYv0OhG6QIpr+Z+oDIV+qwGcz79AAGssLlA="
+  ["DB_HOST"]=>
+  string(9) "XXX.XXX.XXX.XXX"
+  ["DB_PORT"]=>
+  string(5) "XXXXXX"
+  ["DB_USER"]=>
+  string(8) "pantheon"
+  ["DB_PASSWORD"]=>
+  string(32) "XXXXXXXXXXXXXXXXX"
+  ["DB_NAME"]=>
+  string(8) "pantheon"
+  ["PANTHEON_SITE"]=>
+  string(36) "97cf724f-fbe9-49ba-81be-1a3ab4807b98"
+  ["PANTHEON_SITE_NAME"]=>
+  string(15) "development-demo"
+  ["PANTHEON_ENVIRONMENT"]=>
+  string(3) "dev"
+  ["PANTHEON_INFRASTRUCTURE_ENVIRONMENT"]=>
+  string(6) "live"
+}
+```
 
 If you are using a common CMS framework, the code you need to load this configuration and boot your app should already be pre-configured. However, if you need to do something custom, you can work with environmental configuration directly.
 
