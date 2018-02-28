@@ -10,7 +10,7 @@ Pantheon's infrastructure includes a number of layers. Our edge layer provides r
 
 Pantheon's infrastructure is based on a grid model. We serve our customers by provisioning isolated linux containers with an optimized PHP stack in place. Each container includes its own Nginx, APC cache, and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Redis object cache and Apache Solr search indexing. See our [interactive diagram](https://pantheon.io/features/elastic-hosting) to learn more about Pantheon's infrastructure.
 
-![Fancy launch folks](/source/docs/assets/images/launchGuide-twitterLarge.)
+![awesome rachel](/source/docs/assets/images/launchGuide-twitterLarge.png)
 
 Every environment for your site (Dev, Test, Live) runs on its own container. In the case of a Live site, at the Business level and above you can have [multiple containers](#multiple-application-containers) serving your site.
 ### Idle Containers
