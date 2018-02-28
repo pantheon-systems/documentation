@@ -32,3 +32,5 @@ Now we run `pm-update`. This will download and apply all the updates, as well as
 We can turn off maintenance mode by setting the previous system value to 0. If we need to, we can run `drush cr` to clear cache.
 
 This was a quick introduction to Drush, the command line shell for running and scripting Drupal tasks.
+
+{% include("content/deprecate-kalabox.html")%}

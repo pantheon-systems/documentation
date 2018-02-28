@@ -4,7 +4,7 @@ description: Suggestions and solutions for working locally on your Pantheon Drup
 tags: [local]
 categories: []
 ---
-While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. We recommend using Kalabox for local development, which allows you to easily achieve a high standard of parity with Pantheon environments. For details, see [Local Development with Kalabox](/docs/kalabox).
+While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
@@ -16,7 +16,7 @@ Pantheon cannot troubleshoot or support local development solutions; however, we
 ## Before You Begin
 Be sure you have:
 
-- A local stack capable of running Drupal or WordPress. [Kalabox](http://www.kalabox.io/) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
+- A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando){.external} integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
     - Pantheon uses a [particular architecture to maximize performance and availability](/docs/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
     - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/docs/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes

@@ -45,7 +45,7 @@ The next time you [push your changes](/docs/git#push-changes-to-pantheon) back t
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">Kalabox does not recognize the `pantheon.yml` file. The PHP version is instead set in a `kalabox.yml` file. For reference see: [Pantheon on Kalabox Documentation](http://pantheon.kalabox.io/en/stable/users/config/#pantheon).
+<p markdown="1">Kalabox/Lando does not recognize the `pantheon.yml` file. The PHP version is instead set in a `kalabox.yml` or `lando.yml` file. For reference see: [Pantheon on Kalabox Documentation](http://pantheon.kalabox.io/en/stable/users/config/#pantheon){.external} or [.LANDO.YML](https://docs.devwithlando.io/config/lando.html#the-config-option){.external}.
 </p></div>
 
 ### Verify Changes

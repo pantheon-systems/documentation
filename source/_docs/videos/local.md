@@ -28,6 +28,8 @@ Use Git to add, commit, and push code changes up to Pantheon from your local dev
 
 Kalabox
 
-One application we highly recommend for local development is [Kalabox](/docs/kalabox) from Tandem. It’s pre-configured for Pantheon, and it automates many of the tasks we just covered.
+One application we highly recommend for local development is Kalabox from Tandem. It’s pre-configured for Pantheon, and it automates many of the tasks we just covered.
 
 This was a quick introduction to local development and Pantheon. Check out Kalabox, and try it yourself.
+
+{% include("content/deprecate-kalabox.html")%}
