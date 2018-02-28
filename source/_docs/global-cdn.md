@@ -94,6 +94,12 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
 
 3. Click **Details** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS host to use the provided values.
 
+   **Terminology:** Terms you will see beside your domains and what they mean:
+
+      - **Upgrade to CDN** - This means the domain is routing to our legacy infrastructure. Click **Upgrade to CDN** or **Details** to check and update the DNS recommendations
+      - **Setup Required** - This can mean several things; click **Setup Required** or **Details** to get more details
+      - **Launched** - Your domain successfully routes to the Pantheon Platform, and you got your free Let's Encrypt SSL cert. You're good to go!
+
     <div class="alert alert-info">
     <h4 class="info">Pro Tip</h4>
 Look up your DNS host with this free web tool: <a class="external" href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
