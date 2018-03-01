@@ -156,7 +156,7 @@ When you switch to On Server Development (SFTP), you cannot interact with your c
 
 ### What version of Git does Pantheon run?
 
-We are currently running Git 1.9.x.
+We are currently running Git 2.4.x.
 
 ### Why were pushes denied because of changes in sites/default/files?
 
