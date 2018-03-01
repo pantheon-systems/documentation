@@ -31,6 +31,11 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
     <button class="btn btn-default btn-clippy" data-clipboard-target="#github-token">Copy</button>
     <figure><pre id="github-token"><code class="command bash" data-lang="bash">export GITHUB_TOKEN=[REDACTED]</code></pre></figure>
     </div>
+    
+    <div class="alert alert-info">
+      <h4 class="info">Note</h4>
+      <p markdown="1">Github and Terminus tokens are stored in CircleCI as environment variables. If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app){.external}.</p>
+    </div>
 
 3. Create a new project (replace `pantheon-d8-composer-project` with the name of your new site):
 
