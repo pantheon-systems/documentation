@@ -119,7 +119,7 @@ $: git tag
 jenkins-ellis_update_drops_7-3
 jenkins-ellis_update_drops_7-4
 jenkins-ellis_update_drops_7-5
-pantheon.import
+pantheon.initialize
 pantheon_live_1
 pantheon_live_2
 pantheon_test_1
@@ -127,7 +127,7 @@ pantheon_test_2
 ```
 The "update\_drops" tags are from our upstream updates in the past (we don't tag them anymore, but used to).
 
-The tag `pantheon.import` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
+The tag `pantheon.initialize` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
 
 Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can."
 
