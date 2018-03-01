@@ -67,8 +67,9 @@ In the commands below, replace `<site>` with your Pantheon site name.
     <p markdown="1">`api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
     </div>
 
-6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
+6. [Add, commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
 
+        git add private/scripts/new_relic_deploy.php
         git commit -am "Adding deployment recording to New Relic"
         git push origin master
 
