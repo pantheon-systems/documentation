@@ -409,7 +409,7 @@ Terminal screenshots should only be used to demonstrate intended output:
 </div>
 
 ## Error Messages
-Document error messages verbatim as H3s within a **Troubleshooting** section. Using the exact copy of the error message helps to improve SEO and making the header an H3 allows the section to be linkable within the table of contents for easy sharing.
+Document error messages verbatim as H3s within a **Troubleshooting** section. Using the exact copy of the error message helps to improve SEO, and making the header an H3 allows the section to be linkable within the table of contents for easy sharing.
 
 <div class="style-example" markdown="1">
 ### RedisException: Redis server went away
