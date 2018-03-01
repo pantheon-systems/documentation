@@ -10,6 +10,9 @@ categories: [wordpress]
 layout: video
 searchboost: 50
 ---
+
+{% include("content/deprecate-kalabox.html")%}
+
 WP-CLI is a set of command line tools for managing WordPress installations. Let’s install it and explore some commands.
 
 WP-CLI can be installed locally in various ways. You can find instructions at [wp-cli.org](https://make.wordpress.org/cli/handbook/installing/).
@@ -48,5 +51,3 @@ Now we can simply run `terminus wp scaffold plugin`, and generate the default st
 Now I can see the directories, files, and even tests that are stubbed out for me. This saves time and reduces the possibility for user error.
 
 This was a quick introduction to WP-CLI, the command line interface for WordPress. Please explore our technical documentation for more information about using and extending this tool’s functionality.
-
-{% include("content/deprecate-kalabox.html")%}

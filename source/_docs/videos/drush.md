@@ -10,6 +10,8 @@ categories: [drupal]
 layout: video
 searchboost: 50
 ---
+{% include("content/deprecate-kalabox.html")%}
+
 [Drush](https://github.com/drush-ops/drush/) is a command line shell for running and scripting Drupal tasks. Let’s install it and explore some commands.
 
 Drush can be installed locally in various ways. You can find [instructions](https://drushcommands.com/drush-8x/core/site-install/) at drush.org. Just be sure to use the version that corresponds to your Drupal installation and operating system.
@@ -32,5 +34,3 @@ Now we run `pm-update`. This will download and apply all the updates, as well as
 We can turn off maintenance mode by setting the previous system value to 0. If we need to, we can run `drush cr` to clear cache.
 
 This was a quick introduction to Drush, the command line shell for running and scripting Drupal tasks.
-
-{% include("content/deprecate-kalabox.html")%}
