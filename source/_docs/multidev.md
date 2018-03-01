@@ -48,6 +48,12 @@ There are a number of terms used throughout the Multidev workflow:
 1. From your Site Dashboard, click the **Multidev** tab.
 2. Click **Create Multidev Environment**. This will create a new fork of the environment that you select, including code, database and files.
 3. Specify the name for the environment; the URL will incorporate the environment name.
+
+    <div class="alert alert-danger" role="alert">
+    <h4 class="info">Warning</h4>
+    <p>Multidev branch names must be all lowercase and less than 11 characters. Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.</p>
+    </div>
+
 4. Click **Create Environment**.
 
 It will take a few minutes to create the environment and clone the content from the source environment. You can continue working on the Dashboard while it's being created.
@@ -59,17 +65,6 @@ You can create cloned Multidev environments from Dev, Test, or Live; existing br
 <p>The cache tables can contain entries that exceed the transaction redo limit set by <code>@innodb_log_file_size@</code>. If you receive an error message that the clone was aborted, clear caches on the source environment and retry the procedure.</p>
 </div>
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
-
-## Create a New Multidev Environment
-
-First, create a branch locally and push it to Pantheon. Then create a Multidev environment for the branch:
-
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p>Multidev branch names must be all lowercase and less than 11 characters. Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.</p></div>
-
-1. From your Site Dashboard, select **Multidev**.
-2. Click **Git Branches**, and select **Create Environment** next to the branch name.
 
 ## Access a Branch Environment
 
@@ -84,20 +79,42 @@ Any changes you make to a branch you have checked out locally will be committed 
 ## Clone Content
 
 1. Select the environment you want to clone content (files and database) into.
-2. Click **Workflow**.
-3. Select the source environment from the **Clone from the <name> Environment** drop-down.
+2. Click **Database / Files**.
+3. Select the source environment in the **From this Environment** drop-down menu.
 4. Select Database, Files, or both.
-5. Choose whether to execute update.php after cloning, and click **Clone**.
+5. Choose whether to execute update.php after cloning, and click **Clone the Database & the Files from <source> into <target> Environment**.
 
 ## Edit Code
+Edit your content locally via [Git](/docs/git/) or utilize on-server development via [SFTP](/docs/sftp/) mode.
+### SFTP Mode
+1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
+2. Set the connection mode to **SFTP** if it is not already set.
+3. Use the WordPress or Drupal admin interfaces to develop, or connect via SFTP using your preferred client.
+4. Type in a commit message for edits made via SFTP and click the **Commit** button.
 
-1. Edit your content locally via [Git](/docs/git/) or utilize on-server development via [SFTP](/docs/sftp/) mode.
-2. Within the Pantheon Dashboard, click **Code**.
-3. Type in a commit message for edits made via SFTP and click the **Commit** button. Commits pushed via Git are shown in the Commit Log.
+### Git Mode
+1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
+2. Set the connection mode to **Git** if it is not already set.
+3. Select **Clone with Git** and copy the provided command. Paste the command in a terminal window to clone a copy of your site's code repository to your local.
+4. From within the project's root directory, view existing branches using `git branch -a`.
+
+  If the target environment's branch is _not_ listed, update the list by running `git fetch origin`. Once your local clone of the repository shows to be tracking the expected remote branch on Pantheon (e.g., `example-br`), switch to that branch:
+
+  ```
+  git checkout example-br
+  ```
+
+5. Make desired code changes, then stage, commit, and push to the Multidev environment. For example:
+
+  ```
+  git add .
+  git commit -m "My code changes"
+  git push origin example-br
+  ```
 
 ## Merge Code
 
-1. To merge code from a Multidev into the master branch on Dev, click the Dev tab. 
+1. To merge code from a Multidev into the master branch on Dev, click the Dev tab.
 2. Click **Merge**.
 3. Select the environment with commits that can be merged into the target.
 Instructions for using the command-line to merge the changes into the target are shown and can be pasted directly into the terminal without modification.
@@ -165,6 +182,9 @@ Branch names can contain any ASCII letter and number (a through z, 0 through 9) 
 ### Can I fork my code without using Multidev?
 
 Yes, you can; your Git repository is not restricted. If you do not use Multidev, then the interface will not show the branches, allow creation of an environment for a branch, and so forth.
+
+### Can I create a new environment for my local branch?
+Yes. Push a new branch from your local (e.g., `git push origin example-br`) then navigate to **Multidev** > **Git Branches** from your Site Dashboard and select **Create Environment** next to the branch name.
 
 ### Is there a limit on the number of branches or environments?
 
