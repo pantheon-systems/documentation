@@ -48,7 +48,7 @@ There are a number of terms used throughout the Multidev workflow:
 
 ## Getting Started
 
-1. From your Site Dashboard, click the **Database/Files** tab.
+1. From your Site Dashboard, click the **Multidev** tab.
 2. Click **Create Multidev Environment**. This will create a new fork of the environment that you select, including code, database and files.
 3. Specify the name for the environment; the URL will incorporate the environment name.
 
