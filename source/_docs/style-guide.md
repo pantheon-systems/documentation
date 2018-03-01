@@ -411,6 +411,31 @@ Terminal screenshots should only be used to demonstrate intended output:
 ```
 </div>
 
+## Error Messages
+Document error messages verbatim as H3s within a **Troubleshooting** section. Using the exact copy of the error message helps to improve SEO, and making the header an H3 allows the section to be linkable within the table of contents for easy sharing.
+
+<div class="style-example" markdown="1">
+### RedisException: Redis server went away
+The following error occurs when Redis has not been enabled within the Site Dashboard:
+
+```
+RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bindings/xxxxxxxx/code/sites/all/modules/redis/lib/Redis/Client/PhpRedis.php).
+```
+Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
+<hr class="source-code">
+```markdown
+### RedisException: Redis server went away
+The following error occurs when Redis has not been enabled within the Site Dashboard:
+
+ ```
+ RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bindings/xxxxxxxx/code/sites/all/modules/redis/lib/Redis/Client/PhpRedis.php).
+ ```
+
+Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
+```
+</div>
+
+
 ## Panels
 Use panels for extraneous but useful information such as troubleshooting sections or pro tips that would be distracting or can be skipped over by a large portion of readers. This is primarily used in an effort to promote readability of a page.
 
