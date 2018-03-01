@@ -77,7 +77,7 @@ Use the `pantheon.yml` file to define scripts you want executed automatically wh
 For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/docs/quicksilver/) and check our growing set of [Platform Integration guides](/docs/guides/) demonstrating Quicksilver hooks.
 
 ## Custom Upstream Configurations
-Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/docs/custom-upstream/) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file, however Quicksilver workflows are not supported.
+Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/docs/custom-upstream/) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/docs/quicksilver/#hooks) here; however other Quicksilver workflows are not supported.
 
 This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
 
