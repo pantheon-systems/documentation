@@ -11,7 +11,7 @@ When you become a site owner, you receive administrator permissions to manage th
 ### Administrative Tasks
 
 
-####How do I add and remove team members?
+#### How do I add and remove team members?
 
 **Add a Team Member**
 
@@ -40,34 +40,37 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 4. Check that the agency is the one you expected.
 5. Click **Add Agency** to make them a supporting organization.
 
-####What add-ons are available for my site?
-[Apache Solr](/docs/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox.
+#### What add-ons are available for my site?
 
-[New Relic Pro](/docs/new-relic/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
-
-[Redis](/docs/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
-
-####How do I enable add-ons?
-From your Site Dashboard, click **Settings**, then click **Add Ons**. You will now see all the available add-ons for your site.
+ - [Apache Solr](/docs/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox.
+ - [Redis](/docs/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 
-####Can I downgrade my site to a personal plan?
+Pantheon also offers [New Relic Pro](/docs/new-relic/) to our customers, built in to the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+
+#### How do I enable add-ons?
+From your Site Dashboard, click **Settings**, then click **Add Ons**. You will see all the available add-ons for your site.
+
+You can access New Relic Pro directly from the Site Dashboard, by clicking on **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
+
+
+#### Can I downgrade my site to a personal plan?
 Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. If you have HTTPS enabled on Professional plans and above, you will need to re-enable HTTPS and re-load your SSL certificate into Pantheon. For more information, see [Select a Plan](/docs/select-plan#upgrade-or-downgrade-plan).
 
 ### Billing Tasks
 
 
-####How do I change site service levels?
+#### How do I change site service levels?
 From your Site Dashboard, click **Settings**. Select a plan, and click **Update Plan**. Next, enter the payment information or invite someone to pay for the site, and click **Purchase Plan**.
 
-####Can I update or change the payment method?
+#### Can I update or change the payment method?
 You can update the payment method in the **Settings** page. For detailed instructions, see [Updating Payment Methods](/docs/update-payment-method/).
 
-####Can I pay for my site on an annual or quarterly basis instead of monthly?
+#### Can I pay for my site on an annual or quarterly basis instead of monthly?
 Self-serve sites are billable only via recurring monthly charges and can not be paid in advance.
 Sites that are owned by a Reseller, Edu+, or Enterprise organization are invoiced to the organization.
 
-####Can I transfer ownership of a site to someone else?
+#### Can I transfer ownership of a site to someone else?
 
 The site owner is the person who pays for the site. You'll need to update the payment method in order to change the owner.
 
@@ -89,7 +92,7 @@ For Sandbox sites, the site owner can click **Team**, then click **Make Owner** 
 Resellers should contact Pantheon Support directly if you need to transfer ownership.
 
 
-##See Also
+## See Also
 
 - [Adding a Credit Card to a Specific Site](/docs/site-payments#select-a-plan-and-add-a-credit-card)
 - [Updating Payment Methods](/docs/update-payment-method/)
