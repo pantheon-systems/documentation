@@ -1,5 +1,5 @@
 ---
-title: Setting and Clearing Custom Cache Tags in Drupal 8 site with Pantheon Advanced Page Cache module
+title: Setting and Clearing Custom Cache Tags in Drupal 8
 description: Learn how to use Views Cache Tags module along with custom code to control Pantheon Advanced Page Cache.
 tags: []
 categories: []
@@ -11,6 +11,19 @@ contributors:
   - dwayne
   - davidneedham
 ---
+
+## Introduction
+
+[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) and the [Pantheon Global CDN](https://pantheon.io/docs/global-cdn/).
+
+Just by turning on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed) this module will clear only the relevant pages from the edge cache.
+
+This module has no configuration settings of its own, just enable it and it will pass along information already present in Drupal 8 to the Global CDN.
+
+To take finer grain control of how Drupal is handling it's cache data (in ways that will interact with both the Global CDN and internal Drupal caches) this guide will show you how to use a mix of custom code and [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag) to set and clear your own custom tags.
+
+## Setting up a new Drupal site
+
 
 To follow along with this guide it is best to start use the dev environment of a newly created Drupal 8 site. You could use a pre-existing Drupal 8 site but some of the details would change.
 
