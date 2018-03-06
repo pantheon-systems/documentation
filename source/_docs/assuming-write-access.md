@@ -19,15 +19,17 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
  ```bash
  # The first path will be used as the new file destination instead of whatever path the plugin assumed write access to
- ln -s ./wp-content/uploads/new-directory ./wp-content/path/plugin-expects-to-write-to
+ ln -sf ./wp-content/uploads/new-directory ./wp-content/path/plugin-expects-to-write-to
  # Stage your changes
  git add .
  ```
-
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
     <p markdown="1">
     The `ln` command is sensitive to the **working directory**, the folder your prompt is currently sitting in. The example above assumes you're in the main directory of your local git repository.
+    </p>
+    <p markdown="1">
+    Always backup and remove the path or directory where you want to be replaced with symlink. Otherwise, the symlink will go inside that directory. 
     </p>
     </div>
 
@@ -45,7 +47,14 @@ The best solution is to communicate with the maintainer of the module or plugin 
  ```
 
  Your commit can be seen in the Dev environments commit history. The plugin will now successfully write files within any environment, even when the Dev environment's connection mode is set to Git. In your previous configuration, the plugin would fail while in Git mode. You should not see the newly created files in the Dashboard as "ready to commit", as files are not version controlled.
-
+    
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdown="1">
+    In our example, we created the target directory of the symlink as ./wp-content/uploads/new-directory. Make sure this directory is created via SFTP if it does not exist yet.
+    </p>
+    </div>
+    
 6. Deploy to Test and confirm results.
 7. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
