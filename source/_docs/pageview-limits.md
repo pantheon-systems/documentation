@@ -7,7 +7,7 @@ categories: []
 
 Unlike traditional providers where enough requests will crash the server, Pantheon's platform can absorb massive amounts of traffic. One of the main benefits of Pantheon is our ability to provide quality service and uptime under heavy traffic loads.
 
-However, this does mean that websites can run happily even though they are over their plan's traffic limit. If this is happening on a sustained basis, you may recieve notice from customer support that your site's plan isn't adequate to its needs, and an upgrade may be in order.
+However, this does mean that websites can run happily even though they are over their plan's traffic limit. If this is happening on a sustained basis, you may receive notice from customer support that your site's plan isn't adequate to its needs, and an upgrade may be in order.
 
 ## How We Measure Site Traffic
 

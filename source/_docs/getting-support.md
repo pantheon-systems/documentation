@@ -92,7 +92,7 @@ The majority of Pantheon's support is provided in the context of a particular we
   </div>
 </div>
 
-All users of the platform can recieve customer service and support for non-site-related questions via any available medium regardless of account type.
+All users of the platform can receive customer service and support for non-site-related questions via any available medium regardless of account type.
 
 ## Real Time Chat Support
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
