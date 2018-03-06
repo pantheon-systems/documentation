@@ -4,7 +4,7 @@ description: Learn how to reset your Pantheon Website Management Platform dashbo
 tags: [debugdb]
 categories: []
 ---
-If you need to reset your Pantheon Dashboard user password, [visit this page](https://dashboard.pantheon.io/reset-password) and follow the instructions.
+If you need to reset your Pantheon Dashboard user password,logout and [visit this page](https://dashboard.pantheon.io/reset-password) and follow the instructions.
 
 
 ## Drupal Site User Login
