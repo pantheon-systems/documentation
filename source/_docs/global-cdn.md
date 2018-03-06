@@ -39,7 +39,7 @@ Open a support chat to enable the upgrade.
   <tbody>
     <tr>
       <th>Price</th>
-      <td>$30/mo surcharge for HTTPS</td>
+      <td>$60/mo surcharge for HTTPS</td>
       <td>Included</td>
     </tr>
     <tr>
