@@ -163,6 +163,14 @@ It's important to relay the need for updating core to maintainers, even if you p
 
 Once you have communicated the issue, you can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
 
+### Custom Upstream Updates Not Available
+
+If you know your site's Custom Upstream has updated code, but it's not visible on your Site Dashboard, click on **Check now**:
+
+![Check Now](/source/docs/assets/images/dashboard/check-for-updates.png)
+
+This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow compeltes, it may take up to a minute before updates appear on the dashboard.
+
 ### 503 Errors When Running Update.php and Installing Modules
 
 There are multiple reasons that 503 errors might occur when updating:
