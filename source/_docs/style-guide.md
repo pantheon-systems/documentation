@@ -489,6 +489,16 @@ Markdown tables are defined like this:
 
 The colons (`:`) define text alignment; one on each side of the column header dashes will center text. A single `:` on the left or right will align the text to that side.
 
+## Tooltips
+
+Tooltips are a great way to add additional information without cluttering up a section:
+
+```markdown
+Tooltips can be added anywhere, like this <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Title" data-content="Here's some additional information that can help the reader."><em class="fa fa-info-circle"></em></a> .
+```
+
+Tooltips can be added anywhere, like this <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Title" data-content="Here's some additional information that can help the reader."><em class="fa fa-info-circle"></em></a> .
+
 ## See Also
 
 This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
