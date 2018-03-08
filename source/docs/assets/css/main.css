@@ -5728,3 +5728,41 @@ hr.source-code::after {
 .cdn-map-container {
   background-color: #313945;
 }
+
+/* Override Tables with table-responsive and table-bordered */
+
+table{
+  display: table;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #dee2e6;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  border-collapse: collapse;
+  min-height: .01%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+thread {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+th {
+  border: 1px solid #dee2e6;
+  display: table-cell;
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+  font-weight: bold;
+  border-collapse: collapse;
+}
+
+td{
+  border: 1px solid #dee2e6;
+  display: table-cell;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+}
