@@ -469,6 +469,25 @@ Use panels for extraneous but useful information such as troubleshooting section
 ```
 </div>
 
+## Tables
+
+Markdown tables are defined like this:
+
+```markdown
+| Header 1     | Header 2 |
+| ------------ |:--------:|
+| Content      | Content  |
+| Content      | Content  |
+| Content      | Content  |
+```
+
+| Header 1     | Header 2 |
+| ------------ |:--------:|
+| Content      | Content  |
+| Content      | Content  |
+| Content      | Content  |
+
+The colons (`:`) define text alignment; one on each side of the column header dashes will center text. A single `:` on the left or right will align the text to that side.
 
 ## See Also
 
