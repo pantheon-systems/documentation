@@ -169,7 +169,7 @@ If you know your site's Custom Upstream has updated code, but it's not visible o
 
 ![Check Now](/source/docs/assets/images/dashboard/check-for-updates.png)
 
-This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow compeltes, it may take up to a minute before updates appear on the dashboard.
+This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it may take up to a minute before updates appear on the dashboard.
 
 ### 503 Errors When Running Update.php and Installing Modules
 
