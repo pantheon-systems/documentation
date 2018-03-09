@@ -329,7 +329,7 @@ You can adjust your local settings to use Google's DNS (8.8.8.8 and 8.8.4.4) ins
 
 Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Pantheon's timeouts for SSH based commands are outlined in our [documentation on timeouts](https://pantheon.io/docs/timeouts/). To avoid a timeout related to a lack of output, be sure your commands return output to the terminal session in under 10 minutes.
 
-### Drush error: "Failed opening required .../vendor/bin/includes/preflight.inc"
+### Drush error: Failed opening required .../vendor/bin/includes/preflight.inc
 
 ```
 Fatal error: require(): Failed opening required '/srv/bindings/.../code/vendor/bin/includes/preflight.inc' (include_path='.:/usr/share/pear:/usr/share/php') in /srv/bindings/.../vendor/bin/drush.php on line 11
