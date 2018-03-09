@@ -18,20 +18,9 @@ image: buildToolsGuide-thumb
 ---
 In this section we'll use the Terminus Build Tools Plugin to create a new Pantheon Site, a corresponding GitHub repository, and configure CircleCI to run tests.
 
-1. Create a [CircleCI personal API token](https://circleci.com/account/api){.external} and export the value to the `CIRCLE_TOKEN` environment variable (replace `[REDACTED]`):
+1. Create a [CircleCI personal API token](https://circleci.com/account/api){.external}
 
-    <div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#circle-token">Copy</button>
-    <figure><pre id="circle-token"><code class="command bash" data-lang="bash">export CIRCLE_TOKEN=[REDACTED]</code></pre></figure>
-    </div>
-
-2. Create a [GitHub personal access token](https://github.com/settings/tokens){.external} with `repo` and `delete_repo` scopes, and export the value to the `GITHUB_TOKEN` environment variable (replace `[REDACTED]`):
-
-    <div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#github-token">Copy</button>
-    <figure><pre id="github-token"><code class="command bash" data-lang="bash">export GITHUB_TOKEN=[REDACTED]</code></pre></figure>
-    </div>
-
+2. Create a [GitHub personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
     <div class="alert alert-info">
       <h4 class="info">Note</h4>
       <p markdown="1">Github and Terminus tokens are stored in CircleCI as environment variables. If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app){.external}.</p>
