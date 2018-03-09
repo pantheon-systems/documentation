@@ -34,7 +34,21 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 
 **Be sure the `friendly_path` variable is properly set to restrict the cookie to the specific directory.**
 
+## Disable Caching On Development Environment
+You may want to disable caching on Dev Environment as you make changes to cachable contents like css, js or images so that you don't need to clear the cache often to see those changes.
+
+To bypass caching on Development environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
+```
+if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+  if ($_SERVER['PANTHEON_ENVIRONMENT'] === 'dev') {
+    $domain = $_SERVER['HTTP_HOST'];
+    setcookie('NO_CACHE', '1', time()+0, $_SERVER['REQUEST_URI'], $domain);
+  }
+}
+```
+
 As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
+
 
 ## Cache-varying Cookies
 Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]`.
