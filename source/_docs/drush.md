@@ -329,12 +329,11 @@ You can adjust your local settings to use Google's DNS (8.8.8.8 and 8.8.4.4) ins
 
 Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Pantheon's timeouts for SSH based commands are outlined in our [documentation on timeouts](https://pantheon.io/docs/timeouts/). To avoid a timeout related to a lack of output, be sure your commands return output to the terminal session in under 10 minutes.
 
-### Drush not working due to a fatal error - vendor/bin/includes/preflight.inc 
-
+### Drush error: "Fatal error: require(): Failed opening required .../vendor/bin/includes/preflight.inc"
+This indicates that the vendor directory contains Drush binaries that should be removed. Remove any Drush files from `vendor/bin` and `vendor/drush` using `git rm`.
 ```
-Fatal error: require(): Failed opening required '/srv/bindings/3e5118dff45d4b3b9519b9b396516827/code/vendor/bin/includes/preflight.inc' (include_path='.:/usr/share/pear:/usr/share/php') in /srv/bindings/3e5118dff45d4b3b9519b9b396516827/code/vendor/bin/drush.php on line 11
+Fatal error: require(): Failed opening required '/srv/bindings/**********************************/code/vendor/bin/includes/preflight.inc' (include_path='.:/usr/share/pear:/usr/share/php') in /srv/bindings/**********************************/code/vendor/bin/drush.php on line 11
 ```
-To resolve this issue make sure there are no drush binaries inside vendor folder if it does remove the Drush bits using git rm from `vendor/bin` and `vendor/drush`
 
 ## Known Limitations
 - Crontab: Currently, there is no way to manage Crontab on Pantheon. If you need a way to set up your own Cron interval, you can use an external cron service such as [Easy Cron](https://www.easycron.com/user/register).
