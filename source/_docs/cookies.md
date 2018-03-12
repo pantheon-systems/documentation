@@ -74,7 +74,7 @@ else{
   * $httponly = true;
   * @endcode
   **/
-  setcookie($name, $value $expire, $path, $domain, $secure, $httponly);
+  setcookie($name, $value, $expire, $path, $domain, $secure, $httponly);
 }
 ```
 
