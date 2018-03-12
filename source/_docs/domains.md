@@ -92,6 +92,14 @@ It's a best practice for SEO and security to standardize all traffic on HTTPS an
   <div id="more-redirects" class="collapse">
     <div class="panel-inner" markdown="1">
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.
+      
+#### Redirect to HTTPS only
+While it is definitely current best practice for SEO to redirect all traffic to a single, primary domain, there are use cases where it is preferred to only redirect traffic to https, and NOT to a primary domain.
+
+```
+Add code to redirect https only here...
+```
+
 #### Redirect to Subdirectories or Specific URLs
 
 To redirect from a subdomain to a specific area of the site, use the following:
