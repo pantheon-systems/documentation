@@ -8,7 +8,6 @@ contributors:
   - alexfornuto
 date: 9/1/2016
 ---
-Pantheon's [Global CDN](/docs/global-cdn) makes it unnecessary to add a third party CDN for most use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
 
 Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with Drupal sites running on Pantheon.
 
