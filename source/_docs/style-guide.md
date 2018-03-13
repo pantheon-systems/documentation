@@ -471,33 +471,42 @@ Use panels for extraneous but useful information such as troubleshooting section
 
 ## Tables
 
-Markdown tables are defined like this:
+Tables are used to describe feature availability based on site plan. For example:
 
 <div class="style-example" markdown="1">
-| Table Header 1     | Table Header 2 |
-| ------------------ | :------------: |
-| Table Data 1.1     | Table Data 2.1 |
-| Table Data 1.2     | Table Data 2.2 |
-| Table Data 1.3     | Table Data 2.3 |
+| Plans         | Redis Support
+| ------------- |:------- |
+| Sandbox       | ✓       |
+| Personal      |         |
+| Professional  | ✓       |
+| Business      | ✓       |
+| Elite         | ✓       |
 <hr class="source-code">
 ```markdown
-| Table Header 1     | Table Header 2 |
-| ------------------ | -------------- |
-| Table Data 1.1     | Table Data 2.1 |
-| Table Data 1.2     | Table Data 2.2 |
-| Table Data 1.3     | Table Data 2.3 |
+| Plans         | Redis Support
+| ------------- |:------- |
+| Sandbox       | ✓       |
+| Personal      |         |
+| Professional  | ✓       |
+| Business      | ✓       |
+| Elite         | ✓       |
 ```
 </div>
+
+The colons (`:`) define text alignment; one on each side of the column header dashes will center text. A single `:` on the left or right will align the text to that side.
 
 ## Tooltips
 
 Tooltips are a great way to add additional information without cluttering up a section:
 
-```markdown
-Tooltips can be added anywhere, like this <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Title" data-content="Here's some additional information that can help the reader."><em class="fa fa-info-circle"></em></a> .
-```
+<div class="style-example" markdown="1">
+In early testing we saw multi-second speedups in Visual Progress <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Visual Progress" data-content="The pace at which content renders on the visible page"><em class="fa fa-info-circle"></em></a> even within the continental US. International users will benefit even more:
+<hr class="source-code">
 
-Tooltips can be added anywhere, like this <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Title" data-content="Here's some additional information that can help the reader."><em class="fa fa-info-circle"></em></a> .
+```markdown
+In early testing we saw multi-second speedups in Visual Progress <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Visual Progress" data-content="The pace at which content renders on the visible page"><em class="fa fa-info-circle"></em></a> even within the continental US. International users will benefit even more:
+```
+</div>
 
 ## See Also
 

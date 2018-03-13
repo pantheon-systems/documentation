@@ -18,7 +18,7 @@ Redis provides an alternative caching backend, taking that work off the database
 ## Enable Redis
 All plans except for a Personal plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
 
-| Plans         | Supported
+| Plans         | Redis Support
 | ------------- |:------- |
 | Sandbox       | ✓       |
 | Personal      |         |

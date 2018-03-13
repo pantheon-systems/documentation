@@ -15,7 +15,7 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 
 All plans except for a Personal plan can use Solr. Solr is available to Sandbox plans for developmental purposes, but Solr will not be available going live on a Personal plan.
 
-| Plans         | Supported <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Environments" data-content="Solr is enabled for all environments"><em class="fa fa-info-circle"></em></a> |
+| Plans         | Solr Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Environments" data-content="Solr is enabled for all environments"><em class="fa fa-info-circle"></em></a> |
 | ------------- |:------ |
 | Sandbox       | ✓      |
 | Personal      |        |
