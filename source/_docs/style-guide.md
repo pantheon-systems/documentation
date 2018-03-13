@@ -482,14 +482,12 @@ Markdown tables are defined like this:
 <hr class="source-code">
 ```markdown
 | Table Header 1     | Table Header 2 |
-| ------------------ | :------------: |
+| ------------------ | -------------- |
 | Table Data 1.1     | Table Data 2.1 |
 | Table Data 1.2     | Table Data 2.2 |
 | Table Data 1.3     | Table Data 2.3 |
 ```
 </div>
-
-The colons (`:`) define text alignment; one on each side of the column header dashes will center text. A single `:` on the left or right will align the text to that side.
 
 ## Tooltips
 
