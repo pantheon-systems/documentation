@@ -15,6 +15,7 @@ For more in-depth information, see [Error Handling and Logging](https://secure.p
 Each of the PHP errors are handled differently depending on the site environment. On Dev, they are shown directly to the user in the browser. On Test and Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if `db\_log` is enabled for Drupal. The PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled for WordPress to save errors to wp-content/debug.log. PHP errors are also logged on the application server at `logs/php-error.log`.
 
 Here's a breakdown of what errors are shown and where:
+
 <table>
 <thead>
 		<tr>
@@ -28,69 +29,68 @@ Here's a breakdown of what errors are shown and where:
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Dev</td>
 			<td align="left">notice</td>
-			<td align="left"><strong>Y</strong></td>
-			<td align="left"><strong>Y</strong></td>
-			<td align="left">N</td>
+			<td align="left"><strong>✓</strong></td>
+			<td align="left"><strong>✓</strong></td>
+			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left"><strong>Y</strong></td>
-			<td align="left"><strong>Y</strong></td>
-			<td align="left">N</td>
+			<td align="left"><strong>✓</strong></td>
+			<td align="left"><strong>✓</strong></td>
+			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left" style="border-bottom:1px solid black;">error</td>
-			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
-			<td align="left" style="border-bottom:1px solid black;">N</td>
-			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
+			<td align="left" style="border-bottom:1px solid black;"><strong>✓</strong></td>
+			<td align="left" style="border-bottom:1px solid black;"> </td>
+			<td align="left" style="border-bottom:1px solid black;"><strong>✓</strong></td>
 		</tr>
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Test</td>
 			<td align="left">notice</td>
-			<td align="left">N</td>
-			<td align="left"><strong>Y</strong></td>
-			<td align="left">N</td>
+			<td align="left"> </td>
+			<td align="left"><strong>✓</strong></td>
+			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left">N</td>
-			<td align="left"><strong>Y</strong></td>
-			<td align="left">N</td>
+			<td align="left"> </td>
+			<td align="left"><strong>✓</strong></td>
+			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left" style="border-bottom:1px solid black;">error</td>
-			<td align="left" style="border-bottom:1px solid black;">N</td>
-			<td align="left" style="border-bottom:1px solid black;">N</td>
-			<td align="left" style="border-bottom:1px solid black;"><strong>Y</strong></td>
+			<td align="left" style="border-bottom:1px solid black;"> </td>
+			<td align="left" style="border-bottom:1px solid black;"> </td>
+			<td align="left" style="border-bottom:1px solid black;"><strong>✓</strong></td>
 		</tr>
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle;">Live</td>
 			<td align="left">notice</td>
-			<td align="left">N</td>
-			<td align="left"><strong>Y</strong></td>
-			<td align="left">N</td>
+			<td align="left"> </td>
+			<td align="left"><strong>✓</strong></td>
+			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left">N</td>
-			<td align="left"><strong>Y</strong></td>
-			<td align="left">N</td>
+			<td align="left"> </td>
+			<td align="left"><strong>✓</strong></td>
+			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left">error</td>
-			<td align="left">N</td>
-			<td align="left">N</td>
-			<td align="left"><strong>Y</strong></td>
+			<td align="left"> </td>
+			<td align="left"> </td>
+			<td align="left"><strong>✓</strong></td>
 		</tr>
 	</tbody>
 </table>
-
 
 To learn more about PHP error logs, see [Log Files on Pantheon](/docs/logs).
 
 ## Performance Hits
 
-An error, no matter what severity, is a problem that needs to be addressed. Any PHP error, even a notice, will drastically reduce the speed of PHP execution. Even if you don't see the error in your browser, and even if you explicitly disable logging, every single PHP error will slow your site down.  
+An error, no matter what severity, is a problem that needs to be addressed. Any PHP error, even a notice, will drastically reduce the speed of PHP execution. Even if you don't see the error in your browser, and even if you explicitly disable logging, every single PHP error will slow your site down.
 
 
 
@@ -98,7 +98,7 @@ If database logging is enabled, your site will be even slower, requiring a datab
 
 
 
-Best practice is to fix every notice, warning, and error as you discover them. If they're in an extension (WordPress plugin or Drupal module), roll a patch and submit it to the project's issue queue.  
+Best practice is to fix every notice, warning, and error as you discover them. If they're in an extension (WordPress plugin or Drupal module), roll a patch and submit it to the project's issue queue.
 
 
 See [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does-php-run-faster-without-warnings/1869185#1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.

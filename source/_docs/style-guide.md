@@ -469,6 +469,55 @@ Use panels for extraneous but useful information such as troubleshooting section
 ```
 </div>
 
+## Tables
+You can use markdown tables to describe availability based on service levels before providing instructions on how to enable or use a given feature. For example:
+
+<div class="style-example" markdown="1">
+## Enable Redis {.info}
+All plans except for a Personal plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
+
+| Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
+| ------------- | ------- |
+| Sandbox       | ✓       |
+| Personal      |         |
+| Professional  | ✓       |
+| Business      | ✓       |
+| Elite         | ✓       |
+<hr class="source-code">
+```markdown
+## Enable Redis
+All plans except for a Personal plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
+
+| Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
+| ------------- | ------- |
+| Sandbox       | ✓       |
+| Personal      |         |
+| Professional  | ✓       |
+| Business      | ✓       |
+| Elite         | ✓       |
+```
+</div>
+
+Use `✓` to indicate yes and leave the table data blank to indicate no.
+
+## Tooltips
+
+Tooltips are a great way to add additional information without cluttering up a section. For example, you can define jargon and even link out to an external resource without being distracting to the reader:
+
+<div class="style-example" markdown="1">
+Given two new sites with slugs <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Slugs" data-content="Generally, <a class='external' href='https://codex.wordpress.org/Glossary#Slug'>slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site."><em class="fa fa-info-circle"></em></a> `first-site` and `second-site`, each configuration will result in the following URLs:
+
+* Subdirectories: `example.com/first-site` and `example.com/second-site`.
+* Subdomains: `first-site.example.com` and `second-site.example.com`.
+<hr class="source-code">
+
+```markdown
+Given two new sites with slugs <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Slugs" data-content="Generally, <a class='external' href='https://codex.wordpress.org/Glossary#Slug'>slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site."><em class="fa fa-info-circle"></em></a> `first-site` and `second-site`, each configuration will result in the following URLs:
+
+* Subdirectories: `example.com/first-site` and `example.com/second-site`.
+* Subdomains: `first-site.example.com` and `second-site.example.com`.
+```
+</div>
 
 ## See Also
 

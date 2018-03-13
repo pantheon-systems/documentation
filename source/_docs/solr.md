@@ -15,14 +15,13 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 
 All plans except for a Personal plan can use Solr. Solr is available to Sandbox plans for developmental purposes, but Solr will not be available going live on a Personal plan.
 
-| Plans        | Supported
-| ------------- |:-------------:|
-| Sandbox      | **Yes, for all environments** |
-| Personal      | No      |
-| Professional | **Yes, for all environments**      |
-| Business | **Yes, for all environments**      |
-| Elite | **Yes, for all environments**      |
-
+| Plans         | Solr Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
+| ------------- | ------ |
+| Sandbox       | ✓      |
+| Personal      |        |
+| Professional  | ✓      |
+| Business      | ✓      |
+| Elite         | ✓      |
 
 ## Using Solr with WordPress or Drupal
 
@@ -41,7 +40,7 @@ For installation instructions and additional details, see [Enabling Solr for Wor
 
 While Pantheon provides a stable, reliable, and basic Solr service, your individual site needs may require something more robust and customizable. In those cases, a dedicated hosted Solr service may be a better solution for your needs. Given that Solr can tolerate higher latency (one query per request vs hundreds of database queries), Solr servers do not need to be in the same data center to provide fast and responsive results.
 
-Some customers have reported success using external Solr service providers for their Solr indexing:  
+Some customers have reported success using external Solr service providers for their Solr indexing:
 
  - [IndexDepot](https://www.indexdepot.com/en/). For more information, see [Using IndexDepot With Pantheon Sites](/docs/indexdepot/).
  - [OpenSolr](https://opensolr.com/)
@@ -73,7 +72,7 @@ Are you only indexing only 50 items at a time and wondering why hundreds of new 
 
 ### Apache Spatial Search on Pantheon
 
-Pantheon's Solr configuration does not support geospatial indexing and searching and there are currently no plans to add it.  
+Pantheon's Solr configuration does not support geospatial indexing and searching and there are currently no plans to add it.
 As an alternative, there are several external Solr service providers that do support spatial searching. Pantheon doesn’t do any blocking/filtering, so you’re welcome to use an externally hosted Solr index – and in a case where you’re looking for a more complex configuration, that might be optimal.
 
 ### Specify Query Parsers to Allow Fields
@@ -82,7 +81,7 @@ Pantheon's Solr configuration uses the [DisMax](https://cwiki.apache.org/conflue
 The solution is to specify the parser in the request. Both the [Lucene](https://cwiki.apache.org/confluence/display/solr/The+Standard+Query+Parser) and [eDisMax](https://cwiki.apache.org/confluence/display/solr/The+Extended+DisMax+Query+Parser) parsers support the required field:value syntax. You can add them to a query by adding `&defType=lucene` or `&defType=edismax` to the end. For example:
 ```
 /select?q=ts_ol_full_text:property&fl=label,bundle,ts_ol_full_text&wt=json&defType=edismax
-```  
+```
 For details on supported query parsers, see [Query Syntax and Parsing]( https://cwiki.apache.org/confluence/display/solr/Query+Syntax+and+Parsing) and [Common Query Parameters](https://cwiki.apache.org/confluence/display/solr/Common+Query+Parameters#CommonQueryParameters-ThedefTypeParameter).
 
 ### Supported Search Components
