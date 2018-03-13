@@ -474,18 +474,18 @@ Use panels for extraneous but useful information such as troubleshooting section
 Markdown tables are defined like this:
 
 <div class="style-example" markdown="1">
-| Header 1     | Header 2 |
-| ------------ |:--------:|
-| Content      | Content  |
-| Content      | Content  |
-| Content      | Content  |
+| Table Header 1     | Table Header 2 |
+| ------------------ | :------------: |
+| Table Data 1.1     | Table Data 2.1 |
+| Table Data 1.2     | Table Data 2.2 |
+| Table Data 1.3     | Table Data 2.3 |
 <hr class="source-code">
 ```markdown
-| Header 1     | Header 2 |
-| ------------ |:--------:|
-| Content      | Content  |
-| Content      | Content  |
-| Content      | Content  |
+| Table Header 1     | Table Header 2 |
+| ------------------ | :------------: |
+| Table Data 1.1     | Table Data 2.1 |
+| Table Data 1.2     | Table Data 2.2 |
+| Table Data 1.3     | Table Data 2.3 |
 ```
 </div>
 
