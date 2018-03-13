@@ -5757,6 +5757,7 @@ th {
   border-bottom: 2px solid #ddd;
   font-weight: bold;
   border-collapse: collapse;
+  padding: 8px;
 }
 
 td{

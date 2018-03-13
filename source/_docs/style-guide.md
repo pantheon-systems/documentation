@@ -473,6 +473,13 @@ Use panels for extraneous but useful information such as troubleshooting section
 
 Markdown tables are defined like this:
 
+<div class="style-example" markdown="1">
+| Header 1     | Header 2 |
+| ------------ |:--------:|
+| Content      | Content  |
+| Content      | Content  |
+| Content      | Content  |
+<hr class="source-code">
 ```markdown
 | Header 1     | Header 2 |
 | ------------ |:--------:|
@@ -480,12 +487,7 @@ Markdown tables are defined like this:
 | Content      | Content  |
 | Content      | Content  |
 ```
-
-| Header 1     | Header 2 |
-| ------------ |:--------:|
-| Content      | Content  |
-| Content      | Content  |
-| Content      | Content  |
+</div>
 
 The colons (`:`) define text alignment; one on each side of the column header dashes will center text. A single `:` on the left or right will align the text to that side.
 
