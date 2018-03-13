@@ -25,42 +25,42 @@ In early testing we saw multi-second speedups in Visual Progress <a rel="popover
 ![Example before and after page load time](/docs/assets/images/global-cdn-time-to-load.png)
 
 ## Eligibility
-Open a support chat to enable the upgrade.
+All sites are eligible. Upgrade to the Global CDN to reduce HTTPS costs and take advantage of its superior features and performance.
 
 ## Feature Comparison
 <table class="table  table-bordered table-responsive">
   <thead>
     <tr>
       <th></th>
-      <th>Legacy</th>
       <th>Global CDN</th>
+      <th>Deprecated Edge</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>Price</th>
-      <td>$60/mo surcharge for HTTPS</td>
       <td>Included</td>
+      <td>$60/mo surcharge for HTTPS</td>
     </tr>
     <tr>
       <th>Delivery</th>
-      <td>US Datacenter</td>
       <td>Global Distribution</td>
+      <td>US Datacenter</td>
     </tr>
     <tr>
       <th>Cache Lookups</th>
-      <td>Randomly Routed to One of Three Pools</td>
       <td>Routed to the Pool Most Likely to Hit</td>
+      <td>Randomly Routed to One of Three Pools</td>
     </tr>
     <tr>
       <th>Cache Clearing</th>
-      <td>Blocks, takes up to 2000ms</td>
       <td>Non-blocking, takes up to 150ms to take effect</td>
+      <td>Blocks, takes up to 2000ms</td>
     </tr>
     <tr>
       <th>HTTPS Service</th>
-      <td>BYO Cert</td>
       <td markdown="1">[Free and Managed](/docs/https)</td>
+      <td>BYO Cert</td>
     </tr>
   </tbody>
 </table>
