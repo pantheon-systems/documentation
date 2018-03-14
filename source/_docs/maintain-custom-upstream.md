@@ -14,7 +14,7 @@ Maintainers of [Custom Upstreams](/docs/custom-upstream) bear the responsibility
 ## Before You Begin
 Follow the procedure to [create a custom upstream](/docs/create-custom-upstream) so that you have:
 
-- A repository for your Custom Upstream hosted with your preferred provider (GitLab, BitBucket, etc)
+- A repository for your Custom Upstream hosted with your preferred provider (GitLab, Bitbucket, etc)
 - A local clone of that repository, which tracks Pantheon's upstream as a remote
 - Pantheon's core code merged into your Custom Upstream repository
 - Your Custom Upstream repository connected to Pantheon
