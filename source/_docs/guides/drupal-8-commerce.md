@@ -67,13 +67,8 @@ In addition to Pantheon, you will need accounts at:
 
    ```bash
    composer config repositories.commerce_base vcs https://github.com/drupalcommerce/commerce_base
-   composer require "drupalcommerce/commerce_base dev-8.x-1.x" "drupal/commerce:~2.0"  "drupal/admin_toolbar:~1.0"  "drupal/swiftmailer:~1.0"
+   composer require "drupalcommerce/commerce_base dev-8.x-1.x"
    ```
-
-    <div class="alert alert-info" role="alert">
-    <h4 class="info">Note</h4>
-    <p markdown="1">The commands above include dependencies required but not listed for `commerce_base`. The command will be made simpler once [a few Composer changes are made within the Commerce Installation Profile itself](https://github.com/drupalcommerce/commerce_base/pull/7){.external}.</p>
-    </div>
 
 3. Running `git status` should show that the `composer.json` and `composer.lock` files have changed:
 
