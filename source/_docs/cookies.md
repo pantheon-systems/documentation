@@ -34,6 +34,9 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 
 **Be sure the `friendly_path` variable is properly set to restrict the cookie to the specific directory.**
 
+
+As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
+
 ## Disable Caching On The Dev Environment
 
 You may decide to disable caching on the Dev environment as you make changes to cachable contents like css, js or images so that you don't need to clear the cach to see these changes.
