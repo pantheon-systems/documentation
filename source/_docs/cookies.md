@@ -34,10 +34,12 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 
 **Be sure the `friendly_path` variable is properly set to restrict the cookie to the specific directory.**
 
-## Disable Caching On Development Environment
-You may want to disable caching on Dev Environment as you make changes to cachable contents like css, js or images so that you don't need to clear the cache often to see those changes.
+## Disable Caching On The Dev Environment
 
-To bypass caching on Development environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
+You may decide to disable caching on the Dev environment as you make changes to cachable contents like css, js or images so that you don't need to clear the cach to see these changes.
+
+To bypass caching on the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
+
 ```
 if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
   if ($_SERVER['PANTHEON_ENVIRONMENT'] === 'dev') {
