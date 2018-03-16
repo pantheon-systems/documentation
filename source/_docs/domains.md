@@ -92,23 +92,23 @@ It's a best practice for SEO and security to standardize all traffic on HTTPS an
   <div id="more-redirects" class="collapse">
     <div class="panel-inner" markdown="1">
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.
-      
-#### Redirect to HTTPS only
-While it is considered best practice for SEO (and can prevent session strangeness) to redirect all traffic to a single primary domain, there are use cases where it is preferred to redirect traffic to HTTPS, only:
 
-```
- // Require HTTPS.
- if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
-   ($_SERVER['HTTPS'] === 'OFF') &&
-   // Check if Drupal or WordPress is running via command line
-   (php_sapi_name() != "cli")) {
-   if (!isset($_SERVER['HTTP_X_SSL']) ||
-   (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
-     header('HTTP/1.0 301 Moved Permanently');
-     header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-     exit();
+#### Redirect to HTTPS
+While it is considered best practice to redirect all traffic to a single primary domain, there are times during development where it may be preferred to redirect traffic to HTTPS without standardizing on a single domain:
+
+```php
+   // Require HTTPS.
+   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+     ($_SERVER['HTTPS'] === 'OFF') &&
+     // Check if Drupal or WordPress is running via command line
+     (php_sapi_name() != "cli")) {
+     if (!isset($_SERVER['HTTP_X_SSL']) ||
+     (isset($_SERVER['HTTP_X_SSL']) && $_SERVER['HTTP_X_SSL'] != 'ON')) {
+       header('HTTP/1.0 301 Moved Permanently');
+       header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+       exit();
+     }
    }
- }
 ```
 
 #### Redirect to Subdirectories or Specific URLs
