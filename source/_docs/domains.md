@@ -107,7 +107,11 @@ While it is considered best practice to redirect all traffic to a single primary
        header('HTTP/1.0 301 Moved Permanently');
        header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
        exit();
-     }
+
+      # Name transaction "redirect" in New Relic for improved reporting (optional)
+      if (extension_loaded('newrelic')) {
+        newrelic_name_transaction("redirect"); 
+      }
    }
 ```
 
@@ -116,16 +120,16 @@ While it is considered best practice to redirect all traffic to a single primary
 To redirect from a subdomain to a specific area of the site, use the following:
 
 ```php
-// Redirect subdomain to a specific path.
-if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
-  ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
-  // Check if Drupal or WordPress is running via command line
-  (php_sapi_name() != "cli")) {
-  $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
-  header('HTTP/1.0 301 Moved Permanently');
-  header("Location: $newurl");
+ // Redirect subdomain to a specific path.
+ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
+   ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
+   // Check if Drupal or WordPress is running via command line
+   (php_sapi_name() != "cli")) {
+   $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
+   header('HTTP/1.0 301 Moved Permanently');
+   header("Location: $newurl");
   exit();
-}
+ }
 ```
 
 This will redirect requests like http://subdomain.yoursite.com/some/path to http://www.yoursite.com/subdomain/some/path.
