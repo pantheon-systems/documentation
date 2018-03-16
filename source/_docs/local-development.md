@@ -178,7 +178,7 @@ This file is ignored by the `.gitignore` file  in [WordPress](https://github.com
 
 ### Drupal 7
 
-1. Drupal 7 users will need to create a local settings file, and include it  within their `settings.php` file:
+1. Drupal 7 users will need to create a local settings file called `settings.local.php` and include it within their `settings.php` file:
 
     ```
     /**
