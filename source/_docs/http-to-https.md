@@ -123,7 +123,7 @@ Configure redirects to the primary domain with HTTPS in `settings.php` or `wp-co
 
 {% include("redirects.twig") %}
 
-Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label.
+Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see <a href="/docs/domains/#-see-more-redirect-scenarios" data-proofer-ignore>Domains and Redirects</a>.
 
 ### Spot-check new and existing redirects
 Consider your site's existing redirect logic and minimize the number of redirects whenever possible.

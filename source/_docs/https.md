@@ -40,6 +40,10 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 {% include("content/https-requirements.html")%}
 
 ## Frequently Asked Questions
+
+### How do I switch my site over to HTTPS from HTTP?
+To avoid mixed-content browser warnings and excessive redirects, follow the process described in [Switching Sites from HTTP to HTTPS](/docs/http-to-https/).
+
 ### How do I upgrade my existing Pantheon site?
 Make the switch on an existing Pantheon site by updating DNS for your domains. If your site doesn't have the new combined "Domains/HTTPS" tab, open a support chat to get the upgrade enabled
 

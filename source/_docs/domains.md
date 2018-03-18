@@ -92,21 +92,44 @@ It's a best practice for SEO and security to standardize all traffic on HTTPS an
   <div id="more-redirects" class="collapse">
     <div class="panel-inner" markdown="1">
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.
+
+#### Redirect to HTTPS
+While it is considered best practice to redirect all traffic to a single primary domain, there are times during development where it may be preferred to redirect traffic to HTTPS without standardizing on a single domain:
+
+```php
+   // Require HTTPS.
+   if (isset($_SERVER['PANTHEON_ENVIRONMENT']) &&
+     ($_SERVER['HTTPS'] === 'OFF') &&
+     // Check if Drupal or WordPress is running via command line
+     (php_sapi_name() != "cli")) {
+     if (!isset($_SERVER['HTTP_USER_AGENT_HTTPS']) ||
+     (isset($_SERVER['HTTP_USER_AGENT_HTTPS']) && $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON')) {
+       header('HTTP/1.0 301 Moved Permanently');
+       header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
+       exit();
+
+      # Name transaction "redirect" in New Relic for improved reporting (optional)
+      if (extension_loaded('newrelic')) {
+        newrelic_name_transaction("redirect"); 
+      }
+   }
+```
+
 #### Redirect to Subdirectories or Specific URLs
 
 To redirect from a subdomain to a specific area of the site, use the following:
 
 ```php
-// Redirect subdomain to a specific path.
-if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
-  ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
-  // Check if Drupal or WordPress is running via command line
-  (php_sapi_name() != "cli")) {
-  $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
-  header('HTTP/1.0 301 Moved Permanently');
-  header("Location: $newurl");
+ // Redirect subdomain to a specific path.
+ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
+   ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
+   // Check if Drupal or WordPress is running via command line
+   (php_sapi_name() != "cli")) {
+   $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
+   header('HTTP/1.0 301 Moved Permanently');
+   header("Location: $newurl");
   exit();
-}
+ }
 ```
 
 This will redirect requests like http://subdomain.yoursite.com/some/path to http://www.yoursite.com/subdomain/some/path.
