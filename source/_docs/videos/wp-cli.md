@@ -10,6 +10,9 @@ categories: [wordpress]
 layout: video
 searchboost: 50
 ---
+
+{% include("content/deprecate-kalabox.html")%}
+
 WP-CLI is a set of command line tools for managing WordPress installations. Let’s install it and explore some commands.
 
 WP-CLI can be installed locally in various ways. You can find instructions at [wp-cli.org](https://make.wordpress.org/cli/handbook/installing/).

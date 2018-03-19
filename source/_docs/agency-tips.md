@@ -75,10 +75,6 @@ New Relic APM Pro is an advanced tool for application monitoring and troubleshoo
 ## Cron
 Pantheon does not provide a way to set custom scheduling for cron jobs. For details, see [Cron for Drupal](/docs/drupal-cron) and [Cron for WordPress](/docs/wordpress-cron).
 
-## Kalabox
-
-[Kalabox](/docs/kalabox) is a local development tool that mirrors Pantheon environments with excellent integration to sync work back and forth.
-
 ## Advanced Workflows
 
 ### Custom Upstreams
