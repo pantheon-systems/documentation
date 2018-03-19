@@ -99,9 +99,8 @@ terminus drush <site>.<env> -- wd-show --type='cron'
 
   <div class="alert alert-info">
   <h4 class="info">Note</h4>
-  <p markdown="1">Application containers will spin down after 1 hour idle time (12 hours for the Live environment on a paid plan), and cron does not run on an idle container.
-  
-  https://pantheon.io/docs/application-containers/#idle-containers</p></div>
+  <p markdown="1">Application containers will spin down after 1 hour of idle time (12 hours for the Live environment on a paid plan). Cron cannot run on an [idle container](/docs/application-containers/#idle-containers).
+  </p></div>
 
 ## Resources
 
