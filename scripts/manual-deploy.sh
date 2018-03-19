@@ -23,6 +23,16 @@ else
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
   sed -i '11i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
+  # Disable contribute button links for manual deployments to avoid confusion for contributors during peer reviews
+  # If manual deploy is used, it usually follows that the changes aren't on the public github - so the normal contrib process is not in play
+  sed -i '47s/href/class="btn disabled" href/g' source/_views/doc.html
+  sed -i '49s/href/class="btn disabled" href/g' source/_views/doc.html
+  sed -i '29s/href/class="btn disabled" href/g' source/_views/guide.html
+  sed -i '31s/href/class="btn disabled" href/g' source/_views/guide.html
+  sed -i '29s/href/class="btn disabled" href/g' source/_views/terminuspage.html
+  sed -i '31s/href/class="btn disabled" href/g' source/_views/terminuspage.html
+  sed -i '16s/href/class="btn disabled" href/g' source/_views/video.html
+
   # Generate Production files
   bin/sculpin generate --env=prod
 
