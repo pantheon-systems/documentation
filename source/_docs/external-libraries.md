@@ -103,7 +103,7 @@ There are no known plugins in the WordPress.org repository that will enable the 
 
 [ImageMagick](https://www.imagemagick.org/script/index.php) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php),  [EXR](https://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. 
 
-Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.8.6-3 2014-04-08 Q16.
+Pantheon runs the latest stable packaged version in Fedora, which is currently ImageMagick 6.8.8-10 Q16 x86_64 2015-03-10.
 
 ### Drupal ImageMagick Configuration
 
