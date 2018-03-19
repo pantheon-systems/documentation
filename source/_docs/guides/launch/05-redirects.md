@@ -22,7 +22,7 @@ In this lesson, we'll redirect all traffic to a primary domain via HTTPS, which 
 
 <div class="alert alert-info" markdown="1">
 <h4 class="info">Note</h4>
-Be sure https has been successfully provisioned _before_ adding any code (like the sample below) that will redirect traffic to https!
+Make sure HTTPS has been successfully provisioned *before* adding any code (like the sample below) that will redirect traffic to HTTPS.
 </div>
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
