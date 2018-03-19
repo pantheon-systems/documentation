@@ -239,6 +239,6 @@ From the Backup Log tab on the Site Dashboard, you can see the status of current
  - **Database** is a `mysqldump` of your site's db.
  - **Files** refers to static files that are not version controlled (e.g. `wp-content/uploads` directory for WordPress, and `sites/default/files` for Drupal).
 
-If your **Code** or **Database** backup is taking an inordinantly long time to complete, we suggest you [contact support](/docs/getting-support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can detroy the integrity of the backup or cause it to fail.
+If your **Code** or **Database** backup is taking an inordinantly long time to complete, we suggest you [contact support](/docs/getting-support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
 
 If you have large amounts of static files, this can slow down the **Files** backup. For this and other reasons, we suggest large file repositories be stored on a CDN. Otherwise, during a long file backup, you can still make changes to your code and database, provided those changes don't affect static files.
