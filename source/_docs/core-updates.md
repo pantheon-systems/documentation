@@ -146,8 +146,8 @@ If the automated core update doesn't appear to be working, it's possible there a
   git push origin master
   ```
 
-## Core Release Updates 
-Whenever there's a new release of core, ...
+## Core Release Updates
+Whenever there's a new release of WordPress or Drupal core, updates will be available within 72 hours of upstream availability. Security related updates will be made available within 24 hours.
 
 ## Troubleshooting
 
