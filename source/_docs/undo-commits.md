@@ -1,6 +1,6 @@
 ---
 title: Undo Git Commits
-description: Learn how to revert a Git before and after commiting to Pantheon.
+description: Learn how to revert a Git commit before and after pushing to Pantheon.
 tags: [debugcode, git]
 categories: []
 ---
