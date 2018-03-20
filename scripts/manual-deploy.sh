@@ -16,7 +16,7 @@ if [[ $ENV == "live" && $SITE_UUID == "72e163bd-0054-4332-8bf8-219c50b78581" ]];
   echo Deploys to the live site should only be done by an internal team member via CircleCI upon committing to master. For questions, ping @rachelwhitton
 else
   echo Deploying to the $ENV environment on the $SITE_NAME site...
-  # remove any existing generated outpuf files
+  # remove any existing generated output files
   rm -rf output_prod
   # Update redirect script for the Multidev environment
   export avoid_redirect="window.location.hostname == '$ENV-$SITE_NAME.pantheonsite.io' ||"
