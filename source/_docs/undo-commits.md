@@ -1,6 +1,6 @@
 ---
 title: Undo Git Commits
-description: Instructions on how to undo a Git commit for Drupal 7, Drupal 6, and Pantheon.
+description: Learn how to revert a Git commit before and after pushing to Pantheon.
 tags: [debugcode, git]
 categories: []
 ---
