@@ -21,5 +21,5 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   # production urls is used as a source, the production domain is then replaced
   # with the multdev url.
   sed "s,https://pantheon.io/docs,$url,g" scripts/sitespeed-urls.txt > /tmp/sitespeed-urls-multidev.txt
-  ./node_modules/.bin/sitespeed.io $url --no=1 --budget budget.json -b firefox -r ../artifacts/sitespeed --suppressDomainFolder --outputFolderName multidev --file=/tmp/sitespeed-urls-multidev.txt --skipTest=redirects,textcontent,ycdn,privateheaders,longexpirehead,expiresmod,avoidscalingimages,ycompress,frontEndTime,yminify,domContentLoadedTime
+  ./node_modules/.bin/sitespeed.io $url --no=1 --budget budget.json -b firefox -r ~/documentation/artifacts/sitespeed --suppressDomainFolder --outputFolderName multidev --file=/tmp/sitespeed-urls-multidev.txt --skipTest=redirects,textcontent,ycdn,privateheaders,longexpirehead,expiresmod,avoidscalingimages,ycompress,frontEndTime,yminify,domContentLoadedTime
 fi

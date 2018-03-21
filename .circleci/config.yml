@@ -46,6 +46,7 @@ jobs:
           command: |
             echo
             # Run sitespeed.io performance testing.
+            mkdir ~/documentation/artifacts
             bash scripts/run-sitespeed-test.sh
             # Run behat.
             bin/behat
@@ -56,6 +57,8 @@ jobs:
             # Run htmlproofer.
             bundler exec rake
 
+      - store_artifacts:
+          path: ~/documentation/artifacts
 
 # caching for ~/.composer/cache needs to be done 
 # artifacts need to be done sitespeed-result
