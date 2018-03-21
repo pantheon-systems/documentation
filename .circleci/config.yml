@@ -15,24 +15,32 @@ jobs:
             sudo apt-get install rubygems build-essential rubygems-integration ruby-dev gcc ruby-dev libxslt-dev libxml2-dev zlib1g-dev
             sudo gem install bundler
             bundle check --path=vendor/bundle || bundle install --path=vendor/bundle --jobs=4 --retry=3
+      - run:
+          name: Build Docs
+          command: |
             grunt
             bin/sculpin generate
       - run:
-          name: Some Stuff
+          name: Fix Changelog
           command: |
             for file in output_dev/docs/changelog/page/*html; do name="$(basename "$file" .html)"; mkdir -p output_dev/docs/changelog/page/"$name"; mv "$file" "output_dev/docs/changelog/page/"$name"/index.html"; done
             cd output_dev && ln -s ./ source
             cd ..
-            # Deploy Multidev environment
-            bash scripts/deploy-multidev.sh
+      - run:
+          name: Deploy Multidev environment
+          command: bash scripts/deploy-multidev.sh
+
+
      # - run:
      #     name: Start Ghost Driver
      #     command: phantomjs --webdriver=8643
      #     background: true
+
       - run:
           name: Start Sculpin
           command: bin/sculpin server
           background: true
+
       - run:
           name: Test
           command: |
