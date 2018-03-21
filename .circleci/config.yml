@@ -58,7 +58,7 @@ jobs:
             bundler exec rake
 
       - store_artifacts:
-          path: ~/documentation/artifacts
+          path: ~/documentation/sitespeed-result
 
 # caching for ~/.composer/cache needs to be done 
 # artifacts need to be done sitespeed-result
