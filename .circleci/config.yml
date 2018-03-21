@@ -31,10 +31,10 @@ jobs:
           command: bash scripts/deploy-multidev.sh
 
 
-     # - run:
-     #     name: Start Ghost Driver
-     #     command: phantomjs --webdriver=8643
-     #     background: true
+      - run:
+          name: Start Ghost Driver
+          command: phantomjs --webdriver=8643
+          background: true
 
       - run:
           name: Start Sculpin
@@ -46,7 +46,7 @@ jobs:
           command: |
             echo
             # Run sitespeed.io performance testing.
-            #bash scripts/run-sitespeed-test.sh
+            bash scripts/run-sitespeed-test.sh
             # Run behat.
             bin/behat
             # Run a11y.
