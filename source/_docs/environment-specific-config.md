@@ -22,7 +22,7 @@ Filters or functions running in an mu-plugin can enable development plugins that
 
 ### Create the Plugin
 
-Copy this plugin file to `wp-content/mu-plugins/mu-plugins/site-config.php` and edit accordingly.
+Copy this plugin file to `wp-content/mu-plugins/site-config.php` and edit accordingly.
 
 ```php
 <?php
@@ -49,36 +49,43 @@ Create a new directory, `wp-content/mu-plugins/site-config/`, and add a `live-sp
 
 ```php
 <?php
-// List Development Plugins
-  $plugins = array(
-          'wp-reroute-email/wp-reroute-email.php','debug-bar/debug-bar.php','developer/developer.php'
-      );
 
-// Live-specific configs
-  if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) ) ) {
+# List Development Plugins
+    $plugins = array(
+        'debug-bar/debug-bar.php',
+        'developer/developer.php',
+        'wp-reroute-email/wp-reroute-email.php'
+        );
 
-    // Disable Development Plugins
-      require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-      foreach ($plugins as $plugin);
-          if(is_plugin_active($plugin));
-              deactivate_plugins($plugin);
+# Live-specific configs
+    if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) ) ) {
 
-    // Disable jetpack_development_mode
-      add_filter( 'jetpack_development_mode', '__return_false' );
-          }
+    # Disable Development Plugins
+        require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        foreach ($plugins as $plugin) {
+            if(is_plugin_active($plugin)) {
+	            deactivate_plugins($plugin);
+            }
+        }
+          
+    # Disable jetpack_development_mode
+        add_filter( 'jetpack_development_mode', '__return_false' );
+    }
 
-// Configs for All environments but Live
-  else {
-    //
-    // Activate Development Plugins
-    //
-      require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-          foreach ($plugins as $plugin);
-          if(is_plugin_active($plugin))false;
-              activate_plugin($plugin);
-    // Enable development mode for jetpack
-      add_filter( 'jetpack_development_mode', '__return_true' );
+    # Configs for All environments but Live
+    else {
 
+   	# Activate Development Plugins
+    
+        require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        foreach ($plugins as $plugin) {
+            if(is_plugin_inactive($plugin)) {
+                activate_plugin($plugin);
+            }
+        }
+                  
+    # Enable development mode for jetpack
+        add_filter( 'jetpack_development_mode', '__return_true' );
 }
 
 ```
