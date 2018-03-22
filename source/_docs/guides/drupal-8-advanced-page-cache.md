@@ -14,11 +14,11 @@ contributors:
 
 [Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external} is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api){.external} and the [Pantheon Global CDN](/docs/global-cdn/).
 
-Just by turning on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed) this module will clear only the relevant pages from the edge cache.
+When you turn on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed), this module will clear only the relevant pages from the edge cache.
 
 This module has no configuration settings of its own, just enable it and it will pass along information already present in Drupal 8 to the Global CDN.
 
-To take finer grain control of how Drupal is handling it's cache data (in ways that will interact with both the Global CDN and internal Drupal caches) this guide will show you how to use a mix of custom code and [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag){.external} to set and clear your own custom tags.
+To take finer grain control of how Drupal handles its cache data on both the Global CDN and internal Drupal caches, you can set and clear your own custom tags. This guide will show you how to do this using a mix of custom code and [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag){.external}.
 
 ## Before You Begin
 
@@ -26,7 +26,7 @@ Before starting this guide, you should:
 
  - Install and authenticate [Terminus](/docs/terminus)
  - Have an open sandbox slot on your Pantheon account. To follow along with this guide it is best to use the Dev environment of a newly created Drupal 8 site. You could use a pre-existing Drupal 8 site, but some of the details would change.
- - Export local environment variables to define your site name, to easily copy and paste example commands. Replace `cache-tags-demo`with a unique site name:
+ - So that you can easily copy and paste the example commands in this guide, define your site name with a local environment variable. Replace `cache-tags-demo` with a unique site name:
 
     ```bash
     export TERMINUS_SITE=cache-tags-demo
@@ -34,7 +34,9 @@ Before starting this guide, you should:
 
 ## Set up a new Drupal site
 
-1. Start by making a new Drupal 8 site from your local command line environment, using Terminus:
+First, set up a new Drupal 8 site and add the Pantheeon Advanced Page Cache module.
+
+1. Start by making a new Drupal 8 site from your local command line environment using Terminus:
 
   ```bash
   terminus site:create $TERMINUS_SITE $TERMINUS_SITE "Drupal 8"
@@ -55,7 +57,7 @@ Before starting this guide, you should:
   terminus env:commit $TERMINUS_SITE.dev --message="Installing Drupal"
   ```
 
-4. Add and enable the Pantheon Advanced Page Cache Module, which is responsible for sending cache metadata to the Pantheon Global CDN:
+4. Add and enable the Pantheon Advanced Page Cache module, which is responsible for sending cache metadata to the Pantheon Global CDN:
 
   ```bash
   terminus drush $TERMINUS_SITE.dev -- dl pantheon_advanced_page_cache
@@ -74,12 +76,12 @@ Before starting this guide, you should:
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
-7. Turn on full page caching, then clear caches. We can do this from our Drupal site at `/admin/config/development/performance`:
+7. Turn on full page caching by setting the **Page cache maximum age** field to "10 min", then clear caches. We can do this from our Drupal site at `/admin/config/development/performance`:
 
   ![Drual 8 admin screen for Performance](/source/docs/assets/images/guides/drupal-8-advanced-page-cache/img1-config-dev-performance.png
 )
 
-  Or we could make those same changes using Drush via Terminus:
+  You can also make those same changes using Drush via Terminus:
 
   ```bash
   terminus drush $TERMINUS_SITE.dev -- cset system.performance cache.page.max_age 600 -y
@@ -90,7 +92,7 @@ Before starting this guide, you should:
 
 Now we'll look at HTTP Headers.
 
-1. Make a new article node complete with at least one taxonomy term in the tag field:
+1. Make a new article node complete with at least one taxonomy term in the **tags** field:
 
   ![node/add/article](/source/docs/assets/images/guides/drupal-8-advanced-page-cache/img2-node-add-article.png)
 
@@ -98,6 +100,11 @@ Now we'll look at HTTP Headers.
 
     ```
     curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
+    ```
+    
+    The first request you will see in the list is the initial HTML response. All of the subsequent requests for assets like CSS and images happen after this first HTML response kicks things off.
+
+    ```
     HTTP/2 200
     date: Thu, 11 Jan 2018 17:05:01 GMT
     cache-control: max-age=600, public
@@ -131,8 +138,6 @@ Now we'll look at HTTP Headers.
     content-length: 10497
     ```
 
-    The first request in the list is the initial HTML response. All of the subsequent requests for assets like CSS and images happen after this first HTML response kicks things off.
-
     You can also view headers in a web browser. In an another browser (or a [Chrome incognito window](https://support.google.com/chrome/answer/95464){.external} or [Firefox Private Window](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history#w_how-do-i-open-a-new-private-window){.external}), open the article you just created. In your browser's page inspector, you can view the HTTP requests made by the page. You may need to refresh the page to see all the network requests.
 
     By clicking on the first request we can see more detailed information like the HTTP headers.
@@ -141,7 +146,7 @@ Now we'll look at HTTP Headers.
 
 For the rest of the guide, as we make content changes and inspect the changing HTTP headers, we will just reference `curl -I` output because browser inspector tools have a lot of additional information that would distract from our purpose. But if you are more comfortable in the browser, you can continue using that incognito window.
 
-For a walk through of how some of these different headers change caching behavior, see [our Frontend Performance Guide](https://pantheon.io/docs/guides/frontend-performance/). For this guide, we're going to focus on `Surrogate-Key-Raw` and `Age`.
+For a walk through of how some of these different headers change caching behavior, see our [Frontend Performance Guide](https://pantheon.io/docs/guides/frontend-performance/). For this guide, we're going to focus on `Surrogate-Key-Raw` and `Age`.
 
 ### Review HTTP Headers
 
@@ -392,7 +397,7 @@ The code we added clears all references to each taxonomy term every time a node 
     terminus env:commit $TERMINUS_SITE.dev --message="adding views_custom_cache_tag"
     ```
 
-3. Edit the View that controls taxonomy terms (`admin/structure/views/view/taxonomy_term`) and change the cache settings from "Tag based" to “Custom Tag based". You may have to expand the **Advanced** column:
+3. Edit the View that controls taxonomy terms (`admin/structure/views/view/taxonomy_term`) and change the **caching** settings from "Tag based" to “Custom Tag based". You may have to expand the **Advanced** column:
 
   ![Views edit screen](/source/docs/assets/images/guides/drupal-8-advanced-page-cache/img11-view-taxonomy-term.png)
 
