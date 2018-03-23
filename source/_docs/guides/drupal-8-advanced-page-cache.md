@@ -102,7 +102,7 @@ Now we'll look at HTTP Headers.
     curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
     ```
     
-    The first request you will see in the list is the initial HTML response. All of the subsequent requests for assets like CSS and images happen after this first HTML response kicks things off.
+    The first request you will see in the list is the initial HTML response. All of the subsequent requests for assets like CSS and images happen after this first HTML response kicks things off:
 
     ```
     HTTP/2 200
