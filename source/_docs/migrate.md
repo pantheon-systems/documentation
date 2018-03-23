@@ -260,7 +260,7 @@ terminus drush <site>.<env> -- ard --destination=sites/default/files/<RANDOM_HAS
 ```
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">Your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal. Adjust paths as needed to include `web` (e.g., `web/sites/default/files`) for [sites configured to use a nested docroot](/docs/nested-docroot/).</p>
+<p markdown="1">Adjust paths as needed to include `web` (e.g., `web/sites/default/files`) for [sites configured to use a nested docroot](/docs/nested-docroot/).</p>
 </div>
 
 <div class="alert alert-danger" role="alert">
