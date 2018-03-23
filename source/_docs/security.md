@@ -38,6 +38,8 @@ To verify that everything is working correctly, visit the URL of the environment
 
 ![Locked site example](/source/docs/assets/images/auth-required.png)
 
+If you'd like to customize the lock page that displays beneath the authentication form, you can add a `locked.html` file in your site's root directory.
+
 ## Unlock a Site's Environment
 When you are ready to make your environment public again, click **Security** on your Site Dashboard. Next to Environmental Access, click **Public**.
 This will clear the credentials you entered and make the web accessible resources available without a basic authentication prompt.
