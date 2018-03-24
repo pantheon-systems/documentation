@@ -46,7 +46,7 @@ terminus sites:mass-update:apply
 
 For details, see [Terminus Mass Update Plugin](https://github.com/pantheon-systems/terminus-mass-update).
 
-## Apply Upstream Updates Manually from the Command Line and Resolve Merge Conflicts
+## Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts
 If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. You'll need to manually resolve the conflict using the command line and a text editor.
 
 1. Navigate to a [local clone of your site repository](/docs/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
