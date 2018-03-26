@@ -20,7 +20,7 @@ Pantheon supports the most recent release of WordPress via [upstream](https://gi
 
 ### How much does Pantheon cost?
 
-Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for personal sites, and $100 for professional sites. Learn more on [our pricing page](https://pantheon.io/pricing).
+Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for Basic sites, and $100 for Performance sites. Learn more on [our pricing page](https://pantheon.io/pricing).
 
 
 ### Where are the Pantheon servers located?

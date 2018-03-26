@@ -70,9 +70,9 @@ You can also create an environment for an existing Git branch. Content can be cl
 
 From the Dashboard, click **Multidev**, then select the name of the environment.
 
-Git instructions are shown under the Connection Mode section of the code page for all Dev and Multidev environments. 
+Git instructions are shown under the Connection Mode section of the code page for all Dev and Multidev environments.
 
-Once you have cloned your site's codebase to your local machine, you can work on a specific branch by using **git checkout <branch-name>** on the command line, or by checking out the necessary branch using your preferred Git client e.g. SourceTree, GitKraken, GitHub Desktop, etc. 
+Once you have cloned your site's codebase to your local machine, you can work on a specific branch by using **git checkout <branch-name>** on the command line, or by checking out the necessary branch using your preferred Git client e.g. SourceTree, GitKraken, GitHub Desktop, etc.
 
 Any changes you make to a branch you have checked out locally will be committed and pushed to the Multidev of the same name.
 
@@ -165,7 +165,7 @@ This will create a new branch with the commit history intact. From the Multidev 
 
 ### How can I get Multidev and how much is does it cost?
 
-If you have a Business or Elite plan for your site, you already have access to Multidev. Multidev is included at no additional charge for these plans. Additionally, all organizations have [Multidev for all Sites](/docs/organizations/#multidev-for-all-sites). It is not available as an add-on to other plans.
+All Organizations and Agencies have [Multidev for all Sites](/docs/organizations/#multidev-for-all-sites). It is not available as an add-on to other plans.
 
 ### If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 

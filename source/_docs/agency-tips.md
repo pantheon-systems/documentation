@@ -30,10 +30,10 @@ The Agency and Community team at Pantheon produced a [six part training series](
 Follow our [Launch Essentials](/docs/guides/launch/) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
 
 ## Solr
-All plans except for the Personal plan can enable [Solr](/docs/solr) for search indexing. For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr), [Enabling Solr with Drupal 7](/docs/solr-drupal-7) or [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
+All plans except for the Basic plan can enable [Solr](/docs/solr) for search indexing. For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr), [Enabling Solr with Drupal 7](/docs/solr-drupal-7) or [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
 
 ## Redis
-All plans except for the Personal plan can enable Redis for object caching. For installation instructions and additional details, see [Installing Redis on Drupal or WordPress](/docs/redis/).
+All plans except for the Basic plan can enable Redis for object caching. For installation instructions and additional details, see [Installing Redis on Drupal or WordPress](/docs/redis/).
 
 ## WordPress
 

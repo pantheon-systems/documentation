@@ -76,7 +76,7 @@ If you see your Pantheon sites, then it was installed and authenticated successf
 
         terminus drush steve-site-d8.dev -- help
 
-    The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to Drush.		
+    The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to Drush.
 
 4. Review the file changes:
 
@@ -102,7 +102,7 @@ If you see your Pantheon sites, then it was installed and authenticated successf
 
 ### Export the Site Name as a Variable
 
-At this point you are probably tired of replacing `steve-site-d8` in every command.		
+At this point you are probably tired of replacing `steve-site-d8` in every command.
 
 1.  Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands:
 
@@ -124,7 +124,7 @@ At this point you are probably tired of replacing `steve-site-d8` in every comma
 
 We are going to download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You can read more about [this package of modules on drupal.org](https://www.drupal.org/project/devel).
 
-You may want to remove these modules after you launch your site, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live. For this exercise on a Sandbox site, it is fine to have the modules installed in all three environments.
+You may want to remove these modules after you launch your site, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live. For this exercise on a Free site, it is fine to have the modules installed in all three environments.
 
 <div class="alert alert-info">
   <h4 class="info">Note</h4>

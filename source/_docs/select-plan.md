@@ -4,7 +4,7 @@ description: Learn the various Pantheon plans offered for your Drupal or WordPre
 tags: [billing]
 categories: []
 ---
-Pantheon offers multiple service levels, called [plans](https://pantheon.io/pricing). You can select the plan that works best for you and your needs. In the beginning, you can start on the Personal Plan. Then once you start to grow and have more specific requirements, take a look at the Professional Plan, which can be part of the recipe to get your site or application to scale and perform better.
+Pantheon offers multiple service levels, called [plans](https://pantheon.io/pricing). You can select the plan that works best for you and your needs. In the beginning, you can start on the Basic Plan. Then once you start to grow and have more specific requirements, take a look at the Performance Plan, which can be part of the recipe to get your site or application to scale and perform better.
 
 To get started, navigate to the Site Dashboard.
 
@@ -32,19 +32,19 @@ Plan changes take immediate effect.
 
 A plan upgrade will result in a prorated charge to your account; A prorated credit will be issued for any downgrades.
 
-### Downgrade to Sandbox
-The following should be considered before downgrading your site from a paid plan to Sandbox:
+### Downgrade to Free
+The following should be considered before downgrading your site from a paid plan to Free:
 
 * All domains added to Pantheon environments will be removed. If you decide to return to a paid plan in the future, you will need to add the domains again in desired environments.
 
-### Downgrade to Personal
-The following should be considered before switching to a Personal plan:
+### Downgrade to Basic
+The following should be considered before switching to a Basic plan:
 
 * The [Redis addon service](/docs/redis/) will be disabled.
 * The [Solr](/docs/solr) addon service will be disabled.
 
 
-Before moving to a Personal plan, we recommend preparing the site by disabling Redis and Solr from within WordPress or Drupal.
+Before moving to a Basic plan, we recommend preparing the site by disabling Redis and Solr from within WordPress or Drupal.
 #### Disable Redis
 * Drupal sites will need to disable the [Redis](https://www.drupal.org/project/redis) module as well as remove the Redis configuration from `settings.php`.
 * WordPress sites will need to remove the [WP Redis](https://wordpress.org/plugins/wp-redis/) drop-in plugin.

@@ -40,7 +40,7 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 ### What add-ons are available for my site?
 
- - [Apache Solr](/docs/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the free sandbox.
+ - [Apache Solr](/docs/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the Free site plan.
  - [Redis](/docs/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 
@@ -52,8 +52,8 @@ From your Site Dashboard, click **Settings**, then click **Add Ons**. You will s
 You can access New Relic Pro directly from the Site Dashboard, by clicking on **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
 
 
-### Can I downgrade my site to a personal plan?
-Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to personal plan level. For more information, see [Select a Plan](/docs/select-plan#upgrade-or-downgrade-plan).
+### Can I downgrade my site to a Basic plan?
+Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to Basic plan level. For more information, see [Select a Plan](/docs/select-plan#upgrade-or-downgrade-plan).
 
 ## Billing Tasks
 
@@ -73,7 +73,7 @@ Sites that are owned by a Reseller, Edu+, or Enterprise organization are invoice
 
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 
-For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
+For Free sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
 
 Resellers should contact Pantheon Support directly if you need to transfer ownership.
 
