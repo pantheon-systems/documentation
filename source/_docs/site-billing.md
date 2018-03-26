@@ -11,7 +11,7 @@ The Billing tab within the Settings tool of a Site Dashboard is where you can tr
 2. Click the **Billing** tab.
 
 ### Roles & Permissions
-The permission to transfer ownership or update payment method is granted only to the role of **Site Owners** / **User in Charge** at the site-level. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
+The permission to transfer ownership or update payment method is granted only to the role of **Site Owners** at the site-level. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
