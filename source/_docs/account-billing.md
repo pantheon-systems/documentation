@@ -1,6 +1,6 @@
 ---
 title: Account Billing in the User Dashboard
-description: View invoices and update or remove credit cards for all your sites using the Billing tool of the Account tab in the User Dashboard.
+description: View invoices and update or remove credit cards for all your sites using the Billing tab of the Account tool in the User Dashboard.
 tags: [billing]
 categories: []
 ---
@@ -18,17 +18,25 @@ The permission to manage credit cards and view billing history (invoices and tra
 <p markdown="1">If you need to assume site and billing ownership, or add a new card to your account, refer to [Manage Site Billing in the Site Dashboard](/docs/site-billing/).</p></div>
 
 ## View Invoices
-At this time, only invoices starting from **January 2018** are available. If you need to access older invoices please [contact support](/docs/getting-support).
+1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
+2. Click **View Invoices** for the credit card profile in question.
+3. Select **Download (.pdf)** to view the invoice in question. Depending on your browser, it will automatically download (e.g., FireFox) the file or open the file to be viewed in a new tab (e.g., Chrome).
+
+At this time, only invoices dating back to **January 2018** are available. If you need to access older invoices please [contact support](/docs/getting-support).
 
 ## View History
+1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
+2. Click **View History** for the credit card profile in question.
+
 The credit card history currently shows the last 100 transactions. If you need to access older transaction details please [contact support](/docs/getting-support).
 
 ## Update Card
-Use the **Update Card** button when you would like to:
+1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
+2. Use the **Update Card** button when you would like to:
 
-* Update an existing card after it has expired
-* Switch billing to a new card for sites in bulk
-* Modify the email address set to receive invoices
+  * Update an existing card after it has expired
+  * Switch billing to a new card for sites in bulk
+  * Modify the email address set to receive invoices
 
 Changes made here will apply across all sites associated with the card.
 
