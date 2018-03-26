@@ -1,20 +1,13 @@
-#Using Pantheon As A Training Platform for WordPress and Drupal
-Best Practices for training with Pantheon
-
-
 ---
 title: Using Pantheon As A Training Platform for WordPress and Drupal
-Best Practices for training with Pantheon
-tags: []
-categories: []
+description: Best Practices for Training with Pantheon
 type: guide
-image: 
-permalink: docs/:basename/
-contributors:
-  - stevector
-  - dwayne
-  - davidneedham
-  - tessak
+permalink: docs/guides/:basename/
+contributors: [stevector, dwayne, davidneedham, tessak]
+  - 
+  - 
+  - 
+  - 
 ---
 
 
@@ -71,13 +64,13 @@ Trainers with a great deal of Pantheon experience may want to use our [custom up
 	
  I. Create a new site on Pantheon using a unique name such as studentfirstname-studentlastname-date-of-class (dwayne-mcdaniel-3-1-2018 for example) and add this site to your training organization
 
-```
+```html
  terminus site:create --org=ORG-UUID-FOUND-IN-DASHBOARD-URL -- unique-sitename unique-sitename upstream
+``` 
  
  example
- 
+```html
  terminus site:create --org=f43f78ff-e89e-4835-8896-14f7583706fa -- demo03-1-18 demo03-1-18 WordPress
-
 ```
 	
  For a full list of upstreams available on Pantheon, run the following command
@@ -87,14 +80,14 @@ Trainers with a great deal of Pantheon experience may want to use our [custom up
 ```
 
  II.  To sync the code for each student site from your 'start-state' site you have a a few options.  
-			
+
  A. Git clone your site locally and add each student's site as a remote target and `git push --force TARGET master` to make sure all code bases match what is on your local.  
-			
+
  B. Use SFTP client of choice to copy your 'start-state' site code locally and then connect to each of the student sites via their SFTP credentials and overwrite the existing repositories with your code.  
-			
- C. Leverage the CLI for your CMS, Drush or WP-CLI, to recreate the 'start-state' site.  For example
-			
-```
+
+ C. Leverage the CLI for your CMS, Drush or WP-CLI, to recreate the 'start-state' site.  For example			
+
+```html
  terminus wp unique-sitename.dev -- theme delete twentyten 
  terminus wp unique-sitename.dev -- theme update --all
  terminus wp unique-sitename.dev -- plugin delete akismet hello
@@ -103,7 +96,7 @@ Trainers with a great deal of Pantheon experience may want to use our [custom up
 		
  III. Take a backup of your DB and Files and copy the URL for the S3 buckets where they are stored.  You can accomplish this through the Site Dashboard under Backups but clicking the download arrow beside each backup element.  Then Import these zips to the target student site by using the dashboard tools under Database / Files or using Terminus
 
-```
+```html
  terminus import:database unique-sitename.dev URL-OF-YOUR-DB-BACKUP
 
  terminus import:files unique-sitename.dev URL-OF-YOUR-FILES-BACKUP
@@ -113,15 +106,16 @@ Trainers with a great deal of Pantheon experience may want to use our [custom up
 
  V. Add the students as an administrator on the site.  We strongly encourage using Drush or WP-CLI for this
 
-```
+
 
  Drush
-		
+```html		
  terminus drush unique-sitename.dev -- user-create STUDENT-NAME --mail="STUDENT@EMAIL" --password="UserPw" 
  terminus drush unique-sitename.dev -- user-add-role "administrator" STUDENT-NAME 
-
+```
+ 
  WP-CLI
-		
+```html		
  terminus wp unique-sitename.dev -- user create STUDENT-NAME STUDENT@EMAIL --role=administrator
 
 ```
@@ -131,7 +125,9 @@ Trainers with a great deal of Pantheon experience may want to use our [custom up
  Aside from prerequisites specific to your training program, please do inform students that they will get notifications from Pantheon after the setup process.  Letting them know upfront saves everyone some questions and surprises. 
  Below we have included a sample email, similar to one that we use for trainings internally at Pantheon   
 	
-```
+<div class="alert alert-info" role="alert">
+  <p markdown="1">
+
 Hello,
 
 My name is Trainer Name, TITLE, and I will be leading the CLASS NAME training on TRAINING DATE at TIME. During the training, we will be covering CORE TRAINING OBJECTIVE.
@@ -155,17 +151,22 @@ Trainer Name
 Pantheon.io
 Phone-number-here
 
-```	
+</p>
+</div>
 
 
  3. At the beginning of training, including information about what to expect from Pantheon can set everyone up for long term success.  For example
 		"Pantheon provides three environments per site, but we’re only using development for this class"
 		"While the platform expects use of Git for code management, we will be staying in SFTP mode so we can leverage the administration screens and/or SFTP clients to add plugins/modules."  
 		"Pantheon allows all users multiple free sandboxes per account, so you will be able to replicate exercises on your own in an identical environment to the one we are using in class."  
+
+## See Also
+
  Aside from discussing these points, providing links to key documents in your follow up materials will help your students long after class ends as they start to explore Pantheon on their own.  We recommend the following at a minimum:
- [Quick Start Guide](https://pantheon.io/docs/guides/quickstart/)
- [Going live](https://pantheon.io/docs/guides/launch/)
- [How to delete account](https://pantheon.io/docs/delete-account/)
+
+ - [Quick Start Guide](https://pantheon.io/docs/guides/quickstart/)
+ - [Going live](https://pantheon.io/docs/guides/launch/)
+ - [How to delete account](https://pantheon.io/docs/delete-account/)
 
 
 
