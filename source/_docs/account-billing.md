@@ -20,7 +20,7 @@ The permission to manage credit cards and view billing history (invoices and tra
 ## View Invoices
 1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
 2. Click **View Invoices** for the credit card profile in question.
-3. Select **Download (.pdf)** to view the invoice in question. Depending on your browser, it will automatically download (e.g., FireFox) the file or open the file to be viewed in a new tab (e.g., Chrome).
+3. Select **View Invoice** next to the invoice in question. Depending on your browser, it will automatically download (e.g., FireFox) the file or open the file to be viewed in a new tab (e.g., Chrome).
 
 At this time, only invoices dating back to **January 2018** are available. If you need to access older invoices please [contact support](/docs/getting-support).
 
@@ -41,12 +41,12 @@ The credit card history currently shows the last 100 transactions. If you need t
 Changes made here will apply across all sites associated with the card.
 
 ## Remove Card
-All sites must be disassociated from the card before it can be removed.
+All sites must be disassociated from the card before it can be deleted.
 
 1. For each site associated with the credit card, go to the Site Dashboard and click **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Billing** then update the payment method shown in [your credit cards](/docs/site-billing#your-credit-cards).
 2. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
-3. Once the card reports **There are currently no sites billed to this credit card**, click **Remove Card**.
-4. Check the box next to **Yes, remove my card.** and click **Remove Card**.
+3. Once the card reports **This card is not paying for any sites.**, click **Delete Card**.
+4. Check the box next to **Yes, delete my card.** and click **Delete Card**.
 
 ## See Also
 - [Billing in the Site Dashboard](/docs/site-billing/)
