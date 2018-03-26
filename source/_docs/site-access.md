@@ -21,4 +21,4 @@ This article will help you gain access to an account if a site owner has left th
 1. [Sign up](https://dashboard.pantheon.io/register) for a Pantheon account if you don't already have one.
 2. Notify an existing team member that you need access to the account and give them your email address.
 The team member should contact you directly to confirm who you are and give you to the access to that site’s Dashboard. For instructions on adding and inviting new team members, see [Team Management](/docs/team-management/).
-3. Once you have access, [add your credit card](/docs/site-payments/) to the site to make your account the site owner.
+3. Once you have access, [add your credit card](/docs/site-billing#add-new-credit-card) to the site to make your account the site owner.
