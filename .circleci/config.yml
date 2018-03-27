@@ -62,7 +62,28 @@ jobs:
 
 # caching for ~/.composer/cache needs to be done 
 # artifacts need to be done sitespeed-result
-# deployment command for master: bash scripts/deploy-live.sh
+
+  deploy:
+    docker:
+      - image: circleci/php:5.6-apache-node-browsers
+    working_directory: ~/documentation
+    steps:
+      - checkout
+      - run:
+          name: Deploy Live Environment
+          command: bash scripts/deploy-live.sh
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+           - build
+          filters:
+            branches:
+              only: master
 
 experimental:
   notify:
