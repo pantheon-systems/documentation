@@ -14,7 +14,7 @@ The permission to update credit cards and view history is granted only to the ro
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billingtransfer-ownership-and-billing-for-this-site).</p></div>
+<p markdown="1">If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).</p></div>
 
 ## View Invoices
 1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
