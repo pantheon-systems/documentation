@@ -1,17 +1,15 @@
 ---
 title: Billing in the Site Dashboard
-description: Learn how to add a new payment method, stop billing an existing credit card, and how to transfer ownership within the Billing tab of the Settings tool in the Site Dashboard.
+description: Add a new credit card, remove the current card or transfer billing to a new site owner within the Billing tab of the Settings tool in the Site Dashboard.
 tags: [billing]
 categories: []
 ---
-The Billing tab within the Settings tool of a Site Dashboard is where you can transfer site ownership, add a new card to your User Account, and update the payment method associated with the site.
-
 ## Access Site Billing
 1. Go to the Site Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
 2. Click the **Billing** tab.
 
 ### Roles & Permissions
-The permission to transfer ownership or update payment method is granted only to the role of **Site Owners** at the site-level. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
+The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -21,14 +19,14 @@ The permission to transfer ownership or update payment method is granted only to
 {% include("content/transfer-owernship-billing.html")%}
 
 ## Add New Credit Card
-This process will add a new profile for credit cards shown in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of the User Dashboard. Once you have added the card, use it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
-
 1. Go to the Site Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Settings**, then click **Billing**.
 2. Enter your credit card information and click **Add Card**.
 
  ![Your credit card has been added to your account. Use the selector above to apply it to this Site](/source/docs/assets/images/dashboard/site-billing-cc-added.png)
 
  You should get a message saying "Your credit card has been added to your account. Use the selector above to apply it to this Site."
+
+This process will add a new credit card profile in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of your User Dashboard. Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
 
 ## Your Credit Cards
 ### Bill This Site to a New Card

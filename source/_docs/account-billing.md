@@ -1,47 +1,48 @@
 ---
 title: Account Billing in the User Dashboard
-description: View invoices and update or remove credit cards for all your sites using the Billing tab of the Account tool in the User Dashboard.
+description: View billing history (invoices and transactions) or edit credit card profiles to manage billing for sites in bulk within the Billing tab of the Account tool in the User Dashboard.
 tags: [billing]
 categories: []
 ---
-The Billing tab within the Account tool of the User Dashboard shows credit card profiles for sites you've launched on Pantheon. Each profile shows the site(s) using the card as the current payment method, as configured in the Site Dashboard.
-
-## Access Billing
+## Access Account Billing
 1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**.
 2. Click the **Billing** tab.
 
+Review **credit card profiles** for the sites you pay for and own on Pantheon. Each credit card profile shows billing history (invoices and transactions) for any site(s) using the card as the payment method, as set in the Site Dashboard. To add a new card to your account, refer to [Manage Site Billing in the Site Dashboard](/docs/site-billing/).
 ### Roles & Permissions
-The permission to manage credit cards and view billing history (invoices and transactions) is granted only to the role of **Site Owners** at the site-level. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
+The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">If you need to assume site and billing ownership, or add a new card to your account, refer to [Manage Site Billing in the Site Dashboard](/docs/site-billing/).</p></div>
+<p markdown="1">If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billingtransfer-ownership-and-billing-for-this-site).</p></div>
 
 ## View Invoices
 1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
 2. Click **View Invoices** for the credit card profile in question.
-3. Select **View Invoice** next to the invoice in question. Depending on your browser, it will automatically download (e.g., FireFox) the file or open the file to be viewed in a new tab (e.g., Chrome).
+3. Select **View Invoice** next to the invoice in question.
 
-At this time, only invoices dating back to **January 2018** are available. If you need to access older invoices please [contact support](/docs/getting-support).
+At this time, only invoices dating back to **January 2018** are provided. If you need to access older invoices please [contact support](/docs/getting-support).
 
 ## View History
 1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
 2. Click **View History** for the credit card profile in question.
 
-The credit card history currently shows the last 100 transactions. If you need to access older transaction details please [contact support](/docs/getting-support).
+The credit card history will show the last 100 transactions.
 
 ## Update Card
 1. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
 2. Use the **Update Card** button when you would like to:
+   * Update an existing card after it has expired
+   * Switch billing to a new card for sites in bulk
 
-  * Update an existing card after it has expired
-  * Switch billing to a new card for sites in bulk
-  * Modify the email address set to receive invoices
+Changes made here will apply across all sites associated with the credit card profile.
 
-Changes made here will apply across all sites associated with the card.
-
-## Remove Card
+## Delete Card
 All sites must be disassociated from the card before it can be deleted.
+
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p markdown="1">Deleting a card profile from your account will also delete it's associated billing history (invoices and transactions).</p></div>
 
 1. For each site associated with the credit card, go to the Site Dashboard and click **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Billing** then update the payment method shown in [your credit cards](/docs/site-billing#your-credit-cards).
 2. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
