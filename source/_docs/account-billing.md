@@ -42,7 +42,7 @@ All sites must be disassociated from the card before it can be deleted.
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
-<p markdown="1">Deleting a card profile from your account will also delete it's associated billing history (invoices and transactions).</p></div>
+<p markdown="1">Deleting a card profile from your account will also delete it's associated billing history (invoices and transactions). Go to **View Invoices** to download past invoices, prior to deleting your credit card profile. Only invoices dating back to **January 2018** are provided.</p></div>
 
 1. For each site associated with the credit card, go to the Site Dashboard and click **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Billing** then update the payment method shown in [your credit cards](/docs/site-billing#your-credit-cards).
 2. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
