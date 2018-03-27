@@ -20,7 +20,7 @@ Once you have backed-up your data and are ready to delete your sites, see [Delet
 
 ## 3. Delete Your Credit Cards
 
-The next step is to delete the associated credit cards. For more information, see [Updating Payment Methods](/docs/update-payment-method).
+The next step is to delete the associated credit cards. For more information, see [Account Billing in the User Dashboard](/docs/account-billing#delete-card).
 
 ## 4. Delete Your Account
 

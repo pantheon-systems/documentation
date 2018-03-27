@@ -29,24 +29,8 @@ If you plan to pay for the site or if you want to wait to transfer ownership, yo
 
 As the site owner, you’ll receive an email confirming the change to the site. After the site billing is processed, you’ll receive an updated invoice.
 
-## Invite a Business Owner to Pay   
-This is the most common way agencies handle billing. The invitation will guide the recipient through adding their payment method to the site for the designated plan.
-
-The user who pays for the site becomes the site owner. Agencies maintain access by being associated as a Supporting Organization.
-
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">We recommend communicating with the business owner well in advance of sending an invitation. It's a good idea to have them notify you once they've upgraded so you can continue the going live procedure. Feel free to share the [Site Owner FAQ](/docs/site-owner-faq/) guide with them.</p>
-</div>
-
-
-1. From the Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
-2. Click **Invite a business owner to pay for this site**.
-3. Enter the intended site owner’s email and select the desired plan.
-
-  The business owner will get an email that directs them to create a Pantheon account or log in to an existing account. Once inside, they need to provide their contact and billing info.
-
-4. Ask the new site owner to add your agency as a [Supporting Organization](/docs/team-management/#add-a-supporting-organization) so you can continue the going live procedure on their behalf.
+## Transfer Ownership and Billing for This Site
+{% include("content/transfer-owernship-billing.html")%}
 
 <div class="panel panel-drop panel-guide" id="accordion">
   <div class="panel-heading panel-drop-heading">

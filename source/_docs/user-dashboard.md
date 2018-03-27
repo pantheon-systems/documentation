@@ -38,4 +38,4 @@ To associate an image with your Pantheon account, you'll need to [create a Grava
 ## See Also
 - [Role-Based Permissions & Change Management](/docs/change-management/)
 - [New Site Owner FAQs](/docs/site-owner-faq/)
-- [Add a Credit Card to a Site](/docs/site-payments/)
+- [Billing in the Site Dashboard](/docs/site-billing/)
