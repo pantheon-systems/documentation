@@ -5,6 +5,8 @@
 #=====================================================#
 # Build prod env and create backup dirs on Circle     #
 #=====================================================#
+cd ~/documentation
+
 bin/sculpin generate --env=prod
 # Migrate paginated files to avoid .html within the URLs
 for file in output_prod/docs/changelog/page/*html
@@ -23,7 +25,7 @@ curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pan
 #===============================================================#
 # Deploy modified files to production                           #
 #===============================================================#
-rsync --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
+rsync --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Deployed to https://pantheon.io/docs"
