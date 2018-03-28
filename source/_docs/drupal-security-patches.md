@@ -19,7 +19,7 @@ The Drupal community documentation describes how to [apply patches](https://www.
 
 <ul class="nav nav-tabs" role="tablist">
   <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
 </ul>
 <div class="tab-content">
 
