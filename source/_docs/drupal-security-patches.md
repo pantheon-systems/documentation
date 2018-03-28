@@ -49,11 +49,22 @@ You'll need a local git clone of your site code.
     patch -p1 < 206.patch
     ```
 
-4. Remove the patch file, commit and push your changes back to Pantheon:
-
+4. Remove the patch file, and stage code changes: 
     ```bash
     rm 206.patch
-    git commit -am "Manually apply Drupal security patch"
+    git add .
+    ```
+    
+5. Confirm staged changes look good:
+
+```bash
+    git status
+    ```
+
+6. Commit and push your changes back to Pantheon:
+
+```bash
+    git commit -m "Manually apply Drupal security patch"
     git push origin master
     ```
 
@@ -84,11 +95,22 @@ You'll need a local git clone of your site code.
     patch -p1 < 119.patch
     ```
 
-4. Remove the patch file, commit and push your changes back to Pantheon:
-
+4. Remove the patch file, and stage code changes: 
     ```bash
     rm 119.patch
-    git commit -am "Manually apply Drupal security patch"
+    git add .
+    ```
+    
+5. Confirm staged changes look good:
+
+```bash
+    git status
+    ```
+
+6. Commit and push your changes back to Pantheon:
+
+```bash
+    git commit -m "Manually apply Drupal security patch"
     git push origin master
     ```
 
