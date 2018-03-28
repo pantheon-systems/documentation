@@ -53,6 +53,7 @@ You'll need a local git clone of your site code.
 
     ```bash
     rm 206.patch
+    git add core/lib/Drupal/Core/Security/
     git commit -am "Manually apply Drupal security patch"
     git push origin master
     ```
@@ -88,6 +89,7 @@ You'll need a local git clone of your site code.
 
     ```bash
     rm 119.patch
+    git add includes/request-sanitizer.inc
     git commit -am "Manually apply Drupal security patch"
     git push origin master
     ```
