@@ -54,42 +54,6 @@ Otherwise, please ask each student to [create their own Pantheon account](https:
 
  Aside from prerequisites specific to your training program, please do inform students that they will get notifications from Pantheon after the setup process. Letting them know upfront saves everyone some questions and surprises.
 
- Below we have included a sample email, similar to one that we use for trainings internally at Pantheon. You can adapt it as necessary for your use case.
-
-
-
- <div class="panel panel-drop panel-guide" id="accordion">
-   <div class="panel-heading panel-drop-heading">
-     <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#sample-email">
-       <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-question-sign"></span>Sample email to students</h3>
-     </a>
-   </div>
-   <div id="sample-email" class="collapse" markdown="1" style="padding:10px;">
-   ### Sample Email to Students {.info}
-   <p>Hello,</p>
-
-   <p>My name is [TRAINER NAME], [TITLE], and I will be leading the [CLASS NAME] training on [TRAINING DATE] at [TIME]. During the training, we will be covering [CORE TRAINING OBJECTIVE].
-   </p>
-
-   <p>This will be an interactive training. With that in mind, please complete these steps in advance:
-   </p>
-
-   <p>Make sure that you have a Pantheon account and are added to your team's organization.</p>
-
-   <p>Please have the most recent version of <a href="https://pantheon.io/docs/terminus/">Terminus</a> installed, <a href="https://pantheon.io/docs/machine-tokens/">a machine token</a> created and an <a href="https://pantheon.io/docs/ssh-keys/">SSH key</a> uploaded to Pantheon.</p>
-
-   <p>Be prepared to screen share and participate. We ask that everyone join from their own computer so you can view the slides, screen share, etc.</p>
-
-   <p>We want to hear and see you. Please have a working microphone (or be prepared to dial in by phone) and a webcam to join the video.</p>
-
-   <p>If one of your colleagues didn't receive this email and plan to join, please have them reach out to be added to the calendar invitation and so we can best prepare.</p>
-
-   <p>Feel free to reply to this email if you have any questions about the training.</p>
-
-  <p>[EMAIL SIGNATURE]</p>
-   </div>
- </div>
-
 ## See Also
 
  Providing links to key documents in your follow up materials will help your students long after class ends as they start to explore Pantheon on their own. We recommend the following:
