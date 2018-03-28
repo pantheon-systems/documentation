@@ -1,17 +1,17 @@
 ---
 title: Drupal Security Patches
 description: How to manually patch Drupal 7 and 8 with security patches, ahead of the upstream updates.
-
+categories: [drupal]
 ---
 
-On March 28 2018 Drupal released a critical security patch for D7 and D8. Pantheon provided this patch into their upstream immediately, but that may not be accessible for users who:
+On March 28 2018 Drupal released a [critical security patch](https://www.drupal.org/SA-CORE-2018-002){.external} for Drupal 7 and 8. Pantheon provided this patch into their upstream immediately, but that may not be accessible for users who:
 
  - use a [Custom Upstream](/docs/custom-upstream/) or [Public Distribution](/docs/start-state/#public-distributions) which hasn't been patched, or no upstream
  - encounter merge conflicts when applying upstream updates
 
 This doc describes how to manually patch your Drupal core.
 
-## Mannually Patch Core
+## Manually Patch Core
 
 The Drupal community documentation describes how to [apply patches](https://www.drupal.org/patch/apply){.external} using git.
 
@@ -51,7 +51,7 @@ You'll need a local git clone of your site code.
 
     ```bash
     rm 206.patch
-    git commit -m "Mannually apply Drupal security patch"
+    git commit -am "Manually apply Drupal security patch"
     git push origin master
     ```
 
@@ -86,7 +86,7 @@ You'll need a local git clone of your site code.
 
     ```bash
     rm 119.patch
-    git commit -m "Mannually apply Drupal security patch"
+    git commit -am "Manually apply Drupal security patch"
     git push origin master
     ```
 
@@ -131,7 +131,4 @@ done
 
 ##See Also
 
-If you can, end your doc with links to external resources that can be used to improve the reader's comprehension, or to guides on logical next steps in a common development workflow.
-
- - [An internal guide with a relative link](/docs/get-started)
- - [An external guide with a full URL](http://writing.rocks/)
+ - [Drupal Security Advisory](https://www.drupal.org/SA-CORE-2018-002){.external}
