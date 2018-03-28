@@ -2,6 +2,7 @@
 title: Drupal Security Patches
 description: How to manually patch Drupal 7 and 8 with security patches, ahead of the upstream updates.
 categories: [drupal]
+contributors: [alexfornuto, ari]
 ---
 
 On March 28 2018 Drupal released a [critical security patch](https://www.drupal.org/SA-CORE-2018-002){.external} for Drupal 7 and 8. Pantheon provided this patch into their upstream immediately, but that may not be accessible for users who:
