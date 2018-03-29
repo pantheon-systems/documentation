@@ -18,7 +18,7 @@ The Drupal community documentation describes how to [apply patches](https://www.
 
 
 <ul class="nav nav-tabs" role="tablist">
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Drupal 8.5</a></li>
   <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
   <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 6</a></li>
 </ul>
@@ -68,6 +68,11 @@ You'll need a local git clone of your site code.
     git commit -m "Manually apply Drupal security patch"
     git push origin master
     ```
+
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Drupal 8.3 and 8.4 users who cannot upgrade to 8.5 can substitute patch numbers `208` and `207`, respectively.</p>
+</div>
 
 </div>
 
