@@ -16,7 +16,7 @@ This is especially useful for third party dependencies, such as those installed 
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">One-click Dashboard updates are only compatible with the nested `web` docroot feature when the `web_docroot` property is set in the `pantheon.upstream.yml` file of the upstream. We recommend using a [Custom Upstream](/docs/custom-upstream/) if you would like to continue to utilize Dashboard updates.</p>
+<p markdown="1">One-click Dashboard updates are only compatible with the nested `web` docroot feature when the `web_docroot` property is set in the `pantheon.upstream.yml` file of the upstream in conjunction with the use if a [Custom Upstream](/docs/custom-upstream/).</p>
 </div>
 
 ## Disable One-click Updates
