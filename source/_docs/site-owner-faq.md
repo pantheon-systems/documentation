@@ -53,7 +53,7 @@ You can access New Relic Pro directly from the Site Dashboard, by clicking on **
 
 
 ### Can I downgrade my site to a Basic plan?
-Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to Basic plan level. For more information, see [Select a Plan](/docs/select-plan#upgrade-or-downgrade-plan).
+Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to Basic plan level. For more information, see [Plans in the Site Dashboard](/docs/site-plan#basic-plan-considerations).
 
 ## Billing Tasks
 
@@ -69,7 +69,8 @@ Self-serve sites are billable only via recurring monthly charges and can not be 
 Sites that are owned by a Reseller, Edu+, or Enterprise organization are invoiced to the organization.
 
 ### Can I transfer ownership of a site to someone else?
-{% include("content/transfer-owernship-billing.html")%}
+{% include("content/transfer-owernship-billing-intro.html")%}
+{% include("content/transfer-owernship-billing-steps.html")%}
 
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 

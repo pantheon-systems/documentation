@@ -168,7 +168,7 @@ This depends on how much content you have. When you are doing a full environment
 
 #### How can I specify the time for my backups to run?
 
-Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. See [Select a Plan](/docs/select-plan/) for details about site plans on Pantheon.
+Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. See [Plans in the Site Dashboard](/docs/site-plan/) for details about site plans on Pantheon.
 
 #### What time zone is the backup time shown in?
 

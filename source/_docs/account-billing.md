@@ -53,4 +53,4 @@ All sites must be disassociated from the card before it can be deleted.
 - [Billing in the Site Dashboard](/docs/site-billing/)
 - [New Site Owner FAQs](/docs/site-owner-faq/)
 - [Launch Essentials Guide](/docs/guides/launch/)
-- [Select a Plan](/docs/select-plan/)
+- [Plans in the Site Dashboard](/docs/site-plan/)
