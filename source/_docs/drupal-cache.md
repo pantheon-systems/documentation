@@ -39,11 +39,15 @@ This functionality can be added via the [Pantheon Advanced Page Cache](https://w
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ### Caching
-![Drupal 7 Caching options](/source/docs/assets/images/d7-cache-config.png)<br />
+
+![Drupal 7 Caching options](/source/docs/assets/images/d7-cache-config.png)
+
 Unless needed for development, you should always enable "Cache pages for anonymous users". Without it, your Drupal site will have to rebuild every page and the Pantheon Global CDN will not cache your site. If possible, enable "Cache blocks" as well to increase performance for logged-in users.
 
 ### Minimum Cache Lifetime
-![Drupal 7 minimum cache lifetime](/source/docs/assets/images/d7-min-cache-lifetime.png)<br />
+
+![Drupal 7 minimum cache lifetime](/source/docs/assets/images/d7-min-cache-lifetime.png)
+
 Minimum caching lifetime forces cached content to continue to exist before it can be flushed. If all caches are cleared, any content under the minimum cache lifetime will not be expunged. High traffic sites may want to set this to a non-zero value; when in doubt, set it to none.
 
 ### Expiration of Cached Pages
