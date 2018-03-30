@@ -84,7 +84,7 @@ Learn more about the [Pantheon Workflow](/docs/pantheon-workflow/).
 All fatal PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](/docs/php-errors/).
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p>This is not intended to replace reviewing your error logs. Learn more about [accessing all your server logs](/docs/logs/).</p>
+<p markdown="1">This is not intended to replace reviewing your error logs. Learn more about [accessing all your server logs](/docs/logs/).</p>
 </div>
 
 ## Domains / HTTPS
