@@ -52,7 +52,7 @@ Backend APIs running on Pantheon take advantage of the following platform featur
 
 
 ## Exposing the Backend API
-Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or WordPress upstream. The process to [create](/docs/create-sites/), [update core](/docs/upstream-updates/), and [launch](/docs/guides/launch/) a backend API on Pantheon does not deviate from the standard procedures.
+Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or WordPress upstream. The process to [create](/docs/create-sites/), [update core](/docs/core-updates/), and [launch](/docs/guides/launch/) a backend API on Pantheon does not deviate from the standard procedures.
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">

@@ -336,7 +336,7 @@ Fatal error: Class 'Redis_Cache' not found in
 
 It is possible that your `.gitignore` file is not up to date with the most recent version of your CMS. To resolve this, make sure you do not have any pending core updates.
 
-The best and easiest way to update your core is by using Pantheon administration Dashboard. See [Applying Upstream Updates](/docs/upstream-updates) for the steps to update your project's code and get the most recent version of the `.gitignore`.
+The best and easiest way to update your core is by using Pantheon administration Dashboard. See [WordPress and Drupal Core Updates](/docs/core-updates) for the steps to update your project's code and get the most recent version of the `.gitignore`.
 
 ### Fatal Error: require\_once()
 
