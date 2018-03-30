@@ -4,9 +4,10 @@ description: Learn how to use the Security tool in the Site Dashboard to keep yo
 tags: [security]
 categories: []
 ---
+
 There are occasions while you are working on your site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
 
-This can be done by putting a username and password on the environment similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
+This can be done by putting a username and password on the environment, similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
@@ -16,7 +17,6 @@ This can be done by putting a username and password on the environment similar t
 ![Lock environment](/source/docs/assets/images/dashboard/lock-environment.png)
 
 ## Password Protect Your Site's Environments
-
 
 You have the ability to password protect any of the available environments.
 
@@ -37,6 +37,8 @@ You can set a different username and password for each environment. This is impo
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.
 
 ![Locked site example](/source/docs/assets/images/auth-required.png)
+
+If you'd like to customize the lock page that displays beneath the authentication form, you can add a `locked.html` file in your site's root directory.
 
 ## Unlock a Site's Environment
 When you are ready to make your environment public again, click **Security** on your Site Dashboard. Next to Environmental Access, click **Public**.
