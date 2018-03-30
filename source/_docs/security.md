@@ -4,9 +4,10 @@ description: Learn how to use the Security tool in the Site Dashboard to keep yo
 tags: [security]
 categories: []
 ---
+
 There are occasions while you are working on your site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
 
-This can be done by putting a username and password on the environment similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
+This can be done by putting a username and password on the environment, similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
@@ -16,7 +17,6 @@ This can be done by putting a username and password on the environment similar t
 ![Lock environment](/source/docs/assets/images/dashboard/lock-environment.png)
 
 ## Password Protect Your Site's Environments
-
 
 You have the ability to password protect any of the available environments.
 
