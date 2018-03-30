@@ -1,5 +1,5 @@
 ---
-title: Apply Upstream Updates
+title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
 tags: [dashboard, devterminus, git]
 categories: []
