@@ -4,7 +4,7 @@ description: Learn how to revert a Git commit before and after pushing to Panthe
 tags: [debugcode, git]
 categories: []
 ---
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/docs/upstream-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/docs/core-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
 
 <div class="alert alert-danger" role="alert">
   <h4 class="info">Warning</h4>

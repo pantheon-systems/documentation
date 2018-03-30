@@ -109,7 +109,7 @@ At our [site creation page](https://dashboard.pantheon.io/sites/create/ "Pantheo
 
 ### Pull in Pantheon's Upstream
 
-As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickstart, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with your commit history intact, while also preserving Pantheon's [upstream update](/docs/upstream-updates/) function.
+As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickstart, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with your commit history intact, while also preserving Pantheon's [upstream update](/docs/core-updates/) function.
 
 1. From your Site Dashboard, go to the Dev environment.
 2. Click **Settings**, then select **About Site**.

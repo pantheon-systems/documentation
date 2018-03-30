@@ -108,7 +108,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
  git push origin master
  ```
 
-For more details, see [Applying Upstream Updates](/docs/upstream-updates).
+For more details, see [WordPress and Drupal Core Updates](/docs/core-updates).
 ## General Git Questions
 ### Does Pantheon support Git submodules?
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.

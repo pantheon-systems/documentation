@@ -26,7 +26,7 @@ WordPress' admin interface has built in tools to manage plugins and themes, allo
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
-<p markdown="1">Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support) and [Applying Upstream Updates](/docs/upstream-updates).</p>
+<p markdown="1">Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).</p>
 </div>
 
 ### Manage Plugins and Themes
@@ -59,7 +59,7 @@ Drupal also allows you to install modules or themes [using its administrative in
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
-<p markdown="1">Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support) and [Applying Upstream Updates](/docs/upstream-updates).</p>
+<p markdown="1">Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).</p>
 </div>
 
 ### Install a New Module

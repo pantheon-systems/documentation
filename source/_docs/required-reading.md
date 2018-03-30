@@ -29,7 +29,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 ## Run
 - [Optimization for Pantheon and the Cloud](/docs/cloud-optimization/)
 - [New Relic Pro](/docs/new-relic/)
-- [Applying Upstream Updates](/docs/upstream-updates/)
+- [Applying Upstream Updates](/docs/core-updates/)
 - [Global CDN Caching for High Performance](/docs/global-cdn-caching/)
 - [Installing Redis on Drupal or WordPress](/docs/redis/)
 - [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache/)

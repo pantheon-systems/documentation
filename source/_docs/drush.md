@@ -62,7 +62,7 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p><strong>Do not use Drush to update Drupal core on Pantheon</strong>. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. For more details, see <a href="/docs/upstream-updates">Core Updates</a>.
+<p><strong>Do not use Drush to update Drupal core on Pantheon</strong>. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. For more details, see <a href="/docs/core-updates">Core Updates</a>.
 </p>
 </div>
 

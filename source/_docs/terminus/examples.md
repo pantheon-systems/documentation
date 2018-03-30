@@ -18,7 +18,7 @@ Quickly install updates to core, contributed modules, themes, and plugins from t
 ### Upstream Updates (Core)
 Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
 
-<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">For instructions on how to resolve merge conflicts, see [Upstream Updates](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)</p></div>
+<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">For instructions on how to resolve merge conflicts, see [Upstream Updates](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)</p></div>
 
 <p class="instruction">List available upstream updates:</p>
 <div class="copy-snippet">
@@ -206,7 +206,7 @@ terminus dashboard:view $SITE.dev</code></pre>
 The Site Dashboard will open once the reset procedure has completed.
 
 ## Switch Upstreams
-Every site has an upstream assigned in order to deliver [one-click updates](/docs/upstream-updates/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
+Every site has an upstream assigned in order to deliver [one-click updates](/docs/core-updates/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
 * Convert existing sites from a default framework to a [Custom Upstream](/docs/custom-upstream/).
 * Convert existing sites from one Custom Upstream to another, for reasons like:

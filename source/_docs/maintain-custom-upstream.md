@@ -119,7 +119,7 @@ Follow the procedure to [create a custom upstream](/docs/create-custom-upstream)
 
     This assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
 
-Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin. For more details, see [Apply Upstream Updates](/docs/upstream-updates).
+Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/docs/terminus) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin. For more details, see [WordPress and Drupal Core Updates](/docs/core-updates).
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>

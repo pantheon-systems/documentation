@@ -17,7 +17,7 @@ For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8]
 
 ## Installing Solr for Drupal
 ### 1. Apply Upstream Updates
-Use [one-click updates](/docs/upstream-updates) to make sure you are running the latest version of Drupal core.
+Use [one-click updates](/docs/core-updates) to make sure you are running the latest version of Drupal core.
 
 ### 2. Add Either the Apache Solr Search or Search API Solr Search Module
 

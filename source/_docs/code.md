@@ -73,7 +73,7 @@ You can also view the diff output for each individual file:
 ![Diff output](/source/docs/assets/images/dashboard/diff-screen.png)
 
 ### Upstream Updates
-The Dev environment provides [one-click updates](/docs/upstream-updates/) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
+The Dev environment provides [one-click updates](/docs/core-updates/) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
   <dl>
     <dt>Upstream</dt>
       <dd>A code repository that serves as a common package for your web application.</dd><br>
