@@ -158,7 +158,7 @@ Core updates for Custom Upstreams are initiated by the repository maintainer, no
 
 It's important to relay the need for updating core to maintainers, even if you plan on manually pulling in core version updates. First, file an issue in the queue of your repository and reach out to a maintainer. Even better - submit a pull request for the update.
 
-Once you have communicated the issue, you can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts).
+Once you have communicated the issue, you can [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
 
 ### 503 Errors When Running Update.php and Installing Modules
 

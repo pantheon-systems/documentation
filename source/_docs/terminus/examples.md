@@ -18,7 +18,7 @@ Quickly install updates to core, contributed modules, themes, and plugins from t
 ### Upstream Updates (Core)
 Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
 
-<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">For instructions on how to resolve merge conflicts, see [Upstream Updates](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts)</p></div>
+<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">For instructions on how to resolve merge conflicts, see [Upstream Updates](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)</p></div>
 
 <p class="instruction">List available upstream updates:</p>
 <div class="copy-snippet">
