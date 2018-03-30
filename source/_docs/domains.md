@@ -195,15 +195,15 @@ Replace `http://` in the site's database and configure your CMS to assume users 
 ### CNAME Record Workaround
 If your domain's DNS configuration relies on an existing MX or TXT record that intentionally disallows CNAME records, you'll need to use A and AAAA records to configure DNS for subdomains (e.g., `www.example.com`) instead of CNAMEs:
 
-1. Identify required A record value by querying the target environment's [platform domain](#platform-domains) (e.g., `live-example.pantheonsite.io`) using a free online tool: [https://www.whatsmydns.net/#A/{live-example.pantheonsite.io}](https://www.whatsmydns.net/#A/{live-example.pantheonsite.io}).
+1. Identify required A record value by querying the target environment's [platform domain](#platform-domains) (e.g., `live-example.pantheonsite.io`) using a free online tool: [https://www.whatsmydns.net/#A/live-example.pantheonsite.io](https://www.whatsmydns.net/#A/live-example.pantheonsite.io).
 
-Note: Replace the placeholder {live-example.pantheonsite.io} with your environment's platform domain.
+    Note: Replace the placeholder `live-example.pantheonsite.io` with your environment's platform domain.
 
 2. Do the same for the required AAAA values:
 
-[https://www.whatsmydns.net/#AAAA/{live-example.pantheonsite.io}](https://www.whatsmydns.net/#AAAA/{live-example.pantheonsite.io})
+    [https://www.whatsmydns.net/#AAAA/live-example.pantheonsite.io](https://www.whatsmydns.net/#AAAA/live-example.pantheonsite.io)
 
-3. Log in to your DNS host and create two AAAA records and one A record for the desired subdomain (e.g., `www`) using the values returned in the above two steps.
+3. Log in to your DNS host and create two AAAA records and one A record for the desired subdomain (e.g., `www`) using the values returned in the steps above.
 
 ## See Also
  - [Switching DNS From One Pantheon Site to Another](/docs/switching-dns/)
