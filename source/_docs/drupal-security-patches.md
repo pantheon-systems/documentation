@@ -12,6 +12,11 @@ On March 28 2018 Drupal released a [critical security patch](https://www.drupal.
 
 This doc describes how to manually patch your Drupal core.
 
+<div class="alert alert-danger" role="alert">
+<h4 class="info">Warning</h4>
+<p markdown="1"> If you can [apply upstream updates](/docs/upstream-updates/) to patch your system, we advise you do so instead of following this doc. You should be familiar with both Git and the command line before continuing.</p>
+</div>
+
 ## Manually Patch Core
 
 The Drupal community documentation describes how to [apply patches](https://www.drupal.org/patch/apply){.external} using git.
