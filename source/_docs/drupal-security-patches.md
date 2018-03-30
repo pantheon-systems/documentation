@@ -12,6 +12,11 @@ On March 28 2018 Drupal released a [critical security patch](https://www.drupal.
 
 This doc describes how to manually patch your Drupal core.
 
+<div class="alert alert-danger" role="alert">
+<h4 class="info">Warning</h4>
+<p markdown="1">Use the [standard process to update core](/docs/core-updates/) if the security patch is available to be applied in the Site Dashboard. The advanced method described on this page is intended to be used when a security patch is not yet available as a one-click update in the Site Dashboard, or when handling merge conflicts.</p>
+</div>
+
 ## Manually Patch Core
 
 The Drupal community documentation describes how to [apply patches](https://www.drupal.org/patch/apply){.external} using git.
