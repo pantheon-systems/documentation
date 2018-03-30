@@ -14,7 +14,7 @@ This doc describes how to manually patch your Drupal core.
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p markdown="1"> If you can [apply upstream updates](/docs/upstream-updates/) to patch your system, we advise you do so instead of following this doc. You should be familiar with both Git and the command line before continuing.</p>
+<p markdown="1">Use the [standard process to update core](/docs/core-updates/) if the security patch is available to be applied in the Site Dashboard. The advanced method described on this page is intended to be used when a security patch is not yet available as a one-click update in the Site Dashboard, or when handling merge conflicts.</p>
 </div>
 
 ## Manually Patch Core
