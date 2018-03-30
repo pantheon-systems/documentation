@@ -44,6 +44,17 @@ If you'd like to customize the lock page that displays beneath the authenticatio
 When you are ready to make your environment public again, click **Security** on your Site Dashboard. Next to Environmental Access, click **Public**.
 This will clear the credentials you entered and make the web accessible resources available without a basic authentication prompt.
 
+## Scripting Site Locking Operations
+Your site may also be locked and unlocked using [Terminus](/docs/terminus).
+
+To lock a site:
+
+<pre><code class="bash hljs">terminus lock:enable &lt;site&gt;.&lt;env&gt; -- user password</code></pre>
+
+To unlock a site:
+
+<pre><code class="bash hljs">terminus lock:disable &lt;site&gt;.&lt;env&gt;</code></pre>
+
 ## Troubleshooting
 
 ### Drupal HTTP Authentication Module
