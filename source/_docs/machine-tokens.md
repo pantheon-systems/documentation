@@ -33,10 +33,9 @@ Machine tokens are keyed to the email address associated with your Pantheon user
 
 ## Switch Between Multiple Pantheon User Accounts
 
-Machine tokens are paired with the email address associated with your Pantheon user account, so you can easily switch between users:
+Machine tokens are paired with the email address associated with your Pantheon user account, so you can easily switch between users.
 
-1. Log out of an account by running: `terminus auth:logout`  
-2. Log in to another account by running: `terminus auth:login --email <email@example.com>`
+Log in to another account by running: `terminus auth:login --email <email@example.com>`
 
 ## Revoke a Machine Token
 
