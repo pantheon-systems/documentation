@@ -49,11 +49,15 @@ Your site may also be locked and unlocked using [Terminus](/docs/terminus).
 
 To lock a site:
 
-<pre><code class="bash hljs">terminus lock:enable &lt;site&gt;.&lt;env&gt; -- user password</code></pre>
+```bash
+terminus lock:enable <site>:<env> -- user password
+```
 
 To unlock a site:
 
-<pre><code class="bash hljs">terminus lock:disable &lt;site&gt;.&lt;env&gt;</code></pre>
+```bash
+terminus lock:disable <site>:<env>
+```
 
 ## Troubleshooting
 
@@ -71,11 +75,15 @@ Alternatively, you can resolve 403 errors by using [Terminus](/docs/terminus) to
 </ul>
 
 <!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d8">
-    <pre><code class="bash hljs">terminus remote:drush &lt;site&gt;.&lt;env&gt; -- pm-uninstall basic_auth -y</code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="d7">
-    <pre><code class="bash hljs">terminus remote:drush &lt;site&gt;.&lt;env&gt; -- pm-disable basic_auth -y</code></pre>
-  </div>
+<div class="tab-content" markdown="1">
+<div role="tabpanel" class="tab-pane active" id="d8" markdown="1">
+```bash
+terminus remote:drush <site>:<env> -- pm-uninstall basic_auth -y
+```
+</div>
+<div role="tabpanel" class="tab-pane" id="d7" markdown="1">
+```bash
+terminus remote:drush <site>:<env> -- pm-disable basic_auth -y
+```
+</div>
 </div>
