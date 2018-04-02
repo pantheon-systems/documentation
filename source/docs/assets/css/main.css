@@ -24,216 +24,6 @@ html {
 }
 
 @font-face {
-  font-family: 'pan-docs';
-  src: url('../fonts/AvenirLTStd-Roman.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-
-
-/**
- * @license
- * MyFonts Webfont Build ID 2950111, 2015-01-09T09:26:45-0500
- *
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are
- * explicitly restricted from using the Licensed Webfonts(s).
- *
- * You may obtain a valid license at the URLs below.
- *
- * Webfont: AvenirLT-Medium by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/65-medium/
- *
- * Webfont: Avenir-Roman by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/55-roman/
- *
- * Webfont: AvenirLT-MediumOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/65-mediumoblique/
- *
- * Webfont: AvenirLT-BookOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/45-book-oblique/
- *
- * Webfont: AvenirLT-Black by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/95-black/
- *
- * Webfont: AvenirLT-HeavyOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/85-heavy-oblique/
- *
- * Webfont: AvenirLT-Book by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/45-book/
- *
- * Webfont: AvenirLT-Light by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/35-light/
- *
- * Webfont: AvenirLT-BlackOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/95-black-oblique/
- *
- * Webfont: AvenirLT-LightOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/35-light-oblique/
- *
- * Webfont: AvenirLT-Oblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/55-oblique/
- *
- * Webfont: AvenirLT-Heavy by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/85-heavy/
- *
- *
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=2950111
- * Licensed pageviews: 500,000
- * Webfonts copyright: Part of the digitally encoded machine readable outline data for producing the Typefaces provided is copyrighted &#x00A9; 1981 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This software is the property of Linotype GmbH, and may not be repro
- *
- *
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are
- * explicitly restricted from using the Licensed Webfonts(s).
- *
- * You may obtain a valid license at the URLs below.
- *
- * Webfont: AvenirLT-Medium by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/65-medium/
- *
- * Webfont: Avenir-Roman by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/55-roman/
- *
- * Webfont: AvenirLT-MediumOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/65-mediumoblique/
- *
- * Webfont: AvenirLT-BookOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/45-book-oblique/
- *
- * Webfont: AvenirLT-Black by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/95-black/
- *
- * Webfont: AvenirLT-HeavyOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/85-heavy-oblique/
- *
- * Webfont: AvenirLT-Book by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/45-book/
- *
- * Webfont: AvenirLT-Light by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/35-light/
- *
- * Webfont: AvenirLT-BlackOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/95-black-oblique/
- *
- * Webfont: AvenirLT-LightOblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/35-light-oblique/
- *
- * Webfont: AvenirLT-Oblique by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/55-oblique/
- *
- * Webfont: AvenirLT-Heavy by Linotype
- * URL: http://www.myfonts.com/fonts/linotype/avenir/85-heavy/
- *
- *
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=2950111
- * Licensed pageviews: 500,000
- * Webfonts copyright: Part of the digitally encoded machine readable outline data for producing the Typefaces provided is copyrighted &#x00A9; 1981 - 2007 Linotype GmbH, www.linotype.com. All rights reserved. This software is the property of Linotype GmbH, and may not be repro
- *
- * © 2015 MyFonts Inc
-*/
-/* @import must be at top of file, otherwise CSS will not work */
-@font-face {
-  font-family: Avenir-Light;
-  font-weight: 100;
-  font-style: normal;
-  src: url("../fonts/avenir/2D03DF_7_0.eot");
-  src: url("../fonts/avenir/2D03DF_7_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_7_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_7_0.woff") format("woff"), url("../fonts/avenir/2D03DF_7_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-LightItalic';
-  font-weight: 100;
-  font-style: italic;
-  src: url("../fonts/avenir/2D03DF_9_0.eot");
-  src: url("../fonts/avenir/2D03DF_9_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_9_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_9_0.woff") format("woff"), url("../fonts/avenir/2D03DF_9_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-Book';
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/avenir/2D03DF_6_0.eot");
-  src: url("../fonts/avenir/2D03DF_6_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_6_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_6_0.woff") format("woff"), url("../fonts/avenir/2D03DF_6_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-BookItalic';
-  font-weight: 400;
-  font-style: italic;
-  src: url("../fonts/avenir/2D03DF_3_0.eot");
-  src: url("../fonts/avenir/2D03DF_3_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_3_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_3_0.woff") format("woff"), url("../fonts/avenir/2D03DF_3_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: Avenir-Roman;
-  font-weight: normal;
-  font-size: normal;
-  src: url("../fonts/avenir/2D03DF_0_0.eot");
-  src: url("../fonts/avenir/2D03DF_0_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_0_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_0_0.woff") format("woff"), url("../fonts/avenir/2D03DF_0_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-Italic';
-  font-weight: normal;
-  font-style: italic;
-  src: url("../fonts/avenir/2D03DF_A_0.eot");
-  src: url("../fonts/avenir/2D03DF_A_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_A_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_A_0.woff") format("woff"), url("../fonts/avenir/2D03DF_A_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: AvenirLT-Medium;
-  font-weight: 600;
-  font-style: normal;
-  src: url("../fonts/avenir/2D03DF_1_0.eot");
-  src: url("../fonts/avenir/2D03DF_1_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_1_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_1_0.woff") format("woff"), url("../fonts/avenir/2D03DF_1_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-MediumItalic';
-  font-weight: 600;
-  font-style: italic;
-  src: url("../fonts/avenir/2D03DF_2_0.eot");
-  src: url("../fonts/avenir/2D03DF_2_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_2_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_2_0.woff") format("woff"), url("../fonts/avenir/2D03DF_2_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: Avenir-Heavy;
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/avenir/2D03DF_B_0.eot");
-  src: url("../fonts/avenir/2D03DF_B_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_B_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_B_0.woff") format("woff"), url("../fonts/avenir/2D03DF_B_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-HeavyItalic';
-  font-weight: 700;
-  font-style: italic;
-  src: url("../fonts/avenir/2D03DF_5_0.eot");
-  src: url("../fonts/avenir/2D03DF_5_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_5_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_5_0.woff") format("woff"), url("../fonts/avenir/2D03DF_5_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-Black';
-  font-weight: 800;
-  font-style: normal;
-  src: url("../fonts/avenir/2D03DF_4_0.eot");
-  src: url("../fonts/avenir/2D03DF_4_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_4_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_4_0.woff") format("woff"), url("../fonts/avenir/2D03DF_4_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-BlackItalic';
-  font-weight: 800;
-  font-size: italic;
-  src: url("../fonts/avenir/2D03DF_8_0.eot");
-  src: url("../fonts/avenir/2D03DF_8_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_8_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_8_0.woff") format("woff"), url("../fonts/avenir/2D03DF_8_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-BlackItalic';
-  font-weight: 900;
-  font-size: italic;
-  src: url("../fonts/avenir/2D03DF_8_0.eot");
-  src: url("../fonts/avenir/2D03DF_8_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_8_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_8_0.woff") format("woff"), url("../fonts/avenir/2D03DF_8_0.ttf") format("truetype"); }
-
-@font-face {
-  font-family: 'AvenirLT-Black';
-  font-weight: 900;
-  font-style: normal;
-  src: url("../fonts/avenir/2D03DF_4_0.eot");
-  src: url("../fonts/avenir/2D03DF_4_0.eot?#iefix") format("embedded-opentype"), url("../fonts/avenir/2D03DF_4_0.woff2") format("woff2"), url("../fonts/avenir/2D03DF_4_0.woff") format("woff"), url("../fonts/avenir/2D03DF_4_0.ttf") format("truetype"); }
-
-
-@font-face {
   font-family:'Glyphicons Regular';
   src:url('../fonts/glyphicons/glyphicons-regular-v192.eot');
   src:url('../fonts/glyphicons/glyphicons-regular-v192.eot?#iefix') format('embedded-opentype'),url('../fonts/glyphicons/glyphicons-regular-v192.woff2') format('woff2'),url('../fonts/glyphicons/glyphicons-regular-v192.woff') format('woff'),url('../fonts/glyphicons/glyphicons-regular-v192.ttf') format('truetype'),url('../fonts/glyphicons/glyphicons-regular-v192.svg#glyphiconsregular') format('svg')}
@@ -242,10 +32,10 @@ html {
 
 
 p, h1, h2, h3, h4, h5, h6, a {
-  font-family: 'pan-docs';
+  font-family: 'TabletGothic';
 }
 p, h1, h2, h3, h4, h5, h6, a, ol, ul {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-weight:normal;
 }
 .enablement a {
@@ -298,11 +88,11 @@ h4.info > a.external[href]::after {
   opacity: 1;
 }
 h1.main-headline {
-  font-family: Avenir-Heavy;
+  font-family: 'TabletGothic-Bold';
 }
 h1.title {
-  font-family: 'AvenirLT-Black';
-  font-size: 42px;
+  font-family: 'TabletGothic-Bold';
+  font-size: 50px;
   color: #313945;
   line-height: 46px;
   margin-bottom: 30px;
@@ -310,8 +100,9 @@ h1.title {
   margin-left:15px;
 }
 h2.subtitle {
-  font-family: Avenir-Light;
-  font-size: 36px;
+  font-family: 'TabletGothic';
+  font-weight:bold;
+  font-size: 32px;
   color: #313945;
   line-height: 43px;
   margin-bottom: 30px;
@@ -339,29 +130,36 @@ p{
 
 h1{
   margin-top: 35px;
-  font-family: Avenir-Heavy;
+  font-family: 'TabletGothic-Bold';
   color: #313945;
+  font-size: 50px;
   }
 
 h2 {
   margin-top: 30px;
-  font-family: Avenir-Heavy;
-  color: #313945;
+  font-family: 'TabletGothic';
+  color: #050505;
+  font-size: 32px;
+  font-weight: bold;
   }
 
 h3 {
   margin-top: 30px;
-  font-family: Avenir-Heavy;
-  color: #44525E;
+  font-family: 'TabletGothic';
+  color: #666868;
+  font-size: 25px;
+  font-weight: bold;
   }
 h4 {
   margin-top: 25px;
-  font-family: Avenir-Heavy;
-  color: #313945;
+  font-family: 'TabletGothic';
+  color: #8f9192;
+  font-size: 22px;
+  font-weight: bold;
 }
 h3.changelog {
-  font-family: Avenir-Heavy;
-  font-size: 24px;
+  font-family: 'TabletGothic';
+  font-size: 25px;
   color: #313945;
   line-height: 18px;
   margin-bottom: 25px;
@@ -415,8 +213,8 @@ hr {
   text-align: ;
 }
 .article-subhead {
-  font-family: Avenir-Heavy;
-  font-size: 16px;
+  font-family: 'Adelle-Italic';
+  font-size: 25px;
   color: #44525E;
   line-height: 24px;
 }
@@ -444,7 +242,7 @@ hr {
 }
 
 body {
-  font-family: Avenir-Roman;
+  font-family: 'TabletGothic';
   font-size: 16px;
   line-height: 1.65em;
   -webkit-font-smoothing: antialiased;
@@ -535,7 +333,7 @@ a.not-allowed:hover {
   margin-bottom: 14px;
 }
 .related li a{
-  font-family: Avenir-Roman;
+  font-family: 'TabletGothic';
   font-size: 13px;
   color: #0093c9;
   line-height: 18px;
@@ -759,7 +557,6 @@ code.sftp-command::before {
   font-weight: normal;
 }
 .popover-content {
-  font-family: pan-docs !important;
   font-size: smaller;
 }
 
@@ -887,7 +684,7 @@ li.create-account {
 
 
 
-  font-family: Avenir-Heavy;
+  font-family: 'TabletGothic';
   font-size: 14px;
   letter-spacing: 2px;
   line-height: 1;
@@ -1089,7 +886,7 @@ span#changelog-rsaquo {
     top:87px;
 }
 .navbar-nav .dropdown:hover .dropdown-menu li > a {
-  font-family: Avenir-Heavy;
+  font-family: 'TabletGothic';
   font-size: 14px;
   color: #fff;
   letter-spacing: 0px;
@@ -2424,7 +2221,7 @@ h3.panel-drop-title {
   color: #000 !important;
   font-weight: 700;
   text-transform: uppercase;
-  font-family: Avenir-Heavy;
+  font-family: 'TabletGothic';
   font-size: 14px;
   line-height: 1;
 }
@@ -3373,7 +3170,7 @@ display: block;
   color:#44525E !important;
   font-size: 18px;
   line-height: 29px;
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   }
 .alert-warning{
   color: black !important;
@@ -3388,7 +3185,7 @@ display: block;
   color:#44525E !important;
   font-size: 18px;
   line-height: 29px;
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
 }
 .alert-warning h5 {
   color: #31708f;
@@ -3410,7 +3207,7 @@ display: block;
   color:#44525E !important;
   font-size: 18px;
   line-height: 29px;
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
 
 }
 .alert-danger h4 {
@@ -3433,7 +3230,7 @@ display: block;
     color: #3c763d !important;
     font-size: 18px;
     line-height: 29px;
-    font-family: Avenir-Light;
+    font-family: 'TabletGothic';
 }
 .alert-success h4 {
   font-size: 28px;
@@ -3475,14 +3272,6 @@ display: block;
   padding-left: 10px;
 }
 
-.gsc-control-cse, .gsc-control-cse .gsc-table-result {
-  font-family: 'pan-docs' !important;
-  font-size: 16px !important;
-}
-
-.gs-result .gs-title, .gs-result .gs-title {
-  font-size: 20px !important;
-}
 .manual-toc a {
   background: #fff;
   color: #44525E;
@@ -3875,7 +3664,7 @@ p.depbar>a:hover{
   font-size: 12px;
   letter-spacing: 1px;
   font-weight: 800;
-  font-family: Avenir-Heavy;
+  font-family: 'TabletGothic';
   text-transform: uppercase;
   color: #DDE5E7;
   line-height: 10px;
@@ -4092,7 +3881,7 @@ p.depbar>a:hover{
     padding: 6px;
     line-height: 16px;
     font-weight: 500;
-    font-family: AvenirLT-Medium;
+    font-family: 'TabletGothic-SemiBold';
   }
   #footer .footer-menus ul li a:hover {
     color: #EFD01B;
@@ -4139,7 +3928,7 @@ p.depbar>a:hover{
     color: #B5C0C3;
     font-size: 12px;
     line-height: 1.2;
-    font-family: Avenir-Roman;
+    font-family: 'TabletGothic';
   }
 
 
@@ -4165,7 +3954,7 @@ p.depbar>a:hover{
     max-width: 212px;
     white-space: nowrap;
     font-weight: 800;
-    font-family: Avenir-Heavy;
+    font-family: 'TabletGothic';
   }
   #footer  .content>a:after {
     background: none;
@@ -4199,7 +3988,7 @@ p.depbar>a:hover{
     color: white;
     font-size: 12px;
     line-height: 20px;
-    font-family: AvenirLT-Medium;
+    font-family: 'TabletGothic-SemiBold';
   }
   @media (max-width: 48.0525em) {
     #footer #block-block-4 {
@@ -4283,7 +4072,7 @@ p.depbar>a:hover{
     letter-spacing: 1px;
     font-size: 14px;
     line-height: 20px;
-    font-family: Avenir-Heavy;
+    font-family: 'TabletGothic';
   }
   @media (min-width: 64em) and (max-width: 78.125em) {
     .social-links a.blog-link {
@@ -4311,7 +4100,7 @@ p.depbar>a:hover{
   }
   #footer-subscribe h4, #footer-subscribe .region-content .block-block h2.block__title, .region-content .block-block #footer-subscribe h2.block__title, #footer-subscribe .view-resources .view-filters .views-exposed-widget>label, .view-resources .view-filters #footer-subscribe .views-exposed-widget>label {
     font-size: 20px;
-    font-family: Avenir-Light;
+    font-family: 'TabletGothic';
     line-height: 30px;
     margin-bottom: 18px;
     letter-spacing: 0px;
@@ -4324,7 +4113,7 @@ p.depbar>a:hover{
     line-height: 1;
     letter-spacing: 1px;
     font-weight: 800;
-    font-family: Avenir-Heavy;
+    font-family: 'TabletGothic';
     text-transform: uppercase;
   }
   @media (max-width: 25em) {
@@ -4335,7 +4124,7 @@ p.depbar>a:hover{
   #footer-subscribe p {
     font-size: 14px;
     line-height: 20px;
-    font-family: Avenir-Roman;
+    font-family: 'TabletGothic';
     margin-bottom: 26px;
   }
   @media (min-width: 48.0625em) and (max-width: 64em) {
@@ -4390,7 +4179,7 @@ p.depbar>a:hover{
     border: none !important;
     background: #EFD01B !important;
     border: 1px solid #EFD01B;
-    font-family: Avenir-Heavy !important;
+    font-family: 'TabletGothic' !important;
     color: #111 !important;
     font-size: 14px !important;
     text-transform: uppercase;
@@ -4424,7 +4213,7 @@ p.depbar>a:hover{
     background: #EFD01B;
     text-align: center;
     color: #181D21;
-    font-family: 'Avenir-Roman';
+    font-family: 'TabletGothic';
     bottom: 400px;
     display: inherit;
     padding: 50px;
@@ -4434,7 +4223,7 @@ p.depbar>a:hover{
 }
   .office-hours h3 {
     font-weight: 800;
-    font-family: 'Avenir-Heavy';
+    font-family: 'TabletGothic';
     margin: 0 0 28px 0;
     font-size: 28px;
     color: #181D21;
@@ -4456,7 +4245,7 @@ p.depbar>a:hover{
   }
   .office-hours h4{
     font-size: 20px;
-    font-family: Avenir-Light;
+    font-family: 'TabletGothic';
     line-height: 30px;
     margin-bottom: 18px;
     letter-spacing: 0px;
@@ -4528,7 +4317,7 @@ a.cta {
   margin-bottom: 0;
   transition: 200ms all;
   font-weight: 800;
-  font-family: Avenir-Heavy;
+  font-family: 'TabletGothic';
   text-decoration: none;
   text-transform: uppercase;
   background: #000 !important;
@@ -4589,14 +4378,14 @@ a.cta.cta-black-on-yellow:after:hover {
 }
 .author-info__name{
   font-size: 24px;
-  font-family: Avenir-Heavy;
+  font-family: 'TabletGothic';
   line-height: 1.2;
   color:#313945;
   margin-top:10px;
 }
 .author-info__title {
   font-weight: 300;
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 18px;
   color: #44525E;
 }
@@ -4736,7 +4525,7 @@ a.topic-info-link {
   padding-left: 0;
 }
 .topic-info__title {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 20px;
   color: #0093c9;
   line-height: 25px;
@@ -4745,7 +4534,7 @@ a.topic-info-link {
 }
 
 .main-topic-info__title {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 32px;
   color: #0093c9;
   line-height: 32px;
@@ -4754,7 +4543,7 @@ a.topic-info-link {
 }
 
 .topic-info__description {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 14px;
   color: #313945;
   line-height: 1.5;
@@ -4766,7 +4555,7 @@ a.topic-info-link {
   margin-left: 25px;
 }
 .main-topic-info__description {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 16px;
   color: #313945;
   line-height: 1.5;
@@ -4819,7 +4608,7 @@ a.topic-info-link {
   flex:1;
 }
 .video-info__title {
-  font-family: Avenir-Heavy;
+  font-family: 'TabletGothic';
   margin-top: 0;
   font-size: 13px;
   color: #181D21;
@@ -4827,7 +4616,7 @@ a.topic-info-link {
   margin-bottom: 2px;
 }
 .video-info__description {
-  font-family: Avenir-Roman;
+  font-family: 'TabletGothic';
   font-size: 12px;
   color: #44525E;
   line-height: 17px;
@@ -4850,7 +4639,7 @@ a:focus {
   border: 1px solid #A4BBC1;
 }
 .subtopic-lists > h4 {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 22px;
 }
 .guide-cta__text {
@@ -4897,15 +4686,15 @@ a:focus {
 }
 
 .subtopic-groups > h3 {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 28px;
 }
 .topic-groups > h3 {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 28px;
 }
 .topic-groups > h2 {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
 }
 .subtopic-groups {
   background-image: linear-gradient(0deg, #DBE4E6 0%, #FFFFFF 100%);
@@ -4917,7 +4706,7 @@ a:focus {
   border: 1px solid #A4BBC1;
 }
 .hero-video__title {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 36px;
   color: #44525E;
   line-height: 43px;
@@ -4925,7 +4714,7 @@ a:focus {
   margin-top: 0;
 }
 .hero-video__guide-main-topic-title {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 32px;
   line-height: 43px;
   margin-bottom: 5px;
@@ -4934,7 +4723,7 @@ a:focus {
 
 }
 .hero-video__guide-cta-title {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 32px;
   line-height: 43px;
   margin-bottom: 5px;
@@ -4943,7 +4732,7 @@ a:focus {
 
 }
 .hero-video__guide-cta-subtitle {
-  font-family: AvenirLT-Medium;
+  font-family: 'TabletGothic-SemiBold';
   line-height: 20px;
   margin-bottom: 0px;
 
@@ -4956,7 +4745,7 @@ a:focus {
 
 }
 .hero-video__subtitle {
-  font-family: AvenirLT-Medium;
+  font-family: 'TabletGothic-SemiBold';
   font-size: 14px;
   color: #313945;
   line-height: 20px;
@@ -4967,7 +4756,7 @@ a:focus {
   padding-left: 18px;
 }
 .hero-video__bullets li{
-  font-family: Avenir-Roman;
+  font-family: 'TabletGothic';
   font-size: 14px;
   color: #44525E;
   line-height: 17px;
@@ -5018,7 +4807,7 @@ a:focus {
   display:inline-block;
   padding-bottom: 10px;
   border-bottom:1px solid #A4BBC1;
-  font-family: Avenir-Roman;
+  font-family: 'TabletGothic';
   font-size: 14px;
   color: #0093c9;
   line-height: 22px;
@@ -5061,7 +4850,7 @@ a:focus {
   display:inline-block;
   padding-bottom: 10px;
   border-bottom:1px solid #A4BBC1;
-  font-family: Avenir-Roman;
+  font-family: 'TabletGothic';
   font-size: 14px;
   color: #0093c9;
   line-height: 22px;
@@ -5090,14 +4879,14 @@ a:focus {
   margin:60px 0;
 }
 .helpful__text {
-  font-family: Avenir-Medium;
+  font-family: 'TabletGothic';
   font-size: 18px;
   color: #313945;
   line-height: 17px;
   margin-right: 10px;
 }
 .helpful__button {
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
   font-size: 18px;
   color: #313945;
   line-height: 17px;
@@ -5215,7 +5004,7 @@ a:focus {
     color:#EFD01B;
   }
   .navbar-nav .dropdown:hover .dropdown-menu li > a {
-    font-family: Avenir-Light !important;
+    font-family: 'TabletGothic' !important;
     font-size: 13px;
   }
   .navbar-nav .dropdown .dropdown-menu li {
@@ -5546,7 +5335,7 @@ div.navsearch-container {
 }
 .pantheon-workflows>h3 {
   margin-top: 15px;
-  font-family: Avenir-Light;
+  font-family: 'TabletGothic';
 }
 .pantheon-workflows:hover {
   background: #FFFFFF;
@@ -5577,7 +5366,7 @@ blockquote.block-info {
   border-left-color: #5bc0de;
   border-left-width: 5px;
   border-radius: 4px;
-  font-family: Avenir;
+  font-family: 'TabletGothic';
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
@@ -5592,7 +5381,7 @@ blockquote.block-success {
   border-left-color: #5cb85c;
   border-left-width: 5px;
   border-radius: 4px;
-  font-family: Avenir;
+  font-family: 'TabletGothic';
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
