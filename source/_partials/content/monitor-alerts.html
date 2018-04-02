@@ -1,5 +1,5 @@
-<h2>Assessing Alerts</h2>
-<p>Services like Pingdom  or New Relic Synthetics periodically reach out to sites with ping or HTTP requests to gauge availability. These types of tests can create false positives for a number of reasons, including:</p>
+<h2>False Alarms</h2>
+<p>Availability monitoring services (e.g., Pingdom, New Relic Synthetics) function by periodically reaching out to sites to gauge availability. Some failures in availability do not require action and can be considered false alarms, such as failures due to internet routing or idle containers.</p>
 
 <h3>Internet Routing</h3>
 <p>A temporary routing issue between a particular monitoring service endpoint and one of our CDN Points of Presence (POPs) can result in an alert. The internet is a big place, and there's a lot of potential for intermittent packet loss between any two points, depending in the route taken. A single loss of access from one point to another does not always correlate to an issue with the site itself.</p>
@@ -7,4 +7,4 @@
 <p>Tools like <a href="https://en.wikipedia.org/wiki/MTR_(software)" class="external">MTR</a> can help to diagnose a routing issue.</p>
 
 <h3>Idle Containers</h3>
-<p>As we discuss in our doc <a href="/docs/application-containers/#idle-containers">All About Application Containers</a>, containers will spin down after approximately twelve hours of idle time (for a live environment on a paid plan). A web request will trigger a "wake up" on the environment, which usually occurs within 30 seconds. Monitoring pings sent between the initial request and the completed spin-up may fail, but do not necessarily indicate an issue.</p>
+<p>Containers on Pantheon are automatically spun down following a period of inactivity, then spun back up once a web request is made. Monitoring pings sent between the initial request and the completed spin-up may fail, but do not necessarily indicate an issue. For details, see <a href="/docs/application-containers/#idle-containers">All About Application Containers</a>.</p>
