@@ -10,6 +10,10 @@ Cron will always run unless all jobs are specifically set to 'Off' via Elysia or
 
 Both Drupal core and many contributed modules have tasks that need to be performed on a regular basis. You can configure when and how often cron executes the tasks.
 
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">Containers on Pantheon are automatically spun down following a period of inactivity, then spun back up once a web request is made. Cron is _not_ run on idle containers that have been spun down. For details, see [All About Application Containers](/docs/application-containers/#idle-containers).</p></div>
+
 ## Pantheon Cron Execution
 Pantheon executes cron once an hour on every environment to allow Drupal to perform scheduled tasks. This generally occurs within 5 to 10 minutes of half past each hour: 4:30pm, 5:30pm, 6:30pm, etc.
 
@@ -96,11 +100,6 @@ You can also use [Terminus](/docs/terminus/) to see when cron was last run with 
 ```bash
 terminus drush <site>.<env> -- wd-show --type='cron'
 ```
-
-  <div class="alert alert-info">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Application containers will spin down after 1 hour of idle time (12 hours for the Live environment on a paid plan). Cron cannot run on an [idle container](/docs/application-containers/#idle-containers).
-  </p></div>
 
 ## Resources
 
