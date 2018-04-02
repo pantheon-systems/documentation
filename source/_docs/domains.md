@@ -139,16 +139,35 @@ The same technique works for single subdomain redirects. Just specify the path i
 
 #### Redirect From One Path to Another
 
+For single path:
+
 ```php
-// 301 Redirect from /old to /new.
-if (($_SERVER['REQUEST_URI'] == '/old') &&
-  // Check if Drupal or WordPress is running via command line
-  (php_sapi_name() != "cli")) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location: /new');
-  exit();
-}
+// 301 Redirect from /old to /new
+// Check if Drupal or WordPress is running via command line
+    if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
+        header('HTTP/1.0 301 Moved Permanently');
+        header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new');
+        exit();
+    }
 ```
+
+For multiple paths and redirects
+```php
+$redirects = array(
+    "/", 
+    "/old", 
+    "/another/path", 
+    "/old-path");
+
+// 301 Redirect from multiple paths
+// Check if Drupal or WordPress is running via command line
+    if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli")) {
+	header('HTTP/1.0 301 Moved Permanently');
+	header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new-path-for-all');
+	exit();
+    }
+```
+
 #### Redirect Multiple Subdomains to a Single Domain
 
 ```php
