@@ -56,7 +56,7 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
 
 
     # -r: Recurse into subdirectories
-    # -l: Check links
+    # -L: Check links
     # -v: Verbose output
     # -z: Compress during transfer
     # Other rsync flags may or may not be supported
