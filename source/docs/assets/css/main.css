@@ -37,6 +37,7 @@ p, h1, h2, h3, h4, h5, h6, a {
 p, h1, h2, h3, h4, h5, h6, a, ol, ul {
   font-family: 'TabletGothic';
   font-weight:normal;
+  letter-spacing: -0.3px;
 }
 .enablement a {
   text-decoration: none !important;
@@ -146,7 +147,7 @@ h2 {
 h3 {
   margin-top: 30px;
   font-family: 'TabletGothic';
-  color: #666868;
+  color: #424749;
   font-size: 25px;
   font-weight: bold;
   }
@@ -217,6 +218,7 @@ hr {
   font-size: 25px;
   color: #44525E;
   line-height: 24px;
+  letter-spacing: -0.2px;
 }
 
 .start {
@@ -611,7 +613,6 @@ code.sftp-command::before {
 }
 #navbar > ul > li{
   float: right;
-  text-transform: uppercase;
   padding: 25px 0;
 }
 @media screen and (min-width : 995px) {
@@ -675,18 +676,13 @@ li.create-account {
 .pio-docs-nav .navbar-brand,
 .pio-docs-nav .navbar-nav > li > a {
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: unset;
   color: white;
   padding: 13px 25px 10px;
   transition: 200ms all;
   background-color: transparent;
-
-
-
   font-family: 'TabletGothic';
-  font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 17px;
   line-height: 1;
 }
 
@@ -733,6 +729,10 @@ li.create-account {
       padding-top: 10px;
       padding-bottom: 10px;
   }
+  .pio-docs-nav .navbar-nav > li > a:hover {
+    text-decoration: none;
+    color: #efd01b !important;
+  }
   .collapse.in{
       display:block !important;
   }
@@ -742,7 +742,8 @@ li.create-account {
 }
 
 .pantheon-logo {
-  max-width: 215px;
+  max-height: 60px;
+  margin-left: 20px;
 }
 
 .pio-docs-nav .navbar-nav > li.dropdown > a:hover {
@@ -1274,7 +1275,6 @@ margin-bottom: 40px !important;  }
     color: #FFF;
     font-weight: 700;
     text-decoration: none;
-    text-transform: uppercase;
     white-space: nowrap;
   }
   .btn-pio:hover {
@@ -1403,7 +1403,6 @@ margin-bottom: 40px !important;  }
   .pio-docs-header h1 {
     font-size: 60px;
     line-height: 1;
-    text-transform: uppercase;
   }
 }
 
@@ -2059,7 +2058,6 @@ h1[id] {
   font-size: 12px;
   font-weight: bold;
   color: #959595;
-  text-transform: uppercase;
   letter-spacing: 1px;
   content: "Example";
 }
@@ -2220,7 +2218,6 @@ h3.panel-drop-title {
   text-decoration: none;
   color: #000 !important;
   font-weight: 700;
-  text-transform: uppercase;
   font-family: 'TabletGothic';
   font-size: 14px;
   line-height: 1;
@@ -2321,7 +2318,6 @@ a.btn-primary:hover:after  {
 .btn-primary-inverse, .btn-primary-inverse:visited, .btn-primary-inverse:focus {
   border-radius: 0;
   border: none;
-  text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 1px;
   transition: 200ms all;
@@ -4319,7 +4315,6 @@ a.cta {
   font-weight: 800;
   font-family: 'TabletGothic';
   text-decoration: none;
-  text-transform: uppercase;
   background: #000 !important;
   color: #fff !important;
   border: 2px solid #000;
@@ -4531,6 +4526,8 @@ a.topic-info-link {
   line-height: 25px;
   text-align: left;
   margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 
 .main-topic-info__title {
@@ -4720,7 +4717,8 @@ a:focus {
   margin-bottom: 5px;
   margin-top: 15px;
   color: #0093c9;
-
+  text-transform: uppercase;
+  font-weight: 500;
 }
 .hero-video__guide-cta-title {
   font-family: 'TabletGothic';
@@ -4780,6 +4778,8 @@ a:focus {
   display: flex;
   flex-flow: row wrap;
   position: relative;
+  margin-top: 20px;
+
 }
 .topic-docs {
 
@@ -4788,6 +4788,7 @@ a:focus {
     display: flex;
     flex-flow: row wrap;
     position: relative;
+    margin-top: 20px;
 
 }
 .topic-docs li {
@@ -4808,7 +4809,7 @@ a:focus {
   padding-bottom: 10px;
   border-bottom:1px solid #A4BBC1;
   font-family: 'TabletGothic';
-  font-size: 14px;
+  font-size: 17px;
   color: #0093c9;
   line-height: 22px;
 }
@@ -4851,7 +4852,7 @@ a:focus {
   padding-bottom: 10px;
   border-bottom:1px solid #A4BBC1;
   font-family: 'TabletGothic';
-  font-size: 14px;
+  font-size: 17px;
   color: #0093c9;
   line-height: 22px;
 }
@@ -5555,4 +5556,11 @@ td{
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
+}
+.pio-docs-nav .navbar-nav > li > a:hover, .pio-docs-nav .navbar-nav > .active > a, .pio-docs-nav .navbar-nav > .active > a:hover {
+  color: #EFD01B !important;
+  box-shadow: none !important;
+}
+#navbar .create-account a:hover {
+  color: #000 !important;
 }
