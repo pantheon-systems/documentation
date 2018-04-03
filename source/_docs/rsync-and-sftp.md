@@ -59,7 +59,7 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
     # -v: Verbose output
     # -l: copies symlinks as symlinks
     # -z: Compress during transfer
-    # --copy-unsafe-links: transforms symlinks into files when the reference is outside of the tree being copied
+    # --copy-unsafe-links: transforms symlinks into files when the symlink target is outside of the tree being copied
     # Other rsync flags may or may not be supported
     # (-a, -p, -o, -g, -D, etc are not).
 
