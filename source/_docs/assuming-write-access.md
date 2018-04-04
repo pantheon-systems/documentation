@@ -15,48 +15,63 @@ The best solution is to communicate with the maintainer of the module or plugin 
     <div class="alert alert-info">
     <h4 class="info">Note</h4><p markdown="1">We do not recommend creating symlinks over SFTP due to inconsistencies amongst clients. <br><br>The following is for Mac and Linux only. Windows users may refer to Microsoft documentation for opening [Command Prompt as an Administrator](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx) and [creating symlinks using mklink](https://technet.microsoft.com/en-us/library/cc753194.aspx){.external} or create symlinks within a virtual machine.</p></div>
 
-2. From your terminal, `cd` to the site code repository, and create a symlink for the standard files path:
+2. From your terminal, `cd` to the site code repository:
 
- ```bash
- # The first path will be used as the new file destination instead of whatever path the plugin assumed write access to
- ln -sf ./wp-content/uploads/new-directory ./wp-content/path/plugin-expects-to-write-to
- # Stage your changes
- git add .
- ```
+    ```bash
+    cd ~/sites/myawesomesite/ #Change this to your project directory.
+    ```
+
+3. Move the directory you want to replace with a symlink. This servers two purposes; backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
+
+    ```bash
+    mv ./wp-content/path/plugin-excpects-write-to ~/
+    ```
+
+    The command above moves the directory to your home folder `~/`. Replace this with your desired backup location.
+
+4. Create a symlink for the standard files path:
+
+    ```bash
+    # The first path will be used as the new file destination instead of whatever path the plugin assumed write access to
+    ln -s ./wp-content/uploads/new-directory ./wp-content/path/plugin-expects-to-write-to
+    ```
+
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
     <p markdown="1">
     The `ln` command is sensitive to the **working directory**, the folder your prompt is currently sitting in. The example above assumes you're in the main directory of your local git repository.
     </p>
-    <p markdown="1">
-    Always backup and remove the path or directory where you want to be replaced with symlink. Otherwise, the symlink will go inside that directory. 
-    </p>
     </div>
 
-3. Run `git status` to review your current index.
-4. Commit your changes:
+5. Stage your changes
 
- ```
- git commit -m "symlink non-standard files path to wp-content/uploads"
- ```
+    ```bash
+    git add .
+    ```
 
-5. Push the changes to Pantheon:
+6. Run `git status` to review your current index, then commit your changes:
 
- ```
- git push origin master
- ```
+    ```bash
+    git commit -m "symlink non-standard files path to wp-content/uploads"
+    ```
+
+7. Push the changes to Pantheon:
+
+    ```bash
+    git push origin master
+    ```
 
  Your commit can be seen in the Dev environments commit history. The plugin will now successfully write files within any environment, even when the Dev environment's connection mode is set to Git. In your previous configuration, the plugin would fail while in Git mode. You should not see the newly created files in the Dashboard as "ready to commit", as files are not version controlled.
-    
+
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
     <p markdown="1">
     In our example, we created the target directory of the symlink as ./wp-content/uploads/new-directory. Make sure this directory is created via SFTP if it does not exist yet.
     </p>
     </div>
-    
-6. Deploy to Test and confirm results.
-7. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
+
+7. Deploy to Test and confirm results.
+8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
 ## Troubleshooting
 
