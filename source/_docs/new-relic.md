@@ -60,8 +60,9 @@ To disable New Relic for anonymous traffic on Drupal-based sites, add the follow
 if (function_exists('newrelic_ignore_transaction')) {
   $skip_new_relic = TRUE;
   // Capture all transactions for users with a PHP session.
+  // (SSESS is the session cookie prefix when PHP session.cookie_secure is on.)
   foreach (array_keys($_COOKIE) as $cookie) {
-    if (substr($cookie, 0, 4) == 'SESS') {
+    if (substr($cookie, 0, 4) == 'SESS' || substr($cookie, 0, 5) == 'SSESS') {
       $skip_new_relic = FALSE;
     }
   }
