@@ -114,10 +114,11 @@ The text challenge to pre-provision HTTPS on Pantheon requires adding a `.well-k
 
 Pantheon requests new certificates frequently in order to add domains to existing certificates. This can potentially expose  organizations managing many domains to Let's Encrypt rate limits. While sites hosted on Pantheon are not subject to these lower limits, sites hosted off the platform may experience request failures.
 
-If you encounter rate limits we recommend either of two approaches:
+If you encounter rate limits, we recommend the following approaches:
 
-1. [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform){.external}.
-2. Add your apex domain (e.g., `example.edu`) to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines){.external}, which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
+- [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform){.external}.
+- Request that your apex domain (e.g., `example.edu`) be added to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines){.external}, which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
+- Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/){.external} as a workaround. 
 
 ## Glossary
 ### HTTPS
