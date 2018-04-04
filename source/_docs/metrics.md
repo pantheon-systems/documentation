@@ -54,5 +54,5 @@ Yes! Access to metrics via Terminus is currently available as an alpha command, 
 
 ## See Also
 - [Traffic Limits and Overages](/docs/traffic-limits/)
-- [Platform Resources by Plan](/docs/platform-resources/)
-- [Select a Plan](/docs/select-plan/)
+- [Manage Plans in the Site Dashboard](/docs/site-plan/)
+- [New Site Plans FAQs](/docs/new-plans-faq/)

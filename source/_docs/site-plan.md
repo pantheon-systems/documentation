@@ -8,8 +8,13 @@ tags: [billing]
 2. If the site is currently on a Free plan, you will see an **Upgrade** button next to the site name. Otherwise, the current plan is shown in green.
 
 Plan changes take immediate effect. The associated card will be charged or credited a prorated amount upon upgrade or downgrade.
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).</p></div>
+
 ### Roles & Permissions
-The permission to manage a site's plan is granted only to the roles of **Site Owner** / **User in Charge** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page.
+The permission to manage a site's plan is granted only to the roles of **Site Owner** / **User in Charge** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see <a href="/docs/change-management/#site-level-roles-and-permissions" data-proofer-ignore>Role-Based Permissions & Change Management</a>.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -62,7 +67,9 @@ For Redis and Solr, the following code changes are required before the feature c
 ### Free Plans
 [Custom domains](/docs/domains/#custom-domains) are not available to Free plans. Downgrading to a Free plan will automatically delete existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
-## Upgrades and Downgrades
+Downgrading to a Free plan will disable automatic backups. You will be able to create backups manually. For details, see [Backups Tool](/docs/backups/).
+
+## Change Site Plan
 Review the [previous section](#considerations) on feature availability before switching plans to Free or Basic. This applies to upgrades and downgrades alike.
 ### Switch Current Plan
 1. Go to the Site Dashboard.
@@ -121,8 +128,7 @@ The Site Owner will receive an email confirmation of this change, a new invoice 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
 ## See Also
-
-* [Launch Essentials](/docs/guides/launch/)
-* [Account Billing in the User Dashboard](/docs/account-billing/)
-* [Billing in the Site Dashboard](/docs/site-billing/)
-* [Pageview Limits and Overages](/docs/pageview-limits/)
+- [Billing in the Site Dashboard](/docs/site-billing/)
+- [Account Billing in the User Dashboard](/docs/account-billing/)
+- [Traffic Limits and Overages](/docs/traffic-limits/)
+- [New Site Plans FAQs](/docs/new-plans-faq/)

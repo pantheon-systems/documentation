@@ -53,7 +53,7 @@ You can access New Relic Pro directly from the Site Dashboard, by clicking on **
 
 
 ### Can I downgrade my site to a Basic plan?
-Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to Basic plan level. For more information, see [Plans in the Site Dashboard](/docs/site-plan#basic-plan-considerations).
+Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to Basic plan level. For more information, see [Manage Plans in the Site Dashboard](/docs/site-plan/#basic-plans).
 
 ## Billing Tasks
 

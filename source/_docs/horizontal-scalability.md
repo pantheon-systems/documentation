@@ -4,7 +4,7 @@ description: Learn about scaling web applications and architecture of every Pant
 tags: [infrastructure]
 categories: []
 ---
-Pantheon's distributed infrastructure facilitates horizontal scalability through the automated process of provisioning additional lightweight containers. This allows us to take sites from hundreds of pageviews to hundreds of millions of pageviews without downtime.
+Pantheon's distributed infrastructure facilitates horizontal scalability through the automated process of provisioning additional lightweight containers. This allows us to take sites from hundreds of pages served to hundreds of millions without downtime.
 
 ## Vertical vs. Horizontal Scalability
 
