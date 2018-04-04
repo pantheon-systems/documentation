@@ -448,6 +448,28 @@ if (defined( "PANTHEON_BINDING" )) {
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
 
+<hr>
+
+## WordPress Themes
+
+### [Jupiter](https://themes.artbees.net/pages/jupiter-wordpress-theme-create-wordpress-websites/)
+
+**Issue**: This theme presents a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
+
+**Solution**: The form can be disabled by adding the following to `wp-config.php`:
+
+```php
+/** Changes to disable Jupiter theme FTP form */
+define('FS_METHOD', 'direct');
+define('FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
+define('FS_CHMOD_FILE', ( 0755 & ~ umask() ) );
+define('FTP_BASE', DIR);
+define('FTP_CONTENT_DIR', DIR .'/wp-content/');
+define('FTP_PLUGIN_DIR', DIR .'/wp-content/plugins/');
+```
+
+<hr>
+
 ## WordPress Functions
 
 ### [add_management_page()](https://developer.wordpress.org/reference/functions/add_management_page/)
