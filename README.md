@@ -30,3 +30,5 @@ Fork and clone this repository. Issue pull requests one document at a time.
      ```bash
      vagrant ssh -- -t 'cd /vagrant; fuser -k -n tcp 8000;grunt watch & ./bin/sculpin generate --server --watch'
      ```
+### Troubleshooting 
+For newer versions of Vagrant you may need to specify Virtualbox with `vagrant up --provider=virtualbox`
