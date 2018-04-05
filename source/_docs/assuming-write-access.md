@@ -21,7 +21,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
     cd ~/sites/myawesomesite/ #Change this to your project directory.
     ```
 
-3. Move the directory you want to replace with a symlink. This servers two purposes; backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
+3. Move the directory you want to replace with a symlink. This serves two purposes; backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
 
     ```bash
     mv ./wp-content/path/plugin-excpects-write-to ~/
