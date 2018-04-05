@@ -5,7 +5,7 @@ title: Guides
 permalink: docs/guides/
 description: Pantheon step-by-step guides covering platform integrations, performance, workflows, and more.
 ---
-<h1 style="margin-top:0px;font-family: 'AvenirLT-Black';">Guides</h1>
+<h1 style="margin-top:0px;font-family: 'TabletGothic-Bold';">Guides</h1>
 <div class="flex-panel-group">
   <div class="flex-panel-item-guides-landing">
       <div class="flex-panel-body-pantheon-workflows">

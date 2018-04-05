@@ -33,6 +33,7 @@ module.exports = function(grunt) {
             'source/docs/assets/node_modules/bootstrap/dist/css/bootstrap.min.css',
             'source/docs/assets/css/main.css',
             'source/docs/assets/fonts/pan-docs-icons/css/pan-docs.css',
+            'source/docs/assets/fonts/MyFontsWebfontsKit/MyFontsWebfontsKit.css',
           ],
         }
       }
