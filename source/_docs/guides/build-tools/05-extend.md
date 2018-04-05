@@ -51,7 +51,7 @@ The next section will be done from the command line, to prepare your local:
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#export-var1">Copy</button>
       <figure><pre id="export-var1"><code class="command bash" data-lang="bash">export SITE=pantheon-d8-composer-project
-      export ENV=pr-slogan</code></pre></figure>
+      export ENV=ci-4</code></pre></figure>
     </div>
 
 ## Install a Contrib Module
