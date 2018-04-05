@@ -52,15 +52,19 @@ Substitute your target environment and site UUID to connect; copying/pasting thi
     rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
     # To Download
-    rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
+    rsync -rvlz --copy-unsafe-links --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
 
 
     # -r: Recurse into subdirectories
-    # -l: Check links
     # -v: Verbose output
+    # -l: copies symlinks as symlinks
+    # -L: transforms symlinks into files.
     # -z: Compress during transfer
+    # --copy-unsafe-links: transforms symlinks into files when the symlink target is outside of the tree being copied
     # Other rsync flags may or may not be supported
     # (-a, -p, -o, -g, -D, etc are not).
+
+Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsync){.external} to learn more.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
