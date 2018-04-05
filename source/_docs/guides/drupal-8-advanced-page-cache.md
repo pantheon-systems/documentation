@@ -96,12 +96,12 @@ Now we'll look at HTTP Headers.
 
   ![node/add/article](/source/docs/assets/images/guides/drupal-8-advanced-page-cache/img2-node-add-article.png)
 
-2. Use `curl -I` to view the headers returned from that page:
+2. Use `curl -IH` to view the headers returned from that page:
 
     ```
-    curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
+    curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
     ```
-    
+
     The first request you will see in the list is the initial HTML response. All of the subsequent requests for assets like CSS and images happen after this first HTML response kicks things off:
 
     ```
@@ -138,7 +138,7 @@ Now we'll look at HTTP Headers.
     content-length: 10497
     ```
 
-    You can also view headers in a web browser. In an another browser (or a [Chrome incognito window](https://support.google.com/chrome/answer/95464){.external} or [Firefox Private Window](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history#w_how-do-i-open-a-new-private-window){.external}), open the article you just created. In your browser's page inspector, you can view the HTTP requests made by the page. You may need to refresh the page to see all the network requests.
+    You can also view headers in a web browser if you have a browser extension to add the HTTP debugging request header, `Pantheon-Debug`, with a value of `1`. In an another browser (or a [Chrome incognito window](https://support.google.com/chrome/answer/95464){.external} or [Firefox Private Window](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history#w_how-do-i-open-a-new-private-window){.external}), open the article you just created. In your browser's page inspector, you can view the HTTP requests made by the page. You may need to refresh the page to see all the network requests.
 
     By clicking on the first request we can see more detailed information like the HTTP headers.
 
@@ -155,7 +155,7 @@ The `Surrogate-Key-Raw` header tell us all of the Drupal elements that comprise 
 The `Age` header tells us the number of seconds that the page has been cached. If you curl again you should see the age number go up.
 
 ```bash
-curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
+curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
 surrogate-key-raw: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_emit_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous http_response node:1 node_view rendered taxonomy_term:1 user:0 user:1 user_view
 age: 40
 ```
@@ -167,7 +167,7 @@ From this point on, we'll trim the output of the `curl` commands to only show th
    ![Drupal 8 taxonomy screen](/source/docs/assets/images/guides/drupal-8-advanced-page-cache/img5-taxonomy-term-1.png)
 
    ```bash
-   curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+   curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
    Surrogate-Key-Raw: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_emit_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.taxonomy_term http_response node:1 node_emit_list node_view rendered taxonomy_term:1 taxonomy_term_view user:1 user_view
    Age: 0
    ```
@@ -177,7 +177,7 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 2. Curl again and the age will go up:
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   age: 15
   ```
 
@@ -188,7 +188,7 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 4. And look at its headers:
 
     ```bash
-    curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
+    curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
     surrogate-key-raw: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_emit_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous http_response node:2 node_view rendered user:0 user:1
     age: 0
     ```
@@ -196,7 +196,7 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 5. The age will go up if you curl again.
 
     ```bash
-    curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
+    curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
     age: 18
     ```
 
@@ -207,34 +207,34 @@ From this point on, we'll trim the output of the `curl` commands to only show th
 7. Check the age on our three pages:
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
   age: 267
   ```
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   age: 256
   ```
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
   age: 165
   ```
 
 8. Now click the button to save node 1 in your browser. And then curl those three pages again:
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/1
   age: 0
   ```
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   age: 0
   ```
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/node/2
   age: 246
   ```
 
@@ -251,7 +251,7 @@ What if we added a new node that used taxonomy term 1? We would want the listing
 2. And curl the taxonomy listing page.
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   Age: 60
   ```
 
@@ -355,12 +355,12 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 7. Now whenever you add content, the referenced taxonomy term pages are automatically cleared. To test, check on the age of your taxonomy listing again by curling a few times.
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   Age: 0
   ```
 
   ```bash
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   Age: 5
   ```
 
@@ -371,7 +371,7 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 9. Now curl again:
 
   ```
-  curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+  curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
   Age: 0
   ```
 
@@ -414,7 +414,7 @@ The code we added clears all references to each taxonomy term every time a node 
 6. Curl the listing page a few times again:
 
     ```bash
-    curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+    curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
     Surrogate-Key-Raw: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_emit_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.taxonomy_term http_response node:1 node:3 node:4 node:5 node:6 node_view rendered taxonomy-listing:1 taxonomy_term:1 taxonomy_term_view user:1 user_view
     Age: 8
     ```
@@ -435,7 +435,7 @@ The code we added clears all references to each taxonomy term every time a node 
     ![Node add form](/source/docs/assets/images/guides/drupal-8-advanced-page-cache/img13-node-add-article-3.png)
 
     ```bash
-    curl -I http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
+    curl -IH "Pantheon-Debug:1" http://dev-$TERMINUS_SITE.pantheonsite.io/taxonomy/term/1
     Age: 0
     ```
 
