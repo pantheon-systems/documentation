@@ -25,7 +25,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
     <figure><pre id="circle-token"><code class="command bash" data-lang="bash">export CIRCLE_TOKEN=[REDACTED]</code></pre></figure>
     </div>
 
-2. Create a [GitHub personal access token](https://github.com/settings/tokens){.external} and export the value to the `GITHUB_TOKEN` environment variable (replace `[REDACTED]`):
+2. Create a [GitHub personal access token](https://github.com/settings/tokens){.external} with `repo` and `delete_repo` scopes, and export the value to the `GITHUB_TOKEN` environment variable (replace `[REDACTED]`):
 
     <div class="copy-snippet">
     <button class="btn btn-default btn-clippy" data-clipboard-target="#github-token">Copy</button>
