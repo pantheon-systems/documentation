@@ -1,6 +1,6 @@
 ---
 title: Git FAQs
-description: Answers to commonly asked questions about Git, Drupal 8, Drupal 7, Drupal 6 and Pantheon.
+description: Answers to commonly asked questions about Git, Drupal, WordPress and Pantheon.
 tags: [git]
 categories: []
 contributors: mrfelton
