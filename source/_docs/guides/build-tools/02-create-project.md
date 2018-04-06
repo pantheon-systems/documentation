@@ -25,13 +25,13 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
     <figure><pre id="circle-token"><code class="command bash" data-lang="bash">export CIRCLE_TOKEN=[REDACTED]</code></pre></figure>
     </div>
 
-2. Create a [GitHub personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/){.external} and export the value to the `GITHUB_TOKEN` environment variable (replace `[REDACTED]`):
+2. Create a [GitHub personal access token](https://github.com/settings/tokens){.external} with `repo` and `delete_repo` scopes, and export the value to the `GITHUB_TOKEN` environment variable (replace `[REDACTED]`):
 
     <div class="copy-snippet">
     <button class="btn btn-default btn-clippy" data-clipboard-target="#github-token">Copy</button>
     <figure><pre id="github-token"><code class="command bash" data-lang="bash">export GITHUB_TOKEN=[REDACTED]</code></pre></figure>
     </div>
-    
+
     <div class="alert alert-info">
       <h4 class="info">Note</h4>
       <p markdown="1">Github and Terminus tokens are stored in CircleCI as environment variables. If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app){.external}.</p>
@@ -86,7 +86,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
      The following error occurs when running `terminus build:project-create` before authenticating your session with Terminus:
 
      ```
-     BuildToolsCommand.php line 166:  
+     BuildToolsCommand.php line 166:
          The site name exampleuniquesitename is already taken on Pantheon.
      ```
 

@@ -71,7 +71,7 @@ The master branch is automatically built and deployed to the Dev environment. Fe
        </div>
        <div id="understand-builds" class="collapse">
          <div class="panel-inner" markdown="1">
-         As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Multidev site URL (e.g., `pr-slogan-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
+         As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Multidev site URL (e.g., `ci-4-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
 
          ![Passed Pull Request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
 
