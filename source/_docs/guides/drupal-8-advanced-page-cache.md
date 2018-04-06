@@ -1,10 +1,9 @@
 ---
 title: Setting and Clearing Custom Cache Tags in Drupal 8
 description: Learn how to use Views Cache Tags module along with custom code to control Pantheon Advanced Page Cache.
-tags: []
-categories: []
+tags: [moreguides]
+categories: [drupal]
 type: guide
-image:
 permalink: docs/guides/:basename/
 contributors:
   - stevector
@@ -138,7 +137,7 @@ Now we'll look at HTTP Headers.
     content-length: 10497
     ```
 
-    You can also view headers in a web browser if you have a browser extension to add the HTTP debugging request header, `Pantheon-Debug`, with a value of `1`. In an another browser (or a [Chrome incognito window](https://support.google.com/chrome/answer/95464){.external} or [Firefox Private Window](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history#w_how-do-i-open-a-new-private-window){.external}), open the article you just created. In your browser's page inspector, you can view the HTTP requests made by the page. You may need to refresh the page to see all the network requests.
+    You can also view headers in a web browser, if you have a browser extension to add the HTTP debugging request header, `Pantheon-Debug`, with a value of `1` (here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header){.external} and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header){.external}). In an another browser (or a [Chrome incognito window](https://support.google.com/chrome/answer/95464){.external} or [Firefox Private Window](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history#w_how-do-i-open-a-new-private-window){.external}), open the article you just created. In your browser's page inspector, you can view the HTTP requests made by the page. You may need to refresh the page to see all the network requests.
 
     By clicking on the first request we can see more detailed information like the HTTP headers.
 
