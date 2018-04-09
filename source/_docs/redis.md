@@ -16,11 +16,11 @@ Most website frameworks like Drupal and WordPress use the database to cache inte
 Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
 ## Enable Redis
-All plans except for a Basic plan can use Redis. Redis is available to Free site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
+All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
 | Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
 | ------------- | ------- |
-| Free          | ✓       |
+| Sandbox       | ✓       |
 | Basic         |         |
 | Performance   | ✓       |
 | Elite         | ✓       |

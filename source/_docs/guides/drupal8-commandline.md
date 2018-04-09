@@ -124,7 +124,7 @@ At this point you are probably tired of replacing `steve-site-d8` in every comma
 
 We are going to download and enable modules from the `devel` package. These modules are helpful while a site is under construction. You can read more about [this package of modules on drupal.org](https://www.drupal.org/project/devel).
 
-You may want to remove these modules after you launch your site, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live. For this exercise on a Free site, it is fine to have the modules installed in all three environments.
+You may want to remove these modules after you launch your site, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live. For this exercise on a Sandbox site, it is fine to have the modules installed in all three environments.
 
 <div class="alert alert-info">
   <h4 class="info">Note</h4>

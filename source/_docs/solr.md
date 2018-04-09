@@ -4,7 +4,7 @@ description: Detailed information on using Apache Solr on your Pantheon Drupal o
 tags: [addons]
 categories: []
 ---
-Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including Free, on all environments. No permission or action is required from Pantheon to use Solr.
+Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including Sandbox, on all environments. No permission or action is required from Pantheon to use Solr.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
@@ -13,11 +13,11 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 
 ## Which Plans Can Use Solr?
 
-All plans except for a Basic plan can use Solr. Solr is available to Free site plans for developmental purposes, but Solr will not be available going live on a Basic plan.
+All plans except for a Basic plan can use Solr. Solr is available to Sandbox site plans for developmental purposes, but Solr will not be available going live on a Basic plan.
 
 | Plans         | Solr Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
 | ------------- | ------ |
-| Free          | ✓      |
+| Sandbox       | ✓      |
 | Basic         |        |
 | Performance   | ✓      |
 | Elite         | ✓      |

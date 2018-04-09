@@ -28,7 +28,7 @@ Welcome! This guide is designed to get you started on Pantheon.
 
 In this guide, you'll learn how to:
 
-- Create a Free site on Pantheon
+- Create a Sandbox site on Pantheon
 - Use separate Dev, Test, and Live environments in a best-practice development workflow
 - Perform on-server development via our SFTP Connection Mode
 

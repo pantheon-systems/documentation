@@ -12,7 +12,7 @@ Users added to the organization can access all sites associated with the organiz
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Free sites at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
+In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
 
 ###Organizations: Roles and Permissions
 
@@ -159,7 +159,7 @@ To change the owner of a paid site (e.g. Basic or Performance), you'll need to u
 
 Enterprise Organizations can assume ownership of a site by [contacting support](/docs/getting-support); however, Partner Organizations cannot own sites directly.
 
-For Free sites, within the Team modal, the current site owner can click **Make Owner** next to the site team member who should receive ownership of the site.
+For Sandbox sites, within the Team modal, the current site owner can click **Make Owner** next to the site team member who should receive ownership of the site.
 
 ## Manage a Site's Team
 

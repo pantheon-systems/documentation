@@ -5,7 +5,7 @@ tags: [billing]
 ---
 ## Access Site Plan
 1. Go to the Site Dashboard.
-2. If the site is currently on a Free plan, you will see an **Upgrade** button next to the site name. Otherwise, the current plan is shown in green.
+2. If the site is currently on a Sandbox plan, you will see an **Upgrade** button next to the site name. Otherwise, the current plan is shown in green.
 
 Plan changes take immediate effect. The associated card will be charged or credited a prorated amount upon upgrade or downgrade.
 
@@ -64,16 +64,16 @@ For Redis and Solr, the following code changes are required before the feature c
   </div>
 </div>
 
-### Free Plans
-[Custom domains](/docs/domains/#custom-domains) are not available to Free plans. Downgrading to a Free plan will automatically delete existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
+### Sandbox Plans
+[Custom domains](/docs/domains/#custom-domains) are not available to Sandbox plans. Downgrading to a Sandbox plan will automatically delete existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
-Downgrading to a Free plan will disable automatic backups. You will be able to create backups manually. For details, see [Backups Tool](/docs/backups/).
+Downgrading to a Sandbox plan will disable automatic backups. You will be able to create backups manually. For details, see [Backups Tool](/docs/backups/).
 
 ## Change Site Plan
-Review the [previous section](#considerations) on feature availability before switching plans to Free or Basic. This applies to upgrades and downgrades alike.
+Review the [previous section](#considerations) on feature availability before switching plans to Sandbox or Basic. This applies to upgrades and downgrades alike.
 ### Switch Current Plan
 1. Go to the Site Dashboard.
-2. If the site is currently on a Free plan, click the **Upgrade** button. Otherwise, click on the current plan (shown in green).
+2. If the site is currently on a Sandbox plan, click the **Upgrade** button. Otherwise, click on the current plan (shown in green).
 3. Click **Select** for the desired plan.
 
 ### Enter Billing Information

@@ -474,22 +474,22 @@ You can use markdown tables to describe availability based on service levels bef
 
 <div class="style-example" markdown="1">
 ## Enable Redis {.info}
-All plans except for a Basic plan can use Redis. Redis is available to Free site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
+All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
 | Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
 | ------------- | ------- |
-| Free          | ✓       |
+| Sandbox       | ✓       |
 | Basic         |         |
 | Performance   | ✓       |
 | Elite         | ✓       |
 <hr class="source-code">
 ```markdown
 ## Enable Redis
-All plans except for a Basic plan can use Redis. Redis is available to Free site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
+All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
 | Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
 | ------------- | ------- |
-| Free          | ✓       |
+| Sandbox       | ✓       |
 | Basic         |         |
 | Performance   | ✓       |
 | Elite         | ✓       |

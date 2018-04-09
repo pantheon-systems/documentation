@@ -73,7 +73,7 @@ Support is prioritized based on site service levels as follows:
 2. Business
 3. Performance
 4. Basic
-5. Free
+5. Sandbox
 
 ## Unsupported
 
