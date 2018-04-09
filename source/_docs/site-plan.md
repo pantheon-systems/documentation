@@ -42,12 +42,12 @@ For Redis and Solr, the following code changes are required before the feature c
 1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/){.external} plugin.
 2. Delete the `wp-content/object-cache.php` file.
 3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Redis.  
+4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Redis.
 #### Safely Uninstall & Disable Solr
 1. Uninstall the [Solr Search for WordPress](https://wordpress.org/plugins/solr-power/){.external} plugin.
 2. Ensure the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter){.external} is functioning.
 3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Solr.  
+4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Solr.
   </div>
   <!-- 2nd pane content -->
   <div role="tabpanel" class="tab-pane" id="drops" markdown="1">
@@ -55,17 +55,17 @@ For Redis and Solr, the following code changes are required before the feature c
 1. Disable the [Redis](https://www.drupal.org/project/redis){.external} module.
 2. Delete Redis configuration from `settings.php`.
 3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Redis.  
+4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Redis.
 #### Safely Uninstall & Disable Solr
 1. Disable the [Apache Solr Search](https://www.drupal.org/project/apachesolr){.external}, [Search API Solr Search](https://www.drupal.org/project/search_api_solr){.external}, and the [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr){.external} modules.
-2. Delete schema configurations from `settings.php`.
+2. Delete all schema configurations from `settings.php`.
 3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Solr.  
+4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Solr.
   </div>
 </div>
 
 ### Sandbox Plans
-[Custom domains](/docs/domains/#custom-domains) are not available to Sandbox plans. Downgrading to a Sandbox plan will automatically delete existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
+[Custom domains](/docs/domains/#custom-domains) are not available to Sandbox plans. Downgrading to a Sandbox plan will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
 Downgrading to a Sandbox plan will disable automatic backups. You will be able to create backups manually. For details, see [Backups Tool](/docs/backups/).
 
@@ -120,7 +120,7 @@ To associate an existing card from your account as the payment method for this s
 
 ### Confirm Your Purchase
 1. Make sure the **Plan** details are correct.
-2. Verify card shown in **Billing** details.
+2. Verify the card shown in **Billing** details.
 3. Click the **Submit** button.
 
 The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.

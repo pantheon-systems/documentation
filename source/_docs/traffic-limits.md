@@ -24,7 +24,7 @@ For sites on the Basic plan, overages are charged at the end of the month.
 For sites on Performance plans, we will notify you if your site exceeds the limit for the plan. If this happens on the following month, your site will be bumped to the appropriate plan. Overage protection keeps you from being charged in the first month of sustained traffic.
 
 ### How will Pantheon let me know my site will automatically be bumped to the next level?
-You will receive a communication that you are over on month one, and again on month two when the level change will be done.
+You will receive a communication that you are over on month one, and again on month two when the plan level is changed.
 
 ### What is “sustained traffic”?
 Sustained traffic is two consecutive months of being over the site plan limit.
