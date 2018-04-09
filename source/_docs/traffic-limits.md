@@ -59,7 +59,7 @@ Having high performance responses to crawlers is _beneficial_ to SEO, which is o
 ### What about load tests or penetration tests?
 Our onboarding team performs load tests prior to every Elite site launch, and we encourage customers to load test prior to releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
 
-However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform. This is one of the reasons we ask customers to [notify support](/docs/get-support/) of such tests as a courtesy.
+However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform. This is one of the reasons we ask customers to [notify support](/docs/getting-support/) of such tests as a courtesy.
 
 ### What about legitimate traffic spikes?
 We understand that the internet can make any website famous overnight and that this isn't under your control. Pantheon's platform is specifically designed to shine under this circumstance, and it's one of the main reasons people choose us to run their sites.
