@@ -5,7 +5,7 @@ tags: [billing]
 categories: []
 ---
 ## Impacted Sites
-New plans and pricing will impact existing sites purchased online via the Site Dashboard as part of the going live procedure. Plan changes described on this page do not affect annual contract customers such as EDU+, Enterprise, Pantheon One, Elites and Resellers.
+New plans and pricing will impact existing sites purchased online via the Site Dashboard. Plan changes described on this page do not affect annual contract customers such as EDU+, Enterprise, Pantheon One, Elites and Resellers.
 
 For more information on the announcement of new plans, see [this related blog post](https://pantheon.io/blog/announcing-new-online-site-plans){.external}.
 
@@ -35,10 +35,10 @@ There will be no impact to the current plan on your existing sites before June 2
 After June 28th the site will be automatically switched to the equivalent plan with preferred pricing locked in, retaining all features (with the exception of New Relic on Basic plans).
 
 ### Will my existing plan still be available?
-Existing sites will remain on their current legacy plan until June 28th, at which point the site will be automatically switched over to a new plan.
+Existing sites will remain on their current legacy plan until June 28th, at which point the site will be automatically switched over to a new plan. No new sites can be created on legacy plans.
 
 ### Will I be able to keep preferred pricing after June 28th?
-All existing site plans as of June 28th (legacy & new) will lock in preferred pricing in perpetuity (not just agencies). After June 28th, all new online site plan purchases will be at list price unless purchased through a qualified agency.
+All existing sites as of June 28th (legacy & new) will lock in preferred pricing in perpetuity (not just agencies). After June 28th, all new online site plan purchases will be at list price unless purchased through a qualified agency.
 
 ### What action do I need to take on existing sites?
 No action is required. Existing sites will automatically switch to the equivalent plan with preferred pricing locked in on June 28th.
@@ -55,7 +55,7 @@ Basic site plans will not have access to New Relic. If you are using New Relic o
 If you upgrade to a Performance plan before June 28th, you will keep New Relic access and lock in preferred pricing.
 
 ### Why are you removing New Relic access from the Basic plan?
-The Basic plan is aimed at use cases concerned primarily with getting page caching working. If you have performance goals for your site, you should consider a Performance plan of the appropriate size.
+The Basic plan is aimed at use cases concerned primarily with getting page caching working, and those sites without any high-performance goals that New Relic can help debug. If you have performance goals for your site, you should consider a Performance plan of the appropriate size.
 
 ### Will I lose Multidev?
 New plans do not impact feature access for Multidev. If you have it now, you'll continue to have it on the new plans.
