@@ -46,6 +46,9 @@ Metrics are currently only available for the Live environment.
 ### Why don't I see any data, or why don't I see a full 12 months of data?
 If your site is not yet on the Global CDN data will not be available. Sites upgraded in the last 12 months will show data following the switch. To upgrade, see [Pantheon Global CDN](/docs/global-cdn/).
 
+### Are multiple user agents on the same originating IP address counted separately?
+Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor.
+
 ### Can I check metrics from the command line with Terminus?
 Yes! Access to metrics via Terminus is currently available as an alpha command, meaning the command structure may change before full release. [Install Terminus](/docs/terminus/install/) or update to the <a href="/docs/terminus/updates#update-to-the-current-release-" data-proofer-ignore>current release</a> for access to the `alpha:env:metrics` command.
 
