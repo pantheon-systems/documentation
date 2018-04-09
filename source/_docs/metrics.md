@@ -2,6 +2,7 @@
 title: Metrics in the Site Dashboard
 description: Measure your site's traffic with the Metrics tool, found in the Live environment of the Site Dashboard.
 tags: [performance, logs]
+draft: true
 ---
 ## Access Metrics
 1. Navigate to **<span class="glyphicons glyphicons-charts"></span> Metrics** within the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of your Site Dashboard.
