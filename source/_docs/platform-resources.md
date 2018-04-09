@@ -1,8 +1,10 @@
 ---
-title: Platform Resources by Plan
+title: Platform Resources for Legacy Plans
 description: Get detailed information about platform resources for your Drupal or WordPress site.
 tags: [services]
 categories: []
+deprecated: true
+deprecatednote: This page reflects resources for legacy site plans. Sites that have been upgraded or launched to our new plans should refer to <a href="https://pantheon.io/plans/pricing-comparison" class="external">this pricing comparison page</a> for information on resources by plan.
 ---
 The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below.
 
@@ -123,6 +125,9 @@ Get your Redis connection string by going to the **Site Dashboard > Environment 
 See [Securely Working with phpinfo](/docs/phpinfo#drupal-note) for ways to view your specific PHP configuration.
 
 ## Calculate Concurrent User / Dynamic Page Capacity
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p markdown="1">This following content is considered deprecated. Refer to [Traffic Limits and Overages](/docs/traffic-limits/) for updated information on how Pantheon defines plans and site traffic.</p></div>
 
 One common need in determining a plan level is calculating the amount of concurrent traffic a site can handle, especially when all or some of the traffic cannot be handled by caching.
 

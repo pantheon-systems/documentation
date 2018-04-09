@@ -18,7 +18,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 - [Non-standard file locations](/docs/non-standard-file-paths/)
 - [Unsupported modules and plugins](/docs/modules-plugins-known-issues/)
 - [Pantheon FAQs](/docs/faq/)
-- [Pricing comparison](https://pantheon.io/pricing-comparison)
+- [Pricing comparison](https://pantheon.io/plans/pricing-comparison){.external}
 
 ## Power Users Group
 The [Power Users](/docs/power-users) group is a great place to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.

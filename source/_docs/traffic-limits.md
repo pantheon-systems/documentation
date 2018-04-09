@@ -16,7 +16,7 @@ Basic plan sites do not have this protective feature and would see a change to t
 {% include("content/traffic-dl.html")%}
 
 ### What is a traffic spike?
-A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable.
+A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable. For details, see [Pricing Comparison](https://pantheon.io/plans/pricing-comparison){.external}.
 
 ### How will Pantheon reach out to me if my site has an overage?
 For sites on the Basic plan, overages are charged at the end of the month.
