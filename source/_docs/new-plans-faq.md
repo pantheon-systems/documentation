@@ -49,6 +49,76 @@ No action is required. Existing sites will automatically switch to the equivalen
 * Professional > Performance (Small)
 * Business > Performance (Large)
 
+### What are the resource comparisons between new and legacy plans?
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="personal-id" role="presentation" class="active"><a href="#personal" aria-controls="basic-anchor" role="tab" data-toggle="tab">Personal</a></li>
+
+  <!-- 2nd Tab Nav -->
+  <li id="professional-id" role="presentation"><a href="#professional" aria-controls="professional" role="tab" data-toggle="tab">Professional</a></li>
+
+  <!-- 3rd Tab Nav -->
+  <li id="business-id" role="presentation"><a href="#business" aria-controls="business" role="tab" data-toggle="tab">Business</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="personal" markdown="1">
+  |                        | Personal (Legacy) | Basic (New)  |
+  | ---------------------- | ----------------- | ------------ |
+  | Application Containers |        1          |              |
+  | PHP Workers            |        4          |              |
+  | PHP Memory Limit       |      256MB        |              |
+  | MySQL Buffer Pool      |      128MB        |              |
+  | Redis Cache Size       |       n/a         |              |
+  | Storage                |       5GB	       |              |
+  | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>|        5          |             |
+  | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a> |     ✓              |               |
+  | New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a> |          ✓         |               |
+  | Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a>  |                   |              |
+  | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle"> |                   |              |
+  </div>
+
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="professional" markdown="1">
+  |                        | Professional (Legacy) | Performance Small (New)  |
+  | ---------------------- | --------------------- | ------------------------ |
+  | Application Containers |          1            |                          |
+  | PHP Workers            |          8            |                          |
+  | PHP Memory Limit       |         256MB         |                          |
+  | MySQL Buffer Pool      |         512MB         |                          |
+  | Redis Cache Size       |         235MB	       |                          |
+  | Storage                |         20GB          |                          |
+  | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>|            25           |                          |
+  | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a> |          ✓             |                          |
+  | New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a> |             ✓ |                          |
+  | Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a>  |         ✓              |                          |
+  | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle">|                       |                          |
+  </div>
+
+  <!-- 3rd pane content -->
+  <div role="tabpanel" class="tab-pane" id="business" markdown="1">
+  |                        | Business (Legacy)     | Performance Large (New)  |
+  | ---------------------- | --------------------- | ------------------------ |
+  | Application Containers |           2           |                          |
+  | PHP Workers            |           8           |                          |
+  | PHP Memory Limit       |         512MB         |                          |
+  | MySQL Buffer Pool      |         1024MB        |                          |
+  | Redis Cache Size       |         471MB         |                          |
+  | Storage                |         30GB          |                          |
+  | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>|           100         |                          |
+  | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a> |          ✓             |                          |
+  | New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a> |              ✓         |                          |
+  | Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a>  |             ✓          |                          |
+  | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle">|           ✓            |                          |
+  </div>
+</div>
+
+
+
+
 ### Am I going to lose New Relic?
 Basic site plans will not have access to New Relic. If you are using New Relic on a Personal plan currently, you will lose access when your site plan migrates to a Basic plan on June 28th.
 
