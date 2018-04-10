@@ -75,3 +75,4 @@ As above, in cases where these events are regular or sustained, we reserve the r
 - [New Site Plans FAQs](/docs/new-plans-faq/)
 - [Manage Plans in the Site Dashboard](/docs/site-plan/)
 - [Billing in the Site Dashboard](/docs/site-billing/)
+- [Metrics in the Site Dashboard](/docs/metrics/)
