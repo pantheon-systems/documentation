@@ -56,7 +56,7 @@ Pantheon does not provide any mechanism to implement domain masking. You may be 
 In cases of redirection issues on sites with domain masking implemented, Pantheon cannot assist in debugging unless the domain masking is disabled.
 
 ### Additional Databases
-While you are able to import an additional database to an environment, only the Pantheon database will be persevered when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.
+While you are able to import an additional database to an environment, only the Pantheon database will be preserved when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.
 
 ## Highly Populated Directories
 
