@@ -18,15 +18,7 @@ image: buildToolsGuide-thumb
 ---
 In this section we'll use the Terminus Build Tools Plugin to create a new Pantheon Site, a corresponding GitHub repository, and configure CircleCI to run tests.
 
-1. Create a [CircleCI personal API token](https://circleci.com/account/api){.external}
-
-2. Create a [GitHub personal access token](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
-    <div class="alert alert-info">
-      <h4 class="info">Note</h4>
-      <p markdown="1">Github and Terminus tokens are stored in CircleCI as environment variables. If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app){.external}.</p>
-    </div>
-
-3. Create a new project (replace `pantheon-d8-composer-project` with the name of your new site):
+1. Create a new project (replace `pantheon-d8-composer-project` with the name of your new site):
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#d8-create">Copy</button>
@@ -38,9 +30,28 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
       <p markdown="1">Pantheon also maintains Composer based examples for [WordPress](https://github.com/pantheon-systems/example-wordpress-composer){.external} and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer){.external} that are currently in alpha, requiring `--stability=alpha` in the command line options. While this guide demonstrates Drupal 8, the same workflow can be achieved on all frameworks.</p>
     </div>
 
-    Provide additional information as prompted, such as:
+    Provide additional information as prompted, such as Organization (if any), and tokens for GitHub and CircleCI access:
 
     ![Create Project Prompts](/source/docs/assets/images/pr-workflow/build-env-create-project-prompts.png)
+
+    <div class="panel panel-drop panel-guide" id="accordion">
+    <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#additional-info">
+    <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-eye-open"></span> Additional Information</h3>
+    </a>
+    </div>
+    <div id="additional-info" class="collapse" markdown="1" style="padding:10px;">
+    ### Token Management {.info}
+    The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens){.external} and [CircleCI](https://circleci.com/account/api){.external}, which are stored as environment variables. You many also generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
+
+    ```bash
+    export GITHUB_TOKEN=yourGitHubToken
+    export CIRCLE_TOKEN=yourCircleCIToken
+    ```
+
+    If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app){.external}.
+    </div>
+    </div>
 
     <div class="panel panel-drop panel-guide" id="accordion">
       <div class="panel-heading panel-drop-heading">
@@ -95,7 +106,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
       </div>
     </div>
 
-4. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on GitHub:
+2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on GitHub:
 
   ![Initial Project Page](/source/docs/assets/images/pr-workflow/initial-project-page.png)
 
