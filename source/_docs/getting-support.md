@@ -16,80 +16,22 @@ The majority of Pantheon's support is provided in the context of a particular we
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="sites">
-    <table class="table table-responsive table-bordered">
-    <thead>
-      <tr>
-        <th>Sandbox</th>
-        <th>Personal</th>
-        <th>Professional</th>
-        <th>Business</th>
-        <th>Elite</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          Chat Support<br>
-        </td>
-        <td>
-          Chat Support<br>
-        </td>
-        <td>
-          Chat Support<br>
-        </td>
-        <td>
-          Chat Support<br>
-          Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br>
-          Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via support chat)."><em class="fa fa-info-circle"></em></a><br>
-          Full Stack Support
-        </td>
-        <td>
-          Chat Support<br>
-          Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="2 hour response time, 24/7/365."><em class="fa fa-info-circle"></em></a><br>
-          Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a> <br>
-          Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="30 minute response time 24/7/365 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br>
-          Full Stack Support
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-  <div role="tabpanel" class="tab-pane" id="orgs">
-    <table class="table table-responsive table-bordered">
-        <tr>
-            <th>Pantheon for Agencies</th>
-            <th>Pantheon Enterprise</th>
-            <th>Pantheon for EDU+</th>
-            <th>Priority Enterprise Support</th>
-        </tr>
+<div role="tabpanel" class="tab-pane active" id="sites" markdown="1">
 
-        <tr>
-          <td>
-            Chat Support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br>
-            Full Stack Support
-          </td>
-          <td>
-            Chat support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br>
-            Full Stack Support
-          </td>
-          <td>
-            Chat Support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br>
-            Full Stack Support
-          </td>
-          <td>
-            Chat Support<br>
-            Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="2 hour response time, 24/7/365."><em class="fa fa-info-circle"></em></a><br>
-            Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a> <br>
-            Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="30 minute response time 24/7/365 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br>
-            Full Stack Support
-          </td>
-        </tr>
-    </table>
-  </div>
+| **Sandbox, Basic, and Performance S** | **Performance M / L / XL** | **Elite** |
+|:---------------------------------- |:-------------------------- |:--------- |
+| Chat Support                       | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br> Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via support chat)."><em class="fa fa-info-circle"></em></a><br> Full Stack Support | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="2 hour response time, 24/7/365."><em class="fa fa-info-circle"></em></a><br> Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a><br> Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="30 minute response time 24/7/365 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br> Full Stack Support |
+
+
+</div>
+  <div role="tabpanel" class="tab-pane" id="orgs" markdown="1">
+
+| **Pantheon for Agencies** | **Pantheon Enterprise** | **Pantheon for EDU+** | **Priority Enterprise Support** |
+|:------------------------- |:----------------------- |:--------------------- |:------------------------------- |
+| Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br> Full Stack Support | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br> Full Stack Support | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br> Full Stack Support |Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="2 hour response time, 24/7/365."><em class="fa fa-info-circle"></em></a><br> Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a><br> Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="30 minute response time 24/7/365 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br> Full Stack Support |
+
+
+</div>
 </div>
 
 All users of the platform can receive customer service and support for non-site-related questions via any available medium regardless of account type.
@@ -216,8 +158,8 @@ Keep the following tips in mind when opening a new support ticket or chat:
 ####If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 You can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting paying sites.
 
-####Is 24/7 phone support available for Business plans?
-No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Business plans. Elite plans and Priority Enterprise Support customers have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
+#### Is 24/7 phone support available for  Performance plans?
+No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Performance Medium and above plans. Elite plans and Priority Enterprise Support customers have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
 
 ####What if I can't login to the Pantheon Dashboard?
 If you are unable to login, try [resetting your password](https://dashboard.pantheon.io/reset-password).

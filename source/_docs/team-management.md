@@ -9,87 +9,21 @@ Pantheon has powerful workflow tools that are packed with real-time features tha
 The Site Team generally consists of one Site Owner and any necessary Team Members. These roles have the following permissions:
 ## Site-Level: Roles and Permissions
 
-<table class="table  table-bordered table-responsive">
-    <thead>
-      <tr>
-        <th>Permissions</th>
-        <th>Owner </th>
-        <th>Team Member </th>
-       </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Access the site Dashboard</td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Work on the site via SFTP or Git</td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Connect to the site's database via MySQL</td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Clone Database/Files between all environments </td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Deploy changes to Test and Live</td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-          <td>Create and Delete <a href="/docs/multidev/">Multidev Environments</a> <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Business" data-content="Available on Business and Elite sites"><em class="fa fa-info-circle"></em></a></td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-          <td>Merge <a href="/docs/multidev/">Multidevs</a> into Dev <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Business" data-content="Available on Business and Elite sites"><em class="fa fa-info-circle"></em></a></td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-         <td>Access <a href="/docs/getting-support/">Pantheon Support</a></td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Enable New Relic</td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Add/remove Team Members</td>
-        <td>✓</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td>Transfer Ownership</td>
-        <td>✓</td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td>Add/Remove Supporting Organizations</td>
-        <td>✓</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Add Solr or Redis</td>
-        <td>✓</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Manage a site's plan</td>
-        <td>✓</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+| **Permissions**                                   | **Owner** | **Team Member** |
+|:------------------------------------------------- |:--------- |:--------------- |
+| Access the site Dashboard                         | ✓         | ✓               |
+| Work on the site via SFTP or Git                  | ✓         | ✓               |
+| Connect to the site's database via MySQL          | ✓         | ✓               |
+| Clone Database/Files between all environments     | ✓         | ✓               |
+| Deploy changes to Test and Live                   | ✓         | ✓               |
+| Access [Pantheon Support](/docs/getting-support/) | ✓         | ✓               |
+| Enable New Relic                                  | ✓         | ✓               |
+| Add/remove team members                           | ✓         |                 |
+| Transfer Ownership                                | ✓         |                 |
+| Add/remove supporting organizations               | ✓         |                 |
+| Add Solr or Redis                                 | ✓         |                 |
+| Manage a site's plan                              | ✓         |                 |
+
 Once a site has been associated with an [organization](/docs/organizations/), either through ownership or a relationship with a supporting organization, [Role-Based Permissions & Change Management](/docs/change-management) permissions are available.
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4><p>For Sites associated with an Organization, the Developers and Team-members from the Organization may manage Multidev Environments, while members of the Site Team will not be able to Create, Delete, or Merge commits from Multidevs.</p>
@@ -136,7 +70,7 @@ Within the Team modal of the Site Dashboard, the site owner can click **Make Own
 ![Make Owner](/source/docs/assets/images/dashboard/sandbox-make-owner.png)
 
 #### Paid Sites
-To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
+To change the owner of a paid site (e.g. Basic, or Performance), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
 ![Invite a business owner to pay for this site](/source/docs/assets/images/dashboard/payment-form-invite.png)<br />
 Enterprise Organizations can use the same process to assume ownership of a site;  however, Agency Partners do not have the ability to own sites directly.

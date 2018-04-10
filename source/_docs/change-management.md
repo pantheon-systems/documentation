@@ -12,7 +12,7 @@ Users added to the organization can access all sites associated with the organiz
 
 These tables detail the actions each role can execute on each Dashboard.
 
-In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new sandboxes at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
+In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
 
 ###Organizations: Roles and Permissions
 
@@ -155,7 +155,7 @@ An email confirmation is sent to the user. If the user already has a Pantheon ac
 
 ### Change Site Owner
 
-To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
+To change the owner of a paid site (e.g. Basic or Performance), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
 Enterprise Organizations can assume ownership of a site by [contacting support](/docs/getting-support); however, Partner Organizations cannot own sites directly.
 

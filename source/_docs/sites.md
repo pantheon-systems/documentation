@@ -16,7 +16,7 @@ The Team tab allows you to change the site owner; add supporting agencies; and a
 
 ##Settings
 ### Plan and Billing
-Here you can select or change your plan and payment method. For more information, see [Select a Plan](/docs/select-plan/).
+Here you can select or change your plan and payment method. For more information, see [Manage Plans in the Site Dashboard](/docs/site-plan/).
 
 ### Add-Ons
 Pantheon offers several add-ons to help you build dynamic sites. These include [Apache Solr](/docs/solr/) and [Redis](/docs/redis/).

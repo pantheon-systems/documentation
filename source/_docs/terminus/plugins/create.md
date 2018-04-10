@@ -284,7 +284,7 @@ To add more tests, create more files with `.bats` extensions, and populate them 
 
 ### Automating Tests
 
-At this point, it would be a good idea to [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You'll need to keep a sandbox site online to run the tests against.
+At this point, it would be a good idea to [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You'll need to keep a Sandbox site online to run the tests against.
 
 1. Copy the contents below into a file named `circle.yml` in your plugin project:
 
@@ -319,7 +319,7 @@ At this point, it would be a good idea to [configure your project tests to run a
 
 2. In the Circle CI settings, set up the following environment variables:
 
-    - `TERMINUS_SITE`: The name of a sandbox Pantheon site to run tests against.
+    - `TERMINUS_SITE`: The name of a Sandbox Pantheon site to run tests against.
     - `TERMINUS_TOKEN`: A [Pantheon machine token](/docs/machine-tokens/) that has access to the test site.
 
 3. Create an ssh key pair, [add the public key to your account on Pantheon](/docs/ssh-keys/), and [add the private key to Circle CI](https://circleci.com/docs/1.0/permissions-and-access-during-deployment/) (leave the "Hostname" field empty).

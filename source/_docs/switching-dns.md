@@ -73,13 +73,12 @@ Your new site is now live and receiving web traffic (although it may take a bit 
 
 ## Downgrade Old Site
 
-- Once you've confirmed that the new site is live, you can return to the old site and downgrade the plan to **sandbox (free)**.
+- Once you've confirmed that the new site is live, you can return to the old site and downgrade the plan to **Sandbox**.
 
-If you're using an existing credit card profile for billing, the credit from the sandbox downgrade will apply as a prorated payment for your new site. As long as you use the same card/site owner the credit will be carried over automatically.
+If you're using an existing credit card profile for billing, the credit from the Sandbox plan downgrade will apply as a prorated payment for your new site. As long as you use the same card/site owner the credit will be carried over automatically.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p markdown="1">If you are changing the card or the site owner, [let us know](https://pantheon.io/support) when everything is switched over, and we'll apply that credit to the new account.
 Please do not remove the old credit card from your account until after the transfer has been made.</p>
 </div>
-

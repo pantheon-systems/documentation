@@ -76,7 +76,7 @@ If you see your Pantheon sites, then it was installed and authenticated successf
 
         terminus drush steve-site-d8.dev -- help
 
-    The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to Drush.		
+    The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to Drush.
 
 4. Review the file changes:
 
@@ -102,7 +102,7 @@ If you see your Pantheon sites, then it was installed and authenticated successf
 
 ### Export the Site Name as a Variable
 
-At this point you are probably tired of replacing `steve-site-d8` in every command.		
+At this point you are probably tired of replacing `steve-site-d8` in every command.
 
 1.  Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands:
 

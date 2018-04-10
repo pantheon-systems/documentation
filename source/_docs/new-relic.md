@@ -11,6 +11,16 @@ categories: []
   <p>Get the most out of New Relic with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
 </div>
 
+## Supported Site Plans
+All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro is available to Sandbox site plans for developmental purposes, but New Relic APM Pro will not be available going live on a Basic plan.
+
+| Plans         | New Relic APM Pro Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
+| ------------- | ------- |
+| Sandbox       | ✓       |
+| Basic         |         |
+| Performance   | ✓       |
+| Elite         | ✓       |
+
 ## Activate New Relic APM Pro
 Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/terminus-plugin-project/terminus-omniscient-plugin/){.external} plugin to enable New Relic Pro for all sites you have access to by logging in to your Pantheon account and running `terminus omniscient`.
 

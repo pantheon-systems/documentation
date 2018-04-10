@@ -48,7 +48,7 @@ Since you're in fixin' mode, take some time to optimize performance using Redis 
 ### [Enable Redis](/docs/redis/)
 Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
-All plans except for a Personal plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Personal plan.
+All plans except for a Basic plan can use Redis. Redis is available to Sandbox plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
 
 ### [Configure Caching](/docs/global-cdn-caching/)
