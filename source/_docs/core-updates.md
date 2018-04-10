@@ -100,7 +100,7 @@ If the automated core update doesn't appear to be working, it's possible there a
      <pre><code>git fetch pantheon-drops-7
     git rebase pantheon-drops-7/master</code></pre>
      </div>
-     <div role="tabpanel" class="tab-pane" id="custom-2conflict">    
+     <div role="tabpanel" class="tab-pane" id="custom-2conflict">
      <p markdown="1" class="instruction">Replace the remote name (`custom-upstream-example`):</p>
      <pre><code>git fetch custom-upstream-example
     git rebase custom-upstream-example/master</code></pre>
@@ -156,7 +156,7 @@ Squashing and rewriting history may cause one-click updates to break, meaning up
 
 If you are in a situation where you've altered the commit history in such a way that the dashboard is no longer able to determine if your site is up to date with the upstream, the simplest course of corrective action is to use `git reset --hard` to reset the site repository to the last known good commit before the squash/rebase/revert was applied. This *will* result in losing *all* changes that have happened since this commit. You will need to re-apply all custom/contributed code updates that occurred in the interim, so make sure to take stock of these changes first and develop a plan to reapply them with the fixed Git history.
 
-### One-Click Update Not Available for Sites Using a Custom Upstream
+### One-Click Update Not Appearing for Sites Using a Custom Upstream
 Core updates for Custom Upstreams are initiated by the repository maintainer, not Pantheon. Please report issues directly to the project maintainer for expected updates.
 
 It's important to relay the need for updating core to maintainers, even if you plan on manually pulling in core version updates. First, file an issue in the queue of your repository and reach out to a maintainer. Even better - submit a pull request for the update.
