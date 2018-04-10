@@ -264,6 +264,11 @@ terminus drush <site>.<env> -- ard --destination=sites/default/files/<RANDOM_HAS
 <p markdown="1">We recommend using a random hash for the archive filename for security. Archive dumps contain sensitive information, so they should not be exposed using guessable filename patterns (like `BACKUP` or recent dates).</p>
 </div>
 
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Adjust paths as needed for sites with a [nested docroot](/docs/nested-docroot/) (e.g., `web/sites/default/files`).</p>
+</div>
+
 Click **Continue Migration** and follow all remaining instructions within the guided migration process.
 
 **Be sure to delete the Drupal archive file (`<RANDOM_HASH>.tgz`) from your source site after cloning the site, using SFTP to access your site's files.**
