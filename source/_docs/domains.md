@@ -139,7 +139,7 @@ The same technique works for single subdomain redirects. Just specify the path i
 
 #### Redirect From One Path to Another
 
-For single path:
+For a single path:
 
 ```php
 // 301 Redirect from /old to /new
@@ -151,7 +151,8 @@ For single path:
     }
 ```
 
-For multiple paths and redirects
+For multiple paths and redirects:
+
 ```php
 $redirects = array(
     "/", 
