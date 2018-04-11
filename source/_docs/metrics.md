@@ -2,17 +2,17 @@
 title: Metrics in the Site Dashboard
 description: Measure your site's traffic with the Metrics tool, found in the Live environment of the Site Dashboard.
 tags: [performance, logs]
-draft: true
 ---
 ## Access Metrics
 1. Navigate to **<span class="glyphicons glyphicons-charts"></span> Metrics** within the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of your Site Dashboard.
 2. Toggle available date ranges by clicking **Day**, **Week**, or **Month**:
   ![Charts for pages served and visits within the Metrics tool of the Site Dashboard](/source/docs/assets/images/dashboard/metrics-graphs.png)
 
+
 ## Available Metrics
 {% include("content/traffic-dl.html")%}
 
-For example, imagine two visitors go to `example.com`. The first visitor exits from the home page, but the second visitor continues to browse two additional pages. This would be tracked as **2 Visits** and **4 Pages Served**.
+Imagine two visitors go to `example.com`. The first visitor exits from the home page, but the second visitor continues to browse two additional pages. This would be tracked as **2 Visits** and **4 Pages Served**.
 ![Diagram demonstrating how pages served and visits are tracked](/source/docs/assets/images/dashboard/metrics-diagram.png)
 
 _Visits_ and _visitors_ have different meanings. If one of the visitors returns again the next day, it would be counted as 3 Visits, but there'd be only 2 visitors.
@@ -38,8 +38,10 @@ There are some inherent limitations with using an analytics suite (e.g. Google A
 ### How does Pantheon handle overages?
 Where there is a pattern of consistent overage, we will align a site's plans with its load on the platform. For details, see <a href="/docs/traffic-limits/#does-pantheon-charge-for-overages" data-proofer-ignore>Traffic Limits and Overages</a>.
 
+
 ### What about bots or DoS attacks?
 Pantheon-identified bots are excluded from the Visits and Pages Served Metrics.
+
 
 ### Can I see metrics for other environments?
 Metrics are currently only available for the Live environment.
