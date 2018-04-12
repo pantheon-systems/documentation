@@ -35,6 +35,11 @@ if (!defined('WP_DEBUG')) {
 }
 ```
 
+<div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, remove or comment out the [existing code block](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L147){.external} defining it.</p>
+</div>
+
 For more options when editing `wp-config.php` for debugging, see [Configure Error Logging](https://codex.wordpress.org/Editing_wp-config.php#Configure_Error_Logging) on the WordPress Codex.
 
 ## Configuration in an mu-plugin
@@ -61,7 +66,6 @@ if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) :
 require_once( 'site-config/live-specific-configs.php' );
 
 endif;
-
 ```
 
 ### Add Configuration
