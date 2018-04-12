@@ -19,8 +19,7 @@ Pantheon supports Drupal 6, 7, and 8 sites. As of February 2016, the Drupal comm
 Pantheon supports the most recent release of WordPress via [upstream](https://github.com/pantheon-systems/WordPress), which includes platform integration plugins and a pre-configured wp-config.php.
 
 ### How much does Pantheon cost?
-
-Pantheon is free for developers. Our live site plans currently start as low as $25 monthly for Basic sites, and $100 for Performance sites. Learn more on [our pricing page](https://pantheon.io/pricing).
+You can develop new sites for free on Pantheon. Billing starts when you're ready to go live and direct traffic to a site. See available plans on our [pricing page](https://pantheon.io/pricing).
 
 
 ### Where are the Pantheon servers located?
