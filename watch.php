@@ -23,6 +23,7 @@ while (true) {
             echo shell_exec($buildScriptPath)."\n";
         }
     }
+    sleep(1);
 }
 
 function recursiveGlob(array $paths)
