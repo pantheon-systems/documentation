@@ -10,10 +10,30 @@ To quickly see which environment you are on, consider installing the [Pantheon H
 ## Customizations to wp-config.php
 
 Pantheon's default version of `wp-config.php` contains a nice example that sets `DISALLOW_FILE_MODS` to `true` on Test and Live environments.
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal&slice=88:91"></script>
+
+```php
+if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( 'DISALLOW_FILE_MODS' ) ) :
+    define( 'DISALLOW_FILE_MODS', true );
+endif;
+```
 
 This is a useful model to follow for another recommended modification, defining `'WP_DEBUG', true` on all environments except for Test and Live.
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/wp_debug_dev.wp-config.php?footer=minimal"></script>
+
+```php
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Sets WP_DEBUG to true on if on a development environment.
+ *
+ */
+if (!defined('WP_DEBUG')) {
+    if(in_array( $_ENV['PANTHEON_ENVIRONMENT'], array('test', 'live'))) {
+      define('WP_DEBUG', false);
+    } else {
+      define( 'WP_DEBUG', true );
+    }
+}
+```
 
 For more options when editing `wp-config.php` for debugging, see [Configure Error Logging](https://codex.wordpress.org/Editing_wp-config.php#Configure_Error_Logging) on the WordPress Codex.
 
@@ -67,7 +87,7 @@ Create a new directory, `wp-content/mu-plugins/site-config/`, and add a `live-sp
 	            deactivate_plugins($plugin);
             }
         }
-          
+
     # Disable jetpack_development_mode
         add_filter( 'jetpack_development_mode', '__return_false' );
     }
@@ -76,14 +96,14 @@ Create a new directory, `wp-content/mu-plugins/site-config/`, and add a `live-sp
     else {
 
    	# Activate Development Plugins
-    
+
         require_once(ABSPATH . 'wp-admin/includes/plugin.php');
         foreach ($plugins as $plugin) {
             if(is_plugin_inactive($plugin)) {
                 activate_plugin($plugin);
             }
         }
-                  
+
     # Enable development mode for jetpack
         add_filter( 'jetpack_development_mode', '__return_true' );
 }
