@@ -130,12 +130,6 @@ Once you've installed the module or plugin you plan to use, you should immediate
 
 How you configure or include these attributes raises the rigor of the security that your HSTS effort provides. [Here is a great overview of how and why to use the above noted attributes](https://hstspreload.org/){.external}.
 
-Lastly, as an example, this is the strict-transport-security header as it is implemented by the United States `Whitehouse.gov` site (it uses preload, a one-year max-age, and includeSubDomains):
-
-```http
-Strict-Transport-Security: max-age=31536000;includeSubdomains;preload
-```
-
 ## See Also
 For additional details on this header, see:
 
