@@ -48,7 +48,7 @@ Yes! Metrics are now available for the entire site or by environment via the Ter
 
 
 ### Why don't I see any data, or why don't I see a full 12 months of data?
-If your site is not yet on the Global CDN data will not be available. Sites upgraded in the last 12 months will show data following the switch. To upgrade, see [Pantheon Global CDN](/docs/global-cdn/).
+Data is shown for dates after March 18, 2018. If your site is not yet on the Global CDN data will not be available. To upgrade, see [Pantheon Global CDN](/docs/global-cdn/).
 
 ### Are multiple user agents on the same originating IP address counted separately?
 Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor.
