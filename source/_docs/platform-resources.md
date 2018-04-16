@@ -4,7 +4,7 @@ description: Get detailed information about platform resources for your Drupal o
 tags: [services]
 categories: []
 deprecated: true
-deprecatednote: This page reflects resources for legacy site plans. Sites that have been upgraded or launched to our new plans should refer to <a href="/docs/new-plans-faq/#what-are-the-resource-comparisons-between-new-and-legacy-plans" class="external">New Site Plans FAQs</a> for a comparison on resources by plan.
+deprecatednote: This page reflects resources for legacy site plans. Sites that have been upgraded or launched to our new plans should refer to <a data-proofer-ignore href="/docs/new-plans-faq/#what-are-the-resource-comparisons-between-new-and-legacy-plans" class="external">New Site Plans FAQs</a> for a comparison on resources by plan.
 ---
 The platform resources provided to your website depend on your current plan. Pantheon can scale instantly, so changing your service level will immediately change your resources to the values for the new plan, as shown in the table below.
 
