@@ -4,7 +4,7 @@ description: Learn how to work with temporary files in distributed environments.
 tags: [debugcode, infrastructure]
 categories: []
 ---
-Live sites on most Performance plans and the Elite plan have multiple [application containers](/docs/application-containers).  Pantheon's distributed system means that requests are spread between all of the available application servers, which is part of how we help the site scale. However, the `tmp` directory on one instance is not able to access the `tmp` contents on another application server.
+Live sites on most Performance and Elite plans have multiple [application containers](/docs/application-containers).  Pantheon's distributed system means that requests are spread between all of the available application servers, which is part of how we help the site scale. However, the `tmp` directory on one instance is not able to access the `tmp` contents on another application server.
 
 Pantheon's upstream for [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L83-L86){.external} and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L146-L154){.external} configures the temporary directory path dynamically based on the application container processing the request. This ensures the accessibility of temporary files generated for a given task until the request has been completed.
 
