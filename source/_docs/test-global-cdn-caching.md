@@ -58,7 +58,7 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
     ```
     $ curl -I https://pantheon.io/
-    HTTP/2 200 
+    HTTP/2 200
     date: Tue, 13 Feb 2018 21:52:38 GMT
     cache-control: public, max-age=3600
     content-language: en
@@ -69,7 +69,34 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
     link: <https://pantheon.io/>; rel="canonical",<https://pantheon.io/>; rel="shortlink"
     server: nginx
     strict-transport-security: max-age=15552000
-    surrogate-key-raw: 
+    via: 1.1 varnish
+    accept-ranges: bytes
+    via: 1.1 varnish
+    age: 1678
+    x-served-by: cache-mdw17325-MDW, cache-sjc3640-SJC
+    x-cache: HIT, HIT
+    x-cache-hits: 1, 1
+    x-timer: S1518558759.503778,VS0,VE1
+    vary: Accept-Encoding, Cookie, Cookie, Cookie
+    content-length: 55434
+    ```
+
+    To view the `Surrogate-Key-Raw` header, add the `Pantheon-Debug: 1` header to your request:
+
+    ```bash
+    $ curl -IsH "Pantheon-Debug: 1" https://pantheon.io/
+    HTTP/2 200
+    date: Tue, 13 Feb 2018 21:52:38 GMT
+    cache-control: public, max-age=3600
+    content-language: en
+    content-type: text/html; charset=utf-8
+    etag: W/"1518557080-0"
+    expires: Sun, 19 Nov 1978 05:00:00 GMT
+    last-modified: Tue, 13 Feb 2018 21:24:40 GMT
+    link: <https://pantheon.io/>; rel="canonical",<https://pantheon.io/>; rel="shortlink"
+    server: nginx
+    strict-transport-security: max-age=15552000
+    surrogate-key-raw:
     x-content-type-options: nosniff
     x-drupal-cache: MISS
     x-frame-options: SAMEORIGIN
@@ -90,7 +117,7 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
 ### Test Global CDN with Chrome
 
-Right-click anywhere on the page, and select the **Inspect Element** option.
+Right-click anywhere on the page, and select the **Inspect Element** option. You can use a browser extension to add the debugging header. Here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header){.external} to add headers.
 
 ### Test Global CDN with Internet Explorer
 
