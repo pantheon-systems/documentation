@@ -5,7 +5,7 @@ tags: [cacheedge]
 categories: []
 ---
 
-## Cookie naming requirements
+## Cookie Naming Requirements
 For cookies to function on cached pages they must match the pattern: `STYXKEY[a-zA-Z0-9_-]`.
 
 ## Disable Caching for Specific Pages
