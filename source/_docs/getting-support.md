@@ -18,7 +18,7 @@ The majority of Pantheon's support is provided in the context of a particular we
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="sites" markdown="1">
 
-| **Sandbox, Basic, and Performance S** | **Performance M / L / XL** | **Elite** |
+| **Sandbox, Basic, and Performance S / M** | **Performance L / XL** | **Elite** |
 |:---------------------------------- |:-------------------------- |:--------- |
 | Chat Support                       | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br> Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via support chat)."><em class="fa fa-info-circle"></em></a><br> Full Stack Support | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="2 hour response time, 24/7/365."><em class="fa fa-info-circle"></em></a><br> Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a><br> Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="30 minute response time 24/7/365 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br> Full Stack Support |
 
