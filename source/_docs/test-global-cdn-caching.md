@@ -47,7 +47,7 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
 ### Test CDN Caching with Firefox
 
-1. Install [Firebug](https://getfirebug.com/){.external}, the in-browser debugging plugin.
+1. Install [Firebug](https://getfirebug.com/){.external}, the in-browser debugging plugin, and a [plugin](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header){.external} to insert headers.
 2. Go to your Pantheon hosted domain and click the Firebug icon in Firefox. 
 3. Click the **Network** tab, then **HTML** to see the headers.
 
@@ -57,40 +57,57 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 2. Enter the following command with your full Pantheon domain URL. Using the `-I` (uppercase i) flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
 
     ```
-    $ curl -I https://pantheon.io/
-    HTTP/2 200 
-    date: Tue, 13 Feb 2018 21:52:38 GMT
-    cache-control: public, max-age=3600
-    content-language: en
-    content-type: text/html; charset=utf-8
-    etag: W/"1518557080-0"
-    expires: Sun, 19 Nov 1978 05:00:00 GMT
-    last-modified: Tue, 13 Feb 2018 21:24:40 GMT
-    link: <https://pantheon.io/>; rel="canonical",<https://pantheon.io/>; rel="shortlink"
+    $ curl -I https://scalewp.io
+    HTTP/2 200
+    cache-control: public, max-age=86400
+    content-type: text/html; charset=UTF-8
+    link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
+    link: <https://scalewp.io/>; rel=shortlink
     server: nginx
-    strict-transport-security: max-age=15552000
-    surrogate-key-raw: 
-    x-content-type-options: nosniff
-    x-drupal-cache: MISS
-    x-frame-options: SAMEORIGIN
-    x-generator: Drupal 7 (http://drupal.org)
-    x-pantheon-styx-hostname: styx-fe2-6cbdc74cf8-vxjp4
-    x-styx-req-id: styx-0969a5b7412f768f75334ee1df43320b
+    x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
+    x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
     via: 1.1 varnish
     accept-ranges: bytes
+    date: Mon, 16 Apr 2018 16:30:18 GMT
     via: 1.1 varnish
-    age: 1678
-    x-served-by: cache-mdw17325-MDW, cache-sjc3640-SJC
+    age: 44742
+    x-served-by: cache-mdw17344-MDW, cache-jfk8146-JFK
     x-cache: HIT, HIT
     x-cache-hits: 1, 1
-    x-timer: S1518558759.503778,VS0,VE1
-    vary: Accept-Encoding, Cookie, Cookie, Cookie
-    content-length: 55434
+    x-timer: S1523896219.500596,VS0,VE1
+    vary: Accept-Encoding, Cookie, Cookie
+    content-length: 41369
+    ```
+
+    To view the `Surrogate-Key-Raw` header, add the `Pantheon-Debug: 1` header to your request:
+
+    ```bash
+    $ curl -IsH "Pantheon-Debug:1" https://scalewp.io
+    HTTP/2 200
+    cache-control: public, max-age=86400
+    content-type: text/html; charset=UTF-8
+    link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
+    link: <https://scalewp.io/>; rel=shortlink
+    server: nginx
+    surrogate-key-raw: front post-7 post-user-6 single
+    x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
+    x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
+    via: 1.1 varnish
+    accept-ranges: bytes
+    date: Mon, 16 Apr 2018 16:30:24 GMT
+    via: 1.1 varnish
+    age: 44747
+    x-served-by: cache-mdw17344-MDW, cache-jfk8132-JFK
+    x-cache: HIT, HIT
+    x-cache-hits: 1, 2
+    x-timer: S1523896225.507911,VS0,VE0
+    vary: Accept-Encoding, Cookie, Cookie
+    content-length: 41369
     ```
 
 ### Test Global CDN with Chrome
 
-Right-click anywhere on the page, and select the **Inspect Element** option.
+Right-click anywhere on the page, and select the **Inspect Element** option. You can use a browser extension to add the debugging header. Here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header){.external} to add headers.
 
 ### Test Global CDN with Internet Explorer
 
