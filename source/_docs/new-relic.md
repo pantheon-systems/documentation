@@ -138,7 +138,7 @@ If the site owner did not receive the confirmation email, you can re-send the li
 1. On New Relic's login page, click **Forgot your password?**.
 2. Enter the email address of the site owner.
 3. Click **Send my reset link**.
-4. Open the email you will recieve, click the reset link, and follow the prompts to access your account.
+4. Open the email you will receive, click the reset link, and follow the prompts to access your account.
 
 
 
