@@ -52,11 +52,6 @@ This response can also occur on Drupal 8 sites using the cacheability debug serv
 ### Pantheon 503 Target in Maintenance
 "The web site you were looking for is currently undergoing maintenance." This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
-### Pantheon 503 Target Not Responding
-"The web page you were looking for could not be delivered." No application containers are available to complete the request. These errors occur when PHP rendering resources for your site are full. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP resources will free up to service those requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
-
-This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/site-plan/).
-
 ### Pantheon 503 Database not responding
 "The web page you were looking for could not be delivered." The MySQL database is not responding, possibly from being suspended and not resuming.
 
@@ -64,6 +59,12 @@ This error can be caused by sustained spikes in traffic (often caused by search 
 This error generally occurs when a request timeouts. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/docs/timeouts/).
 
 If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP Basic Auth (the security username/password), then that's a misleading message; the best workaround is to disable the security option for the environment for testing.
+
+
+### Pantheon 504 Target Not Responding
+"The web page you were looking for could not be delivered." No application containers are available to complete the request. These errors occur when PHP rendering resources for your site are full. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP resources will free up to service those requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
+
+This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/site-plan/).
 
 ### Pantheon 504 Gateway Timeout
 "Your request has timed out while waiting for PHP to execute." There are two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other option is that there was a server problem, typically php-fpm or MySQL timing out. See [Timeouts on Pantheon](/docs/timeouts/) for more information.
