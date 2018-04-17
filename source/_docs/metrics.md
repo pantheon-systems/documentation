@@ -13,7 +13,7 @@ tags: [performance, logs]
 {% include("content/traffic-dl.html")%}
 
 Imagine two visitors go to `example.com`. The first visitor exits from the home page, but the second visitor continues to browse two additional pages. This would be tracked as **2 Visits** and **4 Pages Served**.
-![Diagram demonstrating how pages served and visits are tracked](/source/docs/assets/images/dashboard/metrics-diagram.png)
+![Diagram demonstrating how pages served and visits are tracked](/source/docs/assets/images/dashboard/metrics-diagrams.png)
 
 _Visits_ and _visitors_ have different meanings. If one of the visitors returns again the next day, it would be counted as 3 Visits, but there'd be only 2 visitors.
 ## Frequently Asked Questions
