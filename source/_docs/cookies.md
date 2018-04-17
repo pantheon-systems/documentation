@@ -5,6 +5,9 @@ tags: [cacheedge]
 categories: []
 ---
 
+## Cookie Naming Requirements
+For cookies to function on cached pages they must match the pattern: `STYXKEY[a-zA-Z0-9_-]`.
+
 ## Disable Caching for Specific Pages
 You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response.
 
