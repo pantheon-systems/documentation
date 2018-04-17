@@ -401,15 +401,5 @@ set-max-intset-entries 512
 activerehashing yes
 ```
 
-### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
-Yes. There is a `redis.log` file that is available on the Redis container for each environment. You can see where the log files and configuration reside:
-
-```nohighlight
-$ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
-sftp> ls -la logs/
--rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log
-sftp>
-```
-
 ### Why won't my site work after importing a database backup?
 When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
