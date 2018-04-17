@@ -24,6 +24,9 @@ Slow websites are **bad**. Many studies have looked at this and the facts are in
 </div>
 
 
+
+
+
 There are many different ways to measure page speed and performance. This guide will be tuning for the metrics set forth by [Google's mobile speed test](https://testmysite.thinkwithgoogle.com/){.external}:
 
 - Reduce Server Response Time
