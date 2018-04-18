@@ -106,6 +106,8 @@ if (function_exists('newrelic_ignore_transaction')) {
 }
 ```
 
+{% include("content/monitor-alerts.html")%}
+
 ## Troubleshooting
 
 ### New Relic Access
