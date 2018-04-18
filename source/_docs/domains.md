@@ -110,7 +110,7 @@ While it is considered best practice to redirect all traffic to a single primary
 
         # Name transaction "redirect" in New Relic for improved reporting (optional)
         if (extension_loaded('newrelic')) {
-          newrelic_name_transaction("redirect"); 
+          newrelic_name_transaction("redirect");
         }
      }
    }
@@ -133,13 +133,13 @@ To redirect from a subdomain to a specific area of the site, use the following:
  }
 ```
 
-This will redirect requests like http://subdomain.yoursite.com/some/path to http://www.yoursite.com/subdomain/some/path.
+This will redirect requests like `http://subdomain.yoursite.com/some/path` to `http://www.yoursite.com/subdomain/some/path`.
 
 The same technique works for single subdomain redirects. Just specify the path in `$newurl` without bothering with `$_SERVER['REQUEST_URI']`
 
 #### Redirect From One Path to Another
 
-For a single path:
+To redirect from a single path:
 
 ```php
 // 301 Redirect from /old to /new
@@ -151,13 +151,13 @@ For a single path:
     }
 ```
 
-For multiple paths and redirects:
+To redirect from multiple pathes to a single URL:
 
 ```php
 $redirects = array(
-    "/", 
-    "/old", 
-    "/another/path", 
+    "/",
+    "/old",
+    "/another/path",
     "/old-path");
 
 // 301 Redirect from multiple paths
