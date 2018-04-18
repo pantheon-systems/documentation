@@ -402,10 +402,13 @@ activerehashing yes
 ```
 
 ### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
-Yes. There is a `redis.log` file that is available on the Redis container for each environment. You can see where the log files and configuration reside:
+Yes. There is a `redis.log` file that is available on the Redis container for each environment. To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
 
 ```nohighlight
-$ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
+$ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in
+Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
+sftp> ls
+certs          chef.stamp     data           lock           logs           metadata.json  redis.conf     tmp
 sftp> ls -la logs/
 -rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log
 sftp>
