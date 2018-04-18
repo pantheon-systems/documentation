@@ -171,6 +171,8 @@ If you know your site's Custom Upstream has updated code, but it's not visible o
 
 This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it may take up to a minute before updates appear on the dashboard.
 
+If updates are still not showing on the site, it may be necessary to re-set the site's upstream via [Terminus](/docs/terminus/examples/#switch-upstreams). Please note that only the Site Owner or owning Organization Administrators can change a site's upstream. 
+
 ### 503 Errors When Running Update.php and Installing Modules
 
 There are multiple reasons that 503 errors might occur when updating:
