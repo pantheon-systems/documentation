@@ -43,7 +43,7 @@ The first part of the output is Terminus telling you which command it's running,
 
 Feeling comfortable with WP-CLI? Here are a [few of many commands](https://developer.wordpress.org/cli/commands/) you may find helpful in your journeys:
 
-* `wp search-replace` - Search for and replace specific strings in the database (e.g. to correct references to platform domains /docs/database-workflow/#troubleshooting). Use `--dry-run` to perform a test run of the operation, and see how it will affect your database ([docs](https://developer.wordpress.org/cli/commands/search-replace/)).
+* `wp search-replace` - Search for and replace specific strings in the database. Commonly used to correct references to [platform domains](/docs/database-workflow/#troubleshooting). Use `--dry-run` to perform a test run of the operation, and see how it will affect your database ([developer docs](https://developer.wordpress.org/cli/commands/search-replace/){.external}).
 * `wp media regenerate` - Regenerate image thumbnails for one or more attachments ([docs](https://developer.wordpress.org/cli/commands/media/regenerate/)).
 * `wp rewrite flush` - Flush rewrite rules to ensure newly registered rules are stored in the database ([docs](https://developer.wordpress.org/cli/commands/rewrite/flush/)).
 
