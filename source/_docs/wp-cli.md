@@ -5,17 +5,17 @@ tags: [devwpcli]
 categories: [wordpress]
 ---
 
-[WP-CLI](https://make.wordpress.org/cli/handbook/) is a command-line interface to WordPress. It provides a [wide range of utilities](https://developer.wordpress.org/cli/commands/) for managing your WordPress site. Virtually any action you can perform through the WordPress admin, you can also do with WP-CLI.
+[WP-CLI](https://make.wordpress.org/cli/handbook/){.external} is a command-line interface to WordPress. It provides a [wide range of utilities](https://developer.wordpress.org/cli/commands/){.external} for managing your WordPress site. Virtually any action you can perform through the WordPress admin, you can also do with WP-CLI.
 
 To use WP-CLI on the Pantheon Platform, you'll first need to install [Terminus](/docs/terminus/) on your local machine. Terminus is a command-line interface for managing your Pantheon sites, and is used to proxy commands from your local machine to your Pantheon environment.
 
-Once you've installed Terminus locally, and verified it's working correctly, you're ready to use WP-CLI. However, if you haven't already, you may want to consider [installing WP-CLI locally](https://make.wordpress.org/cli/handbook/installing/) for use in your local environment.
+Once you've installed Terminus locally, and verified it's working correctly, you're ready to use WP-CLI. However, if you haven't already, you may want to consider [installing WP-CLI locally](https://make.wordpress.org/cli/handbook/installing/){.external} for use in your local environment.
 
 ## Getting Started With WP-CLI
 
 When working on the command-line, it's worth remembering the adage: "with great power comes great responsibility". WP-CLI will let you perform incredible operations on your WordPress site (including dropping your database), for better or for worse. Only you know the true intention of the command you're invoking.
 
-Before you use WP-CLI for the first time, here are a few [global parameters](https://make.wordpress.org/cli/handbook/config/) you should be aware of:
+Before you use WP-CLI for the first time, here are a few [global parameters](https://make.wordpress.org/cli/handbook/config/){.external} you should be aware of:
 
 * `--path=<path>` - Specify the path to WordPress. If this parameter isn't provided, WP-CLI will look upward from its current directory to attempt to find WordPress.
 * `--url=<url>` - Identify the request as from given URL. In WordPress Site Networks, this argument is how the target site is specified.
@@ -36,16 +36,16 @@ Now that we've covered the most important basics, let's run a command:
 From the example above:
 
 * `terminus wp` tells Terminus we'd like to execute a WP-CLI command.
-* `option get` is the command itself ([docs](https://developer.wordpress.org/cli/commands/option/get/)). `home` is the key for the option we're requesting.
-* `<site>` and `<env>` tell Terminus which site and environment to run the command in, respectively. These arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
+* `option get` is the command itself ([docs](https://developer.wordpress.org/cli/commands/option/get/){.external}). `home` is the key for the option we're requesting.
+* `<site>` and `<env>` tell Terminus which site and environment to run the command in, respectively. These arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example){.external} file.
 
 The first part of the output is Terminus telling you which command it's running, and where. The last line, "https://pantheon-demo.pantheonsite.io", is the response of `wp option get`.
 
 Feeling comfortable with WP-CLI? Here are a [few of many commands](https://developer.wordpress.org/cli/commands/) you may find helpful in your journeys:
 
-* `wp search-replace` - Search for and replace specific strings in the database. Use `--dry-run` to perform a test run of the operation, and see how it will affect your database ([docs](https://developer.wordpress.org/cli/commands/search-replace/)).
-* `wp media regenerate` - Regenerate image thumbnails for one or more attachments ([docs](https://developer.wordpress.org/cli/commands/media/regenerate/)).
-* `wp rewrite flush` - Flush rewrite rules to ensure newly registered rules are stored in the database ([docs](https://developer.wordpress.org/cli/commands/rewrite/flush/)).
+* `wp search-replace` - Search for and replace specific strings in the database. Commonly used to correct references to [platform domains](/docs/database-workflow/#troubleshooting). Use `--dry-run` to perform a test run of the operation, and see how it will affect your database ([developer docs](https://developer.wordpress.org/cli/commands/search-replace/){.external}).
+* `wp media regenerate` - Regenerate image thumbnails for one or more attachments ([developer docs](https://developer.wordpress.org/cli/commands/media/regenerate/){.external}).
+* `wp rewrite flush` - Flush rewrite rules to ensure newly registered rules are stored in the database ([developer docs](https://developer.wordpress.org/cli/commands/rewrite/flush/){.external}).
 
 ## Run SQL Queries Using WP-CLI on Pantheon
 
@@ -57,7 +57,7 @@ terminus wp <site>.<env> -- db query "SELECT * FROM wp_users WHERE ID=1"
 
 ## Extending WP-CLI With Subcommands
 
-WP-CLI has a framework for users to write their own commands. Learn about the [anatomy of a subcommand](https://github.com/wp-cli/wp-cli/wiki/Commands-Cookbook#anatomy) to solve your thorny problems with WP-CLI.
+WP-CLI has a framework for users to write their own commands. Learn about the [anatomy of a subcommand](https://github.com/wp-cli/wp-cli/wiki/Commands-Cookbook#anatomy){.external} to solve your thorny problems with WP-CLI.
 
 
 ## Troubleshooting
