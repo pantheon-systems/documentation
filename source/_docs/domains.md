@@ -93,7 +93,7 @@ It's a best practice for SEO and security to standardize all traffic on HTTPS an
     <div class="panel-inner" markdown="1">
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.
 
-#### Redirect to HTTPS
+### Redirect to HTTPS {.info}
 While it is considered best practice to redirect all traffic to a single primary domain, there are times during development where it may be preferred to redirect traffic to HTTPS without standardizing on a single domain:
 
 ```php
@@ -116,7 +116,9 @@ While it is considered best practice to redirect all traffic to a single primary
    }
 ```
 
-#### Redirect to Subdirectories or Specific URLs
+This example will redirect all HTTP requests to HTTPS while reserving the domain name.
+
+### Redirect to Subdirectories or Specific URLs {.info}
 
 To redirect from a subdomain to a specific area of the site, use the following:
 
@@ -137,9 +139,9 @@ This will redirect requests like `http://subdomain.yoursite.com/some/path` to `
 
 The same technique works for single subdomain redirects. Just specify the path in `$newurl` without bothering with `$_SERVER['REQUEST_URI']`
 
-#### Redirect From One Path to Another
+### Redirect From One Path to Another {.info}
 
-To redirect from a single path:
+To redirect from a single path (within the dame domain), use the following:
 
 ```php
 // 301 Redirect from /old to /new
@@ -151,7 +153,7 @@ To redirect from a single path:
     }
 ```
 
-To redirect from multiple pathes to a single URL:
+This example will redirect from `example.com/old` to `example.com/new`. To redirect from multiple pathes to a single URL:
 
 ```php
 $redirects = array(
@@ -163,13 +165,15 @@ $redirects = array(
 // 301 Redirect from multiple paths
 // Check if Drupal or WordPress is running via command line
     if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli")) {
-	header('HTTP/1.0 301 Moved Permanently');
-	header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new-path-for-all');
-	exit();
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new-path-for-all');
+    exit();
     }
 ```
 
-#### Redirect Multiple Subdomains to a Single Domain
+This example works the same as above, but for all paths listed in the array.
+
+### Redirect Multiple Subdomains to a Single Subdomain {.info}
 
 ```php
 // Redirect multiple subdomains to a single domain.
@@ -185,12 +189,15 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
     'sub5.youroldwebsite.com',
   ))) {
     header('HTTP/1.0 301 Moved Permanently');
-    header('Location: http://main.yournewwebsite.com'. $_SERVER['REQUEST_URI']);
+    header('Location: https://main.yournewwebsite.com'. $_SERVER['REQUEST_URI']);
     exit();
   }
 }
 ```
-#### Redirect Legacy UNIX-Style User Home Folder Paths
+
+This example will redirect all of the subdomains listed in the array (`sub1.`, `sub2.`, etc) to your new domain `main,yournewwebsite.com`.
+
+### Redirect Legacy UNIX-Style User Home Folder Paths {.info}
 
 When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
 
@@ -206,7 +213,8 @@ if ($legacy_username) {
   // Your custom logic.
 }
 ```
-#### Redirect to Force Lowercase Letters
+### Redirect to Force Lowercase Letters {.info}
+
 WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core.
 
 Drupal sites can force lowercase letters using the following:
