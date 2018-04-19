@@ -454,11 +454,7 @@ if (defined( "PANTHEON_BINDING" )) {
 
 ### [Jupiter](https://themes.artbees.net/pages/jupiter-wordpress-theme-create-wordpress-websites/){.external}
 
-<<<<<<< HEAD
 **Issue**: This theme presents a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
-=======
-**Issue**: This theme presents a form requesting FTP credentials in order to automatically update it's components. This will appear on dev, test and live environments and can be hidden with CSS, but is still present.
->>>>>>> copy edits
 
 **Solution**: The form can be disabled by adding the following to `wp-config.php`:
 
