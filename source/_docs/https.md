@@ -91,6 +91,20 @@ Refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
 ### For how long are Let's Encrypt certificates valid and what happens when they expire?
 Let's Encrypt certificates are valid for 90 days and are automatically updated on the platform before they expire.
 
+### What are the technical specifications for Pantheon's HTTPS?
+
+|                                                                       |                                 |
+|:--------------------------------------------------------------------- |:------------------------------- |
+| **Certificate Type**                                                  | Shared, issued by Let's Encrypt |
+| **Renewal**                                                           | Automatic                       |
+| **Inbound IP**                                                        | Static (shared)                 |
+| **Client Support**                                                    | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup> |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A+ [with HSTS](/docs/hsts/)     |
+| **Protocol**                                                          | TLS 1.2 with SNI                |
+| **Ciphers**                                                           | No 3DES cipher                  |
+| **Delivery**                                                          | [Global CDN](/docs/global-cdn)  |
+| **Encryption Endpoint**                                               | Application Container           |
+
 
 ## Known Issues
 ### HTTPS doesn't provision with incorrect AAAA configurations
@@ -118,7 +132,7 @@ If you encounter rate limits, we recommend the following approaches:
 
 - [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform){.external}.
 - Request that your apex domain (e.g., `example.edu`) be added to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines){.external}, which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
-- Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/){.external} as a workaround. 
+- Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/){.external} as a workaround.
 
 ## Glossary
 ### HTTPS
