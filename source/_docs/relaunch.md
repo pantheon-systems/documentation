@@ -1,84 +1,57 @@
 ---
-title: Switching DNS From One Pantheon Site to Another
-description: Learn how to change DNS details between Pantheon Drupal or WordPress sites.
+title: Relaunch Existing Pantheon Site
+description: Take a new site live by moving custom domains from one Site Dashboard to another, with minimal HTTPS interruptions.
 tags: [dns]
 categories: []
 ---
-There are times when you may want to switch a domain's DNS from one Pantheon site to another. The same domain cannot be added to more than one environment at the same time, but it's possible to point a domain to another site with minimal impact to visitors.
+Sites are considered launched on Pantheon once traffic is routed through custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p>Only the Site Owner, or if the site is owned by an Organization - the Organization's Administrators, can change the Site's Plan. If you are not the owner, you will not see the options discussed below.</p>
-</div>
+<p markdown="1">The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/docs/guides/launch/).</p></div>
 
+## Before You Begin
+- Log in to the new Site Dashboard on Pantheon
+- Open a second tab for the old Site Dashboard on Pantheon
+- In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
+- Examine existing records pointing to Pantheon
+  {% include("content/standard-dns-config.html") %}
+- Lower the TTL of existing DNS records to minimize impact of upcoming DNS changes
+  {% include("ttl.twig") %}
 
-## Prepare The New Site
+## Roles & Permissions
+The permission to manage billing and plans is granted only to the role of **Site Owner** / **Organization Administrators**. Other roles do not have access as described on this page.
 
-For information on preparing your site for launch, please review our [Launch Essentials](/docs/guides/launch/).
-
-Also, check `settings.php` or `wp-config.php` and comment out any hardcoded redirect logic for Pantheon's Platform domains (e.g.  `live-mysite.pantheon.io`). Once DNS has been configured, you can update the redirects to use the default Platform domain (e.g. `live-mysite.pantheonsite.io`) if needed.
-
-### Select a site plan
-
-1.  Go to the Site Dashboard of your New Site.
-2.  Navigate to **Settings** > **Billing**
-3.  Select existing credit card on file or add a new credit card.
-4.  To select a paid plan, navigate to **Plan**, select a paid plan and click **Update Plan**.
-
-## HTTPS on the New Site
-HTTPS can take up to an hour to provision after you switch DNS to the new site, so you may want to plan a maintenance window accordingly.
-
-### Determine the New DNS Records
-Because the same domain cannot be added to more than one environment, you can use temporary domain names to determine the DNS records. Temporarily add something like `example-new.com` and `www.example-new.com` to the new site's Live environment to see the required DNS records.
-
-Alternately, you can use tools like `nslookup` to find the IP addresses for your new environment:
-
-1. Go to the new site's Live environment and get the Platform domain. (e.g. `live-my-site.pantheonsite.io`)
-
-2. From your command line (in any operating system), run `nslookup` on the platform domain:
-
-   ``` bash
-   nslookup live-my-site.pantheonsite.io
-   ```
-
-  The output IP should look like this: `203.0.113.54`.
-
-
-## Prepare your DNS Settings
-### Lower the Time to Live (TTL)
-The TTL dictates the lifespan of a DNS record - a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds. When you make a change to the TTL you need to wait for the old TTL time to pass. So, for example, if the TTL had been set to 86400, you would need to wait a full 24 hours for the new setting to be in place everywhere. You can lower your TTL well in advance of actually switching the DNS values to point to the new site, so the time to see your DNS change will be much quicker than othwersise.
-
-* Log in to the DNS host for your domain and lower the TTL of the bare domain and www records as much as possible. If possible, set the TTL to 60 or 120 seconds for more efficient propagation.
-
-## Switch the Domains
-
-To minimize a disruption, open the Dashboard for both the currently launched site and the new site in different browser tabs so you can quickly make the changes.
-
-### Remove the Domain(s) from the Launched Site
-* From one browser tab, open the Site Dashboard of the old site, go to the Live Environment and to the Domains / HTTPS tab.
-* Remove the domain and subdomains you will be moving to the new site.
-
-### Add the Domain(s) to the New Site
-* From another browser tab, open the Site Dashbard of the new site, go to the Live Environment and to the Domains tab.
-* Add the custom domains
-* Verify that you have the correct DNS records
-
-### Update the DNS Records
-* Update your DNS host with the records from above.
-
-
-## Verify Your changes
-
-Your new site is now live and receiving web traffic (although it may take a bit for the DNS settings to propagate). You can check on the state of propagation around the world with a free web tool like [https://www.whatsmydns.net/](https://www.whatsmydns.net/)
-
-## Downgrade Old Site
-
-- Once you've confirmed that the new site is live, you can return to the old site and downgrade the plan to **Sandbox**.
-
-If you're using an existing credit card profile for billing, the credit from the Sandbox plan downgrade will apply as a prorated payment for your new site. As long as you use the same card/site owner the credit will be carried over automatically.
-
-<div class="alert alert-info" role="alert">
+<div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">If you are changing the card or the site owner, [let us know](https://pantheon.io/support) when everything is switched over, and we'll apply that credit to the new account.
-Please do not remove the old credit card from your account until after the transfer has been made.</p>
-</div>
+<p markdown="1">If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).</p></div>
+
+## Relaunch Procedure
+1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/docs/site-plan/#change-site-plan).
+2. In the old Site Dashboard, delete all domains affected by the relaunch, such as `example.com` and `www.example.com`:
+
+  **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details** > **Remove Domain**
+
+
+3. In the new Site Dashboard, connect custom domains affected by the relaunch, such as `example.com` and `www.example.com`:
+
+  **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Connect Domain**
+
+4. Wait for HTTPS to provision for the newly connected domains:
+
+  **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
+
+  {% include("content/notes/https-success.html")%}
+
+5. Within the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
+
+ {% include("content/standard-dns-config2.html") %}
+6. Test and confirm that the new site is accessible over HTTPS (e.g., `https://www.example.com/`).
+7. In the new Site Dashboard, [standardize traffic for the primary domain](/docs/domains/#redirect-to-https-and-the-primary-domain).
+8. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/docs/site-plan/#change-site-plan).
+9. In the old Site Dashboard, [remove the existing card as a payment method for the site](/docs/site-billing/#do-not-bill-this-site-to-a-card).
+
+## See Also
+- [Launch Essentials](/docs/guides/launch/)
+- [Manage Plans in the Site Dashboard](/docs/site-plan/)
+- [Billing in the Site Dashboard](/docs/site-billing/)
