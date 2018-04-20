@@ -145,7 +145,7 @@ The following configuration will redirect requests for `example.com/old` to `htt
     }
 ```
 #### Redirect Multiple Paths
-The following configuration will redirect requests for `example.com`, `example.com/old`, `example.com/another/path`, and  `example.com/old-path` to `https://example.com//new-path-for-all`:
+The following configuration will redirect requests for `example.com`, `example.com/old`, `example.com/another/path`, and  `example.com/old-path` to `https://example.com/new-path-for-all`:
 
 ```php
 $redirects = array(
