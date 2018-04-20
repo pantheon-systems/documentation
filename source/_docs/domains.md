@@ -93,7 +93,7 @@ It's a best practice for SEO and security to standardize all traffic on HTTPS an
     <div class="panel-inner" markdown="1">
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.
 
-### Redirect to HTTPS {.info}
+#### Redirect to HTTPS
 While it is considered best practice to redirect all traffic to a single primary domain, there are times during development where it may be preferred to redirect traffic to HTTPS without standardizing on a single domain:
 
 ```php
@@ -118,7 +118,7 @@ While it is considered best practice to redirect all traffic to a single primary
 
 This example will redirect all HTTP requests to HTTPS while reserving the domain name.
 
-### Redirect to Subdirectories or Specific URLs {.info}
+#### Redirect to Subdirectories or Specific URLs
 
 To redirect from a subdomain to a specific area of the site, use the following:
 
@@ -139,7 +139,7 @@ This will redirect requests like `http://subdomain.yoursite.com/some/path` to `
 
 The same technique works for single subdomain redirects. Just specify the path in `$newurl` without bothering with `$_SERVER['REQUEST_URI']`
 
-### Redirect From One Path to Another {.info}
+#### Redirect From One Path to Another
 
 To redirect from a single path (within the dame domain), use the following:
 
@@ -173,7 +173,7 @@ $redirects = array(
 
 This example works the same as above, but for all paths listed in the array.
 
-### Redirect Multiple Subdomains to a Single Subdomain {.info}
+#### Redirect Multiple Subdomains to a Single Subdomain
 
 ```php
 // Redirect multiple subdomains to a single domain.
@@ -197,7 +197,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
 
 This example will redirect all of the subdomains listed in the array (`sub1.`, `sub2.`, etc) to your new domain `main,yournewwebsite.com`.
 
-### Redirect Legacy UNIX-Style User Home Folder Paths {.info}
+#### Redirect Legacy UNIX-Style User Home Folder Paths
 
 When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
 
@@ -213,7 +213,7 @@ if ($legacy_username) {
   // Your custom logic.
 }
 ```
-### Redirect to Force Lowercase Letters {.info}
+#### Redirect to Force Lowercase Letters
 
 WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core.
 
