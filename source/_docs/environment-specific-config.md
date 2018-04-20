@@ -9,7 +9,7 @@ To quickly see which environment you are on, consider installing the [Pantheon H
 
 ## Customizations to wp-config.php
 
-Pantheon's default version of `wp-config.php` contains a nice example that sets `DISALLOW_FILE_MODS` to `true` on Test and Live environments.
+Pantheon's default version of `wp-config.php` demonstrates how to [set `DISALLOW_FILE_MODS` to `true` on Test and Live environments](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L88-L91){.external}:
 
 ```php
 if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( 'DISALLOW_FILE_MODS' ) ) :
@@ -17,7 +17,7 @@ if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! def
 endif;
 ```
 
-This is a useful model to follow for another recommended modification, defining `'WP_DEBUG', true` on all environments except for Test and Live.
+In the same way, you can conditionally set `'WP_DEBUG', true` based on the given Pantheon environment. For example, the following configuration enables WP_DEBUG for development environments (Dev and Multidevs), while disabling it on production environments (Test and Live): 
 
 ```php
 /**
