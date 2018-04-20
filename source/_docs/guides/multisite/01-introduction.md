@@ -36,6 +36,7 @@ We do not support uses of WordPress Site Networks that run functionally-differen
 
 - Software as a service (SAAS) products
 - Agencies using one WordPress installation to support several customers
+- WordPress Multi-Network installations 
 
 ## Request a WordPress Site Network
 Running a WordPress Site Network requires a special configuration that is only available on Elite plans. Only Pantheon employees have the ability to create the sites and add you to the team. Existing WordPress sites cannot be converted to a network, however they can be [migrated](/docs/migrate-wordpress-site-networks/).
