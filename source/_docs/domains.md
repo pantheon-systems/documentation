@@ -94,7 +94,7 @@ It's a best practice for SEO and security to standardize all traffic on HTTPS an
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All <code>if</code> conditional statements need to be in the correct order. For example, a wholesale redirect executed <em>prior</em> to redirects for specific pages would likely prevent the second statement from being evaluated.
 
 #### Redirect to HTTPS
-While it is considered best practice to redirect all traffic to a single primary domain, there are times during development where it may be preferred to redirect traffic to HTTPS without standardizing on a single domain:
+The following configuration will redirect HTTP requests to HTTPS, such as `http://env-site-name.pantheonsite.io` to `https://env-site-name.pantheonsite.io` or `http://example.com` to `https://example.com`:
 
 ```php
    // Require HTTPS.
@@ -110,36 +110,30 @@ While it is considered best practice to redirect all traffic to a single primary
 
         # Name transaction "redirect" in New Relic for improved reporting (optional)
         if (extension_loaded('newrelic')) {
-          newrelic_name_transaction("redirect"); 
+          newrelic_name_transaction("redirect");
         }
      }
    }
 ```
 
-#### Redirect to Subdirectories or Specific URLs
-
-To redirect from a subdomain to a specific area of the site, use the following:
+#### Redirect from Subdomain to Subdirectory Path
+The following configuration will redirect requests for `subdomain.example.com` to `https://example.com/subdirectory/`:
 
 ```php
  // Redirect subdomain to a specific path.
  if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
-   ($_SERVER['HTTP_HOST'] == 'subdomain.yoursite.com') &&
+   ($_SERVER['HTTP_HOST'] == 'subdomain.example.com') &&
    // Check if Drupal or WordPress is running via command line
    (php_sapi_name() != "cli")) {
-   $newurl = 'http://www.yoursite.com/subdomain/'. $_SERVER['REQUEST_URI'];
+   $newurl = 'https://www.example.com/subdirectory/'. $_SERVER['REQUEST_URI'];
    header('HTTP/1.0 301 Moved Permanently');
    header("Location: $newurl");
   exit();
  }
 ```
 
-This will redirect requests like http://subdomain.yoursite.com/some/path to http://www.yoursite.com/subdomain/some/path.
-
-The same technique works for single subdomain redirects. Just specify the path in `$newurl` without bothering with `$_SERVER['REQUEST_URI']`
-
-#### Redirect From One Path to Another
-
-For a single path:
+#### Redirect One Path to Another
+The following configuration will redirect requests for `example.com/old` to `https://example.com/new`:
 
 ```php
 // 301 Redirect from /old to /new
@@ -150,26 +144,27 @@ For a single path:
         exit();
     }
 ```
-
-For multiple paths and redirects:
+#### Redirect Multiple Paths
+The following configuration will redirect requests for `example.com`, `example.com/old`, `example.com/another/path`, and  `example.com/old-path` to `https://example.com/new-path-for-all`:
 
 ```php
 $redirects = array(
-    "/", 
-    "/old", 
-    "/another/path", 
+    "/",
+    "/old",
+    "/another/path",
     "/old-path");
 
 // 301 Redirect from multiple paths
 // Check if Drupal or WordPress is running via command line
     if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli")) {
-	header('HTTP/1.0 301 Moved Permanently');
-	header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new-path-for-all');
-	exit();
+    header('HTTP/1.0 301 Moved Permanently');
+    header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new-path-for-all');
+    exit();
     }
 ```
 
-#### Redirect Multiple Subdomains to a Single Domain
+#### Redirect Multiple Subdomains
+The following configuration will redirect requests for `sub1.example.com`, `sub2.example.com`, `sub3.example.com`, and `sub4.example.com` to `https://new.example.com`:
 
 ```php
 // Redirect multiple subdomains to a single domain.
@@ -178,20 +173,19 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
   // Check if Drupal or WordPress is running via command line
   (php_sapi_name() != "cli")) {
   if (in_array($_SERVER['HTTP_HOST'], array(
-    'sub1.youroldwebsite.com',
-    'sub2.youroldwebsite.com',
-    'sub3.youroldwebsite.com',
-    'sub4.youroldwebsite.com',
-    'sub5.youroldwebsite.com',
+    'sub1.example.com',
+    'sub2.example.com',
+    'sub3.example.com',
+    'sub4.example.com'
   ))) {
     header('HTTP/1.0 301 Moved Permanently');
-    header('Location: http://main.yournewwebsite.com'. $_SERVER['REQUEST_URI']);
+    header('Location: https://new.example.com'. $_SERVER['REQUEST_URI']);
     exit();
   }
 }
 ```
-#### Redirect Legacy UNIX-Style User Home Folder Paths
 
+#### Redirect Legacy UNIX-Style User Home Folder Paths
 When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
 
 ```php
@@ -206,13 +200,32 @@ if ($legacy_username) {
   // Your custom logic.
 }
 ```
+
 #### Redirect to Force Lowercase Letters
-WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core.
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
 
-Drupal sites can force lowercase letters using the following:
+  <!-- 2nd Tab Nav -->
+  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal</a></li>
+</ul>
 
-1. Set general automatic alias settings  to **Change to lower case** within the [PathAuto](https://www.drupal.org/project/pathauto) module configuration (`/admin/build/path/pathauto`).
-2. Enable **Case Sensitive URL Checking** within the [Global Redirect](https://www.drupal.org/project/globalredirect) module configuration (`/admin/settings/globalredirect`).
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+  WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744){.external} function in core.
+  </div>
+
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+  Drupal sites can force lowercase letters using the following:
+
+  1. Set general automatic alias settings to **Change to lower case** within the [PathAuto](https://www.drupal.org/project/pathauto) module configuration (`/admin/build/path/pathauto`).
+  2. Enable **Case Sensitive URL Checking** within the [Global Redirect](https://www.drupal.org/project/globalredirect) module configuration (`/admin/settings/globalredirect`).
+  </div>
+</div>
 </div>
 </div>
 </div>
