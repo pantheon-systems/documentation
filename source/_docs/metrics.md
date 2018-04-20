@@ -44,7 +44,7 @@ Pantheon-identified bots are excluded from the Visits and Pages Served Metrics.
 
 
 ### Can I see metrics for other environments?
-Yes! Metrics are now available for the entire site or by environment via the Terminus `alpha:metrics` command.
+Yes! Metrics are now available for the entire site or by environment via the Terminus `alpha:metrics` command, when [installed via Git](https://github.com/pantheon-systems/terminus#installing-with-git). 
 
 
 ### Why don't I see any data, or why don't I see a full 12 months of data?
