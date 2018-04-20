@@ -35,25 +35,6 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
     ![Create Project Prompts](/source/docs/assets/images/pr-workflow/build-env-create-project-prompts.png)
 
     <div class="panel panel-drop panel-guide" id="accordion">
-    <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#additional-info">
-    <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-eye-open"></span> Additional Information</h3>
-    </a>
-    </div>
-    <div id="additional-info" class="collapse" markdown="1" style="padding:10px;">
-    ### Token Management {.info}
-    The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens){.external} and [CircleCI](https://circleci.com/account/api){.external}, which are stored as environment variables. You many also generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
-
-    ```bash
-    export GITHUB_TOKEN=yourGitHubToken
-    export CIRCLE_TOKEN=yourCircleCIToken
-    ```
-
-    If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app){.external}.
-    </div>
-    </div>
-
-    <div class="panel panel-drop panel-guide" id="accordion">
       <div class="panel-heading panel-drop-heading">
         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#troubleshoot-install"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Troubleshooting</h3></a>
       </div>
