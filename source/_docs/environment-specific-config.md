@@ -17,11 +17,11 @@ if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! def
 endif;
 ```
 
-In the same way, you can conditionally set `'WP_DEBUG', true` based on the given Pantheon environment. For example, the following configuration enables WP_DEBUG for development environments (Dev and Multidevs), while disabling it on production environments (Test and Live): 
+In the same way, you can conditionally set `'WP_DEBUG', true` based on the given Pantheon environment. For example, the following configuration enables WP_DEBUG for development environments (Dev and Multidevs), while disabling it on production environments (Test and Live):
 
 ```php
 /**
- * For developers: WordPress debugging mode.
+ * WordPress debugging mode.
  *
  * Sets WP_DEBUG to true on if on a development environment.
  *
