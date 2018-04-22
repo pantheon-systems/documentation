@@ -47,7 +47,7 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 
 <hr>
 ### [BigPipe](https://www.drupal.org/documentation/modules/big_pipe){.external}
-**Issue**: The Pantheon Edge layer buffers text output, and BigPipe depends on being able to stream text output.
+**Issue**: The Pantheon Edge layer buffers text output, and BigPipe depends on being able to stream text output. Since BigPipe provides no benefit on Pantheon sites, we recommend disabling it.
 
 <hr>
 ### [Boost](https://www.drupal.org/project/boost){.external}
