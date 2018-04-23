@@ -77,4 +77,4 @@ When a certificate is ready you can switch DNS destinations from your existing s
   </div>
 </div>
 ### Maintenance Window
-If you are unable to prove domain ownership, you will not be able to pre-provision HTTPS to prevent service interruption. In these cases, we recommend completing the next section ([Configure DNS](/docs/guides/launch/configure-dns/)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.
+If you are unable to prove domain ownership (e.g. WPEngine blocks serving the required challenge file) you will not be able to pre-provision HTTPS to prevent service interruption. In these cases, we recommend completing the next section ([Configure DNS](/docs/guides/launch/configure-dns/)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.
