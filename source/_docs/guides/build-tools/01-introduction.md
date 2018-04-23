@@ -97,7 +97,7 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
       <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
       <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
     </div>
-    
+
 3. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 4. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create){.external}, then authenticate Terminus:
@@ -141,3 +141,14 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
     <h4 class="info">Note</h4>
     <p markdow="1">If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.</p>
     </div>
+
+### Access Tokens (Optional)
+
+The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens){.external} and [CircleCI](https://circleci.com/account/api){.external}, which are stored as environment variables. You many optionally generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
+
+```bash
+export GITHUB_TOKEN=yourGitHubToken
+export CIRCLE_TOKEN=yourCircleCIToken
+```
+
+If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app){.external}.
