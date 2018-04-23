@@ -142,11 +142,13 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
     <p markdow="1">If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.</p>
     </div>
 
-10. The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens){.external} and [CircleCI](https://circleci.com/account/api){.external}, which are stored as environment variables. You many also generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
+### Access Tokens (Optional)
 
-    ```bash
-    export GITHUB_TOKEN=yourGitHubToken
-    export CIRCLE_TOKEN=yourCircleCIToken
-    ```
+The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens){.external} and [CircleCI](https://circleci.com/account/api){.external}, which are stored as environment variables. You many optionally generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
 
-    If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app){.external}.
+```bash
+export GITHUB_TOKEN=yourGitHubToken
+export CIRCLE_TOKEN=yourCircleCIToken
+```
+
+If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app){.external}.
