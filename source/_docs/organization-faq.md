@@ -75,6 +75,10 @@ Support is prioritized based on site service levels as follows:
 4. Basic
 5. Sandbox
 
+### As an Agency, how many sandbox sites do members of an organization receive?
+
+Each member of an Agency organization receives 10 sandbox sites. When the limit of 10 is reached, taking a site live or deleting unused sites will free up additional sandboxes. 
+
 ## Unsupported
 
 ### Can we run our Joomla, Magento, Laravel (insert other PHP framework here)?
