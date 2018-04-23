@@ -93,17 +93,18 @@ Let's Encrypt certificates are valid for 90 days and are automatically updated o
 
 ### What are the technical specifications for Pantheon's HTTPS?
 
-|                                                                       |                                 |
-|:--------------------------------------------------------------------- |:------------------------------- |
-| **Certificate Type**                                                  | Shared, issued by Let's Encrypt |
-| **Renewal**                                                           | Automatic                       |
-| **Inbound IP**                                                        | Static (shared)                 |
-| **Client Support**                                                    | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup> |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A+ [with HSTS](/docs/hsts/)     |
-| **Protocol**                                                          | TLS 1.2 with SNI                |
-| **Ciphers**                                                           | No 3DES cipher                  |
-| **Delivery**                                                          | [Global CDN](/docs/global-cdn)  |
-| **Encryption Endpoint**                                               | Application Container           |
+|                                                                       | Legacy                    | Global CDN with Let's Encrypt   |
+|:--------------------------------------------------------------------- |:------------------------- |:------------------------------- |
+| **Price**                                                             | $60/month per environment | Free                            |
+| **Certificate Type**                                                  | Bring your own            | Shared, issued by Let's Encrypt |
+| **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
+| **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
+| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup> |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A                         | A+ [with HSTS](/docs/hsts/)     |
+| **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
+| **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |
+| **Delivery**                                                          | US Datacenter             | [Global CDN](/docs/global-cdn)  |
+| **Encryption Endpoint**                                               | Load Balancer             | Application Container           |
 
 
 ## Known Issues
