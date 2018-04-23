@@ -6,7 +6,7 @@ categories: [drupal]
 type: guide
 permalink: docs/guides/:basename/
 contributors:
-  - stevector
+  - andrew
   - dwayne
   - davidneedham
 ---
@@ -46,7 +46,7 @@ We should see composer.json and composer.install. Let’s use Composer to instal
 
 `composer install`
 
-(image here)
+![image of terminal running a composer install](source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-install.png)
 
 `git status`
 
@@ -54,7 +54,8 @@ The drops-8-composer .gitignore file assumes that you’re using a build step wi
 
 `git status`
 
-(image here)
+![image of git status showing the changed files in red](source/docs/assets/images/guides/drops-8-composer-git-status-after-installing-d8.png)
+
 
 `git add .`
 
@@ -102,7 +103,8 @@ git push -u origin addr-module
 
 Spin up a Multidev environment from the git branch we just pushed up to Pantheon.
 
-(image here)
+![image of terminal running a composer install](source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-multidev-creation.png)
+
 
 `terminus multidev:create andrew-drops-8-composer.dev addr-module`
 
@@ -110,8 +112,11 @@ Log in to your new environment and verify that the address module exists.
 
 `terminus drush andrew-drops-8-composer.addr-module -- uli`
 
-(image here)
+(image here) ![image of terminal running a composer install](source/docs/assets/images/guides/drops-8-composer-drupal-8-address-module-install.png)
+
 
 #More resources
 
 ...
+
+[comment]: <Alex is there an algorithmic way to link these assetts rather than us manualy suggesting them?>
