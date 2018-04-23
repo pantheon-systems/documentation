@@ -77,7 +77,7 @@ Support is prioritized based on site service levels as follows:
 
 ### As an Agency, how many sandbox sites do members of an organization receive?
 
-Each member of an Agency organization receives 10 sandbox sites. When the limit of 10 is reached, taking a site live or deleting unused sites will free up additional sandboxes. 
+Each member of an organization receives 10 Sandbox sites. When the limit of 10 is reached, taking a site live or deleting unused sites will free up additional Sandbox slots.
 
 ## Unsupported
 
