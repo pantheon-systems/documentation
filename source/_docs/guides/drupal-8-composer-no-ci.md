@@ -61,7 +61,7 @@ The drops-8-composer .gitignore file assumes that you’re using a build step wi
 (Note: The vendor directory is being committed. This is because Pantheon needs the full site artifact. If you prefer to ignore the vendor directory then take a look at our documentation on the more advanced automated workflow with a build step.)
 
 ```
-git commit -m “Drupal 8 install”
+git commit -m 'Drupal 8 install
 
 git push
 ```
@@ -95,7 +95,7 @@ composer update
 
 git add .
 
-git commit -m “Adding the address module with Composer”
+git commit -m 'Adding the address module with Composer'
 
 git push -u origin addr-module
 ```
