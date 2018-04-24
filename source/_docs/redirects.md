@@ -1,5 +1,5 @@
 ---
-title: Additional Recirect Examples
+title: Additional Redirect Examples
 description: For those who need to use specific redirects to customize the user journey, we offer this page of examples for multiple scenarios.
 tags: [redirects, variables, dns]
 categories: []
