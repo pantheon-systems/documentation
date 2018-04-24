@@ -9,11 +9,36 @@ To quickly see which environment you are on, consider installing the [Pantheon H
 
 ## Customizations to wp-config.php
 
-Pantheon's default version of `wp-config.php` contains a nice example that sets `DISALLOW_FILE_MODS` to `true` on Test and Live environments.
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal&slice=88:91"></script>
+Pantheon's default version of `wp-config.php` demonstrates how to [set `DISALLOW_FILE_MODS` to `true` on Test and Live environments](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L88-L91){.external}:
 
-This is a useful model to follow for another recommended modification, defining `'WP_DEBUG', true` on all environments except for Test and Live.
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/wp_debug_dev.wp-config.php?footer=minimal"></script>
+```php
+if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( 'DISALLOW_FILE_MODS' ) ) :
+    define( 'DISALLOW_FILE_MODS', true );
+endif;
+```
+
+In the same way, you can conditionally set `'WP_DEBUG', true` based on the given Pantheon environment. For example, the following configuration enables WP_DEBUG for development environments (Dev and Multidevs), while disabling it on production environments (Test and Live):
+
+```php
+/**
+ * WordPress debugging mode.
+ *
+ * Sets WP_DEBUG to true on if on a development environment.
+ *
+ */
+if (!defined('WP_DEBUG') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    if(in_array( $_ENV['PANTHEON_ENVIRONMENT'], array('test', 'live'))) {
+      define('WP_DEBUG', false);
+    } else {
+      define( 'WP_DEBUG', true );
+    }
+}
+```
+
+<div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, remove or comment out the [existing code block](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L147){.external} defining it.</p>
+</div>
 
 For more options when editing `wp-config.php` for debugging, see [Configure Error Logging](https://codex.wordpress.org/Editing_wp-config.php#Configure_Error_Logging) on the WordPress Codex.
 
@@ -22,7 +47,7 @@ Filters or functions running in an mu-plugin can enable development plugins that
 
 ### Create the Plugin
 
-Copy this plugin file to `wp-content/mu-plugins/mu-plugins/site-config.php` and edit accordingly.
+Copy this plugin file to `wp-content/mu-plugins/site-config.php` and edit accordingly.
 
 ```php
 <?php
@@ -41,7 +66,6 @@ if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) :
 require_once( 'site-config/live-specific-configs.php' );
 
 endif;
-
 ```
 
 ### Add Configuration
@@ -49,36 +73,43 @@ Create a new directory, `wp-content/mu-plugins/site-config/`, and add a `live-sp
 
 ```php
 <?php
-// List Development Plugins
-  $plugins = array(
-          'wp-reroute-email/wp-reroute-email.php','debug-bar/debug-bar.php','developer/developer.php'
-      );
 
-// Live-specific configs
-  if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) ) ) {
+# List Development Plugins
+    $plugins = array(
+        'debug-bar/debug-bar.php',
+        'developer/developer.php',
+        'wp-reroute-email/wp-reroute-email.php'
+        );
 
-    // Disable Development Plugins
-      require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-      foreach ($plugins as $plugin);
-          if(is_plugin_active($plugin));
-              deactivate_plugins($plugin);
+# Live-specific configs
+    if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) ) ) {
 
-    // Disable jetpack_development_mode
-      add_filter( 'jetpack_development_mode', '__return_false' );
-          }
+    # Disable Development Plugins
+        require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        foreach ($plugins as $plugin) {
+            if(is_plugin_active($plugin)) {
+	            deactivate_plugins($plugin);
+            }
+        }
 
-// Configs for All environments but Live
-  else {
-    //
-    // Activate Development Plugins
-    //
-      require_once(ABSPATH . 'wp-admin/includes/plugin.php');
-          foreach ($plugins as $plugin);
-          if(is_plugin_active($plugin))false;
-              activate_plugin($plugin);
-    // Enable development mode for jetpack
-      add_filter( 'jetpack_development_mode', '__return_true' );
+    # Disable jetpack_development_mode
+        add_filter( 'jetpack_development_mode', '__return_false' );
+    }
 
+    # Configs for All environments but Live
+    else {
+
+   	# Activate Development Plugins
+
+        require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        foreach ($plugins as $plugin) {
+            if(is_plugin_inactive($plugin)) {
+                activate_plugin($plugin);
+            }
+        }
+
+    # Enable development mode for jetpack
+        add_filter( 'jetpack_development_mode', '__return_true' );
 }
 
 ```
