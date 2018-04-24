@@ -2223,6 +2223,14 @@ h3.panel-drop-title {
   font-size: 14px;
   line-height: 1;
 }
+h4.panel-drop-title {
+  text-decoration: none;
+  color: #000 !important;
+  font-weight: 700;
+  font-family: 'TabletGothic';
+  font-size: 14px;
+  line-height: 1;
+}
 a.panel-drop-title {
   text-decoration: none;
   cursor: pointer;
