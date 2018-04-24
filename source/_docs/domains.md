@@ -264,4 +264,4 @@ If your domain's DNS configuration relies on an existing MX or TXT record that i
 3. Log in to your DNS host and create two AAAA records and one A record for the desired subdomain (e.g., `www`) using the values returned in the steps above.
 
 ## See Also
- - [Switching DNS From One Pantheon Site to Another](/docs/switching-dns/)
+ - [Relaunch Existing Pantheon Site](/docs/relaunch/)
