@@ -116,8 +116,7 @@ To associate an existing card from your account as the payment method for this s
 
 1. Click the **<span class="glyphicons glyphicons-envelope"></span> Send a Request** button.
 2. Enter the intended site owner’s email.
-
- The business owner will get an email that directs them to create a Pantheon account or log in to an existing account. Once inside, they need to provide their contact and billing info.
+  The business owner will get an email that directs them to create a Pantheon account or log in to an existing account. Once inside, they need to provide their contact and billing info. 
 3. Ask the new site owner to add your agency as a [Supporting Organization](/docs/team-management/#add-a-supporting-organization) so you can continue the going live procedure on their behalf.
   </div>
 </div>
@@ -135,7 +134,8 @@ Invoices and transaction history related to this change can be found in **<span 
 Review the [previous section](#sandbox-plan) on feature availability before downgrading to Sandbox.
 
 1. Go to the Site Dashboard.
-2. Select the current plan (shown in green).
+2. Select the current plan:
+ ![Change current plan for paid sites](/source/docs/assets/images/dashboard/change-plan.png)
 3. Click the **Downgrade to free** link to cancel the current plan:
  ![Downgrade to free by cancelling current plan](/source/docs/assets/images/dashboard/cancel-plan.png)
 4. Check **Yes, cancel my plan** then click **Continue**:
