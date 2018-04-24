@@ -30,7 +30,7 @@ cd .. && composer create-project pantheon-systems/example-drops-8-composer --sta
 ```
 Make sure to substitute your project's name for `my-site`
 
-This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-system/example-drops-8-composer) in the `my-site-composer` directory. The directory structure should now look like this;
+This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in the `my-site-composer` directory. The directory structure should now look like this;
 ```sh
 Sites
 |-my-site
@@ -104,7 +104,7 @@ We now have to commit all this work to our Pantheon repo. From the `my-site` dir
 cp -r .git ../my-site-composer 
 cd ../my-site-composer
 git add .
-git commit -m "Convert to Composer Based install
+git commit -m "Convert to Composer Based install"
 ```
 
 You should see a large amount of files committed to the new branch we created earlier.
