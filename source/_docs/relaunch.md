@@ -46,11 +46,11 @@ The permission to manage billing and plans is granted only to the role of **Site
 
   {% include("content/notes/https-success.html")%}
 
-5. Within the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
+5. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
  {% include("content/standard-dns-config2.html") %}
 6. Test and confirm that the new site is accessible via the custom domain over HTTPS (e.g., `https://www.example.com/`).
-7. Repeat steps 2-6 above for each affected domain, keep in mind that `www.example.com` and `example.com` are different domains.  
+7. Repeat steps 2-6 above for each affected domain. Keep in mind that `www.example.com` and `example.com` are different domains.
 8. In the new Site Dashboard, [standardize traffic for the primary domain](/docs/domains/#redirect-to-https-and-the-primary-domain).
 9. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/docs/site-plan/#change-site-plan).
 10. In the old Site Dashboard, [remove the existing card as a payment method for the site](/docs/site-billing/#do-not-bill-this-site-to-a-card).
