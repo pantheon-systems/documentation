@@ -64,7 +64,7 @@ If bringing your own certificate is a hard requirement, then we recommend termin
 Yes! HTTPS is terminated at the CDN edge and traffic is encrypted all the way to the individual application container. This is an improvement over our legacy system that terminated all encryption at the load balancer, and a huge upgrade over setups which use a "mixed mode" strategy of terminating HTTPS at the CDN and then back-ending to the origin over unencrypted clear text communication.
 
 ### Will HTTPS be available for my site throughout the upgrade process?
-Yes! As long as your are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
+Yes! As long as you are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
 
 Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/configure-dns/) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
@@ -118,7 +118,7 @@ If you encounter rate limits, we recommend the following approaches:
 
 - [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform){.external}.
 - Request that your apex domain (e.g., `example.edu`) be added to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines){.external}, which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
-- Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/){.external} as a workaround. 
+- Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/){.external} as a workaround.
 
 ## Glossary
 ### HTTPS
