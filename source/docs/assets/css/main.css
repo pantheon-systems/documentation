@@ -5250,6 +5250,8 @@ div.navsearch-container {
   margin: 0px !important;
   border-radius:4px;
   max-height: 70px;
+  border: none !important;
+  padding: unset !important;
 }
 .pantheon-official {
   color: #78868e;
@@ -5573,7 +5575,7 @@ td{
 #navbar .create-account a:hover {
   color: #000 !important;
 }
-img {
+#doc img, .changelog-wrapper img {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 10px;
