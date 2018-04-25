@@ -45,7 +45,7 @@ Select the card you want the site to use as the new payment method _after_ it ha
 
  You should get a message saying "Card has been updated."
 ### Do Not Bill This Site to a Card
-After [downgrading from a paid plan to Sandbox](/docs/site-plan/), remove the card as a payment method for the site:
+After [downgrading from a paid plan to Sandbox](/docs/site-plan/#cancel-current-plan), remove the card as a payment method for the site:
 
 1. Go to the Site Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Settings**, then click **Billing**.
 2. Select **Do not bill this site to a card** from the drop down menu within **Your Credit Cards** section.
