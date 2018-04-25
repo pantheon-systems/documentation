@@ -5573,3 +5573,6 @@ td{
 #navbar .create-account a:hover {
   color: #000 !important;
 }
+.img{
+    border: 1px solid #44515e;
+}

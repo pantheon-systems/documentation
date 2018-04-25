@@ -5,7 +5,10 @@ tags: [billing]
 ---
 ## Access Site Plan
 1. Go to the Site Dashboard.
-2. If the site is currently on a Sandbox plan, you will see an **Upgrade** button next to the site name. Otherwise, the current plan is shown in green.
+2. For Sandbox sites, click the **Upgrade** button:
+ ![Upgrade plan button shown on Sandbox sites](/source/docs/assets/images/dashboard/upgrade-plan.png)
+ Otherwise, click the **current plan**:
+ ![Change current plan for paid sites](/source/docs/assets/images/dashboard/change-plan.png)
 
 Plan changes take immediate effect. The associated card will be charged or credited a prorated amount upon upgrade or downgrade.
 
@@ -22,7 +25,7 @@ The permission to manage a site's plan is granted only to the roles of **Site Ow
 
 ## Considerations
 Consider the following changes to feature access _before_ upgrading or downgrading the site's plan. Certain scenarios require code changes in order to safely change the site plan.
-### Basic Plans
+### Basic Plan
 [New Relic](/docs/new-relic/), [Redis](/docs/redis/), and [Solr](/docs/solr) are not available for Basic plans. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
 For Redis and Solr, the following code changes are required before the feature can be safely disabled:
@@ -64,17 +67,18 @@ For Redis and Solr, the following code changes are required before the feature c
   </div>
 </div>
 
-### Sandbox Plans
+### Sandbox Plan
 [Custom domains](/docs/domains/#custom-domains) are not available to Sandbox plans. Downgrading to a Sandbox plan will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
 Downgrading to a Sandbox plan will disable automatic backups. You will be able to create backups manually. For details, see [Backups Tool](/docs/backups/).
 
-## Change Site Plan
-Review the [previous section](#considerations) on feature availability before switching plans to Sandbox or Basic. This applies to upgrades and downgrades alike.
-### Switch Current Plan
+## Purchase a New Plan
+Review the [previous section](#basic-plan) on feature availability before switching plans to Basic.
+### Select Plan
 1. Go to the Site Dashboard.
-2. If the site is currently on a Sandbox plan, click the **Upgrade** button. Otherwise, click on the current plan (shown in green).
-3. Click **Select** for the desired plan.
+2. For Sandbox sites, click the **Upgrade** button. Otherwise, select the current plan.
+3. Click **Select** to switch plans:
+ ![Select a different plan](/source/docs/assets/images/dashboard/select-plan.png)
 
 ### Enter Billing Information
 Ownership is directly tied to the user account entering billing information.
@@ -112,8 +116,7 @@ To associate an existing card from your account as the payment method for this s
 
 1. Click the **<span class="glyphicons glyphicons-envelope"></span> Send a Request** button.
 2. Enter the intended site owner’s email.
-
- The business owner will get an email that directs them to create a Pantheon account or log in to an existing account. Once inside, they need to provide their contact and billing info.
+  The business owner will get an email that directs them to create a Pantheon account or log in to an existing account. Once inside, they need to provide their contact and billing info. 
 3. Ask the new site owner to add your agency as a [Supporting Organization](/docs/team-management/#add-a-supporting-organization) so you can continue the going live procedure on their behalf.
   </div>
 </div>
@@ -126,6 +129,19 @@ To associate an existing card from your account as the payment method for this s
 The Site Owner will receive an email confirmation of this change, a new invoice will be issued, and a prorated amount for the current billing cycle will be credited or charged to the associated card automatically.
 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
+
+## Cancel Current Plan
+Review the [previous section](#sandbox-plan) on feature availability before downgrading to Sandbox.
+
+1. Go to the Site Dashboard.
+2. Select the current plan:
+ ![Change current plan for paid sites](/source/docs/assets/images/dashboard/change-plan.png)
+3. Click the **Downgrade to free** link to cancel the current plan:
+ ![Downgrade to free by cancelling current plan](/source/docs/assets/images/dashboard/cancel-plan.png)
+4. Check **Yes, cancel my plan** then click **Continue**:
+ ![Confirm plan cancellation](/source/docs/assets/images/dashboard/confirm-cancellation.png)
+5. Make sure the change details are correct, then click **Submit**.
+6. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/docs/site-billing/#do-not-bill-this-site-to-a-card).
 
 ## See Also
 - [Billing in the Site Dashboard](/docs/site-billing/)
