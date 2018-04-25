@@ -1800,9 +1800,9 @@ margin-right: 20px;
 @media (max-width: 1200px) {
 .container {
 }
-}
  /* Widen the fixed sidebar */
   .pio-docs-sidebar.affix,
+}
   .pio-docs-sidebar.affix-bottom {
 
   }
@@ -5572,4 +5572,7 @@ td{
 }
 #navbar .create-account a:hover {
   color: #000 !important;
+}
+.img{
+    border: 1px solid #44515e;
 }
