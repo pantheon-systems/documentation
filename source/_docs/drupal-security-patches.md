@@ -77,11 +77,6 @@ You'll need a local git clone of your site code.
     git push origin master
     ```
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">Drupal 8.4 users who cannot upgrade to 8.5 can substitute patch number `213`.</p>
-</div>
-
 </div>
 
 <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
@@ -227,10 +222,6 @@ You'll need a local git clone of your site code.
     git push origin master
     ```
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">Drupal 8.3 and 8.4 users who cannot upgrade to 8.5 can substitute patch numbers `208` and `207`, respectively.</p>
-</div>
 
 </div>
 
