@@ -37,7 +37,7 @@ The procedure for executing a load test and a performance test are similar:
      * [Jmeter](https://jmeter.apache.org/)
      * [Locust](http://locust.io/)
 
-The Pantheon onboarding team uses Locust, an open source load testing tool. Locust makes it easy to build out test scripts, and it allows you to crawl the site instead of using predefined URLs. Crawling the site has the added benefit of loading every page that is linked to anywhere on the site. This exposes edge case performance bottlenecks that would have gone undetected under tests with predifined URLs.
+The Pantheon onboarding team uses Locust, an open source load testing tool. Locust makes it easy to build out test scripts, and it allows you to crawl the site instead of using predefined URLs. Crawling the site has the added benefit of loading every page that is linked to anywhere on the site. This exposes edge case performance bottlenecks that would have gone undetected under tests with predefined URLs.
 
 Ultimately, it doesn't matter what tool(s) you use as long as you test your site against the anticipated traffic patterns of the site in terms of overall volume and the proportion of anonymous versus authenticated traffic. Note that load testing for anonymous visits is considerably easier than testing authenticated workflows, which will require more investment of time and skills.  
 
