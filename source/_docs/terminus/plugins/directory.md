@@ -98,7 +98,7 @@ The following plugins are just a few of the most popular available for Terminus 
     <div class="flex-panel-item">
     <div class="flex-panel-body">
       <div class="flex-panel-title">
-        <h3 class="plugin-title">Filer</h3>
+        <h3 class="plugin-title">Omniscient</h3>
       </div>
       <p class="topic-info__description">Author: <a href="https://github.com/rvtraveller">rvtraveller</a></p>
       <p class="topic-info__description">Enable New Relic on all your sites on Pantheon that qualify.</p>
