@@ -16,7 +16,7 @@ The scope of performance tests should be limited to the application itself on a 
 
 
 ### Load Testing
-Load testing is the process in which you apply requests to your site that will represent the most load that your site will face once it is live.  This test will ensure that the site can withstand the peak traffic spikes after launch. This test should be done on the Live environment before the site has launched, in advance of anticipated major-traffic events, or after major overhauls, remembering to provide enough time to fix any issues identifiedafter performance testing.
+Load testing is the process in which you apply requests to your site that will represent the most load that your site will face once it is live.  This test will ensure that the site can withstand the peak traffic spikes after launch. This test should be done on the Live environment before the site has launched, in advance of anticipated major-traffic events, or after major overhauls, remembering to provide enough time to fix any issues identified after performance testing.
 
 If your site is already live, then you should run load tests on the Test environment. Keep in mind that the Test environment has two application containers, while Live environments on sites with a service level of Performance Medium and above can have multiple application containers serving the site. So try to run a proportionate amount of traffic based on how many containers you currently have on your Live environment.
 
