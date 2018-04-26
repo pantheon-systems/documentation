@@ -63,7 +63,7 @@ Once the test is running, execute common tasks done by editors and administrator
 * Run any scripts that could be triggered while users are on the site.
 
 ##Assess Results
-Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunites.
+Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunities.
 
 Next, review the **Transactions** tab in New Relic and sort by **Slowest average response time**. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to find the performance bottleneck.
 
