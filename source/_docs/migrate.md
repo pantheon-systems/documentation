@@ -341,7 +341,7 @@ If multiple SQL files are present the import will fail. Only provide one `.sql` 
 If multiple `settings.php` files are present the import will fail. Pantheon does not need the `settings.php` file to import the site. To prevent import problems, it's best to remove `settings.php`.
 
 ### How can I migrate from WP Engine?
-Follow the [standard procedure for migrating WordPress sites to Pantheon](#migrate-existing-sites) as described above. If your migration fails, you can try the following workaround:
+Follow the [standard procedure for migrating WordPress sites to Pantheon](#migrate-existing-sites) as described above. Note that WP Engine blocks the Let's Encrypt challenge file, so you should schedule a [maintenance window](/docs/guides/launch/domains/#maintenance-window) for HTTPS. If your migration fails, you can try the following workaround:
 
 1. Create and download a backup point from WP Engine.
 2. Unzip your site's backup point on your local machine.
