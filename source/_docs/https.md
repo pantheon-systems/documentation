@@ -39,6 +39,21 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 
 {% include("content/https-requirements.html")%}
 
+## Technical Specifications
+
+|                                                                       | Legacy                    | Global CDN with Let's Encrypt   |
+|:--------------------------------------------------------------------- |:------------------------- |:------------------------------- |
+| **Price**                                                             | $60/month per environment | Free                            |
+| **Certificate Type**                                                  | Bring your own            | Shared, issued by Let's Encrypt |
+| **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
+| **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
+| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup> |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A                         | A+ [with HSTS](/docs/hsts/)     |
+| **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
+| **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |
+| **Delivery**                                                          | US Datacenter             | [Global CDN](/docs/global-cdn)  |
+| **Encryption Endpoint**                                               | Load Balancer             | Application Container           |
+
 ## Frequently Asked Questions
 
 ### How do I switch my site over to HTTPS from HTTP?
@@ -91,8 +106,8 @@ Refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
 ### For how long are Let's Encrypt certificates valid and what happens when they expire?
 Let's Encrypt certificates are valid for 90 days and are automatically updated on the platform before they expire.
 
-
 ## Known Issues
+
 ### HTTPS doesn't provision with incorrect AAAA configurations
 Pantheon cannot not begin provisioning HTTPS if the Site Dashboard detects incorrect values set on AAAA records. Once you update the records using the recommended values, HTTPS will start to provision automatically. The values for AAAA records look similar, but they are distinct.
 
