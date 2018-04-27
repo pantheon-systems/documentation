@@ -57,9 +57,9 @@ Note the start time for the test. As the test executes, it's a good idea to keep
 
 Once the test is running, execute common tasks done by editors and administrators and note the time. Example tasks may include:
 
-* Clear the drupal cache
+* Clear the cache
 * Clear the edge cache (if this is a load test, performance tests should not be cached)
-* Run Drupal cron
+* Run cron
 * Run any scripts that could be triggered while users are on the site.
 
 ##Assess Results
