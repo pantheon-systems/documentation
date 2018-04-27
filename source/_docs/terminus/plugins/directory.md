@@ -95,6 +95,16 @@ The following plugins are just a few of the most popular available for Terminus 
       <a href="https://github.com/pantheon-systems/terminus-newrelic-data-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
     </div>
   </div>
+    <div class="flex-panel-item">
+    <div class="flex-panel-body">
+      <div class="flex-panel-title">
+        <h3 class="plugin-title">Omniscient</h3>
+      </div>
+      <p class="topic-info__description">Author: <a href="https://github.com/rvtraveller">rvtraveller</a></p>
+      <p class="topic-info__description">Enable New Relic on all your sites on Pantheon that qualify.</p>
+      <a href="https://github.com/terminus-plugin-project/terminus-omniscient-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
+    </div>
+  </div>
   <div class="flex-panel-item">
     <div class="flex-panel-body">
       <div class="flex-panel-title">
