@@ -22,7 +22,7 @@ All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro i
 | Elite         | ✓       |
 
 ## Activate New Relic APM Pro
-Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/terminus-plugin-project/terminus-omniscient-plugin/){.external} plugin to enable New Relic Pro for all sites you have access to by logging in to your Pantheon account and running `terminus omniscient`.
+Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/terminus-plugin-project/terminus-omniscient-plugin/){.external} plugin to enable New Relic Pro for all eligible sites you have access to by logging in to your Pantheon account and running `terminus omniscient`.
 
 Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
