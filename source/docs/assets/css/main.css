@@ -5576,7 +5576,7 @@ td{
   color: #000 !important;
 }
 #doc img, .changelog-wrapper img {
-  border: 1px solid #ddd;
+  border: 1px solid #b0b0b0;
   border-radius: 4px;
   padding: 10px;
 }
