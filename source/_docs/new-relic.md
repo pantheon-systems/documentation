@@ -132,23 +132,21 @@ If you try to access New Relic prior to any traffic reaching an environment, you
 2. Close the tab, wait a few minutes.
 3. Click the **Go to New Relic** button.
 
+### Who is the New Relic account associated with?
+- If the site owner is a user, the site owner's name and email address is used to create the New Relic account.
+- If the site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. This user must be a member of the organization.
+
 #### If you see "We're sorry, you haven't verified your email address yet."
 After activating New Relic, a confirmation email will be sent to the site owner to complete the setup process. The account will need to be verified first before members of the site can access New Relic dashboard.
 
-If the site owner did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
+If the New Relic account holder, i.e. the site owner or user who activated the New Relic account for the site, did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
 
 1. On New Relic's login page, click **Forgot your password?**.
 2. Enter the email address of the site owner.
 3. Click **Send my reset link**.
 4. Open the email you will receive, click the reset link, and follow the prompts to access your account.
 
-
-
-### Who is the New Relic account associated with?
-- If site owner is a user, the site owner's name and email address is used to create the New Relic account.
-- If site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. These users must be members of the organization.
-
-To learn how to use New Relic APM Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance){.external}.
+Contact Support if you are unsure what user the New Relic account is associated with and unable to identify where the password reset email has been sent.
 
 
 ### Removing Multidev Environments in New Relic
@@ -232,3 +230,4 @@ We don't recommend turning off New Relic for any one environment as it makes tro
 - [New Relic Univeristy: APM Advanced](https://learn.newrelic.com/courses/apm_advanced){.external}
 - [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui){.external}
 - [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help){.external}
+- [Introduction to New Relic for PHP](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php#monitor-performance)){.external}
