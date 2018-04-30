@@ -18,7 +18,7 @@ Imagine two visitors go to `example.com`. The first visitor exits from the home 
 _Visits_ and _visitors_ have different meanings. If one of the visitors returns again the next day, it would be counted as 3 Visits, but there'd be only 2 visitors.
 ## Frequently Asked Questions
 ### How often is data collected?
-Data is updated daily shortly after midnight UTC.
+Data is updated daily, shortly after midnight UTC, with data for the previous day.
 
 ### How long do you keep the data?
 Data is retained for the following amounts of time:
@@ -44,7 +44,7 @@ Pantheon-identified bots are excluded from the Visits and Pages Served Metrics.
 
 
 ### Can I see metrics for other environments?
-Yes! Metrics are now available for the entire site or by environment via the Terminus `alpha:metrics` command, when [installed via Git](https://github.com/pantheon-systems/terminus#installing-with-git). 
+Yes! Metrics are now available for the entire site or by environment via the Terminus `alpha:metrics` command, when [installed via Git](https://github.com/pantheon-systems/terminus#installing-with-git).
 
 
 ### Why don't I see any data, or why don't I see a full 12 months of data?
