@@ -12,7 +12,7 @@ contributors:
 ---
 
 Drupal 8 and Composer on Pantheon (Without Continuous Integration)
-In an ideal situation, you might ignore the vendor directory and use [an automated build step with continuous integration](https://pantheon.io/docs/guides/build-tools/) to install your site with composer on the fly. But sometimes your project doesn’t have the budget or time needed to justify this workflow. 
+In an ideal situation, you might ignore the vendor directory and use [an automated build step with continuous integration](https://pantheon.io/docs/guides/build-tools/) to install your site with composer on the fly. But sometimes your project doesn’t have the budget or time needed to justify this workflow.
 
 In this guide, we’re going to simplify things and run through the bare necessities to use [Composer](https://getcomposer.org/) to install your Drupal 8 site on your local machine and push that to Pantheon. We’ll then demonstrate how to add a module using the same process.
 
@@ -115,7 +115,7 @@ Normally the next step would be going through the standard Drupal installation. 
 
 Since we modified `composer.json` we will need to run `composer update`. This may take a while as all of Drupal core and its dependencies will be downloaded. Subsequent updates should take less time.
 
-![image of terminal running a composer install](source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-install.png)
+![image of terminal running a composer install](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-install.png)
 
 `git status`
 
@@ -123,7 +123,7 @@ The `example-drops-8-composer` `.gitignore` file assumes that you’re using a b
 
 `git status`
 
-![image of git status showing the changed files in red](source/docs/assets/images/guides/drops-8-composer-git-status-after-installing-d8.png)
+![image of git status showing the changed files in red](/source/docs/assets/images/guides/drops-8-composer-git-status-after-installing-d8.png)
 
 Set the site to git mode.
 
@@ -183,12 +183,12 @@ Spin up a Multidev environment from the git branch we just pushed up to Pantheon
 
 `terminus multidev:create andrew-drops-8-composer.dev addr-module`
 
-![image of multidev creation](source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-multidev-creation.png)
+![image of multidev creation](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-multidev-creation.png)
 
 Log in to your new environment and verify that the address module exists.
 
 `terminus drush andrew-drops-8-composer.addr-module -- uli`
 
-![image of installing address module](source/docs/assets/images/guides/drops-8-composer-drupal-8-address-module-install.png)
+![image of installing address module](/source/docs/assets/images/guides/drops-8-composer-drupal-8-address-module-install.png)
 
 Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
