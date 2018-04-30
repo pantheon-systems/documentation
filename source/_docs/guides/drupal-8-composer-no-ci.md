@@ -83,6 +83,29 @@ There are also dependencies defined in `composer.json`, such as testing suites, 
 * Remove the `"find tests/scripts/ -type f | xargs chmod 755"` line of the `post-update-cmd` sub-section of the `scripts` section
 * Remove the comma at the end of the `"DrupalProject\\composer\\ScriptHandler::createRequiredFiles"` line of the `post-update-cmd` sub-section of the `scripts` section to make the JSON valid
 
+The `scripts` section should now be:
+```
+    "scripts": {
+        "build-assets": [
+            "@prepare-for-pantheon",
+            "composer install --optimize-autoloader --no-dev"
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
+        "post-install-cmd": [
+            "@drupal-scaffold",
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-create-project-cmd": [
+            "@drupal-scaffold",
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+```
+
 
 # Downloading Drupal with Composer
 
