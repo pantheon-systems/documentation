@@ -71,7 +71,42 @@ git remote set-url origin ssh://codeserver.dev.SITE_UUD@codeserver.dev.SITE_UUD.
 * `script/gitlab`
 * `.circleci`
 
-If you don't plan on running automated tests locally you can also remove the `tests` directory.
+If you don't plan on running automated tests locally you can completely remove the testing functionality.
+
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
+      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span>Remove Test Suites</h3>
+    </a>
+  </div>
+  <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+    First, delete the `tests` directory. Next, you will need to modify `composer.json`.
+
+    * Remove all dependencies in the `require-dev` section
+    * Update the `scripts` section to the following:
+    ```
+        "scripts": {
+            "build-assets": [
+                "@prepare-for-pantheon",
+                "composer install --optimize-autoloader --no-dev"
+            ],
+            "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+            "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
+            "post-install-cmd": [
+                "@drupal-scaffold",
+                "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            ],
+            "post-update-cmd": [
+                "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            ],
+            "post-create-project-cmd": [
+                "@drupal-scaffold",
+                "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+            ]
+        },
+    ```
+  </div>
+</div>
 
 # Downloading Drupal with Composer
 
