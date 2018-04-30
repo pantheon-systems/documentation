@@ -4,7 +4,7 @@ description: Learn how to use Views Cache Tags module along with custom code to 
 tags: [moreguides]
 categories: [drupal]
 type: guide
-permalink: docs/guides/:basename/
+permalink: docs/:basename/
 contributors:
   - andrew
   - dwayne
@@ -123,7 +123,7 @@ The `example-drops-8-composer` `.gitignore` file assumes that you’re using a b
 
 `git status`
 
-![image of git status showing the changed files in red](/source/docs/assets/images/guides/drops-8-composer-git-status-after-installing-d8.png)
+![image of git status showing the changed files in red](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
 
 Set the site to git mode.
 
@@ -189,6 +189,6 @@ Log in to your new environment and verify that the address module exists.
 
 `terminus drush andrew-drops-8-composer.addr-module -- uli`
 
-![image of installing address module](/source/docs/assets/images/guides/drops-8-composer-drupal-8-address-module-install.png)
+![image of installing address module](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
 
 Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
