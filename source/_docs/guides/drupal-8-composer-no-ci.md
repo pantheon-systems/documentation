@@ -65,47 +65,13 @@ git remote set-url origin ssh://codeserver.dev.SITE_UUD@codeserver.dev.SITE_UUD.
 ```
 
 # Removing Automation Pieces
-`example-drops-8-composer` was built for automated testing and continuous integration. Since that functionality won't be removed you can safely remove the directories and files below.
+`example-drops-8-composer` was designed to run automated tests on a continuous integration server. Since contonuous integration won't be used you can safely remove the directories below.
 
 * `script/github`
 * `script/gitlab`
 * `.circleci`
-* `tests`
 
-# Updating `composer.json`
-There are also dependencies defined in `composer.json`, such as testing suites, that will not be used. To avoid downloading those additional, unused dependencies make the following modifications to `composer.json`.
-
-* Remove all dependencies in the `require-dev` section
-* Remove the `lint` sub-section of the `scripts` section
-* Remove the `code-sniff` sub-section of the `scripts` section
-* Remove the `unit-test` sub-section of the `scripts` section
-* Remove the `"find .circleci/scripts/pantheon/ -type f | xargs chmod 755",` line of the `post-update-cmd` sub-section of the `scripts` section
-* Remove the `"find tests/scripts/ -type f | xargs chmod 755"` line of the `post-update-cmd` sub-section of the `scripts` section
-* Remove the comma at the end of the `"DrupalProject\\composer\\ScriptHandler::createRequiredFiles"` line of the `post-update-cmd` sub-section of the `scripts` section to make the JSON valid
-
-The `scripts` section should now be:
-```
-    "scripts": {
-        "build-assets": [
-            "@prepare-for-pantheon",
-            "composer install --optimize-autoloader --no-dev"
-        ],
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
-        "post-install-cmd": [
-            "@drupal-scaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-create-project-cmd": [
-            "@drupal-scaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
-    },
-```
-
+If you don't plan on running automated tests locally you can also remove the `tests` directory.
 
 # Downloading Drupal with Composer
 
