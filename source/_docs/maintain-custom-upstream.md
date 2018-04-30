@@ -4,7 +4,7 @@ description: Detailed information on how to maintain Custom Upstreams and distri
 tags: [tools, workflow]
 categories: []
 ---
-Maintainers of [Custom Upstreams](/docs/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. In this example, we will be updating core. 
+Maintainers of [Custom Upstreams](/docs/custom-upstream) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. In this example, we will be updating core.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -32,7 +32,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 ## Test and Release Pantheon Core Updates
 
-1. Within your local clone of your Custom Upstream repository, add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote){.external} if you haven't done so already:
+1. From your local clone of your Custom Upstream repository, add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote){.external} if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -54,7 +54,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
     </div>
     </div><br>
 
-2. We will also add the test site you created above as a remote to your Custom Upstream. Do do that, we first need to grab the test site's repository URL on Pantheon using [Terminus](/docs/terminus). Replace `<site>` with your site name:
+2. We will also add the test site you created above as a remote to your Custom Upstream. To do that, we first need to grab the test site's repository URL on Pantheon using [Terminus](/docs/terminus). Replace `<site>` with your site name:
 
     ```command
     terminus connection:info <site>.dev --field=git_url
