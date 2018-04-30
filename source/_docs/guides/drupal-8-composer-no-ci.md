@@ -84,6 +84,7 @@ If you don't plan on running automated tests locally you can completely remove t
 
     * Remove all dependencies in the `require-dev` section
     * Update the `scripts` section to the following:
+
     ```
         "scripts": {
             "build-assets": [
