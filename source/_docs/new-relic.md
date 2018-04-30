@@ -176,17 +176,9 @@ if ($pos !== false){
 To isolate the disabling of New Relic to only AMP pages, the example logic checks the current request for `?amp`. Adjust this example as needed based on your site's implementation of Google AMP and it's corresponding URL patterns.
 
 It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal 8, this can be done using an event subscriber that listens to the `kernel.request` event for instance.
-### APM Availability Monitoring Alerts and False Positive Downtime Events
-When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false positive Downtime events for your site.
 
-#### Server Name Indication (SNI)
-Sites configured with third-party proxy services that use SNI to serve HTTPS requests (e.g. Cloudflare, CloudProxy) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits){.external}.
-
-#### TLS 1.1 or Higher
-When your site uses HTTPS on Pantheon, the cryptographic protocol in use is TLS 1.2+. The regular New Relic Availability Monitoring alerts can only access sites using TLS 1.0 or below. New Relic recommends that you create a New Relic Synthetics alert which can access HTTPS sites using cryptographic protocols TLS 1.1 and higher.
-
-#### Solution: Use New Relic Synthetics Lite
-As an alternative to both situations, you can use the free New Relic Synthetic Lite service to monitor HTTPS pages served with SNI. Enable this service using the [steps provided above](#configure-ping-monitors-for-availability).
+### APM Availability Monitoring
+Availability monitoring from APM is heavily outdated, and will not work with the Pantheon platform. As an alternative, you can use the free New Relic Synthetic Lite service using the [steps provided above](#configure-ping-monitors-for-availability).
 
 ## Frequently Asked Questions
 
