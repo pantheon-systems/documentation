@@ -3545,6 +3545,22 @@ p.depbar>a{
 p.depbar>a:hover{
   opacity: 0.65;
 }
+.oos {
+  background-color: #EEF2F3;
+  border-color: #6E818E;
+  border-radius: 0px;
+}
+.oos h3, .depbar p {
+  color: #313945;
+  margin-top: 10px;
+}
+p.oos>a{
+  color:#313945!important;
+  font-weight:bolder!important;
+}
+p.oos>a:hover{
+  opacity: 0.65;
+}
 #earlyaccessoutter {
   padding: 25px;
   margin-bottom: 30px;
