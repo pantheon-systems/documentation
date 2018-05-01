@@ -26,13 +26,13 @@ The Drupal community documentation describes how to [apply patches](https://www.
 
 
 <ul class="nav nav-tabs" role="tablist">
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Drupal 8.5</a></li>
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
-  <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 6</a></li>
+  <li id="tab-4-id" role="presentation" class="active"><a href="#tab-4-anchor" aria-controls="tab-4-anchor" role="tab" data-toggle="tab">Drupal 8.5</a></li>
+  <li id="tab-5-id" role="presentation"><a href="#tab-5-anchor" aria-controls="tab-5-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li id="tab-6-id" role="presentation"><a href="#tab-6-anchor" aria-controls="tab-6-anchor" role="tab" data-toggle="tab">Drupal 6</a></li>
 </ul>
 <div class="tab-content">
 
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+<div role="tabpanel" class="tab-pane active" id="tab-4-anchor" markdown="1">
 
 ### Apply Patch Using Git {.info}
 
@@ -79,7 +79,7 @@ You'll need a local git clone of your site code.
 
 </div>
 
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+<div role="tabpanel" class="tab-pane" id="tab-5-anchor" markdown="1">
 
 ### Apply Patch Using Git {.info}
 
@@ -126,7 +126,7 @@ You'll need a local git clone of your site code.
 
 </div>
 
-<div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+<div role="tabpanel" class="tab-pane" id="tab-6-anchor" markdown="1">
 
 ### Apply Patch Using Git {.info}
 
