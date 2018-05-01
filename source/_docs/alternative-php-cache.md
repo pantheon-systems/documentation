@@ -72,7 +72,7 @@ Then browse to `https://dev.YOURSITE.pantheon.io/apc_cache_clear.php` to clear t
 
 #### Dashboard
 
-Clearing the cache via the Dashboard will also clear the APC cache along with Varnish and Redis.
+Clearing the cache via the Dashboard will also clear the APC cache along with Varnish.
 
 ### APC related errors are happening on Dev, but not in Test or Live. Why?
 
