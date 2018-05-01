@@ -23,7 +23,12 @@ When a restore starts, it is placed in a queue and executed. Depending on the si
 
 ## Restore an Environment From Its Own Backup
 
-Restore a manual or automatic backup (Code, Database, and Files) by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method. Note that the **Restore** button is only clickable when the environment is [set to Git mode](/docs/guides/quickstart/connection-modes/).
+Restore a manual or automatic backup (Code, Database, and Files) by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method.
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">For development environments (e.g., Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (e.g., Test and Live). For details, see [The Site Dashboard](/docs/sites/#code).</p>
+</div>
 
 ![Backups and Restore Button](/source/docs/assets/images/dashboard/restore-button.png)
 
