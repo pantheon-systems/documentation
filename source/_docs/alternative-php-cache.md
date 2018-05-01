@@ -68,11 +68,11 @@ To do this manually, write a small script named <tt>apc_cache_clear.php</tt> in 
 <?php
 apc_clear_cache();
 ```
-Then browse to `https://dev.YOURSITE.pantheon.io/apc_cache_clear.php` to clear the opcode cache.</yoursite>
+Then browse to `https://dev.YOURSITE.pantheon.io/apc_cache_clear.php` to clear the opcode cache.
 
 #### Dashboard
 
-Clearing the cache via the Dashboard will also clear the APC cache along with Varnish.
+Clearing the cache via the Dashboard will also clear the APC cache along with the Global CDN cache.
 
 ### APC related errors are happening on Dev, but not in Test or Live. Why?
 
