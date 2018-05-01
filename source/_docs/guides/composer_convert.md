@@ -21,12 +21,22 @@ We're about to make some massive changes to the codebase, it is wise to do this 
 git checkout -b composify
 ```
 
-## Create a New Project with Composer
+## Setup a Multidev
 
-On your local workstation, from the site directory of your Pantheon site, execute the following command:
+If your Pantheon account has access to multidev, you should create a multidev now to push your new code to:
 
 ```command
-cd .. && composer create-project pantheon-systems/example-drops-8-composer --stability=alpha my-site-composer
+git push origin composify && terminus env:create <site-name>.dev composify
+```
+
+This will setup the multidev so that it can be ready to receive our changed code. Since we are going to relocate the document root, this is required to be done before pushing your new code so that the platform will recognize the pantheon.yml updates when you push the changed code.
+
+## Create a New Project with Composer
+
+On your local workstation, from the repository root of your Pantheon site, execute the following command:
+
+```command
+cd .. && composer create-project pantheon-systems/example-drops-8-composer my-site-composer
 ```
 Make sure to substitute your project's name for `my-site`
 
@@ -68,7 +78,7 @@ Libraries can be handled in the same way, the specifics dependent on how your li
 ### Custom Code
 #### Modules and Themes
 
-Custom code should be manually copied from the existing site repository.
+Custom code should be manually copied from the existing site repository to the composer managed directory.
 
 module:
 ```sh
@@ -82,7 +92,7 @@ me@my-computer:~/Sites/my-site(composify) $ cp -r /themes/custom/great_theme ../
 Follow suit with any other custom code you need to carry over.
 
 #### Settings.php
-Your existing site may have customizations to `settings.php` or any other config files. Review these carefully and extract relavent changes from these files to copy over, always review any file paths referenced in the code as these may change in the transition. It is not wise to completely overwrite the file with the old one as there are customizations for moving the configuration directory you don't want to overwrite.
+Your existing site may have customizations to `settings.php` or any other config files. Review these carefully and extract relavent changes from these files to copy over, always review any file paths referenced in the code as these may change in the transition. It is not wise to completely overwrite the file with the old one as there are customizations for moving the configuration directory you don't want to overwrite as well as platform specific customizations. The resulting `settings.php` shoul d have no `$databases` array.
 
 #### Configuration
 The preferred (and assumed) location of the configuration directories when using a nested docroot and Composer is at the root of the repository next to the web directory:
@@ -95,7 +105,7 @@ my-site-composer
 |-etc...
 ```
 
-Locate the configuration files in your existing site and move them here. If they are stored in the files directory on your existing site, you will want to retreive them via SFTP (as the Git clone would not contain them).
+Locate the configuration files in your existing site and move them here. If they are stored in the files directory on your existing site, you will want to retreive them via SFTP (as the Git clone would not contain them). The example project is configured to use this location.
 
 ## Prepare to Deploy 	&#128640;
 
@@ -123,6 +133,28 @@ You should see a large amount of files committed to the new branch we created ea
 
 Now that we've committed the code on a branch, if the site has multi-dev, you can deploy that branch directly to a new multidev and test the site in the browser. If there are any issues, utilize your site's logs via `terminus drush my-site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on (our documentation on log collect)[/docs/logs]
 
-Once you have confirmed the site is working, merge in master, and follow the standard workflow to QA a code change before going live.
+Once you have confirmed the site is working, merge `composify` into `master`, and follow the standard workflow to QA a code change before going live.
 
 If your plan does not include multidev, you will have to merge to master before deploying, then follow the rest of the steps above.
+
+
+## Change Upstreams
+
+Your Pantheon site is no longer compatible with traditional upstream updates, it is advised to avoid confusion by turning this feature off by moving your site to an empty upstream:
+
+```sh
+terminus site:upstream:set <sitename> empty
+```
+
+## Ongoing Core Updates
+
+Core updates are carried out via composer
+
+```sh
+git pull origin master
+composer update drupal/core --with-dependencies
+composer prepare-for-pantheon
+```
+
+Review and commit file changes, then push back to Pantheon.
+
