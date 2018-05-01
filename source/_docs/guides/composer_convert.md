@@ -37,6 +37,16 @@ Sites
 |-my-site-composer
 ```
 
+## Copy Over the pantheon.upstream.yml
+
+Since the drops-8 upstream has a `pantheon.upstream.yml` and the example-drops-8-composer one does not, we have to copy over our old file for the platform to properly load the site. From the `my-site-composer` directory, run:
+
+```sh
+cp ../my-site/pantheon.upstream.yml .
+```
+
+`ls` should reveal that the new code repository now has a copy of the `pantheon.upstream.yml`.
+
 ## Add in your Contrib/Custom code
 
 What makes your site code unique is your selection of contributed modules and themes and any custom modules or themes your development team has created. These customizations need to be replicated in our new project structure.
