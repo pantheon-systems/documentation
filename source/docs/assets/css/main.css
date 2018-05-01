@@ -37,7 +37,6 @@ p, h1, h2, h3, h4, h5, h6, a {
 p, h1, h2, h3, h4, h5, h6, a, ol, ul {
   font-family: 'TabletGothic';
   font-weight:normal;
-  letter-spacing: -0.3px;
 }
 .enablement a {
   text-decoration: none !important;
@@ -89,10 +88,12 @@ h4.info > a.external[href]::after {
   opacity: 1;
 }
 h1.main-headline {
-  font-family: 'TabletGothic-Bold';
+  font-family: 'TabletGothic';
+  font-weight: 700;
 }
 h1.title {
-  font-family: 'TabletGothic-Bold';
+  font-family: 'TabletGothic';
+  font-weight: 700;
   font-size: 50px;
   color: #313945;
   line-height: 46px;
@@ -131,9 +132,10 @@ p{
 
 h1{
   margin-top: 35px;
-  font-family: 'TabletGothic-Bold';
+  font-family: 'TabletGothic';
   color: #313945;
   font-size: 50px;
+  font-weight: 700;
   }
 
 h2 {
