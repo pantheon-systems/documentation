@@ -3557,6 +3557,7 @@ p.depbar>a:hover{
 p.oos>a{
   color:#313945!important;
   font-weight:bolder!important;
+  text-decoration: underline;
 }
 p.oos>a:hover{
   opacity: 0.65;
