@@ -1,7 +1,7 @@
 
-Re: <Doc title and/or link>
+Re: <Add Doc title and/or link>
 
-Priority (Low Med High): 
+Priority (Low‚ Medium‚ High): 
 
 ## Issue Description
 
