@@ -1,6 +1,6 @@
 ---
 title: Drupal 8 and Composer on Pantheon Without Continuous Integration
-description: Learn how to use Views Cache Tags module along with custom code to control Pantheon Advanced Page Cache.
+description: Learn how to manage Drupal 8 using Composer with Pantheon.
 tags: [moreguides]
 categories: [drupal]
 type: guide
