@@ -36,9 +36,7 @@ If your site or application requires Facebook authentication, we have added exce
 
 ## Manually Expiring Cache for Static Assets (e.g. CSS, JS, PDFs, Images)
 
-Pantheon sets a max-age header of 366 days on static assets. While these can be expired from the Pantheon Edge, an end user's browser or a CDN in front of Pantheon will cache the asset for a year - something neither site owners, site developers, nor Pantheon Support can control.
-
-The simplest method for dealing with this is to ensure any new version of a static asset has a new name. This will force the user's browser to grab the new version of the asset.
+Pantheon sets a cache lifetime of 1 year for static assets per industry standard best practices. To ensure a client browser receives a new version of a static asset, rename the file. For example, you can version a css file by linking to it using a query parameter, `style.css?v=1.1`.
 
 ## Using Your Own Session-Style Cookies
 
