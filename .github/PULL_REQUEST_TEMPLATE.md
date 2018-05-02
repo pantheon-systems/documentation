@@ -10,11 +10,8 @@ PR includes the following changes:
 - [ ] List any outstanding todos
 - [ ] If needed
 
-## Docs Team Work
-- [ ] Technical Review
-- [ ] Copy Review
-
-### Post Launch
+## Post Launch
+To be completed by the docs team upon merge: 
 - [ ] Redirect `/docs/old-path/` => `/docs/new-path/` (if applicable)
 - [ ] Include/exclude pages ^ respectively within docs search service provider (if applicable)
 - [ ] Update Status Report
