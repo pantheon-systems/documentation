@@ -99,7 +99,7 @@ Learn how to use [bots and indexing](/docs/bots-and-indexing/) in a way that doe
 - [Hot Fixes](/docs/hotfixes/)
 - [What is the "pantheon_api.module"](/docs/modules#pantheon-module-drupal-7)
 - [Email on Pantheon](/docs/email/)
-- [Domains and Redirects](/docs/domains/)
+- [Platform and Custom Domains](/docs/domains/)
 - [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/)
 - [LDAP and LDAPS](/docs/ldap-and-ldaps/)
 - [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway/)

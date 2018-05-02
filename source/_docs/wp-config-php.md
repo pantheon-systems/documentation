@@ -47,7 +47,7 @@ See [Reading the Pantheon Environment Configuration](/docs/read-environment-conf
 
 ### How do I perform redirection?
 
-See [Domains and Redirects](/docs/domains/).
+See [Configure Redirects in PHP](/docs/redirects/).
 
 ### Where do I specify database credentials?
 
