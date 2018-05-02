@@ -124,7 +124,6 @@ p{
   margin: 0 0 20px;
   color:#44525E;
   font-size: 18px;
-  line-height: 29px;
 }
 .instruction {  /*smaller margin-bottom on paragraphs preceeding code snippets*/
   margin-bottom: 5px;
