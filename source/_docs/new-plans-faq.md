@@ -70,7 +70,7 @@ No action is required. Existing sites will automatically switch to the equivalen
   | ---------------------- | ----------------- | ------------ |
   | Application Containers |        1          |      1       |
   | PHP Workers            |        4          |      4       |
-  | PHP Memory Limit       |      256MB        |    246MB     |
+  | PHP Memory Limit       |      256MB        |    256MB     |
   | Storage                |       5GB	       |     20GB     |
   | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>|        5          |      3       |
   | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a> |     ✓              |       ✓       |
