@@ -4,9 +4,9 @@ description: Learn how to use Views Cache Tags module along with custom code to 
 tags: [moreguides]
 categories: [drupal]
 type: guide
-permalink: docs/:basename/
+permalink: docs/guides/:basename/
 contributors:
-  - andrew
+  - andrewtaylor
   - dwayne
   - davidneedham
 ---
