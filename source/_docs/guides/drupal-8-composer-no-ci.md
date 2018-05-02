@@ -163,7 +163,7 @@ Set the connection mode back to git
 
 `terminus connection:set andrew-drops-8-composer.dev git`
 
-#Adding a module
+# Adding a module
 
 Next, let’s add a new module to our site. For this example, we’ll add the address module. We advocate working in feature branches on Pantheon, so let's create a git branch and spin up a Multidev environment.
 
@@ -192,5 +192,14 @@ Log in to your new environment and verify that the address module exists.
 `terminus drush andrew-drops-8-composer.addr-module -- uli`
 
 ![image of installing address module](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
+
+# Managing Drupal Updates with Composer
+Just like adding a new module updates to existing Composer managed third-party items (Drupal core, contrib modules and themes) will need to be done locally.
+
+You can run `composer update` to download all available updates within the constraints defined in `composer.json`. You can update specific dependencies only by listing them explicitly in the `composer update` commands. 
+
+For example, to update Drupal core you would use `composer update drupal/core`. If `composer.json` had the version constraint for `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in the [version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
+
+Once the desired dependencies have been updated with Composer you will need to commit the new files to Pantheon.
 
 Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
