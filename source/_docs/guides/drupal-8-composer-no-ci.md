@@ -126,7 +126,7 @@ This may take a while as all of Drupal core and its dependencies will be downloa
 git status
 ```
 
-The `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. To make it compatible with this method we need to remove everything above the CUT section of the `.gitignore` file. Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon. Now let’s run git status again to make sure everything is included.
+**Important:** The `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. To make it compatible with this method we need to remove everything above the CUT section of the `.gitignore` file. Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon. Now let’s run git status again to make sure everything is included.
 
 ```
 git status
