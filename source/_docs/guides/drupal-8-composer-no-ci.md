@@ -45,8 +45,6 @@ Change into the cloned directory.
 
 ```
 cd andrew-drops-8-composer
-
-ls
 ```
 
 ## Updating the git remote URL
