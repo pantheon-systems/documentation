@@ -112,21 +112,33 @@ If you don't plan on running automated tests locally you can completely remove t
 
 Normally the next step would be going through the standard Drupal installation. But since we’re using Composer, none of the core files exist yet. Let’s use Composer to install Drupal core.
 
-Since we modified `composer.json` we will need to run `composer update`. This may take a while as all of Drupal core and its dependencies will be downloaded. Subsequent updates should take less time.
+Since we modified `composer.json` we will need to update Composer to download the new dependencies. 
+
+```
+composer update
+```
+
+This may take a while as all of Drupal core and its dependencies will be downloaded. Subsequent updates should take less time.
 
 ![image of terminal running a composer install](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-install.png)
 
-`git status`
+```
+git status
+```
 
-The `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. To make it compatible with this method we need to remove everything above the CUT section. Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon. Now let’s run git status again to make sure everything is included.
+The `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. To make it compatible with this method we need to remove everything above the CUT section of the `.gitignore` file. Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon. Now let’s run git status again to make sure everything is included.
 
-`git status`
+```
+git status
+```
 
 ![image of git status showing the changed files in red](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
 
 Set the site to git mode.
 
-`terminus connection:set andrew-drops-8-composer.dev git`
+```
+terminus connection:set andrew-drops-8-composer.dev git
+```
 
 Add and commit the code files. A git force push is necessary initially but subsequent pushes should not need `--force`.
 
@@ -146,19 +158,27 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 
 Change to SFTP mode as files need to be writeable on Pantheon in order to install Drupal.
 
-`terminus connection:set andrew-drops-8-composer.dev sftp`
+```
+terminus connection:set andrew-drops-8-composer.dev sftp
+```
 
 Use Terminus Drush to install Drupal.
 
-`terminus drush andrew-drops-8-composer.dev -- site-install -y`
+```
+terminus drush andrew-drops-8-composer.dev -- site-install -y
+```
 
-Log in to your new Drupal 8 site to verify it is working.
+Log in to your new Drupal 8 site to verify it is working. You can get a one-time login link using Drush.
 
-`terminus drush andrew-drops-8-composer.dev -- uli`
+```
+terminus drush andrew-drops-8-composer.dev -- uli
+```
 
 Set the connection mode back to git
 
-`terminus connection:set andrew-drops-8-composer.dev git`
+```
+terminus connection:set andrew-drops-8-composer.dev git
+```
 
 ### Adding a New Module with Composer
 
@@ -180,13 +200,17 @@ git push -u origin addr-module
 
 Spin up a Multidev environment from the git branch we just pushed up to Pantheon.
 
-`terminus multidev:create andrew-drops-8-composer.dev addr-module`
+```
+terminus multidev:create andrew-drops-8-composer.dev addr-module
+```
 
 ![image of multidev creation](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-multidev-creation.png)
 
 Log in to your new environment and verify that the address module exists.
 
-`terminus drush andrew-drops-8-composer.addr-module -- uli`
+```
+terminus drush andrew-drops-8-composer.addr-module -- uli
+```
 
 ![image of installing address module](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
 
@@ -201,4 +225,4 @@ Once the desired dependencies have been updated with Composer you will need to c
 
 #### Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
 
-P.S. the [Pantheon Power Users Community](https://pantheon.io/docs/power-users/) Slack instance `#composer-workflow` channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
+P.S. the [Pantheon Power Users Community](https://pantheon.io/docs/power-users/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
