@@ -77,7 +77,7 @@ Redirecting all traffic to a primary domain is a best practice for SEO since it 
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">Redirects must be managed via PHP, since `.htaccess` is ignored. For details, see [Configure Redirects in PHP](/docs/redirects/#php-vs-htaccess).</p>
+<p markdown="1">Redirects must be managed via PHP, since `.htaccess` is ignored. For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).</p>
 </div>
 
 ### Redirect to HTTPS and the Primary Domain
@@ -85,7 +85,7 @@ It's a best practice for SEO and security to standardize all traffic on HTTPS an
 
 {% include("redirects.twig")%}
 
-For more redirect scenarios, see [Configure Additional Redirects](/docs/redirects).
+For more redirect scenarios, see [Configure Redirects](/docs/redirects).
 
 ## Vanity Domains for Organizations
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default platform domain (`pantheonsite.io`).
@@ -121,6 +121,6 @@ If your domain's DNS configuration relies on an existing MX or TXT record that i
 3. Log in to your DNS host and create two AAAA records and one A record for the desired subdomain (e.g., `www`) using the values returned in the steps above.
 
 ## See Also
-- [Configure Additional Redirects](/docs/redirects)
+- [Configure Redirects](/docs/redirects)
 - [Launch Essentials](/docs/guides/launch/)
 - [Relaunch Existing Pantheon Site](/docs/relaunch/)

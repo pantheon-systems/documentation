@@ -22,7 +22,7 @@ The following articles include techniques and configurations for `settings.php` 
 - [Reading Pantheon Environment Configuration](/docs/read-environment-config) (including domain_access)
 - [Installing Redis on Drupal or WordPress](/docs/redis/)
 - [Platform and Custom Domains](/docs/domains/)
-- [Configure Redirects in PHP](/docs/redirects/)
+- [Configure Redirects](/docs/redirects/)
 - [SSO and Identity Federation](/docs/sso) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development

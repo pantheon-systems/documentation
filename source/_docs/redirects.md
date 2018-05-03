@@ -1,6 +1,6 @@
 ---
-title: Configure Redirects in PHP
-description: Review considerations and recommendations on how to handle redirect logic within your site's configuration file.
+title: Configure Redirects
+description: Review considerations and recommendations on how to handle redirect logic via PHP within your site's configuration file.
 tags: [redirects, variables, dns]
 categories: []
 ---
