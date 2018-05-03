@@ -200,7 +200,11 @@ Next, let’s add a new module to our site. For this example, we’ll add the ad
 git checkout -b addr-module
 
 composer require "drupal/address ~1.0"
+```
 
+Now that Composer is aware of our new module requirement we need to update our dependencies. Then, we can commit them and push to Pantheon.
+
+```
 composer update
 
 git add .
