@@ -210,8 +210,6 @@ Spin up a Multidev environment from the git branch we just pushed up to Pantheon
 terminus multidev:create andrew-drops-8-composer.dev addr-module
 ```
 
-![image of multidev creation](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-multidev-creation.png)
-
 Log in to your new environment and verify that the address module exists.
 
 ```
