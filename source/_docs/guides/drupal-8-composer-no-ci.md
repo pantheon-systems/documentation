@@ -145,7 +145,7 @@ Add and commit the code files. A git force push is necessary initially but subse
 ```
 git add .
 
-git commit -m 'Drupal 8 install'
+git commit -m 'Drupal 8 and dependencies'
 
 git push --force
 ```
@@ -172,6 +172,12 @@ Log in to your new Drupal 8 site to verify it is working. You can get a one-time
 
 ```
 terminus drush andrew-drops-8-composer.dev -- uli
+```
+
+Commit the changes to Pantheon.
+
+```
+terminus env:commit andrew-drops-8-composer.dev --message="Drupal installation"
 ```
 
 Set the connection mode back to git
