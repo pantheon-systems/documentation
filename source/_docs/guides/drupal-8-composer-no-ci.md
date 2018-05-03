@@ -6,7 +6,7 @@ categories: [drupal]
 type: guide
 permalink: docs/guides/:basename/
 contributors:
-  - andrewtaylor
+  - ataylorme
   - dwayne
   - davidneedham
 ---
