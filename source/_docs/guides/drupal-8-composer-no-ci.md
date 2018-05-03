@@ -23,7 +23,7 @@ Using a Composer managed site **removes** the ability to [apply Drupal core upda
 
 To begin, we’ll want to start a brand new Drupal 8 site on Pantheon from our empty upstream. This upstream is different from the Drupal 8 upstream in that it does not come with any Drupal files. As such, you must use Composer to download Drupal.
 
-Before we begin choose a machine-friendly site name. I'll use `d8-composer-no-CI` but you should choose your own. Once you have a site name export it to a variable for re-use.
+Before we begin choose a machine-friendly (all lower case with dashes instead of spaces) site name. I'll use `d8-composer-no-CI` but you should choose your own. Once you have a site name export it to a variable for re-use.
 
 ```
 export PANTHEON_SITE_NAME="d8-composer-no-CI"
@@ -64,7 +64,7 @@ terminus connection:info $PANTHEON_SITE_NAME.dev --field=git_url
 Update the git remote to use the Pantheon site git URL returned rather than the `example-drops-8-composer` GitHub URL.
 
 ```
-git remote set-url origin ssh://codeserver.dev.SITE_UUD@codeserver.dev.SITE_UUD.drush.in:2222/~/repository.git
+git remote set-url origin ssh://codeserver.dev.SITE_UUD@codeserver.dev.SITE_UUID.drush.in:2222/~/repository.git
 ```
 
 ## Removing Automation Pieces
