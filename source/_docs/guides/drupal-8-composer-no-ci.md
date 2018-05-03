@@ -114,9 +114,9 @@ If you don't plan on running automated tests locally you can completely remove t
 
 ### Downloading Drupal Dependencies with Composer
 
-Normally the next step would be going through the standard Drupal installation. But since we’re using Composer, none of the core files exist yet. Let’s use Composer to install Drupal core.
+Normally the next step would be going through the standard Drupal installation. But since we’re using Composer, none of the core files exist yet. Let’s use Composer to download Drupal core.
 
-Since we modified `composer.json` we will need to update Composer to download the new dependencies. 
+Since we modified `composer.json` we will need to update Composer. This will also download the defined dependencies. 
 
 ```
 composer update
@@ -144,7 +144,7 @@ Set the site to git mode.
 terminus connection:set $PANTHEON_SITE_NAME.dev git
 ```
 
-Add and commit the code files. A git force push is necessary initially but subsequent pushes should not need `--force`.
+Add and commit the code files. A git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`.
 
 ```
 git add .
@@ -154,17 +154,11 @@ git commit -m 'Drupal 8 and dependencies'
 git push --force
 ```
 
-**Note** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at our documentation on the more advanced automated workflow with a build step.
+**Note** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our build tools guide](https://pantheon.io/docs/guides/build-tools/) for documentation on the more advanced automated workflow with a build step.
 
 ### Installing Drupal
 
 Now that the code for Drupal core exists on our Pantheon site, we need to actually install Drupal.
-
-Change to SFTP mode as files need to be writeable on Pantheon in order to install Drupal.
-
-```
-terminus connection:set $PANTHEON_SITE_NAME.dev sftp
-```
 
 Use Terminus Drush to install Drupal.
 
@@ -176,14 +170,6 @@ Log in to your new Drupal 8 site to verify it is working. You can get a one-time
 
 ```
 terminus drush $PANTHEON_SITE_NAME.dev -- uli
-```
-
-**Note:** there is no need to commit changes as the `example-drops-8-composer` project that we started with has already defined `$settings['install_profile'] = 'standard';` in `settings.php`.
-
-Set the connection mode back to git
-
-```
-terminus connection:set $PANTHEON_SITE_NAME.dev git
 ```
 
 ### Adding a New Module with Composer
