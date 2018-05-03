@@ -17,13 +17,11 @@ In this guide, we’re going to simplify things and run through the bare necessi
 
 Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](https://pantheon.io/docs/core-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
 
-**Note** this doc uses the `$PANTHEON_SITE_NAME` site slug. This will need to be replaced with your unique site slug.
-
 ## Creating the Pantheon Site
 
 To begin, we’ll want to start a brand new Drupal 8 site on Pantheon from our empty upstream. This upstream is different from the Drupal 8 upstream in that it does not come with any Drupal files. As such, you must use Composer to download Drupal.
 
-Before we begin choose a machine-friendly (all lower case with dashes instead of spaces) site name. I'll use `d8-composer-no-CI` but you should choose your own. Once you have a site name export it to a variable for re-use.
+Before we begin choose a machine-friendly site name. It should be all lower case with dashes instead of spaces. I'll use `d8-composer-no-CI` but choose your own. Once you have a site name export it to a variable for re-use.
 
 ```
 export PANTHEON_SITE_NAME="d8-composer-no-CI"
@@ -58,7 +56,7 @@ cd $PANTHEON_SITE_NAME
 Store the git URL for the Pantheon site created earlier in a variable.
 
 ```
-PANTHEON_SITE_GIT_URL="$(terminus connection:info $PANTHEON_SITE_NAME.dev --field=git_url)"
+export PANTHEON_SITE_GIT_URL="$(terminus connection:info $PANTHEON_SITE_NAME.dev --field=git_url)"
 ```
 
 Update the git remote to use the Pantheon site git URL returned rather than the `example-drops-8-composer` GitHub URL.
