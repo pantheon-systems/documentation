@@ -178,11 +178,7 @@ Log in to your new Drupal 8 site to verify it is working. You can get a one-time
 terminus drush $PANTHEON_SITE_NAME.dev -- uli
 ```
 
-Commit the changes to Pantheon.
-
-```
-terminus env:commit $PANTHEON_SITE_NAME.dev --message="Drupal installation"
-```
+**Note:** there is no need to commit changes as the `example-drops-8-composer` project that we started with has already defined `$settings['install_profile'] = 'standard';` in `settings.php`.
 
 Set the connection mode back to git
 
