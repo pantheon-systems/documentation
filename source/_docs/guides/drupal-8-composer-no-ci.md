@@ -64,8 +64,8 @@ git remote set-url origin ssh://codeserver.dev.SITE_UUD@codeserver.dev.SITE_UUD.
 ## Removing Automation Pieces
 `example-drops-8-composer` was designed to run automated tests on a continuous integration server. Since contonuous integration won't be used you can safely remove the directories below.
 
-* `script/github`
-* `script/gitlab`
+* `scripts/github`
+* `scripts/gitlab`
 * `.circleci`
 
 If you don't plan on running automated tests locally you can completely remove the testing functionality.
