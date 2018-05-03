@@ -55,16 +55,16 @@ cd $PANTHEON_SITE_NAME
 
 ## Updating the git remote URL
 
-Find the git URL for the Pantheon site created earlier.
+Store the git URL for the Pantheon site created earlier in a variable.
 
 ```
-terminus connection:info $PANTHEON_SITE_NAME.dev --field=git_url
+PANTHEON_SITE_GIT_URL="$(terminus connection:info $PANTHEON_SITE_NAME.dev --field=git_url)"
 ```
 
 Update the git remote to use the Pantheon site git URL returned rather than the `example-drops-8-composer` GitHub URL.
 
 ```
-git remote set-url origin ssh://codeserver.dev.SITE_UUD@codeserver.dev.SITE_UUID.drush.in:2222/~/repository.git
+git remote set-url origin $PANTHEON_SITE_GIT_URL
 ```
 
 ## Removing Automation Pieces
