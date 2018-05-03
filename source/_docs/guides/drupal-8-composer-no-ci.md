@@ -17,16 +17,22 @@ In this guide, we’re going to simplify things and run through the bare necessi
 
 Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](https://pantheon.io/docs/core-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
 
-**Note** this doc uses the `andrew-drops-8-composer` site slug. This will need to be replaced with your unique site slug.
+**Note** this doc uses the `$PANTHEON_SITE_NAME` site slug. This will need to be replaced with your unique site slug.
 
 ## Creating the Pantheon Site
 
 To begin, we’ll want to start a brand new Drupal 8 site on Pantheon from our empty upstream. This upstream is different from the Drupal 8 upstream in that it does not come with any Drupal files. As such, you must use Composer to download Drupal.
 
-Create a new Pantheon site with an empty upstream
+Before we begin choose a machine-friendly site name. I'll use `d8-composer-no-CI` but you should choose your own. Once you have a site name export it to a variable for re-use.
 
 ```
-terminus site:create andrew-drops-8-composer 'Andrew Drops 8 Composer' empty
+export PANTHEON_SITE_NAME="d8-composer-no-CI"
+```
+
+Create a new Pantheon site with an empty upstream.
+
+```
+terminus site:create $PANTHEON_SITE_NAME 'Andrew Drops 8 Composer' empty
 ```
 
 **Note** you can also add the `--org` argument to `terminus site:create` if you would like the site to be part of an organization. See `terminus site:create -h` for details and help.
@@ -38,13 +44,13 @@ Instead of setting up `composer.json` manually it is easier to start with the [`
 First, clone the `example-drops-8-composer` repository locally.
 
 ```
-git clone git@github.com:pantheon-systems/example-drops-8-composer.git andrew-drops-8-composer
+git clone git@github.com:pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
 ```
 
 Change into the cloned directory.
 
 ```
-cd andrew-drops-8-composer
+cd $PANTHEON_SITE_NAME
 ```
 
 ## Updating the git remote URL
@@ -52,7 +58,7 @@ cd andrew-drops-8-composer
 Find the git URL for the Pantheon site created earlier.
 
 ```
-terminus connection:info andrew-drops-8-composer.dev --field=git_url
+terminus connection:info $PANTHEON_SITE_NAME.dev --field=git_url
 ```
 
 Update the git remote to use the Pantheon site git URL returned rather than the `example-drops-8-composer` GitHub URL.
@@ -137,7 +143,7 @@ git status
 Set the site to git mode.
 
 ```
-terminus connection:set andrew-drops-8-composer.dev git
+terminus connection:set $PANTHEON_SITE_NAME.dev git
 ```
 
 Add and commit the code files. A git force push is necessary initially but subsequent pushes should not need `--force`.
@@ -159,31 +165,31 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 Change to SFTP mode as files need to be writeable on Pantheon in order to install Drupal.
 
 ```
-terminus connection:set andrew-drops-8-composer.dev sftp
+terminus connection:set $PANTHEON_SITE_NAME.dev sftp
 ```
 
 Use Terminus Drush to install Drupal.
 
 ```
-terminus drush andrew-drops-8-composer.dev -- site-install -y
+terminus drush $PANTHEON_SITE_NAME.dev -- site-install -y
 ```
 
 Log in to your new Drupal 8 site to verify it is working. You can get a one-time login link using Drush.
 
 ```
-terminus drush andrew-drops-8-composer.dev -- uli
+terminus drush $PANTHEON_SITE_NAME.dev -- uli
 ```
 
 Commit the changes to Pantheon.
 
 ```
-terminus env:commit andrew-drops-8-composer.dev --message="Drupal installation"
+terminus env:commit $PANTHEON_SITE_NAME.dev --message="Drupal installation"
 ```
 
 Set the connection mode back to git
 
 ```
-terminus connection:set andrew-drops-8-composer.dev git
+terminus connection:set $PANTHEON_SITE_NAME.dev git
 ```
 
 ### Adding a New Module with Composer
@@ -207,13 +213,13 @@ git push -u origin addr-module
 Spin up a Multidev environment from the git branch we just pushed up to Pantheon.
 
 ```
-terminus multidev:create andrew-drops-8-composer.dev addr-module
+terminus multidev:create $PANTHEON_SITE_NAME.dev addr-module
 ```
 
 Log in to your new environment and verify that the address module exists.
 
 ```
-terminus drush andrew-drops-8-composer.addr-module -- uli
+terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
 ```
 
 ![image of installing address module](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
