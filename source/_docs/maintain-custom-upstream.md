@@ -18,6 +18,7 @@ Follow the procedure to [create a custom upstream](/docs/create-custom-upstream)
 - A local clone of that repository, which tracks Pantheon's upstream as a remote
 - Pantheon's core code merged into your Custom Upstream repository
 - Your Custom Upstream repository connected to Pantheon
+- You will also need to have [Terminus](/docs/terminus) installed
 
 ## Create a Test Site on Pantheon
 This test site will be used later for evaluating the Custom Upstream changes we will make in the next section.
