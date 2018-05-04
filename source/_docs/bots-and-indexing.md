@@ -82,4 +82,4 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Domains and Redirects](/docs/domains/#redirect-to-https-and-the-primary-domain).
+For more examples of redirecting via PHP, see [Configure Redirects](/docs/redirects/).
