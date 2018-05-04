@@ -11,9 +11,7 @@ contributors:
   - davidneedham
 ---
 
-In an ideal situation, you might ignore the vendor directory and use [an automated build step with continuous integration](https://pantheon.io/docs/guides/build-tools/) to install your site with composer on the fly. But sometimes your project doesn’t have the budget or time needed to justify this workflow.
-
-In this guide, we’re going to simplify things and run through the bare necessities to use [Composer](https://getcomposer.org/) to install your Drupal 8 site on your local machine and push that to Pantheon. We’ll then demonstrate how to add a module using the same process.
+In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/) for managing a Drupal 8 site on your local machine and pushing to Pantheon.
 
 Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](https://pantheon.io/docs/core-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
 
