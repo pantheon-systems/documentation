@@ -126,11 +126,16 @@ This may take a while as all of Drupal core and its dependencies will be downloa
 
 ![image of terminal running a composer install](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-install.png)
 
+Let's take a look at the changes.
+
 ```
 git status
 ```
+It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the CUT section. 
 
-**Important:** The `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. To make it compatible with this method we need to remove everything above the CUT section of the `.gitignore` file. Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon. Now let’s run git status again to make sure everything is included.
+**Important:** Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon. 
+
+Now let’s run git status again to make sure everything is included.
 
 ```
 git status
