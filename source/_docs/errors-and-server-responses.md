@@ -117,9 +117,9 @@ If your PHP workers are overloaded, it's possible that pages will timeout before
 
 ### Fix Errors
 
-If your site is throwing a lot of warning and notices, there is a performance penalty are resources are used to log errors to disk and slow down your site by performing additional database write operations. In this case the solution is not to disable watchdog bug fix the errors.
+If your site is throwing a lot of warnings or notices, there is a performance penalty — resources are used to log errors to disk, and these can slow down your site by performing database write operations. In this case the solution is not to disable logging but to bug fix the errors.
 
-Even with the watchdog off these errors will still be written to the PHP error logs so they should be addressed as soon as possible.
+Even with the logging disabled, these errors will still be written to the server PHP error logs, so they should be addressed as soon as possible.
 
 ### Optimize the Site
 
