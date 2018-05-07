@@ -41,7 +41,7 @@ Here's an example of using a command-line SFTP client to connect to a site envir
 
 rsync is also available, but it is a more advanced tool that requires experience with the command line.
 
-Substitute your target environment and site UUID to connect; copying/pasting this example exactly as is will not work.
+Substitute your target environment and site UUID to connect; copying/pasting this example exactly as is will not work. The value for ENV is case sensitive and should be lower case (dev, test or live will work. DEV, TEST, or LIVE will not work).
 
     export ENV=dev
     # Usually dev, test, or live
