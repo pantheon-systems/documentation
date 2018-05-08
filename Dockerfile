@@ -1,23 +1,36 @@
 # Use a Pre-Built CircleCI Docker Image known to work with Composer
 FROM circleci/php:7.1-node-browsers
 
-USER $USER
+# Set working directory
+WORKDIR documentation
 
-# Declare working directory
-WORKDIR /documentation
-
-# Copy the working directory into the container
-ADD . /documentation
-
-# Install PHP dependencies
-RUN composer self-update && composer install
+# Install Ruby
+RUN sudo apt-get install ruby-full
 
 # Install Ruby dependencies
-RUN sudo apt-get install ruby-full && sudo apt-get install zlib1g-dev && gem install pkg-config -v "~> 1.1" \
-&& gem install bundler && bundle install
+RUN sudo apt-get install zlib1g-dev
+RUN sudo gem install pkg-config -v "~> 1.1"
+RUN sudo chmod -R 777 /var/lib/gems/ /usr/local/bin .
+# TODO: add --no-document
+RUN gem install bundler
+COPY Gemfile ./
+RUN bundle install --jobs=4
+
+# Update Composer
+RUN composer self-update
+
+# Install PHP dependencies
+COPY composer.json ./
+RUN composer install
 
 # Install node dependencies
+COPY package.json ./
 RUN npm install
+
+# Copy the working directory into the container
+ADD . ./
+
+RUN sudo chmod -R 777 .
 
 # Compile assets (CSS and Terminus Manual)
 RUN node_modules/.bin/grunt
