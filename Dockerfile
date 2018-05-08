@@ -9,16 +9,22 @@ WORKDIR /documentation
 # Copy the working directory into the container
 ADD . /documentation
 
-# Install dependencies
-RUN composer self-update && composer install \
-&& sudo apt-get install ruby-full && sudo apt-get install zlib1g-dev && gem install pkg-config -v "~> 1.1" \
-&& gem install bundler && bundle install \
-&& npm install
+# Install PHP dependencies
+RUN composer self-update && composer install
+
+# Install Ruby dependencies
+RUN sudo apt-get install ruby-full && sudo apt-get install zlib1g-dev && gem install pkg-config -v "~> 1.1" \
+&& gem install bundler && bundle install
+
+# Install node dependencies
+RUN npm install
 
 # Compile assets (CSS and Terminus Manual)
-RUN node_modules/.bin/grunt \
-&& vendor/pantheon-systems/terminus/bin/terminus list > source/docs/assets/terminus/commands.json --format=json \
-&& curl https://api.github.com/repos/pantheon-systems/terminus/releases > source/docs/assets/terminus/releases.json
+RUN node_modules/.bin/grunt
+
+RUN vendor/pantheon-systems/terminus/bin/terminus list > source/docs/assets/terminus/commands.json --format=json
+
+RUN curl https://api.github.com/repos/pantheon-systems/terminus/releases > source/docs/assets/terminus/releases.json
 
 # Generate the site in development mode (include drafts)
 RUN bin/sculpin generate --env=dev \
@@ -29,4 +35,4 @@ RUN bin/sculpin generate --env=dev \
 EXPOSE 8000
 
 # Serve the site
-CMD bin/sculpin server
+CMD /documentation/app.sh
