@@ -1,6 +1,10 @@
 # Use a Pre-Built CircleCI Docker Image known to work with Composer
 FROM circleci/php:7.1-node-browsers
 
+
+# Define the user as circleci, as provided by the parent image
+USER circleci
+
 # Set working directory
 WORKDIR documentation
 
@@ -10,34 +14,38 @@ RUN sudo apt-get install ruby-full
 # Install Ruby dependencies
 RUN sudo apt-get install zlib1g-dev
 RUN sudo gem install pkg-config -v "~> 1.1"
-RUN sudo chmod -R 777 /var/lib/gems/ /usr/local/bin .
-# TODO: add --no-document
-RUN gem install bundler
-COPY Gemfile ./
+RUN sudo chown -R circleci /var/lib/gems/ /usr/local/bin .
+RUN gem install bundler --no-rdoc --no-ri
+COPY --chown=circleci:circleci Gemfile ./
 RUN bundle install --jobs=4
 
 # Update Composer
 RUN composer self-update
 
 # Install PHP dependencies
-COPY composer.json ./
+COPY --chown=circleci:circleci composer.json ./
 RUN composer install
 
 # Install node dependencies
-COPY package.json ./
+COPY --chown=circleci:circleci package.json ./
 RUN npm install
 
-# Copy the working directory into the container
-ADD . ./
+# Copy the working directories into the container
+COPY --chown=circleci:circleci ./bin /documentation/bin
+COPY --chown=circleci:circleci ./scripts /documentation/scripts
+COPY --chown=circleci:circleci ./features /documentation/features
+COPY --chown=circleci:circleci ./app.sh ./behat.yml ./budget.json ./Gruntfile.js ./Rakefile ./sculpin.json ./watch.php ./wraith.yaml /documentation/
 
-RUN sudo chmod -R 777 .
+# Copy the app directory
+COPY --chown=circleci:circleci ./app /documentation/app
 
 # Compile assets (CSS and Terminus Manual)
+COPY --chown=circleci:circleci ./source /documentation/source
 RUN node_modules/.bin/grunt
 
-RUN vendor/pantheon-systems/terminus/bin/terminus list > source/docs/assets/terminus/commands.json --format=json
+RUN vendor/pantheon-systems/terminus/bin/terminus list > /documentation/source/docs/assets/terminus/commands.json --format=json
 
-RUN curl https://api.github.com/repos/pantheon-systems/terminus/releases > source/docs/assets/terminus/releases.json
+RUN curl https://api.github.com/repos/pantheon-systems/terminus/releases > /documentation/source/docs/assets/terminus/releases.json
 
 # Generate the site in development mode (include drafts)
 RUN bin/sculpin generate --env=dev \
@@ -48,4 +56,5 @@ RUN bin/sculpin generate --env=dev \
 EXPOSE 8000
 
 # Serve the site
+COPY --chown=circleci:circleci ./watch.php /documentation
 CMD /documentation/app.sh
