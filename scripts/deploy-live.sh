@@ -17,9 +17,9 @@ done
 #===============================================================#
 # Authenticate Terminus  and create json dump of help output    #
 #===============================================================#
-~/documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
-~/documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
-curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/documentation/output_prod/docs/assets/terminus/releases.json
+/documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
+/documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > /documentation/output_prod/docs/assets/terminus/commands.json
+curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > /documentation/output_prod/docs/assets/terminus/releases.json
 
 #===============================================================#
 # Deploy modified files to production                           #
@@ -39,7 +39,7 @@ fi
 # Delete Multidev environment from static-docs site   #
 #=====================================================#
 # Identify existing environments for the static-docs site
-~/documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
+/documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
 echo "Existing environments:" && cat env_list.txt
 # Create array of existing environments on Static Docs
 getExistingTerminusEnvs() {
@@ -74,7 +74,7 @@ getMergedBranchMultidevName "merged-branches-clean.txt"
 merged_branch=" ${merged_branch_multidev_names[*]} "
 for env in ${existing_terminus_envs[@]}; do
   if [[ $merged_branch =~ " $env " ]] && [ "$env" != "terminusma" ] ; then
-    ~/documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:delete static-docs.$env --delete-branch --yes
+    /documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:delete static-docs.$env --delete-branch --yes
   fi
 done
 
