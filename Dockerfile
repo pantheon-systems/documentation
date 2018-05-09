@@ -20,7 +20,7 @@ COPY --chown=circleci:circleci Gemfile ./
 RUN bundle install --jobs=4
 
 # Update Composer
-RUN composer self-update
+#RUN composer self-update
 
 # Install PHP dependencies
 COPY --chown=circleci:circleci composer.json ./
