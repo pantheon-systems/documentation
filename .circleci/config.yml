@@ -9,6 +9,7 @@ jobs:
       - run:
           name: Build Docs
           command: |
+            git checkout $CIRCLE_BRANCH
             node_modules/.bin/grunt
             bin/sculpin generate
       - run:
