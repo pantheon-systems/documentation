@@ -220,4 +220,4 @@ We don't recommend turning off New Relic for any one environment as it makes tro
 - [New Relic Univeristy: APM Advanced](https://learn.newrelic.com/courses/apm_advanced){.external}
 - [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui){.external}
 - [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help){.external}
-- [Introduction to New Relic for PHP](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php#monitor-performance)){.external}
+- [Introduction to New Relic for PHP](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php#monitor-performance){.external}
