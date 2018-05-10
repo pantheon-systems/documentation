@@ -57,4 +57,8 @@ EXPOSE 8000
 
 # Serve the site
 COPY --chown=circleci:circleci ./watch.php /documentation
+
+# Copy anything not yet copied
+COPY --chown=circleci:circleci . /documentation/
+
 CMD /documentation/app.sh
