@@ -16,7 +16,6 @@ RUN sudo apt-get install zlib1g-dev
 RUN sudo gem install pkg-config -v "~> 1.1"
 RUN sudo chown -R circleci /var/lib/gems/ /usr/local/bin .
 RUN gem install bundler --no-rdoc --no-ri
-RUN gem install html-proofer
 COPY --chown=circleci:circleci Gemfile ./
 RUN bundle install --jobs=4
 
