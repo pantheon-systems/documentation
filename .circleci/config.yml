@@ -11,7 +11,7 @@ jobs:
           command: |
             git checkout $CIRCLE_BRANCH
             node_modules/.bin/grunt
-            bin/sculpin generate
+            bin/sculpin generate --quiet
       - run:
           name: Deploy Multidev environment
           command: bash scripts/deploy-multidev.sh
@@ -40,7 +40,7 @@ jobs:
             # Look for merge conflicts.
             scripts/merge_conflicts.sh
             # Run htmlproofer.
-            /usr/local/bin/rake
+            htmlproofer --assume-extension  ./output_dev/ --disable-external true
 
       - store_artifacts:
           path: /documentation/sitespeed-result
