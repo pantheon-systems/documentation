@@ -5,7 +5,7 @@ jobs:
       - image: pantheonsystems/documentation
     working_directory: /documentation
     steps:
-      - checkout
+#      - checkout
       - run:
           name: Build Docs
           command: |
