@@ -62,6 +62,15 @@ Use the `init` command to create a `composer.json` file that includes the approp
               "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
               "wp-content/themes/{$name}/": ["type:wordpress-theme"]
             }
+          },
+          "scripts": {
+            "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf",
+            "post-install-cmd": [
+              "@remove-git-submodules"
+             ],
+            "post-update-cmd": [
+              "@remove-git-submodules"
+            ]
           }
       }
       ```
