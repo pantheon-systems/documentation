@@ -143,6 +143,8 @@ Review the [previous section](#sandbox-plan) on feature availability before down
 5. Make sure the change details are correct, then click **Submit**.
 6. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/docs/site-billing/#do-not-bill-this-site-to-a-card).
 
+Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/docs/delete-site/).
+
 ## See Also
 - [Billing in the Site Dashboard](/docs/site-billing/)
 - [Account Billing in the User Dashboard](/docs/account-billing/)
