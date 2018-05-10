@@ -36,7 +36,7 @@ jobs:
             # Run behat.
             bin/behat
             # Run a11y.
-            grunt test
+            node_modules/.bin/grunt test
             # Look for merge conflicts.
             scripts/merge_conflicts.sh
             # Run htmlproofer.
