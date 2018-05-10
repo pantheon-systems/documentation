@@ -23,13 +23,18 @@ There are a number of GUI SFTP clients available, such as [FileZilla](https://fi
 
 [Connection information](/docs/sftp#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 
-Here's an example of using a command-line SFTP client to connect to a site environment's file directory. Substitute your target environment and [site UUID](/docs/sites#site-uuid) to connect; copy/pasting this example exactly as is will not work.
+Here's an example of using a command-line SFTP client to connect to a site environment's file directory.
 
-    export ENV=dev
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).</p>
+</div>
+
+
+    export ENV=[env]
     # Usually dev, test, or live
-    export SITE=c9beeb22-63f9-498a-942b-6ac0edcd4c29
-    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
-
+    export SITE=[uuid]
+    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
 
     sftp -oPort=2222 $ENV.$SITE@appserver.$ENV.$SITE.drush.in
     Connected to appserver.$ENV.$SITE.drush.in
@@ -41,12 +46,16 @@ Here's an example of using a command-line SFTP client to connect to a site envir
 
 rsync is also available, but it is a more advanced tool that requires experience with the command line.
 
-Substitute your target environment and site UUID to connect; copying/pasting this example exactly as is will not work.
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).</p>
+</div>
 
-    export ENV=dev
+
+    export ENV=[env]
     # Usually dev, test, or live
-    export SITE=[YOUR SITE UUID]
-    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/<UUID>
+    export SITE=[uuid]
+    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
 
     # To Upload/Import
     rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
@@ -76,7 +85,7 @@ Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsy
 Before you begin, make sure you have the following information:
 
 **Site URL:** https://dashboard.pantheon.io/sites/3ef6264e-51d9-43b9-a60b-6cc22c3129308as83<br />
-**Environment (ENV):** Dev<br />
+**Environment (ENV):** dev<br />
 **Site (SITE):** 3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 
 ### Download a Drupal Directory from Pantheon
