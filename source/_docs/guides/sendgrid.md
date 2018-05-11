@@ -5,9 +5,7 @@ tags: [siteintegrations, moreguides]
 categories: []
 type: guide
 permalink: docs/guides/:basename/
-contributors:
-  - erikmathy
-  - rvtraveller
+contributors: [erikmathy, rvtraveller, wbconnor, sarahg]
 date: 9/8/2015
 ---
 Email is a necessity when running a website, whether it's used with a simple contact form or to manage subscription based services, odds are you’re going to need it. Users may want to receive notices of content updates, have sales receipts sent to them, update their password or membership information, and more. Email is the most effective way of communicating with a site's user base, but it does no good if these messages are filtered and marked as spam.
@@ -124,93 +122,46 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 - API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/docs/composer/). For Drupal 7 we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
 
 ### SendGrid API Integration {.info}
-
-You'll need a local git clone of your site before proceding.
-
-1.  [Install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and if you're using Linux place the Composer PHAR in a directory that is part of your PATH, so you can access it globally. 
+1. Install [Composer](https://getcomposer.org){.external}, then install and authenticate [Terminus](/docs/terminus/install/).
+2. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
     ```bash
-    mv composer.phar /usr/local/bin/composer
+    SITE=<site_name>
+    `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
+    cd $SITE
     ```
+3. Set the connection mode to Git:
 
+    ```bash
+    terminus connection:set $SITE.dev git
+    ```
+4.  Install the *dev release* of the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module (and it's dependencies) and the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module using Drush:
 
-2.  Install the *dev release* of the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module (and it's dependencies) and the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module using Drush:
-
-     ```bash
+    ```bash
     drush dl sendgrid_integration-7.x-1.x-dev mailsystem composer_vendor
-     ```
-
-3. Initialize a skeleton `composer.json` file in `sites/all`:
-
-    ```bash
-    cd sites/all && composer init --no-interaction
     ```
-
-4. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
+{% include("content/d7-composer-init.html")%}
+7. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
 
     ```bash
     composer require fastglass/sendgrid:~1.0
     ```
-
-5. Edit the file at `sites/all/vendor/composer.json` If you just now installed Composer for the first time, the `composer.json` file should only show:
-
-    ```json
-    {
-      "require": {
-        "fastglass/sendgrid": "~1.0"
-      }
-    }
-    ```
-    
-    Edit the file to include the following code (notice where the existing require statement is in the code):
-
-        {
-          "repositories": [
-            {
-              "type": "composer",
-              "url": "https://packages.drupal.org/7"
-            }
-          ],
-          "require": {
-            "fastglass/sendgrid": "~1.0"
-          },
-          "extra": {
-            "installer-paths": {
-              "sites/all/modules/{$name}/": ["type:drupal-module"],
-              "sites/all/themes/{$name}/": ["type:drupal-theme"],
-              "sites/all/libraries/{$name}/": ["type:drupal-library"]
-            }
-          },
-          "scripts": {
-            "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf",
-            "post-install-cmd": [
-              "@remove-git-submodules"
-            ],
-            "post-update-cmd": [
-              "@remove-git-submodules"
-            ]
-          }
-        }
-
-
-6. Add, commit, and push all of the new files:
+8. Add, commit, and push all of the new files:
 
     ```bash
     git add .
     git commit -am "Add Sendgrid API Integration"
     git push origin master
     ```
-
-7. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
+9. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
 
     ```bash
-    terminus drush <site>.<env> -- en composer_vendor -y
-    terminus drush <site>.<env> -- en sendgrid_integration -y
+    terminus drush $SITE.<env> -- en composer_vendor -y
+    terminus drush $SITE.<env> -- en sendgrid_integration -y
     ```
-8.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+10.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
 
-9.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
-
+11.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
