@@ -32,20 +32,6 @@ The following plugins are just a few of the most popular available for Terminus 
   <div class="flex-panel-item">
     <div class="flex-panel-body">
       <div class="flex-panel-title">
-        <h3 class="plugin-title">Site Clone</h3>
-        <div class="pantheon-official">
-          <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
-          <p class="pantheon-official">Pantheon Official</p>
-        </div>
-      </div>
-      <p class="topic-info__description">Author: <a href="https://github.comataylorme">Andrew Taylor</a></p>
-      <p class="topic-info__description">Adds the Terminus <code>site:clone</code> command to facilitate cloning code, database and/or media files from one Pantheon site to another.</p>
-      <a href="https://github.com/pantheon-systems/terminus-site-clone-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
-    </div>
-  </div>
-  <div class="flex-panel-item">
-    <div class="flex-panel-body">
-      <div class="flex-panel-title">
         <h3 class="plugin-title">Composer</h3>
         <div class="pantheon-official">
         <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
@@ -159,6 +145,20 @@ The following plugins are just a few of the most popular available for Terminus 
       <p class="topic-info__description">Author: <a href="https://github.com/greg-1-anderson">Greg Anderson</a></p>
       <p class="topic-info__description">Manage the <code>secrets.json</code> file for use with Quicksilver.</p>
       <a href="https://github.com/pantheon-systems/terminus-secrets-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
+    </div>
+  </div>
+  <div class="flex-panel-item">
+    <div class="flex-panel-body">
+      <div class="flex-panel-title">
+        <h3 class="plugin-title">Site Clone</h3>
+        <div class="pantheon-official">
+          <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+          <p class="pantheon-official">Pantheon Official</p>
+        </div>
+      </div>
+      <p class="topic-info__description">Author: <a href="https://github.comataylorme">Andrew Taylor</a></p>
+      <p class="topic-info__description">Adds the Terminus <code>site:clone</code> command to facilitate cloning code, database and/or media files from one Pantheon site to another.</p>
+      <a href="https://github.com/pantheon-systems/terminus-site-clone-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
     </div>
   </div>
   <div class="flex-panel-item">
