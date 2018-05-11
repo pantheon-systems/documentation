@@ -127,25 +127,73 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
 You'll need a local git clone of your site before proceding.
 
-1.  Install the *dev release* of the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module (and it's dependencies) and the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module using Drush:
+1.  [Install Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and if you're using Linux place the Composer PHAR in a directory that is part of your PATH, so you can access it globally. 
+
+    ```bash
+    mv composer.phar /usr/local/bin/composer
+    ```
+
+
+2.  Install the *dev release* of the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module (and it's dependencies) and the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module using Drush:
 
      ```bash
     drush dl sendgrid_integration-7.x-1.x-dev mailsystem composer_vendor
      ```
 
-2. Initialize a skeleton `composer.json` file in `sites/all`:
+3. Initialize a skeleton `composer.json` file in `sites/all`:
 
     ```bash
     cd sites/all && composer init --no-interaction
     ```
 
-3. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
+4. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
 
     ```bash
     composer require fastglass/sendgrid:~1.0
     ```
 
-4. Add, commit, and push all of the new files:
+5. Edit the file at `sites/all/vendor/composer.json` If you just now installed Composer for the first time, the `composer.json` file should only show:
+
+    ```json
+    {
+      "require": {
+        "fastglass/sendgrid": "~1.0"
+      }
+    }
+    ```
+    
+    Edit the file to include the following code (notice where the existing require statement is in the code):
+
+        {
+          "repositories": [
+            {
+              "type": "composer",
+              "url": "https://packages.drupal.org/7"
+            }
+          ],
+          "require": {
+            "fastglass/sendgrid": "~1.0"
+          },
+          "extra": {
+            "installer-paths": {
+              "sites/all/modules/{$name}/": ["type:drupal-module"],
+              "sites/all/themes/{$name}/": ["type:drupal-theme"],
+              "sites/all/libraries/{$name}/": ["type:drupal-library"]
+            }
+          },
+          "scripts": {
+            "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf",
+            "post-install-cmd": [
+              "@remove-git-submodules"
+            ],
+            "post-update-cmd": [
+              "@remove-git-submodules"
+            ]
+          }
+        }
+
+
+6. Add, commit, and push all of the new files:
 
     ```bash
     git add .
@@ -153,15 +201,16 @@ You'll need a local git clone of your site before proceding.
     git push origin master
     ```
 
-5. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
+7. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
 
     ```bash
     terminus drush <site>.<env> -- en composer_vendor -y
     terminus drush <site>.<env> -- en sendgrid_integration -y
     ```
-6.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+8.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
 
-7.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+9.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
