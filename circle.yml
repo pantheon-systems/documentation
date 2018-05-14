@@ -2,7 +2,7 @@
 machine:
   php:
     # https://circleci.com/docs/environment#php
-    version: 5.5.31
+    version: 7.1.3
 
 dependencies:
   cache_directories:
@@ -49,6 +49,6 @@ experimental:
       only:
         - master
 
-general: 
+general:
   artifacts:
     - sitespeed-result
