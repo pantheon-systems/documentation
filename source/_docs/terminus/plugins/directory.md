@@ -157,7 +157,7 @@ The following plugins are just a few of the most popular available for Terminus 
         </div>
       </div>
       <p class="topic-info__description">Author: <a href="https://github.comataylorme">Andrew Taylor</a></p>
-      <p class="topic-info__description">Copy the code, db and files from one Pantheon Site Dashboard to another.</p>
+      <p class="topic-info__description">Copy the code, database and files from one Pantheon Site Dashboard to another.</p>
       <a href="https://github.com/pantheon-systems/terminus-site-clone-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
     </div>
   </div>
