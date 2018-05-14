@@ -18,36 +18,21 @@ Before you edit or create a doc, search [open issues](https://github.com/pantheo
 ###Titles and Descriptions
 When creating issues, add a clear title and description. Issues should contain relevant information e.g., the document title, the information that is incorrect or outdated and your suggestion on how to fix it, reasons why method A is better than method B, and so on.
 
-**Example**:  
-Title: Apache Solr doc - Terminus command is not working  
+**Example**:
+Title: Apache Solr doc - Terminus command is not working
 Description: The document currently suggests using XYZ commands, but I get the following error (insert error message). The fix is to use XYZ commands.
 
 ###Labels
 
 Add labels to issues by clicking the gear in the sidebar on the right. Labels are used to signify priority, category, and to help filter existing issues. For example, if a doc is incorrect, the label 'Doc Defect' should be applied.
 
-## Edit and Test Locally Using Vagrant
+## Edit and Test Locally
 
-**Note**: To preserve the accuracy of promised information throughout the docs, search the repository for links to sections that have been renamed and update accordingly.
-
-1. [Use Vagrant](https://github.com/pantheon-systems/documentation#option-1-use-vagrant-recommended) to run the docs site locally.
-2. Navigate to your local `documentation` repository and use `git checkout -b <new-branch-name>` to switch to a new branch.
-3. Edit/Create docs locally using your favorite text editor (e.g. [Atom](https://atom.io/)), then save the file changes.
-4. Run `vagrant provision` and verify modifications on the local site <http://docs.local:8000/docs>
-5. Test layout or code changes with `vagrant ssh` and `cd /vagrant`, then execute the following tests individually (optional):
- - `grunt`: [a11y](https://github.com/addyosmani/a11y) accessibility audits
- - `rake`: [HTML::Proofer](https://github.com/gjtorikian/html-proofer) HTML validation
- - `bin/behat`: [Behat](https://github.com/Behat/Behat)
- - `wraith capture wraith.yaml`: [Wraith](https://github.com/BBC-News/wraith) visual regression tool
- - `scripts/merge_conflicts.sh`: Look for merge conflicts.
-6. Commit changes and push to your fork. Issue pull-requests one document/issue at a time.
+Pantheon provides a Docker image with which you can test your local edits. See [Local Setup](<README.md#local-setup-optional>) for details.
 
 ### Updating Header and Subheaders
 Headers and Subheaders render as H2 and H3 tags when the site is published. These tags automatically generate anchors which can be relatively linked throughout the site. When creating or editing, avoid using numbers and special characters. If used, the URL would either need to be encoded or ignored from html-proofer tests using the `data-proofer-ignore` attribute.
 
-### Use of Images
-
-All images must include a descriptive `alt` value. For details, see the [Images Readme](https://github.com/pantheon-systems/documentation/blob/master/source/assets/images/readme.md).
 
 ## Edit on GitHub
 
@@ -55,8 +40,8 @@ Trying to edit or create a file in this repository will create your fork automat
 
 ## Keep your Local Updated with Master
 
-From your local repo, run the following commands in order:  
-1. `git checkout master`  
+From your local repo, run the following commands in order:
+1. `git checkout master`
 2. `git pull --rebase upstream master`
 3. `git push origin master`
 
