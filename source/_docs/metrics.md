@@ -36,16 +36,13 @@ Raw data is not currently available.
 There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic. For details, see <a href="/docs/traffic-limits/#why-doesnt-pantheons-traffic-match-my-analytics" data-proofer-ignore>Traffic Limits and Overages</a>.
 
 ### How does Pantheon handle overages?
-Where there is a pattern of consistent overage, we will align a site's plans with its load on the platform. For details, see <a href="/docs/traffic-limits/#does-pantheon-charge-for-overages" data-proofer-ignore>Traffic Limits and Overages</a>.
+All non-Basic plans come with free overage protection. Where there is a pattern of consistent overage, we will align a site's plans with its load on the platform. For details, see [Traffic Limits and Overages](/docs/traffic-limits).
 
-
-### What about bots or DoS attacks?
+### What about bots?
 Pantheon-identified bots are excluded from the Visits and Pages Served Metrics.
-
 
 ### Can I see metrics for other environments?
 Yes! Metrics are now available for the entire site or by environment via the Terminus `alpha:metrics` command, when [installed via Git](https://github.com/pantheon-systems/terminus#installing-with-git).
-
 
 ### Why don't I see any data, or why don't I see a full 12 months of data?
 Data is shown for dates after March 18, 2018. If your site is not yet on the Global CDN data will not be available. To upgrade, see [Pantheon Global CDN](/docs/global-cdn/).
