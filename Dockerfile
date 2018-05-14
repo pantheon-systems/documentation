@@ -31,10 +31,8 @@ COPY --chown=circleci:circleci package.json ./
 RUN npm install
 
 # Copy the working directories into the container
-COPY --chown=circleci:circleci ./bin /documentation/bin
-COPY --chown=circleci:circleci ./scripts /documentation/scripts
 COPY --chown=circleci:circleci ./features /documentation/features
-COPY --chown=circleci:circleci ./app.sh ./behat.yml ./budget.json ./Gruntfile.js ./Rakefile ./sculpin.json ./watch.php ./wraith.yaml /documentation/
+COPY --chown=circleci:circleci ./behat.yml ./budget.json ./Gruntfile.js ./Rakefile ./sculpin.json ./wraith.yaml /documentation/
 
 # Copy the app directory
 COPY --chown=circleci:circleci ./app /documentation/app
@@ -42,19 +40,20 @@ COPY --chown=circleci:circleci ./app /documentation/app
 # Compile assets (CSS and Terminus Manual)
 COPY --chown=circleci:circleci ./source /documentation/source
 RUN node_modules/.bin/grunt
-
 RUN vendor/pantheon-systems/terminus/bin/terminus list > /documentation/source/docs/assets/terminus/commands.json --format=json
-
 RUN curl https://api.github.com/repos/pantheon-systems/terminus/releases > /documentation/source/docs/assets/terminus/releases.json
 
 # Generate the site in development mode (include drafts)
-RUN bin/sculpin generate --env=dev \
-&& cd output_dev && ln -s ./ source && cd ..\
-&& bash -c "scripts/fix-changelog-index.sh"
+RUN bin/sculpin generate --env=dev
+
+# Symlink source inside output_dev
+RUN cd output_dev && ln -s ./ source
+
+# Copy scripts into the container
+COPY --chown=circleci:circleci ./scripts /documentation/scripts
+
+# Run changelog fix script
+RUN ./scripts/fix-changelog-index.sh
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
-
-# Serve the site
-COPY --chown=circleci:circleci ./watch.php /documentation
-CMD /documentation/app.sh
