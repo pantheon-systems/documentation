@@ -12,7 +12,7 @@ If you are importing a site and the database has custom prefixes for your DB tab
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p markdown="1">Table prefixes are not supported or recommended by Pantheon. For more details see [Accessing MySQL Databases](/docs/mysql-access/#are-table-prefixes-supported).</p></div>
+  <p markdown="1">Table prefixes are not supported or recommended by Pantheon. For more details see <a data-proofer-ignore href="/docs/mysql-access/#are-table-prefixes-supported">Accessing MySQL Databases</a>.</p></div>
 
 ## Automatic Updates
 
