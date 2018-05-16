@@ -88,7 +88,11 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 4. Use the [WP-CLI `core install`](https://developer.wordpress.org/cli/commands/core/install/) command to install WordPress on the Dev environment:
 
   ```command
-  terminus wp tessa-site-wp.dev -- core install --url=https://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
+  terminus wp tessa-site-wp.dev -- core install --url=https://dev-tessa-site-wp.pantheonsite.io \
+    --title="Terminus Demo Site" \
+    --admin_user=admin \
+    --admin_password=changemelater \
+    --admin_email=name@yoursite.com
   ```
 
   As a reminder, WP-CLI is the command line utility for WordPress itself.	Terminus is simply passing through the WP-CLI commands to the site on Pantheon. To get a full list of WP-CLI commands run:
