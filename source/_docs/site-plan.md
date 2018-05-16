@@ -29,7 +29,7 @@ Consider the following changes to feature access _before_ upgrading or downgradi
 ### Sandbox Plan
 [Custom domains](/docs/domains/#custom-domains) are not available to Sandbox plans. Downgrading to a Sandbox plan will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
-Downgrading to a Sandbox plan will disable automatic backups. You will be able to create backups manually. For details, see [Backups Tool](/docs/backups/).
+Downgrading to a Sandbox plan will disable automatic backups. You will still be able to create backups manually. For details, see [Backups Tool](/docs/backups/).
 
 ### Basic Plan
 [New Relic](/docs/new-relic/), [Redis](/docs/redis/), and [Solr](/docs/solr) are not available for Basic plans. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
