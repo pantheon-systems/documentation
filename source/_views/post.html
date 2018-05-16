@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div id="doc" class="col-md-9 mb-70" style="margin-top:-20px;">
-      <h1>Pantheon Changelog<br />{% if page.changelogmain is not defined %}<small>{{page.title}}</small></h1>{% endif %}
+      <h1>Pantheon Changelog<br />{% if page.changelogmain is not defined %}<small>{{page.title}}</small>{% endif %}</h1>
       {% include("content/changelog-optin.html")%}
       {{ page.blocks.content|raw }}
     </div>

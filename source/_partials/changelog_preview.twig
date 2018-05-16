@@ -3,7 +3,7 @@
     <h2 class="subtitle">Changelog</h2>
     {% for post in data.posts | slice(0,1) %}
       {{ post.blocks.content| replace({"h2": "h3"})  |slice(0,498)| raw  }}
-      <br>
+      {% include("content/changelog-optin.html")%}
       <a href="/docs/changelog" class="cta">More</a>
     {% endfor %}
   </div>
