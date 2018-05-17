@@ -151,7 +151,7 @@ We're currently testing out integration strategies for Solr with our next-genera
 
 ### What support is available for Pantheon?
 
-See [Getting Support](/docs/getting-support/) and explore our [support features](https://pantheon.io/support).
+See [Getting Support](/docs/support/) and explore our [support features](https://pantheon.io/support).
 
 
 ## Security
