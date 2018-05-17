@@ -7,7 +7,7 @@ Pantheon Custom Upstreams are a self-serve feature available to anyone with acce
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
-Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/getting-support/#custom-upstreams).
+Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/support/#custom-upstreams).
 </div>
 
 

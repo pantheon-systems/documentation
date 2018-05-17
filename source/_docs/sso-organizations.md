@@ -53,7 +53,7 @@ You will need to enter the following:
 
 ## Enable SAML on Pantheon
 
-[Contact support](/docs/getting-support) and provide the following:
+[Contact support](/docs/support) and provide the following:
 
 1. **Email Domain(s)**: The email domain(s) your organization controls. Only users with email addresses in this domain will use the Organization's IdP.
 

@@ -43,4 +43,4 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 
 ## Support
 
-- [Getting Support](/docs/getting-support/)
+- [Getting Support](/docs/support/)
