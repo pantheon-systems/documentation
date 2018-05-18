@@ -14,21 +14,41 @@ Drupal 7 sites do not have the option to set or override the system `tmp` path.
 
 Modules, plugins, and/or themes that override Pantheon's temporary directory configuration are typically not supported within our distributed environment. However, you may be able to resolve issues by adjusting the setting used to configure the temporary directory path within the module, plugin and/or theme.
 
-### Drupal 8
-In the following example, we're using `some_tmp_setting` to refer to an option defined by a module to reference a temporary file location. Replace this with the option used by the module you're working with:
 
-```
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $conf['some_tmp_setting'] = $_SERVER['HOME'] . '/tmp';
-}
-```
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
 
-### WordPress
-Replace `'some_tmp_settings'` with the applicable plugin or theme option used to configure the temporary directory path:
+  <!-- 2nd Tab Nav -->
+  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
 
-```
-update_option('some_tmp_settings', $_SERVER['HOME'] . '/tmp');
-```
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+  In the following example, we're using `some_tmp_setting` to refer to an option defined by a plugin or theme to reference a temporary file location. Replace this with the option used by the plugin you're working with:
+
+  ```
+  update_option('some_tmp_settings', $_SERVER['HOME'] . '/tmp');
+  ```
+  </div>
+
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+  In the following example, we're using `some_tmp_setting` to refer to an option defined by a module to reference a temporary file location. Replace this with the option used by the module you're working with:
+
+  ```php
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    $conf['some_tmp_setting'] = $_SERVER['HOME'] . '/tmp';
+  }
+  ```
+  </div>
+</div>
+
+
 ## Using Valhalla, Pantheon's Networked Filesystem
 <div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
 <p markdown="1">
@@ -47,18 +67,35 @@ This will allow for consistent execution of requests to temporary files for site
 ### Private Temporary Files
 If you prefer to manage your temporary files privately, use the following to ensure resources are available across application containers. These files will be web-accessible based on the access control rules that you set for your site.
 
-#### Drupal
-Create a `private/tmp/` directory within `sites/default/files/` and add the following to `settings.php`.  Replace `'plupload_temporary_uri'` with the applicable module or theme setting used to configure the temporary directory path.
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-3-id" role="presentation" class="active"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">WordPress</a></li>
 
-```
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  $conf['plupload_temporary_uri'] = 'private://tmp';
-}
-```
+  <!-- 2nd Tab Nav -->
+  <li id="tab-4-id" role="presentation"><a href="#tab-4-anchor" aria-controls="tab-4-anchor" role="tab" data-toggle="tab">Drupal</a></li>
 
-#### WordPress
-Create a `private/tmp/` directory within the `wp-content/uploads/` directory and add the following to `wp-config.php`:
+</ul>
 
-```
-define('WP_TEMP_DIR', ABSPATH . 'wp-content/uploads/private/tmp');
-```
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="tab-3-anchor" markdown="1">
+  Create a `private/tmp/` directory within the `wp-content/uploads/` directory and add the following to `wp-config.php`:
+
+  ```
+  define('WP_TEMP_DIR', ABSPATH . 'wp-content/uploads/private/tmp');
+  ```
+  </div>
+
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="tab-4-anchor" markdown="1">
+  Create a `private/tmp/` directory within `sites/default/files/` and add the following to `settings.php`.  Replace `'plupload_temporary_uri'` with the applicable module or theme setting used to configure the temporary directory path.
+
+  ```
+  if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    $conf['plupload_temporary_uri'] = 'private://tmp';
+  }
+  ```
+  </div>
+</div>
