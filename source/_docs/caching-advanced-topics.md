@@ -36,7 +36,10 @@ If your site or application requires Facebook authentication, we have added exce
 
 ## Manually Expiring Cache for Static Assets (e.g. CSS, JS, PDFs, Images)
 
-Pantheon sets a cache lifetime of 1 year for static assets per industry standard best practices. To ensure a client browser receives a new version of a static asset, rename the file. For example, you can version a css file by linking to it using a query parameter, `style.css?v=1.1`.
+Pantheon sets a cache lifetime of 1 year for static assets per industry standard best practices. To ensure a client browser receives a new version of a static asset you can:
+
+ - Rename the file
+ - Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
 
 ## Using Your Own Session-Style Cookies
 
