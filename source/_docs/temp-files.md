@@ -11,7 +11,7 @@ Some Plugins or Modules depend on temporary file locations to store ephemeral da
 
 Live sites on Performance Medium and above plans have multiple [application containers](/docs/application-containers).  Pantheon's distributed system means that requests are spread between all of the available application servers, which is part of how we help the site scale. However, the `~/tmp` directory on one instance is not able to access the `~/tmp` contents on another application server. This means that plugins which expect teporary files to persist between multiple PHP tasks may fail.
 
-Temporary File locations in the [filesystem](/docs/files) are persistent across application containers, but are not optimal solutions for temp folders with a large number of files, or those that undergoe heavy writes. [See below](#set-tmp-to-the-filesystem) for more information.
+Temporary File locations in the [filesystem](/docs/files) are persistent across application containers, but are not optimal solutions for temp folders with a large number of files, or those that undergoe heavy writes. <a href=#set-tmp-to-the-filesystem data-proofer-ignore>See below</a> for more information.
 
 ## Modules/Plugins/Themes Override
 
