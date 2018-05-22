@@ -8,7 +8,10 @@ Pantheon maintains core upstream repositories for [WordPress](https://github.com
 
 Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/docs/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/support/#scope-of-support).
 
-Drupal sites managed with Composer should never receive Pantheon's One-click updates in the Pantheon Site Dashboard, or use Drupal's Admin interface, or Drush to update core, as none of these techniques modify the composer.json file. You must update core using Composer exclusively.
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+  <p markdown="1">Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/docs/guides/build-tools/update/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/#managing-drupal-updates-with-composer).</p>
+</div>
 
 ## Apply Upstream Updates via the Site Dashboard
 1. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
@@ -173,7 +176,7 @@ If you know your site's Custom Upstream has updated code, but it's not visible o
 
 This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it may take up to a minute before updates appear on the dashboard.
 
-If updates are still not showing on the site, it may be necessary to re-set the site's upstream via [Terminus](/docs/terminus/examples/#switch-upstreams). Please note that only the Site Owner or owning Organization Administrators can change a site's upstream. 
+If updates are still not showing on the site, it may be necessary to re-set the site's upstream via [Terminus](/docs/terminus/examples/#switch-upstreams). Please note that only the Site Owner or owning Organization Administrators can change a site's upstream.
 
 ### 503 Errors When Running Update.php and Installing Modules
 
