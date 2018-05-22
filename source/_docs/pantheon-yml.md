@@ -112,6 +112,9 @@ remote:
 remote:
 ```
 
+### Deploying a Hotfix
+Changes made to `pantheon.yml` file on a branch **are not** detected when deploying a [hotfix](/docs/hotfixes/). As a workaround, make some modification to `pantheon.yml` file and deploy that forward using the standard process.
+
 ## See Also
 - [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver/)  
 - [Upgrade PHP Versions](/docs/php-versions/)
