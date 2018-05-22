@@ -33,7 +33,7 @@ Only WordPress and Drupal applications are officially supported, but the PHP run
 
 Pantheon supports toggling between local development mode using `git push` to transfer all code changes, and an on-server development mode, which provides access to the codebase via SFTP.
 
-Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](/docs/terminus/), [drush](/docs/drush), [WP-CLI](/docs/faq#does-pantheon-support-wp-cli%3F), and SFTP files.
+Direct SSH access is not supported, but you are able to directly interface with mysql, use CLI tools ([Terminus](/docs/terminus/), [drush](/docs/drush), [WP-CLI](/docs/faq#does-pantheon-support-wp-cli%3F), and SFTP files).
 
 
 ### How does Pantheon work with DNS?
@@ -98,6 +98,10 @@ WordPress runs its own internal cron-like system as visitors load your site. You
 ### Do you support ffmpeg transcoding?
 
 No. We do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service.
+
+### Do you support Xdebug?
+
+No. Xdebug is not available on the platform.
 
 ### How do I increase the maximum execution time limit for a PHP script?
 
