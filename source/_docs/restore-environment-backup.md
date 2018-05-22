@@ -17,13 +17,18 @@ If you need to restore your database or file uploads, we recommend using the [Da
 ## Before you Begin the Restore Process
 It is important that you and your team know that this is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in when backed up.
 
-When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/docs/getting-support).
+When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/docs/support).
 
 ![Backup tool](/source/docs/assets/images/dashboard/backup-tool.png)
 
 ## Restore an Environment From Its Own Backup
 
 Restore a manual or automatic backup (Code, Database, and Files) by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method.
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">For development environments (e.g., Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (e.g., Test and Live). For details, see [The Site Dashboard](/docs/sites/#code).</p>
+</div>
 
 ![Backups and Restore Button](/source/docs/assets/images/dashboard/restore-button.png)
 

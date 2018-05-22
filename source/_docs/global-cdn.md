@@ -72,7 +72,7 @@ For more details, see [Clearing Caches for Drupal and WordPress](/docs/clear-cac
 
 ## Enabling the Global CDN
 
-If you don't see action required in your Domains / HTTPS tool, please [contact support](/docs/getting-support) to enable the upgrade.
+If you don't see action required in your Domains / HTTPS tool, please [contact support](/docs/support) to enable the upgrade.
 
 ### Upgrade Your Site
 

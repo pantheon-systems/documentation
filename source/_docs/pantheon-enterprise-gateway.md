@@ -14,7 +14,7 @@ The Pantheon Enterprise Gateway uses TLS encryption to create a tunnel from the 
 ![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
 
 ## Create an Enterprise Gateway
-[Contact support](/docs/getting-support) and provide the following for each of your remote services:
+[Contact support](/docs/support) and provide the following for each of your remote services:
 
 * IP address
 * Port number

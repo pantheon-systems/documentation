@@ -16,7 +16,7 @@ The scope of performance tests should be limited to the application itself on a 
 
 
 ### Load Testing
-Load testing is the process in which you apply requests to your site that will represent the most load that your site will face once it is live.  This test will ensure that the site can withstand the peak traffic spikes after launch. This test should be done on the Live environment before the site has launched, in advance of anticipated major-traffic events, or after major overhauls, remembering to provide enough time to fix any issues identifiedafter performance testing.
+Load testing is the process in which you apply requests to your site that will represent the most load that your site will face once it is live.  This test will ensure that the site can withstand the peak traffic spikes after launch. This test should be done on the Live environment before the site has launched, in advance of anticipated major-traffic events, or after major overhauls, remembering to provide enough time to fix any issues identified after performance testing.
 
 If your site is already live, then you should run load tests on the Test environment. Keep in mind that the Test environment has two application containers, while Live environments on sites with a service level of Performance Medium and above can have multiple application containers serving the site. So try to run a proportionate amount of traffic based on how many containers you currently have on your Live environment.
 
@@ -37,7 +37,7 @@ The procedure for executing a load test and a performance test are similar:
      * [Jmeter](https://jmeter.apache.org/)
      * [Locust](http://locust.io/)
 
-The Pantheon onboarding team uses Locust, an open source load testing tool. Locust makes it easy to build out test scripts, and it allows you to crawl the site instead of using predefined URLs. Crawling the site has the added benefit of loading every page that is linked to anywhere on the site. This exposes edge case performance bottlenecks that would have gone undetected under tests with predifined URLs.
+The Pantheon onboarding team uses Locust, an open source load testing tool. Locust makes it easy to build out test scripts, and it allows you to crawl the site instead of using predefined URLs. Crawling the site has the added benefit of loading every page that is linked to anywhere on the site. This exposes edge case performance bottlenecks that would have gone undetected under tests with predefined URLs.
 
 Ultimately, it doesn't matter what tool(s) you use as long as you test your site against the anticipated traffic patterns of the site in terms of overall volume and the proportion of anonymous versus authenticated traffic. Note that load testing for anonymous visits is considerably easier than testing authenticated workflows, which will require more investment of time and skills.  
 
@@ -57,13 +57,13 @@ Note the start time for the test. As the test executes, it's a good idea to keep
 
 Once the test is running, execute common tasks done by editors and administrators and note the time. Example tasks may include:
 
-* Clear the drupal cache
+* Clear the cache
 * Clear the edge cache (if this is a load test, performance tests should not be cached)
-* Run Drupal cron
+* Run cron
 * Run any scripts that could be triggered while users are on the site.
 
 ##Assess Results
-Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunites.
+Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunities.
 
 Next, review the **Transactions** tab in New Relic and sort by **Slowest average response time**. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to find the performance bottleneck.
 

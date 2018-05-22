@@ -8,7 +8,7 @@ Error messages in the cloud are served when Pantheon is unable to fulfill a requ
 
 There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Monitor plugins or modules that integrate external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal.
 
-If you feel that you reached one of these messages in error, [contact support](/docs/getting-support) and provide the full URL and circumstances which led to the error.
+If you feel that you reached one of these messages in error, [contact support](/docs/support) and provide the full URL and circumstances which led to the error.
 
 ## Error Messages
 
@@ -117,9 +117,9 @@ If your PHP workers are overloaded, it's possible that pages will timeout before
 
 ### Fix Errors
 
-If your site is throwing a lot of warning and notices, there is a performance penalty are resources are used to log errors to disk and slow down your site by performing additional database write operations. In this case the solution is not to disable watchdog bug fix the errors.
+If your site is throwing a lot of warnings or notices, there is a performance penalty — resources are used to log errors to disk, and these can slow down your site by performing database write operations. In this case the solution is not to disable logging but to fix the errors.
 
-Even with the watchdog off these errors will still be written to the PHP error logs so they should be addressed as soon as possible.
+Even with logging disabled, these errors will still be written to the server PHP error logs, so they should be addressed as soon as possible.
 
 ### Optimize the Site
 

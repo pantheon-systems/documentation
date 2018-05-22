@@ -38,11 +38,15 @@ Some legitimate [bots/crawlers/proxies](https://useragent.openadmintools.com/) (
 It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/docs/domains/#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/docs/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
 
 ```
+# Pantheon's documentation on robots.txt: http://pantheon.io/docs/articles/sites/code/bots-and-indexing/
 User-agent: *
 Disallow: /
+
+User-agent: RavenCrawler
+Allow: /
 ```
 
-Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP header](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag) when serving requests from platform domains (e.g. `live-site-name.pantheonsite.io`). This instructs bots/crawlers not to index the page and prevents it from being returned in search results.
+Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP header](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag) when serving requests from platform domains (e.g. `live-site-name.pantheonsite.io`). This instructs most bots/crawlers not to index the page and prevents it from being returned in search results.
 
 The `pantheonsite.io` domains are intended for development use and cannot be used for production. Robots.txt is only visible on Live with a custom domain, and is not available on Dev or Test. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the custom robots.txt from the platform domain.
 
@@ -82,4 +86,4 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Domains and Redirects](/docs/domains/#redirect-to-https-and-the-primary-domain).
+For more examples of redirecting via PHP, see [Configure Redirects](/docs/redirects/).

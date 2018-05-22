@@ -5,7 +5,7 @@ title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
 site_url: https://pantheon.io
-assets_version: 11.1
+assets_version: 11.4
 
 #######################################################################################################
 # The contributors. Include your info here, under the "contributors" key, using the following template:
@@ -161,7 +161,7 @@ contributors:
     url: //stevector.com/
     twitter: stevector
     github: //github.com/stevector
-    bio: Agency & Community Engineer
+    bio: Lead Developer Advocate
   andrewmallis:
     name: Andrew Mallis
     avatar: //avatars1.githubusercontent.com/u/249362?v=3&s=400
@@ -176,7 +176,7 @@ contributors:
     github: //github.com/ataylorme
     twitter: ataylorme
     url: //www.ataylor.me/
-    bio: Agency and Community Engineer
+    bio: Developer Programs Engineer
   cteitzel:
     name: Chris Teitzel
     avatar: //avatars0.githubusercontent.com/u/1548058
@@ -222,7 +222,7 @@ contributors:
     url: //www.astrocolossal.com
   davidneedham:
     name: David Needham
-    bio: Agency and Community Training Manager
+    bio: Developer Advocate
     linkedin: //www.linkedin.com/in/davidaneedham
     twitter: davidneedham
     drupal: //www.drupal.org/u/davidneedham
@@ -238,7 +238,7 @@ contributors:
     linkedin: https://www.linkedin.com/in/dwaynemcdaniel
     drupal: https://www.drupal.org/u/mcdwayne
     wordpress: https://profiles.wordpress.org/mcdwayne
-    bio: Agency and Community Success Manager
+    bio: Developer Advocate
   albertcausing:
     name: Albert Causing
     bio: Customer Success Engineer
@@ -247,7 +247,7 @@ contributors:
     drupal: https://www.drupal.org/u/acausing
   tessak22:
     name: Tessa Kriesel
-    bio: Agency & Community Engineer
+    bio: Developer Advocate
     twitter: tessak22
     drupal: https://www.drupal.org/u/tessak22
     url: http://tessakriesel.com/
@@ -277,7 +277,7 @@ contributors:
   dgorton:
     name: Drew Gorton
     twitter: dgorton
-    bio: Director, Agency and Community Outreach
+    bio: Director of Developer Relations
     avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/d0d17cbd-a445-4a69-bdc7-62b39bb90069.jpeg
     github: //github.com/dgorton
   dts:
@@ -302,3 +302,15 @@ contributors:
     github: //github.com/dustinleblanc
     linkedin: https://www.linkedin.com/in/dustinleblanc
     url: https://dustinleblanc.com/
+  wbconnor:
+    name: Brent Connor
+    avatar: //avatars2.githubusercontent.com/u/8883983
+    twitter: wibcon
+    github: //github.com/wbconnor
+  sarahg:
+    name: Sarah German
+    twitter: hey_germano
+    bio: Senior Customer Success Engineer
+    avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Sarah%20G.jpg
+    github: //github.com/sarahg
+    url: https://www.sarahgerman.com/

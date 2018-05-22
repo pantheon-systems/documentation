@@ -149,6 +149,20 @@ The following plugins are just a few of the most popular available for Terminus 
   </div>
   <div class="flex-panel-item">
     <div class="flex-panel-body">
+      <div class="flex-panel-title">
+        <h3 class="plugin-title">Site Clone</h3>
+        <div class="pantheon-official">
+          <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+          <p class="pantheon-official">Pantheon Official</p>
+        </div>
+      </div>
+      <p class="topic-info__description">Author: <a href="https://github.comataylorme">Andrew Taylor</a></p>
+      <p class="topic-info__description">Copy the code, database and files from one Pantheon Site Dashboard to another.</p>
+      <a href="https://github.com/pantheon-systems/terminus-site-clone-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
+    </div>
+  </div>
+  <div class="flex-panel-item">
+    <div class="flex-panel-body">
       <h3 class="plugin-title">Site Status</h3>
       <p class="topic-info__description">Author: <a href="https://github.com/uberhacker">Ed Reel</a></p>
       <p class="topic-info__description">Displays the status of all available Pantheon site environments.</p>

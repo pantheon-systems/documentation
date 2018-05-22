@@ -34,7 +34,7 @@ Terminus is available for Mac OS X, Linux, and Windows 7 and 10.
 ## Authenticate
 Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/docs/machine-tokens).
 
-First, [generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from **User Dashboard** > **Account** > **Machine Tokens**.
+First, [create a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from **User Dashboard** > **Account** > **Machine Tokens**.
 
 <p class="instruction">Once the token has been created, use it to authenticate Terminus by running the following command:</p>
 <div class="copy-snippet">

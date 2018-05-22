@@ -4,7 +4,7 @@ description: A list of Drupal modules and WordPress plugins that require workaro
 tags: [debugcode, siteintegrations]
 categories: []
 ---
-This article lists modules and plugins that may not function as expected or are currently unsupported on the Pantheon platform. This is not a comprehensive list. We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact our Support team](https://pantheon.io/docs/getting-support/).
+This article lists modules and plugins that may not function as expected or are currently unsupported on the Pantheon platform. This is not a comprehensive list. We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact our Support team](https://pantheon.io/docs/support/).
 
 We do not prevent you from installing and using these plugins/modules; however, they may not work as expected and we cannot provide troubleshooting support.
 
@@ -247,20 +247,26 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 <hr>
 
 ### [Views data export](https://www.drupal.org/project/views_data_export)
-**Issue**: This module requires the use of the `/tmp` directory. There is also a [patch](https://www.drupal.org/node/1782038){.external} available, but we still cannot guarantee that the use of the `/tmp` directory will work successfully. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below for more information.
+**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) below for more information.
 
 **Solution**: A possible solution would be to set the export directory in `settings.php` to a `public://` stream wrapper location versus a `temporary://` one.  Example:
-```
+
+```php
 $conf['views_data_export_directory'] = 'public://';
 ```
+
 or to a specific directory:
-````
+
+```php
 $conf['views_data_export_directory'] = 'public://vde/';
-````
+```
+
 Additionally, the variable can be set using Drush:
-````
+
+```php
 drush vset views_data_export_directory 'public://'
-````
+```
+
 Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733){.external}.
 <hr>
 

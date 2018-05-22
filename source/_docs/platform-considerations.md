@@ -147,7 +147,7 @@ Pantheon does not currently support LESS or Sass/Compass CSS preprocessor langua
 ## .htaccess
 Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
-For details, see [Using PHP as an htaccess Alternative](/docs/htaccess).
+For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).
 
 ## nginx.conf
 

@@ -12,13 +12,14 @@ domains:
 # They should exist for all of the domains you've specified above.
 paths:
   home: /
-  article-index: /articles
-  single-article: /articles/going-live
-  subdir-index: /articles/local
   guide-index: /guides
-  single-guide: /guides/visual-diff-with-wraith
+  topic-page: /get-started
   changelog-index: /changelog
-  single-changelog: /changelog/2015-10-October
+  changelog: /changelog/2018/01
+  terminus-manual: /terminus/updates
+  doc: /metrics
+  guide: /guides/build-tools
+
 
 # amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
 fuzz: '20%'
@@ -29,11 +30,8 @@ threshold: 5
 
 # screen widths (and optional height) to resize the browser to before taking the screenshot
 screen_widths:
-  - 320
-  - 600x768
-  - 768
-  - 1024
   - 1280
+  - 1366
 
 # the engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
 browser: "casperjs"
