@@ -251,13 +251,19 @@ Go the to files directory of your existing site and check if the site archive wa
 
 ## Frequently Asked Questions (FAQs)
 ### How do I clone an existing Pantheon site?
-You can make a copy of a WordPress site on Pantheon by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon and is preferred as it built into the dashboard.
+You can make a copy of a WordPress site on Pantheon by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon and is preferred since it's built into the Site Dashboard.
 
-Drupal 7, Drupal 8 and WordPress sites may also use [the Terminus site clone plugin](https://github.com/pantheon-systems/terminus-site-clone-plugin) to clone code, database and/or media files from one Pantheon site to another. This method requires use of [Terminus](https://pantheon.io/docs/terminus/) and the command line tool.
+Drupal 7, Drupal 8 and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/docs/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin){.external} plugin. 
+
+Replace `<source>` and `<destination>` with target [site UUIDs](/docs/sites/#site-uuid) or site names, and specify target development environment in place of `<env>` (dev or multidev):
+
+```bash
+terminus site:clone <source>.<env> <destination>.<env> 
+```
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">File and database backups over 500MBs will not work due to Pantheon import file size limits. If your files or database are over 500MB they will need to be [manually migrated](https://pantheon.io/docs/migrate-manual/).</p>
+<p markdown="1">File and database backups that exceed 500MBs are not supported by this method. Sites that exceed this limit must be cloned manually. For details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual/).</p>
 </div>
 
 ### How do I migrate a local site to Pantheon?
