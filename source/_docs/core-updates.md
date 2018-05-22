@@ -2,7 +2,7 @@
 title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
 tags: [dashboard, devterminus, git]
-categories: []
+contributors: [cityofoaksdesign, rachelwhitton, alexfornuto]
 ---
 Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/docs/maintain-custom-upstream/), become available downstream as a one-click update.
 
