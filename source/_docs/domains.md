@@ -103,6 +103,13 @@ All redirect logic should include the `php_sapi_name() != "cli"` conditional sta
 ### Infinite Redirect Loops
 Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file. Resolve this error by replacing the offending redirect logic with the [recommended code samples in the above section](#redirect-to-https-and-the-primary-domain) and for your specific use case.
 
+Modules and plugins that allow you to add redirects in the CMS can also potentially create redirect loops if those redirects conflict with or repeat redirects configured in code.
+
+WordPress plugins: Redirection, Quick Page/Post Redirect, Safe Redirect Manager, Simple 301 Redirects
+Drupal modules: Language (when using URL detection), Securepages, Redirect
+
+When troubleshooting a redirect loop, you may want to deactivate any module or plugin that may be providing its own redirect logic.
+
 ### Mixed-mode Browser Warnings
 Replace `http://` in the site's database and configure your CMS to assume users are visiting via HTTPS and the site’s primary domain. Templates for example should reference HTTPS in absolute CSS and Javascript sources, even when accessed with HTTP.
 
