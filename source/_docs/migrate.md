@@ -251,35 +251,14 @@ Go the to files directory of your existing site and check if the site archive wa
 
 ## Frequently Asked Questions (FAQs)
 ### How do I clone an existing Pantheon site?
-Make a copy of your WordPress site by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon.
+You can make a copy of a WordPress site on Pantheon by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon and is preferred as it built into the dashboard.
 
-For Drupal sites, during the **Create Site Archive** step of the migration process, you'll need to use [Terminus](/docs/terminus) to run `drush ard` to create an archive of your existing Pantheon site:
-
-```bash
-terminus drush <site>.<env> -- ard --destination=sites/default/files/<RANDOM_HASH>.tgz
-```
-
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p markdown="1">We recommend using a random hash for the archive filename for security. Archive dumps contain sensitive information, so they should not be exposed using guessable filename patterns (like `BACKUP` or recent dates).</p>
-</div>
+Drupal 7, Drupal 8 and WordPress sites may also use [the Terminus site clone plugin](https://github.com/pantheon-systems/terminus-site-clone-plugin) to clone code, database and/or media files from one Pantheon site to another. This method requires use of [Terminus](https://pantheon.io/docs/terminus/) and the command line tool.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">Adjust paths as needed for sites with a [nested docroot](/docs/nested-docroot/) (e.g., `web/sites/default/files`).</p>
+<p markdown="1">File and database backups over 500MBs will not work due to Pantheon import file size limits. If your files or database are over 500MB they will need to be [manually migrated](https://pantheon.io/docs/migrate-manual/).</p>
 </div>
-
-Click **Continue Migration** and follow all remaining instructions within the guided migration process.
-
-**Be sure to delete the Drupal archive file (`<RANDOM_HASH>.tgz`) from your source site after cloning the site, using SFTP to access your site's files.**
-
-If your archive is larger than 256MB the Terminus operation to generate the archive will fail, resulting in the following error:
-
-```bash
-Connection to appserver.<ENV>.<Site UUID>.drush.in closed by remote host.
-```
-
-If your database and code compressed are less than 256MB you can exclude the files directory from export using the `--tar-options="--exclude=code/sites/default/files"` flag. Then you can download a backup of the files from the existing site and import the archive to the new site from the Site Dashboard, under **<span class="glyphicons glyphicons-server"></span> Database / Files** > **Import**.
 
 ### How do I migrate a local site to Pantheon?
 When asked for your current site URL, enter `https://example.com` and continue the migration procedure in the Site Dashboard.
