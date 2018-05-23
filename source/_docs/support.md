@@ -44,7 +44,7 @@ The majority of Pantheon's support is provided in the context of a particular we
 
 </div>
 
-New Plans are in effect for new Elite sites as of May 15, 2018. All users of the platform can receive customer service and support for non-site-related questions via any available medium regardless of account type.
+New support plans are available for Elite subscriptions as of May 15, 2018. All users of the platform can receive customer service and support for non-site-related questions via any available medium regardless of account type.
 
 ## Real Time Chat Support
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
