@@ -7,7 +7,7 @@ tags: [moreguides, workflow]
 contributors: [dustinleblanc]
 ---
 <div class="alert alert-info">
-  <h4 class="info">Note</h4><p markdown="1">Converting to a Composer managed site *removes* the ability to [apply updates via the site dashboard](/docs/upstream-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates.</p>
+  <h4 class="info">Note</h4><p markdown="1">Converting to a Composer managed site *removes* the ability to [apply updates via the site dashboard](/docs/core-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates.</p>
   <p markdown="1"> If you don't need Composer as part of your site, we strongly suggest sitcking to the standard Drupal core.
 </p>
 </div>
