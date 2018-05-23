@@ -85,7 +85,7 @@ Priority Enterprise Support is a blanket support plan which can be purchased for
 
 ## Scope of Support
 
-We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed full stack support. While we have limits to the support we can provide, our Professional Services team is able to assist in areas that fall outside of support scope. [Contact Sales](/contact-us) if your request falls outside the scope outlined below.
+We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed full stack support. While we have limits to the support we can provide, our Professional Services team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your request falls outside the scope outlined below.
 
 ### Code
 Your site code belongs to you. If your plan includes full stack support, we can offer advice on best practices with regard to your codebase and are happy to recommend one of our agency partners to provide development assistance, but our support team will not change the code of our customers. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
