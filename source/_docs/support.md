@@ -11,7 +11,10 @@ The majority of Pantheon's support is provided in the context of a particular we
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#sites" aria-controls="sites" role="tab" data-toggle="tab">Pay-per-site</a></li>
-  <li role="presentation"><a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">Agencies & Organizations</a></li>
+  <li role="presentation"><a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">Agencies & Organizations</a>
+</li>
+<li role="presentation"><a href="#plans" aria-controls="plans" role="tab" data-toggle="tab">New Site Plans</a>
+</li>
 </ul>
 
 <!-- Tab panes -->
@@ -22,7 +25,6 @@ The majority of Pantheon's support is provided in the context of a particular we
 |:---------------------------------- |:-------------------------- |:--------- |
 | Chat Support                       | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br> Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via support chat)."><em class="fa fa-info-circle"></em></a><br> Technical Support | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="2 hour response time, 24/7/365."><em class="fa fa-info-circle"></em></a><br> Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a><br> Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="30 minute response time 24/7/365 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br> Technical Support |
 
-
 </div>
   <div role="tabpanel" class="tab-pane" id="orgs" markdown="1">
 
@@ -30,8 +32,16 @@ The majority of Pantheon's support is provided in the context of a particular we
 |:------------------------- |:----------------------- |:--------------------- |:------------------------------- |
 | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br> Full Stack Support | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br> Full Stack Support | Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="Best effort."><em class="fa fa-info-circle"></em></a><br> Full Stack Support |Chat Support <br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="2 hour response time, 24/7/365."><em class="fa fa-info-circle"></em></a><br> Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a><br> Pantheon On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Response Time" data-content="30 minute response time 24/7/365 for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br> Full Stack Support |
 
+</div>
+
+<div role="tabpanel" class="tab-pane" id="plans" markdown="1">
+
+| **Silver** | **Gold** | **Platinum** | **Diamond** |
+|:---------- |:-------- |:------------ |:----------- |
+| Chat Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="24x5"><em class="fa fa-info-circle"></em></a><br> Platform Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope" data-content="Dashboard, Dev/Test/Live Workflow, Git/sftp, Docs"><em class="fa fa-info-circle"></em></a> | Chat Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="24x7"><em class="fa fa-info-circle"></em></a><br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="24x5: 8 Hour"><em class="fa fa-info-circle"></em></a><br> Technical Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope" data-content="Drupal & Wordpress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus"><em class="fa fa-info-circle"></em></a> | Chat Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="24x7: Priority Routing"><em class="fa fa-info-circle"></em></a><br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="24x7: 2 Hour"><em class="fa fa-info-circle"></em></a><br> Emergency On Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="24x7: 1 Hour"><em class="fa fa-info-circle"></em></a><br> Performance Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope" data-content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus"><em class="fa fa-info-circle"></em></a> | Chat Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="24x7: Highest Priority"><em class="fa fa-info-circle"></em></a><br> Support Tickets <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="24x7: 1 Hour"><em class="fa fa-info-circle"></em></a><br> Direct Phone Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scheduled" data-content="Scheduled in advance via a support ticket (9-5 PST)."><em class="fa fa-info-circle"></em></a><br> Emergency On-Call <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="SLA" data-content="24x7: 15 Min for emergencies and business critical issues."><em class="fa fa-info-circle"></em></a><br> Full Stack Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope" data-content="Bespoke site debugging, Full Stack"><em class="fa fa-info-circle"></em></a> |
 
 </div>
+
 </div>
 
 All users of the platform can receive customer service and support for non-site-related questions via any available medium regardless of account type.
