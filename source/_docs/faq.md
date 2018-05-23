@@ -141,6 +141,56 @@ You'll need the plugin. [More information on sessions](/docs/wordpress-sessions/
 Yes. See [Public Distributions](/docs/start-state/#public-distributions) for details.
 
 
+## DNS
+
+### What is DNS propagation?
+
+Every DNS record has a **Time To Live** (**TTL**) value, which specifies how long any DNS server should hold that record, before dropping it and asking for a new version from its upstream DNS provider. TTLs are usually set in seconds with a few common ones being `86400` (24 hours),  `43200` (12 hours), `3600` (1 hour), and `500` (5 minutes).
+
+**DNS Propagation** is the time it takes for changes made to DNS records to be reflected across DNS servers globally. A lower TTL value means faster propagation, but it's important to note that it is not a 1:1 ratio. Between your [authoritative name server](##where-are-my-dns-records-hosted) and the DNS servers of any particular ISP could be any number of intermediate DNS servers. Each server in that chain will wait for the records it holds to expire before requesting new ones. Because of this, it can take *several times longer* than your record's TTL value to see changes reflected for everyone.
+
+When planning a site migration, or making other changes that affect DNS values, it's a common practive to lower the TTL values as low as allowed (usually `500`) several days in advance. That way when the values are changed, new records are propagated faster. Once a migration is complete, TTL values are usually raised back to `3600` (24 hours) to impove stability in case of a DNS service outage.
+
+### Where are my DNS records hosted?
+
+DNS Records are hosted by an **authoritative name server**. This may or may not also be the **registrar** who you purchased the domain name from. You can use the commandline tool **dig** to look up the **NS** record for a domain to find the name server:
+
+```bash
+$ dig +short ns pantheon.io
+ns-1096.awsdns-09.org.
+ns-148.awsdns-18.com.
+ns-1857.awsdns-40.co.uk.
+ns-924.awsdns-51.net.
+```
+
+The example above shows that the records for `pantheon.io` are hosted by AWS.
+
+To find the registrar where your domain is registed, use the commandline tool **whois**:
+
+```bash
+$ whois pantheon.io | grep Registrar:
+Registrar: Gandi SAS
+```
+
+The example above uses `| grep Registrar:` to filter the results to what we're looking for specifically. Remove it to see the full output of the `whois` command. Our example shows that the domain `pantheon.io` is registered with Gandi
+
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1"> Your registrar may appear to have DNS records for your domain and still nto be the authoritative name server. use `dig` as described above to confirm the name server in use.</p>
+</div>
+
+### Can I buy my domain or manage DNS with Pantheon?
+
+No, Pantheon is neither a domain registrar nor a DNS manager.
+
+### Why does the `www` subdomain redirect to the bare domain?
+
+Some DNS providers provide a default CNAME record for `www` pointing to `@` (the bare domain). Remove these records and replace them with the records suggested by the Pantheon Site Dashboard.
+
+### What about my `MX` records for email?
+
+Pantheon does not provide email services. Make sure your DNS records include an `MX` reacord that points to a subdomain (like `mail`), which in turn has an `A` or `CNAME` record pointing it to your email provider.
+
 ## Caching and Performance
 
 ### Can I use other CDNs with Pantheon?
