@@ -185,7 +185,7 @@ No, Pantheon is neither a domain registrar nor a DNS manager.
 
 ### Why does the `www` subdomain redirect to the bare domain?
 
-Some DNS providers provide a default CNAME record for `www` pointing to `@` (the bare domain). Remove these records and replace them with the records suggested by the Pantheon Site Dashboard.
+Some DNS providers provide a default `CNAME` record for `www` pointing to `@` (the bare domain). Remove these records and replace them with the records suggested by the Pantheon Site Dashboard.
 
 ### What are `AAAA` records, and do I need them?
 
@@ -197,6 +197,33 @@ Pantheon provides IPv6 addresses for you to assign `AAAA` records to. If your DN
 ### What about my `MX` records for email?
 
 Pantheon does not provide email services. Make sure your DNS records include an `MX` reacord that points to a subdomain (like `mail`), which in turn has an `A` or `CNAME` record pointing it to your email provider.
+
+### What is the difference between an `A` and `CNAME` record?
+
+An `A` record points a domain name to an IPv4 address. A `CNAME` record point a domain name to *another* domain, but **does not** redirect to it.
+
+Pantheon will provide both `A` and `CNAME` values, depending on the domains provided:
+
+![DNS Values provided by the Pantheon Site Dashboard](/source/docs/assets/images/dashboard/dns-values.png)
+
+If your DNS provider doesn't allow `CNAME` records, you can use `nslookup` to determine the IP address for the domain value, and then supply that as an `A` record:
+
+```bash
+$ nslookup live-anita-drupal.pantheonsite.io
+Server:         192.168.1.1
+Address:        192.168.1.1#53
+
+Non-authoritative answer:
+live-anita-drupal.pantheonsite.io       canonical name = fe1.edge.pantheon.io.
+Name:   fe1.edge.pantheon.io
+Address: 23.185.0.1
+Name:   fe1.edge.pantheon.io
+Address: 2620:12a:8001::1
+Name:   fe1.edge.pantheon.io
+Address: 2620:12a:8000::1
+```
+
+In the example above, we can create an `A` record for `www` set to `23.185.0.1` To substitute the `CNAME` record.
 
 ## Caching and Performance
 
