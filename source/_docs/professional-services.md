@@ -1,9 +1,9 @@
 ---
 title: Professional Services
-description: Pantheon's Professional Services include consulting, migrations, load testing, training, and dedicated customer success managers.
+description: Pantheon Professional Services include consulting, migrations, load testing, training, and dedicated customer success managers.
 tags: []
 ---
-Customers with Gold, Platinum, or Diamond support plans have access to Pantheon Professional Services. Our Professional Services team provides customized solutions for even the most complex technical challenges.  
+Customers with Gold, Platinum, or Diamond support plans have access to Pantheon Professional Services. We provide customized solutions for the most complex technical challenges.  
 
 ## Consulting and Specialty Services
 If you need advice on architecting a solution, planning for the future, preparing for expansion, tackling a particularly complex use case, or just need problem solving expertise, we can help you achieve your goals. Our Professional Services team has the broad experience and deep expertise to meet the most complex technical challenges. [Contact us](https://pantheon.io/contact-us) for details.
