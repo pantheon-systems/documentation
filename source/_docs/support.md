@@ -44,7 +44,7 @@ The majority of Pantheon's support is provided in the context of a particular we
 |**Scope**|Platform <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope of Support" data-content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs"><em class="fa fa-info-circle"></em></a>|Technical <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope of Support" data-content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus"><em class="fa fa-info-circle"></em></a>|Performance <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope of Support" data-content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus"><em class="fa fa-info-circle"></em></a> |Full Stack <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope of Support" data-content="Bespoke site debugging"><em class="fa fa-info-circle"></em></a>|
 |**Chat**                 |24x5    |24x7        |24x7 <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="SLA" data-content="Priority Routing"><em class="fa fa-info-circle"></em></a>|24x7 <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="SLA" data-content="Highest Priority"><em class="fa fa-info-circle"></em></a>|
 |**Tickets**              |        |24x5 <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="SLA" data-content="8 Hours"><em class="fa fa-info-circle"></em></a>|24x7 <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="SLA" data-content="2 Hours"><em class="fa fa-info-circle"></em></a>          |24x7 <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="SLA" data-content="1 Hour"><em class="fa fa-info-circle"></em></a>         |
-|**On-Call** <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/priority-enterprise-support/'>Using Priority Enterprise Support</a>."><em class="fa fa-info-circle"></em></a>|        |            |24x7 <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="SLA" data-content="1 Hour"><em class="fa fa-info-circle"></em></a>|24x7 <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="SLA" data-content="15 Minutes"><em class="fa fa-info-circle"></em></a>|
+|**Emergency On-Call** |        |            |24x7 <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="SLA" data-content="1 Hour"><em class="fa fa-info-circle"></em></a>|24x7 <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="SLA" data-content="15 Minutes"><em class="fa fa-info-circle"></em></a>|
 |**Professional Services**|        |✓ <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Available for Purchase" data-content="Allows Professional Services to be purchased individually for an additional cost."><em class="fa fa-info-circle"></em></a>|✓ <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Available for Purchase" data-content="Allows Professional Services to be purchased individually for an additional cost."><em class="fa fa-info-circle"></em></a>|✓ <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Bundled" data-content="Professional Services Bundle included."><em class="fa fa-info-circle"></em></a>|
 </div>
 
@@ -91,10 +91,10 @@ Priority Enterprise Support is a blanket support plan which can be purchased for
 
 ## Scope of Support
 
-We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed full stack support. While we have limits to the support we can provide, our Professional Services team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your request falls outside the scope outlined below.
+We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed full stack support. While we have limits to the support we can provide, our Professional Services team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
 
 ### Code
-Your site code belongs to you. If your plan includes full stack support, we can offer advice on best practices with regard to your codebase and are happy to recommend one of our agency partners to provide development assistance, but our support team will not change the code of our customers. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
+Your site code belongs to you. If your plan includes full stack support, we can offer advice on best practices with regard to your codebase and are happy to recommend one of our agency partners or refer you to our professional services team to provide development assistance, but our support team does not change the code of our customers. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
 
 ### Outdated Core
 Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/docs/maintain-custom-upstream/) by the upstream maintainer each time the project releases a new version.
@@ -102,16 +102,16 @@ Outdated versions of core are not supported on the platform. This includes impor
 ### Custom Upstreams
 If you choose to use a custom upstream, please be aware that the scope of support is limited to verification that the externally hosted upstream repository is properly connected to the platform.
 
-We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the burden of testing and [properly maintaining the Custom Upstream](/docs/maintain-custom-upstream/), and the negative impact if it is not done properly is inherited by your team.
+We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [properly maintaining the Custom Upstream](/docs/maintain-custom-upstream/), and fixing any issues related to the upstream falls outside of the scope of support.
 
 ### Public Distributions
-If you choose to use a [public distribution](/docs/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/docs/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 8, Drupal 7), please be aware that we cannot provide platform support for it. If the distribution you are using is behind on core releases or any of its included plugins, please contact the maintainer through [Drupal.org](https://www.drupal.org){.external} or the distribution's GitHub issue queue.
+If you choose to use a [public distribution](/docs/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/docs/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 8, Drupal 7), please be aware that it falls outside our scope of support. If the distribution you are using is behind on core releases or any of its included plugins, please contact the maintainer through [Drupal.org](https://www.drupal.org){.external} or the distribution's GitHub issue queue.
 
 ### Security
-We don’t maintain the integrity of the site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
+We don’t maintain the integrity of your site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 
 ### Debugging
-Pantheon provides a great backend, but cannot provide code-level debugging, Git training, or site architecture recommendations. New Relic and debugging can get you pretty far.  We have a [comprehensive list of docs](/docs/troubleshoot/) to get you underway.
+Code-level debugging, Git training, and site architecture recommendations fall outside of our support scope. New Relic and logs can help you get to the bottom of most issues. We have a [comprehensive list of docs](/docs/troubleshoot/) to get you underway. We can recommend an agency partner for you to work with if you need additional assitance, and customers with Gold, Platinum and Diamond support plans may also access our professional services.
 
 ### Performance
 If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
@@ -123,9 +123,9 @@ Pantheon can only assist if we can replicate the problem. Intermittent issues an
 We recommend development on the platform, rather than on a local environment. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, Apache vs NGINX, or server configuration. Pantheon is not responsible for resolving such issues.
 
 ### Isolated Issues
-Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials.
+Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials or offer to connect you with an agency partner to help you with the resolution.
 
-If we see your site is a volcano of errors or overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
+If we see your site is a volcano of errors or otherwise overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
 
 ### Platform Support
 
@@ -145,12 +145,12 @@ This level of support is intended to help developers succeed on Pantheon, not to
 
 We value your feedback! If you feel there's something we can do to improve our platform, like adding a new [external Library](/docs/external-libraries), or a dashboard feature, contact support and let us know. Include a description of your use case, and a link to the website for any library or other third-party included in your request.
 
-All feature requests will evaluated by Pantheon's product and engineering teams on a case-by-case basis. We love adding new capabilities, but platform changes take time and consideration, and unfortunately feature requests are often declined if there is potential performance or user experience degradation.
+Feature requests are evaluated by Pantheon's product and engineering teams on a case-by-case basis. We love adding new capabilities, but platform changes take time and consideration, and feature requests may be declined if there is potential performance or user experience degradation or if other priorities take precedence.
 
 ### How long does the process take?
 This depends on the feature requested, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved.
 
-It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
+It is very important to note, these requests are not guaranteed, and it is possible the feature requests may be denied. As a result, we recommend you also pursue alternative solutions.
 
 ## Help Us Help You
 
@@ -169,15 +169,15 @@ Keep the following tips in mind when opening a new support ticket or chat:
 ## FAQs
 #### Is there a support number we can call? If so, is this service available for every plan?
 
-**Elite plans** and customers with **Priority Enterprise Support** can access Pantheon on-call, which has an emergency 800-number. For more details, see the [Elite Plan Support Overview](https://pantheon.io/resources/pantheon-support-datasheet) or learn more about [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support).
+Customers with a **Diamond support plan** can access Pantheon on-call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
 
-####If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
+#### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 You can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting paying sites.
 
-#### Is 24/7 phone support available for  Performance plans?
-No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Performance Medium and above plans. Elite plans and Priority Enterprise Support customers have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
+#### Is 24/7 phone support available for Performance plans?
+No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Performance Medium and above plans. Diamond Support plan customers have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
 
-####What if I can't login to the Pantheon Dashboard?
+#### What if I can't login to the Pantheon Dashboard?
 If you are unable to login, try [resetting your password](https://dashboard.pantheon.io/reset-password).
 
 #### How can I review my chat threads?
