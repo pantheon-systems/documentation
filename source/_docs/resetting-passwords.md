@@ -1,6 +1,6 @@
 ---
 title: Resetting Passwords
-description: Learn how to reset your Pantheon Website Management Platform dashboard passwords.
+description: Learn how to reset your Pantheon Dashboard password or your site user login password.
 tags: [debugdb]
 categories: []
 ---
