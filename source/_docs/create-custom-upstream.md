@@ -241,3 +241,4 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)
+- [Switching an Existing site to a Custom Upstream with Terminus])/docs/terminus/examples/#switch-upstreams)
