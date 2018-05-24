@@ -55,10 +55,15 @@ filemount: /files
 ```
 
 #### Considerations
+* Since relocating the filemount path involves multiple steps which must be done correctly and in unison, it is best done only in the upstream repository for new sites.
 * Specify the exact path; only a limited selection of paths are valid:
   * /files
   * /sites/default/files
   * /wp-content/uploads
+* The path to the files directory must be configured in your framework to match what is selected in pantheon.yml
+  * [Drupal 8](https://www.drupal.org/upgrade/file_public_path)
+  * [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after)
+  * [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder)
 * The path specified by `filemount` **must** be listed in the site's .gitignore file
 * The parent directory for the specified path (e.g. `/sites/default` or `/wp-content`) must exist in the site's git repository
 
