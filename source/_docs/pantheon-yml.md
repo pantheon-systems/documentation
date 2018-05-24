@@ -47,6 +47,20 @@ The name of the nested directory is not configurable.
 
 For more information, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).
 
+### Filemount Path
+Pantheon provides a [cloud-based filesystem](https://pantheon.io/docs/files/) to store user-generated content and other website files. By default, a symlink to this filesystem will be created at `sites/default/files` (Drupal) or `wp-content/uploads` (WordPress), but this location may be changed.
+
+```yaml
+filemount: /files
+```
+
+#### Considerations
+* Specify the exact path; only a limited selection of paths are valid:
+  * /files
+  * /sites/default/files
+  * /wp-content/uploads
+* The path specified by `filemount` **must** be listed in the site's .gitignore file
+* The parent directory for the specified path (e.g. `/sites/default` or `/wp-content`) must exist in the site's git repository
 
 ### PHP Version
 Override the upstreams default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourages a good best practice of testing before making a change on your Live site.
