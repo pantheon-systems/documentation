@@ -149,11 +149,11 @@ Every DNS record has a **Time To Live** (**TTL**) value, which specifies how lon
 
 **DNS Propagation** is the time it takes for changes made to DNS records to be reflected across DNS servers globally. A lower TTL value means faster propagation, but it's important to note that it is not a 1:1 ratio. Between your <a href=#where-are-my-dns-records-hosted data-proofer-ignore>authoritative name server</a> and the DNS servers of any particular ISP could be any number of intermediate DNS servers. Each server in that chain will wait for the records it holds to expire before requesting new ones. Because of this, it can take *several times longer* than your record's TTL value to see changes reflected for everyone.
 
-When planning a site migration, or making other changes that affect DNS values, it's a common practive to lower the TTL values as low as allowed (usually `500`) several days in advance. That way when the values are changed, new records are propagated faster. Once a migration is complete, TTL values are usually raised back to `3600` (24 hours) to impove stability in case of a DNS service outage.
+When planning a site migration, or making other changes that affect DNS values, it's a common practice to lower the TTL values as low as allowed (usually `500`) several days in advance. That way when the values are changed, new records are propagated faster. Once a migration is complete, TTL values are usually raised back to `3600` (24 hours) to impove stability in case of a DNS service outage.
 
 ### Where are my DNS records hosted?
 
-DNS Records are hosted by an **authoritative name server**. This may or may not also be the **registrar** who you purchased the domain name from. You can use the commandline tool **dig** to look up the **NS** record for a domain to find the name server:
+DNS Records are hosted by an **authoritative name server**. This may or may not also be the **registrar** who you purchased the domain name from. You can use the commandline tool **dig** to look up the `NS` record for a domain to find the name server:
 
 ```bash
 $ dig +short ns pantheon.io
@@ -200,7 +200,7 @@ Pantheon does not provide email services. Make sure your DNS records include an 
 
 ### What is the difference between an `A` and `CNAME` record?
 
-An `A` record points a domain name to an IPv4 address. A `CNAME` record point a domain name to *another* domain, but **does not** redirect to it.
+An `A` record points a domain name to an IPv4 address. A `CNAME` record points a domain name to *another* domain, but *does not* redirect to it.
 
 Pantheon will provide both `A` and `CNAME` values, depending on the domains provided:
 
@@ -223,7 +223,7 @@ Name:   fe1.edge.pantheon.io
 Address: 2620:12a:8000::1
 ```
 
-In the example above, we can create an `A` record for `www` set to `23.185.0.1` To substitute the `CNAME` record.
+In the example above, we can create an `A` record for `www` set to `23.185.0.1` to substitute the `CNAME` record.
 
 ## Caching and Performance
 
