@@ -6,7 +6,7 @@ tags: []
 Customers with Gold, Platinum, or Diamond support plans have access to Pantheon Professional Services. We provide customized solutions for the most complex technical challenges.  
 
 ## Consulting and Specialty Services
-If you need advice on architecting a solution, planning for the future, preparing for expansion, tackling a particularly complex use case, or just need problem solving expertise, we can help you achieve your goals. Our Professional Services team has the broad experience and deep expertise to meet the most complex technical challenges. [Contact us](https://pantheon.io/contact-us) for details.
+If you need advice on architecting a solution, planning for the future, preparing for expansion, tackling a particularly complex use case, or just need problem solving expertise, we can help you achieve your goals. Our Professional Services team has the broad experience and deep expertise to guide you through your implementation needs. [Contact us](https://pantheon.io/contact-us) for details.
 
 ## Migrations
 Whether you are moving one or hundreds of sites to the platform, Pantheon Migration Services will help you get it done quickly. Our hands-on, white-glove migration services for organizations and agencies remove the burden of migrations, by migrating the sites for you so that you can concentrate on what matters most to your end users. We do all the heavy lifting and let you focus on delivering better, faster websites for your colleagues, constituents or clients. [Contact our migrations team](https://pantheon.io/migrations) for details. 
