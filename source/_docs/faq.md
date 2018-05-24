@@ -187,6 +187,13 @@ No, Pantheon is neither a domain registrar nor a DNS manager.
 
 Some DNS providers provide a default CNAME record for `www` pointing to `@` (the bare domain). Remove these records and replace them with the records suggested by the Pantheon Site Dashboard.
 
+### What are `AAAA` records, and do I need them?
+
+**AAAA** or "quad-A" records are used to assign [IPv6](https://en.wikipedia.org/wiki/IPv6){.external} addresses to domain names. While most of the internet still uses IPv4, the address pool has been exhausted and IPv6 became the standard as of July 14th, 2017.
+
+Pantheon provides IPv6 addresses for you to assign `AAAA` records to. If your DNS service does not support `AAAA` you can simply omit this records for now, but consider asking your provider to add functionality, as the need for IPv6 will only increase in the future.
+
+
 ### What about my `MX` records for email?
 
 Pantheon does not provide email services. Make sure your DNS records include an `MX` reacord that points to a subdomain (like `mail`), which in turn has an `A` or `CNAME` record pointing it to your email provider.
