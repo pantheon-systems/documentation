@@ -55,7 +55,7 @@ filemount: /files
 ```
 
 #### Considerations
-* Recommended usage limited to [Custom Upstream Configurations](#custom-upsream-configurations) in `pantheon.upstream.yml`
+* Recommended usage limited to [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`
 * Path must be inside the site's docroot
 * Specify the exact path; limited selection of valid paths:
   * `/files`
