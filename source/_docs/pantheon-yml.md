@@ -48,24 +48,24 @@ The name of the nested directory is not configurable.
 For more information, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).
 
 ### Filemount Path
-Pantheon provides a [cloud-based filesystem](https://pantheon.io/docs/files/) to store user-generated content and other website files. By default, a symlink to this filesystem will be created at `sites/default/files` (Drupal) or `wp-content/uploads` (WordPress), but this location may be changed.
+Pantheon provides a [cloud-based filesystem](/docs/files/) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `/sites/default/files` (Drupal) or `/wp-content/uploads` (WordPress), but you can change the location with the `filemount` variable:
 
-```yaml
+```
 filemount: /files
 ```
 
 #### Considerations
-* Since relocating the filemount path involves multiple steps which must be done correctly and in unison, it is best done only in the upstream repository for new sites.
+* Since relocating the filemount path involves multiple steps which must be done correctly and in unison, we suggest making this changes only in a [Custom Upstream](/docs/custom-upstream).
 * Specify the exact path; only a limited selection of paths are valid:
-  * /files
-  * /sites/default/files
-  * /wp-content/uploads
-* The path to the files directory must be configured in your framework to match what is selected in pantheon.yml
-  * [Drupal 8](https://www.drupal.org/upgrade/file_public_path)
-  * [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after)
-  * [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder)
-* The path specified by `filemount` **must** be listed in the site's .gitignore file
-* The path <filemount>/private (where <filemount> is the selected filemount path) should be added to the protected file paths, as described above.
+  * `/files`
+  * `/sites/default/files`
+  * `/wp-content/uploads`
+* The path to the files directory must be configured in your CMS to match what is selected in `pantheon.yml`, according to these instructions:
+  * [Drupal 8](https://www.drupal.org/upgrade/file_public_path){.external}
+  * [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after){.external}
+  * [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder){.external}
+* The path specified by `filemount` *must* be listed in the site's `.gitignore` file
+* The path `filemount/private` (where `filemount` is the selected filemount path) should be added to the protected file paths, as [described above](#protected-web-paths)
 * The parent directory for the specified path (e.g. `/sites/default` or `/wp-content`) must exist in the site's git repository
 
 ### PHP Version
@@ -136,5 +136,5 @@ remote:
 Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/docs/hotfixes/). As a workaround, make some modification to `pantheon.yml` file in a development environment and deploy up to production using the standard Pantheon workflow.
 
 ## See Also
-- [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver/)  
+- [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver/)
 - [Upgrade PHP Versions](/docs/php-versions/)
