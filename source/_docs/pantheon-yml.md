@@ -55,18 +55,18 @@ filemount: /files
 ```
 
 #### Considerations
-* Since relocating the filemount path involves multiple steps which must be done correctly and in unison, we suggest making these changes only in a [Custom Upstream](/docs/custom-upstream).
-* Specify the exact path; only a limited selection of paths are valid:
+* Recommended usage limited to [Custom Upstream Configurations](#custom-upsream-configurations) in `pantheon.upstream.yml`
+* Path must be inside the site's docroot
+* Specify the exact path; limited selection of valid paths:
   * `/files`
   * `/sites/default/files`
   * `/wp-content/uploads`
-* The path to the files directory must be configured in your CMS to match what is selected in `pantheon.yml`, according to these instructions:
-  * [Drupal 8](https://www.drupal.org/upgrade/file_public_path){.external}
-  * [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after){.external}
-  * [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder){.external}
-* The path specified by `filemount` *must* be listed in the site's `.gitignore` file
-* The path `filemount/private` (where `filemount` is the selected filemount path) should be added to the protected file paths, as [described above](#protected-web-paths)
-* The parent directory for the specified path (e.g. `/sites/default` or `/wp-content`) must exist in the site's git repository
+
+Complete the following before deploying `filemount` (required):
+
+1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path){.external}, [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after){.external}, or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder){.external} to use the new path
+2. Add path to the `.gitignore` file
+3. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
 
 ### PHP Version
 Override the upstreams default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourages a good best practice of testing before making a change on your Live site.
