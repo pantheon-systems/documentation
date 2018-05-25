@@ -65,6 +65,7 @@ filemount: /files
   * [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after)
   * [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder)
 * The path specified by `filemount` **must** be listed in the site's .gitignore file
+* The path <filemount>/private (where <filemount> is the selected filemount path) should be added to the protected file paths, as described above.
 * The parent directory for the specified path (e.g. `/sites/default` or `/wp-content`) must exist in the site's git repository
 
 ### PHP Version
