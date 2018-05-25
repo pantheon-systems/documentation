@@ -54,6 +54,12 @@ Pantheon provides a [cloud-based filesystem](/docs/files/) to store user-generat
 filemount: /files
 ```
 
+Complete the following before deploying `filemount` (required):
+
+1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path){.external}, [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after){.external}, or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder){.external} to use the new path
+2. Add path to the `.gitignore` file
+3. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
+
 #### Considerations
 * Recommended usage limited to [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`
 * Path must be inside the site's docroot
@@ -61,12 +67,6 @@ filemount: /files
   * `/files`
   * `/sites/default/files`
   * `/wp-content/uploads`
-
-Complete the following before deploying `filemount` (required):
-
-1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path){.external}, [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after){.external}, or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder){.external} to use the new path
-2. Add path to the `.gitignore` file
-3. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
 
 ### PHP Version
 Override the upstreams default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourages a good best practice of testing before making a change on your Live site.
