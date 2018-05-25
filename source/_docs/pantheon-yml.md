@@ -55,7 +55,7 @@ filemount: /files
 ```
 
 #### Considerations
-* Since relocating the filemount path involves multiple steps which must be done correctly and in unison, we suggest making this changes only in a [Custom Upstream](/docs/custom-upstream).
+* Since relocating the filemount path involves multiple steps which must be done correctly and in unison, we suggest making these changes only in a [Custom Upstream](/docs/custom-upstream).
 * Specify the exact path; only a limited selection of paths are valid:
   * `/files`
   * `/sites/default/files`
