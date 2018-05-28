@@ -42,7 +42,7 @@ The majority of Pantheon's support is provided in the context of a particular we
 |                         |Silver  | Gold       |Platinum              |Diamond               |
 |-------------------------|--------|------------|----------------------|----------------------|
 |**Scope**|Platform <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope of Support" data-content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs"><em class="fa fa-info-circle"></em></a>|Technical <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope of Support" data-content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus"><em class="fa fa-info-circle"></em></a>|Performance <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope of Support" data-content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus"><em class="fa fa-info-circle"></em></a> |Dedicated <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Scope of Support" data-content="Bespoke site debugging"><em class="fa fa-info-circle"></em></a>|
-|**Chat**                 |24x5    |24x7        |24x7: Priority |24x7: Highest Priority|
+|**Chat**                 |24x5    |24x7        |24x7: Priority |24x7: Top Priority|
 |**Tickets**              |        |24x5: 8 Hour |24x7: 2 Hours |24x7: 1 Hour |
 |**Emergency On-Call** |        |            |24x7: 1 Hour |24x7: 15 Minutes |
 |**Professional Services**|        |Available for Purchase | Available for Purchase | Bundle included |
