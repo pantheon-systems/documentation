@@ -20,4 +20,74 @@ We provide highly customized, one-on-one training from Pantheon experts for your
 ## Customer Success Management  
 Agile website operations teams iterate constantly to move in lockstep with organizational needs and deliver on business goals. Customer Success Managers work proactively with you to help you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated Customer Success Manager is included with all Diamond support plans and is available for Gold and Platinum plans. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us) for details.
 
+###Organizations: Roles and Permissions
 
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Permissions</th>
+        <th>Administrator</th>
+        <th>Team Member</th>
+        <th>Developer</th>
+        <th>Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Unprivileged" data-content="Enterprise and EDU+ orgs only"><em class="fa fa-info-circle"></em></a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Create sites within an org</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Access the org Dashboard</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Work in Dev/Multidev environments</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Deploy to Test and Live</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Manage site-level team</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Delete sites or remove users from an org</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Manage a site's plan</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Create custom upstreams</td>
+        <td>✓</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
