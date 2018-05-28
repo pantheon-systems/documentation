@@ -45,7 +45,7 @@ The majority of Pantheon's support is provided in the context of a particular we
 |**Chat**                 |24x5    |24x7        |24x7: Priority Routing |24x7: Highest Priority|
 |**Tickets**              |        |24x5: 8 Hour |24x7: 2 Hours |24x7: 1 Hour |
 |**Emergency On-Call** |        |            |24x7: 1 Hour |24x7: 15 Minutes |
-|**Professional Services**|        |Available for Purchase | Available for Purchase | Professional Services Bundle included |
+|**Professional Services**|        |Available for Purchase | Available for Purchase | Bundle included |
 </div>
 
 </div>
