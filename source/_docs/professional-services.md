@@ -11,20 +11,20 @@ If you need advice on architecting a solution, planning for the future, preparin
 <table class="table  table-bordered table-responsive">
     <thead>
       <tr>
-        <th>Permissions</th>
-        <th>Administrator</th>
-        <th>Team Member</th>
-        <th>Developer</th>
-        <th>Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Unprivileged" data-content="Enterprise and EDU+ orgs only"><em class="fa fa-info-circle"></em></a></th>
+        <th>Category</th>
+        <th>Service</th>
+        <th>Available</th>
+        <th>Diamond Includes<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="One load test per Elite site included."><em class="fa fa-info-circle"></em></a></th>
+        <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Create sites within an org</td>
+        <td colspan=6>Consulting</td>
+        <td>DevOps Consulting: 4 hours</td>
         <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
+        <td>Yes (1/Qtr)</td>
+        <td>Solution Architect: Architecture advice, future planning, expansion, use case, problem solving</td>
       </tr>
       <tr>
         <td>Access the org Dashboard</td>
