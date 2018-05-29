@@ -62,7 +62,7 @@ Complete the following before deploying `filemount` (required):
 
 #### Considerations
 * Recommended usage limited to [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`
-* Path must be inside the site's docroot
+* Path must be relative to the site's docroot
 * Specify the exact path; limited selection of valid paths:
   * `/files`
   * `/sites/default/files`
