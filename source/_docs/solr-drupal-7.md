@@ -148,6 +148,12 @@ It needs to be done for Dev, Test, and Live individually. You can do this at `ad
 
 You can do this at `admin/config/search/apachesolr`. This will add any new content that has not yet been indexed to the Solr index (within the provided numbers-per-indexing setting).
 
+## Safely Uninstall & Disable Solr
+The following code changes are required before Solr can be safely disabled:
+1. Disable the [Apache Solr Search](https://www.drupal.org/project/apachesolr){.external}, [Search API Solr Search](https://www.drupal.org/project/search_api_solr){.external}, and the [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr){.external} modules.
+2. Delete all schema configurations from `settings.php`.
+3. Commit and deploy code changes to the Live environment.
+4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Solr.
 
 ## See Also
 [Apache Solr on Pantheon](/docs/solr)
