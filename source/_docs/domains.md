@@ -110,6 +110,7 @@ Resolve this error by replacing the offending redirect logic with the [recommend
 Modules and plugins that support managing redirects in the Site Admin interface can produce redirect errors when repeating or conflicting with redirects managed via PHP in your site's configuration file. Some examples include:
 
 WordPress plugins: Redirection, Quick Page/Post Redirect, Safe Redirect Manager, Simple 301 Redirects
+
 Drupal modules: Language (when using URL detection), Securepages, Redirect
 
 When troubleshooting a redirect loop, you may want to deactivate any module or plugin that may be providing its own redirect logic.
