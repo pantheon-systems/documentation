@@ -11,70 +11,42 @@ If you need advice on architecting a solution, planning for the future, preparin
 <table class="table  table-bordered table-responsive">
     <thead>
       <tr>
-        <th>Category</th>
         <th>Service</th>
-        <th>Available</th>
         <th>Diamond Includes<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="One load test per Elite site included."><em class="fa fa-info-circle"></em></a></th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td colspan=6>Consulting</td>
         <td>DevOps Consulting: 4 hours</td>
-        <td>✓</td>
         <td>Yes (1/Qtr)</td>
         <td>Solution Architect: Architecture advice, future planning, expansion, use case, problem solving</td>
       </tr>
       <tr>
-        <td>Access the org Dashboard</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td></td>
+        <td>DevOps Consulting: 4 hours per Qtr; Recurring</td>
+        <td>Yes (1/Qtr)</td>
+        <td>Solution Architect: Architecture advice, future planning, expansion, use case, problem solving</td>
       </tr>
       <tr>
-        <td>Work in Dev/Multidev environments</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
+        <td>DevOps Consulting: Project based solution architect customized to your needs</td>
         <td></td>
+        <td>Solution Architect: Bespoke project consultancy i.e. Build a custom upstream</td>
       </tr>
       <tr>
-        <td>Deploy to Test and Live</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
+        <td>Performance Deep Dive</td>
+        <td>Yes</td>
+        <td>Diagnose why the site is slow (but not fix it); recommended best practices; suggest specific strategies for fixing. Provided by DevRel or PS</td>
       </tr>
       <tr>
-        <td>Manage site-level team</td>
-        <td>✓</td>
-        <td>✓</td>
+        <td>PEG, annual (Elite sites Only); Recurring</td>
         <td></td>
-        <td></td>
+        <td>Includes all the set up work; available for Elite sites only</td>
       </tr>
       <tr>
-        <td>Delete sites or remove users from an org</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Manage a site's plan</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Create custom upstreams</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+        <td>SSO/SAML, one time, per account</td>
+        <td>Yes</td>
+        <td>Set up Single Sign On capability for your Organization</td>
+    </tr>
     </tbody>
   </table>
 
