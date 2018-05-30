@@ -1,6 +1,6 @@
 ---
 title: Temporary File Management
-description: Learn how to work with temporary files in distributed environments.
+description: Learn about the default path for temporary files and debug .tmp file errors.
 tags: [debugcode, infrastructure]
 categories: []
 ---

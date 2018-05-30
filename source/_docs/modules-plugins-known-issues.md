@@ -521,4 +521,4 @@ Due to the cloud-based infrastructure of the Pantheon platform, outbound request
 ## Using the tmp Directory
 **Issue**: Extensions that require the use of the `/tmp` directory are not supported. With multiple application servers, as exists on Live environments, it's assumed the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared.
 
-**Solution**: For more details, see [Temporary File Management with Multiple Application Containers](/docs/temp-files).
+**Solution**: For more details, see [Temporary File Management](/docs/tmp/).
