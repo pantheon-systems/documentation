@@ -82,7 +82,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
 
 
 ## Multiple Application Containers
-Errors caused by this scenario occur on either the Test or Live environment and typically reference some `.tmp` file as not found and could not be copied. These errors cannot be replicated on development environments (Dev or Multidev) since those environments use a single application container.
+Errors caused by this scenario occur on production environments (Test or Live) and typically reference some `.tmp` file as not found and could not be copied. These errors cannot be replicated on development environments (Dev or Multidev) since those environments use a single application container.
 
 Sites on the Performance Medium plan and above have multiple [application containers](/docs/application-containers). To help sites perform at scale, the platform routes requests across available application containers based on their load.
 
@@ -120,7 +120,7 @@ In general, there's no need for temporary files to persist across application co
     define('SOME_TMP_SETTING', 'wp-content/uploads/private/tmp');
   }
   ```
-  The `private` and `tmp` directories do not exist by default; you must be create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
+  The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
   Verify the setting using [Terminus](/docs/terminus/) to run `wp config get`:
 
@@ -138,7 +138,7 @@ In general, there's no need for temporary files to persist across application co
     $conf['some_tmp_setting'] = 'sites/default/files/private/tmp';
   }
   ```
-  The `private` and `tmp` directories do not exist by default; you must be create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
+  The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
   Verify the setting using [Terminus](/docs/terminus/) to run `drush variable-get`:
 
@@ -155,7 +155,7 @@ In general, there's no need for temporary files to persist across application co
     $config['some_module.settings']['some_tmp_setting']= 'sites/default/files/private/tmp';
   }
   ```
-  The `private` and `tmp` directories do not exist by default; you must be create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
+  The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
   Verify the setting using [Terminus](/docs/terminus/) to run `drush config-get` with `--include-overridden`:
 
