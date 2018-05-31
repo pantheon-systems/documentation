@@ -22,7 +22,7 @@ If you need advice on architecting a solution, planning for the future, preparin
         </tr>
       <tr>
         <td>DevOps Consulting: 4 hours per Qtr; Recurring</td>
-        <td>Yes (1/Qtr)</td>
+        <td></td>
         </tr>
       <tr>
         <td>DevOps Consulting: Project based solution architect customized to your needs.</td>
@@ -56,11 +56,11 @@ Whether you are moving one or hundreds of sites to the platform, Pantheon Migrat
     <tbody>
       <tr>
         <td>Site Migrations-Drupal</td>
-        <td></td>
+        <td>Available, but not included</td>
         </tr>
       <tr>
         <td>Site Migrations-WordPress</td>
-        <td></td>
+        <td>Available, but not included</td>
         </tr>
     </tbody>
   </table>
@@ -104,11 +104,11 @@ We provide highly customized, one-on-one training from Pantheon experts for your
     <tbody>
       <tr>
         <td>Expert Training - Personalized; 4 hours. Online</td>
-        <td></td>
+        <td>Available, but not included</td>
         </tr>
       <tr>
         <td>Expert Training - Personalized; Full Day. Travel possible</td>
-        <td></td>
+        <td>Available, but not included</td>
         </tr>
     </tbody>
   </table>
@@ -120,7 +120,7 @@ Agile website operations teams iterate constantly to move in lockstep with organ
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Available" data-content="Limited inclusion"><em class="fa fa-info-circle"></em></a></th>
+        <th>Included with Diamond</th>
       </tr>
     </thead>
     <tbody>
