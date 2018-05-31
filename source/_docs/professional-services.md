@@ -57,7 +57,7 @@ Whether you are moving one or hundreds of sites to the platform, Pantheon Migrat
     <thead>
       <tr>
         <th>Service</th>
-        <th>Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited Inclusion" data-content=""><em class="fa fa-info-circle"></em></a></th>
+        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Available" data-content="Limited inclusion"><em class="fa fa-info-circle"></em></a></th>
       </tr>
     </thead>
     <tbody>
