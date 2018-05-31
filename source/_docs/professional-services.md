@@ -12,7 +12,7 @@ If you need advice on architecting a solution, planning for the future, preparin
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Availabile for Gold, Platinum and Diamond plans" data-content="Limited inclusion where indicated with Diamond"><em class="fa fa-info-circle"></em></a></th>
+        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Availabile for Gold, Platinum and Diamond. Limited inclusion where indicated with Diamond."><em class="fa fa-info-circle"></em></a></th>
       </tr>
     </thead>
     <tbody>
@@ -60,7 +60,7 @@ Whether you are moving one or hundreds of sites to the platform, Pantheon Migrat
         </tr>
       <tr>
         <td>Site Migrations-WordPress</td>
-        <td>yes</td>
+        <td>Yes</td>
         </tr>
     </tbody>
   </table>
@@ -72,7 +72,7 @@ Load and performance tests are critical steps in ensuring a successful launch. T
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Availabile for Gold, Platinum and Diamond plans" data-content="Limited inclusion where indicated with Diamond"><em class="fa fa-info-circle"></em></a></th>
+        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Availabile for Gold, Platinum and Diamond" data-content="Limited inclusion with Diamond"><em class="fa fa-info-circle"></em></a></th>
       </tr>
     </thead>
     <tbody>
@@ -104,11 +104,11 @@ We provide highly customized, one-on-one training from Pantheon experts for your
     <tbody>
       <tr>
         <td>Expert Training - Personalized; 4 hours. Online</td>
-        <td>Available, but not included</td>
+        <td>Yes</td>
         </tr>
       <tr>
         <td>Expert Training - Personalized; Full Day. Travel Possible</td>
-        <td>Available, but not included</td>
+        <td>Yes</td>
         </tr>
     </tbody>
   </table>
