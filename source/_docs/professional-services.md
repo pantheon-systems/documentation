@@ -50,7 +50,7 @@ Whether you are moving one or hundreds of sites to the platform, Pantheon Migrat
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Available" data-content="Limited inclusion"><em class="fa fa-info-circle"></em></a></th>
+        <th>Included with Diamond</th>
       </tr>
     </thead>
     <tbody>
@@ -72,7 +72,7 @@ Load and performance tests are critical steps in ensuring a successful launch. T
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Available" data-content="Limited inclusion"><em class="fa fa-info-circle"></em></a></th>
+        <th>Included with Diamond</th>
       </tr>
     </thead>
     <tbody>
@@ -98,7 +98,7 @@ We provide highly customized, one-on-one training from Pantheon experts for your
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Available" data-content="Limited inclusion"><em class="fa fa-info-circle"></em></a></th>
+        <th>Included with Diamond</th>
       </tr>
     </thead>
     <tbody>
@@ -107,7 +107,7 @@ We provide highly customized, one-on-one training from Pantheon experts for your
         <td>Available, but not included</td>
         </tr>
       <tr>
-        <td>Expert Training - Personalized; Full Day. Travel possible</td>
+        <td>Expert Training - Personalized; Full Day. Travel Possible</td>
         <td>Available, but not included</td>
         </tr>
     </tbody>
