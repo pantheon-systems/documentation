@@ -12,7 +12,7 @@ If you need advice on architecting a solution, planning for the future, preparin
     <thead>
       <tr>
         <th>Service</th>
-        <th>Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="One load test per Elite site included for Diamond Support customers."><em class="fa fa-info-circle"></em></a></th>
+        <th>Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited Inclusion" data-content=""><em class="fa fa-info-circle"></em></a></th>
         <th>Description</th>
       </tr>
     </thead>
@@ -52,6 +52,41 @@ If you need advice on architecting a solution, planning for the future, preparin
 
 ## Migrations
 Whether you are moving one or hundreds of sites to the platform, Pantheon Migration Services will help you get it done quickly. Our hands-on, white-glove migration services for organizations and agencies remove the burden of migrations, by migrating the sites for you so that you can concentrate on what matters most to your end users. We do all the heavy lifting and let you focus on delivering better, faster websites for your colleagues, constituents or clients. [Contact our migrations team](https://pantheon.io/migrations) for details. 
+
+<table class="table  table-bordered table-responsive">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited Inclusion" data-content=""><em class="fa fa-info-circle"></em></a></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Site Migrations-Drupal</td>
+        <td>Yes (1/Qtr)</td>
+        </tr>
+      <tr>
+        <td>DevOps Consulting: 4 hours per Qtr; Recurring</td>
+        <td>Yes (1/Qtr)</td>
+        </tr>
+      <tr>
+        <td>DevOps Consulting: Project based solution architect customized to your needs.</td>
+        <td></td>
+        </tr>
+      <tr>
+        <td>Performance Deep Dive</td>
+        <td>Yes</td>
+        </tr>
+      <tr>
+        <td>PEG, annual (Elite sites Only); recurring.</td>
+        <td></td>
+        </tr>
+      <tr>
+        <td>SSO/SAML, one time, per account</td>
+        <td>Yes</td>
+        </tr>
+    </tbody>
+  </table>
 
 ## Load Testing
 Load and performance tests are critical steps in ensuring a successful launch. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site. Load tests provide critical insight for how a site will perform in the wild and under peak traffic spikes. Diamond support plans include load tests in order to ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings. Expert load tests are also available for Gold and Platinum plans. [Contact us](https://pantheon.io/contact-us) for details.
