@@ -12,7 +12,7 @@ If you need advice on architecting a solution, planning for the future, preparin
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Available" data-content="Limited inclusion"><em class="fa fa-info-circle"></em></a></th>
+        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Availabile for Gold, Platinum and Diamond plans" data-content="Limited inclusion where indicated with Diamond"><em class="fa fa-info-circle"></em></a></th>
       </tr>
     </thead>
     <tbody>
@@ -30,7 +30,7 @@ If you need advice on architecting a solution, planning for the future, preparin
         </tr>
       <tr>
         <td>Performance Deep Dive</td>
-        <td>Yes</td>
+        <td>Yes (1/Qtr)</td>
         </tr>
       <tr>
         <td>PEG, annual (Elite sites Only); recurring.</td>
@@ -50,17 +50,17 @@ Whether you are moving one or hundreds of sites to the platform, Pantheon Migrat
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond</th>
+        <th>Available with Gold, Platinum and Diamond</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>Site Migrations-Drupal</td>
-        <td>Available, but not included</td>
+        <td>Yes</td>
         </tr>
       <tr>
         <td>Site Migrations-WordPress</td>
-        <td>Available, but not included</td>
+        <td>yes</td>
         </tr>
     </tbody>
   </table>
@@ -72,7 +72,7 @@ Load and performance tests are critical steps in ensuring a successful launch. T
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond</th>
+        <th>Included with Diamond<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Availabile for Gold, Platinum and Diamond plans" data-content="Limited inclusion where indicated with Diamond"><em class="fa fa-info-circle"></em></a></th>
       </tr>
     </thead>
     <tbody>
@@ -98,7 +98,7 @@ We provide highly customized, one-on-one training from Pantheon experts for your
     <thead>
       <tr>
         <th>Service</th>
-        <th>Included with Diamond</th>
+        <th>Available with Gold, Platinum and Diamond</th>
       </tr>
     </thead>
     <tbody>
