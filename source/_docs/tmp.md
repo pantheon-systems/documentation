@@ -36,6 +36,11 @@ Errors caused by an unsupported temporary path typically surface as permission e
   Correct unsupported temporary path set by a plugin or theme in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
   ```php
+  /**
+  * WordPress
+  * Fix unsupported temporary path
+  * Replace SOME_TMP_SETTING
+  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     define('SOME_TMP_SETTING', $_SERVER['HOME'] . '/tmp');
   }
@@ -45,6 +50,10 @@ Errors caused by an unsupported temporary path typically surface as permission e
   ```command
   terminus wp <site>.<env> -- config get SOME_TMP_SETTING
   ```
+
+  Output of this command should look something like the following Contact Form 7 example:
+
+  ![config get wpcf7 uploads tmp dir default](/source/docs/assets/images/wp-config-get-tmp-default.png)
   </div>
 
   <!-- 2nd pane content -->
@@ -52,6 +61,11 @@ Errors caused by an unsupported temporary path typically surface as permission e
   Correct unsupported temporary path set by a module or theme using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
   ```php
+  /**
+  * Drupal 7
+  * Fix unsupported temporary path
+  * Replace some_tmp_setting
+  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     $conf['some_tmp_setting'] = $_SERVER['HOME'] . '/tmp';
   }
@@ -61,12 +75,21 @@ Errors caused by an unsupported temporary path typically surface as permission e
   ```command
   terminus drush <site>.<env> -- variable-get some_tmp_setting
   ```
+
+  Output of this command should look something like the following Plupload example:
+
+  ![cget plupload settings temporary_uri filesystem](/source/docs/assets/images/d7-vget-tmp-default.png)
   </div>
   <!-- 3rd pane content -->
   <div role="tabpanel" class="tab-pane" id="d8-anchor" markdown="1">
   Correct unsupported temporary path set by a module or theme using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
 
   ```php
+  /**
+  * Drupal 8
+  * Fix unsupported temporary path
+  * Replace some_module and some_tmp_setting
+  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     $config['some_module.settings']['some_tmp_setting']= $_SERVER['HOME'] . '/tmp';
   }
@@ -77,6 +100,10 @@ Errors caused by an unsupported temporary path typically surface as permission e
   ```command
   terminus drush <site>.<env> -- config-get some_module.settings some_tmp_setting --include-overridden
   ```
+
+  Output of this command should look something like the following Plupload example:
+
+  ![cget plupload settings temporary_uri filesystem](/source/docs/assets/images/d8-cget-tmp-default.png)
   </div>
 </div>
 
@@ -116,6 +143,11 @@ In general, there's no need for temporary files to persist across application co
   Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
   ```php
+  /**
+  * WordPress
+  * Persistent tmp across app containers
+  * Replace SOME_TMP_SETTING
+  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     define('SOME_TMP_SETTING', 'wp-content/uploads/private/tmp');
   }
@@ -127,6 +159,10 @@ In general, there's no need for temporary files to persist across application co
   ```command
   terminus wp <site>.<env> -- config get SOME_TMP_SETTING
   ```
+
+  Output of this command should look something like the following Contact Form 7 example:
+
+  ![config get wpcf7 uploads tmp dir filesystem](/source/docs/assets/images/wp-config-get-tmp-filesystem.png)
   </div>
 
   <!-- 2nd pane content -->
@@ -134,6 +170,11 @@ In general, there's no need for temporary files to persist across application co
   Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
   ```php
+  /**
+  * Drupal 7
+  * Persistent tmp across app containers
+  * Replace some_tmp_setting
+  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     $conf['some_tmp_setting'] = 'sites/default/files/private/tmp';
   }
@@ -145,12 +186,21 @@ In general, there's no need for temporary files to persist across application co
   ```command
   terminus drush <site>.<env> -- variable-get some_tmp_setting
   ```
+
+  Output of this command should look something like the following Plupload example:
+
+  ![cget plupload settings temporary_uri filesystem](/source/docs/assets/images/d7-vget-tmp-filesystem.png)
   </div>
   <!-- 3rd pane content -->
   <div role="tabpanel" class="tab-pane" id="d8-2anchor" markdown="1">
   Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
 
   ```php
+  /**
+  * Drupal 8
+  * Persistent tmp across app containers
+  * Replace some_module and some_tmp_setting
+  */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     $config['some_module.settings']['some_tmp_setting']= 'sites/default/files/private/tmp';
   }
@@ -162,5 +212,9 @@ In general, there's no need for temporary files to persist across application co
   ```command
   terminus drush <site>.<env> -- config-get some_module.settings some_tmp_setting --include-overridden
   ```
+
+  Output of this command should look something like the following Plupload example:
+
+  ![cget plupload settings temporary_uri filesystem](/source/docs/assets/images/d8-cget-tmp-filesystem.png)
   </div>
 </div>
