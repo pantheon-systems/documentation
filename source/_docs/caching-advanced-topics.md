@@ -58,9 +58,9 @@ WordPress does not use PHP session cookies; however, some themes and plugins do.
 ### Session and Cookie Lifetime
 Pantheon allows developers to control the length of sessions. There are two pieces: the lifetime of the cookie and the lifetime of the session itself.
 
-The cookie lifetime is configured using the PHP setting [session.cookie\_lifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime){.external}. If set to 0, the cookie is deleted when the user closes their browser. Set to 2,000,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
+Session cookie lifetime is configured using the [session.cookie\_lifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime){.external} PHP setting. If set to 0, the cookie is deleted when the user closes their browser. Session cookie lifetime is set to 2,000,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
 
-Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes%21session.inc/function/_drupal_session_garbage_collection/7){.external} uses the PHP setting [session.gc\_maxlifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime){.external} when deleting expired sessions from the sessions database table. Set to 200,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
+Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes%21session.inc/function/_drupal_session_garbage_collection/7){.external} uses the [session.gc\_maxlifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime){.external} PHP setting when deleting expired sessions from the sessions database table. Session max lifetime is set to 200,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
 
 For additional details and examples on how to set cookie lifetimes and garbage collection manually, see the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336){.external}.
 
