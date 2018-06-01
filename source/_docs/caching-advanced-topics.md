@@ -131,7 +131,7 @@ In your code, remember to first check whether the incoming request has the `STYX
 
 &#8211; `STYXKEY.tablet`: The only valid characters are a-z, A-Z, 0-9, hyphens ("-"), and underscores ("\_")
 
-&#8211; `tablet-STYXKEY`: The cookie name must start with `STYXKEY
+&#8211; `tablet-STYXKEY`: The cookie name must start with `STYXKEY`
 
 
 ## Varnish Servers
