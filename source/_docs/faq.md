@@ -85,7 +85,7 @@ Yes. You can invoke WP-CLI commands on Pantheon sites using [Terminus](/docs/ter
 
 ### Does Pantheon support local development?
 
-Yes. [Local development](/docs) is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
+Yes. [Local development](/docs/local-development/) is a great best practice, and Pantheon supports a wide array of local development tools (e.g. MAMP, WAMP, Homebrew, etc).
 
 ### How does cron work with Drupal on Pantheon?
 
