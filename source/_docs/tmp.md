@@ -33,7 +33,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
 <div class="tab-content">
   <!-- Active pane content -->
   <div role="tabpanel" class="tab-pane active" id="wp-anchor" markdown="1">
-  Correct unsupported temporary path set by a plugin or theme in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
+  Correct an unsupported temporary path set by a plugin or theme in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
   ```php
   /**
@@ -45,7 +45,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
     define('SOME_TMP_SETTING', $_SERVER['HOME'] . '/tmp');
   }
   ```
-  Verify the setting using [Terminus](/docs/terminus/) to run `wp config get`:
+  Verify the setting by using [Terminus](/docs/terminus/) to run `wp config get`:
 
   ```command
   terminus wp <site>.<env> -- config get SOME_TMP_SETTING
@@ -58,7 +58,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
 
   <!-- 2nd pane content -->
   <div role="tabpanel" class="tab-pane" id="d7-anchor" markdown="1">
-  Correct unsupported temporary path set by a module or theme using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
+  Correct an unsupported temporary path set by a module or theme using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
   ```php
   /**
@@ -70,7 +70,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
     $conf['some_tmp_setting'] = $_SERVER['HOME'] . '/tmp';
   }
   ```
-  Verify the setting using [Terminus](/docs/terminus/) to run `drush variable-get`:
+  Verify the setting by using [Terminus](/docs/terminus/) to run `drush variable-get`:
 
   ```command
   terminus drush <site>.<env> -- variable-get some_tmp_setting
@@ -82,7 +82,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
   </div>
   <!-- 3rd pane content -->
   <div role="tabpanel" class="tab-pane" id="d8-anchor" markdown="1">
-  Correct unsupported temporary path set by a module or theme using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
+  Correct an unsupported temporary path set by a module or theme using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
 
   ```php
   /**
@@ -95,7 +95,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
   }
   ```
 
-  Verify the setting using [Terminus](/docs/terminus/) to run `drush config-get` with `--include-overridden`:
+  Verify the setting by using [Terminus](/docs/terminus/) to run `drush config-get` with `--include-overridden`:
 
   ```command
   terminus drush <site>.<env> -- config-get some_module.settings some_tmp_setting --include-overridden
@@ -154,7 +154,7 @@ In general, there's no need for temporary files to persist across application co
   ```
   The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-  Verify the setting using [Terminus](/docs/terminus/) to run `wp config get`:
+  Verify the setting by using [Terminus](/docs/terminus/) to run `wp config get`:
 
   ```command
   terminus wp <site>.<env> -- config get SOME_TMP_SETTING
@@ -181,7 +181,7 @@ In general, there's no need for temporary files to persist across application co
   ```
   The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-  Verify the setting using [Terminus](/docs/terminus/) to run `drush variable-get`:
+  Verify the setting by using [Terminus](/docs/terminus/) to run `drush variable-get`:
 
   ```command
   terminus drush <site>.<env> -- variable-get some_tmp_setting
@@ -207,7 +207,7 @@ In general, there's no need for temporary files to persist across application co
   ```
   The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-  Verify the setting using [Terminus](/docs/terminus/) to run `drush config-get` with `--include-overridden`:
+  Verify the setting by using [Terminus](/docs/terminus/) to run `drush config-get` with `--include-overridden`:
 
   ```command
   terminus drush <site>.<env> -- config-get some_module.settings some_tmp_setting --include-overridden
