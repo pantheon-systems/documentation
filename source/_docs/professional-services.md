@@ -25,7 +25,7 @@ If you need advice on architecting a solution, planning for the future, preparin
         <td></td>
         </tr>
       <tr>
-        <td>DevOps Consulting: Project based solution architect customized to your needs.</td>
+        <td>DevOps Consulting: Project based solution architect customized to your needs</td>
         <td></td>
         </tr>
       <tr>
@@ -33,7 +33,7 @@ If you need advice on architecting a solution, planning for the future, preparin
         <td>Yes (1/Qtr)</td>
         </tr>
       <tr>
-        <td>PEG, annual (Elite sites Only); recurring.</td>
+        <td>PEG, annual (Elite sites Only); recurring</td>
         <td></td>
         </tr>
       <tr>
