@@ -43,7 +43,7 @@ Pantheon can handle any domain name you point at it, however DNS configuration i
 ### What are the differences between the environments?
 
 - Dev has lower TTL on Varnish caching and shows errors to site users.
-- Test has the same caching configuration as Live and does not show errors to users, but only one application server.
+- Test has the same caching configuration as Live and does not show errors to users. If the Live environment has multiple application servers, Test will have two.
 - Live has optimal caching and does not show errors to users, and (depending on the plan) can have multiple application servers for high availability and high performance.
 
 To learn more, see [Using the Pantheon Workflow](/docs/pantheon-workflow/).
