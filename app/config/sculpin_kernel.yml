@@ -96,3 +96,14 @@ sculpin_content_types:
                 - categories
                 - tags
                 - contributors
+    woocommercequickstartpages:
+            type: path
+            path: docs/guides/woocommerce-quickstart
+            permalink: pretty
+            singular_name: woocommercequickstartpage
+            enabled: true
+            layout: guide
+            taxonomies:
+                - categories
+                - tags
+                - contributors

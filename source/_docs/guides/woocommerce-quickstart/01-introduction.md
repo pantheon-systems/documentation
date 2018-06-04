@@ -9,9 +9,9 @@ anchorid: woocommerce-quickstart
 woocommerce-quickstart: true
 generator: pagination
 pagination:
-    provider: data.woocommerce-quickstartpages
+    provider: data.woocommercequickstartpages
 use:
-    - woocommerce-quickstartpages
+    - woocommercequickstartpages
 permalink: docs/guides/woocommerce-quickstart/
 nexturl: guides/woocommerce-quickstart/understanding-pantheon-workflow/
 nextpage: "Understanding Pantheon's Workflow"
