@@ -16,7 +16,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 - [Pantheon platform consideration](/docs/platform-considerations/)
 - [Advanced caching](/docs/caching-advanced-topics/)
 - [Non-standard file locations](/docs/non-standard-file-paths/)
-- [Unsupported modules and plugins](/docs/modules-plugins-known-issues/)
+- [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/)
 - [Pantheon FAQs](/docs/faq/)
 - [Pricing comparison](https://pantheon.io/plans/pricing-comparison){.external}
 

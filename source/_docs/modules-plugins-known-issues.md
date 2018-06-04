@@ -1,10 +1,10 @@
 ---
 title: Modules and Plugins with Known Issues
-description: A list of Drupal modules and WordPress plugins that require workarounds or are unsupported.
+description: A list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.
 tags: [debugcode, siteintegrations]
 categories: []
 ---
-This article lists modules and plugins that may not function as expected or are currently unsupported on the Pantheon platform. This is not a comprehensive list. We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact our Support team](https://pantheon.io/docs/support/).
+This article lists modules and plugins that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list. We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/docs/support/).
 
 We do not prevent you from installing and using these plugins/modules; however, they may not work as expected and we cannot provide troubleshooting support.
 
