@@ -33,7 +33,7 @@ If you need advice on architecting a solution, planning for the future, preparin
         <td>Yes (1/Qtr)</td>
         </tr>
       <tr>
-        <td>PEG, annual (Elite sites Only); recurring</td>
+        <td>Pantheon Enterprise Gateway, annual (Elite sites Only); recurring</td>
         <td></td>
         </tr>
       <tr>
