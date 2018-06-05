@@ -150,7 +150,7 @@ It needs to be done for Dev, Test, and Live individually. You can do this at `ad
 You can do this at `admin/config/search/apachesolr`. This will add any new content that has not yet been indexed to the Solr index (within the provided numbers-per-indexing setting).
 
 ## Safely Remove Solr
-The following code changes are required before Solr can be safely uninstalled and removed:
+The following code changes are required before Solr can be safely uninstalled and disabled:
 {% include("content/remove-addons/d7-solr.html")%}
 
 ## See Also

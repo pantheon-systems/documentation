@@ -3,6 +3,7 @@ title: Installing Redis on Drupal or WordPress
 description: Understand how to use Redis as a caching mechanism for your Pantheon site.
 tags: [cacheapp, addons]
 categories: []
+contributors: [cityofoaksdesign]
 ---
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
@@ -417,28 +418,30 @@ sftp>
 ### Why won't my site work after importing a database backup?
 When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
 
-### The following code changes are required before Redis can be safely disabled:
+## Safely Remove Redis
+The following code changes are required before Redis can be safely uninstalled and disabled:
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <!-- Active tab -->
-  <li id="wp-id" role="presentation" class="active"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+  <li id="wp-uninstall-id" role="presentation" class="active"><a href="#wp-uninstall" aria-controls="wp-uninstall" role="tab" data-toggle="tab">WordPress</a></li>
   <!-- 2nd Tab Nav -->
-  <li id="drops-id" role="presentation"><a href="#drops" aria-controls="drops" role="tab" data-toggle="tab">Drupal</a></li>
+  <li id="d8-uninstall-id" role="presentation"><a href="#d8-uninstall" aria-controls="drops" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <!-- 3rd Tab Nav -->
+  <li id="d7-uninstall-id" role="presentation"><a href="#d7-uninstall" aria-controls="drops" role="tab" data-toggle="tab">Drupal 7</a></li>
+
 </ul>
 <!-- Tab panes -->
 <div class="tab-content">
   <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="wp" markdown="1">
-1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/){.external} plugin.
-2. Delete the `wp-content/object-cache.php` file.
-3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Redis.
+  <div role="tabpanel" class="tab-pane active" id="wp-uninstall" markdown="1">
+{% include("content/remove-addons/wp-redis.html")%}
   </div>
   <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="drops" markdown="1">
-1. Disable the [Redis](https://www.drupal.org/project/redis){.external} module.
-2. Delete Redis configuration from `settings.php`.
-3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Redis.
+  <div role="tabpanel" class="tab-pane" id="d8-uninstall" markdown="1">
+{% include("content/remove-addons/d8-redis.html")%}
+  </div>
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="d7-uninstall" markdown="1">
+{% include("content/remove-addons/d7-redis.html")%}
   </div>
 </div>
