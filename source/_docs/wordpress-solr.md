@@ -3,6 +3,7 @@ title: Enabling Solr for WordPress
 description: Detailed information on using Apache Solr with WordPress.
 tags: [addons]
 categories: [wordpress]
+contributors: [cityofoaksdesign]
 ---
 [Apache Solr](/docs/solr) is a system for indexing and searching site content. Currently, all plans except for a Basic plan can use Solr.
 
@@ -67,3 +68,7 @@ New, deleted, and modified posts and pages are automatically added to the Solr i
 
 ### Enable Solr for AJAX and WordPress Dashboard
 Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to work with AJAX and within the WordPress Dashboard.
+
+## Safely Remove Solr
+The following code changes are required before Solr can be safely uninstalled and removed:
+{% include("content/remove-addons/wp-solr.html")%}
