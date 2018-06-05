@@ -99,6 +99,12 @@ Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr serv
 
 Before this module is released as a Beta, reposting the schema file will be done automatically. For details, see [https://www.drupal.org/node/2775549](https://www.drupal.org/node/2775549).
 
+## Safely Uninstall & Disable Solr
+The following code changes are required before Solr can be safely disabled:
+1. Disable the [Apache Solr Search](https://www.drupal.org/project/apachesolr){.external}, [Search API Solr Search](https://www.drupal.org/project/search_api_solr){.external}, and the [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr){.external} modules.
+2. Delete all schema configurations from `settings.php`.
+3. Commit and deploy code changes to the Live environment.
+4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Solr.
 
 ## See Also
 
