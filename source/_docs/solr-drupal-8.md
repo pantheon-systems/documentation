@@ -3,7 +3,7 @@ title: Enabling Solr on Drupal 8
 description: Detailed information on using Apache Solr with Drupal 8.
 tags: [addons, siteintegrations]
 categories: [drupal8]
-contributors: [peter-pantheon]
+contributors: [peter-pantheon, cityofoaksdesign]
 ---
 [Apache Solr](/docs/solr) is a system for indexing and searching site content.
 
@@ -99,6 +99,9 @@ Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr serv
 
 Before this module is released as a Beta, reposting the schema file will be done automatically. For details, see [https://www.drupal.org/node/2775549](https://www.drupal.org/node/2775549).
 
+## Safely Remove Solr
+The following code changes are required before Solr can be safely uninstalled and removed:
+{% include("content/remove-addons/d8-solr.html")%}
 
 ## See Also
 
