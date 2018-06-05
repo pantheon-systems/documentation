@@ -70,5 +70,5 @@ New, deleted, and modified posts and pages are automatically added to the Solr i
 Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to work with AJAX and within the WordPress Dashboard.
 
 ## Safely Remove Solr
-The following code changes are required before Solr can be safely uninstalled and removed:
+The following code changes are required before Solr can be safely uninstalled and disabled:
 {% include("content/remove-addons/wp-solr.html")%}

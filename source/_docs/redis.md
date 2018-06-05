@@ -3,6 +3,7 @@ title: Installing Redis on Drupal or WordPress
 description: Understand how to use Redis as a caching mechanism for your Pantheon site.
 tags: [cacheapp, addons]
 categories: []
+contributors: [cityofoaksdesign]
 ---
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
@@ -416,3 +417,31 @@ sftp>
 
 ### Why won't my site work after importing a database backup?
 When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
+
+## Safely Remove Redis
+The following code changes are required before Redis can be safely uninstalled and disabled:
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="wp-uninstall-id" role="presentation" class="active"><a href="#wp-uninstall" aria-controls="wp-uninstall" role="tab" data-toggle="tab">WordPress</a></li>
+  <!-- 2nd Tab Nav -->
+  <li id="d8-uninstall-id" role="presentation"><a href="#d8-uninstall" aria-controls="drops" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <!-- 3rd Tab Nav -->
+  <li id="d7-uninstall-id" role="presentation"><a href="#d7-uninstall" aria-controls="drops" role="tab" data-toggle="tab">Drupal 7</a></li>
+
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+  <!-- Active pane content -->
+  <div role="tabpanel" class="tab-pane active" id="wp-uninstall" markdown="1">
+{% include("content/remove-addons/wp-redis.html")%}
+  </div>
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="d8-uninstall" markdown="1">
+{% include("content/remove-addons/d8-redis.html")%}
+  </div>
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="d7-uninstall" markdown="1">
+{% include("content/remove-addons/d7-redis.html")%}
+  </div>
+</div>
