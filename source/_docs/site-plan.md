@@ -41,35 +41,33 @@ For Redis and Solr, the following code changes are required before the feature c
   <!-- Active tab -->
   <li id="wp-id" role="presentation" class="active"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
   <!-- 2nd Tab Nav -->
-  <li id="drops-id" role="presentation"><a href="#drops" aria-controls="drops" role="tab" data-toggle="tab">Drupal</a></li>
+  <li id="d8-id" role="presentation"><a href="#d8" aria-controls="drops" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <!-- 3rd Tab Nav -->
+  <li id="d7-id" role="presentation"><a href="#d7" aria-controls="drops" role="tab" data-toggle="tab">Drupal 7</a></li>
+
 </ul>
 <!-- Tab panes -->
 <div class="tab-content">
   <!-- Active pane content -->
   <div role="tabpanel" class="tab-pane active" id="wp" markdown="1">
-#### Safely Uninstall & Disable Redis
-1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/){.external} plugin.
-2. Delete the `wp-content/object-cache.php` file.
-3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Redis.
-#### Safely Uninstall & Disable Solr
-1. Uninstall the [Solr Search for WordPress](https://wordpress.org/plugins/solr-power/){.external} plugin.
-2. Ensure the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter){.external} is functioning.
-3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Solr.
+#### Safely Remove Redis
+{% include("content/remove-addons/wp-redis.html")%}
+#### Safely Remove Solr
+{% include("content/remove-addons/wp-solr.html")%}
   </div>
   <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="drops" markdown="1">
-#### Safely Uninstall & Disable Redis
-1. Disable the [Redis](https://www.drupal.org/project/redis){.external} module.
-2. Delete Redis configuration from `settings.php`.
-3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Redis.
-#### Safely Uninstall & Disable Solr
-1. Disable the [Apache Solr Search](https://www.drupal.org/project/apachesolr){.external}, [Search API Solr Search](https://www.drupal.org/project/search_api_solr){.external}, and the [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr){.external} modules.
-2. Delete all schema configurations from `settings.php`.
-3. Commit and deploy code changes to the Live environment.
-4. Go to **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **Add Ons** and click the **Remove** button for Solr.
+  <div role="tabpanel" class="tab-pane" id="d8" markdown="1">
+#### Safely Remove Redis
+{% include("content/remove-addons/d8-redis.html")%}
+#### Safely Remove Solr
+{% include("content/remove-addons/d8-solr.html")%}
+  </div>
+  <!-- 2nd pane content -->
+  <div role="tabpanel" class="tab-pane" id="d7" markdown="1">
+#### Safely Remove Redis
+{% include("content/remove-addons/d7-redis.html")%}
+#### Safely Remove Solr
+{% include("content/remove-addons/d7-solr.html")%}
   </div>
 </div>
 
