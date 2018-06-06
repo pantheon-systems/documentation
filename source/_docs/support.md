@@ -84,14 +84,14 @@ The ticket support feature is available to certain plans and account types. For 
 5. Click **Open Ticket**
 
 ## Pantheon On-Call
-Elite sites and organizations who opt for [Priority Enterprise Support](#priority-enterprise-support) can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call has a response time SLA of 30 minutes and immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+Elite sites and organizations who opt for [Priority Enterprise Support](#priority-enterprise-support) can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Priority Enterprise Support
-Priority Enterprise Support is a blanket support plan which can be purchased for any organization. It covers all team members and sites, adding a 2-hour SLA for ticket responses and the ability to trigger Pantheon's on-call emergency system described above. [Learn more](https://pantheon.io/priority-enterprise-support).
+Priority Enterprise Support is a blanket support plan which can be purchased for any organization. It covers all team members and sites, adding the ability to trigger Pantheon's on-call emergency system described above. [Learn more](https://pantheon.io/priority-enterprise-support).
 
 ## Scope of Support
 
-We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed full stack support. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
+We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed support. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
 
 ### Code
 Your site code belongs to you. If your plan includes full stack support, we can offer advice on best practices with regard to your codebase and are happy to recommend one of our agency partners or refer you to our professional services team to provide development assistance, but our support team does not change the code of our customers. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
@@ -141,17 +141,6 @@ Our team is experienced with using New Relic to diagnose whether an issue is pla
 
 This level of support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match){.external} from Pantheon’s network of trusted partners.
 
-## Feature Requests
-
-We value your feedback! If you feel there's something we can do to improve our platform, like adding a new [external Library](/docs/external-libraries), or a dashboard feature, contact support and let us know. Include a description of your use case, and a link to the website for any library or other third-party included in your request.
-
-Feature requests are evaluated by Pantheon's product and engineering teams on a case-by-case basis. We love adding new capabilities, but platform changes take time and consideration, and feature requests may be declined if there is potential performance or user experience degradation or if other priorities take precedence.
-
-### How long does the process take?
-This depends on the feature requested, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved.
-
-It is very important to note, these requests are not guaranteed, and it is possible the feature requests may be denied. As a result, we recommend you also pursue alternative solutions.
-
 ## Help Us Help You
 
 Keep the following tips in mind when opening a new support ticket or chat:
@@ -167,6 +156,10 @@ Keep the following tips in mind when opening a new support ticket or chat:
  - **Clarification**: We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
 
 ## FAQs
+#### Can I request a feature be added to the platform?
+
+Yes, for more details, contact your Customer Success Manager or see our [terms of service](https://pantheon.io/terms-of-service).
+
 #### Is there a support number we can call? If so, is this service available for every plan?
 
 Customers with a **Diamond support plan** can access Pantheon on-call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
