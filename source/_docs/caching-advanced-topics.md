@@ -64,6 +64,11 @@ Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes
 
 For additional details and examples on how to set cookie lifetimes and garbage collection manually, see the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336){.external}.
 
+#### Drupal 7
+Session cookie lifetime and session garbage collection can be overriden in your `settings.php` file. For additional details and examples on how to set cookie lifetimes and garbage collection manually, see ​​the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
+
+#### Drupal 8
+Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for Drupal 8](/docs/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
