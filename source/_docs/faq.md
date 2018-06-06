@@ -141,7 +141,6 @@ You'll need the plugin. [More information on sessions](/docs/wordpress-sessions/
 Yes. See [Public Distributions](/docs/start-state/#public-distributions) for details.
 
 
-
 ## Caching and Performance
 
 ### Can I use other CDNs with Pantheon?

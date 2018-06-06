@@ -3,6 +3,7 @@ title: DNS
 description: Learn the basics of DNS.
 tags: [dns]
 categories: []
+contributors: alexfornuto
 ---
 
 **DNS** stands for Domain Name Service, and it's the protocol by which domain names are pointed to the servers that host content. While Pantheon does not offer DNS management services, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site.
@@ -39,7 +40,22 @@ Every DNS record has a **Time To Live** (**TTL**) value, which specifies how lon
 
 **DNS Propagation** is the time it takes for changes made to DNS records to be reflected across DNS servers globally. A lower TTL value means faster propagation, but it's important to note that it is not a 1:1 ratio. Between your <a href=#where-are-my-dns-records-hosted data-proofer-ignore>authoritative name server</a> and the DNS servers of any particular ISP could be any number of intermediate DNS servers. Each server in that chain will wait for the records it holds to expire before requesting new ones. Because of this, it can take *several times longer* than your record's TTL value to see changes reflected for everyone.
 
-When planning a site migration, or making other changes that affect DNS values, it's a common practice to lower the TTL values as low as allowed (usually `500`) several days in advance. That way when the values are changed, new records are propagated faster. Once a migration is complete, TTL values are usually raised back to `3600` (24 hours) to impove stability in case of a DNS service outage.
+### DNS Migration Prep
+
+When you're planning a site migration, follow these simple steps to help minimize DNS-related downtime:
+
+1. Lower the TTL values as low as allowed (usually `500`) several days in advance at your DNS service manager. That way when the values are changed, new records are propagated faster.
+
+2. Use `dig` to confirm the new TTL values have propagated to your ISP's DNS servers:
+
+    ```command
+    dig +nocmd +noall +answer pantheon.io
+    pantheon.io.            60      IN      A       23.185.0.2
+    ```
+
+    In the example above, the TTL of the A record for`pantheon.io` is 60 seconds.
+
+3. Once the migration is complete, raise the TTL values back to `3600` (24 hours) to impove stability in case of a DNS service outage.
 
 ## Frequently Asked Questions
 
