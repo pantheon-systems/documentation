@@ -1,20 +1,21 @@
 ---
 title: WooCommerce Quick Start
 subtitle: Launching Your Store
-woocommercequickstart: true
-anchorid: launching-your-store
+woocommerce: true
+anchorid: launch
 generator: pagination
 layout: guide
 type: guide
 pagination:
-    provider: data.woocommercequickstartpages
+    provider: data.woocommercepages
 use:
-    - woocommercequickstartpages
-permalink: docs/guides/woocommerce-quickstart/launching-your-store/
-previousurl: guides/woocommerce-quickstart/making-a-change-on-dev/
+    - woocommercepages
+permalink: docs/guides/woocommerce/launch/
+previousurl: guides/woocommerce/develop/
 previouspage: Making a Change on Dev
-editpath: woocommerce-quickstart/08-launching-your-store.md
-image: guides/woocommerce-quickstart/WooCommerce-logo-400-200
+editpath: woocommerce/08-launch.md
+image: guides/woocommerce/WooCommerce-logo-400-200
+survey: true
 ---
 In order to launch your store and add a custom domain you'll need a paid [Pantheon Plan](/docs/site-plan/). Once you have upgraded to a paid Pantheon plan you can follow these instructions to [point your DNS and launch](/docs/guides/launch/).
 

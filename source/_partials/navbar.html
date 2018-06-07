@@ -239,33 +239,33 @@
     window.addEventListener("load", setActivetrail);
 </script>
 {% endif %}
-{% if page.woocommercequickstart %}
+{% if page.woocommerce %}
 <script type="text/javascript">
     function setActivetrail() {
         aaObj = document.getElementById('manual-guide-toc').getElementsByTagName('a');
         for(i=0;i<aaObj.length;i++) {
             if(document.location.href.indexOf(aaObj[i].href)>=0 ){
                 aaObj[i].className='active-trail';
-                if(/\/understanding-pantheon-workflow.*/.test(aaObj[i].href)>=1) {
-                    $('#docs-guides-woocommerce-quickstart').removeClass('active-trail');
+                if(/\/workflow.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
-                if(/\/woo-commerce-set-up.*/.test(aaObj[i].href)>=1) {
-                    $('#docs-guides-woocommerce-quickstart').removeClass('active-trail');
+                if(/\/install.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
-                if(/\/site-configuration.*/.test(aaObj[i].href)>=1) {
-                    $('#docs-guides-woocommerce-quickstart').removeClass('active-trail');
+                if(/\/configure.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
-                if(/\/commit-changes.*/.test(aaObj[i].href)>=1) {
-                    $('#docs-guides-woocommerce-quickstart').removeClass('active-trail');
+                if(/\/commit.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
-                if(/\/create-test-and-live-environments.*/.test(aaObj[i].href)>=1) {
-                    $('#docs-guides-woocommerce-quickstart').removeClass('active-trail');
+                if(/\/deploy.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
-                if(/\/making-a-change-on-dev.*/.test(aaObj[i].href)>=1) {
-                    $('#docs-guides-woocommerce-quickstart').removeClass('active-trail');
+                if(/\/develop.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
-                if(/\/launching-your-store.*/.test(aaObj[i].href)>=1) {
-                    $('#docs-guides-woocommerce-quickstart').removeClass('active-trail');
+                if(/\/launch.*/.test(aaObj[i].href)>=1) {
+                    $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
             }
         }

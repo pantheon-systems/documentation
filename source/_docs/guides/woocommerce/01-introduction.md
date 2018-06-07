@@ -6,19 +6,19 @@ tags: [woocommerce]
 contributors: [BFTrick]
 layout: guide
 type: guide
-anchorid: woocommerce-quickstart
-woocommercequickstart: true
+anchorid: woocommerce
+woocommerce: true
 generator: pagination
 pagination:
-    provider: data.woocommercequickstartpages
+    provider: data.woocommercepages
 use:
-    - woocommercequickstartpages
-permalink: docs/guides/woocommerce-quickstart/
-nexturl: guides/woocommerce-quickstart/understanding-pantheon-workflow/
-nextpage: "Understanding Pantheon's Workflow"
-editpath: woocommerce-quickstart/01-introduction.md
+    - woocommercepages
+permalink: docs/guides/woocommerce/
+nexturl: guides/woocommerce/workflow/
+nextpage: Understanding Pantheon's Workflow
+editpath: woocommerce/01-introduction.md
 completiontime: 1 hour
-image: guides/woocommerce-quickstart/WooCommerce-logo-400-200
+image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 Welcome!
 

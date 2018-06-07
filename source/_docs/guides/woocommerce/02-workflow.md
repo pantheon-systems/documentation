@@ -1,22 +1,22 @@
 ---
 title: WooCommerce Quick Start
-subtitle: "Understanding Pantheon's Workflow"
-anchorid: understanding-pantheon-workflow
+subtitle: Understanding Pantheon's Workflow
+anchorid: workflow
 layout: guide
 type: guide
-woocommercequickstart: true
+woocommerce: true
 generator: pagination
 pagination:
-    provider: data.woocommercequickstartpages
+    provider: data.woocommercepages
 use:
-    - woocommercequickstartpages
-permalink: docs/guides/woocommerce-quickstart/understanding-pantheon-workflow/
-nexturl: guides/woocommerce-quickstart/woo-commerce-set-up/
+    - woocommercepages
+permalink: docs/guides/woocommerce/workflow/
+nexturl: guides/woocommerce/install/
 nextpage: WooCommerce Set Up
-previousurl: guides/woocommerce-quickstart/
+previousurl: guides/woocommerce/
 previouspage: Introduction
-editpath: woocommerce-quickstart/02-understanding-pantheon-workflow.md
-image: guides/woocommerce-quickstart/WooCommerce-logo-400-200
+editpath: woocommerce/02-workflow.md
+image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 At Pantheon we believe in workflows and processes that make developer's (and site owner's) lives better. To help with that, every site on Pantheon has three environments:
 
@@ -25,7 +25,7 @@ At Pantheon we believe in workflows and processes that make developer's (and sit
 * Live
 
 <p style="text-align:center;">
-    <img align="center" src="/source/docs/assets/images/guides/woocommerce-quickstart/00-pantheon-workflow.png" style="max-width:100%;" alt="Pantheon workflow">
+    <img align="center" src="/source/docs/assets/images/guides/woocommerce/00-pantheon-workflow.png" style="max-width:100%;" alt="Pantheon workflow">
 </p>
 
 We believe so strongly in this that we have our own [workflow process](/docs/pantheon-workflow/) to help you move code from dev to test and from test to live. And move the database from live to test and from test to dev. We'll cover how to do this later in this guide.

@@ -71,7 +71,7 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
 <h2>Ecommerce Guides</h2>
 <div class="flex-panel-group">
   <div class="flex-panel-item-platform-integrations-guides">
-    <a href="/docs/guides/woocommerce-quickstart/">
+    <a href="/docs/guides/woocommerce/">
       <div class="flex-panel-body-platform-integrations">
         <div class="platform-integrations">
           <img style="margin:10px!important;" alt="woocommerce" src="/source/docs/assets/images/logos/woocommerce.png" class="main-topic-info__plugin-image" >
