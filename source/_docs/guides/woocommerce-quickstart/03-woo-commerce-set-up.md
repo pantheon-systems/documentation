@@ -16,7 +16,7 @@ nextpage: Site Configuration
 previousurl: guides/woocommerce-quickstart/understanding-pantheon-workflow/
 previouspage: "Understanding Pantheon's Workflow"
 editpath: woocommerce-quickstart/03-woo-commerce-set-up.md
-image: guides/woocommerce-quickstart/WooCommerce-logo-400-200.png
+image: guides/woocommerce-quickstart/WooCommerce-logo-400-200
 ---
 I've already gone ahead and [created a new site on Pantheon](/docs/guides/quickstart/create-new-site/).
 

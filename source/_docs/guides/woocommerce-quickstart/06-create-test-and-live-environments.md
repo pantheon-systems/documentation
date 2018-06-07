@@ -16,7 +16,7 @@ nextpage: Making a Change on Dev
 previousurl: guides/woocommerce-quickstart/commit-changes/
 previouspage: Commit Changes
 editpath: woocommerce-quickstart/06-create-test-and-live-environments.md
-image: guides/woocommerce-quickstart/WooCommerce-logo-400-200.png
+image: guides/woocommerce-quickstart/WooCommerce-logo-400-200
 ---
 Now that our dev site is configured and backed up, let's create our test and live and environments so we can launch our store from the live environment.
 

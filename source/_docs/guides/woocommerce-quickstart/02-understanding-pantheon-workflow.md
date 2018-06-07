@@ -16,7 +16,7 @@ nextpage: WooCommerce Set Up
 previousurl: guides/woocommerce-quickstart/
 previouspage: Introduction
 editpath: woocommerce-quickstart/02-understanding-pantheon-workflow.md
-image: guides/woocommerce-quickstart/WooCommerce-logo-400-200.png
+image: guides/woocommerce-quickstart/WooCommerce-logo-400-200
 ---
 At Pantheon we believe in workflows and processes that make developer's (and site owner's) lives better. To help with that, every site on Pantheon has three environments:
 

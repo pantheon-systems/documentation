@@ -16,7 +16,7 @@ nextpage: Launching Your Store
 previousurl: guides/woocommerce-quickstart/create-test-and-live-environments/
 previouspage: Create Test and Live Environments
 editpath: woocommerce-quickstart/07-making-a-change-on-dev.md
-image: guides/woocommerce-quickstart/WooCommerce-logo-400-200.png
+image: guides/woocommerce-quickstart/WooCommerce-logo-400-200
 ---
 It's a good security practice to remove any plugins or themes you aren't using. So let's get rid of the themes we aren't using. We'll make the change in our dev environment, then move it to our test environment to QA, and then move it to our live site.
 

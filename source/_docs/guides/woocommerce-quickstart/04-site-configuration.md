@@ -16,7 +16,7 @@ nextpage: Commit Changes
 previousurl: guides/woocommerce-quickstart/woo-commerce-set-up/
 previouspage: WooCommerce Set Up
 editpath: woocommerce-quickstart/04-site-configuration.md
-image: guides/woocommerce-quickstart/WooCommerce-logo-400-200.png
+image: guides/woocommerce-quickstart/WooCommerce-logo-400-200
 ---
 We've configured a few things for our WooCommerce site. But there are a few additional things to configure.
 

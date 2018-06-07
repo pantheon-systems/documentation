@@ -16,7 +16,7 @@ nextpage: Create Test and Live Environments
 previousurl: guides/woocommerce-quickstart/site-configuration/
 previouspage: Site Configuration
 editpath: woocommerce-quickstart/05-commit-changes.md
-image: guides/woocommerce-quickstart/WooCommerce-logo-400-200.png
+image: guides/woocommerce-quickstart/WooCommerce-logo-400-200
 ---
 At Pantheon, we believe in best practices for development, and that includes using [version control](/features/version-control-workflow) - that's why it's built into our platform. We've done a lot on the dev environment so far and at this point we're just about ready to move everything over to the live environment.
 
