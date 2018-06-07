@@ -4,12 +4,12 @@ subtitle: "Understanding Pantheon's Workflow"
 anchorid: understanding-pantheon-workflow
 layout: guide
 type: guide
-woocommerce-quickstart: true
+woocommercequickstart: true
 generator: pagination
 pagination:
-    provider: data.woocommerce-quickstartpages
+    provider: data.woocommercequickstartpages
 use:
-    - woocommerce-quickstartpages
+    - woocommercequickstartpages
 permalink: docs/guides/woocommerce-quickstart/understanding-pantheon-workflow/
 nexturl: guides/woocommerce-quickstart/woo-commerce-set-up/
 nextpage: WooCommerce Set Up

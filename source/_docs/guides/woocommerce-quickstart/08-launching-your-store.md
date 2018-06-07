@@ -1,15 +1,15 @@
 ---
 title: WooCommerce Quick Start
 subtitle: Launching Your Store
-woocommerce-quickstart: true
+woocommercequickstart: true
 anchorid: launching-your-store
 generator: pagination
 layout: guide
 type: guide
 pagination:
-    provider: data.woocommerce-quickstartpages
+    provider: data.woocommercequickstartpages
 use:
-    - woocommerce-quickstartpages
+    - woocommercequickstartpages
 permalink: docs/guides/woocommerce-quickstart/launching-your-store/
 previousurl: guides/woocommerce-quickstart/making-a-change-on-dev/
 previouspage: Making a Change on Dev

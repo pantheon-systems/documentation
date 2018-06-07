@@ -6,7 +6,7 @@ tags: [woocommerce]
 layout: guide
 type: guide
 anchorid: woocommerce-quickstart
-woocommerce-quickstart: true
+woocommercequickstart: true
 generator: pagination
 pagination:
     provider: data.woocommercequickstartpages

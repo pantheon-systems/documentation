@@ -1,15 +1,15 @@
 ---
 title: WooCommerce Quick Start
 subtitle: Commit Changes
-woocommerce-quickstart: true
+woocommercequickstart: true
 anchorid: commit-changes
 generator: pagination
 layout: guide
 type: guide
 pagination:
-    provider: data.woocommerce-quickstartpages
+    provider: data.woocommercequickstartpages
 use:
-    - woocommerce-quickstartpages
+    - woocommercequickstartpages
 permalink: docs/guides/woocommerce-quickstart/commit-changes/
 nexturl: guides/woocommerce-quickstart/create-test-and-live-environments/
 nextpage: Create Test and Live Environments
@@ -20,7 +20,7 @@ image: guides/woocommerce-quickstart/WooCommerce-logo-400-200.png
 ---
 At Pantheon, we believe in best practices for development, and that includes using [version control](/features/version-control-workflow) - that's why it's built into our platform. We've done a lot on the dev environment so far and at this point we're just about ready to move everything over to the live environment.
 
-However, there's one thing we need to do first. Whenever you install a plugin or write custom code you'll have to commit your changes 
+However, there's one thing we need to do first. Whenever you install a plugin or write custom code you'll have to commit your changes
 
 Pantheon has two ways to commit changes. [SFTP mode](/docs/sftp/), which looks at what files you uploaded and automatically tracks them to be committed, and git mode, which allows you to commit files directly with git. git mode is great for working locally, and SFTP mode is great for working directly on Pantheon.
 

@@ -1,15 +1,15 @@
 ---
 title: WooCommerce Quick Start
 subtitle: Making a Change on Dev
-woocommerce-quickstart: true
+woocommercequickstart: true
 anchorid: making-a-change-on-dev
 generator: pagination
 layout: guide
 type: guide
 pagination:
-    provider: data.woocommerce-quickstartpages
+    provider: data.woocommercequickstartpages
 use:
-    - woocommerce-quickstartpages
+    - woocommercequickstartpages
 permalink: docs/guides/woocommerce-quickstart/making-a-change-on-dev/
 nexturl: guides/woocommerce-quickstart/launching-your-store/
 nextpage: Launching Your Store

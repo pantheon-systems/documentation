@@ -1,15 +1,15 @@
 ---
 title: WooCommerce Quick Start
 subtitle: Create Test and Live Environments
-woocommerce-quickstart: true
+woocommercequickstart: true
 anchorid: create-test-and-live-environments
 generator: pagination
 layout: guide
 type: guide
 pagination:
-    provider: data.woocommerce-quickstartpages
+    provider: data.woocommercequickstartpages
 use:
-    - woocommerce-quickstartpages
+    - woocommercequickstartpages
 permalink: docs/guides/woocommerce-quickstart/create-test-and-live-environments/
 nexturl: guides/woocommerce-quickstart/making-a-change-on-dev/
 nextpage: Making a Change on Dev

@@ -1,15 +1,15 @@
 ---
 title: WooCommerce Quick Start
 subtitle: WooCommerce Set Up
-woocommerce-quickstart: true
+woocommercequickstart: true
 anchorid: woo-commerce-set-up
 generator: pagination
 layout: guide
 type: guide
 pagination:
-    provider: data.woocommerce-quickstartpages
+    provider: data.woocommercequickstartpages
 use:
-    - woocommerce-quickstartpages
+    - woocommercequickstartpages
 permalink: docs/guides/woocommerce-quickstart/woo-commerce-set-up/
 nexturl: guides/woocommerce-quickstart/site-configuration/
 nextpage: Site Configuration
