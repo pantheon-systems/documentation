@@ -67,13 +67,13 @@ To disable Drupal's standard cron:
 2. Select **Never** from the "Run cron every" drop-down menu.
 3. Click **save configuration**:
 
-  ![Stop cron from running](/source/docs/assets/images/run-cron-config.png)  
+  ![Stop cron from running](/source/docs/assets/images/run-cron-config.png)
 
   <div class="alert alert-info">
   <h4 class="info">Note</h4>
   <p markdown="1">This configuration disables cron execution in Drupal, but it does not affect Pantheon's cron execution at the platform level which runs every hour on all environments.</p></div>
 
-Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} contrib module to extend the standard cron can globally disable it in the module's settings:  
+Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} contrib module to extend the standard cron can globally disable it in the module's settings:
 
 ![disable cron globally by Elysia Cron](/source/docs/assets/images/disable_cron_elysia.png)
 
@@ -94,12 +94,16 @@ The maximum execution time of cron is 180 seconds (3 minutes).
 
 ### How can I find out when cron last ran?
 
-You can check the log messages through the Drupal Admin interface.  
+You can check the log messages through the Drupal Admin interface.
 
 You can also use [Terminus](/docs/terminus/) to see when cron was last run with the following command:
 ```bash
 terminus drush <site>.<env> -- wd-show --type='cron'
 ```
+
+### Can I add taks to cron through Drupal?
+
+No. You can create a custom module that uses the [`hook_cron`](https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_cron/8.6.x){.external} function, or schedule a drush command to be run via [Terminus](/source/docs/terminus/) from your local cron, or an external service like [cron-job.org](https://cron-job.org/){.external}.
 
 ## Resources
 
