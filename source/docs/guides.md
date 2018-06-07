@@ -68,6 +68,27 @@ description: Pantheon step-by-step guides covering platform integrations, perfor
       </div>
   </div>
 </div>
+<h2>Ecommerce Guides</h2>
+<div class="flex-panel-group">
+  <div class="flex-panel-item-platform-integrations-guides">
+    <a href="/docs/guides/woocommerce-quickstart/">
+      <div class="flex-panel-body-platform-integrations">
+        <div class="platform-integrations">
+          <img style="margin:10px!important;" alt="woocommerce" src="/source/docs/assets/images/logos/woocommerce.png" class="main-topic-info__plugin-image" >
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="flex-panel-item-platform-integrations-guides">
+    <a href="/docs/guides/drupal-8-commerce/">
+      <div class="flex-panel-body-platform-integrations">
+        <div class="platform-integrations">
+          <img style="margin:10px!important;" alt="drupalcommerce" src="/source/docs/assets/images/logos/drupalcommerce.png" class="main-topic-info__plugin-image" >
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
 <h2>Platform Integration Guides</h2>
 <div class="flex-panel-group">
   <div class="flex-panel-item-platform-integrations-guides">
