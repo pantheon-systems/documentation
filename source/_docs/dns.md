@@ -6,7 +6,11 @@ categories: []
 contributors: alexfornuto
 ---
 
-**DNS** stands for Domain Name Service, and it's the protocol by which domain names are pointed to the servers that host content. While Pantheon does not offer DNS management services, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site.
+**DNS** stands for Domain Name Service, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/docs/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
+
+![DNS Reccomendations](/source/docs/assets/images/dashboard/domain-added.png)
+
+While Pantheon does not offer DNS management services, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site. We also offer [DNS Provider](/docs/dns-providers/)-specific instructions for several common DNS managers.
 
 ## DNS Terminology
 
@@ -57,6 +61,8 @@ When you're planning a site migration, follow these simple steps to help minimiz
 
 3. Once the migration is complete, raise the TTL values back to `3600` (24 hours) to impove stability in case of a DNS service outage.
 
+
+
 ## Frequently Asked Questions
 
 ### Where are my DNS records hosted?
@@ -89,7 +95,26 @@ The example above uses `| grep Registrar:` to filter the results to what we're l
 
 ### Can I buy my domain or manage DNS with Pantheon?
 
-No, Pantheon is neither a domain registrar nor a DNS manager.
+No, Pantheon is neither a domain registrar nor a DNS manager. Many other platforms and hosting providers offer DNS servers and while it's convenient, it's often inflexible. Providers that offer nameservers usually build other features (like HTTPS) in a way that will only work for customers who use the provided nameservers. This approach is fine until it interferes with more advanced deployments.
+
+
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#nameservers-drop">
+      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Learn More</h3>
+    </a>
+  </div>
+  <div id="nameservers-drop" class="collapse" markdown="1" style="padding:10px;">
+  Pantheon is built to support advanced website deployment needs, and that means allowing site owners to use the DNS provider of their choice. If Pantheon required specific nameservers, it would interfere with these major use cases (among others):
+
+  * **Large organizations and institutions with Information Technology departments that operate or configure DNS.** If Pantheon required use of particular DNS servers, it would intefere with the ability to use Pantheon for the organization's websites.
+  * **Digitally signing DNS records using a system like [DNSSec](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions){.external}.** While it would be technically possible for Pantheon to host records signed offline, it's much easier for interested organizations to operate their own DNS or choose a provider that supports the desired signing methods.
+  * **Uncommon record types.** If Pantheon required use of specific nameservers, it's unlikely that all of the desired record types would be available, particularly legacy ones.
+  * **Programmatic updates.** Such use cases include domain control validation for obtaining certificates and automated responses to security events. Different DNS services support different update APIs, and it's unlikely Pantheon would ever be able to support them all.
+
+  If your site doesn't have these advanced needs, there are free and inexpensive options outside of Pantheon. We recommend considering your domain registrar's DNS services, [Amazon Route 53](https://aws.amazon.com/route53/){.external}, [Google Cloud DNS](https://cloud.google.com/dns/){.external}, or [Cloudflare](https://woorkup.com/cloudflare-dns/){.external}.
+  </div>
+</div>
 
 ### Why does the `www` subdomain redirect to the bare domain?
 
@@ -100,6 +125,8 @@ Some DNS providers provide a default `CNAME` record for `www` pointing to `@` (t
 **AAAA** or "quad-A" records are used to assign [IPv6](https://en.wikipedia.org/wiki/IPv6){.external} addresses to domain names. While most of the internet still uses IPv4, the address pool has been exhausted and IPv6 became the standard as of July 14th, 2017.
 
 Pantheon provides IPv6 addresses for you to assign `AAAA` records to. If your DNS service does not support `AAAA` you can simply omit this records for now, but consider asking your provider to add functionality, as the need for IPv6 will only increase in the future.
+
+Some DNS service providers require expanded AAAA records. You can retrieve the expanded version for each AAAA record by using the [IPv6 conversion tool](http://ipv6-literal.com/){.external} and copying the "IPv6 longest" result.
 
 
 ### What about my `MX` records for email?

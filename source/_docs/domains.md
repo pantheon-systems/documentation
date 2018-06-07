@@ -1,5 +1,5 @@
 ---
-title: Platform and Custom Domains  
+title: Platform and Custom Domains
 description: Work with platform domains or connect custom domains in the Site Dashboard, then redirect requests via PHP to standardize traffic on HTTPS and a primary domain.
 tags: [redirects, variables, dns]
 categories: []
@@ -36,39 +36,17 @@ If you don't already own a domain name, register one with a third-party provider
 <h4 class="info">Note</h4>
 <p markdown="1">Add all domains (example.com and www.example.com are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/docs/guides/launch/). Automatic resolution of domains and wildcards are not supported.</p></div>
 
-### Configure DNS
-A custom domain requires specific DNS configurations to handle requests for your Pantheon site. We recommend configuring the following record types wherever you host DNS services for the domain:
+### Add a Custom Domain
 
-- CNAME
-- A
-- AAAA (2)
+1. From your site dashboard, for the environment you want the domain to point to (usually Live), click on <em class="fa fa-home"></em>**Domains**, and enter your domain name:
 
-Some DNS service providers do not support AAAA records, which are used to map IPv6 addresses. IPv6 offers security benefits and performance gains, especially for mobile users. This is largely because the new protocol is capable of carrying larger packets, resulting in fewer roundtrips per request. We strongly recommend transferring DNS services to a provider that supports IPv6 in order to take advantage of these benefits.
+    ![Adding a new domain to the Site Dashboard](/source/docs/assets/images/dashboard/domains-add-new.png)
 
-Some DNS service providers require expanded AAAA records. You can retrieve the expanded version for each AAAA record by using the [IPv6 conversion tool](http://ipv6-literal.com/){.external} and copying the "IPv6 longest" result.
+2. Click **Show DNS Recommendations** to see the DNS values suggested:
 
-For details on what values to use when configuring DNS, refer to [Launch Essentials](/docs/guides/launch/configure-dns/).
+    ![DNS Values for new domain](/source/docs/assets/images/dashboard/domain-added.png)
 
-#### Nameservers
-Pantheon does not host DNS zones or provide nameserver records. Many other platforms and hosting providers offer DNS servers and while it's convenient, it's often inflexible. Providers that offer nameservers usually build other features (like HTTPS) in a way that will only work for customers who use the provided nameservers. This approach is fine until it interferes with more advanced deployments.
-
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#nameservers-drop">
-      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Learn More</h3>
-    </a>
-  </div>
-  <div id="nameservers-drop" class="collapse" markdown="1" style="padding:10px;">
-  Pantheon is built to support advanced website deployment needs, and that means allowing site owners to use the DNS provider of their choice. If Pantheon required specific nameservers, it would interfere with these major use cases (among others):
-
-  * **Large organizations and institutions with Information Technology departments that operate or configure DNS.** If Pantheon required use of particular DNS servers, it would intefere with the ability to use Pantheon for the organization's websites.
-  * **Digitally signing DNS records using a system like [DNSSec](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions){.external}.** While it would be technically possible for Pantheon to host records signed offline, it's much easier for interested organizations to operate their own DNS or choose a provider that supports the desired signing methods.
-  * **Uncommon record types.** If Pantheon required use of specific nameservers, it's unlikely that all of the desired record types would be available, particularly legacy ones.
-  * **Programmatic updates.** Such use cases include domain control validation for obtaining certificates and automated responses to security events. Different DNS services support different update APIs, and it's unlikely Pantheon would ever be able to support them all.
-
-  If your site doesn't have these advanced needs, there are free and inexpensive options outside of Pantheon. We recommend considering your domain registrar's DNS services, [Amazon Route 53](https://aws.amazon.com/route53/){.external}, [Google Cloud DNS](https://cloud.google.com/dns/){.external}, or [Cloudflare](https://woorkup.com/cloudflare-dns/){.external}.
-  </div>
-</div>
+3. Add the values to your DNS management service. If you need help, see our [DNS](/docs/dns/) help doc.
 
 ## Primary Domain
 Pantheon uses the term **primary domain** to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other domain connected to the environment) all get redirected to `www.example.com`.
