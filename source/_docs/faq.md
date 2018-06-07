@@ -148,7 +148,7 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 ### What version of Apache Solr does Pantheon run?
 
-We're currently testing out integration strategies for Solr with our next-generation infrastructure. When we deploy it, it will almost certainly be the latest stable Solr available at that time.
+Currently, the version of Solr on Pantheon is Apache Solr v3.6. See our documentation for details about configuring Solr for [WordPress](/docs/wordpress-solr/), [Drupal 7](/docs/solr-drupal-7/) and [Drupal 8](/docs/solr-drupal-8/).
 
 
 ## Support
