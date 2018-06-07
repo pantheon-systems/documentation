@@ -16,7 +16,7 @@ Older software is more likely to contain code that is incompatible with recent P
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
 ### Available PHP Versions
-Supported PHP versions are:
+The PHP versions available on Pantheon are:
 
 - [7.2](https://v72-php-info.pantheonsite.io/)
 - [7.1](https://v71-php-info.pantheonsite.io/)
@@ -27,7 +27,11 @@ Click on the links above to see the complete PHP info for each version, includin
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Drupal 6 sites are only compatible with PHP 5.4 and below.
+<p markdown="1">Before changing your PHP version, confirm that your CMS is compatible:</p>
+<p markdown="1"> - [WordPress Requirements](https://wordpress.org/about/requirements/){.external}</p>
+<p markdown="1"> - [Drupal 8 PHP versions supported](https://www.drupal.org/docs/8/system-requirements/php-requirements#php_required){.external}</p>
+<p markdown="1"> - [ Drupal 7 PHP versions supported](https://www.drupal.org/docs/7/system-requirements/drupal-7-php-requirements#php_required){.external}</p>
+<p markdown="1"> - Drupal 6 sites are only compatible with PHP 5.4 and below.
 </p></div>
 
 ## Configure PHP Version
