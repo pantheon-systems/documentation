@@ -2,6 +2,7 @@
 title: Manage Plans in the Site Dashboard
 description: Upgrade a free site to a paid plan or downgrade a site's current plan within the Site Dashboard.
 tags: [billing]
+contributors: [cityofoaksdesign]
 ---
 ## Access Site Plan
 1. Go to the Site Dashboard.
@@ -10,7 +11,7 @@ tags: [billing]
  Otherwise, click the **current plan**:
  ![Change current plan for paid sites](/source/docs/assets/images/dashboard/change-plan.png)
 
-Plan changes take immediate effect. The associated card will be charged or credited a prorated amount upon upgrade or downgrade even if the site has not launched.
+Plan changes take immediate effect. The associated card will be charged or credited a prorated amount upon upgrade or downgrade. We recommend staying on the free Sandbox plan until you're ready to launch the site and handle traffic over a custom domain.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
