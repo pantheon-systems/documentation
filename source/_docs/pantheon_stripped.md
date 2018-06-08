@@ -66,14 +66,6 @@ Finally, to optimize caching performance, make sure any parameters are in the su
 
 For more information, see [Caching: Advanced Topics](/docs/caching-advanced-topics).
 
-To avoid recycling query strings and tracking parameters on URLs within a site's framework, place the following within `settings.php` (Drupal) or `wp-config.php` (WordPress):
-
-```
-// Remove query strings and tracking parameters from URLs
-$strip = array('/&?__.+?(&|$)$/', '/&?utm_.+?(&|$)$/');
-$_SERVER['REQUEST_URI'] = preg_replace( $strip, '', $_SERVER['REQUEST_URI'] );
-```
-
 #### Which query parameters are optimized?
 
 Any URL query parameters (GET requests) matching the following criteria will have its value replaced with `PANTHEON_STRIPPED`:
@@ -88,3 +80,17 @@ You can use [curl](https://curl.haxx.se//) or [wget](https://www.gnu.org/softwar
 # example using curl and grep
 curl -i "https://live-mysite.pantheon.io/landing_page.html?utm_source=test-source&utm_medium=test-campaign&utm_term=test-term&utm_content=test-content&utm_campaign=test" | grep utm
 ```
+
+## FAQ
+
+### What if I have a link in the wild that’s not in its final, non-redirectable form?
+
+To resolve these links before they hit the application, place the following within `settings.php` (Drupal) or `wp-config.php` (WordPress):
+
+```
+// Remove query strings and tracking parameters from URLs
+$strip = array('/[&?]__.+?(&|$)$/', '/[&?]utm_.+?(&|$)$/');
++ $_SERVER['REQUEST_URI'] = preg_replace($strip, '', $_SERVER['REQUEST_URI']);
+```
+
+Adjust the regex as required to match your link's parameters.
