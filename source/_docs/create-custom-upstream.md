@@ -231,7 +231,7 @@ You cannot modify the repository URL on existing Custom Upstreams. If there is a
 <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus1copy">Copy</button>
 <figure><pre id="terminus1copy"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My New Custom Upstream"</code></pre></figure></div>
 
-After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/docs/terminus/examples/#switch-upstreams).
+You must be a site owner to switch a site's upstream. After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/docs/terminus/examples/#switch-upstreams).
 
 Once all sites have been updated to track the new Custom Upstream, you can safely delete the old one:
 
