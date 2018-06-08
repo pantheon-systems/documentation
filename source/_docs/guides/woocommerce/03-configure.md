@@ -1,6 +1,6 @@
 ---
 title: WooCommerce Quick Start
-subtitle: Site Configuration
+subtitle: Configure
 woocommerce: true
 anchorid: configure
 generator: pagination
@@ -13,8 +13,8 @@ use:
 permalink: docs/guides/woocommerce/configure/
 nexturl: guides/woocommerce/commit/
 nextpage: Commit Changes
-previousurl: guides/woocommerce/install/
-previouspage: WooCommerce Set Up
+previousurl: guides/woocommerce/store-setup/
+previouspage: Store Setup
 editpath: woocommerce/03-configure.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 ---
@@ -22,19 +22,15 @@ We've configured a few things for our WooCommerce site. But there are a few addi
 
 The first is [adding PHP sessions to WordPress](/docs/wordpress-sessions/). WordPress doesn't include any state tracking which makes it challenging for any plugin to remember which user did what - and for ecommerce that means who added what to their cart.
 
-To solve this, **you must** install [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/). It's a free plugin you can download from WordPress.org or install through your WordPress dashboard.
+To solve this, _you must_ install [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/){.external}. It's a free plugin you can download from WordPress.org or install through your WordPress dashboard.
 
-<p style="text-align:center;">
-    <img align="center" src="/source/docs/assets/images/guides/woocommerce/10-install-WordPress-native-PHP-sessions-plugin.png" style="max-width:100%;" alt="Install WordPress native PHP sessions plugin">
-</p>
+![Install WordPress native PHP sessions plugin](/source/docs/assets/images/guides/woocommerce/10-install-WordPress-native-PHP-sessions-plugin.png)
 
 I'll install mine through the plugin installer.
 
-For any site, speed is important, and for eCommerce it's even more important. That's why Pantheon recommends the [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This plugin allows selective cache purging and longer cache lifetimes.
+For any site, speed is important, and for eCommerce it's even more important. That's why Pantheon recommends the [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}. This plugin allows selective cache purging and longer cache lifetimes.
 
-<p style="text-align:center;">
-    <img align="center" src="/source/docs/assets/images/guides/woocommerce/11-install-Pantheon-advanced-page-cache-plugin.png" style="max-width:100%;" alt="Install Pantheon Advanced Page Cache plugin">
-</p>
+![Install Pantheon Advanced Page Cache plugin](/source/docs/assets/images/guides/woocommerce/11-install-Pantheon-advanced-page-cache-plugin.png)
 
 You can [read more about exactly how this works](https://pantheon.io/blog/optimizing-woocommerce-pantheon-advanced-page-cache-wordpress){.external}. For our purposes, it speeds up your site and it's worth installing.
 
@@ -42,8 +38,6 @@ You've probably noticed that your Pantheon site already loads in HTTPS. But whil
 
 We have a [whole document explaining how to load your entire site in HTTPS](/docs/http-to-https/#wp). This may take a while to set up, so what you can do to get going immediately is configure WooCommerce to force the checkout to load in HTTPS.
 
-<p style="text-align:center;">
-    <img align="center" src="/source/docs/assets/images/guides/woocommerce/12-force-secure-checkout.png" style="max-width:100%;" alt="Force HTTPS in checkout">
-</p>
+![Force HTTPS in checkout](/source/docs/assets/images/guides/woocommerce/12-force-secure-checkout.png)
 
-Make sure “Force secure checkout” is enabled in WooCommerce -> Settings -> Checkout -> Checkout Settings. This has the added benefit of getting rid of one of the admin notices in the backend of your site.
+Make sure **Force secure checkout** is enabled in **WooCommerce** > **Settings** > **Checkout** > **Checkout Settings**. This has the added benefit of getting rid of one of the admin notices in the backend of your site.

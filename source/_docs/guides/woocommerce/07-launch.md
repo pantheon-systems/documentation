@@ -1,6 +1,6 @@
 ---
 title: WooCommerce Quick Start
-subtitle: Launching Your Store
+subtitle: Launch Your Store
 woocommerce: true
 anchorid: launch
 generator: pagination
@@ -12,7 +12,7 @@ use:
     - woocommercepages
 permalink: docs/guides/woocommerce/launch/
 previousurl: guides/woocommerce/develop/
-previouspage: Making a Change on Dev
+previouspage: Continue Development
 editpath: woocommerce/07-launch.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 survey: true

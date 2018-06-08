@@ -246,10 +246,7 @@
         for(i=0;i<aaObj.length;i++) {
             if(document.location.href.indexOf(aaObj[i].href)>=0 ){
                 aaObj[i].className='active-trail';
-                if(/\/workflow.*/.test(aaObj[i].href)>=1) {
-                    $('#docs-guides-woocommerce').removeClass('active-trail');
-                }
-                if(/\/install.*/.test(aaObj[i].href)>=1) {
+                if(/\/store-setup.*/.test(aaObj[i].href)>=1) {
                     $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
                 if(/\/configure.*/.test(aaObj[i].href)>=1) {
@@ -258,7 +255,7 @@
                 if(/\/commit.*/.test(aaObj[i].href)>=1) {
                     $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
-                if(/\/deploy.*/.test(aaObj[i].href)>=1) {
+                if(/\/initialize-prod.*/.test(aaObj[i].href)>=1) {
                     $('#docs-guides-woocommerce').removeClass('active-trail');
                 }
                 if(/\/develop.*/.test(aaObj[i].href)>=1) {
