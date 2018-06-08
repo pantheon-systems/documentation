@@ -15,8 +15,11 @@
             <header>
               <h1>{{ page.subtitle }}</h1>
               {% if page.contributors %}
+                {% if page.featuredcontributor %}
+                {% else %}
                 {% set contributor_list = page.contributors %}
                 <small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small>
+                {% endif %}
               {% endif %}
               {% set fullpath = page.url|replace({'/docs': '/_docs', '/_guides': '/guides', '/_videos': '/vidoes'}) %}
               <div class="dropdown">
@@ -59,6 +62,9 @@
               {% endif %}
               <hr style="margin-top:10px;margin-bottom:10px;">
               </header>
+              {% if page.featuredcontributor %}
+                {% include 'featured-contributor.html' %}
+              {% endif %}
               {{ page.blocks.content|raw }}
               {% if page.survey %}
                <iframe style="width:100%;min-height:300px;" frameborder="0" src="https://www.getfeedback.com/r/tfYOGoE7?guide={{page.title}}"></iframe>
@@ -67,6 +73,7 @@
             {% if page.guidetoc %}
               {% include ("sidebarnav.html") %}
             {% endif %}
+
           </div>
             {% if (page.previousurl) or (page.nexturl) %}
               <div class="row terminus-pager col-md-12">

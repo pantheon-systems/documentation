@@ -5,7 +5,7 @@ title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
 site_url: https://pantheon.io
-assets_version: 11.4
+assets_version: 12.0
 
 #######################################################################################################
 # The contributors. Include your info here, under the "contributors" key, using the following template:
@@ -323,7 +323,7 @@ contributors:
   BFTrick:
     name: Patrick Rauland
     twitter: BFTrick
-    bio: Patrick is an ecommerce consultant and educator who creates courses for Lynda.com and LinkedIn Learning, as well as helping to plan WooCommerce events with Automattic and others.
+    bio: Ecommerce consultant, LinkedIn Learning instructor, and content creator for Lynda.com. WooCommerce events planner with Automattic and others.
     avatar: /docs/assets/images/guides/woocommerce/Patrick-Rauland-headshot.jpg
     github: //github.com/BFTrick
     linkedin: https://www.linkedin.com/learning/instructors/patrick-rauland?u=2125562

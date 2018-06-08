@@ -4,6 +4,7 @@ subtitle: Introduction
 description: The Quick Start guide is designed to get you started on Pantheon.
 tags: [woocommerce]
 contributors: [BFTrick]
+featuredcontributor: true
 layout: guide
 type: guide
 anchorid: woocommerce

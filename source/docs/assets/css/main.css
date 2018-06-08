@@ -3247,10 +3247,8 @@ display: block;
 }
 .contributor {
     background-color:#F0F4F5;
-    border-style: hidden;
-    border-width: thin;
-    border-radius: 4px;
-    margin: 15px 15px 0px 0px;
+    padding: 15px;
+    margin: 20px 0px 20px 0px;
 }
 .jumbotron {
   text-align: left;
@@ -4378,8 +4376,8 @@ a.cta.cta-black-on-yellow:after:hover {
 
 /* Author Info */
 .author-info {
-  margin-bottom: 254px;
-  margin-top: 140px
+/*  margin-bottom: 254px;
+  margin-top: 140px*/
 }
 .author-info__name{
   font-size: 24px;
@@ -4402,6 +4400,86 @@ a.cta.cta-black-on-yellow:after:hover {
   height:auto;
   border:none;
   width: 200px;
+}
+/* Guest Info */
+#guest-info {
+  border: #ddd solid 1px;
+  padding: 50px;
+  margin: 20px 0px 20px 0px;
+
+}
+.preview-contributor {
+  display: flow-root;
+  margin: 20px 20px 20px 20px;
+  border: 1px solid #ddd;
+  background-color: #f7f7f7;
+
+}
+.guest-contributor {
+  margin: 20px 0px 20px 0px;
+  border: 1px solid #ddd;
+}
+.media-body h1 {
+  margin-top:0px;
+}
+.media-body h2 {
+  margin-top:10px;
+}
+.media-heading h3 a, .media-heading h3 {
+  font-weight: bold;
+  font-family: 'TabletGothic';
+}
+
+.guest-info__header {
+  font-weight: 300;
+}
+.guest-info__name{
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.2;
+  margin-top:10px;
+}
+.guest-info__title {
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+.guest-info__img {
+  text-align: left;
+}
+.guest-info__img img {
+  margin: 20px;
+  border-radius: 50% !important;
+  height: auto;
+  border: none !important;
+  width: 200px;
+  padding: unset !important
+}
+.preview-info__img img {
+  margin: 20px;
+  border-radius: 50% !important;
+  height: auto;
+  border: none !important;
+  width: 150px;
+  padding: unset !important
+}
+
+.media-body {
+  padding:15px;
+  padding-top:30px;
+
+}
+.media-body__featured {
+  padding:15px;
+  display: table;
+  min-width: 400px;
+
+}
+.media-body__preview {
+  padding:15px;
+  padding-top:30px;
+  display: table;
+
 }
 
 
@@ -5215,6 +5293,12 @@ div.navsearch-container {
   display: flex;
   flex-flow: row wrap;
   margin-left: -15px;
+}
+.preview-flex-panel-item {
+  flex: 1 46%;
+  margin: 0px 0px 15px 15px;
+  color: #333;
+  min-width: 450px;
 }
 .flex-panel-item {
   flex: 1 30%;
