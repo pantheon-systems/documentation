@@ -284,6 +284,37 @@ There are two types of callouts used in our docs, notes and warnings:
 ```
 </div>
 
+### Success
+Success callouts are used infrequently, usually in guides with specific end results expected. Use success callouts to differentiate between two binary results.
+
+<div class="style-example" markdown="1">
+
+<div class="alert alert-danger">
+  <h4 class="info"><span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration</h4>
+  <p markdown="1">![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)</p>
+</div>
+
+<div class="alert alert-success">
+  <h4 class="info"><span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration</h4>
+  <p markdown="1">![Correct vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/correct-vanity-cname-dns.png)</p>
+</div>
+
+
+<hr class="source-code">
+```html
+<div class="alert alert-danger">
+  <h4 class="info"><span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration</h4>
+  <p markdown="1">![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)</p>
+</div>
+
+<div class="alert alert-success">
+  <h4 class="info"><span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration</h4>
+  <p markdown="1">![Correct vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/correct-vanity-cname-dns.png)</p>
+</div>
+```
+
+</div>
+
 ## Tabs
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
