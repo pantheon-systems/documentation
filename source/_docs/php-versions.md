@@ -25,13 +25,14 @@ The PHP versions available on Pantheon are:
 
 Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions. Pantheon also makes PHP [5.3](https://v53-php-info.pantheonsite.io/) and [5.5](https://v55-php-info.pantheonsite.io/) available on the platform, although these are end-of-life, and should not be used unless absolutely necessary.
 
-<div class="alert alert-info" role="alert">
+<div markdown="1" class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p markdown="1">Before changing your PHP version, confirm that your CMS is compatible:</p>
-<p markdown="1"> - [WordPress Requirements](https://wordpress.org/about/requirements/){.external}</p>
-<p markdown="1"> - [Drupal 8 PHP versions supported](https://www.drupal.org/docs/8/system-requirements/php-requirements#php_required){.external}</p>
-<p markdown="1"> - [ Drupal 7 PHP versions supported](https://www.drupal.org/docs/7/system-requirements/drupal-7-php-requirements#php_required){.external}</p>
-<p markdown="1"> - Drupal 6 sites are only compatible with PHP 5.4 and below.
+
+* [WordPress Requirements](https://wordpress.org/about/requirements/){.external}
+* [Drupal 8 PHP versions supported](https://www.drupal.org/docs/8/system-requirements/php-requirements#php_required){.external}
+* [ Drupal 7 PHP versions supported](https://www.drupal.org/docs/7/system-requirements/drupal-7-php-requirements#php_required){.external}
+* Drupal 6 sites are only compatible with PHP 5.4 and below.
 </p></div>
 
 ## Configure PHP Version
