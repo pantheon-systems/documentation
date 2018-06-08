@@ -13,9 +13,9 @@ use:
 permalink: docs/guides/woocommerce/install/
 nexturl: guides/woocommerce/configure/
 nextpage: Site Configuration
-previousurl: guides/woocommerce/workflow/
-previouspage: Understanding Pantheon's Workflow
-editpath: woocommerce/03-install.md
+previousurl: guides/woocommerce/
+previouspage: Introduction
+editpath: woocommerce/02-install.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 I've already gone ahead and [created a new site on Pantheon](/docs/guides/quickstart/create-new-site/).

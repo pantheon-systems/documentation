@@ -13,7 +13,7 @@ use:
 permalink: docs/guides/woocommerce/launch/
 previousurl: guides/woocommerce/develop/
 previouspage: Making a Change on Dev
-editpath: woocommerce/08-launch.md
+editpath: woocommerce/07-launch.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 survey: true
 ---

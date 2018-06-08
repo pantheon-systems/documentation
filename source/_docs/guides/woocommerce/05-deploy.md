@@ -15,7 +15,7 @@ nexturl: guides/woocommerce/develop/
 nextpage: Making a Change on Dev
 previousurl: guides/woocommerce/commit/
 previouspage: Commit Changes
-editpath: woocommerce/06-deploy.md
+editpath: woocommerce/05-deploy.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 Now that our dev site is configured and backed up, let's create our test and live and environments so we can launch our store from the live environment.

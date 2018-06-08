@@ -15,7 +15,7 @@ nexturl: guides/woocommerce/launch/
 nextpage: Launching Your Store
 previousurl: guides/woocommerce/deploy/
 previouspage: Create Test and Live Environments
-editpath: woocommerce/07-develop.md
+editpath: woocommerce/06-develop.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 It's a good security practice to remove any plugins or themes you aren't using. So let's get rid of the themes we aren't using. We'll make the change in our dev environment, then move it to our test environment to QA, and then move it to our live site.

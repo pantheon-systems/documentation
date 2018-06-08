@@ -15,7 +15,7 @@ nexturl: guides/woocommerce/commit/
 nextpage: Commit Changes
 previousurl: guides/woocommerce/install/
 previouspage: WooCommerce Set Up
-editpath: woocommerce/04-configure.md
+editpath: woocommerce/03-configure.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 We've configured a few things for our WooCommerce site. But there are a few additional things to configure.
