@@ -18,7 +18,7 @@ previouspage: Site Configuration
 editpath: woocommerce/05-commit.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 ---
-At Pantheon, we believe in best practices for development, and that includes using [version control](/features/version-control-workflow) - that's why it's built into our platform. We've done a lot on the dev environment so far and at this point we're just about ready to move everything over to the live environment.
+At Pantheon, we believe in best practices for development, and that includes using [version control](https://pantheon.io/features/version-control-workflow){.external} - that's why it's built into our platform. We've done a lot on the dev environment so far and at this point we're just about ready to move everything over to the live environment.
 
 However, there's one thing we need to do first. Whenever you install a plugin or write custom code you'll have to commit your changes
 

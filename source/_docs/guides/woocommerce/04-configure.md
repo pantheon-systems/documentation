@@ -36,7 +36,7 @@ For any site, speed is important, and for eCommerce it's even more important. Th
     <img align="center" src="/source/docs/assets/images/guides/woocommerce/11-install-Pantheon-advanced-page-cache-plugin.png" style="max-width:100%;" alt="Install Pantheon Advanced Page Cache plugin">
 </p>
 
-You can [read more about exactly how this works](/blog/optimizing-woocommerce-pantheon-advanced-page-cache-wordpress). For our purposes, it speeds up your site and it's worth installing.
+You can [read more about exactly how this works](https://pantheon.io/blog/optimizing-woocommerce-pantheon-advanced-page-cache-wordpress){.external}. For our purposes, it speeds up your site and it's worth installing.
 
 You've probably noticed that your Pantheon site already loads in HTTPS. But while it loads HTTPS, it doesn't force HTTPS. For your users' privacy, for payment, and for SEO reasons it's a best practice to force the site to load in HTTPS.
 
