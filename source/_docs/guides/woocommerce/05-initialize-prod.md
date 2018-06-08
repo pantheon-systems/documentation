@@ -77,8 +77,8 @@ Now let's bring these changes back to our test site:
 
 4. Finally click **Clone the Database from Live into the Test Environment**:
 
-![Cloning database and files on the Pantheon dashboard](/source/docs/assets/images/guides/woocommerce/25-Pantheon-dashboard-clone-database-files.png)
+  ![Cloning database and files on the Pantheon dashboard](/source/docs/assets/images/guides/woocommerce/25-Pantheon-dashboard-clone-database-files.png)
 
-If you login to WordPress you'll see the order in the **<span class="glyphicons glyphicons-equalizer"></span> Test** environment:
+  If you login to WordPress you'll see the order in the **<span class="glyphicons glyphicons-equalizer"></span> Test** environment:
 
-![A test order in the WooCommerce dashboard](/source/docs/assets/images/guides/woocommerce/26-WooCommerce-dashboard-test-order.png)
+  ![A test order in the WooCommerce dashboard](/source/docs/assets/images/guides/woocommerce/26-WooCommerce-dashboard-test-order.png)

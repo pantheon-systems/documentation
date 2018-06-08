@@ -42,10 +42,10 @@ It's a good security practice to remove any plugins or themes you aren't using. 
 
 
 
-When you're moving files (ex. Uploaded media files, such as images) or the database, use the clone functionality in the Pantheon dashboard. When you're moving code, use the deploy functionality. As a reminder, code should be deployed from the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment to **<span class="glyphicons glyphicons-equalizer"></span> Test** and then **<span class="glyphicons glyphicons-cardio"></span> Live** environments. The database and files (content) should be cloned from the live environment back down to the **<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-wrench"></span> Dev** environments periodically to keep them up to date with the latest content.
+  When you're moving files (ex. Uploaded media files, such as images) or the database, use the clone functionality in the Pantheon dashboard. When you're moving code, use the deploy functionality. As a reminder, code should be deployed from the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment to **<span class="glyphicons glyphicons-equalizer"></span> Test** and then **<span class="glyphicons glyphicons-cardio"></span> Live** environments. The database and files (content) should be cloned from the live environment back down to the **<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-wrench"></span> Dev** environments periodically to keep them up to date with the latest content.
 
-With a quick test we can see all of the other themes were deleted, leaving only the active  Storefront theme.
+  With a quick test we can see all of the other themes were deleted, leaving only the active  Storefront theme.
 
-![The WordPress dashboard showing only a single theme installed](/source/docs/assets/images/guides/woocommerce/31-WordPress-dashboard-single-theme.png)
+  ![The WordPress dashboard showing only a single theme installed](/source/docs/assets/images/guides/woocommerce/31-WordPress-dashboard-single-theme.png)
 
 Now that you know how to move content changes around you can keep your store live and accepting new orders while you add functionality to your site in the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment and then test the new changes in the **<span class="glyphicons glyphicons-equalizer"></span> Test** environment. Once the changes are ready for production they can be deployed to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment.
