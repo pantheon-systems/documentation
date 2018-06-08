@@ -142,7 +142,7 @@ The Age returned in the header may vary depending on which cache server is hit. 
 
 ## Varnish, Public Files, and Cookies
 
-Pantheon strips cookies from requests made to public files served from sites/default/files, which allows Varnish to cache the response.
+Pantheon strips cookies from requests made to public files served from `sites/default/files` in Drupal and `wp-content/uploads` in WordPress. This allows Varnish to cache the response.
 
 ## HTTPS & Varnish
 
