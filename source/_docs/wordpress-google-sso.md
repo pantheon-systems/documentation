@@ -1,6 +1,7 @@
 ---
 title: Using WP SAML Auth with Google Apps
 description: WP SAML Auth makes it possible to sign in to your WordPress site using Google Apps.
+featuredcontributor: true
 contributors: [danielbachhuber]
 tags: [siteintegrations, security]
 categories: [automate]

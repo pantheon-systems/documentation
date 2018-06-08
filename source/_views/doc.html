@@ -33,8 +33,11 @@
       <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">{{ page.title }}</h1>
       <p class="article-subhead">{{ page.description }}</p>
       {% if page.contributors %}
-      {% set contributor_list = page.contributors %}
-      <p><small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small></p>
+        {% if page.featuredcontributor %}
+        {% else %}
+        {% set contributor_list = page.contributors %}
+        <p><small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small></p>
+        {% endif %}
       {% endif %}
       {% set fullpath = page.url|replace({'/docs': '/_docs', '/_guides': '/guides', '/_videos': '/vidoes'}) %}
       <div class="dropdown">
@@ -71,6 +74,9 @@
       <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}?text=%40getpantheon%20doc%3A%20{{ page.title|url_encode }}"></a>
       <script async defer src="https://slackin.pantheon.io/slackin.js"></script><br>
       <div style="margin-top:15px;margin-bottom:45px;">
+        {% if page.featuredcontributor %}
+          {% include 'featured-contributor.html' %}
+        {% endif %}
         {{ page.blocks.content|raw }}
       </div>
     </div>

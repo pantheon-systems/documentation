@@ -1,0 +1,19 @@
+  <div class="preview-flex-panel-item">
+    <div class="flex-panel-body">
+        <div class="media">
+          {% if contributor.avatar %}
+            <div class="pull-left">
+              <div class="preview-info__img">
+                <a href="{{ site.url }}/contributors/{{ contributorhandle }}"><img alt="Author photo" typeof="foaf:Image" src="{{ contributor.avatar }}" width="540" height="540" alt=""></a>
+              </div>
+            </div>
+          {% endif %}
+        <div class="media-body__preview">
+          <div class="media-heading">
+              <a style="font-size:22px;font-weight:bold" href="{{ site.url }}/contributors/{{ contributorhandle }}">{{ contributor.name }}</a>
+          </div>
+          <p>{{ contributor.bio }}</p>
+        </div>
+      </div>
+    </div>
+  </div><!--/.contributor-->

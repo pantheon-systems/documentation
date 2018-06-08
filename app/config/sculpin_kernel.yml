@@ -96,3 +96,14 @@ sculpin_content_types:
                 - categories
                 - tags
                 - contributors
+    woocommercepages:
+            type: path
+            path: docs/guides/woocommerce
+            permalink: pretty
+            singular_name: woocommercepage
+            enabled: true
+            layout: guide
+            taxonomies:
+                - categories
+                - tags
+                - contributors
