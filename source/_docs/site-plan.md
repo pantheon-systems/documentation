@@ -10,7 +10,7 @@ tags: [billing]
  Otherwise, click the **current plan**:
  ![Change current plan for paid sites](/source/docs/assets/images/dashboard/change-plan.png)
 
-Plan changes take immediate effect. The associated card will be charged or credited a prorated amount upon upgrade or downgrade.
+Plan changes take immediate effect. The associated card will be charged or credited a prorated amount upon upgrade or downgrade even if the site has not launched.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
