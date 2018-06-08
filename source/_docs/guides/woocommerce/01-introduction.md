@@ -28,8 +28,8 @@ This guide is here to help you get a WooCommerce store up and running on Pantheo
 
 * Create a WordPress site on Pantheon and install WooCommerce
 * Commit your changes with version control
-* Move your dev site to a live environment
-* Accept orders on your live site and pull your database to your test and dev environments for future changes.
+* Move your **<span class="glyphicons glyphicons-wrench"></span> Dev** site to a **<span class="glyphicons glyphicons-cardio"></span> Live** environment
+* Accept orders on your **<span class="glyphicons glyphicons-cardio"></span> Live** site and pull your database to your **<span class="glyphicons glyphicons-equalizer"></span> Test** and **<span class="glyphicons glyphicons-wrench"></span> Dev** environments for future changes.
 
 ## Before You Begin
 Before we get going it's important you already have a [Pantheon account](https://pantheon.io/register){.external} (they're free!) and you already know how to [create a site](/docs/guides/quickstart/create-new-site/).
