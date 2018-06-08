@@ -145,7 +145,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 You can modify this patch according to your needs, such as performing an operation post upload and/or specifying a particular cache bin.
 
 ### [LiveReload](https://www.drupal.org/project/livereload){.external}
-**Issue**: This module triggers heavy load on the application server as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7 and Drupal 8.
+**Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7 and Drupal 8.
 <hr>
 ### [Live CSS](https://www.drupal.org/project/live_css){.external}
 **Issue**: This module requires write access to the site's codebase for editing CSS files, which is not granted on Test and Live environments by design.
@@ -519,6 +519,6 @@ The MSSQL PHP library used to interface with Microsoft SQL Server databases is n
 Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request. For more information, see [Dynamic Outgoing IP Addresses](/docs/outgoing-ips).
 
 ## Using the tmp Directory
-**Issue**: Extensions that require the use of the `/tmp` directory are not supported. With multiple application servers, as exists on Live environments, it's assumed the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared.
+**Issue**: Extensions that require the use of the `/tmp` directory are not supported. With multiple application containers, as exists on Live environments, it's assumed the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared.
 
 **Solution**: For more details, see [Temporary File Management](/docs/tmp/).

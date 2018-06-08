@@ -27,7 +27,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
       <tr>
         <th>nginx-access.log</th>
         <td>Up to 60 days of logs</td>
-        <td  markdown="1">Webserver access log. **Do not consider canonical**, as this will be wiped if the application server is reset or rebuilt. See <a href="/docs/nginx-access-log">Parsing nginx Access Logs with GoAccess</a>.</td>
+        <td  markdown="1">Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See <a href="/docs/nginx-access-log">Parsing nginx Access Logs with GoAccess</a>.</td>
       </tr>
       <tr>
         <th>nginx-error.log</th>
@@ -67,7 +67,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
     </tbody>
   </table>
 
-Rotated log files are archived within the `/logs` directory on application servers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
+Rotated log files are archived within the `/logs` directory on application containers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>

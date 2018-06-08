@@ -13,7 +13,7 @@ searchboost: 50
 
 Caching is an important technique to utilize when developing a CMS application. Let’s look at what the platform offers in terms of front end and back end caching.
 
-Front end reverse-proxy caching is the best practice way to serve commonly requested pages. By serving pages from memory, a response is returned without needing to access either a PHP application server or a database server. This allows pages to be delivered extremely quickly and at scale.
+Front end reverse-proxy caching is the best practice way to serve commonly requested pages. By serving pages from memory, a response is returned without needing to access either a PHP application container or a database server. This allows pages to be delivered extremely quickly and at scale.
 
 
 On Pantheon, every HTTP request goes through the load balancer to a pool of Varnish servers. If a page is found in the cache, it will be immediately returned to the browser. If not, the request will seamlessly continue to the runtime matrix and the response will be cached on the way back out to the browser.

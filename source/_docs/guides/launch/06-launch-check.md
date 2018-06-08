@@ -54,7 +54,7 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox p
 ### [Configure Caching](/docs/global-cdn-caching/)
 Maximize performance on Pantheon by configuring your site's performance settings.
 
-Serving anonymous traffic from virtual memory allows a cached response to be returned to the browser without needing to access the application server, which in turns frees up resources to build more dynamic requests.
+Serving anonymous traffic from virtual memory allows a cached response to be returned to the browser without needing to access the application container, which in turns frees up resources to build more dynamic requests.
 
 ### [Test Cache](/docs/test-global-cdn-caching/)
 Learn how to test whether or not a page is being served from Pantheon's Global CDN by examining the HTTP headers from a response using curl.

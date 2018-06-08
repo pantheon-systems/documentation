@@ -10,7 +10,7 @@ A traditional single server has a high risk of being impacted by any unexpected 
 
 
 ##Benefits and Concerns
-As distributed web architecture has evolved, best practices for high availability have emerged: application servers can be put behind load balancers, database servers can be replicated, backups can be hosted at remote locations.
+As distributed web architecture has evolved, best practices for high availability have emerged: application containers can be put behind load balancers, database servers can be replicated, backups can be hosted at remote locations.
 
 Cloud-based file systems, such as our Valhalla cluster, also reduce the impact of even the most severe outages. This evolution has other advantages: our cloud-based distributed architecture allows for smooth scaling in seconds via software, rather than through adding servers.
 
