@@ -12,7 +12,7 @@ Outgoing requests sent by Drupal and WordPress applications facilitate tasks bet
 </div>
 
 ## Pantheon Enterprise Gateway
-If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway/). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative service to accomplish the request.
+If your site relies on a static IP address for outgoing requests, and your site is within an Enterprise or EDU+ organizations, then the recommended solution is the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway/). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative service to accomplish the request.
 
 ## IP Address Based Security Schemes
 Each application container worker uses a distinct application container, each with a different hostname (which will not resolve externally) and datacenter assigned IP. Application servers are regularly seamlessly reconfigured, which may change both the hostname and IP.
