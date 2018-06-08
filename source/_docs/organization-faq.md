@@ -12,7 +12,7 @@ categories: []
 
 ### How does Multidev work?
 
-Creating a Multidev environment creates an application server, a database server, and connects them to backing services. It creates a Git branch of your codebase from of master, and checks it out in the Multidev environment's application server. It clones the database from the specified environment into the new database server, and clones the filesystem similarly. The new Multidev environment has a unique URL, and behaves the same as the Development environment, with the ability to receive code changes via Git pushes or SFTP file uploads. Multidev environments cannot have custom domains.
+Creating a Multidev environment creates an application container, a database server, and connects them to backing services. It creates a Git branch of your codebase from of master, and checks it out in the Multidev environment's application container. It clones the database from the specified environment into the new database server, and clones the filesystem similarly. The new Multidev environment has a unique URL, and behaves the same as the Development environment, with the ability to receive code changes via Git pushes or SFTP file uploads. Multidev environments cannot have custom domains.
 
 
 ## Change Management

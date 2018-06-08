@@ -122,7 +122,7 @@ You can safely type `yes` and press enter to add the server's SSH key fingerprin
 <div class="panel-inner" markdown="1">
 The key fingerprint is a representation of the public key, used by the remote server to identify itself. These public keys, along with private keys, form a **keypair** used by the [Diffie-Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) to encrypt communication between you and the server.
 
-On a standard server system, the server administrator would publish their host keys and fingerprints publicly, so clients could match them to the keys presented at these prompts. On Pantheon however, application servers are created and destroyed too rapidly to maintain a public key list.
+On a standard server system, the server administrator would publish their host keys and fingerprints publicly, so clients could match them to the keys presented at these prompts. On Pantheon however, application containers are created and destroyed too rapidly to maintain a public key list.
 
 You can, however, easily tell your machine to automatically trust all Pantheon `*.drush.in` servers by disabling the `StrictHostKeyChecking` option in your SSH configuration file.
 

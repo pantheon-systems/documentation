@@ -15,7 +15,7 @@ There are some scenarios when an external library is required. Pantheon has inst
 <p>In its own words: &quot;If PDF is electronic paper, then pdftk is an electronic staple-remover, hole-punch, binder, secret-decoder-ring, and X-Ray-glasses. Pdftk is a simple tool for doing everyday things with PDF documents.&quot;</p>
 
 
-<p>PDFTK can be found on your application server @ /usr/bin/pdftk. The current version supported on Pantheon is 1.44.</p>
+<p>PDFTK can be found on your application container @ /usr/bin/pdftk. The current version supported on Pantheon is 1.44.</p>
 
 
 <p>To install, add&nbsp;<br />
@@ -30,7 +30,7 @@ drush @pantheon.SITENAME.ENV en pdftk
 
 [WebKit HTML](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF.
 
-WKHTMLtoPDF can be found on your application server at `/srv/bin/wkhtmltopdf`
+WKHTMLtoPDF can be found on your application container at `/srv/bin/wkhtmltopdf`
 
 ### Drupal
 Download and enable the print module and extensions via drush:
@@ -52,8 +52,8 @@ Currently, there are no known plugins that implement WKHTMLtoPDF directly. Howev
 
 In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
 
-PhantomJS (1.7.0) is located at `/srv/bin/phantomjs` on your application server.
-PhantomJS (2.1.1) is located at `/srv/bin/phantomjs-2.1.1` on your application server.
+PhantomJS (1.7.0) is located at `/srv/bin/phantomjs` on your application container.
+PhantomJS (2.1.1) is located at `/srv/bin/phantomjs-2.1.1` on your application container.
 
 ### Drupal PhantomJS Configuration
 
