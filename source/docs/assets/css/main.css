@@ -4472,7 +4472,7 @@ a.cta.cta-black-on-yellow:after:hover {
 .media-body__featured {
   padding:15px;
   display: table;
-  min-width: 400px;
+  min-width: 250px;
 
 }
 .media-body__preview {
