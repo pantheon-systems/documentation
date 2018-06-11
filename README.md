@@ -1,4 +1,6 @@
 [![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
+[![](https://images.microbadger.com/badges/version/pantheonsystems/documentation:v0.0.1.svg)](https://microbadger.com/images/pantheonsystems/documentation:v0.0.1 "Get your own version badge on microbadger.com")
+
 Pantheon Documentation
 ======================
 https://pantheon.io/docs/
@@ -22,10 +24,12 @@ Fork and clone this repository. Issue pull requests per document.
 
 If you would like to develop documentation locally and see your work, we offer a Docker containerized solution.
 
-**Prerequisites**
+### Prerequisites
 
  - MacOS or Linux system (untested on Bash on Windows)
  - Docker
+
+### Install
 
 1. Clone the repository to your project directory:
 
@@ -35,16 +39,18 @@ If you would like to develop documentation locally and see your work, we offer a
 
     OR
 
-    git@github.com:pantheon-systems/documentation.git
+    git clone git@github.com:pantheon-systems/documentation.git
     ```
 
-2. Pull the Docker image:
+1. Pull the Docker image:
 
     ```bash
     docker image pull pantheonsystems/documentation
     ```
 
-3. From the project root, run the `runthedocs.sh` script:
+### Run
+
+1. From the project root, execute the `runthedocs.sh` script:
 
     ```bash
     cd documentation
@@ -53,10 +59,97 @@ If you would like to develop documentation locally and see your work, we offer a
 
     **Note::** This will occupy the terminal in which you invoke the script, providing output when files are changed or loaded. Use **CTRL** + **C** to exit.
 
-    The Docker image will mount the `source` directory from the project root, and rebuild when you save changes.
+    You should see:
 
-4. When you're done, run:
+    ```bash
+    Creating the Docker container...
+    Container built and running. 👍👍
+    Building the latest docs...
+    Detected new or updated files
+    Generating: 100% (1035 sources / 0.06 seconds)
+    Converting: 100% (1122 sources / 8.04 seconds)
+    Formatting: 100% (1122 sources / 2.73 seconds)
+    Processing completed in 12.20 seconds
+    Running "watch" task
+    Waiting...
+    ```
+
+    The Docker image will mount the `source` directory from the project root on your computer, and rebuild when you save changes:
+
+    ```bash
+    /documentation/source/_docs/getting-support.md was changed. Building...
+    Detected new or updated files
+    Generating: 100% (1035 sources / 0.04 seconds)
+    Converting: 100% (1122 sources / 5.73 seconds)
+    Formatting: 100% (1122 sources / 2.01 seconds)
+    Processing completed in 9.05 seconds
+    ```
+
+1. When you're done, run:
 
     ```bash
     docker container stop pantheon-docs
     ```
+
+### Update The Docs
+
+The `pantheon-docs` container mounts the `documentation/source` directory from your computer, so the image remains evergreen as long as the toolset is unchanged. To update your local project with the latest version of the docs, you need only pull them from git:
+
+```bash
+git pull origin
+```
+
+### Update The App
+
+
+
+1. To update the documentation build locally run:
+
+    ```bash
+    ./updater.sh
+    ```
+
+### Testing
+
+We include several tools to test that new content doesn't break the documentation. Most of these tests are performed automatically by our continuous integration service, but pull requests created from external contributors aren't included in CI tests. If you want to manually test your branch, you can execute the following tests within the Docker container.
+
+#### Merge Conflicts
+
+To check for merge conflict messages accidentally commited into the docs, run the `merge_conflicts.sh` script:
+
+```bash
+docker exec pantheon-docs scripts/merge_conflicts.sh
+Merge conflict:pass
+```
+#### [HTMLProofer](https://github.com/gjtorikian/html-proofer)
+
+To make sure all relative links (like `/docs/support/`) are correct, run
+
+```bash
+docker exec pantheon-docs htmlproofer --assume-extension  ./output_dev/ --disable-external true
+```
+
+#### [A11y](https://github.com/addyosmani/a11y)
+
+We use grunt to manage accessibility tests:
+
+```bash
+docker exec pantheon-docs node_modules/.bin/grunt test
+Running "a11y:dev" (a11y) task
+
+Done, without errors.
+```
+
+#### [Wraith](https://github.com/BBC-News/wraith)
+
+Checks for visual regression:
+
+```bash
+docker exec pantheon-docs wraith capture wraith.yaml
+```
+
+#### [Behat](https://github.com/Behat/Behat)
+
+```bash
+docker exec pantheon-docs bin/behat
+```
