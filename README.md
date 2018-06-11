@@ -35,7 +35,7 @@ If you would like to develop documentation locally and see your work, we offer a
 
     OR
 
-    git@github.com:pantheon-systems/documentation.git
+    git clone git@github.com:pantheon-systems/documentation.git
     ```
 
 2. Pull the Docker image:
@@ -59,4 +59,11 @@ If you would like to develop documentation locally and see your work, we offer a
 
     ```bash
     docker container stop pantheon-docs
+    ```
+
+
+5. To update the documentation build locally run:
+
+    ```bash
+    ./updater.sh
     ```
