@@ -1,7 +1,7 @@
 # Add as many domains as necessary. Key will act as a label
 domains:
   live:  "https://pantheon.io/docs"
-  local: "http://docs.local:8000/docs"
+  local: "http://localhost:8000/docs"
 
 # (optional) JavaScript file to execute before taking screenshot of every path.
 # Can be used to reload current page with headers specified, or to dynamically
