@@ -34,7 +34,7 @@ screen_widths:
   - 1366
 
 # the engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
-browser: "casperjs"
+browser: "phantomjs"
 
 # the directory that your base screenshots will be stored in
 history_dir: 'shots_base'
