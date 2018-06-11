@@ -12,9 +12,9 @@ For more information on the announcement of new plans, see [this related blog po
 ## List and Preferred Pricing
 <dl>
   <dt>List Price</dt>
-    <dd>Set price for new sites created after June 28th that aren’t tied to an agency.</dd>
+    <dd>Set price for new sites created after August 1st that aren’t tied to an agency.</dd>
   <dt>Preferred Price</dt>
-    <dd>Introductory price available to the general public until June 28th, after which it will be exclusively available via qualified agency partners.</dd>
+    <dd>Introductory price available to the general public until August 1st, after which it will be exclusively available via qualified agency partners.</dd>
 </dl>
 
 | Plan                 | Preferred Price | List Price  |
@@ -27,23 +27,23 @@ For more information on the announcement of new plans, see [this related blog po
 
 ## Frequently Asked Questions
 ### When will prices change for new sites?
-New sites purchased between April 10th and June 28th will have preferred pricing. After June 28th, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
+New sites purchased between April 10th and August 1st will have preferred pricing. After August 1st, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
 
 ### When will prices change for existing sites?
-There will be no impact to the current plan on your existing sites before June 28th.
+There will be no impact to the current plan on your existing sites before August 1st.
 
-After June 28th the site will be automatically switched to the equivalent plan with preferred pricing locked in, retaining all features (with the exception of New Relic on Basic plans).
+After August 1st, your site will automatically be switched to the equivalent plan on your monthly billing date with preferred pricing locked in, retaining all features (with the exception of New Relic on Basic plans).
 
 ### Will my existing plan still be available?
-Existing sites will remain on their current legacy plan until June 28th, at which point the site will be automatically switched over to a new plan. No new sites can be created on legacy plans.
+Existing sites will remain on their current legacy plan until August 1st, at which point the site will be automatically switched over to a new plan. No new sites can be created on legacy plans.
 
-### Will I be able to keep preferred pricing after June 28th?
-All existing sites as of June 28th (legacy & new) will lock in preferred pricing in perpetuity (not just agencies). After June 28th, all new online site plan purchases will be at list price unless purchased through a qualified agency.
+### Will I be able to keep preferred pricing after August 1st?
+All existing sites as of August 1st (legacy & new) will lock in preferred pricing in perpetuity (not just agencies). After August 1st, all new online site plan purchases will be at list price unless purchased through a qualified agency.
 
 ### What action do I need to take on existing sites?
-No action is required. Existing sites will automatically switch to the equivalent plan with preferred pricing locked in on June 28th.
+No action is required. Existing sites will automatically switch to the equivalent plan with preferred pricing locked in on August 1st.
 
-### What new plan will my existing site translate to on June 28th?
+### What new plan will my existing site translate to on August 1st?
 
 * Personal > Basic
 * Professional > Performance (Small)
@@ -117,9 +117,9 @@ No action is required. Existing sites will automatically switch to the equivalen
 
 
 ### Am I going to lose New Relic?
-Basic site plans will not have access to New Relic. If you are using New Relic on a Personal plan currently, you will lose access when your site plan migrates to a Basic plan on June 28th.
+Basic site plans will not have access to New Relic. If you are using New Relic on a Personal plan currently, you will lose access when your site plan migrates to a Basic plan on August 1st.
 
-If you upgrade to a Performance plan before June 28th, you will keep New Relic access and lock in preferred pricing.
+If you upgrade to a Performance plan before August 1st, you will keep New Relic access and lock in preferred pricing.
 
 ### Why are you removing New Relic access from the Basic plan?
 The Basic plan is aimed at use cases concerned primarily with getting page caching working, and those sites without any high-performance goals that New Relic can help debug. If you have performance goals for your site, you should consider a Performance plan of the appropriate size.
@@ -128,9 +128,9 @@ The Basic plan is aimed at use cases concerned primarily with getting page cachi
 New plans do not impact feature access for Multidev. If you have it now, you'll continue to have it on the new plans.
 
 ### As an agency, how am I affected by these plan changes?
-Our new pricing and packaging was built with agencies in mind. All of your client sites will get preferred pricing locked in automatically on June 28th, so there’s no need to worry about your current sites.
+Our new pricing and packaging was built with agencies in mind. All of your client sites will get preferred pricing locked in automatically on August 1st, so there’s no need to worry about your current sites.
 
-After June 28th, preferred pricing will only be available via qualifying agency partners, providing clear value for purchasing a Pantheon site plan via an agency. Stay tuned for details on our soon-to-be announced Partner Program.
+After August 1st, preferred pricing will only be available via qualifying agency partners, providing clear value for purchasing a Pantheon site plan via an agency. Stay tuned for details on our soon-to-be announced Partner Program.
 
 ### As a contract customer, how am I affected by these plan changes?
 Current contract customers such as EDU+, Enterprise, Pantheon One, Elites and Resellers are not affected. Stay tuned for details on our soon-to-be announced Partner Program.
