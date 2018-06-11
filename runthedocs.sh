@@ -9,5 +9,9 @@ else
     docker container start pantheon-docs
 fi
 
+printf "Building the latest docs... \n"
+docker exec pantheon-docs /documentation/node_modules/.bin/grunt --force
+docker exec pantheon-docs /documentation/bin/sculpin generate --env=dev
+
 # Start app script, which invokes grunt, the watch script, and a simple PHP web server
 docker exec pantheon-docs /documentation/scripts/app.sh
