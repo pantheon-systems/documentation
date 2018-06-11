@@ -19,16 +19,16 @@ Using a Composer managed site **removes** the ability to [apply Drupal core upda
 
 To begin, we’ll want to start a brand new Drupal 8 site on Pantheon from our empty upstream. This upstream is different from the Drupal 8 upstream in that it does not come with any Drupal files. As such, you must use Composer to download Drupal.
 
-Before we begin choose a machine-friendly site name. It should be all lower case with dashes instead of spaces. I'll use `d8-composer-no-CI` but choose your own. Once you have a site name export it to a variable for re-use.
+Before we begin choose a machine-friendly site name. It should be all lower case with dashes instead of spaces. I'll use `d8-composer-no-ci` but choose your own. Once you have a site name export it to a variable for re-use.
 
-```
-export PANTHEON_SITE_NAME="d8-composer-no-CI"
+```bash
+export PANTHEON_SITE_NAME="d8-composer-no-ci"
 ```
 
 Create a new Pantheon site with an empty upstream.
 
-```
-terminus site:create $PANTHEON_SITE_NAME 'Andrew Drops 8 Composer' empty
+```bash
+terminus site:create $PANTHEON_SITE_NAME 'My D8 Composer Site' empty
 ```
 
 **Note** you can also add the `--org` argument to `terminus site:create` if you would like the site to be part of an organization. See `terminus site:create -h` for details and help.
@@ -39,13 +39,13 @@ Instead of setting up `composer.json` manually it is easier to start with the [`
 
 First, clone the `example-drops-8-composer` repository locally.
 
-```
+```bash
 git clone git@github.com:pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
 ```
 
 Change into the cloned directory.
 
-```
+```bash
 cd $PANTHEON_SITE_NAME
 ```
 
@@ -53,60 +53,53 @@ cd $PANTHEON_SITE_NAME
 
 Store the git URL for the Pantheon site created earlier in a variable.
 
-```
+```bash
 export PANTHEON_SITE_GIT_URL="$(terminus connection:info $PANTHEON_SITE_NAME.dev --field=git_url)"
 ```
 
 Update the git remote to use the Pantheon site git URL returned rather than the `example-drops-8-composer` GitHub URL.
 
-```
+```bash
 git remote set-url origin $PANTHEON_SITE_GIT_URL
 ```
 
 ## Removing Automation Pieces
-`example-drops-8-composer` was designed to run automated tests on a continuous integration server. Since contonuous integration won't be used you can safely remove the directories below.
+
+`example-drops-8-composer` was designed to run automated tests on a continuous integration server. Unless you plan on running automated tests it is safe to completely remove the automated testing functionality.
+
+Start by deleting the following directories:
 
 * `scripts/github`
 * `scripts/gitlab`
 * `.circleci`
+* `tests`
 
-If you don't plan on running automated tests locally you can completely remove the testing functionality.
+Next, you will need to modify `composer.json`.
 
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
-      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span>Remove Test Suites</h3>
-    </a>
-  </div>
-  <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
-    First, delete the `tests` directory. Next, you will need to modify `composer.json`.
+* Remove all dependencies in the `require-dev` section
+* Update the `scripts` section to the following:
 
-    * Remove all dependencies in the `require-dev` section
-    * Update the `scripts` section to the following:
-
-    ```
-        "scripts": {
-            "build-assets": [
-                "@prepare-for-pantheon",
-                "composer install --optimize-autoloader --no-dev"
-            ],
-            "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-            "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
-            "post-install-cmd": [
-                "@drupal-scaffold",
-                "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-            ],
-            "post-update-cmd": [
-                "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-            ],
-            "post-create-project-cmd": [
-                "@drupal-scaffold",
-                "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-            ]
-        },
-    ```
-  </div>
-</div>
+```json
+    "scripts": {
+        "build-assets": [
+            "@prepare-for-pantheon",
+            "composer install --optimize-autoloader --no-dev"
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
+        "post-install-cmd": [
+            "@drupal-scaffold",
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-create-project-cmd": [
+            "@drupal-scaffold",
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+```
 
 ## Managing Drupal with Composer
 
@@ -114,11 +107,11 @@ If you don't plan on running automated tests locally you can completely remove t
 
 Normally the next step would be going through the standard Drupal installation. But since we’re using Composer, none of the core files exist yet. Let’s use Composer to download Drupal core.
 
-Since we modified `composer.json` we will need to update Composer. This will also download the defined dependencies. 
+Since we modified `composer.json` we will need to update Composer. This will also download the defined dependencies.
 
-```
+```bash
 composer update
-```
+```bash
 
 This may take a while as all of Drupal core and its dependencies will be downloaded. Subsequent updates should take less time.
 
@@ -126,16 +119,17 @@ This may take a while as all of Drupal core and its dependencies will be downloa
 
 Let's take a look at the changes.
 
-```
+```bash
 git status
 ```
+
 It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the CUT section. 
 
 **Important:** Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon. 
 
 Now let’s run git status again to make sure everything is included.
 
-```
+```bash
 git status
 ```
 
@@ -143,13 +137,13 @@ git status
 
 Set the site to git mode.
 
-```
+```bash
 terminus connection:set $PANTHEON_SITE_NAME.dev git
 ```
 
 Add and commit the code files. A git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`.
 
-```
+```bash
 git add .
 
 git commit -m 'Drupal 8 and dependencies'
@@ -165,13 +159,13 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 
 Use Terminus Drush to install Drupal.
 
-```
+```bash
 terminus drush $PANTHEON_SITE_NAME.dev -- site-install -y
 ```
 
 Log in to your new Drupal 8 site to verify it is working. You can get a one-time login link using Drush.
 
-```
+```bash
 terminus drush $PANTHEON_SITE_NAME.dev -- uli
 ```
 
@@ -179,7 +173,7 @@ terminus drush $PANTHEON_SITE_NAME.dev -- uli
 
 Next, let’s add a new module to our site. For this example, we’ll add the address module. We advocate working in feature branches on Pantheon, so let's create a git branch and spin up a Multidev environment.
 
-```
+```bash
 git checkout -b addr-module
 
 composer require "drupal/address ~1.0"
@@ -187,7 +181,7 @@ composer require "drupal/address ~1.0"
 
 Now that Composer is aware of our new module requirement we need to update our dependencies. Then, we can commit them and push to Pantheon.
 
-```
+```bash
 composer update
 
 git add .
@@ -199,13 +193,13 @@ git push -u origin addr-module
 
 Spin up a Multidev environment from the git branch we just pushed up to Pantheon.
 
-```
+```bash
 terminus multidev:create $PANTHEON_SITE_NAME.dev addr-module
 ```
 
 Log in to your new environment and verify that the address module exists.
 
-```
+```bash
 terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
 ```
 
