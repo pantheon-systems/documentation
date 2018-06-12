@@ -48,9 +48,17 @@ Allow: /
 
 Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP header](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag) when serving requests from platform domains (e.g. `live-site-name.pantheonsite.io`). This instructs most bots/crawlers not to index the page and prevents it from being returned in search results.
 
-The `pantheonsite.io` domains are intended for development use and cannot be used for production. Robots.txt is only visible on Live with a custom domain, and is not available on Dev or Test. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the custom robots.txt from the platform domain.
+### Indexing Before You Launch
 
-[Site Auditor](https://raven.zendesk.com/hc/en-us/articles/202346870){.external} (aka RavenCrawler) can access platform domains like `test-example.pantheonsite.io` to support pre-release SEO testing. If you’re testing links or SEO with other tools, you may request the addition of the tool to `robots.txt` by [contacting support](/docs/support/#feature-requests) to create a feature request. Otherwise, you can assign a test or beta domain to the Live environment and test your links following the alternative domain. In addition, if you run SEO toolsets locally, you can utilize an `/etc/hosts` file entry on your local development box to spoof your production domain on Pantheon.
+The `pantheonsite.io` domains are intended for development use and cannot be used for production. A custom or CMS-standard `robots.txt` will only work on Live environments with a custom domain. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
+
+[Site Auditor](https://raven.zendesk.com/hc/en-us/articles/202346870){.external} (aka RavenCrawler) can access platform domains like `test-example.pantheonsite.io` to support pre-release SEO testing. If you’re testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by [contacting support](/docs/support/#feature-requests) to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
+
+If you run SEO toolsets locally, you can utilize an `/etc/hosts` file entry on your local development box to spoof your production domain on Pantheon:
+
+```bash
+192.0.2.128     example.com
+```
 
 You can index your site under your production domain once it's added to the Live environment. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps](https://wordpress.org/plugins/google-sitemap-generator/) or [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugins, which will maintain sitemap updates automatically. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
 
