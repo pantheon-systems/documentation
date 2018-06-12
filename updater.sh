@@ -1,6 +1,6 @@
 #/bin/bash
 
-printf "Stopping any running `pantheon-docs` containers... \n \n"
+printf "Stopping any running pantheon-docs containers... \n \n"
 
 docker container stop pantheon-docs
 
