@@ -1,4 +1,6 @@
 [![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
+[![](https://images.microbadger.com/badges/version/pantheonsystems/documentation:v0.0.1.svg)](https://microbadger.com/images/pantheonsystems/documentation:v0.0.1 "Get your own version badge on microbadger.com")
+
 Pantheon Documentation
 ======================
 https://pantheon.io/docs/
@@ -89,9 +91,17 @@ If you would like to develop documentation locally and see your work, we offer a
     docker container stop pantheon-docs
     ```
 
-### Update
+### Update The Docs
 
-Because the Docker container uses the `source` directory you cloned into your project directory, you only need to update it when there's a change to the toolset. Otherwise, `git pull` will bring you the latest docs content.
+The `pantheon-docs` container mounts the `documentation/source` directory from your computer, so the image remains evergreen as long as the toolset is unchanged. To update your local project with the latest version of the docs, you need only pull them from git:
+
+```bash
+git pull origin
+```
+
+### Update The App
+
+
 
 1. To update the documentation build locally run:
 
@@ -111,7 +121,7 @@ To check for merge conflict messages accidentally commited into the docs, run th
 docker exec pantheon-docs scripts/merge_conflicts.sh
 Merge conflict:pass
 ```
-#### URL Validation
+#### [HTMLProofer](https://github.com/gjtorikian/html-proofer)
 
 To make sure all relative links (like `/docs/support/`) are correct, run
 
