@@ -1,7 +1,7 @@
 Build Status: [![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
 
 
-Docker Image Version: [![](https://images.microbadger.com/badges/version/pantheonsystems/documentation:0.0.4.svg)](https://microbadger.com/images/pantheonsystems/documentation:0.0.4 "Get your own version badge on microbadger.com")
+Docker Image Version: ![](https://img.shields.io/badge/version-0.0.4-green.svg)
 
 Pantheon Documentation
 ======================
