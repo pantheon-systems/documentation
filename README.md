@@ -1,5 +1,8 @@
-[![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
-[![](https://images.microbadger.com/badges/version/pantheonsystems/documentation:v0.0.1.svg)](https://microbadger.com/images/pantheonsystems/documentation:v0.0.1 "Get your own version badge on microbadger.com")
+Build Status: [![Circle CI](https://circleci.com/gh/pantheon-systems/documentation.svg?style=svg)](https://circleci.com/gh/pantheon-systems/documentation)
+
+
+Docker Image Version: [![](https://images.microbadger.com/badges/version/pantheonsystems/documentation.svg)](https://microbadger.com/images/pantheonsystems/documentation "Get your own version badge on microbadger.com")
+
 
 Pantheon Documentation
 ======================
