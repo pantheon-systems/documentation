@@ -456,6 +456,14 @@ if (defined( "PANTHEON_BINDING" )) {
 
 <hr>
 
+## [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/){.external}
+
+**Issue**: The redirects for Yoast SEO setting will detect two options for redirect methods, "PHP", and "Web Server". The Web Server option expects write access to the `nginx.conf` file, which is not writable on Pantheon.
+
+**Solution**: Only use the "PHP" redirect method.
+
+<hr>
+
 ## WordPress Themes
 
 ### [Jupiter](https://themes.artbees.net/pages/jupiter-wordpress-theme-create-wordpress-websites/){.external}
