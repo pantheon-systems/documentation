@@ -156,28 +156,26 @@ Keep the following tips in mind when opening a new support ticket or chat:
  - **Clarification**: We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
 
 ## FAQs
-#### Can I request a feature be added to the platform?
-
+### Can I request a feature be added to the platform?
 Yes, for more details, contact your Customer Success Manager or see our [terms of service](https://pantheon.io/terms-of-service).
 
-#### Is there a support number we can call? If so, is this service available for every plan?
-
+### Is there a support number we can call? If so, is this service available for every plan?
 Customers with a **Diamond support plan** can access Pantheon on-call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
 
-#### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
+### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 You can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting paying sites.
 
-#### Is 24/7 phone support available for Performance plans?
+### Is 24/7 phone support available for Performance plans?
 No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Performance Medium and above plans. Diamond Support plan customers have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
 
-#### What if I can't login to the Pantheon Dashboard?
+### What if I can't login to the Pantheon Dashboard?
 If you are unable to login, try [resetting your password](https://dashboard.pantheon.io/reset-password).
 
-#### How can I review my chat threads?
+### How can I review my chat threads?
 Access support history for chats in the User or Site Dashboards by selecting **Support** > **Launch Chat**.
 
-#### Can I start a chat session via email?
+### Can I start a chat session via email?
 No. Initiate chats via the Pantheon User or Site Dashboards.
 
-#### Can I respond to an existing chat message via email?
+### Can I respond to an existing chat message via email?
 Yes. Reply directly to the email thread to continue an existing chat session and update the chat history on the Dashboard.
