@@ -37,6 +37,8 @@ If you prefer the command line, you can use [Terminus](/docs/terminus) to create
 
 ![Backup Schedule](/source/docs/assets/images/dashboard/backup-schedule.png)
 
+Daily backups are scheduled automatically.
+
 **All sites:** You can run manual backups for free, and choose to keep them for one month or six months.
 
 
