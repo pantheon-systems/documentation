@@ -52,7 +52,62 @@ terminus sites:mass-update:apply
 For details, see [Terminus Mass Update Plugin](https://github.com/pantheon-systems/terminus-mass-update).
 
 ## Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts
-If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. You'll need to manually resolve the conflict using the command line and a text editor.
+If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. You can resolve by overwriting your CMS core with the upstream, or attempt a manual merge conflict resolution.
+
+### Overwrite Core
+
+If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore` or `.htaccess`).
+
+<div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">This process can potentially cause loss of data. Be sure you have no custom code in your CMS core before proceeding.</p>
+</div>
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+  <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
+  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="d8">
+  <pre><code>
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d7">
+  <pre><code>
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="d6">
+  <pre><code>
+  git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+  <div role="tabpanel" class="tab-pane" id="wp">
+  <pre><code>
+  git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
+  # resolve conflicts
+  git push origin master
+  </code></pre>
+  </div>
+</div>
+
+Double-check the files before going forward to make sure no bugs were introduced.
+
+### Merge Conflict Resolution
+
+This process let's you manually resolve the conflict using the command line and a text editor.
 
 1. Navigate to a [local clone of your site repository](/docs/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
@@ -114,7 +169,7 @@ If the automated core update doesn't appear to be working, it's possible there a
 
 3. If a conflict is introduced, use the output provided to resolve. For example:
 
-  ```
+  ```bash
   git rebase pantheon-wordpress/master
   First, rewinding head to replay your work on top of it...
   Applying: Adjust rendering of version release notes
