@@ -113,6 +113,10 @@ If your code, database, and files have completed migrating, but your site is not
 
 Next, check [log files](/docs/logs/) to help identify and fix errors. Drupal or WordPress core is upgraded as part of migration, so you may have additional work to complete the upgrade.
 
+### Migrate from Acquia
+
+Acquia uses a nested docroot directory named `docroot`. When migrating from Acquia to Pantheon, you may choose to move the contents of `docroot` up and remove the folder, or rename it to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).
+
 ### Could not import code, the import file does not appear to contain a valid code directory.
 
 **Cause:** The migration tool could not find Drupal or WordPress core files. This prevents the migration from completing because the site modules, plugins, and/or themes cannot be imported. This error also occurs when multiple `settings.php` files are present.
