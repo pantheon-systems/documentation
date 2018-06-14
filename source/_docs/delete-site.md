@@ -9,7 +9,7 @@ At some point, you may need or want to delete one of your sites on Pantheon. The
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
 <p>This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.</p>
-<p>Before deleting a site, you must downgrade the site plan to Sandbox level. See [Manage Site Plans](/docs/site-plan/) for more information.</p>
+<p markdown="1">Before deleting a site, you must downgrade the site plan to Sandbox level. See [Manage Site Plans](/docs/site-plan/) for more information.</p>
 </div>
 
 ## Delete a Site Using the Pantheon Site Dashboard
