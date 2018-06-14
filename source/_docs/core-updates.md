@@ -52,7 +52,7 @@ terminus sites:mass-update:apply
 For details, see [Terminus Mass Update Plugin](https://github.com/pantheon-systems/terminus-mass-update).
 
 ## Apply Upstream Updates Manually from the Command Line to Resolve Merge Conflicts
-If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. You can resolve be overwriting your CMS core with the upstream, or attempt a manual merge conflict resolution.
+If the automated core update doesn't appear to be working, it's possible there are conflicts with your codebase in the update. You can resolve by overwriting your CMS core with the upstream, or attempt a manual merge conflict resolution.
 
 ### Overwrite Core
 
