@@ -3241,6 +3241,25 @@ display: block;
 .alert-success h4 {
   font-size: 28px;
 }
+
+.alert-export {
+  background-image: none !important;
+    border-color: #3c763d;
+    border-left-width: 8px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-radius: 0px;
+    background-color: #efd01b !important;
+    color: #3c763d !important;
+    font-size: 18px;
+    line-height: 29px;
+    font-family: 'Open Sans', sans-serif;
+}
+.alert-export h4 {
+  font-size: 28px;
+}
+
 .alert h4,
 #doc .alert h4 {
   margin-top: 0px;

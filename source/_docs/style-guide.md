@@ -251,6 +251,40 @@ Once the build finishes from the last step, active your new theme and rebuild th
 ```
 </div>
 
+### Variables
+
+When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. They are styled as inline code, and follow common conventions (lowercase for variables, uppercase for constants).
+
+<div class="style-example" markdown="1">
+
+<div class="alert alert-export" role="alert">
+<h4 class="info">Exports</h4>
+<p markdown="1">This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the constants `$SITE` and `$ENV` to match your site name, and the Dev environment:
+
+<pre><code class="bash">
+export SITE=yoursitename
+export ENV=dev
+</code></pre>
+</p>
+</div>
+
+<hr class="source-code">
+
+```html
+<div class="alert alert-export" role="alert">
+<h4 class="info">Exports</h4>
+<p markdown="1">This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the constants `$SITE` and `$ENV` to match your site name, and the Dev environment:
+
+<pre><code class="bash">
+export SITE=yoursitename
+export ENV=dev
+</code></pre>
+</p>
+</div>
+```
+
+</div>
+
 ## Callouts
 There are two types of callouts used in our docs, notes and warnings:
 
@@ -273,7 +307,14 @@ There are two types of callouts used in our docs, notes and warnings:
 <div class="style-example" markdown="1">
 <div class="alert alert-danger" role="alert">
   <h4 class="info">Warning</h4>
-  <p markdown="1">Warnings cover information critical to the reader, and highlight potential dangers, especially those that can cause data loss.</p>
+  <p markdown="1">Warnings cover information critical to the
+In the example above, replace `yoursitename` with your site's sitename.
+
+1. Clear the site's cache:
+
+    ``Notes should identify important pieces of information the reader shouldn't miss.`bash
+    terminus env:clear-cache $SITE.$ENV
+    ``` reader, and highlight potential dangers, especially those that can cause data loss.</p>
 </div>
 <hr class="source-code">
 ```html
