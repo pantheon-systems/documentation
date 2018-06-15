@@ -1,5 +1,8 @@
 #/bin/bash
 
+printf "Preparing local files... \n"
+chmod -R o+w $(pwd)/source/docs/assets/{css,fonts,node_modules,compiled}/
+
 printf "Creating the Docker container... \n"
 
 # Invoke the docker image with a shared volume for source.
