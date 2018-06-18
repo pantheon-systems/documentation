@@ -2,6 +2,7 @@
 title: Introduction to Domain Name Services
 description: Learn what DNS is, and how to utilize it to configure your domain name to Pantheon's servers.
 tags: [dns]
+use: [docs_tags]
 categories: []
 contributors: alexfornuto
 ---
