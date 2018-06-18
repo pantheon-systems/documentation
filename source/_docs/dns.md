@@ -1,6 +1,6 @@
 ---
-title: DNS
-description: Learn the basics of DNS.
+title: Introduction to Domain Name Services
+description: Learn what DNS is, and how to utilize it to configure your domain name to Pantheon's servers.
 tags: [dns]
 categories: []
 contributors: alexfornuto
@@ -10,7 +10,25 @@ contributors: alexfornuto
 
 ![DNS Reccomendations](/source/docs/assets/images/dashboard/domain-added.png)
 
-While Pantheon does not offer DNS management services, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site. We also offer [DNS Provider](/docs/dns-providers/)-specific instructions for several common DNS managers.
+While Pantheon does not offer DNS management services, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site. We also offer DNS Provider-specific instructions for several common DNS managers.
+
+<div class="panel panel-drop panel-guide" id="accordion1">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
+      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span>DNS Provider-Specific Instruction</h3>
+    </a>
+  </div>
+<div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+### DNS Provider-Specific Instruction {.info}
+
+{% for doc in data.docs_tags.providers %}
+  {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+  {% endif %}
+{% endfor %}
+
+</div>
+</div>
 
 ## DNS Terminology
 

@@ -46,7 +46,7 @@ If you don't already own a domain name, register one with a third-party provider
 
     ![DNS Values for new domain](/source/docs/assets/images/dashboard/domain-added.png)
 
-3. Add the values to your DNS management service. If you need help, see our [DNS](/docs/dns/) help doc.
+3. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/docs/dns/).
 
 ## Primary Domain
 Pantheon uses the term **primary domain** to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other domain connected to the environment) all get redirected to `www.example.com`.
