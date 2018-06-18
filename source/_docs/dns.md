@@ -105,11 +105,11 @@ $ whois pantheon.io | grep Registrar:
 Registrar: Gandi SAS
 ```
 
-The example above uses `| grep Registrar:` to filter the results to what we're looking for specifically. Remove it to see the full output of the `whois` command. Our example shows that the domain `pantheon.io` is registered with Gandi
+The example above uses `| grep Registrar:` to filter the results to what we're looking for specifically. Remove it to see the full output of the `whois` command. Our example shows that the domain `pantheon.io` is registered with Gandi.
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p markdown="1"> Your registrar may appear to have DNS records for your domain and still nto be the authoritative name server. use `dig` as described above to confirm the name server in use.</p>
+  <p markdown="1"> Your registrar may appear to have DNS records for your domain and still not be the authoritative name server. Use `dig` as described above to confirm the name server in use.</p>
 </div>
 
 ### Can I buy my domain or manage DNS with Pantheon?
