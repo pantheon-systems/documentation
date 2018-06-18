@@ -15,7 +15,7 @@ While Pantheon does not offer DNS management services, we can help you to unders
 
 ## DNS Provider Instructions
 
-We offer DNS provider-specific instructions for several common DNS managers:
+We offer DNS provider-specific instructions for several common DNS hosts:
 
 {% for doc in data.docs_tags.providers %}
   {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
