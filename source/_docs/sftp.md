@@ -126,12 +126,6 @@ Uncommitted SFTP changes may not be recognized by the Dev environment when the S
 ### How do I find my site's Binding path?
 You should not manually set the "Remote Path" in your SFTP client's settings. Instead, leave the Remote Path blank and you will automatically be redirected to the proper directory when logging in.
 
-### My SFTP client takes a long time to connect.
-Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol will result in the fastest connections. For OSX/Linux, add the following to your ssh config (~/.ssh/config):
-
-    Host *.drush.in
-        KexAlgorithms diffie-hellman-group1-sha1
-
 ### I am receiving errors connecting to my server with an SFTP client.
 This is caused by using the SFTP application's default connection settings. We recommend you set the connection limit to **1** and then connect to your site.
 
