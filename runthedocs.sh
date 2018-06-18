@@ -1,7 +1,7 @@
 #/bin/bash
 
 printf "Preparing local files... \n"
-chmod -R o+w $(pwd)/source/docs/assets/{css,fonts,node_modules,compiled}/
+chmod -R o+w $(pwd)/source/docs/assets/
 
 printf "Creating the Docker container... \n"
 
