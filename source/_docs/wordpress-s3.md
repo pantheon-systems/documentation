@@ -14,8 +14,10 @@ Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storag
 
 Be sure that you have:
 
-- An existing site or [create](https://dashboard.pantheon.io/sites/create){.external} one
-- Set up an account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/){.external}. Amazon offers [free access](https://aws.amazon.com/free/){.external} to most of their services for the first year.
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create){.external} one.
+- A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/){.external}. Amazon offers [free access](https://aws.amazon.com/free/){.external} to most of their services for the first year.
+- [Terminus](/docs/terminus) installed on your local computer.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
@@ -31,49 +33,62 @@ If you do not have an existing bucket for your site, create one:
 2. Click **Create Bucket**.
 3. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3.
 
- <div class="alert alert-info" role="alert">
- <h4 class="info">Note</h4>
- <p>After you create a bucket, you cannot change its name. The bucket name is visible in the URL that points to the objects stored in the bucket. Ensure that the bucket name you choose is appropriate.</p>
- </div>
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p>After you create a bucket, you cannot change its name. The bucket name is visible in the URL that points to the objects stored in the bucket. Ensure that the bucket name you choose is appropriate.</p>
+    </div>
 
 4. Select a region and click **Create**.
-5. Select **Permissions** within the bucket properties and click **Add more permissions**.
-6. Choose a user and tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Save**.
+5. The **Set properties** section has additional configuration options you can configure now, or wait and configure later. When complete, click **Next**.
+6. In the **Permissions** tab tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Save**.
+7. Review your settings, then click **Create bucket**.
 
-## Integrate S3 with WordPress 
+## Integrate S3 with WordPress
 You will need to install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload S3](https://deliciousbrains.com/wp-offload-s3/){.external}.
 
 WP Offload S3 requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/docs/terminus) and [WP-CLI](/docs/wp-cli) for setup and migration.
 
 ### Install and Deploy S3 Uploads
 
-Note: this plugin currently conflicts with [Solr Power](https://wordpress.org/plugins/solr-power/), our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80).
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">This plugin currently conflicts with [Solr Power](https://wordpress.org/plugins/solr-power/){.external}, our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80){.external}.</p>
+</div>
 
-1. Download the latest plugin release from [Github]((https://github.com/humanmade/S3-Uploads/releases) and add it to your codebase. Note that our documentation has been tested for version 2.0.0.
+1. Download the latest plugin release from [Github](https://github.com/humanmade/S3-Uploads/releases){.external} and extract it to `wp-content/plugins/`. Note that our documentation has been tested for version 2.0.0.
 
-Do not add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info]((https://pantheon.io/docs/git-faq/#does-pantheon-support-git-submodules)).
+    <div class="alert alert-danger" role="alert">
+    <h4 class="info">Warning</h4>
+    <p markdown="1">**Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](https://pantheon.io/docs/git-faq/#does-pantheon-support-git-submodules)).</p>
+    </div>
 
-2. Copy your S3 uploads key and secret from the "My security credentials" section of your AWS account.
+2. Rename the extracted folder to remove the version number. For example:
 
-3. Add credentials to wp-config.php. For security reasons, it is recommended to use a service like [Lockr](https://pantheon.io/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
+    ```bash
+    mv S3-Uploads-2.0.0/ S3-Uploads
+    ```
 
-4. Deploy the new plugin and your wp-config.php to the Dev environment, then activate the plugin.
+3. Create and / or copy your S3 upload key and secret from the "My security credentials" section of your AWS account to a text editor on your local computer.
 
-```bash
-terminus wp <site>.<env> plugin activate S3-Uploads
-```
+4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up){.external} file. For security, we recommended a service like [Lockr](https://pantheon.io/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 
-5. Use WP-CLI to verify your AWS setup.
+5. Commit and push the new plugin and your `wp-config.php` updates to the Dev environment, then  switch to SFTP mode and activate the plugin:
 
-```bash
-terminus wp <site>.<env> s3-uploads verify
-```
+    ```bash
+    terminus wp <site>.<env> plugin activate S3-Uploads
+    ```
+
+6. Use WP-CLI to verify your AWS setup.
+
+    ```bash
+    terminus wp <site>.<env> s3-uploads verify
+    ```
 
 6. Optional: Use WP-CLI to create a new AWS user. This is recommended so you are not using admin-level access keys on your site.
 
-```bash
-terminus wp <site>.<env> -- s3-uploads create-iam-user --admin-key=<key> --admin-secret=<secret>
-```
+    ```bash
+    terminus wp <site>.<env> -- s3-uploads create-iam-user --admin-key=<key> --admin-secret=<secret>
+    ```
 
 Note: Currently this command will only work if you patch the plugin, per this issue on [Github](https://github.com/humanmade/S3-Uploads/issues/95#issuecomment-393989259). You can also create a site-specific user from your S3 admin panel.
 
@@ -94,5 +109,5 @@ Upon succesful migration, this command will also run a search/replace on your da
 #### Further configuration
 Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md) for information on advanced configuration, such as cache control, URL rewriting and offline development.
 
-### Install and Deploy WP Offload S3 
+### Install and Deploy WP Offload S3
 Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offload-s3/doc/quick-start-guide). No specialized configuration is required for this plugin to run on Pantheon.
