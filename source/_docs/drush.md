@@ -343,6 +343,7 @@ This indicates that the vendor directory contains Drush binaries that should be 
   - `sql-sync-pipe`. Use `sql-sync` instead.
   - `sql-cli` (`sqlc`) and `sql-query` (`sqlq`) See: [Run SQL Queries Using Drush on Pantheon](#run-sql-queries-using-drush-on-pantheon)
   - `php-eval` (`eval`, `ev`) See: [Execute PHP Code Using Drush on Pantheon](#execute-php-code-using-drush-on-pantheon)
+- Due to our highly available architecture, Drush `sql-sync` cannot currently be executed on the live environment with more than 1 application container. We recommend you use terminus or `sql-sync` a multidev, dev or test environment which only has 1 application container.
 - Drush may fail if the `['uri']` array key has a different domain than what is expected by Drupal, resulting in the following error:
 
  ```bash
