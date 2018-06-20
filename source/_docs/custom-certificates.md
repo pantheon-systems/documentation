@@ -60,23 +60,26 @@ If you have a requirement for a custom, dedicated certificate, you can now bring
 
 4. [Test Before Going Live](#test-before-going-live) (optional, recommended)
 
-5. Update DNS including [CAA](#add-caa-records) to disable Let's Encrypt, `A`, and `AAAA` records.
+5. Disable Let's Encrypt by adding CAA DNS records TODO: fix link #disable-lets-encrypt-with-caa-records-required
+
+6. Update `A` and `AAAA` records provided by Pantheon support.
 
 
-### Test Before Going Live
+## Test Before Going Live
 
 Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
 
 ```bash
-192.0.2.5       example.com
+23.185.0.X       example.com
+23.185.0.X       www.example.com
 ```
 
-In the example `hosts` file above, replace `192.0.2.5` with the IP address provided by Pantheon in the **<span class="glyphicons glyphicons-global"></span>  Domains / HTTPS** tab of your Site Dashboard, and `example.com` with your domain name.
+In the example `hosts` file above, replace `23.185.0.X` with the IP address provided by Pantheon and `example.com` with your domain name.
 
 
 For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
 
-### Disable Let's Encrypt with CAA Records (Required)
+## Disable Let's Encrypt with CAA Records (Required)
 
 A **Certification Authority Authorization** (CAA) record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain. In order to ensure your custom certificate is served for all traffic, you must prevent Let’s Encrypt from issuing certificates. You have two options to prevent Let’s Encrypt from issuing certificates for domains on your custom certificate:
 
@@ -151,5 +154,5 @@ We will provide you with DNS information required to complete the upgrade, which
 
 ## See also
 - [Pantheon Global CDN](/docs/global-cdn)
-- [HTTPS on Pantheon's Global CDN](/docs/https/HTTPS)
+- [HTTPS on Pantheon's Global CDN](/docs/https/)
 - [Introduction to Domain Name Services](/docs/dns/)
