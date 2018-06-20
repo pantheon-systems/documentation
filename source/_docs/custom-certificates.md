@@ -1,9 +1,8 @@
 ---
 title: Custom Certificates on the Global CDN
-description: For contract customers who need to retain custom TLS certificates.
+description: For contract customers who need to retain custom TLS certificates, bring your own certificate to the Global CDN to replace legacy HTTPS service.
 earlyaccess: true
 earlynote: This documentation covers features and options not available across the entire platform.
-
 ---
 
 ## Access
