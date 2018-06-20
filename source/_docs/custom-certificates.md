@@ -1,26 +1,26 @@
 ---
 title: Custom Certificates on the Global CDN
 description: For contract customers who need to retain custom TLS certificates.
-contributors: [ari, alexfornuto]
 earlyaccess: true
-earlynote: A white glove Custom Certificate Concierge Service in now available and limited to  Legacy SSL Customers with a Pantheon contract, including Enterprise, EDU+, Pantheon One, Elite, and Reseller customers.
+earlynote: This documentation covers features and options not available across the entire platform.
+
 ---
 
-## Eligibility
+## Access
 
-Access to this service is limited to existing Legacy SSL customers with a Pantheon contract.
+A white glove concierge service is now available and limited to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Reseller, who are using Legacy SSL.
 
-## Why upgrade to the Global CDN?
+## Upgrade to the Global CDN
 
 If your site is using our Legacy SSL service it's on deprecated, legacy infrastructure, served from a single server in the central US. When you upgrade to the Global CDN you'll see faster performance, with content  delivered from over 50 points of presence (POPs) around the world.
 
 If your site uses Legacy SSL, it's also on an outdated TLS configuration. The Global CDN is configured to only use TLS 1.2 and no weak 3DES cipher. On the legacy infrastructure, your site isn't as fast, secure, or as resilient as it could be.
 
-## Upgrade to Global CDN with Free & Automated HTTPS
+### Option 1: Automated Certificate Management via Let's Encrypt
 
 If you just haven’t gotten around to upgrading, consider using our managed HTTPS, which includes automated certificate management, leveraging Let’s Encrypt certificates. As a convenience, when you upgrade to managed HTTPS you’ll never have to worry about an expired certificate again. As long as your domain is pointed to Pantheon, we will automatically renew the certificates required to keep your site secure. [Upgrade](/docs/https/) to get best-in-class encryption and an A+ grade from SSL Labs.
 
-## Upgrade to Global CDN with Manual Custom Certificate
+### Option 2: Manually Managed Custom Certificates
 
 If you have a requirement for a custom, dedicated certificate, you can now bring it the Global CDN.
 
@@ -58,9 +58,9 @@ If you have a requirement for a custom, dedicated certificate, you can now bring
 
     Be sure to send these as separate files, not a "chained cert".
 
-4. [Test](#test-before-going-live) your new records using tools like `dig` (optional, but strongly recommended).
+4. [Test Before Going Live](#test-before-going-live) (optional, recommended)
 
-5. Update your [DNS](/docs/dns/) records, including `A`, `AAAA`, and [CAA](#add-caa-records) records.
+5. Update DNS including [CAA](#add-caa-records) to disable Let's Encrypt, `A`, and `AAAA` records.
 
 
 ### Test Before Going Live
@@ -74,9 +74,9 @@ Test production domain(s) before updating DNS by overriding DNS on your local co
 In the example `hosts` file above, replace `192.0.2.5` with the IP address provided by Pantheon in the **<span class="glyphicons glyphicons-global"></span>  Domains / HTTPS** tab of your Site Dashboard, and `example.com` with your domain name.
 
 
-For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate.
+For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
 
-### Add CAA Records
+### Disable Let's Encrypt with CAA Records (Required)
 
 A **Certification Authority Authorization** (CAA) record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain. In order to ensure your custom certificate is served for all traffic, you must prevent Let’s Encrypt from issuing certificates. You have two options to prevent Let’s Encrypt from issuing certificates for domains on your custom certificate:
 
@@ -113,12 +113,11 @@ Please allow two business days to get a CSR and load the certificate.
 
 ### What about for sites purchased online?
 
-Custom certificates are currently available to customers with a Pantheon contract using Legacy SSL. We have no current plans to offer it to Basic or Performance sites. If you pay for your site with a credit card and are interested in using a custom certificate, please [let us know](@ari-gold FEEEEED ME).
+Custom certificates are currently available to customers with a Pantheon contract using Legacy SSL. We have no current plans to offer it to Basic or Performance sites. If you pay for your site with a credit card and are interested in using a custom certificate, please [let us know](https://learn.pantheon.io/201806-Custom-Cert-Reg.html).
 
 ### Will custom certificates be self-serve?
 
-The concierge service is designed to quickly guide you through the steps required to deliver HTTPS on the Global CDN using your custom certificate. Due to the limited demand, and infrequent need to load custom certificates, the concierge service may be the best fit, although we are evaluating following up with a self-serve option.
-
+We have no current plans to offer a self-serve option. The concierge service is designed to quickly guide you through the steps required to deliver HTTPS on the Global CDN using your custom certificate, and we may follow-up with a self-serve option in the future.
 
 ### Which certificates do I submit?
 
@@ -144,3 +143,13 @@ AAAA record 1:  `2620:12a:8000::X`
 AAAA record 2:  `2620:12a:8001::X`
 
 **Note:** AAAA records are not required, but recommended as a best practice for performance, especially for mobile devices.
+
+## Caveats / Known Issues`
+
+### Incorrect DNS Recommendations Shown on Site-Level
+We will provide you with DNS information required to complete the upgrade, which may conflict with the recommendations show on the site-level. We have work in progress to ensure the correct recommendations are shown.
+
+## See also
+- [Pantheon Global CDN](/docs/global-cdn)
+- [HTTPS on Pantheon's Global CDN](/docs/https/HTTPS)
+- [Introduction to Domain Name Services](/docs/dns/)
