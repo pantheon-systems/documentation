@@ -8,7 +8,7 @@ earlynote: This documentation covers features and options not available across t
 
 ## Access
 
-A white glove concierge service is now available and limited to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Reseller, who are using Legacy SSL.
+A white glove concierge service is now available and limited to contract customers, including **Enterprise**, **EDU+**, **Pantheon One**, **Elite**, and **Reseller**, who are using Legacy SSL.
 
 ## Upgrade to the Global CDN
 
@@ -114,7 +114,7 @@ Nope! You can use the a single certificate to cover multiple domains spread acro
 
 Please allow two business days to get a CSR and load the certificate.
 
-### What about for sites purchased online?
+### What about sites purchased online?
 
 Custom certificates are currently available to customers with a Pantheon contract using Legacy SSL. We have no current plans to offer it to Basic or Performance sites. If you pay for your site with a credit card and are interested in using a custom certificate, please [let us know](https://learn.pantheon.io/201806-Custom-Cert-Reg.html).
 
