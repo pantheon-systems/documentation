@@ -148,8 +148,8 @@ AAAA record 2:  `2620:12a:8001::X`
 
 ## Caveats / Known Issues`
 
-### Incorrect DNS Recommendations Shown on Site-Level
-We will provide you with DNS information required to complete the upgrade, which may conflict with the recommendations show on the site-level. We have work in progress to ensure the correct recommendations are shown.
+### Let's Encrypt Certificate Served Instead of Custom Certificate
+If a Let's Encrypt certificate was deployed to the Global CDN before adding CAA records to prevent Let's Encrypt from issuing certificates, then it will take 10 days for Pantheon to automatically remove the domain from the Let's Encrypt certificate. As part of the concierge service, we will manually remove domains from Let's Encrypt certificates to allow for a quick upgrade, and we have work in progress to ensure the Let's Encrypt certificates are automatically removed quickly once a custom certificate is available.
 
 ## See also
 - [Pantheon Global CDN](/docs/global-cdn)
