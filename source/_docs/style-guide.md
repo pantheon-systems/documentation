@@ -84,24 +84,7 @@ To get started, you need to activate [New Relic APM Pro](/docs/new-relic/) on Pa
 </div>
 
 ### Export Local Environment Variables
-Be kind. If you're writing a guide that will use one or more example variables the reader must replace when following along, you should walk them through exporting them to local environment variables.
-<div class="style-example" markdown="1">
-Export local environment variables to define your site name and Multidev environment to easily copy and paste example commands in the next sections (replace `pantheon-d8-composer-project`):
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#export-var1">Copy</button>
-  <figure><pre id="export-var1"><code class="command bash" data-lang="bash">export SITE=pantheon-d8-composer-project
-  export ENV=pr-slogan</code></pre></figure>
-</div>
-<hr class="source-code">
-```html
-Export local environment variables to define your site name and Multidev environment to easily copy and paste example commands in the next sections (replace `pantheon-d8-composer-project`):
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#export-var1">Copy</button>
-  <figure><pre id="export-var1"><code class="command bash" data-lang="bash">export SITE=pantheon-d8-composer-project
-  export ENV=pr-slogan</code></pre></figure>
-</div>
-```
-</div>
+Be kind. If you're writing a guide that will use one or more example variables the reader must replace when following along, you should walk them through exporting them to local environment variables. See the [Variables](#variables) section below for more details.
 
 
 ## Typography
@@ -253,17 +236,17 @@ Once the build finishes from the last step, active your new theme and rebuild th
 
 ### Variables
 
-When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. They are styled as inline code, and follow common conventions (lowercase for variables, uppercase for constants).
+When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
 
 <div class="style-example" markdown="1">
 
 <div class="alert alert-export" role="alert">
 <h4 class="info">Exports</h4>
-<p markdown="1">This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the constants `$SITE` and `$ENV` to match your site name, and the Dev environment:
+<p markdown="1">This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 
 <pre><code class="bash">
-export SITE=yoursitename
-export ENV=dev
+export site=yoursitename
+export env=dev
 </code></pre>
 </p>
 </div>
