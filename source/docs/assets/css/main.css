@@ -3245,14 +3245,14 @@ display: block;
 
 .alert-export {
   background-image: none !important;
-    border-color: #3c763d;
+    border-color: #000000;
     border-left-width: 8px;
     border-right: 0px;
     border-top: 0px;
     border-bottom: 0px;
     border-radius: 0px;
     background-color: #efd01b !important;
-    color: #3c763d !important;
+    color: #000000 !important;
     font-size: 18px;
     line-height: 29px;
     font-family: 'Open Sans', sans-serif;
