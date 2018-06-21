@@ -3242,6 +3242,7 @@ display: block;
   font-size: 28px;
 }
 
+
 .alert-export {
   background-image: none !important;
     border-color: #3c763d;
@@ -3259,6 +3260,7 @@ display: block;
 .alert-export h4 {
   font-size: 28px;
 }
+
 
 .alert h4,
 #doc .alert h4 {
