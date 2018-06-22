@@ -113,9 +113,9 @@ Nope! You can use the a single certificate to cover multiple domains spread acro
 
 Please allow two business days to get a CSR and load the certificate.
 
-### What about sites purchased online?
+### What about new Enterprise sites or sites purchased online?
 
-Custom certificates are currently available to customers with a Pantheon contract using Legacy SSL. We have no current plans to offer it to Basic or Performance sites. If you pay for your site with a credit card and are interested in using a custom certificate, please [let us know](https://learn.pantheon.io/201806-Custom-Cert-Reg.html).
+Custom certificates are currently available to customers with a Pantheon contract using Legacy SSL. We have no current plans to offer it to new sites or Basic or Performance sites. If you are interested in using a custom certificate, however, please [let us know](https://goo.gl/forms/rpyyzmhDOfcVgnYi1).
 
 ### Will custom certificates be self-serve?
 
