@@ -68,7 +68,7 @@ WP Offload S3 requires a paid license but is configurable in the WordPress admin
     mv S3-Uploads-2.0.0/ S3-Uploads
     ```
 
-3. Create and / or copy your S3 upload key and secret from the "My security credentials" section of your AWS account to a text editor on your local computer.
+3. Create and / or copy your access ID key and secret access key from the "My security credentials" section of your AWS account to a text editor on your local computer.
 
 4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up){.external} file. For security, we recommended a service like [Lockr](https://pantheon.io/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 
