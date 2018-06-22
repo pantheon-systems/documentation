@@ -3245,13 +3245,12 @@ display: block;
 
 .alert-export {
   background-image: none !important;
-    border-color: #000000;
+    border-color: #efd01b;
     border-left-width: 8px;
-    border-right: 0px;
-    border-top: 0px;
-    border-bottom: 0px;
-    border-radius: 0px;
-    background-color: #efd01b !important;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-radius: 4px;
     color: #000000 !important;
     font-size: 18px;
     line-height: 29px;
