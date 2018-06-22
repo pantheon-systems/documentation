@@ -7,7 +7,7 @@ earlynote: This documentation covers features and options not available across t
 
 ## Access
 
-A white glove concierge service is now available and limited to contract customers, including **Enterprise**, **EDU+**, **Pantheon One**, **Elite**, and **Reseller**, who are using Legacy SSL.
+A white glove concierge service is now available and **currently limited to existing Legacy SSL contract customers**, including Enterprise**, EDU+, Pantheon One, Elite, and Resellers.
 
 ## Upgrade to the Global CDN
 
