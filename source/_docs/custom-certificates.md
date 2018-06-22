@@ -53,7 +53,7 @@ If you have a requirement for a custom, dedicated certificate, you can now bring
 3. Once you have a set of certificates from the CA, send us:
 
     - The end-client certificate
-    - Any intermediate certficates provided by the CA.<br><br>
+    - Any intermediate certificates provided by the CA.<br><br>
 
     Be sure to send these as separate files, not a "chained cert".
 
