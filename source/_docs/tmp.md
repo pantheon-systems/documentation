@@ -4,7 +4,18 @@ description: Understand Pantheon's default temporary path and learn how to debug
 tags: [debugcode, infrastructure]
 categories: []
 ---
-## Default Temporary Path  
+
+<div class="alert alert-export" role="alert">
+<h4 class="info">Exports</h4>
+<p markdown="1">This doc uses [Terminus](/docs/terminus/) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
+<pre>
+<code class="bash">export site=yoursitename
+export env=dev
+</code></pre>
+</p>
+</div>
+
+## Default Temporary Path
 Pantheon configures an appropriate temporary path for [WordPress](https://github.com/pantheon-systems/WordPress/blob/4.9.6/wp-config.php#L83-L86){.external} and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/8.5.3/sites/default/settings.pantheon.php#L146-L154){.external}. Drupal 7 sites can achieve the same configuration by adding the following to `settings.php`:
 
 ```php
@@ -48,7 +59,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
   Verify the setting by using [Terminus](/docs/terminus/) to run `wp config get`:
 
   ```command
-  terminus wp <site>.<env> -- config get SOME_TMP_SETTING
+  terminus wp $site.$env -- config get SOME_TMP_SETTING
   ```
 
   Output of this command should look something like the following Contact Form 7 example:
@@ -73,7 +84,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
   Verify the setting by using [Terminus](/docs/terminus/) to run `drush variable-get`:
 
   ```command
-  terminus drush <site>.<env> -- variable-get some_tmp_setting
+  terminus drush $site.$env -- variable-get some_tmp_setting
   ```
 
   Output of this command should look something like the following Plupload example:
@@ -98,7 +109,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
   Verify the setting by using [Terminus](/docs/terminus/) to run `drush config-get` with `--include-overridden`:
 
   ```command
-  terminus drush <site>.<env> -- config-get some_module.settings some_tmp_setting --include-overridden
+  terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden
   ```
 
   Output of this command should look something like the following Plupload example:
@@ -157,7 +168,7 @@ In general, there's no need for temporary files to persist across application co
   Verify the setting by using [Terminus](/docs/terminus/) to run `wp config get`:
 
   ```command
-  terminus wp <site>.<env> -- config get SOME_TMP_SETTING
+  terminus wp $site.$env -- config get SOME_TMP_SETTING
   ```
 
   Output of this command should look something like the following Contact Form 7 example:
@@ -184,7 +195,7 @@ In general, there's no need for temporary files to persist across application co
   Verify the setting by using [Terminus](/docs/terminus/) to run `drush variable-get`:
 
   ```command
-  terminus drush <site>.<env> -- variable-get some_tmp_setting
+  terminus drush $site.$env -- variable-get some_tmp_setting
   ```
 
   Output of this command should look something like the following Plupload example:
@@ -210,7 +221,7 @@ In general, there's no need for temporary files to persist across application co
   Verify the setting by using [Terminus](/docs/terminus/) to run `drush config-get` with `--include-overridden`:
 
   ```command
-  terminus drush <site>.<env> -- config-get some_module.settings some_tmp_setting --include-overridden
+  terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden
   ```
 
   Output of this command should look something like the following Plupload example:

@@ -1,5 +1,5 @@
 ---
-title: Platform and Custom Domains  
+title: Platform and Custom Domains
 description: Work with platform domains or connect custom domains in the Site Dashboard, then redirect requests via PHP to standardize traffic on HTTPS and a primary domain.
 tags: [redirects, variables, dns]
 categories: []
@@ -97,9 +97,11 @@ For details, see [Vanity Domains](/docs/vanity-domains/).
 All redirect logic should include the `php_sapi_name() != "cli"` conditional statement to see if WordPress or Drupal is running via the command line. Drush and WP-CLI are used by the platform for operations like cache clearing and search and replace, so it is important to only redirect web requests, otherwise the redirect will kill the PHP process before Drush or WP-CLI is executed, resulting in a silent failure:
 
 ```bash
-[notice] Command: <site>.<env> -- 'drush <command>' [Exit: 1]
+[notice] Command: site.env -- 'drush <command>' [Exit: 1]
 [error]
 ```
+
+
 ### Infinite Redirect Loops
 #### HTTP_X_FORWARDED_PROTO
 Errors referencing too many redirects may be a result of using the ` $_SERVER['HTTP_X_FORWARDED_PROTO']` variable within redirect logic located in your site's `wp-config.php` or `settings.php` file.

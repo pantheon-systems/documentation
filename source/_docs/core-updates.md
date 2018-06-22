@@ -37,11 +37,11 @@ If you prefer using the command line, you can apply updates with [Terminus](/doc
 
 ### Update a Specific Site
 
-```
-terminus upstream:updates:apply <site>.<env> --updatedb
+```bash
+terminus upstream:updates:apply site.env --updatedb
 ```
 
-Learn more about this command by running `terminus help upstream:updates:apply`.
+Replace `site` and `env` with your site name and the correct environment. Learn more about this command by running `terminus help upstream:updates:apply`.
 
 ### Update Multiple Sites
 
