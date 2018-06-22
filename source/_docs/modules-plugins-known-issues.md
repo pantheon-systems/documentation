@@ -95,7 +95,7 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 **Solution**: Pressflow settings can be [decoded in settings.php](/docs/read-environment-config/) to provide database credentials, but the module needs to be modified manually to use `$_ENV(["DB_PORT"])`.
 
-Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/sites/default/default.settings.php#L518){.external} and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/8.5.4/sites/default/default.settings.php#L640){.external} core provide a basic version of this same feature via configuration in settings.php.
+Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/sites/default/default.settings.php#L518){.external} and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/8.5.4/sites/default/default.settings.php#L640){.external} cores provide a basic version of this same feature via configuration in `settings.php`.
 
 <hr>
 ### [Front](https://www.drupal.org/project/front){.external}
