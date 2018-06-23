@@ -1,17 +1,17 @@
 ---
 title: Early Access: Custom Certificates on Pantheon's Global CDN
-description: For contract customers who need to retain custom TLS certificates, bring your own certificate to the Global CDN to replace legacy HTTPS service.
+description: For contract customers who need to retain custom TLS certificates, bring your own certificate to the Global CDN to replace legacy SSL service.
 earlyaccess: true
 earlynote: This documentation covers features and options not available across the entire platform.
 ---
 
 ## Access
 
-A white glove concierge service is now available and **currently limited to existing Legacy SSL contract customers**, including Enterprise**, EDU+, Pantheon One, Elite, and Resellers.
+A white glove concierge service is now available and **currently limited to existing Legacy SSL contract customers**, including Enterprise, EDU+, Pantheon One, Elite, and Resellers.
 
 ## Upgrade to the Global CDN
 
-If your site is using our Legacy SSL service it's on deprecated, legacy infrastructure, served from a single server in the central US. When you upgrade to the Global CDN you'll see faster performance, with content  delivered from over 50 points of presence (POPs) around the world.
+If your site is using our Legacy SSL service it's on deprecated, legacy infrastructure, served from a single server in the central US. When you upgrade to the Global CDN you'll see faster performance, with content  delivered from almost 50 points of presence (POPs) around the world.
 
 If your site uses Legacy SSL, it's also on an outdated TLS configuration. The Global CDN is configured to only use TLS 1.2 and no weak 3DES cipher. On the legacy infrastructure, your site isn't as fast, secure, or as resilient as it could be.
 
@@ -21,7 +21,7 @@ If you just haven’t gotten around to upgrading, consider using our managed HTT
 
 ### Option 2: Manually Managed Custom Certificates
 
-If you have a requirement for a custom, dedicated certificate, you can now bring it the Global CDN.
+If you require a custom, dedicated certificate, you can now bring it the Global CDN.
 
 1. [Open a support ticket](/docs/support/#ticket-support) with the certificate details required to generate a **Certificate Signing Request** (CSR). Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name){.external} (SANs) per certificate.
 
@@ -59,9 +59,9 @@ If you have a requirement for a custom, dedicated certificate, you can now bring
 
 4. [Test Before Going Live](#test-before-going-live) (optional, recommended)
 
-5. <a href="#disable-lets-encrypt-with-caa-records-required" data-proofer-ignore>Disable Let's Encrypt by adding CAA DNS records</a>.
+5.  <a href="#disable-lets-encrypt-with-caa-records-required" data-proofer-ignore>Disable Let's Encrypt by adding CAA DNS records</a>.
 
-6. Update `A` and `AAAA` records provided by Pantheon support.
+6. Update `A` and `AAAA` records provided by Pantheon Support.
 
 
 ## Test Before Going Live
