@@ -11,7 +11,7 @@ A white glove concierge service is now available and **currently limited to exis
 
 ## Upgrade to the Global CDN
 
-If your site is using our Legacy SSL service it's on deprecated, legacy infrastructure, served from a single server in the central US. When you upgrade to the Global CDN you'll see faster performance, with content  delivered from almost 50 points of presence (POPs) around the world.
+If your site is using our Legacy SSL service, it's on deprecated legacy infrastructure served from a single server in the central US. When you upgrade to the Global CDN you'll see faster performance, with content  delivered from almost 50 points of presence (POPs) around the world.
 
 If your site uses Legacy SSL, it's also on an outdated TLS configuration. The Global CDN is configured to only use TLS 1.2 and no weak 3DES cipher. On the legacy infrastructure, your site isn't as fast, secure, or as resilient as it could be.
 
