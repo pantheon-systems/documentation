@@ -203,3 +203,10 @@ terminus drush <site>.<env> -- utf8mb4-convert-databases
 ```
 
 This will convert the database tables in the existing installation to the proper encoding to support emoji characters. After making the conversion, test it out by placing an emoji in the site text.
+
+
+## Terminus Support
+
+[Terminus](/docs/terminus), our command-line tool for power users, is designed for 'nix-type operating systems like MacOS and Linux. While some people have installed Terminus on Windows using the [Git BASH on Git for Windows](https://git-for-windows.github.io/){.external} or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){.external} shells, this is not officially supported.
+
+If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/){.external} to run a virtualized 'nix-type environment for tools like Terminus.
