@@ -59,19 +59,18 @@ Drupal 8 will not run locally without a hash salt, but it need not be the same o
 $settings['hash_salt'] = '$HASH_SALT';
 ```
 
-### Trusted Host Setting
+#### Trusted Host Setting
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">Replace `^www.yoursite.com$` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed.</p>
+<p markdown="1">Replace `^www.yoursite.com$` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. If you're using the Drupal 8 redirects from our [Configure Redirects](/docs/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.</p>
 </div>
 ```
 if (defined('PANTHEON_ENVIRONMENT')) {
   if (in_array($_ENV['PANTHEON_ENVIRONMENT'], array('dev', 'test', 'live'))) {
-    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.getpantheon.io";
     $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.pantheon.io";
     $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.pantheonsite.io";
-    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.panth.io";
+
 
     # Replace value with custom domain(s) added in the site Dashboard
     $settings['trusted_host_patterns'][] = '^.+.yoursite.com$';
