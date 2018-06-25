@@ -14,7 +14,7 @@ searchboost: 200
 
 Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
 
-<a href="/docs/terminus/install">Install Terminus</a> on Mac OS X or Linux, or on Windows using [Git BASH on Git for Windows](https://git-for-windows.github.io/). For details on legacy versions of Terminus, see [Legacy Terminus Versions](/docs/terminus/get-started/legacy).
+[Install Terminus](/docs/terminus/install) on Mac OS X or Linux. For details on legacy versions of Terminus, see [Legacy Terminus Versions](/docs/terminus/get-started/legacy).
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Command Line Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
@@ -23,7 +23,7 @@ Our command line interface, Terminus, provides advanced interaction with Pantheo
 
 ## Usage
 
-Use Terminus to perform these and other operations:  
+Use Terminus to perform these and other operations:
 
 - Create a new site
 - Create and delete Multidev environments
