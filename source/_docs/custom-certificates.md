@@ -144,7 +144,7 @@ A record: `23.185.0.X`
 AAAA record 1:  `2620:12a:8000::X`
 AAAA record 2:  `2620:12a:8001::X`
 
-**Note:** AAAA records are not required, but recommended as a best practice for performance, especially for mobile devices.
+**Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/docs/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
 
 ## Caveats / Known Issues
 
