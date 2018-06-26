@@ -43,6 +43,10 @@ User-agent: *
 Disallow: /
 
 User-agent: RavenCrawler
+User-agent: rogerbot
+User-agent: dotbot
+User-agent: SemrushBot
+User-agent: SemrushBot-SA
 Allow: /
 ```
 
@@ -52,7 +56,14 @@ Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP heade
 
 The `pantheonsite.io` domains are intended for development use and cannot be used for production. A custom or CMS-standard `robots.txt` will only work on Live environments with a custom domain. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
 
-[Site Auditor](https://raven.zendesk.com/hc/en-us/articles/202346870){.external} (aka RavenCrawler) can access platform domains like `test-example.pantheonsite.io` to support pre-release SEO testing. If you’re testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by <a data-proofer-ignore href="/docs/support/#can-i-request-a-feature-be-added-to-the-platform">contacting support</a> to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
+To support pre-launch SEO testing, we allow the following bots access to platform domains:
+
+ - [Site Auditor](https://raven.zendesk.com/hc/en-us/articles/202346870){.external} by Raven
+ - [SEMrush](https://www.semrush.com/bot/){.external}
+ - [RogerBot](https://moz.com/help/guides/moz-procedures/what-is-rogerbot){.external} by Moz
+ - [Dotbot](https://moz.com/help/guides/moz-procedures/dotbot){.external} by Moz
+
+If you’re testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by <a data-proofer-ignore href="/docs/support/#can-i-request-a-feature-be-added-to-the-platform">contacting support</a> to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
 
 If you run SEO toolsets locally, you can utilize an `/etc/hosts` file entry on your local development box to spoof your production domain on Pantheon:
 
