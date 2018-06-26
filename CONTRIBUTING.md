@@ -18,8 +18,8 @@ Before you edit or create a doc, search [open issues](https://github.com/pantheo
 ###Titles and Descriptions
 When creating issues, add a clear title and description. Issues should contain relevant information e.g., the document title, the information that is incorrect or outdated and your suggestion on how to fix it, reasons why method A is better than method B, and so on.
 
-**Example**:  
-Title: Apache Solr doc - Terminus command is not working  
+**Example**:
+Title: Apache Solr doc - Terminus command is not working
 Description: The document currently suggests using XYZ commands, but I get the following error (insert error message). The fix is to use XYZ commands.
 
 ###Labels
@@ -32,6 +32,7 @@ Add labels to issues by clicking the gear in the sidebar on the right. Labels ar
 
 1. [Use Vagrant](https://github.com/pantheon-systems/documentation#option-1-use-vagrant-recommended) to run the docs site locally.
 2. Navigate to your local `documentation` repository and use `git checkout -b <new-branch-name>` to switch to a new branch.
+ - The branch name should start with the corresponding issue number followed by a brief description. If no issues exists, [you can create one](https://github.com/pantheon-systems/documentation/issues/new) first, or proceed without it. For example, `3830-add-branch-guidelines-to-contributing-md`.
 3. Edit/Create docs locally using your favorite text editor (e.g. [Atom](https://atom.io/)), then save the file changes.
 4. Run `vagrant provision` and verify modifications on the local site <http://docs.local:8000/docs>
 5. Test layout or code changes with `vagrant ssh` and `cd /vagrant`, then execute the following tests individually (optional):
@@ -55,8 +56,8 @@ Trying to edit or create a file in this repository will create your fork automat
 
 ## Keep your Local Updated with Master
 
-From your local repo, run the following commands in order:  
-1. `git checkout master`  
+From your local repo, run the following commands in order:
+1. `git checkout master`
 2. `git pull --rebase upstream master`
 3. `git push origin master`
 
