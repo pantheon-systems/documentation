@@ -103,7 +103,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
   </div>
   <div class="alert alert-info">
   <h4 class="info">Note</h4>
-  <p markdown="1">If your existing site is already version controlled and you would like to preserve the commit history, import the code from the command line with Git. If you prefer to avoid the command line entirely, we suggest importing the codebase using an SFTP Client such as [Transmit](https://panic.com/transmit/){.external} or [Cyberduck](https://cyberduck.io/){.external}.</p></div>
+  <p markdown="1">If your existing site is already version controlled and you would like to preserve the commit history, import the code from the command line with Git using the instructions below. If you prefer to avoid the command line entirely, we suggest importing the codebase using an SFTP Client such as [Transmit](https://panic.com/transmit/){.external} or [Cyberduck](https://cyberduck.io/){.external}.</p></div>
 
 ### Using an SFTP Client
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
