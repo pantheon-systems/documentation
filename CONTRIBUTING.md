@@ -32,6 +32,7 @@ Add labels to issues by clicking the gear in the sidebar on the right. Labels ar
 
 1. [Use Vagrant](https://github.com/pantheon-systems/documentation#option-1-use-vagrant-recommended) to run the docs site locally.
 2. Navigate to your local `documentation` repository and use `git checkout -b <new-branch-name>` to switch to a new branch.
+ - The branch name should start with the corresponding issue number followed by a brief description. If no issues exists, [please create a new issue](https://github.com/pantheon-systems/documentation/issues/new) first. For example, `3830-add-branch-guidelines-to-contributing-md`.
 3. Edit/Create docs locally using your favorite text editor (e.g. [Atom](https://atom.io/)), then save the file changes.
 4. Run `vagrant provision` and verify modifications on the local site <http://docs.local:8000/docs>
 5. Test layout or code changes with `vagrant ssh` and `cd /vagrant`, then execute the following tests individually (optional):
