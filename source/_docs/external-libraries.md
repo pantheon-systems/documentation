@@ -114,18 +114,10 @@ When creating a new preset, if the "Division by Zero" warning appears, add the [
 Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize){.external}) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`.
 
 ## Troubleshooting and FAQs
-#### What if I need a library not listed here?
-If you need a library not listed on this page, [contact support](/docs/support) and include a description of your use case and a link to the library's webpage.
-
-All libraries will evaluated by Pantheon's Operations Team on a case-by-case basis.
+#### How do I request the addiiton of a new library or a newer version of an existing library?
+Please [contact support](/docs/support) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
 
 #### Will you setup and configure the module/plugin for me?
 No. This is not within our [scope of support](/docs/support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
 
-#### How long does the process take?
-This depends on the library that you would like to be installed, the impact it could possibly have on a system, roadmap and organizational goals. During the process we will let you know if the request is denied or approved.
 
-It is very important to note, these requests are not guaranteed and it is possible the feature requests may be denied. As a result we recommend you should set aside enough time for alternative solutions.
-
-#### What version of XYZ library is installed?
-As these libraries are installed system-wide, we use the latest packaged version of the libraries available.  New versions may be installed without notice as security updates or other upstream changes are made available.
