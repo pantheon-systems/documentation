@@ -117,7 +117,7 @@ No action is required. Existing sites will automatically switch to the equivalen
 
 
 ### Am I going to lose New Relic?
-Basic site plans will not have access to New Relic. If you are using New Relic on a Personal plan currently, you will lose access when your site plan migrates to a Basic plan on August 1st.
+Basic site plans will not have access to New Relic. If you are using New Relic on a Personal plan currently, you will lose access when your site plan migrates to a Basic plan on your monthly billing date, on or after August 1st.
 
 If you upgrade to a Performance plan before August 1st, you will keep New Relic access and lock in preferred pricing.
 
