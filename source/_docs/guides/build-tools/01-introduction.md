@@ -144,7 +144,7 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
 ### Access Tokens (Optional)
 
-The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens){.external} and [CircleCI](https://circleci.com/account/api){.external}, which are stored as environment variables. You many optionally generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
+The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens){.external} and [CircleCI](https://circleci.com/account/api){.external}, which are stored as environment variables. The GitHub token needs the **repo** (required) and **delete-repo** (optional) scopes. You many optionally generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
 
 ```bash
 export GITHUB_TOKEN=yourGitHubToken
