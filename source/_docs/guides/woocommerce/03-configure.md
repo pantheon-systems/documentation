@@ -40,4 +40,4 @@ We have a [whole document explaining how to load your entire site in HTTPS](/doc
 
 ![Force HTTPS in checkout](/source/docs/assets/images/guides/woocommerce/12-force-secure-checkout.png)
 
-Make sure **Force secure checkout** is enabled in **WooCommerce** > **Settings** > **Checkout** > **Checkout Settings**. This has the added benefit of getting rid of one of the admin notices in the backend of your site.
+Make sure **Force secure checkout** is enabled in **WooCommerce** > **Settings** > **Advanced** > **Page setup**. This has the added benefit of getting rid of one of the admin notices in the backend of your site.
