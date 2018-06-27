@@ -2,7 +2,7 @@
 title: Manage Some Dependencies with Composer
 description: Get your feet wet with Composer on WordPress or Drupal 7 before going all in.
 contributors: [rachelwhitton, dustinleblanc, wbconnor, sarahg]
-tags: [automation, workflow, moreguides]
+tags: [automation, workflow, moreguides, composer]
 type: guide
 permalink: docs/guides/:basename/
 ---
@@ -130,7 +130,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 Anything you aren't managing with Composer is installed and maintained using the standard techniques such as using the WordPress or Drupal admin interfaces. Continue applying one-click core updates from Pantheon in the Site Dashboard.
 
-## Require Dependencies  
+## Require Dependencies
 Use the `require` command to add new dependencies to your project, such as libraries or themes. This command modifies your `composer.json` file by including the specified dependency and it's compatible version.
 
 <!-- Nav tabs -->
@@ -172,7 +172,7 @@ Use the `require` command to add new dependencies to your project, such as libra
 
     ```command
     git push origin master
-    ```  
+    ```
   5. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard.
   6. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
   7. Navigate to **Plugins** and activate Pantheon Advanced Page Cache.
@@ -211,7 +211,7 @@ Use the `require` command to add new dependencies to your project, such as libra
 
     ```command
     git push origin master
-    ```  
+    ```
   </div>
 </div>
 

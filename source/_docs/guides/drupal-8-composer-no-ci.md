@@ -1,7 +1,7 @@
 ---
 title: Drupal 8 and Composer on Pantheon Without Continuous Integration
 description: Learn how to manage Drupal 8 using Composer with Pantheon.
-tags: [moreguides]
+tags: [moreguides, composer]
 categories: [drupal]
 type: guide
 permalink: docs/guides/:basename/
@@ -123,9 +123,9 @@ Let's take a look at the changes.
 git status
 ```
 
-It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the CUT section. 
+It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the CUT section.
 
-**Important:** Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon. 
+**Important:** Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon.
 
 Now let’s run git status again to make sure everything is included.
 
@@ -208,9 +208,9 @@ terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
 ### Managing Drupal Updates with Composer
 Just like adding a new module updates to existing Composer managed third-party items (Drupal core, contrib modules and themes) will need to be done locally.
 
-You can run `composer update` to download all available updates within the constraints defined in `composer.json`. You can update specific dependencies only by listing them explicitly in the `composer update` commands. 
+You can run `composer update` to download all available updates within the constraints defined in `composer.json`. You can update specific dependencies only by listing them explicitly in the `composer update` commands.
 
-For example, to update Drupal core you would use `composer update drupal/core --with-dependencies`. If `composer.json` had the version constraint for `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in the [version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-). `--with-dependencies` is necessary when explicitly updating Drupal core in order to download all of Drupal core's dependencies, such as Symfony. 
+For example, to update Drupal core you would use `composer update drupal/core --with-dependencies`. If `composer.json` had the version constraint for `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in the [version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-). `--with-dependencies` is necessary when explicitly updating Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
 
 Once the desired dependencies have been updated with Composer you will need to commit the new files to Pantheon.
 
