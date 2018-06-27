@@ -4217,10 +4217,18 @@ p.depbar>a:hover{
     background: #EFD01B;
     text-align: center;
     color: #181D21;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'TabletGothic';
     bottom: 400px;
     display: inherit;
     padding: 50px;
+  }
+  .office-hours p {
+    color: #181D21 !important;
+    font-family: 'TabletGothic' !important;
+    font-weight: bolder;
+  }
+  .office-hours .cta {
+    margin: 15px 15px 0px 0px;
   }
   .demo-cta a {
     display:block;
@@ -4250,13 +4258,13 @@ p.depbar>a:hover{
     max-width: 560px;
     margin: auto;
   }
-  #office-hours a:link, #office-hours a:visited {
+  /*#office-hours a:link, #office-hours a:visited {
     color: #181f22 !important;
     font-weight: 700;
   }
   #office-hours a:hover {
     opacity: 0.65;
-  }
+  }*/
   .office-hours h4{
     font-size: 20px;
     font-family: 'Open Sans', sans-serif;
@@ -4328,7 +4336,7 @@ a.cta {
   white-space: nowrap;
   max-width: none;
   padding: 0 0 0 12px !important;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   transition: 200ms all;
   font-weight: 800;
   font-family: 'Open Sans', sans-serif;
@@ -5085,9 +5093,9 @@ a:focus {
     width: 100%;
     top: 20px;
 }
-  a.cta {
+  /*a.cta {
     border: none !important;
-  }
+  }*/
   .nav .open>a, .nav .open>a:focus, .nav .open>a:hover, .navbar-nav .dropdown-menu>li>a:focus, .navbar-nav .dropdown-menu>li>a:hover{
     color: #EFD01B !important;
     background-color: #44525e;
