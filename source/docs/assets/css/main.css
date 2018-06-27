@@ -4222,6 +4222,16 @@ p.depbar>a:hover{
     display: inherit;
     padding: 50px;
   }
+  .demo-cta a {
+    display:block;
+    background: #EFD01B;
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    border: 2px solid #000;
+    bottom: 4px;
+    display: inherit;
+    padding: 5px;
+  }
   .office-hours p {
     color: #181D21;
 }
