@@ -33,6 +33,25 @@
       {% endfor %}
     </ul>
   </div>
+
+  <div class="col-md-6 topic-groups">
+    <h3>Composer</h3>
+    <p class="topic-info__description">Use Composer to manage some or all of your dependencies.</p>
+    <ul class="topic-docs">
+      {% for doc in data.docs_tags.composer if doc.meta.type == "video"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
+      {% endfor %}
+      {% for doc in data.docs_tags.composer %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+          <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% for doc in data.docs_tags.composer if doc.meta.type == "guide"%}
+        <li><a href="{{ doc.url }}"><i class="fa fa-book"></i> {{ doc.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
   <div class="col-md-6 topic-groups">
     <h3>Environment Configuration Variables</h3>
     <p class="topic-info__description">Manage configuration and site settings per environment.</p>
