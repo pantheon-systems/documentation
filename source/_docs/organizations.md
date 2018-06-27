@@ -74,6 +74,11 @@ New users who sign up with the email address domain you specify will be automati
 ### Single Sign-On (SSO)
 SSO allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. [Learn more about SSO with SAML](/docs/sso-organizations).
 
+### Tagging
+Sites in an organization can have one or multiple tags, to easily identify and/or group them. Tagging can be done from the Organization Sites dashboard or through [Terminus](/docs/terminus):
+
+![Sorting sites by tag](/source/docs/assets/images/dashboard/sorted-by-tag.png)
+
 
 ## Retrieving the Organization UUID
 Every entity (user, organization, product and site) is assigned a UUID which is internal to Pantheon. The UUID is found within the URL for the entity and resembles the following:
