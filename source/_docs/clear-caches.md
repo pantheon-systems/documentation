@@ -80,9 +80,11 @@ We refer to this as "full cache clearing" because the operation removes all page
 ### Command Line
 If you're working from a terminal prompt or looking to automate parts of your workflow, use [Terminus](/docs/terminus/) to clear caches from the command line:
 
+```bash
+terminus env:clear-cache site.env
 ```
-terminus env:clear-cache <site>.<env>
-```
+
+Replace `site` and `env` with your site name and the correct environment.
 
 ## Troubleshooting
 ### Clear Cache Fails in Dashboard or Terminus

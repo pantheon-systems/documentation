@@ -42,6 +42,8 @@ Using Terminus, you can complete the above process from the command line.
 
 ### Workflow Example
 
+In the commands below, replace `site` and `env` with your site name and the correct environment:
+
 1.  `terminus drush <site>.dev -- cex -y`
 2.  `terminus env:commit <site>.dev --message="Export configuration to code"`
 3.  `terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"`

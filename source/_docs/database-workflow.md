@@ -29,15 +29,16 @@ WordPress sites with custom domains configured on multiple environments may see 
 
 The Site Dashboard runs `wp search-replace` during the cloning workflow to update environment URLs automatically. This operation, however, only runs once on a single set of URLs. If the target environment has a custom domain (e.g `test.example.com`), it's used to replace the source environment's custom domain (e.g. `www.example.com`). This can cause the target environment to have incorrect references to platform domains (e.g. `live-example.pantheonsite.io`).
 
-To resolve this issue, use [Terminus](/docs/terminus) to run an additional `wp search-replace` command on the target environment after cloning:
-```
-terminus remote:wp <site>.<env> -- search-replace '://live-example.pantheonsite.io' '://test.example.com' --all-tables --verbose
+To resolve this issue, use [Terminus](/docs/terminus) to run an additional `wp search-replace` command on the target environment after cloning. Replace `site` and `env` with your site name and the correct environment:
+
+```bash
+terminus remote:wp site.env -- search-replace '://live-example.pantheonsite.io' '://test.example.com' --all-tables --verbose
 ```
 
 The following example also converts the URL from HTTP to HTTPS, for situations where you might have HTTPS in one environment and not another:
 
-```
-terminus remote:wp <site>.<env> -- search-replace 'https://live-example.pantheonsite.io' 'http://test.example.com' --all-tables --verbose
+```bash
+terminus remote:wp site.env -- search-replace 'https://live-example.pantheonsite.io' 'http://test.example.com' --all-tables --verbose
 ```
 
 ### Base table or view not found
