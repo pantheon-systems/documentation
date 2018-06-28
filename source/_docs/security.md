@@ -61,6 +61,10 @@ terminus lock:disable <site>:<env>
 
 ## Troubleshooting
 
+### Authentication Prompt Appears in Environments Where It's Not Enabled
+
+If you see an authentication prompt for a different environment (for example, a Dev site authentication prompt on the Test environment), you likely have assets, such as images, loading from a locked environment. Inspect your page source code and search for the locked environment's URL (e.g `dev-yoursite.pantheonsite.io`), then replace that with the correct URL for the current environment.
+
 ### Drupal HTTP Authentication Module
 
 The [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) core module (Drupal 8) and [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) contrib module (Drupal 7) conflict with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) if both are enabled. We recommend using Pantheon's Security tool within the Site Dashboard on target environments, or the module to restrict access, not both.
