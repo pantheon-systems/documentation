@@ -92,7 +92,7 @@ A Composer managed site should be able to include all custom code via Composer. 
 composer require drupal/module_name
 ```
 
-Where `module_name` is the machine name of the module in question
+Where `module_name` is the machine name of the module in question.
 
 #### Themes
 Repeat the same process with themes, checking `/themes`, `/themes/contrib`, `/sites/all/themes`, and `/sites/all/themes/contrib`. Use Composer in the same way as above to require these.
