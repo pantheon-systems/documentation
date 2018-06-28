@@ -44,6 +44,8 @@ api_version: 1
 php_version: 7.0
 ```
 
+You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.
+
 Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control.
 
 The next time you [push your changes](/docs/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
