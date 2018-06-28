@@ -103,7 +103,7 @@ Libraries can be handled in the same way, but the specifics depend on how your l
 ### Custom Code
 #### Modules and Themes
 
-Custom code should be manually copied from the existing site repository to the composer managed directory.
+Custom code should be manually copied from the existing site repository to the Composer managed directory.
 
 Modules:
 
@@ -137,7 +137,7 @@ my-site-composer
 |-etc...
 ```
 
-Locate the configuration files in your existing site and move them here. If they are stored in the files directory on your existing site, retreive them via [SFTP](/docs/sftp/), as the Git clone would not contain them. The example project is configured to use this location.
+Locate the configuration files in your existing site and move them here. If they are stored in the files directory on your existing site, retrieve them via [SFTP](/docs/sftp/), as the Git clone would not contain them. The example project is configured to use this location.
 
 ## Prepare to Deploy
 
