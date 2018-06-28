@@ -28,7 +28,7 @@ contributors: [dustinleblanc]
 </div>
 
 ## Checkout a New Branch
-You're about to make some massive changes to the codebase. We recommend you to do this work on a new branch, as it might take you sometime to complete and rolling back can be complicated:
+You're about to make some massive changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back can be complicated:
 
 1. In your local terminal, change directories to your site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
