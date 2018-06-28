@@ -167,7 +167,7 @@ You should see a large amount of files committed to the new branch we created ea
 
 ## Deploy
 
-You've now committed the code to a branch. If your site has multi-dev, you can deploy that branch directly to a new multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on [our documentation on log collection](/docs/logs)
+You've now committed the code to a branch. If your site has multidev, you can deploy that branch directly to a new multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on [our documentation on log collection](/docs/logs).
 
 Once you have confirmed the site is working, merge `composify` into `master`, and follow the standard workflow to QA a code change before going live.
 
