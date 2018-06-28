@@ -4,7 +4,7 @@ $buildScriptPath = '/documentation/bin/sculpin generate --env=dev';
 
 $startPaths = [
     '/documentation/app/config/*',
-    '/documentation/source/*',
+    '/documentation/source/_docs/*',
 ];
 
 $lastTime = time();
