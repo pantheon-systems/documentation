@@ -98,19 +98,7 @@ When troubleshooting a redirect loop, you may want to deactivate any module or p
 ### Mixed-mode Browser Warnings
 Replace `http://` in the site's database and configure your CMS to assume users are visiting via HTTPS and the site’s primary domain. Templates for example should reference HTTPS in absolute CSS and Javascript sources, even when accessed with HTTP.
 
-### CNAME Record Workaround
-If your domain's DNS configuration relies on an existing MX or TXT record that intentionally disallows CNAME records, you'll need to use A and AAAA records to configure DNS for subdomains (e.g., `www.example.com`) instead of CNAMEs.
-
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Replace `live-example.pantheonsite.io` in the following URLs with the target environment's [platform domain](#platform-domains).</p>
-</div>
-
-1. Identify required A record value by querying the target environment's platform domain using a free online tool, such as [https://www.whatsmydns.net/#A/live-example.pantheonsite.io](https://www.whatsmydns.net/#A/live-example.pantheonsite.io){.external}
-
-2. Do the same for the required AAAA values. For example,  [https://www.whatsmydns.net/#AAAA/live-example.pantheonsite.io](https://www.whatsmydns.net/#AAAA/live-example.pantheonsite.io){.external}
-
-3. Log in to your DNS host and create two AAAA records and one A record for the desired subdomain (e.g., `www`) using the values returned in the steps above.
+{% include("content/cname-workaround.html")%}
 
 ## See Also
 - [Configure Redirects](/docs/redirects)
