@@ -4246,7 +4246,8 @@ p.depbar>a:hover{
     margin: 20px auto 5px;
     outline: 0;
     cursor: pointer;
-    padding: 17px 20px;
+    border: 2px solid #000;
+    padding: 20px 20px;
     background: #000000!important;
     color: #fff!important;
     text-decoration: none;
@@ -4266,7 +4267,7 @@ p.depbar>a:hover{
     margin: 20px auto 5px;
     outline: 0;
     cursor: pointer;
-    padding: 15px 20px;
+    padding: 20px 20px;
     background: #EFD01B!important;
     color: #000!important;
     border: 2px solid #000;
