@@ -30,7 +30,7 @@ For more information on the announcement of new plans, see [this related blog po
 ### When will prices change for existing sites?
 During the month of August, sites on legacy plans will automatically be switched to a new equivalent plan. This will occur on their normal monthly invoice date.
 
-After August 1st, your site will automatically be switched to the equivalent plan on your monthly billing date with preferred pricing locked in, retaining all features (with the exception of [New Relic on Basic plans](#am-i-going-to-lose-new-relic)).
+After August 1st, your site will automatically be switched to the equivalent plan on your monthly billing date with preferred pricing locked in, retaining all features (with the exception of <a data-proofer-ignore href="#am-i-going-to-lose-new-relic">New Relic on Basic plans</a>).
 
 ### Will my existing plan still be available?
 Existing sites will remain on their current legacy plan until August. On your regular monthly billing date in August, the site will be automatically switched over to a new plan. No new sites can be created on legacy plans.
