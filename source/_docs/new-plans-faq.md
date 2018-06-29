@@ -26,16 +26,17 @@ For more information on the announcement of new plans, see [this related blog po
 | Performance (XL)     | $750            | $1,000      |
 
 ## Frequently Asked Questions
-### When will prices change for new sites?
-New sites purchased between April 10th and August 1st will have preferred pricing. After August 1st, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
 
 ### When will prices change for existing sites?
 There will be no impact to the current plan on your existing sites before August 1st.
 
-After August 1st, your site will automatically be switched to the equivalent plan on your monthly billing date with preferred pricing locked in, retaining all features (with the exception of New Relic on Basic plans).
+After August 1st, your site will automatically be switched to the equivalent plan on your monthly billing date with preferred pricing locked in, retaining all features (with the exception of [New Relic on Basic plans](#am-i-going-to-lose-new-relic)).
 
 ### Will my existing plan still be available?
-Existing sites will remain on their current legacy plan until August 1st, at which point the site will be automatically switched over to a new plan. No new sites can be created on legacy plans.
+Existing sites will remain on their current legacy plan until August. On your regular monthly billing date in August, the site will be automatically switched over to a new plan. No new sites can be created on legacy plans.
+
+### How long will prefered pricing be available?
+New sites purchased before August 1st will have preferred pricing. After August 1st, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
 
 ### Will I be able to keep preferred pricing after August 1st?
 All existing sites as of August 1st (legacy & new) will lock in preferred pricing in perpetuity (not just agencies). After August 1st, all new online site plan purchases will be at list price unless purchased through a qualified agency.
