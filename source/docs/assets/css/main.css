@@ -4243,7 +4243,7 @@ p.depbar>a:hover{
     font-family: 'TabletGothic';
     bottom: 400px;
     display: inherit;
-    padding: 50px;
+    padding: 30px 30px 25px;
   }
   .office-hours p {
     color: #181D21 !important;
@@ -4253,16 +4253,49 @@ p.depbar>a:hover{
   .office-hours .cta {
     margin: 15px 15px 0px 0px;
   }
-  .demo-cta a {
-    display:block;
-    background: #EFD01B;
-    color: #FFFFFF;
-    font-family: 'Open Sans', sans-serif;
+  .demo-cta {
+    font-family: Tablet Gothic,Frutiger,Frutiger Linotype,Univers,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif!important;
+    font-weight: 700;
+    font-style: normal;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    width: 222px;
+    border: 0;
+    display: block;
+    height: 60px;
+    margin: 20px auto 5px;
+    outline: 0;
+    cursor: pointer;
     border: 2px solid #000;
-    bottom: 4px;
-    display: inherit;
-    padding: 5px;
+    padding: 20px 20px;
+    background: #000000!important;
+    color: #fff!important;
+    text-decoration: none;
+    font-size: 20px!important;
+    display: inline-block;
   }
+
+  .offhour-cta {
+    font-family: Tablet Gothic,Frutiger,Frutiger Linotype,Univers,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif!important;
+    font-weight: 700;
+    font-style: normal;
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    width: 222px;
+    display: block;
+    height: 60px;
+    margin: 20px auto 5px;
+    outline: 0;
+    cursor: pointer;
+    padding: 20px 20px;
+    background: #EFD01B!important;
+    color: #000!important;
+    border: 2px solid #000;
+    text-decoration: none;
+    font-size: 20px!important;
+    display: inline-block;
+  }
+
   .office-hours p {
     color: #181D21;
 }
@@ -4808,7 +4841,7 @@ a:focus {
   color: #FFFFFF!important;
 }
 .hero-video__demo-cta-subtitle {
-  font-family: 'TabletGothic-SemiBold';
+  font-family: 'TabletGothic';
   line-height: 20px;
   margin-bottom: 0px;
   color: #FFFFFF!important;
