@@ -20,7 +20,7 @@ contributors: [dustinleblanc]
 
 <div class="alert alert-export" role="alert">
 <h4 class="info">Exports</h4>
-<p markdown="1">This guide uses the local command line environment, and there are several variables dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
+<p markdown="1">This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
 <pre>
 <code class="bash">export site=yoursitename
 </code></pre>
