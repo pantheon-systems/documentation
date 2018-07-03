@@ -8,7 +8,7 @@ contributors:
 date: 6/4/2018
 ---
 
-Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distrubution through the [Global CDN](https://pantheon.io/docs/global-cdn/), but S3 is a good option for addressing issues with [highly populated directories](https://pantheon.io/docs/platform-considerations/#highly-populated-directories) or [serving large files](https://pantheon.io/docs/platform-considerations/#large-files). 
+Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distrubution through the [Global CDN](/docs/global-cdn/), but S3 is a good option for addressing issues with [highly populated directories](/docs/platform-considerations/#highly-populated-directories) or [serving large files](/docs/platform-considerations/#large-files).
 
 ## Before You Begin
 
@@ -63,7 +63,7 @@ WP Offload S3 requires a paid license but is configurable in the WordPress admin
 
     <div class="alert alert-danger" role="alert">
     <h4 class="info">Warning</h4>
-    <p markdown="1">**Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](https://pantheon.io/docs/git-faq/#does-pantheon-support-git-submodules)).</p>
+    <p markdown="1">**Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/docs/git-faq/#does-pantheon-support-git-submodules)).</p>
     </div>
 
 2. Rename the extracted folder to remove the version number. For example:
@@ -79,7 +79,7 @@ WP Offload S3 requires a paid license but is configurable in the WordPress admin
     <p markdown="1">As a standard security measure, consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin.</p>
     </div>
 
-4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up){.external} file. For security, we recommended a service like [Lockr](https://pantheon.io/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
+4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up){.external} file. For security, we recommended a service like [Lockr](/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin){.external} to store and retrieve these credentials securely.
 
 5. Commit and push the new plugin and your `wp-config.php` updates to the Dev environment, then  switch to SFTP mode and activate the plugin:
 
@@ -106,7 +106,7 @@ Optionally, add the `--delete-local` flag to remove the local copies of the medi
 Upon succesful migration, this command will also provide a search/replace command for your database to update references to the newly-migrated files. Note that you will need to run this on all Pantheon environments (dev/test/live).
 
 #### Further configuration
-Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md) for information on advanced configuration, such as cache control, URL rewriting and offline development.
+Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md){.external} for information on advanced configuration, such as cache control, URL rewriting and offline development.
 
 ### Install and Deploy WP Offload S3
-Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offload-s3/doc/quick-start-guide). No specialized configuration is required for this plugin to run on Pantheon.
+Follow documentation from [DeliciousBrains](https://deliciousbrains.com/wp-offload-s3/doc/quick-start-guide){.external}. No specialized configuration is required for this plugin to run on Pantheon.
