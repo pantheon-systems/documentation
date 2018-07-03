@@ -8,7 +8,7 @@ contributors:
 date: 6/4/2018
 ---
 
-Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon.
+Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distrubution through the [Global CDN](https://pantheon.io/docs/global-cdn/), but S3 is a good option for addressing issues with [highly populated directories](https://pantheon.io/docs/platform-considerations/#highly-populated-directories) or [serving large files](https://pantheon.io/docs/platform-considerations/#large-files). 
 
 ## Before You Begin
 
