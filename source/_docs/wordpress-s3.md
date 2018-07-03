@@ -44,8 +44,8 @@ If you do not have an existing bucket for your site, create one:
 3. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3, and after you create a bucket, you cannot change its name. Because the bucket name is visible in the URL that points to the objects stored in the bucket, ensure that the bucket name you choose is appropriate.
 4. Select a region and click **Create**.
 5. The **Set properties** section has additional configuration options you can configure now, or wait and configure later. When complete, click **Next**.
-6. In the **Permissions** tab tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
-7. Review your settings, then click **Create bucket**.
+6. In the **Permissions** tab, tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
+7. Review your settings, and then click **Create bucket**.
 
 ## Integrate S3 with WordPress
 You will need to install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload S3](https://deliciousbrains.com/wp-offload-s3/){.external}.
@@ -76,7 +76,7 @@ WP Offload S3 requires a paid license but is configurable in the WordPress admin
 
     <div class="alert alert-info" role="alert">
     <h4 class="info">Note</h4>
-    <p markdown="1">As a standard security measure, consider creating a new user with limited permissions covering this S3 bucket to authenticate the plugin.</p>
+    <p markdown="1">As a standard security measure, consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin.</p>
     </div>
 
 4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up){.external} file. For security, we recommended a service like [Lockr](https://pantheon.io/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
