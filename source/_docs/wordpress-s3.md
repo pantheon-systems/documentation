@@ -80,6 +80,11 @@ WP Offload S3 requires a paid license but is configurable in the WordPress admin
 
 3. Create and / or copy your **Access Key ID** key and **Secret Access Key** from the "My security credentials" section of your AWS account to a text editor on your local computer.
 
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p markdown="1">As a standard security measure, consider creating a new user with limited permissions covering this S3 bucket to authenticate the plugin.</p>
+    </div>
+
 4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up){.external} file. For security, we recommended a service like [Lockr](https://pantheon.io/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 
 5. Commit and push the new plugin and your `wp-config.php` updates to the Dev environment, then  switch to SFTP mode and activate the plugin:
@@ -104,7 +109,7 @@ terminus wp $site.dev -- s3-uploads migrate-attachments
 
 Optionally, add the `--delete-local` flag to remove the local copies of the media files.
 
-Upon succesful migration, this command will also run a search/replace on your database to update references to the newly-migrated files. Note that you will need to run this on all Pantheon environments (dev/test/live).
+Upon succesful migration, this command will also provide a search/replace command for your database to update references to the newly-migrated files. Note that you will need to run this on all Pantheon environments (dev/test/live).
 
 #### Further configuration
 Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md) for information on advanced configuration, such as cache control, URL rewriting and offline development.
