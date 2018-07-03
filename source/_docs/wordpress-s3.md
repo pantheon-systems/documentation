@@ -23,6 +23,16 @@ Be sure that you have:
 <h4 class="info">Note</h4>
 <p>When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</p></div>
 
+<div class="alert alert-export" role="alert">
+<h4 class="info">Exports</h4>
+<p markdown="1">This process uses [Terminus](/docs/terminus/) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
+<pre>
+<code class="bash">export site=yoursitename
+export env=dev
+</code></pre>
+</p>
+</div>
+
 ## Configure S3 within the AWS Console
 Before integrating S3 with your site, you'll need to configure the service within your [AWS Management Console](https://console.aws.amazon.com){.external}.
 
@@ -40,7 +50,7 @@ If you do not have an existing bucket for your site, create one:
 
 4. Select a region and click **Create**.
 5. The **Set properties** section has additional configuration options you can configure now, or wait and configure later. When complete, click **Next**.
-6. In the **Permissions** tab tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Save**.
+6. In the **Permissions** tab tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
 7. Review your settings, then click **Create bucket**.
 
 ## Integrate S3 with WordPress
@@ -68,26 +78,26 @@ WP Offload S3 requires a paid license but is configurable in the WordPress admin
     mv S3-Uploads-2.0.0/ S3-Uploads
     ```
 
-3. Create and / or copy your access ID key and secret access key from the "My security credentials" section of your AWS account to a text editor on your local computer.
+3. Create and / or copy your **Access Key ID** key and **Secret Access Key** from the "My security credentials" section of your AWS account to a text editor on your local computer.
 
 4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up){.external} file. For security, we recommended a service like [Lockr](https://pantheon.io/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 
 5. Commit and push the new plugin and your `wp-config.php` updates to the Dev environment, then  switch to SFTP mode and activate the plugin:
 
     ```bash
-    terminus wp <site>.<env> plugin activate S3-Uploads
+    terminus wp $site.dev plugin activate S3-Uploads
     ```
 
 6. Use WP-CLI to verify your AWS setup.
 
     ```bash
-    terminus wp <site>.<env> s3-uploads verify
+    terminus wp $site.dev s3-uploads verify
     ```
 
 6. Optional: Use WP-CLI to create a new AWS user. This is recommended so you are not using admin-level access keys on your site.
 
     ```bash
-    terminus wp <site>.<env> -- s3-uploads create-iam-user --admin-key=<key> --admin-secret=<secret>
+    terminus wp $site.dev -- s3-uploads create-iam-user --admin-key=<key> --admin-secret=<secret>
     ```
 
 Note: Currently this command will only work if you patch the plugin, per this issue on [Github](https://github.com/humanmade/S3-Uploads/issues/95#issuecomment-393989259). You can also create a site-specific user from your S3 admin panel.
@@ -99,7 +109,7 @@ Replace the keys you set previously in wp-config.php with the keys returned from
 You can migrate existing media files to S3 with the following command:
 
 ```bash
-terminus wp sg-s3.dev -- s3-uploads migrate-attachments
+terminus wp $site.dev -- s3-uploads migrate-attachments
 ```
 
 Optionally, add the `--delete-local` flag to remove the local copies of the media files.
