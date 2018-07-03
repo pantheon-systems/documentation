@@ -96,6 +96,8 @@ If you are distributing large binaries or hosting big media files, we recommend 
 
  - Drupal sites can use a module such as [Amazon S3 CORS Upload](https://drupal.org/project/amazons3_cors){.external}
  - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload S3](https://deliciousbrains.com/wp-offload-s3/){.external}
+ 
+See our documentation for [Drupal](/docs/drupal-s3) and [WordPress](/docs/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
 
 ## Large Code Repository
 
