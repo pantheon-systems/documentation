@@ -63,7 +63,7 @@ WP Offload S3 requires a paid license but is configurable in the WordPress admin
 
     <div class="alert alert-danger" role="alert">
     <h4 class="info">Warning</h4>
-    <p markdown="1">**Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/docs/git-faq/#does-pantheon-support-git-submodules)).</p>
+    <p markdown="1">**Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform (<a data-proofer-ignore href="/docs/git-faq/#does-pantheon-support-git-submodules">more info</a>).</p>
     </div>
 
 2. Rename the extracted folder to remove the version number. For example:
