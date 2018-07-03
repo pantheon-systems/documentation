@@ -21,7 +21,7 @@ While this fix does correct symptoms such as undesirable URLs, we recommended re
 <h4 class="info">Note</h4>
 <p><code>$_ENV</code> will also be around for command-line uses. <code>$_SERVER</code> is only set up when handling a web initiated request.</p></div>
 ## Set SERVER_PORT Correctly
-The following is as an example of how to successfully assign a port value for nginx:
+Certain applications (like SimpleSAML) require specific port values to be set at the web server level, before our GlobalCDN. Use the snippet below to assign port value `443` for nginx when the headers specify HTTPS:
 ```php
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   if (isset($_SERVER['HTTP_USER_AGENT_HTTPS']) && $_SERVER['HTTP_USER_AGENT_HTTPS'] === 'ON') {
