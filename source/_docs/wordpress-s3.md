@@ -41,13 +41,7 @@ If you do not have an existing bucket for your site, create one:
 
 1. From your [AWS Console](https://console.aws.amazon.com){.external}, click **S3**.
 2. Click **Create Bucket**.
-3. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3.
-
-    <div class="alert alert-info" role="alert">
-    <h4 class="info">Note</h4>
-    <p>After you create a bucket, you cannot change its name. The bucket name is visible in the URL that points to the objects stored in the bucket. Ensure that the bucket name you choose is appropriate.</p>
-    </div>
-
+3. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3, and after you create a bucket, you cannot change its name. Because the bucket name is visible in the URL that points to the objects stored in the bucket, ensure that the bucket name you choose is appropriate.
 4. Select a region and click **Create**.
 5. The **Set properties** section has additional configuration options you can configure now, or wait and configure later. When complete, click **Next**.
 6. In the **Permissions** tab tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
