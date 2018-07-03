@@ -94,16 +94,6 @@ WP Offload S3 requires a paid license but is configurable in the WordPress admin
     terminus wp $site.dev s3-uploads verify
     ```
 
-6. Optional: Use WP-CLI to create a new AWS user. This is recommended so you are not using admin-level access keys on your site.
-
-    ```bash
-    terminus wp $site.dev -- s3-uploads create-iam-user --admin-key=<key> --admin-secret=<secret>
-    ```
-
-Note: Currently this command will only work if you patch the plugin, per this issue on [Github](https://github.com/humanmade/S3-Uploads/issues/95#issuecomment-393989259). You can also create a site-specific user from your S3 admin panel.
-
-Replace the keys you set previously in wp-config.php with the keys returned from the above command or your S3 admin panel.
-
 #### Migrate existing media using S3 Uploads and WP-CLI
 
 You can migrate existing media files to S3 with the following command:
