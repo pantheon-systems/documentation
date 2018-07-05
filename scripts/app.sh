@@ -3,8 +3,8 @@
 # Move to the project root
 cd /documentation/
 
-#Start Grunt to listen for CSS changes
-node_modules/.bin/grunt watch &
+#Start Grunt to listen for CSS changes - DISABLED until permissions issue for files mounted from the host are resolved.
+#node_modules/.bin/grunt watch &
 
 # Kill any existing processes
 pkill php
