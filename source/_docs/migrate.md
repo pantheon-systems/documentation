@@ -48,9 +48,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
   5. Name your new Pantheon site.
   6. Select an organization for the site (optional).
   7. Click **Create Site**.
-  8. Select **Generate Machine Token** and re-authenticate if prompted:
-
-   ![Authentication BlogVault migration](/source/docs/assets/images/dashboard/migration-authentication-prompt.png)
+  8. Select **Generate Machine Token** and re-authenticate if prompted.
   9. Select **Install on /wp-admin** to install and activate the plugin on your existing site. Keep the Pantheon Dashboard tab open in your browser.
   10. Copy the machine token from the Pantheon Dashboard, then navigate to **Pantheon Migration** within the WordPress Dashboard on your existing site. Paste the machine token and enter the site name.
   11. Click **Migrate**. You will receive an email when the migration completes. After the migration is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
@@ -253,12 +251,12 @@ Go the to files directory of your existing site and check if the site archive wa
 ### How do I clone an existing Pantheon site?
 You can make a copy of a WordPress site on Pantheon by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon and is preferred since it's built into the Site Dashboard.
 
-Drupal 7, Drupal 8 and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/docs/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin){.external} plugin. 
+Drupal 7, Drupal 8 and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/docs/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin){.external} plugin.
 
 Replace `<source>` and `<destination>` with target [site UUIDs](/docs/sites/#site-uuid) or site names, and specify target development environment in place of `<env>` (dev or multidev):
 
 ```bash
-terminus site:clone <source>.<env> <destination>.<env> 
+terminus site:clone <source>.<env> <destination>.<env>
 ```
 
 <div class="alert alert-info" role="alert">
