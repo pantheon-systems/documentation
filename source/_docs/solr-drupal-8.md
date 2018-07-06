@@ -21,7 +21,7 @@ Be sure that you:
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
-<p markdown="1">Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) guide. Since one module relies on [Solarium](http://www.solarium-project.org/){.external}, an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750){.external}.</p>
+<p markdown="1">Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) and [Composer without CI](/docs/guides/drupal-8-composer-no-ci/) guides. Since one module relies on [Solarium](http://www.solarium-project.org/){.external}, an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750){.external}.</p>
 </div>
 
 ## Install Solr on Drupal 8
@@ -40,7 +40,7 @@ Be sure that you:
     composer require "drupal/search_api_pantheon ~1.0" --prefer-dist
     ```
 
-3.  You should now have the Search API Pantheon module installed along with it's dependencies. Run `git status` to make sure you see the expected result (only two files modified). Commit the changes to `composer.json` and `composer.lock` and push to GitHub:
+3.  You should now have the Search API Pantheon module installed along with its dependencies. Run `git status` to make sure you see the expected result. Commit and push the changes:
 
     ```
     git commit -am "Require drupal/search_api_pantheon ~1.0"
@@ -49,8 +49,6 @@ Be sure that you:
 
     ![Require search API output](/source/docs/assets/images/composer-require-search_api_pantheon.png)
 
-
-4.  Return to GitHub and compare your feature branch against `master`. The remaining sections should be completed on the Multidev environment created as part of the PR's build process. Once configured, export the code and deploy as described in [Build Tools](/docs/guides/build-tools/).
 
 ## Configure Solr
 To configure the connection with Pantheon, set the [connection mode](/docs/sftp/#sftp-mode) to SFTP and complete the following on the Multidev environment:
