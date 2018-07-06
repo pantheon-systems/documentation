@@ -26,17 +26,20 @@ For more information on the announcement of new plans, see [this related blog po
 | Performance (XL)     | $750            | $1,000      |
 
 ## Frequently Asked Questions
+### When will prices change for new site purchases?
+New sites purchased between April 10th and August 1st will have preferred pricing as long as they stay on that plan. After August 1st, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
 
 ### When will prices change for existing sites?
 During the month of August, sites on legacy plans will automatically be switched to a new equivalent plan. This will occur on their normal monthly invoice date.
 
-After August 1st, your site will automatically be switched to the equivalent plan on your monthly billing date with preferred pricing locked in, retaining all features (with the exception of <a data-proofer-ignore href="#am-i-going-to-lose-new-relic">New Relic on Basic plans</a>).
+### What new plan will my existing site translate to in August?
+All existing sites will have preferred pricing locked in for the plan they migrate to, and will retain the preferred price as long as they stay on that plan.
 
-### Will my existing plan still be available?
-Existing sites will remain on their current legacy plan until August. On your regular monthly billing date in August, the site will be automatically switched over to a new plan. No new sites can be created on legacy plans.
-
-### How long will prefered pricing be available?
-New sites purchased before August 1st will have preferred pricing. After August 1st, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
+| Legacy Plan | New Plan            | Preferred Price  |
+| ------------| --------------------| ---------------- |
+| Personal    | Basic               | $35              |
+| Pro         | Performance (Small) | $125             |
+| Business    | Performance (Large) | $450             |
 
 
 
