@@ -12,7 +12,7 @@ For more information on the announcement of new plans, see [this related blog po
 ## List and Preferred Pricing
 <dl>
   <dt>List Price</dt>
-    <dd>Set price for new sites created after August 1st that aren’t tied to an agency.</dd>
+    <dd>Set price for new sites created after August 1st that aren’t purchased via a qualified agency partner.</dd>
   <dt>Preferred Price</dt>
     <dd>Introductory price available to the general public until August 1st, after which it will be exclusively available via qualified agency partners.</dd>
 </dl>
@@ -26,28 +26,33 @@ For more information on the announcement of new plans, see [this related blog po
 | Performance (XL)     | $750            | $1,000      |
 
 ## Frequently Asked Questions
-### When will prices change for new sites?
-New sites purchased between April 10th and August 1st will have preferred pricing. After August 1st, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
+### When will prices change for new site purchases?
+New sites purchased between April 10th and August 1st will have preferred pricing as long as they stay on that plan. After August 1st, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
 
 ### When will prices change for existing sites?
-There will be no impact to the current plan on your existing sites before August 1st.
+During the month of August, sites on legacy plans will automatically be switched to a new equivalent plan. This will occur on their normal monthly invoice date. 
 
-After August 1st, your site will automatically be switched to the equivalent plan on your monthly billing date with preferred pricing locked in, retaining all features (with the exception of New Relic on Basic plans).
+### What new plan will my existing site translate to in August?
+All existing sites will have preferred pricing locked in for the plan they migrate to, and will retain the preferred price as long as they stay on that plan.
 
-### Will my existing plan still be available?
-Existing sites will remain on their current legacy plan until August 1st, at which point the site will be automatically switched over to a new plan. No new sites can be created on legacy plans.
+| Legacy Plan | New Plan            | Preferred Price  |
+| ------------| --------------------| ---------------- |
+| Personal    | Basic               | $35              |
+| Pro         | Performance (Small) | $125             |
+| Business    | Performance (Large) | $450             |
+
+
+
+### Are legacy plans still available?
+No new sites can be created on legacy plans outside of existng contracted agreements. The legacy plans are no longer available for purchase online.
 
 ### Will I be able to keep preferred pricing after August 1st?
-All existing sites as of August 1st (legacy & new) will lock in preferred pricing in perpetuity (not just agencies). After August 1st, all new online site plan purchases will be at list price unless purchased through a qualified agency.
+All existing sites as of August 1st (legacy & new) will lock in preferred pricing as long as they are on that plan, regargless of whether they are associated with a qualified agency partner.
+
+After August 1st, new online site plan purchases will be at list price unless purchased through a qualified agency.
 
 ### What action do I need to take on existing sites?
-No action is required. Existing sites will automatically switch to the equivalent plan with preferred pricing locked in on August 1st.
-
-### What new plan will my existing site translate to on August 1st?
-
-* Personal > Basic
-* Professional > Performance (Small)
-* Business > Performance (Large)
+No action is required. Existing sites will automatically switch to the equivalent plan with preferred pricing locked in August. There is no downtime or maintenance window associated with this change.
 
 ### What are the resource comparisons between new and legacy plans?
 <!-- Nav tabs -->
@@ -112,9 +117,6 @@ No action is required. Existing sites will automatically switch to the equivalen
   | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle">|           ✓            |                          |
   </div>
 </div>
-
-
-
 
 ### Am I going to lose New Relic?
 Basic site plans will not have access to New Relic. If you are using New Relic on a Personal plan currently, you will lose access when your site plan migrates to a Basic plan on your monthly billing date, on or after August 1st.
