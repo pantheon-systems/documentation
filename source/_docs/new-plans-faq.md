@@ -106,7 +106,7 @@ No action is required. Existing sites will automatically switch to the equivalen
   |                        | Business (Legacy)     | Performance Large (New)  |
   | ---------------------- | --------------------- | ------------------------ |
   | Application Containers |           2           |           3              |
-  | PHP Workers            |           8           |          24              |
+  | PHP Workers            |           16          |          24              |
   | PHP Memory Limit       |         512MB         |         512MB            |
   | Storage                |         30GB          |         100GB            |
   | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>|           100         |            25            |
