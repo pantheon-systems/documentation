@@ -69,7 +69,7 @@ ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.dr
 ```
 Replace `PORT` with the database port specified in the **Connection Info** tab. Do the same for `PASSWORD`, then execute the following:
 ```bash
-mysql -u pantheon -h 127.0.0.1 -p -P PORT pantheon -pPASSWORD
+mysql -u pantheon -h 127.0.0.1 -P PORT pantheon -pPASSWORD
 ```
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
