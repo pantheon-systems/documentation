@@ -30,9 +30,9 @@ For more information on the announcement of new plans, see [this related blog po
 New sites purchased between April 10th and August 1st will have preferred pricing as long as they stay on that plan. After August 1st, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
 
 ### When will prices change for existing sites?
-During the month of August, sites on legacy plans will automatically be switched to a new equivalent plan. This will occur on their normal monthly invoice date. 
+During the month of August, sites on legacy plans will automatically be switched to a new equivalent plan. This will occur on their normal monthly invoice date.
 
-### What new plan will my existing site translate to in August?
+### What new plan will my existing site migrate to in August?
 All existing sites will have preferred pricing locked in for the plan they migrate to, and will retain the preferred price as long as they stay on that plan.
 
 | Legacy Plan | New Plan            | Preferred Price  |
