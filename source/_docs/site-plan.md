@@ -38,7 +38,7 @@ Consider the following changes to feature access _before_ upgrading or downgradi
 Downgrading to a Sandbox site will disable automatic backups. You will still be able to create backups manually. For details, see [Backups Tool](/docs/backups/).
 
 ### Basic Plan
-[New Relic](/docs/new-relic/), [Redis](/docs/redis/), and [Solr](/docs/solr) are not available for Basic plan. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+[New Relic](/docs/new-relic/), [Redis](/docs/redis/), and [Solr](/docs/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
 For Redis and Solr, the following code changes are required before the feature can be safely disabled:
 
@@ -78,27 +78,32 @@ For Redis and Solr, the following code changes are required before the feature c
 </div>
 
 ### Elite Plan
-Elite sites cannot manage plans from the Site Dashboard. [Contact our sales team](https://pantheon.io/contact-us){.external} or reach out to your dedicated account manager for details.
+Elite sites cannot manage plans from the Site Dashboard. [Contact our sales team](https://pantheon.io/contact-us){.external} or reach out to your dedicated Client Sales Executive for details.
 
 ### Enterprise Organizations
-Plan prices are not shown in the Site Dashboard and you will not be prompted to enter billing information as described below.
+Plan prices are not shown in the Site Dashboard, and you will not be prompted to enter billing information as described below.
 
 If the site is associated with an Enterprise Flagship organization, additional Performance plans not shown in the Site Dashboard are available to purchase.
 
-[Contact our sales team](https://pantheon.io/contact-us){.external} or reach out to your dedicated account manager for details.
+[Contact our sales team](https://pantheon.io/contact-us){.external} or reach out to your dedicated Client Sales Executive for details.
 
 ## Purchase a New Plan
-Review the [previous section](#basic-plan) on feature availability before switching plans to Basic.
+This section covers purchasing a new plan. Review the [previous section](#basic-plan) on feature availability before switching plans to Basic.
+
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/docs/annual-billing/) for more information.
+</div>
 
 ### Select Plan
 1. Go to the Site Dashboard.
-2. For Sandbox sites, click the **Upgrade** button. Otherwise, select the current plan.
+2. For Sandbox sites, click the **Upgrade** button. Otherwise, select the lable for the site's current plan.
 3. Click **Select** to switch plans:
  ![Select a different plan](/source/docs/assets/images/dashboard/select-plan.png)
 
 
 ### Enter Billing Information
-Ownership is directly tied to the user account entering billing information.
+Site ownership is designated to the user account entering billing information.
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <!-- Active tab -->
