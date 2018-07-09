@@ -32,7 +32,7 @@ New sites purchased between April 10th and August 1st will have preferred pricin
 ### When will prices change for existing sites?
 During the month of August, sites on legacy plans will automatically be switched to a new equivalent plan. This will occur on their normal monthly invoice date.
 
-### What new plan will my existing site translate to in August?
+### What new plan will my existing site migrate to in August?
 All existing sites will have preferred pricing locked in for the plan they migrate to, and will retain the preferred price as long as they stay on that plan.
 
 | Legacy Plan | New Plan            | Preferred Price  |
