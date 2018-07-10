@@ -66,7 +66,7 @@ Make the switch on an existing Pantheon site by updating DNS for your domains. I
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### How can I obtain an A+ SSL Labs rating?
-Upgrade your site to the Global CDN and then send the [HSTS header](/docs/hsts/) .
+Upgrade your site to the Global CDN and then send the [HSTS header](/docs/hsts/).
 
 ### Can I bring my own certificate?
 No, but you shouldn't need to buy a dedicated certificate or worry about renewals. For example, wildcard certificates aren't necessary to secure communications for multiple domains, because we will automatically deploy certificates for all domains on your site. The certificates provided by Pantheon on the Global CDN provide end-to-end encryption. Even though certificates are shared, they are still secure. Concerns with shared certificates are cosmetic.
