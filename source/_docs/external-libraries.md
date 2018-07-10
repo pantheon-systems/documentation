@@ -76,7 +76,7 @@ Once you have downloaded and installed the ApacheSolr Attachments module ([apach
 
    * **Extract Using:** Tika (local java application)
    * **Tika Directory Path:** `/srv/bin`
-   * **Tika jar file:** tika-app-1.1.jar
+   * **Tika jar file:** tika-app-1.18.jar
 
 2. Verify that your site is able to extract text from documents. Click **Test your Tika Attachments** under the Actions section.
 
@@ -90,7 +90,7 @@ Download and install the Search API Attachments module ([search_api_attachments]
 
    * **Extraction method:** Tika Extractor
    * **Path to java executable:** `java`
-   * **Path to Tika .jar file:** `/srv/bin/tika-app-1.1.jar`
+   * **Path to Tika .jar file:** `/srv/bin/tika-app-1.18.jar`
 
 2. Verify that your site is able to extract text from documents. Click **Submit and test extraction**.
 
@@ -98,6 +98,14 @@ If everything is working correctly, you will see the success message "Extracted 
 
 ### WordPress Tika Configuration
 There are no known plugins in the WordPress.org repository that will enable the use of Tika.
+
+### Tika Older Versions
+
+Pantheon also supplies the following older version of Tika:
+
+    * `/srv/bin/tika-app-1.1.jar`
+
+Sites that are using an old version of Tika should be upgraded to the supported path as soon as possible.
 
 ## ImageMagick
 
