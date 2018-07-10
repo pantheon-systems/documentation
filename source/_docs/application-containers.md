@@ -29,6 +29,7 @@ Attempts to remotely access services, such as MySQL or SFTP connections, will fa
   - [short\_open\_tag](https://secure.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support `<? ?>` syntax; use `<?php ?>` instead)
   - Maximum PHP execution time and other timeouts can be configured as noted in [Timeouts on Pantheon](/docs/timeouts/).
   - Maximum upload\_max\_filesize and post\_max\_size is 100MB. This cannot be changed.
+  - Maximum max\_file\_uploads is 20. This cannot be changed.
   - WordPress migrations via `wp-cli` may require [changing the WP_MAX_MEMORY_LIMIT constant](https://codex.wordpress.org/Editing_wp-config.php#Increasing_memory_allocated_to_PHP).
   - Each PHP process can have either 256MB or 512MB of memory ([depends on the plan](https://www.pantheon.io/pricing)).
 - For a comprehensive list of MySQL settings, [access your database](/docs/mysql-access/) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
