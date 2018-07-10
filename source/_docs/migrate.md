@@ -111,7 +111,11 @@ If your code, database, and files have completed migrating, but your site is not
 
 Next, check [log files](/docs/logs/) to help identify and fix errors. Drupal or WordPress core is upgraded as part of migration, so you may have additional work to complete the upgrade.
 
-### Could not import code, the import file does not appear to contain a valid code directory. ###
+### Migrate from Acquia
+
+Acquia uses a nested docroot directory named `docroot`. When migrating from Acquia to Pantheon, you may choose to move the contents of `docroot` up and remove the folder, or rename it to `web` and set `web_docroot: true` in your `pantheon.yml` file. For more information on nested docroots, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).
+
+### Could not import code, the import file does not appear to contain a valid code directory.
 
 **Cause:** The migration tool could not find Drupal or WordPress core files. This prevents the migration from completing because the site modules, plugins, and/or themes cannot be imported. This error also occurs when multiple `settings.php` files are present.
 
@@ -189,7 +193,7 @@ Next, check [log files](/docs/logs/) to help identify and fix errors. Drupal or 
 </div>
 
 
-### Could not import database, unable to locate a database dump. ###
+### Could not import database, unable to locate a database dump.
 **Cause:** The migration tool could not locate a MySQL database dump within the archive.
 
 **Solution:** Ensure that the archive contains a valid MySQL database dump.
@@ -199,22 +203,22 @@ Next, check [log files](/docs/logs/) to help identify and fix errors. Drupal or 
 
 **Solution:** This issue is documented on [Drupal.org](https://www.drupal.org/node/2496331). Edit the DB dump as described [here](https://www.drupal.org/node/2496331#comment-10029863).
 
-### Multiple file directories found within the import archive. ###
+### Multiple file directories found within the import archive.
 **Cause:** The migration tool found more than one potential location for files within the archive. This error also occurs if Drupal's private files directory is not placed within the public directory (`sites/default/files/private`).
 
 **Solution:** All files must be moved into the standard location for your site's CMS (`/sites/default/files` for Drupal, and `/wp-content/uploads` for WordPress). For more details, see [Non-Standard Files Locations](/docs/non-standard-file-paths).
 
-### Multiple site directories found within the import archive. ###
+### Multiple site directories found within the import archive.
 **Cause:** The migration tool found a multisite installation, which is not supported on the platform.
 
 **Solution:** Refer to [Extracting Sites from a Drupal Multisite](/docs/unwind-multisite/).
 
-### Multiple database dumps found within the import archive. ###
+### Multiple database dumps found within the import archive.
 **Cause:** The migration tool detected multiple MySQL database dumps within the archive.
 
 **Solution:** Ensure that a single MySQL dump is included within the archive.
 
-### Multiple code roots found within the import archive. ###
+### Multiple code roots found within the import archive.
 **Cause:**  The migration tool detected more than one potential location for the code root in the archive.
 
 **Solution:** Ensure that a single code root is included within the archive.
