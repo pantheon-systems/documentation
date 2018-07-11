@@ -6,6 +6,10 @@
    <h4 class="info">Note</h4>
    <p>Since Pantheon does not support Git submodules <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Git submodules" data-content="Some Composer packages are added as Git submodules, which place a Git repository within a subdirectory of your site’s repository."><em class="fa fa-info-circle"></em></a>, we recommend using the provided script <code>remove-git-submodules</code> to remove any <code>.git</code> directories upon install and update.</p>
  </div>
+ <div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">The example below specifies <code>vendor-dir</code> to <code>sites/all/vendors</code> for compatibility with the <a href="https://www.drupal.org/project/composer_vendor" class="external">Composer Vendor</a> module, but this directory is not a protected path. Be sure to set a protected path in the <a href="/docs/pantheon-yml/#protected-web-paths">Pantheon YAML Configuration File</a> before proceeding.</p>
+</div>
  <pre><code class="json">{
   "repositories": [
     {
