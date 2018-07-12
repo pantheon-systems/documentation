@@ -82,17 +82,15 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/documentation/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
   
-  while [ 1 ]
+  while true
   do
-	  rsync --size-only --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
-  	if [ "$?" -eq "0" ] ; then
-    		echo "Success: Deployed to $url".
-		exit
-  	else
-    		echo "Error: Deploy failed, retrying..."
-		sleep 5
-	fi
-
+    if ! rsync --size-only --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
+      echo "Failed, retrying..."
+      sleep 5
+    else
+      print "Success: Deployed to $url".
+      break
+    fi
   done
   
 
