@@ -45,7 +45,7 @@ else
   done
 
   # Push HTML to the multidev
-  rsync --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/docs/
+  rsync --size-only --delete-after -rtlvzi --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/* --temp-dir=../../tmp/ $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:files/docs/
   if [ "$?" -eq "0" ]
   then
       echo "Success: Deployed to http://"$ENV"-$SITE_NAME.pantheonsite.io/docs"
