@@ -6,6 +6,7 @@ $startPaths = [
     '/documentation/app/config/*',
     '/documentation/source/_docs/*',
     '/documentation/source/docs/assets/images/*',
+    '/documentation/source/_partials/*',
 ];
 
 $lastTime = time();
