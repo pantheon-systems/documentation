@@ -85,7 +85,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   while [ 1 ]
   do
 	  rsync --size-only --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
-  	if [ "$?" -eq "0" ] then
+  	if [ "$?" -eq "0" ] ; then
     		echo "Success: Deployed to $url".
 		exit
   	else
