@@ -88,7 +88,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
       echo "Failed, retrying..."
       sleep 5
     else
-      print "Success: Deployed to $url".
+      echo "Success: Deployed to $url"
       break
     fi
   done
