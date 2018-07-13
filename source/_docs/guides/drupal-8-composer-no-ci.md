@@ -77,31 +77,14 @@ Start by deleting the following directories:
 Next, you will need to modify `composer.json`.
 
 * Remove all dependencies in the `require-dev` section
-* Update the `scripts` section to the following:
-
-```json
-    "scripts": {
-        "build-assets": [
-            "@prepare-for-pantheon",
-            "composer install --optimize-autoloader --no-dev"
-        ],
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
-        "post-install-cmd": [
-            "@drupal-scaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-create-project-cmd": [
-            "@drupal-scaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
-    },
-```
+* Update the `scripts` section to remove the `lint` `code-sniff`, and `unit-test` lines.
 
 ## Managing Drupal with Composer
+
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the <a href="/docs/git-faq/#does-pantheon-support-git-submodules" data-proofer-ignore> Pantheon platform is not compatible with git submodules</a>. If you remove the `.git` directories, be sure to put them back again after you push your commit up to Pantheon (see instructions below). To do this, remove the vendor directory and run `composer install`.</p>
+</div>
 
 ### Downloading Drupal Dependencies with Composer
 
@@ -111,7 +94,7 @@ Since we modified `composer.json` we will need to update Composer. This will als
 
 ```bash
 composer update
-```bash
+```
 
 This may take a while as all of Drupal core and its dependencies will be downloaded. Subsequent updates should take less time.
 
