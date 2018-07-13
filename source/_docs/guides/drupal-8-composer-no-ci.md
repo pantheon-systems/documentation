@@ -111,7 +111,7 @@ Since we modified `composer.json` we will need to update Composer. This will als
 
 ```bash
 composer update
-```bash
+```
 
 This may take a while as all of Drupal core and its dependencies will be downloaded. Subsequent updates should take less time.
 
