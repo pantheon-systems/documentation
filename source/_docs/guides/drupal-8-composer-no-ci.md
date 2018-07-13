@@ -103,6 +103,11 @@ Next, you will need to modify `composer.json`.
 
 ## Managing Drupal with Composer
 
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the [Pantheon platform is not compatible with git submodules](/docs/git-faq/#does-pantheon-support-git-submodules). If you use packages that come as submodules and remove the `.git` directory to compensate, you will need to remove the `vendor` directory before running additional `composer` commands.</p>
+</div>
+
 ### Downloading Drupal Dependencies with Composer
 
 Normally the next step would be going through the standard Drupal installation. But since we’re using Composer, none of the core files exist yet. Let’s use Composer to download Drupal core.
