@@ -77,29 +77,7 @@ Start by deleting the following directories:
 Next, you will need to modify `composer.json`.
 
 * Remove all dependencies in the `require-dev` section
-* Update the `scripts` section to the following:
-
-```json
-    "scripts": {
-        "build-assets": [
-            "@prepare-for-pantheon",
-            "composer install --optimize-autoloader --no-dev"
-        ],
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "prepare-for-pantheon": "DrupalProject\\composer\\ScriptHandler::prepareForPantheon",
-        "post-install-cmd": [
-            "@drupal-scaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ],
-        "post-create-project-cmd": [
-            "@drupal-scaffold",
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-        ]
-    },
-```
+* Update the `scripts` section to remove the `lint` `code-sniff`, and `unit-test` lines.
 
 ## Managing Drupal with Composer
 
