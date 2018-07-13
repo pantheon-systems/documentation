@@ -83,7 +83,7 @@ Next, you will need to modify `composer.json`.
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p markdown="1">When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the [Pantheon platform is not compatible with git submodules](/docs/git-faq/#does-pantheon-support-git-submodules). If you use packages that come as submodules and remove the `.git` directory to compensate, you will need to remove the `vendor` directory before running additional `composer` commands.</p>
+  <p markdown="1">When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the [Pantheon platform is not compatible with git submodules](/docs/git-faq/#does-pantheon-support-git-submodules). If you remove the `.git` directories, be sure to put them back again after you push your commit up to Pantheon (see instructions below). To do this, remove the vendor directory and run `composer install`.</p>
 </div>
 
 ### Downloading Drupal Dependencies with Composer
