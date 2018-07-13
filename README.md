@@ -76,6 +76,8 @@ If you would like to develop documentation locally and see your work, we offer a
     Waiting...
     ```
 
+    Once running, you can view the local dev environment by visiting `http://localhost:8000/docs` in your browser.
+
     The Docker image will mount the `source` directory from the project root on your computer, and rebuild when you save changes:
 
     ```bash
