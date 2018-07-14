@@ -81,14 +81,18 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   ~/documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
   curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/documentation/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
-  rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
-  if [ "$?" -eq "0" ]
-  then
-    echo "Success: Deployed to $url"
-  else
-    echo "Error: Deploy failed, review rsync status"
-    exit 1
-  fi
+  
+  while true
+  do
+    if ! rsync --size-only --delete-after -rtlvzi --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
+      echo "Failed, retrying..."
+      sleep 5
+    else
+      echo "Success: Deployed to $url"
+      break
+    fi
+  done
+  
 
   #Get comment ID and comment body from last commit comment
   export previous_commit=($(git log --format="%H" -n 2))
