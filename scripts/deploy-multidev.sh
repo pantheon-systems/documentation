@@ -35,7 +35,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   if grep -Fxq "$normalize_branch" ./env_list.txt; then
     echo "Existing environment found for $normalize_branch"
     # Get the environment hostname and URL
-    export url=`vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
+    export url=`/documentation/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8: -1}
     export docs_url=${url}/docs
@@ -44,7 +44,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
     /documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:create static-docs.dev $normalize_branch
 
     # Get the environment hostname and identify deployment URL
-    export url=`vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
+    export url=`/documentation/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8}
     export docs_url=${url}/docs
@@ -68,7 +68,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
 
 
   # Regenerate sculpin to reflect new redirect logic
-  bin/sculpin generate --env=prod
+  /documentation/bin/sculpin generate --env=prod --quiet
 
   # Migrate paginated files to avoid .html within the URLs
   for file in output_prod/docs/changelog/page/*html
@@ -78,13 +78,13 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
     mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
   done
   # Create json dump of terminus help for docs/terminus/commands
-  /documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > /documentation/output_prod/docs/assets/terminus/commands.json
-  curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > /documentation/output_prod/docs/assets/terminus/releases.json
+  /documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
+  curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
-  
+
   while true
   do
-    if ! rsync --size-only --delete-after -rtlvzi --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
+    if ! rsync --size-only --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
       echo "Failed, retrying..."
       sleep 5
     else
@@ -92,7 +92,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
       break
     fi
   done
-  
+
 
   #Get comment ID and comment body from last commit comment
   export previous_commit=($(git log --format="%H" -n 2))

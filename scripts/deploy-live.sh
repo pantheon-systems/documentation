@@ -6,7 +6,7 @@
 # Build prod env and create backup dirs on Circle     #
 #=====================================================#
 
-bin/sculpin generate --env=prod
+/documentation/bin/sculpin generate --env=prod --quiet
 # Migrate paginated files to avoid .html within the URLs
 for file in output_prod/docs/changelog/page/*html
 do
@@ -17,14 +17,14 @@ done
 #===============================================================#
 # Authenticate Terminus  and create json dump of help output    #
 #===============================================================#
-/documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
-/documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > /documentation/output_prod/docs/assets/terminus/commands.json
-curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > /documentation/output_prod/docs/assets/terminus/releases.json
+~/build/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
+~/build/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
+curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
 
 #===============================================================#
 # Deploy modified files to production                           #
 #===============================================================#
-rsync --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
+rsync --size-only --delete-after -rlvzi --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$STATIC_DOCS_UUID@appserver.live.$STATIC_DOCS_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Deployed to https://pantheon.io/docs"
@@ -39,7 +39,7 @@ fi
 # Delete Multidev environment from static-docs site   #
 #=====================================================#
 # Identify existing environments for the static-docs site
-/documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
+~/build/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
 echo "Existing environments:" && cat env_list.txt
 # Create array of existing environments on Static Docs
 getExistingTerminusEnvs() {
@@ -74,7 +74,7 @@ getMergedBranchMultidevName "merged-branches-clean.txt"
 merged_branch=" ${merged_branch_multidev_names[*]} "
 for env in ${existing_terminus_envs[@]}; do
   if [[ $merged_branch =~ " $env " ]] && [ "$env" != "terminusma" ] ; then
-    /documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:delete static-docs.$env --delete-branch --yes
+    ~/build/vendor/pantheon-systems/terminus/bin/terminus multidev:delete static-docs.$env --delete-branch --yes
   fi
 done
 

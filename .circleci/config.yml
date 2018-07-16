@@ -2,39 +2,47 @@ version: 2
 dependencies:
   cache_directories:
     - ~/.composer/cache
-    - /documentation/vendor
+    - ~/build/vendor
+    - ~/build/node_modules
 jobs:
   build:
     docker:
-      - image: pantheonsystems/documentation
-    working_directory: /documentation
+      - image: pantheonsystems/documentation:circle
+    working_directory: ~/build
     steps:
+      - checkout
+      - run:
+          name: Generate build
+          command: |
+            npm install
+            ./node_modules/.bin/grunt
+            /documentation/bin/sculpin generate --env=prod --quiet
       - run:
           name: Deploy Multidev environment
-          command: bash scripts/deploy-multidev.sh
+          command: bash ./scripts/deploy-multidev.sh
       - run:
           name: Start Ghost Driver
           command: phantomjs --webdriver=8643
           background: true
       - run:
           name: Start Sculpin
-          command: bin/sculpin server
+          command: /documentation/bin/sculpin server
           background: true
       - run:
           name: Speedtest
           command: |
             echo
             # Run sitespeed.io performance testing.
-            mkdir /documentation/artifacts
+            mkdir ~/build/artifacts
             bash scripts/run-sitespeed-test.sh
       - run:
           name: Behat
           command: |
-            bin/behat
+            /documentation/bin/behat
       - run:
           name: a11y
           command: |
-            node_modules/.bin/grunt test
+            /documentation/node_modules/.bin/grunt test
       - run:
           name: Merge Conflicts
           command: |
@@ -44,7 +52,7 @@ jobs:
           command: |
             htmlproofer --assume-extension  ./output_dev/ --disable-external true
       - store_artifacts:
-          path: /documentation/sitespeed-result
+          path: ~/build/sitespeed-result
 
 
 
