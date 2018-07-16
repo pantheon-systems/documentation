@@ -1,0 +1,56 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: pantheonsystems/documentation
+    working_directory: /documentation
+    steps:
+#      - checkout
+      - run:
+          name: Build Docs
+          command: |
+            git checkout $CIRCLE_BRANCH
+            node_modules/.bin/grunt
+            bin/sculpin generate --quiet
+      - run:
+          name: Deploy Multidev environment
+          command: bash scripts/deploy-multidev.sh
+
+      - run:
+          name: Start Ghost Driver
+          command: phantomjs --webdriver=8643
+          background: true
+
+      - run:
+          name: Start Sculpin
+          command: bin/sculpin server
+          background: true
+
+      - run:
+          name: Test
+          command: |
+            echo
+            # Run sitespeed.io performance testing.
+            mkdir /documentation/artifacts
+            bash scripts/run-sitespeed-test.sh
+            # Run behat.
+            bin/behat
+            # Run a11y.
+            node_modules/.bin/grunt test
+            # Look for merge conflicts.
+            scripts/merge_conflicts.sh
+            # Run htmlproofer.
+            htmlproofer --assume-extension  ./output_dev/ --disable-external true
+
+      - store_artifacts:
+          path: /documentation/sitespeed-result
+
+# caching for ~/.composer/cache needs to be done
+# artifacts need to be done sitespeed-result
+# deployment command for master: bash scripts/deploy-live.sh
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master
