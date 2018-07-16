@@ -1,0 +1,60 @@
+version: 2
+dependencies:
+  cache_directories:
+    - ~/.composer/cache
+    - /documentation/vendor
+jobs:
+  build:
+    docker:
+      - image: pantheonsystems/documentation
+    working_directory: /documentation
+    steps:
+      - run:
+          name: Deploy Multidev environment
+          command: bash scripts/deploy-multidev.sh
+      - run:
+          name: Start Ghost Driver
+          command: phantomjs --webdriver=8643
+          background: true
+      - run:
+          name: Start Sculpin
+          command: bin/sculpin server
+          background: true
+      - run:
+          name: Speedtest
+          command: |
+            echo
+            # Run sitespeed.io performance testing.
+            mkdir /documentation/artifacts
+            bash scripts/run-sitespeed-test.sh
+      - run:
+          name: Behat
+          command: |
+            bin/behat
+      - run:
+          name: a11y
+          command: |
+            node_modules/.bin/grunt test
+      - run:
+          name: Merge Conflicts
+          command: |
+            scripts/merge_conflicts.sh
+      - run:
+          name: htmlProofer
+          command: |
+            htmlproofer --assume-extension  ./output_dev/ --disable-external true
+      - store_artifacts:
+          path: /documentation/sitespeed-result
+
+
+
+
+# caching for ~/.composer/cache needs to be done
+# artifacts need to be done sitespeed-result
+# deployment command for master: bash scripts/deploy-live.sh
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master

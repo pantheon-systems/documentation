@@ -25,11 +25,11 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
 
 
   # Authenticate Terminus
-  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
+  /documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
 
 
   # Write existing environments for the static docs site to a text file
-  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
+  /documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
 
   # Check env_list.txt, create environment if one does not already exist
   if grep -Fxq "$normalize_branch" ./env_list.txt; then
@@ -41,7 +41,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
     export docs_url=${url}/docs
   else
     # Create multidev
-    ~/documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:create static-docs.dev $normalize_branch
+    /documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:create static-docs.dev $normalize_branch
 
     # Get the environment hostname and identify deployment URL
     export url=`vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
@@ -78,8 +78,8 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
     mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
   done
   # Create json dump of terminus help for docs/terminus/commands
-  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
-  curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/documentation/output_prod/docs/assets/terminus/releases.json
+  /documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > /documentation/output_prod/docs/assets/terminus/commands.json
+  curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > /documentation/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
   
   while true
@@ -165,5 +165,5 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
 
   # Clear cache on multidev env
-  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus env:cc static-docs.$normalize_branch
+  /documentation/vendor/pantheon-systems/terminus/bin/terminus env:cc static-docs.$normalize_branch
 fi
