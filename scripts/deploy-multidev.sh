@@ -24,14 +24,14 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   fi
 
 
-  # Authenticate Terminus
+  printf "Authenticate Terminus \n"
   /documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
 
 
-  # Write existing environments for the static docs site to a text file
+  printf "Write existing environments for the static docs site to a text file \n"
   /documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
 
-  # Check env_list.txt, create environment if one does not already exist
+  printf "Check env_list.txt, create environment if one does not already exist \n"
   if grep -Fxq "$normalize_branch" ./env_list.txt; then
     echo "Existing environment found for $normalize_branch"
     # Get the environment hostname and URL
@@ -52,12 +52,12 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   fi
 
 
-  # Update redirect logic for the Multidev environment
+  printf "Update redirect logic for the Multidev environment \n"
   export avoid_redirect="window.location.hostname == '$hostname' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
   sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
-  # Update CTA edit link so that the current branch is used
+  printf "Update CTA edit link so that the current branch is used \n"
   sed -i '50s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
   sed -i '52s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
   sed -i '29s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/terminuspage.html
@@ -67,10 +67,10 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   sed -i '34s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/guide.html
 
 
-  # Regenerate sculpin to reflect new redirect logic
+  printf "Regenerate sculpin to reflect new redirect logic \n"
   /documentation/bin/sculpin generate --env=prod --quiet
 
-  # Migrate paginated files to avoid .html within the URLs
+  printf "Migrate paginated files to avoid .html within the URLs"
   for file in output_prod/docs/changelog/page/*html
   do
     name="$(basename "$file" .html)"
@@ -93,6 +93,8 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
     fi
   done
 
+
+  printf "Commenting on GitHub... \n"
 
   #Get comment ID and comment body from last commit comment
   export previous_commit=($(git log --format="%H" -n 2))
@@ -164,6 +166,6 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   export comment=`cat comment.txt`
   curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
 
-  # Clear cache on multidev env
+  printf "Clear cache on multidev env. \n"
   /documentation/vendor/pantheon-systems/terminus/bin/terminus env:cc static-docs.$normalize_branch
 fi
