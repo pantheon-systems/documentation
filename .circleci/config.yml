@@ -54,10 +54,13 @@ jobs:
       - store_artifacts:
           path: ~/build/sitespeed-result
 
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "masterblaster" ]; then
+              scripts/deploy-live.sh
+            fi
 
 
-
-# caching for ~/.composer/cache needs to be done
 # artifacts need to be done sitespeed-result
 # deployment command for master: bash scripts/deploy-live.sh
 
