@@ -8,7 +8,7 @@ CIRCLE_BRANCH_SLUG=$(echo "$CIRCLE_BRANCH" | iconv -t ascii//TRANSLIT | sed -r s
 
 
 # Deploy any branch except master, dev, test, or live
-if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] && [ "$CIRCLE_BRANCH_SLUG" != "test" ] && [ "$CIRCLE_BRANCH_SLUG" != "live" ] && ! [[ $CIRCLE_BRANCH_SLUG =~ (pull\/.*) ]]; then
+if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "masterblaster" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] && [ "$CIRCLE_BRANCH_SLUG" != "test" ] && [ "$CIRCLE_BRANCH_SLUG" != "live" ] && ! [[ $CIRCLE_BRANCH_SLUG =~ (pull\/.*) ]]; then
   # Normalize branch name to adhere with Multidev requirements
   export normalize_branch="$CIRCLE_BRANCH_SLUG"
   export valid="^[-0-9a-z]" # allows digits 0-9, lower case a-z, and -
@@ -70,21 +70,21 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   printf "Regenerate sculpin to reflect new redirect logic \n"
   /documentation/bin/sculpin generate --env=prod --quiet
 
-  printf "Migrate paginated files to avoid .html within the URLs"
+  printf "Migrate paginated files to avoid .html within the URLs \n"
   for file in output_prod/docs/changelog/page/*html
   do
     name="$(basename "$file" .html)"
     mkdir -p output_prod/docs/changelog/page/"$name"
     mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
   done
-  # Create json dump of terminus help for docs/terminus/commands
+  printf "Create json dump of terminus help for docs/terminus/commands \n"
   /documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
   curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
 
   while true
   do
-    if ! rsync --size-only --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
+    if ! rsync --size-only --delete-after -rtlvzi --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
       echo "Failed, retrying..."
       sleep 5
     else
