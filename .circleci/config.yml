@@ -58,7 +58,7 @@ jobs:
 
       - deploy:
           command: |
-            if [ "${CIRCLE_BRANCH}" == "masterblaster" ]; then
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
               scripts/deploy-live.sh
             fi
 
