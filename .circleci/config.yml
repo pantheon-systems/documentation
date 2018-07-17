@@ -24,6 +24,9 @@ jobs:
           command: phantomjs --webdriver=8643
           background: true
       - run:
+          name: Symlink source Directory
+          command: cd output_prod && ln -s ./ source
+      - run:
           name: Start Sculpin
           command: /documentation/bin/sculpin server
           background: true
