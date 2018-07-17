@@ -12,10 +12,12 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Compile CSS
+          name: Prep Environment
           command: |
             npm install
             ./node_modules/.bin/grunt
+            mkdir output_prod
+            cd output_prod && ln -s ./ source
       - run:
           name: Deploy Multidev environment
           command: bash ./scripts/deploy-multidev.sh
@@ -23,9 +25,6 @@ jobs:
           name: Start Ghost Driver
           command: phantomjs --webdriver=8643
           background: true
-      - run:
-          name: Symlink source Directory
-          command: cd output_prod && ln -s ./ source
       - run:
           name: Start Sculpin
           command: /documentation/bin/sculpin server
