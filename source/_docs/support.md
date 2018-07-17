@@ -6,7 +6,7 @@ categories: []
 ---
 
 ## Support Features and Response Times
-The majority of Pantheon's support is provided in the context of a particular website or project. Because of that, the type of support available varies according to whether you are paying for a site individually, or using Pantheon as an Agency, EDU, or Enterprise customer.
+The majority of Pantheon's support is provided in the context of a particular website or project. Because of that, the type of support available varies according to whether you are paying for a site [individually](/docs/brokenlinkohnoes/), or using Pantheon as an Agency, EDU, or Enterprise customer.
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
