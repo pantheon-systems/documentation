@@ -7,7 +7,7 @@ dependencies:
 jobs:
   build:
     docker:
-      - image: pantheonsystems/documentation:circle
+      - image: pantheonsystems/documentation:latest
     working_directory: ~/build
     steps:
       - checkout
