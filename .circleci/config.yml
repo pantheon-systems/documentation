@@ -12,11 +12,10 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Generate build
+          name: Compile CSS
           command: |
             npm install
             ./node_modules/.bin/grunt
-            /documentation/bin/sculpin generate --env=prod --quiet
       - run:
           name: Deploy Multidev environment
           command: bash ./scripts/deploy-multidev.sh
@@ -60,9 +59,6 @@ jobs:
               scripts/deploy-live.sh
             fi
 
-
-# artifacts need to be done sitespeed-result
-# deployment command for master: bash scripts/deploy-live.sh
 
 experimental:
   notify:
