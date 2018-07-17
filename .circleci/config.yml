@@ -28,13 +28,6 @@ jobs:
           command: /documentation/bin/sculpin server
           background: true
       - run:
-          name: Speedtest
-          command: |
-            echo
-            # Run sitespeed.io performance testing.
-            mkdir ~/build/artifacts
-            bash scripts/run-sitespeed-test.sh
-      - run:
           name: Behat
           command: |
             /documentation/bin/behat
@@ -49,7 +42,14 @@ jobs:
       - run:
           name: htmlProofer
           command: |
-            htmlproofer --assume-extension  ./output_dev/ --disable-external true
+            htmlproofer --assume-extension  ./output_prod/ --disable-external true
+      - run:
+          name: Speedtest
+          command: |
+            echo
+            # Run sitespeed.io performance testing.
+            mkdir ~/build/artifacts
+            bash scripts/run-sitespeed-test.sh
       - store_artifacts:
           path: ~/build/sitespeed-result
 
