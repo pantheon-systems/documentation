@@ -25,7 +25,7 @@ curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pan
 # Deploy modified files to production                           #
 #===============================================================#
 touch ./deployment-log.txt
-rsync --size-only --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=~/deployment-log.txt -e 'ssh -t -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
+rsync --checksum --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=~/deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     cat ./deployment-log.txt
