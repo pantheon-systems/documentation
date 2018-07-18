@@ -18,13 +18,13 @@ done
 # Authenticate Terminus  and create json dump of help output    #
 #===============================================================#
 /documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
-/documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
+/documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/builds/output_prod/docs/assets/terminus/commands.json
 curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/documentation/output_prod/docs/assets/terminus/releases.json
 
 #===============================================================#
 # Deploy modified files to production                           #
 #===============================================================#
-rsync --size-only --checksum --delete-after -rlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
+rsync --size-only --delete-after -rlvzi --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Deployed to https://pantheon.io/docs"
