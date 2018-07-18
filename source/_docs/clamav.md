@@ -49,7 +49,7 @@ terminus wp <site-name>.<env> -- install upload-scanner --activate
    terminus drush <site-name>.<env> -- dl clamav
    ```
 
-2. Enable the module, and set the scan method to daemon mode (the defaults for hostname and port number should: localhost, 3310):
+2. Enable the module and set the scan method to daemon mode (from the module's configuration page, set the hostname and port number to localhost and 3310):
 
     ```
     terminus drush <site-name>.<env> -- en clamav -y
