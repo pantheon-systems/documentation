@@ -33,9 +33,11 @@ jobs:
           command: /documentation/bin/sculpin server
           background: true
       - run:
+          name: Wait for Sculpin
+          command: dockerize -wait tcp://localhost:8000 -timeout 1m
+      - run:
           name: Behat
           command: |
-            sleep 5
             /documentation/bin/behat
       - run:
           name: a11y
