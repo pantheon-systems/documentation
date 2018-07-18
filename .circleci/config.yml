@@ -18,7 +18,9 @@ jobs:
             ./node_modules/.bin/grunt
             mkdir output_prod
             cd output_prod && ln -s ./ source
-            /documentation/bin/sculpin generate --env=prod
+      - run:
+          name: Sculpin Generate
+          command: /documentation/bin/sculpin generate --env=prod
       - run:
           name: Deploy Multidev environment
           command: bash ./scripts/deploy-multidev.sh
