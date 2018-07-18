@@ -14,12 +14,12 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   # Remove - to avoid failures
   export normalize_branch="${normalize_branch//[-_]}"
   export normalize_branch="${normalize_branch,,}"
-  export url=`vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`docs
+  export url=`/documentation/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`docs
   export url=https${url:4}
 
   # sitespeed expects the input file to contain full urls to s file with
   # production urls is used as a source, the production domain is then replaced
   # with the multdev url.
   sed "s,https://pantheon.io/docs,$url,g" scripts/sitespeed-urls.txt > /tmp/sitespeed-urls-multidev.txt
-  ./node_modules/.bin/sitespeed.io $url --no=1 --budget budget.json -b firefox  --suppressDomainFolder --file=/tmp/sitespeed-urls-multidev.txt --skipTest=redirects,textcontent,ycdn,privateheaders,longexpirehead,expiresmod,avoidscalingimages,ycompress,frontEndTime,yminify,domContentLoadedTime
+  /documentation/node_modules/.bin/sitespeed.io $url --no=1 --budget budget.json -b firefox  --suppressDomainFolder --file=/tmp/sitespeed-urls-multidev.txt --skipTest=redirects,textcontent,ycdn,privateheaders,longexpirehead,expiresmod,avoidscalingimages,ycompress,frontEndTime,yminify,domContentLoadedTime
 fi

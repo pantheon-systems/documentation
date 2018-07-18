@@ -24,27 +24,27 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   fi
 
 
-  # Authenticate Terminus
-  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
+  printf "Authenticate Terminus \n"
+  /documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
 
 
-  # Write existing environments for the static docs site to a text file
-  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
+  printf "Write existing environments for the static docs site to a text file \n"
+  /documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
 
-  # Check env_list.txt, create environment if one does not already exist
+  printf "Check env_list.txt, create environment if one does not already exist \n"
   if grep -Fxq "$normalize_branch" ./env_list.txt; then
     echo "Existing environment found for $normalize_branch"
     # Get the environment hostname and URL
-    export url=`vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
+    export url=`/documentation/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8: -1}
     export docs_url=${url}/docs
   else
     # Create multidev
-    ~/documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:create static-docs.dev $normalize_branch
+    /documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:create static-docs.dev $normalize_branch
 
     # Get the environment hostname and identify deployment URL
-    export url=`vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
+    export url=`/documentation/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8}
     export docs_url=${url}/docs
@@ -52,12 +52,12 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   fi
 
 
-  # Update redirect logic for the Multidev environment
+  printf "Update redirect logic for the Multidev environment \n"
   export avoid_redirect="window.location.hostname == '$hostname' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
   sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
 
-  # Update CTA edit link so that the current branch is used
+  printf "Update CTA edit link so that the current branch is used \n"
   sed -i '50s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
   sed -i '52s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
   sed -i '29s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/terminuspage.html
@@ -67,28 +67,34 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   sed -i '34s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/guide.html
 
 
-  # Regenerate sculpin to reflect new redirect logic
-  bin/sculpin generate --env=prod
+  printf "Regenerate sculpin to reflect new redirect logic \n"
+  /documentation/bin/sculpin generate --env=prod --quiet
 
-  # Migrate paginated files to avoid .html within the URLs
+  printf "Migrate paginated files to avoid .html within the URLs \n"
   for file in output_prod/docs/changelog/page/*html
   do
     name="$(basename "$file" .html)"
     mkdir -p output_prod/docs/changelog/page/"$name"
     mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
   done
-  # Create json dump of terminus help for docs/terminus/commands
-  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/documentation/output_prod/docs/assets/terminus/commands.json
-  curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/documentation/output_prod/docs/assets/terminus/releases.json
+  printf "Create json dump of terminus help for docs/terminus/commands \n"
+  /documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
+  curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
-  rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
-  if [ "$?" -eq "0" ]
-  then
-    echo "Success: Deployed to $url"
-  else
-    echo "Error: Deploy failed, review rsync status"
-    exit 1
-  fi
+
+  while true
+  do
+    if ! rsync --size-only --delete-after -rtlvzi --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
+      echo "Failed, retrying..."
+      sleep 5
+    else
+      echo "Success: Deployed to $url"
+      break
+    fi
+  done
+
+
+  printf "Commenting on GitHub... \n"
 
   #Get comment ID and comment body from last commit comment
   export previous_commit=($(git log --format="%H" -n 2))
@@ -160,6 +166,6 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   export comment=`cat comment.txt`
   curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
 
-  # Clear cache on multidev env
-  ~/documentation/vendor/pantheon-systems/terminus/bin/terminus env:cc static-docs.$normalize_branch
+  printf "Clear cache on multidev env. \n"
+  /documentation/vendor/pantheon-systems/terminus/bin/terminus env:cc static-docs.$normalize_branch
 fi

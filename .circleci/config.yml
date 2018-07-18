@@ -1,0 +1,70 @@
+version: 2
+dependencies:
+  cache_directories:
+    - ~/.composer/cache
+    - ~/build/vendor
+    - ~/build/node_modules
+jobs:
+  build:
+    docker:
+      - image: pantheonsystems/documentation:latest
+    working_directory: ~/build
+    steps:
+      - checkout
+      - run:
+          name: Prep Environment
+          command: |
+            npm install
+            ./node_modules/.bin/grunt
+            mkdir output_prod
+            cd output_prod && ln -s ./ source
+            /documentation/bin/sculpin generate --env=prod
+      - run:
+          name: Deploy Multidev environment
+          command: bash ./scripts/deploy-multidev.sh
+      - run:
+          name: Start Ghost Driver
+          command: phantomjs --webdriver=8643
+          background: true
+      - run:
+          name: Start Sculpin
+          command: /documentation/bin/sculpin server
+          background: true
+      - run:
+          name: Behat
+          command: |
+            /documentation/bin/behat
+      - run:
+          name: a11y
+          command: |
+            /documentation/node_modules/.bin/grunt test
+      - run:
+          name: Merge Conflicts
+          command: |
+            scripts/merge_conflicts.sh
+      - run:
+          name: htmlProofer
+          command: |
+            htmlproofer --assume-extension  ./output_prod/ --disable-external true
+      - run:
+          name: Speedtest
+          command: |
+            echo
+            # Run sitespeed.io performance testing.
+            mkdir ~/build/artifacts
+            bash scripts/run-sitespeed-test.sh
+      - store_artifacts:
+          path: ~/build/sitespeed-result
+
+      - deploy:
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              scripts/deploy-live.sh
+            fi
+
+
+experimental:
+  notify:
+    branches:
+      only:
+        - master

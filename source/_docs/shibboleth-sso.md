@@ -8,7 +8,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p>This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the <a href="https://www.drupal.org/project/simplesamlphp_auth">SimpleSAMLphp Authentication</a> module from Drupal.org, or with their WordPress site using the <a href="https://wordpress.org/plugins/wp-saml-auth/">WP SAML Auth</a> plugin from WordPress.org.</p>
+  <p markdown="1">This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the [SimpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth){.external} module from Drupal.org, or with their WordPress site using the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin from WordPress.org.</p>
 </div>
 
 ## Install SimpleSAMLphp
