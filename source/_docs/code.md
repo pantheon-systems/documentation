@@ -28,8 +28,8 @@ Drupal site code repositories are clones of one of our Drupal upstreams: [Drops-
     └── themes
 
 
-<div class="alert alert-info"><h4 class="info">Note</h4>The
- <p><code>sites/default/files</code> directory is represented in your code repository as a symbolic link to the Pantheon environment's <code>files/</code> directory.</p></div>
+<div class="alert alert-info"><h4 class="info">Note</h4>
+ <p markdown="1">The `sites/default/files` directory is represented in your code repository as a symbolic link to the Pantheon environment's `files/` directory.</p></div>
 
 ### WordPress Code Structure
 
