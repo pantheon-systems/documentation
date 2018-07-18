@@ -114,7 +114,7 @@ In your code, remember to first check whether the incoming request has the `STYX
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p><code>STYXKEY</code> is not a replacement for responsive design.</p></div>
+<p markdown="1">`STYXKEY` is not a replacement for responsive design.</p></div>
 
 **Examples of `STYXKEY` cookie names:**
 
