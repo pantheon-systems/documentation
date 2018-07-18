@@ -35,6 +35,7 @@ jobs:
       - run:
           name: Behat
           command: |
+            sleep 5
             /documentation/bin/behat
       - run:
           name: a11y
