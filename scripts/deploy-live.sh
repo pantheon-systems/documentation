@@ -28,7 +28,9 @@ touch ./deployment-log.txt
 rsync --checksum --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=~/deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
-    cat ./deployment-log.txt
+    printf "\n Displaying adjusted Rsync log: \n\n"
+    cat ./deployment-log.txt | egrep '<|>|deleting' || true
+    printf "\n"
     echo "Success: Deployed to https://pantheon.io/docs"
 else
     # If rsync returns an error code the build will fail and send notifications for review
