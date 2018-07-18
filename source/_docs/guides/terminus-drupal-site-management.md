@@ -50,7 +50,7 @@ Now let's create a new site:
 ```nohighlight
 $ terminus upstream:list | grep "Drupal 7" | grep "core"
   21e1fada-199c-492b-97bd-0b36b53a9da0   Drupal 7                                                                  vanilla      core          drupal
-$ terminus site:create terminus-cli-create "Terminus CLI Create" 21e1fada-199c-492b-97bd-0b36b53a9da0
+$ terminus site:create terminus-cli-create 'Terminus CLI Create' 21e1fada-199c-492b-97bd-0b36b53a9da0
 
 [notice] Creating a new site...
 
