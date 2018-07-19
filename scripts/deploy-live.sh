@@ -7,7 +7,7 @@
 #=====================================================#
 
 
-# Migrate paginated files to avoid .html within the URLs
+printf "Migrating paginated files to avoid .html within the URLs \n"
 for file in output_prod/docs/changelog/page/*html
 do
   name="$(basename "$file" .html)"
@@ -17,6 +17,7 @@ done
 #===============================================================#
 # Authenticate Terminus  and create json dump of help output    #
 #===============================================================#
+printf "Updating Terminus commands and version \n"
 /documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
 /documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
 curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
@@ -24,6 +25,7 @@ curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pan
 #===============================================================#
 # Deploy modified files to production                           #
 #===============================================================#
+printf "Deploying to production envrironment... \n"
 touch ./deployment-log.txt
 rsync --checksum --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=./deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
@@ -42,7 +44,7 @@ fi
 #=====================================================#
 # Delete Multidev environment from static-docs site   #
 #=====================================================#
-# Identify existing environments for the static-docs site
+printf "Identify existing environments for the static-docs site \n"
 ~/documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
 echo "Existing environments:" && cat env_list.txt
 # Create array of existing environments on Static Docs
@@ -93,8 +95,23 @@ getMergedBranch() {
 getMergedBranch "merged-branches-clean.txt"
 
 # Delete merged branches from GH Repo
-  for branch in ${merged_branch_array[@]}; do
-    if [ "$branch" != "terminus-manual" ] ; then
-    git push origin --delete "$branch"
-    fi
-  done
+for branch in ${merged_branch_array[@]}; do
+  if [ "$branch" != "terminus-manual" ] ; then
+  git push origin --delete "$branch"
+  fi
+done
+
+printf "Updating dev environment... \n"
+touch ./devupdate-log.txt
+rsync --checksum --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=./devupdate-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ dev.$STATIC_DOCS_UUID@appserver.dev.$STATIC_DOCS_UUID.drush.in:files/docs/
+if [ "$?" -eq "0" ]
+then
+    printf "\n Displaying adjusted Rsync log: \n\n"
+    cat ./devupdate-log.txt | egrep '<|>|deleting' || true
+    printf "\n"
+    echo "Success: Deployed to dev environment."
+else
+    # If rsync returns an error code the build will fail and send notifications for review
+    echo "Error: Deploy failed, review rsync status"
+    exit 1
+fi
