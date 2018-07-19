@@ -38,6 +38,8 @@ To verify that everything is working correctly, visit the URL of the environment
 
 ![Locked site example](/source/docs/assets/images/auth-required.png)
 
+### Customize Lock Page
+
 If you'd like to customize the lock page that displays beneath the authentication form, you can add a `locked.html` file in your site's root directory.
 
 ## Unlock a Site's Environment
