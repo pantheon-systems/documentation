@@ -98,11 +98,20 @@ This error occurs when a request is sent to a database server that is in sleep m
 terminus env:wake <site>.<env>
 ```
 ### Can't Connect to Local MySQL Server Through Socket
-See [Database Connection Errors](/docs/database-connection-errors/) to troubleshoot
- connection errors like the following:<br />
+See [Database Connection Errors](/docs/database-connection-errors/) to troubleshoot connection errors like the following:
+
 ```sql
-Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
+Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 ```
+
+### SSL Connection Error
+For your security, our platform won't accept connections using encryption lower than [TLS v1.2](https://en.wikipedia.org/wiki/Transport_Layer_Security#TLS_1.2){.external}. On local systems not updated to the latest SSL, you may see this message when connecting:
+
+```bash
+SSL connection error: unknown error number
+```
+
+Upgrade your local SSL or OpenSSL package to resolve this error.
 
 
 ## Frequently Asked Questions
