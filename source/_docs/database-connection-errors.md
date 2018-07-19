@@ -8,7 +8,7 @@ There is an issue connecting to the Pantheon database if your site suddenly reve
  ![Can't connect to local MySQL server through socket](/source/docs/assets/images/mysql-connection-error.png)
 
 ```sql
-Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
+Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 ```
 There are two common causes: overwriting core or using non-standard bootstraps.
 
@@ -48,15 +48,17 @@ $settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
 ```
 ### Drupal 7 Style
 
-    # Include any other settings.php magic here.
-      extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
-      include './sites/all/modules/domain/settings.inc';
+```php
+# Include any other settings.php magic here.
+  extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
+  include './sites/all/modules/domain/settings.inc';
+```
 
 You can also use the above to develop Drupal 8 on Pantheon.
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p>If you use any other advanced <code>settings.php</code> tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</p></div>
+<p markdown="1">If you use any other advanced `settings.php` tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent `$conf` array.</p></div>
 
 ## Base Table or View Not Found
 This error may occur during a database clone, restore, or import. A standard MySQL import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try and bootstrap, and the MySQL import may only be at the table letter G. The result is the "semaphore does not exist" error.

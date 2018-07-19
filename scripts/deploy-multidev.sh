@@ -3,11 +3,14 @@
 # Note: This script uses CircleCI environment variables https://circleci.com/docs/environment-variables
 # Note: PRs from forks not yet supported, see: https://circleci.com/docs/fork-pr-builds
 
-# Create a slug from $CIRCLE_BRANCH_SLUG
+printf "Create a slug from $CIRCLE_BRANCH \n"
 CIRCLE_BRANCH_SLUG=$(echo "$CIRCLE_BRANCH" | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
 
+printf "slug created as: "
+echo $CIRCLE_BRANCH_SLUG
 
 # Deploy any branch except master, dev, test, or live
+printf "Checking slug against protected names... \n"
 if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] && [ "$CIRCLE_BRANCH_SLUG" != "test" ] && [ "$CIRCLE_BRANCH_SLUG" != "live" ] && ! [[ $CIRCLE_BRANCH_SLUG =~ (pull\/.*) ]]; then
   # Normalize branch name to adhere with Multidev requirements
   export normalize_branch="$CIRCLE_BRANCH_SLUG"
@@ -40,10 +43,11 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
     export hostname=${url:8: -1}
     export docs_url=${url}/docs
   else
-    # Create multidev
+    printf "Creating multidev environment... \n"
     /documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:create static-docs.dev $normalize_branch
 
     # Get the environment hostname and identify deployment URL
+    printf "Identifying environment hostname... \n"
     export url=`/documentation/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8}
@@ -82,19 +86,24 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
 
+  printf "Copy docs to multidev environment.. \n"
+  touch ./multidev-log.txt
   while true
   do
-    if ! rsync --size-only --delete-after -rtlvzi --ipv4 --progress -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
+    if ! rsync --checksum --delete-after -rtlzq --ipv4 --info=BACKUP,DEL --log-file=multidev-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
       echo "Failed, retrying..."
       sleep 5
     else
+      printf "Displaying adjusted Rsync log \n \n"
+      cat ./multidev-log.txt | egrep '<|>|deleting' || true
+      printf "\n"
       echo "Success: Deployed to $url"
       break
     fi
   done
 
 
-  printf "Commenting on GitHub... \n"
+  printf "\n Commenting on GitHub... \n"
 
   #Get comment ID and comment body from last commit comment
   export previous_commit=($(git log --format="%H" -n 2))
