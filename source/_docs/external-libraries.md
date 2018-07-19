@@ -4,28 +4,9 @@ description: Learn to incorporate external libraries on the Pantheon Website Man
 tags: [services]
 categories: []
 ---
+
 There are some scenarios when an external library is required. Pantheon has installed a number of common libraries that are available on the platform.
 
-
-<!-- h2 id="pdftk"><a href="https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/">PDFTK - PDF Tool Kit</a></h2>
-
-
-
-
-<p>In its own words: &quot;If PDF is electronic paper, then pdftk is an electronic staple-remover, hole-punch, binder, secret-decoder-ring, and X-Ray-glasses. Pdftk is a simple tool for doing everyday things with PDF documents.&quot;</p>
-
-
-<p>PDFTK can be found on your application container @ /usr/bin/pdftk. The current version supported on Pantheon is 1.44.</p>
-
-
-<p>To install, add&nbsp;<br />
-To install, first put your development site in SFTP mode. Then, execute the following commands from your local terminal:</p>
-
-
-<pre class="terminal">
-drush @pantheon.SITENAME.ENV dl pdftk token libraries
-drush @pantheon.SITENAME.ENV en pdftk
-</pre // -->
 ## WKHTMLtoPDF
 
 [WebKit HTML](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF.
@@ -127,5 +108,3 @@ Please [contact support](/docs/support) with a description of your use case and 
 
 #### Will you setup and configure the module/plugin for me?
 No. This is not within our [scope of support](/docs/support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
-
-
