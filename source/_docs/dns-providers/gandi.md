@@ -46,11 +46,12 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. Click the **Add** button and select **CNAME** from the type dropdown menu.
 2. Select desired Time to Live (TTL).
-3. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Value** field.
- <div class="alert alert-info">
-    <h4 class="info">Note</h4><p markdown="1">Do not forget to add the dot at the end of the line!</br>
-    A hostname usually ends with a dot(.) not unless you want it to be suffixed by the current domain.
- </p></div>
+3. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon, followed by a `.` (e.g. `live-example.pantheonsite.io.`) in the **Value** field.
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4><p markdown="1">
+    Remember to add the dot (`.`) at the end of the **Value** line. Hostnames without a `.` at the end will be suffixed by the current domain.
+    </p></div>
 
 4. Click **Submit**.
 5. Click the **Activate this version** button.
