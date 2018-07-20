@@ -523,22 +523,22 @@ You can use markdown tables to describe availability based on service levels bef
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
 | Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
-| ------------- | ------- |
-| Sandbox       | ✓       |
-| Basic         |         |
-| Performance   | ✓       |
-| Elite         | ✓       |
+| ------------- | -------------------------------------- |
+| Sandbox       | <span style="color:green">✔</span> |
+| Basic         | <span style="color:red">❌</span>  |
+| Performance   | <span style="color:green">✔</span> |
+| Elite         | <span style="color:green">✔</span> |
 <hr class="source-code">
 ```markdown
 ## Enable Redis
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
 | Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
-| ------------- | ------- |
-| Sandbox       | ✓       |
-| Basic         |         |
-| Performance   | ✓       |
-| Elite         | ✓       |
+| ------------- | -------------------------------------- |
+| Sandbox       | <span style="color:green">✔</span> |
+| Basic         | <span style="color:red">❌</span>  |
+| Performance   | <span style="color:green">✔</span> |
+| Elite         | <span style="color:green">✔</span> |
 ```
 </div>
 
