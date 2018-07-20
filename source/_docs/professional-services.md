@@ -21,10 +21,6 @@ If you need advice on architecting a solution, planning for the future, preparin
         <td>Yes (1/Qtr)</td>
         </tr>
       <tr>
-        <td>DevOps Consulting: 4 hours per Qtr; Recurring</td>
-        <td></td>
-        </tr>
-      <tr>
         <td>DevOps Consulting: Project based solution architect customized to your needs</td>
         <td></td>
         </tr>
