@@ -33,11 +33,11 @@ If you need advice on architecting a solution, planning for the future, preparin
         <td>Yes (1/Qtr)</td>
         </tr>
       <tr>
-        <td>Pantheon Enterprise Gateway, annual (Elite sites Only); recurring</td>
+        <td>Pantheon Enterprise Gateway, annual recurring (Elite sites Only)</td>
         <td></td>
         </tr>
       <tr>
-        <td>SSO/SAML, one time, per account</td>
+        <td>SSO/SAML, one time per account</td>
         <td>Yes</td>
         </tr>
     </tbody>
