@@ -188,14 +188,28 @@ terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
 
 ![image of installing address module](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
 
-### Managing Drupal Updates with Composer
-Just like adding a new module updates to existing Composer managed third-party items (Drupal core, contrib modules and themes) will need to be done locally.
+### Update all Site Code
 
-You can run `composer update` to download all available updates within the constraints defined in `composer.json`. You can update specific dependencies only by listing them explicitly in the `composer update` commands.
+1. From a local copy of your site's codebase run 
 
-For example, to update Drupal core you would use `composer update drupal/core --with-dependencies`. If `composer.json` had the version constraint for `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in the [version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-). `--with-dependencies` is necessary when explicitly updating Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
+```
+composer update
+```
+2. After composer completes successfully, push code back to Pantheon via Git or SFTP
 
-Once the desired dependencies have been updated with Composer you will need to commit the new files to Pantheon.
+
+### Update only Drupal Core
+1. From a local copy of your site's codebase run 
+
+```
+composer update drupal/core --with-dependencies
+```
+
+`--with-dependencies` is necessary when explicitly updating only Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
+
+2. After composer completes successfully, push code back to Pantheon via Git or SFTP
+
+Note that `composer update` is based on the values specified in `composer.json.` So, for example, if `composer.json` specifies `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in the [version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-). 
 
 #### Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
 
