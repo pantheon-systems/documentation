@@ -8,12 +8,12 @@ The Pantheon platform recognizes two distinct private directories for storing no
 
 Determining which path to use depends on whether or not the data should be tracked with Git as part of your site's codebase. For example, secret tokens or credentials for third party services should not be version controlled alongside your site's code.
 
-**Private Path for Files (Not Version Controlled)**  
-Drupal: `sites/default/files/private`   
+**Private Path for Files (Not Version Controlled)**
+Drupal: `sites/default/files/private`
 WordPress: `wp-content/uploads/private`
 
-**Private Path for Code (Version Controlled)**  
-Drupal and WordPress: `private`   
+**Private Path for Code (Version Controlled)**
+Drupal and WordPress: `private`
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
@@ -51,7 +51,7 @@ To configure, go to **Administration** > **Configuration** > **Media** > **File 
 
 ### Resolving Warning: file_put_contents(private:///.htaccess)
 
-If you receive the above error, make sure you that the private path for code or files exists in your repository. If you are configuring a private path for code, you'll need to start from your Dev environment and create the private directory and commit via Git or create via SFTP and commit via Pantheon Dashboard. Once the directory has been created and committed, you can deploy to Test and Live to deploy the new directory. Once the directory exists you can resubmit your changes via the file systems settings page in your Drupal Admin interface for each environment.
+If you receive the error above, make sure that the private path for code or files exists in your repository. If you are configuring a private path for code, you'll need to start from your Dev environment and create the private directory, then commit via Git, or create via SFTP and commit via Pantheon Dashboard. Once the directory has been created and committed, you can deploy to Test and Live to deploy the new directory. Once the directory exists you can resubmit your changes via the file systems settings page in your Drupal Admin interface for each environment.
 
 ### Selectively Exposing Code
 
