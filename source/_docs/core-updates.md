@@ -10,7 +10,7 @@ Apply one-click updates to individual sites repositories using the Site Dashboar
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-  <p markdown="1">Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/docs/guides/build-tools/update/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/#managing-drupal-updates-with-composer).</p>
+  <p markdown="1">Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/docs/guides/build-tools/update/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/#update-only-drupal-core).</p>
 </div>
 
 ## Apply Upstream Updates via the Site Dashboard

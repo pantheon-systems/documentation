@@ -11,9 +11,9 @@ contributors:
   - davidneedham
 ---
 
-In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/) for managing a Drupal 8 site on your local machine and pushing to Pantheon.
+In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/){.external} for managing a Drupal 8 site on your local machine and pushing to Pantheon.
 
-Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](https://pantheon.io/docs/core-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
+Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/docs/core-updates/).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
 
 ## Creating the Pantheon Site
 
@@ -35,7 +35,7 @@ terminus site:create $PANTHEON_SITE_NAME 'My D8 Composer Site' empty
 
 ## Cloning example-drops-8-composer locally
 
-Instead of setting up `composer.json` manually it is easier to start with the [`example-drops-8-composer`](https://github.com/pantheon-systems/example-drops-8-composer) repository.
+Instead of setting up `composer.json` manually it is easier to start with the [`example-drops-8-composer`](https://github.com/pantheon-systems/example-drops-8-composer){.external} repository.
 
 First, clone the `example-drops-8-composer` repository locally.
 
@@ -134,7 +134,7 @@ git commit -m 'Drupal 8 and dependencies'
 git push --force
 ```
 
-**Note** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our build tools guide](https://pantheon.io/docs/guides/build-tools/) for documentation on the more advanced automated workflow with a build step.
+**Note** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our build tools guide](/docs/guides/build-tools/) for documentation on the more advanced automated workflow with a build step.
 
 ### Installing Drupal
 
@@ -188,15 +188,31 @@ terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
 
 ![image of installing address module](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
 
-### Managing Drupal Updates with Composer
-Just like adding a new module updates to existing Composer managed third-party items (Drupal core, contrib modules and themes) will need to be done locally.
+### Update all Site Code
 
-You can run `composer update` to download all available updates within the constraints defined in `composer.json`. You can update specific dependencies only by listing them explicitly in the `composer update` commands.
+1. From a local copy of your site's codebase, run:
 
-For example, to update Drupal core you would use `composer update drupal/core --with-dependencies`. If `composer.json` had the version constraint for `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in the [version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-). `--with-dependencies` is necessary when explicitly updating Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
+    ```bash
+    composer update
+    ```
 
-Once the desired dependencies have been updated with Composer you will need to commit the new files to Pantheon.
+2. After Composer updates successfully, push the code back to Pantheon via Git or SFTP
+
+
+### Update only Drupal Core
+
+1. From a local copy of your site's codebase run:
+
+    ```bash
+    composer update drupal/core --with-dependencies
+    ```
+
+    `--with-dependencies` is necessary when explicitly updating only Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
+
+2. After Composer updates successfully, push the code back to Pantheon via Git or SFTP
+
+Note that `composer update` is based on the values specified in `composer.json.` So, for example, if `composer.json` specifies `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in Composer's [version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-){.external}.
 
 #### Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
 
-P.S. the [Pantheon Power Users Community](https://pantheon.io/docs/power-users/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
+P.S. the [Pantheon Power Users Community](/docs/power-users/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours){.external} are great places to ask questions and chat about Composer.
