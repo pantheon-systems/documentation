@@ -96,7 +96,7 @@ If you are distributing large binaries or hosting big media files, we recommend 
 
  - Drupal sites can use a module such as [Amazon S3 CORS Upload](https://drupal.org/project/amazons3_cors){.external}
  - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload S3](https://deliciousbrains.com/wp-offload-s3/){.external}
- 
+
 See our documentation for [Drupal](/docs/drupal-s3) and [WordPress](/docs/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
 
 ## Large Code Repository
@@ -150,6 +150,10 @@ Pantheon does not currently support LESS or Sass/Compass CSS preprocessor langua
 Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
 For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).
+
+### Drupal False Positive
+
+Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399){.external}.
 
 ## nginx.conf
 
