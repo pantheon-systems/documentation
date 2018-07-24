@@ -549,14 +549,14 @@ Use `✓` to indicate yes and leave the table data blank to indicate no.
 Tooltips are a great way to add additional information without cluttering up a section. For example, you can define jargon and even link out to an external resource without being distracting to the reader:
 
 <div class="style-example" markdown="1">
-Given two new sites with slugs <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Slugs" data-content="Generally, <a class='external' href='https://codex.wordpress.org/Glossary#Slug'>slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site."><em class="fa fa-info-circle"></em></a> `first-site` and `second-site`, each configuration will result in the following URLs:
+Given two new sites with slugs {% include 'popovers/popover.twig' with {'poptitle': 'Slugs', 'popcontent': 'Generally, <a class="external" href="https://codex.wordpress.org/Glossary#Slug">slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site.'} %} `first-site` and `second-site`, each configuration will result in the following URLs:
 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
 * Subdomains: `first-site.example.com` and `second-site.example.com`.
 <hr class="source-code">
 
 ```markdown
-Given two new sites with slugs <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Slugs" data-content="Generally, <a class='external' href='https://codex.wordpress.org/Glossary#Slug'>slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site."><em class="fa fa-info-circle"></em></a> `first-site` and `second-site`, each configuration will result in the following URLs:
+Given two new sites with slugs {% verbatim %}{% include 'popovers/popover.twig' with {'poptitle': 'Slugs', 'popcontent': 'Generally, <a class="external" href="https://codex.wordpress.org/Glossary#Slug">slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site.'} %}{% endverbatim %} `first-site` and `second-site`, each configuration will result in the following URLs:
 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
 * Subdomains: `first-site.example.com` and `second-site.example.com`.
