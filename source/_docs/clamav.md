@@ -21,50 +21,36 @@ export env=dev
 </p>
 </div>
 
-Because the ClamAV binary is already installed on Pantheon servers, all you need to do is install one of the available modules or plugins.
+Because the ClamAV binary is already installed on Pantheon servers, all you need to do is install one of the available modules.
 
-<!-- Nav tabs -->
-  <ul class="nav nav-tabs" role="tablist">
-    <!-- Active tab -->
-    <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
-    <!-- 2nd Tab Nav -->
-    <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal</a></li>
-  </ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-Use the [Upload Scanner for WordPress](https://wordpress.org/plugins/upload-scanner){.external} plugin, which you can install through the [WordPress dashboard](/docs/cms-admin/#wordpress-dashboard) in [SFTP mode](/docs/cms-admin/#sftp-mode), on your local dev environment, or through [Terminus](/docs/terminus/):
-
-```bash
-terminus wp $site.$env -- install upload-scanner --activate
-```
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">As of this doc's last update, there are no actively maintained ClamAV plugins for WordPress.</p>
 </div>
 
+### Drupal
 
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
-[ClamAV Module for Drupal 7 & 8](https://www.drupal.org/project/clamav){.external}
+This doc uses the [ClamAV Module for Drupal 7 & 8](https://www.drupal.org/project/clamav){.external}.
 
-1. Download the module via [Terminus](/docs/terminus/):
+1. Download and enable the module in the Drupal admin panel, or via [Terminus](/docs/terminus/):
 
    ```bash
    terminus drush $site.$env -- dl clamav
+   terminus drush $site.$env -- en clamav -y
    ```
 
-2. Enable the module and set the scan method to daemon mode:
+2. From the module's configuration page, ensure that the scan method is set to to daemon mode, with the hostname `localhost` and the port number `3310`:
 
-    ```bash
-    terminus drush $site.$env -- en clamav -y
-    terminus drush $site.$env -- vset clamav_mode 0
-    ```
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p markdown="1">You can safely ignore the notice message about `default_executable_version_string`.</p>
+    </div>
 
-3. From the module's configuration page, set the hostname to `localhost` and the port number to `3310`.
-</div>
-</div>
+    ![ClamAV Module Settings](/source/docs/assets/images/clamav-settings.png)
 
+When ClamAV detects a virus, it will display a warning:
 
+![ClamAV Virus Detected](/source/docs/assets/images/clamav-detection.png)
 
 ## Known Issues
 
