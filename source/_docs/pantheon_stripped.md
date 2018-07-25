@@ -90,7 +90,7 @@ To resolve these links before they hit the application, place the following with
 ```
 // Remove query strings and tracking parameters from URLs
 $strip = array('/[&?]__.+?(&|$)$/', '/[&?]utm_.+?(&|$)$/');
-+ $_SERVER['REQUEST_URI'] = preg_replace($strip, '', $_SERVER['REQUEST_URI']);
+$_SERVER['REQUEST_URI'] = preg_replace($strip, '', $_SERVER['REQUEST_URI']);
 ```
 
 Adjust the regex as required to match your link's parameters.
