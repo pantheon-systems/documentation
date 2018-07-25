@@ -44,7 +44,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
 <div class="tab-content">
   <!-- Active pane content -->
   <div role="tabpanel" class="tab-pane active" id="wp-anchor" markdown="1">
-  Correct an unsupported temporary path set by a plugin or theme in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
+  Since the writable path accross all environment in Pantheon for WordPress sites is `/wp-content/uploads` folder, we can correct an unsupported temporary path set by a plugin or theme in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
   ```php
   /**
@@ -53,7 +53,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
   * Replace SOME_TMP_SETTING
   */
   if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    define('SOME_TMP_SETTING', $_SERVER['HOME'] . '/tmp');
+    define('SOME_TMP_SETTING', $_SERVER['HOME'] . '/wp-content/uploads/tmp');
   }
   ```
   Verify the setting by using [Terminus](/docs/terminus/) to run `wp config get`:
