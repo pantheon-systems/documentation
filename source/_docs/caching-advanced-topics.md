@@ -163,6 +163,9 @@ Drupal’s 404\_fast\_\* configuration does not set caching headers. Some contri
 ### WordPress Sites
 WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
+Installing the Cache Control plugin solves this:
+https://wordpress.org/plugins/cache-control/
+
 
 ## Basic Authentication & Varnish
 
