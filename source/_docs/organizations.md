@@ -30,12 +30,15 @@ Access the [Organization Dashboard](/docs/organization-dashboard) in the followi
 - From any Dashboard location, hit the "s" keyboard shortcut to toggle a list of sites and organizations, and click  the Organization name.
 
 All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, and Settings.
- ![The Organization dashboard, site tab](/source/docs/assets/images/dashboard/organization-dashboard-tour.png)
 
 ### Sites
 
-The Sites list shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**. For more details, see
-[Managing Sites and Teams with the Pantheon Organization Dashboard](/docs/organization-dashboard/#add-sites-to-your-organization).
+ ![The Organization dashboard, site tab](/source/docs/assets/images/dashboard/organization-dashboard-sites.png)
+
+The Sites tab shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
+
+For more details on the Sites tab, see
+[Managing Sites and Teams with the Pantheon Organization Dashboard](/docs/organization-dashboard/).
 
 ### People
 
