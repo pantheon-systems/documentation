@@ -1,5 +1,5 @@
 ---
-title: Enabling ClamAV for WordPress or Drupal
+title: Enabling ClamAV for Drupal
 description: Learn how to protect your site against malicious files with malware and other potential threats using ClamAV, an open source antivirus engine.
 tags: [clamav, security, files]
 categories: [security]
