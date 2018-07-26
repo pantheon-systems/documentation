@@ -89,15 +89,15 @@ This test site will be used later for evaluating the Custom Upstream changes we 
      <div class="tab-content">
      <div role="tabpanel" class="tab-pane active" id="wp">
      <pre><code class="command hljs">git fetch pantheon-wordpress
-    git rebase pantheon-wordpress/master</code></pre>
+    git merge pantheon-wordpress/master</code></pre>
      </div>
      <div role="tabpanel" class="tab-pane" id="d8">
      <pre><code class="command hljs">git fetch pantheon-drops-8
-    git rebase pantheon-drops-8/master</code></pre>
+    git merge pantheon-drops-8/master</code></pre>
      </div>
      <div role="tabpanel" class="tab-pane" id="d7">
      <pre><code class="command hljs">git fetch pantheon-drops-7
-    git rebase pantheon-drops-7/master</code></pre>
+    git merge pantheon-drops-7/master</code></pre>
      </div>
      </div><br>
 
@@ -180,15 +180,15 @@ If you receive the error that you have conflicts while updating core, the fastes
     <div class="tab-content">
       <div role="tabpanel" class="tab-pane active" id="wp-xtheirs">
       <pre><code class="command hljs" data-lang="">git fetch pantheon-wordpress
-    git rebase pantheon-wordpress/master -Xtheirs</code></pre>
+    git merge pantheon-wordpress/master -Xtheirs</code></pre>
       </div>
       <div role="tabpanel" class="tab-pane" id="d8-xtheirs">
       <pre><code class="command hljs" data-lang="">git fetch pantheon-drops-8
-    git rebase pantheon-drops-8/master -Xtheirs</code></pre>
+    git merge pantheon-drops-8/master -Xtheirs</code></pre>
       </div>
       <div role="tabpanel" class="tab-pane" id="d7-xtheirs">
       <pre><code class="command hljs" data-lang="">git fetch pantheon-drops-7
-    git rebase pantheon-drops-7/master -Xtheirs</code></pre>
+    git merge pantheon-drops-7/master -Xtheirs</code></pre>
       </div>
     </div><br>
 
@@ -234,22 +234,22 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
      <div class="tab-content">
      <div role="tabpanel" class="tab-pane active" id="wp-2conflict">
      <pre><code class="command hljs">git fetch pantheon-wordpress
-    git rebase pantheon-wordpress/master</code></pre>
+    git merge pantheon-wordpress/master</code></pre>
      </div>
      <div role="tabpanel" class="tab-pane" id="d8-2conflict">
      <pre><code class="command hljs">git fetch pantheon-drops-8
-    git rebase pantheon-drops-8/master</code></pre>
+    git merge pantheon-drops-8/master</code></pre>
      </div>
      <div role="tabpanel" class="tab-pane" id="d7-2conflict">
      <pre><code class="command hljs">git fetch pantheon-drops-7
-    git rebase pantheon-drops-7/master</code></pre>
+    git merge pantheon-drops-7/master</code></pre>
      </div>
      </div><br>
 
 3. If a conflict is introduced, the output provides all the details we need in order to resolve. For example:
 
   ```bash
-  $ git rebase pantheon-wordpress/master
+  $ git merge pantheon-wordpress/master
   First, rewinding head to replay your work on top of it...
   Applying: Adjust rendering of version release notes
   Using index info to reconstruct a base tree...
@@ -259,11 +259,11 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
   CONFLICT (content): Merge conflict in wp-admin/about.php
   error: Failed to merge in the changes.
   Patch failed at 0001 Adjust rendering of version release notes
-  The copy of the patch that failed is found in: .git/rebase-apply/patch
+  The copy of the patch that failed is found in: .git/merge-apply/patch
 
-  When you have resolved this problem, run "git rebase --continue".
-  If you prefer to skip this patch, run "git rebase --skip" instead.
-  To check out the original branch and stop rebasing, run "git rebase --abort".
+  When you have resolved this problem, run "git merge --continue".
+  If you prefer to skip this patch, run "git merge --skip" instead.
+  To check out the original branch and stop rebasing, run "git merge --abort".
   ```
 
   In this example, you would open `wp-admin/about.php` in your preferred text editor.
@@ -276,5 +276,5 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
   ```command
   git add .
-  git rebase --continue
+  git merge --continue
   ```
