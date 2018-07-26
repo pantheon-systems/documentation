@@ -44,33 +44,39 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
     <!-- Tab panes -->
     <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp1">
-    <pre id="git-pull-wp"><code class="command hljs" data-lang="">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
+    <div role="tabpanel" class="tab-pane active" id="wp1" markdown="1">
+    ```git
+    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+    ```
     </div>
-    <div role="tabpanel" class="tab-pane" id="d81">
-    <pre id="git-pull-drops-8"><code class="command hljs" data-lang="">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
+    <div role="tabpanel" class="tab-pane" id="d81" markdown="1">
+    ```git
+    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+    ```
     </div>
-    <div role="tabpanel" class="tab-pane" id="d71">
-    <pre id="git-pull-drops-7"><code class="command hljs" data-lang="">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
+    <div role="tabpanel" class="tab-pane" id="d71" markdown="1">
+    ```git
+    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+    ```
     </div>
     </div><br>
 
 2. We will also add the test site you created above as a remote to your Custom Upstream. To do that, we first need to grab the test site's repository URL on Pantheon using [Terminus](/docs/terminus/). Replace `<site>` with your site name:
 
-    ```command
+    ```bash
     terminus connection:info <site>.dev --field=git_url
     ```
 
 3. Replace `<git_url>` in the following command to add your new test site as a [remote](https://git-scm.com/docs/git-remote){.external}:
 
-    ```command
+    ```git
     git remote add pantheon-test <git_url>
     ```
 
 
 4. Checkout a new branch:
 
-    ```command
+    ```git
     git checkout -b core-update
     ```
 
@@ -87,23 +93,29 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
      <!-- Tab panes -->
      <div class="tab-content">
-     <div role="tabpanel" class="tab-pane active" id="wp">
-     <pre><code class="command hljs">git fetch pantheon-wordpress
-    git merge pantheon-wordpress/master</code></pre>
+     <div role="tabpanel" class="tab-pane active" id="wp" markdown="1">
+     ```git
+     git fetch pantheon-wordpress
+     git merge pantheon-wordpress/master
+     ```
      </div>
-     <div role="tabpanel" class="tab-pane" id="d8">
-     <pre><code class="command hljs">git fetch pantheon-drops-8
-    git merge pantheon-drops-8/master</code></pre>
+     <div role="tabpanel" class="tab-pane" id="d8" markdown="1">
+     ```git
+     git fetch pantheon-drops-8
+     git merge pantheon-drops-8/master
+     ```
      </div>
-     <div role="tabpanel" class="tab-pane" id="d7">
-     <pre><code class="command hljs">git fetch pantheon-drops-7
-    git merge pantheon-drops-7/master</code></pre>
+     <div role="tabpanel" class="tab-pane" id="d7" markdown="1">
+     ```git
+     git fetch pantheon-drops-7
+     git merge pantheon-drops-7/master
+     ```
      </div>
      </div><br>
 
 6. Push to your new test site on Pantheon:
 
-  ```command
+  ```git
   git push pantheon-test core-update
   ```
 
@@ -113,7 +125,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 9. Use this new Multidev environment to evaluate your `core-update` branch. When you're ready to release, merge the branch into master and push to your remote repository on GitHub or Bitbucket:
 
-    ```command
+    ```git
     git checkout master
     git merge --no-ff core-update
     git push origin master
@@ -131,7 +143,7 @@ Updates will become available to sites downstream as one-click updates within an
 
 ## Tips and Tricks
 ### Use the Pantheon Workflow
-To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow/) to push up to your Test and Live environments. Checkout <a href="/docs/guides/drupal8-commandline#managing-content-configuration-and-code-across-environments" data-proofer-ignore>our guide</a> for an example of generating content from the command line.
+To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow/) to push up to your Test and Live environments. Checkout <a href="/docs/guides/drupal8-commandline/#managing-content-configuration-and-code-across-environments" data-proofer-ignore>our guide</a> for an example of generating content from the command line.
 
 ### Sample a Few Sites
 For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/docs/multidev/) environment. Once things look good, release the update to all.
@@ -156,14 +168,20 @@ If you receive the error that you have conflicts while updating core, the fastes
 
     <!-- Tab panes -->
     <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp-1xtheirs">
-    <pre id="git-pull-wp"><code class="command hljs" data-lang="">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
+    <div role="tabpanel" class="tab-pane active" id="wp-1xtheirs" markdown="1">
+    ```git
+    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+    ```
     </div>
-    <div role="tabpanel" class="tab-pane" id="d8-1xtheirs">
-    <pre id="git-pull-drops-8"><code class="command hljs" data-lang="">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
+    <div role="tabpanel" class="tab-pane" id="d8-1xtheirs" markdown="1">
+    ```git
+    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+    ```
     </div>
-    <div role="tabpanel" class="tab-pane" id="d7-1xtheirs">
-    <pre id="git-pull-drops-7"><code class="command hljs" data-lang="">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
+    <div role="tabpanel" class="tab-pane" id="d7-1xtheirs" markdown="1">
+    ```git
+    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+    ```
     </div>
     </div><br>
 
@@ -178,17 +196,23 @@ If you receive the error that you have conflicts while updating core, the fastes
 
     <!-- Tab panes -->
     <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="wp-xtheirs">
-      <pre><code class="command hljs" data-lang="">git fetch pantheon-wordpress
-    git merge pantheon-wordpress/master -Xtheirs</code></pre>
+      <div role="tabpanel" class="tab-pane active" id="wp-xtheirs" markdown="1">
+      ```git
+      git fetch pantheon-wordpress
+      git merge pantheon-wordpress/master -Xtheirs
+      ```
       </div>
-      <div role="tabpanel" class="tab-pane" id="d8-xtheirs">
-      <pre><code class="command hljs" data-lang="">git fetch pantheon-drops-8
-    git merge pantheon-drops-8/master -Xtheirs</code></pre>
+      <div role="tabpanel" class="tab-pane" id="d8-xtheirs" markdown="1">
+      ```git
+      git fetch pantheon-drops-8
+      git merge pantheon-drops-8/master -Xtheirs
+      ```
       </div>
-      <div role="tabpanel" class="tab-pane" id="d7-xtheirs">
-      <pre><code class="command hljs" data-lang="">git fetch pantheon-drops-7
-    git merge pantheon-drops-7/master -Xtheirs</code></pre>
+      <div role="tabpanel" class="tab-pane" id="d7-xtheirs" markdown="1">
+      ```git
+      git fetch pantheon-drops-7
+      git merge pantheon-drops-7/master -Xtheirs
+      ```
       </div>
     </div><br>
 
@@ -210,14 +234,20 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
     <!-- Tab panes -->
     <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp-1conflict">
-    <pre id="git-pull-wp"><code class="command hljs" data-lang="">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
+    <div role="tabpanel" class="tab-pane active" id="wp-1conflict" markdown="1">
+    ```git
+    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+    ```
     </div>
-    <div role="tabpanel" class="tab-pane" id="d8-1conflict">
-    <pre id="git-pull-drops-8"><code class="command hljs" data-lang="">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
+    <div role="tabpanel" class="tab-pane" id="d8-1conflict" markdown="1">
+    ```git
+    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+    ```
     </div>
-    <div role="tabpanel" class="tab-pane" id="d7-1conflict">
-    <pre id="git-pull-drops-7"><code class="command hljs" data-lang="">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
+    <div role="tabpanel" class="tab-pane" id="d7-1conflict" markdown="1">
+    ```git
+    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+    ```
     </div>
     </div><br>
 
@@ -232,17 +262,23 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
      <!-- Tab panes -->
      <div class="tab-content">
-     <div role="tabpanel" class="tab-pane active" id="wp-2conflict">
-     <pre><code class="command hljs">git fetch pantheon-wordpress
-    git merge pantheon-wordpress/master</code></pre>
+     <div role="tabpanel" class="tab-pane active" id="wp-2conflict" markdown="1">
+     ```git
+     git fetch pantheon-wordpress
+     git merge pantheon-wordpress/master
+     ```
      </div>
-     <div role="tabpanel" class="tab-pane" id="d8-2conflict">
-     <pre><code class="command hljs">git fetch pantheon-drops-8
-    git merge pantheon-drops-8/master</code></pre>
+     <div role="tabpanel" class="tab-pane" id="d8-2conflict" markdown="1">
+     ```git
+     git fetch pantheon-drops-8
+     git merge pantheon-drops-8/master
+     ```
      </div>
-     <div role="tabpanel" class="tab-pane" id="d7-2conflict">
-     <pre><code class="command hljs">git fetch pantheon-drops-7
-    git merge pantheon-drops-7/master</code></pre>
+     <div role="tabpanel" class="tab-pane" id="d7-2conflict" markdown="1">
+     ```git
+     git fetch pantheon-drops-7
+     git merge pantheon-drops-7/master
+     ```
      </div>
      </div><br>
 
@@ -274,7 +310,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
 4. Run `git status` to see conflicting files in the current index again. Once all conflicts have been addressed, you can add them to your index and continue pulling in updates:
 
-  ```command
+  ```git
   git add .
   git merge --continue
   ```
