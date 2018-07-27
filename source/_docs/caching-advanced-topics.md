@@ -161,11 +161,9 @@ Pantheon’s default is to not cache 404s, but if your application sets Cache-Co
 Drupal’s 404\_fast\_\* configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
 
 ### WordPress Sites
-WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
+WordPress does not set cache headers by default, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
-Installing the Cache Control plugin solves this:
-https://wordpress.org/plugins/cache-control/
-
+Plugins like [Cache Control](https://wordpress.org/plugins/cache-control/){.external} can solve this issue.
 
 ## Basic Authentication & Varnish
 
