@@ -224,8 +224,8 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 
 New sites created from this Custom Upstream will use this connection mode by default going forward.
 
-### Switch the Repository URL
-You cannot modify the repository URL on existing Custom Upstreams. If there is a new URL you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
+### Repository URL and password
+You cannot modify the repository details on existing Custom Upstreams. If there is a new URL or password you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
 
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus1copy">Copy</button>
