@@ -45,3 +45,6 @@ Run the following [Terminus](/docs/terminus/) command:
 <p>Replace <code>&lt;site&gt;</code> with your site name. You can see a list of all your sites by running <code>terminus site:list</code>.</p></div>
 
   ![Delete Site via Terminus](/source/docs/assets/images/delete-site-terminus.png)
+
+## Delete a Multidev Environment
+Refer to the [Delete a Branch Environment](/docs/multidev#delete-a-branch-environment) section of our Multidev guide for more information.
