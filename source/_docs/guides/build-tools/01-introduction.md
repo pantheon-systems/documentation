@@ -137,14 +137,14 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
     
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p markdow="1">The Terminus Build Tools Plugin does not support private repositories.</p>
+    <p markdown="1">The Terminus Build Tools Plugin does not support private repositories.</p>
     </div>
 
 9. [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p markdow="1">If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.</p>
+    <p markdown="1">If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.</p>
     </div>
 
 ### Access Tokens (Optional)
