@@ -148,7 +148,7 @@ The Site Owner will receive an email confirmation of this change, a new invoice 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
 ## Cancel Current Plan
-Review the [previous section](#sandbox-plan) on feature availability before downgrading to Sandbox.
+Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox.
 
 1. Go to the Site Dashboard.
 2. Select the current plan:
