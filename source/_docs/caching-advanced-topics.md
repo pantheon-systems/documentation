@@ -149,16 +149,11 @@ The Age returned in the header may vary depending on which cache server is hit. 
 
 Pantheon strips cookies from requests made to public files served from `sites/default/files` in Drupal and `wp-content/uploads` in WordPress. This allows Varnish to cache the response.
 
-## HTTPS & Varnish
-
-When a Pantheon environment is configured with HTTPS, a dedicated IP address to a load balancer is provided. Connections via HTTPS to the load balancer are decrypted by an HTTPS or TLS termination server using the client’s uploaded certificate, then handled like any other request, including the same rules for Varnish caching. The result is encrypted by the SSL termination server and served back to the client, completing the request.
-
 ## 404s & Varnish
-
-Pantheon’s default is to not cache 404s, but if your application sets Cache-Control:max-age headers, Varnish will respect them. Depending on your use case, that may be the desired result.
+Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age headers`, Varnish will respect them. Depending on your use case, that may be the desired result.
 
 ### Drupal Sites
-Drupal’s 404\_fast\_\* configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
+Drupal’s `404_fast_*` configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
 
 ### WordPress Sites
 WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
