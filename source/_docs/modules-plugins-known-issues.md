@@ -339,6 +339,11 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass the platform page cache.
 <hr>
 
+### [Force Login](https://wordpress.org/plugins/wp-force-login/){.external}
+**Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
+
+**Solution**: See [Set SERVER_PORT Corectly](https://pantheon.io/docs/server_name-and-server_port/#set-server_port-correctly)
+
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/){.external}
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/){.external} for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 <hr>
