@@ -134,6 +134,11 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
       <button class="btn btn-default btn-clippy" data-clipboard-target="#build-tools-plugin">Copy</button>
       <figure><pre id="build-tools-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:~1</code></pre></figure>
     </div>
+    
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdow="1">The Terminus Build Tools Plugin does not support private repositories.</p>
+    </div>
 
 9. [Authorize CircleCI on Github](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.
 
