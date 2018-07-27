@@ -32,7 +32,7 @@ The majority of Pantheon's support is provided in the context of a particular we
 <div role="tabpanel" class="tab-pane" id="orgs" markdown="1">
 |                         | **Pantheon for Agencies**                                                 | **Enterprise**                                                            | **EDU+**                                                         | **Priority Enterprise Support**           |
 |-------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------|-------------------------------------------|
-| **Scope**               | Full Stack {% include 'popovers/fullstack.twig' %}                        | Full Stack {% include 'popovers/fullstack.twig' %}                        | Full Stack {% include 'popovers/fullstack.twig' %}                        | Full Stack {% include 'popovers/fullstack.twig' %} |
+| **Scope**               | Dedicated {% include 'popovers/fullstack.twig' %}                        | Dedicated {% include 'popovers/fullstack.twig' %}                        | Dedicated {% include 'popovers/fullstack.twig' %}                        | Dedicated {% include 'popovers/fullstack.twig' %} |
 | **Chat**                | <span style=color:green>✔</span>                                          | <span  style=color:green>✔</span>                                         | <span style=color:green>✔</span>                                 | <span style=color:green>✔</span>          |
 | **Tickets**             | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '2 hour, 24/7/365.'} %}     |
 | **Phone**               | <span style=color:red>❌</span>                                           | <span style=color:red>❌</span>                                           | <span style=color:red>❌</span>                                  | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Scheduled', 'popcontent': 'Scheduled in advance via a support ticket (9-5 PST).'} %} |
@@ -134,11 +134,11 @@ We provide technical support for all user interfaces of the Pantheon product, as
 
 We are also happy to help developers learn the ins and outs of making their sites work great on Pantheon, and have a large number of tutorials for common development scenarios. We also do our best to answer most questions about development practices or techniques.
 
-### Full Stack Support
+### Dedicated Support
 
-Customers with Full Stack support get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
+Customers with Dedicated Support get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
 
-Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring. Full Stack Support can help troubleshoot networking issues and other problems that can be difficult to resolve from the outside.
+Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring. Dedicated Support can help troubleshoot networking issues and other problems that can be difficult to resolve from the outside.
 
 This level of support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match){.external} from Pantheon’s network of trusted partners.
 
