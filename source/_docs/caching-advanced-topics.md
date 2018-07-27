@@ -6,14 +6,14 @@ categories: []
 ---
 ## Allow a User to Bypass the Cache
 
-Pantheon supports setting a NO\_CACHE cookie for users who should bypass the cache. When this cookie is present, Varnish will neither get the user's response from any existing cache nor store the response from the user into the cache.
+Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/docs/global-cdn/) will neither get the user's response from any existing cache nor store the response from the user into the cache.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
 </div>
 
-This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this, we recommend setting the NO\_CACHE cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
+This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this, we recommend setting the `NO_CACHE` cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
@@ -22,7 +22,7 @@ This allows users to immediately see comments or changes they've made, even if t
 
 ## Ignoring GET Parameters
 
-For the purpose of optimizing cache hits for identical content, Varnish ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application container. The double-underscore prefix for parameter keys and cookie names is a standard convention used by frontend code to indicate a value that can be safely ignored on the back-end.
+For the purpose of optimizing cache hits for identical content, the Global CDN ignores any GET parameter prefixed with `__` (two underscores) or `utm_` in determining the cache key. This optimization is compatible with services such as Google Analytics and AdWords that use these query parameters solely for tracking and do not alter the page content returned by the application container. The double-underscore prefix for parameter keys and cookie names is a standard convention used by frontend code to indicate a value that can be safely ignored on the back-end.
 
 For example, `?__dynamic_id=1234` is ignored, while `?dynamic_id=1234` and `?_dynamic_id` are considered distinct pages.
 
@@ -43,7 +43,7 @@ Pantheon sets a cache lifetime of 1 year for static assets per industry standard
 
 ## Using Your Own Session-Style Cookies
 
-Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, Varnish will not try to respond to the request from its cache or store the response.
+Pantheon passes all cookies beginning with SESS that are followed by numbers and lowercase characters back to the application. When at least one of these cookies is present, the Global CDN will not try to respond to the request from its cache or store the response.
 
 ### Drupal Sites
 Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to name yours differently if you choose to use one. Generally, SESS followed by a few words will work.
@@ -75,11 +75,11 @@ Session cookie lifetime and session garbage collection can be configured as `ses
 A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon recommends doing this on the client side using browser detection, orientation, or features like aspect ratio using HTML5, CSS3, and JavaScript. Advanced developers can also use STYXKEY.
 
 ### Using Modernizr
-[Modernizr](https://modernizr.com/){.external} is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in Varnish and rendering correctly, depending on the requirements. Modernizr is available as a [Drupal module](https://www.drupal.org/project/modernizr){.external} or a [WordPress plugin](https://wordpress.stackexchange.com/questions/62340/loading-modernizr-or-other-javascript-libraries-for-use-in-a-plugin/62362#62362){.external}.
+[Modernizr](https://modernizr.com/){.external} is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in the Global CDN and rendering correctly, depending on the requirements. Modernizr is available as a [Drupal module](https://www.drupal.org/project/modernizr){.external} or a [WordPress plugin](https://wordpress.stackexchange.com/questions/62340/loading-modernizr-or-other-javascript-libraries-for-use-in-a-plugin/62362#62362){.external}.
 
 ### Device Detection
 
-We do not recommend using cookies that are passed to the backend for mobile theme detection and configuration. This will cause issues scaling requests within your site in case of any load or traffic spikes, as it requires at least the initial hit to make it to the backend before anonymous traffic can be cached by Varnish. If you receive more uncached visitors than your Nginx and PHP processes, it can result in timeouts and server errors.
+We do not recommend using cookies that are passed to the backend for mobile theme detection and configuration. This will cause issues scaling requests within your site in case of any load or traffic spikes, as it requires at least the initial hit to make it to the backend before anonymous traffic can be cached by the Global CDN. If you receive more uncached visitors than your Nginx and PHP processes, it can result in timeouts and server errors.
 
 #### Best Practice Recommendations
 
@@ -106,11 +106,11 @@ A full list of the devices and their support for HTML5 is available on [https://
 
 ### Using STYXKEY
 
-Varnish only passes through a whitelisted set of cookies. To use custom cookies with Drupal or WordPress, you can set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
+The Global CDN only passes through a whitelisted set of cookies. To use custom cookies with Drupal or WordPress, you can set a cookie beginning with `STYXKEY` followed by one or more alphanumeric characters, hyphens, or underscores.
 
 For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and cache different page content for each country. A site can have any number of `STYXKEY` cookies for varying content.
 
-In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, Varnish will not cache that page at all, as Varnish cannot cache a response that contains a `Set-Cookie:` header.
+In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, the Global CDN will not cache that page at all, as it cannot cache a response that contains a `Set-Cookie:` header.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
@@ -139,18 +139,12 @@ In your code, remember to first check whether the incoming request has the `STYX
 &#8211; `tablet-STYXKEY`: The cookie name must start with `STYXKEY`
 
 
-## Varnish Servers
 
-Pantheon uses a rotating pool of Varnish servers. Varnish does not have a shared pool or cache, so that means there is a distinct cache for each server. While local DNS typically picks a route and keeps using it, it is possible to access a different Varnish server and experience a cache miss.
+## Public Files and Cookies
+Pantheon strips cookies from requests made to public files served from `sites/default/files` in Drupal and `wp-content/uploads` in WordPress. This allows the Global CDN to cache the response.
 
-The Age returned in the header may vary depending on which cache server is hit. The main concern when examining Age is whether or not it is increasing, as this indicates that Varnish is indeed working.
-
-## Varnish, Public Files, and Cookies
-
-Pantheon strips cookies from requests made to public files served from `sites/default/files` in Drupal and `wp-content/uploads` in WordPress. This allows Varnish to cache the response.
-
-## 404s & Varnish
-Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age headers`, Varnish will respect them. Depending on your use case, that may be the desired result.
+## 404s
+Pantheon’s default is to not cache 404s, but if your application sets `Cache-Control:max-age headers`, the Global CDN will respect them. Depending on your use case, that may be the desired result.
 
 ### Drupal Sites
 Drupal’s `404_fast_*` configuration does not set caching headers. Some contributed 404 modules include cache-friendly headers, which will cause a 404 response to be cached.
@@ -159,13 +153,14 @@ Drupal’s `404_fast_*` configuration does not set caching headers. Some contrib
 WordPress does not by default set cache headers, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
 
-## Basic Authentication & Varnish
+## Basic Authentication
 
-If you're using the Environment Access: Locked security setting on a site environment, Varnish will not cache your content.
+If you're using the Environment Access: Locked security setting on a site environment, The Global CDN will not cache your content.
 
-## Pantheon's Varnish Cookie Handling
+## Cookie Handling
 
-The following is the "Cache-Busting Cookie Patterns" section from Pantheon's Varnish configuration (.vcl) file for your reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what cookie patterns Varnish will not cache.
+The following is the "Cache-Busting Cookie Patterns" section from Pantheon's Varnish configuration (.vcl) file for your reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what cookie patterns the Global CDN will not cache.
+
 ```nohighlight
 NO_CACHE
 S+ESS[a-z0-9]+
