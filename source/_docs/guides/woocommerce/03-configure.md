@@ -20,9 +20,9 @@ image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 We've configured a few things for our WooCommerce site. But there are a few additional things to configure.
 
-The first is [adding PHP sessions to WordPress](/docs/wordpress-sessions/). WordPress doesn't include any state tracking which makes it challenging for any plugin to remember which user did what - and for ecommerce that means who added what to their cart.
+The first is [adding PHP sessions to WordPress](/docs/wordpress-sessions/). WordPress and WooCommerce core do not use PHP Sessions but other plugins and extensions may.
 
-To solve this, _you must_ install [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/){.external}. It's a free plugin you can download from WordPress.org or install through your WordPress dashboard.
+To enable PHP Sessions on Pantheon, _you must_ install [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/){.external}. It's a free plugin you can download from WordPress.org or install through your WordPress dashboard.
 
 ![Install WordPress native PHP sessions plugin](/source/docs/assets/images/guides/woocommerce/10-install-WordPress-native-PHP-sessions-plugin.png)
 
