@@ -25,12 +25,24 @@ For more information on the announcement of new plans, see [this related blog po
 | Performance (Large)  | $450            | $600        |
 | Performance (XL)     | $750            | $1,000      |
 
+### Annual Billing
+Coming soon, Pantheon will offer annual billing plans at lower rates, giving up to two month's worth of savings.
+
+| Plan                 | Annual Price | Annual Savings  |
+| -------------------- | ------------ | --------------- |
+| Basic                | $350             | $70         |
+| Performance (Small)  | $1325            | $175        |
+| Performance (Medium) | $2475            | $225        |
+| Performance (Large)  | $4950            | $450        |
+| Performance (XL)     | $8250            | $750        |
+
 ## Frequently Asked Questions
-### When will prices change for new site purchases?
-New sites purchased between April 10th and August 1st will have preferred pricing as long as they stay on that plan. After August 1st, preferred pricing is reserved exclusively for new sites purchased through a qualified agency partner and otherwise purchased at list price.
+
+### How do I get preferred pricing?
+For sites purchased before August 1st, preferred pricing will be locked in as long as the site remains on that plan. Otherwise, preferred pricing is available for sites purchased through a qualified agency partner.
 
 ### When will prices change for existing sites?
-During the month of August, sites on legacy plans will automatically be switched to a new equivalent plan. This will occur on their normal monthly invoice date.
+During the month of August, sites on legacy plans will automatically be switched to a new equivalent plan. This will occur on their normal monthly invoice date. All sites switched over will retain preferred pricing for the new plan, as long as they remain on that plan.
 
 ### What new plan will my existing site migrate to in August?
 All existing sites will have preferred pricing locked in for the plan they migrate to, and will retain the preferred price as long as they stay on that plan.
@@ -40,16 +52,21 @@ All existing sites will have preferred pricing locked in for the plan they migra
 | Personal    | Basic               | $35              |
 | Pro         | Performance (Small) | $125             |
 | Business    | Performance (Large) | $450             |
+| Business XL | Performance (XL)    | $750             |
 
 
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Sites retaining [Legacy SSL](/docs/https/#technical-specifications) services will be migrated to Performance Large plans or above.</p>
+</div>
 
 ### Are legacy plans still available?
 No new sites can be created on legacy plans outside of existing contracted agreements. The legacy plans are no longer available for purchase online.
 
 ### Will I be able to keep preferred pricing after August 1st?
-All existing sites as of August 1st (legacy & new) will lock in preferred pricing as long as they are on that plan, regardless of whether they are associated with a qualified agency partner.
+All existing sites as of September (legacy & new) will lock in preferred pricing as long as they are on that plan, regargless of whether they are associated with a qualified agency partner.
 
-After August 1st, new online site plan purchases will be at list price unless purchased through a qualified agency.
+In September all new online site plan purchases will be at list price unless purchased through a qualified agency.
 
 ### What action do I need to take on existing sites?
 No action is required. Existing sites will automatically switch to the equivalent plan with preferred pricing locked in August. There is no downtime or maintenance window associated with this change.
@@ -77,12 +94,12 @@ No action is required. Existing sites will automatically switch to the equivalen
   | PHP Workers            |        4          |      4       |
   | PHP Memory Limit       |      256MB        |    256MB     |
   | Storage                |       5GB	       |     20GB     |
-  | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>|        5          |      5       |
-  | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a> |     ✓              |       ✓       |
-  | New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a> |          ✓         |               |
-  | Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a>  |                   |              |
-  | Solr <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>."><em class="fa fa-info-circle"></em></a>  |                       |                         |
-  | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle"> |                   |              |
+  | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>   | 5 | 5 |
+  | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a>                   | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+  | New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a>                                         | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
+  | Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a>                           | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+  | Solr <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>."><em class="fa fa-info-circle"></em></a>                                             | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+  | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle"> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
   </div>
 
   <!-- 2nd pane content -->
@@ -93,12 +110,12 @@ No action is required. Existing sites will automatically switch to the equivalen
   | PHP Workers            |          8            |            8             |
   | PHP Memory Limit       |         256MB         |          256MB           |
   | Storage                |         20GB          |          30GB            |
-  | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>|            25         |           15              |
-  | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a> |          ✓             |            ✓             |
-  | New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a> |             ✓ |           ✓              |
-  | Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a>  |         ✓              |            ✓             |
-  | Solr <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>."><em class="fa fa-info-circle"></em></a>  |         ✓              |            ✓             |
-  | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle">|           ✓           |                          |
+  | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>| 25 | 10 |
+  | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a>                | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+  | New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a>                                      | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+  | Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a>                        | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+  | Solr <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>."><em class="fa fa-info-circle"></em></a>                                          | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+  | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle">| <span style="color:green">✔</span> | <span style="color:red">❌</span> |
   </div>
 
   <!-- 3rd pane content -->
@@ -109,13 +126,18 @@ No action is required. Existing sites will automatically switch to the equivalen
   | PHP Workers            |           16          |          24              |
   | PHP Memory Limit       |         512MB         |         512MB            |
   | Storage                |         30GB          |         100GB            |
-  | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>|           100         |            35            |
-  | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a> |          ✓             |            ✓           |
-  | New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a> |              ✓         |            ✓             |
-  | Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a>  |             ✓          |           ✓              |
-  | Solr <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>."><em class="fa fa-info-circle"></em></a>  |         ✓              |            ✓             |
-  | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle">|           ✓            |                          |
+  | Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a>| 100 | 35 |
+  | Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a>                | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+  | New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a>                                      | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+  | Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a>                        | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+  | Solr <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>."><em class="fa fa-info-circle"></em></a>                                          | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
+  | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle">| <span style="color:green">✔</span> | <span style="color:red">❌</span> |
   </div>
+</div>
+
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">If the number of custom domains on a site exceeds that allowed by the new site plan, the site will be migrated to the next largest site plan that matches the number of custom domains used.</p>
 </div>
 
 ### Am I going to lose New Relic?
