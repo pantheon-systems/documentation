@@ -142,6 +142,17 @@ $: export ENV=dev
 $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 $: rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
 ```
+### Empty a folder recursively using rsync
+Since rm -rf command is not available and via ftp command line, an alternative way to recursively empty a folder is using the rsync --delete flag. This example shows how to empty the remote folder `files/remote_folder_to_empty`.
+
+In your local machine, you must first create an empty folder by using `mkdir empty_folder`.
+```nohighlight
+$: export ENV=dev
+$: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
+$: rsync -rLvz --size-only --ipv4 --progress -a --delete -e 'ssh -p 2222' empty_folder/ --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/remote_folder_to_empty 
+```
+Note: Don't forget to change `files/remote_folder_to_empty` to the remote folder you wish to empty out.
+
 ## Known Issues
 
 If you're uploading many files, and your Live environment has [multiple application containers](/docs/application-containers/#multiple-application-containers), upload to an environment other than Live (e.g. Dev), then use the clone operation in the Dashboard or [Terminus](/docs/terminus) to move the files to Live. Uploading a large amount of files into a multi-container Live environment may fail silently.
