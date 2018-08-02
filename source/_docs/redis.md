@@ -201,7 +201,6 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 
       }
       ```
-  7. Enable the module via `admin/build/modules`. This is necessary for cache clearing to work in all cases.
   8. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
   9. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
   </div>
