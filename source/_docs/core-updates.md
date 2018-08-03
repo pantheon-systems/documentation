@@ -241,16 +241,20 @@ There are multiple reasons that 503 errors might occur when updating:
 
 - Timeouts are another cause of 503 errors, though they are much less likely to occur if you are using the Pantheon domains. If the operation takes more than 60 seconds, you might see a timeout occur.
 
-### WordPress Auto-resolve conflict is not working and manual merge is failing: 
+### WordPress Auto-resolve conflict is not working and manual merge is failing:
 
-After doing a manual merge from [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) and you are encountering merge conflict errors like this: `CONFLICT (modify/delete): wp-includes/js/tinymce/wp-tinymce.js.gz deleted in HEAD and modified in upstream/master. Version upstream/master of wp-includes/js/tinymce/wp-tinymce.js.gz left in tree.` is because of the `.gz` ignore rule in the `.gitignore` file. 
+After doing a manual merge from [manually apply updates from the command line](#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts), if you're encountering merge conflict errors like this:
+
+```nohighlight
+CONFLICT (modify/delete): wp-includes/js/tinymce/wp-tinymce.js.gz deleted in HEAD and modified in upstream/master. Version upstream/master of wp-includes/js/tinymce/wp-tinymce.js.gz left in tree.
+```
+
+This is because of the `.gz` ignore rule in the `.gitignore` file.
 
 Suggested steps to resolve the issue:
 
-1. Connect to your site via SFTP and edit `.gitignore`. Add `!wp-includes/**/*.gz` at the end of the file.
+1. Connect to your site via SFTP and edit `.gitignore` to add `!wp-includes/**/*.gz` at the end of the file.
 2. Commit the changes in the Pantheon dashboard.
-3. See if the wp-includes/js/tinymce/wp-tinymce.js.gz is present in your WP installation. If not, you can grab a copy here: https://github.com/pantheon-systems/WordPress/blob/default/wp-includes/js/tinymce/wp-tinymce.js.gz
+3. See if the wp-includes/js/tinymce/wp-tinymce.js.gz is present in your WP installation. If not, you can grab a copy [here](https://github.com/pantheon-systems/WordPress/blob/default/wp-includes/js/tinymce/wp-tinymce.js.gz){.external}.
 4. Commit the changes in the Pantheon dashboard.
 5. Auto-resolve conflicts should now work when applying your upstream updates.
-
-
