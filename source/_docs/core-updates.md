@@ -256,5 +256,5 @@ Suggested steps to resolve the issue:
 1. Connect to your site via SFTP and edit `.gitignore` to add `!wp-includes/**/*.gz` at the end of the file.
 2. Commit the changes in the Pantheon dashboard.
 3. See if the wp-includes/js/tinymce/wp-tinymce.js.gz is present in your WP installation. If not, you can grab a copy [here](https://github.com/pantheon-systems/WordPress/blob/default/wp-includes/js/tinymce/wp-tinymce.js.gz){.external}.
-4. Commit the changes in the Pantheon dashboard.
+4. Commit the changes in the Pantheon dashboard. (If no commits are not showing from the dashboard, you can skip this part.)
 5. Auto-resolve conflicts should now work when applying your upstream updates.
