@@ -142,16 +142,17 @@ $: export ENV=dev
 $: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 $: rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
 ```
-### Empty a folder recursively using rsync
-Since rm -rf command is not available and via ftp command line, an alternative way to recursively empty a folder is using the rsync --delete flag. This example shows how to empty the remote folder `files/remote_folder_to_empty`.
+### Empty a Folder Recursively Using Rsync
+Since the `rm -r` command is not available over SFTP on Pantheon, an alternative way to recursively empty a folder is to use the rsync `--delete` flag. This example shows how to empty the remote folder `files/remote_folder_to_empty` (change this to match the remote directory you want to empty).
 
-In your local machine, you must first create an empty folder by using `mkdir empty_folder`.
-```nohighlight
-$: export ENV=dev
-$: export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-$: rsync -rLvz --size-only --ipv4 --progress -a --delete -e 'ssh -p 2222' empty_folder/ --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/remote_folder_to_empty 
+In your local machine, you must first create an empty folder with `mkdir empty_folder`.
+
+```bash
+export ENV=dev
+export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
+rsync -rLvz --size-only --ipv4 --progress -a --delete -e 'ssh -p 2222' empty_folder/ --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/remote_folder_to_empty
 ```
-Note: Don't forget to change `files/remote_folder_to_empty` to the remote folder you wish to empty out.
+Now you can use `rmdir` over SFTP to remove the empty directory itself.
 
 ## Known Issues
 
