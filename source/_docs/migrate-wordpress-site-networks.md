@@ -5,9 +5,13 @@ tags: [migratemanual]
 categories: [wordpress]
 ---
 
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">Before you can migrate a WordPress Site Network, you must be on an [Elite plan](https://pantheon.io/pantheon-elite-plans){.external} and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.</p>
+</div>
+
 ## Requirements
 
-* An [Elite plan](https://pantheon.io/pantheon-elite-plans) and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.
 * [Download](https://git-scm.com/downloads) and install [Git](/docs/git/)
 * [Rsync or SFTP Client](/docs/rsync-and-sftp/)
 * [MySQL Client](/docs/mysql-access/)
