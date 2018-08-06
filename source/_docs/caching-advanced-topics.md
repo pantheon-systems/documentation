@@ -34,7 +34,7 @@ For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/pantheo
 
 If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and log in. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
 
-## Manually Expiring Cache for Static Assets (e.g. CSS, JS, PDFs, Images)
+## Manually Expiring Cache for Static Assets (e.g. CSS, JS, Images)
 
 Pantheon sets a cache lifetime of 1 year for static assets per industry standard best practices. To ensure a client browser receives a new version of a static asset you can:
 
