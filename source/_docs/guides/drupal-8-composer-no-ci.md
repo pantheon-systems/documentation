@@ -76,8 +76,9 @@ Start by deleting the following directories:
 
 Next, you will need to modify `composer.json`.
 
-* Remove all dependencies in the `require-dev` section
+* Remove all dependencies in the `require-dev` section.
 * Update the `scripts` section to remove the `lint` `code-sniff`, and `unit-test` lines.
+* Remove the `"find .circleci/scripts/pantheon/ -type f | xargs chmod 755",` line from the `post-update-cmd` section of `scripts`.
 
 ## Managing Drupal with Composer
 
