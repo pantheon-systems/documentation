@@ -536,7 +536,7 @@ The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles
 Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform.
 
 ### MSSQL
-The MSSQL PHP library used to interface with Microsoft SQL Server databases is not supported on Pantheon.
+The MSSQL PHP library used to interface with Microsoft SQL Server databases is not supported on Pantheon for PHP versions below 7.2. See [Upgrade PHP Versions](/docs/php-versions/) to set your PHP version. Please note that Pantheon does not offer MSSQL databases, this library is only available for those connecting to external databases.
 
 ## Dynamic Outbound IPs
 Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request. For more information, see [Dynamic Outgoing IP Addresses](/docs/outgoing-ips).
