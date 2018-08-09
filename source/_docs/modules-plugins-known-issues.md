@@ -532,12 +532,6 @@ The list of [WordPress roles and capabilities](https://codex.wordpress.org/Roles
 
 **Solution**: As described in [this StackExchange answer](https://wordpress.stackexchange.com/questions/166161/why-cant-the-wp-filesystem-api-read-googlefonts-json/166172#166172){.external}, for cases where file ownership doesn't matter this function could be replaced with `file_get_contents()`. This is true of most cases where the file in question is only being read, not written to.
 
-If the function cannot be replaced, you can create a workaround by adding to your `wp-config.php` file:
-
-```php
-define('FS_METHOD', 'direct');
-```
-
 ## PHP Libraries
 Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform.
 
