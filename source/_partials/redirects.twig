@@ -9,7 +9,7 @@
 <!-- Tab panes -->
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="wp">
-<p markdown="1">Add the following to <code>wp-config.php</code> (replace <code>www.example.com</code>):</p>
+<p markdown="1">Add the following to <code>wp-config.php</code>, usually placed above <code>/* That's all, stop editing! Happy blogging. */</code>. Don't forget to replace <code>www.example.com</code>:</p>
 <pre id="git-pull-wp"><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
