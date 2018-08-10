@@ -2,7 +2,9 @@
   <div class="changelog-wrapper mb-70">
     <h2 class="subtitle">Changelog</h2>
     {% for post in data.posts | slice(0,1) %}
-      {{ post.blocks.content| replace({"h2": "h3"})  |slice(0,248)| raw  }}
+      <h3>Platform Improvements</h3>
+      <h4>HTTPS Provisioning Accelerated</h4>
+      <p>An improvement to our queuing system has resulted in a 60% reduction in average HTTPS provisioning times!</p>
       <br>
       <a href="/docs/changelog" class="cta">More</a>
     {% endfor %}
