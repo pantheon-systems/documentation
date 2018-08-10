@@ -239,6 +239,16 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 3. Click **Settings** next to the existing upstream, then click **Delete**.
 
+## Switch an Existing Site to a Custom Upstream
+
+Only a Site Owner can change an existing site to use a new custom upstream. Site owners can [contact support](/docs/support/), or use [Terminus](/docs/terminus/):
+
+```bash
+terminus site:upstream:set $site $upstream_id
+```
+
+In the example above, set or replace the variables `$site` and `$upstream_id` with your site name and upstream machine name, respectively. You can find your custom upstream's machine name using `terminus org:upstream:list $org`, where `$org` is your organization name.
+
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)
 - [Switching an Existing site to a Custom Upstream with Terminus](/docs/terminus/examples/#switch-upstreams)
