@@ -150,6 +150,6 @@ Please see Google's help article: [My client isn't accepting my username and pas
 
 ### Can I use Microsoft Exchange or Office 365 for my emails?
 
-Offce 365 uses ports `25` and `587` by default, and different options for sending via SMTP client, Direct send or SMTP relay. [This document](https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4?ui=en-US&rs=en-US&ad=US){.external} outlines the limitations and configurations of each, to know what will work for your application.
+Office 365 uses ports `25` and `587` by default, and different options for sending via SMTP client, Direct send or SMTP relay. [This document](https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4?ui=en-US&rs=en-US&ad=US){.external} outlines the limitations and configurations of each, to know what will work for your application.
 
 Because we don't support SPF, it is likely that most Exchange or Office 365 servers won't work if its [configured at your email server](https://technet.microsoft.com/en-us/library/dn789058%28v=exchg.150%29.aspx?f=255&MSPPError=-2147217396){.external}. Check your organization's Microsoft Exchange settings on what's allowed by your system.
