@@ -56,7 +56,7 @@ WP Offload S3 requires a paid license but is configurable in the WordPress admin
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p markdown="1">This plugin is verified to work on a WordPress Multisite. This plugin currently conflicts with [Solr Power](https://wordpress.org/plugins/solr-power/){.external}, our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80){.external}.</p>
+  <p markdown="1">This plugin is verified to work on a WordPress Multisite. The currently known conflict is with [Solr Power](https://wordpress.org/plugins/solr-power/){.external}, our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80){.external}.</p>
 </div>
 
 1. Download the latest plugin release from [Github](https://github.com/humanmade/S3-Uploads/releases){.external} and extract it to `wp-content/plugins/`. Note that our documentation has been tested for version 2.0.0.
