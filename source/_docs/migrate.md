@@ -211,7 +211,7 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
 ### Multiple site directories found within the import archive.
 **Cause:** The migration tool found a multisite installation, which is not supported on the platform.
 
-**Solution:** Refer to [Extracting Sites from a Drupal Multisite](/docs/unwind-multisite/).
+**Solution:** Refer to [Extracting Sites from a Drupal Multisite](/docs/unwind-drupal-multisite/).
 
 ### Multiple database dumps found within the import archive.
 **Cause:** The migration tool detected multiple MySQL database dumps within the archive.
