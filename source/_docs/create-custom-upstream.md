@@ -241,6 +241,11 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 
 ## Switch an Existing Site to a Custom Upstream
 
+<div class="alert alert-danger" role="alert">
+<h4 class="info">Warning</h4>
+<p markdown="1">Switching the upstream of an existing site is risky. Consider creating a new site from your custom upstream, and migrating the contents, using the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin){.external} plugin. If you must switch upstreams, [back up](/docs/backups/) your site first, and consider our documentation on [upstream merge conflicts](/docs/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).</p>
+</div>
+
 Only a Site Owner can change an existing site to use a new custom upstream. Site owners can [contact support](/docs/support/), or use [Terminus](/docs/terminus/):
 
 ```bash
