@@ -134,6 +134,42 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
 }
 ```
 
+### Redirect Using Wildcards
+The following configuration will redirect requests for `example.com` using wildcard regex patterns:
+
+```php
+// Add wildcard redirects (old_path(s) => new_path)
+$redirects = array(
+  "/any/old/path/(.*)" => "/new",
+  "/starts-with(.*)" => "/new/path",
+  "/(.*)ends-with-this" => "/new/path",
+  "/(.*)contains-this(.*)" => "/new/path",
+  "/node/(\d)+" => "/all-nodes-go-here",
+  "/user/(a-z)+/blog" => "/new-user-blogs",
+);
+
+$match = FALSE;
+foreach ($redirects as $old_path => $new_path) {
+  if ($match = preg_match("#^($old_path)$#", $_SERVER['REQUEST_URI'])) {
+    break;
+  }
+}
+
+// 301 Redirect from multiple paths
+// Check if Drupal or WordPress is running via command line
+if ($match && (php_sapi_name() != "cli")) {
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://'. $_SERVER['HTTP_HOST'] . $new_path);
+  exit();
+
+  # Name transaction "redirect" in New Relic for improved reporting (optional)
+  if (extension_loaded('newrelic')) {
+    newrelic_name_transaction("redirect");
+  }
+}
+
+```
+
 ### Redirect Legacy UNIX-Style User Home Folder Paths
 When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
 
