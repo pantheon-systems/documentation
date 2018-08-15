@@ -57,7 +57,7 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 ### [Cache Expiration](https://www.drupal.org/project/expire){.external}
 **Issue**: This module doesn't support Pantheon's granular cache clearing and header system.
 
-**Solution**: Install https://pantheon.io/docs/modules/#advanced-page-cache [Pantheon Advanced Page Cache module](/docs/modules/#advanced-page-cache) to dynamically purge content from cache on content update.
+**Solution**: Install the [Pantheon Advanced Page Cache module](/docs/modules/#advanced-page-cache) to dynamically purge content from cache on content update.
 
 <hr>
 ### [CKFinder](https://www.drupal.org/project/wysiwyg_ckfinder){.external}
