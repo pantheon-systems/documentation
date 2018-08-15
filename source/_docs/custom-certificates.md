@@ -57,7 +57,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
     Be sure to send these as separate files, not a "chained cert".
 
-4. Once the certificate is in place, you will see under **Details** for your domain the following:
+4. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
 
     ![Custom Certificate Confirmation](/source/docs/assets/images/dashboard/custom-cert-confirm.png)
 
@@ -65,7 +65,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 6.  <a href="#disable-lets-encrypt-with-caa-records-required" data-proofer-ignore>Disable Let's Encrypt by adding CAA DNS records</a>.
 
-7. Update `A` and `AAAA` records provided by Pantheon Support.
+7. Update `A` and `AAAA` records provided by Pantheon Support. Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
 
 ## Test Before Going Live
 
