@@ -43,8 +43,8 @@ If you do not have an existing bucket for your site, create one:
 2. Click **Create Bucket**.
 3. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3, and after you create a bucket, you cannot change its name. Because the bucket name is visible in the URL that points to the objects stored in the bucket, ensure that the bucket name you choose is appropriate.
 4. Select a region and click **Create**.
-5. The **Set properties** section has additional configuration options you can configure now, or wait and configure later. When complete, click **Next**.
-6. In the **Permissions** tab, tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Next**.
+5. The **Configure options** section has additional configuration options you can configure now, or wait and configure later. When complete, click **Next**.
+6. In the **Permissions** tab, tick the boxes for **Read** and **Write** access for both **Objects** and **Object Permission**, then click **Next**.
 7. Review your settings, and then click **Create bucket**.
 
 ## Integrate S3 with WordPress

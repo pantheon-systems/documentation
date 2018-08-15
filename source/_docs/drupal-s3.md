@@ -26,20 +26,15 @@ Be sure that you have:
 Before integrating S3 with Drupal, you'll need to configure the service within your [AWS Management Console](https://console.aws.amazon.com){.external}.
 
 ### Create a New AWS S3 Bucket
-If you do not have an existing bucket for your Drupal site, create one:
+If you do not have an existing bucket for your site, create one:
 
 1. From your [AWS Console](https://console.aws.amazon.com){.external}, click **S3**.
 2. Click **Create Bucket**.
-<ol start="3"><li>Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3.
-
- <div class="alert alert-info" role="alert">
- <h4 class="info">Note</h4>
- <p>After you create a bucket, you cannot change its name. The bucket name is visible in the URL that points to the objects stored in the bucket. Ensure that the bucket name you choose is appropriate.</p>
- </div></li></ol>
-
+3. Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3, and after you create a bucket, you cannot change its name. Because the bucket name is visible in the URL that points to the objects stored in the bucket, ensure that the bucket name you choose is appropriate.
 4. Select a region and click **Create**.
-5. Select **Permissions** within the bucket properties and click **Add more permissions**.
-6. Choose a user and tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Save**.
+5. The **Configure options** section has additional configuration options you can configure now, or wait and configure later. When complete, click **Next**.
+6. In the **Permissions** tab, tick the boxes for **Read** and **Write** access for both **Objects** and **Object Permission**, then click **Next**.
+7. Review your settings, and then click **Create bucket**.
 
 ### Create an Identity and Access Management Policy
 [Identity and Access Management (IAM)](https://aws.amazon.com/iam/){.external} allows you to manage all user access to AWS resources and services. Creating a policy allows you to explicitly set limited privileges on your specific bucket. This strategy offers long-term flexibility for organizing and managing users and their privileges.
@@ -105,8 +100,7 @@ Before you begin:
  terminus connection:set <site>.<env> sftp
  ```
 
-###Install Required and Recommended Modules {.info}
-####S3 File System {.info}
+### Install S3 File System Module {.info}
 
 Install the [Libraries API](https://www.drupal.org/project/libraries){.external} and [S3 File System](https://www.drupal.org/project/s3fs){.external} modules:
 
@@ -123,7 +117,7 @@ terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make c
 
 The above command will add the AWS SDK version 2.x library into the `sites/all/libraries/awssdk2` directory.
 
-#### S3 File System CORS {.info}
+### Install S3 File System CORS Module {.info}
 Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors){.external} module to enhance your Drupal media handling and interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
 
 Install s3fs_cors module using Drush:
@@ -146,13 +140,13 @@ Before you begin:
  - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx){.external} locally.
  - Set the site's connection mode to Git within the site Dashboard or via [Terminus](/docs/terminus):
   ```bash
- terminus connection:set <site>.<env> git
+ terminus connection:set $site.$env git
  ```
 
  - Create a local clone of your site code, and navigate to it in your terminal.
 
-###Install Required and Recommended Modules {.info}
-####S3 File System {.info}
+
+### Install S3 File System Module {.info}
 
 Install the [S3 File System](https://www.drupal.org/project/s3fs){.external} module and AWS SDK version 3.x library using Composer.
 
@@ -168,7 +162,7 @@ Install the [S3 File System](https://www.drupal.org/project/s3fs){.external} mod
     composer require drupal/s3fs --prefer-dist
     ```
 
-#### S3 File System CORS {.info}
+### Install S3 File System CORS Module {.info}
 Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors){.external} module to enhance your Drupal media handling and interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
 
 Install s3fs_cors module using Composer:
@@ -176,13 +170,38 @@ Install s3fs_cors module using Composer:
 ```nohighlight
 composer require drupal/s3fs_cors --prefer-dist
 ```
+### Prepare The Site
+
+1. The S3 File System module looks in [settings.php](/docs/settings-php/) for the AWS access and secret keys, set as `$settings['s3fs.access_key']` and `$settings['s3fs.secret_key']` respectively. Because this file is saved into version control, we strongly recommend moving these credentials to a secure location using tools like [the Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin){.external} or [Lockr](/docs/guides/lockr/).
+
+2. Add the `remove-git-submodules` script to the `scripts` section of `composer.json`:
+
+    ```php
+        "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf",
+        "post-install-cmd": [
+          "@remove-git-submodules"
+        ],
+        "post-update-cmd": [
+          "@remove-git-submodules"
+        ]
+    ```
+
+3. Run `composer update` to execute the `remove-git-submodules` script, then commit and push your changes back to Pantheon.
+
+4. Switch the Dev environment to SFTP mode and enable your two new modules. You can do this with Terminus:
+
+    ```bash
+    terminus connection:set $site.dev sftp
+    terminus drush $site.dev -- en s3fs s3fs_cors
+    ```
+
 </div>
 </div>
 
 ## Drupal Module Configuration
 
 ### S3 File System User Credentials
-You can configure the settings for the S3 File System module via the Drupal admin after the installation (`admin/config/media/s3fs/settings`).
+You can configure the settings for the S3 File System module via the Drupal admin after the installation (`admin/config/media/s3fs`).
 
 Enter credentials created for the user in the [previous section](#create-an-identity-and-access-management-group) and your bucket name.
 
