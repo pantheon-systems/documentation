@@ -6,6 +6,11 @@ categories: []
 ---
 Load and performance tests are critical steps in going live procedures, as they help expose and identify potential performance killers. These tests provide insight for how a site will perform in the wild under peak traffic spikes.
 
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Load testing is one of the services offered by our [Professional Services](/docs/professional-services/#load-testing) team.</p>
+</div>
+
 ## Load vs Performance Testing
 Before you start, it's important to understand the difference between load and performance testing and know when to use each.
 ### Performance Testing
