@@ -15,7 +15,9 @@ searchboost: 100
 
 ## Identify Site Name
 
-Most Terminus commands requires a **site name**, which is derived from the **site label** you give it when you create the site. You can find your site's machine name using the Terminus command `site:info`, and the site UUID. The UUID is in the URL of your site Dashboard (`https://dashboard.pantheon.io/sites/SITE_UUID#dev/code` for example):
+Most Terminus commands requires a **site name**, which is derived from the **site label** you give it when you create the site. The site name is all lowercase, with spaces in the site label replaced with dashes (`-`). For example, the site name for the site "Anita Drupal" is `anita-drupal`.
+
+You can also find your site's machine name using the Terminus command `site:info`, and the site UUID. The UUID is in the URL of your site Dashboard (`https://dashboard.pantheon.io/sites/SITE_UUID#dev/code` for example):
 
 ```bash
 terminus site:info 2187b5ed...8dd90916d85b --field name
