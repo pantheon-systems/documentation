@@ -15,7 +15,12 @@ searchboost: 100
 
 ## Identify Site Name
 
-Most Terminus commands requires a **site name**, which is derived from the **site label** you give it when you create the site from the dashboard (sites created through terminus can have unique site names and labels). The site name is all lowercase, with spaces in the site label replaced with dashes (`-`). For example, the site name for the site "Anita Drupal" is `anita-drupal`.
+Most Terminus commands requires a **site name**, which is derived from the **site label** you give it when you create the site from the dashboard.
+<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">Sites created through terminus may have unique site names and labels</p></div>
+
+The site name is all lowercase, with spaces in the site label replaced with dashes (`-`). For example, the site name for the site "Anita Drupal" is `anita-drupal`.
+
+From the Site Dashboard, in any environment, you can click the _Visit To <Environment> Site_ button. The URL that loads up will include the environment and site name formatted as `env-site-name.pantheonsite.io`. For example, the Dev environment for the site "Anita Drupal" would show `https://dev-anita-drupal.pantheonsite.io`
 
 You can also find your site's machine name using the Terminus command `site:info`, and the site UUID. The UUID is in the URL of your site Dashboard (`https://dashboard.pantheon.io/sites/SITE_UUID#dev/code` for example):
 
