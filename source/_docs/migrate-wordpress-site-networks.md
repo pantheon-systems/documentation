@@ -7,7 +7,7 @@ categories: [wordpress]
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p markdown="1">Before you can migrate a WordPress Site Network, you must be on an [Elite plan](https://pantheon.io/pantheon-elite-plans){.external} and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.</p>
+  <p markdown="1">Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.</p>
 </div>
 
 ## Requirements
