@@ -46,13 +46,13 @@ You can resolve this using one of two methods:
 Using [Terminus](/docs/terminus), you can run an additional `wp search-replace` command on the target environment after cloning. Set or replace the variables `$site` and `$env` with your site name and the correct environment:
 
 ```bash
-terminus remote:wp $site.$env -- search-replace '://live-example.pantheonsite.io' '://test.example.com' --all-tables --verbose
+terminus remote:wp $site.$env -- search-replace "://live-example.pantheonsite.io" "://test.example.com" --all-tables --verbose
 ```
 
 The following example also converts the URL from HTTP to HTTPS, for situations where you might have HTTPS in one environment and not another:
 
 ```bash
-terminus remote:wp $site.$env -- search-replace 'https://live-example.pantheonsite.io' 'http://test.example.com' --all-tables --verbose
+terminus remote:wp $site.$env -- search-replace "https://live-example.pantheonsite.io" "http://test.example.com" --all-tables --verbose
 ```
 
 </div>
@@ -68,12 +68,12 @@ echo "Replacing previous environment urls with new environment urls... \n";
 if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
   switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
     case 'live':
-      passthru('wp search-replace "://test-example.pantheonsite.io" "://example.com"');
+      passthru('wp search-replace "://test-example.pantheonsite.io" "://example.com" --all-tables ');
       break;
     case 'test':
-      passthru('wp search-replace "://example1.pantheonsite.io" "://test-examplesite.pantheonsite.io"');
-      passthru('wp search-replace "://example2.pantheonsite.io" "://test-examplesite.pantheonsite.io"');
-      passthru('wp search-replace "://example3.pantheonsite.io" "://test-examplesite.pantheonsite.io"');
+      passthru('wp search-replace "://example1.pantheonsite.io" "://test-examplesite.pantheonsite.io" --all-tables ');
+      passthru('wp search-replace "://example2.pantheonsite.io" "://test-examplesite.pantheonsite.io" --all-tables ');
+      passthru('wp search-replace "://example3.pantheonsite.io" "://test-examplesite.pantheonsite.io" --all-tables ');
       break;
   }
 }
