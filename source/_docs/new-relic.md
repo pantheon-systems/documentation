@@ -106,24 +106,23 @@ if (function_exists('newrelic_ignore_transaction')) {
 
 {% include("content/monitor-alerts.html")%}
 
-## Troubleshooting
 
-### New Relic Access
+## New Relic Access
 
 Your first visit to New Relic must be via the **Go to New Relic** button. Once you have successfully accessed the New Relic Dashboard, you may use the environment links to go directly to their corresponding New Relic page.
 
-#### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
+### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
 1. From the New Relic Dashboard, click on the User Account to the right.
 2. From the Dropdown, click **Log Out**.
 3. Back on the Pantheon Site Dashboard, click the **Go to New Relic** button.
 
-#### If you click the Go to New Relic button and are instead sent to a log in screen
+### If you click the Go to New Relic button and are instead sent to a log in screen
 1. Close all of your open New Relic tabs.
 2. Delete all of the New Relic cookies from your browser.
 3. Reload your Pantheon Dashboard.
 4. Click the **Go to New Relic** button.
 
-#### If you are prompted to Set Up New Relic
+### If you are prompted to Set Up New Relic
 If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic.
 
 1. Visit one of your site pages.
@@ -134,7 +133,7 @@ If you try to access New Relic prior to any traffic reaching an environment, you
 - If the site owner is a user, the site owner's name and email address is used to create the New Relic account.
 - If the site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. This user must be a member of the organization.
 
-#### If you see "We're sorry, you haven't verified your email address yet."
+### If you see "We're sorry, you haven't verified your email address yet."
 After activating New Relic, a confirmation email will be sent to the site owner to complete the setup process. The account will need to be verified first before members of the site can access New Relic dashboard.
 
 If the New Relic account holder, i.e. the site owner or user who activated the New Relic account for the site, did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
@@ -146,6 +145,8 @@ If the New Relic account holder, i.e. the site owner or user who activated the N
 
 Contact Support if you are unsure what user the New Relic account is associated with and unable to identify where the password reset email has been sent.
 
+
+## Troubleshooting
 
 ### Removing Multidev Environments in New Relic
 After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers){.external}.
