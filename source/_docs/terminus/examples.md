@@ -12,6 +12,22 @@ permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
 searchboost: 100
 ---
+
+## Identify Site Name
+
+Most Terminus commands requires a **site name**, which is derived from the **site label** you give it when you create the site from the dashboard.
+<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">Sites created through Terminus may have unique site names and labels.</p></div>
+
+The site name is all lowercase, with spaces in the site label replaced with dashes (`-`). For example, the site name for the site "Anita Drupal" is `anita-drupal`.
+
+The site name is also found in the platform domain for any environment, formatted as `env-site-name.pantheonsite.io`. For example, the Dev environment for the site "Anita Drupal" would show `https://dev-anita-drupal.pantheonsite.io`.
+
+You can also find your site's machine name using the Terminus command `site:info`, and the site UUID. The UUID is in the URL of your site Dashboard (`https://dashboard.pantheon.io/sites/SITE_UUID#dev/code` for example):
+
+```bash
+terminus site:info 2187b5ed...8dd90916d85b --field name
+```
+
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.
 
