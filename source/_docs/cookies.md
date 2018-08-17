@@ -71,7 +71,7 @@ If the value is **not** set, respond with `setcookie()` to serve cached content 
 
 The following example can be used interchangeably between WordPress and Drupal:
 ```
-if(isset($_COOKIE['STYXKEY_gorp'])){
+if (isset($_COOKIE['STYXKEY_gorp'])) {
 
   $foo = $_COOKIE['STYXKEY_gorp'];
   // Generate varied content based on cookie value
@@ -87,9 +87,9 @@ else{
   * Example:
   * @code
   * $name = 'STYXKEY_gorp';
-  * $value = &bar;
+  * $value = 'bar';
   * $expire = time()+600;
-  * $path = /foo;
+  * $path = '/foo';
   * $domain =  $_SERVER['HTTP_HOST'];
   * $secure = true;
   * $httponly = true;
