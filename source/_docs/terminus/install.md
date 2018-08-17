@@ -3,6 +3,7 @@ title: Terminus Manual
 subtitle: Install
 terminusinstall: true
 terminuspage: true
+terminustoc: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/
@@ -28,6 +29,8 @@ Some Windows users have installed Terminus using [Git BASH on Git for Windows](h
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
   <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
 </div>
+
+See [Troubleshooting](#troubleshooting) if your installation fails.
 
 ## Authenticate
 Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/docs/machine-tokens).
