@@ -57,7 +57,7 @@ terminus wp <site>.<env> -- db query "SELECT * FROM wp_users WHERE ID=1"
 
 ## Extending WP-CLI With Subcommands
 
-WP-CLI has a framework for users to write their own commands. Learn about the [anatomy of a subcommand](https://github.com/wp-cli/wp-cli/wiki/Commands-Cookbook#anatomy){.external} to solve your thorny problems with WP-CLI.
+WP-CLI has a framework for users to write their own commands. Learn about the [anatomy of a subcommand](https://make.wordpress.org/cli/handbook/commands-cookbook/#anatomy-of-a-command){.external} to solve your thorny problems with WP-CLI.
 
 
 ## Troubleshooting
