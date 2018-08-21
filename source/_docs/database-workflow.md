@@ -29,17 +29,62 @@ WordPress sites with custom domains configured on multiple environments may see 
 
 The Site Dashboard runs `wp search-replace` during the cloning workflow to update environment URLs automatically. This operation, however, only runs once on a single set of URLs. If the target environment has a custom domain (e.g `test.example.com`), it's used to replace the source environment's custom domain (e.g. `www.example.com`). This can cause the target environment to have incorrect references to platform domains (e.g. `live-example.pantheonsite.io`).
 
-To resolve this issue, use [Terminus](/docs/terminus) to run an additional `wp search-replace` command on the target environment after cloning. Replace `site` and `env` with your site name and the correct environment:
+You can resolve this using one of two methods:
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+<!-- Active tab -->
+<li id="terminus-replace" role="presentation" class="active"><a href="#terminus-replace-anchor" aria-controls="terminus-replace-anchor" role="tab" data-toggle="tab">Terminus</a></li>
+
+<!-- 2nd Tab Nav -->
+<li id="quicksilver-replace" role="presentation"><a href="#quicksilver-replace-anchor" aria-controls="quicksilver-replace-anchor" role="tab" data-toggle="tab">Quicksilver</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+<!-- Active pane content -->
+<div role="tabpanel" class="tab-pane active" id="terminus-replace-anchor" markdown="1">
+Using [Terminus](/docs/terminus), you can run an additional `wp search-replace` command on the target environment after cloning. Set or replace the variables `$site` and `$env` with your site name and the correct environment:
 
 ```bash
-terminus remote:wp site.env -- search-replace '://live-example.pantheonsite.io' '://test.example.com' --all-tables --verbose
+terminus remote:wp $site.$env -- search-replace "://live-example.pantheonsite.io" "://test.example.com" --all-tables --verbose
 ```
 
 The following example also converts the URL from HTTP to HTTPS, for situations where you might have HTTPS in one environment and not another:
 
 ```bash
-terminus remote:wp site.env -- search-replace 'https://live-example.pantheonsite.io' 'http://test.example.com' --all-tables --verbose
+terminus remote:wp $site.$env -- search-replace "https://live-example.pantheonsite.io" "http://test.example.com" --all-tables --verbose
 ```
+
+</div>
+
+<!-- 2nd pane content -->
+<div role="tabpanel" class="tab-pane" id="quicksilver-replace-anchor" markdown="1">
+For those using [Quicksilver](/docs/quicksilver/) scripts, consider the following example. On each `passthru` line, replace `example#.pantheonsite.io` and `example.com` with the domains you want to find and replace, respectively:
+
+```php
+<?php
+echo "Replacing previous environment urls with new environment urls... \n";
+
+if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
+    case 'live':
+      passthru('wp search-replace "://test-example.pantheonsite.io" "://example.com" --all-tables ');
+      break;
+    case 'test':
+      passthru('wp search-replace "://example1.pantheonsite.io" "://test-examplesite.pantheonsite.io" --all-tables ');
+      passthru('wp search-replace "://example2.pantheonsite.io" "://test-examplesite.pantheonsite.io" --all-tables ');
+      passthru('wp search-replace "://example3.pantheonsite.io" "://test-examplesite.pantheonsite.io" --all-tables ');
+      break;
+  }
+}
+?>
+```
+
+The example above replaces three URLs when cloning to the test environment with `test-examplesite.pantheonsite.io`, and replaces that domain with the example [custom domain](/docs/domains/#custom-domains) `example.com` when cloning to the live environment.
+
+You can find this example and many others in the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples){.external} repo.
+</div>
+</div>
 
 ### Base table or view not found
 Database errors may occur during a database clone, import or while wiping the environment. In most cases, the error contains `semaphore' doesn't exist` and is generated because the site is accessed before a certain database operation is complete. Simply waiting for database operations to complete resolves the error.
