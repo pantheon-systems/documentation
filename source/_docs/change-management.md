@@ -30,7 +30,7 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
 
 ### Site-Level: Roles and Permissions
 
-| Permissions                              | User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner orgs only"><em class="fa fa-info-circle"></em></a> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise organizations only"><em class="fa fa-info-circle"></em></a> |
+| Permissions                              | User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner organizations only"><em class="fa fa-info-circle"></em></a> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise organizations only"><em class="fa fa-info-circle"></em></a> |
 |:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
 | Access the site Dashboard                | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Work in Dev/Multidev environments        | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
