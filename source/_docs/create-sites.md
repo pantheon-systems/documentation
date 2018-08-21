@@ -34,6 +34,10 @@ Your account is your own individual account, and every account can manage multip
 ### Can I rename my Pantheon site after creation?
 No. Site names and Platform URLs are permanent and cannot be changed. As a workaround, you can export your existing site and import it to a new site with the correct name. See <a href="/docs/migrate/#how-do-i-clone-an-existing-pantheon-site" data-proofer-ignore>Migrate Sites to Pantheon FAQs</a>.
 
+### What if my site name is already taken?
+
+Site names must be unique across all Pantheon sites, including [frozen](/docs/platform-considerations/#inactive-site-freezing) sites. Choose another site name, and remember that the name you choose in the Pantheon Dashboard is only visible to the public in your [platform domain](/docs/domains/#platform-domains).
+
 ## Next Steps
  - [Developing Directly with SFTP](/docs/sftp/)
  - [Starting with Git](/docs/git/)
