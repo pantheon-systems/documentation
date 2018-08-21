@@ -18,60 +18,72 @@ Choose your preferred Git host:
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#gh" aria-controls="gh" role="tab" data-toggle="tab">GitHub</a></li>
-  <li role="presentation"><a href="#bb" aria-controls="bb" role="tab" data-toggle="tab">Bitbucket</a></li>
-  <li role="presentation"><a href="#gitlab" aria-controls="gitlab" role="tab" data-toggle="tab">GitLab</a></li>
+<li role="presentation" class="active"><a href="#gh" aria-controls="gh" role="tab" data-toggle="tab">GitHub</a></li>
+<li role="presentation"><a href="#bb" aria-controls="bb" role="tab" data-toggle="tab">Bitbucket</a></li>
+<li role="presentation"><a href="#gitlab" aria-controls="gitlab" role="tab" data-toggle="tab">GitLab</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div markdown="1" role="tabpanel" class="tab-pane active" id="gh">
-  1. <a href="https://github.com/join" target=blank>Sign up for a GitHub account</a> if you do not have one already.
-  2. [Log in to GitHub](https://github.com/login/).
-  3. If this is your first time logging into GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New Repository**](https://github.com/new) from the Repository sidebar on the right.
-  4. Name the repository.
-  5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
-  6. Click **Create Repository**.
-  7. Copy the repository URL (HTTPS), found in the Quick setup section:
+<div markdown="1" role="tabpanel" class="tab-pane active" id="gh">
+1. <a href="https://github.com/join" target=blank>Sign up for a GitHub account</a> if you do not have one already.
 
-    ![GitHub Repo URL](/source/docs/assets/images/github-repo-url.png)
+2. [Log in to GitHub](https://github.com/login/).
 
-  8. Clone the repository to your local from the command line (replace the URL):
+3. If this is your first time logging into GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New Repository**](https://github.com/new) from the Repository sidebar on the right.
 
-    ```
-    git clone https://github.com/pantheondocs/agency-custom-upstream.git
-    ```
+4. Name the repository.
 
-  9. Navigate to the repository's root directory:
+5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
 
-    ```
-    cd agency-custom-upstream
-    ```
+6. Click **Create Repository**.
 
-  </div>
-  <div markdown="1" role="tabpanel" class="tab-pane" id="bb">
-  1. [Sign up for a Bitbucket account](https://bitbucket.org/account/signup/) if you do not have one already.
-  2. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
-  3. Click [**Create a Repository**](https://bitbucket.org/repo/create).
-  4. Name the repository.
-  5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
-  6. Click **Create Repository**.
-  7. Copy the repository URL (HTTPS), found on the top right of the page:
+7. Copy the repository URL (HTTPS), found in the Quick setup section:
 
-    ![Bitbucket Repo URL](/source/docs/assets/images/bitbucket-repo-url.png)
+  ![GitHub Repo URL](/source/docs/assets/images/github-repo-url.png)
 
-  8. Clone the repository to your local from the command line (replace the URL):
+8. Clone the repository to your local from the command line (replace the URL):
 
-    ```
-    git clone https://pantheondocs@bitbucket.org/pantheondocs/agency-custom-upstream.git
-    ```
+  ```
+  git clone https://github.com/pantheondocs/agency-custom-upstream.git
+  ```
 
-  9. Navigate to the repository's root directory:
+9. Navigate to the repository's root directory:
 
-    ```
-    cd agency-custom-upstream
-    ```
-  </div>
+  ```
+  cd agency-custom-upstream
+  ```
+
+</div>
+<div markdown="1" role="tabpanel" class="tab-pane" id="bb">
+1. [Sign up for a Bitbucket account](https://bitbucket.org/account/signup/) if you do not have one already.
+
+2. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
+
+3. Click [**Create a Repository**](https://bitbucket.org/repo/create).
+
+4. Name the repository.
+
+5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+
+6. Click **Create Repository**.
+
+7. Copy the repository URL (HTTPS), found on the top right of the page:
+
+  ![Bitbucket Repo URL](/source/docs/assets/images/bitbucket-repo-url.png)
+
+8. Clone the repository to your local from the command line (replace the URL):
+
+  ```
+  git clone https://pantheondocs@bitbucket.org/pantheondocs/agency-custom-upstream.git
+  ```
+
+9. Navigate to the repository's root directory:
+
+  ```
+  cd agency-custom-upstream
+  ```
+</div>
 <div markdown="1" role="tabpanel" class="tab-pane active" id="gitlab">
 You can [sign up](https://gitlab.com/users/sign_in){.external} for a GitLab.com account, or use a self-managed GitLab installation.
 
@@ -232,6 +244,8 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
 
 1. Prepare a GitLab user with at least **Reporter** level permissions for your upstream repository.
+
+    ![GitLab reporter permission](/source/docs/assets/images/gitlab-reporter.png)
 
 2. [Contact support](/docs/support) to add the custom upstream to your org. You must provide a username/password or OAuth token.
 </div>
