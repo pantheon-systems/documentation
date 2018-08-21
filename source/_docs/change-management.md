@@ -14,129 +14,30 @@ These tables detail the actions each role can execute on each Dashboard.
 
 In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
 
-###Organizations: Roles and Permissions
+### Organizations: Roles and Permissions
 
-<table class="table  table-bordered table-responsive">
-    <thead>
-      <tr>
-        <th>Permissions</th>
-        <th>Administrator</th>
-        <th>Team Member</th>
-        <th>Developer</th>
-        <th>Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Unprivileged" data-content="Enterprise and EDU+ orgs only"><em class="fa fa-info-circle"></em></a></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Create sites within an org</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Access the org Dashboard</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Work in Dev/Multidev environments</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Deploy to Test and Live</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Manage site-level team</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Delete sites or remove users from an org</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Manage a site's plan</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Create custom upstreams</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+| Permissions                              | Administrator                    | Team Member                      | Developer | Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Unprivileged" data-content="Enterprise and EDU+ organizations only"><em class="fa fa-info-circle"></em></a> |
+|:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
+| Create sites within an org               | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
+| Access the org Dashboard                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
+| Work in Dev/Multidev environments        | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
+| Deploy to Test and Live                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Invite new team members                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Manage user roles                        | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Delete sites or remove users from an org | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Manage a site's plan                     | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Create custom upstreams                  | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 
-###Site-Level: Roles and Permissions
+### Site-Level: Roles and Permissions
 
-<table class="table  table-bordered table-responsive">
-    <thead>
-      <tr>
-        <th>Permissions</th>
-        <th>User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner orgs only"><em class="fa fa-info-circle"></em></a></th>
-        <th>Team Member </th>
-        <th>Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise orgs only"><em class="fa fa-info-circle"></em></a></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Access the site Dashboard</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Work in Dev/Multidev environments</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td>✓</td>
-      </tr>
-      <tr>
-        <td>Deploy to Test and Live</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Manage site-level team</td>
-        <td>✓</td>
-        <td>✓</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Delete sites or remove users from a site</td>
-        <td>✓</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Manage a site's plan</td>
-        <td>✓ <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="When an Org is the owner of a site, users in charge cannot change the site plan."><em class="fa fa-info-circle"></em></a></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-
+| Permissions                              | User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner organizations only"><em class="fa fa-info-circle"></em></a> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise organizations only"><em class="fa fa-info-circle"></em></a> |
+|:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
+| Access the site Dashboard                | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
+| Work in Dev/Multidev environments        | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
+| Deploy to Test and Live                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
+| Manage user roles                        | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Delete sites or remove users from a site | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Manage a site's plan                     | <span style=color:green>✔</span> <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="When an organization is the owner of a site, users in charge cannot change the site plan."><em class="fa fa-info-circle"></em></a> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 
 ## Manage People in an Organization
 
