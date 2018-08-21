@@ -5,11 +5,13 @@ tags: [siteintegrations, addons, search index, solr]
 categories: [drupal]
 contributors: [cityofoaksdesign]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
-
-This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with Drupal.
+[Apache Solr](/docs/solr) is a system for indexing and searching site content. {% include("content/solr-version.html") %}
 
 For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
+
+## Before You Begin
+
+First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**. This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with Drupal.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
@@ -27,9 +29,9 @@ Two contributed modules are supported by Pantheon that interface with Pantheon's
 - [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.x and 6.x-1.x
 - [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.x
 
-For most users, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.  
+For most users, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.
 
-If you rely on highly customized data structures and the apachesolr module is not enough for your needs, search\_api\_solr provides an alternative with a more powerful interface, but is much more complex.  
+If you rely on highly customized data structures and the apachesolr module is not enough for your needs, search\_api\_solr provides an alternative with a more powerful interface, but is much more complex.
 
 Choose one or the the other and add it to your codebase. Do not enable or configure it yet.
 
@@ -47,11 +49,11 @@ Once enabled, click **Configure**, or navigate to **Administration** > **Config
  ![Drupal Admin Search and Metadata Solr](/source/docs/assets/images/solr-search-metadata.png)
 ### 4. Post the schema.xml Using the Pantheon Apache Solr Module
 
-The next step is to post the `schema.xml`, which describes Drupal fields to the Solr search indexer. Posting the schema will activate the Solr server for the site environment. Click **Post schema.xml**.  
+The next step is to post the `schema.xml`, which describes Drupal fields to the Solr search indexer. Posting the schema will activate the Solr server for the site environment. Click **Post schema.xml**.
 
-![Solr configuration schema](/source/docs/assets/images/solr-config-schema.png)  
+![Solr configuration schema](/source/docs/assets/images/solr-config-schema.png)
 
-Choose the appropriate schema for the module that you are using (apachesolr or search_api_solr). In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.  
+Choose the appropriate schema for the module that you are using (apachesolr or search_api_solr). In the majority of cases, you will want to use `3.x/schema.xml`. Do not attempt to use schemas intended for different versions of Solr, because it won't work. When you've made your selection, click **Post schema**.
 
 Place the following within `settings.php` to configure schema across all Pantheon environments (optional):
 ```php
@@ -85,7 +87,7 @@ Note that the default connection parameters are correct and do not need changing
 
 #### Enabling Search API Solr Search (search\_api\_solr)
 
-Three modules are required; [entity](https://drupal.org/project/entity), [search\_api](https://drupal.org/project/search_api) and [search\_api\_solr](https://drupal.org/project/search_api_solr) need to be installed and enabled.  
+Three modules are required; [entity](https://drupal.org/project/entity), [search\_api](https://drupal.org/project/search_api) and [search\_api\_solr](https://drupal.org/project/search_api_solr) need to be installed and enabled.
  ![Enable Solr Search required modules](/source/docs/assets/images/enable-solr-required.png)
 
 ## Additional Help
@@ -98,7 +100,7 @@ The Pantheon Solr module provides several interfaces for troubleshooting the hea
 
 ### Status
 
-This interface reports what the last schema that was posted to the service and whether the service itself responds to a ping.  
+This interface reports what the last schema that was posted to the service and whether the service itself responds to a ping.
 
 **Administration** > **Configuration** > **Search and metadata** > **Pantheon Apache Solr**
 
@@ -112,12 +114,12 @@ The Pantheon Apache Solr module provides an interface for administrators to send
 
 ### Drupal Status Report
 
-The Pantheon Apache Solr ​module also adds an item to the Administration > Reports > Status report that performs a similar check to the Status check, independently of contrib module configurations.  
+The Pantheon Apache Solr ​module also adds an item to the Administration > Reports > Status report that performs a similar check to the Status check, independently of contrib module configurations.
  ![Solr reports](/source/docs/assets/images/solr-reports.png)
 
 ## Troubleshooting
 
-The following are Pantheon-specific variables that you can check for, depending on the module you are using.  
+The following are Pantheon-specific variables that you can check for, depending on the module you are using.
 
 Keep in mind that newly indexed items have a 2-minute delay until cron has been run or manually indexed before they become available in Solr search.
 

@@ -5,7 +5,7 @@ tags: [addons, siteintegrations]
 categories: [drupal8]
 contributors: [peter-pantheon, cityofoaksdesign]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content.
+[Apache Solr](/docs/solr) is a system for indexing and searching site content. {% include("content/solr-version.html") %}
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
@@ -17,7 +17,7 @@ Be sure that you:
 
 * Enable Solr in the Pantheon Site Dashboard: **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
 * Install [Composer](https://getcomposer.org/){.external}
-* Create a Composer managed site on Pantheon following the [Build Tools](/docs/guides/build-tools/) guide, or the [Composer without CI](/docs/guides/drupal-8-composer-no-ci/) guide. 
+* Create a Composer managed site on Pantheon following the [Build Tools](/docs/guides/build-tools/) guide, or the [Composer without CI](/docs/guides/drupal-8-composer-no-ci/) guide.
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
