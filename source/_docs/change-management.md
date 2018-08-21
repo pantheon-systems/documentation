@@ -16,7 +16,7 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
 
 ### Organizations: Roles and Permissions
 
-| Permissions                              | Administrator                    | Team Member                      | Developer | Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Unprivileged" data-content="Enterprise and EDU+ orgs only"><em class="fa fa-info-circle"></em></a> |
+| Permissions                              | Administrator                    | Team Member                      | Developer | Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Unprivileged" data-content="Enterprise and EDU+ organizations only"><em class="fa fa-info-circle"></em></a> |
 |:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
 | Create sites within an org               | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Access the org Dashboard                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
@@ -30,14 +30,14 @@ In some Dashboards, you may notice the "User in Charge" label applied to a user.
 
 ### Site-Level: Roles and Permissions
 
-| Permissions                              | User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner orgs only"><em class="fa fa-info-circle"></em></a> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise orgs only"><em class="fa fa-info-circle"></em></a> |
+| Permissions                              | User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner orgs only"><em class="fa fa-info-circle"></em></a> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise organizations only"><em class="fa fa-info-circle"></em></a> |
 |:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
 | Access the site Dashboard                | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Work in Dev/Multidev environments        | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Deploy to Test and Live                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
 | Manage user roles                        | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 | Delete sites or remove users from a site | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
-| Manage a site's plan                     | <span style=color:green>✔</span> <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="When an Org is the owner of a site, users in charge cannot change the site plan."><em class="fa fa-info-circle"></em></a> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Manage a site's plan                     | <span style=color:green>✔</span> <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="When an organization is the owner of a site, users in charge cannot change the site plan."><em class="fa fa-info-circle"></em></a> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 
 ## Manage People in an Organization
 
