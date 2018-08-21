@@ -105,6 +105,8 @@ If you receive the error that you have conflicts while updating core, the fastes
 
 Double-check the files before going forward to make sure no bugs were introduced.
 
+If this procedure fails with the message `Already up to date.` refer to [this troubleshooting section](#one-click-updates-do-not-appear-after-rewriting-git-history) to reset your git repository.
+
 ### Merge Conflict Resolution
 
 This process let's you manually resolve the conflict using the command line and a text editor.
