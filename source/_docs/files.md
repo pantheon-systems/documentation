@@ -6,6 +6,7 @@ categories: []
 ---
 Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files:
 
+- [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore)
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
 - [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore)
 
