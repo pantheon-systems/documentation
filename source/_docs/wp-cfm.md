@@ -11,7 +11,7 @@ The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin provides an elegant m
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">WP-CFM should only be used in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.</p>
+<p markdown="1">WP-CFM should only be used to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.</p>
 </div>
 
 ## Install and Deploy WP-CFM
