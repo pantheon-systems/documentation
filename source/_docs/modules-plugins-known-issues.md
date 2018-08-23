@@ -400,7 +400,8 @@ For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authenticat
 <hr>
 
 ### [Visual Composer: Page Builder](https://vc.wpbakery.com/){.external}
-**Issue**: This plugin requires write access to the site's codebase for editing files, which is not granted on Test and Live environments by design.
+**Issue**: This plugin requires write access to the site's codebase for editing files, which is not granted on Test and Live environments by design. Note: Despite [release notes](https://visualcomposer.io/docs/release-notes/){.external} indicating the plugin now works on Pantheon, we find the plugin still has issues on our platform as it uses [wp_filesystem()](#wp_filesystem->get_contents).
+
 <hr>
 
 ### [Weather Station](https://wordpress.org/plugins/live-weather-station/){.external}
