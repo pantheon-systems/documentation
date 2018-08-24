@@ -342,7 +342,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 ### [Force Login](https://wordpress.org/plugins/wp-force-login/){.external}
 **Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
-**Solution**: See [Set SERVER_PORT Corectly](https://pantheon.io/docs/server_name-and-server_port/#set-server_port-correctly).
+**Solution**: See [Set SERVER_PORT Correctly](https://pantheon.io/docs/server_name-and-server_port/#set-server_port-correctly).
 <hr>
 
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/){.external}
