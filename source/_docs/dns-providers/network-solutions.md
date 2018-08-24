@@ -60,7 +60,7 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 
 ### AAAA Records
-Unfortunately, Network Solutions does not support managing AAAA records through their Advanced DNS editor. Please refer to the <a href="http://www.networksolutions.com/support/Adding-an-IPv6-record/" target="_blank">Adding an IPV6 record</a> support document.
+Unfortunately, Network Solutions does not support managing AAAA records through their Advanced DNS editor. Please refer to the <a href="http://www.networksolutions.com/support/Adding-an-IPv6-record/" target="_blank">Adding an IPv6 record</a> support document.
 
 ## Network Solutions Docs
 
