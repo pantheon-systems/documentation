@@ -313,7 +313,7 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 <hr>
 
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/){.external}
-**Issue**: This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change overtime during routine platform maintenance.
+**Issue**: This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
 
 **Solution**: Add the following to `wp-config.php`:
 
