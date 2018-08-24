@@ -388,6 +388,12 @@ Pantheon has tools in place to monitor database queries:
 [MySQL Troubleshooting with New Relic Pro](https://pantheon.io/docs/debug-mysql-new-relic/){.external}
 <hr>
 
+### [Object Sync for Salesforce](https://wordpress.org/plugins/object-sync-for-salesforce/){.external}
+**Issue**: The Object Sync for Salesforce plugin adds dependencies using Composer, and one of these dependencies provides a .gitignore file which prevents files from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
+
+**Solution**: Remove the .gitignore file from the `object-sync-for-salesforce/vendor/pippinsplugins/wp-logging` directory.
+<hr>
+
 ### [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/){.external}
 **Issue**: Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. See [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
 
