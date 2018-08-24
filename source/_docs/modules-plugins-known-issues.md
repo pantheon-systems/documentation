@@ -339,6 +339,18 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
 <hr>
 
+### Caching Plugins (e.g. [Batcache](https://wordpress.org/plugins/batcache/){.external}, [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/){.external}, or [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/){.external})
+**Issue**: Conflicts with platform-level page caching.
+
+**Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass the platform page cache.
+<hr>
+
+### [Constant Contact Forms](https://wordpress.org/plugins/constant-contact-forms/){.external}
+**Issue**: The Constant Contact Forms plugin adds dependencies using Composer and provides a .gitignore file which prevents these dependencies from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
+
+**Solution**: Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
+<hr>
+
 ### [Force Login](https://wordpress.org/plugins/wp-force-login/){.external}
 **Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
