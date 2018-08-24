@@ -13,7 +13,9 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 
 ## Install SimpleSAMLphp
 
-1. Download [SimpleSAMLphp version 1.14.x](https://simplesamlphp.org/) and add it to your git repository as `/private/simplesamlphp-1.14.x`.
+Note: PHP mcrypt is still used in SimpleSAMLphp 1.14.x, but removed as a dependency in SimpleSAML 1.15.x version. PHP mcrypt has been depcreated in PHP 7.1 version, and removed from core PHP 7.2 version. Consider using the appropriate lower versions if issues are encountered.
+
+1. Download [SimpleSAMLphp version 1.15.x](https://simplesamlphp.org/) and add it to your git repository as `/private/simplesamlphp-1.15.x`.
 
         wget https://simplesamlphp.org/download\?latest -O simplesamlphp-latest.tar.gz
         mkdir private
@@ -21,14 +23,14 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
         git add private
         git commit -am "Adding SimpleSAML"
 
-2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.14.x/www`:
+2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.15.x/www`:
 
 
         ln -s ./private/simplesamlphp-1.14.x/www ./simplesaml
         git add simplesaml
         git commit -am "Adding SimpleSAML symlink"
 
-3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed and add them to the repository in `/private/simplesamlphp-1.14.x/cert`.
+3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed and add them to the repository in `/private/simplesamlphp-1.15.x/cert`.
 
 ## Configure SimpleSAMLphp
 
@@ -81,7 +83,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 4. With configuration completed, commit the changes to your SimpleSAMLphp files:
 
 
-        git add private/simplesamlphp-1.14.x
+        git add private/simplesamlphp-1.15.x
         git commit -am "Adding SimpleSaml config files."
 
 
@@ -94,13 +96,13 @@ Add the following lines to `settings.php` so that the Drupal module can locate S
 For Drupal 7 sites:
 ```php
 # Provide universal absolute path to the installation.
-$conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.14.x';
+$conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.15.x';
 ```
 
 For Drupal 8 sites:
 ```php
 # Provide universal absolute path to the installation.
-$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.14.x';
+$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.15.x';
 ```
 
 You can now enable and configure the module. If SAML authentication fails because of a configuration error, look at the watchdog log to see why.
