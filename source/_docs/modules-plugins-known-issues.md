@@ -339,6 +339,12 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
 <hr>
 
+### [Constant Contact Forms](https://wordpress.org/plugins/constant-contact-forms/){.external}
+**Issue**: The Constant Contact Forms plugin adds dependencies using Composer and provides a .gitignore file which prevents these dependencies from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
+
+**Solution**: Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
+<hr>
+
 ### [Force Login](https://wordpress.org/plugins/wp-force-login/){.external}
 **Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
@@ -374,6 +380,12 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 Pantheon has tools in place to monitor database queries:
 [MySQL Slow Log](https://pantheon.io/docs/mysql-slow-log/){.external}
 [MySQL Troubleshooting with New Relic Pro](https://pantheon.io/docs/debug-mysql-new-relic/){.external}
+<hr>
+
+### [Object Sync for Salesforce](https://wordpress.org/plugins/object-sync-for-salesforce/){.external}
+**Issue**: The Object Sync for Salesforce plugin adds dependencies using Composer, and one of these dependencies provides a .gitignore file which prevents files from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
+
+**Solution**: Remove the .gitignore file from the `object-sync-for-salesforce/vendor/pippinsplugins/wp-logging` directory.
 <hr>
 
 ### [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/){.external}
