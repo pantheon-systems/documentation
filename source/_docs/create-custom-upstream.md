@@ -18,59 +18,92 @@ Choose your preferred Git host:
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#gh" aria-controls="gh" role="tab" data-toggle="tab">GitHub</a></li>
-  <li role="presentation"><a href="#bb" aria-controls="bb" role="tab" data-toggle="tab">Bitbucket</a></li>
+<li role="presentation" class="active"><a href="#gh" aria-controls="gh" role="tab" data-toggle="tab">GitHub</a></li>
+<li role="presentation"><a href="#bb" aria-controls="bb" role="tab" data-toggle="tab">Bitbucket</a></li>
+<li role="presentation"><a href="#gitlab" aria-controls="gitlab" role="tab" data-toggle="tab">GitLab</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div markdown="1" role="tabpanel" class="tab-pane active" id="gh">
-  1. <a href="https://github.com/join" target=blank>Sign up for a GitHub account</a> if you do not have one already.
-  2. [Log in to GitHub](https://github.com/login/).
-  3. If this is your first time logging into GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New Repository**](https://github.com/new) from the Repository sidebar on the right.
-  4. Name the repository.
-  5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
-  6. Click **Create Repository**.
-  7. Copy the repository URL (HTTPS), found in the Quick setup section:
+<div markdown="1" role="tabpanel" class="tab-pane active" id="gh">
+1. <a href="https://github.com/join" target=blank>Sign up for a GitHub account</a> if you do not have one already.
 
-    ![GitHub Repo URL](/source/docs/assets/images/github-repo-url.png)
+2. [Log in to GitHub](https://github.com/login/).
 
-  8. Clone the repository to your local from the command line (replace the URL):
+3. If this is your first time logging into GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New Repository**](https://github.com/new) from the Repository sidebar on the right.
 
+4. Name the repository.
+
+5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+
+6. Click **Create Repository**.
+
+7. Copy the repository URL (HTTPS), found in the Quick setup section:
+
+  ![GitHub Repo URL](/source/docs/assets/images/github-repo-url.png)
+
+8. Clone the repository to your local from the command line (replace the URL):
+
+  ```
+  git clone https://github.com/pantheondocs/agency-custom-upstream.git
+  ```
+
+9. Navigate to the repository's root directory:
+
+  ```
+  cd agency-custom-upstream
+  ```
+
+</div>
+<div markdown="1" role="tabpanel" class="tab-pane" id="bb">
+1. [Sign up for a Bitbucket account](https://bitbucket.org/account/signup/) if you do not have one already.
+
+2. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
+
+3. Click [**Create a Repository**](https://bitbucket.org/repo/create).
+
+4. Name the repository.
+
+5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+
+6. Click **Create Repository**.
+
+7. Copy the repository URL (HTTPS), found on the top right of the page:
+
+  ![Bitbucket Repo URL](/source/docs/assets/images/bitbucket-repo-url.png)
+
+8. Clone the repository to your local from the command line (replace the URL):
+
+  ```
+  git clone https://pantheondocs@bitbucket.org/pantheondocs/agency-custom-upstream.git
+  ```
+
+9. Navigate to the repository's root directory:
+
+  ```
+  cd agency-custom-upstream
+  ```
+</div>
+<div markdown="1" role="tabpanel" class="tab-pane active" id="gitlab">
+You can [sign up](https://gitlab.com/users/sign_in){.external} for a GitLab.com account, or use a self-managed GitLab installation.
+
+1. From your GitLab dashboard click **New project**.
+
+2. Provide a **Project name**, **Project description** (optional), and **Visibility Level**, then click **Create project**.
+
+3. Copy the repository URL (HTTPS), and clone the site locally:
+
+    ```bash
+    git clone https://gitlab.com/pantheondocs/agency-custom-upstream.git
     ```
-    git clone https://github.com/pantheondocs/agency-custom-upstream.git
-    ```
 
-  9. Navigate to the repository's root directory:
+4. `cd` into the project directory:
 
-    ```
+    ```bash
     cd agency-custom-upstream
     ```
 
-  </div>
-  <div markdown="1" role="tabpanel" class="tab-pane" id="bb">
-  1. [Sign up for a Bitbucket account](https://bitbucket.org/account/signup/) if you do not have one already.
-  2. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
-  3. Click [**Create a Repository**](https://bitbucket.org/repo/create).
-  4. Name the repository.
-  5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
-  6. Click **Create Repository**.
-  7. Copy the repository URL (HTTPS), found on the top right of the page:
-
-    ![Bitbucket Repo URL](/source/docs/assets/images/bitbucket-repo-url.png)
-
-  8. Clone the repository to your local from the command line (replace the URL):
-
-    ```
-    git clone https://pantheondocs@bitbucket.org/pantheondocs/agency-custom-upstream.git
-    ```
-
-  9. Navigate to the repository's root directory:
-
-    ```
-    cd agency-custom-upstream
-    ```
-  </div>
+</div>
 </div>
 
 ## Pull in Core from Pantheon's Upstream
@@ -135,57 +168,75 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
     </div>
 
 ## Connect Repository to Pantheon
-1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization:
 
-  ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#gh-https" aria-controls="gh-auth" role="tab" data-toggle="tab">GitHub</a></li>
+  <li role="presentation"><a href="#bb-https" aria-controls="bb-auth" role="tab" data-toggle="tab">Bitbucket</a></li>
+  <li role="presentation"><a href="#gitlab-https" aria-controls="gitlab-auth" role="tab" data-toggle="tab">Gitlab</a></li>
+</ul>
 
-2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
-3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
-4. Enter the following information about the Custom Upstream:
+<!-- Tab panes -->
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane active" id="gh-https" markdown="1">
+  1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization:
 
-    * **Name**
-    * **Upstream Repository URL**:
+    ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
 
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#gh-https" aria-controls="gh-auth" role="tab" data-toggle="tab">GitHub</a></li>
-          <li role="presentation"><a href="#bb-https" aria-controls="bb-auth" role="tab" data-toggle="tab">Bitbucket</a></li>
-        </ul>
+  2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+  3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
+  4. Enter the following information about the Custom Upstream:
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="gh-https" markdown="1">
+      * **Name**
+      * **Upstream Repository URL**:
+
             ![GitHub HTTPS Repo URL](/source/docs/assets/images/github-https-url.png)
-          </div>
-          <div role="tabpanel" class="tab-pane" id="bb-https" markdown="1">
-          ![Bitbucket HTTPS Repo URL](/source/docs/assets/images/bitbucket-https-url.png)
-          </div>
-        </div>
 
-    * **Authenticate (private repositories only)**: For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" role="tablist">
-          <li role="presentation" class="active"><a href="#gh-auth" aria-controls="gh-auth" role="tab" data-toggle="tab">GitHub</a></li>
-          <li role="presentation"><a href="#bb-auth" aria-controls="bb-auth" role="tab" data-toggle="tab">Bitbucket</a></li>
-        </ul>
+          * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
 
-        <!-- Tab panes -->
-        <div class="tab-content">
-          <div role="tabpanel" class="tab-pane active" id="gh-auth" markdown="1">
-          1. Go to GitHub to [generate a personal access token](https://github.com/settings/tokens).
-          2. Click **Generate new token**.
-          3. Confirm your password if prompted.
-          4. Enter a token description, such as "pantheon read my custom upstream"
-          5. Select "repo" as the scope:
+              ![GitHub Upstream Authentication](/source/docs/assets/images/dashboard/create-upstream-auth-gh.png)
 
-            ![GitHub generate token](/source/docs/assets/images/github-token.png)
+            For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
-          6. Click **Generate token** and copy the new token to your clipboard.
-          7. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
-          8. Paste your new GitHub access token.
-          </div>
-          <div role="tabpanel" class="tab-pane" id="bb-auth" markdown="1">
+            1. Go to GitHub to [generate a personal access token](https://github.com/settings/tokens).
+            2. Click **Generate new token**.
+            3. Confirm your password if prompted.
+            4. Enter a token description, such as "pantheon read my custom upstream"
+            5. Select "repo" as the scope:
+
+                ![GitHub generate token](/source/docs/assets/images/github-token.png)
+
+            6. Click **Generate token** and copy the new token to your clipboard.
+            7. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
+            8. Paste your new GitHub access token.
+
+      * **Framework**: Drupal 7, Drupal 8, or WordPress
+      * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+
+
+  4. Click **Create**.
+  </div>
+  <div role="tabpanel" class="tab-pane" id="bb-https" markdown="1">
+  1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization:
+
+    ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
+
+  2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+  3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
+  4. Enter the following information about the Custom Upstream:
+
+      * **Name**
+      * **Upstream Repository URL**:
+
+            ![Bitbucket HTTPS Repo URL](/source/docs/assets/images/bitbucket-https-url.png)
+
+      * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
+
+        ![BitBucket Upstream Authentication](/source/docs/assets/images/dashboard/create-upstream-auth-bb.png)
+
+        For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
+
           1. Go to Bitbucket to generate an [app password](https://bitbucket.org/account/admin/app-passwords).
           2. Click **Create app password**.
           3. Enter a label and select the `"Repositories:Read"` permission:
@@ -195,13 +246,24 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
           4. Click **Create** and copy the new password.
           5. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
           6. The username field should already be populated, based on the repository URL. Paste your new Bitbucket app password.
-          </div>
-        </div>
 
-    * **Framework**: Drupal 7, Drupal 8, or WordPress
-    * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+      * **Framework**: Drupal 7, Drupal 8, or WordPress
+      * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
-4. Click **Create**.
+  4. Click **Create**.
+  </div>
+<div role="tabpanel" class="tab-pane" id="gitlab-https" markdown="1">
+Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
+
+1. Prepare a GitLab user with at least **Reporter** level permissions for your upstream repository.
+
+    ![GitLab reporter permission](/source/docs/assets/images/gitlab-reporter.png)
+
+2. [Contact support](/docs/support) to add the custom upstream to your org. You must provide a username/password or OAuth token.
+</div>
+</div>
+
+
 ## Edit Existing Custom Upstream Settings
 If you would like to change the name or description of your Custom Upstream:
 
