@@ -43,7 +43,6 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 
 |                                                                       | Legacy                    | Global CDN with Let's Encrypt   |
 |:--------------------------------------------------------------------- |:------------------------- |:------------------------------- |
-| **Price**                                                             | $60/month per environment | Free                            |
 | **Certificate Type**                                                  | Bring your own            | Shared, issued by Let's Encrypt |
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
