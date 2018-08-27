@@ -192,21 +192,28 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
             ![GitHub HTTPS Repo URL](/source/docs/assets/images/github-https-url.png)
 
+
+          * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
+
+              ![GitHub Upstream Authentication](/source/docs/assets/images/dashboard/create-upstream-auth-gh.png)
+
+            For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
+
+            1. Go to GitHub to [generate a personal access token](https://github.com/settings/tokens).
+            2. Click **Generate new token**.
+            3. Confirm your password if prompted.
+            4. Enter a token description, such as "pantheon read my custom upstream"
+            5. Select "repo" as the scope:
+
+                ![GitHub generate token](/source/docs/assets/images/github-token.png)
+
+            6. Click **Generate token** and copy the new token to your clipboard.
+            7. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
+            8. Paste your new GitHub access token.
+
       * **Framework**: Drupal 7, Drupal 8, or WordPress
       * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
-      * **Authenticate (private repositories only)**: For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
-          1. Go to GitHub to [generate a personal access token](https://github.com/settings/tokens).
-          2. Click **Generate new token**.
-          3. Confirm your password if prompted.
-          4. Enter a token description, such as "pantheon read my custom upstream"
-          5. Select "repo" as the scope:
-
-            ![GitHub generate token](/source/docs/assets/images/github-token.png)
-
-          6. Click **Generate token** and copy the new token to your clipboard.
-          7. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
-          8. Paste your new GitHub access token.
 
   4. Click **Create**.
   </div>
@@ -224,9 +231,11 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
             ![Bitbucket HTTPS Repo URL](/source/docs/assets/images/bitbucket-https-url.png)
 
-      * **Framework**: Drupal 7, Drupal 8, or WordPress
-      * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
-      * **Authenticate (private repositories only)**: For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
+      * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
+
+        ![BitBucket Upstream Authentication](/source/docs/assets/images/dashboard/create-upstream-auth-bb.png)
+
+        For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
           1. Go to Bitbucket to generate an [app password](https://bitbucket.org/account/admin/app-passwords).
           2. Click **Create app password**.
@@ -237,6 +246,9 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
           4. Click **Create** and copy the new password.
           5. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
           6. The username field should already be populated, based on the repository URL. Paste your new Bitbucket app password.
+
+      * **Framework**: Drupal 7, Drupal 8, or WordPress
+      * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
   4. Click **Create**.
   </div>
