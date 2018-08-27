@@ -79,6 +79,8 @@ Next, you will need to modify `composer.json`.
 * Remove all dependencies in the `require-dev` section.
 * Update the `scripts` section to remove the `lint`, `code-sniff`, and `unit-test` lines.
 * Remove the `"find .circleci/scripts/pantheon/ -type f | xargs chmod 755",` line from the `post-update-cmd` section of `scripts`.
+* Remove the `"find tests/scripts/ -type f | xargs chmod 755"` line from the `post-update-cmd` section of `scripts`.
+    * You will may need to remove a trailing comma from the end of the last item in the `post-update-cmd` section, otherwise the JSON will be invalid.
 
 ## Managing Drupal with Composer
 
