@@ -156,7 +156,7 @@ Plugins like [Cache Control](https://wordpress.org/plugins/cache-control/){.exte
 
 ## Basic Authentication
 
-If you're using the Environment Access: Locked security setting on a site environment, The Global CDN will not cache your content.
+If you're using the Environment Access: Locked security setting on a site environment, the Global CDN will not cache your content.
 
 ## Cookie Handling
 
