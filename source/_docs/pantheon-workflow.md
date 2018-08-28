@@ -24,7 +24,7 @@ Code refers to anything version controlled by Git which includes core, custom an
 {% include("content/code.html")%}
 
 ### Content
-Content refers to your sites files and the database. In this context, files are static images and assets stored in the standard upload path `wp-content/uploads` for WordPress and `sites/all/default/files` for Drupal.
+Content refers to your sites files and the database. In this context, files are static images and assets stored in the standard upload path `wp-content/uploads` for WordPress and `sites/default/files` for Drupal.
 
 ## Code Moves Up, Content Moves Down
 <img src="/source/docs/assets/images/workflow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">
