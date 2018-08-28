@@ -36,7 +36,7 @@ This issue can happen with HTTP Basic Auth and Drupal’s AJAX, as it doesn't al
 We recommend disabling Basic Auth to see if it works, and then re-enabling it. However, if it is possible to ensure those headers are always passed for JS files, that is the best solution.
 
 ### Pantheon 502 Bad Gateway
-"There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, Nginx, the web server will report this problem.
+"There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, Nginx (the web server) will report this problem.
 
 ### Pantheon 502 Routing failure
 "Page Could Not Be Loaded. The request could not be completed due to a networking failure. Contact support if this issue persists." This means an internal networking issue has occurred with Styx, Pantheon's routing mesh.
