@@ -210,7 +210,7 @@ terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
     composer update drupal/core --with-dependencies
     ```
 
-    `--with-dependencies` is necessary when explicitly updating only Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
+  `--with-dependencies` is necessary when explicitly updating only Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
 
 2. After Composer updates successfully, push the code back to Pantheon via Git or SFTP
 
