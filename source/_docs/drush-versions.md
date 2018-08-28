@@ -4,7 +4,7 @@ description: Learn about Pantheon's default Drush version and how to implement s
 tags: [devdrush, services, pantheonyml]
 categories: [drupal]
 ---
-By default, Pantheon runs Drush 8 on newly created Drupal sites.
+By default, Pantheon runs Drush 8 on newly created Drupal sites. Drush 8 is compatible with Drupal 6, 7, and 8.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
