@@ -121,7 +121,7 @@ Your first visit to New Relic must be via the **Go to New Relic** button. Once y
 To troubleshoot this issue, try logging into the Pantheon Dashboard in an [Incognito](https://support.google.com/chrome/answer/95464){.external} or [Private](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history){.external} window. The New Relic accounts are shared via SSO, so loading the page in a private window will force new sign-in credentials. If you can sign in this way, use the following steps to resolve access for your main browser session:
 
 1. Close all of your open New Relic tabs.
-2. Delete all of the New Relic cookies from your browser.
+2. Delete all of the New Relic cookies from your browser (support articles for [Chrome](https://support.google.com/chrome/answer/95647){.external} or [Firefox](https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored#w_delete-cookies-for-a-single-site){.external}).
 3. Reload your Pantheon Dashboard.
 4. Click the **Go to New Relic** button.
 
