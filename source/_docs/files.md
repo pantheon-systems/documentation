@@ -6,8 +6,9 @@ categories: []
 ---
 Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files:
 
-- [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
-- [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore)
+- [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore){.external}
+- [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore){.external}
+- [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore){.external}
 
 The Pantheon architecture is comprised of highly available [application containers](/docs/application-containers/) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
