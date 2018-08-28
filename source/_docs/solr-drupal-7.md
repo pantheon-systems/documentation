@@ -123,12 +123,14 @@ The following are Pantheon-specific variables that you can check for, depending 
 
 Keep in mind that newly indexed items have a 2-minute delay until cron has been run or manually indexed before they become available in Solr search.
 
-####apachesolr.module
+{% include("content/solr-commit-changes.html") %}
+
+#### apachesolr.module
 If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](https://github.com/pantheon-systems/cl):
 ```bash
 terminus drush <site>.<env> -- vget apachesolr_service_class
 ```
-####search_api_solr.module
+#### search_api_solr.module
 If you are using search_api_solr.module, you can check it with the command:
 ```bash
 terminus drush <site>.<env> -- vget search_api_solr_connection_class

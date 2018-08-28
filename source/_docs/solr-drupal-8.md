@@ -92,6 +92,8 @@ To actually search your index you will need a module like [Search API Pages](htt
 ## Solr Versions and Schemas
 Currently, the version of Solr on Pantheon is Apache Solr v3.6. Officially, the lowest supported version of Solr in Search API Solr is Solr 4. [Pantheon will soon offer a higher version of Solr](https://www.drupal.org/node/2775595). Until then, you can use the schema for Solr 4 that Search API Pantheon provides.
 
+{% include("content/solr-commit-changes.html") %}
+
 ## Force Reposting of Schema File on Pantheon Environments
 Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr server. So indexing and searching in one environment does not impact any other environment. Currently, the schema file must be reposted to each environment's Solr server. To do so, re-save the search server (e.g. `/admin/config/search/search-api/server/pantheon/edit`).
 
