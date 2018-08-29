@@ -16,6 +16,8 @@ Terminus is available for Mac OS X and Linux
 
 Some Windows users have installed Terminus using [Git BASH on Git for Windows](https://git-for-windows.github.io/){.external}, or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){.external}, but this is unsupported.
 
+Because some Terminus command use SSH authentication, consider [generating and adding SSH keys](/docs/ssh-keys/) to your account before you continue.
+
 ## Requirements
 
 * PHP Version 5.5.38 or later (must include the [php-xml extension](https://secure.php.net/manual/en/dom.setup.php)). You can check your PHP version by running `php -v` from a terminal application.
@@ -30,9 +32,11 @@ Some Windows users have installed Terminus using [Git BASH on Git for Windows](h
   <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
 </div>
 
-See [Troubleshooting](#troubleshooting) if your installation fails.
+See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation){.external} section of the Terminus README file on GitHub for advanced installation methods.
 
 ## Authenticate
+
+### Machine Token
 Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/docs/machine-tokens).
 
 First, [create a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from **User Dashboard** > **Account** > **Machine Tokens**.
@@ -48,7 +52,9 @@ First, [create a Machine Token](https://dashboard.pantheon.io/login?destination=
   <figure><pre id="mac-mt-login"><code class="command bash" data-lang="bash">terminus auth:login --email=dev@example.com</code></pre></figure>
 </div>
 
-See the [Installation](https://github.com/pantheon-systems/terminus#installation){.external} section of the Terminus README file on GitHub for advanced installation methods.
+### SSH Authentication
+
+Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/docs/ssh-keys/) to prevent password requests when executing these commands.
 
 ## Troubleshooting
 ### Permission Denied
