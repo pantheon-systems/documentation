@@ -14,7 +14,7 @@ For more information on the announcement of new plans, see [this related blog po
   <dt>List Price</dt>
     <dd>Set price for new sites created after August 1st that aren’t purchased via a qualified agency partner.</dd>
   <dt>Preferred Price</dt>
-    <dd>Introductory price available to the general public until late September, after which it will be exclusively available via qualified agency partners.</dd>
+    <dd>Introductory price available to the general public until early October, after which it will be exclusively available via qualified agency partners.</dd>
 </dl>
 
 | Plan                 | Preferred Price | List Price  |
@@ -63,10 +63,10 @@ All existing sites will have preferred pricing locked in for the plan they migra
 ### Are legacy plans still available?
 No new sites can be created on legacy plans outside of existing contracted agreements. The legacy plans are no longer available for purchase online.
 
-### Will I be able to keep preferred pricing after August 1st?
-All existing sites as of September (legacy & new) will lock in preferred pricing as long as they are on that plan, regardless of whether they are associated with a qualified agency partner.
+### Will I be able to keep preferred pricing after September 1st?
+All existing sites as of September (legacy & new) will lock in preferred pricing, regardless of whether they are associated with a qualified agency partner.
 
-In September all new online site plan purchases will be at list price unless purchased through a qualified agency.
+In October all new online site plan purchases will be at list price unless purchased through a qualified agency.
 
 ### What action do I need to take on existing sites?
 No action is required. Existing sites will automatically switch to the equivalent plan with preferred pricing locked in August. There is no downtime or maintenance window associated with this change.
