@@ -64,7 +64,7 @@ All existing sites will have preferred pricing locked in for the plan they migra
 No new sites can be created on legacy plans outside of existing contracted agreements. The legacy plans are no longer available for purchase online.
 
 ### Will I be able to keep preferred pricing after September 1st?
-All existing sites as of September (legacy & new) will lock in preferred pricing as long as they are on that plan, regardless of whether they are associated with a qualified agency partner.
+All existing sites as of September (legacy & new) will lock in preferred pricing, regardless of whether they are associated with a qualified agency partner.
 
 In October all new online site plan purchases will be at list price unless purchased through a qualified agency.
 
