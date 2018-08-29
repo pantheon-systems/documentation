@@ -25,7 +25,7 @@ Before we begin choose a machine-friendly site name. It should be all lower case
 export PANTHEON_SITE_NAME="d8-composer-no-ci"
 ```
 
-You should also be authenticated with Terminus. See the [Authenticate into Terminus](https://pantheon.io/docs/machine-tokens/#authenticate-into-terminus) section of the [machine tokens documentation](https://pantheon.io/docs/machine-tokens) for details.
+You should also be authenticated with Terminus. See the [Authenticate into Terminus](/docs/machine-tokens/#authenticate-into-terminus) section of the [machine tokens documentation](/docs/machine-tokens) for details.
 
 Create a new Pantheon site with an empty upstream.
 
