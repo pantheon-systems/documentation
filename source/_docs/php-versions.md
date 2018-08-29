@@ -80,7 +80,7 @@ Modify `pantheon.yml` until valid and commit the fix before attempting to push a
 
 <div markdown="1" class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">As of this writing, deploying to the test or live environments with `git tag` will not trigger the PHP upgrade because the pantheon.yml changes are not detected using this method. Instead you must use the Pantheon's workflow and dashboard to promote and trigger the changes from DEV to TEST to LIVE.</p>
+<p markdown="1">Changes to `pantheon.yml` [deployed as hotfixes](/docs/pantheon-yml#deploying-hotfixes) are not detected.</p>
 </div>
 
 #### SFTP Mode
