@@ -23,6 +23,10 @@ We offer various methods for you to interact with your Pantheon site, so it is i
 
 ## Troubleshooting
 
-#### Spam and Failed Logins
+### Cloudflare
+
+When using Cloudflare as a stacked CDN or proxy, use the variable `$SERVER["HTTP_CF_CONNECTING_IP"]` instead of `$_SERVER["REMOTE_ADDR"]`.
+
+### Spam and Failed Logins
 
 Drupal manages the thresholds for spam and flood detection using configuration variables you can set via settings.php. There are also modules such as [flood control](https://drupal.org/project/flood_control) that will give you more flexibility and allow you to manage the thresholds via the Drupal admin.
