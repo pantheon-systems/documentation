@@ -25,6 +25,8 @@ Before we begin choose a machine-friendly site name. It should be all lower case
 export PANTHEON_SITE_NAME="d8-composer-no-ci"
 ```
 
+You should also be authenticated with Terminus. See the [Authenticate into Terminus](/docs/machine-tokens/#authenticate-into-terminus) section of the [machine tokens documentation](/docs/machine-tokens) for details.
+
 Create a new Pantheon site with an empty upstream.
 
 ```bash
@@ -210,7 +212,7 @@ terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
     composer update drupal/core --with-dependencies
     ```
 
-    `--with-dependencies` is necessary when explicitly updating only Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
+  `--with-dependencies` is necessary when explicitly updating only Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
 
 2. After Composer updates successfully, push the code back to Pantheon via Git or SFTP
 
