@@ -118,7 +118,7 @@ Please allow two business days to get a CSR and load the certificate.
 
 ### What about new Enterprise sites or sites purchased online?
 
-Custom certificates are currently available to customers with a Pantheon contract using Legacy SSL. We have no current plans to offer it to new sites or Basic or Performance sites. If you are interested in using a custom certificate, however, please [let us know](https://learn.pantheon.io/201806-Custom-Cert-Reg.html){.external}.
+Custom certificates are currently available to customers with a Pantheon contract using Legacy SSL. We have no current plans to offer it to new sites or Basic or Performance sites. If you are interested in using a custom certificate, however, please [let us know while we are still gathering interest](https://learn.pantheon.io/201806-Custom-Cert-Reg.html){.external}. If bringing your own certificate is an immediate requirement, please see the suggestions [here](https://pantheon.io/docs/https/#can-i-bring-my-own-certificate).
 
 ### Will custom certificates be self-serve?
 
