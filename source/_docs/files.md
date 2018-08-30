@@ -31,7 +31,11 @@ When you are logged in to your application container, you may notice some files 
 
 ### Migrated WordPress sites errors
 
-The [Pantheon WordPress upstream](https://github.com/pantheon-systems/WordPress){.external} uses the default Media Upload path (`wp-content/uploads`). Using any other path will result in errors. 
+The [Pantheon WordPress upstream](https://github.com/pantheon-systems/WordPress){.external} uses the default Media Upload path (`wp-content/uploads`). Using any other path will result in errors.
+
+### Simultaneous SFTP Connections
+
+Pantheon does not support simultaneous SFTP connections. To avoid errors, set your SFTP client to use no more than 1 simultaneous conection.
 
 ### Unable to create directory <path-to-folder>. Is the parent directory writable by the server?
 
@@ -40,4 +44,3 @@ Sites migrated from other hosts may have custom or absolute paths in the "Store 
 1. In the WordPress Admin Dashboard and go to **Settings > Media** (`/wp-admin/options-media.php`)
 2. Go to **Uploading Files > Store uploads in this folder** and update the field to contain `wp-content/uploads` only.
 3. Optional: Ensure there is no defined setting in `wp-config.php` i.e.; `define(‘UPLOADS’, ‘wp-content/myimages’);`.
-
