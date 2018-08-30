@@ -113,6 +113,12 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
        $config['environment_indicator.indicator']['bg_color'] = '#4C742C';
        $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
        break;
+     default:
+       // Multidev catchall 
+       $config['environment_indicator.indicator']['name'] = 'Multidev';
+       $config['environment_indicator.indicator']['bg_color'] = '#efd01b';
+       $config['environment_indicator.indicator']['fg_color'] = '#000000';
+       break;  
    }
 }</code></pre>
   </div>
@@ -144,6 +150,12 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
          $conf['environment_indicator_overwritten_color'] = '#4C742C';
          $conf['environment_indicator_overwritten_text_color'] = '#ffffff';
          break;
+       default:
+         //Multidev catchall
+         $conf['environment_indicator_overwritten_name'] = 'Multidev';
+         $conf['environment_indicator_overwritten_color'] = '#efd01b';
+         $conf['environment_indicator_overwritten_text_color'] = '#000000';
+         break;      
      }
 }</code></pre>
   </div>
