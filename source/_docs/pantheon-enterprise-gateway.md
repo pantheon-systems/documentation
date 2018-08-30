@@ -70,10 +70,10 @@ WordPress and Drupal both work with the Pantheon Enterprise Gateway. If you’re
 
 ### Does the Pantheon Enterprise Gateway work from all site environments?
 
-Yes, it's configured on a site-by-site basis and works from all environments (Dev, Test, Live, and Multidev). 
+Yes, it's configured on a site-by-site basis and works from all environments (Dev, Test, Live, and Multidev).
 
 ### Does the Pantheon Enterprise Gateway support connections to multiple external resources?
-The PEG connects to the same external resource from all environments. If you need to connect to a separate resource or test against a “test” version of the external resource, you would need an additional PEG configured for that. It would be available to all environments.
+The PEG connects to the same external resource from all environments. If you need to connect to a separate resource, or test against a “test” version of the external resource, you will need an additional PEG configured to point to that resource. The additional PEG would be available to all environments.
 
 ### Is Pantheon Enterprise Gateway a replacement for authentication?
 
