@@ -50,13 +50,13 @@ If you do not have an existing bucket for your site, create one:
 ## Integrate S3 with WordPress
 You will need to install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload S3](https://deliciousbrains.com/wp-offload-s3/){.external}.
 
-WP Offload S3 requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features with multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/docs/terminus) and [WP-CLI](/docs/wp-cli) for setup and migration.
+WP Offload S3 requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/docs/terminus) and [WP-CLI](/docs/wp-cli) for setup and migration.
 
 ### Install and Deploy S3 Uploads
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p markdown="1"This plugin currently conflicts with [Solr Power](https://wordpress.org/plugins/solr-power/){.external}, our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80){.external}.</p>
+  <p markdown="1">This plugin currently conflicts with [Solr Power](https://wordpress.org/plugins/solr-power/){.external}, our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80){.external}.</p>
 </div>
 
 1. Download the latest plugin release from [Github](https://github.com/humanmade/S3-Uploads/releases){.external} and extract it to `wp-content/plugins/`. Note that our documentation has been tested for version 2.0.0.
@@ -106,7 +106,7 @@ Optionally, add the `--delete-local` flag to remove the local copies of the medi
 Upon succesful migration, this command will also provide a search/replace command for your database to update references to the newly-migrated files. Note that you will need to run this on all Pantheon environments (dev/test/live).
 
 #### Multisite compatibility
-  This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads/pull/214). If you need an alternative plugin with premium support and a multisite version, please consider [WP Offload s3](#install-and-deploy-wp-offload-s3).
+  This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads/pull/214){.external}. If you need an alternative plugin with premium support and a multisite version, consider [WP Offload s3](#install-and-deploy-wp-offload-s3).
 
 #### Further configuration
 Check out the plugin's [README file](https://github.com/humanmade/S3-Uploads/blob/master/README.md){.external} for information on advanced configuration, such as cache control, URL rewriting and offline development.
