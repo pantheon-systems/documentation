@@ -27,6 +27,18 @@ We offer various methods for you to interact with your Pantheon site, so it is i
 
 When using Cloudflare as a stacked CDN or proxy, use the variable `$SERVER["HTTP_CF_CONNECTING_IP"]` instead of `$_SERVER["REMOTE_ADDR"]`.
 
+#### Drupal Domain Access module with Cloudflare
+
+When using Cloudflare in combination with the Domain Access module, the user's IP address will get cached by the `ip_address()` function incorrectly very early during the bootstrap process. To correct this you can add similar code to your `settings.php` file above where you include the Domain Access module's `settings.inc` file.
+
+```
+if (!empty($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+  $_SERVER['REMOTE_ADDR'] = $_SERVER['HTTP_CF_CONNECTING_IP'];
+  $_SERVER['HTTP_X_FORWARDED_FOR'] = ", {$_SERVER['REMOTE_ADDR']}";
+  ip_address();
+}
+```
+
 ### Spam and Failed Logins
 
 Drupal manages the thresholds for spam and flood detection using configuration variables you can set via settings.php. There are also modules such as [flood control](https://drupal.org/project/flood_control) that will give you more flexibility and allow you to manage the thresholds via the Drupal admin.
