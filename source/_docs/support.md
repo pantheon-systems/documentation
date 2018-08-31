@@ -11,7 +11,7 @@ The majority of Pantheon's support is provided in the context of a particular we
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
   <li role="presentation" class="active"><a href="#sites" aria-controls="sites" role="tab" data-toggle="tab">Pay-per-site</a></li>
-  <li role="presentation"><a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">Agencies & Organizations</a>
+  <li role="presentation"><a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">Agencies & Organizations (Legacy)</a>
 </li>
 <li role="presentation"><a href="#plans" aria-controls="plans" role="tab" data-toggle="tab">New Support Plans</a>
 </li>
@@ -85,10 +85,7 @@ The ticket support feature is available to certain plans and account types. For 
 5. Click **Open Ticket**
 
 ## Pantheon On-Call
-Elite sites and organizations who opt for [Priority Enterprise Support](#priority-enterprise-support) can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
-
-## Priority Enterprise Support
-Priority Enterprise Support is a blanket support plan which can be purchased for any organization. It covers all team members and sites, adding the ability to trigger Pantheon's on-call emergency system described above. [Learn more](https://pantheon.io/priority-enterprise-support).
+Elite sites can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Scope of Support
 
