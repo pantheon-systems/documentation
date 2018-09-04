@@ -78,6 +78,11 @@ remote: >   8.0 is not one of [5.3, 5.5, 5.6, 7.0]
 
 Modify `pantheon.yml` until valid and commit the fix before attempting to push again.
 
+<div markdown="1" class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Changes to `pantheon.yml` [deployed as hotfixes](/docs/pantheon-yml#deploying-hotfixes) are not detected.</p>
+</div>
+
 #### SFTP Mode
 
 When you upload a new or modified `pantheon.yml` file in SFTP mode, your site dashboard will detect the changes:
