@@ -147,7 +147,7 @@ If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and 
 v=spf1 include:spf.pantheon.io -all
 ```
 
-Adjust the above example records as needed for your domain; be sure that you are configuring the SPF record for the domain that your site in its `From` address. If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged. To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd party mail systems** text box.
+Adjust the above example records as needed for your domain; be sure that you are configuring the SPF record for the domain that your site is set up to use in the `From` address of outgoing messages. If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged. To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd party mail systems** text box.
 
 ### Why does my Gmail user name and password not work?
 
