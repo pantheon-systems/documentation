@@ -80,7 +80,7 @@ Yes! HTTPS is terminated at the CDN edge and traffic is encrypted all the way to
 ### Will HTTPS be available for my site throughout the upgrade process?
 Yes! As long as you are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
 
-Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/configure-dns/) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
+Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
 <div class="alert alert-info" markdown="1">
 <h4 class="info">Note</h4>
