@@ -140,9 +140,14 @@ No, mail logs are not available for download and we do not recommend using the l
 ### What ports are recommended by Pantheon?
 Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. Make sure that your service provider allows traffic on a port other than those mentioned and that you have correctly configured your site to use that port.
 
-### Can Pantheon provide, publish, or support SPF records?
+### Are there SPF records for Pantheon's local MTA (postfix)?
+If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an SPF record, then you should include Pantheon's SPF record, as shown below:
 
-As consumers of cloud infrastructure, we don’t have control over our IP ranges and they are subject to change without our notice. Publishing an SPF record would imply assurance on our end that it can work, which would be very difficult to guarantee given these circumstances. We take the decision of what we support and what we don’t very seriously, and at this time we’re not in a position to support SPF records.
+```
+v=spf1 include:spf.pantheon.io -all
+```
+
+Adjust the above example records as needed for your domain. Add the `include:spf.pantheon.io` to your existing record, keeping the rest unchanged. To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com), and enter `spf.pantheon.io` in the **3rd party mail systems** text box.
 
 ### Why does my Gmail user name and password not work?
 
