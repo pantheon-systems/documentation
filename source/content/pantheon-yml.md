@@ -37,6 +37,23 @@ protected_web_paths:
 * You may not be able to protect files or paths with special characters
 * Wait a few seconds for changes to take effect
 
+### HTTPS Redirects with HSTS Headers
+Ensure that your site will always use https to deliver content with `scheme`. Three values are available:
+
+- `any` (default: no https redirect)
+- `https` (Redirects to https and includes an HSTS header with a 5-minute duration)
+- `hsts` (Redirects to https and includes an HSTS header with a 366-day duration)
+
+The preferred `hsts` configuration is shown below:
+```yaml
+scheme: hsts
+```
+
+#### Considerations
+* Ensure your site is ready to serve all content via HTTPS as described on the documentation page [Switching Sites from HTTP to HTTPS](docs/http-to-https).
+* Test with a short-duration HSTS header before selecting the long-duration HSTS header.
+* Using a long-duration HSTS header is required to obtain an A+ ratings from SSL Labs.
+
 ### Nested Docroot
 Nest your docroot one level beneath your code repository in a directory named `web`:
 
