@@ -54,7 +54,7 @@ In the commands below, replace `site` and `env` with your site name and the corr
 8.  `open live-mysite.pantheonsite.io`
 
 ## Configuration Tools for Drupal 8
-With [Drupal 8](https://pantheon.io/drupal-8), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra){.external}, includes a `config-merge` command that streamlines the use of these tools.
+With [Drupal 8](https://pantheon.io/drupal-8){.external}, much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra){.external}, includes a `config-merge` command that streamlines the use of these tools.
 
 ## Config Direct Save Module
 If you prefer to use a GUI to manage configuration management, try the Config Direct Save Module, available on [Drupal.org](https://www.drupal.org/project/config_direct_save){.external}. Activating this module creates a new **Update** menu option under your configuration menu. This module can make backups of configurations (when you check the backup check box) and override the sync (all files with old configuration) by the new configurations (replace all configurations files).
@@ -104,4 +104,4 @@ Relocate the configuration directory for the default location using `git mv`:
 $ git mv web/sites/default/files/config .
 ```
 
-For additional details, see [this blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root).
+For additional details, see [this blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root){.external}.
