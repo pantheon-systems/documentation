@@ -1,6 +1,7 @@
 ---
 title: Quick Start
 subtitle: Create New Site
+description: In part three of our Quick Start guide, learn how to create your new Pantheon site.
 quickstart: true
 anchorid: create-new-site
 generator: pagination

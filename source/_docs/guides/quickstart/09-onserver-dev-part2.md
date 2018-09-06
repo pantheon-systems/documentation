@@ -1,6 +1,7 @@
 ---
 title: Quick Start
 subtitle: On-Server Dev, Part 2
+description: Continued discussion of on-server development on Pantheon
 quickstart: true
 anchorid: onserver-dev-part2
 generator: pagination
@@ -23,7 +24,7 @@ In this lesson, we’re going to edit code directly. We’ll commit our edits to
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p>To complete this lesson, you need a basic understanding of CSS. If necessary, ask a colleague for help, or feel free to skip this lesson altogether.  
+<p>To complete this lesson, you need a basic understanding of CSS. If necessary, ask a colleague for help, or feel free to skip this lesson altogether.
 </p></div>
 
 If you haven’t added a new theme to your site, please return to the [previous lesson](/docs/guides/quickstart/onserver-dev-part1) and do so now.
@@ -44,7 +45,7 @@ If you haven’t added a new theme to your site, please return to the [previous 
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p markdown="1">Click the highlighted file changes in the Dev environment, and you can view the specific diff.  
+    <p markdown="1">Click the highlighted file changes in the Dev environment, and you can view the specific diff.
     </p></div>
 
 7. Add a commit message, then click **Commit** to add these files to your Dev environment.
