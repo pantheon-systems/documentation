@@ -1,6 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Final Checklist
+description: Part seven of our Launch Essentials guide covers the next steps to take after your site goes live.
 launch: true
 survey: true
 anchorid: launch-check

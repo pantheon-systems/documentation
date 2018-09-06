@@ -1,6 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Redirect for SEO and Security
+description: Part five of our Launch Essentials guide covers redirecting users to the proper domains and paths.
 launch: true
 anchorid: redirects
 generator: pagination
