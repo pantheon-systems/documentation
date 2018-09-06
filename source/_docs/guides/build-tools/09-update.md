@@ -1,6 +1,7 @@
 ---
 title: Build Tools
 subtitle: Update Your Project
+description: In step nine of the Build Tools guide, learn how to update your site as part of the continuous integration process.
 buildtools: true
 anchorid: update
 generator: pagination
@@ -36,7 +37,7 @@ In this lesson, we'll take a closer look at how to update dependencies in a Comp
     </p>
    </div>
  </div>
-</div>   
+</div>
 
 
 ## Update Core
