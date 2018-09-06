@@ -1,6 +1,7 @@
 ---
 title: Terminus Manual
 subtitle: Command Reference
+description: Look up Terminus commands.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
@@ -27,7 +28,7 @@ If you would like additional information for a given command (e.g., available `-
         <div style="background:#fff;cursor:pointer;" ng-click="clearFilters()" class="input-group-addon">
         <span class="fa fa-times"></span>
         </div>
-      </div>      
+      </div>
     </div>
   </form>
   <table class="table table-responsive table-bordered table-striped">

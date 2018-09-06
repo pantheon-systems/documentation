@@ -1,6 +1,7 @@
 ---
 title: Terminus Manual
 subtitle: Install
+description: Learn how to install Terminus to your local computer.
 terminusinstall: true
 terminuspage: true
 terminustoc: true

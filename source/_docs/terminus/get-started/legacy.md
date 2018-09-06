@@ -1,6 +1,7 @@
 ---
 title:  Terminus Manual
 subtitle: Legacy Terminus Versions
+description: Pantheon strongly encourages Terminus users to keep their local installations updated to the current version. This document covers issues with legacy versions of Terminus.
 terminuslegacy: true
 terminuspage: true
 type: terminuspage
@@ -31,7 +32,7 @@ searchboost: 50
         <div style="background:#fff;cursor:pointer;" ng-click="clearFilters()" class="input-group-addon">
         <span class="fa fa-times"></span>
         </div>
-      </div>      
+      </div>
     </div>
   </form>
   <table class="table table-responsive table-bordered table-striped">
