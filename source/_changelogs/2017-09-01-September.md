@@ -1,6 +1,7 @@
 ---
 title: September 2017
 changelog: true
+description: September changelog updates.
 ---
 
 ## Platform Improvements
@@ -29,4 +30,3 @@ Learn how to ace an online speed test with Pantheon's Global CDN.
 
 
 [Style Guide](/docs/style-guide)
-
