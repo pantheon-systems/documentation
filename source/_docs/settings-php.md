@@ -195,3 +195,9 @@ Could not find a Drupal settings.php file at ./sites/default/settings.php
 ```
 
 To resolve, add a default or empty `sites/default/settings.php` to your site's code.
+
+#### Error: "The provided host name is not valid for this server."
+
+This error comes from a feature in Drupal 8 designed to protect against [HTTP HOST Header attacks](https://www.drupal.org/node/1992030). Drupal 8 allows you to specify "trusted host patterns," which specify a set of domains that incoming requests must match. 
+
+If you see this error, you need to update your trusted host patterns in `settings.php` and add your new domain(s) to the `$settings['trusted_host_patterns']` array.
