@@ -163,7 +163,7 @@ This will create a new branch with the commit history intact. From the Multidev 
 
 ## Frequently Asked Questions (FAQs)
 
-### How can I get Multidev and how much is does it cost?
+### How can I get Multidev and how much does it cost?
 
 All Organizations and Agencies have [Multidev for all Sites](/docs/organizations/#multidev-for-all-sites). It is not available as an add-on to other plans.
 
