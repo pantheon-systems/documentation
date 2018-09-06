@@ -50,7 +50,7 @@ scheme: hsts
 ```
 
 #### Considerations
-* Ensure your site is ready to serve all content via HTTPS as described on the documentation page [Switching Sites from HTTP to HTTPS](docs/http-to-https).
+* Ensure your site is ready to serve all content via HTTPS as described on the documentation page [Switching Sites from HTTP to HTTPS](/docs/http-to-https).
 * Test with a short-duration HSTS header before selecting the long-duration HSTS header.
 * Using a long-duration HSTS header is required to obtain an A+ ratings from SSL Labs.
 
