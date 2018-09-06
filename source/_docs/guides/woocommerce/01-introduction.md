@@ -1,7 +1,7 @@
 ---
 title: WooCommerce Quick Start
 subtitle: Introduction
-description: The Quick Start guide is designed to get you started on Pantheon.
+description: This guide covers how to quickly spinup a new WooCommerce site on Pantheon.
 tags: [woocommerce]
 contributors: [BFTrick]
 featuredcontributor: true
