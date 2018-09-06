@@ -14,7 +14,7 @@ searchboost: 100
 ---
 Terminus is available for Mac OS X and Linux
 
-Some Windows users have installed Terminus using [Git BASH on Git for Windows](https://git-for-windows.github.io/){.external}, or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){.external}, but this is unsupported.
+Some Windows users have installed Terminus using [Git BASH on Git for Windows](https://git-for-windows.github.io/){.external}, or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){.external}, but this is unsupported. You can also use [Cygwin on Windows](/docs/cygwin-windows/).
 
 Because some Terminus command use SSH authentication, consider [generating and adding SSH keys](/docs/ssh-keys/) to your account before you continue.
 
