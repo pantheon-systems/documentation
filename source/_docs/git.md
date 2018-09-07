@@ -164,6 +164,15 @@ To configure this URL in SourceTree simply remove the `git clone` and the traili
 
 Alternatively, you can simply clone the repository using the `git clone` and then use the "Add Existing Local Repository" option in SourceTree to point to the checked out directory.
 
+### Blocked port
+
+If your local network is blocking port 2222, you'll see an error like this when attempting to run `git clone`, `git push`, or `git pull`:
+
+`ssh: connect to host codeserver.dev.xxx.drush.in port 2222: Operation timed out
+fatal: Could not read from remote repository.`
+
+To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround[(/docs/port-2222/).
+
 ## Additional Resources
 
 For further learning, we recommend the following resources:
