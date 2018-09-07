@@ -4,15 +4,23 @@ description: Enforce HTTPS communications on supported browsers using the HTTP S
 tags: [security]
 ---
 
+<<<<<<< HEAD
 Pantheon can now automatically redirect all traffic to HTTPS, and set the HTTP Strict Transport Security (HSTS) header to standardize all client connections on HTTPS and prevent use of HTTP. This security feature can increase your SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/){.external}, and will also help protect your website against protocol downgrade attacks and cookie hijacking.
 
 ## Configure HSTS Through the `pantheon.yml` File
 
 {% include("content/hsts.html") %}
 
+=======
+>>>>>>> Improve the note in the HSTS section
 ## Deploy and Configure a HSTS Header by Module or Plugin
 <div class="alert alert-info">
 <h4 class="info">Note</h4><p markdown="1">Manual configuration of the HSTS header using modules, as described in this section, should rarely be necessary. Instead, you should set the `enforce_https` setting in your `pantheon.yml` file as described above, which will apply these headers automatically. If for some reason you need more flexibility than provided by the built-in feature, then you may use the module or plugin below to configure the exact values you need.
+</p>
+</div>
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4><p markdown="1">Manual configuration of the HSTS header using modules, as described in this section, should rarely be necessary. Instead, you should set the [`scheme` setting in your pantheon.yml file](https://pantheon.io/docs/pantheon-yml/), which will apply these headers automatically. If for some reason you need more flexibility than provided by the built-in feature, then you may use the module or plugin below to configure the exact values you need.
 </p>
 </div>
 
