@@ -127,6 +127,13 @@ scheme: https
 ```
 scheme: hsts
 ```
+
+Pantheon will send the following header based on the setting of _scheme_:
+
+- any: _None_
+- https: `Strict-Transport-Security: max-age=300`
+- hsts: `Strict-Transport-Security: max-age=31622400; includeSubDomains; preload`
+
 Configure your pantheon.yml file as explained in the [Pantheon YAML Configuration Files](https://pantheon.io/docs/pantheon-yml/) documentation.
 
 If you need more control over your redirect and/or HSTS header, then you can manually configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
