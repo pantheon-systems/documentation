@@ -153,7 +153,7 @@ For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).
 
 ### Drupal False Positive
 
-Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399){.external} on SA-CORE-2013-003.
+Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399){.external} on `SA-CORE-2013-003`.
 
 ## nginx.conf
 
