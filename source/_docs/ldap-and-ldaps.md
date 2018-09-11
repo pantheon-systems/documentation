@@ -92,7 +92,7 @@ $settings = array(
   'NAME' => array(
     'hostname' => 'ldaps://HOSTNAME:PORT/',
     'port' => 'PORT',
-    'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
+    'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This should be the full rdn and not just the username.
     'bind_password' => '...',
     'display_password' => 'XxXxXxX',  //display an alternate value for security
     'base_dn' => 'OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
@@ -172,7 +172,7 @@ $settings = array(
   'NAME' => array(
     'hostname' => 'ldaps://127.0.0.1', //When using PEG, this is localhost.
     'PANTHEON_SOIP_EXAMPLE', //When using PEG, this is the PHP CONSTANT provided.
-    'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
+    'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This should be the full rdn and not just the username.
     'bind_password' => '...',
     'display_password' => 'XxXxXxX',  //Display an alternate value for security.
     'base_dn' => 'OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
