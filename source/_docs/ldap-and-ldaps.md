@@ -57,8 +57,8 @@ Ensure that your certificates do **not** have a password. There is an extremely 
 
 You can also specify additional configurations with putnev, such as whether to perform server certificate checks.
 
-    // LDAP - Never perform server certificate check in a TLS session.
-    putenv('LDAPTLS_REQCERT=never');
+    // LDAP - Allow server certificate check in a TLS session.
+    putenv('LDAPTLS_REQCERT=allow');
 
 
 ## Frequently Asked Questions
@@ -71,11 +71,15 @@ Users do not have access to make modifications to `ldap.conf`. Instead, use `put
 
 The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP needs to be PHP-based and not webserver-based.
 
+#### Does PEG work with LDAP?
+
+WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
+
 ## Troubleshooting
 
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.
 
-Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. If you are connecting via a Pantheon Enterprise Gateway (PEG), use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 ```bash
 terminus drush <site>.<env> -- scr ldap-test.php
 ```
@@ -88,14 +92,18 @@ $settings = array(
   'NAME' => array(
     'hostname' => 'ldaps://HOSTNAME:PORT/',
     'port' => 'PORT',
-    'bind_rdn' => 'uid=...',
+    'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
     'bind_password' => '...',
-    'base_dn' => 'ou=...',
+    'display_password' => 'XxXxXxX',  //display an alternate value for security
+    'base_dn' => 'OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
     'filter' => '(uid=...)',
     'attributes' => array('cn'),
   ),
 );
 
+ldap_set_option(NULL, LDAP_OPT_PROTOCOL_VERSION, 3);
+ldap_set_option(NULL, LDAP_OPT_REFERRALS, 0);
+ldap_set_option(NULL, LDAP_OPT_X_TLS_REQUIRE_CERT, LDAP_OPT_X_TLS_ALLOW);
 
 echo 'LDAPTLS_CERT=' . getenv('LDAPTLS_CERT') . PHP_EOL;
 if (getenv('LDAPTLS_CERT')) {
@@ -128,7 +136,7 @@ foreach ($settings as $host => $setting) {
   ldap_set_option($link_identifier, LDAP_OPT_REFERRALS, 0);
 
 
-  echo "Attempting to bind with rdn {$setting['bind_rdn']} and password {$setting['bind_password']}." . PHP_EOL;
+  echo "Attempting to bind with rdn {$setting['bind_rdn']} and password {$setting['display_password']}." . PHP_EOL;
   if (!ldap_bind($link_identifier, $setting['bind_rdn'], $setting['bind_password'])) {
     echo 'Unable to bind - ' . ldap_error($link_identifier) . PHP_EOL;
     ldap_unbind($link_identifier);
@@ -154,4 +162,22 @@ foreach ($settings as $host => $setting) {
   $entries = ldap_get_entries($link_identifier, $search_result_identifier);
   var_dump($entries);
 }
+````
+
+Alternate $settings array when using PEG:
+````php
+
+<?php
+$settings = array(
+  'NAME' => array(
+    'hostname' => 'ldaps://127.0.0.1', //When using PEG, this is localhost.
+    'PANTHEON_SOIP_EXAMPLE', //When using PEG, this is the PHP CONSTANT provided.
+    'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
+    'bind_password' => '...',
+    'display_password' => 'XxXxXxX',  //Display an alternate value for security.
+    'base_dn' => 'OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
+    'filter' => '(uid=...)',
+    'attributes' => array('cn'),
+  ),
+);
 ````
