@@ -110,6 +110,17 @@ if (!function_exists('install_drupal')) {
 }
 ```
 
+### "Connection to server closed by remote host" notice when running search-replace
+
+Sites with large databases may encounter a timeout when trying to run `terminus wp search-replace` on all tables. This is due to the [idle timeout limit](/docs/timeouts) on SSH connections.
+
+You can avoid this by configuring your local machine to send an SSH keepalive packet every 60 seconds. Add this to your `$HOME/.ssh/ssh_config` file:
+
+```
+Host *.drush.in
+  ServerAliveInterval 60
+```
+
 ## See Also
 - [MySQL Troubleshooting with New Relic Pro](/docs/debug-mysql-new-relic/)
 - [MySQL Slow Log](/docs/mysql-slow-log/)
