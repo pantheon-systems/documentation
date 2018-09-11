@@ -1,0 +1,27 @@
+Using the <a href="/docs/pantheon-yml/"><code>pantheon.yml</code></a> file, you can set the use and duration of the HSTS header. Either a short (5 minute) or long (366 day) duration may be selected. Using the long duration setting will help you get an A+ SSL rating from <a href="https://www.ssllabs.com/ssltest/" class="external">SSL Labs</a>.
+
+Use of the HSTS header is defined by the <code>scheme</code> directive, and takes three possible values:
+
+<ul>
+<li>No redirect and no HSTS header (default):
+
+    <pre><code class="hljs less">scheme: any</code></pre></li>
+
+<li>HTTPS redirect with a short HSTS duration (5 minutes):
+
+    <pre><code class="hljs less">scheme: https</code></pre></li>
+
+<li>HTTPS redirect with a long HSTS duration (366 days, for an A+ SSL Labs rating):
+
+    <pre><code class="hljs less">scheme: hsts</code></pre></li>
+</ul>
+
+Pantheon will send the following header based on the setting of `scheme`:
+
+<ul>
+<li>any: <i>None</i></li>
+<li>https: <code>Strict-Transport-Security: max-age=300</code></li>
+<li>hsts: <code>Strict-Transport-Security: max-age=31622400; includeSubDomains; preload</code></li>
+</ul>
+
+See <a href="/docs/pantheon-yml/">Pantheon YAML Configuration Files</a> for more information on how to configure this file.

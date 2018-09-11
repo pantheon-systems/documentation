@@ -38,7 +38,7 @@ protected_web_paths:
 * Wait a few seconds for changes to take effect
 
 ### HTTPS Redirects with HSTS Headers
-Ensure that your site will always use https to deliver content with `scheme`. Three values are available:
+Ensure that your site will always use HTTPS to deliver content with `scheme`. Three values are available:
 
 - `any` (default: no https redirect)
 - `https` (Redirects to https and includes an HSTS header with a 5-minute duration)
@@ -48,6 +48,8 @@ The preferred `hsts` configuration is shown below:
 ```yaml
 scheme: hsts
 ```
+
+See [Require HTTPS with the HSTS Header](/docs/hsts/) for more information.
 
 #### Considerations
 * Ensure your site is ready to serve all content via HTTPS as described on the documentation page [Switching Sites from HTTP to HTTPS](/docs/http-to-https).

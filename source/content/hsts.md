@@ -3,18 +3,18 @@ title: Require HTTPS with the HSTS Header
 description: Enforce HTTPS communications on supported browsers using the HTTP Strict Transport Security header.
 tags: [security]
 ---
-After you have required HTTPS for all pages by adding the [necessary redirect](/domains/#redirect-to-https-and-the-primary-domain), set the HTTP Strict Transport Security (HSTS) header to standardize all client connections on HTTPS and prevent use of HTTP.
 
-Not only does this header help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/), it will help protect your website against protocol downgrade attacks and cookie hijacking.
+Pantheon can now automatically redirect all traffic to HTTPS, and set the HTTP Strict Transport Security (HSTS) header to standardize all client connections on HTTPS and prevent use of HTTP. This security feature can increase your SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/), and will also help protect your website against protocol downgrade attacks and cookie hijacking.
 
-<Alert title="Note" type="info">
-Before adding HSTS to your site, you should review and understand the configuration options that are available. A HSTS header that is configured incompletely or not securely enough diminishes the security protection that HSTS provides.
-</Alert>
+## Configure HSTS Through the `pantheon.yml` File
+
+<Partial file="hsts.html" />
 
 ## Deploy and Configure a HSTS Header by Module or Plugin
-The HTTP Strict-Transport-Security response header (often abbreviated as **HSTS**) is a website security feature that tells browsers to only communicate using HTTPS, instead of HTTP.
 
-<TabList>
+<Alert title="Note" type="info">
+Manual configuration of the HSTS header using modules, as described in this section, should rarely be necessary. Instead, you should set the `enforce_https` setting in your `pantheon.yml` file as described above, which will apply these headers automatically. If for some reason you need more flexibility than provided by the built-in feature, then you may use the module or plugin below to configure the exact values you need.
+</Alert>
 
 <Tab title="WordPress" id="tab-1-id" active={true}>
 
@@ -32,9 +32,9 @@ Strict-Transport-Security: max-age=15984000; includeSubDomains; preload
 
 <Accordion title="Troubleshooting" id="unique-anchor" icon="wrench">
 
-#### Nested Docroot
+### Nested Docroot
 
-Site's using our [nested docroot](/nested-docroot/) feature to serve WordPress from a subdirectory will experience a redirect loop upon activation of the LH HSTS plugin:
+Sites using our [nested docroot](/docs/nested-docroot/) feature to serve WordPress from a subdirectory will experience a redirect loop upon activation of the LH HSTS plugin:
 
 ![LH HSTS redirect loop on nested docroot](../images/lh-hsts-redirect-loop.png)
 
@@ -50,14 +50,13 @@ As an alternative for sites served from a subdirectory, we recommend disabling t
 **/
 add_action( 'send_headers', 'add_header_hsts' );
 function add_header_hsts() {
-   header('Strict-Transport-Security: max-age=15984000; includeSubDomains; preload');
+  header('Strict-Transport-Security: max-age=15984000; includeSubDomains; preload');
 }
 ```
 
 See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers) for more details.
 
 </Accordion>
-
 
 </Tab>
 
@@ -69,8 +68,8 @@ See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_
     terminus remote:drush <site>.<env> -- pm-enable hsts --yes
     ```
 
-2. Visit the module configuration page (`/admin/config/system/hsts`).
-3. Check the **Enable HTTP Strict Transport Security** checkbox, set **Max Age** to at least **1 year** and click **Save Configuration**.
+1. Visit the module configuration page (`/admin/config/system/hsts`).
+1. Check the **Enable HTTP Strict Transport Security** checkbox, set **Max Age** to at least **1 year** and click **Save Configuration**.
 
 Once installed and configured, the following header will be sent in responses:
 
@@ -88,8 +87,8 @@ strict-transport-security: max-age=31536000
   terminus remote:drush <site>.<env> -- pm-enable hsts --yes
   ```
 
-2. Visit the module configuration page (`/admin/config/security/hsts`).
-3. Check the **Enable HTTP Strict Transport Security** checkbox, set **Max Age** to **15552000** and click **Save Configuration**.
+1. Visit the module configuration page (`/admin/config/security/hsts`).
+1. Check the **Enable HTTP Strict Transport Security** checkbox, set **Max Age** to **15552000** (180 days) and click **Save Configuration**.
 
 Once installed and configured, the following header will be sent in responses:
 
@@ -101,7 +100,8 @@ strict-transport-security: max-age=15552000
 
 </TabList>
 
-## HSTS Header Configuration Attributes
+### HSTS Header Configuration Attributes
+
 Once you've installed the module or plugin you plan to use, you should immediately configure the `strict-transport-security` header attributes as appropriate for your site. There are three attributes you should configure for the `strict-transport-security` header:
 
 <dl>
@@ -130,12 +130,7 @@ An important to understand, but optional attribute supported by all modern major
 
 </dd>
 
-</dl>
-
 How you configure or include these attributes raises the rigor of the security that your HSTS effort provides. [Here is a great overview of how and why to use the above noted attributes](https://hstspreload.org/).
-
-## HSTS Before the Application Level
-The configuration described above sets the HSTS header when the CMS loads. If you need HSTS to be set before that, consider a CDN-level implementation from a third-party provider like Cloudflare to [enable SSL first](/cloudflare/#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), then [enable HSTS](https://support.cloudflare.com/hc/en-us/articles/204183088-Understanding-HSTS-HTTP-Strict-Transport-Security-) from their end.
 
 ## See Also
 For additional details on this header, see:
