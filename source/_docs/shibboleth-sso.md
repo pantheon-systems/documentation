@@ -15,7 +15,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">[PHP mcrypt](http://php.net/manual/en/book.mcrypt.php){.external} is still used in SimpleSAMLphp 1.14.x, but removed as a dependency in SimpleSAML 1.15.x. PHP mcrypt has been depcreated in PHP 7.1, and removed from core PHP 7.2. Consider using the appropriate lower versions if you encounter issues.
+<p markdown="1">[PHP mcrypt](http://php.net/manual/en/book.mcrypt.php){.external} is still used in SimpleSAMLphp 1.14.x, but removed as a dependency in SimpleSAML 1.15.x. PHP mcrypt has been deprecated in PHP 7.1, and removed from core PHP 7.2. Consider using the appropriate lower versions if you encounter issues.
 </p></div>
 
 <div class="alert alert-export" role="alert">
