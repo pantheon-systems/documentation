@@ -94,7 +94,7 @@ Pantheon cannot be used to host files over 256MB, no matter how the file is upl
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 
- - Drupal sites can use a module such as [Amazon S3 CORS Upload](https://drupal.org/project/amazons3_cors){.external}
+ - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs){.external}
  - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload S3](https://deliciousbrains.com/wp-offload-s3/){.external}
 
 See our documentation for [Drupal](/docs/drupal-s3) and [WordPress](/docs/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
