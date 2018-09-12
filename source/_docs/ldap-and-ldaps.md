@@ -179,16 +179,17 @@ Alternate $settings array when using PEG:
 ````php
 
 <?php
-$settings = array(
-  'NAME' => array(
-    'hostname' => 'ldaps://127.0.0.1', //When using PEG, this is localhost.
-    'port' => 'PANTHEON_SOIP_EXAMPLE', //When using PEG, this is the PHP CONSTANT provided.
-    'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This should be the full rdn and not just the username.
-    'bind_password' => '...',
-    'display_password' => 'XxXxXxX',  //Display an alternate value for security.
-    'base_dn' => 'OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
-    'filter' => '(uid=...)',
-    'attributes' => array('cn'),
-  ),
+$settings = array(
+  'NAME' => array(
+    'host' => 'ldaps://127.0.0.1', //when using PEG, this is localhost
+    'port' => 'PANTHEON_SOIP_EXAMPLE', //when using PEG, this is the PHP CONSTANT
+    'bind_rdn' => 'bind_rdn' => '<insert-bind-dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
+    'bind_password' => '<insert-password>',
+    'display_password' => 'Pxxxxxxx',  //display an alternate value for security
+    'base_dn' => 'OU=value,dc=value,dc=value,dc=value',
+    'filter' => '(uid=<insert_uid>)',
+    'attributes' => array('cn'),
+  ),
 );
+
 ````
