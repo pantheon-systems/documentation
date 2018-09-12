@@ -119,18 +119,29 @@ echo 'LDAPTLS_REQCERT=' . getenv('LDAPTLS_REQCERT') . PHP_EOL;
 
 foreach ($settings as $host => $setting) {
   echo PHP_EOL;
-  echo "Attempting to connect to {$setting['hostname']} on port {$setting['port']}." . PHP_EOL;
+  echo "Attempting to connect to {$setting['host']} on port {$setting['port']}. " . PHP_EOL;
 
+  $resolved_port = $setting['port'];
+  if (!is_numeric($resolved_port)) {
+    // If it's a string, then attempt to use it as the name of a PHP constant.
+    $resolved_port = constant($resolved_port);
+  }
 
-  $link_identifier = ldap_connect($setting['hostname'], $setting['port']);
+  $resolved_address = $setting['host'];
+  // PHP ldap_connect function ignores the port option if scheme is
+  // included in the host, so we must appened port number to the 'address'
+  if (strpos($resolved_address, 'ldap') !== false) {
+    $resolved_address = $resolved_address . ":" . $resolved_port;
+  }
+
+  $link_identifier = ldap_connect($resolved_address, $resolved_port);
+
   if (!$link_identifier) {
     echo 'Unable to connect - ' . ldap_error($link_identifier) . PHP_EOL;
     continue;
   }
 
-
   echo 'Connected.' . PHP_EOL;
-
 
   ldap_set_option($link_identifier, LDAP_OPT_PROTOCOL_VERSION, 3);
   ldap_set_option($link_identifier, LDAP_OPT_REFERRALS, 0);
@@ -171,7 +182,7 @@ Alternate $settings array when using PEG:
 $settings = array(
   'NAME' => array(
     'hostname' => 'ldaps://127.0.0.1', //When using PEG, this is localhost.
-    'PANTHEON_SOIP_EXAMPLE', //When using PEG, this is the PHP CONSTANT provided.
+    'port' => 'PANTHEON_SOIP_EXAMPLE', //When using PEG, this is the PHP CONSTANT provided.
     'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This should be the full rdn and not just the username.
     'bind_password' => '...',
     'display_password' => 'XxXxXxX',  //Display an alternate value for security.
