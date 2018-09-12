@@ -187,7 +187,7 @@ $settings = array(
     'bind_password' => '<insert-password>',
     'display_password' => 'Pxxxxxxx',  //display an alternate value for security
     'base_dn' => 'OU=value,dc=value,dc=value,dc=value',
-    'filter' => '(uid=<insert_uid>)',
+    'filter' => '(uid=<insert-uid>)',
     'attributes' => array('cn'),
   ),
 );
