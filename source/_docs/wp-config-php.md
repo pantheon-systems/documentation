@@ -50,6 +50,12 @@ See [Reading the Pantheon Environment Configuration](/docs/read-environment-conf
 
 See [Configure Redirects](/docs/redirects/).
 
+### How do I change the default debug.log location?
+
+WordPress has an option to write logging information to a [file](/docs/logs/#how-do-i-enable-error-logging-for-wordpress) when enabled. By default, the location of the debug file is located in the /wp-content folder which is not writable on all environments in Pantheon. You can change the location of that file to the uploads folder by adding this in the wp-confi.php:
+
+```ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );```
+
 ### Where do I specify database credentials?
 
 You don't have to! Pantheon automatically injects database credentials into the site environment; if you hard code database credentials, you will break the Pantheon workflow.
