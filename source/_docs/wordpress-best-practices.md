@@ -19,6 +19,8 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Run [Launch Check](/docs/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
 
+* Do not modify core WordPress files as it can cause unintended consequences and can prevent you in updating your site regularly. If ever you need to modify any WP functionality, do it as a custom plugin and adheres with the [best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/).
+
 *  We recommend using an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), or [Brackets](https://github.com/adobe/brackets/).
 
 * Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes they're dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. You'd be surprised how many uploads-type plugins rely on `.htaccess` files — avoid those as well.
