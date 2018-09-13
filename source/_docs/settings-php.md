@@ -180,7 +180,7 @@ Drupal doesn't ship with a `settings.php` in place; as the error suggests, you s
 No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
 
 ## Troubleshooting
-#### Request to a Remote API Does Not Return Expected Response
+### Request to a Remote API Does Not Return Expected Response
 
 The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
@@ -188,10 +188,17 @@ If the API expects `&` as an argument separator but receives `&amp;` (for exampl
 
     ini_set('arg_separator.output', '&');
 
-#### Drush Error: "No Drupal site found", "Could not find a Drupal settings.php file", or missing system information from status
+### Drush Error: "No Drupal site found", "Could not find a Drupal settings.php file", or missing system information from status
 
 ```bash
 Could not find a Drupal settings.php file at ./sites/default/settings.php
 ```
 
 To resolve, add a default or empty `sites/default/settings.php` to your site's code.
+
+### Error: "The provided host name is not valid for this server."
+
+This error comes from a feature in Drupal 8 designed to protect against [HTTP HOST Header attacks](https://www.drupal.org/node/1992030){.external}. Drupal 8 allows you to specify "trusted host patterns," which specify a set of domains that incoming requests must match.
+
+If you see this error, you need to update your [trusted host patterns](#trusted-host-setting) in `settings.php` and add your new domain(s) to the `$settings['trusted_host_patterns']` array.
+
