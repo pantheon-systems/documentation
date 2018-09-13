@@ -49,7 +49,7 @@ Here are some popular email services you can use on the platform and their corre
 ### SMTP Providers & Configurations
 Customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amazon SES, Mandrill, and other externally hosted SMTP based email providers.
 
-Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. Here’s a list of popular email providers and the alternate ports which Pantheon recommends:
+Pantheon strongly encourages using ports other than `25`, `465` or `587` to send email because those ports are often blocked by service providers as an anti-spam measure. Here’s a list of popular email providers and the alternate ports which Pantheon recommends:
 
 <table class="table table-responsive table-bordered">
     <thead class="thead-inverse">
@@ -138,11 +138,20 @@ We strongly recommend that you do not use the local MTA (postfix) as described [
 No, mail logs are not available for download and we do not recommend using the local MTA (postfix).
 
 ### What ports are recommended by Pantheon?
-Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. Make sure that your service provider allows traffic on a port other than those mentioned and that you have correctly configured your site to use that port.
+Pantheon strongly encourages using ports other than `25`, `465` or `587` to send email because those ports are often blocked by service providers as an anti-spam measure.  Make sure that your service provider allows traffic on a port other than those mentioned and that you have correctly configured your site to use that port.
 
-### Can Pantheon provide, publish, or support SPF records?
+### Are there SPF records for Pantheon's local MTA (postfix)?
+If you are using Pantheon's local MTA ([not recommended](#outgoing-email)), and your domain contains an SPF record, then you should include Pantheon's SPF record, as shown below:
 
-As consumers of cloud infrastructure, we don’t have control over our IP ranges and they are subject to change without our notice. Publishing an SPF record would imply assurance on our end that it can work, which would be very difficult to guarantee given these circumstances. We take the decision of what we support and what we don’t very seriously, and at this time we’re not in a position to support SPF records.
+```
+v=spf1 include:spf.example.com include:spf.pantheon.io ~all
+```
+
+Adjust the above example record as needed for your domain:
+
+ - Be sure that you replace `include:spf.example.com` with the appropriate list of mail relays that also send email for your domain.
+ - If an SPF record exists for that domain, then add just the `include:spf.pantheon.io` part to whatever is already there, keeping the rest unchanged.
+ - To craft a new SPF record for a domain that does not yet have one, use the [SPF Record Generator](https://mxtoolbox.com/SPFRecordGenerator.aspx?domain=example.com){.external}, and enter `spf.pantheon.io` in the **3rd party mail systems** text box.
 
 ### Why does my Gmail user name and password not work?
 
