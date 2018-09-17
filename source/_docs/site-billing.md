@@ -4,6 +4,12 @@ description: Add a new credit card, remove the current card or transfer billing 
 tags: [billing]
 categories: []
 ---
+
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/docs/annual-billing/) for more information.
+</div>
+
 ## Access Site Billing
 1. Go to the Site Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
 2. Click the **Billing** tab.
