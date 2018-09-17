@@ -157,12 +157,14 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 - Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/){.external} or [XHProf](http://php.net/manual/en/book.xhprof.php){.external}) or to help refactor code that could be leaking memory
 - Enabling [Redis](/docs/redis/) could boost site performance by providing an in-memory backend caching
 - [Update PHP version](/docs/php-versions/)
-- Use [New Relic](/docs/new-relic/) to identify issues
+- In case the source of the high memory usage is unclear, it might be helpful to use using a memory profiling module / plugin on the production site temporarily. Note that memory profiling most often has a performance overhead, so keep a close eye on the site while profiling. Usually a few hours will provide enough data.
 
 Please note that memory issues caused by custom code fall outside our [scope of support](/docs/support/#scope-of-support).
 
 ### Drupal
 Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler){.external} module can help troubleshoot issues by logging peak memory usage.
+
+GD Image library and UI modules such as Views UI, Feeds UI, etc are known causes for high memory usage. 
 
 ### WordPress
 Refer to [Debugging in WordPress](https://codex.wordpress.org/Debugging_in_WordPress){.external} from the WordPress.org Codex for information on debugging common issues.
