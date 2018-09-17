@@ -27,25 +27,24 @@ The table below shows how much sites can save by switching to annual billing. Pe
 <div class="tab-content">
 <!-- Active pane content -->
 <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-|                | Basic         | Performance Small | Performance Medium | Performance Large | Performance XL       |
-|:-------------- |:------------- |:----------------- |:------------------ |:----------------- |:-------------------- |
-| Monthly Price  | $50           | $175              | $300               | $600              | $1,000               |
-| Annual Price   | $500          | $1,925            | $$3,300            | $6,600            | $11,000              |
-| Annual Savings | $100          | $175              | $300               | $600              | $1,000               |
+|                    | Basic         | Performance Small | Performance Medium | Performance Large | Performance XL       |
+|:------------------ |:------------- |:----------------- |:------------------ |:----------------- |:-------------------- |
+| Monthly Price      | $50           | $175              | $300               | $600              | $1,000               |
+| Annual Price       | $500          | $1,925            | $3,300             | $6,600            | $11,000              |
+| **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
 
-**Note:** List price will not go into affect until the introduction of the Partner Program.
+**Note:** List price will not go into effect until the introduction of the Partner Program.
 </div>
 
 <!-- 2nd pane content -->
 <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
 
-|                                            | Basic | Performance Small | Performance Medium | Performance Large | Performance XL  |
-|:------------------------------------------ |:----- |:----------------- |:------------------ |:----------------- |:--------------- |
-| Monthly Price                              | $35   | $125              | $225               | $450              | $750            |
-| Annual Price                               | $350  | $1,325            | $2,475             | $4,950            | $8,250          |
-| Annual Savings*                            | $100  | $175              | $300               | $600              | $1,000          |
+|                    | Basic   | Performance Small | Performance Medium | Performance Large | Performance XL  |
+|:------------------ |:------- |:----------------- |:------------------ |:----------------- |:--------------- |
+| Monthly Price      | $35     | $125              | $225               | $450              | $750            |
+| Annual Price       | $350    | $1,325            | $2,475             | $4,950            | $8,250          |
+| **Annual Savings** | **$70** | **$175**          | **$225**           | **$450**          | **$750**        |
 
-\* _Prices are compared to list price._
 </div>
 
 </div>
