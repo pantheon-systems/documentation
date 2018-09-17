@@ -1,6 +1,7 @@
 ---
 title: Terminus Manual
 subtitle: Example Usage
+description: Review examples of Terminus commands most frequently used by power users.
 terminusexample: true
 terminuspage: true
 terminustoc: true

@@ -1,6 +1,7 @@
 ---
 title: Quick Start
 subtitle: On-Server Dev, Part 1
+description: In part eight of our Quick Start guide, learn about on-server development on Pantheon.
 quickstart: true
 anchorid: onserver-dev-part1
 generator: pagination
@@ -54,7 +55,7 @@ If you need help with this step, please reference the [WordPress Codex](https://
 
     Ok, now let’s review the new theme in your Test environment.
 
-7. Navigate to the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab and click **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys**. As you can see, 1 commit is ready to deploy from the Dev environment.  
+7. Navigate to the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab and click **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys**. As you can see, 1 commit is ready to deploy from the Dev environment.
 
 8. Let’s review the new theme with the new content we added in the Live environment. Check the box for **Pull files and the database from the Live environment**.
 

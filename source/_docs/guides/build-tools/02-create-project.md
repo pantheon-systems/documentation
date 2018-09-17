@@ -1,6 +1,7 @@
 ---
 title: Build Tools
 subtitle: Create a New Project
+description: In step two of the Build Tools guide, learn how to create your new project.
 anchorid: create-project
 layout: guide
 type: guide

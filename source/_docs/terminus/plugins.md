@@ -1,6 +1,7 @@
 ---
 title: Terminus Manual
 subtitle: Extend with Plugins
+description: Use plugins to extend what you can do with Terminus.
 terminuspage: true
 type: terminuspage
 layout: terminuspage

@@ -1,6 +1,7 @@
 ---
 title: Terminus Manual
 subtitle: Version Updates
+description: Stay up to date on the latest Terminus version.
 terminuspage: true
 terminustoc: true
 type: terminuspage

@@ -1,6 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Connect a Domain Name
+description: Part three of our Launch Essentials guide covers connectin your domain to your Pantheon-hosted site.
 launch: true
 anchorid: domains
 generator: pagination

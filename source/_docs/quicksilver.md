@@ -1,5 +1,6 @@
 ---
 title: Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks
+description: Learn how to use Quicksilver to automate your deployment workflow.
 tags: [pantheonyml, infrastructure]
 categories: []
 ---

@@ -1,6 +1,7 @@
 ---
 title: Build Tools
 subtitle: Manage Configuration
+description: In step four of the Build Tools guide, learn how to manage your site configuration.
 buildtools: true
 anchorid: configure
 generator: pagination

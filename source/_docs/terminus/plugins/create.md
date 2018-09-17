@@ -1,6 +1,7 @@
 ---
 title:  Terminus Manual
 subtitle: Create Plugins
+description: Learn how to create your own Terminus plugin.
 terminuspage: true
 terminuscreate: true
 terminustoc: true

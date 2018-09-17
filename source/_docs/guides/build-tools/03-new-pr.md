@@ -1,6 +1,7 @@
 ---
 title: Build Tools
 subtitle: Start a Pull Request
+description: In step three of the Build Tools guide, learn how to use GitHub as part of your workflow.
 buildtools: true
 anchorid: new-pr
 generator: pagination

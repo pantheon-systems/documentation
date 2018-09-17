@@ -1,6 +1,7 @@
 ---
 title: WooCommerce Quick Start
 subtitle: Configure
+description: In step three of the WooCommerce Quick Start guide, learn how to configure your new store.
 woocommerce: true
 anchorid: configure
 generator: pagination

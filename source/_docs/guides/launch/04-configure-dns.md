@@ -1,6 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Configure DNS and Provision HTTPS
+description: Part four of our Launch Essentials guide covers DNS records and HTTPS provisioning.
 launch: true
 anchorid: dns
 generator: pagination

@@ -1,6 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Upgrade Site Plan
+description: Part two of our Launch Essentials guide covers upgrading your site to the proper plan to cover your needs.
 layout: guide
 anchorid: plans
 launch: true

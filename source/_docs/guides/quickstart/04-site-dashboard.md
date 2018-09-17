@@ -1,6 +1,7 @@
 ---
 title: Quick Start
 subtitle: Site Dashboard
+description: In part four of our Quick Start guide, learn about the Pantheon Site Dashboard.
 quickstart: true
 anchorid: site-dashboard
 generator: pagination

@@ -1,6 +1,7 @@
 ---
 title: Terminus Manual
 subtitle: Configuration File
+description: Learn how to configure your local Terminus configuration file.
 terminuspage: true
 type: terminuspage
 layout: terminuspage

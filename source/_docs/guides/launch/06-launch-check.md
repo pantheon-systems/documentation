@@ -1,6 +1,7 @@
 ---
 title: Launch Essentials
 subtitle: Launch Checks
+description: Part six of our Launch Essentials guide covers launch checks to perform before going live.
 launch: true
 anchorid: launch-check
 generator: pagination

@@ -1,6 +1,7 @@
 ---
 title: Quick Start
 subtitle: Next Steps
+description: In the final section of our Quick Start guide, learn about common next steps for new Pantheon users.
 quickstart: true
 anchorid: next-steps
 generator: pagination
