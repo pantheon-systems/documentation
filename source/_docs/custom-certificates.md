@@ -39,12 +39,12 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
      - Common name (e.g. `example.com`)
      - DNS names (e.g. `example.com`:`www.example.com`:`blog.example.com`:`dev.example.com`)
+     - Emails addresses \[optional\] (e.g. `someone@example.com`:`admin@example.com`)
      - Organization (e.g. `ACME, Inc.`)
      - Organizational unit \[optional\] (e.g. `Engineering`)
      - Country (e.g. `US`)
      - Locality (e.g. `San Francisco`)
      - State / Province (e.g. `California`)
-     - Emails addresses \[optional\] (e.g. `someone@example.com`:`admin@example.com`)
      - Technical contact email
      - Technical contact first name
      - Technical contact last name
