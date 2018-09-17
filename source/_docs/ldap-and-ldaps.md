@@ -8,17 +8,13 @@ categories: []
 
 ## LDAP as a Consumer
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>We do not recommend using LDAP for single sign-on authentication as it is not secure.  The recommended approach for sites and the Dashboard is to use SAML. For details, see <a href="/docs/guides/two-factor-authentication/"> Secure Your Site with Two-Factor Authentication</a>.
-</p></div>
 LDAP provides access and maintenance of a distributed directory storing organized sets of records. Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details are up to the user as not all instances are supported.
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon site.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application containers.</p>
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Pantheon does not support IP authentication schemes, except when used as part of a [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
 </div>
 
 ### Drupal
