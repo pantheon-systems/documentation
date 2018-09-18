@@ -51,7 +51,7 @@ There are a number of terms used throughout the Multidev workflow:
 
     <div class="alert alert-danger" role="alert">
     <h4 class="info">Warning</h4>
-    <p>Multidev branch names must be all lowercase, be less than 11 characters, but may contain a dash `-`. Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.</p>
+    <p>Multidev branch names must be all lowercase, be less than 11 characters, but may contain a dash (`-`). Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.</p>
     </div>
 
 4. Click **Create Environment**.
