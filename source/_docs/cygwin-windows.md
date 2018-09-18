@@ -3,10 +3,12 @@ title: Install Cygwin on Windows
 description: Learn how to install and configure Cygwin on Windows computers for Pantheon sites.
 tags: [local]
 categories: []
+deprecated: true
+deprecatednote: Terminus is no longer supported on Windows, and this document is unmaintained. See the <a href="/docs/platform-considerations/#terminus-support">Terminus Support</a> section of Platform Considerations for more information.
 ---
 If you do not have access to a Mac or Linux environment, you can install [Cygwin](https://cygwin.com/) to perform tasks typically not possible in Windows, such as:
 
-* Installing and using [Terminus, the Pantheon command line interface (CLI)](https://github.com/pantheon-systems/cli)  
+* Installing and using [Terminus, the Pantheon command line interface (CLI)](https://github.com/pantheon-systems/cli)
 
 ## Install Cygwin
 1. Download the [Cygwin](https://cygwin.com/install.html) installer and run `setup.exe`.
