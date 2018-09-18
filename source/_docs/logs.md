@@ -196,8 +196,33 @@ No, access to Apache Solr logs is not available. For more information on debuggi
 No, Varnish logs are not available for download.
 
 ### How do I enable error logging for WordPress?
-Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress) constants on Development environments (Dev and Multidevs) to write errors to `wp-content/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment:
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/wp-debug-expanded.wp-config.php?footer=minimal"></script>
+Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress) constants on Development environments (Dev and Multidevs) to write errors to `wp-content/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment in `wp-config.php`:
+
+```php
+// All Pantheon Environments.
+if (defined('PANTHEON_ENVIRONMENT')) {
+  //Wordpress debug settings in development environments.
+  if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
+    // Debugging enabled.
+    if (!defined( 'WP_DEBUG' )) {
+    define( 'WP_DEBUG', true );
+    }
+    define( 'WP_DEBUG_LOG', true ); // Stored in wp-content/debug.log
+    define( 'WP_DEBUG_DISPLAY', true );
+  }
+  // Wordpress debug settings in test and live environments.
+  else {
+    // Debugging disabled.
+    ini_set('log_errors','On');
+    ini_set('display_errors','Off');
+    ini_set('error_reporting', E_ALL );
+    define('WP_DEBUG', false);
+    define('WP_DEBUG_LOG', true);
+    define('WP_DEBUG_DISPLAY', false);
+  }
+}
+```
+
 By default, the WordPress debug log path is set to `/wp-content/` and not writable on Test or Live environments. This can be overridden to the [`/wp-content/uploads/` folder](/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location).
 
 ### How can I access the Drupal event log?
