@@ -49,9 +49,9 @@ There are a number of terms used throughout the Multidev workflow:
 2. Click **Create Multidev Environment**. This will create a new fork of the environment that you select, including code, database and files.
 3. Specify the name for the environment; the URL will incorporate the environment name.
 
-    <div class="alert alert-danger" role="alert">
-    <h4 class="info">Warning</h4>
-    <p>Multidev branch names must be all lowercase, be less than 11 characters, but may contain a dash (`-`). Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.</p>
+    <div class="alert alert-danger" role="alert" markdown="1">
+    #### Warning {.info}
+    Multidev branch names must be all lowercase, be less than 11 characters, but may contain a dash (`-`). Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.
     </div>
 
 4. Click **Create Environment**.
