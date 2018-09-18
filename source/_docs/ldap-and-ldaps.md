@@ -14,7 +14,7 @@ PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are 
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
-Pantheon does not support IP authentication schemes, except when used as part of a [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
+Pantheon supports IP authentication schemes *only* when implemented as part of a [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
 </div>
 
 ### Drupal
