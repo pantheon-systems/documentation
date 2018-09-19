@@ -75,6 +75,19 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 ## Troubleshooting
 
+### Removing a synlink
+
+If a site will no longer use a symlink and would like to remove, you should unlink first the symlink and move back the folder from the public files folder so be added back to version control or Git. 
+
+1. Clone the folder using Git
+2. Unlink the path of the symlink
+```
+unlink ./wp-content/path/plugin-expects-to-write-to
+```
+3. Move back the folder and files from the public files folder
+4. Commit the changes and push back to the server
+
+
 ### Modules That Verify Directories
 
 Some modules and plugins verify that the target directory exists using `is_dir()` which returns bool(false) if the directory is a symlink. It may help to patch the module/plugin to use `is_link()` instead of `is_dir()`.
