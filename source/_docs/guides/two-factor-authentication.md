@@ -93,7 +93,7 @@ Two-factor authentication is a helpful security practice because it prevents att
   #### OneLogin Instructions
 
   1. Sign up and create a [OneLogin account](https://www.onelogin.com/){.external} for your organization.
-  2. Install the WordPress SAML 2.0 app connector as part of the OneLogin dashboard. This needs to be done for each WordPress site that is being managed by OneLogin.
+  2. Install the WordPress SAML 2.0 app connector as part of the OneLogin dashboard (You need administrator priviledges to install apps). This needs to be done for each WordPress site that is being managed by OneLogin.
   3. Edit the OneLogin WordPress app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
   ![TFA OneLogin Config](/source/docs/assets/images/tfa-wp-onelogin-config.png)
   4. **(Optional)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users.
@@ -104,13 +104,19 @@ Two-factor authentication is a helpful security practice because it prevents att
   #### WordPress Instructions
 
   1. Install and activate the [OneLogin SAML SSO](https://wordpress.org/plugins/onelogin-saml-sso/){.external} plugin on your WordPress site.
-  2. Configure the **Identity Provider Settings** in the SSO/SAML Settings within the WordPress Admin to provide the appropriate values, which are available in the SSO section of the OneLogin Configuration page.
+  2. Configure the **Identity Provider Settings** section in the SSO/SAML Settings within the WordPress Admin to provide the appropriate values, which are available in the SSO section of the OneLogin Configuration page.
   ![TFA OneLogin Ident](/source/docs/assets/images/tfa-wp-onelogin-ident.png)
-  3. Configure the **Attribute** in the SSO/SAML Settings in the WordPress Admin with what is shown in the screenshot; values are case-sensitive.
+  3. Configure the **Options** section(optional) under the SSO/SAML Settings, make sure **Create user if not exists** is checked if you want users to be auto-created and **Keep Local login** is checked if you still want to use the normal WP login form, otherwise you will always be using OneLogin to authenticate.
+  ![TFA OneLogin Options](/source/docs/assets/images/tfa-wp-onelogin-options.png)
+  4. Configure the **Attribute** in the SSO/SAML Settings in the WordPress Admin with what is shown in the screenshot; values are case-sensitive.
   ![TFA OneLogin Attributes](/source/docs/assets/images/tfa-wp-onelogin-attribute.png)
-  4. Configure the **Customize Actions and Links** in the SSO/SAML Settings within the WordPress Admin to **Prevent local login**. This requires OneLogin as the authentication solution.
+  5. Configure the **Customize Actions and Links** in the SSO/SAML Settings within the WordPress Admin to **Prevent use of ?normal**. This requires OneLogin as the authentication solution.
   ![TFA OneLogin Custom Actions](/source/docs/assets/images/tfa-onelogin-custom-actions.png)
-  5. Now use the OneLogin dashboard to log in to your WordPress site!
+  6. Now use the OneLogin dashboard to log in to your WordPress site!
+  ![TFA OneLogin WP Login](/source/docs/assets/images/tfa-onelogin-wp-login.png)
+  <div class="alert alert-info">
+  <h4 class="info">Note</h4>
+  <p markdown="1">You can also refer to OneLogin's documentation to [Configure SAML for WordPress](https://onelogin.service-now.com/support/?id=kb_article&sys_id=590b1d83db109700d5505eea4b96197f){.external} for futher troubleshooting. You will need a OneLogin admin account to access their knowledgebase.</p></div>
   </div>
 
   <!-- 2nd pane content -->
