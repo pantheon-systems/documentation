@@ -68,8 +68,8 @@ You can update the payment method in the **Settings** page. For detailed instruc
 Self-serve sites are billable via recurring monthly or [annual](/docs/annual-billing/) billing. Sites that are owned by a Reseller, Edu+, or Enterprise organization are invoiced to the organization.
 
 ### Can I transfer ownership of a site to someone else?
-{% include("content/transfer-owernship-billing-intro.html")%}
-{% include("content/transfer-owernship-billing-steps.html")%}
+{% include("content/transfer-ownership-billing-intro.html")%}
+{% include("content/transfer-ownership-billing-steps.html")%}
 
 Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
 

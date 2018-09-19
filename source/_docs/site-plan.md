@@ -134,7 +134,7 @@ To associate an existing card from your account as the payment method for this s
   </div>
   <!-- 3rd pane content -->
   <div role="tabpanel" class="tab-pane" id="request-payment" markdown="1">
-{% include("content/transfer-owernship-billing-intro.html")%}
+{% include("content/transfer-ownership-billing-intro.html")%}
 
 1. Click the **<span class="glyphicons glyphicons-envelope"></span> Send a Request** button.
 2. Enter the intended site owner’s email.

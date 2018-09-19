@@ -26,8 +26,8 @@ The permission to transfer ownership or update payment method is granted only to
 <p markdown="1">If you need to assume site and billing ownership, the current Site Owner must transfer it to you directly, as described [below](#transfer-ownership-and-billing-for-this-site).</p></div>
 
 ## Transfer Ownership and Billing for This Site
-{% include("content/transfer-owernship-billing-intro.html")%}
-{% include("content/transfer-owernship-billing-steps.html")%}
+{% include("content/transfer-ownership-billing-intro.html")%}
+{% include("content/transfer-ownership-billing-steps.html")%}
 
 ## Add New Credit Card
 1. Go to the Site Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Settings**, then click **Billing**.
