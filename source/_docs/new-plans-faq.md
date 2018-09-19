@@ -31,7 +31,7 @@ Coming soon, Pantheon will offer annual billing plans at lower rates, giving up 
 | Plan                 | Annual Price | Annual Savings  |
 | -------------------- | ------------ | --------------- |
 | Basic                | $350             | $70         |
-| Performance (Small)  | $1325            | $175        |
+| Performance (Small)  | $1375            | $125        |
 | Performance (Medium) | $2475            | $225        |
 | Performance (Large)  | $4950            | $450        |
 | Performance (XL)     | $8250            | $750        |

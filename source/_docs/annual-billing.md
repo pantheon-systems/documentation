@@ -42,8 +42,8 @@ The table below shows how much sites can save by switching to annual billing. Pe
 |                    | Basic   | Performance Small | Performance Medium | Performance Large | Performance XL  |
 |:------------------ |:------- |:----------------- |:------------------ |:----------------- |:--------------- |
 | Monthly Price      | $35     | $125              | $225               | $450              | $750            |
-| Annual Price       | $350    | $1,325            | $2,475             | $4,950            | $8,250          |
-| **Annual Savings** | **$70** | **$175**          | **$225**           | **$450**          | **$750**        |
+| Annual Price       | $350    | $1,375            | $2,475             | $4,950            | $8,250          |
+| **Annual Savings** | **$70** | **$125**          | **$225**           | **$450**          | **$750**        |
 
 </div>
 
