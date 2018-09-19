@@ -28,6 +28,11 @@ At your DNS provider, create a wildcard CNAME record pointing to our edge. If yo
 
 `*.sites.example.com` **CNAME** `edge.live.getpantheon.com`
 
+<div class="alert-info alert" markdown="1">
+#### Note {.info}
+If the domain in question is already in use, be sure to configure your vanity domain at Pantheon _before_ changing DNS records to avoid any downtime. 
+</div>
+
 ## Effects and Considerations
 
  - Existing sites created before configuring a Vanity domain will continue to use the default Platform domains and will not use the custom Vanity domain.
