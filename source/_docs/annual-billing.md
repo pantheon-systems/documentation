@@ -82,8 +82,8 @@ Before switching to annual billing, consider:
 
  - Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
  - Sites on annual billing plans that upgrade will be invoiced immediately, and the site will be upgraded immediately.
- - Downgrades made to site plans on annual billing will be implemented immediately, but will not be invoiced until the end of the current billing cycle.
- - Sites on annual billing plans switched to monthly billing will be invoiced at the end of the current annual billing cycle.
+ - While all site plans downgrades will be effective immediately, no partial refunds will be issued.
+ - Annual billing plans switched to monthly billing will be effective after the end of your current annual subscription term.
 
 ## See Also
 
