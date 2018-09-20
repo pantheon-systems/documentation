@@ -61,6 +61,21 @@ After [downgrading from a paid plan to Sandbox](/docs/site-plan/#cancel-current-
  ![There is no longer a credit card associated with this site](/source/docs/assets/images/dashboard/site-billing-cc-removed.png)
 
  You should get a message saying "There is no longer a credit card associated with this site."
+
+## Frequently Asked Questions
+
+### Does Pantheon accept PayPal?
+Pantheon currently does not accept PayPal.
+
+### Can there be more than one site owner?
+A site can only have one site owner.
+
+### Can the payment for a site be split between multiple cards.
+No, payment for a site can only come from one card at a time.
+
+### Why don't I get email notifications about upcoming billing?
+Billing emails are only sent to the [Site Owner](#roles-and-permissions). If you are the Site Owner of an online site plan, check that your current email is set in the [**<span class="glyphicons glyphicons-cogwheel"></span> Account**](https://dashboard.pantheon.io/#account/profile){.external} tab of your User Dashboard. If your email is set correctly, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts.
+
 ## See Also
 - [Account Billing in the User Dashboard](/docs/account-billing/)
 - [Manage Plans in the Site Dashboard](/docs/site-plan/)
