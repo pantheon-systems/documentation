@@ -19,7 +19,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing pla
 Changing your site billing is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
 </div>
 
-### Roles & Permissions
+### Roles and Permissions
 The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
 <div class="alert alert-info" role="alert" markdown="1">
