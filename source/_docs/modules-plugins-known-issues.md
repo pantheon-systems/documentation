@@ -536,6 +536,14 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <hr>
 
+### [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/){.external}
+
+**Issue**: When in Test and Live environment, Compatiblity Settings is throwing an error  `The compatibility plugin cannot be enabled because the mu-plugin directory is not currently writable. Please update the permissions of the mu-plugins folder: /srv/bindings/c41eff4cxxxxxxxxxxxxxxxxxxxxx/code/wp-content/mu-plugins`. This plugin optionally needs write access to `wp-content/mu-plugins/` folder if you need a plugin to be enabled while doing DB exports and search-and-replace.
+
+**Solution**: The normal search-and-replace and DB export function of this plugin will work fine and not affected with that error but it leaves all plugins disabled while the plugin is in operation, if a certain plugin is needed to be always activated during the DB export and search-and-replace operation, there is a suggested filter outlined in the [plugin's debugging page](https://deliciousbrains.com/wp-migrate-db-pro/doc/compatibility-mode/){.external}.
+
+<hr>
+
 ### [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/){.external}
 
 **Issue #1**: This plugin requires write access to a cache folder in `wp-content/cache`, which is not granted on Test and Live environments by design.
