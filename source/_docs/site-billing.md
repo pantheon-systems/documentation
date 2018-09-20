@@ -11,8 +11,9 @@ Did you know Pantheon offers savings for sites purchased with annual billing pla
 </div>
 
 ## Access Site Billing
+1. From the User Dashboard, click on the site you want to access billing for.
 1. Go to the Site Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
-2. Click the **Billing** tab.
+1. Click the **Billing** tab.
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
@@ -74,7 +75,11 @@ A site can only have one site owner.
 No, payment for a site can only come from one card at a time.
 
 ### Why don't I get email notifications about upcoming billing?
-Billing emails are only sent to the [Site Owner](#roles-and-permissions). If you are the Site Owner of an online site plan, check that your current email is set in the [**<span class="glyphicons glyphicons-cogwheel"></span> Account**](https://dashboard.pantheon.io/#account/profile){.external} tab of your User Dashboard. If your email is set correctly, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts.
+Billing emails are only sent to the billing contact email, set by the [Site Owner](#roles-and-permissions) when they enter a credit card for payment:
+
+![Billing Contact](/source/docs/assets/images/dashboard/billing-contact.png)
+
+If you are the billing contact for an online site plan, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts. You can also reach out to your IT department to see if the emails are in quarantine.
 
 ## See Also
 - [Account Billing in the User Dashboard](/docs/account-billing/)
