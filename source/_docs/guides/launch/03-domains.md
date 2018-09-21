@@ -33,6 +33,8 @@ In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live e
 ### Avoid HTTPS Interruption
 Sites that already have HTTPS working can pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
 
+To pre-provision HTTPS, CAA records must either 1) not exist for the domain and its parent domains or 2) authorize Let's Encrypt.
+
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
 <p markdown="1">Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.</p>
