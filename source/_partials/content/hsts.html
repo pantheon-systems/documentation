@@ -1,4 +1,4 @@
-Using the <a href="/docs/pantheon-yml/"><code>pantheon.yml</code></a> file, you can set the use and duration of the HSTS header. Either a short (5 minute) or long (366 day) duration may be selected. Using the long duration setting will help you get an A+ SSL rating from <a href="https://www.ssllabs.com/ssltest/" class="external">SSL Labs</a>.
+Using the <a href="/docs/pantheon-yml/"><code>pantheon.yml</code></a> file, you can set the use and duration of the HSTS header, and its affect on subdomains. You can set a short (5 minute) duration header that affects just the domain, or a long (366 day) duration that also applies to subdomains. Using the long duration setting will help you get an A+ SSL rating from <a href="https://www.ssllabs.com/ssltest/" class="external">SSL Labs</a>.
 
 Use of the HSTS header is defined by the <code>scheme</code> directive, and takes three possible values:
 
@@ -11,7 +11,7 @@ Use of the HSTS header is defined by the <code>scheme</code> directive, and take
 
     <pre><code class="hljs less">scheme: https</code></pre></li>
 
-<li>HTTPS redirect with a long HSTS duration (366 days, for an A+ SSL Labs rating):
+<li>HTTPS redirect with a long HSTS duration (366 days, for an A+ SSL Labs rating), which also applies to subdomains:
 
     <pre><code class="hljs less">scheme: hsts</code></pre></li>
 </ul>
@@ -24,8 +24,12 @@ Pantheon will send the following header based on the setting of `scheme`:
 <li>hsts: <code>Strict-Transport-Security: max-age=31622400; includeSubDomains; preload</code></li>
 </ul>
 
-See <a href="/docs/pantheon-yml/">Pantheon YAML Configuration Files</a> for more information on how to configure this file.
+<p>See <a href="/docs/pantheon-yml/">Pantheon YAML Configuration Files</a> for more information on how to configure this file.</p>
 
-<h4>Warning</h4>
-
-Use caution before selecting the HSTS scheme, as this setting will affect not only the selected domain, but also all of its subdomains. Once enabled, HSTS headers are cached by browsers for the duration of the max-age period (one year on Pantheon). If at any time you wish to disable https and go back to plain http, users who have already visited your site will receive a browser warning preventing them from accessing the site until the max-age expires or they have manually cleared their browser history related to your site. If you are not sure that this is what you want, then you should select `scheme: https` instead, as this selection has no affect on subdomains, and has a limited (5 minute) HSTS duration.
+<div class="alert alert-danger" role="alert" markdown="1">
+<h4 class="info">Warning</h4>
+<p>Once enabled, HSTS headers are cached by browsers for the duration of the max-age period (one year on Pantheon). If at any time you wish to disable https and go back to unencrypted HTTP, users who have already visited your site will receive a browser warning preventing them from accessing the site until the max-age expires or they have manually cleared their browser history related to your site.</p>
+<p>
+If you are not sure that this is what you want, then you should select <code>scheme: https</code> instead, as this selection has no affect on subdomains, and has a limited (5 minute) HSTS duration.
+</p>
+</div>
