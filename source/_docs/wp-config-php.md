@@ -105,7 +105,7 @@ See [Configure Redirects](/docs/redirects/).
 
 ### How do I change the default debug.log location?
 
-WordPress has an option to write logging information to a [file](/docs/logs/#how-do-i-enable-error-logging-for-wordpress) when enabled. By default, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
+WordPress has an option to write logging information to a <a href="/docs/logs/#how-do-i-enable-error-logging-for-wordpress" data-proofer-ignore>file</a> when enabled. By default, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
 
 ```php
 ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
