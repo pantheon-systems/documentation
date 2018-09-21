@@ -93,7 +93,7 @@ BACKUPDATE=$(date +%Y%m%d%s)
 EXTENSION="tar.gz"
 
 # connect to terminus
-terminus auth:login --email $TERMINUS_USER
+terminus auth:login --email $TERMINUSUSER
 
 # iterate through sites to backup
 for thissite in $SITENAMES; do
