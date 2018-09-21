@@ -41,29 +41,28 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 			<th>Maximum</th>
 			<th>Description</th>
 		</tr>
-	</thead><tbody>
-			<tr>
-				<td>Connection Timeout</td>
-				<td>60 seconds</td>
-				<td>Number of seconds to wait for a timeout.</td>
-			</tr>
-			<tr>
-				<td>First Byte Timeout</td>
-				<td>60 seconds</td>
-				<td>Number of seconds to wait for the first byte.</td>
-			</tr>
-			<tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Connection Timeout</td>
+			<td>60 seconds</td>
+			<td>Number of seconds to wait for a timeout.</td>
+		</tr>
+		<tr>
+			<td>First Byte Timeout</td>
+			<td>60 seconds</td>
+			<td>Number of seconds to wait for the first byte.</td>
+		</tr>
+		<tr>
 			<td>Between Bytes Timeout</td>
 			<td>60 seconds</td>
 			<td>Number of seconds to wait for between bytes.</td>
-			</tr>
-
+		</tr>
 		<tr>
 			<td>Pantheon executed Drupal cron</td>
 			<td>180 seconds</td>
 			<td>Only applies to Pantheon's automatic hourly execution of drush cron</td>
 		</tr>
-
 		<tr>
 			<td><a href="https://secure.php.net/manual/en/function.set-time-limit.php">PHP set_time_limit</a></td>
 			<td>120 seconds</td>
@@ -81,7 +80,6 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 			60 minutes hard limit</td>
 			<td>Applies to remote Drush commands, SSH tunneling, SFTP, rsync</td>
 		</tr>
-
 		<tr>
 			<td><a href="https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_write_timeout">MySQL net_write_timeout</a></td>
 			<td>90 seconds</td>
