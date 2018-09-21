@@ -45,17 +45,17 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 	<tbody>
 		<tr>
 			<td>Connection Timeout</td>
-			<td>60 seconds</td>
+			<td>59 seconds</td>
 			<td>Number of seconds to wait for a timeout.</td>
 		</tr>
 		<tr>
 			<td>First Byte Timeout</td>
-			<td>60 seconds</td>
+			<td>59 seconds</td>
 			<td>Number of seconds to wait for the first byte.</td>
 		</tr>
 		<tr>
 			<td>Between Bytes Timeout</td>
-			<td>60 seconds</td>
+			<td>59 seconds</td>
 			<td>Number of seconds to wait for between bytes.</td>
 		</tr>
 		<tr>
