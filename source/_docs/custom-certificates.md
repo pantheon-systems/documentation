@@ -7,7 +7,7 @@ earlynote: This documentation covers features and options not available across t
 
 ## Access
 
-A white glove concierge service is now available and **currently limited to existing Legacy SSL contract customers**, including Enterprise, EDU+, Pantheon One, Elite, and Resellers.
+A limited white glove concierge service is now available to contract customers only (Enterprise, EDU+, Pantheon One, Elite, and Resellers) for sites that **currently have a Legacy SSL certificate installed**. All others can either take advantage of our [platform included automated HTTPS powered by Let's Encrypt](/docs/https/) or [terminate HTTPS through a 3rd-party CDN service provider](https://pantheon.io/docs/https/?action=#can-i-bring-my-own-certificate). 
 
 ## Upgrade to the Global CDN
 
