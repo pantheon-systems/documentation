@@ -83,6 +83,8 @@ TERMINUSUSER=""
 SITENAMES=""
 # Site environments to backup (any combination of dev, test and live)
 SITEENVS="dev live"
+# Elements of backup to be downloaded.
+ELEMENTS="code files db"
 # Local backup directory (must exist, requires trailing slash)
 BACKUPDIR="<local-path-to-folder>/"
 # Add a date and unique string to the filename
@@ -91,7 +93,7 @@ BACKUPDATE=$(date +%Y%m%d%s)
 EXTENSION="tar.gz"
 
 # connect to terminus
-terminus auth:login $TERMINUS_USER
+terminus auth:login --email $TERMINUS_USER
 
 # iterate through sites to backup
 for thissite in $SITENAMES; do
@@ -99,9 +101,12 @@ for thissite in $SITENAMES; do
   for thisenv in $SITEENVS; do
     # create backup
     terminus backup:create $thissite.$thisenv
-
-    # download current site backups
-    terminus backup:get $thissite.$thisenv --to=$BACKUPDIR$SITENAMES.$SITEENVS.$BACKUPDATE.$EXTENSION
+    
+    # iterate through backup elements
+    for element in $ELEMENTS; do
+      # download current site backups
+      terminus backup:get --element=$element --to=$BACKUPDIR$thissite.$thisenv.$element.$BACKUPDATE.$EXTENSION $thissite.$thisenv
+    done
   done
 done
 echo $BACKUPDIR
