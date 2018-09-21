@@ -223,7 +223,13 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 }
 ```
 
-By default, the WordPress debug log path is set to `/wp-content/` and not writable on Test or Live environments. This can be overridden to the [`/wp-content/uploads/` folder](/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location).
+By default, the WordPress debug log path is set to `/wp-content/` and not writable on Test or Live environments. This can be overridden to the <a href="/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location" data-proofer-ignore>`/wp-content/uploads/` folder</a>.
+
+
+<div class="alert alert-danger" role="alert" markdown="1">
+#### Warning {.info}
+Enabling debug logging is not recommended for production environments due to the increased resource overhead. If you need to enable debug logging on the live environment to resolve a problem, remember to disable it when you are done.
+</div>
 
 ### How can I access the Drupal event log?
 
