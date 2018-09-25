@@ -207,17 +207,20 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     if (!defined( 'WP_DEBUG' )) {
     define( 'WP_DEBUG', true );
     }
-    define( 'WP_DEBUG_LOG', true ); // Stored in wp-content/debug.log
+    ini_set('log_errors','On');
+    ini_set('display_errors','On');
+    ini_set('error_reporting', E_ALL );
+    define( 'WP_DEBUG_LOG', true ); // Stored in wp-content/debug.log by default.
+    ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Optionally overrides the debug.log location to a writable path.
     define( 'WP_DEBUG_DISPLAY', true );
   }
   // Wordpress debug settings in test and live environments.
   else {
     // Debugging disabled.
-    ini_set('log_errors','On');
+    ini_set('log_errors','Off');
     ini_set('display_errors','Off');
-    ini_set('error_reporting', E_ALL );
     define('WP_DEBUG', false);
-    define('WP_DEBUG_LOG', true);
+    define('WP_DEBUG_LOG', false);
     define('WP_DEBUG_DISPLAY', false);
   }
 }
