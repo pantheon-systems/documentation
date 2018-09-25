@@ -14,7 +14,7 @@ image: terminus-thumbLarge
 searchboost: 100
 ---
 
-## Identify Site Name
+## Identify Site Name <site>
 
 Most Terminus commands requires a **site name**, which is derived from the **site label** you give it when you create the site from the dashboard.
 <div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">Sites created through Terminus may have unique site names and labels.</p></div>
