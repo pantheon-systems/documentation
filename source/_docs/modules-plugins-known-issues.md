@@ -300,6 +300,21 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 
 <hr>
 
+### [Better Search And Replace](https://wordpress.org/plugins/better-search-replace/){.external}
+**Issue**: Plugin is not accessible in TEST/LIVE(read-only environments in Pantheon) due to the ‘install_plugins’ capability check of the plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/not-appearing-on-test-and-live-environments-in-pantheon/){.external}.
+
+**Solution #1**: There is an undocumented filter in place to override the capability check. Adding this in the your theme’s function.php can make it work:
+```
+function better_search_replace_cap_override() {
+    return 'manage_options';
+}
+add_filter( 'bsr_capability', 'better_search_replace_cap_override' );
+```
+
+**Solution #2**: Use an alternative Search and Replace plugin like [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/){.external}
+
+<hr>
+
 ### [Bookly](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/){.external}
 **Issue**: Sessions are implemented in a way that will not allow it to function with the WP Native Sessions plugin, either installed as a regular plugin or an mu-plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/incompatibility-with-wp-native-sessions/){.external}.
 
