@@ -154,9 +154,8 @@ WordPress does not set cache headers by default, 404 or otherwise. If your site 
 
 Plugins like [Cache Control](https://wordpress.org/plugins/cache-control/){.external} can solve this issue.
 
-## Basic Authentication
-
-If you're using the Environment Access: Locked security setting on a site environment, the Global CDN will not cache your content.
+## Environment Access Locked
+If you're using the [Security tool](/docs/security/) within the Pantheon Site Dashboard to lock an environment, the Global CDN will not cache responses. Disable basic authentication by setting environment access to **Public**. 
 
 ## Cookie Handling
 
