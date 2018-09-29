@@ -21,6 +21,8 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Do not modify core WordPress files as it can cause unintended consequences, and can [prevent you from updating your site regularly](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts). If you need to modify any WP functionality, do it as a custom plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/){.external}.
 
+* When developing custom plugins or themes, it is best to abide with the [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/){.external} for efficiency and ease of collaboration. 
+
 *  We recommend using an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP){.external}, or a text editor designed for development like [Atom](https://atom.io/){.external}, [Sublime Text](https://www.sublimetext.com/){.external}, or [Brackets](https://github.com/adobe/brackets/){.external}.
 
 * Don't use plugins that create files vital to your site logic that you aren't willing to track in Git. Sometimes they're dumped in uploads, sometimes not, and you'll likely have difficulty trying to figure it out later. You'd be surprised how many uploads-type plugins rely on `.htaccess` files — avoid those as well.
