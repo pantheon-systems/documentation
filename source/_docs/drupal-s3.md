@@ -209,7 +209,7 @@ terminus drush <site>.<env> -- s3fs-refresh-cache
 ### If you have files in Drupal that need inclusion with S3 run:
 
 ```
-terminus drush drush <site>.<env> -- s3fs-copy-local
+terminus drush <site>.<env> -- s3fs-copy-local
 ```
 
 If you receive an access denied error message from Amazon, check the permissions on your bucket and policies. Verify all your configuration settings in Drupal are complete and accurate.
