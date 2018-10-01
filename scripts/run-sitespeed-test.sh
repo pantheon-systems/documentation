@@ -14,7 +14,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   # Remove - to avoid failures
   export normalize_branch="${normalize_branch//[-_]}"
   export normalize_branch="${normalize_branch,,}"
-  export url=`/documentation/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`docs
+  export url=`~/.composer/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`docs
   export url=https${url:4}
 
   # sitespeed expects the input file to contain full urls to s file with

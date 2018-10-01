@@ -1,5 +1,5 @@
 # Use a Pre-Built CircleCI Docker Image known to work with Composer
-FROM circleci/php:7.1-node-browsers
+FROM circleci/php:7.1-node-browsers-legacy
 
 
 # Define the user as circleci, as provided by the parent image
