@@ -80,7 +80,7 @@ Look for custom modules or theme files (template.php file, &ast;.tpl.php files, 
 > [0x000000000327b2d0] drupal_render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/includes/common.inc:6053  
 > [0x000000000327a240] render() /srv/bindings/d142301948514750b2ff39988as6f4b9158e5/code/sites/all/themes/themename/templates/page.tpl.php:113  
 ```
-Next, search for contributed modules or plug-ins that may be detrimental to the site. stream_wrappers.inc is showing twice at the exact same time stamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
+Next, search for contributed modules or plug-ins that may be detrimental to the site. stream_wrappers.inc is showing twice at the exact same timestamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
 
 ```php
 > [08-Dec-2014 16:56:48]  [pool www] pid 3863  
