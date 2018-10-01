@@ -28,27 +28,27 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
 
 
   printf "Authenticate Terminus \n"
-  /documentation/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
+  ~/.composer/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
 
 
   printf "Write existing environments for the static docs site to a text file \n"
-  /documentation/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
+  ~/.composer/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
 
   printf "Check env_list.txt, create environment if one does not already exist \n"
   if grep -Fxq "$normalize_branch" ./env_list.txt; then
     echo "Existing environment found for $normalize_branch"
     # Get the environment hostname and URL
-    export url=`/documentation/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
+    export url=`~/.composer/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8: -1}
     export docs_url=${url}/docs
   else
     printf "Creating multidev environment... \n"
-    /documentation/vendor/pantheon-systems/terminus/bin/terminus multidev:create static-docs.dev $normalize_branch
+    ~/.composer/vendor/pantheon-systems/terminus/bin/terminus multidev:create static-docs.dev $normalize_branch
 
     # Get the environment hostname and identify deployment URL
     printf "Identifying environment hostname... \n"
-    export url=`/documentation/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
+    export url=`~/.composer/vendor/pantheon-systems/terminus/bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8}
     export docs_url=${url}/docs
@@ -82,7 +82,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
     mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
   done
   printf "Create json dump of terminus help for docs/terminus/commands \n"
-  /documentation/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
+  ~/.composer/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
   curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
 
@@ -176,5 +176,5 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
 
   printf "Clear cache on multidev env. \n"
-  /documentation/vendor/pantheon-systems/terminus/bin/terminus env:cc static-docs.$normalize_branch
+  ~/.composer/vendor/pantheon-systems/terminus/bin/terminus env:cc static-docs.$normalize_branch
 fi
