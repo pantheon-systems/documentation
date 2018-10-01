@@ -24,6 +24,7 @@ RUN bundle install --jobs=4
 
 # Install PHP dependencies
 COPY --chown=circleci:circleci composer.json ./
+COPY --chown=circleci:circleci composer.lock ./
 RUN composer install
 
 # Install node dependencies
@@ -37,10 +38,13 @@ COPY --chown=circleci:circleci ./behat.yml ./budget.json ./Gruntfile.js ./Rakefi
 # Copy the app directory
 COPY --chown=circleci:circleci ./app /documentation/app
 
+# Install Terminus Globally
+RUN composer global require pantheon-systems/terminus
+
 # Compile assets (CSS and Terminus Manual)
 COPY --chown=circleci:circleci ./source /documentation/source
 RUN node_modules/.bin/grunt
-RUN vendor/pantheon-systems/terminus/bin/terminus list > /documentation/source/docs/assets/terminus/commands.json --format=json
+RUN ~/.composer/vendor/pantheon-systems/terminus/bin/terminus list > /documentation/source/docs/assets/terminus/commands.json --format=json
 RUN curl https://api.github.com/repos/pantheon-systems/terminus/releases > /documentation/source/docs/assets/terminus/releases.json
 
 # Generate the site in development mode (include drafts)
