@@ -42,6 +42,9 @@ All non-Basic plans come with free overage protection. Where there is a pattern 
 ### What about bots?
 Pantheon-identified bots are excluded from the Visits and Pages Served Metrics.
 
+### What about redirects?
+Only requests with a 2xx status as pages, so 301 redirects will not be included in metrics
+
 ### Can I see metrics for other environments?
 Yes! Metrics are now available for the entire site or by environment via the Terminus `alpha:metrics` command, when [installed via Git](https://github.com/pantheon-systems/terminus#installing-with-git).
 
