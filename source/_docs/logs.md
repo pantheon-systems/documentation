@@ -231,7 +231,7 @@ By default, the WordPress debug log path is set to `/wp-content/` and not writab
 
 <div class="alert alert-danger" role="alert" markdown="1">
 #### Warning {.info}
-Enabling debug logging is not recommended for production environments due to the increased resource overhead. If you need to enable debug logging on the live environment to resolve a problem, remember to disable it when you are done.
+Enabling debug logging is not recommended for production environments due to the increased resource overhead and security risk. If you need to enable debug logging on the live environment to resolve a problem, remember to disable it when you are done.
 </div>
 
 ### How can I access the Drupal event log?
