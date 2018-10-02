@@ -26,51 +26,15 @@ For more information on the announcement of new plans, see [this related blog po
 | Performance (XL)     | $750            | $1,000      |
 
 ### Annual Billing
+Pantheon offers annual billing plans at lower rates, giving up to two month's worth of savings.
 
-Pantheon offers [annual billing plans at lower rates](/docs/annual-billing/), giving up to two month's worth of savings.
-
-<dl>
-  <dt>List Price</dt>
-    <dd>Set price for new sites created after September that aren’t purchased via a qualified agency partner.</dd>
-  <dt>Preferred Price</dt>
-    <dd>Introductory price available to the general public until late October, after which it will be exclusively available via qualified agency partners.</dd>
-</dl>
-
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">List Price</a></li>
-
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Preferred Price</a></li>
-
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-|                    | Basic         | Performance Small | Performance Medium | Performance Large | Performance XL       |
-|:------------------ |:------------- |:----------------- |:------------------ |:----------------- |:-------------------- |
-| Monthly Price      | $50           | $175              | $300               | $600              | $1,000               |
-| Annual Price       | $500          | $1,925            | $3,300             | $6,600            | $11,000              |
-| **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
-
-**Note:** List price will not go into effect until the introduction of the Partner Program.
-</div>
-
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
-
-|                    | Basic   | Performance Small | Performance Medium | Performance Large | Performance XL  |
-|:------------------ |:------- |:----------------- |:------------------ |:----------------- |:--------------- |
-| Monthly Price      | $35     | $125              | $225               | $450              | $750            |
-| Annual Price       | $350    | $1,375            | $2,475             | $4,950            | $8,250          |
-| **Annual Savings** | **$70** | **$125**          | **$225**           | **$450**          | **$750**        |
-
-</div>
-
-</div>
+| Plan                 | Preferred Annual Price | Annual Savings  |
+| -------------------- | ---------------------- | --------------- |
+| Basic                | $350                   | $70             |
+| Performance (Small)  | $1375                  | $125            |
+| Performance (Medium) | $2475                  | $225            |
+| Performance (Large)  | $4950                  | $450            |
+| Performance (XL)     | $8250                  | $750            |
 
 ## Frequently Asked Questions
 
