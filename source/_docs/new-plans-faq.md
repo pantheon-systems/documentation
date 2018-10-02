@@ -28,13 +28,13 @@ For more information on the announcement of new plans, see [this related blog po
 ### Annual Billing
 Pantheon offers annual billing plans at lower rates, giving up to two month's worth of savings.
 
-| Plan                 | Annual Price | Annual Savings  |
-| -------------------- | ------------ | --------------- |
-| Basic                | $350             | $70         |
-| Performance (Small)  | $1375            | $125        |
-| Performance (Medium) | $2475            | $225        |
-| Performance (Large)  | $4950            | $450        |
-| Performance (XL)     | $8250            | $750        |
+| Plan                 | Preferred Annual Price | Annual Savings  |
+| -------------------- | ---------------------- | --------------- |
+| Basic                | $350                   | $70             |
+| Performance (Small)  | $1375                  | $125            |
+| Performance (Medium) | $2475                  | $225            |
+| Performance (Large)  | $4950                  | $450            |
+| Performance (XL)     | $8250                  | $750            |
 
 ## Frequently Asked Questions
 

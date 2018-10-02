@@ -10,8 +10,14 @@ For standard billing information, see [Billing in the Site Dashboard](/docs/site
 
 ## Annual Billing Savings
 
-The table below shows how much sites can save by switching to annual billing. Performance plans receive savings equal to at least month of free service. On a basic plan, the savings equate to two months of free service.
+The table below shows how much sites can save by switching to annual billing. Performance plans receive savings equivalent to at least one month of free service. On a basic plan, the savings are equivalent to two months of free service.
 
+<dl>
+  <dt>List Price</dt>
+    <dd>Set price for new sites created after September that aren’t purchased via a qualified agency partner.</dd>
+  <dt>Preferred Price</dt>
+    <dd>Introductory price available to the general public until late October, after which it will be exclusively available via qualified agency partners.</dd>
+</dl>
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
