@@ -26,7 +26,7 @@ For more information on the announcement of new plans, see [this related blog po
 | Performance (XL)     | $750            | $1,000      |
 
 ### Annual Billing
-Pantheon offers annual billing plans at lower rates, giving up to two month's worth of savings.
+Pantheon offers [annual billing plans at lower rates](/docs/annual-billing/), giving up to two month's worth of savings.
 
 | Plan                 | Preferred Annual Price | Annual Savings  |
 | -------------------- | ---------------------- | --------------- |
