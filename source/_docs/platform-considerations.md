@@ -34,29 +34,26 @@ The [max execution time](/docs/timeouts/#user-configurable-timeouts) for PHP scr
 
 In this or similar instances, consider performing larger operations locally, them importing the code, files, and database back up to the platform.
 
-## Batched data export to file
+## Batched Data Export to File
 
-Bacthed export to a file is difficult on TEST and LIVE environment on plans which have multiple application containers. Many contrib plugins and modules are not well architected to support multiple application containers. It might be possible to get data export working, but is likely to require effort and custom code.
+Batched export to a file is difficult on Test and Live environment on plans which have multiple application containers. Many contrib plugins and modules are not designed to support multiple application containers. It might be possible to get data export working, but is likely to require effort and custom code.
 
 Often modules and plugins do this type of batch export by continuously appending data to the same file, in each request in the batch process.
-With multiple application containers, the result is that several containers will attempt to add data to the same file at once, while also sync'ing each their own version of the updated file to other appservers, plus receiving updates from other application containers. The exported data will likely be incomplete.
+With multiple application containers, the result is that several containers will attempt to add data to the same file at once, while also syncing their own version of the updated file to other appservers, plus receiving updates from other application containers. The exported data will likely be incomplete.
 
-A non-batched export of a dataset small enough to complete within the set timeout for web requests, will likely work.
+A non-batched export of a dataset small enough to complete within the set timeout for web requests will likely work.
 
-### Suggestions for workarounds to try
+### Potential Workarounds
 
-1) Let each request in the data export write to its own tmp file and concatenate these at the end.
-This solution requires the [Persistent Temporary Path Workaround] (/docs/tmp/#persistent-temporary-path-workaround) is in place.
+1. Have each request in the data export write to its own tmp file and concatenate these at the end. This solution requires that the [Persistent Temporary Path Workaround] (/docs/tmp/#persistent-temporary-path-workaround) is in place.
 
-2) Do small batches and add enough time between each request in the batch process, to allow the updated file to be sync'ed between all application containers.
+2. Do small batches, and add enough time between each request in the batch process to allow the updated file to be synced between all application containers.
 
 ### Alternative approaches 
 
-Running the export command line using tools like terminus, drush, wp-cli and cron will produce a better result. Larger data sets can be exported, as command line processing have longer timeouts than http requests:
-[Timeouts on Pantheon] (/docs/timeouts)
-The export won't need to be batched and can therefore run to completion on a single application container.
+Running the export from the command line using tools like [Terminus](/docs/terminus/), [Drush](/docs/drush/), [WP-CLI](/docs/wp-cli/) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/docs/timeouts). The export won't need to be batched and can therefore run to completion on a single application container.
 
-The best solution will most often be to implement data exports as a webservice, exchanging the data incrementally with the system in the other end.
+The best solution will most often be to implement data exports as a web service, exchanging the data incrementally with the system in the other end.
 
 
 ## Multisite
