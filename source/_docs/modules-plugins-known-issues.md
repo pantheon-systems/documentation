@@ -301,7 +301,7 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 <hr>
 
 ### [Better Search And Replace](https://wordpress.org/plugins/better-search-replace/){.external}
-**Issue**: Plugin is not accessible in Test or Live (read-only environments in Pantheon) due to the ‘install_plugins’ capability check of the plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/not-appearing-on-test-and-live-environments-in-pantheon/){.external}.
+**Issue**: Plugin is not accessible in Test or Live (read-only environments in Pantheon) due to the `install_plugins` capability check of the plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/not-appearing-on-test-and-live-environments-in-pantheon/){.external}.
 
 **Solution #1**: There is an undocumented filter in place to override the capability check. Adding this in the your theme’s `function.php` can make it work:
 
