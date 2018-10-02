@@ -45,7 +45,7 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 ### Suggestions for workarounds to try
 
-1) Let each request in the data export write to it's own tmp file and concatenate these at the end.
+1) Let each request in the data export write to its own tmp file and concatenate these at the end.
 This solution requires the [Persistent Temporary Path Workaround] (/docs/tmp/#persistent-temporary-path-workaround) is in place.
 
 2) Do small batches and add enough time between each request in the batch process, to allow the updated file to be sync'ed between all application containers.
