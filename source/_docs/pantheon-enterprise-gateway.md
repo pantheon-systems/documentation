@@ -4,7 +4,7 @@ description: Configuring your Drupal or WordPress site to use the Pantheon Enter
 tags: [infrastructure, security]
 categories: []
 ---
-[Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration){.external} creates a secure tunnel between your firewall and your public facing website. This is available for sites within Enterprise and EDU+ organizations. [Contact us](https://pantheon.io/pantheon-enterprise){.external} for more information.
+[Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration){.external} creates a secure tunnel between your firewall and your public facing website. This is available for customers with an annual contract. [Contact us](https://pantheon.io/contact-us){.external} for more information.
 
 One of the effects of the elastic nature of Pantheon's platform is that sites have a [dynamic outgoing IP](/docs/outgoing-ips/). Container IP addresses are not constant, so direct connections aren't sustainable. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. The Pantheon Enterprise Gateway provides a solution.
 
