@@ -12,7 +12,7 @@ For more information on the announcement of new plans, see [this related blog po
 ## List and Preferred Pricing
 <dl>
   <dt>List Price</dt>
-    <dd>Set price for new sites created after September that aren’t purchased via a qualified agency partner.</dd>
+    <dd>Set price for new sites created after late October that aren’t purchased via a qualified agency partner.</dd>
   <dt>Preferred Price</dt>
     <dd>Introductory price available to the general public until late October, after which it will be exclusively available via qualified agency partners.</dd>
 </dl>
@@ -26,15 +26,15 @@ For more information on the announcement of new plans, see [this related blog po
 | Performance (XL)     | $750            | $1,000      |
 
 ### Annual Billing
-Pantheon offers annual billing plans at lower rates, giving up to two month's worth of savings.
+Pantheon offers [annual billing plans at lower rates](/docs/annual-billing/), giving up to two month's worth of savings.
 
-| Plan                 | Annual Price | Annual Savings  |
-| -------------------- | ------------ | --------------- |
-| Basic                | $350             | $70         |
-| Performance (Small)  | $1375            | $125        |
-| Performance (Medium) | $2475            | $225        |
-| Performance (Large)  | $4950            | $450        |
-| Performance (XL)     | $8250            | $750        |
+| Plan                 | Preferred Annual Price | Annual Savings  |
+| -------------------- | ---------------------- | --------------- |
+| Basic                | $350                   | $70             |
+| Performance (Small)  | $1375                  | $125            |
+| Performance (Medium) | $2475                  | $225            |
+| Performance (Large)  | $4950                  | $450            |
+| Performance (XL)     | $8250                  | $750            |
 
 ## Frequently Asked Questions
 
@@ -63,8 +63,8 @@ All existing sites will have preferred pricing locked in for the plan they migra
 ### Are legacy plans still available?
 No new sites can be created on legacy plans outside of existing contracted agreements. The legacy plans are no longer available for purchase online.
 
-### Will I be able to keep preferred pricing after September?
-All existing sites as of September (legacy & new) will lock in preferred pricing, regardless of whether they are associated with a qualified agency partner.
+### Will I be able to keep preferred pricing after October?
+All existing sites as of early October (legacy & new) will lock in preferred pricing, regardless of whether they are associated with a qualified agency partner.
 
 In late October all new online site plan purchases will be at list price unless purchased through a qualified agency.
 
