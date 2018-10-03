@@ -14,7 +14,7 @@ The table below shows how much sites can save by switching to annual billing. Pe
 
 <dl>
   <dt>List Price</dt>
-    <dd>Set price for new sites created after September that aren’t purchased via a qualified agency partner.</dd>
+    <dd>Set price for new sites created after late October that aren’t purchased via a qualified agency partner.</dd>
   <dt>Preferred Price</dt>
     <dd>Introductory price available to the general public until late October, after which it will be exclusively available via qualified agency partners.</dd>
 </dl>
