@@ -76,7 +76,7 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
 
 ### Upgrade Your Site
 
-1. Click the **Start Upgrade** button from the Site Dashboard.
+1. From the Site Dashboard, click the **Start Upgrade** button on the Domains section of the Live tab.
 2. It can take up to an hour for the new certificate to deploy across the entire CDN. If you want to avoid any possible hiccoughs you can wait 60 minutes before updating DNS.
 
   If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change:
