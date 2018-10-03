@@ -39,6 +39,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
      - Technical contact first name
      - Technical contact last name
 
+<br>
 
 2. Pantheon Support will provide you with the CSR file, to pass on to your **Certificate Authority** (CA).
 
