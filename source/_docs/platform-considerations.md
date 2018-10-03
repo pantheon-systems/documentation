@@ -36,7 +36,7 @@ In this or similar instances, consider performing larger operations locally, the
 
 ## Batched Data Export to File
 
-In Test and Live environments on plans with multiple application containers, it is difficult to test batched export to a file. Many contrib plugins and modules are not designed to support multiple application containers. It might be possible to get data export working, but that is likely to require additional effort and custom code.
+In Test and Live environments on plans with multiple application containers, it is difficult to test batched exports to a file. Many contrib plugins and modules are not designed to support multiple application containers. It might be possible to get data export working, but that is likely to require additional effort and custom code.
 
 Often, modules and plugins do this type of batch export by continuously appending data to the same file in each request in the batch process. With multiple application containers, the result is that several containers will attempt to add data to the same file at once, while both syncing their own version of the updated file to other appservers and receiving updates from other application containers. The exported data will likely be incomplete.
 
