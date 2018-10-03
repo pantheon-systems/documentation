@@ -23,17 +23,7 @@ If you just haven’t gotten around to upgrading, consider using our managed HTT
 
 If you require a custom, dedicated certificate, you can now bring it the Global CDN.
 
-1. [Open a support ticket](/docs/support/#ticket-support) with the certificate details required to generate a **Certificate Signing Request** (CSR). Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name){.external} (SANs) per certificate.
-
-
-    <div class="panel panel-drop panel-guide" id="accordion">
-    <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
-      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> CSR Details</h3>
-    </a>
-    </div>
-    <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
-    ### CSR Details Required {.info}
+1. [Open a support ticket](/docs/support/#ticket-support) with the certificate details required to request a **Certificate Signing Request** (CSR) from Pantheon. Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name){.external} (SANs) per certificate.
 
     When requesting a CSR file, you must provide Pantheon Support with the following information:
 
@@ -48,8 +38,8 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
      - Technical contact email
      - Technical contact first name
      - Technical contact last name
-    </div>
-    </div>
+
+<br>
 
 2. Pantheon Support will provide you with the CSR file, to pass on to your **Certificate Authority** (CA).
 
