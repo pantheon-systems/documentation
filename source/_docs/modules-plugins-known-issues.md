@@ -334,6 +334,12 @@ add_filter( 'bsr_capability', 'better_search_replace_cap_override' );
 **Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass the platform page cache.
 <hr>
 
+### [Coming Soon](https://wordpress.org/plugins/coming-soon/){.external}
+**Issue**: Maintenance mode gives `ERR_TOO_MANY_REDIRECTS`.
+
+**Solution**: This plugin only works in the "Coming Soon Mode" and you should put something in the Page settings so it won't appear as a blank page.
+<hr>
+
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/){.external}
 **Issue**: This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
 
