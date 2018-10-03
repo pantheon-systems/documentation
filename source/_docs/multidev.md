@@ -209,3 +209,7 @@ Not at this time, but it is on the development roadmap.
 ### Can I backup and restore a branch environment?
 
 Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.
+
+### Can I buy additional Multidev environments?
+
+Elite sites can request additional Multidev environments [from support](/docs/support/) as needed.
