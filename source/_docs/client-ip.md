@@ -25,7 +25,7 @@ We offer various methods for you to interact with your Pantheon site, so it is i
 
 ### Cloudflare
 
-When using Cloudflare as a stacked CDN or proxy, use the variable `$SERVER["HTTP_CF_CONNECTING_IP"]` instead of `$_SERVER["REMOTE_ADDR"]`.
+When using Cloudflare as a stacked CDN or proxy, use the variable `$_SERVER["HTTP_CF_CONNECTING_IP"]` instead of `$_SERVER["REMOTE_ADDR"]`.
 
 ### Spam and Failed Logins
 
