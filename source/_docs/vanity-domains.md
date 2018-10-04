@@ -28,7 +28,7 @@ At your DNS provider, create a wildcard A/AAAA record pointing to our edge. If y
 
 > `*.sites.example.com` **A** `23.185.0.X`
 
-See [Introduction to Domain Name Services](/docs/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
+See <a href="/docs/dns/#what-are-aaaa-records-and-do-i-need-them" data-proofer-ignore>Introduction to Domain Name Services</a> for more information about AAAA records.
 
 <div class="alert-info alert" markdown="1">
 #### Note {.info}
