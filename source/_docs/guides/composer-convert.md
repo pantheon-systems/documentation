@@ -184,7 +184,7 @@ terminus site:upstream:set $site empty
 
 ## Ongoing Core Updates
 
-Core updates are carried out via composer:
+Core updates are carried out via Composer:
 
 ```bash
 git pull origin master
