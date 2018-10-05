@@ -14,20 +14,32 @@ image: terminus-thumbLarge
 searchboost: 100
 ---
 
-## Identify Site Name <site>
+## &lt;site&gt;.&lt;env&gt;
+Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
+![terminus env:clear-cache your-awesome-site.live](/source/docs/assets/images/terminus-example-cc.png)
 
-Most Terminus commands requires a **site name**, which is derived from the **site label** you give it when you create the site from the dashboard.
-<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">Sites created through Terminus may have unique site names and labels.</p></div>
+<div class="panel panel-drop panel-guide" id="accordion">
+<div class="panel-heading panel-drop-heading">
+<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#identify-site"><h3 class="panel-title panel-drop-title info" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Learn More</h3></a>
+</div>
+<div id="identify-site" class="collapse">
+<div class="panel-inner" markdown="1">
+<dl>
+  <dt>Site Label</dt>
+    <dd>Human readable, such as "Your Awesome Site", entered during site creation and displayed in the Site Dashboard.</dd>
+  <dt>Site Name: &lt;site&gt;</dt>
+    <dd markdown="1">Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/docs/domains/#platform-domains). </dd>
+  <dt>Environment Name: &lt;env&gt;</dt>
+    <dd>Machine readable, such as "dev", "test", "live", or "bug123", which refers to the target site environment on Pantheon.</dd>
+</dl>
 
-The site name is all lowercase, with spaces in the site label replaced with dashes (`-`). For example, the site name for the site "Anita Drupal" is `anita-drupal`.
 
-The site name is also found in the platform domain for any environment, formatted as `env-site-name.pantheonsite.io`. For example, the Dev environment for the site "Anita Drupal" would show `https://dev-anita-drupal.pantheonsite.io`.
+You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/docs/sites/#site-uuid). For example:
 
-You can also find your site's machine name using the Terminus command `site:info`, and the site UUID. The UUID is in the URL of your site Dashboard (`https://dashboard.pantheon.io/sites/SITE_UUID#dev/code` for example):
-
-```bash
-terminus site:info 2187b5ed...8dd90916d85b --field name
-```
+![terminus site:info e9ad4349-621e-4be6-9f94-f9646069d9e7 --field name](/source/docs/assets/images/terminus-examples-field-name.png)
+</div>
+</div>
+</div>
 
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.
