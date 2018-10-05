@@ -418,6 +418,29 @@ Pantheon has tools in place to monitor database queries:
 **Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
 <hr>
 
+### [Unyson Theme Framework](https://wordpress.org/plugins/unyson/){.external}
+**Issue**: This plugin has an internal extension system which installs additional files aside from the plugin itself. Some of those extensions has an additional .gitignore file that prevents it from being deployed to Test and Live environment. [See this for more information about the issue.](https://github.com/ThemeFuse/Unyson/issues/3615){.external}
+
+**Solution**: When using these Unyson Extensions, manually delete these .gitignore files in the corresponding locations and you can now commit and deploy the rest of the files to Test and Live environments:
+
+Page builder
+- wp-content/plugins/framework/extensions/shortcodes/.gitignore
+- wp-content/plugins/framework/extensions/shortcodes/extensions/page-builder/.gitignore
+
+WordPress Shortcodes
+- wp-content/plugins/unyson/framework/extensions/shortcodes/.gitignore
+
+Translate Press
+- wp-content/plugins/unyson/framework/extensions/shortcodes/.gitignore
+
+Events
+- wp-content/plugins/unyson/framework/extensions/events/.gitignore
+
+Brizy
+- wp-content/plugins/brizy/vendor/twig/twig/.gitignore
+
+<hr>
+
 ### [UNLOQ Two Factor Authentication (2FA)](https://wordpress.org/plugins/unloq/){.external}
 **Issue**: `This widget does not work on this domain` error message shown after deploying plugin across environments on Pantheon. This is because the API credentials used on the original environment are being used on a new environment URL, which is not allowed by the plugin. This is by design.
 
