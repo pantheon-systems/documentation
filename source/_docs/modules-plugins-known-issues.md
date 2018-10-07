@@ -335,9 +335,11 @@ add_filter( 'bsr_capability', 'better_search_replace_cap_override' );
 <hr>
 
 ### [Coming Soon](https://wordpress.org/plugins/coming-soon/){.external}
-**Issue**: Maintenance mode gives `ERR_TOO_MANY_REDIRECTS`.
+**Issue**: `Maintenance mode` gives `ERR_TOO_MANY_REDIRECTS` error in the frontend. This plugin uses `503 Header status - Service Temporarily Unavailable` when in when in the said mode which renders the platform to have a redirect loop. Please see this [issue](https://wordpress.org/support/topic/plugin-give-err_too_many_redirects-in-pantheon-hosting/){.external} for more details regarding the error. 
 
-**Solution**: This plugin only works in the "Coming Soon Mode" and you should put something in the Page settings so it won't appear as a blank page.
+**Solution**: This plugin only works in the `Coming Soon Mode` in the platform and you should put some information under the `Page Settings` > `Message` so the Coming Soon page won't appear as a blank white page. 
+
+Alternatively, if you want your site not to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/docs/security/#customize-lock-page/). 
 <hr>
 
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/){.external}
