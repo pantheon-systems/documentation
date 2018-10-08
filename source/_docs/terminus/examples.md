@@ -16,6 +16,7 @@ searchboost: 100
 
 ## &lt;site&gt;.&lt;env&gt;
 Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
+
 ![terminus env:clear-cache your-awesome-site.live](/source/docs/assets/images/terminus-example-cc.png)
 
 <div class="panel panel-drop panel-guide" id="accordion">
