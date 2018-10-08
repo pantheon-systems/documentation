@@ -86,6 +86,11 @@ You can find this example and many others in the [Quicksilver Examples](https://
 </div>
 </div>
 
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">In addition to the style above, URLs may be stored in an encoded format. To avoid possible conflicts, search for patterns like `%3A%2F%2Fexample.com` and `:\/\/example.com`.</p>
+</div>
+
 ### Base table or view not found
 Database errors may occur during a database clone, import or while wiping the environment. In most cases, the error contains `semaphore' doesn't exist` and is generated because the site is accessed before a certain database operation is complete. Simply waiting for database operations to complete resolves the error.
 
