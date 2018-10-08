@@ -23,12 +23,15 @@ From your Organization Dashboard, go to Dashboard and [submit a support request]
 </div>
 
 ## Create a Wildcard CNAME Record
-
 At your DNS provider, create a wildcard A/AAAA record pointing to our edge. If you go with `sites.example.com`, the record would need to be created as follows:
 
 > `*.sites.example.com` **A** `23.185.0.X`
 
-See <a href="/docs/dns/#what-are-aaaa-records-and-do-i-need-them" data-proofer-ignore>Introduction to Domain Name Services</a> for more information about AAAA records.
+> `*.sites.example.com` **AAAA** `2620:12a:8000::X`
+
+> `*.sites.example.com` **AAAA** `2620:12a:8001::X`
+
+Remember to replace the `X` in this example with the offset assigned to your site, as found in **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** in your site's Dashboard. See <a href="/docs/dns/#what-are-aaaa-records-and-do-i-need-them" data-proofer-ignore>Introduction to Domain Name Services</a> for more information about AAAA records.
 
 <div class="alert-info alert" markdown="1">
 #### Note {.info}
