@@ -137,7 +137,7 @@ Some DNS providers provide a default `CNAME` record for `www` pointing to `@` (t
 
 `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices.
 
-Pantheon provides IPv6 addresses for you to assign `AAAA` records to. If your DNS service does not support `AAAA` you can simply omit this records for now, but consider asking your provider to add functionality, as the need for IPv6 will only increase in the future.
+Pantheon provides IPv6 addresses for you to assign `AAAA` records to. If your DNS service does not support `AAAA` you can simply omit these records for now, but consider asking your provider to add functionality, as the need for IPv6 will only increase in the future.
 
 Some DNS service providers require expanded AAAA records. You can retrieve the expanded version for each AAAA record by using the [IPv6 conversion tool](http://ipv6-literal.com/){.external} and copying the "IPv6 longest" result.
 
