@@ -29,7 +29,7 @@ When using Cloudflare as a stacked CDN or proxy, use the variable `$SERVER["HTTP
 
 #### Drupal 7 Domain Access module with Cloudflare
 
-When using Cloudflare in combination with the Domain Access module on Drupal 7, the user's IP address will get cached by the `ip_address()` function incorrectly very early during the bootstrap process. To correct this you can add code similar to the example below to your `settings.php` file, above where you include the Domain Access module's `settings.inc` file:
+When using Cloudflare in combination with the Domain Access module on Drupal 7, the user's IP address will get cached by the `ip_address()` function incorrectly, early during the bootstrap process. To correct this you can add similar code to your `settings.php` file, above where you include the Domain Access module's `settings.inc` file:
 
 ```php
 if (!empty($_SERVER['HTTP_CF_CONNECTING_IP'])) {
