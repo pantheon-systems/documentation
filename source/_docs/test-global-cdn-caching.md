@@ -47,9 +47,10 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
 ### Test CDN Caching with Firefox
 
-1. Install [Firebug](https://getfirebug.com/){.external}, the in-browser debugging plugin, and a [plugin](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header){.external} to insert headers.
-2. Go to your Pantheon hosted domain and click the Firebug icon in Firefox. 
-3. Click the **Network** tab, then **HTML** to see the headers.
+1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor){.external}.
+2. Load a page on your site.
+3. In the Network Monitor window, click the row that shows the page path under "File" (the "type" will be HTML).
+4. View HTTP response headers for this request on the right side of the window under the [Headers](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
 
 ### Test CDN Caching with curl
 
