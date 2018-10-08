@@ -67,7 +67,7 @@ If you get a generic Service Unavailable that is not styled like the above and y
 This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/site-plan/).
 
 ### Pantheon 504 Gateway Timeout
-"Your request has timed out while waiting for PHP to execute." There are two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other option is that there was a server problem, typically php-fpm or MySQL timing out. See [Timeouts on Pantheon](/docs/timeouts/) for more information.
+"The application did not respond in time." There are two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other option is that there was a server problem, typically php-fpm or MySQL timing out. See [Timeouts on Pantheon](/docs/timeouts/) for more information.
 
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
 
