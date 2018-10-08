@@ -59,6 +59,7 @@ terminus wp <site>.<env> -- db query "SELECT * FROM wp_users WHERE ID=1"
 
 WP-CLI has a framework for users to write their own commands. Learn about the [anatomy of a subcommand](https://make.wordpress.org/cli/handbook/commands-cookbook/#anatomy-of-a-command){.external} to solve your thorny problems with WP-CLI.
 
+Keep in mind that WP-CLI commands are subject to platform PHP memory limits, which are optimized for serving webpages and not necessarily running development tools. Commands that utilize Composer, such as `wp package install`, are generally best run on your local machine or on a CI service.
 
 ## Troubleshooting
 
