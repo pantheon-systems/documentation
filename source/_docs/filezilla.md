@@ -83,11 +83,12 @@ The value for **Default remote directory** in the Site Manager can be copied fro
 
 ### Quickconnect is refusing to connect
 
-The following error is always thrown when using Quickconnect option in FileZilla:
+The following error is always thrown when using the Quickconnect option in FileZilla:
+
 
 ```bash
 Error:        	Cannot establish FTP connection to an SFTP server. Please select proper protocol.
 Error:        	Critical error: Could not connect to server
 ```
 
-Quickconnect do not give options for protocol selection. Please see how to properly [Configure FileZilla](docs/filezilla/#configure-filezilla).
+Quickconnect does not give options for protocol selection. You need to manually add the protocol (`sftp://`) in the **Host** field.
