@@ -108,7 +108,10 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
 ### Test Global CDN with Chrome
 
-Right-click anywhere on the page, and select the **Inspect Element** option. You can use a browser extension to add the debugging header. Here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header){.external} to add headers.
+1. Open [DevTools](https://developers.google.com/web/tools/chrome-devtools){.external}.
+2. Load a page on your site.
+3. In the Network tab, click on the URL of the request, under the *Name* column of the Requests table..
+4. View HTTP response headers for this request on the right side of the window under the [Headers](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers) tab.
 
 ### Test Global CDN with Internet Explorer
 
