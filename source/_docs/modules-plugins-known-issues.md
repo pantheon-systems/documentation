@@ -427,6 +427,29 @@ For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authenticat
 
 <hr>
 
+### [Unyson Theme Framework](https://wordpress.org/plugins/unyson/){.external}
+**Issue**: This plugin has an internal extension system which installs additional files aside from the plugin itself. Some of those extensions have an additional `.gitignore` file that prevents it from being deployed to Test and Live environment. See [this GitHub issue](https://github.com/ThemeFuse/Unyson/issues/3615){.external} for more information.
+
+**Solution**: When using these Unyson Extensions, manually delete the `.gitignore` files in the corresponding locations:
+
+Page builder
+- `wp-content/plugins/framework/extensions/shortcodes/.gitignore`
+- `wp-content/plugins/framework/extensions/shortcodes/extensions/page-builder/.gitignore`
+
+WordPress Shortcodes
+- `wp-content/plugins/unyson/framework/extensions/shortcodes/.gitignore`
+
+Translate Press
+- `wp-content/plugins/unyson/framework/extensions/shortcodes/.gitignore`
+
+Events
+- `wp-content/plugins/unyson/framework/extensions/events/.gitignore`
+
+Brizy
+- `wp-content/plugins/brizy/vendor/twig/twig/.gitignore`
+
+<hr>
+
 ### [Visual Composer: Website Builder](https://visualcomposer.io/){.external}
 **Issue**: This plugin fails to download additional assets during the internal plugin activation procedure on Test and Live environemtns.
 
