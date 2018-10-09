@@ -22,15 +22,20 @@ From your Organization Dashboard, go to Dashboard and [submit a support request]
 </p>
 </div>
 
-## Create a Wildcard CNAME Record
+## Create Wildcard DNS Records
+At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Using the example domain `sites.example.com`, the record would need to be created as follows. Replace `X` with a `1`, `2`, `3`, or `4`:
 
-At your DNS provider, create a wildcard CNAME record pointing to our edge. If you go with `sites.example.com`, the record would need to be created as follows:
+> `*.sites.example.com` **A** `23.185.0.X`
 
-`*.sites.example.com` **CNAME** `edge.live.getpantheon.com`
+> `*.sites.example.com` **AAAA** `2620:12a:8000::X`
+
+> `*.sites.example.com` **AAAA** `2620:12a:8001::X`
+
+See <a href="/docs/dns/#what-are-aaaa-records-and-do-i-need-them" data-proofer-ignore>Introduction to Domain Name Services</a> for more information about AAAA records.
 
 <div class="alert-info alert" markdown="1">
 #### Note {.info}
-If the domain in question is already in use, be sure to configure your vanity domain at Pantheon _before_ changing DNS records to avoid any downtime. 
+If the domain in question is already in use, be sure to configure your vanity domain at Pantheon _before_ changing DNS records to avoid any downtime.
 </div>
 
 ## Effects and Considerations
@@ -67,11 +72,11 @@ If you run sites on subdomains of your primary site (e.g. `sites.awesomeagency.c
 
 ## Robots.txt with Custom Vanity Domains
 
-For SEO and to prevent duplicate content, the robots.txt file attached to the custom Vanity domain will contain the following by default:
+For SEO and to prevent duplicate content, the `robots.txt` file attached to the custom Vanity domain will contain the following by default:
 
 ```
 # https://live-sitename.agencyname.com/robots.txt
 User-agent: *
 Disallow: /
 ```
-To present an alternate robots.txt file from within the source code, a custom domain needs to be <a href="/docs/guides/launch/domains/" data-proofer-ignore>added to the site's Dashboard</a> and the appropriate DNS record created.
+To present an alternate `robots.txt` file from within the source code, a custom domain needs to be <a href="/docs/guides/launch/domains/" data-proofer-ignore>added to the site's Dashboard</a> and the appropriate DNS record created.
