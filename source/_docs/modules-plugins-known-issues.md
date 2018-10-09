@@ -414,9 +414,9 @@ For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authenticat
 ### [Visual Composer: Website Builder](https://visualcomposer.io/){.external}
 **Issue**: This plugin fails to download additional assets during the internal plugin activation procedure on Test and Live environments.
 
-**Solution 1**: If this plugin is installed and activated on a new site _before_ the Test and Live environment are created, it will properly transfer all assets and database settings to the additional environments.
+**Solution 1: New sites, without existing Test and Live environments**: If this plugin is installed and activated on a new site _before_ the Test and Live environments are created, it will properly transfer all assets and database settings to the additional environments.
 
-**Solution 2**: To activate the plugin on existing Test and Live environments, add the following code block to `wp-config.php`:
+**Solution 2: Sites with existing Test and Live environments**: To activate the plugin on sites with existing Test and Live environments, add the following code block to `wp-config.php`:
 ```
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     define('FS_METHOD', 'direct');
@@ -477,7 +477,7 @@ if (defined( "PANTHEON_BINDING" )) {
 <hr>
 
 ### [WPBakery: Page Builder](https://wpbakery.com/){.external}
-**Issue**: The Custom CSS and Design Options pages of the plugin (`?page=vc-custom_css, ?page=vc-color`) try to create new files when saved. Due to problems related to incorrect `FS_METHOD`, files are not created or saved in the expected folder `wp-content/uploads/js_composer`
+**Issue**: The Custom CSS and Design Options pages of the plugin (`?page=vc-custom_css`, `?page=vc-color`) try to create new files when saved. Due to problems related to incorrect `FS_METHOD`, files are not created or saved in the expected folder, `wp-content/uploads/js_composer`.
 
 **Solution**: In `wp-config.php`, place this block of code:
 
