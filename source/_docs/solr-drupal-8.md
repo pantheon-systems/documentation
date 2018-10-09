@@ -90,7 +90,7 @@ To actually search your index you will need a module like [Search API Pages](htt
 
 
 ## Solr Versions and Schemas
-The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older version of Solr, use the 8.x-1.x branch of [Search API Solr](https://www.drupal.org/project/search_api_solr) and its Solr 4 schema file.
+The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older version of Solr, use the `8.x-1.x` branch of [Search API Solr](https://www.drupal.org/project/search_api_solr){.external} and its Solr 4 schema file.
 
 {% include("content/solr-commit-changes.html") %}
 
