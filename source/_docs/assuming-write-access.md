@@ -75,6 +75,10 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 ## Troubleshooting
 
+### Removing a Symlink
+
+If a site no longer needs a symlink, because you uninstalled the plugin that required it for example, you can simply remove the symlink file from your codebase using `rm`. Move back any folders from the public files folder that should be tracked by version control.
+
 ### Modules That Verify Directories
 
 Some modules and plugins verify that the target directory exists using `is_dir()` which returns bool(false) if the directory is a symlink. It may help to patch the module/plugin to use `is_link()` instead of `is_dir()`.
