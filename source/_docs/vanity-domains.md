@@ -23,7 +23,7 @@ From your Organization Dashboard, go to Dashboard and [submit a support request]
 </div>
 
 ## Create Wildcard DNS Records
-At your DNS provider, create a wildcard A/AAAA record pointing to our edge. If you go with `sites.example.com`, the record would need to be created as follows. Replace `X` with a `1`, `2`, `3`, or `4`:
+At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Using the example domain `sites.example.com`, the record would need to be created as follows. Replace `X` with a `1`, `2`, `3`, or `4`:
 
 > `*.sites.example.com` **A** `23.185.0.X`
 
