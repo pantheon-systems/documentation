@@ -44,14 +44,6 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
 
 Two of the headers listed above are Drupal-specific. By default, WordPress does not send any additional HTTP headers. However, it is possible for plugins and themes to send them.
 
-
-### Test CDN Caching with Firefox
-
-1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor){.external}.
-2. Load a page on your site.
-3. In the Network Monitor window, click the row that shows the page path under "File" (the "type" will be HTML).
-4. View HTTP response headers for this request on the right side of the window under the [Headers](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
-
 ### Test CDN Caching with curl
 
 1. Open a terminal.
@@ -110,8 +102,15 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
 1. Open [DevTools](https://developers.google.com/web/tools/chrome-devtools){.external}.
 2. Load a page on your site.
-3. In the Network tab, click on the URL of the request, under the *Name* column of the Requests table..
+3. In the Network tab, click on the URL of the request, under the *Name* column of the Requests table.
 4. View HTTP response headers for this request on the right side of the window under the [Headers](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers) tab.
+
+### Test Global CDN with Firefox
+
+1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor){.external}.
+2. Load a page on your site.
+3. In the Network Monitor window, click on the URL of the request, under the *File* column of the Requests table.
+4. View HTTP response headers for this request on the right side of the window under the [Headers](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
 
 ### Test Global CDN with Internet Explorer
 
