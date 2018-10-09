@@ -451,11 +451,16 @@ Brizy
 <hr>
 
 ### [Visual Composer: Website Builder](https://visualcomposer.io/){.external}
-**Issue**: This plugin fails to download additional assets during the internal plugin activation procedure on Test and Live environemtns.
+**Issue**: This plugin fails to download additional assets during the internal plugin activation procedure on Test and Live environments.
 
-**Resolution**: If this plugin is installed and activated on a new site _before_ the Test and Live environment are created, it will properly transfer all assets and database settings to the additional environments.
+**Solution 1: New sites, without existing Test and Live environments**: If this plugin is installed and activated on a new site _before_ the Test and Live environments are created, it will properly transfer all assets and database settings to the additional environments.
 
-**Note**: Despite [release notes](https://visualcomposer.io/docs/release-notes/){.external} indicating the plugin now works on Pantheon, we find the plugin still has issues on our platform as of August 2018.
+**Solution 2: Sites with existing Test and Live environments**: To activate the plugin on sites with existing Test and Live environments, add the following code block to `wp-config.php`:
+```
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    define('FS_METHOD', 'direct');
+}
+```
 
 <hr>
 
@@ -507,6 +512,19 @@ if (defined( "PANTHEON_BINDING" )) {
 **Please note:** You will need to make this change every timethat the plugin is updated.
 
 **Issue #2**: This plugin creates a session on every page, which can prevent [page level caching](https://wordpress.org/support/topic/cannot-cache-pages-due-to-sessions-on-every-page-with-wsl-plugin/){.external}.
+
+<hr>
+
+### [WPBakery: Page Builder](https://wpbakery.com/){.external}
+**Issue**: The Custom CSS and Design Options pages of the plugin (`?page=vc-custom_css`, `?page=vc-color`) try to create new files when saved. Due to problems related to incorrect `FS_METHOD`, files are not created or saved in the expected folder, `wp-content/uploads/js_composer`.
+
+**Solution**: In `wp-config.php`, place this block of code:
+
+```
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    define('FS_METHOD', 'direct');
+}
+```
 
 <hr>
 
