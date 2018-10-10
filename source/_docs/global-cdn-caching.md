@@ -21,14 +21,14 @@ The Global CDN can also improve the availability of your site. For example, if a
 
 The Global CDN respects standard HTTP headers served by your site. If you set pages to expire in 5 minutes, the CDN will expire the content as requested. If your site sends headers that forbid caching, the CDN won't cache the content.
 
-For detailed instructions on how to configure and optimize caching, see [Drupal's Performance Settings](/docs/drupal-cache) or [WordPress Pantheon Cache Plugin Configuration](/docs/wordpress-cache-plugin/).
+For detailed instructions on how to configure and optimize caching, see [Drupal's Performance Settings](/docs/drupal-cache/) or [WordPress Pantheon Cache Plugin Configuration](/docs/wordpress-cache-plugin/).
 
 ## Troubleshooting Cache Hits
 
 The most common issue with effectively using edge and CDN caching is troubleshooting situations where the cache should hit but doesn't. Here are some common mistakes that will cause cache misses.
 
 ### No HTTP Cache Headers
-If you have checked your HTTP headers and found that caching is not working, make sure you have configured [Drupal's performance settings](/docs/drupal-cache) or the [WordPress Pantheon Cache Plugin](/docs/wordpress-cache-plugin/). Once you have completed this step, go back and check the HTTP headers to verify that caching is working.
+If you have checked your HTTP headers and found that caching is not working, make sure you have configured [Drupal's performance settings](/docs/drupal-cache/) or the [WordPress Pantheon Cache Plugin](/docs/wordpress-cache-plugin/). Once you have completed this step, go back and check the HTTP headers to verify that caching is working.
 
 #### Drupal
 If you are still getting `no-cache, must-revalidate, post-check=0, pre-check=0` as a response, check to see if any messages are being set. The [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7){.external} function disables page caching. Also check to see if messages are present in page templates; themes could have removed them to suppress user facing messages.
@@ -71,7 +71,7 @@ In the event that a cookie is being set and you are unsure of what's setting it,
 
 ## See Also
 * [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
-* [Working with Cookies on Pantheon](/docs/cookies)
-* [Bypassing Cache with HTTP Headers](/docs/cache-control)
+* [Working with Cookies on Pantheon](/docs/cookies/)
+* [Bypassing Cache with HTTP Headers](/docs/cache-control/)
 * [Testing Global CDN Caching](/docs/test-global-cdn-caching/)
 * [Caching: Advanced Topics](/docs/caching-advanced-topics/)
