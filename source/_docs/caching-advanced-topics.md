@@ -159,7 +159,7 @@ If you're using the [Security tool](/docs/security/) within the Pantheon Site D
 
 ## Cookie Handling
 
-The following is the "Cache-Busting Cookie Patterns" section from Pantheon's Varnish configuration (.vcl) file for your reference. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what cookie patterns the Global CDN will not cache.
+The following is the "Cache-Busting Cookie Patterns" section from Pantheon's Varnish configuration (.vcl) file for your reference. Varnish Configuration is not user editable and we do not provide the complete .vcl file details. Advanced Drupal and WordPress developers should reference this if they have any questions regarding what cookie patterns the Global CDN will not cache.
 
 ```nohighlight
 NO_CACHE
