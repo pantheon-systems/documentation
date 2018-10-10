@@ -566,9 +566,9 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 define('FS_METHOD', 'direct');
 define('FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
 define('FS_CHMOD_FILE', ( 0755 & ~ umask() ) );
-define('FTP_BASE', DIR);
-define('FTP_CONTENT_DIR', DIR .'/wp-content/');
-define('FTP_PLUGIN_DIR', DIR .'/wp-content/plugins/');
+define('FTP_BASE', __DIR__);
+define('FTP_CONTENT_DIR', __DIR__ .'/wp-content/');
+define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
 ```
 
 <hr>
