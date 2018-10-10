@@ -153,7 +153,12 @@ The Site Owner will receive an email confirmation of this change, a new invoice 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
 ## Cancel Current Plan
-Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox.
+Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox. 
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">While all site plans downgrades will be effective immediately, no partial refunds will be issued.</p></div>
+
 
 1. Go to the Site Dashboard.
 2. Select the current plan:
