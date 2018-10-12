@@ -120,9 +120,6 @@ You don't have to! Pantheon automatically injects database credentials into the
 - [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php){.external}
 - [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php){.external}
 
-### Where can I find examples of Pantheon's wp-config.php?
-You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples/tree/master/wordpress){.external}.
-
 ## Troubleshooting
 ### Request to a Remote API Does Not Return Expected Response
 
