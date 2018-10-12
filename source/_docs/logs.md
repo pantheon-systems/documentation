@@ -196,6 +196,14 @@ No, access to Apache Solr logs is not available. For more information on debuggi
 No, Varnish logs are not available for download.
 
 ### How do I enable error logging for WordPress?
+
+<div class="alert alert-danger" role="alert" markdown="1">
+#### Warning {.info}
+The steps in this section enable debug logging. Debug logging increases resource overhead and presents a security risk. It is not recommended for production environments.
+
+To minimize risk exposure, especially in a Live environment, disable debug logging when you are done.
+</div>
+
 Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress) constants on Development environments (Dev and Multidevs) to write errors to `wp-content/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment in `wp-config.php`:
 
 ```php
@@ -226,13 +234,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 }
 ```
 
-By default, the WordPress debug log path is set to `/wp-content/` and not writable on Test or Live environments. This can be overridden to the <a href="/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location" data-proofer-ignore>`/wp-content/uploads/` folder</a>.
-
-
-<div class="alert alert-danger" role="alert" markdown="1">
-#### Warning {.info}
-Enabling debug logging is not recommended for production environments due to the increased resource overhead and security risk. If you need to enable debug logging on the live environment to resolve a problem, remember to disable it when you are done.
-</div>
+By default, the WordPress debug log path is set to `/wp-content/` and is not writable on Test or Live environments. This can be overridden to the <a href="/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location" data-proofer-ignore>`/wp-content/uploads/` folder</a>.
 
 ### How can I access the Drupal event log?
 

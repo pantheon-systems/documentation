@@ -23,11 +23,11 @@ If you are also developing locally and need to configure WordPress for your desk
 
 <div class="panel panel-drop panel-guide" id="accordion">
 <div class="panel-heading panel-drop-heading">
-<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
+<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#pantheon-wp-config-php">
 <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span>View Pantheon's WordPress Configuration</h3>
 </a>
 </div>
-<div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+<div id="pantheon-wp-config-php" class="collapse" markdown="1" style="padding:10px;">
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal"></script>
 </div>
@@ -42,33 +42,33 @@ If you are also developing locally and need to configure WordPress for your desk
 
 ### How can I write logic based on the Pantheon server environment?
 
-Depending on your use case, there are two possibilities.
+Depending on your use case, there are two possibilities:
 
-For web only actions, like [redirects](/docs/domains/#primary-domain), check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
+1. For web only actions, like [redirects](/docs/domains/#primary-domain), check if `$_ENV['PANTHEON_ENVIRONMENT']` exists. If it does, it will contain a string with the current environment (Dev, Test, or Live):
 
-```php
-// Pantheon - web only.
-if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
-  // Only on dev web environment.
-  if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'dev') {
-    // Custom code.
-  }
-}
-```
+ ```php
+ // Pantheon - web only.
+ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+      // Only on dev web environment.
+      if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'dev') {
+       // Custom code.
+      }
+ }
+ ```
 
-For actions that should take place on both web requests _and_ wp-cli commands (e,g, Redis cache configuration), use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live.
+2. For actions that should take place on both web requests _and_ wp-cli commands (e.g. Redis cache configuration), use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live:
 
-```php
-// Pantheon - all (web and CLI) operations.
-if (defined('PANTHEON_ENVIRONMENT')) {
-  // Only on dev environment.
-  if (PANTHEON_ENVIRONMENT == 'dev') {
-    // Custom code.
-  }
-}
-```
+ ```php
+ // Pantheon - all (web and CLI) operations.
+ if (defined('PANTHEON_ENVIRONMENT')) {
+      // Only on dev environment.
+      if (PANTHEON_ENVIRONMENT == 'dev') {
+        // Custom code.
+      }
+ }
+ ```
 
-As an example, here's how you can hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php){.external}.
+The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php){.external}:
 
 ```php
 // All Pantheon Environments.
@@ -105,7 +105,7 @@ See [Configure Redirects](/docs/redirects/).
 
 ### How do I change the default debug.log location?
 
-WordPress has an option to write logging information to a <a href="/docs/logs/#how-do-i-enable-error-logging-for-wordpress" data-proofer-ignore>file</a> when enabled. By default, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
+WordPress has an option to <a href="/docs/logs/#how-do-i-enable-error-logging-for-wordpress" data-proofer-ignore>write logging information to a file</a>. When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
 
 ```php
 ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
@@ -117,10 +117,10 @@ You don't have to! Pantheon automatically injects database credentials into the
 
 ### Where can I get a copy of a default wp-config.php for Pantheon?
 
-- Pantheon WordPress -  [https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php){.external}
-- WordPress Core -   [https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php){.external}
+- [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php){.external}
+- [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php){.external}
 
-### Where can I find examples of Pantheon wp-config.php?
+### Where can I find examples of Pantheon's wp-config.php?
 You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples/tree/master/wordpress){.external}.
 
 ## Troubleshooting
