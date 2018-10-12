@@ -334,6 +334,14 @@ add_filter( 'bsr_capability', 'better_search_replace_cap_override' );
 **Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass the platform page cache.
 <hr>
 
+### [Coming Soon](https://wordpress.org/plugins/coming-soon/){.external}
+**Issue**: `Maintenance mode` gives the `ERR_TOO_MANY_REDIRECTS` error in the frontend. This plugin uses `503 Header status - Service Temporarily Unavailable` which creates a redirect loop. Please see [this issue](https://wordpress.org/support/topic/plugin-give-err_too_many_redirects-in-pantheon-hosting/){.external} for more details regarding the error.
+
+**Solution**: This plugin only works in the `Coming Soon Mode` on Pantheon, and you need to put content into the **Page Settings** > **Message** so the Coming Soon page won't appear as a blank white page.
+
+Alternatively, if you don't want your site to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/docs/security#customize-lock-page).
+<hr>
+
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/){.external}
 **Issue**: This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
 
