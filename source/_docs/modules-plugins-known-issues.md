@@ -417,6 +417,21 @@ Pantheon has tools in place to monitor database queries:
 
 <hr>
 
+### [Sendgrid Subscription Widget](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/){.external}
+**Issue**: Email confirmation link sent from the Subscription Widget goes to a redirect loop, [see the open issue here in wp.org](https://wordpress.org/support/topic/email-sent-from-the-subscription-widget-goes-to-a-redirect-loop-in-pantheon){.external}. The link crated uses a url get parameter `__sg_api` that has double underscores is stripped in the platform which affects [caching performance](/docs/pantheon_stripped/#resolution).
+
+**Solution**: You will need to manually change the the parameter `__sg_api` to any variable like `sg_api` without any double underscore as prefix in these file/lines:
+
+`sendgrid-email-delivery-simplified/lib/class-sendgrid-mc-optin.php:25:    $vars[] = '__sg_api';`
+
+`sendgrid-email-delivery-simplified/lib/class-sendgrid-mc-optin.php:40:    if( isset( $wp->query_vars['__sg_api'] ) )`
+
+`sendgrid-email-delivery-simplified/lib/class-sendgrid-mc-optin.php:146:    $confirmation_link = site_url() . '/?__sg_api=1&token=' . $token;`
+
+Applying this workaround can potentially break again on next plugin update and you need to manually reapply the modification.
+
+<hr>
+
 ### [Timthumb](https://code.google.com/p/timthumb/){.external}
 **Issue**: TimThumb is no longer supported or maintained.
 <hr>
