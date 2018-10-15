@@ -75,7 +75,7 @@ WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pant
 
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.
 
-Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. If you are connecting via a Pantheon Enterprise Gateway (PEG), use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. This script requires PHP 7.1 to execute properly without PHP errors.  If you are connecting via a Pantheon Enterprise Gateway (PEG), use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 ```bash
 terminus drush <site>.<env> -- scr ldap-test.php
 ```
@@ -86,7 +86,7 @@ The entire script:
 <?php
 $settings = array(
   'NAME' => array(
-    'hostname' => 'ldaps://HOSTNAME:PORT/',
+    'host' => 'ldaps://HOSTNAME:PORT/',
     'port' => 'PORT',
     'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This should be the full rdn and not just the username.
     'bind_password' => '...',
@@ -179,7 +179,7 @@ $settings = array(
   'NAME' => array(
     'host' => 'ldaps://127.0.0.1', //when using PEG, this is localhost
     'port' => 'PANTHEON_SOIP_EXAMPLE', //when using PEG, this is the PHP CONSTANT
-    'bind_rdn' => 'bind_rdn' => '<insert-bind-dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
+    'bind_rdn' => '<insert-bind-dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
     'bind_password' => '<insert-password>',
     'display_password' => 'Pxxxxxxx',  //display an alternate value for security
     'base_dn' => 'OU=value,dc=value,dc=value,dc=value',
