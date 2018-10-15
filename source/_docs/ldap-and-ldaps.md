@@ -178,7 +178,7 @@ Alternate $settings array when using PEG:
 $settings = array(
   'NAME' => array(
     'host' => 'ldaps://127.0.0.1', //when using PEG, this is localhost
-    'port' => 'PANTHEON_SOIP_EXAMPLE', //when using PEG, this is the PHP CONSTANT
+    'port' => PANTHEON_SOIP_EXAMPLE, //when using PEG, this is the PHP CONSTANT
     'bind_rdn' => '<insert-bind-dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
     'bind_password' => '<insert-password>',
     'display_password' => 'Pxxxxxxx',  //display an alternate value for security
