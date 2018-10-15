@@ -86,7 +86,7 @@ The entire script:
 <?php
 $settings = array(
   'NAME' => array(
-    'hostname' => 'ldaps://HOSTNAME:PORT/',
+    'host' => 'ldaps://HOSTNAME:PORT/',
     'port' => 'PORT',
     'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This should be the full rdn and not just the username.
     'bind_password' => '...',
@@ -179,7 +179,7 @@ $settings = array(
   'NAME' => array(
     'host' => 'ldaps://127.0.0.1', //when using PEG, this is localhost
     'port' => 'PANTHEON_SOIP_EXAMPLE', //when using PEG, this is the PHP CONSTANT
-    'bind_rdn' => 'bind_rdn' => '<insert-bind-dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
+    'bind_rdn' => '<insert-bind-dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
     'bind_password' => '<insert-password>',
     'display_password' => 'Pxxxxxxx',  //display an alternate value for security
     'base_dn' => 'OU=value,dc=value,dc=value,dc=value',
