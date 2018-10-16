@@ -52,7 +52,8 @@ To learn more, see [Using the Pantheon Workflow](/docs/pantheon-workflow/).
 ## Developing Sites
 
 ### Does Pantheon offer professional services?
-No, however over 2000 design and development agencies partner with Pantheon to build and host their clients’ sites on our website management platform. [Get a personalized quote](https://pantheon.io/agencies/agency-match){.external} from Pantheon’s network of top agencies.
+
+Yes, see [Professional Services](/docs/professional-services/) for more information.
 
 ### Can Pantheon run sites on highly available server clusters?
 
