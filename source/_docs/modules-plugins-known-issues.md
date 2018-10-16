@@ -567,7 +567,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Issue**: This theme presents a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
 
-**Solution**: The form can be disabled by adding the following to `wp-config.php`:
+**Solution**: The form can be disabled by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
 
 ```php
 /** Changes to disable Jupiter theme FTP form */
