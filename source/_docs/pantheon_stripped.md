@@ -73,7 +73,7 @@ Any URL query parameters (GET requests) matching the following criteria will hav
 - `utm_*` -- Matches standard Google Analytics parameters
 - `__*` (two underscores) -- Matches conventional content insignificant query parameters
 
-### How do I test my Google Analytics or AdWords URLs on Pantheon?
+### How do I test my Google Analytics or Google Ads (AdWords) URLs on Pantheon?
 
 You can use [curl](https://curl.haxx.se//) or [wget](https://www.gnu.org/software/wget/) to perform a simple test to see if PANTHEON_STRIPPED is appearing in URLs generated with the Google [URL Builder](https://support.google.com/analytics/answer/1033867):
 ```shell
