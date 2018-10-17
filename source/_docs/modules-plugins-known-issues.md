@@ -536,14 +536,6 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <hr>
 
-### [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/){.external}
-
-**Issue**: When in Test and Live environment, Compatiblity Settings is throwing an error  `The compatibility plugin cannot be enabled because the mu-plugin directory is not currently writable. Please update the permissions of the mu-plugins folder: /srv/bindings/c41eff4cxxxxxxxxxxxxxxxxxxxxx/code/wp-content/mu-plugins`. This plugin optionally needs write access to `wp-content/mu-plugins/` folder if you need a plugin to be enabled while doing DB exports and search-and-replace.
-
-**Solution**: The normal search-and-replace and DB export function of this plugin will work fine and not affected with that error but it leaves all plugins disabled while the plugin is in operation, if a certain plugin is needed to be always activated during the DB export and search-and-replace operation, there is a suggested filter outlined in the [plugin's debugging page](https://deliciousbrains.com/wp-migrate-db-pro/doc/compatibility-mode/){.external}.
-
-<hr>
-
 ### [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/){.external}
 
 **Issue #1**: This plugin requires write access to a cache folder in `wp-content/cache`, which is not granted on Test and Live environments by design.
@@ -551,6 +543,14 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 **Solution**: Symlink `wp-content/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access)
 
 **Issue #2**: This plugin uses `is_dir` to verfiy the target directory, which will return false if the directory is a symlink. This causes a permissions error when deleting cache files.
+
+<hr>
+
+### [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/){.external}
+
+**Issue:** On Test and Live environments, the **Compatibility** settings cannot be configured because this feature requires write access to `wp-content/mu-plugins`. This issue prevents plugins from inclusion in DB exports and search-and-replace tasks.
+
+**Solution**: The normal search-and-replace and DB export functions of this plugin work fine, but will leave all plugins disabled while in operation. If a specific plugin is required as active during the DB export and search-and-replace operation, you can add a filter for it as described in the [plugin's debugging page](https://deliciousbrains.com/wp-migrate-db-pro/doc/compatibility-mode/){.external}.
 
 <hr>
 
