@@ -66,14 +66,14 @@ Finally, to optimize caching performance, make sure any parameters are in the su
 
 For more information, see [Caching: Advanced Topics](/docs/caching-advanced-topics).
 
-#### Which query parameters are optimized?
+### Which query parameters are optimized?
 
 Any URL query parameters (GET requests) matching the following criteria will have its value replaced with `PANTHEON_STRIPPED`:
 
 - `utm_*` -- Matches standard Google Analytics parameters
 - `__*` (two underscores) -- Matches conventional content insignificant query parameters
 
-#### How do I test my Google Analytics or AdWords URLs on Pantheon?
+### How do I test my Google Analytics or AdWords URLs on Pantheon?
 
 You can use [curl](https://curl.haxx.se//) or [wget](https://www.gnu.org/software/wget/) to perform a simple test to see if PANTHEON_STRIPPED is appearing in URLs generated with the Google [URL Builder](https://support.google.com/analytics/answer/1033867):
 ```shell
