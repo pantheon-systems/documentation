@@ -61,7 +61,7 @@ Pantheon strongly encourages using ports other than `25`, `465` or `587` to send
     <tbody>
       <tr>
         <td>SendGrid</td>
-        <td><a href="https://sendgrid.com/docs/Classroom/Basics/Email_Infrastructure/smtp_ports.html" target="blank">2525</a></td>
+        <td><a href="https://sendgrid.com/docs/API_Reference/SMTP_API/integrating_with_the_smtp_api.html" target="blank">2525</a></td>
       </tr>
       <tr>
         <td>Mandrill</td>
