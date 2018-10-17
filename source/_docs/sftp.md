@@ -126,15 +126,15 @@ Uncommitted SFTP changes may not be recognized by the Dev environment when the S
 ### How do I find my site's Binding path?
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>You should not manually set the "Remote Path" in your SFTP client's settings as this changes from time to time due to the platform architecture. It is strongly recommended to leave the Remote Path blank and you will automatically be redirected to the proper directory when logging in.</p>
+<p>You should _not_ manually set the "Remote Path" in your SFTP client's settings, as this path changes from time to time due to the platform architecture. It is strongly recommended to leave the Remote Path blank, and you will automatically be redirected to the proper directory when logging in.</p>
 </div>
 
-You can retrieve the "Remote path" when you connect to SFTP via command line using the `pwd` command. You can get your SFTP "command line" connection string under the connection info in your dashboard.
+You can find the "Remote path" after [connecting to SFTP](#sftp-connection-information) via command line, using the `pwd` command:
 
-    > sftp -o Port=2222 dev.01507cf9-d5e7-460d-83ee-xxxx@appserver.dev.01507cf9-d5e7-xxxxx.drush.in
-    Response:	Connected to appserver.dev.01507cf9-d5e7-xxxxx.drush.in.
-    sftp> pwd
-    Response: Remote working directory: /srv/bindings/daa068ccf4f8414596cddf5xxxxx
+```sftp
+sftp> pwd
+Response: Remote working directory: /srv/bindings/daa068ccf4f8414596cddf5xxxxx
+```
 
 ### I am receiving errors connecting to my server with an SFTP client.
 This is caused by using the SFTP application's default connection settings. We recommend you set the connection limit to **1** and then connect to your site.
