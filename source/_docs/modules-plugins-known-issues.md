@@ -562,6 +562,14 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <hr>
 
+### [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/){.external}
+
+**Issue:** On Test and Live environments, the **Compatibility** settings cannot be configured because this feature requires write access to `wp-content/mu-plugins`. This issue prevents plugins from being included in DB exports and search-and-replace tasks.
+
+**Solution:** The normal search-and-replace and DB export functions of this plugin work, but will leave all plugins disabled while in operation. If a specific plugin is required to remain active during the DB export and search-and-replace operations, add a filter for it as described in the [plugin's debugging page](https://deliciousbrains.com/wp-migrate-db-pro/doc/compatibility-mode/){.external}.
+
+<hr>
+
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/){.external}
 **Issue**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
