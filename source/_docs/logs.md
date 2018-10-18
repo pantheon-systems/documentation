@@ -204,25 +204,25 @@ Writing to `wp-content/debug.log` is not supported on Test or Live environments.
 
 ### How can I access the Drupal event log?
 
-By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors sometimes can be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
+By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
-1. Visit `/admin/reports/dblog` once you've logged in as administrator.
-2. Using [Terminus](/docs/terminus/):
+* Visit `/admin/reports/dblog` once you've logged in as administrator.
+* Using [Terminus](/docs/terminus/):
 
  ```bash
  terminus drush <site>.<env> -- watchdog-show
  ```
 
- Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
+ * Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
 
- ```bash
- terminus drush <site>.<env> -- watchdog-show --tail
- ```
+        ```bash
+        terminus drush <site>.<env> -- watchdog-show --tail
+        ```
 
- <div class="alert alert-info">
- <h4 class="info">Note</h4>
- <p>At this time, <code>terminus drush "watchdog-show --tail"</code> is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.</p>
- </div>
+        <div class="alert alert-info">
+        <h4 class="info">Note</h4>
+        <p>At this time, <code>terminus drush "watchdog-show --tail"</code> is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.</p>
+        </div>
 
 ### My Drupal database logs are huge. Should I disable dblog?
 
