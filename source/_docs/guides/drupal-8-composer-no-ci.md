@@ -35,9 +35,9 @@ terminus site:create $PANTHEON_SITE_NAME 'My D8 Composer Site' empty
 
 **Note** you can also add the `--org` argument to `terminus site:create` if you would like the site to be part of an organization. See `terminus site:create -h` for details and help.
 
-## Cloning example-drops-8-composer locally
+## Cloning example-drops-8-composer Locally
 
-Instead of setting up `composer.json` manually it is easier to start with the [`example-drops-8-composer`](https://github.com/pantheon-systems/example-drops-8-composer){.external} repository.
+Instead of setting up `composer.json` manually, it is easier to start with the [`example-drops-8-composer`](https://github.com/pantheon-systems/example-drops-8-composer){.external} repository.
 
 1. Clone the `example-drops-8-composer` repository locally:
 
@@ -45,21 +45,21 @@ Instead of setting up `composer.json` manually it is easier to start with the [`
   git clone git@github.com:pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
   ```
 
-2. Change into the cloned directory:
+2. `cd` into the cloned directory:
 
   ```bash
   cd $PANTHEON_SITE_NAME
   ```
 
-## Updating the git remote URL
+## Updating the Git Remote URL
 
-1. Store the git URL for the Pantheon site created earlier in a variable:
+1. Store the Git URL for the Pantheon site created earlier in a variable:
 
   ```bash
   export PANTHEON_SITE_GIT_URL="$(terminus connection:info $PANTHEON_SITE_NAME.dev --field=git_url)"
   ```
 
-2. Update the git remote to use the Pantheon site git URL returned rather than the `example-drops-8-composer` GitHub URL:
+2. Update the Git remote to use the Pantheon site Git URL returned rather than the `example-drops-8-composer` GitHub URL:
 
   ```bash
   git remote set-url origin $PANTHEON_SITE_GIT_URL
@@ -112,37 +112,35 @@ Normally the next step would go through the standard Drupal installation. But si
    git status
    ```
 
-   It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration. 
+   It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration.
 
 3. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the `:: cut ::` section:
 
-   **Important:** Without this modification critical components, such as Drupal core and contrib modules, will be ignored and not pushed to Pantheon.
+   **Important:** Without this modification, critical components such as Drupal core and contrib modules will be ignored and not pushed to Pantheon.
 
-4. Now let’s run git status again to make sure everything is included:
+4. Now let’s run `git status` again to make sure everything is included:
 
    ```bash
    git status
    ```
 
-   ![image of git status showing the changed files in red](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
+   ![Image of git status showing the changed files in red](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
 
-5. Set the site to git mode:
+5. Set the site to `git` mode:
 
    ```bash
    terminus connection:set $PANTHEON_SITE_NAME.dev git
    ```
 
-6. Add and commit the code files. A git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
+6. Add and commit the code files. A Git `force` push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
 
    ```bash
    git add .
-
    git commit -m 'Drupal 8 and dependencies'
-
    git push --force
    ```
 
-   **Note** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our build tools guide](/docs/guides/build-tools/) for documentation on the more advanced automated workflow with a build step.
+   **Note:** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our Build Tools guide](/docs/guides/build-tools/) for documentation on the more advanced automated workflow with a build step.
 
 ### Installing Drupal
 
@@ -162,11 +160,10 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 
 ### Adding a New Module with Composer
 
-1. Next, let’s add a new module to our site. For this example, we’ll add the address module. We advocate working in feature branches on Pantheon, so let's create a git branch and spin up a Multidev environment:
+1. Next, let’s add a new module to our site. For this example, we’ll add the address module. We advocate working in feature branches on Pantheon, so let's create a Git branch and spin up a Multidev environment:
 
    ```bash
    git checkout -b addr-module
-
    composer require "drupal/address ~1.0"
    ```
 
@@ -174,15 +171,12 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 
    ```bash
    composer update
-   
    git add .
-   
    git commit -m "Adding the address module with Composer"
-   
    git push -u origin addr-module
    ```
 
-3. Spin up a Multidev environment from the git branch we just pushed up to Pantheon:
+3. Spin up a Multidev environment from the Git branch we just pushed up to Pantheon:
 
    ```bash
    terminus multidev:create $PANTHEON_SITE_NAME.dev addr-module
@@ -194,9 +188,9 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
    terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
    ```
 
-   ![image of installing address module](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
+   ![Image of installing address module](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
 
-### Update all Site Code
+### Update All Site Code
 
 1. From a local copy of your site's codebase, run:
 
@@ -205,7 +199,6 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
     ```
 
 2. After Composer updates successfully, push the code back to Pantheon via Git or SFTP.
-
 
 ### Update only Drupal Core
 
@@ -219,7 +212,7 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 
 2. After Composer updates successfully, push the code back to Pantheon via Git or SFTP.
 
-   Note that `composer update` is based on the values specified in `composer.json.` So, for example, if `composer.json` specifies `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in Composer's [version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-){.external}.
+   Note that `composer update` is based on the values specified in `composer.json.` So, for example, if `composer.json` specifies `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in [Composer's version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-){.external}.
 
 #### Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
 
