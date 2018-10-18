@@ -369,6 +369,22 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution**: Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
 <hr>
 
+### [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/){.external}
+
+**Issue:** EWWW Image Optimizer attempts to install and execute third party binary tools to perform image optimization, which is restricted on our platform. The error message is:
+
+```
+EWWW Image Optimizer uses jpegtran, optipng, pngout, pngquant, gifsicle, and cwebp.
+You are missing: jpegtran, optipng, gifsicle. Please install via the Settings Page
+or the Installation Instructions.
+```
+
+The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/6-the-plugin-says-i-m-missing-something){.external} do not apply to Pantheon.
+
+**Solution:** Use an alternative plugin like [EWWW Image Optimizer Cloud](https://wordpress.org/plugins/ewww-image-optimizer-cloud/){.external}, which is a cloud version of the plugin that executes the compression from an external service instead of the server. Another alternative that works well with the default configuration is [Smush Image Compression and Optimization](https://wordpress.org/plugins/wp-smushit/){.external}.
+
+<hr>
+
 ### [Force Login](https://wordpress.org/plugins/wp-force-login/){.external}
 **Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
