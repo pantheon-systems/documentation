@@ -373,11 +373,9 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 
 **Issue:** EWWW Image Optimizer attempts to install and execute third party binary tools to perform image optimization, which is restricted on our platform. The error message is:
 
-```
-EWWW Image Optimizer uses jpegtran, optipng, pngout, pngquant, gifsicle, and cwebp.
+`EWWW Image Optimizer uses jpegtran, optipng, pngout, pngquant, gifsicle, and cwebp.
 You are missing: jpegtran, optipng, gifsicle. Please install via the Settings Page
-or the Installation Instructions.
-```
+or the Installation Instructions.`
 
 The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/6-the-plugin-says-i-m-missing-something){.external} do not apply to Pantheon.
 
