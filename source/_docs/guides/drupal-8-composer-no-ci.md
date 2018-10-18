@@ -132,7 +132,7 @@ Normally the next step would go through the standard Drupal installation. But si
    terminus connection:set $PANTHEON_SITE_NAME.dev git
    ```
 
-6. Add and commit the code files. A Git `force` push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
+6. Add and commit the code files. A Git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
 
    ```bash
    git add .
