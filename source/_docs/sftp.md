@@ -116,22 +116,31 @@ We recommend [adding an SSH Key](/docs/ssh-keys/), which allows more security th
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please see [Using the Pantheon Workflow
-](/docs/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
+This is by design. Please see [Using the Pantheon Workflow](/docs/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
 
 
 ### SFTP changes do not show up in the Site Dashboard.
 Uncommitted SFTP changes may not be recognized by the Dev environment when the Site Dashboard is open in multiple tabs or windows. Close all windows and tabs then access the Site Dashboard in a single tab to resolve.
 
 ### How do I find my site's Binding path?
-You should not manually set the "Remote Path" in your SFTP client's settings. Instead, leave the Remote Path blank and you will automatically be redirected to the proper directory when logging in.
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p>You should <u>not</u> manually set the "Remote Path" in your SFTP client's settings, as this path changes from time to time due to the platform architecture. It is strongly recommended that you leave the Remote Path blank, and you will automatically be redirected to the proper directory when logging in.</p>
+</div>
+
+You can find the Remote Path after [connecting to SFTP](#sftp-connection-information) via command line, using the `pwd` command:
+
+```sftp
+sftp> pwd
+Response: Remote working directory: /srv/bindings/daa068ccf4f8414596cddf5xxxxx
+```
 
 ### I am receiving errors connecting to my server with an SFTP client.
 This is caused by using the SFTP application's default connection settings. We recommend you set the connection limit to **1** and then connect to your site.
 
 Do not specify a default remote directory within your SFTP client. When application containers are migrated, which can be done at anytime, the remote directory will change.
 
-### I can't move files or folders from one directory to another?
+### I can't move files or folders from one directory to another.
 This is a known limitation of using SFTP for on-server development on the platform. Our SFTP mode doesn't support the `mv` command, which most SFTP applications use when moving or renaming files. You can work around the limitation by transferring the files from your local machine or using rsync.
 
 
