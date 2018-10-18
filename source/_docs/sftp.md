@@ -125,7 +125,7 @@ Uncommitted SFTP changes may not be recognized by the Dev environment when the S
 ### How do I find my site's Binding path?
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>You should <u>not</u> manually set the "Remote Path" in your SFTP client's settings, as this path changes from time to time due to the platform architecture. It is strongly recommended that you leave the Remote Path blank, and you will automatically be redirected to the proper directory when logging in.</p>
+<p>You should <i>not</i> manually set the "Remote Path" in your SFTP client's settings, as this path changes from time to time due to the platform architecture. It is strongly recommended that you leave the Remote Path blank, and you will automatically be redirected to the proper directory when logging in.</p>
 </div>
 
 You can find the Remote Path after [connecting to SFTP](#sftp-connection-information) via command line, using the `pwd` command:
