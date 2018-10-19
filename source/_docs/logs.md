@@ -35,7 +35,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
         <td>Webserver error log.</td>
       </tr>
       <tr>
-        <th>php-error.log <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Fatal errors from PHP error log is provided in each environment on the <strong>Errors</strong> tab of the Site Dashboard. Lower priority php errors are only in the php error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see <a href='/docs/php-errors'>PHP Errors and Exceptions</a>."><em class="fa fa-info-circle"></em></a></th>
+        <th>php-error.log <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Fatal errors from PHP error log are provided in each environment on the <strong>Errors</strong> tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see <a href='/docs/php-errors'>PHP Errors and Exceptions</a>."><em class="fa fa-info-circle"></em></a></th>
         <td>1MB of log data</td>
         <td>PHP <a href="https://secure.php.net/manual/en/book.errorfunc.php">fatal error log</a>; will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard.</td>
       </tr>
@@ -121,9 +121,11 @@ You now have a local copy of the logs directory, which contains the following:
  ```
 
 4. Run the following SFTP command in terminal:
-```nohighlight
-get -r logs
-```
+
+ ```nohighlight
+ get -r logs
+ ```
+
 You now have a local copy of the logs directory, which contains the following:
 ```nohighlight
 ├── logs
@@ -135,7 +137,7 @@ You now have a local copy of the logs directory, which contains the following:
 
 You can automate the process of accessing and maintaining these logs with a simple script.
 
-### Create A Script
+### Create a Script
 Open your local terminal to create and access a new local directory:
 ```bash
 mkdir $HOME/site-logs
@@ -238,25 +240,25 @@ By default, the WordPress debug log path is set to `/wp-content/` and is not wri
 
 ### How can I access the Drupal event log?
 
-By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors sometimes can be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
+By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
-1. Visit `/admin/reports/dblog` once you've logged in as administrator.
-2. Using [Terminus](/docs/terminus/):
+* Visit `/admin/reports/dblog` once you've logged in as administrator.
+* Using [Terminus](/docs/terminus/):
 
-```bash
-terminus drush <site>.<env> -- watchdog-show
-```
+ ```bash
+ terminus drush <site>.<env> -- watchdog-show
+ ```
 
-Terminus can invoke Drush commands to "watch" events in real-time; tail can be used to continuously show new watchdog messages until interrupted (Control+C).
+ * Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
 
-```bash
-terminus drush <site>.<env> -- watchdog-show --tail
-```
+        ```bash
+        terminus drush <site>.<env> -- watchdog-show --tail
+        ```
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>At this time, <code>terminus drush "watchdog-show --tail"</code> is supported in 0.13.x versions and below, and not yet supported in Terminus 1.x.</p>
-</div>
+        <div class="alert alert-info">
+        <h4 class="info">Note</h4>
+        <p>At this time, <code>terminus drush "watchdog-show --tail"</code> is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.</p>
+        </div>
 
 ### My Drupal database logs are huge. Should I disable dblog?
 
