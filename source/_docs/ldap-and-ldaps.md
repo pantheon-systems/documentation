@@ -92,7 +92,7 @@ $settings = array(
     'bind_password' => '...',
     'display_password' => 'XxXxXxX',  //display an alternate value for security
     'base_dn' => 'OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
-    'filter' => '(uid=...)',
+    'filter' => '(objectClass=user)', //Could be an alternate objectClass or a uid
     'attributes' => array('cn'),
   ),
 );
@@ -183,7 +183,7 @@ $settings = array(
     'bind_password' => '<insert-password>',
     'display_password' => 'Pxxxxxxx',  //display an alternate value for security
     'base_dn' => 'OU=value,dc=value,dc=value,dc=value',
-    'filter' => '(uid=<insert-uid>)',
+    'filter' => '(objectClass=user)', //Could be an alternate objectClass or a uid
     'attributes' => array('cn'),
   ),
 );
