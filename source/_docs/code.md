@@ -89,7 +89,7 @@ The Dev environment provides [one-click updates](/docs/core-updates/) for your s
 Get started by learning more about the [Pantheon workflow](/docs/pantheon-workflow/) and [environment configuration](/docs/read-environment-config/). Then, dive in to [developing directly with SFTP mode](/docs/sftp/) and [explore more ways](/docs/cms-admin/) of utilizing built-in admin tools.
 
 ### .gitignore
-Pantheon provides default `.gitignore` files in the base of each site's code repository, in `sites/default/files` on Drupal 7 sites, and in `wp-content/uploads` on WordPress sites. You can use this file to exclude directories from version control and backups.
+Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
 
 ## Performance
 There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/docs/debug-slow-performance/) and utilizing the [PHP slow log](/docs/php-slow-log/).
