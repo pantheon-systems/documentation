@@ -236,7 +236,6 @@ On some WordPress sites migrated from other hosting platforms, when installing o
 This is usually caused by the following lines in `wp-config.php`, added by your former host:
 
 ```
-define('FS_METHOD', 'direct');
 define('FS_CHMOD_DIR', 755);
 define('FS_CHMOD_FILE', 644);
 ```
