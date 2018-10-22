@@ -1,57 +1,69 @@
 ---
 title: Get Support
-description: Information on how to work with the Pantheon support team and understand the levels of support.
+description: Learn how to access Pantheon's expert team and what your support plan includes.
 tags: [dashboard]
 categories: []
 ---
 
 ## Support Features and Response Times
-The majority of Pantheon's support is provided in the context of a particular website or project. Because of that, the type of support available varies according to whether you are paying for a site individually, or using Pantheon as an Agency, EDU, or Enterprise customer.
+Pantheon offers a wide range of support plans that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled professional services with our Diamond Plan. The type of support available varies based on whether you are paying for a site individually, or using Pantheon as an Agency, EDU, or Enterprise customer.
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#sites" aria-controls="sites" role="tab" data-toggle="tab">Pay-per-site</a></li>
-  <li role="presentation"><a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">Agencies & Organizations (Legacy)</a>
+<li role="presentation" class="active"><a href="#sites" aria-controls="sites" role="tab" data-toggle="tab">Support Plans for Organizations</a></li>
+<li role="presentation"><a href="#plans" aria-controls="plans" role="tab" data-toggle="tab">Pay per site</a>
 </li>
-<li role="presentation"><a href="#plans" aria-controls="plans" role="tab" data-toggle="tab">New Support Plans</a>
+<li role="presentation"><a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">Agencies & Organizations (Legacy)</a>
 </li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="sites" markdown="1">
-|                         | **Sandbox, Basic, and Performance S / M**       | **Performance L / XL**                                                    | **Elite**                                             |
-|-------------------------|-------------------------------------------------|---------------------------------------------------------------------------|-------------------------------------------------------|
-| **Scope**               | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %}                         | Performance {% include 'popovers/performance.twig' %} |
-| **Chat**                | <span style=color:green>✔</span>                | <span style=color:green>✔</span>                                          | <span style=color:green>✔</span>                      |
-| **Tickets**             | <span style=color:red>❌</span>                 | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '2 hour, 24/7/365.'} %} |
-| **Phone**               | <span style=color:red>❌</span>                 | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Limited', 'popcontent': 'Two 30-minute calls per month with a Senior Customer Success Engineer (scheduled in advance via support chat).'} %} | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Scheduled', 'popcontent': 'Scheduled in advance via a support ticket (9-5 PST).'} %} |
-| **On-Call** {% include 'popovers/pes.twig' %} | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:green>✔</span>  {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '30 minute response time 24/7/365 for emergencies and business critical issues.'} %} |
-</div>
-
-<div role="tabpanel" class="tab-pane" id="orgs" markdown="1">
-|                         | **Pantheon for Agencies**                                                 | **Enterprise**                                                            | **EDU+**                                                         | **Priority Enterprise Support**           |
-|-------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------|-------------------------------------------|
-| **Scope**               | Dedicated {% include 'popovers/fullstack.twig' %}                        | Dedicated {% include 'popovers/fullstack.twig' %}                        | Dedicated {% include 'popovers/fullstack.twig' %}                        | Dedicated {% include 'popovers/fullstack.twig' %} |
-| **Chat**                | <span style=color:green>✔</span>                                          | <span  style=color:green>✔</span>                                         | <span style=color:green>✔</span>                                 | <span style=color:green>✔</span>          |
-| **Tickets**             | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '2 hour, 24/7/365.'} %}     |
-| **Phone**               | <span style=color:red>❌</span>                                           | <span style=color:red>❌</span>                                           | <span style=color:red>❌</span>                                  | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Scheduled', 'popcontent': 'Scheduled in advance via a support ticket (9-5 PST).'} %} |
-| **On-Call** {% include 'popovers/pes.twig' %} | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '30 minute response time 24/7/365 for emergencies and business critical issues.'} %} |
-</div>
-
-<div role="tabpanel" class="tab-pane" id="plans" markdown="1">
 |                                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
 |-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
 | **Scope**                                                 | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %} | Performance {% include 'popovers/performance.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} |
-| **Chat**                                                  | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
-| **Tickets**                                               | <span style=color:red>❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
-| **Emergency On-Call**                                     | <span style=color:red>❌</span>                 | <span style=color:red>❌</span>                   | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                   |
-| **[Professional Services](/docs/professional-services/)** | <span style=color:red>❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
+| [**Chat**](#real-time-chat-support)                       | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
+| [**Tickets**](#ticket-support)                            | <span style=color:red>❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
+| [**Emergency On-Call**](#pantheon-on-call)                | <span style=color:red>❌</span>                 | <span style=color:red>❌</span>                   | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
+| [**Professional Services**](/docs/professional-services/) | <span style=color:red>❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
+</div>
+
+<div role="tabpanel" class="tab-pane" id="plans" markdown="1">
+|                                            | **Sandbox, Basic, and Performance S / M**       | **Performance L / XL**                              |
+|--------------------------------------------|-------------------------------------------------|-----------------------------------------------------|
+| **Scope**                                  | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %}   |
+| [**Chat**](#real-time-chat-support)        | <span style=color:green>✔</span>                | <span style=color:green>✔</span>                    |
+| [**Tickets**](#ticket-support)             | <span style=color:red>❌</span>                 | <span style=color:green>✔</span>                    |
+| [**Emergency On-Call**](#pantheon-on-call) | <span style=color:red>❌</span>                 | <span style=color:red>❌</span>                     |
+| [**Professional Services**](/docs/professional-services/) | <span style=color:red>❌</span> | <span style=color:red>❌</span>   |
+</div>
+
+<div role="tabpanel" class="tab-pane" id="orgs" markdown="1">
+| | **Pantheon for Agencies** | **Enterprise** | **EDU+** | **Priority Enterprise Support** |
+|-|---------------------------|----------------|----------|---------------------------------|
+| **Scope**   | Dedicated {% include 'popovers/fullstack.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} |
+| **Chat**    | <span style=color:green>✔</span> | <span  style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span>          |
+| **Tickets** | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '2 hour, 24/7/365.'} %}     |
+| **Phone**   | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Scheduled', 'popcontent': 'Scheduled in advance via a support ticket (9-5 PST).'} %} |
+| **On-Call** {% include 'popovers/pes.twig' %} | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '30 minute response time 24/7/365 for emergencies and business critical issues.'} %} |
 </div>
 
 </div>
 
-New support plans are available as of May 15, 2018 for Elite customers. All users of the platform can receive customer service and support for non-site-related questions via any available medium regardless of account type.
+## Best Practices
+
+Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
+
+ - **One ticket per issue:** Opening multiple tickets on the same issue will only impeded our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
+
+ - **Replication Steps:** One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
+
+ - **Specifics:** Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
+
+ - **Custom Access:** If your site uses nonstandard admin URLs, custom logins, etc, please let us know.
+
+ - **Clarification:** We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
 
 ## Real Time Chat Support
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
@@ -85,14 +97,14 @@ The ticket support feature is available to certain plans and account types. For 
 5. Click **Open Ticket**
 
 ## Pantheon On-Call
-Elite sites can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+Diamond and Platinum support customers can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Scope of Support
 
 We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed support. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
 
 ### Code
-Your site code belongs to you. If your plan includes Dedicated Support, we can offer advice on best practices with regard to your codebase and are happy to recommend one of our agency partners or refer you to our professional services team to provide development assistance, but our support team does not change the code of our customers. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
+Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
 
 ### Outdated Core
 Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/docs/maintain-custom-upstream/) by the upstream maintainer each time the project releases a new version.
@@ -103,13 +115,13 @@ If you choose to use a custom upstream, please be aware that the scope of suppor
 We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [properly maintaining the Custom Upstream](/docs/maintain-custom-upstream/), and fixing any issues related to the upstream falls outside of the scope of support.
 
 ### Public Distributions
-If you choose to use a [public distribution](/docs/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/docs/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 8, Drupal 7), please be aware that it falls outside our scope of support. If the distribution you are using is behind on core releases or any of its included plugins, please contact the maintainer through [Drupal.org](https://www.drupal.org){.external} or the distribution's GitHub issue queue.
+If you choose to use a [public distribution](/docs/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/docs/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 8, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org){.external} or the distribution's GitHub issue queue.
 
 ### Security
 We don’t maintain the integrity of your site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 
 ### Debugging
-Code-level debugging, Git training, and site architecture recommendations fall outside of our support scope. New Relic and logs can help you get to the bottom of most issues. We have a [comprehensive list of docs](/docs/troubleshoot/) to get you underway. We can recommend an agency partner for you to work with if you need additional assitance, and customers with Gold, Platinum and Diamond support plans may also access our professional services.
+Code-level debugging and site architecture recommendations are available to Diamond support plans. New Relic is also included for most site plans and will help you get to the bottom of most issues. We have a [comprehensive list of docs](/docs/troubleshoot/) to get you started.
 
 ### Performance
 If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
@@ -123,7 +135,7 @@ We recommend development on the platform, rather than on a local environment. Un
 ### Isolated Issues
 Pantheon Support can quickly determine if an issue is platform related. We take full responsibility for our services and performance, but if something is affecting your site only, or a single environment only, we will most likely refer you to our debugging tutorials or offer to connect you with an agency partner to help you with the resolution.
 
-If we see your site is a volcano of errors or otherwise overloading resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
+If problems with your site become severe and overload resources, we will contact you and ask you to take immediate action. If unresponsive, we may need to put the site into maintenance mode.
 
 ### Platform Support
 
@@ -133,38 +145,21 @@ We are also happy to help developers learn the ins and outs of making their site
 
 ### Dedicated Support
 
-Customers with Dedicated Support get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
+Diamond support customers get an extra level of assistance for their dev teams. Pantheon's team can investigate misbehavior, slowness, or error logs to help identify a root cause. This includes everything from database queries to front end performance.
 
-Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring. Dedicated Support can help troubleshoot networking issues and other problems that can be difficult to resolve from the outside.
+Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring.
 
-This level of support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match){.external} from Pantheon’s network of trusted partners.
-
-## Help Us Help You
-
-Keep the following tips in mind when opening a new support ticket or chat:
-
- - **One ticket per issue**: Opening multiple tickets on the same issue will only impeded our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
-
- - **Replication Steps**: One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
-
- - **Specifics**: Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
-
- - **Custom Access**: If your site uses nonstandard admin URLs, custom logins, etc, please let us know.
-
- - **Clarification**: We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
+Diamond support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match){.external} from Pantheon’s network of trusted partners.
 
 ## FAQs
 ### Can I request a feature be added to the platform?
 Yes, for more details, contact your Customer Success Manager or see our [terms of service](https://pantheon.io/terms-of-service).
 
 ### Is there a support number we can call? If so, is this service available for every plan?
-Customers with a **Diamond support plan** can access Pantheon on-call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
+Diamond and Platinum customers can access Pantheon on-call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
 
 ### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
-You can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting paying sites.
-
-### Is 24/7 phone support available for Performance plans?
-No, but we do provide two monthly scheduled calls with a Senior Customer Success Engineer for Performance Medium and above plans. Diamond Support plan customers have access to an emergency line to page the on-call staff 24/7 regarding downtime issues.
+Diamond, Platinum and Gold customers can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting Diamond and Platinum customers.
 
 ### What if I can't login to the Pantheon Dashboard?
 If you are unable to login, try [resetting your password](https://dashboard.pantheon.io/reset-password).
