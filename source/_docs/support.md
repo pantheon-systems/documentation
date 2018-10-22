@@ -23,29 +23,29 @@ Pantheon offers a wide range of support plans that extend to include all the fea
 |                                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
 |-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
 | **Scope**                                                 | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %} | Performance {% include 'popovers/performance.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} |
-| **Chat**                                                  | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
-| **Tickets**                                               | <span style=color:red>❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
-| **Emergency On-Call**                                     | <span style=color:red>❌</span>                 | <span style=color:red>❌</span>                   | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                   |
-| **[Professional Services](/docs/professional-services/)** | <span style=color:red>❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                |
+| [**Chat**](#real-time-chat-support)                       | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
+| [**Tickets**](#ticket-support)                            | <span style=color:red>❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
+| [**Emergency On-Call**](#pantheon-on-call)                | <span style=color:red>❌</span>                 | <span style=color:red>❌</span>                   | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
+| [**Professional Services**](/docs/professional-services/) | <span style=color:red>❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
 </div>
 
 <div role="tabpanel" class="tab-pane" id="plans" markdown="1">
-|                         | **Sandbox, Basic, and Performance S / M**       | **Performance L / XL**                                                    |
-|-------------------------|-------------------------------------------------|---------------------------------------------------------------------------|
-| **Scope**               | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %}                         |
-| **Chat**                | <span style=color:green>✔</span>                | <span style=color:green>✔</span>                                          |
-| **Tickets**             | <span style=color:red>❌</span>                 | <span style=color:green>✔</span> |
-| **Emergency On-Call**               | <span style=color:red>❌</span>                 | <span style=color:red>❌</span> |
-| **[Professional Services](/docs/professional-services/)** | <span style=color:red>❌</span> | <span style=color:red>❌</span> |
+|                                            | **Sandbox, Basic, and Performance S / M**       | **Performance L / XL**                              |
+|--------------------------------------------|-------------------------------------------------|-----------------------------------------------------|
+| **Scope**                                  | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %}   |
+| [**Chat**](#real-time-chat-support)        | <span style=color:green>✔</span>                | <span style=color:green>✔</span>                    |
+| [**Tickets**](#ticket-support)             | <span style=color:red>❌</span>                 | <span style=color:green>✔</span>                    |
+| [**Emergency On-Call**](#pantheon-on-call) | <span style=color:red>❌</span>                 | <span style=color:red>❌</span>                     |
+| [**Professional Services**](/docs/professional-services/) | <span style=color:red>❌</span> | <span style=color:red>❌</span>   |
 </div>
 
 <div role="tabpanel" class="tab-pane" id="orgs" markdown="1">
-|                         | **Pantheon for Agencies**                                                 | **Enterprise**                                                            | **EDU+**                                                         | **Priority Enterprise Support**           |
-|-------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------|-------------------------------------------|
-| **Scope**               | Dedicated {% include 'popovers/fullstack.twig' %}                        | Dedicated {% include 'popovers/fullstack.twig' %}                        | Dedicated {% include 'popovers/fullstack.twig' %}                        | Dedicated {% include 'popovers/fullstack.twig' %} |
-| **Chat**                | <span style=color:green>✔</span>                                          | <span  style=color:green>✔</span>                                         | <span style=color:green>✔</span>                                 | <span style=color:green>✔</span>          |
-| **Tickets**             | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '2 hour, 24/7/365.'} %}     |
-| **Phone**               | <span style=color:red>❌</span>                                           | <span style=color:red>❌</span>                                           | <span style=color:red>❌</span>                                  | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Scheduled', 'popcontent': 'Scheduled in advance via a support ticket (9-5 PST).'} %} |
+| | **Pantheon for Agencies** | **Enterprise** | **EDU+** | **Priority Enterprise Support** |
+|-|---------------------------|----------------|----------|---------------------------------|
+| **Scope**   | Dedicated {% include 'popovers/fullstack.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} |
+| **Chat**    | <span style=color:green>✔</span> | <span  style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span>          |
+| **Tickets** | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '2 hour, 24/7/365.'} %}     |
+| **Phone**   | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Scheduled', 'popcontent': 'Scheduled in advance via a support ticket (9-5 PST).'} %} |
 | **On-Call** {% include 'popovers/pes.twig' %} | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '30 minute response time 24/7/365 for emergencies and business critical issues.'} %} |
 </div>
 
@@ -53,17 +53,17 @@ Pantheon offers a wide range of support plans that extend to include all the fea
 
 ## Best Practices
 
-Keeping these tips in mind when opening a new support ticket or chat will help us more quickly resolve your issue:
+Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
 
- - **One ticket per issue**: Opening multiple tickets on the same issue will only impeded our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
+ - **One ticket per issue:** Opening multiple tickets on the same issue will only impeded our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
 
- - **Replication Steps**: One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
+ - **Replication Steps:** One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
 
- - **Specifics**: Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
+ - **Specifics:** Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
 
- - **Custom Access**: If your site uses nonstandard admin URLs, custom logins, etc, please let us know.
+ - **Custom Access:** If your site uses nonstandard admin URLs, custom logins, etc, please let us know.
 
- - **Clarification**: We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
+ - **Clarification:** We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
 
 ## Real Time Chat Support
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
@@ -104,7 +104,7 @@ Diamond and Platinum support customers can directly access Pantheon's operations
 We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed support. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
 
 ### Code
-Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change the code of our customers. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
+Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
 
 ### Outdated Core
 Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/docs/maintain-custom-upstream/) by the upstream maintainer each time the project releases a new version.
@@ -121,7 +121,7 @@ If you choose to use a [public distribution](/docs/start-state/#public-distribut
 We don’t maintain the integrity of your site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 
 ### Debugging
-Code-level debugging and site architecture recommendations are available to Diamond customers. New Relic is also included for most site plans and will help you get to the bottom of most issues. We have a [comprehensive list of docs](/docs/troubleshoot/) to get you started.
+Code-level debugging and site architecture recommendations are available to Diamond support plans. New Relic is also included for most site plans and will help you get to the bottom of most issues. We have a [comprehensive list of docs](/docs/troubleshoot/) to get you started.
 
 ### Performance
 If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
