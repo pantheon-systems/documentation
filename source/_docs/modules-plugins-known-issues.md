@@ -475,7 +475,6 @@ define('FS_METHOD', 'direct');
 
 Alternative plugins that have an xml sitemap feature that works well in the platform are [Google Sitemap Generator](https://wordpress.org/plugins/google-sitemap-generator/){.external} or [Yoast](https://wordpress.org/plugins/wordpress-seo/){.external}. 
 
-[Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
 <hr>
 
 ### [Timthumb](https://code.google.com/p/timthumb/){.external}
