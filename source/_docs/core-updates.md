@@ -109,7 +109,7 @@ If this procedure fails with the message `Already up to date.` refer to [this tr
 
 ### Merge Conflict Resolution
 
-This process let's you manually resolve the conflict using the command line and a text editor.
+This process lets you manually resolve the conflict using the command line and a text editor.
 
 1. Navigate to a [local clone of your site repository](/docs/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
