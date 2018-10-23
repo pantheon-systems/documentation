@@ -3355,6 +3355,7 @@ div.col-md-3.manual-guide-toc {
   padding-right: 0px;
   color: #1e1e2b;
   max-height: 100vh;
+  overflow: auto;
 }
 .invisible-manual-toc {
   background: #fff !important;
@@ -3468,6 +3469,7 @@ padding-left:30px;
 }
 .manual-guide-toc {
   padding:0px;
+  overflow: auto;
 }
 
 .manual-body {
