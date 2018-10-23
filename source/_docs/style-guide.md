@@ -60,26 +60,27 @@ earlynote: The documentation on this page discusses features and options that ar
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/docs/terminus/).
+
 <div class="style-example" markdown="1">
 ## Before You Begin {.info}
-To get started, you need to activate [New Relic APM Pro](/docs/new-relic/) on Pantheon:
+Be sure that you have:
 
-1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Live** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-eye-open" aria-hidden="true"></span> New Relic**.
-2. Click the **Activate New Relic Pro** button.
-3. Use the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Live Site** and browse your site for a few minutes to generate data in New Relic:
-
-  ![New Relic Enable and Generate Data](/source/docs/assets/images/pagerduty/new-relic-generate-data.png)
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create){.external} one.
+- A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/){.external}. Amazon offers [free access](https://aws.amazon.com/free/){.external} to most of their services for the first year.
+- [Terminus](/docs/terminus) installed on your local computer.
 
 <hr class="source-code">
 ```markdown
 ## Before You Begin
-To get started, you need to activate [New Relic APM Pro](/docs/new-relic/) on Pantheon:
 
-1. Navigate to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Live** environment in your Site Dashboard, and click **<span class="glyphicons glyphicons-eye-open" aria-hidden="true"></span> New Relic**.
-2. Click the **Activate New Relic Pro** button.
-3. Use the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Live Site** and browse your site for a few minutes to generate data in New Relic:
+Be sure that you have:
 
-  ![New Relic Enable and Generate Data](/source/docs/assets/images/pagerduty/new-relic-generate-data.png)
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create){.external} one.
+- A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/){.external}. Amazon offers [free access](https://aws.amazon.com/free/){.external} to most of their services for the first year.
+- [Terminus](/docs/terminus) installed on your local computer.
 ```
 </div>
 
