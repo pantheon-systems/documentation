@@ -32,7 +32,7 @@ In order to focus internal development and engineering work, the Pantheon Dashbo
 
 The [max execution time](/docs/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce/){.external} can encounter this limit.
 
-In this or similar instances, consider performing larger operations locally, them importing the code, files, and database back up to the platform.
+In this or similar instances, consider performing larger operations locally, then importing the code, files, and database back up to the platform.
 
 ## Batched Data Export to File
 
