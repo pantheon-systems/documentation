@@ -26,7 +26,7 @@ Use [one-click updates](/docs/core-updates) to make sure you are running the lat
 
 Two contributed modules are supported by Pantheon that interface with Pantheon's Apache Solr service (you only need to install one of these modules):
 
-- [​https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.x and 6.x-1.x
+- [https://drupal.org/project/apachesolr](https://drupal.org/project/apachesolr) - 7.x-1.x and 6.x-1.x
 - [https://drupal.org/project/search\_api\_solr](https://drupal.org/project/search_api_solr) - 7.x-1.x
 
 For most users, the apachesolr module is the easiest to configure and maintain, and includes functionality like facets and other great features.
@@ -114,7 +114,7 @@ The Pantheon Apache Solr module provides an interface for administrators to send
 
 ### Drupal Status Report
 
-The Pantheon Apache Solr ​module also adds an item to the Administration > Reports > Status report that performs a similar check to the Status check, independently of contrib module configurations.
+The Pantheon Apache Solr module also adds an item to the Administration > Reports > Status report that performs a similar check to the Status check, independently of contrib module configurations.
  ![Solr reports](/source/docs/assets/images/solr-reports.png)
 
 ## Troubleshooting
