@@ -41,13 +41,13 @@ As the site owner, you’ll receive an email confirming the change to the site. 
   <div id="host-specific1" class="collapse" style="padding:10px;">
     <div markdown="1">
 ## Ready to launch like the pros?
-Now that you've upgraded your site to paid plan, it's the perfect time to test how your site works in the wild.
+Now that you've upgraded your site to a paid plan, it's the perfect time to test how your site works in the wild.
 
 ### [New Relic APM Pro](/docs/new-relic/#activate-new-relic-apm-pro)
-In preparation for these tests, activate New Relic APM Pro so you can observe your site's performance like a maverick. This service is accessible in the Pantheon Site Dashboard for all site plans except Basic, and offers a nearly real-time look into the performance of a web application.
+In preparation for these tests, activate New Relic APM Pro so you can observe your site's performance like a maverick. This service is accessible from the Pantheon Site Dashboard for all site plans except Basic, and it offers a nearly real-time look into the performance of a web application.
 
 ### [Performance Testing](/docs/load-and-performance-testing/#performance-testing)
-Measure your site's response time to proactively expose bottlenecks. We recommend running performance tests before you run load tests.
+Measure your site's response time to proactively expose potential bottlenecks. We recommend running performance tests before you run load tests.
 
 ### [Load Testing](/docs/load-and-performance-testing/#load-testing)
 Make sure your site can withstand peak traffic spikes after launch. This test should be performed on the Live environment before the site has launched, after performance testing.
