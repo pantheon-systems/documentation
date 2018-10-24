@@ -126,7 +126,7 @@ Keep in mind that newly indexed items have a 2-minute delay until cron has been 
 {% include("content/solr-commit-changes.html") %}
 
 #### apachesolr.module
-If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](https://github.com/pantheon-systems/cl):
+If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/docs/terminus/):
 ```bash
 terminus drush <site>.<env> -- vget apachesolr_service_class
 ```
