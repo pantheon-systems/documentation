@@ -26,6 +26,9 @@ image: getting-started-Largethumb
 
 For more information on this feature, see [Backups Tool](/docs/backups/).
 
+## Enable and Test Email Plugin/Module (Optional)
+If your site will be sending outgoing email, we *strongly* recommend using a third-party email service provider. See [Email on Pantheon](/docs/email/) for more information.
+
 ## Review Status Reports
 Launch with confidence by taking advantage of Pantheon's static site analysis service for Drupal and WordPress.
 
