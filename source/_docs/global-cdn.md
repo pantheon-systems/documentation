@@ -153,7 +153,7 @@ Yes, but because it adds additional complexity, we suggest you only do so if you
 You can, but as mentioned above you should identify a need for adding additional complexity first. If you're using Fastly TLS services with WordPress, you'll want to check for the `HTTP_FASTLY_SSL` header so that WordPress can build URLs to your CSS and JS assets correctly. Do this by adding the following to `wp-config.php`:
 
 ```php
-if (!empty( $SERVER['HTTP_FASTLY_SSL'])) {
-  $SERVER['HTTPS'] = 'on';
+if (!empty( $_SERVER['HTTP_FASTLY_SSL'])) {
+  $_SERVER['HTTPS'] = 'on';
 }
 ```
