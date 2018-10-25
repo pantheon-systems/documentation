@@ -465,7 +465,7 @@ This workaround may potentially break again with the next plugin update, and you
 <hr>
 
 ### [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/){.external}
-**Issue:** The sitemap url linked by the plugin produces a `500 Internal Server Error` on Test and Live environments, which results to a PHP error: `class not found WP_Filesystem_Direct`. See more [details about the issue](https://premium.wpmudev.org/forums/topic/smartcrawl-pro-class-wp_filesystem_direct-not-found){.external}.
+**Issue:** The sitemap URL linked by the plugin produces a `500 Internal Server Error` on Test and Live environments. This results in a PHP error: `class not found WP_Filesystem_Direct`. See more [details about the issue](https://premium.wpmudev.org/forums/topic/smartcrawl-pro-class-wp_filesystem_direct-not-found){.external}.
 
 **Solution:** The plugin fails to implement a direct `FS_METHOD` in Test and Live environments. Add the following to `wp-config.php`, before the line `/* That's all, stop editing! Happy Pressing. */`:
 
@@ -473,7 +473,10 @@ This workaround may potentially break again with the next plugin update, and you
 define('FS_METHOD', 'direct');
 ```
 
-Alternative plugins that have an xml sitemap feature that works well in the platform are [Google Sitemap Generator](https://wordpress.org/plugins/google-sitemap-generator/){.external} or [Yoast](https://wordpress.org/plugins/wordpress-seo/){.external}. 
+Alternative plugins that have an XML sitemap feature that works well on the platform are:
+
+* [Google Sitemap Generator](https://wordpress.org/plugins/google-sitemap-generator/){.external}
+* [Yoast](https://wordpress.org/plugins/wordpress-seo/){.external}
 
 <hr>
 
