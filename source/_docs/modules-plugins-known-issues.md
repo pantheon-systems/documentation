@@ -473,7 +473,7 @@ This workaround may potentially break again with the next plugin update, and you
 define('FS_METHOD', 'direct');
 ```
 
-Alternative plugins that have an XML sitemap feature that works well on the platform are:
+Alternative plugins that have an XML sitemap feature that works well on the platform include:
 
 * [Google Sitemap Generator](https://wordpress.org/plugins/google-sitemap-generator/){.external}
 * [Yoast](https://wordpress.org/plugins/wordpress-seo/){.external}
