@@ -91,7 +91,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
         terminus connection:set $SITE.dev git
 
-3. Create a copy of [Pantheon's `pivotal_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/pivotal_integration) in the project's private path:
+3. Create a copy of [Pantheon's `pivotal_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/pivotal-tracker) in the project's private path:
 
     ``` bash
     mkdir private

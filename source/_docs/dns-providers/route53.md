@@ -5,7 +5,7 @@ dnsprovider: true
 description: Learn how to point your Amazon Route 53 domain to a Pantheon site.
 tags: [providers]
 permalink: docs/:basename/
-editpath: dns-providers/amazon-route53.md/
+editpath: dns-providers/route53.md/
 ---
 ## Before You Begin
 Be sure that you have a:

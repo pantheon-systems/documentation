@@ -14,7 +14,7 @@ use:
 permalink: docs/guides/pagerduty/monitor/
 nexturl: guides/pagerduty/schedule/
 previousurl: guides/pagerduty/
-editpath: alert/02-monitors.md
+editpath: pagerduty/02-monitors.md
 ---
 In this lesson, we'll set up a new ping monitor to periodically check the site's availability in New Relic Synthetics.
 
