@@ -52,7 +52,7 @@ $ git remote -v
 origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (fetch)
 origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (push)
 ```
-The output lists "origin" as the the remote with Pantheon SSH Git clone connection information as it's address.
+The output lists "origin" as the remote with Pantheon SSH Git clone connection information as it's address.
 
 ### Create a Repository on GitHub
 
