@@ -108,9 +108,7 @@ It is also possible to deliver smaller media files from Pantheon using [progress
 
 ## Large Files
 
-Pantheon's file serving infrastructure is not optimized to store and deliver very large files. The bigger the file, the slower the transfer. Files over 50MB will experience a noticeable performance degradation due to the configuration of the [Pantheon Filesystem](/docs/files/).
-
-Pantheon cannot be used to host files over 256MB, no matter how the file is uploaded. Attempting to upload a file using SFTP or rsync will fail if the file size is over 256MB.
+Due to the configuration of the [Pantheon Filesystem](/docs/files/), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 256MB will fail no matter how they are uploaded, even if using SFTP or rsync. Transfers with files over 50MB will experience noticeable degradation in performance.
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 
