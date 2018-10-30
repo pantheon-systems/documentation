@@ -84,7 +84,7 @@ Choose your preferred Git host:
   cd agency-custom-upstream
   ```
 </div>
-<div markdown="1" role="tabpanel" class="tab-pane active" id="gitlab">
+<div markdown="1" role="tabpanel" class="tab-pane" id="gitlab">
 You can [sign up](https://gitlab.com/users/sign_in){.external} for a GitLab.com account, or use a self-managed GitLab installation.
 
 1. From your GitLab dashboard click **New project**.
