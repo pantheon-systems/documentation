@@ -47,19 +47,17 @@ While Pantheon doesn't provide a mechanism for custom scheduling of cron tasks, 
 
 If the site has not been accessed through the web by a visitor for at least two hours, the platform suspends the associated services until it's accessed again and cron will not run.
 
-There is a two-part workaround; first, keeping the site awake, then using a different mechanism for executing cron tasks.
+There are several workarounds. Most work by keeping the site awake, then using a different mechanism for executing cron tasks.
 
-To keep the site active, some users have used [https://www.pingdom.com/](https://www.pingdom.com/) to access their site as often as once a minute. In conjunction, the use of the Drupal module [https://www.drupal.org/project/elysia\_cron](https://www.drupal.org/project/elysia_cron) allows for granular control over cron scheduling and execution with both an user interface and API.
+ - To keep the site active, some users have used [Pingdom](https://www.pingdom.com/){.external} to access their site as often as once a minute. In conjunction, the use of the Drupal module [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} allows for granular control over cron scheduling and execution with both a user interface and API.
 
-By having pingdom visit the site once a minute like a visitor, the site stays active and elysia\_cron has an opportunity to act every minute (if it needs to).
+   By having Pingdom visit the site once a minute like a visitor, the site stays active and Elysia Cron has an opportunity to act every minute (if it needs to). This combination is not officially supported by Pantheon, but has worked for some of our customers.
 
-This combination is not officially supported by Pantheon, but has worked for some of our customers with similar needs.
+ - A single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors){.external} to hit Cron URLs. You may still want to use [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} to schedule different cron tasks at different frequencies though. One advantage of this approach is that your site may already have a New Relic instance associated with it, saving you from having to setup another third-party service.
 
-An alternative, single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors) to hit Cron URLs. You may still want to use [https://www.drupal.org/project/elysia\_cron](https://www.drupal.org/project/elysia_cron) to schedule different cron tasks at different frequencies though. One advantage of this approach is that your site may already have a New Relic instance associated to it, saving you from having to setup yet another third-party service. 
+ - If you have anything that is executing cron tasks on your own server, you can invoke Drush commands remotely using [Terminus](/docs/terminus/), including Drush cron, to trigger scheduled operations.
 
-As an alternative solution if you have anything that is executing a cron on your own server, you can invoke Drush commands remotely using [Terminus](/docs/terminus/), including Drush cron, to trigger scheduled operations.
-
-Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/). You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron](https://drupal.org/project/EasyCron) module. The unique URL to kick off cron externally can be found at `/admin/config/system/cron`
+ - Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/){.external}. You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron Module](https://drupal.org/project/EasyCron){.external}. The unique URL to kick off cron externally can be found at `/admin/config/system/cron`.
 
 
 ## Disable Cron
