@@ -90,7 +90,7 @@ Yes. [Local development](/docs/local-development/) is a great best practice, and
 
 ### How does cron work with Drupal on Pantheon?
 
-The platform will use Drush to run cron on an hourly basis automatically. More fine-tuned cron control is in development. If you need to run cron more frequently, you are free to do so using your own timing system and Drush aliases.
+The platform will use Drush to run cron on an hourly basis automatically. More fine-tuned cron control is in development. If you need to run cron more frequently, you are free to do so using your own timing system and Drush aliases. For more information, see [Cron for Drupal](/docs/drupal-cron/).
 
 ### How does cron work with WordPress on Pantheon?
 
