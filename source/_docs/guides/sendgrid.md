@@ -18,11 +18,15 @@ One of the most common reasons that email gets blocked is because it originates 
 
 ## Create a SendGrid Account
 
-Get started by [signing up](https://sendgrid.com/partners/pantheon) for an account and selecting a plan that meets your business needs. After receiving your confirmation email, sign in to your [SendGrid account](https://sendgrid.com/login). From within the Settings menu, click **Credentials**.
+1. Get started by [signing up](https://sendgrid.com/partners/pantheon) for an account and selecting a plan that meets your business needs. After receiving your confirmation email, sign in to your [SendGrid account](https://sendgrid.com/login).
 
-![SendGrid Multiple User setup](/source/docs/assets/images/sendgrid-multiple-users.png)
+2. From within the **Settings** menu, click **API Keys**:
 
-This is where you can create site specific credentials so that sites have their own unique access to your SendGrid features and mail. Once you have created your site's credentials, and allowed the desired access (UI/API and Mail), go to the applicable section below for the CMS your site is running.
+  ![SendGrid Multiple User setup](/source/docs/assets/images/guides/sendgrid/sendgrid-api-keys.png)
+
+3. Click **Create API Key** to define the name and permissions for the API key your site will use. Click **Create & View** to complete the process.
+
+4. The API key will only be displayed once. Copy the key and save is somewhere secured until you can apply it to the site.
 
 ## Integrating Sendgrid With Drupal and Wordpress
 Follow the procedure outlined below for your CMS:
@@ -44,15 +48,14 @@ Install and activate the latest release through the WordPress dashboard or place
 
 ### Add Your SendGrid Account Details {.info}
 1. After you have installed and activated the plugin, go to your site's Dashboard and select **Settings**, then click the SendGrid menu item.
-2. Although you can select the SendGrid Web API or SMTP to send mail, we strongly recommend configuring the plugin to send mail through SendGrid's API. SMTP requests are associated with dynamic outgoing IP addresses on Pantheon, which can have a negative impact on deliverability.
-3. Enter your site's SendGrid account credentials and select the desired protocol for sending mail.
-4. Enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).
-5. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
+2. Provide the API Key from the previous section. 
+3. Enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).
+4. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
 
-![WP Settings example](/source/docs/assets/images/sendgrid_wpconfig.png)​
+![WP Settings example](/source/docs/assets/images/guides/sendgrid/sendgrid-wpconfig.png)
 
-Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
+When you're done, click **Update Setings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
   </div>
   <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
