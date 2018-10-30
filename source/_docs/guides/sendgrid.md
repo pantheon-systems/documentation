@@ -38,10 +38,8 @@ Follow the procedure outlined below for your CMS:
 </ul>
 
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-
+<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
 ### Download the WordPress SendGrid Plugin {.info}
-
 The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/){.external} replaces the `wp_mail` function with API integration, making it easy to configure and get started.
 
 Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
@@ -57,8 +55,9 @@ Install and activate the latest release through the WordPress dashboard or place
 
 When you're done, click **Update Setings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
-  </div>
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</div>
+
+<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
 
 ### Choosing an Integration Method {.info}
 
@@ -66,49 +65,48 @@ Two methods can be used to integrate SendGrid with your Drupal 8 site: API or SM
 
 #### Considerations
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
-- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/docs/composer/).
+- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration){.external} module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/docs/composer/).
 
 ### SendGrid API Integration {.info}
-
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) guide. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea){.external} file.</p>
+<div class="alert alert-danger" markdown="1">
+#### Warning {.info}
+The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea){.external} file.
 </div>
 
-1.  Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using Composer:
+1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration){.external} module using Composer:
 
-     ```bash
-    composer require drupal/sendgrid_integration
-     ```
+  ```bash
+  composer require drupal/sendgrid_integration
+  ```
 
-2.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+2. Commit, push, and enable the new module.
 
-3.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+3.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as an administrator. Paste your API Key and click **Save Configuration**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
 ### SendGrid SMTP Integration {.info}
-A stable release for Drupal 8 is not yet available for the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module. However, [some users](https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM) have reported success with the beta version.
+A stable release for Drupal 8 is not yet available for the [SMTP Authentication Support](https://www.drupal.org/project/smtp){.external} module. However, [some users](https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM){.external} have reported success with the beta version.
 
-1.  Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
+1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp){.external} module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
 
-     ```bash
-     terminus drush <site>.<env> -- en smtp -y
-     ```
-2.  Visit `/admin/config/system/smtp` once you've logged in as an administrator.
-3.  From within Install Options, select **On**.
-4.  Use the following within SMTP Server Settings:
+  ```bash
+  terminus drush <site>.<env> -- en smtp -y
+  ```
+2. Visit `/admin/config/system/smtp` once you've logged in as an administrator.
+3. From within Install Options, select **On**.
+4. Use the following within SMTP Server Settings:
 
-    **SMTP server**: `smtp.sendgrid.net`
+  **SMTP server**: `smtp.sendgrid.net`
 
-    **SMTP port**: `2525`
+  **SMTP port**: `2525`
 
-    **Use encrypted protocol**: We strongly recommend selecting **TLS**
+  **Use encrypted protocol**: We strongly recommend selecting **TLS**
 
-        <div class="alert alert-info" role="alert">
-          <h4 class="info">Note</h4>
-          <p markdown="1">Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/docs/email/) </p>
-        </div>
+    <div class="alert alert-info" role="alert" markdown="1">
+    #### Note {.info}
+    Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/docs/email/)
+    </div>
 
 5.  Provide your site-specific SendGrid credentials and click **Save configuration**.
 
