@@ -55,6 +55,8 @@ By having pingdom visit the site once a minute like a visitor, the site stays ac
 
 This combination is not officially supported by Pantheon, but has worked for some of our customers with similar needs.
 
+An alternative, single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors) to hit Cron URLs. You may still want to use [https://www.drupal.org/project/elysia\_cron](https://www.drupal.org/project/elysia_cron) to schedule different cron tasks at different frequencies though. One advantage of this approach is that your site may already have a New Relic instance associated to it, saving you from having to setup yet another third-party service. 
+
 As an alternative solution if you have anything that is executing a cron on your own server, you can invoke Drush commands remotely using [Terminus](/docs/terminus/), including Drush cron, to trigger scheduled operations.
 
 Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/). You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron](https://drupal.org/project/EasyCron) module. The unique URL to kick off cron externally can be found at `/admin/config/system/cron`
