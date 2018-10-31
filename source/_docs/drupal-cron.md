@@ -49,7 +49,7 @@ If the site has not been accessed through the web by a visitor for at least two 
 
 There are several workarounds. Most work by keeping the site awake, then using a different mechanism for executing cron tasks.
 
- - To keep the site active, some users have used [Pingdom](https://www.pingdom.com/){.external} to access their site as often as once a minute. In conjunction, the use of the Drupal module [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} allows for granular control over cron scheduling and execution with both a user interface and API.
+ - To keep the site active, some users have used [Pingdom](https://www.pingdom.com/){.external} to automate access to their site as often as once a minute. In conjunction, the use of the Drupal module [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} allows for granular control over cron scheduling and execution with both a user interface and API.
 
    By having Pingdom visit the site once a minute like a visitor, the site stays active and Elysia Cron has an opportunity to act every minute (if it needs to). This combination is not officially supported by Pantheon, but has worked for some of our customers.
 
