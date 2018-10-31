@@ -1,13 +1,11 @@
 ---
-title: Early Access: Custom Certificates on Pantheon's Global CDN
-description: For contract customers who need to retain custom TLS certificates, bring your own certificate to the Global CDN to replace legacy SSL service.
-earlyaccess: true
-earlynote: This documentation covers features and options not available across the entire platform.
+title: Custom Certificates on Pantheon's Global CDN
+description: For contract customers who require dedicated, custom TLS certificates
 ---
 
 ## Access
 
-A white glove concierge service is now available and **currently limited to existing Legacy SSL contract customers**, including Enterprise, EDU+, Pantheon One, Elite, and Resellers.
+A white glove concierge service is now available for contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise){.external}.
 
 ## Upgrade to the Global CDN
 
@@ -109,9 +107,9 @@ Nope! You can use the a single certificate to cover multiple domains spread acro
 
 Please allow two business days to get a CSR and load the certificate.
 
-### What about new Enterprise sites or sites purchased online?
+### What about sites purchased online?
 
-Custom certificates are currently available to customers with a Pantheon contract using Legacy SSL. We have no current plans to offer it to new sites or Basic or Performance sites. If you are interested in using a custom certificate, however, please [let us know while we are still gathering interest](https://learn.pantheon.io/201806-Custom-Cert-Reg.html){.external}. If bringing your own certificate is an immediate requirement, please see the suggestions <a href="/docs/https/#can-i-bring-my-own-certificate" data-proofer-ignore>here</a>.
+Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on <a href="/docs/https/#can-i-bring-my-own-certificate" data-proofer-ignore>how to terminate TLS through a 3rd-party.</a>.
 
 ### Will custom certificates be self-serve?
 
