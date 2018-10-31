@@ -109,7 +109,7 @@ The following plugins are just a few of the most popular available for Terminus 
   <div class="flex-panel-item">
     <div class="flex-panel-body">
       <div class="flex-panel-title">
-        <h3 class="plugin-title">Quicksilver</h3>
+        <h3 class="plugin-title">Terminus Quicksilver Plugin</h3>
         <div class="pantheon-official">
         <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
           <p class="pantheon-official">Pantheon Official</p>
