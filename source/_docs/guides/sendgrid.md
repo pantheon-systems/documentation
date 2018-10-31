@@ -26,7 +26,7 @@ One of the most common reasons that email gets blocked is because it originates 
 
 3. Click **Create API Key** to define the name and permissions for the API key your site will use. Click **Create & View** to complete the process.
 
-4. The API key will only be displayed once. Copy the key and save is somewhere secured until you can apply it to the site.
+4. The API key will only be displayed once. Copy the key and save it somewhere secure until you can apply it to the site.
 
 ## Integrating Sendgrid With Drupal and Wordpress
 Follow the procedure outlined below for your CMS:
@@ -47,7 +47,7 @@ Install and activate the latest release through the WordPress dashboard or place
 ### Add Your SendGrid Account Details {.info}
 1. After you have installed and activated the plugin, go to your site's Dashboard and select **Settings**, then click the SendGrid menu item.
 2. Provide the API Key from the previous section. 
-3. Enter the sending email address and provide a reply email address if you prefer replies to go to another address (optional).
+3. Enter the email address to send from and provide a reply email address if you prefer replies to go to another address (optional).
 4. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
 
@@ -70,7 +70,7 @@ Two methods can be used to integrate SendGrid with your Drupal 8 site: API or SM
 ### SendGrid API Integration {.info}
 <div class="alert alert-danger" markdown="1">
 #### Warning {.info}
-The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea){.external} file.
+The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow as described in our [Build Tools](/docs/guides/build-tools/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea){.external} file.
 </div>
 
 1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration){.external} module using Composer:
@@ -105,7 +105,7 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
 
     <div class="alert alert-info" role="alert" markdown="1">
     #### Note {.info}
-    Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/docs/email/)
+    Configuring mail to use port 25, 465 or 587 is strongly discouraged because these ports attract SPAM activities. For details, see [Email on Pantheon](/docs/email/)
     </div>
 
 5.  Provide your site-specific SendGrid credentials and click **Save configuration**.
