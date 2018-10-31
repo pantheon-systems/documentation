@@ -5,7 +5,7 @@ description: Look up Terminus commands.
 terminuspage: true
 type: terminuspage
 layout: terminuspage
-nexturl: terminus/plugins/
+nexturl: terminus/scripting/
 previousurl: terminus/examples/
 permalink: docs/terminus/:basename/
 image: terminus-thumbLarge

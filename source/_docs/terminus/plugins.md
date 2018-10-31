@@ -6,7 +6,7 @@ terminuspage: true
 type: terminuspage
 layout: terminuspage
 nexturl: terminus/plugins/directory/
-previousurl: terminus/commands/
+previousurl: terminus/scripting/
 permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
 searchboost: 100
