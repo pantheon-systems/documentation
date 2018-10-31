@@ -6,7 +6,7 @@ categories: []
 ---
 
 ## Cookie Naming Requirements
-For cookies to function on cached pages they must match the pattern: `STYXKEY[a-zA-Z0-9_-]`.
+For cookies to function on cached pages they must match the pattern: `STYXKEY[a-zA-Z0-9_-]`. Note that on WordPress sites, if you want session cookies to be excluded from caching, they must be named with `wp-` as their prefix.
 
 ## Disable Caching for Specific Pages
 You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response.
