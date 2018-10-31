@@ -599,6 +599,17 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <hr>
 
+### [WP All Import / Export](http://www.wpallimport.com/){.external}
+
+**Issue:** Large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/docs/timeouts) for more information.
+
+**Solution:** To avoid hitting a timeout, you can try:
+
+ - Splitting the import or export into smaller parts
+ - Set the plugin to only process 1 or 2 records per iteration
+
+<hr>
+
 ### [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/){.external}
 
 **Issue #1**: This plugin requires write access to a cache folder in `wp-content/cache`, which is not granted on Test and Live environments by design.
