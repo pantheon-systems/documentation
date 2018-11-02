@@ -118,7 +118,7 @@ If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that s
 
 **Database** - a single `.sql` dump that contains the content and active state of the site's configurations.
 
-If your `.sql` file is less than 500MB, you can use the Import tool on the Workflow tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
+If your `.sql` file is less than 500MB, you can use the Import tool on the Database/Files section of the Dev tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
 
 1. From the Dev environment on the Site Dashboard, click **Connection Info** and copy the database connection string. It will look similar to this:
 
