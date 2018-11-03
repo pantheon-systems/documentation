@@ -69,6 +69,27 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 $baseUrl = '/ckfinder/userfiles/';
 ```
 
+**Issue (CKFinder 3)**: CKFinder's working folder cache is located inside the module's folder hitting this error `Fatal error: Uncaught CKSource\CKFinder\Exception\AccessDeniedException: Couldn't create resource type directory. Please check permissions.`
+
+**Solution (CKFinder 3)**: Manually edit the `ckfinder/config.php` file and edit the following lines to point to the standard writeable path. Please note that you will need to create the folder `ckfinder-cache` under `sites/default/files` for this to work:
+
+```
+$config['privateDir'] = array(
+    ...
+    ...
+    'cache'  => '.sites/default/files/ckfinder-cache',
+    ...
+);
+
+$config['backends'][] = array(
+    ...
+    ...
+    'baseUrl'      => '/sites/default/files',
+    ...
+);
+
+```
+
 <hr>
 ### [Composer Manager](https://www.drupal.org/project/composer_manager){.external}
 This module has been deprecated by its authors. The suggestions made below are not guaranteed to be successful in all use cases.
