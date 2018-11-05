@@ -5,9 +5,9 @@ tags: [migratemanual]
 categories: [wordpress]
 ---
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.</p>
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.
 </div>
 
 ## Requirements
@@ -51,9 +51,26 @@ Import your existing code and commit history via Git. If you don’t have a Git 
  ```
  Preserve any logic necessary in the original `wp-config.php` and `.gitignore` files. It's important to analyze the differences between our upstream's [`wp-config.php`](https://github.com/pantheon-systems/wordpress-network/blob/master/wp-config.php) and [`.gitignore`](https://github.com/pantheon-systems/wordpress-network/blob/master/.gitignore) and the same file in your site's codebase.
 
-    For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
+ For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
 
-    <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php"></script>
+  ```bash
+  /**
+   * Define DOMAIN_CURRENT_SITE conditionally.
+   */
+  if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  	switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
+  		case 'live':
+  			define( 'DOMAIN_CURRENT_SITE', 'www.example-network.com' );
+  			break;
+  		case 'test':
+  			define( 'DOMAIN_CURRENT_SITE', 'www.test.example-network.com' );
+  			break;
+  		case 'dev':
+  			define( 'DOMAIN_CURRENT_SITE', 'www.dev.example-network.com' );
+  			break;
+  	   }
+  }
+  ```
 
 5.  Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in step 3:
 
@@ -118,7 +135,7 @@ If you are unfamiliar or uncomfortable with bash and rsync, an FTP client that s
 
 **Database** - a single `.sql` dump that contains the content and active state of the site's configurations.
 
-If your `.sql` file is less than 500MB, you can use the Import tool on the Workflow tab to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
+If your `.sql` file is less than 500MB, you can use the Import tool in the <span class="glyphicons glyphicons-server" aria-hidden="true"></span> **Database/Files** section of the Site Dashboard to import the database from a URL. If it is less than 100MB, you can upload the file directly. Importing an `.sql` file larger than 500MB require the use of the command line:
 
 1. From the Dev environment on the Site Dashboard, click **Connection Info** and copy the database connection string. It will look similar to this:
 
