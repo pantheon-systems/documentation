@@ -109,7 +109,7 @@ Please allow two business days to get a CSR and load the certificate.
 
 ### What about sites purchased online?
 
-Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on <a href="/docs/https/#can-i-bring-my-own-certificate" data-proofer-ignore>how to terminate TLS through a 3rd-party.</a>.
+Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on <a href="/docs/https/#can-i-bring-my-own-certificate" data-proofer-ignore>how to terminate TLS through a 3rd-party</a>.
 
 ### Will custom certificates be self-serve?
 
