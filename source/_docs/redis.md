@@ -194,7 +194,7 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
       // If you've installed your plugin in a contrib directory, use this line instead:
       // $conf['cache_backends'][] = 'sites/all/modules/contrib/redis/redis.autoload.inc';
 
-      $conf['cache_default_class'] = 'Redis_Cache';
+      $conf['cache_default_class'] = 'Redis_CacheCompressed';
       $conf['cache_prefix'] = array('default' => 'pantheon-redis');
 
       // Do not use Redis for cache_form (no performance difference).
@@ -302,7 +302,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
     // Use Redis for caching.
     $conf['redis_client_interface'] = 'PhpRedis';
     $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
-    $conf['cache_default_class'] = 'Redis_Cache';
+    $conf['cache_default_class'] = 'Redis_CacheCompressed';
     $conf['cache_prefix'] = array('default' => 'pantheon-redis');
     // Do not use Redis for cache_form (no performance difference).
     $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
@@ -332,7 +332,7 @@ In other words, don’t mix your application configuration and redirection logic
 If you push your updates via Git, you may get the error that the Cache directory is not found, Class not found, or the `Cache.php` file was not found. This is because of a `.gitignore` issue that did not allow committing of the Redis cache files. Example error:
 
 ```bash
-Fatal error: Class 'Redis_Cache' not found in
+Fatal error: Class 'Redis_CacheCompressed' not found in
 /srv/bindings/xxxxxxxx/code/sites/all/modules/cache_backport/cache.inc on line 71
 ```
 
