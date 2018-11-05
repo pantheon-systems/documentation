@@ -51,9 +51,26 @@ Import your existing code and commit history via Git. If you don’t have a Git 
  ```
  Preserve any logic necessary in the original `wp-config.php` and `.gitignore` files. It's important to analyze the differences between our upstream's [`wp-config.php`](https://github.com/pantheon-systems/wordpress-network/blob/master/wp-config.php) and [`.gitignore`](https://github.com/pantheon-systems/wordpress-network/blob/master/.gitignore) and the same file in your site's codebase.
 
-    For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
+ For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
 
-    <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/switch-domain_current_site.wp-config.php"></script>
+  ```bash
+  /**
+   * Define DOMAIN_CURRENT_SITE conditionally.
+   */
+  if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  	switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
+  		case 'live':
+  			define( 'DOMAIN_CURRENT_SITE', 'www.example-network.com' );
+  			break;
+  		case 'test':
+  			define( 'DOMAIN_CURRENT_SITE', 'www.test.example-network.com' );
+  			break;
+  		case 'dev':
+  			define( 'DOMAIN_CURRENT_SITE', 'www.dev.example-network.com' );
+  			break;
+  	   }
+  }
+  ```
 
 5.  Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in step 3:
 
