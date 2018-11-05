@@ -5,9 +5,9 @@ tags: [migratemanual]
 categories: [wordpress]
 ---
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.</p>
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.
 </div>
 
 ## Requirements
