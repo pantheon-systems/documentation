@@ -110,6 +110,12 @@ It is also possible to deliver smaller media files from Pantheon using [progress
 
 Due to the configuration of the [Pantheon Filesystem](/docs/files/), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/docs/rsync-and-sftp/). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
 
+| File Size       | Platform Compatibility            | Notes                               |
+|:--------------- | --------------------------------- |------------------------------------ |
+| ≥ 100MB         | <span style=color:green>✔</span>  | Can be uploaded via any means       |
+| < 100MB - 256MB | <span style=color:orange>✔</span> | Must be uploaded over SFTP or rsync |
+| < 256MB         | <span style=color:red>❌</span>   | Must be hosted via 3rd party CDN    |
+
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 
  - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs){.external}.
