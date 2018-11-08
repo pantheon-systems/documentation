@@ -94,9 +94,6 @@ The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older v
 
 {% include("content/solr-commit-changes.html") %}
 
-## Force Reposting of Schema File on Pantheon Environments
-Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr server. So indexing and searching in one environment does not impact any other environment.
-
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
 {% include("content/remove-addons/d8-solr.html")%}
