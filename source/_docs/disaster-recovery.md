@@ -7,7 +7,7 @@ earlynote: This documentation covers features and options not available across t
 
 ## Access
 
-Site Disaster Recovery (DR) is available for purchase as an add-on to all Elite site plans. It's not available for Elite Starter plans. For more information, please [contact Sales](/PLACEHOLDER).
+Site Disaster Recovery (DR) is available for purchase as an add-on to all Elite site plans. It's not available for Elite Starter plans. For more information, please [contact Sales](/contact-us).
 
 ## Overview
 
@@ -42,4 +42,4 @@ While the CMS database is continuously replicated, Pantheon's Solr and Redis ser
 
 
 ## See also
-- [Disaster Recovery Webinar - 11/8 ](/PLACEHOLDER)
+- [Disaster Recovery Webinar - 11/8/2018 ](/resources/disaster-recovery-webinar)
