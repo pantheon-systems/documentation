@@ -111,22 +111,22 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 </table>
 ## Frequently Asked Questions
 
-#### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
+### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
 Yes, just use `terminus drush <site>.<env> -- cron` using [Terminus](/docs/terminus/). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an inefficient process, determine why it's slow and fix the root cause.
 
-#### What if I run into a timeout when using the Drupal Migrate UI?
+### What if I run into a timeout when using the Drupal Migrate UI?
 
 As [strongly recommended by the Migrate module](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/docs/terminus/). You can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
 ```
 $conf['migrate_drush_path'] = $_ENV['HOME'] . '/drush';
 ```
 
-#### Can Pantheon change the non-configurable timeouts for my site?
+### Can Pantheon change the non-configurable timeouts for my site?
 
 No, these settings apply to every site on Pantheon. One of the ways Pantheon scales so well is by avoiding one-off configurations. We run a highly tuned universal configuration for optimized performance.
 
 
-#### How do I change the Solr timeout on Drupal?
+### How do I change the Solr timeout on Drupal?
 
 Edit the `pantheon_apachesolr` module within your Drupal site installation and enjoy your voided warranty (we can't support user modifications). Seriously, this treats a symptom and not the problem; you should reduce the batch size instead and avoid indexing large binary files.
