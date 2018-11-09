@@ -7,6 +7,13 @@ contributors: [davidneedham]
 ---
 We've compiled some great tips for agencies working on Pantheon. They are loosely ordered from basic to advanced and cover a variety of topics. If you would like to see something added to this doc, please use the **Contribute** link at the top of this article.
 
+## Become a Partner Agency / Join the Partner Program
+
+One of the easiest tips we can offer for immediate results. Pantheon Partner Agencies are eligible for additional support options and other exclusive features. Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more.
+
+## Learn Pantheon through Product Trainings, Resources, and Guides
+[Get hands on training](https://pantheon.io/agencies/learn-pantheon?docs){.external} from the Agency and Community team at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
+
 ## Supporting Organizations
 When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/docs/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
 
@@ -22,9 +29,6 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 
 ## Power Users Group
 The [Power Users](/docs/power-users) group is a great place to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.
-
-## Pantheon For Agencies Webinar Series
-The Agency and Community team at Pantheon produced a [six part training series](https://pantheon.io/agency-training-series-part-1) that starts with an introduction and moves into power tools and advanced workflows.
 
 ## HTTPS
 Follow our [Launch Essentials](/docs/guides/launch/) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
