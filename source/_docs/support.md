@@ -8,48 +8,13 @@ categories: []
 ## Support Features and Response Times
 Pantheon offers a wide range of support plans that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled professional services with our Diamond Plan. The type of support available varies based on whether you are paying for a site individually, or using Pantheon as an Agency, EDU, or Enterprise customer.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-<li role="presentation" class="active"><a href="#sites" aria-controls="sites" role="tab" data-toggle="tab">Support Plans for Organizations</a></li>
-<li role="presentation"><a href="#plans" aria-controls="plans" role="tab" data-toggle="tab">Pay per site</a>
-</li>
-<li role="presentation"><a href="#orgs" aria-controls="orgs" role="tab" data-toggle="tab">Agencies & Organizations (Legacy)</a>
-</li>
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-<div role="tabpanel" class="tab-pane active" id="sites" markdown="1">
-|                                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
+| Support Package                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
 |-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
 | **Scope**                                                 | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %} | Performance {% include 'popovers/performance.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} |
 | [**Chat**](#real-time-chat-support)                       | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
 | [**Tickets**](#ticket-support)                            | <span style=color:red>❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
 | [**Emergency On-Call**](#pantheon-on-call)                | <span style=color:red>❌</span>                 | <span style=color:red>❌</span>                   | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
 | [**Professional Services**](/docs/professional-services/) | <span style=color:red>❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
-</div>
-
-<div role="tabpanel" class="tab-pane" id="plans" markdown="1">
-|                                            | **Sandbox, Basic, and Performance S / M**       | **Performance L / XL**                              |
-|--------------------------------------------|-------------------------------------------------|-----------------------------------------------------|
-| **Scope**                                  | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %}   |
-| [**Chat**](#real-time-chat-support)        | <span style=color:green>✔</span>                | <span style=color:green>✔</span>                    |
-| [**Tickets**](#ticket-support)             | <span style=color:red>❌</span>                 | <span style=color:green>✔</span>                    |
-| [**Emergency On-Call**](#pantheon-on-call) | <span style=color:red>❌</span>                 | <span style=color:red>❌</span>                     |
-| [**Professional Services**](/docs/professional-services/) | <span style=color:red>❌</span> | <span style=color:red>❌</span>   |
-</div>
-
-<div role="tabpanel" class="tab-pane" id="orgs" markdown="1">
-| | **Pantheon for Agencies** | **Enterprise** | **EDU+** | **Priority Enterprise Support** |
-|-|---------------------------|----------------|----------|---------------------------------|
-| **Scope**   | Dedicated {% include 'popovers/fullstack.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} |
-| **Chat**    | <span style=color:green>✔</span> | <span  style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span>          |
-| **Tickets** | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/besteffort.twig' %} | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '2 hour, 24/7/365.'} %}     |
-| **Phone**   | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Scheduled', 'popcontent': 'Scheduled in advance via a support ticket (9-5 PST).'} %} |
-| **On-Call** {% include 'popovers/pes.twig' %} | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:red>❌</span> | <span style=color:green>✔</span> {% include 'popovers/popover.twig' with {'poptitle': 'Response Time', 'popcontent': '30 minute response time 24/7/365 for emergencies and business critical issues.'} %} |
-</div>
-
-</div>
 
 ## Best Practices
 
