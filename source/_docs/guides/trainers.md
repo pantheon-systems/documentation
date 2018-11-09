@@ -24,12 +24,12 @@ Before preparing sites to use Pantheon for a specific class, test out the platfo
 
  3. [Please contact us](https://pantheon.io/trainers){.external} and let us know you want to use the platform as a trainer. This will ensure you have full access to all the available tools as they are developed and maintain access to enough free sandboxes for your students. We can also help guide you through the processes to ensure you have the best experience and find success.
 
- 4. Create a Pantheon for Agencies organization [here](https://dashboard.pantheon.io/organizations/create-agency){.external}. This organization will give you a dashboard overview of all of your students' sites. Creating an organization account will require a unique homepage URL. Choose a URL related to your training. You can read more about using the Organization Dashboard [here](/docs/organizations/).
+ 4. [Create an Agency here](https://dashboard.pantheon.io/organizations/create-agency){.external}. This Agency organization will give you a dashboard overview of all of your students' sites. Creating an organization account will require a unique homepage URL. Choose a URL related to your training. You can read more about using the Organization Dashboard [here](/docs/organizations/).
 
     <div class="alert alert-info">
       <h4 class="info">Note</h4>
       <p markdown="1">
-      You are limited to creating one organization per unique email. If you have already created a Pantheon for Agencies account in the past you will need to create a brand new Pantheon user account with a different email address.
+      You are limited to creating one organization per unique email. If you have already created a Pantheon Agency in the past you will need to create a brand new Pantheon user account with a different email address.
       </p>
     </div>
 
