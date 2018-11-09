@@ -14,6 +14,10 @@ categories: []
 
 Creating a Multidev environment creates an application container with a database server, and connects them to backing services. It creates a Git branch of your codebase from the Master branch, and checks it out in the Multidev environment's application container. It clones the database from the specified environment into the new database server, and clones the filesystem similarly. The new Multidev environment has a unique URL, and behaves the same as the Development environment, with the ability to receive code changes via Git pushes or SFTP file uploads. Multidev environments cannot have custom domains.
 
+### How can my Organization get Multidev and how much does it cost?
+
+Multidev is one of the highlight features of the Pantheon Partner Program. Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us){.external}.
+
 ## Change Management
 
 From within the [Organization Dashboard](/docs/organization-dashboard/), you can assign [organization](/docs/organizations) members one of three roles: Administrator, Team Member, and Developer. Developers in an organization can commit code to Multidev and Development environments, but cannot deploy code or clone databases and files into Test or Live environments.

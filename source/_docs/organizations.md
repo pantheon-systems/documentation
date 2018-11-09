@@ -58,7 +58,7 @@ Upload a logo (85 x 85 px). Enterprise and EDU+ Administrators can add payment a
 All Partner Agencies and EDU organizations have Multidev, Change Management, and Custom Upstreams. Not all account levels qualify for custom Vanity domains, email domains, or Single Sign-On (SSO). [Contact us](https://pantheon.io/contact-us){.external} to find out how to add features to your organization.
 
 ### Multidev for All Sites
-All sites associated with any organization will have [Multidev](/docs/multidev) enabled with up to 10 active environments to use. All organization members have access to these environments; team members of a site who are not members of the supporting organization will not have access to Multidev environments.
+Partner Agencies, Enterprise accounts, and EDU organizations have [Multidev](/docs/multidev) available with up to 10 active environments to use. All organization members have access to these environments; team members of a site who are not members of the supporting organization will not have access to Multidev environments.
 
 ### Change Management
 User roles at the organization level determine their level of access to sites supported or owned by the organization. [Learn more about change management](/docs/change-management).
