@@ -8,14 +8,14 @@ categories: []
 <script src="//fast.wistia.com/embed/medias/lt88wkijia.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_lt88wkijia videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
 </div>
 
-If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the [Partner Program Page](/https://pantheon.io/agencies/partner-program){.external} to learn more about the benefits of becoming a Pantheon Partner.
+If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 
 <div class="enablement">
   <h4 class="info" markdown="1">[Accelerate Your Workflow](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
   <p>Improve your agency's development efficiency with custom DevOps training from Pantheon experts.</p>
 </div>
 
-For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) or [Pantheon EDU+](https://pantheon.io/pantheon-edu-plus) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) and [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>

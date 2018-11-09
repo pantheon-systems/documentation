@@ -303,7 +303,7 @@ If you'd like your existing WordPress site to get one-click updates from your [C
 
 1. The general process will be the same as a vanilla WordPress site, but start with **Create New Site** instead of **Migrate existing site**.
 
-2. Name your new site, and be sure to add it to the organization with access to the custom upstream you want to use.
+2. Name your new site, and be sure to add it to the organization with access to the Custom Upstream you want to use.
 
 3. On the next page, choose your Custom Upstream, and complete the installation.
 
