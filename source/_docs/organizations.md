@@ -46,7 +46,7 @@ View all of your collaborators, filter them by role, manage their roles, and add
 [Learn how to add users to the organization](/docs/organization-dashboard/#add-users-to-your-organization).
 
 ### Upstreams
-[Custom Upstreams](/docs/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. To learn how your Partner Agency can get Custom Upstreams, contact your Customer Success Manager.
+[Custom Upstreams](/docs/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us){.external} to learn how your Partner Agency can get Custom Upstreams.
 
 ### Support
 Review, open, or reply to support requests associated with your organization and its sites on the Support tab. Learn about [how to get support](/docs/support).
@@ -55,7 +55,7 @@ Review, open, or reply to support requests associated with your organization and
 Upload a logo (85 x 85 px). Enterprise and EDU+ Administrators can add payment and terms of service information.
 
 ## Features
-All Partner Agencies and EDU organizations have Multidev, Change Management, and Custom Upstreams. Not all account levels qualify for custom Vanity domains, email domains, or Single Sign-On (SSO). To find out how to add features to your organization, [contact us](/url){.external}.
+All Partner Agencies and EDU organizations have Multidev, Change Management, and Custom Upstreams. Not all account levels qualify for custom Vanity domains, email domains, or Single Sign-On (SSO). [Contact us](https://pantheon.io/contact-us){.external} to find out how to add features to your organization.
 
 ### Multidev for All Sites
 All sites associated with any organization will have [Multidev](/docs/multidev) enabled with up to 10 active environments to use. All organization members have access to these environments; team members of a site who are not members of the supporting organization will not have access to Multidev environments.
