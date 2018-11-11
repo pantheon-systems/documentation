@@ -6,7 +6,7 @@ categories: []
 ---
 
 ## Support Features and Response Times
-Pantheon offers a wide range of support plans that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled professional services with our Diamond Plan. The type of support available varies based on whether you are paying for a site individually, or using Pantheon as an Agency, EDU, or Enterprise customer.
+Pantheon offers a range of support plans that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled professional services with our Diamond Plan.
 
 | Support Package                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
 |-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
@@ -86,7 +86,7 @@ If you choose to use a [public distribution](/docs/start-state/#public-distribut
 We don’t maintain the integrity of your site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 
 ### Debugging
-Code-level debugging and site architecture recommendations are available to Diamond support plans. New Relic is also included for most site plans and will help you get to the bottom of most issues. We have a [comprehensive list of docs](/docs/troubleshoot/) to get you started.
+Code-level debugging and site architecture recommendations are available to Diamond support plans. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/docs/troubleshoot/) to get you started.
 
 ### Performance
 If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
