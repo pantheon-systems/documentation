@@ -10,8 +10,8 @@ Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev, 
 ## Create an Organization
 Current users can create their own Agency or EDU organization by completing the appropriate form:
 
-- [Create an Agency Organization](https://dashboard.pantheon.io/organizations/create)
-- [Create an EDU Organization](https://dashboard.pantheon.io/organizations/create-edu)
+- [Create an Agency Organization](https://dashboard.pantheon.io/organizations/create){.external}
+- [Create an EDU Organization](https://dashboard.pantheon.io/organizations/create-edu){.external}
 
 New users can always [register here](https://pantheon.io/register){.external}. Any other type of organization must be created by Pantheon. [Contact us](https://pantheon.io/contact-us){.external} for more information.
 
@@ -29,7 +29,7 @@ Access the [Organization Dashboard](/docs/organization-dashboard) in the followi
 - From the User Dashboard, click the **Organizations** tab, then click the name of the Organization.
 - From any Dashboard location, hit the "s" keyboard shortcut to toggle a list of sites and organizations, and click the Organization name.
 
-All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, and Settings. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and Resellers have a Partner Program tab. EDU and EDU+ have an EDU tab.
+All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, and Settings. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and Resellers have a Partner Program tab.
 
 ### Sites
 

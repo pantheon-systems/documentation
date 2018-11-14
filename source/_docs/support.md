@@ -118,7 +118,7 @@ Diamond support is intended to help developers succeed on Pantheon, not to provi
 
 ## FAQs
 ### Can I request a feature be added to the platform?
-Yes. For more details, contact your Customer Success Manager or see our [terms of service](https://pantheon.io/terms-of-service).
+Yes. For more details, talk to your Customer Success Manager or [contact sales](https://pantheon.io/contact-us){.external}.
 
 ### Is there a support number we can call? If so, is this service available for every plan?
 Diamond and Platinum customers can access Pantheon On-Call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
