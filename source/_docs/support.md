@@ -1,12 +1,12 @@
 ---
 title: Get Support
-description: Learn how to access Pantheon's expert team and what your support plan includes.
+description: Learn how to access Pantheon's expert team and what your support package includes.
 tags: [dashboard]
 categories: []
 ---
 
 ## Support Features and Response Times
-Pantheon offers a range of support plans that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled professional services with our Diamond Plan.
+Pantheon offers a range of support packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled professional services with our Diamond Package.
 
 | Support Package                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
 |-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
@@ -48,7 +48,7 @@ Start a chat with our Support Team to ask questions or request assistance on iss
 </div>
 
 ## Ticket Support
-The ticket support feature is available to certain plans and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
+The ticket support feature is available to certain support packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
 1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
 2. Choose the **ticket type**.
@@ -66,7 +66,7 @@ Diamond and Platinum support customers can directly access Pantheon's operations
 
 ## Scope of Support
 
-We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed support. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
+We love helping developers succeed! Our support packages range from basic platform support to more comprehensive SLA-backed support. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
 
 ### Code
 Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
@@ -86,7 +86,7 @@ If you choose to use a [public distribution](/docs/start-state/#public-distribut
 We don’t maintain the integrity of your site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 
 ### Debugging
-Code-level debugging and site architecture recommendations are available to Diamond support plans. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/docs/troubleshoot/) to get you started.
+Code-level debugging and site architecture recommendations are available to Diamond support packages. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/docs/troubleshoot/) to get you started.
 
 ### Performance
 If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
@@ -120,7 +120,7 @@ Diamond support is intended to help developers succeed on Pantheon, not to provi
 ### Can I request a feature be added to the platform?
 Yes. For more details, talk to your Customer Success Manager or [contact sales](https://pantheon.io/contact-us){.external}.
 
-### Is there a support number we can call? If so, is this service available for every plan?
+### Is there a support number we can call? If so, is this service available for every package?
 Diamond and Platinum customers can access Pantheon On-Call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
 
 ### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
