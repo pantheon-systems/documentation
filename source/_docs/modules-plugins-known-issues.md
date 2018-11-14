@@ -381,6 +381,18 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 
 <hr>
 
+### [Event Espresso](https://eventespresso.com/){.external}
+
+**Issue:** Event Espresso throwing an error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
+
+**Solution**: This plugin is checking against the write capability and can be bypassed by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+```php
+define('FS_METHOD', 'direct');
+```
+
+<hr>
+
 ### [Force Login](https://wordpress.org/plugins/wp-force-login/){.external}
 **Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
