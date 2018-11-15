@@ -71,6 +71,8 @@ Navigate to  `/admin/config/search/search-api/add-server` and configure the foll
 
 You can name the server anything you want but using something like "Pantheon" is a good way to remember where the connection goes. The Search API module provides schema files for each version of Solr (4, 5, and 6). You can customize schema files by copying these examples to your own custom module and editing them. If you are just getting started, we recommend selecting the file for Solr 4.
 
+When deploying Solr to other environments (Test/Live/Multidevs) for the first time, first navigate to your Server settings page at `admin/config/search/search-api/server/pantheon/edit` and click **Save**, so you can post the Solr schema in those environments.
+
 ### Add Search Index
 Navigate to `admin/config/search/search-api/add-index` and name your index, then choose a data source. If this is your first time using Search API, start by selecting **Content** as a data source. This option will index articles, basic pages, and other node types you have configured.
 
@@ -93,9 +95,6 @@ To actually search your index you will need a module like [Search API Pages](htt
 The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older version of Solr, use the `8.x-1.x` branch of [Search API Solr](https://www.drupal.org/project/search_api_solr){.external} and its Solr 4 schema file.
 
 {% include("content/solr-commit-changes.html") %}
-
-## Force Reposting of Schema File on Pantheon Environments
-Each Pantheon environment (Dev, Test, Live, and Multidevs) has its own Solr server. So indexing and searching in one environment does not impact any other environment.
 
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
