@@ -165,7 +165,7 @@ This will create a new branch with the commit history intact. From the Multidev 
 
 ### How can I get Multidev and how much does it cost?
 
-All Organizations and Agencies have [Multidev for all Sites](/docs/organizations/#multidev-for-all-sites). It is not available as an add-on to other plans.
+Multidev is one of the highlight features of the Pantheon Partner Program. Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us){.external}.
 
 ### If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 

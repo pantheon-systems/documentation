@@ -1,12 +1,12 @@
 ---
 title: Get Support
-description: Learn how to access Pantheon's expert team and what your support plan includes.
+description: Learn how to access Pantheon's expert team and what your support package includes.
 tags: [dashboard]
 categories: []
 ---
 
 ## Support Features and Response Times
-Pantheon offers a wide range of support plans that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled professional services with our Diamond Plan. The type of support available varies based on whether you are paying for a site individually, or using Pantheon as an Agency, EDU, or Enterprise customer.
+Pantheon offers a range of support packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled professional services with our Diamond Package.
 
 | Support Package                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
 |-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
@@ -20,13 +20,13 @@ Pantheon offers a wide range of support plans that extend to include all the fea
 
 Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
 
- - **One ticket per issue:** Opening multiple tickets on the same issue will only impeded our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
+ - **One ticket per issue:** Opening multiple tickets on the same issue will only impede our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
 
  - **Replication Steps:** One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
 
  - **Specifics:** Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
 
- - **Custom Access:** If your site uses nonstandard admin URLs, custom logins, etc, please let us know.
+ - **Custom Access:** If your site uses nonstandard admin URLs, custom logins, etc., please let us know.
 
  - **Clarification:** We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
 
@@ -48,7 +48,7 @@ Start a chat with our Support Team to ask questions or request assistance on iss
 </div>
 
 ## Ticket Support
-The ticket support feature is available to certain plans and account types. For details, refer to the [support feature table above](#support-features-and-response-times).  Tickets are associated to the site from which the ticket is opened.  Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
+The ticket support feature is available to certain support packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
 1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
 2. Choose the **ticket type**.
@@ -62,11 +62,11 @@ The ticket support feature is available to certain plans and account types. For 
 5. Click **Open Ticket**
 
 ## Pantheon On-Call
-Diamond and Platinum support customers can directly access Pantheon's operations response team, either via their Pantheon dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
+Diamond and Platinum support customers can directly access Pantheon's operations response team, either via the Pantheon Dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
 ## Scope of Support
 
-We love helping developers succeed! Our support plans range from basic platform support to more comprehensive SLA-backed support. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
+We love helping developers succeed! Our support packages range from basic platform support to more comprehensive SLA-backed support. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
 
 ### Code
 Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
@@ -75,7 +75,7 @@ Your site code belongs to you. We can offer Diamond support customers advice on 
 Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/docs/maintain-custom-upstream/) by the upstream maintainer each time the project releases a new version.
 
 ### Custom Upstreams
-If you choose to use a custom upstream, please be aware that the scope of support is limited to verification that the externally hosted upstream repository is properly connected to the platform.
+If you choose to use a Custom Upstream, please be aware that the scope of support is limited to verification that the externally hosted upstream repository is properly connected to the platform.
 
 We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [properly maintaining the Custom Upstream](/docs/maintain-custom-upstream/), and fixing any issues related to the upstream falls outside of the scope of support.
 
@@ -86,7 +86,7 @@ If you choose to use a [public distribution](/docs/start-state/#public-distribut
 We don’t maintain the integrity of your site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 
 ### Debugging
-Code-level debugging and site architecture recommendations are available to Diamond support plans. New Relic is also included for most site plans and will help you get to the bottom of most issues. We have a [comprehensive list of docs](/docs/troubleshoot/) to get you started.
+Code-level debugging and site architecture recommendations are available to Diamond support packages. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/docs/troubleshoot/) to get you started.
 
 ### Performance
 If your site is slow or modules aren't working, please see our [performance articles](/docs/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
@@ -106,7 +106,7 @@ If problems with your site become severe and overload resources, we will contact
 
 We provide technical support for all user interfaces of the Pantheon product, as well as compatibility with the Drupal and WordPress CMSs. While we cannot guarantee that every Drupal module or WordPress plugin will work, we take responsibility for the availability and proper functionality of the platform. If there's something wrong there, we will fix it.
 
-We are also happy to help developers learn the ins and outs of making their sites work great on Pantheon, and have a large number of tutorials for common development scenarios. We also do our best to answer most questions about development practices or techniques.
+We are also happy to help developers learn the ins and outs of making their sites work great on Pantheon, and we have a large number of tutorials for common development scenarios. We also do our best to answer most questions about development practices or techniques.
 
 ### Dedicated Support
 
@@ -118,10 +118,10 @@ Diamond support is intended to help developers succeed on Pantheon, not to provi
 
 ## FAQs
 ### Can I request a feature be added to the platform?
-Yes, for more details, contact your Customer Success Manager or see our [terms of service](https://pantheon.io/terms-of-service).
+Yes. For more details, talk to your Customer Success Manager or [contact sales](https://pantheon.io/contact-us){.external}.
 
-### Is there a support number we can call? If so, is this service available for every plan?
-Diamond and Platinum customers can access Pantheon on-call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
+### Is there a support number we can call? If so, is this service available for every package?
+Diamond and Platinum customers can access Pantheon On-Call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).
 
 ### If we open a ticket, do you provide 24/7 support for outages, or are there time restrictions?
 Diamond, Platinum and Gold customers can file a downtime ticket for outages on our Support page, and we provide 24/7 on-call support for all platform issues affecting Diamond and Platinum customers.

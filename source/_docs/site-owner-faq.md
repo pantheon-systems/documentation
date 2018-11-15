@@ -30,7 +30,7 @@ For more information on managing teams, see the [Team Management article](/docs/
 
 
 ### How do I add a Supporting Agency?
-One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
 1. Click **Team** in the upper-right of the Site Dashboard.
 2. Select **Add Supporting Organization** at the bottom of the team management window.
@@ -40,11 +40,11 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 ### What add-ons are available for my site?
 
- - [Apache Solr](/docs/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the Sandbox site plan.
+ - [Apache Solr](/docs/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
  - [Redis](/docs/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 
-Pantheon also offers [New Relic Pro](/docs/new-relic/) to our customers, built in to the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+Pantheon also offers [New Relic Pro](/docs/new-relic/) to our customers, built into the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
 ### How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will see all the available add-ons for your site.

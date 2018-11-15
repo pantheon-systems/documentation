@@ -6,7 +6,7 @@ categories: []
 ---
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/docs/sso/).
 
-SAML SSO is included for customers with Diamond Support and is available as an organization-wide feature only. SAML is not available on a per site or per environment basis. If you'd like to upgrade to an eligible support plan, please contact [Sales](https://pantheon.io/why-pantheon-enterprise){.external}. Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must have a [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies){.external} account and be a Pantheon Partner to qualify.
+SAML SSO is included for customers with Diamond Support and is available as an organization-wide feature only. SAML is not available on a per site or per environment basis. If you'd like to upgrade to an eligible support package, please contact [Sales](https://pantheon.io/why-pantheon-enterprise){.external}. Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/agencies/partner-program){.external} to qualify.
 
 ## User Experience
 * User submits the Pantheon login form with their email address.

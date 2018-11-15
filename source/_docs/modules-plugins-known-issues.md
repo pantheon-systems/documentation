@@ -408,7 +408,7 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/docs/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [custom upstream](/docs/custom-upstream/) or [WP Site Network](/docs/guides/multisite/) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/docs/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/docs/custom-upstream/) or [WP Site Network](/docs/guides/multisite/) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
 
 **Issue 3:** Cannot remotely update core, or install/update theme and plugins in the Dev environment.
 

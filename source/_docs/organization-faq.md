@@ -8,12 +8,15 @@ categories: []
 
 ### What is the benefit of Multidev?
 
-[Multidev](/docs/multidev/) allows you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
+[Multidev](/docs/multidev/) environments allow you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
 
 ### How does Multidev work?
 
-Creating a Multidev environment creates an application container, a database server, and connects them to backing services. It creates a Git branch of your codebase from of master, and checks it out in the Multidev environment's application container. It clones the database from the specified environment into the new database server, and clones the filesystem similarly. The new Multidev environment has a unique URL, and behaves the same as the Development environment, with the ability to receive code changes via Git pushes or SFTP file uploads. Multidev environments cannot have custom domains.
+Creating a Multidev environment creates an application container with a database server, and connects them to backing services. It creates a Git branch of your codebase from the Master branch, and checks it out in the Multidev environment's application container. It clones the database from the specified environment into the new database server, and clones the filesystem similarly. The new Multidev environment has a unique URL, and behaves the same as the Development environment, with the ability to receive code changes via Git pushes or SFTP file uploads. Multidev environments cannot have custom domains.
 
+### How can my Organization get Multidev and how much does it cost?
+
+Multidev is one of the highlight features of the Pantheon Partner Program. Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us){.external}.
 
 ## Change Management
 
@@ -31,7 +34,7 @@ See [Role-Based Permissions & Change Management](/docs/change-management) for de
 
 ### How do we add new sites to an Organization?
 
-When you or the administrators, team members, or developers in your agency [create sites](https://dashboard.pantheon.io/sites/create), you have the option of associating it with your organization. Once there, all members of the organization can access the Site's Dashboard from the Organization Dashboard.
+When you or the administrators, team members, or developers in your agency [create sites](https://dashboard.pantheon.io/sites/create), you have the option of associating it with your organization. Once associated, all members of the organization can access the Site's Dashboard from the Organization Dashboard.
 
 ## Support
 ### Why do login attempts fail for all users across my organization simultaneously?
@@ -39,10 +42,8 @@ Any large agency that has multiple developers who login frequently via username/
 
 As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for password-less access](/docs/ssh-keys).
 
-
-
 ### Why can't I access Multidev on my site when the Supporting Organization can use it?
-Only organizational team members and administrators of an Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
+Only organizational team members and administrators of a Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
 
 ### Why can't my Agency Organization own a site?
 Pantheon Enterprise Organizations are able to own sites; Pantheon Partner Organizations cannot. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. See our [Change Management](/docs/change-management/#manage-people-in-an-organization) doc for more details.
@@ -54,11 +55,11 @@ No. Only the owner of the site can add an agency as a Supporting Organization. T
 ### What privileges and roles are granted when adding a Supporting Organization?
 All organization members have access to the site, with permissions determined by their roles at the organization level.
 
-### Can the site owner override privileges and access for orgnizational team members of a Supporting Organization?
+### Can the site owner override privileges and access for organizational team members of a Supporting Organization?
 Yes, but only for sites owned by Enterprise or EDU+ organizations. Roles designated on the Site Team modal will override any roles assigned within the organization.
 
 ### Do you have a status page?
-Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on twitter and bookmark [status.pantheon.io](https://status.pantheon.io/).
+Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on Twitter and bookmark [status.pantheon.io](https://status.pantheon.io/).
 
 ### How do I submit a support request when the Dashboard is down?
 If you need to submit a support request and can’t access the Dashboard, send an email to helpdesk@pantheon.io.
@@ -77,9 +78,9 @@ Support is prioritized based on site service levels as follows:
 
 ### As an Agency, how many sandbox sites do members of an organization receive?
 
-Each member of an organization receives 10 Sandbox sites. When the limit of 10 is reached, taking a site live or deleting unused sites will free up additional Sandbox slots.
+Each member of an organization can create up to 10 Sandbox sites. When the limit of 10 is reached, taking a site live or deleting unused sites will free up additional Sandbox slots.
 
 ## Unsupported
 
-### Can we run our Joomla, Magento, Laravel (insert other PHP framework here)?
+### Can we run our Joomla, Magento, Laravel, or (insert other PHP framework here)?
 No, we don’t support them.

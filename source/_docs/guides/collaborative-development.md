@@ -105,7 +105,7 @@ This process will follow the same general procedures as moving your repo from Pa
 
 ### Create the Site
 
-At our [site creation page](https://dashboard.pantheon.io/sites/create/ "Pantheon's site creation page, used to select an upstream"), name your site. On the next page, `/sites/UUID/configure` select the upstream your site will track. If you need a custom upstream, like one managed by your organization, or one of the public upstreams running on the platform, it is important that you create it as a new site based on that upstream. This will set the upstream for your site, which cannot be changed.  
+At our [site creation page](https://dashboard.pantheon.io/sites/create/ "Pantheon's site creation page, used to select an upstream"), name your site. On the next page, `/sites/UUID/configure` select the upstream your site will track. If you need a Custom Upstream, like one managed by your organization, or one of the public upstreams running on the platform, it is important that you create it as a new site based on that upstream. This will set the upstream for your site, which cannot be changed.
 
 ### Pull in Pantheon's Upstream
 
