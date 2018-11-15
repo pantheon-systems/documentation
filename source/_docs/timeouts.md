@@ -21,7 +21,7 @@ Rules are for the good of the group, and timeouts are no exception. We've config
   <tr>
     <td><a href="https://secure.php.net/manual/en/info.configuration.php#ini.max-execution-time">PHP max_execution_time</a></td>
     <td>120 seconds</td>
-    <td>Maximum time a script can run before being terminated by the parser. Helps prevent poorly written scripts from tying up your application container's PHP workers.
+    <td>Maximum time a script can run before being terminated by the parser. This included Drush & WP-CLI commands. Helps prevent poorly written scripts from tying up your application container's PHP workers.
     <br/><br/>
      You can reduce this timeout to be less than 120 seconds via <code>settings.php</code> or <code>wp-config.php</code>, but you cannot increase it beyond 120 seconds.</td>
   </tr>
