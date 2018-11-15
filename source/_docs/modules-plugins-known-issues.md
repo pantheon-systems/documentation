@@ -369,6 +369,18 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution**: Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
 <hr>
 
+### [Event Espresso](https://eventespresso.com/){.external}
+
+**Issue:** Event Espresso shows the error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
+
+**Solution**: This plugin is checking the `FS_METHOD` value. Add the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+```php
+define('FS_METHOD', 'direct');
+```
+
+<hr>
+
 ### [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/){.external}
 
 **Issue:** EWWW Image Optimizer attempts to install and execute third party binary tools to perform image optimization, which is restricted on our platform. The error message is:
