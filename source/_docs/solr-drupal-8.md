@@ -71,7 +71,7 @@ Navigate to  `/admin/config/search/search-api/add-server` and configure the foll
 
 You can name the server anything you want but using something like "Pantheon" is a good way to remember where the connection goes. The Search API module provides schema files for each version of Solr (4, 5, and 6). You can customize schema files by copying these examples to your own custom module and editing them. If you are just getting started, we recommend selecting the file for Solr 4.
 
-When deploying Solr to other environments (Test/Live/Multidevs) for the first time, you'll need to navigate to your Server settings page at `admin/config/search/search-api/server/pantheon/edit` and click Save in order to post Solr schema in those environments.
+When deploying Solr to other environments (Test/Live/Multidevs) for the first time, first navigate to your Server settings page at `admin/config/search/search-api/server/pantheon/edit` and click **Save**, so you can post the Solr schema in those environments.
 
 ### Add Search Index
 Navigate to `admin/config/search/search-api/add-index` and name your index, then choose a data source. If this is your first time using Search API, start by selecting **Content** as a data source. This option will index articles, basic pages, and other node types you have configured.
