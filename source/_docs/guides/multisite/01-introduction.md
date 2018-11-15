@@ -43,4 +43,4 @@ We do not support uses of WordPress Site Networks that run functionally-differen
 ## Request a WordPress Site Network
 Running a WordPress Site Network requires a special configuration that is only available to contract customers. Only Pantheon employees have the ability to create the sites and add you to the team. Existing WordPress sites cannot be converted to a network, however they can be [migrated](/docs/migrate-wordpress-site-networks/).
 
-Reach out to your existing account manager to request a new WordPress Site Network be created for you. Once an employee of Pantheon has created the network, you will receive an email informing you that you've been added to the site.
+Reach out to your existing account manager to request a new WordPress Site Network be created for you. Once an employee of Pantheon has created the network, you will receive an email informing you that you've been added to the site. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us){.external}.
