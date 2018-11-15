@@ -369,6 +369,18 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution**: Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
 <hr>
 
+### [Event Espresso](https://eventespresso.com/){.external}
+
+**Issue:** Event Espresso shows the error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
+
+**Solution**: This plugin is checking the `FS_METHOD` value. Add the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+```php
+define('FS_METHOD', 'direct');
+```
+
+<hr>
+
 ### [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/){.external}
 
 **Issue:** EWWW Image Optimizer attempts to install and execute third party binary tools to perform image optimization, which is restricted on our platform. The error message is:
@@ -378,18 +390,6 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/6-the-plugin-says-i-m-missing-something){.external} do not apply to Pantheon.
 
 **Solution:** Use an alternative plugin like [EWWW Image Optimizer Cloud](https://wordpress.org/plugins/ewww-image-optimizer-cloud/){.external}, which is a cloud version of the plugin that executes the compression from an external service instead of the server. Another alternative that works well with the default configuration is [Smush Image Compression and Optimization](https://wordpress.org/plugins/wp-smushit/){.external}.
-
-<hr>
-
-### [Event Espresso](https://eventespresso.com/){.external}
-
-**Issue:** Event Espresso throwing an error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
-
-**Solution**: This plugin is checking against the write capability and can be bypassed by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-define('FS_METHOD', 'direct');
-```
 
 <hr>
 
