@@ -202,6 +202,10 @@ Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge
 
 Pantheon does not currently support any PHP frameworks outside of Drupal and WordPress. The platform is only optimized for Drupal or WordPress and no others. Although PHP will run, we can not assist you in getting the non-approved frameworks running in any way.
 
+## Node.js
+
+Node.js is not available in the platform. If running node.js services is a hard requirement for your Drupal or Wordpress application, the node.js service must to be hosted on a different remote server outside of Pantheon.
+
 ## Modules and Plugins with Known Issues
 See [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues) for a list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.
 
