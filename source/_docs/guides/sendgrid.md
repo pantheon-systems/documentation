@@ -46,7 +46,7 @@ Install and activate the latest release through the WordPress dashboard or place
 
 ### Add Your SendGrid Account Details {.info}
 1. After you have installed and activated the plugin, go to your site's Dashboard and select **Settings**, then click the SendGrid menu item.
-2. Provide the API Key from the previous section. 
+2. Provide the API Key from the previous section.
 3. Enter the email address to send from and provide a reply email address if you prefer replies to go to another address (optional).
 4. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
@@ -142,27 +142,34 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
     drush dl sendgrid_integration-7.x-1.x-dev mailsystem composer_vendor
     ```
 {% include("content/d7-composer-init.html")%}
-7. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
+7. The above configuration specifies `vendor-dir` to `sites/all/vendors` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor){.external} module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
+
+    ```bash
+    protected_web_paths:
+      - sites/all/vendors
+    ```
+
+8. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
 
     ```bash
     composer require fastglass/sendgrid:~1.0
     ```
-8. Add, commit, and push all of the new files:
+9. Add, commit, and push all of the new files:
 
     ```bash
     git add .
     git commit -am "Add Sendgrid API Integration"
     git push origin master
     ```
-9. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
+10. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
 
     ```bash
     terminus drush $SITE.<env> -- en composer_vendor -y
     terminus drush $SITE.<env> -- en sendgrid_integration -y
     ```
-10.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+11.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
 
-11.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+12.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
