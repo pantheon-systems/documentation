@@ -281,7 +281,8 @@ sftp -o Port=2222 live.$SITE_UUID@$app_server << !
 !
 done
 ```
-Adjust to `appserver.test.$SITE_UUID.drush.in` to pull logs from Test.
+- Adjust to `appserver.test.$SITE_UUID.drush.in` to pull logs from Test.
+- Adjust to `mget *` to include archived log files.
 
 ## See Also
 - [MySQL Slow Log](/docs/mysql-slow-log/)
