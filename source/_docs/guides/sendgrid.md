@@ -146,7 +146,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
     ```bash
     protected_web_paths:
-      - sites/all/vendors
+      - /sites/all/vendors
     ```
 
 8. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
