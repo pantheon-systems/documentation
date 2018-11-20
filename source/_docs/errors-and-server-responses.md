@@ -76,9 +76,6 @@ There are many things that could cause your site to exceed the request timeout l
 ### Error 561 No site detected
 "No site detected. Make sure your code is pulled into this environment." This typically occurs when a site has been created, but no CMS has been installed. You will also see this instead of a 403 "Directory listing denied" error, if you have no index file.
 
-### Required Key Not Found
-When uploading an SSL certificate and you receive this message, it means you didn't paste in your private key. See [Loading SSH Keys](/docs/ssh-keys) for instructions.
-
 ## Retries Across Application Server Containers (High Availability)
 
 Higher plan levels on Pantheon deploy multiple containers for the live environment. Rather than just supporting scale, Pantheon also uses the extra containers for high-availability. Here are the different cases when Pantheon's edge may retry a request against a different application container.
