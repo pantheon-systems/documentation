@@ -54,11 +54,11 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 
 As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
 
-## Cache-busting Cookies
+## Cache-Busting Cookies
 
 {% include("content/cache-busting.html")%}
 
-## Cache-varying Cookies
+## Cache-Varying Cookies
 Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]+`.
 
 First, check to see if the cookie is set within the incoming request. If the cookie is set, store the value and use it to generate varied content as appropriate for your use case and implementation.
