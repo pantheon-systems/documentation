@@ -19,11 +19,9 @@ For example, this block sets `NO_CACHE` for all pages in the `/news/` directory.
  * yourself per your specific use case before the following conditional.
  *
  * Example: anything in the /news/ directory
- *
- * $friendly_path = '/news/';
  */
 
-$friendly_path = '/some-directory-here/';
+$friendly_path = '/news/';
 
 if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
   $domain =  $_SERVER['HTTP_HOST'];
