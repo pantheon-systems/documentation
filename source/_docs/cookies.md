@@ -5,9 +5,6 @@ tags: [cacheedge]
 categories: []
 ---
 
-## Cookie Naming Requirements
-For cookies to function on cached pages they must match the pattern: `STYXKEY[a-zA-Z0-9_-]`. Note that on WordPress sites, if you want session cookies to be excluded from caching, they must be named with `wp-` as their prefix.
-
 ## Disable Caching for Specific Pages
 You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response.
 
@@ -57,8 +54,12 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 
 As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
 
+## Cache-busting Cookies
+
+{% include("content/cache-busting.html")%}
+
 ## Cache-varying Cookies
-Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]`.
+Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]+`.
 
 First, check to see if the cookie is set within the incoming request. If the cookie is set, store the value and use it to generate varied content as appropriate for your use case and implementation.
 
