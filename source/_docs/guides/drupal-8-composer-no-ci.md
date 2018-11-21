@@ -105,8 +105,14 @@ Normally the next step would go through the standard Drupal installation. But si
     This may take a while as all of Drupal core and its dependencies will be downloaded. Subsequent updates should take less time.
 
     ![image of terminal running a composer install](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-update.png)
+    
+2. And now we need to install:
 
-2. Let's take a look at the changes:
+    ```bash
+    composer install
+    ```
+
+3. Let's take a look at the changes:
 
     ```bash
    git status
@@ -114,11 +120,11 @@ Normally the next step would go through the standard Drupal installation. But si
 
    It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration.
 
-3. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the `:: cut ::` section:
+4. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the `:: cut ::` section:
 
    **Important:** Without this modification, critical components such as Drupal core and contrib modules will be ignored and not pushed to Pantheon.
 
-4. Now let’s run `git status` again to make sure everything is included:
+5. Now let’s run `git status` again to make sure everything is included:
 
    ```bash
    git status
@@ -126,13 +132,13 @@ Normally the next step would go through the standard Drupal installation. But si
 
    ![Image of git status showing the changed files in red](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
 
-5. Set the site to `git` mode:
+6. Set the site to `git` mode:
 
    ```bash
    terminus connection:set $PANTHEON_SITE_NAME.dev git
    ```
 
-6. Add and commit the code files. A Git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
+7. Add and commit the code files. A Git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
 
    ```bash
    git add .
