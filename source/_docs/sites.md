@@ -61,6 +61,11 @@ Learn how to use the [Pantheon workflow](/docs/pantheon-workflow/) to manage you
 ## Merge
 Visit this tab in the Dev environment when you have commits from Multidev environments that you need to merge into Test or Live.
 
+## Metrics
+Within the **<span class="glyphicons glyphicons-cardio"></span> Live** environment, the **<span class="glyphicons glyphicons-charts"></span> Metrics** tab provides insight into your site's traffic. Learn more in our guide on [Metrics in the Site Dashboard](/docs/metrics/).
+
+![Site Metrics](/source/docs/assets/images/dashboard/metrics-graphs.png "Screenshot showing the Metrics tab of a Live site.")
+
 ## Status
 Pantheon provides static site analysis as a service for your site to make best practice recommendations on site configurations and to help detect common problems. This mechanism does not perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results. Learn more about our Launch Check for
 [Drupal sites](/docs/drupal-launch-check/) or [WordPress sites](/docs/wordpress-launch-check/).
