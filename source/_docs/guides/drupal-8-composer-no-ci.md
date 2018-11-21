@@ -85,6 +85,16 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
    * Remove the `find tests/scripts/ -type f | xargs chmod 755` line from the `post-update-cmd` section of `scripts`.
        * You may need to remove a trailing comma from the end of the last item in the `post-update-cmd` section, otherwise the JSON will be invalid.
 
+3. Remove the following section from `pantheon.yml`:
+
+   ```yml
+     sync_code:
+       after:
+         - type: webphp
+           description: Push changes back to GitHub if needed
+           script: private/scripts/quicksilver/quicksilver-pushback/push-back-to-github.php
+   ```
+
 ## Managing Drupal with Composer
 
 <div class="alert alert-info" role="alert">
