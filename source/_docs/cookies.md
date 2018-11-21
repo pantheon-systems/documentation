@@ -33,7 +33,7 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 **Be sure the `friendly_path` variable is properly set to restrict the cookie to the specific directory.**
 
 
-As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
+As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/docs/cache-control) to bypass cache on Pantheon.
 
 ## Disable Caching On The Dev Environment
 
@@ -49,8 +49,6 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
   }
 }
 ```
-
-As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
 
 ## Cache-Busting Cookies
 
