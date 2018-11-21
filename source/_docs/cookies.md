@@ -5,9 +5,6 @@ tags: [cacheedge]
 categories: []
 ---
 
-## Cookie Naming Requirements
-For cookies to function on cached pages they must match the pattern: `STYXKEY[a-zA-Z0-9_-]`.
-
 ## Disable Caching for Specific Pages
 You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response.
 
@@ -22,11 +19,9 @@ For example, this block sets `NO_CACHE` for all pages in the `/news/` directory.
  * yourself per your specific use case before the following conditional.
  *
  * Example: anything in the /news/ directory
- *
- * $friendly_path = '/news/';
  */
 
-$friendly_path = '/some-directory-here/';
+$friendly_path = '/news/';
 
 if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
   $domain =  $_SERVER['HTTP_HOST'];
@@ -38,11 +33,11 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 **Be sure the `friendly_path` variable is properly set to restrict the cookie to the specific directory.**
 
 
-As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
+As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/docs/cache-control) to bypass cache on Pantheon.
 
 ## Disable Caching On The Dev Environment
 
-You may decide to disable caching on the Dev environment as you make changes to cachable contents like css, js or images so that you don't need to clear the cache to see these changes.
+You may decide to disable caching on the Dev environment as you make changes to cachable files like CSS, JavaScript or images so that you don't need to clear the cache to see these changes.
 
 To bypass caching on the Dev environment, add the following to `settings.php` for Drupal and `wp-config.php` for WordPress:
 
@@ -55,10 +50,12 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control:` header](/docs/cache-control) to bypass cache on Pantheon.
+## Cache-Busting Cookies
 
-## Cache-varying Cookies
-Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]`.
+{% include("content/cache-busting.html")%}
+
+## Cache-Varying Cookies
+Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]+`.
 
 First, check to see if the cookie is set within the incoming request. If the cookie is set, store the value and use it to generate varied content as appropriate for your use case and implementation.
 
