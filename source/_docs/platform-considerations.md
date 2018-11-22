@@ -164,6 +164,17 @@ For sites that need to provide services with Cross-Origin Resource Sharing (COR
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
+For WordPress users, they can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/){.external} or add this in their theme's `function.php`:
+
+```
+add_filter('allowed_http_origins', 'pantheon_allowed_origins');
+
+function pantheon_allowed_origins($urls) {
+    $urls[] = 'https://www.example.com';
+    return $urls;
+}
+```
+
 ## Large (>100GB) File Backups
 
 Large backups take longer, use more resources, and have a higher likelihood of failing.  Additionally, a 100GB tarball is in itself not particularly convenient for anyone.  For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal).  Despite the lack of backups, file content is highly durable and stored on multiple servers.
