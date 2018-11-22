@@ -65,21 +65,28 @@ If you have a private code library that needs to have a specific sub-directory e
 
 The result will be a web-accessible URL at https://dev.yoursite.pantheonsite.io/simplesaml which will point to the code in `/private/simplesamlphp/www`.
 
-### Commerce Kickstart or Ubercart Key Path Between Environments
+### Setting Commerce Kickstart or Ubercart Key Path
 
-This depends on the workflow and that you are planning to implement. If you set the encryption key path in Dev, the system variable for `uc_credit_encryption_path` needs to be set to `private/` when you move between environments. If you sync your databases, this variable will be moved between your other environments.
-
-If you do not sync the databases, you may get some errors as there is a system check in Drupal to verify that directory is writable before that variable is set. However, because you have already pushed that up in code, setting that variable in Test or Live will do the trick.
-
-This can be done via [Terminus](/docs/terminus/):
+Make sure to set a relative path. This ensures the key path will work on all appservers across the site's environments.
+You can either set the path in the Drupal admin interface or with Terminus and drush:
 
 ```nohighlight
-# Set this to Test/Live
-$: terminus drush <site>.<env> -- vset uc_credit_encryption_path 'private'
-# verify the path is set on Test/Live
+# Set the encryption key path
+$: terminus drush <site>.<env> -- vset uc_credit_encryption_path <my_private_path>
+# verify that uc_credit_encryption_path is set correctly
 $: terminus drush <site>.<env> -- vget uc_credit_encryption_path
-uc_credit_encryption_path: 'private'
+uc_credit_encryption_path: <check this matches your setting>
 ```
+Whether you set the variable in Drupal admin UI or with terminus, remember to set it on each environment. Or clone the database from an environment where the variable has already been stored to database.
+
+In the above, `<my_private_path>` can be set to either of these non-web accessible private directories:
+`'sites/default/files/private'` (preferred)
+`'private'` (version controlled)
+More about private paths here:
+https://pantheon.io/docs/private-paths/
+
+The directory needs to be created and the key uploaded. If you are using the `'sites/default/files/private'` directory (not version controlled), this needs to be repeated on each environment.
+Alternatively the files can be cloned from an environment where the folder and key are already present.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
