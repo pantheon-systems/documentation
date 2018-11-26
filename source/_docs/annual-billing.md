@@ -16,7 +16,7 @@ The table below shows how much sites can save by switching to annual billing. Pe
   <dt>List Price</dt>
     <dd>Set price for new sites created after late October that aren’t purchased via a qualified agency partner.</dd>
   <dt>Preferred Price</dt>
-    <dd>Preferred pricing is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program){.external}.</dd>
+    <dd markdown="1">Preferred pricing is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program){.external}.</dd>
 </dl>
 
 <!-- Nav tabs -->
@@ -39,7 +39,7 @@ The table below shows how much sites can save by switching to annual billing. Pe
 | Annual Price       | $500          | $1,925            | $3,300             | $6,600            | $11,000              |
 | **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
 
-**Note:** Sites grandfathered into preferred pricing can only switch to annual billing at list price.
+**Note:** Sites grandfathered into preferred pricing that switch to or from annual billing will be [moved to list price](#considerations).
 </div>
 
 <!-- 2nd pane content -->
@@ -91,6 +91,7 @@ Before switching to annual billing, consider:
  - While all site plan downgrades will be effective immediately, no partial refunds will be issued.
  - Annual billing plans will auto-renew at the end of their annual subscription term unless terminated in advance.
  - Annual billing plans switched to monthly billing will be effective after the end of your current annual subscription term.
+ - A site grandfathered into preferred pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes.
 
 ## See Also
 
