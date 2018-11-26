@@ -16,7 +16,7 @@ The table below shows how much sites can save by switching to annual billing. Pe
   <dt>List Price</dt>
     <dd>Set price for new sites created after late October that aren’t purchased via a qualified agency partner.</dd>
   <dt>Preferred Price</dt>
-    <dd>Introductory price available to the general public until late October, after which it will be exclusively available via qualified agency partners.</dd>
+    <dd>Preferred pricing is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program){.external}.</dd>
 </dl>
 
 <!-- Nav tabs -->
@@ -39,7 +39,7 @@ The table below shows how much sites can save by switching to annual billing. Pe
 | Annual Price       | $500          | $1,925            | $3,300             | $6,600            | $11,000              |
 | **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
 
-**Note:** List price will not go into effect until the introduction of the Partner Program.
+**Note:** Sites grandfathered into preferred pricing can only switch to annual billing at list price.
 </div>
 
 <!-- 2nd pane content -->
