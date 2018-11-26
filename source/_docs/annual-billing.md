@@ -39,7 +39,6 @@ The table below shows how much sites can save by switching to annual billing. Pe
 | Annual Price       | $500          | $1,925            | $3,300             | $6,600            | $11,000              |
 | **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
 
-**Note:** Sites grandfathered into preferred pricing that switch to or from annual billing will be [moved to list price](#considerations).
 </div>
 
 <!-- 2nd pane content -->
