@@ -147,7 +147,7 @@ Commands below assume a [nested docroot](/docs/nested-docroot/) structure and sh
 composer require simplesamlphp/simplesamlphp
 ```
 
-2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`. 
+2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`.
 
 ```bash
 ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
@@ -160,11 +160,11 @@ mkdir private
 cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simplesaml-config.php
 ```
 
-4. Follow the directions [above](#configure-simplesamlphp) to set up your config file (`private/simplesaml-config.php`). 
+4. Follow the directions [above](#configure-simplesamlphp) to set up your config file (`private/simplesaml-config.php`).
 
 5. Add a symlink from SimpleSAMLphp's default config file over to our customized config, stored outside the vendor directory.
 
-```bash 
+```bash
 ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
 ```
 
@@ -172,7 +172,7 @@ ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesam
 
 ```json
     "scripts": {
-        "post-update-cmd": [
+        "post-install-cmd": [
             "ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
         ]
     },
