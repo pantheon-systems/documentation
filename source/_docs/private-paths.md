@@ -77,7 +77,6 @@ $: terminus drush <site>.<env> -- vset uc_credit_encryption_path <my_private_pat
 $: terminus drush <site>.<env> -- vget uc_credit_encryption_path
 uc_credit_encryption_path: <check this matches your setting>
 ```
-Whether you set the variable in Drupal admin UI or with terminus, remember to set it on each environment. Or clone the database from an environment where the variable has already been stored to database.
 
 In the above, `<my_private_path>` can be set to either of these non-web accessible private directories:
 `'sites/default/files/private'` (preferred)
@@ -85,8 +84,7 @@ In the above, `<my_private_path>` can be set to either of these non-web accessib
 More about private paths here:
 https://pantheon.io/docs/private-paths/
 
-The directory needs to be created and the key uploaded. If you are using the `'sites/default/files/private'` directory (not version controlled), this needs to be repeated on each environment.
-Alternatively the files can be cloned from an environment where the folder and key are already present.
+Create the private directory you have chosen and upload the key.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
