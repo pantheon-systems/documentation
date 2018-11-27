@@ -160,11 +160,11 @@ PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](htt
 
 ## CORS
 
-For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See  [https://enable-cors.org/server\_php.html](https://enable-cors.org/server_php.html)
+For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See  [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html)
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
-For WordPress users, they can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/){.external} or add this in their theme's `function.php`:
+For WordPress users, you can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/){.external}, or add the following to the theme's `function.php`:
 
 ```
 add_filter('allowed_http_origins', 'pantheon_allowed_origins');
