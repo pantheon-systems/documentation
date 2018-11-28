@@ -82,14 +82,14 @@ You can either set the path in the Drupal admin interface, or with Terminus and 
     - `'sites/default/files/private'` (preferred)
     - `'private'` (version controlled)
 
-2. Verify that `uc_credit_encryption_path` is set correctly:
+2. Create the private directory you have chosen and upload the key.
 
-   ```bash
-   terminus drush <site>.<env> -- vget uc_credit_encryption_path
-   ```
 
-3. Create the private directory you have chosen and upload the key.
+ You can optionally verify that `uc_credit_encryption_path` is set correctly:
 
+```bash
+terminus drush <site>.<env> -- vget uc_credit_encryption_path
+```
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
