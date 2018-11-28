@@ -166,13 +166,19 @@ Sites that consume services using CORS, such as Amazon S3 CORS, do work on Panth
 
 For WordPress users, you can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/){.external}, or add the following to the theme's `function.php`:
 
-```
+```php
 add_filter('allowed_http_origins', 'pantheon_allowed_origins');
 
 function pantheon_allowed_origins($urls) {
     $urls[] = 'https://www.example.com';
     return $urls;
 }
+```
+
+In the example above, `$urls[]` is a defined as a URL that cross-domain requests are allowed for. Note that the procol (`http` or `https`) and any subdomains (like `www`) are relevant. Here's an example of a larger array allowing requests from multiple URLS:
+
+```php
+$urls[] = array( 'https://www.example.com', 'http://www.example.com', 'https://example.com', 'http://example.com' ) ;
 ```
 
 ## Large (>100GB) File Backups
