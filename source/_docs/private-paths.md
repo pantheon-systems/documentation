@@ -68,23 +68,30 @@ The result will be a web-accessible URL at https://dev.yoursite.pantheonsite.io/
 ### Setting Commerce Kickstart or Ubercart Key Path
 
 Make sure to set a relative path. This ensures the key path will work on all appservers across the site's environments.
-You can either set the path in the Drupal admin interface or with Terminus and drush:
+You can either set the path in the Drupal admin interface or with Terminus and Drush:
 
-```nohighlight
-# Set the encryption key path
-$: terminus drush <site>.<env> -- vset uc_credit_encryption_path <my_private_path>
-# verify that uc_credit_encryption_path is set correctly
-$: terminus drush <site>.<env> -- vget uc_credit_encryption_path
-uc_credit_encryption_path: <check this matches your setting>
-```
+1. Set the encryption key path:
 
-In the above, `<my_private_path>` can be set to either of these non-web accessible private directories:
-`'sites/default/files/private'` (preferred)
-`'private'` (version controlled)
-More about private paths here:
-https://pantheon.io/docs/private-paths/
+   ```bash
+   terminus drush <site>.<env> -- vset uc_credit_encryption_path <my_private_path>
+   ```
 
-Create the private directory you have chosen and upload the key.
+   `<my_private_path>` can be set to either of these non-web accessible private directories:
+
+    - `'sites/default/files/private'` (preferred)
+    - `'private'` (version controlled)
+
+
+2. Verify that `uc_credit_encryption_path` is set correctly:
+
+   ```bash
+   terminus drush <site>.<env> -- vget uc_credit_encryption_path
+   ```
+
+3. Check that the output of `uc_credit_encryption_path:` matches your settings.
+
+
+4. Create the private directory you have chosen and upload the key.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
