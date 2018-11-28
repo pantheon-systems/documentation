@@ -68,9 +68,10 @@ The result will be a web-accessible URL at https://dev.yoursite.pantheonsite.io/
 ### Setting Commerce Kickstart or Ubercart Key Path
 
 Make sure to set a relative path. This ensures the key path will work on all appservers across the site's environments.
-You can either set the path in the Drupal admin interface or with Terminus and Drush:
 
-1. Set the encryption key path:
+
+1. Set the encryption key path
+You can either set the path in the Drupal admin interface, or with Terminus and Drush as below:
 
    ```bash
    terminus drush <site>.<env> -- vset uc_credit_encryption_path <my_private_path>
@@ -81,17 +82,8 @@ You can either set the path in the Drupal admin interface or with Terminus and D
     - `'sites/default/files/private'` (preferred)
     - `'private'` (version controlled)
 
+2. Create the private directory you have chosen and upload the key.
 
-2. Verify that `uc_credit_encryption_path` is set correctly:
-
-   ```bash
-   terminus drush <site>.<env> -- vget uc_credit_encryption_path
-   ```
-
-3. Check that the output of `uc_credit_encryption_path:` matches your settings.
-
-
-4. Create the private directory you have chosen and upload the key.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
