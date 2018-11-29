@@ -15,6 +15,8 @@ Older software is more likely to contain code that is incompatible with recent P
 ## Verify Current PHP Versions
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
+**NOTE:** If your pantheon.yml changes aren't being recognized on a multidev then you likely made changes in pantheon.yml git commits before creating the multidev.  Git commits have to be pushed up to multidevs after creation in order to be recognized.  For best results push this commit up separately from any other commits (i.e. no revert commits or it won't work).
+
 ### Available PHP Versions
 The PHP versions available on Pantheon are:
 
