@@ -66,11 +66,11 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 6. We’re going to clone the database and files from our Live site, so select **Live** from the dropdown menu.
 
-    <div class="alert alert-danger" role="alert">
-      <h4 class="info">Warning</h4>
-      <p>As intended, this action will overwrite your Dev database and files. If you skipped the backup task you will be unable to recover this data hereafter.</p>
-      <p>The Clone operation only involves the FILES folder (wp-content/uploads or sites/default/files) which do not include core, theme, plugins or modules. You will still need to manually copy over your CODE from one environment to another via SFTP of Git.</p>
-      
+    <div class="alert alert-danger" role="alert" markdown="1">
+    #### Warning {.info}
+    As intended, this action will overwrite your Dev database and files. If you skipped the backup task you will be unable to recover this data hereafter.
+
+    The Clone operation only copies the [files](/docs/files/) folder (`wp-content/uploads` or `sites/default/files`) which does not include core, theme, plugins or modules.
     </div>
 
 7. Click **Clone the Database & files from Live into the Development Environment**.
