@@ -36,6 +36,10 @@ Choose your preferred Git host:
 
 5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
 
+   **Do not** select the options to create a README, .gitignore, or license file:
+
+   ![GitHub Initialization options](/source/docs/assets/images/github-create-readme.png)
+
 6. Click **Create Repository**.
 
 7. Copy the repository URL (HTTPS), found in the Quick setup section:
