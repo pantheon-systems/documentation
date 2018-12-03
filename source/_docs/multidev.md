@@ -186,10 +186,6 @@ Yes, you can; your Git repository is not restricted. If you do not use Multidev,
 ### Can I create a new environment for my local branch?
 Yes. Push a new branch from your local (e.g., `git push origin example-br`) then navigate to **Multidev** > **Git Branches** from your Site Dashboard and select **Create Environment** next to the branch name.
 
-### Is there a limit on the number of branches or environments?
-
-There is no limit on the number of branches you can have in your Git repository. The limit on forked environments is 5 for Business and 10 for Elite.
-
 ### Can I associate a domain with a branch environment?
 
 Yes, you can assign custom domains to each Multidev environment.
