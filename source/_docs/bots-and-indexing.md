@@ -109,13 +109,15 @@ For more examples of redirecting via PHP, see [Configure Redirects](/docs/redire
 
 ### Incorrect robots.txt output in WordPress
 
-In WordPress, make sure not to enable **Discourage search engines from indexing this site** option under Settings > Reading > Search Engine Visibility in the WordPress Admin Dashboard. This will output a built-in robots.txt version that disallows or blocks crawlers.
+In WordPress, do not enable **Discourage search engines from indexing this site** on Dev or Test environments. This option is set in **Settings** > **Reading** > **Search Engine Visibility** in the WordPress Admin Dashboard.
 
-Crawlers always look for the correct file path of robots.txt and shouldn't be using any other path. In WordPress, the built-in robots_txt filter applies if you add a trailing slash to file path (i.e. www.example.com/robots.txt/ instead of just www.example.com/robots.txt). This can happen even if you have a custom robots.txt file in your site.
+This setting creates a built-in `robots.txt` file that disallows or blocks crawlers. While the file applied by the platform normally overrides it, it doesn't when there's a trailing slash on the URL pointing to `robots.txt`.
 
-As a workaround, you can override the output by creating your custom filter for robots_txt. You can add this as a custom plugin, or an entry in your themes functions.php file. See example below:
+As a workaround, you can override the output by creating your custom filter for `robots_txt`. You can add this as a custom plugin, or an entry in your themes `functions.php` file:
 
-```add_filter('robots_txt', 'custom_robots_txt', 10,  2);
+
+```php
+add_filter('robots_txt', 'custom_robots_txt', 10,  2);
 
 function custom_robots_txt($output, $public) {
     
@@ -127,3 +129,4 @@ function custom_robots_txt($output, $public) {
     return $robots_txt;
 }
 ```
+
