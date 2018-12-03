@@ -175,7 +175,7 @@ function pantheon_allowed_origins($urls) {
 }
 ```
 
-In the example above, `$urls[]` is a defined as a URL that cross-domain requests are allowed for. Note that the procol (`http` or `https`) and any subdomains (like `www`) are relevant. Here's an example of a larger array allowing requests from multiple URLS:
+In the example above, `$urls[]` is defined as a URL for which cross-domain requests are allowed. Note that the protocol (`http` or `https`) and any subdomains (like `www`) are relevant. Here's an example of a larger array allowing requests from multiple URLS:
 
 ```php
 $urls[] = array( 'https://www.example.com', 'http://www.example.com', 'https://example.com', 'http://example.com' ) ;
