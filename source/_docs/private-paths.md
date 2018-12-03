@@ -17,7 +17,7 @@ Drupal and WordPress: `private`
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.</p>
+<p>If you have not already created these directories, you will need to do that first. Create the folders in Dev via SFTP or Git, and push the changes to your Test and Live environments.</p>
 </div>
 
 ## Private Path for Code
@@ -63,7 +63,7 @@ If you have a private code library that needs to have a specific sub-directory e
     git commit simplesaml -m "adding simplesaml symlink"
     git push origin master
 
-The result will be a web-accessible URL at https://dev.yoursite.pantheonsite.io/simplesaml which will point to the code in `/private/simplesamlphp/www`.
+The result will be a web-accessible URL at `https://dev.yoursite.pantheonsite.io/simplesaml` which will point to the code in `/private/simplesamlphp/www`.
 
 ### Setting Commerce Kickstart or Ubercart Key Path
 
@@ -84,12 +84,11 @@ You can either set the path in the Drupal admin interface, or with Terminus and 
 
 2. Create the private directory you have chosen and upload the key.
 
+    * Optionally, verify that `uc_credit_encryption_path` is set correctly:
 
- You can optionally verify that `uc_credit_encryption_path` is set correctly:
-
-```bash
-terminus drush <site>.<env> -- vget uc_credit_encryption_path
-```
+     ```bash
+     terminus drush <site>.<env> -- vget uc_credit_encryption_path
+     ```
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
