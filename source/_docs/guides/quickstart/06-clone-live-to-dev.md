@@ -45,7 +45,7 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
     It’s important to develop on a recent copy of your site with the newest content, so let’s clone your Live site—with its new content—to your Dev environment.
 
-4. Consider creating a backup before proceeding:
+4. Consider creating a backup before proceeding. After Step 7, you will not be able to recover Dev database and files without a backup:
 
     <div class="panel panel-drop panel-guide" id="accordion">
       <div class="panel-heading panel-drop-heading">
@@ -64,13 +64,13 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 5. On the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard click **<span class="glyphicons glyphicons-server" aria-hidden="true"></span> Database / Files**.
 
-6. We’re going to clone the database and files from our Live site, so select **Live** from the dropdown menu.
+6. To clone the database and files from the Live site, select **Live** from the dropdown menu.
 
     <div class="alert alert-danger" role="alert" markdown="1">
     #### Warning {.info}
     As intended, this action will overwrite your Dev database and files. If you skipped the backup task you will be unable to recover this data hereafter.
 
-    The Clone operation only copies the [files](/docs/files/) folder (`wp-content/uploads` or `sites/default/files`) which does not include core, theme, plugins or modules.
+    The Clone operation only copies the [files](/docs/files/) folder (`wp-content/uploads` or `sites/default/files`) and does not include core, theme, plugins or modules.
     </div>
 
 7. Click **Clone the Database & files from Live into the Development Environment**.
