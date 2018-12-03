@@ -155,9 +155,10 @@ Invoices and transaction history related to this change can be found in **<span 
 ## Cancel Current Plan
 Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox. 
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">While all site plans downgrades will be effective immediately, no partial refunds will be issued.</p></div>
+<div class="alert alert-info" markdown="1">
+#### Note {.info}
+While all site plans downgrades will be effective immediately, no partial refunds will be issued, per our [terms of service](https://pantheon.io/terms-of-service#tos-11){.external}.
+</div>
 
 
 1. Go to the Site Dashboard.
