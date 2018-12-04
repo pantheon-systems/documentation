@@ -14,7 +14,7 @@ Pantheon's Site Disaster Recovery (**DR**) service is designed for mission-criti
 ![Pantheon Site Disaster Recovery Architecture Diagram](/source/docs/assets/images/site-dr-diagram.png)
 
 ## Access
-Site Disaster Recovery is available for purchase as an add-on to all Elite site plans. It's not available for Elite Starter plans. For more information, please [contact Sales](https://pantheon.io/contact-us).
+Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us).
 
 
 ## How It Works
