@@ -30,13 +30,13 @@ Choose your preferred Git host:
 
 2. [Log in to GitHub](https://github.com/login/).
 
-3. If this is your first time logging into GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New Repository**](https://github.com/new) from the Repository sidebar on the right.
+3. If this is your first time logging in to GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New**](https://github.com/new) from the Repositories sidebar on the left.
 
 4. Name the repository.
 
 5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
 
-   **Do not** select the options to create a README, .gitignore, or license file:
+   **Do not** select the options to create a `README`, `.gitignore`, or license file:
 
    ![GitHub Initialization options](/source/docs/assets/images/github-create-readme.png)
 
