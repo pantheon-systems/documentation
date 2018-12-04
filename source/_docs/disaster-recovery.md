@@ -11,7 +11,7 @@ contributors:
 ## Overview
 Pantheon's Site Disaster Recovery (**DR**) service is designed for mission-critical websites that need to ensure business continuity during the unlikely event of a zone failure. While we can’t prevent disasters from happening, Pantheon has architected a multi-zone, high availability (**HA**) solution with intelligent failover at the Global CDN layer. Disaster Recovery is more than just technology and includes 24/7 support, and a guaranteed 99.95% uptime Service Level Agreement (**SLA**).
 
-![Pantheon Site Disaster Recovery Architecture Diagram](/source/docs/assets/images/site-dr-diagram.jpg)
+![Pantheon Site Disaster Recovery Architecture Diagram](/source/docs/assets/images/site-dr-diagram.png)
 
 ## Access
 Site Disaster Recovery is available for purchase as an add-on to all Elite site plans. It's not available for Elite Starter plans. For more information, please [contact Sales](https://pantheon.io/contact-us).
