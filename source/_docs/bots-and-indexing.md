@@ -106,3 +106,26 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 ```
 
 For more examples of redirecting via PHP, see [Configure Redirects](/docs/redirects/).
+
+### Incorrect robots.txt Output in WordPress
+
+In WordPress, do not enable **Discourage search engines from indexing this site** on Dev or Test environments. This option is set in **Settings** > **Reading** > **Search Engine Visibility** in the WordPress Admin Dashboard.
+
+This setting creates a built-in `robots.txt` file that disallows or blocks crawlers. While the file applied by the platform normally overrides it, it doesn't when there's a trailing slash on the URL pointing to `robots.txt`.
+
+As a workaround, you can override the output by creating your custom filter for `robots_txt`. You can add this as a custom plugin, or an entry in your theme's `functions.php` file:
+
+
+```php
+add_filter('robots_txt', 'custom_robots_txt', 10,  2);
+
+function custom_robots_txt($output, $public) {
+
+    $robots_txt =  "User Agent: * \n";
+    $robots_txt .=  "Sitemap: https://www.example.com/sitemap_index.xml \n";
+    $robots_txt .=  "Disallow: /secure/ ";
+    // add more $robots_txt .= for each line
+
+    return $robots_txt;
+}
+```
