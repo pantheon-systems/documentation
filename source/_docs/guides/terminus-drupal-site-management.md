@@ -81,7 +81,7 @@ Installation complete.  User name: admin  User password: ********         [ok]
 
 If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/docs/settings-php/) file.
 
-You should now be able to open a web browser and see your brand new Drupal site! For fun, you can at any time use an "open" command to see an environment in your default browser.
+You should now be able to open a web browser and see your brand new Drupal site! On Mac, try using the `open` command to see an environment in your default browser:
 
 ```bash
 open https://dev-terminus-cli-create.pantheon.io
