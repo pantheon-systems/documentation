@@ -1,11 +1,7 @@
 ---
 title: Site Disaster Recovery
 description: Learn how mission-critical websites can stay online in the event of a total zone failure
-earlyaccess: true
-earlynote: This documentation covers features and options not available across the entire platform.
 tags: [services]
-contributors:
- - ari
 ---
 
 ## Overview
@@ -17,7 +13,7 @@ Pantheon's Site Disaster Recovery (**DR**) service is designed for mission-criti
 Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us).
 
 
-## How It Works
+## Features
 
 ### High Availability
 The Pantheon platform has redundancy built-in throughout our containerized infrastructure. Sites with Disaster Recovery also get a replicated database in an alternative availability zone for even higher availability.
@@ -31,16 +27,8 @@ In the event of a zone failure we reroute your site to the backup zone, and prov
 ### Real-time Failover Support  
 Pantheon’s disaster response team will proactively notify you of of a zone failure event and its impact to your site. Your dedicated team will keep clear and transparent lines of communication on any action taken to keep your site online, and is available 24/7 for all of your questions.
 
-
-## Frequently Asked Questions
-
-### Placeholder question
-
-placeholder answer
-
-## Caveats / Known Issues
-While the CMS database is continuously replicated, Pantheon's Solr and Redis services are not.  
-
+## Known Issues
+* Redis and Solr are not supported on DR-enabled sites.
 
 ## See also
 - [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar){.external}
