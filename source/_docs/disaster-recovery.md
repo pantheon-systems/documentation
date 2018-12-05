@@ -27,8 +27,8 @@ In the event of a zone failure we reroute your site to the backup zone, and prov
 ### Real-time Failover Support  
 Pantheon’s disaster response team will proactively notify you of of a zone failure event and its impact to your site. Your dedicated team will keep clear and transparent lines of communication on any action taken to keep your site online, and is available 24/7 for all of your questions.
 
-## Known Issues
-* Redis and Solr are not supported on DR-enabled sites.
+## Limitations
+Redis and Solr are not currently supported on DR-enabled sites.
 
 ## See also
 - [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar){.external}
