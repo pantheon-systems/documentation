@@ -135,10 +135,6 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 2. Install and activate the [Redis](https://www.drupal.org/project/redis){.external} module from Drupal.org.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4><p markdown="1">You **must** activate the module before proceeding.
-    </p></div>
-
     You can install and enable the module from the command line using [Terminus](/docs/terminus):
 
         terminus remote:drush <site>.<env> -- en redis -y
@@ -146,10 +142,13 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 
     ```php
     // Configure Redis
-
-    if (defined('PANTHEON_ENVIRONMENT')) {
+    if (defined('PANTHEON_ENVIRONMENT') && class_exists(\Composer\Autoload\ClassLoader::class)) {
+      // Register required class namespaces.
+      $class_loader = new \Composer\Autoload\ClassLoader();
+      $class_loader->addPsr4('Drupal\\redis\\', 'modules/contrib/redis/src');
+      $class_loader->register();
       // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
-      $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+      $settings['container_yamls'][] = 'modules/contrib/redis/example.services.yml';
 
       //phpredis is built into the Pantheon application container.
       $settings['redis.connection']['interface'] = 'PhpRedis';
