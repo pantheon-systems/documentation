@@ -64,7 +64,8 @@ In order to add any IPv6 records (like AAAA), you must email Network Solutions a
 
 ## Network Solutions Docs
 
-<a href="http://www.networksolutions.com/support/how-to-manage-advanced-dns-records/" target="blank">Managing Advanced DNS Records <span class="glyphicons glyphicons-new-window-alt"></span></a>
+* <a href="http://www.networksolutions.com/support/how-to-manage-advanced-dns-records/" target="blank">Managing Advanced DNS Records <span class="glyphicons glyphicons-new-window-alt"></span></a>
+* <a href="http://www.networksolutions.com/support/Adding-an-IPv6-record/" target="blank">Adding an IPv6 record <span class="glyphicons glyphicons-new-window-alt"></span></a>
 
 ## Next Steps
 
