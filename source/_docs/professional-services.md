@@ -10,8 +10,8 @@ If you need advice on architecting a solution, planning for the future, preparin
 
 | Service                                                                      | Included with Diamond <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Limited" data-content="Availabile for Gold, Platinum and Diamond. Limited inclusion where indicated with Diamond."><em class="fa fa-info-circle"></em></a> |
 |:---------------------------------------------------------------------------- |:----------- |
-| DevOps Consulting: 4 hours                                                   | Yes (1/Qtr) |
-| DevOps Consulting: Project based solution architect customized to your needs |             |
+| Custom Application Services: 4 hours                                         | Yes (1/Qtr) |
+| Custom Application Services: Project based solution customized to your needs |             |
 | Performance Deep Dive                                                        | Yes (1/Qtr) |
 | Pantheon Enterprise Gateway, annual recurring (Elite sites Only)             |             |
 | SSO/SAML, one time, per account                                              | Yes         |
