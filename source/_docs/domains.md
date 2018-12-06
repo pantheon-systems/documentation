@@ -4,6 +4,8 @@ description: Work with platform domains or connect custom domains in the Site Da
 tags: [redirects, variables, dns]
 categories: []
 searchboost: 150
+use:
+    - docs_tags
 ---
 A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.example.com` into machine-readable IP addresses like 127.0.0.1. All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
 
@@ -28,7 +30,24 @@ Pantheon serves a default robots.txt that disallows crawlers on platform domains
 Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding a custom domain to an environment other than Live will not permit crawlers to that environment.
 
 ## Custom Domains
-If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar. Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/docs/https/).
+If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar, but we've created documentation for several popular DNS managers:
+
+<div class="panel panel-drop panel-guide" id="accordion">
+  <div class="panel-heading panel-drop-heading">
+    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific2"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
+  </div>
+  <div id="host-specific2" class="collapse" style="padding:10px;">
+    <ul class="top-docs top-docs-2col docs-2col-panel">
+      {% for doc in data.docs_tags.providers %}
+        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
+          <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/docs/https/).
 
 {% include("content/tables/custom-domains-limit.html") %}
 
