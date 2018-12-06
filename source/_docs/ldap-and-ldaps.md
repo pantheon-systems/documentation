@@ -76,13 +76,14 @@ WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pant
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.
 
 Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. This script requires PHP 7.1 to execute properly without PHP errors.  If you are connecting via a Pantheon Enterprise Gateway (PEG), use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+
 ```bash
 terminus drush <site>.<env> -- scr ldap-test.php
 ```
 
 The entire script:
 
-````php
+```php
 <?php
 $settings = array(
   'NAME' => array(
@@ -169,10 +170,11 @@ foreach ($settings as $host => $setting) {
   $entries = ldap_get_entries($link_identifier, $search_result_identifier);
   var_dump($entries);
 }
-````
+```
 
 Alternate $settings array when using PEG:
-````php
+
+```php
 
 <?php
 $settings = array(
@@ -187,5 +189,5 @@ $settings = array(
     'attributes' => array('cn'),
   ),
 );
+```
 
-````
