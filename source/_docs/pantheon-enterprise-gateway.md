@@ -32,7 +32,7 @@ Once the gateway has been established, you must update your code to use it. This
 
 Once your Enterprise Gateway is configured, we update your site environment with the PHP constant `PANTHEON_SOIP_EXAMPLE`. This constant translates to the port number, internal to your Pantheon Site, through which your external service can be accessed.
 
-###  Example Connections with PHP Constants
+###  Example LDAP Connection with PHP Constants
 
 Please note that any code you're using to connect to the remote service must accept a PHP Constant for the port number. For example: If you have two LDAP servers, one for staff and another for students, you may choose `PANTHEON_SOIP_LDAP_STAFF` and `PANTHEON_SOIP_LDAP_STUDENTS` as names to identify the connections.
 
@@ -53,6 +53,7 @@ In cases where you cannot supply a direct PHP constant, consider wrapping it int
 ```nohighlight
 $externalconnection = “http://127.0.0.1:” . PANTHEON_SOIP_EXAMPLE;
 ```
+See also: [FAQ and Troubleshooting for LDAP](https://pantheon.io/docs/ldap-and-ldaps/#frequently-asked-questions)
 
 ## Considerations
 ### Set Reasonable Timeouts
