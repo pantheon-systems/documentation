@@ -53,7 +53,7 @@ In cases where you cannot supply a direct PHP constant, consider wrapping it int
 ```nohighlight
 $externalconnection = “http://127.0.0.1:” . PANTHEON_SOIP_EXAMPLE;
 ```
-See also: [FAQ and Troubleshooting for LDAP](https://pantheon.io/docs/ldap-and-ldaps/#frequently-asked-questions)
+See also: [FAQ and Troubleshooting for LDAP](/docs/ldap-and-ldaps/#frequently-asked-questions)
 
 ## Considerations
 ### Set Reasonable Timeouts
