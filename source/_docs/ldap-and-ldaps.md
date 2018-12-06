@@ -59,15 +59,15 @@ You can also specify additional configurations with putnev, such as whether to p
 
 ## Frequently Asked Questions
 
-#### How can I make changes to the OpenLDAP configuration file?
+### How can I make changes to the OpenLDAP configuration file?
 
 Users do not have access to make modifications to `ldap.conf`. Instead, use `putenv` within `settings.php` as described above.
 
-#### Is ldap_sso supported?
+### Is ldap_sso supported?
 
 The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP needs to be PHP-based and not webserver-based.
 
-#### Does PEG work with LDAP?
+### Does PEG work with LDAP?
 
 WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
