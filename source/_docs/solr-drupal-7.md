@@ -78,7 +78,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 ### 5. Enable and Configure Your Solr Module
 
-You should have installed only one of these modules and will need to enable only one.
+You will need to enable either Apache Solr Search or Search API Solr Search, depending on which one you selected in step 2. You should have installed only one of these modules and will need to enable only one.
 
 #### Enabling Apache Solr Search (apachesolr)
 
