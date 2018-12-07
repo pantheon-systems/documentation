@@ -163,9 +163,21 @@ This will create a new branch with the commit history intact. From the Multidev 
 
 ## Frequently Asked Questions (FAQs)
 
-### How can I get Multidev and how much does it cost?
+### How can I get Multidev?
 
-Multidev is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support. Unprivileged members of organizations can access and commit to, but not create Multidev environments. Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us){.external}.
+Multidev is available to:
+
+ - Enterprise organizations
+ - EDU organizations
+ - Pantheon Partner Program agencies (at the level of Pantheon Partner and above)
+ - Direct Online customers with [Gold support](/docs/support/#support-features-and-response-times) and above.
+
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Unprivileged members of organizations cannot access Multidev environments. See [Change Management](/docs/change-management/) for more information.
+</div>
+
+Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us){.external}.
 
 ### If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 

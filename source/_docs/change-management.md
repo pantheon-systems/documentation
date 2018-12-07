@@ -22,8 +22,8 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 |:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
 | Create sites within an org               | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Access the org Dashboard                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
-| Work in Dev/Multidev environments        | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
-| Create Multidev environments             | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
+| Work in Dev environments                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
+| Access to Multidev environments          | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
 | Deploy to Test and Live                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 | Invite new team members                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 | Manage user roles                        | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
@@ -36,7 +36,7 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 | Permissions                              | User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner organizations only"><em class="fa fa-info-circle"></em></a> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise organizations only"><em class="fa fa-info-circle"></em></a> |
 |:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
 | Access the site Dashboard                | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
-| Work in Dev/Multidev environments        | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
+| Work in Dev environments                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Deploy to Test and Live                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
 | Manage user roles                        | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 | Delete sites or remove users from a site | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
