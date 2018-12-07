@@ -20,7 +20,7 @@ First, you will need to add the Index Server to your site. From your Dashboard, 
 
 <div class="alert alert-danger" role="alert" markdown="1">
 #### Warning {.info}
-This document uses Pantheon's Solr module, which is designed to work specifically with the Solr service provided by Pantheon. Using a non-Pantheon Solr service with our plugins is not supported, and may result in unexpected behavior.
+This guide uses Pantheon's Solr module, which is designed to work specifically with the Solr service provided by Pantheon. Using a non-Pantheon Solr service with our plugins is not supported, and may result in unexpected behavior.
 </div>
 
 ## Installing Solr for Drupal
