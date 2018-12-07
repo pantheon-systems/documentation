@@ -13,9 +13,12 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Use the [standard migration procedure](/docs/migrate) if none of the above apply to your project.</p></div>
+If none of the above apply to your project, use the [standard migration procedure](/docs/migrate/).
+
+<div class="alert alert-info" markdown="1">
+#### Note {.info}
+Site migrations are one of the services offered by our [Professional Services](/docs/professional-services/#migrations) team.
+</div>
 
 ## Before You Begin
 To ensure a successful migration, complete the following tasks on the source site first:
