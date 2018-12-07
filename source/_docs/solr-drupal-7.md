@@ -18,6 +18,11 @@ First, you will need to add the Index Server to your site. From your Dashboard, 
   <p>Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
 </div>
 
+<div class="alert alert-danger" role="alert" markdown="1">
+#### Warning {.info}
+This guide uses Pantheon's Solr module, which is designed to work specifically with the Solr service provided by Pantheon. Using a non-Pantheon Solr service with our plugins is not supported, and may result in unexpected behavior.
+</div>
+
 ## Installing Solr for Drupal
 ### 1. Apply Upstream Updates
 Use [one-click updates](/docs/core-updates) to make sure you are running the latest version of Drupal core.
