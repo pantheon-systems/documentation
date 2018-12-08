@@ -139,7 +139,7 @@ For more details, including additional plugin configuration options, [please see
 ## Install SimpleSAMLphp with Composer
 When using Composer to manage the SimpleSAMLphp library, you'll need to store your config files outside of the vendor directory in order to prevent those from being overwritten when you apply updates. We can use a symlink to allow SimpleSAMLphp to utilize the config files stored in the non-standard location.
 
-Commands below assume a [nested docroot](/docs/nested-docroot/) structure and should all be run from the site root.
+Commands below require a [nested docroot](/docs/nested-docroot/) structure and should all be run from the site root (not the nested docroot `web` directory).
 
 1. Add the SimpleSAMLphp library.
 
@@ -162,7 +162,7 @@ cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simple
 
 4. Follow the directions [above](#configure-simplesamlphp) to set up your config file (`private/simplesaml-config.php`).
 
-5. Add a symlink from SimpleSAMLphp's default config file over to our customized config, stored outside the vendor directory.
+5. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory.
 
 ```bash
 ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
