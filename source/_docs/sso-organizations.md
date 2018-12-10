@@ -41,7 +41,7 @@ You will need to enter the following:
     <li> The max length for a connection name is 35 characters, including the appended 'SSO'.</li></ul>
     </div>
 
-3.  **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), the attribute is `email`, not `mail`.
+3.  **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), map the attribute `email` to `user:email`.
 
 4.  **Additional configuration details:**
     * The post-back URL (also called Assertion Consumer Service URL) is: `https://pantheon.auth0.com/login/callback`
