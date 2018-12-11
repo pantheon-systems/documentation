@@ -14,13 +14,11 @@ One of the easiest tips we can offer for immediate results. Pantheon Partner Age
 ## Learn Pantheon through Product Trainings, Resources, and Guides
 [Get hands on training](https://pantheon.io/agencies/learn-pantheon?docs){.external} from the Agency and Community team at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
 
-## Supporting Organizations
+## Become a Supporting Organization
 When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/docs/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
-When building a new site for a client, be sure to [transfer ownership and billing](/docs/site-billing/#transfer-ownership-and-billing-for-this-site) properly to make sure the client gets preferred pricing.
-</div>
+## Extend Preferred Pricing to Your Clients
+[Qualified agencies](https://pantheon.io/plans/partner-program) have the ability to extend preferred pricing to their customers. To unlock preferred pricing for a site you are developing, simply [use our invite to pay method to transfer ownership and billing](/docs/site-billing/#transfer-ownership-and-billing-for-this-site) of the site to your client.  
 
 ## Training Resources for New Team Members
 Pantheon strives to maintain accurate and up-to-date documentation. Some docs worth noting, and good for new members of your team, are:
@@ -32,7 +30,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 - [Pantheon FAQs](/docs/faq/)
 - [Pricing comparison](https://pantheon.io/plans/pricing-comparison){.external}
 
-## Power Users Group
+## Be a Power User
 The [Power Users](/docs/power-users) group is a great place to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.
 
 ## HTTPS
