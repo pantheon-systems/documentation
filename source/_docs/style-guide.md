@@ -272,30 +272,30 @@ There are two types of callouts used in our docs, notes and warnings:
 
 ### Notes
 <div class="style-example" markdown="1">
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Notes should identify important pieces of information the reader shouldn't miss.</p>
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Notes should identify important pieces of information the reader shouldn't miss.
 </div>
 <hr class="source-code">
 ```html
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Notes should identify important pieces of information the reader shouldn't miss.</p>
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Notes should identify important pieces of information the reader shouldn't miss.
 </div>
 ```
 </div>
 
 ### Warnings
 <div class="style-example" markdown="1">
-<div class="alert alert-danger" role="alert">
-  <h4 class="info">Warning</h4>
-  <p markdown="1">Warnings cover information critical to the reader, and highlight potential dangers, especially those that can cause data loss.</p>
+<div class="alert alert-danger" role="alert" markdown="1">
+#### Warning {.info}
+Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
 </div>
 <hr class="source-code">
 ```html
-<div class="alert alert-danger" role="alert">
-  <h4 class="info">Warning</h4>
-  <p markdown="1">Warnings cover information critical to the reader, and highlight potential dangers, especially those that can cause data loss.</p>
+<div class="alert alert-danger" role="alert" markdown="1">
+#### Warning {.info}
+Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
 </div>
 ```
 </div>
