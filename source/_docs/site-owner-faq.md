@@ -32,11 +32,7 @@ For more information on managing teams, see the [Team Management article](/docs/
 ### How do I add a Supporting Agency?
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
-1. Click **Team** in the upper-right of the Site Dashboard.
-2. Select **Add Supporting Organization** at the bottom of the team management window.
-3. Enter the complete name of the agency. An exact match is required.
-4. Check that the agency is the one you expected.
-5. Click **Add Agency** to make them a supporting organization.
+{% include("content/add-supporting-org.html")%}
 
 ### What add-ons are available for my site?
 

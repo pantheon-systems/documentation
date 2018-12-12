@@ -16,10 +16,7 @@ While creating a new site, any user in your [organization](/docs/organizations/)
 
 From the Site Dashboard, the Site Owner will want to:
 
-1. Click **Team**.
-2. Click **Add Supporting Organization**.
-3. Search for your Organization.
-4. Click **Add**.
+{% include("content/add-supporting-org.html")%}
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4><p markdown="1"> If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/support/) to transfer sites to your Organization.</p>
