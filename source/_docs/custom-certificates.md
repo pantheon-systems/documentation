@@ -62,13 +62,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
 
-```bash
-23.185.0.X       example.com
-23.185.0.X       www.example.com
-```
-
-In the example `hosts` file above, replace `23.185.0.X` with the IP address provided by Pantheon and `example.com` with your domain name.
-
+{% include("content/hosts-file.html")%}
 
 For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
 

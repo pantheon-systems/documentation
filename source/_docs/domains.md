@@ -119,6 +119,12 @@ Replace `http://` in the site's database and configure your CMS to assume users 
 
 {% include("content/cname-workaround.html")%}
 
+### Test Domain Names Before DNS
+You can modify your local `hosts` file to validate domain-specific settings before DNS is in place.
+
+{% include("content/hosts-file.html")%}
+
+
 ## See Also
 - [Configure Redirects](/docs/redirects)
 - [Launch Essentials](/docs/guides/launch/)
