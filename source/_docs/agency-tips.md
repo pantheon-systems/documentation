@@ -18,7 +18,7 @@ One of the easiest tips we can offer for immediate results. Pantheon Partner Age
 When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/docs/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
 
 ## Extend Preferred Pricing to Your Clients
-[Qualified agencies](https://pantheon.io/plans/partner-program) have the ability to extend preferred pricing to their customers. To unlock preferred pricing for a site you are developing, simply [use our invite to pay method to transfer ownership and billing](/docs/site-billing/#transfer-ownership-and-billing-for-this-site) of the site to your client.  
+[Qualified agencies](https://pantheon.io/plans/partner-program){.external} have the ability to extend preferred pricing to their customers. To unlock preferred pricing for a site you are developing, [use our invite to pay method to transfer ownership and billing](/docs/site-billing/#transfer-ownership-and-billing-for-this-site) of the site to your client.
 
 ## Training Resources for New Team Members
 Pantheon strives to maintain accurate and up-to-date documentation. Some docs worth noting, and good for new members of your team, are:
