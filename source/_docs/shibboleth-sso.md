@@ -136,7 +136,7 @@ add_filter( 'wp_saml_auth_option', function( $value, $option ){
 
 For more details, including additional plugin configuration options, [please see the README](https://github.com/pantheon-systems/wp-saml-auth/blob/master/README.md){.external}.
 
-### Install SimpleSAML with Composer
+## Install SimpleSAML with Composer
 
 When using Composer to manage the SimpleSAMLphp library, you'll need to store your config files outside of the vendor directory in order to prevent those from being overwritten when you apply updates. We can use a symlink to allow SimpleSAMLphp to utilize the config files stored in the non-standard location.
 
