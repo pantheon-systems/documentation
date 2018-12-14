@@ -136,47 +136,46 @@ add_filter( 'wp_saml_auth_option', function( $value, $option ){
 
 For more details, including additional plugin configuration options, [please see the README](https://github.com/pantheon-systems/wp-saml-auth/blob/master/README.md){.external}.
 
-## Install SimpleSAMLphp with Composer
 When using Composer to manage the SimpleSAMLphp library, you'll need to store your config files outside of the vendor directory in order to prevent those from being overwritten when you apply updates. We can use a symlink to allow SimpleSAMLphp to utilize the config files stored in the non-standard location.
 
 Commands below require a [nested docroot](/docs/nested-docroot/) structure and should all be run from the site root (not the nested docroot `web` directory).
 
-1. Add the SimpleSAMLphp library.
+1. Add the SimpleSAMLphp library:
 
-```bash
-composer require simplesamlphp/simplesamlphp
-```
+ ```bash
+ composer require simplesamlphp/simplesamlphp
+ ```
 
-2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`.
+2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
 
-```bash
-ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
-```
+ ```bash
+ ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
+ ```
 
-3. Create your site-specific config file.
+3. Create your site-specific config file:
 
-```bash
-mkdir private
-cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simplesaml-config.php
-```
+ ```bash
+ mkdir private
+ cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simplesaml-config.php
+ ```
 
-4. Follow the directions [above](#configure-simplesamlphp) to set up your config file (`private/simplesaml-config.php`).
+4. Follow the directions above to [set up your config file](#configure-simplesamlphp) (`private/simplesaml-config.php`).
 
-5. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory.
+5. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
-```bash
-ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
-```
+ ```bash
+ ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
+ ```
 
-6. Add this symlink as a post-update script to composer.json. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer.
+6. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
 
-```json
-    "scripts": {
-        "post-install-cmd": [
-            "ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
-        ]
-    },
-```
+ ```json
+     "scripts": {
+         "post-install-cmd": [
+             "ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
+         ]
+     },
+ ```
 
 7. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
