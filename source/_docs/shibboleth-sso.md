@@ -57,7 +57,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
         git add simplesaml
         git commit -am "Adding SimpleSAML symlink"
 
-3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1){.external} as needed and add them to the repository in `/private/simplesamlphp-1.15.x/cert`.
+3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1){.external} as needed, and add them to the repository in `private/simplesamlphp-1.15.x/cert`.
 </div>
 
 <!-- 2nd pane content -->
@@ -105,6 +105,7 @@ Commands below require a [nested docroot](/docs/nested-docroot/) structure and s
 
 7. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
+8. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1){.external} as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
 </div>
 </div>
 
