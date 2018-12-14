@@ -73,11 +73,13 @@ For more information, see [Managing Drush Versions on Pantheon](/docs/drush-vers
 ### Filemount Path
 Pantheon provides a [cloud-based filesystem](/docs/files/) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `/sites/default/files` (Drupal) or `/wp-content/uploads` (WordPress), but you can change the location with the `filemount` variable:
 
-```
+```yaml
 filemount: /files
 ```
 
-Complete the following before deploying `filemount` (required):
+This creates a new symlink to the filesystem at the specified location. Note that this setting is only recommended when creating a custom upstream. Instead, consider using a symlink as described in [Non-Standard Files Locations](/docs/non-standard-file-paths/).
+
+Complete the following before deploying `filemount` (**required**):
 
 1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path){.external}, [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after){.external}, or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder){.external} to use the new path
 2. Add path to the `.gitignore` file
