@@ -77,7 +77,7 @@ Pantheon provides a [cloud-based filesystem](/docs/files/) to store user-generat
 filemount: /files
 ```
 
-This creates a new symlink to the filesystem at the specified location. Note that this setting is only useful when creating a custom upstream that requires it. Otherwise, consider using a symlink as described in [Non-Standard Files Locations](/docs/non-standard-file-paths/).
+This creates a new symlink to the filesystem at the specified location. Note that this setting is only recommended to use when creating a custom upstream. Instead, consider using a symlink as described in [Non-Standard Files Locations](/docs/non-standard-file-paths/).
 
 Complete the following before deploying `filemount` (**required**):
 
