@@ -146,16 +146,17 @@ Pantheon automatically injects database credentials into the site environment; i
 There can be an occasion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
 
 
-    // All Pantheon Environments.
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Set your custom hash salt value.
-      $custom_hash_salt = '';
-      // Extract Pressflow settings into a php object.
-      $pressflow_settings = json_decode($_SERVER['PRESSFLOW_SETTINGS']);
-      $pressflow_settings->drupal_hash_salt = $custom_hash_salt;
-      $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow_settings);
-     }
-
+```php
+// All Pantheon Environments.
+if (defined('PANTHEON_ENVIRONMENT')) {
+  // Set your custom hash salt value.
+  $custom_hash_salt = '';
+  // Extract Pressflow settings into a php object.
+  $pressflow_settings = json_decode($_SERVER['PRESSFLOW_SETTINGS']);
+  $pressflow_settings->drupal_hash_salt = $custom_hash_salt;
+  $_SERVER['PRESSFLOW_SETTINGS'] = json_encode($pressflow_settings);
+ }
+```
 
 ### Where can I get a copy of a default.settings.php?
 
