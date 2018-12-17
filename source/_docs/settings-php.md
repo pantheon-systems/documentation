@@ -107,10 +107,10 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ## Frequently Asked Questions
 
-#### Can I delete the default.settings.php file?
+### Can I delete the default.settings.php file?
 Yes, but only if at least one other file (e.g. `settings.php`) is present within the `sites/default` directory. Otherwise, the existing symlink to `sites/default/files` will be invalid.
 
-#### How can I write logic based on the Pantheon server environment?
+### How can I write logic based on the Pantheon server environment?
 
 Depending on your use case, there are three possibilities:
 
@@ -125,7 +125,7 @@ Depending on your use case, there are three possibilities:
 
  - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/docs/read-environment-config/) for more information, or see our [Redis](/docs/redis/) guide for examples.
 
-#### Why does Drupal report that `settings.php` is not protected? I can't change the permissions on `settings.php`.
+### Why does Drupal report that `settings.php` is not protected? I can't change the permissions on `settings.php`.
 
 If you do not have a `settings.php` file in your codebase, you'll see the following message on `/admin/reports/status`:
 
@@ -133,15 +133,15 @@ Configuration file: Not protected. The file `sites/default/settings.php` is not 
 
 Technically, it's possible to have a functioning Drupal site without `settings.php` on Pantheon, but this breaks compatibility with many modules and tools. Therefore, it's strongly recommended to either copy the `default.settings.php` file to `settings.php` or create an empty `settings.php` file.
 
-#### Should I include settings.php in my site import?
+### Should I include settings.php in my site import?
 
 It depends on your site configuration. Stripping commented-out or non-functional code from your existing `settings.php` file, leaving only known good functional configurations is a best practice and makes it easier to troubleshoot.
 
-#### Where do I specify database credentials?
+### Where do I specify database credentials?
 
 Pantheon automatically injects database credentials into the site environment; if you hard code database credentials, you will break the Pantheon workflow.
 
-#### Where do I set or modify the `drupal_hash_salt` value in Drupal 7?
+### Where do I set or modify the `drupal_hash_salt` value in Drupal 7?
 
 There can be an occasion when you may need to set the hash salt to a specific value. If you install Drupal 7, it will create a `drupal_hash_salt` value for you, but if you want to use a different one, you can edit `settings.php` before installation. Pantheon uses Pressflow to automatically read the environmental configuration and the Drupal 7 hash salt is stored as part of the Pressflow settings.
 
@@ -157,26 +157,26 @@ There can be an occasion when you may need to set the hash salt to a specific va
      }
 
 
-#### Where can I get a copy of a default.settings.php?
+### Where can I get a copy of a default.settings.php?
 
 - Drupal 8 - [https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.settings.php)
 - Drupal 7 -  [https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php)
 - Drupal 6 -  [https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php](https://github.com/pantheon-systems/drops-6/blob/master/sites/default/default.settings.php)
 
-#### Where can I find examples of Pantheon settings.php?
+### Where can I find examples of Pantheon settings.php?
 You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples).
 
-#### Are table prefixes supported?
+### Are table prefixes supported?
 
 Pantheon injects the database configuration dynamically during bootstrap. In the `PRESSFLOW_SETTINGS` variable, the appropriate database connection information is passed in based upon the environment (Dev/Test/Live).
 
 You can technically use database prefixes, but Pantheon will not support database prefixes. As a best practice, allow Pantheon to populate your database configuration settings.
 
-#### Why is the Status tab showing that my configuration file is not protected and that I need to create a settings.php file?
+### Why is the Status tab showing that my configuration file is not protected and that I need to create a settings.php file?
 
 Drupal doesn't ship with a `settings.php` in place; as the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. Once you have created a `settings.php` file, the `settings.php` area of the report should change to green.
 
-#### Can I edit settings.pantheon.php?
+### Can I edit settings.pantheon.php?
 No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
 
 ## Troubleshooting
