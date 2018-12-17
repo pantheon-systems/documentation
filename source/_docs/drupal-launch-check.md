@@ -60,11 +60,22 @@ At this time, there are no plans to support Drupal 6 with this tool.
 
 #### Can I opt-out of a specific recommendation?
 
-If you want to permanently opt-out of a check, you can use the [$conf array in settings.php](https://drupal.org/node/1525472). Individual check names can be specified with a combination of the report name and check name. For example, to permanently opt-out of the PageCompression check in the Cache report:
+If you want to permanently opt-out of a check, you can set configuration options in `settings.php`. Individual check names can be specified with a combination of the report name and check name. Note that the configuration array is `$conf` in Drupal 7 and `$config` in Drupal 8.
+
+##### Examples
+Drupal 7 — permanently opt-out of the PageCompression check in the Cache report:
+
 ```php
 $conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;
 ```
-The specific key you'll use in the `$conf` array is a combination of the report and the check. You can find a list of checks for the report here: [Site Audit Checks](http://cgit.drupalcode.org/site_audit/tree/Check).
+
+Drupal 8 — permanently out-out of the check for Development modules:
+
+```php
+$config['site_audit']['opt_out']['ExtensionsDev'] = TRUE;
+```
+
+The specific key you'll use in the `$conf` or `$config` array is a combination of the report and the check. You can find a list of checks for the report here: [Site Audit Checks D7](http://cgit.drupalcode.org/site_audit/tree/Check?h=7.x-1.x) | [Site Audit Checks D8](http://cgit.drupalcode.org/site_audit/tree/Check?h=8.x-2.x).
 
 Keep in mind that the site audit is executed via Drush so it's best to use the [`$_ENV` superglobal](/docs/read-environment-config/) for doing things like limiting the exclusions to one environment.
 
