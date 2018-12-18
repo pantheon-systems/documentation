@@ -67,35 +67,15 @@ If you see your Pantheon sites, then it was installed and authenticated successf
 
         terminus drush steve-site-d8.dev -- site-install -y
 
-
     Use the password included in the output of that command to sign into the site with your browser, or use this command to get a one-time login link:
 
         terminus drush  steve-site-d8.dev  -- user-login
 
-    Installing Drupal results in a one-line change to `settings.php`, which we can then review and commit. As a reminder, Drush is the command line utility for Drupal itself.	Terminus is simply passing through the Drush commands to the site on Pantheon. To get a full list of Drush commands run:
-
-        terminus drush steve-site-d8.dev -- help
-
-    The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to Drush.
-
-4. Review the file changes:
-
-  ```
-  terminus env:diffstat steve-site-d8.dev
-  ```
-
-5. Commit `settings.php` changes to the Dev environment:
-
-  ```
-  terminus env:commit steve-site-d8.dev --message="Installing Drupal"
-  ```
-
-
-6.  Create the Test environment:
+4.  Create the Test environment:
 
         terminus env:deploy steve-site-d8.test
 
-7.  Create the Live environment:
+5.  Create the Live environment:
 
         terminus env:deploy steve-site-d8.live
 
