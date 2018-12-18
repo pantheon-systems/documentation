@@ -49,3 +49,5 @@ For more detailed instructions pertaining to your specific DNS host, click below
 {% include("content/enable-https.html")%}
 
 {% include("content/https-requirements.html")%}
+
+{% include("content/cname-advantage.html")%}

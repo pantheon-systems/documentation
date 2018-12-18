@@ -173,6 +173,8 @@ Address: 2620:12a:8000::1
 
 In the example above, we can create an `A` record for `www` set to `23.185.0.1` to substitute the `CNAME` record.
 
+{% include("content/cname-advantage.html")%}
+
 ## See Also
 
  - [Launch Essentials](/docs/guides/launch/)
