@@ -142,14 +142,13 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
 9. [Authorize CircleCI on GitHub](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.
 
-    <div class="alert alert-info" markdown="1">
-    #### Note {.info}
     If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.
-    </div>
 
 <div class="alert alert-info" markdown="1">
 #### Note {.info}
-Pantheon's [support team](/docs/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI. If you need help configuring external systems, consider joining the [Pantheon Power Users](/docs/power-users/) community on Slack.
+Pantheon's [support team](/docs/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
+
+If you need help configuring external systems, consider joining the [Pantheon Power Users](/docs/power-users/) community on Slack.
 </div>
 
 
