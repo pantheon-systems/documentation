@@ -21,7 +21,7 @@ Be sure that you:
 - Are familiar with your operating system's command line.
 - Are using a Unix-based system (Linux or Mac OS X). Windows commands may vary slightly.
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
-
+- Have an [SSH key](/docs/ssh-keys/) generated, added to your Pantheon dashboard, and loaded into your local SSH agent.
 
 ## Install and Authenticate Terminus
 Terminus provides advanced interaction with the platform and allows us to run Drush commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/docs/terminus).
