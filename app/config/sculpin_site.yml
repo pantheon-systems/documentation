@@ -5,7 +5,7 @@ title: Pantheon Docs
 subtitle: Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform
 url: /docs
 site_url: https://pantheon.io
-assets_version: 12.3
+assets_version: 12.4
 
 #######################################################################################################
 # The contributors. Include your info here, under the "contributors" key, using the following template:
@@ -330,8 +330,8 @@ contributors:
     url: https://www.speakinginbytes.com/
   edwardangert:
     name: Edward Angert
-    bio: Technical Content Editor for Pantheon
     twitter: edwartangert
+    bio: Technical Content Editor for Pantheon
     github: //github.com/edwardangert
-    avatar: //avatars2.githubusercontent.com/u/17991901?s=460&v=4
+    avatar: //avatars2.githubusercontent.com/u/17991901
     linkedin: //www.linkedin.com/in/edward-angert/
