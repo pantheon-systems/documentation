@@ -29,64 +29,7 @@ In the event of a zone failure we reroute your site to the backup zone and provi
 Pantheon’s disaster response team will proactively notify you of a zone failure event and its impact to your site. Your dedicated team will keep clear and transparent lines of communication on any action taken to keep your site online, and is available 24/7 for all of your questions.
 
 ## Limitations
-Redis and Solr are not currently supported on DR-enabled sites.
-
-### Safely Remove Redis
-The following code changes are required before Redis can be safely uninstalled and disabled:
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="wp-uninstall-id" role="presentation" class="active"><a href="#wp-uninstall-r" aria-controls="wp-uninstall" role="tab" data-toggle="tab">WordPress</a></li>
-  <!-- 2nd Tab Nav -->
-  <li id="d8-uninstall-id" role="presentation"><a href="#d8-uninstall-r" aria-controls="drops" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <!-- 3rd Tab Nav -->
-  <li id="d7-uninstall-id" role="presentation"><a href="#d7-uninstall-r" aria-controls="drops" role="tab" data-toggle="tab">Drupal 7</a></li>
-
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="wp-uninstall-r" markdown="1">
-{% include("content/remove-addons/wp-redis.html")%}
-  </div>
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="d8-uninstall-r" markdown="1">
-{% include("content/remove-addons/d8-redis.html")%}
-  </div>
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="d7-uninstall-r" markdown="1">
-{% include("content/remove-addons/d7-redis.html")%}
-  </div>
-</div>
-
-### Safely Remove Redisi
-The following code changes are required before Solr can be safely uninstalled and disabled:
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="wp-uninstall-id" role="presentation" class="active"><a href="#wp-uninstall" aria-controls="wp-uninstall-s" role="tab" data-toggle="tab">WordPress</a></li>
-  <!-- 2nd Tab Nav -->
-  <li id="d8-uninstall-id" role="presentation"><a href="#d8-uninstall-s" aria-controls="drops" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <!-- 3rd Tab Nav -->
-  <li id="d7-uninstall-id" role="presentation"><a href="#d7-uninstall-s" aria-controls="drops" role="tab" data-toggle="tab">Drupal 7</a></li>
-
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="wp-uninstall-s" markdown="1">
-{% include("content/remove-addons/wp-solr.html")%}
-  </div>
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="d8-uninstall-s" markdown="1">
-{% include("content/remove-addons/d8-solr.html")%}
-  </div>
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="d7-uninstall-s" markdown="1">
-{% include("content/remove-addons/d7-solr.html")%}
-  </div>
-</div>
-
+Redis and Solr are not currently supported on DR-enabled sites. See our documentation on how to [safely remove Redis](/docs/redis/#safely-remove-redis) and how to safely remove Solr for [Drupal 8](/docs/solr-drupal-8/#safely-remove-solr), [Drupal 7](/docs/solr-drupal-7/#safely-remove-solr), and [WordPress](/docs/wordpress-solr/#safely-remove-solr).
 
 ## See also
 - [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar){.external}
