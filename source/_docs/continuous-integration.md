@@ -19,9 +19,54 @@ You can use Terminus for scripting many operations. For example, a post-commit h
 
 ## Drupal SimpleTest
 
-SimpleTests cannot be run on Pantheon as shell access is not supported, and the test-run command was dropped in Drush 7 and 8.  See this GitHub issue for more details: https://github.com/drush-ops/drush/issues/1362.
+The drush test-run command was dropped in Drush 7 and 8.  See this GitHub issue for more details: https://github.com/drush-ops/drush/issues/1362.
+
+[SiteTest](https://www.drupal.org/project/site_test) is a contrib module designed to allow running tests directly against your sites code instead of a base drupal clone of your site.  This module is recommended for use of SimpleTest on Pantheon.
 
 [SimpleTest](https://drupal.org/project/simpletest) is a testing framework based on the [SimpleTest PHP library](https://github.com/simpletest/simpletest) that is included with Drupal core. If you are creating a custom web application, you should consider including SimpleTests of your module functionality.
+
+When running tests on Pantheon you will want to enable site_test using the following command:
+```
+terminus drush $SITE_NAME.$ENV_NAME -- en site_test -y
+```
+
+When running tests on Pantheon you will want to clear the cache immediately before running test to avoid strange failures:
+```
+terminus drush $SITE_NAME.$ENV_NAME -- cc all
+```
+
+When running tests on Pantheon you will need to get the absolue path before you can run the script:
+```
+terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT"
+```
+NOTE: In the above command you may need to strip out warnings by ending the command with `2>/dev/null`
+
+To run tests the full command will look something like this:
+```
+terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io Genomeweb
+```
+NOTE: In the above command the `--url` option is required to be passed as multidevs do not respond to `localhost`.
+
+A full CircleCI command might look similar to this:
+```
+      - run:
+          name: Test simpletest
+          command: |
+            if [ "${CIRCLE_BRANCH}" != "master" ]; then
+
+              terminus drush $SITE_NAME.$ENV_NAME -- en site_test -y
+
+              # If you don't clear the cache immediately before running tests
+              # we get the html gibberish instead of a passing test.
+              terminus drush $SITE_NAME.$ENV_NAME -- cc all
+
+              # NOTE: It is a requirement to be running the latest version of
+              # terminus in order to exclude the notice in shell output of the
+              # embedded command to find the absolute path.
+              terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io ExampleTestGroupName
+
+            fi
+```
 
 ## Integration Bot
 
