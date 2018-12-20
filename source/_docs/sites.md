@@ -31,7 +31,7 @@ If you no longer need your site, you can remove it here.
 This tab shows general information about your site, such as the framework, upstream, date it was created, and your current plan.
 
 #### View your Site's Upstream
-To find a link to your site's upstream, click **Settings**, then **About Site**.
+To find your site's upstream, click **Settings**, then **About Site**.
 
 ![Upstream link](/docs/assets/images/dashboard/upstream-link.png)
 
