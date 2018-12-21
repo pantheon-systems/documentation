@@ -174,7 +174,7 @@ Exception: SolrPhpClient library not found! Please follow the instructions in se
 
 #### Did you post the schema into all your environments?
 
-It needs to be done for Dev, Test, and Live individually. You can do this at `admin/config/search/pantheon`.
+It needs to be done for Dev, Test, and Live individually. You can do this at `admin/config/search/pantheon/schema`.
 
 #### Re-Index Content
 
