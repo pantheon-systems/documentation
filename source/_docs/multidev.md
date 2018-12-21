@@ -160,67 +160,6 @@ git push origin new-name
 
 This will create a new branch with the commit history intact. From the Multidev Environments page, click **Git Branches** and delete the original branch. You will now be able to create an environment associated with the renamed Git branch.
 
+## Troubleshooting and FAQs
 
-## Frequently Asked Questions (FAQs)
-
-### How can I get Multidev?
-
-Multidev is available to:
-
- - Enterprise organizations
- - EDU organizations
- - Pantheon Partner Program agencies (at the level of Pantheon Partner and above)
- - Direct Online customers with [Gold support](/docs/support/#support-features-and-response-times) and above.
-
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
-Unprivileged members of organizations cannot access Multidev environments. See [Change Management](/docs/change-management/) for more information.
-</div>
-
-Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us){.external}.
-
-### If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
-
-No; each branch environment can be independently set to use either SFTP or Git mode for code changes.
-
-### What access controls or permissions are available?
-
-At this time, there are no permissions or access controls for managing the deployment and development workflow beyond the existing team functionality. This is a known feature request and is scheduled for a future release.
-
-### What are the naming conventions for branches?
-
-Branch names can contain any ASCII letter and number (a through z, 0 through 9) and hyphen (dash). The branch name must start with a letter or number. Currently, the maximum length is 11 characters and environments cannot be created with the following reserved names: `master`, `settings`, `team`, `support`, `debug`, `multidev`, `files`, `tags`  and `billing`.
-
-### Can I fork my code without using Multidev?
-
-Yes, you can; your Git repository is not restricted. If you do not use Multidev, then the interface will not show the branches, allow creation of an environment for a branch, and so forth.
-
-### Can I create a new environment for my local branch?
-Yes. Push a new branch from your local (e.g., `git push origin example-br`) then navigate to **Multidev** > **Git Branches** from your Site Dashboard and select **Create Environment** next to the branch name.
-
-### Is there a limit on the number of branches or environments?
-There is no limit on the number of branches you can have in your Git repository. The limit on forked environments is 10 per site.
-
-### Can I associate a domain with a branch environment?
-
-Yes, you can assign custom domains to each Multidev environment.
-
-### What Git clients are supported?
-
-You can use any Git client with Multidev. Use of the command-line Git client is recommended for compatibility with Dashboard instructions.
-
-### Does Multidev support remote repositories, such as GitHub?
-
-At this time, Multidev on Pantheon will only work with the Pantheon hosted code repository. You can use remote repositories with your workflow, but Multidev on Pantheon will only recognize changes pushed to Pantheon.
-
-### Is there a public API available for post-commit hooks or other integrations with external project management systems?
-
-Not at this time, but it is on the development roadmap.
-
-### Can I backup and restore a branch environment?
-
-Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.
-
-### Can I buy additional Multidev environments?
-
-Elite sites can request additional Multidev environments [from support](/docs/support/) as needed.
+For answers to the most frequently asked questions about Multidev, see our [Frequently Asked Questions](/docs/multidev-faq/).
