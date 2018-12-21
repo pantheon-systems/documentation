@@ -26,11 +26,10 @@ Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.
 
 Multidev is available if you are:
 
- - The member of an Organization, as
- - A user with a [Privileged User role](/docs/change-management/), and
- - On a site with a plan that should have Multidev (like through a [Pantheon Preferred Partner](https://pantheon.io/agencies/partner-program){.external}).
+A Developer (or higher role) of an Organization, with the Multidev Feature (like a [Pantheon Preferred Partner](https://pantheon.io/agencies/partner-program){.external}).
+A Direct Online customer with Gold support or above.
 
-If you check all these boxes and still don't have access to Mulitdev, please [contact support](https://dashboard.pantheon.io/#support){.external}.
+If you fully meet either of these conditions and still don't have access to Mulitdev, please [contact support](https://dashboard.pantheon.io/#support){.external}.
 
 ## How many Multidev environments do I get?
 
