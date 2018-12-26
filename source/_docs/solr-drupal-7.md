@@ -178,9 +178,9 @@ It needs to be done for Dev, Test, and Live individually. You can do this at `ad
 
 #### Re-Index Content
 
-ApacheSolr module: You can do this at `admin/config/search/apachesolr`. This will add any new content that has not yet been indexed to the Solr index (within the provided numbers-per-indexing setting).
+**ApacheSolr module:** You can do this at `admin/config/search/apachesolr`. This will add any new content that has not yet been indexed to the Solr index (within the provided numbers-per-indexing setting).
 
-Search API Solr module: Navigate to your Search Index list page at `admin/config/search/search_api` and click the index you need to rebuild. On the index view page, you can either queue all items for reindexing or clear your existing index and re-index in batches.
+**Search API Solr module:** Navigate to your Search Index list page at `admin/config/search/search_api` and click the index you need to rebuild. On the index view page, you can either queue all items for reindexing or clear your existing index and re-index in batches.
 
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
