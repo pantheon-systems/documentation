@@ -80,6 +80,9 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     define( 'WP_DEBUG', true );
     }
     define( 'WP_DEBUG_LOG', true );
+    if ( ! defined( 'WP_CONTENT_DIR' ) ) {
+      define( 'WP_CONTENT_DIR', dirname( FILE ) . '/wp-content' );
+    }
     ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Moves the log file to a location writable while in git mode.
     define( 'WP_DEBUG_DISPLAY', true );
   }
@@ -109,6 +112,9 @@ See [Configure Redirects](/docs/redirects/).
 WordPress has an option to <a href="/docs/logs/#how-do-i-enable-error-logging-for-wordpress" data-proofer-ignore>write logging information to a file</a>. When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
 
 ```php
+if ( ! defined( 'WP_CONTENT_DIR' ) ) {
+   define( 'WP_CONTENT_DIR', dirname( FILE ) . '/wp-content' );
+}
 ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
 ```
 
