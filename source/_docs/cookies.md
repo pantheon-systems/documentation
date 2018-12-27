@@ -74,7 +74,7 @@ if (isset($_COOKIE['STYXKEY_gorp'])) {
   // Generate varied content based on cookie value
   // Do NOT set cookies here; Set-Cookie headers do not allow the response to be cached
   if ($foo == 'ca') {
-    str_replace('football', 'hockey');
+    str_replace('football', 'hockey', $foo);
   }
 
 }
