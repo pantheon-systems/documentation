@@ -68,13 +68,14 @@ If the value is **not** set, respond with `setcookie()` to serve cached content 
 
 The following example can be used interchangeably between WordPress and Drupal:
 ```
+$bar = 'Around here, football is the winter sport of choice!';
 if (isset($_COOKIE['STYXKEY_gorp'])) {
 
   $foo = $_COOKIE['STYXKEY_gorp'];
   // Generate varied content based on cookie value
   // Do NOT set cookies here; Set-Cookie headers do not allow the response to be cached
   if ($foo == 'ca') {
-    str_replace('football', 'hockey', $foo);
+    str_replace('football', 'hockey', $bar);
   }
 
 }
