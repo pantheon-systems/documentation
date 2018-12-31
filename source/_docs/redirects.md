@@ -39,12 +39,13 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
 
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-    exit();
 
     # Name transaction "redirect" in New Relic for improved reporting (optional)
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
+    
+    exit();
   }
 }
 ```
@@ -59,12 +60,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTP_HOST'] == 'subdomain
   $newurl = 'https://www.example.com/subdirectory/'. $_SERVER['REQUEST_URI'];
   header('HTTP/1.0 301 Moved Permanently');
   header("Location: $newurl");
-  exit();
 
   # Name transaction "redirect" in New Relic for improved reporting (optional)
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
+  
+  exit();
 }
 ```
 
@@ -77,12 +79,13 @@ The following configuration will redirect requests for `example.com/old` to `htt
 if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new');
-  exit();
 
   # Name transaction "redirect" in New Relic for improved reporting (optional)
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
+  
+  exit();
 }
 ```
 ### Redirect Multiple Paths
@@ -100,13 +103,14 @@ $redirects = array(
 if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli")) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new-path-for-all');
-  exit();
 
   # Name transaction "redirect" in New Relic for improved reporting (optional)
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
-}
+  
+  exit();
+
 ```
 
 ### Redirect Multiple Subdomains
@@ -124,12 +128,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
   ))) {
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://new.example.com'. $_SERVER['REQUEST_URI']);
-    exit();
 
     # Name transaction "redirect" in New Relic for improved reporting (optional)
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
+
+    exit();
   }
 }
 ```
