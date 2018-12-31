@@ -389,7 +389,7 @@ We are using [allkeys-lru](https://redis.io/topics/lru-cache){.external}. Here i
 
 ```nohighlight
 cat redis.conf
-port 11455
+port xxxxx
 timeout 300
 loglevel notice
 logfile /srv/bindings/xxxxxxxxx/logs/redis.log
@@ -400,7 +400,7 @@ save 60 10000
 rdbcompression yes
 dbfilename dump.rdb
 dir /srv/bindings/xxxxxxxxx/data/
-requirepass 278801a71e2c4264b7d7b155def62bea
+requirepass xxxxx
 maxclients 1024
 maxmemory 964689920
 maxmemory-policy allkeys-lru
@@ -412,6 +412,8 @@ list-max-ziplist-value 64
 set-max-intset-entries 512
 activerehashing yes
 ```
+
+Note that the `maxmemory` value will vary based on plan level.
 
 ### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
 Yes. There is a `redis.log` file that is available on the Redis container for each environment. To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
