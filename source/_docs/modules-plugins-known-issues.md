@@ -403,6 +403,12 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/){.external} for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 <hr>
 
+### [iThemes Security](https://wordpress.org/plugins/better-wp-security/){.external}
+**Issue**: The "File Change Detection" check in iThemes Security warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
+
+**Solution**: Disable the "File Change Detection" component of the plugin. Code files in the Test and Live environments are not writable, so this is not a security risk on Pantheon.
+<hr>
+
 ### [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/){.external}
 **Issue**: Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
 
