@@ -281,6 +281,7 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migration/storage`, which is not permitted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
 **Solution**: You can create and download full backups from your [Dashboard](/docs/backups/).
+<hr>
 
 ### [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external}
 **Issue**: Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
@@ -559,12 +560,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 ### [Weather Station](https://wordpress.org/plugins/live-weather-station/){.external}
 **Issue**: This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
+<hr>
 
 ### [WooCommerce](https://wordpress.org/plugins/woocommerce/){.external}
 **Issue**: The "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
 
 **Solution**: The suggested workaround is to clone the site locally, import the items, then sync the database back up to the platform.
-
+<hr>
 
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503){.external}
 **Issue #1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
