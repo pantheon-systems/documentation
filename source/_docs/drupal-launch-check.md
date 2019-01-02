@@ -58,18 +58,18 @@ terminus remote:drush <site>.<env> -- aa --skip=insights --html --bootstrap --de
 ### Are there plans to support Drupal 6 sites?
 At this time, there are no plans to support Drupal 6 with this tool.
 
-### Can I opt-out of a specific recommendation?
+### Can I opt out of a specific recommendation?
 
-If you want to permanently opt-out of a check, you can set configuration options in `settings.php`. Individual check names can be specified with a combination of the report name and check name. Note that the configuration array is `$conf` in Drupal 7 and `$config` in Drupal 8.
+If you want to permanently opt out of a check, you can set configuration options in `settings.php`. Individual check names can be specified with a combination of the report name and check name. Note that the configuration array is `$conf` in Drupal 7 and `$config` in Drupal 8.
 
 #### Examples
-Drupal 7 — permanently opt-out of the PageCompression check in the Cache report:
+Drupal 7 — permanently opt out of the PageCompression check in the Cache report:
 
 ```php
 $conf['site_audit']['opt_out']['CachePageCompression'] = TRUE;
 ```
 
-Drupal 8 — permanently out-out of the check for Development modules:
+Drupal 8 — permanently opt out of the check for Development modules:
 
 ```php
 $config['site_audit']['opt_out']['ExtensionsDev'] = TRUE;
