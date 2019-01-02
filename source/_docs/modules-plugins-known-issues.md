@@ -281,6 +281,7 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migration/storage`, which is not permitted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
 **Solution**: You can create and download full backups from your [Dashboard](/docs/backups/).
+<hr>
 
 ### [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external}
 **Issue**: Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
@@ -401,6 +402,16 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/){.external}
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/){.external} for more information. This inhibits the ability to set the authorization token required to make the plugin function.
+<hr>
+
+### [iThemes Security](https://wordpress.org/plugins/better-wp-security/){.external}
+**Issue 1:** The "File Change Detection" check in iThemes Security warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
+
+**Solution:** Disable the "File Change Detection" component of the plugin. Code files in the Test and Live environments are not writable, so this is not a security risk on Pantheon.
+
+**Issue 2:** iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` <a href="/docs/platform-considerations/#nginxconf" data-proofer-ignore>cannot be modified</a> and code files on the Test and Live environments are not writable.
+
+**Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
 <hr>
 
 ### [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/){.external}
@@ -549,12 +560,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 ### [Weather Station](https://wordpress.org/plugins/live-weather-station/){.external}
 **Issue**: This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
+<hr>
 
 ### [WooCommerce](https://wordpress.org/plugins/woocommerce/){.external}
 **Issue**: The "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
 
 **Solution**: The suggested workaround is to clone the site locally, import the items, then sync the database back up to the platform.
-
+<hr>
 
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503){.external}
 **Issue #1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
