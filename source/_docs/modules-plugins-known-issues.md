@@ -405,13 +405,13 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 <hr>
 
 ### [iThemes Security](https://wordpress.org/plugins/better-wp-security/){.external}
-**Issue 1**: The "File Change Detection" check in iThemes Security warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
+**Issue 1:** The "File Change Detection" check in iThemes Security warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
 
-**Solution**: Disable the "File Change Detection" component of the plugin. Code files in the Test and Live environments are not writable, so this is not a security risk on Pantheon.
+**Solution:** Disable the "File Change Detection" component of the plugin. Code files in the Test and Live environments are not writable, so this is not a security risk on Pantheon.
 
-**Issue 2**: iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/docs/platform-considerations/#nginxconf) and code files on the Test and Live environments are not writable.
+**Issue 2:** iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` <a href="/docs/platform-considerations/#nginxconf" data-proofer-ignore>cannot be modified</a> and code files on the Test and Live environments are not writable.
 
-**Solution**: Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
+**Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
 <hr>
 
 ### [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/){.external}
