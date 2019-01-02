@@ -11,7 +11,24 @@ date: 6/20/2017
 
 In this guide, we'll configure your existing Jenkins server to automatically test and deploy Drupal 8 to a Multidev environment on Pantheon following a code push to your GitHub repository. Jenkins will run tests against both the pull request and Pantheon's master branch and display the results.
 
-While this guide demonstrates Drupal 8, the same workflow can be applied to WordPress with a few modifications, [listed below]().
+While this guide demonstrates Continuous Integration for Drupal 8 sites, the same workflow can be applied to WordPress with a few modifications:
+
+<div class="panel panel-drop panel-guide" id="accordion">
+<div class="panel-heading panel-drop-heading">
+<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#wordpress-mods">
+<h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> WordPress Modifications</h3>
+</a>
+</div>
+<div id="wordpress-mods" class="collapse" markdown="1" style="padding:10px;">
+WordPress users can make use of this guide with a few modifications:
+
+- Install [WP-CLI](https://wp-cli.org/){.external} on the Jenkins instance instead of Drush.
+- Create the local copy of the new site from [https://github.com/pantheon-systems/example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer){.external}. 
+- Specify WordPress when creating the Pantheon site: `terminus site:create $SITE "My Site" "WordPress"`
+- Use WP-CLI commands for any build steps.
+
+</div>
+</div>
 
 ## Before You Begin
 
@@ -307,14 +324,6 @@ If a test fails, you can see the details by clicking the job, then "Console Outp
 
 ![Job Details](/source/docs/assets/images/integrations/job_details.png)
 
-## WordPress modifications
-
-WordPress users can make use of this guide with a few modifications:
-
-- Install [WP-CLI](https://wp-cli.org/){.external} on the Jenkins instance instead of Drush.
-- Create the local copy of the new site from [https://github.com/pantheon-systems/example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer). 
-- Specify WordPress when creating the Pantheon site: `terminus site:create $SITE "My Site" "WordPress"`
-- Use WP-CLI commands for any build steps.
 
 ## Conclusion
 If you usually use only the Pantheon repository, be sure to now push to your new origin repo on GitHub. You can still add the Pantheon repo as a remote to take advantage of Multidev and work on your own environment. As you add new features, continue to add new tests.
