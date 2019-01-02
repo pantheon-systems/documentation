@@ -110,7 +110,7 @@ if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli"
   }
   
   exit();
-
+}
 ```
 
 ### Redirect Multiple Subdomains
