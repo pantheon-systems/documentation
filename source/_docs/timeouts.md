@@ -115,7 +115,9 @@ Yes, just use `terminus drush <site>.<env> -- cron` using [Terminus](/docs/termi
 
 ### What if I run into a timeout when using the Drupal Migrate UI?
 
-As [strongly recommended by the Migrate module](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/docs/terminus/). You can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
+As [recommended in the Migrate module documentation](https://www.drupal.org/node/1806824){.external}, use Drush, which can be invoked through [Terminus](/docs/terminus/).
+
+If you're migrating to a Drupal 7 site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170){.external} by configuring the `migrate_drush_path` variable to:
 
 ```
 $conf['migrate_drush_path'] = $_ENV['HOME'] . '/bin/drush';
