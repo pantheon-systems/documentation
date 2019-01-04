@@ -142,11 +142,11 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
     drush dl sendgrid_integration-7.x-1.x-dev mailsystem composer_vendor
     ```
 {% include("content/d7-composer-init.html")%}
-7. The above configuration specifies `vendor-dir` to `sites/all/vendors` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor){.external} module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
+7. The above configuration specifies `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor){.external} module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
 
     ```bash
     protected_web_paths:
-      - /sites/all/vendors
+      - /sites/all/vendor
     ```
 
 8. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
