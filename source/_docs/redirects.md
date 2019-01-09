@@ -113,6 +113,30 @@ if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli"
 }
 ```
 
+### Redirect Multiple Urls to Another
+The following configuration will redirect requests for `example.com/old-url1` to `example.com/new-url1`, `example.com/old-url2` to `example.com/new-url2` and `example.com/old-url3` to `example.com/new-url3`
+
+```php
+// You can easily put a list of many 301 url redirects in this format
+// Trailing slashes matters here so /old-url1 is different from /old-url1/
+$redirect_targets = array(
+  '/old-url1' => '/new-url1',
+  '/old-url2' => '/new-url2',
+  '/old-url3' => '/new-url3',
+);
+
+if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name() != "cli") ) {
+  echo 'https://'. $_SERVER['HTTP_HOST'] . $redirect_targets[ $_SERVER['REQUEST_URI'] ];
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://'. $_SERVER['HTTP_HOST'] . $redirect_targets[ $_SERVER['REQUEST_URI'] ]);
+
+  if (extension_loaded('newrelic')) {
+    newrelic_name_transaction("redirect");
+  } 
+  exit();
+}
+```
+
 ### Redirect Multiple Subdomains
 The following configuration will redirect requests for `sub1.example.com`, `sub2.example.com`, `sub3.example.com`, and `sub4.example.com` to `https://new.example.com`:
 
