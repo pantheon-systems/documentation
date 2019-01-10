@@ -104,6 +104,8 @@ The Pantheon Edge size limit for Cookies is 10K. Any larger cookies are dropped,
 
 Knowing this, you can choose to configure your code to listen for this header and respond, with a custom error page for example.
 
+Note that too many `set-cookie` headers in the response can also create issues.
+
 ## See Also
 * [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
 * [Bypassing Cache with HTTP Headers](/docs/cache-control)
