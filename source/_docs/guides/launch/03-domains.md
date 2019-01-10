@@ -63,7 +63,7 @@ Once you begin this process, you have:
 
     We recommend leaving the challenge file in place until the migration is complete. That way, if DNS is not updated within the 7 day window provided by Let's Encrypt, the certificate can be re-issued.
 
-    If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin){.external} to generate DNS TXT records to validate domain ownership. If you must use DNS TXT records to verify domain ownership, note that at some DNS providers TXT records and CNAME records cannot be used at the same time, see: [CNAME Record Workaround](/docs/https/#-cname-record-workaround). 
+    If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin){.external} to generate DNS TXT records to validate domain ownership. If you must use DNS TXT records to verify domain ownership, note that at some DNS providers TXT records and CNAME records cannot be used at the same time, see: [CNAME Record Workaround](/docs/https/#cname-record-workaround).
     </div>
 
 6. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
