@@ -1,10 +1,11 @@
 ---
 title: How to Implement SimpleSAMLphp as idP for Drupal 8 on Pantheon 
-description: Setting up an identity provider on Drupal 8 using SimpleSAMLphp.
-draft: true
-tags: [code, drupal-8]
-categories: [drupal, developing]
-contributors: Javi-er
+description: Setting up an identity provider on Drupal 8 using SimpleSAMLphp
+tags: [code]
+categories: [drupal8, develop]
+contributors: [Javi-er]
+type: guide
+permalink: docs/guides/:basename/
 ---
 
 There are a number of articles detailing how to implement the SAML 2.0 protocol, but if you want to host your site on Pantheon and use Drupal 8 as your identity provider, there are a few details to take in account.
