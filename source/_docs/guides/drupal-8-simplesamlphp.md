@@ -145,7 +145,7 @@ drush ev 'Drupal\saml_idp\Install::postInstall()'
    5. Change the value of `enable.saml20-idp` to `true`.
    6. Change the value of `store.type` to `'sql'`.
    7. Set your database connection string on `store.sql.dsn`, for instance: `'mysql:host=localhost;dbname=my_drupal_db'`.
-   8. Change `store.sql.username` and `store.sql.password` to your database credentials. This is just for your local machine, when this is running on Pantheon, these settings will be overwritten by the [point 6 above](#6).
+   8. Change `store.sql.username` and `store.sql.password` to your database credentials. This is just for your local machine, when this is running on Pantheon, these settings will be overwritten by the `config.php` edits made earlier.
 
 8. Edit `SimpleSAMLphp/config/authsources.php` and add the following:
    1.  Below `default-sp` block add this: 
