@@ -67,13 +67,6 @@ Self-serve sites are billable via recurring monthly or [annual](/docs/annual-bil
 {% include("content/transfer-ownership-billing-intro.html")%}
 {% include("content/transfer-ownership-billing-steps.html")%}
 
-Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
-
-For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
-
-Resellers should contact Pantheon Support directly if you need to transfer ownership.
-
-
 ## See Also
 
 - [Billing in the Site Dashboard](/docs/site-billing/)
