@@ -132,3 +132,8 @@ No, these settings apply to every site on Pantheon. One of the ways Pantheon sca
 
 Edit the `pantheon_apachesolr` module within your Drupal site installation and enjoy your voided warranty (we can't support user modifications). Seriously, this treats a symptom and not the problem; you should reduce the batch size instead and avoid indexing large binary files.
 
+### How do I install a theme or plugin that keeps timing out?
+
+If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/docs/rsync-and-sftp/).
+
+Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/docs/custom-upstream/).
