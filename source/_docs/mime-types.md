@@ -23,4 +23,26 @@ Pantheon promotes and respects internet standards, and for MIME types, we treat 
 See the Internet Assigned Numbers Authority [Media Type List](https://www.iana.org/assignments/media-types/media-types.xhtml).
 
 ##Workaround
-Depending on the file type, you can write a small PHP wrapper to read the file, set the MIME type header, and send back the file with any MIME type you want. Make sure to add caching headers to cache on the edge so that PHP doesn’t have to do too much reading/writing.
+Depending on the file type, you can write a small PHP wrapper to read the file, set the MIME type header, and send back the file with any MIME type you want. Make sure to add caching headers to cache on the edge so that PHP doesn’t have to do too much reading/writing. The example below outputs a given file with a `hello/world` MIME type.
+
+```php
+<?php
+/**
+ * Set a custom MIME type header on a file.
+ *
+ * @param string $file
+ *   Absolute path to a file.
+ */
+function mime_wrapper($file) {
+  if (file_exists($file)) {
+    header('Cache-Control: public, max-age=3600');
+    header('Content-Type: hello/world');
+    readfile($file);
+    exit;
+  }
+
+  if (!file_exists($file)) {
+    return 'File not found';
+  }
+}
+```
