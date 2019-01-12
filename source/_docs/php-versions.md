@@ -21,14 +21,12 @@ Changes made to `pantheon.yml` file on a branch **are not** detected when creati
 </div>
 
 ### Available PHP Versions
-The PHP versions available on Pantheon are:
+The recommended PHP versions available on Pantheon are:
 
 - [7.2](https://v72-php-info.pantheonsite.io/)
 - [7.1](https://v71-php-info.pantheonsite.io/)
-- [7.0](https://v70-php-info.pantheonsite.io/)
-- [5.6](https://v56-php-info.pantheonsite.io/)
 
-Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions. Pantheon also makes PHP [5.3](https://v53-php-info.pantheonsite.io/) and [5.5](https://v55-php-info.pantheonsite.io/) available on the platform, although these are end-of-life, and should not be used unless absolutely necessary.
+Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions. Pantheon also makes PHP [7.0](https://v70-php-info.pantheonsite.io/), [5.6](https://v56-php-info.pantheonsite.io/), [5.5](https://v55-php-info.pantheonsite.io/), and [5.3](https://v53-php-info.pantheonsite.io/) available on the platform, although these are end-of-life, and should not be used unless absolutely necessary.
 
 <div markdown="1" class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
