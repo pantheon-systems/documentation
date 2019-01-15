@@ -22,6 +22,8 @@ image: getting-started-Largethumb
 ---
 In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live environment.
 
+The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are migrating a site already on Pantheon, follow the steps for [relaunching an existing Pantheon site](/docs/relaunch/).
+
 ## Connect Domain
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
@@ -30,6 +32,7 @@ In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live e
 5. Select **Connect Domain** and enter the bare domain (e.g., `example.com`) then click **Connect Domain**.
 
 ## Existing Sites
+
 ### Avoid HTTPS Interruption
 Sites that already have HTTPS working can pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
 
