@@ -142,6 +142,10 @@ If a Let's Encrypt certificate was deployed to the Global CDN before adding CAA 
 ### CA limitations
 Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA Globalsign does not currently meet this requirement. The workaround is to simply use another CA.
 
+### Downgrading a Site that uses a Custom Certificate
+
+Since all sites require an encryption certificate, to downgrade a site that uses a custom certificate, use Pantheon’s [Global CDN](/docs/https/) to enable Let’s Encrypt. Alternatively, you can use another CDN like [Cloudflare](/docs/cloudflare/).
+
 ## See also
 - [Pantheon Global CDN](/docs/global-cdn)
 - [HTTPS on Pantheon's Global CDN](/docs/https/)
