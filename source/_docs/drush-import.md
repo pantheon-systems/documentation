@@ -4,13 +4,13 @@ description: Import a Drupal Drush site archive using the Terminus, the Pantheon
 tags: [migratemanual]
 categories: [dupal]
 ---
-One of the easiest ways to move an existing Drupal site to Pantheon is to import a [Drush archive file](https://drushcommands.com/drush-8x/core/archive-dump/) using our [Terminus command-line interface](/docs/terminus/). This automates the packaging of the existing installation, improving the chances of success.
+One of the easiest ways to move an existing Drupal site to Pantheon is to import a [Drush archive file](https://drushcommands.com/drush-8x/core/archive-dump/){.external} using our [Terminus command-line interface](/docs/terminus/). This automates the packaging of the existing installation, improving the chances of success.
 
 ## Before You Begin
 
 There are a few things you'll need in order to make this work:
 
-1. A Pantheon account with at least one free Dev site slot open. [Pantheon is free](https://dashboard.pantheon.io/register), and if you need an extra Dev site to try this out, just ask and we'll be happy to grant you one.
+1. A Pantheon account with at least one free Dev site slot open. A [Pantheon account is free](https://dashboard.pantheon.io/register), and if you need an extra Dev site to try this out, just ask and we'll be happy to grant you one.
 2. A working local Drush installation that is up to date with 7.x or 8.x stable.
 3. Drush access to your existing Drupal site.
 
@@ -28,7 +28,7 @@ If you haven't already, set up Terminus, the Pantheon CLI, using Composer as des
 
 ## Import Your Archive
 
-Importing a Drush site archive as we've prepared it above is easy. 
+Importing a Drush site archive as we've prepared it above is easy.
 
 1. Authenticate into Pantheon with Terminus:
 

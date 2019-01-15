@@ -109,6 +109,8 @@ When the same configuration value is defined in both files, the value from `pant
 
 ## Troubleshooting
 
+### "Changes to pantheon.yml detected, but there was an error while processing it"
+
 We will reject a commit that includes a `pantheon.yml` error, with a message like:
 ```nohighlight
 remote: PANTHEON ERROR:

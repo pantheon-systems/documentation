@@ -13,9 +13,9 @@ For more information on the announcement of new plans, see [this related blog po
 ## List and Preferred Pricing
 <dl>
   <dt>List Price</dt>
-    <dd>Set price for new sites created after November 15 that aren’t purchased via a qualified agency partner.</dd>
+    <dd>Set price for new sites created after November 15, 2018 that aren’t purchased via a qualified agency partner.</dd>
   <dt>Preferred Price</dt>
-    <dd>Introductory price available to the general public until November 15, after which it will be exclusively available via qualified agency partners.</dd>
+    <dd>Introductory price available to the general public until November 15, 2018, after which it will be exclusively available via qualified <a href="https://pantheon.io/agencies/partner-program" data-proofer-ignore>Agency Partners</a>. Visit our <a href="https://pantheon.io/plans/agency-preferred-pricing" data-proofer-ignore>Preferred Pricing page</a> for more information.</dd>
 </dl>
 
 | Plan                 | Preferred Price | List Price  |
@@ -40,12 +40,12 @@ Pantheon offers [annual billing plans at lower rates](/docs/annual-billing/), gi
 ## Frequently Asked Questions
 
 ### How do I get Preferred Pricing?
-For sites purchased before August 1st, Preferred Pricing will be locked in as long as the site remains on that plan. Otherwise, Preferred Pricing is available for sites purchased through a qualified agency partner.
+For sites purchased before August 1, 2018, Preferred Pricing will be locked in as long as the site remains on that plan. Otherwise, Preferred Pricing is available for sites purchased through a qualified agency partner.
 
 ### When will prices change for existing sites?
-During the month of August, sites on legacy plans will automatically be switched to a new equivalent plan. This will occur on their normal monthly invoice date. All sites switched over will retain Preferred Pricing for the new plan, as long as they remain on that plan.
+During the month of August, 2018, sites on legacy plans were automatically switched to a new equivalent plan. All sites switched over should have retained Preferred Pricing for the new plan for as long as they remain on that plan.
 
-### What new plan will my existing site migrate to in August?
+### What new plan did my existing site migrate to in August?
 All existing sites will have Preferred Pricing locked in for the plan they migrate to, and will retain the preferred price as long as they stay on that plan.
 
 | Legacy Plan | New Plan            | Preferred Price  |
