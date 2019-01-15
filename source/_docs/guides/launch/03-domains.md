@@ -20,7 +20,9 @@ previouspage: Upgrade Site Plan
 editpath: launch/03-domains.md
 image: getting-started-Largethumb
 ---
-In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live environment. The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are doing a Pantheon-to-Pantheon migration, follow the steps for [relaunching an exisiting Pantheon site](/docs/relaunch/).
+In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live environment.
+
+The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are migrating a site already on Pantheon to Pantheon, follow the steps for [relaunching an existing Pantheon site](/docs/relaunch/).
 
 ## Connect Domain
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
