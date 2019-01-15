@@ -30,6 +30,11 @@ In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live e
 5. Select **Connect Domain** and enter the bare domain (e.g., `example.com`) then click **Connect Domain**.
 
 ## Existing Sites
+<div class="alert alert-info" markdown="1">
+    #### Note {.info}
+    If you are doing a Pantheon-to-Pantheon migration, follow the steps for [relaunching an exisiting Pantheon site](/docs/relaunch/).
+    </div>
+
 ### Avoid HTTPS Interruption
 Sites that already have HTTPS working can pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
 
