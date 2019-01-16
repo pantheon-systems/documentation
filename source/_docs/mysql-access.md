@@ -81,7 +81,18 @@ Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbau
 
 ## SSH Tunneling
 
-Developers can use SSH tunnels to securely encrypt remote MySQL connections. For more information on how to set up tunnels for databases, see [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/docs/ssh-tunnels/).
+Be default, MySQL connections made to Pantheon are encrypted:
+
+```sql
+mysql> SHOW STATUS LIKE "Ssl_cipher";
++---------------+---------------------------+
+| Variable_name | Value                     |
++---------------+---------------------------+
+| Ssl_cipher    | DHE-RSA-AES128-GCM-SHA256 |
++---------------+---------------------------+
+```
+
+Developers can use SSH tunnels to add additional layers of encryption to remote MySQL connections, or tunnel the connection across non-standard ports. For more information on how to set up tunnels for databases, see [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/docs/ssh-tunnels/).
 
 ## Troubleshooting MySQL Connections
 
@@ -96,7 +107,7 @@ ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.$ENV.$SITE.drush.
 
 This error occurs when a request is sent to a database server that is in sleep mode. Pantheon containers spin down after ~1 hour of idle time. Live environments on a paid plan spin down after 12 hours of idle time. Environments usually spin up within 30 seconds of receiving a request. To resolve this error, wake environments by loading the home page or with the following Terminus command:
 
-```nohighlight
+```bash
 terminus env:wake <site>.<env>
 ```
 ### Can't Connect to Local MySQL Server Through Socket
