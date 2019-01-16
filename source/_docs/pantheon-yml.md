@@ -48,7 +48,7 @@ The name of the nested directory is not configurable.
 For more information, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).
 
 ### PHP Version
-Override the upstreams default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourages a good best practice of testing before making a change on your Live site.
+Override the upstream's default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourage testing before making a change on your Live site.
 
 For example, to override the upstream default value at the site level to PHP 7:
 
