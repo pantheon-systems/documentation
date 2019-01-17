@@ -466,6 +466,13 @@ Pantheon has tools in place to monitor database queries:
 **Solution**: Remove the .gitignore file from the `object-sync-for-salesforce/vendor/pippinsplugins/wp-logging` directory.
 <hr>
 
+### [Redirection](https://wordpress.org/plugins/redirection/){.external}
+
+**Issue:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
+
+**Sulution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/docs/redirects/) for more information.
+<hr>
+
 ### [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/){.external}
 **Issue**: Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. See [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
 
