@@ -103,6 +103,10 @@ Some web developers choose to aggregate all of their caching logic in one place,
         header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
   }
   ```
+  <div class="alert alert-info" role="alert" markdown="1">
+  ### Note {.info}
+  Place this code in `wp-config.php` to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
+  </div>
   </div>
 </div>
 
