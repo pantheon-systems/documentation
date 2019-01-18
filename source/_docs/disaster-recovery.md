@@ -29,7 +29,7 @@ In the event of a zone failure we reroute your site to the backup zone and provi
 Pantheon’s disaster response team will proactively notify you of a zone failure event and its impact to your site. Your dedicated team will keep clear and transparent lines of communication on any action taken to keep your site online, and is available 24/7 for all of your questions.
 
 ## Limitations
-Redis and Solr are not currently supported on DR-enabled sites.
+Redis and Solr are not currently supported on DR-enabled sites. See our documentation on how to [safely remove Redis](/docs/redis/#safely-remove-redis) and how to safely remove Solr for [Drupal 8](/docs/solr-drupal-8/#safely-remove-solr), [Drupal 7](/docs/solr-drupal-7/#safely-remove-solr), and [WordPress](/docs/wordpress-solr/#safely-remove-solr).
 
 ## See also
 - [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar){.external}

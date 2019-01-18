@@ -66,7 +66,7 @@ Diamond and Platinum support customers can directly access Pantheon's operations
 
 ## Scope of Support
 
-We love helping developers succeed! Our support packages range from basic platform support to more comprehensive SLA-backed support. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
+We love helping developers succeed! Our support packages range from basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
 
 ### Code
 Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.

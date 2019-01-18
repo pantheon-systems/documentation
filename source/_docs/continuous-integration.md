@@ -40,7 +40,7 @@ We recommend creating a bot user account that will handle the tasks or jobs by a
 
 At this time, Pantheon does not provide or support:
 
-  - [Webhooks](https://en.wikipedia.org/wiki/Webhook)
+- [Webhooks](https://en.wikipedia.org/wiki/Webhook)
 - [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 - Running [Jenkins](https://jenkins.io/index.html) or other Continuous Integration software on our servers. You'll need to self-host or use a hosted CI solution. [Compare solutions here](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software).
 - Shell access

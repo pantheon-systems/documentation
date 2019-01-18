@@ -62,13 +62,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
 
-```bash
-23.185.0.X       example.com
-23.185.0.X       www.example.com
-```
-
-In the example `hosts` file above, replace `23.185.0.X` with the IP address provided by Pantheon and `example.com` with your domain name.
-
+{% include("content/hosts-file.html")%}
 
 For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
 
@@ -147,6 +141,10 @@ If a Let's Encrypt certificate was deployed to the Global CDN before adding CAA 
 
 ### CA limitations
 Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA Globalsign does not currently meet this requirement. The workaround is to simply use another CA.
+
+### Downgrading a Site that uses a Custom Certificate
+
+Since all sites require an encryption certificate, to downgrade a site that uses a custom certificate, use Pantheon’s [Global CDN](/docs/https/) to enable Let’s Encrypt. Alternatively, you can use another CDN like [Cloudflare](/docs/cloudflare/).
 
 ## See also
 - [Pantheon Global CDN](/docs/global-cdn)

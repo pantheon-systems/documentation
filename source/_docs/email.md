@@ -77,7 +77,7 @@ Pantheon strongly encourages using ports other than `25`, `465` or `587` to send
       </tr>
       <tr>
         <td>Amazon SES</td>
-        <td><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html" target="blank">2587 (STARTLS), 2465 (TLSWRAPPER)</a></td>
+        <td><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html" target="blank">2587 (STARTTLS), 2465 (TLSWRAPPER)</a></td>
       </tr>
     </tbody>
 </table>

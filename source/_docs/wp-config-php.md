@@ -79,7 +79,8 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     if (!defined( 'WP_DEBUG' )) {
     define( 'WP_DEBUG', true );
     }
-    define( 'WP_DEBUG_LOG', true ); // Stored in wp-content/debug.log
+    define( 'WP_DEBUG_LOG', true );
+    ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Moves the log file to a location writable while in git mode.
     define( 'WP_DEBUG_DISPLAY', true );
   }
   // Wordpress debug settings in test and live environments.

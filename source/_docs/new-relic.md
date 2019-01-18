@@ -45,7 +45,7 @@ New Relic's Dashboard starts with a high-level breakdown of application performa
 
 1. PHP Execution
 2. Database Queries (MySQL or Redis)
-3. External Requests (e.g. calls to third pary APIs)
+3. External Requests (e.g. calls to third-party APIs)
 
 Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the database](/docs/debug-mysql-new-relic/) could be the result of slow queries, or an elevated volume of queries overall.
 

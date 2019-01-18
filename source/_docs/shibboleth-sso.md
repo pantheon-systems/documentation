@@ -18,6 +18,22 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 <p markdown="1">[PHP mcrypt](http://php.net/manual/en/book.mcrypt.php){.external} is still used in SimpleSAMLphp 1.14.x, but removed as a dependency in SimpleSAML 1.15.x. PHP mcrypt has been deprecated in PHP 7.1, and removed from core PHP 7.2. Consider using the appropriate lower versions if you encounter issues.
 </p></div>
 
+
+<!-- Nav tabs -->
+<ul class="nav nav-tabs" role="tablist">
+  <!-- Active tab -->
+  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Download Method</a></li>
+
+  <!-- 2nd Tab Nav -->
+  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Composer Method</a></li>
+
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+<!-- Active pane content -->
+<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+
 <div class="alert alert-export" role="alert">
 <h4 class="info">Version Number</h4>
 <p markdown="1">In the code examples below, replace `15.x` with the downloaded version of SimpleSAMLphp.
@@ -41,7 +57,57 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
         git add simplesaml
         git commit -am "Adding SimpleSAML symlink"
 
-3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1){.external} as needed and add them to the repository in `/private/simplesamlphp-1.15.x/cert`.
+3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1){.external} as needed, and add them to the repository in `private/simplesamlphp-1.15.x/cert`.
+</div>
+
+<!-- 2nd pane content -->
+<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+When using Composer to manage the SimpleSAMLphp library, you'll need to store your config files outside of the vendor directory in order to prevent those from being overwritten when you apply updates. We can use a symlink to allow SimpleSAMLphp to utilize the config files stored in the non-standard location.
+
+Commands below require a [nested docroot](/docs/nested-docroot/) structure and should all be run from the site root (not the nested docroot `web` directory).
+
+1. Add the SimpleSAMLphp library:
+
+ ```bash
+ composer require simplesamlphp/simplesamlphp
+ ```
+
+2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
+
+ ```bash
+ ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
+ ```
+
+3. Create your site-specific config file:
+
+ ```bash
+ mkdir private
+ cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simplesaml-config.php
+ ```
+
+4. Follow the directions above to [set up your config file](#configure-simplesamlphp) (`private/simplesaml-config.php`).
+
+5. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
+
+ ```bash
+ ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
+ ```
+
+6. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
+
+ ```json
+     "scripts": {
+         "post-install-cmd": [
+             "ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
+         ]
+     },
+ ```
+
+7. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
+
+8. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1){.external} as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
+</div>
+</div>
 
 ## Configure SimpleSAMLphp
 

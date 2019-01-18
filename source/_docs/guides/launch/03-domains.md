@@ -22,6 +22,8 @@ image: getting-started-Largethumb
 ---
 In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live environment.
 
+The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are migrating a site already on Pantheon, follow the steps for [relaunching an existing Pantheon site](/docs/relaunch/).
+
 ## Connect Domain
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
@@ -30,6 +32,7 @@ In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live e
 5. Select **Connect Domain** and enter the bare domain (e.g., `example.com`) then click **Connect Domain**.
 
 ## Existing Sites
+
 ### Avoid HTTPS Interruption
 Sites that already have HTTPS working can pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
 
@@ -54,6 +57,8 @@ To pre-provision HTTPS, CAA records must either:
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
 
     We recommend leaving the challenge file in place until the migration is complete. That way, if DNS is not updated within the 7 day window provided by Let's Encrypt, the certificate can be re-issued.
+
+    If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin){.external} to generate DNS TXT records to validate domain ownership.
     </div>
 
 6. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.

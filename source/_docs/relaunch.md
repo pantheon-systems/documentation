@@ -46,6 +46,8 @@ The permission to manage billing and plans is granted only to the role of **Site
 
   {% include("content/notes/https-success.html")%}
 
+   This process typically takes about an hour.
+
 5. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
  {% include("content/standard-dns-config2.html") %}
