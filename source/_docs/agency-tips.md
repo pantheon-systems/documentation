@@ -30,7 +30,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 - [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/)
 - [Pantheon FAQs](/docs/faq/)
 - [Pricing comparison](https://pantheon.io/plans/pricing-comparison){.external}
-- [Add a Client to Your Agency](/docs/add-client-site/) for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.
+- <a href="/docs/add-client-site/" data-proofer-ignore>Add a Client to Your Agency</a> for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.
 
 ## Be a Power User
 The [Power Users](/docs/power-users) group is a great place to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.
