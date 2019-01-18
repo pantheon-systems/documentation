@@ -41,9 +41,14 @@ To pre-provision HTTPS, CAA records must either:
  - Not exist for the domain and its parent domains, or
  - Authorize Let's Encrypt.
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.</p>
+<div class="alert alert-danger" markdown="1">
+####Warning {.info}
+Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.
+
+Once you begin this process, you have:
+
+ - 7 days to complete the challenge response
+ - 30 days to adjust DNS values.
 </div>
 
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
