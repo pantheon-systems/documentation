@@ -61,8 +61,6 @@ Once you begin this process, you have:
     #### Note {.info}
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
 
-    We recommend leaving the challenge file in place until the migration is complete. That way, if DNS is not updated within the 7 day window provided by Let's Encrypt, the certificate can be re-issued.
-
     If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin){.external} to generate DNS TXT records to validate domain ownership.
     </div>
 
