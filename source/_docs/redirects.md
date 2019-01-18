@@ -113,8 +113,12 @@ if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli"
 }
 ```
 
-### Redirect Multiple Urls to Another
-The following configuration will redirect requests for `example.com/old-url1` to `example.com/new-url1`, `example.com/old-url2` to `example.com/new-url2` and `example.com/old-url3` to `example.com/new-url3`
+### Redirect Multiple URLs
+The following configuration will redirect requests for:
+
+ - `example.com/old-url1` to `example.com/new-url1`
+ - `example.com/old-url2` to `example.com/new-url2`
+ - `example.com/old-url3` to `example.com/new-url3`
 
 ```php
 // You can easily put a list of many 301 url redirects in this format
