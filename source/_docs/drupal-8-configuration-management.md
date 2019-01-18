@@ -1,6 +1,6 @@
 ---
 title: Configuration Workflow for Drupal 8 Sites
-description: Configure your Drupal site's performance and caching settings to make significant improvements.
+description: Commit your Drupal configuration to version control.
 tags: [devdrush, workflow]
 categories: [drupal8]
 ---
