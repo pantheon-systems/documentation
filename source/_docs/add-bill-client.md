@@ -4,7 +4,7 @@ description: Learn how to add a client to your Partner Agency to share special f
 tags: [manage, billing]
 categories: []
 ---
-[Partner Agencies](https://pantheon.io/plans/partner-program){.external} on Pantheon receive additional levels of support and discounted pricing for themselves and their clients. This doc explains how to share those benefits by adding a client's site to your Agency.
+[Partner Agencies](https://pantheon.io/plans/partner-program){.external} on Pantheon receive additional levels of support and [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing){.external} for themselves and their clients. This doc explains how to share those benefits by adding a client's site to your Agency.
 
 While many of these steps are followed through the normal course of an Agency-Client relationship. We've collected them here as a quick reference.
 
