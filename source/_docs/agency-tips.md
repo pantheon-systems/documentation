@@ -11,6 +11,7 @@ We've compiled some great tips for agencies working on Pantheon. They are loosel
 
 One of the easiest tips we can offer for immediate results. Pantheon Partner Agencies are eligible for additional support options and other exclusive features. Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more.
 
+
 ## Learn Pantheon through Product Trainings, Resources, and Guides
 [Get hands on training](https://pantheon.io/agencies/learn-pantheon?docs){.external} from the Agency and Community team at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
 
@@ -29,6 +30,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 - [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/)
 - [Pantheon FAQs](/docs/faq/)
 - [Pricing comparison](https://pantheon.io/plans/pricing-comparison){.external}
+- <a href="/docs/add-client-site/" data-proofer-ignore>Add a Client to Your Agency</a> for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.
 
 ## Be a Power User
 The [Power Users](/docs/power-users) group is a great place to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.
