@@ -152,9 +152,6 @@ You can modify this patch according to your needs, such as performing an operati
 ### [Live CSS](https://www.drupal.org/project/live_css){.external}
 **Issue**: This module requires write access to the site's codebase for editing CSS files, which is not granted on Test and Live environments by design.
 <hr>
-### [Media](https://www.drupal.org/project/media){.external}
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
-<hr>
 ### [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus){.external}
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
 <hr>
