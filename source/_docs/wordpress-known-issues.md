@@ -8,7 +8,10 @@ This page tracks known issues and the recommended solution (if any) for running 
 
 ## Table Prefixes
 
-If you are importing a site and the database has custom prefixes for your DB tables (e.g. anything other than wp\_), Pantheon will try to detect this on import. However, if you do a multi-step import, or upload a database manually, you may need to update the $table\_prefix variable in the wp-config.php file Pantheon bundles with your site for the application to correctly see those tables.
+If you are importing a site and the database has custom prefixes for your DB tables (e.g. anything other than wp\_), Pantheon will try to detect this on import. However, if you do a multi-step import, or upload a database manually, you may need to:
+
+ - Update the `$table_prefix` variable in the `wp-config.php` file,
+ - Update user metadata with `update wp_usermeta set meta_key = replace(meta_key, 'oldprefix_', 'wp_');`, replacing `oldprefix` with the previously used prefix.
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
