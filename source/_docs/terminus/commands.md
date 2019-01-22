@@ -45,7 +45,7 @@ If you would like additional information for a given command (e.g., available `-
         <td><strong md-highlight-text="searchCommand">{[{ command.name }]}</strong><br><small md-highlight-text="searchCommand">{[{ command.description }]}</small></td>
         <td>
             <li class="terminus-usage">
-            <span style="white-space:pre-line;"><small md-highlight-text="searchCommand">{[{ command.usage[0] }]}</small></span>
+            <span style="white-space:pre-line;"><small md-highlight-text="searchCommand">{[{ command.usage[0] }]}</small><br><small>{[{ command.definition.options.fields.description | formatFields }]}</small></span>
             </li>
         </td>
       </tr>
