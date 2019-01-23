@@ -3,6 +3,7 @@ title: New Site Plans FAQs
 description: Find answers to common questions related to Pantheon's new site plans and pricing changes.
 tags: [billing]
 categories: []
+searchboost: 70
 ---
 ## Impacted Sites
 New plans and pricing will impact new and existing sites purchased online via the Site Dashboard. Plan changes described on this page do not affect annual contract customers such as EDU+, Enterprise, Pantheon One, Elites and Resellers.

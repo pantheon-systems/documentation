@@ -2,6 +2,7 @@
 title: Pantheon Annual Billing
 description: Learn how you can save money by switching to annual billing.
 tags: [dashboard]
+searchboost: 70
 ---
 
 Pantheon now offers annual billing plans for all sites at all plan levels. When you switch to annual billing, you save compared to the monthly cost.
