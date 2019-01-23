@@ -170,6 +170,10 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 
 <!-- 3rd pane content -->
 <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+This configuration uses the `Redis_CacheCompressed` class for better performance. This requires the Redis plugin version 3.13 or later. For versions before 3.13, use `Redis_Cache` in step 4 instead.
+</div>
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 2. Add the [Redis](https://www.drupal.org/project/redis){.external} module from Drupal.org. You can install and enable the module from the command line using [Terminus](/docs/terminus):
 
