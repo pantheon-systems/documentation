@@ -47,7 +47,7 @@ Skipping this step will result in service interruption for existing sites that r
 
 Once you begin this process, you have:
 
- - 7 days to complete the challenge response. After that, you must issue a new challenge.
+ - 7 days to complete the challenge response. After that, you must create a new challenge.
  - 30 days to adjust DNS values.
 </div>
 
