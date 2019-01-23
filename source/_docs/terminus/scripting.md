@@ -92,7 +92,7 @@ Just like the example above, this example saves the output various Terminus comm
 PANTHEON_ORG="722c5f3b-....-6c8a"
 
 # Get a list of all sites in the org
-PANTHEON_SITES="$(terminus org:site:list -n '${PANTHEON_ORG}' --format=list --field=Name)"
+PANTHEON_SITES="$(terminus org:site:list -n ${PANTHEON_ORG} --format=list --field=Name)"
 
 # Name the CSV output file
 CSV_FILE='pantheon-site-php-versions.csv'
