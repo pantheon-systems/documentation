@@ -42,7 +42,7 @@ Pantheon also makes PHP [7.0](https://v70-php-info.pantheonsite.io/){.external},
 </p></div>
 
 ## Configure PHP Version
-Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. When using SFTP mode, navigate to the `code` directory. If the `pantheon.yml` file is not present, create one to look like the following:
+Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. Navigate to the `code` directory. If the `pantheon.yml` file is not present, create one to look like the following:
 
 ```yaml
 api_version: 1
