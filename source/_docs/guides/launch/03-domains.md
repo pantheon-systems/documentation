@@ -41,9 +41,14 @@ To pre-provision HTTPS, CAA records must either:
  - Not exist for the domain and its parent domains, or
  - Authorize Let's Encrypt.
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.</p>
+<div class="alert alert-danger" markdown="1">
+#### Warning {.info}
+Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.
+
+Once you begin this process, you have:
+
+ - 7 days to complete the challenge response. After that, you must create a new challenge.
+ - 30 days to adjust DNS values.
 </div>
 
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
@@ -55,8 +60,6 @@ To pre-provision HTTPS, CAA records must either:
     <div class="alert alert-info" markdown="1">
     #### Note {.info}
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
-
-    We recommend leaving the challenge file in place until the migration is complete. That way, if DNS is not updated within the 7 day window provided by Let's Encrypt, the certificate can be re-issued.
 
     If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin){.external} to generate DNS TXT records to validate domain ownership.
     </div>
