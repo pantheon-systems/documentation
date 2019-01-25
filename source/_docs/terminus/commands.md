@@ -12,8 +12,8 @@ image: terminus-thumbLarge
 searchboost: 100
 ---
 <div class="alert alert-info" markdown="1">
-<h4 class="info">Note</h4>
-If you would like additional information for a given command (e.g., available `--fields` or `--format` options) run the command with the `--help` option in your terminal.
+#### Note {.info}
+If you would like additional information for a given command (e.g., available `--format` options) run the command with the `--help` flag in your terminal.
 </div>
 
 <!--Note: The contents of the command reference table cannot be edited in the docs project. This table is automatically generated using Terminus (terminus list --format=json). Submit feedback and report issues related to the contents of this table on the Terminus repo: https://github.com/pantheon-systems/terminus/issues -->
@@ -45,7 +45,7 @@ If you would like additional information for a given command (e.g., available `-
         <td><strong md-highlight-text="searchCommand">{[{ command.name }]}</strong><br><small md-highlight-text="searchCommand">{[{ command.description }]}</small></td>
         <td>
             <li class="terminus-usage">
-            <span style="white-space:pre-line;"><small md-highlight-text="searchCommand">{[{ command.usage[0] }]}</small></span>
+            <span style="white-space:pre-line;"><small md-highlight-text="searchCommand">{[{ command.usage[0] }]}</small><br><small>{[{ command.definition.options.fields.description | formatFields }]}</small></span>
             </li>
         </td>
       </tr>

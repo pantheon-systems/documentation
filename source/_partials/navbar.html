@@ -354,6 +354,16 @@ terminusCommandsApp.filter('search', function() {
 }
 });
 
+//Replace commas with new lines, to be used when printing field descriptions
+terminusCommandsApp.filter('formatFields', [function() {
+    return function(string) {
+        if (!angular.isString(string)) {
+            return string;
+        }
+        return string.replace(":", ": \n").replace(/,/g, '\n');
+    };
+}])
+
 
 terminusCompareApp.config(function($interpolateProvider) {
   $interpolateProvider.startSymbol('{[{');
