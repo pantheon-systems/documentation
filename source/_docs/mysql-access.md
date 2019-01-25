@@ -81,7 +81,7 @@ Props to Aaron Bauman for writing [this script](https://gist.github.com/aaronbau
 
 ## SSH Tunneling
 
-Be default, MySQL connections made to Pantheon are encrypted:
+By default, MySQL connections made to Pantheon are encrypted:
 
 ```sql
 mysql> SHOW STATUS LIKE "Ssl_cipher";
