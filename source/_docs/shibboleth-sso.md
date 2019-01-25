@@ -162,7 +162,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 
     <div class="alert alert-info" role="alert" markdown="1">
     #### Note {.info}
-    Some SSO providers will fail to connect when the port number (`443`) is specified in `baseurlpath`. remove `:443` from this line as a troubleshooting step.
+    Some SSO providers will fail to connect when the port number (`443`) is specified in `baseurlpath`. Remove `:443` from this line as a troubleshooting step.
     </div>
 
 4. With configuration completed, commit the changes to your SimpleSAMLphp files:
