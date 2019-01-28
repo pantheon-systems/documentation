@@ -48,6 +48,7 @@ You will need to enter the following:
     * The SAML Request Binding (sent to the IdP from Auth0): `HTTP-Redirect`
     * The SAML Response Binding (how the SAML token is received by Auth0 from IdP): `HTTP-Post`
     * The NameID format: `unspecified`
+    * Optional: The `user_id` attribute may need to be configured to be sent manually. If this value is not already present, it should be set to match the `email` attribute.
     * The SAML assertion, and the SAML response can be individually or simultaneously signed.
     * Optional: Assertions can be encrypted with the following keys: [CER](https://pantheon.auth0.com/cer) | [PEM](https://pantheon.auth0.com/pem) | [PKCS#7](https://pantheon.auth0.com/pb7)
 
