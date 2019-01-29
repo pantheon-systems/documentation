@@ -39,5 +39,7 @@ If an IP address is returned, [configure your network settings to use Google Pub
 ###Port 2222 or Other Blocked Ports
 Make sure the port number is not blocked by your internal firewall. For example, to test whether port 2222 is blocked visit [http://portquiz.net:2222/](http://portquiz.net:2222/)
 
+If you are not able to access port 2222, you can try our [workaround])(/docs/port-2222).
+
 ##Test Connection on the Command Line
 We recommend using the command line when troubleshooting connection issues as GUIs can hide underlying errors. From the site Dashboard, copy the provided connection command for the desired service and run it in terminal.
