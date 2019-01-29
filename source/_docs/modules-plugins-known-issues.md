@@ -467,7 +467,7 @@ Pantheon has tools in place to monitor database queries:
 
 **Issue:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
-**Sulution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/docs/redirects/) for more information.
+**Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/docs/redirects/) for more information.
 <hr>
 
 ### [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/){.external}
