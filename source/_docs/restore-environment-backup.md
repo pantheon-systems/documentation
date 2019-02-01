@@ -38,11 +38,11 @@ From within the source environment, find the backup you want to restore and clic
 
 ![Temporary backup link](/source/docs/assets/images/dashboard/direct-download-archive.png)
 
-This provides a temporary private link directly from Amazon S3, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.
+This provides a temporary private link directly from Google Cloud Storage, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.
 
 If you want to download a backup using wget, put the provided temporary link in double quotes:
 
-    wget "https://pantheon-backups.s3.amazonaws.com..."
+    wget "https://storage.googleapis.com/gcs-pantheon-backups/..."
 
 ### Restore Database and Files
 To restore Database and Files, navigate to the target environment and click the **Workflow** tab. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup. Click **Import** for each backup part to restore.
