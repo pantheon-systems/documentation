@@ -18,7 +18,20 @@ If you need advice on architecting a solution, planning for the future, preparin
 
 
 ## Migrations
-Whether you are moving one or hundreds of sites to the platform, Pantheon Migration Services will help you get it done quickly. Our hands-on, white-glove migration services for organizations and agencies remove the burden of migrations, by migrating the sites for you so that you can concentrate on what matters most to your end users. We do all the heavy lifting and let you focus on delivering better, faster websites for your colleagues, constituents or clients. [Contact our migrations team](https://pantheon.io/migrations){.external} for details.
+Whether you are moving one or hundreds of sites to the platform, Pantheon Migration Services will help you get it done quickly. Our hands-on, white-glove migration services for organizations and agencies remove the burden of migrations, by migrating the sites for you so that you can concentrate on what matters most to your end users. We do all the heavy lifting and let you focus on delivering better, faster websites for your colleagues, constituents or clients. 
+
+We have established a strealined process that maximizes success. This process involves:  
+* [Contacting our migrations team](https://pantheon.io/migrations){.external} for details, or to initiate a migration.
+* Participating in a scoping call to gather info about the site(s) being migrated, identify the critical features, review the scope of the migration program and ensure that your project is good fit for our program
+* Finalizing the agreement
+* Participating in a kickoff call with all stakeholders in which we validate the data gathered, review the migration process and anticipated timeline, and identify the additional information an access details required.
+* Collecting additional information the team requires to undertake the migration. The time it takes to complete this step is entirely up to you, but can take as little as an hour.
+* Customizing and carrying out the migration wherein we establish a repeatable migration process with automated testing routine. During this phase you will have a direct line of communication with the migration team. The time required here depends a lot on the complexity of the migration and on the number of sites involved, but having migrated thousands of sites by now, we're getting pretty good at it!
+* User Acceptance Testing - or UAT  for short - is the step where you test the site(s) and report any issues you encounter, and the migration team investigates and resolves them. The time required for this phase mostly depends on the how long it takes you to get signoff from stakeholders on your side. Ideally we'd like to see it completed within 5 days.  
+* Launch Planning. Once all the UAT issues have been resolved, we start scheduling content, file, code resyncs, and DNS switchovers. During this phase we will do a final pre-flight review of your site(s) and may also carry out load tests, which we prefer to run about a week prior to launch.
+* Launching the site. Final content resyncs are completed, typically overnight, and our team is on-hand as you prior flip the DNS-switch.
+* Post-Launch UAT. We stick around as you test the site for the first day or two after launch. If any issues are identified during that time, they will be prioritized for resolution.
+
 
 | Service                     | Available with Gold, Platinum and Diamond |
 |:--------------------------- |:----------------------------------------- |
