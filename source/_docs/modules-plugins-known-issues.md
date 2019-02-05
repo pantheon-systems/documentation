@@ -516,6 +516,13 @@ Alternative plugins that have an XML sitemap feature that works well on the plat
 **Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
 <hr>
 
+### [Unbounce Landing Pages](https://wordpress.org/plugins/unbounce/){.external}
+**Issue**: Click to call conversions aren't tracking even if the pages are not cached.
+
+**Solution**: Workaround is to get their pages to work with the domain by setting up a CNAME and bypassing the whole WordPress route entirely. Setting-up a subdomain for the root domain and set up the CNAME pointing to unbouncepages.com as a solution outlined [here](https://documentation.unbounce.com/hc/en-us/articles/203661044-Connecting-Your-Domain-to-Unbounce){.external}.
+
+<hr>
+
 ### [UNLOQ Two Factor Authentication (2FA)](https://wordpress.org/plugins/unloq/){.external}
 **Issue**: `This widget does not work on this domain` error message shown after deploying plugin across environments on Pantheon. This is because the API credentials used on the original environment are being used on a new environment URL, which is not allowed by the plugin. This is by design.
 
