@@ -18,6 +18,12 @@ This doc describes how to manually patch your Drupal core.
 <p markdown="1">Use the [standard process to update core](/docs/core-updates/) if the security patch is available to be applied in the Site Dashboard. The advanced method described on this page is intended to be used when a security patch is not yet available as a one-click update in the Site Dashboard, or when handling merge conflicts.</p>
 </div>
 
+## SA-CORE-2018-006
+
+On October 17, 2018 Drupal released a [critical security patch](https://www.drupal.org/SA-CORE-2018-006){.external} for Drupal 7 and 8.
+
+If you need to keep your site on Drupal 8.5.x instead of moving to 8.6 or later, you can apply [this patch](https://patch-diff.githubusercontent.com/raw/pantheon-systems/drops-8/pull/239.patch).
+
 ## SA-CORE-2018-004
 
 On April 25th 2018 Drupal release a [**highly critical** security patch](https://www.drupal.org/SA-CORE-2018-004){.extenral} to prevent remote code execution.
