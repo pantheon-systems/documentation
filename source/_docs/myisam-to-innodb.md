@@ -144,6 +144,7 @@ Make sure you have:
 
 - PHP installed on your computer
 - Your database connection info for your Dev environment from your Site's Dashboard
+- Copy the script below and save it in a file with a `.php` extension in your home directory.
 
 Here is the command line script:
 
@@ -197,7 +198,7 @@ die(0);
 Here are the parameters you will need to configure before running the script:
 <dl>
 	<dt>host</dt>
-	<dd>This is the name of the machine your db is running on. If you are a Pantheon customer localhost is wrong. Get the correct host and paste it in there to replace localhost.</dd><br>
+	<dd>This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/docs/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.</dd><br>
   <dt>port</dt>
   <dd>This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.</dd><br>
   <dt>user </dt>
