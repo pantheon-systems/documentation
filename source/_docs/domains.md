@@ -61,7 +61,7 @@ Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to t
 
 2. If no domains have been added yet, click **Connect Live Domain**:
 
-    ![Adding a first domain to the Site Dashboard](/source/docs/assets/images/dashboard/add-new-domain.png)
+    ![Adding a first domain to the Site Dashboard](/source/docs/assets/images/dashboard/add-first-domain.png)
     
    If one (or more) domains have already been added, click **Connect Domain**:
    
