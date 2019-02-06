@@ -58,8 +58,7 @@ This response can also occur on Drupal 8 sites using the cacheability debug serv
 ### Error 503 Service Unavailable
 This error generally occurs when a request timeouts. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/docs/timeouts/).
 
-If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP Basic Auth (the security username/password), then that's a misleading message; the best workaround is to disable the security option for the environment for testing.
-
+If you get a generic Service Unavailable and you're using AJAX when HTTP Basic Auth is enabled (the security username/password), then that's a misleading message. The best workaround is to disable the security option for the environment for testing.
 
 ### Pantheon 504 Target Not Responding
 "The web page you were looking for could not be delivered." No php workers are available to handle the request. These errors occur when PHP processing resources for your site are exhausted. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP workers will free up to serve these requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line. For more information, jump to [Overloaded Workers](#overloaded-workers).
