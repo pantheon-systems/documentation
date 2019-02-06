@@ -32,11 +32,10 @@ drush_version: 8
 ```
 Now your site’s Drush version is managed via `pantheon.yml`, so it’s in version control and deployed along with the rest of your code.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">
-If the `pantheon.yml` file does not exist, please create it. If a `pantheon.upstream.yml` file exists, please do not edit it. It is used by the upstream updates repository and should not be edited.
-</p></div>
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.yml` file exists, please do not edit it. It is used by the upstream updates repository and will cause a merge conflict if modified.
+</div>
 
 ### Available Drush Versions
 Pantheon currently supports Drush 8. While Drush 5 and 7 are available if needed, they are listed as [unsupported](http://docs.drush.org/en/master/install/#drupal-compatibility){.external} by the Drush maintainers, and should be avoided unless absolutely necessary.
