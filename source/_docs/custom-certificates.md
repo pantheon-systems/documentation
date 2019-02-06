@@ -101,6 +101,10 @@ Nope! You can use the a single certificate to cover multiple domains spread acro
 
 Please allow two business days to get a CSR and load the certificate.
 
+### How do I renew my custom certificate? 
+
+Before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for <a href="docs/custom-certificates/#option-2-manually-managed-custom-certificates" data-proofer-ignore>bringing a custom certificate</a>).
+
 ### What about sites purchased online?
 
 Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on <a href="/docs/https/#can-i-bring-my-own-certificate" data-proofer-ignore>how to terminate TLS through a 3rd-party</a>.
