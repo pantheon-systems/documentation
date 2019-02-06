@@ -4,7 +4,7 @@ description: Using SimpleSAMLphp to configure a single sign-on system for your D
 tags: [siteintegrations, security]
 categories: [automate]
 ---
-Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.15/simplesamlphp-sp){.external}. This documentation contains only the necessary extra steps to get it working on Pantheon with Drupal or WordPress.
+Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.16/simplesamlphp-sp){.external}. This documentation contains only the necessary extra steps to get it working on Pantheon with Drupal or WordPress.
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
@@ -36,11 +36,11 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 
 <div class="alert alert-export" role="alert">
 <h4 class="info">Version Number</h4>
-<p markdown="1">In the code examples below, replace `15.x` with the downloaded version of SimpleSAMLphp.
+<p markdown="1">In the code examples below, replace `16.x` with the downloaded version of SimpleSAMLphp.
 </p>
 </div>
 
-1. Download [SimpleSAMLphp version 1.15.x](https://simplesamlphp.org/){.external} and add it to your git repository as `/private/simplesamlphp-1.15.x`.
+1. Download [SimpleSAMLphp version 1.16.x](https://simplesamlphp.org/){.external} and add it to your git repository as `/private/simplesamlphp-1.16.x`.
 
   ```bash
   wget https://simplesamlphp.org/download?latest -O simplesamlphp-latest.tar.gz
@@ -50,15 +50,15 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
   git commit -am "Adding SimpleSAML"
   ```
 
-2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.15.x/www`:
+2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.16.x/www`:
 
   ```bash
-  ln -s ./private/simplesamlphp-1.15.x/www ./simplesaml
+  ln -s ./private/simplesamlphp-1.16.x/www ./simplesaml
   git add simplesaml
   git commit -am "Adding SimpleSAML symlink"
   ```
 
-3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1){.external} as needed, and add them to the repository in `private/simplesamlphp-1.15.x/cert`.
+3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1){.external} as needed, and add them to the repository in `private/simplesamlphp-1.16.x/cert`.
 </div>
 
 <!-- 2nd pane content -->
