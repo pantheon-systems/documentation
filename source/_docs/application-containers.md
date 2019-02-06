@@ -4,7 +4,7 @@ description: Information on Pantheon's container-based, grid-model infrastructur
 tags: [infrastructure]
 categories: []
 ---
-Pantheon's infrastructure includes a number of layers. Our edge layer provides robust caching to help your site perform quickly under a traffic spike, but when it comes to generating unique pages and serving logged-in users, the real horsepower is in the Runtime Matrix, which is our way of provisioning and scaling application containers.
+Pantheon's infrastructure includes a number of layers. Our edge layer provides robust caching to help your site perform quickly under a traffic spike, but when it comes to generating unique pages and serving logged-in users, the real horsepower is in the [Runtime Matrix](https://pantheon.io/features/elastic-hosting){.external}, a distributed grid of over a million Linux containers running PHP and NGINX that allow us to provision and scale application containers for your site.
 
 ## Application Containers
 
