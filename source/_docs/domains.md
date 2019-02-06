@@ -57,15 +57,25 @@ Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to t
 
 ### Add a Custom Domain
 
-1. From your site dashboard, for the environment you want the domain to point to (usually Live), click on <em class="fa fa-home"></em>**Domains**, and enter your domain name:
+1. From your site dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 
-    ![Adding a new domain to the Site Dashboard](/source/docs/assets/images/dashboard/domains-add-new.png)
+2. If no domains have been added yet, click **Connect Live Domain**:
 
-2. Click **Show DNS Recommendations** to see the DNS values suggested:
+    ![Adding a first domain to the Site Dashboard](/source/docs/assets/images/dashboard/add-new-domain.png)
+    
+   If one (or more) domains have already been added, click **Connect Domain**:
+   
+    ![Adding an additional domain to the Site Dashboard](/source/docs/assets/images/dashboard/add-additional-domains.png)
 
-    ![DNS Values for new domain](/source/docs/assets/images/dashboard/domain-added.png)
+3. Enter the domain you'd like to add in the "Enter domain to connect" field, then click **Connect Domain**:
 
-3. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/docs/dns/).
+    ![Adding a domain to the Site Dashboard](/source/docs/assets/images/dashboard/connect-custom-domain.png)
+
+4. After adding your domain, you'll be automatically taken to the domain's "Details" page where you will see both the current DNS records detected (the "Detected Values"), as well as the values to be added at your DNS host ("Required Values"):
+
+    ![Custom domain Details page](/source/docs/assets/images/dashboard/details-page.png)
+
+5. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/docs/dns/).
 
 ## Primary Domain
 Pantheon uses the term **primary domain** to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other domain connected to the environment) all get redirected to `www.example.com`. This assumes that you have added **both** `example.com` and `www.example.com` to the Site Dashboard.
