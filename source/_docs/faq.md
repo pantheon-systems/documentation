@@ -96,7 +96,7 @@ The platform will use Drush to run cron on an hourly basis automatically. More f
 
 ### How do I correct Pantheon URLs being indexed by search engines?
 
-This can occur if hardcoded links are found in the HTML source of your pages. To correct this, WordPress sites should run a [search and replace using WP-CLI](/docs/wp-cli/) as mentioned in the [WordPress Quick Tip: Search and Replace with WP-CLI](https://pantheon.io/blog/wordpress-quick-tip-search-and-replace-wp-cli) blog post to change the platform domains with your custom domain, and then [add a redirect to the primary domain](/docs/guides/launch/redirects/).
+This can occur if hardcoded links are found in the HTML source of your pages. To correct this, WordPress sites should run a [search and replace using WP-CLI](/docs/wp-cli/) as mentioned in the [WordPress Quick Tip: Search and Replace with WP-CLI](https://pantheon.io/blog/wordpress-quick-tip-search-and-replace-wp-cli/){.external} blog post to exchange the platform domains with your custom domain, and then [add a redirect to the primary domain](/docs/guides/launch/redirects/).
 
 ### How does cron work with WordPress on Pantheon?
 
