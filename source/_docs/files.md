@@ -4,7 +4,7 @@ description: Detailed information on how to access and optimize the Pantheon fil
 tags: [infrastructure, sftpfiles]
 categories: []
 ---
-Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files:
+Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title=".gitignore" data-content="The <a class='external' href='https://git-scm.com/docs/gitignore'>.gitignore file</a> is located at the root of the site's codebase and instructs Git which paths should be ignored."><em class="fa fa-info-circle"></em></a>:
 
 - [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore){.external}
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore){.external}
