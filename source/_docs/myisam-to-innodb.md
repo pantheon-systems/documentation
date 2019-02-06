@@ -20,19 +20,19 @@ Run this from the MySQL command prompt to convert a table from MyISAM to InnoDB:
 ALTER TABLE table_name ENGINE=InnoDB;
 ```
 
-##Simple PHP Script
+## Simple PHP Script
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p>You must be a Pantheon customer to use this script.</p></div>
 
-1. Save the code in a file with the extension .php and SFTP it up to your site.
-2. Place it in the code directory of your website.
+1. Save the code in a file with the extension `.php` and add it to your site root.
+2. Upload the new PHP file to your site via SFTP or Git.
 3. Point a browser to your newly created script that's located in the root directory of your Dev environment:
 
-        https://your.dev.url.gotpantheon.com/filename.php
+        https://dev-yoursite.pantheonsite.io/filename.php
 
-That's all there is to it—the script will do all the work.
+That's all there is to it — the script will do all the work.
 
 Here's the browser version of the script:
 
