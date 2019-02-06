@@ -58,7 +58,7 @@ This response can also occur on Drupal 8 sites using the cacheability debug serv
 ### Error 503 Service Unavailable
 This error generally occurs when a request timeouts. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/docs/timeouts/).
 
-If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP Basic Auth (the security username/password), then that's a misleading message; the best workaround is to disable the security option for the environment for testing.
+If you get a generic Service Unavailable and you're using AJAX when HTTP Basic Auth (the security username/password), then that's a misleading message; the best workaround is to disable the security option for the environment for testing.
 
 
 ### Pantheon 504 Target Not Responding
