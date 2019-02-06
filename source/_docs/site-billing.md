@@ -65,6 +65,9 @@ After [downgrading from a paid plan to Sandbox](/docs/site-plan/#cancel-current-
 
 ## Frequently Asked Questions
 
+### What forms of payment are accepted? 
+Sites purchased online through the Pantheon Site Dashboard accept credit card payments only. Pantheon does not currently accept alternative methods of payment for online site purchases (e.g., checks, PayPal, etc.). 
+
 ### Does Pantheon accept PayPal?
 Pantheon currently does not accept PayPal.
 
