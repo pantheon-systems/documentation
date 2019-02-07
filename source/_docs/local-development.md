@@ -180,7 +180,7 @@ This file is ignored by the `.gitignore` file  in [WordPress](https://github.com
 
 The following can be used as a starting point for the `wp-config-local.php` file.  You will need to replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated using this [link](https://api.wordpress.org/secret-key$){.external}.
 
-```
+```php
 <?php
 define('DB_NAME',     'database_name_here');
 define('DB_USER',     'username_here');
@@ -212,7 +212,7 @@ define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
 
 1. Drupal 7 users will need to create a local settings file (e.g.`settings.local.php`) and include it within their `settings.php` file:
 
-    ```
+    ```php
     /**
      * Include a local settings file if it exists. D7 only
      */
