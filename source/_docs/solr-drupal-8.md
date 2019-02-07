@@ -100,6 +100,15 @@ The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older v
 The following code changes are required before Solr can be safely uninstalled and disabled:
 {% include("content/remove-addons/d8-solr.html")%}
 
+## Troubleshooting
+
+### Solr Verification Check
+Because we are posting the 4.x schema to a 3.x solr instance, the schema verification check can fail and prevent indexing. You can disable the schema check by adding the following line to the `public function defaultConfiguration` block:
+
+```php
+$conf['skip_schema_check'] = TRUE;
+```
+
 ## See Also
 
 * [Search API Docs](https://www.drupal.org/node/1250878).
