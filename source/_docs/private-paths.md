@@ -40,6 +40,12 @@ else {
 ```
 This Drupal example reads the key from the private file `stripe_live.json` only when the request is made from the Live environment on Pantheon.
 
+### Private Path for Files Plugins
+
+WordPress does not have a core feature to configure a private path folder for file uploads. There are several plugins on WordPress.org and projects on Drupal.org that will help protect direct access to files in the files area. However, these plugins commonly require an Apache HTTP server *.htaccess* (`mod_rewrite`) rule. Our NGINX servers <a href="/docs/platform-considerations/#htaccess" data-proofer-ignore>do not support *.htaccess* rules</a>.
+
+Site developers could author their own custom solution to provide authentication, access checks, and ultimately use PHP's [readfile()](http://php.net/readfile/){.external} or [fpassthru()](http://php.net/fpassthru/){.external} functions to read files from the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) areas, respectively, and then output them to the authenticated web user's browser.
+
 ### Additional Drupal Configuration
 
 These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
