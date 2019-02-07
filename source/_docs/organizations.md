@@ -19,9 +19,9 @@ After you create an organization, you can invite team members, add existing site
 
 ## Organization-Site Association
 
-Organizations can either **own** or **support** sites. Enterprise, Reseller, OEM, and EDU+ organizations own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations support sites. In the Team menu on the Site Dashboard, owning organizations are listed at the top as "Owner", while supporting organizations are listed at the bottom.
+Organizations can either **own** or **support** sites. Enterprise, Reseller, OEM, and EDU+ organizations **own** sites. When a site is owned by an organization, it will appear on the dashboard's "Sites" tab, be available to People in the organization, as well as be accessible privileged users via Terminus. Organizations will be charged for any owned sites that have been associated with paid plans (not sandboxes). Association also provides the site with extra features based on the organization's service plan.
 
-When a site is associated with an organization, it provides all privileged users in the organization with access to the site. Association also provides the site with extra features based on the organization service plan.
+Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations **support** sites. In the Team menu on the Site Dashboard, owning organizations are listed at the top as the "Site Owner", while supporting organizations are listed at the bottom under "Supporting Organizations". This method of association is commonly used to provide group access to partner teams – that utilizes the existing roles of the supporting organization. Sites with paid plans that are associated in this manner are not billed to the "Supporting Organization", but instead are charged to the organization that owns them.
 
 ## The Organization Dashboard
 Access the [Organization Dashboard](/docs/organization-dashboard) in the following ways:
