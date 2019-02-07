@@ -270,7 +270,7 @@ terminus site:clone <source>.<env> <destination>.<env>
 </div>
 
 ### Does the WordPress migration cause downtime? 
-No, there is no downtime expected as part of the migration process. For detals, see related [BlogVault resource (question #13)](https://blogvault.net/migration-using-blogvault-faq/). Performance implications to a live site are similar to running a backup for the site. 
+No, there is no downtime expected as part of the migration process. For detals, see related [BlogVault resource (question #13)](https://blogvault.net/migration-using-blogvault-faq/){.external}. Performance implications to a live site are similar to running a backup for the site. 
 
 
 ### How do I migrate a local site to Pantheon?
