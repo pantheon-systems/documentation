@@ -14,15 +14,8 @@ While many of these steps are followed through the normal course of an Agency-Cl
 
 {% include("content/add-supporting-org.html")%}
 
-<<<<<<< Updated upstream:source/_docs/add-client-site.md
-## Transfer Ownership and Billing for the Site to an Agency
-
-{% include("content/transfer-ownership-billing-steps.html")%}
-
-## Send an Invitation to Pay to Your Client
-=======
 ## Send an Invitation to Pay
->>>>>>> Stashed changes:source/_docs/add-bill-client.md
+
 The Agency should follow these steps:
 
 From the <span class="glyphicons glyphicons-group"></span> **Organization's** Dashboard, select the site from the [Sites list](/docs/organizations/#sites).
