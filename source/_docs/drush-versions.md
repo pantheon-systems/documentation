@@ -6,7 +6,7 @@ categories: [drupal]
 ---
 By default, Pantheon runs Drush 8 on newly created Drupal sites. Drush 8 is compatible with Drupal 6, 7, and 8.
 
-The Drush version is set when the site is created. Sites created a few years ago or more may use an older version of Drush that is incompatible with later versions of PHP. Updating Drush can be accomplished by [a simple addition to your pantheon.yml file](#configure-drush-version).
+The Drush version is set when the site is created. Sites created before Nov 4, 2015 (and Drupal 8 sites created before Sep 3, 2015) use an older version of Drush that is incompatible with later versions of PHP. You can [check your current Drush version via Terminus](docs/drush-versions/#verify-current-drush-version). Updating Drush can be accomplished by [a simple addition to your pantheon.yml file](/docs/drush-versions/#configure-drush-version) below.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
