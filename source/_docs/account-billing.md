@@ -35,6 +35,7 @@ The credit card history will show the last 100 transactions.
 2. Use the **Update Card** button when you would like to:
    * Update an existing card after it has expired
    * Switch billing to a new card for sites in bulk
+   * Update billing address
 
 Changes made here will apply across all sites associated with the credit card profile.
 
