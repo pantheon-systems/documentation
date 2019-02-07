@@ -23,7 +23,9 @@ Pantheon promotes and respects internet standards, and for MIME types, we treat 
 See the Internet Assigned Numbers Authority [Media Type List](https://www.iana.org/assignments/media-types/media-types.xhtml).
 
 ##Workaround
-Depending on the file type, you can write a small PHP wrapper to read the file, set the MIME type header, and send back the file with any MIME type you want. Be sure to add caching headers to cache on the edge so that PHP doesn’t have to do too much reading/writing. The example below outputs a given file with a `hello/world` MIME type.
+Depending on the file type, you can write a small PHP wrapper to read the file, set the MIME type header, and send back the file with any MIME type you want. 
+
+The example below outputs a given file with a `hello/world` MIME type and includes browser caching headers (default of 3600 seconds) to reduce load on the server 
 
 ```php
 <?php
@@ -45,7 +47,7 @@ function serveFileCustomMIMEType($file, $mimeType = 'text/plain', $cacheTime = 3
     header('Content-Description: File Transfer');
     header('Content-Type: ' . $mimeType);
     header('Content-Disposition: attachment; filename=' . $fileName);
-	  header('Content-Transfer-Encoding: binary');
+    header('Content-Transfer-Encoding: binary');
     header('Cache-Control: public, max-age=' . $cacheTime);
     header('Last-Modified: ' . $modified);
     header('Content-Length: ' .$size);
