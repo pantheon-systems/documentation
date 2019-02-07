@@ -256,6 +256,8 @@ If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>,
   <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-set">Copy</button>
   <figure><pre id="upstream-set"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My Custom Upstream"</code></pre></figure>
   </div>
+  
+You can use any valid identifier (upstream name, upstream machine name, upstream UUID) returned in `terminus upstream:list` to set a new upstream. For example, the upstream name "My Custom Upstream" is used above. 
 
 As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.
 
