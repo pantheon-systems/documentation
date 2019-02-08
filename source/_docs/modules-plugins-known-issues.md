@@ -202,19 +202,19 @@ This will move the temporary upload destination from the individual server mount
 <hr>
 
 ### [reCAPTCHA](https://www.drupal.org/project/recaptcha){.external}
-**Issue 1**: If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
+**Issue 1:** If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
 
-**Solution 1**: Override the default arg_separator.output value in `settings.php` by adding the following line:
+**Solution:** Override the default arg_separator.output value in `settings.php` by adding the following line:
 
 ```
 ini_set('arg_separator.output', '&');
 ```
 
-**Issue 2**: On non-live environments, reCAPTCHA returns the error, "ERROR for site owner: Invalid domain for site key."
+**Issue 2:** On non-live environments, reCAPTCHA returns the error, "ERROR for site owner: Invalid domain for site key."
 
-**Solution 1 for Issue 2**: Add more domains to your Google reCAPTCHA configuration. Add `dev-<sitename>.pantheonsite.io` and `test-<sitename>.pantheonsite.io` to the site. This is set in [Google's reCAPTCHA admin panel](https://www.google.com/recaptcha/admin).
+**Solution:** Add more domains to your Google reCAPTCHA configuration. Add `dev-<sitename>.pantheonsite.io` and `test-<sitename>.pantheonsite.io` to the site. This is set in [Google's reCAPTCHA admin panel](https://www.google.com/recaptcha/admin){.external}.
 
-**Solution 2 for Issue 2**: Disable the reCAPTCHA on non-live. In Drupal 7, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
+**Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal 7, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
 
 ```
 // Deactivate reCAPTCHA if we're not running on the live site - it doesn't work if the domain name is invalid. Message "ERROR for site owner: Invalid domain for site key" is displayed.
