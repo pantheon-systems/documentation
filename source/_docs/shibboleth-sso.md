@@ -214,3 +214,6 @@ For more details, including additional plugin configuration options, [please see
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
 
 The current version of the SimpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009){.external} in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537){.external} looks to be the best solution until the fix is accepted into an official project release.
+
+### WordPress Site Networks (multisite)
+SimpleSAMLphp does not work with WordPress multisite networks because the simpleSAMLphp redirects get intercepted and rerouted to 404s by the CMS. Site Network users can utilize the OneLogin SAML PHP library that comes bundled with Pantheon's [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin.
