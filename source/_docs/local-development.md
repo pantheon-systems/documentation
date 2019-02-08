@@ -176,11 +176,43 @@ Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)]
 
 This file is ignored by the `.gitignore` file  in [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore#L3) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore#L8) so that local configurations do not get pushed to Pantheon. Simply create the file on your local computer, and manage configurations accordingly.
 
+#### Example `wp-config-local.php` File
+
+The following can be used as a starting point for the `wp-config-local.php` file which needs to be saved in the same location of your `wp-config.php` file.  You will need to replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key$){.external}.
+
+```php
+<?php
+define('DB_NAME',     'database_name_here');
+define('DB_USER',     'username_here');
+define('DB_PASSWORD', 'password_here');
+define('DB_HOST',     'localhost');
+define('DB_CHARSET',  'utf8');
+define('DB_COLLATE',  '');
+
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
+
+define('WP_DEBUG',         true);
+define('WP_DEBUG_LOG',     true);
+define('WP_DEBUG_DISPLAY', true);
+
+define('WP_AUTO_UPDATE_CORE', false);
+
+define('WP_HOME',    'http://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+```
+
 ### Drupal 7
 
 1. Drupal 7 users will need to create a local settings file (e.g.`settings.local.php`) and include it within their `settings.php` file:
 
-    ```
+    ```php
     /**
      * Include a local settings file if it exists. D7 only
      */
