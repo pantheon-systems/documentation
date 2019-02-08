@@ -25,7 +25,7 @@ See the Internet Assigned Numbers Authority [Media Type List](https://www.iana.o
 ##Workaround
 Depending on the file type, you can write a small PHP wrapper to read the file, set the MIME type header, and send back the file with any MIME type you want. 
 
-The example below outputs a given file with a `hello/world` MIME type and includes browser caching headers (default of 3600 seconds) to reduce load on the server 
+The example below outputs a given file with a `hello/world` MIME type and includes browser caching headers (default of 3600 seconds) to reduce load on the server:
 
 ```php
 <?php
