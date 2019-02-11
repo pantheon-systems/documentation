@@ -13,7 +13,7 @@ Pantheon is dedicated to a positive and harassment-free community experience for
 
 ## Issues - Searching and Creating
 
-Before you edit or create a doc, search [open issues](https://github.com/pantheon-systems/documentation/issues) to make sure there isn't an existing issue tracking work to resolve the issue you're trying to resolve. If there is, feel free to contribute to the existing discussion. If there isn't an issue, create one and add an outline for the article you want to create, or explain the issue and resolution for existing content. When possible, fill out as much information as possible requested in the Issue Template.
+Before you edit or create a doc, search [open issues](https://github.com/pantheon-systems/documentation/issues/) to make sure there isn't an existing issue tracking work related to the issue you're trying to resolve. If there is, feel free to contribute to the existing discussion. If there isn't an issue, create one and add an outline for the article you want to create, or explain the issue and resolution for existing content. When possible, fill out as much information as possible requested in the Issue Template.
 
 ### Titles and Descriptions
 When creating issues, add a clear title and description. Issues should contain relevant information e.g., the document title, the information that is incorrect or outdated and your suggestion on how to fix it, reasons why method A is better than method B, and so on.
@@ -26,7 +26,7 @@ Description: The document currently suggests using `XYZ` commands, but I get the
 
 Pantheon provides a Docker image with which you can test your local edits. See [Local Setup](<README.md#local-setup-optional>) for details.
 
-Branch names should start with the corresponding issue number followed by a brief description. If no issues exists, [you can create one](https://github.com/pantheon-systems/documentation/issues/new) first, or proceed without it. For example, `3830-add-branch-guidelines-to-contributing-md`.
+Branch names should start with the corresponding issue number followed by a brief description. If no issues exists, [you can create one](https://github.com/pantheon-systems/documentation/issues/new?title=New%20Doc%20Proposal%20&body=Priority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Title%0A%0A%0A%23%23%20Description%0A%0A%0A%23%23%20Outline%0A%0A%0A%23%23%20Expected%20Audience%0A%0A%0A%23%23%20Path%0A(e.g.%20%60source%2Fdocs%2Farticles%2Fsites%2Fcode%60%20or%20%60source%2Fdocs%2Farticles%2Fwordpress%60)&labels=new%20doc) first, or proceed without it. For example, `3830-add-branch-guidelines-to-contributing-md`.
 
 ### Updating Header and Subheaders
 Headers and Subheaders render as H2 and H3 tags when the site is published. These tags automatically generate anchors which can be relatively linked throughout the site. When creating or editing, avoid using numbers and special characters. If used, the URL would either need to be encoded or ignored from html-proofer tests using the `data-proofer-ignore` attribute.
