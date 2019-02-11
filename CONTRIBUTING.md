@@ -13,18 +13,14 @@ Pantheon is dedicated to a positive and harassment-free community experience for
 
 ## Issues - Searching and Creating
 
-Before you edit or create a doc, search [open issues](https://github.com/pantheon-systems/documentation/issues) to make sure you can't find anything related to what you want to work on. If there isn't an issue, create one and add an outline for the article you want to create. This allows contributors to get some initial feedback.
+Before you edit or create a doc, search [open issues](https://github.com/pantheon-systems/documentation/issues) to make sure there isn't an existing issue tracking work to resolve the issue you're trying to resolve. If there is, feel free to contribute to the existing discussion. If there isn't an issue, create one and add an outline for the article you want to create, or explain the issue and resolution for existing content. When possible, fill out as much information as possible requested in the Issue Template.
 
-###Titles and Descriptions
+### Titles and Descriptions
 When creating issues, add a clear title and description. Issues should contain relevant information e.g., the document title, the information that is incorrect or outdated and your suggestion on how to fix it, reasons why method A is better than method B, and so on.
 
 **Example**:
 Title: Apache Solr doc - Terminus command is not working
-Description: The document currently suggests using XYZ commands, but I get the following error (insert error message). The fix is to use XYZ commands.
-
-###Labels
-
-Add labels to issues by clicking the gear in the sidebar on the right. Labels are used to signify priority, category, and to help filter existing issues. For example, if a doc is incorrect, the label 'Doc Defect' should be applied.
+Description: The document currently suggests using `XYZ` commands, but I get the following error (insert error message). The fix is to use `ABC` commands.
 
 ## Edit and Test Locally
 
@@ -92,6 +88,10 @@ Only the following tags should be included (case sensitive):
 
 If you feel that another tag should be created, indicate the suggestion within your pull request and a moderator will review.
 
+### Style Guide
+
+Review our [Style Guide](https://pantheon.io/docs/style-guide/) for more detailed information on the Pantheon voice and style, and examples of the formatting we use for notes & warnings, code blocks, etc.
+
 ### Contributors
 Create a contributor profile within your **first** contribution. Fill out the information below and add it to the [`sculpin_site.yml`](/app/config/sculpin_site.yml) file. Commit this change alongside your new guide.
 ```
@@ -116,19 +116,21 @@ When you're done making changes, [submit a pull request](https://github.com/pant
 
 Some things to follow to help increase the chance that your pull request will be accepted:
 
-* Follow our [style guide](https://github.com/pantheon-systems/documentation/blob/master/style-guide.md).
+* Follow our [style guide][style].
 * Write a [good commit message][commit].
 * Build and test locally to make sure everything looks good. Refer to [README](https://github.com/pantheon-systems/documentation/blob/master/README.md) for detailed instructions.
 
-[style]: https://github.com/pantheon-systems/documentation/blob/master/style-guide.md
-[commit]: http://chris.beams.io/posts/git-commit/
 
 ## Moderator Expectations
 
-Moderators will review and comment on pull requests within three business days. We may suggest changes, improvements, or alternatives in which case the original contributor will be tagged directly so follow-up instructions are clear. There may be times where moderators will make commits to your fork directly for clarity and/or alignment with our [style guide](https://github.com/pantheon-systems/documentation/blob/master/style-guide.md).
+Moderators will review and comment on pull requests. We may suggest changes, improvements, or alternatives in which case the original contributor will be tagged directly so follow-up instructions are clear. There may be times where moderators will make commits to your fork directly for clarity and/or alignment with our [style guide][style].
 
 ## Additional Resources
 
 * [General GitHub Documentation](http://help.github.com/)
 * [GitHub Pull Request Documentation](http://help.github.com/send-pull-requests/)
-* [#pantheon IRC channel on freenode.net](http://irc.netsplit.de/channels/details.php?room=%23pantheon&net=freenode)
+* [Pantheon Power Users Group on Slack](https://pantheon.io/docs/power-users/)
+
+[style]: https://github.com/pantheon-systems/documentation/blob/master/style-guide.md
+[commit]: http://chris.beams.io/posts/git-commit/
+
