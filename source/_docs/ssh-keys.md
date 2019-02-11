@@ -111,5 +111,5 @@ This error occurs when a user is attempting to make a direct connection to Panth
 Password requests may still occur after adding an SSH key to your Pantheon account if the corresponding key is not found by your local ssh-agent. To resolve, add your SSH key to the ssh-agent using the following command, replacing `id_rsa` with the name of your private key, if different:
 
 ```bash
-ssh-add -K ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_rsa
 ```
