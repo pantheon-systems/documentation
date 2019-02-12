@@ -93,13 +93,47 @@ The command `service-level:set` has been replaced with `plan:set`. An example us
 terminus plan:set $SITE.$PLAN
 ```
 
-In the example above, `$SITE` can be set to the site name, and `$PLAN` can be a plan SKU or UUID. Available plans are listed using `terminus plan:list $SITE`
+In the example above, `$SITE` can be set to the site name, and `$PLAN` can be a plan SKU or UUID. Available plans are listed using `terminus plan:list $SITE`.
 
 ## New Commands
 
-##See Also
+The following commands are new to Terminus as of version 2.0:
 
-If you can, end your doc with links to external resources that can be used to improve the reader's comprehension, or to guides on logical next steps in a common development workflow.
+ - `plan:list`: Requiring a site name or UUID as a value, this returns a list of plans available to that site.
+ - `plan:set`: Requiring a site name or UUID and a plan name or SKU as values, this changes the named site to the plan size named.
 
- - [An internal guide with a relative link](/docs/get-started)  
- - [An external guide with a full URL](http://writing.rocks/)
+## Additional Changes
+
+The changes to these commands' behavior may affect existing integrations. For a complete list of all changes, see the [changelog](/docs/terminus/updates/#changelog).
+
+ - `env:clone-content`
+   - Now checks its target environment for initialization and will emit an error instead of erring after the operation fails.
+ - `site:team:remove`
+   - Now emits an error upon failure. It formerly emitted a notice.
+ - `site:upstream:set`
+   - Now emits an error if your user hasn't sufficient authority to run it, and will not attempt to run the operation.
+ - `upstream:list`
+   - Orders the pending updates in chronological order.
+ - `upstream:updates:apply`
+   - No longer gives a second, redundant log.
+ - `org:site:list`
+   - Has new `plan_name` field being emitted.
+   - No longer returns `service_level`.
+   - Now emits a warning when empty. It previously emitted a notice-level log when empty.
+ - `site:org:list`
+   - Now emits a warning when empty. It previously emitted a notice-level log when empty.
+ - `payment-method:list` now emits a warning when empty. It previously emitted a notice-level log when empty.
+ - `site:create`
+   - Has a new `--region` option.
+ - `site:info`
+   - Has new `plan_name` field being returned.
+   - No longer returns `service_level`.
+ - `site:list`
+   - Has new `region` and `plan_name` fields being emitted.
+   - No longer returns `service_level`.
+   - Now emits a warning when empty. It previously emitted a notice-level log when empty.
+
+## See Also
+
+ - [The Terminus Manual](/docs/terminus/)
+ - [Terminus on GitHub](https://github.com/pantheon-systems/terminus){.external}
