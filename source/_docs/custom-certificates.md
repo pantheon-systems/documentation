@@ -75,6 +75,9 @@ A **Certification Authority Authorization** (CAA) record is used to specify whic
 
 To help generate CAA records, please see the free online tool: <https://sslmate.com/caa/>
 
+CAA records configured for the root domain (e.g., `example.com`) are inherited by subdomains (e.g., `www.example.com`, `blog.example.com`, etc.). Disabling Let's Encrypt for the root domain will disable subdomains.
+
+
 ## Technical Specifications
 
 |                                                                       | Legacy                    | Global CDN with Let's Encrypt   | Global CDN with a Custom Certificate  |
