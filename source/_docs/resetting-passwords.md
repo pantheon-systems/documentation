@@ -7,9 +7,17 @@ categories: []
 ## Pantheon Dashboard Login
 If you need to reset your Pantheon Dashboard user password,logout and [visit this page](https://dashboard.pantheon.io/reset-password) and follow the instructions.
 
+## Site User Logins
 
-## Drupal Site User Login
+If you need to reset your password for your account on your Drupal or WordPress site, you have three options:
 
+A) Use the password reset link provided by Drupal or WordPress (easiest).
+B) Use Terminus to set your password via either Drush or WP-CLI.
+C) Reset your password directly in the MySQL database (advanced).
+
+### Drupal Site User Login
+
+#### Option A: Password reset
 If you need to reset your Drupal site user login, append `/user/password` to your site's URL and follow the directions to reset your password. For example, to reset the password for the development environment of mysite, you would visit the following example link:
 ```http
 https://dev-mysite.pantheonsite.io/user/password
@@ -18,6 +26,7 @@ In the password reset form, enter either the username or email address you used 
 
 Please keep in mind that your site password is stored in a database, so whatever you set in the Development environment may be different than Test or live, unless you keep the database content synced between the environments using the tools in Database / Files tab of the Pantheon Dashboard or during deployment.
 
+#### Option B: Use Terminus Drush to set a password
 If you still can’t get access to your site using password reset, for example if you don't have access to the corresponding email address for the account, you can still generate a one-time password reset link by using the following [Terminus](/docs/terminus/) command for generating one-time login links:
 
 ```bash
@@ -30,7 +39,12 @@ Or you can reset any user's password from the command line by running the [`user
 $ terminus drush <site>.<env> -- user-password user_name --password='Astr0nGP455w0rD'
 ```
 
-## WordPress User Login
+#### Option C: Reset your password directly in the database
+<to do>
+
+### WordPress Site User Login
+
+#### Option A: Password reset
 If your site is powered by WordPress you have two options. The first is to request a password reset from the log in form and the second is to update via the [Terminus CLI](/docs/terminus/).
 
 1. From the main login form, click **Lost Your Password?**.  
@@ -38,6 +52,7 @@ If your site is powered by WordPress you have two options. The first is to reque
 
 You will receive an email that contains a link you can use one time to reset your password. When you click the link, enter your new password twice. It will also show you the strength of your new password; however, it will not prevent you from using a weak password.
 
+#### Option B: Use Terminus WP-CLI to set a password
 Or you can reset any user's password from the command line by running [WP-CLI's `user update` command](https://wp-cli.org/commands/user/update/) via [Terminus](/docs/terminus):
 
 ```nohighlight
@@ -45,3 +60,6 @@ $ terminus wp <site>.<env> -- user update you@example.com --user_pass=NEWPASSWOR
 ```
 
 As a side note, `terminus 'wp user update'` can be used to change almost any property of a WordPress user's account. `wp_update_user()` gives a complete list of all the fields that can be changed. You can change any of them by using `--field=value`. In the above command, field is "user_pass" and value is NEWPASSWORD.
+
+#### Option C: Reset your password directly in the database
+<todo>
