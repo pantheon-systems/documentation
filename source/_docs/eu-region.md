@@ -17,7 +17,7 @@ Site resources (database container, codeserver, application container, etc.) are
 
 To help satisfy Data Residency requirements, EU Region backups are in active development. This and other features will be available soon. Check this guide for updates.
 
-During this feature's Early Access period, participation is opt-in only. [Contact Sales]((https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
+During this feature's Early Access period, participation is opt-in only. [Contact Sales](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
 
 ## How to Create a Pantheon Site in the EU Region
 
