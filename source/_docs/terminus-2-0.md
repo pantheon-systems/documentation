@@ -27,7 +27,6 @@ These commands have changed in a significant way that may affect your existing s
 The following commands would emit no output when returning empty results. As of Terminus 2.0, these commands will instead emit a warning when the output is empty.
 
  - `backups:list`
- - `backup:restore`
  - `branch:list`
  - `domain:list`
  - `env:list`
@@ -39,6 +38,7 @@ The following commands would emit no output when returning empty results. As of 
 
 The following commands now display progress bars while executing. Scripts using these commands can add the `-n` flag for "non-interactive mode".
 
+ - `backup:restore`
  - `connection:set`
  - `env:clear-cache`
  - `env:clone-content`
@@ -112,7 +112,7 @@ The changes to these commands' behavior may affect existing integrations. For a 
    - Now emits an error upon failure. It formerly emitted a notice.
  - `site:upstream:set`
    - Now emits an error if your user hasn't sufficient authority to run it, and will not attempt to run the operation.
- - `upstream:list`
+ - `upstream:updates:list`
    - Orders the pending updates in chronological order.
  - `upstream:updates:apply`
    - No longer gives a second, redundant log.
