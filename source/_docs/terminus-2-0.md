@@ -6,17 +6,15 @@ contributors: [alexfornuto]
 
 Terminus 2.0 is the first major version release of Terminus in over two years. Following [Semantic Versioning](https://semver.org/){.external} standards, this means there are updates in 2.0 that are incompatible with previous implementations. Before upgrading to Terminus 2.0, you should be aware of what changes could require updates to your scripting and implementation.
 
+<div class="alert alert-danger" role="alert" markdown="1">
+#### Warning {.info}
+**Do not** upgrade production environments to Terminus 2.x without first testing in development and/or continuous integration environments.
+</div>
 
 <div class="alert alert-info" markdown="1">
 #### Note {.info}
 If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/docs/terminus/) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
 </div>
-
-## Before You Begin
-
-Upgrade Options
-Installing Side-by-Site
-
 
 ## Updated Commands 
 
