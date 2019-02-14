@@ -530,6 +530,13 @@ Alternative plugins that have an XML sitemap feature that works well on the plat
 **Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
 <hr>
 
+### [Unbounce Landing Pages](https://wordpress.org/plugins/unbounce/){.external}
+**Issue**: Click to call conversions aren't tracking even if the pages are not cached because the cookies are being stripped.
+
+ **Solution**: Usually these type of issues can be solved if the cookie name can be renamed with a prefix starting with `STXKEY_`, but it is unadvisable to modify plugin directly. It is suggested by the Unbounce team to separate your Pantheon site domain (eg. example.com) and the Unbounce landing page in a subdomain (e.g., unbounce.example.com), because your Unbounce landing pages can't live at exactly the same URL as your homepage. See the outlined solution [here](https://documentation.unbounce.com/hc/en-us/articles/203661044-Connecting-Your-Domain-to-Unbounce){.external} or get in touch with Unbounce support for more help.
+
+<hr>
+
 ### [UNLOQ Two Factor Authentication (2FA)](https://wordpress.org/plugins/unloq/){.external}
 **Issue**: `This widget does not work on this domain` error message shown after deploying plugin across environments on Pantheon. This is because the API credentials used on the original environment are being used on a new environment URL, which is not allowed by the plugin. This is by design.
 
