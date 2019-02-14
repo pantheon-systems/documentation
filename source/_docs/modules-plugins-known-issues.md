@@ -287,11 +287,16 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 ##WordPress Plugins
 
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/){.external}
-**Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
+**Issue #1**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
 
 The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migration/storage`, which is not permitted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
 **Solution**: You can create and download full backups from your [Dashboard](/docs/backups/).
+
+**Issue #2**: Uploading large import files is hitting the 59 seconds timeout or getting invalid file path.
+
+**Solution**: You can upload the import file directly to the plugin's designated writeable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear in there as a selection.
+
 <hr>
 
 ### [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external}
