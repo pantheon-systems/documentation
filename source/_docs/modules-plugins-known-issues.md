@@ -293,9 +293,9 @@ The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migra
 
 **Solution**: You can create and download full backups from your [Dashboard](/docs/backups/).
 
-**Issue 2**: Uploading large import files is hitting the 59 seconds timeout or getting invalid file path.
+**Issue 2**: Uploading large import files hits the 59 second [timeout](/docs/timeouts/), or you're getting invalid file paths.
 
-**Solution**: You can upload the import file directly to the plugin's designated writeable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear in there as a selection.
+**Solution 2**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
 
 <hr>
 
