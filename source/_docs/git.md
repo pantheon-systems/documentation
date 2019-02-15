@@ -72,6 +72,8 @@ Sending code to Pantheon is a two step process with Git. First, you need to comm
 
 In order to tell Git the files are ready, you need to commit them. Every commit includes a brief message so you can later remember why the change was made. It is worthwhile to take a moment and create an accurate commit message to help others understand your changes.
 
+This command uses a combination of options `-am` to: `-a` include *all* files changed, and `-m` to include a commit *message*:
+
 ```bash
 git commit -am "Add a great new module to increase awesomesauce level of my Drupal site."
 ```
