@@ -220,7 +220,7 @@ We don't recommend turning off New Relic for any one environment as it makes tro
 - [New Relic and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots){.external}
 - [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic){.external}
 - [New Relic University: Intro to APM](https://learn.newrelic.com/courses/intro_apm){.external}
-- [New Relic Univeristy: APM Advanced](https://learn.newrelic.com/courses/apm_advanced){.external}
+- [New Relic University: APM Advanced](https://learn.newrelic.com/courses/apm_advanced){.external}
 - [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui){.external}
 - [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help){.external}
 - [Introduction to New Relic for PHP](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php#monitor-performance){.external}
