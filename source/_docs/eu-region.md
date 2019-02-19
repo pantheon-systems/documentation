@@ -1,7 +1,7 @@
 ---
 title: Create a New Site in Pantheon's EU Region
 description: Learn how to create a new site located in the EU.
-tags: [!!!!!!!!!!]
+tags: [create]
 categories: []
 contributors: edwardangert
 searchboost: 150
@@ -9,13 +9,11 @@ earlyaccess: true
 earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
 ---
 
-Pantheon is extending early access invitations to customers who want to deploy a new Live site within the European Union (EU).
+Pantheon is extending early access invitations to customers who want to deploy a new site within the European Union (**EU**). Site resources (database container, codeserver, application container, etc.) are provisioned in the European Union. Traffic is served through the Global CDN, configured with the Amsterdam (AMS) point of presence (**POP**) as an origin shield.
+
+To help satisfy Data Residency requirements, EU Region backups are in active development. This and other features will be available soon. Check back to this doc for updates.
 
 ## How to Enable Early Access to EU Region
-
-Site resources (database container, codeserver, application container, etc.) are provisioned in the European Union. Traffic is served through the Global CDN, configured with the Amsterdam (AMS) point of presence (POP) as an origin shield.
-
-To help satisfy Data Residency requirements, EU Region backups are in active development. This and other features will be available soon. Check this guide for updates.
 
 During this feature's Early Access period, participation is opt-in only. [Contact Sales](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
 
@@ -28,14 +26,18 @@ Use [Terminus](/docs/terminus/) to create a site using `site:create` and the `--
   <figure><pre id="terminus-new-eu-site"><code class="command bash" data-lang="bash">terminus site:create --region=eu</code></pre></figure>
 </div>
 
+This command accepts as values a site name, label, and upstream name or UUID. For more information, run `terminus help site:create`.
+
 ### Use Terminus to Display Sites and Regions
 
 To display a specific site's plan and region information:
 
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-site-info">Copy</button>
-  <figure><pre id="terminus-site-info"><code class="command bash" data-lang="bash">terminus site:info</code></pre></figure>
+  <figure><pre id="terminus-site-info"><code class="command bash" data-lang="bash">terminus site:info $SITE</code></pre></figure>
 </div>
+
+Replace or assign `$SITE` with your site name or UUID.
 
 For a list of sites along with their region:
 
@@ -48,11 +50,11 @@ For a list of sites along with their region:
 
 1.  Add domains to all environments.
 2.  Do not update DNS.
-    - Pantheon performs weekly deployments to route all of your domains. If you update manually, domains will be temporarily routed through the US.
+    - Pantheon performs weekly EU deployments to route all of your domains. If you update manually, domains will be temporarily routed through the US.
 3.  [Open a Support ticket](https://dashboard.pantheon.io/#support){.external} with the following template:
 
     ```nohighlight
-    We are preparing to go live for the site named <example>. Please add the following domains to your next deployment:
+    We are preparing to go live for the site named <example>. Please add the following domains to your next EU deployment:
 
     example.com
     www.example.com
