@@ -82,7 +82,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   ```bash
   mkdir web
-  git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
+  git mv -k $(find . -maxdepth 1 -type f | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
@@ -111,7 +111,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   ```bash
   mkdir web
-  git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor index.php web
+  git mv -k $(find . -maxdepth 1 -type f | grep -v pantheon.yml) core drush modules profiles sites themes vendor index.php web
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
@@ -138,7 +138,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   ```bash
   mkdir web
-  git mv -k $(find . -type f -maxdepth 1  | grep -v pantheon.yml) wp-includes wp-content wp-admin ./*.php web
+  git mv -k $(find . -maxdepth 1 -type f | grep -v pantheon.yml) wp-includes wp-content wp-admin ./*.php web
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
@@ -171,7 +171,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 </div>
 
-The idea here is that `find . -type f -maxdepth 1` finds all files at the document root, including the "dot" files, but skips all of the directories. We list the directories in Drupal/WordPress core out specifically, so that any user-defined directories stay behind. This may or may not produce the correct results, depending on what files you or your team has added. Please verify file relocation with `git status` after using one of these commands before committing and pushing.
+The idea here is that `find . -maxdepth 1 -type f` finds all files at the document root, including the "dot" files, but skips all of the directories. We list the directories in Drupal/WordPress core out specifically, so that any user-defined directories stay behind. This may or may not produce the correct results, depending on what files you or your team has added. Please verify file relocation with `git status` after using one of these commands before committing and pushing.
 
 
 ## Troubleshooting
