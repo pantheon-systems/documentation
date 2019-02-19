@@ -4,6 +4,11 @@ description: Learn what's new with the latest Terminus major version upgrade.
 contributors: [alexfornuto]
 ---
 
+<div class="alert alert-info" markdown="1">
+#### Note {.info}
+If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/docs/terminus/) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
+</div>
+
 Terminus 2.0 is the first major version release of Terminus in over two years. Following [Semantic Versioning](https://semver.org/){.external} standards, this means there are updates in 2.0 that are incompatible with previous implementations. Before upgrading to Terminus 2.0, you should be aware of what changes could require updates to your scripting and implementation.
 
 <div class="alert alert-danger" role="alert" markdown="1">
@@ -11,18 +16,13 @@ Terminus 2.0 is the first major version release of Terminus in over two years. F
 **Do not** upgrade production environments to Terminus 2.x without first testing in development and/or continuous integration environments.
 </div>
 
-<div class="alert alert-info" markdown="1">
-#### Note {.info}
-If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/docs/terminus/) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
-</div>
+## Updated Commands
 
-## Updated Commands 
-
-These commands have changed in a significant way that may affect your existing scripting of Terminus.
+These commands or their output have changed in a significant way that may affect your existing scripting of Terminus.
 
 ### New Warnings
 
-The following commands would emit no output when returning empty results. As of Terminus 2.0, these commands will instead emit a warning when the output is empty.
+In the previous version of Terminus, the following commands would emit no output when returning empty results. As of Terminus 2.0, these commands will instead emit a warning when the output is empty:
 
  - `backups:list`
  - `branch:list`
@@ -31,10 +31,9 @@ The following commands would emit no output when returning empty results. As of 
  - `upstream:list`
  - `site:team:list`
 
-
 ### Progress Bars
 
-The following commands now display progress bars while executing. Scripts using these commands can add the `-n` flag for "non-interactive mode".
+The following commands now display progress bars while executing:
 
  - `backup:restore`
  - `connection:set`
@@ -82,6 +81,7 @@ The following commands now display progress bars while executing. Scripts using 
  - `solr:disable`
  - `solr:enable`
 
+To omit the progress bar, scripts that use these commands can add the `-n` flag for "non-interactive mode".
 
 ## Deprecated Commands
 
@@ -102,14 +102,14 @@ The following commands are new to Terminus as of version 2.0:
 
 ## Additional Changes
 
-The changes to these commands' behavior may affect existing integrations. For a complete list of all changes, see the [changelog](/docs/terminus/updates/#changelog).
+The changes to these commands' behavior may affect existing integrations. For a complete list of all changes, see the [Terminus changelog](/docs/terminus/updates/#changelog).
 
  - `env:clone-content`
-   - Now checks its target environment for initialization and will emit an error instead of erring after the operation fails.
+   - Now checks its target environment for initialization and will emit an error instead of showing an error after the operation fails.
  - `site:team:remove`
    - Now emits an error upon failure. It formerly emitted a notice.
  - `site:upstream:set`
-   - Now emits an error if your user hasn't sufficient authority to run it, and will not attempt to run the operation.
+   - Now emits an error if your user doesn't have the authority sufficient to run it, and will not attempt to run the operation.
  - `upstream:updates:list`
    - Orders the pending updates in chronological order.
  - `upstream:updates:apply`
