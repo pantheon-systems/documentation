@@ -102,7 +102,7 @@ The following commands are new to Terminus as of version 2.0:
 
 ## Additional Changes
 
-The changes to these commands' behavior may affect existing integrations. For a complete list of all changes, see the [Terminus changelog](/docs/terminus/updates/#changelog).
+The changes to these commands' behavior may affect existing integrations. For a complete list of all changes, see the <a href="/docs/terminus/updates/#changelog" data-proofer-ignore>Terminus changelog</a>.
 
  - `env:clone-content`
    - Now checks its target environment for initialization and will emit an error instead of showing an error after the operation fails.
