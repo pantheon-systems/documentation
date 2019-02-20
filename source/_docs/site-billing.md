@@ -12,8 +12,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing pla
 
 ## Access Site Billing
 1. From the User Dashboard, click on the site you want to access billing for.
-1. Go to the Site Dashboard and click **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
-1. Click the **Billing** tab.
+1. Go to the Site Dashboard and click the **Billing** tab.
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
@@ -32,12 +31,13 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 {% include("content/transfer-ownership-billing-steps.html")%}
 
 ## Add New Credit Card
-1. Go to the Site Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Settings**, then click **Billing**.
-2. Enter your credit card information and click **Add Card**.
 
- ![Your credit card has been added to your account. Use the selector above to apply it to this Site](/source/docs/assets/images/dashboard/site-billing-cc-added.png)
+If your site is currently in Sandbox mode, click **View All Plans** to select a plan and enter your billing information. Otherwise:
 
- You should get a message saying "Your credit card has been added to your account. Use the selector above to apply it to this Site."
+1. Go to the Site Dashboard and click the **Billing** tab.
+1. Find the existing card under BILLING INFORMATION and click **Change** next to it, then click on **Add New Card**.
+1. Enter your credit card information and click **Add Card**.
+1. Select the new card and click **Update Credit Card**.
 
 This process will add a new credit card profile in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of your User Dashboard. Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
 
@@ -45,23 +45,19 @@ This process will add a new credit card profile in **<span class="glyphicons gly
 ### Bill This Site to a New Card
 Select the card you want the site to use as the new payment method _after_ it has been added as described in the [previous section](#add-new-credit-card).
 
-1. Go to the Site Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Settings**, then click **Billing**.
-2. Select a new card from the drop down menu within **Your Credit Cards** section.
-3. Click **Update Payment Method**.
+1. Go to the Site Dashboard and click the **Billing** tab.
+1. Find the existing card under BILLING INFORMATION and click **Change** next to it.
+1. Select the new card and click **Update Credit Card**.
 
- ![Card has been updated](/source/docs/assets/images/dashboard/site-billing-cc-updated.png)
+ You should get a message saying "Your billing information has been updated!"
 
- You should get a message saying "Card has been updated."
 ### Do Not Bill This Site to a Card
 After [downgrading from a paid plan to Sandbox](/docs/site-plan/#cancel-current-plan), remove the card as a payment method for the site:
 
-1. Go to the Site Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Settings**, then click **Billing**.
-2. Select **Do not bill this site to a card** from the drop down menu within **Your Credit Cards** section.
-3. Click **Update Payment Method**.
+1. Go to the Site Dashboard and click the **Billing** tab.
+1. Find your card under BILLING INFORMATION and click **Remove**.
 
- ![There is no longer a credit card associated with this site](/source/docs/assets/images/dashboard/site-billing-cc-removed.png)
-
- You should get a message saying "There is no longer a credit card associated with this site."
+ You should get a message saying "**Your credit card is removed.** This site is no longer billed to a credit card."
 
 ## Frequently Asked Questions
 
