@@ -11,6 +11,12 @@ previousurl: terminus/configuration/
 image: terminus-thumbLarge
 searchboost: 100
 ---
+
+<div class="alert alert-danger" role="alert" markdown="1">
+#### Warning {.info}
+The latest release of Terminus is a major version upgrade, which may not be backwards-compatible with scripts written for Terminus `1.x`. For more information, see [Terminus 2.0](/docs/terminus-2-0/). 
+</div>
+
 <div class="container col-md-12" ng-app="terminusReleaseApp" ng-controller="terminusReleaseCtrl">
   <h2>Update to the Current Release {[{releases[0].name}]}</h2>
   <p class="instruction">Navigate to the directory where Terminus was originally installed, then run:</p>
