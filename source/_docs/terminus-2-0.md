@@ -66,8 +66,6 @@ The following commands now display progress bars while executing:
  - `payment-method:remove`
  - `redis:disable`
  - `redis:enable`
- - `remote:drush`
- - `remote:wp`
  - `service-level:set`
  - `site:create`
  - `site:delete`
@@ -82,6 +80,8 @@ The following commands now display progress bars while executing:
  - `solr:enable`
 
 To omit the progress bar, scripts that use these commands can add the `-n` flag for "non-interactive mode".
+
+Additionally, `remote:drush` and `remote:wp` now have the option to enable progress bars with the flag `--progress`.
 
 ## Deprecated Commands
 
@@ -106,6 +106,7 @@ The changes to these commands' behavior may affect existing integrations. For a 
 
  - `env:clone-content`
    - Now checks its target environment for initialization and will emit an error instead of showing an error after the operation fails.
+   - New flags `--cc` to clear the cache, and `--updatedb` to update the database (Drupal only).
  - `site:team:remove`
    - Now emits an error upon failure. It formerly emitted a notice.
  - `site:upstream:set`
@@ -115,9 +116,10 @@ The changes to these commands' behavior may affect existing integrations. For a 
  - `upstream:updates:apply`
    - No longer gives a second, redundant log.
  - `org:site:list`
-   - Has new `plan_name` field being emitted.
+   - Has new `plan_name` field.
    - No longer returns `service_level`.
    - Now emits a warning when empty. It previously emitted a notice-level log when empty.
+   - Output can be filtered with the flags `--upstream` and `--plan`.
  - `site:org:list`
    - Now emits a warning when empty. It previously emitted a notice-level log when empty.
  - `payment-method:list` now emits a warning when empty. It previously emitted a notice-level log when empty.
@@ -127,9 +129,12 @@ The changes to these commands' behavior may affect existing integrations. For a 
    - Has new `plan_name` field being returned.
    - No longer returns `service_level`.
  - `site:list`
-   - Has new `region` and `plan_name` fields being emitted.
+   - Has new `region` and `plan_name` fields.
    - No longer returns `service_level`.
    - Now emits a warning when empty. It previously emitted a notice-level log when empty.
+   - Output can be filtered with the flags `--upstream` and `--plan`.
+ - `site:team:list`
+   - Now emits a new field showing which team member is the owner of the site.
 
 ## See Also
 
