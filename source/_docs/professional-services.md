@@ -17,7 +17,7 @@ Implement additional services like extended WAF, Image Optimization, and Domain 
 Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon.
 
 ### Load Testing / Performance Deep Dive
-Identify bottlenecks and fine tune your site to improve performance. Engagement Managers will test load according to your current traffic with a multiplier to ensure growth. We will utilize New Relic and other proprietary tools to produce a performance report.
+Identify bottlenecks and fine tune your site to improve performance. Engagement Managers will test load against current peak loads or anticipated increased load to ensure growth. We will utilize New Relic and other proprietary tools to produce a performance report.
 
 ### Pantheon Enterprise Gateway (PEG)
 Provides a static outgoing IP address for use in IP whitelisting connections to external services.
