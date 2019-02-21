@@ -487,6 +487,11 @@ The new filename will cause clients to get the new file, even if they have a cac
 ## Avoid Redirects
 A redirect will add at least one extra HTTP request-response cycle. As a result, eliminating extraneous redirects can make your website more snappy. Despite your best efforts it still may be necessary to include the occasional [redirect to a primary domain](/docs/guides/launch/redirects/) using HTTPS with or without the WWW.
 
+## GZIP Compression
+By default, Pantheon hosted sites is already gzip compressed and the response headers already includes `content-encoding: gzip` so users won't need to modify and Nginx/.htaccess configuration or they don't have to install any 3rd party plugins/modules for gzip compression.
+
+If there are any assets that are not being gzipped, most likely, they are assets loaded outside Pantheon. Users will need to put the assets in Pantheon so they will also be gzipped by default.
+
 Other considerations:
 
 - Avoid mobile-specific subdomains and use responsive web design techniques.
