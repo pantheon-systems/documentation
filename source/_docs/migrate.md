@@ -269,6 +269,10 @@ terminus site:clone <source>.<env> <destination>.<env>
 <p markdown="1">File and database backups that exceed 500MBs are not supported by this method. Sites that exceed this limit must be cloned manually. For details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual/).</p>
 </div>
 
+### Does the WordPress migration cause downtime? 
+No, there is no downtime expected as part of the migration process. For detals, see related [BlogVault resource (question #13)](https://blogvault.net/migration-using-blogvault-faq/){.external}. Performance implications to a live site are similar to running a backup for the site. 
+
+
 ### How do I migrate a local site to Pantheon?
 When asked for your current site URL, enter `https://example.com` and continue the migration procedure in the Site Dashboard.
 

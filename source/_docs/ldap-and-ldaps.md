@@ -190,4 +190,3 @@ $settings = array(
   ),
 );
 ```
-

@@ -24,13 +24,16 @@ By combining a simple-to-use developer interface with a managed scalable cloud k
 
 1. Clone [the Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) into the `~/terminus/plugins` directory on your local environment.
 2. Log in with Terminus.
-```nohighlight
-auth:login --email=<email> --machine-token=<machine_token>
-```
+
+   ```nohighlight
+   auth:login --email=<email> --machine-token=<machine_token>
+   ```
 3. Run the following command:
-```nohighlight
-terminus lockdown [<Lockr account email>] --password=[<Lockr account password>]
-```
+
+   ```nohighlight
+   terminus lockdown [<Lockr account email>] --password=[<Lockr account password>]
+   ```
+
 4. Select the site for the install. It will now detect the CMS, download and install all necessary components, register the site, and patch all relevant plugins in your site.
 
 It's that simple! One command and your site is set up. After successfully installing and registering Lockr, you will see a confirmation on the Configuration page that the site is registered. You are now able to set keys through the Admin interface for site's that have been registered. Alternatively, you can follow the steps below for the CMS your site uses to install and configure Lockr.
@@ -51,7 +54,7 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
  ```
 3. Click **Lockr** from within the WordPress Dashboard to visit the Lockr Configuration page  (`/wp-admin/admin.php?page=lockr-site-config`):
 
-![WP Lockr Configuration Example](/source/docs/assets/images/lockr_wpconfig.png)​
+   ![WP Lockr Configuration Example](/source/docs/assets/images/lockr_wpconfig.png)​
 
 4. Enter your email address, and click **Register Site**.
 5. Create keys within **Lockr** > **Add Keys** and manage existing keys within **Lockr** > **All Keys**.
@@ -65,29 +68,37 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
 
 The Lockr plugin contains a number of WP-CLI commands to quickly register a site and get a key through the command line.
 
+#### Register the site with Lockr
+
+This command will register the site with Lockr to the email address provided. The password is only necessary for existing Lockr accounts. This is useful for automated deployment from a Custom Upstream using [Quicksilver](/docs/quicksilver).
+
 ```nohighlight
 terminus wp <site>.<env> -- lockr register-site --email=[<Lockr email address>] --password=[<Lockr account password>]
 ```
-This command will register the site with Lockr to the email address provided. The password is only necessary for existing Lockr accounts. This is useful for automated deployment from a Custom Upstream using [Quicksilver](/docs/quicksilver).
 
+#### Use Lockr to patch existing plugins
+
+Run this command and Lockr will go to the [patch library](https://github.com/lockr/lockr-patches/tree/wp) and automatically patch your existing plugins that do not currently integrate natively with Lockr.
 
 ```nohighlight
 terminus wp <site>.<env> -- lockr lockdown
 ```
-Run this command and Lockr will go to the [patch library](https://github.com/lockr/lockr-patches/tree/wp) and automatically patch your existing plugins that do not currently integrate natively with Lockr.
 
+#### Get and decrypt a key from Lockr
+
+Run this command to get and decrypt a key from Lockr. This is a useful command to program in automated functionality in Quicksilver.
 
 ```nohighlight
 terminus wp <site>.<env> -- lockr get-key [key name]
 ```
-Run this command to get and decrypt a key from Lockr. This is a useful command to program in automated functionality in Quicksilver.
 
+#### Encrypt a key and sends it to Lockr
+
+This command encrypts a key and sends it to Lockr. This is useful during site migrations or automated deployments of new sites through Quicksilver.
 
 ```nohighlight
 terminus wp <site>.<env> -- lockr set-key --name=[key name] --label=[key label] --value=[key value]
 ```
-This command encrypts a key and sends it to Lockr. This is useful during site migrations or automated deployments of new sites through Quicksilver.
-
 
 ## Drupal Installation
 

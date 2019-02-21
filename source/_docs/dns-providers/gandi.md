@@ -21,7 +21,7 @@ Identify DNS values to point your domain to Pantheon:
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your <a href="https://www.gandi.net/login" target="blank">Gandi account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
+Keep this page open and login to your <a href="https://id.gandi.net/en/login" target="blank">Gandi account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
 
 ## Configure DNS Records on Gandi
 ### A Record
@@ -59,7 +59,7 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Gandi Docs
 
-<a href="https://wiki.gandi.net/en/dns/zone" target="blank">Manage your domain name's zone file <span class="glyphicons glyphicons-new-window-alt"></span></a>
+<a href="https://docs.gandi.net/en/domain_names/index.html" target="blank">Gandi's domain documentation.<span class="glyphicons glyphicons-new-window-alt"></span></a>
 
 ## Next Steps
 

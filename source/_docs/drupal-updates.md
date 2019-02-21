@@ -72,6 +72,11 @@ terminus drush my-drupal-8-site.dev -- migrate-import --all
 If your source site is on Pantheon and has your domain name pointing to it, you will need to follow special steps to move the domain name to the new site. For details, see [Relaunch Existing Pantheon Site](/docs/relaunch/). Otherwise, follow instructions within the Site Dashboard when [adding a domain](/docs/guides/launch/domains/).
 
 
+## Troubleshooting
+
+### Timeouts or Max Memory Errors
+Migrations of particularly large sites to updated Drupal versions can sometimes hit the limits of memory allocated to sites on Pantheon. When possible, large site upgrade migrations should be performed locally, where the full system resources can be allocated to the task.
+
 ## See Also
 View the following [Drupal.org](https://drupal.org) resources for more information:
 

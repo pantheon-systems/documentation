@@ -27,19 +27,29 @@ Technically, the command bootstraps your site and invokes [drupal\_cron\_run](ht
 
 You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
-There are a couple of ways to interact with cron on Pantheon. One way is to execute cron manually from the Drupal admin interface.<br />
-![Drupal admin configure cron](/source/docs/assets/images/cron-config.png)
-Click **Run cron** to run all scheduled tasks.
-![Click Run Cron](/source/docs/assets/images/run-cron.png)
-Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/terminus/) command:
-```bash
-terminus drush <site>.<env> -- cron
-```
+1.  There are a couple of ways to interact with cron on Pantheon.
 
-To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at Reports > Recent Log Messages. 
-![Reports--->Recent Log Messages](/source/docs/assets/images/recent-log-reports.png)
-If cron has run recently, entries will appear in the log. The two entries in the screenshot below show that cron has run and a cron task called "cron\_example".
-![Cron log entry in reports](/source/docs/assets/images/drupal-reports.png)
+    - One way is to execute cron manually from the Drupal admin interface:
+
+      ![Drupal admin configure cron](/source/docs/assets/images/cron-config.png)
+
+      Click **Run cron** to run all scheduled tasks:
+
+      ![Click Run Cron](/source/docs/assets/images/run-cron.png)
+
+    - Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/terminus/) command:
+
+      ```bash
+      terminus drush <site>.<env> -- cron
+      ```
+
+2.  To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at **Reports** > **Recent log messages**.
+
+ ![Reports--->Recent Log Messages](/source/docs/assets/images/recent-log-reports.png)
+
+ If cron has run recently, entries will appear in the log. The two entries in the screenshot below show that cron has run and a cron task called `cron_example`.
+
+ ![Cron log entry in reports](/source/docs/assets/images/drupal-reports.png)
 
 ### Run Cron More Often
 
@@ -61,19 +71,20 @@ There are several workarounds. Most work by keeping the site awake, then using a
 
 
 ## Disable Cron
+
+This configuration disables cron execution in Drupal, but it does not affect Pantheon's cron execution at the platform level which runs every hour on all environments.
+
 To disable Drupal's standard cron:
 
 1. Navigate to **Configuration** > **System** > **Cron** within the admin interface.
 2. Select **Never** from the "Run cron every" drop-down menu.
-3. Click **save configuration**:
+3. Click **Save configuration**:
 
   ![Stop cron from running](/source/docs/assets/images/run-cron-config.png)
 
-  <div class="alert alert-info">
-  <h4 class="info">Note</h4>
-  <p markdown="1">This configuration disables cron execution in Drupal, but it does not affect Pantheon's cron execution at the platform level which runs every hour on all environments.</p></div>
+### Drupal 7 and Elysia Cron
 
-Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} contrib module to extend the standard cron can globally disable it in the module's settings:
+Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} contrib module to extend the standard cron can disable it globally in the module's settings:
 
 ![disable cron globally by Elysia Cron](/source/docs/assets/images/disable_cron_elysia.png)
 

@@ -6,7 +6,7 @@ categories: [getstarted]
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable web platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
-Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
+Our tech includes NGINX, PHP, Redis, [Global CDN](/docs/global-cdn-caching/), Solr and Git&mdash;common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
 
 ## Get to Know Pantheon
 
@@ -32,7 +32,7 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Applying Upstream Updates](/docs/core-updates/)
 - [Global CDN Caching for High Performance](/docs/global-cdn-caching/)
 - [Installing Redis on Drupal or WordPress](/docs/redis/)
-- [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache/)
+- [Drupal Performance and Caching Settings](/docs/drupal-cache/)
 - [SSO and Identity Federation on Pantheon](/docs/sso/)
 - [Backup Creation](/docs/backups/)
 

@@ -4,13 +4,12 @@ description: Important security considerations when working with phpinfo on your
 tags: [debugcode, services]
 categories: []
 ---
-We serve our customers by provisioning isolated linux containers with an optimized PHP stack. The php.ini is part of a highly tuned configuration and is not user-configurable. We continually deploy new builds of PHP and you also have the ability to [upgrade PHP versions](/docs/php-versions/). If you'd like to see a comprehensive list of what's installed with the version of PHP in use by a particular environment, you may use [phpinfo](https://secure.php.net/manual/en/function.phpinfo.php){.external}. We also have [example PHP info](/docs/php-versions/#available-php-versions) for each version of PHP on the platform.
+We serve our customers by provisioning isolated Linux containers with an optimized PHP stack. The php.ini is part of a highly tuned configuration and is not user-configurable. We continually deploy new builds of PHP and you also have the ability to [upgrade PHP versions](/docs/php-versions/). If you'd like to see a comprehensive list of what's installed with the version of PHP in use by a particular environment, you may use [phpinfo](https://secure.php.net/manual/en/function.phpinfo.php){.external}. We also have [example PHP info](/docs/php-versions/#available-php-versions) for each version of PHP on the platform.
 
 ## Important Security Notes
 
  * phpinfo exposes sensitive information like the password to connect to the DB
- * If using method 2, delete the phpinfo file immediately after creating and viewing
-
+ * If you create a `phpinfo` file, delete the file immediately after review
 
 ### Drupal Note
 
@@ -32,4 +31,3 @@ As an alternative to exposing these values on a web accessible URL, you can use 
 ```
 terminus remote:drush <SITE>.<ENV> -- ev "print(phpinfo())"
 ```
-

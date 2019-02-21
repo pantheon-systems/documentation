@@ -69,31 +69,28 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 
 `example-drops-8-composer` was designed to run automated tests on a continuous integration server. Unless you plan on running automated tests it is safe to completely remove the automated testing functionality.
 
-1. Delete the following directories:
+1.  Delete the following directories:
+    - `scripts/github`
+    - `scripts/gitlab`
+    - `.circleci`
+    - `tests`
 
-   * `scripts/github`
-   * `scripts/gitlab`
-   * `.circleci`
-   * `tests`
-
-<br>
-2. Modify `composer.json`:
-
-   * Remove all dependencies in the `require-dev` section.
-   * Update the `scripts` section to remove the `lint`, `code-sniff`, and `unit-test` lines.
-   * Remove the `find .circleci/scripts/pantheon/ -type f | xargs chmod 755,` line from the `post-update-cmd` section of `scripts`.
-   * Remove the `find tests/scripts/ -type f | xargs chmod 755` line from the `post-update-cmd` section of `scripts`.
-       * You may need to remove a trailing comma from the end of the last item in the `post-update-cmd` section, otherwise the JSON will be invalid.
+2.  Modify `composer.json`:
+    - Remove all dependencies in the `require-dev` section.
+    - Update the `scripts` section to remove the `lint`, `code-sniff`, and `unit-test` lines.
+    - Remove the `find .circleci/scripts/pantheon/ -type f | xargs chmod 755,` line from the `post-update-cmd` section of `scripts`.
+    - Remove the `find tests/scripts/ -type f | xargs chmod 755` line from the `post-update-cmd` section of `scripts`.
+        - You may need to remove a trailing comma from the end of the last item in the `post-update-cmd` section, otherwise the JSON will be invalid.
 
 3. Remove the following section from `pantheon.yml`:
 
-   ```yml
-     sync_code:
-       after:
-         - type: webphp
-           description: Push changes back to GitHub if needed
-           script: private/scripts/quicksilver/quicksilver-pushback/push-back-to-github.php
-   ```
+    ```yml
+      sync_code:
+        after:
+          - type: webphp
+            description: Push changes back to GitHub if needed
+            script: private/scripts/quicksilver/quicksilver-pushback/push-back-to-github.php
+    ```
 
 ## Managing Drupal with Composer
 
@@ -115,7 +112,7 @@ Normally the next step would go through the standard Drupal installation. But si
     This may take a while as all of Drupal core and its dependencies will be downloaded. Subsequent updates should take less time.
 
     ![image of terminal running a composer install](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-update.png)
-    
+
 2. And now we need to install:
 
     ```bash

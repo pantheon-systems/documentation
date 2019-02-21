@@ -202,12 +202,26 @@ This will move the temporary upload destination from the individual server mount
 <hr>
 
 ### [reCAPTCHA](https://www.drupal.org/project/recaptcha){.external}
-**Issue**: If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
+**Issue 1:** If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
 
-**Solution**: Override the default arg_separator.output value in `settings.php` by adding the following line:
+**Solution:** Override the default arg_separator.output value in `settings.php` by adding the following line:
 
 ```
 ini_set('arg_separator.output', '&');
+```
+
+**Issue 2:** On non-live environments, reCAPTCHA returns the error, "ERROR for site owner: Invalid domain for site key."
+
+**Solution:** Add more domains to your Google reCAPTCHA configuration. Add `dev-<sitename>.pantheonsite.io` and `test-<sitename>.pantheonsite.io` to the site. This is set in [Google's reCAPTCHA admin panel](https://www.google.com/recaptcha/admin){.external}.
+
+**Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal 7, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
+
+```
+// Deactivate reCAPTCHA if we're not running on the live site - it doesn't work if the domain name is invalid. Message "ERROR for site owner: Invalid domain for site key" is displayed.
+// This is needed because otherwise it's impossible to log in or submit any protected form.
+if (defined('PANTHEON_ENVIRONMENT') && $_ENV['PANTHEON_ENVIRONMENT'] != 'live') {
+  $conf['recaptcha_site_key'] = NULL;
+}
 ```
 
 <hr>
@@ -273,11 +287,16 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 ##WordPress Plugins
 
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/){.external}
-**Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
+**Issue 1**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
 
 The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migration/storage`, which is not permitted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
 **Solution**: You can create and download full backups from your [Dashboard](/docs/backups/).
+
+**Issue 2**: Uploading large import files hits the 59 second [timeout](/docs/timeouts/), or you're getting invalid file paths.
+
+**Solution 2**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
+
 <hr>
 
 ### [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external}
@@ -301,7 +320,7 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 ### [Better Search And Replace](https://wordpress.org/plugins/better-search-replace/){.external}
 **Issue**: Plugin is not accessible in Test or Live (read-only environments in Pantheon) due to the `install_plugins` capability check of the plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/not-appearing-on-test-and-live-environments-in-pantheon/){.external}.
 
-**Solution #1**: There is an undocumented filter in place to override the capability check. Adding this in the your theme’s `function.php` can make it work:
+**Solution 1**: There is an undocumented filter in place to override the capability check. Adding this in the your theme’s `function.php` can make it work:
 
 ```
 function better_search_replace_cap_override() {
@@ -310,7 +329,7 @@ function better_search_replace_cap_override() {
 add_filter( 'bsr_capability', 'better_search_replace_cap_override' );
 ```
 
-**Solution #2**: Use an alternative Search and Replace plugin like [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/){.external}
+**Solution 2**: Use an alternative Search and Replace plugin like [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/){.external}
 
 <hr>
 
@@ -516,6 +535,13 @@ Alternative plugins that have an XML sitemap feature that works well on the plat
 **Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
 <hr>
 
+### [Unbounce Landing Pages](https://wordpress.org/plugins/unbounce/){.external}
+**Issue**: Click to call conversions aren't tracking even if the pages are not cached because the cookies are being stripped.
+
+ **Solution**: Usually these type of issues can be solved if the cookie name can be renamed with a prefix starting with `STXKEY_`, but it is inadvisable to modify the plugin directly. It is suggested by the Unbounce team to separate your Pantheon site domain (eg. example.com) and the Unbounce landing page in a subdomain (e.g., unbounce.example.com), because your Unbounce landing pages can't live at exactly the same URL as your homepage. See the outlined solution [here](https://documentation.unbounce.com/hc/en-us/articles/203661044-Connecting-Your-Domain-to-Unbounce){.external} or get in touch with Unbounce support for more help.
+
+<hr>
+
 ### [UNLOQ Two Factor Authentication (2FA)](https://wordpress.org/plugins/unloq/){.external}
 **Issue**: `This widget does not work on this domain` error message shown after deploying plugin across environments on Pantheon. This is because the API credentials used on the original environment are being used on a new environment URL, which is not allowed by the plugin. This is by design.
 
@@ -573,7 +599,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 <hr>
 
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503){.external}
-**Issue #1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
+**Issue 1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
 ![WooZone Error](/source/docs/assets/images/woozone-error.png)
 
@@ -581,24 +607,24 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
     define('WP_MEMORY_LIMIT', '256M');
 
-**Issue #2**: WooZone writes to a cache folder in `wp-content/plugins/woozone/`, which is not editable in Test and Live
+**Issue 2**: WooZone writes to a cache folder in `wp-content/plugins/woozone/`, which is not editable in Test and Live
 
 **Solution**: Symlink `wp-content/plugins/woozone/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
 <hr>
 ### [Wordfence](https://wordpress.org/plugins/wordfence/){.external}
-**Issue #1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with platform-level page caching.
+**Issue 1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with platform-level page caching.
 
 **Solution**: Disable Wordfence-generated cookies by disabling Live Traffic within the Wordfence options page. See the  [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5){.external} for details.
 
-**Issue #2**: The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform. This has been [reported as an issue](https://wordpress.org/support/topic/write-logs-to-the-standard-file-path/){.external} within the plugin support forum.
+**Issue 2**: The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform. This has been [reported as an issue](https://wordpress.org/support/topic/write-logs-to-the-standard-file-path/){.external} within the plugin support forum.
 
-**Issue #3**: The Wordfence firewall installs a file called `.user.ini` that includes `wordfence-waf.php` from the absolute path which uses the application container's ID. These paths will change from time to time due to routine platform maintenance. When a container is migrated and when this plugin is deployed to another environment the absolute path is no longer valid resulting in a WSOD. This has been [reported as an issue](https://wordpress.org/support/topic/set-auto_prepend_file-path-relatively/){.external} within the plugin support forum.
+**Issue 3**: The Wordfence firewall installs a file called `.user.ini` that includes `wordfence-waf.php` from the absolute path which uses the application container's ID. These paths will change from time to time due to routine platform maintenance. When a container is migrated and when this plugin is deployed to another environment the absolute path is no longer valid resulting in a WSOD. This has been [reported as an issue](https://wordpress.org/support/topic/set-auto_prepend_file-path-relatively/){.external} within the plugin support forum.
 <hr>
 
 ### [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/){.external}
 
-**Issue #1**: This plugin attempts to access PHP native sessions [before WordPress has been bootstrapped](https://wordpress.org/support/topic/plugin-starts-before-wordpress/){.external}, which prevents the Pantheon PHP native sessions plugin from being called. This leads to a 500 error when authenticating with external services.
+**Issue 1**: This plugin attempts to access PHP native sessions [before WordPress has been bootstrapped](https://wordpress.org/support/topic/plugin-starts-before-wordpress/){.external}, which prevents the Pantheon PHP native sessions plugin from being called. This leads to a 500 error when authenticating with external services.
 
 **Solution**: While *not recommended*, you can add the following lines to `wp-config.php` before the first call to `session_start`:
 
@@ -610,7 +636,7 @@ if (defined( "PANTHEON_BINDING" )) {
 
 **Please note:** You will need to make this change every timethat the plugin is updated.
 
-**Issue #2**: This plugin creates a session on every page, which can prevent [page level caching](https://wordpress.org/support/topic/cannot-cache-pages-due-to-sessions-on-every-page-with-wsl-plugin/){.external}.
+**Issue 2**: This plugin creates a session on every page, which can prevent [page level caching](https://wordpress.org/support/topic/cannot-cache-pages-due-to-sessions-on-every-page-with-wsl-plugin/){.external}.
 
 <hr>
 
@@ -640,11 +666,11 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 ### [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/){.external}
 
-**Issue #1**: This plugin requires write access to a cache folder in `wp-content/cache`, which is not granted on Test and Live environments by design.
+**Issue 1**: This plugin requires write access to a cache folder in `wp-content/cache`, which is not granted on Test and Live environments by design.
 
 **Solution**: Symlink `wp-content/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access)
 
-**Issue #2**: This plugin uses `is_dir` to verfiy the target directory, which will return false if the directory is a symlink. This causes a permissions error when deleting cache files.
+**Issue 2**: This plugin uses `is_dir` to verfiy the target directory, which will return false if the directory is a symlink. This causes a permissions error when deleting cache files.
 
 <hr>
 
