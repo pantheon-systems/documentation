@@ -17,7 +17,7 @@ The table below shows how much sites can save by switching to annual billing. Pe
   <dt>List Price</dt>
     <dd>Set price for new sites created after late October that aren’t purchased via a qualified agency partner.</dd>
   <dt>Preferred Price</dt>
-    <dd markdown="1">Preferred Pricing is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program){.external}.</dd>
+    <dd><a href="https://pantheon.io/plans/agency-preferred-pricing" data-proofer-ignore class="external">Preferred Pricing</a> is available to qualified agency partners. Learn more about the <a href="http://pantheon.io/partner-program" data-proofer-ignore class="external">Pantheon Partner Program</a>.</dd>
 </dl>
 
 <!-- Nav tabs -->
@@ -92,6 +92,7 @@ Before switching to annual billing, consider:
  - Annual billing plans will auto-renew at the end of their annual subscription term unless terminated in advance.
  - Annual billing plans switched to monthly billing will be effective after the end of your current annual subscription term.
  - A site grandfathered into Preferred Pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes.
+   - To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/docs/add-client-site/).
 
 ## See Also
 

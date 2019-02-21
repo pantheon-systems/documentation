@@ -47,7 +47,7 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):
 
  ```
- $ terminus connection:set <site>.<env> git
+ terminus connection:set <site>.<env> git
  ```
 
 2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you haven't already.
