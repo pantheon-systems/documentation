@@ -360,9 +360,9 @@ Alternatively, if you don't want your site to be crawled by search engines, you 
 <hr>
 
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/){.external}
-**Issue**: This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
+**Issue 1:** This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
 
-**Solution**: Add the following to `wp-config.php`:
+**Solution:** Add the following to `wp-config.php`:
 
 ```
 $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
@@ -378,6 +378,12 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 
 For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
+
+**Issue 2:** Local file attachments set in the admin panel cannot come from the `uploads` folder. As described in [this plugin issue](https://wordpress.org/support/topic/local-file-attachments-do-not-work-in-pantheon-hosting/){.external}, the plugin code fails for upload directories that are symlinks.
+
+**Solution:** Until the plugin is updated to allow symlink paths, you can commit your local attachment files to the code base in `wp-content` or another subdirectory thereof.
+
+
 <hr>
 
 ### [Constant Contact Forms](https://wordpress.org/plugins/constant-contact-forms/){.external}
