@@ -4,7 +4,7 @@ description: Pantheon Professional Services include consulting, migrations, load
 tags: []
 ---
 
-Pantheon Professional Services can be brought in as needed to overcome any barriers to entry. Working closely with partners we can help overcome any challenges you are facing, and provide customized solutions for the most complex technical challenges.
+Pantheon Professional Services works closely with partners to provide customized solutions for the most complex technical challenges.
 
 ## Consulting and Specialty Services
 If you need advice on architecting a solution, planning for the future, preparing for expansion, tackling a particularly complex use case, or just need problem solving expertise, Pantheon's Professional Services (**PS**) team can help you achieve your goals. Our Professional Services team has the broad experience and deep expertise to guide you through your implementation needs. [Contact us](https://pantheon.io/contact-us){.external} for details.
@@ -27,7 +27,7 @@ Provides a static outgoing IP address for use in IP whitelisting connections to 
 ### SSO/SAML
 Single Sign-on to both the Pantheon Dashboard and the application itself.
 
-## Migrations
+## Site Migrations
 Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly.
 
 Our hands-on, white-glove migration services for organizations and agencies remove the burden of migrations from your shoulders. By migrating the sites for you, you can concentrate on what matters most to your end users. We do all the heavy lifting and let you focus on delivering better, faster websites for your colleagues, constituents, or clients. [Contact our migrations team](https://pantheon.io/migrations){.external} for details.
