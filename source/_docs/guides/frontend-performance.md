@@ -488,7 +488,7 @@ The new filename will cause clients to get the new file, even if they have a cac
 A redirect will add at least one extra HTTP request-response cycle. As a result, eliminating extraneous redirects can make your website more snappy. Despite your best efforts it still may be necessary to include the occasional [redirect to a primary domain](/docs/guides/launch/redirects/) using HTTPS with or without the WWW.
 
 ## GZIP Compression
-By default, gzip compression is already enabled server-side and the response headers already includes `content-encoding: gzip` which will serve the site's HTML, stylesheets and JavaScipt files in a reduced size before sending it to the browser resulting to a faster Time To First Byte(TTFB). Users won't need to modify and Nginx/.htaccess configuration or they don't have to install any 3rd party plugins/modules for gzip compression.
+By default, gzip compression is already enabled server-side and the response headers already includes `content-encoding: gzip` which will serve the site's HTML, stylesheets and JavaScipt files in a reduced size before sending it to the browser resulting to a faster Time To First Byte(TTFB). Users won't need to modify any Nginx/.htaccess configuration or they don't have to install any 3rd party plugins/modules for gzip compression.
 
 If there are any assets that are not being gzipped, most likely, they are assets loaded outside Pantheon. Users will need to put the assets in Pantheon so they will also be gzipped by default.
 
