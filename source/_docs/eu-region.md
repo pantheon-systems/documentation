@@ -21,7 +21,7 @@ During this feature's Early Access period, participation is opt-in only. [Give u
 
 ## How to Create a Pantheon Site in the EU Region
 
-Note that the `--region` flag used in this section requires [Terminus 2.0](/docs/terminus/) and higher. If you're using an older version, see our guide on [how to update Terminus](/docs/terminus/updates/).
+Note that the `--region` flag used in this section requires [Terminus 2.0](/docs/terminus/) or higher. See [how to update Terminus](/docs/terminus/updates/) for more information.
 
 Use Terminus to create a site using `site:create` and the `--region` flag:
 
