@@ -78,6 +78,8 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 <!-- Tab panes -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="d7" markdown="1">
+  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
+
   [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
@@ -107,6 +109,8 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 
   <div role="tabpanel" class="tab-pane" id="d8" markdown="1">
+  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
+
   [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
@@ -134,6 +138,8 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 
   <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
+  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
+
   [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
@@ -171,8 +177,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 </div>
 
-The idea here is that `find . -type f -maxdepth 1` finds all files at the document root, including the "dot" files, but skips all of the directories. We list the directories in Drupal/WordPress core out specifically, so that any user-defined directories stay behind. This may or may not produce the correct results, depending on what files you or your team has added. Please verify file relocation with `git status` after using one of these commands before committing and pushing.
-
+Please verify file relocation with `git status` after using one of these commands before committing and pushing.
 
 ## Troubleshooting
 
