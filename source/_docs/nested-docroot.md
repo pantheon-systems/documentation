@@ -177,7 +177,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 </div>
 
-Please verify file relocation with `git status` after using one of these commands before committing and pushing.
+After using one of these commands, verify the new file locations with `git status` before committing and pushing.
 
 ## Troubleshooting
 
