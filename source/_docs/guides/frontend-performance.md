@@ -493,3 +493,8 @@ Other considerations:
 - A DNS service provider such as [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL-){.external} may allow speedier redirects in some circumstances, but it’s still faster not to redirect at all.
 - Avoid several chained redirects that make small changes such as redirecting to HTTPS, adding or removing WWW, or adding a trailing slash. Instead, [redirect to a primary domain](/docs/guides/launch/redirects/) that has all of these standardized.
 - Pantheon doesn’t read changes to the `.htaccess` file or support NGINX customization, so redirections via those methods will not work. For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).
+
+## GZIP Compression
+By default, gzip compression is already enabled server-side. The response headers include `content-encoding: gzip` which will serve the site's HTML, stylesheets and JavaScipt files in a reduced size before sending it to the browser, resulting to a faster Time To First Byte (**TTFB**). Users don't need to modify any Nginx/.htaccess configuration, nor install any 3rd party plugins/modules for gzip compression.
+
+If there are any assets that are not being gzipped, most likely they are assets loaded from outside Pantheon.
