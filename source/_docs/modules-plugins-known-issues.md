@@ -646,6 +646,22 @@ if (defined( "PANTHEON_BINDING" )) {
 
 <hr>
 
+### [WP-Rocket](https://wp-rocket.me/){.external}
+**Issue**: Same as other caching plugin, this conflicts with Pantheon's Advanced Page Cache but the caching feature can be disabled but the other features like File Optimization, Media, etc. can be used side-by-side.
+
+**Solution**: 
+1) In SFTP mode, install the WP-Pocket plugin in DEV.
+2) Activate the plugin and it needs to be disabled from the `wp-config.php` by turning the cache off in this define: `define('WP_CACHE', false);`
+3) WP-rocket writes on read-only file paths in Pantheon so you'll need to assume write access: https://pantheon.io/docs/assuming-write-access/#create-a-symbolic-link, you'll need to switch to clone your repo locally and create these symlinks from WP's root folder by:
+- `ln -s ./uploads/wp-rocket-config ./wp-content/wp-rocket-config`
+- `ln -s ./uploads/cache ./wp-content/cache`
+4) Commit these changes locally then switch your Dev environment to Git mode and push the changes.
+5) You will need to create these folders manually in dev, test and live for the WP-Rocket optimized assets to be written properly:
+- `./wp-content/uploads/wp-rocket-config`
+- `./wp-content/uploads/cache`   
+
+<hr>
+
 ### [WPBakery: Page Builder](https://wpbakery.com/){.external}
 **Issue**: The Custom CSS and Design Options pages of the plugin (`?page=vc-custom_css`, `?page=vc-color`) try to create new files when saved. Due to problems related to incorrect `FS_METHOD`, files are not created or saved in the expected folder, `wp-content/uploads/js_composer`.
 
