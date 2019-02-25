@@ -21,7 +21,9 @@ During this feature's Early Access period, participation is opt-in only. [Give u
 
 ## How to Create a Pantheon Site in the EU Region
 
-Use [Terminus](/docs/terminus/) to create a site using `site:create` and the `--region` flag:
+Note that the `--region` flag used in this section requires [Terminus 2.0](/docs/terminus/) and higher. If you're using an older version, see our guide on [how to update Terminus](/docs/terminus/updates/).
+
+Use Terminus to create a site using `site:create` and the `--region` flag:
 
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-new-eu-site">Copy</button>
