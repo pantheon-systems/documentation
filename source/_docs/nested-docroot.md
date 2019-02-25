@@ -148,7 +148,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
-  Your directory structure should like like this afterwards:
+  Your directory structure should look like this afterwards:
 
   ```nohighlight
   ├── web
