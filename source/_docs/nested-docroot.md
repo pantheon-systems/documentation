@@ -78,11 +78,13 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 <!-- Tab panes -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="d7" markdown="1">
+  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
+
   [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
   mkdir web
-  git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
+  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon-upstream.yml') includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
@@ -107,11 +109,13 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 
   <div role="tabpanel" class="tab-pane" id="d8" markdown="1">
+  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
+
   [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
   mkdir web
-  git mv -k $(find . -type f -maxdepth 1 | grep -v pantheon.yml) core drush modules profiles sites themes vendor index.php web
+  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon-upstream.yml') core drush modules profiles sites themes vendor index.php web
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
@@ -134,15 +138,17 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 
   <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
+  The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
+
   [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
   mkdir web
-  git mv -k $(find . -type f -maxdepth 1  | grep -v pantheon.yml) wp-includes wp-content wp-admin ./*.php web
+  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon-upstream.yml') wp-includes wp-content wp-admin ./*.php web
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
-  Your directory structure should like like this afterwards:
+  Your directory structure should look like this afterwards:
 
   ```nohighlight
   ├── web
@@ -171,8 +177,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   </div>
 </div>
 
-The idea here is that `find . -type f -maxdepth 1` finds all files at the document root, including the "dot" files, but skips all of the directories. We list the directories in Drupal/WordPress core out specifically, so that any user-defined directories stay behind. This may or may not produce the correct results, depending on what files you or your team has added. Please verify file relocation with `git status` after using one of these commands before committing and pushing.
-
+After using one of these commands, verify the new file locations with `git status` before committing and pushing.
 
 ## Troubleshooting
 
