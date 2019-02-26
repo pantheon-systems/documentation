@@ -409,7 +409,7 @@ Use the [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} plu
 
 ```php
 // Configure directory & filename of cached autoptimize files
-define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/resources/');
+define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
 define('AUTOPTIMIZE_CACHEFILE_PREFIX','aggregated_');
 ```
 
