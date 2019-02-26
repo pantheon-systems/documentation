@@ -50,7 +50,7 @@ After after this period, the version will reach End Of Life (**EOL**), and will 
 | 2.0.0            | TBD       |
 | 1.9.0            | 2/20/2020 |
 | 1.8.1            | 9/11/2019 |
-| 1.8.0 or earlier | 8/25/2019 |
+| 1.8.0 or earlier | 8/26/2019 |
 
   <h2>Changelog</h2>
   <div ng-repeat="release in releases| filter: greaterThan('id', 5224487)">
