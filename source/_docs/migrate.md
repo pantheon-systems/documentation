@@ -81,9 +81,13 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 
       ![Drupal create archive](/source/docs/assets/images/dashboard/drupal-guided-migrate.png)
 
-      <div class="alert alert-info">
-      <h4 class="info">Note</h4>
-      <p markdown="1">The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.</p></div>
+      <div class="alert alert-info" markdown="1">
+      #### Note {.info}
+      `drush ard` is only available on Drush 8 and earlier.
+      </div>
+
+     The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
+
   9. Paste a publicly accessible URL to a download of your site archive. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly.
   10. Click **Import Archive**. After the imported is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
