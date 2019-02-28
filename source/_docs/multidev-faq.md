@@ -36,7 +36,7 @@ Each site has a limit of 10 Multidev environments.
 
 ## Can I buy additional Multidev environments?
 
-You need to have an Elite site so can request additional Multidev environments [from support](/docs/support/) from you Customer Success Manager as needed.
+Owners of Elite sites can request additional Multidev environments from their Customer Success Manager as needed.
 
 ## If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 
