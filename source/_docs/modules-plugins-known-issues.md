@@ -653,7 +653,7 @@ if (defined( "PANTHEON_BINDING" )) {
 
 1. In SFTP mode, install the WP-Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
 1. Activate the plugin from the dashboard.
-1. All other WP-Rocket's features should work but that plugin's cache needs to be disabled by finding the `WP_CACHE` defined by WP-Rocket in `wp-config.php` and setting it to false:
+1. Disable WP-Rocket caching by finding the `WP_CACHE` value defined by WP-Rocket in `wp-config.php`, and setting it to false:
 
    ```php
    define('WP_CACHE', false);
