@@ -21,9 +21,9 @@ During this feature's Early Access period, participation is opt-in only. [Give u
 
 ## How to Create a Pantheon Site in the EU Region
 
-Once granted early access, create new sites with Terminus, Pantheon's command line interface (*CLI*).
+Once granted early access, create new sites with [Terminus](/docs/terminus/), Pantheon's command line interface (*CLI*).
 
-Note that the `--region` flag used in this section requires [Terminus 2.0](/docs/terminus/) or higher. See [how to update Terminus](/docs/terminus/updates/) for more information.
+Note that the `--region` flag used in this section requires Terminus 2.0 or higher. See [how to update Terminus](/docs/terminus/updates/) for more information.
 
 Use Terminus to create a site using `site:create` and the `--region` flag:
 
@@ -60,7 +60,7 @@ Allow one week between submitting a ticket until go live. Opening a ticket will 
 
 1.  Add domains to all environments.
 2.  Skip updating DNS for now.
-    - Pantheon performs weekly deployments to route all of your domains to the EU. If you update DNS before step 4 below, then domains will be temporarily routed through the US.
+    - Pantheon performs weekly deployments to route all of your domains to the EU. If you update DNS before Step 4 below, then domains will be temporarily routed through the US.
 3.  [Open a Support ticket](https://dashboard.pantheon.io/#support){.external} with the following template:
 
     ```nohighlight
@@ -82,5 +82,6 @@ Allow one week between submitting a ticket until go live. Opening a ticket will 
 More EU Region features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this guide for updates.
 
 Coming soon:
+
   - Dashboard support
   - Automated domain routing
