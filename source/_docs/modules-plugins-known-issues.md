@@ -651,9 +651,9 @@ if (defined( "PANTHEON_BINDING" )) {
 
 **Solution**: 
 
-1. In SFTP mode, install the WP-Pocket plugin to the dev environment.
-1. Activate the plugin in the admin panel.
-1. Disabled caching in `wp-config.php`:
+1. In SFTP mode, install the WP-Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
+1. Activate the plugin from the dashboard.
+1. All other WP-Rocket's features should work but that plugin's cache needs to be disabled in `wp-config.php` by adding:
 
    ```php
    define('WP_CACHE', false);
