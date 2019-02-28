@@ -21,7 +21,7 @@ During this feature's Early Access period, participation is opt-in only. [Give u
 
 ## How to Create a Pantheon Site in the EU Region
 
-Once granted early access, create new sites with [Terminus](/docs/terminus/), Pantheon's command line interface (*CLI*).
+Once granted early access, create new sites with [Terminus](/docs/terminus/), Pantheon's command line interface (**CLI**).
 
 Note that the `--region` flag used in this section requires Terminus 2.0 or higher. See [how to update Terminus](/docs/terminus/updates/) for more information.
 
