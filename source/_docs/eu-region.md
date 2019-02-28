@@ -13,13 +13,15 @@ Pantheon is extending early access invitations to customers who want to deploy a
 
 ### Details
 
-Site resources (database container, codeserver, application container, etc.) are provisioned in the European Union. Traffic is served through the Global CDN, configured with the Amsterdam (AMS) point of presence (**POP**) as an origin shield.
+Site resources, including the database container, are provisioned in the European Union. Traffic is served through the Global CDN, with the Amsterdam point of presence as origin shield.
 
 ## How to Enable Early Access to EU Region
 
 During this feature's Early Access period, participation is opt-in only. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
 
 ## How to Create a Pantheon Site in the EU Region
+
+Once granted early access, create new sites with Terminus, Pantheon's command line interface (*CLI*).
 
 Note that the `--region` flag used in this section requires [Terminus 2.0](/docs/terminus/) or higher. See [how to update Terminus](/docs/terminus/updates/) for more information.
 
@@ -50,11 +52,15 @@ For a list of sites along with their region:
   <figure><pre id="terminus-site-list"><code class="command bash" data-lang="bash">terminus site:list</code></pre></figure>
 </div>
 
-## Prepare your Site and Deploy Live to EU
+## Open Ticket to Prepare to Go Live
+
+In advance of going live with your site, please let us know the domains you'd like to route to your site. 
+
+Allow one week between submitting a ticket until go live. Opening a ticket will not be necessary after early access.
 
 1.  Add domains to all environments.
-2.  Do not update DNS.
-    - Pantheon performs weekly EU deployments to route all of your domains. If you update manually, domains will be temporarily routed through the US.
+2.  Skip updating DNS for now.
+    - Pantheon performs weekly deployments to route all of your domains to the EU. If you update DNS before step 4 below, then domains will be temporarily routed through the US.
 3.  [Open a Support ticket](https://dashboard.pantheon.io/#support){.external} with the following template:
 
     ```nohighlight
@@ -68,11 +74,13 @@ For a list of sites along with their region:
 
     We understand that domains will be routed to the EU every Tuesday, for all requests submitted by the preceding Friday, and that we will receive confirmation when the update is complete, at which time we can update DNS.
     ```
+4. After receiving confirmation, update DNS at your convenience.
+5. Celebrate. Your site is running in the EU!
 
 ## Coming Soon
 
-EU Region features are in active development and release. The following features are coming soon. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this guide for updates on features and usage.
+More EU Region features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this guide for updates.
 
 Coming soon:
-  - Enhanced data residency
   - Dashboard support
+  - Automated domain routing
