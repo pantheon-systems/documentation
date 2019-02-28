@@ -47,6 +47,7 @@ User-agent: rogerbot
 User-agent: dotbot
 User-agent: SemrushBot
 User-agent: SemrushBot-SA
+User-agent: PowerMapper
 Allow: /
 ```
 
@@ -62,6 +63,7 @@ To support pre-launch SEO testing, we allow the following bots access to platfor
  - [SEMrush](https://www.semrush.com/bot/){.external}
  - [RogerBot](https://moz.com/help/guides/moz-procedures/what-is-rogerbot){.external} by Moz
  - [Dotbot](https://moz.com/help/guides/moz-procedures/dotbot){.external} by Moz
+ - [PowerMapper](https://www.powermapper.com/products/mapper/){external}
 
 If you’re testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by <a data-proofer-ignore href="/docs/support/#can-i-request-a-feature-be-added-to-the-platform">contacting support</a> to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
 
