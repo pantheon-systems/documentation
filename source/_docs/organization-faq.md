@@ -70,7 +70,7 @@ No. However, opening support requests from your **Organization Dashboard Support
 
 ### As an Agency, how many sandbox sites do members of an organization receive?
 
-Each member of an organization can create up to 10 Sandbox sites. When the limit of 10 is reached, taking a site Live or deleting unused sites will free up additional Sandbox slots.
+Each member of an organization can create up to 10 Sandbox sites. When the limit of 10 is reached, taking a site live or deleting unused sites will free up additional Sandbox slots.
 
 ## Unsupported
 
