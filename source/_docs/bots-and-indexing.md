@@ -38,7 +38,7 @@ Some legitimate [bots/crawlers/proxies](https://useragent.openadmintools.com/) (
 It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/docs/domains/#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/docs/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
 
 ```
-# Pantheon's documentation on robots.txt: http://pantheon.io/docs/articles/sites/code/bots-and-indexing/
+# Pantheon's documentation on robots.txt: https://pantheon.io/docs/bots-and-indexing/
 User-agent: *
 Disallow: /
 
