@@ -4,7 +4,7 @@ description: Features and benefits of role-based permissions for Pantheon Drupal
 tags: [tools]
 categories: []
 ---
-Change Management is an [organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all Organizations.
+Change Management is an [Organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all Organizations.
 
 Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
 
@@ -59,9 +59,11 @@ An email confirmation is sent to the user. If the user already has a Pantheon ac
 
 ### Change Site Owner
 
-To change the owner of a paid site (e.g. Basic or Performance), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
+To change the owner of a paid site (e.g. Basic or Performance):
 
-Enterprise Organizations can assume ownership of a site by [contacting support](/docs/support); however, Partner Organizations cannot own sites directly.
+{% include("content/transfer-ownership-billing-steps.html")%}
+
+Keep in mind that [Partner Organizations cannot own sites directly](/docs/organizations/#organization-site-association).
 
 For Sandbox sites, within the Team modal, the current site owner can click **Make Owner** next to the site team member who should receive ownership of the site.
 
