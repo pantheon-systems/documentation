@@ -209,6 +209,9 @@ if ($legacy_username) {
 </div>
 </div>
 
+### Redirect Files
+Because PHP isn't called when binary files are served, the PHP redirects used above will not work when the are requested directly. You can use [CloudFlare](/docs/cloudflare/) or another stacked CDN to handle file redirects.
+
 ## See Also
 - [Configuring Settings.php](/docs/settings-php/)
 - [Configuring wp-config.php](/docs/wp-config-php/)
