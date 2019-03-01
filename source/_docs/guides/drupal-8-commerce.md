@@ -17,6 +17,7 @@ This process uses Composer to manage modules and dependencies. Before proceeding
  - [Composer Fundamentals and Workflows](/docs/composer)
  - [Build Tools](/docs/guides/build-tools)
 
+{% include("content/composer-updating.html")%}
 
 In addition to Pantheon, you will need accounts at:
 

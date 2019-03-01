@@ -14,6 +14,8 @@ contributors: [dustinleblanc]
 
 ## Before You Begin
 
+{% include("content/composer-updating.html")%}
+
  - Review our documentation on [Git](/docs/git/), [Composer](/docs/composer/), and [Terminus](/docs/terminus/), and have them installed and configured on your local computer.
  - [Clone](/docs/git#clone-your-site-codebase) your _current_ Pantheon site repository to a working directory on your local computer.
  - Review [Serving Sites from the Web Subdirectory](/docs/nested-docroot/)
