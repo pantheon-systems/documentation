@@ -646,6 +646,25 @@ if (defined( "PANTHEON_BINDING" )) {
 
 <hr>
 
+### [WP-Rocket](https://wp-rocket.me/){.external}
+**Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}. The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
+
+**Solution**: 
+
+1. In SFTP mode, install the WP-Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
+1. Activate the plugin from the dashboard.
+1. Disable WP-Rocket caching by finding the `WP_CACHE` value defined by WP-Rocket in `wp-config.php`, and setting it to false:
+
+   ```php
+   define('WP_CACHE', false);
+   ```
+
+**Issue 2:** WP-rocket [assumes write access](/docs/assuming-write-access) to read-only file paths in Pantheon.
+
+**Solution:** [Create symlinks](/docs/assuming-write-access/#create-a-symbolic-link) for the paths `wp-content/wp-rocket-config` and `wp-content/cache` to a writable path.
+
+<hr>
+
 ### [WPBakery: Page Builder](https://wpbakery.com/){.external}
 **Issue**: The Custom CSS and Design Options pages of the plugin (`?page=vc-custom_css`, `?page=vc-color`) try to create new files when saved. Due to problems related to incorrect `FS_METHOD`, files are not created or saved in the expected folder, `wp-content/uploads/js_composer`.
 
