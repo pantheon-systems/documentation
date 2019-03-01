@@ -17,7 +17,6 @@ TODO: be more verbose, establish a level of conficence... e.g. walk through of p
 * Launch Planning: work with your team to do launch planning like... content resyncs, etc.
 * Launch: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch... (todo : see pp) 
 
-
 ### Managed Updates
 Allow Pantheon’s PS team to apply core and contributed plugins/module updates. Includes visual regression testing (**VRT**) to ensure that no issues arise from the updates.
 
@@ -30,7 +29,23 @@ Load and performance tests are critical steps in ensuring a successful launch. T
 Diamond support plans include load tests, ensuring that your website launches smoothly and is ready to absorb the high traffic that success brings. Expert load tests are also available for Gold and Platinum plans. [Contact us](https://pantheon.io/contact-us){.external} for details.
 
 ## Managed Updates
-Allow Pantheon’s PS team to apply core and contributed plugins/module updates. Includes visual regression testing (**VRT**) to ensure that no issues arise from the updates.
+Keep your site up to date with as little interruption to the site’s end users as possible. Allow Pantheon’s PS team to apply core and contributed plugins/module updates. 
+
+EM monitoring and working with you to ensure that updates are being applied cleanly.
+
+Efforts are made to ensure that updates do not interfere with your day-to-day operations.
+
+TODO: see other document...  
+
+1 - Update detected per specifications provided from client
+2 - Multidev is spun up cloning db/files from Live
+3 - Updates are applied to the multidev env and VRT tests are ran.
+3.1 - A brief window of time if provided to allow for manual testing if required from client.
+4 - If VRT passes, we merge the MD branch into Master and run VRT again.
+5 - Repeat same process on Test.
+6 - Backup Live environment and deploy updates to Live
+
+[Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Advanced CDN
 Implement additional services like extended WAF, Image Optimization, and Domain Masking using our advanced CDN implementation.
