@@ -39,31 +39,8 @@ Or you can reset any user's password from the command line by running the [`user
 $ terminus drush <site>.<env> -- user-password user_name --password='Astr0nGP455w0rD'
 ```
 
-#### Option C: Reset your password directly in the database (advanced)
-Since Drupal does not store passwords in plain text, you need to generate a hashed version of the password before updating it directly in your database. Drupal core provides a script to do this:
-
-* Drupal 7: `scripts/password-hash.sh`
-* Drupal 8: `core/scripts/password-hash.sh`
-
-Note that the Drupal 8 version of this script requires a working [local site](https://pantheon.io/docs/local-development/).
-
-Run the password-hash script over the command-line and pass in your new password as an argument:
-
-```bash
-./core/scripts/password-hash.sh newpassword
-```
-
-Then [connect to MySQL](/docs/mysql-access/) and use the hashed password in a query on your database to actually update your user account:
-
-```bash
-mysql> UPDATE users_field_data set pass='yourhashedpassword' where uid=1;
-```
-
-In Drupal 8, you may also need to clear your user entity cache for this to take effect:
-
-```bash
-mysql> DELETE FROM cache_entity WHERE cid = 'values:user:1';
-```
+#### Option C: Reset your password directly in the database
+<to do>
 
 ### WordPress Site User Login
 
