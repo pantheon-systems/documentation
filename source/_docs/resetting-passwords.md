@@ -39,8 +39,10 @@ Or you can reset any user's password from the command line by running the [`user
 $ terminus drush <site>.<env> -- user-password user_name --password='Astr0nGP455w0rD'
 ```
 
-#### Option C: Reset your password directly in the database
-<to do>
+#### Option C: Reset your password directly in the database (advanced)
+
+If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. Please see documentation on [drupal.org](https://www.drupal.org/node/44164){.external} and [Accessing MySQL Databases](/docs/mysql-access) for more information.
+
 
 ### WordPress Site User Login
 
@@ -61,5 +63,6 @@ $ terminus wp <site>.<env> -- user update you@example.com --user_pass=NEWPASSWOR
 
 As a side note, `terminus 'wp user update'` can be used to change almost any property of a WordPress user's account. `wp_update_user()` gives a complete list of all the fields that can be changed. You can change any of them by using `--field=value`. In the above command, field is "user_pass" and value is NEWPASSWORD.
 
-#### Option C: Reset your password directly in the database
-<todo>
+#### Option C: Reset your password directly in the database (advanced)
+
+If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. Please see documentation on [wordpress.org](https://codex.wordpress.org/Resetting_Your_Password#Through_MySQL.2FMariaDB_Command_Line){.external} and [Accessing MySQL Databases](/docs/mysql-access) for more information.
