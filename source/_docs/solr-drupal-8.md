@@ -103,11 +103,7 @@ The following code changes are required before Solr can be safely uninstalled an
 ## Troubleshooting
 
 ### Solr Verification Check
-Because we are posting the 4.x schema to a 3.x solr instance, the schema verification check can fail and prevent indexing. You can disable the schema check by adding the following line to the `public function defaultConfiguration` block:
-
-```php
-$conf['skip_schema_check'] = TRUE;
-```
+Because we are posting the 4.x schema to a 3.x solr instance, the schema verification check can fail and prevent indexing. You can disable the schema check by checking the **Skip schema verification** box in the UI, or pulling [this patch](https://www.drupal.org/project/search_api_solr/issues/3037213#comment-12996162){.external} to the module.
 
 ## See Also
 
