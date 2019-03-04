@@ -76,7 +76,7 @@ A full CircleCI command might look similar to this:
               # we get the html gibberish instead of a passing test.
               terminus drush $SITE_NAME.$ENV_NAME -- cc all
 
-              # NOTE: Use the latest version of Terminus to avoid warning messages in the output.
+              # NOTE: Use the latest version of Terminus to avoid warning messages in the output, which will break the test.
               # in order to exclude the notice in shell output of the
               # embedded command to find the absolute path.
               terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
