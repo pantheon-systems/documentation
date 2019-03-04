@@ -36,11 +36,15 @@ To run tests on Pantheon:
    terminus drush $SITE_NAME.$ENV_NAME -- en site_test -y
    ```
 
-1. Clear the cache immediately before running test to avoid strange failures:
+  This command will also enable `simpletest` as a dependency of `site_test`.
+
+1. Clear the cache immediately before running tests to avoid strange failures:
 
    ```bash
    terminus drush $SITE_NAME.$ENV_NAME -- cc all
    ```
+
+  This step should be repeated each time tests are to be run moving forward.
 
 1. Get the absolute path before you can run the script:
 
@@ -72,10 +76,10 @@ A full CircleCI command might look similar to this:
               # we get the html gibberish instead of a passing test.
               terminus drush $SITE_NAME.$ENV_NAME -- cc all
 
-              # NOTE: It is a requirement to use Terminus <=1.9
+              # NOTE: Use the latest version of Terminus to avoid warning messages in the output.
               # in order to exclude the notice in shell output of the
               # embedded command to find the absolute path.
-              terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io ExampleTestGroupName
+              terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
 
             fi
 ```
