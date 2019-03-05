@@ -11,6 +11,10 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/){.ext
 
 
 ## Before You Begin
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+This guide requires access to the [Multidev](/docs/multidev/) feature.
+</div>
 
 This process uses Composer to manage modules and dependencies. Before proceeding, you may wish to consult the following docs:
 
