@@ -59,8 +59,7 @@ In advance of going live with your site, please let us know the domains you'd li
 Allow one week between submitting a ticket until go live. Opening a ticket will not be necessary after early access.
 
 1.  Add domains to all environments.
-2.  Skip updating DNS for now.
-    - Pantheon performs weekly deployments to route all of your domains to the EU. If you update DNS before Step 4 below, then domains will be temporarily routed through the US.
+2.  Update DNS values to those provided by the Dashboard. Note that during early access, it may take up to one week for your domain to route directly to the EU region.
 3.  [Open a Support ticket](https://dashboard.pantheon.io/#support){.external} with the following template:
 
     ```nohighlight
@@ -74,8 +73,7 @@ Allow one week between submitting a ticket until go live. Opening a ticket will 
 
     We understand that domains will be routed to the EU every Tuesday, for all requests submitted by the preceding Friday, and that we will receive confirmation when the update is complete, at which time we can update DNS.
     ```
-4. After receiving confirmation, update DNS at your convenience.
-5. Celebrate. Your site is running in the EU!
+4. After receiving confirmation, celebrate. Your site is running in the EU!
 
 ## Coming Soon
 
