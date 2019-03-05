@@ -39,7 +39,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 <br>
 
-2. Pantheon Support will provide you with the CSR file, to pass on to your **Certificate Authority** (CA).
+2. Pantheon Support will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). See [CA Limitations](#ca-limitations) below for more information.
 
 3. Once you have a set of certificates from the CA, send us:
 
