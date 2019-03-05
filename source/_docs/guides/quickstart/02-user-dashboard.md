@@ -57,8 +57,6 @@ In this lesson, we’re going to explore the User Dashboard.
  - **Billing:** View and update your billing information for sites you own.
 
  - **Delete Account:** Delete your Pantheon account. This is useful for consolidating multiple accounts under a single user account.
-
-- **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Advanced:** Find information about using our command line tool, [Terminus](/docs/terminus).
 </div>
 </div>
 </div>
