@@ -84,7 +84,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   ```bash
   mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon-upstream.yml') includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
+  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') includes/ misc/ modules/ profiles/ scripts/ sites/ themes/ index.php web
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
@@ -115,7 +115,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   ```bash
   mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon-upstream.yml') core drush modules profiles sites themes vendor index.php web
+  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') core drush modules profiles sites themes vendor index.php web
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
@@ -144,7 +144,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   ```bash
   mkdir web
-  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon-upstream.yml') wp-includes wp-content wp-admin ./*.php web
+  git mv -k $(find . -maxdepth 1 -type f | egrep -v 'pantheon.yml|.gitignore|README.md|pantheon.upstream.yml') wp-includes wp-content wp-admin ./*.php web
   ```
   These commands create the `web` subdirectory, then use Git to move required files into the nested docroot.
 
