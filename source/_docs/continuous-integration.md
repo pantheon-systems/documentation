@@ -57,6 +57,7 @@ To run tests on Pantheon:
 The full command will look something like this:
 
 ```bash
+export TERMINUS_HIDE_UPDATE_MESSAGE=1
 terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
 ```
 
