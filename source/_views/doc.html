@@ -11,16 +11,6 @@
     </div>
   </div>
   {% endif %}
-  {% if page.multidev %}
-  <div class="row" style="margin-bottom:15px;">
-    <div class="col-md-12">
-      <div id="earlyaccessoutter" class="alert devbar" role="alert" style="border: 1px solid #B5C0C3;border-radius: 4px;">
-       <h3 class="devbar">This Doc Uses Multidev</h3>
-       <p class="devbar">The steps in this guide require <a href="/docs/multidev/">Multidev</a>. Visit our <a href="/docs/multidev-faq/#who-has-access-to-multidev">Multidev FAQ</a> for information on who has access to Multidev environments and if your agency or organization qualifies.</p>
-     </div>
-    </div>
-  </div>
-  {% endif %}
   {% if page.deprecated %}
   <div class="row" style="margin-bottom:15px;">
     <div class="col-md-12">
@@ -87,6 +77,18 @@
         {% if page.featuredcontributor %}
           {% include 'featured-contributor.html' %}
         {% endif %}
+        {% if page.multidev %}
+        <div class="row" style="margin-bottom:5px;">
+          <div class="col-md-12">
+            <div id="earlyaccessoutter" class="alert devbar" role="alert" style="border: 1px solid #B5C0C3;border-radius: 4px;">
+             <h3 class="devbar">This Doc Uses Multidev</h3>
+             <p class="devbar">The steps in this guide require <a href="/docs/multidev/">Multidev</a>. Visit our <a href="/docs/multidev-faq/#who-has-access-to-multidev">Multidev FAQ</a> for information on who has access to Multidev environments and if your agency or organization qualifies.</p>
+           </div>
+          </div>
+        </div>
+        {% endif %}
+
+
         {{ page.blocks.content|raw }}
       </div>
     </div>
