@@ -9,7 +9,7 @@ earlyaccess: true
 earlynote: The documentation on this page discusses features and options that are not yet available to all users.
 ---
 
-Pantheon is extending early access invitations to customers who want to deploy a new site within the European Union (**EU**).
+Pantheon is extending early access invitations to contract customers who want to deploy a new site within the European Union (**EU**).
 
 ### Details
 
@@ -17,7 +17,7 @@ Site resources, including the database container, are provisioned in the Europea
 
 ## How to Enable Early Access to EU Region
 
-During this feature's Early Access period, participation is opt-in only. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
+During this feature's Early Access period, participation is opt-in only for contract customers. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
 
 ## How to Create a Pantheon Site in the EU Region
 
