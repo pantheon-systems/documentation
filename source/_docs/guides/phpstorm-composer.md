@@ -5,8 +5,10 @@ type: guide
 permalink: docs/guides/:basename/
 tags: [siteintegrations]
 contributors: [LukasRos, rachelwhitton]
+multidev: true
+multidevnote: "The steps in this guide require <a href="/docs/multidev/" data-proofer-ignore>Multidev</a>. Visit our [Multidev FAQ](/docs/multidev-faq/#who-has-access-to-multidev) for information on who has access to Multidev environments and if your agency or organization qualifies."
 ---
-[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/){.external} is a commercial PHP IDE that you can configure to work with your Pantheon sites. This guide explains how to use the [Composer integration](https://confluence.jetbrains.com/display/PhpStorm/Composer+Support+in+PhpStorm){.external} of JetBrains PhpStrom to install Drupal 8 dependencies.
+[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/){.external} is a commercial PHP IDE that you can configure to work with your Pantheon sites. This guide explains how to use the [Composer integration](https://confluence.jetbrains.com/display/PhpStorm/Composer+Support+in+PhpStorm){.external} of JetBrains PhpStorm to install Drupal 8 dependencies.
 
 ## Before You Begin
 Be sure that you:
