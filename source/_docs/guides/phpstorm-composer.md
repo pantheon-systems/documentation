@@ -16,6 +16,11 @@ Be sure that you:
 * Install [Composer](https://getcomposer.org/){.external}
 * Create a Composer managed following the [Build Tools](/docs/guides/build-tools/) guide, which describes how to use build tools such as [GitHub](https://github.com/){.external} and [CircleCI](https://circleci.com/){.external} with [Composer](/docs/composer/) on Pantheon.
 
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+This guide requires access to the [Multidev](/docs/multidev/) feature.
+</div>
+
 ## Create A New Project
 
 1. Open PhpStorm, and in the "Welcome to PhpStorm" screen, select **Check out from Version Control** > **Git**:
