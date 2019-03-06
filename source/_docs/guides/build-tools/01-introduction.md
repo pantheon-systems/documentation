@@ -21,6 +21,7 @@ permalink: docs/guides/build-tools/
 nexturl: guides/build-tools/create-project/
 editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb
+multidev: true
 ---
 This guide describes how to use build tools such as GitHub and CircleCI with Composer to implement a collaborative, team-based Continuous Integration workflow using Pull Requests for Drupal 8 sites on Pantheon. While this guide demonstrates [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer){.external}, the same workflow can be applied to [WordPress](https://github.com/pantheon-systems/example-wordpress-composer){.external} and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer){.external} sites.
 
@@ -89,11 +90,6 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 </div>
 
 ## Before You Begin
-
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
-This guide requires access to the [Multidev](/docs/multidev/) feature.
-</div>
 
 1. Install [Composer](https://getcomposer.org){.external}.
 2. Install the most recent release of [Terminus](/docs/terminus/):

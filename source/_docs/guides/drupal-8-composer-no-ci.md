@@ -9,16 +9,12 @@ contributors:
   - ataylorme
   - dwayne
   - davidneedham
+multidev: true
 ---
 
 In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/){.external} for managing a Drupal 8 site on your local machine and pushing to Pantheon.
 
 Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/docs/core-updates/).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
-
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
-This guide requires access to the [Multidev](/docs/multidev/) feature.
-</div>
 
 ## Creating the Pantheon Site
 
