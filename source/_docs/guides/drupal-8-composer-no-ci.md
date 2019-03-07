@@ -9,7 +9,6 @@ contributors:
   - ataylorme
   - dwayne
   - davidneedham
-multidev: true
 ---
 
 In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/){.external} for managing a Drupal 8 site on your local machine and pushing to Pantheon.
@@ -173,6 +172,11 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
    ```
 
 ### Adding a New Module with Composer
+
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+To maintain best practice, some of the steps in this section require access to the [Multidev](/docs/multidev/) feature. Those steps can be skipped, but it isn't recommended.
+</div>
 
 1. Next, let’s add a new module to our site. For this example, we’ll add the address module. We advocate working in feature branches on Pantheon, so let's create a Git branch and spin up a Multidev environment:
 
