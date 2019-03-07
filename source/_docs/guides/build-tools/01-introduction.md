@@ -91,11 +91,6 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
 ## Before You Begin
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
-This guide requires access to the [Multidev](/docs/multidev/) feature.
-</div>
-
 1. Install [Composer](https://getcomposer.org){.external}.
 2. Install the most recent release of [Terminus](/docs/terminus/):
 
