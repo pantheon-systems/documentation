@@ -9,6 +9,7 @@ contributors:
   - ataylorme
   - dwayne
   - davidneedham
+multidev: true
 ---
 
 In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/){.external} for managing a Drupal 8 site on your local machine and pushing to Pantheon.
