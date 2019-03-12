@@ -5,7 +5,7 @@ description: For contract customers who require dedicated, custom TLS certificat
 
 ## Access
 
-A white glove concierge service is now available for contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise){.external}.
+A white glove concierge service is now available to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise){.external}.
 
 ## Upgrade to the Global CDN
 
