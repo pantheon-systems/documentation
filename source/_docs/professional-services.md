@@ -7,32 +7,29 @@ tags: []
 Pantheon Professional Services works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon.
 
 ## Site Migrations 
-The Site Migration service lowers the barrier to entru by utilisaing our PS team and partners. Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably. [Contact our migrations team](https://pantheon.io/migrations){.external} for details.
+The Site Migration service lowers the barrier to entry by leveraging our PS team and partners. Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably. [Contact our migrations team](https://pantheon.io/migrations){.external} for details.
 
-TODO: be more verbose, establish a level of conficence... e.g. walk through of process... 6 steps, automation, etc... one or two sentences for each.
-* Qualification. access to servers; talk to team about business critical functionality to smoke test it
-* Initial migration: automation, "tools that automate moving code/db/file to Pant and standing up..."
-* Test and patch: we implement all the thing to ensure that everything is working as expected and building out additional scripting to be able to do pre-launch content syncing
-* UAT: test the site yourself, supported by Visual Regression tools; have mechanism to report any issues that are found and work to resolve those issues.
-* Launch Planning: work with your team to do launch planning like... content resyncs, etc.
-* Launch: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch... (todo : see pp) 
+TODO: be more verbose, establish a level of confidence... e.g. walk through of process... 6 steps, automation, etc... one or two sentences for each.
+* Qualification: We get access to ther servers or site archives we'll need to undertake the migration and identify business critical functionality that will require special attention and testing.
+* Initial migration: We use automated tools and processes to move code, databases and files, and to stand-up your new environments on Pantheon.
+* Test and patch: We fine tune the migration routine to ensure that everything is working as expected, supported by Visual Regression tools, and build out additional scripting and automated testing as needed. This provides a repeatable and auditable process, and enables pre-launch content syncing.
+* User Acceptance Testing (UAT): You test the site yourself. We have mechanisms in place for you to report any issues that are found and work to resolve those issues.
+* Launch Planning: We work with your team to do launch planning like, such as content resyncs, load testing, SSL certificate pro-provisioning, etc.
+* Launch: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch.
 
 ## Managed Updates
 Keep your site up to date with as little interruption to the site’s end users as possible. Allow Pantheon’s PS team to apply core and contributed plugins/module updates. 
 
-EM monitoring and working with you to ensure that updates are being applied cleanly.
+Efforts are made to ensure that updates do not interfere with your day-to-day operations and your Engagement Manager will monitor the process and work with you to ensure that updates are being applied cleanly.
 
-Efforts are made to ensure that updates do not interfere with your day-to-day operations.
-
-TODO: see other document...  
-
-1 - Update detected per specifications provided from client
-2 - Multidev is spun up cloning db/files from Live
-3 - Updates are applied to the multidev env and VRT tests are ran.
-3.1 - A brief window of time if provided to allow for manual testing if required from client.
-4 - If VRT passes, we merge the MD branch into Master and run VRT again.
-5 - Repeat same process on Test.
-6 - Backup Live environment and deploy updates to Live
+Overview of the process:
+1. Updates are detected per specifications provided from client
+1. A Multidev environment is spun up, cloning db/files from Live
+1. Updates are applied to the Multidev environment and Visual Rregression Tests (VRT) are run
+1. A brief window of time is provided to allow for manual testing if required from client
+1. If VRT passes, we merge the Multidev branch into Master and run VRT again.
+1. Repeat same process on Test.
+1. Backup Live environment and deploy updates to Live
 
 [Contact us](https://pantheon.io/professional-services){.external} for details.
 
