@@ -319,7 +319,7 @@ contributors:
     url: //www.cityofoaksdesign.com
     github: //github.com/cityofoaksdesign
     drupal: //www.drupal.org/u/chris2
-    avatar: //www.drupal.org/files/styles/grid-2/public/user-pictures/picture-1398684-1508882416.jpg
+    avatar: //www.drupal.org/files/styles/grid-3/public/logo_333.png 
   BFTrick:
     name: Patrick Rauland
     twitter: BFTrick
@@ -335,3 +335,7 @@ contributors:
     github: //github.com/edwardangert
     avatar: //avatars2.githubusercontent.com/u/17991901
     linkedin: //www.linkedin.com/in/edward-angert/
+  ccjjmartin:
+    name: Chris Martin
+    github: //github.com/ccjjmartin
+    avatar: //avatars.githubusercontent.com/u/12279982
