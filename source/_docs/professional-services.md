@@ -9,7 +9,7 @@ Pantheon Professional Services works closely with partners to provide customized
 ## Site Migrations 
 The Site Migration service lowers the barrier to entry by leveraging our PS team and partners. Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably. [Contact our migrations team](https://pantheon.io/migrations){.external} for details.
 
-TODO: be more verbose, establish a level of confidence... e.g. walk through of process... 6 steps, automation, etc... one or two sentences for each.
+Overview of the process:
 * Qualification: We get access to ther servers or site archives we'll need to undertake the migration and identify business critical functionality that will require special attention and testing.
 * Initial migration: We use automated tools and processes to move code, databases and files, and to stand-up your new environments on Pantheon.
 * Test and patch: We fine tune the migration routine to ensure that everything is working as expected, supported by Visual Regression tools, and build out additional scripting and automated testing as needed. This provides a repeatable and auditable process, and enables pre-launch content syncing.
