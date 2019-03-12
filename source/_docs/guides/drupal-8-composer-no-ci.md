@@ -15,6 +15,8 @@ In this guide, we’re going to run through the bare necessities to use [Compose
 
 Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/docs/core-updates/).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
 
+{% include("content/composer-updating.html")%}
+
 ## Creating the Pantheon Site
 
 To begin, we’ll want to start a brand new Drupal 8 site on Pantheon from our empty upstream. This upstream is different from the Drupal 8 upstream in that it does not come with any Drupal files. As such, you must use Composer to download Drupal.
