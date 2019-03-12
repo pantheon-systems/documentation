@@ -42,6 +42,9 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#troubleshoot-install"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Troubleshooting</h3></a>
       </div>
       <div id="troubleshoot-install" class="collapse" markdown="1" style="padding:10px;">
+
+      {% include("content/composer-updating.html")%}
+
       ### Composer Content-Length Mismatch and/or Degraded Mode
       If you encounter an issue such as:
 
