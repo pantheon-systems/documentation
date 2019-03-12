@@ -18,7 +18,7 @@ If none of the above apply to your project, use the [standard migration procedur
 
 <div class="alert alert-info" markdown="1">
 #### Note {.info}
-Site migrations are one of the services offered by our [Professional Services](/docs/professional-services/#migrations) team.
+Site migrations are one of the services offered by our [Professional Services](/docs/professional-services/#site-migrations) team.
 </div>
 
 ## Before You Begin
@@ -406,7 +406,7 @@ This error may occur when trying to merge Pantheon's codebase into your existing
 Not possible to fast-forward, aborting.
 ```
 
-Depending on your Git version, you may see the following error instead: 
+Depending on your Git version, you may see the following error instead:
 
 ```
 fatal: refusing to merge unrelated histories
@@ -420,7 +420,7 @@ rebase = TRUE
 ff = only
 ```
 
-In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again. 
+In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again.
 
 ## See Also
 Check our standard migration procedure for related <a href="/docs/migrate#frequently-asked-questions-faqs" data-proofer-ignore>Frequently Asked Questions</a> and [Troubleshooting](/docs/migrate#troubleshooting) tips.
