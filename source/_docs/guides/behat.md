@@ -18,7 +18,7 @@ This guide requires:
  - A local running dev site or remote site URL to point tests to.
  - An empty project directory. In the commands below we assume the directory `~/projects/simple-behat-test`.
 
-<!-- \% include("content/composer-updating.html")%\-->
+{% include("content/composer-updating.html")%}
 
 ## Install Behat and Mink
 
