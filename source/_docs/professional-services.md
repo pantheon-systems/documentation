@@ -23,13 +23,13 @@ Keep your site up to date with as little interruption to the site’s end users 
 Efforts are made to ensure that updates do not interfere with your day-to-day operations and your Engagement Manager will monitor the process and work with you to ensure that updates are being applied cleanly.
 
 Overview of the process:
-1. Updates are detected per specifications provided from client
-1. A Multidev environment is spun up, cloning db/files from Live
-1. Updates are applied to the Multidev environment and Visual Rregression Tests (VRT) are run
-1. A brief window of time is provided to allow for manual testing if required from client
-1. If VRT passes, we merge the Multidev branch into Master and run VRT again.
-1. Repeat same process on Test.
-1. Backup Live environment and deploy updates to Live
+* Updates are detected per specifications provided from client
+* A Multidev environment is spun up, cloning db/files from Live
+* Updates are applied to the Multidev environment and Visual Rregression Tests (VRT) are run
+* A brief window of time is provided to allow for manual testing if required from client
+* If VRT passes, we merge the Multidev branch into Master and run VRT again.
+* Repeat same process on Test.
+* Backup Live environment and deploy updates to Live
 
 [Contact us](https://pantheon.io/professional-services){.external} for details.
 
