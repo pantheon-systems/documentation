@@ -16,11 +16,11 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 All plans except for a Basic plan can use Solr. Solr is available to Sandbox site plans for developmental purposes, but Solr will not be available going live on a Basic plan.
 
 | Plans         | Solr Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
-| ------------- | ------ |
-| Sandbox       | ✓      |
-| Basic         |        |
-| Performance   | ✓      |
-| Elite         | ✓      |
+| ------------- | ---------------------------------- |
+| Sandbox       | <span style="color:green">✔</span> |
+| Basic         | <span style="color:red">❌</span>  |
+| Performance   | <span style="color:green">✔</span> |
+| Elite         | <span style="color:green">✔</span> |
 
 ## Using Solr with WordPress or Drupal
 

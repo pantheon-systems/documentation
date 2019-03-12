@@ -54,7 +54,7 @@ Daily backups are scheduled automatically.
 
 ## Access Backups
 
-Backups created on Pantheon are stored offsite on Amazon EC2 instances for redundancy, however a full-fledged backup solution is strongly recommended for retention. For example, the following script can be executed from an external cron job to send backups to your own Amazon instance:
+Backups created on Pantheon are stored offsite on Google Cloud Storage instances, however a full-fledged backup solution is strongly recommended for retention. For example, the following script can be executed from an external cron job to send backups to your own Amazon S3 instance:
 
 <div class="script-file-header">
 pantheon-backup-to-s3.sh
@@ -139,7 +139,7 @@ Click the down arrow next to Code, Database, or Files to access the link for the
 If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/){.external}:
 
 ```
-wget "https://pantheon-backups.s3.amazonaws.com..."
+wget "wget https://storage.googleapis.com/gcs-pantheon-backups/..."
 ```
 
 You can also use [Terminus](/docs/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading.
@@ -165,7 +165,7 @@ Now that you have created the archive files, check out how to [restore an enviro
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a class="external" href="https://stackoverflow.com/questions/4643328/amazon-s3-expiration-date/4649553#4649553">See this documentation for more information about signed URLS</a>.</p></div>
+<p>Links to backups are signed URLs directly from Google Cloud Storage and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.</p></div>
 
 
 ## Restore From an Existing Backup
@@ -188,7 +188,7 @@ The backup log displays a list of existing backups for that environment. You can
 
 ### Where are the backups stored?
 
-Backups are currently stored offsite for redundancy on Amazon EC2 instances.
+Backups are currently stored offsite for redundancy on Google Cloud Storage instances.
 
 ### How do I restore from my site from a full environment backup?
 
@@ -227,13 +227,13 @@ In comparison, Pantheon’s backup mechanism:
 
 - Does not require a full, or any, Drupal bootstrap
 - Does not utilize an appserver process
-- Does not write to Valhalla, so there are no file size limitation. Instead, backups are stored in Amazon S3 for black-swan redundancy
+- Does not write to Valhalla, so there are no file size limitation. Instead, backups are stored on Google Cloud Storage for black-swan redundancy
 - Uses mysqldump for minimal database impact
 - Executed using job scheduling, and will wait in the queue if the system is busy and execute as soon as its ready
 - Creates distinct archives (code, database, files)
 - Secures access to archives through Pantheon authentication (no anonymous users can access)
 
-Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/docs/terminus/).  Also, you can get S3 download links for retrieval (the links expire and are renewed for additional security).
+Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/docs/terminus/).  Also, you can get download links for retrieval (the links expire and are renewed for additional security).
 
 ```bash
 terminus backup:get $site.$env --file=<filename> --element=<element>

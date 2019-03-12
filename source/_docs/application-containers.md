@@ -4,7 +4,7 @@ description: Information on Pantheon's container-based, grid-model infrastructur
 tags: [infrastructure]
 categories: []
 ---
-Pantheon's infrastructure includes a number of layers. Our edge layer provides robust caching to help your site perform quickly under a traffic spike, but when it comes to generating unique pages and serving logged-in users, the real horsepower is in the Runtime Matrix, which is our way of provisioning and scaling application containers.
+Pantheon's infrastructure includes a number of layers. Our edge layer provides robust caching to help your site perform quickly under a traffic spike, but when it comes to generating unique pages and serving logged-in users, the real horsepower is in the [Runtime Matrix](https://pantheon.io/features/elastic-hosting){.external}, a distributed grid of over a million Linux containers running PHP and NGINX that allow us to provision and scale application containers for your site.
 
 ## Application Containers
 
@@ -24,7 +24,7 @@ Attempts to remotely access services, such as MySQL or SFTP connections, will fa
 
 - All containers are created equally; free accounts are not underpowered.
 - All environments contain a highly tuned PHP-FPM worker and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/docs/phpinfo).
-  - Packages: LDAP, SOAP, GD, Mcrypt, MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
+  - Packages: LDAP, SOAP, GD, Mcrypt (when running PHP versions under 7.2), MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
   - Extensions: APC, New Relic PHP agent, OAuth, Redis
   - [short\_open\_tag](https://secure.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support `<? ?>` syntax; use `<?php ?>` instead)
   - Maximum PHP execution time and other timeouts can be configured as noted in [Timeouts on Pantheon](/docs/timeouts/).

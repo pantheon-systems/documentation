@@ -39,12 +39,13 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
 
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-    exit();
 
     # Name transaction "redirect" in New Relic for improved reporting (optional)
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
+    
+    exit();
   }
 }
 ```
@@ -59,12 +60,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTP_HOST'] == 'subdomain
   $newurl = 'https://www.example.com/subdirectory/'. $_SERVER['REQUEST_URI'];
   header('HTTP/1.0 301 Moved Permanently');
   header("Location: $newurl");
-  exit();
 
   # Name transaction "redirect" in New Relic for improved reporting (optional)
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
+  
+  exit();
 }
 ```
 
@@ -77,12 +79,13 @@ The following configuration will redirect requests for `example.com/old` to `htt
 if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new');
-  exit();
 
   # Name transaction "redirect" in New Relic for improved reporting (optional)
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
+  
+  exit();
 }
 ```
 ### Redirect Multiple Paths
@@ -100,12 +103,41 @@ $redirects = array(
 if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli")) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new-path-for-all');
-  exit();
 
   # Name transaction "redirect" in New Relic for improved reporting (optional)
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
+  
+  exit();
+}
+```
+
+### Redirect Multiple URLs
+The following configuration will redirect requests for:
+
+ - `example.com/old-url1` to `example.com/new-url1`
+ - `example.com/old-url2` to `example.com/new-url2`
+ - `example.com/old-url3` to `example.com/new-url3`
+
+```php
+// You can easily put a list of many 301 url redirects in this format
+// Trailing slashes matters here so /old-url1 is different from /old-url1/
+$redirect_targets = array(
+  '/old-url1' => '/new-url1',
+  '/old-url2' => '/new-url2',
+  '/old-url3' => '/new-url3',
+);
+
+if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name() != "cli") ) {
+  echo 'https://'. $_SERVER['HTTP_HOST'] . $redirect_targets[ $_SERVER['REQUEST_URI'] ];
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://'. $_SERVER['HTTP_HOST'] . $redirect_targets[ $_SERVER['REQUEST_URI'] ]);
+
+  if (extension_loaded('newrelic')) {
+    newrelic_name_transaction("redirect");
+  } 
+  exit();
 }
 ```
 
@@ -124,12 +156,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
   ))) {
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://new.example.com'. $_SERVER['REQUEST_URI']);
-    exit();
 
     # Name transaction "redirect" in New Relic for improved reporting (optional)
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
+
+    exit();
   }
 }
 ```
@@ -175,6 +208,9 @@ if ($legacy_username) {
   2. Enable **Case Sensitive URL Checking** within the [Global Redirect](https://www.drupal.org/project/globalredirect){.external} module configuration (`/admin/settings/globalredirect`).
 </div>
 </div>
+
+### Redirect Files
+Because PHP isn't called when binary files are served, the PHP redirects used above will not work when the are requested directly. You can use [CloudFlare](/docs/cloudflare/) or another stacked CDN to handle file redirects.
 
 ## See Also
 - [Configuring Settings.php](/docs/settings-php/)

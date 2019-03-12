@@ -80,17 +80,6 @@ The site owner is the person who pays for the site. You'll need to update the pa
 
 ## Add a Supporting Organization
 
-One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
-1. Click **Team** in the Site Dashboard.
-2. Click **Add Supporting Organization** at the bottom of the team management window.
-3. Enter the complete name of the agency. An exact match is required.
-4. Check that the agency is the one you expected.
-5. Click the **Add Agency** button to make them a supporting organization.
-
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p>Because Supporting Organizations have full access to a site, only the site owner can perform this action.</p>
-</div>
-
- ![Add a supporting organization button](/source/docs/assets/images/dashboard/multi_org1.png)
- ![Confirm supporting organization](/source/docs/assets/images/dashboard/multi_org2.png)
+{% include("content/add-supporting-org.html")%}

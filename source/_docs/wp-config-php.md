@@ -79,7 +79,8 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     if (!defined( 'WP_DEBUG' )) {
     define( 'WP_DEBUG', true );
     }
-    define( 'WP_DEBUG_LOG', true ); // Stored in wp-content/debug.log
+    define( 'WP_DEBUG_LOG', true );
+    ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Moves the log file to a location writable while in git mode.
     define( 'WP_DEBUG_DISPLAY', true );
   }
   // Wordpress debug settings in test and live environments.
@@ -119,6 +120,16 @@ You don't have to! Pantheon automatically injects database credentials into the
 
 - [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php){.external}
 - [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php){.external}
+
+### How do I enable IonCube Decoder support?
+
+If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/docs/php-versions/) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `wp-config.php`:
+
+```php
+ini_set('ioncube.loader.encoded_paths', '/');
+```
+
+*(More information can be found in our [PHP 7.1 & IonCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
 
 ## Troubleshooting
 ### Request to a Remote API Does Not Return Expected Response

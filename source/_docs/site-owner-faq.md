@@ -30,21 +30,17 @@ For more information on managing teams, see the [Team Management article](/docs/
 
 
 ### How do I add a Supporting Agency?
-One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
-1. Click **Team** in the upper-right of the Site Dashboard.
-2. Select **Add Supporting Organization** at the bottom of the team management window.
-3. Enter the complete name of the agency. An exact match is required.
-4. Check that the agency is the one you expected.
-5. Click **Add Agency** to make them a supporting organization.
+{% include("content/add-supporting-org.html")%}
 
 ### What add-ons are available for my site?
 
- - [Apache Solr](/docs/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service for most plans including the Sandbox site plan.
+ - [Apache Solr](/docs/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
  - [Redis](/docs/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 
-Pantheon also offers [New Relic Pro](/docs/new-relic/) to our customers, built in to the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+Pantheon also offers [New Relic Pro](/docs/new-relic/) to our customers, built into the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
 ### How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will see all the available add-ons for your site.
@@ -70,13 +66,6 @@ Self-serve sites are billable via recurring monthly or [annual](/docs/annual-bil
 ### Can I transfer ownership of a site to someone else?
 {% include("content/transfer-ownership-billing-intro.html")%}
 {% include("content/transfer-ownership-billing-steps.html")%}
-
-Enterprise Organizations can use the same process to assume ownership of a site; however, Agency Partners do not have the ability to own sites directly.
-
-For Sandbox sites, the site owner can click **Team**, then click **Make Owner** next to the team member who should receive ownership of the site.
-
-Resellers should contact Pantheon Support directly if you need to transfer ownership.
-
 
 ## See Also
 

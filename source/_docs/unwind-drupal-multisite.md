@@ -9,7 +9,7 @@ Pantheon only supports one application codebase and one database per site. We do
 
 ## Migrate One Site Out of a Multisite to Pantheon
 
-This method will safely migrate a single site out of your Drupal Multisite and into Pantheon. You may experience some issues, such as  warnings from Launch Check about multisite, but they are generally false positives, and you can clean that up once the site is liberated and on it's own.
+This method will safely migrate a single site out of your Drupal Multisite and into Pantheon. You may experience some issues, such as  warnings from Launch Check about Multisite, but they are generally false positives, and you can clean that up once the site is liberated and on its own.
 
 1. Create a site archive for the site you want to migrate by running `drush ard sitename1`.
 
@@ -34,8 +34,7 @@ This method will safely migrate a single site out of your Drupal Multisite and i
 
 ## Maintain a Single Codebase for Multiple Sites
 
-This method uses a [Custom Upstream](/docs/custom-upstream), a feature available to EDUs, Enterprises, and agencies that sign up for [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies).
-
+This method uses a [Custom Upstream](/docs/custom-upstream), a feature available to EDUs, Enterprises, and [Pantheon Partner Agencies](http://pantheon.io/agencies/partner-program){.external}.
 
 1. Create a [Custom Upstream](/docs/custom-upstream) based on the multisite configuration.
 

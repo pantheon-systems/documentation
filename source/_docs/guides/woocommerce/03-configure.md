@@ -39,6 +39,6 @@ You've probably noticed that your Pantheon site already loads in HTTPS. But whil
 
 We have a [whole document explaining how to load your entire site in HTTPS](/docs/http-to-https/#wp). This may take a while to set up, so what you can do to get going immediately is configure WooCommerce to force the checkout to load in HTTPS.
 
-![Force HTTPS in checkout](/source/docs/assets/images/guides/woocommerce/12-force-secure-checkout.png)
-
 Make sure **Force secure checkout** is enabled in **WooCommerce** > **Settings** > **Advanced** > **Page setup**. This has the added benefit of getting rid of one of the admin notices in the backend of your site.
+
+![Force HTTPS in checkout](/source/docs/assets/images/guides/woocommerce/12-force-secure-checkout.png)

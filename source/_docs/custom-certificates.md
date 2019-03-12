@@ -5,7 +5,7 @@ description: For contract customers who require dedicated, custom TLS certificat
 
 ## Access
 
-A white glove concierge service is now available for contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise){.external}.
+A white glove concierge service is now available to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise){.external}.
 
 ## Upgrade to the Global CDN
 
@@ -39,7 +39,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 <br>
 
-2. Pantheon Support will provide you with the CSR file, to pass on to your **Certificate Authority** (CA).
+2. Pantheon Support will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). See [CA Limitations](#ca-limitations) below for more information.
 
 3. Once you have a set of certificates from the CA, send us:
 
@@ -62,13 +62,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
 
-```bash
-23.185.0.X       example.com
-23.185.0.X       www.example.com
-```
-
-In the example `hosts` file above, replace `23.185.0.X` with the IP address provided by Pantheon and `example.com` with your domain name.
-
+{% include("content/hosts-file.html")%}
 
 For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
 
@@ -80,6 +74,9 @@ A **Certification Authority Authorization** (CAA) record is used to specify whic
  - CAA records permitting your CA, but not Let’s Encrypt.
 
 To help generate CAA records, please see the free online tool: <https://sslmate.com/caa/>
+
+CAA records configured for the root domain (e.g., `example.com`) are inherited by subdomains (e.g., `www.example.com`, `blog.example.com`, etc.). Disabling Let's Encrypt for the root domain will disable subdomains.
+
 
 ## Technical Specifications
 
@@ -106,6 +103,10 @@ Nope! You can use the a single certificate to cover multiple domains spread acro
 ### How long will it take to load my certificate into Pantheon?
 
 Please allow two business days to get a CSR and load the certificate.
+
+### How do I renew my custom certificate? 
+
+Before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for <a href="#option-2-manually-managed-custom-certificates" data-proofer-ignore>bringing a custom certificate</a>).
 
 ### What about sites purchased online?
 
@@ -143,7 +144,14 @@ AAAA record 2:  `2620:12a:8001::X`
 ## Caveats / Known Issues
 
 ### Let's Encrypt Certificate Served Instead of Custom Certificate
-If a Let's Encrypt certificate was deployed to the Global CDN before adding CAA records to prevent Let's Encrypt from issuing certificates, then it will take 10 days for Pantheon to automatically remove the domain from the Let's Encrypt certificate. As part of the concierge service, we will manually remove domains from Let's Encrypt certificates to allow for a quick upgrade, and we have work in progress to ensure the Let's Encrypt certificates are automatically removed quickly once a custom certificate is available.
+If a Let's Encrypt certificate was deployed to the Global CDN before adding CAA records to prevent Let's Encrypt from issuing certificates, then it will take 10 days for Pantheon to automatically remove the domain from the Let's Encrypt certificate.
+
+### CA limitations
+Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA Globalsign does not currently meet this requirement. The workaround is to simply use another CA.
+
+### Downgrading a Site that uses a Custom Certificate
+
+Since all sites require an encryption certificate, to downgrade a site that uses a custom certificate, use Pantheon’s [Global CDN](/docs/https/) to enable Let’s Encrypt. Alternatively, you can use another CDN like [Cloudflare](/docs/cloudflare/).
 
 ## See also
 - [Pantheon Global CDN](/docs/global-cdn)

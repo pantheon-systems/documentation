@@ -81,9 +81,13 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 
       ![Drupal create archive](/source/docs/assets/images/dashboard/drupal-guided-migrate.png)
 
-      <div class="alert alert-info">
-      <h4 class="info">Note</h4>
-      <p markdown="1">The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.</p></div>
+      <div class="alert alert-info" markdown="1">
+      #### Note {.info}
+      `drush ard` is only available on Drush 8 and earlier.
+      </div>
+
+     The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
+
   9. Paste a publicly accessible URL to a download of your site archive. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly.
   10. Click **Import Archive**. After the imported is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
@@ -96,6 +100,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 Manually migrate your site to Pantheon when any of the following apply:
 
 * **Large Drupal Site Archive**: Site archive is greater than the guided migration import limit of 500MB.
+* **Large WordPress Site**: WordPress site exceeds 500MB.
 * **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
 * **[WordPress Site Networks](/docs/migrate-wordpress-site-networks/)**
 * **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
@@ -268,6 +273,10 @@ terminus site:clone <source>.<env> <destination>.<env>
 <p markdown="1">File and database backups that exceed 500MBs are not supported by this method. Sites that exceed this limit must be cloned manually. For details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual/).</p>
 </div>
 
+### Does the WordPress migration cause downtime? 
+No, there is no downtime expected as part of the migration process. For detals, see related [BlogVault resource (question #13)](https://blogvault.net/migration-using-blogvault-faq/){.external}. Performance implications to a live site are similar to running a backup for the site. 
+
+
 ### How do I migrate a local site to Pantheon?
 When asked for your current site URL, enter `https://example.com` and continue the migration procedure in the Site Dashboard.
 
@@ -303,7 +312,7 @@ If you'd like your existing WordPress site to get one-click updates from your [C
 
 1. The general process will be the same as a vanilla WordPress site, but start with **Create New Site** instead of **Migrate existing site**.
 
-2. Name your new site, and be sure to add it to the organization with access to the custom upstream you want to use.
+2. Name your new site, and be sure to add it to the organization with access to the Custom Upstream you want to use.
 
 3. On the next page, choose your Custom Upstream, and complete the installation.
 

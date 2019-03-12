@@ -7,15 +7,19 @@ categories: []
 Manually migrate your site to Pantheon when any of the following apply:
 
 * **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
+* **Large WordPress Site**: WordPress site exceeds 500MB.
 * **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
 * **[WordPress Site Networks](/docs/guides/multisite/)**
 * **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Use the [standard migration procedure](/docs/migrate) if none of the above apply to your project.</p></div>
+If none of the above apply to your project, use the [standard migration procedure](/docs/migrate/).
+
+<div class="alert alert-info" markdown="1">
+#### Note {.info}
+Site migrations are one of the services offered by our [Professional Services](/docs/professional-services/#migrations) team.
+</div>
 
 ## Before You Begin
 To ensure a successful migration, complete the following tasks on the source site first:
@@ -91,16 +95,9 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 
 ## Import Your Code
 Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `wp-content/uploads` (WordPress) / `sites/default/files` (Drupal) directory, or any other static assets you do not want tracked by version control.
-  <div class="panel panel-drop panel-guide" id="accordion">
-    <div class="panel-heading panel-drop-heading">
-      <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
-        <h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Code Directory Structure</h3>
-      </a>
-    </div>
-    <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
-      {% include("content/code.html")%}
-    </div>
-  </div>
+
+  {% include("content/code.html")%}
+
   <div class="alert alert-info">
   <h4 class="info">Note</h4>
   <p markdown="1">If your existing site is already version controlled and you would like to preserve the commit history, import the code from the command line with Git using the instructions below. If you prefer to avoid the command line entirely, we suggest importing the codebase using an SFTP Client such as [Transmit](https://panic.com/transmit/){.external} or [Cyberduck](https://cyberduck.io/){.external}.</p></div>
@@ -402,7 +399,7 @@ This error may occur when trying to merge Pantheon's codebase into your existing
 Not possible to fast-forward, aborting.
 ```
 
-Depending on your Git version, you may see the following error instead: 
+Depending on your Git version, you may see the following error instead:
 
 ```
 fatal: refusing to merge unrelated histories
@@ -416,7 +413,7 @@ rebase = TRUE
 ff = only
 ```
 
-In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again. 
+In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again.
 
 ## See Also
 Check our standard migration procedure for related <a href="/docs/migrate#frequently-asked-questions-faqs" data-proofer-ignore>Frequently Asked Questions</a> and [Troubleshooting](/docs/migrate#troubleshooting) tips.

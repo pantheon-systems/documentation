@@ -22,6 +22,8 @@ image: getting-started-Largethumb
 ---
 In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live environment.
 
+The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are migrating a site already on Pantheon, follow the steps for [relaunching an existing Pantheon site](/docs/relaunch/).
+
 ## Connect Domain
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
@@ -30,6 +32,7 @@ In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live e
 5. Select **Connect Domain** and enter the bare domain (e.g., `example.com`) then click **Connect Domain**.
 
 ## Existing Sites
+
 ### Avoid HTTPS Interruption
 Sites that already have HTTPS working can pre-provision certificates and avoid HTTPS service interruption by verifying ownership of the domain.
 
@@ -38,20 +41,27 @@ To pre-provision HTTPS, CAA records must either:
  - Not exist for the domain and its parent domains, or
  - Authorize Let's Encrypt.
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.</p>
+<div class="alert alert-danger" markdown="1">
+#### Warning {.info}
+Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.
+
+Once you begin this process, you have:
+
+ - 7 days to complete the challenge response. After that, you must create a new challenge.
+ - 30 days to adjust DNS values.
 </div>
 
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 3. Select **Details** next to the bare domain.
 4. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**.
-5. Serve the file from your existing live site. Drupal 7 users can use the [Lets Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge) module to easily serve the contents of the challenge file.
+5. Serve the file from your existing live site. Drupal 7 users can use the [Let's Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge) module to easily serve the contents of the challenge file.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.</p>
+    <div class="alert alert-info" markdown="1">
+    #### Note {.info}
+    The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
+
+    If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin){.external} to generate DNS TXT records to validate domain ownership.
     </div>
 
 6. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.

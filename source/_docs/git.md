@@ -75,6 +75,8 @@ In order to tell Git the files are ready, you need to commit them. Every commit 
 ```bash
 git commit -am "Add a great new module to increase awesomesauce level of my Drupal site."
 ```
+This command uses a combination of options `-am`: `-a` to include *all* files changed, and `-m` to include a commit *message*:
+
 If you don't specify a message on the command line, Git will open your default text editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:<br />
 ![Git Commit](/docs/assets/images/git_commit.png)<br />
 There is a handy list of Git commands (along with a lot of other documentation) [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf).
@@ -179,17 +181,18 @@ To clear this up, you may need to work with your network administrators to unblo
 
 For further learning, we recommend the following resources:
 
-- [Git Documentation](https://git-scm.com/documentation)
-- [Pro Git Book](https://git-scm.com/book/en/v2)
-- [First Aid Git](https://github.com/magalhini/firstaidgit)
-- [Git Reference](http://gitref.org/)
-- [Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html)
-- [Git Immersion](http://gitimmersion.com/)
-- [Code School - Try Git](https://try.github.io/levels/1/challenges/1)
-- [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
-- [SourceTree - Git GUI Client](https://www.sourcetreeapp.com/)
-- [GitKraken - Git GUI Client](https://www.gitkraken.com/)
-- [GitHub Desktop - Git GUI Client](https://desktop.github.com/)
+- [Git Documentation](https://git-scm.com/documentation){.external}
+- [Pro Git Book](https://git-scm.com/book/en/v2){.external}
+- [First Aid Git](https://github.com/magalhini/firstaidgit){.external}
+- [Git Reference](http://gitref.org/){.external}
+- [Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html){.external}
+- [Git Immersion](http://gitimmersion.com/){.external}
+- [Code School - Try Git](https://try.github.io/levels/1/challenges/1){.external}
+- [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/){.external}
+- [SourceTree - Git GUI Client](https://www.sourcetreeapp.com/){.external}
+- [GitKraken - Git GUI Client](https://www.gitkraken.com/){.external}
+- [GitHub Desktop - Git GUI Client](https://desktop.github.com/){.external}
+- [Repository mirroring](https://docs.gitlab.com/ee/workflow/repository_mirroring.html){.external}
 
 For Pantheon-specific Git questions, see the following:
 

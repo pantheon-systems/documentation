@@ -16,10 +16,7 @@ While creating a new site, any user in your [organization](/docs/organizations/)
 
 From the Site Dashboard, the Site Owner will want to:
 
-1. Click **Team**.
-2. Click **Add Supporting Organization**.
-3. Search for your Organization.
-4. Click **Add**.
+{% include("content/add-supporting-org.html")%}
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4><p markdown="1"> If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/support/) to transfer sites to your Organization.</p>
@@ -58,7 +55,7 @@ You can add custom tags by selecting the checkbox next to the site, and clicking
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
 
 ### Upstream
-Use this filter to sort sites by their upstream. This includes both [Pantheon upstreams](/docs/start-state/#pantheon-upstreams) and [custom upstreams](/docs/custom-upstream/).
+Use this filter to sort sites by their upstream. This includes both [Pantheon upstreams](/docs/start-state/#pantheon-upstreams) and [Custom Upstreams](/docs/custom-upstream/).
 
 ### Code Status
 This filter shows which sites have core updates available, which ones are up to date, and which ones are unknown (e.g., managed by Composer). At this time, Organizations with over 800 sites do not have access to this filter, as they will time out loading.

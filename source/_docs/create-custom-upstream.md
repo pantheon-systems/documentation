@@ -3,7 +3,7 @@ title: Create a Custom Upstream
 description: Connect a remote repository with Pantheon to use as a starting point for new sites.
 tags: [tools, workflow]
 ---
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
+Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
@@ -30,11 +30,15 @@ Choose your preferred Git host:
 
 2. [Log in to GitHub](https://github.com/login/).
 
-3. If this is your first time logging into GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New Repository**](https://github.com/new) from the Repository sidebar on the right.
+3. If this is your first time logging in to GitHub, click [**Start Project**](https://github.com/new). Otherwise, click [**New**](https://github.com/new) from the Repositories sidebar on the left.
 
 4. Name the repository.
 
 5. Select whether the repository will be private or if it can be publicly accessible from outside your organization.
+
+   **Do not** select the options to create a `README`, `.gitignore`, or license file:
+
+   ![GitHub Initialization options](/source/docs/assets/images/github-create-readme.png)
 
 6. Click **Create Repository**.
 
@@ -202,7 +206,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
             1. Go to GitHub to [generate a personal access token](https://github.com/settings/tokens).
             2. Click **Generate new token**.
             3. Confirm your password if prompted.
-            4. Enter a token description, such as "pantheon read my custom upstream"
+            4. Enter a token description, such as "pantheon read my Custom Upstream"
             5. Select "repo" as the scope:
 
                 ![GitHub generate token](/source/docs/assets/images/github-token.png)
@@ -259,7 +263,7 @@ Custom Upstreams from GitLab repositories must be created for you by Pantheon Su
 
     ![GitLab reporter permission](/source/docs/assets/images/gitlab-reporter.png)
 
-2. [Contact support](/docs/support) to add the custom upstream to your org. You must provide a username/password or OAuth token.
+2. [Contact support](/docs/support) to add the Custom Upstream to your org. You must provide a username/password or OAuth token.
 </div>
 </div>
 
@@ -305,16 +309,16 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p markdown="1">Switching the upstream of an existing site is risky. Consider creating a new site from your custom upstream and migrating the contents. If you must switch upstreams, [back up](/docs/backups/) your site first, and consider our documentation on [upstream merge conflicts](/docs/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).</p>
+<p markdown="1">Switching the upstream of an existing site is risky. Consider creating a new site from your Custom Upstream and migrating the contents. If you must switch upstreams, [back up](/docs/backups/) your site first, and consider our documentation on [upstream merge conflicts](/docs/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).</p>
 </div>
 
-Only a Site Owner can change an existing site to use a new custom upstream. Site owners can [contact support](/docs/support/), or use [Terminus](/docs/terminus/):
+Only a Site Owner can change an existing site to use a new Custom Upstream. Site owners can [contact support](/docs/support/), or use [Terminus](/docs/terminus/):
 
 ```bash
 terminus site:upstream:set $site $upstream_id
 ```
 
-In the example above, set or replace the variables `$site` and `$upstream_id` with your site name and upstream machine name, respectively. You can find your custom upstream's machine name using `terminus org:upstream:list $org`, where `$org` is your organization name.
+In the example above, set or replace the variables `$site` and `$upstream_id` with your site name and upstream machine name, respectively. You can find your Custom Upstream's machine name using `terminus org:upstream:list $org`, where `$org` is your organization name.
 
 ## Next Steps
 - [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)

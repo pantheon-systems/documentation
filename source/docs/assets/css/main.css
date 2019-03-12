@@ -567,6 +567,11 @@ code.sftp-command::before {
   font-size: smaller;
 }
 
+/* Table Striping */
+tr:nth-child(even) {
+  background-color: #D2D9DD
+}
+
 /* Pantheon "B" icon */
 .pio-docs-booticon {
   display: block;

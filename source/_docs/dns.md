@@ -1,5 +1,5 @@
 ---
-title: Introduction to Domain Name Services
+title: Introduction to the Domain Name System
 description: Learn what DNS is, and how to utilize it to configure your domain name to Pantheon's servers.
 tags: [dns]
 use: [docs_tags]
@@ -7,7 +7,7 @@ categories: []
 contributors: alexfornuto
 ---
 
-**DNS** stands for Domain Name Service, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/docs/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
+**DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/docs/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
 
 ![DNS Reccomendations](/source/docs/assets/images/dashboard/domain-added.png)
 
@@ -172,6 +172,11 @@ Address: 2620:12a:8000::1
 ```
 
 In the example above, we can create an `A` record for `www` set to `23.185.0.1` to substitute the `CNAME` record.
+
+### Can I override DNS locally?
+Yes! You can modify your local `hosts` file, which takes precedence over DNS:
+
+{% include("content/hosts-file.html")%}
 
 ## See Also
 

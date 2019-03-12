@@ -13,7 +13,7 @@ previousurl: terminus/
 image: terminus-thumbLarge
 searchboost: 100
 ---
-Terminus is available for Mac OS X and Linux
+Terminus is available for Mac OS X and Linux.
 
 Some Windows users have installed Terminus using [Git BASH on Git for Windows](https://git-for-windows.github.io/){.external}, or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){.external}, but this is unsupported.
 

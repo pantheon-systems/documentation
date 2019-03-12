@@ -59,15 +59,15 @@ You can also specify additional configurations with putnev, such as whether to p
 
 ## Frequently Asked Questions
 
-#### How can I make changes to the OpenLDAP configuration file?
+### How can I make changes to the OpenLDAP configuration file?
 
 Users do not have access to make modifications to `ldap.conf`. Instead, use `putenv` within `settings.php` as described above.
 
-#### Is ldap_sso supported?
+### Is ldap_sso supported?
 
 The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP needs to be PHP-based and not webserver-based.
 
-#### Does PEG work with LDAP?
+### Does PEG work with LDAP?
 
 WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
@@ -76,13 +76,14 @@ WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pant
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.
 
 Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. This script requires PHP 7.1 to execute properly without PHP errors.  If you are connecting via a Pantheon Enterprise Gateway (PEG), use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+
 ```bash
 terminus drush <site>.<env> -- scr ldap-test.php
 ```
 
 The entire script:
 
-````php
+```php
 <?php
 $settings = array(
   'NAME' => array(
@@ -169,10 +170,11 @@ foreach ($settings as $host => $setting) {
   $entries = ldap_get_entries($link_identifier, $search_result_identifier);
   var_dump($entries);
 }
-````
+```
 
 Alternate $settings array when using PEG:
-````php
+
+```php
 
 <?php
 $settings = array(
@@ -187,5 +189,4 @@ $settings = array(
     'attributes' => array('cn'),
   ),
 );
-
-````
+```

@@ -21,6 +21,7 @@ permalink: docs/guides/build-tools/
 nexturl: guides/build-tools/create-project/
 editpath: build-tools/01-introduction.md
 image: buildToolsGuide-thumb
+multidev: true
 ---
 This guide describes how to use build tools such as GitHub and CircleCI with Composer to implement a collaborative, team-based Continuous Integration workflow using Pull Requests for Drupal 8 sites on Pantheon. While this guide demonstrates [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer){.external}, the same workflow can be applied to [WordPress](https://github.com/pantheon-systems/example-wordpress-composer){.external} and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer){.external} sites.
 
@@ -142,10 +143,15 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
 9. [Authorize CircleCI on GitHub](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.</p>
-    </div>
+    If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.
+
+<div class="alert alert-info" markdown="1">
+#### Note {.info}
+Pantheon's [support team](/docs/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
+
+If you need help configuring external systems, consider joining the [Pantheon Power Users](/docs/power-users/) community on Slack.
+</div>
+
 
 ### Access Tokens (Optional)
 

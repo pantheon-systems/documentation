@@ -102,18 +102,26 @@ Any modules for Drupal or plugins for WordPress that need to write to the codeba
 
 Because Pantheon does not provide [transcoding](https://en.wikipedia.org/wiki/Transcoding#Re-encoding.2Frecoding), bandwidth-adaptive media delivery, or support for large files (see below), [streaming media](https://en.wikipedia.org/wiki/Streaming_media) is not possible directly from the platform.
 
-However, you can run a great streaming media website. To do so, Pantheon recommendeds that you find a service to handle the transcoding and streaming, whether that's [YouTube](https://www.youtube.com/), [Brightcove](https://www.brightcove.com/), [Vimeo](https://vimeo.com/), [Soundcloud](https://soundcloud.com/), or another provider. These services provide all the necessary components for great streaming media.
+However, you can run a great streaming media website. To do so, Pantheon recommends that you find a service to handle the transcoding and streaming, whether that's [YouTube](https://www.youtube.com/), [Brightcove](https://www.brightcove.com/), [Vimeo](https://vimeo.com/), [Soundcloud](https://soundcloud.com/), or another provider. These services provide all the necessary components for great streaming media.
 
 It is also possible to deliver smaller media files from Pantheon using [progressive download](https://en.wikipedia.org/wiki/Progressive_download), but the media will not automatically adapt to the bandwidth and capabilities of the device browsing the site, nor does Pantheon support "seeking" to arbitrary playback positions based on time. The actual media formats (encodings, containers, file name extensions) are unrestricted.
 
 ## Large Files
 
-Due to the configuration of the [Pantheon Filesystem](/docs/files/), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 256MB will fail no matter how they are uploaded, even if using SFTP or rsync. Transfers with files over 50MB will experience noticeable degradation in performance.
+Due to the configuration of the [Pantheon Filesystem](/docs/files/), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/docs/rsync-and-sftp/). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
+
+| File Size       | Platform Compatibility            | Notes                               |
+|:--------------- | --------------------------------- |------------------------------------ |
+| ≤ 100MB         | <span style=color:green>✔</span>  | Can be uploaded via any means       |
+|   100MB - 256MB | <span style=color:orange>✔</span> | Must be uploaded over SFTP or rsync |
+| > 256MB         | <span style=color:red>❌</span>   | Must be hosted via 3rd party CDN    |
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 
- - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs){.external}
- - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/){.external}
+ - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs){.external}.
+ - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/){.external}.
+
+Be aware, even when using an external CDN to host files, you cannot upload files over 100MB through the CMS. Upload these files directly to the CDN (here's Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html){.external}).
 
 See our documentation for [Drupal](/docs/drupal-s3) and [WordPress](/docs/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
 
@@ -152,13 +160,30 @@ PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](htt
 
 ## CORS
 
-For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See  [https://enable-cors.org/server\_php.html](https://enable-cors.org/server_php.html)
+For sites that need to provide services with Cross-Origin Resource Sharing (CORS), adding the proper header should enable the resource. See  [https://enable-cors.org/server_php.html](https://enable-cors.org/server_php.html)
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
+For WordPress users, you can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/){.external}, or add the following to the active theme's `function.php`:
+
+```php
+add_filter('allowed_http_origins', 'pantheon_allowed_origins');
+
+function pantheon_allowed_origins($urls) {
+    $urls[] = 'https://www.example.com';
+    return $urls;
+}
+```
+
+In the example above, `$urls[]` is defined as a URL for which cross-domain requests are allowed. Note that the protocol (`http` or `https`) and any subdomains (like `www`) are relevant. Here's an example of a larger array allowing requests from multiple URLS:
+
+```php
+$urls[] = array( 'https://www.example.com', 'http://www.example.com', 'https://example.com', 'http://example.com' ) ;
+```
+
 ## Large (>100GB) File Backups
 
-Large backups take longer, use more resources, and have a higher likelihood of failing.  Additionally, a 100GB tarball is in itself not particularly convenient for anyone.  For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal).  Despite the lack of backups, file content is highly durable and stored on multiple servers.
+Large backups take longer, use more resources, and have a higher likelihood of failing.  Additionally, a 100GB compressed tarball is in itself not particularly convenient for anyone.  For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal).  Despite the lack of backups, file content is highly durable and stored on multiple servers.
 
 ## CSS Preprocessors
 
@@ -194,6 +219,10 @@ Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge
 
 Pantheon does not currently support any PHP frameworks outside of Drupal and WordPress. The platform is only optimized for Drupal or WordPress and no others. Although PHP will run, we can not assist you in getting the non-approved frameworks running in any way.
 
+## Node.js
+
+Node.js is not available in the platform. If running node.js services is a hard requirement for your Drupal or Wordpress application, the node.js service must to be hosted on a different remote server outside of Pantheon.
+
 ## Modules and Plugins with Known Issues
 See [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues) for a list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.
 
@@ -201,7 +230,7 @@ See [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues) 
 
 Sandbox sites that are over four months old that have not had code commits or other Git activity for three months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
 
-You can reactivate a site with a single click. Simply visit the site's Dashboard and click **Unfreeze site**. Within a few minutes, the site will be ready for development again. If you experience any issues, a backup of the site is available and can be restored via the Site Dashboard.
+You can easily reactivate a site by visiting your Pantheon User Dashboard, select the frozen site there, then click **Unfreeze site**. Within a few minutes, the site will be ready for development again. If you experience any issues, a backup of the site is available and can be restored via the Site Dashboard.
 
 ## Emoji Support
 

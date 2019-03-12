@@ -9,6 +9,7 @@ contributors:
   - ataylorme
   - dwayne
   - davidneedham
+multidev: true
 ---
 
 In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/){.external} for managing a Drupal 8 site on your local machine and pushing to Pantheon.
@@ -69,21 +70,28 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 
 `example-drops-8-composer` was designed to run automated tests on a continuous integration server. Unless you plan on running automated tests it is safe to completely remove the automated testing functionality.
 
-1. Delete the following directories:
+1.  Delete the following directories:
+    - `scripts/github`
+    - `scripts/gitlab`
+    - `.circleci`
+    - `tests`
 
-   * `scripts/github`
-   * `scripts/gitlab`
-   * `.circleci`
-   * `tests`
+2.  Modify `composer.json`:
+    - Remove all dependencies in the `require-dev` section.
+    - Update the `scripts` section to remove the `lint`, `code-sniff`, and `unit-test` lines.
+    - Remove the `find .circleci/scripts/pantheon/ -type f | xargs chmod 755,` line from the `post-update-cmd` section of `scripts`.
+    - Remove the `find tests/scripts/ -type f | xargs chmod 755` line from the `post-update-cmd` section of `scripts`.
+        - You may need to remove a trailing comma from the end of the last item in the `post-update-cmd` section, otherwise the JSON will be invalid.
 
-<br>
-2. Modify `composer.json`:
+3. Remove the following section from `pantheon.yml`:
 
-   * Remove all dependencies in the `require-dev` section.
-   * Update the `scripts` section to remove the `lint`, `code-sniff`, and `unit-test` lines.
-   * Remove the `find .circleci/scripts/pantheon/ -type f | xargs chmod 755,` line from the `post-update-cmd` section of `scripts`.
-   * Remove the `find tests/scripts/ -type f | xargs chmod 755` line from the `post-update-cmd` section of `scripts`.
-       * You may need to remove a trailing comma from the end of the last item in the `post-update-cmd` section, otherwise the JSON will be invalid.
+    ```yml
+      sync_code:
+        after:
+          - type: webphp
+            description: Push changes back to GitHub if needed
+            script: private/scripts/quicksilver/quicksilver-pushback/push-back-to-github.php
+    ```
 
 ## Managing Drupal with Composer
 
@@ -106,7 +114,13 @@ Normally the next step would go through the standard Drupal installation. But si
 
     ![image of terminal running a composer install](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-update.png)
 
-2. Let's take a look at the changes:
+2. And now we need to install:
+
+    ```bash
+    composer install
+    ```
+
+3. Let's take a look at the changes:
 
     ```bash
    git status
@@ -114,11 +128,11 @@ Normally the next step would go through the standard Drupal installation. But si
 
    It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration.
 
-3. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the `:: cut ::` section:
+4. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the `:: cut ::` section:
 
    **Important:** Without this modification, critical components such as Drupal core and contrib modules will be ignored and not pushed to Pantheon.
 
-4. Now let’s run `git status` again to make sure everything is included:
+5. Now let’s run `git status` again to make sure everything is included:
 
    ```bash
    git status
@@ -126,13 +140,13 @@ Normally the next step would go through the standard Drupal installation. But si
 
    ![Image of git status showing the changed files in red](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
 
-5. Set the site to `git` mode:
+6. Set the site to `git` mode:
 
    ```bash
    terminus connection:set $PANTHEON_SITE_NAME.dev git
    ```
 
-6. Add and commit the code files. A Git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
+7. Add and commit the code files. A Git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
 
    ```bash
    git add .

@@ -11,8 +11,7 @@ This article will help you gain access to an account if a site owner has left th
 
 
 ###The Email Address is Known
-
-1. Go to the [Dashboard](https://dashboard.pantheon.io) and select the [Forgot your password](https://dashboard.pantheon.io/reset-password) link.
+1. Go to the [Password Reset](https://dashboard.pantheon.io/reset-password) page.
 2. Enter the previous owner's email address, and click **Request reset link**.
 3. Work with your email administrator so you can use the reset link to gain access.
 4. After you sign in, update the email address to an existing employee.

@@ -169,11 +169,10 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
   terminus env:deploy $TERMINUS_SITE.test --sync-content  --updatedb --cc --note="Deploy C7 plugin"
   ```
 
-   <div class="alert alert-info">
-   <h4 class="info">Note</h4>
-   <p markdown="1">The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added posts and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
-   </p>
-   </div>
+    <div class="alert alert-info" markdown="1">
+    #### Note {.info}
+    The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added posts and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
+    </div>
 
 5. Activate the Contact Form 7 plugin on the Test environment by making a manual configuration change:
 

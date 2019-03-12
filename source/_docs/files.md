@@ -4,13 +4,13 @@ description: Detailed information on how to access and optimize the Pantheon fil
 tags: [infrastructure, sftpfiles]
 categories: []
 ---
-Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files:
+Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title=".gitignore" data-content="The <a class='external' href='https://git-scm.com/docs/gitignore'>.gitignore file</a> is located at the root of the site's codebase and instructs Git which paths should be ignored."><em class="fa fa-info-circle"></em></a>:
 
 - [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore){.external}
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore){.external}
 - [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore){.external}
 
-The Pantheon architecture is comprised of highly available [application containers](/docs/application-containers/) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
+The Pantheon architecture comprises highly available [application containers](/docs/application-containers/) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
 Valhalla symbolically links the `wp-content/uploads` directory for WordPress and the `sites/default/files` directory for Drupal to the Valhalla files directory mount point, `/files` if viewed via an SFTP client. It is important to note that this directory is not part of the document root and is not directly web-accessible. Should you wish to make this accessible, you will need to create an additional symbolic link from within the document root.  Any [non-standard file locations](/docs/non-standard-file-paths/) should be symbolically linked to `/files` or moved manually.
 

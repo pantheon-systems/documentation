@@ -32,13 +32,13 @@ The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of fe
 
 To create your index, you’ll need to supply some information about it:
 
-**Indexname:**  What you would like to call your index.
-**Description:**  A brief description to be displayed in human language.
-**Website:**  The URL of the website you are indexing.
-**Environment:**  The environment to which the index applies.
-**Server type:**  Apache Solr or Elasticsearch.
-**Template:** Select the appropriate template.
-**\*Force SSL:** If your site uses HTTPS, you’ll need to force SSL.
+- **Indexname:**  What you would like to call your index.
+- **Description:**  A brief description to be displayed in human language.
+- **Website:**  The URL of the website you are indexing.
+- **Environment:**  The environment to which the index applies.
+- **Server type:**  Apache Solr or Elasticsearch.
+- **Template:** Select the appropriate template.
+- **Force SSL:** If your site uses HTTPS, you’ll need to force SSL.
 
 After filling out the appropriate fields, click **Save** to create your index. You will then receive an Index URI and a Host-Configuration (the host-configuration is simply a breakdown of the URI).
 

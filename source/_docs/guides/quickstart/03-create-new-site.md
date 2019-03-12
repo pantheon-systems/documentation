@@ -42,7 +42,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
-    <p>Organizations can add their own sites to this list! We call these Custom Upstreams, and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
+    <p>Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/docs/custom-upstream/), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
     </p></div>
 
 4. For the purpose of this guide, deploy WordPress or Drupal 8 by clicking the appropriate button. This takes a few moments. So while you wait, learn what’s happening behind the scenes:

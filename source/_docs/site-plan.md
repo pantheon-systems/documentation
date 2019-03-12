@@ -112,35 +112,30 @@ Site ownership is designated to the user account entering billing information.
   <li id="existing-cc-id" role="presentation"><a href="#existing-cc" aria-controls="existing-cc" role="tab" data-toggle="tab">Select Existing Card</a></li>
   <!-- 3RD Tab Nav -->
   <li id="request-payment-id" role="presentation"><a href="#request-payment" aria-controls="request-payment" role="tab" data-toggle="tab">Send a Request</a></li>
-
 </ul>
 <!-- Tab panes -->
 <div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="add-cc" markdown="1">
+<!-- Active pane content -->
+<div role="tabpanel" class="tab-pane active" id="add-cc" markdown="1">
 If this is your first time taking a site live on Pantheon, you'll likely need to add a new card to your account:
 
 1. Click the **<span class="glyphicon glyphicon-plus"></span> Add New Card** link.
 2. Enter the email address you would like invoices sent to.
 3. Enter your credit card information and click **Add Card**.
 4. Make sure the desired card is selected and click **Continue**.
-  </div>
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="existing-cc" markdown="1">
+</div>
+<!-- 2nd pane content -->
+<div role="tabpanel" class="tab-pane" id="existing-cc" markdown="1">
 To associate an existing card from your account as the payment method for this site:
 
 1. Select the desired card.
 2. Click **Continue**.
-  </div>
-  <!-- 3rd pane content -->
-  <div role="tabpanel" class="tab-pane" id="request-payment" markdown="1">
+</div>
+<!-- 3rd pane content -->
+<div role="tabpanel" class="tab-pane" id="request-payment" markdown="1">
 {% include("content/transfer-ownership-billing-intro.html")%}
-
-1. Click the **<span class="glyphicons glyphicons-envelope"></span> Send a Request** button.
-2. Enter the intended site owner’s email.
-  The business owner will get an email that directs them to create a Pantheon account or log in to an existing account. Once inside, they need to provide their contact and billing info.
-3. Ask the new site owner to add your agency as a [Supporting Organization](/docs/team-management/#add-a-supporting-organization) so you can continue the going live procedure on their behalf.
-  </div>
+{% include("content/transfer-ownership-billing-steps.html")%}
+</div>
 </div>
 
 ### Confirm Your Purchase
@@ -155,9 +150,10 @@ Invoices and transaction history related to this change can be found in **<span 
 ## Cancel Current Plan
 Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox. 
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">While all site plans downgrades will be effective immediately, no partial refunds will be issued.</p></div>
+<div class="alert alert-info" markdown="1">
+#### Note {.info}
+While all site plans downgrades will be effective immediately, no partial refunds will be issued, per our [terms of service](https://pantheon.io/terms-of-service#tos-11){.external}.
+</div>
 
 
 1. Go to the Site Dashboard.
