@@ -7,20 +7,22 @@ tags: []
 Pantheon Professional Services works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon.
 
 ## Site Migrations 
-The Site Migration service lowers the barrier to entry by leveraging our PS team and partners. Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably. [Contact our migrations team](https://pantheon.io/migrations){.external} for details.
+The Site Migration service lowers the barrier to entry by leveraging our PS team and partners. Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably. 
 
 Overview of the process:
-* Qualification: We get access to ther servers or site archives we'll need to undertake the migration and identify business critical functionality that will require special attention and testing.
+* Qualification: We get access to the servers or site archives we'll need to undertake the migration and identify business critical functionality that require special attention and testing.
 * Initial migration: We use automated tools and processes to move code, databases and files, and to stand-up your new environments on Pantheon.
 * Test and patch: We fine tune the migration routine to ensure that everything is working as expected, supported by Visual Regression tools, and build out additional scripting and automated testing as needed. This provides a repeatable and auditable process, and enables pre-launch content syncing.
-* User Acceptance Testing (UAT): You test the site yourself. We have mechanisms in place for you to report any issues that are found and work to resolve those issues.
+* User Acceptance Testing (UAT): You test the site yourself. We have mechanisms in place to report any issues that are found and work to resolve those issues.
 * Launch Planning: We work with your team to do launch planning like, such as content resyncs, load testing, SSL certificate pro-provisioning, etc.
 * Launch: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch.
+
+[Contact our migrations team](https://pantheon.io/migrations){.external} for details.
 
 ## Managed Updates
 Keep your site up to date with as little interruption to the site’s end users as possible. Allow Pantheon’s PS team to apply core and contributed plugins/module updates. 
 
-Efforts are made to ensure that updates do not interfere with your day-to-day operations and your Engagement Manager will monitor the process and work with you to ensure that updates are being applied cleanly.
+Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly, and minimizing interference with your day-to-day operations. 
 
 Overview of the process:
 * Updates are detected per specifications provided from client
@@ -34,16 +36,16 @@ Overview of the process:
 [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Advanced CDN
-Implement additional services like extended WAF, Image Optimization, and Domain Masking using our advanced CDN implementation.
+Implement additional services like extended WAF, Image Optimization, and Domain Masking using our advanced CDN implementation. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Pantheon Enterprise Gateway (PEG)
-Provides a static outgoing IP address for use in IP whitelisting connections to external services.
+Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## SSO/SAML
-Single Sign-on to both the Pantheon Dashboard and the application itself.
+Single Sign-on to both the Pantheon Dashboard and the application itself. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Custom Application Services
-Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon.
+Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Pre-launch Load Testing
 Load tests are critical steps in ensuring a successful launch. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site. Load tests provide critical insight for how a site will perform in the wild and under peak traffic spikes and ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings. [Contact us](https://pantheon.io/professional-services){.external} for details.
