@@ -95,21 +95,7 @@ Next, we can take some of the steps we listed above, most of which are provided 
 
    You should see output like this:
 
-   ```nohighlight
-   Feature: Visibility of the homepage
-     In order to have confidence that my site is accessible
-     As a site administrator
-     I want to verify I can visit the homepage
-   
-     Scenario: Verify the homepage
-       When I am on the homepage
-       Then the response status code should be 200
-   
-   
-   1 scenario (1 passed)
-   2 steps (2 passed)
-   0m0.08s (11.12Mb)
-   ```
+   ![Behat test results](/source/docs/assets/images/guides/behat-output.png)
 
    **Note:** The extra parameters are not required, just a common set of preferences. Here's what they do:
 
