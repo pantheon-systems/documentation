@@ -15,7 +15,7 @@ The Site Migration service lowers the barrier to entry by leveraging our PS team
 - **Initial migration**: We use automated tools and processes to move code, databases and files, and to stand-up your new environments on Pantheon.
 - **Test and patch**: We fine-tune the migration routine to ensure that everything is working as expected, supported by Visual Regression tools, and build out additional scripting and automated testing as needed. This provides a repeatable and auditable process, and enables pre-launch content syncing.
 - **User Acceptance Testing (UAT)**: You test the site yourself. We have mechanisms in place to report any issues that are found and work to resolve those issues.
-- **Launch Planning**: We work with your team to do launch planning such as content resyncs, load testing, SSL certificate pro-provisioning, and more.
+- **Launch Planning**: We work with your team to do launch planning such as content resyncs, load testing, SSL certificate pre-provisioning, and more.
 - **Launch**: Our team stands by during the DNS cutover to handle any potential migration issues and we stick around post-launch.
 
 [Contact our migrations team](https://pantheon.io/migrations){.external} for details.
@@ -23,7 +23,7 @@ The Site Migration service lowers the barrier to entry by leveraging our PS team
 ## Managed Updates
 Keep your site up to date with minimal interruption to end users. Allow Pantheon’s PS team to apply core and contributed plugins/module updates.
 
-Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly, and minimizing interference with your day-to-day operations.
+Your Engagement Manager monitors the process and works with you to ensure that updates are being applied cleanly, minimizing interference with your day-to-day operations.
 
 ### Managed updates process overview
 
