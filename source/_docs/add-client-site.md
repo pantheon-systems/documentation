@@ -37,8 +37,7 @@ The Agency should follow these steps:
 
    If you don't already have a Pantheon account, fill out the required fields and click **Continue**.
 
-   If you already have an account, Click on <span class="glyphicons glyphicons-chevron-down"></span> in the upper right corner, then **My dashboard** to log in to your account before clicking again on **Make Payment** in the invitation.
-
+   If you already have an account, Click on <span class="glyphicons glyphicons-chevron-down"></span> in the upper right corner, then **My dashboard** to log in to your account. Then go back to the email and click again on **Make Payment** to proceed under your existing account.
 
 1. If you have an account and are logged in, or created an account in the previous step, you'll be asked to use an existing card if one is on file or add a card to use as payment for the site:
 
