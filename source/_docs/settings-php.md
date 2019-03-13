@@ -63,7 +63,7 @@ $settings['hash_salt'] = '$HASH_SALT';
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p markdown="1">Replace `^www.yoursite.com$` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. If you're using the Drupal 8 redirects from our [Configure Redirects](/docs/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.</p>
+<p markdown="1">Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 8 redirects from our [Configure Redirects](/docs/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.</p>
 </div>
 ```
 if (defined('PANTHEON_ENVIRONMENT')) {
@@ -73,8 +73,8 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 
     # Replace value with custom domain(s) added in the site Dashboard
-    $settings['trusted_host_patterns'][] = '^.+.yoursite.com$';
-    $settings['trusted_host_patterns'][] = '^yoursite.com$';
+    $settings['trusted_host_patterns'][] = '^.+\.yoursite\.com$';
+    $settings['trusted_host_patterns'][] = '^yoursite\.com$';
   }
 }
 ```
