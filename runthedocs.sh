@@ -16,5 +16,7 @@ printf "Building the latest docs... \n"
 #docker exec pantheon-docs /documentation/node_modules/.bin/grunt --force > /dev/null - Disabled pending permissions resolution
 docker exec pantheon-docs /documentation/bin/sculpin generate --env=dev
 
+printf "Done! Go to http://localhost:8000/docs in your browser.\n\n"
+
 # Start app script, which invokes grunt (disabled), the watch script, and a simple PHP web server
 docker exec pantheon-docs /documentation/scripts/app.sh
