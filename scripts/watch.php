@@ -8,6 +8,7 @@ $startPaths = [
     '/documentation/source/docs/assets/images/*',
     '/documentation/source/_changelogs/*',
     '/documentation/source/_partials/*',
+    '/documentation/source/_views/*',
 ];
 
 $lastTime = time();
