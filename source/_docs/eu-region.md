@@ -15,26 +15,13 @@ Pantheon is extending early access invitations to contract customers who want to
 
 Site resources, including the database container, are provisioned in the European Union. Traffic is served through the Global CDN, with the Amsterdam point of presence as origin shield.
 
-## How to Enable Early Access to EU Region
+## How to Enable Early Access and Create Sites in the EU Region
 
 During this feature's Early Access period, participation is opt-in only for contract customers. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
 
-## How to Create a Pantheon Site in the EU Region
+Once granted early access, our Support team will create the new site for you.
 
-Once granted early access, create new sites with [Terminus](/docs/terminus/), Pantheon's command line interface (**CLI**).
-
-Note that the `--region` flag used in this section requires Terminus 2.0 or higher. See [how to update Terminus](/docs/terminus/updates/) for more information.
-
-Use Terminus to create a site using `site:create` and the `--region` flag:
-
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-new-eu-site">Copy</button>
-  <figure><pre id="terminus-new-eu-site"><code class="command bash" data-lang="bash">terminus site:create --region=eu</code></pre></figure>
-</div>
-
-This command accepts the following as values: site name, label, and upstream name or UUID. For more information, run `terminus help site:create`.
-
-### Use Terminus to Display Sites and Regions
+## Use Terminus to Display Sites and Regions
 
 In the following examples, replace or assign `$SITE` with your site name or UUID.
 
@@ -54,7 +41,7 @@ For a list of sites along with their region:
 
 ## Open Ticket to Prepare to Go Live
 
-In advance of going live with your site, please let us know the domains you'd like to route to your site. 
+In advance of going live with your site, please let us know the domains you'd like to route to your site.
 
 Allow one week between submitting a ticket until go live. Opening a ticket will not be necessary after early access.
 
