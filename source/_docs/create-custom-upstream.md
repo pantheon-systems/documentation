@@ -263,7 +263,7 @@ Custom Upstreams from GitLab repositories must be created for you by Pantheon Su
 
     ![Create GitLab deploy token](/source/docs/assets/images/gitlab-deploy-token.png)
 
-2. [Contact support](/docs/support) to add the Custom Upstream to your org. You must provide the repository https URL and the deploy token as a username / password.
+2. [Contact support](/docs/support) to add the Custom Upstream to your org. You must provide the repository `https` URL and the deploy token as a username / password.
 </div>
 </div>
 
