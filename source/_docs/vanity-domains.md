@@ -10,6 +10,7 @@ The Vanity domain can either be a subdomain of your primary site (`sites.mydomai
 
 If a subdomain of your primary site is configured, a newly created site named "supersite" will then have a Dev environment URL of `dev-supersite.sites.mydomain.com`. If a dedicated domain name is used, the site would instead have a Dev environment URL of `dev-supersite.mypantheonprojects.com`.
 
+{% include("content/secure-only-tlds.html")%}
 
 ## Request the Vanity Domain
 

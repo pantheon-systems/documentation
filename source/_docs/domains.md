@@ -57,6 +57,8 @@ Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to t
 
 ### Add a Custom Domain
 
+{% include("content/secure-only-tlds.html")%}
+
 1. From your site dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 
 2. If no domains have been added yet, click **Connect Live Domain**:
