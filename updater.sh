@@ -12,4 +12,4 @@ printf "Pulling latest image... \n \n"
 
 docker image pull pantheonsystems/documentation
 
-printf "\n Done! Execute runthedocs.sh to start the application. \n \n"
+printf "\n Done! Execute ./runthedocs.sh to start the application. \n \n"
