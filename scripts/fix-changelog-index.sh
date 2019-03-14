@@ -6,4 +6,5 @@ do
   name="$(basename "$file" .html)"
   mkdir -p /documentation/output_dev/docs/changelog/page/"$name"
   mv "$file" "output_dev/docs/changelog/page/"$name"/index.html"
+  sed -i '61i\'<meta name="addsearch-boost" content="30" />'\' output_dev/docs/changelog/page/"$name"/index.html
 done
