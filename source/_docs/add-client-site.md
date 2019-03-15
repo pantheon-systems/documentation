@@ -24,7 +24,7 @@ The Agency should follow these steps:
 {% include("content/invite-to-pay.html")%}
 
 ## Accepting an Invitation to Pay
-1. When an agency is ready to transfer ownership of the site to you, you'll receive an email inviting you to pay for the site:
+1. When a supporting organization is ready to transfer ownership of the site to you, you'll receive an email inviting you to pay for the site:
 
    ![Emailed invitation to pay](/source/docs/assets/images/dashboard/invitation-to-pay.png)
 
