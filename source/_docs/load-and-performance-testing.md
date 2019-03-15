@@ -8,7 +8,7 @@ Load and performance tests are critical steps in going live procedures, as they 
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">Load testing is one of the services offered by our [Professional Services](/docs/professional-services/#load-testing) team.</p>
+<p markdown="1">Load testing is one of the services offered by our [Professional Services](/docs/professional-services/#pre-launch-load-testing) team.</p>
 </div>
 
 ## Load vs Performance Testing

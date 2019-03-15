@@ -18,7 +18,7 @@ If none of the above apply to your project, use the [standard migration procedur
 
 <div class="alert alert-info" markdown="1">
 #### Note {.info}
-Site migrations are one of the services offered by our [Professional Services](/docs/professional-services/#migrations) team.
+Site migrations are one of the services offered by our [Professional Services](/docs/professional-services/#site-migrations) team.
 </div>
 
 ## Before You Begin
