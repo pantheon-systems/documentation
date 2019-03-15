@@ -13,6 +13,7 @@ do
   name="$(basename "$file" .html)"
   mkdir -p output_prod/docs/changelog/page/"$name"
   mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
+  sed -i '61i\'<meta name="addsearch-boost" content="30" />'\' output_dev/docs/changelog/page/"$name"/index.html
 done
 #===============================================================#
 # Authenticate Terminus  and create json dump of help output    #
