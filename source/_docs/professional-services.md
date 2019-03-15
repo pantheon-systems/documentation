@@ -4,7 +4,7 @@ description: Pantheon Professional Services include consulting, migrations, load
 tags: []
 ---
 
-Pantheon Professional Services (**PS**) works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. [Contact us](https://pantheon.io/contact-us){.external} for details.
+Pantheon Professional Services (**PS**) works closely with partners to provide customized solutions for the most complex technical challenges and ensure your success on Pantheon. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Site Migrations
 The Site Migration service lowers the barrier to entry by leveraging our PS team and partners. Whether you are moving one or hundreds of sites to or within Pantheon, Pantheon Migration Services will help you get it done quickly and reliably.
@@ -41,13 +41,13 @@ Your Engagement Manager monitors the process and works with you to ensure that u
 Implement additional services like extended WAF, Image Optimization, and Domain Masking using our advanced CDN implementation. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Pantheon Enterprise Gateway (PEG)
-Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about PEG](https://pantheon.io/docs/pantheon-enterprise-gateway){.external} or [contact us](https://pantheon.io/professional-services) for details.
+Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about PEG](/docs/pantheon-enterprise-gateway/) or [contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## SSO/SAML
-Single Sign-on to both the Pantheon Dashboard and the application itself. [Learn more about SSO](https://pantheon.io/docs/sso){.external} or [contact us](https://pantheon.io/professional-services){.external} for details.
+Single Sign-on to both the Pantheon Dashboard and the application itself. [Learn more about SSO](/docs/sso/) or [contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Pre-launch Load Testing
-Load tests can be critical steps in ensuring a successful launch. Using proprietary tools developed by the PS team we generate traffic to your Live site, if needed simulating complexe user interactions. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
+Load tests can be critical steps in ensuring a successful launch. Using proprietary tools developed by the PS team we generate traffic to your Live site, simulating complex user interactions if needed. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
 
 Load tests provide critical insight for how a site will perform in the wild and through peak traffic spikes. Load tests ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
