@@ -14,12 +14,11 @@ do
   mkdir -p output_prod/docs/changelog/page/"$name"
   mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
 done
-# Lower search ranking for changelog backscroll
+# Don't index changelog backscroll
 for file in output_prod/docs/changelog/page/*/index.html
 do
-  sed -i '61i\'"        <meta name=\"addsearch-boost\" content=\"30\" />"'\' $file
+  sed -i '61i\'"        <meta name=\"robots\" content=\"noindex\">"'\' $file
 done
-
 
 #===============================================================#
 # Authenticate Terminus  and create json dump of help output    #
