@@ -41,21 +41,21 @@ Your Engagement Manager monitors the process and works with you to ensure that u
 Implement additional services like extended WAF, Image Optimization, and Domain Masking using our advanced CDN implementation. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Pantheon Enterprise Gateway (PEG)
-Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Contact us](https://pantheon.io/professional-services){.external} for details.
+Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about PEG](https://pantheon.io/docs/pantheon-enterprise-gateway){.external} or [contact us](https://pantheon.io/professional-services) for details.
 
 ## SSO/SAML
-Single Sign-on to both the Pantheon Dashboard and the application itself. [Contact us](https://pantheon.io/professional-services){.external} for details.
-
-## Custom Application Services
-Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services){.external} for details.
+Single Sign-on to both the Pantheon Dashboard and the application itself. [Learn more about SSO](https://pantheon.io/docs/sso){.external} or [contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Pre-launch Load Testing
-Load tests are critical steps in ensuring a successful launch. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
+Load tests can be critical steps in ensuring a successful launch. Using proprietary tools developed by the PS team we generate traffic to your Live site, if needed simulating complexe user interactions. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.
 
 Load tests provide critical insight for how a site will perform in the wild and through peak traffic spikes. Load tests ensure that your website launches smoothly and that it is ready to absorb the high traffic that success brings. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Performance Deep Dive
 Performance tests expose the root cause of performance bottlenecks and allow us to suggest application-level solutions to optimize performance and reduce errors. [Contact us](https://pantheon.io/professional-services){.external} for details.
+
+## Custom Application Services
+Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services){.external} for details.
 
 ## Customer Success Management
 Agile website operations teams iterate constantly to move in lockstep with organizational needs and deliver on business goals.
