@@ -90,7 +90,7 @@ ns-924.awsdns-51.net.
 
 The example above shows that the records for `pantheon.io` are hosted by AWS.
 
-To find the registrar where your domain is registed, use the commandline tool **whois**:
+To find the registrar where your domain is registered, use the commandline tool **whois**:
 
 ```bash
 $ whois pantheon.io | grep Registrar:
