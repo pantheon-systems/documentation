@@ -17,7 +17,7 @@ Site resources, including the database container, are provisioned in the Europea
 
 ## How to Enable Early Access and Create Sites in the EU Region
 
-During this feature's Early Access period, participation is opt-in only for contract customers. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
+During this feature's Early Access period, participation is opt-in only for contract customers. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
 
 Once granted early access, our Support team will create the new site for you.
 
