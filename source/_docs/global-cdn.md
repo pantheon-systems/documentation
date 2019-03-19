@@ -157,3 +157,12 @@ if (!empty( $_SERVER['HTTP_FASTLY_SSL'])) {
   $_SERVER['HTTPS'] = 'on';
 }
 ```
+
+### Can I use the `Surrogate-Key-Raw` header?
+Yes! While not sent by default, you can make a request that will include this header on return like so:
+
+```bash
+curl -IsH "Pantheon-Debug:1" https://example.com | grep key
+```
+
+This header is not returned by default to prevent issues with Twitter card validation, and reduce the overall time to load.
