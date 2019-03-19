@@ -24,7 +24,7 @@ Attempts to remotely access services, such as MySQL or SFTP connections, will fa
 
 - All containers are created equally; free accounts are not underpowered.
 - All environments contain a highly tuned PHP-FPM worker and a modern version of PHP. For a comprehensive list of what's installed, see [Securely Working with phpinfo](/docs/phpinfo).
-  - Packages: LDAP, SOAP, GD, Mcrypt (when running PHP versions under 7.2), MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
+  - Packages: LDAP, SOAP, GD, Mcrypt (when running PHP versions under 7.2) or Sodium (when running PHP version 7.2 and later), MySQL, Imagick (ImageMagick), PDO, mbstring, XML, IMAP
   - Extensions: APC, New Relic PHP agent, OAuth, Redis
   - [short\_open\_tag](https://secure.php.net/manual/en/ini.core.php#ini.short-open-tag) is off (Pantheon does not support `<? ?>` syntax; use `<?php ?>` instead)
   - Maximum PHP execution time and other timeouts can be configured as noted in [Timeouts on Pantheon](/docs/timeouts/).
