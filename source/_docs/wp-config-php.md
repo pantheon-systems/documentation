@@ -73,7 +73,7 @@ The following example shows how to hard-code your WordPress debug configuration 
 ```php
 // All Pantheon Environments.
 if (defined('PANTHEON_ENVIRONMENT')) {
-  //Wordpress debug settings in development environments.
+  //WordPress debug settings in development environments.
   if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
     // Debugging enabled.
     if (!defined( 'WP_DEBUG' )) {
@@ -83,7 +83,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Moves the log file to a location writable while in git mode.
     define( 'WP_DEBUG_DISPLAY', true );
   }
-  // Wordpress debug settings in test and live environments.
+  // WordPress debug settings in test and live environments.
   else {
     // Debugging disabled.
     ini_set('log_errors','On');
