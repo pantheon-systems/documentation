@@ -159,11 +159,13 @@ if (!empty( $_SERVER['HTTP_FASTLY_SSL'])) {
 ```
 
 ### Can I expose the `Surrogate-Key-Raw` header?
-Yes! Expose `Surrogate-Key-Raw` by including `Pantheon-Debug:1` in a curl request, then use `grep` to filter the output. For example: (replace `https://www.example.com/`):
+Yes! Expose `Surrogate-Key-Raw` by including `Pantheon-Debug:1` in a curl request, then use `grep` to filter the output. For example:
 
 ```bash
 curl -IsH "Pantheon-Debug:1" https://www.example.com/ | grep surrogate-key-raw
 ```
+
+Replace `https://www.example.com/`.
 
 ![curl -IsH "Pantheon-Debug:1" https://www.scalewp.io/ | grep surrogate-key-raw](/source/docs/assets/images/surrogate-key-raw-example.png)
 
