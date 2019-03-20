@@ -28,7 +28,7 @@ One of the most common reasons that email gets blocked is because it originates 
 
 4. The API key will only be displayed once. Copy the key and save it somewhere secure until you can apply it to the site.
 
-## Integrating Sendgrid With Drupal and Wordpress
+## Integrating Sendgrid With Drupal and WordPress
 Follow the procedure outlined below for your CMS:
 
 <ul class="nav nav-tabs" role="tablist">

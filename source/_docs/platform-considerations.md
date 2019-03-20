@@ -221,7 +221,7 @@ Pantheon does not currently support any PHP frameworks outside of Drupal and Wor
 
 ## Node.js
 
-Node.js is not available in the platform. If running node.js services is a hard requirement for your Drupal or Wordpress application, the node.js service must to be hosted on a different remote server outside of Pantheon.
+Node.js is not available in the platform. If running node.js services is a hard requirement for your Drupal or WordPress application, the node.js service must to be hosted on a different remote server outside of Pantheon.
 
 ## Modules and Plugins with Known Issues
 See [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues) for a list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.

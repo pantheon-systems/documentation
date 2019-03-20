@@ -37,7 +37,7 @@ To ensure a successful migration, complete the following tasks on the source sit
   </div>
   <div id="advanced-before-you-begin" class="collapse" markdown="1" style="padding:10px;">
   #### .gitignore
-  Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised.  Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [Wordpress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
+  Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised.  Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
   #### Local Drupal configurations
   To preserve the database connection credentials for a site built on a local development environment, and to exclude them from version control, move your `settings.php` file to `settings.local.php` and add it to `.gitignore` so that it will be ignored by Git and included from Pantheon's `settings.php` when working on your site locally. Make sure that you can modify it, and restore the protections after the move:
 
