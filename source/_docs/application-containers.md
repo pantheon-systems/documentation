@@ -28,7 +28,7 @@ Attempts to remotely access services, such as MySQL or SFTP connections, will fa
     - LDAP
     - SOAP
     - GD
-    - Mcrypt (when running PHP versions under 7.2) or Sodium (when running PHP version 7.2 and later)
+    - Mcrypt (when running PHP versions under 7.2) or Sodium (when running PHP version 7.3 and later)
     - MySQL
     - Imagick (ImageMagick)
     - PDO
