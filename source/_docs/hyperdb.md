@@ -20,7 +20,7 @@ Keep in mind, HyperDB is a powerful tool with several tuning options based on da
 
 ## Install and Configure HyperDB
 
-Before you begin, a Customer Success Manager (**CSM**) must change your site service level to "Elite". The platform will automatically configure and manage your master and replica databases. [Contact us](https://pantheon.io/contact-us){.external} for learn more about service levels and how a CSM can help.
+Before you begin, a Customer Success Manager (**CSM**) must change your site service level to "Elite". The platform will automatically configure and manage your master and replica databases. [Contact us](https://pantheon.io/contact-us){.external} to learn more about service levels and how a CSM can help.
 
 Download the archive of [HyperDB from the WordPress plugin repository](https://wordpress.org/support/plugin/hyperdb){.external} and move the `db.php` file into the `/wp-content` directory. This is a drop-in plugin and does not require activation at any time.
 
