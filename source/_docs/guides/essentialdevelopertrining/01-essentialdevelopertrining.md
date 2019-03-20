@@ -17,10 +17,10 @@ nexturl: guides/essentialdevelopertrining/introduction-and-architecture/
 nextpage: Developer Workflow
 editpath: essentialdevelopertrining/01-introduction-and-architecture.md
 completiontime: 2 hours
-image: PLACEHOLDER 
+image: launchGuide-twitterLarge 
 ---
 
-Welcome! This guide is an online version of our [Essential Developer Training](PLACEHOLDER).
+Welcome! This guide is an online version of our [Essential Developer Training](https://pantheon.io/essential-developer-tools-training).
 All links from the video are provided below.
  <div class="enablement" markdown="1">
   <h4 class="info" markdown="1">[Getting Started Training](https://pantheon.io/getting-started-pantheon?docs){.external}</h4>
