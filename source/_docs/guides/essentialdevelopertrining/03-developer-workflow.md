@@ -17,7 +17,7 @@ nextpage: Multidev
 previousurl: docs/guides/essentialdevelopertrining/introduction-and-architecture/
 previouspage: Architecture
 editpath: essentialdevelopertrining/03-developer-workflow.md
-image: PLACEHOLDER
+image: launchGuide-twitterLarge
 ---
 
 In this lesson, we’re going to explore the Developer Workflow.
