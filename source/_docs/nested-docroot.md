@@ -199,46 +199,11 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
   web/wp-content/cache/
   web/wp-content/backups/
 
-  # Avoid accidental modification of pantheon.upstream.yml in sites
-  # created from this upstream
-  pantheon.upstream.yml
+  ...
 
-  # Packages #
-  ############
-  *.7z
-  *.dmg
-  *.gz
-  *.bz2
-  *.iso
-  *.jar
-  *.rar
-  *.tar
-  *.zip
-  *.tgz
-  web/!wp-includes/**/*.gz
-
-  # Logs and databases #
-  ######################
-  *.log
-  *.sql
-
-  # OS generated files #
-  ######################
-  .DS_Store*
-  ehthumbs.db
-  Icon?
-  Thumbs.db
-  ._*
-
-  # Vim generated files #
-  ######################
-  *.un~
-
-  # SASS #
-  ##########
-  .sass-cache
   ```
-  
+
+  The snippet above is a partial example of `.gitignore`. Do not replace the entire file with only these lines.
   </div>
 </div>
 
