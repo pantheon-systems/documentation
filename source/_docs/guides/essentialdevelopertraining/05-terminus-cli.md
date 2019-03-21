@@ -1,11 +1,10 @@
 ---
 title: Essential Developer Training
 subtitle: Command Line Interface
-quickstart: true
 anchorid: command-line-interface
+edt: true
 layout: guide
 type: guide
-quickstart: true
 generator: pagination
 pagination:
     provider: data.edtpages

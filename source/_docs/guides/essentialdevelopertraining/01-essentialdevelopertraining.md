@@ -3,6 +3,7 @@ title: Essential Developer Training
 subtitle: Introduction
 description: This Self Serve Essential Developer Training guide is designed to help any Pantheon user quickly master workflow and tooling
 tags: [essentialdevelopertrainging]
+edt: true
 layout: guide
 type: guide
 anchorid: essentialdevelopertraining
@@ -13,16 +14,16 @@ use:
     - edtpages
 permalink: docs/guides/essentialdevelopertraining/
 nexturl: guides/essentialdevelopertraining/introduction-and-architecture/
-nextpage: Developer Workflow
-editpath: essentialdevelopertraining/01-introduction-and-architecture.md
+nextpage: Architecture
+editpath: essentialdevelopertraining/01-essentialdevelopertraining.md
 completiontime: 2 hours
 image: launchGuide-twitterLarge 
 ---
 
 Welcome! This guide is an online version of our [Essential Developer Training](https://pantheon.io/essential-developer-training).
 All links from the video are provided below.
- <div class="enablement" markdown="1">
-  <h4 class="info" markdown="1">[Getting Started Training](https://pantheon.io/essential-developer-training){.external}</h4>
+
+  <h4 class="info" markdown="1">[Getting Essential Developer Training](https://pantheon.io/essential-developer-training?docs){.external}</h4>
   Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
 </div>
 

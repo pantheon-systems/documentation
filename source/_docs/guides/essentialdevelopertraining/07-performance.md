@@ -1,11 +1,10 @@
 ---
 title: Essential Developer Training
 subtitle: Performance
-quickstart: true
 anchorid: performance
+edt: true
 layout: guide
 type: guide
-quickstart: true
 generator: pagination
 pagination:
     provider: data.edtpages

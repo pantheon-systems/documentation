@@ -1,11 +1,10 @@
 ---
 title: Essential Developer Training
 subtitle: Developer Workflow
-quickstart: true
 anchorid: developer-workflow
+edt: true
 layout: guide
 type: guide
-quickstart: true
 generator: pagination
 pagination:
     provider: data.edtpages

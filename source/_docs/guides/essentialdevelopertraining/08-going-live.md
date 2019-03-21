@@ -1,11 +1,10 @@
 ---
 title: Essential Developer Training
 subtitle: Going Live
-quickstart: true
 anchorid: going-live
+edt: true
 layout: guide
 type: guide
-quickstart: true
 generator: pagination
 pagination:
     provider: data.edtpages
@@ -63,3 +62,7 @@ All links from the video are provided below.
 [Office Hours](https://pantheon.io/agencies/office-hours)
 
 
+<div class="enablement" markdown="1">
+  <h4 class="info" markdown="1">[Getting Essential Developer Training](https://pantheon.io/essential-developer-training?docs){.external}</h4>
+  Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
+</div>

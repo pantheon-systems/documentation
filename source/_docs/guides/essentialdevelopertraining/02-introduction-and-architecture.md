@@ -1,11 +1,10 @@
 ---
 title: Essential Developer Training
 subtitle: Architecture
-quickstart: true
 anchorid: architecture
 layout: guide
+edt: true
 type: guide
-quickstart: true
 generator: pagination
 pagination:
     provider: data.edtpages
@@ -16,8 +15,8 @@ nexturl: guides/essentialdevelopertraining/developer-workflow/
 nextpage: Developer Workflow
 previousurl: guides/essentialdevelopertraining/
 previouspage: Introduction
-editpath: essentialdevelopertraining/02-user-dashboard.md
-image: PLACEHOLDER
+editpath: essentialdevelopertraining/02-introduction-and-architechture.md
+image: launchGuide-twitterLarge
 ---
 
 In this lesson, we’re going to explore Pantheon's Architecture.

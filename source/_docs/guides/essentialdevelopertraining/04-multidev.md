@@ -1,11 +1,10 @@
 ---
 title: Essential Developer Training
 subtitle: Multidev
-quickstart: true
 anchorid: multidev
+edt: true
 layout: guide
 type: guide
-quickstart: true
 generator: pagination
 pagination:
     provider: data.edtpages

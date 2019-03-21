@@ -1,11 +1,10 @@
 ---
 title: Essential Developer Training
 subtitle: External Integrations
-quickstart: true
 anchorid: external-integrations
+edt: true
 layout: guide
 type: guide
-quickstart: true
 generator: pagination
 pagination:
     provider: data.edtpages
