@@ -800,6 +800,6 @@ Due to the cloud-based infrastructure of the Pantheon platform, outbound request
 Plugins and modules will not work on Pantheon if they:
 
  - Require Apache
- - Use `.htaccess` files
+ - Require customized `.htaccess` files
  - Need to modify Nginx configuration files
  - Require Postgresql or other non-MySQL databases.
