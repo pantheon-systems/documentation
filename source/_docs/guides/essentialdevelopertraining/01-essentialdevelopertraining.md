@@ -1,5 +1,5 @@
 ---
-title: Essential Developer Training 
+title: Essential Developer Training
 subtitle: Introduction
 description: This Self Serve Essential Developer Training guide is designed to help any Pantheon user quickly master workflow and tooling
 tags: [essentialdevelopertrainging]
@@ -26,14 +26,6 @@ image: launchGuide-twitterLarge
 
 In this guide, you'll learn:
 
-<<<<<<< HEAD:source/_docs/guides/essentialdevelopertraining/01-essentialdevelopertraining.md
-- [Architecture](/docs/guides/essentialdevelopertraining/introduction-and-architecture)
-- [Developer Workflow](/docs/guides/essentialdevelopertraining/developer-workflow/)
-- [Multidev](/docs/guides/essentialdevelopertraining/multidev/)
-- [Command Line Interface - Terminus](/docs/guides/essentialdevelopertraining/terminus-cli)
-- [External Integrations - Quicksilver](/docs/guides/essentialdevelopertraining/external-integrations)
-- [Performance](/docs/guides/essentialdevelopertraining/performance)
-=======
 - [Architecture](guides/essentialdevelopertraining/developer-workflow/introduction-and-architecture)
 - [Developer Workflow](guides/essentialdevelopertraining/developer-workflow/)
 - [Multidev](guides/essentialdevelopertraining/multidev/)
@@ -41,7 +33,6 @@ In this guide, you'll learn:
 - [External Integrations - Quicksilver](guides/essentialdevelopertraining/quicksilver-external-integrations)
 - [Performance](guides/essentialdevelopertraining/performance)
 - [Going Live](guides/essentialdevelopertraining/going-live)
->>>>>>> refixed paths (sorry Alex) and added data-proofer-ignore again:source/_docs/guides/essentialdevelopertrining/01-essentialdevelopertrining.md
 
 All you need before you begin is a Pantheon account. If you don't have one, <a href="https://pantheon.io/register" target="_blank">sign up now for free <span class="glyphicons glyphicons-new-window-alt"></span></a>.
 
