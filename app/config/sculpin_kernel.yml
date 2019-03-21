@@ -85,6 +85,17 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
+    edtpages:
+        type: path
+        path: docs/guides/essentialdevelopertraining
+        permalink: pretty
+        singular_name: edtpages
+        enabled: true
+        layout: guide
+        taxonomies:
+            - categories
+            - tags
+            - contributors
     gitwordpresspages:
             type: path
             path: docs/guides/wordpress-git
