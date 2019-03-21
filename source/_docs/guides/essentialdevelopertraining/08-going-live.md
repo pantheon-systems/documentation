@@ -1,5 +1,5 @@
 ---
-title: Self Serve Essential Developer Training ((( PLACEHOLDER IS THIS THE NAME???)))
+title: Essential Developer Training
 subtitle: Going Live
 quickstart: true
 anchorid: going-live

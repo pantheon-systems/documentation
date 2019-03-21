@@ -1,5 +1,5 @@
 ---
-title: Self Serve Essential Developer Training ((( PLACEHOLDER IS THIS THE NAME???)))
+title: Essential Developer Training
 subtitle: Command Line Interface
 quickstart: true
 anchorid: command-line-interface

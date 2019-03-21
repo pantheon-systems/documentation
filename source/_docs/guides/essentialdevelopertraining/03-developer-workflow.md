@@ -1,5 +1,5 @@
 ---
-title: Self Serve Essential Developer Training ((( PLACEHOLDER IS THIS THE NAME???)))
+title: Essential Developer Training
 subtitle: Developer Workflow
 quickstart: true
 anchorid: developer-workflow

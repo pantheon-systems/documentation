@@ -1,5 +1,5 @@
 ---
-title: Self Serve Essential Developer Training ((( PLACEHOLDER IS THIS THE NAME???)))
+title: Essential Developer Training
 subtitle: External Integrations
 quickstart: true
 anchorid: external-integrations
