@@ -1,5 +1,5 @@
 ---
-title: Self Serve Essential Developer Training ((( PLACEHOLDER IS THIS THE NAME???)))
+title: Essential Developer Training 
 subtitle: Introduction
 description: This Self Serve Essential Developer Training guide is designed to help any Pantheon user quickly master workflow and tooling
 tags: [essentialdevelopertrainging]
@@ -19,10 +19,10 @@ completiontime: 2 hours
 image: launchGuide-twitterLarge 
 ---
 
-Welcome! This guide is an online version of our [Essential Developer Training](https://pantheon.io/essential-developer-tools-training).
+Welcome! This guide is an online version of our [Essential Developer Training](https://pantheon.io/essential-developer-training).
 All links from the video are provided below.
  <div class="enablement" markdown="1">
-  <h4 class="info" markdown="1">[Getting Started Training](https://pantheon.io/getting-started-pantheon?docs){.external}</h4>
+  <h4 class="info" markdown="1">[Getting Started Training](https://pantheon.io/essential-developer-training){.external}</h4>
   Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
 </div>
 
