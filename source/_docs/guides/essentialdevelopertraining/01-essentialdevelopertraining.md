@@ -5,17 +5,16 @@ description: This Self Serve Essential Developer Training guide is designed to h
 tags: [essentialdevelopertrainging]
 layout: guide
 type: guide
-anchorid: essentialdevelopertrining
-quickstart: true
+anchorid: essentialdevelopertraining
 generator: pagination
 pagination:
-    provider: data.quickstartpages
+    provider: data.edtpages
 use:
-    - essentialdevelopertrining
-permalink: docs/guides/essentialdevelopertrining/
-nexturl: guides/essentialdevelopertrining/introduction-and-architecture/
+    - edtpages
+permalink: docs/guides/essentialdevelopertraining/
+nexturl: guides/essentialdevelopertraining/introduction-and-architecture/
 nextpage: Developer Workflow
-editpath: essentialdevelopertrining/01-introduction-and-architecture.md
+editpath: essentialdevelopertraining/01-introduction-and-architecture.md
 completiontime: 2 hours
 image: launchGuide-twitterLarge 
 ---
@@ -29,13 +28,12 @@ All links from the video are provided below.
 
 In this guide, you'll learn:
 
-- [Architecture](guides/essentialdevelopertrining/developer-workflow/introduction-and-architecture)
-- [Developer Workflow](guides/essentialdevelopertrining/developer-workflow/)
-- [Multidev](guides/essentialdevelopertrining/multidev/)
-- [Command Line Interface - Terminus](guides/essentialdevelopertrining/terminus-cli)
-- [External Integrations - Quicksilver](guides/essentialdevelopertrining/quicksilver-external-integrations)
-- [Performance](guides/essentialdevelopertrining/performance)
-- [Going Live](guides/essentialdevelopertrining/going-live)
+- [Architecture](/docs/guides/essentialdevelopertraining/introduction-and-architecture)
+- [Developer Workflow](/docs/guides/essentialdevelopertraining/developer-workflow/)
+- [Multidev](/docs/guides/essentialdevelopertraining/multidev/)
+- [Command Line Interface - Terminus](/docs/guides/essentialdevelopertraining/terminus-cli)
+- [External Integrations - Quicksilver](/docs/guides/essentialdevelopertraining/external-integrations)
+- [Performance](/docs/guides/essentialdevelopertraining/performance)
 
 All you need before you begin is a Pantheon account. If you don't have one, <a href="https://pantheon.io/register" target="_blank">sign up now for free <span class="glyphicons glyphicons-new-window-alt"></span></a>.
 
