@@ -174,6 +174,71 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
       ├── themes
       ├── plugins
   ```
+  
+  You will also need to update your `.gitignore` file to reflect the latest structure.
+  
+  ```nohighlight
+  # WordPress #
+  ############
+  web/wp-config-local.php
+  web/wp-cli.local.yml
+  web/wp-content/uploads
+  web/wp-content/blogs.dir/
+  web/wp-content/upgrade/
+  web/wp-content/updraft/
+  web/wp-content/backupwordpress-*/
+  web/wp-content/backup-db/
+  web/wp-content/managewp/backups/
+  web/wp-content/advanced-cache.php
+  web/wp-content/wp-cache-config.php
+  web/sitemap.xml
+  web/sitemap.xml.gz
+  web/*.log
+
+  # @TODO writable paths
+  web/wp-content/cache/
+  web/wp-content/backups/
+
+  # Avoid accidental modification of pantheon.upstream.yml in sites
+  # created from this upstream
+  pantheon.upstream.yml
+
+  # Packages #
+  ############
+  *.7z
+  *.dmg
+  *.gz
+  *.bz2
+  *.iso
+  *.jar
+  *.rar
+  *.tar
+  *.zip
+  *.tgz
+  web/!wp-includes/**/*.gz
+
+  # Logs and databases #
+  ######################
+  *.log
+  *.sql
+
+  # OS generated files #
+  ######################
+  .DS_Store*
+  ehthumbs.db
+  Icon?
+  Thumbs.db
+  ._*
+
+  # Vim generated files #
+  ######################
+  *.un~
+
+  # SASS #
+  ##########
+  .sass-cache
+  ```
+  
   </div>
 </div>
 
