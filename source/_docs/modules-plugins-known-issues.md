@@ -4,7 +4,7 @@ description: A list of Drupal modules and WordPress plugins that are not support
 tags: [debugcode, siteintegrations]
 categories: []
 ---
-This article lists modules and plugins that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/docs/support/).
+This page lists modules and plugins that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/docs/support/).
 
 We do not prevent you from installing and using these plugins/modules; however, they may not work as expected and we cannot provide troubleshooting support.
 
