@@ -8,7 +8,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p markdown="1">This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the [SimpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth){.external} module from Drupal.org, or with their WordPress site using the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin from WordPress.org.</p>
+  <p markdown="1">This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the [SimpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth){.external} module from Drupal.org. WordPress site's should use the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin from WordPress.org with the bundled OneLogin SAML PHP library.</p>
 </div>
 
 ## Install SimpleSAMLphp
@@ -192,28 +192,8 @@ $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.1
 
 You can now enable and configure the module. If SAML authentication fails because of a configuration error, look at the watchdog log to see why.
 
-## WordPress Configuration
-
-To use SimpleSAMLphp with WordPress, first install and activate the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin.
-
-Then, to configure the WP SAML Auth plugin to work with SimpleSAMLphp, add the following filter to your theme's `functions.php` file:
-
-```php
-add_filter( 'wp_saml_auth_option', function( $value, $option ){
-  if ( 'simplesamlphp_autoload' === $option ) {
-    // Note: Your path may differ, if you've installed a later SimpleSAMLphp version
-    $value = ABSPATH . '/private/simplesamlphp-1.15.x/lib/_autoload.php';
-  }
-  return $value;
-}, 10, 2 );
-```
-
-For more details, including additional plugin configuration options, [please see the README](https://github.com/pantheon-systems/wp-saml-auth/blob/master/README.md){.external}.
-
 ## Troubleshooting
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
 
 The current version of the SimpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009){.external} in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537){.external} looks to be the best solution until the fix is accepted into an official project release.
 
-### WordPress Site Networks (multisite)
-SimpleSAMLphp does not work with WordPress multisite networks because the simpleSAMLphp redirects get intercepted and rerouted to 404s by the CMS. Site Network users can utilize the OneLogin SAML PHP library that comes bundled with Pantheon's [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin.
