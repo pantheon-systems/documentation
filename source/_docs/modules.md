@@ -39,6 +39,71 @@ This module provides general methods your site needs to access aspects of the in
 
 Note: Currently, there is no API module available for Drupal 8.
 
+Issue: For sites with Filefield Paths module enabled and a lot of image styles, some transactions may hit some performance issues as image paths are flushed due to its volume. 
+
+Workaround: Add the image path files clearing execution using the Drupal Queue API and be executed during cron run
+
+```
+function image_path_flush($path) {
+  // Following pantheon function isn't even used and subverts the fix.
+  // Pantheon optimization: one bulk operation is better.
+  // if (function_exists('pantheon_api_image_path_flush') && function_exists('pantheon_bulk_file_delete')) {
+  //  pantheon_api_image_path_flush($path);
+  //  return;
+  //}
+  $styles = image_styles();
+  foreach ($styles as $style) {
+    $image_path = image_style_path($style['name'], $path);
+    if (defined('PANTHEON_ENVIRONMENT')) {
+      file_unmanaged_delete($image_path);
+      $data = array('image_path' => $image_path);
+      $queue_name = 'pantheon_api_performance_file_workaround';
+      $result = db_query('SELECT item_id FROM {queue} 
+                                        WHERE name = :name 
+                                        AND expire = :expire AND data = :data', 
+                                        array(':name' => $queue_name, ':expire' => 0, ':data' => serialize($data)));
+      if ($result->rowCount() == 0) {
+        $queue = DrupalQueue::get($queue_name);
+        $queue->createQueue();
+        $queue->createItem($data);
+      }
+    }
+    else {
+      if (file_exists($image_path)) {
+        file_unmanaged_delete($image_path);
+      }
+    }
+  }
+}
+```
+
+```
+/** Implements hook_cron_queue_info(). */
+
+function tlr_system_cron_queue_info() {
+    $queues['pantheon_api_performance_file_workaround'] = array(
+        'worker callback' => 'pantheon_api_process_image_style_flush',
+        'time' => 30
+        );
+    return $queues;
+}
+
+/** Queue callback 
+Processes a single image style path flush per logic in Drupal core image_path_flush() function. 
+*/
+
+function pantheon_api_process_image_style_flush($args) {
+
+  if (!$args['image_path']) {
+    return;
+  }
+  
+  if (file_exists($args['image_path'])) {
+	  file_unmanaged_delete($args['image_path']);
+  }
+}
+```
+
 ### [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
 This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Apache Solr on Pantheon](/docs/solr/).
 
