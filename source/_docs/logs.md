@@ -45,24 +45,14 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
         <td>PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See <a href="/docs/php-slow-log">PHP Slow Log</a></td>
       </tr>
       <tr>
-        <th>pyinotify.log</th>
-        <td></td>
-        <td>Linux filesystem events monitoring.</td>
-      </tr>
-      <tr>
-        <th>watcher.log</th>
-        <td></td>
-        <td>Log of service that checks for files changed in <code>code</code> directory while in SFTP Connection Mode.</td>
-      </tr>
-      <tr>
         <th>mysqld-slow-query.log</th>
         <td>10MB of log data</td>
-        <td>Log of MySQL queries that took more than 120 seconds to execute.</td>
+        <td>Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory.</td>
       </tr>
       <tr>
         <th>mysqld.log</th>
         <td>1 MB of log data</td>
-        <td>Log of established MySQL client connections and statements received from clients.</td>
+        <td>Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory.</td>
       </tr>
     </tbody>
   </table>
