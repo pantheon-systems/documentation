@@ -90,3 +90,6 @@ The Developer role can only deploy to Development and Multidev environments. If 
 
 #### Who can add users to Organizations?
 Enterprise Administrators can add site Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
+
+#### How do I recover an account after a site owner leaves?
+See the steps in our [Site Access](/docs/site-access/) doc for recovery instructions.
