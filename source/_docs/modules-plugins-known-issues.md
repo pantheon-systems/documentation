@@ -400,6 +400,31 @@ define('FS_METHOD', 'direct');
 
 <hr>
 
+### [Disable REST API and Require JWT / OAuth Authentication](https://wordpress.org/plugins/disable-rest-api-and-require-jwt-oauth-authentication/){.external}
+
+**Issue:** When using this plugin is enabled along with Woocommerce, WP CLI fails and affects Pantheon dashboard workflows like Cache Clear. This error may not show up for environments where WP CLI is not installed (local machine, other hosting etc.)
+
+```Fatal error: Uncaught Error: Call to undefined method WP_Error::get_data() in /srv/bindings/eb3971f0dcb7451583600d72a5edfc43/code/wp-content/plugins/woocommerce/includes/cli/class-wc-cli-runner.php:64```
+
+For Woocommerce, the CLI runner needs some of the REST endpoints for it to function. The plugin is only allowing a specific set of paths for allowed access. 
+
+**Solution**:  We can add a conditional that the plugin will only work via non-CLI PHP requests. We can add the conditional `php_sapi_name() != 'cli'` in the allowed_endpoints conditional statement.
+
+```   
+    if ( ! is_user_logged_in() && php_sapi_name() != 'cli' ) {
+        // Only allow these endpoints: JWT Auth.
+        $allowed_endpoints = array(
+            '/jwt-auth/v1/token/validate',
+            '/jwt-auth/v1/token',
+            '/oauth/authorize',
+            '/oauth/token',
+            '/oauth/me',
+    );
+    $allowed_endpoints = apply_filters( 'reqauth/allowed_endpoints', $allowed_endpoints );
+```
+
+<hr>
+
 ### [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/){.external}
 
 **Issue:** EWWW Image Optimizer attempts to install and execute third party binary tools to perform image optimization, which is restricted on our platform. The error message is:
