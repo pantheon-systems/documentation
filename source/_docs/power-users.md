@@ -2,10 +2,13 @@
 title: The Pantheon Community and Power Users Group
 description: Share best practices with other experienced and active users of Pantheon's platform.
 contributors:
-  - joshkoenig
-date: 7/27/2015
+  - tessak22
 ---
-Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our [Power Users Slack channel](https://slackin.pantheon.io/){.external} or [Power Users mailing list](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users){.external}.
+Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our community, through several channels:
+
+ - Community Forum - The [Pantheon Community Forum](https://discuss.pantheon.io/){.external} forum is the best place for questions, discussions and off-topic community building.
+
+ - Slack - Prefer to communicate instantly with fellow Pantheon users? Pop into the [Power Users Slack channel](https://slackin.pantheon.io/){.external}.
 
 ## Power User Topics
 
@@ -21,11 +24,7 @@ The community is an excellent way to bounce ideas off other expert developers. I
 
 ## Joining the Community
 
-You can join the Slack community [by clicking here](https://slackin.pantheon.io/){.external}. The Slack Community can also be accessed at [pantheon-community.slack.com](https://pantheon-community.slack.com/){.external}.
-
-If you have a Google account you can join Power Users mailing list via the [group page](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users){.external}, which also allows you to browse and interact via the web.
-
-You can also subscribe with any email address by sending a message to [power-users+subscribe@pantheon.io](mailto:power-users+subscribe@pantheon.io){.external}.
+You can join the Community Forums by clicking [here](https://discuss.pantheon.io/){.external}, or Slack [here](https://slackin.pantheon.io/){.external}.
 
 ## Code of Conduct
 
