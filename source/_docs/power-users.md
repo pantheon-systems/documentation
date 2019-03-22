@@ -2,11 +2,11 @@
 title: The Pantheon Community and Power Users Group
 description: Share best practices with other experienced and active users of Pantheon's platform.
 contributors:
-  - joshkoenig
+  - tessak22
 ---
 Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our community, through several channels:
 
- - Discuss - The [Pantheon Discuss](https://discuss.pantheon.io/){.external} forum is the best place for longer discussions and off-topic community building.
+ - Discourse - The [Pantheon Discourse](https://discuss.pantheon.io/){.external} forum is the best place for longer discussions and off-topic community building.
 
  - Slack - Have a quick question? Pop into the [Power Users Slack channel](https://slackin.pantheon.io/){.external}.
 
@@ -24,7 +24,7 @@ The community is an excellent way to bounce ideas off other expert developers. I
 
 ## Joining the Community
 
-You can join the Slack community [by clicking here](https://slackin.pantheon.io/){.external}, or the Discuss forum [here](https://discuss.pantheon.io/){.external}
+You can join the Slack community [by clicking here](https://slackin.pantheon.io/){.external}, or the Community forums [here](https://discuss.pantheon.io/){.external}
 
 ## Code of Conduct
 
