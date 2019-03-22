@@ -8,7 +8,7 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 
 <div class="alert alert-info" role="alert">
   <h4 class="info">Note</h4>
-  <p markdown="1">This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the [SimpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth){.external} module from Drupal.org. WordPress site's should use the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin from WordPress.org with the bundled OneLogin SAML PHP library.</p>
+  <p markdown="1">This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the [SimpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth){.external} module from Drupal.org. WordPress site's should use the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin from WordPress.org with the bundled OneLogin SAML PHP library. WordPress Multisite users require [additional configuration](#wordpress-multisite-issues).</p>
 </div>
 
 ## Install SimpleSAMLphp
@@ -191,6 +191,21 @@ $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.1
 ```
 
 You can now enable and configure the module. If SAML authentication fails because of a configuration error, look at the watchdog log to see why.
+
+## WordPress Multisite Issues
+WordPress Multisite users have reported two possible solutions to enable SSO on their site networks:
+
+**Solution 1:** Modify `inc/class-wp-saml-auth.php` to include:
+
+```php
+//$redirect_to = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_URL );
+//$redirect_to = $redirect_to ? : $_SERVER['REQUEST_URI'];
+// added to resolve multisite SSO issues
+$redirect_to = get_admin_url();
+$this->provider->login( $redirect_to );
+```
+
+**Solution 2:** FILL ME IN
 
 ## Troubleshooting
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
