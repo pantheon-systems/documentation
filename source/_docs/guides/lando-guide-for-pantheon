@@ -52,7 +52,7 @@ Installing Lando is straight forward. Be sure to check its [system requirements]
 
 - The latest release of Lando for your OS can be found here. Download the appropriate release for your Operating System. Currently, Debian (and various flavors of Linux), MacOS, Windows.
 - Click to open the installer package. The installer has a few pre-flight checks it runs before getting started.
-((img))
+![alt text](https://lh6.googleusercontent.com/lMk_JxH4wD8FaI1Hch40R81MtRTWFB4pWZoFBZUORUkGPVjLgQgmIZVfREQmYSHLv7D309UgSCPupq6-_ztXtfJJJgVkt5kROxkuNTRC "Lando Installer")
 
 Once you finish following any system prompts, the Lando installation script will work its magic and install itself on your computer.
 
@@ -72,16 +72,21 @@ Getting started with Lando can be disorienting at first. Fear not, mighty develo
 
 - Open your terminal and get to the directory where you plan to run your fancy Lando WP site. 
 - While in your terminal simply type `lando init`.
-(img)
+![alt text](https://lh4.googleusercontent.com/wSSyn5FZsxUY_03N-d5vszYVQPljZCBafwsk_kjWP4SJ62QzSvB-YaFrHwX9nZvXD3Lab5LHGEDMUt19JqgFOrBY-nU5UulHgcYYRMnJ "Install Lando to your working directory")
+
 
 	You may choose to start from your current directory or you can clone from Pantheon, Github, or another remote repository, or zip file. For this step, we’ll choose Current Working Directory.  
-- Next, you’ll choose WordPress as your starting recipe. (img)
+- Next, you’ll choose WordPress as your starting recipe.
+![alt text](https://lh3.googleusercontent.com/9oaWMtWpGPftZ15xrjwB9mcPpFwXNgoS5yUeafZI_hoj57dWS2LLKi6Xfc4odz1yDBfLoatRLkcWEWviyvS0saQSEMJ_BffcolQ2kigA "Install Lando to your working directory")
+
 - For your webroot, you may press enter and Lando will spin up the site from your current directory.
 - Enter the name of the site. Use something you’ll remember!
 
 Your local site has been created but your still not done! You still need to start the app, download WordPress and then install WordPress. Sure, it’s a few steps but the command line practice is good for bone growth and keyboard-punching-dexterity.
 
-- In your terminal type `lando start`. This starts your lando app and gives you some basic information like your Appserver URLs to access the site in your local browser of choice. (img)
+- In your terminal type `lando start`. This starts your lando app and gives you some basic information like your Appserver URLs to access the site in your local browser of choice.
+![alt text](https://lh6.googleusercontent.com/MDz4wDlDJZeEmuNwRKR7rZJStKPLvPQqUjn3kfK_oEk5c33UcO7tJxghP41IUyBnsaEudIUk5Zua5qb8QX06X5uzI86zXmJhorOXIMVS "Install Lando to your working directory")
+
 - Then type `lando wp core download`. 
 
 <div class="alert alert-info" role="alert" markdown="1">
