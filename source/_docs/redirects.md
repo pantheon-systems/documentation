@@ -28,6 +28,8 @@ The following configuration will redirect HTTP to HTTPS _and_ enforce use of a p
 
 ## Additional Redirects (Optional)
 Implement scenario specific redirects as required by the site. Depending on the needs of the site, you may only need one, some, or none of the following.
+
+As described [above](#redirect-to-https-and-the-primary-domain), redirect logic should be added to `wp-config.php` for WordPress sites, and `settings.php` for Drupal sites.
 ### Redirect to HTTPS
 The following configuration will redirect HTTP requests to HTTPS, such as `http://env-site-name.pantheonsite.io` to `https://env-site-name.pantheonsite.io` or `http://example.com` to `https://example.com`:
 
