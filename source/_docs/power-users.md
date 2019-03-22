@@ -5,7 +5,7 @@ contributors:
   - joshkoenig
 date: 7/27/2015
 ---
-Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our [Power Users Slack channel](https://slackin.pantheon.io/){.external} or [Power Users mailing list](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users){.external}.
+Pantheon fosters a community for those actively making use of the platform, primarily website development professionals. If you are an active developer on the Pantheon platform, you may benefit from joining our [Community Forums](https://discuss.pantheon.io/){.external}, [Power Users Slack channel](https://slackin.pantheon.io/){.external} or [Power Users mailing list](https://groups.google.com/a/pantheon.io/forum/#!forum/power-users){.external}.
 
 ## Power User Topics
 
@@ -20,6 +20,8 @@ The Pantheon Community is not a support resource, but it is a source of great id
 The community is an excellent way to bounce ideas off other expert developers. It's also the best way to get early access to beta features and other Power User info.
 
 ## Joining the Community
+
+You can join our Community Forums [by clicking here](https://discuss.pantheon.io/){.external}, where you can ask & find answers to your Pantheon, WordPress, Drupal or overall open source questions. 
 
 You can join the Slack community [by clicking here](https://slackin.pantheon.io/){.external}. The Slack Community can also be accessed at [pantheon-community.slack.com](https://pantheon-community.slack.com/){.external}.
 
