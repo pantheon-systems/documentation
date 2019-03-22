@@ -34,18 +34,18 @@ For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/pantheo
 
 If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and log in. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
 
-## Manually Expiring Cache for Static Assets (e.g. CSS, JS, Images)
+## Manually Expiring Cache for Static Assets (e.g. CSS, JS, Images, PDFs)
 
-Pantheon sets a cache lifetime of 1 year for static assets per industry standard best practices. Drupal and WordPress each offer different methods to update cached assets:
+Pantheon sets a cache lifetime of 1 year for static assets per industry standard best practices. Either of the following options should ensure a client's browser receives a new version of any static asset after clearing a site's cache:
 
-For Drupal sites, it's standard practice (with an option built into the CMS at `/admin/config/development/performance`) to aggregate `css` & `js` files for Live environments. This combines all the CSS for the site into a single file stored in `sites/default/files/css`, and all Javascript in `sites/default/files/js`. Each time the cache is cleared, the CSS & Javascript files are re-aggregated, resulting in a new file name for each being generated, which effectively eliminates the static caching issue for Drupal sites using aggregation.
+- Rename the file
+- Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
 
-WordPress users can use plugins like [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} to aggregate assets similarly.
+Please note - For css or js changes, Drupal and WordPress each offer methods to ensure a new file name will be created automatically any time a site's cache is cleared:
 
-To ensure a client browser receives a new version of a static asset you can also:
+- Drupal: use the built-in option found in the Drupal dashboard here: `/admin/config/development/performance`.
 
- - Rename the file
- - Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
+- WordPress: install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} to add a similar option in the WordPress admin dashboard.
 
 ## Using Your Own Session-Style Cookies
 
