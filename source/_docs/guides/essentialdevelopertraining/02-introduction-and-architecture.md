@@ -1,11 +1,9 @@
 ---
 title: Essential Developer Training
 subtitle: Architecture
-quickstart: true
 anchorid: architecture
 layout: guide
 type: guide
-quickstart: true
 generator: pagination
 pagination:
     provider: data.edtpages
@@ -16,7 +14,7 @@ nexturl: guides/essentialdevelopertraining/developer-workflow/
 nextpage: Developer Workflow
 previousurl: guides/essentialdevelopertraining/
 previouspage: Introduction
-editpath: essentialdevelopertraining/02-user-dashboard.md
+editpath: essentialdevelopertraining/02-introduction-and-architecture.md
 image: launchGuide-twitterLarge
 ---
 
@@ -29,6 +27,3 @@ All links from the video are provided below.
 
 
 [Explore Platform Architecture](https://pantheon.io/docs/platform/)
-
-
-

@@ -1,7 +1,6 @@
 ---
 title: Essential Developer Training
 subtitle: Developer Workflow
-quickstart: true
 anchorid: developer-workflow
 layout: guide
 type: guide

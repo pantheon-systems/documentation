@@ -13,7 +13,7 @@ use:
     - edtpages
 permalink: docs/guides/essentialdevelopertraining/
 nexturl: guides/essentialdevelopertraining/introduction-and-architecture/
-nextpage: Developer Workflow
+nextpage: Architecture 
 editpath: essentialdevelopertraining/01-introduction-and-architecture.md
 completiontime: 2 hours
 image: launchGuide-twitterLarge 
