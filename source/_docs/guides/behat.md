@@ -8,7 +8,7 @@ contributors:
   - ataylorme
 ---
 
-[Behat](https://behat.org){.external} is a PHP framework for automated testing. In our [blog](link-to-blog-post){.external} we've discussed the advantages of using Behat to continuously test your site. This guide demonstrates installation of Behat and [Mink](http://mink.behat.org/en/latest/){.external}, and writing simple tests.
+[Behat](https://behat.org){.external} is a PHP framework for automated testing. In our [blog](https://pantheon.io/blog/behat-web-developers){.external} we've discussed the advantages of using Behat to continuously test your site. This guide demonstrates installation of Behat and [Mink](http://mink.behat.org/en/latest/){.external}, and writing simple tests.
 
 ## Before You Begin
 
