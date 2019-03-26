@@ -10,12 +10,12 @@ pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/essentialdevelopertraining/terminus-cli/
-nexturl: guides/essentialdevelopertraining/external-integrations/
+permalink: docs/guides/edt/terminus-cli/
+nexturl: guides/edt/external-integrations/
 nextpage: External Integrations
-previousurl: guides/essentialdevelopertraining/multidev/
+previousurl: guides/edt/multidev/
 previouspage: Multidev
-editpath: essentialdevelopertraining/05-terminus-cli.md
+editpath: edt/05-terminus-cli.md
 image: launchGuide-twitterLarge
 ---
 

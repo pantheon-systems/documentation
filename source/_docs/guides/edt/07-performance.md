@@ -10,12 +10,12 @@ pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/essentialdevelopertraining/performance/
-nexturl: guides/essentialdevelopertraining/going-live/
+permalink: docs/guides/edt/performance/
+nexturl: guides/edt/going-live/
 nextpage: Going Live
-previousurl: guides/essentialdevelopertraining/external-integrations/
+previousurl: guides/edt/external-integrations/
 previouspage: External Integrations
-editpath: essentialdevelopertraining/07-performance.md
+editpath: edt/07-performance.md
 image: launchGuide-twitterLarge
 ---
 

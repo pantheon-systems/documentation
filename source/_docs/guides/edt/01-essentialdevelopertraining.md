@@ -6,16 +6,16 @@ tags: [essentialdevelopertrainging]
 edt: true
 layout: guide
 type: guide
-anchorid: essentialdevelopertraining
+anchorid: edt
 generator: pagination
 pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/essentialdevelopertraining/
-nexturl: guides/essentialdevelopertraining/introduction-and-architecture/
+permalink: docs/guides/edt/
+nexturl: guides/edt/introduction-and-architecture/
 nextpage: Architecture
-editpath: essentialdevelopertraining/01-essentialdevelopertraining.md
+editpath: edt/01-edt.md
 completiontime: 2 hours
 image: launchGuide-twitterLarge
 ---
@@ -30,12 +30,12 @@ All links from the video are provided below.
 
 In this guide, you'll learn:
 
-- [Architecture](/docs/guides/essentialdevelopertraining/introduction-and-architecture)
-- [Developer Workflow](/docs/guides/essentialdevelopertraining/developer-workflow/)
-- [Multidev](/docs/guides/essentialdevelopertraining/multidev/)
-- [Command Line Interface - Terminus](/docs/guides/essentialdevelopertraining/terminus-cli)
-- [External Integrations - Quicksilver](/docs/guides/essentialdevelopertraining/external-integrations)
-- [Performance](/docs/guides/essentialdevelopertraining/performance)
+- [Architecture](/docs/guides/edt/introduction-and-architecture)
+- [Developer Workflow](/docs/guides/edt/developer-workflow/)
+- [Multidev](/docs/guides/edt/multidev/)
+- [Command Line Interface - Terminus](/docs/guides/edt/terminus-cli)
+- [External Integrations - Quicksilver](/docs/guides/edt/external-integrations)
+- [Performance](/docs/guides/edt/performance)
 
 All you need before you begin is a Pantheon account. If you don't have one, <a href="https://pantheon.io/register" target="_blank">sign up now for free <span class="glyphicons glyphicons-new-window-alt"></span></a>.
 

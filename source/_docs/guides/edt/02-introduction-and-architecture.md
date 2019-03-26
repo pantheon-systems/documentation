@@ -10,12 +10,12 @@ pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/essentialdevelopertraining/introduction-and-architecture/
-nexturl: guides/essentialdevelopertraining/developer-workflow/
+permalink: docs/guides/edt/introduction-and-architecture/
+nexturl: guides/edt/developer-workflow/
 nextpage: Developer Workflow
-previousurl: guides/essentialdevelopertraining/
+previousurl: guides/edt/
 previouspage: Introduction
-editpath: essentialdevelopertraining/02-introduction-and-architechture.md
+editpath: edt/02-introduction-and-architechture.md
 image: launchGuide-twitterLarge
 ---
 

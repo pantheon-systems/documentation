@@ -10,12 +10,12 @@ pagination:
     provider: data.edtpages
 use:
     - edtpages
-permalink: docs/guides/essentialdevelopertraining/external-integrations/
-nexturl: guides/essentialdevelopertraining/performance/
+permalink: docs/guides/edt/external-integrations/
+nexturl: guides/edt/performance/
 nextpage: Performance
-previousurl: guides/essentialdevelopertraining/terminus-cli/
+previousurl: guides/edt/terminus-cli/
 previouspage: Command Line Interface
-editpath: essentialdevelopertraining/06-quicksilver-external-integrations.md
+editpath: edt/06-quicksilver-external-integrations.md
 image: launchGuide-twitterLarge
 ---
 
