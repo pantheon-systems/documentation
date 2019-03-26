@@ -51,6 +51,8 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 
 An email confirmation is sent to the user. If the user already has a Pantheon account, they are immediately added to the Organization. If not, they'll first need to click the confirmation link in the email to create their account.
 
+To create a new user with an unprivileged role, create the user first, then change the role in the next section.
+
 ### Change a User's Role
 
 1. In the People tab, select the user's name.
