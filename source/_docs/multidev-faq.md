@@ -15,20 +15,18 @@ Multidev is available to:
  - Pantheon Partner Program agencies (at the level of Pantheon Partner and above).
  - Direct Online customers with [Gold support](/docs/support/#support-features-and-response-times) and above.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
-Unprivileged members of organizations cannot access Multidev environments. See [Change Management](/docs/change-management/) for more information.
-</div>
+Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/docs/change-management/) for more information about roles and permissions.
 
 Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us){.external}.
 
 ### Should I have access to Multidev?
 
-Multidev is available if you are:
+Multidev is available if you:
 
- - A Developer (or higher role) of an Organization, with the Multidev Feature (like a [Pantheon Preferred Partner](https://pantheon.io/agencies/partner-program){.external}).
- - A Direct Online customer with Gold support or above.
- - If you fully meet either of these conditions and still don't have access to Multidev, please [contact support](https://dashboard.pantheon.io/#support){.external}.
+ - Have been assigned a role as a member of an Organization that has the Multidev Feature (like a [Pantheon Preferred Partner](https://pantheon.io/agencies/partner-program){.external}).
+ - Are a Direct Online customer with Gold support or above.
+
+If you fully meet either of these conditions and still don't have access to Multidev, please [contact support](https://dashboard.pantheon.io/#support){.external}.
 
 ## How many Multidev environments do I get?
 
@@ -75,7 +73,7 @@ At this time, Multidev on Pantheon will only work with the Pantheon hosted code 
 ## Is there a public API available for post-commit hooks or other integrations with external project management systems?
 
 No, but developers can use [Quicksilver hooks](/docs/quicksilver/#hooks) to integrate Multidev creation and other workflows with external services.
- 
+
 ## Can I backup and restore a branch environment?
 
 Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.
