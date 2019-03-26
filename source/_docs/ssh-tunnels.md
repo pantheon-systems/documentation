@@ -5,7 +5,7 @@ tags: [local, security]
 categories: []
 contributors: bwood
 ---
-For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling). This will increase the security of your remote connection, especially in a public or untrusted environment.
+For additional security, Pantheon provides the ability to securely connect to your database and caching service over an encrypted connection using [secure shell tunneling](https://en.wikipedia.org/wiki/Tunneling_protocol#Secure_shell_tunneling){.external}. This will increase the security of your remote connection, especially in a public or untrusted environment.
 
 This technique configures an SSH client to forward a local port to a port on Pantheon. Once the tunnel is established, you can connect to the local port to access the remote service using the encrypted connection.
 
@@ -71,9 +71,11 @@ Replace `PORT` with the database port specified in the **Connection Info** tab. 
 ```bash
 mysql -u pantheon -h 127.0.0.1 -P PORT pantheon -pPASSWORD
 ```
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</p></div>
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.
+</div>
+
 You can destroy the tunnel by using the port value found within the **Connection Info** tab and your computer's USERNAME in the following command:
 ```bash
 ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
