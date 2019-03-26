@@ -19,8 +19,12 @@ Once the user has been added to the project, they will receive a welcome email n
 
 **Remove a Team Member**
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p>All users can be removed except the site owner.</p></div>
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+All users can be removed except the site owner.
+
+See the [Remove a Site Owner](/docs/access-management/#remove-a-site-owner) section of our Access Management doc for more information.
+</div>
 
 In the Team modal, click the X next to the user you want to delete.
 
@@ -50,6 +54,9 @@ You can access New Relic Pro directly from the Site Dashboard, by clicking on **
 
 ### Can I downgrade my site to a Basic plan?
 Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to Basic plan level. For more information, see [Manage Plans in the Site Dashboard](/docs/site-plan/#basic-plan).
+
+## How do I recover an account after a site owner leaves?
+See the steps in our [Site Access](/docs/site-access/) doc for recovery instructions.
 
 ## Billing Tasks
 
