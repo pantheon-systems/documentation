@@ -17,7 +17,7 @@ Verify current PHP settings from the Site Dashboard by clicking **Settings** > *
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
-Changes made to `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. See [Deploying Configuration Changes to Multidev](/docs/pantheon-yml/#deploying-configuration-changes-to-multidev) for more information.
+Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. See [Deploying Configuration Changes to Multidev](/docs/pantheon-yml/#deploying-configuration-changes-to-multidev) for more information.
 </div>
 
 ### Available PHP Versions
