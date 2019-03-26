@@ -28,15 +28,11 @@ All links from the video are provided below.
 
 
 
-[Pantheon Multidev docs](https://pantheon.io/docs/multidev/)
-
-[Pantheon Multidev FAQ](https://pantheon.io/docs/multidev-faq/)
-
-[Pantheon Platform Considerations](https://pantheon.io/docs/platform-considerations/)
-
-[Pantheon YAML Configuration Files](https://pantheon.io/docs/pantheon-yml/)
-
-[Quick Start guide](https://pantheon.io/docs/guides/quickstart/)
+ - [Pantheon Multidev docs](/docs/multidev/)
+ - [Pantheon Multidev FAQ](/docs/multidev-faq/)
+ - [Pantheon Platform Considerations](/docs/platform-considerations/)
+ - [Pantheon YAML Configuration Files](/docs/pantheon-yml/)
+ - [Quick Start guide](/docs/guides/quickstart/)
 
 **CHALLENGE:**
 Push a branch up to Pantheon and use it to create a new Multidev Environment. 
