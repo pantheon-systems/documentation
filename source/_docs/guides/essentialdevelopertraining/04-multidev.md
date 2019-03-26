@@ -11,7 +11,7 @@ pagination:
 use:
     - edtpages
 permalink: docs/guides/essentialdevelopertraining/multidev/
-nexturl: guides/essentialdevelopertraining/terminus-cli
+nexturl: guides/essentialdevelopertraining/terminus-cli/
 nextpage: Command Line Interface
 previousurl: guides/essentialdevelopertraining/developer-workflow/
 previouspage: Developer Workflow
@@ -35,4 +35,4 @@ All links from the video are provided below.
  - [Quick Start guide](/docs/guides/quickstart/)
 
 **CHALLENGE:**
-Push a branch up to Pantheon and use it to create a new Multidev Environment. 
+Push a branch up to Pantheon and use it to create a new Multidev Environment.

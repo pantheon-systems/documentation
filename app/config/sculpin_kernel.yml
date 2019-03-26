@@ -78,7 +78,7 @@ sculpin_content_types:
         type: path
         path: docs/guides/essentialdevelopertraining
         permalink: pretty
-        singular_name: edtpages
+        singular_name: edtpage
         enabled: true
         layout: guide
         taxonomies:

@@ -17,12 +17,13 @@ nexturl: guides/essentialdevelopertraining/introduction-and-architecture/
 nextpage: Architecture
 editpath: essentialdevelopertraining/01-essentialdevelopertraining.md
 completiontime: 2 hours
-image: launchGuide-twitterLarge 
+image: launchGuide-twitterLarge
 ---
 
 Welcome! This guide is an online version of our [Essential Developer Training](https://pantheon.io/essential-developer-training).
 All links from the video are provided below.
 
+<div class="enablement">
   <h4 class="info" markdown="1">[Getting Essential Developer Training](https://pantheon.io/essential-developer-training?docs){.external}</h4>
   Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
 </div>
