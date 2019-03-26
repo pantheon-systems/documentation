@@ -34,12 +34,18 @@ For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/pantheo
 
 If your site or application requires Facebook authentication, we have added exceptions for this to allow users to register and log in. In the event you are having problems with another external authentication service, please contact us and let us know what service you are having issues with.
 
-## Manually Expiring Cache for Static Assets (e.g. CSS, JS, Images)
+## Manually Expiring Cache for Static Assets
 
-Pantheon sets a cache lifetime of 1 year for static assets per industry standard best practices. To ensure a client browser receives a new version of a static asset you can:
+Pantheon sets a cache lifetime of 1 year for static assets (e.g. CSS, JS, Images, PDFs) per industry standard best practices. Either of the following options should ensure a client's browser receives a new version of any static asset after clearing a site's cache: 
 
- - Rename the file
- - Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
+- Rename the file
+- Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
+
+For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure a new file name will be created automatically any time a site's cache is cleared:
+
+- **Drupal:** use the built-in option found in the Drupal dashboard at `/admin/config/development/performance`.
+
+- **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} to add a similar option in the WordPress admin dashboard.
 
 ## Using Your Own Session-Style Cookies
 
