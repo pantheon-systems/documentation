@@ -38,10 +38,9 @@ All links from the video are provided below.
  - [Domains and DNS](/docs/domains/)
  - [Selecting a Plan](/docs/select-plan/)
  - [Pantheon's Global CDN](/docs/global-cdn/)
- - [Free and Automated HTTPS](/docs/free-https/)
+ - [HTTPS on Pantheon's Global CDN](/docs/https/)
  - [Redirect to a Primary Domain](/docs/redirects/#redirect-to-https)
  - [Require HTTPS with the HSTS Header](/docs/hsts/)
-
 
  <div class="enablement" markdown="1">
   <h4 class="info" markdown="1">
