@@ -1,28 +1,19 @@
 ---
-title: Lando Setup Guide for Pantheon
-description: Formatting rules and guidelines for Pantheon's open-source documentation.
-contributors: [Alex Vasquez]
+title: Install and Configure Lando
+description: Install and Configure Lando for local development.
+contributors: [alexvasquez]
+type: guide
+permalink: docs/guides/:basename/
 ---
 
-## Before You Begin
-
-Be sure that you have:
-
-- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create){.external} one.
-- Having a working knowledge of local server environments is helpful but not entirely necessary.
-- While you’re at it be sure to check out [Lando getting started guide] and [Lando CLI usage].
-
-## Intro
-### Welcome to our Lando for Pantheon guide!
-
-This guide will help you get up and running with [Lando], an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.
+This guide will help you get up and running with [Lando](https://thinktandem.io/lando/){.external}, an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
 Lando does not currently provide a Graphical User Interface (GUI). Everything is managed from the command line. 
 </div>
 
-### Reviewing this guide will help you:
+Reviewing this guide will help you:
 
 - Understand Lando: What it is and why you should use it.
 - Installing and setting up Lando as well as understanding its command line interface.
@@ -43,6 +34,19 @@ The other benefit is that if you work with a team, you can easily standardize yo
 Lando + Pantheon helps developers answer long-standing and vexing questions: How do I move my local database to dev? How do I pull the latest copy of my database from production to local setup? With Lando + Pantheon, developers now have a fully integrated process to manage their development cycle from local to production with minimal friction.
 
 Oh, and let’s not even talk about the fact I forgot to mention WP-CLI integration!
+
+
+## Before You Begin
+
+Be sure that you have:
+
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create){.external} one.
+- Having a working knowledge of local server environments is helpful but not entirely necessary.
+- While you’re at it be sure to check out [Lando getting started guide] and [Lando CLI usage].
+
+
+
+
 
 ## Installing and Setting-up Lando
 
