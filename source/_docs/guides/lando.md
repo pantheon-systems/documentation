@@ -1,6 +1,6 @@
 ---
 title: Install and Configure Lando
-description: Install and Configure Lando for local development.
+description: Install and Configure Lando for local development of WordPress sites.
 contributors: [alexvasquez]
 type: guide
 permalink: docs/guides/:basename/
@@ -13,29 +13,6 @@ This guide will help you get up and running with [Lando](https://thinktandem.io/
 Lando does not currently provide a Graphical User Interface (GUI). Everything is managed from the command line. 
 </div>
 
-Reviewing this guide will help you:
-
-- Understand Lando: What it is and why you should use it.
-- Installing and setting up Lando as well as understanding its command line interface.
-- Spin up a fresh WordPress (no Pantheon integration).
-- Spinning up a fresh WordPress via the Pantheon Recipe.
-- Pushing and pulling your changes to your Pantheon hosted environments.
-
-## Understanding Lando: What it is and Why You Should Use it.
-
-With Lando, you can create local server environments using configurations and utilities that closely mimic what you’ll actually be using in your production or staging environments. 
-
-Lando provides great flexibility and customizability through its configuration file . If you need to downgrade to PHP 5.6 to troubleshoot an issue, no problem. If you need to install Mailhog to test email messages coming from your site without the possibility of disturbing your clients or their customers that’s also not a problem—you can spin up different sites running different versions of PHP and MySQL DBs concurrently with no fuss. Lando is easily configured to include useful utilities and libraries by modifying the configuration file _.lando.yml_ to suit your project’s needs.
-
-Lando really shines when used with Pantheon’s hosting platform. The tight integration improves your dev workflow efficiency and makes commonly mundane tasks (such as migrating databases and codebase changes from development) a snap.
-
-The other benefit is that if you work with a team, you can easily standardize your development workflow and processes to ensure that everyone is on the same page or tech-stack. Standardization of your workflow and processes will save you and your team time and headaches in your projects going forward.
-
-Lando + Pantheon helps developers answer long-standing and vexing questions: How do I move my local database to dev? How do I pull the latest copy of my database from production to local setup? With Lando + Pantheon, developers now have a fully integrated process to manage their development cycle from local to production with minimal friction.
-
-Oh, and let’s not even talk about the fact I forgot to mention WP-CLI integration!
-
-
 ## Before You Begin
 
 Be sure that you have:
@@ -43,10 +20,6 @@ Be sure that you have:
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create){.external} one.
 - Having a working knowledge of local server environments is helpful but not entirely necessary.
 - While you’re at it be sure to check out [Lando getting started guide] and [Lando CLI usage].
-
-
-
-
 
 ## Installing and Setting-up Lando
 
