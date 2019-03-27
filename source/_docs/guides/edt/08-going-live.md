@@ -34,9 +34,9 @@ All links from the video are provided below.
  - [Google Page Speed](https://developers.google.com/speed/pagespeed/insights/){.external}
  - [Webpagetest.org](https://www.webpagetest.org){.external}
  - [SiteSpeed](https://www.sitespeed.io/){.external}
- - [Going Live](/docs/going-live)
+ - [Launch Essentials](/docs/guides/launch/)
  - [Domains and DNS](/docs/domains/)
- - [Selecting a Plan](/docs/select-plan/)
+ - [Manage Plans in the Site Dashboard](/docs/site-plan/)
  - [Pantheon's Global CDN](/docs/global-cdn/)
  - [HTTPS on Pantheon's Global CDN](/docs/https/)
  - [Redirect to a Primary Domain](/docs/redirects/#redirect-to-https)
