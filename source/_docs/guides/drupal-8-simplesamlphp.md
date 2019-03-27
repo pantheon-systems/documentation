@@ -1,10 +1,11 @@
 ---
 title: How to Implement SimpleSAMLphp as idP for Drupal 8 on Pantheon 
 description: Setting up an identity provider on Drupal 8 using SimpleSAMLphp.
-draft: true
 tags: [code, drupal-8]
 categories: [drupal, developing]
-contributors: Javi-er
+type: guide
+permalink: docs/guides/:basename/
+conntributors: Javi-er
 ---
 
 There are a number of articles detailing how to implement the SAML 2.0 protocol, but if you want to host your site on Pantheon and use Drupal 8 as your identity provider, there are a few details to take in account.
@@ -30,7 +31,7 @@ By now you should have SAML Idp module on your Drupal 8 site, go to the admin in
 
 After this create the subdirectory ``/simplesamlphp/drupalauth`` and create an empty file with the name `default_enable` in that directory in order to enable the Drupal 8 integration. You can also do this with Drush executing
 
-``` bash
+```bash
 drush ev 'Drupal\saml_idp\Install::postInstall()'
 ```
 
@@ -41,13 +42,14 @@ drush ev 'Drupal\saml_idp\Install::postInstall()'
 2.  Place SimpleSAMLphp a folder called ``/private`` 
 
 3.  Create a symlink on your project root from ``/simplesaml`` to ``/private/simplesamlphp/www``
-    ``` bash
+
+    ```bash
     $ ln -s ./private/simplesamlphp/www ./simplesaml
     ```
     
     Your project structure should be as follow:
     
-    ``` markdown
+    ```markdown
     project
     ├── pantheon.yml   
     ├── ...
@@ -62,16 +64,18 @@ drush ev 'Drupal\saml_idp\Install::postInstall()'
         └── ...
     ```
     
-4.  Add a virtual host for your project
-    Edit your Apache virtual host confiuguration and add the following:
-    You can see your current virtual host configuration with 
+4. Add a virtual host for your project
+
+   Edit your Apache virtual host confiuguration and add the following:
+   You can see your current virtual host configuration with 
+
     ``` bash 
     $ /usr/sbin/httpd -S
     ```
     
-    Replace `local.myproject.com` with your desired domain name and `/var/www/project` with your project location.
-    You'll probably want to edit the log directory as well if it's different on your installation.
-    Take in account that you’ll need `mod_rewrite` to be enabled.
+   Replace `local.myproject.com` with your desired domain name and `/var/www/project` with your project location.
+   You'll probably want to edit the log directory as well if it's different on your installation.
+   Take in account that you’ll need `mod_rewrite` to be enabled.
 
     ``` apache
     <VirtualHost *:80>
