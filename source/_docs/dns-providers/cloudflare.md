@@ -49,7 +49,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
 You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
 
-1. Select **Crypto** from the Cloudflare menu bar and set SSL mode to **Full** (or potentially Full, Strict), but not Flexible.
+1. Select **Crypto** from the Cloudflare menu bar and set SSL mode to **Full (Strict)**.
   ![Enable SSL](/source/docs/assets/images/cloudflare-ssl.png)
 2. Scroll down and enable **Always use HTTPS**
   ![Cloudflare Always HTTPS](/source/docs/assets/images/cloudflare-always-https.png)
@@ -70,9 +70,11 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
   ![caa click to configure](/source/docs/assets/images/cf-caa.png)
 
-4. Select **Allow wildcards and specific hostnames** for the record's tag and enter  `letsencrypt.org` in the value:
+4. Select **Allow wildcards and specific hostnames** for the record's tag. If you are *not* stacking Cloudflare's CDN with the Pantheon Global CDN, enter  `letsencrypt.org` as the value:
 
   ![caa configure](/source/docs/assets/images/cf-caa-configure.png)
+
+  If you *are* using Cloudflare's CDN, they will [automatically add](https://support.cloudflare.com/hc/en-us/articles/115000310792-Configuring-CAA-Records-){.external} CAA records for their CA providers when Universal SSL is enabled. Do *not* add a record for `letsencrypt.org` in this case.
 
 5. Select desired Time to Live (TTL).
 
