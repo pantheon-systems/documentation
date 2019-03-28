@@ -12,7 +12,7 @@ searchboost: 150
 The documentation on this page discusses features and options that are not yet available to all users.
 </div>
 
-Pantheon is extending limited availability invitations to contract customers who want to deploy a new site within the European Union (**EU**).
+Pantheon is extending Limited Availability invitations to contract customers who want to deploy a new site within the European Union (**EU**).
 
 ### Details
 
@@ -20,7 +20,7 @@ Site resources, including the database container, are provisioned in the Europea
 
 ## How to Enable Access and Create Sites in the EU Region
 
-During this feature's limited availability period, participation is opt-in only for contract customers. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account to create sites in the EU Region.
+During this feature's Limited Availability period, participation is opt-in only for contract customers. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account to create sites in the EU Region.
 
 Once granted access, our Support team will create the new site for you.
 
