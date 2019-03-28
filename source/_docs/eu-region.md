@@ -16,7 +16,7 @@ Pantheon is extending Limited Availability invitations to contract customers who
 
 ### Details
 
-Site resources, including the database container, are provisioned in the European Union. Traffic is served through the Global CDN, with the Amsterdam point of presence as origin shield.
+Site resources, including the database container, are provisioned in the European Union. Traffic is served through the Global CDN, with the Amsterdam point of presence as origin shield. EU Data Residency requirements are satisfied in that all site data and traffic is served from the EU region.
 
 ## How to Enable Access and Create Sites in the EU Region
 
