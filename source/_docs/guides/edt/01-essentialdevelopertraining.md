@@ -2,7 +2,7 @@
 title: Essential Developer Training
 subtitle: Introduction
 description: This Self Serve Essential Developer Training guide is designed to help any Pantheon user quickly master workflow and tooling
-tags: [essentialdevelopertrainging]
+tags: [moreguides, essentialdevelopertrainging]
 edt: true
 layout: guide
 type: guide
