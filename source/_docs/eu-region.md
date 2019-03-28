@@ -1,25 +1,41 @@
 ---
 title: Create a New Site in Pantheon's EU Region
 description: Learn how to create a new site located in the EU.
-tags: [create]
+tags: [create, regions]
 categories: []
 contributors: edwardangert
 searchboost: 150
-earlyaccess: true
-earlynote: The documentation on this page discusses features and options that are not yet available to all users.
 ---
 
-Pantheon is extending early access invitations to contract customers who want to deploy a new site within the European Union (**EU**).
+<div class="alert alert-info" markdown="1">
+#### Limited Availability {.info}
+The documentation on this page discusses features and options that are not yet available to all users.
+</div>
+
+Pantheon is extending limited availability invitations to contract customers who want to deploy a new site within the European Union (**EU**).
 
 ### Details
 
 Site resources, including the database container, are provisioned in the European Union. Traffic is served through the Global CDN, with the Amsterdam point of presence as origin shield.
 
-## How to Enable Early Access and Create Sites in the EU Region
+## How to Enable Access and Create Sites in the EU Region
 
-During this feature's Early Access period, participation is opt-in only for contract customers. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
+During this feature's limited availability period, participation is opt-in only for contract customers. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account to create sites in the EU Region.
 
-Once granted early access, our Support team will create the new site for you.
+Once granted access, our Support team will create the new site for you.
+
+## Confirm the Site's Current Region
+
+### View the Site's Region in the Dashboard
+
+Use the Dashboard to confirm the Pantheon Region in which the site hosted:
+
+1.  Navigate to the site Dashboard
+1.  Click **Settings**
+1.  **About Site**
+1.  Region will show either:
+    - `United States`, by default, or
+    - `European Union`, if the site is hosted in the EU Region
 
 ## Use Terminus to Display Sites and Regions
 
@@ -61,6 +77,12 @@ Allow one week between submitting a ticket until go live. Opening a ticket will 
     We understand that domains will be routed to the EU every Tuesday, for all requests submitted by the preceding Friday, and that we will receive confirmation when the update is complete, at which time we can update DNS.
     ```
 4. After receiving confirmation, celebrate. Your site is running in the EU!
+
+## Migrate an Existing Site to the EU Region
+
+The [typical way to migrate sites](/docs/migrate/) is not yet available for international migrations. To migrate an existing site from one region to another, create the new site as described above, then follow the [Manually Migrate Sites to Pantheon](/docs/migrate-manual/) guide.
+
+If you want help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available for hire.
 
 ## Coming Soon
 
