@@ -649,7 +649,7 @@ if (defined( "PANTHEON_BINDING" )) {
 ### [WP-Rocket](https://wp-rocket.me/){.external}
 **Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}. The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
 
-**Solution**: 
+**Solution**:
 
 1. In SFTP mode, install the WP-Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
 1. Activate the plugin from the dashboard.
@@ -799,7 +799,7 @@ Due to the cloud-based infrastructure of the Pantheon platform, outbound request
 
 Plugins and modules will not work on Pantheon if they:
 
- - Require Apache
- - Require customized `.htaccess` files
- - Need to modify Nginx configuration files
- - Require Postgresql or other non-MySQL databases.
+ - Require Apache.
+ - Require customized `.htaccess` files.
+ - Need to modify Nginx configuration files.
+ - Require PostgreSQL or other non-MySQL compatible databases.
