@@ -70,9 +70,9 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
   ![caa click to configure](/source/docs/assets/images/cf-caa.png)
 
-4. Select **Allow wildcards and specific hostnames** for the record's tag. If you are *not* stacking Cloudflare's CDN with the Pantheon Global CDN, enter  `letsencrypt.org` as the value:
+4. Select **Allow wildcards and specific hostnames** for the record's tag. If you are *not* stacking Cloudflare's CDN with the Pantheon Global CDN, enter `letsencrypt.org` as the value:
 
-  ![caa configure](/source/docs/assets/images/cf-caa-configure.png)
+  ![CAA configure](/source/docs/assets/images/cf-caa-configure.png)
 
   If you *are* using Cloudflare's CDN, they will [automatically add](https://support.cloudflare.com/hc/en-us/articles/115000310792-Configuring-CAA-Records-){.external} CAA records for their CA providers when Universal SSL is enabled. Do *not* add a record for `letsencrypt.org` in this case.
 
@@ -82,7 +82,7 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
 6. Click **Add Record**. Your record should look similar to the following once it has been created:
 
-  ![caa record](/source/docs/assets/images/cf-caa-final.png)
+  ![CAA record](/source/docs/assets/images/cf-caa-final.png)
 
 7. Repeat this process for the `www` subdomain.
 
