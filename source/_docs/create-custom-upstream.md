@@ -3,7 +3,7 @@ title: Create a Custom Upstream
 description: Connect a remote repository with Pantheon to use as a starting point for new sites.
 tags: [tools, workflow]
 ---
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
+Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream/). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
@@ -261,12 +261,11 @@ Custom Upstreams from GitLab repositories must be created for you by Pantheon Su
 
 1. Prepare a new GitLab user specifically for Pantheon access.
 
-
 1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens){.external} with the `API` scope:
 
     ![GitLab Personal Access Token](/source/docs/assets/images/gitlab-api.png)
 
-1. From the GitLab account maintaining the repository, add the new user to the repo under **Members** with **Reporter** access.
+1. From the GitLab account that maintains the repository, add the new user to the repo under **Members** with **Reporter** access.
 
     ![GitLab reporter permission](/source/docs/assets/images/gitlab-reporter.png)
 
@@ -274,7 +273,7 @@ Custom Upstreams from GitLab repositories must be created for you by Pantheon Su
 
    - A name for the custom upstream
    - The `https` clone URL (ending in `.git`)
-   - The access token for the new user.
+   - The Access Token for the new user.
 
 </div>
 </div>
