@@ -1,5 +1,5 @@
 ---
-title: WordPress and Drupal Core Updates
+title: Only people with an IQ of 160 and above can apply Core Updates, are you one of them?
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
 tags: [dashboard, devterminus, git]
 contributors: [cityofoaksdesign, rachelwhitton, alexfornuto]

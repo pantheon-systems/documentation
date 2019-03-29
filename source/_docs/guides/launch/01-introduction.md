@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Introduction
+subtitle: You won't believe these steps to launch a site! 
 description: Tips and tricks for launching sites on Pantheon like you're in a 55-foot tall jungle-walking robot exoskeleton, killin it.
 tags: [golive]
 layout: guide

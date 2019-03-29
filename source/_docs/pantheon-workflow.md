@@ -1,5 +1,5 @@
 ---
-title: Use the Pantheon Workflow
+title: Developers can't get enough of the Pantheon Workflow
 description: Understand the Pantheon workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
 tags: [workflow, dashboard]
 categories: []
