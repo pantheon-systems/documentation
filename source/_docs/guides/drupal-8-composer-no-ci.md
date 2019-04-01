@@ -112,7 +112,7 @@ Normally the next step would go through the standard Drupal installation. But si
     composer update
     ```
 
-    This may take a while as all of Drupal core and its dependencies will be downloaded. Subsequent updates should take less time.
+    Downloading Drupal core and its dependencies for the first time may take a while. Subsequent updates should take less time.
 
     ![image of terminal running a composer install](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-update.png)
 
@@ -130,7 +130,7 @@ Normally the next step would go through the standard Drupal installation. But si
 
    It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration.
 
-4. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the `:: cut ::` section:
+4. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the `:: cut ::` section.
 
    **Important:** Without this modification, critical components such as Drupal core and contrib modules will be ignored and not pushed to Pantheon.
 
