@@ -138,13 +138,15 @@ The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
 If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.ouput value by adding the following line to `wp-config.php`:
 
-```ini_set('arg_separator.output', '&');```
-
-### Adding actions or filters in the wp-config.php
-
-There are cases when we implement some actions or filters directly in wp-config.php. WP-CLI commands can fail as some of the functions are not yet accessible. As workaround, we can exclude CLI transactions in PHP by enclosing with this snippet below. 
-
+```php
+ini_set('arg_separator.output', '&');
 ```
+
+### Adding actions or filters in `wp-config.php`
+
+When implementing some actions or filters directly in `wp-config.php`, WP-CLI commands can fail as some of the functions are not yet accessible. As workaround, exclude CLI transactions in PHP by enclosing these actions in the `if` below:
+
+```php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
    // Add your filters here
 }
