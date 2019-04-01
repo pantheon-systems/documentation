@@ -53,7 +53,7 @@ For security purposes, we recommend removing tokens from your account when they 
 ## Troubleshooting
 
 ### Microsoft Edge
-Machine tokens cannot currently be generated using Microsoft Edge browser. As a workaround, generate the token using Mozilla Firefox or Google Chrome, which has been tested as working on Windows 10.
+Currently, machine tokens cannot be generated using Microsoft Edge browser. As a workaround, generate the token using Mozilla Firefox or Google Chrome, which has been tested as working on Windows 10.
 
 ## See Also
 [The Ins and Outs of Token-Based Authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)
