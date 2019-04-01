@@ -95,6 +95,7 @@ The entire script:
 
 ```php
 <?php
+
 $settings = array(
   'NAME' => array(
     'host' => 'ldaps://HOSTNAME:PORT/',
@@ -108,6 +109,7 @@ $settings = array(
   ),
 );
 
+ldap_set_option(NULL, LDAP_OPT_DEBUG_LEVEL, 7);
 ldap_set_option(NULL, LDAP_OPT_PROTOCOL_VERSION, 3);
 ldap_set_option(NULL, LDAP_OPT_REFERRALS, 0);
 ldap_set_option(NULL, LDAP_OPT_X_TLS_REQUIRE_CERT, LDAP_OPT_X_TLS_ALLOW);
