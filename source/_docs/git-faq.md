@@ -1,5 +1,5 @@
 ---
-title:21 Git FAQs Guaranteed to Blow Your Mind!
+title: 21 Git FAQs Guaranteed to Blow Your Mind!
 description: Answers to commonly asked questions about Git, Drupal, WordPress and Pantheon.
 tags: [git]
 categories: []
