@@ -10,52 +10,52 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 
 ## Available Logs
 
-<table class="table  table-bordered table-responsive">
-    <thead>
-      <tr>
-        <th>Log</th>
-        <th>Retention Policy</th>
-        <th>Comments</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>newrelic.log</th>
-        <td></td>
-        <td>New Relic log; check if an environment is not logging.</td>
-      </tr>
-      <tr>
-        <th>nginx-access.log</th>
-        <td>Up to 60 days of logs</td>
-        <td  markdown="1">Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See <a href="/docs/nginx-access-log">Parsing nginx Access Logs with GoAccess</a>.</td>
-      </tr>
-      <tr>
-        <th>nginx-error.log</th>
-        <td>1MB of log data</td>
-        <td>Webserver error log.</td>
-      </tr>
-      <tr>
-        <th>php-error.log <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Fatal errors from PHP error log are provided in each environment on the <strong>Errors</strong> tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see <a href='/docs/php-errors'>PHP Errors and Exceptions</a>."><em class="fa fa-info-circle"></em></a></th>
-        <td>1MB of log data</td>
-        <td>PHP <a href="https://secure.php.net/manual/en/book.errorfunc.php">fatal error log</a>; will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard.</td>
-      </tr>
-      <tr>
-        <th>php-fpm-error.log</th>
-        <td>1MB of log data</td>
-        <td>PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See <a href="/docs/php-slow-log">PHP Slow Log</a></td>
-      </tr>
-      <tr>
-        <th>mysqld-slow-query.log</th>
-        <td>10MB of log data</td>
-        <td>Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory.</td>
-      </tr>
-      <tr>
-        <th>mysqld.log</th>
-        <td>1 MB of log data</td>
-        <td>Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory.</td>
-      </tr>
-    </tbody>
-  </table>
+<table class="table  table-bordered table-responsive" markdown="1">
+<thead>
+  <tr>
+    <th>Log</th>
+    <th>Retention Policy</th>
+    <th>Comments</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th>newrelic.log</th>
+    <td></td>
+    <td>New Relic log; check if an environment is not logging.</td>
+  </tr>
+  <tr>
+    <th>nginx-access.log</th>
+    <td>Up to 60 days of logs</td>
+    <td  markdown="1">Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See <a href="/docs/nginx-access-log">Parsing nginx Access Logs with GoAccess</a>.</td>
+  </tr>
+  <tr>
+    <th>nginx-error.log</th>
+    <td>1MB of log data</td>
+    <td>Webserver error log.</td>
+  </tr>
+  <tr>
+    <th>php-error.log <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Fatal errors from PHP error log are provided in each environment on the <strong>Errors</strong> tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see <a href='/docs/php-errors'>PHP Errors and Exceptions</a>."><em class="fa fa-info-circle"></em></a></th>
+    <td>1MB of log data</td>
+    <td>PHP <a href="https://secure.php.net/manual/en/book.errorfunc.php">fatal error log</a>; will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard.</td>
+  </tr>
+  <tr>
+    <th>php-fpm-error.log</th>
+    <td>1MB of log data</td>
+    <td>PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See <a href="/docs/php-slow-log">PHP Slow Log</a></td>
+  </tr>
+  <tr>
+    <th>mysqld-slow-query.log</th>
+    <td>10MB of log data</td>
+    <td>Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory.</td>
+  </tr>
+  <tr>
+    <th>mysqld.log</th>
+    <td>1 MB of log data</td>
+    <td>Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory.</td>
+  </tr>
+</tbody>
+</table>
 
 Rotated log files are archived within the `/logs` directory on application containers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
