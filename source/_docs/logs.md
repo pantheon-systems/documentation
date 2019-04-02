@@ -278,6 +278,29 @@ done
 
 Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) then review them with any tool on your workstation.
 
+You can also use the `logwatcher.sh` script below, which uses [Terminus](/docs/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin){.external} to download log files repeatedly. Remember to update the variables to match your site name, environment, path, and the log file you want to watch:
+
+```bash
+#!/bin/bash
+LOGPATH=~/logs
+LOGFILE=php-error.log
+SITE=sitename
+ENV=environment
+TERMINUS_HIDE_UPDATE_MESSAGE=1
+
+touch $LOGPATH/$LOGFILE
+terminus rsync $SITE.$ENV:logs/$LOGFILE $LOGPATH
+
+tail $LOGPATH/$LOGFILE
+
+```
+
+Once you create this script and give it executable permissions (`chmod +x`), you can use `watch` (available on macOS via Homebrew), to keep an updated view of the logs:
+
+```bash
+watch -n2 logwatcher.sh
+```
+
 ## See Also
 - [MySQL Slow Log](/docs/mysql-slow-log/)
 - [PHP Slow Log](/docs/php-slow-log/)
