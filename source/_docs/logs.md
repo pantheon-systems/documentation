@@ -278,7 +278,7 @@ done
 
 Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) then review them with any tool on your workstation.
 
-You can also use the `logwatcher.sh` script below, which uses [Terminus](/docs/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin){.external} to download log files repeatedly. Remember to update the variables to match your site name, environment, path, and the log file you want to watch:
+You can also use the `logwatcher.sh` script below, which uses [Terminus](/docs/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin){.external} to download log files and display the last several lines. Remember to update the variables to match your site name, environment, path, and the log file you want to watch:
 
 ```bash
 #!/bin/bash
