@@ -274,6 +274,10 @@ done
 - Adjust to `appserver.test.$SITE_UUID.drush.in` to pull logs from Test.
 - Adjust to `mget *` to include archived log files.
 
+### Can I `tail` server logs?
+
+Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) then review them with any tool on your workstation.
+
 ## See Also
 - [MySQL Slow Log](/docs/mysql-slow-log/)
 - [PHP Slow Log](/docs/php-slow-log/)
