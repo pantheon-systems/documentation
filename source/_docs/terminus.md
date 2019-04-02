@@ -1,6 +1,6 @@
 ---
 title:  Terminus Manual
-subtitle: Pantheon creates a command line interface. You won't believe what happens next!
+subtitle: Get Started
 terminuspage: true
 description: Manual for our command line interface, Terminus, for advanced interaction with Pantheon.
 type: terminuspage
