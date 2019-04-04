@@ -40,7 +40,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Run [Launch Check](/docs/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
 
-* Automate testing with [Behat](/docs/guides/wordpress-automated-testing/). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
+* Automate testing with [Behat](/docs/guides/behat/). Adding automated testing into your development workflow will help you deliver higher quality WordPress sites.
 
 ## Live
 

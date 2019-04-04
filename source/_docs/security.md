@@ -38,6 +38,11 @@ To verify that everything is working correctly, visit the URL of the environment
 
 ![Locked site example](/source/docs/assets/images/auth-required.png)
 
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+While locked, environments will not be cached by the [Global CDN](/docs/global-cdn).
+</div>
+
 ### Customize Lock Page
 
 If you'd like to customize the lock page that displays beneath the authentication form, you can add a `locked.html` file in your site's root directory.

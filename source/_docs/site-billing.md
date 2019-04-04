@@ -32,12 +32,16 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 
 ## Add New Credit Card
 
-If your site is currently in Sandbox mode, click **View All Plans** to select a plan and enter your billing information. Otherwise:
-
 1. Go to the Site Dashboard and click the **Billing** tab.
-1. Find the existing card under BILLING INFORMATION and click **Change** next to it, then click on **Add New Card**.
+1. If the site:
+    *  Is currently in Sandbox mode:
+        1.  Click **Add Card**.
+        1.  Click **+ Add New Card**.
+    *  Already has a card associated with it:
+        * Find the existing card under BILLING INFORMATION and click **Change** next to it, then click on **Add New Card**.
 1. Enter your credit card information and click **Add Card**.
-1. Select the new card and click **Update Credit Card**.
+1. To add the card to the site, select the new card and click **Update Credit Card**.
+    *  Skip this step to store the card without adding it to the site.
 
 This process will add a new credit card profile in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of your User Dashboard. Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
 
@@ -55,14 +59,14 @@ Select the card you want the site to use as the new payment method _after_ it ha
 After [downgrading from a paid plan to Sandbox](/docs/site-plan/#cancel-current-plan), remove the card as a payment method for the site:
 
 1. Go to the Site Dashboard and click the **Billing** tab.
-1. Find your card under BILLING INFORMATION and click **Remove**.
+1. Find your card under BILLING INFORMATION and click **Remove Card**.
 
- You should get a message saying "**Your credit card is removed.** This site is no longer billed to a credit card."
+ You should get a message saying "**Your credit card is removed.** This site is no longer associated with the credit card."
 
 ## Frequently Asked Questions
 
-### What forms of payment are accepted? 
-Sites purchased online through the Pantheon Site Dashboard accept credit card payments only. Pantheon does not currently accept alternative methods of payment for online site purchases (e.g., checks, PayPal, etc.). 
+### What forms of payment are accepted?
+Sites purchased online through the Pantheon Site Dashboard accept credit card payments only. Pantheon does not currently accept alternative methods of payment for online site purchases (e.g., checks, PayPal, etc.).
 
 ### Does Pantheon accept PayPal?
 Pantheon currently does not accept PayPal.

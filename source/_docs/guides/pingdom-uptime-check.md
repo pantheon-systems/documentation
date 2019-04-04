@@ -16,7 +16,7 @@ In this guide, we will create and configure the simplest check for a website, an
 
 - At least a paid Starter plan on Pingdom. It's OK if you don't have one yet, this guide goes over the signup process. For a free alternative to Pingdom, checkout [New Relic](/docs/new-relic#configure-ping-monitors-for-availability).
 
-- A Drupal or Wordpress site on Pantheon to monitor.
+- A Drupal or WordPress site on Pantheon to monitor.
 
 ## Create a Pingdom Account
 

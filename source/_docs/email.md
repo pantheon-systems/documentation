@@ -102,7 +102,7 @@ Use the following integration methods for Drupal and WordPress to configure an e
     </div>
   </div>
   <div role="tabpanel" class="tab-pane" id="wp">
-    Once you have chosen your SMTP provider, install and configure Wordpress's <a href="https://wordpress.org/plugins/wp-mail-smtp/">WP Mail SMTP</a> plugin.
+    Once you have chosen your SMTP provider, install and configure WordPress's <a href="https://wordpress.org/plugins/wp-mail-smtp/">WP Mail SMTP</a> plugin.
   </div>
 </div>
 

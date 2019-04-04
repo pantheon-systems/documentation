@@ -20,7 +20,7 @@ Keep in mind, HyperDB is a powerful tool with several tuning options based on da
 
 ## Install and Configure HyperDB
 
-Before you begin, an Enterprise Onboarding Manager must change your site service level to "Elite". The platform will automatically configure and manage your master and replica databases.
+Before you begin, a Customer Success Manager (**CSM**) must change your site service level to "Elite". The platform will automatically configure and manage your master and replica databases. [Contact us](https://pantheon.io/contact-us){.external} to learn more about service levels and how a CSM can help.
 
 Download the archive of [HyperDB from the WordPress plugin repository](https://wordpress.org/support/plugin/hyperdb){.external} and move the `db.php` file into the `/wp-content` directory. This is a drop-in plugin and does not require activation at any time.
 
@@ -28,7 +28,7 @@ Next, configure the master/replica databases within `db-config.php`. This file s
 
 When the `db.php` database drop-in is deployed to production, WordPress will begin allocating MySQL database reads and writes based on the configuration details you’ve provided in `db-config.php`.
 
-The following sample configurations can be used in place of the `dp-config.php` file provided within the plugin archive. These examples require no additional edits for sites running on Pantheon. For more advanced options, refer to the `db-config.php` file provided in the HyperDB plguin archive.
+The following sample configurations can be used in place of the `dp-config.php` file provided within the plugin archive. These examples require no additional edits for sites running on Pantheon. For more advanced options, refer to the `db-config.php` file provided in the HyperDB plugin archive.
 
 ### Split Reads Between Master and Replica
 Split reads between the master and the replica, to simply distribute the load between two servers.

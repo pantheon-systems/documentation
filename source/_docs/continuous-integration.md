@@ -5,7 +5,9 @@ tags: [platformintegrations]
 categories: []
 contributors: [ccjjmartin]
 ---
-Continuous Integration (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/docs/support).
+Continuous Integration (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/docs/support/).
+
+See our [Build Tools](/docs/guides/build-tools/) guide for a more detailed look at a workflow using build tools like GitHub and CircleCI with Composer for Drupal and WordPress sites.
 
 ## Terminus Command-Line Interface
 

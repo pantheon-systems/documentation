@@ -23,7 +23,7 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 | Create sites within an org               | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Access the org Dashboard                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
 | Work in Dev environments                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
-| Access to Multidev environments          | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
+| Access to Multidev environments          | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span>  |
 | Deploy to Test and Live                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 | Invite new team members                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 | Manage user roles                        | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
@@ -50,6 +50,8 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 2. Enter the email address of the new user, select a role, and click **Add user**.
 
 An email confirmation is sent to the user. If the user already has a Pantheon account, they are immediately added to the Organization. If not, they'll first need to click the confirmation link in the email to create their account.
+
+To create a new user with an unprivileged role, create the user first, then change the role as detailed below.
 
 ### Change a User's Role
 
@@ -90,3 +92,6 @@ The Developer role can only deploy to Development and Multidev environments. If 
 
 #### Who can add users to Organizations?
 Enterprise Administrators can add site Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
+
+#### How do I recover an account after a site owner leaves?
+See the steps in our [Site Access](/docs/site-access/) doc for recovery instructions.

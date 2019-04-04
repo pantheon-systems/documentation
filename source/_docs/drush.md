@@ -32,9 +32,12 @@ $ terminus aliases
 ```
 
 ### Download Using the Dashboard
+
+![Link to Pantheon Drush Aliases](/source/docs/assets/images/dashboard/drush-aliases.png)
+
 Download your Pantheon site aliases to manually update your local aliases file:
 
-1. From your Pantheon User Dashboard, click **Sites** > **Download all Drush aliases**
+1. From your Pantheon User Dashboard, click **Sites** > **Drush Aliases**
 2. Move the generated `pantheon.aliases.drushrc.php` into your local drush site-aliases directory (e.g. `$HOME/.drush/site-aliases`).
 3. Clear Drush cache:
 
@@ -42,7 +45,6 @@ Download your Pantheon site aliases to manually update your local aliases file:
  drush cc drush
  ```
 
-![Link to Pantheon Drush Aliases](/source/docs/assets/images/dashboard/drush-aliases.png)
 If you add a site to your account, you will have to download a new copy of your Drush aliases.
 
 ### List Available Site Aliases

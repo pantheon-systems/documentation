@@ -3,7 +3,7 @@ title: Create a Custom Upstream
 description: Connect a remote repository with Pantheon to use as a starting point for new sites.
 tags: [tools, workflow]
 ---
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
+Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream/). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
@@ -259,11 +259,22 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 <div role="tabpanel" class="tab-pane" id="gitlab-https" markdown="1">
 Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
 
-1. Prepare a GitLab deploy token for your upstream repository with `read_repository` scope.
+1. Prepare a new GitLab user specifically for Pantheon access.
 
-    ![Create GitLab deploy token](/source/docs/assets/images/gitlab-deploy-token.png)
+1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens){.external} with the `API` scope:
 
-2. [Contact support](/docs/support) to add the Custom Upstream to your org. You must provide the repository `https` URL and the deploy token as a username / password.
+    ![GitLab Personal Access Token](/source/docs/assets/images/gitlab-api.png)
+
+1. From the GitLab account that maintains the repository, add the new user to the repo under **Members** with **Reporter** access.
+
+    ![GitLab reporter permission](/source/docs/assets/images/gitlab-reporter.png)
+
+1. [Contact support](/docs/support/) to add the Custom Upstream to your org. You must provide:
+
+   - A name for the custom upstream
+   - The `https` clone URL (ending in `.git`)
+   - The Access Token for the new user.
+
 </div>
 </div>
 
