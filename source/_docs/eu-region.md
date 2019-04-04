@@ -22,7 +22,7 @@ There could be many scenarios for wanting to host a site within the EU region ra
 
 
 ## Region Availability
-Once enabled, this organization feature allows [privileged users](/docs/change-management/#organizations-roles-and-permissions) to designate one of two available regions at the time of site creation:
+Once enabled, this organization feature allows <a href="/docs/change-management/#organizations-roles-and-permissions" data-proofer-ignore>privileged users</a> to designate one of two available regions at the time of site creation:
 
 * US (Default)
 * EU
@@ -35,7 +35,7 @@ Site resources, including the database container, are provisioned in the specifi
 
 1. Install and authenticate [Terminus](/docs/terminus). If you're already running Terminus, be sure and update to the [latest version](/docs/terminus/updates/) (2.0 minimum required).
 2. Use Terminus to create a new site associated with your organization and include the `--region=eu` option.  
- 
+
  For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
 
   ```bash
@@ -94,19 +94,20 @@ At least one week before target launch date, complete the following:
     <p markdown="1">It can take up to one week for your domain to route directly to the EU region.</p>
     </div>
 
-3.  [Open a Support ticket](https://dashboard.pantheon.io/#support){.external} using the following template:
+3.  [Open a Support ticket](https://dashboard.pantheon.io/#support){.external} using the following template (replace `example` throughout):
 
-    ```nohighlight
-    We are preparing to go live for the site named <example>. Please add the following domains to your next EU deployment:
+    >We are preparing to go live for the site named `<example>`. Please add the following domains to your next EU deployment:
+    >
+    >* example.com
+    >* www.example.com
+    >* blog.example.com
+    >* test.example.com
+    >* dev.example.com
+    > <br />
+    > <br />
+    >
+    >We understand that domains will be routed to the EU every Tuesday, for all requests submitted by the preceding Friday, and that we will receive confirmation when the update is complete, at which time we can update DNS.
 
-    example.com
-    www.example.com
-    blog.example.com
-    test.example.com
-    dev.example.com
-
-    We understand that domains will be routed to the EU every Tuesday, for all requests submitted by the preceding Friday, and that we will receive confirmation when the update is complete, at which time we can update DNS.
-    ```
     <div class="alert alert-danger" role="alert">
     <h4 class="warning">Warning</h4>
     <p markdown="1">Do not drive traffic to custom domains (for example, via targeted ad campaigns or newsletter distribution lists) until Pantheon confirms the domain is configured for EU routing.</p>
@@ -117,7 +118,9 @@ At least one week before target launch date, complete the following:
 
 ## Frequently Asked Questions
 ### Can I use the EU region for an existing site?
-Yes, however you must migrate your existing site a new Site Dashboard configured for the EU region. Contact your account owner or our [Sales team](https://pantheon.io/contact-us){.external} to learn about Pantheon's migration services or review [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
+Yes, however you must migrate your existing site to a new Site Dashboard that was configured for the EU region during creation (as described [above](#create-a-new-site-required)).
+
+Contact your account owner or our [Sales team](https://pantheon.io/contact-us){.external} to learn about Pantheon's migration services or review [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
 
 ## Coming Soon
 
