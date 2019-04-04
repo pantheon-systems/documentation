@@ -38,7 +38,7 @@ $ terminus aliases
 Download your Pantheon site aliases to manually update your local aliases file:
 
 1. From your Pantheon User Dashboard, click **Sites** > **Drush Aliases**
-2. Move the generated `pantheon.aliases.drushrc.php` into your local drush site-aliases directory (e.g. `$HOME/.drush/site-aliases`).
+2. Move the generated `pantheon.aliases.drushrc.php` into your local Drush site-aliases directory (e.g. `$HOME/.drush/site-aliases`).
 3. Clear Drush cache:
 
  ```
