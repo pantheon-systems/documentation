@@ -12,7 +12,7 @@ searchboost: 150
 The documentation on this page discusses features and options that are not yet available to all users.
 </div>
 
-Pantheon is extending Limited Availability invitations to contract customers who want to deploy a new site within the European Union (**EU**).
+Pantheon is extending Limited Availability invitations to contract customers who want to deploy a new site within the new International Region: European Union (**EU**).
 
 ### Details
 
@@ -86,9 +86,10 @@ If you want help migrating your site between regions, our [Professional Services
 
 ## Coming Soon
 
-More EU Region features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this guide for updates.
+More International Region features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this guide for updates.
 
 Coming soon:
 
   - Dashboard support
   - Automated domain routing
+  - Disaster Recovery
