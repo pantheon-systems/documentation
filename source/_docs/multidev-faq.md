@@ -80,4 +80,4 @@ Yes, you can backup and restore a branch environment. However, if you restore an
 
 ## Will I lose access to Multidevs if the organization downgrades the plan?
 
-If the organization changes to a plan that doesn't feature Multidev, or if your user account is changed to an [unprivileged role](/docs/change-management/), you will still be able to access existing Multidev environments, but will not be able to create new ones.
+If the organization changes to a plan that doesn't feature Multidev, you will still be able to access existing Multidev environments, but will not be able to create new ones.
