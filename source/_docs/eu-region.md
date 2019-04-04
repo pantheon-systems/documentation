@@ -1,6 +1,6 @@
 ---
-title: Create a New Site in Pantheon's EU Region
-description: Learn how to create a new site located in the EU.
+title: Early Access: EU Region Availability
+description: Learn how to leverage early access support for launching sites from the European Union.
 tags: [create]
 categories: []
 contributors: edwardangert
@@ -9,45 +9,92 @@ earlyaccess: true
 earlynote: The documentation on this page discusses features and options that are not yet available to all users.
 ---
 
-Pantheon is extending early access invitations to contract customers who want to deploy a new site within the European Union (**EU**).
+Pantheon is extending early access to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from the European Union (**EU**) region.
 
-### Details
+## Enable Early Access
+Participation in Early Access is opt-in and available to contract organizations only. To learn more about enabling this feature, contact your dedicated account manager or our [Sales team](https://pantheon.io/contact-us){.external}.
 
-Site resources, including the database container, are provisioned in the European Union. Traffic is served through the Global CDN, with the Amsterdam point of presence as origin shield.
+## Use Cases
+There could be many scenarios for wanting to host a site within the EU region rather than the default US. Common use cases include:  
 
-## How to Enable Early Access and Create Sites in the EU Region
+* Compliance standards that require data residency within the borders of the European Union
+* Improve performance and user experience for authenticated traffic originating in or near the European Union
 
-During this feature's Early Access period, participation is opt-in only for contract customers. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your account for early access to the EU Region.
 
-Once granted early access, our Support team will create the new site for you.
+## Region Availability
+Once enabled, this organization feature allows [privileged users](/docs/change-management/#organizations-roles-and-permissions) to designate one of two available regions at the time of site creation:
 
-## Use Terminus to Display Sites and Regions
+* US (Default)
+* EU
 
-In the following examples, replace or assign `$SITE` with your site name or UUID.
+Site resources, including the database container, are provisioned in the specified region. For EU sites, traffic is served through the Global CDN, with the Amsterdam point of presence as origin shield.
 
-To display a specific site's plan and region information:
+
+## Go Live in the EU
+### Create a New Site (Required)
+
+1. Install and authenticate [Terminus](/docs/terminus). If you're already running Terminus, be sure and update to the [latest version](/docs/terminus/updates/) (2.0 minimum required).
+2. Use Terminus to create a new site associated with your organization and include the `--region=eu` option.  
+ 
+ For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
+
+  ```bash
+  terminus site:create my-eu-site-name "My EU Site Name" "WordPress" --org "My Organization Name" --region eu
+  ```
+
+  ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](/source/docs/assets/images/create-site-eu.png)
+
+### Review Site Region (Optional)
+You can view the region from within the Site Dashboard by clicking **Settings** > **About Site** then reviewing **Region**:
+
+![Site Dashboard > Settings > About Site > Region: European Union](/source/docs/assets/images/settings-about-site-region-eu.png)
+
+You can also get this information via Terminus.
+
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Replace or assign `$SITE` with your site name or UUID.</p>
+</div>
+
+#### Display information for a specific site:
 
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-site-info">Copy</button>
   <figure><pre id="terminus-site-info"><code class="command bash" data-lang="bash">terminus site:info $SITE</code></pre></figure>
 </div>
 
-For a list of sites along with their region:
+#### Display a list of organization sites and their region:
 
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-site-list">Copy</button>
-  <figure><pre id="terminus-site-list"><code class="command bash" data-lang="bash">terminus site:list</code></pre></figure>
+  <figure><pre id="terminus-site-list"><code class="command bash" data-lang="bash">terminus site:list --org "My Organization Name" --fields name,region</code></pre></figure>
 </div>
 
-## Open Ticket to Prepare to Go Live
+#### Show Relevant Response Header
+Expose the `x-served-by` response header or grep `AMS` to verify whether the Amsterdam origin shield was used as expected (replace `example.com`):
 
-In advance of going live with your site, please let us know the domains you'd like to route to your site.
+```bash
+curl -Is https://example.com | grep x-served-by
+```
 
-Allow one week between submitting a ticket until go live. Opening a ticket will not be necessary after early access.
+```bash
+curl -Is https://example.com | grep AMS
+```
 
-1.  Add domains to all environments.
-2.  Update DNS values to those provided by the Dashboard. Note that during early access, it may take up to one week for your domain to route directly to the EU region.
-3.  [Open a Support ticket](https://dashboard.pantheon.io/#support){.external} with the following template:
+![curl -Is https://dev-rachel-whitton-eu2.pantheonsite.io | grep x-served-by](/source/docs/assets/images/x-served-by-eu.png)
+
+### Launch Preparation (Required)
+At least one week before target launch date, complete the following:
+
+1.  Connect all custom domains to target environments (e.g., `www.example.com` and `example.com` on Live).
+2.  Configure DNS based on recommended values provided by the Site Dashboard's Domain tool.
+
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p markdown="1">It can take up to one week for your domain to route directly to the EU region.</p>
+    </div>
+
+3.  [Open a Support ticket](https://dashboard.pantheon.io/#support){.external} using the following template:
 
     ```nohighlight
     We are preparing to go live for the site named <example>. Please add the following domains to your next EU deployment:
@@ -60,7 +107,17 @@ Allow one week between submitting a ticket until go live. Opening a ticket will 
 
     We understand that domains will be routed to the EU every Tuesday, for all requests submitted by the preceding Friday, and that we will receive confirmation when the update is complete, at which time we can update DNS.
     ```
+    <div class="alert alert-danger" role="alert">
+    <h4 class="warning">Warning</h4>
+    <p markdown="1">Do not drive traffic to custom domains (for example, via targeted ad campaigns or newsletter distribution lists) until Pantheon confirms the domain is configured for EU routing.</p>
+    </div>
+
 4. After receiving confirmation, celebrate. Your site is running in the EU!
+
+
+## Frequently Asked Questions
+### Can I use the EU region for an existing site?
+Yes, however you must migrate your existing site a new Site Dashboard configured for the EU region. Contact your account owner or our [Sales team](https://pantheon.io/contact-us){.external} to learn about Pantheon's migration services or review [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
 
 ## Coming Soon
 
