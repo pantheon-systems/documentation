@@ -4,7 +4,7 @@ description: A list of Drupal modules and WordPress plugins that are not support
 tags: [debugcode, siteintegrations]
 categories: []
 ---
-This article lists modules and plugins that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list. We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/docs/support/).
+This page lists modules and plugins that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/docs/support/).
 
 We do not prevent you from installing and using these plugins/modules; however, they may not work as expected and we cannot provide troubleshooting support.
 
@@ -649,7 +649,7 @@ if (defined( "PANTHEON_BINDING" )) {
 ### [WP-Rocket](https://wp-rocket.me/){.external}
 **Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}. The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
 
-**Solution**: 
+**Solution**:
 
 1. In SFTP mode, install the WP-Rocket plugin to the dev environment by uploading via SFTP or from the WP dashboard.
 1. Activate the plugin from the dashboard.
@@ -794,3 +794,12 @@ Due to the cloud-based infrastructure of the Pantheon platform, outbound request
 **Issue**: Extensions that require the use of the `/tmp` directory are not supported. With multiple application containers, as exists on Live environments, it's assumed the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared.
 
 **Solution**: For more details, see [Temporary File Management](/docs/tmp/).
+
+## Other Issues
+
+Plugins and modules will not work on Pantheon if they:
+
+ - Require Apache.
+ - Require customized `.htaccess` files.
+ - Need to modify Nginx configuration files.
+ - Require PostgreSQL or other non-MySQL compatible databases.

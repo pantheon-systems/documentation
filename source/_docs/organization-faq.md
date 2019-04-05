@@ -65,8 +65,7 @@ Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on Twit
 If you need to submit a support request and can’t access the Dashboard, send an email to helpdesk@pantheon.io.
 
 ### As a Partner, do I get enhanced support?
-
-No. However, opening support requests from your **Organization Dashboard Support tab** and checking the box for "Non-site related issue" will direct your request to a specific agent ready to respond to your questions.
+Your support level increases along with your Partner Program level. Refer to the [Pantheon Partner Portal](https://pantheon.io/plans/partner-portal){.external} for more information.
 
 ### As an Agency, how many sandbox sites do members of an organization receive?
 

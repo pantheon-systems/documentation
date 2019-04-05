@@ -42,12 +42,12 @@ Using Terminus, you can complete the above process from the command line.
 
 ### Workflow Example
 
-In the commands below, replace `site` and `env` with your site name and the correct environment:
+In the commands below, replace `site` with your site name and the correct environment:
 
 1.  `terminus drush <site>.dev -- cex -y`
 2.  `terminus env:commit <site>.dev --message="Export configuration to code"`
 3.  `terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"`
-4.  `terminus drush <site>.<env> -- cim -y`
+4.  `terminus drush <site>.test -- cim -y`
 5.  `open https://test-mysite.pantheonsite.io`
 6.  `terminus env:deploy <site>.live --cc --note="Deploy configuration to live"`
 7.  `terminus drush <site>.live -- cim -y`

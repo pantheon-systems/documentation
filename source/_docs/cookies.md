@@ -5,6 +5,8 @@ tags: [cacheedge]
 categories: []
 ---
 
+This page covers working with basic cookies on Pantheon. If you're looking to create session based cookies to bypass caching, refer to [Using Your Own Session-Syle Cookies](/docs/caching-advanced-topics/#using-your-own-session-style-cookies) from our Caching: Advanced Topics doc.
+
 ## Disable Caching for Specific Pages
 You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response.
 

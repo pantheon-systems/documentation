@@ -212,7 +212,9 @@ if ($legacy_username) {
 </div>
 
 ### Redirect Files
-Because PHP isn't called when binary files are served, the PHP redirects used above will not work when the are requested directly. You can use [CloudFlare](/docs/cloudflare/) or another stacked CDN to handle file redirects.
+Because Drupal or WordPress aren't bootstrapped when static assets (e.g, images, PDFs, HTML files) are served, the PHP redirects used above will not work when these files are requested directly. You can use [CloudFlare](/docs/cloudflare/) or another stacked CDN to handle file redirects.
+
+Alternatively, you can remove the file entirely from the old location. In this case, the request will run through Drupal or WordPress. You can let the CMS serve a 404, or you can utilize a redirect in `wp-config.php` or `settings.php` as shown in the examples above.
 
 ## See Also
 - [Configuring Settings.php](/docs/settings-php/)
