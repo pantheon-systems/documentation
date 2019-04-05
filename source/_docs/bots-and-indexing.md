@@ -55,7 +55,7 @@ Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP heade
 
 ### Indexing Before You Launch
 
-The `pantheonsite.io` domains are intended for development use and cannot be used for production. A custom or CMS-standard `robots.txt` will only work on Live environments with a custom domain. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
+The `pantheonsite.io` domains are intended for development use and cannot be used for production. While Drupal and Wordpress both generate their own `robots.txt` file by default, a custom or CMS-standard `robots.txt` will only work on Live environments with a custom domain. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
 
 To support pre-launch SEO testing, we allow the following bots access to platform domains:
 
