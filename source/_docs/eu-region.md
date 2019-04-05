@@ -1,6 +1,6 @@
 ---
-title: Create a New Site in a Pantheon International Region
-description: Learn how to get access to and launch sites in Pantheon's newest International Region: The European Union.
+title: Create a New Site in the Pantheon EU Region
+description: Learn how to get access to and launch sites in Pantheon's Limited Availability European Union Region.
 tags: [create, regions]
 categories: []
 contributors: [edwardangert, rachelwhitton, ari]
@@ -12,7 +12,7 @@ searchboost: 150
 The documentation on this page discusses features and options that are not yet available to all users.
 </div>
 
-Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from the new International Region: European Union (**EU**).
+Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from the new European Union (**EU**) Region.
 
 During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in the EU Region.
 
@@ -124,7 +124,7 @@ Coming soon:
 
 ## Frequently Asked Questions
 ### Can I use the EU region for an existing site?
-Yes, however you must migrate your existing site to a new Site Dashboard that was configured for the EU region during creation ([as described above](#create-a-new-site-required)).
+Yes, however you must migrate your existing site to a new Site Dashboard that was configured for the EU region during creation ([as described above](#create-a-new-site)).
 
 ### When will EU Region be available for sites paid by credit card?
 General Availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external}.
