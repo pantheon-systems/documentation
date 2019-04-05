@@ -8,7 +8,7 @@ Pantheon maintains an [optimized version of WordPress](https://github.com/panthe
 
 You can increase the default value to increase the chances that a visitor will request a cached page, which will reduce page load times.
 
-## WordPress Pantheon Cache Plugin Configuration
+## Pantheon Advanced Page Cache Plugin Configuration
 
 1. Log in to your WordPress site as an administrator.
 2. Click **Settings**.
