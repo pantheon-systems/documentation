@@ -23,7 +23,7 @@ There could be many scenarios for wanting to run a site within the EU region rat
 * Improve performance and user experience for authenticated traffic originating in or near the European Union
 
 ## Region Availability
-Once enabled, this Organization-wide feature allows [privileged users](/docs/change-management/#organizations-roles-and-permissions) to designate one of two available regions at the time of site creation:
+Once enabled, this Organization-wide feature allows <a href="/docs/change-management/#organizations-roles-and-permissions" data-proofer-ignore>privileged users</a> to designate one of two available regions at the time of site creation:
 
 * US (Default)
 * EU
