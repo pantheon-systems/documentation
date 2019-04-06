@@ -107,6 +107,45 @@ Double-check the files before going forward to make sure no bugs were introduced
 
 If this procedure fails with the message `Already up to date.` refer to [this troubleshooting section](#one-click-updates-do-not-appear-after-rewriting-git-history) to reset your git repository.
 
+#### Overwrite WP core via SFTP
+
+Worst case scenario for users that cannot setup Git in their machine and the only method access the files is via SFTP.
+
+1) Via SFTP, delete these files and folders:
+<pre><code class="nohighlight">
+  ├── README.md
+  ├── index.php
+  ├── license.txt
+  ├── readme.html
+  ├── wp-activate.php
+  ├── wp-blog-header.php
+  ├── wp-comments-post.php
+  ├── wp-config-sample.php
+  ├── wp-cron.php
+  ├── wp-links-opml.php
+  ├── wp-load.php
+  ├── wp-login.php
+  ├── wp-mail.php
+  ├── wp-settings.php
+  ├── wp-signup.php
+  ├── wp-trackback.php
+  ├── xmlrpc.php
+  ├── wp-admin
+  ├── wp-includes
+  ├── wp-content
+      └── index.php
+  ├── wp-content
+      └── mu-plugins
+          └── pantheon.php
+  ├── wp-content
+      └── mu-plugins
+          └── pantheon
+</code></pre>
+
+2) Re-upload the corresponding files from https://github.com/pantheon-systems/WordPress
+3) Commit and switch back to Git mode
+4) Apply 1-click core updates via the dashboard and the auto-resolve should be checked. The update nag should be now gone after a successful update.
+
 ### Merge Conflict Resolution
 
 This process lets you manually resolve the conflict using the command line and a text editor.
