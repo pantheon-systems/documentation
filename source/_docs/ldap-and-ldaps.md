@@ -116,7 +116,7 @@ ldap_set_option(NULL, LDAP_OPT_X_TLS_REQUIRE_CERT, LDAP_OPT_X_TLS_ALLOW);
 
 
 // Custom OpenLDAP Configuration for Client Certificates for LDAPS
-// Un-comment lines if that you may need for configuration
+// Un-comment lines that you may need for configuration
 
 // LDAP - specify file that contains the TLS CA Certificate.
 // Can also be used to provide intermediate certificate to trust remote servers.
