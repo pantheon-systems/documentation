@@ -126,10 +126,10 @@ Coming soon:
 ### Can I use the EU region for an existing site?
 Yes, however you must migrate your existing site to a new Site Dashboard that was configured for the EU region during creation ([as described above](#create-a-new-site)).
 
+Contact your account owner or our [Sales team](https://pantheon.io/contact-us){.external} to learn about Pantheon's migration services or review the [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
+
 ### When will EU Region be available for sites paid by credit card?
 General Availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external}.
 
 ### When will site creation through the Dashboard be available?
 General availability is planned for late 2019.
-
-Contact your account owner or our [Sales team](https://pantheon.io/contact-us){.external} to learn about Pantheon's migration services or review the [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
