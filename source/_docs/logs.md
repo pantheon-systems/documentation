@@ -274,6 +274,54 @@ done
 - Adjust to `appserver.test.$SITE_UUID.drush.in` to pull logs from Test.
 - Adjust to `mget *` to include archived log files.
 
+### Can I `tail` server logs?
+
+Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) then review them with any tool on your workstation.
+
+You can also create the `logwatcher.sh` script below, which uses [Terminus](/docs/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin){.external} to download log files and display the last several lines.
+
+1. If you're working on multiple projects locally, create a `logs` directory in the local Git repository for each one you want to watch logs for.
+
+1. Add `logs/*` to the project's [`.gitignore` file](/docs/git-faq/#can-i-use-gitignore-on-pantheon).
+
+1. In your project's `logs` directory, create `logwatcher.sh`:
+
+
+   ```bash
+   #!/bin/bash
+   TERMINUS_HIDE_UPDATE_MESSAGE=1
+
+   LOGPATH=~/projects/mysite/logs
+   LOGFILE=php-error.log
+   SITE=sitename
+   ENV=environment
+
+   touch $LOGPATH/$LOGFILE
+   terminus rsync $SITE.$ENV:logs/$LOGFILE $LOGPATH
+
+   tail $LOGPATH/$LOGFILE
+   ```
+
+1. Update the variables:
+
+    - `LOGPATH` points to the `logs` directory in your project,
+    - `SITE` should match your [site name](/docs/terminus/examples/#siteenv),
+    - `ENV` is the environment you want to watch logs from
+
+1. Make the script executable:
+
+   ```bash
+   chmod +x ~/projects/mysite/logs/logwatcher.sh
+   ```
+
+1. Now you can use `watch` (available on macOS via Homebrew), to keep an updated view of the logs:
+
+   ```bash
+   watch -n2 ~/projects/mysite/logs/logwatcher.sh
+   ```
+
+   Stop the process with **CTRL-C**.
+
 ## See Also
 - [MySQL Slow Log](/docs/mysql-slow-log/)
 - [PHP Slow Log](/docs/php-slow-log/)
