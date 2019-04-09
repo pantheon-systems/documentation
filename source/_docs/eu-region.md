@@ -17,7 +17,7 @@ Pantheon is extending Limited Availability invitations to contract organizations
 During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in the EU Region before the feature becomes widely available in late 2019.
 
 ## Use Cases
-There could be many scenarios for wanting to run a site within the EU Region rather than the default US. Common use cases include:
+There are many scenarios in which you might prefer running a site within the EU Region rather than the default US. Common use cases include:
 
 * Compliance standards that require data residency within the borders of the European Union
 * Improved performance and user experience for authenticated traffic originating in or near the European Union
