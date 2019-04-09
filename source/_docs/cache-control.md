@@ -116,8 +116,8 @@ Some web developers choose to aggregate all of their caching logic in one place,
     '#^/wp-json/?#'
   );
 
-  foreach ($regex_path_patterns as $regex_path_pattern) {
-    if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
+  foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
+    if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
         // re-use the rest_post_dispatch filter in the Pantheon page cache plugin  
         add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
 
