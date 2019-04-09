@@ -38,7 +38,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 
 ## Create a New Site
 
-1. Install and authenticate [Terminus 2.0](/docs/terminus/). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/docs/terminus/updates/).
+1. Install and authenticate [Terminus](/docs/terminus/). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/docs/terminus/updates/).
 1. Use Terminus to create a new site associated with your organization and include the `--region=eu` option.
 
  For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
