@@ -46,10 +46,10 @@ jobs:
           name: Merge Conflicts
           command: |
             scripts/merge_conflicts.sh
-      - run:
-          name: htmlProofer
-          command: |
-            htmlproofer --assume-extension  ./output_prod/ --disable-external true
+#      - run:
+#          name: htmlProofer
+#          command: |
+#            htmlproofer --assume-extension  ./output_prod/ --disable-external true
       - run:
           name: Speedtest
           command: |
