@@ -49,6 +49,8 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 
   ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](/source/docs/assets/images/create-site-eu.png)
 
+  See `terminus site:create --help` for more information on the options and values used in this command.
+
 ## Migrate an Existing Site to the EU Region
 
 The [typical way to migrate sites](/docs/migrate/) is not yet available for international migrations. To migrate an existing site from one region to another, create the new site as described above, then follow the [Manually Migrate Sites to Pantheon](/docs/migrate-manual/) doc. The [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) section of the Relaunch doc is a good resource to help make the transition to your new live site smooth.
@@ -84,7 +86,7 @@ terminus site:list --org "My Organization Name" --fields name,region
 ```
 
 ### Verify Domains Route Correctly
-Use grep to expose the `x-served-by` response header or `AMS` to verify whether the Amsterdam origin shield was used as expected (replace `example.com`):
+Use `grep` to expose the `x-served-by` response header or `AMS` to verify whether the Amsterdam origin shield was used as expected (replace `example.com`):
 
 ```bash
 curl -Is https://example.com | grep x-served-by
