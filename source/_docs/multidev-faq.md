@@ -77,3 +77,7 @@ No, but developers can use [Quicksilver hooks](/docs/quicksilver/#hooks) to inte
 ## Can I backup and restore a branch environment?
 
 Yes, you can backup and restore a branch environment. However, if you restore an old version of code in Dev, you may damage forked environments.
+
+## Will I lose access to Multidevs if the organization downgrades the plan?
+
+If the organization changes to a plan that doesn't feature Multidev, you will still be able to access existing Multidev environments, but will not be able to create new ones.
