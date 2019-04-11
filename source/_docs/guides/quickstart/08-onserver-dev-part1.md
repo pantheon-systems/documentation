@@ -104,4 +104,4 @@ If you need help with this step, please reference the [WordPress Codex](https://
 
 15. When this is finished, you’ll again need to activate/enable the new theme on your Live site.
 
-Congratulations! You just performed on-server development. You made changes on your Dev site, reviewed them on your Live site, then deployed them to Live.
+Congratulations! You just performed on-server development. You made changes on your Dev site, reviewed them on your Test site, then deployed them to Live.
