@@ -7,9 +7,9 @@ contributors:
  - carlalberto
 ---
 
-For actions or filters you want to run even when `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [**Must-Use** (**MU**) plugin](https://codex.wordpress.org/Must_Use_Plugins){.external}. 
+For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [**Must-Use** (**MU**) plugin](https://codex.wordpress.org/Must_Use_Plugins){.external}. 
 
-MU-Plugins are activated by default by simply uploading the file to the `mu-plugins` directory. It affects the whole site including all sites under a WordPress Multisite installation. 
+MU-Plugins are activated by default by simply uploading a php file to the `wp-content/mu-plugins` directory. It affects the whole site including all sites under a WordPress Multisite installation. 
 
 It is loaded by PHP, in alphabetical order, before normal plugins. This means API hooks added in an mu-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
@@ -32,13 +32,11 @@ Use the following script as a starting point for making your own plugin.
 */
 
 if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-    //Actions or Filters that will only run in Pantheon 
-
+  // Actions or Filters that will only run in Pantheon .
 };
 
-if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
-   // Add your actions or filters here that you want to exclude during WP CLI execution
-   
+if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) && php_sapi_name() != 'cli' ) {
+	// Add your actions or filters here that you want to exclude during WP CLI execution.
 }
 
 /*
@@ -61,18 +59,19 @@ $regex_path_patterns = array(
 );
 
 // Loop through the patterns.
-foreach ($regex_path_patterns as $regex_path_pattern) {
-  if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
+foreach ( $regex_path_patterns as $regex_path_pattern ) {
+  if ( preg_match( $regex_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
     add_action( 'send_headers', 'add_header_nocache', 15 );
 
     // No need to continue the loop once there's a match.
     break;
   }
 }
-function add_header_nocache() {
-      header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
-}
 
+function add_header_nocache()
+{
+  header('Cache-Control: no-cache, must-revalidate, max-age=0');
+}
 
 /* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */ 
   
@@ -81,19 +80,21 @@ function add_header_nocache() {
 $regex_json_path_patterns = array(
     '#^/wp-json/wp/v2/users?#',
     '#^/wp-json/?#'
-    );
+  );
   
-foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
-    if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
-        // re-use the rest_post_dispatch filter in the Pantheon page cache plugin  
-        add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
-        // Re-define the send_header value with any custom Cache-Control header
-        function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
-            $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
-            return $response;
-        }
-        break;
-    }
+foreach ( $regex_json_path_patterns as $regex_json_path_pattern ) {
+  if ( preg_match( $regex_json_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
+    // Re-use the rest_post_dispatch filter in the Pantheon page cache plugin.
+    add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
+    filter_rest_post_dispatch_send_cache_control( $response, $server );
+    break;
+  }
+}
+
+// Re-define the send_header value with any custom Cache-Control header.
+function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
+  $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+  return $response;
 }
 // End of File
 ```
@@ -183,16 +184,16 @@ $regex_json_path_patterns = array(
     );
   
 foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
-    if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
-        // re-use the rest_post_dispatch filter in the Pantheon page cache plugin  
-        add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
-        // Re-define the send_header value with any custom Cache-Control header
-        function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
-            $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
-            return $response;
-        }
-        break;
+  if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
+    // re-use the rest_post_dispatch filter in the Pantheon page cache plugin  
+    add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
+    // Re-define the send_header value with any custom Cache-Control header
+    function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
+      $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+      return $response;
     }
+    break;
+  }
 }
 ```
 
@@ -200,13 +201,45 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 
 Referenced from [Github](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor)
 
-A page load with 2,000 Redis calls can be 2 full seonds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group:
+A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group:
 
 `wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );`
 
 This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `wp_cache_get( 'foo', 'bad-actor' );` will not use Redis, and instead fall back to WordPress' default runtime object cache.
 
 
+### Setting custom Cookies
+
+Setting custom cookies can also be done from an mu-plugin like setting cookie example below. More [cookie manipulation examples here](https://pantheon.io/docs/cookies/).
+
+```
+if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
+
+  $foo = $_COOKIE['STYXKEY_gorp'];
+  // Generate varied content based on cookie value
+  // Do NOT set cookies here; Set-Cookie headers do not allow the response to be cached
+  if ($foo == 'ca') {
+    str_replace('football', 'hockey');
+  }
+
+}
+else{
+  /**
+  * Set local vars passed to setcookie()
+  * Example:
+  * @code
+  * $name = 'STYXKEY_gorp';
+  * $value = 'bar';
+  * $expire = time()+600;
+  * $path = '/foo';
+  * $domain =  $_SERVER['HTTP_HOST'];
+  * $secure = true;
+  * $httponly = true;
+  * @endcode
+  **/
+  setcookie( $name, $value, $expire, $path, $domain, $secure, $httponly );
+}
+```
 
 ## See Also
 
