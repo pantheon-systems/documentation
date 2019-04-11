@@ -13,8 +13,23 @@ permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
 searchboost: 100
 ---
+## Command Structure
+The basic format:
+```bash
+terminus command:subcommand site.env
+```
 
-## &lt;site&gt;.&lt;env&gt;
+For more information try:
+```bash
+terminus command:subcommand -h
+```
+
+For a list of all available commands try:
+```bash
+terminus list
+```
+
+### &lt;site&gt;.&lt;env&gt;
 Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. Note that the `<>` symbols are part of the example, not to be included in your commands. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
 
 ![terminus env:clear-cache your-awesome-site.live](/source/docs/assets/images/terminus-example-cc.png)
@@ -41,6 +56,15 @@ You can also find your site's machine name using the Terminus command `site:info
 </div>
 </div>
 </div>
+
+### Drush and WP-CLI
+The platform supports running [Drush (Drupal)](https://drushcommands.com/){.external} and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/){.external} commands remotely against a target site environment on Pantheon. This is often faster and easier than leveraging such tools via local installations.
+
+Start with the [basic command structure described above](#command-structure), and include `--` followed by the Drush or WP-CLI command and all arguments. For example:
+
+![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](/source/docs/assets/images/terminus-wp-cli-example.png)
+
+For more information, see [Drupal Drush Command-Line Utility](/docs/drush/) and [Using WP-CLI On The Pantheon Platform](/docs/wp-cli/).
 
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.
@@ -256,8 +280,8 @@ If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>,
   <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-set">Copy</button>
   <figure><pre id="upstream-set"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My Custom Upstream"</code></pre></figure>
   </div>
-  
-You can use any valid identifier (upstream name, upstream machine name, upstream UUID) returned in `terminus upstream:list` to set a new upstream. For example, the upstream name "My Custom Upstream" is used above. 
+
+You can use any valid identifier (upstream name, upstream machine name, upstream UUID) returned in `terminus upstream:list` to set a new upstream. For example, the upstream name "My Custom Upstream" is used above.
 
 As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.
 
