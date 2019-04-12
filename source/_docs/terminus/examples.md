@@ -14,17 +14,20 @@ image: terminus-thumbLarge
 searchboost: 100
 ---
 ## Command Structure
-The basic format:
+The basic format of a Terminus command is:
+
 ```bash
-terminus command:subcommand site.env
+terminus command:subcommand <site>.<env>
 ```
 
-For more information try:
+For more information on any command you can run:
+
 ```bash
 terminus command:subcommand -h
 ```
 
-For a list of all available commands try:
+Or for a list of all available commands:
+
 ```bash
 terminus list
 ```
@@ -58,9 +61,9 @@ You can also find your site's machine name using the Terminus command `site:info
 </div>
 
 ### Drush and WP-CLI
-The platform supports running [Drush (Drupal)](https://drushcommands.com/){.external} and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/){.external} commands remotely against a target site environment on Pantheon. This is often faster and easier than leveraging such tools via local installations.
+Pantheon supports running [Drush (Drupal)](https://drushcommands.com/){.external} and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/){.external} commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
 
-Start with the [basic command structure described above](#command-structure), and include `--` followed by the Drush or WP-CLI command and all arguments. For example:
+Start with the [basic command structure described above](#command-structure). The commands to invoke Drush and WP-CLI are `remote:drush` and `remote:wp`, respectively. Include `--` followed by the Drush or WP-CLI command and all arguments. For example:
 
 ![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](/source/docs/assets/images/terminus-wp-cli-example.png)
 
