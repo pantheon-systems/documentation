@@ -29,7 +29,7 @@
 
 <p>The following example also converts the URL from HTTP to HTTPS, for situations where you might have HTTPS in one environment and not another:</p>
 
-<pre><code class="bash">terminus remote:wp $site.$env -- search-replace "http://test.example.com" "https://live-example.pantheonsite.io" --all-tables --verbose
+<pre><code class="bash">terminus remote:wp $site.$env -- search-replace "http://live-example.pantheonsite.io" "httpst ://test.example.com" --all-tables --verbose
 </code></pre>
 
 </div>
