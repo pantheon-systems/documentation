@@ -263,3 +263,6 @@ This will convert the database tables in the existing installation to the proper
 [Terminus](/docs/terminus), our command-line tool for power users, is designed for 'nix-type operating systems like MacOS and Linux. While some people have installed Terminus on Windows using the [Git BASH on Git for Windows](https://git-for-windows.github.io/){.external} or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){.external} shells, this is not officially supported.
 
 If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/){.external} to run a virtualized 'nix-type environment for tools like Terminus.
+
+## `php.ini`
+`php.ini` cannot be customized or overridden on the platform. See [Securely Working with phpinfo](/docs/phpinfo) for more information on PHP configuration.
