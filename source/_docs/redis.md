@@ -377,6 +377,23 @@ You have requested a non-existent service "cache.backend.redis".
 Install and enable the module to resolve.
 
 ## Frequently Asked Questions
+
+### How Much Redis Cache is Available for Each Plan Level?
+
+| Plan                   | Cache Memory Limit (in MB) |
+| ---------------------- | -------------------------- |
+| Sandbox*               |               64           |
+| Basic*                 |               64           |
+| Performance Small      |               64           |
+| Performance M, L, XL   |               512          |
+| Professional           |               256          |
+| Flagship               |               512          |
+| Business               |               512          |
+| BusinessXL             |               1024         |
+| Elite                  |               1024         |
+
+\*Redis is available for development on free Sandbox environments, and is available to development environments on the Basic plan, but will not be available when going Live on that plan. See the [Enable Redis](#enable-redis) section above for details about which account types have Redis on Live environments.
+
 ### What happens when Redis reaches maxmemory?
 The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up){.external}, keeping in mind our `maxmemory-policy` is `allkeys-lru`.
 
@@ -409,7 +426,7 @@ set-max-intset-entries 512
 activerehashing yes
 ```
 
-Note that the `maxmemory` value will vary based on plan level.
+Note that the `maxmemory` value will vary [based on plan level](#how-much-redis-cache-is-available-for-each-plan-level).
 
 ### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
 Yes. There is a `redis.log` file that is available on the Redis container for each environment. To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
