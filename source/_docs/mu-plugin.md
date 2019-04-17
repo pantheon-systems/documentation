@@ -9,114 +9,124 @@ contributors:
 
 For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [**Must-Use** (**MU**) plugin](https://codex.wordpress.org/Must_Use_Plugins){.external}. 
 
-MU-Plugins are activated by default by simply uploading a php file to the `wp-content/mu-plugins` directory. It affects the whole site including all sites under a WordPress Multisite installation. 
+MU-Plugins are activated by default by adding a php file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
 
-It is loaded by PHP, in alphabetical order, before normal plugins. This means API hooks added in an mu-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
-
-## Create Your MU Plugin
-1. Create a PHP file (i.e. your-file.php) in the `mu-plugins` folder. `code/wp-content/mu-plugins/your-file.php`
-2. Provide the plugin details for its name, description etc.
-3. Add the custom functions, along with the filters or action that you want to run.
-
-Use the following script as a starting point for making your own plugin.
- 
-```php 
-<?php
-/*
-  Plugin Name: Custom Actions and Filters
-  Plugin URI: https://pantheon.io
-  Description: Boilerplate MU-Plugin for custom actions and filters to run for a site instead on setting in WP-config.php
-  Version: 0.1
-  Author: Pantheon
-  Author URI: https://pantheon.io/
-*/
-
-if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-  // Actions or Filters that will only run in Pantheon .
-};
-
-if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) && php_sapi_name() != 'cli' ) {
-	// Add your actions or filters here that you want to exclude during WP CLI execution.
-}
-
-/*
- * Set $regex_path_patterns accordingly.
- *
- * We don't set this variable for you, so you must define it
- * yourself per your specific use case before the following conditional.
- *
- * For example, to exclude pages in the /news/ and /about/ path from cache, set:
- *
- *   $regex_path_patterns = array(
- *     '#^/news/?#',
- *     '#^/about/?#',
- *   );
- */
-
-$regex_path_patterns = array(
-  '#^/sample-page/?#',
-  '#^/about/?#',
-);
-
-// Loop through the patterns.
-foreach ( $regex_path_patterns as $regex_path_pattern ) {
-  if ( preg_match( $regex_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
-    add_action( 'send_headers', 'add_header_nocache', 15 );
-
-    // No need to continue the loop once there's a match.
-    break;
-  }
-}
-
-function add_header_nocache()
-{
-  header('Cache-Control: no-cache, must-revalidate, max-age=0');
-}
-
-/* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */ 
-  
-// wp-json paths or any custom endpoints 
-
-$regex_json_path_patterns = array(
-    '#^/wp-json/wp/v2/users?#',
-    '#^/wp-json/?#'
-  );
-  
-foreach ( $regex_json_path_patterns as $regex_json_path_pattern ) {
-  if ( preg_match( $regex_json_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
-    // Re-use the rest_post_dispatch filter in the Pantheon page cache plugin.
-    add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
-    filter_rest_post_dispatch_send_cache_control( $response, $server );
-    break;
-  }
-}
-
-// Re-define the send_header value with any custom Cache-Control header.
-function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
-  $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
-  return $response;
-}
-// End of File
-```
+MU plugins are loaded by PHP, in alphabetical order, before normal plugins. This means API hooks added in an mu-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
 ## Why use MU Plugins?
 
-While it is possible to add code in the `wp-config.php` file for site wide behavior, Actions and Filters shouldn't be added in wp-config.php file.
+While you can add code in the `wp-config.php` file for site wide behavior, actions and filters shouldn't be added here.
 
-If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will get a Fatal PHP error because the because `add_action()` and `add_filter()` functions won't be defined yet. 
+If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will get a Fatal PHP error because the because `add_action()` and `add_filter()` functions won't be defined yet.
 
-If they are added below the `require_once ABSPATH . 'wp-settings.php';` statement, then the entirety of WordPress has already been loaded and the actions / filters won't be applied, or would have been applied last.
+If they are added below the `require_once ABSPATH . 'wp-settings.php';` statement, then the entirety of WordPress has already been loaded and the actions / filters won't be applied, or would be applied last.
 
+## Create Your MU Plugin
+1. Create a PHP file (i.e. `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
+2. Provide the plugin details for its name, description etc.
+
+  ```php
+  <?php
+  /*
+    Plugin Name: Custom Actions and Filters
+    Plugin URI: https://plugin-site.example.com
+    Description: Boilerplate MU-Plugin for custom actions and filters to run for a site instead on setting in WP-config.php
+    Version: 0.1
+    Author: Pantheon
+    Author URI: https://yoursite.example.com
+  */
+  ```
+
+3. Add the custom functions, along with the filters or action that you want to run. Use the following script as a starting point for making your own plugin:
+
+  ```php
+  <?php
+  /*
+    Plugin Name: Custom Actions and Filters
+    Plugin URI: https://plugin-site.example.com
+    Description: Boilerplate MU-Plugin for custom actions and filters to run for a site instead on setting in WP-config.php
+    Version: 0.1
+    Author: Pantheon
+    Author URI: https://yoursite.example.com
+  */
+
+  if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+    // Actions or Filters that will only run in Pantheon .
+  };
+
+  if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) && php_sapi_name() != 'cli' ) {
+  	// Add your actions or filters here that you want to exclude during WP CLI execution.
+  }
+
+  /*
+   * Set $regex_path_patterns accordingly.
+   *
+   * We don't set this variable for you, so you must define it
+   * yourself per your specific use case before the following conditional.
+   *
+   * For example, to exclude pages in the /news/ and /about/ path from cache, set:
+   *
+   *   $regex_path_patterns = array(
+   *     '#^/news/?#',
+   *     '#^/about/?#',
+   *   );
+   */
+  
+  $regex_path_patterns = array(
+    '#^/sample-page/?#',
+    '#^/about/?#',
+  );
+  
+  // Loop through the patterns.
+  foreach ( $regex_path_patterns as $regex_path_pattern ) {
+    if ( preg_match( $regex_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
+      add_action( 'send_headers', 'add_header_nocache', 15 );
+
+      // No need to continue the loop once there's a match.
+      break;
+    }
+  }
+
+  function add_header_nocache()
+  {
+    header('Cache-Control: no-cache, must-revalidate, max-age=0');
+  }
+
+  /* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
+
+  // wp-json paths or any custom endpoints
+
+  $regex_json_path_patterns = array(
+      '#^/wp-json/wp/v2/users?#',
+      '#^/wp-json/?#'
+    );
+
+  foreach ( $regex_json_path_patterns as $regex_json_path_pattern ) {
+    if ( preg_match( $regex_json_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
+      // Re-use the rest_post_dispatch filter in the Pantheon page cache plugin.
+      add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
+      filter_rest_post_dispatch_send_cache_control( $response, $server );
+      break;
+    }
+  }
+
+  // Re-define the send_header value with any custom Cache-Control header.
+  function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
+    $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+    return $response;
+  }
+  // End of File
+  ```
 
 ## Example Code Snippets 
 
-We are listing different plugins or themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
+Listed below are different plugins or themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
 
 ### Redirects 
 
-It is possible to add custom redirects, like path or domain specific redirects in the MU plugin. For more redirect scenarios, see the [Redirects docs page here](https://pantheon.io/docs/redirects/)
+In addition to [PHP redirects](/docs/redirects/), it's possible to add custom redirects, like path or domain specific redirects, in an MU plugin.
 
-```
+```php
 // 301 Redirect from /old to /new
 // Check if Drupal or WordPress is running via command line
 if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
@@ -170,13 +180,14 @@ function add_header_nocache() {
 }
 ```
 
-### WP REST API (wp-json) Endpoints Cache
+### WP REST API (`wp-json`) Endpoints Cache
 
 For WP REST API endpoints, we can use the `rest_post_dispatch` filter and create a specific function to apply specific headers for each path or endpoint.
 
-```/* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */ 
-  
-// wp-json paths or any custom endpoints 
+```php
+/* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
+
+// wp-json paths or any custom endpoints
 
 $regex_json_path_patterns = array(
     '#^/wp-json/wp/v2/users?#',
@@ -199,20 +210,21 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 
 ### Exclude Plugins for Redis cache
 
-Referenced from [Github](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor)
+Referenced from [wp-redis](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor){.external} on GitHub:
 
 A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group:
 
-`wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );`
+```php
+wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
+```
 
 This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `wp_cache_get( 'foo', 'bad-actor' );` will not use Redis, and instead fall back to WordPress' default runtime object cache.
 
+### Setting Custom Cookies
 
-### Setting custom Cookies
+Setting custom cookies can also be done from an mu-plugin like, like the example below. Find more [cookie manipulation examples here](https://pantheon.io/docs/cookies/).
 
-Setting custom cookies can also be done from an mu-plugin like setting cookie example below. More [cookie manipulation examples here](https://pantheon.io/docs/cookies/).
-
-```
+```php
 if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
 
   $foo = $_COOKIE['STYXKEY_gorp'];
