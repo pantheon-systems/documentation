@@ -104,11 +104,11 @@ Nope! You can use the a single certificate to cover multiple domains spread acro
 
 Please allow two business days to get a CSR and load the certificate.
 
-### How do I renew my custom certificate? 
+### How do I renew or replace my custom certificate?
 
-Before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for <a href="#option-2-manually-managed-custom-certificates" data-proofer-ignore>bringing a custom certificate</a>).
+45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for <a href="#option-2-manually-managed-custom-certificates" data-proofer-ignore>bringing a custom certificate</a>).
 
-To request a new CSR ahead of time, please [contact support](/docs/support/) with the following details:
+To update a certificate with additional domains, [contact support](/docs/support/) with the following details:
 
  - The current certificate name (CN)
  - A colon-separated list of domains the certificate is valid for.
