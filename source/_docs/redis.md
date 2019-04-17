@@ -17,7 +17,7 @@ Most website frameworks like Drupal and WordPress use the database to cache inte
 Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
 ## Enable Redis
-All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
+All plans except for the Basic plan can use Redis. Sandbox site plans can enable and use Redis for developmental purposes, but if the site plan is upgraded to Basic, the feature will be disabled.
 
 | Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
 | ------------- | -------------------------------------- |
@@ -387,7 +387,6 @@ Install and enable the module to resolve.
 | Plan                   | Cache Memory Limit (in MB) |
 | ---------------------- | -------------------------- |
 | Sandbox*               |               64           |
-| Basic*                 |               64           |
 | Performance Small      |               64           |
 | Performance M, L, XL   |               512          |
 | Professional           |               256          |
@@ -396,7 +395,7 @@ Install and enable the module to resolve.
 | BusinessXL             |               1024         |
 | Elite                  |               1024         |
 
-\*Redis is available for development on free Sandbox environments, and is available to development environments on the Basic plan, but will not be available when going Live on that plan. See the [Enable Redis](#enable-redis) section above for details about which account types have Redis on Live environments.
+\*Redis is available on free Sandbox plans in development environments and will remain through upgrades to any other plan except for Basic. See the [Enable Redis](#enable-redis) section above for details about which account types have Redis on Live environments.
 
 ### What happens when Redis reaches maxmemory?
 The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up){.external}, keeping in mind our `maxmemory-policy` is `allkeys-lru`.
