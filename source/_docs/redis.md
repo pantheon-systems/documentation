@@ -17,7 +17,7 @@ Most website frameworks like Drupal and WordPress use the database to cache inte
 Redis provides an alternative caching backend, taking that work off the database, which is vital for scaling to a larger number of logged-in users. It also provides a number of other nice features for developers looking to use it to manage queues, or do custom caching of their own.
 
 ## Enable Redis
-All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
+All plans except for the Basic plan can use Redis. Sandbox site plans can enable and use Redis for developmental purposes, but if the site plan is upgraded to Basic, the feature will be disabled.
 
 | Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
 | ------------- | -------------------------------------- |
@@ -381,6 +381,22 @@ You have requested a non-existent service "cache.backend.redis".
 Install and enable the module to resolve.
 
 ## Frequently Asked Questions
+
+### How Much Redis Cache is Available for Each Plan Level?
+
+| Plan                   | Cache Memory Limit (in MB) |
+| ---------------------- | -------------------------- |
+| Sandbox*               |               64           |
+| Performance Small      |               64           |
+| Performance M, L, XL   |               512          |
+| Professional           |               256          |
+| Flagship               |               512          |
+| Business               |               512          |
+| BusinessXL             |               1024         |
+| Elite                  |               1024         |
+
+\*Redis is available on free Sandbox plans in development environments and will remain through upgrades to any other plan except for Basic. See the <a href="#enable-redis" data-proofer-ignore>Enable Redis</a> section above for details about which account types have Redis on Live environments.
+
 ### What happens when Redis reaches maxmemory?
 The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up){.external}, keeping in mind our `maxmemory-policy` is `allkeys-lru`.
 
@@ -389,7 +405,7 @@ We are using [allkeys-lru](https://redis.io/topics/lru-cache){.external}. Here i
 
 ```nohighlight
 cat redis.conf
-port 11455
+port xxxxx
 timeout 300
 loglevel notice
 logfile /srv/bindings/xxxxxxxxx/logs/redis.log
@@ -400,7 +416,7 @@ save 60 10000
 rdbcompression yes
 dbfilename dump.rdb
 dir /srv/bindings/xxxxxxxxx/data/
-requirepass 278801a71e2c4264b7d7b155def62bea
+requirepass xxxxx
 maxclients 1024
 maxmemory 964689920
 maxmemory-policy allkeys-lru
@@ -412,6 +428,8 @@ list-max-ziplist-value 64
 set-max-intset-entries 512
 activerehashing yes
 ```
+
+Note that the `maxmemory` value will vary <a href="#how-much-redis-cache-is-available-for-each-plan-level" data-proofer-ignore>based on plan level</a>.
 
 ### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
 Yes. There is a `redis.log` file that is available on the Redis container for each environment. To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
