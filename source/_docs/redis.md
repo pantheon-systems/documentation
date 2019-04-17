@@ -425,7 +425,7 @@ set-max-intset-entries 512
 activerehashing yes
 ```
 
-Note that the `maxmemory` value will vary [based on plan level](#how-much-redis-cache-is-available-for-each-plan-level).
+Note that the `maxmemory` value will vary <a href="#how-much-redis-cache-is-available-for-each-plan-level" data-proofer-ignore>based on plan level</a>.
 
 ### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
 Yes. There is a `redis.log` file that is available on the Redis container for each environment. To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
