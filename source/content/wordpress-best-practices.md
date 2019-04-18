@@ -49,3 +49,5 @@ This article provides suggestions, tips, and best practices for developing and m
 * We recommend using HTTPS. For more information, see [HTTPS on Pantheon's Global CDN](/docs/https/)
 
 * Verify [Global CDN caching](/docs/test-global-cdn-caching/) is working on your site.
+
+* Performance tune the front-end of your WP site by following this [guide](docs/guides/frontend-performance/).
