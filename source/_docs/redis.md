@@ -382,7 +382,7 @@ Install and enable the module to resolve.
 
 ## Frequently Asked Questions
 
-### How Much Redis Cache is Available for Each Plan Level?
+### How much Redis cache is available for each plan level?
 
 | Plan                   | Cache Memory Limit (in MB) |
 | ---------------------- | -------------------------- |
