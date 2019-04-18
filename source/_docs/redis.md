@@ -395,7 +395,7 @@ Install and enable the module to resolve.
 | BusinessXL             |               1024         |
 | Elite                  |               1024         |
 
-\*Redis is available on free Sandbox plans in development environments and will remain through upgrades to any other plan except for Basic. See the <a href="#enable-redis" data-proofer-ignore>Enable Redis</a> section above for details about which account types have Redis on Live environments.
+\*Redis is available on free Sandbox plans in for usage during development and will remain through upgrades to any other plan except for Basic. See the <a href="#enable-redis" data-proofer-ignore>Enable Redis</a> section above for details about which account types have Redis on paid plans.
 
 ### What happens when Redis reaches maxmemory?
 The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up){.external}, keeping in mind our `maxmemory-policy` is `allkeys-lru`.
