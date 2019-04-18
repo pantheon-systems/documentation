@@ -16,51 +16,19 @@ Analyzing the MySQL slow log is an important part of troubleshooting client issu
 
 To download the environment's MySQL slow log, use the [method outlined here](/logs/#database-log-files).
 
-```sql
-$ sftp -o Port=2222 live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in  
-live.91fd3bea-d11b-401a-85e0-0@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in's password:
-Connected to dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in.  
-sftp> cd logs  
-sftp> ls -l  
-get-rw-rw---- 1 16373 16373 16384 Dec 15 16:55 aria_log.00000001  
--rw-rw---- 1 16373 16373 52 Dec 15 16:55 aria_log_control  
--rw-rw---- 1 16373 16373 274308583 Dec 16 00:24 endpointas90kkud28a236-slow.log  
--rw-rw---- 1 16373 16373 14090210 Dec 09 03:19 endpointas90kkud28a236-slow.log-20141209.gz  
--rw-rw---- 1 16373 16373 15363540 Dec 10 04:05 endpointas90kkud28a236-slow.log-20141210.gz  
--rw-rw---- 1 16373 16373 24578172 Dec 11 03:49 endpointas90kkud28a236-slow.log-20141211.gz  
--rw-rw---- 1 16373 16373 41522551 Dec 12 04:08 endpointas90kkud28a236-slow.log-20141212.gz  
--rw-rw---- 1 16373 16373 27318331 Dec 13 04:09 endpointas90kkud28a236-slow.log-20141213.gz  
--rw-rw---- 1 16373 16373 9611117 Dec 14 04:09 endpointas90kkud28a236-slow.log-20141214.gz  
--rw-rw---- 1 16373 16373 29412295 Dec 15 04:08 endpointas90kkud28a236-slow.log-20141215.gz  
--rw-rw---- 1 16373 16373 5242880 Dec 16 00:24 ib_logfile0  
--rw-rw---- 1 16373 16373 5242880 Dec 16 00:24 ib_logfile1  
--rw-rw---- 1 16373 16373 127926272 Dec 16 00:24 ibdata1  
-drwx------ 2 16373 16373 4096 Nov 17 22:10 mysql  
--rw-rw---- 1 16373 16373 1199417182 Dec 15 22:24 mysql-bin.001307  
--rw-rw---- 1 16373 16373 1073911597 Dec 15 22:38 mysql-bin.001308  
--rw-rw---- 1 16373 16373 1073742734 Dec 15 22:51 mysql-bin.001309  
--rw-rw---- 1 16373 16373 1076132500 Dec 15 23:22 mysql-bin.001310  
--rw-rw---- 1 16373 16373 1073867553 Dec 15 23:23 mysql-bin.001311  
--rw-rw---- 1 16373 16373 1073823426 Dec 15 23:39 mysql-bin.001312  
--rw-rw---- 1 16373 16373 1078972711 Dec 15 23:53 mysql-bin.001313  
--rw-rw---- 1 16373 16373 1073845201 Dec 16 00:20 mysql-bin.001314  
--rw-rw---- 1 16373 16373 150462472 Dec 16 00:24 mysql-bin.001315  
--rw-rw---- 1 16373 16373 171 Dec 16 00:20 mysql-bin.index  
-srwxrwxrwx 1 16373 16373 0 Dec 05 23:53 mysql.sock  
--rw-rw---- 1 16373 16373 264 Nov 17 22:24 mysqld-relay-bin.000001  
--rw-rw---- 1 16373 16373 26 Nov 17 22:24 mysqld-relay-bin.index  
-drwx------ 2 16373 16373 139264 Dec 15 09:40 pantheon  
-drwx------ 2 16373 16373 4096 Nov 17 22:10 performance_schema  
-sftp> get endpointas90kkud28a236-slow.log  
-Fetching /srv/bindings/d85c97af3dae43069bc4b6c2d9f839be/data/endpointas90kkud28a236-slow.log to endpointas90kkud28a236-slow.log  
-/srv/bindings/d85c97af3dae43069bc4b6c2d9f839be/data/endpointas90kkud28a236-slow.log 100% 262MB 712.5KB/s 06:16
-sftp> exit  
-$  
+```nohighlight
+$ sftp -o Port=2222 live.8883e341-e49d-4c84-958b-8685f263e5fb@dbserver.live.8883e341-e49d-4c84-958b-8685f263e5fb.drush.in
+Connected to live.8883e341-e49d-4c84-958b-8685f263e5fb@dbserver.live.8883e341-e49d-4c84-958b-8685f263e5fb.drush.in.
+sftp> cd logs
+sftp> ls -l
+-rw-rw----    1 0f59c6e86b6b4889a413835b20fcddf3 support    586912 Apr 18 19:31 mysqld-slow-query.log
+-rw-rw----    1 0f59c6e86b6b4889a413835b20fcddf3 support    628455 Apr 18 19:31 mysqld.log
+-rw-rw----    1 0f59c6e86b6b4889a413835b20fcddf3 support   1048713 Jan  2 11:34 mysqld.log-20190102
+sftp> get mysqld-slow-query.log
+Fetching /srv/bindings/0f59c6e86b6b4889a413835b20fcddf3/logs/mysqld-slow-query.log to mysqld-slow-query.log
+/srv/bindings/0f59c6e86b6b4889a413835b20fcddf3/logs/mysqld-slow-query.log                                            100%  573KB 780.7KB/s   00:00
+sftp> exit
 ```
-
-<Alert title="Note" type="info">
-The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.
-</Alert>
 
 ## Analyze The Mysql Slow Log
 
