@@ -34,6 +34,8 @@ Pantheon sites running in Europe have all site resources in the EU. This include
 
 Automated and manual backups of all site components (code, database, and files) are stored in the EU and created by job workers also running in the EU. Additionally, any database or file clones between site environments are run by EU job workers.
 
+Localized, EU-specific [Disaster Recovery](/docs/disaster-recovery/) is also available.
+
 With this set of EU-specific resources, now you can run WordPress or Drupal sites on Pantheon and meet the European Union's legal, regulatory, or data sovereignty requirements.
 
 ## Create a New Site
@@ -111,7 +113,6 @@ More International Region features are in active development. [Contact us](https
 
 Coming soon:
 
-  - Disaster Recovery for EU Region
   - Region Facet on Organization Dashboard
   - More Regions!
     - [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external} to tell us about your needs.
