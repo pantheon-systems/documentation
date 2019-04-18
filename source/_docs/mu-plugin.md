@@ -72,11 +72,6 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
    *   );
    */
   
-  $regex_path_patterns = array(
-    '#^/sample-page/?#',
-    '#^/about/?#',
-  );
-  
   // Loop through the patterns.
   foreach ( $regex_path_patterns as $regex_path_pattern ) {
     if ( preg_match( $regex_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
@@ -161,10 +156,6 @@ Set `Cache-Control: max-age=0` by hooking into `send_headers`. This will overrid
  *   );
  */
 
-$regex_path_patterns = array(
-  '#^/sample-page/?#',
-  '#^/about/?#',
-);
 
 // Loop through the patterns.
 foreach ($regex_path_patterns as $regex_path_pattern) {
