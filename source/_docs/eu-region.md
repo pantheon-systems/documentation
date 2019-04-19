@@ -52,8 +52,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
   See `terminus site:create --help` for more information on the options and values used in this command.
 
 ## Migrate an Existing Site to the EU Region
-
-The [typical way to migrate sites](/docs/migrate/) is not yet available for international migrations. To migrate an existing site from one region to another, create the new site as described above, then follow the [Manually Migrate Sites to Pantheon](/docs/migrate-manual/) doc. The [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) section of the Relaunch doc is a good resource to help make the transition to your new live site smooth.
+To migrate an existing site from one region to another, create the new site as described above, then follow the [Manually Migrate Sites to Pantheon](/docs/migrate-manual/) doc. The [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) section of the Relaunch doc is a good resource to help make the transition to your new live site smooth.
 
 If you want help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available.
 
