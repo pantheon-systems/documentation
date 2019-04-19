@@ -34,9 +34,8 @@ sftp> exit
 
 There are several different tools you can use to analyze a MySQL slow log:
 
-- [Percona Toolkit](https://www.percona.com/doc/percona-toolkit/2.2/index.html) (Recommended. Actively maintained. Includes slow query log analyzer: [pt-query-digest](https://www.percona.com/doc/percona-toolkit/2.1/pt-query-digest.html).)   
-- [Mysqlsla](http://www.hackmysql.com/mysqlsla) (No longer maintained by the author. [Legacy GitHub repo](https://github.com/daniel-nichter/hackmysql.com/tree/master/mysqlsla).)  
-- [Mysql Log Filter](https://code.google.com/p/mysql-log-filter/) (Not updated since 2007.)
+- <a href="https://www.percona.com/doc/percona-toolkit/2.2/index.html">Percona Toolkit</a> (Recommended. Actively maintained. Includes slow query log analyzer: <a href="https://www.percona.com/doc/percona-toolkit/2.1/pt-query-digest.html">pt-query-digest</a>.)   
+- <a href="https://code.google.com/p/mysql-log-filter/">Mysql Log Filter</a> (Not updated since 2007.)
 
 These tools allow you to see summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. Here is an example usage of MySQL log filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
 
