@@ -382,7 +382,7 @@ Install and enable the module to resolve.
 
 ## Frequently Asked Questions
 
-### How Much Redis Cache is Available for Each Plan Level?
+### How much Redis cache is available for each plan level?
 
 | Plan                   | Cache Memory Limit (in MB) |
 | ---------------------- | -------------------------- |
@@ -398,13 +398,14 @@ Install and enable the module to resolve.
 \*Redis is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. See the <a href="#enable-redis" data-proofer-ignore>Enable Redis</a> section above for details about which account types have Redis on paid plans.
 
 ### What happens when Redis reaches maxmemory?
-The behavior is the same as a standard Redis instance. The overall process is described best in the top four answers of [this thread](https://stackoverflow.com/questions/8652388/how-does-redis-work-when-ram-starts-filling-up){.external}, keeping in mind our `maxmemory-policy` is `allkeys-lru`.
+When the specified amount of memory is reached, Redis follows the `maxmemory-policy` configuration directive, which is defined in the platform `redis.conf` file. 
 
-### Is Redis set up as an LRU cache?
-We are using [allkeys-lru](https://redis.io/topics/lru-cache){.external}. Here is the Redis configuration file for your Live environment:
+On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added. For more information, please see the official [Redis documentation](https://redis.io/topics/lru-cache){.external}.
+
+### How is Redis configured on the platform?
+Your `redis.conf` file can be retrieved via SFTP similarly to how you can download Redis log files (see below), or you can review it here:
 
 ```nohighlight
-cat redis.conf
 port xxxxx
 timeout 300
 loglevel notice
@@ -432,7 +433,9 @@ activerehashing yes
 Note that the `maxmemory` value will vary based on plan level.
 
 ### If Redis hits the upper limit of memory usage, is this logged on Pantheon?
-Yes. There is a `redis.log` file that is available on the Redis container for each environment. To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
+Yes. There is a `redis.log` file that is available on the Redis container for each environment.
+
+To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
 
 ```nohighlight
 $ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in
@@ -445,7 +448,7 @@ sftp>
 ```
 
 ### Why won't my site work after importing a database backup?
-When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
+When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
 
 ## Safely Remove Redis
 The following code changes are required before Redis can be safely uninstalled and disabled:
