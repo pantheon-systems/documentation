@@ -323,7 +323,7 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 <p markdown="1">Switching the upstream of an existing site is risky. Consider creating a new site from your Custom Upstream and migrating the contents. If you must switch upstreams, [back up](/docs/backups/) your site first, and consider our documentation on [upstream merge conflicts](/docs/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).</p>
 </div>
 
-Only a Site Owner can change an existing site to use a new Custom Upstream. Site owners can [contact support](/docs/support/), or use [Terminus](/docs/terminus/):
+Only a Site Owner, User in Charge, or Organization Administrator can change an existing site to use a new Custom Upstream using [Terminus's](/docs/terminus/):
 
 ```bash
 terminus site:upstream:set $site $upstream_id
