@@ -69,7 +69,14 @@ The ldap\_sso submodule from the suite of modules included in [https://drupal.or
 
 ### Does PEG work with LDAP?
 
-WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
+WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module. If you're using the Drupal 8 LDAP module, you will need to add the LDAP server like normal, taking note of the machine name you give to the server. Then, in your `settings.php` file, add the following lines for each LDAP server:
+
+```
+$config['ldap_servers.server.{MACHINE_NAME}']['address'] = '127.0.01';
+$config['ldap_servers.server.{MACHINE_NAME}']['port'] = PANTHEON_SOIP_CONSTANT_NAME;
+```
+
+Be sure to substitute the constant name given to you by Pantheon in the `port` variable, and for both values be sure to substitute the machine name you entered in place of `{MACHINE_NAME}`. When you return to the server configuration page, verify that both the server address and the server port show as `overridden`.
 
 ## Troubleshooting
 
