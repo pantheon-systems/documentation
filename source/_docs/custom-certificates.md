@@ -110,9 +110,9 @@ Please allow two business days to get a CSR and load the certificate.
 
 To update a certificate with additional domains, [contact support](/docs/support/) with the following details:
 
- - The current certificate name (CN)
+ - The current common name (CN) and any SANs
  - A colon-separated list of domains the certificate is valid for
- - The updated certificate attached.
+ - The updated certificate attached
 
 It may take up to two business days to process the request.
 
