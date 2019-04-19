@@ -265,4 +265,4 @@ This will convert the database tables in the existing installation to the proper
 If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/){.external} to run a virtualized 'nix-type environment for tools like Terminus.
 
 ## `php.ini`
-`php.ini` cannot be customized or overridden on the platform. See [Securely Working with phpinfo](/docs/phpinfo) for more information on PHP configuration.
+`php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/docs/phpinfo/) for more information on PHP configuration.
