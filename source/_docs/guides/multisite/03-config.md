@@ -100,6 +100,8 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
   define( 'SITE_ID_CURRENT_SITE', 1 );
   define( 'BLOG_ID_CURRENT_SITE', 1 );
   ```
+  
+  Note: You will have a warning from the WP dashboard that you need to update your `.htaccess` file, since Pantheon is Nginx based and your site is already pre-configured for multisite setup by your Account Manager, you can safely skip this step.
 
 6. Add the following code block to your `wp-config.php` file, under the lines mentioned in the previous step:
 
