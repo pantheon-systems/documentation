@@ -45,3 +45,16 @@ See [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues) 
 
 ## Image uploads
 Since WordPress 4.5, a bug exists affecting the upload of large dimension images regardless of file size. This generally presents itself as an "HTTP error" when uploading. See this [core issue](https://core.trac.wordpress.org/ticket/36534){.external} for more information.
+
+## Force WP to use GD Library instead of Imagick
+WordPress uses both GD Library and Imagick when editing or uploading images/PDF files. For big files, there are times when uploading images inconsistently fails and succeeds because WP tries to utilize any of the two library depending on which resource is available at a given time. It shows that GD Library works reliably for large files and you can insert the sample code below in your theme's function.php to force GD Library to be used all the time. See this [core issue](https://core.trac.wordpress.org/ticket/43310){.external} for more information.
+
+```php
+function force_use_gdlib( $editors ) {
+    $default_editor = 'WP_Image_Editor_GD';
+    $editors = array_diff( $editors, array( $default_editor ) );
+    array_unshift( $editors, $default_editor );
+    return $editors;
+}
+add_filter( 'wp_image_editors', 'force_use_gdlib' );
+```
