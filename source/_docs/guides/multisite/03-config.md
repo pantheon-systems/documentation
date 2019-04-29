@@ -133,6 +133,11 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
 
 7. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment once edits are complete.
 
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+A warning may appear in the WordPress dashboard that you need to update your `.htaccess` file. Since Pantheon used Nginx and your site is already pre-configured for multisite by your Account Manager, you can ignore this warning.
+</div>
+
 ## Developing the Site Network
 Congratulations on setting up your first WordPress Site Network. You are on your way to glory! When logged in to the WordPress Dashboard, you'll see a new **My Sites** menu item in the toolbar:
 
