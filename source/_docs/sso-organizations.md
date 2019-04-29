@@ -26,13 +26,13 @@ New and existing members outside the organization are not redirected to the conf
 
 ## Configure your IdP
 
-Refer to your IdP for general SAML 2.0 setup instructions. Pantheon will supply the string to be used in place of `<Pantheon-SSO-Connection-Name>` in the examples below.
+Refer to your IdP for general SAML 2.0 setup instructions. Pantheon will supply the string to be used in place of `Pantheon-SSO-Connection-Name` in the examples below.
 
 You will need to enter the following:
 
-1.  **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=<Pantheon-SSO-Connection-Name>`
+1.  **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Pantheon-SSO-Connection-Name`
 
-2.  **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:<Pantheon-SSO-Connection-Name>`
+2.  **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
 
 3.  **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), map the attribute `email` to `user:email`.
 
