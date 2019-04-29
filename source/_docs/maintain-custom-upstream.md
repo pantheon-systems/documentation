@@ -151,6 +151,8 @@ For agencies that manage large portfolios, we suggest picking a few sample sites
 ### Upstream Configuration File
 Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. For details, see [Pantheon YAML Configuration Files](/docs/pantheon-yml/).
 
+### Redirects
+We normally suggest [PHP redirects](/docs/redirects/) be placed into `wp-config.php`. Since this file is shared between Multisites, you can use an `include` statement to point to an external file, or store redirects in an [MU-Plugin](/docs/mu-plugin/).
 
 ## Troubleshoot
 ### Resolve Conflicts
