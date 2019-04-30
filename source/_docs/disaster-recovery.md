@@ -13,7 +13,7 @@ Disaster Recovery is more than just a combination of technology. It includes 24/
 
 With Disaster Recovery in place, Pantheon monitors datacenter health and proactively manages failover to avoid or minimize data loss.
 
-Recovery Point Objective (**RPO**) is a baseline of reasonably acceptable data loss in the event of a major outage. In short, think “lost transactions.” The RPO is largely determined by whether there is replication lag or not, which can result from heavy transactional load on the site’s database. We rarely see replication lag, and when we do, we have automated tools to rebuild the site’s replica as well as to alert our team if a site is consistently experiencing replication lag. This way, we can proactively notify you so you can work toward a solution. For sites with DR enabled, Pantheon’s RPO is 5 minutes.
+Recovery Point Objective (**RPO**) is a baseline of reasonably acceptable data loss in the event of a major outage. In short, think “lost transactions.” The RPO is largely determined by whether there is replication lag or not, which can result from heavy transactional load on the site’s database. We rarely see replication lag, and when we do, we have automated tools to rebuild the site’s replica and alert our team if a site is consistently experiencing replication lag. This way, we can proactively notify you so you can work toward a solution. For sites with DR enabled, Pantheon’s RPO is 5 minutes.
 
 Recovery Time Objective (**RTO**) is the target amount of time within which a business process must be restored after a disaster in order to avoid unacceptable consequences from a break in business continuity. In short, think “time down.” For sites with DR enabled, Pantheon’s RTO is 15 minutes.
 
@@ -40,7 +40,7 @@ Pantheon’s disaster response team will proactively notify you of a zone failur
 Redis cache is not preserved after a site failover. This means you must ensure that the site can handle having its cache dropped under regular visitor traffic in order for the site to operate as expected in a failover scenario.
 
 To test in a Test Environment, click the **Clear Caches** button in the upper right hand corner of the Site Dashboard.
-You can also [connect to your Redis instance](/docs/redis/#use-the-redis-command-line-client) and run the `flushall` command to clear Redis cache via the Redis connection string.
+You can also [connect to your Redis instance](/docs/redis/#use-the-redis-command-line-client) and run the `flushall` command to clear Redis cache via the Redis CLI.
 
 If you rely on the Redis cache for locks (mutexes) or storing other long-term data, you must move them out of Redis and into the database to avoid any issues when the Redis cache is dropped during failover.
 
