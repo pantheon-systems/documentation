@@ -107,12 +107,13 @@ Double-check the files before going forward to make sure no bugs were introduced
 
 If this procedure fails with the message `Already up to date.` refer to [this troubleshooting section](#one-click-updates-do-not-appear-after-rewriting-git-history) to reset your git repository.
 
-#### Overwrite WP core via SFTP
+#### Overwrite WordPress Core Via SFTP
 
-Worst case scenario for users that cannot setup Git in their machine and the only method access the files is via SFTP.
+In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to overwrite core files.
 
-1) Via SFTP, delete these files and folders:
-<pre><code class="nohighlight">
+1. Via SFTP, delete these files and folders:
+
+  ```nohighlight
   ├── README.md
   ├── index.php
   ├── license.txt
@@ -134,17 +135,18 @@ Worst case scenario for users that cannot setup Git in their machine and the onl
   ├── wp-includes
   ├── wp-content
       └── index.php
-  ├── wp-content
       └── mu-plugins
           └── pantheon.php
-  ├── wp-content
-      └── mu-plugins
-          └── pantheon
-</code></pre>
+  ```
 
-2) Re-upload the corresponding files from https://github.com/pantheon-systems/WordPress
-3) Commit and switch back to Git mode
-4) Apply 1-click core updates via the dashboard and the auto-resolve should be checked. The update nag should be now gone after a successful update.
+    <div class="alert alert-danger" role="alert" markdown="1">
+    <h4 class="info">Warning</h4>
+    Do not remove `wp-config.php`.
+    </div>
+
+2. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress){.external}.
+3. Commit and switch back to Git mode.
+4. Apply 1-click core updates via the dashboard and the auto-resolve should be checked. The update warning should disappear after a successful update.
 
 ### Merge Conflict Resolution
 
