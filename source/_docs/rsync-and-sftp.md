@@ -58,10 +58,10 @@ rsync is also available, but it is a more advanced tool that requires experience
     # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
 
     # To Upload/Import
-    rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' ./files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+    rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ./files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
     # To Download
-    rsync -rvlz --copy-unsafe-links --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
+    rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
 
 
     # -r: Recurse into subdirectories
@@ -98,26 +98,26 @@ export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 Download the contents of the `sites/default/files` directory into a folder on your local environment in the `files` home folder:
 
 ```bash
-rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/files/ ~/files
+rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/files/ ~/files
 ```
 ### Download a WordPress Directory from Pantheon
 Download the contents of the `wp-content/uploads` directory into a folder on your local environment in the `files` home folder:
 
 ```bash
-rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/wp-content/uploads ~/files
+rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/wp-content/uploads ~/files
 ```
 
 ### Download a Drupal File from Pantheon
 Download the `sites/default/settings.php` file into a Drupal installation called _Foo_ on your local environment in a  `sites/default/files` folder:
 
 ```bash
-rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/settings.php ~/Foo/sites/default
+rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/settings.php ~/Foo/sites/default
 ```
 ### Download a WordPress File from Pantheon
 Download the `index.php` file into a WordPress installation called _Foo_ on your local environment in a `wp-content/uploads` folder:
 
 ```bash
-rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/wp-content/uploads/index.php ~/Foo/sites/wp-content/uploads
+rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/wp-content/uploads/index.php ~/Foo/sites/wp-content/uploads
 ```
 
 ### Upload a Directory to Pantheon
@@ -128,13 +128,13 @@ If you need to upload the files directory from a local installation called Foo i
 <p>Always use the <code>temp-dir flag</code> when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.</p></div>
 
 ```bash
-rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 ```
 ### Upload a Single File to Pantheon
 This example shows how to upload the logo.png file into a Pantheon site's theme folder.
 
 ```bash
-rsync -rLvz --size-only --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
+rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
 ```
 ### Empty a Folder Recursively Using rsync
 Since the `rm -r` command is not available over SFTP on Pantheon, an alternative way to recursively empty a folder is to use the rsync `--delete` flag. This example shows how to empty the remote folder `files/remote_folder_to_empty` (change this to match the remote directory you want to empty).
@@ -145,7 +145,7 @@ On your local machine, you must first create an empty folder with `mkdir empty_f
 export ENV=env # Replace with the site envornment, usually dev, test, or live
 export SITE=uuid # Replace with the site UUID, which you can find from the Site Dashboard URL or terminus site:info $sitename --field=id
 
-rsync -rLvz --size-only --ipv4 --progress -a --delete -e 'ssh -p 2222' empty_folder/ --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/remote_folder_to_empty
+rsync -rLvz --size-only --checksum --ipv4 --progress -a --delete -e 'ssh -p 2222' empty_folder/ --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/remote_folder_to_empty
 ```
 Now you can use `rmdir` over SFTP to remove the empty directory itself.
 
