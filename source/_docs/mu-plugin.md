@@ -82,8 +82,7 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
     }
   }
 
-  function add_header_nocache()
-  {
+  function add_header_nocache() {
     header('Cache-Control: no-cache, must-revalidate, max-age=0');
   }
 
@@ -183,7 +182,7 @@ For WP REST API endpoints, we can use the `rest_post_dispatch` filter and create
 $regex_json_path_patterns = array(
     '#^/wp-json/wp/v2/users?#',
     '#^/wp-json/?#'
-    );
+);
   
 foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
   if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
@@ -203,7 +202,7 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 
 Referenced from [wp-redis](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor){.external} on GitHub:
 
-A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group:
+A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group:
 
 ```php
 wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
@@ -226,7 +225,7 @@ if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
   }
 
 }
-else{
+else{ 
   /**
   * Set local vars passed to setcookie()
   * Example:
