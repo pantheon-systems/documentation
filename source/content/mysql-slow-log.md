@@ -30,14 +30,19 @@ Fetching /srv/bindings/0f59c6e86b6b4889a413835b20fcddf3/logs/mysqld-slow-query.l
 sftp> exit
 ```
 
-## Analyze The Mysql Slow Log
+## Analyze the MySQL Slow Log
 
 There are several different tools you can use to analyze a MySQL slow log:
 
-- <a href="https://www.percona.com/doc/percona-toolkit/2.2/index.html">Percona Toolkit</a> (Recommended. Actively maintained. Includes slow query log analyzer: <a href="https://www.percona.com/doc/percona-toolkit/2.1/pt-query-digest.html">pt-query-digest</a>.)   
-- <a href="https://code.google.com/p/mysql-log-filter/">MySQL Slow Query Log Filter</a> (Not updated since 2007. Still useful, but will throw warnings with newer versions of PHP.)
+- <a href="https://www.percona.com/doc/percona-toolkit/2.2/index.html">Percona Toolkit</a><br>
+Recommended. Actively maintained and includes a number of database utilities, including a slow query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/2.1/pt-query-digest.html){.external}. 
+- [MySQL Slow Query Log Filter](https://code.google.com/p/mysql-log-filter/){.external}<br>
+Not updated since 2007. Still useful, but this will throw warnings with newer versions of PHP.
 
-These tools allow you to see summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. Here is an example usage of MySQL log filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
+These tools provide summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. 
+
+### MySQL Slow Query Log Filter
+Here is an example usage of MySQL Slow Query Log Filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
 
 ```php
 $ php mysql-log-filter-1.9/mysql_filter_slow_log.php -T=1 --sort-execution-count --no-duplicates endpointas90kkud28a236-slow.log > site_name_slow_1s_noDupes.txt  
@@ -56,7 +61,7 @@ $ vi site_name_slow_1s_noDupes.txt
 # User@Host: pantheon[pantheon] @  [10.223.192.87]  
 SET timestamp=1418627746;SELECT node.title AS node_title, node.nid AS nid, node_counter.totalcount AS node_counter_totalcount, ga_stats_count_pageviews_today.count AS ga_stats_count_pageviews_today_countFROM node nodeLEFT JOIN node_counter node_counter ON node.nid = node_counter.nidLEFT OUTER JOIN ga_stats_count ga_stats_count_pageviews_today ON node.nid = ga_stats_count_pageviews_today.nid AND (ga_stats_count_pageviews_today.metric='pageviews' AND ga_stats_count_pageviews_today.timeframe='today') WHERE (( (node.status = '1') AND (node.type IN  ('story')) )) ORDER BY ga_stats_count_pageviews_today_count DESC LIMIT 5 OFFSET 0;  
 ```
-This particular query is, at it's worst, examining 132,363 records to return 5, while taking a full second to do so. That would make it a fairly good candidate for refactoring, since most sites prefer queries to execute in milliseconds.
+This particular query is, at its worst, examining 132,363 records to return 5, while taking a full second to do so. That would make it a fairly good candidate for refactoring, since most sites prefer queries to execute in milliseconds.
 
 ## Look at the slow queries by hour
 
