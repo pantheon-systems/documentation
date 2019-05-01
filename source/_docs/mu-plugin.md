@@ -5,6 +5,8 @@ contributors:
  - alexfornuto
  - eabquina
  - carlalberto
+categories: [wordpress]
+tags: [develop]
 ---
 
 For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [**Must-Use** (**MU**) plugin](https://codex.wordpress.org/Must_Use_Plugins){.external}. 
@@ -200,15 +202,13 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 
 ### Exclude Plugins for Redis cache
 
-Referenced from [wp-redis](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor){.external} on GitHub:
-
-A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group:
+A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group. For example, to prevent [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} from using Redis:
 
 ```php
-wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
+wp_cache_add_non_persistent_groups( array( 'autoptimize' ) );
 ```
 
-This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `wp_cache_get( 'foo', 'bad-actor' );` will not use Redis, and instead fall back to WordPress' default runtime object cache.
+For more information, see [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor){.external}.
 
 ### Setting Custom Cookies
 
