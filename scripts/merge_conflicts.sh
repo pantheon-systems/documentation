@@ -8,7 +8,7 @@ if grep -q --exclude="git-faq/index.html" --exclude="core-updates/index.html" --
   echo 'Merge HEAD hash: fail' && exit 1
 elif grep -q --exclude="git-faq/index.html" --exclude="core-updates/index.html" --exclude="maintain-custom-upstream/index.html" "<<<<<<< HEAD" $(find . -type f); then
   echo 'Merge HEAD hash: fail' && exit 1
-elif grep -q --exclude="git-faq/index.html" --exclude="core-updates/index.html" --exclude="maintain-custom-upstream/index.html" "=======" $(find . -not -path "./assets/*" -type f ); then
+elif grep -q --exclude="core-updates/index.html" --exclude="maintain-custom-upstream/index.html" --exclude="mysql-slow-log/index.html" "=======" $(find . -not -path "./assets/*" -type f ); then
   echo 'Merge equal signs: fail' && exit 1
 else
   echo 'Merge conflict: pass' && exit 0
