@@ -58,10 +58,9 @@ Backups created on Pantheon are stored offsite on Google Cloud Storage instances
 
 <div class="script-file-header">
 pantheon-backup-to-s3.sh
-<a id="downloadLink"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
-</button></a>
 </div>
-<pre><code class="hljs bash" id="pantheon-backup-to-s3">#!/bin/sh
+```bash
+#!/bin/sh
 
 # pantheon-backup-to-s3.sh
 # Script to backup Pantheon sites and copy to Amazon s3 bucket
@@ -91,6 +90,7 @@ BACKUPDIR="<local-path-to-folder>/"
 BACKUPDATE=$(date +%Y%m%d%s)
 # This sets the proper file extension
 EXTENSION="tar.gz"
+DBEXTENSION="sql.gz"
 
 # connect to terminus
 terminus auth:login --email $TERMINUSUSER
@@ -105,7 +105,11 @@ for thissite in $SITENAMES; do
     # iterate through backup elements
     for element in $ELEMENTS; do
       # download current site backups
-      terminus backup:get --element=$element --to=$BACKUPDIR$thissite.$thisenv.$element.$BACKUPDATE.$EXTENSION $thissite.$thisenv
+      if [[ $element == "db" ]]; then
+        terminus backup:get --element=$element --to=$BACKUPDIR$thissite.$thisenv.$element.$BACKUPDATE.$DBEXTENSION $thissite.$thisenv
+      else
+        terminus backup:get --element=$element --to=$BACKUPDIR$thissite.$thisenv.$element.$BACKUPDATE.$EXTENSION $thissite.$thisenv
+      fi
     done
   done
 done
@@ -117,7 +121,8 @@ if [ -z "${S3BUCKETREGION}" ]; then
 else
   aws s3 sync $BACKUPDIR s3://$S3BUCKET --region $S3BUCKETREGION
 
-fi</code></pre>
+fi
+```
 
 ### Via the Dashboard
 
