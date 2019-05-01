@@ -16,7 +16,6 @@ MU-Plugins are activated by default by adding a php file to the `wp-content/mu-p
 MU plugins are loaded by PHP, in alphabetical order, before normal plugins. This means API hooks added in an mu-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
 ## Why use MU Plugins?
-
 While you can add code in the `wp-config.php` file for site wide behavior, actions and filters shouldn't be added here.
 
 If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will get a Fatal PHP error because the because `add_action()` and `add_filter()` functions won't be defined yet.
@@ -115,11 +114,9 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
   ```
 
 ## Example Code Snippets 
-
 Listed below are different plugins or themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
 
 ### Redirects 
-
 In addition to [PHP redirects](/docs/redirects/), it's possible to add custom redirects, like path or domain specific redirects, in an MU plugin.
 
 ```php
@@ -139,7 +136,6 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
 ```
 
 ### Cache Control
-
 Set `Cache-Control: max-age=0` by hooking into `send_headers`. This will override `max-age` configured within the Pantheon Cache plugin for all matching requests:
 
 ```
@@ -173,7 +169,6 @@ function add_header_nocache() {
 ```
 
 ### WP REST API (`wp-json`) Endpoints Cache
-
 For WP REST API endpoints, we can use the `rest_post_dispatch` filter and create a specific function to apply specific headers for each path or endpoint.
 
 ```php
@@ -201,7 +196,6 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 ```
 
 ### Exclude Plugins for Redis cache
-
 A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group. For example, to prevent [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} from using Redis:
 
 ```php
@@ -211,7 +205,6 @@ wp_cache_add_non_persistent_groups( array( 'autoptimize' ) );
 For more information, see [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor){.external}.
 
 ### Setting Custom Cookies
-
 Setting custom cookies can also be done from an mu-plugin like, like the example below. Find more [cookie manipulation examples here](https://pantheon.io/docs/cookies/).
 
 ```php
@@ -244,7 +237,6 @@ else{
 ```
 
 ## See Also
-
 This page intends to introduce the concept of using an MU plugin for applying actions or filters for a site. For Site-specific or Environment specific context, you can see these other documentation pages.
 
  - [Configuring wp-config.php](/docs/wp-config-php/)
