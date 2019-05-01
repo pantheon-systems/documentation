@@ -195,11 +195,20 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 }
 ```
 
-### Exclude Plugins for Redis cache
-A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group. For example, to prevent [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} from using Redis:
+### Exclude Plugins from Redis Cache
+A page load with 2,000 Redis calls can be 2 full seconds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistence for the plugin's group.
+
+For example, let's say you have a custom plugin that sets the cache with:
 
 ```php
-wp_cache_add_non_persistent_groups( array( 'autoptimize' ) );
+wp_cache_set( 'cache_key', 'cache_data', 'my_plugin_group' );
+wp_cache_get( 'cache_key', 'my_plugin_group' );
+```
+
+You can exclude that in Redis with:
+
+```php
+wp_cache_add_non_persistent_groups( array( 'my_plugin_group' ) );
 ```
 
 For more information, see [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor){.external}.
