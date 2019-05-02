@@ -227,7 +227,7 @@ if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
   }
 
 }
-else{
+else{ 
   /**
   * Set local vars passed to setcookie()
   * Example:
