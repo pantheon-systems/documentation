@@ -9,54 +9,54 @@ categories: [wordpress]
 tags: [develop]
 ---
 
-For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [**Must-Use** (**MU**) plugin](https://codex.wordpress.org/Must_Use_Plugins){.external}. 
+For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) Plugin](https://codex.wordpress.org/Must_Use_Plugins){.external}.
 
-MU-Plugins are activated by default by adding a php file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
+MU-Plugins are activated by default by adding a PHP file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
 
-MU plugins are loaded by PHP, in alphabetical order, before normal plugins. This means API hooks added in an mu-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
+MU-plugins are loaded by PHP in alphabetical order, before normal plugins. This means API hooks added in an MU-plugin apply to all other plugins even if they run hooked-functions in the global namespace.
 
 ## Why use MU Plugins?
-While you can add code in the `wp-config.php` file for site wide behavior, actions and filters shouldn't be added here.
+While you can add code in the `wp-config.php` file for site-wide behavior, actions and filters shouldn't be added here.
 
-If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will get a Fatal PHP error because the because `add_action()` and `add_filter()` functions won't be defined yet.
+If they are added above the `require_once ABSPATH . 'wp-settings.php';` statement, the WordPress site will get a Fatal PHP error because the `add_action()` and `add_filter()` functions won't be defined yet.
 
 If they are added below the `require_once ABSPATH . 'wp-settings.php';` statement, then the entirety of WordPress has already been loaded and the actions / filters won't be applied, or would be applied last.
 
 ## Create Your MU Plugin
 1. Create a PHP file (i.e. `your-file.php`) in the `mu-plugins` folder (`code/wp-content/mu-plugins/your-file.php`).
-2. Provide the plugin details for its name, description etc.
+1. Provide the plugin details for its name, description, etc.:
 
   ```php
   <?php
   /*
     Plugin Name: Custom Actions and Filters
     Plugin URI: https://plugin-site.example.com
-    Description: Boilerplate MU-Plugin for custom actions and filters to run for a site instead on setting in WP-config.php
+    Description: Boilerplate MU-Plugin for custom actions and filters to run for a site instead of setting in WP-config.php
     Version: 0.1
     Author: Pantheon
     Author URI: https://yoursite.example.com
   */
   ```
 
-3. Add the custom functions, along with the filters or action that you want to run. Use the following script as a starting point for making your own plugin:
+1. Add the custom functions along with the filters or action that you want to run. Use the following script as a starting point for making your own plugin:
 
   ```php
   <?php
   /*
     Plugin Name: Custom Actions and Filters
     Plugin URI: https://plugin-site.example.com
-    Description: Boilerplate MU-Plugin for custom actions and filters to run for a site instead on setting in WP-config.php
+    Description: Boilerplate MU-Plugin for custom actions and filters to run for a site instead of setting in WP-config.php
     Version: 0.1
     Author: Pantheon
     Author URI: https://yoursite.example.com
   */
 
   if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
-    // Actions or Filters that will only run in Pantheon .
+    // Actions or Filters that will only run in Pantheon.
   };
 
   if ( isset( $_ENV['PANTHEON_ENVIRONMENT'] ) && php_sapi_name() != 'cli' ) {
-  	// Add your actions or filters here that you want to exclude during WP CLI execution.
+    // Add your actions or filters that you want to exclude during WP CLI execution here.
   }
 
   /*
@@ -72,7 +72,7 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
    *     '#^/about/?#',
    *   );
    */
-  
+
   // Loop through the patterns.
   foreach ( $regex_path_patterns as $regex_path_pattern ) {
     if ( preg_match( $regex_path_pattern, $_SERVER['REQUEST_URI'] ) ) {
@@ -113,11 +113,11 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
   // End of File
   ```
 
-## Example Code Snippets 
-Listed below are different plugins or themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
+## Example Code Snippets
+Listed below are different plugins, themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
 
-### Redirects 
-In addition to [PHP redirects](/docs/redirects/), it's possible to add custom redirects, like path or domain specific redirects, in an MU plugin.
+### Redirects
+In addition to [PHP redirects](/docs/redirects/), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
 
 ```php
 // 301 Redirect from /old to /new
@@ -180,10 +180,10 @@ $regex_json_path_patterns = array(
     '#^/wp-json/wp/v2/users?#',
     '#^/wp-json/?#'
 );
-  
+
 foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
   if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
-    // re-use the rest_post_dispatch filter in the Pantheon page cache plugin  
+    // re-use the rest_post_dispatch filter in the Pantheon page cache plugin
     add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
     // Re-define the send_header value with any custom Cache-Control header
     function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
@@ -214,20 +214,20 @@ wp_cache_add_non_persistent_groups( array( 'my_plugin_group' ) );
 For more information, see [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor){.external}.
 
 ### Setting Custom Cookies
-Setting custom cookies can also be done from an mu-plugin like, like the example below. Find more [cookie manipulation examples here](https://pantheon.io/docs/cookies/).
+Setting custom cookies can also be done from an MU-plugin like in the example below. Find more [cookie manipulation examples here](https://pantheon.io/docs/cookies/).
 
 ```php
 if ( isset( $_COOKIE['STYXKEY_gorp'] ) ) {
 
   $foo = $_COOKIE['STYXKEY_gorp'];
   // Generate varied content based on cookie value
-  // Do NOT set cookies here; Set-Cookie headers do not allow the response to be cached
+  // Do NOT set cookies here. Set-Cookie headers do not allow the response to be cached
   if ($foo == 'ca') {
     str_replace('football', 'hockey');
   }
 
 }
-else{ 
+else{
   /**
   * Set local vars passed to setcookie()
   * Example:
@@ -246,11 +246,8 @@ else{
 ```
 
 ## See Also
-This page intends to introduce the concept of using an MU plugin for applying actions or filters for a site. For Site-specific or Environment specific context, you can see these other documentation pages.
+This page intends to introduce the concept of using an MU-plugin for applying actions or filters for a site. For Site-specific or Environment-specific context, see these other documentation pages:
 
  - [Configuring wp-config.php](/docs/wp-config-php/)
  - [Environment-Specific Configuration for WordPress Sites](/docs/environment-specific-config/)
  - [Plugins with Known Issues](/docs/modules-plugins-known-issues/#wordpress-plugins)
- 
- 
-
