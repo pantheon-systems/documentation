@@ -126,7 +126,7 @@ Be aware, even when using an external CDN to host files, you cannot upload files
 See our documentation for [Drupal](/docs/drupal-s3) and [WordPress](/docs/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
 
 ### Upload Speed
-Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/docs/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html){.external} to help determine if a your local internet connection is impeding file uploads to Pantheon.
+Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/docs/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html){.external} to help determine if your local internet connection is impeding file uploads to Pantheon.
 
 ## Large Code Repository
 
