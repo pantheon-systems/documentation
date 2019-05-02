@@ -49,6 +49,3 @@ Solr is not currently supported on DR-enabled sites. See our documentation on ho
 
 ## See also
 - [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar){.external}
-
-## ChangeLog
-**4/26/2019**: Redis support added for sites with Disaster Recovery.
