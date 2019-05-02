@@ -72,7 +72,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
   <div class="alert alert-info" role="alert" markdown="1">
   ### Note {.info}
-  Place this code in `wp-config.php` to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
+  Place this code in an [MU Plugin](/docs/mu-plugin/) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
   </div>
   ```php
   /*
