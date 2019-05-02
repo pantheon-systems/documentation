@@ -57,7 +57,7 @@ Review, open, or reply to support requests associated with your organization and
 Upload a logo (85 x 85 px). Enterprise and EDU+ Administrators can add payment and terms of service information.
 
 ## Features
-All Partner Agencies and EDU organizations have Multidev, Change Management, and Custom Upstreams. Not all account levels qualify for custom Vanity domains, email domains, or Single Sign-On (SSO). [Contact us](https://pantheon.io/contact-us){.external} to find out how to add features to your organization.
+All Partner Agencies and EDU organizations have Change Management and Custom Upstreams. Not all account levels qualify for Multidev, custom Vanity domains, email domains, or Single Sign-On (SSO). [Contact us](https://pantheon.io/contact-us){.external} to find out how to add features to your organization.
 
 ### Multidev
 Partner Agencies, Enterprise accounts, and EDU organizations with [Gold support](/docs/support/#support-features-and-response-times) and above have [Multidev](/docs/multidev) available with up to 10 active environments to use. All organization members with privileged roles have access to these environments. Team members of a site who are not members of the supporting organization will not have access to Multidev environments.
