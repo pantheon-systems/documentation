@@ -211,21 +211,15 @@ You can exclude that in Redis with:
 wp_cache_add_non_persistent_groups( array( 'my_plugin_group' ) );
 ```
 
-You can exclude that in Redis with:
-
-```php
-wp_cache_add_non_persistent_groups( array( 'my_plugin_group' ) );
-```
-
 We can add multiple plugins to the function as well:
 
 ```php
 wp_cache_add_non_persistent_groups( array( 'my_plugin_group', 'woocommerce' ) );
 ```
 
-To verify, you can use [Redis CLI](https://pantheon.io/docs/redis/#use-the-redis-command-line-client) to flush all keys and see that the related objects no longer add to the cache. 
+To verify, you can use the [Redis CLI](/docs/redis/#use-the-redis-command-line-client) to flush all keys and see that the related objects are no longer added to the cache:
 
-```
+```nohighlight
 > KEYS *woocommerce:*
 1) "woocommerce:size-gallery_thumbnail"
 2) "woocommerce:size-woocommerce_thumbnail"
