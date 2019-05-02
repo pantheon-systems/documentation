@@ -111,7 +111,7 @@ If this procedure fails with the message `Already up to date.` refer to [this tr
 
 In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to overwrite core files.
 
-1. Via SFTP, delete these files and folders:
+1. Confirm that the Site Connection Mode is set to SFTP. Then, via SFTP, delete these files and folders:
 
   ```nohighlight
   ├── README.md
@@ -144,9 +144,9 @@ In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to o
     Do not remove `wp-config.php`.
     </div>
 
-2. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress){.external}.
-3. Commit and switch back to Git mode.
-4. Apply 1-click core updates via the dashboard and the auto-resolve should be checked. The update warning should disappear after a successful update.
+1. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress){.external}.
+1. Commit and switch back to Git mode.
+1. Apply 1-click core updates via the dashboard and the auto-resolve should be checked. The update warning should disappear after a successful update.
 
 ### Merge Conflict Resolution
 
