@@ -211,6 +211,33 @@ You can exclude that in Redis with:
 wp_cache_add_non_persistent_groups( array( 'my_plugin_group' ) );
 ```
 
+You can exclude that in Redis with:
+
+```php
+wp_cache_add_non_persistent_groups( array( 'my_plugin_group' ) );
+```
+
+We can add multiple plugins to the function as well:
+
+```php
+wp_cache_add_non_persistent_groups( array( 'my_plugin_group', 'woocommerce' ) );
+```
+
+To verify, you can use [Redis CLI](https://pantheon.io/docs/redis/#use-the-redis-command-line-client) to flush all keys and see that the related objects no longer add to the cache. 
+
+```
+> KEYS *woocommerce:*
+1) "woocommerce:size-gallery_thumbnail"
+2) "woocommerce:size-woocommerce_thumbnail"
+3) "woocommerce:size-thumbnail"
+4) "woocommerce:size-single"
+
+> FLUSHALL
+
+> KEYS *woocommerce:*
+(empty list or set)
+```
+
 For more information, see [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor){.external}.
 
 ### Setting Custom Cookies
