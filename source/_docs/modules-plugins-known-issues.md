@@ -284,7 +284,7 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 <hr>
 
 
-##WordPress Plugins
+## WordPress Plugins
 
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/){.external}
 **Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
@@ -678,14 +678,14 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Issue 1:** Large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/docs/timeouts) for more information.
 
-**Solution 1:** To avoid hitting a timeout, you can try:
+**Solution:** To avoid hitting a timeout, you can try:
 
  - Splitting the import or export into smaller parts
  - Set the plugin to only process 1 or 2 records per iteration
  
 **Issue 2**: Uploading large import files hits the 59 second [timeout](/docs/timeouts/), or you're getting invalid file paths.
 
-**Solution 2**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
+**Solution**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
 
 <hr>
 
