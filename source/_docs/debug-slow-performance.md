@@ -10,7 +10,7 @@ This article covers the most common causes for performance problems, demonstrate
 
 An often ignored cause of bad performance is [PHP errors within site code](/docs/php-errors/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.
 
-Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP-based project.
+Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP-based project.
 
 ![Benchmark example using Drupal's Generate Errors](/source/docs/assets/images/benchmark-example-generate-errors.png)
 
