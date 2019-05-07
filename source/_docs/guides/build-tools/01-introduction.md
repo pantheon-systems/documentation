@@ -149,7 +149,7 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 #### Note {.info}
 Pantheon's [support team](/docs/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
 
-If you need help configuring external systems, consider joining the [Pantheon Power Users](/docs/power-users/) community on Slack.
+If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/){.external} or posting in our [Pantheon Power Users](https://slackin.pantheon.io/){.external} Slack channel.
 </div>
 
 
