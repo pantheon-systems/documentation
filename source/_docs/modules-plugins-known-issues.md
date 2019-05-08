@@ -461,6 +461,10 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 **Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 <hr>
 
+### [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/){.external}
+**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/docs/new-relic/) configuration, resulting in duplicate data in New Relic reports.
+<hr>
+
 ### [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/){.external}
 **Issue**: NextGEN Gallery assumes write access to the site's codebase within the `wp-content/gallery` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
