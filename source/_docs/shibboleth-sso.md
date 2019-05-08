@@ -193,9 +193,7 @@ $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.1
 You can now enable and configure the module. If SAML authentication fails because of a configuration error, look at the watchdog log to see why.
 
 ## WordPress Multisite Issues
-WordPress Multisite users have reported two possible solutions to enable SSO on their site networks:
-
-**Solution 1:** Modify `inc/class-wp-saml-auth.php` to include:
+WordPress Multisite users have reported a possible solution to enable SSO on their site networks; modify `inc/class-wp-saml-auth.php` to include:
 
 ```php
 //$redirect_to = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_URL );
@@ -204,8 +202,6 @@ WordPress Multisite users have reported two possible solutions to enable SSO on 
 $redirect_to = get_admin_url();
 $this->provider->login( $redirect_to );
 ```
-
-**Solution 2:** FILL ME IN
 
 ## Troubleshooting
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
