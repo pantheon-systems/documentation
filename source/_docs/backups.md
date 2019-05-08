@@ -91,6 +91,8 @@ BACKUPDATE=$(date +%Y%m%d%s)
 # This sets the proper file extension
 EXTENSION="tar.gz"
 DBEXTENSION="sql.gz"
+# Hide Terminus update messages
+TERMINUS_HIDE_UPDATE_MESSAGES=1
 
 # connect to terminus
 terminus auth:login --email $TERMINUSUSER
