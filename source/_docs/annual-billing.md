@@ -55,6 +55,18 @@ The table below shows how much sites can save by switching to annual billing. Pe
 
 </div>
 
+## Considerations
+
+Before switching to annual billing, consider:
+
+ - Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
+ - Sites on annual billing plans that upgrade will be invoiced immediately, and the site will be upgraded immediately.
+ - While all site plan downgrades will be effective immediately, no partial refunds will be issued.
+ - Annual billing plans will auto-renew at the end of their annual subscription term unless terminated in advance.
+ - Annual billing plans switched to monthly billing will be effective after the end of your current annual subscription term.
+ - A site grandfathered into Preferred Pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes.
+   - To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/docs/add-client-site/).
+
 
 ## Switch to Annual Billing
 
@@ -81,18 +93,6 @@ The table below shows how much sites can save by switching to annual billing. Pe
 6. You'll be returned to the dashboard with a confirmation of your site plan change:
 
     ![Site Plan Flag](/source/docs/assets/images/dashboard/plan-updated-flag.png)
-
-## Considerations
-
-Before switching to annual billing, consider:
-
- - Sites on monthly plans switching to annual billing (without changing plan size) are invoiced immediately.
- - Sites on annual billing plans that upgrade will be invoiced immediately, and the site will be upgraded immediately.
- - While all site plan downgrades will be effective immediately, no partial refunds will be issued.
- - Annual billing plans will auto-renew at the end of their annual subscription term unless terminated in advance.
- - Annual billing plans switched to monthly billing will be effective after the end of your current annual subscription term.
- - A site grandfathered into Preferred Pricing that is not owned by a qualified partner organization will move to list pricing when the billing plan changes.
-   - To regain Preferred Pricing, the Agency should follow the steps to [Add a Client Site](/docs/add-client-site/).
 
 ## See Also
 
