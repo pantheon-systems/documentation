@@ -462,7 +462,7 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 <hr>
 
 ### [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/){.external}
-**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/docs/new-relic/) configuration, resulting in new applications in New Relic. This behavior may break compatibility with existing Quicksilver scripts, and any other integration designed to use the application reports Pantheon creates.
+**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/docs/new-relic/) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/docs/quicksilver/).
 <hr>
 
 ### [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/){.external}
