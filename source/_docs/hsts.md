@@ -131,7 +131,7 @@ Once you've installed the module or plugin you plan to use, you should immediate
 How you configure or include these attributes raises the rigor of the security that your HSTS effort provides. [Here is a great overview of how and why to use the above noted attributes](https://hstspreload.org/){.external}.
 
 ## HSTS Before the Application Level
-The configuration described above sets the HSTS header when the CMS loads. If you need HSTS to be set before that, consider a DNS-level implementation from a third-party provider like [CloudFlare](https://support.cloudflare.com/hc/en-us/articles/204183088-Understanding-HSTS-HTTP-Strict-Transport-Security-){.external}
+The configuration described above sets the HSTS header when the CMS loads. If you need HSTS to be set before that, consider a DNS-level implementation from a third-party provider like Cloudflare to [enable SSL first](https://pantheon.io/docs/cloudflare/#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn) and eventually [enable HSTS](https://support.cloudflare.com/hc/en-us/articles/204183088-Understanding-HSTS-HTTP-Strict-Transport-Security-){.external} in their end. 
 
 ## See Also
 For additional details on this header, see:
