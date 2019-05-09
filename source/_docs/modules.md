@@ -41,7 +41,9 @@ Note: Currently, there is no API module available for Drupal 8.
 
 Issue: For sites with Filefield Paths module enabled and a lot of image styles, some transactions may hit some performance issues as image paths are flushed due to its volume. 
 
-Workaround: Add the image path files clearing execution using the Drupal Queue API and be executed during cron run
+Workaround: One possible workaround for this is to Add the image path files clearing execution using the Drupal Queue API and be executed during cron run. There may be other ways of doing this depending on a site and one should determine how to implement this better on their specific site before copying the snippet below:
+
+[Line 13 of pantheon_api.module](https://github.com/pantheon-systems/drops-7/blob/default/modules/pantheon/pantheon_api/pantheon_api.module#L13)
 
 ```
 function image_path_flush($path) {
@@ -54,7 +56,9 @@ function image_path_flush($path) {
   $styles = image_styles();
   foreach ($styles as $style) {
     $image_path = image_style_path($style['name'], $path);
-    if (defined('PANTHEON_ENVIRONMENT')) {
+    // Apply these only when in the Pantheon Environment
+    // Can exclude specific environments, or local like Lando
+    if (defined('PANTHEON_ENVIRONMENT' && PANTHEON_ENVIRONMENT != 'lando')) {
       file_unmanaged_delete($image_path);
       $data = array('image_path' => $image_path);
       $queue_name = 'pantheon_api_performance_file_workaround';
