@@ -17,11 +17,6 @@ A domain name is the web address or URL used to visit your site. The Domain Name
 ## Platform Domains
 Pantheon issues platform domains for all environments. Each environment (Dev, Test, Live, each Multidev) is accessible via the platform domain, matching the following patterns:
 
-- dev-site-name.pantheonsite.io
-- test-site-name.pantheonsite.io
-- live-site-name.pantheonsite.io
-- multidev-env-site-name.pantheonsite.io
-
 All platform domains are available over HTTPS. Redirecting to HTTPS during development and testing is a good best practice to ensure you are ready to go live with HTTPS. See [Redirect to HTTPS](/docs/redirects/#redirect-to-https) for more information.
 
 ### robots.txt
