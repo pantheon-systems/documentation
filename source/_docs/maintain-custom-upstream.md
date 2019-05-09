@@ -152,7 +152,17 @@ For agencies that manage large portfolios, we suggest picking a few sample sites
 Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. For details, see [Pantheon YAML Configuration Files](/docs/pantheon-yml/).
 
 ### Redirects
-We normally suggest [PHP redirects](/docs/redirects/) be placed into `wp-config.php`. Since this file is shared between Multisites, you can use an `include` statement to point to an external file, or store redirects in an [MU-Plugin](/docs/mu-plugin/).
+We normally suggest [PHP redirects](/docs/redirects/) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. Since this file is shared on all environments including multidevs, you can use a `require_once` statement to point to an external file that loads all the redirects.
+
+```php
+if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  require_once( dirname( __FILE__ ) . '/redirects.php' );
+}
+```
+
+Remember that this file is not included in the custom upstream and needs to exists uniquely on each installation so you will need to create one for each of your sites. You can then expand that conditional to to loan on specific environments using this [guide](/docs/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
+
+For WordPress sites, another option is to store redirects in an [MU-Plugin](/docs/mu-plugin/).
 
 ## Troubleshoot
 ### Resolve Conflicts
