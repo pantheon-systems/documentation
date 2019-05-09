@@ -410,7 +410,7 @@ Fatal error: Uncaught Error: Call to undefined method WP_Error::get_data() in /s
 
 For WooCommerce, the CLI runner needs some of the REST endpoints for it to function. The plugin is only allowing a specific set of paths for allowed access.
 
-**Solution:** In the plugin.php file at line 20 (`wp-content/plugins/disable-rest-api-and-require-jwt-oauth-authentication/plugin.php`), Replace the conditional and add `php_sapi_name() != 'cli'` to the if statement. This is around the `allowed_endpoints` conditional statement such that the plugin will only work via non-CLI PHP requests:
+**Solution:** In the `plugin.php` file, edit the `if ( ! is_user_logged_in() ) ` conditional to include a check for CLI PHP requests:
 
 ```php
     if ( ! is_user_logged_in() && php_sapi_name() != 'cli' ) {
