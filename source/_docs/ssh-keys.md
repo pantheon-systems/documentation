@@ -24,7 +24,7 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
    ```bash
    ssh-keygen
    ```
-  This command works on Linux, MacOS, and Windows 10
+  This command works on Linux, MacOS, and Windows 10.
 
 1. Unless you have reason to change it, leave the default location of `~/.ssh/id_rsa`. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
 
