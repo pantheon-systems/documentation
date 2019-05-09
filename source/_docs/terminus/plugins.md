@@ -14,7 +14,7 @@ searchboost: 100
 Extend the functionality of Terminus and add commands by installing third party plugins.
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
-<p>If you are a plugin author, ensure your your plugin is using the Terminus 2.x syntax. See <a href="/docs/terminus/get-started/legacy">Legacy Terminus Versions</a> to compare the difference in command syntax.</p>
+<p>If you are a plugin author, ensure your your plugin is updated for Terminus 2. See <a href="/docs/terminus-2-0/">Terminus 2.0</a> to compare the differences.</p>
 </div>
 ## Install Plugins
 <p class="instruction">Add plugins within the <code>$HOME/.terminus/plugins</code> directory on your local workstation. You may need to create the <code>$HOME/.terminus/plugins</code> directory if it does not already exist:</p>
