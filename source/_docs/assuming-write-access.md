@@ -73,6 +73,48 @@ The best solution is to communicate with the maintainer of the module or plugin 
 7. Deploy to Test and confirm results.
 8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
+## Examples
+
+### [WP-Rocket](https://wp-rocket.me/){.external}
+
+#### For Mac/Linux:
+```bash
+ln -s ./uploads/cache ./wp-content/cache
+ln -s ./uploads/wp-rocket-config ./wp-content/wp-rocket-config
+```
+
+To verify that you have done it correctly, you should have this when you list your folders in `wp-content` directory:
+```bash
+$ ls -al
+cache -> ./uploads/cache
+wp-rocket-config -> ./uploads/wp-rocket-config
+```
+
+#### For Windows:
+```bash
+mklink /d ./wp-content/cache ./uploads/cache
+mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
+```
+
+To verify that you have done it correctly, you should have this response:
+```bash
+symbolic link created for .\wp-content\cache <<===>> .\uploads\cache
+symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-rocket-config
+```
+
+To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
+```bash
+> dir
+<SYMLINKD>        cache [.\uploads\cache]
+<SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
+```
+
+Note: Deploying to Test and Live will not automatically create these folders so you'll need to manually created them via SFTP. 
+```bash
+wp-content\uploads\cache
+wp-content\uploads\wp-rocket-config
+```
+
 ## Troubleshooting
 
 ### Removing a Symlink
