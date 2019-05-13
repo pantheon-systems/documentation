@@ -77,6 +77,11 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to the code base.
 
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+You must manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
+</div>
+
 ### For MacOS & Linux:
 From the `wp-content` directory:
 
@@ -115,11 +120,6 @@ You can also verify success using `dir`:
 <SYMLINKD>        cache [.\uploads\cache]
 <SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
 ```
-
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
-You must still manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
-</div>
 
 ## Troubleshooting
 
