@@ -5,7 +5,7 @@ tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
 date: 5/4/2017
-contributors: scottmassey
+contributors: [scottmassey]
 ---
 
 [Asana](https://asana.com) is a flexible project management tool which helps teams to collaborate on projects in either an waterfall or kanban framework. It allows for projects to be spun up and managed quickly and easily, and has an extremely well designed user interface.
