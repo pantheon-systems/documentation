@@ -7,6 +7,9 @@ tags: [providers]
 permalink: docs/:basename/
 editpath: dns-providers/network-solutions.md/
 ---
+<div class="alert alert-danger">
+<h4 class="info">Warning</h4>
+<p>Network Solutions does not support AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports IPv6.</p></div>
 
 ## Before You Begin
 Be sure that you have a:
@@ -68,7 +71,7 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 
 ### AAAA Records
-In order to add any IPv6 records (like AAAA), you must email Network Solutions and work with their team to configure and stage them.
+Unfortunately, Network Solutions does not support AAAA records, which means you can't route IPv6 traffic to your bare domain with Network Solutions. Failure to route IPv6 traffic to your site can negatively impact performance, especially for mobile devices. If you'd like to add AAAA records, then consider transferring your domain or name server to another DNS host.
 
 ## Network Solutions Docs
 
