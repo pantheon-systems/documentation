@@ -3,8 +3,8 @@ import React from 'react';
 const Alert = ({ title, type, children }) => {
   const alertClass = `alert alert-${type}`;
   return (
-    <div class={alertClass}>
-      <h4 class={type}>{title}</h4>
+    <div className={alertClass}>
+      <h4 className={type}>{title}</h4>
       {children}
     </div>
   );

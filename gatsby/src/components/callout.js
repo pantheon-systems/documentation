@@ -1,10 +1,11 @@
 import React from 'react';
+import ExternalLink from './externalLink';
 
 const Callout = ({ type, children, title, link }) => {
   return (
-    <div class="enablement">
-      <h4 class={type}>
-        <a target="_blank" rel="noopener noreferrer" href={link}>{title}</a>
+    <div className="enablement">
+      <h4 className={type}>
+        <ExternalLink text={title} link={link}/>
       </h4>
       {children}
     </div>

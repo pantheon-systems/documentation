@@ -15,10 +15,10 @@ class DocTemplate extends React.Component {
 
     return (
       <Layout>
-        <div class="container">
-          <div class="row doc-content-well">
+        <div className="container">
+          <div className="row doc-content-well">
             <h1>{node.frontmatter.title}</h1>
-            <p class="article-subhead">
+            <p className="article-subhead">
               {node.frontmatter.description}
             </p>
             <MDXRenderer>{node.code.body}</MDXRenderer>
