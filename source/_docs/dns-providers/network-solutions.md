@@ -7,9 +7,9 @@ tags: [providers]
 permalink: docs/:basename/
 editpath: dns-providers/network-solutions.md/
 ---
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p>Network Solutions does not support AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports IPv6.</p></div>
+<div class="alert alert-danger" markdown="1">
+#### Warning {.info}
+Network Solutions does not support AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports IPv6.</div>
 
 ## Before You Begin
 Be sure that you have a:
