@@ -73,38 +73,44 @@ The best solution is to communicate with the maintainer of the module or plugin 
 7. Deploy to Test and confirm results.
 8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
-## Examples
+## Example
 
-### [WP-Rocket](https://wp-rocket.me/){.external}
+As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to the code base.
 
-#### For Mac/Linux:
+### For Mac/Linux:
+From the `wp-content` directory:
+
 ```bash
 ln -s ./uploads/cache ./wp-content/cache
 ln -s ./uploads/wp-rocket-config ./wp-content/wp-rocket-config
 ```
 
-To verify that you have done it correctly, you should have this when you list your folders in `wp-content` directory:
+
+To verify, use `ls -al`:
+
 ```bash
-$ ls -al
 cache -> ./uploads/cache
 wp-rocket-config -> ./uploads/wp-rocket-config
 ```
 
-#### For Windows:
+### For Windows:
+
 ```bash
 mklink /d ./wp-content/cache ./uploads/cache
 mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
 ```
 
-To verify that you have done it correctly, you should have this response:
+Each command will return the following upon success:
+
 ```bash
 symbolic link created for .\wp-content\cache <<===>> .\uploads\cache
 symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-rocket-config
 ```
 
 To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
+You can also verify success using `dir`:
+
 ```bash
-> dir
 <SYMLINKD>        cache [.\uploads\cache]
 <SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
 ```
