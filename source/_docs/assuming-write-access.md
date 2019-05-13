@@ -94,6 +94,7 @@ wp-rocket-config -> ./uploads/wp-rocket-config
 ```
 
 ### For Windows:
+Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash
 mklink /d ./wp-content/cache ./uploads/cache
