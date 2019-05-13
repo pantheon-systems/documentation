@@ -66,7 +66,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
     <p markdown="1">
-    In our example, we created the target directory of the symlink as ./wp-content/uploads/new-directory. Make sure this directory is created via SFTP if it does not exist yet.
+    In our example, we created the target directory of the symlink as `./wp-content/uploads/new-directory`. Make sure this directory is created via SFTP if it does not exist yet.
     </p>
     </div>
 
@@ -77,7 +77,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to the code base.
 
-### For Mac/Linux:
+### For MacOS & Linux:
 From the `wp-content` directory:
 
 ```bash
@@ -88,7 +88,7 @@ ln -s ./uploads/wp-rocket-config ./wp-content/wp-rocket-config
 
 To verify, use `ls -al`:
 
-```bash
+```nohighlight
 cache -> ./uploads/cache
 wp-rocket-config -> ./uploads/wp-rocket-config
 ```
@@ -102,7 +102,7 @@ mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
 
 Each command will return the following upon success:
 
-```bash
+```nohighlight
 symbolic link created for .\wp-content\cache <<===>> .\uploads\cache
 symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-rocket-config
 ```
@@ -110,16 +110,15 @@ symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-roc
 To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
 You can also verify success using `dir`:
 
-```bash
+```nohighlight
 <SYMLINKD>        cache [.\uploads\cache]
 <SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
 ```
 
-Note: Deploying to Test and Live will not automatically create these folders so you'll need to manually created them via SFTP. 
-```bash
-wp-content\uploads\cache
-wp-content\uploads\wp-rocket-config
-```
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+You must still manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
+</div>
 
 ## Troubleshooting
 
