@@ -43,9 +43,6 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 > NOTE: Nav Tab Component  
 
-
-
-
 <Accordion title={"Explore Advanced Install Methods (Optional)"} id={"advance-installs"} icon={"lightbulb"}>
 
 #### Install via Composer
@@ -83,6 +80,7 @@ terminus connection:set <site>.<env> git
        }
      }
     ```
+
 4. Run `composer install` to install WP Redis into the `wp-content` directory.
 5. Use git status to verify your local state, then commit and push your code to Pantheon:
 

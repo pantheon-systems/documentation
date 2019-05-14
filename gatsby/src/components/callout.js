@@ -5,7 +5,7 @@ const Callout = ({ type, children, title, link }) => {
   return (
     <div className="enablement">
       <h4 className={type}>
-        <ExternalLink text={title} link={link}/>
+        <ExternalLink text={title} link={link} />
       </h4>
       {children}
     </div>

@@ -21,7 +21,7 @@ class Accordion extends Component {
         <div className="panel panel-drop panel-guide" id="accordion">
           <div class="panel-heading panel-drop-heading">
             <a
-              className={`accordion-toggle panel-drop-title ${this.state.isCollapsed ? '':'collapsed'}`}
+              className={`accordion-toggle panel-drop-title ${this.state.isCollapsed ? '' : 'collapsed'}`}
               data-toggle={classCollapsed}
               data-parent="#accordion"
               data-proofer-ignore=""
@@ -45,7 +45,7 @@ class Accordion extends Component {
             aria-expanded="false"
           >
             <div className="panel-inner" >
-                { this.props.children }
+              {this.props.children}
             </div>
           </div>
         </div>
