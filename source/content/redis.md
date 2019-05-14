@@ -5,11 +5,7 @@ tags: [cacheapp, addons]
 categories: []
 contributors: [cityofoaksdesign]
 ---
-import Callout from "components/callout";
-import Alert from "components/alert";
-import Accordion from "components/accordion";
-import ExternalLink from "components/externalLink";
-import Icon from "components/icon";
+
 
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
@@ -27,7 +23,7 @@ Redis provides an alternative caching backend, taking that work off the database
 ## Enable Redis
 All plans except for the Basic plan can use Redis. Sandbox site plans can enable and use Redis for developmental purposes, but if the site plan is upgraded to Basic, the feature will be disabled.
 
-| Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
+| Plans         | Redis Support <Popover content={"Available across all environments, including Multidevs."} icon={"info-circle"}/> |
 | ------------- | -------------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
 | Basic         | <span style="color:red">❌</span>  |
