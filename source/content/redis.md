@@ -7,8 +7,9 @@ contributors: [cityofoaksdesign]
 ---
 import Callout from "components/callout";
 import Alert from "components/alert";
-import Accordion from "components/accordion"
-import ExternalLink from "components/externalLink"
+import Accordion from "components/accordion";
+import ExternalLink from "components/externalLink";
+import Icon from "components/icon";
 
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
@@ -325,3 +326,5 @@ sftp>
 
 ### Why won't my site work after importing a database backup?
 When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
+
+Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Solr.

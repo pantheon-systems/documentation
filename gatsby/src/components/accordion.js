@@ -19,7 +19,7 @@ class Accordion extends Component {
     return (
       <>
         <div className="panel panel-drop panel-guide" id="accordion">
-          <div class="panel-heading panel-drop-heading">
+          <div className="panel-heading panel-drop-heading">
             <a
               className={`accordion-toggle panel-drop-title ${this.state.isCollapsed ? '' : 'collapsed'}`}
               data-toggle={classCollapsed}
