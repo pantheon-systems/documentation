@@ -76,9 +76,46 @@ The best solution is to communicate with the maintainer of the module or plugin 
 7. Deploy to Test and confirm results.
 8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
-## Example
+## Examples
 
-As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to the code base.
+## Symlinking files: Making the WP debug log file write in the uploads folder
+
+### For MacOS & Linux:
+From the root directory or where your `wp-config.php` is:
+
+```bash
+ln -s ./uploads/debug.log ./wp-content/debug.log
+```
+
+To verify, use `ls -al` in the `wp-content` folder and you should have:
+
+```nohighlight
+debug.log -> ./uploads/debug.log
+```
+
+### For Windows:
+Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
+
+```bash
+mklink .\wp-content\debug.log .\uploads\debug.log
+```
+
+The command will return the following upon success:
+
+```nohighlight
+symbolic link created for .\wp-content\debug.log <<===>> .\uploads\debug.log
+```
+
+To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
+You can also verify success using `dir`:
+
+```nohighlight
+<SYMLINKD>        debug.log [.\uploads\debug.log]
+```
+
+## Symlinking folder example
+
+As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to a couple of folders in the code base.
 
 <Alert  title="Note" type="alert">
 
@@ -95,7 +132,7 @@ ln -s ./uploads/wp-rocket-config ./wp-content/wp-rocket-config
 ```
 
 
-To verify, use `ls -al`:
+To verify, use `ls -al` in the `wp-content` folder and you should have:
 
 ```
 cache -> ./uploads/cache
@@ -106,8 +143,8 @@ wp-rocket-config -> ./uploads/wp-rocket-config
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash
-mklink /d ./wp-content/cache ./uploads/cache
-mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
+mklink /d .\wp-content\cache .\uploads\cache
+mklink /d .\wp-content\wp-rocket-config .\uploads\wp-rocket-config
 ```
 
 Each command will return the following upon success:
