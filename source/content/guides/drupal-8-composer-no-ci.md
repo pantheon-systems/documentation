@@ -49,7 +49,7 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
   git clone git@github.com:pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
   ```
 
-   This command assumes you have [SSH keys](/docs/ssh-keys/) added to your GitHub account. If not, you can clone the repository over HTTPS:
+   This command assumes you have [SSH keys](/docs/ssh-keys/) added to your GitHub account. If you don't, you can clone the repository over HTTPS:
 
   ```bash
   git clone https://github.com/pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
