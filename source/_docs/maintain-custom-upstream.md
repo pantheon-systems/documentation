@@ -140,6 +140,16 @@ Updates will become available to sites downstream as one-click updates within an
 <p markdown="1">Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.</p>
 </div>
 
+## Delete Custom Upstream
+An upstream cannot be deleted if there are sites using it.
+
+1. From the Organization Dashboard, navigate to **Upstreams**.
+
+2. Click **Settings** next to the upstream you want to delete.
+
+3. Under **Source**, click the **Delete Upstream** button:
+
+  ![Delete Upstream Button](/source/docs/assets/images/dashboard/delete-upstream.png)
 
 ## Tips and Tricks
 ### Use the Pantheon Workflow
