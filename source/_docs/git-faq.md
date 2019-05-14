@@ -80,12 +80,12 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 ```
 1. From your local repository, run this Git command to get a copy of the file in conflict:
 
- ```
- git checkout <commit ID> -- <file>
- ```
-  <div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p>When looking for a commit ID, you can find the last instance where the missing file was in the repository. </p></div>
+   ```
+   git checkout <commit ID> -- <file>
+   ```
+    <div class="alert alert-info" role="alert">
+    <h4 class="info">Note</h4>
+    <p>When looking for a commit ID, you can find the last instance where the missing file was in the repository. </p></div>
 
 2. Run `git status` and verify that there is a new file to add to the repository:
 
@@ -109,6 +109,41 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
  ```
 
 For more details, see [WordPress and Drupal Core Updates](/docs/core-updates).
+
+### How can I resolve conflicts from Multidevs?
+If a merge conflict is preventing you from merging a Multidev environment, follow these steps to resolve.
+
+1. Set the Dev environment to Git mode:
+
+   ![Git Connection Mode](/source/docs/assets/images/dashboard/connection-mode-git.png)
+
+1. Clone the repository to your local computer:
+
+   ![Git Clone](/source/docs/assets/images/dashboard/git-string.png)
+
+1. From the repository directory, pull the multidev branch to master. In the example below, replace `multidev` with the Multidev environment name:
+
+   ```bash
+   git checkout master
+   git pull origin multidev
+   ```
+
+1. Git will tell you which files are in conflict. Open them, and search for the conflicting sections.
+
+   The version from the master branch will be delineated with `<<<<<<< HEAD`, and the version from the multidev environment will end with `>>>>>>> Commit Message`, with `=======` in between.
+
+1. After you resolve the conflict, commit the results:
+
+   ```bash
+   git commit -am "Resolve merge conflict"
+   ```
+
+1.  Push the resolved master branch back to Pantheon:
+
+   ```bash
+   git push origin master
+   ```
+
 ## General Git Questions
 ### Does Pantheon support Git submodules?
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
