@@ -3,7 +3,7 @@ title: Installing Redis on Drupal or WordPress
 description: Understand how to use Redis as a caching mechanism for your Pantheon site.
 tags: [cacheapp, addons]
 categories: []
-contributors: [cityofoaksdesign]
+contributors: [cityofoaksdesign,bmackinney]
 ---
 
 

@@ -15,6 +15,7 @@ import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
 import Icon from "../components/externalLink"
 import Popover from "../components/popover"
+import Contributors from "../components/contributors"
 
 const shortcodes = { Callout, Alert, Accordion, ExternalLink, Icon,Popover }
 
@@ -30,6 +31,7 @@ class DocTemplate extends React.Component {
             <p className="article-subhead">
               {node.frontmatter.description}
             </p>
+            <Contributors contributors={node.frontmatter.contributors}/>
             <MDXProvider components={shortcodes}>
               <MDXRenderer>{node.code.body}</MDXRenderer>
             </MDXProvider>
