@@ -23,7 +23,7 @@ You can develop new sites for free on Pantheon. Billing starts when you're ready
 
 
 ### Where are the Pantheon servers located?
-Our data center is in the United States, but Pantheon's [Global CDN](/docs/global-cdn/) serves content from 40+ POPs (points of presence) distributed around the world. We also have plans to add data centers in Europe, which would speed up authenticated traffic for end-users there, but we don't have an ETA for that expansion.
+Our default region is the United States, with another in [The EU](/docs/eu-region/). Pantheon's [Global CDN](/docs/global-cdn/) serves content from 40+ POPs (points of presence) distributed around the world.
 
 ### Can I run other applications on Pantheon?
 
