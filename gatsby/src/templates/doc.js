@@ -2,12 +2,19 @@ import React from "react"
 import { graphql } from "gatsby"
 
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
+import { MDXProvider } from '@mdx-js/react'
 
 // import SiteInfo from "../components/siteInfo"
 import Layout from "../components/layout"
 // import SEO from "../components/seo"
 // import { rhythm, scale } from "../utils/typography"
 
+import Callout from "../components/callout";
+import Alert from "../components/alert";
+import Accordion from "../components/accordion"
+import ExternalLink from "../components/externalLink"
+
+const shortcodes = { Callout, Alert, Accordion, ExternalLink }
 
 class DocTemplate extends React.Component {
   render() {
@@ -21,7 +28,9 @@ class DocTemplate extends React.Component {
             <p className="article-subhead">
               {node.frontmatter.description}
             </p>
-            <MDXRenderer>{node.code.body}</MDXRenderer>
+            <MDXProvider components={shortcodes}>
+              <MDXRenderer>{node.code.body}</MDXRenderer>
+            </MDXProvider>
           </div>
         </div>
       </Layout>
