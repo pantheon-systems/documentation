@@ -4,7 +4,7 @@ description: Details on specific WordPress plugins developed and maintained for 
 tags: [siteintegrations, infrastructure, cacheedge]
 categories: []
 ---
-Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these modules, find Pantheon developers in our [Power Users Slack channel](/docs/power-users/).
+Pantheon maintains multiple plugins to facilitate its workflow within WordPress. For real time discussion of these modules, find Pantheon developers in our [Pantheon Community and Power Users Group](/docs/power-users/).
 
 <Alert title="Note" type="info">
 
