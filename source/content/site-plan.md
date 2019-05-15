@@ -4,6 +4,11 @@ description: Upgrade a free site to a paid plan or downgrade a site's current pl
 tags: [billing]
 contributors: [cityofoaksdesign]
 ---
+
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
+
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing){.external}, contact your Supporting Organization for assistance and to maintain your special pricing rate.
+
 ## Access Site Plan
 1. Go to the Site Dashboard.
 2. For Sandbox sites, click the **Upgrade** button:
@@ -156,7 +161,7 @@ The Site Owner will receive an email confirmation of this change, a new invoice 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
 ## Cancel Current Plan
-Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox. 
+Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox.
 
 <Alert title="Note" type="info" >
 
