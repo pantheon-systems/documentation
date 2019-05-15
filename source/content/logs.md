@@ -171,16 +171,15 @@ Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_
 // All Pantheon Environments.
 if (defined('PANTHEON_ENVIRONMENT')) {
   //WordPress debug settings in development environments.
-  if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
+  if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) { // For all environments except Test and Live.
     // Debugging enabled.
     if (!defined( 'WP_DEBUG' )) {
-    define( 'WP_DEBUG', true );
+      define( 'WP_DEBUG', true );
     }
     ini_set('log_errors','On');
     ini_set('display_errors','On');
     ini_set('error_reporting', E_ALL );
-    define( 'WP_DEBUG_LOG', true ); // Stored in wp-content/debug.log by default.
-    ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Optionally overrides the debug.log location to a writable path.
+    define( 'WP_DEBUG_LOG', __DIR__ . 'wp-content/uploads/debug.log' // Moves the log file to a writable location.
     define( 'WP_DEBUG_DISPLAY', true );
   }
   // WordPress debug settings in test and live environments.
