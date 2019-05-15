@@ -106,6 +106,14 @@ See [Configure Redirects](/docs/redirects/).
 
 WordPress has an option to [write logging information to a file](/docs/logs/#how-do-i-enable-error-logging-for-wordpress). When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
 
+WP version 5.0.x and older versions
+
+```php
+ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
+```
+
+As of WP version 5.1 and newers
+
 ```php
 define( 'WP_DEBUG_LOG', __DIR__ . 'wp-content/uploads/debug.log'
 ```
