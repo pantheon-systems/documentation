@@ -30,15 +30,49 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 
-> NOTE: Nav Tab Component  
+<TabList>
+
+  <Tab title="WordPress" active={true}>
+
+
+1. Enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+
+2. Install the <ExternalLink text={"WP Redis"} link={"https://wordpress.org/plugins/wp-redis/"}/> plugin via SFTP or Git. To install via [Terminus](/docs/terminus), [set the connection mode to SFTP](/docs/sftp) then run:
+
+    ```
+    terminus wp <site>.<env> -- plugin install wp-redis
+    ```
+
+    For site networks, you will need to specify the site URL by adding that to the command:
+
+    ```
+    terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
+    ```
+3. Create a new file named `wp-content/object-cache.php` that contains the following:
+
+    ```php
+    <?php
+    # This is a Windows-friendly symlink
+    require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
+    ```
+
+    This file is a symlink to the `/plugins/wp-redis/object-cache.php` file. Using SFTP or Git, commit the new file to the Dev environment.
+
+4. In the Dev environment's WordPress Dashboard, verify installation by selecting **Drop-ins** from the Plugins section:
+
+    ![The object-cache Drop-In Plugin](/docs/assets/images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
+
+    When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
+
+    ```bash
+    terminus wp <site>.<env> -- plugin update wp-redis
+    ```
 
 <Alert title="Note" type="info">
   <p>
     <a href="https://wordpress.org/plugins/wp-redis/">WP Redis</a> is loaded via a drop-in file, so there's no need to activate it on your WordPress sites.
   </p>
 </Alert>
-
-> NOTE: Nav Tab Component  
 
 <Accordion title={"Explore Advanced Install Methods (Optional)"} id={"advance-installs"} icon={"lightbulb"}>
 
@@ -90,6 +124,35 @@ terminus connection:set <site>.<env> git
 
 
 </Accordion>
+
+
+
+  </Tab>
+
+  <Tab title="Drupal 8">
+
+1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
+2. Delete Redis configuration from <code>settings.php</code>.
+3. Commit and deploy code changes to the Live environment.
+4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
+5. From the Site Dashboard, click on <Icon text={"Clear Caches"} icon={"cleaning"}/>.
+
+
+  </Tab>
+
+  <Tab title="Drupal 7">
+
+1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
+2. Delete Redis configuration from <code>settings.php</code>.
+3. Commit and deploy code changes to the Live environment.
+4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
+5. From the Site Dashboard, click on <Icon text={"Clear Caches"} icon={"cleaning"}/>.
+
+
+  </Tab>
+  
+</TabList>
+
 
 ## Use the Redis Command-Line Client
 You don't need to install anything locally to use Redis on Pantheon. However, if you want to manually connect to the Pantheon-hosted Redis server for debugging, you'll need to install Redis on your machine.
@@ -324,6 +387,8 @@ sftp>
 When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
 
 
+## Safely Remove Redis
+The following code changes are required before Redis can be safely uninstalled and disabled:
 
 <TabList>
 
