@@ -13,14 +13,14 @@ import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
-import Icon from "../components/externalLink"
+import Icon from "../components/icon"
 import Popover from "../components/popover"
 import Contributors from "../components/contributors"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
 
 
-const shortcodes = { Callout, Alert, Accordion, ExternalLink, Icon,Popover, TabList, Tab }
+const shortcodes = { Callout, Alert, Accordion, ExternalLink, Icon, Popover, TabList, Tab }
 
 class DocTemplate extends React.Component {
   render() {
@@ -30,6 +30,7 @@ class DocTemplate extends React.Component {
       <Layout>
         <div className="container">
           <div className="row doc-content-well">
+            <div id="doc" class="article col-md-9 md-70">
             <h1>{node.frontmatter.title}</h1>
             <p className="article-subhead">
               {node.frontmatter.description}
@@ -39,6 +40,10 @@ class DocTemplate extends React.Component {
               <MDXRenderer>{node.code.body}</MDXRenderer>
             </MDXProvider>
           </div>
+
+            <div class="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
+            </div>
+        </div>
         </div>
       </Layout>
     )
