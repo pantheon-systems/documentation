@@ -323,29 +323,42 @@ sftp>
 ### Why won't my site work after importing a database backup?
 When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
 
-Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Solr.
 
 
 <TabList>
 
-  <Tab title="Tab 1" active={true}>
+  <Tab title="WordPress" active={true}>
 
-  ### Some markdown
-  ```nohighlight
-$ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in
-Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
-sftp> ls
-certs          chef.stamp     data           lock           logs           metadata.json  redis.conf     tmp
-sftp> ls -la logs/
--rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log
-sftp>
-```
+
+1. Uninstall the <ExternalLink text={"WP Redis"} link={"https://wordpress.org/plugins/wp-redis/"}/> plugin.
+2. Delete the <code>wp-content/object-cache.php</code> file.
+3. Commit and deploy code changes to the Live environment.
+4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
+5. From the Site Dashboard, click on <Icon text={"Clear Caches"} icon={"cleaning"}/>.
+
 
   </Tab>
-    
-  <Tab title="Tab 2">
 
-  ## More markdown  
+  <Tab title="Drupal 8">
+
+1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
+2. Delete Redis configuration from <code>settings.php</code>.
+3. Commit and deploy code changes to the Live environment.
+4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
+5. From the Site Dashboard, click on <Icon text={"Clear Caches"} icon={"cleaning"}/>.
+
 
   </Tab>
+
+  <Tab title="Drupal 7">
+
+1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
+2. Delete Redis configuration from <code>settings.php</code>.
+3. Commit and deploy code changes to the Live environment.
+4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
+5. From the Site Dashboard, click on <Icon text={"Clear Caches"} icon={"cleaning"}/>.
+
+
+  </Tab>
+  
 </TabList>
