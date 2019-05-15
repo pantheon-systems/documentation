@@ -19,7 +19,7 @@ class TabList extends React.Component {
       <>
         <ul className="nav nav-tabs" role="tablist">
           {this.props.children.map((tab, i, arr) => {
-            let id = tab.props.title
+            let id = tab.props.id
               .trim()
               .replace(" ", "-")
               .toLowerCase()
@@ -31,9 +31,9 @@ class TabList extends React.Component {
             }
 
             return (
-              <li key={i} id={id} role="presentation" className={className}>
+              <li key={i} id={`${id}-id`} role="presentation" className={className}>
                 <a
-                  href={`#${id}`}
+                  // href={`#${id}`}
                   aria-controls={id}
                   role="tab"
                   data-toggle="tab"
@@ -47,7 +47,7 @@ class TabList extends React.Component {
         </ul>
         <div className="tab-content">
           {this.props.children.map((tab, i, arr) => {
-            let id = tab.props.title
+            let id = tab.props.id
               .trim()
               .replace(" ", "-")
               .toLowerCase()

@@ -32,7 +32,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 <TabList>
 
-  <Tab title="WordPress" active={true}>
+  <Tab title="WordPress" id={"tab-1"} active={true}>
 
 
 1. Enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
@@ -129,24 +129,99 @@ terminus connection:set <site>.<env> git
 
   </Tab>
 
-  <Tab title="Drupal 8">
+  <Tab title="Drupal 8" id={"tab-2"}>
 
-1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
-2. Delete Redis configuration from <code>settings.php</code>.
-3. Commit and deploy code changes to the Live environment.
-4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
-5. From the Site Dashboard, click on <Icon text={"Clear Caches"} icon={"cleaning"}/>.
+1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+2. Install and activate the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module from Drupal.org.
+
+
+<Alert title="Note" type="info">
+  <p>You <strong>must</strong> activate the module before proceeding.
+    </p>
+</Alert>
+
+
+
+    You can install and enable the module from the command line using [Terminus](/docs/terminus):
+
+        terminus remote:drush <site>.<env> -- en redis -y
+3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
+
+    ```php
+    // Configure Redis
+
+    if (defined('PANTHEON_ENVIRONMENT')) {
+      // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
+      $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+
+      //phpredis is built into the Pantheon application container.
+      $settings['redis.connection']['interface'] = 'PhpRedis';
+      // These are dynamic variables handled by Pantheon.
+      $settings['redis.connection']['host']      = $_ENV['CACHE_HOST'];
+      $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
+      $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
+
+      $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
+      $settings['cache_prefix']['default'] = 'pantheon-redis';
+
+      // Set Redis to not get the cache_form (no performance difference).
+      $settings['cache']['bins']['form']      = 'cache.backend.database';
+    }
+    ```
+4. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
 
 
   </Tab>
 
-  <Tab title="Drupal 7">
+  <Tab title="Drupal 7" id={"tab-3"}>
 
-1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
-2. Delete Redis configuration from <code>settings.php</code>.
-3. Commit and deploy code changes to the Live environment.
-4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
-5. From the Site Dashboard, click on <Icon text={"Clear Caches"} icon={"cleaning"}/>.
+<Alert title="Note" type="info">
+  <p>
+    This configuration uses the <code>Redis_CacheCompressed</code> class for better performance. This requires the Redis plugin version 3.13 or later. For versions before 3.13, use <code>Redis_Cache</code> in step 4 instead.
+  </p>
+</Alert>
+
+1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
+2. Add the [Redis](https://www.drupal.org/project/redis){.external} module from Drupal.org. You can install and enable the module from the command line using [Terminus](/docs/terminus):
+
+    ```bash
+    terminus remote:drush <site>.<env> -- en redis -y
+    ```
+
+3. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:
+    - `redis_client_host`
+    - `redis_client_port`
+    - `redis_client_password`
+4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
+
+    ```php
+    // All Pantheon Environments.
+    if (defined('PANTHEON_ENVIRONMENT')) {
+      // Use Redis for caching.
+      $conf['redis_client_interface'] = 'PhpRedis';
+
+      // Point Drupal to the location of the Redis plugin.
+      $conf['cache_backends'][] = 'sites/all/modules/redis/redis.autoload.inc';
+      // If you've installed your plugin in a contrib directory, use this line instead:
+      // $conf['cache_backends'][] = 'sites/all/modules/contrib/redis/redis.autoload.inc';
+
+      $conf['cache_default_class'] = 'Redis_CacheCompressed';
+      $conf['cache_prefix'] = array('default' => 'pantheon-redis');
+
+      // Do not use Redis for cache_form (no performance difference).
+      $conf['cache_class_cache_form'] = 'DrupalDatabaseCache';
+
+      // Use Redis for Drupal locks (semaphore).
+      $conf['lock_inc'] = 'sites/all/modules/redis/redis.lock.inc';
+      // Or if you've installed the redis module in a contrib subdirectory, use:
+      // $conf['lock_inc'] = 'sites/all/modules/contrib/redis/redis.lock.inc';
+
+    }
+    ```
+5. Enable the module via from `/admin/modules` if you haven't already done so with Terminus.
+
+6. Verify Redis is enabled by going to the Dashboard and clicking **Connection Info**. If you see the Redis cache connection string, Redis is enabled.
+7. Visit `/admin/config/development/performance/redis` and open **Connection Information** to verify the connection.
 
 
   </Tab>
@@ -392,7 +467,7 @@ The following code changes are required before Redis can be safely uninstalled a
 
 <TabList>
 
-  <Tab title="WordPress" active={true}>
+  <Tab title="WordPress" id={"wp-uninstall"} active={true}>
 
 
 1. Uninstall the <ExternalLink text={"WP Redis"} link={"https://wordpress.org/plugins/wp-redis/"}/> plugin.
@@ -404,7 +479,7 @@ The following code changes are required before Redis can be safely uninstalled a
 
   </Tab>
 
-  <Tab title="Drupal 8">
+  <Tab title="Drupal 8" id={"d8-uninstall"}>
 
 1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
 2. Delete Redis configuration from <code>settings.php</code>.
@@ -415,7 +490,7 @@ The following code changes are required before Redis can be safely uninstalled a
 
   </Tab>
 
-  <Tab title="Drupal 7">
+  <Tab title="Drupal 7" id={"d7-uninstall"}>
 
 1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
 2. Delete Redis configuration from <code>settings.php</code>.

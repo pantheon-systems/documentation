@@ -9,7 +9,7 @@ class Tab extends Component {
     let className = this.props.active ? "active" : ""
 
     return (
-      <div role="tabpanel" className={`tab-pane ${className}`} id={id}>
+      <div role="tabpanel" className={`tab-pane ${className}`} id={this.props.id}>
         {this.props.children}
       </div>
     )
