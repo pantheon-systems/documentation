@@ -19,7 +19,7 @@ If you just haven’t gotten around to upgrading, consider using our managed HTT
 
 ### Option 2: Manually Managed Custom Certificates
 
-If you require a custom, dedicated certificate, you can now bring it the Global CDN.
+If you require a custom, dedicated certificate, you can now bring it the Global CDN. This is a paid service that our Sales Team can help you with. Please [contact sales](https://pantheon.io/contact-us){.external} prior to going through the following steps if you are not a contract customer.
 
 1. [Open a support ticket](/docs/support/#ticket-support) with the certificate details required to request a **Certificate Signing Request** (CSR) from Pantheon. Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name){.external} (SANs) per certificate.
 
