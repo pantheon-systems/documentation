@@ -68,12 +68,14 @@ Depending on your use case, there are two possibilities:
  }
  ```
 
+### How do I enable debugging?
+
 The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php){.external}:
 
 ```php
 // All Pantheon Environments.
 if (defined('PANTHEON_ENVIRONMENT')) {
-  // Turns on WordPress debug settings in development and multidev environments and disabled in test and live.
+  // Turns on WordPress debug settings in development and multidev environments, and disables in test and live.
   if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
     // Debugging enabled.
     if (!defined( 'WP_DEBUG' )) {
@@ -82,7 +84,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
     define( 'WP_DEBUG_LOG', __DIR__ . 'wp-content/uploads/debug.log' // Moves the log file to a location writable while in git mode.
     define( 'WP_DEBUG_DISPLAY', true );
   }
-  // WordPress debug off in Test and Live environments.
+  // WordPress debug settings in Test and Live environments.
   else {
     // Debugging disabled.
     ini_set('log_errors','Off');
@@ -102,22 +104,6 @@ See [Reading the Pantheon Environment Configuration](/docs/read-environment-conf
 ### How do I perform redirection?
 
 See [Configure Redirects](/docs/redirects/).
-
-### How do I change the default debug.log location?
-
-WordPress has an option to <a href="/docs/logs/#how-do-i-enable-error-logging-for-wordpress" data-proofer-ignore>write logging information to a file</a>. When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
-
-WP version 5.0.x and older versions
-
-```php
-ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
-```
-
-As of WP version 5.1 and newers
-
-```php
-define( 'WP_DEBUG_LOG', __DIR__ . 'wp-content/uploads/debug.log'
-```
 
 ### Where do I specify database credentials?
 
