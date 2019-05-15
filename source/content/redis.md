@@ -324,3 +324,28 @@ sftp>
 When you replace the database with one that doesn't match the Redis cache, it can cause database errors on the site, and you may be unable to clear the cache via the Dashboard. To resolve the issue, [flush your Redis cache from the command line](#clear-cache).
 
 Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Solr.
+
+
+<TabList>
+
+  <Tab title="Tab 1" active={true}>
+
+  ### Some markdown
+  ```nohighlight
+$ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in
+Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
+sftp> ls
+certs          chef.stamp     data           lock           logs           metadata.json  redis.conf     tmp
+sftp> ls -la logs/
+-rw-r--r-- 1 11455 11455 40674752 Mar 10 19:46 redis.log
+sftp>
+```
+
+  </Tab>
+    
+  <Tab title="Tab 2">
+
+  ## More markdown  
+
+  </Tab>
+</TabList>

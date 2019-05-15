@@ -7,10 +7,8 @@ const Contributors = ({ contributors }) => {
         <small>
           <i className="fa fa-users" /> Contributors:{" "}
           {contributors.map((contributor, i, arr) => {
-            let lastCharacter
-            if (arr.length - 1 === i) {
-              lastCharacter = "."
-            } else {
+            let lastCharacter = "."
+            if (arr.length - 1 !== i) {
               lastCharacter = ", "
             }
             return (

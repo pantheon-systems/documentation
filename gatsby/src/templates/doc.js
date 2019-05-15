@@ -16,8 +16,11 @@ import ExternalLink from "../components/externalLink"
 import Icon from "../components/externalLink"
 import Popover from "../components/popover"
 import Contributors from "../components/contributors"
+import TabList from "../components/tabList"
+import Tab from "../components/tab"
 
-const shortcodes = { Callout, Alert, Accordion, ExternalLink, Icon,Popover }
+
+const shortcodes = { Callout, Alert, Accordion, ExternalLink, Icon,Popover, TabList, Tab }
 
 class DocTemplate extends React.Component {
   render() {
