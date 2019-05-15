@@ -72,24 +72,23 @@ The following example shows how to hard-code your WordPress debug configuration 
 ```php
 // All Pantheon Environments.
 if (defined('PANTHEON_ENVIRONMENT')) {
-  //WordPress debug settings in development environments.
+  // Turns on WordPress debug settings in development and multidev environments and disabled in test and live.
   if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
     // Debugging enabled.
     if (!defined( 'WP_DEBUG' )) {
-    define( 'WP_DEBUG', true );
+      define( 'WP_DEBUG', true );
     }
-    define( 'WP_DEBUG_LOG', true );
-    ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Moves the log file to a location writable while in git mode.
+    define( 'WP_DEBUG_LOG', __DIR__ . 'wp-content/uploads/debug.log' // Moves the log file to a location writable while in git mode.
     define( 'WP_DEBUG_DISPLAY', true );
   }
-  // WordPress debug settings in test and live environments.
+  // WordPress debug off in Test and Live environments.
   else {
     // Debugging disabled.
-    ini_set('log_errors','On');
+    ini_set('log_errors','Off');
     ini_set('display_errors','Off');
     ini_set('error_reporting', E_ALL );
     define('WP_DEBUG', false);
-    define('WP_DEBUG_LOG', true);
+    define('WP_DEBUG_LOG', false);
     define('WP_DEBUG_DISPLAY', false);
   }
 }
@@ -108,7 +107,7 @@ See [Configure Redirects](/docs/redirects/).
 WordPress has an option to [write logging information to a file](/docs/logs/#how-do-i-enable-error-logging-for-wordpress). When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
 
 ```php
-ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
+define( 'WP_DEBUG_LOG', __DIR__ . 'wp-content/uploads/debug.log'
 ```
 
 ### Where do I specify database credentials?
