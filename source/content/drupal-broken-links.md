@@ -20,11 +20,11 @@ The recommended solution is setting the `$base_url` in your `settings.php`. This
 
 Here is an example of a code snippet to set the `$base_url` per environment:
 
-````
+```php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain/ in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
-    /** Replace www.example.com with your registered domain name */
+    // Replace www.example.com with your registered domain name.
     $primary_domain = 'www.example.com';
   }
   else {
@@ -36,7 +36,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
       || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
       || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
@@ -46,7 +46,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     exit();
   }
 }
-````
+```
 
 Clear cache after deploying this code change. All cached IP:PORT references will be wiped out, and repopulated with the correct base URL in the future.
 

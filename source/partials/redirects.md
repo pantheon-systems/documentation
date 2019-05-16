@@ -19,7 +19,7 @@ Add the following to <code>wp-config.php</code>, usually placed above <code>/* T
 <pre><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
-    /** Replace www.example.com with your registered domain name */
+    // Replace www.example.com with your registered domain name.
     $primary_domain = 'www.example.com';
   }
   else {
@@ -31,7 +31,7 @@ Add the following to <code>wp-config.php</code>, usually placed above <code>/* T
       || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
       || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
@@ -54,7 +54,7 @@ Add the following to the end of your <code>settings.php</code> file (replace <co
 <pre><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
-    /** Replace www.example.com with your registered domain name */
+    // Replace www.example.com with your registered domain name.
     $primary_domain = 'www.example.com';
   }
   else {
@@ -66,7 +66,7 @@ Add the following to the end of your <code>settings.php</code> file (replace <co
       || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
       || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
@@ -94,7 +94,7 @@ Add the following to the end of your <code>settings.php</code> file (replace <co
 <pre><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
-    /** Replace www.example.com with your registered domain name */
+    // Replace www.example.com with your registered domain name.
     $primary_domain = 'www.example.com';
   }
   else {
@@ -106,7 +106,7 @@ Add the following to the end of your <code>settings.php</code> file (replace <co
       || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
       || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }

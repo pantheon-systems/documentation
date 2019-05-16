@@ -42,7 +42,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
@@ -63,7 +63,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTP_HOST'] == 'subdomain
   header('HTTP/1.0 301 Moved Permanently');
   header("Location: $newurl");
 
-  # Name transaction "redirect" in New Relic for improved reporting (optional)
+  // Name transaction "redirect" in New Relic for improved reporting (optional).
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
@@ -82,7 +82,7 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new');
 
-  # Name transaction "redirect" in New Relic for improved reporting (optional)
+  // Name transaction "redirect" in New Relic for improved reporting (optional).
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
@@ -106,7 +106,7 @@ if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli"
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new-path-for-all');
 
-  # Name transaction "redirect" in New Relic for improved reporting (optional)
+  // Name transaction "redirect" in New Relic for improved reporting (optional).
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
@@ -138,7 +138,7 @@ if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name()
 
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
-  } 
+  }
   exit();
 }
 ```
@@ -159,7 +159,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://new.example.com'. $_SERVER['REQUEST_URI']);
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
