@@ -1,6 +1,6 @@
 ---
-title: Create a New Site in one of Pantheon's International Regions
-description: Learn how to get Limited Availability access to and launch sites in one of Pantheon's International Region.
+title: Create a New Site in your choice of Pantheon Region
+description: Learn how to get Limited Availability access to and launch sites in a specific Region.
 tags: [create, regions]
 categories: []
 contributors: [edwardangert, rachelwhitton, ari]
@@ -12,14 +12,14 @@ searchboost: 150
 The documentation on this page discusses features and options that are not yet available to all users.
 </div>
 
-Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from one of the new International Regions.
+Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from a Pantheon Region outside of the US default.
 
-During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in an International Region before the feature becomes generally available in late 2019.
+During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in your choice of Region before the feature becomes generally available in late 2019.
 
 ## Use Cases
-There are many scenarios in which you might prefer running a site within an International Region rather than the default US. Common use cases include:
+There are many scenarios in which you might prefer running a site in a data center outside of the default United States region. Common use cases include:
 
-* Compliance standards that require data residency within the borders of the European Union
+* Compliance standards that require data residency within the borders of Australia or the European Union
 * Improved performance and user experience for authenticated traffic originating near the desired Region
 
 ## Region Availability
@@ -27,28 +27,26 @@ Once enabled, this Organization-wide feature allows <a href="/docs/change-manage
 
 * United States (**US**) (Default)
 * Australia (**AUS**)
-* Canada (**CAN**)
 * European Union (**EU**)
 
-### EU Data Residency
+### Data Residency and Protection
 
-Pantheon sites running in Europe have all site resources in the EU. This includes application and database containers, Redis cache servers, Apache Solr index servers, and a distributed filesystem and request router.
+Pantheon sites running in Europe have all site resources in the EU. Pantheon sites running in Australia have all site resources in Australia. This includes application and database containers, Redis cache servers, Apache Solr index servers, and a distributed filesystem and request router.
 
-Automated and manual backups of all site components (code, database, and files) are stored in the EU and created by job workers also running in the EU. Additionally, any database or file clones between site environments are run by EU job workers.
+Automated and manual backups of all site components (code, database, and files) are stored in the local region, and created by job workers also running in the region. Additionally, any database or file clones between site environments are run by local job workers.
 
-Localized, EU-specific [Disaster Recovery](/docs/disaster-recovery/) is also available.
+Localized, Region-specific [Disaster Recovery](/docs/disaster-recovery/) is also available.
 
-With this set of EU-specific resources, now you can run WordPress or Drupal sites on Pantheon and meet the European Union's legal, regulatory, or data sovereignty requirements.
+With this set of region-specific resources, now you can run WordPress or Drupal sites on Pantheon and meet local legal, regulatory, or data sovereignty requirements.
 
 ## Create a New Site
 
-1. Install and authenticate [Terminus](/docs/terminus/). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/docs/terminus/updates/).
-1. Use Terminus to create a new site associated with your organization and include the `--region=eu` option.
+1. Install and authenticate [Terminus](/docs/terminus/). The commands used here require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/docs/terminus/updates/).
+1. Use Terminus to create a new site associated with your organization and include the `--region=` option.
 
  - Available Region codes are:
    - `us`
    - `aus`
-   - `can`
    - `eu`
 
  For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
@@ -61,7 +59,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 
   See `terminus site:create --help` for more information on the options and values used in this command.
 
-## Migrate an Existing Site to an International Region
+## Migrate an Existing Site to Another Region
 To migrate an existing site from one region to another, create the new site as described above, then follow the [Manually Migrate Sites to Pantheon](/docs/migrate-manual/#import-your-code) doc. The [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) section of the Relaunch doc is a good resource to help make the transition to your new live site smooth.
 
 If you want help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available.
@@ -72,7 +70,7 @@ Use the Dashboard to see the Pantheon Region in which the site is hosted:
 
 1.  Navigate to the Site Dashboard
 1.  Click **Settings**, then **About Site**
-1.  **Region** will show either `United States` by default, or the name of the International Region in which the Site is hosted.
+1.  **Region** will show either `United States` by default, or the name of the region in which the site is hosted.
 
 ![Site Dashboard > Settings > About Site > Region: European Union](/source/docs/assets/images/settings-about-site-region-eu.png)
 
@@ -110,11 +108,11 @@ curl -Is https://dev-rachel-whitton-eu2.pantheonsite.io | grep x-served-by
 x-served-by: cache-ams21041-AMS, cache-jfk8127-JFK
 ```
 
-Time to celebrate. Your site is running in the EU!
+Time to celebrate. Your site is running in your chosen region!
 
 ## Coming Soon
 
-More International Region features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this doc for updates.
+More features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this doc for updates.
 
 Coming soon:
 
@@ -123,11 +121,11 @@ Coming soon:
     - [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external} to tell us about your needs.
 
 ## Frequently Asked Questions
-### Can I use an International Region for an existing site?
-Yes, however you must migrate your existing site to a new Site that was configured for International Region during creation ([as described above](#create-a-new-site)).
+### Can I move an existing site to a new region?
+Yes, however you must migrate your existing site to a new Site that was configured for the new region during creation ([as described above](#create-a-new-site)).
 
-### When will access to Pantheon's International Regions be available for sites paid by credit card?
-General Availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external}.
+### When will access to Pantheon's Regions be available for sites paid by credit card?
+General availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external}.
 
 ### When will site creation through the Dashboard be available?
 General availability is planned for late 2019.
