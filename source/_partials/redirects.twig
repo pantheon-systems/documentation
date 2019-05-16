@@ -13,7 +13,7 @@
 <pre id="git-pull-wp"><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
-    /** Replace www.example.com with your registered domain name */
+    // Replace www.example.com with your registered domain name.
     $primary_domain = 'www.example.com';
   }
   else {
@@ -25,7 +25,7 @@
       || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
       || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
@@ -41,7 +41,7 @@
 <pre id="git-pull-drops-8"><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
-    /** Replace www.example.com with your registered domain name */
+    // Replace www.example.com with your registered domain name.
     $primary_domain = 'www.example.com';
   }
   else {
@@ -53,7 +53,7 @@
       || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
       || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
@@ -73,7 +73,7 @@
 <pre id="git-pull-drops-7"><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
-    /** Replace www.example.com with your registered domain name */
+    // Replace www.example.com with your registered domain name.
     $primary_domain = 'www.example.com';
   }
   else {
@@ -85,7 +85,7 @@
       || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
       || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
