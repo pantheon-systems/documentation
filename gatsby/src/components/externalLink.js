@@ -2,7 +2,7 @@ import React from 'react';
 
 const ExternalLink = ({ text, link }) => {
   return (
-    <a target="_blank" rel="noopener noreferrer" href={link} title="" className="external">{text}</a>
+    <a target="_blank" rel="nofollow noopener noreferrer external" href={link} title={text} className="external">{text}</a>
   );
 };
 

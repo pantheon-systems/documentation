@@ -1,0 +1,9 @@
+
+a[rel~="external"]:after {
+  content: "\E390";
+  font-family: 'Glyphicons Regular';
+  top: 2px;
+  position: relative;
+  margin-left: 2px;
+  text-decoration: none;
+}
