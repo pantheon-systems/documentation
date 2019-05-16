@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import Header from './header'
 
 const Layout = ({ children }) => {
   return (
@@ -10,6 +11,7 @@ const Layout = ({ children }) => {
         <link rel="stylesheet" href="https://pantheon.io/docs/assets/compiled/compiled.css?v=12.6"/>
         <script src="https://pantheon.io/docs/assets/js/main.js" />
       </header>
+      <Header/>
       {children}
     </>
   );
