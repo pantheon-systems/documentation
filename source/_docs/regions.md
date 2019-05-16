@@ -1,6 +1,6 @@
 ---
 title: Create a New Site in your Choice of Pantheon Region
-description: Learn how to get Limited Availability access to and launch sites in a specific Region.
+description: Learn how to get Limited Availability access to and launch sites in a specific Pantheon Region.
 tags: [create, regions]
 categories: []
 contributors: [edwardangert, rachelwhitton, ari]
@@ -14,13 +14,13 @@ The documentation on this page discusses features and options that are not yet a
 
 Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from a Pantheon Region outside of the US default.
 
-During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in your choice of Region before the feature becomes generally available in late 2019.
+During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US Region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in your choice of region before the feature becomes generally available in late 2019.
 
 ## Use Cases
-There are many scenarios in which you might prefer running a site in a data center outside of the default United States region. Common use cases include:
+There are many scenarios in which you might prefer running a site in a data center outside of the default United States Region. Common use cases include:
 
 * Compliance standards that require data residency within the borders of Australia or the European Union
-* Improved performance and user experience for authenticated traffic originating near the desired Region
+* Improved performance and user experience for authenticated traffic originating near the desired region
 
 ## Region Availability
 Once enabled, this Organization-wide feature allows <a href="/docs/change-management/#organizations-roles-and-permissions" data-proofer-ignore>privileged users</a> to designate one of two available regions at the time of site creation:
@@ -35,7 +35,7 @@ Pantheon sites running in Europe have all site resources in the EU. Pantheon sit
 
 Automated and manual backups of all site components (code, database, and files) are stored in the local region, and created by job workers also running in the region. Additionally, any database or file clones between site environments are run by local job workers.
 
-Localized, Region-specific [Disaster Recovery](/docs/disaster-recovery/) is also available.
+Localized, region-specific [Disaster Recovery](/docs/disaster-recovery/) is also available.
 
 With this set of region-specific resources, now you can run WordPress or Drupal sites on Pantheon and meet local legal, regulatory, or data sovereignty requirements.
 
@@ -44,7 +44,7 @@ With this set of region-specific resources, now you can run WordPress or Drupal 
 1. Install and authenticate [Terminus](/docs/terminus/). The commands used here require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/docs/terminus/updates/).
 1. Use Terminus to create a new site associated with your organization and include the `--region=` option.
 
- - Available Region codes are:
+ - Available region codes are:
    - `us`
    - `aus`
    - `eu`
