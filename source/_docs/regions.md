@@ -1,5 +1,5 @@
 ---
-title: Create a New Site in your choice of Pantheon Region
+title: Create a New Site in your Choice of Pantheon Region
 description: Learn how to get Limited Availability access to and launch sites in a specific Region.
 tags: [create, regions]
 categories: []
@@ -59,7 +59,7 @@ With this set of region-specific resources, now you can run WordPress or Drupal 
 
   See `terminus site:create --help` for more information on the options and values used in this command.
 
-## Migrate an Existing Site to Another Region
+## Migrate an Existing Site to a New Region
 To migrate an existing site from one region to another, create the new site as described above, then follow the [Manually Migrate Sites to Pantheon](/docs/migrate-manual/#import-your-code) doc. The [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) section of the Relaunch doc is a good resource to help make the transition to your new live site smooth.
 
 If you want help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available.
@@ -122,9 +122,9 @@ Coming soon:
 
 ## Frequently Asked Questions
 ### Can I move an existing site to a new region?
-Yes, however you must migrate your existing site to a new Site that was configured for the new region during creation ([as described above](#create-a-new-site)).
+Yes, however you must migrate your existing site to a new site that was configured for the new region during creation ([as described above](#create-a-new-site)).
 
-### When will access to Pantheon's Regions be available for sites paid by credit card?
+### When will region selection be available for sites paid by credit card?
 General availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external}.
 
 ### When will site creation through the Dashboard be available?
