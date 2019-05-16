@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 const Footer = ({ data }) => {
-    console.table(data);
+
   return (
     <div className="container-fluid">
       <div className="row">

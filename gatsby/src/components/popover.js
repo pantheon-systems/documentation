@@ -1,10 +1,10 @@
 import React from "react"
 
-const Popover = ({ icon, content }) => { 
+const Popover = ({ icon, content }) => {
 
   return (
     <a
-      rel="popover"
+      rel="tooltip"
       data-proofer-ignore
       data-toggle="tooltip"
       data-html="true"
@@ -16,5 +16,3 @@ const Popover = ({ icon, content }) => {
 }
 
 export default Popover
-
-
