@@ -28,6 +28,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/../source/docs/assets/images`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/../source/content`,
         name: `content`,
       },
@@ -43,6 +50,8 @@ module.exports = {
             options: {
               maxWidth: 1035,
               sizeByPixelDensity: true,
+              showCaptions: true,
+              linkImagesToOriginal: false,
             },
           },
           {
