@@ -206,7 +206,7 @@ const Footer = ({ data }) => {
                             <div className="col-lg-12 col-sm-6 market-subscribe-footer">
                               <script src="https://app-ab05.marketo.com/js/forms2/js/forms2.min.js" />
                               <form id="mktoForm_2014" name="mktoForm_2014" />
-                              <script>{
+                              {/* <script>{
                                 MktoForms2.loadForm("https://app-ab05.marketo.com","316-GSV-089",2014,function(o)
                                 {o.onSuccess(function(t, m) {
                                   return (
@@ -218,7 +218,7 @@ const Footer = ({ data }) => {
                                   )
                                 })}
                                 )}
-                              </script>
+                              </script> */}
                             </div>
                           </div>
                         </div>
