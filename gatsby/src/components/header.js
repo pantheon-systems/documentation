@@ -31,13 +31,14 @@ class Header extends Component {
                 <a
                   href="https://pantheon.io/register"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="cta cta-yellow"
                 >
                   Get Free Account
                 </a>
               </li>
               <li className="">
-                <a href="https://dashboard.pantheon.io" target="_blank">
+                <a href="https://dashboard.pantheon.io" target="_blank" rel="noopener noreferrer">
                   Log In
                 </a>
               </li>
@@ -45,6 +46,7 @@ class Header extends Component {
                 <a
                   href="https://dashboard.pantheon.io/#support/support/all"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Support
                 </a>
@@ -56,7 +58,7 @@ class Header extends Component {
                   role="button"
                   aria-haspopup="true"
                   aria-expanded="false"
-                 style={{ paddingLeft:'15px', paddingRight:'25px'}}
+                  style={{ paddingLeft: '15px', paddingRight: '25px' }}
                 >
                   Documentation
                 </a>
@@ -135,10 +137,9 @@ class Header extends Component {
             <div className="navsearch-container">
               <div className="navsearch form-group has-feedback">
                 <div className="container container-navsearch-box">
-                <form id="searchform" action="/docs/search" acceptCharset="UTF-8" encType="application/x-www-form-urlencoded">
-                    <input type="search" className="addsearch"  placeholder="Search Pantheon Documentation" />
-                </form>
-
+                  <form id="searchform" action="/docs/search" acceptCharset="UTF-8" encType="application/x-www-form-urlencoded">
+                    <input type="search" className="addsearch" placeholder="Search Pantheon Documentation" />
+                  </form>
                   <span
                     className="glyphicon glyphicon-search form-control-feedback"
                     aria-hidden="true"

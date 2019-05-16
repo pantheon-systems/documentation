@@ -1,15 +1,16 @@
 import React from "react"
 
-const Popover = ({ icon, content }) => {
+const Popover = ({ icon, content }) => { 
+
   return (
-   <a
+    <a
       rel="popover"
       data-proofer-ignore
       data-toggle="tooltip"
       data-html="true"
       data-content={content}
     >
-      <em className={`fa fa-${icon}`} /> 
+      <em className={`fa fa-${icon}`} />
     </a>
   )
 }

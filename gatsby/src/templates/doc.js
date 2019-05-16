@@ -4,10 +4,9 @@ import { graphql } from "gatsby"
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 import { MDXProvider } from '@mdx-js/react'
 
-// import SiteInfo from "../components/siteInfo"
 import Layout from "../components/layout"
+// import SiteInfo from "../components/siteInfo"
 // import SEO from "../components/seo"
-// import { rhythm, scale } from "../utils/typography"
 
 import Callout from "../components/callout"
 import Alert from "../components/alert"
@@ -19,8 +18,16 @@ import Contributors from "../components/contributors"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
 
-
-const shortcodes = { Callout, Alert, Accordion, ExternalLink, Icon, Popover, TabList, Tab }
+const shortcodes = {
+  Callout,
+  Alert,
+  Accordion,
+  ExternalLink,
+  Icon,
+  Popover,
+  TabList,
+  Tab,
+}
 
 class DocTemplate extends React.Component {
   render() {
@@ -31,19 +38,18 @@ class DocTemplate extends React.Component {
         <div className="container">
           <div className="row doc-content-well">
             <div id="doc" class="article col-md-9 md-70">
-            <h1>{node.frontmatter.title}</h1>
-            <p className="article-subhead">
-              {node.frontmatter.description}
-            </p>
-            <Contributors contributors={node.frontmatter.contributors}/>
-            <MDXProvider components={shortcodes}>
-              <MDXRenderer>{node.code.body}</MDXRenderer>
-            </MDXProvider>
-          </div>
-
+              <h1>{node.frontmatter.title}</h1>
+              <p className="article-subhead">
+                {node.frontmatter.description}
+              </p>
+              <Contributors contributors={node.frontmatter.contributors} />
+              <MDXProvider components={shortcodes}>
+                <MDXRenderer>{node.code.body}</MDXRenderer>
+              </MDXProvider>
+            </div>
             <div class="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top" role="complementary">
             </div>
-        </div>
+          </div>
         </div>
       </Layout>
     )

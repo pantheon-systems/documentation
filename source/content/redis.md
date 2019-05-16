@@ -232,7 +232,7 @@ terminus connection:set <site>.<env> git
 ## Use the Redis Command-Line Client
 You don't need to install anything locally to use Redis on Pantheon. However, if you want to manually connect to the Pantheon-hosted Redis server for debugging, you'll need to install Redis on your machine.
 
-1. Download Redis at <ExternalLink text={"https://redis.io/download"} link={"https://redis.io/download"}/> and install it on your local computer. Mac users may prefer to install Redis using <ExternalLink text={"Homebrew"} link={"(https://brew.sh/)"}/>(`brew install redis`).
+1. Download Redis at <ExternalLink text={"https://redis.io/download"} link={"https://redis.io/download"}/> and install it on your local computer. Mac users may prefer to install Redis using <ExternalLink text={"Homebrew"} link={"https://brew.sh/"}/>(`brew install redis`).
 2. From the Site Dashboard, select the desired environment (Dev, Test, or Live).
 3. Click the **Connection Info** button, copy the Redis connection string, and run the command in your local terminal.
 4. To verify that Redis is working, use the Redis Connection Info from the Dashboard. Once you've logged in, execute the following command:
