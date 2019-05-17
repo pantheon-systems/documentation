@@ -6,7 +6,6 @@ categories: []
 contributors: [cityofoaksdesign,bmackinney]
 ---
 
-
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 <Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
@@ -32,12 +31,11 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 <TabList>
 
-  <Tab title="WordPress" id={"tab-1"} active={true}>
-
+  <Tab title="WordPress" id={"wp-install"} active={true}>
 
 1. Enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
-2. Install the <ExternalLink text={"WP Redis"} link={"https://wordpress.org/plugins/wp-redis/"}/> plugin via SFTP or Git. To install via [Terminus](/docs/terminus), [set the connection mode to SFTP](/docs/sftp) then run:
+2. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/"}/> plugin via SFTP or Git. To install via [Terminus](/docs/terminus), [set the connection mode to SFTP](/docs/sftp) then run:
 
     ```
     terminus wp <site>.<env> -- plugin install wp-redis
@@ -85,7 +83,7 @@ terminus connection:set <site>.<env> git
 ```
 
 2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) if you have not done so already.
-3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using <ExternalLink text={"koodimonni/composer-dropin-installer"} link={"  https://github.com/Koodimonni/Composer-Dropin-Installer"}/>
+3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer).
  :
 
     ```json
@@ -121,26 +119,19 @@ terminus connection:set <site>.<env> git
     git push origin master
     ```
 
-
-
 </Accordion>
-
-
 
   </Tab>
 
-  <Tab title="Drupal 8" id={"tab-2"}>
+  <Tab title="Drupal 8" id={"d8-install"}>
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
-2. Install and activate the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module from Drupal.org.
-
+2. Install and activate the [Redis])https://www.drupal.org/project/redis) module from Drupal.org.
 
 <Alert title="Note" type="info">
   <p>You <strong>must</strong> activate the module before proceeding.
     </p>
 </Alert>
-
-
 
     You can install and enable the module from the command line using [Terminus](/docs/terminus):
 
@@ -168,12 +159,12 @@ terminus connection:set <site>.<env> git
       $settings['cache']['bins']['form']      = 'cache.backend.database';
     }
     ```
-4. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
+4. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client.".
 
 
   </Tab>
 
-  <Tab title="Drupal 7" id={"tab-3"}>
+  <Tab title="Drupal 7" id={"d7-install"}>
 
 <Alert title="Note" type="info">
   <p>
@@ -228,11 +219,10 @@ terminus connection:set <site>.<env> git
   
 </TabList>
 
-
 ## Use the Redis Command-Line Client
 You don't need to install anything locally to use Redis on Pantheon. However, if you want to manually connect to the Pantheon-hosted Redis server for debugging, you'll need to install Redis on your machine.
 
-1. Download Redis at <ExternalLink text={"https://redis.io/download"} link={"https://redis.io/download"}/> and install it on your local computer. Mac users may prefer to install Redis using <ExternalLink text={"Homebrew"} link={"https://brew.sh/"}/>(`brew install redis`).
+1. Download Redis at [https://redis.io/download](https://redis.io/download) and install it on your local computer. Mac users may prefer to install Redis using [Homebrew](https://brew.sh) `brew install redis`.
 2. From the Site Dashboard, select the desired environment (Dev, Test, or Live).
 3. Click the **Connection Info** button, copy the Redis connection string, and run the command in your local terminal.
 4. To verify that Redis is working, use the Redis Connection Info from the Dashboard. Once you've logged in, execute the following command:
@@ -310,7 +300,6 @@ When the Dashboard status check reports that Redis is enabled but doesn't have a
 
 Example of a block that will result in an **incorrectly configured cache backend**:
 
-
 ```php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
   $_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
@@ -366,7 +355,7 @@ Fatal error: require_once(): Failed opening required
 
 ### Drupal 6 Cache Backport
 
-If you have a Drupal 6 site, you will also need the <ExternalLink text={"Cache Backport"} link={"https://drupal.org/project/cache_backport"}/> module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6. See <ExternalLink text={"INSTALL.TXT"} link={"http://drupalcode.org/project/cache_backport.git/blob_plain/HEAD:/INSTALL.txt"}/> for how to configure Cache Backport.
+If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport) module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6. See [INSTALL.TXT](http://drupalcode.org/project/cache_backport.git/blob_plain/HEAD:/INSTALL.txt) for how to configure Cache Backport.
 
 If you see the following message:
 
@@ -382,7 +371,7 @@ $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 ```
 
 ### You have requested a non-existent service
-The following error occurs when modifying configurations for the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module before it has been enabled:
+The following error occurs when modifying configurations for the [Redis](https://www.drupal.org/project/redis) module before it has been enabled:
 
 ```php
 Symfony\Component\DependencyInjection\Exception\ServiceNotFoundException:
@@ -411,7 +400,7 @@ Install and enable the module to resolve.
 ### What happens when Redis reaches maxmemory?
 When the specified amount of memory is reached, Redis follows the `maxmemory-policy` configuration directive, which is defined in the platform `redis.conf` file. 
 
-On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added. For more information, please see the official <ExternalLink text={"Redis documentation"} link={"https://redis.io/topics/lru-cache"}/>.
+On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added. For more information, please see the official [Redis documentation](https://redis.io/topics/lru-cache).
 
 ### How is Redis configured on the platform?
 Your `redis.conf` file can be retrieved via SFTP similarly to how you can download Redis log files (see below), or you can review it here:
@@ -469,8 +458,7 @@ The following code changes are required before Redis can be safely uninstalled a
 
   <Tab title="WordPress" id={"wp-uninstall"} active={true}>
 
-
-1. Uninstall the <ExternalLink text={"WP Redis"} link={"https://wordpress.org/plugins/wp-redis/"}/> plugin.
+1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin.
 2. Delete the <code>wp-content/object-cache.php</code> file.
 3. Commit and deploy code changes to the Live environment.
 4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
@@ -481,7 +469,7 @@ The following code changes are required before Redis can be safely uninstalled a
 
   <Tab title="Drupal 8" id={"d8-uninstall"}>
 
-1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
+1. Disable the [Redis](https://www.drupal.org/project/redis) module.
 2. Delete Redis configuration from <code>settings.php</code>.
 3. Commit and deploy code changes to the Live environment.
 4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
@@ -492,7 +480,7 @@ The following code changes are required before Redis can be safely uninstalled a
 
   <Tab title="Drupal 7" id={"d7-uninstall"}>
 
-1. Disable the <ExternalLink text={"Redis"} link={"https://www.drupal.org/project/redis"}/> module.
+1. Disable the [Redis](https://www.drupal.org/project/redis) module.
 2. Delete Redis configuration from <code>settings.php</code>.
 3. Commit and deploy code changes to the Live environment.
 4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
