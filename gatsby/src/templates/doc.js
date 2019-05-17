@@ -21,6 +21,7 @@ import TOC from "../components/toc"
 import Github from "../components/github"
 import Twitter from "../components/twitter"
 import Slack from "../components/slack"
+import GetFeedback from "../components/getFeedback"
 
 const shortcodes = {
   Callout,
@@ -75,6 +76,7 @@ class DocTemplate extends React.Component {
             </div>
           </div>
         </div>
+        <GetFeedback />
       </Layout>
     )
   }
