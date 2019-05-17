@@ -35,7 +35,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 1. Enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
-2. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/"}/> plugin via SFTP or Git. To install via [Terminus](/docs/terminus), [set the connection mode to SFTP](/docs/sftp) then run:
+2. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. To install via [Terminus](/docs/terminus), [set the connection mode to SFTP](/docs/sftp) then run:
 
     ```
     terminus wp <site>.<env> -- plugin install wp-redis
