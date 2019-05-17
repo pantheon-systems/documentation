@@ -12,7 +12,7 @@ const Contributors = ({ contributors }) => {
               lastCharacter = ", "
             }
             return (
-              <>
+              <React.Fragment key={i}>
                 <a
                   key={i}
                   href={`/docs/contributors/${contributor.id}`}
@@ -21,7 +21,7 @@ const Contributors = ({ contributors }) => {
                   {contributor.name}
                 </a>
                 {lastCharacter}
-              </>
+              </React.Fragment>
             )
           })}
         </small>

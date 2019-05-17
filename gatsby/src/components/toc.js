@@ -1,9 +1,9 @@
 import React from "react"
 
 class TOC extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+  // constructor(props) {
+  //   super(props)
+  // }
 
   componentDidMount() {
     const windowGlobal = typeof window !== "undefined" && window

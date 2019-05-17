@@ -8,7 +8,7 @@ const Twitter = () => {
       scrolling="no"
       frameBorder="0"
       allowtransparency="true"
-      class="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
+      className="twitter-share-button twitter-share-button-rendered twitter-tweet-button"
       title="Twitter Tweet Button"
       src="https://platform.twitter.com/widgets/tweet_button.fb066ff7f5f4afee7716887031da2ea8.en.html#dnt=false&amp;
         id=twitter-widget-0&amp;
