@@ -8,7 +8,7 @@ const Slack = () => {
       className="__slackin"
       style={{
         borderWidth: 0,
-        width: "119px",
+        width: "200px",
         height: "20px",
         visibility: "visible",
         marginLeft: 3,
