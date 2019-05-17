@@ -33,6 +33,11 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 ## Test and Release Pantheon Core Updates
 
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+To maintain best practice, some of the steps in this section require access to the [Multidev](/docs/multidev/) feature. Those steps can be skipped, but it isn't recommended.
+</div>
+
 1. From your local clone of your Custom Upstream repository, add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote){.external} if you haven't done so already:
 
     <!-- Nav tabs -->
