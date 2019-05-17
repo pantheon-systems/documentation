@@ -18,6 +18,8 @@ import Contributors from "../components/contributors"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
 import TOC from "../components/toc"
+import Github from "../components/github"
+import Twitter from "../components/twitter"
 
 const shortcodes = {
   Callout,
@@ -38,9 +40,12 @@ class DocTemplate extends React.Component {
       placement: "right",
     })
   }
-  
+
   render() {
     const node = this.props.data.mdx
+    const patt = /[^/]*\.md/
+    const sourceName = patt.exec(node.fileAbsolutePath)
+    const sourcePath = `/docs/${sourceName[0].replace(".md", "")}`
 
     return (
       <Layout>
@@ -50,6 +55,14 @@ class DocTemplate extends React.Component {
               <h1>{node.frontmatter.title}</h1>
               <p className="article-subhead">{node.frontmatter.description}</p>
               <Contributors contributors={node.frontmatter.contributors} />
+              <Github
+                sourceName={sourceName[0]}
+                pageTitle={node.frontmatter.title}
+                path={sourcePath}
+              />
+              <Twitter 
+                pageTitle={node.frontmatter.title} 
+                path={sourcePath} />
               <MDXProvider components={shortcodes}>
                 <MDXRenderer>{node.code.body}</MDXRenderer>
               </MDXProvider>
@@ -85,6 +98,7 @@ export const pageQuery = graphql`
           name
         }
       }
+      fileAbsolutePath
     }
   }
 `

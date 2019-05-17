@@ -21,6 +21,7 @@ class Accordion extends Component {
         <div className="panel panel-drop panel-guide" id="accordion">
           <div className="panel-heading panel-drop-heading">
             <a
+              href={`#${this.props.id}`}
               className={`accordion-toggle panel-drop-title ${this.state.isCollapsed ? '' : 'collapsed'}`}
               data-toggle={classCollapsed}
               data-parent="#accordion"

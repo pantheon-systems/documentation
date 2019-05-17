@@ -33,7 +33,7 @@ class TabList extends React.Component {
             return (
               <li key={i} id={`${id}-id`} role="presentation" className={className}>
                 <a
-                  // href={`#${id}`}
+                  href={`#${id}`}
                   aria-controls={id}
                   role="tab"
                   data-toggle="tab"
