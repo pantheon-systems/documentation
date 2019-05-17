@@ -20,6 +20,7 @@ import Tab from "../components/tab"
 import TOC from "../components/toc"
 import Github from "../components/github"
 import Twitter from "../components/twitter"
+import Slack from "../components/slack"
 
 const shortcodes = {
   Callout,
@@ -59,7 +60,10 @@ class DocTemplate extends React.Component {
                 pageTitle={node.frontmatter.title}
                 path={sourcePath}
               />
-              <Twitter pageTitle={node.frontmatter.title} path={sourcePath} />
+              <Twitter 
+                pageTitle={node.frontmatter.title} 
+                path={sourcePath} />
+              <Slack/>
               <MDXProvider components={shortcodes}>
                 <MDXRenderer>{node.code.body}</MDXRenderer>
               </MDXProvider>

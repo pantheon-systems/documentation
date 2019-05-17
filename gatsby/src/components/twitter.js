@@ -18,7 +18,12 @@ const Twitter = ({ pageTitle, path }) => {
         time=${Date.now()};
         type=share;
         url=https%3A%2F%2Fpantheon.io${path}`}
-      style={{ width: 60, height: 25 }}
+      style={{
+        position: "static",
+        visibility: "visible",
+        width: "60px",
+        height: "20px",
+      }}
     />
   )
 }
