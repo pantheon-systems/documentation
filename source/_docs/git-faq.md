@@ -83,9 +83,10 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
    ```
    git checkout <commit ID> -- <file>
    ```
-    <div class="alert alert-info" role="alert">
-    <h4 class="info">Note</h4>
-    <p>When looking for a commit ID, you can find the last instance where the missing file was in the repository. </p></div>
+    <div class="alert alert-info" role="alert" markdown="1">
+    #### Note {.info}
+    When looking for a commit ID, you can find the last instance where the missing file was in the repository.
+    </div>
 
 2. Run `git status` and verify that there is a new file to add to the repository:
 
@@ -121,7 +122,7 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
 
    ![Git Clone](/source/docs/assets/images/dashboard/git-string.png)
 
-1. From the repository directory, pull the multidev branch to master. In the example below, replace `multidev` with the Multidev environment name:
+1. From the repository directory, pull the Multidev branch to master. In the example below, replace `multidev` with the Multidev environment name:
 
    ```bash
    git checkout master
@@ -130,9 +131,9 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
 
 1. Git will tell you which files are in conflict. Open them, and search for the conflicting sections.
 
-   The version from the master branch will be delineated with `<<<<<<< HEAD`, and the version from the multidev environment will end with `>>>>>>> Commit Message`, with `=======` in between.
+   The version from the master branch will be delineated with `<<<<<<< HEAD`, and the version from the Multidev environment will end with `>>>>>>> Commit Message`, with `=======` in between.
 
-1. After you resolve the conflict, commit the results:
+1. After you resolve the conflict, add the modified file and commit the results:
 
    ```bash
    git commit -am "Resolve merge conflict"
