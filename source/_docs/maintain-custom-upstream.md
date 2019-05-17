@@ -160,7 +160,7 @@ if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANT
 }
 ```
 
-Remember that this file is not included in the custom upstream and needs to exists uniquely on each installation, so you will need to create one for each of your sites. You can then expand that conditional to lean on specific environments using this [guide](/docs/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
+Remember that this file is not included in the custom upstream and needs to exist uniquely on each installation, so you will need to create one for each of your sites. You can then expand that conditional to lean on specific environments using instructions in the [Configuring wp-config.php](/docs/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment) doc.
 
 For WordPress sites, another option is to store redirects in an [MU-Plugin](/docs/mu-plugin/).
 
