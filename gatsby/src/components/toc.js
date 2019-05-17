@@ -1,35 +1,36 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
-class TOC extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  // }
+const TOC = ({ title }) => {
+  const [initialized, setInitialized] = useState(false)
 
-  componentDidMount() {
-    const windowGlobal = typeof window !== "undefined" && window
+  useEffect(() => {
+    if (!initialized) {
+      const windowGlobal = typeof window !== "undefined" && window
 
-    if (windowGlobal && windowGlobal.tocbot) {
-      windowGlobal.tocbot.init({
-        // Where to render the table of contents.
+      const settings = {
         tocSelector: ".toc-placeholder",
-        // Where to grab the headings to build the table of contents.
         contentSelector: "#doc",
         orderedList: false,
-        headingSelector: "h1, h2, h3",
-      })
+        headingSelector: "h2, h3",
+        hasInnerContainers: true,
+        extraListClasses: "nav nav-list",
+        listItemClass: "tocify-item",
+      }
+
+      if (windowGlobal && windowGlobal.tocbot) {
+        windowGlobal.tocbot.init(settings)
+      }
+
+      setInitialized(true)
     }
-  }
+  })
 
-  render() {
-    const { title } = this.props
-
-    return (
-      <div id="toc" className="tocbot">
-        <h4>{title || "Table of Contents"}</h4>
-        <div className="toc-placeholder" />
-      </div>
-    )
-  }
+  return (
+    <div id="toc" className="tocbot">
+      <h4>{title || "Table of Contents"}</h4>
+      <div className="toc-placeholder" />
+    </div>
+  )
 }
 
 export default TOC

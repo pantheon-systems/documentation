@@ -33,7 +33,6 @@ const shortcodes = {
 }
 
 class DocTemplate extends React.Component {
-  
   componentDidMount() {
     window.jQuery('[data-toggle="tooltip"]').popover({
       trigger: "hover",
@@ -60,9 +59,7 @@ class DocTemplate extends React.Component {
                 pageTitle={node.frontmatter.title}
                 path={sourcePath}
               />
-              <Twitter 
-                pageTitle={node.frontmatter.title} 
-                path={sourcePath} />
+              <Twitter pageTitle={node.frontmatter.title} path={sourcePath} />
               <MDXProvider components={shortcodes}>
                 <MDXRenderer>{node.code.body}</MDXRenderer>
               </MDXProvider>

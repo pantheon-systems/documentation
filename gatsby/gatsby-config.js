@@ -1,8 +1,8 @@
-const dotenv = require('dotenv');
+const dotenv = require("dotenv")
 
 dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`
-});
+  path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
   pathPrefix: `/docs`,
@@ -15,7 +15,7 @@ module.exports = {
     },
   },
   mapping: {
-    'Mdx.frontmatter.contributors': 'ContributorYaml',
+    "Mdx.frontmatter.contributors": "ContributorYaml",
   },
   plugins: [
     {
@@ -43,10 +43,10 @@ module.exports = {
     {
       resolve: `gatsby-mdx`,
       options: {
-        extensions: ['.mdx', '.md'],
+        extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: "gatsby-remark-images",
             options: {
               maxWidth: 1035,
               sizeByPixelDensity: true,
@@ -57,7 +57,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: 'language-',
+              classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
             },
@@ -67,7 +67,10 @@ module.exports = {
             options: {
               target: null,
               rel: "nofollow noopener noreferrer external",
-            }
+            },
+          },
+          {
+            resolve: `gatsby-remark-slug`,
           },
         ],
       },
@@ -75,12 +78,12 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Open Sans']
-        }
-      }
+          families: ["Open Sans"],
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
