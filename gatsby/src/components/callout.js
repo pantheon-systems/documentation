@@ -1,5 +1,5 @@
-import React from 'react';
-import ExternalLink from './externalLink';
+import React from "react"
+import ExternalLink from "./externalLink"
 
 const Callout = ({ type, children, title, link }) => {
   return (
@@ -9,7 +9,7 @@ const Callout = ({ type, children, title, link }) => {
       </h4>
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default Callout;
+export default Callout

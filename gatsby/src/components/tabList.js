@@ -25,13 +25,21 @@ class TabList extends React.Component {
               .toLowerCase()
             let className = ""
 
-            if (id === this.state.activeTab || (tab.props.active & this.state.activeTab === "")) {
+            if (
+              id === this.state.activeTab ||
+              tab.props.active & (this.state.activeTab === "")
+            ) {
               className = "active"
               activeTab = id
             }
 
             return (
-              <li key={i} id={`${id}-id`} role="presentation" className={className}>
+              <li
+                key={i}
+                id={`${id}-id`}
+                role="presentation"
+                className={className}
+              >
                 <a
                   href={`#${id}`}
                   aria-controls={id}

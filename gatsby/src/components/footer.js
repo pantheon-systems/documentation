@@ -2,7 +2,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 const Footer = ({ data }) => {
-
   return (
     <div className="container-fluid">
       <div className="row">
@@ -137,7 +136,19 @@ const Footer = ({ data }) => {
                     <div className="row">
                       <div className="col-md-12">
                         <div className="copyright">
-                          © 2014-{new Date().getFullYear()} Pantheon <span>|</span> 717 California Street, San Francisco, CA <span className="responsive-pipe">|</span> <a className="new-line" href="https://pantheon.io/privacy">Privacy Policy</a> <span>|</span> <a href="https://pantheon.io/pantheon-terms-service">Terms of Use</a>
+                          © 2014-{new Date().getFullYear()} Pantheon{" "}
+                          <span>|</span> 717 California Street, San Francisco,
+                          CA <span className="responsive-pipe">|</span>{" "}
+                          <a
+                            className="new-line"
+                            href="https://pantheon.io/privacy"
+                          >
+                            Privacy Policy
+                          </a>{" "}
+                          <span>|</span>{" "}
+                          <a href="https://pantheon.io/pantheon-terms-service">
+                            Terms of Use
+                          </a>
                         </div>
                       </div>
                     </div>
@@ -187,7 +198,8 @@ const Footer = ({ data }) => {
                                 className="blog-link"
                                 href="https://pantheon.io/blog"
                               >
-                                Pantheon Blog<i className="fa fa-angle-right" />
+                                Pantheon Blog
+                                <i className="fa fa-angle-right" />
                               </a>
                             </li>
                           </ul>
@@ -239,10 +251,16 @@ const Footer = ({ data }) => {
 }
 
 export default props => (
-    <StaticQuery
-      query={graphql`
+  <StaticQuery
+    query={graphql`
       {
-        allFile(filter: {relativePath: {in: ["pantheon-logo-symbol.svg", "CC-BY-SA_icon.png"]}}) {
+        allFile(
+          filter: {
+            relativePath: {
+              in: ["pantheon-logo-symbol.svg", "CC-BY-SA_icon.png"]
+            }
+          }
+        ) {
           edges {
             node {
               id
@@ -250,8 +268,8 @@ export default props => (
             }
           }
         }
-      }          
-      `}
-      render={data => <Footer data={data} {...props} />}
-    />
-  )
+      }
+    `}
+    render={data => <Footer data={data} {...props} />}
+  />
+)

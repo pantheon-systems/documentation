@@ -1,7 +1,6 @@
 import React from "react"
 
-const Github = ({sourceName, pageTitle, path}) => {
-    
+const Github = ({ sourceName, pageTitle, path }) => {
   return (
     <div className="dropdown">
       <button

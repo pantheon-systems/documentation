@@ -34,12 +34,16 @@ const Header = ({ data }) => (
               className="cta cta-yellow"
             >
               Get Free Account
-                </a>
+            </a>
           </li>
           <li className="">
-            <a href="https://dashboard.pantheon.io" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://dashboard.pantheon.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Log In
-                </a>
+            </a>
           </li>
           <li className="">
             <a
@@ -48,7 +52,7 @@ const Header = ({ data }) => (
               rel="noopener noreferrer"
             >
               Support
-                </a>
+            </a>
           </li>
           <li className="dropdown">
             <a
@@ -57,10 +61,10 @@ const Header = ({ data }) => (
               role="button"
               aria-haspopup="true"
               aria-expanded="false"
-              style={{ paddingLeft: '15px', paddingRight: '25px' }}
+              style={{ paddingLeft: "15px", paddingRight: "25px" }}
             >
               Documentation
-                </a>
+            </a>
 
             <ul id="dropmenu" className="dropdown-menu">
               <div className="row sub-menu-top">
@@ -68,22 +72,22 @@ const Header = ({ data }) => (
                   <li>
                     <a id="get-started" href="/docs/get-started">
                       Get Started
-                        </a>
+                    </a>
                   </li>
                   <li>
                     <a id="develop" href="/docs/develop">
                       Develop
-                        </a>
+                    </a>
                   </li>
                   <li>
                     <a id="go-live" href="/docs/go-live">
                       Go Live
-                        </a>
+                    </a>
                   </li>
                   <li>
                     <a id="platform" href="/docs/platform">
                       Explore Platform Architecture
-                        </a>
+                    </a>
                   </li>
                 </div>
 
@@ -91,22 +95,22 @@ const Header = ({ data }) => (
                   <li>
                     <a id="automate" href="/docs/automate">
                       Automate & Integrate
-                        </a>
+                    </a>
                   </li>
                   <li>
                     <a id="performance" href="/docs/performance">
                       Optimize Performance
-                        </a>
+                    </a>
                   </li>
                   <li>
                     <a id="manage" href="/docs/manage">
                       Manage Teams & Organizations
-                        </a>
+                    </a>
                   </li>
                   <li>
                     <a id="troubleshoot" href="/docs/troubleshoot">
                       Troubleshoot
-                        </a>
+                    </a>
                   </li>
                 </div>
               </div>
@@ -116,7 +120,7 @@ const Header = ({ data }) => (
                   <li>
                     <a id="changelogs" href="/docs/changelog">
                       Changelog
-                        </a>
+                    </a>
                   </li>
                   <li>
                     <a id="getting-started-guide" href="/docs/guides/">
@@ -126,7 +130,7 @@ const Header = ({ data }) => (
                   <li>
                     <a id="terminus" href="/docs/terminus">
                       Terminus Manual
-                        </a>
+                    </a>
                   </li>
                 </div>
               </div>
@@ -136,8 +140,17 @@ const Header = ({ data }) => (
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box">
-              <form id="searchform" action="/docs/search" acceptCharset="UTF-8" encType="application/x-www-form-urlencoded">
-                <input type="search" className="addsearch" placeholder="Search Pantheon Documentation" />
+              <form
+                id="searchform"
+                action="/docs/search"
+                acceptCharset="UTF-8"
+                encType="application/x-www-form-urlencoded"
+              >
+                <input
+                  type="search"
+                  className="addsearch"
+                  placeholder="Search Pantheon Documentation"
+                />
               </form>
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
@@ -156,7 +169,7 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        logo: file(relativePath: {eq: "Pantheon_Color_rev_clear.png"}) {
+        logo: file(relativePath: { eq: "Pantheon_Color_rev_clear.png" }) {
           childImageSharp {
             fluid {
               src

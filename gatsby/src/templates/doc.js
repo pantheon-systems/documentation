@@ -60,9 +60,7 @@ class DocTemplate extends React.Component {
                 pageTitle={node.frontmatter.title}
                 path={sourcePath}
               />
-              <Twitter 
-                pageTitle={node.frontmatter.title} 
-                path={sourcePath} />
+              <Twitter pageTitle={node.frontmatter.title} path={sourcePath} />
               <Slack />
               <MDXProvider components={shortcodes}>
                 <MDXRenderer>{node.code.body}</MDXRenderer>

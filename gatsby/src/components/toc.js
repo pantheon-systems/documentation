@@ -12,7 +12,7 @@ const TOC = ({ title }) => {
         contentSelector: "#doc",
         orderedList: false,
         headingSelector: "h2, h3",
-        ignoreSelector: '.panel-title',
+        ignoreSelector: ".panel-title",
         hasInnerContainers: true,
         extraListClasses: "nav nav-list",
         listItemClass: "tocify-item",

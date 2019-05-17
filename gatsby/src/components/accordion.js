@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-
+import React, { Component } from "react"
 
 class Accordion extends Component {
   constructor(props) {
@@ -22,7 +21,9 @@ class Accordion extends Component {
           <div className="panel-heading panel-drop-heading">
             <a
               href={`#${this.props.id}`}
-              className={`accordion-toggle panel-drop-title ${this.state.isCollapsed ? '' : 'collapsed'}`}
+              className={`accordion-toggle panel-drop-title ${
+                this.state.isCollapsed ? "" : "collapsed"
+              }`}
               data-toggle={classCollapsed}
               data-parent="#accordion"
               data-proofer-ignore=""
@@ -30,12 +31,8 @@ class Accordion extends Component {
               aria-expanded="false"
               onClick={this.collapseAccordion}
             >
-              <h3
-                className="panel-title panel-drop-title info"
-              >
-                <span
-                  className={`glyphicons glyphicons-${this.props.icon}}`}
-                />
+              <h3 className="panel-title panel-drop-title info">
+                <span className={`glyphicons glyphicons-${this.props.icon}}`} />
                 {this.props.title}
               </h3>
             </a>
@@ -45,9 +42,7 @@ class Accordion extends Component {
             className={classCollapsed}
             aria-expanded="false"
           >
-            <div className="panel-inner" >
-              {this.props.children}
-            </div>
+            <div className="panel-inner">{this.props.children}</div>
           </div>
         </div>
       </>
