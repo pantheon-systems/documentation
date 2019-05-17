@@ -11,8 +11,6 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        {props.headComponents}
-
         {/* Pantheon previous scripts and styles */}
         <link
           rel="stylesheet"
@@ -25,6 +23,7 @@ export default function HTML(props) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js" />
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
         <script src="https://pantheon.io/docs/assets/js/main.js?v=2.4.0" />
+        {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
