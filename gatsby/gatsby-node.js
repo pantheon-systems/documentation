@@ -7,7 +7,7 @@ const calculateSlug = (node, getNode) => {
     return node.frontmatter.permalink.replace(":basename", fileName);
   }
 
-  return fileName;
+  return `/docs/${fileName}`;
 };
 
 exports.onCreateWebpackConfig = ({ actions }) => {
@@ -43,7 +43,7 @@ exports.createPages = ({ graphql, actions }) => {
     const docs = result.data.allDocs.edges
     docs.forEach((doc) => {
       createPage({
-        path: `/docs/${doc.node.fields.slug}`,
+        path: doc.node.fields.slug,
         component: path.resolve(`./src/templates/doc.js`),
         context: {
           slug: doc.node.fields.slug
