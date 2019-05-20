@@ -22,6 +22,8 @@ import Github from "../components/github"
 import Twitter from "../components/twitter"
 import Slack from "../components/slack"
 import GetFeedback from "../components/getFeedback"
+import Card from "../components/card"
+import CardGroup from "../components/cardGroup"
 
 const shortcodes = {
   Callout,
@@ -32,6 +34,8 @@ const shortcodes = {
   Popover,
   TabList,
   Tab,
+  Card,
+  CardGroup,
 }
 
 class DocTemplate extends React.Component {
