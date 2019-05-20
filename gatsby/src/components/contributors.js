@@ -1,6 +1,9 @@
 import React from "react"
 
 const Contributors = ({ contributors }) => {
+  if (contributors == null || contributors.length < 1) {
+    return <></>
+  }
   return (
     <>
       <p>
