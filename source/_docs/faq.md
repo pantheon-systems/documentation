@@ -104,7 +104,7 @@ WordPress runs its own internal cron-like system as visitors load your site. You
 
 ### Do you support ffmpeg transcoding?
 
-No. We do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service.
+No. We do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service or third-party multimedia platform that will give you the option of creating streaming-optimized videos. Those providers have worked around or addressed many, if not most, of the pitfalls associated with transcoding and serving video content, so you'd be able to leverage their infrastructure and lessons learned more easily than addressing those issues yourselves.
 
 ### Do you support Xdebug?
 
