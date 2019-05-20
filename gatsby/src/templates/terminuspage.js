@@ -21,6 +21,8 @@ import TOC from "../components/toc"
 import Github from "../components/github"
 import Twitter from "../components/twitter"
 import Slack from "../components/slack"
+import Card from "../components/card"
+import CardGroup from "../components/cardGroup"
 
 const shortcodes = {
   Callout,
@@ -31,6 +33,8 @@ const shortcodes = {
   Popover,
   TabList,
   Tab,
+  Card,
+  CardGroup,
 }
 
 class TerminusTemplate extends React.Component {
