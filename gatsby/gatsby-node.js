@@ -59,7 +59,6 @@ exports.createPages = ({ graphql, actions }) => {
     const docs = result.data.allDocs.edges
     docs.forEach(doc => {
       const template = calculateTemplate(doc.node, "doc")
-      console.log(template)
       createPage({
         path: doc.node.fields.slug,
         component: path.resolve(`./src/templates/${template}.js`),

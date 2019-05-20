@@ -6,3 +6,9 @@ a[rel~="external"]:after {
   margin-left: 2px;
   text-decoration: none;
 }
+
+div.manual-guide-toc h3 {
+  font-size: 24px;
+  margin-top: 40px;
+  padding: 0px 0px 10px 40px;
+}
