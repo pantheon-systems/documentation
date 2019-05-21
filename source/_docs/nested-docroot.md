@@ -179,6 +179,8 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
 After using one of these commands, verify the new file locations with `git status` before committing and pushing.
 
+Now that the site will be served from the web/ directory, you'll need to update the `.gitignore` file to reflect this, i.e. edit `sites/` to `web/sites`, `!core/**/*.gz` to `!web/core/**/*.gz` for Drupal, and `wp-content`, `wp-includes` to `web/wp-content`, `web/wp-includes` for WordPress. 
+
 ## Troubleshooting
 
 #### Quicksilver Script Location
