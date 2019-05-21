@@ -12,7 +12,7 @@ const NavbarItem = ({ item, activePage }) => {
               <li key={`${item.id}-li-key`} id={`${item.id}-li`}>
                 <Link
                   to={item.link}
-                  className={activePage == item.link ? "active-trail" : ""}
+                  className={activePage === item.link ? "active-trail" : ""}
                 >
                   {item.title}
                 </Link>
@@ -29,7 +29,7 @@ const NavbarItem = ({ item, activePage }) => {
       <li key={`${item.id}-li-key`} id={`${item.id}-li`}>
         <Link
           to={item.link}
-          className={activePage == item.link ? "active-trail" : ""}
+          className={activePage === item.link ? "active-trail" : ""}
         >
           {item.title}
         </Link>

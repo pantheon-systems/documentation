@@ -25,6 +25,7 @@ import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
 import PreviousNextControl from "../components/previousNextControl"
+import SEO from "../components/seo"
 
 const shortcodes = {
   Callout,
@@ -111,6 +112,12 @@ class TerminusTemplate extends React.Component {
 
     return (
       <Layout>
+        <SEO
+          title={node.frontmatter.title}
+          description={node.frontmatter.description || node.excerpt}
+          authors={node.frontmatter.contributors}
+          image={"docs/assets/images/terminus-thumbLarge.png"}
+        />
         <div className="container-fluid">
           <div className="row">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
@@ -188,6 +195,7 @@ export const pageQuery = graphql`
         contributors {
           id
           name
+          twitter
         }
       }
       fileAbsolutePath

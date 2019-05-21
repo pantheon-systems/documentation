@@ -24,6 +24,7 @@ import Slack from "../components/slack"
 import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
+import SEO from "../components/seo"
 
 const shortcodes = {
   Callout,
@@ -48,9 +49,14 @@ class DocTemplate extends React.Component {
 
   render() {
     const node = this.props.data.mdx
-
     return (
       <Layout>
+        <SEO
+          title={node.frontmatter.title}
+          description={node.frontmatter.description || node.excerpt}
+          authors={node.frontmatter.contributors}
+          image={"docs/assets/images/default-thumb-doc.png"}
+        />
         <div className="container">
           <div className="row doc-content-well">
             <div id="doc" className="doc article col-md-9 md-70">
@@ -109,6 +115,7 @@ export const pageQuery = graphql`
         contributors {
           id
           name
+          twitter
         }
       }
       fileAbsolutePath
