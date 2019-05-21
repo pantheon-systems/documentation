@@ -23,6 +23,7 @@ import Twitter from "../components/twitter"
 import Slack from "../components/slack"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
+import Navbar from "../components/navbar"
 
 const shortcodes = {
   Callout,
@@ -36,6 +37,64 @@ const shortcodes = {
   Card,
   CardGroup,
 }
+
+// @TODO relocate this list
+// - To a YAML file and use GraphQL to pull data.
+// - To a GraphQL query order by frontmatter weight/order/index field.
+const items = [
+  {
+    id: "docs-terminus",
+    link: "/docs/terminus",
+    title: "Get Started",
+  },
+  {
+    id: "docs-terminus-install",
+    link: "/docs/terminus/install",
+    title: "Install",
+  },
+  {
+    id: "docs-terminus-examples",
+    link: "/docs/terminus/examples",
+    title: "Example Usage",
+  },
+  {
+    id: "docs-terminus-commands",
+    link: "/docs/terminus/commands",
+    title: "Commands",
+  },
+  {
+    id: "docs-terminus-scripting",
+    link: "/docs/terminus/scripting",
+    title: "Scripting",
+  },
+  {
+    id: "docs-terminus-plugins",
+    link: "/docs/terminus/plugins",
+    title: "Extend with Plugins",
+    items: [
+      {
+        id: "docs-terminus-directory",
+        link: "/docs/terminus/plugins/directory",
+        title: "Directory",
+      },
+      {
+        id: "docs-terminus-create",
+        link: "/docs/terminus/plugins/create",
+        title: "Create Plugins",
+      },
+    ],
+  },
+  {
+    id: "docs-terminus-configuration",
+    link: "/docs/terminus/configuration",
+    title: "Configuration File",
+  },
+  {
+    id: "docs-terminus-updates",
+    link: "/docs/terminus/updates",
+    title: "Version Updates",
+  },
+]
 
 class TerminusTemplate extends React.Component {
   componentDidMount() {
@@ -53,107 +112,7 @@ class TerminusTemplate extends React.Component {
         <div className="container-fluid">
           <div className="row">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
-              <div className="col-md-3 manual-guide-toc" role="navigation">
-                <button
-                  type="button"
-                  className="navbar-toggle"
-                  style={{ marginTop: "-15px", paddingRight: "20px" }}
-                  data-toggle="collapse"
-                  data-target="#guide-collapse"
-                  data-original-title=""
-                  title=""
-                >
-                  <span className="sr-only">Toggle navigation</span>
-                  <i className="fa fa-bars" />
-                </button>
-                <h3>Terminus Manual</h3>
-                <div className="collapse navbar-collapse" id="guide-collapse">
-                  <ul id="manual-guide-toc" className="manual-guide-toc">
-                    <li>
-                      <a id="docs-terminus" href="/docs/terminus">
-                        Get Started
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        id="docs-terminus-install"
-                        href="/docs/terminus/install"
-                      >
-                        Install
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        id="docs-terminus-examples"
-                        href="/docs/terminus/examples"
-                      >
-                        Example Usage
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        id="docs-terminus-commands"
-                        href="/docs/terminus/commands"
-                      >
-                        Commands
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        id="docs-terminus-scripting"
-                        href="/docs/terminus/scripting"
-                      >
-                        Scripting
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        id="docs-terminus-plugins"
-                        href="/docs/terminus/plugins"
-                      >
-                        Extend with Plugins
-                      </a>
-                    </li>
-                    <ul
-                      id="manual-guide-toc"
-                      className="manual-guide-toc child"
-                    >
-                      <li>
-                        <a
-                          id="docs-terminus-directory"
-                          href="/docs/terminus/plugins/directory"
-                        >
-                          Directory
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          id="docs-terminus-create"
-                          href="/docs/terminus/plugins/create"
-                        >
-                          Create Plugins
-                        </a>
-                      </li>
-                    </ul>
-                    <li>
-                      <a
-                        id="docs-terminus-configuration"
-                        href="/docs/terminus/configuration"
-                      >
-                        Configuration File
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        id="docs-terminus-updates"
-                        href="/docs/terminus/updates"
-                      >
-                        Version Updates
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <Navbar title={node.frontmatter.title} items={items} />
               <div id="terminus" className="col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <div className="col-xs-12 col-md-12">
