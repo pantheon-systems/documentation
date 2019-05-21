@@ -9,7 +9,7 @@ const TOC = ({ title }) => {
 
       const settings = {
         tocSelector: ".toc-placeholder",
-        contentSelector: "#doc",
+        contentSelector: ".doc, .terminus",
         orderedList: false,
         headingSelector: "h2, h3",
         ignoreSelector: ".panel-title",

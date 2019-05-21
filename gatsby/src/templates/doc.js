@@ -53,7 +53,7 @@ class DocTemplate extends React.Component {
       <Layout>
         <div className="container">
           <div className="row doc-content-well">
-            <div id="doc" className="article col-md-9 md-70">
+            <div id="doc" className="doc article col-md-9 md-70">
               <h1>{node.frontmatter.title}</h1>
               <p className="article-subhead">{node.frontmatter.description}</p>
               <Contributors contributors={node.frontmatter.contributors} />

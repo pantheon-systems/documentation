@@ -113,9 +113,9 @@ class TerminusTemplate extends React.Component {
           <div className="row">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
               <Navbar title={node.frontmatter.title} items={items} />
-              <div id="terminus" className="col-md-9 guide-doc-body">
+              <div id="terminus" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
-                  <div className="col-xs-12 col-md-12">
+                  <div className="col-xs-9 col-md-9">
                     <header>
                       <h1>{node.frontmatter.subtitle}</h1>
                       <Contributors
@@ -170,6 +170,7 @@ export const pageQuery = graphql`
         description
         nexturl
         previousurl
+        terminustoc
         contributors {
           id
           name
