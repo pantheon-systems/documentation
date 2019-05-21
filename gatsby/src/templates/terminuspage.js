@@ -114,7 +114,11 @@ class TerminusTemplate extends React.Component {
         <div className="container-fluid">
           <div className="row">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
-              <Navbar title={node.frontmatter.title} items={items} />
+              <Navbar
+                title={node.frontmatter.title}
+                items={items}
+                activePage={"/" + node.fields.slug}
+              />
               <div id="terminus" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <div
