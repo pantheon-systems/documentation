@@ -57,16 +57,19 @@ class TerminusTemplate extends React.Component {
           <div className="row">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
               <div className="col-md-3 manual-guide-toc" role="navigation">
-                {/* <button
+                <button
                   type="button"
                   className="navbar-toggle"
+                  style={{ marginTop: "-15px", paddingRight: "20px" }}
                   data-toggle="collapse"
                   data-target="#guide-collapse"
+                  data-original-title=""
+                  title=""
                 >
                   <span className="sr-only">Toggle navigation</span>
                   <i className="fa fa-bars" />
-                </button> */}
-                <h3 className="">Terminus Manual</h3>
+                </button>
+                <h3>Terminus Manual</h3>
                 <div className="collapse navbar-collapse" id="guide-collapse">
                   <ul id="manual-guide-toc" className="manual-guide-toc">
                     <li>
@@ -154,28 +157,37 @@ class TerminusTemplate extends React.Component {
                   </ul>
                 </div>
               </div>
-
               <div id="terminus" className="col-md-9 guide-doc-body">
-                <h1>{node.frontmatter.subtitle}</h1>
-                <Contributors contributors={node.frontmatter.contributors} />
-                <Github
-                  sourceName={sourceName[0]}
-                  pageTitle={node.frontmatter.title}
-                  path={sourcePath}
-                />
-                <Twitter pageTitle={node.frontmatter.title} path={sourcePath} />
-                <Slack />
-                <hr />
-                <MDXProvider components={shortcodes}>
-                  <MDXRenderer>{node.code.body}</MDXRenderer>
-                </MDXProvider>
-              </div>
-
-              <div
-                className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
-                role="complementary"
-              >
-                <TOC title="Contents" />
+                <div className="row guide-content-well">
+                  <div className="col-xs-12 col-md-12">
+                    <header>
+                      <h1>{node.frontmatter.subtitle}</h1>
+                      <Contributors
+                        contributors={node.frontmatter.contributors}
+                      />
+                      <Github
+                        sourceName={sourceName[0]}
+                        pageTitle={node.frontmatter.title}
+                        path={sourcePath}
+                      />
+                      <Twitter
+                        pageTitle={node.frontmatter.title}
+                        path={sourcePath}
+                      />
+                      <Slack />
+                      <hr style={{ marginTop: "10px", marginBottom: "10px" }} />
+                    </header>
+                    <MDXProvider components={shortcodes}>
+                      <MDXRenderer>{node.code.body}</MDXRenderer>
+                    </MDXProvider>
+                  </div>
+                  <div
+                    className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
+                    role="complementary"
+                  >
+                    <TOC title="Contents" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
