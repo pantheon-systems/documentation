@@ -21,12 +21,11 @@ const Navbar = ({ title, items, activePage }) => {
       <div className="collapse navbar-collapse" id="guide-collapse">
         <ul id="manual-guide-toc" className="manual-guide-toc">
           {items.map(item => {
-            const isActive = activePage == item.link
             return (
               <NavbarItem
                 key={`${item.id}-item-key`}
                 item={item}
-                active={isActive}
+                activePage={activePage}
               />
             )
           })}

@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 
-const NavbarItem = ({ item, active }) => {
+const NavbarItem = ({ item, activePage }) => {
   let children = ""
   if (item.items) {
     children = (
@@ -10,7 +10,12 @@ const NavbarItem = ({ item, active }) => {
           {item.items.map(item => {
             return (
               <li key={`${item.id}-li-key`} id={`${item.id}-li`}>
-                <Link to={item.link}>{item.title}</Link>
+                <Link
+                  to={item.link}
+                  className={activePage == item.link ? "active-trail" : ""}
+                >
+                  {item.title}
+                </Link>
               </li>
             )
           })}
@@ -22,7 +27,10 @@ const NavbarItem = ({ item, active }) => {
   return (
     <>
       <li key={`${item.id}-li-key`} id={`${item.id}-li`}>
-        <Link to={item.link} className={active ? "active-trail" : ""}>
+        <Link
+          to={item.link}
+          className={activePage == item.link ? "active-trail" : ""}
+        >
           {item.title}
         </Link>
       </li>
