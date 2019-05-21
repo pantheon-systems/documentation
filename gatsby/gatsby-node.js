@@ -4,10 +4,12 @@ const calculateSlug = (node, getNode) => {
   const fileName = getNode(node.parent).name
 
   if (node.frontmatter.permalink) {
-    return node.frontmatter.permalink.replace(":basename", fileName)
+    return node.frontmatter.permalink
+      .replace(":basename", fileName)
+      .replace(/.$/, "")
   }
 
-  return `/docs/${fileName}`
+  return `docs/${fileName}`
 }
 
 const calculateTemplate = (node, defaultTemplate) => {

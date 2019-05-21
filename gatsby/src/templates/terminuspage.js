@@ -47,9 +47,6 @@ class TerminusTemplate extends React.Component {
 
   render() {
     const node = this.props.data.mdx
-    const patt = /[^/]*\.md/
-    const sourceName = patt.exec(node.fileAbsolutePath)
-    const sourcePath = `${sourceName[0].replace(".md", "")}`
 
     return (
       <Layout>
@@ -166,13 +163,12 @@ class TerminusTemplate extends React.Component {
                         contributors={node.frontmatter.contributors}
                       />
                       <Github
-                        sourceName={sourceName[0]}
                         pageTitle={node.frontmatter.title}
-                        path={sourcePath}
+                        path={node.fields.slug}
                       />
                       <Twitter
                         pageTitle={node.frontmatter.title}
-                        path={sourcePath}
+                        path={node.fields.slug}
                       />
                       <Slack />
                       <hr style={{ marginTop: "10px", marginBottom: "10px" }} />
@@ -205,6 +201,9 @@ export const pageQuery = graphql`
       id
       code {
         body
+      }
+      fields {
+        slug
       }
       frontmatter {
         title

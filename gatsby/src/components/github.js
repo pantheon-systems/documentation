@@ -1,6 +1,7 @@
 import React from "react"
 
-const Github = ({ sourceName, pageTitle, path }) => {
+const Github = ({ pageTitle, path }) => {
+  const repoPath = path.replace("docs/", "_docs/")
   return (
     <div className="dropdown">
       <button
@@ -17,7 +18,7 @@ const Github = ({ sourceName, pageTitle, path }) => {
       <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
         <li>
           <a
-            href={`https://github.com/pantheon-systems/documentation/edit/master/source/_docs/${sourceName}`}
+            href={`https://github.com/pantheon-systems/documentation/edit/master/source/${repoPath}.md`}
             target="blank"
           >
             Edit This Page
