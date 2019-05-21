@@ -3,7 +3,7 @@ title: Installing Redis on Drupal or WordPress
 description: Understand how to use Redis as a caching mechanism for your Pantheon site.
 tags: [cacheapp, addons]
 categories: []
-contributors: [cityofoaksdesign,bmackinney]
+contributors: [cityofoaksdesign,bmackinney,joshkoenig]
 ---
 
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
@@ -78,7 +78,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via Terminus:
 
-```bash 
+```bash
 terminus connection:set <site>.<env> git
 ```
 
@@ -216,7 +216,7 @@ terminus connection:set <site>.<env> git
 
 
   </Tab>
-  
+
 </TabList>
 
 ## Use the Redis Command-Line Client
@@ -398,7 +398,7 @@ Install and enable the module to resolve.
 \*Redis is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. See the <a href="#enable-redis" data-proofer-ignore>Enable Redis</a> section above for details about which account types have Redis on paid plans.
 
 ### What happens when Redis reaches maxmemory?
-When the specified amount of memory is reached, Redis follows the `maxmemory-policy` configuration directive, which is defined in the platform `redis.conf` file. 
+When the specified amount of memory is reached, Redis follows the `maxmemory-policy` configuration directive, which is defined in the platform `redis.conf` file.
 
 On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remove the less recently used (LRU) keys first, in order to make space for the new data added. For more information, please see the official [Redis documentation](https://redis.io/topics/lru-cache).
 
@@ -488,5 +488,5 @@ The following code changes are required before Redis can be safely uninstalled a
 
 
   </Tab>
-  
+
 </TabList>

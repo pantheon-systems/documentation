@@ -108,7 +108,7 @@ class TerminusTemplate extends React.Component {
 
   render() {
     const node = this.props.data.mdx
-    const contentCols = node.frontmatter.showToc ? 9 : 12
+    const contentCols = node.frontmatter.showtoc ? 9 : 12
 
     return (
       <Layout>
@@ -151,7 +151,7 @@ class TerminusTemplate extends React.Component {
                       <MDXRenderer>{node.code.body}</MDXRenderer>
                     </MDXProvider>
                   </div>
-                  {node.frontmatter.showToc && (
+                  {node.frontmatter.showtoc && (
                     <div
                       className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
                       role="complementary"
@@ -191,7 +191,7 @@ export const pageQuery = graphql`
         description
         nexturl
         previousurl
-        showToc: terminustoc
+        showtoc
         contributors {
           id
           name

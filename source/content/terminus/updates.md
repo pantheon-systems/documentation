@@ -3,7 +3,7 @@ title: Terminus Manual
 subtitle: Version Updates
 description: Stay up to date on the latest Terminus version.
 terminuspage: true
-terminustoc: true
+showtoc: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/:basename/

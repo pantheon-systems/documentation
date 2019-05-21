@@ -29,10 +29,8 @@ function SEO({ description, lang, meta, keywords, title, authors, image }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-  let authorArray = new Array()
-  if (authors) {
-    authorArray = Array.from(authors)
-  }
+  const authorList = authors ? Array.from(authors) : []
+
   return (
     <Helmet
       htmlAttributes={{
@@ -107,7 +105,7 @@ function SEO({ description, lang, meta, keywords, title, authors, image }) {
             : []
         )
         .concat(
-          authorArray.map((author, i, arr) => {
+          authorList.map(author => {
             if (author.twitter != null) {
               return {
                 name: `twitter:creator`,

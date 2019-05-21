@@ -4,7 +4,7 @@ subtitle: Create Plugins
 description: Learn how to create your own Terminus plugin.
 terminuspage: true
 terminuscreate: true
-terminustoc: true
+showtoc: true
 type: terminuspage
 layout: terminuspage
 nexturl: terminus/configuration/
