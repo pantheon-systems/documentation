@@ -54,7 +54,12 @@ class DocTemplate extends React.Component {
         <div className="container">
           <div className="row doc-content-well">
             <div id="doc" className="doc article col-md-9 md-70">
-              <h1>{node.frontmatter.title}</h1>
+              <h1
+                style={{ marginBottom: "10px", marginTop: "0px" }}
+                className="pio-docs-title"
+              >
+                {node.frontmatter.title}
+              </h1>
               <p className="article-subhead">{node.frontmatter.description}</p>
               <Contributors contributors={node.frontmatter.contributors} />
               <Github
@@ -66,9 +71,11 @@ class DocTemplate extends React.Component {
                 path={node.fields.slug}
               />
               <Slack />
-              <MDXProvider components={shortcodes}>
-                <MDXRenderer>{node.code.body}</MDXRenderer>
-              </MDXProvider>
+              <div style={{ marginTop: "15px", marginBottom: "45px" }}>
+                <MDXProvider components={shortcodes}>
+                  <MDXRenderer>{node.code.body}</MDXRenderer>
+                </MDXProvider>
+              </div>
             </div>
             <div
               className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
