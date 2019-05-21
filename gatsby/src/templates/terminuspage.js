@@ -106,6 +106,7 @@ class TerminusTemplate extends React.Component {
 
   render() {
     const node = this.props.data.mdx
+    const contentCols = node.frontmatter.showToc ? 9 : 12
 
     return (
       <Layout>
@@ -115,7 +116,9 @@ class TerminusTemplate extends React.Component {
               <Navbar title={node.frontmatter.title} items={items} />
               <div id="terminus" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
-                  <div className="col-xs-9 col-md-9">
+                  <div
+                    className={`col-xs-${contentCols} col-md-${contentCols}`}
+                  >
                     <header>
                       <h1>{node.frontmatter.subtitle}</h1>
                       <Contributors
@@ -136,12 +139,14 @@ class TerminusTemplate extends React.Component {
                       <MDXRenderer>{node.code.body}</MDXRenderer>
                     </MDXProvider>
                   </div>
-                  <div
-                    className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
-                    role="complementary"
-                  >
-                    <TOC title="Contents" />
-                  </div>
+                  {node.frontmatter.showToc && (
+                    <div
+                      className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
+                      role="complementary"
+                    >
+                      <TOC title="Contents" />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -170,7 +175,7 @@ export const pageQuery = graphql`
         description
         nexturl
         previousurl
-        terminustoc
+        showToc: terminustoc
         contributors {
           id
           name
