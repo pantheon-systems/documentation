@@ -24,6 +24,7 @@ import Slack from "../components/slack"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
+import PreviousNextControl from "../components/previousNextControl"
 
 const shortcodes = {
   Callout,
@@ -148,6 +149,10 @@ class TerminusTemplate extends React.Component {
                     </div>
                   )}
                 </div>
+                <PreviousNextControl
+                  prev={node.frontmatter.previousurl}
+                  next={node.frontmatter.nexturl}
+                />
               </div>
             </div>
           </div>
