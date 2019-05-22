@@ -85,7 +85,7 @@ Logs are stored within application containers that house your site's codebase an
 4. Run the following SFTP command in terminal:
 
    ```nohighlight
-   get -r logs
+   get -r *.log
    ```
 
 You now have a local copy of the logs directory, which contains the following:
