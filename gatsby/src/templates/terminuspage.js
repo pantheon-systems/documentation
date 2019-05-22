@@ -23,6 +23,7 @@ import Navbar from "../components/navbar"
 import NavButtons from "../components/navButtons"
 import SEO from "../components/seo"
 import Releases from "../components/releases"
+import TerminusVersion from "../components/terminusVersion"
 
 const shortcodes = {
   Callout,
@@ -36,6 +37,7 @@ const shortcodes = {
   Card,
   CardGroup,
   Releases,
+  TerminusVersion,
 }
 
 // @TODO relocate this list

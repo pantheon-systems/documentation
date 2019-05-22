@@ -13,9 +13,9 @@ const renderAst = new RehypeReact({
   },
 }).Compiler
 
-const Header = ({ data }) => (
-  <div className="releases">
-    {data.allReleasesJson.edges.map((release, i, arr) => {
+const Releases = ({ data }) => (
+  <>
+    {data.allReleasesJson.edges.map((release, i) => {
       return (
         <div key={i}>
           <h3 className="toc-ignore">{release.node.tag_name}</h3>
@@ -28,7 +28,7 @@ const Header = ({ data }) => (
         </div>
       )
     })}
-  </div>
+  </>
 )
 
 export default props => (
@@ -56,6 +56,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Header data={data} {...props} />}
+    render={data => <Releases data={data} {...props} />}
   />
 )
