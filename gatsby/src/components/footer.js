@@ -1,5 +1,6 @@
+import { graphql, StaticQuery } from "gatsby"
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import MarketoForm from "./marketoForm"
 
 const Footer = ({ data }) => {
   return (
@@ -216,21 +217,13 @@ const Footer = ({ data }) => {
                               </p>
                             </div>
                             <div className="col-lg-12 col-sm-6 market-subscribe-footer">
-                              <script src="https://app-ab05.marketo.com/js/forms2/js/forms2.min.js" />
-                              <form id="mktoForm_2014" name="mktoForm_2014" />
-                              {/* <script>{
-                                MktoForms2.loadForm("https://app-ab05.marketo.com","316-GSV-089",2014,function(o)
-                                {o.onSuccess(function(t, m) {
-                                  return (
-                                    ($form = o.getFormElem()),
-                                    $form
-                                      .css("height", $form.css("height"))
-                                      .html("<p>Thank You for Signing Up</p>"),
-                                    !1
-                                  )
-                                })}
-                                )}
-                              </script> */}
+                              {/* NOTE: maybe this configuration should be moved to a configuration file? */}
+                              <MarketoForm
+                                baseUrl="https://app-ab05.marketo.com"
+                                munchkinId="316-GSV-089"
+                                formId={2014}
+                                formName="mktoForm_2014"
+                              />
                             </div>
                           </div>
                         </div>
