@@ -1,13 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../components/layout"
-// import SiteInfo from "../components/siteInfo"
-// import SEO from "../components/seo"
-
 import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
@@ -91,7 +87,7 @@ class DocTemplate extends React.Component {
             </div>
           </div>
         </div>
-        <GetFeedback />
+        <GetFeedback formId="12z1fMzn" page="/docs/redis/" topic="addons" />
       </Layout>
     )
   }

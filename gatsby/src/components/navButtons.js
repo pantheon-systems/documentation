@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-const PreviousNextControl = ({ prev, next }) => {
+
+const NavButtons = ({ prev, next }) => {
   return (
     <div className="row terminus-pager col-md-12">
       <div className="col-xs-6 col-md-6">
@@ -29,4 +30,4 @@ const PreviousNextControl = ({ prev, next }) => {
   )
 }
 
-export default PreviousNextControl
+export default NavButtons

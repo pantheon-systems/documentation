@@ -37,9 +37,7 @@ const MarketoForm = ({ baseUrl, munchkinId, formId, formName }) => {
 
           setInitialized(true)
         })
-        .catch(() =>
-          console.log("Some error ocurred loading Marketo scripts...")
-        )
+        .catch(() => console.log("An error ocurred loading Marketo scripts..."))
     }
   })
 

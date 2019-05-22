@@ -1,13 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-
 import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../components/layout"
-// import SiteInfo from "../components/siteInfo"
-// import SEO from "../components/seo"
-
 import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
@@ -24,7 +20,7 @@ import Slack from "../components/slack"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
-import PreviousNextControl from "../components/previousNextControl"
+import NavButtons from "../components/navButtons"
 import SEO from "../components/seo"
 
 const shortcodes = {
@@ -160,7 +156,7 @@ class TerminusTemplate extends React.Component {
                     </div>
                   )}
                 </div>
-                <PreviousNextControl
+                <NavButtons
                   prev={node.frontmatter.previousurl}
                   next={node.frontmatter.nexturl}
                 />
