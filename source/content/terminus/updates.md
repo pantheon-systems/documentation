@@ -73,10 +73,4 @@ After this period, the version will reach End Of Life (**EOL**), and will no lon
 
 ## Changelog
 
-<!--
-<div ng-repeat="release in releases| filter: greaterThan('id', 5224487)">
-  <h3>{[{release.name}]}</h3>
-  <md ng-model="release.body"></md>
-  <hr>
-  </div>
-</div> -->
+<Releases />

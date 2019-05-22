@@ -11,7 +11,7 @@ const TOC = ({ title }) => {
         tocSelector: ".toc-placeholder",
         contentSelector: ".doc, .terminus",
         orderedList: false,
-        headingSelector: "h2, h3",
+        headingSelector: "h2:not(.toc-ignore), h3:not(.toc-ignore)",
         ignoreSelector: ".panel-title",
         hasInnerContainers: true,
         extraListClasses: "nav nav-list",

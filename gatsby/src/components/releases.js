@@ -1,22 +1,34 @@
 import React from "react"
+import RehypeReact from "rehype-react"
 import { StaticQuery, graphql } from "gatsby"
 
+import { headline1, headline2, headline3 } from "./releaseHeadlines"
+
+const renderAst = new RehypeReact({
+  createElement: React.createElement,
+  components: {
+    h1: headline1,
+    h2: headline2,
+    h3: headline3,
+  },
+}).Compiler
+
 const Header = ({ data }) => (
-  <>
+  <div className="releases">
     {data.allReleasesJson.edges.map((release, i, arr) => {
       return (
         <div key={i}>
-          <h3>{release.node.tag_name}</h3>
-          <div
-            dangerouslySetInnerHTML={{
-              __html: release.node.fields.markdownBody.childMarkdownRemark.html,
-            }}
-          />
+          <h3 className="toc-ignore">{release.node.tag_name}</h3>
+          <div>
+            {renderAst(
+              release.node.fields.markdownBody.childMarkdownRemark.htmlAst
+            )}
+          </div>
           <hr />
         </div>
       )
     })}
-  </>
+  </div>
 )
 
 export default props => (
@@ -35,8 +47,7 @@ export default props => (
               fields {
                 markdownBody {
                   childMarkdownRemark {
-                    id
-                    html
+                    htmlAst
                   }
                 }
               }

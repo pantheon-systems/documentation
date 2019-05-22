@@ -74,9 +74,7 @@ module.exports = {
               rel: "nofollow noopener noreferrer external",
             },
           },
-          {
-            resolve: `gatsby-remark-slug`,
-          },
+          `gatsby-remark-slug`,
         ],
       },
     },
