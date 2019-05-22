@@ -1,4 +1,5 @@
 const path = require(`path`)
+const crypto = require("crypto")
 
 const calculateSlug = (node, getNode) => {
   const fileName = getNode(node.parent).name
@@ -19,6 +20,12 @@ const calculateTemplate = (node, defaultTemplate) => {
 
   return defaultTemplate
 }
+
+const digest = str =>
+  crypto
+    .createHash("md5")
+    .update(str)
+    .digest("hex")
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -75,13 +82,39 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+  const { createNode, createNodeField } = actions
   if (node.internal.type === `Mdx`) {
     const slug = calculateSlug(node, getNode)
     createNodeField({
       name: `slug`,
       node,
       value: slug,
+    })
+  }
+  if (node.internal.type === `ReleasesJson`) {
+    createNodeField({
+      name: `original_id`,
+      node,
+      value: parseInt(node.id),
+    })
+    const textNode = {
+      id: `${node.id}-MarkdownBody`,
+      parent: node.id,
+      dir: path.resolve("./"),
+      internal: {
+        type: `${node.internal.type}MarkdownBody`,
+        mediaType: "text/markdown",
+        content: node.body,
+        contentDigest: digest(node.body),
+      },
+    }
+
+    createNode(textNode)
+
+    createNodeField({
+      node,
+      name: "markdownBody___NODE",
+      value: textNode.id,
     })
   }
 }

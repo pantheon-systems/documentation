@@ -22,6 +22,7 @@ import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
 import NavButtons from "../components/navButtons"
 import SEO from "../components/seo"
+import Releases from "../components/releases"
 
 const shortcodes = {
   Callout,
@@ -34,6 +35,7 @@ const shortcodes = {
   Tab,
   Card,
   CardGroup,
+  Releases,
 }
 
 // @TODO relocate this list

@@ -13,11 +13,15 @@ module.exports = {
     social: {
       twitter: `getpantheon`,
     },
+    terminus: {
+      version: "2.0.1",
+    },
   },
   mapping: {
     "Mdx.frontmatter.contributors": "ContributorYaml",
   },
   plugins: [
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
