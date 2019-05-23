@@ -15,7 +15,7 @@
 #doc h6::before,
 #terminus h6::before {
   display: block;
-  content: none;
+  content: "";
   height: 160px;
   margin-top: -160px;
   visibility: hidden;
