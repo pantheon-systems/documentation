@@ -8,8 +8,8 @@ const Accordion = ({ id, icon, title, children }) => {
     <>
       <div className="panel panel-drop panel-guide" id="accordion">
         <div className="panel-heading panel-drop-heading">
-          <a
-            href={`#${id}`}
+          <span
+            style={{ cursor: "pointer" }}
             className={`accordion-toggle panel-drop-title ${
               isCollapsed ? "" : "collapsed"
             }`}
@@ -23,7 +23,7 @@ const Accordion = ({ id, icon, title, children }) => {
               <span className={`glyphicons glyphicons-${icon}`} />
               {title}
             </h3>
-          </a>
+          </span>
         </div>
         <div id={`${id}`} className={classCollapsed} aria-expanded="false">
           <div className="panel-inner">{children}</div>
