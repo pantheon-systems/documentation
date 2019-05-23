@@ -76,7 +76,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
 7. Deploy to Test and confirm results.
 8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
-## Example
+## Examples
 
 As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to the code base.
 
@@ -123,6 +123,63 @@ You can also verify success using `dir`:
 ```
 <SYMLINKD>        cache [.\uploads\cache]
 <SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
+```
+
+As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/){.external} assumes write access its css files to the code base.
+
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+You must manually move over the target folders `wp-content\themes\uncode\core\assets\css` to `wp-content\uploads\uncode\assets\css` and `wp-content\themes\uncode\library\css` to `wp-content\uploads\uncode\library\css` in Dev.
+
+You must also need to copy over the files generated from `wp-content\themes\uncode\library\css` to `wp-content\uploads\uncode\library\css` in Test, Live, and any Multidev environments after deploying codes for the theme to take effect in different environments.
+</div>
+
+### For MacOS & Linux:
+From the `wp-content` directory:
+
+```bash
+ln -s ../../../../uploads/uncode/assets/css ./themes/uncode/core/assets 
+ln -s ../../../uploads/uncode/library/css ./themes/uncode/library
+```
+
+To verify, use `ls -al` in the `wp-content/themes/uncode/core/assets` folder :
+
+```nohighlight
+css -> ../../../../uploads/uncode/assets/css
+```
+
+As well as in the `wp-content/themes/uncode/library` folder :
+
+```nohighlight
+css -> ../../../uploads/uncode/library/css
+```
+
+### For Windows:
+Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target and backslash is used to denote folders. In the `wp-content` folder create the symlinks by:
+
+```bash
+mklink /d .\themes\uncode\core\assets ..\..\..\..\uploads\uncode\assets\css
+mklink /d .\themes\uncode\library ..\..\..\uploads\uncode\library\css
+```
+
+Each command will return the following upon success:
+
+```nohighlight
+symbolic link created for .\themes\uncode\core\assets <<===>> ..\..\..\..\uploads\uncode\assets\css
+symbolic link created for .\themes\uncode\library <<===>> ..\..\..\uploads\uncode\library\css
+```
+
+To verify that you have done it correctly, you should have these when you list your folders in `wp-content\themes\uncode\core\assets` directory:
+You can also verify success using `dir`:
+
+```nohighlight
+<SYMLINKD>        css [..\..\..\..\uploads\uncode\assets\css]
+```
+
+And in the `themes\uncode\library` directory:
+
+```nohighlight
+<SYMLINKD>        css [..\..\..\uploads\uncode\library\css]
 ```
 
 ## Troubleshooting
