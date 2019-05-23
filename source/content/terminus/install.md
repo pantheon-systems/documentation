@@ -29,25 +29,13 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 
 ## Install
 
-<p class="instruction">Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>\$HOME</code> and install there:</p>
+Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>\$HOME</code> and install there:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#terminus-installer"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="terminus-installer">
-      <code class="command bash" data-lang="bash">
-        curl -O
-        https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
-        && php installer.phar install
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+  curl -O
+  https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
+  && php installer.phar install
+```
 
 See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
 
@@ -59,17 +47,15 @@ Once Terminus is installed, login with a machine token, which is used to securel
 
 First, [create a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from **User Dashboard** > **Account** > **Machine Tokens**.
 
-<p class="instruction">Once the token has been created, use it to authenticate Terminus by running the following command:</p>
+Once the token has been created, use it to authenticate Terminus by running the following command:
 
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth">Copy</button>
-  <figure><pre id="mac-mt-auth"><code class="command bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
-</div>
-<p class="instruction">After a token has been used, future sessions can be established by email:</p>
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-login">Copy</button>
-  <figure><pre id="mac-mt-login"><code class="command bash" data-lang="bash">terminus auth:login --email=dev@example.com</code></pre></figure>
-</div>
+```bash
+  terminus auth:login --machine-token=‹machine-token›
+```
+
+```bash
+  terminus auth:login --email=dev@example.com
+```
 
 ### SSH Authentication
 
@@ -81,7 +67,7 @@ Commands that execute remote instructions to tools like Drush or WP-CLI require 
 
 If the installer throws an IOException at the end:
 
-```
+```bash
   [Symfony\Component\Filesystem\Exception\IOException]
   Failed to create symbolic link from "/path/to/current/dir/vendor/bin/terminus" to "/usr/local/bin/terminus".
 ```
@@ -90,21 +76,21 @@ You may need to remove an old installation from terminus from `/usr/local/bin/te
 
 If you run into permission problems such as:
 
-```
+```bash
 file installer.phar: Permission denied
   0 3150k    0  1928    0     0   1474      0  0:36:28  0:00:01  0:36:27  7330
 curl: (23) Failed writing body (0 != 1928)
 ```
 
-<p markdown="1" class="instruction">You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` diretory in your `$HOME` and go there:</p>
+You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` diretory in your `$HOME` and go there:
 
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer-sudo">Copy</button>
-  <figure><pre id="terminus-installer-sudo"><code class="bash command" data-lang="bash">mkdir $HOME/terminus
+```bash
   cd $HOME/terminus
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
-</div>
+```
+
 ### PHP Fatal error: Uncaught exception 'ReflectionException'
+
 The `php-xml` extension is typically included and enabled by default when installing PHP. However, the following error indicates that the `php-xml` extension is missing:
 
 ```php
@@ -117,7 +103,7 @@ To resolve this error, install the [`php-xml` extension](https://secure.php.net/
 
 The following error occurs when curl is unable to verify the local issuer certificate:
 
-```
+```bash
 curl: (60) SSL certificate problem: unable to get local issuer certificate
 ```
 
@@ -151,12 +137,12 @@ Terminus was installed, but the installer was not able to write to your bin dir.
 
 **Solution:** To enable the `terminus` command, add this alias to your [`.bash_profile` file](https://askubuntu.com/questions/969632/where-is-bash-profile-located-in-windows-subsystem-for-linux):
 
-```
+```bash
 alias terminus=terminus=/c/Users/User1/vendor/bin/terminus
 ```
 
 Or you can enable it by adding the directory the executable file is in to your path:
 
-```
+```bash
 PATH="C:\Users\User1\vendor\bin:$PATH"
 ```

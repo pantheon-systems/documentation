@@ -11,25 +11,13 @@ image: terminus-thumbLarge
 searchboost: 50
 ---
 
-<p class="instruction">The legacy version of Terminus is no longer supported. We strongly recommend that you use the <a href="/docs/terminus/install/">current version</a>. If your use case temporarily requires you to use this unsupported version, you may install <a href="https://github.com/pantheon-systems/terminus/releases/tag/0.13.6">legacy version 0.13.6</a> of Terminus using the following command:</p>
+The legacy version of Terminus is no longer supported. We strongly recommend that you use the <a href="/docs/terminus/install/">current version</a>. If your use case temporarily requires you to use this unsupported version, you may install <a href="https://github.com/pantheon-systems/terminus/releases/tag/0.13.6">legacy version 0.13.6</a> of Terminus using the following command:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#terminus-installer"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="terminus-installer">
-      <code class="bash command" data-lang="bash">
-        curl -O
-        https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
-        && php installer.phar install --install-version=0.13.6
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+curl -O
+https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
+&& php installer.phar install --install-version=0.13.6
+```
 
 ## Compare Legacy Commands with Terminus 1.0
 

@@ -93,41 +93,17 @@ Updates](/docs/core-updates#apply-upstream-updates-manually-from-the-command-lin
 
 </Alert>
 
-<p class="instruction">List available upstream updates:</p>
+List available upstream updates:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#updates-list"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="updates-list">
-      <code class="command bash" data-lang="bash">
-        terminus upstream:updates:list my-site
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+  terminus upstream:updates:list my-site
+```
 
-<p class="instruction">If the environment's connection mode is currently set to SFTP with uncommitted work you want to keep, commit now before proceeding:</p>
+If the environment's connection mode is currently set to SFTP with uncommitted work you want to keep, commit now before proceeding:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#commit-sftp"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="commit-sftp">
-      <code class="command bash" data-lang="bash">
-        terminus env:commit my-site.dev --message="My code changes"
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+  terminus env:commit my-site.dev --message="My code changes"
+```
 
 <Alert title={"Warning"} type={"danger"}>
 
@@ -135,41 +111,17 @@ The following command will permanently delete all uncommitted SFTP changes. If y
 
 </Alert>
 
-<p class="instruction">Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:</p>
+Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#toggle-git"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="toggle-git">
-      <code class="command nohighlight" data-lang="bash">
-        terminus connection:set my-site.dev git
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+  terminus connection:set my-site.dev git
+```
 
-<p class="instruction">Apply available upstream updates for WordPress and Drupal core from the command line with Terminus:</p>
+Apply available upstream updates for WordPress and Drupal core from the command line with Terminus:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#updates-apply"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="updates-apply">
-      <code class="command bash" data-lang="bash">
-        terminus upstream:updates:apply my-site
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+  terminus upstream:updates:apply my-site
+```
 
 ### Module, Theme, and Plugin Updates
 
@@ -178,82 +130,52 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 <TabList>
 
 <Tab title={"Drupal"} id={"wptab"} active={true}>
-  <p class="instruction">
-    First, set the Dev environment's connection mode to SFTP:
-  </p>
-  <div class="copy-snippet">
-    <button
-      class="btn btn-default btn-clippy"
-      data-clipboard-target="#drupal-toggle-sftp"
-    >
-      Copy
-    </button>
-    <figure>
-      <pre id="drupal-toggle-sftp">
-        <code class="command nohighlight" data-lang="bash">
-          terminus connection:set my-site.dev sftp
-        </code>
-      </pre>
-    </figure>
-  </div>
-  <p class="instruction">Apply updates to all contrib projects:</p>
-  <div class="copy-snippet">
-    <button
-      class="btn btn-default btn-clippy"
-      data-clipboard-target="#drupal-update-contrib"
-    >
-      Copy
-    </button>
-    <figure>
-      <pre id="drupal-update-contrib">
-        <code class="command bash" data-lang="bash">
-          terminus drush my-site.dev -- pm-updatecode --no-core
-        </code>
-      </pre>
-    </figure>
-  </div>
-  <p class="instruction">Commit contrib updates to the Dev environment:</p>
-  <div class="copy-snippet">
-    <button
-      class="btn btn-default btn-clippy"
-      data-clipboard-target="#drupal-updates-commit-sftp"
-    >
-      Copy
-    </button>
-    <figure>
-      <pre id="drupal-updates-commit-sftp">
-        <code class="command bash" data-lang="bash">
-          terminus env:commit my-site.dev --message="Update all contrib
-          projects"
-        </code>
-      </pre>
-    </figure>
-  </div>
+
+First, set the Dev environment's connection mode to SFTP:
+
+```bash
+terminus connection:set my-site.dev sftp
+```
+
+Apply updates to all contrib projects:
+
+```bash
+terminus drush my-site.dev -- pm-updatecode --no-core
+```
+
+Commit contrib updates to the Dev environment:
+
+```bash
+  terminus env:commit my-site.dev --message="Update all contrib projects"
+```
+
 </Tab>
 
 <Tab title={"WordPress"} id={"drupaltab"}>
 
-<p class="instruction">First, set the Dev environment's connection mode to SFTP:</p>
+First, set the Dev environment's connection mode to SFTP:
 
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#wp-toggle-sftp">Copy</button>
-<figure><pre id="wp-toggle-sftp"><code class="command nohighlight" data-lang="bash">terminus connection:set my-site.dev sftp</code></pre></figure>
-</div>
-<p class="instruction">Apply updates to all plugins:</p>
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#wp-update-plugins">Copy</button>
-<figure><pre id="wp-update-plugins"><code class="command bash" data-lang="bash">terminus wp my-site.dev -- plugin update --all</code></pre></figure>
-</div>
-<p class="instruction">Apply updates to all themes:</p>
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#wp-update-themes">Copy</button>
-<figure><pre id="wp-update-themes"><code class="command bash" data-lang="bash">terminus wp my-site.dev -- theme update --all</code></pre></figure>
-</div>
-<p class="instruction">Commit plugin and theme updates to the Dev environment:</p>
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#wp-updates-commit-sftp">Copy</button>
-<figure><pre id="wp-updates-commit-sftp"><code class="command bash" data-lang="bash">terminus env:commit my-site.dev --message="Update all plugins and themes"</code></pre></figure>
-</div>
+```bash
+terminus connection:set my-site.dev sftp
+```
+
+Apply updates to all plugins:
+
+```bash
+terminus wp my-site.dev -- plugin update --all
+```
+
+Apply updates to all themes:
+
+```bash
+terminus wp my-site.dev -- theme update --all
+```
+
+Commit plugin and theme updates to the Dev environment:
+
+```bash
+terminus env:commit my-site.dev --message="Update all plugins and themes"
+```
 
   </Tab>
 
@@ -263,25 +185,15 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 Terminus supports third-party plugins that extend it's functionality by adding new commands. The following example demonstrates usage of the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to easily apply upstream updates (core updates) in bulk. For instructions on how to install Terminus plugins, see [Extend with Plugins](/docs/terminus/plugins).
 
-<p markdown="1" class="instruction">Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:</p>
+Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#dry-run">
-    Copy
-  </button>
-  <figure>
-    <pre id="dry-run">
-      <code class="command bash" data-lang="bash">
-        terminus site:list --format=list | terminus site:mass-update:apply
-        --accept-upstream --updatedb --dry-run
-      </code>
-    </pre>
-  </figure>
-</div>
-
-<p markdown="1" class="instruction">The output should be similar to this:</p>
-
+```bash
+terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb --dry-run
 ```
+
+The output should be similar to this:
+
+```bash
  [notice] Found 3 sites.
  [notice] Fetching the list of available updates for each site...
  [notice] 3 sites need updates.
@@ -290,7 +202,7 @@ Terminus supports third-party plugins that extend it's functionality by adding n
  [DRY RUN] Applying 10 updates to superb-central
 ```
 
-<p markdown="1" class="instruction">Resolve warning messages shown in the `--dry-run` output by setting the connection mode to Git for each applicable site:</p>
+Resolve warning messages shown in the `--dry-run` output by setting the connection mode to Git for each applicable site:
 
 <Alert title={"Warning"} type={"danger"}>
 
@@ -298,54 +210,29 @@ The following command will permanently delete all uncommitted SFTP changes. If y
 
 </Alert>
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#mass-update-git"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="mass-update-git">
-      <code class="command bash" data-lang="bash">
-        terminus connection:set my-site.dev git
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+terminus connection:set my-site.dev git
+```
 
-<p markdown="1" class="instruction">Review output then apply the mass update by removing the `--dry-run` option:</p>
+Review output then apply the mass update by removing the `--dry-run` option:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#mass-update-apply"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="mass-update-apply">
-      <code class="command bash" data-lang="bash">
-        terminus site:list --format=list | terminus site:mass-update:apply
-        --accept-upstream --updatedb
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb
+```
 
 ## Deploying Code
 
-<p class="instruction">When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:</p>
+When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:
 
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-test">Copy</button>
-<figure><pre id="deploy-test"><code class="command bash" data-lang="bash">terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates" --cc</code></pre></figure>
-</div>
-<p class="instruction">After testing changes, use Terminus to deploy code from Test up to Live:</p>
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#deploy-live">Copy</button>
-<figure><pre id="deploy-live"><code class="command bash" data-lang="bash">terminus env:deploy my-site.live --note="Deploy core and contrib updates" --cc</code></pre></figure>
-</div>
+```bash
+terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates" --cc
+```
+
+After testing changes, use Terminus to deploy code from Test up to Live:
+
+```bash
+terminus env:deploy my-site.live --note="Deploy core and contrib updates" --cc
+```
 
 ## Reset Dev Environment to Live
 
@@ -359,23 +246,13 @@ There are a few scenarios where it may be useful to reset your Dev environment (
 
 - The Dev environment has been seriously corrupted and you would like to cleanly reset it to Live.
 
-<p class="instruction">Start by cloning the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):</p>
+Start by cloning the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):
 
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#git-clone">
-    Copy
-  </button>
-  <figure>
-    <pre id="git-clone">
-      <code class="command bash" data-lang="bash">
-        `terminus connection:info awesome-site.dev --fields='Git Command'
-        --format=string`
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+`terminus connection:info awesome-site.dev --fields='Git Command' --format=string`
+```
 
-<p class="instruction">Then automate the procedure for resetting Dev to Live by downloading the following bash script:</p>
+Then automate the procedure for resetting Dev to Live by downloading the following bash script:
 
 <div class="script-file-header">
   reset-dev-to-live.sh
@@ -386,8 +263,7 @@ There are a few scenarios where it may be useful to reset your Dev environment (
   </a>
 </div>
 
-<pre>
-  <code id="reset-dev-to-live">
+```bash
     #!/bin/bash #Authenticate Terminus terminus auth:login #Provide the target
     site name (e.g. your-awesome-site) echo 'Provide the site name (e.g.
     your-awesome-site), then press [ENTER] to reset the Dev environment to
@@ -402,26 +278,13 @@ There are a few scenarios where it may be useful to reset your Dev environment (
     "Importing database and files from Live into Dev..."; terminus
     env:clone-content \$SITE.live dev #Open the Dev environment on the Site
     Dashboard terminus dashboard:view \$SITE.dev
-  </code>
-</pre>
+```
 
-<p class="instruction">Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:</p>
+Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#run-reset-script"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="run-reset-script">
-      <code class="command bash" data-lang="bash">
-        sh /PATH/TO/SCRIPT/reset-dev-to-live.sh
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+sh /PATH/TO/SCRIPT/reset-dev-to-live.sh
+```
 
 The Site Dashboard will open once the reset procedure has completed.
 
@@ -437,39 +300,15 @@ Every site has an upstream assigned in order to deliver [one-click updates](/doc
 
 To see all available upstreams, run:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#upstream-list"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="upstream-list">
-      <code class="command bash" data-lang="bash">
-        terminus upstream:list
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+terminus upstream:list
+```
 
-If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>, you can use Terminus to switch existing sites over to the common codebase:
+If your organization has a [Custom Upstream](/docs/custom-upstream/), you can use Terminus to switch existing sites over to the common codebase:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#upstream-set"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="upstream-set">
-      <code class="command bash" data-lang="bash">
-        terminus site:upstream:set my-site "My Custom Upstream"
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+terminus site:upstream:set my-site "My Custom Upstream"
+```
 
 You can use any valid identifier (upstream name, upstream machine name, upstream UUID) returned in `terminus upstream:list` to set a new upstream. For example, the upstream name "My Custom Upstream" is used above.
 

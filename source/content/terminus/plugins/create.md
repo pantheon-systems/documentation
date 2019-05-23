@@ -24,23 +24,11 @@ This example provides the structural requirements for plugins to be recognized a
 
 A plugin is a specific set of files bundled together in a directory. The first step in creating a new plugin is to create that directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must live within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
 
-<p class="instruction">Create a directory for your new plugin (e.g. <code>hello-world</code>):</p>
+Create a directory for your new plugin (e.g. `hello-world`):
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#create-plugin-dir"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="create-plugin-dir">
-      <code class="command bash" data-lang="bash">
-        mkdir $HOME/.terminus/plugins/hello-world
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+mkdir $HOME/.terminus/plugins/hello-world
+```
 
 ### 2. Create composer.json
 
@@ -78,23 +66,11 @@ In order for Terminus to recognize the directory as a plugin, the directory must
 
 Each command in Terminus is defined by its own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
 
-<p class="instruction">Create a <code>src</code> directory within your plugin directory:</p>
+Create a <code>src</code> directory within your plugin directory:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#create-src-dir"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="create-src-dir">
-      <code class="command bash" data-lang="bash">
-        mkdir $HOME/.terminus/plugins/hello-world/src
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+mkdir $HOME/.terminus/plugins/hello-world/src
+```
 
 Download the following file and move it to your plugin's `src` directory (e.g. `$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):
 
@@ -127,23 +103,11 @@ class HelloCommand extends TerminusCommand
 
 You can name the command function anything you like, but it must be a public method. The comment above the command is also required. The first line is the help text that will be displayed when you run `terminus list`. The `@command hello` line tells Terminus that this function is a command and that its name is `hello`.
 
-<p class="instruction">The command should now be recognized and loaded by Terminus:</p>
+The command should now be recognized and loaded by Terminus:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#terminus-hello"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="terminus-hello">
-      <code class="command bash" data-lang="bash">
-        terminus hello
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+terminus hello
+```
 
 The provided example command should display the following when run:
 
@@ -153,12 +117,12 @@ The provided example command should display the following when run:
 
 ## Debug
 
-<p class="instruction">Run the command with the verbose option if it does not work as expected:</p>
+Run the command with the verbose option if it does not work as expected:
 
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-hello-vvv">Copy</button>
-<figure><pre id="terminus-hello-vvv"><code class="command bash" data-lang="bash">terminus hello -vvv</code></pre></figure>
-</div>
+```bash
+terminus hello -vvv
+```
+
 If Terminus had trouble loading your plugin then there should be a debug notice logged. You may also be able to get more info by looking in your PHP error logs.
 
 ## Distribute Plugin
@@ -177,12 +141,12 @@ Add a vendor name to the plugin name within `composer.json` so that your plugin 
 
 ### PSR-4 Namespacing
 
-<p class="instruction">Your plugin command class name may eventually conflict with internal or third-party commands. To avoid this you will need to add a PSR-4 compatible namespace. This should contain your vendor name and the plugin name. Add a <code>namespace</code> declaration to the top of your php file (e.g. <code>\$HOME/.terminus/plugins/hello-world/src/HelloCommand.php</code>):</p>
+Your plugin command class name may eventually conflict with internal or third-party commands. To avoid this you will need to add a PSR-4 compatible namespace. This should contain your vendor name and the plugin name. Add a <code>namespace</code> declaration to the top of your php file (e.g. <code>\$HOME/.terminus/plugins/hello-world/src/HelloCommand.php</code>):
 
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-namespace">Copy</button>
-<figure><pre id="terminus-plugin-namespace"><code class="command bash" data-lang="bash">namespace Pantheon\TerminusHelloWorld\Commands;</code></pre></figure>
-</div>
+```bash
+namespace Pantheon\TerminusHelloWorld\Commands;
+```
+
 The `Commands` part of the namespace is not strictly necessary but it can help keep things organized if you need to add supporting classes to your plugin.
 
 You will also need to make sure your src directory and composer file reflect the new namespace. Move the `HelloCommand.php` file from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can group them into command groups by adding another layer to the namespace and directory structure.
@@ -327,7 +291,7 @@ The instructions in this section demonstrate how to set up simple functional tes
 
 6.  Define some Bats tests to run. Create a folder named `tests`, and create a file named `confirm-install.bats`. Put the contents below in your Bats test file:
 
-    ```
+    ```bash
     #!/usr/bin/env bats
 
     #
@@ -351,21 +315,9 @@ The instructions in this section demonstrate how to set up simple functional tes
 
 7.  Run your test:
 
-    <div class="copy-snippet">
-      <button
-        class="btn btn-default btn-clippy"
-        data-clipboard-target="#terminus-hello"
-      >
-        Copy
-      </button>
-      <figure>
-        <pre id="run-bats-tests">
-          <code class="command bash" data-lang="bash">
-            composer test
-          </code>
-        </pre>
-      </figure>
-    </div>
+    ```bash
+     composer test
+    ```
 
 To add more tests, create more files with `.bats` extensions, and populate them with `@test` blocks as shown above. Tests consist of simple bash expressions; any command that returns a non-zero result code signifies failure. See the [documentation on writing BATS tests](https://github.com/sstephenson/bats#writing-tests) for more information.
 

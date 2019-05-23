@@ -20,12 +20,12 @@ The latest release of Terminus is a major version upgrade, which may not be back
 
 <TerminusVersion text={"Update to the Current Release"} />
 
-<p class="instruction">Navigate to the directory where Terminus was originally installed, then run:</p>
+Navigate to the directory where Terminus was originally installed, then run:
 
-<div class="copy-snippet">
-  <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-update">Copy</button>
-  <figure><pre id="terminus-update"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update</code></pre></figure>
-</div>
+```bash
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update
+```
+
 <Alert title="Note" type={"info"}>
 
 Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully
@@ -38,25 +38,13 @@ releases.
 
 ### Nothing to install or update
 
-<p class="instruction">If the update command above returns output indicating that no updates were found, delete the existing Terminus version (e.g. <code>\$HOME/terminus</code>) and re-run the install command:</p>
+If the update command above returns output indicating that no updates were found, delete the existing Terminus version (e.g. <code>\$HOME/terminus</code>) and re-run the install command:
 
-<div class="copy-snippet">
-  <button
-    class="btn btn-default btn-clippy"
-    data-clipboard-target="#terminus-update-fail"
-  >
-    Copy
-  </button>
-  <figure>
-    <pre id="terminus-update-fail">
-      <code class="command bash" data-lang="bash">
-        rm -rf $HOME/terminus mkdir $HOME/terminus cd $HOME/terminus curl -O
-        https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
-        && php installer.phar install
-      </code>
-    </pre>
-  </figure>
-</div>
+```bash
+    rm -rf $HOME/terminus mkdir $HOME/terminus cd $HOME/terminus curl -O
+    https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
+    && php installer.phar install
+```
 
 ## EOL Timeline
 
