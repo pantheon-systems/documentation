@@ -3,23 +3,6 @@ import { StaticQuery, graphql } from "gatsby"
 
 const Commands = ({ data }) => (
   <div class="container col-md-12">
-    <form>
-      <div className="form-group">
-        <div class="input-group">
-          <div className="input-group-addon">
-            <i className="fa fa-search" />
-          </div>
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search Terminus Commands"
-          />
-          {/* <div style={{ background: "#fff; cursor:pointer;" }}>
-            <span className="fa fa-times" />
-          </div> */}
-        </div>
-      </div>
-    </form>
     <table class="table table-responsive table-bordered table-striped">
       <thead>
         <tr>
@@ -29,7 +12,6 @@ const Commands = ({ data }) => (
       </thead>
       <tbody>
         {data.dataJson.commands.map((command, i) => {
-          console.log(command)
           return (
             <tr key={i}>
               <td>
@@ -58,7 +40,7 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        dataJson(id: { eq: "commands" }) {
+        dataJson {
           commands {
             name
             description

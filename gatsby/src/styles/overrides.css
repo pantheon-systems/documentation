@@ -46,3 +46,7 @@
 .toc-link:hover::before {
   background-color: #ccc;
 }
+
+.media-heading h2 {
+  display: inline;
+}

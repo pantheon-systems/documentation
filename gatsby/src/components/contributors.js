@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const Contributors = ({ contributors }) => {
   if (contributors == null || contributors.length < 1) {
@@ -16,13 +17,12 @@ const Contributors = ({ contributors }) => {
             }
             return (
               <React.Fragment key={i}>
-                <a
-                  key={i}
-                  href={`/docs/contributors/${contributor.id}`}
+                <Link
+                  to={`/docs/contributors/${contributor.id}`}
                   title={contributor.id}
                 >
                   {contributor.name}
-                </a>
+                </Link>
                 {lastCharacter}
               </React.Fragment>
             )
