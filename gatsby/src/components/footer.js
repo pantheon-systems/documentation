@@ -3,6 +3,14 @@ import React from "react"
 import MarketoForm from "./marketoForm"
 
 const Footer = ({ data }) => {
+  const pantheonLogo = data.allFile.edges.find(
+    file => file.node.publicURL.indexOf("pantheon-logo-symbol") > -1
+  )
+
+  const CCLogo = data.allFile.edges.find(
+    file => file.node.publicURL.indexOf("CC-BY-SA_icon") > -1
+  )
+
   return (
     <div className="container-fluid">
       <div className="row">
@@ -27,11 +35,13 @@ const Footer = ({ data }) => {
                 <div className="col-lg-7 footer-menus">
                   <div className="container container-footer-section">
                     <a href="/docs/" className="footer-logo-container">
-                      <img
-                        alt="Pantheon"
-                        src={data.allFile.edges[1].node.publicURL}
-                        className="footer-logo"
-                      />
+                      {pantheonLogo && (
+                        <img
+                          alt="Pantheon"
+                          src={pantheonLogo.node.publicURL}
+                          className="footer-logo"
+                        />
+                      )}
                     </a>
                     <div className="row footer-menu-items">
                       <div className="col-xs-6 col-sm-3">
@@ -127,10 +137,12 @@ const Footer = ({ data }) => {
                       </div>
                       <div className="col-md-3">
                         <div className="license-logo">
-                          <img
-                            src={data.allFile.edges[0].node.publicURL}
-                            alt="Creative Commons Attribution-ShareAlike Logo"
-                          />
+                          {CCLogo && (
+                            <img
+                              src={CCLogo.node.publicURL}
+                              alt="Creative Commons Attribution-ShareAlike Logo"
+                            />
+                          )}
                         </div>
                       </div>
                     </div>
