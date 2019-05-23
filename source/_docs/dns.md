@@ -4,7 +4,7 @@ description: Learn what DNS is, and how to utilize it to configure your domain n
 tags: [dns]
 use: [docs_tags]
 categories: []
-contributors: alexfornuto
+contributors: [alexfornuto]
 ---
 
 **DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/docs/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:

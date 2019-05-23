@@ -52,7 +52,7 @@ All of our documentation is generated from markdown files, found at [`source/_do
 title: Git FAQs
 description: Answers to commonly asked questions about Git, Drupal 7, Drupal 6 and Pantheon.
 tags: [performance, cache]
-contributors: mrfelton
+contributors: [mrfelton]
 ---
 ```
 ### Taxonomies

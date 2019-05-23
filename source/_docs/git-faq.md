@@ -3,7 +3,7 @@ title: Git FAQs
 description: Answers to commonly asked questions about Git, Drupal, WordPress and Pantheon.
 tags: [git]
 categories: []
-contributors: mrfelton
+contributors: [mrfelton]
 ---
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
