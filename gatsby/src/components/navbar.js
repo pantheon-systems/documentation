@@ -19,17 +19,19 @@ const Navbar = ({ title, items, activePage }) => {
       </button>
       <h3>{title}</h3>
       <div className="collapse navbar-collapse" id="guide-collapse">
-        <ul id="manual-guide-toc" className="manual-guide-toc">
-          {items.map(item => {
-            return (
-              <NavbarItem
-                key={`${item.id}-item-key`}
-                item={item}
-                activePage={activePage}
-              />
-            )
-          })}
-        </ul>
+        {items && (
+          <ul id="manual-guide-toc" className="manual-guide-toc">
+            {items.map(item => {
+              return (
+                <NavbarItem
+                  key={`${item.id}-item-key`}
+                  item={item}
+                  activePage={activePage}
+                />
+              )
+            })}
+          </ul>
+        )}
       </div>
     </div>
   )

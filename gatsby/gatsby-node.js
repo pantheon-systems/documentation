@@ -38,14 +38,10 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
+  // fields: { slug: { regex: "/^((?!guides).)*$/" } }
   return graphql(`
     {
-      allDocs: allMdx(
-        filter: {
-          fields: { slug: { regex: "/^((?!guides).)*$/" } }
-          fileAbsolutePath: { ne: null }
-        }
-      ) {
+      allDocs: allMdx(filter: { fileAbsolutePath: { ne: null } }) {
         edges {
           node {
             fileAbsolutePath
