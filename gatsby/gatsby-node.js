@@ -97,6 +97,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       value: parseInt(node.id),
     })
+
     const textNode = {
       id: `${node.id}-MarkdownBody`,
       parent: node.id,
