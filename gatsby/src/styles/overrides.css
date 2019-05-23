@@ -7,13 +7,7 @@
 #doc h2::before,
 #terminus h2::before,
 #doc h3::before,
-#terminus h3::before,
-#doc h4::before,
-#terminus h4::before,
-#doc h5::before,
-#terminus h5::before,
-#doc h6::before,
-#terminus h6::before {
+#terminus h3::before {
   display: block;
   content: "";
   height: 160px;
@@ -26,13 +20,7 @@
 #doc h2,
 #terminus h2,
 #doc h3,
-#terminus h3,
-#doc h4,
-#terminus h4,
-#doc h5,
-#terminus h1,
-#doc h6,
-#terminus h6 {
+#terminus h3 {
   outline: none;
 }
 
