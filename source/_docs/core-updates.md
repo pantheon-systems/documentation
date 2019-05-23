@@ -16,7 +16,7 @@ Apply one-click updates to individual sites repositories using the Site Dashboar
 ## Apply Upstream Updates via the Site Dashboard
 1. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
 
-  ![upstream updates](/source/docs/assets/images/dashboard/updates-available-2.png)
+  ![upstream updates](/source/docs/assets/images/dashboard/updates-available.png)
 
 2. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to **Git**.
 3. Select whether you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied.
