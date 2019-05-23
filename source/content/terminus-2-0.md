@@ -1,7 +1,7 @@
 ---
 title: Terminus 2.0
 description: Learn what's new with the latest Terminus major version upgrade.
-contributors: [alexfornuto]
+contributors: [alexfornuto, joshkoenig]
 ---
 
 <Alert title="Note" type="info">

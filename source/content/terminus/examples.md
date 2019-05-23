@@ -34,7 +34,7 @@ Or for a list of all available commands:
 terminus list
 ```
 
-### &lt;site&gt;.&lt;env&gt;
+### The `<site>.<env>`
 
 Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. Note that the `<>` symbols are part of the example, not to be included in your commands. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
 

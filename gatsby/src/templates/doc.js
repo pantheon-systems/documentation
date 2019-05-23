@@ -56,23 +56,27 @@ class DocTemplate extends React.Component {
         <div className="container">
           <div className="row doc-content-well">
             <div id="doc" className="doc article col-md-9 md-70">
-              <h1
-                style={{ marginBottom: "10px", marginTop: "0px" }}
-                className="pio-docs-title"
-              >
-                {node.frontmatter.title}
-              </h1>
-              <p className="article-subhead">{node.frontmatter.description}</p>
-              <Contributors contributors={node.frontmatter.contributors} />
-              <Github
-                pageTitle={node.frontmatter.title}
-                path={node.fields.slug}
-              />
-              <Twitter
-                pageTitle={node.frontmatter.title}
-                path={node.fields.slug}
-              />
-              <Slack />
+              <header className="buttons">
+                <h1
+                  style={{ marginBottom: "10px", marginTop: "0px" }}
+                  className="pio-docs-title"
+                >
+                  {node.frontmatter.title}
+                </h1>
+                <p className="article-subhead">
+                  {node.frontmatter.description}
+                </p>
+                <Contributors contributors={node.frontmatter.contributors} />
+                <Github
+                  pageTitle={node.frontmatter.title}
+                  path={node.fields.slug}
+                />
+                <Twitter
+                  pageTitle={node.frontmatter.title}
+                  path={node.fields.slug}
+                />
+                <Slack />
+              </header>
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
                   <MDXRenderer>{node.code.body}</MDXRenderer>

@@ -131,7 +131,7 @@ class TerminusTemplate extends React.Component {
                   <div
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
                   >
-                    <header>
+                    <header className="buttons">
                       <h1>{node.frontmatter.subtitle}</h1>
                       <Contributors
                         contributors={node.frontmatter.contributors}
