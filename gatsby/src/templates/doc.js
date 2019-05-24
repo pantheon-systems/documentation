@@ -122,6 +122,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
+        getfeedbackform
         contributors {
           id
           name
