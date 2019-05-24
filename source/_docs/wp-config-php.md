@@ -68,33 +68,11 @@ Depending on your use case, there are two possibilities:
  }
  ```
 
+### How do I enable debugging?
+
 The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php){.external}:
 
-```php
-// All Pantheon Environments.
-if (defined('PANTHEON_ENVIRONMENT')) {
-  //WordPress debug settings in development environments.
-  if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
-    // Debugging enabled.
-    if (!defined( 'WP_DEBUG' )) {
-    define( 'WP_DEBUG', true );
-    }
-    define( 'WP_DEBUG_LOG', true );
-    ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Moves the log file to a location writable while in git mode.
-    define( 'WP_DEBUG_DISPLAY', true );
-  }
-  // WordPress debug settings in test and live environments.
-  else {
-    // Debugging disabled.
-    ini_set('log_errors','On');
-    ini_set('display_errors','Off');
-    ini_set('error_reporting', E_ALL );
-    define('WP_DEBUG', false);
-    define('WP_DEBUG_LOG', true);
-    define('WP_DEBUG_DISPLAY', false);
-  }
-}
-```
+{% include("content/wp-debugging.html") %}
 
 ### How can I read the Pantheon environmental configuration, like database credentials?
 
@@ -103,14 +81,6 @@ See [Reading the Pantheon Environment Configuration](/docs/read-environment-conf
 ### How do I perform redirection?
 
 See [Configure Redirects](/docs/redirects/).
-
-### How do I change the default debug.log location?
-
-WordPress has an option to <a href="/docs/logs/#how-do-i-enable-error-logging-for-wordpress" data-proofer-ignore>write logging information to a file</a>. When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
-
-```php
-ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
-```
 
 ### Where do I specify database credentials?
 

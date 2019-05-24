@@ -196,37 +196,9 @@ The steps in this section enable debug logging. Debug logging increases resource
 To minimize risk exposure, especially in a Live environment, disable debug logging when you are done.
 </div>
 
-Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress) constants on Development environments (Dev and Multidevs) to write errors to `wp-content/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment in `wp-config.php`:
+Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress){.external} constants on Development environments (Dev and Multidevs) to write errors to `wp-content/uploads/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment in `wp-config.php`:
 
-```php
-// All Pantheon Environments.
-if (defined('PANTHEON_ENVIRONMENT')) {
-  //WordPress debug settings in development environments.
-  if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
-    // Debugging enabled.
-    if (!defined( 'WP_DEBUG' )) {
-    define( 'WP_DEBUG', true );
-    }
-    ini_set('log_errors','On');
-    ini_set('display_errors','On');
-    ini_set('error_reporting', E_ALL );
-    define( 'WP_DEBUG_LOG', true ); // Stored in wp-content/debug.log by default.
-    ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Optionally overrides the debug.log location to a writable path.
-    define( 'WP_DEBUG_DISPLAY', true );
-  }
-  // WordPress debug settings in test and live environments.
-  else {
-    // Debugging disabled.
-    ini_set('log_errors','Off');
-    ini_set('display_errors','Off');
-    define('WP_DEBUG', false);
-    define('WP_DEBUG_LOG', false);
-    define('WP_DEBUG_DISPLAY', false);
-  }
-}
-```
-
-By default, the WordPress debug log path is set to `/wp-content/` and is not writable on Test or Live environments. This can be overridden to the <a href="/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location" data-proofer-ignore>`/wp-content/uploads/` folder</a>.
+{% include("content/wp-debugging.html") %}
 
 ### How can I access the Drupal event log?
 
