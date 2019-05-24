@@ -2,8 +2,40 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 const Commands = ({ data }) => (
-  <div class="container col-md-12">
-    <table class="table table-responsive table-bordered table-striped">
+  // hide/show rows
+  //
+  // hide rows
+  // jQuery("table.table-commands tbody td").filter(function() {
+  //     return jQuery(this).text().indexOf(jQuery('#command-search').val());
+  // }).hide();
+  //
+  // show all rows
+  // jQuery("table.table-commands tbody td").show();
+
+  <div className="container col-md-12">
+    <form>
+      <div className="form-group">
+        <div className="input-group">
+          <div className="input-group-addon">
+            <i className="fa fa-search" />
+          </div>
+          <input
+            type="text"
+            id="command-search"
+            className="form-control"
+            placeholder="Search Terminus Commands"
+          />
+          <div
+            style={{ background: "#fff; cursor:pointer" }}
+            className="input-group-addon"
+          >
+            <span className="fa fa-times" />
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <table className="table table-commands table-responsive table-bordered table-striped">
       <thead>
         <tr>
           <th>Command</th>
@@ -15,7 +47,7 @@ const Commands = ({ data }) => (
           return (
             <tr key={i}>
               <td>
-                <strong>{command.name}</strong>
+                <strong className="command-name">{command.name}</strong>
                 <br />
                 <small>{command.description}</small>
               </td>

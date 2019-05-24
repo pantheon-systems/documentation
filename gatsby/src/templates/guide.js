@@ -91,7 +91,7 @@ class GuideTemplate extends React.Component {
                       />
                       <Github
                         pageTitle={node.frontmatter.title}
-                        path={node.fields.slug}
+                        path={`docs/guides/${node.frontmatter.editpath}`}
                       />
                       <Twitter
                         pageTitle={node.frontmatter.title}
@@ -157,6 +157,7 @@ export const pageQuery = graphql`
         nexturl
         previousurl
         showtoc
+        editpath
         contributors {
           id
           name

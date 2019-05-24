@@ -14,17 +14,13 @@ class Index extends React.Component {
             </div>
             <div className="row" style={{ marginBottom: "15px" }}>
               <div className="col-md-12">
-                <a
-                  className="topic-info-link"
-                  style={{ display: "block! important" }}
-                  href="#"
-                >
+                <Link to="/docs/guides/quickstart/">
                   <div
                     className="guide-cta-landing"
                     style={{ padding: "25px !important", display: "block" }}
                   >
                     <h1 className="hero-video__guide-cta-title">
-                      Quick Start Guide{" "}
+                      Quick Start Guide
                       <i
                         className="fa fa-angle-right"
                         style={{ color: "#EFD01B" }}
@@ -35,7 +31,7 @@ class Index extends React.Component {
                       learn all the basics.
                     </p>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
             <div class="row mb-70">
@@ -50,12 +46,12 @@ class Index extends React.Component {
               <div class="col-md-12">
                 <ul class="top-docs top-docs-3col">
                   <li>
-                    <a href="/docs/terminus/">Terminus Manual</a>
+                    <Link to="/docs/terminus/">Terminus Manual</Link>
                   </li>
                   <li>
-                    <a href="/docs/redis/">
+                    <Link to="/docs/redis/">
                       Installing Redis on Drupal or WordPress
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
