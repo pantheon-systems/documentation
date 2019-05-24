@@ -141,13 +141,13 @@ Updates will become available to sites downstream as one-click updates within an
 </div>
 
 ## Delete Custom Upstream
-An upstream cannot be deleted if there are sites using it.
+An Upstream cannot be deleted if there are sites using it.
 
 1. From the Organization Dashboard, navigate to **Upstreams**.
 
-2. Click **Settings** next to the upstream you want to delete.
+1. Click **Settings** next to the Upstream you want to delete.
 
-3. Under **Source**, click the **Delete Upstream** button:
+1. Under **Source**, click the **Delete Upstream** button:
 
   ![Delete Upstream Button](/source/docs/assets/images/dashboard/delete-upstream.png)
 
