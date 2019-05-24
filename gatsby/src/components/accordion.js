@@ -1,9 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 
-const Accordion = ({ id, icon, title, children }) => {
-  const [isCollapsed] = useState(false)
+const Accordion = ({ id, icon, title, children, isCollapsed }) => {
+  const classCollapsed = isCollapsed ? "collapse" : "collapse in"
 
-  const classCollapsed = isCollapsed ? "collapse in" : "collapse"
   return (
     <>
       <div className="panel panel-drop panel-guide" id="accordion">
@@ -11,7 +10,7 @@ const Accordion = ({ id, icon, title, children }) => {
           <span
             style={{ cursor: "pointer" }}
             className={`accordion-toggle panel-drop-title ${
-              isCollapsed ? "" : "collapsed"
+              isCollapsed ? "collapsed" : ""
             }`}
             data-toggle={classCollapsed}
             data-parent="#accordion"
@@ -31,6 +30,10 @@ const Accordion = ({ id, icon, title, children }) => {
       </div>
     </>
   )
+}
+
+Accordion.defaultProps = {
+  isCollapsed: true,
 }
 
 export default Accordion

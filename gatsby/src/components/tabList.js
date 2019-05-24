@@ -1,75 +1,78 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import Tab from "./tab"
-class TabList extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { activeTab: "" }
-  }
 
-  selectTab = selectedTab => {
-    this.setState({
-      ...this.state,
-      activeTab: selectedTab,
-    })
-  }
+const TabList = ({ children }) => {
+  const [activeTab, setActiveTab] = useState(null)
+  const [initialized, setInitialized] = useState(null)
 
-  render() {
-    let activeTab = ""
+  useEffect(() => {
+    if (!initialized) {
+      // determine which tab is initially active
+      const initialActiveTab = children.find(tab => tab.props.active === true)
+      initialActiveTab && setActiveTab(initialActiveTab.props.id)
+
+      setInitialized(true)
+    }
+  })
+
+  const renderTab = tab => {
+    let elementId = tab.props.id
+      .trim()
+      .replace(" ", "-")
+      .toLowerCase()
+
+    let elementClass =
+      elementId === activeTab || tab.props.active & (activeTab === "")
+        ? "active"
+        : ""
+
     return (
-      <>
-        <ul className="nav nav-tabs" role="tablist">
-          {this.props.children.map((tab, i, arr) => {
-            let id = tab.props.id
-              .trim()
-              .replace(" ", "-")
-              .toLowerCase()
-            let className = ""
-
-            if (
-              id === this.state.activeTab ||
-              tab.props.active & (this.state.activeTab === "")
-            ) {
-              className = "active"
-              activeTab = id
-            }
-
-            return (
-              <li
-                key={i}
-                id={`${id}-id`}
-                role="presentation"
-                className={className}
-              >
-                <a
-                  href={`#${id}`}
-                  aria-controls={id}
-                  role="tab"
-                  data-toggle="tab"
-                  onClick={() => this.selectTab(id)}
-                >
-                  {tab.props.title}
-                </a>
-              </li>
-            )
-          })}
-        </ul>
-        <div className="tab-content">
-          {this.props.children.map((tab, i, arr) => {
-            let id = tab.props.id
-              .trim()
-              .replace(" ", "-")
-              .toLowerCase()
-
-            return (
-              <Tab key={i} title={tab.props.title} active={id === activeTab}>
-                {tab.props.children}
-              </Tab>
-            )
-          })}
-        </div>
-      </>
+      <li
+        key={`tab-${elementId}`}
+        id={`${elementId}-id`}
+        role="presentation"
+        className={elementClass}
+      >
+        <a
+          href={`#${elementId}`}
+          aria-controls={elementId}
+          role="tab"
+          data-toggle="tab"
+          onClick={() => setActiveTab(elementId)}
+        >
+          {tab.props.title}
+        </a>
+      </li>
     )
   }
+
+  const renderTabContent = tab => {
+    let elementId = tab.props.id
+      .trim()
+      .replace(" ", "-")
+      .toLowerCase()
+
+    return (
+      <Tab
+        key={`tab-content-${elementId}`}
+        title={tab.props.title}
+        active={elementId === activeTab}
+      >
+        {tab.props.children}
+      </Tab>
+    )
+  }
+
+  return (
+    <>
+      <ul className="nav nav-tabs" role="tablist">
+        {children.map(tab => renderTab(tab))}
+      </ul>
+      <div className="tab-content">
+        {children.map(tab => renderTabContent(tab))}
+      </div>
+    </>
+  )
 }
 
 export default TabList
