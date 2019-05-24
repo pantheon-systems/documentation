@@ -8,15 +8,10 @@ earlynote: The documentation on this page discusses features and options that ar
 contributors: edwardangert
 ---
 
-Pantheon offers a number of [ways to connect to your site](/docs/guides/quickstart/connection-modes/). In addition to Git and SFTP modes, [Pantheon Localdev](https://github.com/pantheon-systems/localdev/){.external} gives you a graphical interface to your Pantheon sites, complete with a fully containerized local environment that and makes it easy to develop your site locally while still maintaining the [Pantheon Workflow](/docs/pantheon-workflow/).
+Pantheon offers a number of [ways to connect to your site](/docs/guides/quickstart/connection-modes/). In addition to Git and SFTP modes, [Pantheon Localdev](https://github.com/pantheon-systems/localdev/){.external} gives you a graphical interface to your Pantheon sites, complete with a fully containerized local environment that makes it easy to develop your site
+locally while still maintaining the [Pantheon Workflow](/docs/pantheon-workflow/).
 
-## Install Docker Desktop for Mac
-
-Follow the instructions at [Docker.com](https://docs.docker.com/docker-for-mac/install/){.external}, or install using homebrew:
-
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#install-docker">Copy</button>
-<figure><pre id="install-docker"><code class="command bash" data-lang="bash">brew cask install docker</code></pre></figure></div>
+Localdev lets you [use an integrated development environment (**IDE**)](#use-a-local-ide-to-develop-your-pantheon-site) to edit and transfer files right from your desktop. Many IDEs also help take care of the Git steps, so your site stays current and properly version controlled.
 
 ## Install and Connect Localdev
 
@@ -36,13 +31,31 @@ Select a site and click **Pull for local development** to clone the site locally
 
 This will take a few minutes.
 
-If the process fails, check your site's PHP version by navigating to **Settings** in your Site's Dashboard. Currently, Localdev does not work for sites using PHP 7.3 or higher. After an error, Localdev will revert all changes and return you to the "Clone your development site" screen.
+If there are any errors, Localdev will revert all changes and return you to the "Clone your development site" screen.
 
 ## Start the Container
 
+## Use a Local IDE to Develop your Pantheon Site
+
+There are a number of IDEs that have built-in Git tools or plugins available for working with Git from within the IDE:
+- [Atom](https://atom.io/)
+- [Sublime Text](https://www.sublimetext.com/)
+- [TextMate](https://macromates.com/)
+- [Visual Studio Code](https://code.visualstudio.com)
+
+In Atom, pushing changes to your site will look something like:
 
 
-## Logging out of Localdev
+
+See your editor's documentation for specific steps on how to commit and push changes.
+
+## Limitations
+
+Localdev does not connect to [Multidev](/docs/multidev/) environments or allow direct database access.
+
+## FAQ and Troubleshooting
+
+### Log out and Reset to Defaults
 
 This will remove the machine token and all local copies of your connected sites.
 
