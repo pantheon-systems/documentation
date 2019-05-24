@@ -55,6 +55,14 @@ class GuideTemplate extends React.Component {
     const node = this.props.data.mdx
     const contentCols = node.frontmatter.showtoc ? 9 : 12
 
+    const items = this.props.data.allMdx.edges.map(item => {
+      return {
+        id: item.node.id,
+        link: item.node.fields.slug,
+        title: item.node.frontmatter.subtitle,
+      }
+    })
+
     return (
       <Layout>
         <SEO
@@ -68,7 +76,8 @@ class GuideTemplate extends React.Component {
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
               <Navbar
                 title={node.frontmatter.title}
-                activePage={"/" + node.fields.slug}
+                activePage={node.fields.slug}
+                items={items}
               />
               <div id="terminus" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
@@ -131,7 +140,7 @@ class GuideTemplate extends React.Component {
 export default GuideTemplate
 
 export const pageQuery = graphql`
-  query GuidePageBySlug($slug: String!) {
+  query GuidePageBySlug($slug: String!, $guide_directory: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       id
       code {
@@ -139,6 +148,7 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        guide_directory
       }
       frontmatter {
         title
@@ -155,6 +165,27 @@ export const pageQuery = graphql`
         getfeedbackform
       }
       fileAbsolutePath
+    }
+
+    allMdx(
+      filter: {
+        fileAbsolutePath: { ne: null }
+        fields: { guide_directory: { eq: $guide_directory } }
+      }
+      sort: { fields: [fileAbsolutePath], order: ASC }
+    ) {
+      edges {
+        node {
+          id
+          fields {
+            slug
+            guide_directory
+          }
+          frontmatter {
+            subtitle
+          }
+        }
+      }
     }
   }
 `

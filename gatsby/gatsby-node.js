@@ -38,10 +38,14 @@ exports.onCreateWebpackConfig = ({ actions }) => {
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // fields: { slug: { regex: "/^((?!guides).)*$/" } }
   return graphql(`
     {
-      allDocs: allMdx(filter: { fileAbsolutePath: { ne: null } }) {
+      allDocs: allMdx(
+        filter: {
+          fileAbsolutePath: { ne: null }
+          fields: { slug: { regex: "/^((?!guides).)*$/" } }
+        }
+      ) {
         edges {
           node {
             fileAbsolutePath
@@ -54,6 +58,30 @@ exports.createPages = ({ graphql, actions }) => {
             }
             fields {
               slug
+            }
+          }
+        }
+      }
+
+      allGuides: allMdx(
+        filter: {
+          fileAbsolutePath: { ne: null }
+          fields: { slug: { regex: "/guides/" } }
+        }
+        sort: { fields: [fileAbsolutePath], order: ASC }
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              layout
+              permalink
+              nexturl
+              previousurl
+            }
+            fields {
+              slug
+              guide_directory
             }
           }
         }
@@ -81,6 +109,20 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/${template}.js`),
         context: {
           slug: doc.node.fields.slug,
+        },
+      })
+    })
+
+    // Create guide pages.
+    const guides = result.data.allGuides.edges
+    guides.forEach(guide => {
+      const template = calculateTemplate(guide.node, "guide")
+      createPage({
+        path: guide.node.fields.slug,
+        component: path.resolve(`./src/templates/${template}.js`),
+        context: {
+          slug: guide.node.fields.slug,
+          guide_directory: guide.node.fields.guide_directory,
         },
       })
     })
@@ -119,6 +161,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       value: node.frontmatter.contributors,
     })
+
+    // Add `guide_parent field
+    if (slug.includes("docs/guides")) {
+      createNodeField({
+        name: `guide_directory`,
+        node,
+        value: `docs/${getNode(node.parent).relativeDirectory}`,
+      })
+    }
   }
 
   // Releases Content
