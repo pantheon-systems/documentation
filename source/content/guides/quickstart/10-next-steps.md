@@ -17,6 +17,7 @@ previousurl: guides/quickstart/onserver-dev-part2
 previouspage: On-Server Dev, Part 2
 editpath: quickstart/10-next-steps.md
 image: launchGuide-twitterLarge
+getfeedbackform: default
 ---
 
 Congratulations! You created and made code changes to your Pantheon site. You should now feel comfortable with the best-practice development workflow that serves as the foundation of our platform.

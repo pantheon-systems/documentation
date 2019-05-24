@@ -25,6 +25,7 @@ import SEO from "../components/seo"
 import Releases from "../components/releases"
 import TerminusVersion from "../components/terminusVersion"
 import Commands from "../components/commands"
+import GetFeedback from "../components/getFeedback"
 
 const shortcodes = {
   Callout,
@@ -103,6 +104,17 @@ class GuideTemplate extends React.Component {
                     </div>
                   )}
                 </div>
+                {node.frontmatter.getfeedbackform && (
+                  <GetFeedback
+                    formId={
+                      node.frontmatter.getfeedbackform === "default"
+                        ? "tfYOGoE7"
+                        : node.frontmatter.getfeedbackform
+                    }
+                    page={"/" + node.fields.slug}
+                    topic="addons"
+                  />
+                )}
                 <NavButtons
                   prev={node.frontmatter.previousurl}
                   next={node.frontmatter.nexturl}
@@ -140,6 +152,7 @@ export const pageQuery = graphql`
           name
           twitter
         }
+        getfeedbackform
       }
       fileAbsolutePath
     }
