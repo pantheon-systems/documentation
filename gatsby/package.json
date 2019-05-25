@@ -36,7 +36,6 @@
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-markdown": "^4.0.8",
-    "rehype-react": "^3.1.0",
     "remove": "^0.1.5",
     "tocbot": "^4.6.0"
   },
