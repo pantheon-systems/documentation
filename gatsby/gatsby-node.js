@@ -147,7 +147,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNode, createNodeField } = actions
   // MDX content
   if (node.internal.type === `Mdx`) {
-    // Add slug fields
+    // Add slug field
     const slug = calculateSlug(node, getNode)
     createNodeField({
       name: `slug`,
@@ -155,14 +155,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug,
     })
 
-    // Add contributors field to filter using GraphQL
-    createNodeField({
-      name: `contributors`,
-      node,
-      value: node.frontmatter.contributors,
-    })
-
-    // Add `guide_parent field
+    // Add guide_directory field
     if (slug.includes("docs/guides")) {
       createNodeField({
         name: `guide_directory`,

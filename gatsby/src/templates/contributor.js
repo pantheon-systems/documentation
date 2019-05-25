@@ -115,7 +115,7 @@ export const pageQuery = graphql`
     allDocs: allMdx(
       filter: {
         fileAbsolutePath: { ne: null }
-        fields: { contributors: { in: [$id] } }
+        frontmatter: { contributors: { elemMatch: { id: { eq: $id } } } }
       }
     ) {
       edges {
@@ -123,15 +123,9 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            contributors {
-              id
-            }
-            layout
-            permalink
           }
           fields {
             slug
-            contributors
           }
         }
       }
