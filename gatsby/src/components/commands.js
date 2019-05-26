@@ -1,31 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 const Commands = ({ data }) => {
-  const [initialized, setInitialized] = useState(false)
-
-  useEffect(() => {
-    if (!initialized) {
-      jQuery("#command-search").change(function() {
-        jQuery("table.table-commands tbody td").show()
-
-        jQuery("table.table-commands tbody td")
-          .filter(function() {
-            return jQuery(this)
-              .text()
-              .indexOf(jQuery("#command-search").val())
-          })
-          .hide()
-      })
-
-      jQuery("#clear-filter").click(function() {
-        jQuery("#command-search").val("")
-        jQuery("table.table-commands tbody td").show()
-      })
-
-      setInitialized(true)
-    }
-  })
+  const [search, setSearch] = useState("")
 
   return (
     <div className="container col-md-12">
@@ -39,11 +16,14 @@ const Commands = ({ data }) => {
             id="command-search"
             className="form-control"
             placeholder="Search Terminus Commands"
+            onChange={e => setSearch(e.target.value)}
+            value={search}
           />
           <div
             style={{ background: "#fff; cursor:pointer" }}
             className="input-group-addon"
             id="clear-filter"
+            onClick={e => setSearch("")}
           >
             <span className="fa fa-times" />
           </div>
@@ -59,6 +39,8 @@ const Commands = ({ data }) => {
         </thead>
         <tbody>
           {data.dataJson.commands.map((command, i) => {
+            if (search !== "" && command.name.indexOf(search) < 0) return null
+
             return (
               <tr key={i}>
                 <td>
