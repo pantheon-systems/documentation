@@ -38,28 +38,30 @@ const Commands = ({ data }) => {
           </tr>
         </thead>
         <tbody>
-          {data.dataJson.commands.map((command, i) => {
-            if (search !== "" && command.name.indexOf(search) < 0) return null
-
-            return (
-              <tr key={i}>
-                <td>
-                  <strong className="command-name">{command.name}</strong>
-                  <br />
-                  <small>{command.description}</small>
-                </td>
-                <td>
-                  <li className="terminus-usage">
-                    <span style={{ whiteSpace: "pre-line" }}>
-                      <small />
-                      <br />
-                      <small>{command.usage[0]}</small>
-                    </span>
-                  </li>
-                </td>
-              </tr>
-            )
-          })}
+          {data.dataJson.commands
+            .filter(command => {
+              return command.name.indexOf(search) >= 0
+            })
+            .map((command, i) => {
+              return (
+                <tr key={i}>
+                  <td>
+                    <strong className="command-name">{command.name}</strong>
+                    <br />
+                    <small>{command.description}</small>
+                  </td>
+                  <td>
+                    <li className="terminus-usage">
+                      <span style={{ whiteSpace: "pre-line" }}>
+                        <small />
+                        <br />
+                        <small>{command.usage[0]}</small>
+                      </span>
+                    </li>
+                  </td>
+                </tr>
+              )
+            })}
         </tbody>
       </table>
     </div>
