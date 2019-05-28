@@ -1,6 +1,6 @@
 ---
 title: Create a New Site in your Choice of Pantheon Region
-description: Learn how to get Limited Availability access to and launch sites in a specific Pantheon Region.
+description: Learn how to get Limited Availability access to and launch sites in the European Union or Australia.
 tags: [create, regions]
 categories: []
 contributors: [edwardangert, rachelwhitton, ari]
@@ -12,7 +12,7 @@ searchboost: 150
 The documentation on this page discusses features and options that are not yet available to all users.
 </div>
 
-Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from a Pantheon Region outside of the US default.
+Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from the European Union or Australia.
 
 During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US Region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in your choice of region before the feature becomes generally available in late 2019.
 
@@ -112,13 +112,12 @@ Time to celebrate. Your site is running in your chosen region!
 
 ## Coming Soon
 
-More features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this doc for updates.
+More features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this doc for updates. [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external} to tell us about your needs.
 
 Coming soon:
 
   - Region Facet on Organization Dashboard
-  - More Regions!
-    - [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external} to tell us about your needs.
+  - Canada
 
 ## Frequently Asked Questions
 ### Can I move an existing site to a new region?
