@@ -10,7 +10,7 @@ permalink: docs/guides/:basename/
 
 There are a number of articles detailing how to implement the SAML 2.0 protocol, but if you want to host your site on Pantheon and use Drupal 8 as your identity provider, there are a few details to take in account.
 <div class="alert alert-info">
-<h4 class="info">Note</h4><p markdown="1">The following tutorial assumes that you are on a linux based computer or a Mac. Also that your project is running on Apache.
+<h4 class="info">Note</h4><p markdown="1">The following tutorial assumes that you are on a linux based computer or a Mac.
 </p>
 </div>
 
@@ -19,7 +19,7 @@ There are a number of articles detailing how to implement the SAML 2.0 protocol,
 Before starting with this guide, make sure you have the following:
 
  - Have a working Drupal 8 site.
- - Download the latest version of [SimpleSAMLphp](https://simplesamlphp.org/download).
+ - Download the latest version of [SimpleSAMLphp](https://simplesamlphp.org/download) and place it on `yourproject/private/simplesamlphp`
  - Download the Drupal module [saml_idp](https://github.com/Javi-er/saml_idp) (you’ll notice that this repo is a fork of [this one](https://github.com/bradjones1/saml_idp) this is because there were some changes necessary to make it work which are [described here](https://www.drupal.org/project/saml_idp/issues/3013357).)
  
 ## Getting started
@@ -37,11 +37,7 @@ drush ev 'Drupal\saml_idp\Install::postInstall()'
 
 ### Setting up SimpleSAMLphp
 
-1.  Place your Drupal 8 projected inside a ``web`` [nested docroot](https://pantheon.io/docs/nested-docroot).
-
-2.  Place SimpleSAMLphp a folder called ``/private`` 
-
-3.  Create a symlink on your project root from ``/simplesaml`` to ``/private/simplesamlphp/www``
+1.  Create a symlink on your project root from ``/simplesaml`` to ``/private/simplesamlphp/www``
 
     ```bash
     $ ln -s ./private/simplesamlphp/www ./simplesaml
@@ -50,7 +46,7 @@ drush ev 'Drupal\saml_idp\Install::postInstall()'
     Your project structure should be as follow:
     
     ```markdown
-    project
+    yourproject
     ├── pantheon.yml   
     ├── ...
     └─── private
@@ -59,23 +55,15 @@ drush ev 'Drupal\saml_idp\Install::postInstall()'
     │       └─── ...
     └─── simplesamlphp -> ./private/simplesamlphp/www  
     |
-    └───web
-        ├── index.php
-        └── ...
+    └───index.php
+    ├── modules
+    └── ...
     ```
     
 4. Add a virtual host for your project
-
-   Edit your Apache virtual host confiuguration and add the following:
-   You can see your current virtual host configuration with 
-
-    ``` bash 
-    $ /usr/sbin/httpd -S
-    ```
-    
-   Replace `local.myproject.com` with your desired domain name and `/var/www/project` with your project location.
-   You'll probably want to edit the log directory as well if it's different on your installation.
-   Take in account that you’ll need `mod_rewrite` to be enabled.
+   1. Set up an enviroment variable on your virtual host configuration called `SIMPLESAMLPHP_CONFIG_DIR` pointing to your project simplesaml configuration file, for instance: `/path/to/yourproject/simplesamlphp/config` .
+   2. add an alias on your virtual host so `/simplesaml` resolves to `/path/to/yourproject/simplesamlphp/www`.
+If you are using Apache as your local server, the virtual host configuration will look as follow:
 
     ``` apache
     <VirtualHost *:80>
@@ -84,18 +72,7 @@ drush ev 'Drupal\saml_idp\Install::postInstall()'
      SetEnv SIMPLESAMLPHP_CONFIG_DIR /var/www/project/simplesamlphp/config
      Alias /simplesaml /var/www/project/simplesamlphp/www
      ErrorLog "/log/project_log"
-     CustomLog "/log/apache2/project-access_log" common
-     <Directory /var/www/project/simplesamlphp/www>
-      <IfModule !mod_authz_core.c>
-       # For Apache 2.2:
-       Order allow,deny
-       Allow from all
-      </IfModule>
-      <IfModule mod_authz_core.c>
-       # For Apache 2.4:
-       Require all granted
-      </IfModule>
-     </Directory>
+     ......
     </VirtualHost>
     ```
 
