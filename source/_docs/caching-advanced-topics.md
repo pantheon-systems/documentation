@@ -8,10 +8,9 @@ categories: []
 
 Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/docs/global-cdn/) will neither get the user's response from any existing cache nor store the response from the user into the cache.
 
-<div class="enablement">
-  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
-</div>
+<Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
+</Callout>
 
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this, we recommend setting the `NO_CACHE` cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
@@ -36,7 +35,7 @@ If your site or application requires Facebook authentication, we have added exce
 
 ## Manually Expiring Cache for Static Assets
 
-Pantheon sets a cache lifetime of 1 year for static assets (e.g. CSS, JS, Images, PDFs) per industry standard best practices. Either of the following options should ensure a client's browser receives a new version of any static asset after clearing a site's cache: 
+Pantheon sets a cache lifetime of 1 year for static assets (e.g. CSS, JS, Images, PDFs) per industry standard best practices. Either of the following options should ensure a client's browser receives a new version of any static asset after clearing a site's cache:
 
 - Rename the file
 - Request the file with an updated query parameter. For example, you can version a css file by linking to it as `style.css?v=1.1`
@@ -161,7 +160,7 @@ WordPress does not set cache headers by default, 404 or otherwise. If your site 
 Plugins like [Cache Control](https://wordpress.org/plugins/cache-control/){.external} can solve this issue.
 
 ## Environment Access Locked
-If you're using the [Security tool](/docs/security/) within the Pantheon Site Dashboard to lock an environment, the Global CDN will not cache responses. Disable basic authentication by setting environment access to **Public**. 
+If you're using the [Security tool](/docs/security/) within the Pantheon Site Dashboard to lock an environment, the Global CDN will not cache responses. Disable basic authentication by setting environment access to **Public**.
 
 ## Cookie Handling
 

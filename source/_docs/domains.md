@@ -9,10 +9,9 @@ use:
 ---
 A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.example.com` into machine-readable IP addresses like 127.0.0.1. All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
 
-<div class="enablement">
-  <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
-</div>
+<Callout title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps</p>
+</Callout>
 
 ## Platform Domains
 Pantheon issues platform domains for all environments. Each environment (Dev, Test, Live, each Multidev) is accessible via the platform domain, matching the following patterns:
@@ -64,9 +63,9 @@ Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to t
 2. If no domains have been added yet, click **Connect Live Domain**:
 
     ![Adding a first domain to the Site Dashboard](/source/docs/assets/images/dashboard/add-first-domain.png)
-    
+
    If one (or more) domains have already been added, click **Connect Domain**:
-   
+
     ![Adding an additional domain to the Site Dashboard](/source/docs/assets/images/dashboard/add-additional-domains.png)
 
 3. Enter the domain you'd like to add in the "Enter domain to connect" field, then click **Connect Domain**:

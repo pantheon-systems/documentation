@@ -10,10 +10,9 @@ categories: []
 
 If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 
-<div class="enablement">
-  <h4 class="info" markdown="1">[Accelerate Your Workflow](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Improve your agency's development efficiency with custom DevOps training from Pantheon experts.</p>
-</div>
+<Callout title="Accelerate Your Workflow" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Improve your agency's development efficiency with custom DevOps training from Pantheon experts.</p>
+</Callout>
 
 For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise){.external} and [Pantheon EDU](https://pantheon.io/edu){.external} accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 

@@ -7,10 +7,9 @@ categories: []
 ## Exclude Specific Pages from Caching
 You can use a variety of mechanisms to determine which responses from your Drupal or WordPress site should be excluded from caching. Ultimately, these mechanisms result in setting HTTP headers that signal cacheability to Varnish and recipients of the response, like a browser.
 
-<div class="enablement">
-  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
-</div>
+<Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
+</Callout>
 
 Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or a plugin dedicated to site-specific functionality in WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited (as in this Drupal 8 example).
 
@@ -106,11 +105,11 @@ Some web developers choose to aggregate all of their caching logic in one place,
   function add_header_nocache() {
         header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
   }
-  
-  
-  /* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */ 
-  
-  // wp-json paths or any custom endpoints 
+
+
+  /* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
+
+  // wp-json paths or any custom endpoints
   $regex_json_path_patterns = array(
     '#^/wp-json/wp/v2?#',
     '#^/wp-json/?#'
@@ -118,7 +117,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
   foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
     if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
-        // re-use the rest_post_dispatch filter in the Pantheon page cache plugin  
+        // re-use the rest_post_dispatch filter in the Pantheon page cache plugin
         add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
 
         // Re-define the send_header value with any custom Cache-Control header

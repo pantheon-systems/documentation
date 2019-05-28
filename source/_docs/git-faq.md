@@ -7,10 +7,9 @@ contributors: mrfelton
 ---
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
-<div class="enablement">
-  <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
-</div>
+<Callout title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
+</Callout>
 
 ## Resolve Conflicts
 
@@ -97,13 +96,13 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
   new file: README.txt
   ```
 
-4. Stage and commit:   
+4. Stage and commit:
  ```
  git commit -am "verifying missing README.txt"
  ```
  You will receive confirmation from Git that the file has been committed.
 
-5. Run the Git push command:  
+5. Run the Git push command:
  ```
  git push origin master
  ```
@@ -175,10 +174,10 @@ We are updating our infrastructure so that code repositories do not have a singl
 
 As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt in to evaluate the settings.
 
-If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings, replacing `SITE_UUID` with your [site's UUID](/docs/sites/#site-uuid):  
+If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings, replacing `SITE_UUID` with your [site's UUID](/docs/sites/#site-uuid):
 ```
 git remote set-url origin ssh://codeserver.dev.SITE_UUID@codeserver.dev.SITE_UUID.drush.in:2222/~/repository.git
-```  
+```
 
 By default your remote will be named origin. If you have renamed your Pantheon site's upstream, you will have to change origin in the command above.
 
@@ -262,10 +261,10 @@ Commits will be pushed to both remote destinations automatically on `git push or
 
 ### Why are some merged commits hidden?
 
-Pantheon uses the following command to display commits in the Dashboard:  
+Pantheon uses the following command to display commits in the Dashboard:
 ```
 git log --first-parent
-```  
+```
 
 According to the Git Manual:
 
@@ -280,4 +279,3 @@ git log --graph
 ### Can I use .gitignore on Pantheon?
 
 Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. The `.gitignore` files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.
-
