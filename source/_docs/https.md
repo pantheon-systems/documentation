@@ -8,10 +8,9 @@ searchboost: 200
 ---
 Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https){.external} for every site launched on the platform.
 
-<div class="enablement">
-  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
-</div>
+<Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
+</Callout>
 
 {% include("content/configure-dns.html")%}
 
@@ -68,7 +67,7 @@ High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of th
 Upgrade your site to the Global CDN and then send the [HSTS header](/docs/hsts/).
 
 ### Can I bring my own certificate?
-Yes. See our page on [custom certificates](https://pantheon.io/docs/custom-certificates/) for more information. 
+Yes. See our page on [custom certificates](https://pantheon.io/docs/custom-certificates/) for more information.
 
 But you shouldn't need to buy a dedicated certificate or worry about renewals in most cases. For example, wildcard certificates aren't necessary to secure communications for multiple domains, because we will automatically deploy certificates for all domains on your site. The certificates provided by Pantheon on the Global CDN provide end-to-end encryption. Even though certificates are shared, they are still secure. Concerns with shared certificates are cosmetic.
 

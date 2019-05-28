@@ -6,10 +6,9 @@ categories: []
 ---
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern.
 
-<div class="enablement">
-  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's DevOps training can accelerate your workflow.</p>
-</div>
+<Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's DevOps training can accelerate your workflow.</p>
+</Callout>
 
 Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/docs/multidev/) instead of local development.
 

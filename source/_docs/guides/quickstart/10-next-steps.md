@@ -28,7 +28,6 @@ But this is just the tip of the iceberg. Ready to learn more? Here are just some
 - Install [Terminus](/docs/terminus), and start interacting with Pantheon from the command line.
 - Take your site live! Just follow this [Launch Essentials](/docs/guides/launch).
 
-<div class="enablement">
-  <h4 class="info" markdown="1">[Are you an agency?](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Accelerate your journey to workflow nirvana with help from the experts at Pantheon. Check out our <a href="https://pantheon.io/agencies/learn-pantheon?docs">DevOps training program</a>.</p>
-</div>
+<Callout title="Are you an agency?" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Accelerate your journey to workflow nirvana with help from the experts at Pantheon. Check out our <a href="https://pantheon.io/agencies/learn-pantheon?docs">DevOps training program</a>.</p>
+</Callout>

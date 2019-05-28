@@ -6,18 +6,17 @@ tags: [git]
 ---
 Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
-<div class="enablement">
-  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
-  <p>Dev/Test/Live, parallel feature development with Multidev, hotfix workflows, and more! Learn how Pantheon's DevOps training can accelerate your workflow.</p>
-</div>
+<Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Dev/Test/Live, parallel feature development with Multidev, hotfix workflows, and more! Learn how Pantheon's DevOps training can accelerate your workflow.</p>
+</Callout>
 
 ## Install Git
 
 Select your operating system and the download will automatically begin:
 
-[Mac OS](https://git-scm.com/download/mac)  
-[Windows](https://git-scm.com/download/win)  
-[Linux](https://git-scm.com/download/linux)  
+[Mac OS](https://git-scm.com/download/mac)
+[Windows](https://git-scm.com/download/win)
+[Linux](https://git-scm.com/download/linux)
 
 ## Clone Your Site Codebase
 
@@ -110,7 +109,7 @@ RSA key fingerprint is SHA256:yPEkh1Amd9WFBSP5syXD5rhUByTjaKBxQnlb5CahZZE.
 Are you sure you want to continue connecting (yes/no)?
 ```
 
-You can safely type `yes` and press enter to add the server's SSH key fingerprint to your computer's `known_hosts` file. Additional connections to this specific Pantheon container will complete successfully without prompts. However, you will be prompted to confirm connections following a container migration, which is part of regular maintenance on the platform. See the following Pro Tip to automatically accept all Pantheon connections.  
+You can safely type `yes` and press enter to add the server's SSH key fingerprint to your computer's `known_hosts` file. Additional connections to this specific Pantheon container will complete successfully without prompts. However, you will be prompted to confirm connections following a container migration, which is part of regular maintenance on the platform. See the following Pro Tip to automatically accept all Pantheon connections.
 
 <div class="panel panel-drop panel-guide" id="accordion">
 

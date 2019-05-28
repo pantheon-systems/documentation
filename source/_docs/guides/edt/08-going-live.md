@@ -44,16 +44,13 @@ All links from the video are provided below.
  - [Redirect to a Primary Domain](/docs/redirects/#redirect-to-https)
  - [Require HTTPS with the HSTS Header](/docs/hsts/)
 
- <div class="enablement" markdown="1">
-  <h4 class="info" markdown="1">
- Need more help? Get in touch:</h4>
- [Power Users](/docs/power-users/)
-[Pantheon Support](/docs/support/)
-[Office Hours](https://pantheon.io/agencies/office-hours)
-</div>
 
+<Callout title="Need more help? Get in touch:">
+ - [Power Users](/docs/power-users/)
+ - [Pantheon Support](/docs/support/)
+ - [Office Hours](https://pantheon.io/agencies/office-hours)
+</Callout>
 
-<div class="enablement" markdown="1">
-  <h4 class="info" markdown="1">[Getting Essential Developer Training](https://pantheon.io/essential-developer-training?docs){.external}</h4>
-  Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
-</div>
+<Callout title="Getting Essential Developer Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<p>Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.</p>
+</Callout>
