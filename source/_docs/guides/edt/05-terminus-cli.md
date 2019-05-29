@@ -19,7 +19,7 @@ editpath: edt/05-terminus-cli.md
 image: launchGuide-twitterLarge
 ---
 
-In this lesson, we’re going to explore the Developer Workflow.
+In this lesson, we’re going to explore the Pantheon Command Line Interface, Terminus.
 All links from the video are provided below.
 
 **Watch the video:**

@@ -19,7 +19,7 @@ editpath: edt/04-multidev.md
 image: launchGuide-twitterLarge
 ---
 
-In this lesson, we’re going to explore the Developer Workflow.
+In this lesson, we’re going to explore Pantheon's Multidev.
 All links from the video are provided below.
 
 **Watch the video:**

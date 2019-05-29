@@ -18,7 +18,7 @@ editpath: edt/08-going-live.md
 image: launchGuide-twitterLarge
 ---
 
-In this lesson, we’re going to explore the Developer Workflow.
+In this lesson, we’re going to dive into launching your site on Pantheon.
 All links from the video are provided below.
 
 **Watch the video:**

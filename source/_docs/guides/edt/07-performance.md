@@ -19,7 +19,7 @@ editpath: edt/07-performance.md
 image: launchGuide-twitterLarge
 ---
 
-In this lesson, we’re going to explore the Developer Workflow.
+In this lesson, we’re going to explore how to get the best performance for your sites.
 All links from the video are provided below.
 
 **Watch the video:**
