@@ -24,26 +24,7 @@ In this lesson, we’re going to explore the User Dashboard.
 
 **Watch the video:**
 
-<div class="panel panel-drop panel-guide">
-  <script src="//fast.wistia.com/embed/medias/hzsntt6bi2.jsonp" async />
-  <script src="//fast.wistia.com/assets/external/E-v1.js" async />
-  <div
-    class="wistia_responsive_padding"
-    style="padding:56.25% 0 0 0;position:relative;"
-  >
-    <div
-      class="wistia_responsive_wrapper"
-      style="height:100%;left:0;position:absolute;top:0;width:100%;"
-    >
-      <div
-        class="wistia_embed wistia_async_hzsntt6bi2 videoFoam=true"
-        style="height:100%;width:100%"
-      >
-        &nbsp;
-      </div>
-    </div>
-  </div>
-</div>
+<VideoWidget videoId={"hzsntt6bi2"} />
 
 <Accordion title={"User Dashboard Glossary (Optional)"} id={"user-dashboard-tour"} icon={"lightbulb"}>
 
