@@ -31,51 +31,26 @@ Every Pantheon site comes with 3 separate environments— Dev, Test, Live—whic
   <Icon icon={"cloud"} text={"Multidev"} /> tab.
 </Alert>
 
-## <span class="glyphicons glyphicons-wrench" text={"Dev
-
-"}/>
+## <span class="glyphicons glyphicons-wrench"></span> Dev
 By default, you’ll find yourself on this tab. This is your development environment. It provides access to a stand-alone copy of your site, with its own codebase, database, and files.
 
 Within the safety of this isolated environment, you can edit code and make updates to your site. In fact, all development on your Pantheon sites starts here.
 
-## <span class="glyphicons glyphicons-equalizer" text={"Test
-
-"}/>
+## <span class="glyphicons glyphicons-equalizer"></span> Test
 This environment is for reviewing the changes made in your Dev environment with the most recent content from your live site.
 
 To use the Test environment for this purpose, you first push new code “up” from your Dev environment and clone recent content “down” from your Live environment.
 
 ![Pantheon Workflow](../../../docs/assets/images/workflow.png)
 
-## <span class="glyphicons glyphicons-cardio" text={"Live
-
-"}/>
+## <span class="glyphicons glyphicons-cardio"> </span> Live
 This environment is for your live site, where content creators actively post and upload media files.
 
 After passing review, you push your new code “up” from the Test environment to this Live environment.
 
 **Watch the video:**
 
-<div class="panel panel-drop panel-guide">
-  <script src="//fast.wistia.com/embed/medias/pb8s59wuij.jsonp" async />
-  <script src="//fast.wistia.com/assets/external/E-v1.js" async />
-  <div
-    class="wistia_responsive_padding"
-    style="padding:56.25% 0 0 0;position:relative;"
-  >
-    <div
-      class="wistia_responsive_wrapper"
-      style="height:100%;left:0;position:absolute;top:0;width:100%;"
-    >
-      <div
-        class="wistia_embed wistia_async_pb8s59wuij videoFoam=true"
-        style="height:100%;width:100%"
-      >
-        &nbsp;
-      </div>
-    </div>
-  </div>
-</div>
+`youtube: https://www.youtube.com/watch?v=NBL2Ejh8TI4`
 
 <Accordion id={"site-dashboard-tour"} title={"Site Dashboard Glossary (Optional)"} icon={"lightbulb"}>
 
