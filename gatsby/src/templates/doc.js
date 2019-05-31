@@ -21,7 +21,6 @@ import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import SEO from "../components/seo"
-import VideoWidget from "../components/videoWidget"
 
 const shortcodes = {
   Callout,
