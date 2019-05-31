@@ -10,10 +10,9 @@ This allows you to transfer unlimited data "server-to-server", which is much fas
 
 There are two mechanisms for transferring files: SFTP and rsync.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.</p>
-</div>
+<Alert title="Note" type="info">
+You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
+</Alert>
 
 {% include("content/auth.html")%}
 
@@ -25,10 +24,9 @@ There are a number of GUI SFTP clients available, such as [FileZilla](https://fi
 
 Here's an example of using a command-line SFTP client to connect to a site environment's file directory.
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).</p>
-</div>
+<Alert title="Note" type="info">
+You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+</Alert>
 
 
     export ENV=[env]
@@ -46,10 +44,9 @@ Here's an example of using a command-line SFTP client to connect to a site envir
 
 rsync is also available, but it is a more advanced tool that requires experience with the command line.
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).</p>
-</div>
+<Alert title="Note" type="info">
+You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+</Alert>
 
 
     export ENV=[env]
@@ -75,24 +72,22 @@ rsync is also available, but it is a more advanced tool that requires experience
 
 Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsync){.external} to learn more.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/docs/nested-docroot/).</p>
+<Alert title="Note" type="info">
+Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/docs/nested-docroot/).</p>
 </div>
 
 ## Examples
 
-<div class="alert alert-export" role="alert">
-<h4 class="info">Exports</h4>
-<p markdown="1">The examples below use the variables `$ENV` and `$SITE`. You can replace these variables with your site UUID and environment, or set them before you begin:
-<pre>
-<code class="bash">export ENV=dev
+<Alert title="Exports" type="export">
+The examples below use the variables `$ENV` and `$SITE`. You can replace these variables with your site UUID and environment, or set them before you begin:
+```
+export ENV=dev
 export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
-</code></pre>
-</p>
-<p markdown="1"> Replace the example values above with the environment you're working with and your site UUID. You can find the UUID in your Site Dashboard URL:</p><br>
-<p markdown="1">https://dashboard.pantheon.io/sites/**3ef6264e-51d9-43b9-a60b-6cc22c3129308as83**</p>
-</div>
+```
+Replace the example values above with the environment you're working with and your site UUID. You can find the UUID in your Site Dashboard URL:
+
+https://dashboard.pantheon.io/sites/**3ef6264e-51d9-43b9-a60b-6cc22c3129308as83**
+</Alert>
 
 ### Download a Drupal Directory from Pantheon
 Download the contents of the `sites/default/files` directory into a folder on your local environment in the `files` home folder:
@@ -123,9 +118,9 @@ rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE
 ### Upload a Directory to Pantheon
 If you need to upload the files directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
 
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p>Always use the <code>temp-dir flag</code> when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.</p></div>
+<Alert title="Warning" type="danger">
+Always use the <code>temp-dir flag</code> when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.
+</Alert>
 
 ```bash
 rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/

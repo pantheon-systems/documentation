@@ -7,10 +7,9 @@ contributors: [edwardangert, rachelwhitton, ari]
 searchboost: 150
 ---
 
-<div class="alert alert-info" markdown="1">
-#### Limited Availability {.info}
+<Alert title="Limited Availability" type="info" markdown="1">
 The documentation on this page discusses features and options that are not yet available to all users.
-</div>
+</Alert>
 
 Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from the new European Union (**EU**) Region.
 

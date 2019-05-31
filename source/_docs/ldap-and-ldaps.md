@@ -12,10 +12,9 @@ LDAP provides access and maintenance of a distributed directory storing organize
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon site.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Pantheon supports IP authentication schemes *only* when implemented as part of a [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
-</div>
+</Alert>
 
 ### Drupal
 Users have reported success using [https://drupal.org/project/ldap](https://drupal.org/project/ldap) and [https://drupal.org/project/simple\_ldap](https://drupal.org/project/simple_ldap) to connect to LDAP servers, including Active Directory.

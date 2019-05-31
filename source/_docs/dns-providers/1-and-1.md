@@ -7,9 +7,9 @@ tags: [providers]
 permalink: docs/:basename/
 editpath: dns-providers/1-and-1.md/
 ---
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p>1&1 does not support adding multiple AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports more than one IPv6 record per domain.</p></div>
+<Alert title="Warning" type="danger">
+1&1 does not support adding multiple AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports more than one IPv6 record per domain.
+</Alert>
 
 ## Before You Begin
 Be sure that you have a:

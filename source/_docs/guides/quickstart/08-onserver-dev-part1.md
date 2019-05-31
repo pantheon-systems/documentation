@@ -41,17 +41,15 @@ If you need help with this step, please reference the [WordPress Codex](https://
 
 5. Return to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. The files you just added are highlighted.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p>You may need to refresh your dashboard to see these files in your Dev environment.
-    </p></div>
+    <Alert title="Note" type="info">
+    You may need to refresh your dashboard to see these files in your Dev environment.
+    </Alert>
 
 6. Add a commit message, then click **Commit** to add these files to your Dev environment.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p>In the Dev environment, you can’t make a commit without first adding a commit message.
-    </p></div>
+    <Alert title="Note" type="info">
+    In the Dev environment, you can’t make a commit without first adding a commit message.
+    </Alert>
 
     Ok, now let’s review the new theme in your Test environment.
 
@@ -76,10 +74,9 @@ If you need help with this step, please reference the [WordPress Codex](https://
      </div>
     </div>
 
-    <div class="alert alert-danger" role="alert">
-      <h4 class="info">Warning</h4>
-      <p>As intended, the following action will overwrite your Test database and files. If you skipped this backup task you will be unable to recover this data hereafter.</p>
-    </div>
+    <Alert title="Warning" type="danger">
+      As intended, the following action will overwrite your Test database and files. If you skipped this backup task you will be unable to recover this data hereafter.
+    </Alert>
 
 10. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 

@@ -241,7 +241,7 @@ When writing multi-step processes, repeated variables and constants should be de
 
 <div class="style-example" markdown="1">
 
-<div class="alert alert-export" role="alert">
+<div class="alert alert-export">
 <h4 class="info">Exports</h4>
 <p markdown="1">This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 <pre>
@@ -254,7 +254,7 @@ export env=dev
 <hr class="source-code">
 
 ```html
-<div class="alert alert-export" role="alert">
+<div class="alert alert-export">
 <h4 class="info">Exports</h4>
 <p markdown="1">This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 <pre>
@@ -272,31 +272,27 @@ There are two types of callouts used in our docs, notes and warnings:
 
 ### Notes
 <div class="style-example" markdown="1">
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Notes should identify important pieces of information the reader shouldn't miss.
-</div>
+</Alert>
 <hr class="source-code">
 ```html
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Notes should identify important pieces of information the reader shouldn't miss.
-</div>
+</Alert>
 ```
 </div>
 
 ### Warnings
 <div class="style-example" markdown="1">
-<div class="alert alert-danger" role="alert" markdown="1">
-#### Warning {.info}
+<Alert title="Warning" type="danger">
 Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
-</div>
+</Alert>
 <hr class="source-code">
 ```html
-<div class="alert alert-danger" role="alert" markdown="1">
-#### Warning {.info}
+<Alert title="Warning" type="danger">
 Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
-</div>
+</Alert>
 ```
 </div>
 
@@ -305,28 +301,24 @@ Success callouts are used infrequently, usually in guides with specific end resu
 
 <div class="style-example" markdown="1">
 
-<div class="alert alert-danger">
-  <h4 class="info"><span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration</h4>
-  <p markdown="1">![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)</p>
-</div>
+<Alert title="<span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration" type="danger">
+![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
+</Alert>
 
-<div class="alert alert-success">
-  <h4 class="info"><span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration</h4>
-  <p markdown="1">![Correct vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/correct-vanity-cname-dns.png)</p>
-</div>
+<Alert title="<span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration" type="success">
+![Correct vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/correct-vanity-cname-dns.png)
+</Alert>
 
 
 <hr class="source-code">
 ```html
-<div class="alert alert-danger">
-  <h4 class="info"><span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration</h4>
-  <p markdown="1">![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)</p>
-</div>
+<Alert title="<span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration" type="danger">
+![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
+</Alert>
 
-<div class="alert alert-success">
-  <h4 class="info"><span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration</h4>
-  <p markdown="1">![Correct vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/correct-vanity-cname-dns.png)</p>
-</div>
+<Alert title="<span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration" type="success">
+![Correct vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/correct-vanity-cname-dns.png)
+</Alert>
 ```
 
 </div>

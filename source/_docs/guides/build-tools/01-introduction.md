@@ -135,21 +135,19 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
       <figure><pre id="build-tools-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:~1</code></pre></figure>
     </div>
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">The Terminus Build Tools Plugin does not support private repositories.</p>
-    </div>
+    <Alert title="Note" type="info">
+    The Terminus Build Tools Plugin does not support private repositories.</p>
+    </Alert>
 
 9. [Authorize CircleCI on GitHub](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb){.external}.
 
     If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.
 
-<div class="alert alert-info" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Pantheon's [support team](/docs/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
 
 If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/){.external} or posting in our [Pantheon Power Users](https://slackin.pantheon.io/){.external} Slack channel.
-</div>
+</Alert>
 
 
 ### Access Tokens (Optional)

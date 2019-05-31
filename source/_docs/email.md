@@ -96,10 +96,9 @@ Use the following integration methods for Drupal and WordPress to configure an e
   <div role="tabpanel" class="tab-pane active" id="drupal">
     Once you have chosen your SMTP provider, install and configure Drupal's <a href="https://drupal.org/project/smtp">SMTP Authentication Support</a> module.
 
-    <div class="alert alert-info" role="alert">
-      <h4 class="info">Note</h4>
-        <p>The SMTP Authentication Support module for Drupal 8 is currently in Beta, support may be limited. </p>
-    </div>
+    <Alert title="Note" type="info">
+        The SMTP Authentication Support module for Drupal 8 is currently in Beta, support may be limited. 
+    </Alert>
   </div>
   <div role="tabpanel" class="tab-pane" id="wp">
     Once you have chosen your SMTP provider, install and configure WordPress's <a href="https://wordpress.org/plugins/wp-mail-smtp/">WP Mail SMTP</a> plugin.

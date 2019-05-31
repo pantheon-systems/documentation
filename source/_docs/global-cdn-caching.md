@@ -14,10 +14,9 @@ The Global CDN can also improve the availability of your site. For example, if a
 
 
 ## Configure Your Drupal or WordPress Site for Global CDN
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>No module or plugin installation is required; do <strong>not</strong> install the Drupal Varnish or CDN modules.</p>
-</div>
+<Alert title="Note" type="info">
+No module or plugin installation is required; do <strong>not</strong> install the Drupal Varnish or CDN modules.
+</Alert>
 
 The Global CDN respects standard HTTP headers served by your site. If you set pages to expire in 5 minutes, the CDN will expire the content as requested. If your site sends headers that forbid caching, the CDN won't cache the content.
 

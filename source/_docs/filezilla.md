@@ -23,15 +23,11 @@ Enter your SFTP connection details:
 
 ![Adding a new site to the Site Manager](/docs/assets/images/filezilla-new-site.png "The Filezilla Site Manager")
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">
+<Alert title="Note" type="info">
 Be sure to set the **Protocol:** to `SFTP` (*not* `FTP`) and the server port to `2222`.
-</p>
-<p markdown="1">
+
 Under the **Advanced** Tab, leave the Remote Directory blank.
-</p>
-</div>
+</Alert>
 
 ### Authentication
 
@@ -39,15 +35,11 @@ Select from one of the following **Logon Type:** options in the General tab:
 
  - For **SSH Key-Based** authentication set the **Logon Type:** dropdown to "Key file". In the **Key file:** box enter the path to or browse and select your private SSH key (usually named `id_rsa`) associated with the public key loaded into your User Dashboard.
 
-    <div class="alert alert-info" role="alert">
-    <h4 class="info">Note</h4>
-    <p markdown="1">
+    <Alert title="Note" type="info">
     The "Browse..." button may not show hidden files or directories, which can make it difficult to navigate to your `.ssh` directory. If you cannot navigate to your `.ssh` folder you can enter the full path to the file in the **Key file:** box.
-    </p>
-    <p markdown="1">
+
     On MacOS, you can make hidden files and folders visible in the Open File window with the command **⌘ CMD + ⇧ SHIFT + . (period)** .
-    </p>
-    </div>
+    </Alert>
 
  - For **Password-Based** authentication set the **Logon Type:** dropdown to "Normal" and then enter your Pantheon account email address and your password. You can also select the "Ask for password" type if you don't want to save the password and instead be prompted for it every time you can connect.
 

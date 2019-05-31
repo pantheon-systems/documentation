@@ -8,11 +8,11 @@ By default, Pantheon runs Drush 8 on newly created Drupal sites. Drush 8 is comp
 
 The Drush version is set when the site is created. Sites created before Nov 4, 2015 (and Drupal 8 sites created before Sep 3, 2015) use an older version of Drush that is incompatible with later versions of PHP. You can [check your current Drush version via Terminus](/docs/drush-versions/#verify-current-drush-version). Updating Drush can be accomplished by [a simple addition to your pantheon.yml file](/docs/drush-versions/#configure-drush-version) below.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">
+<Alert title="Note" type="info">
+
 When running Drush locally, we highly recommend running Drush version 8.1.15 or higher.
-</p></div>
+
+</Alert>
 
 ## Terminus Drush and Local Drush
 [Terminus](/docs/terminus/) makes remote Drush calls on sites without using a local installation, eliminating compatibility issues between local and remote installs. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
@@ -32,10 +32,9 @@ drush_version: 8
 ```
 Now your site’s Drush version is managed via `pantheon.yml`, so it’s in version control and deployed along with the rest of your code.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.yml` file exists, please do not edit it. It is used by the upstream updates repository and will cause a merge conflict if modified.
-</div>
+</Alert>
 
 ### Available Drush Versions
 Pantheon currently supports Drush 8. While Drush 5 and 7 are available if needed, they are listed as [unsupported](http://docs.drush.org/en/master/install/#drupal-compatibility){.external} by the Drush maintainers, and should be avoided unless absolutely necessary.

@@ -44,9 +44,9 @@ composer.json
     }
 }</code></pre>
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>The <code>name</code> attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist). </p></div>
+<Alert title="Note" type="info">
+The <code>name</code> attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist). 
+</Alert>
 ### 3. Add Commands
 Each command in Terminus is defined by its own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
 
@@ -161,10 +161,9 @@ Update the `composer.json` file with a `require` section that lists all of the e
     }
 }
 ```
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>In order to avoid conflicts between the dependencies of different plugins, Terminus does not load a plugin's external libraries until immediately before one of its commands is executed. That means that you cannot use any external classes in your plugin's constructor.</p>
-</div>
+<Alert title="Note" type="info">
+In order to avoid conflicts between the dependencies of different plugins, Terminus does not load a plugin's external libraries until immediately before one of its commands is executed. That means that you cannot use any external classes in your plugin's constructor.
+</Alert>
 
 ## Coding Standards
 While not strictly necessary, if you plan to distribute your plugin, and especially if you plan to add an open source licence and encourage contributions, it may be a good idea to adopt the Terminus core standards. Some basics to follow are:

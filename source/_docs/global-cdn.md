@@ -98,17 +98,15 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
       - **Setup Required** - This can mean several things; click **Setup Required** or **Details** to get more details
       - **Launched** - Your domain successfully routes to the Pantheon Platform, and you got your free Let's Encrypt SSL cert. You're good to go!
 
-    <div class="alert alert-info">
-    <h4 class="info">Pro Tip</h4>
-Look up your DNS host with this free web tool: <a class="external" href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
-</div>
+    <Alert title="Pro Tip" type="info">
+    Look up your DNS host with this free web tool: <a class="external" href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
+    </Alert>
 
   DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) configured for the domain's DNS records. Most records update more quickly, and you can track the progress of DNS propagation.
 
-      <div class="alert alert-info">
-      <h4 class="info">Pro Tip</h4>
-Check the current state of DNS propagation from different parts of the world using this free web tool <a class="external" href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
-</div>
+    <Alert tile="Pro Tip" type="info">
+    Check the current state of DNS propagation from different parts of the world using this free web tool <a class="external" href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
+    </Alert>
 
 4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/docs/guides/launch/redirects/).
 

@@ -50,9 +50,9 @@ Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to t
 
 {% include("content/tables/custom-domains-limit.html") %}
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">Add all domains (example.com and www.example.com are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/docs/guides/launch/). Automatic resolution of domains and wildcards are not supported.</p></div>
+<Alert title="Note" type="info">
+Add all domains (example.com and www.example.com are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/docs/guides/launch/). Automatic resolution of domains and wildcards are not supported.
+</Alert>
 
 ### Add a Custom Domain
 
@@ -83,10 +83,9 @@ Pantheon uses the term **primary domain** to refer to a single domain used to se
 
 Redirecting all traffic to a primary domain is a best practice for SEO since it avoids duplicate content. It also prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time, and it can make it easier to measure and monitor website traffic.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Redirects must be managed via PHP, since `.htaccess` is ignored. For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).</p>
-</div>
+<Alert title="Note" type="info">
+Redirects must be managed via PHP, since `.htaccess` is ignored. For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).
+</Alert>
 
 ### Redirect to HTTPS and the Primary Domain
 It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in [`settings.php`](/docs/settings-php/) or [`wp-config.php`](/docs/wp-config-php/):

@@ -52,6 +52,6 @@ If your site relies on code that expects to find files at non-standard locations
 
 Symlinks are committed to version control and part of the codebase. Your legacy file paths should now work as expected. As long as the path you've chosen for your symlink does not conflict with a future core update to your application, this link will persist indefinitely. Consider opening an issue on the plugin or module's project page citing non-standard file paths when observed.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Adding a symlink for a legacy directory path will not work with private files. If you have a private files use case, migrate the file paths and drop references to the legacy location.</p></div>
+<Alert title="Note" type="info">
+Adding a symlink for a legacy directory path will not work with private files. If you have a private files use case, migrate the file paths and drop references to the legacy location.
+</Alert>

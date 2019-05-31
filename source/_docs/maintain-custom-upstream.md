@@ -6,10 +6,9 @@ categories: []
 ---
 Maintainers of [Custom Upstreams](/docs/custom-upstream/) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. In this example, we will be updating core.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress){.external}, [Drupal 7](https://github.com/pantheon-systems/drops-7){.external}, and [Drupal 8](https://github.com/pantheon-systems/drops-8){.external}) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).</p>
-</div>
+<Alert title="Note" type="info">
+Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress){.external}, [Drupal 7](https://github.com/pantheon-systems/drops-7){.external}, and [Drupal 8](https://github.com/pantheon-systems/drops-8){.external}) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).
+</Alert>
 
 ## Before You Begin
 Follow the procedure to [create a custom upstream](/docs/create-custom-upstream/) so that you have:
@@ -135,10 +134,9 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/docs/terminus/) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin. For more details, see [WordPress and Drupal Core Updates](/docs/core-updates/).
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.</p>
-</div>
+<Alert title="Warning" type="danger">
+Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.
+</Alert>
 
 
 ## Tips and Tricks

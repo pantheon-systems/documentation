@@ -119,10 +119,9 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
 
   The service module has several integration features, and other web service formats. It also has [several supporting modules](https://www.drupal.org/node/750036){.external} that extend the Drupal 7 functionalities made available to the API.
 
-  <div class="alert alert-info" role="alert">
-    <h4 class="info">Note</h4>
-    <p markdown="1">While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource){.external} module.</p>
-  </div>
+  <Alert title="Note" type="info">
+    While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource){.external} module.</p>
+  </Alert>
   </div>
 </div>
 

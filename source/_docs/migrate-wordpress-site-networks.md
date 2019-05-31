@@ -5,10 +5,9 @@ tags: [migratemanual]
 categories: [wordpress]
 ---
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.
-</div>
+</Alert>
 
 ## Requirements
 
@@ -89,10 +88,9 @@ Import your existing code and commit history via Git. If you don’t have a Git 
  git push pantheon master --force
  ```
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p>The <code>--force</code> option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see <a href="https://git-scm.com/docs/git-push"><code>git-push</code></a>.</p>
-    </div>
+    <Alert title="Note" type="info">
+    The <code>--force</code> option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see <a href="https://git-scm.com/docs/git-push"><code>git-push</code></a>.
+    </Alert>
 
 8.  Go to the Code tab of your Dev environment on the Site Dashboard. The most recent commit adds Pantheon's core files. This process preserves the commit history for site's already utilizing version control and once pushed your pre-existing commits will be visible on the Dashboard.
 

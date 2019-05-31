@@ -93,10 +93,9 @@ $config_directories = array(
 );
 ```
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Care should be taken to ensure that this code is added after the `settings.pantheon.php` is included; otherwise, the `CONFIG_SYNC_DIRECTORY` will be overwritten with the Pantheon default value. The configuration directory must exist before this variable is changed.</p>
-</div>
+<Alert title="Note" type="info">
+Care should be taken to ensure that this code is added after the `settings.pantheon.php` is included; otherwise, the `CONFIG_SYNC_DIRECTORY` will be overwritten with the Pantheon default value. The configuration directory must exist before this variable is changed.
+</Alert>
 
 Relocate the configuration directory for the default location using `git mv`:
 

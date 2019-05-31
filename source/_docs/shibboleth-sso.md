@@ -6,17 +6,16 @@ categories: [automate]
 ---
 Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.16/simplesamlphp-sp){.external}. This documentation contains only the necessary extra steps to get it working on Pantheon with Drupal or WordPress.
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the [SimpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth){.external} module from Drupal.org. For WordPress sites, use the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin from WordPress.org with the bundled OneLogin SAML PHP library. WordPress Multisite users require [additional configuration](#wordpress-multisite-issues).</p>
-</div>
+<Alert title="Note" type="info">
+This is only for advanced users working on integrating a Shibboleth single sign-on system with their Drupal site using the [SimpleSAMLphp Authentication](https://www.drupal.org/project/simplesamlphp_auth){.external} module from Drupal.org. For WordPress sites, use the [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} plugin from WordPress.org with the bundled OneLogin SAML PHP library. WordPress Multisite users require [additional configuration](#wordpress-multisite-issues).
+</Alert>
 
 ## Install SimpleSAMLphp
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">[PHP mcrypt](http://php.net/manual/en/book.mcrypt.php){.external} is still used in SimpleSAMLphp 1.14.x, but removed as a dependency in SimpleSAML 1.15.x. PHP mcrypt has been deprecated in PHP 7.1, and removed from core PHP 7.2. Consider using the appropriate lower versions if you encounter issues.
-</p></div>
+<Alert title="Note" type="info">
+[PHP mcrypt](http://php.net/manual/en/book.mcrypt.php){.external} is still used in SimpleSAMLphp 1.14.x, but removed as a dependency in SimpleSAML 1.15.x. PHP mcrypt has been deprecated in PHP 7.1, and removed from core PHP 7.2. Consider using the appropriate lower versions if you encounter issues.
+
+</Alert>
 
 
 <!-- Nav tabs -->
@@ -34,11 +33,9 @@ Start by following the SimpleSAMLphp's [service provider quickstart instructions
 <!-- Active pane content -->
 <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
 
-<div class="alert alert-export" role="alert">
-<h4 class="info">Version Number</h4>
-<p markdown="1">In the code examples below, replace `16.x` with the downloaded version of SimpleSAMLphp.
-</p>
-</div>
+<Alert title="Version Number" type="export">
+In the code examples below, replace `16.x` with the downloaded version of SimpleSAMLphp.
+</Alert>
 
 1. Download [SimpleSAMLphp version 1.16.x](https://simplesamlphp.org/){.external} and add it to your git repository as `/private/simplesamlphp-1.16.x`.
 
@@ -160,10 +157,9 @@ Set up your SimpleSAMLphp `config.php` as follows:
        'store.sql.password' => $db['password'],
   ```
 
-    <div class="alert alert-info" role="alert" markdown="1">
-    #### Note {.info}
+    <Alert title="Note" type="info">
     Some SSO providers will fail to connect when the port number (`443`) is specified in `baseurlpath`. Remove `:443` from this line as a troubleshooting step.
-    </div>
+    </Alert>
 
 4. With configuration completed, commit the changes to your SimpleSAMLphp files:
 

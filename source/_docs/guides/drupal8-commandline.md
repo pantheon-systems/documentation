@@ -44,12 +44,9 @@ If you see your Pantheon sites, then it was installed and authenticated successf
 
 ## Create Your Site and Initialize Environments
 
-<div class="alert alert-info">
-  <h4 class="info">Note</h4>
-  <p markdown="1">
-    The next few sections of this guide use the example variables `steve-site-d8` and `"Steve's Site D8"` as the site name and label. Make sure to replace each instance, as well as other variables, with your desired values.
-  </p>
-</div>
+<Alert title="Note" type="info">
+ The next few sections of this guide use the example variables `steve-site-d8` and `"Steve's Site D8"` as the site name and label. Make sure to replace each instance, as well as other variables, with your desired values.
+</Alert>
 
 1.  Create a new Drupal 8 site on Pantheon:
 
@@ -106,12 +103,9 @@ We are going to download and enable modules from the `devel` package. These modu
 
 You may want to remove these modules after you launch your site, or use more advanced configuration management techniques to keep the module on in the Dev environment and off in Test and Live. For this exercise on a Sandbox site, it is fine to have the modules installed in all three environments.
 
-<div class="alert alert-info">
-  <h4 class="info">Note</h4>
-  <p markdown="1">
-  You may have heard that some Drupal 8 developers are [using Composer](https://pantheon.io/docs/composer/) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
-  </p>
-</div>
+<Alert tile="Note" type="info">
+You may have heard that some Drupal 8 developers are [using Composer](https://pantheon.io/docs/composer/) to manage all modules. You can even use our [Terminus Composer plugin](https://github.com/pantheon-systems/terminus-composer-plugin) to run Composer commands on your Dev environment. However, for this guide we will stick to simply downloading modules with Drush.
+</Alert>
 
 1.  Download and install the latest stable release of the `devel` package from drupal.org:
 
@@ -153,11 +147,9 @@ You may want to remove these modules after you launch your site, or use more adv
 
         terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc  --note="Deploying exported config to enable modules"
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added content and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
-    </p>
-    </div>
+    <Alert title="Note" type="info">
+    The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added content and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
+    </Alert>
 
 9.  With the `yml` configuration files now present on the Test environment, they can be imported to the database there:
 

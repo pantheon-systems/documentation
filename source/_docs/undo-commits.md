@@ -6,10 +6,9 @@ categories: []
 ---
 We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/docs/core-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
 
-<div class="alert alert-danger" role="alert">
-  <h4 class="info">Warning</h4>
-  <p markdown="1">Using `git revert` to revert an upstream update will result in the dashboard being unable to pull upstream updates. If an upstream update introduces a regression or bug, you should use `git reset --hard COMMIT_BEFORE_MERGE` so that the dashboard can accurately judge the state of your site repository and whether it is behind the upstream.</p>
-</div>
+<Alert title="Warning" type="danger">
+Using `git revert` to revert an upstream update will result in the dashboard being unable to pull upstream updates. If an upstream update introduces a regression or bug, you should use `git reset --hard COMMIT_BEFORE_MERGE` so that the dashboard can accurately judge the state of your site repository and whether it is behind the upstream.
+</Alert>
 
 ## Getting Started
 

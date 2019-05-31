@@ -19,9 +19,9 @@ The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of fe
 - Geo-search
 - REST-like API
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>This article assumes that you have already enabled the ApacheSolr module.</p></div>
+<Alert title="Note" type="info">
+This article assumes that you have already enabled the ApacheSolr module.
+</Alert>
 
 ## Create a New Index
 
@@ -58,10 +58,9 @@ Provide two items to the ApacheSolr configuration:
 
 When you’ve finished, click **Save**.
 
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p>A schema must be pushed in each environment (Dev/Test/Live).</p>
-</div>
+<Alert title="Warning" type="danger">
+A schema must be pushed in each environment (Dev/Test/Live).
+</Alert>
 
 ## Test Your New Solr Connection
 

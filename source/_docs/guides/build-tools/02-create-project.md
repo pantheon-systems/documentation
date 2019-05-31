@@ -26,10 +26,9 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
       <figure><pre id="d8-create"><code class="command bash" data-lang="bash">terminus build:project:create d8 pantheon-d8-composer-project</code></pre></figure>
     </div>
 
-    <div class="alert alert-info">
-      <h4 class="info">Note</h4>
-      <p markdown="1">Pantheon also maintains Composer based examples for [WordPress](https://github.com/pantheon-systems/example-wordpress-composer){.external} and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer){.external} that are currently in alpha, requiring `--stability=alpha` in the command line options. While this guide demonstrates Drupal 8, the same workflow can be achieved on all frameworks.</p>
-    </div>
+    <Alert title="Note" type="info">
+      Pantheon also maintains Composer based examples for [WordPress](https://github.com/pantheon-systems/example-wordpress-composer){.external} and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer){.external} that are currently in alpha, requiring `--stability=alpha` in the command line options. While this guide demonstrates Drupal 8, the same workflow can be achieved on all frameworks.</p>
+    </Alert>
 
     Provide additional information as prompted, such as Organization (if any), and tokens for GitHub and CircleCI access:
 

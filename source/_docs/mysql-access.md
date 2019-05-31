@@ -6,10 +6,9 @@ categories: []
 ---
 Pantheon provides direct access for your MySQL databases, both for debugging and for importing large databases. Each site environment (Dev, Test and Live) has a separate database, so credentials for one cannot be used on another. The credentials are automatically included in your site configuration.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.</p>
-</div>
+<Alert title="Note" type="info">
+Due to the nature of our platform, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check the Dashboard periodically or when you can’t connect.
+</Alert>
 
 ## Database Connection Information
 

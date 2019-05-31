@@ -5,10 +5,9 @@ tags: [services]
 categories: [performance]
 ---
 
-<div class="alert alert-info" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info" markdown="1">
 Replica MySQL databases are available for sites on the [Elite service level](https://pantheon.io/resources/elite-plan-overview){.external}. [Contact sales](https://pantheon.io/pantheon-elite-plans){.external} to inquire about our Elite plans.
-</div>
+</Alert>
 
 ## Advantages of MySQL Replication
 Typical WordPress sites are limited to the capacity of a single database to serve read and write requests. As a result, high traffic sites can experience latency as requests are fulfilled. MySQL replication rapidly copies content from the "master" database to one or more "replica" databases. This allows you to spread requests across multiple databases to improve site performance and load times.

@@ -146,10 +146,9 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 terminus drush &lt;site&gt;.&lt;env&gt; -- config-get system.logging --include-overidden
 terminus drush &lt;site&gt;.&lt;env&gt; -- config-get views.settings --include-overidden
 </code></pre>
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>Overridden configurations are not shown within Drupal's admin interface; this behavior is intentional. For details, see <a href="https://www.drupal.org/docs/8/api/configuration-api/configuration-override-system">Configuration override system</a>.</p>
-</div>
+<Alert title="Note" type="info">
+Overridden configurations are not shown within Drupal's admin interface; this behavior is intentional. For details, see <a href="https://www.drupal.org/docs/8/api/configuration-api/configuration-override-system">Configuration override system</a>.
+</Alert>
 </li></ol>
 
 4. Deploy to Test and verify desired configurations are present. If everything looks good, deploy to Live.

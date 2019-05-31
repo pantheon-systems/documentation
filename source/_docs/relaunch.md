@@ -6,9 +6,9 @@ categories: []
 ---
 Sites are considered launched on Pantheon once traffic is routed through custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/docs/guides/launch/).</p></div>
+<Alert title="Note" type="info">
+The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/docs/guides/launch/).
+</Alert>
 
 ## Before You Begin
 - Log in to the new Site Dashboard on Pantheon
@@ -22,11 +22,11 @@ Sites are considered launched on Pantheon once traffic is routed through custom 
 ### Roles & Permissions
 The permission to manage billing and plans is granted only to the role of **Site Owner** / **Organization Administrators**. Other roles do not have access as described on this page.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
+<Alert title="Note" type="info">
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
 
-In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.</p></div>
+In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
+</Alert>
 
 ## Relaunch Procedure
 
@@ -38,10 +38,9 @@ In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-cl
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Connect Domain**
 
-    <div class="alert alert-danger">
-    <h4 class="info">Warning</h4>
-    <p markdown="1">Do **not** update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 5 below.</p></div>
-
+    <Alert title="Warning" type="danger">
+    Do **not** update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 5 below.
+    </Alert>
 4. Wait for HTTPS to provision for the newly connected domains:
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
