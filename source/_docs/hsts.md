@@ -7,10 +7,9 @@ After you have required HTTPS for all pages by adding the [necessary redirect](/
 
 Not only does this header help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/){.external}, it will help protect your website against protocol downgrade attacks and cookie hijacking.
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Before adding HSTS to your site, you should review and understand the configuration options that are available. A HSTS header that is configured incompletely or not securely enough diminishes the security protection that HSTS provides.</p>
-</div>
+<Alert title="Note" type="info">
+Before adding HSTS to your site, you should review and understand the configuration options that are available. A HSTS header that is configured incompletely or not securely enough diminishes the security protection that HSTS provides.
+</Alert>
 
 ## Deploy and Configure a HSTS Header by Module or Plugin
 The HTTP Strict-Transport-Security response header (often abbreviated as **HSTS**) is a website security feature that tells browsers to only communicate using HTTPS, instead of HTTP.

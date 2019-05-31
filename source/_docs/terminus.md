@@ -33,10 +33,9 @@ Use Terminus to perform these and other operations:
 
 ## Contribute
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>If you are a plugin author, you will need to update your plugin for Terminus 2. See <a href="/docs/terminus-2-0/">what's new in Terminus 2.x</a> to learn more.</p>
-</div>
+<Alert title="Note" type="info">
+If you are a plugin author, you will need to update your plugin for Terminus 2. See <a href="/docs/terminus-2-0/">what's new in Terminus 2.x</a> to learn more.
+</Alert>
 
 Terminus is open source! View the project on [GitHub](https://github.com/pantheon-systems/terminus) to contribute, file issues, and submit feature requests.
 

@@ -125,9 +125,9 @@ Get your Redis connection string by going to the **Site Dashboard > Environment 
 See [Securely Working with phpinfo](/docs/phpinfo#drupal-note) for ways to view your specific PHP configuration.
 
 ## Calculate Concurrent User / Dynamic Page Capacity
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">This following content is considered deprecated. Refer to [Traffic Limits and Overages](/docs/traffic-limits/) for updated information on how Pantheon defines plans and site traffic.</p></div>
+<Alert title="Warning" type="danger">
+This following content is considered deprecated. Refer to [Traffic Limits and Overages](/docs/traffic-limits/) for updated information on how Pantheon defines plans and site traffic.
+</Alert>
 
 One common need in determining a plan level is calculating the amount of concurrent traffic a site can handle, especially when all or some of the traffic cannot be handled by caching.
 

@@ -75,9 +75,9 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
     terminus wp <site>.<env> -- plugin update wp-redis
     ```
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">[WP Redis](https://wordpress.org/plugins/wp-redis/){.external} is loaded via a drop-in file, so there's no need to activate it on your WordPress sites.</p></div>
+<Alert title="Note" type="info">
+[WP Redis](https://wordpress.org/plugins/wp-redis/){.external} is loaded via a drop-in file, so there's no need to activate it on your WordPress sites.
+</Alert>
 
 <div class="panel panel-drop panel-guide" id="accordion">
 <div class="panel-heading panel-drop-heading">
@@ -135,9 +135,9 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 2. Install and activate the [Redis](https://www.drupal.org/project/redis){.external} module from Drupal.org.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4><p markdown="1">You **must** activate the module before proceeding.
-    </p></div>
+    <Alert title="Note" type="info">
+    You **must** activate the module before proceeding.
+    </Alert>
 
     You can install and enable the module from the command line using [Terminus](/docs/terminus):
 
@@ -170,10 +170,9 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 <!-- 3rd pane content -->
 <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 This configuration uses the `Redis_CacheCompressed` class for better performance. This requires the Redis plugin version 3.13 or later. For versions before 3.13, use `Redis_Cache` in step 4 instead.
-</div>
+</Alert>
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 2. Add the [Redis](https://www.drupal.org/project/redis){.external} module from Drupal.org. You can install and enable the module from the command line using [Terminus](/docs/terminus):
 

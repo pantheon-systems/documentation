@@ -56,10 +56,9 @@ All existing sites will have Preferred Pricing locked in for the plan they migra
 | Business XL | Performance (XL)    | $750             |
 
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">Sites retaining [Legacy SSL](/docs/https/#technical-specifications) services will be migrated to Performance Large plans or above.</p>
-</div>
+<Alert title="Note" type="info">
+Sites retaining [Legacy SSL](/docs/https/#technical-specifications) services will be migrated to Performance Large plans or above.
+</Alert>
 
 ### Are legacy plans still available?
 No new sites can be created on legacy plans outside of existing contracted agreements. The legacy plans are no longer available for purchase online.
@@ -136,10 +135,9 @@ No action is required. Existing sites will automatically switch to the equivalen
   </div>
 </div>
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">If the number of custom domains on a site exceeds that allowed by the new site plan, the site will be migrated to the next largest site plan that matches the number of custom domains used.</p>
-</div>
+<Alert title="Note" type="info">
+If the number of custom domains on a site exceeds that allowed by the new site plan, the site will be migrated to the next largest site plan that matches the number of custom domains used.
+</Alert>
 
 ### Am I going to lose New Relic?
 Basic site plans will not have access to New Relic. If you are using New Relic on a Personal plan currently, you will lose access when your site plan migrates to a Basic plan on your monthly billing date, on or after August 1st.

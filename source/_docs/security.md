@@ -9,10 +9,9 @@ There are occasions while you are working on your site that you would like to k
 
 This can be done by putting a username and password on the environment, similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.</p>
-</div>
+<Alert title="Note" type="info">
+When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.
+</Alert>
 
 ![Lock environment](/source/docs/assets/images/dashboard/lock-environment.png)
 
@@ -38,10 +37,9 @@ To verify that everything is working correctly, visit the URL of the environment
 
 ![Locked site example](/source/docs/assets/images/auth-required.png)
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 While locked, environments will not be cached by the [Global CDN](/docs/global-cdn).
-</div>
+</Alert>
 
 ### Customize Lock Page
 

@@ -83,8 +83,7 @@ Yes! As long as you are following the Dashboard DNS recommendations before start
 
 Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
-<div class="alert alert-info" markdown="1">
-<h4 class="info">Note</h4>
+<Alert title="Note" type="info">
 You cannot pre-provision HTTPS if:
 
  - You cannot host the provided verification file on the current site.
@@ -92,7 +91,7 @@ You cannot pre-provision HTTPS if:
 
 If you do not already have HTTPS, there's _no need_ to pre-provision.
 
-</div>
+</Alert>
 
 ### How many custom domains are supported?
 {% include("content/tables/custom-domains-limit.html") %}

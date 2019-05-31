@@ -127,12 +127,9 @@ On a standard server system, the server administrator would publish their host k
 
 You can, however, easily tell your machine to automatically trust all Pantheon `*.drush.in` servers by disabling the `StrictHostKeyChecking` option in your SSH configuration file.
 
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p markdown="1">
+<Alert title="Warning" type="danger">
 Be aware that you're disabling a security feature, and trusting your DNS system to always point you to the right IP addresses.
-</p>
-</div>
+</Alert>
 
 Open `~/.ssh/config` (or create a new file if one does not exist) and add the following lines:
 

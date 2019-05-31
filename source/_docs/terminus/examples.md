@@ -75,7 +75,9 @@ Quickly install updates to core, contributed modules, themes, and plugins from t
 ### Upstream Updates (Core)
 Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
 
-<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">For instructions on how to resolve merge conflicts, see [Upstream Updates](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)</p></div>
+<Alert tile="Note" type="info">
+For instructions on how to resolve merge conflicts, see [Upstream Updates](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
+</Alert>
 
 <p class="instruction">List available upstream updates:</p>
 <div class="copy-snippet">
@@ -88,10 +90,9 @@ Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-
 <button class="btn btn-default btn-clippy" data-clipboard-target="#commit-sftp">Copy</button>
 <figure><pre id="commit-sftp"><code class="command bash" data-lang="bash">terminus env:commit my-site.dev --message="My code changes"</code></pre></figure>
 </div>
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
+<Alert title="Warning" type="danger">
 The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
-</div>
+</Alert>
 <p class="instruction">Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#toggle-git">Copy</button>
@@ -175,10 +176,9 @@ Terminus supports third-party plugins that extend it's functionality by adding n
  [DRY RUN] Applying 10 updates to superb-central
 ```
 <p markdown="1" class="instruction">Resolve warning messages shown in the `--dry-run` output by setting the connection mode to Git for each applicable site:</p>
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
+<Alert title="Warning" type="danger">
 The following command will permanently delete all uncommitted SFTP changes. If you wish to keep SFTP changes, commit your work before proceeding.
-</div>
+</Alert>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#mass-update-git">Copy</button>
 <figure><pre id="mass-update-git"><code class="command bash" data-lang="bash">terminus connection:set my-site.dev git</code></pre></figure>
@@ -288,6 +288,8 @@ You can use any valid identifier (upstream name, upstream machine name, upstream
 
 As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.
 
-  <div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">To set an empty upstream for Composer managed sites, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).</p></div>
+  <Alert tile="Note" type="info">
+  To set an empty upstream for Composer managed sites, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).
+  </Alert>
 
 After setting the upstream, you must bring in the new codebase by applying updates to the site. For details on how to apply updates, see the [example usage above](#applying-updates).

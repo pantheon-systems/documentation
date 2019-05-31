@@ -11,10 +11,9 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1.  From your User Dashboard, click **Create New Site**.
 2.  Name your site.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p>The site name will be prefixed to all <a href="/docs/domains/#platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>.
-    </p></div>
+    <Alert title="Note" type="info">
+    The site name will be prefixed to all <a href="/docs/domains/#platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>.
+    </Alert>
 3.  If applicable, affiliate the site with an [organization](/docs/organization-dashboard/#new-sites).
 4.  Click **Create Site**.
 5.  Select your [start state](/docs/start-state). Install WordPress, Drupal 8, or Drupal 7 with one click. You can also select from any of the public or [Custom Upstreams](/docs/custom-upstream) available on the platform.

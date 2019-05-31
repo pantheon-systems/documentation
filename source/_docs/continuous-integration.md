@@ -27,10 +27,9 @@ You can use Terminus for scripting many operations. For example, a post-commit h
 
 [SiteTest](https://www.drupal.org/project/site_test){.external} is a contrib module for Drupal 7 designed to allow running tests directly against your sites code instead of a base Drupal clone of your site.  This module is recommended for use of SimpleTest on Pantheon.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 The drush test-run command was dropped in Drush 7 and 8. See [this GitHub issue](https://github.com/drush-ops/drush/issues/1362){.external} for more details.
-</div>
+</Alert>
 
 To run tests on Pantheon:
 

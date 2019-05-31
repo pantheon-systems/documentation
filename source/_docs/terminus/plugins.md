@@ -12,10 +12,9 @@ image: terminus-thumbLarge
 searchboost: 100
 ---
 Extend the functionality of Terminus and add commands by installing third party plugins.
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>If you are a plugin author, ensure your your plugin is updated for Terminus 2. See <a href="/docs/terminus-2-0/">Terminus 2.0</a> to compare the differences.</p>
-</div>
+<Alert title="Note" type="info">
+If you are a plugin author, ensure your your plugin is updated for Terminus 2. See <a href="/docs/terminus-2-0/">Terminus 2.0</a> to compare the differences.
+</Alert>
 ## Install Plugins
 <p class="instruction">Add plugins within the <code>$HOME/.terminus/plugins</code> directory on your local workstation. You may need to create the <code>$HOME/.terminus/plugins</code> directory if it does not already exist:</p>
 <div class="copy-snippet">

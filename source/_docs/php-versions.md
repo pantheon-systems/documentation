@@ -15,10 +15,9 @@ Older software is more likely to contain code that is incompatible with recent P
 ## Verify Current PHP Versions
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. See [Deploying Configuration Changes to Multidev](/docs/pantheon-yml/#deploying-configuration-changes-to-multidev) for more information.
-</div>
+</Alert>
 
 ### Available PHP Versions
 The recommended PHP versions available on Pantheon are:

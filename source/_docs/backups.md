@@ -14,15 +14,14 @@ We strongly urge you to backup your site regularly.
 
 ![Backups tab](/source/docs/assets/images/dashboard/backup-tool.png)
 
-<div class="alert alert-export" role="alert">
-<h4 class="info">Exports</h4>
-<p markdown="1">This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
+<Alert title="Exports" type="export">
+This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
 </code></pre>
-</p>
-</div>
+
+</Alert>
 
 ## Create a Backup
 
@@ -30,8 +29,9 @@ You can create a new backup and set the timing for how long the backup is kept. 
 
 Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
 
-<div class="alert alert-danger" role="alert"><h3 class="info">Warning</h3>
-<p>Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</p></div>
+<Alert title="Warning" type="danger">
+Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.
+</Alert>
 
 ![Create site backup Pantheon Dashboard](/source/docs/assets/images/dashboard/manual-site-backup.png)
 
@@ -136,10 +136,9 @@ The newest backup will appear at the top of the list. When the retention period 
 
 Click the down arrow next to Code, Database, or Files to access the link for the offsite backup.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">Some older versions of Google Chrome can cause database backups to be downloaded with an incorrect file extensions (e.g. `.sql` instead of `sql.gz`). You can resolve this problem by updating Google Chrome or by renaming the file using the correct extension.</p>
-</div>
+<Alert title="Note" type="info">
+Some older versions of Google Chrome can cause database backups to be downloaded with an incorrect file extensions (e.g. `.sql` instead of `sql.gz`). You can resolve this problem by updating Google Chrome or by renaming the file using the correct extension.
+</Alert>
 
 ### Via the Command Line
 
@@ -155,11 +154,10 @@ You can also use [Terminus](/docs/terminus) to download backups. Note that `--el
 terminus backup:get $site.$env --element=<code|files|db> --to=path/to/file.tar.gz
 ```
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">When specifying the file path for `--to`, be sure to use the correct extension. File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`.
-</p>
-</div>
+<Alert title="Note" type="info">
+When specifying the file path for `--to`, be sure to use the correct extension. File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`.
+
+</Alert>
 
 Select an older archive by running `terminus backup:list $site.$env`, copying the filename, and pasting it in the `--file=<filename>` option when downloading:
 
@@ -170,9 +168,9 @@ terminus backup:get $site.$env --file=<filename> --to=path/to/file.tar.gz
 Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/restore-environment-backup).
 
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Links to backups are signed URLs directly from Google Cloud Storage and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.</p></div>
+<Alert title="Note" type="info">
+Links to backups are signed URLs directly from Google Cloud Storage and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.
+</Alert>
 
 
 ## Restore From an Existing Backup
@@ -184,10 +182,9 @@ Code archives contain the full remote Git repository and reflect the state of co
 
 For a clear visual of the Git repo contents, you can use a free tool like [Sourcetree](https://www.sourcetreeapp.com/){.external} to inspect the branches that the repo contains.
 
-<div class="alert alert-info">
-  <h4 class="info">Note</h4>
-  <p markdown="1">The `.gitignore` file determines paths ignored by version control and consequently excluded in code archives. To see the default `.gitignore` file refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/wordpress/blob/master/.gitignore){.external}, [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore){.external}, and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore){.external}.</p>
-</div>
+<Alert title="Note" type="info">
+The `.gitignore` file determines paths ignored by version control and consequently excluded in code archives. To see the default `.gitignore` file refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/wordpress/blob/master/.gitignore){.external}, [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore){.external}, and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore){.external}.
+</Alert>
 ## Backup Log
 The backup log displays a list of existing backups for that environment. You can also create a new backup or restore your site from an existing backup.
 

@@ -11,10 +11,9 @@ Extending WordPress with custom code is a common part of the development lifecyc
 
 Instead, manage custom code separate from your projects within site-specific [plugins](https://codex.wordpress.org/Writing_a_Plugin). Then scope out an update strategy to easily distribute changes, such as [GitHub Updater](https://github.com/afragen/github-updater) or [WP Pusher](https://wppusher.com/).
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).</p>
-</div>
+<Alert title="Note" type="info">
+Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).
+</Alert>
 ## Before You Begin
 
 1. Separate custom code into site-specific plugins or themes stored within individual repositories outside of your project.

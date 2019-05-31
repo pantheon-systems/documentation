@@ -32,10 +32,9 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 1. Click the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** button to open your Live site in a new tab. You’ll need to log in before being directed to the site administration dashboard.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p>Your WordPress or Drupal username and password are the same set you created when you installed your Dev site for the first time.
-    </p></div>
+    <Alert title="Note" type="info">
+    Your WordPress or Drupal username and password are the same set you created when you installed your Dev site for the first time.
+    </Alert>
 
 2. Now let’s create a new Drupal article or WordPress post! If you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Posts) or [Drupal Documentation](https://www.drupal.org/docs/8/administering-drupal-8-site/managing-content/) on how to add a post or article.  When finished, visit the front page of your site and confirm that you can see the new content.
 
@@ -66,12 +65,11 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 6. To clone the database and files from the Live site, select **Live** from the dropdown menu.
 
-    <div class="alert alert-danger" role="alert" markdown="1">
-    #### Warning {.info}
+    <Alert tile="Warning" type="danger">
     As intended, this action will overwrite your Dev database and files. If you skipped the backup task you will be unable to recover this data hereafter.
 
     The Clone operation only copies the [files](/docs/files/) folder (`wp-content/uploads` or `sites/default/files`) and does not include core, theme, plugins or modules.
-    </div>
+    </Alert>
 
 7. Click **Clone the Database & files from Live into the Development Environment**.
 

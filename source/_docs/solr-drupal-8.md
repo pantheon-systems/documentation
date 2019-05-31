@@ -19,10 +19,9 @@ Be sure that you:
 * Install [Composer](https://getcomposer.org/){.external}
 * Create a Composer managed site on Pantheon following the [Build Tools](/docs/guides/build-tools/) guide, or the [Composer without CI](/docs/guides/drupal-8-composer-no-ci/) guide.
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) and [Composer without CI](/docs/guides/drupal-8-composer-no-ci/) guides. Since one module relies on [Solarium](http://www.solarium-project.org/){.external}, an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750){.external}.</p>
-</div>
+<Alert title="Warning" type="danger">
+Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) and [Composer without CI](/docs/guides/drupal-8-composer-no-ci/) guides. Since one module relies on [Solarium](http://www.solarium-project.org/){.external}, an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750){.external}.
+</Alert>
 
 ## Install Solr on Drupal 8
 

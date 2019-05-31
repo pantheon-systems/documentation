@@ -16,9 +16,9 @@ As with most common problems WordPress site owners face, there's a plugin to hel
 ## Installation
 You can install the plugin from your [WordPress dashboard](/docs/cms-admin/#wordpress-dashboard) by following these steps:
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Your site's Connection Mode must be <a href="/docs/sftp#sftp-mode">set to SFTP</a>.</p></div>
+<Alert title="Note" type="info">
+Your site's Connection Mode must be <a href="/docs/sftp#sftp-mode">set to SFTP</a>.
+</Alert>
 
 1. Click **Plugins**, then select **Add New**.
 2. Search for "Broken Link Checker".

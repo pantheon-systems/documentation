@@ -51,10 +51,9 @@ The first thing we should do is install WordPress and configure it.
 
     If you installed WooCommerce Services to get live shipping rates from USPS or Automated Taxes you'll be prompted to install Jetpack & connect your site to WordPress.com. WooCommerce Services needs this connection in order to work.
 
-    <div class="alert alert-info">
-      <h4 class="info">Note</h4>
-      <p markdown="1">Jetpack is a sophisticated plugin that detects test sites. It will turn on [safe mode](https://jetpack.com/support/safe-mode/){.external} and prevent the connection to WordPress.com. For this reason it's best to only activate Jetpack in the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of your site and let it run in dev mode for your **<span class="glyphicons glyphicons-wrench"></span> Dev** and **<span class="glyphicons glyphicons-equalizer"></span> Test** environments.</p>
-    </div>
+    <Alert title="Note" type="info">
+      Jetpack is a sophisticated plugin that detects test sites. It will turn on [safe mode](https://jetpack.com/support/safe-mode/){.external} and prevent the connection to WordPress.com. For this reason it's best to only activate Jetpack in the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of your site and let it run in dev mode for your **<span class="glyphicons glyphicons-wrench"></span> Dev** and **<span class="glyphicons glyphicons-equalizer"></span> Test** environments.</p>
+    </Alert>
 
     If you need to test Jetpack functionality, you can enable the Jetpack connection in safe mode by clicking **Fix Jetpack's Connection** and then **Start Fresh & Create New Connection**.
 

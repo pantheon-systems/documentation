@@ -5,10 +5,9 @@ tags: [tools, workflow]
 ---
 Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream/). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/support/#custom-upstreams).
-</div>
+</Alert>
 
 
 ## Create and Host the Repository Remotely
@@ -318,10 +317,9 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 
 ## Switch an Existing Site to a Custom Upstream
 
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p markdown="1">Switching the upstream of an existing site is risky. Consider creating a new site from your Custom Upstream and migrating the contents. If you must switch upstreams, [back up](/docs/backups/) your site first, and consider our documentation on [upstream merge conflicts](/docs/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).</p>
-</div>
+<Alert title="Warning" type="danger">
+Switching the upstream of an existing site is risky. Consider creating a new site from your Custom Upstream and migrating the contents. If you must switch upstreams, [back up](/docs/backups/) your site first, and consider our documentation on [upstream merge conflicts](/docs/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
+</Alert>
 
 Only a Site Owner, User in Charge, or Organization Administrator can change an existing site to use a new Custom Upstream using [Terminus](/docs/terminus/):
 

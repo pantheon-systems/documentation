@@ -58,9 +58,9 @@ sftp> exit
 $  
 ```
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.</p></div>
+<Alert title="Note" type="info">
+The names may vary depending on the zone the server is located. Look for the file ending with the matching -slow.log pattern.
+</Alert>
 
 ## Analyze The Mysql Slow Log
 

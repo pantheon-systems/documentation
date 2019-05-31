@@ -62,10 +62,9 @@ In the commands below, replace `<site>` with your Pantheon site name.
                   script: private/scripts/new_relic_deploy.php
 
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">`api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
-    </div>
+    <Alert title="Note" type="info">
+    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
+    </Alert>
 
 6. [Add, commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
 

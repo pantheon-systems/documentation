@@ -69,10 +69,9 @@ Some web developers choose to aggregate all of their caching logic in one place,
   <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
   Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers){.external}. This will override `max-age` configured within the [Pantheon Cache](/docs/wordpress-cache-plugin) plugin for all matching requests:
 
-  <div class="alert alert-info" role="alert" markdown="1">
-  ### Note {.info}
+  <Alert title="Note" type="info">
   Place this code in an [MU Plugin](/docs/mu-plugin/) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
-  </div>
+  </Alert>
   ```php
   /*
    * Set $regex_path_patterns accordingly.
@@ -134,9 +133,9 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
 As an alternative to using HTTP headers to control downstream caching, you can set a `NO_CACHE` cookie. For details, see [Working with Cookies on Pantheon](/docs/cookies).
 
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p>Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.</p></div>
+<Alert title="Warning" type="danger">
+Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.
+</Alert>
 
 ## Test Pages Excluded from Cache
 To test whether or not a page is being served from Pantheon's edge caching layer, examine the headers output (`Age`, `Cache-Control`, `Set-Cookie`) via the following curl command:

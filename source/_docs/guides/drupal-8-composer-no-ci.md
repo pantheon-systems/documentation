@@ -96,10 +96,9 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 
 ## Managing Drupal with Composer
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the <a href="/docs/git-faq/#does-pantheon-support-git-submodules" data-proofer-ignore> Pantheon platform is not compatible with git submodules</a>. If you remove the `.git` directories, be sure to put them back again after you push your commit up to Pantheon (see instructions below). To do this, remove the vendor directory and run `composer install`.</p>
-</div>
+<Alert title="Note" type="info">
+When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the <a href="/docs/git-faq/#does-pantheon-support-git-submodules" data-proofer-ignore> Pantheon platform is not compatible with git submodules</a>. If you remove the `.git` directories, be sure to put them back again after you push your commit up to Pantheon (see instructions below). To do this, remove the vendor directory and run `composer install`.
+</Alert>
 
 ### Downloading Drupal Dependencies with Composer
 
@@ -175,10 +174,9 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 
 ### Adding a New Module with Composer
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 To maintain best practice, some of the steps in this section require access to the [Multidev](/docs/multidev/) feature. Those steps can be skipped, but it isn't recommended.
-</div>
+</Alert>
 
 1. Next, let’s add a new module to our site. For this example, we’ll add the address module. We advocate working in feature branches on Pantheon, so let's create a Git branch and spin up a Multidev environment:
 

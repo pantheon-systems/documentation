@@ -21,9 +21,9 @@ Pantheon offers several add-ons to help you build dynamic sites. These include [
 
 ### Delete Site
 If you no longer need your site, you can remove it here.
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p>This is a permanent change and once you delete it your site cannot be restored.</p></div>
+<Alert title="Warning" type="danger">
+This is a permanent change and once you delete it your site cannot be restored.
+</Alert>
 
 ### About Site
 This tab shows general information about your site, such as the framework, upstream, date it was created, and your current plan.
@@ -83,10 +83,9 @@ Learn more about the [Pantheon Workflow](/docs/pantheon-workflow/).
 
 ### Errors
 All fatal PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](/docs/php-errors/).
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">This is not intended to replace reviewing your error logs. Learn more about [accessing all your server logs](/docs/logs/).</p>
-</div>
+<Alert title="Note" type="info">
+This is not intended to replace reviewing your error logs. Learn more about [accessing all your server logs](/docs/logs/).
+</Alert>
 
 ### Domains / HTTPS
 Use the [Domains/HTTPS tab](/docs/guides/launch/domains/) to connect custom domain(s) and provision HTTPS. For more details, see [HTTPS on Pantheon's Global CDN](/docs/https/).

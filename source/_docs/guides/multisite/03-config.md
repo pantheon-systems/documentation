@@ -21,10 +21,9 @@ You're just about to configure your WordPress Site Network.
 
 Our expectation at this point is that you have a new WordPress Site Network created for you by a Pantheon employee. If you do not yet have a WordPress Site Network, refer to the [introduction](/docs/guides/multisite/) page of this guide. When you visit the Dev environment's site URL, you should be redirected to WordPress' web-based installer.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Adjust placeholders in code snippets as needed throughout this guide. This includes placeholders such as `<site>` and `<env>` within Terminus commands, in addition to placeholders wrapped in `<>` brackets within larger code blocks.</p>
-</div>
+<Alert title="Note" type="info">
+Adjust placeholders in code snippets as needed throughout this guide. This includes placeholders such as `<site>` and `<env>` within Terminus commands, in addition to placeholders wrapped in `<>` brackets within larger code blocks.
+</Alert>
 
 ## Install the WordPress Site Network
 
@@ -53,10 +52,9 @@ Using [Terminus](/docs/terminus/) is our recommended way to install a WordPress 
 
 4. Use Terminus to execute the `wp core multisite-install` command ([full documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/){.external}):
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">The default behavior for this command is to create a Site Network with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.</p>
-    </div>
+    <Alert title="Note" type="info">
+    The default behavior for this command is to create a Site Network with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.</p>
+    </Alert>
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#multisite-install">Copy</button>
@@ -133,10 +131,9 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
 
 7. Save your changes and upload the `wp-config.php` file to Pantheon's Dev environment once edits are complete.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 A warning may appear in the WordPress dashboard that you need to update your `.htaccess` file. Since Pantheon used Nginx and your site is already pre-configured for multisite by your Account Manager, you can ignore this warning.
-</div>
+</Alert>
 
 ## Developing the Site Network
 Congratulations on setting up your first WordPress Site Network. You are on your way to glory! When logged in to the WordPress Dashboard, you'll see a new **My Sites** menu item in the toolbar:

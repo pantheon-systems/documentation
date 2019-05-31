@@ -22,10 +22,9 @@ image: getting-started-Largethumb
 ---
 In this lesson we'll configure DNS and provision [free, automated HTTPS](/docs/https/) on Pantheon.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 If your site is already live and serving HTTPS traffic, and will require HTTPS on Pantheon, return to [Connect a Domain Name](/docs/guides/launch/domains/) and complete the steps to pre-provision HTTPS before updating DNS to avoid downtime.
-</div>
+</Alert>
 
 These instructions cover the common `example.com` and `www.example.com` domain configuration. For other domain configurations, see [Platform and Custom Domains](/docs/domains/#custom-domains).
 

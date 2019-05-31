@@ -34,11 +34,9 @@ if (!isset($_ENV['PANTHEON_ENVIRONMENT']) || ($_ENV['PANTHEON_ENVIRONMENT'] != '
     ini_set("opcache.enable", 0);
 }
 ```
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p>Disabling opcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that <code>display_errors</code> is set to <code>off</code> on Pantheon live environments, so there is no motivation to disable opcache in production anyway. When disabling opcache in dev and multi-dev environments, be sure to re-enable it again once you are done debugging.
-</p>
-</div>
+<Alert title="Warning" type="danger">
+Disabling opcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that <code>display_errors</code> is set to <code>off</code> on Pantheon live environments, so there is no motivation to disable opcache in production anyway. When disabling opcache in dev and multi-dev environments, be sure to re-enable it again once you are done debugging.
+</Alert>
 
 You may also search for deprecated constructors using the PHP linter on the command line (requires PHP 7.0 to be installed locally). First, create a local copy of your site as described in [Local Development](/docs/local-development); then, run:
 ```nohighlight
@@ -63,8 +61,6 @@ Opcache is always enabled on Pantheon. When opcache is in use, PHP will print an
 
 Opcache also influences when this error is displayed. Since opcache caches the compiled form (opcodes) of the PHP that is being executed, the deprecation notices will not be printed when the PHP opcodes are fetched from the opcache. This is what leads to the intermittent nature of this problem.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>The deprecation notices used in the examples on this page appeared in an old version of the Drupal <a href="https://www.drupal.org/project/views">views</a> module for Drupal 7.x. This was fixed in issue <a href="https://www.drupal.org/node/2579819">#2579819</a>, and included in the <a href="https://www.drupal.org/project/views/releases/7.x-3.12">7.x-3.12</a> release.
-</p>
-</div>
+<Alert title="Note" type="info">
+The deprecation notices used in the examples on this page appeared in an old version of the Drupal <a href="https://www.drupal.org/project/views">views</a> module for Drupal 7.x. This was fixed in issue <a href="https://www.drupal.org/node/2579819">#2579819</a>, and included in the <a href="https://www.drupal.org/project/views/releases/7.x-3.12">7.x-3.12</a> release.
+</Alert>

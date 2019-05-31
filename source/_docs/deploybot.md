@@ -96,14 +96,11 @@ Let's say I use [Composer](/docs/composer/) to manage my WordPress site's plugin
 
 7. Use the SFTP values gathered in the previous step to enter the host, port, and login (username). The destination path should use `~/code`.
 
-    <div class="alert alert-danger">
-    <h4 class="info">Warning</h4>
-    <p markdown="1">
+    <Alert title="Warning" type="danger">
       Due to the nature of our platform architecture, the connection information will change from time to time due to server upgrades, endpoint migrations, etc. Update values here with information from Pantheon's Site Dashboard periodically or when you are unable to connect.
 
       In order to deploy to Pantheon using DeployBot, the Dev environment's connection mode must be set to SFTP.
-    </p>
-    </div>
+    </Alert>
 
     We recommend using an SSH Key for the authentication method. Click **Show the commands to add our public key to your server.** then **download the public key itself** and [upload the key to your Pantheon account](/docs/ssh-keys/#add-your-ssh-key-to-pantheon).
 

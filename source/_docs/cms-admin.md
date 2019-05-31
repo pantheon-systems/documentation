@@ -7,9 +7,8 @@ categories: []
 ---
 Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/docs/git/) or working in the WordPress or Drupal admin interface in [SFTP](/docs/sftp/) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/docs/multidev/)) in **SFTP** mode.
 
-<div class="alert alert-export" role="alert">
-<h4 class="info">Exports</h4>
-<p markdown="1">This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
+<Alert title="Exports" type="export">
+This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
@@ -34,10 +33,9 @@ Operations that require write access to the codebase must be executed while the 
 ## WordPress Dashboard
 WordPress' admin interface has built in tools to manage plugins and themes, allowing you to install and manage popular themes and plugins from the main WordPress.org repository.
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).</p>
-</div>
+<Alert title="Warning" type="danger">
+Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).
+</Alert>
 
 ### Manage Plugins and Themes
 1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud"></span> Multidev** tab of your Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-new-window-alt"></span> Site Admin**, then login if you have not done so already.
@@ -67,10 +65,9 @@ You should *never* have to enter credentials into the WordPress Dashboard. Visit
 ## Drupal Admin Interface
 Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface).
 
-<div class="alert alert-danger">
-<h4 class="info">Warning</h4>
-<p markdown="1">Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).</p>
-</div>
+<Alert title="Warning" type="danger">
+Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).
+</Alert>
 
 ### Install a New Module
 <!-- Nav tabs -->
@@ -91,11 +88,9 @@ Drupal also allows you to install modules or themes [using its administrative in
     ![Drupal.org views module](/source/docs/assets/images/drupal-copy-module-link.png)
 
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">
+<Alert title="Note" type="info">
 Make sure the module has a version marked `8.x-*` before installing it on a Drupal 8 site.
-</p></div>
+</Alert>
 
 </p><p markdown="1">
 

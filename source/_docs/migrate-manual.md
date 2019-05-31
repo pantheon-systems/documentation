@@ -16,10 +16,9 @@ Manually migrate your site to Pantheon when any of the following apply:
 
 If none of the above apply to your project, use the [standard migration procedure](/docs/migrate/).
 
-<div class="alert alert-info" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info" markdown="1">
 Site migrations are one of the services offered by our [Professional Services](/docs/professional-services/#site-migrations) team.
-</div>
+</Alert>
 
 ## Before You Begin
 To ensure a successful migration, complete the following tasks on the source site first:
@@ -98,10 +97,9 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
   {% include("content/code.html")%}
 
-  <div class="alert alert-info">
-  <h4 class="info">Note</h4>
-  <p markdown="1">If your existing site is already version controlled and you would like to preserve the commit history, import the code from the command line with Git using the instructions below. If you prefer to avoid the command line entirely, we suggest importing the codebase using an SFTP Client such as [Transmit](https://panic.com/transmit/){.external} or [Cyberduck](https://cyberduck.io/){.external}.</p></div>
-
+  <Alert title="Note" type="info">
+  If your existing site is already version controlled and you would like to preserve the commit history, import the code from the command line with Git using the instructions below. If you prefer to avoid the command line entirely, we suggest importing the codebase using an SFTP Client such as [Transmit](https://panic.com/transmit/){.external} or [Cyberduck](https://cyberduck.io/){.external}.
+  </Alert>
 ### Using an SFTP Client
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 2. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.

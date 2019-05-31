@@ -73,10 +73,9 @@ We use the filesystem private path in this section because we don't want to trac
 
         terminus secrets:set $SITE.dev tracker_token <token value>
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.</p>
-</div>
+<Alert title="Note" type="info">
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+</Alert>
 
 ## Configure Quicksilver Hook
 Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration script for Pivotal Tracker to the [private path](/docs/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
@@ -113,10 +112,9 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
             script: private/scripts/pivotal_integration.php
     ```
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">`api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
-    </div>
+    <Alert title="Note" type="info">
+    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
+    </Alert>
 
 6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
 
@@ -129,9 +127,9 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
     ![Pivotal Tracker id](/source/docs/assets/images/integrations/pivotal-tracker/id.png)
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    In a separate terminal window, run <code>terminus workflow:watch $SITE</code> to see the process unfold in real time (optional).</div>
+    <Alert title="Note" type="info">
+    In a separate terminal window, run <code>terminus workflow:watch $SITE</code> to see the process unfold in real time (optional).
+    </Alert>
 
 2. Push a code change to Pantheon containing the Pivotal Tracker story ID in the commit message in brackets (e.g., [#149869497]). This workflow will trigger `pivotal_integration.php` script, which will search commits for possible issue IDs and comment when found.
 

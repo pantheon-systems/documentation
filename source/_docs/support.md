@@ -44,10 +44,9 @@ Start a chat with our Support Team to ask questions or request assistance on iss
  - Error messages received, if applicable.
  - Links to screenshots or screencasts of the behavior, if necessary.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try whitelisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://docs.intercom.com/faqs-and-troubleshooting/your-users-and-leads-data-in-intercom/why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.</p>
-</div>
+<Alert title="Note" type="info">
+Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try whitelisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://docs.intercom.com/faqs-and-troubleshooting/your-users-and-leads-data-in-intercom/why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.
+</Alert>
 
 ## Ticket Support
 The ticket support feature is available to certain support packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.

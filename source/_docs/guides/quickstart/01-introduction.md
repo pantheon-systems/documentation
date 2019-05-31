@@ -33,9 +33,8 @@ In this guide, you'll learn how to:
 
 All you need before you begin is a Pantheon account. If you don't have one, <a href="https://pantheon.io/register" target="_blank">sign up now for free <span class="glyphicons glyphicons-new-window-alt"></span></a>.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>Are you an agency? Do you build sites for others? If so, check <strong>Are you an agency?</strong> on the <a href="https://pantheon.io/register" target="_blank">signup form <span class="glyphicons glyphicons-new-window-alt"></span></a> to get more free features and really make the most of this guide. Size doesn't matter; you can sign up if you're an agency of one or one-thousand.
-</p></div>
+<Alert title="Note" type="info">
+Are you an agency? Do you build sites for others? If so, check <strong>Are you an agency?</strong> on the <a href="https://pantheon.io/register" target="_blank">signup form <span class="glyphicons glyphicons-new-window-alt"></span></a> to get more free features and really make the most of this guide. Size doesn't matter; you can sign up if you're an agency of one or one-thousand.
+</Alert>
 
 You should now have a Pantheon User Account. When you're ready, you may continue to the next lesson.

@@ -13,10 +13,9 @@ When Drupal releases critical security releases, Pantheon takes immediate steps 
 
 This doc describes how to manually patch your Drupal core.
 
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p markdown="1">Use the [standard process to update core](/docs/core-updates/) if the security patch is available to be applied in the Site Dashboard. The advanced method described on this page is intended to be used when a security patch is not yet available as a one-click update in the Site Dashboard, or when handling merge conflicts.</p>
-</div>
+<Alert title="Warning" type="danger">
+Use the [standard process to update core](/docs/core-updates/) if the security patch is available to be applied in the Site Dashboard. The advanced method described on this page is intended to be used when a security patch is not yet available as a one-click update in the Site Dashboard, or when handling merge conflicts.
+</Alert>
 
 Visit the [Drupal Security page](https://www.drupal.org/security){.external} for the latest Drupal security announcements and patches.
 

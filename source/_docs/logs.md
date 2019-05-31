@@ -59,10 +59,9 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 
 Rotated log files are archived within the `/logs` directory on application containers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">When appservers are migrated as a regular part of platform maintenance, log files are destroyed as they are appserver-specific.  Consider <a href="#automate-downloading-logs" data-proofer-ignore>automating the collection</a> of logs regularly to maintain historical log data.</p>
-</div>
+<Alert title="Note" type="info">
+When appservers are migrated as a regular part of platform maintenance, log files are destroyed as they are appserver-specific.  Consider <a href="#automate-downloading-logs" data-proofer-ignore>automating the collection</a> of logs regularly to maintain historical log data.
+</Alert>
 
 ## Access Logs Via SFTP
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
@@ -148,10 +147,9 @@ db_server=`dig dbserver.$ENV.$SITE_UUID.drush.in +short`
 rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@dbserver.$ENV.$SITE_UUID.drush.in:logs db_server_$db_server
 ```
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">For densely populated directories, using `*` can cause failures. If the script fails, consider removing the wildcard.</p>
-</div>
+<Alert title="Note" type="info">
+For densely populated directories, using `*` can cause failures. If the script fails, consider removing the wildcard.
+</Alert>
 
 ### Collect Logs
 Download logs by executing the script from within the `site-logs` directory:
@@ -189,12 +187,11 @@ No, Varnish logs are not available for download.
 
 ### How do I enable error logging for WordPress?
 
-<div class="alert alert-danger" role="alert" markdown="1">
-#### Warning {.info}
+<Alert title="Warning" type="danger">
 The steps in this section enable debug logging. Debug logging increases resource overhead and presents a security risk. It is not recommended for production environments.
 
 To minimize risk exposure, especially in a Live environment, disable debug logging when you are done.
-</div>
+</Alert>
 
 Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress) constants on Development environments (Dev and Multidevs) to write errors to `wp-content/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment in `wp-config.php`:
 
@@ -245,10 +242,9 @@ By default, Drupal logs events using the Database Logging module (dblog). PHP fa
         terminus drush <site>.<env> -- watchdog-show --tail
         ```
 
-        <div class="alert alert-info">
-        <h4 class="info">Note</h4>
-        <p>At this time, <code>terminus drush "watchdog-show --tail"</code> is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.</p>
-        </div>
+        <Alert title="Note" type="info">
+        At this time, <code>terminus drush "watchdog-show --tail"</code> is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.
+        </Alert>
 
 ### My Drupal database logs are huge. Should I disable dblog?
 

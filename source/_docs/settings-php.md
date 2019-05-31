@@ -11,9 +11,9 @@ Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a cus
 
 For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
-<div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
-<p>You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.</p>
-</div>
+<Alert title="Warning" type="danger">
+You should never put the database connection information for a Pantheon database within your <code>settings.php</code> file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.
+</Alert>
 
 ## Pantheon Articles on settings.php
 
@@ -61,10 +61,9 @@ $settings['hash_salt'] = '$HASH_SALT';
 
 #### Trusted Host Setting
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 8 redirects from our [Configure Redirects](/docs/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.</p>
-</div>
+<Alert title="Note" type="info">
+Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 8 redirects from our [Configure Redirects](/docs/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.
+</Alert>
 ```
 if (defined('PANTHEON_ENVIRONMENT')) {
   if (in_array($_ENV['PANTHEON_ENVIRONMENT'], array('dev', 'test', 'live'))) {
@@ -116,10 +115,9 @@ Depending on your use case, there are three possibilities:
 
  - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/docs/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">`$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
-    </div>
+    <Alert title="Note" type="info">
+    `$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
+    </Alert>
 
  - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/redis/) guide for examples.
 

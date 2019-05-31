@@ -17,10 +17,9 @@ First, you will need to add the Index Server to your site. From your Dashboard, 
 <p>Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
 </Callout>
 
-<div class="alert alert-danger" role="alert" markdown="1">
-#### Warning {.info}
+<Alert title="Warning" type="danger">
 This guide uses Pantheon's Solr module, which is designed to work specifically with the Solr service provided by Pantheon. Using a non-Pantheon Solr service with our plugins is not supported, and may result in unexpected behavior.
-</div>
+</Alert>
 
 ## Install Solr for Drupal
 ### Apply Upstream Updates
@@ -41,10 +40,9 @@ Choose one or the other and add it to your codebase. Do not enable or configure 
 
 ### Enable the Pantheon Apache Solr Module
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you don't, you may receive an error when attempting to connect to the Solr server.
-</div>
+</Alert>
 
 The [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module is included within all Drupal 7 sites on Pantheon. This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. The Pantheon Apache Solr module is not required if you are using a third-party Solr service.
 
@@ -75,10 +73,9 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 You must post the `schema.xml` in each environment (Dev, Test, Live, and each Multidev) that you want to use Pantheon's Solr Service in.
-</div>
+</Alert>
 
 ### Enable and Configure Your Solr Module
 

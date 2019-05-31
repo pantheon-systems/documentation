@@ -44,10 +44,9 @@ Importing a Drush site archive as we've prepared it above is easy.
    terminus site:import <site> <url>
    ```
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4><p markdown="1">
+    <Alert title="Note" type="info">
     Before starting an import make sure you have an existing site on your account.
-    </p></div>
+    </Alert>
 
   At that point the script will poll as the site containers are spun up and the archive is imported. You can wait for that to complete, or cancel out and check back in your Dashboard.
 

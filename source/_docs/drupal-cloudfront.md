@@ -20,10 +20,9 @@ Make sure that you have:
 ## Set Up A Drupal CloudFront Distribution
 
 The first step in setting up CloudFront on your Drupal site is to create a new CloudFront distribution. This article will help you create a barebones configuration. If you require a more complicated configuration, refer to the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html).
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.</p>
-</div>
+<Alert title="Note" type="info">
+A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
+</Alert>
 1. In the CloudFront console, click **Create Distribution**.
 2. Select **Download** for the delivery method and click **Continue**. If you require streaming media (such as video or audio files), you'll need to choose the streaming distribution (not covered in this article).
 3. Complete the fields to get the basic download distribution up and running.
@@ -49,10 +48,9 @@ The first step in setting up CloudFront on your Drupal site is to create a new C
 5. Click **Save Configuration**. Your assets should now be coming from your CloudFront distribution.
 
 ## Verify Assets Are Coming From the CloudFront Distribution
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>Execute the following steps as an anonymous user (logged out).</p>
-</div>
+<Alert title="Note" type="info">
+Execute the following steps as an anonymous user (logged out).
+</Alert>
 1. Create an article on your site and upload an image to it.
 2. View the article in your browser.
 3. Right-click the image and copy its location.
