@@ -24,7 +24,7 @@ In this lesson, we’re going to explore the User Dashboard.
 
 **Watch the video:**
 
-<VideoWidget videoId={"hzsntt6bi2"} />
+`youtube: https://www.youtube.com/watch?v=U7iaX-vwPrc`
 
 <Accordion title={"User Dashboard Glossary (Optional)"} id={"user-dashboard-tour"} icon={"lightbulb"}>
 
