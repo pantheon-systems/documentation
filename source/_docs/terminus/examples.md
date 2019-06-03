@@ -214,7 +214,7 @@ There are a few scenarios where it may be useful to reset your Dev environment (
 
 * The Dev environment has been seriously corrupted and you would like to cleanly reset it to Live.
 
-<p class="instruction">Start by cloning the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):</p>
+<p class="instruction">Start by cloning the site's codebase to your local machine if you have not done so already (replace `awesome-site` with your site name):</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#git-clone">Copy</button>
 <figure><pre id="git-clone"><code class="command bash" data-lang="bash">`terminus connection:info awesome-site.dev --fields='Git Command' --format=string`</code></pre></figure>

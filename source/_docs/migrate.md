@@ -133,7 +133,7 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
 <!-- Tab panes -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="d8">
-  <p>Archives for Drupal 8 sites should include <code>index.php</code> at the code root level, along with the following directories:</p>
+  <p>Archives for Drupal 8 sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── core
   ├── index.php
@@ -149,7 +149,7 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
   </code></pre>
   </div>
   <div role="tabpanel" class="tab-pane" id="d7">
-  <p>Archives for Drupal 7 sites should include <code>index.php</code> at the code root level, along with the following directories:</p>
+  <p>Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── includes
   ├── index.php
@@ -167,7 +167,7 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
   </code></pre>
   </div>
   <div role="tabpanel" class="tab-pane" id="wp">
-  <p>Archives for WordPress sites should include <code>index.php</code> at the code root level, along with the following directories:</p>
+  <p>Archives for WordPress sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── index.php
   ├── wp-activate.php

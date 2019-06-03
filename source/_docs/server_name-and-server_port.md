@@ -18,7 +18,7 @@ $_SERVER['SERVER_NAME'] = $_SERVER['HTTP_HOST'];
 While this fix does correct symptoms such as undesirable URLs, we recommended replacing all instances of `'SERVER_NAME'` with `'HTTP_HOST'` directly (e.g. [`WP_HOME` and `WP_SITE`](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L69-L71) for WordPress).
 
 <Alert title="Note" type="info">
-<code>$_ENV</code> will also be around for command-line uses. <code>$_SERVER</code> is only set up when handling a web initiated request.
+`$_ENV` will also be around for command-line uses. `$_SERVER` is only set up when handling a web initiated request.
 </Alert>
 ## Set SERVER_PORT Correctly
 Certain applications (like SimpleSAML) require specific port values to be set at the web server level, before our GlobalCDN. Use the snippet below to assign port value `443` for nginx when the headers specify HTTPS:

@@ -16,7 +16,7 @@ Be sure that you have:
 - Configured mobile-ready pages; some themes already provide mobile stylesheets.
 
 <Alert title="Note" type="info">
-The following instructions will enable automatic redirects for the domain associated with the site's Live environment. To test redirects on another environment, you will need to add a subdomain (e.g. <code> m-test.example.com</code>) to the Test environment and configure the subdomain on Cloudflare with the provided DNS records.
+The following instructions will enable automatic redirects for the domain associated with the site's Live environment. To test redirects on another environment, you will need to add a subdomain (e.g. ` m-test.example.com`) to the Test environment and configure the subdomain on Cloudflare with the provided DNS records.
 </Alert>
 
 ### Considerations

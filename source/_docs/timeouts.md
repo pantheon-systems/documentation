@@ -23,7 +23,7 @@ Rules are for the good of the group, and timeouts are no exception. We've config
     <td>120 seconds</td>
     <td>Maximum time a script can run before being terminated by the parser. This includes Drush & WP-CLI commands. Helps prevent poorly written scripts from tying up your application container's PHP workers.
     <br/><br/>
-     You can edit this timeout via <code>settings.php</code> or <code>wp-config.php</code>. Scripts executed through the GlobalCDN will still be restricted by the 59 second connection timeout.</td>
+     You can edit this timeout via `settings.php` or `wp-config.php`. Scripts executed through the GlobalCDN will still be restricted by the 59 second connection timeout.</td>
   </tr>
   <tr>
     <td>Solr</td>
