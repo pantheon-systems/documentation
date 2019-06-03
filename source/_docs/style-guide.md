@@ -241,28 +241,24 @@ When writing multi-step processes, repeated variables and constants should be de
 
 <div class="style-example" markdown="1">
 
-<div class="alert alert-export">
-<h4 class="info">Exports</h4>
-<p markdown="1">This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+<Alert title="Exports" type="export">
+This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
 </code></pre>
-</p>
-</div>
+</Alert>
 
 <hr class="source-code">
 
 ```html
-<div class="alert alert-export">
-<h4 class="info">Exports</h4>
-<p markdown="1">This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+<Alert title="Exports" type="export">
+This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
 </code></pre>
-</p>
-</div>
+</Alert>
 ```
 
 </div>
