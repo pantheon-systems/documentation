@@ -23,15 +23,13 @@ Be sure that you have:
 When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.
 </Alert>
 
-<div class="alert alert-export">
-<h4 class="info">Exports</h4>
-<p markdown="1">This process uses [Terminus](/docs/terminus/) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
+<Alert title="Exports" type="export">
+This process uses [Terminus](/docs/terminus/) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
 </code></pre>
-</p>
-</div>
+</Alert>
 
 ## Configure S3 within the AWS Console
 Before integrating S3 with your site, you'll need to configure the service within your [AWS Management Console](https://console.aws.amazon.com){.external}.

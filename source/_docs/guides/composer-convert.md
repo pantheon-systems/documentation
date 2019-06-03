@@ -20,14 +20,12 @@ Converting to a Composer managed site *removes* the ability to [apply updates vi
  - [Clone](/docs/git#clone-your-site-codebase) your _current_ Pantheon site repository to a working directory on your local computer.
  - Review [Serving Sites from the Web Subdirectory](/docs/nested-docroot/)
 
-<div class="alert alert-export">
-<h4 class="info">Exports</h4>
-<p markdown="1">This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
+<Alert title="Exports" type="export">
+This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
 <pre>
 <code class="bash">export site=yoursitename
 </code></pre>
-</p>
-</div>
+</Alert>
 
 ## Checkout a New Branch
 You're about to make some massive changes to the codebase. We recommend you to do this work on a new branch, as it might take you some time to complete and rolling back can be complicated:

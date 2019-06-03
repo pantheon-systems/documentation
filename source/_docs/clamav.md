@@ -11,15 +11,13 @@ A file that may look like a normal JPG or PDF file may actually be malware that 
 
 ## Install ClamAV
 
-<div class="alert alert-export">
-<h4 class="info">Exports</h4>
-<p markdown="1">This process uses [Terminus](/docs/terminus/) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+<Alert title="Exports" type="export">
+This process uses [Terminus](/docs/terminus/) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
 </code></pre>
-</p>
-</div>
+</Alert>
 
 Because the ClamAV binary is already installed on Pantheon servers, all you need to do is install one of the available modules.
 
