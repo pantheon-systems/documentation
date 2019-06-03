@@ -141,7 +141,7 @@ Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n
 
 ## Tips and Tricks
 ### Use the Pantheon Workflow
-To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow/) to push up to your Test and Live environments. Checkout <a href="/docs/guides/drupal8-commandline/#managing-content-configuration-and-code-across-environments" data-proofer-ignore>our guide</a> for an example of generating content from the command line.
+To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/docs/pantheon-workflow/) to push up to your Test and Live environments. Checkout [our guide](/docs/guides/drupal8-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
 ### Sample a Few Sites
 For agencies that manage large portfolios, we suggest picking a few sample sites with varying functionality and design to test updates on a [Multidev](/docs/multidev/) environment. Once things look good, release the update to all.

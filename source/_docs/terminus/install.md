@@ -27,7 +27,7 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 * [Composer](https://getcomposer.org/download/)
 
 ## Install
-<p class="instruction">Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>$HOME</code> and install there:</p>
+<p class="instruction">Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a `terminus` directory in your `$HOME` and install there:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
   <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>

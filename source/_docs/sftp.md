@@ -10,7 +10,7 @@ In some cases, working via Git is not the best option. You may not like local de
 <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
 </Callout>
 
-SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the <code>apps.module</code> in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/docs/cms-admin/).
+SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/docs/cms-admin/).
 
 <Alert tile="SFTP Mode Considerations" type="danger">
 ##### Commit frequently and keep in mind:
@@ -71,7 +71,7 @@ Write a helpful commit message to go with your changes. This will make maintaini
 Once your message is ready, click **Commit**.
 
 <Alert title="Note" type="info">
-Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.
+Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. `wp-content/uploads` or `sites/default/files/`) since these are not tracked in version control.
 </Alert>
 
 ## Discard & Abandon SFTP Changes

@@ -11,7 +11,7 @@ This allows you to transfer unlimited data "server-to-server", which is much fas
 There are two mechanisms for transferring files: SFTP and rsync.
 
 <Alert title="Note" type="info">
-You will not be able to use SFTP or rsync to add any file or directory listed in a <code>.gitignore</code> file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
+You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
 </Alert>
 
 {% include("content/auth.html")%}
@@ -119,7 +119,7 @@ rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE
 If you need to upload the files directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
 
 <Alert title="Warning" type="danger">
-Always use the <code>temp-dir flag</code> when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.
+Always use the `temp-dir flag` when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.
 </Alert>
 
 ```bash

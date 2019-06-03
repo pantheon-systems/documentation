@@ -30,7 +30,7 @@ In this lesson, we’re going to to create our Test site and our Live site, whic
 **Try it yourself:**
 
 <Alert title="Warning" type="danger">
-If you haven’t completed the installation of your Dev site, return to <a href="/docs/guides/quickstart/create-new-site">Create New Site</a>, and do this now, before proceeding.
+If you haven’t completed the installation of your Dev site, return to [Create New Site](/docs/guides/quickstart/create-new-site), and do this now, before proceeding.
 </Alert>
 
 1. Navigate to your Site Dashboard and click the **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test** tab. Here you’ll have access to your Test environment, but it hasn’t been created yet. Do this now by clicking **Create Test Environment**.

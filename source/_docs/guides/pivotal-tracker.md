@@ -128,7 +128,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
     ![Pivotal Tracker id](/source/docs/assets/images/integrations/pivotal-tracker/id.png)
 
     <Alert title="Note" type="info">
-    In a separate terminal window, run <code>terminus workflow:watch $SITE</code> to see the process unfold in real time (optional).
+    In a separate terminal window, run `terminus workflow:watch $SITE` to see the process unfold in real time (optional).
     </Alert>
 
 2. Push a code change to Pantheon containing the Pivotal Tracker story ID in the commit message in brackets (e.g., [#149869497]). This workflow will trigger `pivotal_integration.php` script, which will search commits for possible issue IDs and comment when found.

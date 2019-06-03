@@ -30,7 +30,7 @@ At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Usin
 
 > `*.sites.example.com` **AAAA** `2620:12a:8001::X`
 
-See <a href="/docs/dns/#what-are-aaaa-records-and-do-i-need-them" data-proofer-ignore>Introduction to Domain Name Services</a> for more information about AAAA records.
+See [Introduction to Domain Name Services](/docs/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
 
 <div class="alert-info alert" markdown="1">
 #### Note {.info}
@@ -76,4 +76,4 @@ For SEO and to prevent duplicate content, the `robots.txt` file attached to the 
 User-agent: *
 Disallow: /
 ```
-To present an alternate `robots.txt` file from within the source code, a custom domain needs to be <a href="/docs/guides/launch/domains/" data-proofer-ignore>added to the site's Dashboard</a> and the appropriate DNS record created.
+To present an alternate `robots.txt` file from within the source code, a custom domain needs to be [added to the site's Dashboard](/docs/guides/launch/domains/) and the appropriate DNS record created.

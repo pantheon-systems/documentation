@@ -22,7 +22,7 @@ Identify DNS values to point your domain to Pantheon:
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your <a href="https://portal.dynect.net/login/" target="blank">Dyn DNS account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
+Keep this page open and login to your [Dyn DNS account <span class="glyphicons glyphicons-new-window-alt"></span>](https://portal.dynect.net/login/" target="blank) in a new tab before you continue.
 
 ## Configure DNS Records on Dyn
 ### A Record
@@ -53,8 +53,8 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Dyn Docs
 
-* <a href="https://help.dyn.com/creating-a-zone/" target="blank">Creating a Zone <span class="glyphicons glyphicons-new-window-alt"></span></a>
-* <a href="https://help.dyn.com/zone-records/" target="blank">Zone Records <span class="glyphicons glyphicons-new-window-alt"></span></a>
+* [Creating a Zone <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.dyn.com/creating-a-zone/" target="blank)
+* [Zone Records <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.dyn.com/zone-records/" target="blank)
 
 ## Next Steps
 

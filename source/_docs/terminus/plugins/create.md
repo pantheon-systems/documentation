@@ -20,7 +20,7 @@ This example provides the structural requirements for plugins to be recognized a
 ### 1. Create Plugin Directory
 A plugin is a specific set of files bundled together in a directory. The first step in creating a new plugin is to create that directory. It does not matter what you name your plugin’s directory but it makes sense to give it the same name as your plugin. Plugins must live within `$HOME/.terminus/plugins`. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist.
 
-<p class="instruction">Create a directory for your new plugin (e.g. <code>hello-world</code>):</p>
+<p class="instruction">Create a directory for your new plugin (e.g. `hello-world`):</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#create-plugin-dir">Copy</button>
 <figure><pre id="create-plugin-dir"><code class="command bash" data-lang="bash">mkdir $HOME/.terminus/plugins/hello-world</code></pre></figure>
@@ -45,12 +45,12 @@ composer.json
 }</code></pre>
 
 <Alert title="Note" type="info">
-The <code>name</code> attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist). 
+The `name` attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist). 
 </Alert>
 ### 3. Add Commands
 Each command in Terminus is defined by its own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
 
-<p class="instruction">Create a <code>src</code> directory within your plugin directory:</p>
+<p class="instruction">Create a `src` directory within your plugin directory:</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#create-src-dir">Copy</button>
 <figure><pre id="create-src-dir"><code class="command bash" data-lang="bash">mkdir $HOME/.terminus/plugins/hello-world/src</code></pre></figure>
@@ -111,7 +111,7 @@ Add a vendor name to the plugin name within `composer.json` so that your plugin 
 }
 ```
 ### PSR-4 Namespacing
-<p class="instruction">Your plugin command class name may eventually conflict with internal or third-party commands. To avoid this you will need to add a PSR-4 compatible namespace. This should contain your vendor name and the plugin name. Add a <code>namespace</code> declaration to the top of your php file (e.g. <code>$HOME/.terminus/plugins/hello-world/src/HelloCommand.php</code>):</p>
+<p class="instruction">Your plugin command class name may eventually conflict with internal or third-party commands. To avoid this you will need to add a PSR-4 compatible namespace. This should contain your vendor name and the plugin name. Add a `namespace` declaration to the top of your php file (e.g. `$HOME/.terminus/plugins/hello-world/src/HelloCommand.php`):</p>
 <div class="copy-snippet">
 <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-namespace">Copy</button>
 <figure><pre id="terminus-plugin-namespace"><code class="command bash" data-lang="bash">namespace Pantheon\TerminusHelloWorld\Commands;</code></pre></figure>
@@ -120,7 +120,7 @@ The `Commands` part of the namespace is not strictly necessary but it can help k
 
 You will also need to make sure your src directory and composer file reflect the new namespace. Move the `HelloCommand.php` file  from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can group them into command groups by adding another layer to the namespace and directory structure.
 
-<p class="instruction">Update the <code>composer.json</code> file with an autoload section to indicate how to load your namespace. Your composer file should now look like:</p>
+<p class="instruction">Update the `composer.json` file with an autoload section to indicate how to load your namespace. Your composer file should now look like:</p>
 ```
 {
     "name": "my-username/terminus-hello-world",

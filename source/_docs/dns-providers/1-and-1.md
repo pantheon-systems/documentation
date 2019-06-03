@@ -44,9 +44,9 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## 1&1 Docs
 
-* <a href="https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586" target="blank">Manage Domains – DNS <span class="glyphicons glyphicons-new-window-alt"></span></a>
-* <a href="https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/change-your-domain-s-ip-address-a-record-a599296.html" target="blank">Change Your Domain's IP Address (A record) <span class="glyphicons glyphicons-new-window-alt"></span></a>
-* <a href="https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/enter-a-cname-for-your-subdomain-a643600.html" target="blank">Enter a CNAME for Your Subdomain <span class="glyphicons glyphicons-new-window-alt"></span></a>
+* [Manage Domains – DNS <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586" target="blank)
+* [Change Your Domain's IP Address (A record) <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/change-your-domain-s-ip-address-a-record-a599296.html" target="blank)
+* [Enter a CNAME for Your Subdomain <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/enter-a-cname-for-your-subdomain-a643600.html" target="blank)
 
 
 ## Next Steps

@@ -103,7 +103,7 @@ Any of the above services will get the job done. By disabling WP-Cron, you have 
 2. Set up a job that calls `https://yourdomain.tld/wp-cron.php?doing_wp_cron`
 
 <Alert title="Note" type="info">
-Replace <code>yourdomain.tld</code> with your domain.
+Replace `yourdomain.tld` with your domain.
 </Alert>
 
 Depending on what service you use, you may have the ability to set up multiple jobs at different times. Creating a single job that calls your site's `wp-cron.php` script every 15 minutes is all you should need. WP-Cron will take care of the rest. If you create new schedules that need to be run more often than once every 15 minutes, you will need to adjust your job accordingly.

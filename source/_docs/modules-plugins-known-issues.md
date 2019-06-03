@@ -456,7 +456,7 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 
 **Solution:** Disable the "File Change Detection" component of the plugin. Code files in the Test and Live environments are not writable, so this is not a security risk on Pantheon.
 
-**Issue 2:** iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` <a href="/docs/platform-considerations/#nginxconf" data-proofer-ignore>cannot be modified</a> and code files on the Test and Live environments are not writable.
+**Issue 2:** iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/docs/platform-considerations/#nginxconf) and code files on the Test and Live environments are not writable.
 
 **Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
 <hr>
@@ -530,7 +530,7 @@ Pantheon has tools in place to monitor database queries:
 <hr>
 
 ### [SendGrid Subscription Widget](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/){.external}
-**Issue:** The email confirmation link sent from the Subscription Widget goes to a redirect loop (see the [open issue on wp.org](https://wordpress.org/support/topic/email-sent-from-the-subscription-widget-goes-to-a-redirect-loop-in-pantheon){.external}). The link created uses a URL `GET` parameter `__sg_api`, which has double underscores. The platform strips this type of parameter to improve <a href="/docs/pantheon_stripped/#which-query-parameters-are-optimized" data-proofer-ignore>caching performance</a>.
+**Issue:** The email confirmation link sent from the Subscription Widget goes to a redirect loop (see the [open issue on wp.org](https://wordpress.org/support/topic/email-sent-from-the-subscription-widget-goes-to-a-redirect-loop-in-pantheon){.external}). The link created uses a URL `GET` parameter `__sg_api`, which has double underscores. The platform strips this type of parameter to improve [caching performance](/docs/pantheon_stripped/#which-query-parameters-are-optimized).
 
 **Solution:** Manually change the the parameter `__sg_api` to any variable (like `sg_api`) without double underscores as prefix in the following lines of `sendgrid-email-delivery-simplified/lib/class-sendgrid-mc-optin.php`:
 

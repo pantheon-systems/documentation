@@ -7,7 +7,7 @@ contributors:
  - ataylorme
 ---
 
-The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your <a href="/docs/pantheon-yml/#site-local-configurations-pantheonyml" data-proofer-ignore>pantheon.yml</a> file or in the <a href="/docs/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml" data-proofer-ignore>pantheon.upstream.yml</a> file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
+The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml/#site-local-configurations-pantheonyml) file or in the [pantheon.upstream.yml](/docs/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
 
 <Alert title="Warning" type="danger">
 Changing the settings of the `web_docroot` property will prevent you from updating your site via one-click Dashboard updates. To continue to use one-click updates, switch to a [Custom Upstream](/docs/custom-upstream) that has the `web_docroot` property set in the `pantheon.upstream.yml` file.

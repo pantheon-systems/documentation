@@ -58,7 +58,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
   If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 
   <Alert title="Note" type="info">
-  The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see <a href="/docs/wordpress-sessions/">WordPress and PHP Sessions</a>.
+  The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see [WordPress and PHP Sessions](/docs/wordpress-sessions/).
   </Alert>
 
   </div>
@@ -133,7 +133,7 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
 <!-- Tab panes -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="d8">
-  <p>Archives for Drupal 8 sites should include <code>index.php</code> at the code root level, along with the following directories:</p>
+  <p>Archives for Drupal 8 sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── core
   ├── index.php
@@ -149,7 +149,7 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
   </code></pre>
   </div>
   <div role="tabpanel" class="tab-pane" id="d7">
-  <p>Archives for Drupal 7 sites should include <code>index.php</code> at the code root level, along with the following directories:</p>
+  <p>Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── includes
   ├── index.php
@@ -167,7 +167,7 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
   </code></pre>
   </div>
   <div role="tabpanel" class="tab-pane" id="wp">
-  <p>Archives for WordPress sites should include <code>index.php</code> at the code root level, along with the following directories:</p>
+  <p>Archives for WordPress sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── index.php
   ├── wp-activate.php

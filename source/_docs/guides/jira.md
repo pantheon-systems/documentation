@@ -27,7 +27,7 @@ Be sure that you:
 ## Create a Machine User in Atlassian
 Start by creating a new machine user in your Atlassian Cloud instance. This user is referred to as a "machine user" because the account is used to automatically create comments out of commit messages on Pantheon using a PHP script.
 
-1. <a href="https://www.atlassian.com/software/jira/try" target=blank>Sign up for an Atlassian Cloud account <span class="glyphicons glyphicons-new-window-alt"></span></a> if you do not have one already.
+1. [</span>](https://www.atlassian.com/software/jira/try" target=blank>Sign up for an Atlassian Cloud account <span class="glyphicons glyphicons-new-window-alt) if you do not have one already.
 
 2. Login to your Atlassian Cloud instance and click <i class="fa fa-gear"></i>, found in the upper panel, then select **User management**.
 

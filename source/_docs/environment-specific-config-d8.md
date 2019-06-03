@@ -141,13 +141,13 @@ This issue can be caused by a number of scenarios related to cache tags, such as
  ```
 
 
-<ol start="3"><li>Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (<code>/admin/config/development/configuration/single/export</code>) or via <a href="/docs/terminus">Terminus</a>:
+<ol start="3"><li>Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/docs/terminus):
 <pre><code>terminus drush &lt;site&gt;.&lt;env&gt; -- config-get system.performance --include-overidden
 terminus drush &lt;site&gt;.&lt;env&gt; -- config-get system.logging --include-overidden
 terminus drush &lt;site&gt;.&lt;env&gt; -- config-get views.settings --include-overidden
 </code></pre>
 <Alert title="Note" type="info">
-Overridden configurations are not shown within Drupal's admin interface; this behavior is intentional. For details, see <a href="https://www.drupal.org/docs/8/api/configuration-api/configuration-override-system">Configuration override system</a>.
+Overridden configurations are not shown within Drupal's admin interface; this behavior is intentional. For details, see [Configuration override system](https://www.drupal.org/docs/8/api/configuration-api/configuration-override-system).
 </Alert>
 </li></ol>
 

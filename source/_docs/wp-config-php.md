@@ -34,7 +34,7 @@ If you are also developing locally and need to configure WordPress for your desk
 </div>
 
 <Alert tile="Note" type="info">
-`$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see <a href="/docs/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.
+`$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
 </Alert>
 
 
@@ -107,7 +107,7 @@ See [Configure Redirects](/docs/redirects/).
 
 ### How do I change the default debug.log location?
 
-WordPress has an option to <a href="/docs/logs/#how-do-i-enable-error-logging-for-wordpress" data-proofer-ignore>write logging information to a file</a>. When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
+WordPress has an option to [write logging information to a file](/docs/logs/#how-do-i-enable-error-logging-for-wordpress). When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
 
 ```php
 ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
