@@ -62,5 +62,5 @@ Opcache is always enabled on Pantheon. When opcache is in use, PHP will print an
 Opcache also influences when this error is displayed. Since opcache caches the compiled form (opcodes) of the PHP that is being executed, the deprecation notices will not be printed when the PHP opcodes are fetched from the opcache. This is what leads to the intermittent nature of this problem.
 
 <Alert title="Note" type="info">
-The deprecation notices used in the examples on this page appeared in an old version of the Drupal <a href="https://www.drupal.org/project/views">views</a> module for Drupal 7.x. This was fixed in issue <a href="https://www.drupal.org/node/2579819">#2579819</a>, and included in the <a href="https://www.drupal.org/project/views/releases/7.x-3.12">7.x-3.12</a> release.
+The deprecation notices used in the examples on this page appeared in an old version of the Drupal [views](https://www.drupal.org/project/views) module for Drupal 7.x. This was fixed in issue [#2579819](https://www.drupal.org/node/2579819), and included in the [7.x-3.12](https://www.drupal.org/project/views/releases/7.x-3.12) release.
 </Alert>

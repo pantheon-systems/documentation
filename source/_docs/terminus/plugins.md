@@ -13,7 +13,7 @@ searchboost: 100
 ---
 Extend the functionality of Terminus and add commands by installing third party plugins.
 <Alert title="Note" type="info">
-If you are a plugin author, ensure your your plugin is updated for Terminus 2. See <a href="/docs/terminus-2-0/">Terminus 2.0</a> to compare the differences.
+If you are a plugin author, ensure your your plugin is updated for Terminus 2. See [Terminus 2.0](/docs/terminus-2-0/) to compare the differences.
 </Alert>
 ## Install Plugins
 <p class="instruction">Add plugins within the `$HOME/.terminus/plugins` directory on your local workstation. You may need to create the `$HOME/.terminus/plugins` directory if it does not already exist:</p>

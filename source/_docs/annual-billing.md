@@ -17,7 +17,7 @@ The table below shows how much sites can save by switching to annual billing. Pe
   <dt>List Price</dt>
     <dd>Set price for new sites created after late October that aren’t purchased via a qualified agency partner.</dd>
   <dt>Preferred Price</dt>
-    <dd><a href="https://pantheon.io/plans/agency-preferred-pricing" data-proofer-ignore class="external">Preferred Pricing</a> is available to qualified agency partners. Learn more about the <a href="http://pantheon.io/partner-program" data-proofer-ignore class="external">Pantheon Partner Program</a>.</dd>
+    <dd>[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program" data-proofer-ignore class="external).</dd>
 </dl>
 
 <!-- Nav tabs -->

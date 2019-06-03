@@ -182,7 +182,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 <!-- Tab panes -->
 <div class="tab-content">
   <div role="tabpanel" class="tab-pane active" id="gh-https" markdown="1">
-  1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization:
+  1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization:
 
     ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
 
@@ -221,7 +221,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
   4. Click **Create**.
   </div>
   <div role="tabpanel" class="tab-pane" id="bb-https" markdown="1">
-  1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization:
+  1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization:
 
     ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
 
@@ -281,7 +281,7 @@ Custom Upstreams from GitLab repositories must be created for you by Pantheon Su
 ## Edit Existing Custom Upstream Settings
 If you would like to change the name or description of your Custom Upstream:
 
-1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization.
+1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization.
 2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 3. Click **Settings** next to the existing upstream requiring an update.
 4. Make desired changes, then click **Update**.
@@ -291,7 +291,7 @@ The default connection mode for new sites created from a Custom Upstream is Git 
 
 Configure this setting after connecting your Custom Upstream to Pantheon if new sites need to use an initial connection mode other than the default:
 
-1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization.
+1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization.
 2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 3. Click **Settings** next to the existing upstream requiring an update.
 4. Select the desired connection mode, then click **Update**:
@@ -311,7 +311,7 @@ You must be a site owner to switch a site's upstream. After a site's upstream ha
 
 Once all sites have been updated to track the new Custom Upstream, you can safely delete the old one:
 
-1. Navigate to the **<a href="https://dashboard.pantheon.io/#organizations" target="blank"><span class="glyphicons glyphicons-group"></span> Organizations</a>** tab within the Pantheon Dashboard and select your organization.
+1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization.
 2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
 3. Click **Settings** next to the existing upstream, then click **Delete**.
 

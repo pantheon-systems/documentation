@@ -31,7 +31,7 @@ Import your existing code and commit history via Git. If you don’t have a Git 
  git commit -m "initial commit"
  ```
 2.  From the Dev environment of the Site Dashboard, set the site's connection mode to [git](/docs/git).
-3.  Copy the SSH URL for the site repository, found in the <a href="/docs/git/#step-2-copy-the-git-clone-command" data-proofer-ignore>clone command</a>. **Do not copy `git clone` or the site name.** The URL should look similar to the following:
+3.  Copy the SSH URL for the site repository, found in the [clone command](/docs/git/#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
  ```bash
  ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
@@ -89,7 +89,7 @@ Import your existing code and commit history via Git. If you don’t have a Git 
  ```
 
     <Alert title="Note" type="info">
-    The `--force` option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see <a href="https://git-scm.com/docs/git-push"><code>git-push</code></a>.
+    The `--force` option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see [<code>git-push</code>](https://git-scm.com/docs/git-push).
     </Alert>
 
 8.  Go to the Code tab of your Dev environment on the Site Dashboard. The most recent commit adds Pantheon's core files. This process preserves the commit history for site's already utilizing version control and once pushed your pre-existing commits will be visible on the Dashboard.
@@ -165,4 +165,4 @@ Visit the Development environment and confirm your site was imported correctly!
 When you re-import the database with current content (prior to going live on Pantheon) you will need to run `wp search-replace` again.
 
 ## See Also
-* <a href="https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank">The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span></a>
+* [The Quickstart Guide to Migrating a WordPress Site <span class="glyphicons glyphicons-new-window-alt"></span>](https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site" target="blank)

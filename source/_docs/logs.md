@@ -27,7 +27,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
   <tr>
     <th>nginx-access.log</th>
     <td>Up to 60 days of logs</td>
-    <td  markdown="1">Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See <a href="/docs/nginx-access-log">Parsing nginx Access Logs with GoAccess</a>.</td>
+    <td  markdown="1">Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log).</td>
   </tr>
   <tr>
     <th>nginx-error.log</th>
@@ -37,12 +37,12 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
   <tr>
     <th>php-error.log <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Fatal errors from PHP error log are provided in each environment on the <strong>Errors</strong> tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see <a href='/docs/php-errors'>PHP Errors and Exceptions</a>."><em class="fa fa-info-circle"></em></a></th>
     <td>1MB of log data</td>
-    <td>PHP <a href="https://secure.php.net/manual/en/book.errorfunc.php">fatal error log</a>; will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard.</td>
+    <td>PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard.</td>
   </tr>
   <tr>
     <th>php-fpm-error.log</th>
     <td>1MB of log data</td>
-    <td>PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See <a href="/docs/php-slow-log">PHP Slow Log</a></td>
+    <td>PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/docs/php-slow-log)</td>
   </tr>
   <tr>
     <th>mysqld-slow-query.log</th>
@@ -60,7 +60,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 Rotated log files are archived within the `/logs` directory on application containers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
 <Alert title="Note" type="info">
-When appservers are migrated as a regular part of platform maintenance, log files are destroyed as they are appserver-specific.  Consider <a href="#automate-downloading-logs" data-proofer-ignore>automating the collection</a> of logs regularly to maintain historical log data.
+When appservers are migrated as a regular part of platform maintenance, log files are destroyed as they are appserver-specific.  Consider [automating the collection](#automate-downloading-logs) of logs regularly to maintain historical log data.
 </Alert>
 
 ## Access Logs Via SFTP
@@ -223,7 +223,7 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 }
 ```
 
-By default, the WordPress debug log path is set to `/wp-content/` and is not writable on Test or Live environments. This can be overridden to the <a href="/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location" data-proofer-ignore>`/wp-content/uploads/` folder</a>.
+By default, the WordPress debug log path is set to `/wp-content/` and is not writable on Test or Live environments. This can be overridden to the [`/wp-content/uploads/` folder](/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location).
 
 ### How can I access the Drupal event log?
 

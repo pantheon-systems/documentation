@@ -22,8 +22,8 @@ Meta data for a doc or guide is created in a section referred to as frontmatter.
 <div class="style-example" markdown="1">
 <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">Style Guide</h1>
 <p class="article-subhead">Formatting rules and guidelines for Pantheon&#039;s open-source documentation.</p>
-<p><small><i class="fa fa-users"></i> Contributors:                                                     <a href="/docs/contributors/alexfornuto" title="alexfornuto">Alex Fornuto</a>,
-<a href="/docs/contributors/rachelwhitton" title="rachelwhitton">Rachel Whitton</a>
+<p><small><i class="fa fa-users"></i> Contributors:                                                     [Alex Fornuto](/docs/contributors/alexfornuto" title="alexfornuto),
+[Rachel Whitton](/docs/contributors/rachelwhitton" title="rachelwhitton)
 </small></p>
 <hr class="source-code">
 ```html

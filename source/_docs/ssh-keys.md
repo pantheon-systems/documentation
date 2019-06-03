@@ -55,7 +55,7 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 5. If prompted, enter the password.
 
 <Alert title="Note" type="info">
-Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the <a href="#troubleshooting">Troubleshooting</a> at the end of the document.
+Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the [Troubleshooting](#troubleshooting) at the end of the document.
 </Alert>
 
 ## Delete a Key from Pantheon
@@ -97,7 +97,7 @@ ControlPath ~/.ssh/control-%r
 ```
 #### Server Refused to Allocate pty
 
-This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support <a href="/docs/faq/#does-pantheon-have-ftp-or-shell-access?" data-proofer-ignore> direct SSH connections</a>.
+This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/docs/faq/#does-pantheon-have-ftp-or-shell-access?).
 
 #### Authentication Prompts
 

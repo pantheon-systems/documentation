@@ -36,7 +36,7 @@ In this lesson, we’ll learn how to connect to your Dev environment and change 
 
 You can develop locally with Git Connection Mode. Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who prefers local development, it's an efficient way to interact with our platform: develop locally, commit, and push code to your Dev environment.
 
-For more information, please see our <a href="/docs/local-development/">Local Development <span class="glyphicons glyphicons-new-window-alt"></span></a> documentation.
+For more information, please see our [Local Development <span class="glyphicons glyphicons-new-window-alt"></span>](/docs/local-development/) documentation.
 
 ## SFTP Connection Mode
 

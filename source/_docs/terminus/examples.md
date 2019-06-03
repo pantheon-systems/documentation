@@ -277,7 +277,7 @@ To see all available upstreams, run:
   <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-list">Copy</button>
   <figure><pre id="upstream-list"><code class="command bash" data-lang="bash">terminus upstream:list</code></pre></figure></div>
 
-If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>, you can use Terminus to switch existing sites over to the common codebase:
+If your organization has a [Custom Upstream](/docs/custom-upstream/), you can use Terminus to switch existing sites over to the common codebase:
 
   <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#upstream-set">Copy</button>

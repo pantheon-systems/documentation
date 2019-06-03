@@ -9,7 +9,7 @@ contributors: [albertcausing]
 Pantheon uses nginx web servers for optimal performance. Log files record the web server events and activities and can help you identify potential issues and gather information about users.
 
 <Alert title="Note" type="info">
-Requests served by the <a href="/docs/global-cdn">Pantheon Global CDN</a> will not hit the nginx webserver and will not be logged in `nginx-access.log`.
+Requests served by the [Pantheon Global CDN](/docs/global-cdn) will not hit the nginx webserver and will not be logged in `nginx-access.log`.
 </Alert>
 
 [GoAccess](https://goaccess.io/) is a free, open source utility that creates on the fly server reports by parsing the `nginx-access.log` file. Use it to quickly identify the most used browsers and operating systems, or to debug failed requests—all from the command line.

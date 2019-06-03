@@ -17,7 +17,7 @@ If you are a digital agency servicing clients, or a reseller of Pantheon as part
 For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise){.external} and [Pantheon EDU](https://pantheon.io/edu){.external} accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
-Support for Custom Upstreams requires that the externally hosted upstream repository is connected properly to the platform. For details, see <a href="/docs/support/#custom-upstreams" data-proofer-ignore>Get Support</a>. If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/docs/composer/).
+Support for Custom Upstreams requires that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/support/#custom-upstreams). If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/docs/composer/).
 </Alert>
 
 ## Benefits

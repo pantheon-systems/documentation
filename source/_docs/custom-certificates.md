@@ -54,7 +54,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 5. [Test Before Going Live](#test-before-going-live) (optional, recommended)
 
-6.  <a href="#disable-lets-encrypt-with-caa-records-required" data-proofer-ignore>Disable Let's Encrypt by adding CAA DNS records</a>.
+6.  [Disable Let's Encrypt by adding CAA DNS records](#disable-lets-encrypt-with-caa-records-required).
 
 7. Update `A` and `AAAA` records provided by Pantheon Support. Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
 
@@ -85,7 +85,7 @@ CAA records configured for the root domain (e.g., `example.com`) are inherited b
 | **Certificate Type**                                                  | Bring your own            | Shared, issued by Let's Encrypt | Bring your own                        |
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       | Self-managed (up to you)              |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 | Static (shared)                       |
-| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup> | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup> * |
+| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> * |
 | [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A                         | A+ [with HSTS](/docs/hsts/)     | A+ [with HSTS](/docs/hsts/) *         |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                | TLS 1.2 with SNI                      |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             | No Weak 3DES cipher                   |
@@ -106,7 +106,7 @@ Please allow two business days to get a CSR and load the certificate.
 
 ### How do I renew or replace my custom certificate?
 
-45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for <a href="#option-2-manually-managed-custom-certificates" data-proofer-ignore>bringing a custom certificate</a>).
+45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for [bringing a custom certificate](#option-2-manually-managed-custom-certificates)).
 
 To update a certificate with additional domains, [contact support](/docs/support/) with the following details:
 
@@ -118,7 +118,7 @@ It may take up to two business days to process the request.
 
 ### What about sites purchased online?
 
-Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on <a href="/docs/https/#can-i-bring-my-own-certificate" data-proofer-ignore>how to terminate TLS through a 3rd-party</a>.
+Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on [how to terminate TLS through a 3rd-party](/docs/https/#can-i-bring-my-own-certificate).
 
 ### Will custom certificates be self-serve?
 
@@ -147,7 +147,7 @@ A record: `23.185.0.X`
 AAAA record 1:  `2620:12a:8000::X`
 AAAA record 2:  `2620:12a:8001::X`
 
-**Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See <a href="/docs/dns/#what-are-aaaa-records-and-do-i-need-them" data-proofer-ignore>Introduction to Domain Name Services</a> for more information.
+**Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/docs/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
 
 ## Caveats / Known Issues
 

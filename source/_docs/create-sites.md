@@ -12,7 +12,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 2.  Name your site.
 
     <Alert title="Note" type="info">
-    The site name will be prefixed to all <a href="/docs/domains/#platform-domains">Platform URLs</a>, which are automatically configured as subdomains of `pantheonsite.io`.
+    The site name will be prefixed to all [Platform URLs](/docs/domains/#platform-domains), which are automatically configured as subdomains of `pantheonsite.io`.
     </Alert>
 3.  If applicable, affiliate the site with an [organization](/docs/organization-dashboard/#new-sites).
 4.  Click **Create Site**.
@@ -31,7 +31,7 @@ Your account is your own individual account, and every account can manage multip
 ## Frequently Asked Questions (FAQs)
 
 ### Can I rename my Pantheon site after creation?
-No. Site names and Platform URLs are permanent and cannot be changed. As a workaround, you can export your existing site and import it to a new site with the correct name. See <a href="/docs/migrate/#how-do-i-clone-an-existing-pantheon-site" data-proofer-ignore>Migrate Sites to Pantheon FAQs</a>.
+No. Site names and Platform URLs are permanent and cannot be changed. As a workaround, you can export your existing site and import it to a new site with the correct name. See [Migrate Sites to Pantheon FAQs](/docs/migrate/#how-do-i-clone-an-existing-pantheon-site).
 
 ### What if my site name is already taken?
 
