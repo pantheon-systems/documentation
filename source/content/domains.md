@@ -31,11 +31,7 @@ Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding 
 ## Custom Domains
 If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar, but we've created documentation for several popular DNS managers:
 
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific2"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> DNS Host-Specific Instructions</h3></a>
-  </div>
-  <div id="host-specific2" class="collapse" style="padding:10px;">
+<Accordion title={"DNS Host-Specific Instructions"} id={"host-specific2"} icon={"info-sign"}>
     <ul class="top-docs top-docs-2col docs-2col-panel">
       {% for doc in data.docs_tags.providers %}
         {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
@@ -43,8 +39,7 @@ If you don't already own a domain name, register one with a third-party provider
         {% endif %}
       {% endfor %}
     </ul>
-  </div>
-</div>
+</Accordion>
 
 Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/docs/https/).
 

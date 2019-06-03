@@ -111,16 +111,7 @@ Are you sure you want to continue connecting (yes/no)?
 
 You can safely type `yes` and press enter to add the server's SSH key fingerprint to your computer's `known_hosts` file. Additional connections to this specific Pantheon container will complete successfully without prompts. However, you will be prompted to confirm connections following a container migration, which is part of regular maintenance on the platform. See the following Pro Tip to automatically accept all Pantheon connections.
 
-<div class="panel panel-drop panel-guide" id="accordion">
-
-<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-keys">
-<div class="panel-heading panel-drop-heading">
-<h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Pro Tip: Trust All Pantheon Hosts</h3>
-</div>
-</a>
-
-<div id="host-keys" class="collapse">
-<div class="panel-inner" markdown="1">
+<Accordion title={"Pro Tip: Trust All Pantheon Hosts"} id={"host-keys"} icon={"lightbulb"}>
 The key fingerprint is a representation of the public key, used by the remote server to identify itself. These public keys, along with private keys, form a **keypair** used by the [Diffie-Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) to encrypt communication between you and the server.
 
 On a standard server system, the server administrator would publish their host keys and fingerprints publicly, so clients could match them to the keys presented at these prompts. On Pantheon however, application containers are created and destroyed too rapidly to maintain a public key list.
@@ -140,9 +131,7 @@ Host *.drush.in
 
 Now, requests to any `*.drush.in` server address should automatically accept the server's SSH key fingerprint without prompting you.
 
-</div>
-</div>
-</div>
+</Accordion>
 
 ### Checking Out Code using GUI Clients
 

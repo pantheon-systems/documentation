@@ -28,28 +28,21 @@ To ensure a successful migration, complete the following tasks on the source sit
 - Remove unneeded code, database tables, and files
 - [Configure SSH keys](/docs/ssh-keys)
 
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#advanced-before-you-begin">
-      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Advanced Tips for Successful Migration</h3>
-    </a>
-  </div>
-  <div id="advanced-before-you-begin" class="collapse" markdown="1" style="padding:10px;">
-  #### .gitignore
-  Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised.  Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
-  #### Local Drupal configurations
-  To preserve the database connection credentials for a site built on a local development environment, and to exclude them from version control, move your `settings.php` file to `settings.local.php` and add it to `.gitignore` so that it will be ignored by Git and included from Pantheon's `settings.php` when working on your site locally. Make sure that you can modify it, and restore the protections after the move:
+<Accordion title={"Advanced Tips for Successful Migration"} id={"advanced-before-you-begin"} icon={"lightbulb"}>
+#### .gitignore
+Check the contents of your current codebase for existing `.gitignore` files. To be compatible with the platform, using the Pantheon version is advised.  Otherwise, attempts to import files to restricted paths could break the import process. See the platform-provided versions for [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore), [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore), and [Drupal 8](https://github.com/pantheon-systems/drops-8).
 
-  ```bash
-  chmod u+w sites/default/{.,settings.php}
-  mv sites/default/{settings.php,settings.local.php}
-  chmod u-w sites/default/{settings.local.php,.}
-  ```
+#### Local Drupal configurations
+To preserve the database connection credentials for a site built on a local development environment, and to exclude them from version control, move your `settings.php` file to `settings.local.php` and add it to `.gitignore` so that it will be ignored by Git and included from Pantheon's `settings.php` when working on your site locally. Make sure that you can modify it, and restore the protections after the move:
 
-  Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 6 or 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
+```bash
+chmod u+w sites/default/{.,settings.php}
+mv sites/default/{settings.php,settings.local.php}
+chmod u-w sites/default/{settings.local.php,.}
+```
 
-  </div>
-</div>
+Drupal 8 sites running on Pantheon come with a bundled `settings.php` that includes the `settings.local.php` file, so no additional steps are required. However, sites running Drupal 6 or 7 must add a `settings.php` file that includes `settings.local.php`, as this file is not bundled on Pantheon.
+</Accordion>
 
 ## Create Pantheon Site
 1. Navigate to your User Dashboard and click the **Migrate Existing Site** button:

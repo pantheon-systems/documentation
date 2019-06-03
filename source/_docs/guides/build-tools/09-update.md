@@ -19,12 +19,7 @@ image: buildToolsGuide-thumb
 ---
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
 
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-   <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-composer"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Composer</h3></a>
- </div>
- <div id="understand-composer" class="collapse">
-   <div class="panel-inner" markdown="1">
+<Accordion title={"Composer"} id={"understand-composer"} icon={"lightbulb"}>
    ## Composer Fundamentals
     {% include("content/composer-fundamentals.html")%}
     <p>Site's created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file, such as [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/composer.json#L6-L11" class="external):<br>
@@ -35,9 +30,7 @@ In this lesson, we'll take a closer look at how to update dependencies in a Comp
         }
       ],</code></pre>
     </p>
-   </div>
- </div>
-</div>
+</Accordion>
 
 
 ## Update Core

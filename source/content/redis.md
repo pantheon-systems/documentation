@@ -79,20 +79,15 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 [WP Redis](https://wordpress.org/plugins/wp-redis/){.external} is loaded via a drop-in file, so there's no need to activate it on your WordPress sites.
 </Alert>
 
-<div class="panel panel-drop panel-guide" id="accordion">
-<div class="panel-heading panel-drop-heading">
-<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#advance-installs"><h3 class="panel-title panel-drop-title info" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Explore Advanced Install Methods (Optional)</h3></a>
-</div>
-<div id="advance-installs" class="collapse">
-<div class="panel-inner" markdown="1">
-#### Install via Composer {.info}
+<Accordion title={"Explore Advanced Install Methods (Optional)"} id={"advance-installs"} icon={"lightbulb"}>
+#### Install via Composer
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via Terminus:
 
     ```bash
     terminus connection:set <site>.<env> git
     ```
-2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) if you have not done so already.
-3. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer){.external}:
+1. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) if you have not done so already.
+1. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
 
     ```json
     "repositories": {
@@ -117,17 +112,15 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
        }
      }
     ```
-4. Run `composer install` to install WP Redis into the `wp-content` directory.
-5. Use git status to verify your local state, then commit and push your code to Pantheon:
+1. Run `composer install` to install WP Redis into the `wp-content` directory.
+!. Use git status to verify your local state, then commit and push your code to Pantheon:
 
     ```bash
     git status
     git commit --all -m "Initiate composer, require custom code"
     git push origin master
     ```
-</div>
-</div>
-</div>
+</Accordion>
 </div>
 
 <!-- 2nd pane content -->

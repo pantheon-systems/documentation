@@ -36,12 +36,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
 
     This process will create a secure keypair, with the public key going to Pantheon and the private key stored in CircleCI. If you remove either key, you will need to [generate a new pair](/docs/ssh-keys/) manually to fix the build process.
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#troubleshoot-install"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Troubleshooting</h3></a>
-      </div>
-      <div id="troubleshoot-install" class="collapse" markdown="1" style="padding:10px;">
-
+    <Accordion title={"Troubleshooting"} id={"troubleshoot-install"} icon={"wrench"}">
       {% include("content/composer-updating.html")%}
 
       ### Composer Content-Length Mismatch and/or Degraded Mode
@@ -89,8 +84,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
        * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues){.external}
        * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues){.external}
        * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues){.external}
-      </div>
-    </div>
+    </Accordion>
 
 2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on GitHub:
 

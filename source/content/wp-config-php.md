@@ -21,17 +21,9 @@ If you are also developing locally and need to configure WordPress for your desk
 
 ## Pantheon's WordPress Config
 
-<div class="panel panel-drop panel-guide" id="accordion">
-<div class="panel-heading panel-drop-heading">
-<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#pantheon-wp-config-php">
-<h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span>View Pantheon's WordPress Configuration</h3>
-</a>
-</div>
-<div id="pantheon-wp-config-php" class="collapse" markdown="1" style="padding:10px;">
-
+<Accordion title={"View Pantheon's WordPress Configuration"} id={"pantheon-wp-config-php"} icon={"wrench"}>
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal"></script>
-</div>
-</div>
+</Accordion>
 
 <Alert tile="Note" type="info">
 `$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).

@@ -59,37 +59,25 @@ If you need help with this step, please reference the [WordPress Codex](https://
 
 9. Again, consider creating a backup before proceeding:
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#create-backup"><h3 class="panel-title panel-drop-title" style="cursor:pointer;">Create Backup (optional)</h3></a>
-      </div>
-      <div id="create-backup" class="collapse">
-        <div class="panel-inner" markdown="1">
-          The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
+   <Accordion title={"Create Backup (optional)"} id={"create-backup"} icon={"lightbulb"}>
+   The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
 
-          1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
-          2. Click **Create New Backup**.
-          3. Click **<span class="glyphicons glyphicons-refresh"></span> Deploys** to return to the lesson.
-        </div>
-     </div>
-    </div>
+   1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
+          
+   1. Click **Create New Backup**.
+          
+   1. Click **<span class="glyphicons glyphicons-refresh"></span> Deploys** to return to the lesson.
+   </Accordion>
 
-    <Alert title="Warning" type="danger">
-      As intended, the following action will overwrite your Test database and files. If you skipped this backup task you will be unable to recover this data hereafter.
-    </Alert>
+   <Alert title="Warning" type="danger">
+   As intended, the following action will overwrite your Test database and files. If you skipped this backup task you will be unable to recover this data hereafter.
+   </Alert>
 
 10. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-       <div class="panel-heading panel-drop-heading">
-          <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-deploy"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Deploy Commits to Test (optional)</h3></a>
-        </div>
-        <div id="understand-deploy" class="collapse">
-          <div class="panel-inner" markdown="1">
-            Test is a separate environment from Dev, with its own codebase, database, and media files. When you deploy code from Dev, the platform leverages Git to pull any code changes into your Test environment.
-          </div>
-        </div>
-      </div>
+    <Accordion title={"Deploy Commits to Test (optional)"} id={"#understand-deploy"} icon={"lightbulb"}>
+    Test is a separate environment from Dev, with its own codebase, database, and media files. When you deploy code from Dev, the platform leverages Git to pull any code changes into your Test environment.
+    </Accordion>
 
 11. When the deployment finishes, click **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** to navigate to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
 

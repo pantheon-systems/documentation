@@ -475,32 +475,18 @@ Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add On
 Use panels for extraneous but useful information such as troubleshooting sections or pro tips that would be distracting or can be skipped over by a large portion of readers. This is primarily used in an effort to promote readability of a page.
 
 <div class="style-example" markdown="1">
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
-      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Panel Title</h3>
-    </a>
-  </div>
-  <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+<Accordion title={"Panel Title"} id={"unique-anchor"} icon={"wrench"}>
   ### Panel Content Header {.info}
 
   Note that the info class is required to keep the content header out of the table of contents.
-  </div>
-</div>
+</Accordion>
 <hr class="source-code">
 ```html
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
-      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Panel Title</h3>
-    </a>
-  </div>
-  <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+<Accordion title={"Panel Title"} id={"unique-anchor"} icon={"wrench"}>
   ### Panel Content Header {.info}
 
   Note that the info class is required to keep the content header out of the table of contents.
-  </div>
-</div>
+</Accordion>
 ```
 </div>
 

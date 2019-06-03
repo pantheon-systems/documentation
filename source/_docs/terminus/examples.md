@@ -37,12 +37,7 @@ Terminus command structure typically includes `<site>.<env>` in order to determi
 
 ![terminus env:clear-cache your-awesome-site.live](/source/docs/assets/images/terminus-example-cc.png)
 
-<div class="panel panel-drop panel-guide" id="accordion">
-<div class="panel-heading panel-drop-heading">
-<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#identify-site"><h3 class="panel-title panel-drop-title info" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Learn More</h3></a>
-</div>
-<div id="identify-site" class="collapse">
-<div class="panel-inner" markdown="1">
+<Accordion title={"Learn More"} id={"identify-site"} icon={"lightbulb"}>
 <dl>
   <dt>Site Label</dt>
     <dd>Human readable, such as "Your Awesome Site", entered during site creation and displayed in the Site Dashboard.</dd>
@@ -56,9 +51,7 @@ Terminus command structure typically includes `<site>.<env>` in order to determi
 You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/docs/sites/#site-uuid). For example:
 
 ![terminus site:info e9ad4349-621e-4be6-9f94-f9646069d9e7 --field name](/source/docs/assets/images/terminus-examples-field-name.png)
-</div>
-</div>
-</div>
+</Accordion>
 
 ### Drush and WP-CLI
 Pantheon supports running [Drush (Drupal)](https://drushcommands.com/){.external} and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/){.external} commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.

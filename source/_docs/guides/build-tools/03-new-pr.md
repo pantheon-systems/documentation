@@ -24,18 +24,11 @@ The master branch is automatically built and deployed to the Dev environment. Fe
 <p class="text-center" markdown="1">![Continuous delivery diagram](/source/docs/assets/images/pr-workflow/github-circle-pantheon.png)</p>
 
 
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-     <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-cd"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Continuous Delivery</h3></a>
-   </div>
-   <div id="understand-cd" class="collapse">
-     <div class="panel-inner" markdown="1">
+<Accordion title={"Continuous Delivery"} id={"#understand-cd"} icon={"lightbulb"}>
      Continuous delivery requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress. Anything that keeps your application from deploying code to production is considered a blocker.
 
      Production code is tracked by the master branch on GitHub and it is assumed to be production ready. Development work is done on a feature branch first, then proposed to master in the form of a Pull Request so it can be tested and reviewed before it's accepted.
-    </div>
-   </div>
- </div>
+</Accordion>
 
 
 1. From your GitHub project page, click on the `config` directory. Select the file named `system.site.yml` and click <span class="glyphicon glyphicon-pencil"></span> to open an editor:
@@ -50,28 +43,16 @@ The master branch is automatically built and deployed to the Dev environment. Fe
 
     ![Create slogan branch](/source/docs/assets/images/pr-workflow/create-slogan-branch.png)
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-branch-names"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Branch Naming Conventions</h3></a>
-       </div>
-       <div id="understand-branch-names" class="collapse">
-         <div class="panel-inner" markdown="1">
+    <Accordion title={"Branch Naming Conventions"} id={"#understand-branch-names"} icon={"lightbulb"}>
          Be sure to use unique branch names for each feature branch; the Multidev environment created on Pantheon is named after your branch. Since there is a limit to the number of characters that may be used in a Pantheon Multidev name, your environments may conflict if you always use the branch name that GitHub suggests. For details, see [Multidev](/docs/multidev/#what-are-the-naming-conventions-for-branches)).
-        </div>
-       </div>
-     </div>
+</Accordion>
 
 
 4. Click **Create Pull Request**:
 
     ![Slogan Pull Request](/source/docs/assets/images/pr-workflow/slogan-pull-request.png)
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-builds"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-watch"></span> Builds</h3></a>
-       </div>
-       <div id="understand-builds" class="collapse">
-         <div class="panel-inner" markdown="1">
+    <Accordion title={"Builds"} id={"#understand-builds"} icon={"watch"}>
          As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Multidev site URL (e.g., `ci-4-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
 
          ![Passed Pull Request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
@@ -80,9 +61,7 @@ The master branch is automatically built and deployed to the Dev environment. Fe
          It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, GitHub will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
 
 
-        </div>
-       </div>
-     </div>
+</Accordion>
 
 5. Wait for the build on CircleCI to leave a comment, then click on the **Visit Site** button to access the Multidev site URL. Note that the slogan you entered in your Pull Request branch has been imported and is visible in the site header:
 
