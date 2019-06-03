@@ -20,7 +20,7 @@ Conflicts can occur when modified file(s) within your site's codebase do not ali
 </p>
 
 ### How do I resolve conflicts when updating Core?
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the <code>-Xtheirs</code> flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with <code>.gitignore</code>).</p>
+If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).</p>
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">

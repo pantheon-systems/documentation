@@ -27,7 +27,7 @@ In this lesson, we'll take a closer look at how to update dependencies in a Comp
    <div class="panel-inner" markdown="1">
    ## Composer Fundamentals
     {% include("content/composer-fundamentals.html")%}
-    <p>Site's created from Pantheon's example repositories already include the appropriate package repository within the <code>composer.json</code> file, such as <a href="https://github.com/pantheon-systems/example-drops-8-composer/blob/master/composer.json#L6-L11" class="external">Drupal 8</a>:<br>
+    <p>Site's created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file, such as <a href="https://github.com/pantheon-systems/example-drops-8-composer/blob/master/composer.json#L6-L11" class="external">Drupal 8</a>:<br>
     <pre><code class="hljs json">"repositories": [
         {
           "type": "composer",

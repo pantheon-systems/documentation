@@ -144,7 +144,7 @@ The following plugins are just a few of the most popular available for Terminus 
         </div>
       </div>
       <p class="topic-info__description">Author: <a href="https://github.com/greg-1-anderson">Greg Anderson</a></p>
-      <p class="topic-info__description">Manage the <code>secrets.json</code> file for use with Quicksilver.</p>
+      <p class="topic-info__description">Manage the `secrets.json` file for use with Quicksilver.</p>
       <a href="https://github.com/pantheon-systems/terminus-secrets-plugin" class="btn-primary btn get-plugin">Get Plugin</a>
     </div>
   </div>

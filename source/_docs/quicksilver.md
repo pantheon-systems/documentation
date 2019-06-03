@@ -79,7 +79,7 @@ You can hook into the following workflows:
       <td><code>deploy_product</code></td>
       <td>Create site</td>
       <td>Dev</td>
-      <td><code>after</code> stage valid, <code>before</code> stage invalid</td>
+      <td><code>after</code> stage valid, `before` stage invalid</td>
       </tr>
       <tr>
       <td><code>sync_code</code></td>
@@ -91,7 +91,7 @@ You can hook into the following workflows:
       <td><code>create_cloud_development_environment</code>
       <td>Create Multidev environment</td>
       <td>Multidev</td>
-      <td><code>after</code> stage valid, <code>before</code> stage invalid</td>
+      <td><code>after</code> stage valid, `before` stage invalid</td>
       </tr>
     </tbody>
   </table>

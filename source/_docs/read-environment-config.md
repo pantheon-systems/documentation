@@ -101,7 +101,7 @@ When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_
 For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/docs/server_name-and-server_port/).
 
 <Alert title="Note" type="info">
-The <code>$_SERVER</code> variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of <code>phpinfo();</code> displayed on a site, don't leave this open to public viewing. 
+The `$_SERVER` variable contains sensitive data about a site and should not be publicly exposed. In the same way that you would not leave the output of `phpinfo();` displayed on a site, don't leave this open to public viewing. 
 </Alert>
 
 

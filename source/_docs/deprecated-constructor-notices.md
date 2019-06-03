@@ -35,7 +35,7 @@ if (!isset($_ENV['PANTHEON_ENVIRONMENT']) || ($_ENV['PANTHEON_ENVIRONMENT'] != '
 }
 ```
 <Alert title="Warning" type="danger">
-Disabling opcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that <code>display_errors</code> is set to <code>off</code> on Pantheon live environments, so there is no motivation to disable opcache in production anyway. When disabling opcache in dev and multi-dev environments, be sure to re-enable it again once you are done debugging.
+Disabling opcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that `display_errors` is set to `off` on Pantheon live environments, so there is no motivation to disable opcache in production anyway. When disabling opcache in dev and multi-dev environments, be sure to re-enable it again once you are done debugging.
 </Alert>
 
 You may also search for deprecated constructors using the PHP linter on the command line (requires PHP 7.0 to be installed locally). First, create a local copy of your site as described in [Local Development](/docs/local-development); then, run:

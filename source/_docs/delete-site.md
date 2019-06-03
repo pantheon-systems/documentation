@@ -41,7 +41,7 @@ Run the following [Terminus](/docs/terminus/) command:
 `terminus site:delete <site>`
 
 <Alert title="Note" type="info">
-Replace <code>&lt;site&gt;</code> with your site name. You can see a list of all your sites by running <code>terminus site:list</code>.
+Replace `<site>` with your site name. You can see a list of all your sites by running `terminus site:list`.
 </Alert>
 
   ![Delete Site via Terminus](/source/docs/assets/images/delete-site-terminus.png)
