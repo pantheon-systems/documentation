@@ -48,10 +48,9 @@ There are a number of terms used throughout the Multidev workflow:
 2. Click **Create Multidev Environment**. This will create a new fork of the environment that you select, including code, database and files.
 3. Specify the name for the environment; the URL will incorporate the environment name.
 
-    <div class="alert alert-danger" role="alert" markdown="1">
-    #### Warning {.info}
+    <Alert title="Warning" type="danger">
     Multidev branch names must be all lowercase, be less than 11 characters, but may contain a dash (`-`). Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.
-    </div>
+    </Alert>
 
 4. Click **Create Environment**.
 
@@ -59,10 +58,9 @@ It will take a few minutes to create the environment and clone the content from 
 
 You can create cloned Multidev environments from Dev, Test, or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>The cache tables can contain entries that exceed the transaction redo limit set by <code>@innodb_log_file_size@</code>. If you receive an error message that the clone was aborted, clear caches on the source environment and retry the procedure.</p>
-</div>
+<Alert title="Note" type="info">
+The cache tables can contain entries that exceed the transaction redo limit set by <code>@innodb_log_file_size@</code>. If you receive an error message that the clone was aborted, clear caches on the source environment and retry the procedure.
+</Alert>
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
 ## Access a Branch Environment

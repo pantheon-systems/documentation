@@ -35,9 +35,9 @@ There will not be any files open within your project once you complete these ste
 
 Many WordPress plugin developers use the command line tool [WP-CLI](https://make.wordpress.org/cli/handbook/). This is useful if you have a local development environment and want to use WP-CLI to manage it.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>You must successfully create a project before adding WP-CLI as a Command Line Tool.</p></div>
+<Alert title="Note" type="info">
+You must successfully create a project before adding WP-CLI as a Command Line Tool.
+</Alert>
 
 Once you have installed WP-CLI on your local machine you can configure PhpStorm to recognize WP-CLI from within your project by following these steps:
 
@@ -69,10 +69,9 @@ Use your site's [SFTP connection information](/docs/sftp#sftp-connection-informa
 1. Root Path: Click the **Autodetect** button and the Root Path should be automatically populated:
 
     ![Add web server PhpStorm](/source/docs/assets/images/phpstorm-deployment-connection-tab.png)
-    <div class="alert alert-danger" role="alert">
-    <h4 class="warning">Warning</h4>
-    <p markdown="1">PhpStorm does not allow the Root Path to be left blank. Because the Pantheon platform sometimes migrates sites across app servers without warning, you will need to update the root path any time the binding path changes for your Dev environment.</p>
-    </div>
+    <Alert tile="Warning" type="danger">
+    PhpStorm does not allow the Root Path to be left blank. Because the Pantheon platform sometimes migrates sites across app servers without warning, you will need to update the root path any time the binding path changes for your Dev environment.
+    </Alert>
 
 1. Click the **Test SFTP Connection...** button and make sure the connection is successful before moving forward.  Click **OK**.
 

@@ -9,9 +9,9 @@ contributors:
 
 The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your <a href="/docs/pantheon-yml/#site-local-configurations-pantheonyml" data-proofer-ignore>pantheon.yml</a> file or in the <a href="/docs/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml" data-proofer-ignore>pantheon.upstream.yml</a> file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
 
-<div class="alert alert-danger" role="alert">
-<h4 class="info">Warning</h4>
-<p markdown="1">Changing the settings of the `web_docroot` property will prevent you from updating your site via one-click Dashboard updates. To continue to use one-click updates, switch to a [Custom Upstream](/docs/custom-upstream) that has the `web_docroot` property set in the `pantheon.upstream.yml` file.</p></div>
+<Alert title="Warning" type="danger">
+Changing the settings of the `web_docroot` property will prevent you from updating your site via one-click Dashboard updates. To continue to use one-click updates, switch to a [Custom Upstream](/docs/custom-upstream) that has the `web_docroot` property set in the `pantheon.upstream.yml` file.
+</Alert>
 
 ## Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.

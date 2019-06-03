@@ -26,10 +26,9 @@ To begin, navigate back to the Pantheon **Site Dashboard**.
 
 Every Pantheon site comes with 3 separate environments— Dev, Test, Live—which are represented by tabs on your dashboard.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>Agencies have access to additional development environments under the <strong><span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev</strong> tab.
-</p></div>
+<Alert title="Note" type="info">
+Agencies have access to additional development environments under the <strong><span class="glyphicons glyphicons-cloud" aria-hidden="true"></span> Multidev</strong> tab.
+</Alert>
 
 ##<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev
 

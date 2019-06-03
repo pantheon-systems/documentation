@@ -19,19 +19,17 @@ Be sure that you have:
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/){.external}. Amazon offers [free access](https://aws.amazon.com/free/){.external} to most of their services for the first year.
 - [Terminus](/docs/terminus) installed on your local computer.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.</p></div>
+<Alert title="Note" type="info">
+When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.
+</Alert>
 
-<div class="alert alert-export" role="alert">
-<h4 class="info">Exports</h4>
-<p markdown="1">This process uses [Terminus](/docs/terminus/) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
+<Alert title="Exports" type="export">
+This process uses [Terminus](/docs/terminus/) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
 </code></pre>
-</p>
-</div>
+</Alert>
 
 ## Configure S3 within the AWS Console
 Before integrating S3 with your site, you'll need to configure the service within your [AWS Management Console](https://console.aws.amazon.com){.external}.
@@ -54,22 +52,19 @@ WP Offload Media requires a paid license but is configurable in the WordPress ad
 
 ### Install and Deploy S3 Uploads
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">This plugin currently conflicts with [Solr Power](https://wordpress.org/plugins/solr-power/){.external}, our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80){.external}.</p>
-</div>
+<Alert title="Note" type="info">
+This plugin currently conflicts with [Solr Power](https://wordpress.org/plugins/solr-power/){.external}, our recommended plugin for Solr integration. [More info](https://github.com/humanmade/S3-Uploads/issues/80){.external}.
+</Alert>
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads/pull/214){.external}. If you need an alternative plugin with premium support and a multisite version, consider [WP Offload Media](#install-and-deploy-wp-offload-media).</p>
-</div>
+<Alert title="Note" type="info">
+This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads/pull/214){.external}. If you need an alternative plugin with premium support and a multisite version, consider [WP Offload Media](#install-and-deploy-wp-offload-media).
+</Alert>
 
 1. Download the latest plugin release from [Github](https://github.com/humanmade/S3-Uploads/releases){.external} and extract it to `wp-content/plugins/`. Note that our documentation has been tested for version 2.0.0.
 
-    <div class="alert alert-danger" role="alert">
-    <h4 class="info">Warning</h4>
-    <p markdown="1">**Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform (<a data-proofer-ignore href="/docs/git-faq/#does-pantheon-support-git-submodules">more info</a>).</p>
-    </div>
+    <Alert title="Warning" type="danger">
+    **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform (<a data-proofer-ignore href="/docs/git-faq/#does-pantheon-support-git-submodules">more info</a>).</p>
+    </Alert>
 
 2. Rename the extracted folder to remove the version number. For example:
 
@@ -79,10 +74,9 @@ WP Offload Media requires a paid license but is configurable in the WordPress ad
 
 3. Create and / or copy your **Access Key ID** key and **Secret Access Key** from the "My security credentials" section of your AWS account to a text editor on your local computer.
 
-    <div class="alert alert-info" role="alert">
-    <h4 class="info">Note</h4>
-    <p markdown="1">As a standard security measure, consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin.</p>
-    </div>
+    <Alert title="Note" type="info">
+    As a standard security measure, consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin.</p>
+    </Alert>
 
 4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up){.external} file. For security, we recommended a service like [Lockr](/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin){.external} to store and retrieve these credentials securely.
 

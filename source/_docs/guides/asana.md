@@ -81,10 +81,9 @@ In the commands below, replace `<site>` with your site name, `<user>` with your 
 
         terminus secrets:set $SITE.dev asana_access_token '<API token>'
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.</p>
-</div>
+<Alert title="Note" type="info">
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+</Alert>
 
 ## Configure Quicksilver Integration
 Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration script for Asana to the [private path](/docs/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
@@ -120,10 +119,9 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
                 description: Asana Integration
                 script: private/scripts/asana_integration.php
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">`api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
-    </div>
+    <Alert title="Note" type="info">
+    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
+    </Alert>
 
 6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
 

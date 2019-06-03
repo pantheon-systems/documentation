@@ -15,10 +15,9 @@ WordPress: `wp-content/uploads/private`
 **Private Path for Code (Version Controlled)**
 Drupal and WordPress: `private`
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>If you have not already created these directories, you will need to do that first. Create the folders in Dev via SFTP or Git, and push the changes to your Test and Live environments.</p>
-</div>
+<Alert title="Note" type="info">
+If you have not already created these directories, you will need to do that first. Create the folders in Dev via SFTP or Git, and push the changes to your Test and Live environments.
+</Alert>
 
 ## Private Path for Code
 Store data that should be version controlled, such as [Quicksilver](/docs/quicksilver/) scripts, within the `private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `private`. If you're connecting via Git, use the `private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
@@ -96,7 +95,6 @@ You can either set the path in the Drupal admin interface, or with Terminus and 
      terminus drush <site>.<env> -- vget uc_credit_encryption_path
      ```
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>We do not encourage developers to save credit card information on the platform, but we do realize that for development this may be useful if you need a test payment method.
-</p></div>
+<Alert title="Note" type="info">
+We do not encourage developers to save credit card information on the platform, but we do realize that for development this may be useful if you need a test payment method.
+</Alert>

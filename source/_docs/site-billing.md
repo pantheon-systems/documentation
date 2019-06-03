@@ -5,26 +5,24 @@ tags: [billing]
 categories: []
 ---
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/docs/annual-billing/) for more information.
-</div>
+</Alert>
 
 ## Access Site Billing
 1. From the User Dashboard, click on the site you want to access billing for.
 1. Go to the Site Dashboard and click the **Billing** tab.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Changing your site billing is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
-</div>
+</Alert>
 
 ### Roles and Permissions
 The permission to transfer ownership or update payment method is granted only to the role of **Site Owner**. You can see who is assigned the role of Site Owner by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
-If you need to assume site and billing ownership, the current Site Owner must transfer it to you directly, as described [below](#transfer-ownership-and-billing-for-this-site).</div>
+<Alert tile="Note" type="info">
+If you need to assume site and billing ownership, the current Site Owner must transfer it to you directly, as described [below](#transfer-ownership-and-billing-for-this-site).
+</Alert>
 
 ## Transfer Ownership and Billing for This Site
 {% include("content/transfer-ownership-billing-intro.html")%}

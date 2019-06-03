@@ -41,9 +41,9 @@ This plugins requires PHP version 7.1 or higher. See [Upgrade PHP versions](/doc
 
 4. Select **Indexing Options** from the navigation bar and configure desired indexing options for Solr. Click **Save Changes** after making modifications.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4><p markdown="1">You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated) in the **Excludes Posts or Pages** field.</p>
-    </div>
+    <Alert title="Note" type="info">
+    You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated) in the **Excludes Posts or Pages** field.
+    </Alert>
 
 5. Index all publicly queryable post types by navigating to the **Actions** tab and clicking **Execute** next to **Index Searchable Post Types**, or via Terminus:
 
@@ -67,10 +67,9 @@ Upon activation of the plugin on the Dev or Multidev environment, a default [`sc
 
 You can set a custom `schema.xml` by uploading it to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory using SFTP. Then, from the plugin's **Actions** tab, look for **Repost schema.xml** and click on **Execute**.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4><p markdown="1"> Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment seperately.</p>
-</div>
-
+<Alert title="Note" type="info">
+ Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment seperately.
+</Alert>
 ## Known Issues/Limitations
 This plugin is under active development on [GitHub](https://github.com/pantheon-systems/solr-power). Use the issue queue for status updates and support. Pull requests are also welcome!
 

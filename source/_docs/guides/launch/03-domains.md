@@ -41,15 +41,14 @@ To pre-provision HTTPS, CAA records must either:
  - Not exist for the domain and its parent domains, or
  - Authorize Let's Encrypt.
 
-<div class="alert alert-danger" markdown="1">
-#### Warning {.info}
+<Alert title="Warning" type="danger">
 Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.
 
 Once you begin this process, you have:
 
  - 7 days to complete the challenge response. After that, you must create a new challenge.
  - 30 days to adjust DNS values.
-</div>
+</Alert>
 
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
 2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
@@ -57,12 +56,12 @@ Once you begin this process, you have:
 4. Click **<span class="glyphicons glyphicons-download-alt"></span> Download File**.
 5. Serve the file from your existing live site. Drupal 7 users can use the [Let's Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge) module to easily serve the contents of the challenge file.
 
-    <div class="alert alert-info" markdown="1">
-    #### Note {.info}
+    <Alert title="Note" type="info">
+    Note
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
 
     If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin){.external} to generate DNS TXT records to validate domain ownership.
-    </div>
+    </Alert>
 
 6. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
 

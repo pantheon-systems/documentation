@@ -22,10 +22,9 @@ image: launchGuide-twitterLarge
 
 In this lesson, we’re going to edit code directly. We’ll commit our edits to **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev**, review in **<span class="glyphicons glyphicons-equalizer" aria-hidden="true"></span> Test**, and deploy to **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live**. Let’s get started!
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>To complete this lesson, you need a basic understanding of CSS. If necessary, ask a colleague for help, or feel free to skip this lesson altogether.
-</p></div>
+<Alert title="Note" type="info">
+To complete this lesson, you need a basic understanding of CSS. If necessary, ask a colleague for help, or feel free to skip this lesson altogether.
+</Alert>
 
 If you haven’t added a new theme to your site, please return to the [previous lesson](/docs/guides/quickstart/onserver-dev-part1) and do so now.
 
@@ -43,10 +42,9 @@ If you haven’t added a new theme to your site, please return to the [previous 
 
 6. Return to the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. The files you just changed will be highlighted in yellow.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">Click the highlighted file changes in the Dev environment, and you can view the specific diff.
-    </p></div>
+    <Alert title="Note" type="info">
+    Click the highlighted file changes in the Dev environment, and you can view the specific diff.
+    </p></Alert>
 
 7. Add a commit message, then click **Commit** to add these files to your Dev environment.
 

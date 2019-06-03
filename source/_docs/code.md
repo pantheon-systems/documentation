@@ -28,8 +28,9 @@ Drupal site code repositories are clones of one of our Drupal upstreams: [Drops-
     └── themes
 
 
-<div class="alert alert-info"><h4 class="info">Note</h4>
- <p markdown="1">The `sites/default/files` directory is represented in your code repository as a symbolic link to the Pantheon environment's `files/` directory.</p></div>
+<Alert title="Note" type="info">
+The `sites/default/files` directory is represented in your code repository as a symbolic link to the Pantheon environment's `files/` directory.
+</Alert>
 
 ### WordPress Code Structure
 
@@ -59,7 +60,9 @@ WordPress site code repositories are clones of one our [WordPress upstream](http
     ├── plugins
 ```
 
-<div class="alert alert-info"><h4 class="info">Note</h4><p markdown="1">The `wp-content/uploads` directory is represented in your code repository as a symbolic link to the Pantheon environment's `files/` directory.</p></div>
+<Alert title="Note" type="info">
+The `wp-content/uploads` directory is represented in your code repository as a symbolic link to the Pantheon environment's `files/` directory.
+</Alert>
 
 ## Managing Permissions
 Permissions should be managed in the Dev environment via SFTP exclusively, as [Git only pays attention to the executable bit](https://git-scm.com/docs/user-manual.html).
@@ -81,9 +84,9 @@ The Dev environment provides [one-click updates](/docs/core-updates/) for your s
       <dd>Centralized location of code intended for distribution.</dd>
   </dl>
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>The Test and Live environments do not have write access to code outside of the deployment process.</p></div>
+<Alert title="Note" type="info">
+The Test and Live environments do not have write access to code outside of the deployment process.
+</Alert>
 
 ## Development
 Get started by learning more about the [Pantheon workflow](/docs/pantheon-workflow/) and [environment configuration](/docs/read-environment-config/). Then, dive in to [developing directly with SFTP mode](/docs/sftp/) and [explore more ways](/docs/cms-admin/) of utilizing built-in admin tools.

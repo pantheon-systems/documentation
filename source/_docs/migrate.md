@@ -57,10 +57,9 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 
   If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 
-  <div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p>The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see <a href="/docs/wordpress-sessions/">WordPress and PHP Sessions</a>.</p>
-  </div>
+  <Alert title="Note" type="info">
+  The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see <a href="/docs/wordpress-sessions/">WordPress and PHP Sessions</a>.
+  </Alert>
 
   </div>
 
@@ -81,10 +80,9 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 
       ![Drupal create archive](/source/docs/assets/images/dashboard/drupal-guided-migrate.png)
 
-      <div class="alert alert-info" markdown="1">
-      #### Note {.info}
+      <Alert title="Note" type="info">
       `drush ard` is only available on Drush 8 and earlier.
-      </div>
+     </Alert>
 
      The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
 
@@ -268,10 +266,9 @@ Replace `<source>` and `<destination>` with target [site UUIDs](/docs/sites/#sit
 terminus site:clone <source>.<env> <destination>.<env>
 ```
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">File and database backups that exceed 500MBs are not supported by this method. Sites that exceed this limit must be cloned manually. For details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual/).</p>
-</div>
+<Alert title="Note" type="info">
+File and database backups that exceed 500MBs are not supported by this method. Sites that exceed this limit must be cloned manually. For details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual/).
+</Alert>
 
 ### Does the WordPress migration cause downtime? 
 No, there is no downtime expected as part of the migration process. For detals, see related [BlogVault resource (question #13)](https://blogvault.net/migration-using-blogvault-faq/){.external}. Performance implications to a live site are similar to running a backup for the site. 

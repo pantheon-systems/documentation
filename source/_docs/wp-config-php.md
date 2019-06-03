@@ -11,8 +11,8 @@ WordPress configuration is set in wp-config.php, located within your WordPress s
 
 Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes, and caching.
 
-<div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
-<p markdown="1">You should NEVER put the database connection information for a Pantheon database within your `wp-config.php`. These credentials will change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct `wp-config.php` file for Pantheon.</p>
+<Alert title="Warning" type="danger">
+You should NEVER put the database connection information for a Pantheon database within your `wp-config.php`. These credentials will change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct `wp-config.php` file for Pantheon.</p>
 </div>
 
 ## Local Database Configuration for Development
@@ -33,8 +33,9 @@ If you are also developing locally and need to configure WordPress for your desk
 </div>
 </div>
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p><code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</p></div>
+<Alert tile="Note" type="info">
+`$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see <a href="/docs/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.
+</Alert>
 
 
 

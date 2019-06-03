@@ -11,10 +11,10 @@ contributors: [cityofoaksdesign]
  Otherwise, click the **current plan**:
  ![Change current plan for paid sites](/source/docs/assets/images/dashboard/change-plan.png)
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
-</p></div>
+<Alert title="Note" type="info">
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
+
+</Alert>
 
 ## Upgrades
 Site plan upgrades will change your site's resources and access to features immediately. The associated card will be charged a prorated amount for the remainder of the current billing period.
@@ -25,9 +25,9 @@ Site plan downgrades will change your site's resources and access to features im
 ## Roles & Permissions
 The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see <a href="/docs/change-management/#site-level-roles-and-permissions" data-proofer-ignore>Role-Based Permissions & Change Management</a>.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).</p></div>
+<Alert title="Note" type="info">
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
+</Alert>
 
 ## Considerations
 Consider the following changes to feature access _before_ upgrading or downgrading the site's plan. Certain scenarios require code changes in order to safely change the site plan.
@@ -90,10 +90,9 @@ If the site is associated with an Enterprise Flagship organization, additional P
 ## Purchase a New Plan
 This section covers purchasing a new plan. Review the [previous section](#basic-plan) on feature availability before switching plans to Basic.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info">
 Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/docs/annual-billing/) for more information.
-</div>
+</Alert>
 
 ### Select Plan
 1. Go to the Site Dashboard.
@@ -150,10 +149,9 @@ Invoices and transaction history related to this change can be found in **<span 
 ## Cancel Current Plan
 Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox. 
 
-<div class="alert alert-info" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info" markdown="1">
 While all site plans downgrades will be effective immediately, no partial refunds will be issued, per our [terms of service](https://pantheon.io/terms-of-service#tos-11){.external}.
-</div>
+</Alert>
 
 
 1. Go to the Site Dashboard.

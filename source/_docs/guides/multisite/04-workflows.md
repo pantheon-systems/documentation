@@ -86,10 +86,9 @@ terminus env:clear-cache <site>.<env>
 Running into “Error: Site Not Found”? See [Troubleshoot](/docs/guides/multisite/debug/) for the cause and resolution.
 
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Because the WordPress object cache stores its data as key => value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends.</p>
-</div>
+<Alert title="Note" type="info">
+Because the WordPress object cache stores its data as key => value pairs and WordPress Multisite simply adds the blog ID to the key, flushing cache is a global operation for those using persistent storage backends.
+</Alert>
 
 ## Refreshing data from Live
 Once you have a production environment, refreshing data in Test or Dev from Live is simply a matter of reversing the steps you took to initially create the Live environment.

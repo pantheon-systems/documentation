@@ -43,15 +43,13 @@ Two-factor authentication is a helpful security practice because it prevents att
       Click **Save Changes**.
   6. The page will be automatically redirected to the Duo setup wizard. Follow the on-screen instructions to configure an authentication device to your site and test it. Once complete, your browser will be redirected back to the plugin settings page.
 
-  <div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Duo configuration settings and keys are stored in the database. To avoid setting up new keys for each environment you can: </p>
+  <Alert title="Note" type="info">
+  Duo configuration settings and keys are stored in the database. To avoid setting up new keys for each environment you can:
 
-  <p markdown="1">
    - synchronize and import your database<br>
    - use a tool like [WP-CFM](/docs/wp-cfm/)<br>
-   - keep the new application page from the Duo Admin panel open, and reenter the values for each environment.</p>
-  </div>
+   - keep the new application page from the Duo Admin panel open, and reenter the values for each environment.
+   </Alert>
   </div>
 
   <!-- 2nd pane content -->
@@ -133,10 +131,9 @@ Two-factor authentication is a helpful security practice because it prevents att
   6. Now use the OneLogin dashboard to log in to your WordPress site!
 
     ![TFA OneLogin WP Login](/source/docs/assets/images/tfa-onelogin-wp-login.png)
-  <div class="alert alert-info" markdown="1">
-  #### Note {.info}
-  You can also refer to OneLogin's documentation, [Configure SAML for WordPress](https://onelogin.service-now.com/support/?id=kb_article&sys_id=590b1d83db109700d5505eea4b96197f){.external}, for further troubleshooting. You will need a OneLogin admin account to access their knowledge base.
-  </div>
+    <Alert title="Note" type="info">
+    You can also refer to OneLogin's documentation, [Configure SAML for WordPress](https://onelogin.service-now.com/support/?id=kb_article&sys_id=590b1d83db109700d5505eea4b96197f){.external}, for further troubleshooting. You will need a OneLogin admin account to access their knowledge base.
+    </Alert>
 </div>
 
   <!-- 2nd pane content -->
@@ -171,9 +168,9 @@ The Pantheon Dashboard offers social login with Google, which can be configured 
 
 ![Connect with Google](/source/docs/assets/images/log-in-with-google.png)
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">We recommend adding an [SSH Key](/docs/ssh-keys) to authenticate yourself on Pantheon for operations such as SFTP connections, which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password){.external}</p></div>
+<Alert title="Note" type="info">
+We recommend adding an [SSH Key](/docs/ssh-keys) to authenticate yourself on Pantheon for operations such as SFTP connections, which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password){.external}
+</Alert>
 
 ### Single Sign-On for Orgs
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/).

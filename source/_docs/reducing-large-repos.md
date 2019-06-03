@@ -9,11 +9,9 @@ contributors: curmudgeon
 Repositories that exceed 2GB may experience failures or degraded performance when interacting with code via Git on Pantheon. We recommend reducing the repository size by removing objects that are no longer referenced using [`git prune`](https://git-scm.com/docs/git-prune) in addition to optimizing via [`git gc`](https://git-scm.com/docs/git-gc). You may also want to review the repository for large files, then exclude them as needed.
 
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>Due to the use of Perl and the Bash shell, the following process is supported on Linux and Mac machines only. Windows users should work within a virtual machine.
-</p>
-</div>
+<Alert title="Note" type="info">
+Due to the use of Perl and the Bash shell, the following process is supported on Linux and Mac machines only. Windows users should work within a virtual machine.
+</Alert>
 
 ## Determine Repository File Size
 You can output the size of your repository by running [`git count-objects -vH`](https://git-scm.com/docs/git-count-objects) or `du -sh .git/` from within the root directory of your site's codebase.

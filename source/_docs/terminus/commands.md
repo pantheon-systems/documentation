@@ -11,10 +11,9 @@ permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
 searchboost: 100
 ---
-<div class="alert alert-info" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="info" markdown="1">
 If you would like additional information for a given command (e.g., available `--format` options) run the command with the `--help` flag in your terminal.
-</div>
+</Alert>
 
 <!--Note: The contents of the command reference table cannot be edited in the docs project. This table is automatically generated using Terminus (terminus list --format=json). Submit feedback and report issues related to the contents of this table on the Terminus repo: https://github.com/pantheon-systems/terminus/issues -->
 

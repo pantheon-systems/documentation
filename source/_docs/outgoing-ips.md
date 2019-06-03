@@ -6,10 +6,9 @@ categories: []
 ---
 Outgoing requests sent by Drupal and WordPress applications facilitate tasks between your site and external services, such as authentication and payment gateways.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Due to Pantheon's cloud-based infrastructure, these outbound requests are sent via dynamic IP addresses. There is no way to predict what IP address your code will be executed from.</p>
-</div>
+<Alert title="Note" type="info">
+Due to Pantheon's cloud-based infrastructure, these outbound requests are sent via dynamic IP addresses. There is no way to predict what IP address your code will be executed from.
+</Alert>
 
 ## Pantheon Enterprise Gateway
 If your site relies on a static IP address for outgoing requests, and your site is within an Enterprise or EDU+ organizations, then the recommended solution is the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway/). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative service to accomplish the request.

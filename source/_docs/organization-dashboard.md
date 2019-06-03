@@ -18,10 +18,9 @@ From the Site Dashboard, the Site Owner will want to:
 
 {% include("content/add-supporting-org.html")%}
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p markdown="1"> If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/support/) to transfer sites to your Organization.</p>
-</div>
-
+<Alert title="Note" type="info">
+ If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/support/) to transfer sites to your Organization.
+</Alert>
 
 ## Manage Site Teams
 If you need to add developers as full team members to a site, or outside contractors to individual sites, the Organization Administrator or existing Site Team Member will need to add them to the site team:
@@ -46,11 +45,9 @@ This lets you filter sites by their [site plan](/docs/site-plan/).
 ### Tags
 You can add custom tags by selecting the checkbox next to the site, and clicking **Tags** and **Add Tag(s)**, then entering the tag.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Tags are case-sensitve.
-</p>
-</div>
+<Alert title="Note" type="info">
+Tags are case-sensitve.
+</Alert>
 
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
 

@@ -19,10 +19,9 @@ Review the `Time` field to identify the longest running query and run the follow
 ```
 kill <thread_id>;
 ```
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Replace <code>&lt;thread_id&gt;</code> with the ID of the query you want to terminate.</p>
-</div>
+<Alert title="Note" type="info">
+Replace <code>&lt;thread_id&gt;</code> with the ID of the query you want to terminate.
+</Alert>
 
 ## Kill All Queries
 If a large number of bad requests are blocking valid queries, you can clear them out without having to run `kill` on every individual thread.

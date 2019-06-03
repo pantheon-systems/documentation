@@ -538,10 +538,9 @@ Pantheon has tools in place to monitor database queries:
  - Line 40:  `if( isset( $wp->query_vars['__sg_api'] ) )`
  - Line 146: `$confirmation_link = site_url() . '/?__sg_api=1&token=' . $token;`
 
-<div class="alert alert-danger" role="alert" markdown="1">
-#### Warning {.info}
+<Alert title="Warning" type="danger">
 This workaround may potentially break again with the next plugin update, and you will need to manually reapply the modification.
-</div>
+</Alert>
 
 <hr>
 

@@ -5,9 +5,8 @@ tags: [debugcode, infrastructure]
 categories: []
 ---
 
-<div class="alert alert-export" role="alert">
-<h4 class="info">Exports</h4>
-<p markdown="1">This doc uses [Terminus](/docs/terminus/) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
+<Alert title="Exports" type="export">
+This doc uses [Terminus](/docs/terminus/) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
@@ -132,10 +131,9 @@ It's not common for a plugin, module, or theme to use the temporary path in a wa
 Be aware that temporary files are not cleaned up automatically in the following configuration, which can result in [highly populated directories](/docs/platform-considerations/#highly-populated-directories).
 
 ### Persistent Temporary Path Workaround
-<div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
-<p markdown="1">
+<Alert title="Warning" type="danger">
 In general, there's no need for temporary files to persist across application containers. Using a different plugin or module is preferred to taking the performance hit caused by the workaround below.
-</p></div>
+</Alert>
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">

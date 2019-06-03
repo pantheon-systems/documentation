@@ -63,9 +63,9 @@ $ terminus wp <site>.<env> -- cron <your wp-cron command and switches here>
 
 All `terminus wp` commands require a site name and environment to operate.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>If you have protected your site using the Security setting on your Dashboard, Terminus will be unable to execute cron and you may see status report errors on the Dashboard.</p></div>
+<Alert title="Note" type="info">
+If you have protected your site using the Security setting on your Dashboard, Terminus will be unable to execute cron and you may see status report errors on the Dashboard.
+</Alert>
 
 
 ### Plugins
@@ -85,9 +85,9 @@ The first thing you'll need to do is disable WP-Cron's internal processing. Add 
 define('DISABLE_WP_CRON', true);
 ````
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>There are many important tasks that WP-Cron takes care of, so be prepared to complete all the steps below.</p></div>
+<Alert title="Note" type="info">
+There are many important tasks that WP-Cron takes care of, so be prepared to complete all the steps below.
+</Alert>
 
 ### Free Services
 Once you have disabled WP-Cron, you will need a service that calls a URL at regular intervals. The easiest way to do this is to set up an account with a free cron service:
@@ -102,9 +102,9 @@ Any of the above services will get the job done. By disabling WP-Cron, you have 
 1. Set up an account
 2. Set up a job that calls `https://yourdomain.tld/wp-cron.php?doing_wp_cron`
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Replace <code>yourdomain.tld</code> with your domain.</p></div>
+<Alert title="Note" type="info">
+Replace <code>yourdomain.tld</code> with your domain.
+</Alert>
 
 Depending on what service you use, you may have the ability to set up multiple jobs at different times. Creating a single job that calls your site's `wp-cron.php` script every 15 minutes is all you should need. WP-Cron will take care of the rest. If you create new schedules that need to be run more often than once every 15 minutes, you will need to adjust your job accordingly.
 

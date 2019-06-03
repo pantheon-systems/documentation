@@ -8,9 +8,9 @@ Before [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.ht
 
 Sites that don't use InnoDB are missing out on performance and stability gains.  As part of our Launch Check for new sites, we check the engine type on every table. If we find a table using the MyISAM engine, we notify the user so they can fix it. To make it easy, there is a PHP script you can use to help convert your MyISAM tables to InnoDB.
 
-<div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
- <p>This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.</p>
-</div>
+<Alert title="Warning" type="danger">
+This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.
+</Alert>
 
 ## MySQL Command
 
@@ -22,9 +22,9 @@ ALTER TABLE table_name ENGINE=InnoDB;
 
 ## Simple PHP Script
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>You must be a Pantheon customer to use this script.</p></div>
+<Alert title="Note" type="info">
+You must be a Pantheon customer to use this script.
+</Alert>
 
 1. Save the code in a file with the extension `.php` and add it to your site root.
 2. Upload the new PHP file to your site via SFTP or Git.

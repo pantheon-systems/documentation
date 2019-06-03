@@ -54,10 +54,9 @@ Use the `init` command to create a `composer.json` file that includes the approp
      ```
 3. Edit the `composer.json` to add extra configuration that specifies installation paths for WordPress plugins and themes.
 
-          <div class="alert alert-info" role="alert">
-            <h4 class="info">Note</h4>
-            <p markdown="1">Since Pantheon does not support Git submodules <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Git submodules" data-content="Some Composer packages are added as Git submodules, which place a Git repository within a subdirectory of your site’s repository."><em class="fa fa-info-circle"></em></a>, we recommend using the provided script `remove-git-submodules` to remove any `.git` directories upon install and update.</p>
-          </div>
+          <Alert title="Note" type="info">
+            Since Pantheon does not support Git submodules <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Git submodules" data-content="Some Composer packages are added as Git submodules, which place a Git repository within a subdirectory of your site’s repository."><em class="fa fa-info-circle"></em></a>, we recommend using the provided script `remove-git-submodules` to remove any `.git` directories upon install and update.</p>
+          </Alert>
 
         ```json
         {

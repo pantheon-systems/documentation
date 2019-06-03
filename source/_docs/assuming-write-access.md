@@ -12,8 +12,9 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/docs/git/#install-git) and [clone the code](/docs/git/#clone-your-site-codebase) locally if you have not done so already.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4><p markdown="1">We do not recommend creating symlinks over SFTP due to inconsistencies amongst clients. <br><br>The following is for Mac and Linux only. Windows users may refer to Microsoft documentation for opening [Command Prompt as an Administrator](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx) and [creating symlinks using mklink](https://technet.microsoft.com/en-us/library/cc753194.aspx){.external} or create symlinks within a virtual machine.</p></div>
+    <Alert title="Note" type="info">
+    We do not recommend creating symlinks over SFTP due to inconsistencies amongst clients. <br><br>The following is for Mac and Linux only. Windows users may refer to Microsoft documentation for opening [Command Prompt as an Administrator](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx) and [creating symlinks using mklink](https://technet.microsoft.com/en-us/library/cc753194.aspx){.external} or create symlinks within a virtual machine.
+    </Alert>
 
 2. From your terminal, `cd` to the site code repository:
 
@@ -36,12 +37,9 @@ The best solution is to communicate with the maintainer of the module or plugin 
     ln -s ./wp-content/uploads/new-directory ./wp-content/path/plugin-expects-to-write-to
     ```
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">
+    <Alert title="Note" type="info">
     The `ln` command is sensitive to the **working directory**, the folder your prompt is currently sitting in. The example above assumes you're in the main directory of your local git repository.
-    </p>
-    </div>
+    </Alert>
 
 5. Stage your changes
 
@@ -63,12 +61,9 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
  Your commit can be seen in the Dev environments commit history. The plugin will now successfully write files within any environment, even when the Dev environment's connection mode is set to Git. In your previous configuration, the plugin would fail while in Git mode. You should not see the newly created files in the Dashboard as "ready to commit", as files are not version controlled.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p markdown="1">
+    <Alert title="Note" type="info">
     In our example, we created the target directory of the symlink as ./wp-content/uploads/new-directory. Make sure this directory is created via SFTP if it does not exist yet.
-    </p>
-    </div>
+    </Alert>
 
 7. Deploy to Test and confirm results.
 8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.

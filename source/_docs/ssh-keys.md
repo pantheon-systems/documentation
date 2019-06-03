@@ -54,12 +54,9 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 4. Open the Git bash client, and put in the command to clone your Pantheon site. This is found in the Dev environment of your site above the Git code log.
 5. If prompted, enter the password.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>
+<Alert title="Note" type="info">
 Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the <a href="#troubleshooting">Troubleshooting</a> at the end of the document.
-</p>
-</div>
+</Alert>
 
 ## Delete a Key from Pantheon
 To delete a key, go to the **Account** page and click **SSH Keys**. Simply click the **Remove** button next to the key you want to delete.

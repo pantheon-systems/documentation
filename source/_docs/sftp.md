@@ -12,16 +12,13 @@ In some cases, working via Git is not the best option. You may not like local de
 
 SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the <code>apps.module</code> in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/docs/cms-admin/).
 
-<div class="alert alert-danger" role="alert">
-  <h4 class="info">SFTP Mode Considerations</h4>
-  <h5>Commit frequently and keep in mind:</h5>
-  <ul>
-    <li>SFTP changes to code that have not been committed will <strong> not be saved in backups and not included in deployments</strong> as they are not part of your code repository yet.</li>
-    <li>Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.</li>
-    <li>Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.</li>
-    <li>You won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</li>
-  </ul>
-</div>
+<Alert tile="SFTP Mode Considerations" type="danger">
+##### Commit frequently and keep in mind:
+ - SFTP changes to code that have not been committed will *not be saved in backups and not included in deployments* as they are not part of your code repository yet.
+ - Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.
+ - Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.
+ - You won't be able to save anything that's being excluded from version control via `.gitignore`.
+</Alert>
 
 
 ## SFTP Mode
@@ -47,9 +44,9 @@ Your connection data is as follows:
 
 **port:** `2222`
  
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.</p></div>
+<Alert title="Note" type="info">
+When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.
+</Alert>
 
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
 
@@ -73,10 +70,9 @@ Write a helpful commit message to go with your changes. This will make maintaini
 
 Once your message is ready, click **Commit**.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</p>
-</div>
+<Alert title="Note" type="info">
+Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.
+</Alert>
 
 ## Discard & Abandon SFTP Changes
 
@@ -122,10 +118,9 @@ This is by design. Please see [Using the Pantheon Workflow](/docs/pantheon-workf
 Uncommitted SFTP changes may not be recognized by the Dev environment when the Site Dashboard is open in multiple tabs or windows. Close all windows and tabs then access the Site Dashboard in a single tab to resolve.
 
 ### How do I find my site's Binding path?
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>You should <i>not</i> manually set the "Remote Path" in your SFTP client's settings, as this path changes from time to time due to the platform architecture. It is strongly recommended that you leave the Remote Path blank, and you will automatically be redirected to the proper directory when logging in.</p>
-</div>
+<Alert title="Note" type="info">
+You should <i>not</i> manually set the "Remote Path" in your SFTP client's settings, as this path changes from time to time due to the platform architecture. It is strongly recommended that you leave the Remote Path blank, and you will automatically be redirected to the proper directory when logging in.
+</Alert>
 
 You can find the Remote Path after [connecting to SFTP](#sftp-connection-information) via command line, using the `pwd` command:
 
