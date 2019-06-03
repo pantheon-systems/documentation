@@ -34,7 +34,7 @@ Data is retained for the following amounts of time:
 Raw data is not currently available.
 
 ### Why doesn't Pantheon's traffic match my analytics?
-There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic. For details, see <a href="/docs/traffic-limits/#why-doesnt-pantheons-traffic-match-my-analytics" data-proofer-ignore>Traffic Limits and Overages</a>.
+There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic. For details, see [Traffic Limits and Overages](/docs/traffic-limits/#why-doesnt-pantheons-traffic-match-my-analytics).
 
 ### How does Pantheon handle overages?
 All non-Basic plans come with free overage protection. Where there is a pattern of consistent overage, we will align a site's plans with its load on the platform. For details, see [Traffic Limits and Overages](/docs/traffic-limits).
@@ -55,7 +55,7 @@ Data is shown for dates after March 18, 2018. If your site is not yet on the Glo
 Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor.
 
 ### Can I check metrics from the command line with Terminus?
-Yes! Access to metrics via Terminus is currently available as an alpha command, meaning the command structure may change before full release. [Install Terminus](/docs/terminus/install/) or update to the <a href="/docs/terminus/updates#update-to-the-current-release-" data-proofer-ignore>current release</a> for access to the `alpha:metrics` command.
+Yes! Access to metrics via Terminus is currently available as an alpha command, meaning the command structure may change before full release. [Install Terminus](/docs/terminus/install/) or update to the [current release](/docs/terminus/updates#update-to-the-current-release-) for access to the `alpha:metrics` command.
 
 ## See Also
 - [Traffic Limits and Overages](/docs/traffic-limits/)

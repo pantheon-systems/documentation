@@ -45,7 +45,7 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 | **Certificate Type**                                                  | Bring your own            | Shared, issued by Let's Encrypt |
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
-| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup> |
+| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> |
 | [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A                         | A+ [with HSTS](/docs/hsts/)     |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |

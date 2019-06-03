@@ -17,7 +17,7 @@ As with most common problems WordPress site owners face, there's a plugin to hel
 You can install the plugin from your [WordPress dashboard](/docs/cms-admin/#wordpress-dashboard) by following these steps:
 
 <Alert title="Note" type="info">
-Your site's Connection Mode must be <a href="/docs/sftp#sftp-mode">set to SFTP</a>.
+Your site's Connection Mode must be [set to SFTP](/docs/sftp#sftp-mode).
 </Alert>
 
 1. Click **Plugins**, then select **Add New**.

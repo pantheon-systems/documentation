@@ -414,4 +414,4 @@ ff = only
 In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again.
 
 ## See Also
-Check our standard migration procedure for related <a href="/docs/migrate#frequently-asked-questions-faqs" data-proofer-ignore>Frequently Asked Questions</a> and [Troubleshooting](/docs/migrate#troubleshooting) tips.
+Check our standard migration procedure for related [Frequently Asked Questions](/docs/migrate#frequently-asked-questions-faqs) and [Troubleshooting](/docs/migrate#troubleshooting) tips.

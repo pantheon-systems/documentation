@@ -35,8 +35,8 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## DreamHost Docs
 
-* <a href="https://help.dreamhost.com/hc/en-us/sections/203272268-DNS-Records" target="blank">DNS Records <span class="glyphicons glyphicons-new-window-alt"></span></a>
-* <a href="https://help.dreamhost.com/hc/en-us/articles/215414867-How-do-I-add-custom-DNS-records-" target="blank">How do I add custom DNS records? <span class="glyphicons glyphicons-new-window-alt"></span></a>
+* [DNS Records <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.dreamhost.com/hc/en-us/sections/203272268-DNS-Records" target="blank)
+* [How do I add custom DNS records? <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.dreamhost.com/hc/en-us/articles/215414867-How-do-I-add-custom-DNS-records-" target="blank)
 
 ## Next Steps
 

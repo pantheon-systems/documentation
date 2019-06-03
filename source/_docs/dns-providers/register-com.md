@@ -48,8 +48,8 @@ The CNAME record is required if you wish to include `www` within your site's pri
 
 ## Cloudflare Docs
 
-* <a href="https://support.cloudflare.com/hc/en-us/articles/200169046-How-do-I-add-a-CNAME-record-" target="blank">How do I add a CNAME record? <span class="glyphicons glyphicons-new-window-alt"></span></a>
-* <a href="https://support.cloudflare.com/hc/en-us/articles/200169096-How-do-I-add-A-records-" target="blank">How do I add A records? <span class="glyphicons glyphicons-new-window-alt"></span></a>
+* [How do I add a CNAME record? <span class="glyphicons glyphicons-new-window-alt"></span>](https://support.cloudflare.com/hc/en-us/articles/200169046-How-do-I-add-a-CNAME-record-" target="blank)
+* [How do I add A records? <span class="glyphicons glyphicons-new-window-alt"></span>](https://support.cloudflare.com/hc/en-us/articles/200169096-How-do-I-add-A-records-" target="blank)
 
 ## Next Steps
 

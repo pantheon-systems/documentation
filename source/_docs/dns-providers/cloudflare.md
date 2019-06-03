@@ -24,7 +24,7 @@ The following recommendations differ from those shown in the Site Dashboard. Thi
 
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **DNS Recommendations** button next to the `www` domain and copy the CNAME value (e.g. `live-example.pantheonsite.io`).
-3. Login to your <a href="https://www.cloudflare.com/a/login" target="blank">Cloudflare account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
+3. Login to your [Cloudflare account <span class="glyphicons glyphicons-new-window-alt"></span>](https://www.cloudflare.com/a/login" target="blank) in a new tab before you continue.
 
 ## Configure DNS Records on Cloudflare
 

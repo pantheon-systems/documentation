@@ -394,7 +394,7 @@ Install and enable the module to resolve.
 | BusinessXL             |               1024         |
 | Elite                  |               1024         |
 
-\*Redis is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. See the <a href="#enable-redis" data-proofer-ignore>Enable Redis</a> section above for details about which account types have Redis on paid plans.
+\*Redis is available on free Sandbox plans for usage during development and will remain through upgrades to any other plan except for Basic. See the [Enable Redis](#enable-redis) section above for details about which account types have Redis on paid plans.
 
 ### What happens when Redis reaches maxmemory?
 When the specified amount of memory is reached, Redis follows the `maxmemory-policy` configuration directive, which is defined in the platform `redis.conf` file.
