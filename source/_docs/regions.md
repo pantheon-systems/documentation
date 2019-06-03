@@ -1,6 +1,6 @@
 ---
 title: Create a New Site in your Choice of Pantheon Region
-description: Learn how to get Limited Availability access to and launch sites in the European Union or Australia.
+description: Learn how to get Limited Availability access to and launch sites in the European Union, Australia, or Canada.
 tags: [create, regions]
 categories: []
 contributors: [edwardangert, rachelwhitton, ari]
@@ -12,14 +12,14 @@ searchboost: 150
 The documentation on this page discusses features and options that are not yet available to all users.
 </div>
 
-Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from the European Union or Australia.
+Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from the European Union, Australia, or Canada.
 
 During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US Region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in your choice of region before the feature becomes generally available in late 2019.
 
 ## Use Cases
 There are many scenarios in which you might prefer running a site in a data center outside of the default United States Region. Common use cases include:
 
-* Compliance standards that require data residency within the borders of Australia or the European Union
+* Compliance standards that require data residency within the borders of Australia, the European Union, or Canada
 * Improved performance and user experience for authenticated traffic originating near the desired region
 
 ## Region Availability
@@ -28,10 +28,11 @@ Once enabled, this Organization-wide feature allows <a href="/docs/change-manage
 * United States (**US**) (Default)
 * Australia (**AUS**)
 * European Union (**EU**)
+* Canada (**CA**)
 
 ### Data Residency and Protection
 
-Pantheon sites running in Europe have all site resources in the EU. Pantheon sites running in Australia have all site resources in Australia. This includes application and database containers, Redis cache servers, Apache Solr index servers, and a distributed filesystem and request router.
+Pantheon sites have all site resources in the region in which it was created. This includes application and database containers, Redis cache servers, Apache Solr index servers, and a distributed filesystem and request router.
 
 Automated and manual backups of all site components (code, database, and files) are stored in the local region, and created by job workers also running in the region. Additionally, any database or file clones between site environments are run by local job workers.
 
@@ -48,6 +49,7 @@ With this set of region-specific resources, now you can run WordPress or Drupal 
    - `us`
    - `aus`
    - `eu`
+   - `ca`
 
  For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
 
@@ -115,9 +117,7 @@ Time to celebrate. Your site is running in your chosen region!
 More features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this doc for updates. [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external} to tell us about your needs.
 
 Coming soon:
-
   - Region Facet on Organization Dashboard
-  - Canada
 
 ## Frequently Asked Questions
 ### Can I move an existing site to a new region?
