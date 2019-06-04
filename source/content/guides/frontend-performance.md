@@ -4,6 +4,7 @@ description: Learn how to ace an online speed test with Pantheon's Global CDN.
 tags: [siteintegrations]
 categories: []
 type: guide
+layout: doc
 image: CDN-speedTest-docs-guide
 permalink: docs/guides/:basename/
 contributors:
@@ -19,7 +20,9 @@ contributors:
 Slow websites are **bad**. Many studies have looked at this and the facts are in. Among other metrics, [a one second delay can reduce conversions by 7%, and 40% of users abandon a website that takes over three seconds to load](https://blog.kissmetrics.com/loading-time/). In this guide we’ll show you how to speed up frontend performance to ensure that visitors to your site stay engaged and have the best experience.
 
 <Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
+
+Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
+
 </Callout>
 
 
@@ -40,47 +43,57 @@ Of course, there's much more to Google's ranking than just these two aspects but
 ### Pantheon's Global CDN
 Reduce page rendering speeds from seconds to sub-seconds by caching content _and_ resources alike across 40+ points of presence (POPs) on Pantheon's Global CDN.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li id="globaltab1" role="presentation" class="active"><a href="#global" aria-controls="global" role="tab" data-toggle="tab">Global</a></li>
-  <li id="natab1" role="presentation"><a href="#na" aria-controls="na" role="tab" data-toggle="tab">N. America</a></li>
-  <li id="satab1" role="presentation"><a href="#sa" aria-controls="na" role="tab" data-toggle="tab">S. America</a></li>
-  <li id="aftab1" role="presentation"><a href="#af" aria-controls="na" role="tab" data-toggle="tab">Africa</a></li>
-  <li id="eutab1" role="presentation"><a href="#eu" aria-controls="eu" role="tab" data-toggle="tab">Europe</a></li>
-  <li id="asiatab1" role="presentation"><a href="#asia" aria-controls="asia" role="tab" data-toggle="tab">Asia</a></li>
-  <li id="austab1" role="presentation"><a href="#aus" aria-controls="asia" role="tab" data-toggle="tab">Australia & New Zealand</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content no-border">
-<div role="tabpanel" class="tab-pane active" id="global" markdown="1">
+<Tab title="Global" id="globaltab1" active="true">
+
 ![Global CDN Map](/source/docs/assets/images/guides/front-end-performance/CDN-map.png){.cdn-map-container}
-</div>
-<div role="tabpanel" class="tab-pane" id="na" markdown="1">
+
+</Tab>
+
+<Tab title="N. America" id="natab1">
+
 ![North America CDN Map](/source/docs/assets/images/guides/front-end-performance/CDN-map-NA.png){.cdn-map-container}
 <p class="pop-desc">Ashburn (x2), Atlanta (x2), Boston, Chicago (x2), Dallas, Denver, Los Angeles (x2), Miami, Minneapolis, Montreal, New York (x2), San Jose (x2), Seattle, Toronto</p>
-</div>
-<div role="tabpanel" class="tab-pane" id="sa" markdown="1">
+
+</Tab>
+
+<Tab title="S. America" id="satab1">
+
 ![South America CDN Map](/source/docs/assets/images/guides/front-end-performance/CDN-map-SA.png){.cdn-map-container}
 <p class="pop-desc">São Paulo, Rio de Janeiro</p>
-</div>
-<div role="tabpanel" class="tab-pane" id="af" markdown="1">
+
+</Tab>
+
+<Tab title="Africa" id="aftab1">
+
 ![Africa CDN Map](/source/docs/assets/images/guides/front-end-performance/CDN-map-AF.png){.cdn-map-container}
 <p class="pop-desc">Cape Town, Johannesburg</p>
-</div>
-<div role="tabpanel" class="tab-pane" id="eu" markdown="1">
+
+</Tab>
+
+<Tab title="Europe" id="eutab1">
+
 ![Europe CDN Map](/source/docs/assets/images/guides/front-end-performance/CDN-map-EU.png){.cdn-map-container}
 <p class="pop-desc">Amsterdam, Frankfurt (x2), London (x2), Madrid, Paris, Stockholm</p>
-</div>
-<div role="tabpanel" class="tab-pane" id="asia" markdown="1">
+
+</Tab>
+
+<Tab title="Asia" id="asiatab1">
+
 ![Asia CDN Map](/source/docs/assets/images/guides/front-end-performance/CDN-map-Asia.png){.cdn-map-container}
 <p class="pop-desc">Dubai, Hong Kong, Osaka, Singapore, Tokyo (x2)</p>
-</div>
-<div role="tabpanel" class="tab-pane" id="aus" markdown="1">
+
+</Tab>
+
+<Tab title="Australia & New Zealand" id="austab1">
+
 ![Australia CDN Map](/source/docs/assets/images/guides/front-end-performance/CDN-map-AUZ.png){.cdn-map-container}
 <p class="pop-desc">Auckland, Brisbane, Melbourne, Perth, Sydney, Wellington</p>
-</div>
-</div>
+
+</Tab>
+
+</TabList>
 
 Each POP caches all the resources (e.g., CSS and JavaScript) needed to render the page, including the HTML output. Using the closest physical POP to serve a request means the visitor doesn't have to wait as long to see the first meaningful paint (TTFP).
 
@@ -105,24 +118,19 @@ The following describes the expected cache behavior for sites running the Panthe
 
 ![Chrome network headers](/source/docs/assets/images/guides/front-end-performance/chrome-network-headers.png)
 
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#dev-tools">
-      <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Google's Developer Tools</h3>
-    </a>
-  </div>
-  <div id="dev-tools" class="collapse" markdown="1" style="padding:10px;">
-  Examine the HTTP headers for the response using Chrome's Developer tools:
+<Accordion title="Google's Developer Tools" id="dev-tools" icon="lightbulb">
 
-  ![Check headers in chrome](/source/docs/assets/images/guides/front-end-performance/inspect-network.gif)
+Examine the HTTP headers for the response using Chrome's Developer tools:
 
-  1. Right click somewhere on the page.
-  2. Select **Inspect**.
-  3. Open the **Network** tab, then refresh the page. This allows you to review all of the HTTP requests necessary to display your page.
-  4. Select the first row, which is a request for the initial HTML file.
-  5. Look for the **Age** header. Any number greater than zero indicates that this response was served to the browser from cache.
-  </div>
-</div>
+![Check headers in chrome](/source/docs/assets/images/guides/front-end-performance/inspect-network.gif)
+
+1. Right click somewhere on the page.
+2. Select **Inspect**.
+3. Open the **Network** tab, then refresh the page. This allows you to review all of the HTTP requests necessary to display your page.
+4. Select the first row, which is a request for the initial HTML file.
+5. Look for the **Age** header. Any number greater than zero indicates that this response was served to the browser from cache.
+
+</Accordion>
 
 ### Debug Common Cache Busters
 #### Cookies
@@ -152,37 +160,30 @@ You can see the cookies used on your site under the **Application** tab in Chrom
 #### Unintentional Cache Invalidation
 Try to walk yourself through the content rendering tree, considering any custom or contrib code that may be affecting the directives set in the HTTP headers of a response.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#wordpress-max-age" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+<TabList>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#drupal-max-age" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal</a></li>
-</ul>
+<Tab title="WordPress" id="wordpress-max-age" active="true">
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="wordpress-max-age" markdown="1">
-  There could be an existing snippet assumed to disable caching for a single entity when in reality it's disabling caching for the entire page:
+There could be an existing snippet assumed to disable caching for a single entity when in reality it's disabling caching for the entire page:
 
-  ```php
-  /**
-  * This is an example of accidentally bypassing cache when rendering a response.
-  * Don't use this without proper conditionals wrapped around the header function.
-  **/
-  add_action( 'send_headers', 'add_header_maxage' );
-  function add_header_maxage() {
-    // some logic that accidentally invalidates full-page cache
-      header('Cache Control: max-age=0');
-  }
-  ```
-   See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers) for more details.
-  </div>
+```php
+/**
+* This is an example of accidentally bypassing cache when rendering a response.
+* Don't use this without proper conditionals wrapped around the header function.
+**/
+add_action( 'send_headers', 'add_header_maxage' );
+function add_header_maxage() {
+  // some logic that accidentally invalidates full-page cache
+    header('Cache Control: max-age=0');
+}
+```
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="drupal-max-age" markdown="1">
+See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers) for more details.
+
+</Tab>
+
+<Tab title="Drupal" id="drupal-max-age">
+
 There could be an existing snippet assumed to disable caching for a single block when in reality it's disabling caching for the entire page:
 
 ```php
@@ -194,36 +195,31 @@ There could be an existing snippet assumed to disable caching for a single block
 $form['#cache'] = ['max-age' => 0];
 ```
  See the [Drupal documentation](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays) for more details. You can search your custom code for `#cache` to find places where you've interacted with the Cache API.
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 #### Incorrect Configuration
 Working across many environments presents opportunities for configuration changes to get lost or for configurations to never be set correctly in the first place. Using tools like [WP-CFM](https://wordpress.org/plugins/wp-cfm/) and Drupal 8's [Configuration Management System](https://www.drupal.org/docs/8/configuration-management/managing-your-sites-configuration) to track configuration alongside code will mitigate these issues, but mistakes do happen. Double-check your site's default caching configurations:
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#wp-config-get" aria-controls="wp-config-get" role="tab" data-toggle="tab">WordPress</a></li>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#drupal-config-get" aria-controls="drupal-config-get" role="tab" data-toggle="tab">Drupal</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="wp-config-get" markdown="1">
-  The Pantheon Page Cache plugin is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
+<Tab title="WordPress" id="wp-config-get" active="true">
 
-  1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
-  2. Review the Time to Live, which translates to `max-age`.
-  3. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
+The Pantheon Page Cache plugin is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
 
-  ![Pantheon Cache Plugin](/source/docs/assets/images/guides/front-end-performance/pantheon-page-cache.png)
-  </div>
+1. From the WordPress dashboard, click **Settings** > **Pantheon Page Cache**.
+2. Review the Time to Live, which translates to `max-age`.
+3. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="drupal-config-get" markdown="1">
+![Pantheon Cache Plugin](/source/docs/assets/images/guides/front-end-performance/pantheon-page-cache.png)
+
+</Tab>
+
+<Tab title="Drupal" id="drupal-config-get">
+
 In Drupal it is very easy to turn off page caching and forget to turn it back on.
 
 1. Navigate to **Configuration** > **Development** > **Performance** within Drupal's Admin Interface.
@@ -233,8 +229,9 @@ In Drupal it is very easy to turn off page caching and forget to turn it back on
 
 The Drupal 8 default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
 
-  </div>
-</div>
+</Tab>
+
+</TabList>
 
 ### Optimize Non-Cached Responses
 Improve performance on longer trips to and from the browser for instances you _want_ to bypass cache and go straight to the application:
@@ -253,51 +250,42 @@ If your site doesn't seem to be able to send uncached content fast enough, enabl
 #### Helper Tools
 There are toolbars for both Drupal and WordPress that provide stats like the number of queries, amount of memory, and response time. These can be helpful for real time debugging.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#wp-helpers" aria-controls="wp-helpers" role="tab" data-toggle="tab">WordPress</a></li>
+<TabList>
+<Tab title="WordPress" id="wordpress-helpers" active="true">
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#drupal-helpers" aria-controls="drupal-helpers" role="tab" data-toggle="tab">Drupal 8</a></li>
-</ul>
+The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful identifying advanced cache behaviors. This plugin requires that you enable debugging via `wp-config.php`:
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="wp-helpers" markdown="1">
-  The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful identifying advanced cache behaviors. This plugin requires that you enable debugging via `wp-config.php`:
+```php
+/**
+ * For developers: WordPress debugging mode.
+ *
+ * Sets WP_DEBUG to true on if on a non-production environment.
+ *
+ */
+    if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( 'WP_DEBUG', false ) ) {
+      define('WP_DEBUG', false);
+    }
+    else
+      define( 'WP_DEBUG', true );
+```
 
-  ```php
-  /**
-   * For developers: WordPress debugging mode.
-   *
-   * Sets WP_DEBUG to true on if on a non-production environment.
-   *
-   */
-      if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( 'WP_DEBUG', false ) ) {
-        define('WP_DEBUG', false);
-      }
-      else
-        define( 'WP_DEBUG', true );
-  ```
+1. Navigate to a development environment's site URL that has the plugin installed and enabled, with the above configuration in place.
+2. From the WordPress dashboard, click **Debug** towards the top right.
+3. Review the request and object cache data for potential red flags.
 
-  1. Navigate to a development environment's site URL that has the plugin installed and enabled, with the above configuration in place.
-  2. From the WordPress dashboard, click **Debug** towards the top right.
-  3. Review the request and object cache data for potential red flags.
+![Debug Bar WordPress](/source/docs/assets/images/guides/front-end-performance/debug-bar.png)
 
-  ![Debug Bar WordPress](/source/docs/assets/images/guides/front-end-performance/debug-bar.png)
-  </div>
+</Tab>
 
-<!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="drupal-helpers" markdown="1">
-  The `webprofiler` module is provided by [Devel](https://www.drupal.org/project/devel) and generates a helpful toolbar at the bottom which can dig into performance and caching behaviors.
+<Tab title="Drupal" id="drupal-helpers">
 
-  ![Devel Drupal](/source/docs/assets/images/drupal8-commandline--webprofiler.png)
+The `webprofiler` module is provided by [Devel](https://www.drupal.org/project/devel) and generates a helpful toolbar at the bottom which can dig into performance and caching behaviors.
 
-  </div>
-</div>
+![Devel Drupal](/source/docs/assets/images/drupal8-commandline--webprofiler.png)
 
+</Tab>
+
+</TabList>
 
 For debugging deep and complex server-side performance problems you might need to run your site locally with profiler like [Blackfire](https://blackfire.io/).
 
@@ -349,26 +337,18 @@ Many sites load CSS and JavaScript files not used on the given page and not used
 
 To load custom scripts and styles only on relevant pages, use the appropriate APIs of Drupal and WordPress:
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+<TabList>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal</a></li>
-</ul>
+<Tab title="WordPress" id="wp-css" active="true">
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
 WordPress has twin functions `wp_enqueue_style()` and `wp_enqueue_script()` for adding CSS and JavaScript. You can call them from within your theme or custom plugins to add styles and scripts to page.
 
 If the file you are adding is not relevant for all pages on your site, be sure to wrap the function in some kind of logic so that it is only loaded when needed. See the WordPress [developer documentation](https://developer.wordpress.org/themes/basics/including-css-javascript/) for more details.
-  </div>
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</Tab>
+
+<Tab title="Drupal" id="drupal-css">
+
 In Drupal 7 it was possible to use the functions `drupal_add_css()` and `drupal_add_js()` to add assets. Often these functions were misused to add assets to every single page on the site. Those functions were removed from Drupal 8. Now the `#attached` property on Render arrays (which is also available in Drupal 7) is the technique to use:
 
 ```php
@@ -384,25 +364,17 @@ function contextual_page_attachments(array &$page) {
 
 [See the Drupal core documentation where this example was taken from for more details.](https://www.drupal.org/docs/8/creating-custom-modules/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-module)
 
-  </div>
-</div>
+</Tab>
+
+</TabList>
 
 ### Use as Few Requests as Possible
 Once you have eliminated code that is not needed, make sure the code being loaded comes in as few requests as possible.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor2" aria-controls="tab-1-anchor2" role="tab" data-toggle="tab">WordPress</a></li>
+<TabList>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor2" aria-controls="tab-2-anchor2" role="tab" data-toggle="tab">Drupal</a></li>
-</ul>
+<Tab title="WordPress" id="wp-requests" active="true">
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor2" markdown="1">
 Use the [Autoptimize](https://wordpress.org/plugins/autoptimize/) plugin and the following configuration in your site's `wp-config.php` file:
 
 
@@ -413,10 +385,10 @@ define('AUTOPTIMIZE_CACHEFILE_PREFIX','aggregated_');
 ```
 
 The following blog post walks through how to use results from the [Critical Path CSS Generator](https://jonassebastianohlsson.com/criticalpathcssgenerator/) with the Autoptimize plugin so that you have inline critical styles with a deferred stylesheet: [How to Use the Autoptimize “Inline and Defer CSS” Option](https://www.wpfaster.org/blog/how-to-use-autoptimize-inline-and-defer-css-option)
-  </div>
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor2" markdown="1">
+</Tab>
+<Tab title="Drupal" id="drupal-requests">
+
 Drupal Core has the ability to "aggregate" CSS and JavaScript. When turned on, Drupal will combine individual CSS and Javascript files in a smaller number of bigger files. This easy optimization can be done at `admin/config/development/performance`:
 
 ![Drupal performance admin interface](/source/docs/assets/images/guides/front-end-performance/drops-performance.png)
@@ -424,15 +396,18 @@ Drupal Core has the ability to "aggregate" CSS and JavaScript. When turned on, D
 Checking these boxes will take a normal Drupal site from having dozens (or hundreds) of small CSS/JS files to just a few. As you browse around the site the aggregated files loaded will be different as different modules add different source files to the page. [For more details, see the Drupal.org documentation on CSS organization.](https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8)
 
 If you want to make the number of files as low as possible, try [Advanced Aggregation](https://www.drupal.org/project/advagg) module. [It can help take fine grain control over how files are combined](http://www.mediacurrent.com/blog/better-css-js-aggregation-advanced-aggregation). In the past there have been bugs when using Advanced Aggregation on Pantheon. To our knowledge, those are all resolved.
-  </div>
-</div>
 
-<div markdown="1" class="alert alert-info">
-  <h4 class="info">Note</h4>
+</Tab>
+</TabList>
+
+
+<Alert title="Note" type="info">
+
 The Pantheon Global CDN includes HTTP/2. One of the benefits of HTTP/2 is that it allows multiple files to be downloaded simultaneously.<br/><br/>
 The web community has long speculated whether HTTP/2 will make CSS and JavaScript aggregation irrelevant. (In theory, lots of little files, each individually cacheable, and downloaded en masse over one HTTP/2 connection would be more performant than one big inline CSS statement that's been aggregated.)<br/><br/>
 In our testing, HTTP/2 makes disaggregated files much faster than they were before, but still not as fast as aggregated files. As HTTP/2 and related technologies mature, we will revisit this recommendation.<br/><br/>
-</div>
+
+</Alert>
 
 ### Make Assets as Small as Possible
 In addition to making as few requests as possible to load styling and scripts, the loaded files should be as small as possible. Both Drupal's [Advanced Aggregation](https://www.drupal.org/project/advagg) and WordPress' [Autoptimize](https://wordpress.org/plugins/autoptimize/) have options for further minifying or "uglifying" your CSS and Javascript.
@@ -497,3 +472,4 @@ Other considerations:
 By default, gzip compression is already enabled server-side. The response headers include `content-encoding: gzip` which will serve the site's HTML, stylesheets and JavaScipt files in a reduced size before sending it to the browser, resulting to a faster Time To First Byte (**TTFB**). Users don't need to modify any Nginx/.htaccess configuration, nor install any 3rd party plugins/modules for gzip compression.
 
 If there are any assets that are not being gzipped, most likely they are assets loaded from outside Pantheon.
+
