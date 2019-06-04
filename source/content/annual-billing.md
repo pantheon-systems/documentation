@@ -13,37 +13,30 @@ For standard billing information, see [Billing in the Site Dashboard](/docs/site
 
 The table below shows how much sites can save by switching to annual billing. Performance plans receive savings equivalent to at least one month of free service. On a basic plan, the savings are equivalent to two months of free service.
 
-<dl>
-  <dt>List Price</dt>
-    <dd>Set price for new sites created after late October that aren’t purchased via a qualified agency partner.</dd>
-  <dt>Preferred Price</dt>
-    <dd>[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program" data-proofer-ignore class="external).</dd>
-</dl>
+<DefList>
+<Definition name="List Price">
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">List Price</a></li>
+Set price for new sites created after late October that aren’t purchased via a qualified agency partner.
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Preferred Price</a></li>
+</Definition>
+<Definition name="Preferred Price">
 
-</ul>
+[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program).
 
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+</Definition>
+</DefList>
+
+<TabList>
+<Tab title="List Price" id="tab-1-anchor" active={true}>
+
 |                    | Basic         | Performance Small | Performance Medium | Performance Large | Performance XL       |
 |:------------------ |:------------- |:----------------- |:------------------ |:----------------- |:-------------------- |
 | Monthly Price      | $50           | $175              | $300               | $600              | $1,000               |
 | Annual Price       | $500          | $1,925            | $3,300             | $6,600            | $11,000              |
 | **Annual Savings** | **$100**      | **$175**          | **$300**           | **$600**          | **$1,000**           |
 
-</div>
-
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</Tab>
+<Tab title="Preferred Price" id="tab-2-id" active={true}>
 
 |                    | Basic   | Performance Small | Performance Medium | Performance Large | Performance XL  |
 |:------------------ |:------- |:----------------- |:------------------ |:----------------- |:--------------- |
@@ -51,9 +44,8 @@ The table below shows how much sites can save by switching to annual billing. Pe
 | Annual Price       | $350    | $1,375            | $2,475             | $4,950            | $8,250          |
 | **Annual Savings** | **$70** | **$125**          | **$225**           | **$450**          | **$750**        |
 
-</div>
-
-</div>
+</Tab>
+</TabList>
 
 ## Considerations
 

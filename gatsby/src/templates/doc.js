@@ -21,6 +21,8 @@ import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import SEO from "../components/seo"
+import DefList from "../components/defList.js"
+import Definition from "../components/definition.js"
 
 const shortcodes = {
   Callout,
@@ -33,6 +35,8 @@ const shortcodes = {
   Tab,
   Card,
   CardGroup,
+  DefList,
+  Definition,
 }
 
 class DocTemplate extends React.Component {
