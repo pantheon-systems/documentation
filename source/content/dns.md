@@ -112,11 +112,11 @@ No, Pantheon is neither a domain registrar nor a DNS manager. Many other platfor
   Pantheon is built to support advanced website deployment needs, and that means allowing site owners to use the DNS provider of their choice. If Pantheon required specific nameservers, it would interfere with these major use cases (among others):
 
   * **Large organizations and institutions with Information Technology departments that operate or configure DNS.** If Pantheon required use of particular DNS servers, it would intefere with the ability to use Pantheon for the organization's websites.
-  * **Digitally signing DNS records using a system like [DNSSec](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions){.external}.** While it would be technically possible for Pantheon to host records signed offline, it's much easier for interested organizations to operate their own DNS or choose a provider that supports the desired signing methods.
+  * **Digitally signing DNS records using a system like [DNSSec](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions).** While it would be technically possible for Pantheon to host records signed offline, it's much easier for interested organizations to operate their own DNS or choose a provider that supports the desired signing methods.
   * **Uncommon record types.** If Pantheon required use of specific nameservers, it's unlikely that all of the desired record types would be available, particularly legacy ones.
   * **Programmatic updates.** Such use cases include domain control validation for obtaining certificates and automated responses to security events. Different DNS services support different update APIs, and it's unlikely Pantheon would ever be able to support them all.
 
-  If your site doesn't have these advanced needs, there are free and inexpensive options outside of Pantheon. We recommend considering your domain registrar's DNS services, [Amazon Route 53](https://aws.amazon.com/route53/){.external}, [Google Cloud DNS](https://cloud.google.com/dns/){.external}, or [Cloudflare](https://woorkup.com/cloudflare-dns/){.external}.
+  If your site doesn't have these advanced needs, there are free and inexpensive options outside of Pantheon. We recommend considering your domain registrar's DNS services, [Amazon Route 53](https://aws.amazon.com/route53/), [Google Cloud DNS](https://cloud.google.com/dns/), or [Cloudflare](https://woorkup.com/cloudflare-dns/).
 </Accordion>
 
 ### Why does the `www` subdomain redirect to the bare domain?
@@ -125,13 +125,13 @@ Some DNS providers provide a default `CNAME` record for `www` pointing to `@` (t
 
 ### What are `AAAA` records, and do I need them?
 
-**AAAA** or "quad-A" records are used to assign [IPv6](https://en.wikipedia.org/wiki/IPv6){.external} addresses to domain names. While most of the internet still uses IPv4, the address pool has been exhausted and IPv6 became the standard as of July 14th, 2017.
+**AAAA** or "quad-A" records are used to assign [IPv6](https://en.wikipedia.org/wiki/IPv6) addresses to domain names. While most of the internet still uses IPv4, the address pool has been exhausted and IPv6 became the standard as of July 14th, 2017.
 
 `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices.
 
 Pantheon provides IPv6 addresses for you to assign `AAAA` records to. If your DNS service does not support `AAAA` you can simply omit these records for now, but consider asking your provider to add functionality, as the need for IPv6 will only increase in the future.
 
-Some DNS service providers require expanded AAAA records. You can retrieve the expanded version for each AAAA record by using the [IPv6 conversion tool](http://ipv6-literal.com/){.external} and copying the "IPv6 longest" result.
+Some DNS service providers require expanded AAAA records. You can retrieve the expanded version for each AAAA record by using the [IPv6 conversion tool](http://ipv6-literal.com/) and copying the "IPv6 longest" result.
 
 
 ### What about my `MX` records for email?

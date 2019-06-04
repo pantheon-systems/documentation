@@ -9,7 +9,7 @@ categories: [wordpress]
 tags: [develop]
 ---
 
-For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) Plugin](https://codex.wordpress.org/Must_Use_Plugins){.external}.
+For actions or filters you want to run even when a theme's `functions.php` isn't invoked by a request, or before plugins are loaded by WordPress, you can create a [Must-Use (**MU**) Plugin](https://codex.wordpress.org/Must_Use_Plugins).
 
 MU-Plugins are activated by default by adding a PHP file to the `wp-content/mu-plugins` directory. It affects the whole site, including all sites under a WordPress Multisite installation.
 
@@ -232,7 +232,7 @@ To verify, you can use the [Redis CLI](/docs/redis/#use-the-redis-command-line-c
 (empty list or set)
 ```
 
-For more information, see [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor){.external}.
+For more information, see [How do I disable the persistent object cache for a bad actor?](https://github.com/pantheon-systems/wp-redis#how-do-i-disable-the-persistent-object-cache-for-a-bad-actor).
 
 ### Setting Custom Cookies
 Setting custom cookies can also be done from an MU-plugin like in the example below. Find more [cookie manipulation examples here](https://pantheon.io/docs/cookies/).

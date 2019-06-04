@@ -76,7 +76,7 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
 
   We recommend using a trusted browser extension to format the JSON response from the API so it's easier to read.
 
-  Refer to the [Rest API Handbook](https://developer.wordpress.org/rest-api/){.external} from WordPress.org's Developer Resources for full documentation on this web service.
+  Refer to the [Rest API Handbook](https://developer.wordpress.org/rest-api/) from WordPress.org's Developer Resources for full documentation on this web service.
   </div>
 
   <!-- 2nd pane content -->
@@ -91,9 +91,9 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
 
   #### Resources Configuration
 
-  By default, not all resources or endpoints are enabled. You may need to individually enable `GET`, `POST`, `PATCH` and `DELETE` operations for each web service like node entity or user. Read about the overview and steps for the configuration on the [API overview page](https://www.drupal.org/docs/8/api/restful-web-services-api/restful-web-services-api-overview){.external}.
+  By default, not all resources or endpoints are enabled. You may need to individually enable `GET`, `POST`, `PATCH` and `DELETE` operations for each web service like node entity or user. Read about the overview and steps for the configuration on the [API overview page](https://www.drupal.org/docs/8/api/restful-web-services-api/restful-web-services-api-overview).
 
-  There is a contributed module called [REST UI](https://drupal.org/project/restui){.external} which provides an admin interface for enabling or disabling resources, serialization formats and authentication providers. Use this to quickly manage and save your configuration.
+  There is a contributed module called [REST UI](https://drupal.org/project/restui) which provides an admin interface for enabling or disabling resources, serialization formats and authentication providers. Use this to quickly manage and save your configuration.
 
   #### Resources using Views
 
@@ -113,25 +113,25 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
   <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
   Web Services are implemented through various plugins in Drupal 7.
 
-   - [RESTful](https://www.drupal.org/project/restful){.external}
-   - [RESTful Web Services](https://www.drupal.org/project/restws){.external}
-   - [Services](https://www.drupal.org/project/services){.external}
+   - [RESTful](https://www.drupal.org/project/restful)
+   - [RESTful Web Services](https://www.drupal.org/project/restws)
+   - [Services](https://www.drupal.org/project/services)
 
-  The service module has several integration features, and other web service formats. It also has [several supporting modules](https://www.drupal.org/node/750036){.external} that extend the Drupal 7 functionalities made available to the API.
+  The service module has several integration features, and other web service formats. It also has [several supporting modules](https://www.drupal.org/node/750036) that extend the Drupal 7 functionalities made available to the API.
 
   <Alert title="Note" type="info">
-    While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource){.external} module.</p>
+    While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource) module.</p>
   </Alert>
   </div>
 </div>
 
 ## Frequently Asked Questions
 ### Can I use other frameworks or distributions?
-You can use [custom upstreams](/docs/custom-upstream/), [make your own build](/docs/guides/build-tools/) or [install distributions](/docs/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org/){.external} (Drupal 8 API distribution) can be used on the platform.
+You can use [custom upstreams](/docs/custom-upstream/), [make your own build](/docs/guides/build-tools/) or [install distributions](/docs/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org/) (Drupal 8 API distribution) can be used on the platform.
 
 ### How can I troubleshoot the backend API?
 We recommend using one of the following Chrome extensions to debug HTTP requests:
 
-* [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en){.external}
-* [Dev HTTP Client](https://chrome.google.com/webstore/detail/dev-http-client/aejoelaoggembcahagimdiliamlcdmfm/related){.external}
-* [Restlet Client](https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm){.external}
+* [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+* [Dev HTTP Client](https://chrome.google.com/webstore/detail/dev-http-client/aejoelaoggembcahagimdiliamlcdmfm/related)
+* [Restlet Client](https://chrome.google.com/webstore/detail/restlet-client-rest-api-t/aejoelaoggembcahagimdiliamlcdmfm)

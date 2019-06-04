@@ -13,7 +13,7 @@ The documentation on this page discusses features and options that are not yet a
 
 Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from the new European Union (**EU**) Region.
 
-During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in the EU Region before the feature becomes widely available in late 2019.
+During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us) for information about pricing and how to enable your organization to create sites in the EU Region before the feature becomes widely available in late 2019.
 
 ## Use Cases
 There are many scenarios in which you might prefer running a site within the EU Region rather than the default US. Common use cases include:
@@ -55,7 +55,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 ## Migrate an Existing Site to the EU Region
 To migrate an existing site from one region to another, create the new site as described above, then follow the [Manually Migrate Sites to Pantheon](/docs/migrate-manual/#import-your-code) doc. The [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) section of the Relaunch doc is a good resource to help make the transition to your new live site smooth.
 
-If you want help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available.
+If you want help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services) team is available.
 
 ## Review Site Region
 
@@ -107,22 +107,22 @@ Time to celebrate. Your site is running in the EU!
 
 ## Coming Soon
 
-More International Region features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this doc for updates.
+More International Region features are in active development. [Contact us](https://pantheon.io/contact-us) to learn more, and check this doc for updates.
 
 Coming soon:
 
   - Region Facet on Organization Dashboard
   - More Regions!
-    - [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external} to tell us about your needs.
+    - [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ) to tell us about your needs.
 
 ## Frequently Asked Questions
 ### Can I use the EU region for an existing site?
 Yes, however you must migrate your existing site to a new Site that was configured for the EU region during creation ([as described above](#create-a-new-site)).
 
 ### When will access to Pantheon's EU Region be available for sites paid by credit card?
-General Availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external}.
+General Availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ).
 
 ### When will site creation through the Dashboard be available?
 General availability is planned for late 2019.
 
-Contact your account owner or our [Sales team](https://pantheon.io/contact-us){.external} to learn about Pantheon's migration services or review the [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
+Contact your account owner or our [Sales team](https://pantheon.io/contact-us) to learn about Pantheon's migration services or review the [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.

@@ -60,7 +60,7 @@ Once you begin this process, you have:
     Note
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
 
-    If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin){.external} to generate DNS TXT records to validate domain ownership.
+    If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin) to generate DNS TXT records to validate domain ownership.
     </Alert>
 
 6. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
@@ -77,7 +77,7 @@ When a certificate is ready you can switch DNS destinations from your existing s
   2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
   3. Select **Details** next to the bare domain.
   4. Copy the A record value provided in the Pantheon Site Dashboard.
-  5. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)){.external} file with the IP address from the previous step followed by the domain name, for example:
+  5. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file with the IP address from the previous step followed by the domain name, for example:
 
           192.123.456.789 example.com
 

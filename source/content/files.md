@@ -6,9 +6,9 @@ categories: []
 ---
 Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title=".gitignore" data-content="The <a class='external' href='https://git-scm.com/docs/gitignore'>.gitignore file</a> is located at the root of the site's codebase and instructs Git which paths should be ignored."><em class="fa fa-info-circle"></em></a>:
 
-- [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore){.external}
-- [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore){.external}
-- [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore){.external}
+- [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore)
+- [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
+- [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore)
 
 The Pantheon architecture comprises highly available [application containers](/docs/application-containers/) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
@@ -31,7 +31,7 @@ When you are logged in to your application container, you may notice some files 
 
 ### Migrated WordPress sites errors
 
-The [Pantheon WordPress upstream](https://github.com/pantheon-systems/WordPress){.external} uses the default Media Upload path (`wp-content/uploads`). Using any other path will result in errors.
+The [Pantheon WordPress upstream](https://github.com/pantheon-systems/WordPress) uses the default Media Upload path (`wp-content/uploads`). Using any other path will result in errors.
 
 ### Simultaneous SFTP Connections
 

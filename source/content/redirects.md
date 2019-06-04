@@ -8,9 +8,9 @@ Configure redirects within `settings.php` (Drupal) or `wp-config.php` (WordPress
 
 ## Considerations
 ### PHP vs htaccess
-Pantheon does not support managing redirects in `.htaccess` files, since they are ignored by [NGINX](https://www.nginx.com/resources/wiki/#){.external} for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
+Pantheon does not support managing redirects in `.htaccess` files, since they are ignored by [NGINX](https://www.nginx.com/resources/wiki/#) for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
-Using `.htaccess` is generally not recommended - even for sites running  [Apache](https://httpd.apache.org/docs/trunk/howto/htaccess.html#when){.external}. Instead, we suggest handling redirects in PHP within your site's configuration file. Some advantages of redirecting via PHP instead of `.htaccess` include:
+Using `.htaccess` is generally not recommended - even for sites running  [Apache](https://httpd.apache.org/docs/trunk/howto/htaccess.html#when). Instead, we suggest handling redirects in PHP within your site's configuration file. Some advantages of redirecting via PHP instead of `.htaccess` include:
 
 - Logic and decisions can be made that a web server would have no context for, as it's executable code with application state awareness. Conditional logic, regular expressions, and much more are possible.
 - Configuration tends to be more maintainable as Drupal and WordPress developers are typically more familiar with PHP than Apache rewrite rules.
@@ -199,15 +199,15 @@ if ($legacy_username) {
 <div class="tab-content">
   <!-- Active pane content -->
   <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-  WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744){.external} function in core.
+  WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core.
   </div>
 
   <!-- 2nd pane content -->
   <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
   Drupal sites can force lowercase letters using the following:
 
-  1. Set general automatic alias settings to **Change to lower case** within the [PathAuto](https://www.drupal.org/project/pathauto){.external} module configuration (`/admin/build/path/pathauto`).
-  2. Enable **Case Sensitive URL Checking** within the [Global Redirect](https://www.drupal.org/project/globalredirect){.external} module configuration (`/admin/settings/globalredirect`).
+  1. Set general automatic alias settings to **Change to lower case** within the [PathAuto](https://www.drupal.org/project/pathauto) module configuration (`/admin/build/path/pathauto`).
+  2. Enable **Case Sensitive URL Checking** within the [Global Redirect](https://www.drupal.org/project/globalredirect) module configuration (`/admin/settings/globalredirect`).
 </div>
 </div>
 

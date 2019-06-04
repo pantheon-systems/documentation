@@ -13,7 +13,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
 1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/docs/git/#install-git) and [clone the code](/docs/git/#clone-your-site-codebase) locally if you have not done so already.
 
     <Alert title="Note" type="info">
-    We do not recommend creating symlinks over SFTP due to inconsistencies amongst clients. <br><br>The following is for Mac and Linux only. Windows users may refer to Microsoft documentation for opening [Command Prompt as an Administrator](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx) and [creating symlinks using mklink](https://technet.microsoft.com/en-us/library/cc753194.aspx){.external} or create symlinks within a virtual machine.
+    We do not recommend creating symlinks over SFTP due to inconsistencies amongst clients. <br><br>The following is for Mac and Linux only. Windows users may refer to Microsoft documentation for opening [Command Prompt as an Administrator](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx) and [creating symlinks using mklink](https://technet.microsoft.com/en-us/library/cc753194.aspx) or create symlinks within a virtual machine.
     </Alert>
 
 2. From your terminal, `cd` to the site code repository:

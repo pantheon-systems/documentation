@@ -15,7 +15,7 @@ searchboost: 100
 ---
 Terminus is available for Mac OS X and Linux.
 
-Some Windows users have installed Terminus using [Git BASH on Git for Windows](https://git-for-windows.github.io/){.external}, or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){.external}, but this is unsupported.
+Some Windows users have installed Terminus using [Git BASH on Git for Windows](https://git-for-windows.github.io/), or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), but this is unsupported.
 
 Because some Terminus commands use SSH authentication, consider [generating and adding SSH keys](/docs/ssh-keys/) to your account before you continue.
 
@@ -33,7 +33,7 @@ Because some Terminus commands use SSH authentication, consider [generating and 
   <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
 </div>
 
-See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation){.external} section of the Terminus README file on GitHub for advanced installation methods.
+See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
 
 ## Authenticate
 
@@ -102,13 +102,13 @@ To resolve, save a copy of the [latest CA certificate](https://curl.haxx.se/docs
 
 **Problem:** PHP is not installed.
 
-**Solution:** Install PHP. Consider using a package such as [XAMMP](https://www.apachefriends.org/index.html){.external}, which provides a simple installation process.
+**Solution:** Install PHP. Consider using a package such as [XAMMP](https://www.apachefriends.org/index.html), which provides a simple installation process.
 
 <hr>
 
 **Problem:** Composer is not installed.
 
-**Solution:** Install composer using the [.exe installer](https://getcomposer.org/doc/00-intro.md#installation-windows){.external}
+**Solution:** Install composer using the [.exe installer](https://getcomposer.org/doc/00-intro.md#installation-windows)
 
 <hr>
 
@@ -121,7 +121,7 @@ User1@DESKTOP-UBJ92JO  /usr/bin
 $ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 bash: curl: command not found
 ```
-**Solution:** [Install curl](https://stackoverflow.com/questions/9507353/how-do-i-install-set-up-and-use-curl-on-windows){.external}
+**Solution:** [Install curl](https://stackoverflow.com/questions/9507353/how-do-i-install-set-up-and-use-curl-on-windows)
 
 <hr>
 
@@ -129,7 +129,7 @@ bash: curl: command not found
 
 Terminus was installed, but the installer was not able to write to your bin dir.
 
-**Solution:** To enable the `terminus` command, add this alias to your [`.bash_profile` file](https://askubuntu.com/questions/969632/where-is-bash-profile-located-in-windows-subsystem-for-linux){.external}:
+**Solution:** To enable the `terminus` command, add this alias to your [`.bash_profile` file](https://askubuntu.com/questions/969632/where-is-bash-profile-located-in-windows-subsystem-for-linux):
 
 ```
 alias terminus=terminus=/c/Users/User1/vendor/bin/terminus

@@ -142,7 +142,7 @@ Some older versions of Google Chrome can cause database backups to be downloaded
 
 ### Via the Command Line
 
-If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/){.external}:
+If you have the temporary URL provided via the Dashboard, you can download it from the command line using [`wget`](https://www.gnu.org/software/wget/):
 
 ```
 wget "wget https://storage.googleapis.com/gcs-pantheon-backups/..."
@@ -178,12 +178,12 @@ Links to backups are signed URLs directly from Google Cloud Storage and will exp
 Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard. For detailed instructions, see [Restoring an Environment From a Backup](/docs/restore-environment-backup/).
 
 ## About Your Code Archives
-Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging){.external} associated with the most recent deployment.
+Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment.
 
-For a clear visual of the Git repo contents, you can use a free tool like [Sourcetree](https://www.sourcetreeapp.com/){.external} to inspect the branches that the repo contains.
+For a clear visual of the Git repo contents, you can use a free tool like [Sourcetree](https://www.sourcetreeapp.com/) to inspect the branches that the repo contains.
 
 <Alert title="Note" type="info">
-The `.gitignore` file determines paths ignored by version control and consequently excluded in code archives. To see the default `.gitignore` file refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/wordpress/blob/master/.gitignore){.external}, [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore){.external}, and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore){.external}.
+The `.gitignore` file determines paths ignored by version control and consequently excluded in code archives. To see the default `.gitignore` file refer to Pantheon's upstreams for [WordPress](https://github.com/pantheon-systems/wordpress/blob/master/.gitignore), [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore), and [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore).
 </Alert>
 ## Backup Log
 The backup log displays a list of existing backups for that environment. You can also create a new backup or restore your site from an existing backup.

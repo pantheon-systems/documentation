@@ -43,7 +43,7 @@ This Drupal example reads the key from the private file `stripe_live.json` only 
 
 WordPress does not have a core feature to configure a private path folder for file uploads. There are several plugins on WordPress.org and projects on Drupal.org that will help protect direct access to files in the files area. However, these plugins commonly require an Apache HTTP server *.htaccess* (`mod_rewrite`) rule. Our NGINX servers [do not support *.htaccess* rules](/docs/platform-considerations/#htaccess).
 
-Site developers could author their own custom solution to provide authentication, access checks, and ultimately use PHP's [readfile()](http://php.net/readfile/){.external} or [fpassthru()](http://php.net/fpassthru/){.external} functions to read files from the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) areas, respectively, and then output them to the authenticated web user's browser.
+Site developers could author their own custom solution to provide authentication, access checks, and ultimately use PHP's [readfile()](http://php.net/readfile/) or [fpassthru()](http://php.net/fpassthru/) functions to read files from the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) areas, respectively, and then output them to the authenticated web user's browser.
 
 ### Additional Drupal Configuration
 

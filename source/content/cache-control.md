@@ -67,7 +67,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
   ```
   </div>
   <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
-  Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers){.external}. This will override `max-age` configured within the [Pantheon Cache](/docs/wordpress-cache-plugin) plugin for all matching requests:
+  Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/docs/wordpress-cache-plugin) plugin for all matching requests:
 
   <Alert title="Note" type="info">
   Place this code in an [MU Plugin](/docs/mu-plugin/) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.

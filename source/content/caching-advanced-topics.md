@@ -44,7 +44,7 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 - **Drupal:** use the built-in option found in the Drupal dashboard at `/admin/config/development/performance`.
 
-- **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/){.external} to add a similar option in the WordPress admin dashboard.
+- **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard.
 
 ## Using Your Own Session-Style Cookies
 
@@ -58,16 +58,16 @@ Drupal uses SESS-prefixed cookies for its own session tracking, so be sure to na
 **Incorrect:** SESS\_hello, SESS-12345, mycustomSESS, Sessone, sess123testing, SESSFIVE
 
 ### WordPress Sites
-WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Pantheon Session WordPress plugin"){.external} plugin. It is designed to handle the naming properly.
+WordPress does not use PHP session cookies; however, some themes and plugins do. If you are using a theme or plugin that requires PHP sessions, you can install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/ "Pantheon Session WordPress plugin") plugin. It is designed to handle the naming properly.
 
 ### Session and Cookie Lifetime
 Pantheon allows developers to control the length of sessions. There are two pieces: the lifetime of the cookie and the lifetime of the session itself.
 
-Session cookie lifetime is configured using the [session.cookie\_lifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime){.external} PHP setting. If set to 0, the cookie is deleted when the user closes their browser. Session cookie lifetime is set to 2,000,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
+Session cookie lifetime is configured using the [session.cookie\_lifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.cookie-lifetime) PHP setting. If set to 0, the cookie is deleted when the user closes their browser. Session cookie lifetime is set to 2,000,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
 
-Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes%21session.inc/function/_drupal_session_garbage_collection/7){.external} uses the [session.gc\_maxlifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime){.external} PHP setting when deleting expired sessions from the sessions database table. Session max lifetime is set to 200,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
+Drupal's [session garbage collection](https://api.drupal.org/api/drupal/includes%21session.inc/function/_drupal_session_garbage_collection/7) uses the [session.gc\_maxlifetime](https://secure.php.net/manual/en/session.configuration.php#ini.session.gc-maxlifetime) PHP setting when deleting expired sessions from the sessions database table. Session max lifetime is set to 200,000 seconds in Drupal's default.settings.php and in Pantheon's PHP configuration.
 
-For additional details and examples on how to set cookie lifetimes and garbage collection manually, see the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336){.external}.
+For additional details and examples on how to set cookie lifetimes and garbage collection manually, see the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
 
 #### Drupal 7
 Session cookie lifetime and session garbage collection can be overriden in your `settings.php` file. For additional details and examples on how to set cookie lifetimes and garbage collection manually, see ​​the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
@@ -80,7 +80,7 @@ Session cookie lifetime and session garbage collection can be configured as `ses
 A site may need to deliver different content to different users without them logging in or starting a full session (either of which will cause them to bypass the page cache entirely). Pantheon recommends doing this on the client side using browser detection, orientation, or features like aspect ratio using HTML5, CSS3, and JavaScript. Advanced developers can also use STYXKEY.
 
 ### Using Modernizr
-[Modernizr](https://modernizr.com/){.external} is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in the Global CDN and rendering correctly, depending on the requirements. Modernizr is available as a [Drupal module](https://www.drupal.org/project/modernizr){.external} or a [WordPress plugin](https://wordpress.stackexchange.com/questions/62340/loading-modernizr-or-other-javascript-libraries-for-use-in-a-plugin/62362#62362){.external}.
+[Modernizr](https://modernizr.com/) is a JavaScript library that detects HTML5 and CSS3 features in the user's browser. This will also allow requests to have the benefit of being saved in the Global CDN and rendering correctly, depending on the requirements. Modernizr is available as a [Drupal module](https://www.drupal.org/project/modernizr) or a [WordPress plugin](https://wordpress.stackexchange.com/questions/62340/loading-modernizr-or-other-javascript-libraries-for-use-in-a-plugin/62362#62362).
 
 ### Device Detection
 
@@ -98,16 +98,16 @@ While Google supports multiple mobile site configurations, creating separate mob
 
 More information on mobile site best practices can be found in the Google official developer documentation:
 
-- [Why make a website mobile-friendly?](https://developers.google.com/search/mobile-sites/#why){.external}
-- [What are the top three things I should know when building a site for mobile devices?](https://developers.google.com/search/mobile-sites/get-started#key){.external}
-- [What are the top three mistakes beginners want to avoid?](https://developers.google.com/search/mobile-sites/get-started#mistakes){.external}
+- [Why make a website mobile-friendly?](https://developers.google.com/search/mobile-sites/#why)
+- [What are the top three things I should know when building a site for mobile devices?](https://developers.google.com/search/mobile-sites/get-started#key)
+- [What are the top three mistakes beginners want to avoid?](https://developers.google.com/search/mobile-sites/get-started#mistakes)
 
-A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.com){.external}:
+A full list of the devices and their support for HTML5 is available on [https://html5test.com](https://html5test.com):
 
- - [Desktop browsers](https://html5test.com/results/desktop.html){.external}
- - [Tablet browsers](https://html5test.com/results/tablet.html){.external}
- - [Mobile browsers](https://html5test.com/results/mobile.html){.external}
- - [Other browsers](https://html5test.com/results/other.html){.external}
+ - [Desktop browsers](https://html5test.com/results/desktop.html)
+ - [Tablet browsers](https://html5test.com/results/tablet.html)
+ - [Mobile browsers](https://html5test.com/results/mobile.html)
+ - [Other browsers](https://html5test.com/results/other.html)
 
 ### Using STYXKEY
 
@@ -157,7 +157,7 @@ Drupal’s `404_fast_*` configuration does not set caching headers. Some contrib
 ### WordPress Sites
 WordPress does not set cache headers by default, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
-Plugins like [Cache Control](https://wordpress.org/plugins/cache-control/){.external} can solve this issue.
+Plugins like [Cache Control](https://wordpress.org/plugins/cache-control/) can solve this issue.
 
 ## Environment Access Locked
 If you're using the [Security tool](/docs/security/) within the Pantheon Site Dashboard to lock an environment, the Global CDN will not cache responses. Disable basic authentication by setting environment access to **Public**.

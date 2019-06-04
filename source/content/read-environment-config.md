@@ -65,7 +65,7 @@ Pantheon uses Pressflow to automatically read the environmental configuration. I
 
 ## Domain Access
 
-Place [Domain Access setup routine](https://www.drupal.org/node/1096962){.external} above any [Redis configurations](/docs/redis/#enable-redis) in `settings.php`. For example, for Drupal 7:
+Place [Domain Access setup routine](https://www.drupal.org/node/1096962) above any [Redis configurations](/docs/redis/#enable-redis) in `settings.php`. For example, for Drupal 7:
 
     // All Pantheon Environments.
     if (defined('PANTHEON_ENVIRONMENT')) {
@@ -157,4 +157,4 @@ This is a partial example from a WordPress site homepage:
     }
 ## FAQ
 ### Can I Set My Own Environment Variables?
-No, it is not possible to set environment variables on Pantheon. A common solution for this is to use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin){.external} to write the secrets to a JSON file in the private filesystem, or use [Lockr](/docs/guides/lockr/) for maximum security.
+No, it is not possible to set environment variables on Pantheon. A common solution for this is to use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private filesystem, or use [Lockr](/docs/guides/lockr/) for maximum security.

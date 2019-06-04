@@ -5,7 +5,7 @@ tags: [services]
 ---
 
 ## Overview
-Pantheon's [Site Disaster Recovery](https://pantheon.io/features/disaster-recovery){.external} (**DR**) service is designed for mission-critical websites that need to ensure business continuity during the unlikely event of a zone failure. While Pantheon can’t prevent disasters from happening, we have architected a multi-zone, high availability (**HA**) solution with intelligent failover at the Global CDN layer that can help minimize the effects of an incident.
+Pantheon's [Site Disaster Recovery](https://pantheon.io/features/disaster-recovery) (**DR**) service is designed for mission-critical websites that need to ensure business continuity during the unlikely event of a zone failure. While Pantheon can’t prevent disasters from happening, we have architected a multi-zone, high availability (**HA**) solution with intelligent failover at the Global CDN layer that can help minimize the effects of an incident.
 
 Disaster Recovery is more than just a combination of technology. It includes 24/7 support and a guaranteed 99.99% uptime Service Level Agreement (**SLA**) to keep sites from going down, and to actively respond to any incident that might occur.
 
@@ -18,7 +18,7 @@ Recovery Point Objective (**RPO**) is a baseline of reasonably acceptable data l
 Recovery Time Objective (**RTO**) is the target amount of time within which a business process must be restored after a disaster in order to avoid unacceptable consequences from a break in business continuity. In short, think “time down.” For sites with DR enabled, Pantheon’s RTO is 15 minutes.
 
 ## Access
-Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us){.external}.
+Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us).
 
 ![Pantheon Site Disaster Recovery Architecture Diagram](/source/docs/assets/images/site-dr-diagram.png)
 
@@ -48,4 +48,4 @@ If you rely on the Redis cache for locks (mutexes) or storing other long-term da
 Solr is not currently supported on DR-enabled sites. See our documentation on how to safely remove Solr for [Drupal 8](/docs/solr-drupal-8/#safely-remove-solr), [Drupal 7](/docs/solr-drupal-7/#safely-remove-solr), and [WordPress](/docs/wordpress-solr/#safely-remove-solr).
 
 ## See also
-- [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar){.external}
+- [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar)

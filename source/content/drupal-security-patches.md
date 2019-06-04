@@ -17,7 +17,7 @@ This doc describes how to manually patch your Drupal core.
 Use the [standard process to update core](/docs/core-updates/) if the security patch is available to be applied in the Site Dashboard. The advanced method described on this page is intended to be used when a security patch is not yet available as a one-click update in the Site Dashboard, or when handling merge conflicts.
 </Alert>
 
-Visit the [Drupal Security page](https://www.drupal.org/security){.external} for the latest Drupal security announcements and patches.
+Visit the [Drupal Security page](https://www.drupal.org/security) for the latest Drupal security announcements and patches.
 
 ## Apply Patch Using Git
 
@@ -101,4 +101,4 @@ done
 
 ##See Also
 
- - [Drupal Security Advisory](https://www.drupal.org/security){.external}
+ - [Drupal Security Advisory](https://www.drupal.org/security)

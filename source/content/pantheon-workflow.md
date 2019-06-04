@@ -32,7 +32,7 @@ The main process of the Pantheon workflow is to move code up from Dev to Test to
 <Accordion title={"Why does Pantheon do this?"} id={"why-tab"} icon={"question-sign"}>
   ### Why does Pantheon do this? {.info}
 
-  Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software){.external}". Specifically, we're of the opinion that version control is a critical component when building and maintaining a website. We've built a platform tailored specifically to let you use version control to maintain all of your code, keep all of your files separate, and have all the test beds you need to make sure everything works before changes hit production.
+  Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software)". Specifically, we're of the opinion that version control is a critical component when building and maintaining a website. We've built a platform tailored specifically to let you use version control to maintain all of your code, keep all of your files separate, and have all the test beds you need to make sure everything works before changes hit production.
 </Accordion>
 
 ### Commit Code in Dev
@@ -90,15 +90,15 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 ### WordPress
 
-* [WP-CFM](https://wordpress.org/plugins/wp-cfm/){.external} plugin: exports bundles of configuration to `.json` files in `wp-content/config`
-* [Advanced custom fields can be exported to code](https://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/){.external}.
+* [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin: exports bundles of configuration to `.json` files in `wp-content/config`
+* [Advanced custom fields can be exported to code](https://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/).
 
 
 ### Drupal
 
-* [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x){.external}: Encapsulate changes into a custom module and apply them by running `update.php`. Great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
-* [Views: Export to code](https://www.chapterthree.com/blog/howto-best-practices-for-embedding-views-code){.external}
-* [Features](https://www.drupal.org/project/features){.external} module: Export sets of configuration like content types and fields to code as modules. 
+* [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
+* [Views: Export to code](https://www.chapterthree.com/blog/howto-best-practices-for-embedding-views-code)
+* [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
 * Drupal 8 tackles configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/docs/drupal-8-configuration-management/).
 
 ## Understanding Write Permissions in Test and Live
@@ -140,6 +140,6 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 MySQL imports tables sequentially, in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try to bootstrap, and the MySQL import may be at the table letter G, for example, and the result is the semaphore table does not exist error. Once the import or clone operation has finished, the error should no longer appear.
 
 ## See Also
- - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow){.external}
+ - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
  - [Your Site Code on Pantheon](/docs/code/)
  - [Pantheon Filesystem](/docs/files/)

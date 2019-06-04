@@ -44,7 +44,7 @@ It's especially ill-advised to use Multisite to set up many distinct/separate si
 See [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues) for a list of WordPress plugins that are not supported and/or require workarounds.
 
 ## Image uploads
-Since WordPress 4.5, a bug exists affecting the upload of large dimension images regardless of file size. This generally presents itself as an "HTTP error" when uploading. See this [core issue](https://core.trac.wordpress.org/ticket/36534){.external} for more information.
+Since WordPress 4.5, a bug exists affecting the upload of large dimension images regardless of file size. This generally presents itself as an "HTTP error" when uploading. See this [core issue](https://core.trac.wordpress.org/ticket/36534) for more information.
 
 ## Force WordPress to use GD Library instead of Imagick
 WordPress uses both GD Library and Imagick when editing or uploading images/PDF files. For big files, there are times when uploading images inconsistently fails or succeeds. This is because WordPress tries to utilize either of the two libraries, depending on which resource is available at a given time.
@@ -61,4 +61,4 @@ function force_use_gdlib( $editors ) {
 add_filter( 'wp_image_editors', 'force_use_gdlib' );
 ```
 
-See this [core issue](https://core.trac.wordpress.org/ticket/43310){.external} on WordPress.org for more information.
+See this [core issue](https://core.trac.wordpress.org/ticket/43310) on WordPress.org for more information.

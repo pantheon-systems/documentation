@@ -4,7 +4,7 @@ description: Formatting rules and guidelines for Pantheon's open-source document
 contributors: [alexfornuto, rachelwhitton]
 ---
 
-All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide){.external}. This document serves to define and detail the style conventions used in Pantheon's Documentation.
+All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide). This document serves to define and detail the style conventions used in Pantheon's Documentation.
 
 
 ## Content Types
@@ -66,9 +66,9 @@ Of particular note, any documentation that uses Terminus should reference it in 
 ## Before You Begin {.info}
 Be sure that you have:
 
-- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create){.external} one.
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
 - A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
-- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/){.external}. Amazon offers [free access](https://aws.amazon.com/free/){.external} to most of their services for the first year.
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/docs/terminus) installed on your local computer.
 
 <hr class="source-code">
@@ -77,9 +77,9 @@ Be sure that you have:
 
 Be sure that you have:
 
-- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create){.external} one.
+- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
 - A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
-- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/){.external}. Amazon offers [free access](https://aws.amazon.com/free/){.external} to most of their services for the first year.
+- An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/docs/terminus) installed on your local computer.
 ```
 </div>
@@ -168,10 +168,10 @@ Use relative paths when linking to other pages of the docs site.
 
 #### External Links
 <div class="style-example" markdown="1">
-[Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide){.external}
+[Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide)
 <hr class="source-code">
 ```markdown
-[Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide){.external}
+[Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide)
 ```
 </div>
 
@@ -545,11 +545,11 @@ This is the optimal place to provide links to external resources on the subject,
 <div class="style-example" markdown="1">
 ## See Also {.info}
 - [An internal link](/docs/guides/)
-- [An external link](https://pantheon.io/blog/){.external}
+- [An external link](https://pantheon.io/blog/)
 <hr class="source-code">
 ```markdown
 ## See Also
 - [An internal link](/docs/guides/)
-- [An external link](https://pantheon.io/blog/){.external}
+- [An external link](https://pantheon.io/blog/)
 ```
 </div>

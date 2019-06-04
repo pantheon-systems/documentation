@@ -27,7 +27,7 @@ As of this doc's last update, there are no actively maintained ClamAV plugins fo
 
 ### Drupal
 
-This doc uses the [ClamAV Module for Drupal 7 & 8](https://www.drupal.org/project/clamav){.external}.
+This doc uses the [ClamAV Module for Drupal 7 & 8](https://www.drupal.org/project/clamav).
 
 1. Download and enable the module in the Drupal admin panel, or via [Terminus](/docs/terminus/):
 

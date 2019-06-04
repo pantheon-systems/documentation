@@ -28,7 +28,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 <div class="tab-content">
   <!-- Active pane content -->
   <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-  The recommended way to migrate WordPress sites from another host is to use the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/){.external} plugin, developed by [BlogVault](https://blogvault.net/){.external}.
+  The recommended way to migrate WordPress sites from another host is to use the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 
   <div class="panel panel-drop" id="accordion">
     <div class="panel-heading panel-drop-heading">
@@ -258,7 +258,7 @@ Go the to files directory of your existing site and check if the site archive wa
 ### How do I clone an existing Pantheon site?
 You can make a copy of a WordPress site on Pantheon by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon and is preferred since it's built into the Site Dashboard.
 
-Drupal 7, Drupal 8 and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/docs/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin){.external} plugin.
+Drupal 7, Drupal 8 and WordPress sites can use Terminus to clone one Pantheon site to another from the command line. This method requires you to [install and authenticate Terminus](/docs/terminus/install), then install the [Terminus Site Clone](https://github.com/pantheon-systems/terminus-site-clone-plugin) plugin.
 
 Replace `<source>` and `<destination>` with target [site UUIDs](/docs/sites/#site-uuid) or site names, and specify target development environment in place of `<env>` (dev or multidev):
 
@@ -271,7 +271,7 @@ File and database backups that exceed 500MBs are not supported by this method. S
 </Alert>
 
 ### Does the WordPress migration cause downtime? 
-No, there is no downtime expected as part of the migration process. For detals, see related [BlogVault resource (question #13)](https://blogvault.net/migration-using-blogvault-faq/){.external}. Performance implications to a live site are similar to running a backup for the site. 
+No, there is no downtime expected as part of the migration process. For detals, see related [BlogVault resource (question #13)](https://blogvault.net/migration-using-blogvault-faq/). Performance implications to a live site are similar to running a backup for the site. 
 
 
 ### How do I migrate a local site to Pantheon?
@@ -294,7 +294,7 @@ When asked for your current site URL, enter `https://example.com` and continue t
 
   <!-- 2nd pane content -->
   <div role="tabpanel" class="tab-pane" id="drops-local-migrate" markdown="1">
-  Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/){.external} or [Google Drive](https://drive.google.com){.external}) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [manually migrate](/docs/migrate-manual).
+  Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/) or [Google Drive](https://drive.google.com)) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [manually migrate](/docs/migrate-manual).
   </div>
 </div>
 

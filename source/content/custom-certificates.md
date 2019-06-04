@@ -5,7 +5,7 @@ description: For contract customers who require dedicated, custom TLS certificat
 
 ## Access
 
-A white glove concierge service is now available to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise){.external}.
+A white glove concierge service is now available to contract customers, including Enterprise, EDU+, Pantheon One, Elite, and Resellers. For more information, please contact [Sales](https://pantheon.io/why-pantheon-enterprise).
 
 ## Upgrade to the Global CDN
 
@@ -21,7 +21,7 @@ If you just haven’t gotten around to upgrading, consider using our managed HTT
 
 If you require a custom, dedicated certificate, you can now bring it the Global CDN.
 
-1. [Open a support ticket](/docs/support/#ticket-support) with the certificate details required to request a **Certificate Signing Request** (CSR) from Pantheon. Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name){.external} (SANs) per certificate.
+1. [Open a support ticket](/docs/support/#ticket-support) with the certificate details required to request a **Certificate Signing Request** (CSR) from Pantheon. Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name) (SANs) per certificate.
 
     When requesting a CSR file, you must provide Pantheon Support with the following information:
 
@@ -86,7 +86,7 @@ CAA records configured for the root domain (e.g., `example.com`) are inherited b
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       | Self-managed (up to you)              |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 | Static (shared)                       |
 | **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> * |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A                         | A+ [with HSTS](/docs/hsts/)     | A+ [with HSTS](/docs/hsts/) *         |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/docs/hsts/)     | A+ [with HSTS](/docs/hsts/) *         |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                | TLS 1.2 with SNI                      |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             | No Weak 3DES cipher                   |
 | **Delivery**                                                          | US Datacenter             | [Global CDN](/docs/global-cdn)  | [Global CDN](/docs/global-cdn)        |

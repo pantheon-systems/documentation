@@ -58,7 +58,7 @@ In this example:
 - `--network` tells WP-CLI to perform the procedure on all Site Network tables. Its default behavior is to limit search and replace to the current site.
 - `--url=<old-domain>` sets the request context, which is how WordPress knows which site to load. Without this, you'll likely see “Error: Site not found.”
 
-See the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/){.external} for all supported features.
+See the [full documentation](https://developer.wordpress.org/cli/commands/search-replace/) for all supported features.
 
 Using WP-CLI with Terminus is simply a matter of calling Terminus with the correct `<site>` and `<env>` arguments:
 

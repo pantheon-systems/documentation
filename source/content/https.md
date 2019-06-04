@@ -6,7 +6,7 @@ use:
     - docs_tags
 searchboost: 200
 ---
-Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https){.external} for every site launched on the platform.
+Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
 
 <Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 <p>Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
@@ -41,7 +41,7 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
 | **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A                         | A+ [with HSTS](/docs/hsts/)     |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/docs/hsts/)     |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |
 | **Delivery**                                                          | US Datacenter             | [Global CDN](/docs/global-cdn)  |
@@ -116,7 +116,7 @@ By default Sucuri blocks serving the challenges needed to verify domain ownershi
 Moz Pro is unable to crawl sites using Server Name Indication (SNI). For information on beta access to SNI support, see [Moz Pro, our web crawler, and sites that use SNI (804 HTTPS SSL) error](https://moz.com/community/q/moz-pro-our-web-crawler-and-sites-that-use-sni).
 
 ### 403 Permission Denied (Drupal)
-The text challenge to pre-provision HTTPS on Pantheon requires adding a `.well-known` directory to the root of your site. However, Drupal core has a line in the `.htaccess` file that disallows Apache from serving dot files and folders, which returns a 403 permission denied response. If you see this error while trying to  pre-provision HTTPS on Drupal sites, use the [Let's Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge){.external} contrib module as a workaround.
+The text challenge to pre-provision HTTPS on Pantheon requires adding a `.well-known` directory to the root of your site. However, Drupal core has a line in the `.htaccess` file that disallows Apache from serving dot files and folders, which returns a 403 permission denied response. If you see this error while trying to  pre-provision HTTPS on Drupal sites, use the [Let's Encrypt Challenge](https://www.drupal.org/project/letsencrypt_challenge) contrib module as a workaround.
 
 
 ### Addressing Let's Encrypt Rate Limits
@@ -125,9 +125,9 @@ Pantheon requests new certificates frequently in order to add domains to existin
 
 If you encounter rate limits, we recommend the following approaches:
 
-- [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform){.external}.
-- Request that your apex domain (e.g., `example.edu`) be added to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines){.external}, which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
-- Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/){.external} as a workaround.
+- [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform).
+- Request that your apex domain (e.g., `example.edu`) be added to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines), which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
+- Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/) as a workaround.
 
 {% include("content/cname-workaround.html")%}
 

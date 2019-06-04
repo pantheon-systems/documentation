@@ -20,7 +20,7 @@ Identify DNS values to point your domain to Pantheon:
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmadeeasy.com/){.external} in a new tab before you continue.
+Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmadeeasy.com/) in a new tab before you continue.
 
 ## Configure DNS Records on DNS Made Easy
 ### A Record

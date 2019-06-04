@@ -30,7 +30,7 @@ In order to focus internal development and engineering work, the Pantheon Dashbo
 
 ## Batch Uploads
 
-The [max execution time](/docs/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce/){.external} can encounter this limit.
+The [max execution time](/docs/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce/) can encounter this limit.
 
 In this or similar instances, consider performing larger operations locally, then importing the code, files, and database back up to the platform.
 
@@ -118,15 +118,15 @@ Due to the configuration of the [Pantheon Filesystem](/docs/files/), Pantheon's 
 
 If you are distributing large binaries or hosting big media files, we recommend using a CDN like Amazon S3 as a cost-effective file serving solution that allows uploads directly to S3 from your site without using Pantheon as an intermediary.
 
- - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs){.external}.
- - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads){.external} or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/){.external}.
+ - Drupal sites can use a module such as [S3 File System](https://www.drupal.org/project/s3fs).
+ - WordPress sites can use plugins such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
 
-Be aware, even when using an external CDN to host files, you cannot upload files over 100MB through the CMS. Upload these files directly to the CDN (here's Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html){.external}).
+Be aware, even when using an external CDN to host files, you cannot upload files over 100MB through the CMS. Upload these files directly to the CDN (here's Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html)).
 
 See our documentation for [Drupal](/docs/drupal-s3) and [WordPress](/docs/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
 
 ### Upload Speed
-Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/docs/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html){.external} to help determine if your local internet connection is impeding file uploads to Pantheon.
+Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/docs/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
 
 ## Large Code Repository
 
@@ -167,7 +167,7 @@ For sites that need to provide services with Cross-Origin Resource Sharing (COR
 
 Sites that consume services using CORS, such as Amazon S3 CORS, do work on Pantheon.
 
-For WordPress users, you can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/){.external}, or add the following to the active theme's `function.php`:
+For WordPress users, you can use the [WP-CORS plugin](https://wordpress.org/plugins/wp-cors/), or add the following to the active theme's `function.php`:
 
 ```php
 add_filter('allowed_http_origins', 'pantheon_allowed_origins');
@@ -199,7 +199,7 @@ For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).
 
 ### Drupal False Positive
 
-Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399){.external} on `SA-CORE-2013-003`.
+Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
 
 ## nginx.conf
 
@@ -207,7 +207,7 @@ Pantheon does not currently support modifying the nginx.conf per site, as we run
 
 ## Database Stored Procedures
 
-MySQL stored procedures are not supported. Due to the nature of the platform, there is no guarantee that they will  persist following a database migration. You can avoid the use of stored procedures by using parameterized queries or [object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping){.external}.
+MySQL stored procedures are not supported. Due to the nature of the platform, there is no guarantee that they will  persist following a database migration. You can avoid the use of stored procedures by using parameterized queries or [object-relational mapping](https://en.wikipedia.org/wiki/Object-relational_mapping).
 
 ## Oracle Database Drivers
 
@@ -246,7 +246,7 @@ $databases['default']['default']['charset'] = 'utf8mb4';
 $databases['default']['default']['collation'] = 'utf8mb4_general_ci';
 ```
 
-Existing sites that already have an active database must install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert){.external} Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. Once you've installed the command in `/sites/all/drush`, you must clear Drush cache for the new command to run. Clear Drush cache using [Terminus](/docs/terminus/):
+Existing sites that already have an active database must install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert) Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. Once you've installed the command in `/sites/all/drush`, you must clear Drush cache for the new command to run. Clear Drush cache using [Terminus](/docs/terminus/):
 
 ```bash
 terminus drush <site>.<env> -- cc drush
@@ -263,9 +263,9 @@ This will convert the database tables in the existing installation to the proper
 
 ## Terminus Support
 
-[Terminus](/docs/terminus), our command-line tool for power users, is designed for 'nix-type operating systems like MacOS and Linux. While some people have installed Terminus on Windows using the [Git BASH on Git for Windows](https://git-for-windows.github.io/){.external} or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10){.external} shells, this is not officially supported.
+[Terminus](/docs/terminus), our command-line tool for power users, is designed for 'nix-type operating systems like MacOS and Linux. While some people have installed Terminus on Windows using the [Git BASH on Git for Windows](https://git-for-windows.github.io/) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) shells, this is not officially supported.
 
-If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/){.external} to run a virtualized 'nix-type environment for tools like Terminus.
+If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/) to run a virtualized 'nix-type environment for tools like Terminus.
 
 ## PHP Configuration
 `php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/docs/phpinfo/) for more information on PHP configuration.

@@ -23,12 +23,12 @@ You can use Terminus for scripting many operations. For example, a post-commit h
 
 ## Drupal SimpleTest
 
-[SimpleTest](https://drupal.org/project/simpletest){.external} is a testing framework based on the [SimpleTest PHP library](https://github.com/simpletest/simpletest){.external} that is included with Drupal core. If you are creating a custom web application, you should consider including SimpleTests of your module functionality.
+[SimpleTest](https://drupal.org/project/simpletest) is a testing framework based on the [SimpleTest PHP library](https://github.com/simpletest/simpletest) that is included with Drupal core. If you are creating a custom web application, you should consider including SimpleTests of your module functionality.
 
-[SiteTest](https://www.drupal.org/project/site_test){.external} is a contrib module for Drupal 7 designed to allow running tests directly against your sites code instead of a base Drupal clone of your site.  This module is recommended for use of SimpleTest on Pantheon.
+[SiteTest](https://www.drupal.org/project/site_test) is a contrib module for Drupal 7 designed to allow running tests directly against your sites code instead of a base Drupal clone of your site.  This module is recommended for use of SimpleTest on Pantheon.
 
 <Alert title="Note" type="info">
-The drush test-run command was dropped in Drush 7 and 8. See [this GitHub issue](https://github.com/drush-ops/drush/issues/1362){.external} for more details.
+The drush test-run command was dropped in Drush 7 and 8. See [this GitHub issue](https://github.com/drush-ops/drush/issues/1362) for more details.
 </Alert>
 
 To run tests on Pantheon:

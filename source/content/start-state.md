@@ -17,7 +17,7 @@ We base our Drupal 7 repository on the canonical source from drupal.org, and the
 We include a growing number of "Drupal products" as available upstreams on Pantheon. These are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.		
 
 <Alert tile="Note" type="info">
-If the distribution you are using is behind on core releases or any of its included plugins, please contact the maintainer through [Drupal.org](https://www.drupal.org){.external} or the distribution's GitHub issue queue.
+If the distribution you are using is behind on core releases or any of its included plugins, please contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
 </Alert>
 
 Use the following direct links to create a new site on Pantheon from a public distribution:

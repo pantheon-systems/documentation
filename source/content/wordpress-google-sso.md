@@ -6,11 +6,11 @@ contributors: [danielbachhuber]
 tags: [siteintegrations, security]
 categories: [automate]
 ---
-If your organization uses Google Apps, [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/){.external} lets your users sign into WordPress using their Google Account. This makes it much easier to manage user accounts; rather than recreate WordPress accounts for every user, you can treat Google Apps as your **Identity Provider** for **Single Sign-On** (SSO) and have WordPress defer to Google when determining who should have access and who shouldn’t.
+If your organization uses Google Apps, [WP SAML Auth](https://wordpress.org/plugins/wp-saml-auth/) lets your users sign into WordPress using their Google Account. This makes it much easier to manage user accounts; rather than recreate WordPress accounts for every user, you can treat Google Apps as your **Identity Provider** for **Single Sign-On** (SSO) and have WordPress defer to Google when determining who should have access and who shouldn’t.
 
 ## Before You Begin
 
-First, setting up is a matter of applying the correct configuration. It should take an hour or less. If you get stuck on a configuration error along the way, please reach out by creating an issue on [this doc](https://github.com/pantheon-systems/documentation/issues/new?title=Using%20WP%20SAML%20Auth%20with%20Google%20Apps%20Doc%20Update%20&body=Re%3A%20%5BUsing%20WP%20SAML%20Auth%20with%20Google%20Apps%5D(https%3A%2F%2Fpantheon.io/docs/wordpress-google-sso/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20\&labels=fix%20content){.external} or the [plugin project](https://github.com/pantheon-systems/wp-saml-auth){.external} on GitHub.
+First, setting up is a matter of applying the correct configuration. It should take an hour or less. If you get stuck on a configuration error along the way, please reach out by creating an issue on [this doc](https://github.com/pantheon-systems/documentation/issues/new?title=Using%20WP%20SAML%20Auth%20with%20Google%20Apps%20Doc%20Update%20&body=Re%3A%20%5BUsing%20WP%20SAML%20Auth%20with%20Google%20Apps%5D(https%3A%2F%2Fpantheon.io/docs/wordpress-google-sso/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20\&labels=fix%20content) or the [plugin project](https://github.com/pantheon-systems/wp-saml-auth) on GitHub.
 
 Second, creating a custom Google Apps SAML application requires a Google Apps administrator account. If you don’t have appropriate permissions, you’ll need to pair up with someone that does.
 
@@ -23,7 +23,7 @@ You’ll see these in reference documentation, so it’s important to keep them 
 
 
 ## Create a Custom Google Apps SAML Application
-To use WP SAML Auth with Google Apps, you’ll need to first [create a custom SAML application](https://support.google.com/a/answer/6087519){.external} and enable it for your users.
+To use WP SAML Auth with Google Apps, you’ll need to first [create a custom SAML application](https://support.google.com/a/answer/6087519) and enable it for your users.
 
 1. Find the **SAML Apps** dashboard in the Google Apps admin, and click **Add a service/App to your domain**.
 
@@ -100,10 +100,10 @@ Once you’ve created a custom Google Apps SAML application, you need to tell WP
       return $value;
     });
 
-See WP SAML Auth's [annotated installation instructions](https://github.com/pantheon-systems/wp-saml-auth#installation){.external} for explanation of all potential configuration options.
+See WP SAML Auth's [annotated installation instructions](https://github.com/pantheon-systems/wp-saml-auth#installation) for explanation of all potential configuration options.
 
 ## Troubleshooting
 
- - Google has a [dedicated support page](https://support.google.com/a/answer/6301076?hl=en){.external} with errors you may see on any of their screens.
+ - Google has a [dedicated support page](https://support.google.com/a/answer/6301076?hl=en) with errors you may see on any of their screens.
 
- - [Open an issue](https://github.com/pantheon-systems/wp-saml-auth/issues){.external} on the WP SAML Auth GitHub repo should you get stuck beyond what information is already online.
+ - [Open an issue](https://github.com/pantheon-systems/wp-saml-auth/issues) on the WP SAML Auth GitHub repo should you get stuck beyond what information is already online.

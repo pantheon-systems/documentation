@@ -27,7 +27,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
     </div>
 
     <Alert title="Note" type="info">
-      Pantheon also maintains Composer based examples for [WordPress](https://github.com/pantheon-systems/example-wordpress-composer){.external} and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer){.external} that are currently in alpha, requiring `--stability=alpha` in the command line options. While this guide demonstrates Drupal 8, the same workflow can be achieved on all frameworks.</p>
+      Pantheon also maintains Composer based examples for [WordPress](https://github.com/pantheon-systems/example-wordpress-composer) and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer) that are currently in alpha, requiring `--stability=alpha` in the command line options. While this guide demonstrates Drupal 8, the same workflow can be achieved on all frameworks.</p>
     </Alert>
 
     Provide additional information as prompted, such as Organization (if any), and tokens for GitHub and CircleCI access:
@@ -71,7 +71,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
          The site name exampleuniquesitename is already taken on Pantheon.
      ```
 
-     To resolve, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/create){.external}, then authenticate Terminus and try the build command again:
+     To resolve, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus and try the build command again:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth">Copy</button>
@@ -81,9 +81,9 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
      ### Additional Support
      Pantheon's composer based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
-       * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues){.external}
-       * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues){.external}
-       * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues){.external}
+       * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
+       * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues)
+       * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues)
     </Accordion>
 
 2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on GitHub:

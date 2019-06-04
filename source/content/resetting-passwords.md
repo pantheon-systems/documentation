@@ -5,7 +5,7 @@ tags: [debugdb]
 categories: []
 ---
 ## Pantheon Dashboard Login
-If you need to reset your Pantheon Dashboard user password,logout and [visit this page](https://dashboard.pantheon.io/reset-password){.external} and follow the instructions.
+If you need to reset your Pantheon Dashboard user password,logout and [visit this page](https://dashboard.pantheon.io/reset-password) and follow the instructions.
 
 If you need to reset your password for your account on your Drupal or WordPress site, you have three options:
 
@@ -33,7 +33,7 @@ If you still can’t get access to your site using password reset, for example i
 terminus drush <site>.<env> -- user-login
 ```
 
-Or you can reset any user's password from the command line by running the [`user-password` Drush command](https://drushcommands.com/drush-8x/user/user-password/){.external} via [Terminus](/docs/terminus/):
+Or you can reset any user's password from the command line by running the [`user-password` Drush command](https://drushcommands.com/drush-8x/user/user-password/) via [Terminus](/docs/terminus/):
 
 ```bash
 terminus drush <site>.<env> -- user-password user_name --password='Astr0nGP455w0rD'
@@ -43,7 +43,7 @@ Remember to change the password from the example above.
 
 ### Option C: Reset your password directly in the database (advanced)
 
-If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. Please see documentation on [drupal.org](https://www.drupal.org/node/44164){.external} and [Accessing MySQL Databases](/docs/mysql-access/) for more information.
+If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. Please see documentation on [drupal.org](https://www.drupal.org/node/44164) and [Accessing MySQL Databases](/docs/mysql-access/) for more information.
 
 
 ## WordPress Site User Login
@@ -57,7 +57,7 @@ If your site is powered by WordPress you have two options. The first is to reque
 You will receive an email that contains a link you can use one time to reset your password. When you click the link, enter your new password twice. It will also show you the strength of your new password; however, it will not prevent you from using a weak password.
 
 ### Option B: Use Terminus WP-CLI to set a password
-Or you can reset any user's password from the command line by running [WP-CLI's `user update` command](https://wp-cli.org/commands/user/update/){.external} via [Terminus](/docs/terminus/):
+Or you can reset any user's password from the command line by running [WP-CLI's `user update` command](https://wp-cli.org/commands/user/update/) via [Terminus](/docs/terminus/):
 
 ```bash
 terminus wp <site>.<env> -- user update you@example.com --user_pass=NEWPASSWORD
@@ -69,4 +69,4 @@ As a side note, `terminus 'wp user update'` can be used to change almost any pro
 
 ### Option C: Reset your password directly in the database (advanced)
 
-If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. Please see documentation on [wordpress.org](https://codex.wordpress.org/Resetting_Your_Password#Through_MySQL.2FMariaDB_Command_Line){.external} and [Accessing MySQL Databases](/docs/mysql-access/) for more information.
+If an application issue is preventing a password reset via Terminus, you may need to do a password reset or add a new user account directly in the MySQL database. Please see documentation on [wordpress.org](https://codex.wordpress.org/Resetting_Your_Password#Through_MySQL.2FMariaDB_Command_Line) and [Accessing MySQL Databases](/docs/mysql-access/) for more information.

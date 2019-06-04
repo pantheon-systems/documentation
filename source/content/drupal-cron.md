@@ -59,15 +59,15 @@ If the site has not been accessed through the web by a visitor for at least two 
 
 There are several workarounds. Most work by keeping the site awake, then using a different mechanism for executing cron tasks.
 
- - To keep the site active, some users have used [Pingdom](https://www.pingdom.com/){.external} to automate access to their site as often as once a minute. In conjunction, the use of the Drupal module [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} allows for granular control over cron scheduling and execution with both a user interface and API.
+ - To keep the site active, some users have used [Pingdom](https://www.pingdom.com/) to automate access to their site as often as once a minute. In conjunction, the use of the Drupal module [Elysia Cron](https://www.drupal.org/project/elysia_cron) allows for granular control over cron scheduling and execution with both a user interface and API.
 
    By having Pingdom visit the site once a minute like a visitor, the site stays active and Elysia Cron has an opportunity to act every minute (if it needs to). This combination is not officially supported by Pantheon, but has worked for some of our customers.
 
- - A single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors){.external} to hit Cron URLs. You may still want to use [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} to schedule different cron tasks at different frequencies though. One advantage of this approach is that your site may already have a New Relic instance associated with it, saving you from having to setup another third-party service.
+ - A single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors) to hit Cron URLs. You may still want to use [Elysia Cron](https://www.drupal.org/project/elysia_cron) to schedule different cron tasks at different frequencies though. One advantage of this approach is that your site may already have a New Relic instance associated with it, saving you from having to setup another third-party service.
 
  - If you have anything that is executing cron tasks on your own server, you can invoke Drush commands remotely using [Terminus](/docs/terminus/), including Drush cron, to trigger scheduled operations.
 
- - Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/){.external}. You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron Module](https://drupal.org/project/EasyCron){.external}. The unique URL to kick off cron externally can be found at `/admin/config/system/cron`.
+ - Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/). You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron Module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at `/admin/config/system/cron`.
 
 
 ## Disable Cron
@@ -84,7 +84,7 @@ To disable Drupal's standard cron:
 
 ### Drupal 7 and Elysia Cron
 
-Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron){.external} contrib module to extend the standard cron can disable it globally in the module's settings:
+Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron) contrib module to extend the standard cron can disable it globally in the module's settings:
 
 ![disable cron globally by Elysia Cron](/source/docs/assets/images/disable_cron_elysia.png)
 
@@ -114,7 +114,7 @@ terminus drush <site>.<env> -- wd-show --type='cron'
 
 ### Can I add tasks to cron through Drupal?
 
-No. You can create a custom module that uses the [`hook_cron`](https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_cron/8.6.x){.external} function, or schedule a drush command to be run via [Terminus](/source/docs/terminus/) from your local cron, or an external service like [cron-job.org](https://cron-job.org/){.external}.
+No. You can create a custom module that uses the [`hook_cron`](https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_cron/8.6.x) function, or schedule a drush command to be run via [Terminus](/source/docs/terminus/) from your local cron, or an external service like [cron-job.org](https://cron-job.org/).
 
 ## Resources
 

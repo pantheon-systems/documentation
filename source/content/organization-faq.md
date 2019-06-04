@@ -16,7 +16,7 @@ Creating a Multidev environment creates an application container with a database
 
 ### How can my Organization get Multidev and how much does it cost?
 
-Multidev is one of the highlight features of the Pantheon Partner Program. Visit the [Partner Program Page](https://pantheon.io/plans/partner-program){.external} to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us){.external}.
+Multidev is one of the highlight features of the Pantheon Partner Program. Visit the [Partner Program Page](https://pantheon.io/plans/partner-program) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us).
 
 ## Change Management
 
@@ -65,7 +65,7 @@ Yes. Please follow [@pantheonstatus](https://twitter.com/pantheonstatus) on Twit
 If you need to submit a support request and can’t access the Dashboard, send an email to helpdesk@pantheon.io.
 
 ### As a Partner, do I get enhanced support?
-Your support level increases along with your Partner Program level. Refer to the [Pantheon Partner Portal](https://pantheon.io/plans/partner-portal){.external} for more information.
+Your support level increases along with your Partner Program level. Refer to the [Pantheon Partner Portal](https://pantheon.io/plans/partner-portal) for more information.
 
 ### As an Agency, how many sandbox sites do members of an organization receive?
 

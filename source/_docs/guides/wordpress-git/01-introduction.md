@@ -50,16 +50,16 @@ Make sure that you have a:
       </thead>
       <tbody>
         <tr markdown="1">
-          <td>[Transmit](https://panic.com/transmit/){.external}</td>
-          <td>[Atom](https://atom.io/){.external}</td>
+          <td>[Transmit](https://panic.com/transmit/)</td>
+          <td>[Atom](https://atom.io/)</td>
         </tr>
         <tr markdown="1">
-          <td>[Cyberduck](https://cyberduck.io/){.external}</td>
-          <td>[Sublime](https://www.sublimetext.com/){.external}</td>
+          <td>[Cyberduck](https://cyberduck.io/)</td>
+          <td>[Sublime](https://www.sublimetext.com/)</td>
         </tr>
         <tr markdown="1">
-          <td>[Filezilla](https://filezilla-project.org/){.external}</td>
-          <td>[TextMate](https://macromates.com/){.external}</td>
+          <td>[Filezilla](https://filezilla-project.org/)</td>
+          <td>[TextMate](https://macromates.com/)</td>
         </tr>
       </tbody>
     </table>

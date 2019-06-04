@@ -62,7 +62,7 @@ This will setup the multidev environment to receive and demo our changed code.
     cd ..
     ```
 
-2. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer){.external} repository:
+2. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
 
     ```bash
     composer create-project pantheon-systems/example-drops-8-composer $site-composer

@@ -10,7 +10,7 @@ Hook into platform workflows and manage advanced site configuration via the `pan
 <p>Set up existing scripts and write your own with help from our experts. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
 </Callout>
 
-For reference implementations see  [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml){.external} and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples){.external}.
+For reference implementations see  [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
 
 ## Advanced Site Configuration
 ### Include api_version
@@ -80,7 +80,7 @@ This creates a new symlink to the filesystem at the specified location. Note tha
 
 Complete the following before deploying `filemount` (**required**):
 
-1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path){.external}, [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after){.external}, or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder){.external} to use the new path
+1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path), [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after), or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder) to use the new path
 2. Add path to the `.gitignore` file
 3. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
 

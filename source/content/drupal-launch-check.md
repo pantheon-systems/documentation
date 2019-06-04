@@ -75,7 +75,7 @@ Drupal 8 — permanently opt out of the check for Development modules:
 $config['site_audit']['opt_out']['ExtensionsDev'] = TRUE;
 ```
 
-The specific key you'll use in the `$conf` or `$config` array is a combination of the report and the check. You can find a list of checks for the report here: [Site Audit Checks D7](http://cgit.drupalcode.org/site_audit/tree/Check?h=7.x-1.x){.external} | [Site Audit Checks D8](http://cgit.drupalcode.org/site_audit/tree/Check?h=8.x-2.x){.external}.
+The specific key you'll use in the `$conf` or `$config` array is a combination of the report and the check. You can find a list of checks for the report here: [Site Audit Checks D7](http://cgit.drupalcode.org/site_audit/tree/Check?h=7.x-1.x) | [Site Audit Checks D8](http://cgit.drupalcode.org/site_audit/tree/Check?h=8.x-2.x).
 
 Keep in mind that the site audit is executed via Drush so it's best to use the [`$_ENV` superglobal](/docs/read-environment-config/) for doing things like limiting the exclusions to one environment.
 

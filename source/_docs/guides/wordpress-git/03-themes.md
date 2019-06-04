@@ -22,9 +22,9 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
 
 ## Upload a Theme
-1. Download the [Bento](https://wordpress.org/themes/bento/){.external} theme from WordPress.org to your local machine.
+1. Download the [Bento](https://wordpress.org/themes/bento/) theme from WordPress.org to your local machine.
 2. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is still set to **SFTP**.
-3. Establish a secure connection from your local to Pantheon using an SFTP client of your choice (this guide uses [Transmit](https://panic.com/transmit/){.external}).
+3. Establish a secure connection from your local to Pantheon using an SFTP client of your choice (this guide uses [Transmit](https://panic.com/transmit/)).
 
    Click **SFTP Connection Info** then select the link to **Open in your default SFTP client**:
 
@@ -77,7 +77,7 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 
   ![create beneto-child theme stylesheet](/source/docs/assets/images/guides/git-wordpress/bento-child-css.png)
 
-4. If you don't already have your SFTP client configured to use your preferred text editor, you can do that now. Here's how we configured Transmit so that double-clicking a file opens it up for edits in [Atom](https://atom.io/){.external} (**Transmit** > **Preferences** > **Files** from the app menu):
+4. If you don't already have your SFTP client configured to use your preferred text editor, you can do that now. Here's how we configured Transmit so that double-clicking a file opens it up for edits in [Atom](https://atom.io/) (**Transmit** > **Preferences** > **Files** from the app menu):
 
   ![Transmit file config](/source/docs/assets/images/guides/git-wordpress/transmit-text-editor.png)
 
@@ -156,4 +156,4 @@ Finally, let’s make a few small customizations to our active child theme using
 
   ![Commit child-bento theme](/source/docs/assets/images/guides/git-wordpress/new-css-commit.png)
 
-This example is a very simple demonstration of the edit process, and is not intended to be a comprehensive resource on extending the layout or design of a theme (which likely means writing custom PHP functions). If you're looking for advanced tips on how to build and maintain themes efficiently checkout the [Theme Handbook](https://developer.wordpress.org/themes/advanced-topics/child-themes/){.external} on WordPress.org.
+This example is a very simple demonstration of the edit process, and is not intended to be a comprehensive resource on extending the layout or design of a theme (which likely means writing custom PHP functions). If you're looking for advanced tips on how to build and maintain themes efficiently checkout the [Theme Handbook](https://developer.wordpress.org/themes/advanced-topics/child-themes/) on WordPress.org.

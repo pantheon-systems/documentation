@@ -37,7 +37,7 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 </Alert>
 
 ### Available Drush Versions
-Pantheon currently supports Drush 8. While Drush 5 and 7 are available if needed, they are listed as [unsupported](http://docs.drush.org/en/master/install/#drupal-compatibility){.external} by the Drush maintainers, and should be avoided unless absolutely necessary.
+Pantheon currently supports Drush 8. While Drush 5 and 7 are available if needed, they are listed as [unsupported](http://docs.drush.org/en/master/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
 
 #### PHP Requirements
 
@@ -73,7 +73,7 @@ Sometimes even after updating the drush version in `pantheon.yml`, the correct v
 ### Site-local Drush Usage
 If you need to specify a minor version or a version not available on the platform (such as Drush 9), you can add a site-local installation of Drush to your repository. This will redispatch Pantheon's platform Drush to the site-local installation. Do not select any major version of Drush lower than 8.
 
-For more information, see [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush){.external}.
+For more information, see [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush).
 
 ## See Also
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)

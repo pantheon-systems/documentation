@@ -37,9 +37,9 @@ Configure your site to assume users are visiting via HTTPS and the site’s prim
 ### Reveal violations in bulk
 There are more than a few ways to identify mixed-content violations across your site, but Google Chrome is arguably one of the fastest and simplest. Right click on a page showing as insecure and select inspect, then review the console.
 
-Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/){.external}, for those preferential to GUIs.
+Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/), for those preferential to GUIs.
 
-Fans of the command line might find [mixed-content-scan by Bramus](https://github.com/bramus/mixed-content-scan){.external} helpful.
+Fans of the command line might find [mixed-content-scan by Bramus](https://github.com/bramus/mixed-content-scan) helpful.
 ### Hotfix violations in bulk
 If you're in a bind and need a quick fix, set the `Content-Security-Policy` header to `upgrade-insecure-requests` to upgrade all HTTP resources to the HTTPS protocol client-side, on the fly:
 
@@ -69,7 +69,7 @@ Use the following techniques to replace insecure references to your domain in th
   <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
   **Via Plugin**
 
-  You can use the [Really Simple SSL](https://wordpress.org/plugins/really-simple-ssl/){.external} plugin to automatically detect and fix mixed content messages. For additional details, see [this related blog post](https://pantheon.io/blog/how-get-rid-those-pesky-mixed-content-messages-wordpress){.external}.
+  You can use the [Really Simple SSL](https://wordpress.org/plugins/really-simple-ssl/) plugin to automatically detect and fix mixed content messages. For additional details, see [this related blog post](https://pantheon.io/blog/how-get-rid-those-pesky-mixed-content-messages-wordpress).
 
   **Via WP-CLI**
 
@@ -102,9 +102,9 @@ Use the following techniques to replace insecure references to your domain in th
 
   <!-- 2nd pane content -->
   <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
-  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar){.external} by [adding custom Drush command](/docs/drush/#add-custom-drush-commands){.external}.
+  Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-commands).
 
-  Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8){.external} to fetch data from entities in the database that may include insecure references.
+  Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
   </div>
 </div>
 
@@ -143,7 +143,7 @@ Content-Type: text/html; charset=UTF-8
 Location: https://www.example.com/
 ```
 
-You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/redirects/){.external} to investigate redirect behaviors as an alternative to cURL:
+You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/redirects/) to investigate redirect behaviors as an alternative to cURL:
 
 ![Varvy Redirects example.com](/source/docs/assets/images/varvy-redirect-mapper.png)
 

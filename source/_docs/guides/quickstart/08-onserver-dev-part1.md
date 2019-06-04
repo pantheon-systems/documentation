@@ -35,7 +35,7 @@ In this lesson, we’re going to work directly on the server. We’ll make chang
 
 3. Install a _new_ theme (i.e., do not activate/enable a theme that came pre-packaged with your site).
 
-If you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Using_Themes#Adding_New_Themes_using_the_Administration_Panels){.external} or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html){.external} for installing a new theme.
+If you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Using_Themes#Adding_New_Themes_using_the_Administration_Panels) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html) for installing a new theme.
 
 4. Activate/enable the new theme you just installed in Step 3. Now view your site to confirm the theme change.
 
@@ -81,7 +81,7 @@ If you need help with this step, please reference the [WordPress Codex](https://
 
 11. When the deployment finishes, click **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** to navigate to your Test site. Here you’ll notice that your theme is installed, but not active/enabled. You’ll also find that your content has been pulled “down” from Live.
 
-12. Activate/enable your theme. Again, if you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Using_Themes){.external} or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html){.external}.
+12. Activate/enable your theme. Again, if you need help with this step, please reference the [WordPress Codex](https://codex.wordpress.org/Using_Themes) or [Drupal Documentation](https://www.drupal.org/docs/user_guide/en/extend-theme-install.html).
 
 13. Review your Test site. Does everything look correct? If yes, navigate to **<span class="glyphicons glyphicons-refresh" aria-hidden="true"></span> Deploys** on the **<span class="glyphicons glyphicons-cardio" aria-hidden="true"></span> Live** tab of your Site Dashboard.
 

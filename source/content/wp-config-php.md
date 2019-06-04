@@ -61,7 +61,7 @@ Depending on your use case, there are two possibilities:
  }
  ```
 
-The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php){.external}:
+The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php):
 
 ```php
 // All Pantheon Environments.
@@ -111,8 +111,8 @@ You don't have to! Pantheon automatically injects database credentials into the
 
 ### Where can I get a copy of a default wp-config.php for Pantheon?
 
-- [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php){.external}
-- [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php){.external}
+- [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php)
+- [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
 
 ### How do I enable IonCube Decoder support?
 

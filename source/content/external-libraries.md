@@ -9,7 +9,7 @@ There are some scenarios when an external library is required. Pantheon has inst
 
 ## WKHTMLtoPDF
 
-[WebKit HTML](https://wkhtmltopdf.org/){.external} allows you to create a snapshot or capture the content of a web page easily in a PDF.
+[WebKit HTML](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF.
 
 WKHTMLtoPDF can be found on your application container at `/srv/bin/wkhtmltopdf`.
 
@@ -34,7 +34,7 @@ git push
 Currently, there are no known plugins that implement WKHTMLtoPDF directly. However, you can use the converter by creating a custom plugin or by placing the code within your theme's `functions.php` file.
 
 ## PhantomJS
-In its own words, [PhantomJS](https://github.com/ariya/phantomjs/){.external} is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
+In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
 
 - PhantomJS (1.7.0) is located at `/srv/bin/phantomjs` on your application container.
 - PhantomJS (2.1.1) is located at `/srv/bin/phantomjs-2.1.1` on your application container.
@@ -44,13 +44,13 @@ Once you have downloaded and enabled the PhantomJS Capture module, you'll need t
 
 ## Apache Tika
 
-The [Apache Tika](https://tika.apache.org//){.external} toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
+The [Apache Tika](https://tika.apache.org//) toolkit detects and extracts metadata and structured text content from various documents using existing parser libraries.
 
 Tika can extract content from a number of document formats such as HTML, XML, Microsoft Office document formats, and PDFs and more.
 
 ### Drupal 7 Tika Configuration
 
-Once you have downloaded and installed the ApacheSolr Attachments module ([apachesolr_attachments](https://www.drupal.org/project/apachesolr_attachments){.external}), you'll need to configure the module's settings.
+Once you have downloaded and installed the ApacheSolr Attachments module ([apachesolr_attachments](https://www.drupal.org/project/apachesolr_attachments)), you'll need to configure the module's settings.
 
 1. Go to the Tika settings page at: `/admin/config/search/apachesolr/attachments` and enter the following fields:
 
@@ -89,7 +89,7 @@ Sites that are using an old version of Tika should be upgraded to the supported 
 
 ## ImageMagick
 
-[ImageMagick](https://www.imagemagick.org/script/index.php){.external} is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php){.external} (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php){.external},  [EXR](https://www.imagemagick.org/script/high-dynamic-range.php){.external}, GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. 
+[ImageMagick](https://www.imagemagick.org/script/index.php) is a software suite to create, edit, compose, or convert bitmap images. It can read and write images in a variety of  [formats](https://www.imagemagick.org/script/formats.php) (over 100) including  [DPX](https://www.imagemagick.org/script/motion-picture.php),  [EXR](https://www.imagemagick.org/script/high-dynamic-range.php), GIF, JPEG, JPEG-2000, PDF, PNG, Postscript, SVG, and TIFF. Use ImageMagick to resize, flip, mirror, rotate, distort, shear and transform images, adjust image colors, apply various special effects, or draw text, lines, polygons, ellipses and Bézier curves. 
 
 Pantheon runs ImageMagick 6.8.8-10 Q16 x86_64 2015-03-10.
 
@@ -97,9 +97,9 @@ Pantheon runs ImageMagick 6.8.8-10 Q16 x86_64 2015-03-10.
 
 Once you have downloaded and enabled the Imagemagick module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `admin/config/media/image-toolkit` to select ImageMagick.
 
-When creating a new preset, if the "Division by Zero" warning appears, add the [`image_allow_insecure_derivatives`](https://www.drupal.org/project/image_allow_insecure_derivatives){.external} conf variable to your `settings.php` file.
+When creating a new preset, if the "Division by Zero" warning appears, add the [`image_allow_insecure_derivatives`](https://www.drupal.org/project/image_allow_insecure_derivatives) conf variable to your `settings.php` file.
 
-Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize){.external}) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`.
+Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`.
 
 ## Troubleshooting and FAQs
 #### How do I request the addiiton of a new library or a newer version of an existing library?

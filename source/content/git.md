@@ -166,18 +166,18 @@ To clear this up, you may need to work with your network administrators to unblo
 
 For further learning, we recommend the following resources:
 
-- [Git Documentation](https://git-scm.com/documentation){.external}
-- [Pro Git Book](https://git-scm.com/book/en/v2){.external}
-- [First Aid Git](https://github.com/magalhini/firstaidgit){.external}
-- [Git Reference](http://gitref.org/){.external}
-- [Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html){.external}
-- [Git Immersion](http://gitimmersion.com/){.external}
-- [Code School - Try Git](https://try.github.io/levels/1/challenges/1){.external}
-- [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/){.external}
-- [SourceTree - Git GUI Client](https://www.sourcetreeapp.com/){.external}
-- [GitKraken - Git GUI Client](https://www.gitkraken.com/){.external}
-- [GitHub Desktop - Git GUI Client](https://desktop.github.com/){.external}
-- [Repository mirroring](https://docs.gitlab.com/ee/workflow/repository_mirroring.html){.external}
+- [Git Documentation](https://git-scm.com/documentation)
+- [Pro Git Book](https://git-scm.com/book/en/v2)
+- [First Aid Git](https://github.com/magalhini/firstaidgit)
+- [Git Reference](http://gitref.org/)
+- [Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html)
+- [Git Immersion](http://gitimmersion.com/)
+- [Code School - Try Git](https://try.github.io/levels/1/challenges/1)
+- [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
+- [SourceTree - Git GUI Client](https://www.sourcetreeapp.com/)
+- [GitKraken - Git GUI Client](https://www.gitkraken.com/)
+- [GitHub Desktop - Git GUI Client](https://desktop.github.com/)
+- [Repository mirroring](https://docs.gitlab.com/ee/workflow/repository_mirroring.html)
 
 For Pantheon-specific Git questions, see the following:
 

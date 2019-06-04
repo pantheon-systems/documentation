@@ -73,7 +73,7 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
   ![CAA configure](/source/docs/assets/images/cf-caa-configure.png)
 
-  If you *are* using Cloudflare's CDN, they will [automatically add](https://support.cloudflare.com/hc/en-us/articles/115000310792-Configuring-CAA-Records-){.external} CAA records for their CA providers when Universal SSL is enabled. Do *not* add a record for `letsencrypt.org` in this case.
+  If you *are* using Cloudflare's CDN, they will [automatically add](https://support.cloudflare.com/hc/en-us/articles/115000310792-Configuring-CAA-Records-) CAA records for their CA providers when Universal SSL is enabled. Do *not* add a record for `letsencrypt.org` in this case.
 
 5. Select desired Time to Live (TTL).
 

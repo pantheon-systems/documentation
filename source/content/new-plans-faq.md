@@ -8,7 +8,7 @@ searchboost: 70
 ## Impacted Sites
 New plans and pricing will impact new and existing sites purchased online via the Site Dashboard. Plan changes described on this page do not affect annual contract customers such as EDU+, Enterprise, Pantheon One, Elites and Resellers.
 
-For more information on the announcement of new plans, see [this related blog post](https://pantheon.io/blog/announcing-new-online-site-plans){.external}.
+For more information on the announcement of new plans, see [this related blog post](https://pantheon.io/blog/announcing-new-online-site-plans).
 
 ## List and Preferred Pricing
 <dl>
@@ -165,7 +165,7 @@ No. These new pricing changes only affect online site plans (previously named Pe
 No. Each online site plan is tied to a single install of the CMS.
 
 ### Does Pantheon offer discounting for buying sites in bulk?
-Yes. If you are interested in bulk pricing, [Contact our sales team](https://pantheon.io/contact-us?docsplanFAQ){.external} or your dedicated account manager to discuss.
+Yes. If you are interested in bulk pricing, [Contact our sales team](https://pantheon.io/contact-us?docsplanFAQ) or your dedicated account manager to discuss.
 
 ### How do I purchase one of the new plans?
 For details, see [Manage Plans in the Site Dashboard](/docs/site-plan/).

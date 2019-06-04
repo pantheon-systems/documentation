@@ -30,7 +30,7 @@ The most common issue with effectively using edge and CDN caching is troubleshoo
 If you have checked your HTTP headers and found that caching is not working, make sure you have configured [Drupal's performance settings](/docs/drupal-cache/) or the [WordPress Pantheon Cache Plugin](/docs/wordpress-cache-plugin/). Once you have completed this step, go back and check the HTTP headers to verify that caching is working.
 
 #### Drupal
-If you are still getting `no-cache, must-revalidate, post-check=0, pre-check=0` as a response, check to see if any messages are being set. The [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7){.external} function disables page caching. Also check to see if messages are present in page templates; themes could have removed them to suppress user facing messages.
+If you are still getting `no-cache, must-revalidate, post-check=0, pre-check=0` as a response, check to see if any messages are being set. The [drupal\_set\_message](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/drupal_set_message/7) function disables page caching. Also check to see if messages are present in page templates; themes could have removed them to suppress user facing messages.
 
 ### Theme Images Not Refreshing
 If you are experiencing issues with theme images not refreshing, you can manually flush the cache by going to your Pantheon Dashboard and clicking the **Clear Caches** button.

@@ -28,7 +28,7 @@ During this upgrade, services related to development may be interrupted. As a pr
 
 For most of the sites, we estimate the upgrade to complete in under 30 minutes. However, for some sites with large databases, the upgrade my take longer.
 
-If you have questions around timing and duration of the upgrade, kindly [contact support](https://dashboard.pantheon.io/#support){.external}.
+If you have questions around timing and duration of the upgrade, kindly [contact support](https://dashboard.pantheon.io/#support).
 
 ### What are you upgrading?
 

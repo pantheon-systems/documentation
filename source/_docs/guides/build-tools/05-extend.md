@@ -56,7 +56,7 @@ This section will be performed from the command line, to prepare your local syst
     </div>
 
 ## Install a Contrib Module
-1. Use Composer locally to add the [Pathauto](https://www.drupal.org/project/pathauto){.external} module as a dependency on the existing `slogan` branch:
+1. Use Composer locally to add the [Pathauto](https://www.drupal.org/project/pathauto) module as a dependency on the existing `slogan` branch:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto">Copy</button>

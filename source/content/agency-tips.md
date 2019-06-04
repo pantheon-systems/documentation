@@ -10,17 +10,17 @@ We've compiled some great tips for agencies working on Pantheon. They are loosel
 
 ## Become a Partner Agency / Join the Partner Program
 
-One of the easiest tips we can offer for immediate results. Pantheon Partner Agencies are eligible for additional support options and other exclusive features. Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more.
+One of the easiest tips we can offer for immediate results. Pantheon Partner Agencies are eligible for additional support options and other exclusive features. Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program) to learn more.
 
 
 ## Learn Pantheon through Product Trainings, Resources, and Guides
-[Get hands on training](https://pantheon.io/agencies/learn-pantheon?docs){.external} from the Agency and Community team at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
+[Get hands on training](https://pantheon.io/agencies/learn-pantheon?docs) from the Agency and Community team at Pantheon. Sign up for a training session, visit our office hours, and access our resources.
 
 ## Become a Supporting Organization
 When working with a client who has ownership of their Pantheon site, either through an individual account or another organization, make sure your agency is added as a [supporting organization](/docs/team-management/#add-a-supporting-organization) to the site. This will add the site to your agency dashboard and also grant all users of your organization permissions to the site. This makes it easy for the client to add your agency for a project and allows you to manage permissions for your team in one place, your agency dashboard, without needing to add or remove users from sites one at a time.
 
 ## Extend Preferred Pricing to Your Clients
-[Qualified agencies](https://pantheon.io/plans/partner-program){.external} have the ability to extend Preferred Pricing to their customers. To unlock Preferred Pricing for a site you are developing, [use our invite to pay method to transfer ownership and billing](/docs/add-client-site/#send-an-invitation-to-pay-to-your-client) of the site to your client.
+[Qualified agencies](https://pantheon.io/plans/partner-program) have the ability to extend Preferred Pricing to their customers. To unlock Preferred Pricing for a site you are developing, [use our invite to pay method to transfer ownership and billing](/docs/add-client-site/#send-an-invitation-to-pay-to-your-client) of the site to your client.
 
 ## Training Resources for New Team Members
 Pantheon strives to maintain accurate and up-to-date documentation. Some docs worth noting, and good for new members of your team, are:
@@ -30,7 +30,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 - [Non-standard file locations](/docs/non-standard-file-paths/)
 - [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/)
 - [Pantheon FAQs](/docs/faq/)
-- [Pricing comparison](https://pantheon.io/plans/pricing-comparison){.external}
+- [Pricing comparison](https://pantheon.io/plans/pricing-comparison)
 - [Add a Client to Your Agency](/docs/add-client-site/) for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.
 
 ## Be a Power User

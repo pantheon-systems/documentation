@@ -9,7 +9,7 @@ To quickly see which environment you are on, consider installing the [Pantheon H
 
 ## Customizations to wp-config.php
 
-Pantheon's default version of `wp-config.php` demonstrates how to [set `DISALLOW_FILE_MODS` to `true` on Test and Live environments](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L88-L91){.external}:
+Pantheon's default version of `wp-config.php` demonstrates how to [set `DISALLOW_FILE_MODS` to `true` on Test and Live environments](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L88-L91):
 
 ```php
 if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test', 'live' ) ) && ! defined( 'DISALLOW_FILE_MODS' ) ) :
@@ -36,7 +36,7 @@ if (!defined('WP_DEBUG') && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 
 <Alert title="Warning" type="danger">
-PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, remove or comment out the [existing code block](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L147){.external} defining it.
+PHP constants like `WP_DEBUG` can only be defined once. When implementing this code snippet, remove or comment out the [existing code block](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L147) defining it.
 </Alert>
 
 For more options when editing `wp-config.php` for debugging, see [Configure Error Logging](https://codex.wordpress.org/Editing_wp-config.php#Configure_Error_Logging) on the WordPress Codex.

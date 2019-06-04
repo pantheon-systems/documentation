@@ -7,7 +7,7 @@ categories: []
 Maintainers of [Custom Upstreams](/docs/custom-upstream/) bear the responsibility of pulling in core updates from Pantheon. Regardless of update type, always test changes before you distribute them to your sites. We recommend the following workflow to maintain Custom Upstreams on Pantheon. In this example, we will be updating core.
 
 <Alert title="Note" type="info">
-Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress){.external}, [Drupal 7](https://github.com/pantheon-systems/drops-7){.external}, and [Drupal 8](https://github.com/pantheon-systems/drops-8){.external}) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).
+Failure to run the most up-to-date version of core based on upstreams maintained by Pantheon ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 7](https://github.com/pantheon-systems/drops-7), and [Drupal 8](https://github.com/pantheon-systems/drops-8)) may cause incompatibilities with the platform (e.g. clear cache button, launch checks, cron, etc.).
 </Alert>
 
 ## Before You Begin
@@ -32,7 +32,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 ## Test and Release Pantheon Core Updates
 
-1. From your local clone of your Custom Upstream repository, add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote){.external} if you haven't done so already:
+1. From your local clone of your Custom Upstream repository, add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -66,7 +66,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
     terminus connection:info <site>.dev --field=git_url
     ```
 
-3. Replace `<git_url>` in the following command to add your new test site as a [remote](https://git-scm.com/docs/git-remote){.external}:
+3. Replace `<git_url>` in the following command to add your new test site as a [remote](https://git-scm.com/docs/git-remote):
 
     ```git
     git remote add pantheon-test <git_url>
@@ -155,7 +155,7 @@ Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set d
 #### Automatically Resolve from the Command Line
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
-1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote){.external}, if you haven't done so already:
+1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -221,7 +221,7 @@ Double-check the conflicted files before going forward to make sure no bugs were
 If attempts to automatically resolve conflicts fail or if you want your changes to persist instead of the upstreams, you'll need to manually resolve the conflict using the command line and a text editor.
 
 
-1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote){.external}, if you haven't done so already:
+1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">

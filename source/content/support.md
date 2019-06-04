@@ -67,7 +67,7 @@ Diamond and Platinum support customers can directly access Pantheon's operations
 
 ## Scope of Support
 
-We love helping developers succeed! Our support packages range from basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us){.external} if your requirements fall outside the scope outlined below.
+We love helping developers succeed! Our support packages range from basic platform support to more comprehensive support and a dedicated Customer Success Manager. While we have limits to the support we can provide, our [Professional Services](https://pantheon.io/docs/professional-services/) team is able to assist in areas that fall outside of support scope. [Contact Sales](https://pantheon.io/contact-us) if your requirements fall outside the scope outlined below.
 
 ### Code
 Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
@@ -81,7 +81,7 @@ If you choose to use a Custom Upstream, please be aware that the scope of suppor
 We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [properly maintaining the Custom Upstream](/docs/maintain-custom-upstream/), and fixing any issues related to the upstream falls outside of the scope of support.
 
 ### Public Distributions
-If you choose to use a [public distribution](/docs/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/docs/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 8, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org){.external} or the distribution's GitHub issue queue.
+If you choose to use a [public distribution](/docs/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/docs/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 8, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
 
 ### Security
 We don’t maintain the integrity of your site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
@@ -115,11 +115,11 @@ Diamond support customers get an extra level of assistance for their dev teams. 
 
 Our team is experienced with using New Relic to diagnose whether an issue is platform or site related, and has access to internal logging and monitoring.
 
-Diamond support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match){.external} from Pantheon’s network of trusted partners.
+Diamond support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match) from Pantheon’s network of trusted partners.
 
 ## FAQs
 ### Can I request a feature be added to the platform?
-Yes. For more details, talk to your Customer Success Manager or [contact sales](https://pantheon.io/contact-us){.external}.
+Yes. For more details, talk to your Customer Success Manager or [contact sales](https://pantheon.io/contact-us).
 
 ### Is there a support number we can call? If so, is this service available for every package?
 Diamond and Platinum customers can access Pantheon On-Call, which has an emergency 800-number. For more details, [contact sales](https://pantheon.io/contact-us).

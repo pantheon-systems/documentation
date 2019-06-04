@@ -274,7 +274,7 @@ done
 
 Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) then review them with any tool on your workstation.
 
-You can also create the `logwatcher.sh` script below, which uses [Terminus](/docs/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin){.external} to download log files and display the last several lines.
+You can also create the `logwatcher.sh` script below, which uses [Terminus](/docs/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
 
 1. If you're working on multiple projects locally, create a `logs` directory in the local Git repository for each one you want to watch logs for.
 

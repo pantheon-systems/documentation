@@ -70,7 +70,7 @@ You must replace `[env]` with the target environment and `[uuid]` with the [Site
     # Other rsync flags may or may not be supported
     # (-a, -p, -o, -g, -D, etc are not).
 
-Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsync){.external} to learn more.
+Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsync) to learn more.
 
 <Alert title="Note" type="info">
 Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/docs/nested-docroot/).</p>

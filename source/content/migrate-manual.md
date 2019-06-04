@@ -91,7 +91,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
   {% include("content/code.html")%}
 
   <Alert title="Note" type="info">
-  If your existing site is already version controlled and you would like to preserve the commit history, import the code from the command line with Git using the instructions below. If you prefer to avoid the command line entirely, we suggest importing the codebase using an SFTP Client such as [Transmit](https://panic.com/transmit/){.external} or [Cyberduck](https://cyberduck.io/){.external}.
+  If your existing site is already version controlled and you would like to preserve the commit history, import the code from the command line with Git using the instructions below. If you prefer to avoid the command line entirely, we suggest importing the codebase using an SFTP Client such as [Transmit](https://panic.com/transmit/) or [Cyberduck](https://cyberduck.io/).
   </Alert>
 ### Using an SFTP Client
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
@@ -190,7 +190,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 ## Add Your Database
 The **Database** import requires a single `.sql` dump that contains the site's content and configurations.
 
-1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html){.external} utility. To reduce the size for a faster transfer, we recommend you compress the resulting archive with gzip:
+1. Create a `.sql` dump using the [mysqldump](https://dev.mysql.com/doc/refman/5.7/en/mysqldump.html) utility. To reduce the size for a faster transfer, we recommend you compress the resulting archive with gzip:
 
   ```bash
   mysqldump -uUSERNAME -pPASSWORD DATABASENAME > ~/db.sql

@@ -78,14 +78,14 @@ For Redis and Solr, the following code changes are required before the feature c
 </div>
 
 ### Elite Plan
-Elite sites cannot manage plans from the Site Dashboard. [Contact our sales team](https://pantheon.io/contact-us){.external} or reach out to your dedicated Client Sales Executive for details.
+Elite sites cannot manage plans from the Site Dashboard. [Contact our sales team](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
 
 ### Enterprise Organizations
 Plan prices are not shown in the Site Dashboard, and you will not be prompted to enter billing information as described below.
 
 If the site is associated with an Enterprise Flagship organization, additional Performance plans not shown in the Site Dashboard are available to purchase.
 
-[Contact our sales team](https://pantheon.io/contact-us){.external} or reach out to your dedicated Client Sales Executive for details.
+[Contact our sales team](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
 
 ## Purchase a New Plan
 This section covers purchasing a new plan. Review the [previous section](#basic-plan) on feature availability before switching plans to Basic.
@@ -150,7 +150,7 @@ Invoices and transaction history related to this change can be found in **<span 
 Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox. 
 
 <Alert title="Note" type="info" markdown="1">
-While all site plans downgrades will be effective immediately, no partial refunds will be issued, per our [terms of service](https://pantheon.io/terms-of-service#tos-11){.external}.
+While all site plans downgrades will be effective immediately, no partial refunds will be issued, per our [terms of service](https://pantheon.io/terms-of-service#tos-11).
 </Alert>
 
 

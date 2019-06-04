@@ -15,7 +15,7 @@ export env=dev
 </div>
 
 ## Default Temporary Path
-Pantheon configures an appropriate temporary path for [WordPress](https://github.com/pantheon-systems/WordPress/blob/4.9.6/wp-config.php#L83-L86){.external} and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/8.5.3/sites/default/settings.pantheon.php#L146-L154){.external}. Drupal 7 sites can achieve the same configuration by adding the following to `settings.php`:
+Pantheon configures an appropriate temporary path for [WordPress](https://github.com/pantheon-systems/WordPress/blob/4.9.6/wp-config.php#L83-L86) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/8.5.3/sites/default/settings.pantheon.php#L146-L154). Drupal 7 sites can achieve the same configuration by adding the following to `settings.php`:
 
 ```php
 /**

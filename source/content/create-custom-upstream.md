@@ -88,7 +88,7 @@ Choose your preferred Git host:
   ```
 </div>
 <div markdown="1" role="tabpanel" class="tab-pane" id="gitlab">
-You can [sign up](https://gitlab.com/users/sign_in){.external} for a GitLab.com account, or use a self-managed GitLab installation.
+You can [sign up](https://gitlab.com/users/sign_in) for a GitLab.com account, or use a self-managed GitLab installation.
 
 1. From your GitLab dashboard click **New project**.
 
@@ -260,7 +260,7 @@ Custom Upstreams from GitLab repositories must be created for you by Pantheon Su
 
 1. Prepare a new GitLab user specifically for Pantheon access.
 
-1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens){.external} with the `API` scope:
+1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens) with the `API` scope:
 
     ![GitLab Personal Access Token](/source/docs/assets/images/gitlab-api.png)
 

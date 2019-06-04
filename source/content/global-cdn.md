@@ -5,7 +5,7 @@ earlynote: The documentation on this page discusses features and options that ar
 searchboost: 200
 ---
 
-Pantheon's new [Global CDN](https://pantheon.io/global-cdn){.external} is a core platform offering, with improved performance and security for customer sites. Content is served from 60+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org){.external}.
+Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 60+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org).
 
 <Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 <p>Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
@@ -64,7 +64,7 @@ All sites are eligible. Upgrade to the Global CDN to reduce HTTPS costs and take
 </table>
 
 ## Cache Clearing
-We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external} or [module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external} to take advantage of the granular cache clearing capabilities of the Global CDN. Additionally, you can remove all pages from cache at once from the Site Dashboard, within the Site Admin, and even from the command line.
+We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) to take advantage of the granular cache clearing capabilities of the Global CDN. Additionally, you can remove all pages from cache at once from the Site Dashboard, within the Site Admin, and even from the command line.
 
 For more details, see [Clearing Caches for Drupal and WordPress](/docs/clear-caches/).
 
@@ -87,7 +87,7 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
         192.123.456.789 example.com
         ```
 
-      4. Test HTTPS locally by entering your domain in the browser. If the site is accessible over HTTPS with a <span class="secure glyphicons glyphicons-lock"></span> [Secure status](https://support.google.com/chrome/answer/95617?hl=en){.external}, the test was successful. Remove the edits made to your hosts file once you have finished testing.
+      4. Test HTTPS locally by entering your domain in the browser. If the site is accessible over HTTPS with a <span class="secure glyphicons glyphicons-lock"></span> [Secure status](https://support.google.com/chrome/answer/95617?hl=en), the test was successful. Remove the edits made to your hosts file once you have finished testing.
 
 
 3. Click **Details** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS host to use the provided values.

@@ -54,7 +54,7 @@ You can also find your site's machine name using the Terminus command `site:info
 </Accordion>
 
 ### Drush and WP-CLI
-Pantheon supports running [Drush (Drupal)](https://drushcommands.com/){.external} and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/){.external} commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
+Pantheon supports running [Drush (Drupal)](https://drushcommands.com/) and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/) commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
 
 Start with the [basic command structure described above](#command-structure). The commands to invoke Drush and WP-CLI are `remote:drush` and `remote:wp`, respectively. Include `--` followed by the Drush or WP-CLI command and all arguments. For example:
 

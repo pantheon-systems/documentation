@@ -15,57 +15,12 @@ Here's an example of how PHP errors can slow down a site. This benchmark was per
 ![Benchmark example using Drupal's Generate Errors](/source/docs/assets/images/benchmark-example-generate-errors.png)
 
 Each loop executed user\_load(1, TRUE), then triggered the error. Times are rounded to 2 decimals.
-<table>
-<colgroup>
-		<col width="120">
-		<col width="120">
-		<col width="120">
-		<col width="120">
-		<col width="120">
-		<col width="120">
-		<col width="120">
-	</colgroup><thead>
-		<tr>
-			<th> </th>
-			<th>1 time</th>
-			<th>25 times</th>
-			<th>50 times</th>
-			<th>100 times</th>
-			<th>1,000 times</th>
-			<th>10,000 times</th>
-		</tr>
-	</thead><tbody>
-		<tr>
-			<td><strong>none</strong></td>
-			<td>0.00s</td>
-			<td>0.08s</td>
-			<td>0.17s</td>
-			<td>0.30s</td>
-			<td>3.04s</td>
-			<td>32.81s</td>
-		</tr>
-		<tr>
-			<td><strong>E_NOTICE</strong></td>
-			<td>0.01s</td>
-			<td>0.16s</td>
-			<td>0.34s</td>
-			<td>0.71s</td>
-			<td>7.10s</td>
-			<td>79.52s</td>
-		</tr>
-		<tr>
-			<td><strong>E_WARNING</strong></td>
-			<td>0.01s</td>
-			<td>0.16s</td>
-			<td>0.33s</td>
-			<td>0.70s</td>
-			<td>7.67s</td>
-			<td>134.68s</td>
-		</tr>
-	</tbody>
-</table>
- 
 
+|               | 1 time | 25 times | 50 times | 100 times | 1,000 times | 10,000 times |
+|:------------- |:------ |:-------- |:-------- |:--------- |:----------- |:-------------|
+| **none**      | 0.00s  | 0.08s    | 0.17s    | 0.30s     | 3.04s       | 32.81s       |
+| **E_NOTICE**  | 0.01s  | 0.16s    | 0.34s    | 0.71s     | 7.10s       | 79.52s       |
+| **E_WARNING** | 0.01s  | 0.16s    | 0.33s    | 0.70s     | 7.67s       | 134.68	    	|
 
 Turning off error reporting suppresses the symptom, not the problem, and **PHP execution will still be slow as long as there are errors**.
 
@@ -102,7 +57,7 @@ If the cache lifetime is set to something that doesn't make sense for your traff
 ### Drupal Note
 See our [guidelines on Drupal's performance settings](/docs/drupal-cache/) for more details.
 
-Other caching systems that aren't on by default that should be enabled include [block caching](/docs/drupal-cache/), [Views](https://drupal.org/project/views){.external} result and query caching, and [Panels](https://drupal.org/project/panels){.external} caching.
+Other caching systems that aren't on by default that should be enabled include [block caching](/docs/drupal-cache/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
 
 ### Using the Database to Cache in Drupal
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.
@@ -111,7 +66,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
 
 Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.
 
-One of the services Pantheon offers is [Redis as a caching backend](/docs/redis/), which is a key-value store and is optimized for this type of work. For a real world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.pantheon.io/blog/why-we-recommend-redis-caching-backend){.external}.​
+One of the services Pantheon offers is [Redis as a caching backend](/docs/redis/), which is a key-value store and is optimized for this type of work. For a real world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.pantheon.io/blog/why-we-recommend-redis-caching-backend).​
 
 ### WordPress Caching Note
 There is no built-in caching in WordPress. Pantheon offers Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-cache plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon#edge-cache) is included within the `mu-plugins` directory of our repository, which helps the edge cache (Varnish) communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up the site and may even slow it down.
@@ -125,7 +80,7 @@ There are a large number of caches involved in every single request, including:
 
 - [Pantheon Global CDN](/docs/global-cdn-caching/) - Spread out across multiple servers, and the cache is not shared between servers.
 - [APC](/docs/alternative-php-cache/) - PHP has its own opcode cache, which is not shared between application containers.
-- [Drupal](https://drupal.org/node/326504){.external} and [Redis](/docs/redis/) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
+- [Drupal](https://drupal.org/node/326504) and [Redis](/docs/redis/) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 ## Too Much Traffic
 Of course, too much site traffic can be a problem if you just don't have enough resources.
@@ -149,12 +104,12 @@ Calling external services during regular requests can be a performance problem. 
 Sometimes these are necessary (e.g. getting a Twitter feed). The recommendation here is to avoid making external calls during regular requests as much as possible. As an alternative, you can make these calls via cron and store them in the database. The data can be refreshed with the desired frequency. The advantage is that even if the external service is slow or goes down your site won't be affected.
 
 ## Memory Errors
-An *Allowed memory size of <bytes\> exhausted* or *Out of Memory* error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary between [plans](https://pantheon.io/plans/pricing-comparison){.external}, so sites that handle complex or large data sets, use many modules or plugins, or use memory-intensive features will need to plan accordingly and obtain the proper plan to avoid memory overruns. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.
+An *Allowed memory size of <bytes\> exhausted* or *Out of Memory* error means that the application's PHP Memory Limit is trying to allocate more memory than the maximum amount of memory any single PHP request can utilize. Memory limits vary between [plans](https://pantheon.io/plans/pricing-comparison), so sites that handle complex or large data sets, use many modules or plugins, or use memory-intensive features will need to plan accordingly and obtain the proper plan to avoid memory overruns. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.
 
 Debugging memory issues can be challenging. Here are some things to consider when addressing memory issues:
 
 - Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified
-- Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/){.external} or [XHProf](http://php.net/manual/en/book.xhprof.php){.external}) or to help refactor code that could be leaking memory
+- Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/) or [XHProf](http://php.net/manual/en/book.xhprof.php)) or to help refactor code that could be leaking memory
 - Enabling [Redis](/docs/redis/) could boost site performance by providing an in-memory backend caching
 - [Update PHP version](/docs/php-versions/)
 - In case the source of the high memory usage is unclear, it might be helpful to use using a memory profiling module / plugin on the production site temporarily. Note that memory profiling most often has a performance overhead, so keep a close eye on the site while profiling. Usually a few hours will provide enough data.
@@ -162,9 +117,9 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 Please note that memory issues caused by custom code fall outside our [scope of support](/docs/support/#scope-of-support).
 
 ### Drupal
-Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler){.external} module can help troubleshoot issues by logging peak memory usage.
+Disabling modules that are unneeded will help reduce memory usage. The [Memory profiler](https://www.drupal.org/project/memory_profiler) module can help troubleshoot issues by logging peak memory usage.
 
 GD Image library and UI modules such as Views UI, Feeds UI, etc are known causes for high memory usage. 
 
 ### WordPress
-Refer to [Debugging in WordPress](https://codex.wordpress.org/Debugging_in_WordPress){.external} from the WordPress.org Codex for information on debugging common issues.
+Refer to [Debugging in WordPress](https://codex.wordpress.org/Debugging_in_WordPress) from the WordPress.org Codex for information on debugging common issues.

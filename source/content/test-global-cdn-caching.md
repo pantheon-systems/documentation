@@ -6,7 +6,7 @@ categories: []
 ---
 ## Verify the Global CDN is Working on Your Pantheon Site
 
-Use the [web utility](https://varnishcheck.pantheon.io/){.external} to check to see if caching is working on your Pantheon-hosted website. This tool performs up to two web requests to your site and will check the headers to determine if the CDN can cache your site. If not, it will make recommendations specific to your site configuration. Please note that this utility does not check for cookies that are set in your frontend code (i.e. JavaScript). If you have any feedback, let us know by [contacting support](/docs/support).
+Use the [web utility](https://varnishcheck.pantheon.io/) to check to see if caching is working on your Pantheon-hosted website. This tool performs up to two web requests to your site and will check the headers to determine if the CDN can cache your site. If not, it will make recommendations specific to your site configuration. Please note that this utility does not check for cookies that are set in your frontend code (i.e. JavaScript). If you have any feedback, let us know by [contacting support](/docs/support).
 
 ## Test If Global CDN Caching Is Working by Reading HTTP Headers
 
@@ -25,7 +25,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
   - A Pantheon webserver generated the original page content. This will always be shown, even if a page is served from the a Global CDN cache.
 
 - **X-Drupal-Cache: HIT**
-  - Drupal's internal page cache served the content. See  [\_drupal\_bootstrap\_page\_cache](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/_drupal_bootstrap_page_cache/7){.external} for more information.  **Drupal Only**
+  - Drupal's internal page cache served the content. See  [\_drupal\_bootstrap\_page\_cache](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/_drupal_bootstrap_page_cache/7) for more information.  **Drupal Only**
 
 - **X-Generator: Drupal 7 (https://www.drupal.org/)**
   - Drupal built the page. **Drupal Only**
@@ -100,17 +100,17 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
 ### Test Global CDN with Chrome
 
-1. Open [DevTools](https://developers.google.com/web/tools/chrome-devtools){.external} and click on the **Network** tab.
+1. Open [DevTools](https://developers.google.com/web/tools/chrome-devtools) and click on the **Network** tab.
 2. Load a page on your site.
 3. Click on the URL of the request, under the **Name** column of the Requests table.
-4. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers){.external} tab.
+4. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers) tab.
 
 ### Test Global CDN with Firefox
 
-1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor){.external}.
+1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor).
 2. Load a page on your site.
 3. In the Network Monitor window, click on the URL of the request, under the **File** column of the Requests table.
-4. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers){.external} tab.
+4. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
 
 ### Test Global CDN with Internet Explorer
 

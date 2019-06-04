@@ -141,7 +141,7 @@ In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to o
     Do not remove `wp-config.php`.    
     </Alert>
 
-1. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress){.external}.
+1. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress).
 1. Commit and switch back to Git mode.
 1. Apply 1-click core updates via the dashboard and the auto-resolve should be checked. The update warning should disappear after a successful update.
 

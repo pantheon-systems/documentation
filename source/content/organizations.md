@@ -10,10 +10,10 @@ Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev, 
 ## Create an Organization
 Current users can create their own Agency or EDU organization by completing the appropriate form:
 
-- [Create an Agency Organization](https://dashboard.pantheon.io/organizations/create){.external}
-- [Create an EDU Organization](https://dashboard.pantheon.io/organizations/create-edu){.external}
+- [Create an Agency Organization](https://dashboard.pantheon.io/organizations/create)
+- [Create an EDU Organization](https://dashboard.pantheon.io/organizations/create-edu)
 
-New users can always [register here](https://pantheon.io/register){.external}. Any other type of organization must be created by Pantheon. [Contact us](https://pantheon.io/contact-us){.external} for more information.
+New users can always [register here](https://pantheon.io/register). Any other type of organization must be created by Pantheon. [Contact us](https://pantheon.io/contact-us) for more information.
 
 After you create an organization, you can invite team members, add existing sites, or create and migrate new sites to Pantheon.
 
@@ -48,7 +48,7 @@ View all of your collaborators, filter them by role, manage their roles, and add
 [Learn how to add users to the organization](/docs/organization-dashboard/#add-users-to-your-organization).
 
 ### Upstreams
-[Custom Upstreams](/docs/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us){.external} to learn how your Partner Agency can get Custom Upstreams.
+[Custom Upstreams](/docs/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us) to learn how your Partner Agency can get Custom Upstreams.
 
 ### Support
 Review, open, or reply to support requests associated with your organization and its sites on the Support tab. Learn about [how to get support](/docs/support).
@@ -57,7 +57,7 @@ Review, open, or reply to support requests associated with your organization and
 Upload a logo (85 x 85 px). Enterprise and EDU+ Administrators can add payment and terms of service information.
 
 ## Features
-All Partner Agencies and EDU organizations have Change Management and Custom Upstreams. Not all account levels qualify for Multidev, custom Vanity domains, email domains, or Single Sign-On (SSO). [Contact us](https://pantheon.io/contact-us){.external} to find out how to add features to your organization.
+All Partner Agencies and EDU organizations have Change Management and Custom Upstreams. Not all account levels qualify for Multidev, custom Vanity domains, email domains, or Single Sign-On (SSO). [Contact us](https://pantheon.io/contact-us) to find out how to add features to your organization.
 
 ### Multidev
 Partner Agencies, Enterprise accounts, and EDU organizations with [Gold support](/docs/support/#support-features-and-response-times) and above have [Multidev](/docs/multidev) available with up to 10 active environments to use. All organization members with privileged roles have access to these environments. Team members of a site who are not members of the supporting organization will not have access to Multidev environments.

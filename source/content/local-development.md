@@ -15,7 +15,7 @@ Pantheon cannot troubleshoot or support local development solutions; however, we
 ## Before You Begin
 Be sure you have:
 
-- A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando){.external} integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
+- A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
     - Pantheon uses a [particular architecture to maximize performance and availability](/docs/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
     - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/docs/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
@@ -177,7 +177,7 @@ This file is ignored by the `.gitignore` file  in [WordPress](https://github.com
 
 #### Example `wp-config-local.php` File
 
-The following can be used as a starting point for the `wp-config-local.php` file which needs to be saved in the same location as your `wp-config.php` file. You will need to replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key$){.external}).
+The following can be used as a starting point for the `wp-config-local.php` file which needs to be saved in the same location as your `wp-config.php` file. You will need to replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key$)).
 
 ```php
 <?php

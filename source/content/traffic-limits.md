@@ -18,7 +18,7 @@ Basic plan sites do not have this protective feature and would see a change to t
 For details, see [Metrics in the Site Dashboard](/docs/metrics/).
 
 ### What is a traffic spike?
-A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable. For details, see [Pricing Comparison](https://pantheon.io/plans/pricing-comparison){.external}.
+A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable. For details, see [Pricing Comparison](https://pantheon.io/plans/pricing-comparison).
 
 ### How will Pantheon reach out to me if my site has an overage?
 For sites on the Basic plan, overages are charged at the end of the month.
@@ -41,7 +41,7 @@ There are some inherent limitations with using an analytics suite (e.g. Google A
  - Browsers/users that block cookies or javascript, including adblockers.
  - Users that close the browser before the tracking script loads.
  - Any page with a JavaScript error.
- - Content pre-fetching, by browsers or [apps](https://www.facebook.com/business/help/1514372351922333){.external}.
+ - Content pre-fetching, by browsers or [apps](https://www.facebook.com/business/help/1514372351922333).
  - Automated traffic from bots or load testing.
 
 Finally, analytics implementations can be variable. It may be that your analytics solution isn't tracking all pages served for good reason. For example, you may exclude CMS administrators to give you a view of "visitors only". Misconfiguration may also play a factor.

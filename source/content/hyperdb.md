@@ -6,7 +6,7 @@ categories: [performance]
 ---
 
 <Alert title="Note" type="info" markdown="1">
-Replica MySQL databases are available for sites on the [Elite service level](https://pantheon.io/resources/elite-plan-overview){.external}. [Contact sales](https://pantheon.io/pantheon-elite-plans){.external} to inquire about our Elite plans.
+Replica MySQL databases are available for sites on the [Elite service level](https://pantheon.io/resources/elite-plan-overview). [Contact sales](https://pantheon.io/pantheon-elite-plans) to inquire about our Elite plans.
 </Alert>
 
 ## Advantages of MySQL Replication
@@ -19,9 +19,9 @@ Keep in mind, HyperDB is a powerful tool with several tuning options based on da
 
 ## Install and Configure HyperDB
 
-Before you begin, a Customer Success Manager (**CSM**) must change your site service level to "Elite". The platform will automatically configure and manage your master and replica databases. [Contact us](https://pantheon.io/contact-us){.external} to learn more about service levels and how a CSM can help.
+Before you begin, a Customer Success Manager (**CSM**) must change your site service level to "Elite". The platform will automatically configure and manage your master and replica databases. [Contact us](https://pantheon.io/contact-us) to learn more about service levels and how a CSM can help.
 
-Download the archive of [HyperDB from the WordPress plugin repository](https://wordpress.org/support/plugin/hyperdb){.external} and move the `db.php` file into the `/wp-content` directory. This is a drop-in plugin and does not require activation at any time.
+Download the archive of [HyperDB from the WordPress plugin repository](https://wordpress.org/support/plugin/hyperdb) and move the `db.php` file into the `/wp-content` directory. This is a drop-in plugin and does not require activation at any time.
 
 Next, configure the master/replica databases within `db-config.php`. This file should be stored within the same directory as the site's `wp-config.php` file.
 

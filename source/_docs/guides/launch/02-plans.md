@@ -26,7 +26,7 @@ If you plan to pay for the site or if you want to wait to transfer ownership, yo
 
 1. From the Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
 2. Go to the **Billing** tab and select a payment method, then click **Update Payment Method**. You can add a new card or choose from cards already associated with your user account.
-3. Select the desired [plan](https://pantheon.io/pricing/){.external} from the **Plan** tab, then click **Update Plan**.
+3. Select the desired [plan](https://pantheon.io/pricing/) from the **Plan** tab, then click **Update Plan**.
 
 As the site owner, you’ll receive an email confirming the change to the site. After the site billing is processed, you’ll receive an updated invoice.
 
