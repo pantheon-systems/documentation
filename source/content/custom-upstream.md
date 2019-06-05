@@ -11,13 +11,17 @@ categories: []
 If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the [Partner Program Page](https://pantheon.io/agencies/partner-program) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 
 <Callout title="Accelerate Your Workflow" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Improve your agency's development efficiency with custom DevOps training from Pantheon experts.</p>
+
+Improve your agency's development efficiency with custom DevOps training from Pantheon experts.
+
 </Callout>
 
 For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) and [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
+
 Support for Custom Upstreams requires that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/support/#custom-upstreams). If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/docs/composer/).
+
 </Alert>
 
 ## Benefits
@@ -34,9 +38,8 @@ Not only does this workflow free up developer time, it establishes a sustainable
 
 New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
-<p style="text-align:center" markdown="1">
-![Custom upstream update strategy](/source/docs/assets/images/update-diagram.svg)
-</p>
+![Custom upstream update strategy](../docs/assets/images/update-diagram.svg)
+
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
 
 ### Scale Client Services
@@ -46,51 +49,52 @@ Spend less time doing non-core activities and reclaim lost billable hours where 
 
 ## Workflow Overview
 There are three levels of repositories in play here, and updates flow "downstream" from one level to another.
+
 <div class="upstream-overview-outter-clear">
-  <div class="upstream-overview-outter">
-    <div class="upstream-content-inner-icon">
-      <img alt="Parent upstream level" style="padding-left:10px;" src="/source/docs/assets/images/levelone-icon.svg">
-      <ul class="upstream" style="margin-right:40px;display:inline-flex;">
-        <li>Core Updates</li>
-      </ul>
-    </div>
-    <div class="upstream-content-inner-content">
-      <h3>Level 1: Pantheon's Core Upstream</h3>
-      <p markdown="1">The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.</p>
-    </div>
-  </div>
+<div class="upstream-overview-outter">
+<div class="upstream-content-inner-icon">
+<img alt="Parent upstream level" style="padding-left:10px;" src="../docs/assets/images/levelone-icon.svg" />
+<ul class="upstream" style="margin-right:40px;display:inline-flex;">
+<li>Core Updates</li>
+</ul>
+</div>
+<div class="upstream-content-inner-content">
+<h3>Level 1: Pantheon's Core Upstream</h3>
+The top level repository will be one of Pantheon's core upstreams (either [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), or [Drupal 7](https://github.com/pantheon-systems/drops-7)). Core upstream updates are distributed by Pantheon and must be applied downstream.
+</div>
+</div>
 </div>
 <div class="upstream-overview-outter-clear">
-  <div class="upstream-overview-outter">
-    <div class="upstream-content-inner-icon">
-      <img alt="Custom upstream level" style="padding-left:10px;" src="/source/docs/assets/images/leveltwo-icon.svg">
-      <ul class="upstream">
-        <li>Parent Theme</li>
-        <li>Common plugins / Contrib modules</li>
-      </ul>
-    </div>
-    <div class="upstream-content-inner-content">
-      <h3>Level 2: Your Custom Upstream</h3>
-      <p>The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).</p>
-
-      <p markdown="1">The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/) <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="" data-content="Contact support to create a GitLab based custom upstream."><em class="fa fa-info-circle"></em></a>. It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.</p>
-    </div>
-  </div>
+<div class="upstream-overview-outter">
+<div class="upstream-content-inner-icon">
+<img alt="Custom upstream level" style="padding-left:10px;" src="../docs/assets/images/leveltwo-icon.svg" />
+<ul class="upstream">
+<li>Parent Theme</li>
+<li>Common plugins / Contrib modules</li>
+</ul>
 </div>
-  <div class="upstream-overview-outter">
-    <div class="upstream-content-inner-icon">
-      <img alt="site upstream level" style="padding-left:10px;" src="/source/docs/assets/images/levelthree-icon.svg">
-      <ul class="upstream">
-        <li>Child Theme</li>
-        <li>Site-specific plugins / Custom code</li>
-      </ul>
-    </div>
-    <div class="upstream-content-inner-content">
-      <h3>Level 3: Site Repository</h3>
-      <p>Finally, core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
+<div class="upstream-content-inner-content">
+<h3>Level 2: Your Custom Upstream</h3>
+The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
 
-      The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily.</p>
-    </div>
+The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/) <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="" data-content="Contact support to create a GitLab based custom upstream."><em class="fa fa-info-circle"></em></a>. It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
+</div>
+</div>
+</div>
+<div class="upstream-overview-outter">
+<div class="upstream-content-inner-icon">
+<img alt="site upstream level" style="padding-left:10px;" src="../docs/assets/images/levelthree-icon.svg" />
+<ul class="upstream">
+<li>Child Theme</li>
+<li>Site-specific plugins / Custom code</li>
+</ul>
+</div>
+<div class="upstream-content-inner-content">
+<h3>Level 3: Site Repository</h3>
+Finally, core updates and changes to the common codebase make their way down to the site repository for each site that uses the Custom Upstream.
+
+The site repository allows separation between common code across all sites, tracked in the Custom Upstream, and site specific customizations, tracked in each individual site and facilitates rolling out updates quickly and easily.
+</div>
 </div>
 
 
