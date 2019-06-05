@@ -1,6 +1,6 @@
 ---
-title: Create a New Site in your Choice of Pantheon Region
-description: Learn how to get Limited Availability access to and launch sites in the European Union, Australia, or Canada.
+title: Pantheon Site Regions and Data Residency
+description: Learn how to get Limited Availability access to and launch sites in Australia, Canada, or the European Union.
 tags: [create, regions]
 categories: []
 contributors: [edwardangert, rachelwhitton, ari]
@@ -12,14 +12,14 @@ searchboost: 150
 The documentation on this page discusses features and options that are not yet available to all users.
 </div>
 
-Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from the European Union, Australia, or Canada.
+Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from Australia, Canada, or the European Union.
 
 During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US Region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in your choice of region before the feature becomes generally available in late 2019.
 
 ## Use Cases
 There are many scenarios in which you might prefer running a site in a data center outside of the default United States Region. Common use cases include:
 
-* Compliance standards that require data residency within the borders of Australia, the European Union, or Canada
+* Compliance standards that require data residency within the borders of Australia, Canada, or the European Union
 * Improved performance and user experience for authenticated traffic originating near the desired region
 
 ## Region Availability
@@ -27,8 +27,8 @@ Once enabled, this Organization-wide feature allows <a href="/docs/change-manage
 
 * United States (**US**) (Default)
 * Australia (**AUS**)
-* European Union (**EU**)
 * Canada (**CA**)
+* European Union (**EU**)
 
 ### Data Residency and Protection
 
@@ -48,8 +48,8 @@ With this set of region-specific resources, now you can run WordPress or Drupal 
  - Available region codes are:
    - `us`
    - `aus`
-   - `eu`
    - `ca`
+   - `eu`
 
  For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
 
