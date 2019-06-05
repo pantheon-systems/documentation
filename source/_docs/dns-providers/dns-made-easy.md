@@ -29,7 +29,15 @@ Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmade
 3. Leave the **Name** field blank and enter the A record value provided by Pantheon in the **IP** field.
 4. Select desired Time to Live (TTL).
 
-  {% include("ttl.twig") %}
+  <Accordion title="Learn More" id="ttl" icon="info-sign">
+
+  #### Time to Live (TTL)
+
+  The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour).
+
+  When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
+
+  </Alert>
 
 5. Click **Submit**:
 
@@ -40,7 +48,15 @@ Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmade
 2. Leave the **Name** field blank and enter the first AAAA record value provided by Pantheon in the **IPv6** field.
 3. Select desired Time to Live (TTL).
 
-  {% include("ttl2.twig") %}
+  <Accordion title="Learn More" id="ttl2" icon="info-sign">
+
+  #### Time to Live (TTL)
+
+  The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour).
+
+  When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to be in place everywhere.
+
+  </Alert>
 
 4. Click **Submit**. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability:
 

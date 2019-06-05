@@ -18,7 +18,12 @@ This guide requires:
  - A locally running dev site or remote site URL to point tests to.
  - An empty project directory. In the commands below we assume the directory `~/projects/simple-behat-test`.
 
-{% include("content/composer-updating.html")%}
+<Alert title="Note" type="info">
+As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
+
+As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
+
+</Alert>
 
 ## Install Behat and Mink
 

@@ -23,6 +23,7 @@ import CardGroup from "../components/cardGroup"
 import SEO from "../components/seo"
 import DefList from "../components/defList.js"
 import Definition from "../components/definition.js"
+import Enablement from "../components/enablement.js"
 
 const shortcodes = {
   Callout,
@@ -37,6 +38,7 @@ const shortcodes = {
   CardGroup,
   DefList,
   Definition,
+  Enablement,
 }
 
 class DocTemplate extends React.Component {

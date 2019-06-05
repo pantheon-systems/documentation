@@ -37,7 +37,12 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
     This process will create a secure keypair, with the public key going to Pantheon and the private key stored in CircleCI. If you remove either key, you will need to [generate a new pair](/docs/ssh-keys/) manually to fix the build process.
 
     <Accordion title={"Troubleshooting"} id={"troubleshoot-install"} icon={"wrench"}">
-      {% include("content/composer-updating.html")%}
+      <Alert title="Note" type="info">
+      As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
+
+      As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
+
+      </Alert>
 
       ### Composer Content-Length Mismatch and/or Degraded Mode
       If you encounter an issue such as:
