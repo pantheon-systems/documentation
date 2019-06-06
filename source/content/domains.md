@@ -9,9 +9,11 @@ use:
 ---
 A domain name is the web address or URL used to visit your site. The Domain Name System (DNS) resolves human-readable names like `www.example.com` into machine-readable IP addresses like 127.0.0.1. All Pantheon sites are accessible via platform domains, and you can easily connect your own custom domain to paid sites.
 
-<Callout title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps</p>
-</Callout>
+<Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps
+
+</Enablement>
 
 ## Platform Domains
 Pantheon issues platform domains for all environments. Each environment (Dev, Test, Live, each Multidev) is accessible via the platform domain, matching the following patterns:

@@ -8,9 +8,11 @@ categories: []
 
 Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/docs/global-cdn/) will neither get the user's response from any existing cache nor store the response from the user into the cache.
 
-<Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
-</Callout>
+<Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Learn industry best practices for caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
+
+</Enablement>
 
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this, we recommend setting the `NO_CACHE` cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 

@@ -51,6 +51,8 @@ All links from the video are provided below.
  - [Office Hours](https://pantheon.io/agencies/office-hours)
 </Callout>
 
-<Callout title="Getting Essential Developer Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.</p>
-</Callout>
+<Enablement title="Getting Essential Developer Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
+
+</Enablement>

@@ -64,9 +64,11 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
   </div>
 </div>
 
-<Callout title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
-</Callout>
+<Enablement title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+
+</Enablement>
 
 ## Artifact Deployment
 Only files unique to the project are tracked as part of the project's main "source" repository on GitHub, which requires an abstraction layer to compile dependencies and deploy an entire "artifact" to the site repository on Pantheon. The abstraction layer is facilitated by CircleCI in the Pantheon maintained examples, but the principles are the same for other continuous integration service providers.

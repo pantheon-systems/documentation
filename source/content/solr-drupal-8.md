@@ -8,9 +8,11 @@ contributors: [peter-pantheon, cityofoaksdesign]
 [Apache Solr](/docs/solr) is a system for indexing and searching site content. {% include("content/solr-version.html") %}
 
 
-<Callout title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
-</Callout>
+<Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+
+</Enablement>
 
 ## Before You Begin
 Be sure that you:
