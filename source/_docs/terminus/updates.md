@@ -23,7 +23,7 @@ The latest release of Terminus is a major version upgrade, which may not be back
     <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-update">Copy</button>
     <figure><pre id="terminus-update"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar update</code></pre></figure>
   <Alert title="Note" type="info">
-  Terminus uses [Semantic versioning](https://semver.org/){.external}. Be sure to fully test compatibility with existing configurations before upgrading to new major releases.
+  Terminus uses [Semantic versioning](https://semver.org/). Be sure to fully test compatibility with existing configurations before upgrading to new major releases.
   </Alert>
   </div>
   <h2>Troubleshooting</h2>
@@ -39,7 +39,7 @@ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/ma
 
 ## EOL Timeline
 
-Each major and minor version of Terminus is fully supported for one year from the release of the subsequent version. During the supported period, serious bugs and security issues that have been reported are fixed in patch releases. See [Semantic Versioning](https://semver.org/){.external} for more information on versioning.
+Each major and minor version of Terminus is fully supported for one year from the release of the subsequent version. During the supported period, serious bugs and security issues that have been reported are fixed in patch releases. See [Semantic Versioning](https://semver.org/) for more information on versioning.
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We strongly encourage you to update Terminus well ahead of the EOL schedule, so that regressions in new versions can be reported and patched in time.
 

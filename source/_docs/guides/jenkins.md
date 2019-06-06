@@ -22,8 +22,8 @@ While this guide demonstrates Continuous Integration for Drupal 8 sites, the sam
 <div id="wordpress-mods" class="collapse" markdown="1" style="padding:10px;">
 WordPress users can make use of this guide with a few modifications:
 
-- Install [WP-CLI](https://wp-cli.org/){.external} on the Jenkins instance instead of Drush.
-- Create the local copy of the new site from [https://github.com/pantheon-systems/example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer){.external}. 
+- Install [WP-CLI](https://wp-cli.org/) on the Jenkins instance instead of Drush.
+- Create the local copy of the new site from [https://github.com/pantheon-systems/example-wordpress-composer](https://github.com/pantheon-systems/example-wordpress-composer). 
 - Specify WordPress when creating the Pantheon site: `terminus site:create $SITE "My Site" "WordPress"`
 - Use WP-CLI commands for any build steps.
 

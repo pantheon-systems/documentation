@@ -30,7 +30,15 @@ Keep this page open and login to your [Namecheap account <span class="glyphicons
 4. Select **A Record** for Type and enter **@** in the **Host** field and enter the A record value provided by Pantheon in the **Value** field.
 5. Select desired Time to Live (TTL).
 
-    {% include("ttl.twig") %}
+    <Accordion title="Learn More" id="ttl" icon="info-sign">
+
+    #### Time to Live (TTL)
+
+    The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour).
+
+    When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
+
+    </Alert>
 
 6. Click **Save changes**.
 

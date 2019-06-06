@@ -8,7 +8,7 @@ permalink: docs/guides/:basename/
 multidev: true
 ---
 
-This guide covers installing [Drupal Commerce](https://drupalcommerce.org/){.external}, an e-commerce implementation designed specifically for Drupal. At the end of this guide you will have a Drupal Commerce site, GitHub repository, and Circle CI configuration for testing.
+This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an e-commerce implementation designed specifically for Drupal. At the end of this guide you will have a Drupal Commerce site, GitHub repository, and Circle CI configuration for testing.
 
 
 ## Before You Begin
@@ -17,15 +17,20 @@ This process uses Composer to manage modules and dependencies. Before proceeding
  - [Composer Fundamentals and Workflows](/docs/composer)
  - [Build Tools](/docs/guides/build-tools)
 
-{% include("content/composer-updating.html")%}
+<Alert title="Note" type="info">
+As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
+
+As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
+
+</Alert>
 
 In addition to Pantheon, you will need accounts at:
 
- - [GitHub](https://github.com){.external}
- - [CircleCI](https://circleci.com){.external}
+ - [GitHub](https://github.com)
+ - [CircleCI](https://circleci.com)
 
 
-1.  Follow the [Before You Begin](/docs/guides/build-tools/#before-you-begin) section of the Build Tools guide to install Composer, Terminus, and the Terminus Build Tools plugin on your local computer, and create machine tokens for [GitHub](https://help.github.com/articles/creating-an-access-token-for-command-line-use/){.external} and [CircleCI](https://circleci.com/account/api){.external}. Export the tokens to your current terminal session, as described below.
+1.  Follow the [Before You Begin](/docs/guides/build-tools/#before-you-begin) section of the Build Tools guide to install Composer, Terminus, and the Terminus Build Tools plugin on your local computer, and create machine tokens for [GitHub](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) and [CircleCI](https://circleci.com/account/api). Export the tokens to your current terminal session, as described below.
 
 2.  This guide uses several variables in example [Terminus](/docs/terminus) commands. This lets you copy and paste without needing to change the variable. For this to work, you must first export the variables in your local terminal session:
 
@@ -64,7 +69,7 @@ In addition to Pantheon, you will need accounts at:
 
         cd $SITENAME
 
-2. Use Composer to install the [Commerce Installation Profile](https://github.com/drupalcommerce/commerce_base){.external}:
+2. Use Composer to install the [Commerce Installation Profile](https://github.com/drupalcommerce/commerce_base):
 
    ```bash
    composer config repositories.commerce_base vcs https://github.com/drupalcommerce/commerce_base
@@ -82,7 +87,7 @@ In addition to Pantheon, you will need accounts at:
    git push origin master
    ```
 
-5. From your [CircleCI Dashboard](https://circleci.com/dashboard){.external} you can see that tests are already being run on your new commit. Once they pass, CircleCI will push the changes to your Site Dashboard.
+5. From your [CircleCI Dashboard](https://circleci.com/dashboard) you can see that tests are already being run on your new commit. Once they pass, CircleCI will push the changes to your Site Dashboard.
 
 6. Go to your newly created Site Dashboard. Under the <span class="glyphicons glyphicons-wrench"></span> **Dev** tab, click on <span class="glyphicons glyphicons-embed-close"></span> **Code**, then **install later**. You should now see your commit history. Once CircleCI completes the automated tests built into our repository, it will commit the build assets and push them to Dev:
 

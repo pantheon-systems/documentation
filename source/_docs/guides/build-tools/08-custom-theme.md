@@ -17,7 +17,7 @@ previousurl: guides/build-tools/merge/
 editpath: build-tools/08-custom-theme.md
 image: buildToolsGuide-thumb
 ---
-This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik){.external} theme using the Terminus Drush Console plugin. For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming){.external} on drupal.org.
+This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik) theme using the Terminus Drush Console plugin. For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming) on drupal.org.
 
 1. Start by creating a new branch based off the tip of master, then push it up to GitHub:
 
@@ -43,12 +43,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
       <figure><pre id="drush-generate-theme"><code class="command bash" data-lang="bash">terminus drupal $SITE.$ENV -- generate:theme</code></pre></figure>
     </div>
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-drupal-console"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Drupal Console Generate Theme</h3></a>
-       </div>
-       <div id="understand-drupal-console" class="collapse">
-         <div class="panel-inner" markdown="1">
+    <Accordion title={"Drupal Console Generate Theme"} id={"#understand-drupal-console"} icon={"lightbulb"}>
         Drupal Console will ask a series of questions about your theme. For many of them you can use the default value by just hitting **Enter**. Provide additional information as prompted, such as:
 
           * Theme: Amazing Theme
@@ -59,9 +54,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
         ![Drupal console generate theme](/source/docs/assets/images/pr-workflow/drupal-console-generate-theme.png)
 
         Once you do this, the files for your new theme will be written to the directory `code/web/themes/custom/amazing_theme` on the Pantheon Multidev environment. If you gave your theme a different name, replace `amazing_theme` with the appropriate name for your theme.
-        </div>
-        </div>
-      </div>
+</Accordion>
 
 4. Commit theme files generated in the last command to the Multidev environment, either from the Site Dashboard or from the command line. We don't _need_ this particular commit to be built by CircleCI, so we'll add `[ci skip]` to the commit message to skip:
 

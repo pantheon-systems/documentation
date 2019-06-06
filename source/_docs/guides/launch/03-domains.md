@@ -60,7 +60,7 @@ Once you begin this process, you have:
     Note
     The validation file to pre-provision HTTPS must be accessible over HTTP, not just HTTPS. A redirect from HTTP to HTTPS will work, but if a request over HTTP returns a 404, for example, the validation will fail.
 
-    If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin){.external} to generate DNS TXT records to validate domain ownership.
+    If you're unable to host the challenge file, consider using the [Terminus ACME Plugin](https://github.com/pantheon-systems/terminus-acme-plugin) to generate DNS TXT records to validate domain ownership.
     </Alert>
 
 6. Return to the Pantheon Site Dashboard and refresh the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
@@ -69,11 +69,7 @@ After verifying domain ownership, your domain's HTTPS certificate(s) will automa
 
 When a certificate is ready you can switch DNS destinations from your existing site to your new Pantheon site without HTTPS interruption.
 
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#local-test"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-info-sign"></span> Test Locally Before Updating DNS (optional)</h3></a>
-  </div>
-  <div id="local-test" class="collapse" markdown="1" style="padding:10px;">
+<Accordion title={" Test Locally Before Updating DNS (optional)"} id="{local-test"} icon={"info-sign""}
   Ready to launch like the pros?
   Before updating DNS, you can validate HTTPS configuration for the domain is ready on Pantheon by testing locally:
 
@@ -81,7 +77,7 @@ When a certificate is ready you can switch DNS destinations from your existing s
   2. Navigate to the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page.
   3. Select **Details** next to the bare domain.
   4. Copy the A record value provided in the Pantheon Site Dashboard.
-  5. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)){.external} file with the IP address from the previous step followed by the domain name, for example:
+  5. Add a line to your [local hosts](https://en.wikipedia.org/wiki/Hosts_(file)) file with the IP address from the previous step followed by the domain name, for example:
 
           192.123.456.789 example.com
 
@@ -89,7 +85,6 @@ When a certificate is ready you can switch DNS destinations from your existing s
 
   6. Make sure your site works with HTTPS by entering your domain with HTTPS in the browser (e.g., `https://www.example.com/`).
   7. When you finish testing, remove the edits made to your hosts file.
-  </div>
-</div>
+</Accordion>
 ### Maintenance Window
 If you are unable to prove domain ownership (e.g. WP Engine blocks serving the required challenge file) you will not be able to pre-provision HTTPS to prevent service interruption. In these cases, we recommend completing the next section ([Configure DNS](/docs/guides/launch/configure-dns/)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.

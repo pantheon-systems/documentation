@@ -52,12 +52,12 @@ The first thing we should do is install WordPress and configure it.
     If you installed WooCommerce Services to get live shipping rates from USPS or Automated Taxes you'll be prompted to install Jetpack & connect your site to WordPress.com. WooCommerce Services needs this connection in order to work.
 
     <Alert title="Note" type="info">
-      Jetpack is a sophisticated plugin that detects test sites. It will turn on [safe mode](https://jetpack.com/support/safe-mode/){.external} and prevent the connection to WordPress.com. For this reason it's best to only activate Jetpack in the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of your site and let it run in dev mode for your **<span class="glyphicons glyphicons-wrench"></span> Dev** and **<span class="glyphicons glyphicons-equalizer"></span> Test** environments.</p>
+      Jetpack is a sophisticated plugin that detects test sites. It will turn on [safe mode](https://jetpack.com/support/safe-mode/) and prevent the connection to WordPress.com. For this reason it's best to only activate Jetpack in the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of your site and let it run in dev mode for your **<span class="glyphicons glyphicons-wrench"></span> Dev** and **<span class="glyphicons glyphicons-equalizer"></span> Test** environments.</p>
     </Alert>
 
     If you need to test Jetpack functionality, you can enable the Jetpack connection in safe mode by clicking **Fix Jetpack's Connection** and then **Start Fresh & Create New Connection**.
 
-    To understand more about Jetpack, read their documentation on [safe mode](https://jetpack.com/support/safe-mode/){.external}.
+    To understand more about Jetpack, read their documentation on [safe mode](https://jetpack.com/support/safe-mode/).
 
 6. When you connect your site, you'll see a connection to WordPress.com. This should only take a minute and then it should automatically return you to your WordPress dashboard.
 
@@ -67,4 +67,4 @@ The first thing we should do is install WordPress and configure it.
 
     ![WooCommerce installation wizard complete](/source/docs/assets/images/guides/woocommerce/09-WooCommerce-installation-wizard-complete.png)
 
-We won't cover configuring every setting, but I encourage you to read the getting started guide and documentation for each plugin. Now is also a good point to configure your payment gateway so you can [accept test payments](https://robotninja.com/blog/test-woocommerce-payments-via-credit-card/){.external}, as well as configure your shipping costs, and tax settings.
+We won't cover configuring every setting, but I encourage you to read the getting started guide and documentation for each plugin. Now is also a good point to configure your payment gateway so you can [accept test payments](https://robotninja.com/blog/test-woocommerce-payments-via-credit-card/), as well as configure your shipping costs, and tax settings.

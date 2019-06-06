@@ -27,7 +27,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
     </div>
 
     <Alert title="Note" type="info">
-      Pantheon also maintains Composer based examples for [WordPress](https://github.com/pantheon-systems/example-wordpress-composer){.external} and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer){.external} that are currently in alpha, requiring `--stability=alpha` in the command line options. While this guide demonstrates Drupal 8, the same workflow can be achieved on all frameworks.</p>
+      Pantheon also maintains Composer based examples for [WordPress](https://github.com/pantheon-systems/example-wordpress-composer) and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer) that are currently in alpha, requiring `--stability=alpha` in the command line options. While this guide demonstrates Drupal 8, the same workflow can be achieved on all frameworks.</p>
     </Alert>
 
     Provide additional information as prompted, such as Organization (if any), and tokens for GitHub and CircleCI access:
@@ -36,13 +36,13 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
 
     This process will create a secure keypair, with the public key going to Pantheon and the private key stored in CircleCI. If you remove either key, you will need to [generate a new pair](/docs/ssh-keys/) manually to fix the build process.
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#troubleshoot-install"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Troubleshooting</h3></a>
-      </div>
-      <div id="troubleshoot-install" class="collapse" markdown="1" style="padding:10px;">
+    <Accordion title={"Troubleshooting"} id={"troubleshoot-install"} icon={"wrench"}">
+      <Alert title="Note" type="info">
+      As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
 
-      {% include("content/composer-updating.html")%}
+      As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
+
+      </Alert>
 
       ### Composer Content-Length Mismatch and/or Degraded Mode
       If you encounter an issue such as:
@@ -76,7 +76,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
          The site name exampleuniquesitename is already taken on Pantheon.
      ```
 
-     To resolve, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/create){.external}, then authenticate Terminus and try the build command again:
+     To resolve, [generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus and try the build command again:
 
     <div class="copy-snippet">
       <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth">Copy</button>
@@ -86,11 +86,10 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
      ### Additional Support
      Pantheon's composer based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
-       * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues){.external}
-       * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues){.external}
-       * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues){.external}
-      </div>
-    </div>
+       * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
+       * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues)
+       * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues)
+    </Accordion>
 
 2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on GitHub:
 

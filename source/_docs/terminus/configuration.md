@@ -39,4 +39,4 @@ The example above does two things:
 
  - When the command `terminus auth:login` is run, it will automatically provide the correct email address. This is useful if you find yourself logging in to multiple accounts frequently, and want to use your regular account by default.
 
- - The Terminus Plugin [Pancakes](https://github.com/terminus-plugin-project/terminus-pancakes-plugin){.external} lets you open your Pantheon site database with a SQL GUI client. Rather than define the app every time, this configuration will always use Sequel Pro, unless otherwise specified.
+ - The Terminus Plugin [Pancakes](https://github.com/terminus-plugin-project/terminus-pancakes-plugin) lets you open your Pantheon site database with a SQL GUI client. Rather than define the app every time, this configuration will always use Sequel Pro, unless otherwise specified.

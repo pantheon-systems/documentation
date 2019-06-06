@@ -36,7 +36,7 @@ Using [Terminus](/docs/terminus/) is our recommended way to install a WordPress 
       <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
     </div>
 
-2. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create){.external}, then authenticate Terminus:
+2. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
 
       <div class="copy-snippet">
         <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth">Copy</button>
@@ -50,7 +50,7 @@ Using [Terminus](/docs/terminus/) is our recommended way to install a WordPress 
         <figure><pre id="sftp"><code class="command bash" data-lang="bash">terminus connection:set &lsaquo;site&rsaquo;.dev sftp</code></pre></figure>
       </div>
 
-4. Use Terminus to execute the `wp core multisite-install` command ([full documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/){.external}):
+4. Use Terminus to execute the `wp core multisite-install` command ([full documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/)):
 
     <Alert title="Note" type="info">
     The default behavior for this command is to create a Site Network with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.</p>
