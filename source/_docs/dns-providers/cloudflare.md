@@ -39,7 +39,15 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 4. Create a **CNAME** record for the bare domain (e.g. `example.com`) using the value from the previous step (e.g. `live-example.pantheonsite.io`).
 5. Select desired Time to Live (TTL).
 
-  {% include("ttl.twig") %}
+  <Accordion title="Learn More" id="ttl" icon="info-sign">
+
+  #### Time to Live (TTL)
+
+  The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour).
+
+  When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
+
+  </Alert>
 
 6. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 7. Click **Add Record**.
@@ -73,11 +81,19 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
   ![CAA configure](/source/docs/assets/images/cf-caa-configure.png)
 
-  If you *are* using Cloudflare's CDN, they will [automatically add](https://support.cloudflare.com/hc/en-us/articles/115000310792-Configuring-CAA-Records-){.external} CAA records for their CA providers when Universal SSL is enabled. Do *not* add a record for `letsencrypt.org` in this case.
+  If you *are* using Cloudflare's CDN, they will [automatically add](https://support.cloudflare.com/hc/en-us/articles/115000310792-Configuring-CAA-Records-) CAA records for their CA providers when Universal SSL is enabled. Do *not* add a record for `letsencrypt.org` in this case.
 
 5. Select desired Time to Live (TTL).
 
-  {% include("ttl2.twig") %}
+  <Accordion title="Learn More" id="ttl2" icon="info-sign">
+
+  #### Time to Live (TTL)
+
+  The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour).
+
+  When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to be in place everywhere.
+
+  </Alert>
 
 6. Click **Add Record**. Your record should look similar to the following once it has been created:
 

@@ -40,7 +40,7 @@ Follow the procedure outlined below for your CMS:
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
 ### Download the WordPress SendGrid Plugin {.info}
-The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/){.external} replaces the `wp_mail` function with API integration, making it easy to configure and get started.
+The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the `wp_mail` function with API integration, making it easy to configure and get started.
 
 Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
 
@@ -65,14 +65,17 @@ Two methods can be used to integrate SendGrid with your Drupal 8 site: API or SM
 
 #### Considerations
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
-- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration){.external} module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/docs/composer/).
+- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/docs/composer/).
 
 ### SendGrid API Integration {.info}
+
 <Alert title="Warning" type="danger" markdown="1">
-The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow as described in our [Build Tools](/docs/guides/build-tools/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea){.external} file.
+
+The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow as described in our [Build Tools](/docs/guides/build-tools/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
+
 </Alert>
 
-1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration){.external} module using Composer:
+1. Install the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module using Composer:
 
   ```bash
   composer require drupal/sendgrid_integration
@@ -85,9 +88,9 @@ The SendGrid API Integration Module for Drupal 8 requires a Composer managed wor
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
 ### SendGrid SMTP Integration {.info}
-A stable release for Drupal 8 is not yet available for the [SMTP Authentication Support](https://www.drupal.org/project/smtp){.external} module. However, [some users](https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM){.external} have reported success with the beta version.
+A stable release for Drupal 8 is not yet available for the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module. However, [some users](https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM) have reported success with the beta version.
 
-1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp){.external} module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
+1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/docs/terminus):
 
   ```bash
   terminus drush <site>.<env> -- en smtp -y
@@ -121,7 +124,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 - API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/docs/composer/). For Drupal 7 we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
 
 ### SendGrid API Integration {.info}
-1. Install [Composer](https://getcomposer.org){.external}, then install and authenticate [Terminus](/docs/terminus/install/).
+1. Install [Composer](https://getcomposer.org), then install and authenticate [Terminus](/docs/terminus/install/).
 2. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
     ```bash
@@ -140,7 +143,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
     drush dl sendgrid_integration-7.x-1.3 mailsystem composer_vendor
     ```
 {% include("content/d7-composer-init.html")%}
-7. The above configuration specifies `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor){.external} module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
+7. The above configuration specifies `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
 
     ```bash
     protected_web_paths:

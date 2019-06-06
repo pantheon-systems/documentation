@@ -34,7 +34,7 @@ All links from the video are provided below.
  - [Platform Integration Guides](/docs/guides/)
  - [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/docs/quicksilver/)
  - [Pantheon YAML Configuration Files](/docs/pantheon-yml/)
- - [Example scripts for using Pantheon's Quicksilver Platform Hooks](https://github.com/pantheon-systems/quicksilver-examples/){.external}
+ - [Example scripts for using Pantheon's Quicksilver Platform Hooks](https://github.com/pantheon-systems/quicksilver-examples/)
 
 **CHALLENGE:**
 

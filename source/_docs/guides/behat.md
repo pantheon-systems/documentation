@@ -8,17 +8,22 @@ contributors:
   - ataylorme
 ---
 
-[Behat](https://behat.org){.external} is a PHP framework for automated testing. In our [blog](https://pantheon.io/blog/behat-web-developers){.external} we discuss the advantages of using Behat to continuously test your site. This guide demonstrates how to install Behat and [Mink](http://mink.behat.org/en/latest/){.external}, and how to write simple tests.
+[Behat](https://behat.org) is a PHP framework for automated testing. In our [blog](https://pantheon.io/blog/behat-web-developers) we discuss the advantages of using Behat to continuously test your site. This guide demonstrates how to install Behat and [Mink](http://mink.behat.org/en/latest/), and how to write simple tests.
 
 ## Before You Begin
 
 This guide requires:
 
- - A local installation of [Composer](https://getcomposer.org/){.external}.
+ - A local installation of [Composer](https://getcomposer.org/).
  - A locally running dev site or remote site URL to point tests to.
  - An empty project directory. In the commands below we assume the directory `~/projects/simple-behat-test`.
 
-{% include("content/composer-updating.html")%}
+<Alert title="Note" type="info">
+As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
+
+As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
+
+</Alert>
 
 ## Install Behat and Mink
 
@@ -44,7 +49,7 @@ This guide requires:
 
 ## Configure Behat
 
-1. Behat is configured with the file `behat.yml`. If you haven't used [**YAML**](https://yaml.org/){.external} before, there is a good [YAML quickstart guide](https://yaml.org/start.html){.external}. Make the new file, and add contents below. Remember to replace `https://your-site-url/` with the actual URL to your site:
+1. Behat is configured with the file `behat.yml`. If you haven't used [**YAML**](https://yaml.org/) before, there is a good [YAML quickstart guide](https://yaml.org/start.html). Make the new file, and add contents below. Remember to replace `https://your-site-url/` with the actual URL to your site:
 
    ```yml
    default:
@@ -108,10 +113,10 @@ Review the available step definitions again by running `./vendor/bin/behat -dl`,
 
 If you find you are repeating the same things over and over, such as logging into WordPress or Drupal, try framework extensions. Each one adds additional steps, specific to their corresponding framework:
 
- - [Behat WordPress Extension](https://wordhat.info/){.external}
- - [Behat Drupal Extension](https://www.drupal.org/project/drupalextension){.external}
+ - [Behat WordPress Extension](https://wordhat.info/)
+ - [Behat Drupal Extension](https://www.drupal.org/project/drupalextension)
 
 ## See Also
 
  - [Composer Fundamentals and Workflows](/docs/composer/)
- - [Behat.org](http://behat.org){.external}
+ - [Behat.org](http://behat.org)

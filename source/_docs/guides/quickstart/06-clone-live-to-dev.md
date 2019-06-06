@@ -46,20 +46,13 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
 4. Consider creating a backup before proceeding. After Step 7, you will not be able to recover Dev database and files without a backup:
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-         <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#create-backup"><h3 class="panel-title panel-drop-title" style="cursor:pointer;">Create Backup (optional)</h3></a>
-      </div>
-      <div id="create-backup" class="collapse">
-        <div class="panel-inner" markdown="1">
+    <Accordion title={"Create Backup (optional)"} id={"#create-backup"} icon={""}>
           The Backups tab is where you manage all the details for your site's backup. A backup is composed of 3 separate archives for database, files, and code. Let’s create a backup now:
 
           1. Click **<span class="glyphicons glyphicons-cloud-upload" aria-hidden="true"></span> Backups** on the <span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> **Dev** tab of your Site Dashboard.
           2. Click **Create New Backup**.
           3. Click **<span class="glyphicons glyphicons-refresh"></span> Deploys** to return to the lesson.
-        </div>
-     </div>
-    </div>
+</Accordion>
 
 5. On the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard click **<span class="glyphicons glyphicons-server" aria-hidden="true"></span> Database / Files**.
 

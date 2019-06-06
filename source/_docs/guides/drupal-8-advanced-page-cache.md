@@ -11,13 +11,13 @@ contributors:
   - davidneedham
 ---
 
-[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache){.external} is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api){.external} and the [Pantheon Global CDN](/docs/global-cdn/).
+[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) and the [Pantheon Global CDN](/docs/global-cdn/).
 
 When you turn on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed), this module will clear only the relevant pages from the edge cache.
 
 This module has no configuration settings of its own, just enable it and it will pass along information already present in Drupal 8 to the Global CDN.
 
-To take finer grain control of how Drupal handles its cache data on both the Global CDN and internal Drupal caches, you can set and clear your own custom tags. This guide will show you how to do this using a mix of custom code and [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag){.external}.
+To take finer grain control of how Drupal handles its cache data on both the Global CDN and internal Drupal caches, you can set and clear your own custom tags. This guide will show you how to do this using a mix of custom code and [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag).
 
 ## Before You Begin
 
@@ -137,7 +137,7 @@ Now we'll look at HTTP Headers.
     content-length: 10497
     ```
 
-    You can also view headers in a web browser, if you have a browser extension to add the HTTP debugging request header, `Pantheon-Debug`, with a value of `1` (here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header){.external} and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header){.external}). In an another browser (or a [Chrome incognito window](https://support.google.com/chrome/answer/95464){.external} or [Firefox Private Window](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history#w_how-do-i-open-a-new-private-window){.external}), open the article you just created. In your browser's page inspector, you can view the HTTP requests made by the page. You may need to refresh the page to see all the network requests.
+    You can also view headers in a web browser, if you have a browser extension to add the HTTP debugging request header, `Pantheon-Debug`, with a value of `1` (here are some extensions for [Chrome](https://chrome.google.com/webstore/search/modify%20header) and [Firefox](https://addons.mozilla.org/en-US/firefox/search/?q=modify+header)). In an another browser (or a [Chrome incognito window](https://support.google.com/chrome/answer/95464) or [Firefox Private Window](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history#w_how-do-i-open-a-new-private-window)), open the article you just created. In your browser's page inspector, you can view the HTTP requests made by the page. You may need to refresh the page to see all the network requests.
 
     By clicking on the first request we can see more detailed information like the HTTP headers.
 
@@ -380,7 +380,7 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 
 The code we added clears all references to each taxonomy term every time a node is added that references the term. Clearing caches that broadly might be too aggressive if we are just concerned about listings of our taxonomy term. We can be more targeted in our clearing by adding a module that will set a more specific tag.
 
-1. Download and enable the [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag){.external} module:
+1. Download and enable the [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag) module:
 
     ```bash
     terminus drush $TERMINUS_SITE.dev -- dl views_custom_cache_tag
@@ -440,5 +440,5 @@ The code we added clears all references to each taxonomy term every time a node 
 
 ## Additional Resources.
 
- - Where you set and clear tags will vary greatly based on the needs of your site. See the [Drupal.org documentation for how you can set cache metadata directly on render arrays](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays){.external}.
- - You can also read this blog post from Aaron Wolfe of Capellic on [Pantheon Advanced Page Cache in Drupal 7](https://capellic.com/2017/11/28/using-pantheon-advanced-page-cache-in-drupal-7/){.external}.
+ - Where you set and clear tags will vary greatly based on the needs of your site. See the [Drupal.org documentation for how you can set cache metadata directly on render arrays](https://www.drupal.org/docs/8/api/render-api/cacheability-of-render-arrays).
+ - You can also read this blog post from Aaron Wolfe of Capellic on [Pantheon Advanced Page Cache in Drupal 7](https://capellic.com/2017/11/28/using-pantheon-advanced-page-cache-in-drupal-7/).

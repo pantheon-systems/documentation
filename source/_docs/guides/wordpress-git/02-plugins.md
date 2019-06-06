@@ -60,28 +60,20 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
      ![Several Plugins Added](/source/docs/assets/images/guides/git-wordpress/several-plugins-added.png)
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor2">
-          <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Learn more about these plugins</h3>
-        </a>
-      </div>
-      <div id="unique-anchor2" class="collapse" markdown="1" style="padding:10px;">
+   <Accordion title={"Learn more about these plugins"} id={"unique-anchor2"} icon={"lightbulb"}>
+   #### [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
 
-      ### [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}
+   Automatically clear related pages from [Pantheon's Global CDN](https://pantheon.io/docs/global-cdn/) when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
 
-      Automatically clear related pages from [Pantheon's Global CDN](https://pantheon.io/docs/global-cdn/) when you update content. Without this plugin, pages expire from cache after 10 minutes (600 seconds) by default. This plugin allows fresh content to be immediately served to anonymous visitors.
+   #### [WordPress Native PHP Sessions](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
 
-      ### [WordPress Native PHP Sessions](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}
+   This plugin provides a more scalable way to handle sessions than PHP's default session manager. Some plugins will require this to run on Pantheon's distributed infrastructure. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
 
-      This plugin provides a more scalable way to handle sessions than PHP's default session manager. Some plugins will require this to run on Pantheon's distributed infrastructure. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
+   #### [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)
 
-      ### [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/){.external}
+   Provides situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
 
-      Provides situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
-
-      ![Pantheon HUD](/source/docs/assets/images/pantheon-hud.png)
-      </div>
-    </div>
+   ![Pantheon HUD](/source/docs/assets/images/pantheon-hud.png)
+   </Accordion>
 
 Bam! You just nailed our first demonstration of using version control with WordPress on Pantheon sites. Follow this same approach to update plugins and for any other development tasks you normally handle in the WordPress Dashboard.

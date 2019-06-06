@@ -10,7 +10,7 @@ In this guide, you'll learn how to use Composer in small doses with WordPress an
 
 ## Before You Begin
 - Read [Composer Fundamentals and Workflows](/docs/composer/)
-- Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx){.external} and [Git](https://git-scm.com/downloads){.external} locally
+- Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and [Git](https://git-scm.com/downloads) locally
 - Create a WordPress or Drupal 7 site on Pantheon
 
   {% include("content/notes/partial-composer-adoption-warning.html") %}
@@ -146,7 +146,7 @@ Use the `require` command to add new dependencies to your project, such as libra
   <!-- Active pane content -->
   <div role="tabpanel" class="tab-pane active" id="wp-require-papc" markdown="1">
   #### Install a Plugin
-  1. Require the plugin, [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external} for example, with Composer:
+  1. Require the plugin, [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) for example, with Composer:
 
     ```command
     composer require wpackagist-plugin/pantheon-advanced-page-cache

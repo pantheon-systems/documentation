@@ -23,17 +23,17 @@ We've configured a few things for our WooCommerce site. But there are a few addi
 
 The first is [adding PHP sessions to WordPress](/docs/wordpress-sessions/). WordPress and WooCommerce core do not use PHP Sessions, but other plugins and extensions may.
 
-To enable PHP Sessions on Pantheon, install [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/){.external}. It's a free plugin you can download from WordPress.org or install through your WordPress dashboard.
+To enable PHP Sessions on Pantheon, install [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/). It's a free plugin you can download from WordPress.org or install through your WordPress dashboard.
 
 ![Install WordPress native PHP sessions plugin](/source/docs/assets/images/guides/woocommerce/10-install-WordPress-native-PHP-sessions-plugin.png)
 
 I'll install mine through the plugin installer.
 
-For any site, speed is important, and for eCommerce it's even more important. That's why Pantheon recommends the [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/){.external}. This plugin allows selective cache purging and longer cache lifetimes.
+For any site, speed is important, and for eCommerce it's even more important. That's why Pantheon recommends the [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This plugin allows selective cache purging and longer cache lifetimes.
 
 ![Install Pantheon Advanced Page Cache plugin](/source/docs/assets/images/guides/woocommerce/11-install-Pantheon-advanced-page-cache-plugin.png)
 
-You can [read more about exactly how this works](https://pantheon.io/blog/optimizing-woocommerce-pantheon-advanced-page-cache-wordpress){.external}. For our purposes, it speeds up your site and it's worth installing.
+You can [read more about exactly how this works](https://pantheon.io/blog/optimizing-woocommerce-pantheon-advanced-page-cache-wordpress). For our purposes, it speeds up your site and it's worth installing.
 
 You've probably noticed that your Pantheon site already loads in HTTPS. But while it loads HTTPS, it doesn't force HTTPS. For your users' privacy, for payment, and for SEO reasons it's a best practice to force the site to load in HTTPS.
 

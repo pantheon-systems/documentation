@@ -48,7 +48,7 @@ If the update command above returns output indicating that no updates were found
 
 ## EOL Timeline
 
-Each major and minor version of Terminus is fully supported for one year from the release of the subsequent version. During the supported period, serious bugs and security issues that have been reported are fixed in patch releases. See [Semantic Versioning](https://semver.org/){.external} for more information on versioning.
+Each major and minor version of Terminus is fully supported for one year from the release of the subsequent version. During the supported period, serious bugs and security issues that have been reported are fixed in patch releases. See [Semantic Versioning](https://semver.org/) for more information on versioning.
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We strongly encourage you to update Terminus well ahead of the EOL schedule, so that regressions in new versions can be reported and patched in time.
 

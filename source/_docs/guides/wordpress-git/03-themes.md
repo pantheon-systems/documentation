@@ -22,41 +22,35 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
 
 ## Upload a Theme
-1. Download the [Bento](https://wordpress.org/themes/bento/){.external} theme from WordPress.org to your local machine.
+1. Download the [Bento](https://wordpress.org/themes/bento/) theme from WordPress.org to your local machine.
 2. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is still set to **SFTP**.
-3. Establish a secure connection from your local to Pantheon using an SFTP client of your choice (this guide uses [Transmit](https://panic.com/transmit/){.external}).
+3. Establish a secure connection from your local to Pantheon using an SFTP client of your choice (this guide uses [Transmit](https://panic.com/transmit/)).
 
-  Click **SFTP Connection Info** then select the link to **Open in your default SFTP client**:
+   Click **SFTP Connection Info** then select the link to **Open in your default SFTP client**:
 
-  ![Open in your default SFTP client](/source/docs/assets/images/guides/git-wordpress/sftp-connection-mode.png)
+   ![Open in your default SFTP client](/source/docs/assets/images/guides/git-wordpress/sftp-connection-mode.png)
 
-  If you have already set up an SSH key, as recommended in the **Before You Begin** section of the [guide's introduction](/docs/guides/wordpress-git/#before-you-begin), you should see a new window open for your SFTP client where you can see local files and remote files on Pantheon. In Transmit, local files are managed on the left and Pantheon's on the right:
+   If you have already set up an SSH key, as recommended in the **Before You Begin** section of the [guide's introduction](/docs/guides/wordpress-git/#before-you-begin), you should see a new window open for your SFTP client where you can see local files and remote files on Pantheon. In Transmit, local files are managed on the left and Pantheon's on the right:
 
-  ![Open in your default SFTP client window](/source/docs/assets/images/guides/git-wordpress/sftp-connection-mode-client.png)
+   ![Open in your default SFTP client window](/source/docs/assets/images/guides/git-wordpress/sftp-connection-mode-client.png)
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor">
-          <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> Troubleshooting</h3>
-        </a>
-      </div>
-      <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
-      ### Manually Connect via SFTP {.info}
-      If for some reason your client does not establish a connection to Pantheon by clicking the handy default link, use the provided values from the Site Dashboard's **SFTP Connection Info** to open a connection.
+   <Accordion title={"Troubleshooting"} id={"unique-anchor"} icon={"wrench"}>
+   ### Manually Connect via SFTP
+   If for some reason your client does not establish a connection to Pantheon by clicking the handy default link, use the provided values from the Site Dashboard's **SFTP Connection Info** to open a connection.
 
-      1. The default window when opening the Transmit application provides a dialog titled **Quick Connect** where you can **Connect via SFTP**:
+   1. The default window when opening the Transmit application provides a dialog titled **Quick Connect** where you can **Connect via SFTP**:
 
-        ![New Transmit Site](/source/docs/assets/images/guides/git-wordpress/transmit-quick-connect-dialog.png)
+      ![New Transmit Site](/source/docs/assets/images/guides/git-wordpress/transmit-quick-connect-dialog.png)
 
-      2. Copy the value provided by Pantheon for **Host** and paste into Transmit's **Address** field. Do the same for **Port** and **Username**.
+   1. Copy the value provided by Pantheon for **Host** and paste into Transmit's **Address** field. Do the same for **Port** and **Username**.
 
-      3. Click the key icon next to the **Password** field to add your private SSH key, or authenticate using your Pantheon Dashboard password.
-      4. Click **Connect**:
+   1. Click the key icon next to the **Password** field to add your private SSH key, or authenticate using your Pantheon Dashboard password.
 
-        ![New Transmit Site](/source/docs/assets/images/guides/git-wordpress/transmit-quick-connect-dialog-populated.png)
+   1. Click **Connect**:
 
-      </div>
-    </div>
+      ![New Transmit Site](/source/docs/assets/images/guides/git-wordpress/transmit-quick-connect-dialog-populated.png)
+
+  </Accordion>
 
 4. Navigate to the `code/wp-content/themes` directory within the remote file manager for Pantheon on the right side. Then drag and drop the Bento theme folder from your local computer onto Pantheon to upload the theme. You'll see Transmit begin uploading, then confirm once it's done:
 
@@ -83,7 +77,7 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 
   ![create beneto-child theme stylesheet](/source/docs/assets/images/guides/git-wordpress/bento-child-css.png)
 
-4. If you don't already have your SFTP client configured to use your preferred text editor, you can do that now. Here's how we configured Transmit so that double-clicking a file opens it up for edits in [Atom](https://atom.io/){.external} (**Transmit** > **Preferences** > **Files** from the app menu):
+4. If you don't already have your SFTP client configured to use your preferred text editor, you can do that now. Here's how we configured Transmit so that double-clicking a file opens it up for edits in [Atom](https://atom.io/) (**Transmit** > **Preferences** > **Files** from the app menu):
 
   ![Transmit file config](/source/docs/assets/images/guides/git-wordpress/transmit-text-editor.png)
 
@@ -124,22 +118,14 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 
 8. Now we should have a working child theme. From the WordPress Dashboard, navigate to the Appearance tab and activate the child theme.
 
-    <div class="panel panel-drop panel-guide" id="accordion">
-      <div class="panel-heading panel-drop-heading">
-        <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#unique-anchor1">
-          <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> ProTip </h3>
-        </a>
-      </div>
-      <div id="unique-anchor1" class="collapse" markdown="1" style="padding:10px;">
-      ### WP-CLI & Terminus {.info}
-      You can do the exact same process from the command line using [Terminus](/docs/terminus/), the Pantheon CLI. Install Terminus, then run a WP-CLI command against the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment to create the child theme scaffold for you automatically. That's right, go from all the steps above to a one-liner to kick things into warp speed:
+   <Accordion title={"PropTip"} id={"unique-anchor1"} icon={"lightbulb"}>
+   #### WP-CLI & Terminus
+   You can do the exact same process from the command line using [Terminus](/docs/terminus/), the Pantheon CLI. Install Terminus, then run a WP-CLI command against the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment to create the child theme scaffold for you automatically. That's right, go from all the steps above to a one-liner to kick things into warp speed:
 
-      ```
-      terminus wp <site>.<env> -- scaffold child-theme bento-child --parent_theme=bento
-      ```
-      </div>
-    </div>
-
+   ```
+   terminus wp <site>.<env> -- scaffold child-theme bento-child --parent_theme=bento
+   ```
+  </Accordion>   
 
 9. Return to the Site Dashboard on Pantheon, and you should see two files ready to be committed to Git. They're from the child theme we just created. Write a commit message then click **Commit** to submit our new child theme to version control:
 
@@ -170,4 +156,4 @@ Finally, let’s make a few small customizations to our active child theme using
 
   ![Commit child-bento theme](/source/docs/assets/images/guides/git-wordpress/new-css-commit.png)
 
-This example is a very simple demonstration of the edit process, and is not intended to be a comprehensive resource on extending the layout or design of a theme (which likely means writing custom PHP functions). If you're looking for advanced tips on how to build and maintain themes efficiently checkout the [Theme Handbook](https://developer.wordpress.org/themes/advanced-topics/child-themes/){.external} on WordPress.org.
+This example is a very simple demonstration of the edit process, and is not intended to be a comprehensive resource on extending the layout or design of a theme (which likely means writing custom PHP functions). If you're looking for advanced tips on how to build and maintain themes efficiently checkout the [Theme Handbook](https://developer.wordpress.org/themes/advanced-topics/child-themes/) on WordPress.org.

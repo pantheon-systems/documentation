@@ -12,19 +12,19 @@ contributors:
 date: 3/26/2018
 ---
 
-Pantheon makes it easy for educators training students on Drupal and WordPress to spin up and manage free sandbox sites for their students. Using Pantheon allows you and your students to focus on the CMS rather than setting up local sites or remote infrastructure. [Please contact us if you need assistance using Pantheon to conduct your trainings.](https://pantheon.io/trainers){.external}
+Pantheon makes it easy for educators training students on Drupal and WordPress to spin up and manage free sandbox sites for their students. Using Pantheon allows you and your students to focus on the CMS rather than setting up local sites or remote infrastructure. [Please contact us if you need assistance using Pantheon to conduct your trainings.](https://pantheon.io/trainers)
 
 ## Initial Setup
 
 Before preparing sites to use Pantheon for a specific class, test out the platform and make a Pantheon organization.
 
- 1. Each trainer should [create a Pantheon account](https://pantheon.io/register){.external} for themselves.
+ 1. Each trainer should [create a Pantheon account](https://pantheon.io/register) for themselves.
 
- 2. Test that Pantheon is suitable for your training topic. Please read our [Platform Considerations](/docs/platform-considerations/) to ensure that your curriculum will work with our [opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software){.external} decisions. For instance, Pantheon does not support Drupal multisite and Node.js is not available on our containers.
+ 2. Test that Pantheon is suitable for your training topic. Please read our [Platform Considerations](/docs/platform-considerations/) to ensure that your curriculum will work with our [opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software) decisions. For instance, Pantheon does not support Drupal multisite and Node.js is not available on our containers.
 
- 3. [Please contact us](https://pantheon.io/trainers){.external} and let us know you want to use the platform as a trainer. This will ensure you have full access to all the available tools as they are developed and maintain access to enough free sandboxes for your students. We can also help guide you through the processes to ensure you have the best experience and find success.
+ 3. [Please contact us](https://pantheon.io/trainers) and let us know you want to use the platform as a trainer. This will ensure you have full access to all the available tools as they are developed and maintain access to enough free sandboxes for your students. We can also help guide you through the processes to ensure you have the best experience and find success.
 
- 4. [Create an Agency here](https://dashboard.pantheon.io/organizations/create-agency){.external}. This Agency organization will give you a dashboard overview of all of your students' sites. Creating an organization account will require a unique homepage URL. Choose a URL related to your training. You can read more about using the Organization Dashboard [here](/docs/organizations/).
+ 4. [Create an Agency here](https://dashboard.pantheon.io/organizations/create-agency). This Agency organization will give you a dashboard overview of all of your students' sites. Creating an organization account will require a unique homepage URL. Choose a URL related to your training. You can read more about using the Organization Dashboard [here](/docs/organizations/).
 
     <Alert title="Note" type="info">
       You are limited to creating one organization per unique email. If you have already created a Pantheon Agency in the past you will need to create a brand new Pantheon user account with a different email address.
@@ -38,9 +38,9 @@ Before preparing sites to use Pantheon for a specific class, test out the platfo
 
 ## Make Sites for All Students
 
-If you need to create many sites before a training, [contact us](https://pantheon.io/trainers){.external} and we can assist with this process.
+If you need to create many sites before a training, [contact us](https://pantheon.io/trainers) and we can assist with this process.
 
-Otherwise, please ask each student to [create their own Pantheon account](https://pantheon.io/register){.external} and then create a new sandbox site.  Once created, students can add your organization as a [Supporting Organization](/docs/organization-dashboard/) which will give you access to the site.
+Otherwise, please ask each student to [create their own Pantheon account](https://pantheon.io/register) and then create a new sandbox site.  Once created, students can add your organization as a [Supporting Organization](/docs/organization-dashboard/) which will give you access to the site.
 
 ## Communicating with Students
 

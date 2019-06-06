@@ -7,14 +7,14 @@ tags: [siteintegrations]
 contributors: [LukasRos, rachelwhitton]
 multidev: true
 ---
-[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/){.external} is a commercial PHP IDE that you can configure to work with your Pantheon sites. This guide explains how to use the [Composer integration](https://confluence.jetbrains.com/display/PhpStorm/Composer+Support+in+PhpStorm){.external} of JetBrains PhpStorm to install Drupal 8 dependencies.
+[JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/) is a commercial PHP IDE that you can configure to work with your Pantheon sites. This guide explains how to use the [Composer integration](https://confluence.jetbrains.com/display/PhpStorm/Composer+Support+in+PhpStorm) of JetBrains PhpStorm to install Drupal 8 dependencies.
 
 ## Before You Begin
 Be sure that you:
 
-* Install [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/){.external}
-* Install [Composer](https://getcomposer.org/){.external}
-* Create a Composer managed following the [Build Tools](/docs/guides/build-tools/) guide, which describes how to use build tools such as [GitHub](https://github.com/){.external} and [CircleCI](https://circleci.com/){.external} with [Composer](/docs/composer/) on Pantheon.
+* Install [JetBrains PhpStorm](https://www.jetbrains.com/phpstorm/)
+* Install [Composer](https://getcomposer.org/)
+* Create a Composer managed following the [Build Tools](/docs/guides/build-tools/) guide, which describes how to use build tools such as [GitHub](https://github.com/) and [CircleCI](https://circleci.com/) with [Composer](/docs/composer/) on Pantheon.
 
 ## Create A New Project
 
@@ -72,7 +72,7 @@ Be sure that you:
   ![Set Drupal-style formatting](/source/docs/assets/images/integrations/phpstorm/set-drupal-styling.png)
 
 ## Install Dependencies via Composer
-PhpStorm's Composer integration has a search interface available at **Tools** > **Composer** > **Manage Dependencies ...**. You can type the name of any package hosted on the [PHP Package Repository](https://packagist.org/){.external} in the search field.
+PhpStorm's Composer integration has a search interface available at **Tools** > **Composer** > **Manage Dependencies ...**. You can type the name of any package hosted on the [PHP Package Repository](https://packagist.org/) in the search field.
 
 Unfortunately, this interface cannot be used to install dependencies from custom repositories defined in `composer.json`:
 
@@ -85,7 +85,7 @@ Unfortunately, this interface cannot be used to install dependencies from custom
 ],
 ```
 
-This means that if your Composer extension is not on the PHP Package Repository, you have to add it manually to the `composer.json` file. Dependencies are added to the `require` section and for each package you need to specify either an exact version number or [a version constraint](https://getcomposer.org/doc/articles/versions.md){.external}.
+This means that if your Composer extension is not on the PHP Package Repository, you have to add it manually to the `composer.json` file. Dependencies are added to the `require` section and for each package you need to specify either an exact version number or [a version constraint](https://getcomposer.org/doc/articles/versions.md).
 
 1. Click **Git:Master** from the bottom right corner, then click **+ New Branch**:
 
@@ -95,7 +95,7 @@ This means that if your Composer extension is not on the PHP Package Repository,
 
   ![Checkout pathauto branch](/source/docs/assets/images/integrations/phpstorm/new-branch-name.png)
 
-3. Determine the latest available stable version from the [Pathauto](https://www.drupal.org/project/pathauto){.external} project page:
+3. Determine the latest available stable version from the [Pathauto](https://www.drupal.org/project/pathauto) project page:
 
    ![Drupal Pathauto](/source/docs/assets/images/integrations/phpstorm/Pathauto___Drupal_org.png)
 
