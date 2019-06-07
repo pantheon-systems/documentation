@@ -32,7 +32,7 @@ At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Usin
 
 See [Introduction to Domain Name Services](/docs/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
 
-<div class="alert-info alert" markdown="1">
+<div class="alert-info alert" >
 #### Note {.info}
 If the domain in question is already in use, be sure to configure your vanity domain at Pantheon _before_ changing DNS records to avoid any downtime.
 </div>

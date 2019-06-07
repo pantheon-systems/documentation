@@ -15,15 +15,23 @@ Learn industry best practices for caching, how to take advantage of them on the 
 
 Some web developers choose to aggregate all of their caching logic in one place, often the `settings.php` file of Drupal or a plugin dedicated to site-specific functionality in WordPress (as shown in the examples below). Alternatively, you can spread out cache-related code so that it is closest to the elements (i.e. sidebars, footers) that cause the cacheability of the response to be limited (as in this Drupal 8 example).
 
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
+<TabList>
+
+<Tab name="Drupal 8" id="d8" active="true">
+
+</Tab>
+
+<Tab name="Drupal 7" id="d7">
+
+</Tab>
+
+<Tab name="WordPress" id="wp">
+
+</Tab>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d8" markdown="1">
+  <div role="tabpanel" class="tab-pane active" id="d8" >
   [Drupal 8's system of cacheability metadata](https://www.drupal.org/developing/api/8/render/arrays/cacheability) is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with:
 
   ```php
@@ -33,7 +41,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
   Drupal 8 will "bubble up" this information so that if any small block on a page requires a cache max age of zero, the entire page will be uncacheable. Currently [Cache Control Override](https://www.drupal.org/project/cache_control_override) module is required for this feature to behave correctly.
   </div>
-  <div role="tabpanel" class="tab-pane" id="d7" markdown="1">
+  <div role="tabpanel" class="tab-pane" id="d7">
   Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
 
   ```php
@@ -68,7 +76,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
   }
   ```
   </div>
-  <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
+  <div role="tabpanel" class="tab-pane" id="wp">
   Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/docs/wordpress-cache-plugin) plugin for all matching requests:
 
   <Alert title="Note" type="info">

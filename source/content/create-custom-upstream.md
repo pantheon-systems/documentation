@@ -15,17 +15,10 @@ This remote repository serves as the central location for the development and ma
 
 Choose your preferred Git host:
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-<li role="presentation" class="active"><a href="#gh" aria-controls="gh" role="tab" data-toggle="tab">GitHub</a></li>
-<li role="presentation"><a href="#bb" aria-controls="bb" role="tab" data-toggle="tab">Bitbucket</a></li>
-<li role="presentation"><a href="#gitlab" aria-controls="gitlab" role="tab" data-toggle="tab">GitLab</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
-<div markdown="1" role="tabpanel" class="tab-pane active" id="gh">
-1. <a href="https://github.com/join" target=blank>Sign up for a GitHub account</a> if you do not have one already.
+<Tab title="GitHub" id="gh" active="true">
+1. [Sign up for a GitHub account](https://github.com/join) if you do not have one already.
 
 2. [Log in to GitHub](https://github.com/login/).
 
@@ -57,8 +50,11 @@ Choose your preferred Git host:
   cd agency-custom-upstream
   ```
 
-</div>
-<div markdown="1" role="tabpanel" class="tab-pane" id="bb">
+
+</Tab>
+
+<Tab title="Bitbucket" id="bb">
+
 1. [Sign up for a Bitbucket account](https://bitbucket.org/account/signup/) if you do not have one already.
 
 2. [Log in to Bitbucket](https://bitbucket.org/account/signin/) and navigate to [**Repositories**](https://bitbucket.org/dashboard/repositories).
@@ -86,8 +82,11 @@ Choose your preferred Git host:
   ```
   cd agency-custom-upstream
   ```
-</div>
-<div markdown="1" role="tabpanel" class="tab-pane" id="gitlab">
+
+</Tab>
+
+<Tab title="GitLab" id="gitlab">
+
 You can [sign up](https://gitlab.com/users/sign_in) for a GitLab.com account, or use a self-managed GitLab installation.
 
 1. From your GitLab dashboard click **New project**.
@@ -106,82 +105,88 @@ You can [sign up](https://gitlab.com/users/sign_in) for a GitLab.com account, or
     cd agency-custom-upstream
     ```
 
-</div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ## Pull in Core from Pantheon's Upstream
 To avoid incompatibilities, you must track Pantheon's corresponding upstream repository within the Custom Upstream.
 
 1. Navigate to the Custom Upstream's root directory using the command line, then add the appropriate Pantheon upstream as a [remote](https://git-scm.com/docs/git-remote):
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li id="wptab1" role="presentation" class="active"><a href="#wp1" aria-controls="wp1" role="tab" data-toggle="tab">WordPress</a></li>
-      <li id="d8tab1" role="presentation"><a href="#d81" aria-controls="d81" role="tab" data-toggle="tab">Drupal 8</a></li>
-      <li id="d7tab1" role="presentation"><a href="#d71" aria-controls="d71" role="tab" data-toggle="tab"> Drupal 7</a></li>
-    </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content no-border">
-    <div role="tabpanel" class="tab-pane active" id="wp1"><div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#wp1copy">Copy</button>
-    <figure><pre id="wp1copy"><code class="command bash" data-lang="bash">git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre></figure>
-    </div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d81"><div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#d81copy">Copy</button>
-    <figure><pre id="d81copy"><code class="command bash" data-lang="bash">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre></figure></div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d71"><div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#d71copy">Copy</button>
-    <figure><pre id="d71copy"><code class="command bash" data-lang="bash">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre></figure></div>
-    </div>
-    </div>
+    <TabList>
+
+    <Tab name="WordPress" id="wp1" active="true">
+
+    ```bash
+    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+    ```
+
+    </Tab>
+
+    <Tab name="Drupal 8" id="d81">
+
+    ```bash
+    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+    ```
+
+    </Tab>
+
+    <Tab name=" Drupal 7" id="d71">
+
+    ```bash
+    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+    ```
+
+    </Tab>
+
+    </TabList>
 
 2. Now that the Custom Upstream repository is tracking the corresponding Pantheon core upstream, we can pull in core:
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li id="wptab" role="presentation" class="active"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-      <li id="d8tab" role="presentation"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-      <li id="d7tab" role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-    </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content no-border">
-    <div role="tabpanel" class="tab-pane active" id="wp"><div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#wp2copy">Copy</button>
-    <figure><pre id="wp2copy"><code class="command bash" data-lang="bash">git checkout master
+    <TabList>
+
+    <Tab name="WordPress" id="wp1" active="true">
+
+    ```bash
+    git checkout master
     git fetch pantheon-wordpress
     git merge pantheon-wordpress/master
-    git push origin master</code></pre></figure></div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d8"><div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#d82copy">Copy</button>
-    <figure><pre id="d82copy"><code class="command bash" data-lang="bash">git checkout master
+    git push origin master
+    ```
+
+    </Tab>
+
+    <Tab name="Drupal 8" id="d81">
+
+    ```bash
+    git checkout master
     git fetch pantheon-drops-8
     git merge pantheon-drops-8/master
-    git push origin master</code></pre></figure></div>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d7"><div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#d72copy">Copy</button>
-    <figure><pre id="d72copy"><code class="command bash" data-lang="bash">git checkout master
+    git push origin master
+    ```
+
+    </Tab>
+
+    <Tab name=" Drupal 7" id="d71">
+
+    ```bash
+    git checkout master
     git fetch pantheon-drops-7
     git merge pantheon-drops-7/master
-    git push origin master</code></pre></figure></div>
-    </div>
-    </div>
+    git push origin master
+    ```
+
+    </Tab>
+
+    </TabList>
 
 ## Connect Repository to Pantheon
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#gh-https" aria-controls="gh-auth" role="tab" data-toggle="tab">GitHub</a></li>
-  <li role="presentation"><a href="#bb-https" aria-controls="bb-auth" role="tab" data-toggle="tab">Bitbucket</a></li>
-  <li role="presentation"><a href="#gitlab-https" aria-controls="gitlab-auth" role="tab" data-toggle="tab">Gitlab</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="gh-https" markdown="1">
+<Tab title="GitHub" id="gh-auth" active="true">
   1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization:
 
     ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
@@ -219,8 +224,11 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 
   4. Click **Create**.
-  </div>
-  <div role="tabpanel" class="tab-pane" id="bb-https" markdown="1">
+
+</Tab>
+
+<Tab title="Bitbucket" id="bb-auth">
+
   1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization:
 
     ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)
@@ -254,28 +262,33 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
       * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
   4. Click **Create**.
-  </div>
-<div role="tabpanel" class="tab-pane" id="gitlab-https" markdown="1">
-Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
 
-1. Prepare a new GitLab user specifically for Pantheon access.
+</Tab>
 
-1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens) with the `API` scope:
+<Tab title="Gitlab" id="gitlab-auth">
 
-    ![GitLab Personal Access Token](/source/docs/assets/images/gitlab-api.png)
+  Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
+  
+  1. Prepare a new GitLab user specifically for Pantheon access.
+  
+  1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens) with the `API` scope:
+  
+      ![GitLab Personal Access Token](/source/docs/assets/images/gitlab-api.png)
+  
+  1. From the GitLab account that maintains the repository, add the new user to the repo under **Members** with **Reporter** access.
+  
+      ![GitLab reporter permission](/source/docs/assets/images/gitlab-reporter.png)
+  
+  1. [Contact support](/docs/support/) to add the Custom Upstream to your org. You must provide:
+  
+     - A name for the custom upstream
+     - The `https` clone URL (ending in `.git`)
+     - The Access Token for the new user.
+  
 
-1. From the GitLab account that maintains the repository, add the new user to the repo under **Members** with **Reporter** access.
+</Tab>
 
-    ![GitLab reporter permission](/source/docs/assets/images/gitlab-reporter.png)
-
-1. [Contact support](/docs/support/) to add the Custom Upstream to your org. You must provide:
-
-   - A name for the custom upstream
-   - The `https` clone URL (ending in `.git`)
-   - The Access Token for the new user.
-
-</div>
-</div>
+</TabList>
 
 
 ## Edit Existing Custom Upstream Settings

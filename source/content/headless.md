@@ -16,7 +16,7 @@ Some key differences of decoupled architecture include:
 <div class="flex-panel-group">
   <div id="headless" class="flex-panel-item">
     <div class="flex-panel-body">
-      <p class="topic-info__description" markdown="1">
+      <p class="topic-info__description" >
       ![Decoupled Frontend](/source/docs/assets/images/decoupledcms-what-is-decoupled.png)
 
       **Decoupled Frontend**<br>
@@ -25,7 +25,7 @@ Some key differences of decoupled architecture include:
   </div>
   <div id="headless" class="flex-panel-item">
     <div class="flex-panel-body">
-      <p class="topic-info__description" markdown="1">
+      <p class="topic-info__description" >
       ![Content Via Web Service API](/source/docs/assets/images/decoupledcms-what-is-content.png)
 
       **Content Via Web Service API**<br>
@@ -34,7 +34,7 @@ Some key differences of decoupled architecture include:
   </div>
   <div id="headless" class="flex-panel-item">
     <div class="flex-panel-body">
-      <p class="topic-info__description" markdown="1">
+      <p class="topic-info__description" >
       ![CMS Backend and Database](/source/docs/assets/images/decoupledcms-what-is-backend.png)
 
       **CMS Backend and Database**<br>
@@ -56,20 +56,15 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
-
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-
-  <!-- 3rd Tab Nav -->
-  <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
+<li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+<lihref="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab"><a Drupal 8>  </a></li>
+<li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+
+  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" >
   Since WordPress 4.7, the WordPress API is included as part of core. There's no action needed to expose the API on Pantheon. Explore default routes and endpoints like `/wp-json/wp/v2/posts` in your browser:
 
   ![default routes wp](/source/docs/assets/images/wp-json-posts.png)
@@ -79,8 +74,8 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
   Refer to the [Rest API Handbook](https://developer.wordpress.org/rest-api/) from WordPress.org's Developer Resources for full documentation on this web service.
   </div>
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+
+  <div role="tabpanel" class="tab-pane" id="tab-2-anchor">
   #### Core Modules
   With the release of Drupal 8, Web Services have been implemented to core through different modules:
 
@@ -109,8 +104,8 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
   If you have Basic Authentication enabled, you need to set headers `PHP_AUTH_USER` and `PHP_AUTH_PW` to authenticate as our user.
   </div>
 
-  <!-- 3rd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+
+  <div role="tabpanel" class="tab-pane" id="tab-3-anchor">
   Web Services are implemented through various plugins in Drupal 7.
 
    - [RESTful](https://www.drupal.org/project/restful)

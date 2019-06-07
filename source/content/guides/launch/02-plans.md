@@ -39,7 +39,7 @@ As the site owner, you’ll receive an email confirming the change to the site. 
     <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific1"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><i class="fa fa-graduation-cap" style="line-height:.9"></i> Level Up: Load and Performance Tests (Optional)</h3></a>
   </div>
   <div id="host-specific1" class="collapse" style="padding:10px;">
-    <div markdown="1">
+    <div >
 ## Ready to launch like the pros?
 Now that you've upgraded your site to a paid plan, it's the perfect time to test how your site works in the wild.
 

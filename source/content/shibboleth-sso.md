@@ -21,20 +21,10 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 </Alert>
 
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Download Method</a></li>
+<TabList>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Composer Method</a></li>
+<Tab title="Download Method" id="tab-1-id" active="true">
 
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
 
 <Alert title="Version Number" type="export">
 In the code examples below, replace `16.x` with the downloaded version of SimpleSAMLphp.
@@ -59,10 +49,11 @@ In the code examples below, replace `16.x` with the downloaded version of Simple
   ```
 
 3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed, and add them to the repository in `private/simplesamlphp-1.16.x/cert`.
-</div>
 
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</Tab>
+
+<Tab title="Composer Method" id="tab-2-id">
+
 When using Composer to manage the SimpleSAMLphp library, you'll need to store your config files outside of the vendor directory in order to prevent those from being overwritten when you apply updates. We can use a symlink to allow SimpleSAMLphp to utilize the config files stored in the non-standard location.
 
 Commands below require a [nested docroot](/docs/nested-docroot/) structure and should all be run from the site root (not the nested docroot `web` directory).
@@ -107,8 +98,10 @@ Commands below require a [nested docroot](/docs/nested-docroot/) structure and s
 7. Commit and push these changes back to your Pantheon dev or multidev environment, where you should now be able to access the SimpleSAMLphp installation page at `dev-yoursite.pantheonsite.io/simplesaml`.
 
 8. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed, and add them to the project in `vendor/simplesamlphp/simplesamlphp/cert`.
-</div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ## Configure SimpleSAMLphp
 

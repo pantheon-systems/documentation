@@ -49,15 +49,15 @@ Make sure that you have a:
         </tr>
       </thead>
       <tbody>
-        <tr markdown="1">
+        <tr >
           <td>[Transmit](https://panic.com/transmit/)</td>
           <td>[Atom](https://atom.io/)</td>
         </tr>
-        <tr markdown="1">
+        <tr >
           <td>[Cyberduck](https://cyberduck.io/)</td>
           <td>[Sublime](https://www.sublimetext.com/)</td>
         </tr>
-        <tr markdown="1">
+        <tr >
           <td>[Filezilla](https://filezilla-project.org/)</td>
           <td>[TextMate](https://macromates.com/)</td>
         </tr>

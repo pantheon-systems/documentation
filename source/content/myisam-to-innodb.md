@@ -38,15 +38,15 @@ Here's the browser version of the script:
 
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
+
   <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">PHP 5</a></li>
-  <!-- 2nd Tab Nav -->
+
   <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">PHP 7</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <!-- Active pane content -->
+
   <div role="tabpanel" class="tab-pane active" id="tab-1-anchor"><pre><code>&lt;style&gt;
   .green { color: green; font-family: monospace;}
   .red { color: red; font-family: monospace;}

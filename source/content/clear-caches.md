@@ -27,54 +27,44 @@ We refer to this as "full cache clearing" because the operation removes all page
   ![Clear Cache Button](/source/docs/assets/images/clear-cache-button.png)
 
 ### Site Admin
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
+<TabList>
 
-  <!-- 3rd Tab Nav -->
-  <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
-</ul>
+<Tab name="WordPress" id="wp-1">
+1. Navigate to the Site Dashboard and select the desired environment.
+2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
+3. Navigate to **Settings** > **Pantheon Page Cache**, then click **Clear Cache**:
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
-  1. Navigate to the Site Dashboard and select the desired environment.
-  2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
-  3. Navigate to **Settings** > **Pantheon Page Cache**, then click **Clear Cache**:
+  ![WordPress Clear Caches](/source/docs/assets/images/wp-cc.png)
 
-    ![WordPress Clear Caches](/source/docs/assets/images/wp-cc.png)
+</Tab>
 
-  </div>
+<Tab name="Drupal 8" id="d8-2">
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
-  1. Navigate to the Site Dashboard and select the desired environment.
-  2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
-  3. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
+1. Navigate to the Site Dashboard and select the desired environment.
+2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
+3. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
 
-    ![Drupal 8 Clear Caches](/source/docs/assets/images/d8-cc.png)
+  ![Drupal 8 Clear Caches](/source/docs/assets/images/d8-cc.png)
 
-  </div>
+</Tab>
 
-  <!-- 3rd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
-  1. Navigate to the Site Dashboard and select the desired environment.
-  2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
-  3. Ensure the [Pantheon Platform API](/docs/modules#pantheon-module-drupal-7) module is enabled:
 
-    ![Pantheon Platform API module](/source/docs/assets/images/pantheon-platform-api-enabled.png)
+<Tab name="Drupal 7" id="d7-3">
 
-  4. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
+1. Navigate to the Site Dashboard and select the desired environment.
+2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
+3. Ensure the [Pantheon Platform API](/docs/modules#pantheon-module-drupal-7) module is enabled:
 
-    ![Drupal 7 Clear Caches](/source/docs/assets/images/d7-cc.png)
+  ![Pantheon Platform API module](/source/docs/assets/images/pantheon-platform-api-enabled.png)
 
-  </div>
-</div>
+4. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
+
+  ![Drupal 7 Clear Caches](/source/docs/assets/images/d7-cc.png)
+
+</Tab>
+
+</TabList>
 
 
 ### Command Line

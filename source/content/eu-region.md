@@ -7,7 +7,7 @@ contributors: [edwardangert, rachelwhitton, ari]
 searchboost: 150
 ---
 
-<Alert title="Limited Availability" type="info" markdown="1">
+<Alert title="Limited Availability" type="info" >
 The documentation on this page discusses features and options that are not yet available to all users.
 </Alert>
 

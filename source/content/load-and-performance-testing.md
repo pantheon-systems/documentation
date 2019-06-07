@@ -53,7 +53,7 @@ Ultimately, it doesn't matter what tool(s) you use as long as you test your site
 
 ##Running the Tests
 If this is a performance test, be sure to run the test on a development environment (Dev or [Multidev](/docs/multidev)) without caching. Run load tests on the Live environment before launching the site. If the site is already launched, use the Test environment instead.
-<div markdown="1" class="alert alert-danger" role="alert">
+<div  class="alert alert-danger" role="alert">
 ###Warning {.info}
 We do not recommend load testing on the Live environment if the site has already launched because you risk overwhelming your live site and causing downtime.
 </div>

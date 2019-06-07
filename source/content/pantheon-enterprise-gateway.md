@@ -58,7 +58,7 @@ See also: [FAQ and Troubleshooting for LDAP](/docs/ldap-and-ldaps/#frequently-as
 ## Considerations
 ### Set Reasonable Timeouts
 
-<Alert title="Note" type="info" markdown="1">
+<Alert title="Note" type="info" >
 
 It is very important to set reasonable timeouts for requests sent via the Pantheon Enterprise Gateway, since [normal PHP timeouts](https://secure.php.net/manual/en/function.set-time-limit.php) are not considered on external requests. Outages can occur when timeouts are not appropriately set, due to failing gateway connection requests that build up and consume resources.
 

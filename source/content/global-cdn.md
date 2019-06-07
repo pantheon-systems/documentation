@@ -59,7 +59,7 @@ All sites are eligible. Upgrade to the Global CDN to reduce HTTPS costs and take
     </tr>
     <tr>
       <th>HTTPS Service</th>
-      <td markdown="1">[Free and Managed](/docs/https)</td>
+      <td >[Free and Managed](/docs/https)</td>
       <td>BYO Cert</td>
     </tr>
   </tbody>

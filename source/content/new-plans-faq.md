@@ -74,20 +74,15 @@ No action is required. Existing sites will automatically switch to the equivalen
 ### What are the resource comparisons between new and legacy plans?
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="personal-id" role="presentation" class="active"><a href="#personal" aria-controls="basic-anchor" role="tab" data-toggle="tab">Personal</a></li>
-
-  <!-- 2nd Tab Nav -->
-  <li id="professional-id" role="presentation"><a href="#professional" aria-controls="professional" role="tab" data-toggle="tab">Professional</a></li>
-
-  <!-- 3rd Tab Nav -->
-  <li id="business-id" role="presentation"><a href="#business" aria-controls="business" role="tab" data-toggle="tab">Business</a></li>
+<li id="personal-id" role="presentation" class="active"><a href="#personal" aria-controls="basic-anchor" role="tab" data-toggle="tab">Personal</a></li>
+<lihref="#professional" aria-controls="professional" role="tab" data-toggle="tab"><a Professional>  </a></li>
+<li id="business-id" role="presentation"><a href="#business" aria-controls="business" role="tab" data-toggle="tab">Business</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="personal" markdown="1">
+
+  <div role="tabpanel" class="tab-pane active" id="personal" >
   |                        | Personal (Legacy) | Basic (New)  |
   | ---------------------- | ----------------- | ------------ |
   | Application Containers |        1          |      1       |
@@ -102,8 +97,8 @@ No action is required. Existing sites will automatically switch to the equivalen
   | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support."><em class="fa fa-info-circle"> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
   </div>
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="professional" markdown="1">
+
+  <div role="tabpanel" class="tab-pane" id="professional">
   |                        | Professional (Legacy) | Performance Small (New)  |
   | ---------------------- | --------------------- | ------------------------ |
   | Application Containers |          1            |            1             |
@@ -118,8 +113,8 @@ No action is required. Existing sites will automatically switch to the equivalen
   | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support."><em class="fa fa-info-circle">| <span style="color:red">❌</span> | <span style="color:red">❌</span> |
   </div>
 
-  <!-- 3rd pane content -->
-  <div role="tabpanel" class="tab-pane" id="business" markdown="1">
+
+  <div role="tabpanel" class="tab-pane" id="business">
   |                        | Business (Legacy)     | Performance Large (New)  |
   | ---------------------- | --------------------- | ------------------------ |
   | Application Containers |           2           |           3              |

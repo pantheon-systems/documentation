@@ -78,19 +78,24 @@ Sites that have the environment locked on Pantheon in addition to enabling the m
 
 Alternatively, you can resolve 403 errors by using [Terminus](/docs/terminus) to disable the module:
 
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-</ul>
+<TabList>
+
+<Tab name="Drupal 8" id="d8" active="true">
+
+</Tab>
+
+<Tab name="Drupal 7" id="d7">
+
+</Tab>
 
 <!-- Tab panes -->
-<div class="tab-content" markdown="1">
-<div role="tabpanel" class="tab-pane active" id="d8" markdown="1">
+<div class="tab-content" >
+<div role="tabpanel" class="tab-pane active" id="d8" >
 ```bash
 terminus remote:drush <site>:<env> -- pm-uninstall basic_auth -y
 ```
 </div>
-<div role="tabpanel" class="tab-pane" id="d7" markdown="1">
+<div role="tabpanel" class="tab-pane" id="d7">
 ```bash
 terminus remote:drush <site>:<env> -- pm-disable basic_auth -y
 ```

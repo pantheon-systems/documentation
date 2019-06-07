@@ -10,7 +10,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 
 ## Available Logs
 
-<table class="table  table-bordered table-responsive" markdown="1">
+<table class="table  table-bordered table-responsive" >
 <thead>
   <tr>
     <th>Log</th>
@@ -27,7 +27,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
   <tr>
     <th>nginx-access.log</th>
     <td>Up to 60 days of logs</td>
-    <td  markdown="1">Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log).</td>
+    <td  >Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log).</td>
   </tr>
   <tr>
     <th>nginx-error.log</th>

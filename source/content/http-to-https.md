@@ -54,19 +54,10 @@ Use this as temporary solution while working to fix each problem at its origin.
 ### Database cleanup
 Use the following techniques to replace insecure references to your domain in the site's database. The result should be that the browser loads pages of your WordPress or Drupal site securely with no warnings.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+<TabList>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal</a></li>
-</ul>
+<Tab title="WordPress" id="tab-1-id" active="true">
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
   **Via Plugin**
 
   You can use the [Really Simple SSL](https://wordpress.org/plugins/really-simple-ssl/) plugin to automatically detect and fix mixed content messages. For additional details, see [this related blog post](https://pantheon.io/blog/how-get-rid-those-pesky-mixed-content-messages-wordpress).
@@ -98,15 +89,18 @@ Use the following techniques to replace insecure references to your domain in th
   2. Now, from the **Live** environment, clone your database back from Test, making sure to select "https" under **Convert URLs' Protocol to:**:
 
       ![Cloning the Test database to Live, while converting URLs](/source/docs/assets/images/dashboard/clone-test-to-live.png)
-  </div>
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</Tab>
+
+<Tab title="Drupal" id="tab-2-id">
+
   Drupal 7 sites can use [Drush Search and Replace (sar)](https://www.drupal.org/project/sar) by [adding custom Drush command](/docs/drush/#add-custom-drush-commands).
 
   Drupal 8 sites can use the [Entity API](https://www.drupal.org/docs/8/api/entity-api/introduction-to-entity-api-in-drupal-8) to fetch data from entities in the database that may include insecure references.
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ## Clear Caches
 Clear Drupal and WordPress object caches in the [database and/or in Redis](/docs/redis/#clear-cache) in addition to manually flush edge caches by going to your Pantheon Dashboard and clicking the **Clear Caches** button.

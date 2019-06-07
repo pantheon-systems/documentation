@@ -49,7 +49,7 @@ Terminus command structure typically includes `<site>.<env>` in order to determi
     and displayed in the Site Dashboard.
   </dd>
   <dt>Site Name: &lt;site&gt;</dt>
-  <dd markdown="1">
+  <dd >
     Machine readable, such as "your-awesome-site", either derived automatically
     by the platform from the site label or uniquely defined during site creation
     via Terminus. This value is used to construct [platform

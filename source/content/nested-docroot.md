@@ -21,21 +21,29 @@ This is especially useful for third party dependencies, such as those installed 
 ## Disable One-click Updates
 If you wish to stop using One-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/docs/terminus):
 
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#d7-set-upstream" aria-controls="d7-set-upstream" role="tab" data-toggle="tab">Drupal 7</a></li>
-  <li role="presentation"><a href="#d8-set-upstream" aria-controls="d8-set-upstream" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li role="presentation"><a href="#wp-set-upstream" aria-controls="wp-set-upstream" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
+<TabList>
+
+<Tab name="Drupal 7" id="d7-set-upstream" active="true">
+
+</Tab>
+
+<Tab name="Drupal 8" id="d8-set-upstream">
+
+</Tab>
+
+<Tab name="WordPress" id="wp-set-upstream">
+
+</Tab>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <div markdown="1" role="tabpanel" class="tab-pane active" id="d7-set-upstream">
+  <div  role="tabpanel" class="tab-pane active" id="d7-set-upstream">
     <pre><code class="bash hljs">terminus site:upstream:set &lt;site&gt; empty-7</code></pre>
   </div>
-  <div markdown="1" role="tabpanel" class="tab-pane" id="d8-set-upstream">
+  <div  role="tabpanel" class="tab-pane" id="d8-set-upstream">
     <pre><code class="bash hljs">terminus site:upstream:set &lt;site&gt; empty</code></pre>
   </div>
-  <div markdown="1" role="tabpanel" class="tab-pane" id="wp-set-upstream">
+  <div  role="tabpanel" class="tab-pane" id="wp-set-upstream">
     <pre><code class="bash hljs">terminus site:upstream:set &lt;site&gt; empty-wordpress</code></pre>
   </div>
 </div>
@@ -68,16 +76,9 @@ If your site utilizes a [Custom Upstream](/docs/custom-upstream/) with a `panthe
 ### Convert an Existing Site
 You'll need to move the CMS code into the `web` subdirectory, either manually or by using one of the commands below.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-  <li role="presentation"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d7" markdown="1">
+<Tab title="Drupal 7" id="d7" active="true">
   The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
   [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
@@ -106,9 +107,11 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
             └── settings.php
     └── themes
   ```
-  </div>
 
-  <div role="tabpanel" class="tab-pane" id="d8" markdown="1">
+</Tab>
+
+<Tab title="Drupal 8" id="d8">
+
   The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
   [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
@@ -135,9 +138,11 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
     ├── index.php
   ```
 
-  </div>
 
-  <div role="tabpanel" class="tab-pane" id="wp" markdown="1">
+</Tab>
+
+<Tab title="WordPress" id="wp">
+
   The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
   [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
@@ -174,8 +179,10 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
       ├── themes
       ├── plugins
   ```
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 After using one of these commands, verify the new file locations with `git status` before committing and pushing.
 

@@ -70,61 +70,47 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 </Alert>
 
 ### Install a New Module
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-<!-- Active tab -->
-<li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-    <!-- 2nd Tab Nav -->
-    <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
-</ul>
 
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor">
-<p markdown="1">
+<TabList>
+-
+<Tab title="Drupal 8" id="d8-1" active="true">
+
 1. Get the URL to the code you want to install from Drupal.org:
 
-    ![Drupal.org views module](/source/docs/assets/images/drupal-copy-module-link.png)
+   ![Drupal.org views module](/source/docs/assets/images/drupal-copy-module-link.png)
 
 
-<Alert title="Note" type="info">
-Make sure the module has a version marked `8.x-*` before installing it on a Drupal 8 site.
-</Alert>
+    <Alert title="Note" type="info">
 
-</p><p markdown="1">
+    Make sure the module has a version marked `8.x-*` before installing it on a Drupal 8 site.
+    </Alert>
 
-2. From the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab of your Pantheon Site Dashboard, click **Visit Development Site**. Sign in with your admin credentials.
+1. From the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab of your Pantheon Site Dashboard, click **Visit Development Site**. Sign in with your admin credentials.
 
-</p><p markdown="1">
 
-3. Under the **Manage** menu, click on **Extend**, then **+ Install new module**. Paste the URL from Step 1. You can also upload a tarball or zip file from your desktop:
+
+1. Under the **Manage** menu, click on **Extend**, then **+ Install new module**. Paste the URL from Step 1. You can also upload a tarball or zip file from your desktop:
 
     ![Installing a module on Drupal 8](/source/docs/assets/images/drupal-8-install-module.png)
 
-</p>
-</div>
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor">
-<p markdown="1">
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7-2">
+
 1. Get the URL to the code you want to install from Drupal.org:
 
     ![Drupal.org views module](/source/docs/assets/images/views-module.png)
 
-</p><p markdown="1">
+1. From the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab of your Pantheon Site Dashboard, click **Visit Development Site**, then navigate to the administration page.
 
-2. From the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab of your Pantheon Site Dashboard, click **Visit Development Site**, then navigate to the administration page.
-
-</p><p markdown="1">
-
-3. Paste the URL into Drupal's update manager. You can also upload a tarball or zip file from your desktop:
+1. Paste the URL into Drupal's update manager. You can also upload a tarball or zip file from your desktop:
 
     ![Installing via update manager](/source/docs/assets/images/install-via-update-manager.png)
 
-</p>
-</div>
-</div>
+</Tab>
 
+</TabList>
 
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live.
 

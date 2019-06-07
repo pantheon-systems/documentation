@@ -5,7 +5,7 @@ tags: [services]
 categories: [performance]
 ---
 
-<Alert title="Note" type="info" markdown="1">
+<Alert title="Note" type="info" >
 
 Replica MySQL databases are available for sites on the [Elite service level](https://pantheon.io/resources/elite-plan-overview). [Contact sales](https://pantheon.io/pantheon-elite-plans) to inquire about our Elite plans.
 

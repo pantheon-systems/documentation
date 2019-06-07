@@ -86,10 +86,15 @@ If you do not find your service provider in the table above, check with their su
 
 Use the following integration methods for Drupal and WordPress to configure an external SMTP service:
 
-<ul class="nav nav-tabs" role="tablist">
-  <li class="active" role="presentation"><a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal 7/8</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
+<TabList>
+
+<Tab name="Drupal 7/8" id="drupal" active="true">
+
+</Tab>
+
+<Tab name="WordPress" id="wp">
+
+</Tab>
 
 <!-- Tab panes -->
 <div class="tab-content">

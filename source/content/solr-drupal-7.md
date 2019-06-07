@@ -93,7 +93,7 @@ You will need to enable either Apache Solr Search or Search API Solr Search, dep
 <!-- Tab panes -->
 <div class="tab-content">
 <!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" >
 #### Enabling Apache Solr Search (apachesolr) {.info}
 
 Enable both the **Apache Solr framework** and **Apache Solr Search** modules.
@@ -106,7 +106,7 @@ Note that the default connection parameters are correct and do not need changing
 </div>
 
 <!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+<div role="tabpanel" class="tab-pane" id="tab-2-anchor">
 #### Enabling Search API Solr Search (search\_api\_solr) {.info}
 
 Three modules are required; [entity](https://drupal.org/project/entity), [search\_api](https://drupal.org/project/search_api) and [search\_api\_solr](https://drupal.org/project/search_api_solr) need to be installed and enabled.

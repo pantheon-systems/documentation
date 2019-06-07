@@ -149,7 +149,7 @@ You will have one site — go ahead and create another if you'd like. If you cho
       <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span>Mapping Custom Hostnames</h3>
     </a>
   </div>
-  <div id="unique-anchor" class="collapse" markdown="1" style="padding:10px;">
+  <div id="unique-anchor" class="collapse"  style="padding:10px;">
   ### Mapping Custom Hostnames (subdomain configurations only)
   Upon installation and configuration the main site will load properly (e.g., `dev-<example>.pantheonsite.io`). However, additional network sites created will fail to load because `pantheonsite.io` doesn't support sub-sub-domains (e.g., `<new-sub-site>.dev-<example>.pantheonsite.io`). WordPress Site Networks using a subdomain configuration require custom domains to be mapped to each network site in order to load properly.
 

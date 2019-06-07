@@ -24,45 +24,48 @@ Conflicts can occur when modified file(s) within your site's codebase do not ali
 ### How do I resolve conflicts when updating Core?
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).</p>
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-  <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d8">
+<Tab title="Drupal 8" id="d8" active="true">
   <pre><code>
   git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
   # resolve conflicts
   git push origin master
   </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="d7">
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7">
+
   <pre><code>
   git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
   # resolve conflicts
   git push origin master
   </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="d6">
+
+</Tab>
+
+<Tab title="Drupal 6" id="d6">
+
   <pre><code>
   git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
   # resolve conflicts
   git push origin master
   </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
+
+</Tab>
+
+<Tab title="WordPress" id="wp">
+
   <pre><code>
   git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
   # resolve conflicts
   git push origin master
   </code></pre>
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 Double-check the files before going forward to make sure no bugs were introduced.
 
