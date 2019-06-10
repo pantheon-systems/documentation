@@ -29,9 +29,9 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
   <div class="flex-panel-item">
     <div class="flex-panel-body">
       <div class="flex-panel-title">
-        <h4 class="info" style="margin-top:10px;font-size:larger">GitHub</h3>
+        <h4 class="info" style="margin-top:10px;font-size:larger">GitHub</h4>
         <div class="pantheon-official">
-          <img alt="GitHub Logo" src="/source/docs/assets/images/github-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;">
+          <img alt="GitHub Logo" src="/source/docs/assets/images/github-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;" />
           <p class="pantheon-official"></p>
         </div>
       </div>
@@ -43,7 +43,7 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
       <div class="flex-panel-title">
         <h4 class="info" style="margin-top:10px;font-size:larger">CircleCI</h3>
         <div class="pantheon-official">
-          <img alt="CircleCI Logo" src="/source/docs/assets/images/circleci-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;">
+          <img alt="CircleCI Logo" src="/source/docs/assets/images/circleci-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;" />
           <p class="pantheon-official"></p>
         </div>
       </div>
@@ -55,7 +55,7 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
       <div class="flex-panel-title">
         <h4 class="info" style="margin-top:10px;font-size:larger">Composer</h3>
         <div class="pantheon-official">
-          <img alt="Composer Logo" src="/source/docs/assets/images/composer-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;">
+          <img alt="Composer Logo" src="/source/docs/assets/images/composer-logo.svg" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;" />
           <p class="pantheon-official"></p>
         </div>
       </div>

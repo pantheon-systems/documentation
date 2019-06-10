@@ -9,12 +9,13 @@ Pantheon's Site Dashboard provides two connection modes to support various devel
 
 <Alert title="Exports" type="export">
 This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
-<pre>
-<code class="bash">export site=yoursitename
+
+```bash
+export site=yoursitename
 export env=dev
-</code></pre>
-</p>
-</div>
+```
+
+</Alert>
 
 ## SFTP Mode
 1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud"></span> Multidev** tab of your Pantheon Site Dashboard.
