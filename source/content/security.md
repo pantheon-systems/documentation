@@ -82,22 +82,17 @@ Alternatively, you can resolve 403 errors by using [Terminus](/docs/terminus) to
 
 <Tab name="Drupal 8" id="d8" active="true">
 
+```bash
+terminus remote:drush <site>:<env> -- pm-uninstall basic_auth -y
+```
+
 </Tab>
 
 <Tab name="Drupal 7" id="d7">
 
-</Tab>
-
-<!-- Tab panes -->
-<div class="tab-content" >
-<div role="tabpanel" class="tab-pane active" id="d8" >
-```bash
-terminus remote:drush <site>:<env> -- pm-uninstall basic_auth -y
-```
-</div>
-<div role="tabpanel" class="tab-pane" id="d7">
 ```bash
 terminus remote:drush <site>:<env> -- pm-disable basic_auth -y
 ```
-</div>
-</div>
+
+</Tab>
+</TabList>

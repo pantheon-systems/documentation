@@ -25,29 +25,27 @@ If you wish to stop using One-click Dashboard updates on a particular site, and 
 
 <Tab name="Drupal 7" id="d7-set-upstream" active="true">
 
+```bash
+terminus site:upstream:set <site> empty-7
+```
+
 </Tab>
 
 <Tab name="Drupal 8" id="d8-set-upstream">
+
+```bash
+terminus site:upstream:set <site> empty
+```
 
 </Tab>
 
 <Tab name="WordPress" id="wp-set-upstream">
 
+```bash
+terminus site:upstream:set <site> empty-wordpress
+```
+
 </Tab>
-
-<!-- Tab panes -->
-<div class="tab-content">
-  <div  role="tabpanel" class="tab-pane active" id="d7-set-upstream">
-    <pre><code class="bash hljs">terminus site:upstream:set &lt;site&gt; empty-7</code></pre>
-  </div>
-  <div  role="tabpanel" class="tab-pane" id="d8-set-upstream">
-    <pre><code class="bash hljs">terminus site:upstream:set &lt;site&gt; empty</code></pre>
-  </div>
-  <div  role="tabpanel" class="tab-pane" id="wp-set-upstream">
-    <pre><code class="bash hljs">terminus site:upstream:set &lt;site&gt; empty-wordpress</code></pre>
-  </div>
-</div>
-
 
 ## Enable Nested Docroot
 Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.

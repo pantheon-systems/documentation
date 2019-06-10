@@ -198,27 +198,31 @@ If you receive the error that you have conflicts while updating core, the fastes
 
     <Tab title="WordPress" id="wp-xtheirs" active="true">
 
-      ```git
-      git fetch pantheon-wordpress
-      git merge pantheon-wordpress/master -Xtheirs
-      ```
+    ```git
+    git fetch pantheon-wordpress
+    git merge pantheon-wordpress/master -Xtheirs
+    ```
 
     </Tab>
 
     <Tab title="Drupal 8" id="d8-xtheirs">
 
-      ```git
-      git fetch pantheon-drops-8
-      git merge pantheon-drops-8/master -Xtheirs
+    ```git
+    git fetch pantheon-drops-8
+    git merge pantheon-drops-8/master -Xtheirs
       ```
-      </div>
-      <div role="tabpanel" class="tab-pane" id="d7-xtheirs">
-      ```git
-      git fetch pantheon-drops-7
-      git merge pantheon-drops-7/master -Xtheirs
-      ```
-      </div>
-    </div><br>
+
+    </Tab>
+
+    <Tab title="Drupal 7" id="d7-xtheirs">
+    ```git
+    git fetch pantheon-drops-7
+    git merge pantheon-drops-7/master -Xtheirs
+    ```
+
+    </Tab>
+
+    </TabList>
 
 Double-check the conflicted files before going forward to make sure no bugs were introduced.
 

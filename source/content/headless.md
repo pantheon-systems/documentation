@@ -54,74 +54,70 @@ Backend APIs running on Pantheon take advantage of the following platform featur
 ## Exposing the Backend API
 Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or WordPress upstream. The process to [create](/docs/create-sites/), [update core](/docs/core-updates/), and [launch](/docs/guides/launch/) a backend API on Pantheon does not deviate from the standard procedures.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-<li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
-<lihref="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab"><a Drupal 8>  </a></li>
-<li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
+<Tab name="WordPress" id="wp-api" active="true">
 
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" >
-  Since WordPress 4.7, the WordPress API is included as part of core. There's no action needed to expose the API on Pantheon. Explore default routes and endpoints like `/wp-json/wp/v2/posts` in your browser:
+Since WordPress 4.7, the WordPress API is included as part of core. There's no action needed to expose the API on Pantheon. Explore default routes and endpoints like `/wp-json/wp/v2/posts` in your browser:
 
-  ![default routes wp](/source/docs/assets/images/wp-json-posts.png)
+![default routes wp](/source/docs/assets/images/wp-json-posts.png)
 
-  We recommend using a trusted browser extension to format the JSON response from the API so it's easier to read.
+We recommend using a trusted browser extension to format the JSON response from the API so it's easier to read.
 
-  Refer to the [Rest API Handbook](https://developer.wordpress.org/rest-api/) from WordPress.org's Developer Resources for full documentation on this web service.
-  </div>
+Refer to the [Rest API Handbook](https://developer.wordpress.org/rest-api/) from WordPress.org's Developer Resources for full documentation on this web service.
 
+</Tab>
 
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor">
-  #### Core Modules
-  With the release of Drupal 8, Web Services have been implemented to core through different modules:
+<Tab name="Drupal 8" id="d8-api">
 
-  * **RESTful Web Services (rest)** - Exposes entities and other resources via a RESTful web API. It depends on the Serialization module for the serialization of data that is sent to and from the API.
-  * **Serialization (serialization)** - Provides a service for serialization of data to and from formats such as JSON and XML.
-  * **Hypertext Application Language (hal)** - Extends the Serialization module to provide the HAL hypermedia format. This is what is used as the primary format in Drupal 8 Core. It only adds two reserved keywords, `_links` for link relations (also used by Github's Pull Request API) and `_embedded` for embedded resources. The HAL hypermedia format can be encoded in both JSON and XML.
-  * **HTTP Basic Authentication (basic_auth)** - This module implements basic user authentication using the HTTP Basic authentication provider. It facilitates the use of a username and password for authentication when making calls to the REST API. It is advised to enable SSL when used in production.
+#### Core Modules
+With the release of Drupal 8, Web Services have been implemented to core through different modules:
 
-  #### Resources Configuration
+* **RESTful Web Services (rest)** - Exposes entities and other resources via a RESTful web API. It depends on the Serialization module for the serialization of data that is sent to and from the API.
+* **Serialization (serialization)** - Provides a service for serialization of data to and from formats such as JSON and XML.
+* **Hypertext Application Language (hal)** - Extends the Serialization module to provide the HAL hypermedia format. This is what is used as the primary format in Drupal 8 Core. It only adds two reserved keywords, `_links` for link relations (also used by Github's Pull Request API) and `_embedded` for embedded resources. The HAL hypermedia format can be encoded in both JSON and XML.
+* **HTTP Basic Authentication (basic_auth)** - This module implements basic user authentication using the HTTP Basic authentication provider. It facilitates the use of a username and password for authentication when making calls to the REST API. It is advised to enable SSL when used in production.
 
-  By default, not all resources or endpoints are enabled. You may need to individually enable `GET`, `POST`, `PATCH` and `DELETE` operations for each web service like node entity or user. Read about the overview and steps for the configuration on the [API overview page](https://www.drupal.org/docs/8/api/restful-web-services-api/restful-web-services-api-overview).
+#### Resources Configuration
 
-  There is a contributed module called [REST UI](https://drupal.org/project/restui) which provides an admin interface for enabling or disabling resources, serialization formats and authentication providers. Use this to quickly manage and save your configuration.
+By default, not all resources or endpoints are enabled. You may need to individually enable `GET`, `POST`, `PATCH` and `DELETE` operations for each web service like node entity or user. Read about the overview and steps for the configuration on the [API overview page](https://www.drupal.org/docs/8/api/restful-web-services-api/restful-web-services-api-overview).
 
-  #### Resources using Views
+There is a contributed module called [REST UI](https://drupal.org/project/restui) which provides an admin interface for enabling or disabling resources, serialization formats and authentication providers. Use this to quickly manage and save your configuration.
 
-  Because Views is also part of core, you can make a JSON resource once REST and Serialization modules are enabled. Just create a view and select "REST export" as its display type. Name the path as you like.
+#### Resources using Views
 
-  * Use Filter Criterias to extract content as you like it (e.g., `/json/articles?nid=5`).
-  * You can also use Contextual Filters if we want to just append the end of the path (e.g., `rest/views/articles/1`) for filtering results.
+Because Views is also part of core, you can make a JSON resource once REST and Serialization modules are enabled. Just create a view and select "REST export" as its display type. Name the path as you like.
 
-  #### Example Requests
+* Use Filter Criterias to extract content as you like it (e.g., `/json/articles?nid=5`).
+* You can also use Contextual Filters if we want to just append the end of the path (e.g., `rest/views/articles/1`) for filtering results.
 
-  To create a node entity, we must send a `POST` request to `/entity/node` with the `Content-Type` header set to `application/hal+json` and declare the required type and title fields in the request `BODY`.
+#### Example Requests
 
-  If you have Basic Authentication enabled, you need to set headers `PHP_AUTH_USER` and `PHP_AUTH_PW` to authenticate as our user.
-  </div>
+To create a node entity, we must send a `POST` request to `/entity/node` with the `Content-Type` header set to `application/hal+json` and declare the required type and title fields in the request `BODY`.
 
+If you have Basic Authentication enabled, you need to set headers `PHP_AUTH_USER` and `PHP_AUTH_PW` to authenticate as our user.
 
-  <div role="tabpanel" class="tab-pane" id="tab-3-anchor">
-  Web Services are implemented through various plugins in Drupal 7.
+</Tab>
 
-   - [RESTful](https://www.drupal.org/project/restful)
-   - [RESTful Web Services](https://www.drupal.org/project/restws)
-   - [Services](https://www.drupal.org/project/services)
+<Tab name="Drupal 7" id="d7-api">
 
-  The service module has several integration features, and other web service formats. It also has [several supporting modules](https://www.drupal.org/node/750036) that extend the Drupal 7 functionalities made available to the API.
+Web Services are implemented through various plugins in Drupal 7.
 
-  <Alert title="Note" type="info">
+  - [RESTful](https://www.drupal.org/project/restful)
+  - [RESTful Web Services](https://www.drupal.org/project/restws)
+  - [Services](https://www.drupal.org/project/services)
 
-    While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource) module.</p>
+The service module has several integration features, and other web service formats. It also has [several supporting modules](https://www.drupal.org/node/750036) that extend the Drupal 7 functionalities made available to the API.
 
-  </Alert>
+<Alert title="Note" type="info">
 
-  </div>
-</div>
+While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource) module.</p>
+
+</Alert>
+
+</Tab>
+
+</TabList>
 
 ## Frequently Asked Questions
 ### Can I use other frameworks or distributions?

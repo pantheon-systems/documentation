@@ -19,136 +19,137 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
 <Tab name="Drupal 8" id="d8" active="true">
 
+[Drupal 8's system of cacheability metadata](https://www.drupal.org/developing/api/8/render/arrays/cacheability) is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with:
+
+```php
+// $build is a render array.
+$build['#cache']['max-age'] = 0;
+```
+
+Drupal 8 will "bubble up" this information so that if any small block on a page requires a cache max age of zero, the entire page will be uncacheable. Currently [Cache Control Override](https://www.drupal.org/project/cache_control_override) module is required for this feature to behave correctly.
+
 </Tab>
 
 <Tab name="Drupal 7" id="d7">
+
+Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
+
+```php
+/*
+  * Set $regex_path_patterns accordingly.
+  *
+  * We don't set this variable for you, so you must define it
+  * yourself per your specific use case before the following conditional.
+  *
+  * For example, to exclude pages in the /news/ and /about/ path from cache, set:
+  *
+  *   $regex_path_patterns = array(
+  *     '#^/news/?#',
+  *     '#^/about/?#',
+  *   );
+  */
+
+$regex_path_patterns = array(
+  '#^/news/?#',
+  '#^/about/?#',
+);
+
+// Loop through the patterns.
+foreach ($regex_path_patterns as $regex_path_pattern) {
+  if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
+    drupal_page_is_cacheable(FALSE);
+    $conf['page_cache_maximum_age'] = 0;
+
+    // No need to continue the loop once there's a match.
+    break;
+  }
+}
+```
 
 </Tab>
 
 <Tab name="WordPress" id="wp">
 
+Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/docs/wordpress-cache-plugin) plugin for all matching requests:
+
+<Alert title="Note" type="info">
+
+Place this code in an [MU Plugin](/docs/mu-plugin/) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
+
+</Alert>
+
+```php
+/*
+  * Set $regex_path_patterns accordingly.
+  *
+  * We don't set this variable for you, so you must define it
+  * yourself per your specific use case before the following conditional.
+  *
+  * For example, to exclude pages in the /news/ and /about/ path from cache, set:
+  *
+  *   $regex_path_patterns = array(
+  *     '#^/news/?#',
+  *     '#^/about/?#',
+  *   );
+  */
+
+$regex_path_patterns = array(
+  '#^/news/?#',
+  '#^/about/?#',
+);
+
+// Loop through the patterns.
+foreach ($regex_path_patterns as $regex_path_pattern) {
+  if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
+    add_action( 'send_headers', 'add_header_nocache', 15 );
+
+    // No need to continue the loop once there's a match.
+    break;
+  }
+}
+function add_header_nocache() {
+      header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
+}
+
+
+/* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
+
+// wp-json paths or any custom endpoints
+$regex_json_path_patterns = array(
+  '#^/wp-json/wp/v2?#',
+  '#^/wp-json/?#'
+);
+
+foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
+  if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
+      // re-use the rest_post_dispatch filter in the Pantheon page cache plugin
+      add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
+
+      // Re-define the send_header value with any custom Cache-Control header
+      function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
+          $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+          return $response;
+      }
+      break;
+  }
+}
+```
+
 </Tab>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d8" >
-  [Drupal 8's system of cacheability metadata](https://www.drupal.org/developing/api/8/render/arrays/cacheability) is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with:
-
-  ```php
-  // $build is a render array.
-  $build['#cache']['max-age'] = 0;
-  ```
-
-  Drupal 8 will "bubble up" this information so that if any small block on a page requires a cache max age of zero, the entire page will be uncacheable. Currently [Cache Control Override](https://www.drupal.org/project/cache_control_override) module is required for this feature to behave correctly.
-  </div>
-  <div role="tabpanel" class="tab-pane" id="d7">
-  Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
-
-  ```php
-  /*
-   * Set $regex_path_patterns accordingly.
-   *
-   * We don't set this variable for you, so you must define it
-   * yourself per your specific use case before the following conditional.
-   *
-   * For example, to exclude pages in the /news/ and /about/ path from cache, set:
-   *
-   *   $regex_path_patterns = array(
-   *     '#^/news/?#',
-   *     '#^/about/?#',
-   *   );
-   */
-
-  $regex_path_patterns = array(
-    '#^/news/?#',
-    '#^/about/?#',
-  );
-
-  // Loop through the patterns.
-  foreach ($regex_path_patterns as $regex_path_pattern) {
-    if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
-      drupal_page_is_cacheable(FALSE);
-      $conf['page_cache_maximum_age'] = 0;
-
-      // No need to continue the loop once there's a match.
-      break;
-    }
-  }
-  ```
-  </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
-  Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/docs/wordpress-cache-plugin) plugin for all matching requests:
-
-  <Alert title="Note" type="info">
-  Place this code in an [MU Plugin](/docs/mu-plugin/) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
-  </Alert>
-  ```php
-  /*
-   * Set $regex_path_patterns accordingly.
-   *
-   * We don't set this variable for you, so you must define it
-   * yourself per your specific use case before the following conditional.
-   *
-   * For example, to exclude pages in the /news/ and /about/ path from cache, set:
-   *
-   *   $regex_path_patterns = array(
-   *     '#^/news/?#',
-   *     '#^/about/?#',
-   *   );
-   */
-
-  $regex_path_patterns = array(
-    '#^/news/?#',
-    '#^/about/?#',
-  );
-
-  // Loop through the patterns.
-  foreach ($regex_path_patterns as $regex_path_pattern) {
-    if (preg_match($regex_path_pattern, $_SERVER['REQUEST_URI'])) {
-      add_action( 'send_headers', 'add_header_nocache', 15 );
-
-      // No need to continue the loop once there's a match.
-      break;
-    }
-  }
-  function add_header_nocache() {
-        header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
-  }
-
-
-  /* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */
-
-  // wp-json paths or any custom endpoints
-  $regex_json_path_patterns = array(
-    '#^/wp-json/wp/v2?#',
-    '#^/wp-json/?#'
-  );
-
-  foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
-    if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
-        // re-use the rest_post_dispatch filter in the Pantheon page cache plugin
-        add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
-
-        // Re-define the send_header value with any custom Cache-Control header
-        function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
-            $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
-            return $response;
-        }
-        break;
-    }
-  }
-  ```
-  </div>
-</div>
+</TabList>
 
 As an alternative to using HTTP headers to control downstream caching, you can set a `NO_CACHE` cookie. For details, see [Working with Cookies on Pantheon](/docs/cookies).
 
 <Alert title="Warning" type="danger">
+
 Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.
+
 </Alert>
 
 ## Test Pages Excluded from Cache
 To test whether or not a page is being served from Pantheon's edge caching layer, examine the headers output (`Age`, `Cache-Control`, `Set-Cookie`) via the following curl command:
+
 <pre><code class="http hljs">$ curl -I dev.mysite.com
 HTTP/1.1 200 OK
 X-Pantheon-Styx-Hostname: styx1a

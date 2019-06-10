@@ -29,16 +29,10 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ## Fix Unsupported Temporary Path
 Errors caused by an unsupported temporary path typically surface as permission errors for `.tmp` files and can be replicated on any environment.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-<li id="wp-id" role="presentation" class="active"><a href="#wp-anchor" aria-controls="wp-anchor" role="tab" data-toggle="tab">WordPress</a></li>
-<li id="d7-id" role="presentation"><a href="#d7-anchor" aria-controls="d7-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
-<li id="d8-id" role="presentation"><a href="#d8-anchor" aria-controls="d8-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="wp-anchor" >
+<TabList>
+
+<Tab name="WordPress" id="wptmppath" active="true">
+
 Correct an unsupported temporary path set by a plugin or theme in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
 ```php
@@ -60,10 +54,11 @@ terminus wp $site.$env -- config get SOME_TMP_SETTING
 Output of this command should look something like the following Contact Form 7 example:
 
 ![config get wpcf7 uploads tmp dir default](/source/docs/assets/images/wp-config-get-tmp-default.png)
-</div>
 
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="d7-anchor">
+</Tab>
+
+<Tab name="Drupal 7" id="d7tmppath">
+
 Correct an unsupported temporary path set by a module or theme using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
 ```php
@@ -85,9 +80,11 @@ terminus drush $site.$env -- variable-get some_tmp_setting
 Output of this command should look something like the following Plupload example:
 
 ![cget plupload settings temporary_uri filesystem](/source/docs/assets/images/d7-vget-tmp-default.png)
-</div>
-<!-- 3rd pane content -->
-<div role="tabpanel" class="tab-pane" id="d8-anchor">
+
+</Tab>
+
+<Tab name="Drupal 8" id="d8tmppath">
+
 Correct an unsupported temporary path set by a module or theme using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
 
 ```php
@@ -110,9 +107,10 @@ terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --
 Output of this command should look something like the following Plupload example:
 
 ![cget plupload settings temporary_uri filesystem](/source/docs/assets/images/d8-cget-tmp-default.png)
-</div>
-</div>
 
+</Tab>
+
+</TabList>
 
 ## Multiple Application Containers
 Errors caused by this scenario occur on production environments (Test or Live) and typically reference some `.tmp` file as not found and could not be copied. These errors cannot be replicated on development environments (Dev or Multidev) since those environments use a single application container.
@@ -127,20 +125,18 @@ It's not common for a plugin, module, or theme to use the temporary path in a wa
 Be aware that temporary files are not cleaned up automatically in the following configuration, which can result in [highly populated directories](/docs/platform-considerations/#highly-populated-directories).
 
 ### Persistent Temporary Path Workaround
+
 <Alert title="Warning" type="danger">
+
 In general, there's no need for temporary files to persist across application containers. Using a different plugin or module is preferred to taking the performance hit caused by the workaround below.
+
 </Alert>
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-<li id="wp-id" role="presentation" class="active"><a href="#wp-2anchor" aria-controls="wp-2anchor" role="tab" data-toggle="tab">WordPress</a></li>
-<li id="d7-2id" role="presentation"><a href="#d7-2anchor" aria-controls="d7-2anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
-<li id="d8-2id" role="presentation"><a href="#d8-2anchor" aria-controls="d8-2anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="wp-2anchor" >
+
+<TabList>
+
+<Tab name="WordPress" id="wpworkaround" active="true">
+
 Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
 ```php
@@ -164,10 +160,11 @@ terminus wp $site.$env -- config get SOME_TMP_SETTING
 Output of this command should look something like the following Contact Form 7 example:
 
 ![config get wpcf7 uploads tmp dir filesystem](/source/docs/assets/images/wp-config-get-tmp-filesystem.png)
-</div>
 
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="d7-2anchor">
+</Tab>
+
+<Tab name="Drupal 7" id="d7workaround">
+
 Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
 ```php
@@ -191,9 +188,11 @@ terminus drush $site.$env -- variable-get some_tmp_setting
 Output of this command should look something like the following Plupload example:
 
 ![cget plupload settings temporary_uri filesystem](/source/docs/assets/images/d7-vget-tmp-filesystem.png)
-</div>
-<!-- 3rd pane content -->
-<div role="tabpanel" class="tab-pane" id="d8-2anchor">
+
+</Tab>
+
+<Tab name="Drupal 8" id="d8workaround">
+
 Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
 
 ```php
@@ -217,5 +216,7 @@ terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --
 Output of this command should look something like the following Plupload example:
 
 ![cget plupload settings temporary_uri filesystem](/source/docs/assets/images/d8-cget-tmp-filesystem.png)
-</div>
-</div>
+
+</Tab>
+
+</TabList>

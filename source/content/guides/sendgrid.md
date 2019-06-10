@@ -35,18 +35,6 @@ Follow the procedure outlined below for your CMS:
 
 <Tab name="WordPress" id="tab-1-anchor" active="true">
 
-</Tab>
-
-<Tab name="Drupal 8" id="tab-2-anchor">
-
-</Tab>
-
-<Tab name="Drupal 7" id="tab-3-anchor">
-
-</Tab>
-
-<div class="tab-content">
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" >
 ### Download the WordPress SendGrid Plugin {.info}
 The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the `wp_mail` function with API integration, making it easy to configure and get started.
 
@@ -63,9 +51,9 @@ Install and activate the latest release through the WordPress dashboard or place
 
 When you're done, click **Update Setings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
-</div>
+</Tab>
 
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor">
+<Tab name="Drupal 8" id="tab-2-anchor">
 
 ### Choosing an Integration Method {.info}
 
@@ -120,9 +108,10 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
 5.  Provide your site-specific SendGrid credentials and click **Save configuration**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the Send Test E-mail configuration field and click **Save configuration** to test.
-  </div>
 
-  <div role="tabpanel" class="tab-pane" id="tab-3-anchor">
+</Tab>
+
+<Tab name="Drupal 7" id="tab-3-anchor">
 
 ### Choosing an Integration Method {.info}
 Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SMTP.
@@ -206,8 +195,10 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 5. Provide your site-specific SendGrid credentials and click **Save configuration**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the Send Test E-mail configuration field and click **Save configuration** to test.
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.
