@@ -39,7 +39,7 @@ Site's using our [nested docroot](/docs/nested-docroot/) feature to serve WordPr
 
 There is an [open issue](https://wordpress.org/support/topic/broken-website-9/) to address the problem with currently no known workaround.
 
-As an alternative for sites served from a subdirectory, we recommend disabling the LH HSTS plugin and using a custom PHP function <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Custom PHP Functions" data-content="Best practice would be to write a custom plugin for the following since it is related to the functionality of your site, not it's design or layout. However, you can add the custom function to a Child Theme's function.php file as a quick fix. Keep in mind, managing this functionality within the theme's functions.php file means it will not persist when swapping themes."><em class="fa fa-info-circle"></em></a> to send the HSTS header:
+As an alternative for sites served from a subdirectory, we recommend disabling the LH HSTS plugin and using a custom PHP function <Popover icon="info-circle" title="Custom PHP Functions" content="Best practice would be to write a custom plugin for the following since it is related to the functionality of your site, not it's design or layout. However, you can add the custom function to a Child Theme's function.php file as a quick fix. Keep in mind, managing this functionality within the theme's functions.php file means it will not persist when swapping themes." /> to send the HSTS header:
 
 ```php
 /**

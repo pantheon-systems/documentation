@@ -18,7 +18,7 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 
 ### Organizations: Roles and Permissions
 
-| Permissions                              | Administrator                    | Team Member                      | Developer | Unprivileged <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Unprivileged" data-content="Enterprise and EDU+ organizations only"><em class="fa fa-info-circle"></em></a> |
+| Permissions                              | Administrator                    | Team Member                      | Developer | Unprivileged <Popover icon="info-circle" title="Unprivileged" content="Enterprise and EDU+ organizations only" /> |
 |:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
 | Create sites within an org               | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Access the org Dashboard                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
@@ -33,14 +33,14 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 
 ### Site-Level: Roles and Permissions
 
-| Permissions                              | User in Charge / Owner <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="Partner organizations only"><em class="fa fa-info-circle"></em></a> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise organizations only"><em class="fa fa-info-circle"></em></a> |
+| Permissions                              | User in Charge / Owner <Popover icon="info-circle" title="Owner" content="Partner organizations only" /> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise organizations only"><em class="fa fa-info-circle"></em></a> |
 |:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
 | Access the site Dashboard                | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Work in Dev environments                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
 | Deploy to Test and Live                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
 | Manage user roles                        | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 | Delete sites or remove users from a site | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
-| Manage a site's plan                     | <span style=color:green>✔</span> <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Owner" data-content="When an organization is the owner of a site, users in charge cannot change the site plan."><em class="fa fa-info-circle"></em></a> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Manage a site's plan                     | <span style=color:green>✔</span> <Popover icon="info-circle" title="Owner" content="When an organization is the owner of a site, users in charge cannot change the site plan." /> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
 
 ## Manage People in an Organization
 

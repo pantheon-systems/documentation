@@ -1,12 +1,13 @@
 import React from "react"
 
-const Popover = ({ icon, content }) => {
+const Popover = ({ icon, title, content }) => {
   return (
     <span
       rel="tooltip"
       data-proofer-ignore
       data-toggle="tooltip"
       data-html="true"
+      data-title="{title}"
       data-content={content}
       style={{ color: "#0093c9" }}
     >

@@ -110,7 +110,7 @@ See [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does
 PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon Dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
 ## Undefined Function Error
-Normally a request to Drupal or WordPress starts by reading the `index.php` file at the root directory, which then bootstraps <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Bootstrap" data-content="Loading sequence for an application, or the process of loading necessary functionality."><em class="fa fa-info-circle"></em></a> the site.
+Normally a request to Drupal or WordPress starts by reading the `index.php` file at the root directory, which then bootstraps <Popover icon="info-circle" title="Bootstrap" content="Loading sequence for an application, or the process of loading necessary functionality." /> the site.
 
 However, when a PHP file is requested directly (e.g., `https://example.com/path/to/phpfile.php`) the `index.php` file and the bootstrap process are skipped. Instead, the PHP file is executed on it's own and any function included but not defined by the file will cause a `Call to undefined function` fatal error.
 

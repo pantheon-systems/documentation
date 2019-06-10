@@ -166,15 +166,15 @@ Overridden configurations are not shown within Drupal's admin interface; this be
   <tbody>
     <tr>
       <td>settings.php</td>
-      <td>services.yml <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Requires Manual Creation" data-content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments."><em class="fa fa-info-circle"></em></a><br>settings.pantheon.php<br>settings.local.php <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title=".gitignore" data-content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments."><em class="fa fa-info-circle"></em></a></td>
+      <td>services.yml <Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /><br>settings.pantheon.php<br>settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /></td>
     </tr>
     <tr>
       <td>settings.pantheon.php</td>
-      <td>services.pantheon.preproduction.yml<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Requires Manual Creation" data-content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments."><em class="fa fa-info-circle"></em></a></br>services.pantheon.production.yml<a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="Requires Manual Creation" data-content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments."><em class="fa fa-info-circle"></em></a><br>
+      <td>services.pantheon.preproduction.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /></br>services.pantheon.production.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /><br>
     </tr>
     <tr>
-      <td>settings.local.php <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title=".gitignore" data-content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments."><em class="fa fa-info-circle"></em></a></td>
-      <td>development.services.yml <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title=".gitignore" data-content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not included by default on any Pantheon environment."><em class="fa fa-info-circle"></em></a></td>
+      <td>settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /></td>
+      <td>development.services.yml <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not included by default on any Pantheon environment." /></td>
     </tr>
   </tbody>
 </table>
