@@ -35,7 +35,7 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
           <p class="pantheon-official"></p>
         </div>
       </div>
-      <p class="topic-info__description" markdown="1">[GitHub](https://github.com) is an online service that provides cloud storage Git repositories that may be cloned and used locally, or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
+      <p class="topic-info__description" >[GitHub](https://github.com) is an online service that provides cloud storage Git repositories that may be cloned and used locally, or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
     </div>
   </div>
   <div class="flex-panel-item">
@@ -47,7 +47,7 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
           <p class="pantheon-official"></p>
         </div>
       </div>
-      <p class="topic-info__description" markdown="1">[CircleCI](https://circleci.com) provides hosted services to run automated tests for a project, and GitHub provides an integration to run these tests to whenever a change is submitted. The process of testing each set of changed files prior to merging them into the main branch is called continuous integration.</p>
+      <p class="topic-info__description" >[CircleCI](https://circleci.com) provides hosted services to run automated tests for a project, and GitHub provides an integration to run these tests to whenever a change is submitted. The process of testing each set of changed files prior to merging them into the main branch is called continuous integration.</p>
     </div>
   </div>
   <div class="flex-panel-item">
@@ -64,16 +64,18 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
   </div>
 </div>
 
-<Callout title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
-</Callout>
+<Enablement title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+
+</Enablement>
 
 ## Artifact Deployment
 Only files unique to the project are tracked as part of the project's main "source" repository on GitHub, which requires an abstraction layer to compile dependencies and deploy an entire "artifact" to the site repository on Pantheon. The abstraction layer is facilitated by CircleCI in the Pantheon maintained examples, but the principles are the same for other continuous integration service providers.
 
 Composer is used to fetch dependencies declared by the project as part of a CircleCI build step. This ensures that the final composed build results are installed on Pantheon:
 
-<p class="text-center" markdown="1">![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)</p>
+<p class="text-center" >![Artifact Deployment](/source/docs/assets/images/artifact-deployment.png)</p>
 
 <Accordion title={"Pull Requests"} id={"understand-pr"} icon={"lightbulb"}>
 One advantage of managing code this way is that it keeps the change sets (differences) for pull requests as small as possible. If a pull request upgrades several dependencies, only the dependency metadata file will change; the actual code changes in the upgraded dependencies themselves are not shown.

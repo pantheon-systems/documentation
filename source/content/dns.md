@@ -25,7 +25,7 @@ We offer DNS provider-specific instructions for several common DNS hosts:
 
 ## DNS Terminology
 
-<dl markdown="1">
+<dl >
   <dt>TLD</dt>
     <dd>Stands for **Top Level Domain**. This is the last piece of your website URL (`.com`, `.net`, `.org`, etc)</dd>
   <dt>Registrar</dt>

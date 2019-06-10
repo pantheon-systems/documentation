@@ -14,19 +14,10 @@ If you are importing a site that has files in another location, manually move th
 ### Symlinks
 If your site relies on code that expects to find files at non-standard locations (e.g., `/content/`), create a **symlink** to the standard location as a workaround:
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+<TabList>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal</a></li>
-</ul>
+<Tab title="WordPress" id="tab-1-id" active="true">
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
     If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase), then navigate to the project's root directory and execute the following commands:
 
   ```bash
@@ -35,10 +26,11 @@ If your site relies on code that expects to find files at non-standard locations
   git commit files -m "adding legacy files location symlink"
   git push origin master
   ```
-  </div>
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</Tab>
+
+<Tab title="Drupal" id="tab-2-id">
+
     If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase), then navigate to the project's root directory and execute the following commands:
 
   ```bash
@@ -47,8 +39,10 @@ If your site relies on code that expects to find files at non-standard locations
   git commit files -m "adding legacy files location symlink"
   git push origin master
   ```
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 Symlinks are committed to version control and part of the codebase. Your legacy file paths should now work as expected. As long as the path you've chosen for your symlink does not conflict with a future core update to your application, this link will persist indefinitely. Consider opening an issue on the plugin or module's project page citing non-standard file paths when observed.
 

@@ -6,9 +6,11 @@ categories: [drupal8]
 ---
 To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.
 
-<Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Learn industry best practices for Drupal caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
-</Callout>
+<Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Learn industry best practices for Drupal caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.
+
+</Enablement>
 
 ## Drupal 8 Performance Configuration
 Visit `/admin/config/development/performance` for Drupal's performance settings.

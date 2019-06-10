@@ -15,19 +15,10 @@ To ensure a successful migration, complete the following tasks on the source sit
 ## Migrate Existing Sites
 Pantheon provides a guided path for migrating existing sites to the platform, which begins by clicking the **Migrate Existing Site** button on the User Dashboard.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+<TabList>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal</a></li>
-</ul>
+<Tab title="WordPress" id="tab-1-id" active="true">
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
   The recommended way to migrate WordPress sites from another host is to use the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 
   <div class="panel panel-drop" id="accordion">
@@ -61,10 +52,11 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
   The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see [WordPress and PHP Sessions](/docs/wordpress-sessions/).
   </Alert>
 
-  </div>
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</Tab>
+
+<Tab title="Drupal" id="tab-2-id">
+
   The recommended way to migrate Drupal sites from another host is to use `drush ard` to create an archive that can be easily imported.
 
   1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
@@ -91,8 +83,10 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 
    ![Successful Drupal Migration](/source/docs/assets/images/dashboard/successful-drupal-migration.png)
 
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ## Manually Migrate
 Manually migrate your site to Pantheon when any of the following apply:
@@ -123,16 +117,9 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
 **Cause:** The migration tool could not find Drupal or WordPress core files. This prevents the migration from completing because the site modules, plugins, and/or themes cannot be imported. This error also occurs when multiple `settings.php` files are present.
 
 **Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive.
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d8">
+<Tab title="Drupal 8" id="d8" active="true">
   <p>Archives for Drupal 8 sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── core
@@ -147,8 +134,11 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
          └── settings.php
   └── themes
   </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="d7">
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7">
+
   <p>Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── includes
@@ -165,8 +155,11 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
          └── settings.php
   └── themes
   </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
+
+</Tab>
+
+<Tab title="WordPress" id="wp">
+
   <p>Archives for WordPress sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── index.php
@@ -192,8 +185,10 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
       ├── plugins
 
   </code></pre>
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 
 ### Could not import database, unable to locate a database dump.
@@ -277,26 +272,21 @@ No, there is no downtime expected as part of the migration process. For detals, 
 ### How do I migrate a local site to Pantheon?
 When asked for your current site URL, enter `https://example.com` and continue the migration procedure in the Site Dashboard.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#wp-local-migrate" aria-controls="wp-local-migrate" role="tab" data-toggle="tab">WordPress</a></li>
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#drops-local-migrate" aria-controls="drops-local-migrate" role="tab" data-toggle="tab">Drupal</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="wp-local-migrate" markdown="1">
+<Tab title="WordPress" id="tab-1-id" active="true">
+
   The Pantheon Migration plugin for WordPress does not support local sites. WordPress users should [manually migrate](/docs/migrate-manual).
-  </div>
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="drops-local-migrate" markdown="1">
+</Tab>
+
+<Tab title="Drupal" id="tab-2-id">
+
   Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/) or [Google Drive](https://drive.google.com)) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [manually migrate](/docs/migrate-manual).
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ### How long does the WordPress migration process take?
 Most migrations are completed within two hours. The migration time depends solely on the size of your site, so be aware that it may take more or less time than estimated. We will send you an email once your migration is complete. If there are any issues with the migration, we will notify you by email.

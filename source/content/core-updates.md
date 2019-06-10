@@ -61,45 +61,48 @@ If you receive the error that you have conflicts while updating core, the fastes
 This process can potentially cause loss of data. Be sure you have no custom code in your CMS core before proceeding.
 </Alert>
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-  <li role="presentation"><a href="#d6" aria-controls="d6" role="tab" data-toggle="tab">Drupal 6</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="d8">
+<Tab title="Drupal 8" id="d8" active="true">
   <pre><code>
   git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
   # resolve conflicts
   git push origin master
   </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="d7">
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7">
+
   <pre><code>
   git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
   # resolve conflicts
   git push origin master
   </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="d6">
+
+</Tab>
+
+<Tab title="Drupal 6" id="d6">
+
   <pre><code>
   git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
   # resolve conflicts
   git push origin master
   </code></pre>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
+
+</Tab>
+
+<Tab title="WordPress" id="wp">
+
   <pre><code>
   git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
   # resolve conflicts
   git push origin master
   </code></pre>
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 Double-check the files before going forward to make sure no bugs were introduced.
 
@@ -151,61 +154,79 @@ This process lets you manually resolve the conflict using the command line and a
 
 1. Navigate to a [local clone of your site repository](/docs/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li id="wptab-1conflict" role="presentation" class="active"><a href="#wp-1conflict" aria-controls="wp-1conflict" role="tab" data-toggle="tab">WordPress</a></li>
-      <li id="d8tab-1conflict" role="presentation"><a href="#d8-1conflict" aria-controls="d81" role="tab" data-toggle="tab">Drupal 8</a></li>
-      <li id="d7tab-1conflict" role="presentation"><a href="#d7-1conflict" aria-controls="d7-1conflict" role="tab" data-toggle="tab">Drupal 7</a></li>
-      <li id="d7tab-1conflict" role="presentation"><a href="#custom1-conflict" aria-controls="custom1-conflict" role="tab" data-toggle="tab">Custom Upstream</a></li>
-    </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content no-border">
-    <div role="tabpanel" class="tab-pane active" id="wp-1conflict">
-    <pre id="git-pull-wp"><code>git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git</code></pre>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d8-1conflict">
-    <pre id="git-pull-drops-8"><code data-lang="">git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git</code></pre>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d7-1conflict">
-    <pre id="git-pull-drops-7"><code data-lang="">git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git</code></pre>
-    </div>
-    <div role="tabpanel" class="tab-pane" id="custom1-conflict">
-    <p markdown="1" class="instruction">Replace the remote name (`custom-upstream-example`) and repository URL (`git://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:</p>
-    <pre id="git-pull-custom"><code data-lang="">git remote add  custom-upstream-example git://github.com/example-org/custom-upsream-example.git</code></pre>
-    </div>
-    </div>
+    <TabList>
+
+    <Tab title="WordPress" id="wp-1conflict" active="true">
+
+    ```bash
+    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+    ```
+
+    </Tab>
+
+    <Tab title="Drupal 8" id="d8-1conflict">
+
+    ```bash
+    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+    ```
+
+    </Tab>
+
+    <Tab title="Drupal 7" id="d7-1conflict">
+
+    ```bash
+    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+    ```
+
+    </Tab>
+
+    <Tab title="Custom Upstream" id="custom-1conflict">
+
+    Replace the remote name (`custom-upstream-example`) and repository URL (`git://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:
+
+    ```bash
+    git remote add  custom-upstream-example git://github.com/example-org/custom-upsream-example.git
+    ```
+
+    </Tab>
+
+    </TabList>
 
 2. Pull down changes from the appropriate upstream:
 
-     <!-- Nav tabs -->
-     <ul class="nav nav-tabs" role="tablist">
-     <li role="presentation" class="active"><a href="#wp-2conflict" aria-controls="wp-2conflict" role="tab" data-toggle="tab">WordPress</a></li>
-     <li role="presentation"><a href="#d8-2conflict" aria-controls="d8-2conflict" role="tab" data-toggle="tab">Drupal 8</a></li>
-     <li role="presentation"><a href="#d7-2conflict" aria-controls="d7-2conflict" role="tab" data-toggle="tab">Drupal 7</a></li>
-     <li role="presentation"><a href="#custom-2conflict" aria-controls="custom-2conflict" role="tab" data-toggle="tab">Custom Upstream</a></li>
-     </ul>
+     <TabList>
 
-     <!-- Tab panes -->
-     <div class="tab-content no-border">
-     <div role="tabpanel" class="tab-pane active" id="wp-2conflict">
+     <Tab title="WordPress" id="wp-2conflict" active="true">
+
      <pre><code>git fetch pantheon-wordpress
     git rebase pantheon-wordpress/master</code></pre>
-     </div>
-     <div role="tabpanel" class="tab-pane" id="d8-2conflict">
+
+     </Tab>
+
+     <Tab title="Drupal 8" id="d8-2conflict">
+
      <pre><code>git fetch pantheon-drops-8
     git rebase pantheon-drops-8/master</code></pre>
-     </div>
-     <div role="tabpanel" class="tab-pane" id="d7-2conflict">
+
+     </Tab>
+
+     <Tab title="Drupal 7" id="d7-2conflict">
+
      <pre><code>git fetch pantheon-drops-7
     git rebase pantheon-drops-7/master</code></pre>
-     </div>
-     <div role="tabpanel" class="tab-pane" id="custom-2conflict">
-     <p markdown="1" class="instruction">Replace the remote name (`custom-upstream-example`):</p>
+
+     </Tab>
+
+     <Tab title="Custom Upstream" id="custom-2conflict">
+
+     <p  class="instruction">Replace the remote name (`custom-upstream-example`):</p>
      <pre><code>git fetch custom-upstream-example
     git rebase custom-upstream-example/master</code></pre>
-     </div>
-     </div>
+
+     </Tab>
+
+     </TabList>
 
 3. If a conflict is introduced, use the output provided to resolve. For example:
 

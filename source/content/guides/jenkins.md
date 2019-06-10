@@ -19,7 +19,7 @@ While this guide demonstrates Continuous Integration for Drupal 8 sites, the sam
 <h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> WordPress Modifications</h3>
 </a>
 </div>
-<div id="wordpress-mods" class="collapse" markdown="1" style="padding:10px;">
+<div id="wordpress-mods" class="collapse"  style="padding:10px;">
 WordPress users can make use of this guide with a few modifications:
 
 - Install [WP-CLI](https://wp-cli.org/) on the Jenkins instance instead of Drush.

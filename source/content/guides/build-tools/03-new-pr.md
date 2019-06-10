@@ -21,7 +21,7 @@ This section demonstrates GitHub's Pull Request workflow for Pantheon by making 
 
 The master branch is automatically built and deployed to the Dev environment. Feature branches are automatically built and deployed to individual Multidev environments:
 
-<p class="text-center" markdown="1">![Continuous delivery diagram](/source/docs/assets/images/pr-workflow/github-circle-pantheon.png)</p>
+<p class="text-center" >![Continuous delivery diagram](/source/docs/assets/images/pr-workflow/github-circle-pantheon.png)</p>
 
 
 <Accordion title={"Continuous Delivery"} id={"#understand-cd"} icon={"lightbulb"}>

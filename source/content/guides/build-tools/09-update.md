@@ -19,27 +19,6 @@ image: buildToolsGuide-thumb
 ---
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
 
-<<<<<<< HEAD
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-   <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#understand-composer"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Composer</h3></a>
- </div>
- <div id="understand-composer" class="collapse">
-   <div class="panel-inner" markdown="1">
-   ## Composer Fundamentals
-    {% include("content/composer-fundamentals.html")%}
-    <p>Site's created from Pantheon's example repositories already include the appropriate package repository within the `composer.json` file, such as [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/composer.json#L6-L11" class="external):<br>
-    <pre><code class="hljs json">"repositories": [
-        {
-          "type": "composer",
-          "url": "https://packages.drupal.org/8"
-        }
-      ],</code></pre>
-    </p>
-   </div>
- </div>
-</div>
-=======
 <Accordion title={"Composer"} id={"understand-composer"} icon={"lightbulb"}>
 
 ## Composer Fundamentals
@@ -78,8 +57,6 @@ repositories": [
 ```
 
 </Accordion>
->>>>>>> edd07f1acd84287a342672bfc245e75b8afedff3
-
 
 ## Update Core
 1. Start by creating a new branch based off the tip of master (replace `drupal-8.3.7` according to your current task):

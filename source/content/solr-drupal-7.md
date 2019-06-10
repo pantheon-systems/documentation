@@ -13,9 +13,11 @@ For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8]
 
 First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**. This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with Drupal.
 
-<Callout title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
-</Callout>
+<Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+
+</Enablement>
 
 <Alert title="Warning" type="danger">
 This guide uses Pantheon's Solr module, which is designed to work specifically with the Solr service provided by Pantheon. Using a non-Pantheon Solr service with our plugins is not supported, and may result in unexpected behavior.
@@ -81,37 +83,35 @@ You must post the `schema.xml` in each environment (Dev, Test, Live, and each Mu
 
 You will need to enable either Apache Solr Search or Search API Solr Search, depending on which one you selected in the [previous steps](#add-either-the-apache-solr-search-or-search-api-solr-search-module). You should have installed only one of these modules and will need to enable only one.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-<!-- Active tab -->
-<li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Apache Solr Search</a></li>
-<!-- 2nd Tab Nav -->
-<li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Search API Solr Search</a></li>
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+<TabList>
+
+<Tab name="Apache Solr Search" id="apachesolrsearch" active="true">
+
 #### Enabling Apache Solr Search (apachesolr) {.info}
 
 Enable both the **Apache Solr framework** and **Apache Solr Search** modules.
+
  ![Enable Solr module](/source/docs/assets/images/enable-solr-module.png)
 
 Browse to the main Apache Solr settings screen and you should now see an index is ready for you. You do not need to configure any server settings, but you can still handle your facet and bias settings as per normal:
+
  ![Configure Solr Settings](/source/docs/assets/images/apache-solr-module-config.png)
 
 Note that the default connection parameters are correct and do not need changing. After this point, your configuration and settings will be the same as any generic Apache Solr use case.
-</div>
 
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</Tab>
+
+<Tab name="Search API Solr Search" id="apisolr">
+
 #### Enabling Search API Solr Search (search\_api\_solr) {.info}
 
 Three modules are required; [entity](https://drupal.org/project/entity), [search\_api](https://drupal.org/project/search_api) and [search\_api\_solr](https://drupal.org/project/search_api_solr) need to be installed and enabled.
 
 ![Enable Solr Search required modules](/source/docs/assets/images/enable-solr-required.png)
-</div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ## Additional Help
 

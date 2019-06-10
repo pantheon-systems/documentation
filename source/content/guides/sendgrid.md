@@ -31,14 +31,10 @@ One of the most common reasons that email gets blocked is because it originates 
 ## Integrating Sendgrid With Drupal and WordPress
 Follow the procedure outlined below for your CMS:
 
-<ul class="nav nav-tabs" role="tablist">
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
-</ul>
+<TabList>
 
-<div class="tab-content">
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+<Tab name="WordPress" id="tab-1-anchor" active="true">
+
 ### Download the WordPress SendGrid Plugin {.info}
 The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the `wp_mail` function with API integration, making it easy to configure and get started.
 
@@ -55,9 +51,9 @@ Install and activate the latest release through the WordPress dashboard or place
 
 When you're done, click **Update Setings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
-</div>
+</Tab>
 
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+<Tab name="Drupal 8" id="tab-2-anchor">
 
 ### Choosing an Integration Method {.info}
 
@@ -69,7 +65,7 @@ Two methods can be used to integrate SendGrid with your Drupal 8 site: API or SM
 
 ### SendGrid API Integration {.info}
 
-<Alert title="Warning" type="danger" markdown="1">
+<Alert title="Warning" type="danger" >
 
 The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow as described in our [Build Tools](/docs/guides/build-tools/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
 
@@ -112,9 +108,10 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
 5.  Provide your site-specific SendGrid credentials and click **Save configuration**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the Send Test E-mail configuration field and click **Save configuration** to test.
-  </div>
 
-  <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+</Tab>
+
+<Tab name="Drupal 7" id="tab-3-anchor">
 
 ### Choosing an Integration Method {.info}
 Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SMTP.
@@ -198,8 +195,10 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 5. Provide your site-specific SendGrid credentials and click **Save configuration**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid. Provide an address within the Send Test E-mail configuration field and click **Save configuration** to test.
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ## <a name="deliverability"></a>Checking Deliverability in SendGrid
 For testing purposes, your first few deliveries should be to email addresses that you control directly. You can track and measure unique aspects of mail behaviors from within your site's SendGrid account, which should be monitored regularly.

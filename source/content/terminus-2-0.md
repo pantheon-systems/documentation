@@ -4,7 +4,7 @@ description: Learn what's new with the latest Terminus major version upgrade.
 contributors: [alexfornuto]
 ---
 
-<Alert title="Note" type="info" markdown="1">
+<Alert title="Note" type="info" >
 If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/docs/terminus/) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
 </Alert>
 

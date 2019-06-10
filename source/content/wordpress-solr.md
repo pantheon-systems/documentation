@@ -9,9 +9,11 @@ contributors: [cityofoaksdesign]
 
 First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**. This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
 
-<Callout title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.</p>
-</Callout>
+<Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+
+</Enablement>
 
 ## Solr Search for WordPress
 Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/).  This plugin replaces the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) within WordPress while preserving the familiar integration methods within themes and widgets.

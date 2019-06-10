@@ -42,40 +42,36 @@ Downgrading to a Sandbox site will disable automatic backups. You will still be 
 
 For Redis and Solr, the following code changes are required before the feature can be safely disabled:
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="wp-id" role="presentation" class="active"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-  <!-- 2nd Tab Nav -->
-  <li id="d8-id" role="presentation"><a href="#d8" aria-controls="drops" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <!-- 3rd Tab Nav -->
-  <li id="d7-id" role="presentation"><a href="#d7" aria-controls="drops" role="tab" data-toggle="tab">Drupal 7</a></li>
+<TabList>
 
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="wp" markdown="1">
+<Tab title="wp-id" id="WordPress" active="true">
+
 #### Safely Remove Redis
 {% include("content/remove-addons/wp-redis.html")%}
 #### Safely Remove Solr
 {% include("content/remove-addons/wp-solr.html")%}
-  </div>
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="d8" markdown="1">
+
+</Tab>
+
+<Tab title="d8-id" id="Drupal 8">
+
 #### Safely Remove Redis
 {% include("content/remove-addons/d8-redis.html")%}
 #### Safely Remove Solr
 {% include("content/remove-addons/d8-solr.html")%}
-  </div>
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="d7" markdown="1">
+
+</Tab>
+
+<Tab title="d7-id" id="Drupal 7">
+
 #### Safely Remove Redis
 {% include("content/remove-addons/d7-redis.html")%}
 #### Safely Remove Solr
 {% include("content/remove-addons/d7-solr.html")%}
-  </div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ### Elite Plan
 Elite sites cannot manage plans from the Site Dashboard. [Contact our sales team](https://pantheon.io/contact-us) or reach out to your dedicated Client Sales Executive for details.
@@ -103,39 +99,36 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 
 ### Enter Billing Information
 Site ownership is designated to the user account entering billing information.
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="add-cc-id" role="presentation" class="active"><a href="#add-cc" aria-controls="add-cc" role="tab" data-toggle="tab">Add New Card</a></li>
-  <!-- 2nd Tab Nav -->
-  <li id="existing-cc-id" role="presentation"><a href="#existing-cc" aria-controls="existing-cc" role="tab" data-toggle="tab">Select Existing Card</a></li>
-  <!-- 3RD Tab Nav -->
-  <li id="request-payment-id" role="presentation"><a href="#request-payment" aria-controls="request-payment" role="tab" data-toggle="tab">Send a Request</a></li>
-</ul>
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="add-cc" markdown="1">
+<TabList>
+
+<Tab title="add-cc-id" id="Add New Card" active="true">
+
 If this is your first time taking a site live on Pantheon, you'll likely need to add a new card to your account:
 
 1. Click the **<span class="glyphicon glyphicon-plus"></span> Add New Card** link.
 2. Enter the email address you would like invoices sent to.
 3. Enter your credit card information and click **Add Card**.
 4. Make sure the desired card is selected and click **Continue**.
-</div>
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="existing-cc" markdown="1">
+
+</Tab>
+
+<Tab title="existing-cc-id" id="Select Existing Card">
+
 To associate an existing card from your account as the payment method for this site:
 
 1. Select the desired card.
 2. Click **Continue**.
-</div>
-<!-- 3rd pane content -->
-<div role="tabpanel" class="tab-pane" id="request-payment" markdown="1">
+
+</Tab>
+
+<Tab title="request-payment-id" id="Send a Request">
+
 {% include("content/transfer-ownership-billing-intro.html")%}
 {% include("content/transfer-ownership-billing-steps.html")%}
-</div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ### Confirm Your Purchase
 1. Make sure the **Plan** details are correct.
@@ -149,7 +142,7 @@ Invoices and transaction history related to this change can be found in **<span 
 ## Cancel Current Plan
 Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox. 
 
-<Alert title="Note" type="info" markdown="1">
+<Alert title="Note" type="info" >
 
 While all site plans downgrades will be effective immediately, no partial refunds will be issued, per our [terms of service](https://pantheon.io/terms-of-service#tos-11).
 

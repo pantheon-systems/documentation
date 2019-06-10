@@ -14,21 +14,10 @@ Before adding HSTS to your site, you should review and understand the configurat
 ## Deploy and Configure a HSTS Header by Module or Plugin
 The HTTP Strict-Transport-Security response header (often abbreviated as **HSTS**) is a website security feature that tells browsers to only communicate using HTTPS, instead of HTTP.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <!-- 3rd Tab Nav -->
-  <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
+<Tab title="tab-1-id" id="WordPress" active="true">
 
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
 Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/docs/terminus/):
 
 ```bash
@@ -68,10 +57,11 @@ See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_
 
 </Accordion>
 
-</div>
 
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</Tab>
+
+<Tab title="tab-2-id" id="Drupal 8">
+
 1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-modules) or with [Terminus](/docs/terminus/):
 
     ```bash
@@ -86,10 +76,11 @@ Once installed and configured, the following header will be sent in responses:
 ```http
 strict-transport-security: max-age=31536000
 ```
-</div>
 
-<!-- 3rd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+</Tab>
+
+<Tab title="tab-3-id" id="Drupal 7">
+
 1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/7/extending-drupal/installing-modules) or with [Terminus](/docs/terminus):
 
   ```bash
@@ -104,9 +95,10 @@ Once installed and configured, the following header will be sent in responses:
 ```http
 strict-transport-security: max-age=15552000
 ```
-</div>
 
-</div>
+</Tab>
+
+</TabList>
 
 ## HSTS Header Configuration Attributes
 Once you've installed the module or plugin you plan to use, you should immediately configure the `strict-transport-security` header attributes as appropriate for your site. There are three attributes you should configure for the `strict-transport-security` header:
@@ -117,7 +109,7 @@ Once you've installed the module or plugin you plan to use, you should immediate
   <dt>includeSubDomains</dt>
   <dd>Optional, but usually advisable to use this attribute. If this optional parameter is specified, your HSTS header applies to all of your site's subdomains as well. If you do not use the includeSuDomains attribute, your site may still have unintended security issues exposed when users access subdomains of your site.</dd>
   <dt>preload</dt>
-  <dd markdown="1">An important to understand, but optional attribute supported by all modern major browsers. Optimally, you should only add the preload attribute after you have tested your site using your HSTS header configured with max-age and includeSubDomains. The preload list is a list of domains baked into browsers that a browser consults before sending a request for a site. If your site is in the preload list, all requests for your site will be sent via HTTPS no matter what the user types into the browser address bar and this will occur even before the browser first ever sees your site's actual HSTS header. [Here is where you add your site to the preload list](https://hstspreload.org/).</dd>
+  <dd >An important to understand, but optional attribute supported by all modern major browsers. Optimally, you should only add the preload attribute after you have tested your site using your HSTS header configured with max-age and includeSubDomains. The preload list is a list of domains baked into browsers that a browser consults before sending a request for a site. If your site is in the preload list, all requests for your site will be sent via HTTPS no matter what the user types into the browser address bar and this will occur even before the browser first ever sees your site's actual HSTS header. [Here is where you add your site to the preload list](https://hstspreload.org/).</dd>
 </dl>
 
 How you configure or include these attributes raises the rigor of the security that your HSTS effort provides. [Here is a great overview of how and why to use the above noted attributes](https://hstspreload.org/).

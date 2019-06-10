@@ -75,20 +75,9 @@ You can only view or download a user's secret access key immediately after the u
 ## Integrate S3 with Drupal
 You will need to install the appropriate Drupal module(s) and the AWS SDK library.
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
+<TabList>
 
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-
-</ul>
-
-<!-- Tab panes -->
-<div class="tab-content">
-<!-- Active pane content -->
-<div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+<Tab name="Drupal 7" id="d8tab1">
 
 The following instructions use [Terminus](/docs/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
@@ -104,8 +93,8 @@ Before you begin:
  terminus connection:set <site>.<env> sftp
  ```
 
-###Install Required and Recommended Modules {.info}
-####S3 File System {.info}
+### Install Required and Recommended Modules {.info}
+#### S3 File System {.info}
 
 Install the [Libraries API](https://www.drupal.org/project/libraries) and [S3 File System](https://www.drupal.org/project/s3fs) modules:
 
@@ -130,10 +119,10 @@ Install s3fs_cors module using Drush:
 ```nohighlight
 terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 ```
-</div>
 
-<!-- 2nd pane content -->
-<div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+</Tab>
+
+<Tab name="Drupal 8" id="d7tab1">
 
 <Alert title="Warning" type="danger">
 
@@ -151,8 +140,8 @@ Before you begin:
 
  - Create a local clone of your site code, and navigate to it in your terminal.
 
-###Install Required and Recommended Modules {.info}
-####S3 File System {.info}
+## Install Required and Recommended Modules {.info}
+#### S3 File System {.info}
 
 Install the [S3 File System](https://www.drupal.org/project/s3fs) module and AWS SDK version 3.x library using Composer.
 
@@ -176,8 +165,10 @@ Install s3fs_cors module using Composer:
 ```nohighlight
 composer require drupal/s3fs_cors --prefer-dist
 ```
-</div>
-</div>
+
+</Tab>
+
+</TabList>
 
 ## Drupal Module Configuration
 

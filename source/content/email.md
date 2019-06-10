@@ -86,25 +86,25 @@ If you do not find your service provider in the table above, check with their su
 
 Use the following integration methods for Drupal and WordPress to configure an external SMTP service:
 
-<ul class="nav nav-tabs" role="tablist">
-  <li class="active" role="presentation"><a href="#drupal" aria-controls="drupal" role="tab" data-toggle="tab">Drupal 7/8</a></li>
-  <li role="presentation"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-</ul>
+<TabList>
 
-<!-- Tab panes -->
-<div class="tab-content">
-  <div role="tabpanel" class="tab-pane active" id="drupal">
-    Once you have chosen your SMTP provider, install and configure Drupal's [SMTP Authentication Support](https://drupal.org/project/smtp) module.
+<Tab name="Drupal 7/8" id="$" active="true">
 
-    <Alert title="Note" type="info">
-        The SMTP Authentication Support module for Drupal 8 is currently in Beta, support may be limited. 
-    </Alert>
-  </div>
-  <div role="tabpanel" class="tab-pane" id="wp">
-    Once you have chosen your SMTP provider, install and configure WordPress's [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) plugin.
-  </div>
-</div>
+Once you have chosen your SMTP provider, install and configure Drupal's [SMTP Authentication Support](https://drupal.org/project/smtp) module.
 
+<Alert title="Note" type="info">
+
+The SMTP Authentication Support module for Drupal 8 is currently in Beta, support may be limited. 
+
+</Alert>
+
+</Tab>
+
+<Tab name="WordPress" id="wp">
+
+Once you have chosen your SMTP provider, install and configure WordPress's [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) plugin.
+
+</Tab>
 
 ## Troubleshooting
 

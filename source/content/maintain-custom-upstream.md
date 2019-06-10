@@ -36,31 +36,33 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 1. From your local clone of your Custom Upstream repository, add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li id="wptab1" role="presentation" class="active"><a href="#wp1" aria-controls="wp1" role="tab" data-toggle="tab">WordPress</a></li>
-      <li id="d8tab1" role="presentation"><a href="#d81" aria-controls="d81" role="tab" data-toggle="tab">Drupal 8</a></li>
-      <li id="d7tab1" role="presentation"><a href="#d71" aria-controls="d71" role="tab" data-toggle="tab">Drupal 7</a></li>
-    </ul>
+    <TabList>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp1" markdown="1">
+    <Tab name="WordPress" id="wp1" active="true">
+
     ```git
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
     ```
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d81" markdown="1">
+
+    </Tab>
+
+    <Tab name="Drupal 8" id="d81">
+
     ```git
     git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
     ```
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d71" markdown="1">
+
+    </Tab>
+
+    <Tab name="Drupal 7" id="d71">
+
     ```git
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
     ```
-    </div>
-    </div><br>
+
+    </Tab>
+
+    </TabList>
 
 2. We will also add the test site you created above as a remote to your Custom Upstream. To do that, we first need to grab the test site's repository URL on Pantheon using [Terminus](/docs/terminus/). Replace `<site>` with your site name:
 
@@ -85,34 +87,36 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 5. Pull down Pantheon's core updates from the appropriate upstream:
 
-     <!-- Nav tabs -->
-     <ul class="nav nav-tabs" role="tablist">
-     <li role="presentation" class="active"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-     <li role="presentation"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-     <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-     </ul>
+     <TabList>
 
-     <!-- Tab panes -->
-     <div class="tab-content">
-     <div role="tabpanel" class="tab-pane active" id="wp" markdown="1">
+     <Tab title="WordPress" id="wp" active="true">
+
      ```git
      git fetch pantheon-wordpress
      git merge pantheon-wordpress/master
      ```
-     </div>
-     <div role="tabpanel" class="tab-pane" id="d8" markdown="1">
+
+     </Tab>
+
+     <Tab title="Drupal 8" id="d8">
+
      ```git
      git fetch pantheon-drops-8
      git merge pantheon-drops-8/master
      ```
-     </div>
-     <div role="tabpanel" class="tab-pane" id="d7" markdown="1">
+
+     </Tab>
+
+     <Tab title="Drupal 7" id="d7">
+
      ```git
      git fetch pantheon-drops-7
      git merge pantheon-drops-7/master
      ```
-     </div>
-     </div><br>
+
+     </Tab>
+
+     </TabList>
 
 6. Push to your new test site on Pantheon:
 
@@ -159,62 +163,66 @@ If you receive the error that you have conflicts while updating core, the fastes
 
 1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li id="wptab-1xtheirs" role="presentation" class="active"><a href="#wp-1xtheirs" aria-controls="wp-1xtheirs" role="tab" data-toggle="tab">WordPress</a></li>
-      <li id="d8tab-1xtheirs" role="presentation"><a href="#d8-1xtheirs" aria-controls="d8-1xtheirs" role="tab" data-toggle="tab">Drupal 8</a></li>
-      <li id="d7tab-1xtheirs" role="presentation"><a href="#d7-1xtheirs" aria-controls="d7-1xtheirs" role="tab" data-toggle="tab">Drupal 7</a></li>
-    </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp-1xtheirs" markdown="1">
-    ```git
+    <TabList>
+
+    <Tab name="WordPress" id="wp2" active="true">
+
+    ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
     ```
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d8-1xtheirs" markdown="1">
-    ```git
+
+    </Tab>
+
+    <Tab name="Drupal 8" id="d82">
+
+    ```bash
     git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
     ```
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d7-1xtheirs" markdown="1">
-    ```git
+
+    </Tab>
+
+    <Tab name=" Drupal 7" id="d72">
+
+    ```bash
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
     ```
-    </div>
-    </div><br>
+
+    </Tab>
+
+    </TabList>
 
 2. Pull down changes from the appropriate upstream and attempt to resolve automatically:
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#wp-xtheirs" aria-controls="wp-xtheirs" role="tab" data-toggle="tab">WordPress</a></li>
-      <li role="presentation"><a href="#d8-xtheirs" aria-controls="d8-xtheirs" role="tab" data-toggle="tab">Drupal 8</a></li>
-      <li role="presentation"><a href="#d7-xtheirs" aria-controls="d7-xtheirs" role="tab" data-toggle="tab">Drupal 7</a></li>
-    </ul>
+    <TabList>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane active" id="wp-xtheirs" markdown="1">
-      ```git
-      git fetch pantheon-wordpress
-      git merge pantheon-wordpress/master -Xtheirs
+    <Tab title="WordPress" id="wp-xtheirs" active="true">
+
+    ```git
+    git fetch pantheon-wordpress
+    git merge pantheon-wordpress/master -Xtheirs
+    ```
+
+    </Tab>
+
+    <Tab title="Drupal 8" id="d8-xtheirs">
+
+    ```git
+    git fetch pantheon-drops-8
+    git merge pantheon-drops-8/master -Xtheirs
       ```
-      </div>
-      <div role="tabpanel" class="tab-pane" id="d8-xtheirs" markdown="1">
-      ```git
-      git fetch pantheon-drops-8
-      git merge pantheon-drops-8/master -Xtheirs
-      ```
-      </div>
-      <div role="tabpanel" class="tab-pane" id="d7-xtheirs" markdown="1">
-      ```git
-      git fetch pantheon-drops-7
-      git merge pantheon-drops-7/master -Xtheirs
-      ```
-      </div>
-    </div><br>
+
+    </Tab>
+
+    <Tab title="Drupal 7" id="d7-xtheirs">
+    ```git
+    git fetch pantheon-drops-7
+    git merge pantheon-drops-7/master -Xtheirs
+    ```
+
+    </Tab>
+
+    </TabList>
 
 Double-check the conflicted files before going forward to make sure no bugs were introduced.
 
@@ -225,62 +233,64 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
 1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
-    <!-- Nav tabs -->
-    <ul class="nav nav-tabs" role="tablist">
-      <li id="wptab-1conflict" role="presentation" class="active"><a href="#wp-1conflict" aria-controls="wp-1conflict" role="tab" data-toggle="tab">WordPress</a></li>
-      <li id="d8tab-1conflict" role="presentation"><a href="#d8-1conflict" aria-controls="d81" role="tab" data-toggle="tab">Drupal 8</a></li>
-      <li id="d7tab-1conflict" role="presentation"><a href="#d7-1conflict" aria-controls="d7-1conflict" role="tab" data-toggle="tab">Drupal 7</a></li>
-    </ul>
+    <TabList>
 
-    <!-- Tab panes -->
-    <div class="tab-content">
-    <div role="tabpanel" class="tab-pane active" id="wp-1conflict" markdown="1">
-    ```git
+    <Tab name="WordPress" id="wp2" active="true">
+
+    ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
     ```
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d8-1conflict" markdown="1">
-    ```git
+
+    </Tab>
+
+    <Tab name="Drupal 8" id="d82">
+
+    ```bash
     git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
     ```
-    </div>
-    <div role="tabpanel" class="tab-pane" id="d7-1conflict" markdown="1">
-    ```git
+
+    </Tab>
+
+    <Tab name=" Drupal 7" id="d72">
+
+    ```bash
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
     ```
-    </div>
-    </div><br>
+
+    </Tab>
+
+    </TabList>
 
 2. Pull down changes from the appropriate upstream:
 
-     <!-- Nav tabs -->
-     <ul class="nav nav-tabs" role="tablist">
-     <li role="presentation" class="active"><a href="#wp-2conflict" aria-controls="wp-2conflict" role="tab" data-toggle="tab">WordPress</a></li>
-     <li role="presentation"><a href="#d8-2conflict" aria-controls="d8-2conflict" role="tab" data-toggle="tab">Drupal 8</a></li>
-     <li role="presentation"><a href="#d7-2conflict" aria-controls="d7-2conflict" role="tab" data-toggle="tab">Drupal 7</a></li>
-     </ul>
+    <Tablist>
+    <Tab name="WordPress" id="wp-2conflict">
 
-     <!-- Tab panes -->
-     <div class="tab-content">
-     <div role="tabpanel" class="tab-pane active" id="wp-2conflict" markdown="1">
-     ```git
-     git fetch pantheon-wordpress
-     git merge pantheon-wordpress/master
-     ```
-     </div>
-     <div role="tabpanel" class="tab-pane" id="d8-2conflict" markdown="1">
-     ```git
-     git fetch pantheon-drops-8
-     git merge pantheon-drops-8/master
-     ```
-     </div>
-     <div role="tabpanel" class="tab-pane" id="d7-2conflict" markdown="1">
+    ```git
+    git fetch pantheon-wordpress
+    git merge pantheon-wordpress/master
+    ```
+
+    </Tab>
+
+    <Tab title="Drupal 7" id="d7-xtheirs">
+
+    ```git
+    git fetch pantheon-drops-8
+    git merge pantheon-drops-8/master
+    ```
+    </Tab>
+
+     <Tab name="Drupal 7" id="d7-2conflict">
+
      ```git
      git fetch pantheon-drops-7
      git merge pantheon-drops-7/master
      ```
-     </div>
-     </div><br>
+
+    </Tab>
+
+    </TabList>
 
 3. If a conflict is introduced, the output provides all the details we need in order to resolve. For example:
 

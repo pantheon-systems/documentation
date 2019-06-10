@@ -19,7 +19,7 @@ Some General Rules:
 
 ## Frontmatter
 Meta data for a doc or guide is created in a section referred to as frontmatter. It lives at the very top of the file and is wrapped in three dashes.
-<div class="style-example" markdown="1">
+<div class="style-example" >
 <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">Style Guide</h1>
 <p class="article-subhead">Formatting rules and guidelines for Pantheon&#039;s open-source documentation.</p>
 <p><small><i class="fa fa-users"></i> Contributors:                                                     [Alex Fornuto](/docs/contributors/alexfornuto" title="alexfornuto),
@@ -36,7 +36,7 @@ contributors: [alexfornuto, rachelwhitton]
 </div>
 
 ### Early Access
-<div class="style-example" markdown="1">
+<div class="style-example" >
 <div id="earlyaccessoutter" class="alert devbar alert-dismissible" role="alert" style="border: 1px solid #B5C0C3;border-radius: 4px;">
  <button type="button" class="close" data-dismiss="alert" aria-label="Close" data-original-title="" title=""><span aria-hidden="true">×</span></button>
  <h3 class="devbar info">Early Access Doc</h3>
@@ -62,7 +62,7 @@ This section should outline any steps or services required before starting those
 
 Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/docs/terminus/).
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 ## Before You Begin {.info}
 Be sure that you have:
 
@@ -90,7 +90,7 @@ Be kind. If you're writing a guide that will use one or more example variables t
 
 ## Typography
 ### Headings
-<div class="style-example" markdown="1">
+<div class="style-example" >
 # Page Title {.info}
 ## Header {.info}
 ### Sub Header {.info}
@@ -108,7 +108,7 @@ Be kind. If you're writing a guide that will use one or more example variables t
 
 Bold is used for navigational elements within a given interface:
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 Go to **Account** > **Secutiry** > **Personal Access Tokens**.
 <hr class="source-code">
 ```markdown
@@ -118,7 +118,7 @@ Go to **Account** > **Secutiry** > **Personal Access Tokens**.
 
 Bold is also used when defining new terms, in cases where the [Definition List](#definition-list) doesn't fit:
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 **Transport Layer Security** (TLS) refers to a set of cryptographic security protocols used to encrypt network traffic.
 <hr class="source-code">
 ```markdown
@@ -127,7 +127,7 @@ Bold is also used when defining new terms, in cases where the [Definition List](
 </div>
 
 ### Italics
-<div class="style-example" markdown="1">
+<div class="style-example" >
 Emphasis should *always* be stressed with italics, and *never* with bold.
 <hr class="source-code">
 ```markdown
@@ -136,7 +136,7 @@ Emphasis should *always* be stressed with italics, and *never* with bold.
 </div>
 
 ### Definition List
-<div class="style-example" markdown="1">
+<div class="style-example" >
 <dl>
 <dt>Term</dt>
 <dd>Definition.</dd>
@@ -158,7 +158,7 @@ Do not specify a target tab or window for external, or any other links, leaving 
 
 #### Internal Links
 Use relative paths when linking to other pages of the docs site.
-<div class="style-example" markdown="1">
+<div class="style-example" >
 [Quick Start](/docs/guides/quickstart/)
 <hr class="source-code">
 ```markdown
@@ -167,7 +167,7 @@ Use relative paths when linking to other pages of the docs site.
 </div>
 
 #### External Links
-<div class="style-example" markdown="1">
+<div class="style-example" >
 [Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide)
 <hr class="source-code">
 ```markdown
@@ -179,7 +179,7 @@ Use relative paths when linking to other pages of the docs site.
 ### Inline
 Used for file names, variables, commands, and output, inline within paragraphs:
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 Inline code styling using backticks, like `$EXAMPLE`.
 <hr class="source-code">
 ```markdown
@@ -187,7 +187,7 @@ Inline code styling using backticks, like `$EXAMPLE`.
 ```
 </div>
 ### Blocks
-<div class="style-example" markdown="1">
+<div class="style-example" >
 ```php
 /**
 * Example Comment
@@ -217,7 +217,7 @@ if (!function_exists('install_drupal')) {
 
 ### Commands
 Use the copy button when you provide a command you expect the reader to execute on their local terminal.
-<div class="style-example" markdown="1">
+<div class="style-example" >
 Once the build finishes from the last step, active your new theme and rebuild the cache:
 
 <div class="copy-snippet">
@@ -239,7 +239,7 @@ Once the build finishes from the last step, active your new theme and rebuild th
 
 When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 
 <Alert title="Exports" type="export">
 This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
@@ -267,7 +267,7 @@ export env=dev
 There are two types of callouts used in our docs, notes and warnings:
 
 ### Notes
-<div class="style-example" markdown="1">
+<div class="style-example" >
 <Alert title="Note" type="info">
 Notes should identify important pieces of information the reader shouldn't miss.
 </Alert>
@@ -280,7 +280,7 @@ Notes should identify important pieces of information the reader shouldn't miss.
 </div>
 
 ### Warnings
-<div class="style-example" markdown="1">
+<div class="style-example" >
 <Alert title="Warning" type="danger">
 Warnings cover information critical to the reader and highlight potential dangers, especially those that can cause data loss.
 </Alert>
@@ -295,7 +295,7 @@ Warnings cover information critical to the reader and highlight potential danger
 ### Success
 Success callouts are used infrequently, usually in guides with specific end results expected. Use success callouts to differentiate between two binary results.
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 
 <Alert title="<span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration" type="danger">
 ![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
@@ -322,23 +322,18 @@ Success callouts are used infrequently, usually in guides with specific end resu
 ## Tabs
 When working on a document that will cover steps for multiple CMSs, use tabs when possible to condense instructions that need duplication for the different applications.
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-    <!-- Active tab -->
-    <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
-
-    <!-- 2nd Tab Nav -->
-    <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-
-    <!-- 3rd Tab Nav -->
-    <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
+<li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+<lihref="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab"><a Drupal 8>    </a></li>
+<li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-    <!-- Active pane content -->
-    <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+
+    <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" >
     Here's our WordPress specific copy, and an example snippet:
     ```php
     /**
@@ -348,8 +343,8 @@ When working on a document that will cover steps for multiple CMSs, use tabs whe
     ```
     </div>
 
-    <!-- 2nd pane content -->
-    <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+
+    <div role="tabpanel" class="tab-pane" id="tab-2-anchor">
     Here's our Drupal 8 specific copy, and an example snippet:
     ```php
     /**
@@ -359,8 +354,8 @@ When working on a document that will cover steps for multiple CMSs, use tabs whe
     ```
     </div>
 
-    <!-- 3rd pane content -->
-    <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+
+    <div role="tabpanel" class="tab-pane" id="tab-3-anchor">
     Here's our Drupal 7 specific copy, and an example snippet:
     ```php
     /**
@@ -374,20 +369,15 @@ When working on a document that will cover steps for multiple CMSs, use tabs whe
 ```html
 <!-- Nav tabs -->
 <ul class="nav nav-tabs" role="tablist">
-  <!-- Active tab -->
-  <li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
-
-  <!-- 2nd Tab Nav -->
-  <li id="tab-2-id" role="presentation"><a href="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab">Drupal 8</a></li>
-
-  <!-- 3rd Tab Nav -->
-  <li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
+<li id="tab-1-id" role="presentation" class="active"><a href="#tab-1-anchor" aria-controls="tab-1-anchor" role="tab" data-toggle="tab">WordPress</a></li>
+<lihref="#tab-2-anchor" aria-controls="tab-2-anchor" role="tab" data-toggle="tab"><a Drupal 8>  </a></li>
+<li id="tab-3-id" role="presentation"><a href="#tab-3-anchor" aria-controls="tab-3-anchor" role="tab" data-toggle="tab">Drupal 7</a></li>
 </ul>
 
 <!-- Tab panes -->
 <div class="tab-content">
-  <!-- Active pane content -->
-  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
+
+  <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" >
     Here's our WordPress specific copy, and an example snippet:
     ```php
     /**
@@ -397,8 +387,8 @@ When working on a document that will cover steps for multiple CMSs, use tabs whe
     ```
   </div>
 
-  <!-- 2nd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-2-anchor" markdown="1">
+
+  <div role="tabpanel" class="tab-pane" id="tab-2-anchor">
     Here's our Drupal 8 specific copy, and an example snippet:
     ```php
     /**
@@ -408,8 +398,8 @@ When working on a document that will cover steps for multiple CMSs, use tabs whe
     ```
   </div>
 
-  <!-- 3rd pane content -->
-  <div role="tabpanel" class="tab-pane" id="tab-3-anchor" markdown="1">
+
+  <div role="tabpanel" class="tab-pane" id="tab-3-anchor">
     Here's our Drupal 7 specific copy, and an example snippet:
     ```php
     /**
@@ -428,7 +418,7 @@ Submit screenshots without additional markup. Don't use Skitch to add an arrow, 
 
 ### GUI
 Screenshots are used to reference GUI instructions:
-<div class="style-example" markdown="1">
+<div class="style-example" >
 ![Alt text describing the image](/source/docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 <hr class="source-code">
 ```markdown
@@ -438,7 +428,7 @@ Screenshots are used to reference GUI instructions:
 
 ### Terminal
 Terminal screenshots should only be used to demonstrate intended output:
-<div class="style-example" markdown="1">
+<div class="style-example" >
 ![Alt text describing the image](/source/docs/assets/images/pr-workflow/composer-require-pathauto.png)
 <hr class="source-code">
 ```markdown
@@ -449,7 +439,7 @@ Terminal screenshots should only be used to demonstrate intended output:
 ## Error Messages
 Document error messages verbatim as H3s within a **Troubleshooting** section. Using the exact copy of the error message helps to improve SEO, and making the header an H3 allows the section to be linkable within the table of contents for easy sharing.
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 ### RedisException: Redis server went away
 The following error occurs when Redis has not been enabled within the Site Dashboard:
 
@@ -474,7 +464,7 @@ Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add On
 ## Panels
 Use panels for extraneous but useful information such as troubleshooting sections or pro tips that would be distracting or can be skipped over by a large portion of readers. This is primarily used in an effort to promote readability of a page.
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 <Accordion title={"Panel Title"} id={"unique-anchor"} icon={"wrench"}>
   ### Panel Content Header {.info}
 
@@ -493,7 +483,7 @@ Use panels for extraneous but useful information such as troubleshooting section
 ## Tables
 You can use markdown tables to describe availability based on service levels before providing instructions on how to enable or use a given feature. For example:
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 ## Enable Redis {.info}
 All plans except for a Basic plan can use Redis. Redis is available to Sandbox site plans for developmental purposes, but Redis will not be available going live on a Basic plan.
 
@@ -523,7 +513,7 @@ Use `✓` to indicate yes and leave the table data blank to indicate no.
 
 Tooltips are a great way to add additional information without cluttering up a section. For example, you can define jargon and even link out to an external resource without being distracting to the reader:
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 Given two new sites with slugs {% include 'popovers/popover.twig' with {'poptitle': 'Slugs', 'popcontent': 'Generally, <a class="external" href="https://codex.wordpress.org/Glossary#Slug">slugs</a> are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site.'} %} `first-site` and `second-site`, each configuration will result in the following URLs:
 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
@@ -542,7 +532,7 @@ Given two new sites with slugs {% verbatim %}{% include 'popovers/popover.twig' 
 
 This is the optimal place to provide links to external resources on the subject, or internal docs on common processes to follow after completing those above.
 
-<div class="style-example" markdown="1">
+<div class="style-example" >
 ## See Also {.info}
 - [An internal link](/docs/guides/)
 - [An external link](https://pantheon.io/blog/)

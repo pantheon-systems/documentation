@@ -6,9 +6,11 @@ categories: []
 ---
 [New Relic APM Pro](https://newrelic.com/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
-<Callout title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-<p>Get the most out of New Relic with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
-</Callout>
+<Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
+Get the most out of New Relic with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.
+
+</Enablement>
 
 ## Supported Site Plans
 All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro is available to Sandbox site plans for developmental purposes, but New Relic APM Pro will not be available going live on a Basic plan.
