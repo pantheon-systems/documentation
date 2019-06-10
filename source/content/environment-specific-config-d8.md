@@ -156,29 +156,10 @@ Overridden configurations are not shown within Drupal's admin interface; this be
 
 ## Inclusions and Loading Order of Settings and Services Files
 
-<table class="table  table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th>Settings File</th>
-      <th>Inclusions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>settings.php</td>
-      <td>services.yml <Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /><br>settings.pantheon.php<br>settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /></td>
-    </tr>
-    <tr>
-      <td>settings.pantheon.php</td>
-      <td>services.pantheon.preproduction.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /></br>services.pantheon.production.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /><br>
-    </tr>
-    <tr>
-      <td>settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /></td>
-      <td>development.services.yml <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not included by default on any Pantheon environment." /></td>
-    </tr>
-  </tbody>
-</table>
-
+| Settings File         | Inclusions |
+| settings.php          | services.yml <Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /><br />settings.pantheon.php<br />settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
+| settings.pantheon.php | services.pantheon.preproduction.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /></br>services.pantheon.production.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /><br> |
+| settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  development.services.yml <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not included by default on any Pantheon environment." /> |
 
 ## See Also
 

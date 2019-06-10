@@ -41,28 +41,11 @@ Pantheon currently supports Drush 8. While Drush 5 and 7 are available if needed
 
 #### PHP Requirements
 
-<table class="table  table-bordered table-responsive">
-    <thead>
-      <tr>
-        <th>Drush Version</th>
-        <th>Minimum PHP Version</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Drush 5</td>
-        <td>PHP 5.2.0+</td>
-      </tr>
-      <tr>
-        <td>Drush 7</td>
-        <td>PHP 5.3.0+</td>
-      </tr>
-      <tr>
-        <td>Drush 8</td>
-        <td>PHP 5.4.5+</td>
-      </tr>
-    </tbody>
-</table>
+| Drush Version | Minimum PHP Version | 
+|:------------- |:------------------- |
+| Drush 5       | PHP 5.2.0+          |
+| Drush 7       | PHP 5.3.0+          |
+| Drush 8       | PHP 5.4.5+          |
 
 See our guide on [Upgrading PHP Versions](/docs/php-versions/).
 

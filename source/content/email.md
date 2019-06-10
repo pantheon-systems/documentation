@@ -17,32 +17,12 @@ For outgoing emails, we recommend integrating a third-party service provider tha
 
 Here are some popular email services you can use on the platform and their corresponding Drupal or WordPress integration method:
 
-<table class="table table-responsive table-bordered">
-    <thead class="thead-inverse">
-      <tr>
-        <th scope="row" class="thead-inverse">Provider</th>
-        <th>Integration</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td scope="row" class="thead-inverse">SendGrid</td>
-        <td><a href="https://www.drupal.org/project/sendgrid_integration" target="blank">Drupal</a> | <a target="blank" href="https://wordpress.org/plugins/sendgrid-email-delivery-simplified/">WordPress</a></td>
-      </tr>
-      <tr>
-        <td scope="row" class="thead-inverse">Mandrill</td>
-        <td><a href="https://www.drupal.org/project/mandrill" target="blank">Drupal</a> | <a target="blank" href="https://wordpress.org/plugins/wpmandrill/">WordPress</a></td>
-      </tr>
-      <tr>
-        <td scope="row" class="thead-inverse">Mailgun</td>
-        <td><a href="https://www.drupal.org/project/mailgun" target="blank">Drupal</a> | <a target="blank" href="https://wordpress.org/plugins/mailgun/">WordPress</a></td>
-      </tr>
-      <tr>
-        <td scope="row" class="thead-inverse">SparkPost</td>
-        <td><a href="https://www.drupal.org/project/sparkpost" target="blank">Drupal</a> | <a target="blank" href="https://wordpress.org/plugins/sparkpost/">WordPress</a></td>
-      </tr>
-    </tbody>
-</table>
+| Provider  | Integration | 
+|:--------- |:----------- |
+| Sendgrid  | [Drupal](https://www.drupal.org/project/sendgrid_integration) \| [WordPress](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) |
+| Mandrill  | [Drupal](https://www.drupal.org/project/mandrill) \| [WordPress](https://wordpress.org/plugins/wpmandrill/) |
+| Mailgun   | [Drupal](https://www.drupal.org/project/mailgun) \| [WordPress](https://wordpress.org/plugins/mailgun/) |
+| SparkPost | [Drupal](https://www.drupal.org/project/sparkpost) \| [WordPress](https://wordpress.org/plugins/sparkpost/) |
 
 [SendGrid](https://sendgrid.com/), a high-deliverability email service, offers several plans to meet your specific needs. For more information, see [Using SendGrid To Deliver Email](/docs/guides/sendgrid/).
 
@@ -51,36 +31,13 @@ Customers have successfully used [SendGrid](/docs/guides/sendgrid/), Gmail, Amaz
 
 Pantheon strongly encourages using ports other than `25`, `465` or `587` to send email because those ports are often blocked by service providers as an anti-spam measure. Here’s a list of popular email providers and the alternate ports which Pantheon recommends:
 
-<table class="table table-responsive table-bordered">
-    <thead class="thead-inverse">
-      <tr>
-        <th scope="row" class="thead-inverse">Provider</th>
-        <th>Port Documentation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>SendGrid</td>
-        <td><a href="https://sendgrid.com/docs/API_Reference/SMTP_API/integrating_with_the_smtp_api.html" target="blank">2525</a></td>
-      </tr>
-      <tr>
-        <td>Mandrill</td>
-        <td><a href="https://mandrill.zendesk.com/hc/en-us/articles/205582167-Which-SMTP-ports-can-I-use-" target="blank">2525</a></td>
-      </tr>
-      <tr>
-        <td>Mailgun</td>
-        <td><a href="http://blog.mailgun.com/25-465-587-what-port-should-i-use/" target="blank">2525</a></td>
-      </tr>
-      <tr>
-        <td>SparkPost</td>
-        <td><a href="https://www.sparkpost.com/docs/faq/smtp-connection-problems/" target="blank">2525</a></td>
-      </tr>
-      <tr>
-        <td>Amazon SES</td>
-        <td><a href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html" target="blank">2587 (STARTTLS), 2465 (TLSWRAPPER)</a></td>
-      </tr>
-    </tbody>
-</table>
+| Provider   | Port Documentation                                                                                          |
+|:---------- |:----------------------------------------------------------------------------------------------------------- |
+| Sendgrid   | [2525](https://sendgrid.com/docs/API_Reference/SMTP_API/integrating_with_the_smtp_api.html)                 |
+| Mandrill   | [2525](https://mandrill.zendesk.com/hc/en-us/articles/205582167-Which-SMTP-ports-can-I-use-)                |
+| Mailgun    | [2525](http://blog.mailgun.com/25-465-587-what-port-should-i-use/)                                          |
+| SparkPost  | [2525](https://www.sparkpost.com/docs/faq/smtp-connection-problems/)                                        |
+| Amazon SES | [587 (STARTTLS), 2465 (TLSWRAPPER)](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-connect.html) |
 
 If you do not find your service provider in the table above, check with their support and/or documentation.
 
