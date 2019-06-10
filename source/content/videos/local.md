@@ -5,8 +5,7 @@ videoid: 3albxwjv3k
 contributors:  [dwayne]
 permalink:  docs/videos/:basename/
 tags: [local]
-type: video
-layout: video
+layout: doc
 searchboost: 50
 ---
 

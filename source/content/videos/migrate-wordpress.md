@@ -5,9 +5,8 @@ contributors:  [scottmassey]
 videoid: nw3r5fzrwx
 permalink:  docs/videos/:basename/
 tags: [migrateguided]
-type: video
 categories: [develop, cli]
-layout: video
+layout: doc
 searchboost: 50
 ---
 Pantheon has a guided path for migrating sites onto our platform. This method gets most sites on board. Let’s click on the Migrate Existing Site button to start the process.

@@ -5,9 +5,8 @@ contributors:  [scottmassey]
 videoid: zv7y9eczjb
 permalink:  docs/videos/:basename/
 tags: [devwpcli]
-type: video
 categories: [wordpress]
-layout: video
+layout: doc
 searchboost: 50
 ---
 

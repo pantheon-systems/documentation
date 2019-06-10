@@ -5,9 +5,8 @@ videoid: pugjxn19gi
 contributors:  [dwayne]
 permalink:  docs/videos/:basename/
 tags: [cacheedge]
-type: video
 categories: [develop, cli]
-layout: video
+layout: doc
 searchboost: 50
 ---
 

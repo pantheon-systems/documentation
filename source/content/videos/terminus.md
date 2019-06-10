@@ -5,8 +5,7 @@ contributors:  [scottmassey]
 videoid: muv7vxu6vi
 permalink:  docs/videos/:basename/
 tags: [devterminus]
-type: video
-layout: video
+layout: doc
 searchboost: 50
 ---
 

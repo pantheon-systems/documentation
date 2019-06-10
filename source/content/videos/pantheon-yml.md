@@ -5,9 +5,8 @@ videoid: jlklwnyt81
 contributors:  [davidneedham]
 permalink:  docs/videos/:basename/
 tags: [pantheonyml]
-type: video
 categories: [develop, cli]
-layout: video
+layout: doc
 searchboost: 50
 ---
 The [pantheon.yml](/docs/pantheon-yml) file provides a way to configure platform options for any project. This file is version controlled and can be configured differently for each environment.

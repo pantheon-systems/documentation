@@ -5,9 +5,8 @@ contributors:  [scottmassey]
 videoid: w0iyypcydc
 permalink:  docs/videos/:basename/
 tags: [devdrush]
-type: video
 categories: [drupal]
-layout: video
+layout: doc
 searchboost: 50
 ---
 {% include("content/deprecate-kalabox.html")%}

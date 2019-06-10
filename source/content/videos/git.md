@@ -5,9 +5,8 @@ contributors:  [scottmassey]
 videoid: b7okmpc05p
 permalink:  docs/videos/:basename/
 tags: [git]
-type: video
 categories: [develop, cli]
-layout: video
+layout: doc
 searchboost: 50
 ---
 Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
