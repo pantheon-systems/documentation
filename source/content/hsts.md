@@ -104,7 +104,7 @@ strict-transport-security: max-age=15552000
 Once you've installed the module or plugin you plan to use, you should immediately configure the `strict-transport-security` header attributes as appropriate for your site. There are three attributes you should configure for the `strict-transport-security` header:
 
 <dl>
-  <dt>max-age=&lt;expire-time&gt;</dt>
+  <dt>max-age=<expire-time></dt>
   <dd>The time, in seconds, that the browser should remember that this site is only to be accessed using HTTPS. You might want to set the max-age to as low as 5 minutes or 1 day as you first add and configure the HSTS header so that you can check that your site does not exhibit any unexpected access issues. With a very low max-age you can change the settings quickly until you complete testing. Then you would more optimally set the max-age to 1 year or even two years.</dd>
   <dt>includeSubDomains</dt>
   <dd>Optional, but usually advisable to use this attribute. If this optional parameter is specified, your HSTS header applies to all of your site's subdomains as well. If you do not use the includeSuDomains attribute, your site may still have unintended security issues exposed when users access subdomains of your site.</dd>

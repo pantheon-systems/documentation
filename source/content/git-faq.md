@@ -75,6 +75,7 @@ Double-check the files before going forward to make sure no bugs were introduced
 
 ### Where can I find a site's upstream URL?
 The upstream URL is provided within the Site Dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/docs/terminus):
+
 ```nohighlight
 terminus site:info <site> --field=upstream
 ```
@@ -83,16 +84,21 @@ terminus site:info <site> --field=upstream
 
 To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
 For example, the Git log may contain an entry similar to the following:
+
 ```bash
 CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 72faeeff1c9356221694d1351cdb2000ab3c5d1c. Version 72faeeff1c9356221694d1351cdb2000ab3c5d1c of scripts/run-tests.sh left in tree.
 ```
+
 1. From your local repository, run this Git command to get a copy of the file in conflict:
 
- ```
- git checkout <commit ID> -- <file>
- ```
+  ```
+  git checkout <commit ID> -- <file>
+  ```
+
   <Alert title="Note" type="info">
+
   When looking for a commit ID, you can find the last instance where the missing file was in the repository. 
+
   </Alert>
 
 2. Run `git status` and verify that there is a new file to add to the repository:
@@ -106,22 +112,27 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
   ```
 
 4. Stage and commit:
+
  ```
  git commit -am "verifying missing README.txt"
  ```
+
  You will receive confirmation from Git that the file has been committed.
 
 5. Run the Git push command:
+
  ```
  git push origin master
  ```
 
 For more details, see [WordPress and Drupal Core Updates](/docs/core-updates).
+
 ## General Git Questions
 ### Does Pantheon support Git submodules?
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
 
 ### What are the Git tags?
+
 ```nohighlight
 $: git tag
 jenkins-ellis_update_drops_7-3
@@ -133,6 +144,7 @@ pantheon_live_2
 pantheon_test_1
 pantheon_test_2
 ```
+
 The "update\_drops" tags are from our upstream updates in the past (we don't tag them anymore, but used to).
 
 The tag `pantheon.initialize` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
@@ -184,6 +196,7 @@ We are updating our infrastructure so that code repositories do not have a singl
 As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt in to evaluate the settings.
 
 If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings, replacing `SITE_UUID` with your [site's UUID](/docs/sites/#site-uuid):
+
 ```
 git remote set-url origin ssh://codeserver.dev.SITE_UUID@codeserver.dev.SITE_UUID.drush.in:2222/~/repository.git
 ```
@@ -199,11 +212,13 @@ If you're having problems cloning your Git repository, verify your SSH key in yo
 This occurs when you have multiple SSH keys. For more information, see [Permission Denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
 1.  Use [Terminus](/docs/terminus) to identify the Git host:
+
     ```
     terminus connection:info <site>.dev --fields=git_host
     ```
 
     Which will return:
+
     ```bash
      Git Host   codeserver.dev.1887c5fa-...-8fe90727d85b.drush.in
     ```
@@ -211,11 +226,13 @@ This occurs when you have multiple SSH keys. For more information, see [Permissi
     Copy the URL.
 
 2.  Find out which SSH keys your Git client is using with the following command, replacing `codeserver.dev.<SITE_UUID>.drush.in` with the URL copied in step 2:
+
     ```
     ssh -vT codeserver.dev.<SITE_UUID>.drush.in
     ```
 
     The output should be similar to this:
+
     ```bash
     OpenSSH_7.3p1, LibreSSL 2.4.1
     debug1: Reading configuration data /etc/ssh/ssh_config
@@ -233,6 +250,7 @@ This occurs when you have multiple SSH keys. For more information, see [Permissi
 ### How do I fix fast forward errors?
 
 If you're getting errors after committing your reverted changes, make sure you have included the `-f` option, as you will be forcing a fast-forward update. Without this, you will receive an error similar to the one below:
+
 ```bash
 $: git push
 To git@code.getpantheon.com:3ef6264e-51d9-43b9-a60b-6cc22c3081c9
@@ -242,6 +260,7 @@ To prevent you from losing history, non-fast-forward updates were rejected
 Merge the remote changes (e.g. 'git pull') before pushing again. See the
 'Note about fast-forwards' section of 'git push --help' for details.
 ```
+
 ### I have a Git conflict; can you fix it for me?
 
 No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/docs/git-faq/#how-do-i-import-a-site-with-existing-git-history%3F), [Git issues performing core updates](/docs/git-faq/#can-i-use-.gitignore-on-pantheon%3F), and [resetting your code to a specific commit](/docs/git-faq/#how-do-i-revert-or-undo-changes%3F).
@@ -252,9 +271,11 @@ As a result of the varying techniques and to prevent code from being accidentall
 
 ### How do I delete a remote branch?
 Use the `--delete` option:
+
 ```
 git push origin --delete branchname
 ```
+
 Alternatively, you can prefix the branch with a colon.
 
 ### How do I keep multiple remote repositories in sync?
@@ -271,6 +292,7 @@ Commits will be pushed to both remote destinations automatically on `git push or
 ### Why are some merged commits hidden?
 
 Pantheon uses the following command to display commits in the Dashboard:
+
 ```
 git log --first-parent
 ```

@@ -66,7 +66,9 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 1. Download the latest plugin release from [Github](https://github.com/humanmade/S3-Uploads/releases) and extract it to `wp-content/plugins/`. Note that our documentation has been tested for version 2.0.0.
 
     <Alert title="Warning" type="danger">
-    **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform (<a data-proofer-ignore href="/docs/git-faq/#does-pantheon-support-git-submodules">more info</a>).</p>
+
+    **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/docs/git-faq/#does-pantheon-support-git-submodules)).
+
     </Alert>
 
 2. Rename the extracted folder to remove the version number. For example:
@@ -78,7 +80,9 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 3. Create and / or copy your **Access Key ID** key and **Secret Access Key** from the "My security credentials" section of your AWS account to a text editor on your local computer.
 
     <Alert title="Note" type="info">
-    As a standard security measure, consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin.</p>
+
+    As a standard security measure, consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin.
+
     </Alert>
 
 4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommended a service like [Lockr](/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.

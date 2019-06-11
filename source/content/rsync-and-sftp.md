@@ -73,20 +73,26 @@ You must replace `[env]` with the target environment and `[uuid]` with the [Site
 Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsync) to learn more.
 
 <Alert title="Note" type="info">
-Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/docs/nested-docroot/).</p>
-</div>
+
+Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/docs/nested-docroot/).
+
+</Alert>
 
 ## Examples
 
 <Alert title="Exports" type="export">
+
 The examples below use the variables `$ENV` and `$SITE`. You can replace these variables with your site UUID and environment, or set them before you begin:
+
 ```
 export ENV=dev
 export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 ```
+
 Replace the example values above with the environment you're working with and your site UUID. You can find the UUID in your Site Dashboard URL:
 
 https://dashboard.pantheon.io/sites/**3ef6264e-51d9-43b9-a60b-6cc22c3129308as83**
+
 </Alert>
 
 ### Download a Drupal Directory from Pantheon
@@ -95,6 +101,7 @@ Download the contents of the `sites/default/files` directory into a folder on yo
 ```bash
 rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/files/ ~/files
 ```
+
 ### Download a WordPress Directory from Pantheon
 Download the contents of the `wp-content/uploads` directory into a folder on your local environment in the `files` home folder:
 
@@ -108,6 +115,7 @@ Download the `sites/default/settings.php` file into a Drupal installation called
 ```bash
 rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/default/settings.php ~/Foo/sites/default
 ```
+
 ### Download a WordPress File from Pantheon
 Download the `index.php` file into a WordPress installation called _Foo_ on your local environment in a `wp-content/uploads` folder:
 
@@ -119,18 +127,22 @@ rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE
 If you need to upload the files directory from a local installation called Foo in your home directory to a Pantheon site's Test environment `sites/default/files` directory, use the following commands:
 
 <Alert title="Warning" type="danger">
+
 Always use the `temp-dir flag` when using rsync for uploads. Removing the flag will result in broken files after cloning from one environment to another.
+
 </Alert>
 
 ```bash
 rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 ```
+
 ### Upload a Single File to Pantheon
 This example shows how to upload the logo.png file into a Pantheon site's theme folder.
 
 ```bash
 rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ~/Foo/sites/all/themes/foo/logo.png --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:code/sites/all/themes/foo
 ```
+
 ### Empty a Folder Recursively Using rsync
 Since the `rm -r` command is not available over SFTP on Pantheon, an alternative way to recursively empty a folder is to use the rsync `--delete` flag. This example shows how to empty the remote folder `files/remote_folder_to_empty` (change this to match the remote directory you want to empty).
 

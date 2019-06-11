@@ -52,7 +52,7 @@ In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-cl
     Do **not** update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 5 below.
 
     </Alert>
-    
+
 4. Wait for HTTPS to provision for the newly connected domains:
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**

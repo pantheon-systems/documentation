@@ -31,15 +31,16 @@ Click on the links above to see the complete PHP info for each version, includin
 ### EOL PHP Versions
 Pantheon also makes PHP [7.0](https://v70-php-info.pantheonsite.io/), [5.6](https://v56-php-info.pantheonsite.io/), [5.5](https://v55-php-info.pantheonsite.io/), and [5.3](https://v53-php-info.pantheonsite.io/) available on the platform, although these are end-of-life (**EOL**), and should not be used unless absolutely necessary.
 
-<div  class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p >Before changing your PHP version, confirm that your CMS is compatible:</p>
+<Alert title="Note" type="info">
+
+Before changing your PHP version, confirm that your CMS is compatible:
 
 * [WordPress Requirements](https://wordpress.org/about/requirements/)
 * [Drupal 8 PHP versions supported](https://www.drupal.org/docs/8/system-requirements/php-requirements#php_required)
 * [Drupal 7 PHP versions supported](https://www.drupal.org/docs/7/system-requirements/drupal-7-php-requirements#php_required)
 * As of Drupal 6.45, Drupal 6 is [compatible with PHP 7.2](https://www.mydropwizard.com/blog/announcing-drupal-645-and-selected-contrib-php-72). Older versions of Drupal 6 require PHP 5.4 and below.
-</p></div>
+
+</Alert>
 
 ## Configure PHP Version
 Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. If you have a local git clone of your site, this is the project root. When looking at the site over an SFTP connection, look in the `code` directory. If the `pantheon.yml` file is not present, create one to look like the following:
@@ -69,7 +70,8 @@ remote: Changes to `pantheon.yml` detected.
 remote:
 remote: Successfully applied `pantheon.yml` to the 'dev' environment.
 ```
-<br>
+<br />
+
 If you have an invalid `pantheon.yml` file, the `git push` operation will fail and your commit will be rejected. In this example, we've set an unavailable PHP version:
 
 ```
@@ -84,10 +86,11 @@ remote: >   8.0 is not one of [5.3, 5.5, 5.6, 7.0]
 
 Modify `pantheon.yml` until valid and commit the fix before attempting to push again.
 
-<div  class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p >Changes to `pantheon.yml` [deployed as hotfixes](/docs/pantheon-yml#deploying-hotfixes) are not detected.</p>
-</div>
+<Alert title="Note" type="info">
+
+Changes to `pantheon.yml` [deployed as hotfixes](/docs/pantheon-yml#deploying-hotfixes) are not detected.
+
+</Alert>
 
 #### SFTP Mode
 

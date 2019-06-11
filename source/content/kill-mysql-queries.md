@@ -22,7 +22,7 @@ Review the `Time` field to identify the longest running query and run the follow
 kill <thread_id>;
 ```
 <Alert title="Note" type="info">
-Replace `&lt;thread_id&gt;` with the ID of the query you want to terminate.
+Replace `<thread_id>` with the ID of the query you want to terminate.
 </Alert>
 
 ## Kill All Queries

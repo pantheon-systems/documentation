@@ -116,7 +116,9 @@ Depending on your use case, there are three possibilities:
  - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/docs/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
 
     <Alert title="Note" type="info">
-    `$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).</p>
+
+    `$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).
+
     </Alert>
 
  - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/redis/) guide for examples.

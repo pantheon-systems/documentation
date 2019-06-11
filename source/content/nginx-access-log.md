@@ -34,12 +34,9 @@ date-format %d/%b/%Y
 log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T ~h{," }
 ```
 ## Automate GoAccess Reports
-<p class="instruction">Download the following script to quickly pull a site's nginx log file and create an HTML report using GoAccess:</p>
-<div class="script-file-header">
-access_getlogs.sh
-<a id="downloadLinkgoaccess"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
-</button></a>
-</div>
+Download the following script to quickly pull a site's nginx log file and create an HTML report using GoAccess:
+
+<div class="script-file-header">access_getlogs.sh<a id="downloadLinkgoaccess"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script</button></a></div>
 <pre><code id="access_getlogs">#!/bin/bash
 
 type goaccess >/dev/null 2>&1 || { echo >&2 "GoAccess is not installed. Aborting. \n[+]https://pantheon.io/docs/nginx-access-log/ \n[+] https://goaccess.io/download"; exit 1; }
@@ -132,24 +129,23 @@ fi
 open ${TARGET}/${SITE}_report.html
 echo "[+] DONE, LAUNCHING: "</code></pre>
 
-<p class="instruction">Make the script executable:</p>
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#script-install">Copy</button>
-<figure><pre id="script-install"><code class="command bash" data-lang="bash">chmod +x ~/Downloads/access_getlogs.sh</code></pre></figure>
-</div>
+Make the script executable:
 
-<p class="instruction">Move the script to `/usr/local/bin/`:</p>
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#script-move">Copy</button>
-<figure><pre id="script-move"><code class="command bash" data-lang="bash">sudo mv ~/Downloads/access_getlogs.sh /usr/local/bin/access_getlogs
-</code></pre></figure>
-</div>
+```bash
+chmod +x ~/Downloads/access_getlogs.sh
+```
 
-<p class="instruction">Generate a report for a given site and environment:</p>
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#script-run">Copy</button>
-<figure><pre id="script-run"><code class="command bash" data-lang="bash">access_getlogs --site=&lt;site&gt; --env=&lt;env&gt;</code></pre></figure>
-</div>
+Move the script to `/usr/local/bin/`:
+
+```bash
+sudo mv ~/Downloads/access_getlogs.sh /usr/local/bin/access_getlogs
+```
+
+Generate a report for a given site and environment:
+
+```bash
+access_getlogs --site=<site> --env=<env>
+```
 
 
 

@@ -41,14 +41,14 @@ Here's the browser version of the script:
 
 <Tab name="PHP 5" id="php5" active="true">
 
-<pre><code>&lt;style&gt;
+<pre><code><style>
   .green { color: green; font-family: monospace;}
   .red { color: red; font-family: monospace;}
-&lt;/style&gt;
+</style>
 
-&lt;h1&gt;Pantheon MyISAM to InnoDB engine converter&lt;/h1&gt;
+<h1>Pantheon MyISAM to InnoDB engine converter</h1>
 
-&lt;?php
+<?php
 /*
 * Use this script ONLY if you are a Pantheon customer.
 * ONLY RUN THIS SCRIPT IN DEV!
@@ -56,14 +56,14 @@ Here's the browser version of the script:
 $mysqli = @new mysqli($_ENV['DB_HOST'] . ':' . $_ENV['DB_PORT'], $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME']);
 
 if ($mysqli->connect_errno) {
-  echo "&lt;h1&gt;Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."&lt;/h1&gt;\n";
+  echo "<h1>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."</h1>\n";
   die(1);
 }
 
 $results = $mysqli->query("show tables;");
 
 if ($results===false or $mysqli->connect_errno) {
-  echo "&lt;h1&gt;MySQL error: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."&lt;/h1&gt;\n";
+  echo "<h1>MySQL error: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."</h1>\n";
   die(2);
 }
 
@@ -87,14 +87,14 @@ die(0);</code></pre>
 
 <Tab name="PHP 7" id="php7">
 
-<pre><code>&lt;style&gt;
+<pre><code><style>
   .green { color: green; font-family: monospace;}
   .red { color: red; font-family: monospace;}
-&lt;/style&gt;
+</style>
 
-&lt;h1&gt;Pantheon MyISAM to InnoDB engine converter&lt;/h1&gt;
+<h1>Pantheon MyISAM to InnoDB engine converter</h1>
 
-&lt;?php
+<?php
 /*
 * Use this script ONLY if you are a Pantheon customer.
 * ONLY RUN THIS SCRIPT IN DEV!
@@ -102,14 +102,14 @@ die(0);</code></pre>
 $mysqli = @new mysqli($_ENV['DB_HOST'], $_ENV['DB_USER'], $_ENV['DB_PASSWORD'], $_ENV['DB_NAME'], $_ENV['DB_PORT']);
 
 if ($mysqli->connect_errno) {
-  echo "&lt;h1&gt;Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."&lt;/h1&gt;\n";
+  echo "<h1>Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."</h1>\n";
   die(1);
 }
 
 $results = $mysqli->query("show tables;");
 
 if ($results===false or $mysqli->connect_errno) {
-  echo "&lt;h1&gt;MySQL error: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."&lt;/h1&gt;\n";
+  echo "<h1>MySQL error: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error ."</h1>\n";
   die(2);
 }
 
