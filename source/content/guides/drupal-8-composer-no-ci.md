@@ -5,10 +5,7 @@ tags: [moreguides, composer]
 categories: [drupal]
 type: guide
 permalink: docs/guides/:basename/
-contributors:
-  - ataylorme
-  - dwayne
-  - davidneedham
+contributors: [ataylorme, dwayne, davidneedham]
 ---
 
 In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/) for managing a Drupal 8 site on your local machine and pushing to Pantheon.

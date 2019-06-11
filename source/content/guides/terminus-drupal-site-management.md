@@ -5,8 +5,7 @@ tags: [devterminus, create, moreguides]
 categories: []
 type: guide
 permalink: docs/guides/:basename/
-contributors:
-  - erikmathy
+contributors: [erikmathy]
 date: 2/25/2015
 ---
 ## Create Sites Faster and More Efficiently

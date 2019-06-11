@@ -5,7 +5,7 @@ tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
 date: 5/4/2017
-contributors: scottmassey
+contributors: [scottmassey]
 ---
 [Trello](https://trello.com) is a simple yet powerful project management tool which helps teams to collaborate on projects in an agile framework. Trello lends itself to not only web projects, but also helps businesses keep [other](https://trello.com/inspiration) internal tasks and objectives organized.
 
@@ -80,7 +80,9 @@ We use the filesystem private path in this section because we don't want to trac
         terminus secrets:set $SITE.dev trello_token '<Token>'
 
 <Alert title="Note" type="info">
+
 When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+
 </Alert>
 
 ## Configure Quicksilver Integration
@@ -118,7 +120,9 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
                 script: private/scripts/trello_integration.php
 
     <Alert title="Note" type="info">
-    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
+
+    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+
     </Alert>
 
 6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
@@ -134,7 +138,9 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
     ![Trello card ID](/source/docs/assets/images/integrations/trello/card-id.png)
 
     <Alert title="Note" type="info">
+
     In a separate teriminal window, run `terminus workflow:watch $SITE` to see the process unfold in real time (optional).
+    
     </Alert>
 
 2. Push a code change to Pantheon containing the Trello card ID in the commit message in brackets (e.g., [4K2zqr1A]). This workflow will trigger `trello_integration.php` script, which will search commits for possible issue IDs and comment in Trello when found.

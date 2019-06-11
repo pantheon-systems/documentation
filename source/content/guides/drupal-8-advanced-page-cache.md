@@ -5,10 +5,7 @@ tags: [moreguides]
 categories: [drupal]
 type: guide
 permalink: docs/guides/:basename/
-contributors:
-  - stevector
-  - dwayne
-  - davidneedham
+contributors: [stevector, dwayne, davidneedham]
 ---
 
 [Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) and the [Pantheon Global CDN](/docs/global-cdn/).

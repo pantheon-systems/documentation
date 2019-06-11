@@ -5,8 +5,7 @@ tags: [siteintegrations, security, moreguides]
 categories: []
 type: guide
 permalink: docs/guides/:basename/
-contributors:
-  - cteitzel
+contributors: [cteitzel]
 featuredcontributor: true
 date: 8/11/2016
 ---

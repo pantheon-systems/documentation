@@ -74,7 +74,9 @@ We use the filesystem private path in this section because we don't want to trac
         terminus secrets:set $SITE.dev tracker_token <token value>
 
 <Alert title="Note" type="info">
+
 When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+
 </Alert>
 
 ## Configure Quicksilver Hook
@@ -113,7 +115,9 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
     ```
 
     <Alert title="Note" type="info">
-    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
+
+    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+
     </Alert>
 
 6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
@@ -128,7 +132,9 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
     ![Pivotal Tracker id](/source/docs/assets/images/integrations/pivotal-tracker/id.png)
 
     <Alert title="Note" type="info">
+
     In a separate terminal window, run `terminus workflow:watch $SITE` to see the process unfold in real time (optional).
+
     </Alert>
 
 2. Push a code change to Pantheon containing the Pivotal Tracker story ID in the commit message in brackets (e.g., [#149869497]). This workflow will trigger `pivotal_integration.php` script, which will search commits for possible issue IDs and comment when found.

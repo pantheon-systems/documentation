@@ -5,7 +5,7 @@ tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
 date: 5/4/2017
-contributors: scottmassey
+contributors: [scottmassey]
 ---
 
 [Asana](https://asana.com) is a flexible project management tool which helps teams to collaborate on projects in either an waterfall or kanban framework. It allows for projects to be spun up and managed quickly and easily, and has an extremely well designed user interface.
@@ -82,7 +82,9 @@ In the commands below, replace `<site>` with your site name, `<user>` with your 
         terminus secrets:set $SITE.dev asana_access_token '<API token>'
 
 <Alert title="Note" type="info">
+
 When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+
 </Alert>
 
 ## Configure Quicksilver Integration
@@ -120,7 +122,9 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
                 script: private/scripts/asana_integration.php
 
     <Alert title="Note" type="info">
-    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
+
+    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+
     </Alert>
 
 6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:

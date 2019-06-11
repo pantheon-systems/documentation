@@ -4,8 +4,7 @@ description: Learn how to install Behat and write simple tests.
 type: guide
 tags: [moreguides]
 permalink: docs/guides/:basename/
-contributors:
-  - ataylorme
+contributors: [ataylorme]
 ---
 
 [Behat](https://behat.org) is a PHP framework for automated testing. In our [blog](https://pantheon.io/blog/behat-web-developers) we discuss the advantages of using Behat to continuously test your site. This guide demonstrates how to install Behat and [Mink](http://mink.behat.org/en/latest/), and how to write simple tests.

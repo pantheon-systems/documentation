@@ -5,10 +5,7 @@ tags: [workflow, tools, moreguides]
 categories: []
 type: guide
 permalink: docs/guides/:basename/
-contributors:
-  - bmackinney
-  - jessifischer
-  - mrfelton
+contributors: [bmackinney, jessifischer, mrfelton]
 date: 4/3/2015
 ---
 While Pantheon provides Git repositories for all sites on the platform, many teams need to use an external repository hosted at a provider, like GitHub or Bitbucket, as the canonical version of the site's codebase. This guide will show you how to get up and running using a GitHub account as the example, although the steps should be similar for any provider.

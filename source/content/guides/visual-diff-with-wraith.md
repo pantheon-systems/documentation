@@ -5,8 +5,7 @@ tags: [siteintegrations, moreguides]
 categories: []
 type: guide
 permalink: docs/guides/:basename/
-contributors:
-  - kate
+contributors: [kate]
 date: 5/29/2015
 ---
 

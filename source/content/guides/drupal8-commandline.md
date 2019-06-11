@@ -5,8 +5,7 @@ tags: [devterminus, create]
 categories: [develop, cli, moreguides]
 type: guide
 permalink: docs/guides/:basename/
-contributors:
-  - stevector
+contributors: [stevector]
 date: 2/15/2017
 ---
 

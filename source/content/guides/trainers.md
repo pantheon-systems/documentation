@@ -4,11 +4,7 @@ description: Best practices for training a group of student using Pantheon
 type: guide
 permalink: docs/guides/:basename/
 tags: [moreguides]
-contributors:
-  - stevector
-  - dwayne
-  - davidneedham
-  - tessak22
+contributors: [stevector, dwayne, davidneedham, tessak22]
 date: 3/26/2018
 ---
 
