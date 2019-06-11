@@ -48,7 +48,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
  terminus site:create my-eu-site-name "My EU Site Name" "WordPress" --org "My Organization Name" --region eu
  ```
 
-  ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](/source/docs/assets/images/create-site-eu.png)
+  ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](../docs/assets/images/create-site-eu.png)
 
   See `terminus site:create --help` for more information on the options and values used in this command.
 
@@ -67,7 +67,7 @@ Use the Dashboard to see the Pantheon Region in which the site is hosted:
     - `United States`, by default, or
     - `European Union`, if the site is hosted in the EU Region
 
-![Site Dashboard > Settings > About Site > Region: European Union](/source/docs/assets/images/settings-about-site-region-eu.png)
+![Site Dashboard > Settings > About Site > Region: European Union](../docs/assets/images/settings-about-site-region-eu.png)
 
 You can also get this information via Terminus.
 

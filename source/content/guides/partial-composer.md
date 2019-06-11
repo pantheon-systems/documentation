@@ -142,7 +142,7 @@ Use the `require` command to add new dependencies to your project, such as libra
     ```
   2. Review modified files using `git status`, you should see the module has been installed in the `wp-content/plugins` directory like so:
 
-    ![Require wpackagist-plugin/pantheon-advanced-page-cache output](/source/docs/assets/images/guides/partial-composer/require-papc-plugin.png)
+    ![Require wpackagist-plugin/pantheon-advanced-page-cache output](../docs/assets/images/guides/partial-composer/require-papc-plugin.png)
 
     Notice a missing dependency was also installed, `composer/installers`. This is package is needed to support the installation paths configured in the previous section.
 
@@ -184,7 +184,7 @@ Use the `require` command to add new dependencies to your project, such as libra
     ```
   3. Review modified files using `git status`:
 
-    ![Require drupal/pantheon_advanced_page_cache output](/source/docs/assets/images/guides/partial-composer/require-drush.png)
+    ![Require drupal/pantheon_advanced_page_cache output](../docs/assets/images/guides/partial-composer/require-drush.png)
 
     If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing.
   4. Commit your work to version control with Git:

@@ -96,11 +96,11 @@ Changes to `pantheon.yml` [deployed as hotfixes](/docs/pantheon-yml#deploying-ho
 
 When you upload a new or modified `pantheon.yml` file in SFTP mode, your site dashboard will detect the changes:
 
-![The Site Dashboard sees changes to pantheon.yml](/source/docs/assets/images/dashboard/pantheon-yml-changes-sftp.png)
+![The Site Dashboard sees changes to pantheon.yml](../docs/assets/images/dashboard/pantheon-yml-changes-sftp.png)
 
 If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. In the example below we've attempted to set the PHP version to 12:
 
-![The Site Dashboard doesn't commit invalid changes](/source/docs/assets/images/dashboard/pantheon-yml-failure-sftp.png)
+![The Site Dashboard doesn't commit invalid changes](../docs/assets/images/dashboard/pantheon-yml-failure-sftp.png)
 
 ## Troubleshoot Post-Upgrade Errors
 

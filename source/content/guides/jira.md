@@ -35,7 +35,7 @@ Start by creating a new machine user in your Atlassian Cloud instance. This user
 
   We suggest naming machine users relative to their function, in this example we name our new user `Pantheon Automation`. The email needs to be an account you have access to:
 
-    ![Create an automation user](/source/docs/assets/images/integrations/jira-new-user.png)
+    ![Create an automation user](../docs/assets/images/integrations/jira-new-user.png)
 
 4. Check the address used in the last step for an email from Atlassian. The username is provided here. Click the **Set my password** button and follow prompts to set the machine user's password.
 
@@ -140,7 +140,7 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 4. Return to the issue in Jira to see a message from our machine user:
 
-    ![Jira issue](/source/docs/assets/images/integrations/jira_log.png)
+    ![Jira issue](../docs/assets/images/integrations/jira_log.png)
 
 ## Conclusion
 In this guide, we covered a simple integration between Jira and Pantheon. There are other ways to connect your Jira with your development workflow on Pantheon if you also use and external repository such as Atlassian's [Bitbucket](https://confluence.atlassian.com/adminjiracloud/getting-started-with-bitbucket-and-jira-cloud-776830280.html) or [GitHub](https://confluence.atlassian.com/adminjiracloud/connect-jira-cloud-to-github-814188429.html). These integrations will provide better insight and clarity into work being performed, while saving time by automating communication within your team.

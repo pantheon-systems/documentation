@@ -139,7 +139,7 @@ A warning may appear in the WordPress dashboard that you need to update your `.h
 Congratulations on setting up your first WordPress Site Network. You are on your way to glory! When logged in to the WordPress Dashboard, you'll see a new **My Sites** menu item in the toolbar:
 
 
-![Enabling the network](/source/docs/assets/images/wp-network-admin-sites.png)
+![Enabling the network](../docs/assets/images/wp-network-admin-sites.png)
 
 You will have one site — go ahead and create another if you'd like. If you chose to use WordPress Site Networks with subdirectories, you'll be able to access the site right away. If you chose to use subdomains, you'll need to map a custom hostname to the environment before you can access the new environment.
 

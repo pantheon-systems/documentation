@@ -49,7 +49,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
 
 All environments will now show the following indicator for logged-in users with the `manage_options` capability:
 
-![Pantheon HUD](/source/docs/assets/images/pantheon-hud.png)
+![Pantheon HUD](../docs/assets/images/pantheon-hud.png)
 
 You can restrict this to specific users with the `pantheon_hud_current_user_can_view` filter:
 

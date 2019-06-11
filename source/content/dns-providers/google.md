@@ -26,7 +26,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 ### A Record
 1. Select the **Configure DNS** icon within the Google Domains interface:
 
-  ![Google configure dns](/source/docs/assets/images/google-config-dns.png)
+  ![Google configure dns](../docs/assets/images/google-config-dns.png)
 
 2. Scroll to the **Custom resource records** section.
 3. Enter **@** in the **Host** field and provide the A record value provided by Pantheon in the **IPv4** field.
@@ -44,7 +44,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 
 5. Click **Add** to create the record.
 
-![Google configure ipv4](/source/docs/assets/images/google-a-record.png)
+![Google configure ipv4](../docs/assets/images/google-a-record.png)
 
 
 ### AAAA Records
@@ -54,7 +54,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 3. Click the **+** icon to the right of the IPv6 field then enter the second AAAA record provided by Pantheon in the **IPv6 address** field.
 4. Set desired Time to Live (TTL), then click **Add** to create the record.
 
-![Google configure ipv6](/source/docs/assets/images/google-aaaa.png)
+![Google configure ipv6](../docs/assets/images/google-aaaa.png)
 
 
 ### CNAME Record
@@ -64,7 +64,7 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 2. Enter `www` in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
 3. Set desired Time to Live (TTL), then click **Add** to create the record.
 
-![Google configure cname](/source/docs/assets/images/google-cname.png)
+![Google configure cname](../docs/assets/images/google-cname.png)
 
 ## Next Steps
 

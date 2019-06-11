@@ -114,7 +114,7 @@ Normally the next step would go through the standard Drupal installation. But si
 
     Downloading Drupal core and its dependencies for the first time may take a while. Subsequent updates should take less time.
 
-    ![image of terminal running a composer install](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-update.png)
+    ![image of terminal running a composer install](../docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-update.png)
 
 2. And now we need to install:
 
@@ -140,7 +140,7 @@ Normally the next step would go through the standard Drupal installation. But si
    git status
    ```
 
-   ![Image of git status showing the changed files in red](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
+   ![Image of git status showing the changed files in red](../docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
 
 6. Set the site to `git` mode:
 
@@ -208,7 +208,7 @@ To maintain best practice, some of the steps in this section require access to t
    terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
    ```
 
-   ![Image of installing address module](/source/docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
+   ![Image of installing address module](../docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
 
 ### Update All Site Code
 

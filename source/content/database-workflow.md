@@ -7,7 +7,7 @@ categories: []
 The Pantheon platform provides each site environment with a dedicated MySQL container running [MariaDB](https://en.wikipedia.org/wiki/MariaDB) that can be maintained remotely or locally. For a comprehensive list of MySQL settings, [access your database](/docs/mysql-access/#database-connection-information) and use the [SHOW VARIABLES](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) statement.
 
 Using the tools in the Database / Files tab, you can overwrite the databases on your site's Dev or Test environment with the database on your Live environment, allowing you to pull content from Live in to other environments.
-![Workflow Tool](/source/docs/assets/images/dashboard/interface-workflow-tool.png)
+![Workflow Tool](../docs/assets/images/dashboard/interface-workflow-tool.png)
 <Alert title="Warning" type="danger">
 Pushing content up to Live should almost never be done to a launched site, as it can overwrite the environment configurations. See [Using the Pantheon Workflow](/docs/pantheon-workflow/). 
 </Alert>

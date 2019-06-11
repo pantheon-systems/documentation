@@ -50,7 +50,7 @@ Solr on Drupal 8 requires a Composer managed workflow, as described in our [Buil
     git push origin solr
     ```
 
-    ![Require search API output](/source/docs/assets/images/composer-require-search_api_pantheon.png)
+    ![Require search API output](../docs/assets/images/composer-require-search_api_pantheon.png)
 
 
 ## Configure Solr

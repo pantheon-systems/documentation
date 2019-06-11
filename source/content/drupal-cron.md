@@ -31,11 +31,11 @@ You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
     - One way is to execute cron manually from the Drupal admin interface:
 
-      ![Drupal admin configure cron](/source/docs/assets/images/cron-config.png)
+      ![Drupal admin configure cron](../docs/assets/images/cron-config.png)
 
       Click **Run cron** to run all scheduled tasks:
 
-      ![Click Run Cron](/source/docs/assets/images/run-cron.png)
+      ![Click Run Cron](../docs/assets/images/run-cron.png)
 
     - Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/terminus/) command:
 
@@ -45,11 +45,11 @@ You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
 2.  To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at **Reports** > **Recent log messages**.
 
- ![Reports--->Recent Log Messages](/source/docs/assets/images/recent-log-reports.png)
+ ![Reports--->Recent Log Messages](../docs/assets/images/recent-log-reports.png)
 
  If cron has run recently, entries will appear in the log. The two entries in the screenshot below show that cron has run and a cron task called `cron_example`.
 
- ![Cron log entry in reports](/source/docs/assets/images/drupal-reports.png)
+ ![Cron log entry in reports](../docs/assets/images/drupal-reports.png)
 
 ### Run Cron More Often
 
@@ -80,13 +80,13 @@ To disable Drupal's standard cron:
 2. Select **Never** from the "Run cron every" drop-down menu.
 3. Click **Save configuration**:
 
-  ![Stop cron from running](/source/docs/assets/images/run-cron-config.png)
+  ![Stop cron from running](../docs/assets/images/run-cron-config.png)
 
 ### Drupal 7 and Elysia Cron
 
 Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cron) contrib module to extend the standard cron can disable it globally in the module's settings:
 
-![disable cron globally by Elysia Cron](/source/docs/assets/images/disable_cron_elysia.png)
+![disable cron globally by Elysia Cron](../docs/assets/images/disable_cron_elysia.png)
 
 ## Troubleshooting Cron
 

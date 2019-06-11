@@ -78,7 +78,7 @@ No, payment for a site can only come from one card at a time.
 ### Why don't I get email notifications about upcoming billing?
 Billing emails are only sent to the billing contact email, set by the [Site Owner](#roles-and-permissions) when they enter a credit card for payment:
 
-![Billing Contact](/source/docs/assets/images/dashboard/billing-contact.png)
+![Billing Contact](../docs/assets/images/dashboard/billing-contact.png)
 
 If you are the billing contact for an online site plan, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts. You can also reach out to your IT department to see if the emails are in quarantine.
 

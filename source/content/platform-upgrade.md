@@ -4,7 +4,7 @@ description: Details on the current infrastructure upgrade.
 ---
 If your site dashboard displays the following **Deployment Infrastructure Upgrade** notice, we recommend waiting to make code changes until maintenance completes:
 
-![deployment infrastructure upgrade](/source/docs/assets/images/upgrade-notice.png)
+![deployment infrastructure upgrade](../docs/assets/images/upgrade-notice.png)
 
 Refer to the following FAQs for more details and if you have concerns surrounding this process.
 ## Frequently Asked Questions

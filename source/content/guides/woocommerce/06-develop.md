@@ -23,23 +23,23 @@ It's a good security practice to remove any plugins or themes you aren't using. 
 
 1. In the WordPress admin of our **<span class="glyphicons glyphicons-wrench"></span> Dev** environment under **Appearance** you'll see all of the installed themes.
 
-    ![WordPress dashboard theme screen](/source/docs/assets/images/guides/woocommerce/27-WordPress-dashboard-theme-list.png)
+    ![WordPress dashboard theme screen](../docs/assets/images/guides/woocommerce/27-WordPress-dashboard-theme-list.png)
 
     Hover over each one and click **Theme Details**.
 
 2. A preview of the theme will come up. If the theme is not active, click **Delete** in the bottom right to remove it.
 
-    ![Deleting a theme in the WordPress dashboard](/source/docs/assets/images/guides/woocommerce/28-WordPress-dashboard-delete-theme.png)
+    ![Deleting a theme in the WordPress dashboard](../docs/assets/images/guides/woocommerce/28-WordPress-dashboard-delete-theme.png)
 
     Repeat this for each theme, deleting the ones that are not active.
 
 3. Now we need to commit the changes, just like we did earlier. This ensures they are tracked in version control. Changes that aren't committed cannot be deployed to the **<span class="glyphicons glyphicons-equalizer"></span> Test** environment.
 
-    ![Deleted files list in the Pantheon dashboard](/source/docs/assets/images/guides/woocommerce/29-Pantheon-dashboard-deleted-theme-file-changes.png)
+    ![Deleted files list in the Pantheon dashboard](../docs/assets/images/guides/woocommerce/29-Pantheon-dashboard-deleted-theme-file-changes.png)
 
 4. Now that the changes are committed we can move them over to our **<span class="glyphicons glyphicons-equalizer"></span> Test** environment with the the **<span class="glyphicons glyphicons-refresh"></span> Deploy** menu.
 
-    ![Pantheon dashboard deployment log with deleted themes](/source/docs/assets/images/guides/woocommerce/30-Pantheon-dashboard-deleted-theme-deployment.jpg)
+    ![Pantheon dashboard deployment log with deleted themes](../docs/assets/images/guides/woocommerce/30-Pantheon-dashboard-deleted-theme-deployment.jpg)
 
 
 
@@ -47,6 +47,6 @@ It's a good security practice to remove any plugins or themes you aren't using. 
 
   With a quick test we can see all of the other themes were deleted, leaving only the active  Storefront theme.
 
-  ![The WordPress dashboard showing only a single theme installed](/source/docs/assets/images/guides/woocommerce/31-WordPress-dashboard-single-theme.png)
+  ![The WordPress dashboard showing only a single theme installed](../docs/assets/images/guides/woocommerce/31-WordPress-dashboard-single-theme.png)
 
 Now that you know how to move content changes around you can keep your store live and accepting new orders while you add functionality to your site in the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment and then test the new changes in the **<span class="glyphicons glyphicons-equalizer"></span> Test** environment. Once the changes are ready for production they can be deployed to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment.

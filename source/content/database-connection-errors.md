@@ -5,7 +5,7 @@ tags: [debugdb]
 categories: [troubleshoot]
 ---
 There is an issue connecting to the Pantheon database if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
- ![Can't connect to local MySQL server through socket](/source/docs/assets/images/mysql-connection-error.png)
+ ![Can't connect to local MySQL server through socket](../docs/assets/images/mysql-connection-error.png)
 
 ```sql
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).

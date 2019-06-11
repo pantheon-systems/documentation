@@ -33,7 +33,7 @@ $ terminus aliases
 
 ### Download Using the Dashboard
 
-![Link to Pantheon Drush Aliases](/source/docs/assets/images/dashboard/drush-aliases.png)
+![Link to Pantheon Drush Aliases](../docs/assets/images/dashboard/drush-aliases.png)
 
 Download your Pantheon site aliases to manually update your local aliases file:
 

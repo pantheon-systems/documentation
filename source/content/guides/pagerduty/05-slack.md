@@ -29,22 +29,22 @@ In this lesson, we'll add the Slack extension to PagerDuty so your team can ackn
 
 3. Click Authorize:
 
-  ![Add slack extension](/source/docs/assets/images/pagerduty/pg-extensions.png)
+  ![Add slack extension](../docs/assets/images/pagerduty/pg-extensions.png)
 
 4. Select the channel to which you’d like PagerDuty to send messages and then Authorize the integration. We recommend using project specific channels:
 
-    ![CSlack authorization](/source/docs/assets/images/pagerduty/pg-authorize-slack.png)
+    ![CSlack authorization](../docs/assets/images/pagerduty/pg-authorize-slack.png)
 
 5. Go to **Configuration** > **Services**, and click the **<span class="glyphicons glyphicons-cogwheel" aria-hidden="true"></span>** icon next to your existing service then click **+ New Incident**:
 
-  ![Configure existing service](/source/docs/assets/images/pagerduty/pg-configure-service.png)
+  ![Configure existing service](../docs/assets/images/pagerduty/pg-configure-service.png)
 
 6. Create a new incident:
 
-  ![Create pagerduty incident](/source/docs/assets/images/pagerduty/pg-new-incident.png)
+  ![Create pagerduty incident](../docs/assets/images/pagerduty/pg-new-incident.png)
 
 This will automatically send notifications to whoever is on-call via SMS and email immediately, in addition to showing up in Slack. The person on-call can acknowledge and resolve the incident through email, SMS, Slack, or from within PagerDuty.
 
-![SMS interactions](/source/docs/assets/images/pagerduty/pg-sms-notification.png)
+![SMS interactions](../docs/assets/images/pagerduty/pg-sms-notification.png)
 
-![CSlack authorization](/source/docs/assets/images/pagerduty/pg-slack-notification.png)
+![CSlack authorization](../docs/assets/images/pagerduty/pg-slack-notification.png)

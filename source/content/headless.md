@@ -17,7 +17,7 @@ Some key differences of decoupled architecture include:
   <div id="headless" class="flex-panel-item">
     <div class="flex-panel-body">
       <p class="topic-info__description" >
-      ![Decoupled Frontend](/source/docs/assets/images/decoupledcms-what-is-decoupled.png)
+      ![Decoupled Frontend](../docs/assets/images/decoupledcms-what-is-decoupled.png)
 
       **Decoupled Frontend**<br>
       Presentation can be handled in a variety of ways, from interactive JS frameworks like Angular, to static generators, to mobile apps, or even another CMS. Multiple frontends can peacefully coexist.</p>
@@ -26,7 +26,7 @@ Some key differences of decoupled architecture include:
   <div id="headless" class="flex-panel-item">
     <div class="flex-panel-body">
       <p class="topic-info__description" >
-      ![Content Via Web Service API](/source/docs/assets/images/decoupledcms-what-is-content.png)
+      ![Content Via Web Service API](../docs/assets/images/decoupledcms-what-is-content.png)
 
       **Content Via Web Service API**<br>
       The content for the site is accessible via a web-service API, usually in a RESTful manner and in a mashup-friendly format such as JSON.</p>
@@ -35,7 +35,7 @@ Some key differences of decoupled architecture include:
   <div id="headless" class="flex-panel-item">
     <div class="flex-panel-body">
       <p class="topic-info__description" >
-      ![CMS Backend and Database](/source/docs/assets/images/decoupledcms-what-is-backend.png)
+      ![CMS Backend and Database](../docs/assets/images/decoupledcms-what-is-backend.png)
 
       **CMS Backend and Database**<br>
       There is a traditional database-driven CMS which editors use to maintain the content for the site, usually via the same admin interface as always.</p>
@@ -60,7 +60,7 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
 
 Since WordPress 4.7, the WordPress API is included as part of core. There's no action needed to expose the API on Pantheon. Explore default routes and endpoints like `/wp-json/wp/v2/posts` in your browser:
 
-![default routes wp](/source/docs/assets/images/wp-json-posts.png)
+![default routes wp](../docs/assets/images/wp-json-posts.png)
 
 We recommend using a trusted browser extension to format the JSON response from the API so it's easier to read.
 

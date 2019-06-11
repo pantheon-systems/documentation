@@ -26,7 +26,7 @@ Keep this page open and login to your [GoDaddy account <span class="glyphicons g
 ## Configure DNS Records on GoDaddy
 ### A Record
 
-![Example A record](/source/docs/assets/images/godaddy-dns-a-record.png)
+![Example A record](../docs/assets/images/godaddy-dns-a-record.png)
 
 1. Click your GoDaddy profile in the top right menu bar and select **Manage My Domains**.
 2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Manage DNS**.
@@ -48,7 +48,7 @@ Keep this page open and login to your [GoDaddy account <span class="glyphicons g
 
 ### AAAA Records
 
-![Example AAAAA record](/source/docs/assets/images/godaddy-dns-aaaa-record.png)
+![Example AAAAA record](../docs/assets/images/godaddy-dns-aaaa-record.png)
 
 1. Click the **Add** button and select **AAAA** from the type dropdown menu.
 2. Enter **@** in the **Host** field and enter the first AAAA record value provided by Pantheon in the **Points to** field.
@@ -59,7 +59,7 @@ Keep this page open and login to your [GoDaddy account <span class="glyphicons g
 ### CNAME Record
 A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
-![Example CNAME record](/source/docs/assets/images/godaddy-dns-cname-record.png)
+![Example CNAME record](../docs/assets/images/godaddy-dns-cname-record.png)
 
 1. Click the **Add** button and select **CNAME** from the Type dropdown menu.
 2. Enter **www** in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Points to** field.

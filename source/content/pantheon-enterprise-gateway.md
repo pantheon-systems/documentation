@@ -11,7 +11,7 @@ One of the effects of the elastic nature of Pantheon's platform is that sites ha
 ## How It Works
 The Pantheon Enterprise Gateway uses TLS encryption to create a tunnel from the application containers to a pair of [F5 load balancers](https://f5.com/glossary/load-balancer), offering a consistent IP address range from which requests are made to your local service.
 
-![pantheon enterprise gateway](/source/docs/assets/images/PEG_diagram.png)
+![pantheon enterprise gateway](../docs/assets/images/PEG_diagram.png)
 
 ## Create an Enterprise Gateway
 [Contact support](/docs/support) and provide the following for each of your remote services:

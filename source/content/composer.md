@@ -35,7 +35,7 @@ This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml`
 ## Pull Request Workflow
 In this workflow, a [Multidev](/docs/multidev/) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
 
-![Multidev PR workflow](/source/docs/assets/images/pr-workflow/github-circle-pantheon.png)
+![Multidev PR workflow](../docs/assets/images/pr-workflow/github-circle-pantheon.png)
 
 ### Scaling Considerations
 We recommend the Pull Request workflow for single site use cases, and for most use cases involving larger site portfolios such as EDUs. You can create a "template" repository based off Pantheon's example repositories and customize it to your liking, then use the template to create new sites.

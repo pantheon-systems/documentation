@@ -298,22 +298,22 @@ Success callouts are used infrequently, usually in guides with specific end resu
 <div class="style-example" >
 
 <Alert title="<span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration" type="danger">
-![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain CNAME required DNS value](../docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
 </Alert>
 
 <Alert title="<span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration" type="success">
-![Correct vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain CNAME required DNS value](../docs/assets/images/dashboard/correct-vanity-cname-dns.png)
 </Alert>
 
 
 <hr class="source-code">
 ```html
 <Alert title="<span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration" type="danger">
-![Incorrect vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain CNAME required DNS value](../docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
 </Alert>
 
 <Alert title="<span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration" type="success">
-![Correct vanity domain CNAME required DNS value](/source/docs/assets/images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain CNAME required DNS value](../docs/assets/images/dashboard/correct-vanity-cname-dns.png)
 </Alert>
 ```
 
@@ -419,20 +419,20 @@ Submit screenshots without additional markup. Don't use Skitch to add an arrow, 
 ### GUI
 Screenshots are used to reference GUI instructions:
 <div class="style-example" >
-![Alt text describing the image](/source/docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 <hr class="source-code">
 ```markdown
-![Alt text describing the image](/source/docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 ```
 </div>
 
 ### Terminal
 Terminal screenshots should only be used to demonstrate intended output:
 <div class="style-example" >
-![Alt text describing the image](/source/docs/assets/images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](../docs/assets/images/pr-workflow/composer-require-pathauto.png)
 <hr class="source-code">
 ```markdown
-![Alt text describing the image](/source/docs/assets/images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](../docs/assets/images/pr-workflow/composer-require-pathauto.png)
 ```
 </div>
 

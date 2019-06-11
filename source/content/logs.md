@@ -67,14 +67,12 @@ When appservers are migrated as a regular part of platform maintenance, log file
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 ## Downloading Logs
-<div class="panel panel-drop" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#logs-video"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-facetime-video"></span> Watch: Download Appserver and Database Log Files</h3></a>
-  </div>
-  <div id="logs-video" class="collapse">
-    <script src="//fast.wistia.com/embed/medias/hqqq24z2iv.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_hqqq24z2iv videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-  </div>
-</div>
+
+<Accordion title="Watch: Download Appserver and Database Log Files" id="logs-video" icon="facetime-video">
+
+`youtube: https://youtu.be/t3cyL5h5vTI`
+
+</Accordion>
 
 ### Application Log Files
 

@@ -36,7 +36,7 @@ Automatically clear related pages from Pantheon's Edge when you update content. 
 ## [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud)
 Provides situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
 
-![Pantheon HUD](/source/docs/assets/images/pantheon-hud.png)
+![Pantheon HUD](../docs/assets/images/pantheon-hud.png)
 
 For installation details, see [Configuring Environment Indicators](/docs/environment-indicator).
 

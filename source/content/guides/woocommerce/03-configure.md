@@ -25,13 +25,13 @@ The first is [adding PHP sessions to WordPress](/docs/wordpress-sessions/). Word
 
 To enable PHP Sessions on Pantheon, install [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/). It's a free plugin you can download from WordPress.org or install through your WordPress dashboard.
 
-![Install WordPress native PHP sessions plugin](/source/docs/assets/images/guides/woocommerce/10-install-WordPress-native-PHP-sessions-plugin.png)
+![Install WordPress native PHP sessions plugin](../docs/assets/images/guides/woocommerce/10-install-WordPress-native-PHP-sessions-plugin.png)
 
 I'll install mine through the plugin installer.
 
 For any site, speed is important, and for eCommerce it's even more important. That's why Pantheon recommends the [Pantheon Advanced Page Cache plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/). This plugin allows selective cache purging and longer cache lifetimes.
 
-![Install Pantheon Advanced Page Cache plugin](/source/docs/assets/images/guides/woocommerce/11-install-Pantheon-advanced-page-cache-plugin.png)
+![Install Pantheon Advanced Page Cache plugin](../docs/assets/images/guides/woocommerce/11-install-Pantheon-advanced-page-cache-plugin.png)
 
 You can [read more about exactly how this works](https://pantheon.io/blog/optimizing-woocommerce-pantheon-advanced-page-cache-wordpress). For our purposes, it speeds up your site and it's worth installing.
 
@@ -41,4 +41,4 @@ We have a [whole document explaining how to load your entire site in HTTPS](/doc
 
 Make sure **Force secure checkout** is enabled in **WooCommerce** > **Settings** > **Advanced** > **Page setup**. This has the added benefit of getting rid of one of the admin notices in the backend of your site.
 
-![Force HTTPS in checkout](/source/docs/assets/images/guides/woocommerce/12-force-secure-checkout.png)
+![Force HTTPS in checkout](../docs/assets/images/guides/woocommerce/12-force-secure-checkout.png)

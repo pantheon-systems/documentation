@@ -29,7 +29,7 @@ Two-factor authentication is a helpful security practice because it prevents att
 
 
   5. Open the settings page for the Duo plugin. Configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com:
-      ![TFA Duo Configuration](/source/docs/assets/images/duo-settings.png)
+      ![TFA Duo Configuration](../docs/assets/images/duo-settings.png)
       Click **Save Changes**.
   6. The page will be automatically redirected to the Duo setup wizard. Follow the on-screen instructions to configure an authentication device to your site and test it. Once complete, your browser will be redirected back to the plugin settings page.
 
@@ -52,14 +52,14 @@ Two-factor authentication is a helpful security practice because it prevents att
     1. Install and enable the [Two-factor Authentication (TFA)](https://www.drupal.org/project/tfa) module and the [TFA Basic plugins](https://www.drupal.org/project/tfa_basic) module on your Drupal site.
     2. Download and set up a Time-based One-time Password Algorithm (TOTP) app such as [Authy](https://www.authy.com/users) for either iOS or Android.
     3. Configure the TFA module `admin/config/people/tfa` to **Enable TFA**; set **TOTP** as the default validation plugin; add **Recovery Codes** as a fallback plugin; and allow **Trusted Browsers** for your domain.
-    ![TFA Module Settings](/source/docs/assets/images/tfa-drupal-module-settings.png)
+    ![TFA Module Settings](../docs/assets/images/tfa-drupal-module-settings.png)
     4. Go to the Security settings on each user profile you want to use TFA, and click **Enable TFA**.
     5. Enter your current password, and view the TFA Setup - Application page.
-    ![TFA setup](/source/docs/assets/images/tfa-drupal-otp-setup.png)
+    ![TFA setup](../docs/assets/images/tfa-drupal-otp-setup.png)
     6. Use the app on your mobile phone to scan the QR code to install a new TFA account on your mobile phone.
     7. Enter the six digit TFA code on your mobile app for your specific site to complete the setup. You will then be prompted to confirm a trusted browser (which is optional and will skip TFA on that browser in the future), and to write down TFA recovery codes (best practice).
     8. Log in to your Drupal site by using the TOTP mobile app to generate a six digit code.
-    ![TFA setup](/source/docs/assets/images/tfa-drupal-login.png)
+    ![TFA setup](../docs/assets/images/tfa-drupal-login.png)
 
 </Tab>
 
@@ -83,15 +83,15 @@ For an organization-wide solution, there are many different [WordPress plugins f
 
 3. Edit the OneLogin WordPress app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
 
-  ![TFA OneLogin Config](/source/docs/assets/images/tfa-wp-onelogin-config.png)
+  ![TFA OneLogin Config](../docs/assets/images/tfa-wp-onelogin-config.png)
 
 4. **(Optional)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users.
 
-  ![TFA OneLogin Methods](/source/docs/assets/images/tfa-onelogin-tfa-methods.png)
+  ![TFA OneLogin Methods](../docs/assets/images/tfa-onelogin-tfa-methods.png)
 
 5. Create user accounts in the Users Administration area of OneLogin, and click **New User**. Make sure that the “Username” and "Email" fields in OneLogin match their WordPress username and email.
 
-  ![TFA OneLogin New User](/source/docs/assets/images/tfa-onelogin-new-user.png)
+  ![TFA OneLogin New User](../docs/assets/images/tfa-onelogin-new-user.png)
 
 #### WordPress Instructions
 
@@ -99,25 +99,25 @@ For an organization-wide solution, there are many different [WordPress plugins f
 
 2. Configure the **Identity Provider Settings** section in the SSO/SAML Settings within the WordPress Admin to provide the appropriate values, which are available in the SSO section of the OneLogin Configuration page.
 
-  ![TFA OneLogin Ident](/source/docs/assets/images/tfa-wp-onelogin-ident.png)
+  ![TFA OneLogin Ident](../docs/assets/images/tfa-wp-onelogin-ident.png)
 
 3. Configure the **Options** section(optional) under the SSO/SAML Settings:
   - Check **Create user if not exists** if you want users to be auto-created
   - Check **Keep Local login** if you still want to use the normal WP login form, otherwise you will always be using OneLogin to authenticate.
 
-  ![TFA OneLogin Options](/source/docs/assets/images/tfa-wp-onelogin-options.png)
+  ![TFA OneLogin Options](../docs/assets/images/tfa-wp-onelogin-options.png)
 
 4. Configure the **Attribute Mapping** in the SSO/SAML Settings of the WordPress Admin with the values shown below. Values are case-sensitive.
 
-  ![TFA OneLogin Attributes](/source/docs/assets/images/tfa-wp-onelogin-attribute.png)
+  ![TFA OneLogin Attributes](../docs/assets/images/tfa-wp-onelogin-attribute.png)
 
 5. Configure the **Customize Actions and Links** in the SSO/SAML Settings of the WordPress Admin to **Prevent use of ?normal**. This requires OneLogin as the authentication solution.
 
-  ![TFA OneLogin Custom Actions](/source/docs/assets/images/tfa-onelogin-custom-actions.png)
+  ![TFA OneLogin Custom Actions](../docs/assets/images/tfa-onelogin-custom-actions.png)
 
 6. Now use the OneLogin dashboard to log in to your WordPress site!
 
-  ![TFA OneLogin WP Login](/source/docs/assets/images/tfa-onelogin-wp-login.png)
+  ![TFA OneLogin WP Login](../docs/assets/images/tfa-onelogin-wp-login.png)
 
   <Alert title="Note" type="info">
 
@@ -136,18 +136,18 @@ For an organization-wide solution, there are many different [Drupal modules for 
 1. Sign up and create a [OneLogin account](https://www.onelogin.com/) for your organization.
 2. Install the Drupal SAML 2.0 app connector as part of the OneLogin dashboard. This will need to be done for each Drupal site that is being managed by OneLogin.
 3. Edit the OneLogin Drupal app connector to provide the appropriate default values for the Configuration section. Other sections should already be set up correctly.
-![TFA OneLogin Config](/source/docs/assets/images/tfa-drupal-onelogin-config.png)
+![TFA OneLogin Config](../docs/assets/images/tfa-drupal-onelogin-config.png)
 4. **(Optional)** Configure the **Authentication Factors** found under Settings for a list of authentication factors you can enable for your different users.
-![TFA OneLogin Methods](/source/docs/assets/images/tfa-onelogin-tfa-methods.png)
+![TFA OneLogin Methods](../docs/assets/images/tfa-onelogin-tfa-methods.png)
 5. Create user accounts in the Users Administration area in OneLogin, and click **New User**. Make sure that the “Username” and "Email" fields in OneLogin match their Drupal username and email.
-![TFA OneLogin New User](/source/docs/assets/images/tfa-onelogin-new-user.png)
+![TFA OneLogin New User](../docs/assets/images/tfa-onelogin-new-user.png)
 
 #### Drupal Instructions
 
 1. Install and enable the GitHub version of the [OneLogin SAML](https://github.com/onelogin/drupal-saml) module on your Drupal site. This module is eventually intended to live on Drupal.org as the [2.x branch of the OneLogin project](https://www.drupal.org/project/onelogin).
 2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/docs/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.
 3. Configure the OneLogin SAML module `admin/config/onelogin_saml` with what is shown in the screenshot; values are case-sensitive.
-![TFA OneLogin Options](/source/docs/assets/images/tfa-drupal-onelogin-options.png)
+![TFA OneLogin Options](../docs/assets/images/tfa-drupal-onelogin-options.png)
 4. Now use the OneLogin dashboard to log in to your Drupal site!
 
 </Tab>
@@ -158,7 +158,7 @@ For an organization-wide solution, there are many different [Drupal modules for 
 ### Log in with Google
 The Pantheon Dashboard offers social login with Google, which can be configured to use [Google TFA](https://www.google.com/landing/2step/):
 
-![Connect with Google](/source/docs/assets/images/log-in-with-google.png)
+![Connect with Google](../docs/assets/images/log-in-with-google.png)
 
 <Alert title="Note" type="info">
 

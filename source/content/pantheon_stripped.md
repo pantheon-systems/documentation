@@ -12,7 +12,7 @@ Variables that are converted to `PANTHEON_STRIPPED` cannot be read with PHP, and
 
 ## Issue: PANTHEON_STRIPPED Displays in the utm_source URL Parameter in Google Analytics
 
-![pantheon_stripped](/source/docs/assets/images/pantheon_stripped.png)
+![pantheon_stripped](../docs/assets/images/pantheon_stripped.png)
 
 This is typically caused by PHP in your site’s code reading in `PANTHEON_STRIPPED` as part of the url that it sees, and then using that in a page response in such a way that shows up in a customer browser, it will then be dutifully reported to Google. Pantheon makes every effort to prevent this, but it is not possible to predict all possible PHP behavior. In most cases, it's safe to simply ignore `PANTHEON_STRIPPED` in your traffic results, as usually customers will have hit the site with a valid parameter first, and the `PANTHEON_STRIPPED` values are duplicate "self-referrals".
 

@@ -14,7 +14,7 @@ Be sure that you have a:
 - Registered domain name using Dyn to host DNS
 - [Paid Pantheon plan](/docs/guides/launch/plans/)
 - [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live):
- ![Domains / HTTPS**.](/source/docs/assets/images/dashboard/domain-added.png)
+ ![Domains / HTTPS**.](../docs/assets/images/dashboard/domain-added.png)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:

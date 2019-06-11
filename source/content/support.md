@@ -5,7 +5,7 @@ tags: [dashboard]
 categories: []
 ---
 
-![Screenshot of the Support Tab](/source/docs/assets/images/dashboard/support-tab.png)
+![Screenshot of the Support Tab](../docs/assets/images/dashboard/support-tab.png)
 
 ## Support Features and Response Times
 Pantheon offers a range of support packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Package.

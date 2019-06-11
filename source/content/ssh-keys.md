@@ -5,14 +5,12 @@ tags: [security, dashboard]
 categories: []
 ---
 To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
-<div class="panel panel-drop" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#ssh-video"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-facetime-video"></span> Watch: Generate a SSH Key and Add it to Your Dashboard</h3></a>
-  </div>
-  <div id="ssh-video" class="collapse">
-    <script src="//fast.wistia.com/embed/medias/mnuxft90ya.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_mnuxft90ya videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-  </div>
-</div>
+
+<Accordion title="Watch: Generate a SSH Key and Add it to Your Dashboard" id="ssh-video" icon="facetime-video">
+
+`youtube: https://youtu.be/U8sfuvrjroY`
+
+</Accordion>
 
 
 Pantheon does not support the SSH protocol. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
@@ -49,7 +47,7 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 1. Log in to Pantheon and go to the **Account** page.
 2. Click **SSH Keys**.
 3. Paste the copied public key into the box, and click **Add Key**.  
-![Adding SSH Keys](/source/docs/assets/images/dashboard/add-ssh-key-dashboard.png)
+![Adding SSH Keys](../docs/assets/images/dashboard/add-ssh-key-dashboard.png)
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on your Pantheon Account page.
 4. Open the Git bash client, and put in the command to clone your Pantheon site. This is found in the Dev environment of your site above the Git code log.
 5. If prompted, enter the password.
@@ -60,7 +58,7 @@ Generating SSH keys may add your username or the computer's hostname as a commen
 
 ## Delete a Key from Pantheon
 To delete a key, go to the **Account** page and click **SSH Keys**. Simply click the **Remove** button next to the key you want to delete.
-![Delete SSH Key](/source/docs/assets/images/dashboard/remove-ssh-key.png)
+![Delete SSH Key](../docs/assets/images/dashboard/remove-ssh-key.png)
 
 If you have no keys remaining but still have active sites, you will still have access to them and can make edits via SFTP and Git using your account password to authenticate.
 

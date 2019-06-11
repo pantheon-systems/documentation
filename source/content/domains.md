@@ -59,19 +59,19 @@ Add all domains (example.com and www.example.com are different domains!) you wan
 
 2. If no domains have been added yet, click **Connect Live Domain**:
 
-    ![Adding a first domain to the Site Dashboard](/source/docs/assets/images/dashboard/add-first-domain.png)
+    ![Adding a first domain to the Site Dashboard](../docs/assets/images/dashboard/add-first-domain.png)
 
    If one (or more) domains have already been added, click **Connect Domain**:
 
-    ![Adding an additional domain to the Site Dashboard](/source/docs/assets/images/dashboard/add-additional-domains.png)
+    ![Adding an additional domain to the Site Dashboard](../docs/assets/images/dashboard/add-additional-domains.png)
 
 3. Enter the domain you'd like to add in the "Enter domain to connect" field, then click **Connect Domain**:
 
-    ![Adding a domain to the Site Dashboard](/source/docs/assets/images/dashboard/connect-custom-domain.png)
+    ![Adding a domain to the Site Dashboard](../docs/assets/images/dashboard/connect-custom-domain.png)
 
 4. After adding your domain, you'll be automatically taken to the domain's "Details" page where you will see both the current DNS records detected (the "Detected Values"), as well as the values to be added at your DNS host ("Required Values"):
 
-    ![Custom domain Details page](/source/docs/assets/images/dashboard/details-page.png)
+    ![Custom domain Details page](../docs/assets/images/dashboard/details-page.png)
 
 5. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/docs/dns/).
 

@@ -13,7 +13,7 @@ This can be done by putting a username and password on the environment, similar 
 When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.
 </Alert>
 
-![Lock environment](/source/docs/assets/images/dashboard/lock-environment.png)
+![Lock environment](../docs/assets/images/dashboard/lock-environment.png)
 
 ## Password Protect Your Site's Environments
 
@@ -27,7 +27,7 @@ You have the ability to password protect any of the available environments.
 
 If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
 
-![Credentials](/source/docs/assets/images/dashboard/environment-access.png)
+![Credentials](../docs/assets/images/dashboard/environment-access.png)
 
 Now when your page refreshes you will notice that the environment is now "Private". You will also be able to see the credentials needed to access that environment.
 
@@ -35,7 +35,7 @@ You can set a different username and password for each environment. This is impo
 
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.
 
-![Locked site example](/source/docs/assets/images/auth-required.png)
+![Locked site example](../docs/assets/images/auth-required.png)
 
 <Alert title="Note" type="info">
 While locked, environments will not be cached by the [Global CDN](/docs/global-cdn).

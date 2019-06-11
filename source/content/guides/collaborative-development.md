@@ -53,13 +53,13 @@ The output lists "origin" as the remote with Pantheon SSH Git clone connection i
 
 ### Create a Repository on GitHub
 
-![Create a Repository on GitHub](/source/docs/assets/images/create-git-repo.png)
+![Create a Repository on GitHub](../docs/assets/images/create-git-repo.png)
 
 ### Add the GitHub Repository as a Remote
 
 As long as you keep “Initialize this repository with a README” unchecked, you will see options for adding code to your repo. You need to replace the word “origin” in this case, because your local clone is already tracking the Pantheon site repository as origin.
 
-![Push an existing repo to GitHub](/source/docs/assets/images/push-existing-repo.png)
+![Push an existing repo to GitHub](../docs/assets/images/push-existing-repo.png)
 
 I chose to name this remote "github".
 ```nohighlight
@@ -95,7 +95,7 @@ Branch master set up to track remote branch master from github.
 
 The repository on GitHub now has all of the same code as my site.
 
-![GitHub repo same as site](/source/docs/assets/images/github-repo-origin-sameas-remote.png)
+![GitHub repo same as site](../docs/assets/images/github-repo-origin-sameas-remote.png)
 
 ## Synchronizing Existing Site Repositories on GitHub With Pantheon
 This process will follow the same general procedures as moving your repo from Pantheon to GitHub, in reverse.
@@ -112,7 +112,7 @@ As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickst
 2. Click **Settings**, then select **About Site**.
 3. Copy the Upstream URL and modify it by replacing `https` with `git` and appending `.git master` to the end of the string.
  For example, a site running Drupal 7, `https://github.com/pantheon-systems/drops-7` will change to `git://github.com/pantheon-systems/drops-7.git master` in the Git command used to pull in the upstream.  
- ![Pantheon Dashboard about site tab](/source/docs/assets/images/dashboard/pantheon-dashboard-settings-about-site-upstream.png)
+ ![Pantheon Dashboard about site tab](../docs/assets/images/dashboard/pantheon-dashboard-settings-about-site-upstream.png)
 4. At the root of your local clone of the site repository, run
 
   ```nohighlight
@@ -136,7 +136,7 @@ Squash commit -- not updating HEAD
 Automatic merge went well; stopped before committing as requested
 ```
 
-![Git Connection Info](/source/docs/assets/images/dashboard/pantheon-dashboard-git-connection-info.png)
+![Git Connection Info](../docs/assets/images/dashboard/pantheon-dashboard-git-connection-info.png)
 
 ### Add the Pantheon Site as a Git Remote
 
@@ -154,7 +154,7 @@ Automatic merge went well; stopped before committing as requested
 6. Push the repo with the newly updated core files to GitHub.
   `$ git push origin master`
 
-![Pantheon Dashboard with Commit Messages](/source/docs/assets/images/dashboard/pantheon-dashboard-git-commit-messages.png)
+![Pantheon Dashboard with Commit Messages](../docs/assets/images/dashboard/pantheon-dashboard-git-commit-messages.png)
 
 ## Developing in Sync
 
@@ -228,7 +228,7 @@ error: failed to push some refs to 'ssh://codeserver.dev.59b2dd69-2305-4ca2-a745
 
 This push to Pantheon failed, because the Development environment was in SFTP mode.
 
-![Connection Mode set to SFTP](/source/docs/assets/images/dashboard/connection-mode-sftp.png)
+![Connection Mode set to SFTP](../docs/assets/images/dashboard/connection-mode-sftp.png)
 
 Switch the connection mode to Git by clicking on the toggle, or via the command line:
 
@@ -236,7 +236,7 @@ Switch the connection mode to Git by clicking on the toggle, or via the command 
 $ terminus connection:set <site>.<env> git
 ```
 
-![Connection Mode set to Git](/source/docs/assets/images/dashboard/connection-mode-git.png)
+![Connection Mode set to Git](../docs/assets/images/dashboard/connection-mode-git.png)
 
 Push to Pantheon:
 
@@ -251,7 +251,7 @@ To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2
    fe267cb..b802550  master -> master
 ```
 
-![Commit deployed to Pantheon Dashboard](/source/docs/assets/images/dashboard/commit-deployed-pantheon-dashboard.png)
+![Commit deployed to Pantheon Dashboard](../docs/assets/images/dashboard/commit-deployed-pantheon-dashboard.png)
 
 The GitHub repo and Pantheon site both now have a settings.php file. This will allow for environment-specific configuration to enable modules via remote Drush calls and other essential functionality.
 
@@ -317,20 +317,20 @@ The platform is telling me that no Multidev environments were found associated w
 ```nohighlight
 $ terminus multidev:create <site>.dev <to_env>
 ```
-![New environment named configs](/source/docs/assets/images/dashboard/new-env-configs.png "New Pantheon Multidev Environment named configs, created with Terminus")
+![New environment named configs](../docs/assets/images/dashboard/new-env-configs.png "New Pantheon Multidev Environment named configs, created with Terminus")
 The module will now be available to activate and test on Pantheon for my colleagues to experience. I'll add a link to the module's configuration page on the Multidev environment on my GitHub pull request.
 
-![New environment configuration admin url](/source/docs/assets/images/configs-admin-url-configs-env.png "The configuration management module's admin url on the configs environment")
+![New environment configuration admin url](../docs/assets/images/configs-admin-url-configs-env.png "The configuration management module's admin url on the configs environment")
 
 ### Create Pull Request
 
 We’re now ready to create a pull request on GitHub. The pull request can include things like links to the Multidev environment where the team can view the effects of the commits, @-mentions of team members, and a list of tasks for team members to perform before merging.
 
-![Pull request for configs branch](/source/docs/assets/images/configuration-pull-request-1.png "A pull request on github for the configs branch to be merged to master")
+![Pull request for configs branch](../docs/assets/images/configuration-pull-request-1.png "A pull request on github for the configs branch to be merged to master")
 
 Timani completed the tasks, we discussed a bit in person, and he merged the PR.
 
-![Merged pull request for configs branch](/source/docs/assets/images/merged-pull-request-1.png "A merged pull request on github showing the configs branch was merged to master")
+![Merged pull request for configs branch](../docs/assets/images/merged-pull-request-1.png "A merged pull request on github showing the configs branch was merged to master")
 
 ## Deploy to Pantheon
 Locally, I now checkout the master branch, pull from github master, and push to pantheon master.
@@ -339,7 +339,7 @@ $ git checkout master
 $ git pull github master
 $ git push pantheon master
 ```
-![Merged PR commit in the Pantheon dashboard](/source/docs/assets/images/dashboard/merged-pull-request-1-dashboard.png "A commit in the dev environment's dashboard from the merged pull request on github")
+![Merged PR commit in the Pantheon dashboard](../docs/assets/images/dashboard/merged-pull-request-1-dashboard.png "A commit in the dev environment's dashboard from the merged pull request on github")
 
 ## Optional Tools to Optimize Workflows
 

@@ -21,18 +21,15 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 
   The recommended way to migrate WordPress sites from another host is to use the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 
-  <div class="panel panel-drop" id="accordion">
-    <div class="panel-heading panel-drop-heading">
-      <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#wp-video"><h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-facetime-video"></span> Watch: Guided WordPress Migrations</h3></a>
-    </div>
-    <div id="wp-video" class="collapse">
-      <script src="//fast.wistia.com/embed/medias/nw3r5fzrwx.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_nw3r5fzrwx videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-    </div>
-  </div>
+  <Accordion title="Watch: Guided WordPress Migrations" id="wp-video" icon="facetime-video">
+
+  `youtube: https://youtu.be/ksg1XkH1da8`
+
+  </Accordion>
 
   1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
-    ![Migrate Existing Site](/source/docs/assets/images/dashboard/migrate-existing-site.png)
+    ![Migrate Existing Site](../docs/assets/images/dashboard/migrate-existing-site.png)
   2. Enter your current website URL.
   3. Select **WordPress**.
   4. Click **Continue**.
@@ -44,12 +41,14 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
   10. Copy the machine token from the Pantheon Dashboard, then navigate to **Pantheon Migration** within the WordPress Dashboard on your existing site. Paste the machine token and enter the site name.
   11. Click **Migrate**. You will receive an email when the migration completes. After the migration is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
-   ![Successful Migration BlogVault](/source/docs/assets/images/dashboard/successful-site-migration-complete-blogvault.png)
+   ![Successful Migration BlogVault](../docs/assets/images/dashboard/successful-site-migration-complete-blogvault.png)
 
   If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 
   <Alert title="Note" type="info">
+
   The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see [WordPress and PHP Sessions](/docs/wordpress-sessions/).
+
   </Alert>
 
 
@@ -61,7 +60,8 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 
   1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
-    ![Migrate Existing Site](/source/docs/assets/images/dashboard/migrate-existing-site.png)
+    ![Migrate Existing Site](../docs/assets/images/dashboard/migrate-existing-site.png)
+
   2. Enter your current website URL.
   3. Select **Drupal 7** or **Drupal 8**.
   4. Click **Continue**.
@@ -70,7 +70,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
   7. Click **Create Site**.
   8. Follow the instructions to **Create an Archive of Your Existing Site With Drush**:
 
-      ![Drupal create archive](/source/docs/assets/images/dashboard/drupal-guided-migrate.png)
+      ![Drupal create archive](../docs/assets/images/dashboard/drupal-guided-migrate.png)
 
       <Alert title="Note" type="info">
       `drush ard` is only available on Drush 8 and earlier.
@@ -81,7 +81,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
   9. Paste a publicly accessible URL to a download of your site archive. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly.
   10. Click **Import Archive**. After the imported is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
-   ![Successful Drupal Migration](/source/docs/assets/images/dashboard/successful-drupal-migration.png)
+   ![Successful Drupal Migration](../docs/assets/images/dashboard/successful-drupal-migration.png)
 
 
 </Tab>
@@ -120,41 +120,44 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
 <TabList>
 
 <Tab title="Drupal 8" id="d8" active={true}>
-  <p>Archives for Drupal 8 sites should include `index.php` at the code root level, along with the following directories:</p>
-  <pre><code class="nohighlight">
-  ├── core
-  ├── index.php
-  ├── modules
-  ├── profiles
-  ├── sites
-      └── all
-         ├── modules
-         └── themes
-      └── default
-         └── settings.php
-  └── themes
-  </code></pre>
+
+Archives for Drupal 8 sites should include `index.php` at the code root level, along with the following directories:
+
+```nohighlight
+├── core
+├── index.php
+├── modules
+├── profiles
+├── sites
+    └── all
+        ├── modules
+        └── themes
+    └── default
+        └── settings.php
+└── themes
+```
 
 </Tab>
 
 <Tab title="Drupal 7" id="d7">
 
-  <p>Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:</p>
-  <pre><code class="nohighlight">
-  ├── includes
-  ├── index.php
-  ├── misc
-  ├── modules
-  ├── profiles
-  ├── scripts
-  ├── sites
-      └── all
-         ├── modules
-         └── themes
-      └── default
-         └── settings.php
-  └── themes
-  </code></pre>
+Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:
+
+```nohighlight
+├── includes
+├── index.php
+├── misc
+├── modules
+├── profiles
+├── scripts
+├── sites
+    └── all
+        ├── modules
+        └── themes
+    └── default
+        └── settings.php
+└── themes
+```
 
 </Tab>
 
@@ -224,14 +227,14 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
 ### Cannot Login Using a Google Account
 Attempts to login with Google will fail if your organization uses Single Sign-On, resulting in the following error:
 
-![Migration Authentication Error](/source/docs/assets/images/dashboard/migration-authentication-error.png)
+![Migration Authentication Error](../docs/assets/images/dashboard/migration-authentication-error.png)
 
 Click your browser's back button to re-authenticate by entering your email address and sign in with your SAML Identity Provider. For details, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/).
 
 ### Destination Site Not Found Error
 If you are logged in with one identity and re-authenticate a different account, the site created will be associated with one account and the machine token with another, resulting in the following error:
 
-![Destination site not found](/source/docs/assets/images/bv-destination-not-found-error.png)
+![Destination site not found](../docs/assets/images/bv-destination-not-found-error.png)
 
 Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 

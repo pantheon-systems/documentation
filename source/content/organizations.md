@@ -33,7 +33,7 @@ All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, a
 
 ### Sites
 
- ![The Organization dashboard, site tab](/source/docs/assets/images/dashboard/organization-dashboard-sites.png)
+ ![The Organization dashboard, site tab](../docs/assets/images/dashboard/organization-dashboard-sites.png)
 
 The Sites tab shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
 
@@ -77,7 +77,7 @@ SSO allows users to authenticate against your Identity Provider (IdP) when loggi
 ### Tagging
 Sites in an organization can have one or multiple tags, to easily identify and/or group them. Tagging can be done from the Organization Sites dashboard or through [Terminus](/docs/terminus):
 
-![Sorting sites by tag](/source/docs/assets/images/dashboard/sorted-by-tag.png)
+![Sorting sites by tag](../docs/assets/images/dashboard/sorted-by-tag.png)
 
 
 ## Retrieving the Organization UUID

@@ -47,7 +47,7 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
 2. At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
 
-    ![Copy Past Git Clone](/source/docs/assets/images/dashboard/git-string.png)<br />
+    ![Copy Past Git Clone](../docs/assets/images/dashboard/git-string.png)<br />
 
 3. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
 
@@ -56,7 +56,7 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
     ```
     If everything worked correctly, you will see Git fetching the data:
 
-    ![Git Clone During](/source/docs/assets/images/git_clone.png)<br />
+    ![Git Clone During](../docs/assets/images/git_clone.png)<br />
 
     If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 

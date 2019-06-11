@@ -24,7 +24,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 1. Navigate to the Site Dashboard and select the desired environment.
 2. Click the **Clear Caches** button:
 
-  ![Clear Cache Button](/source/docs/assets/images/clear-cache-button.png)
+  ![Clear Cache Button](../docs/assets/images/clear-cache-button.png)
 
 ### Site Admin
 
@@ -35,7 +35,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
 3. Navigate to **Settings** > **Pantheon Page Cache**, then click **Clear Cache**:
 
-  ![WordPress Clear Caches](/source/docs/assets/images/wp-cc.png)
+  ![WordPress Clear Caches](../docs/assets/images/wp-cc.png)
 
 </Tab>
 
@@ -45,7 +45,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
 3. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
 
-  ![Drupal 8 Clear Caches](/source/docs/assets/images/d8-cc.png)
+  ![Drupal 8 Clear Caches](../docs/assets/images/d8-cc.png)
 
 </Tab>
 
@@ -56,11 +56,11 @@ We refer to this as "full cache clearing" because the operation removes all page
 2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
 3. Ensure the [Pantheon Platform API](/docs/modules#pantheon-module-drupal-7) module is enabled:
 
-  ![Pantheon Platform API module](/source/docs/assets/images/pantheon-platform-api-enabled.png)
+  ![Pantheon Platform API module](../docs/assets/images/pantheon-platform-api-enabled.png)
 
 4. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
 
-  ![Drupal 7 Clear Caches](/source/docs/assets/images/d7-cc.png)
+  ![Drupal 7 Clear Caches](../docs/assets/images/d7-cc.png)
 
 </Tab>
 

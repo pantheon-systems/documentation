@@ -49,11 +49,11 @@ This doc uses the [ClamAV Module for Drupal 7 & 8](https://www.drupal.org/projec
 
     </Alert>
 
-    ![ClamAV Module Settings](/source/docs/assets/images/clamav-settings.png)
+    ![ClamAV Module Settings](../docs/assets/images/clamav-settings.png)
 
 When ClamAV detects a virus, it will display a warning:
 
-![ClamAV Virus Detected](/source/docs/assets/images/clamav-detection.png)
+![ClamAV Virus Detected](../docs/assets/images/clamav-detection.png)
 
 ## Known Issues
 

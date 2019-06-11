@@ -29,7 +29,7 @@ Start by creating a new machine user in your Trello instance. This user is refer
 
 1. If you haven't done so already, create a team. Login to your Trello instance and click <i class="fa fa-plus"></i>, found in the upper panel, then select **Create Personal Team** or **Create Business Team**, depending on your plan. Add a team name and click **Create**:
 
-    ![Create a team](/source/docs/assets/images/integrations/trello/new-team.png)
+    ![Create a team](../docs/assets/images/integrations/trello/new-team.png)
 
     If you already have a team, select it from your dashboard.
 
@@ -39,15 +39,15 @@ Start by creating a new machine user in your Trello instance. This user is refer
 
   We suggest naming machine users relative to their function, in this example we name our new user `Automation User`. The email needs to be an account you have access to:
 
-    ![Create an automation user](/source/docs/assets/images/integrations/trello/add-member.png)
+    ![Create an automation user](../docs/assets/images/integrations/trello/add-member.png)
 
 4. Login as the new "Automation User" and make sure you're a team member on the relevant board:
 
-    ![Add a team](/source/docs/assets/images/integrations/trello/team-board.png)
+    ![Add a team](../docs/assets/images/integrations/trello/team-board.png)
 
 5. Copy the machine user's API key from [here](https://trello.com/app-key), then click the link to manually generate a Token:
 
-    ![Copy developer api key](/source/docs/assets/images/integrations/trello/developer-keys.png)
+    ![Copy developer api key](../docs/assets/images/integrations/trello/developer-keys.png)
 
     Save your key and token, to be used in the next section.
 
@@ -135,7 +135,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 1. Create a test issue in an existing or new Trello project. Copy the issue ID, which is located in the Trello card's URL:
 
-    ![Trello card ID](/source/docs/assets/images/integrations/trello/card-id.png)
+    ![Trello card ID](../docs/assets/images/integrations/trello/card-id.png)
 
     <Alert title="Note" type="info">
 
@@ -149,7 +149,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 3. Return to the issue in Trello to see a message from our machine user:
 
-    ![Trello card](/source/docs/assets/images/integrations/trello/trello-card.png)
+    ![Trello card](../docs/assets/images/integrations/trello/trello-card.png)
 
 ## Conclusion
 In this guide, we covered a simple integration between Trello and Pantheon. There are other ways to connect your Trello with your development workflow on Pantheon if you also use an external repository such as [GitHub](http://help.trello.com/article/1065-using-the-github-power-up). This integrations work in the opposite direction, allowing you to attach pull requests, issues, and commits directly to your Trello cards, from the Trello dashboard. Using and extending integrations like these will provide clarity into work being performed by you and your team, while speeding up the development process.
