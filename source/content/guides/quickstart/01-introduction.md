@@ -6,12 +6,7 @@ tags: [getstarted]
 layout: guide
 type: guide
 anchorid: quickstart
-quickstart: true
 generator: pagination
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/
 nexturl: guides/quickstart/user-dashboard/
 nextpage: User Dashboard

@@ -7,10 +7,6 @@ layout: guide
 type: guide
 quickstart: true
 generator: pagination
-pagination:
-  provider: data.quickstartpages
-use:
-  - quickstartpages
 permalink: docs/guides/quickstart/user-dashboard/
 nexturl: guides/quickstart/create-new-site/
 nextpage: Create New Site
