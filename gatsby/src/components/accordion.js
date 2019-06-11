@@ -20,7 +20,7 @@ const Accordion = ({ id, icon, title, children, isCollapsed }) => {
           >
             <h3 className="panel-title panel-drop-title info">
               <span className={`glyphicons glyphicons-${icon}`} />
-              {title}
+              &nbsp;{title}
             </h3>
           </span>
         </div>
