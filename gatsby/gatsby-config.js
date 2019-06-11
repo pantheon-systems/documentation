@@ -9,7 +9,7 @@ module.exports = {
   siteMetadata: {
     title: `Pantheon Docs`,
     description: `Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform`,
-    siteUrl: `https://pantheon.io/docs`,
+    siteUrl: `https://pantheon.io/`,
     social: {
       twitter: `getpantheon`,
     },
