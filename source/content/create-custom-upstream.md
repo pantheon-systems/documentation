@@ -17,7 +17,7 @@ Choose your preferred Git host:
 
 <TabList>
 
-<Tab title="GitHub" id="gh" active="true">
+<Tab title="GitHub" id="gh" active={true}>
 1. [Sign up for a GitHub account](https://github.com/join) if you do not have one already.
 
 2. [Log in to GitHub](https://github.com/login/).
@@ -117,7 +117,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <TabList>
 
-    <Tab name="WordPress" id="wp1" active="true">
+    <Tab name="WordPress" id="wp1" active={true}>
 
     ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
@@ -147,7 +147,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <TabList>
 
-    <Tab name="WordPress" id="wp1" active="true">
+    <Tab name="WordPress" id="wp1" active={true}>
 
     ```bash
     git checkout master
@@ -186,7 +186,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
 <TabList>
 
-<Tab title="GitHub" id="gh-auth" active="true">
+<Tab title="GitHub" id="gh-auth" active={true}>
   1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization:
 
     ![Organization Dashobard](/source/docs/assets/images/dashboard/organizations.png)

@@ -83,7 +83,7 @@ The [Environment Indicator](https://www.drupal.org/project/environment_indicator
 
   <TabList>
 
-  <Tab title="Drupal 8" id="d8tab" active="true">
+  <Tab title="Drupal 8" id="d8tab" active={true}>
 
   ```php
   if (!defined('PANTHEON_ENVIRONMENT')) {

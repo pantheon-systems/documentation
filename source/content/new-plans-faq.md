@@ -75,7 +75,7 @@ No action is required. Existing sites will automatically switch to the equivalen
 
 <TabList>
 
-<Tab name="Presonal" id="personal" active="true">
+<Tab name="Presonal" id="personal" active={true}>
 
 |                        | Personal (Legacy) | Basic (New)  |
 | ---------------------- | ----------------- | ------------ |

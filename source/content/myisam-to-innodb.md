@@ -39,7 +39,7 @@ Here's the browser version of the script:
 
 <TabList>
 
-<Tab name="PHP 5" id="php5" active="true">
+<Tab name="PHP 5" id="php5" active={true}>
 
 <pre><code><style>
   .green { color: green; font-family: monospace;}

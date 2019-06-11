@@ -16,7 +16,7 @@ If your site relies on code that expects to find files at non-standard locations
 
 <TabList>
 
-<Tab title="WordPress" id="tab-1-id" active="true">
+<Tab title="WordPress" id="tab-1-id" active={true}>
 
     If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase), then navigate to the project's root directory and execute the following commands:
 

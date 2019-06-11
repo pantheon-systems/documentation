@@ -44,7 +44,7 @@ For Redis and Solr, the following code changes are required before the feature c
 
 <TabList>
 
-<Tab title="wp-id" id="WordPress" active="true">
+<Tab title="wp-id" id="WordPress" active={true}>
 
 #### Safely Remove Redis
 {% include("content/remove-addons/wp-redis.html")%}
@@ -101,7 +101,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 Site ownership is designated to the user account entering billing information.
 <TabList>
 
-<Tab title="add-cc-id" id="Add New Card" active="true">
+<Tab title="add-cc-id" id="Add New Card" active={true}>
 
 If this is your first time taking a site live on Pantheon, you'll likely need to add a new card to your account:
 

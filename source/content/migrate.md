@@ -17,7 +17,7 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 
 <TabList>
 
-<Tab title="WordPress" id="tab-1-id" active="true">
+<Tab title="WordPress" id="tab-1-id" active={true}>
 
   The recommended way to migrate WordPress sites from another host is to use the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 
@@ -119,7 +119,7 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
 **Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive.
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active="true">
+<Tab title="Drupal 8" id="d8" active={true}>
   <p>Archives for Drupal 8 sites should include `index.php` at the code root level, along with the following directories:</p>
   <pre><code class="nohighlight">
   ├── core
@@ -274,7 +274,7 @@ When asked for your current site URL, enter `https://example.com` and continue t
 
 <TabList>
 
-<Tab title="WordPress" id="tab-1-id" active="true">
+<Tab title="WordPress" id="tab-1-id" active={true}>
 
   The Pantheon Migration plugin for WordPress does not support local sites. WordPress users should [manually migrate](/docs/migrate-manual).
 

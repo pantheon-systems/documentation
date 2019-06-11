@@ -63,7 +63,7 @@ This process can potentially cause loss of data. Be sure you have no custom code
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active="true">
+<Tab title="Drupal 8" id="d8" active={true}>
   <pre><code>
   git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
   # resolve conflicts
@@ -157,7 +157,7 @@ This process lets you manually resolve the conflict using the command line and a
 
     <TabList>
 
-    <Tab title="WordPress" id="wp-1conflict" active="true">
+    <Tab title="WordPress" id="wp-1conflict" active={true}>
 
     ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
@@ -197,7 +197,7 @@ This process lets you manually resolve the conflict using the command line and a
 
      <TabList>
 
-     <Tab title="WordPress" id="wp-2conflict" active="true">
+     <Tab title="WordPress" id="wp-2conflict" active={true}>
 
      <pre><code>git fetch pantheon-wordpress
     git rebase pantheon-wordpress/master</code></pre>

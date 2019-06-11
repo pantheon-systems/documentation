@@ -16,7 +16,7 @@ Two-factor authentication is a helpful security practice because it prevents att
 ## Single Site TFA
 <TabList>
 
-<Tab title="WordPress" id="tab-1-id" active="true">
+<Tab title="WordPress" id="tab-1-id" active={true}>
 
   For a single site, there are many different [WordPress plugins for two-factor authentication](https://wordpress.org/plugins/tags/two-factor-authentication) that can provide TFA capabilities to your site. A popular plugin is [Duo Two-Factor Authentication](https://wordpress.org/plugins/duo-wordpress/), which makes it easy to set up two-factor authentication on your WordPress site.
 
@@ -71,7 +71,7 @@ Two-factor authentication is a helpful security practice because it prevents att
 
 <TabList>
 
-<Tab name="WordPress" id="wp-org" active="true">
+<Tab name="WordPress" id="wp-org" active={true}>
 
 For an organization-wide solution, there are many different [WordPress plugins for single sign on](https://wordpress.org/plugins/tags/single-sign-on) that can provide TFA capabilities. One of the service options we use internally at Pantheon is OneLogin, which has the [OneLogin SAML SSO](https://wordpress.org/plugins/onelogin-saml-sso/) plugin.
 

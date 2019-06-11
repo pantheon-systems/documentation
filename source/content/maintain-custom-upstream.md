@@ -38,7 +38,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
     <TabList>
 
-    <Tab name="WordPress" id="wp1" active="true">
+    <Tab name="WordPress" id="wp1" active={true}>
 
     ```git
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
@@ -89,7 +89,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
      <TabList>
 
-     <Tab title="WordPress" id="wp" active="true">
+     <Tab title="WordPress" id="wp" active={true}>
 
      ```git
      git fetch pantheon-wordpress
@@ -166,7 +166,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
     <TabList>
 
-    <Tab name="WordPress" id="wp2" active="true">
+    <Tab name="WordPress" id="wp2" active={true}>
 
     ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
@@ -196,7 +196,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
     <TabList>
 
-    <Tab title="WordPress" id="wp-xtheirs" active="true">
+    <Tab title="WordPress" id="wp-xtheirs" active={true}>
 
     ```git
     git fetch pantheon-wordpress
@@ -235,7 +235,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
     <TabList>
 
-    <Tab name="WordPress" id="wp2" active="true">
+    <Tab name="WordPress" id="wp2" active={true}>
 
     ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git

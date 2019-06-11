@@ -74,7 +74,7 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 
 <TabList>
 -
-<Tab title="Drupal 8" id="d8-1" active="true">
+<Tab title="Drupal 8" id="d8-1" active={true}>
 
 1. Get the URL to the code you want to install from Drupal.org:
 

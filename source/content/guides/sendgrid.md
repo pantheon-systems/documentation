@@ -33,7 +33,7 @@ Follow the procedure outlined below for your CMS:
 
 <TabList>
 
-<Tab name="WordPress" id="tab-1-anchor" active="true">
+<Tab name="WordPress" id="tab-1-anchor" active={true}>
 
 ### Download the WordPress SendGrid Plugin {.info}
 The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the `wp_mail` function with API integration, making it easy to configure and get started.

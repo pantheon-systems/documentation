@@ -85,7 +85,7 @@ You will need to enable either Apache Solr Search or Search API Solr Search, dep
 
 <TabList>
 
-<Tab name="Apache Solr Search" id="apachesolrsearch" active="true">
+<Tab name="Apache Solr Search" id="apachesolrsearch" active={true}>
 
 #### Enabling Apache Solr Search (apachesolr) {.info}
 

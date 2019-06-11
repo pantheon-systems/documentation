@@ -56,7 +56,7 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
 
 <TabList>
 
-<Tab name="WordPress" id="wp-api" active="true">
+<Tab name="WordPress" id="wp-api" active={true}>
 
 Since WordPress 4.7, the WordPress API is included as part of core. There's no action needed to expose the API on Pantheon. Explore default routes and endpoints like `/wp-json/wp/v2/posts` in your browser:
 

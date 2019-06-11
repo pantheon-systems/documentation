@@ -56,7 +56,7 @@ Use the following techniques to replace insecure references to your domain in th
 
 <TabList>
 
-<Tab title="WordPress" id="tab-1-id" active="true">
+<Tab title="WordPress" id="tab-1-id" active={true}>
 
   **Via Plugin**
 

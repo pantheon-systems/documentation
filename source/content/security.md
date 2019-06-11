@@ -80,7 +80,7 @@ Alternatively, you can resolve 403 errors by using [Terminus](/docs/terminus) to
 
 <TabList>
 
-<Tab name="Drupal 8" id="d8" active="true">
+<Tab name="Drupal 8" id="d8" active={true}>
 
 ```bash
 terminus remote:drush <site>:<env> -- pm-uninstall basic_auth -y

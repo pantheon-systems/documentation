@@ -29,7 +29,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 <TabList>
 
-<Tab title="WordPress" id="wp-init" active="true">
+<Tab title="WordPress" id="wp-init" active={true}>
 
 1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
@@ -132,7 +132,7 @@ Use the `require` command to add new dependencies to your project, such as libra
 
 <TabList>
 
-<Tab title="WordPress" id="wp-require-papc-id" active="true">
+<Tab title="WordPress" id="wp-require-papc-id" active={true}>
 
   #### Install a Plugin
   1. Require the plugin, [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) for example, with Composer:

@@ -31,7 +31,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
 
 <TabList>
 
-<Tab name="WordPress" id="wptmppath" active="true">
+<Tab name="WordPress" id="wptmppath" active={true}>
 
 Correct an unsupported temporary path set by a plugin or theme in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
@@ -135,7 +135,7 @@ In general, there's no need for temporary files to persist across application co
 
 <TabList>
 
-<Tab name="WordPress" id="wpworkaround" active="true">
+<Tab name="WordPress" id="wpworkaround" active={true}>
 
 Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 

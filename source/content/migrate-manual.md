@@ -58,7 +58,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
     <TabList>
 
-    <Tab title="WordPress" id="wp-confirm" active="true">
+    <Tab title="WordPress" id="wp-confirm" active={true}>
 
     ![Choose Manual WordPress Migration](/source/docs/assets/images/dashboard/migrate-manual-wp.png)
 
@@ -130,7 +130,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
     <TabList>
 
-    <Tab title="Git 2.8 and Below" id="28-step6" active="true">
+    <Tab title="Git 2.8 and Below" id="28-step6" active={true}>
 
     ```bash
     git pull --no-rebase --squash -Xtheirs pantheon master
@@ -167,7 +167,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
     <TabList>
 
-    <Tab title="Git 2.8 and Below" id="28-step8" active="true">
+    <Tab title="Git 2.8 and Below" id="28-step8" active={true}>
 
     ```bash
     git pull pantheon master --no-rebase
@@ -217,7 +217,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
 <TabList>
 
-<Tab title="100mbs" id="Up to 100MBs" active="true">
+<Tab title="100mbs" id="Up to 100MBs" active={true}>
 
 If your archive is under 100MB, you can upload the file directly:
 
@@ -273,7 +273,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
     <TabList>
 
-    <Tab title="WordPress" id="files-wp-anchor" active="true">
+    <Tab title="WordPress" id="files-wp-anchor" active={true}>
 
     Navigate to your WordPress site's root directory to run this command, which will create an archive file in your user's home directory:
 
@@ -305,7 +305,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
     <TabList>
 
-    <Tab title="Up to 100MBs" id="100mbsfiles-id" active="true">
+    <Tab title="Up to 100MBs" id="100mbsfiles-id" active={true}>
 
     If your archive is under 100MB, you can upload the file directly:
 

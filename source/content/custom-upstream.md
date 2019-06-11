@@ -4,9 +4,8 @@ description: Learn how to use Custom Upstreams to free up developer time.
 tags: [tools, workflow]
 categories: []
 ---
-<div class="panel panel-drop panel-guide">
-<script src="//fast.wistia.com/embed/medias/lt88wkijia.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_lt88wkijia videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
-</div>
+
+`youtube: https://youtu.be/b1lNrZL0xxM`
 
 If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the [Partner Program Page](https://pantheon.io/agencies/partner-program) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 
@@ -38,7 +37,7 @@ Not only does this workflow free up developer time, it establishes a sustainable
 
 New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
-![Custom upstream update strategy](../docs/assets/images/update-diagram.svg)
+![Custom upstream update strategy](../docs/assets/images/update-diagram.png)
 
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
 
@@ -53,7 +52,9 @@ There are three levels of repositories in play here, and updates flow "downstrea
 <div class="upstream-overview-outter-clear">
 <div class="upstream-overview-outter">
 <div class="upstream-content-inner-icon">
-<img alt="Parent upstream level" style="padding-left:10px;" src="../docs/assets/images/levelone-icon.svg" />
+
+![Parent upstream level](../docs/assets/images/levelone-icon.png)
+
 <ul class="upstream" style="margin-right:40px;display:inline-flex;">
 <li>Core Updates</li>
 </ul>
@@ -67,7 +68,9 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 <div class="upstream-overview-outter-clear">
 <div class="upstream-overview-outter">
 <div class="upstream-content-inner-icon">
-<img alt="Custom upstream level" style="padding-left:10px;" src="../docs/assets/images/leveltwo-icon.svg" />
+
+![Custom upstream level](../docs/assets/images/leveltwo-icon.png)
+
 <ul class="upstream">
 <li>Parent Theme</li>
 <li>Common plugins / Contrib modules</li>
@@ -83,7 +86,9 @@ The Custom Upstream repository is hosted outside of Pantheon using a provider li
 </div>
 <div class="upstream-overview-outter">
 <div class="upstream-content-inner-icon">
-<img alt="site upstream level" style="padding-left:10px;" src="../docs/assets/images/levelthree-icon.svg" />
+
+![Site upstream level](../docs/assets/images/levelthree-icon.png)
+
 <ul class="upstream">
 <li>Child Theme</li>
 <li>Site-specific plugins / Custom code</li>

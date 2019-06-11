@@ -31,7 +31,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 <TabList>
 
-<Tab title="WordPress" id="wp-install" active="true">
+<Tab title="WordPress" id="wp-install" active={true}>
 
 1. Enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
@@ -456,7 +456,7 @@ The following code changes are required before Redis can be safely uninstalled a
 
 <TabList>
 
-<Tab title="WordPress" id="wp-uninstall" active="true">
+<Tab title="WordPress" id="wp-uninstall" active={true}>
 
 1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin.
 2. Delete the <code>wp-content/object-cache.php</code> file.

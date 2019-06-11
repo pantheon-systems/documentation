@@ -18,7 +18,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
 <p style="margin-top:0px;margin-bottom:40px;">
-  <img src="/source/docs/assets/images/icon-version-control.svg
+  <img src="/source/docs/assets/images/icon-version-control.png
 " data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;" />
 <br />
 <em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)</em>
@@ -30,7 +30,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
 <TabList>
 
-<Tab title="Drupal 8" id="d8" active="true">
+<Tab title="Drupal 8" id="d8" active={true}>
   ```bash
   git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
   # resolve conflicts

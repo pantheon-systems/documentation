@@ -37,7 +37,7 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
 
 <TabList>
 
-<Tab title="Global" id="globaltab1" active="true">
+<Tab title="Global" id="globaltab1" active={true}>
 
 ![Global CDN Map](/source/docs/assets/images/guides/front-end-performance/CDN-map.png){.cdn-map-container}
 
@@ -154,7 +154,7 @@ Try to walk yourself through the content rendering tree, considering any custom 
 
 <TabList>
 
-<Tab title="WordPress" id="wordpress-max-age" active="true">
+<Tab title="WordPress" id="wordpress-max-age" active={true}>
 
 There could be an existing snippet assumed to disable caching for a single entity when in reality it's disabling caching for the entire page:
 
@@ -198,7 +198,7 @@ Working across many environments presents opportunities for configuration change
 
 <TabList>
 
-<Tab title="WordPress" id="wp-config-get" active="true">
+<Tab title="WordPress" id="wp-config-get" active={true}>
 
 The Pantheon Page Cache plugin is already included by our upstream as a Must-Use plugin. Check the plugin settings to make sure you're setting the desired TTL:
 
@@ -243,7 +243,7 @@ If your site doesn't seem to be able to send uncached content fast enough, enabl
 There are toolbars for both Drupal and WordPress that provide stats like the number of queries, amount of memory, and response time. These can be helpful for real time debugging.
 
 <TabList>
-<Tab title="WordPress" id="wordpress-helpers" active="true">
+<Tab title="WordPress" id="wordpress-helpers" active={true}>
 
 The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful identifying advanced cache behaviors. This plugin requires that you enable debugging via `wp-config.php`:
 
@@ -331,7 +331,7 @@ To load custom scripts and styles only on relevant pages, use the appropriate AP
 
 <TabList>
 
-<Tab title="WordPress" id="wp-css" active="true">
+<Tab title="WordPress" id="wp-css" active={true}>
 
 WordPress has twin functions `wp_enqueue_style()` and `wp_enqueue_script()` for adding CSS and JavaScript. You can call them from within your theme or custom plugins to add styles and scripts to page.
 
@@ -365,7 +365,7 @@ Once you have eliminated code that is not needed, make sure the code being loade
 
 <TabList>
 
-<Tab title="WordPress" id="wp-requests" active="true">
+<Tab title="WordPress" id="wp-requests" active={true}>
 
 Use the [Autoptimize](https://wordpress.org/plugins/autoptimize/) plugin and the following configuration in your site's `wp-config.php` file:
 

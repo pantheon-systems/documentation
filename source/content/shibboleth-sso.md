@@ -23,7 +23,7 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 
 <TabList>
 
-<Tab title="Download Method" id="tab-1-id" active="true">
+<Tab title="Download Method" id="tab-1-id" active={true}>
 
 
 <Alert title="Version Number" type="export">

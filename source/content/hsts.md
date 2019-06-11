@@ -16,7 +16,7 @@ The HTTP Strict-Transport-Security response header (often abbreviated as **HS
 
 <TabList>
 
-<Tab title="tab-1-id" id="WordPress" active="true">
+<Tab title="tab-1-id" id="WordPress" active={true}>
 
 Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/docs/terminus/):
 
