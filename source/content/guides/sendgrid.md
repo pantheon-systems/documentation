@@ -189,7 +189,7 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
     **Use encrypted protocol**: We strongly recommend selecting **TLS**
 
         <Alert title="Note" type="info">
-          Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/docs/email/) </p>
+          Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/docs/email/)
         </Alert>
 
 5. Provide your site-specific SendGrid credentials and click **Save configuration**.

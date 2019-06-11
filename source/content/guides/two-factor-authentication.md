@@ -40,7 +40,7 @@ Two-factor authentication is a helpful security practice because it prevents att
    - synchronize and import your database
    - use a tool like [WP-CFM](/docs/wp-cfm/)
    - keep the new application page from the Duo Admin panel open, and reenter the values for each environment.
-   
+
    </Alert>
 
 </Tab>

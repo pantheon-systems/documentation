@@ -17,6 +17,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 - Examine existing records pointing to Pantheon
   {% include("content/standard-dns-config.html") %}
 - Lower the TTL of existing DNS records to minimize impact of upcoming DNS changes
+
   <Accordion title="Learn More" id="ttl" icon="info-sign">
 
   #### Time to Live (TTL)
@@ -25,7 +26,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
 
-  </Alert>
+  </Accordion>
 
 ### Roles & Permissions
 The permission to manage billing and plans is granted only to the role of **Site Owner** / **Organization Administrators**. Other roles do not have access as described on this page.
@@ -47,8 +48,11 @@ In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-cl
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Connect Domain**
 
     <Alert title="Warning" type="danger">
+
     Do **not** update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 5 below.
+
     </Alert>
+    
 4. Wait for HTTPS to provision for the newly connected domains:
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**

@@ -14,7 +14,9 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
     <Alert title="Note" type="info">
 
-    We do not recommend creating symlinks over SFTP due to inconsistencies amongst clients. <br><br>The following is for Mac and Linux only. Windows users may refer to Microsoft documentation for opening [Command Prompt as an Administrator](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx) and [creating symlinks using mklink](https://technet.microsoft.com/en-us/library/cc753194.aspx) or create symlinks within a virtual machine.
+    We do not recommend creating symlinks over SFTP due to inconsistencies amongst clients.
+
+    The following is for Mac and Linux only. Windows users may refer to Microsoft documentation for opening [Command Prompt as an Administrator](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx) and [creating symlinks using mklink](https://technet.microsoft.com/en-us/library/cc753194.aspx) or create symlinks within a virtual machine.
 
     </Alert>
 
@@ -40,7 +42,9 @@ The best solution is to communicate with the maintainer of the module or plugin 
     ```
 
     <Alert title="Note" type="info">
+
     The `ln` command is sensitive to the **working directory**, the folder your prompt is currently sitting in. The example above assumes you're in the main directory of your local git repository.
+
     </Alert>
 
 5. Stage your changes

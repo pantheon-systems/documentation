@@ -37,8 +37,7 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## eNom Docs
 
-<a href="https://www.enom.com/kb/kb/kb_0002_change-host-records.htm" target="blank">Change Host Records - Forward, Redirect or Point Your Domain/Sub-Domain
- <span class="glyphicons glyphicons-new-window-alt"></span></a>
+[Change Host Records - Forward, Redirect or Point Your Domain/Sub-Domain]
 
 ## Next Steps
 

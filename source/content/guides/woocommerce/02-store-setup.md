@@ -53,7 +53,7 @@ The first thing we should do is install WordPress and configure it.
 
    <Alert title="Note" type="info">
 
-   Jetpack is a sophisticated plugin that detects test sites. It will turn on [safe mode](https://jetpack.com/support/safe-mode/) and prevent the connection to WordPress.com. For this reason it's best to only activate Jetpack in the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of your site and let it run in dev mode for your **<span class="glyphicons glyphicons-wrench"></span> Dev** and **<span class="glyphicons glyphicons-equalizer"></span> Test** environments.</p>
+   Jetpack is a sophisticated plugin that detects test sites. It will turn on [safe mode](https://jetpack.com/support/safe-mode/) and prevent the connection to WordPress.com. For this reason it's best to only activate Jetpack in the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of your site and let it run in dev mode for your **<span class="glyphicons glyphicons-wrench"></span> Dev** and **<span class="glyphicons glyphicons-equalizer"></span> Test** environments.
 
    </Alert>
 

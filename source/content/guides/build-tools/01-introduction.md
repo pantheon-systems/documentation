@@ -127,7 +127,7 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
     </div>
 
     <Alert title="Note" type="info">
-    The Terminus Build Tools Plugin does not support private repositories.</p>
+    The Terminus Build Tools Plugin does not support private repositories.
     </Alert>
 
 9. [Authorize CircleCI on GitHub](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb).

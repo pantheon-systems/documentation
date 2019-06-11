@@ -414,7 +414,7 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
 
 ```php
     if ( ! is_user_logged_in() && php_sapi_name() != 'cli' ) {
-    
+
         // Only allow these endpoints: JWT Auth.
         $allowed_endpoints = array(
             '/jwt-auth/v1/token/validate',
@@ -714,7 +714,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
  - Splitting the import or export into smaller parts
  - Set the plugin to only process 1 or 2 records per iteration
- 
+
 **Issue 2**: Uploading large import files hits the 59 second [timeout](/docs/timeouts/), or you're getting invalid file paths.
 
 **Solution**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .

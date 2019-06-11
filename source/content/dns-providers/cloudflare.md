@@ -47,7 +47,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
   When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
 
-  </Alert>
+  </Accordion>
 
 6. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 7. Click **Add Record**.
@@ -93,7 +93,7 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
   When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to be in place everywhere.
 
-  </Alert>
+  </Accordion>
 
 6. Click **Add Record**. Your record should look similar to the following once it has been created:
 

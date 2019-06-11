@@ -461,7 +461,7 @@ The following code changes are required before Redis can be safely uninstalled a
 1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin.
 2. Delete the <code>wp-content/object-cache.php</code> file.
 3. Commit and deploy code changes to the Live environment.
-4. Go to <Icon text="Settings" icon="cogwheel"/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
+4. Go to <Icon text="Settings" icon="cogwheel"/> > <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
 5. From the Site Dashboard, click on <Icon text="Clear Caches" icon="cleaning"/>.
 
 
@@ -472,7 +472,7 @@ The following code changes are required before Redis can be safely uninstalled a
 1. Disable the [Redis](https://www.drupal.org/project/redis) module.
 2. Delete Redis configuration from <code>settings.php</code>.
 3. Commit and deploy code changes to the Live environment.
-4. Go to <Icon text="Settings" icon="cogwheel"/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
+4. Go to <Icon text="Settings" icon="cogwheel"/> > <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
 5. From the Site Dashboard, click on <Icon text="Clear Caches" icon="cleaning"/>.
 
 
@@ -483,7 +483,7 @@ The following code changes are required before Redis can be safely uninstalled a
 1. Disable the [Redis](https://www.drupal.org/project/redis) module.
 2. Delete Redis configuration from <code>settings.php</code>.
 3. Commit and deploy code changes to the Live environment.
-4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> &gt; <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
+4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> > <strong>Add Ons</strong> and click the <strong>Remove</strong> button for Redis.
 5. From the Site Dashboard, click on <Icon text={"Clear Caches"} icon={"cleaning"}/>.
 
 

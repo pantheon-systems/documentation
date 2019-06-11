@@ -53,7 +53,7 @@ Using [Terminus](/docs/terminus/) is our recommended way to install a WordPress 
 4. Use Terminus to execute the `wp core multisite-install` command ([full documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/)):
 
     <Alert title="Note" type="info">
-    The default behavior for this command is to create a Site Network with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.</p>
+    The default behavior for this command is to create a Site Network with the subdirectory configuration. To create your network with the subdomain configuration, add the `--subdomains` flag.
     </Alert>
 
     <div class="copy-snippet">

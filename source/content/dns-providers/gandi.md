@@ -37,7 +37,7 @@ Keep this page open and login to your [Gandi account <span class="glyphicons gly
 
     When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
 
-    </Alert>
+    </Accordion>
 
 4. Enter **@** in the **Name** field and enter the A record value provided by Pantheon in the **Value** field.
 6. Click **Submit**.
@@ -57,7 +57,9 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 3. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon, followed by a `.` (e.g. `live-example.pantheonsite.io.`) in the **Value** field.
 
     <Alert title="Note" type="info">
+
     Remember to add the dot (`.`) at the end of the **Value** line. Hostnames without a `.` at the end will be suffixed by the current domain.
+
     </Alert>
 
 4. Click **Submit**.

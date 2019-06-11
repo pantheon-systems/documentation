@@ -40,27 +40,29 @@ Terminus command structure typically includes `<site>.<env>` in order to determi
 
 ![terminus env:clear-cache your-awesome-site.live](../../docs/assets/images/terminus-example-cc.png)
 
-<Accordion title={"Learn More"} id={"identify-site"} icon={"lightbulb"}>
+<Accordion title="Learn More" id="identify-site" icon="lightbulb">
 
-<dl>
-  <dt>Site Label</dt>
-  <dd>
-    Human readable, such as "Your Awesome Site", entered during site creation
-    and displayed in the Site Dashboard.
-  </dd>
-  <dt>Site Name: &lt;site&gt;</dt>
-  <dd >
-    Machine readable, such as "your-awesome-site", either derived automatically
-    by the platform from the site label or uniquely defined during site creation
-    via Terminus. This value is used to construct [platform
-    domains](/docs/domains/#platform-domains).{" "}
-  </dd>
-  <dt>Environment Name: &lt;env&gt;</dt>
-  <dd>
-    Machine readable, such as "dev", "test", "live", or "bug123", which refers
-    to the target site environment on Pantheon.
-  </dd>
-</dl>
+<DefList>
+
+<Definition title="Site Label">
+
+Human readable, such as "Your Awesome Site", entered during site creation and displayed in the Site Dashboard.
+
+</Definition>
+
+<Definition title="Site Name">
+
+Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/docs/domains/#platform-domains).
+
+</Definition>
+
+<Definition title="Environment Name">
+
+Machine readable, such as "dev", "test", "live", or "bug123", which refers to the target site environment on Pantheon.
+
+</Definition>
+
+</DefList>
 
 You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/docs/sites/#site-uuid). For example:
 

@@ -268,23 +268,23 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 <Tab title="Gitlab" id="gitlab-auth">
 
   Custom Upstreams from GitLab repositories must be created for you by Pantheon Support.
-  
+
   1. Prepare a new GitLab user specifically for Pantheon access.
-  
+
   1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens) with the `API` scope:
-  
+
       ![GitLab Personal Access Token](/source/docs/assets/images/gitlab-api.png)
-  
+
   1. From the GitLab account that maintains the repository, add the new user to the repo under **Members** with **Reporter** access.
-  
+
       ![GitLab reporter permission](/source/docs/assets/images/gitlab-reporter.png)
-  
+
   1. [Contact support](/docs/support/) to add the Custom Upstream to your org. You must provide:
-  
+
      - A name for the custom upstream
      - The `https` clone URL (ending in `.git`)
      - The Access Token for the new user.
-  
+
 
 </Tab>
 

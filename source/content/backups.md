@@ -57,8 +57,11 @@ Daily backups are scheduled automatically.
 Backups created on Pantheon are stored offsite on Google Cloud Storage instances, however a full-fledged backup solution is strongly recommended for retention. For example, the following script can be executed from an external cron job to send backups to your own Amazon S3 instance:
 
 <div class="script-file-header">
+
 pantheon-backup-to-s3.sh
+
 </div>
+
 ```bash
 #!/bin/sh
 
@@ -103,7 +106,7 @@ for thissite in $SITENAMES; do
   for thisenv in $SITEENVS; do
     # create backup
     terminus backup:create $thissite.$thisenv
-    
+
     # iterate through backup elements
     for element in $ELEMENTS; do
       # download current site backups

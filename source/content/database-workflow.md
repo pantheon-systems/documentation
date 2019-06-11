@@ -39,11 +39,11 @@ Additional uncaught exception thrown while handling exception.
 
 Original
 
-PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;pantheon.variable&#039; doesn&#039;t exist: SELECT 1 AS expression FROM {variable} variable WHERE ( (name = :db_condition_placeholder_0) ); Array ( [:db_condition_placeholder_0] =&gt; drupal_css_cache_files ) in variable_set() (line 1265 of /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/bootstrap.inc).
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;pantheon.variable&#039; doesn&#039;t exist: SELECT 1 AS expression FROM {variable} variable WHERE ( (name = :db_condition_placeholder_0) ); Array ( [:db_condition_placeholder_0] => drupal_css_cache_files ) in variable_set() (line 1265 of /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/bootstrap.inc).
 
 Additional
 
-PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;pantheon.variable&#039; doesn&#039;t exist: SELECT 1 AS expression FROM {variable} variable WHERE ( (name = :db_condition_placeholder_0) ); Array ( [:db_condition_placeholder_0] =&gt; drupal_css_cache_files ) in variable_set() (line 1265 of /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/bootstrap.inc).
+PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table &#039;pantheon.variable&#039; doesn&#039;t exist: SELECT 1 AS expression FROM {variable} variable WHERE ( (name = :db_condition_placeholder_0) ); Array ( [:db_condition_placeholder_0] => drupal_css_cache_files ) in variable_set() (line 1265 of /srv/bindings/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/code/includes/bootstrap.inc).
 ```
 
 You can fix this issue by wrapping the configuration logic within a conditional statement in `settings.php`:

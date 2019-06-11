@@ -48,6 +48,7 @@ Once you begin this process, you have:
 
  - 7 days to complete the challenge response. After that, you must create a new challenge.
  - 30 days to adjust DNS values.
+
 </Alert>
 
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
@@ -70,7 +71,8 @@ After verifying domain ownership, your domain's HTTPS certificate(s) will automa
 
 When a certificate is ready you can switch DNS destinations from your existing site to your new Pantheon site without HTTPS interruption.
 
-<Accordion title={" Test Locally Before Updating DNS (optional)"} id="{local-test"} icon={"info-sign""}
+<Accordion title=" Test Locally Before Updating DNS (optional)" id="local-test" icon="info-sign">
+
   Ready to launch like the pros?
   Before updating DNS, you can validate HTTPS configuration for the domain is ready on Pantheon by testing locally:
 
@@ -86,6 +88,8 @@ When a certificate is ready you can switch DNS destinations from your existing s
 
   6. Make sure your site works with HTTPS by entering your domain with HTTPS in the browser (e.g., `https://www.example.com/`).
   7. When you finish testing, remove the edits made to your hosts file.
+
 </Accordion>
+
 ### Maintenance Window
 If you are unable to prove domain ownership (e.g. WP Engine blocks serving the required challenge file) you will not be able to pre-provision HTTPS to prevent service interruption. In these cases, we recommend completing the next section ([Configure DNS](/docs/guides/launch/configure-dns/)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.

@@ -54,7 +54,7 @@ Our site is looking good and loading really fast! Now to show you the power of m
     Add a product to the cart and proceed to checkout.
 
     <Alert title="Note" type="info">
-      If you didn't configure shipping or payment earlier you'll have to do so now. For easy testing I recommend enabling Free Shipping & Cash On Delivery, which requires the least setup. Also, if you enabled Jetpack earlier it will be in safe mode.</p>
+      If you didn't configure shipping or payment earlier you'll have to do so now. For easy testing I recommend enabling Free Shipping & Cash On Delivery, which requires the least setup. Also, if you enabled Jetpack earlier it will be in safe mode.
     </Alert>
 
 2. Continue through the checkout process:

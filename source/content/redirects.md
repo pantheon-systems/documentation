@@ -46,7 +46,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
-    
+
     exit();
   }
 }
@@ -67,7 +67,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTP_HOST'] == 'subdomain
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
-  
+
   exit();
 }
 ```
@@ -86,7 +86,7 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
-  
+
   exit();
 }
 ```
@@ -110,7 +110,7 @@ if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli"
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
-  
+
   exit();
 }
 ```

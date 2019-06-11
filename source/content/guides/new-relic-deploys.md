@@ -15,7 +15,7 @@ In this guide, we'll automatically label code changes to your site in New Relic'
 
 1. From the Site Dashboard, click **<span class="glyphicons glyphicons-eye-open"></span> New Relic**.
 2. Click **Activate New Relic Pro**. The Site Dashboard will begin showing New Relic data shortly after an environment receives web requests.
-3. Click the **<span class="glyphicons glyphicons-new-window-alt"></spaN> Go to New Relic** button.
+3. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Go to New Relic** button.
 
 
 ## Configure Quicksilver Hook to Record Deployments

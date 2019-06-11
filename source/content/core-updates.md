@@ -220,7 +220,8 @@ This process lets you manually resolve the conflict using the command line and a
 
      <Tab title="Custom Upstream" id="custom-2conflict">
 
-     <p  class="instruction">Replace the remote name (`custom-upstream-example`):</p>
+     Replace the remote name (`custom-upstream-example`):
+
      <pre><code>git fetch custom-upstream-example
     git rebase custom-upstream-example/master</code></pre>
 

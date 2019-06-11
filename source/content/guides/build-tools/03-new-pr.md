@@ -56,15 +56,14 @@ The master branch is automatically built and deployed to the Dev environment. Fe
     ![Slogan Pull Request](/source/docs/assets/images/pr-workflow/slogan-pull-request.png)
 
     <Accordion title={"Builds"} id={"#understand-builds"} icon={"watch"}>
-         As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Multidev site URL (e.g., `ci-4-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
+    As soon as you commit changes to a feature branch, CircleCI builds a new Multidev environment on Pantheon to preview the change. Once the Multidev environment has been created, the build script will add a comment to the commit with links to the Multidev environment of the Pantheon Site Dashboard and a button to visit the Multidev site URL (e.g., `ci-4-my-pantheon-project.pantheonsite.io`). The Pull Request page conveniently shows the messages from each commit on the branch:
 
-         ![Passed Pull Request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
+    ![Passed Pull Request](/source/docs/assets/images/pr-workflow/slogan-pr-starting.png)
 
-         ### Automated Tests
-         It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, GitHub will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
+    ### Automated Tests
+    It is also common to set up automated tests to confirm that the project is working as expected; when tests are available, GitHub will run them and display the results of the tests with the pull request. Working on projects with comprehensive tests increases the development team's confidence that submitted pull requests will work correctly when they are integrated into the main build.
 
-
-</Accordion>
+    </Accordion>
 
 5. Wait for the build on CircleCI to leave a comment, then click on the **Visit Site** button to access the Multidev site URL. Note that the slogan you entered in your Pull Request branch has been imported and is visible in the site header:
 

@@ -47,12 +47,8 @@ Make sure HTTPS has been successfully provisioned *before* adding any code (like
 
 10. Navigate to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment and click **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Live Site** to test the redirect logic.
 
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific1"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><i class="fa fa-graduation-cap" style="line-height:.9"></i> Level Up: Configure Site Monitoring Services  (Optional)</h3></a>
-  </div>
-  <div id="host-specific1" class="collapse" style="padding:10px;">
-    <div >
+<Accordion title="Level Up: Configure Site Monitoring Services  (Optional)" id="host-specific1" icon="graduation-cap">
+
 ## Ready to launch like the pros?
 Now that you're redirecting requests to a single, primary domain, it's the perfect time to setup a availability monitoring service to watch over it like an automated hawk.
 
@@ -61,6 +57,5 @@ Install a plugin or module to prevent cookie hijacking and get an A+ rating from
 
 ### [Setup Availability Monitoring](/docs/new-relic/#configure-ping-monitors-for-availability)
 New Relic provides a free availability monitoring service that sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails.
-    </div>
-  </div>
-</div>
+
+</Accordion>

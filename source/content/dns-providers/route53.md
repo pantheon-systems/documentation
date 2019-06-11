@@ -37,7 +37,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
   When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
 
-  </Alert>
+  </Accordion>
 
 5. Click **Create**:
 
@@ -56,7 +56,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
   When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to be in place everywhere.
 
-  </Alert>
+  </Accordion>
 
 4. Click **Create**:
 

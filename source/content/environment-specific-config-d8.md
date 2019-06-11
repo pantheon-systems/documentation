@@ -133,7 +133,7 @@ This issue can be caused by a number of scenarios related to cache tags, such as
   }
   ```
 
-2. Stage, commit, and push your changes to Pantheon:
+1. Stage, commit, and push your changes to Pantheon:
 
  ```
  git commit -am "Override system performance configurations per env"
@@ -141,15 +141,19 @@ This issue can be caused by a number of scenarios related to cache tags, such as
  ```
 
 
-<ol start="3"><li>Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/docs/terminus):
-<pre><code>terminus drush &lt;site&gt;.&lt;env&gt; -- config-get system.performance --include-overidden
-terminus drush &lt;site&gt;.&lt;env&gt; -- config-get system.logging --include-overidden
-terminus drush &lt;site&gt;.&lt;env&gt; -- config-get views.settings --include-overidden
-</code></pre>
-<Alert title="Note" type="info">
-Overridden configurations are not shown within Drupal's admin interface; this behavior is intentional. For details, see [Configuration override system](https://www.drupal.org/docs/8/api/configuration-api/configuration-override-system).
-</Alert>
-</li></ol>
+1. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/docs/terminus):
+
+   ```bash
+   terminus drush <site>.<env> -- config-get system.performance --include-overidden
+   terminus drush <site>.<env> -- config-get system.logging --include-overidden
+   terminus drush <site>.<env> -- config-get views.settings --include-overidden
+   ```
+
+   <Alert title="Note" type="info">
+
+   Overridden configurations are not shown within Drupal's admin interface; this behavior is intentional. For details, see [Configuration override system](https://www.drupal.org/docs/8/api/configuration-api/configuration-override-system).
+
+   </Alert>
 
 4. Deploy to Test and verify desired configurations are present. If everything looks good, deploy to Live.
 
@@ -158,7 +162,7 @@ Overridden configurations are not shown within Drupal's admin interface; this be
 
 | Settings File         | Inclusions |
 | settings.php          | services.yml <Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /><br />settings.pantheon.php<br />settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
-| settings.pantheon.php | services.pantheon.preproduction.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /></br>services.pantheon.production.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /><br> |
+| settings.pantheon.php | services.pantheon.preproduction.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /></br>services.pantheon.production.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /><br /> |
 | settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  development.services.yml <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not included by default on any Pantheon environment." /> |
 
 ## See Also

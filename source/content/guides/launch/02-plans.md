@@ -34,12 +34,8 @@ As the site owner, you’ll receive an email confirming the change to the site. 
 {% include("content/transfer-ownership-billing-intro.html")%}
 {% include("content/transfer-ownership-billing-steps.html")%}
 
-<div class="panel panel-drop panel-guide" id="accordion">
-  <div class="panel-heading panel-drop-heading">
-    <a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#host-specific1"><h3 class="panel-title panel-drop-title" style="cursor:pointer;"><i class="fa fa-graduation-cap" style="line-height:.9"></i> Level Up: Load and Performance Tests (Optional)</h3></a>
-  </div>
-  <div id="host-specific1" class="collapse" style="padding:10px;">
-    <div >
+<Accordion title="Level Up: Load and Performance Tests (Optional)" id="host-specific1" icon="graduation-cap">
+
 ## Ready to launch like the pros?
 Now that you've upgraded your site to a paid plan, it's the perfect time to test how your site works in the wild.
 
@@ -51,6 +47,5 @@ Measure your site's response time to proactively expose potential bottlenecks. W
 
 ### [Load Testing](/docs/load-and-performance-testing/#load-testing)
 Make sure your site can withstand peak traffic spikes after launch. This test should be performed on the Live environment before the site has launched, after performance testing.
-    </div>
-  </div>
-</div>
+
+</Accordion>

@@ -77,12 +77,15 @@ You can also view the diff output for each individual file:
 
 ### Upstream Updates
 The Dev environment provides [one-click updates](/docs/core-updates/) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
-  <dl>
-    <dt>Upstream</dt>
-      <dd>A code repository that serves as a common package for your web application.</dd><br>
-    <dt>Repository</dt>
-      <dd>Centralized location of code intended for distribution.</dd>
-  </dl>
+
+  <DefList>
+  <Definition name="Upstream">
+  A code repository that serves as a common package for your web application.
+  </Definition>
+  <Definition name="Repository">
+  Centralized location of code intended for distribution.
+  </Definition>
+  </DefList>
 
 <Alert title="Note" type="info">
 The Test and Live environments do not have write access to code outside of the deployment process.

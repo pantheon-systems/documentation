@@ -23,7 +23,7 @@ If you are managing a high profile site, using PagerDuty is an excellent way to 
 
 
 ## Add User Contact Info and Notification Rules
-1. [</span>](https://signup.pagerduty.com/accounts/new" target=blank>Sign up for a PagerDuty account <span class="glyphicons glyphicons-new-window-alt) if you do not have one already. This is a paid service, but you can get started for free on a 14-day trial.
+1. [Sign up for a PagerDuty account](https://signup.pagerduty.com/accounts/new) if you do not have one already. This is a paid service, but you can get started for free on a 14-day trial.
 
 2. Login to your PagerDuty account and go to **Configuration** > **Users**.
 3. Setup your user profile and contact information. Add your name, a job title, your time zone, phone number, SMS number and an email address:
@@ -52,8 +52,11 @@ Next, we'll create an on-call Schedule, to configure a scaleable custom alert wo
 1. Login to your PagerDuty account and go to **Configuration** > **Schedules**, then click **+ Add Schedules**.
 
     <Alert title="Note" type="info">
+
     Schedules have **Layers**, which allow for different people or teams to provide additional backup. If the lowest layer agent does not respond to an alert, it will rollover to the next layer. It's a good idea to have one or more layers of fallbacks.
+
     </Alert>
+
 2. Add the first layer for whoever you want to be the last point of contact and a second layer for team members in the on-call rotation to be the first point of contact:
 
   ![Team schedule](/source/docs/assets/images/pagerduty/pg-schedule.png)
@@ -73,6 +76,7 @@ Next, we'll create an on-call Schedule, to configure a scaleable custom alert wo
 When an incident is created, PagerDuty uses an escalation policy to determine who to contact. An escalation policy can alert PagerDuty users directly, as well as alerting teams and schedules. Since you just created a schedule for your team, this is what your simple policy will alert.
 
 1. Login to your PagerDuty account and go to **Configuration** > **Escalation**.
+
 2. Click the **<span class="glyphicons glyphicons-cogwheel" aria-hidden="true"></span>** icon next to the existing **Default** policy and select **Edit**.
 
 3. Rename the default policy so it's project specific (e.g., `example.com`) and add your new **example.com** schedule:

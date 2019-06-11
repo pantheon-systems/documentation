@@ -151,7 +151,7 @@ The `Commands` part of the namespace is not strictly necessary but it can help k
 
 You will also need to make sure your src directory and composer file reflect the new namespace. Move the `HelloCommand.php` file from `src/` to the `src/Commands` directory to mirror the last part of the namespace. If you have a lot of commands in your plugin, you can group them into command groups by adding another layer to the namespace and directory structure.
 
-<p class="instruction">Update the <code>composer.json</code> file with an autoload section to indicate how to load your namespace. Your composer file should now look like:</p>
+Update the `composer.json` file with an autoload section to indicate how to load your namespace. Your composer file should now look like:
 
 ```json
 {

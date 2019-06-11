@@ -37,14 +37,14 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
      - Technical contact first name
      - Technical contact last name
 
-<br>
+<br />
 
 2. Pantheon Support will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). See [CA Limitations](#ca-limitations) below for more information.
 
 3. Once you have a set of certificates from the CA, send us:
 
     - The end-client certificate
-    - Any intermediate certificates provided by the CA.<br><br>
+    - Any intermediate certificates provided by the CA.<br /><br />
 
     Be sure to send these as separate files, not a "chained cert".
 
@@ -85,7 +85,7 @@ CAA records configured for the root domain (e.g., `example.com`) are inherited b
 | **Certificate Type**                                                  | Bring your own            | Shared, issued by Let's Encrypt | Bring your own                        |
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       | Self-managed (up to you)              |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 | Static (shared)                       |
-| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> * |
+| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br />Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br />Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> * |
 | [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/docs/hsts/)     | A+ [with HSTS](/docs/hsts/) *         |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                | TLS 1.2 with SNI                      |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             | No Weak 3DES cipher                   |

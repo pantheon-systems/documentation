@@ -36,14 +36,14 @@ The example below outputs a given file with a `hello/world` MIME type and includ
  * @param string $mimeType - Mime Type to serve with file. (default='text/plain')
  * @param int $cacheTime - Cache control time. (default=3600)
  */
-  
+
 function serveFileCustomMIMEType($file, $mimeType = 'text/plain', $cacheTime = 3600) {
   if (file_exists($file)) {
-  
+
     $fileName = sprintf('"%s"', addcslashes(basename($file), '"\\'));
     $modified = gmdate ('D, d M Y H:i:s', filemtime($file)) . ' GMT';
     $size = filesize($file);
-    
+
     header('Content-Description: File Transfer');
     header('Content-Type: ' . $mimeType);
     header('Content-Disposition: attachment; filename=' . $fileName);
@@ -51,7 +51,7 @@ function serveFileCustomMIMEType($file, $mimeType = 'text/plain', $cacheTime = 3
     header('Cache-Control: public, max-age=' . $cacheTime);
     header('Last-Modified: ' . $modified);
     header('Content-Length: ' .$size);
-	
+
     readfile($file);
     exit;
   }

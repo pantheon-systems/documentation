@@ -64,7 +64,7 @@ You will need:
 1. From your local terminal, use Composer to make a new local project based on our example, which contains Drupal 8, Behat, and other configuration settings:
 
     <Alert title="Note" type="info">
-    In this example our project is call called `my-site`, so we begin by setting a local environment variable to this value. Adjust this any other variables to match your site settings.</p>
+    In this example our project is call called `my-site`, so we begin by setting a local environment variable to this value. Adjust this any other variables to match your site settings.
     </Alert>
 
     ```nohighlight
@@ -170,7 +170,7 @@ Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite th
     ![Credentials Page](/source/docs/assets/images/integrations/2_credentials.png)
 
     <Alert title="Note" type="info">
-    Keep your Terminus token handy, you'll need to enter it again later.</p>
+    Keep your Terminus token handy, you'll need to enter it again later.
     </Alert>
 
 5. Return to the main Jenkins dashboard and select **Manage Jenkins**, then **Configure System**.

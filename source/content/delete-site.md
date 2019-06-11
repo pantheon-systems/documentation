@@ -7,9 +7,11 @@ categories: []
 At some point, you may need or want to delete one of your sites on Pantheon. The number of free sites you can create is increased after a free site is deleted, or after it has converted to a paid plan.
 
 <Alert title="Warning" type="danger">
+
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
 Before deleting a site, you must downgrade the site plan to Sandbox level. See [Manage Site Plans](/docs/site-plan/) for more information.
+
 </Alert>
 
 ## Delete a Site Using the Pantheon Site Dashboard
@@ -38,10 +40,15 @@ Before deleting a site, you must downgrade the site plan to Sandbox level. See [
 
 ## Delete a Site with Terminus
 Run the following [Terminus](/docs/terminus/) command:
-`terminus site:delete <site>`
+
+```bash
+terminus site:delete <site>
+```
 
 <Alert title="Note" type="info">
+
 Replace `<site>` with your site name. You can see a list of all your sites by running `terminus site:list`.
+
 </Alert>
 
   ![Delete Site via Terminus](/source/docs/assets/images/delete-site-terminus.png)
