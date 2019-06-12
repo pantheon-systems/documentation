@@ -75,7 +75,7 @@ No action is required. Existing sites will automatically switch to the equivalen
 
 <TabList>
 
-<Tab name="Presonal" id="personal" active={true}>
+<Tab title="Presonal" id="personal" active={true}>
 
 |                        | Personal (Legacy) | Basic (New)  |
 | ---------------------- | ----------------- | ------------ |
@@ -92,7 +92,7 @@ No action is required. Existing sites will automatically switch to the equivalen
 
 </Tab>
 
-<Tab name="Professional" id="professional">
+<Tab title="Professional" id="professional">
 
 |                        | Professional (Legacy) | Performance Small (New)  |
 | ---------------------- | --------------------- | ------------------------ |
@@ -109,7 +109,7 @@ No action is required. Existing sites will automatically switch to the equivalen
 
 </Tab>
 
-<Tab name="Business" id="business">
+<Tab title="Business" id="business">
 
 |                        | Business (Legacy)     | Performance Large (New)  |
 | ---------------------- | --------------------- | ------------------------ |

@@ -1,12 +1,14 @@
 ---
-title: Migrate to Pantheon: WordPress Site Networks
+title: '[Migrate to Pantheon: WordPress Site Networks]'
 description: Learn how to import a WordPress Site Network into Pantheon.
 tags: [migratemanual]
 categories: [wordpress]
 ---
 
 <Alert title="Note" type="info">
+
 Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/docs/guides/multisite/) for you.
+
 </Alert>
 
 ## Requirements
@@ -30,24 +32,28 @@ Import your existing code and commit history via Git. If you don’t have a Git 
  git add .
  git commit -m "initial commit"
  ```
-2.  From the Dev environment of the Site Dashboard, set the site's connection mode to [git](/docs/git).
-3.  Copy the SSH URL for the site repository, found in the [clone command](/docs/git/#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
+
+1.  From the Dev environment of the Site Dashboard, set the site's connection mode to [git](/docs/git).
+
+1.  Copy the SSH URL for the site repository, found in the [clone command](/docs/git/#step-2-copy-the-git-clone-command). **Do not copy `git clone` or the site name.** The URL should look similar to the following:
 
  ```bash
  ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
  ```
 
-4.  Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase, replacing `<ssh_url>` with the SSH URL copied in step 3:
+1.  Use Git to pull in the upstream's code (which may have Pantheon-specific optimizations) to your existing site's codebase, replacing `<ssh_url>` with the SSH URL copied in step 3:
 
  ```bash
  git pull --no-rebase --squash -Xtheirs <ssh_url> master
  ```
 
  This will yield:
- ```bash
+ 
+```bash
  Squash commit -- not updating HEAD
  Automatic merge went well; stopped before committing as requested
  ```
+
  Preserve any logic necessary in the original `wp-config.php` and `.gitignore` files. It's important to analyze the differences between our upstream's [`wp-config.php`](https://github.com/pantheon-systems/wordpress-network/blob/master/wp-config.php) and [`.gitignore`](https://github.com/pantheon-systems/wordpress-network/blob/master/.gitignore) and the same file in your site's codebase.
 
  For compatibility with Pantheon, you’ll need to update `DOMAIN_CURRENT_SITE` to be set conditionally based on environment. Here is an example:
@@ -71,28 +77,32 @@ Import your existing code and commit history via Git. If you don’t have a Git 
   }
   ```
 
-5.  Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in step 3:
+1.  Add Pantheon as a remote destination, replacing `<ssh_url>` with the SSH URL copied in step 3:
 
  ```bash
  git remote add pantheon <ssh_url>
  ```
 
-6.  Run `git add` and `git commit` to prepare the Pantheon core merge for pushing to the repository:
+1.  Run `git add` and `git commit` to prepare the Pantheon core merge for pushing to the repository:
+
  ```bash
  git add -A
  git commit -m "Adding Pantheon core files"
  ```
-7.  Push your newly merged codebase up to your Pantheon site repository:
+
+1.  Push your newly merged codebase up to your Pantheon site repository:
 
  ```bash
  git push pantheon master --force
  ```
 
-    <Alert title="Note" type="info">
-    The `--force` option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see [<code>git-push</code>](https://git-scm.com/docs/git-push).
-    </Alert>
+  <Alert title="Note" type="info">
 
-8.  Go to the Code tab of your Dev environment on the Site Dashboard. The most recent commit adds Pantheon's core files. This process preserves the commit history for site's already utilizing version control and once pushed your pre-existing commits will be visible on the Dashboard.
+  The `--force` option overwrites the site's remote repository on Pantheon with the contents of your local repository. This operation can be especially destructive in distributed team environments and should be used sparingly. For more information, see [<code>git-push</code>](https://git-scm.com/docs/git-push).
+
+  </Alert>
+
+1.  Go to the Code tab of your Dev environment on the Site Dashboard. The most recent commit adds Pantheon's core files. This process preserves the commit history for site's already utilizing version control and once pushed your pre-existing commits will be visible on the Dashboard.
 
 ## Files
 
@@ -103,6 +113,7 @@ This directory is a shared filesystem and is stored separately from the site's c
 File archives can be imported via the Site Dashboard on **Workflow** > **Import**; however, the archive must be within the size limits for the upload method in use (100MB for file uploads, 500MB for URL uploads).
 
 For larger file transfers, we recommend running rsync from the old environment directly to your new environment on Pantheon to forgo downloading all the files locally. However, if the files already exist on your local machine you can transfer them to Pantheon with this handy script and avoid connectivity issues:
+
 ```bash
 ENV='dev'
 SITE='SITEID'
@@ -140,14 +151,16 @@ If your `.sql` file is less than 500MB, you can use the Import tool in the <span
  ```
  mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
  ```
-2. From your terminal, `cd` into the directory containing your `.sql` archive. Paste the connection string and append it with:
+
+1. From your terminal, `cd` into the directory containing your `.sql` archive. Paste the connection string and append it with:
 `< database.sql`
 Your command will now look like:
 
  ```
  mysql -u pantheon -p{massive-random-pw} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
  ```
-3. After you run the command, the .sql file is imported into your Pantheon Dev database.
+
+1. After you run the command, the .sql file is imported into your Pantheon Dev database.
 
 You should now have all three of the major components of your site imported into Pantheon.
 
@@ -156,6 +169,7 @@ You should now have all three of the major components of your site imported into
 When you imported your database, all of the URLs remained active at the previous site's domain name. Visiting the site at this point should return an incorrect connection information error message. To resolve it, the last step of the import process is to change the URLs to match the development environment using the WP-CLI command `wp search-replace`. In the example below, replace `example.com` with the domain your site currently runs at.
 
 **Pro Tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
+
 ```bash
 terminus wp <site>.<env> -- search-replace example.com dev-example-network.pantheonsite.io --url=example.com --network
 ```

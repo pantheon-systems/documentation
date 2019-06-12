@@ -44,6 +44,7 @@ In some rare cases, there is a [known issue with APC](https://www.drupal.org/nod
 ```php
 Fatal error: Cannot redeclare class InsertQuery_mysql in ... on line 87
 ```
+
 If this happens often, a workaround would be to place the following at the top of the file in question:
 
 ```php
@@ -68,6 +69,7 @@ To do this manually, write a small script named <tt>apc_cache_clear.php</tt> in 
 <?php
 apc_clear_cache();
 ```
+
 Then browse to `https://dev.YOURSITE.pantheon.io/apc_cache_clear.php` to clear the opcode cache.
 
 #### Dashboard

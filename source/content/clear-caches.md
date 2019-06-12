@@ -30,7 +30,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 <TabList>
 
-<Tab name="WordPress" id="wp-1">
+<Tab title="WordPress" id="wp-1">
 1. Navigate to the Site Dashboard and select the desired environment.
 2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
 3. Navigate to **Settings** > **Pantheon Page Cache**, then click **Clear Cache**:
@@ -39,7 +39,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 </Tab>
 
-<Tab name="Drupal 8" id="d8-2">
+<Tab title="Drupal 8" id="d8-2">
 
 1. Navigate to the Site Dashboard and select the desired environment.
 2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
@@ -50,7 +50,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 </Tab>
 
 
-<Tab name="Drupal 7" id="d7-3">
+<Tab title="Drupal 7" id="d7-3">
 
 1. Navigate to the Site Dashboard and select the desired environment.
 2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.

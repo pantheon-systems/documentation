@@ -75,7 +75,7 @@ You will need to install the appropriate Drupal module(s) and the AWS SDK librar
 
 <TabList>
 
-<Tab name="Drupal 7" id="d8tab1">
+<Tab title="Drupal 7" id="d8tab1">
 
 The following instructions use [Terminus](/docs/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
@@ -120,7 +120,7 @@ terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 
 </Tab>
 
-<Tab name="Drupal 8" id="d7tab1">
+<Tab title="Drupal 8" id="d7tab1">
 
 <Alert title="Warning" type="danger">
 

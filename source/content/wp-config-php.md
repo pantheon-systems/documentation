@@ -137,4 +137,6 @@ The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
 If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.ouput value by adding the following line to `wp-config.php`:
 
-```ini_set('arg_separator.output', '&');```
+```php
+ini_set('arg_separator.output', '&');
+```

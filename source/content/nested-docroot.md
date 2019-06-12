@@ -23,7 +23,7 @@ If you wish to stop using One-click Dashboard updates on a particular site, and 
 
 <TabList>
 
-<Tab name="Drupal 7" id="d7-set-upstream" active={true}>
+<Tab title="Drupal 7" id="d7-set-upstream" active={true}>
 
 ```bash
 terminus site:upstream:set <site> empty-7
@@ -31,7 +31,7 @@ terminus site:upstream:set <site> empty-7
 
 </Tab>
 
-<Tab name="Drupal 8" id="d8-set-upstream">
+<Tab title="Drupal 8" id="d8-set-upstream">
 
 ```bash
 terminus site:upstream:set <site> empty
@@ -39,7 +39,7 @@ terminus site:upstream:set <site> empty
 
 </Tab>
 
-<Tab name="WordPress" id="wp-set-upstream">
+<Tab title="WordPress" id="wp-set-upstream">
 
 ```bash
 terminus site:upstream:set <site> empty-wordpress

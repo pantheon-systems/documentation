@@ -71,7 +71,7 @@ Two-factor authentication is a helpful security practice because it prevents att
 
 <TabList>
 
-<Tab name="WordPress" id="wp-org" active={true}>
+<Tab title="WordPress" id="wp-org" active={true}>
 
 For an organization-wide solution, there are many different [WordPress plugins for single sign on](https://wordpress.org/plugins/tags/single-sign-on) that can provide TFA capabilities. One of the service options we use internally at Pantheon is OneLogin, which has the [OneLogin SAML SSO](https://wordpress.org/plugins/onelogin-saml-sso/) plugin.
 
@@ -127,7 +127,7 @@ For an organization-wide solution, there are many different [WordPress plugins f
 
 </Tab>
 
-<Tab name="Drupal" id="drupal-org">
+<Tab title="Drupal" id="drupal-org">
 
 For an organization-wide solution, there are many different [Drupal modules for single sign on](https://groups.drupal.org/node/182004) that can also provide TFA capabilities. One of the service options we use internally at Pantheon is OneLogin, which has the [OneLogin](https://www.drupal.org/project/onelogin) module.
 

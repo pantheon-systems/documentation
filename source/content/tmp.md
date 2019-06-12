@@ -6,6 +6,7 @@ categories: []
 ---
 
 <Alert title="Exports" type="export">
+
 This doc uses [Terminus](/docs/terminus/) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
 
 ```bash
@@ -31,7 +32,7 @@ Errors caused by an unsupported temporary path typically surface as permission e
 
 <TabList>
 
-<Tab name="WordPress" id="wptmppath" active={true}>
+<Tab title="WordPress" id="wptmppath" active={true}>
 
 Correct an unsupported temporary path set by a plugin or theme in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
@@ -57,7 +58,7 @@ Output of this command should look something like the following Contact Form 7 e
 
 </Tab>
 
-<Tab name="Drupal 7" id="d7tmppath">
+<Tab title="Drupal 7" id="d7tmppath">
 
 Correct an unsupported temporary path set by a module or theme using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
@@ -83,7 +84,7 @@ Output of this command should look something like the following Plupload example
 
 </Tab>
 
-<Tab name="Drupal 8" id="d8tmppath">
+<Tab title="Drupal 8" id="d8tmppath">
 
 Correct an unsupported temporary path set by a module or theme using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
 
@@ -135,7 +136,7 @@ In general, there's no need for temporary files to persist across application co
 
 <TabList>
 
-<Tab name="WordPress" id="wpworkaround" active={true}>
+<Tab title="WordPress" id="wpworkaround" active={true}>
 
 Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem in `wp-config.php`. Replace `SOME_TMP_SETTING` with the conflicting plugin or theme option:
 
@@ -163,7 +164,7 @@ Output of this command should look something like the following Contact Form 7 e
 
 </Tab>
 
-<Tab name="Drupal 7" id="d7workaround">
+<Tab title="Drupal 7" id="d7workaround">
 
 Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$conf` override in `settings.php`. Replace `some_tmp_setting` with the conflicting module or theme setting:
 
@@ -191,7 +192,7 @@ Output of this command should look something like the following Plupload example
 
 </Tab>
 
-<Tab name="Drupal 8" id="d8workaround">
+<Tab title="Drupal 8" id="d8workaround">
 
 Configure a temporary path that uses a private subdirectory of Pantheon's networked filesystem using `$config` override in `settings.php`. Replace `some_module` and `some_tmp_setting` with the conflicting module or theme setting:
 

@@ -33,7 +33,7 @@ Follow the procedure outlined below for your CMS:
 
 <TabList>
 
-<Tab name="WordPress" id="tab-1-anchor" active={true}>
+<Tab title="WordPress" id="tab-1-anchor" active={true}>
 
 ### Download the WordPress SendGrid Plugin {.info}
 The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the `wp_mail` function with API integration, making it easy to configure and get started.
@@ -53,7 +53,7 @@ When you're done, click **Update Setings**. Your WordPress application is now se
 
 </Tab>
 
-<Tab name="Drupal 8" id="tab-2-anchor">
+<Tab title="Drupal 8" id="tab-2-anchor">
 
 ### Choosing an Integration Method {.info}
 
@@ -111,7 +111,7 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 
 </Tab>
 
-<Tab name="Drupal 7" id="tab-3-anchor">
+<Tab title="Drupal 7" id="tab-3-anchor">
 
 ### Choosing an Integration Method {.info}
 Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SMTP.

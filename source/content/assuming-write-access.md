@@ -67,9 +67,11 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
  Your commit can be seen in the Dev environments commit history. The plugin will now successfully write files within any environment, even when the Dev environment's connection mode is set to Git. In your previous configuration, the plugin would fail while in Git mode. You should not see the newly created files in the Dashboard as "ready to commit", as files are not version controlled.
 
-    <Alert title="Note" type="info">
-    In our example, we created the target directory of the symlink as ./wp-content/uploads/new-directory. Make sure this directory is created via SFTP if it does not exist yet.
-    </Alert>
+  <Alert title="Note" type="info">
+
+  In our example, we created the target directory of the symlink as `./wp-content/uploads/new-directory`. Make sure this directory is created via SFTP if it does not exist yet.
+
+  </Alert>
 
 7. Deploy to Test and confirm results.
 8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.

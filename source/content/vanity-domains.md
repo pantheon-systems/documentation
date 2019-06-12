@@ -18,24 +18,27 @@ From your Organization Dashboard, go to Dashboard and [submit a support request]
 
 
 <Alert title="Note" type="info">
+
 We recommend using a separate domain from your production site. This prevents any security issues related to domain-specific cookies. Even the same domain under a different TLD (`.com`, `.net`, etc) would suffice.
+
 </Alert>
 
 ## Create Wildcard DNS Records
 At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Using the example domain `sites.example.com`, the record would need to be created as follows. Replace `X` with a `1`, `2`, `3`, or `4`:
 
 > `*.sites.example.com` **A** `23.185.0.X`
-
+ 
 > `*.sites.example.com` **AAAA** `2620:12a:8000::X`
-
+ 
 > `*.sites.example.com` **AAAA** `2620:12a:8001::X`
 
 See [Introduction to Domain Name Services](/docs/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
 
-<div class="alert-info alert" >
-#### Note {.info}
+<Alert type="info" title="Note">
+
 If the domain in question is already in use, be sure to configure your vanity domain at Pantheon _before_ changing DNS records to avoid any downtime.
-</div>
+
+</Alert>
 
 ## Effects and Considerations
 
@@ -49,17 +52,17 @@ If the domain in question is already in use, be sure to configure your vanity do
 
  - **Do not configure DNS for custom domains using Vanity domain values.** Even after configuring a vanity domain, your custom domain CNAME records should *always* point to the platform domain values, as recommended within the **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** page. Vanity domains are designed to be viewed by end users, not added into records for other domains.
 
-    <Alert title="<span class="alert-icon glyphicon glyphicon-remove"></span>  Incorrect DNS Configuration" type="danger">
+<Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-    ![Incorrect vanity domain CNAME required DNS value](../docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain CNAME required DNS value](../docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
 
-    </Alert>
+</Alert>
 
-    <Alert title="<span class="alert-icon glyphicon glyphicon-check"></span> Correct DNS Configuration" type="success">
+<Alert title="Correct DNS Configuration" type="success" icon="check">
 
-    ![Correct vanity domain CNAME required DNS value](../docs/assets/images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain CNAME required DNS value](../docs/assets/images/dashboard/correct-vanity-cname-dns.png)
 
-    </Alert>
+</Alert>
 
 
 ## Security Considerations

@@ -49,54 +49,54 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 1. Open a terminal.
 2. Enter the following command with your full Pantheon domain URL. Using the `-I` (uppercase i) flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
 
-    ```
-    $ curl -I https://scalewp.io
-    HTTP/2 200
-    cache-control: public, max-age=86400
-    content-type: text/html; charset=UTF-8
-    link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
-    link: <https://scalewp.io/>; rel=shortlink
-    server: nginx
-    x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
-    x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
-    via: 1.1 varnish
-    accept-ranges: bytes
-    date: Mon, 16 Apr 2018 16:30:18 GMT
-    via: 1.1 varnish
-    age: 44742
-    x-served-by: cache-mdw17344-MDW, cache-jfk8146-JFK
-    x-cache: HIT, HIT
-    x-cache-hits: 1, 1
-    x-timer: S1523896219.500596,VS0,VE1
-    vary: Accept-Encoding, Cookie, Cookie
-    content-length: 41369
-    ```
+  ```
+  $ curl -I https://scalewp.io
+  HTTP/2 200
+  cache-control: public, max-age=86400
+  content-type: text/html; charset=UTF-8
+  link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
+  link: <https://scalewp.io/>; rel=shortlink
+  server: nginx
+  x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
+  x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
+  via: 1.1 varnish
+  accept-ranges: bytes
+  date: Mon, 16 Apr 2018 16:30:18 GMT
+  via: 1.1 varnish
+  age: 44742
+  x-served-by: cache-mdw17344-MDW, cache-jfk8146-JFK
+  x-cache: HIT, HIT
+  x-cache-hits: 1, 1
+  x-timer: S1523896219.500596,VS0,VE1
+  vary: Accept-Encoding, Cookie, Cookie
+  content-length: 41369
+  ```
 
-    To view the `Surrogate-Key-Raw` header, add the `Pantheon-Debug: 1` header to your request:
+  To view the `Surrogate-Key-Raw` header, add the `Pantheon-Debug: 1` header to your request:
 
-    ```bash
-    $ curl -IsH "Pantheon-Debug:1" https://scalewp.io
-    HTTP/2 200
-    cache-control: public, max-age=86400
-    content-type: text/html; charset=UTF-8
-    link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
-    link: <https://scalewp.io/>; rel=shortlink
-    server: nginx
-    surrogate-key-raw: front post-7 post-user-6 single
-    x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
-    x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
-    via: 1.1 varnish
-    accept-ranges: bytes
-    date: Mon, 16 Apr 2018 16:30:24 GMT
-    via: 1.1 varnish
-    age: 44747
-    x-served-by: cache-mdw17344-MDW, cache-jfk8132-JFK
-    x-cache: HIT, HIT
-    x-cache-hits: 1, 2
-    x-timer: S1523896225.507911,VS0,VE0
-    vary: Accept-Encoding, Cookie, Cookie
-    content-length: 41369
-    ```
+  ```bash
+  $ curl -IsH "Pantheon-Debug:1" https://scalewp.io
+  HTTP/2 200
+  cache-control: public, max-age=86400
+  content-type: text/html; charset=UTF-8
+  link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
+  link: <https://scalewp.io/>; rel=shortlink
+  server: nginx
+  surrogate-key-raw: front post-7 post-user-6 single
+  x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
+  x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
+  via: 1.1 varnish
+  accept-ranges: bytes
+  date: Mon, 16 Apr 2018 16:30:24 GMT
+  via: 1.1 varnish
+  age: 44747
+  x-served-by: cache-mdw17344-MDW, cache-jfk8132-JFK
+  x-cache: HIT, HIT
+  x-cache-hits: 1, 2
+  x-timer: S1523896225.507911,VS0,VE0
+  vary: Accept-Encoding, Cookie, Cookie
+  content-length: 41369
+  ```
 
 ### Test Global CDN with Chrome
 

@@ -39,7 +39,7 @@ Here's the browser version of the script:
 
 <TabList>
 
-<Tab name="PHP 5" id="php5" active={true}>
+<Tab title="PHP 5" id="php5" active={true}>
 
 <pre><code><style>
   .green { color: green; font-family: monospace;}
@@ -85,7 +85,7 @@ die(0);</code></pre>
 
 </Tab>
 
-<Tab name="PHP 7" id="php7">
+<Tab title="PHP 7" id="php7">
 
 <pre><code><style>
   .green { color: green; font-family: monospace;}

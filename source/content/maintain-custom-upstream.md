@@ -38,7 +38,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
     <TabList>
 
-    <Tab name="WordPress" id="wp1" active={true}>
+    <Tab title="WordPress" id="wp1" active={true}>
 
     ```git
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
@@ -46,7 +46,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
     </Tab>
 
-    <Tab name="Drupal 8" id="d81">
+    <Tab title="Drupal 8" id="d81">
 
     ```git
     git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
@@ -54,7 +54,7 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
     </Tab>
 
-    <Tab name="Drupal 7" id="d71">
+    <Tab title="Drupal 7" id="d71">
 
     ```git
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
@@ -166,7 +166,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
     <TabList>
 
-    <Tab name="WordPress" id="wp2" active={true}>
+    <Tab title="WordPress" id="wp2" active={true}>
 
     ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
@@ -174,7 +174,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
     </Tab>
 
-    <Tab name="Drupal 8" id="d82">
+    <Tab title="Drupal 8" id="d82">
 
     ```bash
     git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
@@ -182,7 +182,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 
     </Tab>
 
-    <Tab name=" Drupal 7" id="d72">
+    <Tab title=" Drupal 7" id="d72">
 
     ```bash
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
@@ -235,7 +235,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
     <TabList>
 
-    <Tab name="WordPress" id="wp2" active={true}>
+    <Tab title="WordPress" id="wp2" active={true}>
 
     ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
@@ -243,7 +243,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
     </Tab>
 
-    <Tab name="Drupal 8" id="d82">
+    <Tab title="Drupal 8" id="d82">
 
     ```bash
     git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
@@ -251,7 +251,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
     </Tab>
 
-    <Tab name=" Drupal 7" id="d72">
+    <Tab title=" Drupal 7" id="d72">
 
     ```bash
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
@@ -264,7 +264,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 2. Pull down changes from the appropriate upstream:
 
     <Tablist>
-    <Tab name="WordPress" id="wp-2conflict">
+    <Tab title="WordPress" id="wp-2conflict">
 
     ```git
     git fetch pantheon-wordpress
@@ -281,7 +281,7 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
     ```
     </Tab>
 
-     <Tab name="Drupal 7" id="d7-2conflict">
+     <Tab title="Drupal 7" id="d7-2conflict">
 
      ```git
      git fetch pantheon-drops-7

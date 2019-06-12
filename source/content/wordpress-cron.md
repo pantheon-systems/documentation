@@ -45,21 +45,21 @@ You can also schedule your own jobs, execute existing jobs, and manage just abou
 
 One of the first things you'll want to do is test WP-Cron to make sure everything is working correctly. When you execute the command below, make sure to replace SITE_NAME with your site's name from your Pantheon Dashboard and replace ENV_NAME with the desired environment ("dev", "test", "live", or multidev branch name).
 
-````nohighlight
+```nohighlight
 $ terminus wp <site>.<env> -- cron test
-````
+```
 
 If everything works correctly, the result looks like this:
 
-````bash
+```bash
 Success: WP-Cron spawning is working as expected.
-````
+```
 
 This lets you know that WP-Cron is working properly on your site. From here, you can run any cron-related command with [WP-CLI](https://developer.wordpress.org/cli/commands/cron/ "wp-cli web site"). When using WP-CLI to manage your Pantheon hosted WordPress site, you should be using [Terminus](/docs/terminus/). The command format is as follows:
 
-````nohighlight
+```nohighlight
 $ terminus wp <site>.<env> -- cron <your wp-cron command and switches here>
-````
+```
 
 All `terminus wp` commands require a site name and environment to operate.
 
@@ -81,9 +81,9 @@ If you're looking for more control over your site's cron jobs, or you don't want
 ### Disable WP-Cron
 The first thing you'll need to do is disable WP-Cron's internal processing. Add the following line to your `wp-config.php` file:
 
-````php
+```php
 define('DISABLE_WP_CRON', true);
-````
+```
 
 <Alert title="Note" type="info">
 There are many important tasks that WP-Cron takes care of, so be prepared to complete all the steps below.

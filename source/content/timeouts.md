@@ -9,104 +9,28 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 
 ## User-Configurable Timeouts
 
-
-<table class=table>
-<thead>
-		<tr>
-			<th>Name</th>
-			<th>Timeout</th>
-			<th>Description</th>
-		</tr>
-	</thead><tbody>
-  <tr>
-    <td><a href="https://secure.php.net/manual/en/info.configuration.php#ini.max-execution-time">PHP max_execution_time</a></td>
-    <td>120 seconds</td>
-    <td>Maximum time a script can run before being terminated by the parser. This includes Drush & WP-CLI commands. Helps prevent poorly written scripts from tying up your application container's PHP workers.
-    <br/><br/>
-     You can edit this timeout via `settings.php` or `wp-config.php`. Scripts executed through the GlobalCDN will still be restricted by the 59 second connection timeout.</td>
-  </tr>
-  <tr>
-    <td>Solr</td>
-    <td>5 seconds</td>
-    <td>Typically reached if you try to index too much at once (use a reasonable batch size and avoid indexing large binary files).</td>
-  </tr>
-</table>
+| Name              | Timeout   | Description |
+|:----------------- |:--------- |:----------- |
+| [PHP max_execution_time](https://secure.php.net/manual/en/info.configuration.php#ini.max-execution-time) | 120 Seconds | Maximum time a script can run before being terminated by the parser. This includes Drush & WP-CLI commands. Helps prevent poorly written scripts from tying up your application container's PHP workers. <br />  You can edit this timeout via `settings.php` or `wp-config.php`. Scripts executed through the GlobalCDN will still be restricted by the 59 second connection timeout. |
+| Solr             | 5 Seconds  | Typically reached if you try to index too much at once (use a reasonable batch size and avoid indexing large binary files). |
 
 ## Timeouts That are not Configurable
 
-<table class=table>
-<thead>
-		<tr>
-			<th>Name</th>
-			<th>Maximum</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Connection Timeout</td>
-			<td>59 seconds</td>
-			<td>Number of seconds to wait for a timeout.</td>
-		</tr>
-		<tr>
-			<td>First Byte Timeout</td>
-			<td>59 seconds</td>
-			<td>Number of seconds to wait for the first byte.</td>
-		</tr>
-		<tr>
-			<td>Between Bytes Timeout</td>
-			<td>59 seconds</td>
-			<td>Number of seconds to wait for between bytes.</td>
-		</tr>
-		<tr>
-			<td>Pantheon executed Drupal cron</td>
-			<td>180 seconds</td>
-			<td>Only applies to Pantheon's automatic hourly execution of drush cron</td>
-		</tr>
-		<tr>
-			<td><a href="https://secure.php.net/manual/en/function.set-time-limit.php">PHP set_time_limit</a></td>
-			<td>120 seconds</td>
-			<td>Number of seconds a script can run. If reached, the script returns a fatal error.</td>
-		</tr>
-		<tr>
-			<td>Load Balancer</td>
-			<td>120 seconds</td>
-			<td>Applies to HTTPS requests and requests to a DNS A record.
-			Requests using the Pantheon CNAME for HTTP requests <em>are not</em> limited.</td>
-		</tr>
-		<tr>
-			<td>SSH</td>
-			<td>10 minutes with no communication<br>
-			60 minutes hard limit</td>
-			<td>Applies to remote Drush commands, SSH tunneling, SFTP, rsync</td>
-		</tr>
-		<tr>
-			<td><a href="https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_write_timeout">MySQL net_write_timeout</a></td>
-			<td>90 seconds</td>
-			<td>Number of seconds to wait for a block to be written to a connection before aborting the write.</td>
-		</tr>
-		<tr>
-			<td><a href="https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_read_timeout">MySQL net_read_timeout</a></td>
-			<td>90 seconds</td>
-			<td>Number of seconds to wait for more data from a connection before aborting the read.</td>
-		</tr>
-		<tr>
-			<td><a href="https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout">MySQL wait_timeout</a></td>
-			<td>420 seconds</td>
-			<td>Number of seconds the server waits for activity on a noninteractive connection before closing it.</td>
-		</tr>
-		<tr>
-			<td><a href="https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_interactive_timeout">MySQL interactive_timeout</a></td>
-			<td>420 seconds</td>
-			<td>Number of seconds the server waits for activity on an interactive connection before closing it.</td>
-		</tr>
-		<tr>
-			<td><a href="https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_read_timeout">Nginx fastcgi_read_timeout</a></td>
-			<td>900 seconds</td>
-			<td>PHP won't run forever.</td>
-		</tr>
-	</tbody>
-</table>
+| Name                                                                                                                         | Timeout     | Description |
+|:---------------------------------------------------------------------------------------------------------------------------- |:----------- |:----------- |
+| Connection Timeout                                                                                                           | 59 seconds  | Number of seconds to wait for a timeout. |
+| First Byte Timeout                                                                                                           | 59 seconds  | Number of seconds to wait for the first byte. |
+| Between Bytes Timeout                                                                                                        | 59 seconds  | Number of seconds to wait for between bytes. |
+| Pantheon executed Drupal cron                                                                                                | 180 seconds | Only applies to Pantheon's automatic hourly execution of drush cron |
+| [PHP set_time_limit](https://secure.php.net/manual/en/function.set-time-limit.php)                                           | 120 seconds | Number of seconds a script can run. If reached, the script returns a fatal error. |
+| Load Balancer                                                                                                                | 120 seconds | Applies to HTTPS requests and requests to a DNS A record. Requests using the Pantheon CNAME for HTTP requests are *not* limited |
+| SSH                                                                                                                          | 10 minutes with no communication <br /> 60 minutes hard limit | Applies to remote Drush commands, SSH tunneling, SFTP, rsync |
+| [MySQL net_write_timeout](https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_write_timeout)     | 90 seconds  | Number of seconds to wait for a block to be written to a connection before aborting the write. |
+| [MySQL net_read_timeout](https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_read_timeout)       | 90 seconds  | Number of seconds to wait for more data from a connection before aborting the read. |
+| [MySQL wait_timeout](https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout)               | 420 seconds | Number of seconds the server waits for activity on a noninteractive connection before closing it. |
+| [MySQL interactive_timeout](https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_interactive_timeout) | 420 seconds | Number of seconds the server waits for activity on an interactive connection before closing it. |
+| [Nginx fastcgi_read_timeout](https://nginx.org/en/docs/http/ngx_http_fastcgi_module.html#fastcgi_read_timeout)               | 900 seconds | PHP won't run forever. |
+
 ## Frequently Asked Questions
 
 ### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?

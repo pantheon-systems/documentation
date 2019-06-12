@@ -189,13 +189,13 @@ if ($legacy_username) {
 
 <TabList>
 
-<Tab name="WordPress" id="wp-lc" active={true}>
+<Tab title="WordPress" id="wp-lc" active={true}>
 
 WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core.
 
 </Tab>
 
-<Tab name="Drupal" id="dp-lc">
+<Tab title="Drupal" id="dp-lc">
 
 Drupal sites can force lowercase letters using the following:
 

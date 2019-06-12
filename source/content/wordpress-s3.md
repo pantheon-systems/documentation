@@ -23,11 +23,14 @@ When creating an AWS account, you will have to enter credit card information. Th
 </Alert>
 
 <Alert title="Exports" type="export">
+
 This process uses [Terminus](/docs/terminus/) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
-<pre>
-<code class="bash">export site=yoursitename
+
+```bash
+export site=yoursitename
 export env=dev
-</code></pre>
+```
+
 </Alert>
 
 ## Configure S3 within the AWS Console
@@ -65,25 +68,25 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
 1. Download the latest plugin release from [Github](https://github.com/humanmade/S3-Uploads/releases) and extract it to `wp-content/plugins/`. Note that our documentation has been tested for version 2.0.0.
 
-    <Alert title="Warning" type="danger">
+  <Alert title="Warning" type="danger">
 
-    **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/docs/git-faq/#does-pantheon-support-git-submodules)).
+  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/docs/git-faq/#does-pantheon-support-git-submodules)).
 
-    </Alert>
+  </Alert>
 
 2. Rename the extracted folder to remove the version number. For example:
 
-    ```bash
-    mv S3-Uploads-2.0.0/ S3-Uploads
-    ```
+  ```bash
+  mv S3-Uploads-2.0.0/ S3-Uploads
+  ```
 
 3. Create and / or copy your **Access Key ID** key and **Secret Access Key** from the "My security credentials" section of your AWS account to a text editor on your local computer.
 
-    <Alert title="Note" type="info">
+   <Alert title="Note" type="info">
 
-    As a standard security measure, consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin.
+   As a standard security measure, consider creating a unique user with limited permissions covering this S3 bucket to authenticate the plugin.
 
-    </Alert>
+   </Alert>
 
 4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommended a service like [Lockr](/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 

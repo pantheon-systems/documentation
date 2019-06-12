@@ -85,7 +85,7 @@ You will need to enable either Apache Solr Search or Search API Solr Search, dep
 
 <TabList>
 
-<Tab name="Apache Solr Search" id="apachesolrsearch" active={true}>
+<Tab title="Apache Solr Search" id="apachesolrsearch" active={true}>
 
 #### Enabling Apache Solr Search (apachesolr) {.info}
 
@@ -101,7 +101,7 @@ Note that the default connection parameters are correct and do not need changing
 
 </Tab>
 
-<Tab name="Search API Solr Search" id="apisolr">
+<Tab title="Search API Solr Search" id="apisolr">
 
 #### Enabling Search API Solr Search (search\_api\_solr) {.info}
 

@@ -45,7 +45,7 @@ Use the following integration methods for Drupal and WordPress to configure an e
 
 <TabList>
 
-<Tab name="Drupal 7/8" id="$" active={true}>
+<Tab title="Drupal 7/8" id="$" active={true}>
 
 Once you have chosen your SMTP provider, install and configure Drupal's [SMTP Authentication Support](https://drupal.org/project/smtp) module.
 
@@ -57,7 +57,7 @@ The SMTP Authentication Support module for Drupal 8 is currently in Beta, suppor
 
 </Tab>
 
-<Tab name="WordPress" id="wp">
+<Tab title="WordPress" id="wp">
 
 Once you have chosen your SMTP provider, install and configure WordPress's [WP Mail SMTP](https://wordpress.org/plugins/wp-mail-smtp/) plugin.
 

@@ -117,7 +117,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <TabList>
 
-    <Tab name="WordPress" id="wp1" active={true}>
+    <Tab title="WordPress" id="wp1" active={true}>
 
     ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
@@ -125,7 +125,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab name="Drupal 8" id="d81">
+    <Tab title="Drupal 8" id="d81">
 
     ```bash
     git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
@@ -133,7 +133,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab name=" Drupal 7" id="d71">
+    <Tab title=" Drupal 7" id="d71">
 
     ```bash
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
@@ -147,7 +147,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <TabList>
 
-    <Tab name="WordPress" id="wp1" active={true}>
+    <Tab title="WordPress" id="wp1" active={true}>
 
     ```bash
     git checkout master
@@ -158,7 +158,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab name="Drupal 8" id="d81">
+    <Tab title="Drupal 8" id="d81">
 
     ```bash
     git checkout master
@@ -169,7 +169,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab name=" Drupal 7" id="d71">
+    <Tab title=" Drupal 7" id="d71">
 
     ```bash
     git checkout master
