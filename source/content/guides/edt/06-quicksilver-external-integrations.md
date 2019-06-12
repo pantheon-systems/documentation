@@ -19,7 +19,7 @@ editpath: edt/06-quicksilver-external-integrations.md
 image: launchGuide-twitterLarge
 ---
 
-In this lesson, we’re going to explore the Developer Workflow.
+In this lesson, we’re going to explore External Integrations with Quicksilver.
 All links from the video are provided below.
 
 **Watch the video:**
@@ -39,4 +39,3 @@ All links from the video are provided below.
 **CHALLENGE:**
 
 Use the Examples Repository to implement New Relic Deployment Markers or DB Sanitization with Quicksilver.
-
