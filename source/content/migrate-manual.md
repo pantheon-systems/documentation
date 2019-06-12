@@ -271,36 +271,35 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 1. Export a `tar.gz` or `.zip` file of your files directory:
 
-    <TabList>
+  <TabList>
 
-    <Tab title="WordPress" id="files-wp-anchor" active={true}>
+  <Tab title="WordPress" id="files-wp-anchor" active={true}>
 
-    Navigate to your WordPress site's root directory to run this command, which will create an archive file in your user's home directory:
+  Navigate to your WordPress site's root directory to run this command, which will create an archive file in your user's home directory:
 
-    ```bash
-    cd wp-content/uploads
-    tar -czf ~/files.tar.gz .
-    ```
+  ```bash
+  cd wp-content/uploads
+  tar -czf ~/files.tar.gz .
+  ```
 
+  </Tab>
 
-    </Tab>
+  <Tab title="Drupal" id="files-drops-anchor">
 
-    <Tab title="Drupal" id="files-drops-anchor">
+  Navigate to your Drupal site's root directory to run this command, which will create an archive file in your user's home directory:
 
-    Navigate to your Drupal site's root directory to run this command, which will create an archive file in your user's home directory:
+  ```bash
+  cd sites/default/files
+  tar -czf ~/files.tar.gz .
+  ```
 
-    ```bash
-    cd sites/default/files
-    tar -czf ~/files.tar.gz .
-    ```
+  </Tab>
 
-    </Tab>
+  </TabList>
 
-    </TabList>
-
-2. From the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
-3. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
-4. Click **Import** and add your archive accordingly (based on file size):
+1. From the Site Dashboard, select the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
+1. Select **<span class="glyphicons glyphicons-server"></span> Database / Files**.
+1. Click **Import** and add your archive accordingly (based on file size):
 
 
     <TabList>

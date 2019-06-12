@@ -11,55 +11,66 @@ We do not prevent you from installing and using these plugins/modules; however, 
 **Plugin & Module Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fpantheon.io/docs/modules-plugins-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content); we're happy to help provide information that can lead to conflict resolutions between your code and the platform. If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/master/source/_docs/modules-plugins-known-issues.md).
 
 ## Drupal Modules
-<hr>
+<hr />
+
 ### [APC - Alternative PHP Cache](https://www.drupal.org/project/apc)
 **Issue**: APC is in-memory and limited to a single instance. It cannot span multiple server environments.
 
 **Solution**: Pantheon recommends Redis as a caching backend, which has better performance.
-<hr>
+<hr />
+
 ### [Adaptive Image Styles](https://www.drupal.org/project/ais)
 **Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/docs/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
-<hr>
+<hr />
+
 ### [Apache Solr Multilingual](https://www.drupal.org/project/apachesolr_multilingual)
 **Issue**: When the Apache Solr Multilingual module is enabled, the default class variable set by the Pantheon Apache Solr module is changed, and the site will be unable to connect to the Solr server.
 
 If you have already enabled the Apache Solr Multilingual module and found that your site can no longer connect to the Solr server, you will need to first disable and uninstall the module. Next, disable and re-enable the Pantheon Apache Solr module. This will add the class variable back so your site can connect to the Solr server again.
-<hr>
+<hr />
+
 ### [Acquia Search](https://www.drupal.org/project/acquia_search)
 **Issue**: If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.
 
 **Solution**: Delete the Acquia Solr modules from the codebase and then disable and re-enable the Pantheon Apache Solr module.
-<hr>
+<hr />
+
 ### [Background Process](https://www.drupal.org/project/background_process)
 **Issue**: The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform. See [https://www.drupal.org/node/2233843](https://www.drupal.org/node/2233843).
 
-<hr>
+<hr />
+
 ### [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
 **Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/docs/backups/#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
 **Solution**: You can use the automated backups that are available on the Dashboard for each environment. If you want to access your backups and copy it to your own repository (Amazon S3, FTP server, etc), consider using a bash script. You can do that by running it in your local system, or use an external server, or a service that runs cron jobs for you. See [Access Backups](/docs/backups/#access-backups) for more details.
 
-<hr>
+<hr />
+
 ### [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
 **Issue**: This contrib module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
 
 **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Security on the Pantheon Dashboard](/docs/security/#troubleshoot).
 
-<hr>
+<hr />
+
 ### [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
 **Issue**: The Pantheon Edge layer buffers text output, and BigPipe depends on being able to stream text output. Since BigPipe provides no benefit on Pantheon sites, we recommend disabling it.
 
-<hr>
+<hr />
+
 ### [Boost](https://www.drupal.org/project/boost)
 **Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust page caching infrastructure that returns pages for anonymous visitors at the highest possible performance. See [Pantheon's Global CDN](/docs/global-cdn).
 
-<hr>
+<hr />
+
 ### [Cache Expiration](https://www.drupal.org/project/expire)
 **Issue**: This module doesn't support Pantheon's granular cache clearing and header system.
 
 **Solution**: Install the [Pantheon Advanced Page Cache module](/docs/modules/#advanced-page-cache) to dynamically purge content from cache on content update.
 
-<hr>
+<hr />
+
 ### [CKFinder](https://www.drupal.org/project/wysiwyg_ckfinder)
 **Issue**:  If you follow the installation instructions for CKFinder, the `$baseUrl` path is not correctly set and will not recognize any path set via CKFinder.  See this [Drupal.org issue](https://www.drupal.org/node/2629000).
 
@@ -69,7 +80,8 @@ If you have already enabled the Apache Solr Multilingual module and found that y
 $baseUrl = '/ckfinder/userfiles/';
 ```
 
-<hr>
+<hr />
+
 ### [Composer Manager](https://www.drupal.org/project/composer_manager)
 This module has been deprecated by its authors. The suggestions made below are not guaranteed to be successful in all use cases.
 
@@ -89,7 +101,8 @@ This module has been deprecated by its authors. The suggestions made below are n
 You also need to create the directory path `sites/default/files/private/composer`.
 
 This disables auto-building in all Pantheon environments. This will allow Drush commands such as `pm-enable` and `pm-disable` to function correctly in both Git and SFTP modes as Composer Manager will only update packages and the autoloader when _explicitly_ told to do so via `drush composer-manager [COMMAND] [OPTIONS]` or `drush composer-json-rebuild`. This is the setting recommended by Pantheon.  While `composer.json` can be rebuilt via [Terminus](/docs/terminus) while the DEV site is in SFTP mode, `composer install` must be run locally, committed via Git, and pushed back to Pantheon.
-<hr>
+<hr />
+
 ### [Fast 404](https://www.drupal.org/project/fast_404)
 **Issue**: Database connection credentials are needed before Drupal bootstrap is invoked and standard MySQL is port hard-coded.
 
@@ -97,23 +110,27 @@ This disables auto-building in all Pantheon environments. This will allow Drush 
 
 Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/sites/default/default.settings.php#L518) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/8.5.4/sites/default/default.settings.php#L640) cores provide a basic version of this same feature via configuration in `settings.php`.
 
-<hr>
+<hr />
+
 ### [Front](https://www.drupal.org/project/front)
 **Issue**: The Drupal 7 version of the module disables caching for the front page.
 
 **Solution**: [Apply a patch to the module](https://www.drupal.org/project/front/issues/1854300#comment-12405090) to allow caching for anonymous users. Note that this patch doesn't work with the **Full** or **Redirect** options.
 
-<hr>
+<hr />
+
 ### [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
  **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
 
  **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Security on the Pantheon Dashboard](/docs/security/#troubleshoot).
-<hr>
+<hr />
+
 
 ### [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
-<hr>
+<hr />
+
 ### [IMCE 6.x](https://www.drupal.org/node/251024) and [IMCE 7.x](https://www.drupal.org/project/imce/releases/7.x-1.11)
 **Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
 
@@ -148,17 +165,21 @@ You can modify this patch according to your needs, such as performing an operati
 
 ### [LiveReload](https://www.drupal.org/project/livereload)
 **Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7 and Drupal 8.
-<hr>
+<hr />
+
 ### [Live CSS](https://www.drupal.org/project/live_css)
 **Issue**: This module requires write access to the site's codebase for editing CSS files, which is not granted on Test and Live environments by design.
-<hr>
+<hr />
+
 ### [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus)
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
-<hr>
+<hr />
+
 
 ### [Mobile Tools](https://www.drupal.org/project/mobile_tools)
 **Issue**: Conflicts with platform page caches. See [this thread](https://www.drupal.org/node/1976162#comment-7411366) for details.
-<hr>
+<hr />
+
 
 ### [Node export webforms](https://www.drupal.org/project/node_export_webforms)
 **Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
@@ -166,11 +187,13 @@ You can modify this patch according to your needs, such as performing an operati
 **Solution**: Use [drush](https://drushcommands.com/drush-8x/webform/webform-export/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
 Customers have also reported success by making the export path [configurable](https://www.drupal.org/node/2221651).
-<hr>
+<hr />
+
 
 ### [Node Gallery](https://www.drupal.org/project/node_gallery)
 **Issue**: Using Node Gallery with Plupload attaches cookies to image uploads for authentication purposes. This conflicts with our page cache configuration as we strip all cookies for images, CSS, and JS files to improve performance.
-<hr>
+<hr />
+
 ### [Pathologic](https://www.drupal.org/project/pathologic)
  **Issue**: The path of the base URL is changed and cached by the module itself.
 
@@ -183,7 +206,8 @@ Customers have also reported success by making the export path [configurable](ht
 
 
 **Solution**: Follow the remedy provided within the [module's documentation of the issue on Drupal.org](https://www.drupal.org/node/1306214), which is to alter the code to prefix the cookie name with `SESS`.
- <hr>
+ <hr />
+
 
 ### [Plupload](https://www.drupal.org/project/plupload)
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
@@ -199,7 +223,8 @@ $temp_destination = file_stream_wrapper_uri_normalize('private://tmp/' . $filena
 ```
 
 This will move the temporary upload destination from the individual server mount `tmp` directory to the shared `mount tmp files/private/tmp directory`, which should preserve the files between requests.
-<hr>
+<hr />
+
 
 ### [reCAPTCHA](https://www.drupal.org/project/recaptcha)
 **Issue 1:** If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
@@ -224,11 +249,13 @@ if (defined('PANTHEON_ENVIRONMENT') && $_ENV['PANTHEON_ENVIRONMENT'] != 'live') 
 }
 ```
 
-<hr>
+<hr />
+
 
 ### [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)
 This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/drush#registry-rebuild) for details on how to use Registry Rebuild on Pantheon.
-<hr>
+<hr />
+
 
 ### [Schema](https://www.drupal.org/project/schema)
 **Issue**: The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a [known bug](https://drupal.org/node/468644) in the schema module.
@@ -237,27 +264,32 @@ This is built into the platform. See [Drupal Drush Command-Line Utility](/docs/d
 ```
 $conf[‘schema_suppress_type_warnings’] = TRUE;
 ```
-<hr>
+<hr />
+
 
 ### [Simple OAuth / OAuth 2.0](https://www.drupal.org/project/simple_oauth)
 **Issue**: The module requires a very specific set of permissions for the folder and the keys to be uploaded. Using Private or non-standard filepaths won't work. It is not possible to change these in LIVE or TEST environment.
 
 **Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
-<hr>
+<hr />
+
 
 ### [Taxonomy CSV](https://www.drupal.org/project/taxonomy_csv)
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/docs/modules-plugins-known-issues/#using-the-tmp-directory) section below.
-<hr>
+<hr />
+
 
 ### [Twig Extensions](https://www.drupal.org/project/twig_extensions)
 **Issue**:  This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
-<hr>
+<hr />
+
 
 ### [Varnish](https://www.drupal.org/project/varnish)
 **Issue**: Conflicts with the existing platform configuration.
 
 **Solution**: Update Drupal performance settings to set the TTL and have the platform page cache serve requests. See [Pantheon's Global CDN](/docs/global-cdn/)
-<hr>
+<hr />
+
 
 ### [Views data export](https://www.drupal.org/project/views_data_export)
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) below for more information.
@@ -281,7 +313,8 @@ drush vset views_data_export_directory 'public://'
 ```
 
 Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733).
-<hr>
+<hr />
+
 
 
 ## WordPress Plugins
@@ -293,7 +326,8 @@ The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migra
 
 **Solution**: You can create and download full backups from your [Dashboard](/docs/backups/).
 
-<hr>
+<hr />
+
 
 ### [Autoptimize](https://wordpress.org/plugins/autoptimize/)
 **Issue**: Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
@@ -311,7 +345,8 @@ Be sure to add this configuration _above_ the comment to stop editing:
 
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/docs/assuming-write-access/#create-a-symbolic-link).
 
-<hr>
+<hr />
+
 
 ### [Better Search And Replace](https://wordpress.org/plugins/better-search-replace/)
 **Issue**: Plugin is not accessible in Test or Live (read-only environments in Pantheon) due to the `install_plugins` capability check of the plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/not-appearing-on-test-and-live-environments-in-pantheon/).
@@ -327,25 +362,29 @@ add_filter( 'bsr_capability', 'better_search_replace_cap_override' );
 
 **Solution 2**: Use an alternative Search and Replace plugin like [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/)
 
-<hr>
+<hr />
+
 
 ### [Bookly](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/)
 **Issue**: Sessions are implemented in a way that will not allow it to function with the WP Native Sessions plugin, either installed as a regular plugin or an mu-plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/incompatibility-with-wp-native-sessions/).
 
-<hr>
+<hr />
+
 
 ### [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/)
 **Issue**: A low value set for "Check link every X hours" can consume a large amount of server resources.
 
 **Solution**: Ensure that the value is set for the default of 72 hours or greater.
 
-<hr>
+<hr />
+
 
 ### Caching Plugins (e.g. [Batcache](https://wordpress.org/plugins/batcache/), [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/), or [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/))
 **Issue**: Conflicts with platform-level page caching.
 
 **Solution**: See [Caching: Advanced Topics](/docs/caching-advanced-topics/) for details on how to bypass the platform page cache.
-<hr>
+<hr />
+
 
 ### [Coming Soon](https://wordpress.org/plugins/coming-soon/)
 **Issue**: `Maintenance mode` gives the `ERR_TOO_MANY_REDIRECTS` error in the frontend. This plugin uses `503 Header status - Service Temporarily Unavailable` which creates a redirect loop. Please see [this issue](https://wordpress.org/support/topic/plugin-give-err_too_many_redirects-in-pantheon-hosting/) for more details regarding the error.
@@ -353,7 +392,8 @@ add_filter( 'bsr_capability', 'better_search_replace_cap_override' );
 **Solution**: This plugin only works in the `Coming Soon Mode` on Pantheon, and you need to put content into the **Page Settings** > **Message** so the Coming Soon page won't appear as a blank white page.
 
 Alternatively, if you don't want your site to be crawled by search engines, you can lock it via the platform and you can use a [custom lock page](/docs/security#customize-lock-page).
-<hr>
+<hr />
+
 
 ### [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
 **Issue 1:** This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
@@ -380,13 +420,15 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution:** Until the plugin is updated to allow symlink paths, you can commit your local attachment files to the code base in `wp-content` or another subdirectory thereof.
 
 
-<hr>
+<hr />
+
 
 ### [Constant Contact Forms](https://wordpress.org/plugins/constant-contact-forms/)
 **Issue**: The Constant Contact Forms plugin adds dependencies using Composer and provides a .gitignore file which prevents these dependencies from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
 
 **Solution**: Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
-<hr>
+<hr />
+
 
 ### [Event Espresso](https://eventespresso.com/)
 
@@ -398,7 +440,8 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 define('FS_METHOD', 'direct');
 ```
 
-<hr>
+<hr />
+
 
 ### [Disable REST API and Require JWT / OAuth Authentication](https://wordpress.org/plugins/disable-rest-api-and-require-jwt-oauth-authentication/)
 
@@ -427,7 +470,8 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
 
 ```
 
-<hr>
+<hr />
+
 
 ### [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
 
@@ -439,17 +483,20 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 
 **Solution:** Use an alternative plugin like [EWWW Image Optimizer Cloud](https://wordpress.org/plugins/ewww-image-optimizer-cloud/), which is a cloud version of the plugin that executes the compression from an external service instead of the server. Another alternative that works well with the default configuration is [Smush Image Compression and Optimization](https://wordpress.org/plugins/wp-smushit/).
 
-<hr>
+<hr />
+
 
 ### [Force Login](https://wordpress.org/plugins/wp-force-login/)
 **Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
 **Solution**: See [Set SERVER_PORT Correctly](https://pantheon.io/docs/server_name-and-server_port/#set-server_port-correctly).
-<hr>
+<hr />
+
 
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/)
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
-<hr>
+<hr />
+
 
 ### [iThemes Security](https://wordpress.org/plugins/better-wp-security/)
 **Issue 1:** The "File Change Detection" check in iThemes Security warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
@@ -459,13 +506,15 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 **Issue 2:** iThemes Security attempts to modify `nginx.conf`, `.htaccess` and `wp-config.php`. Components that need write access to these files will not work since `nginx.conf` [cannot be modified](/docs/platform-considerations/#nginxconf) and code files on the Test and Live environments are not writable.
 
 **Solution:** Modifications to `wp-config.php` should be done in Dev or Multidev environments, then deployed forward to Test and Live.
-<hr>
+<hr />
+
 
 ### [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
 **Issue**: Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
 
 **Solution**: If you are locked out of your site, wp-login.php will still function and you can login to disable the maintenance mode plugin.
-<hr>
+<hr />
+
 
 ### [ManageWP worker](https://wordpress.org/plugins/worker/)
 **Issue 1:** Error when adding a site in the ManageWP dashboard:
@@ -484,15 +533,18 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 **Solution:** Make sure you are in [SFTP mode](/docs/sftp/#sftp-mode) instead of Git mode.
 
-<hr>
+<hr />
+
 
 ### [Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/)
 **Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
-<hr>
+<hr />
+
 
 ### [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/)
 **Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/docs/new-relic/) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/docs/quicksilver/).
-<hr>
+<hr />
+
 
 ### [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)
 **Issue**: NextGEN Gallery assumes write access to the site's codebase within the `wp-content/gallery` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
@@ -500,7 +552,8 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 **Solution**: This can be overridden from the plugin's configuration page (`/wp-admin/admin.php?page=ngg_other_options`) to use `wp-content/uploads/gallery/`.
 
 An alternative solution is to [create a symbolic link](/docs/assuming-write-access/#create-a-symbolic-link).
-<hr>
+<hr />
+
 
 ### [Query Monitor](https://wordpress.org/plugins/query-monitor/)
 **Issue**: Creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments.
@@ -509,25 +562,29 @@ An alternative solution is to [create a symbolic link](/docs/assuming-write-acce
 Pantheon has tools in place to monitor database queries:
 [MySQL Slow Log](https://pantheon.io/docs/mysql-slow-log/)
 [MySQL Troubleshooting with New Relic Pro](https://pantheon.io/docs/debug-mysql-new-relic/)
-<hr>
+<hr />
+
 
 ### [Object Sync for Salesforce](https://wordpress.org/plugins/object-sync-for-salesforce/)
 **Issue**: The Object Sync for Salesforce plugin adds dependencies using Composer, and one of these dependencies provides a .gitignore file which prevents files from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
 
 **Solution**: Remove the .gitignore file from the `object-sync-for-salesforce/vendor/pippinsplugins/wp-logging` directory.
-<hr>
+<hr />
+
 
 ### [Redirection](https://wordpress.org/plugins/redirection/)
 
 **Issue:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
 **Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/docs/redirects/) for more information.
-<hr>
+<hr />
+
 
 ### [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/)
 **Issue**: Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. See [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
 
-<hr>
+<hr />
+
 
 ### [SendGrid Subscription Widget](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/)
 **Issue:** The email confirmation link sent from the Subscription Widget goes to a redirect loop (see the [open issue on wp.org](https://wordpress.org/support/topic/email-sent-from-the-subscription-widget-goes-to-a-redirect-loop-in-pantheon)). The link created uses a URL `GET` parameter `__sg_api`, which has double underscores. The platform strips this type of parameter to improve [caching performance](/docs/pantheon_stripped/#which-query-parameters-are-optimized).
@@ -542,7 +599,8 @@ Pantheon has tools in place to monitor database queries:
 This workaround may potentially break again with the next plugin update, and you will need to manually reapply the modification.
 </Alert>
 
-<hr>
+<hr />
+
 
 ### [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
 **Issue:** The sitemap URL linked by the plugin produces a `500 Internal Server Error` on Test and Live environments. This results in a PHP error: `class not found WP_Filesystem_Direct`. See more [details about the issue](https://premium.wpmudev.org/forums/topic/smartcrawl-pro-class-wp_filesystem_direct-not-found).
@@ -558,23 +616,27 @@ Alternative plugins that have an XML sitemap feature that works well on the plat
 * [Google Sitemap Generator](https://wordpress.org/plugins/google-sitemap-generator/)
 * [Yoast](https://wordpress.org/plugins/wordpress-seo/)
 
-<hr>
+<hr />
+
 
 ### [Timthumb](https://code.google.com/p/timthumb/)
 **Issue**: TimThumb is no longer supported or maintained.
-<hr>
+<hr />
+
 ### [TubePress Pro](https://tubepress.com/)
 **Issue**: Sites running PHP version 5.3 produce a WSOD after activating this plugin.
 
 **Solution**: [Upgrade your site's PHP version](/docs/php-versions) to 5.5, 5.6, or 7.0.
-<hr>
+<hr />
+
 
 ### [Unbounce Landing Pages](https://wordpress.org/plugins/unbounce/)
 **Issue**: Click to call conversions aren't tracking even if the pages are not cached because the cookies are being stripped.
 
  **Solution**: Usually these type of issues can be solved if the cookie name can be renamed with a prefix starting with `STXKEY_`, but it is inadvisable to modify the plugin directly. It is suggested by the Unbounce team to separate your Pantheon site domain (eg. example.com) and the Unbounce landing page in a subdomain (e.g., unbounce.example.com), because your Unbounce landing pages can't live at exactly the same URL as your homepage. See the outlined solution [here](https://documentation.unbounce.com/hc/en-us/articles/203661044-Connecting-Your-Domain-to-Unbounce) or get in touch with Unbounce support for more help.
 
-<hr>
+<hr />
+
 
 ### [UNLOQ Two Factor Authentication (2FA)](https://wordpress.org/plugins/unloq/)
 **Issue**: `This widget does not work on this domain` error message shown after deploying plugin across environments on Pantheon. This is because the API credentials used on the original environment are being used on a new environment URL, which is not allowed by the plugin. This is by design.
@@ -583,7 +645,8 @@ Alternative plugins that have an XML sitemap feature that works well on the plat
 
 For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authentication](/docs/guides/two-factor-authentication/#single-site-tfa).
 
-<hr>
+<hr />
+
 
 ### [Unyson Theme Framework](https://wordpress.org/plugins/unyson/)
 **Issue**: This plugin has an internal extension system which installs additional files aside from the plugin itself. Some of those extensions have an additional `.gitignore` file that prevents it from being deployed to Test and Live environment. See [this GitHub issue](https://github.com/ThemeFuse/Unyson/issues/3615) for more information.
@@ -606,7 +669,8 @@ Events
 Brizy
 - `wp-content/plugins/brizy/vendor/twig/twig/.gitignore`
 
-<hr>
+<hr />
+
 
 ### [Visual Composer: Website Builder](https://visualcomposer.io/)
 **Issue**: This plugin fails to download additional assets during the internal plugin activation procedure on Test and Live environments.
@@ -620,17 +684,20 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-<hr>
+<hr />
+
 
 ### [Weather Station](https://wordpress.org/plugins/live-weather-station/)
 **Issue**: This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
-<hr>
+<hr />
+
 
 ### [WooCommerce](https://wordpress.org/plugins/woocommerce/)
 **Issue**: The "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
 
 **Solution**: The suggested workaround is to clone the site locally, import the items, then sync the database back up to the platform.
-<hr>
+<hr />
+
 
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
 **Issue 1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
@@ -645,7 +712,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Solution**: Symlink `wp-content/plugins/woozone/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
-<hr>
+<hr />
+
 ### [Wordfence](https://wordpress.org/plugins/wordfence/)
 **Issue 1**: Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with platform-level page caching.
 
@@ -654,7 +722,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 **Issue 2**: The Wordfence firewall expects specific write access to `wp-content/wflogs` during activation. Adding a symlink does not mitigate this, so using the Wordfence firewall is not supported on the platform. This has been [reported as an issue](https://wordpress.org/support/topic/write-logs-to-the-standard-file-path/) within the plugin support forum.
 
 **Issue 3**: The Wordfence firewall installs a file called `.user.ini` that includes `wordfence-waf.php` from the absolute path which uses the application container's ID. These paths will change from time to time due to routine platform maintenance. When a container is migrated and when this plugin is deployed to another environment the absolute path is no longer valid resulting in a WSOD. This has been [reported as an issue](https://wordpress.org/support/topic/set-auto_prepend_file-path-relatively/) within the plugin support forum.
-<hr>
+<hr />
+
 
 ### [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/)
 
@@ -672,7 +741,8 @@ if (defined( "PANTHEON_BINDING" )) {
 
 **Issue 2**: This plugin creates a session on every page, which can prevent [page level caching](https://wordpress.org/support/topic/cannot-cache-pages-due-to-sessions-on-every-page-with-wsl-plugin/).
 
-<hr>
+<hr />
+
 
 ### [WP-Rocket](https://wp-rocket.me/)
 **Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
@@ -691,7 +761,8 @@ if (defined( "PANTHEON_BINDING" )) {
 
 **Solution:** [Create symlinks](/docs/assuming-write-access/#create-a-symbolic-link) for the paths `wp-content/wp-rocket-config` and `wp-content/cache` to a writable path.
 
-<hr>
+<hr />
+
 
 ### [WPBakery: Page Builder](https://wpbakery.com/)
 **Issue**: The Custom CSS and Design Options pages of the plugin (`?page=vc-custom_css`, `?page=vc-color`) try to create new files when saved. Due to problems related to incorrect `FS_METHOD`, files are not created or saved in the expected folder, `wp-content/uploads/js_composer`.
@@ -704,7 +775,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-<hr>
+<hr />
+
 
 ### [WP All Import / Export](http://www.wpallimport.com/)
 
@@ -719,7 +791,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Solution**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
 
-<hr>
+<hr />
+
 
 ### [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)
 
@@ -729,7 +802,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Issue 2**: This plugin uses `is_dir` to verfiy the target directory, which will return false if the directory is a symlink. This causes a permissions error when deleting cache files.
 
-<hr>
+<hr />
+
 
 ### [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/)
 
@@ -737,14 +811,16 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Solution:** The normal search-and-replace and DB export functions of this plugin work, but will leave all plugins disabled while in operation. If a specific plugin is required to remain active during the DB export and search-and-replace operations, add a filter for it as described in the [plugin's debugging page](https://deliciousbrains.com/wp-migrate-db-pro/doc/compatibility-mode/).
 
-<hr>
+<hr />
+
 
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
 **Issue**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/docs/security).
 
-<hr>
+<hr />
+
 
 ### [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
 
@@ -752,7 +828,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Solution**: Only use the "PHP" redirect method.
 
-<hr>
+<hr />
+
 
 ## WordPress Themes
 
@@ -772,7 +849,8 @@ define('FTP_CONTENT_DIR', __DIR__ .'/wp-content/');
 define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
 ```
 
-<hr>
+<hr />
+
 
 ## WordPress Functions
 

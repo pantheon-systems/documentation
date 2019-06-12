@@ -1,5 +1,5 @@
 ---
-title: Required Reading: Essential Pantheon Documentation
+title: '[Required Reading: Essential Pantheon Documentation]'
 description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
 tags: [getstarted]
 categories: [getstarted]
@@ -37,10 +37,8 @@ Our tech includes NGINX, PHP, Redis, [Global CDN](/docs/global-cdn-caching/), So
 - [Backup Creation](/docs/backups/)
 
 ## Debug
-
 - [PHP Errors and Exceptions](/docs/php-errors/)
 - [Errors and Server Responses](/docs/errors-and-server-responses/)
 
 ## Support
-
 - [Getting Support](/docs/support/)
