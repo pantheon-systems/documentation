@@ -10,7 +10,9 @@ There are occasions while you are working on your site that you would like to k
 This can be done by putting a username and password on the environment, similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
 
 <Alert title="Note" type="info">
+
 When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.
+
 </Alert>
 
 ![Lock environment](../docs/assets/images/dashboard/lock-environment.png)
@@ -19,8 +21,8 @@ When a Dev environment is locked, a lock icon will be added to the screenshot of
 
 You have the ability to password protect any of the available environments.
 
-1. Select the environment (e.g., **<span class="glyphicon glyphicon-wrench"></span> Dev**).
-2. Select **<span class="glyphicon glyphicon-keys"></span> Security**.
+1. Select the environment (e.g., <span class="glyphicon glyphicon-wrench"></span> **Dev**).
+2. Select <span class="glyphicon glyphicon-keys"></span> **Security**.
 3. Select **Locked**.
 4. Provide a username and password.
 5. Click **Lock Environment**.
@@ -38,11 +40,12 @@ To verify that everything is working correctly, visit the URL of the environment
 ![Locked site example](../docs/assets/images/auth-required.png)
 
 <Alert title="Note" type="info">
+
 While locked, environments will not be cached by the [Global CDN](/docs/global-cdn).
+
 </Alert>
 
 ### Customize Lock Page
-
 If you'd like to customize the lock page that displays beneath the authentication form, you can add a `locked.html` file in your site's root directory.
 
 ## Unlock a Site's Environment
@@ -95,4 +98,5 @@ terminus remote:drush <site>:<env> -- pm-disable basic_auth -y
 ```
 
 </Tab>
+
 </TabList>
