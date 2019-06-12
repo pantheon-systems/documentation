@@ -57,6 +57,17 @@ module.exports = {
             }
           },
           {
+            resolve: "gatsby-remark-github",
+            options: {
+              marker: 'GITHUB-EMBED',
+              insertEllipsisComments: true,
+              ellipsisPhrase: '...',
+              useCache: true,
+              cacheKey: 'gatsby-remark-github-v1',
+              token: '9319d4acf3a5b00bfa36dc6a52fd687ffb843138',
+            }
+          },
+          {
             resolve: "gatsby-remark-embed-video",
             options: {
               width: 800,

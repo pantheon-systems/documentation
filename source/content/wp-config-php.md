@@ -23,17 +23,21 @@ If you are also developing locally and need to configure WordPress for your desk
 
 ## Pantheon's WordPress Config
 
-<Accordion title={"View Pantheon's WordPress Configuration"} id={"pantheon-wp-config-php"} icon={"wrench"}>
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal"></script>
+<Accordion title="View Pantheon's WordPress Configuration" id="pantheon-wp-config-php" icon="wrench">
+
+GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php GITHUB-EMBED
+
 </Accordion>
 
 <Alert tile="Note" type="info">
+
 `$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
+
 </Alert>
 
 
 
-##Frequently Asked Questions
+## Frequently Asked Questions
 
 ### How can I write logic based on the Pantheon server environment?
 
