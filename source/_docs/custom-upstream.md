@@ -15,7 +15,7 @@ If you are a digital agency servicing clients, or a reseller of Pantheon as part
   <p>Improve your agency's development efficiency with custom DevOps training from Pantheon experts.</p>
 </div>
 
-For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise){.external} and [Pantheon EDU](https://pantheon.io/edu){.external} accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+For corporate or higher education customers, Custom Upstreams is included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise){.external} with Gold Support and higher, and all [Pantheon EDU](https://pantheon.io/edu){.external} accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
