@@ -180,7 +180,8 @@ It needs to be done for Dev, Test, and Live individually. You can do this at `ad
 
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
-{% include("content/remove-addons/d7-solr.html")%}
+
+`markdown:remove-addons/d7-solr.md`
 
 ## See Also
 [Apache Solr on Pantheon](/docs/solr)

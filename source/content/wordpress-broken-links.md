@@ -37,4 +37,4 @@ WordPress stores URLs in various places in the database; considering Pantheon's 
 
 ### Fix WordPress Content References to the Wrong Domain After Cloning
 
-{% include("content/search-replace-domains.html")%}
+`markdown:search-replace-domains.md`

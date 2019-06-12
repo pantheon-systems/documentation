@@ -189,7 +189,7 @@ In the example above, we can create an `A` record for `www` set to `23.185.0.1` 
 ### Can I override DNS locally?
 Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 
-{% include("content/hosts-file.html")%}
+`markdown:hosts-file.md`
 
 ## See Also
 

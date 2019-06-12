@@ -25,8 +25,8 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 </Alert>
 
 ## Transfer Ownership and Billing for This Site
-{% include("content/transfer-ownership-billing-intro.html")%}
-{% include("content/transfer-ownership-billing-steps.html")%}
+`markdown:transfer-ownership-billing-intro.md`
+`markdown:transfer-ownership-billing-steps.md`
 
 ## Add New Credit Card
 

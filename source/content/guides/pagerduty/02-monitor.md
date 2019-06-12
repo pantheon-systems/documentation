@@ -47,4 +47,4 @@ Now that you have a monitor setup in New Relic to periodically check your Panthe
 
 8. Enter a name for the condition, like "Live Availability", and click **Create condition**.
 
-{% include("content/monitor-alerts.html")%}
+`markdown:monitor-alerts.md`

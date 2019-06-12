@@ -9,7 +9,7 @@ layout: doc
 searchboost: 50
 ---
 
-{% include("content/deprecate-kalabox.html")%}
+`markdown:deprecate-kalabox.md`
 
 Pantheon encourages on-server development. However, many developers prefer the speed and convenience of [local development](/docs/local-development) where sites run in virtual machines and don’t require Internet access.
 

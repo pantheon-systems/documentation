@@ -44,30 +44,39 @@ For Redis and Solr, the following code changes are required before the feature c
 
 <TabList>
 
-<Tab title="wp-id" id="WordPress" active={true}>
+<Tab title="WordPress" id="wp-id" active={true}>
 
 #### Safely Remove Redis
-{% include("content/remove-addons/wp-redis.html")%}
+
+`markdown:remove-addons/wp-redis.md`
+
 #### Safely Remove Solr
-{% include("content/remove-addons/wp-solr.html")%}
+
+`markdown:remove-addons/wp-solr.md`
 
 </Tab>
 
-<Tab title="d8-id" id="Drupal 8">
+<Tab title="Drupal 8" id="d8-id">
 
 #### Safely Remove Redis
-{% include("content/remove-addons/d8-redis.html")%}
+
+`markdown:remove-addons/drupal-redis.md`
+
 #### Safely Remove Solr
-{% include("content/remove-addons/d8-solr.html")%}
+
+`markdown:remove-addons/d8-solr.md`
 
 </Tab>
 
-<Tab title="d7-id" id="Drupal 7">
+<Tab title="Drupal 7" id="d7-id">
 
 #### Safely Remove Redis
-{% include("content/remove-addons/d7-redis.html")%}
+
+`markdown:remove-addons/drupal-redis.md`
+
 #### Safely Remove Solr
-{% include("content/remove-addons/d7-solr.html")%}
+
+`markdown:remove-addons/d7-solr.md`
 
 </Tab>
 
@@ -123,8 +132,8 @@ To associate an existing card from your account as the payment method for this s
 
 <Tab title="request-payment-id" id="Send a Request">
 
-{% include("content/transfer-ownership-billing-intro.html")%}
-{% include("content/transfer-ownership-billing-steps.html")%}
+`markdown:transfer-ownership-billing-intro.md`
+`markdown:transfer-ownership-billing-steps.md`
 
 </Tab>
 

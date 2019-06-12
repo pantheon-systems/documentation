@@ -14,7 +14,7 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 </Enablement>
 
-{% include("content/configure-dns.html")%}
+`markdown:configure-dns.md`
 
 For more detailed instructions pertaining to your specific DNS host, click below:
 
@@ -28,12 +28,12 @@ For more detailed instructions pertaining to your specific DNS host, click below
     </ul>
 </Accordion>
 
-{% include("content/enable-https.html")%}
+`markdown:enable-https.md`
 
 ## Let's Encrypt Certificates
 [Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically adds your site's domains to a shared Let's Encrypt certificate, and always renews it automatically, with no additional cost. Let's Encrypt issued certs are valid for 90 days and we renew them at least 30 days before expiration.
 
-{% include("content/https-requirements.html")%}
+`markdown:https-requirements.md`
 
 ## Technical Specifications
 
@@ -131,7 +131,7 @@ If you encounter rate limits, we recommend the following approaches:
 - Request that your apex domain (e.g., `example.edu`) be added to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines), which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
 - Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/) as a workaround.
 
-{% include("content/cname-workaround.html")%}
+`markdown:cname-workaround.md`
 
 ## Glossary
 ### HTTPS

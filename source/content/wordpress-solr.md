@@ -83,4 +83,5 @@ Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to wo
 
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
-{% include("content/remove-addons/wp-solr.html")%}
+
+`markdown:remove-addons/wp-solr.md`

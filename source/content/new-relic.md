@@ -105,7 +105,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 }
 ```
 
-{% include("content/monitor-alerts.html")%}
+`markdown:monitor-alerts.md`
 
 
 ## New Relic Access

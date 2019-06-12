@@ -166,4 +166,4 @@ If you're using the [Security tool](/docs/security/) within the Pantheon Site D
 
 ## Cookie Handling
 
-{% include("content/cache-busting.html")%}
+`markdown:cache-busting.md`

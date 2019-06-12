@@ -57,7 +57,7 @@ In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-cl
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
 
-  {% include("content/notes/https-success.html")%}
+  `markdown:notes/https-success.md`
 
    This process typically takes about an hour.
 

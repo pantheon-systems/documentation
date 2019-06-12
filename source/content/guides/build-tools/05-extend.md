@@ -28,41 +28,36 @@ This section will be performed from the command line, to prepare your local syst
 
 2. Open a terminal application and clone the GitHub repository (replace `<github-url>`):
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-clone">Copy</button>
-      <figure><pre id="git-clone"><code class="command bash" data-lang="bash">git clone &lsaquo;github-url&rsaquo;</code></pre></figure>
-    </div>
+    ```bash
+    git clone &lsaquo;github-url&rsaquo;
+    ```
 
 3. Navigate to the repository's root (replace `pantheon-d8-composer-project`):
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#cd-project">Copy</button>
-      <figure><pre id="cd-project"><code class="command bash" data-lang="bash">cd pantheon-d8-composer-project</code></pre></figure>
-    </div>
+    ```bash
+    cd pantheon-d8-composer-project
+    ```
 
 4. Install dependencies with Composer:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-install">Copy</button>
-      <figure><pre id="composer-install"><code class="command bash" data-lang="bash">composer install</code></pre></figure>
-    </div>
+    ```bash
+    composer install
+    ```
 
 5. Export local environment variables to define your site name and Multidev environment to easily copy and paste example commands in the next sections (replace `pantheon-d8-composer-project`):
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#export-var1">Copy</button>
-      <figure><pre id="export-var1"><code class="command bash" data-lang="bash">export SITE=pantheon-d8-composer-project
-      export ENV=ci-4</code></pre></figure>
-    </div>
+    ```bash
+    export SITE=pantheon-d8-composer-project
+      export ENV=ci-4
+    ```
 
 ## Install a Contrib Module
 1. Use Composer locally to add the [Pathauto](https://www.drupal.org/project/pathauto) module as a dependency on the existing `slogan` branch:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto">Copy</button>
-      <figure><pre id="pathauto"><code class="command bash" data-lang="bash">git checkout slogan
-      composer require drupal/pathauto</code></pre></figure>
-    </div>
+    ```bash
+    git checkout slogan
+      composer require drupal/pathauto
+    ```
 
     Note that the dependencies of pathauto, token and ctools, are also installed:
 
@@ -70,36 +65,32 @@ This section will be performed from the command line, to prepare your local syst
 
 2. Commit the updated `composer.json` and `composer.lock` files and push your work to the `slogan` branch on GitHub:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto-git-commit-push">Copy</button>
-      <figure><pre id="pathauto-git-commit-push"><code class="command bash" data-lang="bash">git add composer.*
+    ```bash
+    git add composer.*
       git commit -m "Install drupal/pathauto ^1.0"
-      git push origin slogan</code></pre></figure>
-    </div>
+      git push origin slogan
+    ```
 
     ![Commit composer.json and composer.lock](../docs/assets/images/pr-workflow/commit-pathauto.png)
 
 3. Enable the Pathauto module on the Pantheon Multidev environment from the command line using Terminus and Drush:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto-enable">Copy</button>
-      <figure><pre id="pathauto-enable"><code class="command bash" data-lang="bash">terminus drush $SITE.$ENV -- pm-enable pathauto --yes</code></pre></figure>
-    </div>
+    ```bash
+    terminus drush $SITE.$ENV -- pm-enable pathauto --yes
+    ```
 
 4. You can use the [method described in an earlier lesson](/docs/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto-export-config">Copy</button>
-      <figure><pre id="pathauto-export-config"><code class="command bash" data-lang="bash">terminus drush $SITE.$ENV -- config-export --yes</code></pre></figure>
-    </div>
+    ```bash
+    terminus drush $SITE.$ENV -- config-export --yes
+    ```
 
 
 5. Commit your changes in Pantheon from the command line with Terminus:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#pathauto-export-config-commit">Copy</button>
-      <figure><pre id="pathauto-export-config-commit"><code class="command bash" data-lang="bash">terminus env:commit $SITE.$ENV --message="Install and enable pathauto"</code></pre></figure>
-    </div>
+    ```bash
+    terminus env:commit $SITE.$ENV --message="Install and enable pathauto"
+    ```
 
     ![enable export config and commit](../docs/assets/images/pr-workflow/export-module-enable-config.png)
 

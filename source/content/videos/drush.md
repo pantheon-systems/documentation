@@ -9,7 +9,7 @@ categories: [drupal]
 layout: doc
 searchboost: 50
 ---
-{% include("content/deprecate-kalabox.html")%}
+`markdown:deprecate-kalabox.md`
 
 [Drush](https://github.com/drush-ops/drush/) is a command line shell for running and scripting Drupal tasks. Let’s install it and explore some commands.
 

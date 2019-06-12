@@ -14,7 +14,7 @@ There are two mechanisms for transferring files: SFTP and rsync.
 You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
 </Alert>
 
-{% include("content/auth.html")%}
+`markdown:auth.md`
 
 ## SFTP
 

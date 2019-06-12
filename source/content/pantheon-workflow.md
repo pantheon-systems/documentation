@@ -21,7 +21,7 @@ One of the core concepts at the heart of the Pantheon workflow is the distinctio
 ### Code
 Code refers to anything version controlled by Git which includes core, custom and contributed modules or plugins, themes, and libraries.
 
-{% include("content/code.html")%}
+`markdown:code.md`
 
 ### Content
 Content refers to your sites files and the database. In this context, files are static images and assets stored in the standard upload path `wp-content/uploads` for WordPress and `sites/default/files` for Drupal.

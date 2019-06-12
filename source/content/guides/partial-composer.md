@@ -105,7 +105,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
     `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
     cd $SITE
     ```
-{% include("content/d7-composer-init.html")%}
+`markdown:d7-composer-init.md`
 4. Commit the `composer.json` file to version control with Git:
 
     ```command

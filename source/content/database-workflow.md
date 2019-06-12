@@ -28,7 +28,7 @@ Learn more about the [Pantheon Workflow](/docs/pantheon-workflow/).
 
 ### WordPress Content References the Wrong Domain After Cloning
 
-{% include("content/search-replace-domains.html")%}
+`markdown:search-replace-domains.md`
 
 ### Base table or view not found
 Database errors may occur during a database clone, import or while wiping the environment. In most cases, the error contains `semaphore' doesn't exist` and is generated because the site is accessed before a certain database operation is complete. Simply waiting for database operations to complete resolves the error.

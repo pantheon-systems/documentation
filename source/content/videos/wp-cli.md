@@ -10,7 +10,7 @@ layout: doc
 searchboost: 50
 ---
 
-{% include("content/deprecate-kalabox.html")%}
+`markdown:deprecate-kalabox.md`
 
 WP-CLI is a set of command line tools for managing WordPress installations. Let’s install it and explore some commands.
 

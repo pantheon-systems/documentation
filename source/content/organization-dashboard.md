@@ -16,7 +16,7 @@ While creating a new site, any user in your [organization](/docs/organizations/)
 
 From the Site Dashboard, the Site Owner will want to:
 
-{% include("content/add-supporting-org.html")%}
+`markdown:add-supporting-org.md`
 
 <Alert title="Note" type="info">
  If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/support/) to transfer sites to your Organization.

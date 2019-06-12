@@ -84,47 +84,41 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 1. Install [Composer](https://getcomposer.org).
 2. Install the most recent release of [Terminus](/docs/terminus/):
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
-      <figure><pre id="terminus-installer"><code class="command bash" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
-    </div>
+    ```bash
+    curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+    ```
 
 3. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 4. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
 
-      <div class="copy-snippet">
-        <button class="btn btn-default btn-clippy" data-clipboard-target="#mac-mt-auth">Copy</button>
-        <figure><pre id="mac-mt-auth"><code class="command bash" data-lang="bash">terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;</code></pre></figure>
-      </div>
+      ```bash
+      terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;
+      ```
 
 5. Create the `$HOME/.terminus/plugins` directory if it does not already exist:
 
-      <div class="copy-snippet">
-        <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-plugin-install-mkdir">Copy</button>
-        <figure><pre id="terminus-plugin-install-mkdir"><code class="command bash" data-lang="bash">mkdir -p $HOME/.terminus/plugins</code></pre></figure>
-      </div>
+      ```bash
+      mkdir -p $HOME/.terminus/plugins
+      ```
 
 6. Install the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin):
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-plugin">Copy</button>
-      <figure><pre id="composer-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1</code></pre></figure>
-    </div>
+    ```bash
+    composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1
+    ```
 
 7. Install the [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin):
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#console-plugin">Copy</button>
-      <figure><pre id="console-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1</code></pre></figure>
-    </div>
+    ```bash
+    composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1
+    ```
 
 8. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#build-tools-plugin">Copy</button>
-      <figure><pre id="build-tools-plugin"><code class="command bash" data-lang="bash">composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:~1</code></pre></figure>
-    </div>
+    ```bash
+    composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:~1
+    ```
 
     <Alert title="Note" type="info">
     The Terminus Build Tools Plugin does not support private repositories.

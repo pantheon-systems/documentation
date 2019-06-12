@@ -61,18 +61,16 @@ repositories": [
 ## Update Core
 1. Start by creating a new branch based off the tip of master (replace `drupal-8.3.7` according to your current task):
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-branch-update">Copy</button>
-      <figure><pre id="git-branch-update"><code class="command bash" data-lang="bash">git checkout -b drupal-8.3.7 master</code></pre></figure>
-    </div>
+    ```bash
+    git checkout -b drupal-8.3.7 master
+    ```
 
 
 2. Update your project to the current Drupal 8 stable version of core released on drupal.org with Composer:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#composer-update-cmd">Copy</button>
-      <figure><pre id="composer-update-cmd"><code class="command bash" data-lang="bash">composer update drupal/core</code></pre></figure>
-    </div>
+    ```bash
+    composer update drupal/core
+    ```
 
 3. Run `git diff composer.lock` to see the updated dependency details:
 
@@ -80,11 +78,10 @@ repositories": [
 
 4. Commit the updated `composer.lock` file and push a new branch up to GitHub, for example (replace `drupal-8.3.7` according to your current task):
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#update-core-commit">Copy</button>
-      <figure><pre id="update-core-commit"><code class="command bash" data-lang="bash">git commit -m="Update to Drupal 8.3.7"
-      git push origin drupal-8.3.7</code></pre></figure>
-    </div>
+    ```bash
+    git commit -m="Update to Drupal 8.3.7"
+      git push origin drupal-8.3.7
+    ```
 
 
 5. Return to GitHub and compare your feature branch against `master`. You should see all commits made locally here in GitHub. Click **Create Pull Request** and go through your team's standard peer review process.

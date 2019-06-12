@@ -63,7 +63,7 @@ To create a new user with an unprivileged role, create the user first, then chan
 
 To change the owner of a paid site (e.g. Basic or Performance):
 
-{% include("content/transfer-ownership-billing-steps.html")%}
+`markdown:transfer-ownership-billing-steps.md`
 
 Keep in mind that [Partner Organizations cannot own sites directly](/docs/organizations/#organization-site-association).
 

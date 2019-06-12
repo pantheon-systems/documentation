@@ -28,7 +28,7 @@ If your site is already live and serving HTTPS traffic, and will require HTTPS o
 
 These instructions cover the common `example.com` and `www.example.com` domain configuration. For other domain configurations, see [Platform and Custom Domains](/docs/domains/#custom-domains).
 
-{% include("content/configure-dns.html")%}
+`markdown:configure-dns.md`
 
 For more detailed instructions pertaining to your specific DNS host, click below:
 
@@ -42,6 +42,6 @@ For more detailed instructions pertaining to your specific DNS host, click below
     </ul>
 </Accordion>
 
-{% include("content/enable-https.html")%}
+`markdown:enable-https.md`
 
-{% include("content/https-requirements.html")%}
+`markdown:https-requirements.md`
