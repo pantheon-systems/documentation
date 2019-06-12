@@ -20,27 +20,27 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 
 | Permissions                              | Administrator                    | Team Member                      | Developer | Unprivileged <Popover icon="info-circle" title="Unprivileged" content="Enterprise and EDU+ organizations only" /> |
 |:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
-| Create sites within an org               | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
-| Access the org Dashboard                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
-| Work in Dev environments                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
-| Access to Multidev environments          | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span>  |
-| Deploy to Test and Live                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
-| Invite new team members                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
-| Manage user roles                        | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
-| Delete sites or remove users from an org | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
-| Manage a site's plan                     | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
-| Create custom upstreams                  | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Create sites within an org               | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="green">✔</Color> |
+| Access the org Dashboard                 | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="red">❌</Color>  |
+| Work in Dev environments                 | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="green">✔</Color> |
+| Access to Multidev environments          | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="green">✔</Color>  |
+| Deploy to Test and Live                  | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  |
+| Invite new team members                  | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  |
+| Manage user roles                        | <Color color="green">✔</Color> | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  |
+| Delete sites or remove users from an org | <Color color="green">✔</Color> | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  |
+| Manage a site's plan                     | <Color color="green">✔</Color> | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  |
+| Create custom upstreams                  | <Color color="green">✔</Color> | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  |
 
 ### Site-Level: Roles and Permissions
 
 | Permissions                              | User in Charge / Owner <Popover icon="info-circle" title="Owner" content="Partner organizations only" /> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise organizations only"><em class="fa fa-info-circle"></em></a> |
 |:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
-| Access the site Dashboard                | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
-| Work in Dev environments                 | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:green>✔</span> |
-| Deploy to Test and Live                  | <span style=color:green>✔</span> | <span style=color:green>✔</span> | <span style=color:red>❌</span>  |
-| Manage user roles                        | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
-| Delete sites or remove users from a site | <span style=color:green>✔</span> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
-| Manage a site's plan                     | <span style=color:green>✔</span> <Popover icon="info-circle" title="Owner" content="When an organization is the owner of a site, users in charge cannot change the site plan." /> | <span style=color:red>❌</span>  | <span style=color:red>❌</span>  |
+| Access the site Dashboard                | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="green">✔</Color> |
+| Work in Dev environments                 | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="green">✔</Color> |
+| Deploy to Test and Live                  | <Color color="green">✔</Color> | <Color color="green">✔</Color> | <Color color="red">❌</Color>  |
+| Manage user roles                        | <Color color="green">✔</Color> | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  |
+| Delete sites or remove users from a site | <Color color="green">✔</Color> | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  |
+| Manage a site's plan                     | <Color color="green">✔</Color> <Popover icon="info-circle" title="Owner" content="When an organization is the owner of a site, users in charge cannot change the site plan." /> | <Color color="red">❌</Color>  | <Color color="red">❌</Color>  |
 
 ## Manage People in an Organization
 

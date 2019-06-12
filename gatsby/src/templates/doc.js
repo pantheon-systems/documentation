@@ -24,6 +24,7 @@ import SEO from "../components/seo"
 import DefList from "../components/defList.js"
 import Definition from "../components/definition.js"
 import Enablement from "../components/enablement.js"
+import Color from "../components/color.js"
 
 const shortcodes = {
   Callout,
@@ -39,6 +40,7 @@ const shortcodes = {
   DefList,
   Definition,
   Enablement,
+  Color,
 }
 
 class DocTemplate extends React.Component {

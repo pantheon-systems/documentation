@@ -14,9 +14,9 @@ Pantheon offers a range of support packages that extend to include all the featu
 |-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
 | **Scope**                                                 | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %} | Performance {% include 'popovers/performance.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} |
 | [**Chat**](#real-time-chat-support)                       | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
-| [**Tickets**](#ticket-support)                            | <span style=color:red>❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
-| [**Emergency On-Call**](#pantheon-on-call)                | <span style=color:red>❌</span>                 | <span style=color:red>❌</span>                   | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
-| [**Professional Services**](/docs/professional-services/) | <span style=color:red>❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
+| [**Tickets**](#ticket-support)                            | <Color color="red">❌</Color>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
+| [**Emergency On-Call**](#pantheon-on-call)                | <Color color="red">❌</Color>                 | <Color color="red">❌</Color>                   | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
+| [**Professional Services**](/docs/professional-services/) | <Color color="red">❌</Color>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
 
 ## Best Practices
 
