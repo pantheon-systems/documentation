@@ -15,11 +15,13 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/docs/cms-admin/).
 
 <Alert tile="SFTP Mode Considerations" type="danger">
-##### Commit frequently and keep in mind:
+
+#### Commit frequently and keep in mind:
  - SFTP changes to code that have not been committed will *not be saved in backups and not included in deployments* as they are not part of your code repository yet.
  - Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.
  - Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.
  - You won't be able to save anything that's being excluded from version control via `.gitignore`.
+
 </Alert>
 
 
@@ -47,7 +49,9 @@ Your connection data is as follows:
 **port:** `2222`
  
 <Alert title="Note" type="info">
+
 When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.
+
 </Alert>
 
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
@@ -73,7 +77,9 @@ Write a helpful commit message to go with your changes. This will make maintaini
 Once your message is ready, click **Commit**.
 
 <Alert title="Note" type="info">
+
 Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. `wp-content/uploads` or `sites/default/files/`) since these are not tracked in version control.
+
 </Alert>
 
 ## Discard & Abandon SFTP Changes
@@ -121,7 +127,9 @@ Uncommitted SFTP changes may not be recognized by the Dev environment when the S
 
 ### How do I find my site's Binding path?
 <Alert title="Note" type="info">
-You should <i>not</i> manually set the "Remote Path" in your SFTP client's settings, as this path changes from time to time due to the platform architecture. It is strongly recommended that you leave the Remote Path blank, and you will automatically be redirected to the proper directory when logging in.
+
+You should *not* manually set the "Remote Path" in your SFTP client's settings, as this path changes from time to time due to the platform architecture. It is strongly recommended that you leave the Remote Path blank, and you will automatically be redirected to the proper directory when logging in.
+
 </Alert>
 
 You can find the Remote Path after [connecting to SFTP](#sftp-connection-information) via command line, using the `pwd` command:
@@ -142,11 +150,13 @@ This is a known limitation of using SFTP for on-server development on the platfo
 
 ### DNS Connection Issues
 
-    Status:	Connecting to appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in:2222...
-    Response:	fzSftp started
-    Command:	open "dev.dc82c743-3088-426f-bfcf-e388e4add2b3@appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in" 2222
-    Error:	ssh_init: Host does not exist
-    Error:	Could not connect to server
+```nohighlight
+Status:	Connecting to appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in:2222...
+Response:	fzSftp started
+Command:	open "dev.dc82c743-3088-426f-bfcf-e388e4add2b3@appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in" 2222
+Error:	ssh_init: Host does not exist
+Error:	Could not connect to server
+```
 
 Trouble resolving the server hostname or other DNS-related issues can generally be resolved by using Google's Public DNS service in place of your ISP's name servers. See [Google's Public DNS](https://developers.google.com/speed/public-dns/) for instructions.
 
@@ -160,33 +170,39 @@ There have been observed cases in which Internet Service Providers (specifically
 
 Replace `SITE_UUID` with your site's [UUID](/docs/sites/#site-uuid) and run the following to obtain the returned IP address:
 
-    dig codeserver.dev.<SITE_UUID>.drush.in
+```bash
+dig codeserver.dev.<SITE_UUID>.drush.in
+```
 
 The returned IP is found within the ANSWER portion of the output:
 
-    ;; ANSWER SECTION:
-    codeserver.dev.<SITE_UUID>.drush.in. 188 IN A xx.xx.xx.xxx
+```bash
+;; ANSWER SECTION:
+codeserver.dev.<SITE_UUID>.drush.in. 188 IN A xx.xx.xx.xxx
+```
 
 Run the address through [IP WHOIS Lookup](https://www.whatismyip.com/ip-whois-lookup/) and review the results. The following is an example of DNS hijacking:
 
-    % [whois.apnic.net]
-    % Whois data copyright terms    https://www.apnic.net/manage-ip/using-whois/bulk-access/copyright/
+```bash
+% [whois.apnic.net]
+% Whois data copyright terms    https://www.apnic.net/manage-ip/using-whois/bulk-access/copyright/
 
-    % Information related to 'xx.xx.xx.0 - xx.xx.xx.255'
+% Information related to 'xx.xx.xx.0 - xx.xx.xx.255'
 
-    inetnum:        xx.xx.xx.0 - xx.xx.xx.255
-    netname:        TLKM_BB_SERVICE_36_86
-    descr:          PT TELKOM INDONESIA
-                    STO Gambir 3rd Floor
-                    Jl. Medan Merdeka Selatan No. 12
-                    Jakarta 10110
-    country:        ID
-    admin-c:        AR165-AP
-    tech-c:         HM444-AP
-    status:         ALLOCATED NON-PORTABLE
-    mnt-by:         MAINT-TELKOMNET
-    mnt-irt:        IRT-IDTELKOM-ID
-    changed:        hostmaster@telkom.net.id 20130123
-    source:         APNIC
+inetnum:        xx.xx.xx.0 - xx.xx.xx.255
+netname:        TLKM_BB_SERVICE_36_86
+descr:          PT TELKOM INDONESIA
+                STO Gambir 3rd Floor
+                Jl. Medan Merdeka Selatan No. 12
+                Jakarta 10110
+country:        ID
+admin-c:        AR165-AP
+tech-c:         HM444-AP
+status:         ALLOCATED NON-PORTABLE
+mnt-by:         MAINT-TELKOMNET
+mnt-irt:        IRT-IDTELKOM-ID
+changed:        hostmaster@telkom.net.id 20130123
+source:         APNIC
+```
 
 Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.

@@ -5,7 +5,7 @@ tags: [siteintegrations, addons, search index, solr]
 categories: [drupal]
 contributors: [cityofoaksdesign]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. {% include("content/solr-version.html") %}
+[Apache Solr](/docs/solr) is a system for indexing and searching site content. `markdown:solr-version.md`
 
 For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
 
@@ -43,7 +43,9 @@ Choose one or the other and add it to your codebase. Do not enable or configure 
 ### Enable the Pantheon Apache Solr Module
 
 <Alert title="Note" type="info">
+
 If you previously installed the Acquia Solr module and you still have the files present in your codebase, you will need to delete them from your repo before enabling the Pantheon Apache Solr module. If you don't, you may receive an error when attempting to connect to the Solr server.
+
 </Alert>
 
 The [Pantheon Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr) module is included within all Drupal 7 sites on Pantheon. This module **must** be enabled and configured in each environment (Dev, Test, Live, and each Multidev) in order to use Pantheon's Apache Solr service. The Pantheon Apache Solr module is not required if you are using a third-party Solr service.
@@ -76,7 +78,9 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 
 <Alert title="Note" type="info">
+
 You must post the `schema.xml` in each environment (Dev, Test, Live, and each Multidev) that you want to use Pantheon's Solr Service in.
+
 </Alert>
 
 ### Enable and Configure Your Solr Module
@@ -87,7 +91,7 @@ You will need to enable either Apache Solr Search or Search API Solr Search, dep
 
 <Tab title="Apache Solr Search" id="apachesolrsearch" active={true}>
 
-#### Enabling Apache Solr Search (apachesolr) {.info}
+#### Enabling Apache Solr Search (apachesolr)
 
 Enable both the **Apache Solr framework** and **Apache Solr Search** modules.
 
@@ -103,7 +107,7 @@ Note that the default connection parameters are correct and do not need changing
 
 <Tab title="Search API Solr Search" id="apisolr">
 
-#### Enabling Search API Solr Search (search\_api\_solr) {.info}
+#### Enabling Search API Solr Search (search\_api\_solr)
 
 Three modules are required; [entity](https://drupal.org/project/entity), [search\_api](https://drupal.org/project/search_api) and [search\_api\_solr](https://drupal.org/project/search_api_solr) need to be installed and enabled.
 
@@ -146,7 +150,7 @@ The following are Pantheon-specific variables that you can check for, depending 
 
 Keep in mind that newly indexed items have a 2-minute delay until cron has been run or manually indexed before they become available in Solr search.
 
-{% include("content/solr-commit-changes.html") %}
+`markdown:solr-commit-changes.md`
 
 #### apachesolr.module
 If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/docs/terminus/):

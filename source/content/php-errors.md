@@ -29,59 +29,59 @@ Here's a breakdown of what errors are shown and where:
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Dev</td>
 			<td align="left">notice</td>
-			<td align="left"><strong>✓</strong></td>
-			<td align="left"><strong>✓</strong></td>
+			<td align="left">**✓**</td>
+			<td align="left">**✓**</td>
 			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left"><strong>✓</strong></td>
-			<td align="left"><strong>✓</strong></td>
+			<td align="left">**✓**</td>
+			<td align="left">**✓**</td>
 			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left" style="border-bottom:1px solid black;">error</td>
-			<td align="left" style="border-bottom:1px solid black;"><strong>✓</strong></td>
+			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
 			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;"><strong>✓</strong></td>
+			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
 		</tr>
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Test</td>
 			<td align="left">notice</td>
 			<td align="left"> </td>
-			<td align="left"><strong>✓</strong></td>
+			<td align="left">**✓**</td>
 			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
 			<td align="left"> </td>
-			<td align="left"><strong>✓</strong></td>
+			<td align="left">**✓**</td>
 			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left" style="border-bottom:1px solid black;">error</td>
 			<td align="left" style="border-bottom:1px solid black;"> </td>
 			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;"><strong>✓</strong></td>
+			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
 		</tr>
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle;">Live</td>
 			<td align="left">notice</td>
 			<td align="left"> </td>
-			<td align="left"><strong>✓</strong></td>
+			<td align="left">**✓**</td>
 			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
 			<td align="left"> </td>
-			<td align="left"><strong>✓</strong></td>
+			<td align="left">**✓**</td>
 			<td align="left"> </td>
 		</tr>
 		<tr>
 			<td align="left">error</td>
 			<td align="left"> </td>
 			<td align="left"> </td>
-			<td align="left"><strong>✓</strong></td>
+			<td align="left">**✓**</td>
 		</tr>
 	</tbody>
 </table>
@@ -110,7 +110,7 @@ See [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does
 PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon Dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
 ## Undefined Function Error
-Normally a request to Drupal or WordPress starts by reading the `index.php` file at the root directory, which then bootstraps <Popover icon="info-circle" title="Bootstrap" content="Loading sequence for an application, or the process of loading necessary functionality." /> the site.
+Normally a request to Drupal or WordPress starts by reading the `index.php` file at the root directory, which then bootstraps <Popover title="Bootstrap" content="Loading sequence for an application, or the process of loading necessary functionality." /> the site.
 
 However, when a PHP file is requested directly (e.g., `https://example.com/path/to/phpfile.php`) the `index.php` file and the bootstrap process are skipped. Instead, the PHP file is executed on it's own and any function included but not defined by the file will cause a `Call to undefined function` fatal error.
 

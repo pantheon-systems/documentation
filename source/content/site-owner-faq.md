@@ -20,9 +20,11 @@ Once the user has been added to the project, they will receive a welcome email n
 **Remove a Team Member**
 
 <Alert title="Note" type="info">
+
 All users can be removed except the site owner.
 
 See the [Remove a Site Owner](/docs/access-management/#remove-a-site-owner) section of our Access Management doc for more information.
+
 </Alert>
 
 In the Team modal, click the X next to the user you want to delete.

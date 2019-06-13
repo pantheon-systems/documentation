@@ -9,8 +9,14 @@
 <!-- Tab panes -->
 <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="wp">
-<p markdown="1">Add the following to <code>wp-config.php</code>, usually placed above <code>/* That's all, stop editing! Happy blogging. */</code>. Don't forget to replace <code>www.example.com</code>:</p>
-<pre id="git-pull-wp"><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+
+<p>
+
+Add the following to <code>wp-config.php</code>, usually placed above <code>/* That's all, stop editing! Happy blogging. */</code>. Don't forget to replace <code>www.example.com</code>:
+
+</p>
+
+<pre><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     /** Replace www.example.com with your registered domain name */
@@ -35,10 +41,17 @@
     exit();
   }
 }</code></pre>
+
 </div>
 <div role="tabpanel" class="tab-pane" id="d8">
-<p markdown="1">Add the following to the end of your <code>settings.php</code> file (replace <code>www.example.com</code>):</p>
-<pre id="git-pull-drops-8"><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+
+<p>
+
+Add the following to the end of your <code>settings.php</code> file (replace <code>www.example.com</code>):
+
+</p>
+
+<pre><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     /** Replace www.example.com with your registered domain name */
@@ -67,10 +80,18 @@
     $settings['trusted_host_patterns'] = array('^'. preg_quote($primary_domain) .'$');
   }
 }</code></pre>
+
 </div>
+
 <div role="tabpanel" class="tab-pane" id="d7">
-<p markdown="1">Add the following to the end of your <code>settings.php</code> file (replace <code>www.example.com</code>):</p>
-<pre id="git-pull-drops-7"><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+
+<p>
+
+Add the following to the end of your <code>settings.php</code> file (replace <code>www.example.com</code>):
+
+</p>
+
+<pre><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     /** Replace www.example.com with your registered domain name */
@@ -95,5 +116,7 @@
     exit();
   }
 }</code></pre>
+
 </div>
+
 </div>

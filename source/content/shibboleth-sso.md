@@ -27,7 +27,9 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 
 
 <Alert title="Version Number" type="export">
+
 In the code examples below, replace `16.x` with the downloaded version of SimpleSAMLphp.
+
 </Alert>
 
 1. Download [SimpleSAMLphp version 1.16.x](https://simplesamlphp.org/) and add it to your git repository as `/private/simplesamlphp-1.16.x`.
@@ -153,9 +155,11 @@ Set up your SimpleSAMLphp `config.php` as follows:
        'store.sql.password' => $db['password'],
   ```
 
-    <Alert title="Note" type="info">
-    Some SSO providers will fail to connect when the port number (`443`) is specified in `baseurlpath`. Remove `:443` from this line as a troubleshooting step.
-    </Alert>
+  <Alert title="Note" type="info">
+
+  Some SSO providers will fail to connect when the port number (`443`) is specified in `baseurlpath`. Remove `:443` from this line as a troubleshooting step.
+
+  </Alert>
 
 4. With configuration completed, commit the changes to your SimpleSAMLphp files:
 

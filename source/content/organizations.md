@@ -37,7 +37,7 @@ All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, a
 
 The Sites tab shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
 
-A <strong><span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span></strong> icon in the site's status column indicates that a site is [frozen due to inactivity](/docs/platform-considerations/#inactive-site-freezing).
+A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/docs/platform-considerations/#inactive-site-freezing).
 
 For more details on the Sites tab, see
 [Managing Sites and Teams with the Pantheon Organization Dashboard](/docs/organization-dashboard/).

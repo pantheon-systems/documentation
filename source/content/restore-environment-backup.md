@@ -8,7 +8,9 @@ categories: []
 Each site environment's backups are located on the Backups tab for that environment in the Pantheon Dashboard.
 
 <Alert title="Warning" type="danger">
+
 We do not recommend directly restoring a Live environment from a backup; instead, restore to Dev or Test, then  pull the code change and clone the content to Live. This will minimize user-facing downtime.
+
 </Alert>
 
 If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/docs/undo-commits) **before** attempting a site restore.
@@ -27,7 +29,9 @@ When a restore starts, it is placed in a queue and executed. Depending on the si
 Restore a manual or automatic backup (Code, Database, and Files) by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method.
 
 <Alert title="Note" type="info">
+
 For development environments (e.g., Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (e.g., Test and Live). For details, see [The Site Dashboard](/docs/sites/#code).
+
 </Alert>
 
 ![Backups and Restore Button](../docs/assets/images/dashboard/restore-button.png)
@@ -61,7 +65,7 @@ This method is recommended for distributed teams working collaboratively. To und
 
  ![commit ID](../docs/assets/images/dashboard/commit-id.png)
 
-3. Replace <ID> with the commit ID and run: `git revert <ID> --no-edit`
+3. Replace **ID** with the commit ID and run: `git revert ID --no-edit`
 4. Push the reverted codebase to Pantheon: `git push origin master`
 5. Deploy the change from Dev up to Test and Live.
 
@@ -75,7 +79,7 @@ This is a destructive process. If you're not comfortable with this technique, us
 
  ![commit ID](../docs/assets/images/dashboard/commit-id.png)
 
-3. Replace <ID> with the commit ID you want to reset and run: `git reset <ID> --hard`
+3. Replace **ID** with the commit ID you want to reset and run: `git reset ID --hard`
 4. Push the reset codebase to Pantheon: `git push origin master --force`
  The `--force` option should be used sparingly, especially in distributed team environments. For more information, see [git push](https://git-scm.com/docs/git-push).
 5. Deploy the change from Dev up to Test and Live.

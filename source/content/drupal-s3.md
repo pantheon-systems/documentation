@@ -60,7 +60,7 @@ We recommend that you do not access an S3 bucket using your AWS root user creden
 4. Filter policies by **Customer Managed Policies** and select your recently created policy.
 5. Click **Next Step**, then **Create Group**.
 6. Go to **Users** and click **Create New Users**.
-<ol start="7"><li>Provide a user name and click <strong>Create</strong>, then view the new user security credentials by clicking <strong>Show User Security Credentials</strong>.
+<ol start="7"><li>Provide a user name and click **Create**, then view the new user security credentials by clicking **Show User Security Credentials**.
 
 <Alert title="Note" type="info">
 You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time. You will need the access keys when configuring the S3 File System module

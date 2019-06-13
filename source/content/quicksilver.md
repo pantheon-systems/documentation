@@ -49,54 +49,14 @@ We recommend setting up a dedicated directory in the docroot (e.g. `private/scri
 
 You can hook into the following workflows:
 
-<table class="table  table-bordered table-responsive">
-    <thead>
-      <tr>
-        <th>Workflow</th>
-        <th>Description</th>
-        <th>Location of webphp script runtime</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-      <td><code>clear_cache</code></td>
-      <td>Clear CMS and Edge Cache</td>
-      <td></td>
-      <td></td>
-      </tr>
-      <tr>
-      <td><code>clone_database</code></td>
-      <td>Clone database between environments</td>
-      <td>target (to_env)</td>
-      <td></td>
-      </tr>
-      <tr>
-      <td><code>deploy</code></td>
-      <td>Deploy code to Test or Live</td>
-      <td>target</td>
-      <td></td>
-      </tr>
-      <tr>
-      <td><code>deploy_product</code></td>
-      <td>Create site</td>
-      <td>Dev</td>
-      <td><code>after</code> stage valid, `before` stage invalid</td>
-      </tr>
-      <tr>
-      <td><code>sync_code</code></td>
-      <td>Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard
-      <td>Dev or Multidev </td>
-      <td></td>
-      </tr>
-      <tr>
-      <td><code>create_cloud_development_environment</code>
-      <td>Create Multidev environment</td>
-      <td>Multidev</td>
-      <td><code>after</code> stage valid, `before` stage invalid</td>
-      </tr>
-    </tbody>
-  </table>
+| Workflow                               | Description                                                         | Location of webphp runtime | Notes                                       |
+|:-------------------------------------- |:------------------------------------------------------------------- |:-------------------------- |:------------------------------------------- |
+| `clear_cache`                          | Clear CMS and Edge Cache                                            |                            |                                             |
+| `clone_database`                       | Clone database between environments                                 | target (to_env)            |                                             |
+| `deploy`                               | Deploy code to Test or Live                                         | target                     |                                             |
+| `deploy_product`                       | Create site                                                         | Dev                        | `after` stage valid, `before` stage invalid |
+| `sync_code`                            | Push code via Git or commit OSD/SFTP changes via Pantheon Dashboard | Dev or Multidev            |                                             |
+| `create_cloud_development_environment` | Create Multidev environment                                         | Multidev                   | `after` stage valid, `before` stage invalid |
 
 
 ## Debugging via Terminus

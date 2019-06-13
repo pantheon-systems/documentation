@@ -7,11 +7,11 @@ const Popover = ({ icon, title, content }) => {
       data-proofer-ignore
       data-toggle="tooltip"
       data-html="true"
-      data-title="{title}"
+      data-title={title}
       data-content={content}
       style={{ color: "#0093c9" }}
     >
-      <em className={`fa fa-${icon}`} />
+      <em className={`fa fa-info-circle`} />
     </span>
   )
 }

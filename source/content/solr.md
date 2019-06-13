@@ -16,7 +16,7 @@ Learn how to configure Solr with help from our experts. Pantheon delivers custom
 
 All plans except for a Basic plan can use Solr. Solr is available to Sandbox site plans for developmental purposes, but Solr will not be available going live on a Basic plan.
 
-| Plans         | Solr Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
+| Plans         | Solr Support <Popover content="Available across all environments, including Multidevs." /> |
 | ------------- | ---------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
 | Basic         | <span style="color:red">❌</span>  |
@@ -48,24 +48,52 @@ Some customers have reported success using external Solr service providers for t
 
 ## Apache Solr Vocabulary
 
-<dl>
-	<dt>bias</dt>
-	<dd>Allows certain parts of indexed items to influence the importance of search results. The higher the bias, the greater the influence; the range is 0.1 to 21.0.</dd>
-	<dt>core</dt>
-	<dd>A core is a separate configuration and index using a single Solr instance. A core is created when the schema is posted. For more information, see [https://wiki.apache.org/solr/CoreAdmin](https://wiki.apache.org/solr/CoreAdmin).
-</dd>
-	<dt>document</dt>
-	<dd>A document is similar to a database row, containing the contents of what is to be searched and whatever fields are associated with it, like title.</dd>
-	<dt>facet</dt>
-	<dd>Search facets allow search results to be filtered; examples include seeing a list of potential filters and the count of matches for each filter on the left, like Amazon product searches.</dd>
-	<dt>index</dt>
-	<dd>structure containing extracted keywords from a document for rapid search and retrieval, similar to a database table.</dd>
-	<dt>score</dt>
-	<dd>calculated relevance of matches influenced by bias, represented as a float.</dd>
-	<dt>schema.xml</dt>
-	<dd>Contains details about the fields that documents can contain, and how those fields are handled when adding documents to the index or querying those fields. Must be posted using the pantheon_apachesolr module before indexing and searching will work. For more information, see [https://wiki.apache.org/solr/SchemaXml](https://wiki.apache.org/solr/SchemaXml).
-</dd>
-</dl>
+<DefList>
+
+<Definition name="bias">
+
+Allows certain parts of indexed items to influence the importance of search results. The higher the bias, the greater the influence; the range is 0.1 to 21.0.
+
+</Definition>
+
+<Definition name="core">
+
+A core is a separate configuration and index using a single Solr instance. A core is created when the schema is posted. For more information, see [https://wiki.apache.org/solr/CoreAdmin](https://wiki.apache.org/solr/CoreAdmin)
+
+</Definition>
+
+<Definition name="document">
+
+A document is similar to a database row, containing the contents of what is to be searched and whatever fields are associated with it, like title.
+
+</Definition>
+
+<Definition name="facet">
+
+Search facets allow search results to be filtered; examples include seeing a list of potential filters and the count of matches for each filter on the left, like Amazon product searches.
+
+</Definition>
+
+<Definition name="index">
+
+structure containing extracted keywords from a document for rapid search and retrieval, similar to a database table.
+
+</Definition>
+
+<Definition name="score">
+
+calculated relevance of matches influenced by bias, represented as a float.
+
+</Definition>
+
+<Definition name="schema.xml">
+
+Contains details about the fields that documents can contain, and how those fields are handled when adding documents to the index or querying those fields. Must be posted using the pantheon_apachesolr module before indexing and searching will work. For more information, see [https://wiki.apache.org/solr/SchemaXml](https://wiki.apache.org/solr/SchemaXml).
+
+</Definition>
+
+</DefList>
+
 #### Check Index and Batch Sizes
 
 Are you only indexing only 50 items at a time and wondering why hundreds of new content nodes generated in the last hour aren't being indexed? Numbers are important here. If you need to increase the number of items being indexed with each Solr indexing run, feel free to do so. However, don't get ridiculous here: setting 1000 items to be indexed per run could cause a page timeout. If a specific request times out, that could be because it's trying to POST too much data at once; try reducing the quantity of items being indexed per batch and see if that allows the items to be indexed.

@@ -12,11 +12,11 @@ Pantheon offers a range of support packages that extend to include all the featu
 
 | Support Package                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
 |-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
-| **Scope**                                                 | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %} | Performance {% include 'popovers/performance.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} |
+| **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
 | [**Chat**](#real-time-chat-support)                       | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
-| [**Tickets**](#ticket-support)                            | <Color color="red">❌</Color>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
-| [**Emergency On-Call**](#pantheon-on-call)                | <Color color="red">❌</Color>                 | <Color color="red">❌</Color>                   | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
-| [**Professional Services**](/docs/professional-services/) | <Color color="red">❌</Color>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
+| [**Tickets**](#ticket-support)                            | <span style="color:red">❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
+| [**Emergency On-Call**](#pantheon-on-call)                | <span style="color:red">❌</span>                 | <span style="color:red">❌</span>                  | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
+| [**Professional Services**](/docs/professional-services/) | <span style="color:red">❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
 
 ## Best Practices
 
@@ -45,7 +45,9 @@ Start a chat with our Support Team to ask questions or request assistance on iss
  - Links to screenshots or screencasts of the behavior, if necessary.
 
 <Alert title="Note" type="info">
+
 Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try whitelisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://docs.intercom.com/faqs-and-troubleshooting/your-users-and-leads-data-in-intercom/why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.
+
 </Alert>
 
 ## Ticket Support

@@ -11,7 +11,9 @@ This allows you to transfer unlimited data "server-to-server", which is much fas
 There are two mechanisms for transferring files: SFTP and rsync.
 
 <Alert title="Note" type="info">
+
 You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
+
 </Alert>
 
 `markdown:auth.md`
@@ -25,50 +27,55 @@ There are a number of GUI SFTP clients available, such as [FileZilla](https://fi
 Here's an example of using a command-line SFTP client to connect to a site environment's file directory.
 
 <Alert title="Note" type="info">
+
 You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+
 </Alert>
 
+```sftp
+export ENV=[env]
+# Usually dev, test, or live
+export SITE=[uuid]
+# Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
 
-    export ENV=[env]
-    # Usually dev, test, or live
-    export SITE=[uuid]
-    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
-
-    sftp -oPort=2222 $ENV.$SITE@appserver.$ENV.$SITE.drush.in
-    Connected to appserver.$ENV.$SITE.drush.in
-    sftp> cd files
-    sftp> put [your file or files]
-
+sftp -oPort=2222 $ENV.$SITE@appserver.$ENV.$SITE.drush.in
+Connected to appserver.$ENV.$SITE.drush.in
+sftp> cd files
+sftp> put [your file or files]
+```
 
 ## rsync
 
 rsync is also available, but it is a more advanced tool that requires experience with the command line.
 
 <Alert title="Note" type="info">
+
 You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+
 </Alert>
 
+```bash
+export ENV=[env]
+# Usually dev, test, or live
+export SITE=[uuid]
+# Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
 
-    export ENV=[env]
-    # Usually dev, test, or live
-    export SITE=[uuid]
-    # Site UUID from dashboard URL: https://dashboard.pantheon.io/sites/[uuid]
+# To Upload/Import
+rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ./files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
 
-    # To Upload/Import
-    rsync -rLvz --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' ./files/. --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
-
-    # To Download
-    rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
+# To Download
+rsync -rvlz --copy-unsafe-links --size-only --checksum --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/ ~/files
 
 
-    # -r: Recurse into subdirectories
-    # -v: Verbose output
-    # -l: copies symlinks as symlinks
-    # -L: transforms symlinks into files.
-    # -z: Compress during transfer
-    # --copy-unsafe-links: transforms symlinks into files when the symlink target is outside of the tree being copied
-    # Other rsync flags may or may not be supported
-    # (-a, -p, -o, -g, -D, etc are not).
+# -r: Recurse into subdirectories
+# -v: Verbose output
+# -l: copies symlinks as symlinks
+# -L: transforms symlinks into files.
+# -z: Compress during transfer
+# --copy-unsafe-links: transforms symlinks into files when the symlink target is outside of the tree being copied
+# Other rsync flags may or may not be supported
+# (-a, -p, -o, -g, -D, etc are not).
+```
 
 Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsync) to learn more.
 
@@ -84,7 +91,7 @@ Regardless of framework, WordPress or Drupal, your files need to be in the `/fil
 
 The examples below use the variables `$ENV` and `$SITE`. You can replace these variables with your site UUID and environment, or set them before you begin:
 
-```
+```bash
 export ENV=dev
 export SITE=3ef6264e-51d9-43b9-a60b-6cc22c3129308as83
 ```

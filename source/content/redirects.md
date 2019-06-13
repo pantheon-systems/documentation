@@ -20,11 +20,11 @@ Using `.htaccess` is generally not recommended - even for sites running  [Apache
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All `if` conditional statements need to be in the correct order. For example, a wholesale redirect executed *prior* to redirects for specific pages would likely prevent the second statement from being evaluated.
 
 ## Redirect to HTTPS and the Primary Domain
-This redirect is considered best practice and recommended as part of the going live procedure. Configure this redirect after connecting a custom domain in the Site Dashboard when you're ready to launch the site. For details, see [Launch Essentials](/docs/guides/launch/).
+This redirect is considered best practice and recommended as part of the going live procedure. Configure this redirect after connecting a custom domain in the Site Dashboard when you're ready to launch the site. For details, see [Launch Essentials](/docs/guides/launch/). 
 
 The following configuration will redirect HTTP to HTTPS _and_ enforce use of a primary domain, such as `http://live-site-name.pantheonsite.io` to `https://www.example.com` or `http://example.com` to `https://www.example.com`:
 
-{% include("redirects.twig")%}
+`markdown:redirects.md`
 
 ## Additional Redirects (Optional)
 Implement scenario specific redirects as required by the site. Depending on the needs of the site, you may only need one, some, or none of the following.

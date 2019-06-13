@@ -14,40 +14,27 @@ As of Drupal 8.2.0, however, `services.yml` was removed from `.gitignore`, and a
 
 The table below illustrates which services file is used in which Pantheon environments:
 
-<table class="table  table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th>Pantheon Environment</th>
-      <th>Settings Filename</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Test or Live</td>
-      <td>services.pantheon.production.yml</td>
-    </tr>
-    <tr>
-      <td>Dev or any Multidev</td>
-      <td>services.pantheon.preproduction.yml</td>
-    </tr>
-    <tr>
-      <td>All environments</td>
-      <td>services.yml</td>
-    </tr>
-  </tbody>
-</table>
+| Pantheon Environment | Settings Filename                     |
+|:-------------------- |:------------------------------------- |
+| Test or Live         | `services.pantheon.production.yml`    |
+| Dev or any Multidev  | `services.pantheon.preproduction.yml` |
+| All environments     | `services.yml`                        |
+
 
 ## Create and Modify services.yml
 1.  Before you begin, make sure that you have updated your Drupal site to version 8.2.0 or greater.
 2.  From within the `sites/default` directory, create a new `services` file. Name it based on which environment you wish to configure settings for:
-      - **All environments:** `services.yml`
-      - **Production environment:** `services.pantheon.production.yml`
-      - **Pre-production environment:** `services.pantheon.preproduction.yml`
 
-    Consult the existing [`default.services.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.yml) and [`default.services.pantheon.preproduction.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) files for example parameters that you may wish to customize for your site.
+    - **All environments:** `services.yml`
+    - **Production environment:** `services.pantheon.production.yml`
+    - **Pre-production environment:** `services.pantheon.preproduction.yml`
+
+  Consult the existing [`default.services.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.yml) and [`default.services.pantheon.preproduction.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) files for example parameters that you may wish to customize for your site.
 
 <Alert title="Note" type="info">
+
 Module specific services should be defined in a separate `.yml` file, located in the root directory of the respective module (e.g. `sites/all/modules/module_name/module_name.services.yml`).
+
 </Alert>
 
 ## See Also

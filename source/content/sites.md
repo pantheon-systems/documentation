@@ -11,18 +11,22 @@ The Site Dashboard is where you can find all the tools you need to successfully 
 At the top of the page you'll find all the environments for your site: Dev, Test, and Live. Additional development environments are available with [Multidev](/docs/multidev/).
 
 The **Visit Site** button is available for each environment so you can view the site in each environment. This helpful to view changes in Dev or Test before moving them to Live.
+
 ## Team
 The Team tab allows you to change the site owner; add supporting agencies; and add, manage, and delete users. For more information, see [Team Management](/docs/team-management/).
 
-##Settings
+## Settings
 
 ### Add-Ons
 Pantheon offers several add-ons to help you build dynamic sites. These include [Apache Solr](/docs/solr/) and [Redis](/docs/redis/).
 
 ### Delete Site
 If you no longer need your site, you can remove it here.
+
 <Alert title="Warning" type="danger">
+
 This is a permanent change and once you delete it your site cannot be restored.
+
 </Alert>
 
 ### About Site
@@ -102,10 +106,13 @@ Every user, organization, product and site is assigned a UUID which is internal 
 ```
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
+
 You can also use Terminus to find the UUID of any site on your user Dashboard:
+
 ```bash
 terminus site:list
 ```
+
 For example uses, see the following:
 
 - [Port 2222 Blocked Workaround](/docs/port-2222#set-up-the-tunnel)

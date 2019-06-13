@@ -12,6 +12,7 @@ contributors: [cityofoaksdesign]
  ![Change current plan for paid sites](../docs/assets/images/dashboard/change-plan.png)
 
 <Alert title="Note" type="info">
+
 Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
 
 </Alert>
@@ -26,7 +27,9 @@ Site plan downgrades will change your site's resources and access to features im
 The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/docs/change-management/#site-level-roles-and-permissions).
 
 <Alert title="Note" type="info">
+
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
+
 </Alert>
 
 ## Considerations
@@ -96,21 +99,25 @@ If the site is associated with an Enterprise Flagship organization, additional P
 This section covers purchasing a new plan. Review the [previous section](#basic-plan) on feature availability before switching plans to Basic.
 
 <Alert title="Note" type="info">
+
 Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/docs/annual-billing/) for more information.
+
 </Alert>
 
 ### Select Plan
 1. Go to the Site Dashboard.
 2. For Sandbox sites, click the **Upgrade** button. Otherwise, select the lable for the site's current plan.
 3. Click **Select** to switch plans:
+
  ![Select a different plan](../docs/assets/images/dashboard/select-plan.png)
 
 
 ### Enter Billing Information
 Site ownership is designated to the user account entering billing information.
+
 <TabList>
 
-<Tab title="add-cc-id" id="Add New Card" active={true}>
+<Tab title="Add New Card" id="add-cc-id" active={true}>
 
 If this is your first time taking a site live on Pantheon, you'll likely need to add a new card to your account:
 
@@ -121,7 +128,7 @@ If this is your first time taking a site live on Pantheon, you'll likely need to
 
 </Tab>
 
-<Tab title="existing-cc-id" id="Select Existing Card">
+<Tab title="Select Existing Card" id="existing-cc-id">
 
 To associate an existing card from your account as the payment method for this site:
 
@@ -130,7 +137,7 @@ To associate an existing card from your account as the payment method for this s
 
 </Tab>
 
-<Tab title="request-payment-id" id="Send a Request">
+<Tab title="Send a Request" id="request-payment-id">
 
 `markdown:transfer-ownership-billing-intro.md`
 `markdown:transfer-ownership-billing-steps.md`

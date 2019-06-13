@@ -53,7 +53,9 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 5. If prompted, enter the password.
 
 <Alert title="Note" type="info">
+
 Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the [Troubleshooting](#troubleshooting) at the end of the document.
+
 </Alert>
 
 ## Delete a Key from Pantheon
