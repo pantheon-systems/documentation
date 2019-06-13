@@ -86,6 +86,7 @@ Every entity (user, organization, product and site) is assigned a UUID which is 
 ```
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
+
 You can also use [Terminus](/docs/terminus/) to find the UUID of your organizations:
 
 ```

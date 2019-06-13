@@ -36,33 +36,33 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 1. From your local clone of your Custom Upstream repository, add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
-    <TabList>
+  <TabList>
 
-    <Tab title="WordPress" id="wp1" active={true}>
+  <Tab title="WordPress" id="wp1" active={true}>
 
-    ```git
-    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
-    ```
+  ```git
+  git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title="Drupal 8" id="d81">
+  <Tab title="Drupal 8" id="d81">
 
-    ```git
-    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
-    ```
+  ```git
+  git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title="Drupal 7" id="d71">
+  <Tab title="Drupal 7" id="d71">
 
-    ```git
-    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
-    ```
+  ```git
+  git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    </TabList>
+  </TabList>
 
 2. We will also add the test site you created above as a remote to your Custom Upstream. To do that, we first need to grab the test site's repository URL on Pantheon using [Terminus](/docs/terminus/). Replace `<site>` with your site name:
 
@@ -83,40 +83,40 @@ This test site will be used later for evaluating the Custom Upstream changes we 
     git checkout -b core-update
     ```
 
-    It's important to use feature branches when applying and testing updates. Updates applied on the master branch and pushed to the remote repository on GitHub or Bitbucket become available to individual sites downstream. Using a feature branch gives us a chance to reveal issues before distributing updates.
+  It's important to use feature branches when applying and testing updates. Updates applied on the master branch and pushed to the remote repository on GitHub or Bitbucket become available to individual sites downstream. Using a feature branch gives us a chance to reveal issues before distributing updates.
 
 5. Pull down Pantheon's core updates from the appropriate upstream:
 
-     <TabList>
+  <TabList>
 
-     <Tab title="WordPress" id="wp" active={true}>
+  <Tab title="WordPress" id="wp" active={true}>
 
-     ```git
-     git fetch pantheon-wordpress
-     git merge pantheon-wordpress/master
-     ```
+  ```git
+  git fetch pantheon-wordpress
+  git merge pantheon-wordpress/master
+  ```
 
-     </Tab>
+  </Tab>
 
-     <Tab title="Drupal 8" id="d8">
+  <Tab title="Drupal 8" id="d8">
 
-     ```git
-     git fetch pantheon-drops-8
-     git merge pantheon-drops-8/master
-     ```
+  ```git
+  git fetch pantheon-drops-8
+  git merge pantheon-drops-8/master
+  ```
 
-     </Tab>
+  </Tab>
 
-     <Tab title="Drupal 7" id="d7">
+  <Tab title="Drupal 7" id="d7">
 
-     ```git
-     git fetch pantheon-drops-7
-     git merge pantheon-drops-7/master
-     ```
+  ```git
+  git fetch pantheon-drops-7
+  git merge pantheon-drops-7/master
+  ```
 
-     </Tab>
+  </Tab>
 
-     </TabList>
+  </TabList>
 
 6. Push to your new test site on Pantheon:
 
@@ -130,18 +130,20 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 9. Use this new Multidev environment to evaluate your `core-update` branch. When you're ready to release, merge the branch into master and push to your remote repository on GitHub or Bitbucket:
 
-    ```git
-    git checkout master
-    git merge --no-ff core-update
-    git push origin master
-    ```
+  ```git
+  git checkout master
+  git merge --no-ff core-update
+  git push origin master
+  ```
 
-    This assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
+  This assumes you are using the default remote destination (`origin`) for your Custom Upstream repository that's hosted with your preferred provider.
 
 Updates will become available to sites downstream as one-click updates within an hour of being pushed to the remote repository on sites running the Custom Upstream within your Organization. You can apply the updates on each site individually within the Site Dashboard, or you can apply updates in bulk using [Terminus](/docs/terminus/) and the [Mass Update](/docs/terminus/examples/#mass-update) plugin. For more details, see [WordPress and Drupal Core Updates](/docs/core-updates/).
 
 <Alert title="Warning" type="danger">
+
 Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.
+
 </Alert>
 
 
@@ -164,65 +166,66 @@ If you receive the error that you have conflicts while updating core, the fastes
 1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
 
-    <TabList>
+  <TabList>
 
-    <Tab title="WordPress" id="wp2" active={true}>
+  <Tab title="WordPress" id="wp2" active={true}>
 
-    ```bash
-    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
-    ```
+  ```bash
+  git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title="Drupal 8" id="d82">
+  <Tab title="Drupal 8" id="d82">
 
-    ```bash
-    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
-    ```
+  ```bash
+  git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title=" Drupal 7" id="d72">
+  <Tab title=" Drupal 7" id="d72">
 
-    ```bash
-    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
-    ```
+  ```bash
+  git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    </TabList>
+  </TabList>
 
 2. Pull down changes from the appropriate upstream and attempt to resolve automatically:
 
-    <TabList>
+  <TabList>
 
-    <Tab title="WordPress" id="wp-xtheirs" active={true}>
+  <Tab title="WordPress" id="wp-xtheirs" active={true}>
 
-    ```git
-    git fetch pantheon-wordpress
-    git merge pantheon-wordpress/master -Xtheirs
+  ```git
+  git fetch pantheon-wordpress
+  git merge pantheon-wordpress/master -Xtheirs
+  ```
+
+  </Tab>
+
+  <Tab title="Drupal 8" id="d8-xtheirs">
+
+  ```git
+  git fetch pantheon-drops-8
+  git merge pantheon-drops-8/master -Xtheirs
     ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title="Drupal 8" id="d8-xtheirs">
+  <Tab title="Drupal 7" id="d7-xtheirs">
 
-    ```git
-    git fetch pantheon-drops-8
-    git merge pantheon-drops-8/master -Xtheirs
-      ```
+  ```git
+  git fetch pantheon-drops-7
+  git merge pantheon-drops-7/master -Xtheirs
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title="Drupal 7" id="d7-xtheirs">
-    ```git
-    git fetch pantheon-drops-7
-    git merge pantheon-drops-7/master -Xtheirs
-    ```
-
-    </Tab>
-
-    </TabList>
+  </TabList>
 
 Double-check the conflicted files before going forward to make sure no bugs were introduced.
 
@@ -233,64 +236,67 @@ If attempts to automatically resolve conflicts fail or if you want your changes 
 
 1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
 
-    <TabList>
+  <TabList>
 
-    <Tab title="WordPress" id="wp2" active={true}>
+  <Tab title="WordPress" id="wp2" active={true}>
 
-    ```bash
-    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
-    ```
+  ```bash
+  git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title="Drupal 8" id="d82">
+  <Tab title="Drupal 8" id="d82">
 
-    ```bash
-    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
-    ```
+  ```bash
+  git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title=" Drupal 7" id="d72">
+  <Tab title=" Drupal 7" id="d72">
 
-    ```bash
-    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
-    ```
+  ```bash
+  git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    </TabList>
+  </TabList>
 
 2. Pull down changes from the appropriate upstream:
 
-    <Tablist>
-    <Tab title="WordPress" id="wp-2conflict">
+  <TabList>
 
-    ```git
-    git fetch pantheon-wordpress
-    git merge pantheon-wordpress/master
-    ```
+  <Tab title="WordPress" id="wp-2conflict" active={true}>
 
-    </Tab>
+  ```git
+  git fetch pantheon-wordpress
+  git merge pantheon-wordpress/master
+  ```
 
-    <Tab title="Drupal 7" id="d7-xtheirs">
+  </Tab>
 
-    ```git
-    git fetch pantheon-drops-8
-    git merge pantheon-drops-8/master
-    ```
-    </Tab>
+  <Tab title="Drupal 7" id="d7-xtheirs">
 
-     <Tab title="Drupal 7" id="d7-2conflict">
+  ```git
+  git fetch pantheon-drops-8
+  git merge pantheon-drops-8/master
+  ```
 
-     ```git
-     git fetch pantheon-drops-7
-     git merge pantheon-drops-7/master
-     ```
+  </Tab>
 
-    </Tab>
+   <Tab title="Drupal 7" id="d7-2conflict">
 
-    </TabList>
+   ```git
+   git fetch pantheon-drops-7
+   git merge pantheon-drops-7/master
+   ```
+
+  </Tab>
+
+  </TabList>
+
 
 3. If a conflict is introduced, the output provides all the details we need in order to resolve. For example:
 
