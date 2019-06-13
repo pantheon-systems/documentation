@@ -9,7 +9,9 @@ contributors: [albertcausing]
 Pantheon uses nginx web servers for optimal performance. Log files record the web server events and activities and can help you identify potential issues and gather information about users.
 
 <Alert title="Note" type="info">
+
 Requests served by the [Pantheon Global CDN](/docs/global-cdn) will not hit the nginx webserver and will not be logged in `nginx-access.log`.
+
 </Alert>
 
 [GoAccess](https://goaccess.io/) is a free, open source utility that creates on the fly server reports by parsing the `nginx-access.log` file. Use it to quickly identify the most used browsers and operating systems, or to debug failed requests—all from the command line.
@@ -28,16 +30,20 @@ Be sure that you have:
 To parse the Pantheon `nginx-access.log` file with GoAccess, you'll need to specify the unique log formats.
 
 Add the following lines to the `goaccess.conf` file, located in either `/etc/`, `/usr/etc/` or `/usr/local/etc/` depending on your installation method:
+
 ```
 time-format %H:%M:%S
 date-format %d/%b/%Y
 log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T ~h{," }
 ```
+
 ## Automate GoAccess Reports
 Download the following script to quickly pull a site's nginx log file and create an HTML report using GoAccess:
 
-<div class="script-file-header">access_getlogs.sh<a id="downloadLinkgoaccess"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script</button></a></div>
-<pre><code id="access_getlogs">#!/bin/bash
+<Download file="access_getlogs.sh" />
+
+```bash
+#!/bin/bash
 
 type goaccess >/dev/null 2>&1 || { echo >&2 "GoAccess is not installed. Aborting. \n[+]https://pantheon.io/docs/nginx-access-log/ \n[+] https://goaccess.io/download"; exit 1; }
 
@@ -127,7 +133,8 @@ else
 fi
 
 open ${TARGET}/${SITE}_report.html
-echo "[+] DONE, LAUNCHING: "</code></pre>
+echo "[+] DONE, LAUNCHING: "
+```
 
 Make the script executable:
 
