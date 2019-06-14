@@ -7,15 +7,6 @@ contributors: [edwardangert, rachelwhitton, ari]
 searchboost: 150
 ---
 
-<div class="alert alert-info" markdown="1">
-#### Limited Availability {.info}
-The documentation on this page discusses features and options that are not yet available to all users.
-</div>
-
-Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from Australia, Canada, or the European Union.
-
-During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US Region. [Give us a call](https://pantheon.io/contact-us){.external} for information about pricing and how to enable your organization to create sites in your choice of region before the feature becomes generally available in late 2019.
-
 ## Use Cases
 There are many scenarios in which you might prefer running a site in a data center outside of the default United States Region. Common use cases include:
 
@@ -23,7 +14,8 @@ There are many scenarios in which you might prefer running a site in a data cent
 * Improved performance and user experience for authenticated traffic originating near the desired region
 
 ## Region Availability
-Once enabled, this Organization-wide feature allows <a href="/docs/change-management/#organizations-roles-and-permissions" data-proofer-ignore>privileged users</a> to designate one of two available regions at the time of site creation:
+
+Four regions are available when creating a new site:
 
 * United States (**US**) (Default)
 * Australia (**AUS**)
@@ -40,7 +32,13 @@ Localized, region-specific [Disaster Recovery](/docs/disaster-recovery/) is also
 
 With this set of region-specific resources, now you can run WordPress or Drupal sites on Pantheon and meet local legal, regulatory, or data sovereignty requirements.
 
-## Create a New Site
+## Create a New Site in a New Region
+
+[Create a new Site](/docs/sites/) from the Dashboard and select the Region:
+
+![Select a Region from the Create Your Pantheon Site screen](/source/docs/assets/images/dashboard/create-pantheon-site.png "Select a Region from the Create Your Pantheon Site screen")
+
+### Create a New Site in a Specific Region using Terminus
 
 1. Install and authenticate [Terminus](/docs/terminus/). The commands used here require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/docs/terminus/updates/).
 1. Use Terminus to create a new site associated with your organization and include the `--region=` option.
@@ -116,17 +114,12 @@ Time to celebrate. Your site is running in your chosen region!
 
 More features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this doc for updates. [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external} to tell us about your needs.
 
-Coming soon:
-  - Region Facet on Organization Dashboard
-
 ## Frequently Asked Questions
 ### Can I move an existing site to a new region?
-Yes, however you must migrate your existing site to a new site that was configured for the new region during creation ([as described above](#create-a-new-site)).
+Yes, however you must migrate your existing site to a new site that was configured for the new region during creation ([as described above](#create-a-new-site-in-a-new-region)).
+
+Contact your account owner or our [Sales team](https://pantheon.io/contact-us){.external} to learn about Pantheon's migration services or review the [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
+
 
 ### When will region selection be available for sites paid by credit card?
 General availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external}.
-
-### When will site creation through the Dashboard be available?
-General availability is planned for late 2019.
-
-Contact your account owner or our [Sales team](https://pantheon.io/contact-us){.external} to learn about Pantheon's migration services or review the [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.

@@ -36,14 +36,14 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
     <p markdown="1">If you registered as an agency, and this is your first time logging in, you’ll land on your Organization Dashboard. Navigate to your User Dashboard by selecting your name in the menu bar, then **My Dashboard**.
     </p></div>
 
-2. Select **<span class="glyphicons glyphicons-plus" aria-hidden="true"></span> Create New Site**. You’ll be asked to name this site and, if you’re part of an agency, associate this site with your organization.
+2. Select **<span class="glyphicons glyphicons-plus" aria-hidden="true"></span> Create New Site**. You’ll be asked to name this site, if you’re part of an agency, associate the site with your organization, and choose your desired [Region](/docs/regions/).
 
 3. Select **Continue** to choose from the available site frameworks.
 
-    <div class="alert alert-info">
-    <h4 class="info">Note</h4>
-    <p>Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/docs/custom-upstream/), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
-    </p></div>
+    <div class="alert alert-info" role="alert" markdown="1">
+    #### Note
+    Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/docs/custom-upstream/), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
+    </div>
 
 4. For the purpose of this guide, deploy WordPress or Drupal 8 by clicking the appropriate button. This takes a few moments. So while you wait, learn what’s happening behind the scenes:
 
