@@ -6,7 +6,7 @@ contributors: [eabquina, rachelwhitton]
 ---
 Pantheon supports running WordPress and Drupal as an API (Application Programming Interface) for the backend of headless sites, which enables the CMS to interact with external frontend applications over HTTP requests.
 
-For example, a mobile application <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="A separate and external frontend application that is not running on Pantheon."><em class="fa fa-info-circle"></em></a> that uses the `GET`, `POST`, and `DELETE` HTTP methods to perform CRUD operations <Popover title="CRUD" content="Create, read, update and delete." /> on a CMS's database <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="The Drupal or WordPress site running on Pantheon as the backend API."><em class="fa fa-info-circle"></em></a>.
+For example, a mobile application <Popover content="A separate and external frontend application that is not running on Pantheon." /> that uses the `GET`, `POST`, and `DELETE` HTTP methods to perform CRUD operations <Popover title="CRUD" content="Create, read, update and delete." /> on a CMS's database <Popover content="The Drupal or WordPress site running on Pantheon as the backend API." />.
 
 ## Decoupled Architecture Overview
 WordPress and Drupal are traditionally monolithic CMSs, meaning they serve as the frontend and backend of a site. Decoupled architecture (**headless**) is a development model that uses a CMS to manage content in the backend with a completely separate frontend component to render that content in the browser.
@@ -14,33 +14,41 @@ WordPress and Drupal are traditionally monolithic CMSs, meaning they serve as th
 Some key differences of decoupled architecture include:
 
 <div class="flex-panel-group">
-  <div id="headless" class="flex-panel-item">
-    <div class="flex-panel-body">
-      <p class="topic-info__description" >
-      ![Decoupled Frontend](../docs/assets/images/decoupledcms-what-is-decoupled.png)
 
-      **Decoupled Frontend**<br>
-      Presentation can be handled in a variety of ways, from interactive JS frameworks like Angular, to static generators, to mobile apps, or even another CMS. Multiple frontends can peacefully coexist.</p>
-    </div>
-  </div>
   <div id="headless" class="flex-panel-item">
-    <div class="flex-panel-body">
-      <p class="topic-info__description" >
-      ![Content Via Web Service API](../docs/assets/images/decoupledcms-what-is-content.png)
 
-      **Content Via Web Service API**<br>
-      The content for the site is accessible via a web-service API, usually in a RESTful manner and in a mashup-friendly format such as JSON.</p>
-    </div>
-  </div>
-  <div id="headless" class="flex-panel-item">
-    <div class="flex-panel-body">
-      <p class="topic-info__description" >
-      ![CMS Backend and Database](../docs/assets/images/decoupledcms-what-is-backend.png)
+  <div class="flex-panel-body">
+   <p class="topic-info__description" >
 
-      **CMS Backend and Database**<br>
-      There is a traditional database-driven CMS which editors use to maintain the content for the site, usually via the same admin interface as always.</p>
-    </div>
-  </div>
+   ![Decoupled Frontend](../docs/assets/images/decoupledcms-what-is-decoupled.png)
+
+   **Decoupled Frontend**<br />
+   Presentation can be handled in a variety of ways, from interactive JS frameworks like Angular, to static generators, to mobile apps, or even another CMS. Multiple frontends can peacefully coexist.
+   </p>
+ </div>
+ </div>
+ <div id="headless" class="flex-panel-item">
+ <div class="flex-panel-body">
+   <p class="topic-info__description" >
+
+   ![Content Via Web Service API](../docs/assets/images/decoupledcms-what-is-content.png)
+
+   **Content Via Web Service API**<br />
+   The content for the site is accessible via a web-service API, usually in a RESTful manner and in a mashup-friendly format such as JSON.
+   </p>
+ </div>
+ </div>
+ <div id="headless" class="flex-panel-item">
+ <div class="flex-panel-body">
+   <p class="topic-info__description" >
+
+   ![CMS Backend and Database](../docs/assets/images/decoupledcms-what-is-backend.png)
+
+   **CMS Backend and Database**<br />
+   There is a traditional database-driven CMS which editors use to maintain the content for the site, usually via the same admin interface as always.
+   </p>
+ </div>
+ </div>
 </div>
 
 ### Pantheon's Platform Benefits
@@ -111,7 +119,7 @@ The service module has several integration features, and other web service forma
 
 <Alert title="Note" type="info">
 
-While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource) module.</p>
+While not a REST API service by itself, you can create a JSON view using the [Views Datasource](https://www.drupal.org/project/views_datasource) module.
 
 </Alert>
 

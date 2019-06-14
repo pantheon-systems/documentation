@@ -5,7 +5,8 @@ tags: [git, tools, workflow]
 categories: []
 ---
 Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
-<img src="/source/docs/assets/images/multidev-flow.png" alt="Dev Test and Live icon" style="border:0;margin-left:auto;margin-right:auto;display:block;">
+
+![Dev Test and Live icon](../docs/assets/images/multidev-flow.png)
 
 <Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -28,21 +29,51 @@ Branching is a standard mechanism for duplicating source code under revision con
 
 There are a number of terms used throughout the Multidev workflow:
 
-<dl>
-<dt>commit</dt>
-<dd>Record snapshot to history.</dd>
-<dt>push</dt>
-<dd>Send changes to a remote repository.</dd>
-<dt>branch</dt>
-<dd>Movable pointer to a set of commits, allowing independent development and history.</dd>
-<dt>environment</dt>
-<dd>Independent infrastructure for a site, including code, database, and files.</dd>
-<dt>fork</dt>
-<dd>To divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.</dd>
-<dt>merge</dt>
-<dd>Combine contents of a&nbsp;branch into another, like a bug fix branch into master.</dd>
-<dt>master</dt>
-<dd>Name of default branch; deployed to Pantheon Dev, Test, and Live environments.</dd></dl>
+<DefList>
+
+<Definition name="commit">
+
+Record snapshot to history.
+
+</Definition>
+
+<Definition name="push">
+
+Send changes to a remote repository.
+
+</Definition>
+
+<Definition name="branch">
+
+Movable pointer to a set of commits, allowing independent development and history.
+
+</Definition>
+
+<Definition name="environment">
+
+Independent infrastructure for a site, including code, database, and files.
+
+</Definition>
+
+<Definition name="fork">
+
+To divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.
+
+</Definition>
+
+<Definition name="merge">
+
+Combine contents of a&nbsp;branch into another, like a bug fix branch into master.
+
+</Definition>
+
+<Definition name="master">
+
+Name of default branch; deployed to Pantheon Dev, Test, and Live environments.
+
+</Definition>
+
+</DefList>
 
 ## Getting Started
 
@@ -50,9 +81,11 @@ There are a number of terms used throughout the Multidev workflow:
 2. Click **Create Multidev Environment**. This will create a new fork of the environment that you select, including code, database and files.
 3. Specify the name for the environment; the URL will incorporate the environment name.
 
-    <Alert title="Warning" type="danger">
-    Multidev branch names must be all lowercase, be less than 11 characters, but may contain a dash (`-`). Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.
-    </Alert>
+   <Alert title="Warning" type="danger">
+
+   Multidev branch names must be all lowercase, be less than 11 characters, but may contain a dash (`-`). Environments cannot be created with the following reserved names: master, settings, team, support, multidev, debug, files, tags, and billing.
+
+   </Alert>
 
 4. Click **Create Environment**.
 
@@ -61,8 +94,11 @@ It will take a few minutes to create the environment and clone the content from 
 You can create cloned Multidev environments from Dev, Test, or Live; existing branch environments can also be forked. Any branch not associated with an environment will be listed on Multidev > Git Branches.
 
 <Alert title="Note" type="info">
+
 The cache tables can contain entries that exceed the transaction redo limit set by `@innodb_log_file_size@`. If you receive an error message that the clone was aborted, clear caches on the source environment and retry the procedure.
+
 </Alert>
+
 You can also create an environment for an existing Git branch. Content can be cloned from any existing environment during the environment creation.
 
 ## Access a Branch Environment
@@ -71,7 +107,7 @@ From the Dashboard, click **Multidev**, then select the name of the environment.
 
 Git instructions are shown under the Connection Mode section of the code page for all Dev and Multidev environments.
 
-Once you have cloned your site's codebase to your local machine, you can work on a specific branch by using **git checkout <branch-name>** on the command line, or by checking out the necessary branch using your preferred Git client e.g. SourceTree, GitKraken, GitHub Desktop, etc.
+Once you have cloned your site's codebase to your local machine, you can work on a specific branch by using **git checkout `branch-name`** on the command line, or by checking out the necessary branch using your preferred Git client e.g. SourceTree, GitKraken, GitHub Desktop, etc.
 
 Any changes you make to a branch you have checked out locally will be committed and pushed to the Multidev of the same name.
 
@@ -81,10 +117,11 @@ Any changes you make to a branch you have checked out locally will be committed 
 2. Click **Database / Files**.
 3. Select the source environment in the **From this Environment** drop-down menu.
 4. Select Database, Files, or both.
-5. Choose whether to execute update.php after cloning, and click **Clone the Database & the Files from <source> into <target> Environment**.
+5. Choose whether to execute update.php after cloning, and click **Clone the Database & the Files from `source` into `target` Environment**.
 
 ## Edit Code
 Edit your content locally via [Git](/docs/git/) or utilize on-server development via [SFTP](/docs/sftp/) mode.
+
 ### SFTP Mode
 1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
 2. Set the connection mode to **SFTP** if it is not already set.
@@ -118,7 +155,7 @@ Edit your content locally via [Git](/docs/git/) or utilize on-server development
 3. Select the environment with commits that can be merged into the target.
 Instructions for using the command-line to merge the changes into the target are shown and can be pasted directly into the terminal without modification.
 
-![Location of Multidev merge button](../docs/assets/images/dashboard/multidev-merge.png)​
+![Location of Multidev merge button](../docs/assets/images/dashboard/multidev-merge.png)
 
 ### Compare Multidev Environments Locally
 The Multidev Environments page provides a list of all existing environments for a site, along with a quick comparison between environments and master (Dev). The "ahead" count represents the number of commits existing on the Multidev environment that have not been merged into master (Dev), while the "behind" count represents commits in master that do not exist on the Multidev branch.

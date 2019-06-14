@@ -71,12 +71,14 @@ From within the Site Dashboard:
 
 3. Import the database into your local environment using a MySQL client:
 
-    ````sql
-    $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
-    ````
-    <Alert title="Note" type="info">
-    Replace `database.sql.gz` with the name of the database archive downloaded from Pantheon.
-    </Alert>
+  ```sql
+  $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
+  ```
+  <Alert title="Note" type="info">
+
+  Replace `database.sql.gz` with the name of the database archive downloaded from Pantheon.
+
+  </Alert>
 
 ### Via Terminus
 

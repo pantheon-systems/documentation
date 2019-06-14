@@ -10,57 +10,22 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 
 ## Available Logs
 
-<table class="table  table-bordered table-responsive" >
-<thead>
-  <tr>
-    <th>Log</th>
-    <th>Retention Policy</th>
-    <th>Comments</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <th>newrelic.log</th>
-    <td></td>
-    <td>New Relic log; check if an environment is not logging.</td>
-  </tr>
-  <tr>
-    <th>nginx-access.log</th>
-    <td>Up to 60 days of logs</td>
-    <td  >Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log).</td>
-  </tr>
-  <tr>
-    <th>nginx-error.log</th>
-    <td>1MB of log data</td>
-    <td>Webserver error log.</td>
-  </tr>
-  <tr>
-    <th>php-error.log <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see <a href='/docs/php-errors'>PHP Errors and Exceptions</a>."><em class="fa fa-info-circle"></em></a></th>
-    <td>1MB of log data</td>
-    <td>PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard.</td>
-  </tr>
-  <tr>
-    <th>php-fpm-error.log</th>
-    <td>1MB of log data</td>
-    <td>PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/docs/php-slow-log)</td>
-  </tr>
-  <tr>
-    <th>mysqld-slow-query.log</th>
-    <td>10MB of log data</td>
-    <td>Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory.</td>
-  </tr>
-  <tr>
-    <th>mysqld.log</th>
-    <td>1 MB of log data</td>
-    <td>Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory.</td>
-  </tr>
-</tbody>
-</table>
+| Log        | Retention Policy           | Comments                                                |
+|:---------- |:-------------------------- |:------------------------------------------------------- |
+| **newrelic.log**          |                       | New Relic log; check if an environment is not logging. |
+| **nginx-access.log**      | Up to 60 days of logs |  Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log). |
+| **nginx-error.log**       | 1MB of log data       | Webserver error log. |
+| **php-error.log** <Popover content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see [PHP Errors and Exceptions](/docs/php-errors)" />  | 1MB of log data       | PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard. |
+| **php-fpm-error.log**     | 1MB of log data       | PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/docs/php-slow-log) |
+| **mysqld-slow-query.log** | 10MB of log data      | Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory. |
+| **mysqld.log**            | 1MB of log data       | Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory. |
 
 Rotated log files are archived within the `/logs` directory on application containers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
 <Alert title="Note" type="info">
+
 When appservers are migrated as a regular part of platform maintenance, log files are destroyed as they are appserver-specific.  Consider [automating the collection](#automate-downloading-logs) of logs regularly to maintain historical log data.
+
 </Alert>
 
 ## Access Logs Via SFTP
@@ -126,11 +91,14 @@ You can automate the process of accessing and maintaining these logs with a simp
 
 ### Create a Script
 Open your local terminal to create and access a new local directory:
+
 ```bash
 mkdir $HOME/site-logs
 cd $HOME/site-logs
 ```
+
 Using your favorite text editor, create a file within the `site-logs` directory called `collect-logs.sh` and include the following:
+
 ```bash
 # Site UUID from Dashboard URL, eg 12345678-1234-1234-abcd-0123456789ab
 SITE_UUID=xxxxxxxxxxx
@@ -146,14 +114,18 @@ rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@dbser
 ```
 
 <Alert title="Note" type="info">
+
 For densely populated directories, using `*` can cause failures. If the script fails, consider removing the wildcard.
+
 </Alert>
 
 ### Collect Logs
 Download logs by executing the script from within the `site-logs` directory:
+
 ```
 sh collect-logs.sh
 ```
+
 You can now access the logs from within the `site-log` directory. More than one directory is generated for sites that use multiple application containers.
 
 ## Frequently Asked Questions
@@ -186,9 +158,11 @@ No, Varnish logs are not available for download.
 ### How do I enable error logging for WordPress?
 
 <Alert title="Warning" type="danger">
+
 The steps in this section enable debug logging. Debug logging increases resource overhead and presents a security risk. It is not recommended for production environments.
 
 To minimize risk exposure, especially in a Live environment, disable debug logging when you are done.
+
 </Alert>
 
 Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress) constants on Development environments (Dev and Multidevs) to write errors to `wp-content/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment in `wp-config.php`:
@@ -280,21 +254,20 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/doc
 
 1. In your project's `logs` directory, create `logwatcher.sh`:
 
+  ```bash
+  #!/bin/bash
+  TERMINUS_HIDE_UPDATE_MESSAGE=1
 
-   ```bash
-   #!/bin/bash
-   TERMINUS_HIDE_UPDATE_MESSAGE=1
+  LOGPATH=~/projects/mysite/logs
+  LOGFILE=php-error.log
+  SITE=sitename
+  ENV=environment
 
-   LOGPATH=~/projects/mysite/logs
-   LOGFILE=php-error.log
-   SITE=sitename
-   ENV=environment
+  touch $LOGPATH/$LOGFILE
+  terminus rsync $SITE.$ENV:logs/$LOGFILE $LOGPATH
 
-   touch $LOGPATH/$LOGFILE
-   terminus rsync $SITE.$ENV:logs/$LOGFILE $LOGPATH
-
-   tail $LOGPATH/$LOGFILE
-   ```
+  tail $LOGPATH/$LOGFILE
+  ```
 
 1. Update the variables:
 
