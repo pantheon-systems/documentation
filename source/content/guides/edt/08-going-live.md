@@ -47,7 +47,7 @@ All links from the video are provided below.
 
 <Callout title="Need more help? Get in touch:">
 
- - [Power Users](/docs/power-users/)
+ - [Pantheon Community](/docs/pantheon-community/)
  - [Pantheon Support](/docs/support/)
  - [Office Hours](https://pantheon.io/agencies/office-hours)
 

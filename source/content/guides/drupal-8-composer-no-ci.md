@@ -242,4 +242,4 @@ To maintain best practice, some of the steps in this section require access to t
 
 #### Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
 
-P.S. the [Pantheon Power Users Community](/docs/power-users/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
+P.S. the [Pantheon Community](/docs/pantheon-community/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.

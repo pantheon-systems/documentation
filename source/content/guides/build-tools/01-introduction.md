@@ -99,8 +99,7 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 
 Pantheon's [support team](/docs/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
 
-If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/) or posting in our [Pantheon Power Users](https://slackin.pantheon.io/) Slack channel.
-
+If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/) or posting in our [Pantheon Community Slack Channel](https://slackin.pantheon.io/).
 </Alert>
 
 
