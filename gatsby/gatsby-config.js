@@ -4,6 +4,10 @@ dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   pathPrefix: `/docs`,
   siteMetadata: {
@@ -71,7 +75,7 @@ module.exports = {
               ellipsisPhrase: '...',
               useCache: true,
               cacheKey: 'gatsby-remark-github-v1',
-              token: '9319d4acf3a5b00bfa36dc6a52fd687ffb843138',
+              token: process.env.GITHUB_API,
             }
           },
           {
