@@ -1,13 +1,15 @@
 ---
 title: On-Server Development
 description: Develop on Pantheon directly via SFTP.
-videoid: 6r4y1zf97c
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [admin, sftpfiles]
 searchboost: 50
 layout: doc
 ---
+
+`youtube: https://youtu.be/ktesh9SiHfc`
+
 Pantheon allows you to quickly and easily write code or add modules and plugins directly on the platform using on-server development.
 
 All the code on your Pantheon site is stored in a repository, which is a remote canonical storehouse of code along with its history of changes.

@@ -1,13 +1,14 @@
 ---
 title: Local Development
 description: Sync your code, database, and files for local development.
-videoid: 3albxwjv3k
 contributors:  [dwayne]
 permalink:  docs/videos/:basename/
 tags: [local]
 layout: doc
 searchboost: 50
 ---
+
+`youtube: https://youtu.be/z01vIuB3kRg`
 
 `markdown:deprecate-kalabox.md`
 

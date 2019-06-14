@@ -2,13 +2,14 @@
 title: WP-CLI
 description: Interact with WordPress from a command line interface.
 contributors:  [scottmassey]
-videoid: zv7y9eczjb
 permalink:  docs/videos/:basename/
 tags: [devwpcli]
 categories: [wordpress]
 layout: doc
 searchboost: 50
 ---
+
+`youtube: https://youtu.be/2KphdFOaOeM`
 
 `markdown:deprecate-kalabox.md`
 
