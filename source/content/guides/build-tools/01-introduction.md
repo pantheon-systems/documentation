@@ -21,44 +21,7 @@ multidev: true
 ---
 This guide describes how to use build tools such as GitHub and CircleCI with Composer to implement a collaborative, team-based Continuous Integration workflow using Pull Requests for Drupal 8 sites on Pantheon. While this guide demonstrates [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer), the same workflow can be applied to [WordPress](https://github.com/pantheon-systems/example-wordpress-composer) and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer) sites.
 
-<div class="flex-panel-group">
-  <div class="flex-panel-item">
-    <div class="flex-panel-body">
-      <div class="flex-panel-title">
-        <h4 class="info" style="margin-top:10px;font-size:larger">GitHub</h4>
-        <div class="pantheon-official">
-          <img alt="GitHub Logo" src="/source/docs/assets/images/github-logo.png" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;" />
-          <p class="pantheon-official"></p>
-        </div>
-      </div>
-      <p class="topic-info__description" >[GitHub](https://github.com) is an online service that provides cloud storage Git repositories that may be cloned and used locally, or edited directly through their web-based management interface. These features are very useful to teams collaborating on a project together.</p>
-    </div>
-  </div>
-  <div class="flex-panel-item">
-    <div class="flex-panel-body">
-      <div class="flex-panel-title">
-        <h4 class="info" style="margin-top:10px;font-size:larger">CircleCI</h3>
-        <div class="pantheon-official">
-          <img alt="CircleCI Logo" src="/source/docs/assets/images/circleci-logo.png" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;" />
-          <p class="pantheon-official"></p>
-        </div>
-      </div>
-      <p class="topic-info__description" >[CircleCI](https://circleci.com) provides hosted services to run automated tests for a project, and GitHub provides an integration to run these tests to whenever a change is submitted. The process of testing each set of changed files prior to merging them into the main branch is called continuous integration.</p>
-    </div>
-  </div>
-  <div class="flex-panel-item">
-    <div class="flex-panel-body">
-      <div class="flex-panel-title">
-        <h4 class="info" style="margin-top:10px;font-size:larger">Composer</h3>
-        <div class="pantheon-official">
-          <img alt="Composer Logo" src="/source/docs/assets/images/composer-logo.png" class="main-topic-info__plugin-image" style="max-width:40px;margin-bottom:10px!important;" />
-          <p class="pantheon-official"></p>
-        </div>
-      </div>
-      <p class="topic-info__description"><a href="/docs/composer/">Composer</a> is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a project. For example, Composer may be used to install the plugins, modules and themes used by a Drupal or WordPress site.</p>
-    </div>
-  </div>
-</div>
+<BuildTools />
 
 <Enablement title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 

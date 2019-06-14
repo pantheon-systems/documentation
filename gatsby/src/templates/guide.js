@@ -26,6 +26,12 @@ import Releases from "../components/releases"
 import TerminusVersion from "../components/terminusVersion"
 import Commands from "../components/commands"
 import GetFeedback from "../components/getFeedback"
+import DefList from "../components/defList.js"
+import Definition from "../components/definition.js"
+import Enablement from "../components/enablement.js"
+import Color from "../components/color.js"
+import Download from "../components/download.js"
+import BuildTools from "../components/buildTools.js"
 
 const shortcodes = {
   Callout,
@@ -41,6 +47,11 @@ const shortcodes = {
   Releases,
   TerminusVersion,
   Commands,
+  DefList,
+  Definition,
+  Enablement,
+  Download,
+  BuildTools,
 }
 
 class GuideTemplate extends React.Component {
