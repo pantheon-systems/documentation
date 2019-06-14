@@ -56,12 +56,12 @@ However we do reserve the right to review individual sites that are excessive ba
 ### What about bots?
 Although it places load on the platform, Pantheon excludes automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. We do this by examining the user-agent of traffic, as well as the source IP address.
 
-Having high performance responses to crawlers is _beneficial_ to SEO, which is one reson people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible.
+Having high performance responses to crawlers is _beneficial_ to SEO, which is one reason people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible.
 
 ### What about load tests or penetration tests?
 We encourage customers to load test prior to releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
 
-However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform. 
+However, if you are load or pen testing in extreme excess of your plan limits, or do so on a regular and repeated basis, we reserve the right to charge for a plan that is appropriate to the load placed on the platform.
 
 If you identify a platform issue, please let us know. If an issue is identified with your codebase, we can recommend a Partner or connect you with our Professional Services team to help you with remediation.
 
