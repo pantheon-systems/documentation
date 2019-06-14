@@ -91,7 +91,9 @@ If you do not already have HTTPS, there's _no need_ to pre-provision.
 </Alert>
 
 ### How many custom domains are supported?
-{% include("content/tables/custom-domains-limit.html") %}
+
+`markdown:/tables/custom-domains-limit.md`
+
 
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).

@@ -63,6 +63,8 @@ Once you have chosen your SMTP provider, install and configure WordPress's [WP M
 
 </Tab>
 
+</TabList>
+
 ## Troubleshooting
 
 ### Failed Opening `MimeMailSystem__SmtpMailSystem.mail.inc` or `HTMLMailSystem__SmtpMailSystem.mail.inc`

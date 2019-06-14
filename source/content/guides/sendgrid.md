@@ -178,8 +178,8 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert  title="Note" type="alert">
+
 Under `/admin/reports/status` you may see a warning that `composer.lock` isn't found in `code/sites/all`. The actual `composer.lock` is in the code root, but you can symlink to it to remove the warning.
 
 From the project root:
@@ -190,7 +190,8 @@ ln -s ../../composer.lock ./composer.lock
 ```
 
 Then commit and push the symlink to Pantheon.
-</div>
+
+</Alert>
 
 ### SendGrid SMTP Integration {.info}
 

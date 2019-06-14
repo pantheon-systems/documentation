@@ -319,9 +319,9 @@ New sites created from this Custom Upstream will use this connection mode by def
 ### Repository URL and password
 You cannot modify the repository details on existing Custom Upstreams. If there is a new URL or password you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
 
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus1copy">Copy</button>
-<figure><pre id="terminus1copy"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My New Custom Upstream"</code></pre></figure></div>
+```bash
+terminus site:upstream:set my-site "My New Custom Upstream"
+```
 
 You must be a site owner to switch a site's upstream. After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/docs/terminus/examples/#switch-upstreams).
 
@@ -334,7 +334,9 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 ## Switch an Existing Site to a Custom Upstream
 
 <Alert title="Warning" type="danger">
+
 Switching the upstream of an existing site is risky. Consider creating a new site from your Custom Upstream and migrating the contents. If you must switch upstreams, [back up](/docs/backups/) your site first, and consider our documentation on [upstream merge conflicts](/docs/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
+
 </Alert>
 
 Only a Site Owner, User in Charge, or Organization Administrator can change an existing site to use a new Custom Upstream using [Terminus](/docs/terminus/):

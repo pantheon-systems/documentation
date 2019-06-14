@@ -390,6 +390,7 @@ Checking these boxes will take a normal Drupal site from having dozens (or hundr
 If you want to make the number of files as low as possible, try [Advanced Aggregation](https://www.drupal.org/project/advagg) module. [It can help take fine grain control over how files are combined](http://www.mediacurrent.com/blog/better-css-js-aggregation-advanced-aggregation). In the past there have been bugs when using Advanced Aggregation on Pantheon. To our knowledge, those are all resolved.
 
 </Tab>
+
 </TabList>
 
 

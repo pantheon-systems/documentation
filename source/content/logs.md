@@ -167,7 +167,9 @@ To minimize risk exposure, especially in a Live environment, disable debug loggi
 
 Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress){.external} constants on Development environments (Dev and Multidevs) to write errors to `wp-content/uploads/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment in `wp-config.php`:
 
-{% include("content/wp-debugging.html") %}
+
+`markdown:/wp-debugging.md`
+
 
 By default, the WordPress debug log path is set to `/wp-content/` and is not writable on Test or Live environments. This can be overridden to the [`/wp-content/uploads/` folder](/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location).
 

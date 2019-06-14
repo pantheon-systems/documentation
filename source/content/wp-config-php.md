@@ -70,7 +70,9 @@ Depending on your use case, there are two possibilities:
 ### How do I enable debugging?
 The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php):
 
-{% include("content/wp-debugging.html") %}
+
+`markdown:/wp-debugging.md`
+
 
 ### How can I read the Pantheon environmental configuration, like database credentials?
 

@@ -155,7 +155,9 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 ### What version of Apache Solr does Pantheon run?
 
-{% include("content/solr-version.html") %} See our documentation for details about configuring Solr for [WordPress](/docs/wordpress-solr/), [Drupal 7](/docs/solr-drupal-7/) and [Drupal 8](/docs/solr-drupal-8/).
+
+`markdown:/solr-version.md`
+ See our documentation for details about configuring Solr for [WordPress](/docs/wordpress-solr/), [Drupal 7](/docs/solr-drupal-7/) and [Drupal 8](/docs/solr-drupal-8/).
 
 
 ## Support

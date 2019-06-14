@@ -1,11 +1,6 @@
 ---
-<<<<<<< HEAD:source/content/eu-region.md
-title: Create a New Site in one of Pantheon's International Regions
-description: Learn how to get Limited Availability access to and launch sites in the European Union, Australia, or Canada.
-=======
 title: Pantheon Site Regions and Data Residency
 description: Learn how to get Limited Availability access to and launch sites in Australia, Canada, or the European Union.
->>>>>>> alphabetizing regions:source/_docs/regions.md
 tags: [create, regions]
 categories: []
 contributors: [edwardangert, rachelwhitton, ari]
@@ -13,7 +8,9 @@ searchboost: 150
 ---
 
 <Alert title="Limited Availability" type="info" >
+
 The documentation on this page discusses features and options that are not yet available to all users.
+
 </Alert>
 
 
@@ -32,11 +29,6 @@ Once enabled, this Organization-wide feature allows [privileged users](/docs/cha
 
 * United States (**US**) (Default)
 * Australia (**AUS**)
-<<<<<<< HEAD:source/content/eu-region.md
-* Canada (**CAN**)
-* European Union (**EU**)
-=======
->>>>>>> alphabetizing regions:source/_docs/regions.md
 * Canada (**CA**)
 * European Union (**EU**)
 
@@ -58,11 +50,6 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
  - Available Region codes are:
    - `us`
    - `aus`
-<<<<<<< HEAD:source/content/eu-region.md
-   - `can`
-   - `eu`
-=======
->>>>>>> alphabetizing regions:source/_docs/regions.md
    - `ca`
    - `eu`
 

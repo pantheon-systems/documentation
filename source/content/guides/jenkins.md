@@ -13,13 +13,8 @@ In this guide, we'll configure your existing Jenkins server to automatically tes
 
 While this guide demonstrates Continuous Integration for Drupal 8 sites, the same workflow can be applied to WordPress with a few modifications:
 
-<div class="panel panel-drop panel-guide" id="accordion">
-<div class="panel-heading panel-drop-heading">
-<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#wordpress-mods">
-<h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> WordPress Modifications</h3>
-</a>
-</div>
-<div id="wordpress-mods" class="collapse"  style="padding:10px;">
+<Accordion id="wordpress-mods" title="WordPress Modifications" icon="wrench">
+
 WordPress users can make use of this guide with a few modifications:
 
 - Install [WP-CLI](https://wp-cli.org/) on the Jenkins instance instead of Drush.
@@ -27,8 +22,7 @@ WordPress users can make use of this guide with a few modifications:
 - Specify WordPress when creating the Pantheon site: `terminus site:create $SITE "My Site" "WordPress"`
 - Use WP-CLI commands for any build steps.
 
-</div>
-</div>
+</Accordion>
 
 ## Before You Begin
 

@@ -13,7 +13,9 @@ In this guide, you'll learn how to use Composer in small doses with WordPress an
 - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and [Git](https://git-scm.com/downloads) locally
 - Create a WordPress or Drupal 7 site on Pantheon
 
-  {% include("content/notes/partial-composer-adoption-warning.html") %}
+  
+`markdown:/notes/partial-composer-adoption-warning.md`
+
 
 - Set the site's connection mode to Git within the Site Dashboard or via [Terminus](/docs/terminus):
 

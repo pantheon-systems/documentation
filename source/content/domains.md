@@ -45,7 +45,9 @@ If you don't already own a domain name, register one with a third-party provider
 
 Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/docs/https/).
 
-{% include("content/tables/custom-domains-limit.html") %}
+
+`markdown:/tables/custom-domains-limit.md`
+
 
 <Alert title="Note" type="info">
 Add all domains (example.com and www.example.com are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/docs/guides/launch/). Automatic resolution of domains and wildcards are not supported.

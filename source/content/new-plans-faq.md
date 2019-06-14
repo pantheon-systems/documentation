@@ -11,12 +11,22 @@ New plans and pricing will impact new and existing sites purchased online via th
 For more information on the announcement of new plans, see [this related blog post](https://pantheon.io/blog/announcing-new-online-site-plans).
 
 ## List and Preferred Pricing
-<dl>
-  <dt>List Price</dt>
-    <dd>Set price for new sites created after November 15, 2018 that aren’t purchased via a qualified agency partner.</dd>
-  <dt>Preferred Price</dt>
-    <dd>Introductory price available to the general public until November 15, 2018, after which it will be exclusively available via qualified [Agency Partners](https://pantheon.io/agencies/partner-program). Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information.</dd>
-</dl>
+
+<DefList>
+
+<Definition name="List Price">
+
+Set price for new sites created after November 15, 2018 that aren’t purchased via a qualified agency partner.
+
+</Definition>
+
+<Definition name="Preferred Price">
+
+Introductory price available to the general public until November 15, 2018, after which it will be exclusively available via qualified [Agency Partners](https://pantheon.io/agencies/partner-program). Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information.
+
+</Definition>
+
+</DefList>
 
 | Plan                 | Preferred Price | List Price  |
 | -------------------- | --------------- | ----------- |
@@ -125,6 +135,8 @@ No action is required. Existing sites will automatically switch to the equivalen
 | Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support."><em class="fa fa-info-circle">| <span style="color:green">✔</span> | <span style="color:red">❌</span> |
 
 </Tab>
+
+</TabList>
 
 <Alert title="Note" type="info">
 

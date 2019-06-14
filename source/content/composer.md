@@ -58,4 +58,6 @@ If you already have a Drupal 8 site that you need to convert to a Composer-manag
 ### Partial Adoption
 If you're not ready to go all in with a Composer workflow and you want to see how it works on a smaller scale, follow the [Manage Some Dependencies with Composer](/docs/guides/partial-composer/) guide to get started.
 
-{% include("content/notes/partial-composer-adoption-warning.html") %}
+
+`markdown:/notes/partial-composer-adoption-warning.md`
+
