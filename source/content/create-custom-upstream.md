@@ -6,7 +6,9 @@ tags: [tools, workflow]
 Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream/). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
 <Alert title="Note" type="info">
+
 Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/support/#custom-upstreams).
+
 </Alert>
 
 
@@ -18,6 +20,7 @@ Choose your preferred Git host:
 <TabList>
 
 <Tab title="GitHub" id="gh" active={true}>
+
 1. [Sign up for a GitHub account](https://github.com/join) if you do not have one already.
 
 2. [Log in to GitHub](https://github.com/login/).

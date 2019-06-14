@@ -33,7 +33,7 @@ Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding 
 ## Custom Domains
 If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar, but we've created documentation for several popular DNS managers:
 
-<Accordion title={"DNS Host-Specific Instructions"} id={"host-specific2"} icon={"info-sign"}>
+<Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
     <ul class="top-docs top-docs-2col docs-2col-panel">
       {% for doc in data.docs_tags.providers %}
         {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}

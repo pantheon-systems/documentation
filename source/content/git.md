@@ -113,7 +113,7 @@ Are you sure you want to continue connecting (yes/no)?
 
 You can safely type `yes` and press enter to add the server's SSH key fingerprint to your computer's `known_hosts` file. Additional connections to this specific Pantheon container will complete successfully without prompts. However, you will be prompted to confirm connections following a container migration, which is part of regular maintenance on the platform. See the following Pro Tip to automatically accept all Pantheon connections.
 
-<Accordion title={"Pro Tip: Trust All Pantheon Hosts"} id={"host-keys"} icon={"lightbulb"}>
+<Accordion title="Pro Tip: Trust All Pantheon Hosts" id="host-keys" icon="lightbulb">
 The key fingerprint is a representation of the public key, used by the remote server to identify itself. These public keys, along with private keys, form a **keypair** used by the [Diffie-Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) to encrypt communication between you and the server.
 
 On a standard server system, the server administrator would publish their host keys and fingerprints publicly, so clients could match them to the keys presented at these prompts. On Pantheon however, application containers are created and destroyed too rapidly to maintain a public key list.

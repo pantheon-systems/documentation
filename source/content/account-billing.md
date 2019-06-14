@@ -16,7 +16,9 @@ Review **credit card profiles** for the sites you pay for and own on Pantheon. E
 The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
 <Alert title="Note" type="info">
+
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
+
 </Alert>
 
 ## View Invoices

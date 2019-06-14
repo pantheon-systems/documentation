@@ -58,7 +58,9 @@ If the automated core update doesn't appear to be working, it's possible there a
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore` or `.htaccess`).
 
 <Alert title="Warning" type="danger">
+
 This process can potentially cause loss of data. Be sure you have no custom code in your CMS core before proceeding.
+
 </Alert>
 
 <TabList>
@@ -141,7 +143,9 @@ In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to o
   ```
 
     <Alert title="Warning" type="danger">
+
     Do not remove `wp-config.php`.    
+
     </Alert>
 
 1. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress).

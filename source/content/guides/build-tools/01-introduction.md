@@ -73,7 +73,7 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
 <p class="text-center" >![Artifact Deployment](../docs/assets/images/artifact-deployment.png)</p>
 
-<Accordion title={"Pull Requests"} id={"understand-pr"} icon={"lightbulb"}>
+<Accordion title="Pull Requests" id="understand-pr" icon="lightbulb">
 One advantage of managing code this way is that it keeps the change sets (differences) for pull requests as small as possible. If a pull request upgrades several dependencies, only the dependency metadata file will change; the actual code changes in the upgraded dependencies themselves are not shown.
 
 GitHub pull requests (PRs) are a formalized way of reviewing and merging a proposed set of changes to the source repository. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before merging the PR to accept changes.

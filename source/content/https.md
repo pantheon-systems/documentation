@@ -18,7 +18,7 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 For more detailed instructions pertaining to your specific DNS host, click below:
 
-<Accordion title={"DNS Host-Specific Instructions"} id={"host-specific2"} icon={"info-sign"}>
+<Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
     <ul class="top-docs top-docs-2col docs-2col-panel">
       {% for doc in data.docs_tags.providers %}
         {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}

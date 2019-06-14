@@ -34,8 +34,11 @@ if (!isset($_ENV['PANTHEON_ENVIRONMENT']) || ($_ENV['PANTHEON_ENVIRONMENT'] != '
     ini_set("opcache.enable", 0);
 }
 ```
+
 <Alert title="Warning" type="danger">
+
 Disabling opcache has a sever impact on performance, so care should be taken not to do this on a production system. Note that `display_errors` is set to `off` on Pantheon live environments, so there is no motivation to disable opcache in production anyway. When disabling opcache in dev and multi-dev environments, be sure to re-enable it again once you are done debugging.
+
 </Alert>
 
 You may also search for deprecated constructors using the PHP linter on the command line (requires PHP 7.0 to be installed locally). First, create a local copy of your site as described in [Local Development](/docs/local-development); then, run:
@@ -62,5 +65,7 @@ Opcache is always enabled on Pantheon. When opcache is in use, PHP will print an
 Opcache also influences when this error is displayed. Since opcache caches the compiled form (opcodes) of the PHP that is being executed, the deprecation notices will not be printed when the PHP opcodes are fetched from the opcache. This is what leads to the intermittent nature of this problem.
 
 <Alert title="Note" type="info">
+
 The deprecation notices used in the examples on this page appeared in an old version of the Drupal [views](https://www.drupal.org/project/views) module for Drupal 7.x. This was fixed in issue [#2579819](https://www.drupal.org/node/2579819), and included in the [7.x-3.12](https://www.drupal.org/project/views/releases/7.x-3.12) release.
+
 </Alert>

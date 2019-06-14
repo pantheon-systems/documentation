@@ -36,7 +36,7 @@ Download a zip archive of the plugin's most recent release, then install it by u
   -L | tar -C ~/.terminus/plugins -xvz
 ```
 
-<Accordion title={"Explore Advanced Install Methods (Optional)"} id={"advance-installs"} icon={"lightbulb"}>
+<Accordion title="Explore Advanced Install Methods (Optional)" id="advance-installs" icon="lightbulb">
 
 ### Install via Composer
 

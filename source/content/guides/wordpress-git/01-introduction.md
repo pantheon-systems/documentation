@@ -21,7 +21,7 @@ This guide demonstrates how SFTP users can build WordPress sites on Pantheon's g
 
 Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and text editor without compromising use of the WordPress Dashboard or adding a lot of complexity to your workflow. But first, why should you use git, when SFTP and a text editor has been working fine? Here are a few reasons why:
 
-<Accordion title={"Benefits of Git"} id={"unique-anchor"} icon={"lightbulb"}>
+<Accordion title="Benefits of Git" id="unique-anchor" icon="lightbulb">
 #### Collaborate
 Any kind of collaboration is easier and safer with version control. You can work in parallel with others and not step on any toes. Even working alone, you can have many features in progress on a site, but without risking the stability of the current site.
 

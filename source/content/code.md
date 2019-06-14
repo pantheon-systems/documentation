@@ -29,7 +29,9 @@ Drupal site code repositories are clones of one of our Drupal upstreams: [Drops-
 
 
 <Alert title="Note" type="info">
+
 The `sites/default/files` directory is represented in your code repository as a symbolic link to the Pantheon environment's `files/` directory.
+
 </Alert>
 
 ### WordPress Code Structure
@@ -61,7 +63,9 @@ WordPress site code repositories are clones of one our [WordPress upstream](http
 ```
 
 <Alert title="Note" type="info">
+
 The `wp-content/uploads` directory is represented in your code repository as a symbolic link to the Pantheon environment's `files/` directory.
+
 </Alert>
 
 ## Managing Permissions
@@ -88,7 +92,9 @@ The Dev environment provides [one-click updates](/docs/core-updates/) for your s
   </DefList>
 
 <Alert title="Note" type="info">
+
 The Test and Live environments do not have write access to code outside of the deployment process.
+
 </Alert>
 
 ## Development

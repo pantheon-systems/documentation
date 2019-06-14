@@ -19,7 +19,7 @@ image: buildToolsGuide-thumb
 ---
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
 
-<Accordion title={"Composer"} id={"understand-composer"} icon={"lightbulb"}>
+<Accordion title="Composer" id="understand-composer" icon="lightbulb">
 
 ## Composer Fundamentals
 Composer is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a WordPress or Drupal site. At its primary level, Composer needs:

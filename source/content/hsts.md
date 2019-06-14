@@ -30,7 +30,7 @@ Once enabled, the following header will be sent in responses:
 Strict-Transport-Security: max-age=15984000; includeSubDomains; preload
 ```
 
-<Accordion title={"Troubleshooting"} id={"unique-anchor"} icon={"wrench"}>
+<Accordion title="Troubleshooting" id="unique-anchor" icon="wrench">
 #### Nested Docroot
 
 Site's using our [nested docroot](/docs/nested-docroot/) feature to serve WordPress from a subdirectory will experience a redirect loop upon activation of the LH HSTS plugin:

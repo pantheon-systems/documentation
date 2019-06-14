@@ -19,7 +19,7 @@ image: buildToolsGuide-thumb
 ---
 In this lesson, we'll use the Configuration Management system within the Drupal Admin interface to set block placements for our example site. Continuing from the previous step, we'll be working in the feature branch environment, not Dev.
 
-<Accordion title={"Configuration Management"} id={"understand-config"} icon={"lightbulb"}>
+<Accordion title="Configuration Management" id="understand-config" icon="lightbulb">
 #### Configuration Management
  While it is possible to configure your site by directly editing the exported configuration files (as we did in the [previous lesson](/docs/guides/build-tools/new-pr/)), it's only easy for properties with a known location and format. Most of the time, it's far more convenient to use the [Configuration Management system within the Drupal admin interface](/docs/drupal-8-configuration-management/).
 

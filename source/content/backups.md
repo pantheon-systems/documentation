@@ -15,6 +15,7 @@ We strongly urge you to backup your site regularly.
 ![Backups tab](../docs/assets/images/dashboard/backup-tool.png)
 
 <Alert title="Exports" type="export">
+
 This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 <pre>
 <code class="bash">export site=yoursitename
@@ -30,7 +31,9 @@ You can create a new backup and set the timing for how long the backup is kept. 
 Select the **Backups** tab, and click **Create New Backup**. The status is shown in the progress bar as it's being created, and the jobs workflow shows the number of active jobs. You can continue on with development while the backup is in progress.
 
 <Alert title="Warning" type="danger">
+
 Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.
+
 </Alert>
 
 ![Create site backup Pantheon Dashboard](../docs/assets/images/dashboard/manual-site-backup.png)
@@ -140,7 +143,9 @@ The newest backup will appear at the top of the list. When the retention period 
 Click the down arrow next to Code, Database, or Files to access the link for the offsite backup.
 
 <Alert title="Note" type="info">
+
 Some older versions of Google Chrome can cause database backups to be downloaded with an incorrect file extensions (e.g. `.sql` instead of `sql.gz`). You can resolve this problem by updating Google Chrome or by renaming the file using the correct extension.
+
 </Alert>
 
 ### Via the Command Line
@@ -158,6 +163,7 @@ terminus backup:get $site.$env --element=<code|files|db> --to=path/to/file.tar.g
 ```
 
 <Alert title="Note" type="info">
+
 When specifying the file path for `--to`, be sure to use the correct extension. File and code backups are saved as `.tar.gz`, while database backups are saved as `.sql.gz`.
 
 </Alert>
@@ -172,7 +178,9 @@ Now that you have created the archive files, check out how to [restore an enviro
 
 
 <Alert title="Note" type="info">
+
 Links to backups are signed URLs directly from Google Cloud Storage and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive.
+
 </Alert>
 
 

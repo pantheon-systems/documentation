@@ -40,7 +40,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
   terminus drupal $SITE.$ENV -- generate:theme
   ```
 
-  <Accordion title={"Drupal Console Generate Theme"} id={"#understand-drupal-console"} icon={"lightbulb"}>
+  <Accordion title="Drupal Console Generate Theme" id="#understand-drupal-console" icon="lightbulb">
 
   Drupal Console will ask a series of questions about your theme. For many of them you can use the default value by just hitting **Enter**. Provide additional information as prompted, such as:
 

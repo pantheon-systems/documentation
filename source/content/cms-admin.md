@@ -8,6 +8,7 @@ categories: []
 Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/docs/git/) or working in the WordPress or Drupal admin interface in [SFTP](/docs/sftp/) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/docs/multidev/)) in **SFTP** mode.
 
 <Alert title="Exports" type="export">
+
 This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 
 ```bash
@@ -35,7 +36,9 @@ Operations that require write access to the codebase must be executed while the 
 WordPress' admin interface has built in tools to manage plugins and themes, allowing you to install and manage popular themes and plugins from the main WordPress.org repository.
 
 <Alert title="Warning" type="danger">
+
 Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).
+
 </Alert>
 
 ### Manage Plugins and Themes
@@ -67,13 +70,15 @@ You should *never* have to enter credentials into the WordPress Dashboard. Visit
 Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface).
 
 <Alert title="Warning" type="danger">
+
 Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).
+
 </Alert>
 
 ### Install a New Module
 
 <TabList>
--
+
 <Tab title="Drupal 8" id="d8-1" active={true}>
 
 1. Get the URL to the code you want to install from Drupal.org:

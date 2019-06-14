@@ -34,7 +34,7 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
    ![Open in your default SFTP client window](../docs/assets/images/guides/git-wordpress/sftp-connection-mode-client.png)
 
-   <Accordion title={"Troubleshooting"} id={"unique-anchor"} icon={"wrench"}>
+   <Accordion title="Troubleshooting" id="unique-anchor" icon="wrench">
    ### Manually Connect via SFTP
    If for some reason your client does not establish a connection to Pantheon by clicking the handy default link, use the provided values from the Site Dashboard's **SFTP Connection Info** to open a connection.
 
@@ -118,7 +118,7 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 
 8. Now we should have a working child theme. From the WordPress Dashboard, navigate to the Appearance tab and activate the child theme.
 
-   <Accordion title={"PropTip"} id={"unique-anchor1"} icon={"lightbulb"}>
+   <Accordion title="PropTip" id="unique-anchor1" icon="lightbulb">
    #### WP-CLI & Terminus
    You can do the exact same process from the command line using [Terminus](/docs/terminus/), the Pantheon CLI. Install Terminus, then run a WP-CLI command against the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment to create the child theme scaffold for you automatically. That's right, go from all the steps above to a one-liner to kick things into warp speed:
 

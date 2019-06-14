@@ -17,11 +17,19 @@ While Pantheon does not offer DNS management services, we can help you to unders
 
 We offer DNS provider-specific instructions for several common DNS hosts:
 
-{% for doc in data.docs_tags.providers %}
-  {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-    <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-  {% endif %}
-{% endfor %}
+
+ - [1&1 Domain Configuration](/docs/1-and-1/)
+ - [Cloudflare Domain Configuration](/docs/cloudflare/)
+ - [DNS Made Easy Domain Configurationi](/docs/dns-made-easy/)
+ - [DreamHost Domain Configuration](/docs/dreamhost/)
+ - [Dyn Domain Configuration](/docs/dyn/)
+ - [eNom Domain Configuration](/docs/enom/)
+ - [Gandi Domain Configuration](/docs/gandi/)
+ - [GoDaddy Domain Configuration](/docs/godaddy/)
+ - [Google Domain Configuration](/docs/google/)
+ - [Namecheap Domain Configuration](/docs/namecheap/)
+ - [Network Solutions Domain Configuration](/docs/network-solutions/)
+ - [Amazon Route 53 Domain Configuration](/docs/route53/)
 
 ## DNS Terminology
 
@@ -74,7 +82,7 @@ The service that publishes your domain's DNS records
 
 Every DNS record has a **Time To Live** (**TTL**) value, which specifies how long any DNS server should hold that record, before dropping it and asking for a new version from its upstream DNS provider. TTLs are usually set in seconds with a few common ones being `86400` (24 hours),  `43200` (12 hours), `3600` (1 hour), and `500` (5 minutes).
 
-**DNS Propagation** is the time it takes for changes made to DNS records to be reflected across DNS servers globally. A lower TTL value means faster propagation, but it's important to note that it is not a 1:1 ratio. Between your <a href=#where-are-my-dns-records-hosted data-proofer-ignore>authoritative name server</a> and the DNS servers of any particular ISP could be any number of intermediate DNS servers. Each server in that chain will wait for the records it holds to expire before requesting new ones. Because of this, it can take *several times longer* than your record's TTL value to see changes reflected for everyone.
+**DNS Propagation** is the time it takes for changes made to DNS records to be reflected across DNS servers globally. A lower TTL value means faster propagation, but it's important to note that it is not a 1:1 ratio. Between your [authoritative name server](#where-are-my-dns-records-hosted) and the DNS servers of any particular ISP could be any number of intermediate DNS servers. Each server in that chain will wait for the records it holds to expire before requesting new ones. Because of this, it can take *several times longer* than your record's TTL value to see changes reflected for everyone.
 
 ### DNS Migration Prep
 
@@ -121,7 +129,9 @@ Registrar: Gandi SAS
 The example above uses `| grep Registrar:` to filter the results to what we're looking for specifically. Remove it to see the full output of the `whois` command. Our example shows that the domain `pantheon.io` is registered with Gandi.
 
 <Alert title="Note" type="info">
- Your registrar may appear to have DNS records for your domain and still not be the authoritative name server. Use `dig` as described above to confirm the name server in use.
+
+Your registrar may appear to have DNS records for your domain and still not be the authoritative name server. Use `dig` as described above to confirm the name server in use.
+
 </Alert>
 
 ### Can I buy my domain or manage DNS with Pantheon?
@@ -129,7 +139,8 @@ The example above uses `| grep Registrar:` to filter the results to what we're l
 No, Pantheon is neither a domain registrar nor a DNS manager. Many other platforms and hosting providers offer DNS servers and while it's convenient, it's often inflexible. Providers that offer nameservers usually build other features (like HTTPS) in a way that will only work for customers who use the provided nameservers. This approach is fine until it interferes with more advanced deployments.
 
 
-<Accordion title={"Learn More"} id={"nameservers-drop"} icon={"lightbulb"}>
+<Accordion title="Learn More" id="nameservers-drop" icon="lightbulb">
+
   Pantheon is built to support advanced website deployment needs, and that means allowing site owners to use the DNS provider of their choice. If Pantheon required specific nameservers, it would interfere with these major use cases (among others):
 
   * **Large organizations and institutions with Information Technology departments that operate or configure DNS.** If Pantheon required use of particular DNS servers, it would intefere with the ability to use Pantheon for the organization's websites.
@@ -138,6 +149,7 @@ No, Pantheon is neither a domain registrar nor a DNS manager. Many other platfor
   * **Programmatic updates.** Such use cases include domain control validation for obtaining certificates and automated responses to security events. Different DNS services support different update APIs, and it's unlikely Pantheon would ever be able to support them all.
 
   If your site doesn't have these advanced needs, there are free and inexpensive options outside of Pantheon. We recommend considering your domain registrar's DNS services, [Amazon Route 53](https://aws.amazon.com/route53/), [Google Cloud DNS](https://cloud.google.com/dns/), or [Cloudflare](https://woorkup.com/cloudflare-dns/).
+
 </Accordion>
 
 ### Why does the `www` subdomain redirect to the bare domain?
