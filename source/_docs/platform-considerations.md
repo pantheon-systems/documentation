@@ -125,6 +125,9 @@ Be aware, even when using an external CDN to host files, you cannot upload files
 
 See our documentation for [Drupal](/docs/drupal-s3) and [WordPress](/docs/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
 
+### Upload Speed
+Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/docs/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html){.external} to help determine if your local internet connection is impeding file uploads to Pantheon.
+
 ## Large Code Repository
 
 When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs.

@@ -4,17 +4,17 @@ description: Upgrade a free site to a paid plan or downgrade a site's current pl
 tags: [billing]
 contributors: [cityofoaksdesign]
 ---
+
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
+
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing){.external}, contact your Supporting Organization for assistance, in order to retain your special pricing rate.
+
 ## Access Site Plan
 1. Go to the Site Dashboard.
 2. For Sandbox sites, click the **Upgrade** button:
  ![Upgrade plan button shown on Sandbox sites](/source/docs/assets/images/dashboard/upgrade-plan.png)
  Otherwise, click the **current plan**:
  ![Change current plan for paid sites](/source/docs/assets/images/dashboard/change-plan.png)
-
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
-</p></div>
 
 ## Upgrades
 Site plan upgrades will change your site's resources and access to features immediately. The associated card will be charged a prorated amount for the remainder of the current billing period.
@@ -23,7 +23,7 @@ Site plan upgrades will change your site's resources and access to features imme
 Site plan downgrades will change your site's resources and access to features immediately. Beginning on the next billing cycle, the associated card will be charged for the new site plan.
 
 ## Roles & Permissions
-The permission to manage a site's plan is granted only to the roles of **Site Owner** / **User in Charge** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see <a href="/docs/change-management/#site-level-roles-and-permissions" data-proofer-ignore>Role-Based Permissions & Change Management</a>.
+The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see <a href="/docs/change-management/#site-level-roles-and-permissions" data-proofer-ignore>Role-Based Permissions & Change Management</a>.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>
@@ -148,7 +148,7 @@ The Site Owner will receive an email confirmation of this change, a new invoice 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
 ## Cancel Current Plan
-Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox. 
+Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox.
 
 <div class="alert alert-info" markdown="1">
 #### Note {.info}

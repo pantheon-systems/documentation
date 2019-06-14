@@ -21,32 +21,28 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 
 1. Open your terminal and enter the following command to generate a key:
 
-   ```nohighlight
+   ```bash
    ssh-keygen
    ```
-     <div class="alert alert-info">
-        <h4 class="info">Note</h4>
-        <p markdown="1">
-          Windows users can use a command line emulator such as [Git Bash](https://git-for-windows.github.io/) or [Bash on Ubuntu on Windows](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) (Windows 10 only) to generate SSH keys. This also sets you up to manage code locally with Git and interact with the Site Dashboard using [Terminus](/docs/terminus).
-        </p>
-      </div>
+  This command works on Linux, MacOS, and Windows 10.
 
-2. Unless you're an advanced user, just press **enter** for every question. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
-3. Copy the content from `~/.ssh/id_rsa.pub` to your clipboard.
+1. Unless you have reason to change it, leave the default location of `~/.ssh/id_rsa`. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
 
- Windows (emulator required) and Linux users must output the SSH key to a file:
- ```nohighlight
- cat ~/.ssh/id_rsa.pub > ~/Desktop/key_for_pantheon.txt
- ```
+1. A passphrase is recommended to provide greater security, but can conflict with tools that cannot handle them.
 
- Then open the `key_for_pantheon.txt` file on your desktop, select all and copy.
+1. Once the files are created, copy the contents of `~/.ssh/id_rsa.pub` to your clipboard.
 
- Mac users can execute the following to copy the SSH key in a single step:
+   Linux and Mac users can `cat`the file to the terminal and copy the output:
 
- ```nohighlight
- pbcopy < ~/.ssh/id_rsa.pub
- ```
+   ```bash
+   cat ~/.ssh/id_rsa.pub
+   ```
 
+   Windows users can achieve the same result with `type`:
+
+   ```bash
+   type .ssh\id_rsa.pub
+   ```
 
 ## Add Your SSH Key to Pantheon
 

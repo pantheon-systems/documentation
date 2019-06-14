@@ -127,8 +127,8 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 2. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
     ```bash
-    SITE=<site_name>
-    `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
+    export SITE=<site_name>
+    terminus connection:info $SITE.dev --fields='Git Command' --format=string
     cd $SITE
     ```
 3. Set the connection mode to Git:
@@ -161,17 +161,38 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
     git commit -am "Add Sendgrid API Integration"
     git push origin master
     ```
-10. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
+
+10. Switch the site back to SFTP mode:
+
+    ```bash
+    terminus connection:set $SITE.dev sftp
+    ```
+
+11. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
 
     ```bash
     terminus drush $SITE.<env> -- en composer_vendor -y
     terminus drush $SITE.<env> -- en sendgrid_integration -y
     ```
-11.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+12.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
 
-12.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+13.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
+
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Under `/admin/reports/status` you may see a warning that `composer.lock` isn't found in `code/sites/all`. The actual `composer.lock` is in the code root, but you can symlink to it to remove the warning.
+
+From the project root:
+
+```bash
+cd sites/all
+ln -s ../../composer.lock ./composer.lock
+```
+
+Then commit and push the symlink to Pantheon.
+</div>
 
 ### SendGrid SMTP Integration {.info}
 

@@ -72,7 +72,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
   <div class="alert alert-info" role="alert" markdown="1">
   ### Note {.info}
-  Place this code in `wp-config.php` to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
+  Place this code in an [MU Plugin](/docs/mu-plugin/) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
   </div>
   ```php
   /*
@@ -105,6 +105,29 @@ Some web developers choose to aggregate all of their caching logic in one place,
   }
   function add_header_nocache() {
         header( 'Cache-Control: no-cache, must-revalidate, max-age=0' );
+  }
+  
+  
+  /* For WP REST API specific paths, we use a different approach by using the rest_post_dispatch filter */ 
+  
+  // wp-json paths or any custom endpoints 
+  $regex_json_path_patterns = array(
+    '#^/wp-json/wp/v2?#',
+    '#^/wp-json/?#'
+  );
+
+  foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
+    if (preg_match($regex_json_path_pattern, $_SERVER['REQUEST_URI'])) {
+        // re-use the rest_post_dispatch filter in the Pantheon page cache plugin  
+        add_filter( 'rest_post_dispatch', 'filter_rest_post_dispatch_send_cache_control', 12, 2 );
+
+        // Re-define the send_header value with any custom Cache-Control header
+        function filter_rest_post_dispatch_send_cache_control( $response, $server ) {
+            $server->send_header( 'Cache-Control', 'no-cache, must-revalidate, max-age=0' );
+            return $response;
+        }
+        break;
+    }
   }
   ```
   </div>

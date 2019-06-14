@@ -33,6 +33,11 @@ This test site will be used later for evaluating the Custom Upstream changes we 
 
 ## Test and Release Pantheon Core Updates
 
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+To maintain best practice, some of the steps in this section require access to the [Multidev](/docs/multidev/) feature. Those steps can be skipped, but it isn't recommended.
+</div>
+
 1. From your local clone of your Custom Upstream repository, add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote){.external} if you haven't done so already:
 
     <!-- Nav tabs -->
@@ -140,6 +145,16 @@ Updates will become available to sites downstream as one-click updates within an
 <p markdown="1">Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n`. Pantheon site level repositories use these tags to deploy code to Test and Live environments.</p>
 </div>
 
+## Delete Custom Upstream
+An Upstream cannot be deleted if there are sites using it.
+
+1. From the Organization Dashboard, navigate to **Upstreams**.
+
+1. Click **Settings** next to the Upstream you want to delete.
+
+1. Under **Source**, click the **Delete Upstream** button:
+
+  ![Delete Upstream Button](/source/docs/assets/images/dashboard/delete-upstream.png)
 
 ## Tips and Tricks
 ### Use the Pantheon Workflow
@@ -151,6 +166,18 @@ For agencies that manage large portfolios, we suggest picking a few sample sites
 ### Upstream Configuration File
 Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. For details, see [Pantheon YAML Configuration Files](/docs/pantheon-yml/).
 
+### Redirects
+We normally suggest [PHP redirects](/docs/redirects/) be placed into `wp-config.php` for WordPress, and `settings.php` for Drupal. Since these files are likely to be modified by a Custom Upstream, creating conflicts, we suggest a `require_once` statement to point to an external file unique to each site, and not version-controlled by the upstream.
+
+```php
+if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  require_once( dirname( __FILE__ ) . '/redirects.php' );
+}
+```
+
+Remember that this file is not included in the Custom Upstream and needs to exist uniquely on each installation, so you will need to create one for each of your sites. You can then expand that conditional to lean on specific environments using instructions in the [Configuring wp-config.php](/docs/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment) doc.
+
+For WordPress sites, another option is to store redirects in an [MU-Plugin](/docs/mu-plugin/).
 
 ## Troubleshoot
 ### Resolve Conflicts

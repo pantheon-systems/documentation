@@ -66,12 +66,60 @@ The best solution is to communicate with the maintainer of the module or plugin 
     <div class="alert alert-info">
     <h4 class="info">Note</h4>
     <p markdown="1">
-    In our example, we created the target directory of the symlink as ./wp-content/uploads/new-directory. Make sure this directory is created via SFTP if it does not exist yet.
+    In our example, we created the target directory of the symlink as `./wp-content/uploads/new-directory`. Make sure this directory is created via SFTP if it does not exist yet.
     </p>
     </div>
 
 7. Deploy to Test and confirm results.
 8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
+
+## Example
+
+As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to the code base.
+
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+You must manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
+</div>
+
+### For MacOS & Linux:
+From the `wp-content` directory:
+
+```bash
+ln -s ./uploads/cache ./wp-content/cache
+ln -s ./uploads/wp-rocket-config ./wp-content/wp-rocket-config
+```
+
+
+To verify, use `ls -al`:
+
+```nohighlight
+cache -> ./uploads/cache
+wp-rocket-config -> ./uploads/wp-rocket-config
+```
+
+### For Windows:
+Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
+
+```bash
+mklink /d ./wp-content/cache ./uploads/cache
+mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
+```
+
+Each command will return the following upon success:
+
+```nohighlight
+symbolic link created for .\wp-content\cache <<===>> .\uploads\cache
+symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-rocket-config
+```
+
+To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
+You can also verify success using `dir`:
+
+```nohighlight
+<SYMLINKD>        cache [.\uploads\cache]
+<SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
+```
 
 ## Troubleshooting
 

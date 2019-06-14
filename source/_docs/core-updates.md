@@ -16,7 +16,7 @@ Apply one-click updates to individual sites repositories using the Site Dashboar
 ## Apply Upstream Updates via the Site Dashboard
 1. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
 
-  ![upstream updates](/source/docs/assets/images/dashboard/updates-available-2.png)
+  ![upstream updates](/source/docs/assets/images/dashboard/updates-available.png)
 
 2. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to **Git**.
 3. Select whether you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied.
@@ -106,6 +106,47 @@ If you receive the error that you have conflicts while updating core, the fastes
 Double-check the files before going forward to make sure no bugs were introduced.
 
 If this procedure fails with the message `Already up to date.` refer to [this troubleshooting section](#one-click-updates-do-not-appear-after-rewriting-git-history) to reset your git repository.
+
+#### Overwrite WordPress Core Via SFTP
+
+In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to overwrite core files.
+
+1. Confirm that the Site Connection Mode is set to SFTP. Then, via SFTP, delete these files and folders:
+
+  ```nohighlight
+  ├── README.md
+  ├── index.php
+  ├── license.txt
+  ├── readme.html
+  ├── wp-activate.php
+  ├── wp-blog-header.php
+  ├── wp-comments-post.php
+  ├── wp-config-sample.php
+  ├── wp-cron.php
+  ├── wp-links-opml.php
+  ├── wp-load.php
+  ├── wp-login.php
+  ├── wp-mail.php
+  ├── wp-settings.php
+  ├── wp-signup.php
+  ├── wp-trackback.php
+  ├── xmlrpc.php
+  ├── wp-admin
+  ├── wp-includes
+  ├── wp-content
+      └── index.php
+      └── mu-plugins
+          └── pantheon.php
+  ```
+
+    <div class="alert alert-danger" role="alert" markdown="1">
+    <h4 class="info">Warning</h4>
+    Do not remove `wp-config.php`.
+    </div>
+
+1. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress){.external}.
+1. Commit and switch back to Git mode.
+1. Apply 1-click core updates via the dashboard and the auto-resolve should be checked. The update warning should disappear after a successful update.
 
 ### Merge Conflict Resolution
 

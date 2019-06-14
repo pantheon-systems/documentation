@@ -284,18 +284,14 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 <hr>
 
 
-##WordPress Plugins
+## WordPress Plugins
 
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/){.external}
-**Issue 1**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
+**Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
 
 The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migration/storage`, which is not permitted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access).
 
 **Solution**: You can create and download full backups from your [Dashboard](/docs/backups/).
-
-**Issue 2**: Uploading large import files hits the 59 second [timeout](/docs/timeouts/), or you're getting invalid file paths.
-
-**Solution 2**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
 
 <hr>
 
@@ -404,6 +400,35 @@ define('FS_METHOD', 'direct');
 
 <hr>
 
+### [Disable REST API and Require JWT / OAuth Authentication](https://wordpress.org/plugins/disable-rest-api-and-require-jwt-oauth-authentication/){.external}
+
+**Issue:** When this plugin is enabled along with WooCommerce, WP-CLI and Pantheon dashboard workflows like **Cache Clear** can fail. This issue may not happen for environments where WP-CLI is not installed (local machine, other hosting, etc):
+
+```nohighlight
+Fatal error: Uncaught Error: Call to undefined method WP_Error::get_data() in /srv/bindings/.../code/wp-content/plugins/woocommerce/includes/cli/class-wc-cli-runner.php:64
+```
+
+For WooCommerce, the CLI runner needs some of the REST endpoints for it to function. The plugin is only allowing a specific set of paths for allowed access.
+
+**Solution:** In the `plugin.php` file, edit the `if ( ! is_user_logged_in() ) ` conditional to include a check for CLI PHP requests:
+
+```php
+    if ( ! is_user_logged_in() && php_sapi_name() != 'cli' ) {
+    
+        // Only allow these endpoints: JWT Auth.
+        $allowed_endpoints = array(
+            '/jwt-auth/v1/token/validate',
+            '/jwt-auth/v1/token',
+            '/oauth/authorize',
+            '/oauth/token',
+            '/oauth/me',
+    );
+    $allowed_endpoints = apply_filters( 'reqauth/allowed_endpoints', $allowed_endpoints );
+
+```
+
+<hr>
+
 ### [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/){.external}
 
 **Issue:** EWWW Image Optimizer attempts to install and execute third party binary tools to perform image optimization, which is restricted on our platform. The error message is:
@@ -463,6 +488,10 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 ### [Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/){.external}
 **Issue**: Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
+<hr>
+
+### [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/){.external}
+**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/docs/new-relic/) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/docs/quicksilver/).
 <hr>
 
 ### [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/){.external}
@@ -680,12 +709,16 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 ### [WP All Import / Export](http://www.wpallimport.com/){.external}
 
-**Issue:** Large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/docs/timeouts) for more information.
+**Issue 1:** Large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/docs/timeouts) for more information.
 
 **Solution:** To avoid hitting a timeout, you can try:
 
  - Splitting the import or export into smaller parts
  - Set the plugin to only process 1 or 2 records per iteration
+ 
+**Issue 2**: Uploading large import files hits the 59 second [timeout](/docs/timeouts/), or you're getting invalid file paths.
+
+**Solution**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
 
 <hr>
 

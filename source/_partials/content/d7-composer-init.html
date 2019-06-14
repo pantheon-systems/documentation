@@ -1,5 +1,5 @@
 <li><p>Initialize composer to create a <code>composer.json</code> file with the Drupal 7 package repository:</p>
-  <pre><code class="command">composer init --repository=https://packages.drupal.org/7 --no-interaction</code></pre>
+  <pre><code class="bash">composer init --repository=https://packages.drupal.org/7 --no-interaction</code></pre>
 </li>
 <li><p>Edit the <code>composer.json</code> to add extra configuration that specifies installation paths for Drupal modules, libraries, and themes.</p>
  <div class="alert alert-info" role="alert">
