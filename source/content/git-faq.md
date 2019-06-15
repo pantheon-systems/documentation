@@ -18,19 +18,24 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
 <p style="margin-top:0px;margin-bottom:40px;">
-  <img src="/source/docs/assets/images/icon-version-control.png
-" data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;" />
-<br />
-<em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)</em>
+
+  
+![Worfklow Icon](../docs/assets/images/icon-version-control.png)
+
+
+*When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)*
+
 <br />
 </p>
 
+
 ### How do I resolve conflicts when updating Core?
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).</p>
+If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
 <TabList>
 
 <Tab title="Drupal 8" id="d8" active={true}>
+
   ```bash
   git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
   # resolve conflicts
@@ -127,18 +132,16 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 
 For more details, see [WordPress and Drupal Core Updates](/docs/core-updates).
 
-<<<<<<< HEAD:source/content/git-faq.md
-=======
 ### How can I resolve conflicts from Multidevs?
 If a merge conflict is preventing you from merging a Multidev environment, follow these steps to resolve.
 
 1. Set the Dev environment to Git mode:
 
-   ![Git Connection Mode](/source/docs/assets/images/dashboard/connection-mode-git.png)
+   ![Git Connection Mode](../docs/assets/images/dashboard/connection-mode-git.png)
 
 1. Clone the repository to your local computer:
 
-   ![Git Clone](/source/docs/assets/images/dashboard/git-string.png)
+   ![Git Clone](../docs/assets/images/dashboard/git-string.png)
 
 1. From the repository directory, pull the Multidev branch to master. In the example below, replace `multidev` with the Multidev environment name:
 
@@ -163,7 +166,6 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
    git push origin master
    ```
 
->>>>>>> add section on multidev merge conflict resolution:source/_docs/git-faq.md
 ## General Git Questions
 ### Does Pantheon support Git submodules?
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.

@@ -92,7 +92,7 @@ If you do not already have HTTPS, there's _no need_ to pre-provision.
 
 ### How many custom domains are supported?
 
-`markdown:/tables/custom-domains-limit.md`
+`markdown:tables/custom-domains-limit.md`
 
 
 ### Which browsers and operating systems are supported?
