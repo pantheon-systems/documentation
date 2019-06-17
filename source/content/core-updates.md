@@ -9,7 +9,9 @@ Pantheon maintains core upstream repositories for [WordPress](https://github.com
 Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/docs/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/support/#scope-of-support).
 
 <Alert title="Note" type="info">
+
 Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/docs/guides/build-tools/update/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
+
 </Alert>
 
 ## Apply Upstream Updates via the Site Dashboard
