@@ -33,7 +33,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
 
   Provide additional information as prompted, such as Organization (if any), and tokens for GitHub and CircleCI access:
 
-  ![Create Project Prompts](../docs/assets/images/pr-workflow/build-env-create-project-prompts.png)
+  ![Create Project Prompts](../../../docs/assets/images/pr-workflow/build-env-create-project-prompts.png)
 
   This process will create a secure keypair, with the public key going to Pantheon and the private key stored in CircleCI. If you remove either key, you will need to [generate a new pair](/docs/ssh-keys/) manually to fix the build process.
 
@@ -94,7 +94,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
 
 2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on GitHub:
 
-  ![Initial Project Page](../docs/assets/images/pr-workflow/initial-project-page.png)
+  ![Initial Project Page](../../../docs/assets/images/pr-workflow/initial-project-page.png)
 
   The badges on your project page provide quick access to the different components used to manage your site:
 
@@ -104,4 +104,4 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
 
   If you click on the CircleCI badge, you can watch your project's initial test run. Once your tests successfully complete, the orange CircleCI "no builds" badge will become a green "passing" badge:
 
-  ![Passing Project Page](../docs/assets/images/pr-workflow/passing-project-page.png)
+  ![Passing Project Page](../../../docs/assets/images/pr-workflow/passing-project-page.png)

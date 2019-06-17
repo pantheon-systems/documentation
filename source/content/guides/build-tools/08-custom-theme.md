@@ -33,14 +33,13 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
   export ENV=pr-custom-t
   ```
 
-
 1. Wait for CircleCI to build a new Pantheon Multidev environment (`pr-custom-t`), then use the `generate:theme` command as shown below to start the process of creating a subtheme:
 
   ```bash
   terminus drupal $SITE.$ENV -- generate:theme
   ```
 
-  <Accordion title="Drupal Console Generate Theme" id="#understand-drupal-console" icon="lightbulb">
+  <Accordion title="Drupal Console Generate Theme" id="understand-drupal-console" icon="lightbulb">
 
   Drupal Console will ask a series of questions about your theme. For many of them you can use the default value by just hitting **Enter**. Provide additional information as prompted, such as:
 
@@ -49,7 +48,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
     * Enter `no` to generate theme regions and theme breakpoints
     * Type `yes` when asked to confirm generation of the theme
 
-  ![Drupal console generate theme](../docs/assets/images/pr-workflow/drupal-console-generate-theme.png)
+  ![Drupal console generate theme](../../../docs/assets/images/pr-workflow/drupal-console-generate-theme.png)
 
   Once you do this, the files for your new theme will be written to the directory `code/web/themes/custom/amazing_theme` on the Pantheon Multidev environment. If you gave your theme a different name, replace `amazing_theme` with the appropriate name for your theme.
 
@@ -69,17 +68,17 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
 
 1. Run the following command to copy the `regions:` section of Bartik's default info file to your new custom theme's info file:
 
-    ```bash
-    cat web/core/themes/bartik/bartik.info.yml | sed -n -e '/regions:/,$p' >> web/themes/custom/amazing_theme/amazing_theme.info.yml
-    ```
+  ```bash
+  cat web/core/themes/bartik/bartik.info.yml | sed -n -e '/regions:/,$p' >> web/themes/custom/amazing_theme/amazing_theme.info.yml
+  ```
 
 1. Copy the logo over from Bartik to your custom theme:
 
-    ```bash
-    cp web/core/themes/bartik/logo.svg web/themes/custom/amazing_theme/logo.svg
-    ```
+  ```bash
+  cp web/core/themes/bartik/logo.svg web/themes/custom/amazing_theme/logo.svg
+  ```
 
-81
+1.
     ```bash
     echo "global-styling:
         version: VERSION
@@ -116,7 +115,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
     terminus env:view $SITE.$ENV
     ```
 
-    ![Modified css](../docs/assets/images/pr-workflow/modified-css.png)
+    ![Modified css](../../../docs/assets/images/pr-workflow/modified-css.png)
 
 12. You can use the [method described in an earlier lesson](/docs/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 

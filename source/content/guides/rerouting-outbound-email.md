@@ -53,7 +53,7 @@ $ git push origin master
 ```
 Now check your Site Dashboard and you’ll see that the module’s code has been deployed to your Dev environment.
 
-![The dashboard's showing the code was deployed to the Dev environment](../docs/assets/images/dashboard/verify-reroute-email-dashboard-commits1.png)
+![The dashboard's showing the code was deployed to the Dev environment](../../docs/assets/images/dashboard/verify-reroute-email-dashboard-commits1.png)
 
 
 
@@ -133,11 +133,11 @@ $ terminus drush <site>.live -- en reroute_email -y
 ```
 Now the Dev environment’s settings page for reroute_email (/admin/config/development/reroute_email) should look something like this:
 
-![The Reroute Email Configuration menu shows the email settings](../docs/assets/images/reroute-email-config-settings.png)
+![The Reroute Email Configuration menu shows the email settings](../../docs/assets/images/reroute-email-config-settings.png)
 
 If you don’t see what you’re expecting, review your settings.php and ensure the commit is showing on your Dashboard:
 
-![The dashboard showing the code was deployed to the Dev environment](../docs/assets/images/dashboard/verify-reroute-email-dashboard-commits2.png)
+![The dashboard showing the code was deployed to the Dev environment](../../docs/assets/images/dashboard/verify-reroute-email-dashboard-commits2.png)
 
 ##Go Forth and Test
 
@@ -146,11 +146,11 @@ That’s it! Now when Drupal sends out an email from any environment (except Liv
 ###See Reroute Email In Action
 To see exactly what we did, I forked a new [MultiDev](/docs/multidev/) Multidev environment called ```demo``` and requested a new account:
 
-![Drupal site showing account requested and emails sent](../docs/assets/images/reroute-email-account-requested.png)
+![Drupal site showing account requested and emails sent](../../docs/assets/images/reroute-email-account-requested.png)
 
 Requesting a new account fires off two emails: one to the requestor and another to the site owner; both are successfully rerouted to the email address defined in settings.php:
 
-![Email showing the reroute was successful](../docs/assets/images/reroute-email-confirmation.png)
+![Email showing the reroute was successful](../../docs/assets/images/reroute-email-confirmation.png)
 
 ##See Also
 [Manage Email Handling for Development or Testing](https://www.drupal.org/node/201981)

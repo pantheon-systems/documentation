@@ -23,25 +23,25 @@ Now that our **<span class="glyphicons glyphicons-equalizer"></span> Dev** site 
 
 1. In your site settings in Pantheon go to the **<span class="glyphicons glyphicons-equalizer"></span> Test** tab and click **Initialize Test Environment**:
 
-    ![Initializing the test environment](../docs/assets/images/guides/woocommerce/17-Pantheon-dashboard-initialize-test-environment.png)
+    ![Initializing the test environment](../../docs/assets/images/guides/woocommerce/17-Pantheon-dashboard-initialize-test-environment.png)
 
     It should only take a minute or two. And you'll know you're done when you see a message in the deploy log:
 
-    ![Test environment deploy log](../docs/assets/images/guides/woocommerce/18-Pantheon-dashboard-test-environment-deploy-log.png)
+    ![Test environment deploy log](../../docs/assets/images/guides/woocommerce/18-Pantheon-dashboard-test-environment-deploy-log.png)
 
     Now we can move the test site to live mode.
 
 2. We can repeat the process for Live by clicking on the **<span class="glyphicons glyphicons-cardio"></span> Live** tab, then **Initialize Live Environment**:
 
-    ![Initializing the live environment](../docs/assets/images/guides/woocommerce/19-Pantheon-dashboard-initialize-live-environment.png)
+    ![Initializing the live environment](../../docs/assets/images/guides/woocommerce/19-Pantheon-dashboard-initialize-live-environment.png)
 
     As soon as it's done you'll see a message in the deploy log.
 
-    ![Visit live site button on the Pantheon dashboard](../docs/assets/images/guides/woocommerce/20-Pantheon-dashboard-visit-live-site.png)
+    ![Visit live site button on the Pantheon dashboard](../../docs/assets/images/guides/woocommerce/20-Pantheon-dashboard-visit-live-site.png)
 
 3. Now is a great time to view the live site and make sure everything is up your standards.
 
-    ![WooCommerce site home page](../docs/assets/images/guides/woocommerce/21-WooCommerce-front-page.png)
+    ![WooCommerce site home page](../../docs/assets/images/guides/woocommerce/21-WooCommerce-front-page.png)
 
 ## Create a Test Order
 
@@ -49,7 +49,7 @@ Our site is looking good and loading really fast! Now to show you the power of m
 
 1. When you install Storefront it prompts you to add demo products. If you don't have any dummy products you can manually create products:
 
-    ![WooCommerce demo products on the site front end](../docs/assets/images/guides/woocommerce/22-WooCommerce-demo-products.png)
+    ![WooCommerce demo products on the site front end](../../docs/assets/images/guides/woocommerce/22-WooCommerce-demo-products.png)
 
     Add a product to the cart and proceed to checkout.
 
@@ -59,11 +59,11 @@ Our site is looking good and loading really fast! Now to show you the power of m
 
 2. Continue through the checkout process:
 
-    ![WooCommerce checkout](../docs/assets/images/guides/woocommerce/23-WooCommerce-checkout.png)
+    ![WooCommerce checkout](../../docs/assets/images/guides/woocommerce/23-WooCommerce-checkout.png)
 
 3. We've placed our order. If you want you can login to your admin screen and see all of the details:
 
-    ![WooCommerce order received thank you message](../docs/assets/images/guides/woocommerce/24-WooCommerce-order-received-thank-you-message.png)
+    ![WooCommerce order received thank you message](../../docs/assets/images/guides/woocommerce/24-WooCommerce-order-received-thank-you-message.png)
 
 ## Clone Content Down
 
@@ -77,8 +77,8 @@ Now let's bring these changes back to our test site:
 
 4. Finally click **Clone the Database from Live into the Test Environment**:
 
-  ![Cloning database and files on the Pantheon dashboard](../docs/assets/images/guides/woocommerce/25-Pantheon-dashboard-clone-database-files.png)
+  ![Cloning database and files on the Pantheon dashboard](../../docs/assets/images/guides/woocommerce/25-Pantheon-dashboard-clone-database-files.png)
 
   If you login to WordPress you'll see the order in the **<span class="glyphicons glyphicons-equalizer"></span> Test** environment:
 
-  ![A test order in the WooCommerce dashboard](../docs/assets/images/guides/woocommerce/26-WooCommerce-dashboard-test-order.png)
+  ![A test order in the WooCommerce dashboard](../../docs/assets/images/guides/woocommerce/26-WooCommerce-dashboard-test-order.png)

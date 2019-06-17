@@ -137,7 +137,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 
   If you have the Site Dashboard open, you'll see that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit, but we'll continue on the command line.
 
-  ![Pantheon Site Dashboard: Install CF7](../docs/assets/images/wordpress-commandline-install-cf7.png)
+  ![Pantheon Site Dashboard: Install CF7](../../docs/assets/images/wordpress-commandline-install-cf7.png)
 
 
 2. Review the file changes:
@@ -153,7 +153,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
   ```
 
   If you refer back to the Site Dashboard, you'll see the commit on the Dev environment:
-  ![Pantheon Site Dashboard: Commit CF7](../docs/assets/images/wordpress-commandline-commit-cf7-to-dev.png)
+  ![Pantheon Site Dashboard: Commit CF7](../../docs/assets/images/wordpress-commandline-commit-cf7-to-dev.png)
 
 4. Deploy the code to Test and pull content down from Live:
 
@@ -161,9 +161,11 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
   terminus env:deploy $TERMINUS_SITE.test --sync-content  --updatedb --cc --note="Deploy C7 plugin"
   ```
 
-      <Alert title="Note" type="info">
-      The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added posts and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
-    </Alert>
+  <Alert title="Note" type="info">
+  
+  The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added posts and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
+  
+  </Alert>
 
 5. Activate the Contact Form 7 plugin on the Test environment by making a manual configuration change:
 
@@ -177,9 +179,11 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
   terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy after CF7 Install"
   ```
 
-    <Alert title="Note" type="info">
-        We don't need the `--sync-content` flag when going to the Live environment because that environment already has our canonical database.
-      </Alert>
+  <Alert title="Note" type="info">
+
+  We don't need the `--sync-content` flag when going to the Live environment because that environment already has our canonical database.
+
+  </Alert>
 
 7. Activate the Contact Form 7 plugin on the Live environment by making a manual configuration change:
 
@@ -219,7 +223,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 
   You should see the new theme within **Appearance** > **Themes** of the WordPress Dashboard:
 
-  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](../docs/assets/images/wordpress-commandline-child-theme-wp.png)
+  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](../../docs/assets/images/wordpress-commandline-child-theme-wp.png)
 
   Now you're ready to edit your child theme. This allows your parent theme, in our case Shapely, to receive updates without conflict or interference to the functionality of the site.
 

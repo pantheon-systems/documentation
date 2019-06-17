@@ -34,7 +34,7 @@ Only files unique to the project are tracked as part of the project's main "sour
 
 Composer is used to fetch dependencies declared by the project as part of a CircleCI build step. This ensures that the final composed build results are installed on Pantheon:
 
-<p class="text-center" >![Artifact Deployment](../docs/assets/images/artifact-deployment.png)</p>
+<p class="text-center" >![Artifact Deployment](../../docs/assets/images/artifact-deployment.png)</p>
 
 <Accordion title="Pull Requests" id="understand-pr" icon="lightbulb">
 One advantage of managing code this way is that it keeps the change sets (differences) for pull requests as small as possible. If a pull request upgrades several dependencies, only the dependency metadata file will change; the actual code changes in the upgraded dependencies themselves are not shown.
