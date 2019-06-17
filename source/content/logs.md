@@ -46,12 +46,12 @@ Logs are stored within application containers that house your site's codebase an
 3. Open a terminal window and paste the SFTP connection command.
 4. Run the following SFTP command in terminal:
 
-   ```nohighlight
+   ```
    get -r logs
    ```
 
 You now have a local copy of the logs directory, which contains the following:
-```nohighlight
+```
 ├── logs
     └──newrelic.log
     └──nginx-access.log
@@ -68,18 +68,18 @@ You now have a local copy of the logs directory, which contains the following:
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
 3. Edit and execute the command by replacing `appserver` with `dbserver`:
 
- ```nohighlight
+ ```
  sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
  ```
 
 4. Run the following SFTP command in terminal:
 
- ```nohighlight
+ ```
  get -r logs
  ```
 
 You now have a local copy of the logs directory, which contains the following:
-```nohighlight
+```
 ├── logs
     └──mysqld-slow-query.log
     └──mysqld.log

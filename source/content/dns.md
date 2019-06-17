@@ -92,7 +92,7 @@ When you're planning a site migration, follow these simple steps to help minimiz
 
 2. Use `dig` to confirm the new TTL values have propagated to your ISP's DNS servers:
 
-    ```command
+    ```bash
     dig +nocmd +noall +answer pantheon.io
     pantheon.io.            60      IN      A       23.185.0.2
     ```

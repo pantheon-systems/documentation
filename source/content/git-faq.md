@@ -81,7 +81,7 @@ Double-check the files before going forward to make sure no bugs were introduced
 ### Where can I find a site's upstream URL?
 The upstream URL is provided within the Site Dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/docs/terminus):
 
-```nohighlight
+```
 terminus site:info <site> --field=upstream
 ```
 
@@ -172,7 +172,7 @@ No, Git submodules are not supported at this time. We recommend maintaining cust
 
 ### What are the Git tags?
 
-```nohighlight
+```
 $: git tag
 jenkins-ellis_update_drops_7-3
 jenkins-ellis_update_drops_7-4

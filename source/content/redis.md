@@ -406,7 +406,7 @@ On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remo
 ### How is Redis configured on the platform?
 Your `redis.conf` file can be retrieved via SFTP similarly to how you can download Redis log files (see below), or you can review it here:
 
-```nohighlight
+```
 port xxxxx
 timeout 300
 loglevel notice
@@ -438,7 +438,7 @@ Yes. There is a `redis.log` file that is available on the Redis container for ea
 
 To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
 
-```nohighlight
+```
 $ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in
 Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
 sftp> ls

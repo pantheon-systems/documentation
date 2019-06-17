@@ -61,7 +61,7 @@ You will need:
     In this example our project is call called `my-site`, so we begin by setting a local environment variable to this value. Adjust this any other variables to match your site settings.
     </Alert>
 
-    ```nohighlight
+    ```
     SITE="my-site"
     composer create-project pantheon-systems/example-drops-8-composer $SITE
     cd $SITE
@@ -70,7 +70,7 @@ You will need:
 
 2. Initialize a local Git repository within your project.
 
-    ```nohighlight
+    ```
     git init
     git add -A .
     git commit -m "Initial commit."
@@ -85,7 +85,7 @@ You will need:
 
 2. From your local command line, connect your local project to this repository as `origin`, and push the code to the master branch. Remember to replace the URL path:
 
-    ```nohighlight
+    ```
     git remote add origin git@github.com:YOUR-ORG/YOUR-PROJECT.git
     git push -u origin master
     ```
@@ -98,14 +98,14 @@ Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite th
 
 1. From your local terminal, use terminus to create a site on Pantheon:
 
-    ```nohighlight
+    ```
     terminus site:create $SITE "My Site" "Drupal 8" --org="My Team"
     terminus connection:set $SITE.dev git
     ```
 
 2. Add the Pantheon remote repository address and push the code to it:
 
-    ```nohighlight
+    ```
     PANTHEON_REPO=$(terminus connection:info $SITE.dev --field=git_url)
     git remote add pantheon $PANTHEON_REPO
     git push --force pantheon master
@@ -113,13 +113,13 @@ Now we will spin up a Drupal 8 site on Pantheon with Terminus, then overwrite th
 
 3. Complete the Drupal site configuration on Pantheon, replacing the values for `--site-mail`, `--account-mail`, and `--account-name`:
 
-    ```nohighlight
+    ```
     terminus build:env:install --site-mail="your email" --site-name="My Drupal Site" --account-mail="<your email>" --account-name="admin" $SITE.dev
     ```
 
 4. Verify the site is installed and working:
 
-    ```nohighlight
+    ```
     terminus env:view $SITE.dev
     ```
 
@@ -226,7 +226,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
 
 2. Jenkins logs into Pantheon:
 
-    ```nohighlight
+    ```
     #!/bin/bash
     echo "Logging into Terminus"
     terminus auth:login --machine-token=${TERMINUS_TOKEN}
@@ -234,25 +234,25 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
 
 3. Verifies the dev site is awake and in git mode. Note that these are separate build steps:
 
-    ```nohighlight
+    ```
     echo "Waking Dev environment."
     terminus env:wake -n ${SITE_ID}.dev
     ```
 
-    ```nohighlight
+    ```
     echo "Setting site to git mode."
     terminus connection:set ${SITE_ID}.dev git
     ```
 
 4. Jenkins creates a Multidev and pushes the new code to this environment
 
-    ```nohighlight
+    ```
     echo "Creating multidev"
     cd ${WORKSPACE}
     terminus build:env:create ${SITE_ID}.dev ci-${BUILD_ID} --yes
     ```
 
-    ```nohighlight
+    ```
     echo "Run database updates and clear cache"
     terminus drush -n ${SITE_ID}.ci-${BUILD_ID} -- updatedb -y
     terminus drush ${SITE_ID}.ci-${BUILD_ID} cr
@@ -260,7 +260,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
 
 5. Then the test suite we include with the example is run.
 
-    ```nohighlight
+    ```
     echo "Running behat"
     TERMINUS_ENV=ci-$BUILD_ID TERMINUS_SITE=$SITE_ID $WORKSPACE/tests/scripts/run-behat
     ```
@@ -285,7 +285,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
 
 7. Finally, a cleanup task:
 
-    ```nohighlight
+    ```
     echo "Cleaning up multidev & branches"
     git -C ${WORKSPACE} remote remove pantheon
     git -C ${WORKSPACE} remote prune origin

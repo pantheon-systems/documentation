@@ -51,7 +51,7 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
 3. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
 
-    ```nohighlight
+    ```
     git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
     ```
     If everything worked correctly, you will see Git fetching the data:
@@ -84,7 +84,7 @@ From within the Site Dashboard:
 
 1. Create and get the database with Terminus commands:
 
-    ```nohighlight
+    ```
     terminus backup:create <site>.<env> --element=db
     terminus backup:get <site>.<env> --element=db
     ```
@@ -103,7 +103,7 @@ For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/doc
 ### Via Terminus
 
 Run the following Terminus commands:
-```nohighlight
+```
 terminus backup:create <site>.<env> --element=files
 terminus backup:get <site>.<env> --element=files
 ```
@@ -149,7 +149,7 @@ Upload and import the file by going to your Pantheon Dashboard and selecting **D
 
 Drush and rsync is by far the easiest way to send files for Drupal sites:
 
-````nohighlight
+````
 drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAME.ENV:%files
 ````
 

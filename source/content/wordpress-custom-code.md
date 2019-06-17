@@ -78,7 +78,7 @@ Notifications within the WordPress dashboard will now include updates to your cu
 ### Troubleshooting
 You may encounter WordPress database errors referencing the `wp_wppusher_packages` table within the `php-error.log` on the Test and Live environments, similar to the following:
 
-```mysql
+```sql
 [28-Mar-2016 17:57:58 UTC] WordPress database error Table 'pantheon.wp_wppusher_packages' doesn't exist for query SELECT * FROM wp_wppusher_packages WHERE type = 1 made by require_once('wp-admin/admin.php'), do_action('admin_init'), call_user_func_array, Pusher\Pusher->registerPluginActionLinks, Pusher\Storage\PluginRepository->allPusherPlugins
 ```
 

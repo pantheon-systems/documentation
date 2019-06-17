@@ -48,7 +48,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 Verify the setting by using [Terminus](/docs/terminus/) to run `wp config get`:
 
-```command
+```bash
 terminus wp $site.$env -- config get SOME_TMP_SETTING
 ```
 
@@ -74,7 +74,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 Verify the setting by using [Terminus](/docs/terminus/) to run `drush variable-get`:
 
-```command
+```bash
 terminus drush $site.$env -- variable-get some_tmp_setting
 ```
 
@@ -101,7 +101,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 Verify the setting by using [Terminus](/docs/terminus/) to run `drush config-get` with `--include-overridden`:
 
-```command
+```bash
 terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden
 ```
 
@@ -154,7 +154,7 @@ The `private` and `tmp` directories do not exist by default; you must create the
 
 Verify the setting by using [Terminus](/docs/terminus/) to run `wp config get`:
 
-```command
+```bash
 terminus wp $site.$env -- config get SOME_TMP_SETTING
 ```
 
@@ -182,7 +182,7 @@ The `private` and `tmp` directories do not exist by default; you must create the
 
 Verify the setting by using [Terminus](/docs/terminus/) to run `drush variable-get`:
 
-```command
+```bash
 terminus drush $site.$env -- variable-get some_tmp_setting
 ```
 
@@ -210,7 +210,7 @@ The `private` and `tmp` directories do not exist by default; you must create the
 
 Verify the setting by using [Terminus](/docs/terminus/) to run `drush config-get` with `--include-overridden`:
 
-```command
+```bash
 terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden
 ```
 

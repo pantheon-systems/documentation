@@ -150,7 +150,7 @@ This is a known limitation of using SFTP for on-server development on the platfo
 
 ### DNS Connection Issues
 
-```nohighlight
+```
 Status:	Connecting to appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in:2222...
 Response:	fzSftp started
 Command:	open "dev.dc82c743-3088-426f-bfcf-e388e4add2b3@appserver.dev.dc82c743-3088-426f-bfcf-e388e4add2b3.drush.in" 2222

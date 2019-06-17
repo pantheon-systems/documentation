@@ -86,7 +86,7 @@ Quicksilver hooks for the `create_cloud_development_environment` workflow will n
 ### Deploying Configuration Changes or Quicksilver Hooks to Multidev
 If a `pantheon.yml` file **does not** exist on the Dev environment, configuration changes will not be detected when creating a Multidev environment. As a workaround, make some modification the `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
-```nohighlight
+```
 remote:
 remote: PANTHEON NOTICE:
 remote:

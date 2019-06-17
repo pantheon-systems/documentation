@@ -93,7 +93,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   Your directory structure should look like this afterwards:
 
-  ```nohighlight
+  ```
   ├── web
     ├── includes
     ├── index.php
@@ -126,7 +126,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   Your directory structure should look like this afterwards:
 
-  ```nohighlight
+  ```
   ├── web
     ├── core
     ├── drush
@@ -157,7 +157,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   Your directory structure should look like this afterwards:
 
-  ```nohighlight
+  ```
   ├── web
     ├── index.php
     ├── wp-activate.php

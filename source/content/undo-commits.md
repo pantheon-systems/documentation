@@ -16,7 +16,7 @@ Before you start making any changes to the Git repository. Be sure to have a wor
 
 In order to get back to a version of core, you can run a Git log on a core file. In this example, we take a look at `/includes/bootstrap.inc` on a Drupal 7 site - as this file has some references to when core was overwritten.
 
-```nohighlight
+```
 $ git log bootstrap.inc
 commit 9a11sd8f67af9679a6fsafasdf802834207489328
 Author: Russell Wilson
@@ -32,21 +32,21 @@ Once you have that commit, you can begin to apply any changes you have made sinc
 ## Delete the Last Commit That Hasn't Been Sent to Pantheon
 
 If you made the change locally but have not sent it to Pantheon, you locally delete that last commit. This is destructive and will undo all the changes.
-```nohighlight
+```
 git reset --hard HEAD~1
 ```
 ## Delete the Last Commit on Dev
 
 If you just made the erroneous change and pushed it to Pantheon and realized that there's a problem, you can overwrite history and pretend it never happened. Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques below.
 
-```nohighlight
+```
 git reset --hard HEAD~1
 git push --force origin master
 ```
 ## Revert the Last Commit on Pantheon That Has Been Deployed
 
 It is important to test changes before deploying them to Test or Live, but just in case, this technique will reverse the last commit and leave the history.
-```nohighlight
+```
 git revert HEAD --no-edit
 git push origin master
 ```
@@ -56,13 +56,13 @@ This one is a bit trickier, but you can do it. This will selectively undo a part
 
 First, determine what commit you want to undo.
 
-```nohighlight
+```
 # List last 10 git commits
 git log --pretty=oneline -10
 ```
 This will give you a list of commit IDs and the commit message. For example:
 
-```nohighlight
+```
 c24030f49d9e330324228f47c2b6c8b06f00eeb1 ctools
 a44306655691d281e852d84fe45a80f7026984cd Views
 ee24ab75e44239102bd0e72da8fb3b423168b4c5 Devel

@@ -42,7 +42,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
       ```
 2. Initialize composer to create a `composer.json` file with the WordPress package repository:
 
-     ```command
+     ```bash
      composer init --repository=https://wpackagist.org --no-interaction
      ```
 3. Edit the `composer.json` to add extra configuration that specifies installation paths for WordPress plugins and themes.
@@ -82,17 +82,17 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 4. Commit the `composer.json` file to version control with Git:
 
-     ```command
+     ```bash
      git add composer.json
      ```
 
-     ```command
+     ```bash
      git commit -m "Create composer.json with WP repo and install paths"
      ```
 
 5. Push your new file to Pantheon:
 
-     ```command
+     ```bash
      git push origin master
      ```
 
@@ -110,16 +110,16 @@ Use the `init` command to create a `composer.json` file that includes the approp
 `markdown:d7-composer-init.md`
 4. Commit the `composer.json` file to version control with Git:
 
-    ```command
+    ```bash
     git add composer.json
     ```
 
-    ```command
+    ```bash
     git commit -m "Create composer.json with D7 repo and install paths"
     ```
 5. Push your new file to Pantheon:
 
-    ```command
+    ```bash
     git push origin master
     ```
 
@@ -139,7 +139,7 @@ Use the `require` command to add new dependencies to your project, such as libra
   #### Install a Plugin
   1. Require the plugin, [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/) for example, with Composer:
 
-    ```command
+    ```bash
     composer require wpackagist-plugin/pantheon-advanced-page-cache
     ```
   2. Review modified files using `git status`, you should see the module has been installed in the `wp-content/plugins` directory like so:
@@ -151,16 +151,16 @@ Use the `require` command to add new dependencies to your project, such as libra
     If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing.
   3. Commit your work to version control with Git:
 
-    ```command
+    ```bash
     git add .
     ```
 
-    ```command
+    ```bash
     git commit -m "Require pantheon-advanced-page-cache ^0.3.0 "
     ```
   4. Push your changes to Pantheon:
 
-    ```command
+    ```bash
     git push origin master
     ```
   5. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard.
@@ -176,12 +176,12 @@ Use the `require` command to add new dependencies to your project, such as libra
 
   1. First, require the `composer/installers` package to support the installation paths configured in the previous section:
 
-    ```command
+    ```bash
     composer require composer/installers
     ```
   2. Require Drush with Composer:
 
-    ```command
+    ```bash
     composer require drush/drush
     ```
   3. Review modified files using `git status`:
@@ -191,16 +191,16 @@ Use the `require` command to add new dependencies to your project, such as libra
     If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing.
   4. Commit your work to version control with Git:
 
-    ```command
+    ```bash
     git add .
     ```
 
-    ```command
+    ```bash
     git commit -m "Require drush and composer/installers"
     ```
   5. Push your changes to Pantheon:
 
-    ```command
+    ```bash
     git push origin master
     ```
 

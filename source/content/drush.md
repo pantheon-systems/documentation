@@ -27,7 +27,7 @@ There are two ways to obtain the aliases, either with Terminus or through the Da
 ### Download with Terminus, the Pantheon CLI
 Authenticate Terminus with [machine tokens](/docs/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
-```nohighlight
+```
 $ terminus aliases
 ```
 
@@ -174,7 +174,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
 
 Some Drush 5 commands need to be executed from outside the context of a local Drupal installation, due to a [known issue with Drush 5](https://github.com/drush-ops/drush/issues/313). The output from a Drush 5 command run in this context looks like the following:
 
-```nohighlight
+```
 $ drush @pantheon.SITENAME.ENV status
  PHP configuration : /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/php53.in
                         i
@@ -187,7 +187,7 @@ $ drush @pantheon.SITENAME.ENV status
 
 To make your Drush 5 commands work on Pantheon aliases, change your directory to a context outside of a working local Drupal installation:
 
-```nohighlight
+```
 $ pwd
 /Users/USERNAME/Sites/SITENAME
 
@@ -229,13 +229,13 @@ $ drush @pantheon.SITENAME.ENV status
 
 ### Drush Error: "Unknown option: --db-url"
 
-```nohighlight
+```
 $ drush @pantheon.SITENAME.ENV cc all
 Unknown option: --db-url. See `drush help cache-clear` for available [error]
 options. To suppress this error, add the option --strict=0.
 ```
 To resolve this error, follow the suggestion and add the option `--strict=0`:
-```nohighlight
+```
 $ drush @pantheon.SITENAME.ENV cc all --strict=0
 'all' cache was cleared in [success]
 /srv/bindings/BINDINGID/code#ENV-SITENAME.pantheonsite.io
@@ -255,13 +255,13 @@ To resolve, add a default or empty `sites/default/settings.php` to your site's c
 
 Sometimes, you may encounter the following error when running Drush MySQL commands:
 
-```nohighlight
+```
 ERROR 2003 (HY000): Can't connect to MySQL server on 'dbserver.dev.SITE_ID.drush.in' (61)
 ```
 
 This can happen when an inactive site has spun down. To resolve this error, wake environments by loading the home page or with the following [Terminus](/docs/terminus) command:
 
-```nohighlight
+```
 terminus env:wake SITENAME.ENV
 ```
 
@@ -269,7 +269,7 @@ terminus env:wake SITENAME.ENV
 
 Some ISPs have issues resolving a drush.in hostname; if you're having trouble connecting to a drush.in hostname, you can use the `dig` command to investigate further.
 
-```nohighlight
+```
 $ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; Truncated, retrying in TCP mode.
 
@@ -291,7 +291,7 @@ $ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; MSG SIZE rcvd: 78
 ```
 As you can see in the output above, the status REFUSED suggests improper resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
-```nohighlight
+```
 $ dig @8.8.8.8 appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; Truncated, retrying in TCP mode.
 

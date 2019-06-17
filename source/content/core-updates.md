@@ -118,7 +118,7 @@ In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to o
 
 1. Confirm that the Site Connection Mode is set to SFTP. Then, via SFTP, delete these files and folders:
 
-  ```nohighlight
+  ```
   ├── README.md
   ├── index.php
   ├── license.txt

@@ -72,7 +72,7 @@ Spaces or non-standard alphanumeric characters in the SSH key's comments (such a
 #### Control Path Error
 
 You may receive the following error:
-```nohighlight
+```
 ControlPath too long fatal: Could not read from remote repository.
 ```
 Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh_config`) for a declaration like this:

@@ -40,7 +40,7 @@ As a first troubleshooting step, try running `composer update` to bring `compose
    ```
 
    The output should read:
-   ```nohighlight
+   ```
    +d features - place your *.feature files here
    +d features/bootstrap - place your context classes here
    +f features/bootstrap/FeatureContext.php - place your definitions, transformations and hooks here

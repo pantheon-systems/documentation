@@ -145,7 +145,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 The Pivotal Tracker API will also change story status by including "fixed", "completed", or "finished" within the square brackets, in addition to the story ID. You may use different cases or forms of these verbs, such as "Fix" or "FIXES", and they may appear before or after the story ID. In Pivotal vernacular, for features, one of these keywords will put the story in the finished state. For chores, it will put the story in the accepted state. The square brackets can appear anywhere in the commit message. Examples:
 
-```shell
+```bash
   [Completed #149869497] adding requested feature.
   I finally [finished #148528125] this functionality.
   This commit [fixes #148528125]

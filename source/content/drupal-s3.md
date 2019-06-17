@@ -87,7 +87,7 @@ Before you begin:
  - Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
  - Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/docs/terminus):
 
- ```nohighlight
+ ```
  terminus connection:set <site>.<env> sftp
  ```
 
@@ -96,12 +96,12 @@ Before you begin:
 
 Install the [Libraries API](https://www.drupal.org/project/libraries) and [S3 File System](https://www.drupal.org/project/s3fs) modules:
 
-```nohighlight
+```
 terminus drush <site>.<env> -- en libraries s3fs -y
 ```
 Get the [AWS SDK Library 2.x](https://github.com/aws/aws-sdk-php/releases):
 
-```nohighlight
+```
 terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make code/
   //or if you have a contrib subfolder for modules use:
   //terminus drush <site>.<env> -- make --no-core sites/all/modules/contrib/s3fs/s3fs.make code/
@@ -114,7 +114,7 @@ Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) m
 
 Install s3fs_cors module using Drush:
 
-```nohighlight
+```
 terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 ```
 
@@ -145,13 +145,13 @@ Install the [S3 File System](https://www.drupal.org/project/s3fs) module and AWS
 
 1. Ensure that the Composer for your site will first look to Drupal's preferred package source to find modules:
 
-    ```nohighlight
+    ```
     composer config repositories.drupal composer https://packages.drupal.org/8
     ```
 
 2. Install s3fs module from the preferred package source:
 
-    ```nohighlight
+    ```
     composer require drupal/s3fs --prefer-dist
     ```
 
@@ -160,7 +160,7 @@ Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) m
 
 Install s3fs_cors module using Composer:
 
-```nohighlight
+```
 composer require drupal/s3fs_cors --prefer-dist
 ```
 

@@ -143,7 +143,7 @@ In order to run WP-CLI or Drush commands on Pantheon's development environments,
 ### Download Contrib Modules with Drush
 SFTP mode supports [Drush](https://github.com/drush-ops/drush/), the command-line interface for Drupal. For example, you can download multiple contrib modules and a theme to the Dev environment:
 
-```nohighlight
+```
 $ terminus drush $site.$env -- dl pathauto devel admin_menu zen search_api search_api_solr
 Running drush dl pathauto devel admin_menu zen search_api search_api_solr on community-plumbing-20-dev
 Project pathauto (7.x-1.2) downloaded to [success]
@@ -170,7 +170,7 @@ terminus env:commit $site.$env --message="Download pathauto devel admin_menu zen
 
 ### Install WordPress Plugins with WP-CLI
 SFTP mode supports [WP-CLI](https://make.wordpress.org/cli/handbook/), the official command line tool for interfacing with WordPress sites. For example, you can install multiple plugins on the Dev environment:
-```nohighlight
+```
 $ terminus remote:wp bensons-big-demo.dev -- plugin install akismet wordpress-seo jetpack google-sitemap-generator
 Running wp plugin install akismet wordpress-seo jetpack google-sitemap-generator on bensons-big-demo-dev
 dev.f8277b1a-ed45-4390-a257-8d@appserver.dev.f8277b1a-ed45-4390-a257-8dda0b50ff21.drush.in's password:

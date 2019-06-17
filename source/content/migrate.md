@@ -126,7 +126,7 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
 
 Archives for Drupal 8 sites should include `index.php` at the code root level, along with the following directories:
 
-```nohighlight
+```
 ├── core
 ├── index.php
 ├── modules
@@ -146,7 +146,7 @@ Archives for Drupal 8 sites should include `index.php` at the code root level, a
 
 Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:
 
-```nohighlight
+```
 ├── includes
 ├── index.php
 ├── misc
@@ -168,7 +168,7 @@ Archives for Drupal 7 sites should include `index.php` at the code root level, a
 
 Archives for WordPress sites should include `index.php` at the code root level, along with the following directories:
 
-```nohighlight
+```
 ├── index.php
 ├── wp-activate.php
 ├── wp-config.php

@@ -97,7 +97,7 @@ ln -s ./uploads/wp-rocket-config ./wp-content/wp-rocket-config
 
 To verify, use `ls -al`:
 
-```nohighlight
+```
 cache -> ./uploads/cache
 wp-rocket-config -> ./uploads/wp-rocket-config
 ```
@@ -112,7 +112,7 @@ mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
 
 Each command will return the following upon success:
 
-```nohighlight
+```
 symbolic link created for .\wp-content\cache <<===>> .\uploads\cache
 symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-rocket-config
 ```
@@ -120,7 +120,7 @@ symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-roc
 To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
 You can also verify success using `dir`:
 
-```nohighlight
+```
 <SYMLINKD>        cache [.\uploads\cache]
 <SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
 ```
@@ -139,7 +139,7 @@ Some modules and plugins verify that the target directory exists using `is_dir()
 
 If a symlinked folder doesn't show the proper contents, doublecheck that the path is correct. In Bash, `ls -l` will show symlinks paths:
 
-```shell
+```bash
 $ ls -l
 
 lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/images/

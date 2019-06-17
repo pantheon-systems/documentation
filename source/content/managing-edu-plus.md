@@ -14,7 +14,7 @@ From the Organization Dashboard, go to **Settings** and enter a **Take Live/Paym
 These settings allow a payment flow so your EDU+ Organization can collect information needed to take the site live, manage accounting, and chargebacks to the appropriate department or unit within your organization.
 
 The URL includes information that you can use to auto-populate a form you control. For example:
-```nohighlight
+```
 https://www.awesome.edu/technology/web/payment-form?site_name=my-site&id=6b23f58b-132b-4547-93bd-71bb34fc0b1d&service_level=free&owner=Jane%Smith&email=jane%40awesome.edu
 ```
 

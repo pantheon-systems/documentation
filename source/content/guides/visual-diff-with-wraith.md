@@ -28,7 +28,7 @@ Wraith needs the ImageMagick library to do image comparisons. Additionally, Wrai
 
 Install via [Homebrew](https://brew.sh/):
 
-```nohighlight
+```
 brew install phantomjs198
 brew install imagemagick
 brew install casperjs --devel
@@ -38,7 +38,7 @@ brew install casperjs --devel
 
 On Ubuntu:
 
-```nohighlight
+```
 sudo apt-get install phantomjs
 sudo apt-get install imagemagick
 npm install -g casperjs
@@ -47,13 +47,13 @@ npm install -g casperjs
 
 Wraith runs on the command line and installs as a Ruby gem. If you're running Wraith on Linux, you may need to install Ruby first. To install Wraith, run the following command:
 
-```nohighlight
+```
 gem install wraith
 ```
 
 Wraith should now be accessible from the command line.
 
-```nohighlight
+```
 $ wraith
 
   Commands:
@@ -82,20 +82,20 @@ See Wraith's [installation guide](https://bbc-news.github.io/wraith/os-install.h
 
 Wraith stores its configuration within a self-generated YAML file. To set this up, we'll first have to create a directory to store your Wraith configuration files:
 
-```nohighlight
+```
 mkdir wraith
 cd wraith
 ```
 
 Next, use the `wraith setup` command to generate a Wraith YAML configuration file and browser navigation script:
 
-```nohighlight
+```
 wraith setup
 ```
 
 You should see the following output:
 
-```nohighlight
+```
 create  configs
 create  configs/capture.yaml
 create  configs/history.yaml
@@ -162,13 +162,13 @@ YAML is space sensitive. Domain and Path entries in the code snippets above shou
 
 Finally, execute Wraith:
 
-```nohighlight
+```
 wraith capture capture
 ```
 
 Wraith will navigate your two websites and generate an image comparison gallery. Open `wraith/shots/gallery.html` in any web browser to view the results. You can do this by using the browser application (e.g. File > Open File) or by running the following command from within the wraith directory:
 
-```nohighlight
+```
 open shots/gallery.html
 ```
 
@@ -228,7 +228,7 @@ before_capture: 'javascript/wait--casper.js'
 
 Run Wraith to produce a new gallery from the selectors. To execute this Wraith test, run the following command:
 
-```nohighlight
+```
 wraith capture capture
 ```
 

@@ -38,7 +38,7 @@ The `sites/default/files` directory is represented in your code repository as a 
 
 WordPress site code repositories are clones of one our [WordPress upstream](https://github.com/pantheon-systems/wordpress), and consist of the following files and directories:
 
-```nohighlight
+```
 ├── index.php
 ├── wp-activate.php
 ├── wp-config.php

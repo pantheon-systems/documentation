@@ -37,7 +37,7 @@ At the top of the development panel, look for the `git clone` command and copy a
 
 On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
 
-```nohighlight
+```
 git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
 ```
 If everything worked correctly you will see Git fetching the data:<br />
