@@ -3,7 +3,7 @@ title: Drupal 8 and Composer on Pantheon Without Continuous Integration
 description: Learn how to manage Drupal 8 using Composer with Pantheon.
 tags: [moreguides, composer]
 categories: [drupal]
-type: guide
+layout: doc
 permalink: docs/guides/:basename/
 contributors: [ataylorme, dwayne, davidneedham]
 ---
@@ -13,6 +13,7 @@ In this guide, we’re going to run through the bare necessities to use [Compose
 Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/docs/core-updates/).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
 
 <Alert title="Note" type="info">
+
 As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
 
 As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
@@ -103,7 +104,9 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 ## Managing Drupal with Composer
 
 <Alert title="Note" type="info">
+
 When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the [Pantheon platform is not compatible with git submodules](/docs/git-faq/#does-pantheon-support-git-submodules). If you remove the `.git` directories, be sure to put them back again after you push your commit up to Pantheon (see instructions below). To do this, remove the vendor directory and run `composer install`.
+
 </Alert>
 
 ### Downloading Drupal Dependencies with Composer
@@ -181,7 +184,9 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 ### Adding a New Module with Composer
 
 <Alert title="Note" type="info">
+
 To maintain best practice, some of the steps in this section require access to the [Multidev](/docs/multidev/) feature. Those steps can be skipped, but it isn't recommended.
+
 </Alert>
 
 1. Next, let’s add a new module to our site. For this example, we’ll add the address module. We advocate working in feature branches on Pantheon, so let's create a Git branch and spin up a Multidev environment:
