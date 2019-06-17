@@ -146,6 +146,16 @@ Custom Upstreams must not contain the tags `pantheon_test_n` or `pantheon_live_n
 
 </Alert>
 
+## Delete Custom Upstream
+An Upstream cannot be deleted if there are sites using it.
+
+1. From the Organization Dashboard, navigate to **Upstreams**.
+
+1. Click **Settings** next to the Upstream you want to delete.
+
+1. Under **Source**, click the **Delete Upstream** button:
+
+  ![Delete Upstream Button](../docs/assets/images/dashboard/delete-upstream.png)
 
 ## Tips and Tricks
 ### Use the Pantheon Workflow
