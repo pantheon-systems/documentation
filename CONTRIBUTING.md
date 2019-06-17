@@ -129,6 +129,5 @@ Moderators will review and comment on pull requests. We may suggest changes, imp
 
 * [General GitHub Documentation](http://help.github.com/)
 * [GitHub Pull Request Documentation](http://help.github.com/send-pull-requests/)
-* [Pantheon Power Users Group on Slack](https://pantheon.io/docs/power-users/)
+* [Pantheon Community](https://pantheon.io/docs/pantheon-community/)
 * [How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)
-

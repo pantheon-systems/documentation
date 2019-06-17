@@ -102,7 +102,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 
   <Alert title="Note" type="info">
 
-  When looking for a commit ID, you can find the last instance where the missing file was in the repository. 
+  When looking for a commit ID, you can find the last instance where the missing file was in the repository.
 
   </Alert>
 
@@ -326,7 +326,7 @@ A simple option is to configure Git with a multi-remote origin within `.git/conf
 	url = git@github.com:systemseed/example.git
 ```
 
-Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/contributors/mrfelton) for contributing this tip in the [Power Users](/docs/power-users) group.
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/docs/pantheon-community/).
 
 ### Why are some merged commits hidden?
 
