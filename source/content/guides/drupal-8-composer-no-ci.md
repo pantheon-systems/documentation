@@ -92,14 +92,13 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 1.  Remove the following section from `pantheon.yml`:
 
     ```yml
+    workflows:
       sync_code:
         after:
           - type: webphp
             description: Push changes back to GitHub if needed
             script: private/scripts/quicksilver/quicksilver-pushback/push-back-to-github.php
     ```
-
-    If there is a `workflows:` line, remove that as well.
 
 ## Managing Drupal with Composer
 
