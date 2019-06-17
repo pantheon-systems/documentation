@@ -2,10 +2,11 @@
 title: HTTPS on Pantheon's Global CDN
 description: Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt
 tags: [dns, security]
-use:
-    - docs_tags
+layout: doc
+permalink: docs/guides/:basename/
 searchboost: 200
 ---
+
 Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
 
 <Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
@@ -19,13 +20,20 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 For more detailed instructions pertaining to your specific DNS host, click below:
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
-    <ul class="top-docs top-docs-2col docs-2col-panel">
-      {% for doc in data.docs_tags.providers %}
-        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-          <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+
+ - [1&1 Domain Configuration](/docs/1-and-1/)
+ - [Cloudflare Domain Configuration](/docs/cloudflare/)
+ - [DNS Made Easy Domain Configurationi](/docs/dns-made-easy/)
+ - [DreamHost Domain Configuration](/docs/dreamhost/)
+ - [Dyn Domain Configuration](/docs/dyn/)
+ - [eNom Domain Configuration](/docs/enom/)
+ - [Gandi Domain Configuration](/docs/gandi/)
+ - [GoDaddy Domain Configuration](/docs/godaddy/)
+ - [Google Domain Configuration](/docs/google/)
+ - [Namecheap Domain Configuration](/docs/namecheap/)
+ - [Network Solutions Domain Configuration](/docs/network-solutions/)
+ - [Amazon Route 53 Domain Configuration](/docs/route53/)
+
 </Accordion>
 
 `markdown:enable-https.md`
@@ -42,7 +50,7 @@ For more detailed instructions pertaining to your specific DNS host, click below
 | **Certificate Type**                                                  | Bring your own            | Shared, issued by Let's Encrypt |
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
-| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> |
+| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br /> Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> |
 | [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/docs/hsts/)     |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |
@@ -81,6 +89,7 @@ Yes! As long as you are following the Dashboard DNS recommendations before start
 Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
 <Alert title="Note" type="info">
+
 You cannot pre-provision HTTPS if:
 
  - You cannot host the provided verification file on the current site.

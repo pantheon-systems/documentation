@@ -34,12 +34,14 @@ Only files unique to the project are tracked as part of the project's main "sour
 
 Composer is used to fetch dependencies declared by the project as part of a CircleCI build step. This ensures that the final composed build results are installed on Pantheon:
 
-<p class="text-center" >![Artifact Deployment](../../docs/assets/images/artifact-deployment.png)</p>
+![Artifact Deployment](../../docs/assets/images/artifact-deployment.png)
 
 <Accordion title="Pull Requests" id="understand-pr" icon="lightbulb">
+
 One advantage of managing code this way is that it keeps the change sets (differences) for pull requests as small as possible. If a pull request upgrades several dependencies, only the dependency metadata file will change; the actual code changes in the upgraded dependencies themselves are not shown.
 
 GitHub pull requests (PRs) are a formalized way of reviewing and merging a proposed set of changes to the source repository. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before merging the PR to accept changes.
+
 </Accordion>
 
 ## Before You Begin
@@ -83,18 +85,22 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
     composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:~1
     ```
 
-    <Alert title="Note" type="info">
-    The Terminus Build Tools Plugin does not support private repositories.
-    </Alert>
+  <Alert title="Note" type="info">
+
+  The Terminus Build Tools Plugin does not support private repositories.
+
+  </Alert>
 
 9. [Authorize CircleCI on GitHub](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb).
 
     If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.
 
 <Alert title="Note" type="info">
+
 Pantheon's [support team](/docs/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
 
 If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/) or posting in our [Pantheon Power Users](https://slackin.pantheon.io/) Slack channel.
+
 </Alert>
 
 

@@ -75,16 +75,20 @@ Use the following techniques to replace insecure references to your domain in th
   If don't have Terminus installed, or are unfamiliar with working in the command line, WordPress sites have the option to replace the URLs from the Pantheon Dashboard.
 
   <Alert title="Note" type="info">
-    This will not work for Multisite installations, and can result in data loss on sites with active transactions, as well as other non-standard configurations.</p>
+
+  This will not work for Multisite installations, and can result in data loss on sites with active transactions, as well as other non-standard configurations.
+
   </Alert>
 
   1. From the **Test** environment, clone your database from Live:
 
-      ![Cloning the Live Database to Test](../docs/assets/images/dashboard/clone-live-to-test.png)
+    ![Cloning the Live Database to Test](../docs/assets/images/dashboard/clone-live-to-test.png)
 
-      <Alert title="Warning" type="danger">
-        Be *sure* that you are cloning in the right direction. If you accidentally replace your Live environment's database, you can lose data.</p>
-      </Alert>
+    <Alert title="Warning" type="danger">
+
+    Be *sure* that you are cloning in the right direction. If you accidentally replace your Live environment's database, you can lose data.
+
+    </Alert>
 
   2. Now, from the **Live** environment, clone your database back from Test, making sure to select "https" under **Convert URLs' Protocol to:**:
 

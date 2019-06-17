@@ -65,35 +65,35 @@ The platform resources provided to your website depend on your current plan. Pan
         <td>100GB+</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Custom Domain Limit (per site) <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>."><em class="fa fa-info-circle"></em></a></th>
+        <th scope="row" class="thead-inverse">Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>." /></th>
         <td>5</td>
         <td>25</td>
         <td>100</td>
         <td>200</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Free and managed HTTPS <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>."><em class="fa fa-info-circle"></em></a></th>
+        <th scope="row" class="thead-inverse">Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>." /></th>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">New Relic <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>."><em class="fa fa-info-circle"></em></a></th>
+        <th scope="row" class="thead-inverse">New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." /></th>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-        <th scope="row" class="thead-inverse">Redis <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>."><em class="fa fa-info-circle"></em></a></th>
+        <th scope="row" class="thead-inverse">Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." /></th>
         <td></td>
         <td>✓</td>
         <td>✓</td>
         <td>✓</td>
       </tr>
       <tr>
-      <th scope="row" class="thead-inverse">Multidev <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan."><em class="fa fa-info-circle"></em></a></th>
+      <th scope="row" class="thead-inverse">Multidev <Popover content="All sites associated with an organization have access to <a href='/docs/multidev/'>Multidev</a>, regardless of plan." /></th>
         <td></td>
         <td></td>
         <td>✓</td>
@@ -105,13 +105,21 @@ The platform resources provided to your website depend on your current plan. Pan
 ## Glossary
 
 **Application Containers**: Each application container is a separate deployment of your site's code. All Dev and Test environments for Personal and Performance sites have one container, and Test environments for Business and Elite sites have two containers. The Live environment for Elite sites may be scaled to multiple containers to handle more requests.
-<hr>
+
+<hr />
+
 **PHP Concurrency**: The amount of simultaneous processes PHP can run within a given container. The number of requests your website can handle is a product of the number of containers, and each containers' concurrency, as well as your application performance (see below).
-<hr>
+
+<hr />
+
 **PHP Memory Limit (Application Memory Limit)**: The maximum amount of memory a single PHP process can use. Exceeding this limit will kill the process, resulting in a failed request from the user's perspective.
-<hr>
+
+<hr />
+
 **MySQL Buffer Pool**: The buffer pool is InnoDB's cache for frequently-accessed data in your database. If queries can run out of the buffer alone, they will be dramatically accelerated.
-<hr>
+
+<hr />
+
 **Redis Cache Size**: Amount of data a Redis instance can store. Note these numbers are intentionally set below the maximum memory for the Redis instance (which is the next logical power of 2) in order to ensure good performance.
 
 ## View Service Configuration Details
@@ -126,8 +134,11 @@ Get your Redis connection string by going to the **Site Dashboard > Environment 
 See [Securely Working with phpinfo](/docs/phpinfo#drupal-note) for ways to view your specific PHP configuration.
 
 ## Calculate Concurrent User / Dynamic Page Capacity
+
 <Alert title="Warning" type="danger">
+
 This following content is considered deprecated. Refer to [Traffic Limits and Overages](/docs/traffic-limits/) for updated information on how Pantheon defines plans and site traffic.
+
 </Alert>
 
 One common need in determining a plan level is calculating the amount of concurrent traffic a site can handle, especially when all or some of the traffic cannot be handled by caching.
@@ -153,11 +164,11 @@ If you're running an interactive user forum on a Business plan, you've tuned you
 
 ## Frequently Asked Questions (FAQs)
 
-#### Are these the complete specs and memory for my site?
+### Are these the complete specs and memory for my site?
 There are many "under the hood" configuration values not show here, but these are the most important values for understanding whether or not Pantheon will fit for a given site.
 
-#### Is memory shared between containers?
+### Is memory shared between containers?
 No, your database and application container resources are not shared. They operate in their own Linux user space with their own memory.
 
-#### Are the specs the same for all three environments (Dev/Test/Live)?
+### Are the specs the same for all three environments (Dev/Test/Live)?
 Yes they have the same infrastructure; however, Live environments on Business plans and above have multiple application containers, while Dev and Test environments have only one.
