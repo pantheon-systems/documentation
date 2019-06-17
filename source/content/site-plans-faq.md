@@ -18,7 +18,7 @@ Set price for new sites created after November 15, 2018 that aren’t purchased 
 
 <Definition name="Preferred Price">
 
-Introductory price available to the general public until November 15, 2018, after which it will be exclusively available via qualified [Agency Partners](https://pantheon.io/agencies/partner-program). Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information.
+Introductory price available to customers through Registered Agencies on a trial basis, after which it will be exclusively available via qualified [Agency Partners](https://pantheon.io/agencies/partner-program). Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information.
 
 </Definition>
 
@@ -34,7 +34,7 @@ Introductory price available to the general public until November 15, 2018, afte
 | Performance (XL)     | $750            | $1,000      |
 
 ### Annual Billing
-Pantheon offers [annual billing plans at lower rates](/docs/annual-billing/), giving up to two month's worth of savings.
+Pantheon offers [annual billing plans at lower rates](/docs/annual-billing/), offering up to two month's worth of savings.
 
 | Plan                 | Preferred Annual Price | Annual Savings  |
 | -------------------- | ---------------------- | --------------- |
@@ -59,7 +59,7 @@ See [Securely Working with phpinfo](/docs/phpinfo#drupal-note) for ways to view 
 
 <Alert title="Warning" type="danger">
 
-This following content is considered deprecated. Refer to [Traffic Limits and Overages](/docs/traffic-limits/) for updated information on how Pantheon defines plans and site traffic.
+This section is considered deprecated. Refer to [Traffic Limits and Overages](/docs/traffic-limits/) for updated information on how Pantheon defines plans and site traffic.
 
 </Alert>
 
@@ -87,13 +87,14 @@ If you're running an interactive user forum on a Business plan, you've tuned you
 ## Frequently Asked Questions (FAQs)
 
 #### Are these the complete specs and memory for my site?
-There are many "under the hood" configuration values not show here, but these are the most important values for understanding whether or not Pantheon will fit for a given site.
+There are many "under the hood" configuration values not shown here, but these are the most important values for understanding whether or not Pantheon will fit for a given site.
 
 #### Is memory shared between containers?
 No, your database and application container resources are not shared. They operate in their own Linux user space with their own memory.
 
 #### Are the specs the same for all three environments (Dev/Test/Live)?
 Yes they have the same infrastructure; however, Live environments on Business plans and above have multiple application containers, while Dev and Test environments have only one.
+
 ## Frequently Asked Questions
 
 ### How do I get Preferred Pricing?
