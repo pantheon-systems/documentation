@@ -10,7 +10,7 @@ const calculateSlug = (node, getNode) => {
       .replace(/.$/, "")
   }
 
-  return `docs/${fileName}`
+  return `${fileName}`
 }
 
 const calculateTemplate = (node, defaultTemplate) => {
@@ -160,7 +160,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       createNodeField({
         name: `guide_directory`,
         node,
-        value: `docs/${getNode(node.parent).relativeDirectory}`,
+        value: `${getNode(node.parent).relativeDirectory}`,
       })
     }
   }
