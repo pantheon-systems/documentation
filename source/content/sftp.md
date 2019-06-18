@@ -134,7 +134,7 @@ You should *not* manually set the "Remote Path" in your SFTP client's settings, 
 
 You can find the Remote Path after [connecting to SFTP](#sftp-connection-information) via command line, using the `pwd` command:
 
-```sftp
+```
 sftp> pwd
 Response: Remote working directory: /srv/bindings/daa068ccf4f8414596cddf5xxxxx
 ```
