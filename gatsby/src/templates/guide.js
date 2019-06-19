@@ -4,19 +4,17 @@ import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../components/layout"
+import HeaderBody from "../components/headerBody"
+
 import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
 import Icon from "../components/icon"
 import Popover from "../components/popover"
-import Contributors from "../components/contributors"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
 import TOC from "../components/toc"
-import Github from "../components/github"
-import Twitter from "../components/twitter"
-import Slack from "../components/slack"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
@@ -95,22 +93,14 @@ class GuideTemplate extends React.Component {
                   <div
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
                   >
-                    <header className="buttons">
-                      <h1>{node.frontmatter.subtitle}</h1>
-                      <Contributors
-                        contributors={node.frontmatter.contributors}
-                      />
-                      <Github
-                        pageTitle={node.frontmatter.title}
-                        path={`docs/guides/${node.frontmatter.editpath}`}
-                      />
-                      <Twitter
-                        pageTitle={node.frontmatter.title}
-                        path={node.fields.slug}
-                      />
-                      <Slack />
-                      <hr style={{ marginTop: "10px", marginBottom: "10px" }} />
-                    </header>
+                    <HeaderBody
+                      title={node.frontmatter.title}
+                      subtitle={node.frontmatter.subtitle}
+                      description={node.frontmatter.description}
+                      slug={node.fields.slug}
+                      contributors={node.frontmatter.contributors}
+                      featured={node.frontmatter.featuredcontributor}
+                    />
                     <MDXProvider components={shortcodes}>
                       <MDXRenderer>{node.code.body}</MDXRenderer>
                     </MDXProvider>
@@ -173,7 +163,11 @@ export const pageQuery = graphql`
           id
           name
           twitter
+          bio
+          avatar
+          url
         }
+        featuredcontributor
         getfeedbackform
       }
       fileAbsolutePath

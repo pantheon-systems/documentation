@@ -116,15 +116,26 @@ exports.createPages = ({ graphql, actions }) => {
     // Create guide pages.
     const guides = result.data.allGuides.edges
     guides.forEach(guide => {
-      const template = calculateTemplate(guide.node, "guide")
-      createPage({
-        path: guide.node.fields.slug,
-        component: path.resolve(`./src/templates/${template}.js`),
-        context: {
-          slug: guide.node.fields.slug,
-          guide_directory: guide.node.fields.guide_directory,
-        },
-      })
+      if (guide.node.fields.guide_directory !== null) {
+        const template = calculateTemplate(guide.node, "guide")
+        createPage({
+          path: guide.node.fields.slug,
+          component: path.resolve(`./src/templates/${template}.js`),
+          context: {
+            slug: guide.node.fields.slug,
+            guide_directory: guide.node.fields.guide_directory,
+          },
+        })
+      } else {
+        const template = calculateTemplate(guide.node, "doc")
+        createPage({
+          path: guide.node.fields.slug,
+          component: path.resolve(`./src/templates/${template}.js`),
+          context: {
+            slug: guide.node.fields.slug,
+          },
+        })
+      }
     })
 
     // Create contributor pages.
@@ -155,13 +166,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug,
     })
 
-    // Add guide_directory field
     if (slug.includes("docs/guides")) {
-      createNodeField({
-        name: `guide_directory`,
-        node,
-        value: `${getNode(node.parent).relativeDirectory}`,
-      })
+      if (getNode(node.parent).relativeDirectory !== 'guides') {
+        // Add guide_directory field
+        createNodeField({
+          name: `guide_directory`,
+          node,
+          value: `${getNode(node.parent).relativeDirectory}`,
+        })
+      }
     }
   }
 

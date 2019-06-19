@@ -4,19 +4,17 @@ import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../components/layout"
+import HeaderBody from "../components/headerBody"
+
 import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
 import ExternalLink from "../components/externalLink"
 import Icon from "../components/icon"
 import Popover from "../components/popover"
-import Contributors from "../components/contributors"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
 import TOC from "../components/toc"
-import Github from "../components/github"
-import Twitter from "../components/twitter"
-import Slack from "../components/slack"
 import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
@@ -55,6 +53,7 @@ class DocTemplate extends React.Component {
 
   render() {
     const node = this.props.data.mdx
+
     return (
       <Layout>
         <SEO
@@ -66,27 +65,14 @@ class DocTemplate extends React.Component {
         <div className="container">
           <div className="row doc-content-well">
             <div id="doc" className="doc article col-md-9 md-70">
-              <header className="buttons">
-                <h1
-                  style={{ marginBottom: "10px", marginTop: "0px" }}
-                  className="pio-docs-title"
-                >
-                  {node.frontmatter.title}
-                </h1>
-                <p className="article-subhead">
-                  {node.frontmatter.description}
-                </p>
-                <Contributors contributors={node.frontmatter.contributors} />
-                <Github
-                  pageTitle={node.frontmatter.title}
-                  path={node.fields.slug}
-                />
-                <Twitter
-                  pageTitle={node.frontmatter.title}
-                  path={node.fields.slug}
-                />
-                <Slack />
-              </header>
+              <HeaderBody
+                title={node.frontmatter.title}
+                subtitle={node.frontmatter.subtitle}
+                description={node.frontmatter.description}
+                slug={node.fields.slug}
+                contributors={node.frontmatter.contributors}
+                featured={node.frontmatter.featuredcontributor}
+              />
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
                   <MDXRenderer>{node.code.body}</MDXRenderer>
@@ -137,7 +123,11 @@ export const pageQuery = graphql`
           id
           name
           twitter
+          bio
+          avatar
+          url
         }
+        featuredcontributor
       }
       fileAbsolutePath
     }
