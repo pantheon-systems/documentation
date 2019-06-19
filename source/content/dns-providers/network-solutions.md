@@ -28,7 +28,7 @@ Identify DNS values to point your domain to Pantheon:
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your [Network Solutions account <span class="glyphicons glyphicons-new-window-alt"></span>](https://www.networksolutions.com" target="blank) in a new tab before you continue.
+Keep this page open and login to your [Network Solutions account](https://www.networksolutions.com) in a new tab before you continue.
 
 ## Configure DNS Records on Network Solutions
 ### A Record
@@ -78,8 +78,8 @@ Unfortunately, Network Solutions does not support AAAA records, which means you 
 
 ## Network Solutions Docs
 
-* [Managing Advanced DNS Records <span class="glyphicons glyphicons-new-window-alt"></span>](http://www.networksolutions.com/support/how-to-manage-advanced-dns-records/" target="blank)
-* [Adding an IPv6 record <span class="glyphicons glyphicons-new-window-alt"></span>](http://www.networksolutions.com/support/Adding-an-IPv6-record/" target="blank)
+* [Managing Advanced DNS Records](http://www.networksolutions.com/support/how-to-manage-advanced-dns-records/)
+* [Adding an IPv6 record](http://www.networksolutions.com/support/Adding-an-IPv6-record/)
 
 ## Next Steps
 

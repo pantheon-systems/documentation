@@ -38,7 +38,6 @@ GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config
 
 
 ## Frequently Asked Questions
-
 ### How can I write logic based on the Pantheon server environment?
 
 Depending on your use case, there are two possibilities:
