@@ -52,6 +52,16 @@ module.exports = {
       options: {
         path: `${__dirname}/../source/content`,
         name: `content`,
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+            },
+          },
+        ]
       },
     },
     `gatsby-transformer-yaml`,
@@ -66,12 +76,11 @@ module.exports = {
             options: {
               directory: `${__dirname}/../source/partials`,
               resolve: `gatsby-remark-prismjs`,
-              options: {
-                classPrefix: "language-",
-                inlineCodeMarker: null,
-                aliases: {},
-            },
-
+                options: {
+                  classPrefix: "language-",
+                  inlineCodeMarker: null,
+                  aliases: {},
+                },
             },
           },
           {
