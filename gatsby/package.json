@@ -1,7 +1,7 @@
 {
   "name": "pantheon-documentation",
   "private": true,
-  "description": "The Pantheon Documentatkon powered by Gatsby, Markdown and MDX",
+  "description": "The Pantheon Documentation powered by Gatsby, Markdown and MDX",
   "version": "0.1.0",
   "author": "docs@pantheon.io",
   "bugs": {
