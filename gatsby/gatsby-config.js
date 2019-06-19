@@ -61,11 +61,18 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
-           {
+          {
             resolve: "gatsby-remark-embed-markdown",
             options: {
               directory: `${__dirname}/../source/partials`,
-            }
+              resolve: `gatsby-remark-prismjs`,
+              options: {
+                classPrefix: "language-",
+                inlineCodeMarker: null,
+                aliases: {},
+            },
+
+            },
           },
           {
             resolve: "gatsby-remark-github",
