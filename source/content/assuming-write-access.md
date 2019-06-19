@@ -78,15 +78,17 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 ## Examples
 
-As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to the code base.
+### WP-Rocket
 
-<Alert  title="Note" type="alert">
+As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/) assumes write access to the code base.
+
+<Alert  title="Note" type="info">
 
 You must manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
 
 </Alert>
 
-### For MacOS & Linux:
+#### For MacOS & Linux:
 From the `wp-content` directory:
 
 ```bash
@@ -102,7 +104,7 @@ cache -> ./uploads/cache
 wp-rocket-config -> ./uploads/wp-rocket-config
 ```
 
-### For Windows:
+#### For Windows:
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash
@@ -125,17 +127,33 @@ You can also verify success using `dir`:
 <SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
 ```
 
-As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/){.external} assumes write access its css files to the code base.
+### Uncode Theme
 
-<Alert title="Note" type="alert">
+As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/) assumes write access its css files to the code base.
 
-You must manually move over the target folders `wp-content\themes\uncode\core\assets\css` to `wp-content\uploads\uncode\assets\css` and `wp-content\themes\uncode\library\css` to `wp-content\uploads\uncode\library\css` in Dev.
+1. Manually move over the target folders:
 
-You must also need to copy over the files generated from `wp-content\themes\uncode\library\css` to `wp-content\uploads\uncode\library\css` in Test, Live, and any Multidev environments after deploying codes for the theme to take effect in different environments.
+  `wp-content\themes\uncode\core\assets\css`
 
-</Alert>
+  To: `wp-content\uploads\uncode\assets\css`
 
-### For MacOS & Linux:
+  And:
+
+  `wp-content\themes\uncode\library\css`
+
+  To: `wp-content\uploads\uncode\library\css` in Dev.
+
+1. Copy over the files generated from:
+
+  `wp-content\themes\uncode\library\css`
+
+  To:
+
+  `wp-content\uploads\uncode\library\css`
+
+  In Test, Live, and any Multidev environments after deploying codes for the theme to take effect in different environments.
+
+#### For MacOS & Linux:
 From the `wp-content` directory:
 
 ```bash
@@ -155,7 +173,7 @@ As well as in the `wp-content/themes/uncode/library` folder :
 css -> ../../../uploads/uncode/library/css
 ```
 
-### For Windows:
+#### For Windows:
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target and backslash is used to denote folders. In the `wp-content` folder create the symlinks by:
 
 ```bash
