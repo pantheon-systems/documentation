@@ -26,7 +26,7 @@ SFTP mode allows you to develop directly on Pantheon and can be a major time-sav
 
 
 ## SFTP Mode
-Every Development environment has a toggle to switch between SFTP and Git modes; this is to prevent you from accidentally overwriting changes from a different source. To enable SFTP mode, click the **SFTP** button next to Connection Mode.
+Every Development environment has a toggle to switch between SFTP and Git modes. This is to prevent you from accidentally overwriting changes from a different source. To enable SFTP mode, click the **SFTP** button next to Development Mode.
 
 When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase, the Dashboard will track your changes and you'll see all the pending changes. You can then commit them to version control once you are happy with the results without having to ever use Git.
 
@@ -34,7 +34,7 @@ When in SFTP mode, there's comment box above the commit log. As you make changes
 
 ## SFTP Connection Information
 
-To get your SFTP login credentials, click **SFTP Connection Info**. You will see your connection credentials and a link to connect directly with your preferred client.
+To get your SFTP login credentials, click **Connect with SFTP**. You will see your connection credentials and a button to connect directly with your preferred client.
 
  ![SFTP Connection Data](../images/dashboard/sftp-connection-info.png)<br />
 
