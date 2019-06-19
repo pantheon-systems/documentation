@@ -127,12 +127,13 @@ You can also verify success using `dir`:
 
 As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/){.external} assumes write access its css files to the code base.
 
-<div class="alert alert-info" role="alert" markdown="1">
-#### Note {.info}
+<Alert title="Note" type="alert">
+
 You must manually move over the target folders `wp-content\themes\uncode\core\assets\css` to `wp-content\uploads\uncode\assets\css` and `wp-content\themes\uncode\library\css` to `wp-content\uploads\uncode\library\css` in Dev.
 
 You must also need to copy over the files generated from `wp-content\themes\uncode\library\css` to `wp-content\uploads\uncode\library\css` in Test, Live, and any Multidev environments after deploying codes for the theme to take effect in different environments.
-</div>
+
+</Alert>
 
 ### For MacOS & Linux:
 From the `wp-content` directory:
@@ -144,13 +145,13 @@ ln -s ../../../uploads/uncode/library/css ./themes/uncode/library
 
 To verify, use `ls -al` in the `wp-content/themes/uncode/core/assets` folder :
 
-```nohighlight
+```
 css -> ../../../../uploads/uncode/assets/css
 ```
 
 As well as in the `wp-content/themes/uncode/library` folder :
 
-```nohighlight
+```
 css -> ../../../uploads/uncode/library/css
 ```
 
