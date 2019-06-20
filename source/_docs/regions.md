@@ -119,7 +119,3 @@ More features are in active development. [Contact us](https://pantheon.io/contac
 Yes, however you must migrate your existing site to a new site that was configured for the new region during creation ([as described above](#create-a-new-site-in-a-new-region)).
 
 Contact your account owner or our [Sales team](https://pantheon.io/contact-us){.external} to learn about Pantheon's migration services or review the [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
-
-
-### When will region selection be available for sites paid by credit card?
-General availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external}.
