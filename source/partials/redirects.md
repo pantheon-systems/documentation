@@ -12,7 +12,7 @@
 
 <p>
 
-Add the following to <code>wp-config.php</code>, usually placed above <code>/* That's all, stop editing! Happy blogging. */</code>. Don't forget to replace <code>www.example.com</code>:
+Add the following to <code>wp-config.php</code>, usually placed above <code>/* That's all, stop editing! Happy Pressing. */</code>. Don't forget to replace <code>www.example.com</code>:
 
 </p>
 
