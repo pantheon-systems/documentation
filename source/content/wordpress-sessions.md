@@ -21,6 +21,27 @@ Warning: session_start(): user session functions not defined
 ```
 Plugins with session-using code are relying on PHP's default session manager, which is temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment.
 
+## Varnish or caching is not working when a specific plugin or theme that uses `$_SESSIONS` is enabled
+
+Symptoms of this issue shows when the header is inspected, you will see that the session cookie is always set on every page load eg. 
+
+```
+Set-Cookie: SESS1234XXXXXXXXXXXXXX path=/; domain=.example.pantheonsite.io; HttpOnly
+```
+
+The best way to determine which plugin or theme is not caching your site is by using this [tool](https://varnishcheck.pantheon.io/) with each of the steps until you determine which component is breaking the cache:
+1) To check if it is the theme that is breaking the cache, use your default theme like twentynineteen and check with the tool.
+2) To check if it is any of the plugin is breaking the cache, disable all the plugins and turn it on one by one while checking with the tool if it breaks the cache.
+3) To check if it is any of the 3rd party must-use plugins or drop-ins that is breaking the cache, temporarily remove the 3rd party must-use plugins and leaving only the `Pantheon` and `WP Native PHP Sessions`. There should be also no drop-ins in place.
+
+Once you were able to determine the plugin or theme that causes the issue, most likely `session_start()` is always started and not being checked if it already have a prior session in place. You will need to report that with the plugin/theme author or directly modify the code to have a check in place eg. 
+
+```php
+if ( ! (session_name() ) ) {
+    session_start();
+}
+```
+
 ### Install WordPress Native PHP Sessions Plugin
 If `$_SESSIONs` are necessary for your application, install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
 
