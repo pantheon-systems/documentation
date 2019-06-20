@@ -271,3 +271,7 @@ If you're a Windows user, consider using a virtualization tool like [VirtualBox]
 
 ## PHP Configuration
 `php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/docs/phpinfo/) for more information on PHP configuration.
+
+## XML-RPC
+
+The [XML-RPC PHP extension](https://www.php.net/manual/en/intro.xmlrpc.php) is, as of this doc's last update, listed as experimental, and not included on the platform. Consider the [XML-RPC for PHP](http://gggeek.github.io/phpxmlrpc/) library as an alternative.
