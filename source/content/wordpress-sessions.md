@@ -25,7 +25,6 @@ Plugins with session-using code are relying on PHP's default session manager, wh
 
 Due to how caching and sessions work, sessions need to be uncached for it to work properly in it is impossible to have a cached site when there are sessions in place. It would be best to go to a cookie based solution to avoid performance hit of uncached session pages.
 
-Symptoms of this issue shows when the header is inspected, you will see that the session cookie is always set on every page load eg. 
 
 ```
 Set-Cookie: SESS1234XXXXXXXXXXXXXX path=/; domain=.example.pantheonsite.io; HttpOnly
