@@ -9,7 +9,6 @@ This page is used to keep track of common platform considerations, mostly derive
 ## Browser Support for Pantheon's Dashboard
 In order to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
-
 <table class="table  table-bordered table-responsive">
   <thead>
     <tr>
@@ -19,13 +18,11 @@ In order to focus internal development and engineering work, the Pantheon Dashbo
       <th>Opera</th>
       <th>Edge</th>
       <th>Safari</th>
-      <th>Internet Explorer</th>
     </tr>
     <tr>
       <th>Versions Supported</th>
       <td colspan="4">Evergreen Browsers - Last 4</td>
       <td>Current + Last Year</td>
-      <td>Internet Explorer 11 <Popover title="Minimum Support" content="Feature support only, allows for visual inconsistencies." /></td>
     </tr>
   </thead>
 </table>
