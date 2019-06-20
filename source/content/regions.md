@@ -21,7 +21,6 @@ Four regions are available when creating a new site:
 * Australia (**AU**)
 * Canada (**CA**)
 * European Union (**EU**)
-* United States (**US**) (Default)
 
 ### EU Data Residency
 
