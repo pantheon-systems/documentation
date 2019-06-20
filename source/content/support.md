@@ -66,7 +66,7 @@ The ticket support feature is available to certain support packages and account 
   - Links to screenshots or screencasts of the behavior, if necessary.
 5. Click **Open Ticket**
 
-Once a ticket is submitted, you can view details for your support requests. If are you are part of an organziation, your support tickets are visible to all members except Unpriviged users. 
+Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except Unprivileged users.
 
 
 ## Pantheon On-Call
