@@ -66,6 +66,9 @@ The ticket support feature is available to certain support packages and account 
   - Links to screenshots or screencasts of the behavior, if necessary.
 5. Click **Open Ticket**
 
+Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except Unprivileged users.
+
+
 ## Pantheon On-Call
 Diamond and Platinum support customers can directly access Pantheon's operations response team, either via the Pantheon Dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.
 
