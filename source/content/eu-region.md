@@ -7,17 +7,6 @@ contributors: [edwardangert, rachelwhitton, ari]
 searchboost: 150
 ---
 
-<Alert title="Limited Availability" type="info" >
-
-The documentation on this page discusses features and options that are not yet available to all users.
-
-</Alert>
-
-
-Pantheon is extending Limited Availability invitations to contract organizations (Enterprise, Reseller, OEM, and EDU+) that want to take a new site live from Australia, Canada, or the European Union.
-
-During this feature's Limited Availability period, participation is opt-in and available to contract customers only. All other new sites will continue to be deployed to the default US region. [Give us a call](https://pantheon.io/contact-us) for information about pricing and how to enable your organization to create sites in the EU Region before the feature becomes widely available in late 2019.
-
 ## Use Cases
 There are many scenarios in which you might prefer running a site within an International Region rather than the default US. Common use cases include:
 
@@ -25,7 +14,7 @@ There are many scenarios in which you might prefer running a site within an Inte
 * Improved performance and user experience for authenticated traffic originating near the desired region
 
 ## Region Availability
-Once enabled, this Organization-wide feature allows [privileged users](/docs/change-management/#organizations-roles-and-permissions) to designate one of two available regions at the time of site creation:
+Four regions are available when creating a new site:
 
 * United States (**US**) (Default)
 * Australia (**AUS**)
@@ -42,7 +31,13 @@ Localized, EU-specific [Disaster Recovery](/docs/disaster-recovery/) is also ava
 
 With this set of EU-specific resources, now you can run WordPress or Drupal sites on Pantheon and meet the European Union's legal, regulatory, or data sovereignty requirements.
 
-## Create a New Site
+## Create a New Site in a New Region
+
+[Create a new Site](/docs/sites/) from the Dashboard and select the Region:
+
+![Select a Region from the Create Your Pantheon Site screen](/source/docs/assets/images/dashboard/create-pantheon-site.png "Select a Region from the Create Your Pantheon Site screen")
+
+### Create a New Site in a Specific Region using Terminus
 
 1. Install and authenticate [Terminus](/docs/terminus/). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/docs/terminus/updates/).
 1. Use Terminus to create a new site associated with your organization and include the `--region=eu` option.
@@ -118,17 +113,8 @@ Time to celebrate. Your site is running in the EU!
 
 More features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this doc for updates. [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external} to tell us about your needs.
 
-Coming soon:
-  - Region Facet on Organization Dashboard
-
 ## Frequently Asked Questions
-### Can I use an International Region for an existing site?
-Yes, however you must migrate your existing site to a new Site that was configured for International Region during creation ([as described above](#create-a-new-site)).
-
-### When will access to Pantheon's EU Region be available for sites paid by credit card?
-General Availability is planned for late 2019. Tell us more about your needs by [filling out this survey](https://www.getfeedback.com/r/hkR9uTAJ).
-
-### When will site creation through the Dashboard be available?
-General availability is planned for late 2019.
+### Can I move an existing site to a new region?
+Yes, however you must migrate your existing site to a new site that was configured for the new region during creation ([as described above](#create-a-new-site-in-a-new-region)).
 
 Contact your account owner or our [Sales team](https://pantheon.io/contact-us) to learn about Pantheon's migration services or review the [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
