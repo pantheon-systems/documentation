@@ -16,10 +16,11 @@ There are many scenarios in which you might prefer running a site within an Inte
 ## Available Regions
 
 Four regions are available when creating a new site:
+
+* United States (**US**) (Default)
 * Australia (**AU**)
 * Canada (**CA**)
 * European Union (**EU**)
-* United States (**US**) (Default)
 
 ### EU Data Residency
 
@@ -63,9 +64,11 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 
 ## Migrate an Existing Site to a New Region
 
-1) Create a new site (as described above) 
-2) Copy over the site's code, database, and files. For details see documentation to [Manually Migrate Sites to Pantheon](/docs/migrate-manual/#import-your-code).
-3) Move domains and DNS to the new site. For more info see the [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) doc.
+1.  Create a new site (as described above) 
+1.  Copy over the site's code, database, and files.
+    * For details see [How to Manually Migrate Sites to Pantheon](/docs/migrate-manual/#import-your-code).
+1.  Move domains and DNS to the new site.
+    * For more info see the [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) doc.
 
 ### Professional Services Migration
 If you'd like help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available.
