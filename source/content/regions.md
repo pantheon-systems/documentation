@@ -21,6 +21,7 @@ Four regions are available when creating a new site:
 * Australia (**AU**)
 * Canada (**CA**)
 * European Union (**EU**)
+* United States (**US**) (Default)
 
 ### EU Data Residency
 
@@ -45,7 +46,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 
  - Available regions:
  
-| Name                    |  Code   |
+ | Name                    |  Code   |
 |:------------------------- |:------------------------------- |
 |  Australia  | au               |
 | Canada | ca |
