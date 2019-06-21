@@ -1,11 +1,12 @@
 import React from "react"
+import './style.css';
 
 const Accordion = ({ id, icon, title, children, isCollapsed }) => {
   const classCollapsed = isCollapsed ? "collapse" : "collapse in"
 
   return (
     <>
-      <div className="panel panel-drop panel-guide" id="accordion">
+      <div className="panel panel-drop panel-guide accordion" id="accordion">
         <div className="panel-heading panel-drop-heading">
           <span
             style={{ cursor: "pointer" }}
