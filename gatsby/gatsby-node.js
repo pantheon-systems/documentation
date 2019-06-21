@@ -94,6 +94,54 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+
+      dataYaml {
+        landings {
+          title
+          path
+          video_id
+          cta {
+            title
+            subtitle
+            url
+          }
+          cta_alt {
+            title
+            subtitle
+            url
+          }
+          guides {
+            title
+            type
+            links {
+              text
+              image
+              url
+            }
+          }
+          topics_groups {
+            title
+            subtitle
+            links {
+              text
+              url
+              icon
+            }
+          }
+          subtopics {
+            title
+            subtitle
+            subtopic_lists {
+              title
+              links {
+                text
+                url
+                icon
+              }
+            }
+          }
+        }
+      }
     }
   `).then(result => {
     if (result.errors) {
@@ -135,6 +183,19 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/contributor.js`),
         context: {
           id: contributor.node.id,
+        },
+      })
+    })
+
+    // Create topics pages.
+    const topics = result.data.dataYaml.landings
+    topics.forEach(topic => {
+      createPage({
+        path: `docs/${topic.path}`,
+        component: path.resolve(`./src/templates/landing.js`),
+        context: {
+          id: topic.path,
+          topic,
         },
       })
     })
