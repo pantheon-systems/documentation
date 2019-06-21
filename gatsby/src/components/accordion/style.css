@@ -1,0 +1,11 @@
+.accordion h3.panel-drop-title{
+  line-height: 21px;
+}
+.accordion .panel-heading .accordion-toggle:before{
+  position: relative;
+  top: 5px;
+}
+.accordion .panel-title.panel-drop-title:before{
+  height: 0px !important;
+  margin-top: 0px !important;
+}
