@@ -33,7 +33,7 @@ const ContributorGuest = ({ contributor }) => {
                       to={`/docs/contributors/${contributor.id}`}
                       title={contributor.id}
                     >
-                      {contributor.name}
+                      {` ${contributor.name}`}
                     </Link>
                   </h3>
                 </div>
