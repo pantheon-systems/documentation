@@ -1,6 +1,6 @@
-Using the <a href="/docs/pantheon-yml/"><code>pantheon.yml</code></a> file, you can set the use and duration of the HSTS header, and its affect on subdomains. You can set a short (5 minute) duration header that affects just the domain, or a long (366 day) duration that also applies to subdomains. Using the long duration setting will help you get an A+ SSL rating from <a href="https://www.ssllabs.com/ssltest/" class="external">SSL Labs</a>.
+Using the <a href="/docs/pantheon-yml/"><code>pantheon.yml</code></a> file, you can set the use and duration of the HSTS header, and its affect on subdomains. You can set a short (5 minute) duration header, or a long (366 day) duration, and choose whether to affect subdomains. Using the long duration setting will help you get an A+ SSL rating from <a href="https://www.ssllabs.com/ssltest/" class="external">SSL Labs</a>.
 
-Use of the HSTS header is defined by the <code>scheme</code> directive, and takes three possible values:
+Use of the HSTS header is defined by the <code>enforce_https</code> directive, and takes five possible values:
 
 <ul>
 <li>No redirect and no HSTS header (default):
