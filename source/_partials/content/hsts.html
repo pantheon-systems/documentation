@@ -5,23 +5,33 @@ Use of the HSTS header is defined by the <code>scheme</code> directive, and take
 <ul>
 <li>No redirect and no HSTS header (default):
 
-    <pre><code class="hljs less">scheme: any</code></pre></li>
+    <pre><code class="hljs less">enforce_https: off</code></pre></li>
 
-<li>HTTPS redirect with a short HSTS duration (5 minutes):
+<li>HTTPS redirect with a short HSTS duration (5 minutes), which does not apply to subdomains:
 
-    <pre><code class="hljs less">scheme: https</code></pre></li>
+    <pre><code class="hljs less">enforce_https: transitional</code></pre></li>
+    
+<li>HTTPS redirect with a short HSTS duration (5 minutes), which also applies to subdomains:
+
+    <pre><code class="hljs less">enforce_https: transitional+subdomains</code></pre></li>
+
+<li>HTTPS redirect with a long HSTS duration (366 days, for an A+ SSL Labs rating), which does not apply to subdomains:
+
+    <pre><code class="hljs less">scheme: full</code></pre></li>
 
 <li>HTTPS redirect with a long HSTS duration (366 days, for an A+ SSL Labs rating), which also applies to subdomains:
 
-    <pre><code class="hljs less">scheme: hsts</code></pre></li>
+    <pre><code class="hljs less">scheme: full+subdomains</code></pre></li>
 </ul>
 
-Pantheon will send the following header based on the setting of `scheme`:
+Pantheon will send the following header based on the setting of `enforce_https`:
 
 <ul>
-<li>any: <i>None</i></li>
-<li>https: <code>Strict-Transport-Security: max-age=300</code></li>
-<li>hsts: <code>Strict-Transport-Security: max-age=31622400; includeSubDomains; preload</code></li>
+<li>off: <i>None</i></li>
+<li>transitional: <code>Strict-Transport-Security: max-age=300</code></li>
+<li>transitional+subdomains: <code>Strict-Transport-Security: max-age=300; includeSubDomains; </code></li>
+<li>full: <code>Strict-Transport-Security: max-age=31622400; preload</code></li>
+<li>full+subdomains: <code>Strict-Transport-Security: max-age=31622400; includeSubDomains; preload</code></li>
 </ul>
 
 <p>See <a href="/docs/pantheon-yml/">Pantheon YAML Configuration Files</a> for more information on how to configure this file.</p>
@@ -30,6 +40,6 @@ Pantheon will send the following header based on the setting of `scheme`:
 <h4 class="info">Warning</h4>
 <p>Once enabled, HSTS headers are cached by browsers for the duration of the max-age period (one year on Pantheon). If at any time you wish to disable https and go back to unencrypted HTTP, users who have already visited your site will receive a browser warning preventing them from accessing the site until the max-age expires or they have manually cleared their browser history related to your site.</p>
 <p>
-If you are not sure that this is what you want, then you should select <code>scheme: https</code> instead, as this selection has no affect on subdomains, and has a limited (5 minute) HSTS duration.
+If you are not sure that this is what you want, then you should select <code>enforce_https: transitional</code> instead, as this selection has no affect on subdomains, and has a limited (5 minute) HSTS duration.
 </p>
 </div>
