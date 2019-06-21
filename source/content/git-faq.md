@@ -18,19 +18,24 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
 <p style="margin-top:0px;margin-bottom:40px;">
-  <img src="/source/docs/assets/images/icon-version-control.png
-" data-proofer-ignore alt="Worfklow Icon" style="margin-right:30px;max-height:80px;margin-top:10px;float:left;border:0;" />
-<br />
-<em>When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)</em>
+
+  
+![Worfklow Icon](../docs/assets/images/icon-version-control.png)
+
+
+*When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)*
+
 <br />
 </p>
 
+
 ### How do I resolve conflicts when updating Core?
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).</p>
+If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
 <TabList>
 
 <Tab title="Drupal 8" id="d8" active={true}>
+
   ```bash
   git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
   # resolve conflicts
@@ -76,7 +81,7 @@ Double-check the files before going forward to make sure no bugs were introduced
 ### Where can I find a site's upstream URL?
 The upstream URL is provided within the Site Dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/docs/terminus):
 
-```nohighlight
+```
 terminus site:info <site> --field=upstream
 ```
 
@@ -97,7 +102,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 
   <Alert title="Note" type="info">
 
-  When looking for a commit ID, you can find the last instance where the missing file was in the repository. 
+  When looking for a commit ID, you can find the last instance where the missing file was in the repository.
 
   </Alert>
 
@@ -127,13 +132,47 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 
 For more details, see [WordPress and Drupal Core Updates](/docs/core-updates).
 
+### How can I resolve conflicts from Multidevs?
+If a merge conflict is preventing you from merging a Multidev environment, follow these steps to resolve.
+
+1. Set the Dev environment to Git mode:
+
+   ![Git Connection Mode](../docs/assets/images/dashboard/connection-mode-git.png)
+
+1. Clone the repository to your local computer:
+
+   ![Git Clone](../docs/assets/images/dashboard/git-string.png)
+
+1. From the repository directory, pull the Multidev branch to master. In the example below, replace `multidev` with the Multidev environment name:
+
+   ```bash
+   git checkout master
+   git pull origin multidev
+   ```
+
+1. Git will tell you which files are in conflict. Open them, and search for the conflicting sections.
+
+   The version from the master branch will be delineated with `<<<<<<< HEAD`, and the version from the Multidev environment will end with `>>>>>>> Commit Message`, with `=======` in between.
+
+1. After you resolve the conflict, add the modified file and commit the results:
+
+   ```bash
+   git commit -am "Resolve merge conflict"
+   ```
+
+1.  Push the resolved master branch back to Pantheon:
+
+   ```bash
+   git push origin master
+   ```
+
 ## General Git Questions
 ### Does Pantheon support Git submodules?
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
 
 ### What are the Git tags?
 
-```nohighlight
+```
 $: git tag
 jenkins-ellis_update_drops_7-3
 jenkins-ellis_update_drops_7-4
@@ -287,7 +326,7 @@ A simple option is to configure Git with a multi-remote origin within `.git/conf
 	url = git@github.com:systemseed/example.git
 ```
 
-Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/contributors/mrfelton) for contributing this tip in the [Power Users](/docs/power-users) group.
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/docs/pantheon-community/).
 
 ### Why are some merged commits hidden?
 

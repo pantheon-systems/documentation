@@ -28,21 +28,21 @@ If you are managing a high profile site, using PagerDuty is an excellent way to 
 2. Login to your PagerDuty account and go to **Configuration** > **Users**.
 3. Setup your user profile and contact information. Add your name, a job title, your time zone, phone number, SMS number and an email address:
 
-  ![New User](../docs/assets/images/pagerduty/pg-user-contact.png)
+  ![New User](../../docs/assets/images/pagerduty/pg-user-contact.png)
 
 4. Go to the **Notification Rules** tab and setup your notification rules. The default is alerting everything at once. Click the edit (<span class="glyphicons glyphicons-edit"></span>) buttons to adjust the rules to your preference, for example:
 
-  ![User contact information](../docs/assets/images/pagerduty/pg-user-notifications.png)
+  ![User contact information](../../docs/assets/images/pagerduty/pg-user-notifications.png)
 
 
   There is also a handy setting which alerts a user when they are about to go on call. We kept the default setting, which sends an email 24 hours before the user's on-call shift starts:
 
-  ![Notify before I go on call](../docs/assets/images/pagerduty/new-relic-before-on-call.png)
+  ![Notify before I go on call](../../docs/assets/images/pagerduty/new-relic-before-on-call.png)
 
 
 5. Click **Add Users** to invite more team members:
 
-  ![Adding new user](../docs/assets/images/pagerduty/pg-new-user.png)
+  ![Adding new user](../../docs/assets/images/pagerduty/pg-new-user.png)
 
 Users can have different roles, allowing them, for example, to administrate schedules or alert policies. For team members with the Developer job title, we suggest the **Responder** role. Each member then can set up their own alert policies, or you can for them.
 
@@ -59,7 +59,7 @@ Next, we'll create an on-call Schedule, to configure a scaleable custom alert wo
 
 2. Add the first layer for whoever you want to be the last point of contact and a second layer for team members in the on-call rotation to be the first point of contact:
 
-  ![Team schedule](../docs/assets/images/pagerduty/pg-schedule.png)
+  ![Team schedule](../../docs/assets/images/pagerduty/pg-schedule.png)
 
   This configuration notifies the on-call shift, either Joe or Anita, when an incident occurs. If the on-call shift does not acknowledge the incident within a certain amount of time, Jane will be alerted as a fallback.
 
@@ -70,7 +70,7 @@ Next, we'll create an on-call Schedule, to configure a scaleable custom alert wo
 
   Refer to the the **Final Schedule** at the bottom of the page to see who's on call and the first point of contact:
 
-  ![Final Schedule](../docs/assets/images/pagerduty/pg-final-schedule.png)
+  ![Final Schedule](../../docs/assets/images/pagerduty/pg-final-schedule.png)
 
 ## Create Escalation Policy
 When an incident is created, PagerDuty uses an escalation policy to determine who to contact. An escalation policy can alert PagerDuty users directly, as well as alerting teams and schedules. Since you just created a schedule for your team, this is what your simple policy will alert.
@@ -81,6 +81,6 @@ When an incident is created, PagerDuty uses an escalation policy to determine wh
 
 3. Rename the default policy so it's project specific (e.g., `example.com`) and add your new **example.com** schedule:
 
-  ![Escalation Policy](../docs/assets/images/pagerduty/pg-escalation.png)
+  ![Escalation Policy](../../docs/assets/images/pagerduty/pg-escalation.png)
 
 4. Click **Save**.

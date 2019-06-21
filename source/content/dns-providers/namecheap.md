@@ -21,7 +21,7 @@ Identify DNS values to point your domain to Pantheon:
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your [Namecheap account <span class="glyphicons glyphicons-new-window-alt"></span>](https://www.namecheap.com/myaccount/login.aspx" target="blank) in a new tab before you continue.
+Keep this page open and login to your [Namecheap account](https://www.namecheap.com/myaccount/login.aspx) in a new tab before you continue.
 
 ## Configure DNS Records on Namecheap
 ### A Record
@@ -60,7 +60,7 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Namecheap Docs
 
-[How do I set up host records for a domain? <span class="glyphicons glyphicons-new-window-alt"></span>](https://www.namecheap.com/support/knowledgebase/article.aspx/434/2237/how-do-i-set-up-host-records-for-a-domain" target="blank)
+[How do I set up host records for a domain?](https://www.namecheap.com/support/knowledgebase/article.aspx/434/2237/how-do-i-set-up-host-records-for-a-domain)
 
 ## Next Steps
 

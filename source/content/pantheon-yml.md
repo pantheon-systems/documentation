@@ -113,7 +113,7 @@ When the same configuration value is defined in both files, the value from `pant
 ### "Changes to pantheon.yml detected, but there was an error while processing it"
 
 We will reject a commit that includes a `pantheon.yml` error, with a message like:
-```nohighlight
+```
 remote: PANTHEON ERROR:
 remote:
 remote: Changes to `pantheon.yml` detected, but there was an error while processing it:
@@ -128,7 +128,7 @@ While our parser will reject a `pantheon.yml` that is invalid, it won't necessar
 ### Deploying Configuration Changes to Multidev
 Changes made to `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. As a workaround, make some modification to `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
-```nohighlight
+```
 remote:
 remote: PANTHEON NOTICE:
 remote:

@@ -50,3 +50,12 @@
 .media-heading h2 {
   display: inline;
 }
+
+:not(pre) > code[class*="language-"] {
+  color: #c7254e;
+  background-color: #f9f2f4;
+}
+
+pre code, pre code .hljs, .hljs {
+  padding-left: 0em !important;
+}

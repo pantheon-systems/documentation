@@ -30,19 +30,20 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 <TabList>
 
-<Tab name="WordPress" id="wp-1">
+<Tab title="WordPress" id="wp-1" active={true}>
+
 1. Navigate to the Site Dashboard and select the desired environment.
-2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
+2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
 3. Navigate to **Settings** > **Pantheon Page Cache**, then click **Clear Cache**:
 
   ![WordPress Clear Caches](../docs/assets/images/wp-cc.png)
 
 </Tab>
 
-<Tab name="Drupal 8" id="d8-2">
+<Tab title="Drupal 8" id="d8-2">
 
 1. Navigate to the Site Dashboard and select the desired environment.
-2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
+2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
 3. Navigate to **Configuration** > **Development** > **Performance**, then click **Clear all caches**:
 
   ![Drupal 8 Clear Caches](../docs/assets/images/d8-cc.png)
@@ -50,10 +51,10 @@ We refer to this as "full cache clearing" because the operation removes all page
 </Tab>
 
 
-<Tab name="Drupal 7" id="d7-3">
+<Tab title="Drupal 7" id="d7-3">
 
 1. Navigate to the Site Dashboard and select the desired environment.
-2. Click the **Site Admin <span class="glyphicons glyphicons-new-window-alt"></span>** button and login.
+2. Click the **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Site** button and login.
 3. Ensure the [Pantheon Platform API](/docs/modules#pantheon-module-drupal-7) module is enabled:
 
   ![Pantheon Platform API module](../docs/assets/images/pantheon-platform-api-enabled.png)

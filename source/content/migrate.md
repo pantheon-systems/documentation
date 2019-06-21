@@ -19,69 +19,71 @@ Pantheon provides a guided path for migrating existing sites to the platform, wh
 
 <Tab title="WordPress" id="tab-1-id" active={true}>
 
-  The recommended way to migrate WordPress sites from another host is to use the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
+The recommended way to migrate WordPress sites from another host is to use the [Pantheon Migration](https://wordpress.org/plugins/bv-pantheon-migration/) plugin, developed by [BlogVault](https://blogvault.net/).
 
-  <Accordion title="Watch: Guided WordPress Migrations" id="wp-video" icon="facetime-video">
+<Accordion title="Watch: Guided WordPress Migrations" id="wp-video" icon="facetime-video">
 
-  `youtube: https://youtu.be/ksg1XkH1da8`
+`youtube: https://youtu.be/ksg1XkH1da8`
 
-  </Accordion>
+</Accordion>
 
-  1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
+1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
-    ![Migrate Existing Site](../docs/assets/images/dashboard/migrate-existing-site.png)
-  2. Enter your current website URL.
-  3. Select **WordPress**.
-  4. Click **Continue**.
-  5. Name your new Pantheon site.
-  6. Select an organization for the site (optional).
-  7. Click **Create Site**.
-  8. Select **Generate Machine Token** and re-authenticate if prompted.
-  9. Select **Install on /wp-admin** to install and activate the plugin on your existing site. Keep the Pantheon Dashboard tab open in your browser.
-  10. Copy the machine token from the Pantheon Dashboard, then navigate to **Pantheon Migration** within the WordPress Dashboard on your existing site. Paste the machine token and enter the site name.
-  11. Click **Migrate**. You will receive an email when the migration completes. After the migration is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
+  ![Migrate Existing Site](../docs/assets/images/dashboard/migrate-existing-site.png)
+2. Enter your current website URL.
+3. Select **WordPress**.
+4. Click **Continue**.
+5. Name your new Pantheon site.
+6. Select an organization for the site (optional).
+7. Click **Create Site**.
+8. Select **Generate Machine Token** and re-authenticate if prompted.
+9. Select **Install on /wp-admin** to install and activate the plugin on your existing site. Keep the Pantheon Dashboard tab open in your browser.
+10. Copy the machine token from the Pantheon Dashboard, then navigate to **Pantheon Migration** within the WordPress Dashboard on your existing site. Paste the machine token and enter the site name.
+11. Click **Migrate**. You will receive an email when the migration completes. After the migration is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
-   ![Successful Migration BlogVault](../docs/assets/images/dashboard/successful-site-migration-complete-blogvault.png)
+ ![Successful Migration BlogVault](../docs/assets/images/dashboard/successful-site-migration-complete-blogvault.png)
 
-  If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
+If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 
-  <Alert title="Note" type="info">
+<Alert title="Note" type="info">
 
-  The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see [WordPress and PHP Sessions](/docs/wordpress-sessions/).
+The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessions/">WordPress Native PHP Sessions</a> plugin is automatically installed during the migration process. For more details on this plugin, see [WordPress and PHP Sessions](/docs/wordpress-sessions/).
 
-  </Alert>
+</Alert>
 
 
 </Tab>
 
 <Tab title="Drupal" id="tab-2-id">
 
-  The recommended way to migrate Drupal sites from another host is to use `drush ard` to create an archive that can be easily imported.
+The recommended way to migrate Drupal sites from another host is to use `drush ard` to create an archive that can be easily imported.
 
-  1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
+1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
-    ![Migrate Existing Site](../docs/assets/images/dashboard/migrate-existing-site.png)
+  ![Migrate Existing Site](../docs/assets/images/dashboard/migrate-existing-site.png)
 
-  2. Enter your current website URL.
-  3. Select **Drupal 7** or **Drupal 8**.
-  4. Click **Continue**.
-  5. Name your new Pantheon site.
-  6. Select an organization for the site (optional).
-  7. Click **Create Site**.
-  8. Follow the instructions to **Create an Archive of Your Existing Site With Drush**:
+2. Enter your current website URL.
+3. Select **Drupal 7** or **Drupal 8**.
+4. Click **Continue**.
+5. Name your new Pantheon site.
+6. Select an organization for the site (optional).
+7. Click **Create Site**.
+8. Follow the instructions to **Create an Archive of Your Existing Site With Drush**:
 
-      ![Drupal create archive](../docs/assets/images/dashboard/drupal-guided-migrate.png)
+  ![Drupal create archive](../docs/assets/images/dashboard/drupal-guided-migrate.png)
 
-      <Alert title="Note" type="info">
-      `drush ard` is only available on Drush 8 and earlier.
-     </Alert>
+  <Alert title="Note" type="info">
 
-     The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
+  `drush ard` is only available on Drush 8 and earlier.
 
-  9. Paste a publicly accessible URL to a download of your site archive. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly.
-  10. Click **Import Archive**. After the imported is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
+  </Alert>
 
-   ![Successful Drupal Migration](../docs/assets/images/dashboard/successful-drupal-migration.png)
+  The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
+
+9. Paste a publicly accessible URL to a download of your site archive. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly.
+10. Click **Import Archive**. After the imported is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
+
+ ![Successful Drupal Migration](../docs/assets/images/dashboard/successful-drupal-migration.png)
 
 
 </Tab>
@@ -117,13 +119,14 @@ Acquia uses a nested docroot directory named `docroot`. When migrating from Acqu
 **Cause:** The migration tool could not find Drupal or WordPress core files. This prevents the migration from completing because the site modules, plugins, and/or themes cannot be imported. This error also occurs when multiple `settings.php` files are present.
 
 **Solution:** Check that the archive includes a valid code root with all core files. If multiple `settings.php` files are present, delete them from the archive.
+
 <TabList>
 
 <Tab title="Drupal 8" id="d8" active={true}>
 
 Archives for Drupal 8 sites should include `index.php` at the code root level, along with the following directories:
 
-```nohighlight
+```
 ├── core
 ├── index.php
 ├── modules
@@ -143,7 +146,7 @@ Archives for Drupal 8 sites should include `index.php` at the code root level, a
 
 Archives for Drupal 7 sites should include `index.php` at the code root level, along with the following directories:
 
-```nohighlight
+```
 ├── includes
 ├── index.php
 ├── misc
@@ -163,31 +166,32 @@ Archives for Drupal 7 sites should include `index.php` at the code root level, a
 
 <Tab title="WordPress" id="wp">
 
-  <p>Archives for WordPress sites should include `index.php` at the code root level, along with the following directories:</p>
-  <pre><code class="nohighlight">
-  ├── index.php
-  ├── wp-activate.php
-  ├── wp-config.php
-  ├── wp-comments-post.php
-  ├── wp-blog-header.php
-  ├── wp-admin
-  ├── wp-cron.php
-  ├── wp-load.php
-  ├── wp-links-opml.php
-  ├── wp-includes
-  ├── xmlrpc.php
-  ├── wp-trackback.php
-  ├── wp-signup.php
-  ├── wp-settings.php
-  ├── wp-mail.php
-  ├── wp-login.php
-  ├── wp-content
-      ├── index.php
-      ├── mu-plugins
-      ├── themes
-      ├── plugins
+Archives for WordPress sites should include `index.php` at the code root level, along with the following directories:
 
-  </code></pre>
+```
+├── index.php
+├── wp-activate.php
+├── wp-config.php
+├── wp-comments-post.php
+├── wp-blog-header.php
+├── wp-admin
+├── wp-cron.php
+├── wp-load.php
+├── wp-links-opml.php
+├── wp-includes
+├── xmlrpc.php
+├── wp-trackback.php
+├── wp-signup.php
+├── wp-settings.php
+├── wp-mail.php
+├── wp-login.php
+├── wp-content
+    ├── index.php
+    ├── mu-plugins
+    ├── themes
+    ├── plugins
+
+```
 
 </Tab>
 
@@ -265,7 +269,9 @@ terminus site:clone <source>.<env> <destination>.<env>
 ```
 
 <Alert title="Note" type="info">
+
 File and database backups that exceed 500MBs are not supported by this method. Sites that exceed this limit must be cloned manually. For details, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual/).
+
 </Alert>
 
 ### Does the WordPress migration cause downtime? 
@@ -285,7 +291,7 @@ When asked for your current site URL, enter `https://example.com` and continue t
 
 <Tab title="Drupal" id="tab-2-id">
 
-  Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/) or [Google Drive](https://drive.google.com)) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [manually migrate](/docs/migrate-manual).
+Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/) or [Google Drive](https://drive.google.com)) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [manually migrate](/docs/migrate-manual).
 
 </Tab>
 
@@ -332,9 +338,9 @@ Follow the [standard procedure for migrating WordPress sites to Pantheon](#migra
 1. Create and download a backup point from WP Engine.
 2. Unzip your site's backup point on your local machine.
 3. Remove the WP Engine remnants. There are a few files you'll need to remove:
-  - Drop-in plugins (e.g. `wpengine-common`) located at: `\wp-content\mu-plugins`
-  - `.gitattributes` and `.gitignore` from the root folder
-  - If object caching is enabled, remove the `object-cache.php` file located in `/wp-content`.
+   - Drop-in plugins (e.g. `wpengine-common`) located at: `\wp-content\mu-plugins`
+   - `.gitattributes` and `.gitignore` from the root folder
+   - If object caching is enabled, remove the `object-cache.php` file located in `/wp-content`.
 4. Replace existing `wp-config.php` with [Pantheon's `wp-config.php`](https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php) file. Preserve necessary logic from your existing file.
 5. Move the `mysql.sql` database out of the `wp-content` directory and into the project's root directory.
 6. Follow the procedure to [manually migrate](/docs/migrate-manual/) your site.

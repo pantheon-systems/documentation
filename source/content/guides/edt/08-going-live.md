@@ -18,7 +18,7 @@ editpath: edt/08-going-live.md
 image: launchGuide-twitterLarge
 ---
 
-In this lesson, we’re going to explore the Developer Workflow.
+In this lesson, we’re going to dive into launching your site on Pantheon.
 All links from the video are provided below.
 
 **Watch the video:**
@@ -47,7 +47,7 @@ All links from the video are provided below.
 
 <Callout title="Need more help? Get in touch:">
 
- - [Power Users](/docs/power-users/)
+ - [Pantheon Community](/docs/pantheon-community/)
  - [Pantheon Support](/docs/support/)
  - [Office Hours](https://pantheon.io/agencies/office-hours)
 

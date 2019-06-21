@@ -10,8 +10,11 @@ Extending WordPress with custom code is a common part of the development lifecyc
 Instead, manage custom code separate from your projects within site-specific [plugins](https://codex.wordpress.org/Writing_a_Plugin). Then scope out an update strategy to easily distribute changes, such as [GitHub Updater](https://github.com/afragen/github-updater) or [WP Pusher](https://wppusher.com/).
 
 <Alert title="Note" type="info">
+
 Pantheon does not support Git submodules (placing a Git repository within a subdirectory of your site’s repository).
+
 </Alert>
+
 ## Before You Begin
 
 1. Separate custom code into site-specific plugins or themes stored within individual repositories outside of your project.
@@ -24,19 +27,21 @@ For more details on separating custom code, see this related [blog post](https:/
 
 1. Modify your plugin and/or theme to add support for the GitHub Updater by providing the required declarations. The following [plugin example](https://github.com/afragen/github-updater/#plugins) should be placed within the plugin's header:
 
-    <pre><code>/*
-    Plugin Name:       GitHub Updater
-    Plugin URI:        https://github.com/afragen/github-updater
-    Description:       A plugin to automatically update GitHub, Bitbucket or GitLab hosted plugins and themes. It also allows for remote installation of plugins or themes into WordPress.
-    Version:           1.0.0
-    Author:            Andy Fragen
-    License:           GNU General Public License v2
-    License URI:       https://www.gnu.org/licenses/gpl-2.0.html
-    Domain Path:       /languages
-    Text Domain:       github-updater
-    <b>GitHub Plugin URI: https://github.com/afragen/github-updater
-    GitHub Branch:     master</b>
-    */</code></pre>
+  ```bash
+  /*
+  Plugin Name:       GitHub Updater
+  Plugin URI:        https://github.com/afragen/github-updater
+  Description:       A plugin to automatically update GitHub, Bitbucket or GitLab hosted plugins and themes. It also allows for remote installation of plugins or themes into WordPress.
+  Version:           1.0.0
+  Author:            Andy Fragen
+  License:           GNU General Public License v2
+  License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+  Domain Path:       /languages
+  Text Domain:       github-updater
+  <b>GitHub Plugin URI: https://github.com/afragen/github-updater
+  GitHub Branch:     master</b>
+  */
+  ```
 
   [Theme declarations](https://github.com/afragen/github-updater#themes) are made similarly within the `styles.css` file.
 
@@ -44,10 +49,10 @@ For more details on separating custom code, see this related [blog post](https:/
 
 2. Set the Dev environment's connection mode to SFTP within the Pantheon Dashboard or via [Terminus](/docs/terminus):
 
-    <div class="copy-snippet">
-    <button class="btn btn-default btn-clippy" data-clipboard-target="#set-connect-sftp">Copy</button>
-    <figure><pre id="set-connect-sftp"><code class="command bash" data-lang="bash">terminus connection:set <site>.<env> sftp</code></pre></figure>
-    </div>
+  ```bash
+  terminus connection:set <site>.<env> sftp
+  ```
+  
 
 3. Download the [latest release](https://github.com/afragen/github-updater/releases) of the GitHub Updater plugin (select the **zip** option).
 4. Unzip the archive and rename the folder to `github-updater`, then re-zip the file.
@@ -73,7 +78,7 @@ Notifications within the WordPress dashboard will now include updates to your cu
 ### Troubleshooting
 You may encounter WordPress database errors referencing the `wp_wppusher_packages` table within the `php-error.log` on the Test and Live environments, similar to the following:
 
-```mysql
+```sql
 [28-Mar-2016 17:57:58 UTC] WordPress database error Table 'pantheon.wp_wppusher_packages' doesn't exist for query SELECT * FROM wp_wppusher_packages WHERE type = 1 made by require_once('wp-admin/admin.php'), do_action('admin_init'), call_user_func_array, Pusher\Pusher->registerPluginActionLinks, Pusher\Storage\PluginRepository->allPusherPlugins
 ```
 

@@ -2,14 +2,16 @@
 title: Drush
 description: Interact with Drupal from the command line.
 contributors:  [scottmassey]
-videoid: w0iyypcydc
 permalink:  docs/videos/:basename/
 tags: [devdrush]
 categories: [drupal]
 layout: doc
 searchboost: 50
 ---
-{% include("content/deprecate-kalabox.html")%}
+
+`youtube: https://youtu.be/wAL4LQwy8Ow`
+
+`markdown:deprecate-kalabox.md`
 
 [Drush](https://github.com/drush-ops/drush/) is a command line shell for running and scripting Drupal tasks. Let’s install it and explore some commands.
 

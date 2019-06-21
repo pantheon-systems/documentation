@@ -5,7 +5,7 @@ import Layout from '../layout/layout';
 import CallToAction from '../layout/call-to-action';
 import TopicGroup from '../layout/topic-group';
 import SubTopicGroup from '../layout/subtopic-group';
-import WistiaVideo from '../layout/wistia-video';
+import YoutubeVideo from '../layout/youtube-video';
 import GuideItem from '../layout/guide-item';
 import IntegrationGuideItem from '../layout/integration-guide-item';
 const LandingTemplate = (props) => {
@@ -20,9 +20,9 @@ const LandingTemplate = (props) => {
 					<div className="row" style={{ marginBottom: '15px' }}>
 						<div className="col-md-12">
 							<div className="row call-to-action-section">
-								{topic.video_id && (
+								{topic.video_url && (
 									<div className="col-md-6 hero-video__video">
-										<WistiaVideo videoId={topic.video_id} />
+                    <YoutubeVideo videoURL={topic.video_url} />
 									</div>
 								)}
 								{(topic.cta||topic.cta_alt) && <div className="col-md-6 ">

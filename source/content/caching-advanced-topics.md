@@ -17,7 +17,9 @@ Learn industry best practices for caching, how to take advantage of them on the 
 This allows users to immediately see comments or changes they've made, even if they're not logged in. To best achieve this, we recommend setting the `NO_CACHE` cookie to exist slightly longer than the site's page cache. This setting allows content contributors to resume using the cached pages once all cached pages have been updated.
 
 <Alert title="Warning" type="danger">
+
 Pantheon does not support manually editing and updating the Varnish Configuration Language (VCL). We use a standard VCL for all sites on the platform. Requests for changes/updates to the standard VCL are accepted for consideration, but we do not guarantee change requests will be implemented.
+
 </Alert>
 
 
@@ -120,7 +122,9 @@ For example, you could set a cookie named `STYXKEY-country` to `ca` or `de` and 
 In your code, remember to first check whether the incoming request has the `STYXKEY` cookie set. If it does, generate the different version of the page, but don't set the cookie again, i.e. don't respond with another `Set-Cookie:` header. If the code tries to set the cookie again, the Global CDN will not cache that page at all, as it cannot cache a response that contains a `Set-Cookie:` header.
 
 <Alert title="Note" type="info">
+
 `STYXKEY` is not a replacement for responsive design.
+
 </Alert>
 
 **Examples of `STYXKEY` cookie names:**
@@ -166,4 +170,4 @@ If you're using the [Security tool](/docs/security/) within the Pantheon Site D
 
 ## Cookie Handling
 
-{% include("content/cache-busting.html")%}
+`markdown:cache-busting.md`

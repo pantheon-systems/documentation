@@ -18,3 +18,5 @@ shots/
 npm-debug.log
 *.swp
 *.un~
+.env.*
+/.vscode/

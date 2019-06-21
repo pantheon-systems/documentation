@@ -8,7 +8,9 @@ permalink: docs/:basename/
 editpath: dns-providers/1-and-1.md/
 ---
 <Alert title="Warning" type="danger">
+
 1&1 does not support adding multiple AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports more than one IPv6 record per domain.
+
 </Alert>
 
 ## Before You Begin
@@ -29,6 +31,7 @@ Be sure that you have a:
     Pantheon provides two AAAA records for improved uptime and reliability, however 1&1 only supports one IPv6 record per domain. If you'd like to add both AAAA records, then consider transferring your domain or name server to another DNS host.
 
 5. Click **Save**.
+
 ### CNAME Record
 A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
@@ -44,9 +47,9 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## 1&1 Docs
 
-* [Manage Domains – DNS <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586" target="blank)
-* [Change Your Domain's IP Address (A record) <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/change-your-domain-s-ip-address-a-record-a599296.html" target="blank)
-* [Enter a CNAME for Your Subdomain <span class="glyphicons glyphicons-new-window-alt"></span>](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/enter-a-cname-for-your-subdomain-a643600.html" target="blank)
+* [Manage Domains – DNS](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586)
+* [Change Your Domain's IP Address (A record)](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/change-your-domain-s-ip-address-a-record-a599296.html)
+* [Enter a CNAME for Your Subdomain](https://help.1and1.com/domains-c36931/manage-domains-c79822/dns-c37586/enter-a-cname-for-your-subdomain-a643600.html)
 
 
 ## Next Steps

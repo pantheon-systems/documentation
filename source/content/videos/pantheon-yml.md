@@ -1,7 +1,6 @@
 ---
 title: The Pantheon.yml Configuration File
 description: Configure our platform for your needs.
-videoid: jlklwnyt81
 contributors:  [davidneedham]
 permalink:  docs/videos/:basename/
 tags: [pantheonyml]
@@ -9,6 +8,9 @@ categories: [develop, cli]
 layout: doc
 searchboost: 50
 ---
+
+`youtube: https://youtu.be/SM3QlNGgyBo`
+
 The [pantheon.yml](/docs/pantheon-yml) file provides a way to configure platform options for any project. This file is version controlled and can be configured differently for each environment.
 
 Configurable items include: PHP version, Drush version, protected paths, nested docroot, and [Quicksilver](/docs/quicksilver) platform hooks.

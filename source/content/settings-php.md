@@ -12,7 +12,9 @@ Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a cus
 For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
 <Alert title="Warning" type="danger">
+
 You should never put the database connection information for a Pantheon database within your `settings.php` file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.
+
 </Alert>
 
 ## Pantheon Articles on settings.php
@@ -32,39 +34,46 @@ Use these configuration snippets to specify a local configuration that will be i
 ### Drupal 8
 Configure environment-specific settings within the `settings.local.php` file, which is ignored by git in our [Drupal 8 upstream](https://github.com/pantheon-systems/drops-8). Modifying the bundled `settings.php` file is not necessary, as it already includes `settings.local.php` if one exists.
 
-    // Local development configuration.
-    if (!defined('PANTHEON_ENVIRONMENT')) {
-      // Database.
-      $databases['default']['default'] = array(
-        'database' => 'DATABASE',
-        'username' => 'USERNAME',
-        'password' => 'PASSWORD',
-        'host' => 'localhost',
-        'driver' => 'mysql',
-        'port' => 3306,
-        'prefix' => '',
-      );
-    }
-
+```php
+// Local development configuration.
+if (!defined('PANTHEON_ENVIRONMENT')) {
+  // Database.
+  $databases['default']['default'] = array(
+    'database' => 'DATABASE',
+    'username' => 'USERNAME',
+    'password' => 'PASSWORD',
+    'host' => 'localhost',
+    'driver' => 'mysql',
+    'port' => 3306,
+    'prefix' => '',
+  );
+}
+```
 
 The `HASH_SALT` value should also be set within `settings.local.php`. See Drush script: [Quickstart](https://github.com/pantheon-systems/drush-config-workflow/blob/master/bin/quickstart)
 
 To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/docs/terminus):
+
 ```
 terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
 ```
 
 Drupal 8 will not run locally without a hash salt, but it need not be the same one set on the Pantheon platform; any sufficiently long random string will do. Make sure to set one in `settings.local.php` :
+
 ```
 $settings['hash_salt'] = '$HASH_SALT';
 ```
 
 #### Trusted Host Setting
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. If you would like to resolve the warning, use the following configuration:
+
 <Alert title="Note" type="info">
+
 Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 8 redirects from our [Configure Redirects](/docs/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.
+
 </Alert>
-```
+
+```php
 if (defined('PANTHEON_ENVIRONMENT')) {
   if (in_array($_ENV['PANTHEON_ENVIRONMENT'], array('dev', 'test', 'live'))) {
     $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.pantheon.io";
@@ -81,28 +90,32 @@ if (defined('PANTHEON_ENVIRONMENT')) {
 
 ### Drupal 7
 
-    // Local development configuration.
-    if (!defined('PANTHEON_ENVIRONMENT')) {
-      // Database.
-      $databases['default']['default'] = array(
-        'database' => 'DATABASE',
-        'username' => 'USERNAME',
-        'password' => 'PASSWORD',
-        'host' => 'localhost',
-        'driver' => 'mysql',
-        'port' => 3306,
-        'prefix' => '',
-      );
-    }
+```php
+// Local development configuration.
+if (!defined('PANTHEON_ENVIRONMENT')) {
+  // Database.
+  $databases['default']['default'] = array(
+    'database' => 'DATABASE',
+    'username' => 'USERNAME',
+    'password' => 'PASSWORD',
+    'host' => 'localhost',
+    'driver' => 'mysql',
+    'port' => 3306,
+    'prefix' => '',
+  );
+}
+```
 
 ### Drupal 6
 
-    // Local development configuration.
-    if (!defined('PANTHEON_ENVIRONMENT')) {
-      // Database.
-      $db_url = 'mysql://username:password@localhost/databasename';
-      $db_prefix = '';
-    }
+```php
+// Local development configuration.
+if (!defined('PANTHEON_ENVIRONMENT')) {
+  // Database.
+  $db_url = 'mysql://username:password@localhost/databasename';
+  $db_prefix = '';
+}
+```
 
 ## Frequently Asked Questions
 
@@ -115,11 +128,11 @@ Depending on your use case, there are three possibilities:
 
  - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/docs/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
 
-    <Alert title="Note" type="info">
-
-    `$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).
-
-    </Alert>
+  <Alert title="Note" type="info">
+  
+  `$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).
+  
+  </Alert>
 
  - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/redis/) guide for examples.
 
@@ -199,7 +212,9 @@ The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
 If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.ouput value by adding the following line to `settings.php`:
 
-    ini_set('arg_separator.output', '&');
+```php
+ini_set('arg_separator.output', '&');
+```
 
 ### Drush Error: "No Drupal site found", "Could not find a Drupal settings.php file", or missing system information from status
 

@@ -15,7 +15,7 @@ Wraith works by crawling two websites, taking screenshots of both, and then comp
 
 In the following example, the accidental removal of the date field on the lower right caused spacing and other changes. These changes were automatically detected and highlighted in red.
 
-![Visual Regression Date Change](../docs/assets/images/visual-date-diff.png)
+![Visual Regression Date Change](../../docs/assets/images/visual-date-diff.png)
 
 
 ## Installation
@@ -28,7 +28,7 @@ Wraith needs the ImageMagick library to do image comparisons. Additionally, Wrai
 
 Install via [Homebrew](https://brew.sh/):
 
-```nohighlight
+```
 brew install phantomjs198
 brew install imagemagick
 brew install casperjs --devel
@@ -38,22 +38,22 @@ brew install casperjs --devel
 
 On Ubuntu:
 
-```nohighlight
+```
 sudo apt-get install phantomjs
 sudo apt-get install imagemagick
 npm install -g casperjs
 ```
-<hr>
+<hr />
 
 Wraith runs on the command line and installs as a Ruby gem. If you're running Wraith on Linux, you may need to install Ruby first. To install Wraith, run the following command:
 
-```nohighlight
+```
 gem install wraith
 ```
 
 Wraith should now be accessible from the command line.
 
-```nohighlight
+```
 $ wraith
 
   Commands:
@@ -81,16 +81,21 @@ See Wraith's [installation guide](https://bbc-news.github.io/wraith/os-install.h
 ## Configure and Run Wraith
 
 Wraith stores its configuration within a self-generated YAML file. To set this up, we'll first have to create a directory to store your Wraith configuration files:
-```nohighlight
+
+```
 mkdir wraith
 cd wraith
 ```
+
 Next, use the `wraith setup` command to generate a Wraith YAML configuration file and browser navigation script:
-```nohighlight
+
+```
 wraith setup
 ```
+
 You should see the following output:
-```nohighlight
+
+```
 create  configs
 create  configs/capture.yaml
 create  configs/history.yaml
@@ -105,6 +110,7 @@ create  javascript/interact--phantom.js
 create  javascript/wait--casper.js
 create  javascript/wait--phantom.js
 ```
+
 Notice that Wraith also created the JavaScript file `javascript/wait--phantom.js`, which is a browser navigation script for PhantomJS. This script can be modified to increase the reliability of your screenshot captures by changing the browser timeout from two seconds to ten.
 
 Open the `javascript/wait--phantom.js` file in an editor, scroll to the end, and replace the number 2000 with 10000.
@@ -119,15 +125,19 @@ module.exports = function (phantom, ready) {
     setTimeout(ready, 10000); // you MUST call the ready() callback for Wraith to continue
 }
 ```
+
 Next, the `configs/capture.yaml` file will need to be modified to crawl and capture your websites. For this guide I'm comparing a default installation of Panopoly on my Pantheon Dev and Test environments.
 
 Open `configs/capture.yaml`, go to the `domains` label, and change the default values to two websites you want to visually compare.
+
 ```yaml
 domains:
   dev: "https://dev-panopoly-dreams.pantheon.io"
   test: "https://test-panopoly-dreams.pantheon.io"
 ```
+
 You also need to add navigation paths in `configs/capture.yaml` for Wraith to crawl. In the following example, I've edited the `paths:` to remove the default `about` and `contact` items and added some additional pages for Wraith to compare.
+
 ```yaml
 paths:
   home: "/"
@@ -135,39 +145,54 @@ paths:
   great-vegetables: "/content/great-vegetables"
   lovely-vegetables: "/content/lovely-vegetables"
 ```
+
 Next, update the global `before_capture:` hook and replace its value with the `javascript/wait--phantom.js` script you updated.
+
 ```yaml
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 #before_capture: 'javascript/disable_javascript--phantom.js'
 before_capture: 'javascript/wait--phantom.js'
 ```
+
 <Alert title="Note" type="info">
+
 YAML is space sensitive. Domain and Path entries in the code snippets above should be spaced as illustrated within your local editor.
+
 </Alert>
+
 Finally, execute Wraith:
-```nohighlight
+
+```
 wraith capture capture
 ```
+
 Wraith will navigate your two websites and generate an image comparison gallery. Open `wraith/shots/gallery.html` in any web browser to view the results. You can do this by using the browser application (e.g. File > Open File) or by running the following command from within the wraith directory:
-```nohighlight
+
+```
 open shots/gallery.html
 ```
-![Full Screen Diff Example](../docs/assets/images/fullscreen-diff.png)
+
+![Full Screen Diff Example](../../docs/assets/images/fullscreen-diff.png)
 
 ## Capture with Selectors
 
 Wraith can capture portions of a website with CSS selectors and display them in the gallery alongside full page captures.  This feature is useful to isolate static content when testing pages with dynamic functionality.
+
 <Alert title="Note" type="info">
+
 The latest development version of CasperJS is required to use CSS selectors with Wraith. Please see the above [Install](#installation) section for instructions.
+
 </Alert>
 
 First, edit `configs/capture.yaml` to change the `browser:` setting to `casperjs`.
+
 ```yaml
 # (required) The engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
 browser: "casperjs"
 ```
 
 Edit the new configuration file, `configs/capture.yaml`, to add selectors to the paths.  Note the path format has changed to support URL components with selectors.
+
 ```yaml
 domains:
   dev: "https://dev-panopoly-dreams.pantheon.io"
@@ -180,7 +205,9 @@ paths:
     path: "/"
     selector: "#header"
 ```
+
 To increase the reliability of the screenshot captures, tweak the capture time in `javascript/wait--casper.js`. Change the timeout from 2000 to 10000.
+
 ```javascript
 // ######################################################
 // This is an example module provided by Wraith.
@@ -191,16 +218,21 @@ module.exports = function (phantom, ready) {
     setTimeout(ready, 10000); // you MUST call the ready() callback for Wraith to continue
 }
 ```
+
 Finally, tweak the `before_capture:` line in `configs/capture.yaml` to use the CasperJS wait script.
+
 ```yaml
 # (optional) JavaScript file to execute before taking screenshot of every path. Default: nil
 before_capture: 'javascript/wait--casper.js'
 ```
+
 Run Wraith to produce a new gallery from the selectors. To execute this Wraith test, run the following command:
-```nohighlight
+
+```
 wraith capture capture
 ```
-![Headers Diff Example](../docs/assets/images/headers-diff.png)
+
+![Headers Diff Example](../../docs/assets/images/headers-diff.png)
 
 
 ## History Mode

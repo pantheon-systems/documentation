@@ -9,7 +9,9 @@ Before [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.ht
 Sites that don't use InnoDB are missing out on performance and stability gains.  As part of our Launch Check for new sites, we check the engine type on every table. If we find a table using the MyISAM engine, we notify the user so they can fix it. To make it easy, there is a PHP script you can use to help convert your MyISAM tables to InnoDB.
 
 <Alert title="Warning" type="danger">
+
 This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.
+
 </Alert>
 
 ## MySQL Command
@@ -23,7 +25,9 @@ ALTER TABLE table_name ENGINE=InnoDB;
 ## Simple PHP Script
 
 <Alert title="Note" type="info">
+
 You must be a Pantheon customer to use this script.
+
 </Alert>
 
 1. Save the code in a file with the extension `.php` and add it to your site root.
@@ -39,13 +43,9 @@ Here's the browser version of the script:
 
 <TabList>
 
-<Tab name="PHP 5" id="php5" active={true}>
+<Tab title="PHP 5" id="php5" active={true}>
 
-<pre><code><style>
-  .green { color: green; font-family: monospace;}
-  .red { color: red; font-family: monospace;}
-</style>
-
+```php
 <h1>Pantheon MyISAM to InnoDB engine converter</h1>
 
 <?php
@@ -81,16 +81,14 @@ while ($row= $results->fetch_assoc())
   }
 };
 
-die(0);</code></pre>
+die(0);
+```
 
 </Tab>
 
-<Tab name="PHP 7" id="php7">
+<Tab title="PHP 7" id="php7">
 
-<pre><code><style>
-  .green { color: green; font-family: monospace;}
-  .red { color: red; font-family: monospace;}
-</style>
+```php
 
 <h1>Pantheon MyISAM to InnoDB engine converter</h1>
 
@@ -127,7 +125,8 @@ while ($row= $results->fetch_assoc())
   }
 };
 
-die(0);</code></pre>
+die(0);
+```
 
 </Tab>
 
@@ -195,18 +194,40 @@ die(0);
 ```
 
 Here are the parameters you will need to configure before running the script:
-<dl>
-	<dt>host</dt>
-	<dd>This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/docs/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.</dd><br>
-  <dt>port</dt>
-  <dd>This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.</dd><br>
-  <dt>user </dt>
-  <dd>This is the user name you use to connect to MySQL with.</dd><br>
-  <dt>password</dt>
-  <dd>This is your MySQL password for the user you specified in the line above.</dd><br>
-  <dt>database</dt>
-  <dd>This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.</dd>
-</dl>
+
+<DefList>
+
+<Definition name="host">
+
+This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/docs/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
+
+</Definition>
+
+<Definition name="port">
+
+This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.
+
+</Definition>
+
+<Definition name="user">
+
+This is the user name you use to connect to MySQL with.
+
+</Definition>
+
+<Definition name="password">
+
+This is your MySQL password for the user you specified in the line above.
+
+</Definition>
+
+<Definition name="database">
+
+This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.
+
+</Definition>
+
+</DefList>
 
 Now, save the file. Execute the program from a command window.
 

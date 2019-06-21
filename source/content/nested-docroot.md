@@ -10,7 +10,9 @@ contributors:
 The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml/#site-local-configurations-pantheonyml) file or in the [pantheon.upstream.yml](/docs/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
 
 <Alert title="Warning" type="danger">
+
 Changing the settings of the `web_docroot` property will prevent you from updating your site via one-click Dashboard updates. To continue to use one-click updates, switch to a [Custom Upstream](/docs/custom-upstream) that has the `web_docroot` property set in the `pantheon.upstream.yml` file.
+
 </Alert>
 
 ## Advantages and Use Cases
@@ -23,7 +25,7 @@ If you wish to stop using One-click Dashboard updates on a particular site, and 
 
 <TabList>
 
-<Tab name="Drupal 7" id="d7-set-upstream" active={true}>
+<Tab title="Drupal 7" id="d7-set-upstream" active={true}>
 
 ```bash
 terminus site:upstream:set <site> empty-7
@@ -31,7 +33,7 @@ terminus site:upstream:set <site> empty-7
 
 </Tab>
 
-<Tab name="Drupal 8" id="d8-set-upstream">
+<Tab title="Drupal 8" id="d8-set-upstream">
 
 ```bash
 terminus site:upstream:set <site> empty
@@ -39,13 +41,15 @@ terminus site:upstream:set <site> empty
 
 </Tab>
 
-<Tab name="WordPress" id="wp-set-upstream">
+<Tab title="WordPress" id="wp-set-upstream">
 
 ```bash
 terminus site:upstream:set <site> empty-wordpress
 ```
 
 </Tab>
+
+</TabList>
 
 ## Enable Nested Docroot
 Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.
@@ -89,7 +93,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   Your directory structure should look like this afterwards:
 
-  ```nohighlight
+  ```
   ├── web
     ├── includes
     ├── index.php
@@ -122,7 +126,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   Your directory structure should look like this afterwards:
 
-  ```nohighlight
+  ```
   ├── web
     ├── core
     ├── drush
@@ -153,7 +157,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   Your directory structure should look like this afterwards:
 
-  ```nohighlight
+  ```
   ├── web
     ├── index.php
     ├── wp-activate.php

@@ -21,7 +21,7 @@ Identify DNS values to point your domain to Pantheon:
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your [GoDaddy account <span class="glyphicons glyphicons-new-window-alt"></span>](https://godaddy.com/" target="blank) in a new tab before you continue.
+Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in a new tab before you continue.
 
 ## Configure DNS Records on GoDaddy
 ### A Record
@@ -73,7 +73,7 @@ If you receive an error message that says `The specified record already exists`,
 
 ## GoDaddy Docs
 
-[Manage DNS <span class="glyphicons glyphicons-new-window-alt"></span>](https://www.godaddy.com/help/manage-dns-680" target="blank)
+[Manage DNS](https://www.godaddy.com/help/manage-dns-680)
 
 ## Next Steps
 

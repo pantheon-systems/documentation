@@ -52,7 +52,7 @@ Example: `https://livesitename.pantheonsite.io/` and add an asterisk at the end 
 
 Here is an example of what these settings would look like if we were to test our own site:
 
-![The BlazeMeter settings window](../docs/assets/images/blazemeter-settings-example.png)
+![The BlazeMeter settings window](../../docs/assets/images/blazemeter-settings-example.png)
 
 ###Integrate New Relic Pro
 
@@ -84,13 +84,13 @@ Results are graphed, along with any error messages, response times, and so forth
 
 Now that you’ve run your load test, you can review the results on BlazeMeter and see a summary of users, throughput, errors, response times, and bandwidth. You can also access an aggregate report of load times on each page and a list of errors generated, demonstrated below.
 
-![The BlazeMeter settings window](../docs/assets/images/blazemeter-review-results.png)
+![The BlazeMeter settings window](../../docs/assets/images/blazemeter-review-results.png)
 
 The report is a nice high-level overview of site performance, but you’ll want more details for the full picture. New Relic (which you can enable through the Pantheon Site Dashboard) will provide more information on slow transactions and appserver response times for both web and non-web transactions.
 
 You can also view the load report directly to evaluate the number of users and the concurrent response time, shown here:
 
-![The BlazeMeter load report](../docs/assets/images/blazemeter-load-report.png)
+![The BlazeMeter load report](../../docs/assets/images/blazemeter-load-report.png)
 
 
 Depending on the application you’re running, you can also access error and slow logs for PHP and mySQL. Drupal can log these to the database with [DBlog](https://api.drupal.org/api/drupal/modules!dblog!dblog.module/7) (though be sure to prune these regularly as they can bloat the database and slow your site down). WordPress has plugins like [Debug Bar](https://wordpress.org/plugins/debug-bar/), [SQL Monitor](https://wordpress.org/plugins/sqlmon/), [P3](https://wordpress.org/plugins/p3-profiler/), and [Debug Queries](https://wordpress.org/plugins/debug-queries/).

@@ -1,7 +1,7 @@
 ---
 title: Using Pantheon as a Training Platform for WordPress and Drupal
 description: Best practices for training a group of student using Pantheon
-type: guide
+layout: doc
 permalink: docs/guides/:basename/
 tags: [moreguides]
 contributors: [stevector, dwayne, davidneedham, tessak22]
@@ -23,14 +23,18 @@ Before preparing sites to use Pantheon for a specific class, test out the platfo
  4. [Create an Agency here](https://dashboard.pantheon.io/organizations/create-agency). This Agency organization will give you a dashboard overview of all of your students' sites. Creating an organization account will require a unique homepage URL. Choose a URL related to your training. You can read more about using the Organization Dashboard [here](/docs/organizations/).
 
     <Alert title="Note" type="info">
-      You are limited to creating one organization per unique email. If you have already created a Pantheon Agency in the past you will need to create a brand new Pantheon user account with a different email address.
-      </Alert>
+
+    You are limited to creating one organization per unique email. If you have already created a Pantheon Agency in the past you will need to create a brand new Pantheon user account with a different email address.
+
+    </Alert>
 
  5. **Optional:** Make a new *start-state* site. If you want your students to all start with a set of certain themes, modules/plugins, and content in the database, you can create a sample site on Pantheon. This site can later be copied for each of your students. Alternatively, if you want your students to start with stock Drupal or WordPress core, you can simply spin up sites from one of our [standard upstreams](/docs/start-state/).
 
     <Alert title="Note" type="info">
+
     Trainers with a great deal of Pantheon experience may want to use our [Custom Upstreams](/docs/custom-upstream/) to supply a common set of code to their students. We **do not** recommend trainers new to Pantheon take on that additional complexity.
-      </Alert>
+
+    </Alert>
 
 ## Make Sites for All Students
 

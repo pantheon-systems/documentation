@@ -19,12 +19,14 @@ Be sure that you have a:
 ## Locate Pantheon's DNS Values
 
 <Alert title="Note" type="info">
+
 The following recommendations differ from those shown in the Site Dashboard. This is because Cloudflare supports **CNAME Flattening**, which prevents association with a single IP address. Ignore the DNS values provided in the Site Dashboard for A/AAAA records.
+
 </Alert>
 
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **DNS Recommendations** button next to the `www` domain and copy the CNAME value (e.g. `live-example.pantheonsite.io`).
-3. Login to your [Cloudflare account <span class="glyphicons glyphicons-new-window-alt"></span>](https://www.cloudflare.com/a/login" target="blank) in a new tab before you continue.
+3. Login to your [Cloudflare account](https://www.cloudflare.com/a/login) in a new tab before you continue.
 
 ## Configure DNS Records on Cloudflare
 

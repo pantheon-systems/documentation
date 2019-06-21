@@ -20,28 +20,39 @@ previouspage: Connect a Domain to Live
 editpath: launch/04-configure-dns.md
 image: getting-started-Largethumb
 ---
+
 In this lesson we'll configure DNS and provision [free, automated HTTPS](/docs/https/) on Pantheon.
 
 <Alert title="Note" type="info">
+
 If your site is already live and serving HTTPS traffic, and will require HTTPS on Pantheon, return to [Connect a Domain Name](/docs/guides/launch/domains/) and complete the steps to pre-provision HTTPS before updating DNS to avoid downtime.
+
 </Alert>
 
 These instructions cover the common `example.com` and `www.example.com` domain configuration. For other domain configurations, see [Platform and Custom Domains](/docs/domains/#custom-domains).
 
-{% include("content/configure-dns.html")%}
+`markdown:configure-dns.md`
 
 For more detailed instructions pertaining to your specific DNS host, click below:
 
 <Accordion title=" DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
-    <ul class="top-docs top-docs-2col docs-2col-panel">
-      {% for doc in data.docs_tags.providers %}
-        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-          <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+
+ - [1&1 Domain Configuration](/docs/1-and-1/)
+ - [Cloudflare Domain Configuration](/docs/cloudflare/)
+ - [DNS Made Easy Domain Configurationi](/docs/dns-made-easy/)
+ - [DreamHost Domain Configuration](/docs/dreamhost/)
+ - [Dyn Domain Configuration](/docs/dyn/)
+ - [eNom Domain Configuration](/docs/enom/)
+ - [Gandi Domain Configuration](/docs/gandi/)
+ - [GoDaddy Domain Configuration](/docs/godaddy/)
+ - [Google Domain Configuration](/docs/google/)
+ - [Namecheap Domain Configuration](/docs/namecheap/)
+ - [Network Solutions Domain Configuration](/docs/network-solutions/)
+ - [Amazon Route 53 Domain Configuration](/docs/route53/)
+
 </Accordion>
 
-{% include("content/enable-https.html")%}
+`markdown:enable-https.md`
 
-{% include("content/https-requirements.html")%}
+
+`markdown:https-requirements.md`

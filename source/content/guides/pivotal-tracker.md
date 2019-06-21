@@ -35,11 +35,11 @@ As a best practice, start by creating a new machine user in Tracker. This user i
 
   We suggest naming machine users relative to their function, in this example we name our new user `Automation User`. Add this account to an existing project if you have one. The email needs to be an account you have access to:
 
-  ![Create an automation user](../docs/assets/images/integrations/pivotal-tracker/new-user.png)
+  ![Create an automation user](../../docs/assets/images/integrations/pivotal-tracker/new-user.png)
 
 3. Sign in as the machine user and navigate to the profile page. Save the API token for the next steps:
 
-   ![Get token](../docs/assets/images/integrations/pivotal-tracker/api-token.png)
+   ![Get token](../../docs/assets/images/integrations/pivotal-tracker/api-token.png)
 
 
 ## Prepare your site: Securely Store User Credentials on Pantheon
@@ -129,7 +129,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 1. Create a test story in an existing or new Pivotal Tracker project. Copy the issue ID:
 
-    ![Pivotal Tracker id](../docs/assets/images/integrations/pivotal-tracker/id.png)
+    ![Pivotal Tracker id](../../docs/assets/images/integrations/pivotal-tracker/id.png)
 
     <Alert title="Note" type="info">
 
@@ -141,11 +141,11 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 3. You should see the change appear in the Activity log of the story:
 
- ![successful commit in Pivotal Tracker](../docs/assets/images/integrations/pivotal-tracker/commit-story.png)
+ ![successful commit in Pivotal Tracker](../../docs/assets/images/integrations/pivotal-tracker/commit-story.png)
 
 The Pivotal Tracker API will also change story status by including "fixed", "completed", or "finished" within the square brackets, in addition to the story ID. You may use different cases or forms of these verbs, such as "Fix" or "FIXES", and they may appear before or after the story ID. In Pivotal vernacular, for features, one of these keywords will put the story in the finished state. For chores, it will put the story in the accepted state. The square brackets can appear anywhere in the commit message. Examples:
 
-```shell
+```bash
   [Completed #149869497] adding requested feature.
   I finally [finished #148528125] this functionality.
   This commit [fixes #148528125]

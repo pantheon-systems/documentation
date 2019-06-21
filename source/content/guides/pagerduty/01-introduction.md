@@ -33,4 +33,4 @@ To get started, you need to activate [New Relic APM Pro](/docs/new-relic/) on Pa
 2. Click the **Activate New Relic Pro** button.
 3. Use the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Live Site** and browse your site for a few minutes to generate data in New Relic:
 
-  ![New Relic Enable and Generate Data](../docs/assets/images/pagerduty/new-relic-generate-data.png)
+  ![New Relic Enable and Generate Data](../../docs/assets/images/pagerduty/new-relic-generate-data.png)

@@ -23,18 +23,21 @@ If you are also developing locally and need to configure WordPress for your desk
 
 ## Pantheon's WordPress Config
 
-<Accordion title={"View Pantheon's WordPress Configuration"} id={"pantheon-wp-config-php"} icon={"wrench"}>
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal"></script>
+<Accordion title="View Pantheon's WordPress Configuration" id="pantheon-wp-config-php" icon="wrench">
+
+GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php GITHUB-EMBED
+
 </Accordion>
 
 <Alert tile="Note" type="info">
+
 `$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
+
 </Alert>
 
 
 
-##Frequently Asked Questions
-
+## Frequently Asked Questions
 ### How can I write logic based on the Pantheon server environment?
 
 Depending on your use case, there are two possibilities:
@@ -63,33 +66,10 @@ Depending on your use case, there are two possibilities:
  }
  ```
 
+### How do I enable debugging?
 The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php):
 
-```php
-// All Pantheon Environments.
-if (defined('PANTHEON_ENVIRONMENT')) {
-  //WordPress debug settings in development environments.
-  if (!in_array(PANTHEON_ENVIRONMENT, array('test', 'live'))) {
-    // Debugging enabled.
-    if (!defined( 'WP_DEBUG' )) {
-    define( 'WP_DEBUG', true );
-    }
-    define( 'WP_DEBUG_LOG', true );
-    ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' ); // Moves the log file to a location writable while in git mode.
-    define( 'WP_DEBUG_DISPLAY', true );
-  }
-  // WordPress debug settings in test and live environments.
-  else {
-    // Debugging disabled.
-    ini_set('log_errors','On');
-    ini_set('display_errors','Off');
-    ini_set('error_reporting', E_ALL );
-    define('WP_DEBUG', false);
-    define('WP_DEBUG_LOG', true);
-    define('WP_DEBUG_DISPLAY', false);
-  }
-}
-```
+`markdown:/wp-debugging.md`
 
 ### How can I read the Pantheon environmental configuration, like database credentials?
 
@@ -103,8 +83,16 @@ See [Configure Redirects](/docs/redirects/).
 
 WordPress has an option to [write logging information to a file](/docs/logs/#how-do-i-enable-error-logging-for-wordpress). When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
 
+WP version 5.0.x and older versions
+
 ```php
 ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
+```
+
+As of WP version 5.1 and newers
+
+```php
+define( 'WP_DEBUG_LOG', __DIR__ . 'wp-content/uploads/debug.log'
 ```
 
 ### Where do I specify database credentials?
@@ -133,4 +121,6 @@ The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
 If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.ouput value by adding the following line to `wp-config.php`:
 
-```ini_set('arg_separator.output', '&');```
+```php
+ini_set('arg_separator.output', '&');
+```

@@ -34,7 +34,7 @@ In this guide, we will create and configure the simplest check for a website, an
 
 2.  The left navigation menu contains the different types of monitoring checks, reports, and a few other features. From the [main user dashboard](https://my.pingdom.com/dashboard) or from the left navigation's **Monitoring** > **Uptime** sub-menu, click on **Add uptime check**:
 
-    ![My.pingdom.com dashboard](../docs/assets/images/integrations/dashboard.png)
+    ![My.pingdom.com dashboard](../../docs/assets/images/integrations/dashboard.png)
 
 3.  In the modal that opens, add the following information where indicated:
 
@@ -58,36 +58,36 @@ In this guide, we will create and configure the simplest check for a website, an
 
 3.  Click **Create check** when you are done. You will now see a new check in the dashboard, from the **Uptime** page:
 
-    ![Pingdom.com uptime check](../docs/assets/images/integrations/complete_check.png)
+    ![Pingdom.com uptime check](../../docs/assets/images/integrations/complete_check.png)
 
 ## Review your Check
 Let the check run a while (a few hours), then you can access reports for each site in either the left navigation menu or the individual check dropdown menu.
 
-![Pingdom reports](../docs/assets/images/integrations/reporting_options.png)
+![Pingdom reports](../../docs/assets/images/integrations/reporting_options.png)
 
 Let’s look at a site that is having some trouble to see how Pingdom can help.
 
-![Downtime modal](../docs/assets/images/integrations/downtime_modal.png)
+![Downtime modal](../../docs/assets/images/integrations/downtime_modal.png)
 
 - Item 1 tells us when the issue started occurring, which we can attempt to correlate to any recent changes or external events.
 
 - Item 2 provides the site's response to the check and Pingdom’s attempt to determine the root cause of the downtime. In this case, we see that the site returned a 200, which is a successful response, but took so long that Pingdom considered it a timeout:
 
-    ![Root cause analysis](../docs/assets/images/integrations/root_cause.png)
+    ![Root cause analysis](../../docs/assets/images/integrations/root_cause.png)
 
 This could point to a scaling, performance, or something simple, like lack of caching. Sometimes a server error will be returned, which can be connected to a PHP or permissions error.
 
 The Test Log Results will also display which regions encountered downtime. Sometimes the root cause of downtime is not related to site performance, as when a regional DNS server encounters issues. This report is helpful determining an incident when a certain region of users encounter downtime while others do not.
 
-![Test log results](../docs/assets/images/integrations/test_result.png)
+![Test log results](../../docs/assets/images/integrations/test_result.png)
 
 ## Customize Alerts
 
 Before finishing, each user should customize how they receive alerts. Here I added my mobile telephone number, so I also get text alerts as well as email notifications.
 
-![User configuration page](../docs/assets/images/integrations/user_config.png)
+![User configuration page](../../docs/assets/images/integrations/user_config.png)
 
-{% include("content/monitor-alerts.html")%}
+`markdown:monitor-alerts.md`
 
 ## Conclusion
 Pingdom has a few more checks and features we did not cover. Depending on your plan it provides a site status page, multi-tier alerting schedules, and API access for custom integration.

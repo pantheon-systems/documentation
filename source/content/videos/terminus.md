@@ -2,12 +2,13 @@
 title: Introduction to Terminus
 description: The Pantheon CLI.
 contributors:  [scottmassey]
-videoid: muv7vxu6vi
 permalink:  docs/videos/:basename/
 tags: [devterminus]
 layout: doc
 searchboost: 50
 ---
+
+`youtube: https://youtu.be/njN2-z2pDFI`
 
 You can interact with Pantheon using our command line interface—[Terminus](/docs/terminus). In doing so, you can work faster and more efficiently, automate repetitive tasks, and access additional functionality.
 

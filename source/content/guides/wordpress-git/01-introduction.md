@@ -21,7 +21,7 @@ This guide demonstrates how SFTP users can build WordPress sites on Pantheon's g
 
 Dive into Git with WordPress on Pantheon, keeping your favorite SFTP client and text editor without compromising use of the WordPress Dashboard or adding a lot of complexity to your workflow. But first, why should you use git, when SFTP and a text editor has been working fine? Here are a few reasons why:
 
-<Accordion title={"Benefits of Git"} id={"unique-anchor"} icon={"lightbulb"}>
+<Accordion title="Benefits of Git" id="unique-anchor" icon="lightbulb">
 #### Collaborate
 Any kind of collaboration is easier and safer with version control. You can work in parallel with others and not step on any toes. Even working alone, you can have many features in progress on a site, but without risking the stability of the current site.
 
@@ -32,7 +32,7 @@ Version control creates a more secure way to move code around. You can lock down
 Git provides a recorded timeline of changes, allowing you to move forward or back in the code's history. What caused that new bug? Simply step back through past revisions until you find where it appears!
 
 #### Best Practice
-Using Git is a big step away from the bad habits of Cowboy Coding <Popover icon="info-circle" title="Cowboy Coding" content="Developing directly on the production environment, a poor practice." /> and a leap towards professional development best practices. For growing agencies and developers, it isn’t an option, it's inevitable. And here is the easiest way to embrace your destiny as a WordPress professional.
+Using Git is a big step away from the bad habits of Cowboy Coding <Popover title="Cowboy Coding" content="Developing directly on the production environment, a poor practice." /> and a leap towards professional development best practices. For growing agencies and developers, it isn’t an option, it's inevitable. And here is the easiest way to embrace your destiny as a WordPress professional.
 </Accordion>
 
 ## Before You Begin
@@ -75,4 +75,4 @@ Using the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment
 
 * Build in a known state with fewer surprises, since **<span class="glyphicons glyphicons-wrench"></span> Dev** is the same as **<span class="glyphicons glyphicons-cardio"></span> Live**.
 * Share work in progress with a web accessible URL (e.g., `example-dev.pantheonsite.io`)
-* Stop Cowboy Coding <Popover icon="info-circle" title="Cowboy Coding" content="Developing directly on the production environment, a poor practice." />
+* Stop Cowboy Coding <Popover title="Cowboy Coding" content="Developing directly on the production environment, a poor practice." />

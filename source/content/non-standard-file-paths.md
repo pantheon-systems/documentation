@@ -18,27 +18,27 @@ If your site relies on code that expects to find files at non-standard locations
 
 <Tab title="WordPress" id="tab-1-id" active={true}>
 
-    If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase), then navigate to the project's root directory and execute the following commands:
+If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase), then navigate to the project's root directory and execute the following commands:
 
-  ```bash
-  ln -s ./wp-content/uploads ./content
-  git add content
-  git commit files -m "adding legacy files location symlink"
-  git push origin master
-  ```
+```bash
+ln -s ./wp-content/uploads ./content
+git add content
+git commit files -m "adding legacy files location symlink"
+git push origin master
+```
 
 </Tab>
 
 <Tab title="Drupal" id="tab-2-id">
 
-    If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase), then navigate to the project's root directory and execute the following commands:
+If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase), then navigate to the project's root directory and execute the following commands:
 
-  ```bash
-  ln -s ./sites/default/files ./content
-  git add content
-  git commit files -m "adding legacy files location symlink"
-  git push origin master
-  ```
+```bash
+ln -s ./sites/default/files ./content
+git add content
+git commit files -m "adding legacy files location symlink"
+git push origin master
+```
 
 </Tab>
 

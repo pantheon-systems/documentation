@@ -26,10 +26,9 @@ The following is an example of how to increase test coverage for your project by
 
 1. Pull down commits added to the `slogan` branch from the previous lesson:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-branch">Copy</button>
-      <figure><pre id="git-branch"><code class="command bash" data-lang="bash">git pull origin slogan</code></pre></figure>
-    </div>
+    ```bash
+    git pull origin slogan
+    ```
 
 2.  Create the directory `tests/site-features` and add a new file called `slogan.feature` containing:
 
@@ -67,12 +66,11 @@ The following is an example of how to increase test coverage for your project by
 
 3.  Commit your new files to the `slogan` branch and push to GitHub for peer review:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#git-push">Copy</button>
-      <figure><pre id="git-push"><code class="command bash" data-lang="bash">git add .
+    ```bash
+    git add .
       git commit -m "Add tests/site-features for content UI and slogan"
-      git push origin slogan</code></pre></figure>
-    </div>
+      git push origin slogan
+    ```
 
 ### Behat Test Artifacts
 

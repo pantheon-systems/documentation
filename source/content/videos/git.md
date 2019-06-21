@@ -2,13 +2,15 @@
 title: Git
 description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
-videoid: b7okmpc05p
 permalink:  docs/videos/:basename/
 tags: [git]
 categories: [develop, cli]
 layout: doc
 searchboost: 50
 ---
+
+`youtube: https://youtu.be/LG7_wWQHtS4`
+
 Pantheon uses Git to make sure all code is stored, versioned, and deployed both safely and predictably.
 
 Git is an open source version control system. It’s fast, secure, and reliable, and supports both simple versioning or complex, distributed, non-linear workflows for hundreds of contributors.

@@ -33,8 +33,10 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * In your theme, use a simple PHP `include()` instead of WordPress's [get_template_part()](https://codex.wordpress.org/Function_Reference/get_template_part). The overhead is heavy if your use case is simply adding in another sub-template file. For example:
 
-        <?php get_template_part('content', 'sidebar'); ?>
-        <?php include('content-sidebar.php'); ?>
+  ```php
+  <?php get_template_part('content', 'sidebar'); ?>
+  <?php include('content-sidebar.php'); ?>
+  ```
 
 ## Testing
 

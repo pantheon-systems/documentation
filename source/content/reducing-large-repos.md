@@ -78,3 +78,4 @@ You can output the size of your repository by running [`git count-objects -vH`](
  git reflog expire --expire=now --all
  git gc --prune=now
  ```
+

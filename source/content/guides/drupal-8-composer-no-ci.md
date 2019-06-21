@@ -3,7 +3,7 @@ title: Drupal 8 and Composer on Pantheon Without Continuous Integration
 description: Learn how to manage Drupal 8 using Composer with Pantheon.
 tags: [moreguides, composer]
 categories: [drupal]
-type: guide
+layout: doc
 permalink: docs/guides/:basename/
 contributors: [ataylorme, dwayne, davidneedham]
 ---
@@ -13,6 +13,7 @@ In this guide, we’re going to run through the bare necessities to use [Compose
 Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/docs/core-updates/).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
 
 <Alert title="Note" type="info">
+
 As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
 
 As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
@@ -49,6 +50,12 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
   git clone git@github.com:pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
   ```
 
+   This command assumes you have [SSH keys](/docs/ssh-keys/) added to your GitHub account. If you don't, you can clone the repository over HTTPS:
+
+  ```bash
+  git clone https://github.com/pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
+  ```
+
 2. `cd` into the cloned directory:
 
   ```bash
@@ -79,16 +86,14 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
     - `.circleci`
     - `tests`
 
-2.  Modify `composer.json`:
+1.  Modify `composer.json`:
     - Remove all dependencies in the `require-dev` section.
     - Update the `scripts` section to remove the `lint`, `code-sniff`, and `unit-test` lines.
-    - Remove the `find .circleci/scripts/pantheon/ -type f | xargs chmod 755,` line from the `post-update-cmd` section of `scripts`.
-    - Remove the `find tests/scripts/ -type f | xargs chmod 755` line from the `post-update-cmd` section of `scripts`.
-        - You may need to remove a trailing comma from the end of the last item in the `post-update-cmd` section, otherwise the JSON will be invalid.
 
-3. Remove the following section from `pantheon.yml`:
+1.  Remove the following section from `pantheon.yml`:
 
     ```yml
+    workflows:
       sync_code:
         after:
           - type: webphp
@@ -99,7 +104,9 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 ## Managing Drupal with Composer
 
 <Alert title="Note" type="info">
+
 When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the [Pantheon platform is not compatible with git submodules](/docs/git-faq/#does-pantheon-support-git-submodules). If you remove the `.git` directories, be sure to put them back again after you push your commit up to Pantheon (see instructions below). To do this, remove the vendor directory and run `composer install`.
+
 </Alert>
 
 ### Downloading Drupal Dependencies with Composer
@@ -114,7 +121,7 @@ Normally the next step would go through the standard Drupal installation. But si
 
     Downloading Drupal core and its dependencies for the first time may take a while. Subsequent updates should take less time.
 
-    ![image of terminal running a composer install](../docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-update.png)
+    ![image of terminal running a composer install](../../docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-update.png)
 
 2. And now we need to install:
 
@@ -140,7 +147,7 @@ Normally the next step would go through the standard Drupal installation. But si
    git status
    ```
 
-   ![Image of git status showing the changed files in red](../docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
+   ![Image of git status showing the changed files in red](../../docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
 
 6. Set the site to `git` mode:
 
@@ -177,7 +184,9 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 ### Adding a New Module with Composer
 
 <Alert title="Note" type="info">
+
 To maintain best practice, some of the steps in this section require access to the [Multidev](/docs/multidev/) feature. Those steps can be skipped, but it isn't recommended.
+
 </Alert>
 
 1. Next, let’s add a new module to our site. For this example, we’ll add the address module. We advocate working in feature branches on Pantheon, so let's create a Git branch and spin up a Multidev environment:
@@ -208,7 +217,7 @@ To maintain best practice, some of the steps in this section require access to t
    terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
    ```
 
-   ![Image of installing address module](../docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
+   ![Image of installing address module](../../docs/assets/images/guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png)
 
 ### Update All Site Code
 
@@ -236,4 +245,4 @@ To maintain best practice, some of the steps in this section require access to t
 
 #### Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
 
-P.S. the [Pantheon Power Users Community](/docs/power-users/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
+P.S. the [Pantheon Community](/docs/pantheon-community/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.

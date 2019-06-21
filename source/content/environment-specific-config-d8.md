@@ -133,15 +133,15 @@ This issue can be caused by a number of scenarios related to cache tags, such as
   }
   ```
 
-1. Stage, commit, and push your changes to Pantheon:
+2. Stage, commit, and push your changes to Pantheon:
 
- ```
- git commit -am "Override system performance configurations per env"
- git push
- ```
+    ```
+    git commit -am "Override system performance configurations per env"
+    git push
+    ```
 
 
-1. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/docs/terminus):
+3. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/docs/terminus):
 
    ```bash
    terminus drush <site>.<env> -- config-get system.performance --include-overidden
@@ -161,9 +161,10 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 ## Inclusions and Loading Order of Settings and Services Files
 
 | Settings File         | Inclusions |
-| settings.php          | services.yml <Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /><br />settings.pantheon.php<br />settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
-| settings.pantheon.php | services.pantheon.preproduction.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /></br>services.pantheon.production.yml<Popover icon="info-circle" title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /><br /> |
-| settings.local.php <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  development.services.yml <Popover icon="info-circle" title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not included by default on any Pantheon environment." /> |
+|:--------------------- |:---------- |
+| settings.php          | services.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on all Pantheon environments." /> <br /> settings.pantheon.php <br /> settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |
+| settings.pantheon.php | services.pantheon.preproduction.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Dev and Multidev Pantheon environments." /> <br /> services.pantheon.production.yml <Popover title="Requires Manual Creation" content="Does not exist within Pantheon's upstream by default but is included if found on Test and Live Pantheon environments." /> <br /> |
+| settings.local.php <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not loaded by default on any Pantheon environment but is included if found on local environments." /> |  development.services.yml <Popover title=".gitignore" content="Excluded from version control via .gitignore within Pantheon's Drupal 8 upstream. It is not included by default on any Pantheon environment." /> |
 
 ## See Also
 

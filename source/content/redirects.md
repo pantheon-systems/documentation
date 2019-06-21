@@ -20,11 +20,11 @@ Using `.htaccess` is generally not recommended - even for sites running  [Apache
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All `if` conditional statements need to be in the correct order. For example, a wholesale redirect executed *prior* to redirects for specific pages would likely prevent the second statement from being evaluated.
 
 ## Redirect to HTTPS and the Primary Domain
-This redirect is considered best practice and recommended as part of the going live procedure. Configure this redirect after connecting a custom domain in the Site Dashboard when you're ready to launch the site. For details, see [Launch Essentials](/docs/guides/launch/).
+This redirect is considered best practice and recommended as part of the going live procedure. Configure this redirect after connecting a custom domain in the Site Dashboard when you're ready to launch the site. For details, see [Launch Essentials](/docs/guides/launch/). 
 
 The following configuration will redirect HTTP to HTTPS _and_ enforce use of a primary domain, such as `http://live-site-name.pantheonsite.io` to `https://www.example.com` or `http://example.com` to `https://www.example.com`:
 
-{% include("redirects.twig")%}
+`markdown:redirects.md`
 
 ## Additional Redirects (Optional)
 Implement scenario specific redirects as required by the site. Depending on the needs of the site, you may only need one, some, or none of the following.
@@ -42,7 +42,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTPS'] === 'OFF') && 
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://'. $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
@@ -63,7 +63,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTP_HOST'] == 'subdomain
   header('HTTP/1.0 301 Moved Permanently');
   header("Location: $newurl");
 
-  # Name transaction "redirect" in New Relic for improved reporting (optional)
+  // Name transaction "redirect" in New Relic for improved reporting (optional).
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
@@ -82,7 +82,7 @@ if (($_SERVER['REQUEST_URI'] == '/old') && (php_sapi_name() != "cli")) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new');
 
-  # Name transaction "redirect" in New Relic for improved reporting (optional)
+  // Name transaction "redirect" in New Relic for improved reporting (optional).
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
@@ -106,7 +106,7 @@ if ((in_array($_SERVER['REQUEST_URI'], $redirects)) && (php_sapi_name() != "cli"
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: https://'. $_SERVER['HTTP_HOST'] . '/new-path-for-all');
 
-  # Name transaction "redirect" in New Relic for improved reporting (optional)
+  // Name transaction "redirect" in New Relic for improved reporting (optional).
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
   }
@@ -138,7 +138,7 @@ if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name()
 
   if (extension_loaded('newrelic')) {
     newrelic_name_transaction("redirect");
-  } 
+  }
   exit();
 }
 ```
@@ -159,7 +159,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
     header('HTTP/1.0 301 Moved Permanently');
     header('Location: https://new.example.com'. $_SERVER['REQUEST_URI']);
 
-    # Name transaction "redirect" in New Relic for improved reporting (optional)
+    // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
       newrelic_name_transaction("redirect");
     }
@@ -189,13 +189,13 @@ if ($legacy_username) {
 
 <TabList>
 
-<Tab name="WordPress" id="wp-lc" active={true}>
+<Tab title="WordPress" id="wp-lc" active={true}>
 
 WordPress automatically forces lowercase letters within URLs using the [`sanitize_title_with_dashes()`](https://core.trac.wordpress.org/browser/tags/4.6/src/wp-includes/formatting.php#L1744) function in core.
 
 </Tab>
 
-<Tab name="Drupal" id="dp-lc">
+<Tab title="Drupal" id="dp-lc">
 
 Drupal sites can force lowercase letters using the following:
 

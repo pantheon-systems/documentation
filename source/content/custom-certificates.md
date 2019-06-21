@@ -19,7 +19,7 @@ If you just haven’t gotten around to upgrading, consider using our managed HTT
 
 ### Option 2: Manually Managed Custom Certificates
 
-If you require a custom, dedicated certificate, you can now bring it the Global CDN.
+If you require a custom, dedicated certificate, you can now bring it the Global CDN. This is a paid service that our Sales Team can help you with. Please [contact sales](https://pantheon.io/contact-us){.external} prior to going through the following steps if you are not a contract customer.
 
 1. [Open a support ticket](/docs/support/#ticket-support) with the certificate details required to request a **Certificate Signing Request** (CSR) from Pantheon. Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name) (SANs) per certificate.
 
@@ -62,7 +62,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
 
-{% include("content/hosts-file.html")%}
+`markdown:hosts-file.md`
 
 For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
 
@@ -85,8 +85,8 @@ CAA records configured for the root domain (e.g., `example.com`) are inherited b
 | **Certificate Type**                                                  | Bring your own            | Shared, issued by Let's Encrypt | Bring your own                        |
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       | Self-managed (up to you)              |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 | Static (shared)                       |
-| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br />Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br />Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 [2](https://caniuse.com/#search=SNI)</sup> * |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/docs/hsts/)     | A+ [with HSTS](/docs/hsts/) *         |
+| **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br />Some very old browsers not supported <sup> [1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br />Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> * |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)               | A                         | A+ [with HSTS](/docs/hsts/)     | A+ [with HSTS](/docs/hsts/) *         |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                | TLS 1.2 with SNI                      |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             | No Weak 3DES cipher                   |
 | **Delivery**                                                          | US Datacenter             | [Global CDN](/docs/global-cdn)  | [Global CDN](/docs/global-cdn)        |

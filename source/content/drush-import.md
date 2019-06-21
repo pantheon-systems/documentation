@@ -40,7 +40,7 @@ Importing a Drush site archive as we've prepared it above is easy.
 
 2. Start an import:
 
-   ```nohighlight
+   ```
    terminus site:import <site> <url>
    ```
 

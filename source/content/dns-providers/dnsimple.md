@@ -52,8 +52,8 @@ The TXT record is only required if you need to prove ownership of your domain in
 
 ## Cloudflare Docs
 
-* [How do I add a CNAME record? <span class="glyphicons glyphicons-new-window-alt"></span>](https://support.cloudflare.com/hc/en-us/articles/200169046-How-do-I-add-a-CNAME-record-" target="blank)
-* [How do I add A records? <span class="glyphicons glyphicons-new-window-alt"></span>](https://support.cloudflare.com/hc/en-us/articles/200169096-How-do-I-add-A-records-" target="blank)
+* [How do I add a CNAME record?](https://support.cloudflare.com/hc/en-us/articles/200169046-How-do-I-add-a-CNAME-record-)
+* [How do I add A records?](https://support.cloudflare.com/hc/en-us/articles/200169096-How-do-I-add-A-records-)
 
 ## Next Steps
 
