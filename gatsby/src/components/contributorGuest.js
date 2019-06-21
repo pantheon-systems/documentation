@@ -9,7 +9,7 @@ const ContributorGuest = ({ contributor }) => {
   return (
     <>
       <div className="guest-contributor">
-          <div claclassName="media">
+          <div className="media">
               <div className="pull-left">
                 <div className="preview-info__img">
                   <Link
@@ -26,14 +26,14 @@ const ContributorGuest = ({ contributor }) => {
                   </Link>
                 </div>
               </div>
-              <div claclassName="media-body__featured">
-                <div claclassName="media-heading">
+              <div className="media-body__featured">
+                <div className="media-heading">
                   <h3 className="toc-ignore">By
                     <Link
                       to={`/docs/contributors/${contributor.id}`}
                       title={contributor.id}
                     >
-                      {contributor.name}
+                      {` ${contributor.name}`}
                     </Link>
                   </h3>
                 </div>
