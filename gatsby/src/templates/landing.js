@@ -22,7 +22,7 @@ const LandingTemplate = (props) => {
 							<div className="row call-to-action-section">
 								{topic.video_id && (
 									<div className="col-md-6 hero-video__video">
-										{/* <WistiaVideo videoId={topic.video_id} /> */}
+                    <iframe width="560" height="315" src={topic.video_id} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									</div>
 								)}
 								{(topic.cta||topic.cta_alt) && <div className="col-md-6 ">
