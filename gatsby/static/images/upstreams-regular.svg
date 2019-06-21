@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="28px" viewBox="0 0 36 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>upstreams-regular</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="25.2765957" y="0.603316327" width="10.1636661" height="10.1466837" rx="3"></rect>
+        <rect id="path-2" x="0" y="0.603316327" width="10.1636661" height="10.1466837" rx="3"></rect>
+        <rect id="path-3" x="12.2553191" y="0.603316327" width="10.1636661" height="10.1466837" rx="3"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="upstreams-regular">
+            <path d="M4.06546645,18.172619 L16.2618658,11.3334321" id="Line-Copy-11" stroke="#45454D" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M18.3829787,11.3334321 L30.5793781,18.172619" id="Line-Copy-12" stroke="#45454D" stroke-width="2" stroke-linecap="round"></path>
+            <g id="Group-13" transform="translate(0.000000, 16.892857)">
+                <g id="Rectangle-19-Copy-15">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <rect stroke="#45454D" stroke-width="2" x="26.2765957" y="1.60331633" width="8.16366612" height="8.14668367" rx="3"></rect>
+                </g>
+                <g id="Rectangle-19-Copy-16">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    <rect stroke="#45454D" stroke-width="2" x="1" y="1.60331633" width="8.16366612" height="8.14668367" rx="3"></rect>
+                </g>
+                <g id="Rectangle-19-Copy-18">
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    <rect stroke="#45454D" stroke-width="2" x="13.2553191" y="1.60331633" width="8.16366612" height="8.14668367" rx="3"></rect>
+                </g>
+            </g>
+            <rect id="Rectangle-19-Copy-17" fill="#45454D" x="11.4893617" y="0" width="11.4893617" height="11.5178571" rx="3"></rect>
+            <path d="M17.101473,11.7463861 L17.101473,17.4961735" id="Line" stroke="#45454D" stroke-width="2" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

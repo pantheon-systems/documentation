@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '../layout/layout';
 import CallToAction from '../layout/call-to-action';
 import TopicsGrid from '../layout/topics-grid';
 import ThreeColumnList from '../layout/three-column-list';
