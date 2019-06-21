@@ -38,7 +38,7 @@ protected_web_paths:
 * Wait a few seconds for changes to take effect
 
 ### HTTPS Redirects with HSTS Headers
-Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Three values are available:
+Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available:
 
 - `off` (default: no https redirect)
 - `transitional` (Redirects to https and includes an HSTS header with a 5-minute duration)
