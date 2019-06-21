@@ -1,7 +1,7 @@
 landings:
   - title: 'Get Started'
     path: 'get-started'
-    video_id: 'https://www.youtube.com/embed/qHHWonKfGsQ'
+    video_url: 'qHHWonKfGsQ'
     cta: 
       title: 'Quick Start Guide'
       subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'

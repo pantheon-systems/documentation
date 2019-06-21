@@ -99,7 +99,7 @@ exports.createPages = ({ graphql, actions }) => {
         landings {
           title
           path
-          video_id
+          video_url
           cta {
             title
             subtitle
