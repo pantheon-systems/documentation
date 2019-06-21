@@ -51,6 +51,8 @@ The preferred `hsts` configuration is shown below:
 enforce_https: full+subdomains
 ```
 
+Note that any option with `+subdomains` should not be used if you have subdomains that are not hosted on Pantheon, unless you are sure they will behave correctly with these hsts settings. 
+
 See [Require HTTPS with the HSTS Header](/docs/hsts/) for more information.
 
 #### Considerations
