@@ -9,7 +9,6 @@ const propTypes = {
 
 function ThreeColumnList(props) {
   const {title, links} = props;
-  console.log(links);
   return (
     <React.Fragment>  
       <div class="row">

@@ -12,7 +12,7 @@
     - title: 'Develop'
       summary: 'Set up your local or work via SFTP and Git within our Dev, Test, and Live environments to follow development best practices.'
       icon: 'icon-develop.svg'
-      url: '/docs/get-started/'
+      url: '/docs/develop/'
     - title: 'Go live'
       summary: 'Learn how to launch sites on Pantheon. Select the correct plan, then add your domain and enable HTTPS.'
       icon: 'icon-golive.svg'
