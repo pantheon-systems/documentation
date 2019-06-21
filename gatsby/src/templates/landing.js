@@ -22,7 +22,7 @@ const LandingTemplate = (props) => {
 							<div className="row call-to-action-section">
 								{topic.video_id && (
 									<div className="col-md-6 hero-video__video">
-										<WistiaVideo videoId={topic.video_id} />
+										{/* <WistiaVideo videoId={topic.video_id} /> */}
 									</div>
 								)}
 								{(topic.cta||topic.cta_alt) && <div className="col-md-6 ">

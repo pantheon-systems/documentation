@@ -224,7 +224,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       name: `slug`,
       node,
-      value: slug,
+      value: slug.startsWith("docs")?slug:`docs/${slug}`
     })
 
     if (slug.includes("docs/guides")) {
