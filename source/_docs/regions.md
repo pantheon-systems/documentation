@@ -1,6 +1,6 @@
 ---
 title: Pantheon Site Regions and Data Residency
-description: Learn how to get Limited Availability access to and launch sites in Australia, Canada, or the European Union.
+description: Learn how to launch sites in Australia, Canada, or the European Union.
 tags: [create, regions]
 categories: []
 contributors: [edwardangert, rachelwhitton, ari]
@@ -13,12 +13,12 @@ There are many scenarios in which you might prefer running a site in a data cent
 * Compliance standards that require data residency within the borders of Australia, Canada, or the European Union
 * Improved performance and user experience for authenticated traffic originating near the desired region
 
-## Region Availability
+## Available Regions
 
 Four regions are available when creating a new site:
 
 * United States (**US**) (Default)
-* Australia (**AUS**)
+* Australia (**AU**)
 * Canada (**CA**)
 * European Union (**EU**)
 
@@ -43,11 +43,14 @@ With this set of region-specific resources, now you can run WordPress or Drupal 
 1. Install and authenticate [Terminus](/docs/terminus/). The commands used here require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/docs/terminus/updates/).
 1. Use Terminus to create a new site associated with your organization and include the `--region=` option.
 
- - Available region codes are:
-   - `us`
-   - `aus`
-   - `ca`
-   - `eu`
+ - Available regions:
+ 
+ | Name                    |  Code   |
+|:------------------------- |:------------------------------- |
+|  Australia  | au               |
+| Canada | ca |
+| European Union | eu |
+|  United States            | us |
 
  For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
 
@@ -60,9 +63,15 @@ With this set of region-specific resources, now you can run WordPress or Drupal 
   See `terminus site:create --help` for more information on the options and values used in this command.
 
 ## Migrate an Existing Site to a New Region
-To migrate an existing site from one region to another, create the new site as described above, then follow the [Manually Migrate Sites to Pantheon](/docs/migrate-manual/#import-your-code) doc. The [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) section of the Relaunch doc is a good resource to help make the transition to your new live site smooth.
 
-If you want help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available.
+1.  Create a new site (as described above) 
+1.  Copy over the site's code, database, and files.
+    * For details see [How to Manually Migrate Sites to Pantheon](/docs/migrate-manual/#import-your-code).
+1.  Move domains and DNS to the new site.
+    * For more info see the [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) doc.
+
+### Professional Services Migration
+If you'd like help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available.
 
 ## Review Site Region
 
