@@ -38,15 +38,17 @@ protected_web_paths:
 * Wait a few seconds for changes to take effect
 
 ### HTTPS Redirects with HSTS Headers
-Ensure that your site will always use HTTPS to deliver content with `scheme`. Three values are available:
+Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Three values are available:
 
-- `any` (default: no https redirect)
-- `https` (Redirects to https and includes an HSTS header with a 5-minute duration)
-- `hsts` (Redirects to https and includes an HSTS header with a 366-day duration)
+- `off` (default: no https redirect)
+- `transitional` (Redirects to https and includes an HSTS header with a 5-minute duration)
+- `transitional+subdomains` (Redirects to https and includes an HSTS header with a 5-minute duration, including subdomains)
+- `full` (Redirects to https and includes an HSTS header with a 366-day duration)
+- `full+subdomains` (Redirects to https and includes an HSTS header with a 366-day duration, including subdomains)
 
 The preferred `hsts` configuration is shown below:
 ```yaml
-scheme: hsts
+enforce_https: full+subdomains
 ```
 
 See [Require HTTPS with the HSTS Header](/docs/hsts/) for more information.
