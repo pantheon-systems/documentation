@@ -1,7 +1,7 @@
 landings:
   - title: 'Get Started'
     path: 'get-started'
-    video_url: 'qHHWonKfGsQ'
+    video_id: 'qHHWonKfGsQ'
     cta: 
       title: 'Quick Start Guide'
       subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
@@ -81,7 +81,7 @@ landings:
                 url: '/docs/migrate-wordpress-site-networks/'
   - title: 'Develop'
     path: 'develop'
-    video_url: 'v7qe2_OZ95k'
+    video_id: 'v7qe2_OZ95k'
     cta: 
       title: 'Quick Start Guide'
       subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
@@ -352,7 +352,7 @@ landings:
                 url: '/docs/wordpress-phpstorm/'
   - title: 'Go Live'
     path: 'go-live'
-    video_url: 'nZvf2CrLh9o'
+    video_id: 'nZvf2CrLh9o'
     cta: 
       title: 'Launch Essentials Guide'
       subtitle: "Ready to launch like a pro? Check out our step-by-step guide to see how it's done."

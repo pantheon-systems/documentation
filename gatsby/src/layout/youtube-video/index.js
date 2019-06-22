@@ -1,17 +1,18 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-class YoutubeVideo extends Component {
-	render() {
-		const { videoURL } = this.props;
-		return (
-			<div>
-        <iframe width="560" height="315" src={"https://www.youtube.com/embed/" + this.props.videoURL} frameborder="0" allow="accelerometer; encrypted-media; gyroscope;" allowfullscreen></iframe>
-			</div>
-		);
-	}
+const YoutubeVideo = ({ videoId }) => {
+	return(
+			<>
+				<iframe
+					width="560"
+					height="315"
+					src={`https://www.youtube.com/embed/${videoId}`}
+					frameborder="0"
+					allow="accelerometer; encrypted-media; gyroscope;"
+					allowfullscreen>
+				</iframe>
+			</>
+	)
 }
-
-YoutubeVideo.propTypes = {};
 
 export default YoutubeVideo;
