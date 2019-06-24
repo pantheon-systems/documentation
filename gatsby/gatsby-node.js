@@ -3,18 +3,26 @@ const crypto = require("crypto")
 
 const calculateSlug = (node, getNode) => {
   const fileName = getNode(node.parent).name
-
   if (node.frontmatter.permalink) {
     return node.frontmatter.permalink
       .replace(":basename", fileName)
       .replace(/.$/, "")
   }
 
+  if (fileName === undefined) {
+    return `${fileName}`
+  }
+
+  if (getNode(node.parent).absolutePath.includes("_changelogs")) {
+    const split = fileName.split('-');
+    return `changelog/${split[0]}/${split[1]}`
+  }
+
   return `${fileName}`
 }
 
 const calculateTemplate = (node, defaultTemplate) => {
-  if (node.frontmatter !== undefined && node.frontmatter.layout !== null) {
+  if (node.frontmatter && node.frontmatter.layout && node.frontmatter.layout !== null) {
     return node.frontmatter.layout
   }
 
@@ -66,8 +74,7 @@ exports.createPages = ({ graphql, actions }) => {
     {
       allDocs: allMdx(
         filter: {
-          fileAbsolutePath: { ne: null }
-          fields: { slug: { regex: "/^((?!guides).)*$/" } }
+          fields: { slug: { regex: "/^((?!guides|changelog).)*$/" } }
         }
       ) {
         edges {
@@ -87,8 +94,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       allGuides: allMdx(
         filter: {
-          fileAbsolutePath: { ne: null }
-          fields: { slug: { regex: "/guides/" } }
+          fileAbsolutePath: { regex: "/guides/"}
         }
         sort: { fields: [fileAbsolutePath], order: ASC }
       ) {
@@ -118,6 +124,25 @@ exports.createPages = ({ graphql, actions }) => {
           }
         }
       }
+
+      allChangelogs: allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/_changelogs/"}
+        },
+        sort: { fields: [fileAbsolutePath], order: DESC }
+      ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+          }
+        }
+      }
+    }
 
       allContributorYaml {
         edges {
@@ -182,6 +207,19 @@ exports.createPages = ({ graphql, actions }) => {
           },
         })
       }
+    })
+
+    // Create changelog pages.
+    const changelogs = result.data.allChangelogs.edges
+    changelogs.forEach(changelog => {
+      const template = calculateTemplate(changelog.node, "changelog")
+      createPage({
+        path: changelog.node.fields.slug,
+        component: path.resolve(`./src/templates/${template}.js`),
+        context: {
+          slug: changelog.node.fields.slug,
+        },
+      })
     })
 
     // Create contributor pages.
