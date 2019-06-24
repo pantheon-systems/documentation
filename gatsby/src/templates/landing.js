@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Layout from '../components/layout';
+import { Link } from 'gatsby';
+import Layout from '../layout/layout';
 import CallToAction from '../layout/call-to-action';
 import TopicGroup from '../layout/topic-group';
 import SubTopicGroup from '../layout/subtopic-group';

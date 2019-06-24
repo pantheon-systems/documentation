@@ -12,17 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {/* Pantheon previous scripts and styles */}
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-        />
-        <link
-          rel="stylesheet"
-          href="https://pantheon.io/docs/assets/compiled/compiled.css?v=12.6"
-        />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js" />
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
-        <script src="https://pantheon.io/docs/assets/js/main.js?v=2.4.0" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
@@ -36,6 +25,9 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" />
+        <script src="https://pantheon.io/docs/assets/js/main.js?v=2.4.0" />
       </body>
     </html>
   )
