@@ -40,7 +40,7 @@ As a first troubleshooting step, try running `composer update` to bring `compose
    ```
 
    The output should read:
-   ```nohighlight
+   ```
    +d features - place your *.feature files here
    +d features/bootstrap - place your context classes here
    +f features/bootstrap/FeatureContext.php - place your definitions, transformations and hooks here
@@ -98,7 +98,7 @@ Next, we can take some of the steps we listed above, most of which are provided 
 
    You should see output like this:
 
-   ![Behat test results](../docs/assets/images/guides/behat-output.png)
+   ![Behat test results](../../docs/assets/images/guides/behat-output.png)
 
    **Note:** The extra parameters are not required, just a common set of preferences. Here's what they do:
 

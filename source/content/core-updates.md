@@ -9,7 +9,9 @@ Pantheon maintains core upstream repositories for [WordPress](https://github.com
 Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/docs/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/support/#scope-of-support).
 
 <Alert title="Note" type="info">
+
 Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/docs/guides/build-tools/update/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
+
 </Alert>
 
 ## Apply Upstream Updates via the Site Dashboard
@@ -58,7 +60,9 @@ If the automated core update doesn't appear to be working, it's possible there a
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore` or `.htaccess`).
 
 <Alert title="Warning" type="danger">
+
 This process can potentially cause loss of data. Be sure you have no custom code in your CMS core before proceeding.
+
 </Alert>
 
 <TabList>
@@ -114,7 +118,7 @@ In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to o
 
 1. Confirm that the Site Connection Mode is set to SFTP. Then, via SFTP, delete these files and folders:
 
-  ```nohighlight
+  ```
   ├── README.md
   ├── index.php
   ├── license.txt
@@ -141,7 +145,9 @@ In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to o
   ```
 
     <Alert title="Warning" type="danger">
+
     Do not remove `wp-config.php`.    
+
     </Alert>
 
 1. Re-upload the corresponding files from [GitHub](https://github.com/pantheon-systems/WordPress).

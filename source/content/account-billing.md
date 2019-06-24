@@ -16,7 +16,9 @@ Review **credit card profiles** for the sites you pay for and own on Pantheon. E
 The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
 <Alert title="Note" type="info">
+
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
+
 </Alert>
 
 ## View Invoices
@@ -45,7 +47,9 @@ Changes made here will apply across all sites associated with the credit card pr
 All sites must be disassociated from the card before it can be deleted.
 
 <Alert title="Warning" type="danger">
+
 Deleting a card profile from your account will also delete it's associated billing history (invoices and transactions). Go to **View Invoices** to download past invoices, prior to deleting your credit card profile.
+
 </Alert>
 
 1. For each site associated with the credit card, go to the Site Dashboard and click on the **Billing** tab, then update the payment method shown in [your credit cards](/docs/site-billing#your-credit-cards). Each site on a paid plan must be associated with a card.

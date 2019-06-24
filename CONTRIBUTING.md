@@ -52,7 +52,7 @@ All of our documentation is generated from markdown files, found at [`source/_do
 title: Git FAQs
 description: Answers to commonly asked questions about Git, Drupal 7, Drupal 6 and Pantheon.
 tags: [performance, cache]
-contributors: mrfelton
+contributors: [mrfelton]
 ---
 ```
 ### Taxonomies
@@ -129,6 +129,5 @@ Moderators will review and comment on pull requests. We may suggest changes, imp
 
 * [General GitHub Documentation](http://help.github.com/)
 * [GitHub Pull Request Documentation](http://help.github.com/send-pull-requests/)
-* [Pantheon Power Users Group on Slack](https://pantheon.io/docs/power-users/)
+* [Pantheon Community](https://pantheon.io/docs/pantheon-community/)
 * [How to Write a Git Commit Message](http://chris.beams.io/posts/git-commit/)
-

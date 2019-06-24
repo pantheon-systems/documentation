@@ -20,9 +20,11 @@ Once the user has been added to the project, they will receive a welcome email n
 **Remove a Team Member**
 
 <Alert title="Note" type="info">
+
 All users can be removed except the site owner.
 
 See the [Remove a Site Owner](/docs/access-management/#remove-a-site-owner) section of our Access Management doc for more information.
+
 </Alert>
 
 In the Team modal, click the X next to the user you want to delete.
@@ -35,7 +37,7 @@ For more information on managing teams, see the [Team Management article](/docs/
 ### How do I add a Supporting Agency?
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
-{% include("content/add-supporting-org.html")%}
+`markdown:add-supporting-org.md`
 
 ### What add-ons are available for my site?
 
@@ -70,8 +72,8 @@ You can update the payment method in the **Settings** page. For detailed instruc
 Self-serve sites are billable via recurring monthly or [annual](/docs/annual-billing/) billing. Sites that are owned by a Reseller, Edu+, or Enterprise organization are invoiced to the organization.
 
 ### Can I transfer ownership of a site to someone else?
-{% include("content/transfer-ownership-billing-intro.html")%}
-{% include("content/transfer-ownership-billing-steps.html")%}
+`markdown:transfer-ownership-billing-intro.md`
+`markdown:transfer-ownership-billing-steps.md`
 
 ## See Also
 

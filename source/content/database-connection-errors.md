@@ -57,7 +57,9 @@ $settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
 You can also use the above to develop Drupal 8 on Pantheon.
 
 <Alert title="Warning" type="danger">
+
 If you use any other advanced `settings.php` tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent `$conf` array.
+
 </Alert>
 
 ## Base Table or View Not Found

@@ -17,13 +17,14 @@ As with most common problems WordPress site owners face, there's a plugin to hel
 You can install the plugin from your [WordPress dashboard](/docs/cms-admin/#wordpress-dashboard) by following these steps:
 
 <Alert title="Note" type="info">
+
 Your site's Connection Mode must be [set to SFTP](/docs/sftp#sftp-mode).
+
 </Alert>
 
 1. Click **Plugins**, then select **Add New**.
 2. Search for "Broken Link Checker".
 3. Click **Install Now**, then click **Activate**.
-
 
 ## Using the Plugin
 Once you have the plugin installed and activated, you will see a new option within the Tools section of your WordPress dashboard. Notice that there are no reported broken links. Don't get too excited&mdash;you won't see any until WordPress runs it's next Cron job. In the background, WordPress will quietly check all your posts, comments, pages, etc., and look for broken URLs. Each URL is queued to be checked so that performance is not negatively affected. Check back later; if you have a lot of content, it will take a while to run.
@@ -37,4 +38,4 @@ WordPress stores URLs in various places in the database; considering Pantheon's 
 
 ### Fix WordPress Content References to the Wrong Domain After Cloning
 
-{% include("content/search-replace-domains.html")%}
+`markdown:search-replace-domains.md`

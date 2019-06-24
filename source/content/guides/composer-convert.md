@@ -161,7 +161,7 @@ The output `> DrupalProject\composer\ScriptHandler::prepareForPantheon` means th
 ### Commit
 Commit your work to the git repo. From the `$site` directory, run the following:
 
-```sh
+```bash
 cp -r .git ../$site-composer/
 cd ../$site-composer
 git add .

@@ -8,6 +8,12 @@ permalink: docs/:basename/
 editpath: dns-providers/network-solutions.md/
 ---
 
+<Alert type="danger" title="Warning">
+
+Network Solutions does not support AAAA records for IPv6 traffic which can negatively impact performance, especially on mobile devices. We recommend transferring DNS services to a provider that supports IPv6.
+
+</Alert>
+
 ## Before You Begin
 Be sure that you have a:
 
@@ -22,7 +28,7 @@ Identify DNS values to point your domain to Pantheon:
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your [Network Solutions account <span class="glyphicons glyphicons-new-window-alt"></span>](https://www.networksolutions.com" target="blank) in a new tab before you continue.
+Keep this page open and login to your [Network Solutions account](https://www.networksolutions.com) in a new tab before you continue.
 
 ## Configure DNS Records on Network Solutions
 ### A Record
@@ -68,12 +74,12 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 
 ### AAAA Records
-In order to add any IPv6 records (like AAAA), you must email Network Solutions and work with their team to configure and stage them.
+Unfortunately, Network Solutions does not support AAAA records, which means you can't route IPv6 traffic to your bare domain with Network Solutions. Failure to route IPv6 traffic to your site can negatively impact performance, especially for mobile devices. If you'd like to add AAAA records, then consider transferring your domain or name server to another DNS host.
 
 ## Network Solutions Docs
 
-* [Managing Advanced DNS Records <span class="glyphicons glyphicons-new-window-alt"></span>](http://www.networksolutions.com/support/how-to-manage-advanced-dns-records/" target="blank)
-* [Adding an IPv6 record <span class="glyphicons glyphicons-new-window-alt"></span>](http://www.networksolutions.com/support/Adding-an-IPv6-record/" target="blank)
+* [Managing Advanced DNS Records](http://www.networksolutions.com/support/how-to-manage-advanced-dns-records/)
+* [Adding an IPv6 record](http://www.networksolutions.com/support/Adding-an-IPv6-record/)
 
 ## Next Steps
 

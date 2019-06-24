@@ -54,7 +54,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 
 ## Cache-Busting Cookies
 
-{% include("content/cache-busting.html")%}
+`markdown:cache-busting.md`
 
 ## Cache-Varying Cookies
 Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]+`.
@@ -62,6 +62,7 @@ Respond to a request with cached content depending on the presence and value of 
 First, check to see if the cookie is set within the incoming request. If the cookie is set, store the value and use it to generate varied content as appropriate for your use case and implementation.
 
 <Alert title="Note" type="info">
+
 If the value has already been set, do not set the cookie again in the response. Varnish cannot cache a response that contains a `Set-Cookie:` header.
 
 </Alert>

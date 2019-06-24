@@ -9,4 +9,4 @@ Site ownership is a self-service feature, and Pantheon does not transfer ownersh
 
 This article will help you gain access to an account if a site owner has left the agency or project, and you do not have the login information.
 
-{% include("content/recover-account-after-owner-leaves.html")%}
+`markdown:recover-account-after-owner-leaves.md`

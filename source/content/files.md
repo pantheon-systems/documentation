@@ -4,7 +4,7 @@ description: Detailed information on how to access and optimize the Pantheon fil
 tags: [infrastructure, sftpfiles]
 categories: []
 ---
-Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title=".gitignore" data-content="The <a class='external' href='https://git-scm.com/docs/gitignore'>.gitignore file</a> is located at the root of the site's codebase and instructs Git which paths should be ignored."><em class="fa fa-info-circle"></em></a>:
+Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files <Popover content="The [.gitignore file](https://git-scm.com/docs/gitignore) is located at the root of the site's codebase and instructs Git which paths should be ignored." />:
 
 - [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore)
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
@@ -37,7 +37,7 @@ The [Pantheon WordPress upstream](https://github.com/pantheon-systems/WordPress)
 
 Pantheon does not support simultaneous SFTP connections. To avoid errors, set your SFTP client to use no more than 1 simultaneous conection.
 
-### Unable to create directory <path-to-folder>. Is the parent directory writable by the server?
+### Unable to create directory `path-to-folder`. Is the parent directory writable by the server?
 
 Sites migrated from other hosts may have custom or absolute paths in the "Store Uploads in This Folder" configuration. This can be resolved by using the recommended configuration:
 

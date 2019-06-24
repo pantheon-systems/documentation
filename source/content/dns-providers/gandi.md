@@ -21,7 +21,7 @@ Identify DNS values to point your domain to Pantheon:
 1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
 2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your [Gandi account <span class="glyphicons glyphicons-new-window-alt"></span>](https://id.gandi.net/en/login" target="blank) in a new tab before you continue.
+Keep this page open and login to your [Gandi account](https://id.gandi.net/en/login) in a new tab before you continue.
 
 ## Configure DNS Records on Gandi
 ### A Record
@@ -29,15 +29,15 @@ Keep this page open and login to your [Gandi account <span class="glyphicons gly
 2. Click the **Add** button and select **A** from the type dropdown menu.
 3. Select desired Time to Live (TTL).
 
-    <Accordion title="Learn More" id="ttl" icon="info-sign">
+  <Accordion title="Learn More" id="ttl" icon="info-sign">
 
-    #### Time to Live (TTL)
+  #### Time to Live (TTL)
 
-    The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour).
+  The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour).
 
-    When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
+  When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
 
-    </Accordion>
+  </Accordion>
 
 4. Enter **@** in the **Name** field and enter the A record value provided by Pantheon in the **Value** field.
 6. Click **Submit**.
@@ -56,11 +56,11 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 2. Select desired Time to Live (TTL).
 3. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon, followed by a `.` (e.g. `live-example.pantheonsite.io.`) in the **Value** field.
 
-    <Alert title="Note" type="info">
+  <Alert title="Note" type="info">
 
-    Remember to add the dot (`.`) at the end of the **Value** line. Hostnames without a `.` at the end will be suffixed by the current domain.
+  Remember to add the dot (`.`) at the end of the **Value** line. Hostnames without a `.` at the end will be suffixed by the current domain.
 
-    </Alert>
+  </Alert>
 
 4. Click **Submit**.
 5. Click the **Activate this version** button.

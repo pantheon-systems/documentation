@@ -6,7 +6,9 @@ tags: [tools, workflow]
 Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream/). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
 <Alert title="Note" type="info">
+
 Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/support/#custom-upstreams).
+
 </Alert>
 
 
@@ -18,6 +20,7 @@ Choose your preferred Git host:
 <TabList>
 
 <Tab title="GitHub" id="gh" active={true}>
+
 1. [Sign up for a GitHub account](https://github.com/join) if you do not have one already.
 
 2. [Log in to GitHub](https://github.com/login/).
@@ -117,7 +120,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <TabList>
 
-    <Tab name="WordPress" id="wp1" active={true}>
+    <Tab title="WordPress" id="wp1" active={true}>
 
     ```bash
     git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
@@ -125,7 +128,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab name="Drupal 8" id="d81">
+    <Tab title="Drupal 8" id="d81">
 
     ```bash
     git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
@@ -133,7 +136,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab name=" Drupal 7" id="d71">
+    <Tab title=" Drupal 7" id="d71">
 
     ```bash
     git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
@@ -147,7 +150,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     <TabList>
 
-    <Tab name="WordPress" id="wp1" active={true}>
+    <Tab title="WordPress" id="wp1" active={true}>
 
     ```bash
     git checkout master
@@ -158,7 +161,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab name="Drupal 8" id="d81">
+    <Tab title="Drupal 8" id="d81">
 
     ```bash
     git checkout master
@@ -169,7 +172,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
     </Tab>
 
-    <Tab name=" Drupal 7" id="d71">
+    <Tab title=" Drupal 7" id="d71">
 
     ```bash
     git checkout master
@@ -316,9 +319,9 @@ New sites created from this Custom Upstream will use this connection mode by def
 ### Repository URL and password
 You cannot modify the repository details on existing Custom Upstreams. If there is a new URL or password you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
 
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#terminus1copy">Copy</button>
-<figure><pre id="terminus1copy"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My New Custom Upstream"</code></pre></figure></div>
+```bash
+terminus site:upstream:set my-site "My New Custom Upstream"
+```
 
 You must be a site owner to switch a site's upstream. After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/docs/terminus/examples/#switch-upstreams).
 
@@ -331,7 +334,9 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 ## Switch an Existing Site to a Custom Upstream
 
 <Alert title="Warning" type="danger">
+
 Switching the upstream of an existing site is risky. Consider creating a new site from your Custom Upstream and migrating the contents. If you must switch upstreams, [back up](/docs/backups/) your site first, and consider our documentation on [upstream merge conflicts](/docs/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
+
 </Alert>
 
 Only a Site Owner, User in Charge, or Organization Administrator can change an existing site to use a new Custom Upstream using [Terminus](/docs/terminus/):

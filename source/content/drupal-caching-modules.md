@@ -10,14 +10,27 @@ While configuring [Drupal's performance and caching settings](/docs/drupal-cache
 
 Views has a very granular caching system, down to the individual View display. There's no single control that will just turn on views caching, and the caching is off by default. There are three different kinds of user-configurable caching within Views:
 
-<dl>
-	<dt>Query Results Caching</dt>
-	<dd>Raw Query Results, which should be cached for at least 1 minute. As the subject matter expert, you're in the best position to know how often your content should change.</dd>
-	<dt>Rendered Output Caching</dt>
-	<dd>Generated markup, which should be cached for as long as possible (if the query changes, the output will be refreshed).</dd>
-	<dt>Block Caching</dt>
-	<dd>If you're generating a block, this will expose the block to Drupal's built-in block caching.</dd>
-</dl>
+<DefList>
+
+<Definition name="Query Results Caching">
+
+Raw Query Results, which should be cached for at least 1 minute. As the subject matter expert, you're in the best position to know how often your content should change.
+
+</Definition>
+
+<Definition name="Rendered Output Caching">
+
+Generated markup, which should be cached for as long as possible (if the query changes, the output will be refreshed).
+
+</Definition>
+
+<Definition name="Block Caching">
+
+If you're generating a block, this will expose the block to Drupal's built-in block caching.
+
+</Definition>
+
+</DefList>
 
 ### Configure Views Caching
 

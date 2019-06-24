@@ -22,7 +22,7 @@ One of the most common reasons that email gets blocked is because it originates 
 
 2. From within the **Settings** menu, click **API Keys**:
 
-  ![SendGrid Multiple User setup](../docs/assets/images/guides/sendgrid/sendgrid-api-keys.png)
+  ![SendGrid Multiple User setup](../../docs/assets/images/guides/sendgrid/sendgrid-api-keys.png)
 
 3. Click **Create API Key** to define the name and permissions for the API key your site will use. Click **Create & View** to complete the process.
 
@@ -33,7 +33,7 @@ Follow the procedure outlined below for your CMS:
 
 <TabList>
 
-<Tab name="WordPress" id="tab-1-anchor" active={true}>
+<Tab title="WordPress" id="tab-1-anchor" active={true}>
 
 ### Download the WordPress SendGrid Plugin {.info}
 The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the `wp_mail` function with API integration, making it easy to configure and get started.
@@ -47,13 +47,13 @@ Install and activate the latest release through the WordPress dashboard or place
 4. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
 
-![WP Settings example](../docs/assets/images/guides/sendgrid/sendgrid-wpconfig.png)
+![WP Settings example](../../docs/assets/images/guides/sendgrid/sendgrid-wpconfig.png)
 
 When you're done, click **Update Setings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
 </Tab>
 
-<Tab name="Drupal 8" id="tab-2-anchor">
+<Tab title="Drupal 8" id="tab-2-anchor">
 
 ### Choosing an Integration Method {.info}
 
@@ -111,7 +111,7 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 
 </Tab>
 
-<Tab name="Drupal 7" id="tab-3-anchor">
+<Tab title="Drupal 7" id="tab-3-anchor">
 
 ### Choosing an Integration Method {.info}
 Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SMTP.
@@ -125,8 +125,8 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 2. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
     ```bash
-    SITE=<site_name>
-    `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
+    export SITE=<site_name>
+    terminus connection:info $SITE.dev --fields='Git Command' --format=string
     cd $SITE
     ```
 3. Set the connection mode to Git:
@@ -139,7 +139,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
     ```bash
     drush dl sendgrid_integration-7.x-1.3 mailsystem composer_vendor
     ```
-{% include("content/d7-composer-init.html")%}
+`markdown:d7-composer-init.md`
 7. The above configuration specifies `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
 
     ```bash
@@ -159,17 +159,39 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
     git commit -am "Add Sendgrid API Integration"
     git push origin master
     ```
-10. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
+
+10. Switch the site back to SFTP mode:
+
+    ```bash
+    terminus connection:set $SITE.dev sftp
+    ```
+
+11. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
 
     ```bash
     terminus drush $SITE.<env> -- en composer_vendor -y
     terminus drush $SITE.<env> -- en sendgrid_integration -y
     ```
-11.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+12.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
 
-12.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+13.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
+
+<Alert  title="Note" type="alert">
+
+Under `/admin/reports/status` you may see a warning that `composer.lock` isn't found in `code/sites/all`. The actual `composer.lock` is in the code root, but you can symlink to it to remove the warning.
+
+From the project root:
+
+```bash
+cd sites/all
+ln -s ../../composer.lock ./composer.lock
+```
+
+Then commit and push the symlink to Pantheon.
+
+</Alert>
 
 ### SendGrid SMTP Integration {.info}
 
@@ -205,7 +227,7 @@ For testing purposes, your first few deliveries should be to email addresses tha
 
 First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**. You will be taken to a page with a form to search by email. Enter the email address, and press **Enter**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the filters near the top right corner.
 
-![SendGrid email search options](../docs/assets/images/sendgrid-search-options.png)​
+![SendGrid email search options](../../docs/assets/images/sendgrid-search-options.png)​
 
 You can explore the Statistics and Email Reports from within your site's account to gain insight into email activity, statistics on email clients, and much more.
 

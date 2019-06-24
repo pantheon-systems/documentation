@@ -10,7 +10,9 @@ Version-controlling site configuration within the codebase is a best practice. S
 The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin provides an elegant mechanism for enabling developers to practice configuration management in code. The plugin exports WordPress site configuration from the mysql database's `wp_options` table to a `.json` file stored in `wp-content/config`.  After deploying the file to a new environment for the same site, it can then import the configuration from the `.json` file into the second `wp_options` table.
 
 <Alert title="Note" type="info">
+
 WP-CFM should only be used to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.
+
 </Alert>
 
 ## Install and Deploy WP-CFM
@@ -50,8 +52,11 @@ WP-CFM refers to a group of settings to track as a **bundle**. There are two app
 
 - **Site-Wide Bundling**: Track the entire site configuration in a single bundle with the **Select All** option.
 - **Feature Specific Bundling**: Track plugin, theme, and site-wide settings (e.g. permalinks) separately by creating multiple bundles.
+
 <Alert title="Note" type="info">
+
 To avoid conflicts, do not to track changes for the same values in more than one bundle. WP-CFM alerts you when it happens, but the plugin does not restrict you from doing so.
+
 </Alert>
 
 To create a bundle:

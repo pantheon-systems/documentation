@@ -104,7 +104,7 @@ WordPress runs its own internal cron-like system as visitors load your site. You
 
 ### Do you support ffmpeg transcoding?
 
-No. We do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service.
+No. We do not have plans to add this feature. However, it is possible to run a site on the platform and integrate with a third-party transcoding service or multimedia platform that lets you create streaming-optimized videos. Those providers have optimized the highly complex process of transcoding and serving video content, and leveraging their infrastructure is often preferable to a custom solution.
 
 ### Do you support Xdebug?
 
@@ -155,7 +155,9 @@ Yes. We recommend that you ensure that you are enforcing HTTPS only at the outer
 
 ### What version of Apache Solr does Pantheon run?
 
-{% include("content/solr-version.html") %} See our documentation for details about configuring Solr for [WordPress](/docs/wordpress-solr/), [Drupal 7](/docs/solr-drupal-7/) and [Drupal 8](/docs/solr-drupal-8/).
+
+`markdown:/solr-version.md`
+ See our documentation for details about configuring Solr for [WordPress](/docs/wordpress-solr/), [Drupal 7](/docs/solr-drupal-7/) and [Drupal 8](/docs/solr-drupal-8/).
 
 
 ## Support

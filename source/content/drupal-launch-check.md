@@ -46,7 +46,7 @@ The Dashboard integration is intended to provide developers with the most action
 ### How can I manually run site audit on my site?
 
 You can get a list of all available site audit reports using [Terminus](/docs/terminus/):
-```nohighlight
+```
 terminus remote:drush <site>.<env> -- help --filter=site_audit
 ```
 

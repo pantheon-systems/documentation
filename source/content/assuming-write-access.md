@@ -67,12 +67,63 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
  Your commit can be seen in the Dev environments commit history. The plugin will now successfully write files within any environment, even when the Dev environment's connection mode is set to Git. In your previous configuration, the plugin would fail while in Git mode. You should not see the newly created files in the Dashboard as "ready to commit", as files are not version controlled.
 
-    <Alert title="Note" type="info">
-    In our example, we created the target directory of the symlink as ./wp-content/uploads/new-directory. Make sure this directory is created via SFTP if it does not exist yet.
-    </Alert>
+  <Alert title="Note" type="info">
+
+  In our example, we created the target directory of the symlink as `./wp-content/uploads/new-directory`. Make sure this directory is created via SFTP if it does not exist yet.
+
+  </Alert>
 
 7. Deploy to Test and confirm results.
 8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
+
+## Example
+
+As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to the code base.
+
+<Alert  title="Note" type="alert">
+
+You must manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
+
+</Alert>
+
+### For MacOS & Linux:
+From the `wp-content` directory:
+
+```bash
+ln -s ./uploads/cache ./wp-content/cache
+ln -s ./uploads/wp-rocket-config ./wp-content/wp-rocket-config
+```
+
+
+To verify, use `ls -al`:
+
+```
+cache -> ./uploads/cache
+wp-rocket-config -> ./uploads/wp-rocket-config
+```
+
+### For Windows:
+Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
+
+```bash
+mklink /d ./wp-content/cache ./uploads/cache
+mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
+```
+
+Each command will return the following upon success:
+
+```
+symbolic link created for .\wp-content\cache <<===>> .\uploads\cache
+symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-rocket-config
+```
+
+To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
+You can also verify success using `dir`:
+
+```
+<SYMLINKD>        cache [.\uploads\cache]
+<SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
+```
 
 ## Troubleshooting
 
@@ -88,7 +139,7 @@ Some modules and plugins verify that the target directory exists using `is_dir()
 
 If a symlinked folder doesn't show the proper contents, doublecheck that the path is correct. In Bash, `ls -l` will show symlinks paths:
 
-```shell
+```bash
 $ ls -l
 
 lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/images/

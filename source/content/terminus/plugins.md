@@ -36,7 +36,7 @@ Download a zip archive of the plugin's most recent release, then install it by u
   -L | tar -C ~/.terminus/plugins -xvz
 ```
 
-<Accordion title={"Explore Advanced Install Methods (Optional)"} id={"advance-installs"} icon={"lightbulb"}>
+<Accordion title="Explore Advanced Install Methods (Optional)" id="advance-installs" icon="lightbulb">
 
 ### Install via Composer
 
@@ -49,7 +49,7 @@ Plugins published on Packagist are available to install via the Composer package
 
 ### Install via Git
 
-Most plugins are published online as a Git repository. You can install the plugin by cloning the repository into your local plugins directory (`\$HOME/.terminus/plugins`). This will allow you to contribute to the development of the plugin and to update the plugin using Git commands. To install a plugin using Git, find the Git URL of the plugin’s repository. On GitHub you can find it by clicking <strong>Clone or download</strong> on the repository home page:
+Most plugins are published online as a Git repository. You can install the plugin by cloning the repository into your local plugins directory (`\$HOME/.terminus/plugins`). This will allow you to contribute to the development of the plugin and to update the plugin using Git commands. To install a plugin using Git, find the Git URL of the plugin’s repository. On GitHub you can find it by clicking **Clone or download** on the repository home page:
 
 ![GitHub clone URL](../../docs/assets/images/terminus-plugin-install-git.png "GitHub clone URL")
 

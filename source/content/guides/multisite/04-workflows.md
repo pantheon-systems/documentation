@@ -31,10 +31,9 @@ After you've configured a WordPress Site Network in the Dev environment, you'll 
 
 4. From the command line, perform a `wp search-replace` on the Test environment's database via Terminus:
 
-    <div class="copy-snippet">
-      <button class="btn btn-default btn-clippy" data-clipboard-target="#wp-search-replace-test">Copy</button>
-      <figure><pre id="wp-search-replace-test"><code class="command bash" data-lang="bash">terminus wp &lsaquo;site&rsaquo;.test -- search-replace &lsaquo;dev-domain&rsaquo; &lsaquo;test-domain&rsaquo; --url=&lsaquo;dev-domain&rsaquo; --network</code></pre></figure>
-    </div>
+    ```bash
+    terminus wp &lsaquo;site&rsaquo;.test -- search-replace &lsaquo;dev-domain&rsaquo; &lsaquo;test-domain&rsaquo; --url=&lsaquo;dev-domain&rsaquo; --network
+    ```
 
     Ensure the database connection error is resolved on the Test environment's URL.
 

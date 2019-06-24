@@ -4,6 +4,11 @@ description: Upgrade a free site to a paid plan or downgrade a site's current pl
 tags: [billing]
 contributors: [cityofoaksdesign]
 ---
+
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
+
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing){.external}, contact your Supporting Organization for assistance, in order to retain your special pricing rate.
+
 ## Access Site Plan
 1. Go to the Site Dashboard.
 2. For Sandbox sites, click the **Upgrade** button:
@@ -12,6 +17,7 @@ contributors: [cityofoaksdesign]
  ![Change current plan for paid sites](../docs/assets/images/dashboard/change-plan.png)
 
 <Alert title="Note" type="info">
+
 Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
 
 </Alert>
@@ -26,7 +32,9 @@ Site plan downgrades will change your site's resources and access to features im
 The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/docs/change-management/#site-level-roles-and-permissions).
 
 <Alert title="Note" type="info">
+
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
+
 </Alert>
 
 ## Considerations
@@ -44,30 +52,39 @@ For Redis and Solr, the following code changes are required before the feature c
 
 <TabList>
 
-<Tab title="wp-id" id="WordPress" active={true}>
+<Tab title="WordPress" id="wp-id" active={true}>
 
 #### Safely Remove Redis
-{% include("content/remove-addons/wp-redis.html")%}
+
+`markdown:remove-addons/wp-redis.md`
+
 #### Safely Remove Solr
-{% include("content/remove-addons/wp-solr.html")%}
+
+`markdown:remove-addons/wp-solr.md`
 
 </Tab>
 
-<Tab title="d8-id" id="Drupal 8">
+<Tab title="Drupal 8" id="d8-id">
 
 #### Safely Remove Redis
-{% include("content/remove-addons/d8-redis.html")%}
+
+`markdown:remove-addons/drupal-redis.md`
+
 #### Safely Remove Solr
-{% include("content/remove-addons/d8-solr.html")%}
+
+`markdown:remove-addons/d8-solr.md`
 
 </Tab>
 
-<Tab title="d7-id" id="Drupal 7">
+<Tab title="Drupal 7" id="d7-id">
 
 #### Safely Remove Redis
-{% include("content/remove-addons/d7-redis.html")%}
+
+`markdown:remove-addons/drupal-redis.md`
+
 #### Safely Remove Solr
-{% include("content/remove-addons/d7-solr.html")%}
+
+`markdown:remove-addons/d7-solr.md`
 
 </Tab>
 
@@ -87,21 +104,25 @@ If the site is associated with an Enterprise Flagship organization, additional P
 This section covers purchasing a new plan. Review the [previous section](#basic-plan) on feature availability before switching plans to Basic.
 
 <Alert title="Note" type="info">
+
 Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/docs/annual-billing/) for more information.
+
 </Alert>
 
 ### Select Plan
 1. Go to the Site Dashboard.
 2. For Sandbox sites, click the **Upgrade** button. Otherwise, select the lable for the site's current plan.
 3. Click **Select** to switch plans:
+
  ![Select a different plan](../docs/assets/images/dashboard/select-plan.png)
 
 
 ### Enter Billing Information
 Site ownership is designated to the user account entering billing information.
+
 <TabList>
 
-<Tab title="add-cc-id" id="Add New Card" active={true}>
+<Tab title="Add New Card" id="add-cc-id" active={true}>
 
 If this is your first time taking a site live on Pantheon, you'll likely need to add a new card to your account:
 
@@ -112,7 +133,7 @@ If this is your first time taking a site live on Pantheon, you'll likely need to
 
 </Tab>
 
-<Tab title="existing-cc-id" id="Select Existing Card">
+<Tab title="Select Existing Card" id="existing-cc-id">
 
 To associate an existing card from your account as the payment method for this site:
 
@@ -121,10 +142,10 @@ To associate an existing card from your account as the payment method for this s
 
 </Tab>
 
-<Tab title="request-payment-id" id="Send a Request">
+<Tab title="Send a Request" id="request-payment-id">
 
-{% include("content/transfer-ownership-billing-intro.html")%}
-{% include("content/transfer-ownership-billing-steps.html")%}
+`markdown:transfer-ownership-billing-intro.md`
+`markdown:transfer-ownership-billing-steps.md`
 
 </Tab>
 
@@ -140,7 +161,7 @@ The Site Owner will receive an email confirmation of this change, a new invoice 
 Invoices and transaction history related to this change can be found in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing**.
 
 ## Cancel Current Plan
-Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox. 
+Review the [previous section](#sandbox) on feature availability before downgrading to Sandbox.
 
 <Alert title="Note" type="info" >
 

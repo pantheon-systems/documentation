@@ -5,10 +5,9 @@ import Layout from '../layout/layout';
 import CallToAction from '../layout/call-to-action';
 import TopicGroup from '../layout/topic-group';
 import SubTopicGroup from '../layout/subtopic-group';
-import WistiaVideo from '../layout/wistia-video';
+import YoutubeVideo from '../layout/youtube-video';
 import GuideItem from '../layout/guide-item';
 import IntegrationGuideItem from '../layout/integration-guide-item';
-
 
 class LandingTemplate extends Component {
 	render() {

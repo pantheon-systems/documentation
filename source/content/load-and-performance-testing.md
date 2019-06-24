@@ -7,7 +7,9 @@ categories: []
 Load and performance tests are critical steps in going live procedures, as they help expose and identify potential performance killers. These tests provide insight for how a site will perform in the wild under peak traffic spikes.
 
 <Alert title="Note" type="info">
+
 Load testing is one of the services offered by our [Professional Services](/docs/professional-services/#pre-launch-load-testing) team.
+
 </Alert>
 
 ## Load vs Performance Testing
@@ -53,10 +55,13 @@ Ultimately, it doesn't matter what tool(s) you use as long as you test your site
 
 ##Running the Tests
 If this is a performance test, be sure to run the test on a development environment (Dev or [Multidev](/docs/multidev)) without caching. Run load tests on the Live environment before launching the site. If the site is already launched, use the Test environment instead.
-<div  class="alert alert-danger" role="alert">
-###Warning {.info}
+
+<Alert title="Warning" type="danger">
+
 We do not recommend load testing on the Live environment if the site has already launched because you risk overwhelming your live site and causing downtime.
-</div>
+
+</Alert>
+
 Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/docs/logs). Make note of any errors and warnings that pop up during the test so that you can fix them.
 
 Once the test is running, execute common tasks done by editors and administrators and note the time. Example tasks may include:
@@ -66,7 +71,7 @@ Once the test is running, execute common tasks done by editors and administrator
 * Run cron
 * Run any scripts that could be triggered while users are on the site.
 
-##Assess Results
+## Assess Results
 Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunities.
 
 Next, review the **Transactions** tab in New Relic and sort by **Slowest average response time**. Click on the slowest transaction to pull up the transaction trace. Review the transaction trace to find the performance bottleneck.

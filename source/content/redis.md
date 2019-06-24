@@ -21,7 +21,7 @@ Redis provides an alternative caching backend, taking that work off the database
 ## Enable Redis
 All plans except for the Basic plan can use Redis. Sandbox site plans can enable and use Redis for developmental purposes, but if the site plan is upgraded to Basic, the feature will be disabled.
 
-| Plans         | Redis Support <Popover icon="info-circle" content="Available across all environments, including Multidevs."/> |
+| Plans         | Redis Support <Popover content="Available across all environments, including Multidevs."/> |
 | ------------- | -------------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
 | Basic         | <span style="color:red">❌</span>  |
@@ -406,7 +406,7 @@ On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remo
 ### How is Redis configured on the platform?
 Your `redis.conf` file can be retrieved via SFTP similarly to how you can download Redis log files (see below), or you can review it here:
 
-```nohighlight
+```
 port xxxxx
 timeout 300
 loglevel notice
@@ -438,7 +438,7 @@ Yes. There is a `redis.log` file that is available on the Redis container for ea
 
 To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
 
-```nohighlight
+```
 $ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in
 Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
 sftp> ls
@@ -458,19 +458,34 @@ The following code changes are required before Redis can be safely uninstalled a
 
 <Tab title="WordPress" id="wp-uninstall" active={true}>
 
-`markdown:remove-addons/wp-redis.md`
+1. Uninstall the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin.
+2. Delete the <code>wp-content/object-cache.php</code> file.
+3. Commit and deploy code changes to the Live environment.
+4. Go to <Icon text="Settings" icon="cogwheel"/> > **Add Ons** and click the **Remove** button for Redis.
+5. From the Site Dashboard, click on <Icon text="Clear Caches" icon="cleaning"/>.
+
 
 </Tab>
 
 <Tab title="Drupal 8" id="d8-uninstall">
 
-`markdown:remove-addons/drupal-redis.md` 
+1. Disable the [Redis](https://www.drupal.org/project/redis) module.
+2. Delete Redis configuration from <code>settings.php</code>.
+3. Commit and deploy code changes to the Live environment.
+4. Go to <Icon text="Settings" icon="cogwheel"/> > **Add Ons** and click the **Remove** button for Redis.
+5. From the Site Dashboard, click on <Icon text="Clear Caches" icon="cleaning"/>.
+
 
 </Tab>
 
 <Tab title="Drupal 7" id="d7-uninstall">
 
-`markdown:remove-addons/drupal-redis.md` 
+1. Disable the [Redis](https://www.drupal.org/project/redis) module.
+2. Delete Redis configuration from <code>settings.php</code>.
+3. Commit and deploy code changes to the Live environment.
+4. Go to <Icon text={"Settings"} icon={"cogwheel"}/> > **Add Ons** and click the **Remove** button for Redis.
+5. From the Site Dashboard, click on <Icon text={"Clear Caches"} icon={"cleaning"}/>.
+
 
 </Tab>
 

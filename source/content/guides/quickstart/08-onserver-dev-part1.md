@@ -78,7 +78,7 @@ If you need help with this step, please reference the [WordPress Codex](https://
 
 10. Add a Deploy Log Message (optional), then click **Deploy Code from Development to Test Environment**.
 
-    <Accordion title={"Deploy Commits to Test (optional)"} id={"understand-deploy"} icon={"lightbulb"}>
+    <Accordion title="Deploy Commits to Test (optional)" id="understand-deploy" icon="lightbulb">
 
     Test is a separate environment from Dev, with its own codebase, database, and media files. When you deploy code from Dev, the platform leverages Git to pull any code changes into your Test environment.
 

@@ -53,7 +53,9 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 5. If prompted, enter the password.
 
 <Alert title="Note" type="info">
+
 Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the [Troubleshooting](#troubleshooting) at the end of the document.
+
 </Alert>
 
 ## Delete a Key from Pantheon
@@ -70,7 +72,7 @@ Spaces or non-standard alphanumeric characters in the SSH key's comments (such a
 #### Control Path Error
 
 You may receive the following error:
-```nohighlight
+```
 ControlPath too long fatal: Could not read from remote repository.
 ```
 Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh_config`) for a declaration like this:

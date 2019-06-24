@@ -7,7 +7,9 @@ categories: [wordpress]
 Pantheon provides [one-click updates](/docs/core-updates/) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
 
 <Alert title="Warning" type="danger">
+
 Development versions and beta releases are not supported and should not be run on live sites. Testing should be done on a [Multidev](/docs/multidev/) environment or within an isolated local environment on a branch other than master.
+
 </Alert>
 
 ## Update Core within WordPress Dashboard
@@ -24,8 +26,8 @@ Development versions and beta releases are not supported and should not be run o
  ```
 
 3. Go to **Tools** > **WordPress Beta Tester** and select the update stream you want to use, then click **Save**:
-  - [Point release nightlies](https://wordpress.org/download/nightly/): This contains the work that is occurring on a branch in preparation for a x.x.x point release. This should also be fairly stable but will be available before the branch is ready for beta.
-  - [Bleeding edge nightlies](https://wordpress.org/download/beta) (Choose this option to test 4.5 beta releases): This is the bleeding edge development code which may be unstable at times.
+   - [Point release nightlies](https://wordpress.org/download/nightly/): This contains the work that is occurring on a branch in preparation for a x.x.x point release. This should also be fairly stable but will be available before the branch is ready for beta.
+   - [Bleeding edge nightlies](https://wordpress.org/download/beta) (Choose this option to test 4.5 beta releases): This is the bleeding edge development code which may be unstable at times.
 
 
 4. Go to **Dashboard** > **Updates** and click **Update Now**.
@@ -50,6 +52,7 @@ Development versions and beta releases are not supported and should not be run o
  git remote add WordPress git://github.com/WordPress/WordPress.git
  git fetch WordPress
  ```
+
 3. Determine which update stream you want to use:
     - [Point release nightlies](https://wordpress.org/download/nightly/):
      Run `git tag` to identify the latest development tag (currently 4.4.2), then merge:
@@ -57,6 +60,7 @@ Development versions and beta releases are not supported and should not be run o
      ```
      git merge --squash -s recursive -X theirs tags/4.4.2
      ```
+
     - [Bleeding edge nightlies](https://wordpress.org/download/beta) (Choose this option to test 4.5 beta releases):
 
      ```
@@ -77,4 +81,4 @@ Create the Multidev from within the Site Dashboard by selecting **Multidev** > *
 ## Troubleshooting
 
 ### Database Update Required
-WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus <site>.<env> 'wp core update-db'](/docs/terminus).
+WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus $site.$env 'wp core update-db'](/docs/terminus).

@@ -33,27 +33,38 @@ Pantheon does not allow crawlers on Dev, Test, or Multidev environments. Adding 
 ## Custom Domains
 If you don't already own a domain name, register one with a third-party provider. Pantheon is not a domain registrar, but we've created documentation for several popular DNS managers:
 
-<Accordion title={"DNS Host-Specific Instructions"} id={"host-specific2"} icon={"info-sign"}>
-    <ul class="top-docs top-docs-2col docs-2col-panel">
-      {% for doc in data.docs_tags.providers %}
-        {% if (doc.meta.type != "video") and (doc.meta.type != "guide") and (doc.meta.type != "terminuspage")%}
-          <li><a href="{{ doc.url }}">{{ doc.provider }}</a></li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+<Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
+
+ - [1&1 Domain Configuration](/docs/1-and-1/)
+ - [Cloudflare Domain Configuration](/docs/cloudflare/)
+ - [DNS Made Easy Domain Configurationi](/docs/dns-made-easy/)
+ - [DreamHost Domain Configuration](/docs/dreamhost/)
+ - [Dyn Domain Configuration](/docs/dyn/)
+ - [eNom Domain Configuration](/docs/enom/)
+ - [Gandi Domain Configuration](/docs/gandi/)
+ - [GoDaddy Domain Configuration](/docs/godaddy/)
+ - [Google Domain Configuration](/docs/google/)
+ - [Namecheap Domain Configuration](/docs/namecheap/)
+ - [Network Solutions Domain Configuration](/docs/network-solutions/)
+ - [Amazon Route 53 Domain Configuration](/docs/route53/)
+
 </Accordion>
 
 Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/docs/https/).
 
-{% include("content/tables/custom-domains-limit.html") %}
+
+`markdown:tables/custom-domains-limit.md`
+
 
 <Alert title="Note" type="info">
+
 Add all domains (example.com and www.example.com are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/docs/guides/launch/). Automatic resolution of domains and wildcards are not supported.
+
 </Alert>
 
 ### Add a Custom Domain
 
-{% include("content/secure-only-tlds.html")%}
+`markdown:secure-only-tlds.md`
 
 1. From your site dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 
@@ -124,12 +135,12 @@ When troubleshooting a redirect loop, you may want to deactivate any module or p
 ### Mixed-mode Browser Warnings
 Replace `http://` in the site's database and configure your CMS to assume users are visiting via HTTPS and the site’s primary domain. Templates for example should reference HTTPS in absolute CSS and Javascript sources, even when accessed with HTTP.
 
-{% include("content/cname-workaround.html")%}
+`markdown:cname-workaround.md`
 
 ### Test Domain Names Before DNS
 You can modify your local `hosts` file to validate domain-specific settings before DNS is in place.
 
-{% include("content/hosts-file.html")%}
+`markdown:hosts-file.md`
 
 
 ## See Also

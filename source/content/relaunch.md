@@ -7,7 +7,9 @@ categories: []
 Sites are considered launched on Pantheon once traffic is routed through custom domain(s). Relaunching a previously launched site is done by rerouting traffic from the existing Site Dashboard to an entirely new Site Dashboard.
 
 <Alert title="Note" type="info">
+
 The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/docs/guides/launch/).
+
 </Alert>
 
 ## Before You Begin
@@ -15,7 +17,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 - Open a second tab for the old Site Dashboard on Pantheon
 - In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
 - Examine existing records pointing to Pantheon
-  {% include("content/standard-dns-config.html") %}
+  `markdown:standard-dns-config.md`
 - Lower the TTL of existing DNS records to minimize impact of upcoming DNS changes
 
   <Accordion title="Learn More" id="ttl" icon="info-sign">
@@ -32,9 +34,11 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 The permission to manage billing and plans is granted only to the role of **Site Owner** / **Organization Administrators**. Other roles do not have access as described on this page.
 
 <Alert title="Note" type="info">
+
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
 
 In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
+
 </Alert>
 
 ## Relaunch Procedure
@@ -47,23 +51,24 @@ In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-cl
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Connect Domain**
 
-    <Alert title="Warning" type="danger">
+  <Alert title="Warning" type="danger">
 
-    Do **not** update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 5 below.
+  Do **not** update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 5 below.
 
-    </Alert>
+  </Alert>
 
 4. Wait for HTTPS to provision for the newly connected domains:
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
 
-  {% include("content/notes/https-success.html")%}
+  `markdown:notes/https-success.md`
 
    This process typically takes about an hour.
 
 5. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
- {% include("content/standard-dns-config2.html") %}
+  `markdown:standard-dns-config2.md`
+
 6. Test and confirm that the new site is accessible via the custom domain over HTTPS (e.g., `https://www.example.com/`).
 7. Repeat steps 2-6 above for each affected domain. Keep in mind that `www.example.com` and `example.com` are different domains.
 8. In the new Site Dashboard, [standardize traffic for the primary domain](/docs/domains/#redirect-to-https-and-the-primary-domain).

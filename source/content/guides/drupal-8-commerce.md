@@ -78,7 +78,7 @@ In addition to Pantheon, you will need accounts at:
 
 3. Running `git status` should show that the `composer.json` and `composer.lock` files have changed:
 
-   ![Git Status showing updated Composer files](../docs/assets/images/guides/drupal-8-commerce/git-status.png)
+   ![Git Status showing updated Composer files](../../docs/assets/images/guides/drupal-8-commerce/git-status.png)
 
 4. Commit the new files and push them to GitHub:
 
@@ -91,7 +91,7 @@ In addition to Pantheon, you will need accounts at:
 
 6. Go to your newly created Site Dashboard. Under the <span class="glyphicons glyphicons-wrench"></span> **Dev** tab, click on <span class="glyphicons glyphicons-embed-close"></span> **Code**, then **install later**. You should now see your commit history. Once CircleCI completes the automated tests built into our repository, it will commit the build assets and push them to Dev:
 
-    ![Build Assets on Dev](../docs/assets/images/guides/drupal-8-commerce/build-assets.png)
+    ![Build Assets on Dev](../../docs/assets/images/guides/drupal-8-commerce/build-assets.png)
 
 ## Reinstall Drupal
 
@@ -112,7 +112,7 @@ In addition to Pantheon, you will need accounts at:
 
 2. Log in to your Drupal site in the Dev environment. The presence of the **Commerce** button on the toolbar indicates a succefull install:
 
-    ![Drupal Commerce in the Toolbar](../docs/assets/images/guides/drupal-8-commerce/commerce-button.png)
+    ![Drupal Commerce in the Toolbar](../../docs/assets/images/guides/drupal-8-commerce/commerce-button.png)
 
 ## Conclusion
 

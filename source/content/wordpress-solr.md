@@ -5,7 +5,7 @@ tags: [addons]
 categories: [wordpress]
 contributors: [cityofoaksdesign]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. Currently, all plans except for a Basic plan can use Solr. {% include("content/solr-version.html") %}
+[Apache Solr](/docs/solr) is a system for indexing and searching site content. Currently, all plans except for a Basic plan can use Solr. `markdown:solr-version.md`
 
 First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**. This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
 
@@ -83,4 +83,5 @@ Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to wo
 
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
-{% include("content/remove-addons/wp-solr.html")%}
+
+`markdown:remove-addons/wp-solr.md`

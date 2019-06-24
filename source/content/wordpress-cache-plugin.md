@@ -13,10 +13,10 @@ If you want to automatically clear cached pages when content is updated, check o
 ## Pantheon Page Cache Plugin Configuration
 
 1. Log in to your WordPress site as an administrator.
-2. Click **Settings**.
-3. Click **Pantheon Cache**. You'll end up at: `/wp-admin/options-general.php?page=pantheon-cache`
-4. Adjust the **Default Cache Time** as desired.
-5. Click **Save Changes**.
+1. Click **Settings**.
+1. Click **Pantheon Cache**. You'll end up at: `/wp-admin/options-general.php?page=pantheon-cache`
+1. Adjust the **Default Cache Time** as desired.
+1. Click **Save Changes**.
 
 ![WordPress Pantheon Cache Plugin settings](../docs/assets/images/WordPress_Pantheon-Cache-Settings.png)
 
@@ -54,6 +54,7 @@ public function clean_post_cache( $post_id, $include_homepage = true )
 
 ### clean_term_cache
 Flushes the cache for an individual term or terms which are passed in an array, or for a complete taxonomy passed via a single taxonomy ID.
+
 ```php
 /**
  * Clear the cache for a given term or terms and taxonomy.

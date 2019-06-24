@@ -15,7 +15,7 @@ Improve your agency's development efficiency with custom DevOps training from Pa
 
 </Callout>
 
-For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) and [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+For corporate or higher education customers, Custom Upstreams is included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) with Gold Support and higher, and all [Pantheon EDU](https://pantheon.io/edu) accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
 
 <Alert title="Note" type="info">
 

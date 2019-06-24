@@ -16,10 +16,12 @@ While creating a new site, any user in your [organization](/docs/organizations/)
 
 From the Site Dashboard, the Site Owner will want to:
 
-{% include("content/add-supporting-org.html")%}
+`markdown:add-supporting-org.md`
 
 <Alert title="Note" type="info">
+
  If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/support/) to transfer sites to your Organization.
+
 </Alert>
 
 ## Manage Site Teams
@@ -46,7 +48,9 @@ This lets you filter sites by their [site plan](/docs/site-plan/).
 You can add custom tags by selecting the checkbox next to the site, and clicking **Tags** and **Add Tag(s)**, then entering the tag.
 
 <Alert title="Note" type="info">
+
 Tags are case-sensitve.
+
 </Alert>
 
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.

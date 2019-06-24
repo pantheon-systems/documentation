@@ -19,7 +19,7 @@ We do not recommend hotfixing. Hotfixes should be the exception, not the norm. P
 ## Get Into the Right Tag
 
 1. From within your Git clone, get a quick list of the existing Git tags:<br />
- ```nohighlight
+ ```
  git tag
  pantheon.initialize
  pantheon_live_1

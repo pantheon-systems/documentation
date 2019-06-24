@@ -10,7 +10,7 @@ const calculateSlug = (node, getNode) => {
       .replace(/.$/, "")
   }
 
-  return `docs/${fileName}`
+  return `${fileName}`
 }
 
 const calculateTemplate = (node, defaultTemplate) => {
@@ -19,6 +19,30 @@ const calculateTemplate = (node, defaultTemplate) => {
   }
 
   return defaultTemplate
+}
+
+const calculatePrevious = (guide) => {
+  if (!guide.previous) {
+    return null;
+  }
+
+  if (guide.node.fields.guide_directory !== guide.previous.fields.guide_directory) {
+    return null;
+  }
+
+  return guide.previous.fields.slug;
+}
+
+const calculateNext = (guide) => {
+  if (!guide.next) {
+    return null;
+  }
+
+  if (guide.node.fields.guide_directory !== guide.next.fields.guide_directory) {
+    return null;
+  }
+
+  return guide.next.fields.slug;
 }
 
 const digest = str =>
@@ -53,8 +77,6 @@ exports.createPages = ({ graphql, actions }) => {
               title
               layout
               permalink
-              nexturl
-              previousurl
             }
             fields {
               slug
@@ -71,14 +93,24 @@ exports.createPages = ({ graphql, actions }) => {
         sort: { fields: [fileAbsolutePath], order: ASC }
       ) {
         edges {
+          previous {
+            fields {
+              slug
+              guide_directory
+            }
+          }
           node {
             frontmatter {
               title
               layout
               permalink
-              nexturl
-              previousurl
             }
+            fields {
+              slug
+              guide_directory
+            }
+          }
+          next {
             fields {
               slug
               guide_directory
@@ -126,15 +158,30 @@ exports.createPages = ({ graphql, actions }) => {
     // Create guide pages.
     const guides = result.data.allGuides.edges
     guides.forEach(guide => {
-      const template = calculateTemplate(guide.node, "guide")
-      createPage({
-        path: guide.node.fields.slug,
-        component: path.resolve(`./src/templates/${template}.js`),
-        context: {
-          slug: guide.node.fields.slug,
-          guide_directory: guide.node.fields.guide_directory,
-        },
-      })
+      if (guide.node.fields.guide_directory !== null) {
+        const previous = calculatePrevious(guide);
+        const next = calculateNext(guide);
+        const template = calculateTemplate(guide.node, "guide")
+        createPage({
+          path: guide.node.fields.slug,
+          component: path.resolve(`./src/templates/${template}.js`),
+          context: {
+            slug: guide.node.fields.slug,
+            guide_directory: guide.node.fields.guide_directory,
+            previous,
+            next
+          },
+        })
+      } else {
+        const template = calculateTemplate(guide.node, "doc")
+        createPage({
+          path: guide.node.fields.slug,
+          component: path.resolve(`./src/templates/${template}.js`),
+          context: {
+            slug: guide.node.fields.slug,
+          },
+        })
+      }
     })
 
     // Create contributor pages.
@@ -175,16 +222,18 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       name: `slug`,
       node,
-      value: slug,
+      value: slug.startsWith("docs")?slug:`docs/${slug}`
     })
 
-    // Add guide_directory field
     if (slug.includes("docs/guides")) {
-      createNodeField({
-        name: `guide_directory`,
-        node,
-        value: `docs/${getNode(node.parent).relativeDirectory}`,
-      })
+      if (getNode(node.parent).relativeDirectory !== 'guides') {
+        // Add guide_directory field
+        createNodeField({
+          name: `guide_directory`,
+          node,
+          value: `${getNode(node.parent).relativeDirectory}`,
+        })
+      }
     }
   }
 

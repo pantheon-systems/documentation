@@ -17,7 +17,7 @@ Some web developers choose to aggregate all of their caching logic in one place,
 
 <TabList>
 
-<Tab name="Drupal 8" id="d8" active={true}>
+<Tab title="Drupal 8" id="d8" active={true}>
 
 [Drupal 8's system of cacheability metadata](https://www.drupal.org/developing/api/8/render/arrays/cacheability) is much more advanced than the tools available in Drupal 7 or WordPress. Drupal builds HTML out of render arrays, which are specially formed PHP arrays. If one layer of a render array cannot be cached (if it's cache max age should be zero) that cacheability metadata can be set with:
 
@@ -30,7 +30,7 @@ Drupal 8 will "bubble up" this information so that if any small block on a page 
 
 </Tab>
 
-<Tab name="Drupal 7" id="d7">
+<Tab title="Drupal 7" id="d7">
 
 Here is an example of a global way to determine a Drupal response's cacheability. Use the `$conf` global variable to set `Cache-Control: max-age=0`:
 
@@ -68,7 +68,7 @@ foreach ($regex_path_patterns as $regex_path_pattern) {
 
 </Tab>
 
-<Tab name="WordPress" id="wp">
+<Tab title="WordPress" id="wp">
 
 Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/docs/wordpress-cache-plugin) plugin for all matching requests:
 

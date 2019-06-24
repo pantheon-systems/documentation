@@ -12,15 +12,17 @@ Pantheon offers a range of support packages that extend to include all the featu
 
 | Support Package                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
 |-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
-| **Scope**                                                 | Platform {% include 'popovers/platform.twig' %} | Technical {% include 'popovers/technical.twig' %} | Performance {% include 'popovers/performance.twig' %} | Dedicated {% include 'popovers/fullstack.twig' %} |
+| **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
 | [**Chat**](#real-time-chat-support)                       | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
-| [**Tickets**](#ticket-support)                            | <Color color="red">❌</Color>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
-| [**Emergency On-Call**](#pantheon-on-call)                | <Color color="red">❌</Color>                 | <Color color="red">❌</Color>                   | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
-| [**Professional Services**](/docs/professional-services/) | <Color color="red">❌</Color>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
+| [**Tickets**](#ticket-support)                            | <span style="color:red">❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
+| [**Emergency On-Call**](#pantheon-on-call)                | <span style="color:red">❌</span>                 | <span style="color:red">❌</span>                  | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
+| [**Professional Services**](/docs/professional-services/) | <span style="color:red">❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
 
 ## Best Practices
 
 Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
+
+ - **Open the Ticket in the Right Place:** Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package.
 
  - **One ticket per issue:** Opening multiple tickets on the same issue will only impede our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
 
@@ -45,7 +47,9 @@ Start a chat with our Support Team to ask questions or request assistance on iss
  - Links to screenshots or screencasts of the behavior, if necessary.
 
 <Alert title="Note" type="info">
+
 Some in-browser ad or tracking blockers can interfere with the **Launch Chat** button. If you don't see it, try whitelisting `pantheon.io` or disabling the browser extension. Intercom has posted more details on [why this happens](https://docs.intercom.com/faqs-and-troubleshooting/your-users-and-leads-data-in-intercom/why-am-i-missing-users-that-are-showing-up-on-my-own-system) on their site.
+
 </Alert>
 
 ## Ticket Support
@@ -61,6 +65,9 @@ The ticket support feature is available to certain support packages and account 
   - Error messages received, if applicable.
   - Links to screenshots or screencasts of the behavior, if necessary.
 5. Click **Open Ticket**
+
+Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except Unprivileged users.
+
 
 ## Pantheon On-Call
 Diamond and Platinum support customers can directly access Pantheon's operations response team, either via the Pantheon Dashboard, or by an emergency 800-number. Pantheon on-call immediately escalates to the on-call engineering team. The scope of on-call support is limited to emergencies and business critical issues.

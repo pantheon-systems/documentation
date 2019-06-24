@@ -20,7 +20,7 @@
       <td>15</td>
       <td>35</td>
       <td>70</td>
-      <td>200</td>
+      <td>270</td>
     </tr>
     <tr>
       <th scope="row" class="thead-inverse">Free and managed HTTPS</th>

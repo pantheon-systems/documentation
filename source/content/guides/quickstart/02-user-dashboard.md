@@ -22,7 +22,7 @@ In this lesson, we’re going to explore the User Dashboard.
 
 `youtube: https://www.youtube.com/watch?v=U7iaX-vwPrc`
 
-<Accordion title={"User Dashboard Glossary (Optional)"} id={"user-dashboard-tour"} icon={"lightbulb"}>
+<Accordion title="User Dashboard Glossary (Optional)" id="user-dashboard-tour" icon="lightbulb">
 
 - <Icon icon={"more-windows"} text={"Sites:"}/> Add a new site, view sites you're a team member of, and check how many free sites you have remaining. Return to this page by clicking the Pantheon logo.
 

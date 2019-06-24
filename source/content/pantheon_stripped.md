@@ -76,7 +76,7 @@ Any URL query parameters (GET requests) matching the following criteria will hav
 ### How do I test my Google Analytics or Google Ads (AdWords) URLs on Pantheon?
 
 You can use [curl](https://curl.haxx.se//) or [wget](https://www.gnu.org/software/wget/) to perform a simple test to see if PANTHEON_STRIPPED is appearing in URLs generated with the Google [URL Builder](https://support.google.com/analytics/answer/1033867):
-```shell
+```bash
 # example using curl and grep
 curl -i "https://live-mysite.pantheon.io/landing_page.html?utm_source=test-source&utm_medium=test-campaign&utm_term=test-term&utm_content=test-content&utm_campaign=test" | grep utm
 ```

@@ -216,7 +216,7 @@ wp_cache_add_non_persistent_groups( array( 'my_plugin_group', 'woocommerce' ) );
 
 To verify, you can use the [Redis CLI](/docs/redis/#use-the-redis-command-line-client) to flush all keys and see that the related objects are no longer added to the cache:
 
-```nohighlight
+```
 > KEYS *woocommerce:*
 1) "woocommerce:size-gallery_thumbnail"
 2) "woocommerce:size-woocommerce_thumbnail"

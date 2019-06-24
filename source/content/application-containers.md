@@ -68,4 +68,4 @@ Live environments on sites with a service level of Performance Medium and above 
 Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/docs/logs#automate-downloading-logs).
 
 ### Failover Application Containers
-All paid service levels have failover application containers which are <strong>not</strong> used for load balancing. If the primary container is not healthy, traffic will be switched to the failover.
+All paid service levels have failover application containers which are **not** used for load balancing. If the primary container is not healthy, traffic will be switched to the failover.

@@ -10,7 +10,7 @@ tags: [performance, logs]
 
 
 ## Available Metrics
-{% include("content/traffic-dl.html")%}
+`markdown:traffic-dl.md`
 
 Imagine two visitors go to `example.com`. The first visitor exits from the home page, but the second visitor continues to browse two additional pages. This would be tracked as **2 Visits** and **4 Pages Served**.
 

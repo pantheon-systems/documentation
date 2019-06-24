@@ -8,6 +8,7 @@ categories: []
 Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/docs/git/) or working in the WordPress or Drupal admin interface in [SFTP](/docs/sftp/) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/docs/multidev/)) in **SFTP** mode.
 
 <Alert title="Exports" type="export">
+
 This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 
 ```bash
@@ -28,14 +29,16 @@ Operations that require write access to the codebase must be executed while the 
 
  - Activating a new theme in the site admin,
  - Uploading a new module or plugin using an SFTP client,
- - Remote Drush commands, like `terminus remote:drush $site.$env -- pm-enable hsts --yes` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run Drush commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/drush/'>Drupal Drush Command-Line Utility</a>."><em class="fa fa-info-circle"></em></a>
- - Remote WP-CLI commands, like `terminus remote:wp $site.$env -- plugin install lh-hsts --activate` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>."><em class="fa fa-info-circle"></em></a>
+ - Remote Drush commands, like `terminus remote:drush $site.$env -- pm-enable hsts --yes` <Popover content="Run Drush commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/drush/'>Drupal Drush Command-Line Utility</a>." />
+ - Remote WP-CLI commands, like `terminus remote:wp $site.$env -- plugin install lh-hsts --activate` <Popover content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>." />
 
 ## WordPress Dashboard
 WordPress' admin interface has built in tools to manage plugins and themes, allowing you to install and manage popular themes and plugins from the main WordPress.org repository.
 
 <Alert title="Warning" type="danger">
+
 Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).
+
 </Alert>
 
 ### Manage Plugins and Themes
@@ -67,13 +70,15 @@ You should *never* have to enter credentials into the WordPress Dashboard. Visit
 Drupal also allows you to install modules or themes [using its administrative interface](https://drupal.org/documentation/install/modules-themes/modules-7#using-drupal-interface).
 
 <Alert title="Warning" type="danger">
+
 Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).
+
 </Alert>
 
 ### Install a New Module
 
 <TabList>
--
+
 <Tab title="Drupal 8" id="d8-1" active={true}>
 
 1. Get the URL to the code you want to install from Drupal.org:
@@ -138,7 +143,7 @@ In order to run WP-CLI or Drush commands on Pantheon's development environments,
 ### Download Contrib Modules with Drush
 SFTP mode supports [Drush](https://github.com/drush-ops/drush/), the command-line interface for Drupal. For example, you can download multiple contrib modules and a theme to the Dev environment:
 
-```nohighlight
+```
 $ terminus drush $site.$env -- dl pathauto devel admin_menu zen search_api search_api_solr
 Running drush dl pathauto devel admin_menu zen search_api search_api_solr on community-plumbing-20-dev
 Project pathauto (7.x-1.2) downloaded to [success]
@@ -165,7 +170,7 @@ terminus env:commit $site.$env --message="Download pathauto devel admin_menu zen
 
 ### Install WordPress Plugins with WP-CLI
 SFTP mode supports [WP-CLI](https://make.wordpress.org/cli/handbook/), the official command line tool for interfacing with WordPress sites. For example, you can install multiple plugins on the Dev environment:
-```nohighlight
+```
 $ terminus remote:wp bensons-big-demo.dev -- plugin install akismet wordpress-seo jetpack google-sitemap-generator
 Running wp plugin install akismet wordpress-seo jetpack google-sitemap-generator on bensons-big-demo-dev
 dev.f8277b1a-ed45-4390-a257-8d@appserver.dev.f8277b1a-ed45-4390-a257-8dda0b50ff21.drush.in's password:

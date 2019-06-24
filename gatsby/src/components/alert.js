@@ -1,12 +1,18 @@
 import React from "react"
 
-const Alert = ({ title, type, children }) => {
+const Alert = ({ title, type, icon, children }) => {
   const alertClass = `alert alert-${type}`
+  const glyphiconClass = `glyphicon glyphicon-${icon}`
   return (
+    <>
     <div className={alertClass}>
-      <h4 className={type}>{title}</h4>
+      <h4 className={type}>
+      <span className={glyphiconClass}></span>&nbsp;
+      {title}
+      </h4>
       {children}
     </div>
+    </>
   )
 }
 

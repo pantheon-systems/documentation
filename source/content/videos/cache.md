@@ -1,7 +1,6 @@
 ---
 title: Caching
 description: Understand frontend and backend caching on our platform.
-videoid: pugjxn19gi
 contributors:  [dwayne]
 permalink:  docs/videos/:basename/
 tags: [cacheedge]
@@ -9,6 +8,8 @@ categories: [develop, cli]
 layout: doc
 searchboost: 50
 ---
+
+`youtube: https://youtu.be/ecjZhtu41hs`
 
 Caching is an important technique to utilize when developing a CMS application. Let’s look at what the platform offers in terms of front end and back end caching.
 

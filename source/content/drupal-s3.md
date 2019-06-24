@@ -60,7 +60,7 @@ We recommend that you do not access an S3 bucket using your AWS root user creden
 4. Filter policies by **Customer Managed Policies** and select your recently created policy.
 5. Click **Next Step**, then **Create Group**.
 6. Go to **Users** and click **Create New Users**.
-<ol start="7"><li>Provide a user name and click <strong>Create</strong>, then view the new user security credentials by clicking <strong>Show User Security Credentials</strong>.
+<ol start="7"><li>Provide a user name and click **Create**, then view the new user security credentials by clicking **Show User Security Credentials**.
 
 <Alert title="Note" type="info">
 You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time. You will need the access keys when configuring the S3 File System module
@@ -75,7 +75,7 @@ You will need to install the appropriate Drupal module(s) and the AWS SDK librar
 
 <TabList>
 
-<Tab name="Drupal 7" id="d8tab1">
+<Tab title="Drupal 7" id="d8tab1">
 
 The following instructions use [Terminus](/docs/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
@@ -87,7 +87,7 @@ Before you begin:
  - Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
  - Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/docs/terminus):
 
- ```nohighlight
+ ```
  terminus connection:set <site>.<env> sftp
  ```
 
@@ -96,12 +96,12 @@ Before you begin:
 
 Install the [Libraries API](https://www.drupal.org/project/libraries) and [S3 File System](https://www.drupal.org/project/s3fs) modules:
 
-```nohighlight
+```
 terminus drush <site>.<env> -- en libraries s3fs -y
 ```
 Get the [AWS SDK Library 2.x](https://github.com/aws/aws-sdk-php/releases):
 
-```nohighlight
+```
 terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make code/
   //or if you have a contrib subfolder for modules use:
   //terminus drush <site>.<env> -- make --no-core sites/all/modules/contrib/s3fs/s3fs.make code/
@@ -114,13 +114,13 @@ Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) m
 
 Install s3fs_cors module using Drush:
 
-```nohighlight
+```
 terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 ```
 
 </Tab>
 
-<Tab name="Drupal 8" id="d7tab1">
+<Tab title="Drupal 8" id="d7tab1">
 
 <Alert title="Warning" type="danger">
 
@@ -145,13 +145,13 @@ Install the [S3 File System](https://www.drupal.org/project/s3fs) module and AWS
 
 1. Ensure that the Composer for your site will first look to Drupal's preferred package source to find modules:
 
-    ```nohighlight
+    ```
     composer config repositories.drupal composer https://packages.drupal.org/8
     ```
 
 2. Install s3fs module from the preferred package source:
 
-    ```nohighlight
+    ```
     composer require drupal/s3fs --prefer-dist
     ```
 
@@ -160,7 +160,7 @@ Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) m
 
 Install s3fs_cors module using Composer:
 
-```nohighlight
+```
 composer require drupal/s3fs_cors --prefer-dist
 ```
 

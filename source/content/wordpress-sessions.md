@@ -26,37 +26,37 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
 
 1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
 
- ```nohighlight
+ ```
  terminus connection:set <site>.<env> sftp
  ```
 
 2. Install and activate  [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=wp+native-php-sessions`) or with Terminus:
 
- ```nohighlight
+ ```
  terminus wp <site>.<env> -- plugin install wp-native-php-sessions --activate
  ```
 
 3. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
 
- ```nohighlight
+ ```
  terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Install WordPress Native PHP Sessions plugin"
  ```
 
 4. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 
- ```nohighlight
+ ```
  terminus wp <site>.test -- plugin activate wp-native-php-sessions
  ```
 
 5. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
 
- ```nohighlight
+ ```
  terminus env:deploy <site>.live --cc --note="Install WordPress Native PHP Sessions plugin"
  ```
 
 6. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
 
- ```nohighlight
+ ```
  terminus wp <site>.live -- plugin activate wp-native-php-sessions
  ```
 

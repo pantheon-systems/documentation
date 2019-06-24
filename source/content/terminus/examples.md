@@ -179,7 +179,7 @@ Commit plugin and theme updates to the Dev environment:
 terminus env:commit my-site.dev --message="Update all plugins and themes"
 ```
 
-  </Tab>
+</Tab>
 
 </TabList>
 

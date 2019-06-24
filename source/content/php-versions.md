@@ -16,7 +16,9 @@ Older software is more likely to contain code that is incompatible with recent P
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
 <Alert title="Note" type="info">
+
 Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. See [Deploying Configuration Changes to Multidev](/docs/pantheon-yml/#deploying-configuration-changes-to-multidev) for more information.
+
 </Alert>
 
 ### Available PHP Versions
@@ -70,6 +72,7 @@ remote: Changes to `pantheon.yml` detected.
 remote:
 remote: Successfully applied `pantheon.yml` to the 'dev' environment.
 ```
+
 <br />
 
 If you have an invalid `pantheon.yml` file, the `git push` operation will fail and your commit will be rejected. In this example, we've set an unavailable PHP version:
