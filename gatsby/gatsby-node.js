@@ -198,7 +198,6 @@ exports.createPages = ({ graphql, actions }) => {
 
     // Create topics pages.
     const topics = result.data.allLandingsYaml.edges
-    console.log(topics);
     topics.forEach(topic => {
       createPage({
         path: `docs/${topic.node.path}`,
