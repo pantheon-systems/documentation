@@ -40,12 +40,19 @@ module.exports = {
         name: `scripts`,
       },
     },
-     {
-     resolve: `gatsby-source-filesystem`,
-     options: {
-       path: `${__dirname}/../source/docs/assets/images`,
-       name: `images`,
-     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/../source/docs/assets/images`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/../source/_changelogs`,
+        name: `changelogs`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
