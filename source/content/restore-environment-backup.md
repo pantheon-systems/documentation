@@ -44,9 +44,11 @@ From within the source environment, find the backup you want to restore and clic
 
 This provides a temporary private link directly from Google Cloud Storage, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.
 
-If you want to download a backup using wget, put the provided temporary link in double quotes:
+If you want to download a backup using wget, put the provided temporary link in double quotes (`"`) and include the `-O` option to specify the output file and extension based on which backup you are downloading. In the following example, replace both the temporary link and `output-file`:
 
-    wget "https://storage.googleapis.com/gcs-pantheon-backups/..."
+```
+wget "https://storage.googleapis.com/gcs-pantheon-backups/..." -O output-file
+```
 
 ### Restore Database and Files
 To restore Database and Files, navigate to the target environment and click the **Workflow** tab. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup. Click **Import** for each backup part to restore.
