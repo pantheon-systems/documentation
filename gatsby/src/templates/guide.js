@@ -126,8 +126,8 @@ class GuideTemplate extends React.Component {
                   />
                 )}
                 <NavButtons
-                  prev={node.frontmatter.previousurl}
-                  next={node.frontmatter.nexturl}
+                  prev={this.props.pageContext.previous}
+                  next={this.props.pageContext.next}
                 />
               </div>
             </div>
@@ -155,8 +155,6 @@ export const pageQuery = graphql`
         title
         subtitle
         description
-        nexturl
-        previousurl
         showtoc
         editpath
         contributors {

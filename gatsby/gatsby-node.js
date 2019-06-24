@@ -21,6 +21,30 @@ const calculateTemplate = (node, defaultTemplate) => {
   return defaultTemplate
 }
 
+const calculatePrevious = (guide) => {
+  if (!guide.previous) {
+    return null;
+  }
+
+  if (guide.node.fields.guide_directory !== guide.previous.fields.guide_directory) {
+    return null;
+  }
+
+  return guide.previous.fields.slug;
+}
+
+const calculateNext = (guide) => {
+  if (!guide.next) {
+    return null;
+  }
+
+  if (guide.node.fields.guide_directory !== guide.next.fields.guide_directory) {
+    return null;
+  }
+
+  return guide.next.fields.slug;
+}
+
 const digest = str =>
   crypto
     .createHash("md5")
@@ -53,8 +77,6 @@ exports.createPages = ({ graphql, actions }) => {
               title
               layout
               permalink
-              nexturl
-              previousurl
             }
             fields {
               slug
@@ -71,14 +93,24 @@ exports.createPages = ({ graphql, actions }) => {
         sort: { fields: [fileAbsolutePath], order: ASC }
       ) {
         edges {
+          previous {
+            fields {
+              slug
+              guide_directory
+            }
+          }
           node {
             frontmatter {
               title
               layout
               permalink
-              nexturl
-              previousurl
             }
+            fields {
+              slug
+              guide_directory
+            }
+          }
+          next {
             fields {
               slug
               guide_directory
@@ -165,6 +197,8 @@ exports.createPages = ({ graphql, actions }) => {
     const guides = result.data.allGuides.edges
     guides.forEach(guide => {
       if (guide.node.fields.guide_directory !== null) {
+        const previous = calculatePrevious(guide);
+        const next = calculateNext(guide);
         const template = calculateTemplate(guide.node, "guide")
         createPage({
           path: guide.node.fields.slug,
@@ -172,6 +206,8 @@ exports.createPages = ({ graphql, actions }) => {
           context: {
             slug: guide.node.fields.slug,
             guide_directory: guide.node.fields.guide_directory,
+            previous,
+            next
           },
         })
       } else {

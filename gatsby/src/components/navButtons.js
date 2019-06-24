@@ -8,7 +8,7 @@ const NavButtons = ({ prev, next }) => {
         {prev && (
           <ul className="pull-left pagination pager-guides">
             <li>
-              <Link to={"/docs/" + prev} rel="prev">
+              <Link to={prev} rel="prev">
                 <span className="terminus-pager-lsaquo">‹</span> Previous
               </Link>
             </li>
@@ -19,7 +19,7 @@ const NavButtons = ({ prev, next }) => {
         {next && (
           <ul className="pull-right pagination pager-guides">
             <li>
-              <Link to={"/docs/" + next} rel="prev">
+              <Link to={next} rel="prev">
                 <span className="terminus-pager-rsaquo">›</span> Continue
               </Link>
             </li>
