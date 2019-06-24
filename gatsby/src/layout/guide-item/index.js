@@ -3,7 +3,9 @@ import PropTypes from 'prop-types'
 import Image from '../image';
 
 const propTypes = {
-  
+  url: PropTypes.string,
+  text: PropTypes.string,
+  image: PropTypes.string,
 }
 
 function GuideItem(props) {

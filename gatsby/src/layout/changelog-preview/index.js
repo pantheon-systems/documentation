@@ -47,6 +47,9 @@ const ChangelogPreview = (props) => {
 	);
 };
 
-ChangelogPreview.propTypes = {};
+ChangelogPreview.propTypes = {
+	title: PropTypes.string,
+	url: PropTypes.string,
+};
 
 export default ChangelogPreview;

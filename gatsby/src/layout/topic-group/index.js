@@ -4,7 +4,9 @@ import {Link} from 'gatsby';
 import './style.css';
 
 const propTypes = {
-  
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
+  docs: PropTypes.array,
 }
 
 function TopicGroup(props) {

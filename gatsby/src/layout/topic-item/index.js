@@ -4,7 +4,9 @@ import {Link} from 'gatsby'
 import Image from '../image';
 
 
-const propTypes = {};
+const propTypes = {
+	topic: PropTypes.object,
+};
 
 function TopicItem(props) {
 	const { topic } = props;

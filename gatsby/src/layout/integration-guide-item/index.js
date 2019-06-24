@@ -4,7 +4,8 @@ import Image from '../image';
 import './style.css';
 
 const propTypes = {
-  
+  url: PropTypes.string,
+  image: PropTypes.string,
 }
 
 function IntegrationGuideItem(props) {
