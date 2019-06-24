@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../source/_changelogs`,
+        path: `${__dirname}/../source/changelogs`,
         name: `changelogs`,
       },
     },

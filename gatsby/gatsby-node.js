@@ -13,7 +13,7 @@ const calculateSlug = (node, getNode) => {
     return `${fileName}`
   }
 
-  if (getNode(node.parent).absolutePath.includes("_changelogs")) {
+  if (getNode(node.parent).absolutePath.includes("changelogs")) {
     const split = fileName.split('-');
     return `changelog/${split[0]}/${split[1]}`
   }
@@ -127,7 +127,7 @@ exports.createPages = ({ graphql, actions }) => {
 
       allChangelogs: allMdx(
         filter: {
-          fileAbsolutePath: { regex: "/_changelogs/"}
+          fileAbsolutePath: { regex: "/changelogs/"}
         },
         sort: { fields: [fileAbsolutePath], order: DESC }
       ) {
