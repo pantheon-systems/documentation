@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import CallToAction from '../layout/call-to-action';
 import TopicGroup from '../layout/topic-group';
@@ -20,9 +19,9 @@ const LandingTemplate = (props) => {
 					<div className="row" style={{ marginBottom: '15px' }}>
 						<div className="col-md-12">
 							<div className="row call-to-action-section">
-								{topic.video_url && (
+								{topic.video_id && (
 									<div className="col-md-6 hero-video__video">
-                    <YoutubeVideo videoURL={topic.video_url} />
+										<YoutubeVideo videoId={topic.video_id} />
 									</div>
 								)}
 								{(topic.cta||topic.cta_alt) && <div className="col-md-6 ">
