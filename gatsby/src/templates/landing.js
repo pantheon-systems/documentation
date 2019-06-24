@@ -9,6 +9,7 @@ import WistiaVideo from '../layout/wistia-video';
 import GuideItem from '../layout/guide-item';
 import IntegrationGuideItem from '../layout/integration-guide-item';
 
+
 class LandingTemplate extends Component {
 	render() {
 		const { data: { landingsYaml } } = this.props;
