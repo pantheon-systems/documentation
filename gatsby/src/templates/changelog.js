@@ -5,6 +5,8 @@ import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
 import HeaderBody from "../components/headerBody"
+import NavButtons from "../components/navButtons"
+
 import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
@@ -82,6 +84,12 @@ class ChangelogTemplate extends React.Component {
               <TOC title="Contents" />
             </div>
           </div>
+          <NavButtons
+              prev={this.props.pageContext.previous}
+              next={this.props.pageContext.next}
+              prevTitle="Older"
+              nextTitle="Newer"
+          />
         </div>
       </Layout>
     )
