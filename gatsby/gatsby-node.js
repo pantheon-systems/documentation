@@ -132,18 +132,32 @@ exports.createPages = ({ graphql, actions }) => {
         },
         sort: { fields: [fileAbsolutePath], order: DESC }
       ) {
-      edges {
-        node {
-          id
-          frontmatter {
-            title
+        edges {
+
+          previous {
+            fields {
+              slug
+            }
           }
-          fields {
-            slug
+
+          node {
+            id
+            frontmatter {
+              title
+            }
+            fields {
+              slug
+            }
           }
+
+          next {
+            fields {
+              slug
+            }
+          }
+
         }
       }
-    }
 
       allContributorYaml {
         edges {
@@ -213,12 +227,16 @@ exports.createPages = ({ graphql, actions }) => {
     // Create changelog pages.
     const changelogs = result.data.allChangelogs.edges
     changelogs.forEach(changelog => {
+      const previous = changelog.previous ? changelog.previous.fields.slug || null : null
+      const next = changelog.next ? changelog.next.fields.slug || null : null
       const template = calculateTemplate(changelog.node, "changelog")
       createPage({
         path: changelog.node.fields.slug,
         component: path.resolve(`./src/templates/${template}.js`),
         context: {
           slug: changelog.node.fields.slug,
+          next: previous,
+          previous: next
         },
       })
     })
