@@ -45,7 +45,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 
  - Available regions:
  
- | Name                    |  Code   |
+| Name                    |  Code   |
 |:------------------------- |:------------------------------- |
 |  Australia  | au               |
 | Canada | ca |

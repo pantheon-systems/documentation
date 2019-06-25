@@ -63,3 +63,11 @@ If you are a member of a SAML-enabled organization, and the password field does 
 
 ### Cannot Log in Using a Google Account
 Google account login is disabled for users in organizations using single sign-on. SAML allows organizations to centrally manage authentication policies, so allowing social login could circumvent that policy.
+
+### Use Base-64 encoded X.509(.CER) when using Microsoft ADSF as idp 
+Make sure you generate the certificate using the right encoding.
+
+### Use token-signing certificate when using Microsoft ADSF as idp 
+There are 3 types of certificate that you can generate such as communication-service, token-decrypting and token-signing. Use Token-signing certificate otherwise you will get a thumprint error.
+
+
