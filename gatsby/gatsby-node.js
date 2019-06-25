@@ -291,7 +291,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
         internal: {
           type: `${node.internal.type}MarkdownBody`,
           mediaType: "text/markdown",
-          content: content.excerpt,
+          content: excerpt,
           contentDigest: digest(excerpt),
         },
       }
