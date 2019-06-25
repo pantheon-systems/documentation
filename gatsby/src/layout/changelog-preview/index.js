@@ -1,46 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from "gatsby"
+import MDXRenderer from "gatsby-mdx/mdx-renderer"
+import { MDXProvider } from "@mdx-js/react"
 import './styles.css';
 
 const ChangelogPreview = (props) => {
-	const { title, url } = props;
+	const { title, url, changelogs } = props;
+	const current = changelogs[0];
 	return (
 		<div className="row mb-70 changelog-preview">
 			<div className="col-md-8">
 				<div className="changelog-wrapper mb-70">
 					<h2 className="subtitle">{title}</h2>
-					<h3>Pantheon Heroes</h3>
-					<p>
-						Our new advocacy program,
-						<a href="https://community.pantheon.io/" className="external">
-							Pantheon Heroes
-						</a>
-						is in full swing. If you love Pantheon, the Open Web, and helping others,
-						<a href="https://community.pantheon.io/#apply" className="external">
-							apply for Hero Status
-						</a>
-						so we can help you help the world.
-					</p>
-					<br />
-					<a href={url} className="cta">
+					<MDXProvider>
+          	<MDXRenderer>{current.node.fields.markdownBody.childMdx.code.body}</MDXRenderer>
+					</MDXProvider>
+					<Link
+						to={url}
+						className="cta"
+					>
 						More
-					</a>
+					</Link>
 				</div>
 			</div>
 			<div className="col-md-4 mt-70">
 				<ul className="changelog-sidebar">
-					<li>
-						<a href="/docs/changelog/2019/05/">May 2019</a>
-					</li>
-					<li>
-						<a href="/docs/changelog/2019/04/">April 2019</a>
-					</li>
-					<li>
-						<a href="/docs/changelog/2019/03/">March 2019</a>
-					</li>
-					<li>
-						<a href="/docs/changelog/2019/02/">February 2019</a>
-					</li>
+					{changelogs.map((changelog)=>(
+						<li key={changelog.node.id}>
+							<Link to={`/${changelog.node.fields.slug}`}>{changelog.node.frontmatter.title}</Link>
+						</li>
+          ))}
 				</ul>
 			</div>
 		</div>
