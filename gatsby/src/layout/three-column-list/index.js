@@ -11,14 +11,14 @@ function ThreeColumnList(props) {
   const {title, links} = props;
   return (
     <React.Fragment>  
-      <div class="row">
-        <div class="col-md-12">
-          <h2 class="subtitle">{title}</h2>
+      <div className="row">
+        <div className="col-md-12">
+          <h2 className="subtitle">{title}</h2>
         </div>
       </div>
-      <div class="row mb-70">
-        <div class="col-md-12">
-          <ul class="top-docs top-docs-3col">
+      <div className="row mb-70">
+        <div className="col-md-12">
+          <ul className="top-docs top-docs-3col">
             {links.map((link)=>(
               <li key={link.url}>
                 <Link to={link.url}>{link.text}</Link>

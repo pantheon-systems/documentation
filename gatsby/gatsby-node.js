@@ -1,5 +1,6 @@
 const path = require(`path`)
 const crypto = require("crypto")
+const matter = require('gray-matter');
 
 const calculateSlug = (node, getNode) => {
   const fileName = getNode(node.parent).name
@@ -271,6 +272,37 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
           value: `${getNode(node.parent).relativeDirectory}`,
         })
       }
+    }
+
+    if (slug.includes("changelog/")) {
+      const content = matter(node.internal.content, { excerpt: true } );
+      const excerpt = content.excerpt || "---";
+
+      createNodeField({
+        name: `excerpt`,
+        node,
+        value: excerpt,
+      })
+
+      const textNode = {
+        id: `${node.id}-MarkdownBody`,
+        parent: node.id,
+        dir: path.resolve("./"),
+        internal: {
+          type: `${node.internal.type}MarkdownBody`,
+          mediaType: "text/markdown",
+          content: content.excerpt,
+          contentDigest: digest(excerpt),
+        },
+      }
+      createNode(textNode)
+
+      // Create markdownBody___NODE field
+      createNodeField({
+        node,
+        name: "markdownBody___NODE",
+        value: textNode.id,
+      })
     }
   }
 
