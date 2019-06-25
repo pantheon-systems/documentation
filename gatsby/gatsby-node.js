@@ -223,6 +223,27 @@ exports.createPages = ({ graphql, actions }) => {
       })
     })
 
+    // Create changelog pagination.
+    const postsPerPage = 6
+    const numPages = Math.ceil(changelogs.length / postsPerPage)
+    Array.from({ length: numPages }).forEach((_, i) => {
+      const currentPage = i + 1;
+      const next = currentPage === 1 ? null : (currentPage === 2 ? `/docs/changelog/` : `/docs/changelog/page/${currentPage - 1}`);
+      const previous = currentPage < numPages ? `/docs/changelog/page/${currentPage + 1}` : null;
+      createPage({
+        path: i === 0 ? `/docs/changelog/` : `/docs/changelog/page/${i + 1}`,
+        component: path.resolve("./src/templates/changelogs.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage,
+          previous,
+          next
+        },
+      })
+    })
+
     // Create contributor pages.
     const contributors = result.data.allContributorYaml.edges
     contributors.forEach(contributor => {
