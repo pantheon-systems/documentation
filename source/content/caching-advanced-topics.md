@@ -1,5 +1,5 @@
 ---
-title: '[Cachingd: Advanced Topics]'
+title: 'Caching: Advanced Topics'
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
 tags: [cacheedge]
 categories: []
