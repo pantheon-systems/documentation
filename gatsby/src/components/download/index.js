@@ -1,8 +1,8 @@
 import React from "react"
 import './style.css';
 
-const Download = ({ file, }) => {
-  const downloadPath = `../scripts/${file}`
+const Download = ({ file }) => {
+  const downloadPath = `/scripts/${file}`
   return (
     <div
       className="script-file-header"
