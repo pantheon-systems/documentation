@@ -136,7 +136,7 @@ Your registrar may appear to have DNS records for your domain and still not be t
 
 ### Can I buy my domain or manage DNS with Pantheon?
 
-No, Pantheon is neither a domain registrar nor a DNS manager. Many other platforms and hosting providers offer DNS servers and while it's convenient, it's often inflexible. Providers that offer nameservers usually build other features (like HTTPS) in a way that will only work for customers who use the provided nameservers. This approach is fine until it interferes with more advanced deployments.
+No, Pantheon is neither a domain registrar nor a DNS manager. Many platforms and hosting providers offer DNS servers and while it's convenient, it's often inflexible. Providers that offer nameservers usually build other features (like HTTPS) in a way that will only work for customers who use the provided nameservers. This approach is fine until it interferes with more advanced deployments.
 
 
 <Accordion title="Learn More" id="nameservers-drop" icon="lightbulb">

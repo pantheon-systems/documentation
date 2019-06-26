@@ -216,7 +216,7 @@ This is by design. Please read [this section](/docs/pantheon-workflow#understand
 
 ### Unable to Install Plugins on Migrated Sites
 
-On some WordPress sites migrated from other hosting platforms, when installing or updating plugins you may see an error like this:
+On some WordPress sites migrated from other platforms, when installing or updating plugins you may see an error like this:
 
 ![Failed Plugin Installation](../docs/assets/images/wp-plugin-failed.png)
 

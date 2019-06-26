@@ -7,7 +7,7 @@
     url: '/docs/guides/quickstart/'
   cta_alt: 
     title: 'Live Demo'
-    subtitle: 'See how you can build amazing digital experiences on the fastest and most reliable web hosting platform.'
+    subtitle: 'See how you can build amazing digital experiences on the fastest and most reliable WebOps platform.'
     url: '/live-demo?docs'
   topics-groups:
     - title: 'Create Sandbox Site'
