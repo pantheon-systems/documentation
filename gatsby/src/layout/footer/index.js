@@ -1,6 +1,7 @@
 import { graphql, StaticQuery } from "gatsby"
 import React from "react"
 import MarketoForm from "../../components/marketoForm"
+import './style.css';
 
 const Footer = ({ data }) => {
   const pantheonLogo = data.allFile.edges.find(

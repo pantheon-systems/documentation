@@ -1,10 +1,11 @@
 import React from "react"
 
-import Contributors from "../components/contributors"
-import Github from "../components/github"
-import Twitter from "../components/twitter"
-import Slack from "../components/slack"
-import ContributorGuest from "../components/contributorGuest"
+import Contributors from "../contributors"
+import Github from "../github"
+import Twitter from "../twitter"
+import Slack from "../slack"
+import ContributorGuest from "../contributorGuest"
+import './style.css';
 
 const HeaderBody = ({ title, subtitle, description, slug, contributors, featured }) => {
   const contributor = contributors ? contributors[0] : null;

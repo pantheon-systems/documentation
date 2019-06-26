@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { StaticQuery, graphql } from "gatsby"
+import './style.css';
 
 const Commands = ({ data }) => {
   const [search, setSearch] = useState("")

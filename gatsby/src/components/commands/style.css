@@ -1,0 +1,14 @@
+
+input.form-control {
+  opacity: 0.6;
+  transition: all 0.2s ease-in;
+  color: #000;
+}
+
+input.form-control:focus {
+  opacity: 1;
+}
+
+li.terminus-usage {
+  list-style: none !important;
+}

@@ -15,14 +15,14 @@ function CallToAction(props) {
 	return (
 		<Link to={url}>
 			<div
-				className={`call-to-action guide-cta-landing ${dark && 'call-to-action--dark'}`}
+				className={`call-to-action ${dark && 'call-to-action--dark'}`}
 				style={{ padding: '25px !important', display: 'block' }}
 			>
-				<h1 className="hero-video__guide-cta-title">
+				<h1 className="call-to-action__title">
 					{title}
 					<i className="fa fa-angle-right" style={{ color: '#EFD01B' }} />
 				</h1>
-				<p className="hero-video__guide-cta-subtitle">{subTitle}</p>
+				<p className="call-to-action__subtitle">{subTitle}</p>
 			</div>
 		</Link>
 	);

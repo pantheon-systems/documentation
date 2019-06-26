@@ -1,6 +1,6 @@
 import React from "react"
-
-import NavbarItem from "./navbarItem"
+import NavbarItem from "../navbarItem"
+import './style.css';
 
 const Navbar = ({ title, items, activePage }) => {
   return (

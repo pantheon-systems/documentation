@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
+import './style.css';
 
 const NavButtons = ({ prev, next, prevTitle = 'Previous', nextTitle = 'Continue' }) => {
-
   return (
     <div className="row terminus-pager col-md-12">
       <div className="col-xs-6 col-md-6">

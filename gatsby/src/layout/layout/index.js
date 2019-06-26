@@ -5,11 +5,11 @@ import './style.css'
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className="pantheon-docs">
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
 

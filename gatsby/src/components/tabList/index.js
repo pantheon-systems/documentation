@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
-import Tab from "./tab"
+import Tab from "../tab"
+import './style.css';
 
 const TabList = ({ children }) => {
   const [activeTab, setActiveTab] = useState(null)

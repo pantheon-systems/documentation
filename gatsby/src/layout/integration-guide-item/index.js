@@ -4,7 +4,10 @@ import { Link } from 'gatsby';
 import Image from '../image';
 import './style.css';
 
-const propTypes = {};
+const propTypes = {
+	url: PropTypes.string,
+	image: PropTypes.string,
+};
 
 function IntegrationGuideItem(props) {
 	const { url, image } = props;

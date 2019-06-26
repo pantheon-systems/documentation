@@ -1,5 +1,6 @@
 import React from "react"
-import logo from "../../../source/docs/assets/images/official-plugin.svg"
+import logo from "../../../../source/docs/assets/images/official-plugin.svg"
+import './style.css';
 
 const Card = ({ title, isOfficial, author, authorLink, link, children }) => {
   return (
