@@ -1393,24 +1393,6 @@ a.panel-drop-title {
 	text-decoration: none;
 	cursor: pointer;
 }
-.panel-inner {
-	padding: 20px;
-}
-.panel-heading .accordion-toggle:before {
-	font-family: "Glyphicons Halflings";
-	content: "\e114";
-	float: left;
-	line-height: 0.65;
-	padding-right: 10px;
-	color: #222;
-}
-.panel-heading .accordion-toggle.collapsed:before {
-	content: "\e080";
-	float: left;
-	line-height: 0.65;
-	padding-right: 10px;
-	color: #222;
-}
 #doc-head {
 	background-color: #fff;
 }
