@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'gatsby'
 import Image from '../image';
+import './style.css';
 
-
-const propTypes = {};
+const propTypes = {
+	topic: PropTypes.object,
+};
 
 function TopicItem(props) {
 	const { topic } = props;
 	return (
-		<div className="pantheon-workflows flex-panel-item-platform-integrations">
+		<div className="topic-item pantheon-workflows flex-panel-item-platform-integrations">
 			<Link className="topic-info-link" to={topic.url}>
 				<div className="flex-panel-body-home">
 					<div className={topic.secondary ? 'flex-panel-body-inner' : 'flex-panel-main-body-inner'}>

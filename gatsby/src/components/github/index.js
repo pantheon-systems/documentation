@@ -1,4 +1,5 @@
 import React from "react"
+import './style.css';
 
 const Github = ({ pageTitle, path }) => {
   const repoPath = path.replace("docs/", "_docs/").replace(".md", "")

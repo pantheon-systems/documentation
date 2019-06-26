@@ -1,4 +1,5 @@
 import React from "react"
+import './style.css';
 
 const Enablement = ({ title, link, children }) => {
   return (

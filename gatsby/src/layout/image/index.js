@@ -27,4 +27,9 @@ const Image = (props) => (
     }}
   />
 )
+
+Image.propTypes = {
+  path: PropTypes.string,
+}
+
 export default Image

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import './style.css';
 
 const TOC = ({ title }) => {
   const [initialized, setInitialized] = useState(false)

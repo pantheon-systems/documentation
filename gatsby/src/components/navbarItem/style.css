@@ -1,0 +1,29 @@
+
+.manual-guide-toc .child a {
+  padding:10px 10px 10px 70px;
+
+}
+.manual-guide-toc .child a:hover {
+  padding:10px 10px 10px 50px;
+
+}
+.manual-guide-toc .child .active-trail {
+  padding:10px 10px 10px 50px !important;
+
+}
+.manual-guide-toc a {
+  padding:10px 10px 10px 40px;
+  display: block;
+}
+.manual-guide-toc .child a {
+  padding:10px 10px 10px 70px;
+
+}
+.manual-guide-toc .child a:hover {
+  padding:10px 10px 10px 50px;
+
+}
+.manual-guide-toc .child .active-trail {
+  padding:10px 10px 10px 50px !important;
+
+}

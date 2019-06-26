@@ -20,9 +20,9 @@ import CardGroup from "../components/cardGroup"
 import SEO from "../layout/seo"
 import DefList from "../components/defList.js"
 import Definition from "../components/definition.js"
-import Enablement from "../components/enablement.js"
+import Enablement from "../components/enablement"
 import Color from "../components/color.js"
-import Download from "../components/download.js"
+import Download from "../components/download"
 
 const shortcodes = {
   Callout,

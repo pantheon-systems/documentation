@@ -1,4 +1,5 @@
 import React from "react"
+import './style.css';
 
 const Alert = ({ title, type, icon, children }) => {
   const alertClass = `alert alert-${type}`

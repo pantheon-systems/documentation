@@ -8,3 +8,10 @@
 .topic-groups h3{
   min-height: 30px;
 }
+.topic-groups > h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+}
+.topic-groups > h2 {
+  font-family: "Open Sans", sans-serif;
+}

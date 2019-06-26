@@ -1,3 +1,4 @@
+
 /*
   Tocbot Library hack (used inTable of Contents component)
   this solves the scrolling overlap with the nav bar
@@ -45,17 +46,4 @@
 
 .toc-link:hover::before {
   background-color: #ccc;
-}
-
-.media-heading h2 {
-  display: inline;
-}
-
-:not(pre) > code[class*="language-"] {
-  color: #c7254e;
-  background-color: #f9f2f4;
-}
-
-pre code, pre code .hljs, .hljs {
-  padding-left: 0em !important;
 }

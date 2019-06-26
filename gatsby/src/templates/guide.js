@@ -25,9 +25,9 @@ import Commands from "../components/commands"
 import GetFeedback from "../components/getFeedback"
 import DefList from "../components/defList.js"
 import Definition from "../components/definition.js"
-import Enablement from "../components/enablement.js"
+import Enablement from "../components/enablement"
 import Color from "../components/color.js"
-import Download from "../components/download.js"
+import Download from "../components/download"
 import BuildTools from "../components/buildTools.js"
 
 const shortcodes = {
