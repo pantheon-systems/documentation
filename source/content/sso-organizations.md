@@ -68,6 +68,11 @@ Google account login is disabled for users in organizations using single sign-on
 Make sure you generate the certificate using the right encoding.
 
 ### Use token-signing certificate when using Microsoft ADSF as idp 
-There are 3 types of certificate that you can generate such as communication-service, token-decrypting and token-signing. Use Token-signing certificate otherwise you will get a thumprint error.
+There are 3 types of certificate that you can generate:
 
+ - `communication-service`
+ - `token-decrypting`
+ - `token-signing`
+
+Use a `token-signing` certificate, otherwise you will get a thumbprint error.
 
