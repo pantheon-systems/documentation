@@ -24,10 +24,3 @@ Run the following [Terminus](/docs/terminus/) command:
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p>Replace <code>&lt;site&gt;</code> with your site name. You can see a list of all your sites by running <code>terminus site:list</code>.</p></div>
-
-## Delete a Site From the Organization Dashboard
-
-1. Select the checkbox next to the site you want to delete.
-2. Click **Operations**, and select **Delete Site**.
-3. Type **Delete**.
-4. Click **I understand the consequences, Delete these sites**.
