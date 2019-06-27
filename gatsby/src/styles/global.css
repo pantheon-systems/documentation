@@ -316,7 +316,7 @@ td {
   line-height: 1.42857143;
   vertical-align: top;
 }
-.pio-docs-sidebar {
+.affix-top.pio-docs-sidebar {
 	top: 130px !important;
 	position: sticky;
 	position: -webkit-sticky;
@@ -349,9 +349,9 @@ td {
 	background-color: #e6e6e6;
 	border-right: 5px solid #909090;
 }
-.pio-docs-sidebar .nav > .active > a,
-.pio-docs-sidebar .nav > .active:hover > a,
-.pio-docs-sidebar .nav > .active:focus > a {
+.pio-docs-sidebar .nav > .is-active-li > a,
+.pio-docs-sidebar .nav > .is-active-li:hover > a,
+.pio-docs-sidebar .nav > .is-active-li:focus > a {
 	padding-left: 18px;
 	color: #44525e;
 	background-color: #f5f5f5 !important;
@@ -360,16 +360,16 @@ td {
 	cursor: default !important;
 }
 
-/* Nav: second level (shown on .active) */
+/* Nav: second level (shown on .is-active-li) */
 .pio-docs-sidebar .nav .nav {
 	display: none; /* Hide by default, but at >768px, show it */
 }
-.pio-docs-sidebar .nav .nav > .active > a:hover,
-.pio-docs-sidebar .nav .nav > .active > a {
+.pio-docs-sidebar .nav .nav > .is-active-li > a:hover,
+.pio-docs-sidebar .nav .nav > .is-active-li > a {
 	font-weight: 600 !important;
 }
 li.tocify-item {
-	padding: 2px;
+	padding: 2px 0;
 }
 .pio-docs-sidebar .nav .nav > li > a {
 	padding-top: 5px;
