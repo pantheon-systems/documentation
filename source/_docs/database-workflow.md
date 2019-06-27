@@ -24,21 +24,10 @@ Use this tool if you need to completely wipe your database and files for a singl
 Learn more about the [Pantheon Workflow](/docs/pantheon-workflow/).
 
 ## Troubleshooting
+
 ### WordPress Content References the Wrong Domain After Cloning
-WordPress sites with custom domains configured on multiple environments may see references to the wrong platform domain after cloning the database from one environment to another.
 
-The Site Dashboard runs `wp search-replace` during the cloning workflow to update environment URLs automatically. This operation, however, only runs once on a single set of URLs. If the target environment has a custom domain (e.g `test.example.com`), it's used to replace the source environment's custom domain (e.g. `www.example.com`). This can cause the target environment to have incorrect references to platform domains (e.g. `live-example.pantheonsite.io`).
-
-To resolve this issue, use [Terminus](/docs/terminus) to run an additional `wp search-replace` command on the target environment after cloning:
-```
-terminus remote:wp <site>.<env> -- search-replace '://live-example.pantheonsite.io' '://test.example.com' --all-tables --verbose
-```
-
-The following example also converts the URL from HTTP to HTTPS, for situations where you might have HTTPS in one environment and not another:
-
-```
-terminus remote:wp <site>.<env> -- search-replace 'https://live-example.pantheonsite.io' 'http://test.example.com' --all-tables --verbose
-```
+{% include("content/search-replace-domains.html")%}
 
 ### Base table or view not found
 Database errors may occur during a database clone, import or while wiping the environment. In most cases, the error contains `semaphore' doesn't exist` and is generated because the site is accessed before a certain database operation is complete. Simply waiting for database operations to complete resolves the error.
@@ -62,6 +51,17 @@ You can fix this issue by wrapping the configuration logic within a conditional 
 if (!function_exists('install_drupal')) {
   $conf['preprocess_css'] = 1;
 }
+```
+
+### "Connection to server closed by remote host" notice when running search-replace
+
+Sites with large databases may encounter a timeout when trying to run `terminus wp search-replace` on all tables. This is due to the [idle timeout limit](/docs/timeouts) on SSH connections.
+
+You can avoid this by configuring your local machine to send an SSH keepalive packet every 60 seconds. Add this to your `$HOME/.ssh/ssh_config` file:
+
+```
+Host *.drush.in
+  ServerAliveInterval 60
 ```
 
 ## See Also

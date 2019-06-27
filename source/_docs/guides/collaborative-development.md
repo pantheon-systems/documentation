@@ -1,6 +1,6 @@
 ---
 title: Collaborative Development Using GitHub and Pantheon
-description: Use GitHib to collaborate with the team members on your Pantheon site.
+description: Use GitHub to collaborate with the team members on your Pantheon site.
 tags: [workflow, tools, moreguides]
 categories: []
 type: guide
@@ -11,7 +11,7 @@ contributors:
   - mrfelton
 date: 4/3/2015
 ---
-While Pantheon provides Git repositories for all sites on the platform, many teams need to use an external repository hosted at a provider, like GitHub or BitBucket, as the canonical version of the site's codebase. This guide will show you how to get up and running using a GitHub account as the example, although the steps should be similar for any provider.
+While Pantheon provides Git repositories for all sites on the platform, many teams need to use an external repository hosted at a provider, like GitHub or Bitbucket, as the canonical version of the site's codebase. This guide will show you how to get up and running using a GitHub account as the example, although the steps should be similar for any provider.
 
 ## Git Repositories on Pantheon
 
@@ -52,7 +52,7 @@ $ git remote -v
 origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (fetch)
 origin	ssh://codeserver.dev.UUID@codeserver.dev.UUID.drush.in:2222/~/repository.git (push)
 ```
-The output lists "origin" as the the remote with Pantheon SSH Git clone connection information as it's address.
+The output lists "origin" as the remote with Pantheon SSH Git clone connection information as it's address.
 
 ### Create a Repository on GitHub
 
@@ -105,11 +105,11 @@ This process will follow the same general procedures as moving your repo from Pa
 
 ### Create the Site
 
-At our [site creation page](https://dashboard.pantheon.io/sites/create/ "Pantheon's site creation page, used to select an upstream"), name your site. On the next page, `/sites/UUID/configure` select the upstream your site will track. If you need a custom upstream, like one managed by your organization, or one of the public upstreams running on the platform, it is important that you create it as a new site based on that upstream. This will set the upstream for your site, which cannot be changed.  
+At our [site creation page](https://dashboard.pantheon.io/sites/create/ "Pantheon's site creation page, used to select an upstream"), name your site. On the next page, `/sites/UUID/configure` select the upstream your site will track. If you need a Custom Upstream, like one managed by your organization, or one of the public upstreams running on the platform, it is important that you create it as a new site based on that upstream. This will set the upstream for your site, which cannot be changed.
 
 ### Pull in Pantheon's Upstream
 
-As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickstart, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with your commit history intact, while also preserving Pantheon's [upstream update](/docs/upstream-updates/) function.
+As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickstart, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with your commit history intact, while also preserving Pantheon's [upstream update](/docs/core-updates/) function.
 
 1. From your Site Dashboard, go to the Dev environment.
 2. Click **Settings**, then select **About Site**.
@@ -117,7 +117,23 @@ As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickst
  For example, a site running Drupal 7, `https://github.com/pantheon-systems/drops-7` will change to `git://github.com/pantheon-systems/drops-7.git master` in the Git command used to pull in the upstream.  
  ![Pantheon Dashboard about site tab](/source/docs/assets/images/dashboard/pantheon-dashboard-settings-about-site-upstream.png)
 4. At the root of your local clone of the site repository, run
-`git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master`, replacing the upstream URL with the one you copied from the Site Dashboard and modified, if you need something other than Drupal 7.
+
+  ```nohighlight
+  git pull --no-rebase -Xtheirs --allow-unrelated-histories --squash git://github.com/pantheon-systems/drops-7.git master
+  ```
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdown="1">
+    For versions of Git 2.8 and below, the command is:
+
+    <pre><code class="nohighlight">git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master</code></pre>
+
+    </p>
+    </div>
+
+
+If you need something other than Drupal 7 in the above command, replace the upstream URL with the one you copied from the Site Dashboard and modified.
 
 Once executed, that command will pull in the Pantheon core files, but not commit them; you will be able to do a final review before doing so. You will see this message when it's done:
 
@@ -130,9 +146,9 @@ Automatic merge went well; stopped before committing as requested
 
 ### Add the Pantheon Site as a Git Remote
 
-1. From your terminal within the site directory, use the Git `remote add` command with an alias to make sure you know when you are moving code to or from Pantheon.
+1. From your terminal within the site directory, use the Git `remote add` command with a remote name (such as "pantheon") to make sure you know when you are moving code to or from Pantheon.
   ```nohighlight
-  git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git pantheon-new-site-import
+  git remote add pantheon ssh://codeserver.dev.{site-id}@codeserver.dev.{site-id}.drush.in:2222/~/repository.git
   ```
 
 2. Run a Git add and commit to prepare the Pantheon core merge for pushing to the repository:

@@ -6,6 +6,29 @@ categories: []
 ---
 Pantheon has powerful workflow tools that are packed with real-time features that are great for people working in teams, and getting started is easy.
 
+The Site Team generally consists of one Site Owner and any necessary Team Members. These roles have the following permissions:
+## Site-Level: Roles and Permissions
+
+| **Permissions**                                   | **Owner** | **Team Member** |
+|:------------------------------------------------- |:--------- |:--------------- |
+| Access the site Dashboard                         | ✓         | ✓               |
+| Work on the site via SFTP or Git                  | ✓         | ✓               |
+| Connect to the site's database via MySQL          | ✓         | ✓               |
+| Clone Database/Files between all environments     | ✓         | ✓               |
+| Deploy changes to Test and Live                   | ✓         | ✓               |
+| Access [Pantheon Support](/docs/support/) | ✓         | ✓               |
+| Enable New Relic                                  | ✓         | ✓               |
+| Add/remove team members                           | ✓         |                 |
+| Transfer Ownership                                | ✓         |                 |
+| Add/remove supporting organizations               | ✓         |                 |
+| Add Solr or Redis                                 | ✓         |                 |
+| Manage a site's plan                              | ✓         |                 |
+
+Once a site has been associated with an [organization](/docs/organizations/), either through ownership or a relationship with a supporting organization, [Role-Based Permissions & Change Management](/docs/change-management) permissions are available.
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4><p>For Sites associated with an Organization, the Developers and Team-members from the Organization may manage Multidev Environments, while members of the Site Team will not be able to Create, Delete, or Merge commits from Multidevs.</p>
+</div>
+
 ## Manage Site Team Members
 You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Site Dashboard.
 
@@ -38,16 +61,10 @@ Site ownership is assigned to the person who creates the site or pays for the si
 ### Change the Site Owner
 
 #### Sandbox Sites
-Within the Team modal of the Site Dashboard, the site owner can click **Make Owner** next to the site team member that should receive ownership of the site. This link is only visible when the Sandbox site does not have a credit card associated with the site. To disassociate a credit card, go to **Settings** and click the Billing tab.
-
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p>Only the current site owner has the ability to assign a new owner; site team members will not see this option.</p>
-</div>
-
-![Make Owner](/source/docs/assets/images/dashboard/sandbox-make-owner.png)
+{% include("content/transfer-ownership-billing-steps.html")%}
 
 #### Paid Sites
-To change the owner of a paid site (e.g. Personal, Pro, Business), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within in the Settings page of the Site Dashboard. Enter the email address for the new site owner and select the applicable plan for the site. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
+To change the owner of a paid site (e.g. Basic, or Performance), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within the Settings page of the Site Dashboard. Enter the email address for the new site owner. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
 ![Invite a business owner to pay for this site](/source/docs/assets/images/dashboard/payment-form-invite.png)<br />
 Enterprise Organizations can use the same process to assume ownership of a site;  however, Agency Partners do not have the ability to own sites directly.
@@ -55,26 +72,8 @@ Enterprise Organizations can use the same process to assume ownership of a site;
 ### Pantheon Partners
 The site owner is the person who pays for the site. You'll need to update the payment method to change the owner.
 
-## Roles and Permissions
-Change Management is an [organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all [Partner](https://pantheon.io/agencies/pantheon-for-agencies), [EDU](https://pantheon.io/edu) and [Enterprise](https://pantheon.io/pantheon-enterprise) Organizations.
-
-Sites that do not fit the above description will not be able to restrict access or assign specific user roles, such as **Administrator** or **Developer**.
-
-For details on this feature, see [Role-Based Permissions & Change Management](/docs/change-management).
-
 ## Add a Supporting Organization
 
-One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner or Ally Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site.
+One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
-1. Click **Team** in the Site Dashboard.
-2. Click **Add Supporting Organization** at the bottom of the team management window.
-3. Enter the complete name of the agency. An exact match is required.
-4. Check that the agency is the one you expected.
-5. Click the **Add Agency** button to make them a supporting organization.
-
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4><p>Because Supporting Organizations have full access to a site, only the site owner can perform this action.</p>
-</div>
-
- ![Add a supporting organization button](/source/docs/assets/images/dashboard/multi_org1.png)
- ![Confirm supporting organization](/source/docs/assets/images/dashboard/multi_org2.png)
+{% include("content/add-supporting-org.html")%}

@@ -2,7 +2,8 @@
   <div class="changelog-wrapper mb-70">
     <h2 class="subtitle">Changelog</h2>
     {% for post in data.posts | slice(0,1) %}
-      {{ post.blocks.content| replace({"h2": "h3"})  |slice(0,460)| raw  }}
+      <h3>Pantheon Heroes</h3>
+      <p>Our new advocacy program, <a href="https://community.pantheon.io/" class="external">Pantheon Heroes</a> is in full swing. If you love Pantheon, the Open Web, and helping others, <a href="https://community.pantheon.io/#apply" class="external">apply for Hero Status</a> so we can help you help the world.</p>
       <br>
       <a href="/docs/changelog" class="cta">More</a>
     {% endfor %}

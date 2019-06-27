@@ -6,6 +6,11 @@ tags: [git]
 ---
 Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
+<div class="enablement">
+  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+  <p>Dev/Test/Live, parallel feature development with Multidev, hotfix workflows, and more! Learn how Pantheon's DevOps training can accelerate your workflow.</p>
+</div>
+
 ## Install Git
 
 Select your operating system and the download will automatically begin:
@@ -70,6 +75,8 @@ In order to tell Git the files are ready, you need to commit them. Every commit 
 ```bash
 git commit -am "Add a great new module to increase awesomesauce level of my Drupal site."
 ```
+This command uses a combination of options `-am`: `-a` to include *all* files changed, and `-m` to include a commit *message*:
+
 If you don't specify a message on the command line, Git will open your default text editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:<br />
 ![Git Commit](/docs/assets/images/git_commit.png)<br />
 There is a handy list of Git commands (along with a lot of other documentation) [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf).
@@ -117,7 +124,7 @@ You can safely type `yes` and press enter to add the server's SSH key fingerprin
 <div class="panel-inner" markdown="1">
 The key fingerprint is a representation of the public key, used by the remote server to identify itself. These public keys, along with private keys, form a **keypair** used by the [Diffie-Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) to encrypt communication between you and the server.
 
-On a standard server system, the server administrator would publish their host keys and fingerprints publicly, so clients could match them to the keys presented at these prompts. On Pantheon however, application servers are created and destroyed too rapidly to maintain a public key list.
+On a standard server system, the server administrator would publish their host keys and fingerprints publicly, so clients could match them to the keys presented at these prompts. On Pantheon however, application containers are created and destroyed too rapidly to maintain a public key list.
 
 You can, however, easily tell your machine to automatically trust all Pantheon `*.drush.in` servers by disabling the `StrictHostKeyChecking` option in your SSH configuration file.
 
@@ -159,21 +166,33 @@ To configure this URL in SourceTree simply remove the `git clone` and the traili
 
 Alternatively, you can simply clone the repository using the `git clone` and then use the "Add Existing Local Repository" option in SourceTree to point to the checked out directory.
 
+### Blocked port
+
+If your local network is blocking port 2222, you'll see an error like this when attempting to run `git clone`, `git push`, or `git pull`:
+
+```
+ssh: connect to host codeserver.dev.xxx.drush.in port 2222: Operation timed out
+fatal: Could not read from remote repository.
+```
+
+To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround](/docs/port-2222/).
+
 ## Additional Resources
 
 For further learning, we recommend the following resources:
 
-- [Git Documentation](https://git-scm.com/documentation)
-- [Pro Git Book](https://git-scm.com/book/en/v2)
-- [First Aid Git](https://github.com/magalhini/firstaidgit)
-- [Git Reference](http://gitref.org/)
-- [Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html)
-- [Git Immersion](http://gitimmersion.com/)
-- [Code School - Try Git](https://try.github.io/levels/1/challenges/1)
-- [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
-- [SourceTree - Git GUI Client](https://www.sourcetreeapp.com/)
-- [GitKraken - Git GUI Client](https://www.gitkraken.com/)
-- [GitHub Desktop - Git GUI Client](https://desktop.github.com/)
+- [Git Documentation](https://git-scm.com/documentation){.external}
+- [Pro Git Book](https://git-scm.com/book/en/v2){.external}
+- [First Aid Git](https://github.com/magalhini/firstaidgit){.external}
+- [Git Reference](http://gitref.org/){.external}
+- [Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html){.external}
+- [Git Immersion](http://gitimmersion.com/){.external}
+- [Code School - Try Git](https://try.github.io/levels/1/challenges/1){.external}
+- [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/){.external}
+- [SourceTree - Git GUI Client](https://www.sourcetreeapp.com/){.external}
+- [GitKraken - Git GUI Client](https://www.gitkraken.com/){.external}
+- [GitHub Desktop - Git GUI Client](https://desktop.github.com/){.external}
+- [Repository mirroring](https://docs.gitlab.com/ee/workflow/repository_mirroring.html){.external}
 
 For Pantheon-specific Git questions, see the following:
 

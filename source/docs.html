@@ -1,7 +1,9 @@
 ---
 layout: jumbo
 home: true
+description: Pantheon's Documentation, also available on GitHub.
 title: Home
+permalink: docs/
 use:
 - docs_categories
 - docs_tags
@@ -13,9 +15,9 @@ use:
   </div>
   <div class="row" style="margin-bottom:15px;">
     <div class="col-md-12">
-        <a class="topic-info-link" style="display:block!important;" href="/docs/guides/getting-started/">
+        <a class="topic-info-link" style="display:block!important;" href="/docs/guides/quickstart/">
           <div class="guide-cta-landing" style="padding:25px!important;display:block">
-            <h1 class="hero-video__guide-cta-title">Getting Started Guide <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h1>
+            <h1 class="hero-video__guide-cta-title">Quick Start Guide <i class="fa fa-angle-right" style="color:#EFD01B;"></i></h1>
             <p class="hero-video__guide-cta-subtitle">New to our platform? Check out our step-by-step guide to learn all the basics.</p>
           </div>
         </a>
@@ -159,7 +161,7 @@ use:
     <div class="col-md-12">
       <ul class="top-docs top-docs-3col">
         <li><a href="/docs/terminus/">Terminus Manual</a></li>
-        <li><a href="/docs/guides/getting-started/">Getting Started Guide</a></li>
+        <li><a href="/docs/guides/quickstart/">Quick Start Guide</a></li>
         <li><a href="/docs/platform-considerations/">Platform Considerations</a></li>
         <li><a href="/docs/guides/launch/">Launch Essentials</a></li>
         <li><a href="/docs/pantheon-workflow/">Using the Pantheon Workflow</a></li>
@@ -168,12 +170,12 @@ use:
         <li><a href="/docs/settings-php/">Configuring settings.php</a></li>
         <li><a href="/docs/git-faq/">Git FAQs</a></li>
         <li><a href="/docs/ssh-keys/">Generating and Adding SSH Keys</a></li>
-        <li><a href="/docs/redis/">Redis as a Caching Backend</a></li>
+        <li><a href="/docs/redis/">Installing Redis on Drupal or WordPress</a></li>
         <li><a href="/docs/drush/">Drupal Drush Command-Line Utility</a></li>
       </ul>
     </div>
   </div>
   <div class="row mb-70">
-    {% include "changelog_preview.twig" %}
+    {% include 'changelog_preview.twig' %}
   </div>
 </div>

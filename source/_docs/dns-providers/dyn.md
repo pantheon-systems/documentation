@@ -13,13 +13,14 @@ Be sure that you have a:
 
 - Registered domain name using Dyn to host DNS
 - [Paid Pantheon plan](/docs/guides/launch/plans/)
-- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live):
+ ![Domains / HTTPS**.](/source/docs/assets/images/dashboard/domain-added.png)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
 
-1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-home"></span> Domains & HTTPS**.
-2. Click the **DNS Recommendations** button next to your domain.
+1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
+2. Click the **Details** button next to your domain.
 
 Keep this page open and login to your <a href="https://portal.dynect.net/login/" target="blank">Dyn DNS account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
 
@@ -43,7 +44,7 @@ Keep this page open and login to your <a href="https://portal.dynect.net/login/"
 5. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
 ### CNAME Record
-The CNAME record is required if you wish to include `www` within your site's primary domain name.
+A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. Select **CNAME** from the record type dropdown menu.
 2. Enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Cname** field.

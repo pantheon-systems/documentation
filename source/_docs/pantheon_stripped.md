@@ -25,7 +25,7 @@ If you redirect a request that contains `utm_` parameters, Pantheon's edge shoul
 You can see this for yourself by testing how Pantheon's own public facing website behaves. Try requesting the homepage over http with a `utm_campaign` parameter:
 
 ```
-curl -I https://pantheon.io/?utm_campaign=documentation_example
+curl -I http://pantheon.io/?utm_campaign=documentation_example
 HTTP/1.1 301 Moved Permanently
 Cache-Control: max-age=3600
 Content-Type: text/html
@@ -51,7 +51,7 @@ Connection: keep-alive
 Note that the resulting `Location` header, which is where a browser would bounce to, still has your `utm_campaign` value in addition to being on https. That's great. We also include a special `X-Pre-Strip-Debug` header to help with debugging.
 
 However, as far as Pantheon's application environments are concerned, the value coming in was `PANTHEON_STRIPPED`.
-Query keys will still be passed to the application server, but the values will be changed to PANTHEON_STRIPPED to indicate that the URL is being altered. Looking in the `nginx-access.log` you would see something like this:
+Query keys will still be passed to the application container, but the values will be changed to PANTHEON_STRIPPED to indicate that the URL is being altered. Looking in the `nginx-access.log` you would see something like this:
 
 ```
 nginx-access.log:10.223.193.24 - - [26/Jun/2015:17:12:52 +0000]  "GET /utm_campaign=PANTHEON_STRIPPED HTTP/1.1" 301 5 "https://www.google.com/aclk?sa=l&&ctype=4&clui=3&rct=j&q=&ved=0CB4QwgUoAg&adurl=https://example.com/features%3Futm_source%3Dgoogle_adwords%26utm_medium%3Dcpc%26utm_term%3Dmam%26utm_campaign%3Drlsa_mam%26utm_content%3Drlsa_mam_broad" "Mozilla/5.0 (iPhone; CPU iPhone OS 8_3 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Version/8.0 Mobile/12F70 Safari/600.1.4" 0.002 "108.87.108.187, 184.106.100.21, 10.189.246.4"
@@ -66,25 +66,31 @@ Finally, to optimize caching performance, make sure any parameters are in the su
 
 For more information, see [Caching: Advanced Topics](/docs/caching-advanced-topics).
 
-To avoid recycling query strings and tracking parameters on URLs within a site's framework, place the following within `settings.php` (Drupal) or `wp-config.php` (WordPress):
-
-```
-// Remove query strings and tracking parameters from URLs
-$strip = array('/&?__.+?(&|$)$/', '/&?utm_.+?(&|$)$/');
-$_SERVER['REQUEST_URI'] = preg_replace( $strip, '', $_SERVER['REQUEST_URI'] );
-```
-
-#### Which query parameters are optimized?
+### Which query parameters are optimized?
 
 Any URL query parameters (GET requests) matching the following criteria will have its value replaced with `PANTHEON_STRIPPED`:
 
 - `utm_*` -- Matches standard Google Analytics parameters
 - `__*` (two underscores) -- Matches conventional content insignificant query parameters
 
-#### How do I test my Google Analytics or AdWords URLs on Pantheon?
+### How do I test my Google Analytics or Google Ads (AdWords) URLs on Pantheon?
 
 You can use [curl](https://curl.haxx.se//) or [wget](https://www.gnu.org/software/wget/) to perform a simple test to see if PANTHEON_STRIPPED is appearing in URLs generated with the Google [URL Builder](https://support.google.com/analytics/answer/1033867):
 ```shell
 # example using curl and grep
 curl -i "https://live-mysite.pantheon.io/landing_page.html?utm_source=test-source&utm_medium=test-campaign&utm_term=test-term&utm_content=test-content&utm_campaign=test" | grep utm
 ```
+
+## FAQ
+
+### What if I have a link in the wild that’s not in its final, non-redirectable form?
+
+To resolve these links before they hit the application, place the following within `settings.php` (Drupal) or `wp-config.php` (WordPress):
+
+```
+// Remove query strings and tracking parameters from URLs
+$strip = array('/[&?]__.+?(&|$)$/', '/[&?]utm_.+?(&|$)$/');
+$_SERVER['REQUEST_URI'] = preg_replace($strip, '', $_SERVER['REQUEST_URI']);
+```
+
+Adjust the regex as required to match your link's parameters.

@@ -5,37 +5,42 @@ tags: [manage]
 categories: []
 ---
 
-Pantheon Organizations bring together users, sites, Custom Upstreams, and support; and provide administrators with the tools needed to effectively manage a large number of sites.
+Pantheon Organizations bring together users, sites, Custom Upstreams, Multidev, and support to provide administrators with the tools needed to effectively manage a large number of sites.
+
 ## Create an Organization
-Current users can create their own Pantheon for Agencies and Pantheon EDU organizations by completing the appropriate form:
+Current users can create their own Agency or EDU organization by completing the appropriate form:
 
-- [Create a Pantheon for Agencies Organization](https://dashboard.pantheon.io/organizations/create)
-- [Create a Pantheon EDU Organization](https://dashboard.pantheon.io/organizations/create-edu)
+- [Create an Agency Organization](https://dashboard.pantheon.io/organizations/create){.external}
+- [Create an EDU Organization](https://dashboard.pantheon.io/organizations/create-edu){.external}
 
-All other organization service levels must be created by Pantheon.
+New users can always [register here](https://pantheon.io/register){.external}. Any other type of organization must be created by Pantheon. [Contact us](https://pantheon.io/contact-us){.external} for more information.
 
-After completing the form, you have the opportunity to invite collaborators and add existing sites that you own to the organization.
+After you create an organization, you can invite team members, add existing sites, or create and migrate new sites to Pantheon.
 
 ## Organization-Site Association
 
-Organizations can either **own** or **support** sites. Enterprise, Reseller, OEM, and EDU+ organizations own sites. Ally, Partner, Strategic Partner, and EDU organizations support sites. In the Team menu on the Site Dashboard, owning organizations are listed at the top as "Owner", while supporting organizations are listed at the bottom.
+Organizations can either **own** or **support** sites. Enterprise, Reseller, OEM, and EDU+ organizations **own** sites. When a site is owned by an organization, it will appear on the dashboard's "Sites" tab, be available to People in the organization, as well as be accessible privileged users via Terminus. Organizations will be charged for any owned sites that have been upgraded from Sandbox mode to paid plans. Organization ownership also provides the site with extra features based on the organization's service plan.
 
-When a site is associated with an organization, it provides all privileged users in the organization with access to the site. Association also provides the site with extra features based on the organization service level.
+Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations **support** sites. In the Team menu on the Site Dashboard, owning organizations or users are listed at the top as the "Site Owner", while supporting organizations are listed at the bottom under "Supporting Organizations". This method of association is commonly used to provide group access to partner teams using existing roles in the supporting organization to manage access. Sites with paid plans that are associated in this manner are not billed to the "Supporting Organization", but instead are charged to the organization or user that owns them.
 
 ## The Organization Dashboard
 Access the [Organization Dashboard](/docs/organization-dashboard) in the following ways:
 
-- From the User Dashboard, click the **Organizations** tab.
-- From the Site Dashboard, click the Organization's name next to your site's service level.
-- From any Dashboard location, hit the "s" keyboard shortcut to toggle a list of sites and organizations, and click  the Organization name.
+- From the User Dashboard, click the **Organizations** tab, then click the name of the Organization.
+- From any Dashboard location, hit the "s" keyboard shortcut to toggle a list of sites and organizations, and click the Organization name.
 
-All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, and Settings.
- ![The Organization dashboard, site tab](/source/docs/assets/images/dashboard/organization-dashboard-tour.png)
+All Organization Dashboards have five tabs: Sites, People, Upstreams, Support, and Settings. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and Resellers have a Partner Program tab.
 
 ### Sites
 
-The Sites list shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**. For more details, see
-[Managing Sites and Teams with the Pantheon Organization Dashboard](/docs/organization-dashboard/#add-sites-to-your-organization).
+ ![The Organization dashboard, site tab](/source/docs/assets/images/dashboard/organization-dashboard-sites.png)
+
+The Sites tab shows all sites your organization has access to. You can quickly tag, sort, and filter your sites. All of the people in the organization will have access to all of the sites. You can add users to specific sites by checking the box to select the site and clicking **Team** > **Add to Team**.
+
+A <strong><span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span></strong> icon in the site's status column indicates that a site is [frozen due to inactivity](/docs/platform-considerations/#inactive-site-freezing).
+
+For more details on the Sites tab, see
+[Managing Sites and Teams with the Pantheon Organization Dashboard](/docs/organization-dashboard/).
 
 ### People
 
@@ -43,26 +48,21 @@ View all of your collaborators, filter them by role, manage their roles, and add
 [Learn how to add users to the organization](/docs/organization-dashboard/#add-users-to-your-organization).
 
 ### Upstreams
-
-[Custom Upstreams](/docs/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream starting a new site, and the site will track it to receive updates to core and common code.
+[Custom Upstreams](/docs/custom-upstream) are Git forks of Pantheon's versions of Drupal and WordPress, owned and managed by organizations. Members of the organization can select your upstream when starting a new site, and the site will track it to receive updates to core and common code. [Contact us](https://pantheon.io/contact-us){.external} to learn how your Partner Agency can get Custom Upstreams.
 
 ### Support
-Review, open, or reply to support requests associated with your organization and its sites on the Support tab. Learn about [how to get support](/docs/getting-support).
-
-If you need expedited, on-call support, and are an Enterprise customer, Pantheon for EDU+ organization, or Agency Reseller, consider upgrading to [Priority Enterprise Support](https://pantheon.io/priority-enterprise-support).
+Review, open, or reply to support requests associated with your organization and its sites on the Support tab. Learn about [how to get support](/docs/support).
 
 ### Settings
-
 Upload a logo (85 x 85 px). Enterprise and EDU+ Administrators can add payment and terms of service information.
 
 ## Features
-All organizations have Multidev and Change Management. Ally Partners and Pantheon EDU customers do not qualify for Custom Upstreams, custom Vanity domains, email domains, or single sign-on (SSO).
+All Partner Agencies and EDU organizations have Change Management and Custom Upstreams. Not all account levels qualify for Multidev, custom Vanity domains, email domains, or Single Sign-On (SSO). [Contact us](https://pantheon.io/contact-us){.external} to find out how to add features to your organization.
 
-### Multidev for All Sites
-All sites associated with any organization will have [Multidev](/docs/multidev) enabled with up to 10 active environments to use. All organization members have access to these environments; team members of a site who are not members of the supporting organization will not have access to Multidev environments, unless the site service level includes it (Business and Elite sites, and those owned by an Enterprise organization).
+### Multidev
+Partner Agencies, Enterprise accounts, and EDU organizations with [Gold support](/docs/support/#support-features-and-response-times) and above have [Multidev](/docs/multidev) available with up to 10 active environments to use. All organization members with privileged roles have access to these environments. Team members of a site who are not members of the supporting organization will not have access to Multidev environments.
 
 ### Change Management
-
 User roles at the organization level determine their level of access to sites supported or owned by the organization. [Learn more about change management](/docs/change-management).
 
 ### Vanity Domains
@@ -73,6 +73,11 @@ New users who sign up with the email address domain you specify will be automati
 
 ### Single Sign-On (SSO)
 SSO allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. [Learn more about SSO with SAML](/docs/sso-organizations).
+
+### Tagging
+Sites in an organization can have one or multiple tags, to easily identify and/or group them. Tagging can be done from the Organization Sites dashboard or through [Terminus](/docs/terminus):
+
+![Sorting sites by tag](/source/docs/assets/images/dashboard/sorted-by-tag.png)
 
 
 ## Retrieving the Organization UUID

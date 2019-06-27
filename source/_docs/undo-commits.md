@@ -1,10 +1,15 @@
 ---
 title: Undo Git Commits
-description: Instructions on how to undo a Git commit for Drupal 7, Drupal 6, and Pantheon.
+description: Learn how to revert a Git commit before and after pushing to Pantheon.
 tags: [debugcode, git]
 categories: []
 ---
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/docs/upstream-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/docs/core-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
+
+<div class="alert alert-danger" role="alert">
+  <h4 class="info">Warning</h4>
+  <p markdown="1">Using `git revert` to revert an upstream update will result in the dashboard being unable to pull upstream updates. If an upstream update introduces a regression or bug, you should use `git reset --hard COMMIT_BEFORE_MERGE` so that the dashboard can accurately judge the state of your site repository and whether it is behind the upstream.</p>
+</div>
 
 ## Getting Started
 
@@ -21,7 +26,7 @@ Date: Fri Dec 6 15:37:24 2014 -0700
 
     Making a single change to a CSS file in a theme. But bootstrap has a commit?
 ```
-At this point you will have to revert your code back to the commit before core was overwritten. In this case before commit _9a11sd8f67af9679a6fsafasdf802834207489328_ when changes were made on _Date: Fri Dec 6 15:37:24 2014 -0700_.
+At this point you will have to revert your code back to the commit before core was overwritten. In this case before commit `9a11sd8f67af9679a6fsafasdf802834207489328` when changes were made on `Date: Fri Dec 6 15:37:24 2014 -0700`.
 
 Once you have that commit, you can begin to apply any changes you have made since the date core was overwritten. Updating each file with a copy from a backup is the best option.
 
@@ -84,7 +89,7 @@ git push origin master
 
 
 ## Reset Dev Environment to Live
-If the Dev environment gets tangled up with changes you wish to abandon, you can reset history to match the current state of Live using [Terminus](/docs/terminus). Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques.
+If the Dev environment gets tangled up with changes you wish to abandon, you can reset history to match the current state of Live using [Terminus](/docs/terminus). Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques. Also note, this resets the Dev environment's codebase only, it does not clone Live's database or files down to Dev. 
 
 Identify the most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
 ```

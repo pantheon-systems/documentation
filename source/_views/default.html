@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<html itemscope itemtype="https://schema.org/Article">
 <head>
     <!-- Quickie redirection to https and pantheon.io -->
     <script type="text/javascript">
@@ -35,29 +33,45 @@
     <meta name="google-site-verification" content="n49gHyRyl90KIyeI1VgmjAMLIEchW4TCX8NsY8gmTI8" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{% block title %}{{ page.title }} | {{ site.title }}{% endblock %}</title>
+    <title data-addsearch="exclude">{% block title %}{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }} | {{ site.title }}{% else %} | {{ site.title }}{% endif %}{% endblock %}</title>
     <meta name="description" content="{{ page.description }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="canonical" href="{{ site.site_url}}{{ page.url }}/" />
+    <link rel="canonical" href="{{ site.site_url}}{{ page.url }}" />
 
     <!-- Schema.org markup for Google+ -->
-    <meta itemprop="name" content="{{ page.title}}">
+    <meta itemprop="name" content="{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }} | {{ site.title }}{% else %} | {{ site.title }}{% endif %}">
 
     {% if page.image %}
+    <!-- Use specified image when defined in the page's frontmatter-->
     <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png" />
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png"/>
     <meta itemprop="image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png">
     <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/{{ page.image }}.png" />
+    {% elseif page.type == "video" %}
+    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb-video.png" />
+    <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb-video.png">
+    <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb-video.png" />
+    {% elseif page.type == "guide" %}
+    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb-guide.png" />
+    <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb-guide.png">
+    <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb-guide.png" />
+    {% elseif page.changelog %}
+    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb-changelog.png" />
+    <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb-changelog.png">
+    <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb-changelog.png" />
     {% else %}
     <meta name="twitter:card" content="summary">
-    <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb.png" />
-    <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb.png">
-    <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb.png" />
+    <meta property="og:image" content="https://pantheon.io/docs/assets/images/default-thumb-doc.png" />
+    <meta itemprop="image" content="https://pantheon.io/docs/assets/images/default-thumb-doc.png">
+    <meta name="twitter:image" content="https://pantheon.io/docs/assets/images/default-thumb-doc.png" />
     {% endif %}
 
     <!-- Twitter Card data -->
     <meta name="twitter:site" content="@getpantheon">
-    <meta name="twitter:title" content="{{ page.title}}">
+    <meta name="twitter:title" content="{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }}{% endif %}">
     {% if page.description %}
     <meta name="twitter:text:description" content="{{ page.description }}">
     <meta property="og:description" content="{{ page.description }}" />
@@ -73,14 +87,36 @@
     {% if page.contributors %}{% set contributor_list = page.contributors %}{% if contributor_list %}{% for contributorhandle in contributor_list %}{% if site.contributors[contributorhandle] %}{% set contributor = site.contributors[contributorhandle] %}<meta name="twitter:creator" content="@{{ contributor.twitter }}">
     {% endif %}{% endfor %}{% endif %}{% endif %}
 
+    {% if page.searchboost %}
+    <meta name="addsearch-boost" content="{{ page.searchboost }}" />
+    {% endif %}
+
+    <!-- Define content types for addsearch service provider -->
+    {% if page.type == "video" %}
+    <meta name="addsearch-category" content="Video" />
+    {% elseif page.type == "terminuspage" %}
+    <meta name="addsearch-category" content="Guide" />
+    {% elseif page.type == "guide" %}
+    <meta name="addsearch-category" content="Guide" />
+    {% elseif page.layout == "topic" %}
+    <meta name="addsearch-category" content="Topic Index" />
+    {% elseif page.layout == "taxon" %}
+    <meta name="addsearch-category" content="Topic Index" />
+    {% elseif page.changelog %}
+    <meta name="addsearch-category" content="Changelog" />
+    <meta name="addsearch-boost" content="30" />
+    {% else %}
+    <meta name="addsearch-category" content="Doc" />
+    {% endif %}
+
     <!-- Twitter summary card with large image must be at least 280x150px -->
     <!-- Open Graph data -->
-    <meta property="og:title" content="{{ page.title}}" />
+    <meta property="og:title" content="{{ page.title }}{% if page.subtitle %}: {{ page.subtitle }}{% endif %}" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ site.site_url}}{{ page.url }}" />
     <meta property="og:site_name" content="Pantheon Documentation" />
     <!--<meta property="fb:admins" content="Facebook numberic ID" />-->
     <!-- Latest compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/docs/assets/compiled/compiled.css?v={{ site.assets_version }}">
     <script src="//www.google-analytics.com/analytics.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

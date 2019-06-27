@@ -33,10 +33,9 @@ Machine tokens are keyed to the email address associated with your Pantheon user
 
 ## Switch Between Multiple Pantheon User Accounts
 
-Machine tokens are paired with the email address associated with your Pantheon user account, so you can easily switch between users:
+Machine tokens are paired with the email address associated with your Pantheon user account, so you can easily switch between users.
 
-1. Log out of an account by running: `terminus auth:logout`  
-2. Log in to another account by running: `terminus auth:login --email <email@example.com>`
+Log in to another account by running: `terminus auth:login --email <email@example.com>`
 
 ## Revoke a Machine Token
 
@@ -50,6 +49,11 @@ For security purposes, we recommend removing tokens from your account when they 
 
 - Bot users with machine tokens can use Terminus to authenticate to and operate on Pantheon from a continuous integration (CI) server.
 - Users in organizations with SAML Single-Sign On (SSO) can authenticate with Terminus.
+
+## Troubleshooting
+
+### Microsoft Edge
+Currently, machine tokens cannot be generated using Microsoft Edge browser. As a workaround, generate the token using Mozilla Firefox or Google Chrome, which has been tested as working on Windows 10.
 
 ## See Also
 [The Ins and Outs of Token-Based Authentication](https://scotch.io/tutorials/the-ins-and-outs-of-token-based-authentication)

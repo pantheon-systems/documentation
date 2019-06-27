@@ -1,6 +1,7 @@
 ---
 title: Go Live
 description: Launch a website on Pantheon.
+permalink: docs/go-live/
 videoid: 2wcmrvrwlw
 bullet1: Workflow
 bullet2: Plans

@@ -1,16 +1,21 @@
 ---
 layout: taxon
+permalink: docs/contributors/
 use:
     - docs_contributors
     - docs_categories
+description: Contributors to the Pantheon Docs site.
 ---
 <title>Contributors | {{ site.title }}</title>
 <h1 style="margin: 0">Contributors</h1>
 <div class="article container-fluid" style="margin-top=-30px;">
+  <div class="flex-panel-group">
+
 {% for contributorhandle,docs in data.docs_contributors %}
     {% if site.contributors[contributorhandle] %}
         {% set contributor = site.contributors[contributorhandle] %}
-        {% include 'contributor_box.twig' %}
+        {% include 'contributor_preview.twig' %}
     {% endif %}
 {% endfor %}
+</div>
 </div>

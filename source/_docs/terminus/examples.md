@@ -1,6 +1,7 @@
 ---
 title: Terminus Manual
 subtitle: Example Usage
+description: Review examples of Terminus commands most frequently used by power users.
 terminusexample: true
 terminuspage: true
 terminustoc: true
@@ -10,14 +11,71 @@ nexturl: terminus/commands/
 previousurl: terminus/install/
 permalink: docs/terminus/:basename/
 image: terminus-thumbLarge
+searchboost: 100
 ---
+## Command Structure
+The basic format of a Terminus command is:
+
+```bash
+terminus command:subcommand <site>.<env>
+```
+
+For more information on any command you can run:
+
+```bash
+terminus command:subcommand -h
+```
+
+Or for a list of all available commands:
+
+```bash
+terminus list
+```
+
+### &lt;site&gt;.&lt;env&gt;
+Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. Note that the `<>` symbols are part of the example, not to be included in your commands. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
+
+![terminus env:clear-cache your-awesome-site.live](/source/docs/assets/images/terminus-example-cc.png)
+
+<div class="panel panel-drop panel-guide" id="accordion">
+<div class="panel-heading panel-drop-heading">
+<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#identify-site"><h3 class="panel-title panel-drop-title info" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-lightbulb"></span> Learn More</h3></a>
+</div>
+<div id="identify-site" class="collapse">
+<div class="panel-inner" markdown="1">
+<dl>
+  <dt>Site Label</dt>
+    <dd>Human readable, such as "Your Awesome Site", entered during site creation and displayed in the Site Dashboard.</dd>
+  <dt>Site Name: &lt;site&gt;</dt>
+    <dd markdown="1">Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/docs/domains/#platform-domains). </dd>
+  <dt>Environment Name: &lt;env&gt;</dt>
+    <dd>Machine readable, such as "dev", "test", "live", or "bug123", which refers to the target site environment on Pantheon.</dd>
+</dl>
+
+
+You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/docs/sites/#site-uuid). For example:
+
+![terminus site:info e9ad4349-621e-4be6-9f94-f9646069d9e7 --field name](/source/docs/assets/images/terminus-examples-field-name.png)
+</div>
+</div>
+</div>
+
+### Drush and WP-CLI
+Pantheon supports running [Drush (Drupal)](https://drushcommands.com/){.external} and [WP-CLI (WordPress)](https://developer.wordpress.org/cli/commands/){.external} commands remotely against a target site environment through Terminus. This is often faster and easier than leveraging such tools via local installations.
+
+Start with the [basic command structure described above](#command-structure). The commands to invoke Drush and WP-CLI are `remote:drush` and `remote:wp`, respectively. Include `--` followed by the Drush or WP-CLI command and all arguments. For example:
+
+![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](/source/docs/assets/images/terminus-wp-cli-example.png)
+
+For more information, see [Drupal Drush Command-Line Utility](/docs/drush/) and [Using WP-CLI On The Pantheon Platform](/docs/wp-cli/).
+
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.
 
 ### Upstream Updates (Core)
 Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-systems/WordPress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7). Updates can be applied once they have been merged into the upstream and become available for a site.
 
-<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">For instructions on how to resolve merge conflicts, see [Upstream Updates](/docs/upstream-updates#apply-upstream-updates-manually-from-the-command-line-and-resolve-merge-conflicts)</p></div>
+<div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">For instructions on how to resolve merge conflicts, see [Upstream Updates](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)</p></div>
 
 <p class="instruction">List available upstream updates:</p>
 <div class="copy-snippet">
@@ -205,7 +263,7 @@ terminus dashboard:view $SITE.dev</code></pre>
 The Site Dashboard will open once the reset procedure has completed.
 
 ## Switch Upstreams
-Every site has an upstream assigned in order to deliver [one-click updates](/docs/upstream-updates/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
+Every site has an upstream assigned in order to deliver [one-click updates](/docs/core-updates/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
 * Convert existing sites from a default framework to a [Custom Upstream](/docs/custom-upstream/).
 * Convert existing sites from one Custom Upstream to another, for reasons like:
@@ -226,8 +284,10 @@ If your organization has a <a href="/docs/custom-upstream/">Custom Upstream</a>,
   <figure><pre id="upstream-set"><code class="command bash" data-lang="bash">terminus site:upstream:set my-site "My Custom Upstream"</code></pre></figure>
   </div>
 
-As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.   
+You can use any valid identifier (upstream name, upstream machine name, upstream UUID) returned in `terminus upstream:list` to set a new upstream. For example, the upstream name "My Custom Upstream" is used above.
 
-  <div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">To set an empty upstream for Composer managed sites, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/#one-time-setup).</p></div>
+As a safeguard, Terminus will prevent a framework switch such as moving from Drupal to WordPress or vice versa.
+
+  <div class="alert alert-info"><h4 class="note">Note</h4><p markdown="1">To set an empty upstream for Composer managed sites, see [Serving Sites from the Web Subdirectory](/docs/nested-docroot/).</p></div>
 
 After setting the upstream, you must bring in the new codebase by applying updates to the site. For details on how to apply updates, see the [example usage above](#applying-updates).

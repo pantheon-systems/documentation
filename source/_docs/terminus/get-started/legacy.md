@@ -1,14 +1,16 @@
 ---
 title:  Terminus Manual
 subtitle: Legacy Terminus Versions
+description: Pantheon strongly encourages Terminus users to keep their local installations updated to the current version. This document covers issues with legacy versions of Terminus.
 terminuslegacy: true
 terminuspage: true
 type: terminuspage
 layout: terminuspage
 permalink: docs/terminus/get-started/:basename/
 image: terminus-thumbLarge
+searchboost: 50
 ---
-<p class="instruction">Install <a href="https://github.com/pantheon-systems/terminus/releases/tag/0.13.6">legacy version 0.13.6</a> of Terminus using the following command:</p>
+<p class="instruction">The legacy version of Terminus is no longer supported. We strongly recommend that you use the <a href="/docs/terminus/install/">current version</a>. If your use case temporarily requires you to use this unsupported version, you may install <a href="https://github.com/pantheon-systems/terminus/releases/tag/0.13.6">legacy version 0.13.6</a> of Terminus using the following command:</p>
 <div class="copy-snippet">
   <button class="btn btn-default btn-clippy" data-clipboard-target="#terminus-installer">Copy</button>
   <figure><pre id="terminus-installer"><code class="bash command" data-lang="bash">curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install --install-version=0.13.6</code></pre></figure>
@@ -30,7 +32,7 @@ image: terminus-thumbLarge
         <div style="background:#fff;cursor:pointer;" ng-click="clearFilters()" class="input-group-addon">
         <span class="fa fa-times"></span>
         </div>
-      </div>      
+      </div>
     </div>
   </form>
   <table class="table table-responsive table-bordered table-striped">

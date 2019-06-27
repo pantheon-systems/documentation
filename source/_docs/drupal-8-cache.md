@@ -1,10 +1,16 @@
 ---
 title: Drupal 8 Performance and Varnish Caching Settings
-description: Optimize Drupal 8 and Varnish caching to maximize your Pantheon site's performance.  
+description: Optimize Drupal 8 and Varnish caching to maximize your Pantheon site's performance.
 tags: [cacheapp]
 categories: [drupal8]
 ---
 To maximize your site's performance on Pantheon and to take advantage of our Varnish caching, you'll need to configure your site's performance settings.
+
+<div class="enablement">
+  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+  <p>Learn industry best practices for Drupal caching, how to take advantage of them on the platform, and troubleshooting common issues with help from the experts at Pantheon.</p>
+</div>
+
 
 ## Drupal 8 Performance Configuration
 Visit `/admin/config/development/performance` for Drupal's performance settings.
@@ -21,11 +27,16 @@ Page cache maximum age sets the max-age value in the Cache-Control headers that 
 
 On the Live environment, make sure to enable **Aggregate and compress CSS files** and **Aggregate and compress JavaScript files**. This is critical for page render times by reducing the number of HTTP requests and the amount of data transferred. There is no longer a "compress cached pages" setting in Drupal 8.
 
+Some developers may wonder if HTTP/2 has replaced CSS and Javascript aggregation as a best practice. While HTTP/2 certainly reduces the overhead of requesting and downloading many files, our testing with real-world browsers and web connections still shows benefits for aggregation even with HTTP/2.
+
+* Aggregation allows multiple source files to share compression data. HTTP/2 does not inherently support doing this between responses. The result is that disaggregating the files and serving them over HTTP/2 makes the overall size of page load larger, often by hundreds of kilobytes. Aggregated files avoid this problem by combining similar data (CSS or Javascript) into fewer responses. [Brotli compression](https://en.wikipedia.org/wiki/Brotli){.external} should eventually minimize this issue, but it's not broadly available for web servers and CDNs as of January 2018.
+* The TCP foundations of today's HTTP/2 deployments still impose [ordering overhead](https://en.wikipedia.org/wiki/Head-of-line_blocking){.external} that undermines the intended parallelism. In real-world environments, we've seen HTTP/2 with no aggregation perform substantially worse (hundreds of milliseconds) than pages using aggregation. This overhead occurs even with HTTP/2 push, though that reduces it somewhat. [QUIC](https://en.wikipedia.org/wiki/QUIC){.external} may solve this gap, but it's even more experimental than Brotli. As of January 2018, it isn't clear if QUIC will find broad support and deployment.
+
 ### Other Caching Locations
 Other modules like `views.module`, which is now in Drupal 8's core, and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should consider implementing their cache settings to provide a good logged-in user experience.
 
 ## See Also
-- [Varnish Caching for High Performance](/docs/varnish)
-- [Cache API in Drupal 8](https://www.drupal.org/developing/api/8/cache)  
-- [Drupal 8 Cache API Documentation](https://api.drupal.org/api/drupal/core!core.api.php/group/cache/8)  
-- [Drupal 8's Dynamic Page Cache](http://wimleers.com/article/drupal-8-dynamic-page-cache)
+- [Global CDN Caching for High Performance](/docs/global-cdn-caching/)
+- [Cache API in Drupal 8](https://www.drupal.org/developing/api/8/cache){.external}
+- [Drupal 8 Cache API Documentation](https://api.drupal.org/api/drupal/core!core.api.php/group/cache/8){.external}
+- [Drupal 8's Dynamic Page Cache](http://wimleers.com/article/drupal-8-dynamic-page-cache){.external}

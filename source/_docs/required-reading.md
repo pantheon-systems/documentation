@@ -1,16 +1,16 @@
 ---
-title: Required Reading: Essential Pantheon Documentation
+title: 'Required Reading: Essential Pantheon Documentation'
 description: Recommended documentation to learn about Pantheon Website Management Platform's technologies.
 tags: [getstarted]
 categories: [getstarted]
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable web platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
-Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
+Our tech includes NGINX, PHP, Redis, [Global CDN](/docs/global-cdn-caching/), Solr and Git&mdash;common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
 
 ## Get to Know Pantheon
 
-- [Getting Started](/docs/guides/getting-started/)  
+- [Quick Start](/docs/guides/quickstart/)
 - [Using the Pantheon Workflow](/docs/pantheon-workflow/)
 - [All About Application Containers](/docs/application-containers/)
 - [Platform Considerations](/docs/platform-considerations/)
@@ -27,15 +27,14 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 - [Launch Essentials](/docs/guides/launch)
 
 ## Run
-- [Optimization for Pantheon and the Cloud](/docs/cloud-optimization)
-- [New Relic Pro](/docs/new-relic)
-- [Applying Upstream Updates](/docs/upstream-updates)
-- [Varnish Caching for High Performance with Drupal and WordPress](/docs/varnish)
-- [Redis as a Caching Backend](/docs/redis)
-- [Drupal 7 Performance and Varnish Caching Settings](/docs/drupal-cache)
-- [Content Delivery Network (CDN) for File Distribution](/docs/content-delivery-network/)
+- [Optimization for Pantheon and the Cloud](/docs/cloud-optimization/)
+- [New Relic Pro](/docs/new-relic/)
+- [Applying Upstream Updates](/docs/core-updates/)
+- [Global CDN Caching for High Performance](/docs/global-cdn-caching/)
+- [Installing Redis on Drupal or WordPress](/docs/redis/)
+- [Drupal Performance and Caching Settings](/docs/drupal-cache/)
 - [SSO and Identity Federation on Pantheon](/docs/sso/)
-- [Backup Creation](/docs/backups)
+- [Backup Creation](/docs/backups/)
 
 ## Debug
 
@@ -44,4 +43,4 @@ Our tech includes NGINX, PHP, Redis, Varnish, Solr and Git&mdash;common tools in
 
 ## Support
 
-- [Getting Support](/docs/getting-support)
+- [Getting Support](/docs/support/)

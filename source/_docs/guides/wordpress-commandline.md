@@ -10,6 +10,7 @@ contributors:
   - calevans
   - stevector
   - tessak22
+  - davidneedham
 date: 3/7/2017
 ---
 Many developers feel more at home using the command line than they do using a GUI. Edit a text file, issue a command, and bang—you've completed your task. There's just something about doing it all from the command line that makes it a little more exciting. Until recently, WordPress didn't have a great answer for developers who are most at home on the CLI.
@@ -29,7 +30,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
 1. Install Terminus within the `$HOME/terminus` directory:
 
-  ```
+  ```bash
   mkdir $HOME/terminus
   cd $HOME/terminus
   curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
@@ -37,7 +38,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
 2. [Generate a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from within **User Dashboard** > **Account** > **Machine Tokens**. Then use it to authenticate Terminus:
 
-  ```
+  ```bash
   terminus auth:login --machine-token=‹machine-token›
   ```
 
@@ -45,7 +46,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
 3. Once installed, verify your session:
 
-  ```
+  ```bash
   terminus site:list
   ```
 
@@ -56,13 +57,13 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 <div class="alert alert-info">
   <h4 class="info">Note</h4>
   <p markdown="1">
-    The next few secions of this guide use the example variables `tesa-site-wp` and `"Terminus Demo Site"` as the site name and label. Make sure to replace each instance, as well as other variables like the site URL and user/password combinations, with your desired values.
+    The next few secions of this guide use the example variables `tessa-site-wp` and `"Terminus Demo Site"` as the site name and label. Make sure to replace each instance, as well as other variables like the site URL and user/password combinations, with your desired values.
   </p>
 </div>
 
 1. Create a new WordPress site on Pantheon:
 
-  ```
+  ```bash
   terminus site:create tessa-site-wp "Terminus Demo Site" WordPress
   ```
 
@@ -70,7 +71,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
 2. Open your new Site Dashboard in a browser:
 
- ```
+ ```bash
  terminus dashboard:view tessa-site-wp
  ```
 
@@ -78,7 +79,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
 3. Get the platform domain for the Dev environment:
 
-  ```
+  ```bash
   terminus env:info tessa-site-wp.dev --field=domain
   ```
 
@@ -86,34 +87,34 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
 4. Use the [WP-CLI `core install`](https://developer.wordpress.org/cli/commands/core/install/) command to install WordPress on the Dev environment:
 
-  ```
+  ```bash
   terminus wp tessa-site-wp.dev -- core install --url=https://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
   ```
 
   As a reminder, WP-CLI is the command line utility for WordPress itself.	Terminus is simply passing through the WP-CLI commands to the site on Pantheon. To get a full list of WP-CLI commands run:
 
-  ```
+  ```bash
   terminus wp tessa-site-wp.dev -- help
   ```
 
-  The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to WP-CLI.		
+  The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to WP-CLI.
 
 4. Create the Test environment:
 
-  ```
+  ```bash
   terminus env:deploy tessa-site-wp.test --updatedb --note="Initialize the Test environment"
   ```
 
 5. Create the Live environment:
 
-    ```
+    ```bash
     terminus env:deploy tessa-site-wp.live  --updatedb --note="Initialize the Live environment"
     ```
 
 ### Export the Site Name as a Variable
 1. Instead of having to type the site name out, let's export our site name to a variable so we can copy/paste the remainder of our commands:
 
-  ```
+  ```bash
   export TERMINUS_SITE=tessa-site-wp
   ```
 
@@ -121,7 +122,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
 2. We can test this by echoing our variable:
 
-  ```
+  ```bash
   echo $TERMINUS_SITE
   ```
 
@@ -129,7 +130,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 
 3. Let's see our new variable in action. Get the connection information for the Dev environment:
 
-  ```
+  ```bash
   terminus connection:info $TERMINUS_SITE.dev
   ```
 
@@ -138,7 +139,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 
 1. Install and activate the [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin:
 
-  ```
+  ```bash
   terminus wp $TERMINUS_SITE.dev -- plugin install contact-form-7 --activate
   ```
 
@@ -149,13 +150,13 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 
 2. Review the file changes:
 
-  ```
+  ```bash
   terminus env:diffstat $TERMINUS_SITE.dev
   ```
 
 3. Commit your changes to the Dev environment:
 
-  ```
+  ```bash
   terminus env:commit $TERMINUS_SITE.dev --message="Install CF7"
   ```
 
@@ -164,25 +165,24 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 
 4. Deploy the code to Test and pull content down from Live:
 
-  ```
+  ```bash
   terminus env:deploy $TERMINUS_SITE.test --sync-content  --updatedb --cc --note="Deploy C7 plugin"
   ```
 
-   <div class="alert alert-info">
-   <h4 class="info">Note</h4>
-   <p markdown="1">The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added posts and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
-   </p>
-   </div>
+    <div class="alert alert-info" markdown="1">
+    #### Note {.info}
+    The `--sync-content` option will pull the database and files down from the Live environment. In a real-world scenario, your content editors most likely have added posts and files in the Live environment. For proper testing, you want those updates present on the Test environment with your deployed code. For more information on options for the this command, run `terminus env:deploy -h`.
+    </div>
 
 5. Activate the Contact Form 7 plugin on the Test environment by making a manual configuration change:
 
-  ```
+  ```bash
   terminus wp $TERMINUS_SITE.test -- plugin activate contact-form-7
   ```
 
 6. Once you've experimented in the Test environment and verified that your new plugin is working, and everything else is still in working order, deploy to Live:
 
-  ```
+  ```bash
   terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy after CF7 Install"
   ```
 
@@ -195,7 +195,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 
 7. Activate the Contact Form 7 plugin on the Live environment by making a manual configuration change:
 
-  ```
+  ```bash
   terminus wp $TERMINUS_SITE.live -- plugin activate contact-form-7
   ```
 
@@ -207,25 +207,25 @@ Now that you have WordPress installed, let's make it look a little better by add
 
 1. Install and activate the [Shapely](https://wordpress.org/themes/shapely/) theme:
 
-  ```
+  ```bash
   terminus wp $TERMINUS_SITE.dev -- theme install shapely --activate
   ```
 
 2. Check out the Dev environment's site URL to see the new theme in action. The `terminus env:info` command from earlier gives us the URL. Here it is again with our environment variable:
 
-   ```
+   ```bash
    terminus env:info $TERMINUS_SITE.dev --field=domain
    ```
 
 3. Commit your changes to the Dev environment:
 
-  ```
+  ```bash
   terminus env:commit $TERMINUS_SITE.dev --message="Install shapely theme"
   ```
 
 4. No WordPress site is ready for development without a [child theme](https://codex.wordpress.org/Child_Themes). Let's create one! Run [the `scaffold child-theme` WP-CLI command](https://developer.wordpress.org/cli/commands/scaffold/child-theme/) (replace `Tessa-child-theme` and `shapely`):
 
-  ```
+  ```bash
   terminus wp $TERMINUS_SITE.dev -- scaffold child-theme Tessa-child-theme --parent_theme=shapely
   ```
 
@@ -239,13 +239,13 @@ Now that you have WordPress installed, let's make it look a little better by add
 
 5. Commit your changes to the Dev environment:
 
-  ```
+  ```bash
   terminus env:commit $TERMINUS_SITE.dev --message="Create Child of Shapely Theme"
   ```
 
 6. Deploy the themes to Test and pull content down from Live:
 
-  ```
+  ```bash
   terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc --note="Deploy Themes"
   ```
 
@@ -253,13 +253,13 @@ Now that you have WordPress installed, let's make it look a little better by add
 
 7. Deploy code to Live, then apply configuration changes:
 
-  ```
+  ```bash
   terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploy Themes"
   ```
 
 ## The Power of Terminus and WP-CLI
 
-If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and Drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the sandbox site we've setup and explore on your own to see what else is possible.
+If you're a developer who lives in the command line, you now see the power of Terminus and WP-CLI. This guide has just scratched the surface of what can be done. Terminus provides the power to manage most aspects of your Pantheon sites, while tools like WP-CLI (and Drush for Drupal) give you the power to manage the inner workings of your WordPress powered site. Now you're ready to take the Sandbox site we've setup and explore on your own to see what else is possible.
 
 Here are some suggestions on where to go from here:
 

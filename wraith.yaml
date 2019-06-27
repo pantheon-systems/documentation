@@ -1,7 +1,7 @@
 # Add as many domains as necessary. Key will act as a label
 domains:
   live:  "https://pantheon.io/docs"
-  local: "http://docs.local:8000/docs"
+  local: "http://localhost:8000/docs"
 
 # (optional) JavaScript file to execute before taking screenshot of every path.
 # Can be used to reload current page with headers specified, or to dynamically
@@ -12,13 +12,14 @@ domains:
 # They should exist for all of the domains you've specified above.
 paths:
   home: /
-  article-index: /articles
-  single-article: /articles/going-live
-  subdir-index: /articles/local
   guide-index: /guides
-  single-guide: /guides/visual-diff-with-wraith
+  topic-page: /get-started
   changelog-index: /changelog
-  single-changelog: /changelog/2015-10-October
+  changelog: /changelog/2018/01
+  terminus-manual: /terminus/updates
+  doc: /metrics
+  guide: /guides/build-tools
+
 
 # amount of fuzz ImageMagick will use when comparing images. A higher fuzz makes the comparison less strict.
 fuzz: '20%'
@@ -29,14 +30,11 @@ threshold: 5
 
 # screen widths (and optional height) to resize the browser to before taking the screenshot
 screen_widths:
-  - 320
-  - 600x768
-  - 768
-  - 1024
   - 1280
+  - 1366
 
 # the engine to run Wraith with. Examples: 'phantomjs', 'casperjs', 'slimerjs'
-browser: "casperjs"
+browser: "phantomjs"
 
 # the directory that your base screenshots will be stored in
 history_dir: 'shots_base'

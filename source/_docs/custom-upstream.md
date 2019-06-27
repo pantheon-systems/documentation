@@ -4,13 +4,22 @@ description: Learn how to use Custom Upstreams to free up developer time.
 tags: [tools, workflow]
 categories: []
 ---
-Custom Upstreams are a feature of a Pantheon organization account, not the individual user account. If you are a digital agency servicing clients, or potentially a reseller of Pantheon as part of a managed solution, you can get started for free with an  organization account via [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies). Custom Upstream acccess is granted for agencies following [a training workshop](https://pantheon.io/agencies/learn-pantheon?docs).
+<div class="panel panel-drop panel-guide">
+<script src="//fast.wistia.com/embed/medias/lt88wkijia.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_lt88wkijia videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+</div>
 
-For corporate or higher education customers, Custom Upstreams is included in all [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise) or [Pantheon EDU+](https://pantheon.io/pantheon-edu-plus) accounts. You can learn my and reach out to our accounts team using the forms on the pages linked here.
+If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the [Partner Program Page](https://pantheon.io/agencies/partner-program){.external} to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 
-<div class="alert alert-info">
+<div class="enablement">
+  <h4 class="info" markdown="1">[Accelerate Your Workflow](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+  <p>Improve your agency's development efficiency with custom DevOps training from Pantheon experts.</p>
+</div>
+
+For corporate or higher education customers, Custom Upstreams is included for [Pantheon Enterprise](https://pantheon.io/pantheon-enterprise){.external} with Gold Support and higher, and all [Pantheon EDU](https://pantheon.io/edu){.external} accounts. You can learn more by reaching out to our accounts team using the forms on the pages linked here.
+
+<div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">We do not recommend Custom Upstreams for Drupal 8 sites managed by Composer at this time. For an alternative workflow, checkout [Using GitHub Pull Requests with Composer and Drupal 8](/docs/guides/github-pull-requests/).</p>
+<p markdown="1">Support for Custom Upstreams requires that the externally hosted upstream repository is connected properly to the platform. For details, see <a href="/docs/support/#custom-upstreams" data-proofer-ignore>Get Support</a>. If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/docs/composer/).</p>
 </div>
 
 ## Benefits
@@ -66,7 +75,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
       <h3>Level 2: Your Custom Upstream</h3>
       <p>The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).</p>
 
-      <p markdown="1">The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [BitBucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/). It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.</p>
+      <p markdown="1">The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/) <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="" data-content="Contact support to create a GitLab based custom upstream."><em class="fa fa-info-circle"></em></a>. It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.</p>
     </div>
   </div>
 </div>
@@ -94,7 +103,7 @@ Here are definitions for commonly used terms:
 * **Custom Upstream**: A repository restricted to members of an organization, containing a common codebase for new sites. This type of repository is a child repository to Pantheon's core upstreams ([WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), [Drupal 7](https://github.com/pantheon-systems/drops-7)) and acts as a parent for site level repositories.
 * **Public Upstream**: A repository that is open to all Pantheon users which contains a common codebase for new sites, like [Panopoly](https://github.com/populist/panopoly-drops-7).
 * **Repository**: A collection of files packaged in a single directory under version control.
-* **Remote Repository**: A central version control location, e.g. residing on GitHub or BitBucket.
+* **Remote Repository**: A central version control location, e.g. residing on GitHub or Bitbucket.
 * **Upstream Updates**: Code changes that are made once in a parent (upstream) repository, then applied "downstream" to child repositories. This is how Pantheon's one-click updates work.
 * **Site Repository**: Child repository where upstream updates are applied and site specific customizations are tracked, like your site's codebase on Pantheon.
 

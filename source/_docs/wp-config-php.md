@@ -3,7 +3,7 @@ title: Configuring wp-config.php
 description: Understand how to adjust and customize the WordPress configuration file for your Pantheon WordPress site.
 tags: [variables]
 categories: [wordpress]
-contributors: masonjames
+contributors: [masonjames]
 ---
 ## Overview
 
@@ -12,7 +12,8 @@ WordPress configuration is set in wp-config.php, located within your WordPress s
 Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes, and caching.
 
 <div class="alert alert-danger" role="alert"><h4 class="info">Warning</h4>
-<p>You should NEVER put the database connection information for a Pantheon database within your <code>wp-config.php</code>. These credentials will change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct <code>wp-config.php</code> file for Pantheon.</p></div>
+<p markdown="1">You should NEVER put the database connection information for a Pantheon database within your `wp-config.php`. These credentials will change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct `wp-config.php` file for Pantheon.</p>
+</div>
 
 ## Local Database Configuration for Development
 
@@ -20,34 +21,66 @@ If you are also developing locally and need to configure WordPress for your desk
 
 ## Pantheon's WordPress Config
 
+<div class="panel panel-drop panel-guide" id="accordion">
+<div class="panel-heading panel-drop-heading">
+<a class="accordion-toggle panel-drop-title collapsed" data-toggle="collapse" data-parent="#accordion" data-proofer-ignore data-target="#pantheon-wp-config-php">
+<h3 class="info panel-title panel-drop-title" style="cursor:pointer;"><span style="line-height:.9" class="glyphicons glyphicons-wrench"></span>View Pantheon's WordPress Configuration</h3>
+</a>
+</div>
+<div id="pantheon-wp-config-php" class="collapse" markdown="1" style="padding:10px;">
+
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal"></script>
+</div>
+</div>
+
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4><p><code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</p></div>
+
+
 
 ##Frequently Asked Questions
 
 ### How can I write logic based on the Pantheon server environment?
 
-Depending on your use case, there are two possibilities.
+Depending on your use case, there are two possibilities:
 
-For web only actions, like [redirects](/docs/domains/#redirects), check for the existence of `$_SERVER['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live).
+1. For web only actions, like [redirects](/docs/domains/#primary-domain), check if `$_ENV['PANTHEON_ENVIRONMENT']` exists. If it does, it will contain a string with the current environment (Dev, Test, or Live):
 
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/%24_SERVER-environment?footer=minimal"></script>
+ ```php
+ // Pantheon - web only.
+ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
+      // Only on dev web environment.
+      if ($_SERVER['PANTHEON_ENVIRONMENT'] == 'dev') {
+       // Custom code.
+      }
+ }
+ ```
 
-For actions that should take place on both web requests _and_ wp-cli commands (e,g, Redis cache configuration), use the constant ​`PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live.
+2. For actions that should take place on both web requests _and_ wp-cli commands (e.g. Redis cache configuration), use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live:
 
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/web-cli-environment?footer=minimal"></script>
+ ```php
+ // Pantheon - all (web and CLI) operations.
+ if (defined('PANTHEON_ENVIRONMENT')) {
+      // Only on dev environment.
+      if (PANTHEON_ENVIRONMENT == 'dev') {
+        // Custom code.
+      }
+ }
+ ```
 
-As an example, here's how you can hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php).
+### How do I enable debugging?
 
-<script src="//gist-it.appspot.com/https://github.com/pantheon-systems/pantheon-settings-examples/blob/master/wordpress/wp-debug-expanded.wp-config.php?footer=minimal"></script>
+The following example shows how to hard-code your WordPress debug configuration based on the environment. To learn more, see [Defining variables in a wp-config.php](https://codex.wordpress.org/Editing_wp-config.php){.external}:
+
+{% include("content/wp-debugging.html") %}
+
 ### How can I read the Pantheon environmental configuration, like database credentials?
 
 See [Reading the Pantheon Environment Configuration](/docs/read-environment-config/).
 
 ### How do I perform redirection?
 
-See [Domains and Redirects](/docs/domains/).
+See [Configure Redirects](/docs/redirects/).
 
 ### Where do I specify database credentials?
 
@@ -55,11 +88,18 @@ You don't have to! Pantheon automatically injects database credentials into the
 
 ### Where can I get a copy of a default wp-config.php for Pantheon?
 
-- Pantheon WordPress -  [https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php)
-- WordPress Core -   [https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
+- [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php){.external}
+- [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php){.external}
 
-### Where can I find examples of Pantheon wp-config.php?
-You can view examples at the [pantheon-settings-examples repo](https://github.com/pantheon-systems/pantheon-settings-examples/tree/master/wordpress).
+### How do I enable IonCube Decoder support?
+
+If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/docs/php-versions/) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `wp-config.php`:
+
+```php
+ini_set('ioncube.loader.encoded_paths', '/');
+```
+
+*(More information can be found in our [PHP 7.1 & IonCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
 
 ## Troubleshooting
 ### Request to a Remote API Does Not Return Expected Response

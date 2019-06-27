@@ -4,14 +4,19 @@ description: Suggestions and solutions for working locally on your Pantheon Drup
 tags: [local]
 categories: []
 ---
-While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern. We recommend using Kalabox for local development, which allows you to easily achieve a high standard of parity with Pantheon environments. For details, see [Local Development with Kalabox](/docs/kalabox).
+While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern.
+
+<div class="enablement">
+  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+  <p>Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's DevOps training can accelerate your workflow.</p>
+</div>
 
 Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/docs/multidev/) instead of local development.
 
 ## Before You Begin
 Be sure you have:
 
-- A local stack capable of running Drupal or WordPress. [Kalabox](http://www.kalabox.io/) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
+- A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando){.external} integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
     - Pantheon uses a [particular architecture to maximize performance and availability](/docs/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
     - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/docs/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
@@ -167,15 +172,47 @@ Instead, we recommend using a local configuration file (e.g. `settings.local.php
 
 ### Drupal 8 and WordPress
 
-Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L11-L20) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations. 
+Pantheon's upstreams will detect and include [`wp-config-local.php` (WordPress)](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php#L11-L20) and [`settings.local.php` (Drupal 8)](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.php#L22-L25) for local environment configurations.
 
 This file is ignored by the `.gitignore` file  in [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore#L3) and [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore#L8) so that local configurations do not get pushed to Pantheon. Simply create the file on your local computer, and manage configurations accordingly.
 
+#### Example `wp-config-local.php` File
+
+The following can be used as a starting point for the `wp-config-local.php` file which needs to be saved in the same location as your `wp-config.php` file. You will need to replace the database values with the values from your local environment, and the key/salt values with your unique phrase (generated from [WordPress.org](https://api.wordpress.org/secret-key$){.external}).
+
+```php
+<?php
+define('DB_NAME',     'database_name_here');
+define('DB_USER',     'username_here');
+define('DB_PASSWORD', 'password_here');
+define('DB_HOST',     'localhost');
+define('DB_CHARSET',  'utf8');
+define('DB_COLLATE',  '');
+
+define('AUTH_KEY',         'put your unique phrase here');
+define('SECURE_AUTH_KEY',  'put your unique phrase here');
+define('LOGGED_IN_KEY',    'put your unique phrase here');
+define('NONCE_KEY',        'put your unique phrase here');
+define('AUTH_SALT',        'put your unique phrase here');
+define('SECURE_AUTH_SALT', 'put your unique phrase here');
+define('LOGGED_IN_SALT',   'put your unique phrase here');
+define('NONCE_SALT',       'put your unique phrase here');
+
+define('WP_DEBUG',         true);
+define('WP_DEBUG_LOG',     true);
+define('WP_DEBUG_DISPLAY', true);
+
+define('WP_AUTO_UPDATE_CORE', false);
+
+define('WP_HOME',    'http://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
+```
+
 ### Drupal 7
 
-1. Drupal 7 users will need to create a local settings file, and include it  within their `settings.php` file:
+1. Drupal 7 users will need to create a local settings file (e.g.`settings.local.php`) and include it within their `settings.php` file:
 
-    ```
+    ```php
     /**
      * Include a local settings file if it exists. D7 only
      */
@@ -190,4 +227,3 @@ This file is ignored by the `.gitignore` file  in [WordPress](https://github.com
     ```
     sites/*/settings.local.php
     ```
-

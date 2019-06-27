@@ -38,7 +38,13 @@ The table below illustrates which services file is used in which Pantheon enviro
 </table>
 
 ## Create and Modify services.yml
-Before you begin, make sure that you have updated your Drupal site to version 8.2.0. From within the `sites/default` directory, create a new file named `services.yml`, `services.pantheon.production.yml`, or `services.pantheon.preproduction.yml`, depending on whether you wish to configure settings for all environments, production environments or pre-production environments. Consult the existing [`default.services.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.yml) and [`default.services.pantheon.preproduction.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) files for example parameters that you may wish to customize for your site.
+1.  Before you begin, make sure that you have updated your Drupal site to version 8.2.0 or greater.
+2.  From within the `sites/default` directory, create a new `services` file. Name it based on which environment you wish to configure settings for:
+      - **All environments:** `services.yml`
+      - **Production environment:** `services.pantheon.production.yml`
+      - **Pre-production environment:** `services.pantheon.preproduction.yml`
+
+    Consult the existing [`default.services.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.yml) and [`default.services.pantheon.preproduction.yml`](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) files for example parameters that you may wish to customize for your site.
 
 <div class="alert alert-info">
 <h4 class="info">Note</h4>

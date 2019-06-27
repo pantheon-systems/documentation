@@ -11,11 +11,11 @@ Refer to the following FAQs for more details and if you have concerns surroundin
 
 ### Does it affect my site uptime?
 
-No. We can ensure you that there will be zero downtime on your site.
+No. We can assure you that there will be zero downtime on your site.
 
 ### What features are affected?
 
-During this upgrade, services related to development may be interrupted. Thus, as a caution, you should delay the activity require the following:
+During this upgrade, services related to development may be interrupted. As a precaution, until the upgrade is complete, you should delay:
 
 - Making changes using SFTP mode
 - Pushing code with git
@@ -28,7 +28,7 @@ During this upgrade, services related to development may be interrupted. Thus, a
 
 For most of the sites, we estimate the upgrade to complete in under 30 minutes. However, for some sites with large databases, the upgrade my take longer.
 
-If you have questions around timing and duration of the upgrade, kindly contact Support.
+If you have questions around timing and duration of the upgrade, kindly [contact support](https://dashboard.pantheon.io/#support){.external}.
 
 ### What are you upgrading?
 

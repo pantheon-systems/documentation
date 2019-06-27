@@ -5,7 +5,7 @@ tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
 date: 5/14/2017
-contributors: scottmassey
+contributors: [scottmassey]
 ---
 
 Monitoring services, such as [Pingdom](https://www.pingdom.com/), allow those responsible for site performance and uptime to know when a website is having problems delivering content. Pingdom provides several different types of uptime and performance checks.
@@ -16,7 +16,7 @@ In this guide, we will create and configure the simplest check for a website, an
 
 - At least a paid Starter plan on Pingdom. It's OK if you don't have one yet, this guide goes over the signup process. For a free alternative to Pingdom, checkout [New Relic](/docs/new-relic#configure-ping-monitors-for-availability).
 
-- A Drupal or Wordpress site on Pantheon to monitor.
+- A Drupal or WordPress site on Pantheon to monitor.
 
 ## Create a Pingdom Account
 
@@ -87,6 +87,7 @@ Before finishing, each user should customize how they receive alerts. Here I add
 
 ![User configuration page](/source/docs/assets/images/integrations/user_config.png)
 
+{% include("content/monitor-alerts.html")%}
 
 ## Conclusion
 Pingdom has a few more checks and features we did not cover. Depending on your plan it provides a site status page, multi-tier alerting schedules, and API access for custom integration.

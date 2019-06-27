@@ -1,10 +1,12 @@
 ---
 title: Incident Management
 subtitle: PagerDuty Schedule
+description: Page three of our guide on Pagerduty integration with New Relic for incident management.
 pagerduty: true
 anchorid: schedule
 generator: pagination
 layout: guide
+type: guide
 pagination:
     provider: data.pagerdutypages
 use:
@@ -49,9 +51,9 @@ Next, we'll create an on-call Schedule, to configure a scaleable custom alert wo
 
 1. Login to your PagerDuty account and go to **Configuration** > **Schedules**, then click **+ Add Schedules**.
 
-  <div class="alert alert-info">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Schedules have **Layers**, which allow for different people or teams to provide additional backup. If the lowest layer agent does not respond to an alert, it will rollover to the next layer. It's a good idea to have one or more layers of fallbacks.</p></div>
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4>
+    <p markdown="1">Schedules have **Layers**, which allow for different people or teams to provide additional backup. If the lowest layer agent does not respond to an alert, it will rollover to the next layer. It's a good idea to have one or more layers of fallbacks.</p></div>
 
 2. Add the first layer for whoever you want to be the last point of contact and a second layer for team members in the on-call rotation to be the first point of contact:
 

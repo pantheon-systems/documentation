@@ -21,7 +21,7 @@ Be sure that you have:
 </div>
 
 ### Considerations
-We recommend handling mobile detection using Responsive Web Design (RWD) techniques to avoid compromising potential scalability. Creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. For details, see [Caching: Advanced Topics](/docs/caching-advanced-topics#device-detection).
+We recommend handling mobile detection using Responsive Web Design (RWD) techniques to avoid compromising potential scalability. Creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. For details, see [Caching: Advanced Topics](/docs/caching-advanced-topics/#device-detection).
 
 ## Add the Mobile Domain to Live
 1. Go to the Live environment on your Site Dashboard, and select **Domains/HTTPS**.

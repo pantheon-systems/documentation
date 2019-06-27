@@ -8,16 +8,16 @@ The Pantheon platform recognizes two distinct private directories for storing no
 
 Determining which path to use depends on whether or not the data should be tracked with Git as part of your site's codebase. For example, secret tokens or credentials for third party services should not be version controlled alongside your site's code.
 
-**Private Path for Files (Not Version Controlled)**  
-Drupal: `sites/default/files/private`   
+**Private Path for Files (Not Version Controlled)**
+Drupal: `sites/default/files/private`
 WordPress: `wp-content/uploads/private`
 
-**Private Path for Code (Version Controlled)**  
-Drupal and WordPress: `private`   
+**Private Path for Code (Version Controlled)**
+Drupal and WordPress: `private`
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>If you have not already created these directories, you will need to do that first. Creating the folders can be done via SFTP or Git in Dev, and pushed to your Test and Live environments.</p>
+<p>If you have not already created these directories, you will need to do that first. Create the folders in Dev via SFTP or Git, and push the changes to your Test and Live environments.</p>
 </div>
 
 ## Private Path for Code
@@ -40,6 +40,12 @@ else {
 ```
 This Drupal example reads the key from the private file `stripe_live.json` only when the request is made from the Live environment on Pantheon.
 
+### Plugins That Manage Private Paths
+
+WordPress does not have a core feature to configure a private path folder for file uploads. There are several plugins on WordPress.org and projects on Drupal.org that will help protect direct access to files in the files area. However, these plugins commonly require an Apache HTTP server *.htaccess* (`mod_rewrite`) rule. Our NGINX servers <a href="/docs/platform-considerations/#htaccess" data-proofer-ignore>do not support *.htaccess* rules</a>.
+
+Site developers could author their own custom solution to provide authentication, access checks, and ultimately use PHP's [readfile()](http://php.net/readfile/){.external} or [fpassthru()](http://php.net/fpassthru/){.external} functions to read files from the `wp-content/uploads/private` (WordPress) or `sites/default/files/private` (Drupal) areas, respectively, and then output them to the authenticated web user's browser.
+
 ### Additional Drupal Configuration
 
 These files will be web-accessible based on the access control rules that you set for your site and will use the following directory: `sites/default/files/private`
@@ -51,7 +57,7 @@ To configure, go to **Administration** > **Configuration** > **Media** > **File 
 
 ### Resolving Warning: file_put_contents(private:///.htaccess)
 
-If you receive the above error, make sure you that the private path for code or files exists in your repository. If you are configuring a private path for code, you'll need to start from your Dev environment and create the private directory and commit via Git or create via SFTP and commit via Pantheon Dashboard. Once the directory has been created and committed, you can deploy to Test and Live to deploy the new directory. Once the directory exists you can resubmit your changes via the file systems settings page in your Drupal Admin interface for each environment.
+If you receive the error above, make sure that the private path for code or files exists in your repository. If you are configuring a private path for code, you'll need to start from your Dev environment and create the private directory, then commit via Git, or create via SFTP and commit via Pantheon Dashboard. Once the directory has been created and committed, you can deploy to Test and Live to deploy the new directory. Once the directory exists you can resubmit your changes via the file systems settings page in your Drupal Admin interface for each environment.
 
 ### Selectively Exposing Code
 
@@ -63,23 +69,32 @@ If you have a private code library that needs to have a specific sub-directory e
     git commit simplesaml -m "adding simplesaml symlink"
     git push origin master
 
-The result will be a web-accessible URL at https://dev.yoursite.pantheonsite.io/simplesaml which will point to the code in `/private/simplesamlphp/www`.
+The result will be a web-accessible URL at `https://dev.yoursite.pantheonsite.io/simplesaml` which will point to the code in `/private/simplesamlphp/www`.
 
-### Commerce Kickstart or Ubercart Key Path Between Environments
+### Setting Commerce Kickstart or Ubercart Key Path
 
-This depends on the workflow and that you are planning to implement. If you set the encryption key path in Dev, the system variable for `uc_credit_encryption_path` needs to be set to `private/` when you move between environments. If you sync your databases, this variable will be moved between your other environments.
+Make sure to set a relative path. This ensures the key path will work on all appservers across the site's environments.
 
-If you do not sync the databases, you may get some errors as there is a system check in Drupal to verify that directory is writable before that variable is set. However, because you have already pushed that up in code, setting that variable in Test or Live will do the trick.
 
-This can be done via [Terminus](/docs/terminus/):
+1. Set the encryption key path
+You can either set the path in the Drupal admin interface, or with Terminus and Drush as below:
 
-```nohighlight
-# Set this to Test/Live
-$: terminus drush <site>.<env> -- vset uc_credit_encryption_path 'private'
-# verify the path is set on Test/Live
-$: terminus drush <site>.<env> -- vget uc_credit_encryption_path
-uc_credit_encryption_path: 'private'
-```
+   ```bash
+   terminus drush <site>.<env> -- vset uc_credit_encryption_path <my_private_path>
+   ```
+
+   `<my_private_path>` can be set to either of these non-web accessible private directories:
+
+    - `'sites/default/files/private'` (preferred)
+    - `'private'` (version controlled)
+
+2. Create the private directory you have chosen and upload the key.
+
+    * Optionally, verify that `uc_credit_encryption_path` is set correctly:
+
+     ```bash
+     terminus drush <site>.<env> -- vget uc_credit_encryption_path
+     ```
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>

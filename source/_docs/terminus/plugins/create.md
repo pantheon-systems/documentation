@@ -1,15 +1,17 @@
 ---
 title:  Terminus Manual
 subtitle: Create Plugins
+description: Learn how to create your own Terminus plugin.
 terminuspage: true
 terminuscreate: true
 terminustoc: true
 type: terminuspage
 layout: terminuspage
-nexturl: terminus/updates/
+nexturl: terminus/configuration/
 previousurl: terminus/plugins/directory/
 permalink: docs/terminus/plugins/:basename/
 image: terminus-thumbLarge
+searchboost: 100
 ---
 Add new commands to Terminus by creating a plugin. The following explains how to create our [example plugin](https://github.com/pantheon-systems/terminus-plugin-example) to demonstrate how to add new commands.
 
@@ -46,7 +48,7 @@ composer.json
 <h4 class="info">Note</h4>
 <p>The <code>name</code> attribute is only required if you plan to publish and distribute your plugin (e.g. on Packagist). </p></div>
 ### 3. Add Commands
-Each command in Terminus is defined by it’s own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
+Each command in Terminus is defined by its own class which contains a function that is run when the command is run. The class name must end with `Command` and the file that contains the class must be named similarly (e.g. `HelloCommand` class within `HelloCommand.php`).
 
 <p class="instruction">Create a <code>src</code> directory within your plugin directory:</p>
 <div class="copy-snippet">
@@ -77,7 +79,7 @@ class HelloCommand extends TerminusCommand
     }
 }</code></pre>
 
-You can name the command function anything you like, but it must be a public method. The comment above the command is also required. The first line is the help text that will be displayed when you run `terminus list`. The `@command hello` line tells Terminus that this function is a command and that it’s name is `hello`.
+You can name the command function anything you like, but it must be a public method. The comment above the command is also required. The first line is the help text that will be displayed when you run `terminus list`. The `@command hello` line tells Terminus that this function is a command and that its name is `hello`.
 
 <p class="instruction">The command should now be recognized and loaded by Terminus:</p>
 <div class="copy-snippet">
@@ -283,7 +285,7 @@ To add more tests, create more files with `.bats` extensions, and populate them 
 
 ### Automating Tests
 
-At this point, it would be a good idea to [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You'll need to keep a sandbox site online to run the tests against.
+At this point, it would be a good idea to [configure your project tests to run automatically on Circle CI](https://circleci.com/docs/1.0/getting-started/). You'll need to keep a Sandbox site online to run the tests against.
 
 1. Copy the contents below into a file named `circle.yml` in your plugin project:
 
@@ -318,7 +320,7 @@ At this point, it would be a good idea to [configure your project tests to run a
 
 2. In the Circle CI settings, set up the following environment variables:
 
-    - `TERMINUS_SITE`: The name of a sandbox Pantheon site to run tests against.
+    - `TERMINUS_SITE`: The name of a Sandbox Pantheon site to run tests against.
     - `TERMINUS_TOKEN`: A [Pantheon machine token](/docs/machine-tokens/) that has access to the test site.
 
 3. Create an ssh key pair, [add the public key to your account on Pantheon](/docs/ssh-keys/), and [add the private key to Circle CI](https://circleci.com/docs/1.0/permissions-and-access-during-deployment/) (leave the "Hostname" field empty).

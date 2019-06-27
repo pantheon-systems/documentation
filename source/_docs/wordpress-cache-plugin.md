@@ -8,7 +8,9 @@ Pantheon maintains an [optimized version of WordPress](https://github.com/panthe
 
 You can increase the default value to increase the chances that a visitor will request a cached page, which will reduce page load times.
 
-## WordPress Pantheon Cache Plugin Configuration
+If you want to automatically clear cached pages when content is updated, check out the [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache){.external}
+
+## Pantheon Page Cache Plugin Configuration
 
 1. Log in to your WordPress site as an administrator.
 2. Click **Settings**.
@@ -64,6 +66,6 @@ public function clean_term_cache( $term_ids, $taxonomy )
 ```
 
 ## See Also
-* [Testing Varnish](/docs/test-varnish/)
-* [Varnish Caching for High Performance](/docs/varnish)
-* [Redis as a Caching Backend](/docs/redis/)
+* [Testing Global CDN Caching](/docs/test-global-cdn-caching/)
+- [Global CDN Caching for High Performance](/docs/global-cdn-caching/)
+* [Installing Redis on Drupal or WordPress](/docs/redis/)

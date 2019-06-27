@@ -6,6 +6,11 @@ categories: []
 ---
 In some cases, working via Git is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
 
+<div class="enablement">
+  <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+  <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
+</div>
+
 SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the <code>apps.module</code> in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/docs/cms-admin/).
 
 <div class="alert alert-danger" role="alert">
@@ -14,7 +19,6 @@ SFTP mode allows you to develop directly on Pantheon and can be a major time-sav
   <ul>
     <li>SFTP changes to code that have not been committed will <strong> not be saved in backups and not included in deployments</strong> as they are not part of your code repository yet.</li>
     <li>Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.</li>
-    <li>The connection information will change from time to time due to server upgrades, endpoint migrations, etc. You will need to check this within the Dashboard periodically or when you find that you can’t connect.</li>
     <li>Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.</li>
     <li>You won't be able to save anything that's being excluded from version control via <code>.gitignore</code>.</li>
   </ul>
@@ -56,27 +60,15 @@ There is also a one-click option so you can connect with a GUI client. The main 
 
 Get the instructions for other [SFTP clients](/docs/sftp#sftp-clients).
 
-
-## Authenticating
-
-### SSH Keys
-To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on. For more details, see [Generate and Add SSH Keys](/docs/ssh-keys/).
-
-### Dashboard Credentials
-Alternatively, you may use your Pantheon Dashboard password when prompted.  
-
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p markdown="1">If you login via social login (Connect with Google) or Single-Sign On (SSO) and you'd like to authenticate using a password, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password) to add a password to your account.</p>
-</div>
-
-Larger agencies with multiple developers using password authentication who login frequently may see access issues across the organization. To avoid potential authentication failures, we strongly recommend using SSH keys. For details, see <a href="/docs/organization-faq#why-do-login-attempts-fail-for-all-users-across-my-organization-simultaneously?" data-proofer-ignore>Pantheon Organizations FAQs</a>.
+{% include("content/auth.html")%}
 
 ## Committing SFTP Changes
 
 Even though you are unable to use Git to push remotely with SFTP mode enabled, you still need to commit your changes to save them, or push them to Test/Live. **Commit early and commit often**. Large sets of code changes taking longer than two minutes to commit may result in failure due to timeouts. In those cases, temporarily remove some of your code changes (new modules or plugins), then try again.
 
-After you have made a change to your code, you will see a message that appears below the comment box to let you know you have some changes that are not in your repository. Clicking the notification message expands the listing of the pending changes.
+After you have made a change to your code, you will see a message on the Dashboard that appears below the comment box to let you know you have uncommitted changes that are not yet in your repository. Clicking the notification message expands the listing of the pending changes.
+
+![Uncommitted changes](/source/docs/assets/images/dashboard/pantheon-dashboard-uncommitted-changes.png)
 
 Write a helpful commit message to go with your changes. This will make maintaining your code a saner process, and make it easier for any other developers who pull your changes down to understand what you've done.
 
@@ -124,29 +116,33 @@ We recommend [adding an SSH Key](/docs/ssh-keys/), which allows more security th
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please see [Using the Pantheon Workflow
-](/docs/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
+This is by design. Please see [Using the Pantheon Workflow](/docs/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
 
 
 ### SFTP changes do not show up in the Site Dashboard.
 Uncommitted SFTP changes may not be recognized by the Dev environment when the Site Dashboard is open in multiple tabs or windows. Close all windows and tabs then access the Site Dashboard in a single tab to resolve.
 
 ### How do I find my site's Binding path?
-You should not manually set the "Remote Path" in your SFTP client's settings. Instead, leave the Remote Path blank and you will automatically be redirected to the proper directory when logging in.
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p>You should <i>not</i> manually set the "Remote Path" in your SFTP client's settings, as this path changes from time to time due to the platform architecture. It is strongly recommended that you leave the Remote Path blank, and you will automatically be redirected to the proper directory when logging in.</p>
+</div>
 
-### My SFTP client takes a long time to connect.
-Your SSH connection may be using a slow encryption protocol. Configuring your SSH client to use the `diffie-hellman-group1-sha1` protocol will result in the fastest connections. For OSX/Linux, add the following to your ssh config (~/.ssh/config):
+You can find the Remote Path after [connecting to SFTP](#sftp-connection-information) via command line, using the `pwd` command:
 
-    Host *.drush.in
-        KexAlgorithms diffie-hellman-group1-sha1
+```sftp
+sftp> pwd
+Response: Remote working directory: /srv/bindings/daa068ccf4f8414596cddf5xxxxx
+```
 
 ### I am receiving errors connecting to my server with an SFTP client.
 This is caused by using the SFTP application's default connection settings. We recommend you set the connection limit to **1** and then connect to your site.
 
-Do not specify a default remote directory within your SFTP client. When application servers are migrated, which can be done at anytime, the remote directory will change.
+Do not specify a default remote directory within your SFTP client. When application containers are migrated, which can be done at anytime, the remote directory will change.
 
-### I can't move files from one folder to another.
-This is a known limitation of using SFTP for on-server development on the platform. You can work around the limitation by transferring the files from your local machine or using rsync.
+### I can't move files or folders from one directory to another.
+This is a known limitation of using SFTP for on-server development on the platform. Our SFTP mode doesn't support the `mv` command, which most SFTP applications use when moving or renaming files. You can work around the limitation by transferring the files from your local machine or using rsync.
+
 
 ### DNS Connection Issues
 
@@ -198,4 +194,3 @@ Run the address through [IP WHOIS Lookup](https://www.whatismyip.com/ip-whois-lo
     source:         APNIC
 
 Unfortunately, no permanent solution has been found aside from changing Internet Service Providers. In some cases, you may be able troubleshoot the issue with your ISP or connect using a VPN.
-

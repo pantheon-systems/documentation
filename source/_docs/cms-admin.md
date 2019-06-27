@@ -2,13 +2,24 @@
 title: Working in the WordPress Dashboard and Drupal Admin Interface
 description: Learn how to build sites using the WordPress and Drupal admin interfaces in SFTP mode on Pantheon.
 tags: [admin]
+searchboost: 150
 categories: []
 ---
 Pantheon's Site Dashboard provides two connection modes to support various development workflows, such as pushing commits from your local with [Git](/docs/git/) or working in the WordPress or Drupal admin interface in [SFTP](/docs/sftp/) mode. Admin tools and command-line interfaces require write access to the codebase, which is only provided to development environments (Dev or [Multidev](/docs/multidev/)) in **SFTP** mode.
 
+<div class="alert alert-export" role="alert">
+<h4 class="info">Exports</h4>
+<p markdown="1">This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
+<pre>
+<code class="bash">export site=yoursitename
+export env=dev
+</code></pre>
+</p>
+</div>
+
 ## SFTP Mode
 1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud"></span> Multidev** tab of your Pantheon Site Dashboard.
-2.Next to Connection Mode, click **SFTP**:
+2. Next to Connection Mode, click **SFTP**:
 
   ![SFTP Mode](/source/docs/assets/images/dashboard/connection-mode-sftp.png)
 
@@ -17,15 +28,15 @@ Operations that require write access to the codebase must be executed while the 
 
  - Activating a new theme in the site admin,
  - Uploading a new module or plugin using an SFTP client,
- - Remote Drush commands, like `terminus remote:drush <site>.<env> -- pm-enable hsts --yes` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run Drush commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/drush/'>Drupal Drush Command-Line Utility</a>."><em class="fa fa-info-circle"></em></a>
- - Remote WP-CLI commands, like `terminus remote:wp <site>.<env> -- plugin install lh-hsts --activate` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>."><em class="fa fa-info-circle"></em></a>
+ - Remote Drush commands, like `terminus remote:drush $site.$env -- pm-enable hsts --yes` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run Drush commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/drush/'>Drupal Drush Command-Line Utility</a>."><em class="fa fa-info-circle"></em></a>
+ - Remote WP-CLI commands, like `terminus remote:wp $site.$env -- plugin install lh-hsts --activate` <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-content="Run WP-CLI commands with <a href='/docs/terminus/'>Terminus</a>. For details, see <a href='/docs/wp-cli/'>Using WP-CLI On The Pantheon Platform</a>."><em class="fa fa-info-circle"></em></a>
 
 ## WordPress Dashboard
 WordPress' admin interface has built in tools to manage plugins and themes, allowing you to install and manage popular themes and plugins from the main WordPress.org repository.
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
-<p markdown="1">Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support) and [Applying Upstream Updates](/docs/upstream-updates).</p>
+<p markdown="1">Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).</p>
 </div>
 
 ### Manage Plugins and Themes
@@ -58,7 +69,7 @@ Drupal also allows you to install modules or themes [using its administrative in
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>
-<p markdown="1">Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support) and [Applying Upstream Updates](/docs/upstream-updates).</p>
+<p markdown="1">Do not update core using the Drupal Admin interface or Drush. Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus/). For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).</p>
 </div>
 
 ### Install a New Module
@@ -146,7 +157,7 @@ In order to run WP-CLI or Drush commands on Pantheon's development environments,
 SFTP mode supports [Drush](https://github.com/drush-ops/drush/), the command-line interface for Drupal. For example, you can download multiple contrib modules and a theme to the Dev environment:
 
 ```nohighlight
-joshk@steppinrazor ~$ terminus drush <site>.<env> -- dl pathauto devel admin_menu zen search_api search_api_solr
+$ terminus drush $site.$env -- dl pathauto devel admin_menu zen search_api search_api_solr
 Running drush dl pathauto devel admin_menu zen search_api search_api_solr on community-plumbing-20-dev
 Project pathauto (7.x-1.2) downloaded to [success]
 /srv/bindings/.../code/sites/all/modules/pathauto.
@@ -167,13 +178,13 @@ Project search_api_solr (7.x-1.4) downloaded to [success]
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live:
 
 ```
-terminus env:commit <site>.<env> --message="Download pathauto devel admin_menu zen search_api search_api_solr"
+terminus env:commit $site.$env --message="Download pathauto devel admin_menu zen search_api search_api_solr"
 ```
 
 ### Install WordPress Plugins with WP-CLI
 SFTP mode supports [WP-CLI](https://make.wordpress.org/cli/handbook/), the official command line tool for interfacing with WordPress sites. For example, you can install multiple plugins on the Dev environment:
 ```nohighlight
-joshk@steppinrazor ~$ terminus remote:wp bensons-big-demo.dev -- plugin install akismet wordpress-seo jetpack google-sitemap-generator
+$ terminus remote:wp bensons-big-demo.dev -- plugin install akismet wordpress-seo jetpack google-sitemap-generator
 Running wp plugin install akismet wordpress-seo jetpack google-sitemap-generator on bensons-big-demo-dev
 dev.f8277b1a-ed45-4390-a257-8d@appserver.dev.f8277b1a-ed45-4390-a257-8dda0b50ff21.drush.in's password:
 Installing Akismet (3.0.0)
@@ -200,7 +211,7 @@ Plugin installed successfully.
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live:
 
 ```
-terminus env:commit <site>.<env> --message="Install akismet wordpress-seo jetpack google-sitemap-generator"
+terminus env:commit $site.$env --message="Install akismet wordpress-seo jetpack google-sitemap-generator"
 ```
 
 ## Commit SFTP Changes
@@ -225,9 +236,10 @@ On some WordPress sites migrated from other hosting platforms, when installing o
 This is usually caused by the following lines in `wp-config.php`, added by your former host:
 
 ```
-define('FS_METHOD', 'direct');
 define('FS_CHMOD_DIR', 755);
 define('FS_CHMOD_FILE', 644);
 ```
 
 Remove these lines to resolve.
+
+A `wp-content/upgrade` folder with read-only access can also cause this error. You can remove this folder or change the file permission to `755` to make it writable. WordPress stores temporary files to the `wp-content/upgrade` folder when updating plugins or themes.

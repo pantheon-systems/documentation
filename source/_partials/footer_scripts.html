@@ -150,17 +150,17 @@
 
     {% if page.terminuscreate %}
         <script type="text/javascript">
-              function downloadInnerHtml(filename, elId, mimeType) {
+              function downloadInnerHtml(filename_1, elId, mimeType) {
                   var elHtml = document.getElementById(elId).innerText;
                   var link = document.createElement('a');
                   mimeType = mimeType || 'application/json';
-                  link.setAttribute('download', filename);
+                  link.setAttribute('download', filename_1);
                   link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
                   link.click();
               }
-              var fileName =  'composer.json'; // You can use the .txt extension if you want
+              var filename_1 =  'composer.json'; // You can use the .txt extension if you want
               $('#downloadLink').click(function(){
-                  downloadInnerHtml(fileName, 'composer','application/json');
+                  downloadInnerHtml(filename_1, 'composer','application/json');
               });
               function downloadInnerHtml(filename, elId, mimeType) {
                   var elHtml = document.getElementById(elId).innerText;

@@ -3,7 +3,12 @@ title: Setting Up CloudFront CDN with Drupal
 description: Instructions for setting up Amazon CloudFront CDN on your Drupal site.
 tags: [siteintegrations, cacheedge]
 categories: [drupal]
+searchboost: 50
 ---
+
+Pantheon's [Global CDN](/docs/global-cdn) makes it unnecessary to add a third party CDN, such as CloudFront, for most CDN use cases. While technically possible, stacking another CDN on top of the Global CDN adds potentially unnecessary complexity. Confirm whether your needs are met by the Global CDN before considering stacking another CDN on top of it.
+
+
 CloudFront is a pull-only content distribution network. All requests for assets go through CloudFront, and if the CDN's cached version has expired or is missing, a fresh copy will be pulled from the origin (your site).
 
 ## Before You Begin
@@ -59,6 +64,5 @@ If you find that CloudFront is unable to receive content from the origin (Panthe
 
 ## See Also
 
-- [Content Delivery Network (CDN) for File Distribution](/docs/content-delivery-network/)
 - [CDN Developer's Article](http://wimleers.com/article/easy-drupal-cdn-integration-for-fun-and-profit)
 - [CDN Module](https://drupal.org/project/CDN)

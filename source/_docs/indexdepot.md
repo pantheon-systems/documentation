@@ -6,7 +6,7 @@ categories: []
 ---
 ## Overview
 
-Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.5 as a service that works well for the majority of sites on the platform. No permission or action is required from Pantheon to use Solr.
+Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service that works well for the majority of sites on the platform. No permission or action is required from Pantheon to use Solr.
 
 However, If you are looking for additional features for more advanced use cases, you may want to consider an external Solr service.
 
@@ -32,13 +32,13 @@ The [IndexDepot](https://www.indexdepot.com/en/) service offers a number of fe
 
 To create your index, you’ll need to supply some information about it:
 
-**Indexname:**  What you would like to call your index.
-**Description:**  A brief description to be displayed in human language.
-**Website:**  The URL of the website you are indexing.
-**Environment:**  The environment to which the index applies.
-**Server type:**  Apache Solr or Elasticsearch.
-**Template:** Select the appropriate template.
-**\*Force SSL:** If your site uses HTTPS, you’ll need to force SSL.
+- **Indexname:**  What you would like to call your index.
+- **Description:**  A brief description to be displayed in human language.
+- **Website:**  The URL of the website you are indexing.
+- **Environment:**  The environment to which the index applies.
+- **Server type:**  Apache Solr or Elasticsearch.
+- **Template:** Select the appropriate template.
+- **Force SSL:** If your site uses HTTPS, you’ll need to force SSL.
 
 After filling out the appropriate fields, click **Save** to create your index. You will then receive an Index URI and a Host-Configuration (the host-configuration is simply a breakdown of the URI).
 

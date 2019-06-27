@@ -12,18 +12,23 @@ Each site environment's backups are located on the Backups tab for that environm
 
 If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/docs/undo-commits) **before** attempting a site restore.
 
-If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/docs/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/docs/migrate-manual/#import-database-using-a-mysql-client) or [sftp/rsync your file uploads](/docs/rsync-and-sftp)
+If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/docs/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/docs/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/docs/rsync-and-sftp)
 
 ## Before you Begin the Restore Process
 It is important that you and your team know that this is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in when backed up.
 
-When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/docs/getting-support).
+When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/docs/support).
 
 ![Backup tool](/source/docs/assets/images/dashboard/backup-tool.png)
 
 ## Restore an Environment From Its Own Backup
 
 Restore a manual or automatic backup (Code, Database, and Files) by clicking the **Restore** button to the right of a backup. This is the recommended and easiest method.
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">For development environments (e.g., Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (e.g., Test and Live). For details, see [The Site Dashboard](/docs/sites/#code).</p>
+</div>
 
 ![Backups and Restore Button](/source/docs/assets/images/dashboard/restore-button.png)
 
@@ -33,11 +38,11 @@ From within the source environment, find the backup you want to restore and clic
 
 ![Temporary backup link](/source/docs/assets/images/dashboard/direct-download-archive.png)
 
-This provides a temporary private link directly from Amazon S3, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.
+This provides a temporary private link directly from Google Cloud Storage, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.
 
 If you want to download a backup using wget, put the provided temporary link in double quotes:
 
-    wget "https://pantheon-backups.s3.amazonaws.com..."
+    wget "https://storage.googleapis.com/gcs-pantheon-backups/..."
 
 ### Restore Database and Files
 To restore Database and Files, navigate to the target environment and click the **Workflow** tab. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup. Click **Import** for each backup part to restore.

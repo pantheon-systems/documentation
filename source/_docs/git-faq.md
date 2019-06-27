@@ -1,11 +1,16 @@
 ---
 title: Git FAQs
-description: Answers to commonly asked questions about Git, Drupal 8, Drupal 7, Drupal 6 and Pantheon.
+description: Answers to commonly asked questions about Git, Drupal, WordPress and Pantheon.
 tags: [git]
 categories: []
-contributors: mrfelton
+contributors: [mrfelton]
 ---
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+
+<div class="enablement">
+  <h4 class="info" markdown="1">[Get DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+  <p>Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.</p>
+</div>
 
 ## Resolve Conflicts
 
@@ -75,12 +80,13 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 ```
 1. From your local repository, run this Git command to get a copy of the file in conflict:
 
- ```
- git checkout <commit ID> -- <file>
- ```
-  <div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p>When looking for a commit ID, you can find the last instance where the missing file was in the repository. </p></div>
+   ```
+   git checkout <commit ID> -- <file>
+   ```
+    <div class="alert alert-info" role="alert" markdown="1">
+    #### Note {.info}
+    When looking for a commit ID, you can find the last instance where the missing file was in the repository.
+    </div>
 
 2. Run `git status` and verify that there is a new file to add to the repository:
 
@@ -103,7 +109,42 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
  git push origin master
  ```
 
-For more details, see [Applying Upstream Updates](/docs/upstream-updates).
+For more details, see [WordPress and Drupal Core Updates](/docs/core-updates).
+
+### How can I resolve conflicts from Multidevs?
+If a merge conflict is preventing you from merging a Multidev environment, follow these steps to resolve.
+
+1. Set the Dev environment to Git mode:
+
+   ![Git Connection Mode](/source/docs/assets/images/dashboard/connection-mode-git.png)
+
+1. Clone the repository to your local computer:
+
+   ![Git Clone](/source/docs/assets/images/dashboard/git-string.png)
+
+1. From the repository directory, pull the Multidev branch to master. In the example below, replace `multidev` with the Multidev environment name:
+
+   ```bash
+   git checkout master
+   git pull origin multidev
+   ```
+
+1. Git will tell you which files are in conflict. Open them, and search for the conflicting sections.
+
+   The version from the master branch will be delineated with `<<<<<<< HEAD`, and the version from the Multidev environment will end with `>>>>>>> Commit Message`, with `=======` in between.
+
+1. After you resolve the conflict, add the modified file and commit the results:
+
+   ```bash
+   git commit -am "Resolve merge conflict"
+   ```
+
+1.  Push the resolved master branch back to Pantheon:
+
+   ```bash
+   git push origin master
+   ```
+
 ## General Git Questions
 ### Does Pantheon support Git submodules?
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
@@ -114,7 +155,7 @@ $: git tag
 jenkins-ellis_update_drops_7-3
 jenkins-ellis_update_drops_7-4
 jenkins-ellis_update_drops_7-5
-pantheon.import
+pantheon.initialize
 pantheon_live_1
 pantheon_live_2
 pantheon_test_1
@@ -122,7 +163,7 @@ pantheon_test_2
 ```
 The "update\_drops" tags are from our upstream updates in the past (we don't tag them anymore, but used to).
 
-The tag `pantheon.import` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
+The tag `pantheon.initialize` is your initial start state. `pantheon_test_N` and `pantheon_live_N` are created when you use workflow actions, so you can potentially revert to that state, produce diffs, etc.
 
 Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a higher value N, can I push changes directly to test?" The answer is "yes, yes you can."
 
@@ -141,7 +182,7 @@ From your local clone, run the `git apply` command as per Drupal.org, commit you
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](https://www.drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
-For detailed instructions, see [Migrate Sites to Pantheon: Manual Method](/docs/migrate-manual).
+For detailed instructions, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual).
 
 ### Can I use Git with SFTP mode?
 
@@ -151,7 +192,7 @@ When you switch to On Server Development (SFTP), you cannot interact with your c
 
 ### What version of Git does Pantheon run?
 
-We are currently running Git 1.9.x.
+We are currently running Git 2.4.x.
 
 ### Why were pushes denied because of changes in sites/default/files?
 
@@ -262,7 +303,9 @@ Pantheon uses the following command to display commits in the Dashboard:
 git log --first-parent
 ```  
 
-According to the Git Manual, "this option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge."
+According to the Git Manual:
+
+> This option can give a better overview when viewing the evolution of a particular topic branch, because merges into a topic branch tend to be only about adjusting to updated upstream from time to time, and this option allows you to ignore the individual commits brought in to your history by such a merge.
 
 Pantheon does this so upstream updates or merges from Multidev environments show up as a cohesive whole, rather than individual commits. For granular details about your Git history, use a Git UI client like [SourceTree](https://www.sourcetreeapp.com/), or visualize the full history with:
 
@@ -272,4 +315,5 @@ git log --graph
 
 ### Can I use .gitignore on Pantheon?
 
-Pantheon provides a default .gitignore file in the base of each site's code repository and in `sites/default/files`. The .gitignore files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.
+Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. The `.gitignore` files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.
+

@@ -6,20 +6,20 @@ categories: []
 ---
 Error messages in the cloud are served when Pantheon is unable to fulfill a request. Given the low-level nature of these errors, these messages cannot be customized for a particular site. Changes are system-wide, not site specific.
 
-There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Monitor plugins or modules that integrate external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal.  
+There are some extreme circumstances where these error messages can be inadvertently triggered by your site code without an actual server error. Monitor plugins or modules that integrate external applications closely, such as [services](https://www.drupal.org/project/services) for Drupal.
 
-If you feel that you reached one of these messages in error, [contact support](/docs/getting-support) and provide the full URL and circumstances which led to the error.
+If you feel that you reached one of these messages in error, [contact support](/docs/support) and provide the full URL and circumstances which led to the error.
 
 ## Error Messages
 
 ### Pantheon 401 Unauthorized
 
-This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/docs/lock-environment). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.  
+This is the default response of an HTTP Basic Auth failure after a site administrator has [locked the site's environment](/docs/security). This is usually not a platform failure, as environment access can be set from the Dashboard Security tab.
 
 In some circumstances, a 401 can be triggered inadvertently if a site environment is locked, and a user passes the HTTP auth but the site sends a 401 HTTP status code. The workaround is to disable HTTP auth security for the environment in question.
 
 ### Pantheon 403 Forbidden
-"Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.  
+"Access denied to uploaded PHP files." This message is shown when a PHP file is attempted to be accessed in Valhalla, Pantheon's network file system.
 
 Pantheon also prevents public access via the webserver to private files, .htaccess, and directory listings.
 
@@ -36,10 +36,13 @@ This issue can happen with HTTP Basic Auth and Drupal’s AJAX, as it doesn't al
 We recommend disabling Basic Auth to see if it works, and then re-enabling it. However, if it is possible to ensure those headers are always passed for JS files, that is the best solution.
 
 ### Pantheon 502 Bad Gateway
-"There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, Nginx, the web server will report this problem.
+"There was an error connecting to the PHP backend." If the php-fpm process hangs or cannot start, Nginx (the web server) will report this problem.
 
 ### Pantheon 502 Routing failure
 "Page Could Not Be Loaded. The request could not be completed due to a networking failure. Contact support if this issue persists." This means an internal networking issue has occurred with Styx, Pantheon's routing mesh.
+
+### 503 First Byte Timeout
+"Page Could Not Be Loaded. We're very sorry, but the page could not be loaded properly. This should be fixed very soon, and we apologize for any inconvenience." This error message will be accompanied by a page title of "503 First Byte Timeout". This means that the request has exceeded the platform web request timeout of 60 seconds (see our [timeouts documentation](/docs/timeouts/) for more information). See our [documentation on debugging](/docs/debug-slow-performance/) for some helpful insights on how to handle these cases.
 
 ### 503 Header Overflow
 "Header overflow" The new Pantheon Global Edge size limit for cookies (as sent in the request `"Cookie: .."` header) is 10K. If more than that is sent, all cookies will be dropped and the request will continue to be processed as if no cookies had been sent at all. The header `"X-Cookies-Dropped: 1"` will be added to the request and response indicating that these have been truncated. You can either ignore this scenario in your PHP code or handle it (perhaps by displaying a custom error page).
@@ -49,28 +52,28 @@ This response can also occur on Drupal 8 sites using the cacheability debug serv
 ### Pantheon 503 Target in Maintenance
 "The web site you were looking for is currently undergoing maintenance." This is  **not**  a web application (WordPress or Drupal) maintenance mode; this is a manually toggled emergency message reserved for unusual circumstances when a site is known to be not available.
 
-### Pantheon 503 Target Not Responding
-"The web page you were looking for could not be delivered." No application containers are available to complete the request. These errors occur when PHP rendering resources for your site are full. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP resources will free up to service those requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line.
-
-This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/select-plan/).
-
 ### Pantheon 503 Database not responding
 "The web page you were looking for could not be delivered." The MySQL database is not responding, possibly from being suspended and not resuming.
 
 ### Error 503 Service Unavailable
-This error generally occurs when a request is going through our Rackspace Cloud load balancer, which imposes a timed limit on requests. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/docs/timeouts/).
+This error generally occurs when a request timeouts. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/docs/timeouts/).
 
-If you get a generic Service Unavailable that is not styled like the above and you're using AJAX when HTTP Basic Auth (the security username/password), then that's a misleading message; the best workaround is to disable the security option for the environment for testing.
+If you get a generic Service Unavailable and you're using AJAX when HTTP Basic Auth is enabled (the security username/password), then that's a misleading message. The best workaround is to disable the security option for the environment for testing.
+
+### Pantheon 504 Target Not Responding
+"The web page you were looking for could not be delivered." No php workers are available to handle the request. These errors occur when PHP processing resources for your site are exhausted. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP workers will free up to serve these requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line. For more information, jump to [Overloaded Workers](#overloaded-workers).
+
+This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/docs/site-plan/).
 
 ### Pantheon 504 Gateway Timeout
-"Your request has timed out while waiting for PHP to execute." There are two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other option is that there was a server problem, typically php-fpm or MySQL timing out. See [Timeouts on Pantheon](/docs/timeouts/) for more information.
+"The application did not respond in time." There are two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other option is that there was a server problem, typically php-fpm or MySQL timing out. See [Timeouts on Pantheon](/docs/timeouts/) for more information.
 
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
 
 There are many things that could cause your site to exceed the request timeout limit. The first step to fixing any problem is to identify the root cause.
 
-### Required Key Not Found
-When uploading an SSL certificate and you receive this message, it means you didn't paste in your private key. See [Loading SSH Keys](/docs/ssh-keys) for instructions.
+### Error 561 No site detected
+"No site detected. Make sure your code is pulled into this environment." This typically occurs when a site has been created, but no CMS has been installed. You will also see this instead of a 403 "Directory listing denied" error, if you have no index file.
 
 ## Retries Across Application Server Containers (High Availability)
 
@@ -106,13 +109,16 @@ If you are seeing frequent problems with external web services, it's a good idea
 ## Overloaded Workers
 If your PHP workers are overloaded, it's possible that pages will timeout before they are ever even picked up by the back-end. This can happen if you are suddenly hit with a flood of un-cachable/authenticated traffic.
 
-<script src="//gist.github.com/timani/412437aa8c1e5e6b5abe.js"></script>
+```php
+2014/05/15 08:57:21 [error] 31914#0: *13543 connect() to unix:/srv/bindings/0181b7c2caqe34534qw34533453e69cd027b13556df00/run/php-fpm.sock failed (11: Resource temporarily unavailable) while connecting to upstream, client: 127.0.0.1, server: , request: "GET /index.php?q=user HTTP/1.0", upstream: "fastcgi://unix:/srv/bindings/0181b7c2caqe34534qw34533453e69cd027b13556df00/run/php-fpm.sock:", host: "dev-example.gotpantheon.com"
+2014/05/15 08:57:21 [alert] 31914#0: *13546 128 worker_connections are not enough while connecting to upstream, client: unix:ded-fo, server: , request: "GET /index.php?q=user HTTP/1.0", upstream: "http://127.0.0.1:452/index.php?q=user", host: "dev-example.gotpantheon.com"
+```
 
 ### Fix Errors
 
-If your site is throwing a lot of warning and notices, there is a performance penalty are resources are used to log errors to disk and slow down your site by performing additional database write operations. In this case the solution is not to disable watchdog bug fix the errors.
+If your site is throwing a lot of warnings or notices, there is a performance penalty — resources are used to log errors to disk, and these can slow down your site by performing database write operations. In this case the solution is not to disable logging but to fix the errors.
 
-Even with the watchdog off these errors will still be written to the PHP error logs so they should be addressed as soon as possible.
+Even with logging disabled, these errors will still be written to the server PHP error logs, so they should be addressed as soon as possible.
 
 ### Optimize the Site
 

@@ -1,5 +1,6 @@
 ---
 title: Contributing to Pantheon Docs
+description: Learn how you can contribute to the Pantheon open-source documentation project on GitHub.
 ---
 Become one of our [contributors](/docs/contributors)! Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests!
 
@@ -19,21 +20,7 @@ Get involved by:
 
 ## Edit and Build Locally
 
-Fork and clone the [documentation](https://github.com/pantheon-systems/documentation) repository on GitHub.
-
-1. Install the following:
- * [virtualBox](https://www.virtualbox.org/wiki/Downloads)
- * [vagrant](https://www.vagrantup.com/downloads.html)
- * [vagrant-hostmanager](https://github.com/smdahlen/vagrant-hostmanager)
- * [vagrant-auto_network](https://github.com/oscar-stack/vagrant-auto_network)
-2. Run `vagrant up` from inside the project root directory (`documentation`).
-3. You will be prompted for the administration password on your host machine. Obey.
-4. Visit <http://docs.local:8000/docs> in your browser of choice.
-5. Run `vagrant provision` to update the local site. Alternatively, you can watch for CSS and file modifications so that changes are reflected automatically:
-
- ```
- vagrant ssh -- -t 'cd /vagrant; fuser -k -n tcp 8000;grunt watch & ./bin/sculpin generate --server --watch'
- ```
+If you would like to work on documentation locally and see your work, we offer a Docker containerized solution. For information on how to use this solution see our [README](https://github.com/pantheon-systems/documentation#local-setup-optional).
 
 ## Code of Conduct
 

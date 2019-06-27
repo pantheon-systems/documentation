@@ -1,0 +1,62 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3539060, 2018-03-09T12:47:34-0500
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: Adelle-Italic by TypeTogether
+ * URL: https://www.myfonts.com/fonts/type-together/adelle/italic/
+ * Copyright: Copyright (c) 2009 by TypeTogether. All rights reserved.
+ *
+ * Webfont: TabletGothic-Bold by TypeTogether
+ * URL: https://www.myfonts.com/fonts/type-together/tablet-gothic/bold/
+ * Copyright: Copyright (c) 2012 by TypeTogether. All rights reserved.
+ *
+ * Webfont: TabletGothic-Oblique by TypeTogether
+ * URL: https://www.myfonts.com/fonts/type-together/tablet-gothic/oblique/
+ * Copyright: Copyright (c) 2012 by TypeTogether. All rights reserved.
+ *
+ * Webfont: TabletGothic by TypeTogether
+ * URL: https://www.myfonts.com/fonts/type-together/tablet-gothic/regular/
+ * Copyright: Copyright (c) 2012 by TypeTogether. All rights reserved.
+ *
+ * Webfont: TabletGothic-SemiBold by TypeTogether
+ * URL: https://www.myfonts.com/fonts/type-together/tablet-gothic/semi-bold/
+ * Copyright: Copyright (c) 2012 by TypeTogether. All rights reserved.
+ *
+ * Webfont: TabletGothicCondensed-Bold by TypeTogether
+ * URL: https://www.myfonts.com/fonts/type-together/tablet-gothic/condensed-bold/
+ * Copyright: Copyright (c) 2012 by TypeTogether. All rights reserved.
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3539060
+ * Licensed pageviews: 250,000
+ *
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("/count/360074");
+
+
+@font-face {font-family: 'Adelle-Italic';src: url('../MyFontsWebfontsKit/webfonts/360074_0_0.eot');src: url('../MyFontsWebfontsKit/webfonts/360074_0_0.eot?#iefix') format('embedded-opentype'),url('../MyFontsWebfontsKit/webfonts/360074_0_0.woff2') format('woff2'),url('../MyFontsWebfontsKit/webfonts/360074_0_0.woff') format('woff'),url('../MyFontsWebfontsKit/webfonts/360074_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TabletGothic-Bold';src: url('../MyFontsWebfontsKit/webfonts/360074_1_0.eot');src: url('../MyFontsWebfontsKit/webfonts/360074_1_0.eot?#iefix') format('embedded-opentype'),url('../MyFontsWebfontsKit/webfonts/360074_1_0.woff2') format('woff2'),url('../MyFontsWebfontsKit/webfonts/360074_1_0.woff') format('woff'),url('../MyFontsWebfontsKit/webfonts/360074_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TabletGothic-Oblique';src: url('../MyFontsWebfontsKit/webfonts/360074_2_0.eot');src: url('../MyFontsWebfontsKit/webfonts/360074_2_0.eot?#iefix') format('embedded-opentype'),url('../MyFontsWebfontsKit/webfonts/360074_2_0.woff2') format('woff2'),url('../MyFontsWebfontsKit/webfonts/360074_2_0.woff') format('woff'),url('../MyFontsWebfontsKit/webfonts/360074_2_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TabletGothic';src: url('../MyFontsWebfontsKit/webfonts/360074_3_0.eot');src: url('../MyFontsWebfontsKit/webfonts/360074_3_0.eot?#iefix') format('embedded-opentype'),url('../MyFontsWebfontsKit/webfonts/360074_3_0.woff2') format('woff2'),url('../MyFontsWebfontsKit/webfonts/360074_3_0.woff') format('woff'),url('../MyFontsWebfontsKit/webfonts/360074_3_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TabletGothic-SemiBold';src: url('../MyFontsWebfontsKit/webfonts/360074_4_0.eot');src: url('../MyFontsWebfontsKit/webfonts/360074_4_0.eot?#iefix') format('embedded-opentype'),url('../MyFontsWebfontsKit/webfonts/360074_4_0.woff2') format('woff2'),url('../MyFontsWebfontsKit/webfonts/360074_4_0.woff') format('woff'),url('../MyFontsWebfontsKit/webfonts/360074_4_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TabletGothicCondensed-Bold';src: url('../MyFontsWebfontsKit/webfonts/360074_5_0.eot');src: url('../MyFontsWebfontsKit/webfonts/360074_5_0.eot?#iefix') format('embedded-opentype'),url('../MyFontsWebfontsKit/webfonts/360074_5_0.woff2') format('woff2'),url('../MyFontsWebfontsKit/webfonts/360074_5_0.woff') format('woff'),url('../MyFontsWebfontsKit/webfonts/360074_5_0.ttf') format('truetype');}

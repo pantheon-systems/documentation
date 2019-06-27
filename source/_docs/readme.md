@@ -49,7 +49,7 @@ Describe the goal in greater detail.
 ```
 ## Guide Articles
 
-Know how to solve problems that aren't the same every time? Write us a guide and make up to $500. Guides are, in Instructional Design parlance, "Systematic Approaches to Problem Solving" (SAP's). The solutions that SAP's guide us toward vary in their complexity, breadth, and depth. They can tell how agencies should approach developing  entire websites of varying types from start to finish with all details; they can explain how individual front-end developers should approach solving a specific non-recurrent type of problem; they can  They are made of phases, which match sub-goals with rules-of-thumb and procedures for accomplishing them. You can start with the template below:
+Know how to solve problems that aren't the same every time? Write us a guide and make up to $500. Guides are, in Instructional Design parlance, "Systematic Approaches to Problem Solving" (SAP's). The solutions that SAP's guide us toward vary in their complexity, breadth, and depth. They can tell how agencies should approach developing  entire websites of varying types from start to finish with all details; they can explain how individual frontend developers should approach solving a specific non-recurrent type of problem; they can  They are made of phases, which match sub-goals with rules-of-thumb and procedures for accomplishing them. You can start with the template below:
 ```markdown
 ---
 title:
@@ -60,7 +60,7 @@ categories:
 ---
 (do not add an h1 or h2 repeating the title of the article)
 
-Explain the goal. What variables cause the problem to be solved differently in one case compared to the next case?  
+Explain the goal. What variables cause the problem to be solved differently in one case compared to the next case?
 
 ## Phase 1 Goal
 

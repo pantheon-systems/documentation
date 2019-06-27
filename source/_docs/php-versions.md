@@ -9,28 +9,49 @@ Upgrading your site's PHP version will improve the security, performance, and su
 ## Before You Begin
 Older software is more likely to contain code that is incompatible with recent PHP versions. Before you change your PHP version:
 
-- Update core to the latest release. For details, see [Apply Upstream Updates](/docs/upstream-updates/).
+- Update core to the latest release. For details, see [WordPress and Drupal Core Updates](/docs/core-updates/).
 - Update themes, plugins, and modules. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/docs/cms-admin/).
 
 ## Verify Current PHP Versions
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
-### Available PHP Versions
-Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. See [Deploying Configuration Changes to Multidev](/docs/pantheon-yml/#deploying-configuration-changes-to-multidev) for more information.
+</div>
 
-<div class="alert alert-info" role="alert">
+### Available PHP Versions
+The recommended PHP versions available on Pantheon are:
+
+- [7.3](https://v73-php-info.pantheonsite.io/){.external}
+- [7.2](https://v72-php-info.pantheonsite.io/){.external}
+- [7.1](https://v71-php-info.pantheonsite.io/){.external}
+
+Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions.
+
+### EOL PHP Versions
+Pantheon also makes PHP [7.0](https://v70-php-info.pantheonsite.io/){.external}, [5.6](https://v56-php-info.pantheonsite.io/){.external}, [5.5](https://v55-php-info.pantheonsite.io/){.external}, and [5.3](https://v53-php-info.pantheonsite.io/){.external} available on the platform, although these are end-of-life (**EOL**), and should not be used unless absolutely necessary.
+
+<div markdown="1" class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Drupal 6 sites are only compatible with PHP 5.4 and below.
+<p markdown="1">Before changing your PHP version, confirm that your CMS is compatible:</p>
+
+* [WordPress Requirements](https://wordpress.org/about/requirements/){.external}
+* [Drupal 8 PHP versions supported](https://www.drupal.org/docs/8/system-requirements/php-requirements#php_required){.external}
+* [Drupal 7 PHP versions supported](https://www.drupal.org/docs/7/system-requirements/drupal-7-php-requirements#php_required){.external}
+* As of Drupal 6.45, Drupal 6 is [compatible with PHP 7.2](https://www.mydropwizard.com/blog/announcing-drupal-645-and-selected-contrib-php-72){.external}. Older versions of Drupal 6 require PHP 5.4 and below.
 </p></div>
 
 ## Configure PHP Version
-Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. When using SFTP mode, navigate to the `code` directory. Your `pantheon.yml` file will look like the following:
+Manage PHP versions by committing a `pantheon.yml` configuration file to the root of your site's code repository. If you have a local git clone of your site, this is the project root. When looking at the site over an SFTP connection, look in the `code` directory. If the `pantheon.yml` file is not present, create one to look like the following:
 
 ```yaml
 api_version: 1
 
 php_version: 7.0
 ```
+
+You do not need to specify the PHP version's exact point release (e.g, `7.2.6`), as these are managed by the platform and deployed automatically.
 
 Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control.
 
@@ -64,9 +85,14 @@ remote: >   8.0 is not one of [5.3, 5.5, 5.6, 7.0]
 
 Modify `pantheon.yml` until valid and commit the fix before attempting to push again.
 
+<div markdown="1" class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">Changes to `pantheon.yml` [deployed as hotfixes](/docs/pantheon-yml#deploying-hotfixes) are not detected.</p>
+</div>
+
 #### SFTP Mode
 
-When you upload a new or modified `pantheon.yml` file in SFTP mode, your side dashboard will detect the changes:
+When you upload a new or modified `pantheon.yml` file in SFTP mode, your site dashboard will detect the changes:
 
 ![The Site Dashboard sees changes to pantheon.yml](/source/docs/assets/images/dashboard/pantheon-yml-changes-sftp.png)
 

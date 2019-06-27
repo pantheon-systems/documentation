@@ -1,5 +1,6 @@
 ---
 title: Develop
+permalink: docs/develop/
 description: Use our developer tools and best practice workflows.
 videoid: t852d5453q
 bullet1: Command Line Tools

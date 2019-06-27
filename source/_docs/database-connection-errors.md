@@ -4,11 +4,11 @@ description: Drupal Pressflow core, WordPress core, and the causes and solutions
 tags: [debugdb]
 categories: [troubleshoot]
 ---
-There is an issue connecting to the Pantheon databse if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
+There is an issue connecting to the Pantheon database if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
  ![Can't connect to local MySQL server through socket](/source/docs/assets/images/mysql-connection-error.png)
 
 ```sql
-Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
+Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
 ```
 There are two common causes: overwriting core or using non-standard bootstraps.
 
@@ -24,7 +24,7 @@ To see if this is the case, examine your `includes/bootstrap.inc` file, and veri
 If you don't see that, look in to recent changes and revert or remove whatever overwrote your core.
 
 ### WordPress Core
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/getting-support/#scope-of-support) and [Applying Upstream Updates](/docs/upstream-updates).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).
 
 ## Drupal Non-Standard Bootstraps
 Some modules, like the **domain.module**, change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
@@ -48,15 +48,17 @@ $settings = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
 ```
 ### Drupal 7 Style
 
-    # Include any other settings.php magic here.
-      extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
-      include './sites/all/modules/domain/settings.inc';
+```php
+# Include any other settings.php magic here.
+  extract(json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE));
+  include './sites/all/modules/domain/settings.inc';
+```
 
 You can also use the above to develop Drupal 8 on Pantheon.
 
 <div class="alert alert-danger" role="alert">
 <h4 class="info">Warning</h4>
-<p>If you use any other advanced <code>settings.php</code> tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent <code>$conf</code> array.</p></div>
+<p markdown="1">If you use any other advanced `settings.php` tricks (e.g. enabling Redis), you will need to do this <em>before</em> the snippet in D7, or <em>after</em> in D6 to insure you have a consistent `$conf` array.</p></div>
 
 ## Base Table or View Not Found
 This error may occur during a database clone, restore, or import. A standard MySQL import happens sequentially and in alphabetical order from A to Z. If you access the site before the operation is complete, Drupal will try and bootstrap, and the MySQL import may only be at the table letter G. The result is the "semaphore does not exist" error.

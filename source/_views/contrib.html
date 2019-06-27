@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<html itemscope itemtype="https://schema.org/Article">
 <head>
 
     <!-- Asks bots not to index  -->
@@ -75,14 +73,18 @@
     {% if page.contributors %}{% set contributor_list = page.contributors %}{% if contributor_list %}{% for contributorhandle in contributor_list %}{% if site.contributors[contributorhandle] %}{% set contributor = site.contributors[contributorhandle] %}<meta name="twitter:creator" content="@{{ contributor.twitter }}">
     {% endif %}{% endfor %}{% endif %}{% endif %}
 
+    {% if page.searchboost %}
+    <meta name="addsearch-boost" content="{{ page.searchboost }}" />
+    {% endif %}
+
     <!-- Twitter summary card with large image must be at least 280x150px -->
     <!-- Open Graph data -->
     <meta property="og:title" content="{{ page.title}}" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ site.site_url}}{{ page.url }}" />
     <meta property="og:site_name" content="Pantheon Documentation" />
     <!--<meta property="fb:admins" content="Facebook numberic ID" />-->
     <!-- Latest compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/docs/assets/compiled/compiled.css?v={{ site.assets_version }}">
     <script src="//www.google-analytics.com/analytics.js"></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

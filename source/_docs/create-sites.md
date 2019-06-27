@@ -16,15 +16,19 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
     <p>The site name will be prefixed to all <a href="/docs/domains/#platform-domains">Platform URLs</a>, which are automatically configured as subdomains of <code>pantheonsite.io</code>.
     </p></div>
 3.  If applicable, affiliate the site with an [organization](/docs/organization-dashboard/#new-sites).
-4.  Click **Create Site**.
-5.  Select your [start state](/docs/start-state). Install WordPress, Drupal 8, or Drupal 7 with one click. You can also select from any of the public or [Custom Upstreams](/docs/custom-upstream) available on the platform.
-6.  Click **Visit your Pantheon Dashboard**.
-7.  Click **Visit Development Site** and complete the installation process for the selected framework.
+4.  Choose a [Region](/docs/regions/) for the Site.
+5.  Click **Continue** and wait a few moments for the Site to be created:
+
+    ![Select a Region from the Create Your Pantheon Site screen](/source/docs/assets/images/dashboard/create-pantheon-site.png "Select a Region from the Create Your Pantheon Site screen")
+
+6.  Select your [start state](/docs/start-state). Install WordPress, Drupal 8, or Drupal 7 with one click. You can also select from any of the public or [Custom Upstreams](/docs/custom-upstream) available on the platform.
+7.  Click **Visit your Pantheon Site Dashboard**.
+8.  Click **Visit Development Site** and complete the installation process for the selected framework.
  ![Visit development site button](/source/docs/assets/images/dashboard/visit-development-site.png)
 
-## Free Sites
+## Sandbox Sites
 
-Free sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. We allocate two free sandbox sites for all user accounts. If you have reached your limit of Sandbox sites, delete an unused site or take a site live. If you're building sites for third parties, sign up for [Pantheon for Agencies](https://pantheon.io/agencies/pantheon-for-agencies). If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/pantheon-top-edu).
+Sandbox sites are useful for trying out the Pantheon platform, creating sandboxes for development, or for starting a new client project. A Sandbox has the equivalent resources of a Performance Small site. We allocate two Sandbox sites for all user accounts. If you've reached your limit of Sandbox sites, delete an unused site, take a site live or join an organization. If you're building sites for third parties, join the [Pantheon Partner Program](http://pantheon.io/agencies/partner-program){.external} for more sandbox sites, Multidev environments, and other features. If you're at an educational institution, sign up for [Pantheon for EDU](https://pantheon.io/pantheon-top-edu){.external}.
 
 ## Your Pantheon Account
 Your account is your own individual account, and every account can manage multiple projects or sites at a time. Pantheon doesn't recommend sharing your account with other people. If you're collaborating on a project or handing over ownership to a client, use our [team management](/docs/team-management) and [ownership transfer](/docs/site-owner-faq/#billing-tasks) tools.
@@ -32,8 +36,11 @@ Your account is your own individual account, and every account can manage multip
 ## Frequently Asked Questions (FAQs)
 
 ### Can I rename my Pantheon site after creation?
+No. Site names and Platform URLs are permanent and cannot be changed. As a workaround, you can export your existing site and import it to a new site with the correct name. See <a href="/docs/migrate/#how-do-i-clone-an-existing-pantheon-site" data-proofer-ignore>Migrate Sites to Pantheon FAQs</a>.
 
-No. Site names and Platform URLs are permanent and cannot be changed. As as a workaround, you can export your existing site and import it to a new site with the correct name. See [Cloning an Existing Pantheon Site](https://pantheon.io/docs/clone-site/).
+### What if my site name is already taken?
+
+Site names must be unique across all Pantheon sites, including [frozen](/docs/platform-considerations/#inactive-site-freezing) sites. Choose another site name, and remember that the name you choose in the Pantheon Dashboard is only visible to the public in your [platform domain](/docs/domains/#platform-domains).
 
 ## Next Steps
  - [Developing Directly with SFTP](/docs/sftp/)

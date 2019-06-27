@@ -20,19 +20,19 @@ Run this from the MySQL command prompt to convert a table from MyISAM to InnoDB:
 ALTER TABLE table_name ENGINE=InnoDB;
 ```
 
-##Simple PHP Script
+## Simple PHP Script
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p>You must be a Pantheon customer to use this script.</p></div>
 
-1. Save the code in a file with the extension .php and SFTP it up to your site.
-2. Place it in the code directory of your website.
+1. Save the code in a file with the extension `.php` and add it to your site root.
+2. Upload the new PHP file to your site via SFTP or Git.
 3. Point a browser to your newly created script that's located in the root directory of your Dev environment:
 
-        https://your.dev.url.gotpantheon.com/filename.php
+        https://dev-yoursite.pantheonsite.io/filename.php
 
-That's all there is to it—the script will do all the work.
+That's all there is to it — the script will do all the work.
 
 Here's the browser version of the script:
 
@@ -134,16 +134,17 @@ die(0);</code></pre>
 </div>
 </div>
 
-##Advanced Method via Command Line
+## Advanced Method via Command Line
 
 If you want to run the script from the command line instead of adding it to your codebase, use this script.
 
-###Before You Begin
+### Before You Begin
 
 Make sure you have:
 
 - PHP installed on your computer
 - Your database connection info for your Dev environment from your Site's Dashboard
+- Copy the script below and save it in a file with a `.php` extension in your home directory.
 
 Here is the command line script:
 
@@ -180,7 +181,7 @@ if ($results===false or $mysqli->connect_errno) {
     die(2);
 }
 while ($row= $results->fetch_assoc()) {
-    $sql = "SHOW TABLE STATUS WHERE Name = '{$row['Tables_in_' . $db['database']]'";
+    $sql = "SHOW TABLE STATUS WHERE Name = '{$row['Tables_in_' . $db['database']]}'";
     $thisTable = $mysqli->query($sql)->fetch_assoc();
     if ($thisTable['Engine']==='MyISAM') {
         $sql = "alter table " . $row['Tables_in_' . $db['database']]. " ENGINE = InnoDB;";
@@ -197,7 +198,7 @@ die(0);
 Here are the parameters you will need to configure before running the script:
 <dl>
 	<dt>host</dt>
-	<dd>This is the name of the machine your db is running on. If you are a Pantheon customer localhost is wrong. Get the correct host and paste it in there to replace localhost.</dd><br>
+	<dd>This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/docs/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.</dd><br>
   <dt>port</dt>
   <dd>This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.</dd><br>
   <dt>user </dt>

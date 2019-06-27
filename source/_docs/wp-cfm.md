@@ -9,6 +9,11 @@ Version-controlling site configuration within the codebase is a best practice. S
 
 The [WP-CFM](https://wordpress.org/plugins/wp-cfm/) plugin provides an elegant mechanism for enabling developers to practice configuration management in code. The plugin exports WordPress site configuration from the mysql database's `wp_options` table to a `.json` file stored in `wp-content/config`.  After deploying the file to a new environment for the same site, it can then import the configuration from the `.json` file into the second `wp_options` table.
 
+<div class="alert alert-info" role="alert">
+<h4 class="info">Note</h4>
+<p markdown="1">WP-CFM should only be used to write changes to code in Dev and Multidev environments, where the code base is writable. Cloning databases between environments before saving WP-CFM bundles can result in loss of data.</p>
+</div>
+
 ## Install and Deploy WP-CFM
 
 Each of the following steps can be done using the Pantheon and WordPress Dashboards or via the command line using Pantheon's CLI, [Terminus](/docs/terminus):

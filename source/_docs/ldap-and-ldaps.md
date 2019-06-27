@@ -8,17 +8,13 @@ categories: []
 
 ## LDAP as a Consumer
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>We do not recommend using LDAP for single sign-on authentication as it is not secure.  The recommended approach for sites and the Dashboard is to use SAML. For details, see <a href="/docs/guides/two-factor-authentication/"> Secure Your Site with Two-Factor Authentication</a>.
-</p></div>
-LDAP provides access and maintenance of a distributed directory storing organized sets of records. Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details are up to the user as not all instances are supported. For general information about implementing LDAPS, see [https://drupal.org/node/1404368](https://drupal.org/node/1404368) and [https://drupal.org/node/1302032](https://drupal.org/node/1302032).
+LDAP provides access and maintenance of a distributed directory storing organized sets of records. Using LDAP as a consumer of services is supported on the platform and will work at all plan levels, assuming correct configuration. The implementation and configuration details are up to the user as not all instances are supported.
 
 PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are necessary in order to enable LDAP on your Pantheon site.
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p>Pantheon does not support IP authentication schemes. We recommend certificate-based authentication to be compatible with distributed application servers.</p>
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+Pantheon supports IP authentication schemes *only* when implemented as part of a [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
 </div>
 
 ### Drupal
@@ -57,44 +53,89 @@ Ensure that your certificates do **not** have a password. There is an extremely 
 
 You can also specify additional configurations with putnev, such as whether to perform server certificate checks.
 
-    // LDAP - Never perform server certificate check in a TLS session.
-    putenv('LDAPTLS_REQCERT=never');
+    // LDAP - Allow server certificate check in a TLS session.
+    putenv('LDAPTLS_REQCERT=allow');
 
 
 ## Frequently Asked Questions
 
-#### How can I make changes to the OpenLDAP configuration file?
+### How can I make changes to the OpenLDAP configuration file?
 
 Users do not have access to make modifications to `ldap.conf`. Instead, use `putenv` within `settings.php` as described above.
 
-#### Is ldap_sso supported?
+### Is ldap_sso supported?
 
-The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP needs to be PHP-based and not webserver-based.
+The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap){.external} is not supported. We do have PHP with LDAP support. Any authentication through LDAP needs to be PHP-based and not webserver-based.
+
+### Does PEG work with LDAP?
+
+WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch){.external} prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273){.external}. The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
+
+If you're using the Drupal 8 LDAP module, take note of the machine name you give to the LDAP server. Then, in your `settings.php` file, add the following lines for each LDAP server:
+
+```php
+$config['ldap_servers.server.MACHINE_NAME']['address'] = '127.0.01';
+$config['ldap_servers.server.MACHINE_NAME']['port'] = PANTHEON_SOIP_CONSTANT_NAME;
+```
+
+In the snippet above, replace the `PANTHEON_SOIP_CONSTANT_NAME` with name given to you by Pantheon, and the LDAP machine name in place of `MACHINE_NAME`. When you return to the server configuration page, verify that both the server address and the server port show as `overridden`.
+
 
 ## Troubleshooting
 
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.
 
-Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. This script requires PHP 7.1 to execute properly without PHP errors.  If you are connecting via a Pantheon Enterprise Gateway (PEG), use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+
 ```bash
 terminus drush <site>.<env> -- scr ldap-test.php
 ```
 
 The entire script:
 
-````php
+```php
 <?php
+
 $settings = array(
   'NAME' => array(
-    'hostname' => 'ldaps://HOSTNAME:PORT/',
+    'host' => 'ldaps://HOSTNAME:PORT/',
     'port' => 'PORT',
-    'bind_rdn' => 'uid=...',
+    'bind_rdn' => 'CN=value,OU=value,DC=value,DC=value', //This should be the full rdn and not just the username.
     'bind_password' => '...',
-    'base_dn' => 'ou=...',
-    'filter' => '(uid=...)',
+    'display_password' => 'XxXxXxX',  //display an alternate value for security
+    'base_dn' => 'OU=value,DC=value,DC=value', //This may be a comma-separated list of values.
+    'filter' => '(objectClass=user)', //Could be an alternate objectClass or a uid
     'attributes' => array('cn'),
   ),
 );
+
+ldap_set_option(NULL, LDAP_OPT_DEBUG_LEVEL, 7);
+ldap_set_option(NULL, LDAP_OPT_PROTOCOL_VERSION, 3);
+ldap_set_option(NULL, LDAP_OPT_REFERRALS, 0);
+ldap_set_option(NULL, LDAP_OPT_X_TLS_REQUIRE_CERT, LDAP_OPT_X_TLS_ALLOW);
+
+
+// Custom OpenLDAP Configuration for Client Certificates for LDAPS
+// Un-comment lines that you may need for configuration
+
+// LDAP - specify file that contains the TLS CA Certificate.
+// Can also be used to provide intermediate certificate to trust remote servers.
+# $tls_cacert = __DIR__ . '/../../private/ca.crt';
+# if (!file_exists($tls_cacert)) die($tls_cacert . ' CA cert does not exist');
+# putenv("LDAPTLS_CACERT=$tls_cacert");
+
+// LDAP - specify file that contains the client certificate.
+# $tls_cert = __DIR__ . '/../../private/client.crt';
+# if (!file_exists($tls_cert)) die($tls_cert . ' client cert does not exist');
+# putenv("LDAPTLS_CERT=$tls_cert");
+
+// LDAP - specify file that contains private key w/o password for TLS_CERT.
+# $tls_key = __DIR__ . '/../../private/client.key';
+# if (!file_exists($tls_key)) die($tls_key . ' client key does not exist');
+# putenv("LDAPTLS_KEY=$tls_key");
+
+// LDAP - Allow server certificate check in a TLS session.
+# putenv('LDAPTLS_REQCERT=allow');
 
 
 echo 'LDAPTLS_CERT=' . getenv('LDAPTLS_CERT') . PHP_EOL;
@@ -111,24 +152,35 @@ echo 'LDAPTLS_REQCERT=' . getenv('LDAPTLS_REQCERT') . PHP_EOL;
 
 foreach ($settings as $host => $setting) {
   echo PHP_EOL;
-  echo "Attempting to connect to {$setting['hostname']} on port {$setting['port']}." . PHP_EOL;
+  echo "Attempting to connect to {$setting['host']} on port {$setting['port']}. " . PHP_EOL;
 
+  $resolved_port = $setting['port'];
+  if (!is_numeric($resolved_port)) {
+    // If it's a string, then attempt to use it as the name of a PHP constant.
+    $resolved_port = constant($resolved_port);
+  }
 
-  $link_identifier = ldap_connect($setting['hostname'], $setting['port']);
+  $resolved_address = $setting['host'];
+  // PHP ldap_connect function ignores the port option if scheme is
+  // included in the host, so we must appened port number to the 'address'
+  if (strpos($resolved_address, 'ldap') !== false) {
+    $resolved_address = $resolved_address . ":" . $resolved_port;
+  }
+
+  $link_identifier = ldap_connect($resolved_address, $resolved_port);
+
   if (!$link_identifier) {
     echo 'Unable to connect - ' . ldap_error($link_identifier) . PHP_EOL;
     continue;
   }
 
-
   echo 'Connected.' . PHP_EOL;
-
 
   ldap_set_option($link_identifier, LDAP_OPT_PROTOCOL_VERSION, 3);
   ldap_set_option($link_identifier, LDAP_OPT_REFERRALS, 0);
 
 
-  echo "Attempting to bind with rdn {$setting['bind_rdn']} and password {$setting['bind_password']}." . PHP_EOL;
+  echo "Attempting to bind with rdn {$setting['bind_rdn']} and password {$setting['display_password']}." . PHP_EOL;
   if (!ldap_bind($link_identifier, $setting['bind_rdn'], $setting['bind_password'])) {
     echo 'Unable to bind - ' . ldap_error($link_identifier) . PHP_EOL;
     ldap_unbind($link_identifier);
@@ -154,4 +206,23 @@ foreach ($settings as $host => $setting) {
   $entries = ldap_get_entries($link_identifier, $search_result_identifier);
   var_dump($entries);
 }
-````
+```
+
+Alternate $settings array when using PEG:
+
+```php
+
+<?php
+$settings = array(
+  'NAME' => array(
+    'host' => 'ldaps://127.0.0.1', //when using PEG, this is localhost
+    'port' => PANTHEON_SOIP_EXAMPLE, //when using PEG, this is the PHP CONSTANT
+    'bind_rdn' => '<insert-bind-dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
+    'bind_password' => '<insert-password>',
+    'display_password' => 'Pxxxxxxx',  //display an alternate value for security
+    'base_dn' => 'OU=value,dc=value,dc=value,dc=value',
+    'filter' => '(objectClass=user)', //Could be an alternate objectClass or a uid
+    'attributes' => array('cn'),
+  ),
+);
+```

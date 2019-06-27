@@ -10,7 +10,7 @@ Pantheon uses nginx web servers for optimal performance. Log files record the we
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p>Requests served by <a href="/docs/varnish">Varnish</a> will not hit the nginx webserver and will not be logged in <code>nginx-access.log</code>.</p>
+<p>Requests served by the <a href="/docs/global-cdn">Pantheon Global CDN</a> will not hit the nginx webserver and will not be logged in <code>nginx-access.log</code>.</p>
 </div>
 
 [GoAccess](https://goaccess.io/) is a free, open source utility that creates on the fly server reports by parsing the `nginx-access.log` file. Use it to quickly identify the most used browsers and operating systems, or to debug failed requests—all from the command line.
@@ -32,7 +32,7 @@ Add the following lines to the `goaccess.conf` file, located in either `/etc/`, 
 ```
 time-format %H:%M:%S
 date-format %d/%b/%Y
-log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
+log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T ~h{," }
 ```
 ## Automate GoAccess Reports
 <p class="instruction">Download the following script to quickly pull a site's nginx log file and create an HTML report using GoAccess:</p>

@@ -18,10 +18,10 @@ Be sure that you have a:
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
 
-1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-home"></span> Domains & HTTPS**.
-2. Click the **DNS Recommendations** button next to your domain.
+1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
+2. Click the **Details** button next to your domain.
 
-Keep this page open and login to your <a href="https://www.gandi.net/login" target="blank">Gandi account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
+Keep this page open and login to your <a href="https://id.gandi.net/en/login" target="blank">Gandi account <span class="glyphicons glyphicons-new-window-alt"></span></a> in a new tab before you continue.
 
 ## Configure DNS Records on Gandi
 ### A Record
@@ -42,18 +42,24 @@ Keep this page open and login to your <a href="https://www.gandi.net/login" targ
 5. Repeat steps 1-5 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
 ### CNAME Record
-The CNAME record is required if you wish to include `www` within your site's primary domain name.
+A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. Click the **Add** button and select **CNAME** from the type dropdown menu.
 2. Select desired Time to Live (TTL).
-3. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Value** field.
+3. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon, followed by a `.` (e.g. `live-example.pantheonsite.io.`) in the **Value** field.
+
+    <div class="alert alert-info">
+    <h4 class="info">Note</h4><p markdown="1">
+    Remember to add the dot (`.`) at the end of the **Value** line. Hostnames without a `.` at the end will be suffixed by the current domain.
+    </p></div>
+
 4. Click **Submit**.
 5. Click the **Activate this version** button.
 
 
 ## Gandi Docs
 
-<a href="https://wiki.gandi.net/en/dns/zone" target="blank">Manage your domain name's zone file <span class="glyphicons glyphicons-new-window-alt"></span></a>
+<a href="https://docs.gandi.net/en/domain_names/index.html" target="blank">Gandi's domain documentation.<span class="glyphicons glyphicons-new-window-alt"></span></a>
 
 ## Next Steps
 

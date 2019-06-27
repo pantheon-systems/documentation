@@ -8,7 +8,7 @@ Bots are part of every public-facing website's lifecycle. We wouldn't be able to
 
 ## Bots in My Logs: Real World Scenarios and Identifiers
 
-Bots don't browse like humans. Analyzing access patterns in the Nginx log is one of the quickest ways to determine the presence of bots.
+Bots don't browse like humans. Analyzing access patterns in the nginx log is one of the quickest ways to determine the presence of bots.
 
 ### Rapid Fire Requests/Duplicates
 
@@ -38,13 +38,38 @@ Some legitimate [bots/crawlers/proxies](https://useragent.openadmintools.com/) (
 It is important to note that each of your site environments have a `robots.txt` file associated with the [platform domain](/docs/domains/#platform-domains) (e.g. `dev-site-name.pantheonsite.io`), or [custom Vanity domain](/docs/vanity-domains) (e.g. `dev-sites.myagency.com`), that contains the following:
 
 ```
+# Pantheon's documentation on robots.txt: https://pantheon.io/docs/bots-and-indexing/
 User-agent: *
 Disallow: /
+
+User-agent: RavenCrawler
+User-agent: rogerbot
+User-agent: dotbot
+User-agent: SemrushBot
+User-agent: SemrushBot-SA
+User-agent: PowerMapper
+Allow: /
 ```
 
-Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP header](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag) when serving requests from platform domains (e.g. `live-site-name.pantheonsite.io`). This instructs bots/crawlers not to index the page and prevents it from being returned in search results.
+Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP header](https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag) when serving requests from platform domains (e.g. `live-site-name.pantheonsite.io`). This instructs most bots/crawlers not to index the page and prevents it from being returned in search results.
 
-The `pantheonsite.io` domains are intended for development use and cannot be used for production. Robots.txt is only visible on Live with a custom domain, and is not available on Dev or Test. If you're testing links or SEO prior to launch, a workaround is to assign a test or beta domain to the Live environment and test your links following the alternative domain. In addition, if you run SEO toolsets locally, you can utilize a /etc/hosts file entry on your local development box to spoof your production domain on Pantheon.
+### Indexing Before You Launch
+
+The `pantheonsite.io` domains are intended for development use and cannot be used for production. While Drupal and WordPress both generate their own `robots.txt` file by default, a custom or CMS-standard `robots.txt` will only work on Live environments with a custom domain. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
+
+To support pre-launch SEO testing, we allow the following bots access to platform domains:
+
+ - [Site Auditor](https://raven.zendesk.com/hc/en-us/articles/202346870){.external} by Raven
+ - [SEMrush](https://www.semrush.com/bot/){.external}
+ - [RogerBot](https://moz.com/help/guides/moz-procedures/what-is-rogerbot){.external} by Moz
+ - [Dotbot](https://moz.com/help/guides/moz-procedures/dotbot){.external} by Moz
+ - [PowerMapper](https://www.powermapper.com/products/mapper/){external}
+
+If you’re testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by <a data-proofer-ignore href="/docs/support/#can-i-request-a-feature-be-added-to-the-platform">contacting support</a> to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
+
+If you run SEO toolsets locally, you can utilize an `/etc/hosts` file entry on your local development box to spoof your production domain on Pantheon:
+
+{% include("content/hosts-file.html")%}
 
 You can index your site under your production domain once it's added to the Live environment. There are many contrib module options available for creating sitemaps for Drupal, including [XMLSiteMap](https://drupal.org/project/xmlsitemap) and [Site_Map](https://drupal.org/project/site_map). WordPress users can install the [Google XML Sitemaps](https://wordpress.org/plugins/google-sitemap-generator/) or [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/) plugins, which will maintain sitemap updates automatically. It is up to you to configure the extensions to work as you desire. Pantheon does not offer support for Drupal modules or WordPress plugins.
 
@@ -80,4 +105,27 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Domains and Redirects](/docs/domains/#redirect-to-https-and-the-primary-domain).
+For more examples of redirecting via PHP, see [Configure Redirects](/docs/redirects/).
+
+### Incorrect robots.txt Output in WordPress
+
+In WordPress, do not enable **Discourage search engines from indexing this site** on Dev or Test environments. This option is set in **Settings** > **Reading** > **Search Engine Visibility** in the WordPress Admin Dashboard.
+
+This setting creates a built-in `robots.txt` file that disallows or blocks crawlers. While the file applied by the platform normally overrides it, it doesn't when there's a trailing slash on the URL pointing to `robots.txt`.
+
+As a workaround, you can override the output by creating your custom filter for `robots_txt`. You can add this as a custom plugin, or an entry in your theme's `functions.php` file:
+
+
+```php
+add_filter('robots_txt', 'custom_robots_txt', 10,  2);
+
+function custom_robots_txt($output, $public) {
+
+    $robots_txt =  "User Agent: * \n";
+    $robots_txt .=  "Sitemap: https://www.example.com/sitemap_index.xml \n";
+    $robots_txt .=  "Disallow: /secure/ ";
+    // add more $robots_txt .= for each line
+
+    return $robots_txt;
+}
+```

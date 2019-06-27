@@ -1,6 +1,6 @@
 ---
 title: FileZilla on Pantheon
-description: Information about using the FileZilla FTP client for your Pantheon Drupal or Wordpress site.
+description: Information about using the FileZilla FTP client for your Pantheon Drupal or WordPress site.
 tags: [sftpfiles]
 categories: []
 ---
@@ -61,7 +61,34 @@ After logging in, you can access your application code in the `/code` directory.
 
 Your file uploads (Drupal's `sites/default/files` and WordPress's `wp-content/uploads`) can be found in the `files` directory.  Your log files can be found in the `/logs` directory.
 
-## Known Issues
+## Troubleshooting
 
 ### Uploading to the Files Directory
-Filezilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/docs/winscp) (Windows).
+FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/docs/winscp) (Windows).
+
+### nodename nor servname provided, or not known
+The following error is caused by an invalid hostname, most often the result of a typo:
+
+```bash
+Error:            ssh_init: nodename nor servname provided, or not known
+Error:            Could not connect to server
+```
+
+Double check settings and resolve typos to fix this issue.
+
+### Site Manager
+Features offered in the FileZilla Site Manager (like [Synchronized Browsing](https://wiki.filezilla-project.org/Using#Synchronized_Browsing){.external}) are not supported because the Pantheon platform sometimes migrates sites across appservers without warning and the non-static binding string will change. This means that while you can set up your site in the Site Manager, you will need to reconfigure the login information and file paths whenever the dev environment site binding changes.
+
+The value for **Default remote directory** in the Site Manager can be copied from the **Remote site** field in the main window, and you can append `code` to the path to synchronize with your local codebase. Remember that the site binding is subject to change. 
+
+### Quickconnect is refusing to connect
+
+The following error is always thrown when using the Quickconnect option in FileZilla:
+
+
+```bash
+Error:        	Cannot establish FTP connection to an SFTP server. Please select proper protocol.
+Error:        	Critical error: Could not connect to server
+```
+
+Quickconnect does not give options for protocol selection. You need to manually add the protocol (`sftp://`) in the **Host** field.

@@ -1,39 +1,100 @@
 ---
-title: Security on the Pantheon Dashboard
-description: Learn how to keep your work hidden from the public for Drupal or WordPress site development or updates.
+title: Lock Environments with the Dashboard Security Tool
+description: Learn how to use the Security tool in the Site Dashboard to keep your work hidden from the public for Drupal or WordPress site development.
 tags: [security]
 categories: []
 ---
-There are occasions while you are working on your Drupal site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
 
-This can be done by putting a username and password on the environment similar to basic authentication on Apache. If a request for a resource on your environment is received and the site is _private_ the requesting client will have to supply the authentication credentials you set in order to access the site.
+There are occasions while you are working on your site that you would like to keep your progress hidden from the world as you prepare to go live or make updates.
+
+This can be done by putting a username and password on the environment, similar to basic authentication on Apache. Visitors will be prompted to authenticate before the site is served.
 
 <div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
 <p>When a Dev environment is locked, a lock icon will be added to the screenshot of a site on the Your Sites page.</p>
 </div>
 
-## Password Protect Your Site's Environments
+![Lock environment](/source/docs/assets/images/dashboard/lock-environment.png)
 
+## Password Protect Your Site's Environments
 
 You have the ability to password protect any of the available environments.
 
-- Select the environment (e.g. Dev).
-- Select **Security**.
-- Select **Locked**.
-- Choose a username and password.
-- Click **Lock Environment**.
-
-![Lock environment](/source/docs/assets/images/dashboard/lock-environment.png)
+1. Select the environment (e.g., **<span class="glyphicon glyphicon-wrench"></span> Dev**).
+2. Select **<span class="glyphicon glyphicon-keys"></span> Security**.
+3. Select **Locked**.
+4. Provide a username and password.
+5. Click **Lock Environment**.
 
 If other members of your team on the site need to access the site, they will also be able to view the authentication credentials when they log in to their accounts.
+
 ![Credentials](/source/docs/assets/images/dashboard/environment-access.png)
+
 Now when your page refreshes you will notice that the environment is now "Private". You will also be able to see the credentials needed to access that environment.
 
 You can set a different username and password for each environment. This is important if you only want the Live site publicly viewable, while Dev and Test can be private as you work on your code and content.
 
 To verify that everything is working correctly, visit the URL of the environment that you have made private. You should see an authentication form where you can enter the username and password for that environment to start your session.
+
 ![Locked site example](/source/docs/assets/images/auth-required.png)
+
+<div class="alert alert-info" role="alert" markdown="1">
+#### Note {.info}
+While locked, environments will not be cached by the [Global CDN](/docs/global-cdn).
+</div>
+
+### Customize Lock Page
+
+If you'd like to customize the lock page that displays beneath the authentication form, you can add a `locked.html` file in your site's root directory.
+
 ## Unlock a Site's Environment
 When you are ready to make your environment public again, click **Security** on your Site Dashboard. Next to Environmental Access, click **Public**.
 This will clear the credentials you entered and make the web accessible resources available without a basic authentication prompt.
+
+## Scripting Site Locking Operations
+Your site may also be locked and unlocked using [Terminus](/docs/terminus).
+
+To lock a site:
+
+```bash
+terminus lock:enable <site>:<env> -- user password
+```
+
+To unlock a site:
+
+```bash
+terminus lock:disable <site>:<env>
+```
+
+## Troubleshooting
+
+### Authentication Prompt Appears in Environments Where It's Not Enabled
+
+If you see an authentication prompt for a different environment (for example, a Dev site authentication prompt on the Test environment), you likely have assets, such as images, loading from a locked environment. Inspect your page source code and search for the locked environment's URL (e.g `dev-yoursite.pantheonsite.io`), then replace that with the correct URL for the current environment.
+
+### Drupal HTTP Authentication Module
+
+The [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) core module (Drupal 8) and [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) contrib module (Drupal 7) conflict with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) if both are enabled. We recommend using Pantheon's Security tool within the Site Dashboard on target environments, or the module to restrict access, not both.
+
+Sites that have the environment locked on Pantheon in addition to enabling the module will experience 403 errors. You can resolve these errors by unlocking the environment in the Site Dashboard, clearing cache, then disabling the module in Drupal's admin interface. Once you've disabled the module you can safely lock the environment on Pantheon.
+
+Alternatively, you can resolve 403 errors by using [Terminus](/docs/terminus) to disable the module:
+
+<ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
+  <li role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content" markdown="1">
+<div role="tabpanel" class="tab-pane active" id="d8" markdown="1">
+```bash
+terminus remote:drush <site>:<env> -- pm-uninstall basic_auth -y
+```
+</div>
+<div role="tabpanel" class="tab-pane" id="d7" markdown="1">
+```bash
+terminus remote:drush <site>:<env> -- pm-disable basic_auth -y
+```
+</div>
+</div>

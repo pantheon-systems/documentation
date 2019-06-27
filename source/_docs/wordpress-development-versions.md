@@ -4,7 +4,7 @@ description: Learn how to test WordPress core updates using nightly builds of th
 tags: [workflow]
 categories: [wordpress]
 ---
-Pantheon provides [one-click updates](/docs/upstream-updates/) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
+Pantheon provides [one-click updates](/docs/core-updates/) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
 
 <div class="alert alert-danger">
 <h4 class="info">Warning</h4>

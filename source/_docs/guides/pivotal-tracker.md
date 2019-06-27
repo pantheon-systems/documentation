@@ -91,7 +91,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
         terminus connection:set $SITE.dev git
 
-3. Create a copy of [Pantheon's `pivotal_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/pivotal_integration) in the project's private path:
+3. Create a copy of [Pantheon's `pivotal_integration.php`](https://github.com/pantheon-systems/quicksilver-examples/tree/master/pivotal-tracker) in the project's private path:
 
     ``` bash
     mkdir private
@@ -154,4 +154,4 @@ If code is automatically tested and deployed when pushed to the origin repositor
 ```
 
 ## Conclusion
-In this guide, we covered a simple but time-saving integration between [Pivotal Tracker](https://www.pivotaltracker.com) and Pantheon. There are similar ways to integrate other project management applications using [Quicksilver hooks](https://github.com/pantheon-systems/quicksilver-examples). Additionally, you can use continuous integration tools such as [CircleCI](https://pantheon.io/docs/guides/github-pull-requests/) if you use an external repository such as GitHub. Using these integrations will give clarity into work being performed across your team, while saving time by automating your development workflow.
+In this guide, we covered a simple but time-saving integration between [Pivotal Tracker](https://www.pivotaltracker.com) and Pantheon. There are similar ways to integrate other project management applications using [Quicksilver hooks](https://github.com/pantheon-systems/quicksilver-examples). Additionally, you can use continuous integration tools such as [CircleCI](https://pantheon.io/docs/guides/build-tools/) if you use an external repository such as GitHub. Using these integrations will give clarity into work being performed across your team, while saving time by automating your development workflow.

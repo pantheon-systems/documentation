@@ -4,14 +4,27 @@ description: Learn how to enable and use New Relic performance metrics and repor
 tags: [newrelic, addons]
 categories: []
 ---
-[New Relic APM Pro](https://newrelic.com/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application and is provided to all sites on Pantheon for free. Using New Relic not only makes it easy for you to monitor to your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
+[New Relic APM Pro](https://newrelic.com/){.external} offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
+
+<div class="enablement">
+  <h4 class="info" markdown="1">[Agency DevOps Training](https://pantheon.io/agencies/learn-pantheon?docs){.external}</h4>
+  <p>Get the most out of New Relic with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.</p>
+</div>
+
+## Supported Site Plans
+All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro is available to Sandbox site plans for developmental purposes, but New Relic APM Pro will not be available going live on a Basic plan.
+
+| Plans         | New Relic APM Pro Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
+| ------------- | ------- |
+| Sandbox       | ✓       |
+| Basic         |         |
+| Performance   | ✓       |
+| Elite         | ✓       |
 
 ## Activate New Relic APM Pro
-Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. You can also use the [Terminus Omniscient](https://github.com/terminus-plugin-project/terminus-omniscient-plugin/) plugin to enable New Relic Pro for all sites you have access to by logging in to your Pantheon account and running `terminus omniscient`.
+Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
-Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
-
-New Relic is automatically enabled for all application servers added to the site, including Multidev environments.
+New Relic is automatically enabled for all application containers added to the site, including Multidev environments.
 
 ## Configure Ping Monitors for Availability
 New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring check sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails. To configure this service:
@@ -32,16 +45,16 @@ New Relic's Dashboard starts with a high-level breakdown of application performa
 
 1. PHP Execution
 2. Database Queries (MySQL or Redis)
-3. External Requests (e.g. calls to third pary APIs)
+3. External Requests (e.g. calls to third-party APIs)
 
-Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the databse](/docs/debug-mysql-new-relic/) could be the result of  slow queries, or an elevated volume of queries overall.
+Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the database](/docs/debug-mysql-new-relic/) could be the result of slow queries, or an elevated volume of queries overall.
 
-For more information on using New Relic's features, we encourage you to read  the [New Relic APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic to investigate specific areas of performance below:
+For more information on using New Relic's features, we encourage you to read  the [New Relic APM](https://docs.newrelic.com/docs/apm){.external} docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions){.external} and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details){.external}. You can find more information on using New Relic to investigate specific areas of performance below:
 
-- [Measuring PHP7 Performance with New Relic](https://pantheon.io/blog/measuring-php-7-performance-new-relic-nobsbenchmarks)
-- [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
-- [New Relic and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
+- [Measuring PHP7 Performance with New Relic](https://pantheon.io/blog/measuring-php-7-performance-new-relic-nobsbenchmarks){.external}
+- [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/){.external}
+- [New Relic and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots){.external}
+- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic){.external}
 
 ## Focusing on Authenticated Users Only
 
@@ -55,8 +68,9 @@ To disable New Relic for anonymous traffic on Drupal-based sites, add the follow
 if (function_exists('newrelic_ignore_transaction')) {
   $skip_new_relic = TRUE;
   // Capture all transactions for users with a PHP session.
+  // (SSESS is the session cookie prefix when PHP session.cookie_secure is on.)
   foreach (array_keys($_COOKIE) as $cookie) {
-    if (substr($cookie, 0, 4) == 'SESS') {
+    if (substr($cookie, 0, 4) == 'SESS' || substr($cookie, 0, 5) == 'SSESS') {
       $skip_new_relic = FALSE;
     }
   }
@@ -90,124 +104,123 @@ if (function_exists('newrelic_ignore_transaction')) {
 }
 ```
 
-## Troubleshooting
+{% include("content/monitor-alerts.html")%}
 
-### New Relic Access
+
+## New Relic Access
 
 Your first visit to New Relic must be via the **Go to New Relic** button. Once you have successfully accessed the New Relic Dashboard, you may use the environment links to go directly to their corresponding New Relic page.
 
-#### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
+### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
 1. From the New Relic Dashboard, click on the User Account to the right.
 2. From the Dropdown, click **Log Out**.
 3. Back on the Pantheon Site Dashboard, click the **Go to New Relic** button.
 
-#### If you click the Go to New Relic button and are instead sent to a log in screen
+### If you click the Go to New Relic button and are instead sent to a log in screen
+
+To troubleshoot this issue, try logging into the Pantheon Dashboard in an [Incognito](https://support.google.com/chrome/answer/95464){.external} or [Private](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history){.external} window. The New Relic accounts are shared via SSO, so loading the page in a private window will force new sign-in credentials. If you can sign in this way, use the following steps to resolve access for your main browser session:
+
 1. Close all of your open New Relic tabs.
-2. Delete all of the New Relic cookies from your browser.
+2. Delete all of the New Relic cookies from your browser (support articles for [Chrome](https://support.google.com/chrome/answer/95647){.external} or [Firefox](https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored#w_delete-cookies-for-a-single-site){.external}).
 3. Reload your Pantheon Dashboard.
 4. Click the **Go to New Relic** button.
 
-#### If you are prompted to Set Up New Relic
+### If you are prompted to Set Up New Relic
 If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic.
 
 1. Visit one of your site pages.
-2. Close the tab, wait for the New Relic data table to appear in your Pantheon Site Dashboard, under the **New Relic** tab.
+2. Close the tab, wait a few minutes.
 3. Click the **Go to New Relic** button.
 
-#### If you see "We're sorry, you haven't verified your email address yet."
+### Who is the New Relic account associated with?
+- If the site owner is a user, the site owner's name and email address is used to create the New Relic account.
+- If the site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. This user must be a member of the organization.
+
+### If you see "We're sorry, you haven't verified your email address yet."
 After activating New Relic, a confirmation email will be sent to the site owner to complete the setup process. The account will need to be verified first before members of the site can access New Relic dashboard.
 
-If the site owner did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
+If the New Relic account holder, i.e. the site owner or user who activated the New Relic account for the site, did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
 
 1. On New Relic's login page, click **Forgot your password?**.
 2. Enter the email address of the site owner.
 3. Click **Send my reset link**.
+4. Open the email you will receive, click the reset link, and follow the prompts to access your account.
 
-### New Relic data is not showing on the Pantheon Site Dashboard
-Browser extensions that restrict or block trackers, such as [Ghostery](https://www.ghostery.com/our-solutions/ghostery-browser-extension/), may prevent data from loading within Pantheon's New Relic tab on the Site Dashboard. Disable the extension, or add the following sites as trusted (whitelisted):
-
- - dashboard.pantheon.io
- - rpm.newrelic.com
+Contact Support if you are unsure what user the New Relic account is associated with and unable to identify where the password reset email has been sent.
 
 
-#### Who is the New Relic account associated with?
-- If site owner is a user, the site owner's name and email address is used to create the New Relic account.
-- If site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. These users must be members of the organization.
-
-To learn how to use New Relic APM Pro to monitor your site's performance, see [New Relic's documentation](https://docs.newrelic.com/docs/agents/php-agent/getting-started/new-relic-php#monitor-performance).
-
+## Troubleshooting
 
 ### Removing Multidev Environments in New Relic
-After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).
+After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers){.external}.
 
 1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.
 2. From the New Relic menu bar, select **APM** > **Applications**.
 3. Wait until the color-coded health status turns gray, then select the app's gear icon.
 4. Select **Delete app**, and click the confirmation button.
 
-### AMP Validation Errors
-New Relic's Browser agent JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve validation errors by disabling New Relic's Browser monitoring agent on all AMP pages.
+### Disable New Relic Browser Monitoring Agent
+You may encounter situations where New Relic's Browser agent may interfere with other systems. For example, the JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html){.external} failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve many errors by disabling New Relic's Browser monitoring agent.
 
-Start by strategizing and testing logic to identify AMP pages based on your site's implementation. Once confirmed, place AMP isolating logic within the first conditional statement of the example below. Then disable New Relic's Browser monitoring by setting `newrelic_disable_autorum` to `FALSE` only if the current request is an AMP page:
+In this example we'll disable it on all AMP pages:
 
 ```php
-if (extension_loaded('newrelic')) {
-  // Add AMP page identifying logic here that would, for example,
-  // set variable $amp to TRUE or FALSE. If $amp is true, disable new relic
-  if ($amp) {
-    newrelic_disable_autorum (FALSE);
-    newrelic_ignore_transaction();
+$path = $_SERVER['REQUEST_URI'];
+$find = '?amp';
+$pos = strpos($path, $find);
+if ($pos !== false){
+  if (function_exists('newrelic_disable_autorum')) {
+    newrelic_disable_autorum();
   }
 }
 ```
 
-### APM Availability Monitoring Alerts and False Positive Downtime Events
-When your site uses HTTPS there are two scenarios that can cause your New Relic APM's Availability Monitoring to report false positive Downtime events for your site.
+To isolate the disabling of New Relic to only AMP pages, the example logic checks the current request for `?amp`. Adjust this example as needed based on your site's implementation of Google AMP and it's corresponding URL patterns.
 
-#### Server Name Indication (SNI)
-Sites configured with third-party proxy services that use SNI to serve HTTPS requests (e.g. Cloudflare, CloudProxy) will cause alerts and downtime events within New Relic APM's Availability Monitoring reports when the ping URL uses HTTPS. This is a [known New Relic availability monitoring limitation](https://docs.newrelic.com/docs/alerts/alert-policies/downtime-alerts/availability-monitoring#limits).
+It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal 8, this can be done using an event subscriber that listens to the `kernel.request` event for instance.
 
-#### TLS 1.1 or Higher
-When your site uses HTTPS on Pantheon, the cryptographic protocol in use is TLS 1.1. The regular New Relic Availability Monitoring alerts can only access sites using TLS 1.0 or below. New Relic recommends that you create a New Relic Synthetics alert which can access HTTPS sites using cryptographic protocols TLS 1.1 and higher.
-
-#### Solution: Use New Relic Synthetics Lite
-As an alternative to both situations, you can use the free New Relic Synthetic Lite service to monitor HTTPS pages served with SNI. Enable this service using the [steps provided above](#configure-ping-monitors-for-availability).
+### APM Availability Monitoring
+Availability monitoring from APM is heavily outdated, and will not work with the Pantheon platform. As an alternative, you can use the free New Relic Synthetic Lite service using the [steps provided above](#configure-ping-monitors-for-availability).
 
 ## Frequently Asked Questions
 
-#### How do I change the New Relic site owner now that our Pantheon site has a new site owner?
-A New Relic account can have only one owner at any time. You must be the current account owner to change your role to someone who currently has an Admin role for the account. For more information, see [New Relic's documentation](https://docs.newrelic.com/docs/accounts-partnerships/accounts/account-billing-usage/change-account-owner).
+### How do I change the New Relic site owner now that our Pantheon site has a new site owner?
+A New Relic account can have only one owner at any time. You must be the current account owner to change your role to someone who currently has an Admin role for the account. For more information, see [New Relic's documentation](https://docs.newrelic.com/docs/accounts-partnerships/accounts/account-billing-usage/change-account-owner){.external}.
 
-#### How can I share a link to a particular metric?
+### How can I share a link to a particular metric?
 
 At the bottom of any page, click **Permalink**. This will preserve the current time window and take the link recipient to the same page you're currently looking at.
 
-#### How much is New Relic APM Pro?
+### How much is New Relic APM Pro?
 
-Pantheon provides New Relic APM Pro for all sites at no cost.
+Pantheon provides New Relic APM Pro for all site plans except Basic, at no cost. Purchase additional services or upgrade your New Relic account by reaching out to [sales@newrelic.com](mailto:sales@newrelic.com){.external}.
 
-#### Will turning on New Relic APM Pro slow my site down?
+### Will turning on New Relic APM Pro slow my site down?
 
 Basically no, New Relic will not make your site slower. There is a very small amount of overhead, but it's imperceptible. The amount of available metrics useful for debugging and improving performance far outstrips the negligible difference.
 
-#### What is the difference between app server response time and browser page load time?
+### What is the difference between app server response time and browser page load time?
 
 App server response time measures how the page was built on Pantheon, including PHP execution, database, Redis (if used). Browser page load time measures the additional time of client-side page rendering, DOM processing, and how long it took to transfer to the client. While a fast app server response time is optimal, a slow browser page load time indicates a bad user experience. Some causes are unaggregated or uncompressed scripts and stylesheets, invalid markup, or unoptimized client-side code (like JavaScript).
 
-#### Can I use my existing New Relic license with my Pantheon site?
+### Can I use my existing New Relic license with my Pantheon site?
 
 New Relic Pro is automatically provisioned for your site. Unfortunately, you cannot use your existing license.
 
-#### Why are servers listed in New Relic with no data?
+### Why are servers listed in New Relic with no data?
 
 Because Pantheon's runtime matrix runs your application across many containers simultaneously, it's common to see old containers with no reporting data as your application shifts around. This is not a cause for concern.
 
+### Can I disable New Relic for a specific environment?
+
+We don't recommend turning off New Relic for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also <a href="/docs/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment" data-proofer-ignore>write logic based on the environment</a>.
 
 ## See Also
 - [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
-- [New Relic and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
-- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
-- [New Relic University: Intro to APM](https://learn.newrelic.com/courses/intro_apm)
-- [New Relic Univeristy: APM Advanced](https://learn.newrelic.com/courses/apm_advanced)
-- [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui)
-- [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help)
+- [New Relic and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots){.external}
+- [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic){.external}
+- [New Relic University: Intro to APM](https://learn.newrelic.com/courses/intro_apm){.external}
+- [New Relic University: APM Advanced](https://learn.newrelic.com/courses/apm_advanced){.external}
+- [Interface Overview](https://newrelic.com/docs/site/the-new-relic-ui){.external}
+- [Finding Help From the New Relic UI](https://newrelic.com/docs/site/finding-help){.external}
+- [Introduction to New Relic for PHP](https://docs.newrelic.com/docs/agents/php-agent/getting-started/introduction-new-relic-php#monitor-performance){.external}

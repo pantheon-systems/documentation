@@ -5,7 +5,7 @@ tags: [siteintegrations]
 type: guide
 permalink: docs/guides/:basename/
 date: 5/1/2017
-contributors: scottmassey
+contributors: [scottmassey]
 ---
 New Relic is a powerful tool for monitoring the performance of a WordPress or Drupal site. It provides insight into how efficiently a website is using resources, and where improvements can be made in the application. Pantheon offers New Relic Pro within the Site Dashboard on all sites for free.
 
@@ -67,8 +67,9 @@ In the commands below, replace `<site>` with your Pantheon site name.
     <p markdown="1">`api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.</p>
     </div>
 
-6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
+6. [Add, commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
 
+        git add private/scripts/new_relic_deploy.php
         git commit -am "Adding deployment recording to New Relic"
         git push origin master
 
@@ -83,4 +84,4 @@ In the commands below, replace `<site>` with your Pantheon site name.
 7. Once you've tested and confirmed there are no issues, deploy your new commit to Test and Live. From now on, your deploys will be recorded in New Relic.
 
 ## Conclusion
-This is a fast way to integrated New Relic and Pantheon. The [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.
+This is a fast way to integrate New Relic and Pantheon. The [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repository provides many more ways to automate development, so please take advantage of them and extend them to fit your workflow.

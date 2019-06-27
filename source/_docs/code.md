@@ -28,8 +28,8 @@ Drupal site code repositories are clones of one of our Drupal upstreams: [Drops-
     └── themes
 
 
-<div class="alert alert-info"><h4 class="info">Note</h4>The
- <p><code>sites/default/files</code> directory is represented in your code repository as a symbolic link to the Pantheon environment's <code>files/</code> directory.</p></div>
+<div class="alert alert-info"><h4 class="info">Note</h4>
+ <p markdown="1">The `sites/default/files` directory is represented in your code repository as a symbolic link to the Pantheon environment's `files/` directory.</p></div>
 
 ### WordPress Code Structure
 
@@ -59,7 +59,7 @@ WordPress site code repositories are clones of one our [WordPress upstream](http
     ├── plugins
 ```
 
-<div class="alert alert-info"><h4 class="info">Note</h4>The <p><code>wp-content/uploads</code> directory is represented in your code repository as a symbolic link to the Pantheon environment's <code>files/</code> directory.</p></div>
+<div class="alert alert-info"><h4 class="info">Note</h4><p markdown="1">The `wp-content/uploads` directory is represented in your code repository as a symbolic link to the Pantheon environment's `files/` directory.</p></div>
 
 ## Managing Permissions
 Permissions should be managed in the Dev environment via SFTP exclusively, as [Git only pays attention to the executable bit](https://git-scm.com/docs/user-manual.html).
@@ -73,7 +73,7 @@ You can also view the diff output for each individual file:
 ![Diff output](/source/docs/assets/images/dashboard/diff-screen.png)
 
 ### Upstream Updates
-The Dev environment provides [one-click updates](/docs/upstream-updates/) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
+The Dev environment provides [one-click updates](/docs/core-updates/) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
   <dl>
     <dt>Upstream</dt>
       <dd>A code repository that serves as a common package for your web application.</dd><br>
@@ -87,8 +87,9 @@ The Dev environment provides [one-click updates](/docs/upstream-updates/) for yo
 
 ## Development
 Get started by learning more about the [Pantheon workflow](/docs/pantheon-workflow/) and [environment configuration](/docs/read-environment-config/). Then, dive in to [developing directly with SFTP mode](/docs/sftp/) and [explore more ways](/docs/cms-admin/) of utilizing built-in admin tools.
+
 ### .gitignore
-Pantheon provides a default `.gitignore` file in the base of each site's code repository and in `sites/default/files`. You can use this file to exclude directories from version control and backups.
+Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
 
 ## Performance
 There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/docs/debug-slow-performance/) and utilizing the [PHP slow log](/docs/php-slow-log/).
@@ -97,9 +98,9 @@ Learn how to use [bots and indexing](/docs/bots-and-indexing/) in a way that doe
 
 ## See Also
 - [Hot Fixes](/docs/hotfixes/)
-- [What is the "pantheon_api.module"](/docs/pantheon_api-module)
+- [What is the "pantheon_api.module"](/docs/modules#pantheon-module-drupal-7)
 - [Email on Pantheon](/docs/email/)
-- [Domains and Redirects](/docs/domains/)
+- [Platform and Custom Domains](/docs/domains/)
 - [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/)
 - [LDAP and LDAPS](/docs/ldap-and-ldaps/)
 - [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway/)

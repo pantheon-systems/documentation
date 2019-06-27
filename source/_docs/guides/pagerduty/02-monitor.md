@@ -1,7 +1,9 @@
 ---
 title: Incident Management
 subtitle: New Relic Ping Monitors
+description: Page two of our guide on Pagerduty integration with New Relic for incident management.
 layout: guide
+type: guide
 anchorid: monitor
 pagerduty: true
 generator: pagination
@@ -12,7 +14,7 @@ use:
 permalink: docs/guides/pagerduty/monitor/
 nexturl: guides/pagerduty/schedule/
 previousurl: guides/pagerduty/
-editpath: alert/02-monitors.md
+editpath: pagerduty/02-monitors.md
 ---
 In this lesson, we'll set up a new ping monitor to periodically check the site's availability in New Relic Synthetics.
 
@@ -44,3 +46,5 @@ Now that you have a monitor setup in New Relic to periodically check your Panthe
   ![New Relic select entity](/source/docs/assets/images/pagerduty/new-relic-entity.png)
 
 8. Enter a name for the condition, like "Live Availability", and click **Create condition**.
+
+{% include("content/monitor-alerts.html")%}
