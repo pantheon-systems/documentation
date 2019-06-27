@@ -142,7 +142,7 @@ module.exports = {
               rel: "nofollow noopener noreferrer external",
             },
           },
-          `gatsby-remark-slug`,
+          `gatsby-remark-heading-slug`,
         ],
       },
     },
