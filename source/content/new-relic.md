@@ -175,6 +175,7 @@ if ($pos !== false){
   }
 }
 ```
+This code should be added to `settings.php` for Drupal sites or `wp-config.php` for WordPress sites.
 
 To isolate the disabling of New Relic to only AMP pages, the example logic checks the current request for `?amp`. Adjust this example as needed based on your site's implementation of Google AMP and it's corresponding URL patterns.
 
