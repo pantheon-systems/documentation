@@ -50,4 +50,4 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * Verify [Global CDN caching](/docs/test-global-cdn-caching/) is working on your site.
 
-* Performance tune the front-end of your WP site by following this [guide](docs/guides/frontend-performance/).
+* Follow our [Frontend Performance](/docs/guides/frontend-performance/) guide to tune your WordPress site.
