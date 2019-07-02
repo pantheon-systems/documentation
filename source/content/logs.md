@@ -186,13 +186,15 @@ By default, Drupal logs events using the Database Logging module (dblog). PHP fa
 
  * Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
 
-        ```bash
-        terminus drush <site>.<env> -- watchdog-show --tail
-        ```
+  ```bash
+  terminus drush <site>.<env> -- watchdog-show --tail
+  ```
 
-        <Alert title="Note" type="info">
-        At this time, `terminus drush "watchdog-show --tail"` is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.
-        </Alert>
+  <Alert title="Note" type="info">
+
+  At this time, `terminus drush "watchdog-show --tail"` is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.
+
+  </Alert>
 
 ### My Drupal database logs are huge. Should I disable dblog?
 
