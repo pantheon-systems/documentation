@@ -6,6 +6,7 @@ permalink: docs/guides/:basename/
 tags: [moreguides, workflow, composer]
 contributors: [dustinleblanc]
 ---
+
 <Alert title="Note" type="info">
 
 Converting to a Composer managed site *removes* the ability to [apply updates via the site dashboard](/core-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates.
