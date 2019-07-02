@@ -16,7 +16,7 @@ Analyzing the MySQL slow log is an important part of troubleshooting client issu
 
 To download the environment's MySQL slow log, use the [method outlined here](/logs/#database-log-files).
 
-```nohighlight
+```
 $ sftp -o Port=2222 live.8883e341-e49d-4c84-958b-8685f263e5fb@dbserver.live.8883e341-e49d-4c84-958b-8685f263e5fb.drush.in
 Connected to live.8883e341-e49d-4c84-958b-8685f263e5fb@dbserver.live.8883e341-e49d-4c84-958b-8685f263e5fb.drush.in.
 sftp> cd logs
@@ -34,9 +34,9 @@ sftp> exit
 
 There are several different tools you can use to analyze a MySQL slow log:
 
-- [Percona Toolkit](https://www.percona.com/doc/percona-toolkit/3.0/index.html)<br>
-Recommended. Actively maintained and includes a number of database utilities, including a slow query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html){.external}. 
-- [MySQL Slow Query Log Filter](https://code.google.com/p/mysql-log-filter/){.external}<br>
+- [Percona Toolkit](https://www.percona.com/doc/percona-toolkit/3.0/index.html)<br />
+Recommended. Actively maintained and includes a number of database utilities, including a slow query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html). 
+- [MySQL Slow Query Log Filter](https://code.google.com/p/mysql-log-filter/)<br />
 Not updated since 2007. Still useful, but this will throw warnings with newer versions of PHP.
 
 These tools provide summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. 
@@ -130,7 +130,7 @@ LEFT JOIN field_data_field_section_number field_data_field_section_number ON nod
 WHERE (( (field_data_field_parent_course.field_parent_course_target_id = '7996' ) )AND(( (node.status = '1') AND (node.type IN  ('section')) AND (field_data_field_term.field_term_tid IN  ('141', '131', '126', '96')) )))) subquery\G
 ```
 
-With this output, you can copy the offending query and run it through `EXPLAIN` on the MySQL server to find out why exactly the query runs slowly. In this case, we can see that a table is missing an index, which will slow down the response.
+With this output, you can copy the offending query and run it through `EXPLAIN` on the MySQL server to find out why the query runs slowly. In this case, `EXPLAIN` shows that the table is missing an index, so adding an index could improve performance.
 
 ### MySQL Slow Query Log Filter
 Here is an example usage of MySQL Slow Query Log Filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
