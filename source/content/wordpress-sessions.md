@@ -23,25 +23,20 @@ Plugins with session-using code are relying on PHP's default session manager, wh
 
 ## Varnish or caching is not working when a specific plugin or theme that uses `$_SESSIONS` is enabled
 
+Due to how caching and sessions work, sessions need to be uncached for it to work properly in it is impossible to have a cached site when there are sessions in place. It would be best to go to a cookie based solution to avoid performance hit of uncached session pages.
+
 Symptoms of this issue shows when the header is inspected, you will see that the session cookie is always set on every page load eg. 
 
 ```
 Set-Cookie: SESS1234XXXXXXXXXXXXXX path=/; domain=.example.pantheonsite.io; HttpOnly
 ```
 
-The best way to determine which plugin or theme is not caching your site is by using this [tool](https://varnishcheck.pantheon.io/) with each of the steps until you determine which component is breaking the cache:
+The best way to determine which plugin or theme is not caching your site is by using this [tool](https://varnishcheck.pantheon.io/) or by inspecting the headers using `curl -sI example.com` with each of the steps until you determine which component is breaking the cache:
 1) To check if it is the theme that is breaking the cache, use your default theme like twentynineteen and check with the tool.
 2) To check if it is any of the plugin is breaking the cache, disable the plugins and turn it on one by one while checking with the tool if it breaks the cache. Do not forget to clear the cache from the Pantheon dashboard everytime that you disable a plugin. 
 Note: If you have a local copy of you site, you can try doing search for plugins that uses `session_start()` or `$_SESSIONS` and start turning them off first.
 3) To check if it is any of the 3rd party must-use plugins or drop-ins that is breaking the cache, temporarily remove the 3rd party must-use plugins and leaving only the `Pantheon` and `WP Native PHP Sessions`. There should be also no drop-ins in place.
 
-Once you were able to determine the plugin or theme that causes the issue, most likely `session_start()` is always started and not being checked if it already have a prior session in place. You will need to report that with the plugin/theme author or directly modify the code to have a check in place eg. 
-
-```php
-if ( ! (session_name() ) ) {
-    session_start();
-}
-```
 
 ### Install WordPress Native PHP Sessions Plugin
 If `$_SESSIONs` are necessary for your application, install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
