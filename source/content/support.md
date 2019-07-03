@@ -22,7 +22,7 @@ Pantheon offers a range of support packages that extend to include all the featu
 
 Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
 
- - **Open the Ticket in the Right Place:** Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package. For a visual, check out the [Support Tab from the Organization Dashboard](#the-support-tab-from-the-organization-dashboard).
+ - **Open the Ticket in the Right Place:** If you are a member of an [Organization](/docs/organizations/), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
 
  - **One ticket per issue:** Opening multiple tickets on the same issue will only impede our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
 
