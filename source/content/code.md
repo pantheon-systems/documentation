@@ -115,5 +115,5 @@ Learn how to use [bots and indexing](/docs/bots-and-indexing/) in a way that doe
 - [Platform and Custom Domains](/docs/domains/)
 - [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/)
 - [LDAP and LDAPS](/docs/ldap-and-ldaps/)
-- [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway/)
+- [Secure Integration](/docs/secure-integration/)
 - [SSO and Identity Federation on Pantheon](/docs/sso/)

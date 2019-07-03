@@ -1,18 +1,18 @@
 - title: 'Get Started'
   path: 'get-started'
   video_id: 'qHHWonKfGsQ'
-  cta: 
+  cta:
     title: 'Quick Start Guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/docs/guides/quickstart/'
-  cta_alt: 
+  cta_alt:
     title: 'Live Demo'
     subtitle: 'See how you can build amazing digital experiences on the fastest and most reliable WebOps platform.'
     url: '/live-demo?docs'
   topics-groups:
     - title: 'Create Sandbox Site'
       subtitle: 'Spin up a Drupal or WordPress site for free in minutes.'
-      links: 
+      links:
         - text: 'Create a Drupal 8 Site From the Command Line Using Terminus and Drush'
           url: '/docs/guides/drupal8-commandline/'
           icon: 'fa fa-book'
@@ -32,7 +32,7 @@
           url: '/docs/start-state/'
     - title: 'Explore the Site Dashboard'
       subtitle: 'A developer console for all your sites.'
-      links: 
+      links:
         - text: 'Pantheon Annual Billing'
           url: '/docs/annual-billing/'
         - text: 'Your Site Code on Pantheon'
@@ -54,22 +54,22 @@
   subtopics:
     - title: 'Migrate your Sites to Pantheon'
       subtitle: 'Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: 'Guided Migrations'
-          links: 
+          links:
             - text: 'Guided WordPress Migrations'
               url: '/docs/videos/migrate-wordpress/'
               icon: 'fa fa-video-camera'
             - text: 'Migrate Sites to Pantheon'
               url: '/docs/migrate/'
         - title: 'Create Archives for Manual Migration'
-          links: 
+          links:
             - text: 'Exporting Sites from GoDaddy with cPanel'
               url: '/docs/migrate-cpanel/'
             - text: 'Extracting Sites from a Drupal Multisite'
               url: '/docs/unwind-drupal-multisite/'
         - title: 'Manual Migrations'
-          links: 
+          links:
             - text: 'Major Version Drupal Upgrades'
               url: '/docs/drupal-updates/'
             - text: 'Importing Drush Site Archives with Terminus'
@@ -81,14 +81,14 @@
 - title: 'Develop'
   path: 'develop'
   video_id: 'v7qe2_OZ95k'
-  cta: 
+  cta:
     title: 'Quick Start Guide'
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/docs/guides/quickstart/'
   topics-groups:
     - title: 'Add On Services'
       subtitle: 'Use free services to improve search and enable robust application caching.'
-      links: 
+      links:
         - text: 'New Relic APM Pro'
           url: '/docs/new-relic/'
           icon: 'fa fa-book'
@@ -106,7 +106,7 @@
           url: '/docs/wordpress-solr/'
     - title: 'Composer'
       subtitle: 'Use Composer to manage some or all of your dependencies.'
-      links: 
+      links:
         - text: 'Composer Fundamentals and Workflows'
           url: '/docs/composer/'
         - text: 'Build Tools'
@@ -123,7 +123,7 @@
           icon: 'fa fa-book'
     - title: 'Environment Configuration Variables'
       subtitle: 'Manage configuration and site settings per environment.'
-      links: 
+      links:
         - text: 'Getting the Client IP Address'
           url: '/docs/client-ip/'
         - text: 'Platform and Custom Domains'
@@ -146,7 +146,7 @@
           url: '/docs/wp-config-php/'
     - title: 'Security'
       subtitle: 'Enable HTTPS and learn about various authentication methods.'
-      links: 
+      links:
         - text: 'Using Lockr to Secure and Manage API and Encryption Keys'
           url: '/docs/guides/lockr/'
           icon: 'fa fa-book'
@@ -163,8 +163,8 @@
           url: '/docs/https/'
         - text: 'Creating and Revoking Machine Tokens'
           url: '/docs/machine-tokens/'
-        - text: 'Pantheon Enterprise Gateway'
-          url: '/docs/pantheon-enterprise-gateway/'
+        - text: 'Pantheon Secure Integration'
+          url: '/docs/secure-integration/'
         - text: 'Private Paths for Files and Code'
           url: '/docs/private-paths/'
         - text: 'Lock Environments with the Dashboard Security Tool'
@@ -183,7 +183,7 @@
           url: '/docs/wordpress-google-sso/'
     - title: 'Workflows'
       subtitle: 'Best practice workflow recommendations for streamlining development.'
-      links: 
+      links:
         - text: 'Collaborative Development Using GitHub and Pantheon'
           url: '/docs/guides/collaborative-development/'
           icon: 'fa fa-book'
@@ -239,9 +239,9 @@
   subtopics:
     - title: 'Command Line Interface'
       subtitle: 'Use Terminus to interact with the platform from the command line.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: 'Terminus'
-          links: 
+          links:
             - text: 'Introduction to Terminus'
               url: '/docs/videos/terminus/'
               icons: 'fa fa-video-camera'
@@ -259,7 +259,7 @@
             - text: 'Terminus Manual'
               url: '/docs/terminus/'
         - title: 'Drush'
-          links: 
+          links:
             - text: 'Drush'
               url: '/docs/videos/drush/'
               icon: 'fa fa-video-camera'
@@ -270,7 +270,7 @@
             - text: 'Drupal Drush Command-Line Utility'
               url: '/docs/drush/'
         - title: 'WP-CLI'
-          links: 
+          links:
             - text: 'WP-CLI'
               url: '/docs/videos/wp-cli/'
               icon: 'fa fa-video-camera'
@@ -280,9 +280,9 @@
               url: '/docs/wp-cli/'
     - title: 'Git'
       subtitle: 'Push code changes to the platform using Git mode.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: ''
-          links: 
+          links:
             - text: 'Git'
               url: '/docs/videos/git/'
               icon: 'fa fa-video-camera'
@@ -293,7 +293,7 @@
             - text: 'Undo Git Commits'
               url: '/docs/undo-commits/'
         - title: ''
-          links: 
+          links:
             - text: 'Your Site Code on Pantheon'
               url: '/docs/code/'
             - text: 'Git FAQs'
@@ -302,9 +302,9 @@
               url: '/docs/multidev/'
     - title: 'On-Server Development (SFTP)'
       subtitle: 'Manage plugins, modules, and themes within the WordPress Dashboard or Drupal Admin using SFTP mode.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: 'Using the Admin Interface'
-          links: 
+          links:
             - text: 'On-Server Development'
               url: '/docs/videos/sftp/'
               icon: 'fa fa-video-camera'
@@ -313,7 +313,7 @@
             - text: 'Developing on Pantheon Directly with SFTP Mode'
               url: '/docs/sftp/'
         - title: 'Managing Files'
-          links: 
+          links:
             - text: 'On-Server Development'
               url: '/docs/videos/sftp/'
               icon: 'fa fa-video-camera'
@@ -327,9 +327,9 @@
               url: '/docs/winscp/'
     - title: 'Local Development'
       subtitle: 'Sync your code, database, and files for local development.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: ''
-          links: 
+          links:
             - text: 'Local Development'
               url: '/docs/videos/local/'
               icon: 'fa fa-video-camera'
@@ -340,7 +340,7 @@
             - text: 'Secure Connections to Pantheon Services via TLS or SSH Tunnels'
               url: '/docs/ssh-tunnels/'
         - title: ''
-          links: 
+          links:
             - text: 'Install Cygwin on Windows'
               url: '/docs/cygwin-windows/'
             - text: 'Modify the Local Hosts File'
@@ -352,14 +352,14 @@
 - title: 'Go Live'
   path: 'go-live'
   video_id: 'nZvf2CrLh9o'
-  cta: 
+  cta:
     title: 'Launch Essentials Guide'
     subtitle: "Ready to launch like a pro? Check out our step-by-step guide to see how it's done."
     url: '/docs/guides/launch/'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'
-      links: 
+      links:
         - text: 'Load Testing Drupal and WordPress with BlazeMeter'
           url: '/docs/guides/load-testing-with-blazemeter/'
           icon: 'fa fa-book'
@@ -371,7 +371,7 @@
           url: '/docs/new-relic/'
     - title: 'Launch-Checks and Site Status Reports'
       subtitle: 'Get recommendations and discover site issues fast.'
-      links: 
+      links:
         - text: 'Launch Check - Drupal Performance and Configuration Analysis'
           url: '/docs/drupal-launch-check/'
         - text: 'Converting MySQL Tables From MyISAM to InnoDB'
@@ -380,7 +380,7 @@
           url: '/docs/wordpress-launch-check/'
     - title: 'Billing'
       subtitle: 'Learn about common billing and administrative tasks.'
-      links: 
+      links:
         - text: 'Account Billing in the User Dashboard'
           url: '/docs/account-billing/'
         - text: 'Add a Client Site to Your Organization Dashboard'
@@ -398,9 +398,9 @@
   subtopics:
     - title: 'Point Domains to Pantheon'
       subtitle: 'Add custom domains to environments, configure DNS, and use PHP for redirecting to a common domain.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: 'Configure DNS'
-          links: 
+          links:
             - text: 'Introduction to the Domain Name System'
               url: '/docs/dns/'
             - text: 'Platform and Custom Domains'
@@ -416,7 +416,7 @@
             - text: 'Vanity Domains'
               url: '/docs/vanity-domains/'
         - title: 'Handling Redirects'
-          links: 
+          links:
             - text: 'Platform and Custom Domains'
               url: '/docs/domains/'
             - text: 'Enabling Mobile Redirection with Cloudflare'
@@ -428,14 +428,14 @@
 - title: 'Explore Platform Architecture'
   path: 'platform'
   video_id: 'khwioqd597'
-  cta: 
+  cta:
     title: 'Quick Start Guide '
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/docs/guides/quickstart/'
   topics-groups:
     - title: 'Platform Services & Resources'
       subtitle: 'Learn about the services and resources provided to your website.'
-      links: 
+      links:
         - text: 'Database Workflow Tool'
           url: '/docs/database-workflow/'
         - text: 'Date and Time'
@@ -472,7 +472,7 @@
           url: '/docs/wordpress-cron/'
     - title: 'Platform Architecture'
       subtitle: 'Learn how our container-based system gives you unmatched performance.'
-      links: 
+      links:
         - text: 'All About Application Containers'
           url: '/docs/application-containers/'
         - text: 'Bots and Indexing on Pantheon'
@@ -489,8 +489,8 @@
           url: '/docs/modules/'
         - text: 'Dynamic Outgoing IP Addresses'
           url: '/docs/outgoing-ips/'
-        - text: 'Pantheon Enterprise Gateway'
-          url: '/docs/pantheon-enterprise-gateway/'
+        - text: 'Pantheon Secure Integration'
+          url: '/docs/secure-integration/'
         - text: 'Pantheon YAML Configuration Files'
           url: '/docs/pantheon-yml/'
         - text: 'Platform Considerations'
@@ -508,9 +508,9 @@
   subtopics:
     - title: 'The pantheon.yml Configuration File'
       subtitle: 'Automate your Pantheon workflows using platform hooks and manage advanced site configurations in YAML.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: ''
-          links: 
+          links:
             - text: 'The Pantheon.yml Configuration File'
               url: '/docs/videos/pantheon-yml/'
               icons: 'fa fa-vide-camera'
@@ -519,7 +519,7 @@
             - text: 'Upgrade PHP Versions'
               url: '/docs/php-versions/'
         - title: ''
-          links: 
+          links:
             - text: 'Managing Drush Versions on Pantheon'
               url: '/docs/drush-versions/'
             - text: 'Pantheon YAML Configuration Files'
@@ -529,14 +529,14 @@
 - title: 'Automate & Integrate'
   path: 'automate'
   video_id: 'iazvxxlsja'
-  cta: 
+  cta:
     title: 'Terminus Manual'
     subtitle: 'Prefer working from the command line? Check out Terminus, the Pantheon CLI.'
     url: '/docs/terminus/'
   topics-groups:
     - title: ''
       subtitle: ''
-      links: 
+      links:
         - text: 'Integrating Asana with Pantheon using Quicksilver Hooks'
           url: '/docs/guides/asana/'
           icons: 'fa fa-book'
@@ -574,7 +574,7 @@
           url: '/docs/wordpress-google-sso/'
     - title: ''
       subtitle: ''
-      links: 
+      links:
         - text: 'Drupal Commerce on Drupal 8'
           url: '/docs/guides/drupal-8-commerce/'
           icons: 'fa fa-book'
@@ -613,9 +613,9 @@
   subtopics:
     - title: 'The pantheon.yml Configuration File'
       subtitle: 'Automate your Pantheon workflows using platform hooks and manage advanced site configurations in YAML.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: ''
-          links: 
+          links:
             - text: 'The Pantheon.yml Configuration File'
               url: '/docs/videos/pantheon-yml/'
               icons: 'fa fa-video-camera'
@@ -624,7 +624,7 @@
             - text: 'Upgrade PHP Versions'
               url: '/docs/php-versions/'
         - title: ''
-          links: 
+          links:
             - text: 'Managing Drush Versions on Pantheon'
               url: '/docs/drush-versions/'
             - text: 'Pantheon YAML Configuration Files'
@@ -633,9 +633,9 @@
               url: '/docs/quicksilver/'
     - title: 'Command Line Interface'
       subtitle: 'Use Terminus to interact with the platform from the command line.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: 'Terminus'
-          links: 
+          links:
             - text: 'Introduction to Terminus'
               url: '/docs/videos/terminus/'
               icon: 'fa fa-video-camera'
@@ -653,7 +653,7 @@
             - text: 'Terminus Manual'
               url: '/docs/terminus/'
         - title: 'Drush'
-          links: 
+          links:
             - text: 'Drush'
               url: '/docs/videos/drush/'
               icon: 'fa fa-video-camera'
@@ -664,7 +664,7 @@
             - text: 'Drupal Drush Command-Line Utility'
               url: '/docs/drush/'
         - title: 'WP-CLI'
-          links: 
+          links:
             - text: 'WP-CLI'
               url: '/docs/videos/wp-cli/'
               icon: 'fa fa-video-camera'
@@ -675,14 +675,14 @@
 - title: 'Optimize Performance'
   path: 'performance'
   video_id: '34lai83fx6'
-  cta: 
+  cta:
     title: 'Front End Performance Guide'
     subtitle: "Ready to dive into Pantheon's Global CDN? Check out this guide to learn how to ace an online speed test."
     url: '/docs/guides/frontend-performance/'
   topics-groups:
     - title: 'New Relic'
       subtitle: 'Use New Relic’s reporting to get end-to-end visibility into your website’s performance.'
-      links: 
+      links:
         - text: 'Load Testing Drupal and WordPress with BlazeMeter'
           url: '/docs/guides/load-testing-with-blazemeter/'
           icon: 'fa fa-book'
@@ -694,7 +694,7 @@
           url: '/docs/new-relic/'
     - title: 'Log Files'
       subtitle: 'Use log files to expose errors, track response times, analyze visitors and more.'
-      links: 
+      links:
         - text: 'Debugging Slow Performance'
           url: '/docs/debug-slow-performance/'
         - text: 'Log Files on Pantheon'
@@ -707,7 +707,7 @@
           url: '/docs/php-slow-log/'
     - title: 'Launch-Checks and Site Status Reports'
       subtitle: 'Get recommendations and discover site issues fast.'
-      links: 
+      links:
         - text: 'Launch Check - Drupal Performance and Configuration Analysis'
           url: '/docs/drupal-launch-check/'
         - text: 'Converting MySQL Tables From MyISAM to InnoDB'
@@ -717,9 +717,9 @@
   subtopics:
     - title: 'Cache'
       subtitle: 'Understand frontend and backend caching on our platform.'
-      subtopic-lists: 
+      subtopic-lists:
         - title: 'Edge Layer & CDN Configurations'
-          links: 
+          links:
             - text: 'Caching'
               url: '/docs/videos/cache/'
               icon: 'fa fa-video-camera'
@@ -744,7 +744,7 @@
             - text: 'Page Caching Changes with WordPress 4.7 and Above'
               url: '/docs/wordpress-4.7-upgrade/'
         - title: 'Application Configurations'
-          links: 
+          links:
             - text: 'What is APC and what is it used for?'
               url: '/docs/alternative-php-cache/'
             - text: 'Clearing Caches for Drupal and WordPress'
@@ -762,14 +762,14 @@
 - title: 'Manage Teams & Organizations'
   path: 'manage'
   video_id: 'yym44euvwr'
-  cta: 
+  cta:
     title: 'Quick Start Guide '
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/docs/guides/quickstart/'
   topics-groups:
     - title: 'Tools for Teams'
       subtitle: 'Spin up a Drupal or WordPress site for free in minutes.'
-      links: 
+      links:
         - text: 'Collaborative Development Using GitHub and Pantheon'
           url: '/docs/guides/collaborative-development/'
           icons: 'fa fa-book'
@@ -797,7 +797,7 @@
           url: '/docs/vanity-domains/'
     - title: 'Manage Sites & Users'
       subtitle: 'Control access and manage teams for a single site or an entire organization.'
-      links: 
+      links:
         - text: 'Access Management for Site Owners and Administrators'
           url: '/docs/access-management/'
         - text: 'Add a Client Site to Your Organization Dashboard'
@@ -824,7 +824,7 @@
           url: '/docs/team-management/'
     - title: 'Billing'
       subtitle: 'Learn about common billing and administrative tasks.'
-      links: 
+      links:
         - text: 'Account Billing in the User Dashboard'
           url: '/docs/account-billing/'
         - text: 'Add a Client Site to Your Organization Dashboard'
@@ -842,14 +842,14 @@
 - title: 'Troubleshoot'
   path: 'troubleshoot'
   video_id: 'upty5ldins'
-  cta: 
+  cta:
     title: 'Quick Start Guide '
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
     url: '/docs/guides/quickstart/'
   topics-groups:
     - title: 'Code'
       subtitle: 'Learn how to handle PHP errors, notices, warnings, and exceptions.'
-      links: 
+      links:
         - text: 'Debugging Slow Performance'
           url: '/docs/debug-slow-performance/'
         - text: 'Debug Intermittent PHP 7 Notices'
@@ -876,7 +876,7 @@
           url: '/docs/wordpress-known-issues/'
     - title: 'Database'
       subtitle: 'Expose issues and fix connection issues with the database.'
-      links: 
+      links:
         - text: 'Database Connection Errors'
           url: '/docs/database-connection-errors/'
         - text: 'MySQL Troubleshooting with New Relic Pro'
@@ -893,7 +893,7 @@
           url: '/docs/wordpress-broken-links/'
     - title: 'Filesystem'
       subtitle: 'Debug issues with write access and unexpected permissions.'
-      links: 
+      links:
         - text: 'Using Extensions That Assume Write Access'
           url: '/docs/assuming-write-access/'
         - text: 'Debugging Connectivity Issues'
@@ -956,7 +956,7 @@
           url: '/docs/guides/trello/'
   topics-groups:
     - title: 'More Guides'
-      links: 
+      links:
         - text: 'Automate Testing with Behat'
           url: '/docs/guides/behat/'
         - text: 'Convert a Standard Drupal 8 Site to a Composer Managed Site'
@@ -974,7 +974,7 @@
         - text: 'Using Terminus to Create and Update Drupal Sites on Pantheon'
           url: '/docs/guides/terminus-drupal-site-management/'
     - title: ' '
-      links: 
+      links:
         - text: 'Collaborative Development Using GitHub and Pantheon'
           url: '/docs/guides/collaborative-development/'
         - text: 'Create a WordPress Site From the Command Line Using Terminus and WP-CLI'
