@@ -78,10 +78,11 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 ## Examples
 
-## Symlinking files: Making the WP debug log file write in the uploads folder
+### Write Debug Logs to Uploads
 
-### For MacOS & Linux:
-From the root directory or where your `wp-config.php` is:
+#### For MacOS & Linux:
+
+From the codebase root, where your `wp-config.php` is, create the symlink:
 
 ```bash
 ln -s ./uploads/debug.log ./wp-content/debug.log
@@ -93,7 +94,7 @@ To verify, use `ls -al` in the `wp-content` folder and you should have:
 debug.log -> ./uploads/debug.log
 ```
 
-### For Windows:
+#### For Windows:
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash
@@ -113,17 +114,17 @@ You can also verify success using `dir`:
 <SYMLINKD>        debug.log [.\uploads\debug.log]
 ```
 
-## Symlinking folder example
+### Plugins Assuming Write Access
 
-As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to a couple of folders in the code base.
+As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/) assumes write access to a couple of folders in the code base.
 
-<Alert  title="Note" type="alert">
+<Alert title="Note" type="info">
 
 You must manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
 
 </Alert>
 
-### For MacOS & Linux:
+#### For MacOS & Linux:
 From the `wp-content` directory:
 
 ```bash
@@ -139,7 +140,7 @@ cache -> ./uploads/cache
 wp-rocket-config -> ./uploads/wp-rocket-config
 ```
 
-### For Windows:
+#### For Windows:
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash
