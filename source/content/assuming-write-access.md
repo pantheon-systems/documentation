@@ -106,8 +106,8 @@ wp-rocket-config -> ./uploads/wp-rocket-config
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash
-mklink /d ./wp-content/cache ./uploads/cache
-mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
+mklink /d .\wp-content\cache .\uploads\cache
+mklink /d .\wp-content\wp-rocket-config .\uploads\wp-rocket-config
 ```
 
 Each command will return the following upon success:
