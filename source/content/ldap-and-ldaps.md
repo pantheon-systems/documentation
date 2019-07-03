@@ -4,7 +4,7 @@ description: Detailed information on how to configure LDAP and LDAPS on your Pan
 tags: [siteintegrations]
 categories: []
 ---
-[Lightweight Directory Access Protocol](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) as a provider is not available on Pantheon. For sites at the Elite plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration).
+[Lightweight Directory Access Protocol](https://en.wikipedia.org/wiki/Lightweight_Directory_Access_Protocol) (LDAP) as a provider is not available on Pantheon. For sites at the Elite plan level that need a secure tunnel between your firewall, contact your sales representative regarding [Pantheon Secure Integration](https://pantheon.io/features/secure-integration).
 
 ## LDAP as a Consumer
 
@@ -14,7 +14,7 @@ PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are 
 
 <Alert title="Note" type="info">
 
-Pantheon supports IP authentication schemes *only* when implemented as part of a [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
+Pantheon supports IP authentication schemes *only* when implemented as part of a [Pantheon Secure Integration](/docs/secure-integration/) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
 
 </Alert>
 
@@ -68,9 +68,9 @@ Users do not have access to make modifications to `ldap.conf`. Instead, use `put
 
 The ldap\_sso submodule from the suite of modules included in [https://drupal.org/project/ldap](https://drupal.org/project/ldap) is not supported. We do have PHP with LDAP support. Any authentication through LDAP needs to be PHP-based and not webserver-based.
 
-### Does PEG work with LDAP?
+### Does Secure Integration work with LDAP?
 
-WordPress and Drupal both work with the [Pantheon Enterprise Gateway](/docs/pantheon-enterprise-gateway). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
+WordPress and Drupal both work with the [Pantheon Secure Integration](/docs/secure-integration/). If you’re using the Drupal 7 LDAP module, apply the [patch](https://www.drupal.org/files/issues/ldap_php-constant-port_1.patch) prepared by one of our engineers [listed on Drupal.org](https://www.drupal.org/node/2283273). The patch allows the use of a PHP constant for the port number, and gives a good example should you need to write a similar patch for another module.
 
 If you're using the Drupal 8 LDAP module, take note of the machine name you give to the LDAP server. Then, in your `settings.php` file, add the following lines for each LDAP server:
 
@@ -86,7 +86,7 @@ In the snippet above, replace the `PANTHEON_SOIP_CONSTANT_NAME` with name given 
 
 The majority of problems with LDAP on Pantheon come from misconfigurations. Pantheon does not filter or block LDAP or LDAPS traffic and does not utilize a firewall to restrict traffic between your Pantheon environment and your locally hosted server.
 
-Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. This script requires PHP 7.1 to execute properly without PHP errors.  If you are connecting via a Pantheon Enterprise Gateway (PEG), use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
+Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. This script requires PHP 7.1 to execute properly without PHP errors.  If you are connecting via a Pantheon Secure Integration, use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/docs/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 
 ```bash
 terminus drush <site>.<env> -- scr ldap-test.php
@@ -209,15 +209,15 @@ foreach ($settings as $host => $setting) {
 }
 ```
 
-Alternate $settings array when using PEG:
+Alternate $settings array when using Secure Integration:
 
 ```php
 
 <?php
 $settings = array(
   'NAME' => array(
-    'host' => 'ldaps://127.0.0.1', //when using PEG, this is localhost
-    'port' => PANTHEON_SOIP_EXAMPLE, //when using PEG, this is the PHP CONSTANT
+    'host' => 'ldaps://127.0.0.1', //when using Secure Integration, this is localhost
+    'port' => PANTHEON_SOIP_EXAMPLE, //when using Secure Integration, this is the PHP CONSTANT
     'bind_rdn' => '<insert-bind-dn>', //e.g. CN=usename,CN=value,DC=value,DC=value,DC=value
     'bind_password' => '<insert-password>',
     'display_password' => 'Pxxxxxxx',  //display an alternate value for security
