@@ -40,8 +40,8 @@ Your Engagement Manager monitors the process and works with you to ensure that u
 ## Advanced CDN
 Implement additional services like extended WAF, Image Optimization, and Domain Masking using our advanced CDN implementation. [Contact us](https://pantheon.io/professional-services) for details.
 
-## Pantheon Enterprise Gateway (PEG)
-Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about PEG](/docs/pantheon-enterprise-gateway/) or [contact us](https://pantheon.io/professional-services) for details.
+## Pantheon Secure Integration
+Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about Secure Integration](/docs/pantheon-enterprise-gateway/) or [contact us](https://pantheon.io/professional-services) for details.
 
 ## SSO/SAML
 Single Sign-on to both the Pantheon Dashboard and the application itself. [Learn more about SSO](/docs/sso/) or [contact us](https://pantheon.io/professional-services) for details.
