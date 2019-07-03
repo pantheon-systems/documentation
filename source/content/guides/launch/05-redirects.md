@@ -12,26 +12,28 @@ pagination:
 use:
     - launchpages
 permalink: docs/guides/launch/redirects/
-nexturl: guides/launch/launch-check/
-nextpage: Final Launch Check
-previousurl: guides/launch/configure-dns/
-previouspage: Configure DNS and HTTPS
 editpath: launch/05-redirects.md
 image: getting-started-Largethumb
 ---
+
 In this lesson, we'll redirect all traffic to a primary domain via HTTPS, which is a best practice for security and SEO. This means if you choose `www.example.com` as your primary domain, then if a visitor types in `example.com` into their browser (or any other domain you have connected to your site), they will end up on `https://www.example.com`.
 
 <Alert title="Note" type="info">
+
 Make sure HTTPS has been successfully provisioned *before* adding any code (like the sample below) that will redirect traffic to HTTPS.
+
 </Alert>
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
+
 2. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
+
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
   If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
 
 4. Now open the `code` folder in your SFTP client, and download your site's `settings.php` (Drupal) or `wp-config.php` (WordPress) file.
+
 5. Edit your configuration file by adding the following snippet for the desired redirect (replace `example.com`):
 
   <Partial file="redirects.md" />

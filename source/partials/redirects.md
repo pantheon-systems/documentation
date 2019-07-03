@@ -32,6 +32,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
 }
 ```
 
+WordPress users should also run a [search and replace](/docs/wordpress-broken-links/#fix-wordpress-content-references-to-the-wrong-domain-after-cloning) to update any references to the platform domain.
+
 </Tab>
 
 <Tab name="Drupal 8" id="d8redirects">
