@@ -16,75 +16,7 @@ Each of the PHP errors are handled differently depending on the site environment
 
 Here's a breakdown of what errors are shown and where:
 
-<table>
-<thead>
-		<tr>
-			<th align="left" style="width: 130px">Environment</th>
-			<th align="left" style="width: 130px">Severity</th>
-			<th align="left" style="width: 130px">Browser</th>
-			<th align="left" style="width: 130px">Watchdog</th>
-			<th>logs/php-error.log</th>
-		</tr>
-	</thead><tbody>
-		<tr>
-			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Dev</td>
-			<td align="left">notice</td>
-			<td align="left">**✓**</td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
-		</tr>
-		<tr>
-			<td align="left">warning</td>
-			<td align="left">**✓**</td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
-		</tr>
-		<tr>
-			<td align="left" style="border-bottom:1px solid black;">error</td>
-			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
-			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
-		</tr>
-		<tr>
-			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Test</td>
-			<td align="left">notice</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
-		</tr>
-		<tr>
-			<td align="left">warning</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
-		</tr>
-		<tr>
-			<td align="left" style="border-bottom:1px solid black;">error</td>
-			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
-		</tr>
-		<tr>
-			<td align="left" rowspan="3" style="vertical-align:middle;">Live</td>
-			<td align="left">notice</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
-		</tr>
-		<tr>
-			<td align="left">warning</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
-		</tr>
-		<tr>
-			<td align="left">error</td>
-			<td align="left"> </td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-		</tr>
-	</tbody>
-</table>
+`markdown:php-error-table.md`
 
 To learn more about PHP error logs, see [Log Files on Pantheon](/docs/logs).
 
@@ -92,20 +24,14 @@ To learn more about PHP error logs, see [Log Files on Pantheon](/docs/logs).
 
 An error, no matter what severity, is a problem that needs to be addressed. Any PHP error, even a notice, will drastically reduce the speed of PHP execution. Even if you don't see the error in your browser, and even if you explicitly disable logging, every single PHP error will slow your site down.
 
-
-
 If database logging is enabled, your site will be even slower, requiring a database write for every error. However, disabling logging does not address the problem, it only hides the symptom.
 
-
-
 Best practice is to fix every notice, warning, and error as you discover them. If they're in an extension (WordPress plugin or Drupal module), roll a patch and submit it to the project's issue queue.
-
 
 See [this stackoverflow thread](https://stackoverflow.com/questions/1868874/does-php-run-faster-without-warnings/1869185#1869185) for some more details, including benchmarks that compare the differences between suppressing notices and actually eliminating the root cause.
 
 ## Unhandled Exceptions
-
-​A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the [PHP documentation on Exceptions.](https://secure.php.net/manual/en/language.exceptions.php).
+A PHP exception is a mechanism for defining error conditions and how to handle them. For more details on Exceptions, see the [PHP documentation on Exceptions.](https://secure.php.net/manual/en/language.exceptions.php).
 
 PHP Exceptions are errors, and depending on the severity and whether they are handled correctly can crash your site. As Exceptions are created in code and not by PHP itself, they are not logged in the PHP error log file and will not be visible in the Pantheon Dashboard. By default, Drupal will [log exceptions](https://api.drupal.org/api/drupal/includes%21bootstrap.inc/function/watchdog_exception/7) to Watchdog.
 
@@ -132,9 +58,11 @@ We also recommend submitting a sitemap and instructing bots to only crawl design
 When you import your site or enable some new modules, PHP notices may be reported on your Dev site that have never been reported before. These notices are now being made apparent because of the Dev environment's strict error reporting level.
 
 An example notice might look like this:
+
 ```php
 Notice: Undefined index: description in theme_imagefield_image_imagecache_lightbox2() (line 163 of /srv/bindings/xxxxxxxxx/code/sites/all/modules/contrib/lightbox2/lightbox2.formatter.inc)..
 ```
+
 Why is PHP reporting this?
 
 Variable declaration is not required by PHP, but is a recommended practice that can help to avoid security vulnerabilities or bugs if one forgets to provide a value to a variable that be used later on. PHP issues an E\_NOTICE, a very low-level error, as a reminder.
@@ -150,6 +78,7 @@ When this error surfaces, it simply means that the file in question is not where
 ```php
 Fatal error: require_once(): Failed opening required ‘/srv/bindings/xxxxx/code/sites/all/modules/redis/redis.autoload.inc’ (include_path=‘.:/usr/share/pear:/usr/share/php’) in /srv/bindings/xxxxxx/code/includes/bootstrap.inc on line 2394
 ```
+
 To fix this error, look for the correct path to the file and update the require\_once().
 
 ## Intermittent Notices
