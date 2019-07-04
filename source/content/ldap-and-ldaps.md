@@ -14,7 +14,7 @@ PHP on Pantheon includes LDAP using OpenLDAP, so no changes to the platform are 
 
 <Alert title="Note" type="info">
 
-Pantheon supports IP authentication schemes *only* when implemented as part of a [Pantheon Secure Integration](/docs/secure-integration/) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
+Pantheon supports IP-based defense-in-depth firewall configuration schemes *only* when implemented as part of a [Pantheon Secure Integration](/docs/secure-integration/) configuration. We recommend certificate-based authentication to be compatible with distributed application containers.
 
 </Alert>
 
