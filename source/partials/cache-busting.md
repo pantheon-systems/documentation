@@ -14,4 +14,6 @@ duo_secure_wordpress_auth_cookie
 bp_completed_create_steps # BuddyPress cookie used when creating groups
 bp_new_group_id # BuddyPress cookie used when creating groups
 wp-resetpass-[A-Za-z0-9_]+
-(wp_)?woocommerce[A-Za-z0-9_-]+</code></pre>
+(wp_)?woocommerce[A-Za-z0-9_-]+
+amazon_Login_[A-Za-z0-9_]+
+</code></pre>
