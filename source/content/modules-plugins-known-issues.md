@@ -447,6 +447,13 @@ define('FS_METHOD', 'direct');
 
 <hr />
 
+### [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/){.external}
+
+**Issue:** Site suddenly shows a white screen of death.
+
+**Solution**: Due to random miantenance where binding path changes from time to time, cache folder path may change. You can manually recoonfigure the cache path from Fast Velocity Minify > Settings tab > Cache Location. Do not forget to clear the cache from Pantheon and flush the Redis cache.
+
+<hr>
 
 ### [Disable REST API and Require JWT / OAuth Authentication](https://wordpress.org/plugins/disable-rest-api-and-require-jwt-oauth-authentication/)
 
