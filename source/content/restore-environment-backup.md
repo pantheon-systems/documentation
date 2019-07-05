@@ -87,3 +87,37 @@ This is a destructive process. If you're not comfortable with this technique, us
 5. Deploy the change from Dev up to Test and Live.
 
 For more information, see [git reset](https://git-scm.com/docs/git-reset).
+
+## Restoring the LIVE environment
+The restore process removes any recent content or changes applied to your site, since the date of the backup file you will use. Doing so in LIVE means you will lose them forever with no way to recover.
+
+If there is still a need to do this in the LIVE environment, we recommend doing the following steps:
+- [Lock the environment first](/docs/security/)
+- [Run a backup](/docs/backups/) of LIVE, in order to have a copy of files and the database for later use
+- Run the restore while the site is still locked
+
+Doing these steps will allow you to later recreate any new content manually. It also resticts access while the restore process is still running, which is a good practice. 
+
+## Restoring Large Sites
+Large sites that have more than 100GB files can take too long to restore and are likely to fail. We recommend running the steps above for a safer process, or do use the separate [backup archive files as mentioned above](/docs/restore-environment-backup/#restore-an-environment-from-another-environments-backup).
+
+## Frequently Asked Questions
+
+### How long does the restore process will take?
+When the Restore button is pressed, three (3) separate workflow process are triggered in the dashboard. Each one represent code, database and asset media files like images or other attachments). One workflow may complete ahead of the others.
+
+There is no way to determine specifically how long it will take, as it varies per site. But the usual factor that extends the restore process is the <strong>count or number of files</strong> in the codebase or files backup. We have seen sites take more than one (1) hour to restore when they have 10,000 files or above, though this is not a strict ratio as another factor is individual file sizes. 
+
+One other way to estimate is to use the last backups duration. Terminus and the `workflow:list` command will show the Time Elapsed field show in seconds.
+
+```
+ $ terminus workflow:list yoursite-name --fields id,env,workflow,time --format table
+ -------------------------------------- ------------- --------------------------------------------- --------------
+  Workflow ID                            Environment   Workflow                                      Time Elapsed
+ -------------------------------------- ------------- --------------------------------------------- --------------
+  31442e94-9e34-11e9-b40b-42010a800275   dev           Automated backup for the "dev" environment    2292s
+  cce72480-9e2c-11e9-bece-42010a8001a4   live          Automated backup for the "live" environment   1290s
+  cdb6df62-9d6a-11e9-85d1-42010a800117   dev           Automated backup for the "dev" environment    4328s
+  f194a2fa-9d62-11e9-b1a0-42010a800117   live          Automated backup for the "live" environment   5152s
+  de32c0fa-9ca1-11e9-a9aa-42010a800117   dev           Automated backup for the "dev" environment    2335s
+```
