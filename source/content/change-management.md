@@ -41,7 +41,8 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 | Clear cache on Test and Live             | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
 | Manage user roles                        | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Delete sites or remove users from a site | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Manage a site's plan                     | <span  style="color:green">✔</span> <Popover title="Owner" content="When an organization is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
+| Add a Supporting Organization            | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
+| Manage a site's plan                     | <span  style="color:green">✔ Org admin or Owner</span> <Popover title="Owner" content="When an organization is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 
 ## Manage People in an Organization
 
@@ -77,6 +78,8 @@ For Sandbox sites, within the Team modal, the current site owner can click **Mak
 2. Enter the user's email address, select a role, and click **Add Team Member**.
 
 ### Add a Supporting Organization to a Site
+Organization administrators, Users in Charge, or Site Owners can add a Supporting Organization.
+
 1. At the Site Dashboard, click **Team**.
 2. Click **Add a Supporting Organization**, enter the organization's name in the search box, and click **Search**.
 3. Select a role, and click **Add**.
