@@ -32,13 +32,14 @@ Pantheon supports the most common use case for site networks: a common codebase 
 - Blogs for faculty at a university
 - Franchise sites under a parent organization site
 - Sections within a media publication
+- [Bedrock based](https://carlalexander.ca/using-bedrock-with-pantheon/) or Composer based WP Multi-site is a possibility and can be discussed during onboarding
 
 ## Unsupported Use Cases
 We do not support uses of WordPress Site Networks that run functionally-different or uniquely-owned sites on the same WordPress installation. This includes, but is not limited to:
 
 - Software as a service (SAAS) products
 - Agencies using one WordPress installation to support several customers
-- WordPress Multi-Network installations
+- WordPress Multi-Network installations where multiple domains can be added aside from subdomains and subdirectory
 
 ## Request a WordPress Site Network
 Running a WordPress Site Network requires a special configuration that is only available to contract customers with Performance or Elite sites. Only Pantheon employees have the ability to create the sites and add you to the team. Existing WordPress sites cannot be converted to a network, however they can be [migrated](/migrate-wordpress-site-networks/).
