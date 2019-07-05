@@ -129,9 +129,9 @@ You can also verify success using `dir`:
 
 ### Uncode Theme
 
-As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/) assumes write access its css files to the code base.
+As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the code base.
 
-1. Manually move over the target folders:
+1. Manually move the target folders:
 
   `wp-content\themes\uncode\core\assets\css`
 
@@ -143,7 +143,7 @@ As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-kn
 
   To: `wp-content\uploads\uncode\library\css` in Dev.
 
-1. Copy over the files generated from:
+1. Copy the files generated from:
 
   `wp-content\themes\uncode\library\css`
 
@@ -157,11 +157,11 @@ As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-kn
 From the `wp-content` directory:
 
 ```bash
-ln -s ../../../../uploads/uncode/assets/css ./themes/uncode/core/assets 
+ln -s ../../../../uploads/uncode/assets/css ./themes/uncode/core/assets
 ln -s ../../../uploads/uncode/library/css ./themes/uncode/library
 ```
 
-To verify, use `ls -al` in the `wp-content/themes/uncode/core/assets` folder :
+To verify, use `ls -al` in the `wp-content/themes/uncode/core/assets` folder:
 
 ```
 css -> ../../../../uploads/uncode/assets/css

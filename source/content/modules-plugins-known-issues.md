@@ -871,7 +871,7 @@ define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
 
 **Issue 2**: This theme throws a PHP Fatal error in its settings page for Dev's and Multidev's Git mode, Test and Live.
 
-**Solution**: This theme to assumes write to theme folders `wp-content\themes\uncode\core\assets\css` and `wp-content\themes\uncode\library\css` for it to work properly in git mode. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access/#uncodetheme).
+**Solution**: This theme assumes write to theme folders `wp-content\themes\uncode\core\assets\css` and `wp-content\themes\uncode\library\css` for it to work properly in git mode. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access/#uncodetheme).
 
 <hr />
 
