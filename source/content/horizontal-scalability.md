@@ -33,17 +33,40 @@ Pantheon's infrastructure is based on a grid model. Each application container i
 For more information on containers, see [All About Application Containers](/docs/application-containers/).
 
 ## Add and Remove Application Containers
-Add containers by upgrading the site's plan within the Site Dashboard to a Performance Medium plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove.
+Add containers by upgrading the site's plan within the Site Dashboard to a Performance Medium plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove. 
 
-The platform does not assume when additional containers are added or removed in response to traffic and/or resource consumption.
+For more information about your plan changes, see [Manage Plans in the Site Dashboard](/docs/site-plan/#upgrades).
+
+## Handle Traffic Spikes
+If done manually, you'll need to decide how to distribute traffic across the available PHP app servers. Open-source tools like Nginx, HAProxy, and Pound can fill this role, but you can also solve this with hardware (e.g. an F5 appliance) or with a cloud-based load balancer (e.g. Amazon’s ELBs). 
+
+### Performance Plans
+In Pantheon, all Performance plans include Overage Protection to prevent one-time traffic spikes from causing billing issues. If the change to traffic behavior is sustained, the site will eventually be moved to the appropriate Performance plan. This provides billing protection against externally driven spikes, or for businesses that have an annual “big event” but otherwise operate at a lower “normal” rate. 
+
+Basic plan sites do not have this protective feature and would see a change to their bill in the applicable billing period. The overage charge is $2.50 per 1,000 visits (no proration).
+
+For more information, see [Traffic Limits and Overages](/docs/traffic-limits/).
+
+### Elite or Contract Plans
+We allow an increase in application containers for campaigns or peak traffic. A request can be sent to Pantheon Support with the following information:
+
+- <strong> How much extra traffic? </strong><br>
+Number of Users, Pageviews or Sessions per hour, day, week and month.
+- <strong> How much is Anonymous or Authenticated traffic? </strong> <br>
+Aside from the total count, we need to know the ration of Anonymous and Authenticated traffic in order to determine if visits. There are times that sites can still withstand traffic spikes if majority are anonymous and cached. 
+- <strong> What is the timeframe of the campaign or peak traffic? </strong> <br>
+When is the campaign expected to start and end measured in days. 
+- <strong> Where is the traffic concentration? </strong> <br>
+Describe if the additional traffic will hit all at once at a specific hour of the day, or be spread throughout business hours etc. The more descriptive, the easier to determine how to increase resources.
+
+Generally speaking, increase in traffic that is mostly anonymous no longer application container increase, but this is best decide using the above information and calculate properly. We derive the number of <strong> requests per minute </strong> as the basis for the number of servers.
+
+Requests that span more than 3 weeks require approval from the organization or site's Client Sales representative. 
 
 ## New Relic Pro
 Consider enabling New Relic Pro for your site. You'll get access to a wide array of metrics that provide a nearly real-time look into the performance of a web application. Making it easy for you to monitor to your performance, with the added benefit of speeding up the support process by helping our support team visualize corresponding performance and symptoms.
 
 For more information, see [New Relic Pro](/docs/new-relic).
-
-## Handle Traffic Spikes
-You'll need to decide how to distribute traffic across the available PHP app servers. Open-source tools like Nginx, HAProxy, and Pound can fill this role, but you can also solve this with hardware (e.g. an F5 appliance) or with a cloud-based load balancer (e.g. Amazon’s ELBs).
 
 ## Managing Temporary Files
 The `/tmp` directory is not shared across application containers, making temporary files created by your site's framework inaccessible for requests served by another container. A plan for managing these files should be implemented prior to scaling the site out. For more details, see [Temporary File Management](/docs/tmp/).
