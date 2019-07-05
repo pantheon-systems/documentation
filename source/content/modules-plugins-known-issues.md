@@ -851,6 +851,29 @@ define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
 
 <hr />
 
+### [Uncode](https://undsgn.com/uncode/)
+
+**Issue 1**: This theme presents a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
+
+**Solution**: The form can be disabled by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+```php
+/** Changes to disable Uncode theme FTP form */
+define('FS_METHOD', 'direct');
+define('FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
+define('FS_CHMOD_FILE', ( 0755 & ~ umask() ) );
+define('FTP_BASE', __DIR__);
+define('FTP_CONTENT_DIR', __DIR__ .'/wp-content/');
+define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
+```
+
+<br />
+
+**Issue 2**: This theme throws a PHP Fatal error in its settings page for Dev's and Multidev's Git mode, Test and Live.
+
+**Solution**: This theme assumes write to theme folders `wp-content\themes\uncode\core\assets\css` and `wp-content\themes\uncode\library\css` for it to work properly in git mode. For additional details, see [Using Extensions That Assume Write Access](/docs/assuming-write-access/#uncodetheme).
+
+<hr />
 
 ## WordPress Functions
 
