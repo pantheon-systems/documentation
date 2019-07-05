@@ -75,7 +75,7 @@ You will need to install the appropriate Drupal module(s) and the AWS SDK librar
 
 <TabList>
 
-<Tab title="Drupal 7" id="d8tab1">
+<Tab title="Drupal 7" id="d7tab1">
 
 The following instructions use [Terminus](/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
@@ -120,13 +120,7 @@ terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 
 </Tab>
 
-<Tab title="Drupal 8" id="d7tab1">
-
-<Alert title="Warning" type="danger">
-
-As of the latest update to this doc, the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module appears to be uninstallable. Refer to [this bug report](https://www.drupal.org/project/s3fs_cors/issues/2852333) for more information.
-
-</Alert>
+<Tab title="Drupal 8" id="d8tab1">
 
 Before you begin:
 
@@ -156,6 +150,7 @@ Install the [S3 File System](https://www.drupal.org/project/s3fs) module and AWS
     ```
 
 #### S3 File System CORS {.info}
+
 Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module to enhance your Drupal media handling and interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
 
 Install s3fs_cors module using Composer:
