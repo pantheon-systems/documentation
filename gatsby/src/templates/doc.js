@@ -5,6 +5,7 @@ import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
 import HeaderBody from "../components/headerBody"
+
 import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
@@ -24,6 +25,9 @@ import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
 
+import Partial from "../components/partial"
+import Image from "../layout/image"
+
 const shortcodes = {
   Callout,
   Alert,
@@ -39,7 +43,8 @@ const shortcodes = {
   Definition,
   Enablement,
   Color,
-  Download
+  Download,
+  Partial
 }
 
 class DocTemplate extends React.Component {

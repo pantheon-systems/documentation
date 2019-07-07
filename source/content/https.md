@@ -15,7 +15,7 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 </Enablement>
 
-`markdown:configure-dns.md`
+<Partial file="configure-dns.md" />
 
 For more detailed instructions pertaining to your specific DNS host, click below:
 
