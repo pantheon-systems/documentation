@@ -97,17 +97,17 @@ module.exports = {
                 },
             },
           },
-          // {
-          //   resolve: "gatsby-remark-github",
-          //   options: {
-          //     marker: 'GITHUB-EMBED',
-          //     insertEllipsisComments: true,
-          //     ellipsisPhrase: '...',
-          //     useCache: true,
-          //     cacheKey: 'gatsby-remark-github-v1',
-          //     token: process.env.GITHUB_API,
-          //   }
-          // },
+          {
+            resolve: "gatsby-remark-github",
+            options: {
+              marker: 'GITHUB-EMBED',
+              insertEllipsisComments: true,
+              ellipsisPhrase: '...',
+              useCache: true,
+              cacheKey: 'gatsby-remark-github-v1',
+              token: process.env.GITHUB_API,
+            }
+          },
           {
             resolve: "gatsby-remark-embed-video",
             options: {
