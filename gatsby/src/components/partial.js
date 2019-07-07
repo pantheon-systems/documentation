@@ -15,7 +15,6 @@ const Partial = (props) => (
           sort: {fields: fileAbsolutePath}) {
           edges {
             node {
-              id
               code {
                 body
               }
@@ -32,29 +31,13 @@ const Partial = (props) => (
 
     render={data => {
 
-      console.table(props.file)
-
-      // console.table(data)
-
       const { node } = data.allDocs.edges.find(
         edge => edge.node.parent.relativePath === props.file
       )
 
-      console.log(node);
-
       if (!node) {
         return null
       }
-
-      // if (!node.hasOwnProperty('code')) {
-      //   return null
-      // }
-
-      // if (!node.code.hasOwnProperty('body')) {
-      //   return null
-      // }
-
-      // console.log(node.code.body);
 
       return <>
           <MDXProvider>
