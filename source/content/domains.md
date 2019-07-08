@@ -140,7 +140,7 @@ Replace `http://` in the site's database and configure your CMS to assume users 
 ### Test Domain Names Before DNS
 You can modify your local `hosts` file to validate domain-specific settings before DNS is in place.
 
-`markdown:hosts-file.md`
+<Partial file="_hosts-file.md" />
 
 
 ## See Also

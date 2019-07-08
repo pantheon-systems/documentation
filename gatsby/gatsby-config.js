@@ -71,6 +71,13 @@ module.exports = {
         ]
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/../source/partials`,
+        name: `partials`,
+      },
+    },
     `gatsby-transformer-yaml`,
     `gatsby-transformer-json`,
     {
