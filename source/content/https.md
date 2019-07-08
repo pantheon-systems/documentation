@@ -36,12 +36,12 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 </Accordion>
 
-`markdown:enable-https.md`
+<Partial file="enable-https.md" />
 
 ## Let's Encrypt Certificates
 [Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically adds your site's domains to a shared Let's Encrypt certificate, and always renews it automatically, with no additional cost. Let's Encrypt issued certs are valid for 90 days and we renew them at least 30 days before expiration.
 
-`markdown:https-requirements.md`
+<Partial file="https-requirements.md" />
 
 
 ## Technical Specifications
@@ -102,7 +102,7 @@ If you do not already have HTTPS, there's _no need_ to pre-provision.
 
 ### How many custom domains are supported?
 
-`markdown:tables/custom-domains-limit.md`
+<Partial file="tables/custom-domains-limit.md" />
 
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
@@ -141,7 +141,7 @@ If you encounter rate limits, we recommend the following approaches:
 - [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform){.external}.
 - Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/){.external} as a workaround.
 
-`markdown:cname-workaround.md`
+<Partial file="cname-workaround.md" />
 
 ## Glossary
 ### HTTPS

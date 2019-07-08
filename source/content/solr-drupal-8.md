@@ -5,7 +5,7 @@ tags: [addons, siteintegrations]
 categories: [drupal8]
 contributors: [peter-pantheon, cityofoaksdesign]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. `markdown:solr-version.md`
+[Apache Solr](/docs/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
 <Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -96,12 +96,12 @@ To actually search your index you will need a module like [Search API Pages](htt
 ## Solr Versions and Schemas
 The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older version of Solr, use the `8.x-1.x` branch of [Search API Solr](https://www.drupal.org/project/search_api_solr) and its Solr 4 schema file.
 
-`markdown:solr-commit-changes.md`
+<Partial file="solr-commit-changes.md" />
 
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
 
-`markdown:remove-addons/d8-solr.md`
+<Partial file="remove-addons/d8-solr.md" />
 
 ## Troubleshooting
 

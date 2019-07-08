@@ -31,8 +31,8 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 </Alert>
 
 ## Transfer Ownership and Billing for This Site
-`markdown:transfer-ownership-billing-intro.md`
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-intro.md" />
+<Partial file="transfer-ownership-billing-steps.md" />
 
 ## Add New Credit Card
 

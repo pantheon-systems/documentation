@@ -85,7 +85,7 @@ Now that you have a new site on Pantheon, you're ready to add the major componen
 ## Import Your Code
 Your **code** is all custom and contributed modules or plugins, themes, and libraries. The codebase should not include the `wp-content/uploads` (WordPress) / `sites/default/files` (Drupal) directory, or any other static assets you do not want tracked by version control.
 
-  `markdown:code.md`
+  <Partial file="code.md" />
 
   <Alert title="Note" type="info">
 

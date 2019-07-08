@@ -31,8 +31,8 @@ If you plan to pay for the site or if you want to wait to transfer ownership, yo
 As the site owner, you’ll receive an email confirming the change to the site. After the site billing is processed, you’ll receive an updated invoice.
 
 ## Transfer Ownership and Billing for This Site
-`markdown:transfer-ownership-billing-intro.md`
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-intro.md" />
+<Partial file="transfer-ownership-billing-steps.md" />
 
 <Accordion title="Level Up: Load and Performance Tests (Optional)" id="host-specific1" icon="graduation-cap">
 

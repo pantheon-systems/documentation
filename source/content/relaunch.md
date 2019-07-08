@@ -17,7 +17,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 - Open a second tab for the old Site Dashboard on Pantheon
 - In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
 - Examine existing records pointing to Pantheon
-  `markdown:standard-dns-config.md`
+  <Partial file="standard-dns-config.md" />
 - Lower the TTL of existing DNS records to minimize impact of upcoming DNS changes
 
   <Accordion title="Learn More" id="ttl" icon="info-sign">
@@ -61,13 +61,13 @@ In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-cl
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
 
-  `markdown:notes/https-success.md`
+  <Partial file="notes/https-success.md" />
 
    This process typically takes about an hour.
 
 5. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
-  `markdown:standard-dns-config2.md`
+  <Partial file="standard-dns-config2.md" />
 
 6. Test and confirm that the new site is accessible via the custom domain over HTTPS (e.g., `https://www.example.com/`).
 7. Repeat steps 2-6 above for each affected domain. Keep in mind that `www.example.com` and `example.com` are different domains.

@@ -10,7 +10,7 @@ searchboost: 50
 
 `youtube: https://youtu.be/z01vIuB3kRg`
 
-`markdown:deprecate-kalabox.md`
+<Partial file="deprecate-kalabox.md" />
 
 Pantheon encourages on-server development. However, many developers prefer the speed and convenience of [local development](/docs/local-development) where sites run in virtual machines and don’t require Internet access.
 

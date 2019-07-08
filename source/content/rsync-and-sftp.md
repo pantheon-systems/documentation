@@ -16,7 +16,7 @@ You will not be able to use SFTP or rsync to add any file or directory listed in
 
 </Alert>
 
-`markdown:auth.md`
+<Partial file="auth.md" />
 
 ## SFTP
 

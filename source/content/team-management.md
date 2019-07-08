@@ -61,7 +61,7 @@ Site ownership is assigned to the person who creates the site or pays for the si
 ### Change the Site Owner
 
 #### Sandbox Sites
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-steps.md" />
 
 #### Paid Sites
 To change the owner of a paid site (e.g. Basic, or Performance), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within the Settings page of the Site Dashboard. Enter the email address for the new site owner. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
@@ -76,4 +76,4 @@ The site owner is the person who pays for the site. You'll need to update the pa
 
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
-`markdown:add-supporting-org.md`
+<Partial file="add-supporting-org.md" />

@@ -11,7 +11,7 @@ searchboost: 50
 
 `youtube: https://youtu.be/2KphdFOaOeM`
 
-`markdown:deprecate-kalabox.md`
+<Partial file="deprecate-kalabox.md" />
 
 WP-CLI is a set of command line tools for managing WordPress installations. Let’s install it and explore some commands.
 

@@ -5,7 +5,7 @@ tags: [siteintegrations, addons, search index, solr]
 categories: [drupal]
 contributors: [cityofoaksdesign]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. `markdown:solr-version.md`
+[Apache Solr](/docs/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
 For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
 
@@ -150,7 +150,7 @@ The following are Pantheon-specific variables that you can check for, depending 
 
 Keep in mind that newly indexed items have a 2-minute delay until cron has been run or manually indexed before they become available in Solr search.
 
-`markdown:solr-commit-changes.md`
+<Partial file="solr-commit-changes.md" />
 
 #### apachesolr.module
 If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/docs/terminus/):
@@ -185,7 +185,7 @@ It needs to be done for Dev, Test, and Live individually. You can do this at `ad
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
 
-`markdown:remove-addons/d7-solr.md`
+<Partial file="remove-addons/d7-solr.md" />
 
 ## See Also
 [Apache Solr on Pantheon](/docs/solr)

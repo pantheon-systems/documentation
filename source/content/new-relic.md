@@ -105,7 +105,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 }
 ```
 
-`markdown:monitor-alerts.md`
+<Partial file="monitor-alerts.md" />
 
 
 ## New Relic Access

@@ -54,7 +54,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 
 ## Cache-Busting Cookies
 
-`markdown:cache-busting.md`
+<Partial file="cache-busting.md" />
 
 ## Cache-Varying Cookies
 Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]+`.

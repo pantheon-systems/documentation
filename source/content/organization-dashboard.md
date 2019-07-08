@@ -16,7 +16,7 @@ While creating a new site, any user in your [organization](/docs/organizations/)
 
 From the Site Dashboard, the Site Owner will want to:
 
-`markdown:add-supporting-org.md`
+<Partial file="add-supporting-org.md" />
 
 <Alert title="Note" type="info">
 

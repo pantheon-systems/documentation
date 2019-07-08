@@ -14,7 +14,7 @@ In this guide, you'll learn how to use Composer in small doses with WordPress an
 - Create a WordPress or Drupal 7 site on Pantheon
 
   
-`markdown:/notes/partial-composer-adoption-warning.md`
+<Partial file="/notes/partial-composer-adoption-warning.md" />
 
 
 - Set the site's connection mode to Git within the Site Dashboard or via [Terminus](/docs/terminus):
@@ -107,7 +107,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
     `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
     cd $SITE
     ```
-`markdown:d7-composer-init.md`
+<Partial file="d7-composer-init.md" />
 4. Commit the `composer.json` file to version control with Git:
 
     ```bash

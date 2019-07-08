@@ -62,7 +62,7 @@ There is also a one-click option so you can connect with a GUI client. The main 
 
 Get the instructions for other [SFTP clients](/docs/sftp#sftp-clients).
 
-`markdown:auth.md`
+<Partial file="auth.md" />
 
 ## Committing SFTP Changes
 

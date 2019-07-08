@@ -87,7 +87,7 @@ Before finishing, each user should customize how they receive alerts. Here I add
 
 ![User configuration page](../../docs/assets/images/integrations/user_config.png)
 
-`markdown:monitor-alerts.md`
+<Partial file="monitor-alerts.md" />
 
 ## Conclusion
 Pingdom has a few more checks and features we did not cover. Depending on your plan it provides a site status page, multi-tier alerting schedules, and API access for custom integration.

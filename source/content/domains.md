@@ -53,7 +53,7 @@ If you don't already own a domain name, register one with a third-party provider
 Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/docs/https/).
 
 
-`markdown:tables/custom-domains-limit.md`
+<Partial file="tables/custom-domains-limit.md" />
 
 
 <Alert title="Note" type="info">
@@ -64,7 +64,7 @@ Add all domains (example.com and www.example.com are different domains!) you wan
 
 ### Add a Custom Domain
 
-`markdown:secure-only-tlds.md`
+<Partial file="secure-only-tlds.md" />
 
 1. From your site dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 
@@ -135,7 +135,7 @@ When troubleshooting a redirect loop, you may want to deactivate any module or p
 ### Mixed-mode Browser Warnings
 Replace `http://` in the site's database and configure your CMS to assume users are visiting via HTTPS and the site’s primary domain. Templates for example should reference HTTPS in absolute CSS and Javascript sources, even when accessed with HTTP.
 
-`markdown:cname-workaround.md`
+<Partial file="cname-workaround.md" />
 
 ### Test Domain Names Before DNS
 You can modify your local `hosts` file to validate domain-specific settings before DNS is in place.

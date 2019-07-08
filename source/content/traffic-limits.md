@@ -13,7 +13,7 @@ Basic plan sites do not have this protective feature and would see a change to t
 
 ## Frequently Asked Questions
 ### How does Pantheon calculate monthly visits?
-`markdown:traffic-dl.md`
+<Partial file="traffic-dl.md" />
 
 For details, see [Metrics in the Site Dashboard](/docs/metrics/).
 

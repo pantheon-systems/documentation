@@ -170,4 +170,4 @@ If you're using the [Security tool](/docs/security/) within the Pantheon Site D
 
 ## Cookie Handling
 
-`markdown:cache-busting.md`
+<Partial file="cache-busting.md" />

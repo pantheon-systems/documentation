@@ -56,11 +56,11 @@ For Redis and Solr, the following code changes are required before the feature c
 
 #### Safely Remove Redis
 
-`markdown:remove-addons/wp-redis.md`
+<Partial file="remove-addons/wp-redis.md" />
 
 #### Safely Remove Solr
 
-`markdown:remove-addons/wp-solr.md`
+<Partial file="remove-addons/wp-solr.md" />
 
 </Tab>
 
@@ -68,11 +68,11 @@ For Redis and Solr, the following code changes are required before the feature c
 
 #### Safely Remove Redis
 
-`markdown:remove-addons/drupal-redis.md`
+<Partial file="remove-addons/drupal-redis.md" />
 
 #### Safely Remove Solr
 
-`markdown:remove-addons/d8-solr.md`
+<Partial file="remove-addons/d8-solr.md" />
 
 </Tab>
 
@@ -80,11 +80,11 @@ For Redis and Solr, the following code changes are required before the feature c
 
 #### Safely Remove Redis
 
-`markdown:remove-addons/drupal-redis.md`
+<Partial file="remove-addons/drupal-redis.md" />
 
 #### Safely Remove Solr
 
-`markdown:remove-addons/d7-solr.md`
+<Partial file="remove-addons/d7-solr.md" />
 
 </Tab>
 
@@ -144,8 +144,8 @@ To associate an existing card from your account as the payment method for this s
 
 <Tab title="Send a Request" id="request-payment-id">
 
-`markdown:transfer-ownership-billing-intro.md`
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-intro.md" />
+<Partial file="transfer-ownership-billing-steps.md" />
 
 </Tab>
 

@@ -12,16 +12,16 @@ While many of these steps are followed through the normal course of an Agency-Cl
 
 ## Client Adds Supporting Organization
 
-`markdown:add-supporting-org.md`
+<Partial file="add-supporting-org.md" />
 
 ## Transfer Ownership and Billing for the Site to an Agency
 
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-steps.md" />
 
 ## Send an Invitation to Pay to Your Client
 The Agency should follow these steps:
 
-`markdown:invite-to-pay.md`
+<Partial file="invite-to-pay.md" />
 
 ## Accepting an Invitation to Pay
 1. When a supporting organization is ready to transfer ownership of the site to you, you'll receive an email inviting you to pay for the site:

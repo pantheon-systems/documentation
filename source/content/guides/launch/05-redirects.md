@@ -34,7 +34,7 @@ Make sure HTTPS has been successfully provisioned *before* adding any code (like
 4. Now open the `code` folder in your SFTP client, and download your site's `settings.php` (Drupal) or `wp-config.php` (WordPress) file.
 5. Edit your configuration file by adding the following snippet for the desired redirect (replace `example.com`):
 
-  `markdown:redirects.md`
+  <Partial file="redirects.md" />
 
 6. Upload the configuration file to Pantheon using your SFTP client.
 
