@@ -70,8 +70,11 @@ Upon activation of the plugin on the Dev or Multidev environment, a default [`sc
 You can set a custom `schema.xml` by uploading it to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory using SFTP. Then, from the plugin's **Actions** tab, look for **Repost schema.xml** and click on **Execute**.
 
 <Alert title="Note" type="info">
- Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment seperately.
+
+Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment seperately.
+
 </Alert>
+
 ## Known Issues/Limitations
 This plugin is under active development on [GitHub](https://github.com/pantheon-systems/solr-power). Use the issue queue for status updates and support. Pull requests are also welcome!
 
