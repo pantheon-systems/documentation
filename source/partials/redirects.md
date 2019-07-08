@@ -1,22 +1,11 @@
+<TabList>
 
-<!-- Nav tabs -->
-<ul class="nav nav-tabs" role="tablist">
-  <li id="wptab" role="presentation" class="active"><a href="#wp" aria-controls="wp" role="tab" data-toggle="tab">WordPress</a></li>
-  <li id="d8tab" role="presentation"><a href="#d8" aria-controls="d8" role="tab" data-toggle="tab">Drupal 8</a></li>
-  <li id="d7tab" role="presentation"><a href="#d7" aria-controls="d7" role="tab" data-toggle="tab">Drupal 7</a></li>
-</ul>
+<Tab name="WordPress" id="wpredirects" active={true}>
 
-<!-- Tab panes -->
-<div class="tab-content">
-<div role="tabpanel" class="tab-pane active" id="wp">
+Add the following to `wp-config.php`, usually placed above `/* That's all, stop editing! Happy Pressing. */`. Don't forget to replace `www.example.com`:
 
-<p>
-
-Add the following to <code>wp-config.php</code>, usually placed above <code>/* That's all, stop editing! Happy Pressing. */</code>. Don't forget to replace <code>www.example.com</code>:
-
-</p>
-
-<pre><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+```php
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     // Replace www.example.com with your registered domain name.
@@ -40,18 +29,18 @@ Add the following to <code>wp-config.php</code>, usually placed above <code>/* T
     header('Location: https://'. $primary_domain . $_SERVER['REQUEST_URI']);
     exit();
   }
-}</code></pre>
+}
+```
 
-</div>
-<div role="tabpanel" class="tab-pane" id="d8">
+</Tab>
 
-<p>
+<Tab name="Drupal 8" id="d8redirects">
 
-Add the following to the end of your <code>settings.php</code> file (replace <code>www.example.com</code>):
 
-</p>
+Add the following to the end of your `settings.php` file (replace `www.example.com`):
 
-<pre><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+```php
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     // Replace www.example.com with your registered domain name.
@@ -79,19 +68,19 @@ Add the following to the end of your <code>settings.php</code> file (replace <co
   if (is_array($settings)) {
     $settings['trusted_host_patterns'] = array('^'. preg_quote($primary_domain) .'$');
   }
-}</code></pre>
+}
+```
 
-</div>
+</Tab>
 
-<div role="tabpanel" class="tab-pane" id="d7">
+<Tab name="Drupal 7" id="d7redirects">
 
-<p>
 
-Add the following to the end of your <code>settings.php</code> file (replace <code>www.example.com</code>):
+Add the following to the end of your `settings.php` file (replace `www.example.com`):
 
-</p>
 
-<pre><code class="php hljs" data-lang="hljs">if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
+```php
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     // Replace www.example.com with your registered domain name.
@@ -115,8 +104,9 @@ Add the following to the end of your <code>settings.php</code> file (replace <co
     header('Location: https://'. $primary_domain . $_SERVER['REQUEST_URI']);
     exit();
   }
-}</code></pre>
+}
+```
 
-</div>
+</Tab>
 
-</div>
+</TabList>
