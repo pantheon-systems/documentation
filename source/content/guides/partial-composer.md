@@ -14,7 +14,7 @@ In this guide, you'll learn how to use Composer in small doses with WordPress an
 - Create a WordPress or Drupal 7 site on Pantheon
 
   
-<Partial file="/notes/partial-composer-adoption-warning.md" />
+<Partial file="notes/partial-composer-adoption-warning.md" />
 
 
 - Set the site's connection mode to Git within the Site Dashboard or via [Terminus](/docs/terminus):

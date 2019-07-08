@@ -5,7 +5,7 @@ tags: [addons]
 categories: []
 ---
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr as a service for most plans including Sandbox, on all environments. No permission or action is required from Pantheon to use Solr. 
-<Partial file="/solr-version.md" />
+<Partial file="solr-version.md" />
 
 
 <Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
