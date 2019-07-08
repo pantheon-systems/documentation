@@ -1,6 +1,6 @@
 <Alert title="note" type="info">
 
-Because Supporting Organizations have full access to a site, only the site owner can perform this action.</p>
+Because Supporting Organizations have full access to a site, only the site owner can perform this action.
 
 </Alert>
 
