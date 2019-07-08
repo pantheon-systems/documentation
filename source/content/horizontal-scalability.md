@@ -65,7 +65,7 @@ We allow an increase in application containers for campaigns or peak traffic. A 
 
   Describe if the additional traffic will hit all at once at a specific hour of the day, or be spread throughout business hours etc. The more descriptive, the easier to determine how to increase resources.
 
-Generally speaking, increases in traffic that is mostly anonymous no longer necessitates application container increase, but this is best determined using the information above. We derive the number of *requests per minute* as the basis for the number of servers.
+Generally speaking, it is no longer necessary to increase application containers when there is a large increase in mostly anonymous traffic. This is best determined using the information above. We derive the number of *requests per minute* as the basis for the number of servers.
 
 Requests that span more than 3 weeks require approval from the organization or site's Client Sales representative. 
 
