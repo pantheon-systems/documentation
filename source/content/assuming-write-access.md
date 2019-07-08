@@ -183,7 +183,7 @@ mklink /d .\themes\uncode\library ..\..\..\uploads\uncode\library\css
 
 Each command will return the following upon success:
 
-```nohighlight
+```
 symbolic link created for .\themes\uncode\core\assets <<===>> ..\..\..\..\uploads\uncode\assets\css
 symbolic link created for .\themes\uncode\library <<===>> ..\..\..\uploads\uncode\library\css
 ```
@@ -191,13 +191,13 @@ symbolic link created for .\themes\uncode\library <<===>> ..\..\..\uploads\uncod
 To verify that you have done it correctly, you should have these when you list your folders in `wp-content\themes\uncode\core\assets` directory:
 You can also verify success using `dir`:
 
-```nohighlight
+```
 <SYMLINKD>        css [..\..\..\..\uploads\uncode\assets\css]
 ```
 
 And in the `themes\uncode\library` directory:
 
-```nohighlight
+```
 <SYMLINKD>        css [..\..\..\uploads\uncode\library\css]
 ```
 

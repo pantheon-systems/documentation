@@ -119,12 +119,14 @@ As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickst
   git pull --no-rebase -Xtheirs --allow-unrelated-histories --squash git://github.com/pantheon-systems/drops-7.git master
   ```
 
-    <Alert title="Note" type="info">
-    For versions of Git 2.8 and below, the command is:
+  <Alert title="Note" type="info">
+  For versions of Git 2.8 and below, the command is:
 
-    <pre><code class="nohighlight">git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master</code></pre>
+  ```
+  git pull --no-rebase -Xtheirs --squash git://github.com/pantheon-systems/drops-7.git master
+  ```
 
-    </Alert>
+  </Alert>
 
 
 If you need something other than Drupal 7 in the above command, replace the upstream URL with the one you copied from the Site Dashboard and modified.

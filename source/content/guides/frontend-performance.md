@@ -130,7 +130,7 @@ Cookies are included in the response headers we examined previously. They can in
 
 For reference, here are all the cookie patterns configured to bust cache across Pantheon's Global CDN:
 
-```vcl
+```
 NO_CACHE
 S+ESS[a-z0-9]+
 fbs[a-z0-9_]+

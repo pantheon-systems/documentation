@@ -32,7 +32,7 @@ You must replace `[env]` with the target environment and `[uuid]` with the [Site
 
 </Alert>
 
-```sftp
+```
 export ENV=[env]
 # Usually dev, test, or live
 export SITE=[uuid]
