@@ -69,7 +69,8 @@ Once the test is running, execute common tasks done by editors and administrator
 * Clear the cache
 * Clear the edge cache (if this is a load test, performance tests should not be cached)
 * Run cron
-* Run any scripts that could be triggered while users are on the site.
+* Run any scripts that could be triggered while users are on the site
+* Flush Redis cache (if Redis is running)
 
 ## Assess Results
 Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunities.
@@ -84,3 +85,4 @@ After launch, you can establish a baseline that `X` response time will let you h
 ## See Also
 
 * [Load Testing Drupal and WordPress with BlazeMeter](/docs/guides/load-testing-with-blazemeter/)
+
