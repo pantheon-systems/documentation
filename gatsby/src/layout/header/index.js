@@ -140,7 +140,7 @@ const Header = ({ data }) => (
         </ul>
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
-            <div className="container-fluid container-navsearch-box-guide">
+            <div className="container container-navsearch-box-guide">
               <form
                 id="searchform"
                 action="/docs/search"
