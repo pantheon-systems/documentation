@@ -29,6 +29,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/../source/partials`,
+        name: `partials`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/../source/data`,
         name: `data`,
       },
@@ -69,13 +76,6 @@ module.exports = {
             },
           },
         ]
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/../source/partials`,
-        name: `partials`,
       },
     },
     `gatsby-transformer-yaml`,
@@ -119,9 +119,9 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          {
-            resolve: "gatsby-remark-copy-linked-files",
-          },
+          // {
+          //   resolve: "gatsby-remark-copy-linked-files",
+          // },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
