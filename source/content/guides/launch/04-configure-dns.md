@@ -52,7 +52,10 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 </Accordion>
 
+Click [here](/docs/dns/#frequently-asked-questions) to learn more about DNS settings.
+
 <Partial file="enable-https.md" />
 
 
 <Partial file="https-requirements.md" />
+
