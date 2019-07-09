@@ -39,7 +39,7 @@ Keep this page open and login to your [Dyn DNS account](https://portal.dynect.ne
 
   #### Time to Live (TTL)
 
-  The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours),  43200 (12 hours), and 3600 (1 hour).
+  The TTL dictates the lifespan of a DNS record; a shorter time means less time to wait until the changes go into effect. TTLs are always set in seconds with a few common ones being 86400 (24 hours), 43200 (12 hours), and 3600 (1 hour).
 
   When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
 
@@ -54,13 +54,13 @@ Keep this page open and login to your [Dyn DNS account](https://portal.dynect.ne
 1. Click **Add**.
 1. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
-### CNAME Record
-A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
+### A Record for subdomain
+An A record is required to configure a subdomain (e.g., `www.example.com`).
 
-1. Select **CNAME** from the record type dropdown menu.
-1. Enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Cname** field.
-1. Select desired Time to Live (TTL).
-1. Click **Add**.
+1. Select **A** from the record type dropdown menu.
+2. Enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **IP Address** field.
+3. Select desired Time to Live (TTL).
+4. Click **Add**.
 
 ## Dyn Docs
 

@@ -26,11 +26,11 @@ Be sure that you have a:
 2. Click the **Add IPv6 Now** button and enter the AAAA record value provided by Pantheon.
 3. Repeat steps 1-2 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
-### CNAME Record
-A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
+### A Record for subdomain
+An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. Navigate to **Panel** > **Domains** > **Manage Domains** and click **DNS**.
-2. Leave the **Name** field blank, select CNAME from the Type dropdown menu, and enter the enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Value** field.
+2. Leave the **Name** field blank, select A from the Type dropdown menu, and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Value** field.
 3. Click **Add record now!**.
 
 ## DreamHost Docs

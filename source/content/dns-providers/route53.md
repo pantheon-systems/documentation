@@ -41,7 +41,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
 5. Click **Create**:
 
-  ![Route 53 a record](../docs/assets/images/route53-a-record.png)
+  ![Route 53 A record](../docs/assets/images/route53-a-record.png)
 
 ### AAAA Records
 1. Click **Create Record Set** to add a new record, then select **AAAA - IPv6 address** for the record type.
@@ -60,17 +60,15 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
 4. Click **Create**:
 
-  ![Route 53 aaaa records](../docs/assets/images/route53-aaaa-records.png)
+  ![Route 53 AAAA records](../docs/assets/images/route53-aaaa-records.png)
 
-### CNAME Record
-A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
+### A Record for subdomain
+An A record is required to configure a subdomain (e.g., `www.example.com`).
 
-1. Click **Create Record Set** to add a new record, then select **CNAME - Canonical name** for the record type.
-2. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon in the **Value** field (e.g. `live-example.pantheonsite.io`)
+1. Click **Create Record Set** to add a new record, then select **A - IPv4 address** for the record type.
+2. Enter **www** in the **Name** field and enter the A record value provided by Pantheon in the **Value** field (e.g. `23.185.0.2`)
 3. Select desired Time to Live (TTL).
 4. Click **Create**:
-
-  ![Route 53 cname records](../docs/assets/images/route53-cname-record.png)
 
 ## Next Steps
 

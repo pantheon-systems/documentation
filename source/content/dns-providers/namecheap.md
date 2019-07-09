@@ -10,7 +10,6 @@ editpath: dns-providers/namecheap.md/
 ## Before You Begin
 Be sure that you have a:
 
-
 - Registered domain name using Namecheap to host DNS
 - [Paid Pantheon plan](/docs/guides/launch/plans/)
 - [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
@@ -49,14 +48,13 @@ Keep this page open and login to your [Namecheap account](https://www.namecheap.
 4. Click **Save changes**.
 5. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
-### CNAME Record
-A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
+### A Record for subdomain
+An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. From the **Advanced DNS** tab, click the **Add New Record** button.
-2. Select **CNAME Record** for the Type and enter **www** in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Value** field.
+2. Select **A Record** for the Type and enter **www** in the **Host** field and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Value** field.
 3. Select desired Time to Live (TTL).
 4. Click **Save changes**.
-
 
 ## Namecheap Docs
 

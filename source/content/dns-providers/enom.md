@@ -10,7 +10,6 @@ editpath: dns-providers/enom.md/
 ## Before You Begin
 Be sure that you have a:
 
-
 - Registered domain name using eNom to host DNS
 - [Paid Pantheon plan](/docs/guides/launch/plans/)
 - [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
@@ -28,11 +27,11 @@ Be sure that you have a:
 2. Enter **@** in the **Host Name** field, select **AAAA** for the **Record Type** then enter the first AAAA record value provided by Pantheon in the **Address** field.
 3. Repeat steps 1-2 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
-### CNAME Record
-A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
+### A Record for subdomain
+An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 1. Click **New Row**.
-2. Enter **www** in the **Host Name** field, select **CNAME** for the **Record Type** then enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Address** field.
+2. Enter **www** in the **Host Name** field, select **A** for the **Record Type** then enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Address** field.
 4. Click **Save**.
 
 ## eNom Docs

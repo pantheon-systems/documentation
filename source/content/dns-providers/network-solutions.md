@@ -17,7 +17,6 @@ Network Solutions does not support AAAA records for IPv6 traffic which can negat
 ## Before You Begin
 Be sure that you have a:
 
-
 - Registered domain name using Network Solutions to host DNS
 - [Paid Pantheon plan](/docs/guides/launch/plans/)
 - [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
@@ -55,26 +54,18 @@ Keep this page open and login to your [Network Solutions account](https://www.ne
 7. Click **Save Changes**.
 8. Once changes are saved, the section of the Advanced DNS interface for A records should look like this:
 
-  ![Network Solutions Final CNAME](../docs/assets/images/dns/networksolutions/final-a.png)
+  ![Network Solutions Final A](/source/docs/assets/images/dns/networksolutions/final-a.png)
 
+### A Record for Subdomain
+An A record is required to configure a subdomain (e.g., `www.example.com`).
 
-### CNAME Record
-A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
-
-1. In the Host Aliases (CNAME Records) section, click **Edit CNAME Records**.
-2. Enter **www** in the **Alias** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Other Host** field:
-
-  ![Network Solutions CNAME](../docs/assets/images/dns/networksolutions/create-cname.png)
-
+1. In the IP Address (A records) section, click **Edit A Records**.
+2. Edit the **www** record field and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Numeric IP** field.
 3. Select desired Time to Live (TTL).
-4. Click **Continue**, then **Save Changes**.
-5. Once changes are saved, the section of the Advanced DNS interface for CNAME records should look like this:
-
-  ![Network Solutions Final CNAME](../docs/assets/images/dns/networksolutions/final-cname.png)
-
+4. Click **Save Changes**.
 
 ### AAAA Records
-Unfortunately, Network Solutions does not support AAAA records, which means you can't route IPv6 traffic to your bare domain with Network Solutions. Failure to route IPv6 traffic to your site can negatively impact performance, especially for mobile devices. If you'd like to add AAAA records, then consider transferring your domain or name server to another DNS host.
+AAAA records can be set viat the [Adding an IPv6 record](http://www.networksolutions.com/support/Adding-an-IPv6-record/) instructions on the Network Solutions docs and require an email to their support to complete.
 
 ## Network Solutions Docs
 
