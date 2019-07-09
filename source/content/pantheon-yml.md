@@ -37,28 +37,30 @@ protected_web_paths:
 * You may not be able to protect files or paths with special characters
 * Wait a few seconds for changes to take effect
 
-### HTTPS Redirects with HSTS Headers
-Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available:
+### Enforce HTTPS + HSTS
+**HTTPS** adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. **HTTP Strict Transport Security (HSTS)** instructs browsers to only connect via HTTPS and helps to protect websites against protocol downgrade attacks and cookie hijacking.
 
-- `off` (default: no https redirect)
-- `transitional` (Redirects to https and includes an HSTS header with a 5-minute duration)
-- `transitional+subdomains` (Redirects to https and includes an HSTS header with a 5-minute duration, including subdomains)
-- `full` (Redirects to https and includes an HSTS header with a 366-day duration)
-- `full+subdomains` (Redirects to https and includes an HSTS header with a 366-day duration, including subdomains)
+<div class="alert alert-info" role="alert">
+  <h4 class="info">Note</h4>
+  <p markdown="1">Before adjusting `enforce_https`, you should review and understand the configuration options and all considerations to avoid unintended consequences.</p>
+</div>
 
-The preferred `hsts` configuration is shown below:
-```yaml
-enforce_https: full+subdomains
-```
+Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available, from least to most secure:
 
-Note that any option with `+subdomains` should not be used if you have subdomains that are not hosted on Pantheon, unless you are sure they will behave correctly with these hsts settings. 
+- `off`
+- `transitional` - Redirect to HTTPS with a 5-minute HSTS header
+- `transitional+subdomains` Redirect to HTTPS with a 5-minute HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
+- `full` - Redirect to HTTPS with a year-long HSTS header
+- `full+subdomains` - Redirect to HTTPS with a year-long HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
 
-See [Require HTTPS with the HSTS Header](/docs/hsts/) for more information.
+Note that any option with `+subdomains` should not be used if you have subdomains that are not hosted on Pantheon, unless you are sure they can connect via HTTPS and will behave correctly.
 
-#### Considerations
+**Considerations**
+
 * Ensure your site is ready to serve all content via HTTPS as described on the documentation page [Switching Sites from HTTP to HTTPS](/docs/http-to-https).
-* Test with a short-duration HSTS header before selecting the long-duration HSTS header.
-* Using a long-duration HSTS header is required to obtain an A+ ratings from SSL Labs.
+* Test with a short-duration HSTS header (`transitional` or `transitional+subdomains`) before selecting the long-duration HSTS header.
+* Using a long-duration HSTS header (`full` or `full+subdomains`) is required to obtain an A+ ratings from [SSL Labs](https://www.ssllabs.com), the industry-standard 3rd-party testing tool.
+* The recommended and most secure configuration is `full+subdomains`
 
 ### Nested Docroot
 Nest your docroot one level beneath your code repository in a directory named `web`:
