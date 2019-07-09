@@ -10,13 +10,13 @@ categories: []
 ## Support Features and Response Times
 Pantheon offers a range of support packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Package.
 
-| Support Package                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
-|-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
+| Support Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
+|-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
 | **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
-| [**Chat**](#real-time-chat-support)                       | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
-| [**Tickets**](#ticket-support)                            | <span style="color:red">❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
-| [**Emergency On-Call**](#pantheon-on-call)                | <span style="color:red">❌</span>                 | <span style="color:red">❌</span>                  | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
-| [**Professional Services**](/docs/professional-services/) | <span style="color:red">❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
+| [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
+| [**Tickets**](#ticket-support)                            | <span style="color:red">❌</span> | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
+| [**Emergency On-Call**](#pantheon-on-call)                | <span style="color:red">❌</span> | <span style="color:red">❌</span> | 24x7: 1 Hour           | 24x7: 15 Minutes   |
+| [**Professional Services**](/docs/professional-services/) | <span style="color:red">❌</span> | Available for Purchase            | Available for Purchase | Bundle Included    |
 
 ## Best Practices
 
