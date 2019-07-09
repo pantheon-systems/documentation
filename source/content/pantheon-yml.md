@@ -53,13 +53,14 @@ Ensure that your site will always use HTTPS to deliver content with `enforce_htt
 - `full` - Redirect to HTTPS with a year-long HSTS header
 - `full+subdomains` - Redirect to HTTPS with a year-long HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
 
-Note that any option with `+subdomains` should not be used if you have subdomains that are not hosted on Pantheon, unless you are sure they can connect via HTTPS and will behave correctly.
+Note that any option with `+subdomains` should not be used if you have subdomains that are not on Pantheon, unless you are sure they can connect via HTTPS and will behave correctly.
 
-**Considerations**
+#### Considerations
 
-* Ensure your site is ready to serve all content via HTTPS as described on the documentation page [Switching Sites from HTTP to HTTPS](/docs/http-to-https).
+* Ensure your site is ready to serve all content via HTTPS as described in [Switching Sites from HTTP to HTTPS](/docs/http-to-https).
 * Test with a short-duration HSTS header (`transitional` or `transitional+subdomains`) before selecting the long-duration HSTS header.
-* Using a long-duration HSTS header (`full` or `full+subdomains`) is required to obtain an A+ ratings from [SSL Labs](https://www.ssllabs.com), the industry-standard 3rd-party testing tool.
+* A long-duration HSTS header (`full` or `full+subdomains`) is required to obtain an A+ ratings from [SSL Labs](https://www.ssllabs.com).
+* HSTS headers sent with `full` or `full+subdomains` are cached by browsers for one year, so treat this configuration as a commitment. If you disable HTTPS (e.g. by moving to a host that doesn't support HTTPS) returning visitors will be unable to access your site until they manually clear their browser cache.
 * The recommended and most secure configuration is `full+subdomains`
 
 ### Nested Docroot
