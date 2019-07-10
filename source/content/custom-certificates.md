@@ -149,6 +149,10 @@ AAAA record 2:  `2620:12a:8001::X`
 
 **Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
 
+### What to do if we can't add or our DNS manager don't support CAA DNS records?
+
+Not being able to add CAA DNS records means you will have empty CAA records or policy. No action needed here and can proceed to the next step and do cut-over.
+
 ## Caveats / Known Issues
 
 ### Let's Encrypt Certificate Served Instead of Custom Certificate
