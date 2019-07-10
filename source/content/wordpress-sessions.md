@@ -33,7 +33,7 @@ Set-Cookie: SESS1234XXXXXXXXXXXXXX path=/; domain=.example.pantheonsite.io; Http
 
 The best way to determine which plugin or theme is not caching your site is by using this [tool](https://varnishcheck.pantheon.io/) or by inspecting the headers using `curl -sI example.com` with each of the steps until you determine which component is breaking the cache:
 1) To check if it is the theme that is breaking the cache, use your default theme like twentynineteen and check with the tool.
-2) To check if it is any of the plugin is breaking the cache, disable the plugins and turn it on one by one while checking with the tool if it breaks the cache. Do not forget to clear the cache from the Pantheon dashboard everytime that you disable a plugin. 
+2) To check if it is any of the plugin is breaking the cache, disable the plugins one by one. Do not forget to clear the cache from the Pantheon dashboard everytime that you disable a plugin. The last plugin disabled and made the cache work again most likely is the culprit why the page is not being cached.
 Note: If you have a local copy of you site, you can try doing search for plugins that uses `session_start()` or `$_SESSIONS` and start turning them off first.
 3) To check if it is any of the 3rd party must-use plugins or drop-ins that is breaking the cache, temporarily remove the 3rd party must-use plugins and leaving only the `Pantheon` and `WP Native PHP Sessions`. There should be also no drop-ins in place.
 
