@@ -695,9 +695,12 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ### [WooCommerce](https://wordpress.org/plugins/woocommerce/)
 **Issue**: The "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
 
-**Solution**: The suggested workaround is to clone the site locally, import the items, then sync the database back up to the platform.
-<hr />
+**Solution 1**: The suggested workaround is to clone the site locally, import the items, then sync the database back up to the platform.
 
+**Solution 2**: If you don't have a local copy, you can sftp to any environment's `wp-content/uploads` folder and upload the CSV file that you wish to import. Under the advanced settings of the WooCommerce import, you can specify the exact path where you have uploaded the csv file and import from there https://screencast.com/t/K2ZGmLgu
+
+Usually a WP cli import command would be great as it is less prone to timeouts. Interested parties that would like to vote for that feature request can be done from [WooCommerce's GitHub page](https://github.com/woocommerce/woocommerce/issues/21624)
+<hr>
 
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
 **Issue 1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
