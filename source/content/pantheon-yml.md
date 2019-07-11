@@ -38,30 +38,30 @@ protected_web_paths:
 * Wait a few seconds for changes to take effect
 
 ### Enforce HTTPS + HSTS
-**HTTPS** adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. **HTTP Strict Transport Security (HSTS)** instructs browsers to only connect via HTTPS and helps to protect websites against protocol downgrade attacks and cookie hijacking.
 
-<div class="alert alert-info" role="alert">
-  <h4 class="info">Note</h4>
-  <p markdown="1">Before adjusting `enforce_https`, you should review and understand the configuration options and all considerations to avoid unintended consequences.</p>
-</div>
+HTTPS adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
+
+<Alert title="Note" type="info">
+
+Before adjusting `enforce_https`, review and understand the configuration options and all considerations to avoid unintended consequences.
+
+</Alert>
 
 Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available, from least to most secure:
-
 - `off`
 - `transitional` - Redirect to HTTPS with a 5-minute HSTS header
 - `transitional+subdomains` Redirect to HTTPS with a 5-minute HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
 - `full` - Redirect to HTTPS with a year-long HSTS header
 - `full+subdomains` - Redirect to HTTPS with a year-long HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
+   - This is the recommended and most secure configuration.
 
-Note that any option with `+subdomains` should not be used if you have subdomains that are not on Pantheon, unless you are sure they can connect via HTTPS and will behave correctly.
+Any option with `+subdomains` should only be used for subdomains on Pantheon and other sites that connect via HTTPS. HSTS headers sent with `full` or `full+subdomains` are cached by browsers for one year. To test your configuration during development, select a short-duration HSTS header (`transitional` or `transitional+subdomains`) before committing to the long-duration HSTS header. If you disable HTTPS (e.g. by moving to a host that doesn't support HTTPS) returning visitors will be unable to access your site until they manually clear their browser cache.
 
-#### Considerations
+To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/docs/http-to-https/) doc.
 
-* Ensure your site is ready to serve all content via HTTPS as described in [Switching Sites from HTTP to HTTPS](/docs/http-to-https).
-* Test with a short-duration HSTS header (`transitional` or `transitional+subdomains`) before selecting the long-duration HSTS header.
-* A long-duration HSTS header (`full` or `full+subdomains`) is required to obtain an A+ ratings from [SSL Labs](https://www.ssllabs.com).
-* HSTS headers sent with `full` or `full+subdomains` are cached by browsers for one year, so treat this configuration as a commitment. If you disable HTTPS (e.g. by moving to a host that doesn't support HTTPS) returning visitors will be unable to access your site until they manually clear their browser cache.
-* The recommended and most secure configuration is `full+subdomains`
+#### Test Your Site's HSTS Configuration for an A+ Rating
+
+[SSL Labs](https://www.ssllabs.com) provides a free, online service that you can use to test your Site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
 
 ### Nested Docroot
 Nest your docroot one level beneath your code repository in a directory named `web`:
