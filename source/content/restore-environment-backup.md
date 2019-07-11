@@ -88,27 +88,32 @@ This is a destructive process. If you're not comfortable with this technique, us
 
 For more information, see [git reset](https://git-scm.com/docs/git-reset).
 
-## Restoring the LIVE environment
-The restore process removes any recent content or changes applied to your site, since the date of the backup file you will use. Doing so in LIVE means you will lose them forever with no way to recover.
+## Restore the Live Environment
+As mentioned at the top of this page, we do _not_ recommend restoring  backups directly to the Live environment. This method increases the chance and possible duration of downtime to your public-facing site.
 
-If there is still a need to do this in the LIVE environment, we recommend doing the following steps:
+The restore process removes any recent content or changes applied to your site since the date the backup was created. Restoring directly to Live means you will lose code or content updates _forever_ with no way to recover.
+
+If you still want to restore a backup to the Live environment, we recommend the following steps:
+
 - [Lock the environment first](/docs/security/)
-- [Run a backup](/docs/backups/) of LIVE, in order to have a copy of files and the database for later use
+- [Run a backup](/docs/backups/) of LIVE, in order to have a copy of files and the database that will be overwritten
 - Run the restore while the site is still locked
 
-Doing these steps will allow you to later recreate any new content manually. It also resticts access while the restore process is still running, which is a good practice. 
+These steps allow you to recreate any new content manually after the process is complete. It also restricts access while the restore process is still running, which is a good practice to avoid conflicts or data corruption.
 
 ## Restoring Large Sites
-Large sites that have more than 100GB files can take too long to restore and are likely to fail. We recommend running the steps above for a safer process, or do use the separate [backup archive files as mentioned above](/docs/restore-environment-backup/#restore-an-environment-from-another-environments-backup).
+Large sites that have more than 100GB files can take too long to restore and are likely to fail. We recommend the same steps as [restoring to the Live environment](#restore-the-live-environment) for a safer process.
+
+Alternately, consider restoring only the code and database from backups, and move the content back up over [rsync](/docs/rsync-and-sftp).
 
 ## Frequently Asked Questions
 
-### How long does the restore process will take?
-When the Restore button is pressed, three (3) separate workflow process are triggered in the dashboard. Each one represent code, database and asset media files like images or other attachments). One workflow may complete ahead of the others.
+### How long does the restore process take?
+When the Restore button is pressed, three (3) separate workflow process are triggered in the dashboard. One each for code, database, and assets (media files like images or other attachments). One workflow may complete ahead of the others.
 
-There is no way to determine specifically how long it will take, as it varies per site. But the usual factor that extends the restore process is the <strong>count or number of files</strong> in the codebase or files backup. We have seen sites take more than one (1) hour to restore when they have 10,000 files or above, though this is not a strict ratio as another factor is individual file sizes. 
+There is no way to determine specifically how long any one restore job will take, as it varies per site. The usual factor that extends the restore process is the *count*, or number of files in the codebase or files backup. We've seen sites take more than one (1) hour to restore when they have 10,000 files or above, though this is not a strict ratio as individual file sizes also affect the time.
 
-One other way to estimate is to use the last backups duration. Terminus and the `workflow:list` command will show the Time Elapsed field show in seconds.
+One way to estimate time to restore is to check the last backup duration. The Terminus `workflow:list` command will show workflow durations in the **Time Elapsed** field, in seconds.
 
 ```
  $ terminus workflow:list yoursite-name --fields id,env,workflow,time --format table
