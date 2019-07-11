@@ -41,6 +41,41 @@ If you add a site to your account, you will have to download a new copy of your 
 <p>You must use Drush 8.3.0 or 9.6.0 or later to use Drush aliases directly. Earlier versions are not compatible.
 </p></div>
 
+### Structure of Site Aliases
+
+The form Pantheon Drush aliases take depends on the version of Drush being used. Drush 8 aliases are all written to a single file, `$HOME/.drush/pantheon.aliases.drushrc.php`. A single alias record looks something like the example below:
+```
+$aliases['example.*'] = array(
+  'uri' => '${env-name}-example.pantheonsite.io',
+  'remote-host' => 'appserver.${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1.drush.in',
+  'remote-user' => '${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1',
+  'ssh-options' => '-p 2222 -o "AddressFamily inet"',
+  'path-aliases' => array(
+    '%files' => 'files',
+    '%drush-script' => 'drush',
+   ),
+);
+```
+
+Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sites/pantheon`. The site name is used to generate the filename, e.g. `example.site.yml`. The contents of a Drush 9 alias file looks something like the following exampe:
+
+```
+'*':
+  host: appserver.${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1.drush.in
+  paths:
+    files: files
+    drush-script: drush9
+  uri: ${env-name}-example.pantheonsite.io
+  user: ${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1
+  ssh:
+    options: '-p 2222 -o "AddressFamily inet"'
+    tty: false
+```
+
+Note that these are both "wildcard" aliases. The same wildcard alias is used for every environment available for a given site. The variable `${env-name}` is replaced with the appropriate environment name when used.
+
+Pantheon also uses "policy files" to validate aliases before they are used. The policy files are written by the `terminus aliases` command; the Drush 8 policy file is written to `$HOME/.drush/pantheon/drush8/pantheon_policy.drush.inc`, and the Drush 9 policy file is written to `$HOME/.drush/pantheon/Commands/PantheonAliasPolicyCommands.php`. These files should not be deleted.
+
 ### List Available Site Aliases
 Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
 ```
