@@ -18,6 +18,13 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 - In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
 - Examine existing records pointing to Pantheon
   <Partial file="standard-dns-config.md" />
+  
+  <Alert title="note" type="info">
+
+  For subdomains that are using Custom Certificates, use the bare domain's recommended A/AAAA records instead of using CNAME records.
+
+  </Alert>
+
 - Lower the TTL of existing DNS records to minimize impact of upcoming DNS changes
 
   <Accordion title="Learn More" id="ttl" icon="info-sign">
