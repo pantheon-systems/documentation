@@ -20,44 +20,32 @@ You can run all of the commands below from Terminus instead of using Drush alias
 For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/drush-versions).
 
 ## Download Drush Aliases Locally
-Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments.
+Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use Terminus to download your Drush aliases.
 
-There are two ways to obtain the aliases, either with Terminus or through the Dashboard.
-
-### Download with Terminus, the Pantheon CLI
-Authenticate Terminus with [machine tokens](/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
+Authenticate Terminus with [machine tokens](/docs/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
 ```
 $ terminus aliases
 ```
 
-### Download Using the Dashboard
+This command will write both Drush 8 and Drush 9 aliases into the directory `$HOME/.drush` for your sites that you are a direct member of. To create aliases for all sites that you can use, including sites that you have access to via team membership, run:
 
-![Link to Pantheon Drush Aliases](../images/dashboard/drush-aliases.png)
+```nohighlight
+$ terminus aliases --all
+```
 
-Download your Pantheon site aliases to manually update your local aliases file:
+If you add a site to your account, you will have to download a new copy of your Drush aliases. You do not need to update your Drush aliases when you add new mulitdev environments to your sites.
 
-1. From your Pantheon User Dashboard, click **Sites** > **Drush Aliases**
-2. Move the generated `pantheon.aliases.drushrc.php` into your local Drush site-aliases directory (e.g. `$HOME/.drush/site-aliases`).
-3. Clear Drush cache:
-
- ```
- drush cc drush
- ```
-
-If you add a site to your account, you will have to download a new copy of your Drush aliases.
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p>You must use Drush 8.3.0 or 9.6.0 or later to use Drush aliases directly. Earlier versions are not compatible.
+</p></div>
 
 ### List Available Site Aliases
 Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
 ```
 $ drush sa
 ```
-<Alert title="Note" type="info">
-
-You must be a [site team member](/team-management/#manage-site-team-members) of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/terminus) for sites in which you are not a direct site team member.
-
-</Alert>
-
 ## Execute a Drush Command on a Pantheon Site Environment
 Once you see the target site in the list of site aliases, you can execute a command on any remote site listed. The syntax is:  
 
@@ -87,6 +75,8 @@ Drupal's list of PHP classes and files can get corrupted or out-of-date, typical
 terminus drush <site>.<env> -- rr
 ```
 
+Note that the Registry Rebuild command is only ever necessary on Drupal 7 and Drupal 6 sites. The command `drush cache:rebuild` for Drupal 8 serves the same function that `registry rebuild` does for older versions of Drupal.
+
 ## Run SQL Queries Using Drush on Pantheon
 
 The `drush sql-cli` and `drush sql-connect` commands are not supported on Pantheon. For security reasons, the SQL database is not directly accessible from your local machine.
@@ -94,7 +84,7 @@ The `drush sql-cli` and `drush sql-connect` commands are not supported on Panthe
 You can, however, use Terminus as follows:
 
 ```bash
-terminus drush SITENAME.ENV -- sql-query "SELECT * FROM users WHERE uid=1"
+echo 'SELECT * FROM users WHERE uid=1;' | terminus drush SITENAME.ENV sql:cli
 ```
 
 Note that certain characters such as `;` cannot be used in the query. If you use an illegal character, you will get an error message "Command not supported as typed."
@@ -125,7 +115,7 @@ While we have the full spectrum of Drush core already available for your use, yo
 
 1. Put the site in Git mode.
 1. Clone locally.
-1. Create a Drush folder in the Drupal root.
+1. Create a `drush` folder in the Drupal root.
 1. Add the “sar” Drush command to the Drush folder.
 1. Commit drush/sar.
 1. Push your code up to Pantheon.
@@ -134,6 +124,9 @@ While we have the full spectrum of Drush core already available for your use, yo
  ```
  drush @pantheon.SITENAME.dev cc drush
  ```
+
+For Drupal 9, place Drush commands in `drush/Commands`.
+
 
 ## Drush Alias Strict Control
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
@@ -165,7 +158,7 @@ The following silent failure occurs when executing `terminus drush` commands on 
 [error]
 ```
 
-Redirects kill the PHP process before Drush is executed. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
+Redirects kill the PHP process before Drush execution is complete. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
 
 ```php
 // Require HTTPS, www.
