@@ -39,7 +39,7 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 </Alert>
 
 ### Available Drush Versions
-Pantheon currently supports Drush 8 and Drush 9. Drush 9 is the preferred version of Drush to use with Drupal 8 sites. Drush 8 may be desired for sites that are not managed by Composer, or that use modules that provide additional Drush 8 commands.
+Pantheon currently supports Drush 8 and Drush 9. Drush 9 is the preferred version of Drush to use with Drupal 8 sites that are managed by Composer. See [Drupal 8 and Composer on Pantheon Without Continuous Integration](https://pantheon.io/docs/guides/drupal-8-composer-no-ci/) and the [Build Tools Workflow](https://pantheon.io/docs/guides/build-tools/) for information on how to use Composer to manage Drupal sites on Pantheon. Drush 8 should be used for Drupal 8 sites that are not managed by Composer, or that use modules that provide additional Drush 8 commands.
 
 Always use Drush 8 with Drupal 7 and Drupal 6 sites, as Drush 9 only works on Drupal 8 and later. While Drush 5 and 7 are available on Pantheon if needed, they are listed as [unsupported](http://docs.drush.org/en/master/install/#drupal-compatibility){.external} by the Drush maintainers, and should be avoided unless absolutely necessary.
 
