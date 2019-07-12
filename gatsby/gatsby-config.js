@@ -119,9 +119,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          // {
-          //   resolve: "gatsby-remark-copy-linked-files",
-          // },
+          `gatsby-remark-static-images`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

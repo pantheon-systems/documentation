@@ -10,19 +10,19 @@ categories: []
 ## Support Features and Response Times
 Pantheon offers a range of support packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Package.
 
-| Support Package                                           | Silver                                          | Gold                                              | Platinum                                              | Diamond                                           |
-|-----------------------------------------------------------|-------------------------------------------------|---------------------------------------------------|-------------------------------------------------------|---------------------------------------------------|
+| Support Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
+|-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
 | **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
-| [**Chat**](#real-time-chat-support)                       | 24x5                                            | 24x7                                              | 24x7: Priority                                        | 24x7: Top Priority                                |
-| [**Tickets**](#ticket-support)                            | <span style="color:red">❌</span>                 | 24x5: 8 Hours                                     | 24x7: 2 Hours                                         | 24x7: 1 Hour                                      |
-| [**Emergency On-Call**](#pantheon-on-call)                | <span style="color:red">❌</span>                 | <span style="color:red">❌</span>                  | 24x7: 1 Hour                                          | 24x7: 15 Minutes                                  |
-| [**Professional Services**](/docs/professional-services/) | <span style="color:red">❌</span>                 | Available for Purchase                            | Available for Purchase                                | Bundle Included                                   |
+| [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
+| [**Tickets**](#ticket-support)                            | <span style="color:red">❌</span> | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
+| [**Emergency On-Call**](#pantheon-on-call)                | <span style="color:red">❌</span> | <span style="color:red">❌</span> | 24x7: 1 Hour           | 24x7: 15 Minutes   |
+| [**Professional Services**](/docs/professional-services/) | <span style="color:red">❌</span> | Available for Purchase            | Available for Purchase | Bundle Included    |
 
 ## Best Practices
 
 Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
 
- - **Open the Ticket in the Right Place:** Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package.
+ - **Open the Ticket in the Right Place:** If you are a member of an [Organization](/docs/organizations/), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
 
  - **One ticket per issue:** Opening multiple tickets on the same issue will only impede our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
 
@@ -33,6 +33,12 @@ Keep these tips in mind when opening a new support ticket or chat, to help us mo
  - **Custom Access:** If your site uses nonstandard admin URLs, custom logins, etc., please let us know.
 
  - **Clarification:** We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
+
+### The Support Tab from the Organization Dashboard
+
+If you are part of an Organization with an enhanced support package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
+
+![Select Support from the Organization's Dashboard](../docs/assets/images/dashboard/support-from-org-dash.gif)
 
 ## Real Time Chat Support
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
