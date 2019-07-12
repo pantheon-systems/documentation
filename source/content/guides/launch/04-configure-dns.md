@@ -56,6 +56,5 @@ Click [here](/docs/dns/#frequently-asked-questions) to learn more about DNS sett
 
 <Partial file="enable-https.md" />
 
-
 <Partial file="https-requirements.md" />
 
