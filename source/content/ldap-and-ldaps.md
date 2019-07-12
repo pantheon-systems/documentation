@@ -75,7 +75,7 @@ WordPress and Drupal both work with the [Pantheon Secure Integration](/secure-in
 If you're using the Drupal 8 LDAP module, take note of the machine name you give to the LDAP server. Then, in your `settings.php` file, add the following lines for each LDAP server:
 
 ```php
-$config['ldap_servers.server.MACHINE_NAME']['address'] = '127.0.01';
+$config['ldap_servers.server.MACHINE_NAME']['address'] = '127.0.0.1';
 $config['ldap_servers.server.MACHINE_NAME']['port'] = PANTHEON_SOIP_CONSTANT_NAME;
 ```
 
