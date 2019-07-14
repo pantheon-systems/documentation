@@ -497,9 +497,22 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 **Solution**: See [Set SERVER_PORT Correctly](https://pantheon.io/docs/server_name-and-server_port/#set-server_port-correctly).
 <hr />
 
+<<<<<<< HEAD:source/content/modules-plugins-known-issues.md
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/)
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 <hr />
+=======
+### [Interactive Content H5P](https://wordpress.org/plugins/h5p/){.external}
+**Issue**: Uploading large h5p files usually causes gateway timeouts/504s specially on slow internet connection.
+
+**Solution**: Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout of 59 seconds](https://pantheon.io/docs/platform-considerations/#upload-speed). Please try uploading on a faster internet upload connection.
+
+<hr>
+
+### [Instashow](https://elfsight.com/instagram-feed-instashow/){.external}
+**Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/){.external} for more information. This inhibits the ability to set the authorization token required to make the plugin function.
+<hr>
+>>>>>>> Add h5p in plugin with known issues:source/_docs/modules-plugins-known-issues.md
 
 
 ### [iThemes Security](https://wordpress.org/plugins/better-wp-security/)
