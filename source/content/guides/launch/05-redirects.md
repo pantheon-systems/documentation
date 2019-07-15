@@ -36,7 +36,7 @@ Make sure HTTPS has been successfully provisioned *before* adding any code (like
 
 5. Edit your configuration file by adding the following snippet for the desired redirect (replace `example.com`):
 
-  <Partial file="redirects.md" />
+  <Partial file="_redirects.md" />
 
 6. Upload the configuration file to Pantheon using your SFTP client.
 

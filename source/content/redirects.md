@@ -24,7 +24,7 @@ This redirect is considered best practice and recommended as part of the going l
 
 The following configuration will redirect HTTP to HTTPS _and_ enforce use of a primary domain, such as `http://live-site-name.pantheonsite.io` to `https://www.example.com` or `http://example.com` to `https://www.example.com`:
 
-<Partial file="redirects.md" />
+<Partial file="_redirects.md" />
 
 ## Additional Redirects (Optional)
 Implement scenario specific redirects as required by the site. Depending on the needs of the site, you may only need one, some, or none of the following.
