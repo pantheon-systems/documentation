@@ -34,7 +34,7 @@ Or for a list of all available commands:
 terminus list
 ```
 
-### The `<site>.<env>`
+### site.env
 
 Terminus command structure typically includes `<site>.<env>` in order to determine the target site and environment to execute against. Note that the `<>` symbols are part of the example, not to be included in your commands. For example, running the `env:clear-cache` command for the Live environment of a site labeled "Your Awesome Site":
 
@@ -44,19 +44,19 @@ Terminus command structure typically includes `<site>.<env>` in order to determi
 
 <DefList>
 
-<Definition title="Site Label">
+<Definition name="Site Label">
 
 Human readable, such as "Your Awesome Site", entered during site creation and displayed in the Site Dashboard.
 
 </Definition>
 
-<Definition title="Site Name">
+<Definition name="Site Name">
 
 Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/domains/#platform-domains).
 
 </Definition>
 
-<Definition title="Environment Name">
+<Definition name="Environment Name">
 
 Machine readable, such as "dev", "test", "live", or "bug123", which refers to the target site environment on Pantheon.
 

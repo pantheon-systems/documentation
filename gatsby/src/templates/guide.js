@@ -30,6 +30,7 @@ import Color from "../components/color.js"
 import Download from "../components/download"
 import BuildTools from "../components/buildTools.js"
 import Partial from "../components/partial.js"
+import ChecklistItem from "../components/checklistItem"
 
 const shortcodes = {
   Callout,
@@ -50,7 +51,8 @@ const shortcodes = {
   Enablement,
   Download,
   BuildTools,
-  Partial
+  Partial,
+  ChecklistItem,
 }
 
 class GuideTemplate extends React.Component {

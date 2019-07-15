@@ -24,9 +24,9 @@ import Definition from "../components/definition.js"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
-
 import Partial from "../components/partial"
 import Image from "../layout/image"
+import ChecklistItem from "../components/checklistItem"
 
 const shortcodes = {
   Callout,
@@ -44,7 +44,8 @@ const shortcodes = {
   Enablement,
   Color,
   Download,
-  Partial
+  Partial,
+  ChecklistItem,
 }
 
 class DocTemplate extends React.Component {

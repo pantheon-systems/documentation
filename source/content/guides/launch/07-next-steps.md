@@ -22,18 +22,37 @@ Congrats!! You just launched a site on Pantheon. This is a big deal. Revel in yo
 
 When you're ready to launch another site, use this best-practice checklist to establish a repeatable going live procedure.
 ## Best Practice Checklist for Going Live
-<span class="checklist-icons glyphicon-unchecked"></span> [Create the Live environment](/guides/quickstart/create-test-live/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Upgrade Site Plan](/guides/launch/plans/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Activate New Relic Pro](/new-relic/#activate-new-relic-apm-pro)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Load and Performance Test](/load-and-performance-testing/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Add Domains to the Live Environment](/guides/launch/domains/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Configure DNS](/guides/launch/domains/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Redirect to a Primary Domain](/guides/launch/redirects/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Enable and Schedule Weekly Backups](/guides/launch/launch-check/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Set Up Outgoing Email](/email/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [WordPress Launch Check](/wordpress-launch-check/) / [Drupal Launch Check](/drupal-launch-check)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Review Status Reports](/guides/launch/launch-check/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Enable Redis](/redis/#enable-redis)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Configure Caching](/global-cdn-caching/)<br />
-<span class="checklist-icons glyphicon-unchecked"></span> [Test Cache](/test-global-cdn-caching/)<br />
+
+<ChecklistItem title="Create the Live environment" link="/guides/quickstart/create-test-live/" />
+
+<ChecklistItem title="Upgrade Site Plan" link="/guides/launch/plans/" />
+
+<ChecklistItem title="Activate New Relic Pro" link="/new-relic/#activate-new-relic-apm-pro" />
+
+<ChecklistItem title="Load and Performance Test" link="/load-and-performance-testing/" />
+
+<ChecklistItem title="Add Domains to the Live Environment" link="/guides/launch/domains/" />
+
+<ChecklistItem title="Configure DNS" link="/guides/launch/domains/" />
+
+<ChecklistItem title="Redirect to a Primary Domain" link="/guides/launch/redirects/" />
+
+<ChecklistItem title="Setup Availability Monitoring" link="/new-relic/#configure-ping-monitors-for-availability" />
+
+<ChecklistItem title="Enable and Schedule Weekly Backups" link="/guides/launch/launch-check/" />
+
+<ChecklistItem title="Set Up Outgoing Email" link="/email/" />
+
+<ChecklistItem title="WordPress Launch Check" link="/wordpress-launch-check/" />
+
+ **OR** 
+
+<ChecklistItem title="Drupal Launch Check" link="/drupal-launch-check/" />
+
+<ChecklistItem title="Review Status Report" link="/guides/launch/launch-check/" />
+
+<ChecklistItem title="Enable Redis" link="/redis/#enable-redis" />
+
+<ChecklistItem title="Configure Caching" link="/global-cdn-caching/" />
+
+<ChecklistItem title="Test Cache" link="/test-global-cdn-caching/" />
