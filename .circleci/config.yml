@@ -17,6 +17,12 @@ jobs:
             sudo npm install -g gatsby
             npm install
       - run:
+          name: Import GitHub Token
+          command: |
+            cd ~/build/gatsby
+            touch .env.production
+            echo "GITHUB_API=$GITHUB_TOKEN" > .env.production
+      - run:
           name: Gatsby Build
           command: |
             cd ~/build/gatsby
