@@ -50,51 +50,65 @@ Some customers have reported success using external Solr service providers for t
 
 ## Apache Solr Vocabulary
 
-<DefList>
+<dl>
 
-<Definition title="bias">
+<dt>bias</dt>
+
+<dd>
 
 Allows certain parts of indexed items to influence the importance of search results. The higher the bias, the greater the influence; the range is 0.1 to 21.0.
 
-</Definition>
+</dd>
 
-<Definition title="core">
+<dt>core</dt>
+
+<dd>
 
 A core is a separate configuration and index using a single Solr instance. A core is created when the schema is posted. For more information, see [https://wiki.apache.org/solr/CoreAdmin](https://wiki.apache.org/solr/CoreAdmin)
 
-</Definition>
+</dd>
 
-<Definition title="document">
+<dt>document</dt>
+
+<dd>
 
 A document is similar to a database row, containing the contents of what is to be searched and whatever fields are associated with it, like title.
 
-</Definition>
+</dd>
 
-<Definition title="facet">
+<dt>facet</dt>
+
+<dd>
 
 Search facets allow search results to be filtered; examples include seeing a list of potential filters and the count of matches for each filter on the left, like Amazon product searches.
 
-</Definition>
+</dd>
 
-<Definition title="index">
+<dt>index</dt>
+
+<dd>
 
 structure containing extracted keywords from a document for rapid search and retrieval, similar to a database table.
 
-</Definition>
+</dd>
 
-<Definition title="score">
+<dt>score</dt>
+
+<dd>
 
 calculated relevance of matches influenced by bias, represented as a float.
 
-</Definition>
+</dd>
 
-<Definition title="schema.xml">
+<dt>schema.xml</dt>
+
+<dd>
 
 Contains details about the fields that documents can contain, and how those fields are handled when adding documents to the index or querying those fields. Must be posted using the pantheon_apachesolr module before indexing and searching will work. For more information, see [https://wiki.apache.org/solr/SchemaXml](https://wiki.apache.org/solr/SchemaXml).
 
-</Definition>
+</dd>
 
-</DefList>
+</dl>
 
 #### Check Index and Batch Sizes
 

@@ -23,13 +23,12 @@ import Releases from "../components/releases"
 import TerminusVersion from "../components/terminusVersion"
 import Commands from "../components/commands"
 import GetFeedback from "../components/getFeedback"
-import DefList from "../components/defList.js"
-import Definition from "../components/definition.js"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
 import BuildTools from "../components/buildTools.js"
 import Partial from "../components/partial.js"
+import Image from "../layout/image"
 import ChecklistItem from "../components/checklistItem"
 
 const shortcodes = {
@@ -46,13 +45,12 @@ const shortcodes = {
   Releases,
   TerminusVersion,
   Commands,
-  DefList,
-  Definition,
   Enablement,
   Download,
   BuildTools,
   Partial,
   ChecklistItem,
+  Image,
 }
 
 class GuideTemplate extends React.Component {

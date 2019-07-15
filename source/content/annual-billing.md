@@ -13,21 +13,25 @@ For standard billing information, see [Billing in the Site Dashboard](/site-bill
 
 The table below shows how much sites can save by switching to annual billing. Performance plans receive savings equivalent to at least one month of free service. On a basic plan, the savings are equivalent to two months of free service.
 
-<DefList>
+<dl>
 
-<Definition title="List Price">
+<dt>List Price</dt>
+
+<dd>
 
 Set price for new sites created after late October that aren’t purchased via a qualified agency partner.
 
-</Definition>
+</dd>
 
-<Definition title="Preferred Price">
+<dt>Preferred Price</dt>
+
+<dd>
 
 [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program).
 
-</Definition>
+</dd>
 
-</DefList>
+</dl>
 
 <TabList>
 

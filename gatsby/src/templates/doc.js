@@ -19,8 +19,6 @@ import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import SEO from "../layout/seo"
-import DefList from "../components/defList.js"
-import Definition from "../components/definition.js"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
@@ -39,13 +37,12 @@ const shortcodes = {
   Tab,
   Card,
   CardGroup,
-  DefList,
-  Definition,
   Enablement,
   Color,
   Download,
   Partial,
   ChecklistItem,
+  Image,
 }
 
 class DocTemplate extends React.Component {

@@ -29,51 +29,65 @@ Branching is a standard mechanism for duplicating source code under revision con
 
 There are a number of terms used throughout the Multidev workflow:
 
-<DefList>
+<dl>
 
-<Definition title="commit">
+<dt>commit</dt>
+
+<dd>
 
 Record snapshot to history.
 
-</Definition>
+</dd>
 
-<Definition title="push">
+<dt>push</dt>
+
+<dd>
 
 Send changes to a remote repository.
 
-</Definition>
+</dd>
 
-<Definition title="branch">
+<dt>branch</dt>
+
+<dd>
 
 Movable pointer to a set of commits, allowing independent development and history.
 
-</Definition>
+</dd>
 
-<Definition title="environment">
+<dt>environment</dt>
+
+<dd>
 
 Independent infrastructure for a site, including code, database, and files.
 
-</Definition>
+</dd>
 
-<Definition title="fork">
+<dt>fork</dt>
+
+<dd>
 
 To divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.
 
-</Definition>
+</dd>
 
-<Definition title="merge">
+<dt>merge</dt>
+
+<dd>
 
 Combine contents of a&nbsp;branch into another, like a bug fix branch into master.
 
-</Definition>
+</dd>
 
-<Definition title="master">
+<dt>master</dt>
+
+<dd>
 
 Name of default branch; deployed to Pantheon Dev, Test, and Live environments.
 
-</Definition>
+</dd>
 
-</DefList>
+</dl>
 
 ## Getting Started
 

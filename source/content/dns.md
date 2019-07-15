@@ -33,39 +33,49 @@ We offer DNS provider-specific instructions for several common DNS hosts:
 
 ## DNS Terminology
 
-<DefList>
+<dl>
 
-<Definition title="TLD">
+<dt>TLD</dt>
+
+<dd>
 
 Stands for **Top Level Domain**. This is the last piece of your website URL (`.com`, `.net`, `.org`, etc)
 
-</Definition>
+</dd>
 
-<Definition title="Registrar">
+<dt>Registrar</dt>
+
+<dd>
 
 The service through which you purchase a domain name. Most registrars also offer DNS management services.
 
-</Definition>
+</dd>
 
-<Definition title="Domain">
+<dt>Domain</dt>
+
+<dd>
 
 The last section of your website name before the TLD, the domain is what you purchase from the Registrar.
 
-</Definition>
+</dd>
 
-<Definition title="Subdomain">
+<dt>Subdomain</dt>
+
+<dd>
 
 Separate by periods (`.`), subdomains preceed the domain name. `www` is the most commonly seen subdomain. Subdomains can also stack (example: `www.something.example.com`).
 
-</Definition>
+</dd>
 
-<Definition title="Authoritative Name Server">
+<dt>Authoritative Name Server</dt>
+
+<dd>
 
 The service that publishes your domain's DNS records
 
-</Definition>
+</dd>
 
-</DefList>
+</dl>
 
 ## DNS Record Types
 

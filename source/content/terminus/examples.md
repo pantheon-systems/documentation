@@ -42,27 +42,36 @@ Terminus command structure typically includes `<site>.<env>` in order to determi
 
 <Accordion title="Learn More" id="identify-site" icon="lightbulb">
 
-<DefList>
+<dl>
 
-<Definition title="Site Label">
+<dt>Site Label</dt>
+
+<dd>
 
 Human readable, such as "Your Awesome Site", entered during site creation and displayed in the Site Dashboard.
 
-</Definition>
+</dd>
 
-<Definition title="Site Name">
+
+<dt>Site Name</dt>
+
+<dd>
 
 Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/domains/#platform-domains).
 
-</Definition>
+</dd>
 
-<Definition title="Environment Name">
+
+<dt>Environment Name</dt>
+
+<dd>
 
 Machine readable, such as "dev", "test", "live", or "bug123", which refers to the target site environment on Pantheon.
 
-</Definition>
+</dd>
 
-</DefList>
+
+</dl>
 
 You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/sites/#site-uuid). For example:
 
