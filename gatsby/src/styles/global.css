@@ -577,3 +577,13 @@ h2 > .glyphicons {
 		right: 0px;
 	}
 }
+
+/* contributor template style */
+.guest-info__img img {
+	margin: 20px;
+	border-radius: 50% !important;
+	height: auto;
+	border: none !important;
+	width: 200px;
+	padding: unset !important;
+}
