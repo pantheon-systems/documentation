@@ -42,6 +42,7 @@ To pre-provision HTTPS, CAA records must either:
  - Authorize Let's Encrypt.
 
 <Alert title="Warning" type="danger">
+
 Skipping this step will result in service interruption for existing sites that require or expect HTTPS. If you skip this step, HTTPS will be available within an hour **after** DNS routes to Pantheon.
 
 Once you begin this process, you have:
