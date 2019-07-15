@@ -82,7 +82,7 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 8. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
 
     ```bash
-    composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:~1
+    composer create-project -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta12
     ```
 
   <Alert title="Note" type="info">
