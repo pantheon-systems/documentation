@@ -18,7 +18,7 @@ const Contributors = ({ contributors }) => {
 						}
 						return (
 							<React.Fragment key={i}>
-								<Link to={`/docs/contributors/${contributor.id}`} title={contributor.id}>
+								<Link to={`/contributors/${contributor.id}`} title={contributor.id}>
 									{contributor.name}
 								</Link>
 								{lastCharacter}

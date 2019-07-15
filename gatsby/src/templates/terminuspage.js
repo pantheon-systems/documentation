@@ -115,7 +115,7 @@ class TerminusTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"docs/assets/images/terminus-thumbLarge.png"}
+          image={"/assets/images/terminus-thumbLarge.png"}
         />
         <div className="container-fluid">
           <div className="row">

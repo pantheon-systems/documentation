@@ -64,7 +64,7 @@ class DocTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"docs/assets/images/default-thumb-doc.png"}
+          image={"/assets/images/default-thumb-doc.png"}
         />
         <div className="container">
           <div className="row doc-content-well">

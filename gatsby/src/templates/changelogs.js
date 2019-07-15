@@ -64,7 +64,7 @@ class ChangelogsTemplate extends React.Component {
         <SEO
           title="Pantheon Changelog"
           description="Pantheon Changelog"
-          image={"docs/assets/images/default-thumb-doc.png"}
+          image={"assets/images/default-thumb-doc.png"}
         />
         <div className="container">
           <div className="row doc-content-well">
