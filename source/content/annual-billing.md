@@ -15,13 +15,13 @@ The table below shows how much sites can save by switching to annual billing. Pe
 
 <DefList>
 
-<Definition name="List Price">
+<Definition title="List Price">
 
 Set price for new sites created after late October that aren’t purchased via a qualified agency partner.
 
 </Definition>
 
-<Definition name="Preferred Price">
+<Definition title="Preferred Price">
 
 [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program).
 

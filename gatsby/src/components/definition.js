@@ -1,10 +1,13 @@
 import React from "react"
 
-const Definition = ({ name, children }) => (
+const Definition = ({ title, children }) => {
+  return (
   <>
-    <dt>{name}</dt><dd markdown="1">{children}</dd>
+    <dt>{title}</dt>
+    <dd>{children}</dd>
     <br />
   </>
-)
+  )
+}
 
 export default Definition

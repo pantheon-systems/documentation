@@ -52,43 +52,43 @@ Some customers have reported success using external Solr service providers for t
 
 <DefList>
 
-<Definition name="bias">
+<Definition title="bias">
 
 Allows certain parts of indexed items to influence the importance of search results. The higher the bias, the greater the influence; the range is 0.1 to 21.0.
 
 </Definition>
 
-<Definition name="core">
+<Definition title="core">
 
 A core is a separate configuration and index using a single Solr instance. A core is created when the schema is posted. For more information, see [https://wiki.apache.org/solr/CoreAdmin](https://wiki.apache.org/solr/CoreAdmin)
 
 </Definition>
 
-<Definition name="document">
+<Definition title="document">
 
 A document is similar to a database row, containing the contents of what is to be searched and whatever fields are associated with it, like title.
 
 </Definition>
 
-<Definition name="facet">
+<Definition title="facet">
 
 Search facets allow search results to be filtered; examples include seeing a list of potential filters and the count of matches for each filter on the left, like Amazon product searches.
 
 </Definition>
 
-<Definition name="index">
+<Definition title="index">
 
 structure containing extracted keywords from a document for rapid search and retrieval, similar to a database table.
 
 </Definition>
 
-<Definition name="score">
+<Definition title="score">
 
 calculated relevance of matches influenced by bias, represented as a float.
 
 </Definition>
 
-<Definition name="schema.xml">
+<Definition title="schema.xml">
 
 Contains details about the fields that documents can contain, and how those fields are handled when adding documents to the index or querying those fields. Must be posted using the pantheon_apachesolr module before indexing and searching will work. For more information, see [https://wiki.apache.org/solr/SchemaXml](https://wiki.apache.org/solr/SchemaXml).
 

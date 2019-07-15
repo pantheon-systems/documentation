@@ -44,19 +44,19 @@ Terminus command structure typically includes `<site>.<env>` in order to determi
 
 <DefList>
 
-<Definition name="Site Label">
+<Definition title="Site Label">
 
 Human readable, such as "Your Awesome Site", entered during site creation and displayed in the Site Dashboard.
 
 </Definition>
 
-<Definition name="Site Name">
+<Definition title="Site Name">
 
 Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/domains/#platform-domains).
 
 </Definition>
 
-<Definition name="Environment Name">
+<Definition title="Environment Name">
 
 Machine readable, such as "dev", "test", "live", or "bug123", which refers to the target site environment on Pantheon.
 

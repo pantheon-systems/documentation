@@ -31,43 +31,43 @@ There are a number of terms used throughout the Multidev workflow:
 
 <DefList>
 
-<Definition name="commit">
+<Definition title="commit">
 
 Record snapshot to history.
 
 </Definition>
 
-<Definition name="push">
+<Definition title="push">
 
 Send changes to a remote repository.
 
 </Definition>
 
-<Definition name="branch">
+<Definition title="branch">
 
 Movable pointer to a set of commits, allowing independent development and history.
 
 </Definition>
 
-<Definition name="environment">
+<Definition title="environment">
 
 Independent infrastructure for a site, including code, database, and files.
 
 </Definition>
 
-<Definition name="fork">
+<Definition title="fork">
 
 To divide in branches, copying source code&nbsp;to start independent development. At Pantheon, we are also copying content (files and database) when forking.
 
 </Definition>
 
-<Definition name="merge">
+<Definition title="merge">
 
 Combine contents of a&nbsp;branch into another, like a bug fix branch into master.
 
 </Definition>
 
-<Definition name="master">
+<Definition title="master">
 
 Name of default branch; deployed to Pantheon Dev, Test, and Live environments.
 

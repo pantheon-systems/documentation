@@ -12,19 +12,19 @@ Views has a very granular caching system, down to the individual View display. T
 
 <DefList>
 
-<Definition name="Query Results Caching">
+<Definition title="Query Results Caching">
 
 Raw Query Results, which should be cached for at least 1 minute. As the subject matter expert, you're in the best position to know how often your content should change.
 
 </Definition>
 
-<Definition name="Rendered Output Caching">
+<Definition title="Rendered Output Caching">
 
 Generated markup, which should be cached for as long as possible (if the query changes, the output will be refreshed).
 
 </Definition>
 
-<Definition name="Block Caching">
+<Definition title="Block Caching">
 
 If you're generating a block, this will expose the block to Drupal's built-in block caching.
 

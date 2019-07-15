@@ -35,31 +35,31 @@ We offer DNS provider-specific instructions for several common DNS hosts:
 
 <DefList>
 
-<Definition name="TLD">
+<Definition title="TLD">
 
 Stands for **Top Level Domain**. This is the last piece of your website URL (`.com`, `.net`, `.org`, etc)
 
 </Definition>
 
-<Definition name="Registrar">
+<Definition title="Registrar">
 
 The service through which you purchase a domain name. Most registrars also offer DNS management services.
 
 </Definition>
 
-<Definition name="Domain">
+<Definition title="Domain">
 
 The last section of your website name before the TLD, the domain is what you purchase from the Registrar.
 
 </Definition>
 
-<Definition name="Subdomain">
+<Definition title="Subdomain">
 
 Separate by periods (`.`), subdomains preceed the domain name. `www` is the most commonly seen subdomain. Subdomains can also stack (example: `www.something.example.com`).
 
 </Definition>
 
-<Definition name="Authoritative Name Server">
+<Definition title="Authoritative Name Server">
 
 The service that publishes your domain's DNS records
 

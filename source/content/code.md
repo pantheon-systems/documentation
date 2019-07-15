@@ -83,10 +83,10 @@ You can also view the diff output for each individual file:
 The Dev environment provides [one-click updates](/core-updates/) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
 
   <DefList>
-  <Definition name="Upstream">
+  <Definition title="Upstream">
   A code repository that serves as a common package for your web application.
   </Definition>
-  <Definition name="Repository">
+  <Definition title="Repository">
   Centralized location of code intended for distribution.
   </Definition>
   </DefList>
