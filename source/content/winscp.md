@@ -8,7 +8,7 @@ categories: []
 
 ## Getting Started
 
-Make sure you have the Pantheon SFTP connection information for your site ready. If you need to locate the connection information, see the documentation on [how to find the SFTP credentials](/docs/sftp#sftp-connection-information) for your site.
+Make sure you have the Pantheon SFTP connection information for your site ready. If you need to locate the connection information, see the documentation on [how to find the SFTP credentials](/sftp#sftp-connection-information) for your site.
 
 ## Download WinSCP
 

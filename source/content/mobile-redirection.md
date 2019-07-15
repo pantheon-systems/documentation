@@ -20,7 +20,7 @@ The following instructions will enable automatic redirects for the domain associ
 </Alert>
 
 ### Considerations
-We recommend handling mobile detection using Responsive Web Design (RWD) techniques to avoid compromising potential scalability. Creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. For details, see [Caching: Advanced Topics](/docs/caching-advanced-topics/#device-detection).
+We recommend handling mobile detection using Responsive Web Design (RWD) techniques to avoid compromising potential scalability. Creating separate mobile URLs greatly increases the amount of work required to maintain and update your site and introduces possible technical problems. For details, see [Caching: Advanced Topics](/caching-advanced-topics/#device-detection).
 
 ## Add the Mobile Domain to Live
 1. Go to the Live environment on your Site Dashboard, and select **Domains/HTTPS**.
@@ -45,7 +45,7 @@ In order for Cloudflare's mobile redirection service to work, the domain must be
 
 
 ### JavaScript
-You can detect user agents via JavaScript, then redirect requests to your configured and optimized mobile site. For cache considerations, we do not recommend using cookies that are passed to the backend for mobile theme detection and configuration. For details, see [Caching: Advanced Topics](/docs/caching-advanced-topics/#device-detection).
+You can detect user agents via JavaScript, then redirect requests to your configured and optimized mobile site. For cache considerations, we do not recommend using cookies that are passed to the backend for mobile theme detection and configuration. For details, see [Caching: Advanced Topics](/caching-advanced-topics/#device-detection).
 
 The following example can also be used in addition to Cloudflare's mobile redirection service to detect user agents not yet supported, such as tablets.
 

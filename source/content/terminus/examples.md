@@ -52,7 +52,7 @@ Human readable, such as "Your Awesome Site", entered during site creation and di
 
 <Definition title="Site Name">
 
-Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/docs/domains/#platform-domains).
+Machine readable, such as "your-awesome-site", either derived automatically by the platform from the site label or uniquely defined during site creation via Terminus. This value is used to construct [platform domains](/domains/#platform-domains).
 
 </Definition>
 
@@ -64,7 +64,7 @@ Machine readable, such as "dev", "test", "live", or "bug123", which refers to th
 
 </DefList>
 
-You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/docs/sites/#site-uuid). For example:
+You can also find your site's machine name using the Terminus command `site:info`, and the [site UUID](/sites/#site-uuid). For example:
 
 ![terminus site:info e9ad4349-621e-4be6-9f94-f9646069d9e7 --field name](../../docs/assets/images/terminus-examples-field-name.png)
 
@@ -78,7 +78,7 @@ Start with the [basic command structure described above](#command-structure). Th
 
 ![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../docs/assets/images/terminus-wp-cli-example.png)
 
-For more information, see [Drupal Drush Command-Line Utility](/docs/drush/) and [Using WP-CLI On The Pantheon Platform](/docs/wp-cli/).
+For more information, see [Drupal Drush Command-Line Utility](/drush/) and [Using WP-CLI On The Pantheon Platform](/wp-cli/).
 
 ## Applying Updates
 
@@ -127,7 +127,7 @@ Apply available upstream updates for WordPress and Drupal core from the command 
 
 ### Module, Theme, and Plugin Updates
 
-Apply updates to all contributed modules, themes, and plugins via Terminus by setting the environment's connection mode to SFTP and invoking [Drush](/docs/drush) (Drupal) or [WP-CLI](/docs/wp-cli) (WordPress) update commands. You can then use Terminus to commit updates to a development environment on Pantheon.
+Apply updates to all contributed modules, themes, and plugins via Terminus by setting the environment's connection mode to SFTP and invoking [Drush](/drush) (Drupal) or [WP-CLI](/wp-cli) (WordPress) update commands. You can then use Terminus to commit updates to a development environment on Pantheon.
 
 <TabList>
 
@@ -185,7 +185,7 @@ terminus env:commit my-site.dev --message="Update all plugins and themes"
 
 ### Mass Update
 
-Terminus supports third-party plugins that extend it's functionality by adding new commands. The following example demonstrates usage of the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to easily apply upstream updates (core updates) in bulk. For instructions on how to install Terminus plugins, see [Extend with Plugins](/docs/terminus/plugins).
+Terminus supports third-party plugins that extend it's functionality by adding new commands. The following example demonstrates usage of the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin to easily apply upstream updates (core updates) in bulk. For instructions on how to install Terminus plugins, see [Extend with Plugins](/terminus/plugins).
 
 Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 
@@ -240,7 +240,7 @@ terminus env:deploy my-site.live --note="Deploy core and contrib updates" --cc
 
 There are a few scenarios where it may be useful to reset your Dev environment (codebase, files, and database) to the state of Live:
 
-- Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/docs/multidev) environment you can unblock deploys by resetting the Dev environment to reflect the state of Live.
+- Development work that is not ready to go live has been committed directly to the Dev environment, blocking the deployment pipeline for other work ready to be deployed. After preserving work in progress on a local branch or on a [Multidev](/multidev) environment you can unblock deploys by resetting the Dev environment to reflect the state of Live.
 
 - Code changes have been force-pushed or incorrectly merged into the Dev environment creating a large or complex Git history that you wish to undo.
 
@@ -292,9 +292,9 @@ The Site Dashboard will open once the reset procedure has completed.
 
 ## Switch Upstreams
 
-Every site has an upstream assigned in order to deliver [one-click updates](/docs/core-updates/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
+Every site has an upstream assigned in order to deliver [one-click updates](/core-updates/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
-- Convert existing sites from a default framework to a [Custom Upstream](/docs/custom-upstream/).
+- Convert existing sites from a default framework to a [Custom Upstream](/custom-upstream/).
 - Convert existing sites from one Custom Upstream to another, for reasons like:
   - Repository has been migrated from Bitbucket to Github, or vice versa.
   - Code has been refactored and moved to a new repository.
@@ -306,7 +306,7 @@ To see all available upstreams, run:
 terminus upstream:list
 ```
 
-If your organization has a [Custom Upstream](/docs/custom-upstream/), you can use Terminus to switch existing sites over to the common codebase:
+If your organization has a [Custom Upstream](/custom-upstream/), you can use Terminus to switch existing sites over to the common codebase:
 
 ```bash
 terminus site:upstream:set my-site "My Custom Upstream"

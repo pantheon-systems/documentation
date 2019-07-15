@@ -16,7 +16,7 @@ In this guide, we are using Asana to manage a website project on Pantheon. When 
 Be sure that you:
 
 - Have a Drupal or WordPress site on Pantheon
-- Install [Terminus](/docs/terminus):
+- Install [Terminus](/terminus):
 
         curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 - [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create) from **User Dashboard** > **Account** > **Machine Tokens**, then authenticate Terminus:
@@ -56,7 +56,7 @@ Start by creating a new machine user in Asana. This user is referred to as a "ma
 6. Give the token a name which denotes it's purpose and save the string generated for the next steps.
 
 ## Securely Store User Credentials on Pantheon
-Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/docs/private-paths/#private-path-for-files) of Pantheon's filesystem.
+Next, we need to provide Pantheon with the credentials for our new machine user. We'll securely store these values in the [private path](/private-paths/#private-path-for-files) of Pantheon's filesystem.
 
 We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
 
@@ -83,14 +83,14 @@ In the commands below, replace `<site>` with your site name, `<user>` with your 
 
 <Alert title="Note" type="info">
 
-When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
 
 </Alert>
 
 ## Configure Quicksilver Integration
-Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration script for Asana to the [private path](/docs/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Asana to the [private path](/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
-1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory:
+1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory:
 
         `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
         cd $SITE
@@ -123,11 +123,11 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
     <Alert title="Note" type="info">
 
-    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
 
     </Alert>
 
-6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
+6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
 
         git add .
         git commit -m "Create private/scripts/asana_integration.php and configure platform hooks"

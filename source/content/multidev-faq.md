@@ -4,18 +4,18 @@ description: A quick reference to answer some of the most frequently asked quest
 tags: [tools, workflow]
 categories: []
 ---
-For information about what Multidev is and how to use it, see our full guide on [Multidev](/docs/multidev/).
+For information about what Multidev is and how to use it, see our full guide on [Multidev](/multidev/).
 
 ## Who has access to Multidev?
 
 Multidev is available to:
 
  - Enterprise organizations.
- - EDU organizations with [Gold support](/docs/support/#support-features-and-response-times) and above.
+ - EDU organizations with [Gold support](/support/#support-features-and-response-times) and above.
  - Pantheon Partner Program agencies (at the level of Pantheon Partner and above).
- - Direct Online customers with [Gold support](/docs/support/#support-features-and-response-times) and above.
+ - Direct Online customers with [Gold support](/support/#support-features-and-response-times) and above.
 
-Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/docs/change-management/) for more information about roles and permissions.
+Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management/) for more information about roles and permissions.
 
 Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us).
 
@@ -34,7 +34,7 @@ Each site has a limit of 10 Multidev environments.
 
 ## Can I buy additional Multidev environments?
 
-Elite sites can request additional Multidev environments [from support](/docs/support/) as needed.
+Elite sites can request additional Multidev environments [from support](/support/) as needed.
 
 ## If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 
@@ -72,7 +72,7 @@ At this time, Multidev on Pantheon will only work with the Pantheon hosted code 
 
 ## Is there a public API available for post-commit hooks or other integrations with external project management systems?
 
-No, but developers can use [Quicksilver hooks](/docs/quicksilver/#hooks) to integrate Multidev creation and other workflows with external services.
+No, but developers can use [Quicksilver hooks](/quicksilver/#hooks) to integrate Multidev creation and other workflows with external services.
 
 ## Can I backup and restore a branch environment?
 

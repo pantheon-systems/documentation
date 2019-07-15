@@ -19,7 +19,7 @@ image: multisite
 ---
 You're just about to configure your WordPress Site Network.
 
-Our expectation at this point is that you have a new WordPress Site Network created for you by a Pantheon employee. If you do not yet have a WordPress Site Network, refer to the [introduction](/docs/guides/multisite/) page of this guide. When you visit the Dev environment's site URL, you should be redirected to WordPress' web-based installer.
+Our expectation at this point is that you have a new WordPress Site Network created for you by a Pantheon employee. If you do not yet have a WordPress Site Network, refer to the [introduction](/guides/multisite/) page of this guide. When you visit the Dev environment's site URL, you should be redirected to WordPress' web-based installer.
 
 <Alert title="Note" type="info">
 
@@ -29,7 +29,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 ## Install the WordPress Site Network
 
-Using [Terminus](/docs/terminus/) is our recommended way to install a WordPress Site Network.
+Using [Terminus](/terminus/) is our recommended way to install a WordPress Site Network.
 
 1. Install the most recent release of Terminus:
 
@@ -85,7 +85,7 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
 
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
+  If you run into issues, please refer to [this documentation](/sftp/#sftp-connection-information).
 
 4. Now open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 

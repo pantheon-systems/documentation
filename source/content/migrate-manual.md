@@ -9,16 +9,16 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
 * **Large WordPress Site**: WordPress site exceeds 500MB.
 * **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
-* **[WordPress Site Networks](/docs/guides/multisite/)**
+* **[WordPress Site Networks](/guides/multisite/)**
 * **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
 
-If none of the above apply to your project, use the [standard migration procedure](/docs/migrate/).
+If none of the above apply to your project, use the [standard migration procedure](/migrate/).
 
 <Alert title="Note" type="info" >
 
-Site migrations are one of the services offered by our [Professional Services](/docs/professional-services/#site-migrations) team.
+Site migrations are one of the services offered by our [Professional Services](/professional-services/#site-migrations) team.
 
 </Alert>
 
@@ -28,7 +28,7 @@ To ensure a successful migration, complete the following tasks on the source sit
 - Upgrade to the latest version of WordPress or Drupal core
 - Clear all caches
 - Remove unneeded code, database tables, and files
-- [Configure SSH keys](/docs/ssh-keys)
+- [Configure SSH keys](/ssh-keys)
 
 <Accordion title="Advanced Tips for Successful Migration" id="advanced-before-you-begin" icon="lightbulb">
 
@@ -55,7 +55,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 2. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, or WordPress,), and click **Continue**:
 
     ![Choose the Starting State for your Migrated Site](../docs/assets/images/dashboard/migrate-step2.png)
-3. Name your site and select an [Organization](/docs/organizations/) (optional), then click **Create Site**:
+3. Name your site and select an [Organization](/organizations/) (optional), then click **Create Site**:
 
     ![Name the Migrated Site and Optionally Choose an Organization](../docs/assets/images/dashboard/migrate-step3.png)
 4.  Click the link to manually migrate your site then select **Yes** to confirm:
@@ -98,7 +98,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 2. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
+  If you run into issues, please refer to [this documentation](/sftp/#sftp-connection-information).
 
 4. Upload your existing site's plugins, modules, and themes to the `code` directory. Do not overwrite WordPress or Drupal core files on your Pantheon site.
 5. Return to the Site Dashboard on Pantheon, and you should see quite a few files ready to be committed to version control. Write a commit message such as "Import existing codebase" then click **Commit**.
@@ -159,7 +159,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
   Automatic merge went well; stopped before committing as requested
   ```
 
-  If you haven't already configured [SSH Keys](/docs/ssh-keys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
+  If you haven't already configured [SSH Keys](/ssh-keys), authenticate using your Pantheon Dashboard credentials when prompted for a password.
 
 7. Review your current index using `git status`, then commit all changes:
 
@@ -250,7 +250,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
   
   <Tab title="Over 500MBs" id="500mbsplus">
   
-  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Pro or Navicat. For more information, see [Accessing MySQL Databases](/docs/mysql-access/).
+  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Pro or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access/).
   
    1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
   
@@ -264,7 +264,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
       ```
   
-    If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/docs/mysql-access/#troubleshooting-mysql-connections).
+    If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
   
    3. After you run the command, the `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
   
@@ -405,4 +405,4 @@ ff = only
 In this case, you will want to remove `ff = only` from your `.gitconfig` file and try the merge command again.
 
 ## See Also
-Check our standard migration procedure for related [Frequently Asked Questions](/docs/migrate#frequently-asked-questions-faqs) and [Troubleshooting](/docs/migrate#troubleshooting) tips.
+Check our standard migration procedure for related [Frequently Asked Questions](/migrate#frequently-asked-questions-faqs) and [Troubleshooting](/migrate#troubleshooting) tips.

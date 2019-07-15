@@ -21,7 +21,7 @@ Be sure that you:
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
 
 ## Install and Authenticate Terminus
-Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/docs/terminus/).
+Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/terminus/).
 
 1. Install Terminus within the `$HOME/terminus` directory:
 
@@ -37,7 +37,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
   terminus auth:login --machine-token=‹machine-token›
   ```
 
-  For details, see [Terminus Manual: Install](/docs/terminus/install/).
+  For details, see [Terminus Manual: Install](/terminus/install/).
 
 3. Once installed, verify your session:
 
@@ -191,7 +191,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
   terminus wp $TERMINUS_SITE.live -- plugin activate contact-form-7
   ```
 
-For this example, manually applying configuration changes is a simple and short task. We're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/docs/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
+For this example, manually applying configuration changes is a simple and short task. We're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
 
 
 ## Install WordPress Themes
@@ -255,6 +255,6 @@ If you're a developer who lives in the command line, you now see the power of Te
 
 Here are some suggestions on where to go from here:
 
- - [Use the Pantheon Workflow](/docs/pantheon-workflow/)
- - [WordPress Configuration Management (WP-CFM)](/docs/wp-cfm/)
- - [The Terminus Manual](/docs/terminus/)
+ - [Use the Pantheon Workflow](/pantheon-workflow/)
+ - [WordPress Configuration Management (WP-CFM)](/wp-cfm/)
+ - [The Terminus Manual](/terminus/)

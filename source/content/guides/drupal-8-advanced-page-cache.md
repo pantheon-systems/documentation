@@ -8,7 +8,7 @@ permalink: docs/guides/:basename/
 contributors: [stevector, dwayne, davidneedham]
 ---
 
-[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) and the [Pantheon Global CDN](/docs/global-cdn/).
+[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) and the [Pantheon Global CDN](/global-cdn/).
 
 When you turn on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed), this module will clear only the relevant pages from the edge cache.
 
@@ -20,7 +20,7 @@ To take finer grain control of how Drupal handles its cache data on both the Glo
 
 Before starting this guide, you should:
 
- - Install and authenticate [Terminus](/docs/terminus)
+ - Install and authenticate [Terminus](/terminus)
  - Have an open sandbox slot on your Pantheon account. To follow along with this guide it is best to use the Dev environment of a newly created Drupal 8 site. You could use a pre-existing Drupal 8 site, but some of the details would change.
  - So that you can easily copy and paste the example commands in this guide, define your site name with a local environment variable. Replace `cache-tags-demo` with a unique site name:
 
@@ -257,7 +257,7 @@ What if we added a new node that used taxonomy term 1? We would want the listing
 
 Now we're going to add a custom module that uses a hook to clear the cache tag for all taxonomy terms.
 
-1. To start, connect to your Dev environment via [SFTP](/docs/sftp/).
+1. To start, connect to your Dev environment via [SFTP](/sftp/).
 
 2. Open `code/modules` and create a new directory called `custom_cache_tags`. Open that folder:
 

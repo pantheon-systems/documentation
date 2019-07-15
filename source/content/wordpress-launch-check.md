@@ -36,7 +36,7 @@ This displays database stats such as the number of rows in the options table, op
 
 #### What issues will I experience if I don't use InnoDB?
 InnoDB has row level locking; MYISAM has table level locking. If a query is being performed on a table with MYISAM storage engine, no other query can modify the data until the first has given up its lock, which can result in tremendous performance issues for web applications.
-To learn how to move your tables to InnoDB, see  [Moving MySQL tables from MyISAM to InnoDB](/docs/myisam-to-innodb).
+To learn how to move your tables to InnoDB, see  [Moving MySQL tables from MyISAM to InnoDB](/myisam-to-innodb).
 
 ### Probable Exploits
 This check will display a list of exploited patterns in code, the file name that has the exploit, line number, and match.
@@ -44,7 +44,7 @@ This check will display a list of exploited patterns in code, the file name that
 ### Object Cache
 This tells you if Object Caching and Redis are enabled.
 
-If you receive an error similar to the following, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Installing Redis on Drupal or WordPress](/docs/redis/).
+If you receive an error similar to the following, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Installing Redis on Drupal or WordPress](/redis/).
 
 ```
 Cannot redeclare class WP_Object_Cache in
@@ -69,4 +69,4 @@ Displays the files that references sessions. If any are found, you'll be prompte
 If you have a feature request, message enhancements, or found a bug, please look at the [project's issues](https://github.com/pantheon-systems/wp_launch_check/issues) and submit a new issue if someone else has not already posted it. Pull requests are always welcome!
 
 ## See Also
-If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/docs/drupal-launch-check/).
+If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check/).

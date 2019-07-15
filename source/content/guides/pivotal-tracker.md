@@ -17,7 +17,7 @@ Be sure to:
 
 - Have an active pivotal tracker account
 - Have a Drupal or WordPress site on Pantheon, with a local clone of the repository.
-- Locally install [Terminus](/docs/terminus):
+- Locally install [Terminus](/terminus):
 
         curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 
@@ -43,7 +43,7 @@ As a best practice, start by creating a new machine user in Tracker. This user i
 
 
 ## Prepare your site: Securely Store User Credentials on Pantheon
-Next, we need to provide Pantheon with the credentials for our new machine user in Pivotal Tracker. We'll securely store these values in the [private path](/docs/private-paths/#private-path-for-files) of Pantheon's filesystem.
+Next, we need to provide Pantheon with the credentials for our new machine user in Pivotal Tracker. We'll securely store these values in the [private path](/private-paths/#private-path-for-files) of Pantheon's filesystem.
 
 We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
 
@@ -75,15 +75,15 @@ We use the filesystem private path in this section because we don't want to trac
 
 <Alert title="Note" type="info">
 
-When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
 
 </Alert>
 
 ## Configure Quicksilver Hook
-Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration script for Pivotal Tracker to the [private path](/docs/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Pivotal Tracker to the [private path](/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
 
-1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory:
+1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory:
 
         `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
         cd $SITE
@@ -116,11 +116,11 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
     <Alert title="Note" type="info">
 
-    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
 
     </Alert>
 
-6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
+6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
 
         git commit -am "Create private/scripts/pivotal_integration.php and configure platform hooks"
         git push origin master

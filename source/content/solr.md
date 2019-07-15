@@ -27,7 +27,7 @@ All plans except for a Basic plan can use Solr. Solr is available to Sandbox sit
 
 ## Using Solr with WordPress or Drupal
 
-For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr), [Enabling Solr with Drupal 7](/docs/solr-drupal-7) or [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
+For installation instructions and additional details, see [Enabling Solr for WordPress](/wordpress-solr), [Enabling Solr with Drupal 7](/solr-drupal-7) or [Enabling Solr on Drupal 8](/solr-drupal-8).
 
 ## Known Limitations of Pantheon's Solr Service
 
@@ -44,7 +44,7 @@ While Pantheon provides a stable, reliable, and basic Solr service, your individ
 
 Some customers have reported success using external Solr service providers for their Solr indexing:
 
- - [IndexDepot](https://www.indexdepot.com/en/). For more information, see [Using IndexDepot With Pantheon Sites](/docs/indexdepot/).
+ - [IndexDepot](https://www.indexdepot.com/en/). For more information, see [Using IndexDepot With Pantheon Sites](/indexdepot/).
  - [OpenSolr](https://opensolr.com/)
  - [WebSolr](https://websolr.com/)
 

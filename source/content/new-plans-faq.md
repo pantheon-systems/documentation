@@ -37,7 +37,7 @@ Introductory price available to the general public until November 15, 2018, afte
 | Performance (XL)     | $750            | $1,000      |
 
 ### Annual Billing
-Pantheon offers [annual billing plans at lower rates](/docs/annual-billing/), giving up to two month's worth of savings.
+Pantheon offers [annual billing plans at lower rates](/annual-billing/), giving up to two month's worth of savings.
 
 | Plan                 | Preferred Annual Price | Annual Savings  |
 | -------------------- | ---------------------- | --------------- |
@@ -68,7 +68,7 @@ All existing sites will have Preferred Pricing locked in for the plan they migra
 
 <Alert title="Note" type="info">
 
-Sites retaining [Legacy SSL](/docs/https/#technical-specifications) services will be migrated to Performance Large plans or above.
+Sites retaining [Legacy SSL](/https/#technical-specifications) services will be migrated to Performance Large plans or above.
 
 </Alert>
 
@@ -175,9 +175,9 @@ No. Each online site plan is tied to a single install of the CMS.
 Yes. If you are interested in bulk pricing, [Contact our sales team](https://pantheon.io/contact-us?docsplanFAQ) or your dedicated account manager to discuss.
 
 ### How do I purchase one of the new plans?
-For details, see [Manage Plans in the Site Dashboard](/docs/site-plan/).
+For details, see [Manage Plans in the Site Dashboard](/site-plan/).
 
 ## See Also
-- [Manage Plans in the Site Dashboard](/docs/site-plan/)
-- [Traffic Limits and Overages](/docs/traffic-limits/)
-- [Metrics in the Site Dashboard](/docs/metrics/)
+- [Manage Plans in the Site Dashboard](/site-plan/)
+- [Traffic Limits and Overages](/traffic-limits/)
+- [Metrics in the Site Dashboard](/metrics/)

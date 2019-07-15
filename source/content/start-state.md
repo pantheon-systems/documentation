@@ -4,7 +4,7 @@ description: See available options for starting new Drupal or WordPress sites an
 tags: [create]
 categories: []
 ---
-The site's framework is selected during the creation process. Pantheon Upstreams provide default installations of WordPress, Drupal 8 and Drupal 7. [Custom Upstreams](/docs/custom-upstream/) are available to team members when the organization is associated during site creation.
+The site's framework is selected during the creation process. Pantheon Upstreams provide default installations of WordPress, Drupal 8 and Drupal 7. [Custom Upstreams](/custom-upstream/) are available to team members when the organization is associated during site creation.
 
 ## Pantheon Upstreams
 We base our Drupal 7 repository on the canonical source from drupal.org, and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
@@ -38,14 +38,14 @@ Use the following direct links to create a new site on Pantheon from a public di
 - [RedHen Raiser](https://dashboard.pantheon.io/sites/create?upstream_id=10d6937e-1dd2-4490-9950-11867ba43597) [<i class="ml-5 fa fa-github"></i>](https://github.com/thinkshout/redhenraiser-drops-7)
 
 ## Product UUID
-There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all available products, run the following [Terminus](/docs/terminus/) command:
+There is a UUID for all the different systems you can install on Pantheon. WordPress on Pantheon is `e8fe8550-1ab9-4964-8838-2b9abdccf4bf`. To see all available products, run the following [Terminus](/terminus/) command:
 
 ```
 $ terminus upstream:list
 ```
 
 ## Create Sites with Terminus
-Create new sites with [Terminus, the Pantheon CLI](/docs/terminus/). Run `terminus site:create <site> <label> <upstream>` to create a new site using the desired upstream, like so:
+Create new sites with [Terminus, the Pantheon CLI](/terminus/). Run `terminus site:create <site> <label> <upstream>` to create a new site using the desired upstream, like so:
 
 ```
 $ terminus site:create my-new-panopoly-site "My New Panopoly Site" "Panopoly"
@@ -58,4 +58,4 @@ $ terminus dashboard:view my-new-panopoly-site
 
 ## Importing an Existing Site
 
-Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/docs/migrate).
+Your site migration has four phases. You’ll package your site, import it, test it out, and then change DNS and go live. With a good plan and understanding of the platform, the process will run smoothly. For detailed information, see [Migrate Sites to Pantheon](/migrate).

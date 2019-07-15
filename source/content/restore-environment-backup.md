@@ -13,14 +13,14 @@ We do not recommend directly restoring a Live environment from a backup; instead
 
 </Alert>
 
-If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/docs/undo-commits) **before** attempting a site restore.
+If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/undo-commits) **before** attempting a site restore.
 
-If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/docs/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/docs/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/docs/rsync-and-sftp)
+If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/rsync-and-sftp)
 
 ## Before you Begin the Restore Process
 It is important that you and your team know that this is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in when backed up.
 
-When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/docs/support).
+When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/support).
 
 ![Backup tool](../docs/assets/images/dashboard/backup-tool.png)
 
@@ -30,7 +30,7 @@ Restore a manual or automatic backup (Code, Database, and Files) by clicking the
 
 <Alert title="Note" type="info">
 
-For development environments (e.g., Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (e.g., Test and Live). For details, see [The Site Dashboard](/docs/sites/#code).
+For development environments (e.g., Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (e.g., Test and Live). For details, see [The Site Dashboard](/sites/#code).
 
 </Alert>
 
@@ -95,8 +95,8 @@ The restore process removes any recent content or changes applied to your site s
 
 If you still want to restore a backup to the Live environment, we recommend the following steps:
 
-- [Lock the environment first](/docs/security/)
-- [Run a backup](/docs/backups/) of LIVE, in order to have a copy of files and the database that will be overwritten
+- [Lock the environment first](/security/)
+- [Run a backup](/backups/) of LIVE, in order to have a copy of files and the database that will be overwritten
 - Run the restore while the site is still locked
 
 These steps allow you to recreate any new content manually after the process is complete. It also restricts access while the restore process is still running, which is a good practice to avoid conflicts or data corruption.
@@ -104,7 +104,7 @@ These steps allow you to recreate any new content manually after the process is 
 ## Restoring Large Sites
 Large sites that have more than 100GB files can take too long to restore and are likely to fail. We recommend the same steps as [restoring to the Live environment](#restore-the-live-environment) for a safer process.
 
-Alternately, consider restoring only the code and database from backups, and move the content back up over [rsync](/docs/rsync-and-sftp).
+Alternately, consider restoring only the code and database from backups, and move the content back up over [rsync](/rsync-and-sftp).
 
 ## Frequently Asked Questions
 

@@ -85,4 +85,4 @@ If you'd like to create custom configurations or manually edit your index, synon
 - [ApacheSolr Module](https://drupal.org/project/apachesolr) 
 - [IndexDepot](https://www.indexdepot.com/en/)
 - [IndexDepot Support](https://www.indexdepot.com/en/faq)
-- [FAQ](/docs/faq)
+- [FAQ](/faq)

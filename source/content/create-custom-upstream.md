@@ -3,11 +3,11 @@ title: Create a Custom Upstream
 description: Connect a remote repository with Pantheon to use as a starting point for new sites.
 tags: [tools, workflow]
 ---
-Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/docs/custom-upstream/). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
+Pantheon Custom Upstreams are a self-serve feature available to anyone with access to the Organization Dashboard of an eligible plan. Once created, members of the organization will be able to create new sites from a set common codebase. For an overview of this feature, see [Introduction to Custom Upstreams](/custom-upstream/). In order to use a specific Custom Upstream on multiple Organizations, the upstream must be created within each Organization’s Dashboard.
 
 <Alert title="Note" type="info">
 
-Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/support/#custom-upstreams).
+Be aware that support for Custom Upstreams is limited to verification that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/support/#custom-upstreams).
 
 </Alert>
 
@@ -282,7 +282,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
       ![GitLab reporter permission](../docs/assets/images/gitlab-reporter.png)
 
-  1. [Contact support](/docs/support/) to add the Custom Upstream to your org. You must provide:
+  1. [Contact support](/support/) to add the Custom Upstream to your org. You must provide:
 
      - A name for the custom upstream
      - The `https` clone URL (ending in `.git`)
@@ -317,13 +317,13 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 New sites created from this Custom Upstream will use this connection mode by default going forward.
 
 ### Repository URL and password
-You cannot modify the repository details on existing Custom Upstreams. If there is a new URL or password you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/docs/terminus/):
+You cannot modify the repository details on existing Custom Upstreams. If there is a new URL or password you need to use, we recommend creating a new Custom Upstream and switching each site to the new upstream individually with [Terminus](/terminus/):
 
 ```bash
 terminus site:upstream:set my-site "My New Custom Upstream"
 ```
 
-You must be a site owner to switch a site's upstream. After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/docs/terminus/examples/#switch-upstreams).
+You must be a site owner to switch a site's upstream. After a site's upstream has been changed, you will need to merge changes as a one-click update. For details, see [Example Usage](/terminus/examples/#switch-upstreams).
 
 Once all sites have been updated to track the new Custom Upstream, you can safely delete the old one:
 
@@ -335,11 +335,11 @@ Once all sites have been updated to track the new Custom Upstream, you can safel
 
 <Alert title="Warning" type="danger">
 
-Switching the upstream of an existing site is risky. Consider creating a new site from your Custom Upstream and migrating the contents. If you must switch upstreams, [back up](/docs/backups/) your site first, and consider our documentation on [upstream merge conflicts](/docs/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
+Switching the upstream of an existing site is risky. Consider creating a new site from your Custom Upstream and migrating the contents. If you must switch upstreams, [back up](/backups/) your site first, and consider our documentation on [upstream merge conflicts](/core-updates/#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts).
 
 </Alert>
 
-Only a Site Owner, User in Charge, or Organization Administrator can change an existing site to use a new Custom Upstream using [Terminus](/docs/terminus/):
+Only a Site Owner, User in Charge, or Organization Administrator can change an existing site to use a new Custom Upstream using [Terminus](/terminus/):
 
 ```bash
 terminus site:upstream:set $site $upstream_id
@@ -348,5 +348,5 @@ terminus site:upstream:set $site $upstream_id
 In the example above, set or replace the variables `$site` and `$upstream_id` with your site name and upstream machine name, respectively. You can find your Custom Upstream's machine name using `terminus org:upstream:list $org`, where `$org` is your organization name.
 
 ## Next Steps
-- [Best Practices for Maintaining Custom Upstreams](/docs/maintain-custom-upstream)
-- [Switching an Existing site to a Custom Upstream with Terminus](/docs/terminus/examples/#switch-upstreams)
+- [Best Practices for Maintaining Custom Upstreams](/maintain-custom-upstream)
+- [Switching an Existing site to a Custom Upstream with Terminus](/terminus/examples/#switch-upstreams)

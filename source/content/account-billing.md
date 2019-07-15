@@ -10,14 +10,14 @@ categories: []
 
 ![Access account billing through the User Dashboard](../docs/assets/images/dashboard/dashboard-account-billing.gif)
 
-Review **credit card profiles** for the sites you pay for and own on Pantheon. Each credit card profile shows billing history (invoices and transactions) for any site(s) using the card as the payment method, as set in the Site Dashboard. To add a new card to your account, refer to [Manage Site Billing in the Site Dashboard](/docs/site-billing/).
+Review **credit card profiles** for the sites you pay for and own on Pantheon. Each credit card profile shows billing history (invoices and transactions) for any site(s) using the card as the payment method, as set in the Site Dashboard. To add a new card to your account, refer to [Manage Site Billing in the Site Dashboard](/site-billing/).
 
 ### Roles & Permissions
 The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
 
 </Alert>
 
@@ -52,12 +52,12 @@ Deleting a card profile from your account will also delete it's associated billi
 
 </Alert>
 
-1. For each site associated with the credit card, go to the Site Dashboard and click on the **Billing** tab, then update the payment method shown in [your credit cards](/docs/site-billing#your-credit-cards). Each site on a paid plan must be associated with a card.
+1. For each site associated with the credit card, go to the Site Dashboard and click on the **Billing** tab, then update the payment method shown in [your credit cards](/site-billing#your-credit-cards). Each site on a paid plan must be associated with a card.
 2. Go to the User Dashboard and select **<span class="glyphicons glyphicons-cogwheel"></span> Account**, then click **Billing**.
 3. Once the card reports **This card is not paying for any sites.**, click **Delete Card**.
 4. Check the box next to **Yes, delete my card.** and click **Delete Card**.
 
 ## See Also
-- [Billing in the Site Dashboard](/docs/site-billing/)
-- [New Site Owner FAQs](/docs/site-owner-faq/)
-- [Manage Plans in the Site Dashboard](/docs/site-plan/)
+- [Billing in the Site Dashboard](/site-billing/)
+- [New Site Owner FAQs](/site-owner-faq/)
+- [Manage Plans in the Site Dashboard](/site-plan/)

@@ -21,7 +21,7 @@ image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 We've configured a few things for our WooCommerce site. But there are a few additional things to configure.
 
-The first is [adding PHP sessions to WordPress](/docs/wordpress-sessions/). WordPress and WooCommerce core do not use PHP Sessions, but other plugins and extensions may.
+The first is [adding PHP sessions to WordPress](/wordpress-sessions/). WordPress and WooCommerce core do not use PHP Sessions, but other plugins and extensions may.
 
 To enable PHP Sessions on Pantheon, install [WP Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions/). It's a free plugin you can download from WordPress.org or install through your WordPress dashboard.
 
@@ -37,7 +37,7 @@ You can [read more about exactly how this works](https://pantheon.io/blog/optimi
 
 You've probably noticed that your Pantheon site already loads in HTTPS. But while it loads HTTPS, it doesn't force HTTPS. For your users' privacy, for payment, and for SEO reasons it's a best practice to force the site to load in HTTPS.
 
-We have a [whole document explaining how to load your entire site in HTTPS](/docs/http-to-https/#wp). This may take a while to set up, so what you can do to get going immediately is configure WooCommerce to force the checkout to load in HTTPS.
+We have a [whole document explaining how to load your entire site in HTTPS](/http-to-https/#wp). This may take a while to set up, so what you can do to get going immediately is configure WooCommerce to force the checkout to load in HTTPS.
 
 Make sure **Force secure checkout** is enabled in **WooCommerce** > **Settings** > **Advanced** > **Page setup**. This has the added benefit of getting rid of one of the admin notices in the backend of your site.
 

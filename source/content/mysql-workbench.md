@@ -8,7 +8,7 @@ categories: []
 
 ## Get Started
 
-Start by getting the MySQL connection for the environment you want to access. To get the database credentials, copy them from the Connection Information widget available on the site's Dashboard. For detailed information, see [Accessing MySQL database](/docs/mysql-access/).
+Start by getting the MySQL connection for the environment you want to access. To get the database credentials, copy them from the Connection Information widget available on the site's Dashboard. For detailed information, see [Accessing MySQL database](/mysql-access/).
 
 ## Create a New MySQL Connection
 
@@ -36,4 +36,4 @@ After the configuration is complete, the new connection will be available on the
 
 At this point, you are all set and can administer your database. There will be a new entry on the Workbench for the newly set up connection and you can click the icon to initiate a session.
 ## Troubleshooting MySQL Connections
-See [Accessing MySQL Databases](/docs/mysql-access).
+See [Accessing MySQL Databases](/mysql-access).

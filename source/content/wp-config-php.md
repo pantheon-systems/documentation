@@ -31,7 +31,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config
 
 <Alert tile="Note" type="info">
 
-`$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_name-and-server_port/).
+`$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port/).
 
 </Alert>
 
@@ -42,7 +42,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config
 
 Depending on your use case, there are two possibilities:
 
-1. For web only actions, like [redirects](/docs/domains/#primary-domain), check if `$_ENV['PANTHEON_ENVIRONMENT']` exists. If it does, it will contain a string with the current environment (Dev, Test, or Live):
+1. For web only actions, like [redirects](/domains/#primary-domain), check if `$_ENV['PANTHEON_ENVIRONMENT']` exists. If it does, it will contain a string with the current environment (Dev, Test, or Live):
 
  ```php
  // Pantheon - web only.
@@ -73,15 +73,15 @@ The following example shows how to hard-code your WordPress debug configuration 
 
 ### How can I read the Pantheon environmental configuration, like database credentials?
 
-See [Reading the Pantheon Environment Configuration](/docs/read-environment-config/).
+See [Reading the Pantheon Environment Configuration](/read-environment-config/).
 
 ### How do I perform redirection?
 
-See [Configure Redirects](/docs/redirects/).
+See [Configure Redirects](/redirects/).
 
 ### How do I change the default debug.log location?
 
-WordPress has an option to [write logging information to a file](/docs/logs/#how-do-i-enable-error-logging-for-wordpress). When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
+WordPress has an option to [write logging information to a file](/logs/#how-do-i-enable-error-logging-for-wordpress). When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
 
 WP version 5.0.x and older versions
 
@@ -106,7 +106,7 @@ You don't have to! Pantheon automatically injects database credentials into the
 
 ### How do I enable IonCube Decoder support?
 
-If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/docs/php-versions/) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `wp-config.php`:
+If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions/) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `wp-config.php`:
 
 ```php
 ini_set('ioncube.loader.encoded_paths', '/');

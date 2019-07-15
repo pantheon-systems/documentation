@@ -7,7 +7,7 @@ permalink: docs/:basename/
 searchboost: 200
 ---
 
-Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
+Pantheon's new [Global CDN](/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
 
 <Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -21,18 +21,18 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
- - [1&1 Domain Configuration](/docs/1-and-1/)
- - [Cloudflare Domain Configuration](/docs/cloudflare/)
- - [DNS Made Easy Domain Configurationi](/docs/dns-made-easy/)
- - [DreamHost Domain Configuration](/docs/dreamhost/)
- - [Dyn Domain Configuration](/docs/dyn/)
- - [eNom Domain Configuration](/docs/enom/)
- - [Gandi Domain Configuration](/docs/gandi/)
- - [GoDaddy Domain Configuration](/docs/godaddy/)
- - [Google Domain Configuration](/docs/google/)
- - [Namecheap Domain Configuration](/docs/namecheap/)
- - [Network Solutions Domain Configuration](/docs/network-solutions/)
- - [Amazon Route 53 Domain Configuration](/docs/route53/)
+ - [1&1 Domain Configuration](/1-and-1/)
+ - [Cloudflare Domain Configuration](/cloudflare/)
+ - [DNS Made Easy Domain Configurationi](/dns-made-easy/)
+ - [DreamHost Domain Configuration](/dreamhost/)
+ - [Dyn Domain Configuration](/dyn/)
+ - [eNom Domain Configuration](/enom/)
+ - [Gandi Domain Configuration](/gandi/)
+ - [GoDaddy Domain Configuration](/godaddy/)
+ - [Google Domain Configuration](/google/)
+ - [Namecheap Domain Configuration](/namecheap/)
+ - [Network Solutions Domain Configuration](/network-solutions/)
+ - [Amazon Route 53 Domain Configuration](/route53/)
 
 </Accordion>
 
@@ -52,16 +52,16 @@ For more detailed instructions pertaining to your specific DNS host, click below
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
 | **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br /> Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/docs/hsts/)     |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/hsts/)     |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |
-| **Delivery**                                                          | US Datacenter             | [Global CDN](/docs/global-cdn)  |
+| **Delivery**                                                          | US Datacenter             | [Global CDN](/global-cdn)  |
 | **Encryption Endpoint**                                               | Load Balancer             | Application Container           |
 
 ## Frequently Asked Questions
 
 ### How do I switch my site over to HTTPS from HTTP?
-To avoid mixed-content browser warnings and excessive redirects, follow the process described in [Switching Sites from HTTP to HTTPS](/docs/http-to-https/).
+To avoid mixed-content browser warnings and excessive redirects, follow the process described in [Switching Sites from HTTP to HTTPS](/http-to-https/).
 
 ### How do I upgrade my existing Pantheon site?
 Make the switch on an existing Pantheon site by updating DNS for your domains. If your site doesn't have the new combined "Domains/HTTPS" tab, open a support chat to get the upgrade enabled
@@ -70,7 +70,7 @@ Make the switch on an existing Pantheon site by updating DNS for your domains. I
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### How can I obtain an A+ SSL Labs rating?
-Upgrade your site to the Global CDN and then send the [HSTS header](/docs/hsts/).
+Upgrade your site to the Global CDN and then send the [HSTS header](/hsts/).
 
 ### Can I bring my own certificate?
 Yes. See our page on [custom certificates](https://pantheon.io/docs/custom-certificates/) for more information.
@@ -87,7 +87,7 @@ Yes! HTTPS is terminated at the CDN edge and traffic is encrypted all the way to
 ### Will HTTPS be available for my site throughout the upgrade process?
 Yes! As long as you are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
 
-Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
+Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
 <Alert title="Note" type="info">
 
@@ -108,7 +108,7 @@ If you do not already have HTTPS, there's _no need_ to pre-provision.
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### What about Cloudflare?
-Refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
+Refer to [Cloudflare Domain Configuration](/cloudflare/).
 
 ### For how long are Let's Encrypt certificates valid and what happens when they expire?
 Let's Encrypt certificates are valid for 90 days and are automatically updated on the platform before they expire.

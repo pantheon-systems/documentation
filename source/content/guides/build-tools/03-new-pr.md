@@ -48,7 +48,7 @@ Production code is tracked by the master branch on GitHub and it is assumed to b
 
   <Accordion title="Branch Naming Conventions" id="understand-branch-names" icon="lightbulb">
 
-  Be sure to use unique branch names for each feature branch; the Multidev environment created on Pantheon is named after your branch. Since there is a limit to the number of characters that may be used in a Pantheon Multidev name, your environments may conflict if you always use the branch name that GitHub suggests. For details, see [Multidev](/docs/multidev/#what-are-the-naming-conventions-for-branches)).
+  Be sure to use unique branch names for each feature branch; the Multidev environment created on Pantheon is named after your branch. Since there is a limit to the number of characters that may be used in a Pantheon Multidev name, your environments may conflict if you always use the branch name that GitHub suggests. For details, see [Multidev](/multidev/#what-are-the-naming-conventions-for-branches)).
 
   </Accordion>
 

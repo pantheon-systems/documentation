@@ -86,7 +86,7 @@ Here's a breakdown of what errors are shown and where:
 	</tbody>
 </table>
 
-To learn more about PHP error logs, see [Log Files on Pantheon](/docs/logs).
+To learn more about PHP error logs, see [Log Files on Pantheon](/logs).
 
 ## Performance Hits
 
@@ -121,11 +121,11 @@ Use the following debugging techniques to investigate undefined function error m
 
 - Search for the offending function elsewhere in the codebase to make sure it's defined somewhere in the project.
 - Check the reported PHP file at full bootstrap. Rather than accessing the reported PHP file directly (e.g., `https://example.com/path/to/phpfile.php`), browse to a page that includes the file (e.g., `https://example.com/some-page/`) to see if the same error occurs with the site fully bootstrapped.
-- Review [`nginx-access.log`](/docs/logs/) for requests to the reported PHP file.
+- Review [`nginx-access.log`](/logs/) for requests to the reported PHP file.
 
-If you see direct requests to PHP files causing fatal undefined function errors (often caused by bot traffic), use the `pantheon.yml` configuration file to set protected web paths. For details, see [Pantheon YAML Configuration Files](/docs/pantheon-yml/#protected-web-paths). This stops the file from being web accessible while keeping the file available to PHP during bootstrap. When accessed directly, protected paths and files return a 403 Access Denied server response.
+If you see direct requests to PHP files causing fatal undefined function errors (often caused by bot traffic), use the `pantheon.yml` configuration file to set protected web paths. For details, see [Pantheon YAML Configuration Files](/pantheon-yml/#protected-web-paths). This stops the file from being web accessible while keeping the file available to PHP during bootstrap. When accessed directly, protected paths and files return a 403 Access Denied server response.
 
-We also recommend submitting a sitemap and instructing bots to only crawl designated paths set in `robots.txt`. For details, see [Bots and Indexing on Pantheon](/docs/bots-and-indexing/).
+We also recommend submitting a sitemap and instructing bots to only crawl designated paths set in `robots.txt`. For details, see [Bots and Indexing on Pantheon](/bots-and-indexing/).
 
 ## Undefined Index Notices
 
@@ -154,4 +154,4 @@ To fix this error, look for the correct path to the file and update the require\
 
 ## Intermittent Notices
 
-If you are encountering intermittent notices that are not behaving as described on this page, see [Debug Intermittent PHP 7 Notices](/docs/deprecated-constructor-notices) for additional information. This is not common.
+If you are encountering intermittent notices that are not behaving as described on this page, see [Debug Intermittent PHP 7 Notices](/deprecated-constructor-notices) for additional information. This is not common.

@@ -3,7 +3,7 @@ title: Require HTTPS with the HSTS Header
 description: Enforce HTTPS communications on supported browsers using the HTTP Strict Transport Security header.
 tags: [security]
 ---
-After you have required HTTPS for all pages by adding the [necessary redirect](/docs/domains/#redirect-to-https-and-the-primary-domain), set the HTTP Strict Transport Security (HSTS) header to standardize all client connections on HTTPS and prevent use of HTTP.
+After you have required HTTPS for all pages by adding the [necessary redirect](/domains/#redirect-to-https-and-the-primary-domain), set the HTTP Strict Transport Security (HSTS) header to standardize all client connections on HTTPS and prevent use of HTTP.
 
 Not only does this header help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/), it will help protect your website against protocol downgrade attacks and cookie hijacking.
 
@@ -18,7 +18,7 @@ The HTTP Strict-Transport-Security response header (often abbreviated as **HS
 
 <Tab title="WordPress" id="tab-1-id" active={true}>
 
-Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/docs/terminus/):
+Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/terminus/):
 
 ```bash
 terminus remote:wp <site>.<env> -- plugin install lh-hsts --activate
@@ -34,7 +34,7 @@ Strict-Transport-Security: max-age=15984000; includeSubDomains; preload
 
 #### Nested Docroot
 
-Site's using our [nested docroot](/docs/nested-docroot/) feature to serve WordPress from a subdirectory will experience a redirect loop upon activation of the LH HSTS plugin:
+Site's using our [nested docroot](/nested-docroot/) feature to serve WordPress from a subdirectory will experience a redirect loop upon activation of the LH HSTS plugin:
 
 ![LH HSTS redirect loop on nested docroot](../docs/assets/images/lh-hsts-redirect-loop.png)
 
@@ -63,7 +63,7 @@ See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_
 
 <Tab title="Drupal 8" id="tab-2-id">
 
-1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-modules) or with [Terminus](/docs/terminus/):
+1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-modules) or with [Terminus](/terminus/):
 
     ```bash
     terminus remote:drush <site>.<env> -- pm-enable hsts --yes
@@ -82,7 +82,7 @@ strict-transport-security: max-age=31536000
 
 <Tab title="Drupal 7" id="tab-3-id">
 
-1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/7/extending-drupal/installing-modules) or with [Terminus](/docs/terminus):
+1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/7/extending-drupal/installing-modules) or with [Terminus](/terminus):
 
   ```bash
   terminus remote:drush <site>.<env> -- pm-enable hsts --yes
@@ -129,7 +129,7 @@ An important to understand, but optional attribute supported by all modern major
 How you configure or include these attributes raises the rigor of the security that your HSTS effort provides. [Here is a great overview of how and why to use the above noted attributes](https://hstspreload.org/).
 
 ## HSTS Before the Application Level
-The configuration described above sets the HSTS header when the CMS loads. If you need HSTS to be set before that, consider a CDN-level implementation from a third-party provider like Cloudflare to [enable SSL first](/docs/cloudflare/#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), then [enable HSTS](https://support.cloudflare.com/hc/en-us/articles/204183088-Understanding-HSTS-HTTP-Strict-Transport-Security-) from their end.
+The configuration described above sets the HSTS header when the CMS loads. If you need HSTS to be set before that, consider a CDN-level implementation from a third-party provider like Cloudflare to [enable SSL first](/cloudflare/#option-2-use-cloudflares-cdn-stacked-on-top-of-pantheons-global-cdn), then [enable HSTS](https://support.cloudflare.com/hc/en-us/articles/204183088-Understanding-HSTS-HTTP-Strict-Transport-Security-) from their end.
 
 ## See Also
 For additional details on this header, see:

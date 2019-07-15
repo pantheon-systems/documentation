@@ -45,8 +45,8 @@ You are ready to start development! Click the **Visit Development Site** button 
 
 #### Further Reading  
 
-- [Using the Pantheon Workflow](/docs/pantheon-workflow)
-- [Developing with SFTP](/docs/sftp)
-- [Starting with Git](/docs/git)
-- [Installing Plugins via WP Admin Interface](/docs/cms-admin)
-- [WordPress Site Networks](/docs/guides/multisite/)
+- [Using the Pantheon Workflow](/pantheon-workflow)
+- [Developing with SFTP](/sftp)
+- [Starting with Git](/git)
+- [Installing Plugins via WP Admin Interface](/cms-admin)
+- [WordPress Site Networks](/guides/multisite/)

@@ -21,7 +21,7 @@ This method will safely migrate a single site out of your Drupal Multisite and i
 
 5. Install [Drush SAR 2.x](https://www.drupal.org/project/sar) as described in this [blog post](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands).
 
-6. [Backup the site](/docs/backups/#create-a-backup) in the Dashboard, just in case.
+6. [Backup the site](/backups/#create-a-backup) in the Dashboard, just in case.
 
 7. Run `terminus drush <site>.<env> -- sar --dry-run sites/sitename1 sites/default` to test the search and replace. This exact command can change depending on the name of your site, and broken assets in step 3.
 
@@ -34,9 +34,9 @@ This method will safely migrate a single site out of your Drupal Multisite and i
 
 ## Maintain a Single Codebase for Multiple Sites
 
-This method uses a [Custom Upstream](/docs/custom-upstream), a feature available to EDUs, Enterprises, and [Pantheon Partner Agencies](http://pantheon.io/agencies/partner-program).
+This method uses a [Custom Upstream](/custom-upstream), a feature available to EDUs, Enterprises, and [Pantheon Partner Agencies](http://pantheon.io/agencies/partner-program).
 
-1. Create a [Custom Upstream](/docs/custom-upstream) based on the multisite configuration.
+1. Create a [Custom Upstream](/custom-upstream) based on the multisite configuration.
 
 2. Archive each of your sites using `drush ard`.
 
@@ -44,11 +44,11 @@ This method uses a [Custom Upstream](/docs/custom-upstream), a feature available
 
 Then for each site:
 
-4. [Git clone the repo](/docs/git/#clone-your-site-codebase) locally.
+4. [Git clone the repo](/git/#clone-your-site-codebase) locally.
 
 5. If there are customizations on the individual sites that are not incorporated into the upstream repository, commit those changes from your archives into the local repo.
 
-6. [Import the database.](/docs/migrate-manual/#step-3-add-database)
+6. [Import the database.](/migrate-manual/#step-3-add-database)
 
 7. Run `drush sar --dry-run sites/sitename1 sites/default` to test the search and replace. You can run `terminus drush` or run `terminus aliases`, and then run local Drush.
 

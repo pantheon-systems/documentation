@@ -120,7 +120,7 @@ Any changes you make to a branch you have checked out locally will be committed 
 5. Choose whether to execute update.php after cloning, and click **Clone the Database & the Files from `source` into `target` Environment**.
 
 ## Edit Code
-Edit your content locally via [Git](/docs/git/) or utilize on-server development via [SFTP](/docs/sftp/) mode.
+Edit your content locally via [Git](/git/) or utilize on-server development via [SFTP](/sftp/) mode.
 
 ### SFTP Mode
 1. Navigate to the **Code** tab of the target Multidev environment within the Site Dashboard.
@@ -198,4 +198,4 @@ This will create a new branch with the commit history intact. From the Multidev 
 
 ## Troubleshooting and FAQs
 
-For answers to the most frequently asked questions about Multidev, see our [Frequently Asked Questions](/docs/multidev-faq/).
+For answers to the most frequently asked questions about Multidev, see our [Frequently Asked Questions](/multidev-faq/).

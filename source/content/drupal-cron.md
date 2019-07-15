@@ -11,7 +11,7 @@ Cron will always run unless all jobs are specifically set to 'Off' via Elysia or
 Both Drupal core and many contributed modules have tasks that need to be performed on a regular basis. You can configure when and how often cron executes the tasks.
 
 <Alert title="Note" type="info">
-Containers on Pantheon are automatically spun down following a period of inactivity, then spun back up once a web request is made. Cron is _not_ run on idle containers that have been spun down. For details, see [All About Application Containers](/docs/application-containers/#idle-containers).
+Containers on Pantheon are automatically spun down following a period of inactivity, then spun back up once a web request is made. Cron is _not_ run on idle containers that have been spun down. For details, see [All About Application Containers](/application-containers/#idle-containers).
 </Alert>
 
 ## Pantheon Cron Execution
@@ -37,7 +37,7 @@ You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
 
       ![Click Run Cron](../docs/assets/images/run-cron.png)
 
-    - Alternatively, you can run all scheduled cron tasks with the following [Terminus](/docs/terminus/) command:
+    - Alternatively, you can run all scheduled cron tasks with the following [Terminus](/terminus/) command:
 
       ```bash
       terminus drush <site>.<env> -- cron
@@ -65,7 +65,7 @@ There are several workarounds. Most work by keeping the site awake, then using a
 
  - A single-part solution is to [set up New Relic's Synthetics Ping Monitoring](https://docs.newrelic.com/docs/synthetics/new-relic-synthetics/using-monitors/add-edit-monitors) to hit Cron URLs. You may still want to use [Elysia Cron](https://www.drupal.org/project/elysia_cron) to schedule different cron tasks at different frequencies though. One advantage of this approach is that your site may already have a New Relic instance associated with it, saving you from having to setup another third-party service.
 
- - If you have anything that is executing cron tasks on your own server, you can invoke Drush commands remotely using [Terminus](/docs/terminus/), including Drush cron, to trigger scheduled operations.
+ - If you have anything that is executing cron tasks on your own server, you can invoke Drush commands remotely using [Terminus](/terminus/), including Drush cron, to trigger scheduled operations.
 
  - Another very effective solution is to leverage a service such as [EasyCron](https://www.easycron.com/). You can set custom schedules, notifications, and logging through their web interface or through their [EasyCron Module](https://drupal.org/project/EasyCron). The unique URL to kick off cron externally can be found at `/admin/config/system/cron`.
 
@@ -95,8 +95,8 @@ Drupal 7 sites using the [Elysia Cron](https://www.drupal.org/project/elysia_cro
 The most common causes are:
 
 - Missing sites/default/settings.php
-- [PHP fatal errors](/docs/php-errors/)
-- [Invalid redirection logic in settings.php](/docs/domains/#redirect-to-https-and-the-primary-domain)
+- [PHP fatal errors](/php-errors/)
+- [Invalid redirection logic in settings.php](/domains/#redirect-to-https-and-the-primary-domain)
 - Setting a cron key in Elysia Cron's settings: `admin/config/system/cron/settings`
 
 ### What is the maximum execution time of cron?
@@ -107,7 +107,7 @@ The maximum execution time of cron is 180 seconds (3 minutes).
 
 You can check the log messages through the Drupal Admin interface.
 
-You can also use [Terminus](/docs/terminus/) to see when cron was last run with the following command:
+You can also use [Terminus](/terminus/) to see when cron was last run with the following command:
 ```bash
 terminus drush <site>.<env> -- wd-show --type='cron'
 ```

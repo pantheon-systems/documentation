@@ -19,7 +19,7 @@ By combining a simple-to-use developer interface with a managed scalable cloud k
 
 ## Install Lockr via the Lockr Terminus Plugin
 
-[The Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) allows you to install all necessary components, register the site with Lockr, and patch all relevant plugins/modules running on your site with a single [Terminus](/docs/terminus/) command. To enable the Terminus plugin, complete these steps in your local environment:
+[The Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) allows you to install all necessary components, register the site with Lockr, and patch all relevant plugins/modules running on your site with a single [Terminus](/terminus/) command. To enable the Terminus plugin, complete these steps in your local environment:
 
 1. Clone [the Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) into the `~/terminus/plugins` directory on your local environment.
 2. Log in with Terminus.
@@ -41,12 +41,12 @@ It's that simple! One command and your site is set up. After successfully instal
 Lockr is automatically configured to secure API keys for numerous third-party plugins for seamless integration and securing of your keys.
 Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a list of plugins that can be automatically patched.
 
-1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.<env> sftp
  ```
-2. Install and activate the [Lockr](https://wordpress.org/plugins/lockr) plugin from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lockr`) or with [Terminus](/docs/terminus):
+2. Install and activate the [Lockr](https://wordpress.org/plugins/lockr) plugin from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lockr`) or with [Terminus](/terminus):
 
  ```
  terminus wp <site>.<env> -- plugin install lockr --activate
@@ -57,7 +57,7 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
 
 4. Enter your email address, and click **Register Site**.
 5. Create keys within **Lockr** > **Add Keys** and manage existing keys within **Lockr** > **All Keys**.
-6. Visit the [Lockr patch library](https://github.com/lockr/lockr-patches/tree/wp) for the latest patches to your favorite plugins or apply patches with [Terminus](/docs/terminus):
+6. Visit the [Lockr patch library](https://github.com/lockr/lockr-patches/tree/wp) for the latest patches to your favorite plugins or apply patches with [Terminus](/terminus):
 
  ```
  terminus wp <site>.<env> -- lockr lockdown
@@ -69,7 +69,7 @@ The Lockr plugin contains a number of WP-CLI commands to quickly register a site
 
 #### Register the site with Lockr
 
-This command will register the site with Lockr to the email address provided. The password is only necessary for existing Lockr accounts. This is useful for automated deployment from a Custom Upstream using [Quicksilver](/docs/quicksilver).
+This command will register the site with Lockr to the email address provided. The password is only necessary for existing Lockr accounts. This is useful for automated deployment from a Custom Upstream using [Quicksilver](/quicksilver).
 
 ```
 terminus wp <site>.<env> -- lockr register-site --email=[<Lockr email address>] --password=[<Lockr account password>]
@@ -105,7 +105,7 @@ Pairing together the [Lockr](https://www.drupal.org/project/lockr), [Encrypt](ht
 
 Lockr is currently available for Drupal 7 and Drupal 8 (development release). See the project's [GitHub page](https://github.com/lockr/lockr-patches/tree/drupal7) for a list of modules that can be automatically patched.
 
-1. [Set the connection mode to SFTP](/docs/sftp/) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
+1. [Set the connection mode to SFTP](/sftp/) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.<env> sftp

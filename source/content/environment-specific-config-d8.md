@@ -10,7 +10,7 @@ The following instructions enable Twig debugging and set development-friendly pe
 ## Enable Twig Debugging on Dev & Multidevs
 Pantheon handles the inclusion of service configuration files for pre-production and production environments [within our Drupal 8 upstream](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php#L31-L48). The [default file provided](https://github.com/pantheon-systems/drops-8/blob/master/sites/default/default.services.pantheon.preproduction.yml) has everything you need, so enabling Twig debugging is simple:
 
-1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/docs/git/#clone-your-site-codebase) or via [Terminus](/docs/terminus):
+1. If you haven't done so already, clone the site's codebase using the [Git command string provided on the Site Dashboard](/git/#clone-your-site-codebase) or via [Terminus](/terminus):
 
  ```bash
  `terminus connection:info <site>.dev --fields='Git Command' --format=string`
@@ -29,7 +29,7 @@ Pantheon handles the inclusion of service configuration files for pre-production
  git push -u origin master
  ```
 
-4. Clear caches on Dev within the Site Dashboard or via [Terminus](/docs/terminus):
+4. Clear caches on Dev within the Site Dashboard or via [Terminus](/terminus):
 
  ```
  terminus env:clear-cache <site>.<env>
@@ -53,7 +53,7 @@ Pantheon handles the inclusion of service configuration files for pre-production
  ```
 
 
-For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/docs/services-yml).
+For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/services-yml).
 
 
 ## Enable Cacheability Debugging on Dev & Multidevs
@@ -83,7 +83,7 @@ For more information on Pantheon's service configuration files for Drupal, refer
   X-Drupal-Cache-Tags: block_view config:block.block.bartik_account_menu config:block.block.bartik_branding config:block.block.bartik_breadcrumbs config:block.block.bartik_content config:block.block.bartik_footer config:block.block.bartik_help config:block.block.bartik_local_actions config:block.block.bartik_local_tasks config:block.block.bartik_main_menu config:block.block.bartik_messages config:block.block.bartik_page_title config:block.block.bartik_powered config:block.block.bartik_search config:block.block.bartik_tools config:block_list config:color.theme.bartik config:search.settings config:system.menu.account config:system.menu.footer config:system.menu.main config:system.menu.tools config:system.site config:user.role.anonymous config:views.view.frontpage http_response node_list rendered
   ```
 
-For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/docs/services-yml).
+For more information on Pantheon's service configuration files for Drupal, refer to [Creating a services.yml File for Drupal 8](/services-yml).
 
 
 ### Troubleshoot 503 Response: Header Overflow
@@ -141,7 +141,7 @@ This issue can be caused by a number of scenarios related to cache tags, such as
     ```
 
 
-3. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/docs/terminus):
+3. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/terminus):
 
    ```bash
    terminus drush <site>.<env> -- config-get system.performance --include-overidden

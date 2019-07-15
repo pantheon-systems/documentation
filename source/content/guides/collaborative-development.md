@@ -15,7 +15,7 @@ While Pantheon provides Git repositories for all sites on the platform, many tea
 The codebase for your site is stored in a Git repository. This includes our versions of Drupal or WordPress core, and all of the custom and contributed modules, plugins, and themes that work together to power your site. It doesn’t include the `/sites/default/files/` or `/wp-content/uploads/` directories, or your database.
 
 This repository will be a clone of one of the **upstreams** running on the platform, usually [Drupal 7](https://github.com/pantheon-systems/drops-7/ "Pantheon's Drupal 7 repository at GitHub") or [WordPress](https://github.com/pantheon-systems/WordPress/ "Pantheon's WordPress repository at GitHub"),
-or one of their forks that our users manage as [custom upstreams](/docs/custom-upstream/ "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on our platform will track one of these upstream repositories as a Git remote. To see which repo your site is tracking, go to your Site Dashboard, click the **Settings tab**, then **About site**. The name of the upstream will be linked to the repository's hosted location.
+or one of their forks that our users manage as [custom upstreams](/custom-upstream/ "Documentation article about running custom upstreams on Pantheon"). Your site’s repository on our platform will track one of these upstream repositories as a Git remote. To see which repo your site is tracking, go to your Site Dashboard, click the **Settings tab**, then **About site**. The name of the upstream will be linked to the repository's hosted location.
 
 These repositories control the common codebase for several sites. The most common change to an upstream is in the event of a core version release. These changes to the upstream repository become available to the sites running them within a day. For individual sites, using GitHub to collaborate on custom code is often a requirement for teams. In order to do so, you’ll need a quick and efficient way to keep your Pantheon repo in sync with GitHub.
 
@@ -80,7 +80,7 @@ Another option is to add another push URL for origin within `.git/config`:
 	url = git@github.com:systemseed/example.git
 ```
 
-Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/docs/pantheon-community/).
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/pantheon-community/).
 
 ### Push the Pantheon Site's Codebase to GitHub
 
@@ -106,7 +106,7 @@ At our [site creation page](https://dashboard.pantheon.io/sites/create/ "Pantheo
 
 ### Pull in Pantheon's Upstream
 
-As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickstart, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with your commit history intact, while also preserving Pantheon's [upstream update](/docs/core-updates/) function.
+As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickstart, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with your commit history intact, while also preserving Pantheon's [upstream update](/core-updates/) function.
 
 1. From your Site Dashboard, go to the Dev environment.
 2. Click **Settings**, then select **About Site**.
@@ -269,7 +269,7 @@ pantheon	ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.de
 
 ## Feature Branching
 
-Working with teams on GitHub requires a branching strategy. We are fans of GitHub flow and continuous integration here at Pantheon. In order to collaborate, I need to add my colleagues to the site we’re developing, both [on GitHub](https://help.github.com/enterprise/2.0/admin/guides/user-management/organizations-and-teams/) and [on Pantheon](/docs/team-management).
+Working with teams on GitHub requires a branching strategy. We are fans of GitHub flow and continuous integration here at Pantheon. In order to collaborate, I need to add my colleagues to the site we’re developing, both [on GitHub](https://help.github.com/enterprise/2.0/admin/guides/user-management/organizations-and-teams/) and [on Pantheon](/team-management).
 Locally, our codebase is in sync with both repositories. In order to start working on a new feature, we’ll checkout a branch. Since my site is associated with a supporting organization that has Multidev, I can test out any feature in a Multidev environment. These environments have an 11-character limit for branch names, so I'm choosing to use short branch names for my feature branches.  
 
 ```
@@ -355,6 +355,6 @@ These tools will allow your team to fully implement continuous delivery with aut
 
 ## Additional Resources
 
-[Starting with Git](/docs/git/)
+[Starting with Git](/git/)
 
-[Git FAQs](/docs/git-faq/)
+[Git FAQs](/git-faq/)

@@ -7,7 +7,7 @@ tags: [moreguides, workflow, composer]
 contributors: [dustinleblanc]
 ---
 <Alert title="Note" type="info">
-Converting to a Composer managed site *removes* the ability to [apply updates via the site dashboard](/docs/core-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates.
+Converting to a Composer managed site *removes* the ability to [apply updates via the site dashboard](/core-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates.
 
  If you don't need Composer as part of your site, we strongly suggest sticking to the standard Drupal core.
 </Alert>
@@ -21,9 +21,9 @@ As a first troubleshooting step, try running `composer update` to bring `compose
 
 </Alert>
 
- - Review our documentation on [Git](/docs/git/), [Composer](/docs/composer/), and [Terminus](/docs/terminus/), and have them installed and configured on your local computer.
- - [Clone](/docs/git#clone-your-site-codebase) your _current_ Pantheon site repository to a working directory on your local computer.
- - Review [Serving Sites from the Web Subdirectory](/docs/nested-docroot/)
+ - Review our documentation on [Git](/git/), [Composer](/composer/), and [Terminus](/terminus/), and have them installed and configured on your local computer.
+ - [Clone](/git#clone-your-site-codebase) your _current_ Pantheon site repository to a working directory on your local computer.
+ - Review [Serving Sites from the Web Subdirectory](/nested-docroot/)
 
 <Alert title="Exports" type="export">
 This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
@@ -51,7 +51,7 @@ You're about to make some massive changes to the codebase. We recommend you to d
 
 ## Setup a Multidev (optional)
 
-If your Pantheon account has access to [multidev](/docs/multidev/), create a multidev to push your new code to:
+If your Pantheon account has access to [multidev](/multidev/), create a multidev to push your new code to:
 
 ```bash
 git push origin composify && terminus env:create $site.dev composify
@@ -142,13 +142,13 @@ my-site-composer
 |-etc...
 ```
 
-Locate the configuration files in your existing site and move them here. If they are stored in the files directory on your existing site, retrieve them via [SFTP](/docs/sftp/), as the Git clone would not contain them. The example project is configured to use this location.
+Locate the configuration files in your existing site and move them here. If they are stored in the files directory on your existing site, retrieve them via [SFTP](/sftp/), as the Git clone would not contain them. The example project is configured to use this location.
 
 ## Prepare to Deploy
 
 At this point, your new project directory should contain all of the unique code from your existing Drupal 8 site, plus all of the code required to make a Composer driven project work. Since Pantheon requires all runtime code to be present when deploying to the platform, if no CI solution is a part of your workflow, you must now modify the project to be deployable straight to Pantheon.
 
-If you do plan on using a CI solution, refer to our [Build Tools](/docs/guides/build-tools/) guide at this point.
+If you do plan on using a CI solution, refer to our [Build Tools](/guides/build-tools/) guide at this point.
 
 From the `$site-composer` directory, run the following:
 
@@ -172,7 +172,7 @@ You should see a large amount of files committed to the new branch we created ea
 
 ## Deploy
 
-You've now committed the code to a branch. If your site has multidev, you can deploy that branch directly to a new multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on [our documentation on log collection](/docs/logs).
+You've now committed the code to a branch. If your site has multidev, you can deploy that branch directly to a new multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on [our documentation on log collection](/logs).
 
 Once you have confirmed the site is working, merge `composify` into `master`, and follow the standard workflow to QA a code change before going live.
 
@@ -201,4 +201,4 @@ Review and commit file changes, then push back to Pantheon.
 
 ## See Also
 
- - [Composer Fundamentals and Workflows](/docs/composer/)
+ - [Composer Fundamentals and Workflows](/composer/)

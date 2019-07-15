@@ -10,7 +10,7 @@ At some point, you may need or want to delete one of your sites on Pantheon. The
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
-Before deleting a site, you must downgrade the site plan to Sandbox level. See [Manage Site Plans](/docs/site-plan/) for more information.
+Before deleting a site, you must downgrade the site plan to Sandbox level. See [Manage Site Plans](/site-plan/) for more information.
 
 </Alert>
 
@@ -39,7 +39,7 @@ Before deleting a site, you must downgrade the site plan to Sandbox level. See [
 
 
 ## Delete a Site with Terminus
-Run the following [Terminus](/docs/terminus/) command:
+Run the following [Terminus](/terminus/) command:
 
 ```bash
 terminus site:delete <site>
@@ -54,4 +54,4 @@ Replace `<site>` with your site name. You can see a list of all your sites by ru
   ![Delete Site via Terminus](../docs/assets/images/delete-site-terminus.png)
 
 ## Delete a Multidev Environment
-Refer to the [Delete a Branch Environment](/docs/multidev#delete-a-branch-environment) section of our Multidev guide for more information.
+Refer to the [Delete a Branch Environment](/multidev#delete-a-branch-environment) section of our Multidev guide for more information.

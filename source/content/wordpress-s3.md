@@ -7,16 +7,16 @@ contributors: [sarahg]
 date: 6/4/2018
 ---
 
-Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distrubution through the [Global CDN](/docs/global-cdn/), but S3 is a good option for addressing issues with [highly populated directories](/docs/platform-considerations/#highly-populated-directories) or [serving large files](/docs/platform-considerations/#large-files).
+Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distrubution through the [Global CDN](/global-cdn/), but S3 is a good option for addressing issues with [highly populated directories](/platform-considerations/#highly-populated-directories) or [serving large files](/platform-considerations/#large-files).
 
 ## Before You Begin
 
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/git/#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/docs/terminus) installed on your local computer.
+- [Terminus](/terminus) installed on your local computer.
 
 <Alert title="Note" type="info">
 When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.
@@ -24,7 +24,7 @@ When creating an AWS account, you will have to enter credit card information. Th
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/docs/terminus/) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
+This process uses [Terminus](/terminus/) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
 
 ```bash
 export site=yoursitename
@@ -50,7 +50,7 @@ If you do not have an existing bucket for your site, create one:
 ## Integrate S3 with WordPress
 You will need to install a plugin such as [S3 Uploads](https://github.com/humanmade/S3-Uploads) or [WP Offload Media](https://deliciousbrains.com/wp-offload-media/).
 
-WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/docs/terminus) and [WP-CLI](/docs/wp-cli) for setup and migration.
+WP Offload Media requires a paid license but is configurable in the WordPress admin UI and offers a number of options and features, including multisite support. S3 Uploads is open-source but does not include an admin UI and requires [Terminus](/terminus) and [WP-CLI](/wp-cli) for setup and migration.
 
 ### Install and Deploy S3 Uploads
 
@@ -70,7 +70,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
   <Alert title="Warning" type="danger">
 
-  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/docs/git-faq/#does-pantheon-support-git-submodules)).
+  **Do not** add the plugin as a Git submodule. Git submodules are not supported on the platform ([more info](/git-faq/#does-pantheon-support-git-submodules)).
 
   </Alert>
 
@@ -88,7 +88,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
    </Alert>
 
-4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommended a service like [Lockr](/docs/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
+4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommended a service like [Lockr](/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 
 5. Commit and push the new plugin and your `wp-config.php` updates to the Dev environment, then  switch to SFTP mode and activate the plugin:
 

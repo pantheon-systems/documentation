@@ -13,8 +13,8 @@ You can use Cloudflare for DNS only or stack it as a CDN on top of Pantheon's Gl
 Be sure that you have a:
 
 - Domain name using Cloudflare to host DNS
-- [Paid Pantheon plan](/docs/guides/launch/plans/)
-- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans/)
+- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 
@@ -53,7 +53,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
 6. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
 7. Click **Add Record**.
-8. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Configure Redirects](/docs/redirects/) for more information.
+8. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Configure Redirects](/redirects/) for more information.
 
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
 You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
@@ -109,5 +109,5 @@ If you're using Cloudflare's IP Geolocation feature, you will need to read the `
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/docs/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)

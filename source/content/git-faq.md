@@ -5,7 +5,7 @@ tags: [git]
 categories: []
 contributors: [mrfelton]
 ---
-[Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+[Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
 <Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -79,7 +79,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 Double-check the files before going forward to make sure no bugs were introduced.
 
 ### Where can I find a site's upstream URL?
-The upstream URL is provided within the Site Dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/docs/terminus):
+The upstream URL is provided within the Site Dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/terminus):
 
 ```
 terminus site:info <site> --field=upstream
@@ -130,7 +130,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
  git push origin master
  ```
 
-For more details, see [WordPress and Drupal Core Updates](/docs/core-updates).
+For more details, see [WordPress and Drupal Core Updates](/core-updates).
 
 ### How can I resolve conflicts from Multidevs?
 If a merge conflict is preventing you from merging a Multidev environment, follow these steps to resolve.
@@ -192,7 +192,7 @@ Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a hig
 
 ### How do I revert or undo changes?
 
-See [Undo Git commits like overwriting Drupal core](/docs/undo-commits).
+See [Undo Git commits like overwriting Drupal core](/undo-commits).
 
 ### How do I apply a patch from Drupal.org on Pantheon?
 
@@ -205,7 +205,7 @@ From your local clone, run the `git apply` command as per Drupal.org, commit you
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](https://www.drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
-For detailed instructions, see [Manually Migrate Sites to Pantheon](/docs/migrate-manual).
+For detailed instructions, see [Manually Migrate Sites to Pantheon](/migrate-manual).
 
 ### Can I use Git with SFTP mode?
 
@@ -234,7 +234,7 @@ We are updating our infrastructure so that code repositories do not have a singl
 
 As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt in to evaluate the settings.
 
-If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings, replacing `SITE_UUID` with your [site's UUID](/docs/sites/#site-uuid):
+If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings, replacing `SITE_UUID` with your [site's UUID](/sites/#site-uuid):
 
 ```
 git remote set-url origin ssh://codeserver.dev.SITE_UUID@codeserver.dev.SITE_UUID.drush.in:2222/~/repository.git
@@ -244,13 +244,13 @@ By default your remote will be named origin. If you have renamed your Pantheon s
 
 ### Why can't I connect to Git?
 
-If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [Generating SSH Keys](/docs/ssh-keys).
+If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [Generating SSH Keys](/ssh-keys).
 
 ### Why am I being prompted for my password after adding the public key?
 
 This occurs when you have multiple SSH keys. For more information, see [Permission Denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
-1.  Use [Terminus](/docs/terminus) to identify the Git host:
+1.  Use [Terminus](/terminus) to identify the Git host:
 
     ```
     terminus connection:info <site>.dev --fields=git_host
@@ -302,7 +302,7 @@ Merge the remote changes (e.g. 'git pull') before pushing again. See the
 
 ### I have a Git conflict; can you fix it for me?
 
-No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/docs/git-faq/#how-do-i-import-a-site-with-existing-git-history%3F), [Git issues performing core updates](/docs/git-faq/#can-i-use-.gitignore-on-pantheon%3F), and [resetting your code to a specific commit](/docs/git-faq/#how-do-i-revert-or-undo-changes%3F).
+No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/git-faq/#how-do-i-import-a-site-with-existing-git-history%3F), [Git issues performing core updates](/git-faq/#can-i-use-.gitignore-on-pantheon%3F), and [resetting your code to a specific commit](/git-faq/#how-do-i-revert-or-undo-changes%3F).
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 
@@ -326,7 +326,7 @@ A simple option is to configure Git with a multi-remote origin within `.git/conf
 	url = git@github.com:systemseed/example.git
 ```
 
-Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/docs/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/docs/pantheon-community/).
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/pantheon-community/).
 
 ### Why are some merged commits hidden?
 

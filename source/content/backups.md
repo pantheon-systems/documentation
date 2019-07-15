@@ -16,7 +16,7 @@ We strongly urge you to backup your site regularly.
 
 <Alert title="Exports" type="export">
 
-This doc offers [Terminus](/docs/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
+This doc offers [Terminus](/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
@@ -38,7 +38,7 @@ Run backups separately for each environment (Dev, Test, and Live). If you have c
 
 ![Create site backup Pantheon Dashboard](../docs/assets/images/dashboard/manual-site-backup.png)
 
-If you prefer the command line, you can use [Terminus](/docs/terminus) to create backups:
+If you prefer the command line, you can use [Terminus](/terminus) to create backups:
 
 ```bash
 terminus backup:create $site.$env --element=<element> --keep-for=<days>
@@ -156,7 +156,7 @@ If you have the temporary URL provided via the Dashboard, you can download it fr
 wget "wget https://storage.googleapis.com/gcs-pantheon-backups/..."
 ```
 
-You can also use [Terminus](/docs/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading.
+You can also use [Terminus](/terminus) to download backups. Note that `--element=all` is only available when creating backups and not when downloading.
 
 ```bash
 terminus backup:get $site.$env --element=<code|files|db> --to=path/to/file.tar.gz
@@ -174,7 +174,7 @@ Select an older archive by running `terminus backup:list $site.$env`, copying th
 terminus backup:get $site.$env --file=<filename> --to=path/to/file.tar.gz
 ```
 
-Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/restore-environment-backup).
+Now that you have created the archive files, check out how to [restore an environment from a backup](/restore-environment-backup).
 
 
 <Alert title="Note" type="info">
@@ -186,7 +186,7 @@ Links to backups are signed URLs directly from Google Cloud Storage and will exp
 
 ## Restore From an Existing Backup
 
-Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard. For detailed instructions, see [Restoring an Environment From a Backup](/docs/restore-environment-backup/).
+Each manual and automatic backup can be directly restored to that environment from the Pantheon Dashboard. For detailed instructions, see [Restoring an Environment From a Backup](/restore-environment-backup/).
 
 ## About Your Code Archives
 Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment.
@@ -210,7 +210,7 @@ Backups are currently stored offsite for redundancy on Google Cloud Storage inst
 
 ### How do I restore from my site from a full environment backup?
 
-In the event that you need to get your site to a certain point, you can use a [full backup to restore an environment](/docs/restore-environment-backup).
+In the event that you need to get your site to a certain point, you can use a [full backup to restore an environment](/restore-environment-backup).
 
 ### How long does a backup take?
 
@@ -218,7 +218,7 @@ This depends on how much content you have. When you are doing a full environment
 
 ### How can I specify the time for my backups to run?
 
-Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. See [Manage Plans in the Site Dashboard](/docs/site-plan/) for details about site plans on Pantheon.
+Daily backups are run at a random time during the day. You must have a plan associated with a site to select a specific day for a weekly backup. See [Manage Plans in the Site Dashboard](/site-plan/) for details about site plans on Pantheon.
 
 ### What time zone is the backup time shown in?
 
@@ -251,7 +251,7 @@ In comparison, Pantheon’s backup mechanism:
 - Creates distinct archives (code, database, files)
 - Secures access to archives through Pantheon authentication (no anonymous users can access)
 
-Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/docs/terminus/).  Also, you can get download links for retrieval (the links expire and are renewed for additional security).
+Additionally, you can manually trigger a full Pantheon backup job for any site environment at any time on your own schedule using [Terminus](/terminus/).  Also, you can get download links for retrieval (the links expire and are renewed for additional security).
 
 ```bash
 terminus backup:get $site.$env --file=<filename> --element=<element>
@@ -264,6 +264,6 @@ From the Backup Log tab on the Site Dashboard, you can see the status of current
 
 ![Backups in progress](../docs/assets/images/backup-progress.png)
 
-If your **Code** or **Database** backup is taking an inordinately long time to complete, we suggest you [contact support](/docs/support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
+If your **Code** or **Database** backup is taking an inordinately long time to complete, we suggest you [contact support](/support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
 
 If you have large amounts of static files, this can slow down the **Files** backup. For this and other reasons, we suggest large file repositories be stored on a CDN. Otherwise, during a long file backup, you can still make changes to your code and database, provided those changes don't affect static files.

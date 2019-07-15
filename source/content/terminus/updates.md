@@ -14,7 +14,7 @@ searchboost: 100
 
 <Alert title={"Warning"} type={"danger"}>
 
-The latest release of Terminus is a major version upgrade, which may not be backwards-compatible with scripts written for Terminus `1.x`. For more information, see [Terminus 2.0](/docs/terminus-2-0/).
+The latest release of Terminus is a major version upgrade, which may not be backwards-compatible with scripts written for Terminus `1.x`. For more information, see [Terminus 2.0](/terminus-2-0/).
 
 </Alert>
 

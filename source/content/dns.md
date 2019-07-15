@@ -7,7 +7,7 @@ categories: []
 contributors: [alexfornuto]
 ---
 
-**DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/docs/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
+**DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
 
 ![DNS Reccomendations](../docs/assets/images/dashboard/domain-added.png)
 
@@ -18,18 +18,18 @@ While Pantheon does not offer DNS management services, we can help you to unders
 We offer DNS provider-specific instructions for several common DNS hosts:
 
 
- - [1&1 Domain Configuration](/docs/1-and-1/)
- - [Cloudflare Domain Configuration](/docs/cloudflare/)
- - [DNS Made Easy Domain Configurationi](/docs/dns-made-easy/)
- - [DreamHost Domain Configuration](/docs/dreamhost/)
- - [Dyn Domain Configuration](/docs/dyn/)
- - [eNom Domain Configuration](/docs/enom/)
- - [Gandi Domain Configuration](/docs/gandi/)
- - [GoDaddy Domain Configuration](/docs/godaddy/)
- - [Google Domain Configuration](/docs/google/)
- - [Namecheap Domain Configuration](/docs/namecheap/)
- - [Network Solutions Domain Configuration](/docs/network-solutions/)
- - [Amazon Route 53 Domain Configuration](/docs/route53/)
+ - [1&1 Domain Configuration](/1-and-1/)
+ - [Cloudflare Domain Configuration](/cloudflare/)
+ - [DNS Made Easy Domain Configurationi](/dns-made-easy/)
+ - [DreamHost Domain Configuration](/dreamhost/)
+ - [Dyn Domain Configuration](/dyn/)
+ - [eNom Domain Configuration](/enom/)
+ - [Gandi Domain Configuration](/gandi/)
+ - [GoDaddy Domain Configuration](/godaddy/)
+ - [Google Domain Configuration](/google/)
+ - [Namecheap Domain Configuration](/namecheap/)
+ - [Network Solutions Domain Configuration](/network-solutions/)
+ - [Amazon Route 53 Domain Configuration](/route53/)
 
 ## DNS Terminology
 
@@ -205,6 +205,6 @@ Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 
 ## See Also
 
- - [Launch Essentials](/docs/guides/launch/)
- - [Platform and Custom Domains](/docs/domains/)
- - [Configure Redirects](/docs/redirects/)
+ - [Launch Essentials](/guides/launch/)
+ - [Platform and Custom Domains](/domains/)
+ - [Configure Redirects](/redirects/)

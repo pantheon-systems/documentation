@@ -41,7 +41,7 @@ To verify that everything is working correctly, visit the URL of the environment
 
 <Alert title="Note" type="info">
 
-While locked, environments will not be cached by the [Global CDN](/docs/global-cdn).
+While locked, environments will not be cached by the [Global CDN](/global-cdn).
 
 </Alert>
 
@@ -53,7 +53,7 @@ When you are ready to make your environment public again, click **Security** on 
 This will clear the credentials you entered and make the web accessible resources available without a basic authentication prompt.
 
 ## Scripting Site Locking Operations
-Your site may also be locked and unlocked using [Terminus](/docs/terminus).
+Your site may also be locked and unlocked using [Terminus](/terminus).
 
 To lock a site:
 
@@ -75,11 +75,11 @@ If you see an authentication prompt for a different environment (for example, a 
 
 ### Drupal HTTP Authentication Module
 
-The [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) core module (Drupal 8) and [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) contrib module (Drupal 7) conflict with [Pantheon's Security tool](/docs/security/#password-protect-your-site%27s-environments) if both are enabled. We recommend using Pantheon's Security tool within the Site Dashboard on target environments, or the module to restrict access, not both.
+The [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) core module (Drupal 8) and [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) contrib module (Drupal 7) conflict with [Pantheon's Security tool](/security/#password-protect-your-site%27s-environments) if both are enabled. We recommend using Pantheon's Security tool within the Site Dashboard on target environments, or the module to restrict access, not both.
 
 Sites that have the environment locked on Pantheon in addition to enabling the module will experience 403 errors. You can resolve these errors by unlocking the environment in the Site Dashboard, clearing cache, then disabling the module in Drupal's admin interface. Once you've disabled the module you can safely lock the environment on Pantheon.
 
-Alternatively, you can resolve 403 errors by using [Terminus](/docs/terminus) to disable the module:
+Alternatively, you can resolve 403 errors by using [Terminus](/terminus) to disable the module:
 
 <TabList>
 

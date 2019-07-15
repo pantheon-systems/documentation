@@ -89,7 +89,7 @@ ControlMaster auto
 ControlPath ~/.ssh/control-%r
 ```
 
-If this doesn't fix the issue try creating an entry in your SSH configuration for your site specifically by its hostname.  Also, don't use the `ControlMaster` option but do use the `ControlPath` line as shown below, replacing `SITE_UUID` with your [site's UUID](/docs/sites/#site-uuid):
+If this doesn't fix the issue try creating an entry in your SSH configuration for your site specifically by its hostname.  Also, don't use the `ControlMaster` option but do use the `ControlPath` line as shown below, replacing `SITE_UUID` with your [site's UUID](/sites/#site-uuid):
 
 ```bash
 Host *.SITE_UUID.drush.in
@@ -97,7 +97,7 @@ ControlPath ~/.ssh/control-%r
 ```
 #### Server Refused to Allocate pty
 
-This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/docs/faq/#does-pantheon-have-ftp-or-shell-access?).
+This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/faq/#does-pantheon-have-ftp-or-shell-access?).
 
 #### Authentication Prompts
 

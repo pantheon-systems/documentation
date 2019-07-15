@@ -4,7 +4,7 @@ description: Learn how to deploy and test hot fixes and preserve orphan commits 
 tags: [debugcode]
 categories: []
 ---
-For Experts only. You should not need to attempt this if you use [Multidev](/docs/multidev) and keep commits from reaching Dev that you do not intend on deploying.
+For Experts only. You should not need to attempt this if you use [Multidev](/multidev) and keep commits from reaching Dev that you do not intend on deploying.
 
 <Alert title="Warning" type="danger">
 We do not recommend hotfixing. Hotfixes should be the exception, not the norm. Pushing a hotfix via Git is the only way to push code directly to Live without having to go through Dev and Test. Hotfixing is not a best practice and any damage to the source code will be the responsibility of the user and should be avoided whenever possible.

@@ -3,7 +3,7 @@ title: Readme
 description: Detailed information on article types for Pantheon Documentation.
 draft: true
 ---
-Documentation articles for the Pantheon website platform will initially be written in two types: Tools, which provide general information and step-by-step procedures for using different tools, and [Guides](/docs/guides), which explain how to solve website problems by breaking goals into phases and subphases, and providing rules-of-thumb as if-then statements.
+Documentation articles for the Pantheon website platform will initially be written in two types: Tools, which provide general information and step-by-step procedures for using different tools, and [Guides](/guides), which explain how to solve website problems by breaking goals into phases and subphases, and providing rules-of-thumb as if-then statements.
 
 ## Tool Articles
 
@@ -30,22 +30,22 @@ Describe the goal in greater detail.
 
 1. Instruction (imperative object with object)
 
-![title](/docs/assets/images/ "alt")
+![title](/assets/images/ "alt")
 
 2. Instruction
 
-![title](/docs/assets/images/ "alt")
+![title](/assets/images/ "alt")
 
 ## Procedure 2 Goal
 Describe the goal in greater detail.
 
 1. Instruction
 
-![title](/docs/assets/images/ "alt")
+![title](/assets/images/ "alt")
 
 2. Instruction
 
-![title](/docs/assets/images/ "alt")
+![title](/assets/images/ "alt")
 ```
 ## Guide Articles
 

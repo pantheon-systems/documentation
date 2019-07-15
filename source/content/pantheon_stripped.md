@@ -64,7 +64,7 @@ We recommend distributing campaign URLs that are in their final, non-redirectabl
 
 Finally, to optimize caching performance, make sure any parameters are in the supported format, as those that are not in the format utm_ or are preceded by double underscores will instead act as query keys and be served and cached as distinct pages. You can build campaign links in the correct format using [Google’s URL builder](https://ga-dev-tools.appspot.com/campaign-url-builder/) tool.
 
-For more information, see [Caching: Advanced Topics](/docs/caching-advanced-topics).
+For more information, see [Caching: Advanced Topics](/caching-advanced-topics).
 
 ### Which query parameters are optimized?
 

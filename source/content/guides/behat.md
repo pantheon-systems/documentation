@@ -117,5 +117,5 @@ If you find you are repeating the same things over and over, such as logging int
 
 ## See Also
 
- - [Composer Fundamentals and Workflows](/docs/composer/)
+ - [Composer Fundamentals and Workflows](/composer/)
  - [Behat.org](http://behat.org)

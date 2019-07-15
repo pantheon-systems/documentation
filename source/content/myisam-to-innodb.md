@@ -199,7 +199,7 @@ Here are the parameters you will need to configure before running the script:
 
 <Definition name="host">
 
-This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/docs/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
+This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
 
 </Definition>
 

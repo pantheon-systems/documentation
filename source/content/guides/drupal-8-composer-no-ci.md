@@ -10,7 +10,7 @@ contributors: [ataylorme, dwayne, davidneedham]
 
 In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/) for managing a Drupal 8 site on your local machine and pushing to Pantheon.
 
-Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/docs/core-updates/).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
+Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/core-updates/).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
 
 <Alert title="Note" type="info">
 
@@ -30,7 +30,7 @@ Before we begin choose a machine-friendly site name. It should be all lower case
 export PANTHEON_SITE_NAME="d8-composer-no-ci"
 ```
 
-You should also be authenticated with Terminus. See the [Authenticate into Terminus](/docs/machine-tokens/#authenticate-into-terminus) section of the [machine tokens documentation](/docs/machine-tokens) for details.
+You should also be authenticated with Terminus. See the [Authenticate into Terminus](/machine-tokens/#authenticate-into-terminus) section of the [machine tokens documentation](/machine-tokens) for details.
 
 Create a new Pantheon site with an empty upstream.
 
@@ -50,7 +50,7 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
   git clone git@github.com:pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
   ```
 
-   This command assumes you have [SSH keys](/docs/ssh-keys/) added to your GitHub account. If you don't, you can clone the repository over HTTPS:
+   This command assumes you have [SSH keys](/ssh-keys/) added to your GitHub account. If you don't, you can clone the repository over HTTPS:
 
   ```bash
   git clone https://github.com/pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
@@ -105,7 +105,7 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 
 <Alert title="Note" type="info">
 
-When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the [Pantheon platform is not compatible with git submodules](/docs/git-faq/#does-pantheon-support-git-submodules). If you remove the `.git` directories, be sure to put them back again after you push your commit up to Pantheon (see instructions below). To do this, remove the vendor directory and run `composer install`.
+When possible, use tagged versions of Composer packages. Untagged versions will include `.git` directories, and the [Pantheon platform is not compatible with git submodules](/git-faq/#does-pantheon-support-git-submodules). If you remove the `.git` directories, be sure to put them back again after you push your commit up to Pantheon (see instructions below). To do this, remove the vendor directory and run `composer install`.
 
 </Alert>
 
@@ -163,7 +163,7 @@ Normally the next step would go through the standard Drupal installation. But si
    git push --force
    ```
 
-   **Note:** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our Build Tools guide](/docs/guides/build-tools/) for documentation on the more advanced automated workflow with a build step.
+   **Note:** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our Build Tools guide](/guides/build-tools/) for documentation on the more advanced automated workflow with a build step.
 
 ### Installing Drupal
 
@@ -185,7 +185,7 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 
 <Alert title="Note" type="info">
 
-To maintain best practice, some of the steps in this section require access to the [Multidev](/docs/multidev/) feature. Those steps can be skipped, but it isn't recommended.
+To maintain best practice, some of the steps in this section require access to the [Multidev](/multidev/) feature. Those steps can be skipped, but it isn't recommended.
 
 </Alert>
 
@@ -245,4 +245,4 @@ To maintain best practice, some of the steps in this section require access to t
 
 #### Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
 
-P.S. the [Pantheon Community](/docs/pantheon-community/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
+P.S. the [Pantheon Community](/pantheon-community/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.

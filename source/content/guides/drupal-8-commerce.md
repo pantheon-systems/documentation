@@ -14,8 +14,8 @@ This guide covers installing [Drupal Commerce](https://drupalcommerce.org/), an 
 ## Before You Begin
 This process uses Composer to manage modules and dependencies. Before proceeding, you may wish to consult the following docs:
 
- - [Composer Fundamentals and Workflows](/docs/composer)
- - [Build Tools](/docs/guides/build-tools)
+ - [Composer Fundamentals and Workflows](/composer)
+ - [Build Tools](/guides/build-tools)
 
 <Alert title="Note" type="info">
 As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
@@ -30,9 +30,9 @@ In addition to Pantheon, you will need accounts at:
  - [CircleCI](https://circleci.com)
 
 
-1.  Follow the [Before You Begin](/docs/guides/build-tools/#before-you-begin) section of the Build Tools guide to install Composer, Terminus, and the Terminus Build Tools plugin on your local computer, and create machine tokens for [GitHub](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) and [CircleCI](https://circleci.com/account/api). Export the tokens to your current terminal session, as described below.
+1.  Follow the [Before You Begin](/guides/build-tools/#before-you-begin) section of the Build Tools guide to install Composer, Terminus, and the Terminus Build Tools plugin on your local computer, and create machine tokens for [GitHub](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) and [CircleCI](https://circleci.com/account/api). Export the tokens to your current terminal session, as described below.
 
-2.  This guide uses several variables in example [Terminus](/docs/terminus) commands. This lets you copy and paste without needing to change the variable. For this to work, you must first export the variables in your local terminal session:
+2.  This guide uses several variables in example [Terminus](/terminus) commands. This lets you copy and paste without needing to change the variable. For this to work, you must first export the variables in your local terminal session:
 
     ```bash
     export SITENAME=yoursitenamehere
@@ -116,7 +116,7 @@ In addition to Pantheon, you will need accounts at:
 
 ## Conclusion
 
-What you do next is up to you and your needs. Remember that you're now using Composer to manage core, modules, and dependencies for your site. Consider reading our [Composer Fundamentals and Workflows](/docs/composer) doc for more information.
+What you do next is up to you and your needs. Remember that you're now using Composer to manage core, modules, and dependencies for your site. Consider reading our [Composer Fundamentals and Workflows](/composer) doc for more information.
 
 ##See Also
 

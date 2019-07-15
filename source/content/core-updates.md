@@ -4,13 +4,13 @@ description: Detailed information on applying and debugging upstream updates fro
 tags: [dashboard, devterminus, git]
 contributors: [cityofoaksdesign, rachelwhitton, alexfornuto]
 ---
-Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/docs/maintain-custom-upstream/), become available downstream as a one-click update.
+Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream/), become available downstream as a one-click update.
 
-Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/docs/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/support/#scope-of-support).
+Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/support/#scope-of-support).
 
 <Alert title="Note" type="info">
 
-Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/docs/guides/build-tools/update/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/docs/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
+Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
 
 </Alert>
 
@@ -23,7 +23,7 @@ Sites managing core with Composer are not compatible with Pantheon's One-click u
 3. Select whether you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied.
 4. Click **Apply Updates**.
 5. Click **Visit Development Site** in the Development Environment to test and QA the site.
-5. Follow the standard [Pantheon Workflow](/docs/pantheon-workflow/#combine-code-from-dev-and-content-from-live-in-test) to deploy changes up to Test and on to Live.
+5. Follow the standard [Pantheon Workflow](/pantheon-workflow/#combine-code-from-dev-and-content-from-live-in-test) to deploy changes up to Test and on to Live.
 
 ### Auto-Resolve Conflicts
 
@@ -34,7 +34,7 @@ If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull 
 
 ## Apply Upstream Updates via Terminus
 
-If you prefer using the command line, you can apply updates with [Terminus](/docs/terminus/).
+If you prefer using the command line, you can apply updates with [Terminus](/terminus/).
 
 ### Update a Specific Site
 
@@ -114,7 +114,7 @@ If this procedure fails with the message `Already up to date.` refer to [this tr
 
 #### Overwrite WordPress Core Via SFTP
 
-In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to overwrite core files.
+In the case where you're unable to use Git, you can use [SFTP](/sftp/) to overwrite core files.
 
 1. Confirm that the Site Connection Mode is set to SFTP. Then, via SFTP, delete these files and folders:
 
@@ -158,7 +158,7 @@ In the case where you're unable to use Git, you can use [SFTP](/docs/sftp/) to o
 
 This process lets you manually resolve the conflict using the command line and a text editor.
 
-1. Navigate to a [local clone of your site repository](/docs/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
+1. Navigate to a [local clone of your site repository](/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
 
     <TabList>
@@ -299,7 +299,7 @@ If you know your site's Custom Upstream has updated code, but it's not visible o
 
 This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it may take up to a minute before updates appear on the dashboard.
 
-If updates are still not showing on the site, it may be necessary to re-set the site's upstream via [Terminus](/docs/terminus/examples/#switch-upstreams). Please note that only the Site Owner or owning Organization Administrators can change a site's upstream.
+If updates are still not showing on the site, it may be necessary to re-set the site's upstream via [Terminus](/terminus/examples/#switch-upstreams). Please note that only the Site Owner or owning Organization Administrators can change a site's upstream.
 
 ### 503 Errors When Running Update.php and Installing Modules
 

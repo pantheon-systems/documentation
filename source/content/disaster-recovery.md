@@ -40,12 +40,12 @@ Pantheon’s disaster response team will proactively notify you of a zone failur
 Redis cache is not preserved after a site failover. This means you must ensure that the site can handle having its cache dropped under regular visitor traffic in order for the site to operate as expected in a failover scenario.
 
 To test in a Test Environment, click the **Clear Caches** button in the upper right hand corner of the Site Dashboard.
-You can also [connect to your Redis instance](/docs/redis/#use-the-redis-command-line-client) and run the `flushall` command to clear Redis cache via the Redis CLI.
+You can also [connect to your Redis instance](/redis/#use-the-redis-command-line-client) and run the `flushall` command to clear Redis cache via the Redis CLI.
 
 If you rely on the Redis cache for locks (mutexes) or storing other long-term data, you must move them out of Redis and into the database to avoid any issues when the Redis cache is dropped during failover.
 
 ## Limitations
-Solr is not currently supported on DR-enabled sites. See our documentation on how to safely remove Solr for [Drupal 8](/docs/solr-drupal-8/#safely-remove-solr), [Drupal 7](/docs/solr-drupal-7/#safely-remove-solr), and [WordPress](/docs/wordpress-solr/#safely-remove-solr).
+Solr is not currently supported on DR-enabled sites. See our documentation on how to safely remove Solr for [Drupal 8](/solr-drupal-8/#safely-remove-solr), [Drupal 7](/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
 
 ## See also
 - [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar)

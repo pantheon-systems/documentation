@@ -14,7 +14,7 @@ If a subdomain of your primary site is configured, a newly created site named "s
 
 ## Request the Vanity Domain
 
-From your Organization Dashboard, go to Dashboard and [submit a support request](/docs/support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
+From your Organization Dashboard, go to Dashboard and [submit a support request](/support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
 
 
 <Alert title="Note" type="info">
@@ -32,7 +32,7 @@ At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Usin
  
 > `*.sites.example.com` **AAAA** `2620:12a:8001::X`
 
-See [Introduction to Domain Name Services](/docs/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
+See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
 
 <Alert type="info" title="Note">
 
@@ -83,4 +83,4 @@ For SEO and to prevent duplicate content, the `robots.txt` file attached to the 
 User-agent: *
 Disallow: /
 ```
-To present an alternate `robots.txt` file from within the source code, a custom domain needs to be [added to the site's Dashboard](/docs/guides/launch/domains/) and the appropriate DNS record created.
+To present an alternate `robots.txt` file from within the source code, a custom domain needs to be [added to the site's Dashboard](/guides/launch/domains/) and the appropriate DNS record created.

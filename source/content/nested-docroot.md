@@ -7,21 +7,21 @@ contributors:
  - ataylorme
 ---
 
-The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/docs/pantheon-yml/#site-local-configurations-pantheonyml) file or in the [pantheon.upstream.yml](/docs/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
+The docroot is the directory from which your site is served. On Pantheon, this defaults to the root directory of the site's codebase (`code`). Specifying `web_docroot: true` in your [pantheon.yml](/pantheon-yml/#site-local-configurations-pantheonyml) file or in the [pantheon.upstream.yml](/pantheon-yml/#custom-upstream-configurations-pantheonupstreamyml) file in your upstream allows you to serve site files from the `web` subdirectory of your site's code repository on all Pantheon environments (e.g. `code/web`).
 
 <Alert title="Warning" type="danger">
 
-Changing the settings of the `web_docroot` property will prevent you from updating your site via one-click Dashboard updates. To continue to use one-click updates, switch to a [Custom Upstream](/docs/custom-upstream) that has the `web_docroot` property set in the `pantheon.upstream.yml` file.
+Changing the settings of the `web_docroot` property will prevent you from updating your site via one-click Dashboard updates. To continue to use one-click updates, switch to a [Custom Upstream](/custom-upstream) that has the `web_docroot` property set in the `pantheon.upstream.yml` file.
 
 </Alert>
 
 ## Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
 
-This is especially useful for third party dependencies, such as those installed and managed via [Composer](/docs/composer/).
+This is especially useful for third party dependencies, such as those installed and managed via [Composer](/composer/).
 
 ## Disable One-click Updates
-If you wish to stop using One-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/docs/terminus):
+If you wish to stop using One-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
 
 <TabList>
 
@@ -54,13 +54,13 @@ terminus site:upstream:set <site> empty-wordpress
 ## Enable Nested Docroot
 Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we recommend using Git, but you can also use SFTP to set up your site.
 
-1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/docs/terminus):
+1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.<env> git
  ```
 
-2. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you haven't already.
+2. [Clone the site's codebase](/git/#clone-your-site-codebase), if you haven't already.
 3. Create a `pantheon.yml` file if it doesn't already exist.
 4. Add the line `web_docroot: true` to the top level of the YAML file, typically after `api_version`. For example:
   ```
@@ -73,7 +73,7 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
 6. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site) below.
 
 ### Create a New Site
-If your site utilizes a [Custom Upstream](/docs/custom-upstream/) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
+If your site utilizes a [Custom Upstream](/custom-upstream/) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
 
 ### Convert an Existing Site
 You'll need to move the CMS code into the `web` subdirectory, either manually or by using one of the commands below.
@@ -83,7 +83,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 <Tab title="Drupal 7" id="d7" active={true}>
   The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-  [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
+  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
   mkdir web
@@ -116,7 +116,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-  [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
+  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
   mkdir web
@@ -147,7 +147,7 @@ You'll need to move the CMS code into the `web` subdirectory, either manually or
 
   The command below uses `find` to select all files at the document root, including "dot" files, but skips all directories and all files explicitly excluded in the `egrep` section. It then lists the specific core directories to move into the nested docroot. This may or may not produce the correct results, depending on what files you or your team has added. You can add files to be excluded in the list after `egrep`, and use the `-n` flag for `git mv` to perform a dry run first.
 
-  [Clone the site's codebase](/docs/git/#clone-your-site-codebase), then execute the following from the project root directory:
+  [Clone the site's codebase](/git/#clone-your-site-codebase), then execute the following from the project root directory:
 
   ```bash
   mkdir web
@@ -197,4 +197,4 @@ For example, if your `pantheon.yml` has a script location definition of `private
 
 #### Can I specify a subdirectory other than web?
 
-The directory name is not configurable, but you can [create a symlink](/docs/assuming-write-access/#create-a-symbolic-link) from some other directory to `web`.
+The directory name is not configurable, but you can [create a symlink](/assuming-write-access/#create-a-symbolic-link) from some other directory to `web`.

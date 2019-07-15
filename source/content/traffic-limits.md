@@ -15,7 +15,7 @@ Basic plan sites do not have this protective feature and would see a change to t
 ### How does Pantheon calculate monthly visits?
 <Partial file="traffic-dl.md" />
 
-For details, see [Metrics in the Site Dashboard](/docs/metrics/).
+For details, see [Metrics in the Site Dashboard](/metrics/).
 
 ### What is a traffic spike?
 A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable. For details, see [Pricing Comparison](https://pantheon.io/plans/pricing-comparison).
@@ -76,7 +76,7 @@ We are well aware that malicious actors can create a ton of traffic out of nowhe
 As above, in cases where these events are regular or sustained, we reserve the right to right-size a site plan. If a site's real load on the platform is consistently higher than what appears in end-user analytics, fairness demands that the site plan fit its usage.
 
 ## See Also
-- [New Site Plans FAQs](/docs/new-plans-faq/)
-- [Manage Plans in the Site Dashboard](/docs/site-plan/)
-- [Billing in the Site Dashboard](/docs/site-billing/)
-- [Metrics in the Site Dashboard](/docs/metrics/)
+- [New Site Plans FAQs](/new-plans-faq/)
+- [Manage Plans in the Site Dashboard](/site-plan/)
+- [Billing in the Site Dashboard](/site-billing/)
+- [Metrics in the Site Dashboard](/metrics/)

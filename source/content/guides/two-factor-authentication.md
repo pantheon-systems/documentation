@@ -43,7 +43,7 @@ For a single site, there are many different [WordPress plugins for two-factor au
 Duo configuration settings and keys are stored in the database. To avoid setting up new keys for each environment you can:
 
   - synchronize and import your database
-  - use a tool like [WP-CFM](/docs/wp-cfm/)
+  - use a tool like [WP-CFM](/wp-cfm/)
   - keep the new application page from the Duo Admin panel open, and reenter the values for each environment.
 
 </Alert>
@@ -160,7 +160,7 @@ For an organization-wide solution, there are many different [Drupal modules for 
 #### Drupal Instructions
 
 1. Install and enable the GitHub version of the [OneLogin SAML](https://github.com/onelogin/drupal-saml) module on your Drupal site. This module is eventually intended to live on Drupal.org as the [2.x branch of the OneLogin project](https://www.drupal.org/project/onelogin).
-2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/docs/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.
+2. Set the `$_SERVER['SERVER_PORT']` value in `settings.php` according to [these instructions](/server_name-and-server_port). This change is necessary to have SAML use the appropriate ports.
 3. Configure the OneLogin SAML module `admin/config/onelogin_saml` with what is shown in the screenshot; values are case-sensitive.
 ![TFA OneLogin Options](../../docs/assets/images/tfa-drupal-onelogin-options.png)
 4. Now use the OneLogin dashboard to log in to your Drupal site!
@@ -177,12 +177,12 @@ The Pantheon Dashboard offers social login with Google, which can be configured 
 
 <Alert title="Note" type="info">
 
-We recommend adding an [SSH Key](/docs/ssh-keys) to authenticate yourself on Pantheon for operations such as SFTP connections, which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
+We recommend adding an [SSH Key](/ssh-keys) to authenticate yourself on Pantheon for operations such as SFTP connections, which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
 
 </Alert>
 
 ### Single Sign-On for Orgs
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/docs/sso-organizations/).
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/sso-organizations/).
 
 ##See Also
 - [Security on Pantheon](https://pantheon.io/security)

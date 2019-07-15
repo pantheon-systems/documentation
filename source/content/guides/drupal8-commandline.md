@@ -20,10 +20,10 @@ Be sure that you:
 - Are familiar with your operating system's command line.
 - Are using a Unix-based system (Linux or Mac OS X). Windows commands may vary slightly.
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
-- Have an [SSH key](/docs/ssh-keys/) generated, added to your Pantheon dashboard, and loaded into your local SSH agent.
+- Have an [SSH key](/ssh-keys/) generated, added to your Pantheon dashboard, and loaded into your local SSH agent.
 
 ## Install and Authenticate Terminus
-Terminus provides advanced interaction with the platform and allows us to run Drush commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/docs/terminus).
+Terminus provides advanced interaction with the platform and allows us to run Drush commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/terminus).
 
 1.  Install Terminus within the `$HOME/terminus` directory:
 
@@ -136,7 +136,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 
         terminus drush $TERMINUS_SITE.dev -- config-export -y
 
-    [Configuration management is a complex topic with its own detailed recommendations](/docs/drupal-8-configuration-management/). For this guide, all you need to know is that by default, Drupal 8 configuration is stored in the database and can be cleanly exported to `yml` files. Once exported to files and committed to git, these configuration changes can be deployed to different environments (like Test and Live) where they can then be imported to the database.
+    [Configuration management is a complex topic with its own detailed recommendations](/drupal-8-configuration-management/). For this guide, all you need to know is that by default, Drupal 8 configuration is stored in the database and can be cleanly exported to `yml` files. Once exported to files and committed to git, these configuration changes can be deployed to different environments (like Test and Live) where they can then be imported to the database.
 
 7.  Commit the changes:
 
@@ -229,6 +229,6 @@ If you're a developer who lives in the command line, you now see the power of Te
 
 Here are some suggestions on where to go from here:
 
- - [Use the Pantheon Workflow](/docs/pantheon-workflow/)
- - [Configuration Workflow for Drupal 8 Sites](/docs/drupal-8-configuration-management/)
- - [The Terminus Manual](/docs/terminus/)
+ - [Use the Pantheon Workflow](/pantheon-workflow/)
+ - [Configuration Workflow for Drupal 8 Sites](/drupal-8-configuration-management/)
+ - [The Terminus Manual](/terminus/)

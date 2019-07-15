@@ -18,7 +18,7 @@ Terminus is available for Mac OS X and Linux.
 
 Some Windows users have installed Terminus using [Git BASH on Git for Windows](https://git-for-windows.github.io/), or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), but this is unsupported.
 
-Because some Terminus commands use SSH authentication, consider [generating and adding SSH keys](/docs/ssh-keys/) to your account before you continue.
+Because some Terminus commands use SSH authentication, consider [generating and adding SSH keys](/ssh-keys/) to your account before you continue.
 
 ## Requirements
 
@@ -43,7 +43,7 @@ See [Troubleshooting](#troubleshooting) if your installation fails, or the [Inst
 
 ### Machine Token
 
-Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/docs/machine-tokens).
+Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/machine-tokens).
 
 First, [create a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from **User Dashboard** > **Account** > **Machine Tokens**.
 
@@ -59,7 +59,7 @@ Once the token has been created, use it to authenticate Terminus by running the 
 
 ### SSH Authentication
 
-Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/docs/ssh-keys/) to prevent password requests when executing these commands.
+Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
 
 ## Troubleshooting
 

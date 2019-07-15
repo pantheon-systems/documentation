@@ -4,7 +4,7 @@ description: Learn how to install and configure Cygwin on Windows computers for 
 tags: [local]
 categories: []
 deprecated: true
-deprecatednote: Terminus is no longer supported on Windows, and this document is unmaintained. See the [Terminus Support](/docs/platform-considerations/#terminus-support) section of Platform Considerations for more information.
+deprecatednote: Terminus is no longer supported on Windows, and this document is unmaintained. See the [Terminus Support](/platform-considerations/#terminus-support) section of Platform Considerations for more information.
 ---
 If you do not have access to a Mac or Linux environment, you can install [Cygwin](https://cygwin.com/) to perform tasks typically not possible in Windows, such as:
 

@@ -4,7 +4,7 @@ description: Learn how to identify and kill long-running MySQL queries on your W
 tags: [debugdb]
 categories: []
 ---
-Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL Database](/docs/mysql-access).
+Long-running MySQL queries keep other transactions from accessing the necessary tables to execute a request, leaving your users on hold. To kill these queries, you'll need to [access the environment's MySQL Database](/mysql-access).
 
 <Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -43,8 +43,8 @@ mysql> SELECT GROUP_CONCAT(CONCAT('KILL ',id,';') SEPARATOR ' ') 'Paste the foll
 Copy the provided query in the output and run as instructed.
 
 ## See Also
-- [Access MySQL Databases](/docs/mysql-access)
-- [Database Connection Errors](/docs/database-connection-errors)
-- [MySQL Slow Log](/docs/mysql-slow-log/)
-- [MySQL Troubleshooting with New Relic Pro](/docs/debug-mysql-new-relic/)
-- [Converting MySQL Tables From MyISAM to InnoDB](/docs/myisam-to-innodb/)
+- [Access MySQL Databases](/mysql-access)
+- [Database Connection Errors](/database-connection-errors)
+- [MySQL Slow Log](/mysql-slow-log/)
+- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic/)
+- [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb/)

@@ -5,9 +5,9 @@ tags: [siteintegrations, addons, search index, solr]
 categories: [drupal]
 contributors: [cityofoaksdesign]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
+[Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
-For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
+For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8](/solr-drupal-8).
 
 ## Before You Begin
 
@@ -25,7 +25,7 @@ This guide uses Pantheon's Solr module, which is designed to work specifically w
 
 ## Install Solr for Drupal
 ### Apply Upstream Updates
-Use [one-click updates](/docs/core-updates) to make sure you are running the latest version of Drupal core.
+Use [one-click updates](/core-updates) to make sure you are running the latest version of Drupal core.
 
 ### Add Either the Apache Solr Search or Search API Solr Search Module
 
@@ -153,7 +153,7 @@ Keep in mind that newly indexed items have a 2-minute delay until cron has been 
 <Partial file="solr-commit-changes.md" />
 
 #### apachesolr.module
-If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/docs/terminus/):
+If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/terminus/):
 ```bash
 terminus drush <site>.<env> -- vget apachesolr_service_class
 ```
@@ -188,4 +188,4 @@ The following code changes are required before Solr can be safely uninstalled an
 <Partial file="remove-addons/d7-solr.md" />
 
 ## See Also
-[Apache Solr on Pantheon](/docs/solr)
+[Apache Solr on Pantheon](/solr)

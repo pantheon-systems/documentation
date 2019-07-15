@@ -10,7 +10,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 ## Create a Symbolic Link
 
-1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/docs/git/#install-git) and [clone the code](/docs/git/#clone-your-site-codebase) locally if you have not done so already.
+1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/git/#install-git) and [clone the code](/git/#clone-your-site-codebase) locally if you have not done so already.
 
     <Alert title="Note" type="info">
 
@@ -80,7 +80,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 ### WP-Rocket
 
-As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/) assumes write access to the code base.
+As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/) assumes write access to the code base.
 
 <Alert  title="Note" type="info">
 
@@ -129,7 +129,7 @@ You can also verify success using `dir`:
 
 ### Uncode Theme
 
-As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the code base.
+As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the code base.
 
 1. Manually move the target folders:
 
