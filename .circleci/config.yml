@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: pantheonsystems/documentation:latest
+      - image: circleci/node:10.16.0
     working_directory: ~/build
     steps:
       - checkout
@@ -13,13 +13,14 @@ jobs:
       - run:
           name: Prep Environment
           command: |
+            cd ~/build/gatsby
+            sudo npm install -g gatsby
             npm install
-            ./node_modules/.bin/grunt
-            mkdir output_prod
-            cd output_prod && ln -s ./ source
       - run:
-          name: Sculpin Generate
-          command: /documentation/bin/sculpin generate --env=prod
+          name: Gatsby Build
+          command: |
+            cd ~/build/gatsby
+            gatsby build --prefix-paths
       - run:
           name: Deploy Multidev environment
           command: bash ./scripts/deploy-multidev.sh
