@@ -31,17 +31,19 @@ const Partial = (props) => (
 
     render={data => {
 
-      const { node } = data.allDocs.edges.find(
-        edge => edge.node.parent.relativePath === props.file
+      const mdx = data.allDocs.edges.find(
+        edge => {
+          return edge.node.parent.relativePath === props.file
+        }
       )
 
-      if (!node) {
+      if (!mdx) {
         return null
       }
 
       return <>
           <MDXProvider>
-            <MDXRenderer>{node.code.body}</MDXRenderer>
+            <MDXRenderer>{mdx.node.code.body}</MDXRenderer>
           </MDXProvider>
         </>
     }}
