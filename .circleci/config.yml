@@ -13,7 +13,7 @@ jobs:
       - run:
           name: Prep Environment
           command: |
-            sudo apt install -y rsync composer
+            sudo apt install -y rsync composer php-xml
             composer global require pantheon-systems/terminus
             cd ~/build/gatsby
             sudo npm install -g gatsby
