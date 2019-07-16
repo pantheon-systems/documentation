@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10.16.0
+      - image: circleci/node:10.16.0-browsers
     working_directory: ~/build
     steps:
       - checkout
@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Gatsby Build
           command: |
-            cd ~/build/gatsby
+            cd ~/build/gatsby | cat
             gatsby build --prefix-paths
       - run:
           name: Deploy Multidev environment
