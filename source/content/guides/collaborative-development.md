@@ -111,8 +111,10 @@ As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickst
 1. From your Site Dashboard, go to the Dev environment.
 2. Click **Settings**, then select **About Site**.
 3. Copy the Upstream URL and modify it by replacing `https` with `git` and appending `.git master` to the end of the string.
- For example, a site running Drupal 7, `https://github.com/pantheon-systems/drops-7` will change to `git://github.com/pantheon-systems/drops-7.git master` in the Git command used to pull in the upstream.  
- <Image alt="Pantheon Dashboard about site tab" src="dashboard/pantheon-dashboard-settings-about-site-upstream.png" />
+  For example, a site running Drupal 7, `https://github.com/pantheon-systems/drops-7` will change to `git://github.com/pantheon-systems/drops-7.git master` in the Git command used to pull in the upstream.
+
+  <Image alt="Pantheon Dashboard about site tab" src="dashboard/pantheon-dashboard-settings-about-site-upstream.png" />
+
 4. At the root of your local clone of the site repository, run
 
   ```
@@ -120,6 +122,7 @@ As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickst
   ```
 
   <Alert title="Note" type="info">
+
   For versions of Git 2.8 and below, the command is:
 
   ```
@@ -258,6 +261,7 @@ To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2
 The GitHub repo and Pantheon site both now have a settings.php file. This will allow for environment-specific configuration to enable modules via remote Drush calls and other essential functionality.
 
 Before I continue having to remember which remote, GitHub or Pantheon, is the "origin", I'm going to rename my remote from origin to pantheon and verify.
+
 ```
 $ git remote rename origin pantheon
 $ git remote -v
@@ -280,10 +284,13 @@ Switched to a new branch 'configs']
 
 I’m responsible for adding the configuration management module as a feature of this site and tracking initial configurations with it.
 In my local environment, I'm going to download the module and its dependencies:
+
 ```
 $ drush dl configuration-7.x-2.x-dev xautoload
 ```
+
 After I enable the module, I test and verify that the module is working. Next I'll add, commit, and push to branches on Pantheon and GitHub.
+
 ```
 $ git status
 On branch configs
@@ -299,6 +306,7 @@ Brians-Pantheon-Mac-2:d7-ci brian$ git commit -m "install configuration and xaut
 [configs 0f85fbd] install configuration and xautoload
  284 files changed, 25781 insertions(+)
 ```
+
 ```
 $ git push pantheon configs
 Counting objects: 365, done.
@@ -314,34 +322,39 @@ remote:
 To ssh://codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88@codeserver.dev.59b2dd69-2305-4ca2-a745-4f00e4100c88.drush.in:2222/~/repository.git
  * [new branch]      configs -> configs
 ```
+
 The platform is telling me that no Multidev environments were found associated with the Git branch. I can stay on the command-line and quickly create one with Terminus.
 
 ```
 $ terminus multidev:create <site>.dev <to_env>
 ```
-<Image alt="New environment named configs" src="dashboard/new-env-configs.png "New Pantheon Multidev Environment named configs, created with Terminus"" />
+
+<Image alt="New environment named configs" src="dashboard/new-env-configs.png" />
+
 The module will now be available to activate and test on Pantheon for my colleagues to experience. I'll add a link to the module's configuration page on the Multidev environment on my GitHub pull request.
 
-<Image alt="New environment configuration admin url" src="configs-admin-url-configs-env.png "The configuration management module's admin url on the configs environment"" />
+<Image alt="New environment configuration admin url" src="configs-admin-url-configs-env.png" />
 
 ### Create Pull Request
 
 We’re now ready to create a pull request on GitHub. The pull request can include things like links to the Multidev environment where the team can view the effects of the commits, @-mentions of team members, and a list of tasks for team members to perform before merging.
 
-<Image alt="Pull request for configs branch" src="configuration-pull-request-1.png "A pull request on github for the configs branch to be merged to master"" />
+<Image alt="Pull request for configs branch" src="configuration-pull-request-1.png" />
 
 Timani completed the tasks, we discussed a bit in person, and he merged the PR.
 
-<Image alt="Merged pull request for configs branch" src="merged-pull-request-1.png "A merged pull request on github showing the configs branch was merged to master"" />
+<Image alt="Merged pull request for configs branch" src="merged-pull-request-1.png" />
 
 ## Deploy to Pantheon
 Locally, I now checkout the master branch, pull from github master, and push to pantheon master.
+
 ```
 $ git checkout master
 $ git pull github master
 $ git push pantheon master
 ```
-<Image alt="Merged PR commit in the Pantheon dashboard" src="dashboard/merged-pull-request-1-dashboard.png "A commit in the dev environment's dashboard from the merged pull request on github"" />
+
+<Image alt="Merged PR commit in the Pantheon dashboard" src="dashboard/merged-pull-request-1-dashboard.png" />
 
 ## Optional Tools to Optimize Workflows
 

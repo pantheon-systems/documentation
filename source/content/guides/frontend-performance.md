@@ -39,48 +39,48 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
 
 <Tab title="Global" id="globaltab1" active={true}>
 
-<Image alt="Global CDN Map" src="guides/front-end-performance/CDN-map.png" />{.cdn-map-container}
+<Image alt="Global CDN Map" src="guides/front-end-performance/CDN-map.png" />
 
 </Tab>
 
 <Tab title="N. America" id="natab1">
 
-<Image alt="North America CDN Map" src="guides/front-end-performance/CDN-map-NA.png" />{.cdn-map-container}
+<Image alt="North America CDN Map" src="guides/front-end-performance/CDN-map-NA.png" />
 <p class="pop-desc">Ashburn (x2), Atlanta (x2), Boston, Chicago (x2), Dallas, Denver, Los Angeles (x2), Miami, Minneapolis, Montreal, New York (x2), San Jose (x2), Seattle, Toronto</p>
 
 </Tab>
 
 <Tab title="S. America" id="satab1">
 
-<Image alt="South America CDN Map" src="guides/front-end-performance/CDN-map-SA.png" />{.cdn-map-container}
+<Image alt="South America CDN Map" src="guides/front-end-performance/CDN-map-SA.png" />
 <p class="pop-desc">São Paulo, Rio de Janeiro</p>
 
 </Tab>
 
 <Tab title="Africa" id="aftab1">
 
-<Image alt="Africa CDN Map" src="guides/front-end-performance/CDN-map-AF.png" />{.cdn-map-container}
+<Image alt="Africa CDN Map" src="guides/front-end-performance/CDN-map-AF.png" />
 <p class="pop-desc">Cape Town, Johannesburg</p>
 
 </Tab>
 
 <Tab title="Europe" id="eutab1">
 
-<Image alt="Europe CDN Map" src="guides/front-end-performance/CDN-map-EU.png" />{.cdn-map-container}
+<Image alt="Europe CDN Map" src="guides/front-end-performance/CDN-map-EU.png" />
 <p class="pop-desc">Amsterdam, Frankfurt (x2), London (x2), Madrid, Paris, Stockholm</p>
 
 </Tab>
 
 <Tab title="Asia" id="asiatab1">
 
-<Image alt="Asia CDN Map" src="guides/front-end-performance/CDN-map-Asia.png" />{.cdn-map-container}
+<Image alt="Asia CDN Map" src="guides/front-end-performance/CDN-map-Asia.png" />
 <p class="pop-desc">Dubai, Hong Kong, Osaka, Singapore, Tokyo (x2)</p>
 
 </Tab>
 
 <Tab title="Australia & New Zealand" id="austab1">
 
-<Image alt="Australia CDN Map" src="guides/front-end-performance/CDN-map-AUZ.png" />{.cdn-map-container}
+<Image alt="Australia CDN Map" src="guides/front-end-performance/CDN-map-AUZ.png" />
 <p class="pop-desc">Auckland, Brisbane, Melbourne, Perth, Sydney, Wellington</p>
 
 </Tab>
