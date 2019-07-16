@@ -39,11 +39,11 @@ Now that you have a monitor setup in New Relic to periodically check your Panthe
 5. Click **Create a condition**.
 6. Select **Synthetics** and **Monitor failure** then click **Next, select entities**:
 
-  ![New Relic Alert Policy Ping Condition](../../docs/assets/images/pagerduty/new-relic-policy-ping.png)
+  <Image alt="New Relic Alert Policy Ping Condition" src="pagerduty/new-relic-policy-ping.png" />
 
 7. Select your new monitor, then **Next, define thresholds**:
 
-  ![New Relic select entity](../../docs/assets/images/pagerduty/new-relic-entity.png)
+  <Image alt="New Relic select entity" src="pagerduty/new-relic-entity.png" />
 
 8. Enter a name for the condition, like "Live Availability", and click **Create condition**.
 

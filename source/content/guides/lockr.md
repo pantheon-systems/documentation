@@ -53,7 +53,7 @@ Visit the [GitHub page](https://github.com/lockr/lockr-patches/tree/wp) for a li
  ```
 3. Click **Lockr** from within the WordPress Dashboard to visit the Lockr Configuration page  (`/wp-admin/admin.php?page=lockr-site-config`):
 
-   ![WP Lockr Configuration Example](../../docs/assets/images/lockr_wpconfig.png)​
+   <Image alt="WP Lockr Configuration Example" src="lockr_wpconfig.png" />​
 
 4. Enter your email address, and click **Register Site**.
 5. Create keys within **Lockr** > **Add Keys** and manage existing keys within **Lockr** > **All Keys**.
@@ -117,7 +117,7 @@ Lockr is currently available for Drupal 7 and Drupal 8 (development release). Se
 
 4. Navigate to the Lockr configuration page (`/admin/config/system/lockr`):
 
-  ![Drupal Lockr Configuration example](../../docs/assets/images/lockr_drupalconfig.png)​
+  <Image alt="Drupal Lockr Configuration example" src="lockr_drupalconfig.png" />​
 
 5.  Enter your email address and click **Sign Up**.  
 

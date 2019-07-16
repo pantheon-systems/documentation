@@ -35,4 +35,4 @@ Now we'll hookup our PagerDuty service as a notification channel for our alert p
 2. Go to **Alerts** > **Notification Channels** from the menu bar at the top of the page.
 3. Select **PagerDuty** from the dropdown menu, enter a service name and paste the integration key copied in the previous section:
 
-  ![New Relic notification channel](../../docs/assets/images/pagerduty/new-relic-notification-channels.png)
+  <Image alt="New Relic notification channel" src="pagerduty/new-relic-notification-channels.png" />

@@ -22,7 +22,7 @@ One of the most common reasons that email gets blocked is because it originates 
 
 2. From within the **Settings** menu, click **API Keys**:
 
-  ![SendGrid Multiple User setup](../../docs/assets/images/guides/sendgrid/sendgrid-api-keys.png)
+  <Image alt="SendGrid Multiple User setup" src="guides/sendgrid/sendgrid-api-keys.png" />
 
 3. Click **Create API Key** to define the name and permissions for the API key your site will use. Click **Create & View** to complete the process.
 
@@ -47,7 +47,7 @@ Install and activate the latest release through the WordPress dashboard or place
 4. SendGrid supports categories so you can track email analytics and organize message types. Include any categories you would like to use, separated by commas.
 
 
-![WP Settings example](../../docs/assets/images/guides/sendgrid/sendgrid-wpconfig.png)
+<Image alt="WP Settings example" src="guides/sendgrid/sendgrid-wpconfig.png" />
 
 When you're done, click **Update Setings**. Your WordPress application is now set up to send email through SendGrid! Complete the fields in the SendGrid Test section of the Settings page and watch the magic work its way to your inbox. For guidance on checking deliverability in SendGrid, see [Checking Deliverability in SendGrid](#deliverability).
 
@@ -227,7 +227,7 @@ For testing purposes, your first few deliveries should be to email addresses tha
 
 First, log into [SendGrid](https://sendgrid.com/login) and select **Activity**. You will be taken to a page with a form to search by email. Enter the email address, and press **Enter**. SendGrid will search through your mail queue for any messages sent to that address. For additional search parameters, select the filters near the top right corner.
 
-![SendGrid email search options](../../docs/assets/images/sendgrid-search-options.png)​
+<Image alt="SendGrid email search options" src="sendgrid-search-options.png" />​
 
 You can explore the Statistics and Email Reports from within your site's account to gain insight into email activity, statistics on email clients, and much more.
 

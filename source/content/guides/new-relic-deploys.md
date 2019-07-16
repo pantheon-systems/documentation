@@ -76,11 +76,11 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
     In the terminal, you should see that your `pantheon.yml` file is being applied. Even this initial code push should appear in your Dev environment's New Relic account, on the **Deployments** tab:
 
-    ![Deployment tab display](../../docs/assets/images/integrations/newrelic/deploy_tab.png)
+    <Image alt="Deployment tab display" src="integrations/newrelic/deploy_tab.png" />
 
     You can also view deployments from the Overview tab:
 
-    ![Deployment overview display](../../docs/assets/images/integrations/newrelic/deploy_marker.png)
+    <Image alt="Deployment overview display" src="integrations/newrelic/deploy_marker.png" />
 
 7. Once you've tested and confirmed there are no issues, deploy your new commit to Test and Live. From now on, your deploys will be recorded in New Relic.
 

@@ -21,33 +21,33 @@ image: guides/woocommerce/WooCommerce-logo-400-200
 ---
 I've already gone ahead and [created a new site on Pantheon](/guides/quickstart/create-new-site/).
 
-![New Pantheon Site Dashboard](../../docs/assets/images/guides/woocommerce/01-new-pantheon-site.png)
+<Image alt="New Pantheon Site Dashboard" src="guides/woocommerce/01-new-pantheon-site.png" />
 
 The first thing we should do is install WordPress and configure it.
 
 1. Click **Install WordPress**. Then, choose your language:
 
-    ![WordPress choose language](../../docs/assets/images/guides/woocommerce/02-WordPress-choose-language.png)
+    <Image alt="WordPress choose language" src="guides/woocommerce/02-WordPress-choose-language.png" />
 
 2. Configure the site title and create your admin account:
 
-    ![WordPress create admin account](../../docs/assets/images/guides/woocommerce/03-WordPress-create-admin-account.png)
+    <Image alt="WordPress create admin account" src="guides/woocommerce/03-WordPress-create-admin-account.png" />
 
 3. Now that WordPress is set up, let's configure WooCommerce. For this guide we'll also install Stripe, for easy payments, and WooCommerce services to easily set up shipping with USPS, if you're in the US.
 
-    ![WordPress dashboard](../../docs/assets/images/guides/woocommerce/04-WordPress-dashboard-fresh-installation.png)
+    <Image alt="WordPress dashboard" src="guides/woocommerce/04-WordPress-dashboard-fresh-installation.png" />
 
 4. Go to **Plugins** > **Add New** > and type in WooCommerce. Click **Install Now**. Click **Activate** once the plugin has installed.
 
-    ![WooCommerce plugin installation](../../docs/assets/images/guides/woocommerce/05-install-WooCommerce-plugin.png)
+    <Image alt="WooCommerce plugin installation" src="guides/woocommerce/05-install-WooCommerce-plugin.png" />
 
 5. WooCommerce has a well-designed welcome wizard. Take your time going through the welcome wizard. It will help you configure everything you need for your store.
 
-   ![WooCommerce installation wizard](../../docs/assets/images/guides/woocommerce/06-WooCommerce-installation-wizard.png)
+   <Image alt="WooCommerce installation wizard" src="guides/woocommerce/06-WooCommerce-installation-wizard.png" />
 
    If you select any options that require additional plugins, the welcome wizard will automatically install them for you. In our case Jetpack, WooCommerce Services, the WooCommerce Stripe Payment Gateway, and the Storefront theme will be installed for us automatically.
 
-   ![Jetpack plugin installation](../../docs/assets/images/guides/woocommerce/07-install-Jetpack.png)
+   <Image alt="Jetpack plugin installation" src="guides/woocommerce/07-install-Jetpack.png" />
 
    If you installed WooCommerce Services to get live shipping rates from USPS or Automated Taxes you'll be prompted to install Jetpack & connect your site to WordPress.com. WooCommerce Services needs this connection in order to work.
 
@@ -63,10 +63,10 @@ The first thing we should do is install WordPress and configure it.
 
 6. When you connect your site, you'll see a connection to WordPress.com. This should only take a minute and then it should automatically return you to your WordPress dashboard.
 
-    ![Connecting Jetpack to WordPress.com](../../docs/assets/images/guides/woocommerce/08-connect-Jetpack.png)
+    <Image alt="Connecting Jetpack to WordPress.com" src="guides/woocommerce/08-connect-Jetpack.png" />
 
   When you get to this page you're done. We've installed all of the required plugins:
 
-    ![WooCommerce installation wizard complete](../../docs/assets/images/guides/woocommerce/09-WooCommerce-installation-wizard-complete.png)
+    <Image alt="WooCommerce installation wizard complete" src="guides/woocommerce/09-WooCommerce-installation-wizard-complete.png" />
 
 We won't cover configuring every setting, but I encourage you to read the getting started guide and documentation for each plugin. Now is also a good point to configure your payment gateway so you can [accept test payments](https://robotninja.com/blog/test-woocommerce-payments-via-credit-card/), as well as configure your shipping costs, and tax settings.

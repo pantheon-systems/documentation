@@ -28,11 +28,11 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
    Click **SFTP Connection Info** then select the link to **Open in your default SFTP client**:
 
-   ![Open in your default SFTP client](../../docs/assets/images/guides/git-wordpress/sftp-connection-mode.png)
+   <Image alt="Open in your default SFTP client" src="guides/git-wordpress/sftp-connection-mode.png" />
 
    If you have already set up an SSH key, as recommended in the **Before You Begin** section of the [guide's introduction](/guides/wordpress-git/#before-you-begin), you should see a new window open for your SFTP client where you can see local files and remote files on Pantheon. In Transmit, local files are managed on the left and Pantheon's on the right:
 
-   ![Open in your default SFTP client window](../../docs/assets/images/guides/git-wordpress/sftp-connection-mode-client.png)
+   <Image alt="Open in your default SFTP client window" src="guides/git-wordpress/sftp-connection-mode-client.png" />
 
    <Accordion title="Troubleshooting" id="unique-anchor" icon="wrench">
    ### Manually Connect via SFTP
@@ -40,7 +40,7 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
    1. The default window when opening the Transmit application provides a dialog titled **Quick Connect** where you can **Connect via SFTP**:
 
-      ![New Transmit Site](../../docs/assets/images/guides/git-wordpress/transmit-quick-connect-dialog.png)
+      <Image alt="New Transmit Site" src="guides/git-wordpress/transmit-quick-connect-dialog.png" />
 
    1. Copy the value provided by Pantheon for **Host** and paste into Transmit's **Address** field. Do the same for **Port** and **Username**.
 
@@ -48,19 +48,19 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
    1. Click **Connect**:
 
-      ![New Transmit Site](../../docs/assets/images/guides/git-wordpress/transmit-quick-connect-dialog-populated.png)
+      <Image alt="New Transmit Site" src="guides/git-wordpress/transmit-quick-connect-dialog-populated.png" />
 
   </Accordion>
 
 4. Navigate to the `code/wp-content/themes` directory within the remote file manager for Pantheon on the right side. Then drag and drop the Bento theme folder from your local computer onto Pantheon to upload the theme. You'll see Transmit begin uploading, then confirm once it's done:
 
-  ![Upload bento theme gif](../../docs/assets/images/guides/git-wordpress/bento-upload.gif)
+  <Image alt="Upload bento theme gif" src="guides/git-wordpress/bento-upload.gif" />
 
   That's all it takes! You can now activate the Bento theme in the WordPress Dashboard.
 
 5. Return to the Site Dashboard on Pantheon, and you should see quite a few files ready to be committed to Git. That's from the theme we just uploaded. Write a commit message then click **Commit** to submit our new theme to version control:
 
-  ![Commit bento theme](../../docs/assets/images/guides/git-wordpress/bento-commit.png)
+  <Image alt="Commit bento theme" src="guides/git-wordpress/bento-commit.png" />
 
 
 ## Create a Child Theme
@@ -71,15 +71,15 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 1. Use Transmit and navigate to the remote `code/wp-content/themes` directory on Pantheon.
 2. Right-click then select **New Folder** and name it `bento-child`:
 
-  ![create bento-child theme dir](../../docs/assets/images/guides/git-wordpress/bento-child-dir.png)
+  <Image alt="create bento-child theme dir" src="guides/git-wordpress/bento-child-dir.png" />
 
 3. Right-click the `bento-child` directory then select **New File** and name it `style.css`:
 
-  ![create beneto-child theme stylesheet](../../docs/assets/images/guides/git-wordpress/bento-child-css.png)
+  <Image alt="create beneto-child theme stylesheet" src="guides/git-wordpress/bento-child-css.png" />
 
 4. If you don't already have your SFTP client configured to use your preferred text editor, you can do that now. Here's how we configured Transmit so that double-clicking a file opens it up for edits in [Atom](https://atom.io/) (**Transmit** > **Preferences** > **Files** from the app menu):
 
-  ![Transmit file config](../../docs/assets/images/guides/git-wordpress/transmit-text-editor.png)
+  <Image alt="Transmit file config" src="guides/git-wordpress/transmit-text-editor.png" />
 
 5. Double-click the new `style.css` file within Transmit to open it up for edits in Atom, then add the following to the top:
 
@@ -95,7 +95,7 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 
   Here is what it looks like in the Atom text editor.
 
-  ![Atom Child Theme Code Snippet](../../docs/assets/images/guides/git-wordpress/atom.png)
+  <Image alt="Atom Child Theme Code Snippet" src="guides/git-wordpress/atom.png" />
 
 6. Save your additions to the `style.css` file in Atom. Saving changes to this file in Atom will trigger Transmit to upload the file to Pantheon automatically.
 
@@ -129,7 +129,7 @@ The child theme inherits all the features of the Bento theme. It's simply a spot
 
 9. Return to the Site Dashboard on Pantheon, and you should see two files ready to be committed to Git. They're from the child theme we just created. Write a commit message then click **Commit** to submit our new child theme to version control:
 
-  ![Commit child-bento theme](../../docs/assets/images/guides/git-wordpress/child-bento-commit.png)
+  <Image alt="Commit child-bento theme" src="guides/git-wordpress/child-bento-commit.png" />
 
 ## Customize the Stylesheet
 Finally, let’s make a few small customizations to our active child theme using Transmit and Atom.
@@ -150,10 +150,10 @@ Finally, let’s make a few small customizations to our active child theme using
 3. Save the file changes in Atom.
 4. Refresh the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment's site URL and you should see your changes reflected. The header background should be salmon and the page should have deepskyblue anchors:
 
-  ![Site with New CSS changes](../../docs/assets/images/guides/git-wordpress/new-css.png)
+  <Image alt="Site with New CSS changes" src="guides/git-wordpress/new-css.png" />
 
 5. Return to the Site Dashboard on Pantheon, and you should see one file ready to be committed to Git. That's from recent edits to the child theme's `style.css` file. Write a commit message then click **Commit** to submit our new styles to version control:
 
-  ![Commit child-bento theme](../../docs/assets/images/guides/git-wordpress/new-css-commit.png)
+  <Image alt="Commit child-bento theme" src="guides/git-wordpress/new-css-commit.png" />
 
 This example is a very simple demonstration of the edit process, and is not intended to be a comprehensive resource on extending the layout or design of a theme (which likely means writing custom PHP functions). If you're looking for advanced tips on how to build and maintain themes efficiently checkout the [Theme Handbook](https://developer.wordpress.org/themes/advanced-topics/child-themes/) on WordPress.org.
