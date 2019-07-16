@@ -68,41 +68,42 @@ This process can potentially cause loss of data. Be sure you have no custom code
 <TabList>
 
 <Tab title="Drupal 8" id="d8" active={true}>
-  <pre><code>
-  git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
-  # resolve conflicts
-  git push origin master
-  </code></pre>
+
+```bash
+git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
+# resolve conflicts
+git push origin master
+```
 
 </Tab>
 
 <Tab title="Drupal 7" id="d7">
 
-  <pre><code>
-  git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
-  # resolve conflicts
-  git push origin master
-  </code></pre>
+```bash
+git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
+# resolve conflicts
+git push origin master
+```
 
 </Tab>
 
 <Tab title="Drupal 6" id="d6">
 
-  <pre><code>
-  git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
-  # resolve conflicts
-  git push origin master
-  </code></pre>
+```bash
+git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
+# resolve conflicts
+git push origin master
+```
 
 </Tab>
 
 <Tab title="WordPress" id="wp">
 
-  <pre><code>
-  git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
-  # resolve conflicts
-  git push origin master
-  </code></pre>
+```bash
+git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
+# resolve conflicts
+git push origin master
+```
 
 </Tab>
 
@@ -161,79 +162,87 @@ This process lets you manually resolve the conflict using the command line and a
 1. Navigate to a [local clone of your site repository](/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
 
-    <TabList>
+  <TabList>
 
-    <Tab title="WordPress" id="wp-1conflict" active={true}>
+  <Tab title="WordPress" id="wp-1conflict" active={true}>
 
-    ```bash
-    git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
-    ```
+  ```bash
+  git remote add pantheon-wordpress git://github.com/pantheon-systems/WordPress.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title="Drupal 8" id="d8-1conflict">
+  <Tab title="Drupal 8" id="d8-1conflict">
 
-    ```bash
-    git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
-    ```
+  ```bash
+  git remote add pantheon-drops-8 git://github.com/pantheon-systems/drops-8.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title="Drupal 7" id="d7-1conflict">
+  <Tab title="Drupal 7" id="d7-1conflict">
 
-    ```bash
-    git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
-    ```
+  ```bash
+  git remote add pantheon-drops-7 git://github.com/pantheon-systems/drops-7.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    <Tab title="Custom Upstream" id="custom-1conflict">
+  <Tab title="Custom Upstream" id="custom-1conflict">
 
-    Replace the remote name (`custom-upstream-example`) and repository URL (`git://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:
+  Replace the remote name (`custom-upstream-example`) and repository URL (`git://github.com/example-org/custom-upsream-example.git`) with values specific to your existing Custom Upstream:
 
-    ```bash
-    git remote add  custom-upstream-example git://github.com/example-org/custom-upsream-example.git
-    ```
+  ```bash
+  git remote add  custom-upstream-example git://github.com/example-org/custom-upsream-example.git
+  ```
 
-    </Tab>
+  </Tab>
 
-    </TabList>
+  </TabList>
 
 2. Pull down changes from the appropriate upstream:
 
-     <TabList>
+  <TabList>
 
-     <Tab title="WordPress" id="wp-2conflict" active={true}>
+  <Tab title="WordPress" id="wp-2conflict" active={true}>
 
-     <pre><code>git fetch pantheon-wordpress
-    git rebase pantheon-wordpress/master</code></pre>
+  ```bash
+  git fetch pantheon-wordpress
+  git rebase pantheon-wordpress/master
+  ```
 
-     </Tab>
+  </Tab>
 
-     <Tab title="Drupal 8" id="d8-2conflict">
+  <Tab title="Drupal 8" id="d8-2conflict">
 
-     <pre><code>git fetch pantheon-drops-8
-    git rebase pantheon-drops-8/master</code></pre>
+  ```bash
+  git fetch pantheon-drops-8
+  git rebase pantheon-drops-8/master
+  ```
 
-     </Tab>
+  </Tab>
 
-     <Tab title="Drupal 7" id="d7-2conflict">
+  <Tab title="Drupal 7" id="d7-2conflict">
 
-     <pre><code>git fetch pantheon-drops-7
-    git rebase pantheon-drops-7/master</code></pre>
+  ```bash
+  git fetch pantheon-drops-7
+  git rebase pantheon-drops-7/master
+  ```
 
-     </Tab>
+  </Tab>
 
-     <Tab title="Custom Upstream" id="custom-2conflict">
+  <Tab title="Custom Upstream" id="custom-2conflict">
 
-     Replace the remote name (`custom-upstream-example`):
+  Replace the remote name (`custom-upstream-example`):
 
-     <pre><code>git fetch custom-upstream-example
-    git rebase custom-upstream-example/master</code></pre>
+  ```bash
+  git fetch custom-upstream-example
+  git rebase custom-upstream-example/master
+  ```
 
-     </Tab>
+  </Tab>
 
-     </TabList>
+  </TabList>
 
 3. If a conflict is introduced, use the output provided to resolve. For example:
 
