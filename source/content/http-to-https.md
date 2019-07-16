@@ -115,11 +115,11 @@ At this point, all visitors to the site should be able to securely access all pa
 
 As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/hsts/), as well as redirect all HTTP traffic to HTTPS.
 
-{% include("content/hsts.html") %}
+<Partial file="hsts.html" />
 
 If you need more control over your redirect and/or HSTS header, then you can manually configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
 
-{% include("redirects.twig") %}
+<Partial file="redirects.twig" />
 
 Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/domains/#-see-more-redirect-scenarios).
 
