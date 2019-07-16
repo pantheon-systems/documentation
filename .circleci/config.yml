@@ -29,7 +29,9 @@ jobs:
             gatsby build --prefix-paths
       - run:
           name: Deploy Multidev environment
-          command: bash ./scripts/deploy-multidev.sh
+          command: |
+            sudo apt install -y rsync
+            bash ./scripts/deploy-multidev.sh
       - run:
           name: Start Ghost Driver
           command: phantomjs --webdriver=8643
