@@ -25,12 +25,12 @@ Ramp up faster with an instructor-led version of this material, delivered by Pan
 
 In this guide, you'll learn:
 
-- [Architecture](/docs/guides/edt/introduction-and-architecture)
-- [Developer Workflow](/docs/guides/edt/developer-workflow/)
-- [Multidev](/docs/guides/edt/multidev/)
-- [Command Line Interface - Terminus](/docs/guides/edt/terminus-cli)
-- [External Integrations - Quicksilver](/docs/guides/edt/external-integrations)
-- [Performance](/docs/guides/edt/performance)
+- [Architecture](/guides/edt/introduction-and-architecture)
+- [Developer Workflow](/guides/edt/developer-workflow/)
+- [Multidev](/guides/edt/multidev/)
+- [Command Line Interface - Terminus](/guides/edt/terminus-cli)
+- [External Integrations - Quicksilver](/guides/edt/external-integrations)
+- [Performance](/guides/edt/performance)
 
 All you need before you begin is a Pantheon account. If you don't have one, [sign up now for free](https://pantheon.io/register).
 

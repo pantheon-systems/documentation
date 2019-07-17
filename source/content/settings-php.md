@@ -21,11 +21,11 @@ You should never put the database connection information for a Pantheon database
 
 The following articles include techniques and configurations for `settings.php` on Pantheon:
 
-- [Reading Pantheon Environment Configuration](/docs/read-environment-config) (including domain_access)
-- [Installing Redis on Drupal or WordPress](/docs/redis/)
-- [Platform and Custom Domains](/docs/domains/)
-- [Configure Redirects](/docs/redirects/)
-- [SSO and Identity Federation](/docs/sso) (LDAP TLS certificate configuration)
+- [Reading Pantheon Environment Configuration](/read-environment-config) (including domain_access)
+- [Installing Redis on Drupal or WordPress](/redis/)
+- [Platform and Custom Domains](/domains/)
+- [Configure Redirects](/redirects/)
+- [SSO and Identity Federation](/sso) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development
 
@@ -52,7 +52,7 @@ if (!defined('PANTHEON_ENVIRONMENT')) {
 
 The `HASH_SALT` value should also be set within `settings.local.php`. See Drush script: [Quickstart](https://github.com/pantheon-systems/drush-config-workflow/blob/master/bin/quickstart)
 
-To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/docs/terminus):
+To use the Pantheon `HASH_SALT` in your local site (not necessary), you can get it via [Terminus](/terminus):
 
 ```
 terminus drush <site>.<env> -- ev 'return getenv("DRUPAL_HASH_SALT")'
@@ -69,7 +69,7 @@ A warning within `/admin/reports/status` will appear when the `trusted_host_patt
 
 <Alert title="Note" type="info">
 
-Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 8 redirects from our [Configure Redirects](/docs/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.
+Replace `yoursite\.com` with custom domain(s) added within the Site Dashboard, adjusting patterns as needed. Be sure to escape any characters that need to be escaped in regular expressions, including dots (`.`). If you're using the Drupal 8 redirects from our [Configure Redirects](/redirects/#redirect-to-https-and-the-primary-domain) doc, don't use this snippet as it conflicts.
 
 </Alert>
 
@@ -126,17 +126,17 @@ Yes, but only if at least one other file (e.g. `settings.php`) is present within
 
 Depending on your use case, there are three possibilities:
 
- - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/docs/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
+ - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
 
   <Alert title="Note" type="info">
   
-  `$_SERVER` is not generally available from the command line so [logic should check for that when used](/docs/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/docs/server_name-and-server_port/).
+  `$_SERVER` is not generally available from the command line so [logic should check for that when used](/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/server_name-and-server_port/).
   
   </Alert>
 
- - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/docs/redis/) guide for examples.
+ - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/redis/) guide for examples.
 
- - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/docs/read-environment-config/) for more information, or see our [Redis](/docs/redis/) guide for examples.
+ - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config/) for more information, or see our [Redis](/redis/) guide for examples.
 
 ### Why does Drupal report that `settings.php` is not protected? I can't change the permissions on `settings.php`.
 
@@ -190,14 +190,14 @@ You can technically use database prefixes, but Pantheon will not support databas
 
 Drupal 7 doesn't ship with a `settings.php` in place; as the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. Once you have created a `settings.php` file, the `settings.php` area of the report should change to green.
 
-Drupal 7 sites that plan to use [Drush](/docs/drush/) should have a `settings.php` file.
+Drupal 7 sites that plan to use [Drush](/drush/) should have a `settings.php` file.
 
 ### Can I edit settings.pantheon.php?
 No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
 
 ### How do I enable IonCube Decoder support?
 
-If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/docs/php-versions/) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `settings.php`:
+If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions/) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `settings.php`:
 
 ```php
 ini_set('ioncube.loader.encoded_paths', '/');

@@ -22,25 +22,25 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 2. Now log in to your Dev site by clicking the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** button.
 
-  ![Add new plugin](../../docs/assets/images/guides/git-wordpress/sftp-mode.png)
+  <Image alt="Add new plugin" src="guides/git-wordpress/sftp-mode.png" />
 
 3. On the left admin menu, select **Plugins**, then **Add New**.
 4. Search for the **Yoast** plugin, then click **Install Now**:
 
 
-  ![Install Pantheon Advanced Page Cache plugin](../../docs/assets/images/guides/git-wordpress/install-yoast.png)
+  <Image alt="Install Pantheon Advanced Page Cache plugin" src="guides/git-wordpress/install-yoast.png" />
 
 
     If you encounter a prompt for FTP credentials, you're either working on the wrong environment or you're using the wrong connection mode. Don't try to authenticate FTP prompts within the WordPress Dashboard, it won't work (by design). Using the WordPress Dashboard to add or modify code is only allowed using the **SFTP** connection mode on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment.
 
 5. Return to the Pantheon Site Dashboard and click the yellow notification to review file changes as a result of our actions in the WordPress Dashboard:
 
-  ![View file changes prompt](../../docs/assets/images/guides/git-wordpress/file-changes.png)
+  <Image alt="View file changes prompt" src="guides/git-wordpress/file-changes.png" />
 
 
   You should see the following files for our recently installed plugin:
 
-  ![View advanced page cache plugin files](../../docs/assets/images/guides/git-wordpress/view-yoast.png)
+  <Image alt="View advanced page cache plugin files" src="guides/git-wordpress/view-yoast.png" />
 
 6. Rather than piling a bunch of changes on top of this plugin, get into the habit of saving code in small incremental amounts with meaningful commit messages.
 
@@ -48,7 +48,7 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
   Click **Commit** to submit work from the WordPress Dashboard to Git in the Site Dashboard:
 
-  ![Commit advanced page cache plugin files](../../docs/assets/images/guides/git-wordpress/commit-yoast.png)
+  <Image alt="Commit advanced page cache plugin files" src="guides/git-wordpress/commit-yoast.png" />
 
 7. For practice, add these plugins next, each with their own commit message. These plugins allow your site to take advantage of some of Pantheon's performance optimizations:
 
@@ -58,7 +58,7 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
      The commit log within the Pantheon Site Dashboard should look something like this:
 
-     ![Several Plugins Added](../../docs/assets/images/guides/git-wordpress/several-plugins-added.png)
+     <Image alt="Several Plugins Added" src="guides/git-wordpress/several-plugins-added.png" />
 
    <Accordion title="Learn more about these plugins" id="unique-anchor2" icon="lightbulb">
    #### [Pantheon Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
@@ -67,13 +67,13 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
 
    #### [WordPress Native PHP Sessions](https://wordpress.org/plugins/pantheon-advanced-page-cache/)
 
-   This plugin provides a more scalable way to handle sessions than PHP's default session manager. Some plugins will require this to run on Pantheon's distributed infrastructure. For more details, see [WordPress and PHP Sessions](/docs/wordpress-sessions/#troubleshooting-session-errors).
+   This plugin provides a more scalable way to handle sessions than PHP's default session manager. Some plugins will require this to run on Pantheon's distributed infrastructure. For more details, see [WordPress and PHP Sessions](/wordpress-sessions/#troubleshooting-session-errors).
 
    #### [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud/)
 
    Provides situational awareness within the WordPress Dashboard when working on the Pantheon platform. It's helpful to have a reminder of which environment you're in, as well as quick access to links to get back to Pantheon's Dashboard, or to interface with your WordPress installation via the command line:
 
-   ![Pantheon HUD](../../docs/assets/images/pantheon-hud.png)
+   <Image alt="Pantheon HUD" src="pantheon-hud.png" />
    </Accordion>
 
 Bam! You just nailed our first demonstration of using version control with WordPress on Pantheon sites. Follow this same approach to update plugins and for any other development tasks you normally handle in the WordPress Dashboard.

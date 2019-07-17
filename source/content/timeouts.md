@@ -4,7 +4,7 @@ description: Detailed information about timeout errors on your site.
 tags: [debugcode, services]
 categories: []
 ---
-Rules are for the good of the group, and timeouts are no exception. We've configured timeouts to fit normal program execution. Sometimes timeouts can be reached when working with a particularly inefficient bit of code or when attempting to execute a long-running job that would be better suited for [Terminus](/docs/terminus/).
+Rules are for the good of the group, and timeouts are no exception. We've configured timeouts to fit normal program execution. Sometimes timeouts can be reached when working with a particularly inefficient bit of code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus/).
 
 
 ## User-Configurable Timeouts
@@ -35,11 +35,11 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 
 ### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes, just use `terminus drush <site>.<env> -- cron` using [Terminus](/docs/terminus/). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an inefficient process, determine why it's slow and fix the root cause.
+Yes, just use `terminus drush <site>.<env> -- cron` using [Terminus](/terminus/). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an inefficient process, determine why it's slow and fix the root cause.
 
 ### What if I run into a timeout when using the Drupal Migrate UI?
 
-As [recommended in the Migrate module documentation](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/docs/terminus/).
+As [recommended in the Migrate module documentation](https://www.drupal.org/node/1806824), use Drush, which can be invoked through [Terminus](/terminus/).
 
 If you're migrating to a Drupal 7 site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
 
@@ -58,6 +58,6 @@ Edit the `pantheon_apachesolr` module within your Drupal site installation and e
 
 ### How do I install a theme or plugin that keeps timing out?
 
-If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/docs/rsync-and-sftp/).
+If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/rsync-and-sftp/).
 
-Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/docs/custom-upstream/).
+Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/custom-upstream/).

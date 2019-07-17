@@ -24,7 +24,7 @@ This guide covers the process of requesting, configuring, and maintaining a new 
 ## About WordPress Site Networks
 Pantheon supports [WordPress Site Networks](https://codex.wordpress.org/Glossary#Network) (also known as WordPress Multisite) which lets you create a network of sites using a single copy of the WordPress codebase and a common database. For those responsible for maintaining several or dozens of similar sites, WordPress Site Networks can make it much easier to fix bugs and deploy new features across all of those sites.
 
-![Multisite diagram](../../docs/assets/images/Multisite-risk_2.png)
+<Image alt="Multisite diagram" src="Multisite-risk_2.png" />
 
 ## Supported Use Cases
 Pantheon supports the most common use case for site networks: a common codebase which powers a set of related sites. This includes, but is not limited to, networks of:
@@ -41,6 +41,6 @@ We do not support uses of WordPress Site Networks that run functionally-differen
 - WordPress Multi-Network installations
 
 ## Request a WordPress Site Network
-Running a WordPress Site Network requires a special configuration that is only available to contract customers with Performance or Elite sites. Only Pantheon employees have the ability to create the sites and add you to the team. Existing WordPress sites cannot be converted to a network, however they can be [migrated](/docs/migrate-wordpress-site-networks/).
+Running a WordPress Site Network requires a special configuration that is only available to contract customers with Performance or Elite sites. Only Pantheon employees have the ability to create the sites and add you to the team. Existing WordPress sites cannot be converted to a network, however they can be [migrated](/migrate-wordpress-site-networks/).
 
 Reach out to your account manager to request that a new WordPress Site Network be created for you. Once an employee of Pantheon has created the network, you will receive an email informing you that you've been added to the site. If you don't have an account manager, you can [contact sales](https://pantheon.io/contact-us).

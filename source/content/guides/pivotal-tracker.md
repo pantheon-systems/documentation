@@ -17,7 +17,7 @@ Be sure to:
 
 - Have an active pivotal tracker account
 - Have a Drupal or WordPress site on Pantheon, with a local clone of the repository.
-- Locally install [Terminus](/docs/terminus):
+- Locally install [Terminus](/terminus):
 
         curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 
@@ -35,15 +35,15 @@ As a best practice, start by creating a new machine user in Tracker. This user i
 
   We suggest naming machine users relative to their function, in this example we name our new user `Automation User`. Add this account to an existing project if you have one. The email needs to be an account you have access to:
 
-  ![Create an automation user](../../docs/assets/images/integrations/pivotal-tracker/new-user.png)
+  <Image alt="Create an automation user" src="integrations/pivotal-tracker/new-user.png" />
 
 3. Sign in as the machine user and navigate to the profile page. Save the API token for the next steps:
 
-   ![Get token](../../docs/assets/images/integrations/pivotal-tracker/api-token.png)
+   <Image alt="Get token" src="integrations/pivotal-tracker/api-token.png" />
 
 
 ## Prepare your site: Securely Store User Credentials on Pantheon
-Next, we need to provide Pantheon with the credentials for our new machine user in Pivotal Tracker. We'll securely store these values in the [private path](/docs/private-paths/#private-path-for-files) of Pantheon's filesystem.
+Next, we need to provide Pantheon with the credentials for our new machine user in Pivotal Tracker. We'll securely store these values in the [private path](/private-paths/#private-path-for-files) of Pantheon's filesystem.
 
 We use the filesystem private path in this section because we don't want to track sensitive data like passwords in the codebase with git.
 
@@ -75,15 +75,15 @@ We use the filesystem private path in this section because we don't want to trac
 
 <Alert title="Note" type="info">
 
-When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/docs/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
+When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](/guides/lockr) to automatically encrypt and secure keys on distributed platforms such as Pantheon.
 
 </Alert>
 
 ## Configure Quicksilver Hook
-Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration script for Pivotal Tracker to the [private path](/docs/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
+Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script for Pivotal Tracker to the [private path](/private-paths/#private-path-for-code) of your site's codebase. The private path within the codebase is tracked in version control and is accessible by PHP, but not the web.
 
 
-1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory:
+1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory:
 
         `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
         cd $SITE
@@ -116,11 +116,11 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
     <Alert title="Note" type="info">
 
-    `api_version` should be set once in [`pantheon.yml`](/docs/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
 
     </Alert>
 
-6. [Commit and push](/docs/git/#push-changes-to-pantheon) changes to the Dev environment:
+6. [Commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
 
         git commit -am "Create private/scripts/pivotal_integration.php and configure platform hooks"
         git push origin master
@@ -129,7 +129,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 1. Create a test story in an existing or new Pivotal Tracker project. Copy the issue ID:
 
-    ![Pivotal Tracker id](../../docs/assets/images/integrations/pivotal-tracker/id.png)
+    <Image alt="Pivotal Tracker id" src="integrations/pivotal-tracker/id.png" />
 
     <Alert title="Note" type="info">
 
@@ -141,7 +141,7 @@ Next we'll add Pantheon's example [Quicksilver](/docs/quicksilver) integration s
 
 3. You should see the change appear in the Activity log of the story:
 
- ![successful commit in Pivotal Tracker](../../docs/assets/images/integrations/pivotal-tracker/commit-story.png)
+ <Image alt="successful commit in Pivotal Tracker" src="integrations/pivotal-tracker/commit-story.png" />
 
 The Pivotal Tracker API will also change story status by including "fixed", "completed", or "finished" within the square brackets, in addition to the story ID. You may use different cases or forms of these verbs, such as "Fix" or "FIXES", and they may appear before or after the story ID. In Pivotal vernacular, for features, one of these keywords will put the story in the finished state. For chores, it will put the story in the accepted state. The square brackets can appear anywhere in the commit message. Examples:
 

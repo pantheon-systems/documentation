@@ -4,14 +4,14 @@ description: Learn how to implement an environment indicator for Drupal and Word
 tags: [workflow]
 categories: []
 ---
-Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting the live site. Additional development environments are available with [Multidev](/docs/multidev/).
+Each site on Pantheon comes with three environments: Dev, Test, and Live. This allows you to develop and test features without impacting the live site. Additional development environments are available with [Multidev](/multidev/).
 
 For a heads-up indicator of your Pantheon site and environment, we recommend installing the [Pantheon HUD](https://wordpress.org/plugins/pantheon-hud) plugin on WordPress sites and the [Environment Indicator](https://www.drupal.org/project/environment_indicator) module on Drupal sites.
 
 ## WordPress: Pantheon HUD
 The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue](https://github.com/pantheon-systems/pantheon-hud/issues) with questions, feature requests, or bug reports.
 
-1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.<env> sftp
@@ -49,7 +49,7 @@ The Pantheon HUD plugin is developed and maintained on GitHub. [Create an issue]
 
 All environments will now show the following indicator for logged-in users with the `manage_options` capability:
 
-![Pantheon HUD](../docs/assets/images/pantheon-hud.png)
+![Pantheon HUD](../images/pantheon-hud.png)
 
 You can restrict this to specific users with the `pantheon_hud_current_user_can_view` filter:
 
@@ -67,7 +67,7 @@ add_filter( 'pantheon_hud_current_user_can_view', function(){
 The [Environment Indicator](https://www.drupal.org/project/environment_indicator) module is officially supported for Drupal 7 and Drupal 8 sites.
 
 
-1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.dev sftp

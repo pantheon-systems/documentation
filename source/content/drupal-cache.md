@@ -4,7 +4,7 @@ description: Optimize Drupal and Global CDN caching to maximize your site's perf
 tags: [cacheapp]
 categories: [drupal]
 ---
-To maximize your site's performance on Pantheon and to take advantage of our [Global CDN caching](/docs/global-cdn-caching/), you'll need to configure your site's performance settings.
+To maximize your site's performance on Pantheon and to take advantage of our [Global CDN caching](/global-cdn-caching/), you'll need to configure your site's performance settings.
 
 <Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -17,7 +17,7 @@ Learn industry best practices for Drupal caching, how to take advantage of them 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ### Caching
-![Drupal 8 Caching options](../docs/assets/images/d8-cache-config.png)
+![Drupal 8 Caching options](../images/d8-cache-config.png)
 **This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 minutes, but this is something to consider. If you can set it to an hour, that's great for performance.
@@ -27,13 +27,13 @@ On Pantheon, this value defaults to 15 minutes. This is done on the first cache-
 Note that Drupal 8 has no setting to configure the minimum cache lifetime.
 
 ### Bandwidth Optimization
- ![Drupal 8 aggregate CSS and JS files](../docs/assets/images/d8-aggregate-css-js.png)<br />
+ ![Drupal 8 aggregate CSS and JS files](../images/d8-aggregate-css-js.png)<br />
 On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
 ### Cache Tags
 Drupal 8 introduced a [cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) system that allows internal and external caches to be cleared in very granular fashion as data is changed. For instance, if `node 123` were resaved, caches that depends upon that node, like the full page cache of the page `mysite.com/node/123`, should be cleared.
 
-This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal 8's cache metadata to communicate with the [Pantheon Global CDN](/docs/global-cdn/). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
+This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal 8's cache metadata to communicate with the [Pantheon Global CDN](/global-cdn/). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
 
 ## Drupal 7 Performance Configuration
 
@@ -41,26 +41,26 @@ Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ### Caching
 
-![Drupal 7 Caching options](../docs/assets/images/d7-cache-config.png)
+![Drupal 7 Caching options](../images/d7-cache-config.png)
 
 Unless needed for development, you should always enable "Cache pages for anonymous users". Without it, your Drupal site will have to rebuild every page and the Pantheon Global CDN will not cache your site. If possible, enable "Cache blocks" as well to increase performance for logged-in users.
 
 ### Minimum Cache Lifetime
 
-![Drupal 7 minimum cache lifetime](../docs/assets/images/d7-min-cache-lifetime.png)
+![Drupal 7 minimum cache lifetime](../images/d7-min-cache-lifetime.png)
 
 Minimum caching lifetime forces cached content to continue to exist before it can be flushed. If all caches are cleared, any content under the minimum cache lifetime will not be expunged. High traffic sites may want to set this to a non-zero value; when in doubt, set it to none.
 
 ### Expiration of Cached Pages
- ![Drupal 7 expiration of cached pages](../docs/assets/images/exp-cached-pages.png)<br />
+ ![Drupal 7 expiration of cached pages](../images/exp-cached-pages.png)<br />
 **This is a key setting**. It determines what value Drupal delivers in its `max-age` header, which is how long the reverse-proxy layer will retain a cache.
 
 Performance is often a trade-off between how fresh your content is, and how fast you want to deliver it to the internet. A good value to start with is 15 minutes, but this is something to consider. If you can set it to an hour, that's great for performance. More than a day is usually excessive, since the edge cache will decay over that amount of time in most cases.
 
 ### Bandwidth Optimization
- ![Drupal 7 compressed cached pages](../docs/assets/images/compress-cached-pages.png)<br />
+ ![Drupal 7 compressed cached pages](../images/compress-cached-pages.png)<br />
 On Pantheon, the "Compress cached pages" setting should not checked, as pages are already compressed with gzip.  <br />
- ![Drupal 7 aggregate CSS and JS files](../docs/assets/images/aggregate-css-js.png)<br />
+ ![Drupal 7 aggregate CSS and JS files](../images/aggregate-css-js.png)<br />
 On the Live environment, make sure to enable "Aggregate and compress CSS files" and "Aggregate and compress JavaScript files". This is critical for page render times by reducing the number of HTTP requests and reducing the amount of data transferred.
 
 ## Drupal 6
@@ -96,11 +96,11 @@ This can help with logged-in performance by preventing regeneration of block ele
 
 This setting controls whether or not to compile and cache your CSS and JavaScript files together, speeding up browser render times significantly. You might want to turn it off in Dev if you are building a theme (or developing JS), but this should always be enabled in production.
 
-![Drupal 6 Performance cache settings](../docs/assets/images/page-cache-module-config.png)
+![Drupal 6 Performance cache settings](../images/page-cache-module-config.png)
 
 ### Contributed Modules
 
 Contributed modules like `views.module` and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should definitely look at implementing their cache settings to provide a good logged-in user experience.
 
 ## See Also
-- [Global CDN Caching for High Performance](/docs/global-cdn-caching/)
+- [Global CDN Caching for High Performance](/global-cdn-caching/)

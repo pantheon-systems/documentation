@@ -7,6 +7,7 @@ const calculateSlug = (node, getNode) => {
   if (node.frontmatter.permalink) {
     return node.frontmatter.permalink
       .replace(":basename", fileName)
+      .replace("docs", "")
       .replace(/.$/, "")
   }
 
@@ -249,10 +250,10 @@ exports.createPages = ({ graphql, actions }) => {
     const numPages = Math.ceil(changelogs.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
       const currentPage = i + 1;
-      const next = currentPage === 1 ? null : (currentPage === 2 ? `/docs/changelog/` : `/docs/changelog/page/${currentPage - 1}`);
-      const previous = currentPage < numPages ? `/docs/changelog/page/${currentPage + 1}` : null;
+      const next = currentPage === 1 ? null : (currentPage === 2 ? `/changelog/` : `/changelog/page/${currentPage - 1}`);
+      const previous = currentPage < numPages ? `/changelog/page/${currentPage + 1}` : null;
       createPage({
-        path: i === 0 ? `/docs/changelog/` : `/docs/changelog/page/${i + 1}`,
+        path: i === 0 ? `/changelog/` : `/changelog/page/${i + 1}`,
         component: path.resolve("./src/templates/changelogs.js"),
         context: {
           limit: postsPerPage,
@@ -269,7 +270,7 @@ exports.createPages = ({ graphql, actions }) => {
     const contributors = result.data.allContributorYaml.edges
     contributors.forEach(contributor => {
       createPage({
-        path: `docs/contributors/${contributor.node.id}`,
+        path: `contributors/${contributor.node.id}`,
         component: path.resolve(`./src/templates/contributor.js`),
         context: {
           id: contributor.node.id,
@@ -281,7 +282,7 @@ exports.createPages = ({ graphql, actions }) => {
     const topics = result.data.allLandingsYaml.edges
     topics.forEach(topic => {
       createPage({
-        path: `docs/${topic.node.path}`,
+        path: topic.node.path,
         component: path.resolve(`./src/templates/landing.js`),
         context: {
           id: topic.node.id,
@@ -302,10 +303,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       name: `slug`,
       node,
-      value: slug.startsWith("docs")?slug:`docs/${slug}`
+      value: slug
     })
 
-    if (slug.includes("docs/guides")) {
+    if (slug.includes("guides/")) {
       if (getNode(node.parent).relativeDirectory !== 'guides') {
         // Add guide_directory field
         createNodeField({

@@ -14,7 +14,7 @@ If a subdomain of your primary site is configured, a newly created site named "s
 
 ## Request the Vanity Domain
 
-From your Organization Dashboard, go to Dashboard and [submit a support request](/docs/support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
+From your Organization Dashboard, go to Dashboard and [submit a support request](/support) with "Request for custom Vanity domain" as the subject. You must provide the Vanity domain required on the site, like `sites.example.com`.
 
 
 <Alert title="Note" type="info">
@@ -32,7 +32,7 @@ At your DNS provider, create a wildcard A/AAAA record pointing to our edge. Usin
  
 > `*.sites.example.com` **AAAA** `2620:12a:8001::X`
 
-See [Introduction to Domain Name Services](/docs/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
+See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information about AAAA records.
 
 <Alert type="info" title="Note">
 
@@ -54,13 +54,13 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain CNAME required DNS value](../docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain CNAME required DNS value](../images/dashboard/wrong-vanity-cname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain CNAME required DNS value](../docs/assets/images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain CNAME required DNS value](../images/dashboard/correct-vanity-cname-dns.png)
 
 </Alert>
 
@@ -83,4 +83,4 @@ For SEO and to prevent duplicate content, the `robots.txt` file attached to the 
 User-agent: *
 Disallow: /
 ```
-To present an alternate `robots.txt` file from within the source code, a custom domain needs to be [added to the site's Dashboard](/docs/guides/launch/domains/) and the appropriate DNS record created.
+To present an alternate `robots.txt` file from within the source code, a custom domain needs to be [added to the site's Dashboard](/guides/launch/domains/) and the appropriate DNS record created.

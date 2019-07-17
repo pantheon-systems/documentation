@@ -14,7 +14,7 @@ In this guide, we will create and configure the simplest check for a website, an
 
 ## What You’ll Need
 
-- At least a paid Starter plan on Pingdom. It's OK if you don't have one yet, this guide goes over the signup process. For a free alternative to Pingdom, checkout [New Relic](/docs/new-relic#configure-ping-monitors-for-availability).
+- At least a paid Starter plan on Pingdom. It's OK if you don't have one yet, this guide goes over the signup process. For a free alternative to Pingdom, checkout [New Relic](/new-relic#configure-ping-monitors-for-availability).
 
 - A Drupal or WordPress site on Pantheon to monitor.
 
@@ -34,7 +34,7 @@ In this guide, we will create and configure the simplest check for a website, an
 
 2.  The left navigation menu contains the different types of monitoring checks, reports, and a few other features. From the [main user dashboard](https://my.pingdom.com/dashboard) or from the left navigation's **Monitoring** > **Uptime** sub-menu, click on **Add uptime check**:
 
-    ![My.pingdom.com dashboard](../../docs/assets/images/integrations/dashboard.png)
+    <Image alt="My.pingdom.com dashboard" src="integrations/dashboard.png" />
 
 3.  In the modal that opens, add the following information where indicated:
 
@@ -58,34 +58,34 @@ In this guide, we will create and configure the simplest check for a website, an
 
 3.  Click **Create check** when you are done. You will now see a new check in the dashboard, from the **Uptime** page:
 
-    ![Pingdom.com uptime check](../../docs/assets/images/integrations/complete_check.png)
+    <Image alt="Pingdom.com uptime check" src="integrations/complete_check.png" />
 
 ## Review your Check
 Let the check run a while (a few hours), then you can access reports for each site in either the left navigation menu or the individual check dropdown menu.
 
-![Pingdom reports](../../docs/assets/images/integrations/reporting_options.png)
+<Image alt="Pingdom reports" src="integrations/reporting_options.png" />
 
 Let’s look at a site that is having some trouble to see how Pingdom can help.
 
-![Downtime modal](../../docs/assets/images/integrations/downtime_modal.png)
+<Image alt="Downtime modal" src="integrations/downtime_modal.png" />
 
 - Item 1 tells us when the issue started occurring, which we can attempt to correlate to any recent changes or external events.
 
 - Item 2 provides the site's response to the check and Pingdom’s attempt to determine the root cause of the downtime. In this case, we see that the site returned a 200, which is a successful response, but took so long that Pingdom considered it a timeout:
 
-    ![Root cause analysis](../../docs/assets/images/integrations/root_cause.png)
+    <Image alt="Root cause analysis" src="integrations/root_cause.png" />
 
 This could point to a scaling, performance, or something simple, like lack of caching. Sometimes a server error will be returned, which can be connected to a PHP or permissions error.
 
 The Test Log Results will also display which regions encountered downtime. Sometimes the root cause of downtime is not related to site performance, as when a regional DNS server encounters issues. This report is helpful determining an incident when a certain region of users encounter downtime while others do not.
 
-![Test log results](../../docs/assets/images/integrations/test_result.png)
+<Image alt="Test log results" src="integrations/test_result.png" />
 
 ## Customize Alerts
 
 Before finishing, each user should customize how they receive alerts. Here I added my mobile telephone number, so I also get text alerts as well as email notifications.
 
-![User configuration page](../../docs/assets/images/integrations/user_config.png)
+<Image alt="User configuration page" src="integrations/user_config.png" />
 
 <Partial file="monitor-alerts.md" />
 

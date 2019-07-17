@@ -18,8 +18,8 @@ Network Solutions does not support AAAA records for IPv6 traffic which can negat
 Be sure that you have a:
 
 - Registered domain name using Network Solutions to host DNS
-- [Paid Pantheon plan](/docs/guides/launch/plans/)
-- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans/)
+- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -37,7 +37,7 @@ Keep this page open and login to your [Network Solutions account](https://www.ne
 4. In the IP Address (A records) section, click **Edit A Records**.
 5. The domain likely has a few default values for `www` and the bare domain. Paste the IP address provided by Pantheon in the Numeric IP field for the existing `@ (None)` record, then delete any default records like so:
 
-  ![Network Solutions Edit A Records](../docs/assets/images/dns/networksolutions/default-a-records.png)
+  ![Network Solutions Edit A Records](../images/dns/networksolutions/default-a-records.png)
 
 6. Select desired Time to Live (TTL).
 
@@ -53,8 +53,6 @@ Keep this page open and login to your [Network Solutions account](https://www.ne
 
 7. Click **Save Changes**.
 8. Once changes are saved, the section of the Advanced DNS interface for A records should look like this:
-
-  ![Network Solutions Final A](/source/docs/assets/images/dns/networksolutions/final-a.png)
 
 ### A Record for Subdomain
 An A record is required to configure a subdomain (e.g., `www.example.com`).
@@ -74,5 +72,5 @@ AAAA records can be set viat the [Adding an IPv6 record](http://www.networksolut
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/docs/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)

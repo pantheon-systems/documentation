@@ -30,13 +30,13 @@ All links from the video are provided below.
 
 **Resource Links From Video**
 
- - [Caching: Advanced Topics](/docs/caching-advanced-topics)
- - [Redis docs](/docs/redis)
- - [New Relic docs](/docs/new-relic/)
+ - [Caching: Advanced Topics](/caching-advanced-topics)
+ - [Redis docs](/redis)
+ - [New Relic docs](/new-relic/)
  - [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
  - [Troubleshooting WordPress with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
- - [Uptime monitoring with Synthetics](/docs/new-relic/#configure-ping-monitors-for-availability)
- - [Load and Performance Testing](/docs/load-and-performance-testing/)
+ - [Uptime monitoring with Synthetics](/new-relic/#configure-ping-monitors-for-availability)
+ - [Load and Performance Testing](/load-and-performance-testing/)
 
 **CHALLENGE:**
 

@@ -25,7 +25,7 @@ There are many different ways to measure page speed and performance. This guide 
 - Deliver Efficient CSS and JavaScript
 - Avoid Redirects
 
-![Acing Google's speed test](../../docs/assets/images/guides/front-end-performance/ace-it.png)
+<Image alt="Acing Google's speed test" src="guides/front-end-performance/ace-it.png" />
 
 ## Reduce Server Response Time
 The amount of time it takes for a site to respond, **Time To First Byte** (TTFB), along with the time it takes a page to render meaningful content above the fold, **Time To First Paint** (TTFP), are both proven factors for Google's page rankings. All other qualifiers being equal, search rankings can drop by 5 or 10 if TTFB goes up a few hundred milliseconds.
@@ -39,48 +39,48 @@ Reduce page rendering speeds from seconds to sub-seconds by caching content _and
 
 <Tab title="Global" id="globaltab1" active={true}>
 
-![Global CDN Map](../../docs/assets/images/guides/front-end-performance/CDN-map.png){.cdn-map-container}
+<Image alt="Global CDN Map" src="guides/front-end-performance/CDN-map.png" />
 
 </Tab>
 
 <Tab title="N. America" id="natab1">
 
-![North America CDN Map](../../docs/assets/images/guides/front-end-performance/CDN-map-NA.png){.cdn-map-container}
+<Image alt="North America CDN Map" src="guides/front-end-performance/CDN-map-NA.png" />
 <p class="pop-desc">Ashburn (x2), Atlanta (x2), Boston, Chicago (x2), Dallas, Denver, Los Angeles (x2), Miami, Minneapolis, Montreal, New York (x2), San Jose (x2), Seattle, Toronto</p>
 
 </Tab>
 
 <Tab title="S. America" id="satab1">
 
-![South America CDN Map](../../docs/assets/images/guides/front-end-performance/CDN-map-SA.png){.cdn-map-container}
+<Image alt="South America CDN Map" src="guides/front-end-performance/CDN-map-SA.png" />
 <p class="pop-desc">São Paulo, Rio de Janeiro</p>
 
 </Tab>
 
 <Tab title="Africa" id="aftab1">
 
-![Africa CDN Map](../../docs/assets/images/guides/front-end-performance/CDN-map-AF.png){.cdn-map-container}
+<Image alt="Africa CDN Map" src="guides/front-end-performance/CDN-map-AF.png" />
 <p class="pop-desc">Cape Town, Johannesburg</p>
 
 </Tab>
 
 <Tab title="Europe" id="eutab1">
 
-![Europe CDN Map](../../docs/assets/images/guides/front-end-performance/CDN-map-EU.png){.cdn-map-container}
+<Image alt="Europe CDN Map" src="guides/front-end-performance/CDN-map-EU.png" />
 <p class="pop-desc">Amsterdam, Frankfurt (x2), London (x2), Madrid, Paris, Stockholm</p>
 
 </Tab>
 
 <Tab title="Asia" id="asiatab1">
 
-![Asia CDN Map](../../docs/assets/images/guides/front-end-performance/CDN-map-Asia.png){.cdn-map-container}
+<Image alt="Asia CDN Map" src="guides/front-end-performance/CDN-map-Asia.png" />
 <p class="pop-desc">Dubai, Hong Kong, Osaka, Singapore, Tokyo (x2)</p>
 
 </Tab>
 
 <Tab title="Australia & New Zealand" id="austab1">
 
-![Australia CDN Map](../../docs/assets/images/guides/front-end-performance/CDN-map-AUZ.png){.cdn-map-container}
+<Image alt="Australia CDN Map" src="guides/front-end-performance/CDN-map-AUZ.png" />
 <p class="pop-desc">Auckland, Brisbane, Melbourne, Perth, Sydney, Wellington</p>
 
 </Tab>
@@ -108,13 +108,13 @@ The following describes the expected cache behavior for sites running the Panthe
 <dt>x-served-by</dt>
 <dd>This header indicates which POP your response came from. Our primary infrastructure is in the Midwest of the United States so the first item you will probably see on this list will include "ORD" for the O'Hare airport in Chicago. If you're physically located in Austin you will also see DFW, indicating the response went from the primary datacenter to a cached copy in Chicago to a cached copy in Dallas.</dd>
 
-![Chrome network headers](../../docs/assets/images/guides/front-end-performance/chrome-network-headers.png)
+<Image alt="Chrome network headers" src="guides/front-end-performance/chrome-network-headers.png" />
 
 <Accordion title="Google's Developer Tools" id="dev-tools" icon="lightbulb">
 
 Examine the HTTP headers for the response using Chrome's Developer tools:
 
-![Check headers in chrome](../../docs/assets/images/guides/front-end-performance/inspect-network.gif)
+<Image alt="Check headers in chrome" src="guides/front-end-performance/inspect-network.gif" />
 
 1. Right click somewhere on the page.
 2. Select **Inspect**.
@@ -206,7 +206,7 @@ The Pantheon Page Cache plugin is already included by our upstream as a Must-Use
 2. Review the Time to Live, which translates to `max-age`.
 3. We recommend setting **Default Time to Live (TTL)** to a higher value, like 86400 seconds (one day):
 
-![Pantheon Cache Plugin](../../docs/assets/images/guides/front-end-performance/pantheon-page-cache.png)
+<Image alt="Pantheon Cache Plugin" src="guides/front-end-performance/pantheon-page-cache.png" />
 
 </Tab>
 
@@ -217,7 +217,7 @@ In Drupal it is very easy to turn off page caching and forget to turn it back on
 1. Navigate to **Configuration** > **Development** > **Performance** within Drupal's Admin Interface.
 2. Review **Page cache maximum age**:
 
-![Drupal Performance settings](../../docs/assets/images/guides/front-end-performance/d8-cache.png)
+<Image alt="Drupal Performance settings" src="guides/front-end-performance/d8-cache.png" />
 
 The Drupal 8 default setting is 10 minutes. You can set much higher cache max ages when using the Pantheon Advanced Page Cache Module to clear specific pages when your underlying data is updated.
 
@@ -229,15 +229,15 @@ The Drupal 8 default setting is 10 minutes. You can set much higher cache max ag
 Improve performance on longer trips to and from the browser for instances you _want_ to bypass cache and go straight to the application:
 
 #### Upgrade to PHP7
-If you haven't done so already, [make the switch to PHP7](/docs/php-versions/). Upgrading your site's PHP version will improve the security, performance, and supportability of your site.
+If you haven't done so already, [make the switch to PHP7](/php-versions/). Upgrading your site's PHP version will improve the security, performance, and supportability of your site.
 
 See our blog post for an example of [62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
 #### Enable Redis Object Caching
-Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Installing Redis on Drupal or WordPress](/docs/redis/).
+Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Installing Redis on Drupal or WordPress](/redis/).
 
 #### Monitor Performance with New Relic
-If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/docs/new-relic/) for help identifying bottlenecks.
+If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/new-relic/) for help identifying bottlenecks.
 
 #### Helper Tools
 There are toolbars for both Drupal and WordPress that provide stats like the number of queries, amount of memory, and response time. These can be helpful for real time debugging.
@@ -265,7 +265,7 @@ The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful i
 2. From the WordPress dashboard, click **Debug** towards the top right.
 3. Review the request and object cache data for potential red flags.
 
-![Debug Bar WordPress](../../docs/assets/images/guides/front-end-performance/debug-bar.png)
+<Image alt="Debug Bar WordPress" src="guides/front-end-performance/debug-bar.png" />
 
 </Tab>
 
@@ -273,7 +273,7 @@ The [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin can be useful i
 
 The `webprofiler` module is provided by [Devel](https://www.drupal.org/project/devel) and generates a helpful toolbar at the bottom which can dig into performance and caching behaviors.
 
-![Devel Drupal](../../docs/assets/images/drupal8-commandline--webprofiler.png)
+<Image alt="Devel Drupal" src="drupal8-commandline--webprofiler.png" />
 
 </Tab>
 
@@ -383,7 +383,7 @@ The following blog post walks through how to use results from the [Critical Path
 
 Drupal Core has the ability to "aggregate" CSS and JavaScript. When turned on, Drupal will combine individual CSS and Javascript files in a smaller number of bigger files. This easy optimization can be done at `admin/config/development/performance`:
 
-![Drupal performance admin interface](../../docs/assets/images/guides/front-end-performance/drops-performance.png)
+<Image alt="Drupal performance admin interface" src="guides/front-end-performance/drops-performance.png" />
 
 Checking these boxes will take a normal Drupal site from having dozens (or hundreds) of small CSS/JS files to just a few. As you browse around the site the aggregated files loaded will be different as different modules add different source files to the page. [For more details, see the Drupal.org documentation on CSS organization.](https://www.drupal.org/docs/develop/standards/css/css-file-organization-for-drupal-8)
 
@@ -452,14 +452,14 @@ The new filename will cause clients to get the new file, even if they have a cac
 
 
 ## Avoid Redirects
-A redirect will add at least one extra HTTP request-response cycle. As a result, eliminating extraneous redirects can make your website more snappy. Despite your best efforts it still may be necessary to include the occasional [redirect to a primary domain](/docs/guides/launch/redirects/) using HTTPS with or without the WWW.
+A redirect will add at least one extra HTTP request-response cycle. As a result, eliminating extraneous redirects can make your website more snappy. Despite your best efforts it still may be necessary to include the occasional [redirect to a primary domain](/guides/launch/redirects/) using HTTPS with or without the WWW.
 
 Other considerations:
 
 - Avoid mobile-specific subdomains and use responsive web design techniques.
 - A DNS service provider such as [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL-) may allow speedier redirects in some circumstances, but it’s still faster not to redirect at all.
-- Avoid several chained redirects that make small changes such as redirecting to HTTPS, adding or removing WWW, or adding a trailing slash. Instead, [redirect to a primary domain](/docs/guides/launch/redirects/) that has all of these standardized.
-- Pantheon doesn’t read changes to the `.htaccess` file or support NGINX customization, so redirections via those methods will not work. For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).
+- Avoid several chained redirects that make small changes such as redirecting to HTTPS, adding or removing WWW, or adding a trailing slash. Instead, [redirect to a primary domain](/guides/launch/redirects/) that has all of these standardized.
+- Pantheon doesn’t read changes to the `.htaccess` file or support NGINX customization, so redirections via those methods will not work. For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
 ## GZIP Compression
 By default, gzip compression is already enabled server-side. The response headers include `content-encoding: gzip` which will serve the site's HTML, stylesheets and JavaScipt files in a reduced size before sending it to the browser, resulting to a faster Time To First Byte (**TTFB**). Users don't need to modify any Nginx/.htaccess configuration, nor install any 3rd party plugins/modules for gzip compression.

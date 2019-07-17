@@ -4,33 +4,39 @@ description: Configure your Drupal site's performance and caching settings to ma
 tags: [cacheapp]
 categories: [drupal]
 ---
-While configuring [Drupal's performance and caching settings](/docs/drupal-cache) and using [Redis as a Drupal caching backend](/docs/redis/) will make a significant performance difference, not every module uses Drupal's caching out of the box.
+While configuring [Drupal's performance and caching settings](/drupal-cache) and using [Redis as a Drupal caching backend](/redis/) will make a significant performance difference, not every module uses Drupal's caching out of the box.
 
 ## Views
 
 Views has a very granular caching system, down to the individual View display. There's no single control that will just turn on views caching, and the caching is off by default. There are three different kinds of user-configurable caching within Views:
 
-<DefList>
+<dl>
 
-<Definition name="Query Results Caching">
+<dt>Query Results Caching</dt>
+
+<dd>
 
 Raw Query Results, which should be cached for at least 1 minute. As the subject matter expert, you're in the best position to know how often your content should change.
 
-</Definition>
+</dd>
 
-<Definition name="Rendered Output Caching">
+<dt>Rendered Output Caching</dt>
+
+<dd>
 
 Generated markup, which should be cached for as long as possible (if the query changes, the output will be refreshed).
 
-</Definition>
+</dd>
 
-<Definition name="Block Caching">
+<dt>Block Caching</dt>
+
+<dd>
 
 If you're generating a block, this will expose the block to Drupal's built-in block caching.
 
-</Definition>
+</dd>
 
-</DefList>
+</dl>
 
 ### Configure Views Caching
 

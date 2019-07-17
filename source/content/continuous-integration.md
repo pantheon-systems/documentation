@@ -5,16 +5,16 @@ tags: [platformintegrations]
 categories: []
 contributors: [ccjjmartin]
 ---
-Continuous Integration (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/docs/support/).
+Continuous Integration (CI) is a method of running automated unit and integration tests to apply quality control. Pantheon doesn't provide or host tools for continuous integration, but many tools and techniques are compatible with Pantheon. If you have a particular use case or technique that you'd like to highlight, let us know by [contacting support](/support/).
 
-See our [Build Tools](/docs/guides/build-tools/) guide for a more detailed look at a workflow using build tools like GitHub and CircleCI with Composer for Drupal and WordPress sites.
+See our [Build Tools](/guides/build-tools/) guide for a more detailed look at a workflow using build tools like GitHub and CircleCI with Composer for Drupal and WordPress sites.
 
 ## Terminus Command-Line Interface
 
-[Terminus](/docs/terminus/) is a Drush-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon Dashboard can be performed with Terminus, including:
+[Terminus](/terminus/) is a Drush-based command-line interface (CLI) in the Pantheon core API. Most operations available through the Pantheon Dashboard can be performed with Terminus, including:
 
 - Site creation
-- [Multidev environment](/docs/multidev) creation and removal
+- [Multidev environment](/multidev) creation and removal
 - Content cloning
 - Code pushes
 

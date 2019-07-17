@@ -27,7 +27,7 @@ In this lesson, we’re going to edit code directly. We’ll commit our edits to
   ask a colleague for help, or feel free to skip this lesson altogether.
 </Alert>
 
-If you haven’t added a new theme to your site, please return to the [previous lesson](/docs/guides/quickstart/onserver-dev-part1) and do so now.
+If you haven’t added a new theme to your site, please return to the [previous lesson](/guides/quickstart/onserver-dev-part1) and do so now.
 
 1.  Navigate to <Icon icon={"embed-close"} text={"Code"}/> in the <Icon icon={"wrench"} text={"Dev"}/> tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
@@ -35,7 +35,7 @@ If you haven’t added a new theme to your site, please return to the [previous 
 
 3.  Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
-    If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
+    If you run into issues, please refer to [this documentation](/sftp/#sftp-connection-information).
 
 4.  Now open the `code` folder in your SFTP client, and navigate to the theme you installed previously.
 

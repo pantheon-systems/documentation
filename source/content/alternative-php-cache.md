@@ -12,7 +12,7 @@ Pantheon provides APC by default across all plans, but the size of the APC memor
 
 #### Can APC be used as a cache backend on Pantheon?
 
-Yes, APC can be used as a cache backend or a "key-value store"; however, this is not recommended. APC lacks the ability to span multiple server environments. Instead, Pantheon provides [Redis](/docs/redis/) as a caching backend for Drupal and WordPress, which has better performance.
+Yes, APC can be used as a cache backend or a "key-value store"; however, this is not recommended. APC lacks the ability to span multiple server environments. Instead, Pantheon provides [Redis](/redis/) as a caching backend for Drupal and WordPress, which has better performance.
 
 
 #### What happens if the APC memory cache is too small?
@@ -22,13 +22,13 @@ If the size of the scripts loaded exceed the size of the APC cache, the cache wi
 ```php
 Warning: require_once(): Unable to allocate memory for pool.
 ```
-In these circumstances, either increasing the SHM size by [upgrading your account](https://www.pantheon.io/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. To learn more about how much memory your site is using, visit the site's [New Relic dashboard](/docs/new-relic).
+In these circumstances, either increasing the SHM size by [upgrading your account](https://www.pantheon.io/pricing "Pantheon Pricing"), or reducing the amount of scripts read by PHP by disabling unneeded modules typically resolves the issue. To learn more about how much memory your site is using, visit the site's [New Relic dashboard](/new-relic).
 
 #### How can I determine what my current APC settings are?
 
 Search for `shm_size` in phpinfo.
 
-See [Securely Working with phpinfo](/docs/phpinfo).
+See [Securely Working with phpinfo](/phpinfo).
 
 
 ## Can the shm_size be configured manually?

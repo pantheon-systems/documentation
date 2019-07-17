@@ -12,7 +12,7 @@ Variables that are converted to `PANTHEON_STRIPPED` cannot be read with PHP, and
 
 ## Issue: PANTHEON_STRIPPED Displays in the utm_source URL Parameter in Google Analytics
 
-![pantheon_stripped](../docs/assets/images/pantheon_stripped.png)
+![pantheon_stripped](../images/pantheon_stripped.png)
 
 This is typically caused by PHP in your site’s code reading in `PANTHEON_STRIPPED` as part of the url that it sees, and then using that in a page response in such a way that shows up in a customer browser, it will then be dutifully reported to Google. Pantheon makes every effort to prevent this, but it is not possible to predict all possible PHP behavior. In most cases, it's safe to simply ignore `PANTHEON_STRIPPED` in your traffic results, as usually customers will have hit the site with a valid parameter first, and the `PANTHEON_STRIPPED` values are duplicate "self-referrals".
 
@@ -64,7 +64,7 @@ We recommend distributing campaign URLs that are in their final, non-redirectabl
 
 Finally, to optimize caching performance, make sure any parameters are in the supported format, as those that are not in the format utm_ or are preceded by double underscores will instead act as query keys and be served and cached as distinct pages. You can build campaign links in the correct format using [Google’s URL builder](https://ga-dev-tools.appspot.com/campaign-url-builder/) tool.
 
-For more information, see [Caching: Advanced Topics](/docs/caching-advanced-topics).
+For more information, see [Caching: Advanced Topics](/caching-advanced-topics).
 
 ### Which query parameters are optimized?
 

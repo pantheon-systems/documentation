@@ -8,7 +8,7 @@ categories: []
 
 ### What is the benefit of Multidev?
 
-[Multidev](/docs/multidev/) environments allow you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
+[Multidev](/multidev/) environments allow you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
 
 ### How does Multidev work?
 
@@ -20,7 +20,7 @@ Multidev is one of the highlight features of the Pantheon Partner Program. Visit
 
 ## Change Management
 
-From within the [Organization Dashboard](/docs/organization-dashboard/), you can assign [organization](/docs/organizations/) members one of three roles: Administrator, Team Member, and Developer. Developers in an organization can commit code to Multidev and Development environments, but cannot deploy code or clone databases and files into Test or Live environments.
+From within the [Organization Dashboard](/organization-dashboard/), you can assign [organization](/organizations/) members one of three roles: Administrator, Team Member, and Developer. Developers in an organization can commit code to Multidev and Development environments, but cannot deploy code or clone databases and files into Test or Live environments.
 
 ### Can I Restrict Access to a Specific Site with the Developer Role?
 Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner Organizations cannot specify which members have access to specific sites.
@@ -30,7 +30,7 @@ The person who creates the site owns it until someone else starts paying for it.
 
 ### Where can I learn more about these roles?
 
-See [Role-Based Permissions & Change Management](/docs/change-management/) for details.
+See [Role-Based Permissions & Change Management](/change-management/) for details.
 
 ### How do we add new sites to an Organization?
 
@@ -40,13 +40,13 @@ When you or the administrators, team members, or developers in your agency [crea
 ### Why do login attempts fail for all users across my organization simultaneously?
 Any large agency that has multiple developers who login frequently via username/password will trigger failed logins for everyone else who works on the site. This occurs despite everyone using the right password and even when one user logins in and out successfully 3 times.
 
-As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for password-less access](/docs/ssh-keys).
+As a workaround, we recommend following development best practice workflows by [authenticating via SSH key for password-less access](/ssh-keys).
 
 ### Why can't I access Multidev on my site when the Supporting Organization can use it?
 Only organizational team members and administrators of a Supporting Organization with Multidev will be able to use this feature. Site team members who are associated with the site but not the agency can access Multidev environments via the unique URL, but will not be able to commit code to them.
 
 ### Why can't my Agency Organization own a site?
-Enterprise, Reseller, OEM, and EDU+ organizations own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in our [Organizations](/docs/organizations/#organization-site-association) doc.
+Enterprise, Reseller, OEM, and EDU+ organizations own sites. Registered Agencies, Pantheon Partners, Premier Pantheon Partners, Strategic Pantheon Partners, and EDU organizations support sites. This is because an agency's role is to develop, service, and maintain a site on behalf of its owner. Read more about owning and supporting sites in our [Organizations](/organizations/#organization-site-association) doc.
 
 ### Can I add my own Agency as a Supporting Organization to a client's site?
 

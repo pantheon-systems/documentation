@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../source/docs/assets/images`,
+        path: `${__dirname}/../source/images`,
         name: `images`,
       },
     },
@@ -119,9 +119,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          // {
-          //   resolve: "gatsby-remark-copy-linked-files",
-          // },
+          `gatsby-remark-static-images`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {

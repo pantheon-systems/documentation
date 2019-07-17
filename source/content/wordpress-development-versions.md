@@ -4,16 +4,16 @@ description: Learn how to test WordPress core updates using nightly builds of th
 tags: [workflow]
 categories: [wordpress]
 ---
-Pantheon provides [one-click updates](/docs/core-updates/) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
+Pantheon provides [one-click updates](/core-updates/) for WordPress core within the Site Dashboard for officially launched versions once they have been merged into our [upstream](https://github.com/pantheon-systems/WordPress). You can test development versions of WordPress by updating through the WordPress Dashboard or via Git.
 
 <Alert title="Warning" type="danger">
 
-Development versions and beta releases are not supported and should not be run on live sites. Testing should be done on a [Multidev](/docs/multidev/) environment or within an isolated local environment on a branch other than master.
+Development versions and beta releases are not supported and should not be run on live sites. Testing should be done on a [Multidev](/multidev/) environment or within an isolated local environment on a branch other than master.
 
 </Alert>
 
 ## Update Core within WordPress Dashboard
-1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/docs/sftp/) or with [Terminus](/docs/terminus):
+1. If working on a Multidev environment, set the connection mode to SFTP within the [Pantheon Site Dashboard](/sftp/) or with [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.<env> sftp
@@ -39,13 +39,13 @@ Development versions and beta releases are not supported and should not be run o
 
 
 ## Update Core Manually with Git
-1. If working on a Multidev environment, set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/docs/terminus):
+1. If working on a Multidev environment, set the connection mode to Git within the Pantheon Site Dashboard or with [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.<env> git
  ```
 
-2. From within the [local clone of your site's code repository](/docs/git/#clone-your-site-codebase):
+2. From within the [local clone of your site's code repository](/git/#clone-your-site-codebase):
 
  ```
  git checkout -b "wpcore"
@@ -81,4 +81,4 @@ Create the Multidev from within the Site Dashboard by selecting **Multidev** > *
 ## Troubleshooting
 
 ### Database Update Required
-WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus $site.$env 'wp core update-db'](/docs/terminus).
+WordPress sometimes includes database schema changes in major releases. When you update WordPress to the latest version, you might see a notification in the WordPress dashboard to update the database. Update as instructed or via [terminus $site.$env 'wp core update-db'](/terminus).

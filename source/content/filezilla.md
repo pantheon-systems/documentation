@@ -9,7 +9,7 @@ categories: []
 
 ## Getting Started
 
-Make sure you have your SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. See [how to find the SFTP credentials](/docs/sftp#sftp-connection-information) for your site.
+Make sure you have your SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. See [how to find the SFTP credentials](/sftp#sftp-connection-information) for your site.
 
 ## Download FileZilla
 
@@ -21,7 +21,7 @@ Open FileZilla  and launch the Site Manager by clicking the first icon in the me
 
 Enter your SFTP connection details:
 
-![Adding a new site to the Site Manager](/docs/assets/images/filezilla-new-site.png "The Filezilla Site Manager")
+![Adding a new site to the Site Manager](/assets/images/filezilla-new-site.png "The Filezilla Site Manager")
 
 <Alert title="Note" type="info">
 Be sure to set the **Protocol:** to `SFTP` (*not* `FTP`) and the server port to `2222`.
@@ -56,7 +56,7 @@ Your file uploads (Drupal's `sites/default/files` and WordPress's `wp-content/up
 ## Troubleshooting
 
 ### Uploading to the Files Directory
-FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/docs/winscp) (Windows).
+FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/winscp) (Windows).
 
 ### nodename nor servname provided, or not known
 The following error is caused by an invalid hostname, most often the result of a typo:

@@ -24,10 +24,10 @@ Congratulations! You created and made code changes to your Pantheon site. You sh
 
 But this is just the tip of the iceberg. Ready to learn more? Here are just some of the things you can do with Pantheon:
 
-- Set up a [Local Development](/docs/local-development) environment.
-- If you’re on a team, start using [Multidev environments](/docs/multidev).
-- Install [Terminus](/docs/terminus), and start interacting with Pantheon from the command line.
-- Take your site live! Just follow this [Launch Essentials](/docs/guides/launch).
+- Set up a [Local Development](/local-development) environment.
+- If you’re on a team, start using [Multidev environments](/multidev).
+- Install [Terminus](/terminus), and start interacting with Pantheon from the command line.
+- Take your site live! Just follow this [Launch Essentials](/guides/launch).
 
 <Callout
   title={"Are you an agency?"}

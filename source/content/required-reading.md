@@ -6,41 +6,41 @@ categories: [getstarted]
 ---
 Pantheon is not web hosting. It is a highly-tuned, distributed, and instantly scalable [WebOps](https://en.wikipedia.org/wiki/Web_operations) platform. Pantheon also integrates development best practices and tools into the platform, to get the developer back to writing code, not configuring servers and carrying pagers.
 
-Our tech includes NGINX, PHP, Redis, [Global CDN](/docs/global-cdn-caching/), Solr and Git—common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
+Our tech includes NGINX, PHP, Redis, [Global CDN](/global-cdn-caching/), Solr and Git—common tools in web development. You don't have to configure them, but an understanding of how they interact with your applications on Pantheon is important. Review the following must-read list to ensure developer success.
 
 ## Get to Know Pantheon
 
-- [Quick Start](/docs/guides/quickstart/)
-- [Using the Pantheon Workflow](/docs/pantheon-workflow/)
-- [All About Application Containers](/docs/application-containers/)
-- [Platform Considerations](/docs/platform-considerations/)
-- [HTTPS on Pantheon's Global CDN](/docs/https)
+- [Quick Start](/guides/quickstart/)
+- [Using the Pantheon Workflow](/pantheon-workflow/)
+- [All About Application Containers](/application-containers/)
+- [Platform Considerations](/platform-considerations/)
+- [HTTPS on Pantheon's Global CDN](/https)
 
 ## Build
-- [Migrate Sites to Pantheon](/docs/migrate)
-- [rsync and SFTP](/docs/rsync-and-sftp)
-- [Configuring settings.php](/docs/settings-php) or [Configuring wp-config.php](/docs/wp-config-php)
-- [Drupal Drush Command-Line Utility](/docs/drush)
-- [Cron for WordPress](/docs/wordpress-cron) or [Cron for Drupal](/docs/drupal-cron)
+- [Migrate Sites to Pantheon](/migrate)
+- [rsync and SFTP](/rsync-and-sftp)
+- [Configuring settings.php](/settings-php) or [Configuring wp-config.php](/wp-config-php)
+- [Drupal Drush Command-Line Utility](/drush)
+- [Cron for WordPress](/wordpress-cron) or [Cron for Drupal](/drupal-cron)
 
 ## Launch
-- [Launch Essentials](/docs/guides/launch)
+- [Launch Essentials](/guides/launch)
 
 ## Run
-- [Optimization for Pantheon and the Cloud](/docs/cloud-optimization/)
-- [New Relic Pro](/docs/new-relic/)
-- [Applying Upstream Updates](/docs/core-updates/)
-- [Global CDN Caching for High Performance](/docs/global-cdn-caching/)
-- [Installing Redis on Drupal or WordPress](/docs/redis/)
-- [Drupal Performance and Caching Settings](/docs/drupal-cache/)
-- [SSO and Identity Federation on Pantheon](/docs/sso/)
-- [Backup Creation](/docs/backups/)
+- [Optimization for Pantheon and the Cloud](/cloud-optimization/)
+- [New Relic Pro](/new-relic/)
+- [Applying Upstream Updates](/core-updates/)
+- [Global CDN Caching for High Performance](/global-cdn-caching/)
+- [Installing Redis on Drupal or WordPress](/redis/)
+- [Drupal Performance and Caching Settings](/drupal-cache/)
+- [SSO and Identity Federation on Pantheon](/sso/)
+- [Backup Creation](/backups/)
 
 ## Debug
-- [PHP Errors and Exceptions](/docs/php-errors/)
-- [Errors and Server Responses](/docs/errors-and-server-responses/)
+- [PHP Errors and Exceptions](/php-errors/)
+- [Errors and Server Responses](/errors-and-server-responses/)
 
 ## Support
-- [Getting Support](/docs/support/)
+- [Getting Support](/support/)
 
 

@@ -12,18 +12,18 @@ Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's DevOp
 
 </Enablement>
 
-Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/docs/multidev/) instead of local development.
+Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev/) instead of local development.
 
 ## Before You Begin
 Be sure you have:
 
 - A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
-    - Pantheon uses a [particular architecture to maximize performance and availability](/docs/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
-    - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/docs/php-versions/#verify-current-php-versions).
+    - Pantheon uses a [particular architecture to maximize performance and availability](/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
+    - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
-- [Terminus](/docs/terminus/)
-- [Drush](/docs/drush) (optional)
+- [Terminus](/terminus/)
+- [Drush](/drush) (optional)
 
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
 
@@ -47,7 +47,7 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
 2. At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
 
-    ![Copy Past Git Clone](../docs/assets/images/dashboard/git-string.png)<br />
+    ![Copy Past Git Clone](../images/dashboard/git-string.png)<br />
 
 3. On your local environment, go to where you want the code to reside. Git will create a directory as part of the clone, so you don't need to create one. Run the command you copied in step 2:
 
@@ -56,9 +56,9 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
     ```
     If everything worked correctly, you will see Git fetching the data:
 
-    ![Git Clone During](../docs/assets/images/git_clone.png)<br />
+    ![Git Clone During](../images/git_clone.png)<br />
 
-    If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+    If you run into permission problems, check your [SSH key](/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Get the Database
 
@@ -98,7 +98,7 @@ From within the Site Dashboard:
 
 ## Get the Files
 
-For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/docs/rsync-and-sftp/).
+For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsync-and-sftp/).
 
 ### Via Terminus
 
@@ -124,7 +124,7 @@ SFTP is slower, but easier for some to use:
 
 ### Send the Code
 
-Test your changes, then [commit locally and push to Pantheon](/docs/git/#push-changes-to-pantheon):
+Test your changes, then [commit locally and push to Pantheon](/git/#push-changes-to-pantheon):
 
 ```bash
 git commit -am "enter a summary of the changes"
@@ -157,7 +157,7 @@ drush -r . rsync --temp-dir=../tmp/ @self:sites/default/files/ @pantheon.SITENAM
 
 Send files using SFTP:
 
-- [Copy the SFTP CLI command](/docs/sftp#sftp-connection-information)
+- [Copy the SFTP CLI command](/sftp#sftp-connection-information)
 - From terminal, navigate to the proper directory on your local file system:
     - **Drupal**: `sites/default/files`
     - **WordPress**: `wp-content/uploads`

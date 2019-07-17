@@ -6,7 +6,7 @@ tags: [debugcode]
 contributors: [greg-1-anderson]
 ---
 
-PHP notices are usually handled automatically by the Pantheon Platform as described on the page [PHP Errors and Exceptions](/docs/php-errors); however, occasionally a PHP notice might be emitted directly into the web page content.
+PHP notices are usually handled automatically by the Pantheon Platform as described on the page [PHP Errors and Exceptions](/php-errors); however, occasionally a PHP notice might be emitted directly into the web page content.
 
 An example notice might look like this:
 ```
@@ -41,7 +41,7 @@ Disabling opcache has a sever impact on performance, so care should be taken not
 
 </Alert>
 
-You may also search for deprecated constructors using the PHP linter on the command line (requires PHP 7.0 to be installed locally). First, create a local copy of your site as described in [Local Development](/docs/local-development); then, run:
+You may also search for deprecated constructors using the PHP linter on the command line (requires PHP 7.0 to be installed locally). First, create a local copy of your site as described in [Local Development](/local-development); then, run:
 ```
 $ php -l sites/all/modules/views/includes/handlers.inc
 PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; views_many_to_one_helper has a deprecated constructor in sites/all/modules/views/includes/handlers.inc on line 753

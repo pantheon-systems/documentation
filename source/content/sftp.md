@@ -12,7 +12,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 
 </Enablement>
 
-SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/docs/cms-admin/).
+SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin/).
 
 <Alert tile="SFTP Mode Considerations" type="danger">
 
@@ -30,13 +30,13 @@ Every Development environment has a toggle to switch between SFTP and Git modes;
 
 When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase, the Dashboard will track your changes and you'll see all the pending changes. You can then commit them to version control once you are happy with the results without having to ever use Git.
 
- ![Enable SFTP mode](../docs/assets/images/dashboard/sftp-enabled.png)
+ ![Enable SFTP mode](../images/dashboard/sftp-enabled.png)
 
 ## SFTP Connection Information
 
 To get your SFTP login credentials, click **SFTP Connection Info**. You will see your connection credentials and a link to connect directly with your preferred client.
 
- ![SFTP Connection Data](../docs/assets/images/dashboard/sftp-connection-info.png)<br />
+ ![SFTP Connection Data](../images/dashboard/sftp-connection-info.png)<br />
 
 The connection information is a bit different than what you might be used to, and it's based on your unique "Site ID". This is the long string at the end of your Dashboard URL.
 
@@ -58,9 +58,9 @@ It is possible to connect to an environment via SFTP by using the terminal. The 
 
 There is also a one-click option so you can connect with a GUI client. The main directory listing includes Pantheon, logs, environment data and configuration. Your website is in the `code` directory. For instance, in Mac OS Cyberduck:
 
-![Cyberduck Example](../docs/assets/images/cyberduck-example.png)
+![Cyberduck Example](../images/cyberduck-example.png)
 
-Get the instructions for other [SFTP clients](/docs/sftp#sftp-clients).
+Get the instructions for other [SFTP clients](/sftp#sftp-clients).
 
 <Partial file="auth.md" />
 
@@ -70,7 +70,7 @@ Even though you are unable to use Git to push remotely with SFTP mode enabled, y
 
 After you have made a change to your code, you will see a message on the Dashboard that appears below the comment box to let you know you have uncommitted changes that are not yet in your repository. Clicking the notification message expands the listing of the pending changes.
 
-![Uncommitted changes](../docs/assets/images/dashboard/pantheon-dashboard-uncommitted-changes.png)
+![Uncommitted changes](../images/dashboard/pantheon-dashboard-uncommitted-changes.png)
 
 Write a helpful commit message to go with your changes. This will make maintaining your code a saner process, and make it easier for any other developers who pull your changes down to understand what you've done.
 
@@ -86,7 +86,7 @@ Your Dashboard tracks all changes made within your codebase. File change notific
 
 Toggle the **Connection Mode** from **SFTP** to **Git** to *permanently* discard all SFTP changes that have not been committed, such as the 119 file changes shown here:
 
-![SFTP changes ready to commit](../docs/assets/images/dashboard/sftp-enabled.png)
+![SFTP changes ready to commit](../images/dashboard/sftp-enabled.png)
 
 This can be useful when you have many changes you wish to undo or if it would otherwise be difficult to manually revert all the changes. Toggle back to **SFTP** mode when you're ready to resume SFTP development.
 
@@ -94,32 +94,32 @@ This can be useful when you have many changes you wish to undo or if it would ot
 
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
-- PHPStorm with [WordPress](/docs/wordpress-phpstorm) and [Drupal](/docs/drupal-phpstorm)
-- [FileZilla](/docs/filezilla/)
-- [WinSCP](/docs/winscp/)
+- PHPStorm with [WordPress](/wordpress-phpstorm) and [Drupal](/drupal-phpstorm)
+- [FileZilla](/filezilla/)
+- [WinSCP](/winscp/)
 
 ## Troubleshooting
 
 ### I can't connect via SFTP to the site.
 
-Make sure your site has not [spun down after being idle](/docs/application-containers/#idle-containers). Visit the site in your web browser and let it fully load then try connecting again.
+Make sure your site has not [spun down after being idle](/application-containers/#idle-containers). Visit the site in your web browser and let it fully load then try connecting again.
 
-If your site is not idle and your [SFTP settings are correct](/docs/sftp/#sftp-connection-information) (including SFTP mode and port `2222`) you may be on a network that restricts what outbound ports you can access. An example may be an office or public wifi that only allows web traffic on port `80` (HTTPS)  and `443` (HTTPS).
+If your site is not idle and your [SFTP settings are correct](/sftp/#sftp-connection-information) (including SFTP mode and port `2222`) you may be on a network that restricts what outbound ports you can access. An example may be an office or public wifi that only allows web traffic on port `80` (HTTPS)  and `443` (HTTPS).
 
 A simple way to test for outbound network restrictions is to load a special web site that listens on all ports. To test your access outbound on port `2222`, try to load this web page in your web browser:
 
 * [http://portquiz.net:2222/](http://portquiz.net:2222/)
 
-If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port `2222` outbound. Contact your network administrators to allow outbound access on port `2222`. Advanced users may also be comfortable [establishing an SSH tunnel through another server](/docs/port-2222/) instead.
+If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port `2222` outbound. Contact your network administrators to allow outbound access on port `2222`. Advanced users may also be comfortable [establishing an SSH tunnel through another server](/port-2222/) instead.
 
-If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related.  Be sure to double-check or re-enter your [SFTP settings](/docs/sftp/#sftp-connection-information), including SFTP mode and port `2222`. Contact Pantheon Support if you still have trouble.
+If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related.  Be sure to double-check or re-enter your [SFTP settings](/sftp/#sftp-connection-information), including SFTP mode and port `2222`. Contact Pantheon Support if you still have trouble.
 
 ### I registered my Pantheon account via Google. How do I connect to SFTP?
-We recommend [adding an SSH Key](/docs/ssh-keys/), which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
+We recommend [adding an SSH Key](/ssh-keys/), which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
 
 ### I can't write to my codebase on Test or Live.
 
-This is by design. Please see [Using the Pantheon Workflow](/docs/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
+This is by design. Please see [Using the Pantheon Workflow](/pantheon-workflow#understanding-write-permissions-in-test-and-live) to learn why.
 
 
 ### SFTP changes do not show up in the Site Dashboard.
@@ -168,7 +168,7 @@ There have been observed cases in which Internet Service Providers (specifically
     Unable to connect to host codeserver.dev.<xxx>.drush.in, or the request timed out.
     Be sure that the address is correct and that you have the necessary privileges, or try increasing the connection timeout (currently 10 seconds).
 
-Replace `SITE_UUID` with your site's [UUID](/docs/sites/#site-uuid) and run the following to obtain the returned IP address:
+Replace `SITE_UUID` with your site's [UUID](/sites/#site-uuid) and run the following to obtain the returned IP address:
 
 ```bash
 dig codeserver.dev.<SITE_UUID>.drush.in

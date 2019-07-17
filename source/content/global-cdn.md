@@ -5,7 +5,7 @@ earlynote: The documentation on this page discusses features and options that ar
 searchboost: 200
 ---
 
-Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 60+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/docs/https) using [Let's Encrypt](https://letsencrypt.org).
+Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 60+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/https) using [Let's Encrypt](https://letsencrypt.org).
 
 <Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -22,7 +22,7 @@ Finally, the Global CDN includes interfaces to dynamically expire selected conte
 
 In early testing we saw multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US. International users will benefit even more:
 
-![Example before and after page load time](/docs/assets/images/global-cdn-time-to-load.png)
+![Example before and after page load time](/assets/images/global-cdn-time-to-load.png)
 
 ## Eligibility
 All sites are eligible. Upgrade to the Global CDN to reduce HTTPS costs and take advantage of its superior features and performance.
@@ -59,7 +59,7 @@ All sites are eligible. Upgrade to the Global CDN to reduce HTTPS costs and take
     </tr>
     <tr>
       <th>HTTPS Service</th>
-      <td >[Free and Managed](/docs/https)</td>
+      <td >[Free and Managed](/https)</td>
       <td>BYO Cert</td>
     </tr>
   </tbody>
@@ -68,11 +68,11 @@ All sites are eligible. Upgrade to the Global CDN to reduce HTTPS costs and take
 ## Cache Clearing
 We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) to take advantage of the granular cache clearing capabilities of the Global CDN. Additionally, you can remove all pages from cache at once from the Site Dashboard, within the Site Admin, and even from the command line.
 
-For more details, see [Clearing Caches for Drupal and WordPress](/docs/clear-caches/).
+For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches/).
 
 ## Enabling the Global CDN
 
-If you don't see action required in your Domains / HTTPS tool, please [contact support](/docs/support) to enable the upgrade.
+If you don't see action required in your Domains / HTTPS tool, please [contact support](/support) to enable the upgrade.
 
 ### Upgrade Your Site
 
@@ -83,7 +83,7 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
 
       1. Click the "Details" button next to your site's bare domain.
       2. Copy the "A" record's IP address provided for the site's bare domain.
-      3. Add a line to your [local hosts file](/docs/hosts-file/) with the IP address from the previous step followed by the domain name, for example:
+      3. Add a line to your [local hosts file](/hosts-file/) with the IP address from the previous step followed by the domain name, for example:
 
         ```
         192.123.456.789 example.com
@@ -110,9 +110,9 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
     Check the current state of DNS propagation from different parts of the world using this free web tool <a class="external" href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
     </Alert>
 
-4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/docs/guides/launch/redirects/).
+4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/guides/launch/redirects/).
 
-For more details, see [HTTPS on Pantheon's Global CDN](/docs/https).
+For more details, see [HTTPS on Pantheon's Global CDN](/https).
 
 ## Frequently Asked Questions
 
@@ -122,7 +122,7 @@ Ultimately the Global CDN will be the default for every site on Pantheon. We enc
 ### I already have a CDN - should I switch?
 Pantheon's Global CDN has some advantages over solutions some customers may already have in place:
 
-1. It includes [free and automatic HTTPS service](/docs/https)
+1. It includes [free and automatic HTTPS service](/https)
 2. It is heavily optimized for website performance
 3. It is configured, maintained, and supported by Pantheon
 4. It is available at no additional cost
@@ -130,19 +130,19 @@ Pantheon's Global CDN has some advantages over solutions some customers may alre
 Even if you want to retain your existing CDN because of specific features they provide, the upgrade will improve your end-user experience, as your custom CDN will be able to pull pages and assets from a nearby Pantheon Global CDN location, rather than the origin datacenter.
 
 ### Is the www-redirector service still available?
-No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/docs/guides/launch/redirects/) to your site's configuration file (wp-config.php or settings.php).
+No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/guides/launch/redirects/) to your site's configuration file (wp-config.php or settings.php).
 
 ### Are vanity domains supported?
-You can upgrade a site to Global CDN that is using [vanity domains](/docs/vanity-domains/), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
+You can upgrade a site to Global CDN that is using [vanity domains](/vanity-domains/), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
 
 ### What about Cloudflare?
-See [Cloudflare Domain Configuration](/docs/cloudflare/).
+See [Cloudflare Domain Configuration](/cloudflare/).
 
 ### Is the CDN configurable?
 No, we pre-configured the CDN so you don’t have to hassle with configuration, and we can guarantee performance and uptime. The Global CDN's behavior is the same as our legacy cache which is heavily optimized for Drupal and WordPress sites, and serves billions of pages monthly, except it's globally distributed.
 
 ### Do I get access to hit rates or other statistics?
-Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/docs/metrics/).
+Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/metrics/).
 
 ### Can I use other CDNs with the Pantheon Global CDN?
 Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address. We recommend that you ensure you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.
@@ -163,6 +163,6 @@ Yes! Expose `Surrogate-Key-Raw` by including `Pantheon-Debug:1` in a curl reques
 curl -IsH "Pantheon-Debug:1" https://www.example.com/ | grep surrogate-key-raw
 ```
 
-![curl -IsH "Pantheon-Debug:1" https://www.scalewp.io/ | grep surrogate-key-raw](../docs/assets/images/surrogate-key-raw-example.png)
+![curl -IsH "Pantheon-Debug:1" https://www.scalewp.io/ | grep surrogate-key-raw](../images/surrogate-key-raw-example.png)
 
 To prevent issues with Twitter card validation and to reduce the overall time to load, the `Surrogate-Key-Raw` header is not returned by default. Exposing this header provides context for entities included on a given page.

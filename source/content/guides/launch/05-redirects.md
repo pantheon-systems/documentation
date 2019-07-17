@@ -30,13 +30,13 @@ Make sure HTTPS has been successfully provisioned *before* adding any code (like
 
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
+  If you run into issues, please refer to [this documentation](/sftp/#sftp-connection-information).
 
 4. Now open the `code` folder in your SFTP client, and download your site's `settings.php` (Drupal) or `wp-config.php` (WordPress) file.
 
 5. Edit your configuration file by adding the following snippet for the desired redirect (replace `example.com`):
 
-  <Partial file="redirects.md" />
+  <Partial file="_redirects.md" />
 
 6. Upload the configuration file to Pantheon using your SFTP client.
 
@@ -54,10 +54,10 @@ Make sure HTTPS has been successfully provisioned *before* adding any code (like
 ## Ready to launch like the pros?
 Now that you're redirecting requests to a single, primary domain, it's the perfect time to setup a availability monitoring service to watch over it like an automated hawk.
 
-### [Send an HSTS Header for Increased Security](/docs/hsts/)
+### [Send an HSTS Header for Increased Security](/hsts/)
 Install a plugin or module to prevent cookie hijacking and get an A+ rating from SSL Labs.
 
-### [Setup Availability Monitoring](/docs/new-relic/#configure-ping-monitors-for-availability)
+### [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability)
 New Relic provides a free availability monitoring service that sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails.
 
 </Accordion>

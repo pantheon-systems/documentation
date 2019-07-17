@@ -28,19 +28,19 @@ Pantheon sites have all site resources in the region in which it was created. Th
 
 Automated and manual backups of all site components (code, database, and files) are stored in the EU and created by job workers also running in the EU. Additionally, any database or file clones between site environments are run by EU job workers.
 
-Localized, EU-specific [Disaster Recovery](/docs/disaster-recovery/) is also available.
+Localized, EU-specific [Disaster Recovery](/disaster-recovery/) is also available.
 
 With this set of EU-specific resources, now you can run WordPress or Drupal sites on Pantheon and meet the European Union's legal, regulatory, or data sovereignty requirements.
 
 ## Create a New Site in a New Region
 
-[Create a new Site](/docs/sites/) from the Dashboard and select the Region:
+[Create a new Site](/sites/) from the Dashboard and select the Region:
 
-![Select a Region from the Create Your Pantheon Site screen](/source/docs/assets/images/dashboard/create-pantheon-site.png "Select a Region from the Create Your Pantheon Site screen")
+![Select a Region from the Create Your Pantheon Site screen](/sour../images/dashboard/create-pantheon-site.png "Select a Region from the Create Your Pantheon Site screen")
 
 ### Create a New Site in a Specific Region using Terminus
 
-1. Install and authenticate [Terminus](/docs/terminus/). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/docs/terminus/updates/).
+1. Install and authenticate [Terminus](/terminus/). The commands used for International Regions require Terminus 2.0 or newer. If you're already running Terminus, be sure to update to the [latest version](/terminus/updates/).
 1. Use Terminus to create a new site associated with your organization and include the `--region=eu` option.
 
  - Available regions:
@@ -58,7 +58,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
  terminus site:create my-eu-site-name "My EU Site Name" "WordPress" --org "My Organization Name" --region eu
  ```
 
-  ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](../docs/assets/images/create-site-eu.png)
+  ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](../images/create-site-eu.png)
 
   See `terminus site:create --help` for more information on the options and values used in this command.
 
@@ -66,9 +66,9 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 
 1.  Create a new site (as described above) 
 1.  Copy over the site's code, database, and files.
-    * For details see [How to Manually Migrate Sites to Pantheon](/docs/migrate-manual/#import-your-code).
+    * For details see [How to Manually Migrate Sites to Pantheon](/migrate-manual/#import-your-code).
 1.  Move domains and DNS to the new site.
-    * For more info see the [Relaunch Procedure](/docs/relaunch/#relaunch-procedure) doc.
+    * For more info see the [Relaunch Procedure](/relaunch/#relaunch-procedure) doc.
 
 ### Professional Services Migration
 If you'd like help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available.
@@ -81,7 +81,7 @@ Use the Dashboard to see the Pantheon Region in which the site is hosted:
 1.  Click **Settings**, then **About Site**
 1.  **Region** will show either `United States` by default, or the name of the International Region in which the Site is hosted.
 
-![Site Dashboard > Settings > About Site > Region: European Union](../docs/assets/images/settings-about-site-region-eu.png)
+![Site Dashboard > Settings > About Site > Region: European Union](../images/settings-about-site-region-eu.png)
 
 You can also get this information via Terminus.
 
@@ -127,4 +127,4 @@ More features are in active development. [Contact us](https://pantheon.io/contac
 ### Can I move an existing site to a new region?
 Yes, however you must migrate your existing site to a new site that was configured for the new region during creation ([as described above](#create-a-new-site-in-a-new-region)).
 
-Contact your account owner or our [Sales team](https://pantheon.io/contact-us) to learn about Pantheon's migration services or review the [relaunch procedure](/docs/relaunch/) for steps on how to migrate the site yourself.
+Contact your account owner or our [Sales team](https://pantheon.io/contact-us) to learn about Pantheon's migration services or review the [relaunch procedure](/relaunch/) for steps on how to migrate the site yourself.

@@ -13,16 +13,16 @@ We do not recommend directly restoring a Live environment from a backup; instead
 
 </Alert>
 
-If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/docs/undo-commits) **before** attempting a site restore.
+If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/undo-commits) **before** attempting a site restore.
 
-If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/docs/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/docs/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/docs/rsync-and-sftp)
+If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/rsync-and-sftp)
 
 ## Before you Begin the Restore Process
 It is important that you and your team know that this is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in when backed up.
 
-When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/docs/support).
+When a restore starts, it is placed in a queue and executed. Depending on the size of the site, this operation may take some time; be patient and do not attempt to restart the restore unless you are confident that it completed. During the process of the restore, files may show as missing and the site may show as unavailable. When in doubt, [contact support](/support).
 
-![Backup tool](../docs/assets/images/dashboard/backup-tool.png)
+![Backup tool](../images/dashboard/backup-tool.png)
 
 ## Restore an Environment From Its Own Backup
 
@@ -30,17 +30,17 @@ Restore a manual or automatic backup (Code, Database, and Files) by clicking the
 
 <Alert title="Note" type="info">
 
-For development environments (e.g., Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (e.g., Test and Live). For details, see [The Site Dashboard](/docs/sites/#code).
+For development environments (e.g., Dev and Multidevs), the **Restore** button is only available when **Development Mode** is set to Git mode. This does not apply to production environments (e.g., Test and Live). For details, see [The Site Dashboard](/sites/#code).
 
 </Alert>
 
-![Backups and Restore Button](../docs/assets/images/dashboard/restore-button.png)
+![Backups and Restore Button](../images/dashboard/restore-button.png)
 
 
 ## Restore an Environment From Another Environment's Backup
 From within the source environment, find the backup you want to restore and click the download link for Database and Files:
 
-![Temporary backup link](../docs/assets/images/dashboard/direct-download-archive.png)
+![Temporary backup link](../images/dashboard/direct-download-archive.png)
 
 This provides a temporary private link directly from Google Cloud Storage, the external backup host. These links will expire after a few minutes; if the link is no longer working, return to the Dashboard and get a new link. If you want to directly download the backup part (required for code), click **Direct Download**. Otherwise, copy the provided URL.
 
@@ -54,7 +54,7 @@ wget "https://storage.googleapis.com/gcs-pantheon-backups/..." -O output-file
 To restore Database and Files, navigate to the target environment and click the **Workflow** tab. Choose **File** and upload the backups for Database and Files if you downloaded the archives directly, otherwise provide the temporary URL for each backup. Click **Import** for each backup part to restore.
 
 If you have an existing database or file archive that you want to import from an external source, you can also upload the content here.
-![Workflow Tab](../docs/assets/images/dashboard/workflow-tab.png)
+![Workflow Tab](../images/dashboard/workflow-tab.png)
 
 ### Restore Code
 Code archives contain the full remote Git repository and reflect the state of code for the given environment. Backups created on the Test and Live environments automatically checkout the [`git tag`](https://git-scm.com/book/en/v2/Git-Basics-Tagging) associated with the most recent deployment. However, if you would like to rewind an environment's codebase to a previous state we recommend using `git revert` or `git reset` instead of a code archive.
@@ -65,7 +65,7 @@ This method is recommended for distributed teams working collaboratively. To und
 1. Identify the commit you want to undo using the commit history provided in the Site Dashboard or by reviewing `git log` locally.
 2. Copy the commit ID:
 
- ![commit ID](../docs/assets/images/dashboard/commit-id.png)
+ ![commit ID](../images/dashboard/commit-id.png)
 
 3. Replace **ID** with the commit ID and run: `git revert ID --no-edit`
 4. Push the reverted codebase to Pantheon: `git push origin master`
@@ -79,7 +79,7 @@ This is a destructive process. If you're not comfortable with this technique, us
 1. Identify the last commit you want included using the commit history provided within the Site Dashboard or by reviewing `git log` locally.
 2. Copy the commit ID:
 
- ![commit ID](../docs/assets/images/dashboard/commit-id.png)
+ ![commit ID](../images/dashboard/commit-id.png)
 
 3. Replace **ID** with the commit ID you want to reset and run: `git reset ID --hard`
 4. Push the reset codebase to Pantheon: `git push origin master --force`
@@ -95,8 +95,8 @@ The restore process removes any recent content or changes applied to your site s
 
 If you still want to restore a backup to the Live environment, we recommend the following steps:
 
-- [Lock the environment first](/docs/security/)
-- [Run a backup](/docs/backups/) of LIVE, in order to have a copy of files and the database that will be overwritten
+- [Lock the environment first](/security/)
+- [Run a backup](/backups/) of LIVE, in order to have a copy of files and the database that will be overwritten
 - Run the restore while the site is still locked
 
 These steps allow you to recreate any new content manually after the process is complete. It also restricts access while the restore process is still running, which is a good practice to avoid conflicts or data corruption.
@@ -104,7 +104,7 @@ These steps allow you to recreate any new content manually after the process is 
 ## Restoring Large Sites
 Large sites that have more than 100GB files can take too long to restore and are likely to fail. We recommend the same steps as [restoring to the Live environment](#restore-the-live-environment) for a safer process.
 
-Alternately, consider restoring only the code and database from backups, and move the content back up over [rsync](/docs/rsync-and-sftp).
+Alternately, consider restoring only the code and database from backups, and move the content back up over [rsync](/rsync-and-sftp).
 
 ## Frequently Asked Questions
 

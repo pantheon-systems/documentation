@@ -6,15 +6,15 @@ categories: []
 ---
 [Pantheon Secure Integration](https://pantheon.io/features/secure-integration), formerly known as Pantheon Enterprise Gateway (PEG), creates a secure tunnel between your firewall and your public facing website. This is available for customers with an annual contract. [Contact us](https://pantheon.io/contact-us) for more information.
 
-One of the effects of the elastic nature of Pantheon's platform is that sites have a [dynamic outgoing IP](/docs/outgoing-ips/). Container IP addresses are not constant, so direct connections aren't sustainable. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. Secure Integration provides a solution.
+One of the effects of the elastic nature of Pantheon's platform is that sites have a [dynamic outgoing IP](/outgoing-ips/). Container IP addresses are not constant, so direct connections aren't sustainable. This can be a problem if your site needs to communicate with another service that restricts traffic by source IP. Secure Integration provides a solution.
 
 ## How It Works
 Secure Integration uses TLS encryption to create a tunnel from the application containers to a pair of [F5 load balancers](https://f5.com/glossary/load-balancer), offering a consistent IP address range from which requests are made to your local service.
 
-![Secure Integration diagram](../docs/assets/images/si-diagram.png)
+![Secure Integration diagram](../images/si-diagram.png)
 
 ## Create a Secure Tunnel
-[Contact support](/docs/support) and provide the following for each of your remote services:
+[Contact support](/support) and provide the following for each of your remote services:
 
 * IP address
 * Port number
@@ -53,7 +53,7 @@ In cases where you cannot supply a direct PHP constant, consider wrapping it int
 ```
 $externalconnection = “http://127.0.0.1:” . PANTHEON_SOIP_EXAMPLE;
 ```
-See also: [FAQ and Troubleshooting for LDAP](/docs/ldap-and-ldaps/#frequently-asked-questions)
+See also: [FAQ and Troubleshooting for LDAP](/ldap-and-ldaps/#frequently-asked-questions)
 
 ## Considerations
 ### Set Reasonable Timeouts

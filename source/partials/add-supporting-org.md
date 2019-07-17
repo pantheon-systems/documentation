@@ -8,12 +8,12 @@ Because Supporting Organizations have full access to a site, only the site owner
 
 1. At the bottom of the Manage Team window, click <span class="glyphicons glyphicons-plus-sign"></span> **Add Supporting Organization**:
 
-  ![Add a supporting organization button](../docs/assets/images/dashboard/multi_org1.png)
+  <Image alt="Add a supporting organization button" path="dashboard/multi_org1.png" />
 
 1. Enter the agency's full name and click **Search**. The name must match exactly.
 
 1. Once the agency has been located and confirmed to match the agency intended, click the **Add** button:
 
-  ![Confirm supporting organization](../docs/assets/images/dashboard/multi_org2.png)
+  <Image alt="Confirm supporting organization"  path="dashboard/multi_org2.png" />
 
   The agency will receive an email notification.

@@ -67,7 +67,7 @@ The [rsync configuration workflow](https://github.com/pantheon-systems/drush-con
 ### Three-way Merge
 Additionally, the [three-way merge page](https://github.com/pantheon-systems/drush-config-workflow/blob/master/docs/three_way_merge.md) in this repository describes what to do when the `config-merge` tool encounters a conflict, and brings up a three-way merge tool such as [kdiff3](http://kdiff3.sourceforge.net/). This tool can considerably reduce the time needed to comprehend and resolve merge conflicts.
 
-![MySQL Credentials](../docs/assets/images/kdiff3-user-field-conflicts.png)
+![MySQL Credentials](../images/kdiff3-user-field-conflicts.png)
 
 ### Installation Script
 If you would like to try out any of the example scenarios presented in the repository, there is also a handy installation script that will quickly set up a local environment for you to use. It can be used to either clone a Pantheon site locally, or it can create both sites locally. Instructions on how to use the script are detailed on the [installation page](https://github.com/pantheon-systems/drush-config-workflow/blob/master/INSTALL.md).
@@ -75,7 +75,7 @@ If you would like to try out any of the example scenarios presented in the repos
 ## Relocated Configuration Directory
 Configuration files can contain sensitive information. Drupal takes some measures to protect the default configuration directory, but the conventional way to secure these files is to locate them outside of the document root so they are not web accessible. Following this convention may help make site configuration easier to manage.
 ### Before you Begin
-- Refer to [Serving Sites from the Web Subdirectory](/docs/nested-docroot/) to enable nested docroot on a new or existing Drupal 8 site.
+- Refer to [Serving Sites from the Web Subdirectory](/nested-docroot/) to enable nested docroot on a new or existing Drupal 8 site.
 
 ### Configure and Relocate
 After implementing a nested docroot, set a new path (`/config`) for configuration directories by adding the following to `settings.php`:

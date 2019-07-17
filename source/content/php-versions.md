@@ -9,15 +9,15 @@ Upgrading your site's PHP version will improve the security, performance, and su
 ## Before You Begin
 Older software is more likely to contain code that is incompatible with recent PHP versions. Before you change your PHP version:
 
-- Update core to the latest release. For details, see [WordPress and Drupal Core Updates](/docs/core-updates/).
-- Update themes, plugins, and modules. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/docs/cms-admin/).
+- Update core to the latest release. For details, see [WordPress and Drupal Core Updates](/core-updates/).
+- Update themes, plugins, and modules. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin/).
 
 ## Verify Current PHP Versions
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
 
 <Alert title="Note" type="info">
 
-Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. See [Deploying Configuration Changes to Multidev](/docs/pantheon-yml/#deploying-configuration-changes-to-multidev) for more information.
+Changes made to the `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. See [Deploying Configuration Changes to Multidev](/pantheon-yml/#deploying-configuration-changes-to-multidev) for more information.
 
 </Alert>
 
@@ -57,7 +57,7 @@ You do not need to specify the PHP version's exact point release (e.g, `7.2.6`),
 
 Now your site’s PHP version is determined via `pantheon.yml`, and managed in version control.
 
-The next time you [push your changes](/docs/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
+The next time you [push your changes](/git#push-changes-to-pantheon) back to Pantheon, your site will begin using the newly specified PHP version.
 
 ### Verify Changes
 
@@ -91,7 +91,7 @@ Modify `pantheon.yml` until valid and commit the fix before attempting to push a
 
 <Alert title="Note" type="info">
 
-Changes to `pantheon.yml` [deployed as hotfixes](/docs/pantheon-yml#deploying-hotfixes) are not detected.
+Changes to `pantheon.yml` [deployed as hotfixes](/pantheon-yml#deploying-hotfixes) are not detected.
 
 </Alert>
 
@@ -99,11 +99,11 @@ Changes to `pantheon.yml` [deployed as hotfixes](/docs/pantheon-yml#deploying-ho
 
 When you upload a new or modified `pantheon.yml` file in SFTP mode, your site dashboard will detect the changes:
 
-![The Site Dashboard sees changes to pantheon.yml](../docs/assets/images/dashboard/pantheon-yml-changes-sftp.png)
+![The Site Dashboard sees changes to pantheon.yml](../images/dashboard/pantheon-yml-changes-sftp.png)
 
 If the contents of `pantheon.yml` are valid, you can commit normally. If there is a problem with the file, the dashboard will fail to commit and display the error. In the example below we've attempted to set the PHP version to 12:
 
-![The Site Dashboard doesn't commit invalid changes](../docs/assets/images/dashboard/pantheon-yml-failure-sftp.png)
+![The Site Dashboard doesn't commit invalid changes](../images/dashboard/pantheon-yml-failure-sftp.png)
 
 ## Troubleshoot Post-Upgrade Errors
 
@@ -121,9 +121,9 @@ If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`
 
 * [PHP Supported Versions](https://secure.php.net/supported-versions.php)
 * [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)
-* [Log Files on Pantheon](/docs/logs)
-* [PHP Errors and Exceptions](/docs/php-errors/)
-* [The pantheon.yml Configuration File](/docs/pantheon-yml/)
-* [Securely Working with phpinfo](/docs/phpinfo/)
+* [Log Files on Pantheon](/logs)
+* [PHP Errors and Exceptions](/php-errors/)
+* [The pantheon.yml Configuration File](/pantheon-yml/)
+* [Securely Working with phpinfo](/phpinfo/)
 * [php.net - Backward Incompatible Changes](https://secure.php.net/manual/en/migration70.incompatible.php)
-* [Debug Intermittent PHP 7 Notices](/docs/deprecated-constructor-notices)
+* [Debug Intermittent PHP 7 Notices](/deprecated-constructor-notices)

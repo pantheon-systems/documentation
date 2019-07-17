@@ -21,7 +21,7 @@ Be sure that you:
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
 
 ## Install and Authenticate Terminus
-Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/docs/terminus/).
+Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/terminus/).
 
 1. Install Terminus within the `$HOME/terminus` directory:
 
@@ -37,7 +37,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
   terminus auth:login --machine-token=‹machine-token›
   ```
 
-  For details, see [Terminus Manual: Install](/docs/terminus/install/).
+  For details, see [Terminus Manual: Install](/terminus/install/).
 
 3. Once installed, verify your session:
 
@@ -50,7 +50,9 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 ## Create Your Site and Initialize Environments
 
 <Alert title="Note" type="info">
- The next few secions of this guide use the example variables `tessa-site-wp` and `"Terminus Demo Site"` as the site name and label. Make sure to replace each instance, as well as other variables like the site URL and user/password combinations, with your desired values.
+
+The next few secions of this guide use the example variables `tessa-site-wp` and `"Terminus Demo Site"` as the site name and label. Make sure to replace each instance, as well as other variables like the site URL and user/password combinations, with your desired values.
+
 </Alert>
 
 1. Create a new WordPress site on Pantheon:
@@ -137,7 +139,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 
   If you have the Site Dashboard open, you'll see that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit, but we'll continue on the command line.
 
-  ![Pantheon Site Dashboard: Install CF7](../../docs/assets/images/wordpress-commandline-install-cf7.png)
+  <Image alt="Pantheon Site Dashboard: Install CF7" src="wordpress-commandline-install-cf7.png" />
 
 
 2. Review the file changes:
@@ -153,7 +155,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
   ```
 
   If you refer back to the Site Dashboard, you'll see the commit on the Dev environment:
-  ![Pantheon Site Dashboard: Commit CF7](../../docs/assets/images/wordpress-commandline-commit-cf7-to-dev.png)
+  <Image alt="Pantheon Site Dashboard: Commit CF7" src="wordpress-commandline-commit-cf7-to-dev.png" />
 
 4. Deploy the code to Test and pull content down from Live:
 
@@ -191,7 +193,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
   terminus wp $TERMINUS_SITE.live -- plugin activate contact-form-7
   ```
 
-For this example, manually applying configuration changes is a simple and short task. We're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/docs/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
+For this example, manually applying configuration changes is a simple and short task. We're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
 
 
 ## Install WordPress Themes
@@ -223,7 +225,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 
   You should see the new theme within **Appearance** > **Themes** of the WordPress Dashboard:
 
-  ![Pantheon Site Dashboard: Child Theme Installed in WordPress](../../docs/assets/images/wordpress-commandline-child-theme-wp.png)
+  <Image alt="Pantheon Site Dashboard: Child Theme Installed in WordPress" src="wordpress-commandline-child-theme-wp.png" />
 
   Now you're ready to edit your child theme. This allows your parent theme, in our case Shapely, to receive updates without conflict or interference to the functionality of the site.
 
@@ -255,6 +257,6 @@ If you're a developer who lives in the command line, you now see the power of Te
 
 Here are some suggestions on where to go from here:
 
- - [Use the Pantheon Workflow](/docs/pantheon-workflow/)
- - [WordPress Configuration Management (WP-CFM)](/docs/wp-cfm/)
- - [The Terminus Manual](/docs/terminus/)
+ - [Use the Pantheon Workflow](/pantheon-workflow/)
+ - [WordPress Configuration Management (WP-CFM)](/wp-cfm/)
+ - [The Terminus Manual](/terminus/)

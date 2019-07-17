@@ -19,7 +19,7 @@ image: multisite
 ---
 You're just about to configure your WordPress Site Network.
 
-Our expectation at this point is that you have a new WordPress Site Network created for you by a Pantheon employee. If you do not yet have a WordPress Site Network, refer to the [introduction](/docs/guides/multisite/) page of this guide. When you visit the Dev environment's site URL, you should be redirected to WordPress' web-based installer.
+Our expectation at this point is that you have a new WordPress Site Network created for you by a Pantheon employee. If you do not yet have a WordPress Site Network, refer to the [introduction](/guides/multisite/) page of this guide. When you visit the Dev environment's site URL, you should be redirected to WordPress' web-based installer.
 
 <Alert title="Note" type="info">
 
@@ -29,7 +29,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 ## Install the WordPress Site Network
 
-Using [Terminus](/docs/terminus/) is our recommended way to install a WordPress Site Network.
+Using [Terminus](/terminus/) is our recommended way to install a WordPress Site Network.
 
 1. Install the most recent release of Terminus:
 
@@ -85,7 +85,7 @@ In order for things to run smoothly on Pantheon, we need to adjust the configura
 
 3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
-  If you run into issues, please refer to [this documentation](/docs/sftp/#sftp-connection-information).
+  If you run into issues, please refer to [this documentation](/sftp/#sftp-connection-information).
 
 4. Now open the `code` folder in your SFTP client, and download your site's `wp-config.php` file.
 
@@ -144,7 +144,7 @@ A warning may appear in the WordPress dashboard that you need to update your `.h
 Congratulations on setting up your first WordPress Site Network. You are on your way to glory! When logged in to the WordPress Dashboard, you'll see a new **My Sites** menu item in the toolbar:
 
 
-![Enabling the network](../../docs/assets/images/wp-network-admin-sites.png)
+<Image alt="Enabling the network" src="wp-network-admin-sites.png" />
 
 You will have one site — go ahead and create another if you'd like. If you chose to use WordPress Site Networks with subdirectories, you'll be able to access the site right away. If you chose to use subdomains, you'll need to map a custom hostname to the environment before you can access the new environment.
 

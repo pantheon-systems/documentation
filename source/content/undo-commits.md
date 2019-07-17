@@ -4,7 +4,7 @@ description: Learn how to revert a Git commit before and after pushing to Panthe
 tags: [debugcode, git]
 categories: []
 ---
-We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/docs/core-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
+We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/core-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
 
 <Alert title="Warning" type="danger">
 Using `git revert` to revert an upstream update will result in the dashboard being unable to pull upstream updates. If an upstream update introduces a regression or bug, you should use `git reset --hard COMMIT_BEFORE_MERGE` so that the dashboard can accurately judge the state of your site repository and whether it is behind the upstream.
@@ -88,7 +88,7 @@ git push origin master
 
 
 ## Reset Dev Environment to Live
-If the Dev environment gets tangled up with changes you wish to abandon, you can reset history to match the current state of Live using [Terminus](/docs/terminus). Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques. Also note, this resets the Dev environment's codebase only, it does not clone Live's database or files down to Dev. 
+If the Dev environment gets tangled up with changes you wish to abandon, you can reset history to match the current state of Live using [Terminus](/terminus). Again, this is destructive. If you're not comfortable with this technique, use one of the revert techniques. Also note, this resets the Dev environment's codebase only, it does not clone Live's database or files down to Dev. 
 
 Identify the most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live (replace `<site>` with your site's name):
 ```

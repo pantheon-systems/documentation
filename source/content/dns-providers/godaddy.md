@@ -11,8 +11,8 @@ editpath: dns-providers/godaddy.md/
 Be sure that you have a:
 
 - Registered domain name using GoDaddy to host DNS
-- [Paid Pantheon plan](/docs/guides/launch/plans/)
-- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans/)
+- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -25,7 +25,7 @@ Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in
 ## Configure DNS Records on GoDaddy
 ### A Record
 
-![Example A record](../docs/assets/images/godaddy-dns-a-record.png)
+![Example A record](../images/godaddy-dns-a-record.png)
 
 1. Click your GoDaddy profile in the top right menu bar and select **Manage My Domains**.
 2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Manage DNS**.
@@ -47,7 +47,7 @@ Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in
 
 ### AAAA Records
 
-![Example AAAAA record](../docs/assets/images/godaddy-dns-aaaa-record.png)
+![Example AAAAA record](../images/godaddy-dns-aaaa-record.png)
 
 1. Click the **Add** button and select **AAAA** from the type dropdown menu.
 2. Enter **@** in the **Host** field and enter the first AAAA record value provided by Pantheon in the **Points to** field.
@@ -74,5 +74,5 @@ If you receive an error message that says `The specified record already exists`,
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/docs/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)

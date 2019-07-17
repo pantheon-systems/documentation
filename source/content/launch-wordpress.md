@@ -30,7 +30,7 @@ Congratulations! Your Pantheon site environments have been configured. From the 
 ## Launch Development Site
 
 You will eventually have three environments (Dev, Test, and Live), each with a separate version of your website, but you need to finish development site installation first. Click **Visit Development Site** at the top left of your Dashboard to launch the site.
-![Visit development site](../docs/assets/images/dashboard/site-admin-env-links.png)
+![Visit development site](../images/dashboard/site-admin-env-links.png)
 
 <!-- #6 -->
 ## Complete the Installation
@@ -45,8 +45,8 @@ You are ready to start development! Click the **Visit Development Site** button 
 
 #### Further Reading  
 
-- [Using the Pantheon Workflow](/docs/pantheon-workflow)
-- [Developing with SFTP](/docs/sftp)
-- [Starting with Git](/docs/git)
-- [Installing Plugins via WP Admin Interface](/docs/cms-admin)
-- [WordPress Site Networks](/docs/guides/multisite/)
+- [Using the Pantheon Workflow](/pantheon-workflow)
+- [Developing with SFTP](/sftp)
+- [Starting with Git](/git)
+- [Installing Plugins via WP Admin Interface](/cms-admin)
+- [WordPress Site Networks](/guides/multisite/)

@@ -6,7 +6,7 @@ categories: [drupal]
 ---
 By default, Pantheon runs Drush 8 on newly created Drupal sites. Drush 8 is compatible with Drupal 6, 7, and 8.
 
-The Drush version is set when the site is created. Sites created before Nov 4, 2015 (and Drupal 8 sites created before Sep 3, 2015) use an older version of Drush that is incompatible with later versions of PHP. You can [check your current Drush version via Terminus](/docs/drush-versions/#verify-current-drush-version). Updating Drush can be accomplished by [a simple addition to your pantheon.yml file](/docs/drush-versions/#configure-drush-version) below.
+The Drush version is set when the site is created. Sites created before Nov 4, 2015 (and Drupal 8 sites created before Sep 3, 2015) use an older version of Drush that is incompatible with later versions of PHP. You can [check your current Drush version via Terminus](/drush-versions/#verify-current-drush-version). Updating Drush can be accomplished by [a simple addition to your pantheon.yml file](/drush-versions/#configure-drush-version) below.
 
 <Alert title="Note" type="info">
 
@@ -15,16 +15,16 @@ When running Drush locally, we highly recommend running Drush version 8.1.15 or 
 </Alert>
 
 ## Terminus Drush and Local Drush
-[Terminus](/docs/terminus/) makes remote Drush calls on sites without using a local installation, eliminating compatibility issues between local and remote installs. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/docs/guides/terminus-drupal-site-management/).
+[Terminus](/terminus/) makes remote Drush calls on sites without using a local installation, eliminating compatibility issues between local and remote installs. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management/).
 
 ## Verify Current Drush Version
-Verify the current version of Drush running remotely on Pantheon using [Terminus](/docs/terminus):
+Verify the current version of Drush running remotely on Pantheon using [Terminus](/terminus):
 ```bash
 terminus drush <site>.<env> -- status | grep "Drush version"
 ```
 
 ## Configure Drush Version
-You can change a site's Drush version via the [pantheon.yml file](/docs/pantheon-yml):
+You can change a site's Drush version via the [pantheon.yml file](/pantheon-yml):
 ```yaml
 api_version: 1
 
@@ -47,7 +47,7 @@ Pantheon currently supports Drush 8. While Drush 5 and 7 are available if needed
 | Drush 7       | PHP 5.3.0+          |
 | Drush 8       | PHP 5.4.5+          |
 
-See our guide on [Upgrading PHP Versions](/docs/php-versions/).
+See our guide on [Upgrading PHP Versions](/php-versions/).
 
 ## Troubleshooting
 
@@ -62,5 +62,5 @@ For more information, see [Avoiding “Dependency Hell” with Site-Local Drush]
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
 - [Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
 - [Expand Your Use of Drush on Pantheon with More Commands (Blog)](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands)
-- [Drupal Drush Command-Line Utility](/docs/drush)
-- [The pantheon.yml Configuration File](/docs/pantheon-yml)
+- [Drupal Drush Command-Line Utility](/drush)
+- [The pantheon.yml Configuration File](/pantheon-yml)

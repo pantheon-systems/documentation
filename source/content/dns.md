@@ -7,9 +7,9 @@ categories: []
 contributors: [alexfornuto]
 ---
 
-**DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/docs/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
+**DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
 
-![DNS Reccomendations](../docs/assets/images/dashboard/domain-added.png)
+![DNS Reccomendations](../images/dashboard/domain-added.png)
 
 While Pantheon does not offer DNS management services, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site.
 
@@ -18,54 +18,64 @@ While Pantheon does not offer DNS management services, we can help you to unders
 We offer DNS provider-specific instructions for several common DNS hosts:
 
 
- - [1&1 Domain Configuration](/docs/1-and-1/)
- - [Cloudflare Domain Configuration](/docs/cloudflare/)
- - [DNS Made Easy Domain Configurationi](/docs/dns-made-easy/)
- - [DreamHost Domain Configuration](/docs/dreamhost/)
- - [Dyn Domain Configuration](/docs/dyn/)
- - [eNom Domain Configuration](/docs/enom/)
- - [Gandi Domain Configuration](/docs/gandi/)
- - [GoDaddy Domain Configuration](/docs/godaddy/)
- - [Google Domain Configuration](/docs/google/)
- - [Namecheap Domain Configuration](/docs/namecheap/)
- - [Network Solutions Domain Configuration](/docs/network-solutions/)
- - [Amazon Route 53 Domain Configuration](/docs/route53/)
+ - [1&1 Domain Configuration](/1-and-1/)
+ - [Cloudflare Domain Configuration](/cloudflare/)
+ - [DNS Made Easy Domain Configurationi](/dns-made-easy/)
+ - [DreamHost Domain Configuration](/dreamhost/)
+ - [Dyn Domain Configuration](/dyn/)
+ - [eNom Domain Configuration](/enom/)
+ - [Gandi Domain Configuration](/gandi/)
+ - [GoDaddy Domain Configuration](/godaddy/)
+ - [Google Domain Configuration](/google/)
+ - [Namecheap Domain Configuration](/namecheap/)
+ - [Network Solutions Domain Configuration](/network-solutions/)
+ - [Amazon Route 53 Domain Configuration](/route53/)
 
 ## DNS Terminology
 
-<DefList>
+<dl>
 
-<Definition name="TLD">
+<dt>TLD</dt>
+
+<dd>
 
 Stands for **Top Level Domain**. This is the last piece of your website URL (`.com`, `.net`, `.org`, etc)
 
-</Definition>
+</dd>
 
-<Definition name="Registrar">
+<dt>Registrar</dt>
+
+<dd>
 
 The service through which you purchase a domain name. Most registrars also offer DNS management services.
 
-</Definition>
+</dd>
 
-<Definition name="Domain">
+<dt>Domain</dt>
+
+<dd>
 
 The last section of your website name before the TLD, the domain is what you purchase from the Registrar.
 
-</Definition>
+</dd>
 
-<Definition name="Subdomain">
+<dt>Subdomain</dt>
+
+<dd>
 
 Separate by periods (`.`), subdomains preceed the domain name. `www` is the most commonly seen subdomain. Subdomains can also stack (example: `www.something.example.com`).
 
-</Definition>
+</dd>
 
-<Definition name="Authoritative Name Server">
+<dt>Authoritative Name Server</dt>
+
+<dd>
 
 The service that publishes your domain's DNS records
 
-</Definition>
+</dd>
 
-</DefList>
+</dl>
 
 ## DNS Record Types
 
@@ -177,7 +187,7 @@ An `A` record points a domain name to an IPv4 address. A `CNAME` record points a
 
 Pantheon will provide both `A` and `CNAME` values, depending on the domains provided:
 
-![DNS Values provided by the Pantheon Site Dashboard](../docs/assets/images/dashboard/dns-values.png)
+![DNS Values provided by the Pantheon Site Dashboard](../images/dashboard/dns-values.png)
 
 If your DNS provider doesn't allow `CNAME` records, you can use `nslookup` to determine the IP address for the domain value, and then supply that as an `A` record:
 
@@ -205,6 +215,6 @@ Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 
 ## See Also
 
- - [Launch Essentials](/docs/guides/launch/)
- - [Platform and Custom Domains](/docs/domains/)
- - [Configure Redirects](/docs/redirects/)
+ - [Launch Essentials](/guides/launch/)
+ - [Platform and Custom Domains](/domains/)
+ - [Configure Redirects](/redirects/)

@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: pantheonsystems/documentation:latest
+      - image: circleci/node:10.16.0-browsers
     working_directory: ~/build
     steps:
       - checkout
@@ -13,26 +13,38 @@ jobs:
       - run:
           name: Prep Environment
           command: |
+            sudo apt install -y rsync composer php-xml
+            composer global require pantheon-systems/terminus
+            cd ~/build/gatsby
+            sudo npm install -g gatsby
             npm install
-            ./node_modules/.bin/grunt
-            mkdir output_prod
-            cd output_prod && ln -s ./ source
       - run:
-          name: Sculpin Generate
-          command: /documentation/bin/sculpin generate --env=prod
+          name: Import GitHub Token
+          command: |
+            cd ~/build/gatsby
+            touch .env.production
+            echo "GITHUB_API=$GITHUB_TOKEN" > .env.production
+      - run:
+          name: Gatsby Build
+          command: |
+            cd ~/build/gatsby
+            gatsby build --prefix-paths | cat
       - run:
           name: Deploy Multidev environment
-          command: bash ./scripts/deploy-multidev.sh
+          command: |
+            bash ./scripts/deploy-multidev.sh
       - run:
           name: Start Ghost Driver
           command: phantomjs --webdriver=8643
           background: true
       - run:
-          name: Start Sculpin
-          command: /documentation/bin/sculpin server
+          name: Start Gatsby
+          command: |
+            cd ~/build/gatsby
+            gatsby serve --prefix-paths
           background: true
       - run:
-          name: Wait for Sculpin
+          name: Wait for Gatsby
           command: dockerize -wait tcp://localhost:8000 -timeout 1m
       - run:
           name: Behat

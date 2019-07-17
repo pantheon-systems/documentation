@@ -70,11 +70,11 @@ foreach ($regex_path_patterns as $regex_path_pattern) {
 
 <Tab title="WordPress" id="wp">
 
-Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/docs/wordpress-cache-plugin) plugin for all matching requests:
+Set `Cache-Control: max-age=0` by hooking into [`send_headers`](https://codex.wordpress.org/Plugin_API/Action_Reference/send_headers). This will override `max-age` configured within the [Pantheon Cache](/wordpress-cache-plugin) plugin for all matching requests:
 
 <Alert title="Note" type="info">
 
-Place this code in an [MU Plugin](/docs/mu-plugin/) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
+Place this code in an [MU Plugin](/mu-plugin/) to ensure it's executed on all requests. Calls to the API don't invoke a theme's `functions.php` file.
 
 </Alert>
 
@@ -139,7 +139,7 @@ foreach ($regex_json_path_patterns as $regex_json_path_pattern) {
 
 </TabList>
 
-As an alternative to using HTTP headers to control downstream caching, you can set a `NO_CACHE` cookie. For details, see [Working with Cookies on Pantheon](/docs/cookies).
+As an alternative to using HTTP headers to control downstream caching, you can set a `NO_CACHE` cookie. For details, see [Working with Cookies on Pantheon](/cookies).
 
 <Alert title="Warning" type="danger">
 
@@ -170,10 +170,10 @@ X-Pantheon-Edge-Server: 108.166.58.245
 Vary: Accept-Encoding, Cookie
 </code></pre>
 
-The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/docs/test-global-cdn-caching/).
+The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/test-global-cdn-caching/).
 
 ## See Also
-* [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
-* [Working with Cookies on Pantheon](/docs/cookies)
-* [Testing Global CDN Caching](/docs/test-global-cdn-caching/)
-* [Caching: Advanced Topics](/docs/caching-advanced-topics/)
+* [Clearing Caches for Drupal and WordPress](/clear-caches/)
+* [Working with Cookies on Pantheon](/cookies)
+* [Testing Global CDN Caching](/test-global-cdn-caching/)
+* [Caching: Advanced Topics](/caching-advanced-topics/)

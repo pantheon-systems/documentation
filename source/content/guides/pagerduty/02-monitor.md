@@ -24,7 +24,7 @@ In this lesson, we'll set up a new ping monitor to periodically check the site's
 3. From the **Monitors** tab (default), click **Add new**, and enter the details for the URL you want to monitor (e.g. `https://www.example.com`).
 4. Select the locations you wish to check the site from. We recommend picking locations that correspond to your site's visitors to reduce the risk of false-positives due to long-distance networking snafus.
 5. Set the frequency for checks. We suggest 5 minutes.
-6. Leave the email field empty for alerts. We'll setup notifications in a [later lesson](/docs/guides/pagerduty/notify/) with PagerDuty.
+6. Leave the email field empty for alerts. We'll setup notifications in a [later lesson](/guides/pagerduty/notify/) with PagerDuty.
 7. Click **Create my monitor**.
 
 Pantheon can provide New Relic ping monitoring for free as part of the service. However, more advanced monitoring — full browser testing, or scripted interactions — is only available to customers on an annual contract and requires an additional cost. Contact our sales team or your dedicated account manager for details.
@@ -39,11 +39,11 @@ Now that you have a monitor setup in New Relic to periodically check your Panthe
 5. Click **Create a condition**.
 6. Select **Synthetics** and **Monitor failure** then click **Next, select entities**:
 
-  ![New Relic Alert Policy Ping Condition](../../docs/assets/images/pagerduty/new-relic-policy-ping.png)
+  <Image alt="New Relic Alert Policy Ping Condition" src="pagerduty/new-relic-policy-ping.png" />
 
 7. Select your new monitor, then **Next, define thresholds**:
 
-  ![New Relic select entity](../../docs/assets/images/pagerduty/new-relic-entity.png)
+  <Image alt="New Relic select entity" src="pagerduty/new-relic-entity.png" />
 
 8. Enter a name for the condition, like "Live Availability", and click **Create condition**.
 

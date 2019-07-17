@@ -14,7 +14,7 @@ Analyzing the MySQL slow log is an important part of troubleshooting client issu
 
 ## Download the MySQL Slow Log via SFTP
 
-To download the environment's MySQL slow log, use the [method outlined here](/docs/logs/#database-log-files).
+To download the environment's MySQL slow log, use the [method outlined here](/logs/#database-log-files).
 
 ```sql
 $ sftp -o Port=2222 live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf@dbserver.live.91fd3bea-d11b-401a09iamd9-85e0-07ca0f4ce7bf.drush.in  
@@ -107,7 +107,7 @@ Another method is to look at slow queries by the hour to see if there are spikes
 
 This means there were 70 slow queries between 10 and 11AM. That is roughly even distribution, which probably means there are a few slow queries that keep repeating.
 
-For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic Pro](/docs/debug-mysql-new-relic/).
+For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic/).
 
 ## See Also
-- [Identify and Kill Queries with MySQL Command-Line Tool](/docs/kill-mysql-queries)
+- [Identify and Kill Queries with MySQL Command-Line Tool](/kill-mysql-queries)

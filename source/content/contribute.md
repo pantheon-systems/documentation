@@ -2,7 +2,7 @@
 title: Contributing to Pantheon Docs
 description: Learn how you can contribute to the Pantheon open-source documentation project on GitHub.
 ---
-Become one of our [contributors](/docs/contributors)! Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests!
+Become one of our [contributors](/contributors)! Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests!
 
 Get involved by:
 
@@ -24,4 +24,4 @@ If you would like to work on documentation locally and see your work, we offer a
 
 ## Code of Conduct
 
-Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/docs/code-of-conduct) for details, including how to report abuse.
+Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/code-of-conduct) for details, including how to report abuse.
