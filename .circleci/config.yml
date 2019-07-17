@@ -45,11 +45,13 @@ jobs:
           background: true
       - run:
           name: Wait for Gatsby
-          command: dockerize -wait tcp://localhost:8000 -timeout 1m
+          command: dockerize -wait tcp://localhost:9000 -timeout 1m
       - run:
           name: Behat
           command: |
-            /documentation/bin/behat
+            cd ~/build
+            npm install
+            ~/build/bin/behat
       - run:
           name: a11y
           command: |
