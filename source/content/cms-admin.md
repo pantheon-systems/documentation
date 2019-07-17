@@ -22,7 +22,7 @@ export env=dev
 1. Navigate to the **<span class="glyphicons glyphicons-wrench"></span> Dev** or **<span class="glyphicons glyphicons-cloud"></span> Multidev** tab of your Pantheon Site Dashboard.
 2. Next to Connection Mode, click **SFTP**:
 
-  ![SFTP Mode](../docs/assets/images/dashboard/connection-mode-sftp.png)
+  ![SFTP Mode](../images/dashboard/connection-mode-sftp.png)
 
 
 Operations that require write access to the codebase must be executed while the site is in SFTP mode, such as:
@@ -46,15 +46,15 @@ Do not update core using the WordPress Dashboard or WP-CLI. Apply one-click upda
 
 2. WordPress will let you know when there are plugin updates available:
 
-    ![WordPress Plugin Updates Alert](../docs/assets/images/wp-updates-ready.png)
+    ![WordPress Plugin Updates Alert](../images/wp-updates-ready.png)
 
 3. From the **Plugins** menu, click **Add New** to search and install plugins directly:
 
-    ![Install a new WordPress plugin](../docs/assets/images/wp-new-plugin.png)
+    ![Install a new WordPress plugin](../images/wp-new-plugin.png)
 
 4. Themes can be installed directly through the admin panel as well:
 
-    ![Install a new WordPress theme](../docs/assets/images/wp-new-theme.png)
+    ![Install a new WordPress theme](../images/wp-new-theme.png)
 
 
 You still need to turn these changes into commits in your Pantheon Site Dashboard. Committing code will submit your changes to version control so you can deploy up to Test and Live.
@@ -62,7 +62,7 @@ You still need to turn these changes into commits in your Pantheon Site Dashboar
 ### Connection Information Prompt
 Prompts asking for connection information will occur in the WordPress Dashboard when the site is set to the wrong connection mode:
 
-![WordPress Credential Prompt](../docs/assets/images/wp-ftp-prompt.png)
+![WordPress Credential Prompt](../images/wp-ftp-prompt.png)
 
 You should *never* have to enter credentials into the WordPress Dashboard. Visit the Site Dashboard and set the environment's connection mode to **SFTP**, then try again.
 
@@ -83,7 +83,7 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 
 1. Get the URL to the code you want to install from Drupal.org:
 
-   ![Drupal.org views module](../docs/assets/images/drupal-copy-module-link.png)
+   ![Drupal.org views module](../images/drupal-copy-module-link.png)
 
 
     <Alert title="Note" type="info">
@@ -97,7 +97,7 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 
 1. Under the **Manage** menu, click on **Extend**, then **+ Install new module**. Paste the URL from Step 1. You can also upload a tarball or zip file from your desktop:
 
-    ![Installing a module on Drupal 8](../docs/assets/images/drupal-8-install-module.png)
+    ![Installing a module on Drupal 8](../images/drupal-8-install-module.png)
 
 
 </Tab>
@@ -106,13 +106,13 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 
 1. Get the URL to the code you want to install from Drupal.org:
 
-    ![Drupal.org views module](../docs/assets/images/views-module.png)
+    ![Drupal.org views module](../images/views-module.png)
 
 1. From the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab of your Pantheon Site Dashboard, click **Visit Development Site**, then navigate to the administration page.
 
 1. Paste the URL into Drupal's update manager. You can also upload a tarball or zip file from your desktop:
 
-    ![Installing via update manager](../docs/assets/images/install-via-update-manager.png)
+    ![Installing via update manager](../images/install-via-update-manager.png)
 
 </Tab>
 
@@ -123,7 +123,7 @@ You still need to turn these changes into commits in your Pantheon Site Dashboar
 ### Connection Information Prompt
 Prompts asking for connection information will occur in the Drupal Admin interface when the site is set to the wrong connection mode:
 
-![Drupal Credential Prompt](../docs/assets/images/drupal-ftp-prompt.png)
+![Drupal Credential Prompt](../images/drupal-ftp-prompt.png)
 
 You should *never* have to enter credentials into the Drupal Admin interface. Visit the Site Dashboard and set the environment's connection mode to **SFTP**, then try again.
 
@@ -204,7 +204,7 @@ terminus env:commit $site.$env --message="Install akismet wordpress-seo jetpack 
 ## Commit SFTP Changes
 While in SFTP Mode, changes made to the codebase are "staged", as visible on in the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab:
 
-![Pending changes in SFTP mode](../docs/assets/images/dashboard/dev-code-pendingchanges-commit.png)
+![Pending changes in SFTP mode](../images/dashboard/dev-code-pendingchanges-commit.png)
 
 Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.
 
@@ -218,7 +218,7 @@ This is by design. Please read [this section](/pantheon-workflow#understanding-w
 
 On some WordPress sites migrated from other platforms, when installing or updating plugins you may see an error like this:
 
-![Failed Plugin Installation](../docs/assets/images/wp-plugin-failed.png)
+![Failed Plugin Installation](../images/wp-plugin-failed.png)
 
 This is usually caused by the following lines in `wp-config.php`, added by your former host:
 

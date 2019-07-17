@@ -16,14 +16,14 @@ Learn industry best practices for Drupal caching, how to take advantage of them 
 Visit `/admin/config/development/performance` for Drupal's performance settings.
 
 ## Caching
-![caching settings](../docs/assets/images/drupal-8-performance-settings.png)
+![caching settings](../images/drupal-8-performance-settings.png)
 
 In Drupal 8, anonymous page caching is enabled by default. There is no option to turn it on or off. To disable caching for development purposes, set the "Page cache maximum age" to **no caching**.
 
 Page cache maximum age sets the max-age value in the Cache-Control headers that are output by Drupal 8. The only value that will disable Drupal's caching is "no caching". For an in-depth explanation of the max-age header, see the [W3.org official documentation](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.3).
 
 ## Bandwidth Optimization
-![bandwidth](../docs/assets/images/drupal-8-bandwidth-optimization.png)
+![bandwidth](../images/drupal-8-bandwidth-optimization.png)
 
 On the Live environment, make sure to enable **Aggregate and compress CSS files** and **Aggregate and compress JavaScript files**. This is critical for page render times by reducing the number of HTTP requests and the amount of data transferred. There is no longer a "compress cached pages" setting in Drupal 8.
 

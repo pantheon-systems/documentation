@@ -47,7 +47,7 @@ Pantheon does not support the SSH protocol. These directions allow you to have p
 1. Log in to Pantheon and go to the **Account** page.
 2. Click **SSH Keys**.
 3. Paste the copied public key into the box, and click **Add Key**.  
-![Adding SSH Keys](../docs/assets/images/dashboard/add-ssh-key-dashboard.png)
+![Adding SSH Keys](../images/dashboard/add-ssh-key-dashboard.png)
   Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on your Pantheon Account page.
 4. Open the Git bash client, and put in the command to clone your Pantheon site. This is found in the Dev environment of your site above the Git code log.
 5. If prompted, enter the password.
@@ -60,7 +60,7 @@ Generating SSH keys may add your username or the computer's hostname as a commen
 
 ## Delete a Key from Pantheon
 To delete a key, go to the **Account** page and click **SSH Keys**. Simply click the **Remove** button next to the key you want to delete.
-![Delete SSH Key](../docs/assets/images/dashboard/remove-ssh-key.png)
+![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
 
 If you have no keys remaining but still have active sites, you will still have access to them and can make edits via SFTP and Git using your account password to authenticate.
 

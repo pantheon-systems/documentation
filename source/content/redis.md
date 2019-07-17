@@ -58,7 +58,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 4. In the Dev environment's WordPress Dashboard, verify installation by selecting **Drop-ins** from the Plugins section:
 
-    ![The object-cache Drop-In Plugin](../docs/assets/images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
+    ![The object-cache Drop-In Plugin](../images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
 
     When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
 

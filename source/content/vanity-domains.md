@@ -54,13 +54,13 @@ If the domain in question is already in use, be sure to configure your vanity do
 
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain CNAME required DNS value](../docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain CNAME required DNS value](../images/dashboard/wrong-vanity-cname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain CNAME required DNS value](../docs/assets/images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain CNAME required DNS value](../images/dashboard/correct-vanity-cname-dns.png)
 
 </Alert>
 

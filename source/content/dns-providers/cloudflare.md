@@ -33,7 +33,7 @@ The following recommendations differ from those shown in the Site Dashboard. Thi
 ### Option 1: Use Cloudflare for DNS Only (Recommended)
 This configuration routes traffic to Pantheon's Global CDN exclusively. Unless you're paying for advanced Cloudflare features or if you have custom configurations (e.g. many page rules) you'd like to keep, turn off Cloudflare's CDN so that only DNS hosting services are used:
 
-![Example DNS only](../docs/assets/images/cloudflare-dns-only.png)
+![Example DNS only](../images/cloudflare-dns-only.png)
 
 1. Select **DNS** from the Cloudflare menu bar.
 2. Select **CNAME** from the dropdown menu.
@@ -59,14 +59,14 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
 
 1. Select **Crypto** from the Cloudflare menu bar and set SSL mode to **Full (Strict)**.
-  ![Enable SSL](../docs/assets/images/cloudflare-ssl.png)
+  ![Enable SSL](../images/cloudflare-ssl.png)
 2. Scroll down and enable **Always use HTTPS**
-  ![Cloudflare Always HTTPS](../docs/assets/images/cloudflare-always-https.png)
+  ![Cloudflare Always HTTPS](../images/cloudflare-always-https.png)
 3. Scroll down and enable **Automatic HTTPS Rewrites**
 4. Remove existing redirects configured via PHP in `settings.php` or `wp-config.php`.
 5. Proceed with DNS configuration as describe in Option 1, but make sure the cloud is toggled orange, not gray:
 
-   ![Example DNS only](../docs/assets/images/cloudflare-cnames.png)
+   ![Example DNS only](../images/cloudflare-cnames.png)
 
 
 ## CAA Records (Optional)
@@ -77,11 +77,11 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 2. Select **CAA** from the dropdown menu.
 3. Enter the bare domain (`example.com`) in the **Name** field then click to configure the record value:
 
-  ![caa click to configure](../docs/assets/images/cf-caa.png)
+  ![caa click to configure](../images/cf-caa.png)
 
 4. Select **Allow wildcards and specific hostnames** for the record's tag. If you are *not* stacking Cloudflare's CDN with the Pantheon Global CDN, enter `letsencrypt.org` as the value:
 
-  ![CAA configure](../docs/assets/images/cf-caa-configure.png)
+  ![CAA configure](../images/cf-caa-configure.png)
 
   If you *are* using Cloudflare's CDN, they will [automatically add](https://support.cloudflare.com/hc/en-us/articles/115000310792-Configuring-CAA-Records-) CAA records for their CA providers when Universal SSL is enabled. Do *not* add a record for `letsencrypt.org` in this case.
 
@@ -99,7 +99,7 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
 6. Click **Add Record**. Your record should look similar to the following once it has been created:
 
-  ![CAA record](../docs/assets/images/cf-caa-final.png)
+  ![CAA record](../images/cf-caa-final.png)
 
 7. Repeat this process for the `www` subdomain.
 

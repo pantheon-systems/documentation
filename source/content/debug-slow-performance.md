@@ -12,7 +12,7 @@ An often ignored cause of bad performance is [PHP errors within site code](/php-
 
 Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP-based project.
 
-![Benchmark example using Drupal's Generate Errors](../docs/assets/images/benchmark-example-generate-errors.png)
+![Benchmark example using Drupal's Generate Errors](../images/benchmark-example-generate-errors.png)
 
 Each loop executed user\_load(1, TRUE), then triggered the error. Times are rounded to 2 decimals.
 
@@ -33,14 +33,14 @@ Don’t shoot the messenger—disabling dblog will not fix bad code.
 
 As an example, if your slowest database operation is an INSERT to watchdog, then you should fix the PHP errors that are causing the writes. Notice that watchdog INSERTS is taking 70.6% of the execution time.
 
-![Example of INSERT consuming execution time](../docs/assets/images/example-insert-consuming-execution-time.png)
+![Example of INSERT consuming execution time](../images/example-insert-consuming-execution-time.png)
 
 Learn more about [Log Files on Pantheon](/logs).
 
 ## Too Many Database Queries
 The next performance killer is an excessive number of database queries per request. You can see that in the [New Relic Pro dashboard](/new-relic) by going to the Map tab, which shows  how the various low-level components in your application are performing together.
 
-![New Relic map tab](../docs/assets/images/new-relic-map.png)<br />
+![New Relic map tab](../images/new-relic-map.png)<br />
 
 Looking at an example, the average number of queries per request is shown in the lower-left, which in this case is 110 queries - a bit high. In the upper-right, the average query duration is shown and is actually very respectable.
 
@@ -62,7 +62,7 @@ Other caching systems that aren't on by default that should be enabled include [
 ### Using the Database to Cache in Drupal
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.
 
-![New Relic most time consuming queries](../docs/assets/images/new-relic-most-time-consuming-queries.png)<br />
+![New Relic most time consuming queries](../images/new-relic-most-time-consuming-queries.png)<br />
 
 Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.
 

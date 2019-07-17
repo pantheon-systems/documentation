@@ -6,7 +6,7 @@ tags: [performance, logs]
 ## Access Metrics
 1. Navigate to **<span class="glyphicons glyphicons-charts"></span> Metrics** within the **<span class="glyphicons glyphicons-cardio"></span> Live** environment of your Site Dashboard.
 2. Toggle available date ranges by clicking **Day**, **Week**, or **Month**:
-  ![Charts for pages served and visits within the Metrics tool of the Site Dashboard](../docs/assets/images/dashboard/metrics-graphs.png)
+  ![Charts for pages served and visits within the Metrics tool of the Site Dashboard](../images/dashboard/metrics-graphs.png)
 
 
 ## Available Metrics
@@ -14,7 +14,7 @@ tags: [performance, logs]
 
 Imagine two visitors go to `example.com`. The first visitor exits from the home page, but the second visitor continues to browse two additional pages. This would be tracked as **2 Visits** and **4 Pages Served**.
 
-![Diagram demonstrating how pages served and visits are tracked](../docs/assets/images/dashboard/metrics-diagram.png)
+![Diagram demonstrating how pages served and visits are tracked](../images/dashboard/metrics-diagram.png)
 
 _Visits_ and _visitors_ have different meanings. If one of the visitors returns again the next day, it would be counted as 3 Visits, but there'd be only 2 visitors.
 ## Frequently Asked Questions

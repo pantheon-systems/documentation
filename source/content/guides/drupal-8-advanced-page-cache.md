@@ -74,7 +74,7 @@ First, set up a new Drupal 8 site and add the Pantheeon Advanced Page Cache modu
 
 7. Turn on full page caching by setting the **Page cache maximum age** field to "10 min", then clear caches. We can do this from our Drupal site at `/admin/config/development/performance`:
 
-  ![Drual 8 admin screen for Performance](../../docs/assets/images/guides/drupal-8-advanced-page-cache/img1-config-dev-performance.png
+  ![Drual 8 admin screen for Performance](../../images/guides/drupal-8-advanced-page-cache/img1-config-dev-performance.png
 )
 
   You can also make those same changes using Drush via Terminus:

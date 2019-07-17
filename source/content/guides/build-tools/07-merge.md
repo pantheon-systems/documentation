@@ -23,7 +23,7 @@ This lesson demonstrates the final process of the Pull Request workflow, merging
 
   Check if your tests have completed, and the test results are green If they haven't completed, just wait a few minutes. If they failed, go back and review the changes you made.
 
-  ![Passed Pull Request](../../../docs/assets/images/pr-workflow/slogan-pr-passed.png)
+  ![Passed Pull Request](../../../images/pr-workflow/slogan-pr-passed.png)
 
 2.  Once your tests have passed, and there is nothing else that you wish to add to this particular feature, click on the **Merge Pull Request**.
 

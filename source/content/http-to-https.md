@@ -21,13 +21,13 @@ Be sure that you have:
 ## Test HTTPS availability and existing redirects
 Start by testing a simple HTML or Text file in your browser with HTTPS on your custom domain. The test is successful if the browser loads the file securely with no warnings:
 
-![Example HTTPS Test](../docs/assets/images/dummy-html-https-test.png)
+![Example HTTPS Test](../images/dummy-html-https-test.png)
 
 Requests bounced from HTTPS to HTTP indicate test failure. Remove existing redirects to HTTP within the site's framework (e.g., `wp-config.php` or `settings.php`) in addition to CDN configurations if applicable (e.g., page rules in Cloudflare).
 
 Mixed-content warnings in the browser are expected at this stage; such issues will be visible in Chrome as an HTTPS URL with either no “Secure” label *or* a “Secure” label and a small warning icon:
 
-![Mixed content browser warnings](../docs/assets/images/mixed-content-console-error.png)
+![Mixed content browser warnings](../images/mixed-content-console-error.png)
 
 Continue once you're able to load a normal page of your WordPress or Drupal site with HTTPS without _redirecting_ (browser warnings are okay for now).
 
@@ -82,7 +82,7 @@ Use the following techniques to replace insecure references to your domain in th
 
   1. From the **Test** environment, clone your database from Live:
 
-    ![Cloning the Live Database to Test](../docs/assets/images/dashboard/clone-live-to-test.png)
+    ![Cloning the Live Database to Test](../images/dashboard/clone-live-to-test.png)
 
     <Alert title="Warning" type="danger">
 
@@ -92,7 +92,7 @@ Use the following techniques to replace insecure references to your domain in th
 
   2. Now, from the **Live** environment, clone your database back from Test, making sure to select "https" under **Convert URLs' Protocol to:**:
 
-      ![Cloning the Test database to Live, while converting URLs](../docs/assets/images/dashboard/clone-test-to-live.png)
+      ![Cloning the Test database to Live, while converting URLs](../images/dashboard/clone-test-to-live.png)
 
 </Tab>
 
@@ -143,7 +143,7 @@ Location: https://www.example.com/
 
 You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/redirects/) to investigate redirect behaviors as an alternative to cURL:
 
-![Varvy Redirects example.com](../docs/assets/images/varvy-redirect-mapper.png)
+![Varvy Redirects example.com](../images/varvy-redirect-mapper.png)
 
 Check all configured services when looking for redirects to remove, like page rules on some external CDN.
 

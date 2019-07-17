@@ -30,13 +30,13 @@ Every Development environment has a toggle to switch between SFTP and Git modes;
 
 When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase, the Dashboard will track your changes and you'll see all the pending changes. You can then commit them to version control once you are happy with the results without having to ever use Git.
 
- ![Enable SFTP mode](../docs/assets/images/dashboard/sftp-enabled.png)
+ ![Enable SFTP mode](../images/dashboard/sftp-enabled.png)
 
 ## SFTP Connection Information
 
 To get your SFTP login credentials, click **SFTP Connection Info**. You will see your connection credentials and a link to connect directly with your preferred client.
 
- ![SFTP Connection Data](../docs/assets/images/dashboard/sftp-connection-info.png)<br />
+ ![SFTP Connection Data](../images/dashboard/sftp-connection-info.png)<br />
 
 The connection information is a bit different than what you might be used to, and it's based on your unique "Site ID". This is the long string at the end of your Dashboard URL.
 
@@ -58,7 +58,7 @@ It is possible to connect to an environment via SFTP by using the terminal. The 
 
 There is also a one-click option so you can connect with a GUI client. The main directory listing includes Pantheon, logs, environment data and configuration. Your website is in the `code` directory. For instance, in Mac OS Cyberduck:
 
-![Cyberduck Example](../docs/assets/images/cyberduck-example.png)
+![Cyberduck Example](../images/cyberduck-example.png)
 
 Get the instructions for other [SFTP clients](/sftp#sftp-clients).
 
@@ -70,7 +70,7 @@ Even though you are unable to use Git to push remotely with SFTP mode enabled, y
 
 After you have made a change to your code, you will see a message on the Dashboard that appears below the comment box to let you know you have uncommitted changes that are not yet in your repository. Clicking the notification message expands the listing of the pending changes.
 
-![Uncommitted changes](../docs/assets/images/dashboard/pantheon-dashboard-uncommitted-changes.png)
+![Uncommitted changes](../images/dashboard/pantheon-dashboard-uncommitted-changes.png)
 
 Write a helpful commit message to go with your changes. This will make maintaining your code a saner process, and make it easier for any other developers who pull your changes down to understand what you've done.
 
@@ -86,7 +86,7 @@ Your Dashboard tracks all changes made within your codebase. File change notific
 
 Toggle the **Connection Mode** from **SFTP** to **Git** to *permanently* discard all SFTP changes that have not been committed, such as the 119 file changes shown here:
 
-![SFTP changes ready to commit](../docs/assets/images/dashboard/sftp-enabled.png)
+![SFTP changes ready to commit](../images/dashboard/sftp-enabled.png)
 
 This can be useful when you have many changes you wish to undo or if it would otherwise be difficult to manually revert all the changes. Toggle back to **SFTP** mode when you're ready to resume SFTP development.
 

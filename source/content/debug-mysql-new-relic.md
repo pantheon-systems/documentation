@@ -31,15 +31,15 @@ At times, systems like Drupal's Watchdog appear at the top. In general, that's a
 [Download database log files](/logs/#database-log-files) and review the `mysql-slow-query.log` file. Search for the query within the log. If it isn't there, download and unzip any applicable archived slow logs (e.g. `mysqld-slow-query.log-20160606`) and search there. The archived slow logs are created by date and time, so look for the one that corresponds with the trace you are working with.
 
 Using the information from the New Relic trace, find the full query in the slow log. First, choose a distinctive part of the query. In this case I used "grep -c users\_comment.uis AS users\_comment\_uid" to get a count of the number of times that field has been included in the slow log. If the log is small enough (or if you have enough RAM), you can load it into your favorite text editor or IDE instead.  
- ![Review slow low](../docs/assets/images/review-slow-log.png)​  
+ ![Review slow low](../images/review-slow-log.png)​  
 Close out the SFTP session and get the MySQL CLI information for the Test MySQL server. If the Test server has major differences from your Live server, you can either connect to Live (not recommended) or clone your Live database to your Dev or Test environment via your Pantheon Dashboard. Once this is done, connect to the MySQL server of your choice and run the query.  
- ![Execute the query](../docs/assets/images/execute-query.png)
+ ![Execute the query](../images/execute-query.png)
 If the result confirm your suspicions, as this one does, delve in deeper to find out why the query is behaving so badly. Type [EXPLAIN](https://dev.mysql.com/doc/refman/5.7/en/explain.html) and then re-paste the query. MySQL will display extended information on how it’s [executing the query](https://dev.mysql.com/doc/refman/5.7/en/using-explain.html). Look for really odd things. For example, this one really doesn't look that bad, except the users table is referenced twice via alias and there isn't a single key index being used to search them.
- ![Extended information example](../docs/assets/images/extended-info-example.png)
+ ![Extended information example](../images/extended-info-example.png)
 Looking at that table with a MySQL `describe` command shows that there is no primary key set on the UID field.  
- ![MySQL table describe users](../docs/assets/images/mysql-table-describe-users.png)
+ ![MySQL table describe users](../images/mysql-table-describe-users.png)
 Now that the problem has been found, it can be addressed. In this case, simply adding in the primary key and re-running the query gets a much improved query performance of 0.10 seconds.  
- ![Improved query preformance](../docs/assets/images/improved-query-preformance.png)
+ ![Improved query preformance](../images/improved-query-preformance.png)
 **To recap:**
 
 1. Use New Relic Pro to narrow and identify periods of time that have high load and/or slow response times.

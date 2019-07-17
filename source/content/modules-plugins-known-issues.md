@@ -341,7 +341,7 @@ define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
 
 Be sure to add this configuration _above_ the comment to stop editing:
 
-![Autoptimize configuration](../docs/assets/images/autoptimize-config.png)
+![Autoptimize configuration](../images/autoptimize-config.png)
 
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/assuming-write-access/#create-a-symbolic-link).
 
@@ -702,7 +702,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
 **Issue 1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
-![WooZone Error](../docs/assets/images/woozone-error.png)
+![WooZone Error](../images/woozone-error.png)
 
 **Solution**: Add the following line to `wp-config.php`:
 

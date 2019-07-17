@@ -341,13 +341,13 @@ Success callouts are used infrequently, usually in guides with specific end resu
 
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain CNAME required DNS value](../docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain CNAME required DNS value](../images/dashboard/wrong-vanity-cname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain CNAME required DNS value](../docs/assets/images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain CNAME required DNS value](../images/dashboard/correct-vanity-cname-dns.png)
 
 </Alert>
 
@@ -356,13 +356,13 @@ Success callouts are used infrequently, usually in guides with specific end resu
 ```html
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
 
-![Incorrect vanity domain CNAME required DNS value](../docs/assets/images/dashboard/wrong-vanity-cname-dns.png)
+![Incorrect vanity domain CNAME required DNS value](../images/dashboard/wrong-vanity-cname-dns.png)
 
 </Alert>
 
 <Alert title="Correct DNS Configuration" type="success" icon="check">
 
-![Correct vanity domain CNAME required DNS value](../docs/assets/images/dashboard/correct-vanity-cname-dns.png)
+![Correct vanity domain CNAME required DNS value](../images/dashboard/correct-vanity-cname-dns.png)
 
 </Alert>
 
@@ -486,12 +486,12 @@ Screenshots are used to reference GUI instructions:
 
 <Example>
 
-![Alt text describing the image](../../docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
 <hr className="source-code" />
 
 ```markdown
-![Alt text describing the image](../../docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 ```
 
 </Example>
@@ -501,12 +501,12 @@ Terminal screenshots should only be used to demonstrate intended output:
 
 <Example>
 
-![Alt text describing the image](../../docs/assets/images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](../../images/pr-workflow/composer-require-pathauto.png)
 
 <hr className="source-code" />
 
 ```markdown
-![Alt text describing the image](../../docs/assets/images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](../../images/pr-workflow/composer-require-pathauto.png)
 ```
 
 </Example>

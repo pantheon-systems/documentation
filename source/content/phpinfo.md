@@ -21,7 +21,7 @@ Drupal makes the phpinfo available to privileged users at `https://example.com/a
 1. [Lock environment](/security/)  (if the environment does not currently need to be publicly accessible).
 2. Create a php file with an obscure filename that uses phpinfo.
 3. Visit the file in a web browser to view phpinfo.
- ![obscure-phpinfo-filename](../docs/assets/images/obscure-phpinfo-delete-immediately.png)
+ ![obscure-phpinfo-filename](../images/obscure-phpinfo-delete-immediately.png)
 4. Delete the file immediately so you do not expose sensitive information, such as a password, to connect to the DB.
 
 ## Terminus

@@ -17,7 +17,7 @@ Sites managing core with Composer are not compatible with Pantheon's One-click u
 ## Apply Upstream Updates via the Site Dashboard
 1. Navigate to the Code tab in the Site Dashboard on the Dev environment to check available updates:
 
-  ![upstream updates](../docs/assets/images/dashboard/updates-available-2.png)
+  ![upstream updates../images/dashboard/updates-available-2.png)
 
 2. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to **Git**.
 3. Select whether you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied.
@@ -304,7 +304,7 @@ Once you have communicated the issue, you can [manually apply updates from the c
 
 If you know your site's Custom Upstream has updated code, but it's not visible on your Site Dashboard, click on **Check now**:
 
-![Check Now](../docs/assets/images/dashboard/check-for-updates.png)
+![Check Now](../images/dashboard/check-for-updates.png)
 
 This will trigger a "Code Cache Clear" to verify that the Site Dashboard has fetched the most recent commit. Please note that even after the workflow completes, it may take up to a minute before updates appear on the dashboard.
 

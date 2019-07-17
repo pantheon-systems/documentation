@@ -6,7 +6,7 @@ categories: []
 ---
 Multidev is development environments for teams and allows a developer to fork the entire stack (code and content), work independently, then merge the code changes back into the master. Each forked branch will have its own separate development environment, including database and files.
 
-![Dev Test and Live icon](../docs/assets/images/multidev-flow.png)
+![Dev Test and Live icon](../images/multidev-flow.png)
 
 <Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -21,7 +21,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 **No more surprises.** Multidev makes it easy to keep in sync with code from every team member and content updates from any environment. As a result, deployments become surprisingly predictable.
 
 **A fork for every developer on your team.** Multidev gets new developers started quickly; you can’t have too many cooks in a Multidev kitchen.
-![Pantheon standard workflow vs multidev](../docs/assets/images/multidev-workflow.png)​
+![Pantheon standard workflow vs multidev](../images/multidev-workflow.png)​
 
 ## Branching and Multidev Terminology
 
@@ -169,7 +169,7 @@ Edit your content locally via [Git](/git/) or utilize on-server development via 
 3. Select the environment with commits that can be merged into the target.
 Instructions for using the command-line to merge the changes into the target are shown and can be pasted directly into the terminal without modification.
 
-![Location of Multidev merge button](../docs/assets/images/dashboard/multidev-merge.png)
+![Location of Multidev merge button](../images/dashboard/multidev-merge.png)
 
 ### Compare Multidev Environments Locally
 The Multidev Environments page provides a list of all existing environments for a site, along with a quick comparison between environments and master (Dev). The "ahead" count represents the number of commits existing on the Multidev environment that have not been merged into master (Dev), while the "behind" count represents commits in master that do not exist on the Multidev branch.

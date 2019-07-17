@@ -20,7 +20,7 @@ Conflicts can occur when modified file(s) within your site's codebase do not ali
 <p style="margin-top:0px;margin-bottom:40px;">
 
   
-![Worfklow Icon](../docs/assets/images/icon-version-control.png)
+![Worfklow Icon](../images/icon-version-control.png)
 
 
 *When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)*
@@ -137,11 +137,11 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
 
 1. Set the Dev environment to Git mode:
 
-   ![Git Connection Mode](../docs/assets/images/dashboard/connection-mode-git.png)
+   ![Git Connection Mode](../images/dashboard/connection-mode-git.png)
 
 1. Clone the repository to your local computer:
 
-   ![Git Clone](../docs/assets/images/dashboard/git-string.png)
+   ![Git Clone](../images/dashboard/git-string.png)
 
 1. From the repository directory, pull the Multidev branch to master. In the example below, replace `multidev` with the Multidev environment name:
 

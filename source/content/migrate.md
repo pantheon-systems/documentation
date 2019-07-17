@@ -29,7 +29,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 
 1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
-  ![Migrate Existing Site](../docs/assets/images/dashboard/migrate-existing-site.png)
+  ![Migrate Existing Site](../images/dashboard/migrate-existing-site.png)
 2. Enter your current website URL.
 3. Select **WordPress**.
 4. Click **Continue**.
@@ -41,7 +41,7 @@ The recommended way to migrate WordPress sites from another host is to use the [
 10. Copy the machine token from the Pantheon Dashboard, then navigate to **Pantheon Migration** within the WordPress Dashboard on your existing site. Paste the machine token and enter the site name.
 11. Click **Migrate**. You will receive an email when the migration completes. After the migration is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
- ![Successful Migration BlogVault](../docs/assets/images/dashboard/successful-site-migration-complete-blogvault.png)
+ ![Successful Migration BlogVault](../images/dashboard/successful-site-migration-complete-blogvault.png)
 
 If the migration is not successful, contact <migrations@pantheon.io> and include a link to the Site Dashboard and any details you can provide, such as where you are migrating the site from. We will help troubleshoot up to five migrations with issues arising from the Pantheon Migrate plugin.
 
@@ -60,7 +60,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
 1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
-  ![Migrate Existing Site](../docs/assets/images/dashboard/migrate-existing-site.png)
+  ![Migrate Existing Site](../images/dashboard/migrate-existing-site.png)
 
 2. Enter your current website URL.
 3. Select **Drupal 7** or **Drupal 8**.
@@ -70,7 +70,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 7. Click **Create Site**.
 8. Follow the instructions to **Create an Archive of Your Existing Site With Drush**:
 
-  ![Drupal create archive](../docs/assets/images/dashboard/drupal-guided-migrate.png)
+  ![Drupal create archive](../images/dashboard/drupal-guided-migrate.png)
 
   <Alert title="Note" type="info">
 
@@ -83,7 +83,7 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 9. Paste a publicly accessible URL to a download of your site archive. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly.
 10. Click **Import Archive**. After the imported is complete, select **Visit the Site Dashboard** from the Site Dashboard on Pantheon:
 
- ![Successful Drupal Migration](../docs/assets/images/dashboard/successful-drupal-migration.png)
+ ![Successful Drupal Migration](../images/dashboard/successful-drupal-migration.png)
 
 
 </Tab>
@@ -231,14 +231,14 @@ Archives for WordPress sites should include `index.php` at the code root level, 
 ### Cannot Login Using a Google Account
 Attempts to login with Google will fail if your organization uses Single Sign-On, resulting in the following error:
 
-![Migration Authentication Error](../docs/assets/images/dashboard/migration-authentication-error.png)
+![Migration Authentication Error](../images/dashboard/migration-authentication-error.png)
 
 Click your browser's back button to re-authenticate by entering your email address and sign in with your SAML Identity Provider. For details, see [Single Sign-On for Pantheon Organizations](/sso-organizations/).
 
 ### Destination Site Not Found Error
 If you are logged in with one identity and re-authenticate a different account, the site created will be associated with one account and the machine token with another, resulting in the following error:
 
-![Destination site not found](../docs/assets/images/bv-destination-not-found-error.png)
+![Destination site not found](../images/bv-destination-not-found-error.png)
 
 Click your browser's back button from the Pantheon Dashboard and re-authenticate the user account for your current session.
 

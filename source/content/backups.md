@@ -12,7 +12,7 @@ The Backups tab is where you manage all the details for your site's backup. Each
 
 We strongly urge you to backup your site regularly.
 
-![Backups tab](../docs/assets/images/dashboard/backup-tool.png)
+![Backups tab](../images/dashboard/backup-tool.png)
 
 <Alert title="Exports" type="export">
 
@@ -36,7 +36,7 @@ Run backups separately for each environment (Dev, Test, and Live). If you have c
 
 </Alert>
 
-![Create site backup Pantheon Dashboard](../docs/assets/images/dashboard/manual-site-backup.png)
+![Create site backup Pantheon Dashboard](../images/dashboard/manual-site-backup.png)
 
 If you prefer the command line, you can use [Terminus](/terminus) to create backups:
 
@@ -48,7 +48,7 @@ terminus backup:create $site.$env --element=<element> --keep-for=<days>
 
 **Paid sites:** You can enable or disable automatic backups. If enabled, your nightly backup is stored for a week and your weekly backup is stored for a month. You can select the day the weekly backup is run:
 
-![Backup Schedule](../docs/assets/images/dashboard/backup-schedule.png)
+![Backup Schedule](../images/dashboard/backup-schedule.png)
 
 Daily backups are scheduled automatically.
 
@@ -136,7 +136,7 @@ fi
 
 When the backup has finished, the jobs indicator returns to its start state to let you know that the task is complete. You will notice a new backup in your log with three separate archives (code, database, and files).
 
-![Access site backups Pantheon Dashboard](../docs/assets/images/dashboard/direct-download-backup.png)
+![Access site backups Pantheon Dashboard](../images/dashboard/direct-download-backup.png)
 
 The newest backup will appear at the top of the list. When the retention period expires for a backup, it will no longer be in the list of available archives.
 
@@ -262,7 +262,7 @@ See also <a data-proofer-ignore href="/docs/modules-plugins-known-issues/#backup
 
 From the Backup Log tab on the Site Dashboard, you can see the status of currently running backups for your code, database, and files:
 
-![Backups in progress](../docs/assets/images/backup-progress.png)
+![Backups in progress](../images/backup-progress.png)
 
 If your **Code** or **Database** backup is taking an inordinately long time to complete, we suggest you [contact support](/support/) to discuss why, and possible solutions. Don't deploy code or change database values during these backups, as it can destroy the integrity of the backup or cause it to fail.
 

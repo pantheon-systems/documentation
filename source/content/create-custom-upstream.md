@@ -33,13 +33,13 @@ Choose your preferred Git host:
 
    **Do not** select the options to create a `README`, `.gitignore`, or license file:
 
-   ![GitHub Initialization options](../docs/assets/images/github-create-readme.png)
+   ![GitHub Initialization options](../images/github-create-readme.png)
 
 6. Click **Create Repository**.
 
 7. Copy the repository URL (HTTPS), found in the Quick setup section:
 
-  ![GitHub Repo URL](../docs/assets/images/github-repo-url.png)
+  ![GitHub Repo URL](../images/github-repo-url.png)
 
 8. Clone the repository to your local from the command line (replace the URL):
 
@@ -72,7 +72,7 @@ Choose your preferred Git host:
 
 7. Copy the repository URL (HTTPS), found on the top right of the page:
 
-  ![Bitbucket Repo URL](../docs/assets/images/bitbucket-repo-url.png)
+  ![Bitbucket Repo URL](../images/bitbucket-repo-url.png)
 
 8. Clone the repository to your local from the command line (replace the URL):
 
@@ -192,7 +192,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 <Tab title="GitHub" id="gh-auth" active={true}>
   1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization:
 
-    ![Organization Dashobard](../docs/assets/images/dashboard/organizations.png)
+    ![Organization Dashobard](../images/dashboard/organizations.png)
 
   2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
   3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
@@ -201,12 +201,12 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
       * **Name**
       * **Upstream Repository URL**:
 
-            ![GitHub HTTPS Repo URL](../docs/assets/images/github-https-url.png)
+            ![GitHub HTTPS Repo URL](../images/github-https-url.png)
 
 
           * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
 
-              ![GitHub Upstream Authentication](../docs/assets/images/dashboard/create-upstream-auth-gh.png)
+              ![GitHub Upstream Authentication](../images/dashboard/create-upstream-auth-gh.png)
 
             For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
@@ -216,7 +216,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
             4. Enter a token description, such as "pantheon read my Custom Upstream"
             5. Select "repo" as the scope:
 
-                ![GitHub generate token](../docs/assets/images/github-token.png)
+                ![GitHub generate token](../images/github-token.png)
 
             6. Click **Generate token** and copy the new token to your clipboard.
             7. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
@@ -234,7 +234,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
   1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization:
 
-    ![Organization Dashobard](../docs/assets/images/dashboard/organizations.png)
+    ![Organization Dashobard](../images/dashboard/organizations.png)
 
   2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
   3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
@@ -243,11 +243,11 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
       * **Name**
       * **Upstream Repository URL**:
 
-            ![Bitbucket HTTPS Repo URL](../docs/assets/images/bitbucket-https-url.png)
+            ![Bitbucket HTTPS Repo URL](../images/bitbucket-https-url.png)
 
       * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
 
-        ![BitBucket Upstream Authentication](../docs/assets/images/dashboard/create-upstream-auth-bb.png)
+        ![BitBucket Upstream Authentication](../images/dashboard/create-upstream-auth-bb.png)
 
         For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
@@ -255,7 +255,7 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
           2. Click **Create app password**.
           3. Enter a label and select the `"Repositories:Read"` permission:
 
-            ![Bitbucket app password](../docs/assets/images/bitbucket-app-password.png)
+            ![Bitbucket app password](../images/bitbucket-app-password.png)
 
           4. Click **Create** and copy the new password.
           5. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
@@ -276,11 +276,11 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 
   1. From this new account, [generate an Access Token](https://gitlab.com/profile/personal_access_tokens) with the `API` scope:
 
-      ![GitLab Personal Access Token](../docs/assets/images/gitlab-api.png)
+      ![GitLab Personal Access Token](../images/gitlab-api.png)
 
   1. From the GitLab account that maintains the repository, add the new user to the repo under **Members** with **Reporter** access.
 
-      ![GitLab reporter permission](../docs/assets/images/gitlab-reporter.png)
+      ![GitLab reporter permission](../images/gitlab-reporter.png)
 
   1. [Contact support](/support/) to add the Custom Upstream to your org. You must provide:
 
@@ -312,7 +312,7 @@ Configure this setting after connecting your Custom Upstream to Pantheon if new 
 3. Click **Settings** next to the existing upstream requiring an update.
 4. Select the desired connection mode, then click **Update**:
 
-  ![Modify initial connection mode](../docs/assets/images/dashboard/initial-connection-mode.png)
+  ![Modify initial connection mode](../images/dashboard/initial-connection-mode.png)
 
 New sites created from this Custom Upstream will use this connection mode by default going forward.
 

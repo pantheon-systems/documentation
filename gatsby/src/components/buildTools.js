@@ -1,7 +1,7 @@
 import React from "react"
-import ghlogo from "../../../source/docs/assets/images/github-logo.svg"
-import circlelogo from "../../../source/docs/assets/images/circleci-logo.svg"
-import composerlogo from "../../../source/docs/assets/images/composer-logo.svg"
+import ghlogo from "../../../source/images/github-logo.svg"
+import circlelogo from "../../../source/images/circleci-logo.svg"
+import composerlogo from "../../../source/images/composer-logo.svg"
 
 const BuildTools= ({ })  => {
   const h4Style = `margin-top:10px;fontSize:larger`

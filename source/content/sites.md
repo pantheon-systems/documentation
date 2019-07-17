@@ -6,7 +6,7 @@ categories: [getstarted]
 ---
 The Site Dashboard is where you can find all the tools you need to successfully build, launch, and manage your site.
 
-![Site Dashboard](../docs/assets/images/dashboard/site-dashboard-image.png)
+![Site Dashboard](../images/dashboard/site-dashboard-image.png)
 
 At the top of the page you'll find all the environments for your site: Dev, Test, and Live. Additional development environments are available with [Multidev](/multidev/).
 
@@ -64,7 +64,7 @@ Learn how to use the [Pantheon workflow](/pantheon-workflow/) to manage your sit
 ### Metrics
 Within the **<span class="glyphicons glyphicons-cardio"></span> Live** environment, the **<span class="glyphicons glyphicons-charts"></span> Metrics** tab provides insight into your site's traffic. Learn more in our guide on [Metrics in the Site Dashboard](/metrics/).
 
-![Site Metrics](../docs/assets/images/dashboard/metrics-graphs.png "Screenshot showing the Metrics tab of a Live site.")
+![Site Metrics](../images/dashboard/metrics-graphs.png "Screenshot showing the Metrics tab of a Live site.")
 
 ### Status
 Pantheon provides static site analysis as a service for your site to make best practice recommendations on site configurations and to help detect common problems. This mechanism does not perform requests on your site, and in doing so avoids the observer effect. It's non-intrusive, so no installation or configuration is required. Finally, it's completely automated for consistent reports and results. Learn more about our Launch Check for

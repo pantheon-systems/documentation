@@ -22,13 +22,13 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. Choose a [Region](/regions/) for the Site.
 1. Click **Continue** and wait a few moments for the Site to be created:
 
-  ![Select a Region from the Create Your Pantheon Site screen](../docs/assets/images/dashboard/create-pantheon-site.png)
+  ![Select a Region from the Create Your Pantheon Site screen](../images/dashboard/create-pantheon-site.png)
 
 1. Select your [start state](/start-state). Install WordPress, Drupal 8, or Drupal 7 with one click. You can also select from any of the public or [Custom Upstreams](/custom-upstream) available on the platform.
 1. Click **Visit your Pantheon Site Dashboard**.
 1. Click **Visit Development Site** and complete the installation process for the selected framework.
 
-  ![Visit development site button](/source/docs/assets/images/dashboard/visit-development-site.png)
+  ![Visit development site button](/sour../images/dashboard/visit-development-site.png)
 
 ## Sandbox Sites
 

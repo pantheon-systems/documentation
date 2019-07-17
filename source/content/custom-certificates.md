@@ -50,7 +50,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 4. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
 
-    ![Custom Certificate Confirmation](../docs/assets/images/dashboard/custom-cert-confirm.png)
+    ![Custom Certificate Confirmation](../images/dashboard/custom-cert-confirm.png)
 
 5. [Test Before Going Live](#test-before-going-live) (optional, recommended)
 

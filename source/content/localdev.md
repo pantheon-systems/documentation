@@ -5,7 +5,7 @@ tags: [manage, tools, workflow]
 categories: []
 earlyaccess: true
 earlynote: The documentation on this page discusses features and options that are still in production. Pantheon Support for Localdev may be limited.
-contributors: edwardangert
+contributors: [edwardangert]
 ---
 
 Pantheon offers a number of [ways to connect to your site](/docs/guides/quickstart/connection-modes/). In addition to Git and SFTP modes, [Pantheon Localdev](https://github.com/pantheon-systems/localdev/){.external} gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/docs/pantheon-workflow/).
@@ -33,7 +33,7 @@ Once Localdev is installed, a list of your sites is displayed in a column on the
 
 Select a site and click **Pull for local development** to clone the site locally and boot the local environment.
 
-![Localdev clones the site code](/source/docs/assets/images/localdev/localdev-cloning-site.png)
+![Localdev clones the site code](../images/localdev/localdev-cloning-site.png)
 
 Since this is the first time you are cloning the entire site code, this will take several minutes. Unless you [reset Localdev to its defaults](#log-out-and-reset-to-defaults), you will only need to do this once per site.
 
@@ -43,11 +43,11 @@ If there are any errors, Localdev will revert all changes and return you to the 
 
 In the upper right hand corner, click the grey **Stopped** button and click **Start** to start the local server.
 
-![In the Stopped button's dropdown, click Start](/source/docs/assets/images/localdev/localdev-start-destroy.png)
+![In the Stopped button's dropdown, click Start](../images/localdev/localdev-start-destroy.png)
 
 Once the container has been started, you can preview the site using the **Open Browser** button in the **Local Site** section, and track changed files using the **Pull** and **Push** tabs.
 
-![Localdev shows that the container is running](/source/docs/assets/images/localdev/localdev-container-running.png)
+![Localdev shows that the container is running](../images/localdev/localdev-container-running.png)
 
 ## Use a Local IDE to Develop your Pantheon Site
 

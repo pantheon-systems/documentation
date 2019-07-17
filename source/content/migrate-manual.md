@@ -51,26 +51,26 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 ## Create Pantheon Site
 1. Navigate to your User Dashboard and click the **Migrate Existing Site** button:
 
-    ![The Migrate Existing Site Button](../docs/assets/images/dashboard/migrate-existing-site.png)
+    ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
 2. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, or WordPress,), and click **Continue**:
 
-    ![Choose the Starting State for your Migrated Site](../docs/assets/images/dashboard/migrate-step2.png)
+    ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
 3. Name your site and select an [Organization](/organizations/) (optional), then click **Create Site**:
 
-    ![Name the Migrated Site and Optionally Choose an Organization](../docs/assets/images/dashboard/migrate-step3.png)
+    ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
 4.  Click the link to manually migrate your site then select **Yes** to confirm:
 
   <TabList>
 
   <Tab title="WordPress" id="wp-confirm" active={true}>
 
-  ![Choose Manual WordPress Migration](../docs/assets/images/dashboard/migrate-manual-wp.png)
+  ![Choose Manual WordPress Migration](../images/dashboard/migrate-manual-wp.png)
 
   </Tab>
 
   <Tab title="Drupal" id="drops-confirm">
 
-  ![Choose Manual Drupal Migration](../docs/assets/images/dashboard/migrate-manual-drops.png)
+  ![Choose Manual Drupal Migration](../images/dashboard/migrate-manual-drops.png)
 
   </Tab>
 
@@ -78,7 +78,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
 5. Click **Visit your Pantheon Site Dashboard**:
 
-  ![Creating Your Site on Pantheon Complete for manual migration](../docs/assets/images/dashboard/migrate-manual-visit-your-site-dashboard.png)
+  ![Creating Your Site on Pantheon Complete for manual migration](../images/dashboard/migrate-manual-visit-your-site-dashboard.png)
 
 Now that you have a new site on Pantheon, you're ready to add the major components from your existing site: custom code, files, and the database.
 
@@ -114,7 +114,7 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 2. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment of the Site Dashboard, set the site's connection mode to Git:
 
-  ![Git connection mode](../docs/assets/images/dashboard/connection-mode-git.png)
+  ![Git connection mode](../images/dashboard/connection-mode-git.png)
 
 3. Copy the SSH URL for the site repository. *Do not copy* `git clone` or the site name.
 
@@ -232,7 +232,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    2. Select your local archive file, then press **Import**.
   
-     ![Import MySQL database from file](../docs/assets/images/dashboard/import-mysql-file.png)
+     ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
   
   </Tab>
   
@@ -244,7 +244,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
    2. Paste a publicly accessible URL for the `.sql.gz` file, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
   
-      ![Import MySQL Database from URL](../docs/assets/images/dashboard/import-mysql-url.png)
+      ![Import MySQL Database from URL](../images/dashboard/import-mysql-url.png)
   
   </Tab>
   
@@ -378,7 +378,7 @@ You can use the Pantheon Dashboard, SFTP, or Rsync to upload your site's files.
 
 You should now have all three of the major components of your site imported into Pantheon. Clear your caches on the the Pantheon Dashboard, and you are good to go! Once everything looks good, click **I've Successfully Migrated Manually**:
 
-![Finish Manual Migration](../docs/assets/images/successfully-migrated.png)
+![Finish Manual Migration](../images/successfully-migrated.png)
 ## Troubleshooting
 
 ### fatal: Not possible to fast-forward, aborting.

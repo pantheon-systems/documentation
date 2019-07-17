@@ -18,24 +18,24 @@ Before deleting a site, you must downgrade the site plan to Sandbox level. See [
 1. Select **Settings** > **Delete Site**.
 2. Click the **Delete Site** button.
 
-  ![Site Dashboard Operations Delete Site](../docs/assets/images/dashboard/delete-site.png)
+  ![Site Dashboard Operations Delete Site](../images/dashboard/delete-site.png)
 
 3. Enter the site title; this ensures you're aware of the site you're deleting.
 4. Click **Delete**.
 
-  ![Site Dashboard Operations Delete Site Confirm](../docs/assets/images/dashboard/delete-site-confirm.png)
+  ![Site Dashboard Operations Delete Site Confirm](../images/dashboard/delete-site-confirm.png)
 
 ## Delete a Site From the Organization Dashboard
 
 1. Select the checkbox next to the site you want to delete.
 2. Click **Operations**, and select **Delete Site**.
 
-  ![Organization Dashboard Operations Delete Site](../docs/assets/images/dashboard/org-delete-site.png)
+  ![Organization Dashboard Operations Delete Site](../images/dashboard/org-delete-site.png)
 
 3. Type **Delete**.
 4. Click **Delete Site(s)**.
 
-  ![Organization Dashboard Operations Delete Site Confirm](../docs/assets/images/dashboard/org-delete-site-confirm.png)
+  ![Organization Dashboard Operations Delete Site Confirm](../images/dashboard/org-delete-site-confirm.png)
 
 
 ## Delete a Site with Terminus
@@ -51,7 +51,7 @@ Replace `<site>` with your site name. You can see a list of all your sites by ru
 
 </Alert>
 
-  ![Delete Site via Terminus](../docs/assets/images/delete-site-terminus.png)
+  ![Delete Site via Terminus](../images/delete-site-terminus.png)
 
 ## Delete a Multidev Environment
 Refer to the [Delete a Branch Environment](/multidev#delete-a-branch-environment) section of our Multidev guide for more information.

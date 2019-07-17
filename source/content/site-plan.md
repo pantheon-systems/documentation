@@ -12,9 +12,9 @@ If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-
 ## Access Site Plan
 1. Go to the Site Dashboard.
 2. For Sandbox sites, click the **Upgrade** button:
- ![Upgrade plan button shown on Sandbox sites](../docs/assets/images/dashboard/upgrade-plan.png)
+ ![Upgrade plan button shown on Sandbox sites](../images/dashboard/upgrade-plan.png)
  Otherwise, click the **current plan**:
- ![Change current plan for paid sites](../docs/assets/images/dashboard/change-plan.png)
+ ![Change current plan for paid sites](../images/dashboard/change-plan.png)
 
 <Alert title="Note" type="info">
 
@@ -114,7 +114,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 2. For Sandbox sites, click the **Upgrade** button. Otherwise, select the lable for the site's current plan.
 3. Click **Select** to switch plans:
 
- ![Select a different plan](../docs/assets/images/dashboard/select-plan.png)
+ ![Select a different plan](../images/dashboard/select-plan.png)
 
 
 ### Enter Billing Information
@@ -172,11 +172,11 @@ While all site plans downgrades will be effective immediately, no partial refund
 
 1. Go to the Site Dashboard.
 2. Select the current plan:
- ![Change current plan for paid sites](../docs/assets/images/dashboard/change-plan.png)
+ ![Change current plan for paid sites](../images/dashboard/change-plan.png)
 3. Click the **Downgrade to free** link to cancel the current plan:
- ![Downgrade to free by cancelling current plan](../docs/assets/images/dashboard/cancel-plan.png)
+ ![Downgrade to free by cancelling current plan](../images/dashboard/cancel-plan.png)
 4. Check **Yes, cancel my plan** then click **Continue**:
- ![Confirm plan cancellation](../docs/assets/images/dashboard/confirm-cancellation.png)
+ ![Confirm plan cancellation](../images/dashboard/confirm-cancellation.png)
 5. Make sure the change details are correct, then click **Submit**.
 6. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/site-billing/#do-not-bill-this-site-to-a-card).
 

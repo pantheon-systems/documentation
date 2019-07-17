@@ -54,7 +54,7 @@ terminus wp $site.$env -- config get SOME_TMP_SETTING
 
 Output of this command should look something like the following Contact Form 7 example:
 
-![config get wpcf7 uploads tmp dir default](../docs/assets/images/wp-config-get-tmp-default.png)
+![config get wpcf7 uploads tmp dir default](../images/wp-config-get-tmp-default.png)
 
 </Tab>
 
@@ -80,7 +80,7 @@ terminus drush $site.$env -- variable-get some_tmp_setting
 
 Output of this command should look something like the following Plupload example:
 
-![cget plupload settings temporary_uri filesystem](../docs/assets/images/d7-vget-tmp-default.png)
+![cget plupload settings temporary_uri filesystem](../images/d7-vget-tmp-default.png)
 
 </Tab>
 
@@ -107,7 +107,7 @@ terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --
 
 Output of this command should look something like the following Plupload example:
 
-![cget plupload settings temporary_uri filesystem](../docs/assets/images/d8-cget-tmp-default.png)
+![cget plupload settings temporary_uri filesystem](../images/d8-cget-tmp-default.png)
 
 </Tab>
 
@@ -160,7 +160,7 @@ terminus wp $site.$env -- config get SOME_TMP_SETTING
 
 Output of this command should look something like the following Contact Form 7 example:
 
-![config get wpcf7 uploads tmp dir filesystem](../docs/assets/images/wp-config-get-tmp-filesystem.png)
+![config get wpcf7 uploads tmp dir filesystem](../images/wp-config-get-tmp-filesystem.png)
 
 </Tab>
 
@@ -188,7 +188,7 @@ terminus drush $site.$env -- variable-get some_tmp_setting
 
 Output of this command should look something like the following Plupload example:
 
-![cget plupload settings temporary_uri filesystem](../docs/assets/images/d7-vget-tmp-filesystem.png)
+![cget plupload settings temporary_uri filesystem](../images/d7-vget-tmp-filesystem.png)
 
 </Tab>
 
@@ -216,7 +216,7 @@ terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --
 
 Output of this command should look something like the following Plupload example:
 
-![cget plupload settings temporary_uri filesystem](../docs/assets/images/d8-cget-tmp-filesystem.png)
+![cget plupload settings temporary_uri filesystem](../images/d8-cget-tmp-filesystem.png)
 
 </Tab>
 

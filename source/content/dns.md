@@ -9,7 +9,7 @@ contributors: [alexfornuto]
 
 **DNS** stands for Domain Name System, and it's the protocol by which domain names are pointed to the servers that host content. When adding a [custom domain](/domains/#custom-domains) to your site, we provide the values for your DNS records, to be assigned with your DNS service provider:
 
-![DNS Reccomendations](../docs/assets/images/dashboard/domain-added.png)
+![DNS Reccomendations](../images/dashboard/domain-added.png)
 
 While Pantheon does not offer DNS management services, we can help you to understand how DNS works, and configure your domain to point to your Pantheon site.
 
@@ -187,7 +187,7 @@ An `A` record points a domain name to an IPv4 address. A `CNAME` record points a
 
 Pantheon will provide both `A` and `CNAME` values, depending on the domains provided:
 
-![DNS Values provided by the Pantheon Site Dashboard](../docs/assets/images/dashboard/dns-values.png)
+![DNS Values provided by the Pantheon Site Dashboard](../images/dashboard/dns-values.png)
 
 If your DNS provider doesn't allow `CNAME` records, you can use `nslookup` to determine the IP address for the domain value, and then supply that as an `A` record:
 

@@ -74,27 +74,27 @@ Before switching to annual billing, consider:
 
 1. From the Site Dashboard, click on your site plan, or the billing tab:
 
-    ![Click on site plan](../docs/assets/images/dashboard/change-plan.png)
+    ![Click on site plan](../images/dashboard/change-plan.png)
 
 2. If you're keeping the same plan size and only switching to annual billing, select your current plan:
 
-    ![Select new site plan](../docs/assets/images/dashboard/select-plan.png)
+    ![Select new site plan](../images/dashboard/select-plan.png)
 
 3. Switch the slider to **Pay Annually**:
 
-    ![Select annual billing](../docs/assets/images/dashboard/select-annual-billing.png)
+    ![Select annual billing](../images/dashboard/select-annual-billing.png)
 
 4. Enter or confirm your billing information, then click **Continue**.
 
-    ![Choose the card to bill](../docs/assets/images/dashboard/choose-card.png)
+    ![Choose the card to bill](../images/dashboard/choose-card.png)
 
 5. Confirm the purchase, then click on **Place your order**.
 
-    ![Confirm your purchase](../docs/assets/images/dashboard/confirm-purchase.png)
+    ![Confirm your purchase](../images/dashboard/confirm-purchase.png)
 
 6. You'll be returned to the dashboard with a confirmation of your site plan change:
 
-    ![Site Plan Flag](../docs/assets/images/dashboard/plan-updated-flag.png)
+    ![Site Plan Flag](../images/dashboard/plan-updated-flag.png)
 
 ## See Also
 

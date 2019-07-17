@@ -155,7 +155,7 @@ An Upstream cannot be deleted if there are sites using it.
 
 1. Under **Source**, click the **Delete Upstream** button:
 
-  ![Delete Upstream Button](../docs/assets/images/dashboard/delete-upstream.png)
+  ![Delete Upstream Button](../images/dashboard/delete-upstream.png)
 
 ## Tips and Tricks
 ### Use the Pantheon Workflow

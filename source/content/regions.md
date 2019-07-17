@@ -36,7 +36,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 
 [Create a new Site](/sites/) from the Dashboard and select the Region:
 
-![Select a Region from the Create Your Pantheon Site screen](/source/docs/assets/images/dashboard/create-pantheon-site.png "Select a Region from the Create Your Pantheon Site screen")
+![Select a Region from the Create Your Pantheon Site screen](/sour../images/dashboard/create-pantheon-site.png "Select a Region from the Create Your Pantheon Site screen")
 
 ### Create a New Site in a Specific Region using Terminus
 
@@ -58,7 +58,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
  terminus site:create my-eu-site-name "My EU Site Name" "WordPress" --org "My Organization Name" --region eu
  ```
 
-  ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](../docs/assets/images/create-site-eu.png)
+  ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](../images/create-site-eu.png)
 
   See `terminus site:create --help` for more information on the options and values used in this command.
 
@@ -81,7 +81,7 @@ Use the Dashboard to see the Pantheon Region in which the site is hosted:
 1.  Click **Settings**, then **About Site**
 1.  **Region** will show either `United States` by default, or the name of the International Region in which the Site is hosted.
 
-![Site Dashboard > Settings > About Site > Region: European Union](../docs/assets/images/settings-about-site-region-eu.png)
+![Site Dashboard > Settings > About Site > Region: European Union](../images/settings-about-site-region-eu.png)
 
 You can also get this information via Terminus.
 

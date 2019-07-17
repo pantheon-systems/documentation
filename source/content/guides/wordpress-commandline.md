@@ -50,7 +50,9 @@ Terminus provides advanced interaction with the platform and allows us to run WP
 ## Create Your Site and Initialize Environments
 
 <Alert title="Note" type="info">
- The next few secions of this guide use the example variables `tessa-site-wp` and `"Terminus Demo Site"` as the site name and label. Make sure to replace each instance, as well as other variables like the site URL and user/password combinations, with your desired values.
+
+The next few secions of this guide use the example variables `tessa-site-wp` and `"Terminus Demo Site"` as the site name and label. Make sure to replace each instance, as well as other variables like the site URL and user/password combinations, with your desired values.
+
 </Alert>
 
 1. Create a new WordPress site on Pantheon:

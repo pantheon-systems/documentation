@@ -7,14 +7,17 @@ tags: [moreguides, workflow, composer]
 contributors: [dustinleblanc]
 ---
 <Alert title="Note" type="info">
+
 Converting to a Composer managed site *removes* the ability to [apply updates via the site dashboard](/core-updates/). This is for advanced users who are comfortable taking complete responsibility for the management of site updates.
 
  If you don't need Composer as part of your site, we strongly suggest sticking to the standard Drupal core.
+
 </Alert>
 
 ## Before You Begin
 
 <Alert title="Note" type="info">
+
 As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
 
 As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
@@ -26,10 +29,13 @@ As a first troubleshooting step, try running `composer update` to bring `compose
  - Review [Serving Sites from the Web Subdirectory](/nested-docroot/)
 
 <Alert title="Exports" type="export">
+
 This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
-<pre>
-<code class="bash">export site=yoursitename
-</code></pre>
+
+```bash
+export site=yoursitename
+```
+
 </Alert>
 
 ## Checkout a New Branch
@@ -37,17 +43,17 @@ You're about to make some massive changes to the codebase. We recommend you to d
 
 1. In your local terminal, change directories to your site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
-    ```bash
-    cd ~/projects/$site/
-    ```
+  ```bash
+  cd ~/projects/$site/
+  ```
 
 2. Create the new branch:
 
-    ```bash
-    git checkout -b composify
-    ```
+  ```bash
+  git checkout -b composify
+  ```
 
-    You can replace `composify` with a branch name of your choosing, but all following steps assume this name.
+  You can replace `composify` with a branch name of your choosing, but all following steps assume this name.
 
 ## Setup a Multidev (optional)
 
@@ -63,9 +69,9 @@ This will setup the multidev environment to receive and demo our changed code.
 
 1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
 
-    ```bash
-    cd ..
-    ```
+  ```bash
+  cd ..
+  ```
 
 2. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
 

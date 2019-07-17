@@ -36,7 +36,7 @@ Strict-Transport-Security: max-age=15984000; includeSubDomains; preload
 
 Site's using our [nested docroot](/nested-docroot/) feature to serve WordPress from a subdirectory will experience a redirect loop upon activation of the LH HSTS plugin:
 
-![LH HSTS redirect loop on nested docroot](../docs/assets/images/lh-hsts-redirect-loop.png)
+![LH HSTS redirect loop on nested docroot](../images/lh-hsts-redirect-loop.png)
 
 There is an [open issue](https://wordpress.org/support/topic/broken-website-9/) to address the problem with currently no known workaround.
 

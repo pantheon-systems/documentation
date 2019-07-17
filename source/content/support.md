@@ -5,7 +5,7 @@ tags: [dashboard]
 categories: []
 ---
 
-![Screenshot of the Support Tab](../docs/assets/images/dashboard/support-tab.png)
+![Screenshot of the Support Tab](../images/dashboard/support-tab.png)
 
 ## Support Features and Response Times
 Pantheon offers a range of support packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Package.
@@ -38,7 +38,7 @@ Keep these tips in mind when opening a new support ticket or chat, to help us mo
 
 If you are part of an Organization with an enhanced support package, navigate to the Support tab from the Organization's Dashboard to make use of the Organization's Support level:
 
-![Select Support from the Organization's Dashboard](../docs/assets/images/dashboard/support-from-org-dash.gif)
+![Select Support from the Organization's Dashboard](../images/dashboard/support-from-org-dash.gif)
 
 ## Real Time Chat Support
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
