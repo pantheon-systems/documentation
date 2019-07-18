@@ -190,81 +190,80 @@ To avoid incompatibilities, you must track Pantheon's corresponding upstream rep
 <TabList>
 
 <Tab title="GitHub" id="gh-auth" active={true}>
-  1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization:
 
-    ![Organization Dashobard](../images/dashboard/organizations.png)
+1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations)** tab within the Pantheon Dashboard and select your organization:
 
-  2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
-  3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
-  4. Enter the following information about the Custom Upstream:
+  ![Organization Dashobard](../images/dashboard/organizations.png)
 
-      * **Name**
-      * **Upstream Repository URL**:
+1. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+1. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
+1. Enter the following information about the Custom Upstream:
 
-            ![GitHub HTTPS Repo URL](../images/github-https-url.png)
+   * **Name**
+   * **Upstream Repository URL**:
 
+    ![GitHub HTTPS Repo URL](../images/github-https-url.png)
 
-          * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
+     * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
 
-              ![GitHub Upstream Authentication](../images/dashboard/create-upstream-auth-gh.png)
+     ![GitHub Upstream Authentication](../images/dashboard/create-upstream-auth-gh.png)
 
-            For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
+     For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
+ 
+       1. Go to GitHub to [generate a personal access token](https://github.com/settings/tokens).
+       2. Click **Generate new token**.
+       3. Confirm your password if prompted.
+       4. Enter a token description, such as "pantheon read my Custom Upstream"
+       5. Select "repo" as the scope:
+  
+           ![GitHub generate token](../images/github-token.png)
+  
+       6. Click **Generate token** and copy the new token to your clipboard.
+       7. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
+       8. Paste your new GitHub access token.
 
-            1. Go to GitHub to [generate a personal access token](https://github.com/settings/tokens).
-            2. Click **Generate new token**.
-            3. Confirm your password if prompted.
-            4. Enter a token description, such as "pantheon read my Custom Upstream"
-            5. Select "repo" as the scope:
+   * **Framework**: Drupal 7, Drupal 8, or WordPress
+   * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
-                ![GitHub generate token](../images/github-token.png)
-
-            6. Click **Generate token** and copy the new token to your clipboard.
-            7. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
-            8. Paste your new GitHub access token.
-
-      * **Framework**: Drupal 7, Drupal 8, or WordPress
-      * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
-
-
-  4. Click **Create**.
+1. Click **Create**.
 
 </Tab>
 
 <Tab title="Bitbucket" id="bb-auth">
 
-  1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations" target="blank)** tab within the Pantheon Dashboard and select your organization:
+1. Navigate to the **[<span class="glyphicons glyphicons-group"></span> Organizations](https://dashboard.pantheon.io/#organizations)** tab within the Pantheon Dashboard and select your organization:
 
-    ![Organization Dashobard](../images/dashboard/organizations.png)
+  ![Organization Dashobard](../images/dashboard/organizations.png)
 
-  2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
-  3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
-  4. Enter the following information about the Custom Upstream:
+2. Select the **<span class="upstreams-regular"></span> Upstreams** tab.
+3. Click the **<span class="glyphicons glyphicons-plus"></span> Add New Upstream** button. You must be an administrator of the organization to add a new upstream.
+4. Enter the following information about the Custom Upstream:
 
-      * **Name**
-      * **Upstream Repository URL**:
+    * **Name**
+    * **Upstream Repository URL**:
 
-            ![Bitbucket HTTPS Repo URL](../images/bitbucket-https-url.png)
+       ![Bitbucket HTTPS Repo URL](../images/bitbucket-https-url.png)
 
-      * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
+    * **Authenticate (private repositories only)**: If you provided the URL to a private repository, a new field will appear:
 
-        ![BitBucket Upstream Authentication](../images/dashboard/create-upstream-auth-bb.png)
+      ![BitBucket Upstream Authentication](../images/dashboard/create-upstream-auth-bb.png)
 
-        For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
+      For privately hosted repositories, create a dedicated user with repository access. If your repository is publicly accessible, you can skip this step.
 
-          1. Go to Bitbucket to generate an [app password](https://bitbucket.org/account/admin/app-passwords).
-          2. Click **Create app password**.
-          3. Enter a label and select the `"Repositories:Read"` permission:
+        1. Go to Bitbucket to generate an [app password](https://bitbucket.org/account/admin/app-passwords).
+        2. Click **Create app password**.
+        3. Enter a label and select the `"Repositories:Read"` permission:
 
-            ![Bitbucket app password](../images/bitbucket-app-password.png)
+          ![Bitbucket app password](../images/bitbucket-app-password.png)
 
-          4. Click **Create** and copy the new password.
-          5. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
-          6. The username field should already be populated, based on the repository URL. Paste your new Bitbucket app password.
+        4. Click **Create** and copy the new password.
+        5. Return to the Pantheon Organization Dashboard, where you are creating the Custom Upstream.
+        6. The username field should already be populated, based on the repository URL. Paste your new Bitbucket app password.
 
-      * **Framework**: Drupal 7, Drupal 8, or WordPress
-      * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
+    * **Framework**: Drupal 7, Drupal 8, or WordPress
+    * **Description**: (Optional) Less than 200 characters, plain text and markdown supported
 
-  4. Click **Create**.
+4. Click **Create**.
 
 </Tab>
 
