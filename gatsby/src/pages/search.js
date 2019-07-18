@@ -24,7 +24,7 @@ class Index extends React.Component {
 							<div className="container-fluid">
 								<div className="row">
 									<div className="col-md-8 search-results">
-
+{/*
 									<script>
 										function parseParamsFromUrl() {
 										var queryString = window.location.search;
@@ -36,7 +36,7 @@ class Index extends React.Component {
 										document.getElementById('piodocsearch').setAttribute('value', urlParams);
    								   </script>
 
-
+*/}
 									<div id="addsearch-results"></div>
 
 
