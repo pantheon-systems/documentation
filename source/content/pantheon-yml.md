@@ -57,7 +57,7 @@ Ensure that your site will always use HTTPS to deliver content with `enforce_htt
 
 Any option with `+subdomains` should only be used for subdomains on Pantheon and other sites that connect via HTTPS. HSTS headers sent with `full` or `full+subdomains` are cached by browsers for one year. To test your configuration during development, select a short-duration HSTS header (`transitional` or `transitional+subdomains`) before committing to the long-duration HSTS header. If you disable HTTPS (e.g. by moving to a host that doesn't support HTTPS) returning visitors will be unable to access your site until they manually clear their browser cache.
 
-To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/docs/http-to-https/) doc.
+To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/http-to-https/) doc.
 
 #### Test Your Site's HSTS Configuration for an A+ Rating
 

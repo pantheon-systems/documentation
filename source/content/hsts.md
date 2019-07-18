@@ -34,7 +34,7 @@ Strict-Transport-Security: max-age=15984000; includeSubDomains; preload
 
 ### Nested Docroot
 
-Sites using our [nested docroot](/docs/nested-docroot/) feature to serve WordPress from a subdirectory will experience a redirect loop upon activation of the LH HSTS plugin:
+Sites using our [nested docroot](/nested-docroot/) feature to serve WordPress from a subdirectory will experience a redirect loop upon activation of the LH HSTS plugin:
 
 ![LH HSTS redirect loop on nested docroot](../images/lh-hsts-redirect-loop.png)
 
