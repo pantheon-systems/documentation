@@ -21,6 +21,13 @@ class SearchResults extends React.Component {
                     `
                 }}
                 />
+                <script 
+                    defer 
+                    src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage"
+                    >
+                </script>
+
+                </Helmet>
 
                 <div id="addsearch-results"></div>
 
@@ -33,16 +40,10 @@ class SearchResults extends React.Component {
                         display_date: true,
                         display_sortby: true,
                         display_category: true
-                    
                     }
                     `
                 }}
                 />
-
-
-                <script src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage"></script>
-
-                </Helmet>
             </div>
         );
       }
