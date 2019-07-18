@@ -41,6 +41,9 @@ PANTHEON_MULTIDEV_LIST="$(terminus multidev:list -n ${TERMINUS_SITE} --format=li
 
 This example assumes the variable `TERMINUS_SITE` is already set. Now you can iterate through `$PANTHEON_MULTIDEV_LIST` using something like a `while read` loop to perform tasks on each multidev environment.
 
+## Interactive Prompts
+Keep in mind that any commands which normally require interaction from the user will need to be bypassed with the appropriate flag. For most Terminus commands, the flags `-y` or `--yes` will bypass requests to confirm actions.
+
 ## Example Bash Scripts
 
 ### Take a backup of the live environment of all sites in an organization
