@@ -31,7 +31,7 @@
 # Deploy modified files to production                           #
 #===============================================================#
 touch ./deployment-log.txt
-rsync --checksum --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=./deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' ~/build/gatsby/public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
+rsync --checksum --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=./deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     printf "\n Displaying adjusted Rsync log: \n\n"
