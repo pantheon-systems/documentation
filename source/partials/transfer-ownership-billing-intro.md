@@ -1,8 +1,8 @@
-This is the most common way non-agency developers and Registered Agencies (i.e. non-Partner Agencies) deliver completed sites to their clients. If you are a Partner Agency looking to ensure that your client receives [preferred pricing](https://pantheon.io/plans/agency-preferred-pricing), you should instead [send an invitation to your client to pay for the site](/docs/add-client-site/#send-an-invitation-to-pay-to-your-client).
+This is the most common way non-agency developers and Registered Agencies (i.e. non-Partner Agencies) deliver completed sites to their clients. If you are a Partner Agency looking to ensure that your client receives [preferred pricing](https://pantheon.io/plans/agency-preferred-pricing), you should instead [send an invitation to your client to pay for the site](/add-client-site/#send-an-invitation-to-pay-to-your-client).
 
 Single-site businesses can also use this method when site ownership needs to be transferred to someone else within the company. The invitation will guide the recipient through adding their payment method to the site for the designated plan.
 
-We recommend communicating with the business owner well in advance of sending a transfer request. It's a good idea to have them notify you once they've upgraded so you can continue the going live procedure. Feel free to share the [Site Owner FAQ](/docs/site-owner-faq/) guide with them.
+We recommend communicating with the business owner well in advance of sending a transfer request. It's a good idea to have them notify you once they've upgraded so you can continue the going live procedure. Feel free to share the [Site Owner FAQ](/site-owner-faq/) guide with them.
 
 <Alert title="Warning" type="warning">
 

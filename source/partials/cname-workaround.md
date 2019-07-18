@@ -5,7 +5,7 @@ If your domain's DNS configuration relies on an existing MX or TXT record that i
 
 <Alert title="Note" type="info">
 
-Replace `live-example.pantheonsite.io` in the following URLs with the target environment's [platform domain](/docs/domains/#platform-domains).
+Replace `live-example.pantheonsite.io` in the following URLs with the target environment's [platform domain](/domains/#platform-domains).
 
 </Alert>
 

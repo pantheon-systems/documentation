@@ -11,7 +11,7 @@ You can resolve this using one of two methods:
 
 <Tab title="Terminus" id="terminus-replace-anchor" active={true}>
 
-Using [Terminus](/docs/terminus), you can run an additional `wp search-replace` command on the target environment after cloning. Set or replace the variables `$site` and `$env` with your site name and the correct environment:
+Using [Terminus](/terminus), you can run an additional `wp search-replace` command on the target environment after cloning. Set or replace the variables `$site` and `$env` with your site name and the correct environment:
 
 
 ```bash
@@ -29,7 +29,7 @@ terminus remote:wp $site.$env -- search-replace "http://live-example.pantheonsit
 
 <Tab title="Quicksilver" id="quicksilver-replace-anchor">
 
-For those using [Quicksilver](/docs/quicksilver/) scripts, consider the following example. On each `passthru` line, replace `example#.pantheonsite.io` and `example.com` with the domains you want to find and replace, respectively:
+For those using [Quicksilver](/quicksilver/) scripts, consider the following example. On each `passthru` line, replace `example#.pantheonsite.io` and `example.com` with the domains you want to find and replace, respectively:
 
 
 ```php
@@ -51,7 +51,7 @@ if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
 ?&gt;
 ```
 
-The example above replaces three URLs when cloning to the test environment with `test-examplesite.pantheonsite.io`, and replaces that domain with the example [custom domain](/docs/domains/#custom-domains) `example.com` when cloning to the live environment.
+The example above replaces three URLs when cloning to the test environment with `test-examplesite.pantheonsite.io`, and replaces that domain with the example [custom domain](/domains/#custom-domains) `example.com` when cloning to the live environment.
 
 
 You can find this example and many others in the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repo.

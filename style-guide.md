@@ -72,7 +72,7 @@ Any bits of code should be wrapped in backticks.  Any standalone code blocks sho
 
 ### Links
 
-Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress")` will yield [Guide Title](/docs/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress").
+Only link the title of the article or name of a site, not the entire leading sentence or any ending punctuation. For example: `[Guide Title](/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress")` will yield [Guide Title](/articles/wordpress/guide-title "Pantheon's Guide to doing something in WordPress").
 
 ### Anchor Tags
 
@@ -158,18 +158,18 @@ sites/all/modules/contrib
 
 When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations).   **Example**:
 
-For help with SSH keys, see [Generating SSH Keys](/docs/articles/users/generating-ssh-keys/).
+For help with SSH keys, see [Generating SSH Keys](/articles/users/generating-ssh-keys/).
 
 When linking to an article in a sentence without using the exact title, display it as part of the sentence in sentence case. **Example**:
 In WordPress, [advanced custom fields can be exported to code](http://stevegrunwell.com/blog/exploring-the-wordpress-advanced-custom-fields-export-feature/ "Steve Grunwell blog, WordPress post").
 
 When referring to another article to provide detailed instructions that are important for completing the current task, use this format:
 ```
-For detailed instructions, see [Article Title](/docs/articles/path).
+For detailed instructions, see [Article Title](/articles/path).
 ```
 When cross-referencing a document as suggested reading that the user may find helpful because it is related to the task/topic, but not essential for completing the current task, use this format:
 ```
-For more information, see [Article Title](/docs/articles/path).
+For more information, see [Article Title](/articles/path).
 ```
 ## Dates
 

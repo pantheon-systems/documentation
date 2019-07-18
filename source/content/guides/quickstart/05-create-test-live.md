@@ -30,7 +30,7 @@ In this lesson, we’re going to to create our Test site and our Live site, whic
 
 <Alert title={"Warning"} type={"danger"}>
   If you haven’t completed the installation of your Dev site, return to [Create
-  New Site](/docs/guides/quickstart/create-new-site), and do this now, before
+  New Site](/guides/quickstart/create-new-site), and do this now, before
   proceeding.
 </Alert>
 
