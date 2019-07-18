@@ -5,7 +5,7 @@ contributors:  [dwayne]
 permalink:  docs/videos/:basename/
 tags: [cacheedge]
 categories: [develop, cli]
-layout: doc
+layout: video
 searchboost: 50
 ---
 

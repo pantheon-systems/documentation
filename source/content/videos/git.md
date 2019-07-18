@@ -5,7 +5,7 @@ contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [git]
 categories: [develop, cli]
-layout: doc
+layout: video
 searchboost: 50
 ---
 

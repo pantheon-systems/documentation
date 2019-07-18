@@ -5,7 +5,7 @@ contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [devdrush]
 categories: [drupal]
-layout: doc
+layout: video
 searchboost: 50
 ---
 

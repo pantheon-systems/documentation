@@ -5,7 +5,7 @@ contributors:  [davidneedham]
 permalink:  docs/videos/:basename/
 tags: [pantheonyml]
 categories: [develop, cli]
-layout: doc
+layout: video
 searchboost: 50
 ---
 

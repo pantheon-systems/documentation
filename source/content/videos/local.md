@@ -4,7 +4,7 @@ description: Sync your code, database, and files for local development.
 contributors:  [dwayne]
 permalink:  docs/videos/:basename/
 tags: [local]
-layout: doc
+layout: video
 searchboost: 50
 ---
 

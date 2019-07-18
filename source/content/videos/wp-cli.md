@@ -5,7 +5,7 @@ contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [devwpcli]
 categories: [wordpress]
-layout: doc
+layout: video
 searchboost: 50
 ---
 
