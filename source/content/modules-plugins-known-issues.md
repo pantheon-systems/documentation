@@ -120,7 +120,7 @@ Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/
 <hr />
 
 ### [Honeypot http:BL](https://www.drupal.org/project/httpbl)
-**Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx webservers and Apache modules are not compatible with our platform.
+**Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx webservers and Apache modules are not compatible with the Platform.
 
 <hr />
 
