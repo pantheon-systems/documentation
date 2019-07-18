@@ -7,7 +7,7 @@ categories: []
 
 <Alert title="Note" type="info">
 
-Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/docs/annual-billing/) for more information.
+Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/annual-billing/) for more information.
 
 </Alert>
 
@@ -17,7 +17,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing pla
 
 <Alert title="Note" type="info">
 
-Changing your site billing is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
+Changing your site billing is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch/).
 
 </Alert>
 
@@ -31,8 +31,8 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 </Alert>
 
 ## Transfer Ownership and Billing for This Site
-`markdown:transfer-ownership-billing-intro.md`
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-intro.md" />
+<Partial file="transfer-ownership-billing-steps.md" />
 
 ## Add New Credit Card
 
@@ -60,7 +60,7 @@ Select the card you want the site to use as the new payment method _after_ it ha
  You should get a message saying "Your billing information has been updated!"
 
 ### Do Not Bill This Site to a Card
-After [downgrading from a paid plan to Sandbox](/docs/site-plan/#cancel-current-plan), remove the card as a payment method for the site:
+After [downgrading from a paid plan to Sandbox](/site-plan/#cancel-current-plan), remove the card as a payment method for the site:
 
 1. Go to the Site Dashboard and click the **Billing** tab.
 1. Find your card under BILLING INFORMATION and click **Remove Card**.
@@ -84,12 +84,12 @@ No, payment for a site can only come from one card at a time.
 ### Why don't I get email notifications about upcoming billing?
 Billing emails are only sent to the billing contact email, set by the [Site Owner](#roles-and-permissions) when they enter a credit card for payment:
 
-![Billing Contact](../docs/assets/images/dashboard/billing-contact.png)
+![Billing Contact](../images/dashboard/billing-contact.png)
 
 If you are the billing contact for an online site plan, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts. You can also reach out to your IT department to see if the emails are in quarantine.
 
 ## See Also
-- [Account Billing in the User Dashboard](/docs/account-billing/)
-- [Manage Plans in the Site Dashboard](/docs/site-plan/)
-- [Traffic Limits and Overages](/docs/traffic-limits/)
-- [New Site Plans FAQs](/docs/new-plans-faq/)
+- [Account Billing in the User Dashboard](/account-billing/)
+- [Manage Plans in the Site Dashboard](/site-plan/)
+- [Traffic Limits and Overages](/traffic-limits/)
+- [New Site Plans FAQs](/new-plans-faq/)

@@ -19,7 +19,7 @@ For corporate or higher education customers, Custom Upstreams is included for [P
 
 <Alert title="Note" type="info">
 
-Support for Custom Upstreams requires that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/docs/support/#custom-upstreams). If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/docs/composer/).
+Support for Custom Upstreams requires that the externally hosted upstream repository is connected properly to the platform. For details, see [Get Support](/support/#custom-upstreams). If you are considering a Composer based workflow, refer to [Composer Fundamentals and Workflows](/composer/).
 
 </Alert>
 
@@ -37,7 +37,7 @@ Not only does this workflow free up developer time, it establishes a sustainable
 
 New features and functionality can be continuously developed in the Custom Upstream repository, then distributed to each site, where they can be applied with a single click by site owners.
 
-![Custom upstream update strategy](../docs/assets/images/update-diagram.png)
+![Custom upstream update strategy](../images/update-diagram.png)
 
 > See how Forum One uses this process to build, launch, and manage nearly 200 satellite sites for Fairfax County Public Schools in [this case study](https://pantheon.io/resources/forum-one-pantheon-fairfax-county-public-schools-drupal-case-study).
 
@@ -53,7 +53,7 @@ There are three levels of repositories in play here, and updates flow "downstrea
 <div class="upstream-overview-outter">
 <div class="upstream-content-inner-icon">
 
-![Parent upstream level](../docs/assets/images/levelone-icon.png)
+![Parent upstream level](../images/levelone-icon.png)
 
 <ul class="upstream" style="margin-right:40px;display:inline-flex;">
 <li>Core Updates</li>
@@ -69,7 +69,7 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 <div class="upstream-overview-outter">
 <div class="upstream-content-inner-icon">
 
-![Custom upstream level](../docs/assets/images/leveltwo-icon.png)
+![Custom upstream level](../images/leveltwo-icon.png)
 
 <ul class="upstream">
 <li>Parent Theme</li>
@@ -87,7 +87,7 @@ The Custom Upstream repository is hosted outside of Pantheon using a provider li
 <div class="upstream-overview-outter">
 <div class="upstream-content-inner-icon">
 
-![Site upstream level](../docs/assets/images/levelthree-icon.png)
+![Site upstream level](../images/levelthree-icon.png)
 
 <ul class="upstream">
 <li>Child Theme</li>
@@ -118,4 +118,4 @@ Here are definitions for commonly used terms:
 
 Once you've grasped the concepts discussed above, you're ready to create your own Custom Upstream.
 
-- [Create a Custom Upstream](/docs/create-custom-upstream)
+- [Create a Custom Upstream](/create-custom-upstream)

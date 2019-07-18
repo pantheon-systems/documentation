@@ -4,7 +4,7 @@ description: Use Git version control to deploy code to your Drupal or WordPress 
 categories: []
 tags: [git]
 ---
-Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](/docs), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
 <Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -31,7 +31,7 @@ Log in to Pantheon and load the Dashboard for the site you want to work on.
 ### Step 2: Copy the Git Clone Command
 
 At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:<br />
-![Copy Past Git Clone](/docs/assets/images/dashboard/git-string.png)<br />
+![Copy Past Git Clone](/assets/images/dashboard/git-string.png)<br />
 
 ### Step 3: Run Git Clone
 
@@ -41,8 +41,8 @@ On your local environment, go to where you want the code to reside. Git will cre
 git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
 ```
 If everything worked correctly you will see Git fetching the data:<br />
-![Git Clone During](/docs/assets/images/git_clone.png)<br />
-If you run into permission problems, check your [SSH key](/docs/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+![Git Clone During](/assets/images/git_clone.png)<br />
+If you run into permission problems, check your [SSH key](/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Make a Change
 
@@ -62,7 +62,7 @@ To find out if you have any files in your local clone that Git isn't yet trackin
 git status
 ```
 Any pending changes and files to be added will be listed like this:<br />
-![Git Status](/docs/assets/images/git_status.png)<br />
+![Git Status](/assets/images/git_status.png)<br />
 You can then cut and paste the paths to these files when using `git add .`
 
 ## Push Changes to Pantheon
@@ -79,7 +79,7 @@ git commit -am "Add a great new module to increase awesomesauce level of my Drup
 This command uses a combination of options `-am`: `-a` to include *all* files changed, and `-m` to include a commit *message*:
 
 If you don't specify a message on the command line, Git will open your default text editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:<br />
-![Git Commit](/docs/assets/images/git_commit.png)<br />
+![Git Commit](/assets/images/git_commit.png)<br />
 There is a handy list of Git commands (along with a lot of other documentation) [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf).
 
 ### Step 2: Send the Changes to Pantheon
@@ -92,7 +92,7 @@ git push origin master
 This executes a push to the origin location, which is Pantheon since that's where you cloned the code from, on the branch "master", which is what your Dev environment tracks.
 
 If you have a password on your SSH key, you may need to enter it to authorize the push. If everything worked, you will see something like this:<br />
-![Git Push](/docs/assets/images/gitpush.png)
+![Git Push](/assets/images/gitpush.png)
 
 ### Step 3: View the Changes on Pantheon
 
@@ -149,7 +149,7 @@ To configure this URL in SourceTree simply remove the `git clone` and the traili
 * Destination Path: The local path where you want to clone the repository.
 * Name: Your site name.
 
-![SourceTree git Configuration](/docs/assets/images/sourcetree-config.png)
+![SourceTree git Configuration](/assets/images/sourcetree-config.png)
 
 Alternatively, you can simply clone the repository using the `git clone` and then use the "Add Existing Local Repository" option in SourceTree to point to the checked out directory.
 
@@ -162,7 +162,7 @@ ssh: connect to host codeserver.dev.xxx.drush.in port 2222: Operation timed out
 fatal: Could not read from remote repository.
 ```
 
-To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround](/docs/port-2222/).
+To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround](/port-2222/).
 
 ## Additional Resources
 
@@ -183,5 +183,5 @@ For further learning, we recommend the following resources:
 
 For Pantheon-specific Git questions, see the following:
 
-- [Git FAQs](/docs/git-faq/)
-- [Undo Git Commits](/docs/undo-commits/)
+- [Git FAQs](/git-faq/)
+- [Undo Git Commits](/undo-commits/)

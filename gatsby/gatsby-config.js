@@ -29,6 +29,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/../source/partials`,
+        name: `partials`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         path: `${__dirname}/../source/data`,
         name: `data`,
       },
@@ -40,12 +47,19 @@ module.exports = {
         name: `scripts`,
       },
     },
-     {
-     resolve: `gatsby-source-filesystem`,
-     options: {
-       path: `${__dirname}/../source/docs/assets/images`,
-       name: `images`,
-     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/../source/images`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/../source/changelogs`,
+        name: `changelogs`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -71,18 +85,6 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
-          {
-            resolve: "gatsby-remark-embed-markdown",
-            options: {
-              directory: `${__dirname}/../source/partials`,
-              resolve: `gatsby-remark-prismjs`,
-                options: {
-                  classPrefix: "language-",
-                  inlineCodeMarker: null,
-                  aliases: {},
-                },
-            },
-          },
           {
             resolve: "gatsby-remark-github",
             options: {
@@ -117,9 +119,7 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
-          {
-            resolve: "gatsby-remark-copy-linked-files",
-          },
+          `gatsby-remark-static-images`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -135,7 +135,7 @@ module.exports = {
               rel: "nofollow noopener noreferrer external",
             },
           },
-          `gatsby-remark-slug`,
+          `gatsby-remark-heading-slug`,
         ],
       },
     },

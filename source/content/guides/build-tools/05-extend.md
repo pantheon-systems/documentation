@@ -17,14 +17,14 @@ previousurl: guides/build-tools/configure/
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb
 ---
-Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/docs/guides/build-tools/new-pr/).
+Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/new-pr/).
 
 ## Local Setup
 This section will be performed from the command line, to prepare your local system.
 
 1. Navigate to the **Code** tab of the GitHub repository, then click **Clone or download** and copy the repository URL:
 
-  ![Clone repository](../../../docs/assets/images/pr-workflow/clone.png)
+  ![Clone repository](../../../images/pr-workflow/clone.png)
 
 2. Open a terminal application and clone the GitHub repository (replace `<github-url>`):
 
@@ -61,7 +61,7 @@ This section will be performed from the command line, to prepare your local syst
 
     Note that the dependencies of pathauto, token and ctools, are also installed:
 
-    ![Composer require pathauto](../../../docs/assets/images/pr-workflow/composer-require-pathauto.png)
+    ![Composer require pathauto](../../../images/pr-workflow/composer-require-pathauto.png)
 
 2. Commit the updated `composer.json` and `composer.lock` files and push your work to the `slogan` branch on GitHub:
 
@@ -71,7 +71,7 @@ This section will be performed from the command line, to prepare your local syst
       git push origin slogan
     ```
 
-    ![Commit composer.json and composer.lock](../../../docs/assets/images/pr-workflow/commit-pathauto.png)
+    ![Commit composer.json and composer.lock](../../../images/pr-workflow/commit-pathauto.png)
 
 3. Enable the Pathauto module on the Pantheon Multidev environment from the command line using Terminus and Drush:
 
@@ -79,7 +79,7 @@ This section will be performed from the command line, to prepare your local syst
     terminus drush $SITE.$ENV -- pm-enable pathauto --yes
     ```
 
-4. You can use the [method described in an earlier lesson](/docs/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
+4. You can use the [method described in an earlier lesson](/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
     ```bash
     terminus drush $SITE.$ENV -- config-export --yes
@@ -92,6 +92,6 @@ This section will be performed from the command line, to prepare your local syst
     terminus env:commit $SITE.$ENV --message="Install and enable pathauto"
     ```
 
-    ![enable export config and commit](../../../docs/assets/images/pr-workflow/export-module-enable-config.png)
+    ![enable export config and commit](../../../images/pr-workflow/export-module-enable-config.png)
 
 Use this process to install any new dependency required by your project. The site should *never* use Drupal's **Extend** -> **Install new module** feature or `drush pm-download`, as neither of these techniques modify the `composer.json` file. Modules added using these methods will disappear the next time the build artifacts are pushed to your Pantheon Multidev environment. You must use Composer to install new modules exclusively.

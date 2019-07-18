@@ -195,39 +195,49 @@ die(0);
 
 Here are the parameters you will need to configure before running the script:
 
-<DefList>
+<dl>
 
-<Definition name="host">
+<dt>host</dt>
 
-This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/docs/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
+<dd>
 
-</Definition>
+This is the name of the remote machine your database is running on. If you are a Pantheon customer, localhost is wrong. Get the correct host from your [Site Dashboard](/mysql-access/#database-connection-information) and paste it in the PHP script to replace localhost.
 
-<Definition name="port">
+</dd>
+
+<dt>port</dt>
+
+<dd>
 
 This is the port that is running MySQL on your computer. Again, if you are a Pantheon customer, we give you this information. If you are not, 3306 is the standard port for MySQL.
 
-</Definition>
+</dd>
 
-<Definition name="user">
+<dt>user</dt>
+
+<dd>
 
 This is the user name you use to connect to MySQL with.
 
-</Definition>
+</dd>
 
-<Definition name="password">
+<dt>password</dt>
+
+<dd>
 
 This is your MySQL password for the user you specified in the line above.
 
-</Definition>
+</dd>
 
-<Definition name="database">
+<dt>database</dt>
+
+<dd>
 
 This is the name of the database that contains the tables. If you are a pantheon customer, this is "pantheon". If you are not a Pantheon customer, you will need to get this from your host.
 
-</Definition>
+</dd>
 
-</DefList>
+</dl>
 
 Now, save the file. Execute the program from a command window.
 

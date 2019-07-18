@@ -15,13 +15,13 @@ If your site uses Legacy SSL, it's also on an outdated TLS configuration. The Gl
 
 ### Option 1: Automated Certificate Management via Let's Encrypt
 
-If you just haven’t gotten around to upgrading, consider using our managed HTTPS, which includes automated certificate management, leveraging Let’s Encrypt certificates. As a convenience, when you upgrade to managed HTTPS you’ll never have to worry about an expired certificate again. As long as your domain is pointed to Pantheon, we will automatically renew the certificates required to keep your site secure. [Upgrade](/docs/https/) to get best-in-class encryption and an A+ grade from SSL Labs.
+If you just haven’t gotten around to upgrading, consider using our managed HTTPS, which includes automated certificate management, leveraging Let’s Encrypt certificates. As a convenience, when you upgrade to managed HTTPS you’ll never have to worry about an expired certificate again. As long as your domain is pointed to Pantheon, we will automatically renew the certificates required to keep your site secure. [Upgrade](/https/) to get best-in-class encryption and an A+ grade from SSL Labs.
 
 ### Option 2: Manually Managed Custom Certificates
 
-If you require a custom, dedicated certificate, you can now bring it the Global CDN. This is a paid service that our Sales Team can help you with. Please [contact sales](https://pantheon.io/contact-us){.external} prior to going through the following steps if you are not a contract customer.
+If you require a custom, dedicated certificate, you can now bring it the Global CDN. This is a paid service that our Sales Team can help you with. Please [contact sales](https://pantheon.io/contact-us) prior to going through the following steps if you are not a contract customer.
 
-1. [Open a support ticket](/docs/support/#ticket-support) with the certificate details required to request a **Certificate Signing Request** (CSR) from Pantheon. Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name) (SANs) per certificate.
+1. [Open a support ticket](/support/#ticket-support) with the certificate details required to request a **Certificate Signing Request** (CSR) from Pantheon. Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name) (SANs) per certificate.
 
     When requesting a CSR file, you must provide Pantheon Support with the following information:
 
@@ -50,7 +50,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 4. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
 
-    ![Custom Certificate Confirmation](../docs/assets/images/dashboard/custom-cert-confirm.png)
+    ![Custom Certificate Confirmation](../images/dashboard/custom-cert-confirm.png)
 
 5. [Test Before Going Live](#test-before-going-live) (optional, recommended)
 
@@ -62,7 +62,7 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 Test production domain(s) before updating DNS by overriding DNS on your local computer from your local `hosts` file:
 
-`markdown:hosts-file.md`
+<Partial file="_hosts-file.md" />
 
 For non-production domains, test on any environment (Dev, Test, Live or Multidev), just make sure to include the non-production domains on your certificate. We are happy to provide a new CSR if your original CSR and certificate did not initially non-production domains.
 
@@ -86,10 +86,10 @@ CAA records configured for the root domain (e.g., `example.com`) are inherited b
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       | Self-managed (up to you)              |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 | Static (shared)                       |
 | **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br />Some very old browsers not supported <sup> [1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br />Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> * |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)               | A                         | A+ [with HSTS](/docs/hsts/)     | A+ [with HSTS](/docs/hsts/) *         |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)               | A                         | A+ [with HSTS](/hsts/)     | A+ [with HSTS](/hsts/) *         |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                | TLS 1.2 with SNI                      |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             | No Weak 3DES cipher                   |
-| **Delivery**                                                          | US Datacenter             | [Global CDN](/docs/global-cdn)  | [Global CDN](/docs/global-cdn)        |
+| **Delivery**                                                          | US Datacenter             | [Global CDN](/global-cdn)  | [Global CDN](/global-cdn)        |
 | **Encryption Endpoint**                                               | Load Balancer             | Application Container           | Application Container                 |
 
 \* The browser compatibility and SSL Labs scores are guaranteed for shared Let’s Encrypt certificates. The same results are typical for a custom certificate from a mainstream CA with mainstream attributes, but not guaranteed.  For custom certificates, compatibility and SSL Labs score depends on attributes of that certificate, such as number of SAN entries, CA and signing algorithm.
@@ -108,7 +108,7 @@ Please allow two business days to get a CSR and load the certificate.
 
 45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for [bringing a custom certificate](#option-2-manually-managed-custom-certificates)).
 
-To update a certificate with additional domains, [contact support](/docs/support/) with the following details:
+To update a certificate with additional domains, [contact support](/support/) with the following details:
 
  - The current common name (CN) and any SANs
  - A colon-separated list of domains the certificate is valid for
@@ -118,7 +118,7 @@ It may take up to two business days to process the request.
 
 ### What about sites purchased online?
 
-Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on [how to terminate TLS through a 3rd-party](/docs/https/#can-i-bring-my-own-certificate).
+Custom certificates are available for contract customers (e.g. Elite, Enterprise, EDU+) and we have no plans to offer it for Basic or Performance sites purchased online. If bringing your own certificate for non-contract site is a requirement, please see suggestions on [how to terminate TLS through a 3rd-party](/https/#can-i-bring-my-own-certificate).
 
 ### Will custom certificates be self-serve?
 
@@ -147,7 +147,7 @@ A record: `23.185.0.X`
 AAAA record 1:  `2620:12a:8000::X`
 AAAA record 2:  `2620:12a:8001::X`
 
-**Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/docs/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
+**Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
 
 ## Caveats / Known Issues
 
@@ -159,9 +159,9 @@ Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CS
 
 ### Downgrading a Site that uses a Custom Certificate
 
-Since all sites require an encryption certificate, to downgrade a site that uses a custom certificate, use Pantheon’s [Global CDN](/docs/https/) to enable Let’s Encrypt. Alternatively, you can use another CDN like [Cloudflare](/docs/cloudflare/).
+Since all sites require an encryption certificate, to downgrade a site that uses a custom certificate, use Pantheon’s [Global CDN](/https/) to enable Let’s Encrypt. Alternatively, you can use another CDN like [Cloudflare](/cloudflare/).
 
 ## See also
-- [Pantheon Global CDN](/docs/global-cdn)
-- [HTTPS on Pantheon's Global CDN](/docs/https/)
-- [Introduction to Domain Name Services](/docs/dns/)
+- [Pantheon Global CDN](/global-cdn)
+- [HTTPS on Pantheon's Global CDN](/https/)
+- [Introduction to Domain Name Services](/dns/)

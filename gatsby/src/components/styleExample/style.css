@@ -1,0 +1,27 @@
+
+.style-example {
+    border: solid 2px #6E818E;
+    position: relative;
+    padding: 45px 15px 15px;
+    margin-bottom: 20px;
+}
+
+.style-example::after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+}
+
+.h1 {
+	margin-top: 35px;
+	font-family: "TabletGothic";
+	color: #313945;
+	font-size: 50px;
+	font-weight: 700;
+}

@@ -1,0 +1,25 @@
+.platform-integrations img{
+  margin: 10px !important;
+}
+.flex-panel-item-platform-integrations-guides {
+  flex: 1 200px;
+  margin: 0px 0px 15px 15px;
+  color: #333;
+}
+.flex-panel-body-platform-integrations:hover {
+  background: #ffffff;
+  border: 1px solid #a4bbc1;
+  box-shadow: 0px 0px 11px;
+}
+.flex-panel-body-platform-integrations {
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}

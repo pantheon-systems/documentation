@@ -10,11 +10,11 @@ This article covers some best practices and recommendations for building a Drupa
 
 ## Initial Site Setup
 
-After you've [created your site on Pantheon](/docs/create-sites), you'll need to set up your local environment.
+After you've [created your site on Pantheon](/create-sites), you'll need to set up your local environment.
 
 ## Clone the Code Repository
 
-Make sure your Dev environment is in Git mode, then [clone your Git repository](/docs/git/) to your local workstation.
+Make sure your Dev environment is in Git mode, then [clone your Git repository](/git/) to your local workstation.
 
 ## Create a New PhpStorm Project
 
@@ -39,7 +39,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 ## Configure On-Server Development
 
-1. Put your [Dev environment into SFTP mode](/docs/sftp/), and click **Connection Info** to see the connection settings.
+1. Put your [Dev environment into SFTP mode](/sftp/), and click **Connection Info** to see the connection settings.
 2. Within PhpStorm, go to Tools > Deployment > Configuration.
 3. Click **plus** for the [add server dialog](https://www.jetbrains.com/help/phpstorm/add-server-dialog.html).
 4. Enter the Pantheon site name followed by a dash and the environment.<br />

@@ -9,14 +9,14 @@ contributors: [erikmathy]
 date: 2/25/2015
 ---
 ## Create Sites Faster and More Efficiently
-The latest version of Pantheon's CLI, [Terminus](/docs/terminus/), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
+The latest version of Pantheon's CLI, [Terminus](/terminus/), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
 
 <Alert title="Note" type="info">
-The following does **not** pertain to Composer managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/docs/guides/build-tools/).
+The following does **not** pertain to Composer managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/guides/build-tools/).
 </Alert>
 
 ## Installing Terminus
-Installing Terminus is a fairly straight forward process. Just follow [these instructions](/docs/terminus/install/).
+Installing Terminus is a fairly straight forward process. Just follow [these instructions](/terminus/install/).
 
 After you install Terminus, do a quick status check to make sure it works. Depending on your OS, the output may vary, but here's a sample:
 
@@ -78,7 +78,7 @@ Starting Drupal installation. This takes a few seconds ...                  [ok]
 Installation complete.  User name: admin  User password: ********         [ok]
 ```
 
-If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/docs/settings-php/) file.
+If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/settings-php/) file.
 
 You should now be able to open a web browser and see your brand new Drupal site! On Mac, try using the `open` command to see an environment in your default browser:
 
@@ -86,7 +86,7 @@ You should now be able to open a web browser and see your brand new Drupal site!
 open https://dev-terminus-cli-create.pantheon.io
 ```
 
-![Dev environment in browser](../../docs/assets/images/terminus-cli-open-http.png)
+<Image alt="Dev environment in browser" src="terminus-cli-open-http.png" />
 
 There is also the `terminus dashboard <site>.<env> --print` command if, at any point in time, you want to open the site's Pantheon Dashboard.
 
@@ -94,7 +94,7 @@ There is also the `terminus dashboard <site>.<env> --print` command if, at any p
 $ terminus dashboard <site>.<env>
 ```
 
-![Dashboard in browser](../../docs/assets/images/dashboard/terminus-cli-open-dash.png)
+<Image alt="Dashboard in browser" src="dashboard/terminus-cli-open-dash.png" />
 
 Also, the status of each of the environments within the site can be seen using a `terminus env:list` command.
 
@@ -130,7 +130,7 @@ admin_menu_toolbar was enabled successfully.                                [ok]
 
 Not bad, eh? All this without a single GUI or web browser click! If you look at the site's Dashboard, the new code will be displayed there, waiting to be committed.
 
-![The dashboard showing the code was deployed to the Dev environment](/docs/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![The dashboard showing the code was deployed to the Dev environment](/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
 Let's commit it all into the Git repo with the `terminus env:commit` command:
 
@@ -146,7 +146,7 @@ Success: Successfully committed.
 
 Open the Pantheon Dashboard, and you'll see the new files are shown in the Git commit log.
 
-![The dashboard's showing the code was deployed to the Dev environment](../../docs/assets/images/dashboard/terminus-cli-code-committed-dashboard.png)
+<Image alt="The dashboard's showing the code was deployed to the Dev environment" src="dashboard/terminus-cli-code-committed-dashboard.png" />
 
 To see what a commit message looks like, let's download Bootstrap and then commit it as well.
 
@@ -166,7 +166,7 @@ Success: Successfully commited.
 +---------------------+---------+-----------+------------------------------------------+-------------------+
 ```
 
-![The dashboard's showing the code was deployed to the Dev environment](../../docs/assets/images/dashboard/terminus-commit-with-message.png)
+<Image alt="The dashboard's showing the code was deployed to the Dev environment" src="dashboard/terminus-commit-with-message.png" />
 
 And finally, let's initialize the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using a `terminus env:deploy` command:
 
@@ -178,6 +178,6 @@ $ terminus env:deploy <site>.test --sync-content --cc --updatedb
 You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. There is a whole new world of possibility open to you. Now go forth and CLI!
 
 ##  Next Steps
-- Learn more about [Drush](/docs/drush/).
+- Learn more about [Drush](/drush/).
 
-- After you've mastered Terminus, take it a step further with [Continuous Integration](/docs/continuous-integration).
+- After you've mastered Terminus, take it a step further with [Continuous Integration](/continuous-integration).

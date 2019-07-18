@@ -5,7 +5,7 @@ tags: [debugdb]
 categories: [troubleshoot]
 ---
 There is an issue connecting to the Pantheon database if your site suddenly reverts to `install.php`, or you see database connection errors like the following:
- ![Can't connect to local MySQL server through socket](../docs/assets/images/mysql-connection-error.png)
+ ![Can't connect to local MySQL server through socket](../images/mysql-connection-error.png)
 
 ```sql
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).
@@ -24,7 +24,7 @@ To see if this is the case, examine your `includes/bootstrap.inc` file, and veri
 If you don't see that, look in to recent changes and revert or remove whatever overwrote your core.
 
 ### WordPress Core
-Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/docs/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/docs/support/#scope-of-support) and [WordPress and Drupal Core Updates](/docs/core-updates).
+Apply one-click updates within the Site Dashboard on Pantheon or via [Terminus](/terminus). Do not update core using the WordPress Dashboard or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/support/#scope-of-support) and [WordPress and Drupal Core Updates](/core-updates).
 
 ## Drupal Non-Standard Bootstraps
 Some modules, like the **domain.module**, change Drupal's standard bootstrap process. They typically require you to add an include file to the end of your `settings.php`, which causes an escalated bootstrap earlier than normal so they can perform some higher level functions like checking to see if a user has access.
@@ -75,4 +75,4 @@ Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or v
 ```
 
 ## See Also
-- [Troubleshooting MySQL Connections](/docs/mysql-access/#troubleshooting-mysql-connections)
+- [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections)

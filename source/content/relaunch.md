@@ -8,7 +8,7 @@ Sites are considered launched on Pantheon once traffic is routed through custom 
 
 <Alert title="Note" type="info">
 
-The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/docs/guides/launch/).
+The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/guides/launch/).
 
 </Alert>
 
@@ -17,7 +17,14 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 - Open a second tab for the old Site Dashboard on Pantheon
 - In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
 - Examine existing records pointing to Pantheon
-  `markdown:standard-dns-config.md`
+  <Partial file="standard-dns-config.md" />
+
+  <Alert title="Note" type="info">
+
+  For subdomains that are using Custom Certificates, use the bare domain's recommended A/AAAA records instead of using CNAME records.
+
+  </Alert>
+
 - Lower the TTL of existing DNS records to minimize impact of upcoming DNS changes
 
   <Accordion title="Learn More" id="ttl" icon="info-sign">
@@ -35,15 +42,15 @@ The permission to manage billing and plans is granted only to the role of **Site
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
 
-In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
+In order to retain Preferred Pricing an updated [invitation to pay](/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
 
 </Alert>
 
 ## Relaunch Procedure
 
-1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/docs/site-plan/#purchase-a-new-plan).
+1. In the new Site Dashboard, [upgrade the site from free to a paid plan](/site-plan/#purchase-a-new-plan).
 2. In the old Site Dashboard, remove the custom domain affected by the relaunch:
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details** > **Remove Domain**
@@ -61,21 +68,21 @@ In order to retain Preferred Pricing an updated [invitation to pay](/docs/add-cl
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details**
 
-  `markdown:notes/https-success.md`
+  <Partial file="notes/https-success.md" />
 
    This process typically takes about an hour.
 
 5. From the DNS hosting service (not Pantheon), replace values in DNS records pointed to Pantheon with new values provided in the Site Dashboard.
 
-  `markdown:standard-dns-config2.md`
+  <Partial file="standard-dns-config2.md" />
 
 6. Test and confirm that the new site is accessible via the custom domain over HTTPS (e.g., `https://www.example.com/`).
 7. Repeat steps 2-6 above for each affected domain. Keep in mind that `www.example.com` and `example.com` are different domains.
-8. In the new Site Dashboard, [standardize traffic for the primary domain](/docs/domains/#redirect-to-https-and-the-primary-domain).
-9. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/docs/site-plan/#cancel-current-plan).
-10. In the old Site Dashboard, [remove the existing card as a payment method for the site](/docs/site-billing/#do-not-bill-this-site-to-a-card).
+8. In the new Site Dashboard, [standardize traffic for the primary domain](/domains/#redirect-to-https-and-the-primary-domain).
+9. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/site-plan/#cancel-current-plan).
+10. In the old Site Dashboard, [remove the existing card as a payment method for the site](/site-billing/#do-not-bill-this-site-to-a-card).
 
 ## See Also
-- [Launch Essentials](/docs/guides/launch/)
-- [Manage Plans in the Site Dashboard](/docs/site-plan/)
-- [Billing in the Site Dashboard](/docs/site-billing/)
+- [Launch Essentials](/guides/launch/)
+- [Manage Plans in the Site Dashboard](/site-plan/)
+- [Billing in the Site Dashboard](/site-billing/)

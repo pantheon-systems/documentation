@@ -9,15 +9,15 @@ permalink: docs/guides/:basename/
 In this guide, you'll learn how to use Composer in small doses with WordPress and Drupal 7 so you can work towards best practices achieved by more advanced implementations. This allows you to continue using Pantheon's one-click core updates in the Site Dashboard while managing non-core dependencies with Composer.
 
 ## Before You Begin
-- Read [Composer Fundamentals and Workflows](/docs/composer/)
+- Read [Composer Fundamentals and Workflows](/composer/)
 - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and [Git](https://git-scm.com/downloads) locally
 - Create a WordPress or Drupal 7 site on Pantheon
 
   
-`markdown:/notes/partial-composer-adoption-warning.md`
+<Partial file="notes/partial-composer-adoption-warning.md" />
 
 
-- Set the site's connection mode to Git within the Site Dashboard or via [Terminus](/docs/terminus):
+- Set the site's connection mode to Git within the Site Dashboard or via [Terminus](/terminus):
 
   ```bash
   terminus connection:set <site>.<env> git
@@ -33,7 +33,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 <Tab title="WordPress" id="wp-init" active={true}>
 
-1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
+1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
       ```bash
       SITE=<site_name>
@@ -100,14 +100,14 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 <Tab title="Drupal 7" id="d7-init">
 
-1. If you haven't done so already, [clone your Pantheon site repository](/docs/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
+1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
     ```bash
     SITE=<site_name>
     `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
     cd $SITE
     ```
-`markdown:d7-composer-init.md`
+<Partial file="d7-composer-init.md" />
 4. Commit the `composer.json` file to version control with Git:
 
     ```bash
@@ -144,7 +144,7 @@ Use the `require` command to add new dependencies to your project, such as libra
     ```
   2. Review modified files using `git status`, you should see the module has been installed in the `wp-content/plugins` directory like so:
 
-    ![Require wpackagist-plugin/pantheon-advanced-page-cache output](../../docs/assets/images/guides/partial-composer/require-papc-plugin.png)
+    <Image alt="Require wpackagist-plugin/pantheon-advanced-page-cache output" src="guides/partial-composer/require-papc-plugin.png" />
 
     Notice a missing dependency was also installed, `composer/installers`. This is package is needed to support the installation paths configured in the previous section.
 
@@ -186,7 +186,7 @@ Use the `require` command to add new dependencies to your project, such as libra
     ```
   3. Review modified files using `git status`:
 
-    ![Require drupal/pantheon_advanced_page_cache output](../../docs/assets/images/guides/partial-composer/require-drush.png)
+    <Image alt="Require drupal/pantheon_advanced_page_cache output" src="guides/partial-composer/require-drush.png" />
 
     If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing.
   4. Commit your work to version control with Git:
@@ -211,4 +211,4 @@ Use the `require` command to add new dependencies to your project, such as libra
 ## Next Steps
 If your use case doesn't require the more advanced Build Tools method, continue using Composer to manage any number of your non-core dependencies while preserving Pantheon's one-click core updates. This is only supported for Drupal 7 and WordPress. This is not supported on Drupal 8 as it will break one-click updates due to excessive conflicts.
 
-If you're ready to learn best practices for Composer on Pantheon, follow the [Build Tools](/docs/guides/build-tools/) guide.
+If you're ready to learn best practices for Composer on Pantheon, follow the [Build Tools](/guides/build-tools/) guide.

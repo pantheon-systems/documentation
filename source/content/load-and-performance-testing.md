@@ -8,7 +8,7 @@ Load and performance tests are critical steps in going live procedures, as they 
 
 <Alert title="Note" type="info">
 
-Load testing is one of the services offered by our [Professional Services](/docs/professional-services/#pre-launch-load-testing) team.
+Load testing is one of the services offered by our [Professional Services](/professional-services/#pre-launch-load-testing) team.
 
 </Alert>
 
@@ -17,7 +17,7 @@ Before you start, it's important to understand the difference between load and p
 ### Performance Testing
 Performance testing is the process in which you measure an application's response time to proactively expose bottlenecks. In addition to regularly referring to your New Relic reports, you should consider regularly executing performance tests as part of routine maintenance to ensure performance isn't being degraded by code or configuration changes.  You should run these test before any load testing. If your application is not performing well, then you can be assured that the load test will not go well.  
 
-The scope of performance tests should be limited to the application itself on a development environment (Dev or [Multidev](/docs/multidev)) without caching. This will give you an honest look into your application and show exactly how uncached requests will perform. You can bypass cache by [setting the `no-cache` HTTP headers](/docs/cache-control) in responses.
+The scope of performance tests should be limited to the application itself on a development environment (Dev or [Multidev](/multidev)) without caching. This will give you an honest look into your application and show exactly how uncached requests will perform. You can bypass cache by [setting the `no-cache` HTTP headers](/cache-control) in responses.
 
 
 
@@ -29,7 +29,7 @@ If your site is already live, then you should run load tests on the Test environ
 ## Preparing for Tests
 The procedure for executing a load test and a performance test are similar:
 
-1. Enable [New Relic Pro](/docs/new-relic) within the Site Dashboard on Pantheon to ensure you have clear reporting to monitor response times.
+1. Enable [New Relic Pro](/new-relic) within the Site Dashboard on Pantheon to ensure you have clear reporting to monitor response times.
 
    * Set your [apdex](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measuring-user-satisfaction#score) threshold according to your business rules (.5 is the default). Be careful not to set this too high, otherwise you will not get as many transaction traces in New Relic.
    * If you have particular transactions that you want to ensure are traced, set them up as [key transactions](https://docs.newrelic.com/docs/apm/transactions/key-transactions/key-transactions-tracking-important-transactions-or-events).
@@ -54,7 +54,7 @@ Ultimately, it doesn't matter what tool(s) you use as long as you test your site
 
 
 ##Running the Tests
-If this is a performance test, be sure to run the test on a development environment (Dev or [Multidev](/docs/multidev)) without caching. Run load tests on the Live environment before launching the site. If the site is already launched, use the Test environment instead.
+If this is a performance test, be sure to run the test on a development environment (Dev or [Multidev](/multidev)) without caching. Run load tests on the Live environment before launching the site. If the site is already launched, use the Test environment instead.
 
 <Alert title="Warning" type="danger">
 
@@ -62,14 +62,15 @@ We do not recommend load testing on the Live environment if the site has already
 
 </Alert>
 
-Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/docs/logs). Make note of any errors and warnings that pop up during the test so that you can fix them.
+Note the start time for the test. As the test executes, it's a good idea to keep a close eye on [log files](/logs). Make note of any errors and warnings that pop up during the test so that you can fix them.
 
 Once the test is running, execute common tasks done by editors and administrators and note the time. Example tasks may include:
 
 * Clear the cache
 * Clear the edge cache (if this is a load test, performance tests should not be cached)
 * Run cron
-* Run any scripts that could be triggered while users are on the site.
+* Run any scripts that could be triggered while users are on the site
+* Flush Redis cache (if Redis is running)
 
 ## Assess Results
 Now that the test is complete, examine the New Relic data. The **Overview** tab will give you an average response time for the duration of the test. Times above 750ms are good indicators of performance optimization opportunities.
@@ -83,4 +84,5 @@ After launch, you can establish a baseline that `X` response time will let you h
 
 ## See Also
 
-* [Load Testing Drupal and WordPress with BlazeMeter](/docs/guides/load-testing-with-blazemeter/)
+* [Load Testing Drupal and WordPress with BlazeMeter](/guides/load-testing-with-blazemeter/)
+

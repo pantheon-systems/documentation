@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: pantheonsystems/documentation:latest
+      - image: circleci/node:10.16.0-browsers-legacy
     working_directory: ~/build
     steps:
       - checkout
@@ -13,60 +13,74 @@ jobs:
       - run:
           name: Prep Environment
           command: |
+            sudo apt install -y rsync composer php-xml
+            composer global require pantheon-systems/terminus
+            cd ~/build/gatsby
+            sudo npm install -g gatsby
             npm install
-            ./node_modules/.bin/grunt
-            mkdir output_prod
-            cd output_prod && ln -s ./ source
       - run:
-          name: Sculpin Generate
-          command: /documentation/bin/sculpin generate --env=prod
+          name: Import GitHub Token
+          command: |
+            cd ~/build/gatsby
+            touch .env.production
+            echo "GITHUB_API=$GITHUB_TOKEN" > .env.production
+      - run:
+          name: Gatsby Build
+          command: |
+            cd ~/build/gatsby
+            gatsby build --prefix-paths | cat
       - run:
           name: Deploy Multidev environment
-          command: bash ./scripts/deploy-multidev.sh
-      - run:
-          name: Start Ghost Driver
-          command: phantomjs --webdriver=8643
-          background: true
-      - run:
-          name: Start Sculpin
-          command: /documentation/bin/sculpin server
-          background: true
-      - run:
-          name: Wait for Sculpin
-          command: dockerize -wait tcp://localhost:8000 -timeout 1m
-      - run:
-          name: Behat
           command: |
-            /documentation/bin/behat
-      - run:
-          name: a11y
-          command: |
-            /documentation/node_modules/.bin/grunt test
-      - run:
-          name: Merge Conflicts
-          command: |
-            scripts/merge_conflicts.sh
+            bash ./scripts/deploy-multidev.sh
+#      - run:
+#          name: Start Ghost Driver
+#          command: phantomjs --webdriver=8643
+#          background: true
+#      - run:
+#          name: Start Gatsby
+#          command: |
+#            cd ~/build/gatsby
+#            gatsby serve --prefix-paths
+#          background: true
+#      - run:
+#          name: Wait for Gatsby
+#          command: dockerize -wait tcp://localhost:9000 -timeout 1m
+#      - run:
+#          name: Behat
+#          command: |
+#            cd ~/build
+#            npm install
+#            ~/build/bin/behat
+#      - run:
+#          name: a11y
+#          command: |
+#            /documentation/node_modules/.bin/grunt test
+#      - run:
+#          name: Merge Conflicts
+#          command: |
+#            scripts/merge_conflicts.sh
 #      - run:
 #          name: htmlProofer
 #          command: |
 #            htmlproofer --assume-extension  ./output_prod/ --disable-external true
-      - run:
-          name: Speedtest
-          command: |
-            echo
-            # Run sitespeed.io performance testing.
-            mkdir ~/build/artifacts
-            bash scripts/run-sitespeed-test.sh
-      - save_cache:
-          key: npm-v1-{{ checksum "package-lock.json" }}
-          paths:
-            - ~/build/node_modules
+#      - run:
+#          name: Speedtest
+#          command: |
+#            echo
+#            # Run sitespeed.io performance testing.
+#            mkdir ~/build/artifacts
+#            bash scripts/run-sitespeed-test.sh
+#      - save_cache:
+#          key: npm-v1-{{ checksum "package-lock.json" }}
+#          paths:
+#            - ~/build/node_modules
       - save_cache:
           key: composer-v1-{{ checksum "composer.lock" }}
           paths:
             - ~/.composer/cache
-      - store_artifacts:
-          path: ~/build/sitespeed-result
+#      - store_artifacts:
+#          path: ~/build/sitespeed-result
 
       - deploy:
           command: |

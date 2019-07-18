@@ -16,7 +16,7 @@ Extend the functionality of Terminus and add commands by installing third party 
 
 <Alert title="Note" type="info">
 
-If you are a plugin author, ensure your your plugin is updated for Terminus 2. See [Terminus 2.0](/docs/terminus-2-0/) to compare the differences.
+If you are a plugin author, ensure your your plugin is updated for Terminus 2. See [Terminus 2.0](/terminus-2-0/) to compare the differences.
 
 </Alert>
 
@@ -51,7 +51,7 @@ Plugins published on Packagist are available to install via the Composer package
 
 Most plugins are published online as a Git repository. You can install the plugin by cloning the repository into your local plugins directory (`\$HOME/.terminus/plugins`). This will allow you to contribute to the development of the plugin and to update the plugin using Git commands. To install a plugin using Git, find the Git URL of the plugin’s repository. On GitHub you can find it by clicking **Clone or download** on the repository home page:
 
-![GitHub clone URL](../../docs/assets/images/terminus-plugin-install-git.png "GitHub clone URL")
+![GitHub clone URL](../../images/terminus-plugin-install-git.png "GitHub clone URL")
 
 Then in a terminal window on your computer, use the following commands:
 

@@ -125,19 +125,19 @@ The platform resources provided to your website depend on your current plan. Pan
 ## View Service Configuration Details
 
 ### MySQL
-For a comprehensive list of MySQL settings, [access your database](/docs/mysql-access/) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
+For a comprehensive list of MySQL settings, [access your database](/mysql-access/) and issue the [SHOW VARIABLES;](https://dev.mysql.com/doc/refman/5.7/en/show-variables.html) query.
 
 ### Redis
 Get your Redis connection string by going to the **Site Dashboard > Environment (e.g. Dev) > Connection Info**, and then run: `<your redis string> config get *memory*`
 
 ### PHP
-See [Securely Working with phpinfo](/docs/phpinfo#drupal-note) for ways to view your specific PHP configuration.
+See [Securely Working with phpinfo](/phpinfo#drupal-note) for ways to view your specific PHP configuration.
 
 ## Calculate Concurrent User / Dynamic Page Capacity
 
 <Alert title="Warning" type="danger">
 
-This following content is considered deprecated. Refer to [Traffic Limits and Overages](/docs/traffic-limits/) for updated information on how Pantheon defines plans and site traffic.
+This following content is considered deprecated. Refer to [Traffic Limits and Overages](/traffic-limits/) for updated information on how Pantheon defines plans and site traffic.
 
 </Alert>
 

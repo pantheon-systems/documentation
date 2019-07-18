@@ -4,7 +4,7 @@ description: Learn how to manage site plan changes and chargebacks for Pantheon 
 tags: [manage]
 categories: []
 ---
-Pantheon for EDU+ allows Organization Administrators to manage who can change service level [plans](https://pantheon.io/pricing) for sites within their [organization](/docs/organizations/). When a site is not associated with an organization, you can add a credit card to change the site's plan. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can change a site's plan.
+Pantheon for EDU+ allows Organization Administrators to manage who can change service level [plans](https://pantheon.io/pricing) for sites within their [organization](/organizations/). When a site is not associated with an organization, you can add a credit card to change the site's plan. When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can change a site's plan.
 
 If you have a free Pantheon for EDU account and would like to upgrade to Pantheon for EDU+, [complete this form](https://pantheon.io/pantheon-edu-plus) to contact our Sales team.
 
@@ -25,13 +25,13 @@ This allows you to collect the site name, site UUID, site owner, and site owner'
 
 1. From your Site Dashboard, select **Settings**.
 2. Select the new plan from the drop-down menu, and click **Update Plan**.
-![EDU+ Service Level Selection](/docs/assets/images/dashboard/edu-site-selector.png)
+![EDU+ Service Level Selection](/assets/images/dashboard/edu-site-selector.png)
 3. Enter the text in the confirmation field to continue.
 
 ## Change the Service Level (Team Member)
 
 1. From your Site Dashboard, select **Settings**.
 2. Your organization has specific information you'll need to complete. Click **Read Instructions** to continue.  
-![Service Level Instructions](/docs/assets/images/dashboard/edu-read-instructions.png)
+![Service Level Instructions](/assets/images/dashboard/edu-read-instructions.png)
 3. Enter the required site and plan information in your organization's form. Below is an example form; however, each organization will have its own custom form.   
-![EDU+ Organization Payment Form](/docs/assets/images/edu-payment-form.png)
+![EDU+ Organization Payment Form](/assets/images/edu-payment-form.png)

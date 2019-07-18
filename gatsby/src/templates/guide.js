@@ -3,9 +3,8 @@ import { graphql } from "gatsby"
 import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "../components/layout"
+import Layout from "../layout/layout"
 import HeaderBody from "../components/headerBody"
-
 import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
@@ -19,17 +18,18 @@ import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
 import NavButtons from "../components/navButtons"
-import SEO from "../components/seo"
+import SEO from "../layout/seo"
 import Releases from "../components/releases"
 import TerminusVersion from "../components/terminusVersion"
 import Commands from "../components/commands"
 import GetFeedback from "../components/getFeedback"
-import DefList from "../components/defList.js"
-import Definition from "../components/definition.js"
-import Enablement from "../components/enablement.js"
+import Enablement from "../components/enablement"
 import Color from "../components/color.js"
-import Download from "../components/download.js"
+import Download from "../components/download"
 import BuildTools from "../components/buildTools.js"
+import Partial from "../components/partial.js"
+import Image from "../layout/image"
+import ChecklistItem from "../components/checklistItem"
 
 const shortcodes = {
   Callout,
@@ -45,11 +45,12 @@ const shortcodes = {
   Releases,
   TerminusVersion,
   Commands,
-  DefList,
-  Definition,
   Enablement,
   Download,
   BuildTools,
+  Partial,
+  ChecklistItem,
+  Image,
 }
 
 class GuideTemplate extends React.Component {
@@ -78,7 +79,7 @@ class GuideTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"docs/assets/images/terminus-thumbLarge.png"}
+          image={"/assets/images/terminus-thumbLarge.png"}
         />
         <div className="container-fluid">
           <div className="row">
@@ -126,8 +127,8 @@ class GuideTemplate extends React.Component {
                   />
                 )}
                 <NavButtons
-                  prev={node.frontmatter.previousurl}
-                  next={node.frontmatter.nexturl}
+                  prev={this.props.pageContext.previous}
+                  next={this.props.pageContext.next}
                 />
               </div>
             </div>
@@ -155,8 +156,6 @@ export const pageQuery = graphql`
         title
         subtitle
         description
-        nexturl
-        previousurl
         showtoc
         editpath
         contributors {

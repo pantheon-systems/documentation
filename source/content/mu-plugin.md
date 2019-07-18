@@ -114,7 +114,7 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
 Listed below are different plugins, themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
 
 ### Redirects
-In addition to [PHP redirects](/docs/redirects/), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
+In addition to [PHP redirects](/redirects/), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
 
 ```php
 // 301 Redirect from /old to /new
@@ -214,7 +214,7 @@ We can add multiple plugins to the function as well:
 wp_cache_add_non_persistent_groups( array( 'my_plugin_group', 'woocommerce' ) );
 ```
 
-To verify, you can use the [Redis CLI](/docs/redis/#use-the-redis-command-line-client) to flush all keys and see that the related objects are no longer added to the cache:
+To verify, you can use the [Redis CLI](/redis/#use-the-redis-command-line-client) to flush all keys and see that the related objects are no longer added to the cache:
 
 ```
 > KEYS *woocommerce:*
@@ -266,6 +266,6 @@ else{
 ## See Also
 This page intends to introduce the concept of using an MU-plugin for applying actions or filters for a site. For Site-specific or Environment-specific context, see these other documentation pages:
 
- - [Configuring wp-config.php](/docs/wp-config-php/)
- - [Environment-Specific Configuration for WordPress Sites](/docs/environment-specific-config/)
- - [Plugins with Known Issues](/docs/modules-plugins-known-issues/#wordpress-plugins)
+ - [Configuring wp-config.php](/wp-config-php/)
+ - [Environment-Specific Configuration for WordPress Sites](/environment-specific-config/)
+ - [Plugins with Known Issues](/modules-plugins-known-issues/#wordpress-plugins)

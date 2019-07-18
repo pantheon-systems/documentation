@@ -1,4 +1,5 @@
-<p>A paid plan is required to connect custom domains to your site, up to the following limits:</p>
+A paid plan is required to connect custom domains to your site, up to the following limits:
+
 
 <table class="table table-condensed table-bordered">
   <thead class="thead-inverse">

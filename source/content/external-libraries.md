@@ -20,7 +20,7 @@ Download and enable the print module and extensions via drush:
 drush @pantheon.{sitename}.{env} en print --y
 ```
 
-Create a symlink to the hosted library and your site's libraries directory [via Git](/docs/git/#clone-your-site-codebase):
+Create a symlink to the hosted library and your site's libraries directory [via Git](/git/#clone-your-site-codebase):
 
 ```bash
 mkdir -p sites/all/libraries/wkhtmltopdf
@@ -103,7 +103,7 @@ Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_o
 
 ## Troubleshooting and FAQs
 #### How do I request the addiiton of a new library or a newer version of an existing library?
-Please [contact support](/docs/support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
+Please [contact support](/support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
 
 #### Will you setup and configure the module/plugin for me?
-No. This is not within our [scope of support](/docs/support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
+No. This is not within our [scope of support](/support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.

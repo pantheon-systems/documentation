@@ -1,12 +1,12 @@
 ---
-title: '[Cachingd: Advanced Topics]'
+title: 'Caching: Advanced Topics'
 description: Advanced details about Pantheon's edge caching layer, cookies, and PHP sessions.
 tags: [cacheedge]
 categories: []
 ---
 ## Allow a User to Bypass the Cache
 
-Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/docs/global-cdn/) will neither get the user's response from any existing cache nor store the response from the user into the cache.
+Pantheon supports setting a `NO_CACHE` cookie for users who should bypass the cache. When this cookie is present, the [Pantheon Global CDN](/global-cdn/) will neither get the user's response from any existing cache nor store the response from the user into the cache.
 
 <Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -31,7 +31,7 @@ For example, `?__dynamic_id=1234` is ignored, while `?dynamic_id=1234` and `?_dy
 
 The query parameters are still passed to the application container; however, the values are replaced with `PANTHEON_STRIPPED` to indicate that cache optimization is in effect for this parameter. Avoid using these parameters in ways that alter content in the response.
 
-For more information, see [PANTHEON_STRIPPED GET Parameter Values](/docs/pantheon_stripped).
+For more information, see [PANTHEON_STRIPPED GET Parameter Values](/pantheon_stripped).
 
 ## External Authentication (e.g. Facebook login)
 
@@ -77,7 +77,7 @@ For additional details and examples on how to set cookie lifetimes and garbage c
 Session cookie lifetime and session garbage collection can be overriden in your `settings.php` file. For additional details and examples on how to set cookie lifetimes and garbage collection manually, see ​​the [documentation within default.settings.php](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php#L314-L336).
 
 #### Drupal 8
-Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for Drupal 8](/docs/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
+Session cookie lifetime and session garbage collection can be configured as `session.storage.options` parameters in a services.yml file. To override core session behavior, create a copy of the services.yml file (see [Creating a services.yml File for Drupal 8](/services-yml)), and adjust the `gc_maxlifetime` and `cookie_lifetime` values as needed.
 
 ## Geolocation, Referral Tracking, Content Customization, and Cache Segmentation
 
@@ -166,8 +166,8 @@ WordPress does not set cache headers by default, 404 or otherwise. If your site 
 Plugins like [Cache Control](https://wordpress.org/plugins/cache-control/) can solve this issue.
 
 ## Environment Access Locked
-If you're using the [Security tool](/docs/security/) within the Pantheon Site Dashboard to lock an environment, the Global CDN will not cache responses. Disable basic authentication by setting environment access to **Public**.
+If you're using the [Security tool](/security/) within the Pantheon Site Dashboard to lock an environment, the Global CDN will not cache responses. Disable basic authentication by setting environment access to **Public**.
 
 ## Cookie Handling
 
-`markdown:cache-busting.md`
+<Partial file="cache-busting.md" />

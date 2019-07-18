@@ -6,7 +6,7 @@ contributors: [alexfornuto]
 
 <Alert title="Note" type="info" >
 
-If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/docs/terminus/) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
+If you're not already familiar with Terminus, we suggest you read the [Terminus Manual](/terminus/) instead. This doc is specifically geared at existing Terminus users who need to update existing implementations.
 
 </Alert>
 
@@ -104,7 +104,7 @@ The following commands are new to Terminus as of version 2.0:
 
 ## Additional Changes
 
-The changes to these commands' behavior may affect existing integrations. For a complete list of all changes, see the [Terminus changelog](/docs/terminus/updates/#changelog).
+The changes to these commands' behavior may affect existing integrations. For a complete list of all changes, see the [Terminus changelog](/terminus/updates/#changelog).
 
  - `env:clone-content`
    - Now checks its target environment for initialization and will emit an error instead of showing an error after the operation fails.
@@ -140,5 +140,5 @@ The changes to these commands' behavior may affect existing integrations. For a 
 
 ## See Also
 
- - [The Terminus Manual](/docs/terminus/)
+ - [The Terminus Manual](/terminus/)
  - [Terminus on GitHub](https://github.com/pantheon-systems/terminus)

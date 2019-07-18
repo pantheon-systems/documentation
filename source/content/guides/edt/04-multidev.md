@@ -30,11 +30,11 @@ All links from the video are provided below.
 
 **Resource Links From Video**
 
- - [Pantheon Multidev docs](/docs/multidev/)
- - [Pantheon Multidev FAQ](/docs/multidev-faq/)
- - [Pantheon Platform Considerations](/docs/platform-considerations/)
- - [Pantheon YAML Configuration Files](/docs/pantheon-yml/)
- - [Quick Start guide](/docs/guides/quickstart/)
+ - [Pantheon Multidev docs](/multidev/)
+ - [Pantheon Multidev FAQ](/multidev-faq/)
+ - [Pantheon Platform Considerations](/platform-considerations/)
+ - [Pantheon YAML Configuration Files](/pantheon-yml/)
+ - [Quick Start guide](/guides/quickstart/)
 
 **CHALLENGE:**
 

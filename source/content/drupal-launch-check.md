@@ -6,7 +6,7 @@ categories: [drupal7]
 ---
 Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 
-![status tab on live environment](../docs/assets/images/dashboard/status-tab.png)
+![status tab on live environment](../images/dashboard/status-tab.png)
 
 Every site is unique, with its own individual configuration, content, audience, and so forth. On Pantheon, they're all built with one of two CMS frameworks, Drupal or WordPress, and have the same architectural requirements. Therefore, it's possible to provide recommendations that fit the vast majority of use cases using a technique known as **static program analysis** by gathering performance and behavior patterns to see how a site works.
 
@@ -25,7 +25,7 @@ In short, you get a fast, repeatable report that can help detect common problems
 
 ## What Doesn't Launch Check Address?
 
-- DOM and frontend performance - browsers and aggregating tools such as [New Relic Pro](/docs/new-relic) are in a much better position to analyze and report
+- DOM and frontend performance - browsers and aggregating tools such as [New Relic Pro](/new-relic) are in a much better position to analyze and report
 - Usability and site experience - in part, subjective and highly individualized to the site, not really something that can be quantified
 - Aesthetics - similarly, way out of scope
 - Content - can count the quantity and size, but we leave the actual content to the stakeholders
@@ -37,7 +37,7 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 ## Frequently Asked Questions
 
 ### Trusted Host Setting for Drupal 8
-A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/docs/settings-php/#trusted-host-setting).
+A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/settings-php/#trusted-host-setting).
 
 ### Why does site audit have more reports than what's shown in the Dashboard?
 
@@ -45,7 +45,7 @@ The Dashboard integration is intended to provide developers with the most action
 
 ### How can I manually run site audit on my site?
 
-You can get a list of all available site audit reports using [Terminus](/docs/terminus/):
+You can get a list of all available site audit reports using [Terminus](/terminus/):
 ```
 terminus remote:drush <site>.<env> -- help --filter=site_audit
 ```
@@ -77,7 +77,7 @@ $config['site_audit']['opt_out']['ExtensionsDev'] = TRUE;
 
 The specific key you'll use in the `$conf` or `$config` array is a combination of the report and the check. You can find a list of checks for the report here: [Site Audit Checks D7](http://cgit.drupalcode.org/site_audit/tree/Check?h=7.x-1.x) | [Site Audit Checks D8](http://cgit.drupalcode.org/site_audit/tree/Check?h=8.x-2.x).
 
-Keep in mind that the site audit is executed via Drush so it's best to use the [`$_ENV` superglobal](/docs/read-environment-config/) for doing things like limiting the exclusions to one environment.
+Keep in mind that the site audit is executed via Drush so it's best to use the [`$_ENV` superglobal](/read-environment-config/) for doing things like limiting the exclusions to one environment.
 
 ### I want to contribute/I found a mistake. How should I proceed?
 
@@ -87,11 +87,11 @@ Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) t
 
 ### Site Audit isn't running on my site.
 
-If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/docs/terminus/) command to execute Site Audit directly on your Pantheon site:
+If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/terminus/) command to execute Site Audit directly on your Pantheon site:
 ```bash
 terminus drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon --strict=0
 ```
 If Site Audit isn't running, there may be a fatal PHP error in your application; debugging these problems are crucial for your site's continuing operation and performance.
 
 ## See Also
-If you have a WordPress site, see [Launch Check - WordPress Performance and Configuration Analysis](/docs/wordpress-launch-check).
+If you have a WordPress site, see [Launch Check - WordPress Performance and Configuration Analysis](/wordpress-launch-check).

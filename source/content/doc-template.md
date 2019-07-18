@@ -83,7 +83,7 @@ Now let's look at some of the commonly used Markdown syntax in the docs.
 
 Images are a great way to show what the user should be seeing in a graphic user interface (**GUI**) environment, like the WordPress Admin Dashboard:
 
-![This is the alternate text, important for screen readers.](/docs/assets/images/WordPress_Pantheon-Cache-Settings.png "This is the image title text.")
+![This is the alternate text, important for screen readers.](/assets/images/WordPress_Pantheon-Cache-Settings.png "This is the image title text.")
 
 <Alert title="Warning" type="danger">
 Images of terminal output is frowned upon. When small changes are required to comply with software updates, replacing a few characters is much easier than generating a new screenshot.
@@ -99,5 +99,5 @@ Images of terminal output is frowned upon. When small changes are required to co
 
 If you can, end your doc with links to external resources that can be used to improve the reader's comprehension, or to guides on logical next steps in a common development workflow.
 
- - [An internal guide with a relative link](/docs/get-started)  
+ - [An internal guide with a relative link](/get-started)  
  - [An external guide with a full URL](http://writing.rocks/)

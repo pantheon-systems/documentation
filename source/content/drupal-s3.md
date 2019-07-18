@@ -77,15 +77,15 @@ You will need to install the appropriate Drupal module(s) and the AWS SDK librar
 
 <Tab title="Drupal 7" id="d8tab1">
 
-The following instructions use [Terminus](/docs/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
+The following instructions use [Terminus](/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
 These steps require Drush 8, which is run by default on Pantheon for newly created Drupal sites. Sites created prior to November 4, 2015 run 5.x by default.
 
 Before you begin:
 
- - [Set your site’s Drush version](/docs/drush-versions/#configure-drush-version) to Drush 8 if needed.
+ - [Set your site’s Drush version](/drush-versions/#configure-drush-version) to Drush 8 if needed.
  - Either copy the [`default.settings.php`](https://github.com/pantheon-systems/drops-7/blob/master/sites/default/default.settings.php) file to `settings.php` or create an empty `settings.php` file within the `sites/default` directory if you have not done so already.
- - Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/docs/terminus):
+ - Set the site's connection mode to SFTP within the site Dashboard or via [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.<env> sftp
@@ -131,7 +131,7 @@ As of the latest update to this doc, the [S3 File System CORS Upload](https://ww
 Before you begin:
 
  - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) locally.
- - Set the site's connection mode to Git within the site Dashboard or via [Terminus](/docs/terminus):
+ - Set the site's connection mode to Git within the site Dashboard or via [Terminus](/terminus):
   ```bash
  terminus connection:set <site>.<env> git
  ```

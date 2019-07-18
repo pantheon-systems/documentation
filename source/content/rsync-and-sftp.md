@@ -16,23 +16,23 @@ You will not be able to use SFTP or rsync to add any file or directory listed in
 
 </Alert>
 
-`markdown:auth.md`
+<Partial file="auth.md" />
 
 ## SFTP
 
 There are a number of GUI SFTP clients available, such as [FileZilla](https://filezilla-project.org), [WinSCP](https://winscp.net/eng/index.php), and [Cyberduck](https://cyberduck.io/). In your SFTP client, be sure to limit the number of simultaneous connections to one.
 
-[Connection information](/docs/sftp#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
+[Connection information](/sftp#sftp-connection-information) for SFTP is available in each site environment. From your Pantheon Dashboard, click **Connection Info** to see your credentials.
 
 Here's an example of using a command-line SFTP client to connect to a site environment's file directory.
 
 <Alert title="Note" type="info">
 
-You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
 
 </Alert>
 
-```sftp
+```
 export ENV=[env]
 # Usually dev, test, or live
 export SITE=[uuid]
@@ -50,7 +50,7 @@ rsync is also available, but it is a more advanced tool that requires experience
 
 <Alert title="Note" type="info">
 
-You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/docs/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
+You must replace `[env]` with the target environment and `[uuid]` with the [Site UUID](/sites#site-uuid) to connect. The values are case sensitive and should be lower case (e.g., dev, test, live).
 
 </Alert>
 
@@ -81,7 +81,7 @@ Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsy
 
 <Alert title="Note" type="info">
 
-Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/docs/nested-docroot/).
+Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/nested-docroot/).
 
 </Alert>
 
@@ -165,4 +165,4 @@ Now you can use `rmdir` over SFTP to remove the empty directory itself.
 
 ## Known Issues
 
-If you're uploading many files, and your Live environment has [multiple application containers](/docs/application-containers/#multiple-application-containers), upload to an environment other than Live (e.g. Dev), then use the clone operation in the Dashboard or [Terminus](/docs/terminus) to move the files to Live. Uploading a large amount of files into a multi-container Live environment may fail silently.
+If you're uploading many files, and your Live environment has [multiple application containers](/application-containers/#multiple-application-containers), upload to an environment other than Live (e.g. Dev), then use the clone operation in the Dashboard or [Terminus](/terminus) to move the files to Live. Uploading a large amount of files into a multi-container Live environment may fail silently.

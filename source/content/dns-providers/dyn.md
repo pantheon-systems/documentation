@@ -13,11 +13,11 @@ Be sure that you have a:
 
 - Registered domain name using Dyn to host DNS
 
-- [Paid Pantheon plan](/docs/guides/launch/plans/)
+- [Paid Pantheon plan](/guides/launch/plans/)
 
-- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live):
+- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live):
 
- ![Domains / HTTPS](../docs/assets/images/dashboard/domain-added.png)
+ ![Domains / HTTPS](../images/dashboard/domain-added.png)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -69,5 +69,5 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/docs/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)

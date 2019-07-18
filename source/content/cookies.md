@@ -5,12 +5,12 @@ tags: [cacheedge]
 categories: []
 ---
 
-This page covers working with basic cookies on Pantheon. If you're looking to create session based cookies to bypass caching, refer to [Using Your Own Session-Syle Cookies](/docs/caching-advanced-topics/#using-your-own-session-style-cookies) from our Caching: Advanced Topics doc.
+This page covers working with basic cookies on Pantheon. If you're looking to create session based cookies to bypass caching, refer to [Using Your Own Session-Syle Cookies](/caching-advanced-topics/#using-your-own-session-style-cookies) from our Caching: Advanced Topics doc.
 
 ## Disable Caching for Specific Pages
 You can use regular expression(s) to determine if the current request (`$_SERVER['REQUEST_URI']`) should be excluded from cache. If the request matches, bypass cache by setting the `NO_CACHE` cookie in the response.
 
-For example, this block sets `NO_CACHE` for all pages in the `/news/` directory.
+For example, this block sets `NO_CACHE` for all pages in the `/news/` directory:
 
 
 ```
@@ -35,7 +35,7 @@ if (preg_match('#^' . $friendly_path . '#', $_SERVER['REQUEST_URI'])) {
 **Be sure the `friendly_path` variable is properly set to restrict the cookie to the specific directory.**
 
 
-As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/docs/cache-control) to bypass cache on Pantheon.
+As an alternative to setting a `NO_CACHE` cookie within the response, you can [modify the `Cache-Control` header](/cache-control) to bypass cache on Pantheon.
 
 ## Disable Caching On The Dev Environment
 
@@ -54,7 +54,7 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
 
 ## Cache-Busting Cookies
 
-`markdown:cache-busting.md`
+<Partial file="cache-busting.md" />
 
 ## Cache-Varying Cookies
 Respond to a request with cached content depending on the presence and value of a particular cookie. It's important to note that in order for the response to be cached by Pantheon's edge, the cookie name must match `STYXKEY[a-zA-Z0-9_-]+`.
@@ -111,7 +111,7 @@ Knowing this, you can choose to configure your code to listen for this header an
 Note that too many `set-cookie` headers in the response can also create issues.
 
 ## See Also
-* [Clearing Caches for Drupal and WordPress](/docs/clear-caches/)
-* [Bypassing Cache with HTTP Headers](/docs/cache-control)
-* [Testing Global CDN Caching](/docs/test-global-cdn-caching/)
-* [Caching: Advanced Topics](/docs/caching-advanced-topics/)
+* [Clearing Caches for Drupal and WordPress](/clear-caches/)
+* [Bypassing Cache with HTTP Headers](/cache-control)
+* [Testing Global CDN Caching](/test-global-cdn-caching/)
+* [Caching: Advanced Topics](/caching-advanced-topics/)

@@ -5,7 +5,7 @@ tags: [addons, siteintegrations]
 categories: [drupal8]
 contributors: [peter-pantheon, cityofoaksdesign]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. `markdown:solr-version.md`
+[Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
 <Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -18,11 +18,11 @@ Be sure that you:
 
 * Enable Solr in the Pantheon Site Dashboard: **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
 * Install [Composer](https://getcomposer.org/)
-* Create a Composer managed site on Pantheon following the [Build Tools](/docs/guides/build-tools/) guide, or the [Composer without CI](/docs/guides/drupal-8-composer-no-ci/) guide.
+* Create a Composer managed site on Pantheon following the [Build Tools](/guides/build-tools/) guide, or the [Composer without CI](/guides/drupal-8-composer-no-ci/) guide.
 
 <Alert title="Warning" type="danger">
 
-Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/docs/guides/build-tools/) and [Composer without CI](/docs/guides/drupal-8-composer-no-ci/) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
+Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/guides/build-tools/) and [Composer without CI](/guides/drupal-8-composer-no-ci/) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
 
 </Alert>
 
@@ -49,11 +49,11 @@ Solr on Drupal 8 requires a Composer managed workflow, as described in our [Buil
     git push origin solr
     ```
 
-    ![Require search API output](../docs/assets/images/composer-require-search_api_pantheon.png)
+    ![Require search API output](../images/composer-require-search_api_pantheon.png)
 
 
 ## Configure Solr
-To configure the connection with Pantheon, set the [connection mode](/docs/sftp/#sftp-mode) to SFTP and complete the following on the Multidev environment:
+To configure the connection with Pantheon, set the [connection mode](/sftp/#sftp-mode) to SFTP and complete the following on the Multidev environment:
 
 ### Enable Modules
 Enable the Search API Pantheon module via the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-contributed-modules-find-import-enable-configure-drupal-8#enable_your_mod). When prompted, click **Continue** to enable the [Search API](https://www.drupal.org/project/search_api) and [Search API Solr](https://www.drupal.org/project/search_api_solr) modules:
@@ -83,7 +83,7 @@ Select **Pantheon** as the server, then click **Save and add fields**. Add field
 After adding fields the configuration, make sure the index is full by clicking **Index now** or by running cron.
 
 ### Export Configuration
-It is a best practice in Drupal 8 to export your changes to `yml` files. You can quickly export configuration changes via [Terminus](/docs/terminus):
+It is a best practice in Drupal 8 to export your changes to `yml` files. You can quickly export configuration changes via [Terminus](/terminus):
 
 ```
 terminus drush <site>.solr -- config-export -y
@@ -96,12 +96,12 @@ To actually search your index you will need a module like [Search API Pages](htt
 ## Solr Versions and Schemas
 The version of Solr on Pantheon is Apache Solr v3.6. To accommodate this older version of Solr, use the `8.x-1.x` branch of [Search API Solr](https://www.drupal.org/project/search_api_solr) and its Solr 4 schema file.
 
-`markdown:solr-commit-changes.md`
+<Partial file="solr-commit-changes.md" />
 
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
 
-`markdown:remove-addons/d8-solr.md`
+<Partial file="remove-addons/d8-solr.md" />
 
 ## Troubleshooting
 

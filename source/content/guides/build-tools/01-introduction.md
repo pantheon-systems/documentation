@@ -34,7 +34,7 @@ Only files unique to the project are tracked as part of the project's main "sour
 
 Composer is used to fetch dependencies declared by the project as part of a CircleCI build step. This ensures that the final composed build results are installed on Pantheon:
 
-![Artifact Deployment](../../docs/assets/images/artifact-deployment.png)
+<Image alt="Artifact Deployment" src="artifact-deployment.png" />
 
 <Accordion title="Pull Requests" id="understand-pr" icon="lightbulb">
 
@@ -47,13 +47,13 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 ## Before You Begin
 
 1. Install [Composer](https://getcomposer.org).
-2. Install the most recent release of [Terminus](/docs/terminus/):
+2. Install the most recent release of [Terminus](/terminus/):
 
     ```bash
     curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
     ```
 
-3. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+3. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 4. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
 
@@ -82,7 +82,7 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 8. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
 
     ```bash
-    composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:~1
+    composer create-project -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta12
     ```
 
   <Alert title="Note" type="info">
@@ -97,7 +97,7 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 
 <Alert title="Note" type="info">
 
-Pantheon's [support team](/docs/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
+Pantheon's [support team](/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
 
 If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/) or posting in our [Pantheon Community Slack Channel](https://slackin.pantheon.io/).
 

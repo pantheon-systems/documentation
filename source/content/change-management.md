@@ -4,7 +4,7 @@ description: Features and benefits of role-based permissions for Pantheon Drupal
 tags: [tools]
 categories: []
 ---
-Change Management is an [Organization](/docs/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all Organizations.
+Change Management is an [Organization](/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all Organizations.
 
 Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
 
@@ -14,7 +14,7 @@ These tables detail the actions each role can execute on each Dashboard.
 
 In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
 
-If you are an administrator for a Pantheon organization, [contact support](/docs/support/) to have the User in Charge changed.
+If you are an administrator for a Pantheon organization, [contact support](/support/) to have the User in Charge changed.
 
 ### Organizations: Roles and Permissions
 
@@ -34,13 +34,15 @@ If you are an administrator for a Pantheon organization, [contact support](/docs
 ### Site-Level: Roles and Permissions
 
 | Permissions                              | User in Charge / Owner <Popover title="Owner" content="Partner organizations only" /> | Team Member | Developer <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Enterprise organizations only"><em class="fa fa-info-circle"></em></a> |
-|:---------------------------------------- |:-------------------------------- |:-------------------------------- |:-------------------------------- |
+|:---------------------------------------- |:----------------------------------- |:----------------------------------- |:----------------------------------- |
 | Access the site Dashboard                | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
 | Work in Dev environments                 | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> |
 | Deploy to Test and Live                  | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
+| Clear cache on Test and Live             | <span  style="color:green">✔</span> | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  |
 | Manage user roles                        | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 | Delete sites or remove users from a site | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
-| Manage a site's plan                     | <span  style="color:green">✔</span> <Popover title="Owner" content="When an organization is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
+| Add a Supporting Organization            | <span  style="color:green">✔</span> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
+| Manage a site's plan                     | <span  style="color:green">✔</span> Org admin or Owner <Popover title="Owner" content="When an organization is the owner of a site, users in charge cannot change the site plan." /> | <span  style="color:red">❌</span>  | <span  style="color:red">❌</span>  |
 
 ## Manage People in an Organization
 
@@ -63,9 +65,9 @@ To create a new user with an unprivileged role, create the user first, then chan
 
 To change the owner of a paid site (e.g. Basic or Performance):
 
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-steps.md" />
 
-Keep in mind that [Partner Organizations cannot own sites directly](/docs/organizations/#organization-site-association).
+Keep in mind that [Partner Organizations cannot own sites directly](/organizations/#organization-site-association).
 
 For Sandbox sites, within the Team modal, the current site owner can click **Make Owner** next to the site team member who should receive ownership of the site.
 
@@ -76,6 +78,8 @@ For Sandbox sites, within the Team modal, the current site owner can click **Mak
 2. Enter the user's email address, select a role, and click **Add Team Member**.
 
 ### Add a Supporting Organization to a Site
+Organization Administrators, Users in Charge, or Site Owners can add a Supporting Organization.
+
 1. At the Site Dashboard, click **Team**.
 2. Click **Add a Supporting Organization**, enter the organization's name in the search box, and click **Search**.
 3. Select a role, and click **Add**.
@@ -94,4 +98,4 @@ The Developer role can only deploy to Development and Multidev environments. If 
 Enterprise Administrators can add site Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
 
 #### How do I recover an account after a site owner leaves?
-See the steps in our [Site Access](/docs/site-access/) doc for recovery instructions.
+See the steps in our [Site Access](/site-access/) doc for recovery instructions.

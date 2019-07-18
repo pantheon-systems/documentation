@@ -1,13 +1,13 @@
 ---
-title: HTTPS on Pantheon's Global CDN
-description: Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt
+title: "HTTPS on Pantheon's Global CDN"
+description: "Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt"
 tags: [dns, security]
 layout: doc
-permalink: docs/guides/:basename/
+permalink: docs/:basename/
 searchboost: 200
 ---
 
-Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
+Pantheon's new [Global CDN](/global-cdn) provides [free, automated HTTPS](https://pantheon.io/features/managed-https) for every site launched on the platform.
 
 <Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -15,33 +15,34 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 </Enablement>
 
-`markdown:configure-dns.md`
+<Partial file="configure-dns.md" />
 
 For more detailed instructions pertaining to your specific DNS host, click below:
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
- - [1&1 Domain Configuration](/docs/1-and-1/)
- - [Cloudflare Domain Configuration](/docs/cloudflare/)
- - [DNS Made Easy Domain Configurationi](/docs/dns-made-easy/)
- - [DreamHost Domain Configuration](/docs/dreamhost/)
- - [Dyn Domain Configuration](/docs/dyn/)
- - [eNom Domain Configuration](/docs/enom/)
- - [Gandi Domain Configuration](/docs/gandi/)
- - [GoDaddy Domain Configuration](/docs/godaddy/)
- - [Google Domain Configuration](/docs/google/)
- - [Namecheap Domain Configuration](/docs/namecheap/)
- - [Network Solutions Domain Configuration](/docs/network-solutions/)
- - [Amazon Route 53 Domain Configuration](/docs/route53/)
+ - [1&1 Domain Configuration](/1-and-1/)
+ - [Cloudflare Domain Configuration](/cloudflare/)
+ - [DNS Made Easy Domain Configurationi](/dns-made-easy/)
+ - [DreamHost Domain Configuration](/dreamhost/)
+ - [Dyn Domain Configuration](/dyn/)
+ - [eNom Domain Configuration](/enom/)
+ - [Gandi Domain Configuration](/gandi/)
+ - [GoDaddy Domain Configuration](/godaddy/)
+ - [Google Domain Configuration](/google/)
+ - [Namecheap Domain Configuration](/namecheap/)
+ - [Network Solutions Domain Configuration](/network-solutions/)
+ - [Amazon Route 53 Domain Configuration](/route53/)
 
 </Accordion>
 
-`markdown:enable-https.md`
+<Partial file="enable-https.md" />
 
 ## Let's Encrypt Certificates
 [Let's Encrypt](https://letsencrypt.org) is a free, automated, and open certificate authority that aims to make HTTPS the standard for all websites, a goal we share. Pantheon automatically adds your site's domains to a shared Let's Encrypt certificate, and always renews it automatically, with no additional cost. Let's Encrypt issued certs are valid for 90 days and we renew them at least 30 days before expiration.
 
-`markdown:https-requirements.md`
+<Partial file="https-requirements.md" />
+
 
 ## Technical Specifications
 
@@ -51,16 +52,16 @@ For more detailed instructions pertaining to your specific DNS host, click below
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
 | **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br /> Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/docs/hsts/)     |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/hsts/)     |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |
-| **Delivery**                                                          | US Datacenter             | [Global CDN](/docs/global-cdn)  |
+| **Delivery**                                                          | US Datacenter             | [Global CDN](/global-cdn)  |
 | **Encryption Endpoint**                                               | Load Balancer             | Application Container           |
 
 ## Frequently Asked Questions
 
 ### How do I switch my site over to HTTPS from HTTP?
-To avoid mixed-content browser warnings and excessive redirects, follow the process described in [Switching Sites from HTTP to HTTPS](/docs/http-to-https/).
+To avoid mixed-content browser warnings and excessive redirects, follow the process described in [Switching Sites from HTTP to HTTPS](/http-to-https/).
 
 ### How do I upgrade my existing Pantheon site?
 Make the switch on an existing Pantheon site by updating DNS for your domains. If your site doesn't have the new combined "Domains/HTTPS" tab, open a support chat to get the upgrade enabled
@@ -69,7 +70,7 @@ Make the switch on an existing Pantheon site by updating DNS for your domains. I
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### How can I obtain an A+ SSL Labs rating?
-Upgrade your site to the Global CDN and then send the [HSTS header](/docs/hsts/).
+Upgrade your site to the Global CDN and then send the [HSTS header](/hsts/).
 
 ### Can I bring my own certificate?
 Yes. See our page on [custom certificates](https://pantheon.io/docs/custom-certificates/) for more information.
@@ -86,7 +87,7 @@ Yes! HTTPS is terminated at the CDN edge and traffic is encrypted all the way to
 ### Will HTTPS be available for my site throughout the upgrade process?
 Yes! As long as you are following the Dashboard DNS recommendations before starting the upgrade, you will see no interruption in HTTPS service. The process to provision certificates can take up to an hour, after which you can update DNS records without HTTPS interruption.
 
-Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/docs/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
+Existing sites that are live over HTTPS which are not already hosted on Pantheon can [pre-provision HTTPS](/guides/launch/domains/#avoid-https-interruption) to avoid interruption. If you are unable to prove ownership as described, we recommend a maintenance window.
 
 <Alert title="Note" type="info">
 
@@ -101,14 +102,13 @@ If you do not already have HTTPS, there's _no need_ to pre-provision.
 
 ### How many custom domains are supported?
 
-`markdown:tables/custom-domains-limit.md`
-
+<Partial file="tables/custom-domains-limit.md" />
 
 ### Which browsers and operating systems are supported?
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### What about Cloudflare?
-Refer to [Cloudflare Domain Configuration](/docs/cloudflare/).
+Refer to [Cloudflare Domain Configuration](/cloudflare/).
 
 ### For how long are Let's Encrypt certificates valid and what happens when they expire?
 Let's Encrypt certificates are valid for 90 days and are automatically updated on the platform before they expire.
@@ -139,10 +139,9 @@ Pantheon requests new certificates frequently in order to add domains to existin
 If you encounter rate limits, we recommend the following approaches:
 
 - [Ask Let's Encrypt to increase your rate limit](https://docs.google.com/forms/d/e/1FAIpQLSetFLqcyPrnnrom2Kw802ZjukDVex67dOM2g4O8jEbfWFs3dA/viewform).
-- Request that your apex domain (e.g., `example.edu`) be added to the public suffix list by submitting a [pull request](https://github.com/publicsuffix/list/wiki/Guidelines), which will cause Let's Encrypt to treat every subdomain of the main domain as independent for limit purposes. Also, browsers and malware scanners will treat the subdomains as independent.
 - Consider using another certificate service for sites that are not on Pantheon. For example, educational institutions may want to consider using the [Incommon Certificate Service](https://www.incommon.org/certificates/) as a workaround.
 
-`markdown:cname-workaround.md`
+<Partial file="cname-workaround.md" />
 
 ## Glossary
 ### HTTPS

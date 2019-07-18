@@ -53,6 +53,6 @@ Clear cache after deploying this code change. All cached IP:PORT references will
 
 ## See Also
 
-[Private Paths](/docs/private-paths/)
+[Private Paths](/private-paths/)
 
-[Non-Standard File Paths](/docs/non-standard-file-paths/)
+[Non-Standard File Paths](/non-standard-file-paths/)

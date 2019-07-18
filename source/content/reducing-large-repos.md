@@ -18,7 +18,7 @@ You can output the size of your repository by running [`git count-objects -vH`](
 
 ## Prune and Optimize Large Repositories
 
-1. [Clone the site's codebase](/docs/git/#clone-your-site-codebase), if you haven't already.
+1. [Clone the site's codebase](/git/#clone-your-site-codebase), if you haven't already.
 2. Navigate to the root directory of your site's codebase (e.g. `cd site-name`).
 3. Create local copies of all remote branches:
 

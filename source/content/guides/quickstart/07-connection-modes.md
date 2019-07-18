@@ -29,15 +29,15 @@ In this lesson, we’ll learn how to connect to your Dev environment and change 
      so it’s the only place you can access and change your Connection Mode.
    </Alert>
 
-   On Pantheon, you can connect and work via [Git](/docs/git/), or you can connect and work via [SFTP](/docs/sftp/):
+   On Pantheon, you can connect and work via [Git](/git/), or you can connect and work via [SFTP](/sftp/):
 
-   ![Connection Modes](../../../docs/assets/images/dashboard/connection-mode-sftp.png)
+   ![Connection Modes](../../../images/dashboard/connection-mode-sftp.png)
 
 ## Git Connection Mode
 
 You can develop locally with Git Connection Mode. Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who prefers local development, it's an efficient way to interact with our platform: develop locally, commit, and push code to your Dev environment.
 
-For more information, please see our [Local Development](/docs/local-development) documentation.
+For more information, please see our [Local Development](/local-development) documentation.
 
 ## SFTP Connection Mode
 

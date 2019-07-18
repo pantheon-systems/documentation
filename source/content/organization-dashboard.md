@@ -10,17 +10,17 @@ The Organization Dashboard is where Organization Administrators and Team Members
 
 ### New Sites
 
-While creating a new site, any user in your [organization](/docs/organizations/) will see an "Organization Affiliation" select field containing any organizations to which he or she belongs. New sites affiliated this way are automatically added to your Organization Dashboard, and the user who creates the site is made the owner.
+While creating a new site, any user in your [organization](/organizations/) will see an "Organization Affiliation" select field containing any organizations to which he or she belongs. New sites affiliated this way are automatically added to your Organization Dashboard, and the user who creates the site is made the owner.
 
 ### Existing Sites
 
 From the Site Dashboard, the Site Owner will want to:
 
-`markdown:add-supporting-org.md`
+<Partial file="add-supporting-org.md" />
 
 <Alert title="Note" type="info">
 
- If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/docs/support/) to transfer sites to your Organization.
+ If your Organization is Enterprise, EDU+, or a Reseller, you will need to [contact support](/support/) to transfer sites to your Organization.
 
 </Alert>
 
@@ -42,7 +42,7 @@ Removing site team members follows the same process.
 At the Sites tab, the left panel contains groups of filters for limiting the sites list. Filters will appear in each group as sites are added that match the filters.
 
 ### Service Level
-This lets you filter sites by their [site plan](/docs/site-plan/).
+This lets you filter sites by their [site plan](/site-plan/).
 
 ### Tags
 You can add custom tags by selecting the checkbox next to the site, and clicking **Tags** and **Add Tag(s)**, then entering the tag.
@@ -56,17 +56,17 @@ Tags are case-sensitve.
 To remove tags, select the site(s) you want to remove and follow the procedure above, this time selecting **Remove Tag**, or by hovering over the tag and clicking the **x** that appears.
 
 ### Upstream
-Use this filter to sort sites by their upstream. This includes both [Pantheon upstreams](/docs/start-state/#pantheon-upstreams) and [Custom Upstreams](/docs/custom-upstream/).
+Use this filter to sort sites by their upstream. This includes both [Pantheon upstreams](/start-state/#pantheon-upstreams) and [Custom Upstreams](/custom-upstream/).
 
 ### Code Status
 This filter shows which sites have core updates available, which ones are up to date, and which ones are unknown (e.g., managed by Composer). At this time, Organizations with over 800 sites do not have access to this filter, as they will time out loading.
 
 ### Status
 
-This filter shows any sites that are [frozen](/docs/platform-considerations/#inactive-site-freezing), or awaiting upgrade to the [Global CDN](/docs/global-cdn/).
+This filter shows any sites that are [frozen](/platform-considerations/#inactive-site-freezing), or awaiting upgrade to the [Global CDN](/global-cdn/).
 
 ### User in Charge
-Filters sites by the [user in charge](/docs/change-management/#roles-and-permissions).
+Filters sites by the [user in charge](/change-management/#roles-and-permissions).
 
 
 ## Add Users to Your Organization

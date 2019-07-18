@@ -1,0 +1,27 @@
+
+.nav-tabs {
+	padding-left: 20px;
+	margin-bottom: 10px;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+	font-weight: bold;
+}
+
+.tab-content-heading {
+	margin-top: 15px; /*decrease top margin for headings located in tab switchers*/
+}
+
+.tab-content {
+	border: 1px solid #ddd;
+	padding: 10px 20px 5px 20px;
+	border-top: 0;
+	margin-top: -10px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.nav-tabs > li > a {
+	text-decoration: none;
+}

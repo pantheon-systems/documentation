@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "../components/layout"
+import Layout from "../layout/layout"
 import HeaderBody from "../components/headerBody"
 
 import Callout from "../components/callout"
@@ -18,12 +18,14 @@ import TOC from "../components/toc"
 import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
-import SEO from "../components/seo"
-import DefList from "../components/defList.js"
-import Definition from "../components/definition.js"
-import Enablement from "../components/enablement.js"
+import SEO from "../layout/seo"
+import Enablement from "../components/enablement"
 import Color from "../components/color.js"
-import Download from "../components/download.js"
+import Download from "../components/download"
+import Partial from "../components/partial"
+import Image from "../layout/image"
+import ChecklistItem from "../components/checklistItem"
+import Example from "../components/styleExample"
 
 const shortcodes = {
   Callout,
@@ -36,11 +38,13 @@ const shortcodes = {
   Tab,
   Card,
   CardGroup,
-  DefList,
-  Definition,
   Enablement,
   Color,
-  Download
+  Download,
+  Partial,
+  ChecklistItem,
+  Image,
+  Example,
 }
 
 class DocTemplate extends React.Component {
@@ -60,7 +64,7 @@ class DocTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"docs/assets/images/default-thumb-doc.png"}
+          image={"/assets/images/default-thumb-doc.png"}
         />
         <div className="container">
           <div className="row doc-content-well">

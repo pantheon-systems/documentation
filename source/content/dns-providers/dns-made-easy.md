@@ -11,8 +11,8 @@ editpath: dns-providers/dns-made-easy.md/
 Be sure that you have a:
 
 - Registered domain name using DNS Made Easy to host DNS
-- [Paid Pantheon plan](/docs/guides/launch/plans/)
-- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans/)
+- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -41,7 +41,7 @@ Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmade
 
 5. Click **Submit**:
 
-  ![dns made easy a record](../docs/assets/images/dns-made-easy-a-record.png)
+  ![dns made easy a record](../images/dns-made-easy-a-record.png)
 
 ### AAAA Records
 1. Within the **AAAA** table, click <span class="glyphicon glyphicon-plus"></span> to add a new record.
@@ -60,7 +60,7 @@ Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmade
 
 4. Click **Submit**. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability:
 
-  ![dns made easy aaaa records](../docs/assets/images/dns-made-easy-aaaa-records.png)
+  ![dns made easy aaaa records](../images/dns-made-easy-aaaa-records.png)
 
 ### CNAME Record
 A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
@@ -70,9 +70,9 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 3. Select desired Time to Live (TTL).
 4. Click **Submit**:
 
-  ![dns made easy cname records](../docs/assets/images/dns-made-easy-cname-record.png)
+  ![dns made easy cname records](../images/dns-made-easy-cname-record.png)
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/docs/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)

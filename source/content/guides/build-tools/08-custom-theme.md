@@ -17,7 +17,7 @@ previousurl: guides/build-tools/merge/
 editpath: build-tools/08-custom-theme.md
 image: buildToolsGuide-thumb
 ---
-This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik) theme using the Terminus Drupal Console plugin. For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming) on drupal.org.
+This lesson demonstrates how to create a custom theme from the default [Bartik](https://www.drupal.org/project/bartik) theme using the [Terminus Drupal Console plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin). For comprehensive documentation on how to create themes for Drupal 8, see [Theming Drupal 8](https://www.drupal.org/docs/8/theming) on drupal.org.
 
 1. Start by creating a new branch based off the tip of master, then push it up to GitHub:
 
@@ -48,7 +48,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
     * Enter `no` to generate theme regions and theme breakpoints
     * Type `yes` when asked to confirm generation of the theme
 
-  ![Drupal console generate theme](../../../docs/assets/images/pr-workflow/drupal-console-generate-theme.png)
+  ![Drupal console generate theme](../../../images/pr-workflow/drupal-console-generate-theme.png)
 
   Once you do this, the files for your new theme will be written to the directory `code/web/themes/custom/amazing_theme` on the Pantheon Multidev environment. If you gave your theme a different name, replace `amazing_theme` with the appropriate name for your theme.
 
@@ -115,9 +115,9 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
     terminus env:view $SITE.$ENV
     ```
 
-    ![Modified css](../../../docs/assets/images/pr-workflow/modified-css.png)
+    ![Modified css](../../../images/pr-workflow/modified-css.png)
 
-12. You can use the [method described in an earlier lesson](/docs/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
+12. You can use the [method described in an earlier lesson](/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
     ```bash
     terminus drush $SITE.$ENV -- config-export --yes

@@ -24,7 +24,7 @@ Plugins with session-using code are relying on PHP's default session manager, wh
 ### Install WordPress Native PHP Sessions Plugin
 If `$_SESSIONs` are necessary for your application, install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
 
-1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.<env> sftp

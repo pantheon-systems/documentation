@@ -11,20 +11,20 @@ This technique configures an SSH client to forward a local port to a port on Pan
 
 Currently, there are two services on Pantheon that support SSH tunneling:
 
-- [MySQL database](/docs/mysql-access/) (dbserver)
-- [Redis cache](/docs/redis/)
+- [MySQL database](/mysql-access/) (dbserver)
+- [Redis cache](/redis/)
 
 ## Prerequisites
 
 - Local installation of a MySQL client
-- [Redis command-line client](/docs/redis/#use-the-redis-command-line-client)
-- Add an [SSH key](/docs/ssh-keys) to your Pantheon User Dashboard
+- [Redis command-line client](/redis/#use-the-redis-command-line-client)
+- Add an [SSH key](/ssh-keys) to your Pantheon User Dashboard
 
 ## Create Secure Connection to MySQL using TLS
 
 Later versions of the MySQL client support the `--ssl` option.  Using this command line option will encrypt your connection to the database server with TLS.  To determine if your MySQL client supports TLS run `man mysql` and search for the `--ssl` option. If you add the `--ssl` option to your command there is no need to setup an SSH tunnel as described below.
 
-Use the following Bash script to establish secure MySQL connections via TLS using the `—ssl` option and [Terminus](/docs/terminus):
+Use the following Bash script to establish secure MySQL connections via TLS using the `—ssl` option and [Terminus](/terminus):
 
 ```
 terminus-sql-cli() {
@@ -61,9 +61,9 @@ alias tsqlc=terminus-sql-cli
 
 From the Site Dashboard, access the environment you want to connect with, and click **Connection Info**. This will give you the required environment specific values for the command example below.
 
-![Connection info](../docs/assets/images/dashboard/connection-info.png)
+![Connection info](../images/dashboard/connection-info.png)
 
-Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/docs/sites/#site-uuid) found in the Dashboard URL within the following command:
+Use the required values from the **Connection Info** tab, the desired environment (Dev, Test, or Live), and the  [site uuid](/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```
 ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@dbserver.ENV.SITE_UUID.drush.in
 ```
@@ -90,7 +90,7 @@ From the site environment, get the one-line connection string. It will be in the
 ```bash
 redis-cli -h HOSTNAME -p PORT -a PASSWORD
 ```
-Use the port value from the above one-line connection string, the desired environment (Dev, Test, or Live), and the [site uuid](/docs/sites/#site-uuid) found in the Dashboard URL within the following command:
+Use the port value from the above one-line connection string, the desired environment (Dev, Test, or Live), and the [site uuid](/sites/#site-uuid) found in the Dashboard URL within the following command:
 ```bash
 ssh -f -N -L PORT:localhost:PORT -p 2222 ENV.SITE_UUID@cacheserver.ENV.SITE_UUID.drush.in
 ```
@@ -105,11 +105,11 @@ ps -fU USERNAME | grep "ssh -f" | grep "PORT:" | awk '{print $2}' | xargs kill
 ```
 
 ## Troubleshooting
-To find solutions for MySQL connection errors, see [Accessing MySQL Databases](/docs/mysql-access/#troubleshooting-mysql-connections).
+To find solutions for MySQL connection errors, see [Accessing MySQL Databases](/mysql-access/#troubleshooting-mysql-connections).
 
 If port 2222 is blocked on your network you will see an error similar to the following:
 ```
 SSH: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to host
 Fatal: Could not read from remote repository.
 ```
-See [Port 2222 Blocked Workaround](/docs/port-2222/) for more information.
+See [Port 2222 Blocked Workaround](/port-2222/) for more information.

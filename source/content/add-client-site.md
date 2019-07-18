@@ -12,28 +12,27 @@ While many of these steps are followed through the normal course of an Agency-Cl
 
 ## Client Adds Supporting Organization
 
-`markdown:add-supporting-org.md`
+<Partial file="add-supporting-org.md" />
 
 ## Transfer Ownership and Billing for the Site to an Agency
 
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-steps.md" />
 
 ## Send an Invitation to Pay to Your Client
 The Agency should follow these steps:
 
-`markdown:invite-to-pay.md`
+<Partial file="invite-to-pay.md" />
 
 ## Accepting an Invitation to Pay
 1. When a supporting organization is ready to transfer ownership of the site to you, you'll receive an email inviting you to pay for the site:
 
-   ![Emailed invitation to pay](../docs/assets/images/dashboard/invitation-to-pay.png)
+   ![Emailed invitation to pay](../images/dashboard/invitation-to-pay.png)
 
 1. When you click on **Make Payment** you'll be brought to one of two pages:
 
    If you're **not logged in**, you'll be prompted to create a new account:
 
-   ![Prompt to create an account](../docs/assets/images/dashboard/invitation-new-account.png)
-
+   ![Prompt to create an account](../images/dashboard/invitation-new-account.png)
 
    If you don't already have a Pantheon account, fill out the required fields and click **Continue**.
 
@@ -41,4 +40,4 @@ The Agency should follow these steps:
 
 1. If you have an account and are logged in, or created an account in the previous step, you'll be asked to use an existing card if one is on file or add a card to use as payment for the site:
 
-   ![Add a card to your account](../docs/assets/images/dashboard/add-card.png)
+   ![Add a card to your account](../images/dashboard/add-card.png)

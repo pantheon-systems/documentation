@@ -6,7 +6,7 @@ categories: []
 ---
 
 Access all of your sites and manage your account information from the User Dashboard.
-![Site Dashboard](../docs/assets/images/dashboard/pantheon-user-dashboard.png)
+![Site Dashboard](../images/dashboard/pantheon-user-dashboard.png)
 
 ## Sites Tab
 Here you can add a new site, see every site you're a team member of, and see the number of free sites you have remaining. Return to this page by clicking the Pantheon logo.
@@ -26,16 +26,16 @@ This is where you can update and manage your personal account details. Use the o
 - Connect and disconnect your Google account (used for logging in to Pantheon with your Google identity)
 - Change your password
 - Set your [login destination](https://dashboard.pantheon.io/users/#account/login-destination) (if you're a member of an organization or agency)
-- Add and manage [SSH keys](/docs/ssh-keys/)
+- Add and manage [SSH keys](/ssh-keys/)
 - View billing details
-- Add [machine tokens](/docs/machine-tokens/)
-- [Delete your account](/docs/delete-account/)
+- Add [machine tokens](/machine-tokens/)
+- [Delete your account](/delete-account/)
 
 ### Gravatar
 To associate an image with your Pantheon account, you'll need to [create a Gravatar](https://en.gravatar.com/) for the email address you use with your Pantheon account. If you already have a Gravatar set up for another email address, update your Gravatar profile to add the email address you use on Pantheon. For help, visit the [Gravatar Support](https://gravatar.com/support/) page.
 
 
 ## See Also
-- [Role-Based Permissions & Change Management](/docs/change-management/)
-- [New Site Owner FAQs](/docs/site-owner-faq/)
-- [Billing in the Site Dashboard](/docs/site-billing/)
+- [Role-Based Permissions & Change Management](/change-management/)
+- [New Site Owner FAQs](/site-owner-faq/)
+- [Billing in the Site Dashboard](/site-billing/)

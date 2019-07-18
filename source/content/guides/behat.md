@@ -18,6 +18,7 @@ This guide requires:
  - An empty project directory. In the commands below we assume the directory `~/projects/simple-behat-test`.
 
 <Alert title="Note" type="info">
+
 As packages pulled by Composer are updated (along with their dependencies), version compatibility issues can pop up. Sometimes you may need to manually alter the version constraints on a given package within the `require` or `require-dev` section of `composer.json` in order to update packages. See the [updating dependencies](https://getcomposer.org/doc/01-basic-usage.md#updating-dependencies-to-their-latest-versions) section of Composer's documentation for more information.
 
 As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
@@ -98,7 +99,7 @@ Next, we can take some of the steps we listed above, most of which are provided 
 
    You should see output like this:
 
-   ![Behat test results](../../docs/assets/images/guides/behat-output.png)
+   <Image alt="Behat test results" src="guides/behat-output.png" />
 
    **Note:** The extra parameters are not required, just a common set of preferences. Here's what they do:
 
@@ -117,5 +118,5 @@ If you find you are repeating the same things over and over, such as logging int
 
 ## See Also
 
- - [Composer Fundamentals and Workflows](/docs/composer/)
+ - [Composer Fundamentals and Workflows](/composer/)
  - [Behat.org](http://behat.org)

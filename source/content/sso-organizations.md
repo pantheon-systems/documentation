@@ -4,7 +4,7 @@ description: Detailed information to enable SAML single sign-on for your organiz
 tags: [security, tools]
 categories: []
 ---
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/docs/sso/).
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/sso/).
 
 SAML SSO is included for customers with Diamond Support, and is available for purchase for Pantheon Organizations with Platinum or below. SAML is an organization-wide feature only and is not available on a per site or per environment basis. If you'd like to upgrade to an eligible support package, please contact [Sales](https://pantheon.io/why-pantheon-enterprise). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/agencies/partner-program) to qualify.
 
@@ -14,11 +14,11 @@ SAML SSO is included for customers with Diamond Support, and is available for pu
 * After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
 
 ## Terminus Authentication
-Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/docs/terminus/) by using [machine tokens](/docs/machine-tokens/).
+Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/terminus/) by using [machine tokens](/machine-tokens/).
 
 ## Managing Users
 
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/docs/organization-dashboard/). Automated user provisioning isn't available.
+Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/organization-dashboard/). Automated user provisioning isn't available.
 
 ### External Members
 
@@ -34,7 +34,7 @@ You will need to enter the following:
 
 2.  **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
 
-3.  **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), map the attribute `email` to `user:email`.
+3.  **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), map the attributes `mail` to `user.email` and `user_name` to `user.email`.
 
 4.  **Additional configuration details:**
     * The post-back URL (also called Assertion Consumer Service URL) is: `https://pantheon.auth0.com/login/callback`
@@ -47,7 +47,7 @@ You will need to enter the following:
 
 ## Enable SAML on Pantheon
 
-[Contact support](/docs/support) and provide the following:
+[Contact support](/support) and provide the following:
 
 1. **Email Domain(s)**: The email domain(s) your organization controls. Only users with email addresses in this domain will use the Organization's IdP.
 
@@ -63,3 +63,16 @@ If you are a member of a SAML-enabled organization, and the password field does 
 
 ### Cannot Log in Using a Google Account
 Google account login is disabled for users in organizations using single sign-on. SAML allows organizations to centrally manage authentication policies, so allowing social login could circumvent that policy.
+
+### Use Base-64 encoded X.509(.CER) when using Microsoft ADSF as idp 
+Make sure you generate the certificate using the right encoding.
+
+### Use token-signing certificate when using Microsoft ADSF as idp 
+There are 3 types of certificate that you can generate:
+
+ - `communication-service`
+ - `token-decrypting`
+ - `token-signing`
+
+Use a `token-signing` certificate, otherwise you will get a thumbprint error.
+

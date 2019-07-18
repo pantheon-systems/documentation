@@ -48,12 +48,12 @@ New Relic's Dashboard starts with a high-level breakdown of application performa
 2. Database Queries (MySQL or Redis)
 3. External Requests (e.g. calls to third-party APIs)
 
-Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the database](/docs/debug-mysql-new-relic/) could be the result of slow queries, or an elevated volume of queries overall.
+Depending on which area you need to optimize, you will dig in to different areas of data. For instance, a lot of [time spent in the database](/debug-mysql-new-relic/) could be the result of slow queries, or an elevated volume of queries overall.
 
 For more information on using New Relic's features, we encourage you to read  the [New Relic APM](https://docs.newrelic.com/docs/apm) docs, especially the pages on [transactions](https://docs.newrelic.com/docs/apm/transactions) and [slow query details](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details). You can find more information on using New Relic to investigate specific areas of performance below:
 
 - [Measuring PHP7 Performance with New Relic](https://pantheon.io/blog/measuring-php-7-performance-new-relic-nobsbenchmarks)
-- [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
+- [MySQL Troubleshooting With New Relic Pro](/debug-mysql-new-relic/)
 - [New Relic and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 - [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 
@@ -105,7 +105,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 }
 ```
 
-`markdown:monitor-alerts.md`
+<Partial file="monitor-alerts.md" />
 
 
 ## New Relic Access
@@ -176,6 +176,8 @@ if ($pos !== false){
 }
 ```
 
+This code should be added to `settings.php` for Drupal sites or `wp-config.php` for WordPress sites.
+
 To isolate the disabling of New Relic to only AMP pages, the example logic checks the current request for `?amp`. Adjust this example as needed based on your site's implementation of Google AMP and it's corresponding URL patterns.
 
 It is important to note that this method is sensitive to call location. Most customers find success calling this method early in a transaction. For Drupal 8, this can be done using an event subscriber that listens to the `kernel.request` event for instance.
@@ -214,10 +216,10 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 ### Can I disable New Relic for a specific environment?
 
-We don't recommend turning off New Relic for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/docs/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
+We don't recommend turning off New Relic for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
 
 ## See Also
-- [MySQL Troubleshooting With New Relic Pro](/docs/debug-mysql-new-relic/)
+- [MySQL Troubleshooting With New Relic Pro](/debug-mysql-new-relic/)
 - [New Relic and Drupal: Find Your Site's Slow Spots](https://pantheon.io/blog/new-relic-drupal-find-site-slow-spots)
 - [Troubleshooting WordPress Performance with New Relic](https://pantheon.io/blog/troubleshooting-wordpress-performance-new-relic)
 - [New Relic University: Intro to APM](https://learn.newrelic.com/courses/intro_apm)

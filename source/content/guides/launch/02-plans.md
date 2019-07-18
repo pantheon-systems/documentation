@@ -31,21 +31,21 @@ If you plan to pay for the site or if you want to wait to transfer ownership, yo
 As the site owner, you’ll receive an email confirming the change to the site. After the site billing is processed, you’ll receive an updated invoice.
 
 ## Transfer Ownership and Billing for This Site
-`markdown:transfer-ownership-billing-intro.md`
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-intro.md" />
+<Partial file="transfer-ownership-billing-steps.md" />
 
 <Accordion title="Level Up: Load and Performance Tests (Optional)" id="host-specific1" icon="graduation-cap">
 
 ## Ready to launch like the pros?
 Now that you've upgraded your site to a paid plan, it's the perfect time to test how your site works in the wild.
 
-### [New Relic APM Pro](/docs/new-relic/#activate-new-relic-apm-pro)
+### [New Relic APM Pro](/new-relic/#activate-new-relic-apm-pro)
 In preparation for these tests, activate New Relic APM Pro so you can observe your site's performance like a maverick. This service is accessible from the Pantheon Site Dashboard for all site plans except Basic, and it offers a nearly real-time look into the performance of a web application.
 
-### [Performance Testing](/docs/load-and-performance-testing/#performance-testing)
+### [Performance Testing](/load-and-performance-testing/#performance-testing)
 Measure your site's response time to proactively expose potential bottlenecks. We recommend running performance tests before you run load tests.
 
-### [Load Testing](/docs/load-and-performance-testing/#load-testing)
+### [Load Testing](/load-and-performance-testing/#load-testing)
 Make sure your site can withstand peak traffic spikes after launch. This test should be performed on the Live environment before the site has launched, after performance testing.
 
 </Accordion>

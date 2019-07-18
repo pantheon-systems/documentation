@@ -20,7 +20,7 @@ Some key differences of decoupled architecture include:
   <div class="flex-panel-body">
    <p class="topic-info__description" >
 
-   ![Decoupled Frontend](../docs/assets/images/decoupledcms-what-is-decoupled.png)
+   ![Decoupled Frontend](../images/decoupledcms-what-is-decoupled.png)
 
    **Decoupled Frontend**<br />
    Presentation can be handled in a variety of ways, from interactive JS frameworks like Angular, to static generators, to mobile apps, or even another CMS. Multiple frontends can peacefully coexist.
@@ -31,7 +31,7 @@ Some key differences of decoupled architecture include:
  <div class="flex-panel-body">
    <p class="topic-info__description" >
 
-   ![Content Via Web Service API](../docs/assets/images/decoupledcms-what-is-content.png)
+   ![Content Via Web Service API](../images/decoupledcms-what-is-content.png)
 
    **Content Via Web Service API**<br />
    The content for the site is accessible via a web-service API, usually in a RESTful manner and in a mashup-friendly format such as JSON.
@@ -42,7 +42,7 @@ Some key differences of decoupled architecture include:
  <div class="flex-panel-body">
    <p class="topic-info__description" >
 
-   ![CMS Backend and Database](../docs/assets/images/decoupledcms-what-is-backend.png)
+   ![CMS Backend and Database](../images/decoupledcms-what-is-backend.png)
 
    **CMS Backend and Database**<br />
    There is a traditional database-driven CMS which editors use to maintain the content for the site, usually via the same admin interface as always.
@@ -54,13 +54,13 @@ Some key differences of decoupled architecture include:
 ### Pantheon's Platform Benefits
 Backend APIs running on Pantheon take advantage of the following platform features for optimal performance:
 
-* [**Global CDN**](/docs/global-cdn/): Cache backend API responses from WordPress or Drupal in 40+ global POPs (points of presence).
-* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Installing Redis on Drupal or WordPress](/docs/redis/).
+* [**Global CDN**](/global-cdn/): Cache backend API responses from WordPress or Drupal in 40+ global POPs (points of presence).
+* **Redis**: Leverage object caching for backend APIs that use the database-driven admin interface of the CMS to edit or add content. For details, see [Installing Redis on Drupal or WordPress](/redis/).
 <!--todo: does solr belong here? help wanted describing the benefits of solr in context of decoupled site.]-->
 
 
 ## Exposing the Backend API
-Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or WordPress upstream. The process to [create](/docs/create-sites/), [update core](/docs/core-updates/), and [launch](/docs/guides/launch/) a backend API on Pantheon does not deviate from the standard procedures.
+Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or WordPress upstream. The process to [create](/create-sites/), [update core](/core-updates/), and [launch](/guides/launch/) a backend API on Pantheon does not deviate from the standard procedures.
 
 <TabList>
 
@@ -68,7 +68,7 @@ Running WordPress and Drupal as an API on Pantheon can be done on any Drupal or 
 
 Since WordPress 4.7, the WordPress API is included as part of core. There's no action needed to expose the API on Pantheon. Explore default routes and endpoints like `/wp-json/wp/v2/posts` in your browser:
 
-![default routes wp](../docs/assets/images/wp-json-posts.png)
+![default routes wp](../images/wp-json-posts.png)
 
 We recommend using a trusted browser extension to format the JSON response from the API so it's easier to read.
 
@@ -129,7 +129,7 @@ While not a REST API service by itself, you can create a JSON view using the [Vi
 
 ## Frequently Asked Questions
 ### Can I use other frameworks or distributions?
-You can use [custom upstreams](/docs/custom-upstream/), [make your own build](/docs/guides/build-tools/) or [install distributions](/docs/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org/) (Drupal 8 API distribution) can be used on the platform.
+You can use [custom upstreams](/custom-upstream/), [make your own build](/guides/build-tools/) or [install distributions](/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org/) (Drupal 8 API distribution) can be used on the platform.
 
 ### How can I troubleshoot the backend API?
 We recommend using one of the following Chrome extensions to debug HTTP requests:

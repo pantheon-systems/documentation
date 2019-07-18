@@ -10,7 +10,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 ## Create a Symbolic Link
 
-1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/docs/git/#install-git) and [clone the code](/docs/git/#clone-your-site-codebase) locally if you have not done so already.
+1. On your Dev environment's Dashboard, change the Connection Mode from SFTP to Git mode. [Install Git](/git/#install-git) and [clone the code](/git/#clone-your-site-codebase) locally if you have not done so already.
 
     <Alert title="Note" type="info">
 
@@ -76,17 +76,19 @@ The best solution is to communicate with the maintainer of the module or plugin 
 7. Deploy to Test and confirm results.
 8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
-## Example
+## Examples
 
-As discussed in [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/){.external} assumes write access to the code base.
+### WP-Rocket
 
-<Alert  title="Note" type="alert">
+As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/) assumes write access to the code base.
+
+<Alert  title="Note" type="info">
 
 You must manually create the target folders `wp-content\uploads\cache` and `wp-content\uploads\wp-rocket-config` for Dev, Test, Live, and any Multidev environments.
 
 </Alert>
 
-### For MacOS & Linux:
+#### For MacOS & Linux:
 From the `wp-content` directory:
 
 ```bash
@@ -102,12 +104,12 @@ cache -> ./uploads/cache
 wp-rocket-config -> ./uploads/wp-rocket-config
 ```
 
-### For Windows:
+#### For Windows:
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash
-mklink /d ./wp-content/cache ./uploads/cache
-mklink /d ./wp-content/wp-rocket-config ./uploads/wp-rocket-config
+mklink /d .\wp-content\cache .\uploads\cache
+mklink /d .\wp-content\wp-rocket-config .\uploads\wp-rocket-config
 ```
 
 Each command will return the following upon success:
@@ -123,6 +125,80 @@ You can also verify success using `dir`:
 ```
 <SYMLINKD>        cache [.\uploads\cache]
 <SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
+```
+
+### Uncode Theme
+
+As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the code base.
+
+1. Manually move the target folders:
+
+  `wp-content\themes\uncode\core\assets\css`
+
+  To: `wp-content\uploads\uncode\assets\css`
+
+  And:
+
+  `wp-content\themes\uncode\library\css`
+
+  To: `wp-content\uploads\uncode\library\css` in Dev.
+
+1. Copy the files generated from:
+
+  `wp-content\themes\uncode\library\css`
+
+  To:
+
+  `wp-content\uploads\uncode\library\css`
+
+  In Test, Live, and any Multidev environments after deploying codes for the theme to take effect in different environments.
+
+#### For MacOS & Linux:
+From the `wp-content` directory:
+
+```bash
+ln -s ../../../../uploads/uncode/assets/css ./themes/uncode/core/assets
+ln -s ../../../uploads/uncode/library/css ./themes/uncode/library
+```
+
+To verify, use `ls -al` in the `wp-content/themes/uncode/core/assets` folder:
+
+```
+css -> ../../../../uploads/uncode/assets/css
+```
+
+As well as in the `wp-content/themes/uncode/library` folder :
+
+```
+css -> ../../../uploads/uncode/library/css
+```
+
+#### For Windows:
+Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target and backslash is used to denote folders. In the `wp-content` folder create the symlinks by:
+
+```bash
+mklink /d .\themes\uncode\core\assets ..\..\..\..\uploads\uncode\assets\css
+mklink /d .\themes\uncode\library ..\..\..\uploads\uncode\library\css
+```
+
+Each command will return the following upon success:
+
+```
+symbolic link created for .\themes\uncode\core\assets <<===>> ..\..\..\..\uploads\uncode\assets\css
+symbolic link created for .\themes\uncode\library <<===>> ..\..\..\uploads\uncode\library\css
+```
+
+To verify that you have done it correctly, you should have these when you list your folders in `wp-content\themes\uncode\core\assets` directory:
+You can also verify success using `dir`:
+
+```
+<SYMLINKD>        css [..\..\..\..\uploads\uncode\assets\css]
+```
+
+And in the `themes\uncode\library` directory:
+
+```
+<SYMLINKD>        css [..\..\..\uploads\uncode\library\css]
 ```
 
 ## Troubleshooting

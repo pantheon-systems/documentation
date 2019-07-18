@@ -5,7 +5,7 @@ tags: [addons]
 categories: [wordpress]
 contributors: [cityofoaksdesign]
 ---
-[Apache Solr](/docs/solr) is a system for indexing and searching site content. Currently, all plans except for a Basic plan can use Solr. `markdown:solr-version.md`
+[Apache Solr](/solr) is a system for indexing and searching site content. Currently, all plans except for a Basic plan can use Solr. <Partial file="solr-version.md" />
 
 First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**. This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
 
@@ -18,12 +18,12 @@ Learn how to configure Solr with help from our experts. Pantheon delivers custom
 ## Solr Search for WordPress
 Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/).  This plugin replaces the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) within WordPress while preserving the familiar integration methods within themes and widgets.
 
-This plugins requires PHP version 7.1 or higher. See [Upgrade PHP versions](/docs/php-versions/) for more information on switching PHP versions.
+This plugins requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-versions/) for more information on switching PHP versions.
 
 
 ## Install and Configure Plugin
 
-1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/docs/terminus/):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus/):
  ```bash
  terminus connection:set <site>.<env> sftp
  ```
@@ -70,8 +70,11 @@ Upon activation of the plugin on the Dev or Multidev environment, a default [`sc
 You can set a custom `schema.xml` by uploading it to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory using SFTP. Then, from the plugin's **Actions** tab, look for **Repost schema.xml** and click on **Execute**.
 
 <Alert title="Note" type="info">
- Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment seperately.
+
+Custom `schema.xml` files exist outside of version control, and must be uploaded to each environment seperately.
+
 </Alert>
+
 ## Known Issues/Limitations
 This plugin is under active development on [GitHub](https://github.com/pantheon-systems/solr-power). Use the issue queue for status updates and support. Pull requests are also welcome!
 
@@ -84,4 +87,4 @@ Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to wo
 ## Safely Remove Solr
 The following code changes are required before Solr can be safely uninstalled and disabled:
 
-`markdown:remove-addons/wp-solr.md`
+<Partial file="remove-addons/wp-solr.md" />

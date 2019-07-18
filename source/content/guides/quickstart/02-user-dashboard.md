@@ -28,7 +28,7 @@ In this lesson, we’re going to explore the User Dashboard.
 
   - <Icon icon={"plus"} text={"Create New Site:"}/> Start the process of creating a new site on Pantheon. Once created, it will appear under the Sites tab.
 
-  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/docs/migrate-manual).
+  - **Migrate Existing Site:** Start a guided migration to add a site. If you’re importing a site from your local environment, follow our [manual migration process](/migrate-manual).
 
 - <Icon icon={"group"} text={"Organizations:"}/> If you belong to an organization, you’ll see it listed here. Click it to link to the organization's dashboard.
 
@@ -44,7 +44,7 @@ In this lesson, we’re going to explore the User Dashboard.
 
   - **SSH Keys:** Add and manage your SSH keys.
 
-  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/docs/terminus) or the [Pantheon Migration plugin](/docs/migrate/).
+  - **Machine Tokens:** Use machine tokens to uniquely identify your machine and securely authenticate with apps such as [Terminus](/terminus) or the [Pantheon Migration plugin](/migrate/).
 
   - **Billing:** View and update your billing information for sites you own.
 

@@ -11,8 +11,8 @@ editpath: dns-providers/route53.md/
 Be sure that you have a:
 
 - Registered domain name using Amazon Route 53 to host DNS
-- [Paid Pantheon plan](/docs/guides/launch/plans/)
-- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans/)
+- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -41,7 +41,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
 5. Click **Create**:
 
-  ![Route 53 a record](../docs/assets/images/route53-a-record.png)
+  ![Route 53 a record](../images/route53-a-record.png)
 
 ### AAAA Records
 1. Click **Create Record Set** to add a new record, then select **AAAA - IPv6 address** for the record type.
@@ -60,7 +60,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
 4. Click **Create**:
 
-  ![Route 53 aaaa records](../docs/assets/images/route53-aaaa-records.png)
+  ![Route 53 aaaa records](../images/route53-aaaa-records.png)
 
 ### CNAME Record
 A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
@@ -70,9 +70,9 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 3. Select desired Time to Live (TTL).
 4. Click **Create**:
 
-  ![Route 53 cname records](../docs/assets/images/route53-cname-record.png)
+  ![Route 53 cname records](../images/route53-cname-record.png)
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/docs/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)

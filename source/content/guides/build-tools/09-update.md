@@ -74,7 +74,7 @@ repositories": [
 
 3. Run `git diff composer.lock` to see the updated dependency details:
 
-  ![composer diff core](../../../docs/assets/images/pr-workflow/composer-lock-diff.png)
+  ![composer diff core](../../../images/pr-workflow/composer-lock-diff.png)
 
 4. Commit the updated `composer.lock` file and push a new branch up to GitHub, for example (replace `drupal-8.3.7` according to your current task):
 
@@ -86,6 +86,6 @@ repositories": [
 
 5. Return to GitHub and compare your feature branch against `master`. You should see all commits made locally here in GitHub. Click **Create Pull Request** and go through your team's standard peer review process.
 
-  ![Composer update pr](../../../docs/assets/images/pr-workflow/composer-update-pr.png)
+  ![Composer update pr](../../../images/pr-workflow/composer-update-pr.png)
 
 Use this process to update any dependency required by your project's `composer.json` file. The site should *never* receive Pantheon's One-click updates in the Pantheon Site Dashboard, Drupal's Admin interface, or Drush to update core, as none of these techniques modify the `composer.json` file. You must update core using Composer exclusively.

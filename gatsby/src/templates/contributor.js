@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../layout/layout"
 import ContributorLink from "../components/contributorLink"
 
 const links = [
@@ -45,7 +45,7 @@ class ContributorTemplate extends React.Component {
         /> */}
         <div className="container mb-70">
           <div className="row">
-            <title>cityofoaksdesign</title>
+            <title>{contributor.name}</title>
             <div className="article container-fluid">
               <div className="media">
                 <div className="pull-left">

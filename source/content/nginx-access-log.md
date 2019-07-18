@@ -10,7 +10,7 @@ Pantheon uses nginx web servers for optimal performance. Log files record the we
 
 <Alert title="Note" type="info">
 
-Requests served by the [Pantheon Global CDN](/docs/global-cdn) will not hit the nginx webserver and will not be logged in `nginx-access.log`.
+Requests served by the [Pantheon Global CDN](/global-cdn) will not hit the nginx webserver and will not be logged in `nginx-access.log`.
 
 </Alert>
 
@@ -20,7 +20,7 @@ Requests served by the [Pantheon Global CDN](/docs/global-cdn) will not hit the 
 
 Be sure that you have:
 
-- [Terminus](/docs/terminus)
+- [Terminus](/terminus)
 - [GoAccess](https://goaccess.io/download)
  - **Mac OS X**: Install via [Homebrew](https://brew.sh/)
  - **Windows**: Use [Cygwin](https://cygwin.com/install.html)
@@ -158,8 +158,8 @@ access_getlogs --site=<site> --env=<env>
 
 
 ## See Also
-- [Log Files on Pantheon](/docs/logs)
-- [MySQL Slow Log](/docs/mysql-slow-log/)
-- [PHP Slow Log](/docs/php-slow-log/)
-- [PHP Errors and Exceptions](/docs/php-errors/)
-- [Bots and Indexing](/docs/bots-and-indexing/)
+- [Log Files on Pantheon](/logs)
+- [MySQL Slow Log](/mysql-slow-log/)
+- [PHP Slow Log](/php-slow-log/)
+- [PHP Errors and Exceptions](/php-errors/)
+- [Bots and Indexing](/bots-and-indexing/)

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '../layout/layout';
 import CallToAction from '../layout/call-to-action';
 import TopicsGrid from '../layout/topics-grid';
 import ThreeColumnList from '../layout/three-column-list';
@@ -9,7 +9,7 @@ import ChangelogPreview from '../layout/changelog-preview';
 
 class Index extends React.Component {
 	render() {
-		const { data: { homeYaml } } = this.props;
+		const { data: { homeYaml, allMdx } } = this.props;
 		return (
 			<Layout>
 				<div style={{ marginTop: '-20px' }} className="container">
@@ -26,13 +26,20 @@ class Index extends React.Component {
 								/>
 							</div>
 						</div>
-						<div class="row mb-70">
-							<div class="col-md-12">
+						<div className="row mb-70">
+							<div className="col-md-12">
 								<TopicsGrid topics={homeYaml.topics} />
 							</div>
 						</div>
-						<ThreeColumnList title={homeYaml.three_column_links.title} links={homeYaml.three_column_links.links} />
-						<ChangelogPreview title={homeYaml.changelog_preview.title} url={homeYaml.changelog_preview.url} />
+						<ThreeColumnList
+							title={homeYaml.three_column_links.title}
+							links={homeYaml.three_column_links.links}
+						/>
+						<ChangelogPreview
+							title={homeYaml.changelog_preview.title}
+							url={homeYaml.changelog_preview.url}
+							changelogs={allMdx.edges}
+						/>
 					</div>
 				</div>
 			</Layout>
@@ -68,6 +75,27 @@ export const pageQuery = graphql`
 			changelog_preview {
 				title
 				url
+			}
+		}
+
+		allMdx(filter: {fileAbsolutePath: {regex: "/changelogs/"}}, sort: {fields: [fileAbsolutePath], order: DESC}, limit: 4) {
+			edges {
+				node {
+					id
+					frontmatter {
+						title
+					}
+					fields {
+						slug
+						markdownBody {
+							childMdx {
+								code {
+									body
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

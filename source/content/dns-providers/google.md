@@ -11,8 +11,8 @@ editpath: dns-providers/google.md/
 Be sure that you have a:
 
 - Registered domain name using Google Domains to host DNS
-- [Paid Pantheon plan](/docs/guides/launch/plans/)
-- [Domain connected](/docs/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans/)
+- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -26,7 +26,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 ### A Record
 1. Select the **Configure DNS** icon within the Google Domains interface:
 
-  ![Google configure dns](../docs/assets/images/google-config-dns.png)
+  ![Google configure dns](../images/google-config-dns.png)
 
 2. Scroll to the **Custom resource records** section.
 3. Enter **@** in the **Host** field and provide the A record value provided by Pantheon in the **IPv4** field.
@@ -44,7 +44,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 
 5. Click **Add** to create the record.
 
-![Google configure ipv4](../docs/assets/images/google-a-record.png)
+![Google configure ipv4](../images/google-a-record.png)
 
 
 ### AAAA Records
@@ -54,7 +54,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 3. Click the **+** icon to the right of the IPv6 field then enter the second AAAA record provided by Pantheon in the **IPv6 address** field.
 4. Set desired Time to Live (TTL), then click **Add** to create the record.
 
-![Google configure ipv6](../docs/assets/images/google-aaaa.png)
+![Google configure ipv6](../images/google-aaaa.png)
 
 
 ### CNAME Record
@@ -64,9 +64,9 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 2. Enter `www` in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
 3. Set desired Time to Live (TTL), then click **Add** to create the record.
 
-![Google configure cname](../docs/assets/images/google-cname.png)
+![Google configure cname](../images/google-cname.png)
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/docs/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/docs/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)

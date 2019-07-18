@@ -5,20 +5,20 @@ tags: [billing]
 contributors: [cityofoaksdesign]
 ---
 
-Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch/).
 
-If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing){.external}, contact your Supporting Organization for assistance, in order to retain your special pricing rate.
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing), contact your Supporting Organization for assistance, in order to retain your special pricing rate.
 
 ## Access Site Plan
 1. Go to the Site Dashboard.
 2. For Sandbox sites, click the **Upgrade** button:
- ![Upgrade plan button shown on Sandbox sites](../docs/assets/images/dashboard/upgrade-plan.png)
+ ![Upgrade plan button shown on Sandbox sites](../images/dashboard/upgrade-plan.png)
  Otherwise, click the **current plan**:
- ![Change current plan for paid sites](../docs/assets/images/dashboard/change-plan.png)
+ ![Change current plan for paid sites](../images/dashboard/change-plan.png)
 
 <Alert title="Note" type="info">
 
-Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/docs/guides/launch/).
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch/).
 
 </Alert>
 
@@ -29,11 +29,11 @@ Site plan upgrades will change your site's resources and access to features imme
 Site plan downgrades will change your site's resources and access to features immediately. Beginning on the next billing cycle, the associated card will be charged for the new site plan.
 
 ## Roles & Permissions
-The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/docs/change-management/#site-level-roles-and-permissions).
+The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
 
 <Alert title="Note" type="info">
 
-If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/docs/site-billing#transfer-ownership-and-billing-for-this-site).
+If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
 
 </Alert>
 
@@ -41,12 +41,12 @@ If you need to assume site and billing ownership, the current Site Owner must [t
 Consider the following changes to feature access _before_ upgrading or downgrading the site's plan. Certain scenarios require code changes in order to safely change the site plan.
 
 ### Sandbox
-[Custom domains](/docs/domains/#custom-domains) are not available to Sandbox sites. Downgrading to a Sandbox site will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
+[Custom domains](/domains/#custom-domains) are not available to Sandbox sites. Downgrading to a Sandbox site will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
-Downgrading to a Sandbox site will disable automatic backups. You will still be able to create backups manually. For details, see [Backups Tool](/docs/backups/).
+Downgrading to a Sandbox site will disable automatic backups. You will still be able to create backups manually. For details, see [Backups Tool](/backups/).
 
 ### Basic Plan
-[New Relic](/docs/new-relic/), [Redis](/docs/redis/), and [Solr](/docs/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+[New Relic](/new-relic/), [Redis](/redis/), and [Solr](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
 For Redis and Solr, the following code changes are required before the feature can be safely disabled:
 
@@ -56,11 +56,11 @@ For Redis and Solr, the following code changes are required before the feature c
 
 #### Safely Remove Redis
 
-`markdown:remove-addons/wp-redis.md`
+<Partial file="remove-addons/wp-redis.md" />
 
 #### Safely Remove Solr
 
-`markdown:remove-addons/wp-solr.md`
+<Partial file="remove-addons/wp-solr.md" />
 
 </Tab>
 
@@ -68,11 +68,11 @@ For Redis and Solr, the following code changes are required before the feature c
 
 #### Safely Remove Redis
 
-`markdown:remove-addons/drupal-redis.md`
+<Partial file="remove-addons/drupal-redis.md" />
 
 #### Safely Remove Solr
 
-`markdown:remove-addons/d8-solr.md`
+<Partial file="remove-addons/d8-solr.md" />
 
 </Tab>
 
@@ -80,11 +80,11 @@ For Redis and Solr, the following code changes are required before the feature c
 
 #### Safely Remove Redis
 
-`markdown:remove-addons/drupal-redis.md`
+<Partial file="remove-addons/drupal-redis.md" />
 
 #### Safely Remove Solr
 
-`markdown:remove-addons/d7-solr.md`
+<Partial file="remove-addons/d7-solr.md" />
 
 </Tab>
 
@@ -105,7 +105,7 @@ This section covers purchasing a new plan. Review the [previous section](#basic-
 
 <Alert title="Note" type="info">
 
-Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/docs/annual-billing/) for more information.
+Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/annual-billing/) for more information.
 
 </Alert>
 
@@ -114,7 +114,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 2. For Sandbox sites, click the **Upgrade** button. Otherwise, select the lable for the site's current plan.
 3. Click **Select** to switch plans:
 
- ![Select a different plan](../docs/assets/images/dashboard/select-plan.png)
+ ![Select a different plan](../images/dashboard/select-plan.png)
 
 
 ### Enter Billing Information
@@ -144,8 +144,8 @@ To associate an existing card from your account as the payment method for this s
 
 <Tab title="Send a Request" id="request-payment-id">
 
-`markdown:transfer-ownership-billing-intro.md`
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-intro.md" />
+<Partial file="transfer-ownership-billing-steps.md" />
 
 </Tab>
 
@@ -172,18 +172,18 @@ While all site plans downgrades will be effective immediately, no partial refund
 
 1. Go to the Site Dashboard.
 2. Select the current plan:
- ![Change current plan for paid sites](../docs/assets/images/dashboard/change-plan.png)
+ ![Change current plan for paid sites](../images/dashboard/change-plan.png)
 3. Click the **Downgrade to free** link to cancel the current plan:
- ![Downgrade to free by cancelling current plan](../docs/assets/images/dashboard/cancel-plan.png)
+ ![Downgrade to free by cancelling current plan](../images/dashboard/cancel-plan.png)
 4. Check **Yes, cancel my plan** then click **Continue**:
- ![Confirm plan cancellation](../docs/assets/images/dashboard/confirm-cancellation.png)
+ ![Confirm plan cancellation](../images/dashboard/confirm-cancellation.png)
 5. Make sure the change details are correct, then click **Submit**.
-6. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/docs/site-billing/#do-not-bill-this-site-to-a-card).
+6. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/site-billing/#do-not-bill-this-site-to-a-card).
 
-Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/docs/delete-site/).
+Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site/).
 
 ## See Also
-- [Billing in the Site Dashboard](/docs/site-billing/)
-- [Account Billing in the User Dashboard](/docs/account-billing/)
-- [Traffic Limits and Overages](/docs/traffic-limits/)
-- [New Site Plans FAQs](/docs/new-plans-faq/)
+- [Billing in the Site Dashboard](/site-billing/)
+- [Account Billing in the User Dashboard](/account-billing/)
+- [Traffic Limits and Overages](/traffic-limits/)
+- [New Site Plans FAQs](/new-plans-faq/)

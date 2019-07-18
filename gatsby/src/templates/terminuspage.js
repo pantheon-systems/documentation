@@ -3,9 +3,8 @@ import { graphql } from "gatsby"
 import MDXRenderer from "gatsby-mdx/mdx-renderer"
 import { MDXProvider } from "@mdx-js/react"
 
-import Layout from "../components/layout"
+import Layout from "../layout/layout"
 import HeaderBody from "../components/headerBody"
-
 import Callout from "../components/callout"
 import Alert from "../components/alert"
 import Accordion from "../components/accordion"
@@ -19,7 +18,7 @@ import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
 import NavButtons from "../components/navButtons"
-import SEO from "../components/seo"
+import SEO from "../layout/seo"
 import Releases from "../components/releases"
 import TerminusVersion from "../components/terminusVersion"
 import Commands from "../components/commands"
@@ -46,54 +45,54 @@ const shortcodes = {
 const items = [
   {
     id: "docs-terminus",
-    link: "/docs/terminus",
+    link: "/terminus",
     title: "Get Started",
   },
   {
     id: "docs-terminus-install",
-    link: "/docs/terminus/install",
+    link: "/terminus/install",
     title: "Install",
   },
   {
     id: "docs-terminus-examples",
-    link: "/docs/terminus/examples",
+    link: "/terminus/examples",
     title: "Example Usage",
   },
   {
     id: "docs-terminus-commands",
-    link: "/docs/terminus/commands",
+    link: "/terminus/commands",
     title: "Commands",
   },
   {
     id: "docs-terminus-scripting",
-    link: "/docs/terminus/scripting",
+    link: "/terminus/scripting",
     title: "Scripting",
   },
   {
     id: "docs-terminus-plugins",
-    link: "/docs/terminus/plugins",
+    link: "/terminus/plugins",
     title: "Extend with Plugins",
     items: [
       {
         id: "docs-terminus-directory",
-        link: "/docs/terminus/plugins/directory",
+        link: "/terminus/plugins/directory",
         title: "Directory",
       },
       {
         id: "docs-terminus-create",
-        link: "/docs/terminus/plugins/create",
+        link: "/terminus/plugins/create",
         title: "Create Plugins",
       },
     ],
   },
   {
     id: "docs-terminus-configuration",
-    link: "/docs/terminus/configuration",
+    link: "/terminus/configuration",
     title: "Configuration File",
   },
   {
     id: "docs-terminus-updates",
-    link: "/docs/terminus/updates",
+    link: "/terminus/updates",
     title: "Version Updates",
   },
 ]
@@ -116,7 +115,7 @@ class TerminusTemplate extends React.Component {
           title={node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
-          image={"docs/assets/images/terminus-thumbLarge.png"}
+          image={"/assets/images/terminus-thumbLarge.png"}
         />
         <div className="container-fluid">
           <div className="row">
@@ -124,7 +123,7 @@ class TerminusTemplate extends React.Component {
               <Navbar
                 title={node.frontmatter.title}
                 items={items}
-                activePage={"/" + node.fields.slug}
+                activePage={node.fields.slug}
               />
               <div id="terminus" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">

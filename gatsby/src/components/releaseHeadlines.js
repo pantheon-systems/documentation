@@ -11,3 +11,7 @@ export const headline2 = props => {
 export const headline3 = props => {
   return <h3 className="toc-ignore">{props.children}</h3>
 }
+
+export const headline4 = props => {
+  return <h4 className="toc-ignore">{props.children}</h4>
+}

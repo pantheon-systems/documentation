@@ -35,7 +35,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 1. Enable Redis from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 
-2. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. To install via [Terminus](/docs/terminus), [set the connection mode to SFTP](/docs/sftp) then run:
+2. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. To install via [Terminus](/terminus), [set the connection mode to SFTP](/sftp) then run:
 
     ```
     terminus wp <site>.<env> -- plugin install wp-redis
@@ -58,7 +58,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 4. In the Dev environment's WordPress Dashboard, verify installation by selecting **Drop-ins** from the Plugins section:
 
-    ![The object-cache Drop-In Plugin](../docs/assets/images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
+    ![The object-cache Drop-In Plugin](../images/redis-dropin-plugin.png "The object-cache plugin, visible in the Drop-ins section of Plugins.")
 
     When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
 
@@ -80,7 +80,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
     ```bash
     terminus connection:set <site>.<env> git
     ```
-1. [Clone the site's codebase](/docs/git/#clone-your-site-codebase) if you have not done so already.
+1. [Clone the site's codebase](/git/#clone-your-site-codebase) if you have not done so already.
 1. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
 
     ```json
@@ -131,7 +131,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
     </Alert>
 
-    You can install and enable the module from the command line using [Terminus](/docs/terminus):
+    You can install and enable the module from the command line using [Terminus](/terminus):
 
     ```bash
     terminus remote:drush <site>.<env> -- en redis -y
@@ -173,7 +173,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 </Alert>
 
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
-2. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/docs/terminus):
+2. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
 
     ```bash
     terminus remote:drush <site>.<env> -- en redis -y
@@ -343,7 +343,7 @@ Fatal error: Class 'Redis_CacheCompressed' not found in
 
 It is possible that your `.gitignore` file is not up to date with the most recent version of your CMS. To resolve this, make sure you do not have any pending core updates.
 
-The best and easiest way to update your core is by using Pantheon administration Dashboard. See [WordPress and Drupal Core Updates](/docs/core-updates) for the steps to update your project's code and get the most recent version of the `.gitignore`.
+The best and easiest way to update your core is by using Pantheon administration Dashboard. See [WordPress and Drupal Core Updates](/core-updates) for the steps to update your project's code and get the most recent version of the `.gitignore`.
 
 ### Fatal Error: require\_once()
 

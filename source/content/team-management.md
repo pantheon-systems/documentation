@@ -16,7 +16,7 @@ The Site Team generally consists of one Site Owner and any necessary Team Member
 | Connect to the site's database via MySQL          | ✓         | ✓               |
 | Clone Database/Files between all environments     | ✓         | ✓               |
 | Deploy changes to Test and Live                   | ✓         | ✓               |
-| Access [Pantheon Support](/docs/support/) | ✓         | ✓               |
+| Access [Pantheon Support](/support/) | ✓         | ✓               |
 | Enable New Relic                                  | ✓         | ✓               |
 | Add/remove team members                           | ✓         |                 |
 | Transfer Ownership                                | ✓         |                 |
@@ -24,7 +24,7 @@ The Site Team generally consists of one Site Owner and any necessary Team Member
 | Add Solr or Redis                                 | ✓         |                 |
 | Manage a site's plan                              | ✓         |                 |
 
-Once a site has been associated with an [organization](/docs/organizations/), either through ownership or a relationship with a supporting organization, [Role-Based Permissions & Change Management](/docs/change-management) permissions are available.
+Once a site has been associated with an [organization](/organizations/), either through ownership or a relationship with a supporting organization, [Role-Based Permissions & Change Management](/change-management) permissions are available.
 <Alert title="Note" type="info">
 For Sites associated with an Organization, the Developers and Team-members from the Organization may manage Multidev Environments, while members of the Site Team will not be able to Create, Delete, or Merge commits from Multidevs.
 </Alert>
@@ -32,7 +32,7 @@ For Sites associated with an Organization, the Developers and Team-members from 
 ## Manage Site Team Members
 You can add and delete users in the Team modal by clicking **Team** in the upper-right of your Site Dashboard.
 
-![Team Management Window](../docs/assets/images/dashboard/team-modal.png)
+![Team Management Window](../images/dashboard/team-modal.png)
 ## Add a Team Member
 
 In the Team modal, enter the email address of the user and click **Add team member**.
@@ -61,12 +61,12 @@ Site ownership is assigned to the person who creates the site or pays for the si
 ### Change the Site Owner
 
 #### Sandbox Sites
-`markdown:transfer-ownership-billing-steps.md`
+<Partial file="transfer-ownership-billing-steps.md" />
 
 #### Paid Sites
 To change the owner of a paid site (e.g. Basic, or Performance), you'll need to update the billing information by clicking **Invite a business owner to pay for this site** within the Settings page of the Site Dashboard. Enter the email address for the new site owner. Once the new owner receives the invitation they will be directed to provide payment information, at which point they will assume ownership of the site.
 
-![Invite a business owner to pay for this site](../docs/assets/images/dashboard/payment-form-invite.png)<br />
+![Invite a business owner to pay for this site](../images/dashboard/payment-form-invite.png)<br />
 Enterprise Organizations can use the same process to assume ownership of a site;  however, Agency Partners do not have the ability to own sites directly.
 
 ### Pantheon Partners
@@ -76,4 +76,4 @@ The site owner is the person who pays for the site. You'll need to update the pa
 
 One of the best things about Pantheon is the ability to collaborate with agencies and shops on web projects. If you have contracted with a Pantheon Partner Agency, you can add them to the site as a Supporting Organization, which will give their company access to help build, launch, or maintain your site:
 
-`markdown:add-supporting-org.md`
+<Partial file="add-supporting-org.md" />

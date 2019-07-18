@@ -4,7 +4,7 @@ description: Use log files to identify errors, track response times, analyze vis
 tags: [logs, services]
 categories: []
 ---
-Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/docs/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
+Log files track and record your site's activity to help you find, debug, and isolate current or potential problems on your site. Each environment (Multidev, Dev, Test, and Live) has their own respective log files, which can be obtained via SFTP. Application-level logs can be accessed through Drupal directly. In addition to logs, [New Relic Pro](/new-relic) is a great way to help diagnose and fix errors and performance bottlenecks.
 
 The server timezone and all log timestamps are in UTC (Coordinated Universal Time).
 
@@ -13,10 +13,10 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 | Log        | Retention Policy           | Comments                                                |
 |:---------- |:-------------------------- |:------------------------------------------------------- |
 | **newrelic.log**          |                       | New Relic log; check if an environment is not logging. |
-| **nginx-access.log**      | Up to 60 days of logs |  Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log). |
+| **nginx-access.log**      | Up to 60 days of logs |  Webserver access log. **Do not consider canonical**, as this will be wiped if the application container is reset or rebuilt. See [Parsing nginx Access Logs with GoAccess](/nginx-access-log). |
 | **nginx-error.log**       | 1MB of log data       | Webserver error log. |
-| **php-error.log** <Popover content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see [PHP Errors and Exceptions](/docs/php-errors)" />  | 1MB of log data       | PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard. |
-| **php-fpm-error.log**     | 1MB of log data       | PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/docs/php-slow-log) |
+| **php-error.log** <Popover content="Fatal errors from PHP error log are provided in each environment on the **Errors** tab of the Site Dashboard. Lower priority PHP errors are only in the PHP error log or in the application logs (watchdog on Drupal, WP_DEBUG for WordPress). For details, see [PHP Errors and Exceptions](/php-errors)" />  | 1MB of log data       | PHP [fatal error log](https://secure.php.net/manual/en/book.errorfunc.php); will not contain stack overflows. Fatal errors from this log are also shown in the Dashboard. |
+| **php-fpm-error.log**     | 1MB of log data       | PHP-FPM generated collection of stack traces of slow executions, similar to MySQL's slow query log. See [PHP Slow Log](/php-slow-log) |
 | **mysqld-slow-query.log** | 10MB of log data      | Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory. |
 | **mysqld.log**            | 1MB of log data       | Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory. |
 
@@ -29,7 +29,7 @@ When appservers are migrated as a regular part of platform maintenance, log file
 </Alert>
 
 ## Access Logs Via SFTP
-Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/docs/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 ## Downloading Logs
 
@@ -132,7 +132,7 @@ You can now access the logs from within the `site-log` directory. More than one 
 
 ### How can I parse my Nginx access logs?
 
-See [Parsing nginx Access Logs with GoAccess](/docs/nginx-access-log) for details.
+See [Parsing nginx Access Logs with GoAccess](/nginx-access-log) for details.
 
 ### Why do I see requests coming from 10.x.x.x IPs in nginx-access.log?
 The first entry reflects an internal IP address of Pantheon's routing layer. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the loadbalancer IP address will be listed second, after the client IP.
@@ -149,7 +149,7 @@ No, syslog is not available. Technically, you can log Drupal events using the sy
 
 ### Can I access Apache Solr logs?
 
-No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/docs/solr).
+No, access to Apache Solr logs is not available. For more information on debugging Solr, see [Apache Solr on Pantheon](/solr).
 
 ### Can I download Varnish logs?
 
@@ -165,20 +165,18 @@ To minimize risk exposure, especially in a Live environment, disable debug loggi
 
 </Alert>
 
-Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress){.external} constants on Development environments (Dev and Multidevs) to write errors to `wp-content/uploads/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment in `wp-config.php`:
+Enable the [WP_DEBUG and WP_DEBUG_LOG](https://codex.wordpress.org/Debugging_in_WordPress) constants on Development environments (Dev and Multidevs) to write errors to `wp-content/uploads/debug.log` and show all PHP errors, notices, and warnings on the page. We suggest setting the WordPress debugging constants per environment in `wp-config.php`:
 
+<Partial file="wp-debugging.md" />
 
-`markdown:/wp-debugging.md`
-
-
-By default, the WordPress debug log path is set to `/wp-content/` and is not writable on Test or Live environments. This can be overridden to the [`/wp-content/uploads/` folder](/docs/wp-config-php/#how-do-i-change-the-default-debuglog-location).
+By default, the WordPress debug log path is set to `/wp-content/` and is not writable on Test or Live environments. This can be overridden to the [`/wp-content/uploads/` folder](/wp-config-php/#how-do-i-change-the-default-debuglog-location).
 
 ### How can I access the Drupal event log?
 
 By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
 * Visit `/admin/reports/dblog` once you've logged in as administrator.
-* Using [Terminus](/docs/terminus/):
+* Using [Terminus](/terminus/):
 
  ```bash
  terminus drush <site>.<env> -- watchdog-show
@@ -186,13 +184,15 @@ By default, Drupal logs events using the Database Logging module (dblog). PHP fa
 
  * Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
 
-        ```bash
-        terminus drush <site>.<env> -- watchdog-show --tail
-        ```
+  ```bash
+  terminus drush <site>.<env> -- watchdog-show --tail
+  ```
 
-        <Alert title="Note" type="info">
-        At this time, `terminus drush "watchdog-show --tail"` is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.
-        </Alert>
+  <Alert title="Note" type="info">
+
+  At this time, `terminus drush "watchdog-show --tail"` is supported in 0.13.x versions and below, and not yet supported in  Terminus 1.x.
+
+  </Alert>
 
 ### My Drupal database logs are huge. Should I disable dblog?
 
@@ -222,11 +222,11 @@ done
 
 Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) then review them with any tool on your workstation.
 
-You can also create the `logwatcher.sh` script below, which uses [Terminus](/docs/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
+You can also create the `logwatcher.sh` script below, which uses [Terminus](/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
 
 1. If you're working on multiple projects locally, create a `logs` directory in the local Git repository for each one you want to watch logs for.
 
-1. Add `logs/*` to the project's [`.gitignore` file](/docs/git-faq/#can-i-use-gitignore-on-pantheon).
+1. Add `logs/*` to the project's [`.gitignore` file](/git-faq/#can-i-use-gitignore-on-pantheon).
 
 1. In your project's `logs` directory, create `logwatcher.sh`:
 
@@ -248,7 +248,7 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/doc
 1. Update the variables:
 
     - `LOGPATH` points to the `logs` directory in your project,
-    - `SITE` should match your [site name](/docs/terminus/examples/#siteenv),
+    - `SITE` should match your [site name](/terminus/examples/#siteenv),
     - `ENV` is the environment you want to watch logs from
 
 1. Make the script executable:
@@ -266,8 +266,8 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/doc
    Stop the process with **CTRL-C**.
 
 ## See Also
-- [MySQL Slow Log](/docs/mysql-slow-log/)
-- [PHP Slow Log](/docs/php-slow-log/)
-- [PHP Errors and Exceptions](/docs/php-errors/)
-- [Bots and Indexing](/docs/bots-and-indexing/)
-- [New Relic](/docs/new-relic)
+- [MySQL Slow Log](/mysql-slow-log/)
+- [PHP Slow Log](/php-slow-log/)
+- [PHP Errors and Exceptions](/php-errors/)
+- [Bots and Indexing](/bots-and-indexing/)
+- [New Relic](/new-relic)

@@ -5,7 +5,7 @@ tags: [addons]
 categories: []
 ---
 Apache Solr is a system for indexing and searching site content. Pantheon provides Apache Solr as a service for most plans including Sandbox, on all environments. No permission or action is required from Pantheon to use Solr. 
-`markdown:/solr-version.md`
+<Partial file="solr-version.md" />
 
 
 <Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
@@ -27,7 +27,7 @@ All plans except for a Basic plan can use Solr. Solr is available to Sandbox sit
 
 ## Using Solr with WordPress or Drupal
 
-For installation instructions and additional details, see [Enabling Solr for WordPress](/docs/wordpress-solr), [Enabling Solr with Drupal 7](/docs/solr-drupal-7) or [Enabling Solr on Drupal 8](/docs/solr-drupal-8).
+For installation instructions and additional details, see [Enabling Solr for WordPress](/wordpress-solr), [Enabling Solr with Drupal 7](/solr-drupal-7) or [Enabling Solr on Drupal 8](/solr-drupal-8).
 
 ## Known Limitations of Pantheon's Solr Service
 
@@ -44,57 +44,71 @@ While Pantheon provides a stable, reliable, and basic Solr service, your individ
 
 Some customers have reported success using external Solr service providers for their Solr indexing:
 
- - [IndexDepot](https://www.indexdepot.com/en/). For more information, see [Using IndexDepot With Pantheon Sites](/docs/indexdepot/).
+ - [IndexDepot](https://www.indexdepot.com/en/). For more information, see [Using IndexDepot With Pantheon Sites](/indexdepot/).
  - [OpenSolr](https://opensolr.com/)
  - [WebSolr](https://websolr.com/)
 
 ## Apache Solr Vocabulary
 
-<DefList>
+<dl>
 
-<Definition name="bias">
+<dt>bias</dt>
+
+<dd>
 
 Allows certain parts of indexed items to influence the importance of search results. The higher the bias, the greater the influence; the range is 0.1 to 21.0.
 
-</Definition>
+</dd>
 
-<Definition name="core">
+<dt>core</dt>
+
+<dd>
 
 A core is a separate configuration and index using a single Solr instance. A core is created when the schema is posted. For more information, see [https://wiki.apache.org/solr/CoreAdmin](https://wiki.apache.org/solr/CoreAdmin)
 
-</Definition>
+</dd>
 
-<Definition name="document">
+<dt>document</dt>
+
+<dd>
 
 A document is similar to a database row, containing the contents of what is to be searched and whatever fields are associated with it, like title.
 
-</Definition>
+</dd>
 
-<Definition name="facet">
+<dt>facet</dt>
+
+<dd>
 
 Search facets allow search results to be filtered; examples include seeing a list of potential filters and the count of matches for each filter on the left, like Amazon product searches.
 
-</Definition>
+</dd>
 
-<Definition name="index">
+<dt>index</dt>
+
+<dd>
 
 structure containing extracted keywords from a document for rapid search and retrieval, similar to a database table.
 
-</Definition>
+</dd>
 
-<Definition name="score">
+<dt>score</dt>
+
+<dd>
 
 calculated relevance of matches influenced by bias, represented as a float.
 
-</Definition>
+</dd>
 
-<Definition name="schema.xml">
+<dt>schema.xml</dt>
+
+<dd>
 
 Contains details about the fields that documents can contain, and how those fields are handled when adding documents to the index or querying those fields. Must be posted using the pantheon_apachesolr module before indexing and searching will work. For more information, see [https://wiki.apache.org/solr/SchemaXml](https://wiki.apache.org/solr/SchemaXml).
 
-</Definition>
+</dd>
 
-</DefList>
+</dl>
 
 #### Check Index and Batch Sizes
 

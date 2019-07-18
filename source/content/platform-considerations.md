@@ -9,7 +9,6 @@ This page is used to keep track of common platform considerations, mostly derive
 ## Browser Support for Pantheon's Dashboard
 In order to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
-
 <table class="table  table-bordered table-responsive">
   <thead>
     <tr>
@@ -19,20 +18,18 @@ In order to focus internal development and engineering work, the Pantheon Dashbo
       <th>Opera</th>
       <th>Edge</th>
       <th>Safari</th>
-      <th>Internet Explorer</th>
     </tr>
     <tr>
       <th>Versions Supported</th>
       <td colspan="4">Evergreen Browsers - Last 4</td>
       <td>Current + Last Year</td>
-      <td>Internet Explorer 11 <Popover title="Minimum Support" content="Feature support only, allows for visual inconsistencies." /></td>
     </tr>
   </thead>
 </table>
 
 ## Batch Uploads
 
-The [max execution time](/docs/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce/) can encounter this limit.
+The [max execution time](/timeouts/#user-configurable-timeouts) for PHP scripts on the platform is 120 seconds. Batch uploads, like one might see importing products with [WooCommerce](https://wordpress.org/plugins/woocommerce/) can encounter this limit.
 
 In this or similar instances, consider performing larger operations locally, then importing the code, files, and database back up to the platform.
 
@@ -46,19 +43,19 @@ A non-batched export of a dataset small enough to complete within the set timeou
 
 ### Potential Workarounds
 
-1. Have each request in the data export write to its own `tmp` file, then concatenate these at the end. This solution requires that the [Persistent Temporary Path Workaround](/docs/tmp/#persistent-temporary-path-workaround) is in place.
+1. Have each request in the data export write to its own `tmp` file, then concatenate these at the end. This solution requires that the [Persistent Temporary Path Workaround](/tmp/#persistent-temporary-path-workaround) is in place.
 
 2. Do small batches and add enough time between each request in the batch process to allow the updated file to be synced between all application containers.
 
 ### Alternative Approaches
 
-Running the export from the command line using tools like [Terminus](/docs/terminus/), [Drush](/docs/drush/), [WP-CLI](/docs/wp-cli/) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/docs/timeouts/). The export won't need to be batched and can therefore run to completion on a single application container.
+Running the export from the command line using tools like [Terminus](/terminus/), [Drush](/drush/), [WP-CLI](/wp-cli/) and cron will produce a better result. Larger data sets can be exported, as command line processes have longer timeouts than HTTP requests. For more details, see [Timeouts on Pantheon](/timeouts/). The export won't need to be batched and can therefore run to completion on a single application container.
 
 Most often, the best solution is to implement data exports as a web service, incrementally exchanging the data with the target system.
 
 ## Multisite
 
-Pantheon supports designated use cases for [WordPress Site Networks](/docs/guides/multisite) created by WordPress' Multisite feature.
+Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature.
 
 We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-drupal/multi-site-sharing-the-same-code-base). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
 
@@ -92,13 +89,13 @@ Consider the [File (field) Paths](https://www.drupal.org/project/filefield_paths
 
 Because of the cloud-based nature of Pantheon's infrastructure, we cannot ensure high-deliverability email originating from your Application Containers, as they have no fixed location. While all sites have access to a local Postfix service for testing and development, we recommend using an external SMTP gateway (SendGrid, for example) in production to ensure that your email is delivered.
 
-See [the email documentation](/docs/email) for more details and suggestions.
+See [the email documentation](/email) for more details and suggestions.
 
 ## Write Access on Environments
 
 For Dev environments in SFTP mode, the entire codebase is writable. However the platform is designed to keep only the codebase under version control.  This means that the only writable paths are `sites/default/files` for Drupal sites and `wp-content/uploads` for WordPress sites.
 
-Any modules for Drupal or plugins for WordPress that need to write to the codebase (and assume write access) need a symlink added so that they will instead write to the file system. For more information, read [Using Extensions That Assume Write Access](/docs/assuming-write-access/).
+Any modules for Drupal or plugins for WordPress that need to write to the codebase (and assume write access) need a symlink added so that they will instead write to the file system. For more information, read [Using Extensions That Assume Write Access](/assuming-write-access/).
 
 ## Streaming Media
 
@@ -110,7 +107,7 @@ It is also possible to deliver smaller media files from Pantheon using [progress
 
 ## Large Files
 
-Due to the configuration of the [Pantheon Filesystem](/docs/files/), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/docs/rsync-and-sftp/). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
+Due to the configuration of the [Pantheon Filesystem](/files/), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp/). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
 
 | File Size       | Platform Compatibility          | Notes                               |
 |:--------------- | ------------------------------- |------------------------------------ |
@@ -125,10 +122,10 @@ If you are distributing large binaries or hosting big media files, we recommend 
 
 Be aware, even when using an external CDN to host files, you cannot upload files over 100MB through the CMS. Upload these files directly to the CDN (here's Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html)).
 
-See our documentation for [Drupal](/docs/drupal-s3) and [WordPress](/docs/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
+See our documentation for [Drupal](/drupal-s3) and [WordPress](/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
 
 ### Upload Speed
-Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/docs/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
+Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
 
 ## Large Code Repository
 
@@ -147,11 +144,11 @@ File directories on Pantheon's file serving infrastructure cannot be moved or re
 ## IP-Address Based Security Schemes
 IP-based security is not recommended on Pantheon - or any cloud platform because the actual IP address where code executes from can change as application containers are migrated throughout the infrastructure.
 
-For more information, see [Dynamic Outgoing IP Addresses](/docs/outgoing-ips).
+For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
 
 ## Maintenance Mode
 
-Pantheon may send a [generic Maintenance Mode message](/docs/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
+Pantheon may send a [generic Maintenance Mode message](/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
 
 Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
 
@@ -197,7 +194,7 @@ Pantheon does not currently support LESS or Sass/Compass CSS preprocessor langua
 ## .htaccess
 Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
-For details, see [Configure Redirects](/docs/redirects/#php-vs-htaccess).
+For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
 ### Drupal False Positive
 
@@ -213,7 +210,7 @@ MySQL stored procedures are not supported. Due to the nature of the platform, th
 
 ## Oracle Database Drivers
 
-Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
+Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Secure Integration](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
 
 
 ## PHP/Java Bridge
@@ -229,7 +226,7 @@ Pantheon does not currently support any PHP frameworks outside of Drupal and Wor
 Node.js is not available in the platform. If running node.js services is a hard requirement for your Drupal or WordPress application, the node.js service must to be hosted on a different remote server outside of Pantheon.
 
 ## Modules and Plugins with Known Issues
-See [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues) for a list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.
+See [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for a list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.
 
 ## Inactive Site Freezing
 
@@ -248,13 +245,13 @@ $databases['default']['default']['charset'] = 'utf8mb4';
 $databases['default']['default']['collation'] = 'utf8mb4_general_ci';
 ```
 
-Existing sites that already have an active database must install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert) Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. Once you've installed the command in `/sites/all/drush`, you must clear Drush cache for the new command to run. Clear Drush cache using [Terminus](/docs/terminus/):
+Existing sites that already have an active database must install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert) Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. Once you've installed the command in `/sites/all/drush`, you must clear Drush cache for the new command to run. Clear Drush cache using [Terminus](/terminus/):
 
 ```bash
 terminus drush <site>.<env> -- cc drush
 ```
 
-Start by making a [backup](/docs/backups/) of the site database, then place the site in maintenance mode and run the following:
+Start by making a [backup](/backups/) of the site database, then place the site in maintenance mode and run the following:
 
 ```bash
 terminus drush <site>.<env> -- utf8mb4-convert-databases
@@ -265,12 +262,12 @@ This will convert the database tables in the existing installation to the proper
 
 ## Terminus Support
 
-[Terminus](/docs/terminus), our command-line tool for power users, is designed for 'nix-type operating systems like MacOS and Linux. While some people have installed Terminus on Windows using the [Git BASH on Git for Windows](https://git-for-windows.github.io/) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) shells, this is not officially supported.
+[Terminus](/terminus), our command-line tool for power users, is designed for 'nix-type operating systems like MacOS and Linux. While some people have installed Terminus on Windows using the [Git BASH on Git for Windows](https://git-for-windows.github.io/) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) shells, this is not officially supported.
 
 If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/) to run a virtualized 'nix-type environment for tools like Terminus.
 
 ## PHP Configuration
-`php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/docs/phpinfo/) for more information on PHP configuration.
+`php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/phpinfo/) for more information on PHP configuration.
 
 ## XML-RPC
 

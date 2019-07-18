@@ -17,9 +17,9 @@ WP-CFM should only be used to write changes to code in Dev and Multidev environm
 
 ## Install and Deploy WP-CFM
 
-Each of the following steps can be done using the Pantheon and WordPress Dashboards or via the command line using Pantheon's CLI, [Terminus](/docs/terminus):
+Each of the following steps can be done using the Pantheon and WordPress Dashboards or via the command line using Pantheon's CLI, [Terminus](/terminus):
 
-1. [Set the connection mode to SFTP](/docs/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with Terminus:
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with Terminus:
  ```bash
  terminus connection:set <site>.<env> sftp
  ```
@@ -131,7 +131,7 @@ You can review values on the [All Settings Screen](https://codex.wordpress.org/O
 If you want to track configurations in more tables, you must do so using the `wpcfm_configuration_items` hook. For details, see [WP-CFM documentation](https://forumone.github.io/wp-cfm/).
 
 ### What's not tracked?
-Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identify more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/docs/wp-config-php/#frequently-asked-questions).
+Site content, posts, users, taxonomy, etc. Review all queries for a page request using the Queries tab of the [Debug Bar](https://wordpress.org/plugins/debug-bar/) plugin to help identify more settings you want to track. This plugin requires that you enable [debugging via `wp-config.php`](/wp-config-php/#frequently-asked-questions).
 
 ### Why aren't my site navigation menus tracked?
 The `wp_options` table stores serialized value for active menus, identified with the `term_id` paramater of the `theme_mods_yourthemename` row. This table does not store menu data otherwise. By default, WP-CFM will only track when a menu is enabled or disabled for the site and not when a menu's items are updated.
