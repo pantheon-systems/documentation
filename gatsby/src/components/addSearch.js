@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import {Helmet} from "react-helmet";
 
-class AddSearch extends Component {
-	componentWillMount() {
-		const script3 = document.createElement('script');
+class AddSearch extends React.Component {
 
-    
-		script3.src = `https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6`;
-
-		document.body.appendChild(script3);
-	}
-
-
-    render() { 
+    render () {
         return (
-            <script></script>
+            <div className="addsearch-container">
+                <Helmet>
+                    <script defer src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6"></script>
+                </Helmet>
+            </div>
         );
-    }
+      }
 
 }
 
