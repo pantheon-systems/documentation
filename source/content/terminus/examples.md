@@ -100,7 +100,7 @@ Pantheon maintains upstream updates for [WordPress](https://github.com/pantheon-
 <Alert title={"Note"} type={"info"}>
 
 For instructions on how to resolve merge conflicts, see [Upstream
-Updates](/docs/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
+Updates](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts)
 
 </Alert>
 
@@ -328,7 +328,7 @@ As a safeguard, Terminus will prevent a framework switch such as moving from Dru
 <Alert title={"Note"} type={"info"}>
 
 To set an empty upstream for Composer managed sites, see [Serving Sites from
-the Web Subdirectory](/docs/nested-docroot/).
+the Web Subdirectory](/nested-docroot/).
 
 </Alert>
 

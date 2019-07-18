@@ -51,7 +51,7 @@ contributors: [alexfornuto, rachelwhitton]
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
-Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/docs/terminus/).
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus/).
 
 <Example>
 
@@ -59,9 +59,9 @@ Of particular note, any documentation that uses Terminus should reference it in 
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/git/#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/docs/terminus) installed on your local computer.
+- [Terminus](/terminus) installed on your local computer.
 
 <hr className="source-code" />
 
@@ -71,9 +71,9 @@ Be sure that you have:
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/git/#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/docs/terminus) installed on your local computer.
+- [Terminus](/terminus) installed on your local computer.
 ```
 
 </Example>
@@ -187,12 +187,12 @@ Use relative paths when linking to other pages of the docs site.
 
 <Example>
 
-[Quick Start](/docs/guides/quickstart/)
+[Quick Start](/guides/quickstart/)
 
 <hr className="source-code" />
 
 ```markdown
-[Quick Start](/docs/guides/quickstart/)
+[Quick Start](/guides/quickstart/)
 ```
 
 </Example>
@@ -263,7 +263,7 @@ When writing multi-step processes, repeated variables and constants should be de
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 
 ```bash
 export site=yoursitename
@@ -276,7 +276,7 @@ export env=dev
 
 <pre><code className="html"><Alert title="Exports" type="export">
 
-This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 
 ```bash
 export site=yoursitename
@@ -630,14 +630,14 @@ This is the optimal place to provide links to external resources on the subject,
 <Example>
 
 ## See Also 
-- [An internal link](/docs/guides/)
+- [An internal link](/guides/)
 - [An external link](https://pantheon.io/blog/)
 
 <hr className="source-code" />
 
 ```markdown
 ## See Also
-- [An internal link](/docs/guides/)
+- [An internal link](/guides/)
 - [An external link](https://pantheon.io/blog/)
 ```
 

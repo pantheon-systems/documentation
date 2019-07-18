@@ -3,9 +3,9 @@
 If your domain's DNS configuration relies on an existing MX or TXT record that intentionally disallows CNAME records, you'll need to use `A` and `AAAA` records to configure DNS for subdomains (e.g., `www.example.com`) instead of CNAMEs.
 
 
-<Alert title="note" type="info">
+<Alert title="Note" type="info">
 
-Replace `live-example.pantheonsite.io` in the following URLs with the target environment's [platform domain](/docs/domains/#platform-domains).
+Replace `live-example.pantheonsite.io` in the following URLs with the target environment's [platform domain](/domains/#platform-domains).
 
 </Alert>
 

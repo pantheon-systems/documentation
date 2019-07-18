@@ -22,8 +22,8 @@ Meta data for a doc or guide is created in a section referred to as frontmatter.
 <div class="style-example" >
 <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">Style Guide</h1>
 <p class="article-subhead">Formatting rules and guidelines for Pantheon&#039;s open-source documentation.</p>
-<p><small><i class="fa fa-users"></i> Contributors:                                                     [Alex Fornuto](/docs/contributors/alexfornuto" title="alexfornuto),
-[Rachel Whitton](/docs/contributors/rachelwhitton" title="rachelwhitton)
+<p><small><i class="fa fa-users"></i> Contributors:                                                     [Alex Fornuto](/contributors/alexfornuto" title="alexfornuto),
+[Rachel Whitton](/contributors/rachelwhitton" title="rachelwhitton)
 </small></p>
 <hr class="source-code">
 ```html
@@ -60,16 +60,16 @@ earlynote: The documentation on this page discusses features and options that ar
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
-Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/docs/terminus/).
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus/).
 
 <div class="style-example" >
 ## Before You Begin {.info}
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/git/#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/docs/terminus) installed on your local computer.
+- [Terminus](/terminus) installed on your local computer.
 
 <hr class="source-code">
 ```markdown
@@ -78,9 +78,9 @@ Be sure that you have:
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
-- A [local clone](/docs/git/#clone-your-site-codebase) of your code repository.
+- A [local clone](/git/#clone-your-site-codebase) of your code repository.
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
-- [Terminus](/docs/terminus) installed on your local computer.
+- [Terminus](/terminus) installed on your local computer.
 ```
 </div>
 
@@ -159,10 +159,10 @@ Do not specify a target tab or window for external, or any other links, leaving 
 #### Internal Links
 Use relative paths when linking to other pages of the docs site.
 <div class="style-example" >
-[Quick Start](/docs/guides/quickstart/)
+[Quick Start](/guides/quickstart/)
 <hr class="source-code">
 ```markdown
-[Quick Start](/docs/guides/quickstart/)
+[Quick Start](/guides/quickstart/)
 ```
 </div>
 
@@ -242,7 +242,7 @@ When writing multi-step processes, repeated variables and constants should be de
 <div class="style-example" >
 
 <Alert title="Exports" type="export">
-This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
@@ -253,7 +253,7 @@ export env=dev
 
 ```html
 <Alert title="Exports" type="export">
-This process uses [Terminus](/docs/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
@@ -534,12 +534,12 @@ This is the optimal place to provide links to external resources on the subject,
 
 <div class="style-example" >
 ## See Also {.info}
-- [An internal link](/docs/guides/)
+- [An internal link](/guides/)
 - [An external link](https://pantheon.io/blog/)
 <hr class="source-code">
 ```markdown
 ## See Also
-- [An internal link](/docs/guides/)
+- [An internal link](/guides/)
 - [An external link](https://pantheon.io/blog/)
 ```
 </div>

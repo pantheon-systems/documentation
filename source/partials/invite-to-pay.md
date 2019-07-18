@@ -1,8 +1,8 @@
-1. From the **<span class="glyphicons glyphicons-group"></span> Organization's** Dashboard, select the site from the [Sites list](/docs/organizations/#sites).
+1. From the **<span class="glyphicons glyphicons-group"></span> Organization's** Dashboard, select the site from the [Sites list](/organizations/#sites).
 1. Click the site's name to enter the Site Dashboard, then click the **Billing** tab.
 1. Click **View All Plans** to select a plan size and **Annual** or **Monthly** billing.
 
-  <Alert title="note" type="info">
+  <Alert title="Note" type="info">
 
   A site transferred as a Sandbox will not receive Preferred Pricing. A site plan and billing preference (Annual or Monthly) must be selected prior to sending your client a payment invitation.
 
