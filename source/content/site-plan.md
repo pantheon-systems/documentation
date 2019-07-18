@@ -111,7 +111,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing? Se
 
 ### Select Plan
 1. Go to the Site Dashboard.
-2. For Sandbox sites, click the **Upgrade** button. Otherwise, select the lable for the site's current plan.
+2. For Sandbox sites, click the **Upgrade** button. Otherwise, select the label for the site's current plan.
 3. Click **Select** to switch plans:
 
  ![Select a different plan](../images/dashboard/select-plan.png)

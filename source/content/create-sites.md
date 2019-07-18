@@ -28,7 +28,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 1. Click **Visit your Pantheon Site Dashboard**.
 1. Click **Visit Development Site** and complete the installation process for the selected framework.
 
-  ![Visit development site button](/sour../images/dashboard/visit-development-site.png)
+  ![Visit development site button](../images/dashboard/visit-development-site.png)
 
 ## Sandbox Sites
 
