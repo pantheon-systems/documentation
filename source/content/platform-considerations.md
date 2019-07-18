@@ -210,7 +210,7 @@ MySQL stored procedures are not supported. Due to the nature of the platform, th
 
 ## Oracle Database Drivers
 
-Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Enterprise Gateway](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
+Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Secure Integration](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
 
 
 ## PHP/Java Bridge

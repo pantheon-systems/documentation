@@ -34,7 +34,7 @@ Pantheon strives to maintain accurate and up-to-date documentation. Some docs wo
 - [Add a Client to Your Agency](/add-client-site/) for an all-in-one guide on how to add a client's site to your agency and pass on Preferred Partner pricing.
 
 ## Be a Community Member
-The Pantheon [Community Forums](https://discuss.pantheon.io/){.external} and [Slack Workspace](https://slackin.pantheon.io/){.external} are great places to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.
+The Pantheon [Community Forums](https://discuss.pantheon.io/) and [Slack Workspace](https://slackin.pantheon.io/) are great places to read about advanced Pantheon topics, post questions, and stay up to date on Pantheon developments.
 
 ## HTTPS
 Follow our [Launch Essentials](/guides/launch/) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).

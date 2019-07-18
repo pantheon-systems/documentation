@@ -8,7 +8,7 @@ earlynote: The documentation on this page discusses features and options that ar
 contributors: [edwardangert]
 ---
 
-Pantheon offers a number of [ways to connect to your site](/docs/guides/quickstart/connection-modes/). In addition to Git and SFTP modes, [Pantheon Localdev](https://github.com/pantheon-systems/localdev/){.external} gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/docs/pantheon-workflow/).
+Pantheon offers a number of [ways to connect to your site](/docs/guides/quickstart/connection-modes/). In addition to Git and SFTP modes, [Pantheon Localdev](https://github.com/pantheon-systems/localdev/) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/docs/pantheon-workflow/).
 
 Localdev lets you [use an integrated development environment (**IDE**)](#use-a-local-ide-to-develop-your-pantheon-site) to edit files and code, and push changes to Pantheon right from your desktop. Use it if you want to avoid the command line, or to develop sites with a fully functional local preview, even when you don't have an internet connection.
 
@@ -20,7 +20,7 @@ Localdev is in active development, with new features and updates coming soon.
 
 If you have an older version of Localdev already installed on your machine, remove it to avoid potential compatibility issues. Newer versions of Localdev include support for automatic updates.
 
-1.  Download and install the [latest Localdev](http://pantheon-localdev.s3.amazonaws.com/localdev-latest-dev.dmg){.external} `.dmg`
+1.  Download and install the [latest Localdev](http://pantheon-localdev.s3.amazonaws.com/localdev-latest-dev.dmg) `.dmg`
 1.  Localdev checks the Docker installation. Once it's done, click **Continue installation**
 1.  Enter the machine token you created for Localdev.
     - Click **View your Pantheon machine tokens** to open a browser to the *Machine Tokens* tab of your account.
@@ -77,7 +77,7 @@ After you make changes to your site:
 
 ## Advanced Steps
 
-For users looking to be more hands on and willing to use the terminal, try [Terminus](/docs/terminus/) and [Lando](https://docs.devwithlando.io/started.html){.external}. The [Local Development](/docs/local-development/) doc can help you get started.
+For users looking to be more hands on and willing to use the terminal, try [Terminus](/docs/terminus/) and [Lando](https://docs.devwithlando.io/started.html). The [Local Development](/docs/local-development/) doc can help you get started.
 
 ## FAQ, Troubleshooting, and Support
 
@@ -92,7 +92,7 @@ While Localdev is in beta, [support request best practices](/docs/support/#best-
     - If the error is inconsistent, make note of this as well. Multiple reports of an inconsistent error help our team troubleshoot.
 
 1.  Report the error:
-    - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all){.external} or [via Chat](/docs/support/#real-time-chat-support) and include the steps you took to reproduce the error.
+    - [Contact Support via your Dashboard](https://dashboard.pantheon.io/#support/support/all) or [via Chat](/docs/support/#real-time-chat-support) and include the steps you took to reproduce the error.
 
 ### Log out and Reset to Defaults
 

@@ -71,7 +71,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
     * For more info see the [Relaunch Procedure](/relaunch/#relaunch-procedure) doc.
 
 ### Professional Services Migration
-If you'd like help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services){.external} team is available.
+If you'd like help migrating your site between regions, our [Professional Services Migrations](https://pantheon.io/professional-services) team is available.
 
 ## Review Site Region
 
@@ -121,7 +121,7 @@ Time to celebrate. Your site is running in the EU!
 
 ## Coming Soon
 
-More features are in active development. [Contact us](https://pantheon.io/contact-us){.external} to learn more, and check this doc for updates. [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ){.external} to tell us about your needs.
+More features are in active development. [Contact us](https://pantheon.io/contact-us) to learn more, and check this doc for updates. [Fill out this survey](https://www.getfeedback.com/r/hkR9uTAJ) to tell us about your needs.
 
 ## Frequently Asked Questions
 ### Can I move an existing site to a new region?

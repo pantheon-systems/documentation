@@ -7,7 +7,7 @@ contributors: [cityofoaksdesign]
 
 Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch/).
 
-If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing){.external}, contact your Supporting Organization for assistance, in order to retain your special pricing rate.
+If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing), contact your Supporting Organization for assistance, in order to retain your special pricing rate.
 
 ## Access Site Plan
 1. Go to the Site Dashboard.
