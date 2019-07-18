@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import './style.css';
-
+import AddSearch from "../../components/addSearch"
 const Header = ({ data }) => (
   <>
     <div className="navbar navbar-fixed-top pio-docs-nav" role="navigation">
@@ -152,6 +152,7 @@ const Header = ({ data }) => (
                   className="addsearch"
                   placeholder="Search Pantheon Documentation"
                 />
+                <AddSearch />
               </form>
               <span
                 className="glyphicon glyphicon-search form-control-feedback"
