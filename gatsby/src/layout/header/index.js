@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import './style.css';
 import AddSearch from "../../components/addSearch"
+
 const Header = ({ data }) => (
   <>
     <div className="navbar navbar-fixed-top pio-docs-nav" role="navigation">
