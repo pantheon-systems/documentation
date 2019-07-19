@@ -32,7 +32,7 @@ Manual configuration of the HSTS header using modules, as described in this sect
 <!-- Active pane content -->
 <div role="tabpanel" class="tab-pane active" id="tab-1-anchor" markdown="1">
 
-Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/){.external} plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/terminus/):
+Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/){.external} plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/docs/terminus/):
 
 ```bash
 terminus remote:wp <site>.<env> -- plugin install lh-hsts --activate
