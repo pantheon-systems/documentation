@@ -157,4 +157,3 @@ How you configure or include these attributes raises the rigor of the security t
 For additional details on this header, see:
 
  - [HTTP Strict Transport Security Cheat Sheet](https://www.owasp.org/index.php/HTTP_Strict_Transport_Security_Cheat_Sheet){.external}
- - [The CIO Council](https://https.cio.gov/hsts/){.external} overview on HSTS.
