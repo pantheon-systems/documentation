@@ -1,5 +1,5 @@
 ---
-title: Custom Certificates on Pantheon's Global CDN
+title: 'Custom Certificates on The Pantheon Global CDN'
 description: For contract customers who require dedicated, custom TLS certificates
 ---
 
@@ -149,13 +149,16 @@ AAAA record 2:  `2620:12a:8001::X`
 
 **Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
 
+### What if my DNS manager doesn't support CAA DNS records?
+As [discussed above](#disable-lets-encrypt-with-caa-records-required), an empty CAA policy will suffice if you can't create one specifically disabling Let's Encrypt.
+
 ## Caveats / Known Issues
 
 ### Let's Encrypt Certificate Served Instead of Custom Certificate
 If a Let's Encrypt certificate was deployed to the Global CDN before adding CAA records to prevent Let's Encrypt from issuing certificates, then it will take 10 days for Pantheon to automatically remove the domain from the Let's Encrypt certificate.
 
 ### CA limitations
-Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA Globalsign does not currently meet this requirement. The workaround is to simply use another CA.
+Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to simply use another CA.
 
 ### Downgrading a Site that uses a Custom Certificate
 
