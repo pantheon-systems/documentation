@@ -81,7 +81,7 @@ Use the following techniques to replace insecure references to your domain in th
 
   **Via Site Dashboard**
 
-  If don't have Terminus installed, or are unfamiliar with working in the command line, WordPress sites have the option to replace the URLs from the Pantheon Dashboard.
+  If you don't have Terminus installed, or are unfamiliar with working in the command line, WordPress sites have the option to replace the URLs from the Pantheon Dashboard.
 
   <div class="alert alert-info" role="alert">
     <h4 class="info">Note</h4>
@@ -117,9 +117,11 @@ At this point, all visitors to the site should be able to securely access all pa
 
 ## Redirect to HTTPS and the primary domain
 
-As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/docs/hsts), as well as a redirect.
+As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/hsts/), as well as redirect all HTTP traffic to HTTPS.
 
-Configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
+{% include("hsts.html") %}
+
+If you need more control over your redirect and/or HSTS header, then you can manually configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
 
 {% include("redirects.twig") %}
 
