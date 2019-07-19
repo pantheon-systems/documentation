@@ -36,6 +36,32 @@ protected_web_paths:
 * You may not be able to protect files or paths with special characters
 * Wait a few seconds for changes to take effect
 
+### Enforce HTTPS + HSTS
+
+HTTPS adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
+
+<div class="alert alert-info">
+<h4 class="info">Note</h4>
+<p markdown="1">
+Before adjusting `enforce_https`, review and understand the configuration options and all considerations to avoid unintended consequences.
+</div>
+
+Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available, from least to most secure:
+- `off`
+- `transitional` - Redirect to HTTPS with a 5-minute HSTS header
+- `transitional+subdomains` Redirect to HTTPS with a 5-minute HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
+- `full` - Redirect to HTTPS with a year-long HSTS header
+- `full+subdomains` - Redirect to HTTPS with a year-long HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
+   - This is the recommended and most secure configuration.
+
+Any option with `+subdomains` should only be used for subdomains on Pantheon and other sites that connect via HTTPS. HSTS headers sent with `full` or `full+subdomains` are cached by browsers for one year. To test your configuration during development, select a short-duration HSTS header (`transitional` or `transitional+subdomains`) before committing to the long-duration HSTS header. If you disable HTTPS (e.g. by moving to a host that doesn't support HTTPS) returning visitors will be unable to access your site until they manually clear their browser cache.
+
+To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/docs/http-to-https/) doc.
+
+#### Test Your Site's HSTS Configuration for an A+ Rating
+
+[SSL Labs](https://www.ssllabs.com){.external} provides a free, online service that you can use to test your Site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
+
 ### Nested Docroot
 Nest your docroot one level beneath your code repository in a directory named `web`:
 
@@ -81,7 +107,7 @@ This creates a new symlink to the filesystem at the specified location. Note tha
 
 Complete the following before deploying `filemount` (**required**):
 
-1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path){.external}, [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after){.external}, or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder){.external} to use the new path
+1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path), [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after), or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder) to use the new path
 2. Add path to the `.gitignore` file
 3. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
 
@@ -112,7 +138,7 @@ When the same configuration value is defined in both files, the value from `pant
 ### "Changes to pantheon.yml detected, but there was an error while processing it"
 
 We will reject a commit that includes a `pantheon.yml` error, with a message like:
-```nohighlight
+```
 remote: PANTHEON ERROR:
 remote:
 remote: Changes to `pantheon.yml` detected, but there was an error while processing it:
@@ -127,7 +153,7 @@ While our parser will reject a `pantheon.yml` that is invalid, it won't necessar
 ### Deploying Configuration Changes to Multidev
 Changes made to `pantheon.yml` file on a branch **are not** detected when creating the Multidev environment for that branch. As a workaround, make some modification to `pantheon.yml` file and re-commit to the Multidev environment. You will then receive a notice indicating configuration changes have been detected and applied to the Multidev environment:
 
-```nohighlight
+```
 remote:
 remote: PANTHEON NOTICE:
 remote:
