@@ -54,9 +54,9 @@ With this set of region-specific resources, now you can run WordPress or Drupal 
 
  For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
 
- ```bash
- terminus site:create my-eu-site-name "My EU Site Name" "WordPress" --org "My Organization Name" --region eu
- ```
+  ```bash
+  terminus site:create my-eu-site-name "My EU Site Name" "WordPress" --org "My Organization Name" --region eu
+  ```
 
   ![terminus site:create my-eu-site "My EU Site" "WordPress" --org "Rachel Pantheor" --region eu](/source/docs/assets/images/create-site-eu.png)
 
