@@ -46,12 +46,12 @@ With this set of region-specific resources, now you can run WordPress or Drupal 
  - Available regions:
  
  | Name                    |  Code   |
-|:------------------------- |:------------------------------- |
-|  Australia  | au               |
-| Canada | ca |
-| European Union | eu |
-|  United States            | us |
-
+ |:------------------------- |:------------------------------- |
+ |  Australia  | au               |
+ | Canada | ca |
+ | European Union | eu |
+ |  United States            | us |
+ 
  For example (replace `my-eu-site-name`, `My EU Site Name`, `WordPress` and `My Organization Name` accordingly):
 
  ```bash
