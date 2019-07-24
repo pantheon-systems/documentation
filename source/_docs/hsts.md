@@ -126,30 +126,15 @@ strict-transport-security: max-age=15552000
 Once you've installed the module or plugin you plan to use, you should immediately configure the `strict-transport-security` header attributes as appropriate for your site. There are three attributes you should configure for the `strict-transport-security` header:
 
 <dl>
-
 <dt>max-age=expire-time</dt>
-
-<dd>
-
-The time, in seconds, that the browser should remember that this site is only to be accessed using HTTPS. You might want to set the max-age to as low as 5 minutes or 1 day as you first add and configure the HSTS header so that you can check that your site does not exhibit any unexpected access issues. With a very low max-age you can change the settings quickly until you complete testing. Then you would more optimally set the max-age to 1 year or even two years.
-
-</dd>
+<dd>The time, in seconds, that the browser should remember that this site is only to be accessed using HTTPS. You might want to set the max-age to as low as 5 minutes or 1 day as you first add and configure the HSTS header so that you can check that your site does not exhibit any unexpected access issues. With a very low max-age you can change the settings quickly until you complete testing. Then you would more optimally set the max-age to 1 year or even two years.</dd>
 
 <dt>includeSubDomains</dt>
-
-<dd>
-
-Optional, but usually advisable to use this attribute. If this optional parameter is specified, your HSTS header applies to all of your site's subdomains as well. If you do not use the includeSuDomains attribute, your site may still have unintended security issues exposed when users access subdomains of your site.
-
-</dd>
+<dd>Optional, but usually advisable to use this attribute. If this optional parameter is specified, your HSTS header applies to all of your site's subdomains as well. If you do not use the includeSuDomains attribute, your site may still have unintended security issues exposed when users access subdomains of your site.</dd>
 
 <dt>preload</dt>
-
-<dd>
-
-An important to understand, but optional attribute supported by all modern major browsers. Optimally, you should only add the preload attribute after you have tested your site using your HSTS header configured with max-age and includeSubDomains. The preload list is a list of domains baked into browsers that a browser consults before sending a request for a site. If your site is in the preload list, all requests for your site will be sent via HTTPS no matter what the user types into the browser address bar and this will occur even before the browser first ever sees your site's actual HSTS header. [Here is where you add your site to the preload list](https://hstspreload.org/){.external}.
-
-</dd>
+<dd>An important to understand, but optional attribute supported by all modern major browsers. Optimally, you should only add the preload attribute after you have tested your site using your HSTS header configured with max-age and includeSubDomains. The preload list is a list of domains baked into browsers that a browser consults before sending a request for a site. If your site is in the preload list, all requests for your site will be sent via HTTPS no matter what the user types into the browser address bar and this will occur even before the browser ever sees your site's actual HSTS header. Add your site to the preload list on <a href="https://hstspreload.org/">hstspreload.org</a>.</dd>
+</dl>
 
 How you configure or include these attributes raises the rigor of the security that your HSTS effort provides. [Here is a great overview of how and why to use the above noted attributes](https://hstspreload.org/){.external}.
 
