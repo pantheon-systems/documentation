@@ -40,13 +40,13 @@ protected_web_paths:
 
 HTTPS adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
 
-<div class="alert alert-info">
+<div class="alert alert-info" role="alert">
 <h4 class="info">Note</h4>
-<p markdown="1">
-Before adjusting `enforce_https`, review and understand the configuration options and all considerations to avoid unintended consequences.
+<p markdown="1">Before adjusting `enforce_https`, review and understand the configuration options and all considerations to avoid unintended consequences.</p>
 </div>
 
 Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available, from least to most secure:
+
 - `off`
 - `transitional` - Redirect to HTTPS with a 5-minute HSTS header
 - `transitional+subdomains` Redirect to HTTPS with a 5-minute HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
