@@ -2,8 +2,10 @@
 title: Switching Sites from HTTP to HTTPS
 description: Best-practice HTTPS configurations for WordPress and Drupal to fix mixed-content browser warnings and excessive redirects.
 tags: [security]
+categories: []
 ---
-Connect a custom domain to the Site Dashboard and point DNS at Pantheon to trigger the automated process of provisioning HTTPS. The platform will deploy a certificate for your custom domain to the target environment (typically Live) at which point, HTTPS is enabled. For details, see [Free and Automated HTTPS](/docs/https/).
+
+All new sites created on Pantheon are configured for HTTPS by default. HTTPS is available immediately for Platform domains like `multidev-example.pantheonsite.io`. When you upgrade to a paid plan you can connect a custom domain. For more information on HTTPS provisioning for custom domains see [Free and Automated HTTPS](/docs/https/).
 
 The following describes how to switch WordPress and Drupal sites over from HTTP to HTTPS.
 
@@ -37,9 +39,10 @@ Configure your site to assume users are visiting via HTTPS and the site’s prim
 ### Reveal violations in bulk
 There are more than a few ways to identify mixed-content violations across your site, but Google Chrome is arguably one of the fastest and simplest. Right click on a page showing as insecure and select inspect, then review the console.
 
-Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/){.external}, for those preferential to GUIs.
+Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/){.external}, for those who prefer GUIs.
 
 Fans of the command line might find [mixed-content-scan by Bramus](https://github.com/bramus/mixed-content-scan){.external} helpful.
+
 ### Hotfix violations in bulk
 If you're in a bind and need a quick fix, set the `Content-Security-Policy` header to `upgrade-insecure-requests` to upgrade all HTTP resources to the HTTPS protocol client-side, on the fly:
 
@@ -51,6 +54,7 @@ header("Content-Security-Policy-Report-Only: img-src https:; script-src https: '
 ```
 
 Use this as temporary solution while working to fix each problem at its origin.
+
 ### Database cleanup
 Use the following techniques to replace insecure references to your domain in the site's database. The result should be that the browser loads pages of your WordPress or Drupal site securely with no warnings.
 
@@ -119,7 +123,7 @@ At this point, all visitors to the site should be able to securely access all pa
 
 As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/hsts/), as well as redirect all HTTP traffic to HTTPS.
 
-{% include("hsts.html") %}
+{% include("content/hsts.html") %}
 
 If you need more control over your redirect and/or HSTS header, then you can manually configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
 

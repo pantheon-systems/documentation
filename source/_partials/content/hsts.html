@@ -10,7 +10,7 @@ Use of the HSTS header is defined by the <code>enforce_https</code> directive, a
 <li>HTTPS redirect with a short HSTS duration (5 minutes), which does not apply to subdomains:
 
     <pre><code class="hljs less">enforce_https: transitional</code></pre></li>
-    
+
 <li>HTTPS redirect with a short HSTS duration (5 minutes), which also applies to subdomains:
 
     <pre><code class="hljs less">enforce_https: transitional+subdomains</code></pre></li>
@@ -24,7 +24,7 @@ Use of the HSTS header is defined by the <code>enforce_https</code> directive, a
     <pre><code class="hljs less">scheme: full+subdomains</code></pre></li>
 </ul>
 
-Pantheon will send the following header based on the setting of `enforce_https`:
+Pantheon will send the following header based on the setting of <code>enforce_https</code>:
 
 <ul>
 <li>off: <i>None</i></li>
