@@ -57,7 +57,7 @@ Make sure HTTPS has been successfully provisioned *before* adding any code (like
 ## Ready to launch like the pros?
 Now that you're redirecting requests to a single, primary domain, it's the perfect time to setup a availability monitoring service to watch over it like an automated hawk.
 
-### [Send an HSTS Header for Increased Security](/docs/hsts/)
+### [Send an HSTS Header for Increased Security](/docs/pantheon-yml/#enforce-https-+-)
 Install a plugin or module to prevent cookie hijacking and get an A+ rating from SSL Labs.
 
 ### [Setup Availability Monitoring](/docs/new-relic/#configure-ping-monitors-for-availability)

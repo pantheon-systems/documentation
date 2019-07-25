@@ -158,4 +158,4 @@ You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/red
 Check all configured services when looking for redirects to remove, like page rules on some external CDN.
 
 ### HTTPS Strict Transport Security (optional)
-Send headers for HTTPS Strict Transport Security. This creates a long-term commitment to delivering the site with HTTPS and should raise the SSL Labs grade to A+ (if the site uses Global CDN). For details, see [Require HTTPS with the HSTS Header](/docs/hsts).
+Send headers for HTTPS Strict Transport Security. This creates a long-term commitment to delivering the site with HTTPS and should raise the SSL Labs grade to A+ (if the site uses Global CDN). For details, see [Require HTTPS with the HSTS Header](/docs/pantheon-yml/#enforce-https-+-).
