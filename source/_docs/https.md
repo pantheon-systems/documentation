@@ -47,7 +47,7 @@ Pantheon's new [Global CDN](/docs/global-cdn) provides [free, automated HTTPS](h
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
 | **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br>Some very old browsers not supported <sup><a href="https://caniuse.com/#search=TLS%201.2">1 <a href="https://caniuse.com/#search=SNI">2</a></sup> |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A                         | A+ [with HSTS](/docs/pantheon-yml/#enforce-https-+-)     |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/){.external}    | A                         | A+ [with HSTS](/docs/pantheon-yml/#enforce-https-+-hsts)     |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |
 | **Delivery**                                                          | US Datacenter             | [Global CDN](/docs/global-cdn)  |
@@ -65,7 +65,7 @@ Make the switch on an existing Pantheon site by updating DNS for your domains. I
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### How can I obtain an A+ SSL Labs rating?
-Upgrade your site to the Global CDN and then send the [HSTS header](/docs/pantheon-yml/#enforce-https-+-).
+Upgrade your site to the Global CDN and then send the [HSTS header](/docs/pantheon-yml/#enforce-https-+-hsts).
 
 ### Can I bring my own certificate?
 Yes. See our page on [custom certificates](https://pantheon.io/docs/custom-certificates/) for more information. 
