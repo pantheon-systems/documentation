@@ -89,20 +89,15 @@ terminus drush <site>.<env> -- rr
 
 ## Run SQL Queries Using Drush on Pantheon
 
-The `drush sql-cli` command is not supported on Pantheon. You can open the MySQL CLI on Pantheon via the following command:
-```bash
-$(drush @pantheon.SITENAME.ENV sql-connect)
-```
-Alternately, to run a single SQL query:
-```bash
-echo 'show tables;' | $(drush @pantheon.SITENAME.ENV sql-connect)
-```
+The `drush sql-cli` and `drush sql-connect` commands not supported on Pantheon. For security reasons, the SQL database is not directly accessible from your local machine.
 
-Or, you can use Terminus as follows:
+You can, however, use Terminus as follows:
 
 ```bash
 terminus drush SITENAME.ENV -- sql-query "SELECT * FROM users WHERE uid=1"
 ```
+
+Note that certain characters such as `;` cannot be used in the query. If you use an illegal character, you will get an error message "Command not supported as typed." Note that the trailing `;` in the SQL query is optional in this context.
 
 ## Execute PHP Code Using Drush on Pantheon
 
