@@ -99,6 +99,20 @@ The following plugins are just a few of the most popular available for Terminus 
   <div class="flex-panel-item">
     <div class="flex-panel-body">
       <div class="flex-panel-title">
+        <h3 class="plugin-title">New Relic API</h3>
+        <div class="pantheon-official">
+        <img alt="Official Pantheon Plugin" src="/source/docs/assets/images/official-plugin.svg" class="main-topic-info__plugin-image" >
+          <p class="pantheon-official">Pantheon Official</p>
+        </div>
+      </div>
+      <p class="topic-info__description">Author: <a href="https://github.com/bhasselbeck">Brian Hasselbeck</a></p>
+      <p class="topic-info__description">Fetches New Relic REST API (v2) datapoints; apdex, recent deployments, key transations, error rates, memory usage, response times, etc.</p>
+      <a href="https://github.com/pantheon-systems/terminus-newrelic-api" class="btn-primary btn get-plugin">Get Plugin</a>
+    </div>
+  </div>
+  <div class="flex-panel-item">
+    <div class="flex-panel-body">
+      <div class="flex-panel-title">
         <h3 class="plugin-title">Pancakes</h3>
       </div>
       <p class="topic-info__description">Author: <a href="https://github.com/derimagia">Dave Wikoff</a></p>
