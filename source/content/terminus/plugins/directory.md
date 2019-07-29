@@ -54,6 +54,12 @@ Fetches metric data from the New Relic API.
 
   </Card>
 
+  <Card title="New Relic API" isOfficial author="Brian Hasselbeck" authorLink="https://github.com/bhasselbeck" link="https://github.com/pantheon-systems/terminus-newrelic-api">
+
+  Fetches New Relic REST API (v2) datapoints; apdex, recent deployments, key transations, error rates, memory usage, response times, etc.
+
+  </Card>
+
   <Card title={"Pancakes"} author={"Dave Wikoff"} authorLink={"https://github.com/derimagia"} link={"https://github.com/terminus-plugin-project/terminus-pancakes-plugin"}>
 
 Open Pantheon Site Databases in your favorite SQL Client.
