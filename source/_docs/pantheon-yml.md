@@ -54,13 +54,21 @@ Ensure that your site will always use HTTPS to deliver content with `enforce_htt
 - `full+subdomains` - Redirect to HTTPS with a year-long HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
    - This is the recommended and most secure configuration.
 
-Any option with `+subdomains` should only be used for subdomains on Pantheon and other sites that connect via HTTPS. HSTS headers sent with `full` or `full+subdomains` are cached by browsers for one year. To test your configuration during development, select a short-duration HSTS header (`transitional` or `transitional+subdomains`) before committing to the long-duration HSTS header. If you disable HTTPS (e.g. by moving to a host that doesn't support HTTPS) returning visitors will be unable to access your site until they manually clear their browser cache.
+Any option with `+subdomains` should only be used for subdomains on Pantheon and other sites that connect via HTTPS. HSTS headers sent with `full` or `full+subdomains` are cached by browsers for one year. If you disable HTTPS (e.g. by moving to a host that doesn't support HTTPS) returning visitors will be unable to access your site until they manually clear their browser cache.
 
 To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/docs/http-to-https/) doc.
+
+!!!!!!!!!!!!!!!!!!!!!!!!
+*Considerations*
+- Use of `full` or `full+subdomains` should be treated as a commitment. If after sending the long-duration HSTS header, your site is unable to serve HTTPS (e.g. by moving to a host that doesn't support HTTPS) visitors will be unable to access your site.
+- Any option with `+subdomains` should only be used if you want to enforce HTTPS for *all subdomains, even those not connected to Pantheon*.
 
 #### Test Your Site's HSTS Configuration for an A+ Rating
 
 [SSL Labs](https://www.ssllabs.com){.external} provides a free, online service that you can use to test your Site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
+
+1. To test your configuration during development, select a short-duration HSTS header (`transitional` or `transitional+subdomains`) before committing to the long-duration HSTS header.
+2. When you're comfortable that HSTS works as expected, send the long-duration HSTS header by moving to `full` or `full+subdomains`.
 
 ### Nested Docroot
 Nest your docroot one level beneath your code repository in a directory named `web`:
