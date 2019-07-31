@@ -388,18 +388,6 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/docs/server_nam
 **Solution**: Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
 <hr>
 
-### [Event Espresso](https://eventespresso.com/){.external}
-
-**Issue:** Event Espresso shows the error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
-
-**Solution**: This plugin is checking the `FS_METHOD` value. Add the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-define('FS_METHOD', 'direct');
-```
-
-<hr>
-
 ### [Disable REST API and Require JWT / OAuth Authentication](https://wordpress.org/plugins/disable-rest-api-and-require-jwt-oauth-authentication/){.external}
 
 **Issue:** When this plugin is enabled along with WooCommerce, WP-CLI and Pantheon dashboard workflows like **Cache Clear** can fail. This issue may not happen for environments where WP-CLI is not installed (local machine, other hosting, etc):
@@ -425,6 +413,18 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
     );
     $allowed_endpoints = apply_filters( 'reqauth/allowed_endpoints', $allowed_endpoints );
 
+```
+
+<hr>
+
+### [Event Espresso](https://eventespresso.com/){.external}
+
+**Issue:** Event Espresso shows the error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
+
+**Solution**: This plugin is checking the `FS_METHOD` value. Add the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+```php
+define('FS_METHOD', 'direct');
 ```
 
 <hr>
