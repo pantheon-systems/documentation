@@ -18,7 +18,7 @@ First, you will need to add the Index Server to your site. From your Dashboard, 
 
 Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/){.external}.  This plugin replaces the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter){.external} within WordPress while preserving the familiar integration methods within themes and widgets.
 
-This plugins requires PHP version 7.1 or higher. See [Upgrade PHP versions](/docs/php-versions/) for more information on switching PHP versions.
+This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/docs/php-versions/) for more information on switching PHP versions.
 
 
 ## Install and Configure Plugin
