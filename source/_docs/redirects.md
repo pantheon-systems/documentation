@@ -169,6 +169,23 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
 }
 ```
 
+### Wild Card Redirect ###
+The following will redirect all links back to the homepage.
+
+```
+if (($_SERVER['REQUEST_URI'] != '/') && (php_sapi_name() != "cli")) {
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://'. $_SERVER['HTTP_HOST']);
+
+  // Name transaction "redirect" in New Relic for improved reporting (optional).
+  if (extension_loaded('newrelic')) {
+    newrelic_name_transaction("redirect");
+  }
+
+  exit();
+}
+```
+
 ### Redirect Legacy UNIX-Style User Home Folder Paths
 When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
 
