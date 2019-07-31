@@ -54,7 +54,7 @@ Ensure that your site will always use HTTPS to deliver content with `enforce_htt
 - `full+subdomains` - Redirect to HTTPS with a year-long HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
    - This is the recommended and most secure configuration.
 
-**Considerations**
+#### Considerations
 * Use of `full` or `full+subdomains` should be treated as a commitment. If your site is unable to serve HTTPS (e.g. by moving to a host that doesn't support HTTPS) after sending a long-duration HSTS header, visitors will be unable to access your site.
 * Any option with `+subdomains` should only be used if you want to enforce HTTPS for *all subdomains, even those not connected to Pantheon*.
 * To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/docs/http-to-https/) doc.
