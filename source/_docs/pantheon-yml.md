@@ -63,8 +63,8 @@ Ensure that your site will always use HTTPS to deliver content with `enforce_htt
 
 [SSL Labs](https://www.ssllabs.com){.external} provides a free, online service that you can use to test your Site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
 
-1. To test your configuration during development, select a short-duration HSTS header (`transitional` or `transitional+subdomains`) before committing to the long-duration HSTS header.
-2. When you're comfortable that HSTS works as expected, send the long-duration HSTS header by moving to `full` or `full+subdomains`.
+1. To test your configuration, select a short-duration HSTS header (`transitional` or `transitional+subdomains`), before committing to the long-duration HSTS header.
+2. When you're comfortable that HSTS works as expected in the Live environment, send the long-duration HSTS header by moving to `full` or `full+subdomains`.
 
 ### Nested Docroot
 Nest your docroot one level beneath your code repository in a directory named `web`:
