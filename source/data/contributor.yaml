@@ -18,7 +18,7 @@
   bio: Technical Manager, Training and Certification @zend
 - id: ari
   name: Ari Gold
-  avatar: //secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg  
+  avatar: //secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg
   twitter: http://twitter.com/AriAtPantheon
   github: //github.com/ari-gold
   drupal: //www.drupal.org/user/329006/
@@ -199,7 +199,7 @@
   twitter: davidneedham
   drupal: //www.drupal.org/u/davidneedham
   gplus: //plus.google.com/u/0/+DavidNeedham
-  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/David_Needham540x540.png
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/David%20Needham.png
 - id: dwayne
   name: Dwayne McDaniel
   url: //www.mcdwayne.com
@@ -224,7 +224,7 @@
   drupal: https://www.drupal.org/u/tessak22
   url: http://tessakriesel.com/
   github: https://github.com/tessak22
-  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JMP_9650-800x800.jpg
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/1Headshot_IMG_4173.JPG
   linkedin: http://linkedin.com/in/tessak22
 - id: eabquina
   name: Eladio Abquina
