@@ -8,7 +8,7 @@ earlynote: The documentation on this page discusses features and options that ar
 contributors: [edwardangert]
 ---
 
-Pantheon offers a number of [ways to connect to your site](/docs/guides/quickstart/connection-modes/). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/docs/pantheon-workflow/).
+Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes/). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/docs/pantheon-workflow/).
 
 Localdev lets you [use an integrated development environment (**IDE**)](#use-a-local-ide-to-develop-your-pantheon-site) to edit files and code, and push changes to Pantheon right from your desktop. Use it if you want to avoid the command line, or to develop sites with a fully functional local preview, even when you don't have an internet connection.
 
