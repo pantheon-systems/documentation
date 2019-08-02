@@ -70,9 +70,7 @@ Domain masking allows you to serve two entirely different and separate sites ove
 * Main Site: `https://www.example-site.com/`
 * Blog: `https://www.example-site.com/blog/`
 
-Pantheon does not provide any mechanism to implement domain masking. You may be able to setup this using a third party service but Pantheon cannot assist with the configuration or support if you implement domain masking.
-
-In cases of redirection issues on sites with domain masking implemented, Pantheon cannot assist in debugging unless the domain masking is disabled.
+Domain masking is available to contract customers as an add-on. If you require domain masking, ask your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us). Customers may also set up domain masking using a third-party CDN service, but please note that third-party services are outside [Pantheon's scope of support](/support/#scope-of-support).
 
 ### Additional Databases
 While you are able to import an additional database to an environment, only the Pantheon database will be preserved when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.
