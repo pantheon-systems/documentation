@@ -38,6 +38,11 @@ protected_web_paths:
 
 ### Enforce HTTPS + HSTS
 
+```yaml
+enforce_https: off
+```
+Where `off` is replaced by the setting you want to use. Please read below for details.
+
 HTTPS adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
 
 <div class="alert alert-info" role="alert">
