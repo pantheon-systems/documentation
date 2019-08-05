@@ -1,6 +1,6 @@
 <TabList>
 
-<Tab name="WordPress" id="wpredirects" active={true}>
+<Tab title="WordPress" id="wpredirects" active={true}>
 
 Add the following to `wp-config.php`, usually placed above `/* That's all, stop editing! Happy Pressing. */`. Don't forget to replace `www.example.com`:
 
@@ -36,7 +36,7 @@ WordPress users should also run a [search and replace](/wordpress-broken-links/#
 
 </Tab>
 
-<Tab name="Drupal 8" id="d8redirects">
+<Tab title="Drupal 8" id="d8redirects">
 
 
 Add the following to the end of your `settings.php` file (replace `www.example.com`):
@@ -75,7 +75,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
 
 </Tab>
 
-<Tab name="Drupal 7" id="d7redirects">
+<Tab title="Drupal 7" id="d7redirects">
 
 
 Add the following to the end of your `settings.php` file (replace `www.example.com`):
