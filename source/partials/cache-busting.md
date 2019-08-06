@@ -6,6 +6,7 @@ S+ESS[a-z0-9]+
 fbs[a-z0-9_]+
 SimpleSAML[A-Za-z]+
 PHPSESSID
+Drupal[a-zA-Z0-9_\.-]+
 wordpress[A-Za-z0-9_]*
 wp-[A-Za-z0-9_]+
 comment_author_[a-z0-9_]+
