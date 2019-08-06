@@ -30,11 +30,12 @@ Solr on Drupal 8 requires a Composer managed workflow, as described in our [Buil
 
 ### Install the Search API Pantheon Module
 
-1. Navigate to the project's root directory on your local computer, then checkout a new branch from master:
+1. Navigate to the project's root directory on your local computer. If you have access to [Multidev](/docs/multidev/), checkout a new branch from master:
 
     ```
     git checkout -b solr master
     ```
+  Otherwise, continue from the master branch.
 
 2.  Add the Search API Pantheon module as a required dependency:
 
@@ -44,16 +45,30 @@ Solr on Drupal 8 requires a Composer managed workflow, as described in our [Buil
 
 3.  You should now have the Search API Pantheon module installed along with its dependencies. Run `git status` to make sure you see the expected result. Commit and push the changes:
 
-    ```
-    git commit -am "Require drupal/search_api_pantheon ~1.0"
-    git push origin solr
-    ```
+  <TabList>
 
-    ![Require search API output](../images/composer-require-search_api_pantheon.png)
+  <Tab title="Without Multidev" id="install-nomulti" active={true}>
 
+  ```bash
+  git commit -am "Require drupal/search_api_pantheon ~1.0"
+  git push origin master
+  ```
+
+  </Tab>
+
+  <Tab title="With Multidev" id="install-multidev">
+
+  ```bash
+  git commit -am "Require drupal/search_api_pantheon ~1.0"
+  git push origin solr
+  ```
+
+  </Tab>
+
+  </TabList>
 
 ## Configure Solr
-To configure the connection with Pantheon, set the [connection mode](/sftp/#sftp-mode) to SFTP and complete the following on the Multidev environment:
+To configure the connection with Pantheon, set the [connection mode](/sftp/#sftp-mode) to SFTP and complete the following steps.
 
 ### Enable Modules
 Enable the Search API Pantheon module via the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-contributed-modules-find-import-enable-configure-drupal-8#enable_your_mod). When prompted, click **Continue** to enable the [Search API](https://www.drupal.org/project/search_api) and [Search API Solr](https://www.drupal.org/project/search_api_solr) modules:
@@ -86,8 +101,10 @@ After adding fields the configuration, make sure the index is full by clicking *
 It is a best practice in Drupal 8 to export your changes to `yml` files. You can quickly export configuration changes via [Terminus](/terminus):
 
 ```
-terminus drush <site>.solr -- config-export -y
+terminus drush site.env -- config-export -y
 ```
+
+Replace `site` and `env` with your site name and the environment (Dev, Multidev, etc), respectively.
 
 ### Search the Index
 To actually search your index you will need a module like [Search API Pages](https://www.drupal.org/project/search_api_page), which allows for the configuration of search forms on their own pages.
