@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-
+import Helmet from "react-helmet"
 import Layout from '../layout/layout';
 import CallToAction from '../layout/call-to-action';
 import TopicsGrid from '../layout/topics-grid';
@@ -14,7 +14,6 @@ class Index extends React.Component {
 		return (
 			<Layout>
         <SEO
-					title="Pantheon Docs"
 					description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
 					image={"/assets/images/default-thumb-doc.png"}
 				/>
@@ -46,6 +45,10 @@ class Index extends React.Component {
 							url={homeYaml.changelog_preview.url}
 							changelogs={allMdx.edges}
 						/>
+          <Helmet
+            title="Pantheon Docs"
+            titleTemplate={`%s`}
+          />
 					</div>
 				</div>
 			</Layout>
