@@ -36,7 +36,7 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## eNom Docs
 
-[Change Host Records - Forward, Redirect or Point Your Domain/Sub-Domain]
+[Change Host Records - Forward, Redirect or Point Your Domain/Sub-Domain](https://www.enom.com/kb/kb/kb_0002_change-host-records.htm)
 
 ## Next Steps
 
