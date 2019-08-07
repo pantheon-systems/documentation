@@ -38,7 +38,7 @@ Keep this page open and login to your [Network Solutions account](https://www.ne
 4. In the IP Address (A records) section, click **Edit A Records**.
 5. The domain likely has a few default values for `www` and the bare domain. Paste the IP address provided by Pantheon in the Numeric IP field for the existing `@ (None)` record, then delete any default records like so:
 
-  ![Network Solutions Edit A Records](../images/dns/networksolutions/default-a-records.png)
+  ![Network Solutions Edit A Records](../../images/dns/networksolutions/default-a-records.png)
 
 6. Select desired Time to Live (TTL).
 
@@ -55,7 +55,7 @@ Keep this page open and login to your [Network Solutions account](https://www.ne
 7. Click **Save Changes**.
 8. Once changes are saved, the section of the Advanced DNS interface for A records should look like this:
 
-  ![Network Solutions Final CNAME](../images/dns/networksolutions/final-a.png)
+  ![Network Solutions Final CNAME](../../images/dns/networksolutions/final-a.png)
 
 
 ### CNAME Record
@@ -64,13 +64,13 @@ A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
 1. In the Host Aliases (CNAME Records) section, click **Edit CNAME Records**.
 2. Enter **www** in the **Alias** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Other Host** field:
 
-  ![Network Solutions CNAME](../images/dns/networksolutions/create-cname.png)
+  ![Network Solutions CNAME](../../images/dns/networksolutions/create-cname.png)
 
 3. Select desired Time to Live (TTL).
 4. Click **Continue**, then **Save Changes**.
 5. Once changes are saved, the section of the Advanced DNS interface for CNAME records should look like this:
 
-  ![Network Solutions Final CNAME](../images/dns/networksolutions/final-cname.png)
+  ![Network Solutions Final CNAME](../../images/dns/networksolutions/final-cname.png)
 
 
 ### AAAA Records
