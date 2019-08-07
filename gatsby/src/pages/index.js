@@ -6,12 +6,18 @@ import CallToAction from '../layout/call-to-action';
 import TopicsGrid from '../layout/topics-grid';
 import ThreeColumnList from '../layout/three-column-list';
 import ChangelogPreview from '../layout/changelog-preview';
+import SEO from "../layout/seo"
 
 class Index extends React.Component {
 	render() {
 		const { data: { homeYaml, allMdx } } = this.props;
 		return (
 			<Layout>
+        <SEO
+					title="Pantheon Docs"
+					description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
+					image={"/assets/images/default-thumb-doc.png"}
+				/>
 				<div style={{ marginTop: '-20px' }} className="container">
 					<div className="row doc-content-well">
 						<div className="row">
