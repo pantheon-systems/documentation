@@ -49,19 +49,12 @@ Keep this page open and login to your [Gandi account](https://id.gandi.net/en/lo
 4. Click **Submit**.
 5. Repeat steps 1-5 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability.
 
-### CNAME Record
-A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
+### A Record for subdomain
+An A record is required to configure a subdomain (e.g., `www.example.com`).
 
-1. Click the **Add** button and select **CNAME** from the type dropdown menu.
+1. Click the **Add** button and select **A** from the type dropdown menu.
 2. Select desired Time to Live (TTL).
-3. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon, followed by a `.` (e.g. `live-example.pantheonsite.io.`) in the **Value** field.
-
-  <Alert title="Note" type="info">
-
-  Remember to add the dot (`.`) at the end of the **Value** line. Hostnames without a `.` at the end will be suffixed by the current domain.
-
-  </Alert>
-
+3. Enter **www** in the **Name** field and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **Value** field.
 4. Click **Submit**.
 5. Click the **Activate this version** button.
 

@@ -62,15 +62,13 @@ Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmade
 
   ![dns made easy aaaa records](../../images/dns-made-easy-aaaa-records.png)
 
-### CNAME Record
-A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
+### A Record for subdomain
+An A record is required to configure a subdomain (e.g., `www.example.com`).
 
-1. Within the **CNAME** table, click <span class="glyphicon glyphicon-plus"></span> to add a new record.
-2. Enter **www** in the **Name** field and enter the CNAME record value provided by Pantheon in the **Domain name** field *followed by a trailing dot* (e.g. `live-example.pantheonsite.io.`)
+1. Within the **A** table, click <span class="glyphicon glyphicon-plus"></span> to add a new record.
+2. Enter **www** in the **Name** field and enter the A record value provided by Pantheon in the **IP** field (e.g. `23.185.0.2`).
 3. Select desired Time to Live (TTL).
 4. Click **Submit**:
-
-  ![dns made easy cname records](../../images/dns-made-easy-cname-record.png)
 
 ## Next Steps
 

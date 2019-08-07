@@ -57,14 +57,12 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 ![Google configure ipv6](../../images/google-aaaa.png)
 
 
-### CNAME Record
-A CNAME record is required to configure a subdomain (e.g., `www.example.com`).
+### A Record for subdomain
+An A record is required to configure a subdomain (e.g., `www.example.com`).
 
-1. Within the same section (**Custom resource records**), change the record type from **A** to **CNAME**.
-2. Enter `www` in the **Host** field and enter the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
+1. Within the same section (**Custom resource records**), select the record type **A**.
+2. Enter `www` in the **Host** field and enter the A record value provided by Pantheon (e.g. `23.185.0.2`) in the **IPv4** field.
 3. Set desired Time to Live (TTL), then click **Add** to create the record.
-
-![Google configure cname](../../images/google-cname.png)
 
 ## Next Steps
 
