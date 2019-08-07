@@ -8,6 +8,7 @@ import SubTopicGroup from '../layout/subtopic-group';
 import YoutubeVideo from '../layout/youtube-video';
 import GuideItem from '../layout/guide-item';
 import IntegrationGuideItem from '../layout/integration-guide-item';
+import SEO from "../layout/seo"
 
 class LandingTemplate extends Component {
 	render() {
@@ -15,6 +16,11 @@ class LandingTemplate extends Component {
 		const topic = landingsYaml;
 		return !topic ? null : (
 			<Layout>
+				<SEO
+					title={topic.title}
+					description={topic.title}
+					image={"/assets/images/default-thumb-doc.png"}
+				/>
 				<div style={{ marginTop: '-20px' }} className="container">
 					<div className="row doc-content-well">
 						<div className="row">
