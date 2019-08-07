@@ -37,6 +37,8 @@ Select a site and click **Pull for local development** to clone the site locally
 
 Since this is the first time you are cloning the entire site code, this will take several minutes. Unless you [reset Localdev to its defaults](#log-out-and-reset-to-defaults), you will only need to do this once per site.
 
+Each site is cloned to its own directory within `~/Localdev/`.
+
 If there are any errors, Localdev will revert all changes and return you to the "Clone your development site" screen. Try the process again, then consult the [Troubleshooting section](#faq-troubleshooting-and-support) below for how to contact Support.
 
 ## Start the Container
@@ -80,6 +82,12 @@ After you make changes to your site:
 For users looking to be more hands on and willing to use the terminal, try [Terminus](/terminus/) and [Lando](https://docs.devwithlando.io/started.html). The [Local Development](/local-development/) doc can help you get started.
 
 ## FAQ, Troubleshooting, and Support
+
+### What does Localdev do about existing Lando config files?
+
+Localdev will use the existing `.lando` file only when the site is initially cloned. After the initial site clone, there is currently no `lando rebuild` equivalent that will force Localdev to reconsider the landofile.
+
+Note that if there are services specified in `.lando`, Localdev will return an error.
 
 ### Contact Support / File an Issue
 
