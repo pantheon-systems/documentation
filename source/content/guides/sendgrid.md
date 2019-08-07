@@ -237,7 +237,7 @@ You can explore the Statistics and Email Reports from within your site's account
 You have now successfully integrated an industrial strength, simple to use, email delivery service into your website. If you have any questions, contact [SendGrid's support team](https://support.sendgrid.com/hc/en-us) or check out SendGrid’s [Email Infrastructure Guide](https://go.sendgrid.com/SendGrid-Infrastructure-Guide.html) for advanced tips on how to create and publish DNS records for increased deliverability.
 
 ## Troubleshooting
-In some cases, other WordPress plugins can conflict with the Sendgrid plugin and cause it to use PHPMailer instead of SendGrid.  One such plugin is called [iLightBox](https://codecanyon.net/item/ilightbox-revolutionary-lightbox-for-wordpress/3939523).
+In some cases, other WordPress plugins can conflict with the Sendgrid plugin and cause it to use PHPMailer instead of SendGrid.
 
 ## See Also
 
