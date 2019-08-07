@@ -35,7 +35,7 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## DreamHost Docs
 
-* [DNS Records](https://help.dreamhost.com/hc/en-us/sections/203272268-DNS-Records)
+* [DNS Records](https://help.dreamhost.com/hc/en-us/articles/214694378-What-DreamHost-DNS-records-do-I-point-my-site-to-)
 * [How do I add custom DNS records?](https://help.dreamhost.com/hc/en-us/articles/215414867-How-do-I-add-custom-DNS-records-)
 
 ## Next Steps
