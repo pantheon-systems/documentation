@@ -26,7 +26,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 ### A Record
 1. Select the **Configure DNS** icon within the Google Domains interface:
 
-  ![Google configure dns](../images/google-config-dns.png)
+  ![Google configure dns](../../images/google-config-dns.png)
 
 2. Scroll to the **Custom resource records** section.
 3. Enter **@** in the **Host** field and provide the A record value provided by Pantheon in the **IPv4** field.
@@ -44,7 +44,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 
 5. Click **Add** to create the record.
 
-![Google configure ipv4](../images/google-a-record.png)
+![Google configure ipv4](../../images/google-a-record.png)
 
 
 ### AAAA Records
@@ -54,7 +54,7 @@ Keep this page open and login to your [Google Domains account](https://domains.g
 3. Click the **+** icon to the right of the IPv6 field then enter the second AAAA record provided by Pantheon in the **IPv6 address** field.
 4. Set desired Time to Live (TTL), then click **Add** to create the record.
 
-![Google configure ipv6](../images/google-aaaa.png)
+![Google configure ipv6](../../images/google-aaaa.png)
 
 
 ### A Record for subdomain

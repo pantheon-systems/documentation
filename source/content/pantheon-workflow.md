@@ -90,7 +90,7 @@ This entire process is designed around making sure that the Live site is always 
 
 ### Deploy Code to Live
 
-After testing your changes you can take them live. Deploying code from Test to Live will immediately update your live website; however, static assets such as images and css may still be outdated. To update them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches/).
+After testing your changes you can take them live. Deploying code from Test to Live will immediately update your live website; however, static assets such as images and CSS may still be outdated. To update them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches/).
 
 ![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
 

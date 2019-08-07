@@ -7,7 +7,7 @@ A temporary routing issue between a particular monitoring service endpoint and o
 Tools like [MTR](https://en.wikipedia.org/wiki/MTR_(software)) can help to diagnose a routing issue.
 
 ### Idle Containers
-Containers on Pantheon are automatically spun down following a period of inactivity, then spun back up once a web request is made. Monitoring pings sent between the initial request and the completed spin-up may fail, but do not necessarily indicate an issue. For details, see [All About Application Containers](/docs/application-containers/#idle-containers).
+Containers on Pantheon are automatically spun down following a period of inactivity, then spun back up once a web request is made. Monitoring pings sent between the initial request and the completed spin-up may fail, but do not necessarily indicate an issue. For details, see [All About Application Containers](/application-containers/#idle-containers).
 
 ## Support for Handling Alerts
 Before opening a support ticket based on an alert, take the following actions:
@@ -21,4 +21,4 @@ Before opening a support ticket based on an alert, take the following actions:
     - Error messages received
     - Links to screenshots or screencasts of the behavior, if necessary
 
-  If the issue creating the alert stems from the Pantheon Platform, we will investigate and resolve. Alerts triggered by the site's code are not within Pantheon's scope of support. For details, see [Getting Support](/docs/support/#code).
+  If the issue creating the alert stems from the Pantheon Platform, we will investigate and resolve. Alerts triggered by the site's code are not within Pantheon's scope of support. For details, see [Getting Support](/support/#code).

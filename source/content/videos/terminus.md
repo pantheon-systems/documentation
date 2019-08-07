@@ -4,7 +4,7 @@ description: The Pantheon CLI.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [devterminus]
-layout: doc
+layout: video
 searchboost: 50
 ---
 

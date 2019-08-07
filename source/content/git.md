@@ -30,8 +30,9 @@ Log in to Pantheon and load the Dashboard for the site you want to work on.
 
 ### Step 2: Copy the Git Clone Command
 
-At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:<br />
-![Copy Past Git Clone](/assets/images/dashboard/git-string.png)<br />
+At the top of the development panel, look for the `git clone` command and copy and paste it in your terminal. It will look something like this:
+
+![Copy Past Git Clone](../images/dashboard/git-string.png)
 
 ### Step 3: Run Git Clone
 
@@ -40,8 +41,10 @@ On your local environment, go to where you want the code to reside. Git will cre
 ```
 git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
 ```
-If everything worked correctly you will see Git fetching the data:<br />
-![Git Clone During](/assets/images/git_clone.png)<br />
+If everything worked correctly you will see Git fetching the data:
+
+![Git Clone During](../images/git_clone.png)
+
 If you run into permission problems, check your [SSH key](/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Make a Change
@@ -57,12 +60,16 @@ If you want to add a new file to your codebase, you will need to tell Git about 
 ```bash
 git add _path_to_file_
 ```
+
 To find out if you have any files in your local clone that Git isn't yet tracking, run:
+
 ```bash
 git status
 ```
-Any pending changes and files to be added will be listed like this:<br />
-![Git Status](/assets/images/git_status.png)<br />
+Any pending changes and files to be added will be listed like this:
+
+![Git Status](../images/git_status.png)
+
 You can then cut and paste the paths to these files when using `git add .`
 
 ## Push Changes to Pantheon
@@ -76,10 +83,13 @@ In order to tell Git the files are ready, you need to commit them. Every commit 
 ```bash
 git commit -am "Add a great new module to increase awesomesauce level of my Drupal site."
 ```
+
 This command uses a combination of options `-am`: `-a` to include *all* files changed, and `-m` to include a commit *message*:
 
-If you don't specify a message on the command line, Git will open your default text editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:<br />
-![Git Commit](/assets/images/git_commit.png)<br />
+If you don't specify a message on the command line, Git will open your default text editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:
+
+![Git Commit](../images/git_commit.png)
+
 There is a handy list of Git commands (along with a lot of other documentation) [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf).
 
 ### Step 2: Send the Changes to Pantheon
@@ -89,10 +99,12 @@ You have committed the file locally, but you still need to send the changes to P
 ```bash
 git push origin master
 ```
+
 This executes a push to the origin location, which is Pantheon since that's where you cloned the code from, on the branch "master", which is what your Dev environment tracks.
 
-If you have a password on your SSH key, you may need to enter it to authorize the push. If everything worked, you will see something like this:<br />
-![Git Push](/assets/images/gitpush.png)
+If you have a password on your SSH key, you may need to enter it to authorize the push. If everything worked, you will see something like this:
+
+![Git Push](../images/gitpush.png)
 
 ### Step 3: View the Changes on Pantheon
 
@@ -114,6 +126,7 @@ Are you sure you want to continue connecting (yes/no)?
 You can safely type `yes` and press enter to add the server's SSH key fingerprint to your computer's `known_hosts` file. Additional connections to this specific Pantheon container will complete successfully without prompts. However, you will be prompted to confirm connections following a container migration, which is part of regular maintenance on the platform. See the following Pro Tip to automatically accept all Pantheon connections.
 
 <Accordion title="Pro Tip: Trust All Pantheon Hosts" id="host-keys" icon="lightbulb">
+
 The key fingerprint is a representation of the public key, used by the remote server to identify itself. These public keys, along with private keys, form a **keypair** used by the [Diffie-Hellman key exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange) to encrypt communication between you and the server.
 
 On a standard server system, the server administrator would publish their host keys and fingerprints publicly, so clients could match them to the keys presented at these prompts. On Pantheon however, application containers are created and destroyed too rapidly to maintain a public key list.
@@ -121,7 +134,9 @@ On a standard server system, the server administrator would publish their host k
 You can, however, easily tell your machine to automatically trust all Pantheon `*.drush.in` servers by disabling the `StrictHostKeyChecking` option in your SSH configuration file.
 
 <Alert title="Warning" type="danger">
+
 Be aware that you're disabling a security feature, and trusting your DNS system to always point you to the right IP addresses.
+
 </Alert>
 
 Open `~/.ssh/config` (or create a new file if one does not exist) and add the following lines:
@@ -149,7 +164,7 @@ To configure this URL in SourceTree simply remove the `git clone` and the traili
 * Destination Path: The local path where you want to clone the repository.
 * Name: Your site name.
 
-![SourceTree git Configuration](/assets/images/sourcetree-config.png)
+![SourceTree git Configuration](../images/sourcetree-config.png)
 
 Alternatively, you can simply clone the repository using the `git clone` and then use the "Add Existing Local Repository" option in SourceTree to point to the checked out directory.
 

@@ -41,7 +41,7 @@ Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmade
 
 5. Click **Submit**:
 
-  ![dns made easy a record](../images/dns-made-easy-a-record.png)
+  ![dns made easy a record](../../images/dns-made-easy-a-record.png)
 
 ### AAAA Records
 1. Within the **AAAA** table, click <span class="glyphicon glyphicon-plus"></span> to add a new record.
@@ -60,7 +60,7 @@ Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmade
 
 4. Click **Submit**. Repeat steps 1-4 for the second AAAA record value provided by Pantheon. There are two AAAA records for improved uptime and reliability:
 
-  ![dns made easy aaaa records](../images/dns-made-easy-aaaa-records.png)
+  ![dns made easy aaaa records](../../images/dns-made-easy-aaaa-records.png)
 
 ### A Record for subdomain
 An A record is required to configure a subdomain (e.g., `www.example.com`).

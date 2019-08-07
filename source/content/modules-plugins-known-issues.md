@@ -119,6 +119,11 @@ Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/
 
 <hr />
 
+### [Honeypot http:BL](https://www.drupal.org/project/httpbl)
+**Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx webservers and Apache modules are not compatible with the Platform.
+
+<hr />
+
 ### [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
  **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
 
@@ -490,13 +495,20 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 **Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
 **Solution**: See [Set SERVER_PORT Correctly](https://pantheon.io/docs/server_name-and-server_port/#set-server_port-correctly).
-<hr />
 
+<hr />
 
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/)
-**Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](https://pantheon.io/docs/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
+**Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
+
 <hr />
 
+### [Interactive Content H5P](https://wordpress.org/plugins/h5p/)
+**Issue**: Uploading large h5p files usually causes gateway timeouts/504s especially on slow internet connection.
+
+**Solution**: Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout of 59 seconds](/platform-considerations/#upload-speed). Please try uploading on a faster internet upload connection.
+
+<hr />
 
 ### [iThemes Security](https://wordpress.org/plugins/better-wp-security/)
 **Issue 1:** The "File Change Detection" check in iThemes Security warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.

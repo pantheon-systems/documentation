@@ -17,10 +17,11 @@ We strongly urge you to backup your site regularly.
 <Alert title="Exports" type="export">
 
 This doc offers [Terminus](/terminus/) commands, using the variables `$site` and `$env`. Export these variables in your terminal session to match your site name and the correct environment:
-<pre>
-<code class="bash">export site=yoursitename
+
+```bash
+export site=yoursitename
 export env=dev
-</code></pre>
+```
 
 </Alert>
 
@@ -59,11 +60,7 @@ Daily backups are scheduled automatically.
 
 Backups created on Pantheon are stored offsite on Google Cloud Storage instances, however a full-fledged backup solution is strongly recommended for retention. For example, the following script can be executed from an external cron job to send backups to your own Amazon S3 instance:
 
-<div class="script-file-header">
-
-pantheon-backup-to-s3.sh
-
-</div>
+<Download file="pantheon-backup-to-s3.sh" />
 
 ```bash
 #!/bin/sh

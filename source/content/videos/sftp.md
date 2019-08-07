@@ -5,7 +5,7 @@ contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [admin, sftpfiles]
 searchboost: 50
-layout: doc
+layout: video
 ---
 
 `youtube: https://youtu.be/ktesh9SiHfc`

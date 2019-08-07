@@ -25,7 +25,7 @@ Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in
 ## Configure DNS Records on GoDaddy
 ### A Record
 
-![Example A record](../images/godaddy-dns-a-record.png)
+![Example A record](../../images/godaddy-dns-a-record.png)
 
 1. Click your GoDaddy profile in the top right menu bar and select **Manage My Domains**.
 2. Click the down arrow to the right of the domain you want to point to Pantheon, then click **Manage DNS**.
@@ -47,7 +47,7 @@ Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in
 
 ### AAAA Records
 
-![Example AAAAA record](../images/godaddy-dns-aaaa-record.png)
+![Example AAAAA record](../../images/godaddy-dns-aaaa-record.png)
 
 1. Click the **Add** button and select **AAAA** from the type dropdown menu.
 2. Enter **@** in the **Host** field and enter the first AAAA record value provided by Pantheon in the **Points to** field.

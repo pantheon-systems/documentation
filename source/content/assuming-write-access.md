@@ -92,8 +92,8 @@ You must manually create the target folders `wp-content\uploads\cache` and `wp-c
 From the `wp-content` directory:
 
 ```bash
-ln -s ./uploads/cache ./wp-content/cache
-ln -s ./uploads/wp-rocket-config ./wp-content/wp-rocket-config
+ln -s ./uploads/cache ./cache
+ln -s ./uploads/wp-rocket-config ./wp-rocket-config
 ```
 
 

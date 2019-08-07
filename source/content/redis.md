@@ -356,7 +356,7 @@ Fatal error: require_once(): Failed opening required
 
 ### Drupal 6 Cache Backport
 
-If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport) module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6. See [INSTALL.TXT](http://drupalcode.org/project/cache_backport.git/blob_plain/HEAD:/INSTALL.txt) for how to configure Cache Backport.
+If you have a Drupal 6 site, you will also need the [Cache Backport](https://drupal.org/project/cache_backport) module. This module is a full backport of the Drupal 7 `cache.inc` for Drupal 6. See [INSTALL.TXT](https://git.drupalcode.org/project/cache_backport/blob/master/INSTALL.txt) for how to configure Cache Backport.
 
 If you see the following message:
 

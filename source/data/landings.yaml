@@ -528,7 +528,7 @@
               url: '/quicksilver/'
 - title: 'Automate & Integrate'
   path: 'automate'
-  video_id: 'iazvxxlsja'
+  video_id: 'mdc8o19wfTI'
   cta:
     title: 'Terminus Manual'
     subtitle: 'Prefer working from the command line? Check out Terminus, the Pantheon CLI.'
@@ -674,7 +674,7 @@
               url: '/wp-cli/'
 - title: 'Optimize Performance'
   path: 'performance'
-  video_id: '34lai83fx6'
+  video_id: 'BAbJyb-uznY'
   cta:
     title: 'Front End Performance Guide'
     subtitle: "Ready to dive into Pantheon's Global CDN? Check out this guide to learn how to ace an online speed test."
@@ -761,7 +761,7 @@
               url: '/wordpress-cache-plugin/'
 - title: 'Manage Teams & Organizations'
   path: 'manage'
-  video_id: 'yym44euvwr'
+  video_id: '8bsPxcnffYM'
   cta:
     title: 'Quick Start Guide '
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
@@ -841,7 +841,7 @@
           url: '/traffic-limits/'
 - title: 'Troubleshoot'
   path: 'troubleshoot'
-  video_id: 'upty5ldins'
+  video_id: 'V7RvZwl5Sw8'
   cta:
     title: 'Quick Start Guide '
     subtitle: 'New to our platform? Check out our step-by-step guide to learn all the basics.'
