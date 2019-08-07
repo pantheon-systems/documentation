@@ -699,7 +699,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Solution 2**: If you don't have a local copy, SFTP into any environment's `wp-content/uploads` folder and upload the CSV file that you wish to import. Under the advanced settings of the WooCommerce import, specify the exact path where you uploaded the CSV file and import from there:
 
-![Enter the path to the CSV on the Import products from a CSV file page](../images/woocommerce-path-csv.png)
+![Enter the path to the CSV on the Import products from a CSV file page](../images/woocommerce/woocommerce-path-csv.png)
 
 There is a feature request on [WooCommerce's GitHub page](https://github.com/woocommerce/woocommerce/issues/21624) for a WP-CLI import command which would be less prone to timeouts. To express your interest to the developers, click the thumbs up on the feature request.
 
@@ -708,7 +708,7 @@ There is a feature request on [WooCommerce's GitHub page](https://github.com/woo
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
 **Issue 1**: This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
-![WooZone Error](../images/woozone-error.png)
+![WooZone WP_MEMORY_LIMIT Error](../images/woocommerce/woozone-error.png)
 
 **Solution**: Add the following line to `wp-config.php`:
 
@@ -716,7 +716,7 @@ There is a feature request on [WooCommerce's GitHub page](https://github.com/woo
 
 **Issue 2**: WooZone writes to a cache folder in `wp-content/plugins/woozone/`, which is not editable in Test and Live
 
-**Solution**: Symlink `wp-content/plugins/woozone/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/assuming-write-access).
+**Solution**: Symlink `wp-content/plugins/woozone/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/assuming-write-access/).
 
 <hr />
 
