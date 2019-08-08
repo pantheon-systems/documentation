@@ -20,6 +20,7 @@ const TOC = ({ title }) => {
       }
 
       if (windowGlobal && windowGlobal.tocbot) {
+        jQuery('.tab-pane h2, .tab-pane h3').addClass('toc-ignore')
         windowGlobal.tocbot.init(settings)
       }
 
