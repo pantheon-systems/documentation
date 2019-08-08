@@ -7,6 +7,7 @@
 1. Edit the `composer.json` to add extra configuration that specifies installation paths for Drupal modules, libraries, and themes.
 
   <Alert title="Note" type="info">
+
   Since Pantheon does not support Git submodules <Popover title="Git submodules" content="Some Composer packages are added as Git submodules, which place a Git repository within a subdirectory of your site’s repository." />, we recommend using the provided script `remove-git-submodules` to remove any `.git` directories upon install and update.
 
   </Alert>
