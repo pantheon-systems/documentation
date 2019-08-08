@@ -30,7 +30,7 @@ Solr on Drupal 8 requires a Composer managed workflow, as described in our [Buil
 
 ### Install the Search API Pantheon Module
 
-1. Navigate to the project's root directory on your local computer. If you have access to [Multidev](/docs/multidev/), checkout a new branch from master:
+1. Navigate to the project's root directory on your local computer. If you have access to [Multidev](/multidev/), checkout a new branch from master:
 
     ```
     git checkout -b solr master
