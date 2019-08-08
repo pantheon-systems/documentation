@@ -119,7 +119,7 @@ As part of best security practices, we suggest you [Require HTTPS with the HSTS 
 
 If you need more control over your redirect and/or HSTS header, then you can manually configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
 
-{% include("redirects.twig") %}
+<Partial file="_redirects.md" />
 
 Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/domains/#-see-more-redirect-scenarios).
 
