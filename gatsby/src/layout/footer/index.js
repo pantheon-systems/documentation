@@ -1,4 +1,4 @@
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 import React from "react"
 import MarketoForm from "../../components/marketoForm"
 import './style.css';
@@ -35,7 +35,7 @@ const Footer = ({ data }) => {
               <div className="row">
                 <div className="col-lg-7 footer-menus">
                   <div className="container container-footer-section">
-                    <a href="/docs/" className="footer-logo-container">
+                    <Link to="/" className="footer-logo-container">
                       {pantheonLogo && (
                         <img
                           alt="Pantheon"
@@ -43,44 +43,54 @@ const Footer = ({ data }) => {
                           className="footer-logo"
                         />
                       )}
-                    </a>
+                    </Link>
                     <div className="row footer-menu-items">
                       <div className="col-xs-6 col-sm-3">
                         <h4 className="block__title">Topics</h4>
                         <ul className="menu">
                           <li className="first leaf menu-mlid-1147">
-                            <a href="/docs/get-started/">Get Started </a>
+                            <Link to="/get-started/">
+                              Get Started
+                            </Link>
                           </li>
                           <li className="leaf menu-mlid-1148">
-                            <a href="/docs/develop/">Develop</a>
+                            <Link to="/develop/">
+                              Develop
+                            </Link>
                           </li>
                           <li className="leaf menu-mlid-1149">
-                            <a href="/docs/go-live/">Go Live</a>
+                            <Link to="/go-live/">
+                              Go Live
+                            </Link>
                           </li>
                           <li className="leaf menu-mlid-1162">
-                            <a href="/docs/platform/">
+                            <Link to="/platform/">
                               Explore Platform Architecture
-                            </a>
+                            </Link>
                           </li>
                         </ul>
                       </div>
                       <div className="col-xs-6 col-sm-3 col-no-title">
                         <ul className="menu">
                           <li className="first leaf menu-mlid-1147">
-                            <a href="/docs/automate/">Automate & Integrate</a>
+                            <Link to="/automate/">
+                              Automate & Integrate
+                            </Link>
                           </li>
                           <li className="leaf menu-mlid-1148">
-                            <a href="/docs/performance/">
+                            <Link to="/performance/">
                               Optimize Performance
-                            </a>
+                            </Link>
                           </li>
                           <li className="leaf menu-mlid-1149">
-                            <a href="/docs/manage/">
+                            <Link to="/manage/">
                               Manage Teams & Organizations
-                            </a>
+                            </Link>
                           </li>
                           <li className="leaf menu-mlid-1162">
-                            <a href="/docs/troubleshoot/">Troubleshoot</a>
+                            <Link to="/troubleshoot/">
+                              Troubleshoot
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -103,7 +113,9 @@ const Footer = ({ data }) => {
                             <a href="https://status.pantheon.io/">Status</a>
                           </li>
                           <li className="last leaf menu-mlid-1154">
-                            <a href="/docs/support/">Support</a>
+                            <Link to="/support/">
+                              Support
+                            </Link>
                           </li>
                         </ul>
                       </div>
@@ -111,18 +123,24 @@ const Footer = ({ data }) => {
                         <h4 className="block__title">Community</h4>
                         <ul className="menu">
                           <li className="first leaf menu-mlid-1142">
-                            <a href="/docs/code-of-conduct/">Code of Conduct</a>
+                            <Link to="/code-of-conduct/">
+                              Code of Conduct
+                            </Link>
                           </li>
                           <li className="leaf menu-mlid-1188">
-                            <a href="/docs/contributors/">Contributors</a>
+                            <Link to="/contributors/">
+                              Contributors
+                            </Link>
                           </li>
                           <li className="leaf menu-mlid-1143">
-                            <a href="/docs/power-users/">
+                            <Link to="/power-users/">
                               Community and Power Users Group
-                            </a>
+                            </Link>
                           </li>
                           <li className="last leaf menu-mlid-1145">
-                            <a href="/docs/contribute/">Learn to Contribute</a>
+                            <Link to="/contribute/">
+                              Learn to Contribute
+                            </Link>
                           </li>
                         </ul>
                       </div>
