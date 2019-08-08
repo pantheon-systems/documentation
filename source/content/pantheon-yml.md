@@ -12,11 +12,12 @@ Set up existing scripts and write your own with help from our experts. Pantheon 
 
 </Enablement>
 
-For reference implementations see  [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
+For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
 
 ## Advanced Site Configuration
 ### Include api_version
 Define the `api_version` property in order for `pantheon.yml` to be valid:
+
 ```yaml
 api_version: 1
 ```
@@ -36,6 +37,37 @@ protected_web_paths:
 * Limited to 24 protected paths
 * You may not be able to protect files or paths with special characters
 * Wait a few seconds for changes to take effect
+
+### Enforce HTTPS + HSTS
+
+HTTPS adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
+
+<Alert title="Note" type="info">
+
+Before adjusting `enforce_https`, review and understand the configuration options and all considerations to avoid unintended consequences.
+
+</Alert>
+
+Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available, from least to most secure:
+
+- `off` - Does not enforce HTTPS. This is the default behavior.
+- `transitional` - Redirect to HTTPS with a 5-minute HSTS header
+- `transitional+subdomains` Redirect to HTTPS with a 5-minute HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
+- `full` - Redirect to HTTPS with a year-long HSTS header
+- `full+subdomains` - Redirect to HTTPS with a year-long HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
+   - This is the recommended and most secure configuration.
+
+#### Considerations
+* Use of `full` or `full+subdomains` should be treated as a commitment. If your site is unable to serve HTTPS (e.g. by moving to a host that doesn't support HTTPS) after sending a long-duration HSTS header, visitors will be unable to access your site.
+* Any option with `+subdomains` should only be used if you want to enforce HTTPS for *all subdomains, even those not connected to Pantheon*.
+* To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/docs/http-to-https/) doc.
+
+#### Test Your Site's HSTS Configuration for an A+ Rating
+
+[SSL Labs](https://www.ssllabs.com) provides a free, online service that you can use to test your Site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
+
+1. To test your configuration, select a short-duration HSTS header (`transitional` or `transitional+subdomains`), before committing to the long-duration HSTS header.
+2. When you're comfortable that HSTS works as expected in the Live environment, send the long-duration HSTS header by moving to `full` or `full+subdomains`.
 
 ### Nested Docroot
 Nest your docroot one level beneath your code repository in a directory named `web`:
@@ -113,6 +145,7 @@ When the same configuration value is defined in both files, the value from `pant
 ### "Changes to pantheon.yml detected, but there was an error while processing it"
 
 We will reject a commit that includes a `pantheon.yml` error, with a message like:
+
 ```
 remote: PANTHEON ERROR:
 remote:
