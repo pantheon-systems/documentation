@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import SearchResults from '../components/searchResults';
-import Layout from '../layout/layout';
+import ResultLayout from '../layout/resultLayout';
 import CallToAction from '../layout/call-to-action';
 import TopicsGrid from '../layout/topics-grid';
 import ThreeColumnList from '../layout/three-column-list';
@@ -10,7 +10,7 @@ import ChangelogPreview from '../layout/changelog-preview';
 class Index extends React.Component {
 	render() {
 		return (
-			<Layout>
+			<ResultLayout>
 				<div style={{ marginTop: '-20px' }} className="container">
 					<div className="row doc-content-well">
 						<div className="row">
@@ -38,7 +38,7 @@ class Index extends React.Component {
 						</div>
 					</div>
 				</div>
-			</Layout>
+			</ResultLayout>
 		);
 	}
 }
