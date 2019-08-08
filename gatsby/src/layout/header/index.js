@@ -35,7 +35,7 @@ const Header = ({ data }) => (
               rel="noopener noreferrer"
               className="cta cta-yellow"
             >
-              Get Free Account
+              Get Freebie Account
             </a>
           </li>
           <li className="">
