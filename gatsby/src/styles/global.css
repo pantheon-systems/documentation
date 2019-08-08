@@ -413,12 +413,23 @@ h2 > .glyphicons {
 	margin-bottom: 50px;
 }
 
-#doc img,
 .changelog-wrapper img {
 	border: 1px solid #ddd;
 	border-radius: 4px;
 	padding: 10px;
 }
+
+#doc .gatsby-resp-image-wrapper {
+	border: 1px solid #ddd;
+	padding: 5px;
+}
+
+#doc img {
+    border: none;
+    border-radius: 4px;
+    padding: 0px;
+}
+
 /*  */
 .algolia-autocomplete.algolia-autocomplete-right .ds-dropdown-menu {
 	right: auto !important;
