@@ -37,7 +37,7 @@ Configure your site to assume users are visiting via HTTPS and the site’s prim
 ### Reveal violations in bulk
 There are more than a few ways to identify mixed-content violations across your site, but Google Chrome is arguably one of the fastest and simplest. Right click on a page showing as insecure and select inspect, then review the console.
 
-Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/){.external}, for those who prefer GUIs.
+Another easy to use tool is [https://www.whynopadlock.com/](https://www.whynopadlock.com/), for those who prefer GUIs.
 
 Fans of the command line might find [mixed-content-scan by Bramus](https://github.com/bramus/mixed-content-scan) helpful.
 
