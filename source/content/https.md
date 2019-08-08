@@ -52,7 +52,7 @@ For more detailed instructions pertaining to your specific DNS host, click below
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 |
 | **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br /> Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/hsts/)     |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)    | A                         | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts)     |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             |
 | **Delivery**                                                          | US Datacenter             | [Global CDN](/global-cdn)  |
@@ -70,7 +70,7 @@ Make the switch on an existing Pantheon site by updating DNS for your domains. I
 High grade TLS 1.2 encryption with up-to-date ciphers. For a deep analysis of the HTTPS configuration on upgraded sites see [this A+ SSL Labs report for https://pantheon.io](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### How can I obtain an A+ SSL Labs rating?
-Upgrade your site to the Global CDN and then send the [HSTS header](/hsts/).
+Upgrade your site to the Global CDN and then send the [HSTS header](/pantheon-yml/#enforce-https-+-hsts).
 
 ### Can I bring my own certificate?
 Yes. See our page on [custom certificates](https://pantheon.io/docs/custom-certificates/) for more information.

@@ -113,7 +113,7 @@ At this point, all visitors to the site should be able to securely access all pa
 
 ## Redirect to HTTPS and the primary domain
 
-As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/hsts), as well as a redirect.
+As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/pantheon-yml/#enforce-https-+-hsts), as well as a redirect.
 
 Configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
 
@@ -148,4 +148,4 @@ You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/red
 Check all configured services when looking for redirects to remove, like page rules on some external CDN.
 
 ### HTTPS Strict Transport Security (optional)
-Send headers for HTTPS Strict Transport Security. This creates a long-term commitment to delivering the site with HTTPS and should raise the SSL Labs grade to A+ (if the site uses Global CDN). For details, see [Require HTTPS with the HSTS Header](/hsts).
+Send headers for HTTPS Strict Transport Security. This creates a long-term commitment to delivering the site with HTTPS and should raise the SSL Labs grade to A+ (if the site uses Global CDN). For details, see [Require HTTPS with the HSTS Header](/pantheon-yml/#enforce-https-+-hsts).

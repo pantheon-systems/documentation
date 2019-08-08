@@ -86,7 +86,7 @@ CAA records configured for the root domain (e.g., `example.com`) are inherited b
 | **Renewal**                                                           | Self-managed (up to you)  | Automatic                       | Self-managed (up to you)              |
 | **Inbound IP**                                                        | Static (unique)           | Static (shared)                 | Static (shared)                       |
 | **Client Support**                                                    | 96.02% of browsers        | 95.55% of Browsers <br />Some very old browsers not supported <sup> [1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> | 95.55% of Browsers <br />Some very old browsers not supported <sup>[1](https://caniuse.com/#search=TLS%201.2) [2](https://caniuse.com/#search=SNI)</sup> * |
-| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)               | A                         | A+ [with HSTS](/hsts/)     | A+ [with HSTS](/hsts/) *         |
+| [**SSL Labs Rating**](https://www.ssllabs.com/ssltest/)               | A                         | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts)     | A+ [with HSTS](/pantheon-yml/#enforce-https-+-hsts) *         |
 | **Protocol**                                                          | TLS 1.1 & 1.2             | TLS 1.2 with SNI                | TLS 1.2 with SNI                      |
 | **Ciphers**                                                           | Weak 3DES Cipher          | No Weak 3DES cipher             | No Weak 3DES cipher                   |
 | **Delivery**                                                          | US Datacenter             | [Global CDN](/global-cdn)  | [Global CDN](/global-cdn)        |

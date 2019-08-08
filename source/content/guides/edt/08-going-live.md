@@ -42,7 +42,7 @@ All links from the video are provided below.
  - [Pantheon's Global CDN](/global-cdn/)
  - [HTTPS on Pantheon's Global CDN](/https/)
  - [Redirect to a Primary Domain](/redirects/#redirect-to-https)
- - [Require HTTPS with the HSTS Header](/hsts/)
+ - [Require HTTPS with the HSTS Header](/pantheon-yml/#enforce-https-+-hsts)
 
 
 <Callout title="Need more help? Get in touch:">
