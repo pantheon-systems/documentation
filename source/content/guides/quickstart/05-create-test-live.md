@@ -30,18 +30,18 @@ In this lesson, we’re going to to create our Test site and our Live site, whic
 
 <Alert title="Warning" type="danger">
 
-If you haven’t completed the installation of your Dev site, return to [Create New Site](/guides/quickstart/create-new-site), and do this now, before proceeding.
+If you haven’t completed the installation of your Dev site, return to [Create New Site](/guides/quickstart/create-new-site), and complete the installation before proceeding with the rest of this guide.
 
 </Alert>
 
-1. Navigate to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, but it hasn’t been created yet. Do this now by clicking **Create Test Environment**.
+1. Navigate to your Site Dashboard and click the <Icon icon="equalizer" text="Test"/> tab. Here you’ll have access to your Test environment, but it hasn’t been created yet. Click **Create Test Environment** to create one.
 
   This takes a few moments.
 
 1. Now click <Icon icon="new-window-alt" text="Visit Test Site"/>. This will open your Test site in a new browser tab with the URL `test-YOURSITE.pantheonsite.io`.
 
-1. Navigate back to your Site Dashboard, and click the <Icon icon="cardio" text="Live"/> tab. Here again you need to create the environment. Do this now by clicking **Create Live Environment**.
+1. Navigate back to your Site Dashboard, and click the <Icon icon="cardio" text="Live"/> tab. Click **Create Live Environment** to create the environment.
 
-1. This time, while we wait, let’s click on **Workflows** <Icon icon="chevron-down" /> In the dropdown you’ll find your active workflow as well as those workflows we’ve completed to this point.
+1. This time, while we wait, let’s click on **Workflows** <Icon icon="chevron-down" />. In the dropdown you’ll find your active workflow as well as the workflows we’ve completed to this point.
 
 Congratulations! You now have three copies of your site running in three separate environments: Dev, Test, and Live.
