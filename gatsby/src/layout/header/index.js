@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import './style.css';
 import AddSearch from "../../components/addSearch"
 
@@ -72,47 +72,47 @@ const Header = ({ data }) => (
               <div className="row sub-menu-top">
                 <div className="col-xs-6">
                   <li>
-                    <a id="get-started" href="/docs/get-started">
+                      <Link id="get-started" to="/get-started">
                       Get Started
-                    </a>
+                      </Link>
                   </li>
                   <li>
-                    <a id="develop" href="/docs/develop">
+                    <Link id="develop" to="/develop">
                       Develop
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a id="go-live" href="/docs/go-live">
+                    <Link id="go-live" to="/go-live">
                       Go Live
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a id="platform" href="/docs/platform">
+                    <Link id="platform" to="/platform">
                       Explore Platform Architecture
-                    </a>
+                    </Link>
                   </li>
                 </div>
 
                 <div className="col-xs-6">
                   <li>
-                    <a id="automate" href="/docs/automate">
+                    <Link id="automate" to="/automate">
                       Automate & Integrate
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a id="performance" href="/docs/performance">
+                    <Link id="performance" to="/performance">
                       Optimize Performance
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a id="manage" href="/docs/manage">
+                    <Link id="manage" to="/manage">
                       Manage Teams & Organizations
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a id="troubleshoot" href="/docs/troubleshoot">
+                    <Link id="troubleshoot" to="/troubleshoot">
                       Troubleshoot
-                    </a>
+                    </Link>
                   </li>
                 </div>
               </div>
@@ -120,19 +120,19 @@ const Header = ({ data }) => (
               <div className="row sub-menu-bottom">
                 <div className="col-xs-12">
                   <li>
-                    <a id="changelogs" href="/docs/changelog">
+                    <Link id="changelogs" to="/changelog">
                       Changelog
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a id="getting-started-guide" href="/docs/guides/">
+                    <Link id="getting-started-guide" to="/guides/">
                       Guides <span className="label label-info">NEW</span>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a id="terminus" href="/docs/terminus">
+                    <Link id="terminus" to="/terminus">
                       Terminus Manual
-                    </a>
+                    </Link>
                   </li>
                 </div>
               </div>
