@@ -35,12 +35,12 @@ Follow the procedure outlined below for your CMS:
 
 <Tab title="WordPress" id="tab-1-anchor" active={true}>
 
-### Download the WordPress SendGrid Plugin {.info}
+### Download the WordPress SendGrid Plugin
 The official [SendGrid Plugin](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/) replaces the `wp_mail` function with API integration, making it easy to configure and get started.
 
 Install and activate the latest release through the WordPress dashboard or place it in the `code/wp-content/plugins` directory and activate via the dashboard.
 
-### Add Your SendGrid Account Details {.info}
+### Add Your SendGrid Account Details
 1. After you have installed and activated the plugin, go to your site's Dashboard and select **Settings**, then click the SendGrid menu item.
 2. Provide the API Key from the previous section.
 3. Enter the email address to send from and provide a reply email address if you prefer replies to go to another address (optional).
@@ -55,7 +55,7 @@ When you're done, click **Update Setings**. Your WordPress application is now se
 
 <Tab title="Drupal 8" id="tab-2-anchor">
 
-### Choosing an Integration Method {.info}
+### Choosing an Integration Method
 
 Two methods can be used to integrate SendGrid with your Drupal 8 site: API or SMTP.
 
@@ -63,7 +63,7 @@ Two methods can be used to integrate SendGrid with your Drupal 8 site: API or SM
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
 - API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/composer/).
 
-### SendGrid API Integration {.info}
+### SendGrid API Integration
 
 <Alert title="Warning" type="danger" >
 
@@ -83,7 +83,7 @@ The SendGrid API Integration Module for Drupal 8 requires a Composer managed wor
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
-### SendGrid SMTP Integration {.info}
+### SendGrid SMTP Integration
 A stable release for Drupal 8 is not yet available for the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module. However, [some users](https://groups.google.com/a/pantheon.io/forum/#!topic/power-users/HxvK7T0MPEM) have reported success with the beta version.
 
 1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/terminus):
@@ -113,72 +113,80 @@ Your Drupal application on Pantheon is now set up to send email through SendGrid
 
 <Tab title="Drupal 7" id="tab-3-anchor">
 
-### Choosing an Integration Method {.info}
+### Choosing an Integration Method
 Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SMTP.
 
 #### Considerations
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
 - API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/composer/). For Drupal 7 we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
 
-### SendGrid API Integration {.info}
+### SendGrid API Integration
 1. Install [Composer](https://getcomposer.org), then install and authenticate [Terminus](/terminus/install/).
-2. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
-    ```bash
-    export SITE=<site_name>
-    terminus connection:info $SITE.dev --fields='Git Command' --format=string
-    cd $SITE
-    ```
-3. Set the connection mode to Git:
+1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
-    ```bash
-    terminus connection:set $SITE.dev git
-    ```
-4.  Install the *dev release* of the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module (and it's dependencies) and the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module using Drush:
+  ```bash
+  export SITE=<site_name>
+  terminus connection:info $SITE.dev --fields='Git Command' --format=string
+  cd $SITE
+  ```
+1. Set the connection mode to Git:
 
-    ```bash
-    drush dl sendgrid_integration-7.x-1.3 mailsystem composer_vendor
-    ```
+  ```bash
+  terminus connection:set $SITE.dev git
+  ```
+
+1.  Install the *dev release* of the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module (and its dependencies) and the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module using Drush:
+
+  ```bash
+  drush dl sendgrid_integration-7.x-1.3 mailsystem composer_vendor
+  ```
+
+Now that the module and dependencies are installed, initialize Composer:
+
 <Partial file="d7-composer-init.md" />
-7. The above configuration specifies `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
+
+The above configuration specifies setting `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
 
     ```bash
     protected_web_paths:
       - /sites/all/vendor
     ```
 
-8. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
+1. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
 
     ```bash
     composer require fastglass/sendgrid:~1.0
     ```
-9. Add, commit, and push all of the new files:
 
-    ```bash
-    git add .
-    git commit -am "Add Sendgrid API Integration"
-    git push origin master
-    ```
+1. Add, commit, and push all of the new files:
 
-10. Switch the site back to SFTP mode:
+  ```bash
+  git add .
+  git commit -am "Add Sendgrid API Integration"
+  git push origin master
+  ```
 
-    ```bash
-    terminus connection:set $SITE.dev sftp
-    ```
+1. Switch the site back to SFTP mode:
 
-11. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
+  ```bash
+  terminus connection:set $SITE.dev sftp
+  ```
 
-    ```bash
-    terminus drush $SITE.<env> -- en composer_vendor -y
-    terminus drush $SITE.<env> -- en sendgrid_integration -y
-    ```
-12.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+1. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
 
-13.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
+  ```bash
+  terminus drush $SITE.<env> -- en composer_vendor -y
+  terminus drush $SITE.<env> -- en sendgrid_integration -y
+  ```
+
+1.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
+
+1.  Visit `/admin/config/services/sendgrid` once you've logged into your Drupal site as administrator. Paste your API Key and click **Save Settings**.
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
-<Alert  title="Note" type="alert">
+<Alert title="Note" type="info">
 
 Under `/admin/reports/status` you may see a warning that `composer.lock` isn't found in `code/sites/all`. The actual `composer.lock` is in the code root, but you can symlink to it to remove the warning.
 
@@ -193,7 +201,7 @@ Then commit and push the symlink to Pantheon.
 
 </Alert>
 
-### SendGrid SMTP Integration {.info}
+### SendGrid SMTP Integration
 
 1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/terminus):
 
@@ -210,9 +218,11 @@ Then commit and push the symlink to Pantheon.
 
     **Use encrypted protocol**: We strongly recommend selecting **TLS**
 
-        <Alert title="Note" type="info">
-          Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/email/)
-        </Alert>
+       <Alert title="Note" type="info">
+
+       Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/email/)
+
+       </Alert>
 
 5. Provide your site-specific SendGrid credentials and click **Save configuration**.
 
