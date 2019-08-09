@@ -148,10 +148,10 @@ Now that the module and dependencies are installed, initialize Composer:
 
 The above configuration specifies setting `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
 
-    ```bash
-    protected_web_paths:
-      - /sites/all/vendor
-    ```
+```bash
+protected_web_paths:
+  - /sites/all/vendor
+```
 
 1. Require the [SendGrid API Library](https://github.com/taz77/sendgrid-php-ng) via Composer:
 
