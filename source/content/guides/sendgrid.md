@@ -136,14 +136,17 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
   terminus connection:set $SITE.dev git
   ```
 
-1.  Install the *dev release* of the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module (and it's dependencies) and the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module using Drush:
+1.  Install the *dev release* of the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module (and its dependencies) and the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module using Drush:
 
   ```bash
   drush dl sendgrid_integration-7.x-1.3 mailsystem composer_vendor
   ```
+
+Now that the module and dependencies are installed, initialize Composer:
+
 <Partial file="d7-composer-init.md" />
 
-1. The above configuration specifies `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
+The above configuration specifies setting `vendor-dir` to `sites/all/vendor` for compatibility with the [Composer Vendor](https://www.drupal.org/project/composer_vendor) module, but this directory is not a protected path by default. Make this path non-web accessible by adding the following to the `pantheon.yml` configuration file before proceeding:
 
     ```bash
     protected_web_paths:
@@ -183,7 +186,7 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
 Your Drupal application on Pantheon is now set up to send email through SendGrid's API. Test your configuration from `/admin/config/services/sendgrid/test`.
 
-<Alert  title="Note" type="info">
+<Alert title="Note" type="info">
 
 Under `/admin/reports/status` you may see a warning that `composer.lock` isn't found in `code/sites/all`. The actual `composer.lock` is in the code root, but you can symlink to it to remove the warning.
 
