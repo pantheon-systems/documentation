@@ -35,7 +35,7 @@ This tab shows general information about your site, such as the framework, upstr
 #### View your Site's Upstream
 To find your site's upstream, click **Settings**, then **About Site**.
 
-![Upstream link](/assets/images/dashboard/upstream-link.png)
+![Upstream link](../images/dashboard/upstream-link.png)
 
 
 ### PHP Version
