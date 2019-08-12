@@ -434,27 +434,6 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and
 **Solution**: Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
 <hr />
 
-
-### [Event Espresso](https://eventespresso.com/)
-
-**Issue:** Event Espresso shows the error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
-
-**Solution**: This plugin is checking the `FS_METHOD` value. Add the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-define('FS_METHOD', 'direct');
-```
-
-<hr />
-
-### [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/)
-
-**Issue:** Site suddenly shows a white screen of death.
-
-**Solution**: Due to random maintenance where binding path changes from time to time, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Do not forget to [clear the cache from Pantheon](/clear-caches/) and [flush the Redis cache](/redis/#clear-cache).
-
-<hr />
-
 ### [Disable REST API and Require JWT / OAuth Authentication](https://wordpress.org/plugins/disable-rest-api-and-require-jwt-oauth-authentication/)
 
 **Issue:** When this plugin is enabled along with WooCommerce, WP-CLI and Pantheon dashboard workflows like **Cache Clear** can fail. This issue may not happen for environments where WP-CLI is not installed (local machine, other platforms, etc):
@@ -484,6 +463,17 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
 
 <hr />
 
+### [Event Espresso](https://eventespresso.com/)
+
+**Issue:** Event Espresso shows the error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
+
+**Solution**: This plugin is checking the `FS_METHOD` value. Add the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+```php
+define('FS_METHOD', 'direct');
+```
+
+<hr />
 
 ### [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
 
@@ -497,6 +487,13 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 
 <hr />
 
+### [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/)
+
+**Issue:** Site suddenly shows a white screen of death.
+
+**Solution**: Due to random maintenance where binding path changes from time to time, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Do not forget to [clear the cache from Pantheon](/clear-caches/) and [flush the Redis cache](/redis/#clear-cache).
+
+<hr />
 
 ### [Force Login](https://wordpress.org/plugins/wp-force-login/)
 **Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
