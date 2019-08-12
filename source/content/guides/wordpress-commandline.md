@@ -82,13 +82,13 @@ The next few secions of this guide use the example variables `tessa-site-wp` and
 4. Use the [WP-CLI `core install`](https://developer.wordpress.org/cli/commands/core/install/) command to install WordPress on the Dev environment:
 
   ```bash
-  terminus wp tessa-site-wp.dev -- core install --url=https://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
+  terminus wp tessa-site-wp.dev core install --url=https://dev-tessa-site-wp.pantheonsite.io --title="Terminus Demo Site" --admin_user=admin --admin_password=changemelater --admin_email=name@yoursite.com
   ```
 
   As a reminder, WP-CLI is the command line utility for WordPress itself.	Terminus is simply passing through the WP-CLI commands to the site on Pantheon. To get a full list of WP-CLI commands run:
 
   ```bash
-  terminus wp tessa-site-wp.dev -- help
+  terminus wp tessa-site-wp.dev help
   ```
 
   The `--` signifies the end of the Terminus options, anything after `--` gets passed straight to WP-CLI.
@@ -134,7 +134,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 1. Install and activate the [Contact Form 7](https://wordpress.org/plugins/contact-form-7/) plugin:
 
   ```bash
-  terminus wp $TERMINUS_SITE.dev -- plugin install contact-form-7 --activate
+  terminus wp $TERMINUS_SITE.dev plugin install contact-form-7 --activate
   ```
 
   If you have the Site Dashboard open, you'll see that 78 files have changed and are ready to commit in the yellow box. You can use the Site Dashboard interface to review file changes and commit, but we'll continue on the command line.
@@ -172,7 +172,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 5. Activate the Contact Form 7 plugin on the Test environment by making a manual configuration change:
 
   ```bash
-  terminus wp $TERMINUS_SITE.test -- plugin activate contact-form-7
+  terminus wp $TERMINUS_SITE.test plugin activate contact-form-7
   ```
 
 6. Once you've experimented in the Test environment and verified that your new plugin is working, and everything else is still in working order, deploy to Live:
@@ -190,7 +190,7 @@ The [WordPress plugin repository](https://wordpress.org/plugins/) has loads of f
 7. Activate the Contact Form 7 plugin on the Live environment by making a manual configuration change:
 
   ```bash
-  terminus wp $TERMINUS_SITE.live -- plugin activate contact-form-7
+  terminus wp $TERMINUS_SITE.live plugin activate contact-form-7
   ```
 
 For this example, manually applying configuration changes is a simple and short task. We're only activating one plugin on each environment. However, complex configuration changes are [best managed in code](/pantheon-workflow/#configuration-management) so you can pull fresh content from Live while bringing in the site settings from Dev.
@@ -202,7 +202,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 1. Install and activate the [Shapely](https://wordpress.org/themes/shapely/) theme:
 
   ```bash
-  terminus wp $TERMINUS_SITE.dev -- theme install shapely --activate
+  terminus wp $TERMINUS_SITE.dev theme install shapely --activate
   ```
 
 2. Check out the Dev environment's site URL to see the new theme in action. The `terminus env:info` command from earlier gives us the URL. Here it is again with our environment variable:
@@ -220,7 +220,7 @@ Now that you have WordPress installed, let's make it look a little better by add
 4. No WordPress site is ready for development without a [child theme](https://codex.wordpress.org/Child_Themes). Let's create one! Run [the `scaffold child-theme` WP-CLI command](https://developer.wordpress.org/cli/commands/scaffold/child-theme/) (replace `Tessa-child-theme` and `shapely`):
 
   ```bash
-  terminus wp $TERMINUS_SITE.dev -- scaffold child-theme Tessa-child-theme --parent_theme=shapely
+  terminus wp $TERMINUS_SITE.dev scaffold child-theme Tessa-child-theme --parent_theme=shapely
   ```
 
   You should see the new theme within **Appearance** > **Themes** of the WordPress Dashboard:

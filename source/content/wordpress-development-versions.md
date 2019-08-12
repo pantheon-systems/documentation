@@ -22,7 +22,7 @@ Development versions and beta releases are not supported and should not be run o
 2. Install and activate the [WordPress Beta Tester](https://wordpress.org/plugins/wordpress-beta-tester/) plugin within the WordPress Dashboard or with Terminus:
 
  ```
- terminus wp <site>.<env> -- plugin install wordpress-beta-tester --activate --yes
+ terminus wp <site>.<env> plugin install wordpress-beta-tester --activate --yes
  ```
 
 3. Go to **Tools** > **WordPress Beta Tester** and select the update stream you want to use, then click **Save**:
@@ -31,7 +31,7 @@ Development versions and beta releases are not supported and should not be run o
 
 
 4. Go to **Dashboard** > **Updates** and click **Update Now**.
-5. Verify the WordPress version using `terminus wp <site>.<env> -- core version` or check the bottom of any WordPress Dashboard page:
+5. Verify the WordPress version using `terminus wp <site>.<env> core version` or check the bottom of any WordPress Dashboard page:
 
   > You are using a development version (4.5-beta1-36808). Cool! Please stay updated.
 

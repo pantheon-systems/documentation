@@ -100,7 +100,7 @@ In addition to Pantheon, you will need accounts at:
 
    ```bash
    terminus connection:set $SITENAME.dev sftp
-   terminus drush $SITENAME.dev -- site-install commerce
+   terminus drush $SITENAME.dev site-install commerce
    ```
 
    Review the last two lines of output to identify the username and password created:

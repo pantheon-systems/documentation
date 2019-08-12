@@ -49,7 +49,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 Verify the setting by using [Terminus](/terminus/) to run `wp config get`:
 
 ```bash
-terminus wp $site.$env -- config get SOME_TMP_SETTING
+terminus wp $site.$env config get SOME_TMP_SETTING
 ```
 
 Output of this command should look something like the following Contact Form 7 example:
@@ -75,7 +75,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 Verify the setting by using [Terminus](/terminus/) to run `drush variable-get`:
 
 ```bash
-terminus drush $site.$env -- variable-get some_tmp_setting
+terminus drush $site.$env variable-get some_tmp_setting
 ```
 
 Output of this command should look something like the following Plupload example:
@@ -102,7 +102,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 Verify the setting by using [Terminus](/terminus/) to run `drush config-get` with `--include-overridden`:
 
 ```bash
-terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden
+terminus drush $site.$env config-get some_module.settings some_tmp_setting --include-overridden
 ```
 
 Output of this command should look something like the following Plupload example:
@@ -155,7 +155,7 @@ The `private` and `tmp` directories do not exist by default; you must create the
 Verify the setting by using [Terminus](/terminus/) to run `wp config get`:
 
 ```bash
-terminus wp $site.$env -- config get SOME_TMP_SETTING
+terminus wp $site.$env config get SOME_TMP_SETTING
 ```
 
 Output of this command should look something like the following Contact Form 7 example:
@@ -183,7 +183,7 @@ The `private` and `tmp` directories do not exist by default; you must create the
 Verify the setting by using [Terminus](/terminus/) to run `drush variable-get`:
 
 ```bash
-terminus drush $site.$env -- variable-get some_tmp_setting
+terminus drush $site.$env variable-get some_tmp_setting
 ```
 
 Output of this command should look something like the following Plupload example:
@@ -211,7 +211,7 @@ The `private` and `tmp` directories do not exist by default; you must create the
 Verify the setting by using [Terminus](/terminus/) to run `drush config-get` with `--include-overridden`:
 
 ```bash
-terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden
+terminus drush $site.$env config-get some_module.settings some_tmp_setting --include-overridden
 ```
 
 Output of this command should look something like the following Plupload example:

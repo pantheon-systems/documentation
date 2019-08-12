@@ -79,7 +79,7 @@ Make sure to set a relative path. This ensures the key path will work on all app
 You can either set the path in the Drupal admin interface, or with Terminus and Drush as below:
 
    ```bash
-   terminus drush <site>.<env> -- vset uc_credit_encryption_path <my_private_path>
+   terminus drush <site>.<env> vset uc_credit_encryption_path <my_private_path>
    ```
 
    `<my_private_path>` can be set to either of these non-web accessible private directories:
@@ -92,7 +92,7 @@ You can either set the path in the Drupal admin interface, or with Terminus and 
     * Optionally, verify that `uc_credit_encryption_path` is set correctly:
 
      ```bash
-     terminus drush <site>.<env> -- vget uc_credit_encryption_path
+     terminus drush <site>.<env> vget uc_credit_encryption_path
      ```
 
 <Alert title="Note" type="info">

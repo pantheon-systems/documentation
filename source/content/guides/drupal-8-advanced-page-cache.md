@@ -43,7 +43,7 @@ First, set up a new Drupal 8 site and add the Pantheeon Advanced Page Cache modu
 2. Install Drupal:
 
   ```bash
-  terminus drush $TERMINUS_SITE.dev -- site-install -y
+  terminus drush $TERMINUS_SITE.dev site-install -y
   ```
 
 
@@ -56,8 +56,8 @@ First, set up a new Drupal 8 site and add the Pantheeon Advanced Page Cache modu
 4. Add and enable the Pantheon Advanced Page Cache module, which is responsible for sending cache metadata to the Pantheon Global CDN:
 
   ```bash
-  terminus drush $TERMINUS_SITE.dev -- dl pantheon_advanced_page_cache
-  terminus drush $TERMINUS_SITE.dev -- en pantheon_advanced_page_cache -y
+  terminus drush $TERMINUS_SITE.dev dl pantheon_advanced_page_cache
+  terminus drush $TERMINUS_SITE.dev en pantheon_advanced_page_cache -y
   ```
 
 5. Commit the new code:
@@ -69,7 +69,7 @@ First, set up a new Drupal 8 site and add the Pantheeon Advanced Page Cache modu
 6. Log in to your newly created site. This command will give you a one-time log-in link for the admin user:
 
   ```bash
-  terminus drush $TERMINUS_SITE.dev -- user-login
+  terminus drush $TERMINUS_SITE.dev user-login
   ```
 
 7. Turn on full page caching by setting the **Page cache maximum age** field to "10 min", then clear caches. We can do this from our Drupal site at `/admin/config/development/performance`:
@@ -80,8 +80,8 @@ First, set up a new Drupal 8 site and add the Pantheeon Advanced Page Cache modu
   You can also make those same changes using Drush via Terminus:
 
   ```bash
-  terminus drush $TERMINUS_SITE.dev -- cset system.performance cache.page.max_age 600 -y
-  terminus drush $TERMINUS_SITE.dev -- cr
+  terminus drush $TERMINUS_SITE.dev cset system.performance cache.page.max_age 600 -y
+  terminus drush $TERMINUS_SITE.dev cr
   ```
 
 ## View HTTP Headers
@@ -335,7 +335,7 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 5. Enable the new custom module and commit your code:
 
     ```bash
-    terminus drush $TERMINUS_SITE.dev -- en custom_cache_tags -y
+    terminus drush $TERMINUS_SITE.dev en custom_cache_tags -y
     ```
 
     ```bash
@@ -345,7 +345,7 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 6. Clear all caches so that the new hook you added is detected by Drupal:
 
     ```bash
-    terminus drush $TERMINUS_SITE.dev -- cr
+    terminus drush $TERMINUS_SITE.dev cr
     ```
 
 7. Now whenever you add content, the referenced taxonomy term pages are automatically cleared. To test, check on the age of your taxonomy listing again by curling a few times.
@@ -380,11 +380,11 @@ The code we added clears all references to each taxonomy term every time a node 
 1. Download and enable the [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag) module:
 
     ```bash
-    terminus drush $TERMINUS_SITE.dev -- dl views_custom_cache_tag
+    terminus drush $TERMINUS_SITE.dev dl views_custom_cache_tag
     ```
 
     ```bash
-    terminus drush $TERMINUS_SITE.dev -- en views_custom_cache_tag -y
+    terminus drush $TERMINUS_SITE.dev en views_custom_cache_tag -y
     ```
 
 2. Commit your code changes:
@@ -404,7 +404,7 @@ The code we added clears all references to each taxonomy term every time a node 
 5. To see the change, you may need to clear all caches:
 
     ```bash
-    terminus drush $TERMINUS_SITE.dev -- cr
+    terminus drush $TERMINUS_SITE.dev cr
     ```
 
 6. Curl the listing page a few times again:

@@ -40,7 +40,7 @@ You can manage cron via Drupal's admin interface at `admin/config/system/cron`.
     - Alternatively, you can run all scheduled cron tasks with the following [Terminus](/terminus/) command:
 
       ```bash
-      terminus drush <site>.<env> -- cron
+      terminus drush <site>.<env> cron
       ```
 
 2.  To ensure that cron tasks have been run, check the reports via the Drupal Admin interface at **Reports** > **Recent log messages**.
@@ -109,7 +109,7 @@ You can check the log messages through the Drupal Admin interface.
 
 You can also use [Terminus](/terminus/) to see when cron was last run with the following command:
 ```bash
-terminus drush <site>.<env> -- wd-show --type='cron'
+terminus drush <site>.<env> wd-show --type='cron'
 ```
 
 ### Can I add tasks to cron through Drupal?

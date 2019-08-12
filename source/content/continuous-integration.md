@@ -38,7 +38,7 @@ To run tests on Pantheon:
 1. Enable `site_test`:
 
    ```bash
-   terminus drush $SITE_NAME.$ENV_NAME -- en site_test -y
+   terminus drush $SITE_NAME.$ENV_NAME en site_test -y
    ```
 
   This command will also enable `simpletest` as a dependency of `site_test`.
@@ -46,7 +46,7 @@ To run tests on Pantheon:
 1. Clear the cache immediately before running tests to avoid strange failures:
 
    ```bash
-   terminus drush $SITE_NAME.$ENV_NAME -- cc all
+   terminus drush $SITE_NAME.$ENV_NAME cc all
    ```
 
   This step should be repeated each time tests are to be run moving forward.
@@ -54,7 +54,7 @@ To run tests on Pantheon:
 1. Get the absolute path before you can run the script:
 
    ```bash
-   terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT"
+   terminus drush $SITE_NAME.$ENV_NAME eval "echo DRUPAL_ROOT"
    ```
 
   In the command above, you may need to strip out warnings by ending the command with `2>/dev/null`.
@@ -63,7 +63,7 @@ The full command will look something like this:
 
 ```bash
 export TERMINUS_HIDE_UPDATE_MESSAGE=1
-terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
+terminus drush $SITE_NAME.$ENV_NAME exec php `terminus drush $SITE_NAME.$ENV_NAME eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
 ```
 
 In the above command the `--url` option is required to be passed as multidevs do not respond to `localhost`.
@@ -77,16 +77,16 @@ A full CircleCI command might look similar to this:
             if [ "${CIRCLE_BRANCH}" != "master" ]; then
 
               export TERMINUS_HIDE_UPDATE_MESSAGE=1
-              terminus drush $SITE_NAME.$ENV_NAME -- en site_test -y
+              terminus drush $SITE_NAME.$ENV_NAME en site_test -y
 
               # If you don't clear the cache immediately before running tests
               # we get the html gibberish instead of a passing test.
-              terminus drush $SITE_NAME.$ENV_NAME -- cc all
+              terminus drush $SITE_NAME.$ENV_NAME cc all
 
               # NOTE: Use the latest version of Terminus to avoid warning messages in the output, which will break the test.
               # in order to exclude the notice in shell output of the
               # embedded command to find the absolute path.
-              terminus drush $SITE_NAME.$ENV_NAME -- exec php `terminus drush $SITE_NAME.$ENV_NAME -- eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
+              terminus drush $SITE_NAME.$ENV_NAME exec php `terminus drush $SITE_NAME.$ENV_NAME eval "echo DRUPAL_ROOT" 2>/dev/null`/scripts/run-tests.sh --url http://$ENV_NAME-$SITE_NAME.pantheonsite.io OptionalTestGroup
 
             fi
 ```

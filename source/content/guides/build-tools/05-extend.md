@@ -76,13 +76,13 @@ This section will be performed from the command line, to prepare your local syst
 3. Enable the Pathauto module on the Pantheon Multidev environment from the command line using Terminus and Drush:
 
     ```bash
-    terminus drush $SITE.$ENV -- pm-enable pathauto --yes
+    terminus drush $SITE.$ENV pm-enable pathauto --yes
     ```
 
 4. You can use the [method described in an earlier lesson](/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
     ```bash
-    terminus drush $SITE.$ENV -- config-export --yes
+    terminus drush $SITE.$ENV config-export --yes
     ```
 
 

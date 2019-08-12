@@ -31,12 +31,12 @@ This plugins requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php
 2. Install and activate the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin on the Dev or Multidev environment using the WordPress Dashboard or with Terminus:
 
  ```bash
- terminus wp <site>.<env> -- plugin install --activate solr-power
+ terminus wp <site>.<env> plugin install --activate solr-power
  ```
 
  Or for WP Site Networks:
  ```bash
- terminus wp <site>.<env> -- plugin install --activate --network solr-power
+ terminus wp <site>.<env> plugin install --activate --network solr-power
  ```
 
 3. From the WordPress Dashboard, navigate to **Solr Options** (previously under **Settings**). You should see your site's Solr Server details within the **Info** tab.
@@ -50,12 +50,12 @@ This plugins requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php
 5. Index all publicly queryable post types by navigating to the **Actions** tab and clicking **Execute** next to **Index Searchable Post Types**, or via Terminus:
 
  ```bash
- terminus wp <site>.<env> -- solr index
+ terminus wp <site>.<env> solr index
  ```
 
  For WP Site Networks, you will need to index all your subsites individually:
  ```bash
- terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
+ terminus wp <site>.<env> url=example.pantheonsite.io/subsite solr index
  ```
 
 6. Deploy the plugin to the site's Test and Live environments after validation and testing.

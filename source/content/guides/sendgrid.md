@@ -89,7 +89,7 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
 1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/terminus):
 
   ```bash
-  terminus drush <site>.<env> -- en smtp -y
+  terminus drush <site>.<env> en smtp -y
   ```
 2. Visit `/admin/config/system/smtp` once you've logged in as an administrator.
 3. From within Install Options, select **On**.
@@ -176,8 +176,8 @@ protected_web_paths:
 1. Enable *Composer Vendor*, followed by *SendGrid Integration*. Order is important here, SendGrid Integration will refuse to activate if the library file is not autoloaded:
 
   ```bash
-  terminus drush $SITE.<env> -- en composer_vendor -y
-  terminus drush $SITE.<env> -- en sendgrid_integration -y
+  terminus drush $SITE.<env> en composer_vendor -y
+  terminus drush $SITE.<env> en sendgrid_integration -y
   ```
 
 1.  From within your SendGrid account, navigate to **Settings** > **API Keys** and create a site-specific API Key. Click the key to copy it to your keyboard.
@@ -206,7 +206,7 @@ Then commit and push the symlink to Pantheon.
 1. Install the [SMTP Authentication Support](https://www.drupal.org/project/smtp) module using the [Drupal interface](https://drupal.org/documentation/install/modules-themes) or with [Terminus](/terminus):
 
      ```bash
-     terminus drush <site>.<env> -- en smtp -y
+     terminus drush <site>.<env> en smtp -y
      ```
 2. Visit `/admin/config/system/smtp` once you've logged in as administrator.
 3. From within Install Options, select **On**.

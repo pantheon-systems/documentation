@@ -21,7 +21,7 @@ The HTTP Strict-Transport-Security response header (often abbreviated as **HS
 Install and activate the [LH HSTS](https://wordpress.org/plugins/lh-hsts/) plugin using the WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=lh+hsts`) or with [Terminus](/terminus/):
 
 ```bash
-terminus remote:wp <site>.<env> -- plugin install lh-hsts --activate
+terminus remote:wp <site>.<env> plugin install lh-hsts --activate
 ```
 
 Once enabled, the following header will be sent in responses:
@@ -66,7 +66,7 @@ See the [WordPress documentation](https://codex.wordpress.org/Plugin_API/Action_
 1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/8/extending-drupal-8/installing-modules) or with [Terminus](/terminus/):
 
     ```bash
-    terminus remote:drush <site>.<env> -- pm-enable hsts --yes
+    terminus remote:drush <site>.<env> pm-enable hsts --yes
     ```
 
 2. Visit the module configuration page (`/admin/config/system/hsts`).
@@ -85,7 +85,7 @@ strict-transport-security: max-age=31536000
 1. Install the [HTTP Strict Transport Security](https://drupal.org/project/hsts) module using the [Drupal interface](https://www.drupal.org/docs/7/extending-drupal/installing-modules) or with [Terminus](/terminus):
 
   ```bash
-  terminus remote:drush <site>.<env> -- pm-enable hsts --yes
+  terminus remote:drush <site>.<env> pm-enable hsts --yes
   ```
 
 2. Visit the module configuration page (`/admin/config/security/hsts`).

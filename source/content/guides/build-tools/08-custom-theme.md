@@ -36,7 +36,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
 1. Wait for CircleCI to build a new Pantheon Multidev environment (`pr-custom-t`), then use the `generate:theme` command as shown below to start the process of creating a subtheme:
 
   ```bash
-  terminus drupal $SITE.$ENV -- generate:theme
+  terminus drupal $SITE.$ENV generate:theme
   ```
 
   <Accordion title="Drupal Console Generate Theme" id="understand-drupal-console" icon="lightbulb">
@@ -106,7 +106,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
 11. Once the build finishes from the last step, active your new theme and rebuild the cache:
 
     ```bash
-    terminus drupal $SITE.$ENV -- theme:install --set-default amazing_theme
+    terminus drupal $SITE.$ENV theme:install --set-default amazing_theme
     ```
 
     Visit the site in the web browser, it should reflect the change provided by the custom theme:
@@ -120,7 +120,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
 12. You can use the [method described in an earlier lesson](/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
     ```bash
-    terminus drush $SITE.$ENV -- config-export --yes
+    terminus drush $SITE.$ENV config-export --yes
     ```
 
 

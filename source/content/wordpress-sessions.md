@@ -33,7 +33,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
 2. Install and activate  [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) from within the Dev or Multidev environment's WordPress Dashboard (`/wp-admin/plugin-install.php?tab=search&s=wp+native-php-sessions`) or with Terminus:
 
  ```
- terminus wp <site>.<env> -- plugin install wp-native-php-sessions --activate
+ terminus wp <site>.<env> plugin install wp-native-php-sessions --activate
  ```
 
 3. Deploy the plugin to the Test environment within the Site Dashboard or with Terminus:
@@ -45,7 +45,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
 4. Activate the plugin within the WordPress Dashboard on the Test environment (`/wp-admin/plugins.php`) or with Terminus:
 
  ```
- terminus wp <site>.test -- plugin activate wp-native-php-sessions
+ terminus wp <site>.test plugin activate wp-native-php-sessions
  ```
 
 5. Deploy the plugin to the Live environment within the Site Dashboard or with Terminus:
@@ -57,7 +57,7 @@ If `$_SESSIONs` are necessary for your application, install the [WordPress Nativ
 6. Activate the plugin within the WordPress Dashboard on the Live environment (`/wp-admin/plugins.php`) or with Terminus:
 
  ```
- terminus wp <site>.live -- plugin activate wp-native-php-sessions
+ terminus wp <site>.live plugin activate wp-native-php-sessions
  ```
 
 Once enabled, your functionality will "just work". For more information, see [Fix WordPress PHP Session Problems on Pantheon with a Script](https://pantheon.io/blog/fix-wordpress-php-session-problems-pantheon-script).

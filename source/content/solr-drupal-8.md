@@ -101,7 +101,7 @@ After adding fields the configuration, make sure the index is full by clicking *
 It is a best practice in Drupal 8 to export your changes to `yml` files. You can quickly export configuration changes via [Terminus](/terminus):
 
 ```
-terminus drush site.env -- config-export -y
+terminus drush site.env config-export -y
 ```
 
 Replace `site` and `env` with your site name and the environment (Dev, Multidev, etc), respectively.

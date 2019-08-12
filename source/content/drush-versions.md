@@ -20,7 +20,7 @@ When running Drush locally, we highly recommend running Drush version 8.1.15 or 
 ## Verify Current Drush Version
 Verify the current version of Drush running remotely on Pantheon using [Terminus](/terminus):
 ```bash
-terminus drush <site>.<env> -- status | grep "Drush version"
+terminus drush <site>.<env> status | grep "Drush version"
 ```
 
 ## Configure Drush Version

@@ -37,5 +37,5 @@ Drupal makes the phpinfo available to privileged users at `https://example.com/a
 As an alternative to exposing these values on a web accessible URL, you can use [Terminus](/terminus/) to check these values:
 
 ```
-terminus remote:drush <SITE>.<ENV> -- ev "print(phpinfo())"
+terminus remote:drush <SITE>.<ENV> ev "print(phpinfo())"
 ```

@@ -37,8 +37,8 @@ This doc uses the [ClamAV Module for Drupal 7 & 8](https://www.drupal.org/projec
 1. Download and enable the module in the Drupal admin panel, or via [Terminus](/terminus/):
 
    ```bash
-   terminus drush $site.$env -- dl clamav
-   terminus drush $site.$env -- en clamav -y
+   terminus drush $site.$env dl clamav
+   terminus drush $site.$env en clamav -y
    ```
 
 2. From the module's configuration page, ensure that the scan method is set to to daemon mode, with the hostname `localhost` and the port number `3310`:

@@ -58,13 +58,13 @@ Using [Terminus](/terminus/) is our recommended way to install a WordPress Site 
   </Alert>
 
   ```bash
-  terminus wp <site>.<env> -- core multisite-install --url=<url> --title=<site-title> --admin_user=<username> --admin_email=<email>
+  terminus wp <site>.<env> core multisite-install --url=<url> --title=<site-title> --admin_user=<username> --admin_email=<email>
   ```
 
   When you install a new WordPress Site Network, you should see a success notice similar to this:
 
   ```bash
-  $ terminus wp sitenetworks.dev -- core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="Site Networks" --admin_user=aghost --admin_email=aghost@pantheon.io
+  $ terminus wp sitenetworks.dev core multisite-install --url=dev-sitenetworks.pantheonsite.io --title="Site Networks" --admin_user=aghost --admin_email=aghost@pantheon.io
   Admin password: abcdefgnotarealpassword
   Created single site database tables.
   Set up multisite database tables.

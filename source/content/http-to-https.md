@@ -67,7 +67,7 @@ Use the following techniques to replace insecure references to your domain in th
   If you'd rather not add another plugin to the site you can use [Terminus](/terminus) to run `wp search-replace` to converts URLs from HTTP to HTTPS:
 
   ```
-  terminus remote:wp <site>.<env> -- search-replace 'http://www.example.com' 'https://www.example.com' --all-tables --verbose
+  terminus remote:wp <site>.<env> search-replace 'http://www.example.com' 'https://www.example.com' --all-tables --verbose
   ```
 
   **Via Site Dashboard**

@@ -79,7 +79,7 @@ This is a common error with the SMTP Authentication Support module. It can be fi
 
 4. [Clear the cache](https://github.com/pantheon-systems/cli):
 
-        terminus drush <site>.<env> -- cc all
+        terminus drush <site>.<env> cc all
 
 See [available patch](https://drupal.org/node/1369736#comment-5644064).
 

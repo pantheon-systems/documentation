@@ -21,10 +21,10 @@ And deploy changes between Dev, Test, and Live environments. I’ll do this by r
 If it can be accomplished in the Pantheon dashboard, it can probably be accomplished with Terminus.
 
 
-You can also execute Drupal or WordPress-specific commands using Drush or WP-CLI. For example, the command  `terminus drush` followed by the site name and environment, then `user-create -- newuser1` with the email address of the user, can be used to create a new Drupal user.
+You can also execute Drupal or WordPress-specific commands using Drush or WP-CLI. For example, the command  `terminus drush` followed by the site name and environment, then `user-create newuser1` with the email address of the user, can be used to create a new Drupal user.
 
 
-Update WordPress plugins by running `terminus wp` the site name and environment, `-- plugin update --all`, to update all.
+Update WordPress plugins by running `terminus wp` the site name and environment, `plugin update --all`, to update all.
 
 Terminus also makes it easy to automate tasks. In this example, we’ve scripted a set of Terminus commands to identify, install, and test WordPress updates. If the tests pass, as they do here, our script pushes the WordPress updates to our Live environment.
 

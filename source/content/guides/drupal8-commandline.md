@@ -74,13 +74,13 @@ The next few sections of this guide use the example variables `steve-site-d8` an
 1. Use the Drush [`site-install`](https://drushcommands.com/drush-8x/core/site-install/) command to install Drupal 8 on the Dev environment:
 
   ```bash
-  terminus drush steve-site-d8.dev -- site-install -y
+  terminus drush steve-site-d8.dev site-install -y
   ```
 
   Use the password included in the output of that command to sign into the site with your browser, or use this command to get a one-time login link:
 
    ```bash
-   terminus drush  steve-site-d8.dev  -- user-login
+   terminus drush  steve-site-d8.dev  user-login
   ```
 
 1. Create the Test environment:
@@ -136,7 +136,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 1. Download and install the latest stable release of the `devel` package from drupal.org:
 
   ```bash
-  terminus drush $TERMINUS_SITE.dev -- pm-download devel
+  terminus drush $TERMINUS_SITE.dev pm-download devel
   ```
 
 1. Review the file changes:
@@ -154,7 +154,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 1. Enable the modules:
 
   ```bash
-  terminus drush $TERMINUS_SITE.dev -- pm-enable devel devel_generate kint webprofiler -y
+  terminus drush $TERMINUS_SITE.dev pm-enable devel devel_generate kint webprofiler -y
   ```
 
   All of these modules are helpful during active development. We use Devel Generate later in this walkthrough to make nodes on the Live environment.
@@ -162,7 +162,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 1. If you haven't done so yet, sign into your Dev environment, where you will see a footer of helpful development information provided by the `webprofiler` module we just installed:
 
   ```bash
-  terminus drush $TERMINUS_SITE.dev -- user-login
+  terminus drush $TERMINUS_SITE.dev user-login
   ```
 
   <Image alt="The webprofiler toolbar" src="drupal8-commandline--webprofiler.png" />
@@ -170,7 +170,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 1. Export the configuration in the Dev environment:
 
   ```bash
-  terminus drush $TERMINUS_SITE.dev -- config-export -y
+  terminus drush $TERMINUS_SITE.dev config-export -y
   ```
 
   [Configuration management is a complex topic with its own detailed recommendations](/drupal-8-configuration-management/). For this guide, all you need to know is that by default, Drupal 8 configuration is stored in the database and can be cleanly exported to `yml` files. Once exported to files and committed to git, these configuration changes can be deployed to different environments (like Test and Live) where they can then be imported to the database.
@@ -196,19 +196,19 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 1. With the `yml` configuration files now present on the Test environment, they can be imported to the database there:
 
   ```bash
-  terminus drush $TERMINUS_SITE.test -- config-import -y
+  terminus drush $TERMINUS_SITE.test config-import -y
   ```
 
 1. Sign into Drupal in the Test environment to see the enabled modules:
 
   ```bash
-  terminus drush $TERMINUS_SITE.test -- user-login
+  terminus drush $TERMINUS_SITE.test user-login
   ```
 
 1. Sign into Drupal in the Live environment to see that the modules aren't there yet:
 
   ```bash
-  terminus drush $TERMINUS_SITE.live -- user-login
+  terminus drush $TERMINUS_SITE.live user-login
   ```
 
   Now that you are signed into all three environments you should be seeing the development footer in Dev and Test but not Live.
@@ -222,7 +222,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
 1. Import the configuration on the Live environment:
 
   ```
-  terminus drush $TERMINUS_SITE.live -- config-import -y
+  terminus drush $TERMINUS_SITE.live config-import -y
   ```
 
   Once this command completes you will be able to refresh the Live environment in your browser and see the development footer.
@@ -233,7 +233,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 1. As a demonstration of the typical workflow on Pantheon, let's create some content in Live using [the `generate-content` command](https://drushcommands.com/drush-8x/devel-generate/generate-content/):
 
   ```bash
-  terminus drush $TERMINUS_SITE.live -- generate-content 25
+  terminus drush $TERMINUS_SITE.live generate-content 25
   ```
 
 1. Copy the database and media files from Live into the Dev environment:
@@ -245,13 +245,13 @@ In the lifecycle of managing a site, you can expect content editors to add new m
 1. Make some configuration change on the Dev environment, such as enabling the [Views Glossary](https://www.drupal.org/project/views_glossary) module:
 
   ```bash
-  terminus drush $TERMINUS_SITE.dev -- views-enable glossary
+  terminus drush $TERMINUS_SITE.dev views-enable glossary
   ```
 
 1. Export the configuration change so it can be managed in code:
 
   ```
-  terminus drush $TERMINUS_SITE.dev -- config-export -y
+  terminus drush $TERMINUS_SITE.dev config-export -y
   ```
 
 1. Commit your code changes to the Dev environment:
@@ -269,7 +269,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
   ```bash
   terminus env:deploy $TERMINUS_SITE.test --sync-content --updatedb --cc --note="Deploying glossary View"
 
-  terminus drush $TERMINUS_SITE.test -- config-import -y
+  terminus drush $TERMINUS_SITE.test config-import -y
   ```
 
 1. Check the Test environment and visit `/glossary` and `/admin/content` again. You should see both the glossary View and a full list of content on the administrative page.
@@ -279,7 +279,7 @@ In the lifecycle of managing a site, you can expect content editors to add new m
   ```bash
   terminus env:deploy $TERMINUS_SITE.live --updatedb --cc --note="Deploying glossary View"
 
-  terminus drush $TERMINUS_SITE.live -- config-import -y
+  terminus drush $TERMINUS_SITE.live config-import -y
   ```
 
   With the change to the glossary View deployed and imported on the Live environment you should be able to see the glossary page (`/glossary`).

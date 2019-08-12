@@ -107,7 +107,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 You can migrate existing media files to S3 with the following command:
 
 ```bash
-terminus wp $site.dev -- s3-uploads migrate-attachments
+terminus wp $site.dev s3-uploads migrate-attachments
 ```
 
 Optionally, add the `--delete-local` flag to remove the local copies of the media files.

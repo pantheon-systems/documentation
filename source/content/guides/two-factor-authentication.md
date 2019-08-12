@@ -27,7 +27,7 @@ For a single site, there are many different [WordPress plugins for two-factor au
 4. Install and activate the [Duo Two-Factor Authentication](https://wordpress.org/plugins/duo-wordpress/) plugin on your WordPress site. You can do this through the WordPress admin panel, or with Terminus:
 
   ```bash
-  terminus remote:wp $SITENAME.dev -- plugin install duo-wordpress --activate
+  terminus remote:wp $SITENAME.dev plugin install duo-wordpress --activate
   ```
 
 5. Open the settings page for the Duo plugin. Configure Duo with your **integration key**, **secret key**, and **API hostname** from the Duo WordPress application you created earlier at duo.com:

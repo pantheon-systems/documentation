@@ -38,13 +38,13 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 2. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. To install via [Terminus](/terminus), [set the connection mode to SFTP](/sftp) then run:
 
     ```
-    terminus wp <site>.<env> -- plugin install wp-redis
+    terminus wp <site>.<env> plugin install wp-redis
     ```
 
     For site networks, you will need to specify the site URL by adding that to the command:
 
     ```
-    terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
+    terminus wp <site>.<env> plugin install wp-redis --url=<url>
     ```
 3. Create a new file named `wp-content/object-cache.php` that contains the following:
 
@@ -63,7 +63,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
     When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
 
     ```bash
-    terminus wp <site>.<env> -- plugin update wp-redis
+    terminus wp <site>.<env> plugin update wp-redis
     ```
 
 <Alert title="Note" type="info">
@@ -134,7 +134,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
     You can install and enable the module from the command line using [Terminus](/terminus):
 
     ```bash
-    terminus remote:drush <site>.<env> -- en redis -y
+    terminus remote:drush <site>.<env> en redis -y
     ```
 
 3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
@@ -176,7 +176,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 2. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
 
     ```bash
-    terminus remote:drush <site>.<env> -- en redis -y
+    terminus remote:drush <site>.<env> en redis -y
     ```
 
 3. Ignore the directions bundled with the Redis module. Pantheon automatically manages the following `settings.php`/`$conf`/`variable_get` items for you:

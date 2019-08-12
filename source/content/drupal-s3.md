@@ -97,14 +97,14 @@ Before you begin:
 Install the [Libraries API](https://www.drupal.org/project/libraries) and [S3 File System](https://www.drupal.org/project/s3fs) modules:
 
 ```
-terminus drush <site>.<env> -- en libraries s3fs -y
+terminus drush <site>.<env> en libraries s3fs -y
 ```
 Get the [AWS SDK Library 2.x](https://github.com/aws/aws-sdk-php/releases):
 
 ```
-terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make code/
+terminus drush <site>.<env> make --no-core sites/all/modules/s3fs/s3fs.make code/
   //or if you have a contrib subfolder for modules use:
-  //terminus drush <site>.<env> -- make --no-core sites/all/modules/contrib/s3fs/s3fs.make code/
+  //terminus drush <site>.<env> make --no-core sites/all/modules/contrib/s3fs/s3fs.make code/
 ```
 
 The above command will add the AWS SDK version 2.x library into the `sites/all/libraries/awssdk2` directory.
@@ -115,7 +115,7 @@ Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) m
 Install s3fs_cors module using Drush:
 
 ```
-terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
+terminus drush <site≥.<env> en jquery_update s3fs_cors -y
 ```
 
 </Tab>
@@ -191,14 +191,14 @@ Periodically, you'll need to run Actions provided by the S3 File System module e
 ###If you have files on S3 already that are not known to Drupal, refresh the files metadata cache:
 
 ```
-terminus drush <site>.<env> -- s3fs-refresh-cache
+terminus drush <site>.<env> s3fs-refresh-cache
 ```
 
 
 ### If you have files in Drupal that need inclusion with S3 run:
 
 ```
-terminus drush <site>.<env> -- s3fs-copy-local
+terminus drush <site>.<env> s3fs-copy-local
 ```
 
 If you receive an access denied error message from Amazon, check the permissions on your bucket and policies. Verify all your configuration settings in Drupal are complete and accurate.

@@ -254,7 +254,7 @@ Under the **Build** tab is a button labeled **Add build step**. These tasks will
 
     ```
     echo "Run database updates and clear cache"
-    terminus drush -n ${SITE_ID}.ci-${BUILD_ID} -- updatedb -y
+    terminus drush -n ${SITE_ID}.ci-${BUILD_ID} updatedb -y
     terminus drush ${SITE_ID}.ci-${BUILD_ID} cr
     ```
 

@@ -89,7 +89,7 @@ The majority of problems with LDAP on Pantheon come from misconfigurations. Pant
 Use the following script to troubleshoot a variety of configuration problems. Customize it with your settings, then place it in your site root with a name like ldap-test.php. This script requires PHP 7.1 to execute properly without PHP errors.  If you are connecting via a Pantheon Secure Integration, use the alternate $settings array below the full script instead.  You can execute it remotely using [Terminus](/terminus/) to fully bootstrap Drupal and include the environmental configurations from your settings.php:
 
 ```bash
-terminus drush <site>.<env> -- scr ldap-test.php
+terminus drush <site>.<env> scr ldap-test.php
 ```
 
 The entire script:

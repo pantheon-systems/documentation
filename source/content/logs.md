@@ -179,13 +179,13 @@ By default, Drupal logs events using the Database Logging module (dblog). PHP fa
 * Using [Terminus](/terminus/):
 
  ```bash
- terminus drush <site>.<env> -- watchdog-show
+ terminus drush <site>.<env> watchdog-show
  ```
 
  * Terminus can invoke Drush commands to "watch" events in real-time; `--tail` can be used to continuously show new watchdog messages until  interrupted (Control+C).
 
   ```bash
-  terminus drush <site>.<env> -- watchdog-show --tail
+  terminus drush <site>.<env> watchdog-show --tail
   ```
 
   <Alert title="Note" type="info">

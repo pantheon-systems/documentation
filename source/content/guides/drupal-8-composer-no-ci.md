@@ -172,13 +172,13 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 1. Use Terminus Drush to install Drupal:
 
    ```bash
-   terminus drush $PANTHEON_SITE_NAME.dev -- site-install -y
+   terminus drush $PANTHEON_SITE_NAME.dev site-install -y
    ```
 
 2. Log in to your new Drupal 8 site to verify it is working. You can get a one-time login link using Drush:
 
    ```bash
-   terminus drush $PANTHEON_SITE_NAME.dev -- uli
+   terminus drush $PANTHEON_SITE_NAME.dev uli
    ```
 
 ### Adding a New Module with Composer
@@ -214,7 +214,7 @@ To maintain best practice, some of the steps in this section require access to t
 4. Log in to your new environment and verify that the address module exists:
 
    ```bash
-   terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
+   terminus drush $PANTHEON_SITE_NAME.addr-module uli
    ```
 
    <Image alt="Image of installing address module" src="guides/drupal-8-composer-no-ci/drops-8-composer-drupal-8-address-module-install.png" />

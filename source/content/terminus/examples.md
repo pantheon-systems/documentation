@@ -151,7 +151,7 @@ terminus connection:set my-site.dev sftp
 Apply updates to all contrib projects:
 
 ```bash
-terminus drush my-site.dev -- pm-updatecode --no-core
+terminus drush my-site.dev pm-updatecode --no-core
 ```
 
 Commit contrib updates to the Dev environment:
@@ -173,13 +173,13 @@ terminus connection:set my-site.dev sftp
 Apply updates to all plugins:
 
 ```bash
-terminus wp my-site.dev -- plugin update --all
+terminus wp my-site.dev plugin update --all
 ```
 
 Apply updates to all themes:
 
 ```bash
-terminus wp my-site.dev -- theme update --all
+terminus wp my-site.dev theme update --all
 ```
 
 Commit plugin and theme updates to the Dev environment:

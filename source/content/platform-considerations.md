@@ -246,13 +246,13 @@ $databases['default']['default']['collation'] = 'utf8mb4_general_ci';
 Existing sites that already have an active database must install the [UTF8MB4 Convert](https://www.drupal.org/project/utf8mb4_convert) Drush command and convert the database. Note that this is not a Drupal module that can be enabled, it's a Drush command that should be placed within `/sites/all/drush`. Once you've installed the command in `/sites/all/drush`, you must clear Drush cache for the new command to run. Clear Drush cache using [Terminus](/terminus/):
 
 ```bash
-terminus drush <site>.<env> -- cc drush
+terminus drush <site>.<env> cc drush
 ```
 
 Start by making a [backup](/backups/) of the site database, then place the site in maintenance mode and run the following:
 
 ```bash
-terminus drush <site>.<env> -- utf8mb4-convert-databases
+terminus drush <site>.<env> utf8mb4-convert-databases
 ```
 
 This will convert the database tables in the existing installation to the proper encoding to support emoji characters. After making the conversion, test it out by placing an emoji in the site text.
