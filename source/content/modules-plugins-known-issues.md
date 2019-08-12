@@ -329,7 +329,7 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 
 The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migration/storage`, which is not permitted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
 
-**Solution**: You can create and download full backups from your [$1]($2backups/).
+**Solution**: You can create and download full backups from your [Dashboard](/backups/).
 
 <hr />
 
