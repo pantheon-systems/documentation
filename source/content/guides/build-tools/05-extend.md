@@ -29,7 +29,7 @@ This section will be performed from the command line, to prepare your local syst
 2. Open a terminal application and clone the GitHub repository (replace `<github-url>`):
 
     ```bash
-    git clone &lsaquo;github-url&rsaquo;
+    git clone <github-url>
     ```
 
 3. Navigate to the repository's root (replace `pantheon-d8-composer-project`):

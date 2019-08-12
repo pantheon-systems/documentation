@@ -32,7 +32,7 @@ After you've configured a WordPress Site Network in the Dev environment, you'll 
 4. From the command line, perform a `wp search-replace` on the Test environment's database via Terminus:
 
     ```bash
-    terminus wp &lsaquo;site&rsaquo;.test -- search-replace &lsaquo;dev-domain&rsaquo; &lsaquo;test-domain&rsaquo; --url=&lsaquo;dev-domain&rsaquo; --network
+    terminus wp <site>.test -- search-replace <dev-domain> <test-domain> --url=<dev-domain> --network
     ```
 
     Ensure the database connection error is resolved on the Test environment's URL.
