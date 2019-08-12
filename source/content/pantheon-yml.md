@@ -57,6 +57,12 @@ Ensure that your site will always use HTTPS to deliver content with `enforce_htt
 - `full+subdomains` - Redirect to HTTPS with a year-long HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
    - This is the recommended and most secure configuration.
 
+For example, to set `enforce_https` as `transitional`:
+
+```
+enforce_https: transitional
+```
+
 #### Considerations
 * Use of `full` or `full+subdomains` should be treated as a commitment. If your site is unable to serve HTTPS (e.g. by moving to a host that doesn't support HTTPS) after sending a long-duration HSTS header, visitors will be unable to access your site.
 * Any option with `+subdomains` should only be used if you want to enforce HTTPS for *all subdomains, even those not connected to Pantheon*.
@@ -144,7 +150,7 @@ When the same configuration value is defined in both files, the value from `pant
 
 ### "Changes to pantheon.yml detected, but there was an error while processing it"
 
-We will reject a commit that includes a `pantheon.yml` error, with a message like:
+The Platform will automatically reject a commit that includes a `pantheon.yml` error. The error message will resemble:
 
 ```
 remote: PANTHEON ERROR:
