@@ -39,7 +39,7 @@ We do not support uses of WordPress Site Networks that run functionally-differen
 
 - Software as a service (SAAS) products
 - Agencies using one WordPress installation to support several customers
-- WordPress Multi-Network installations where multiple domains can be added aside from subdomains and subdirectory
+- [WordPress Multi-Network](https://wordpress.org/plugins/wp-multi-network/) installations where multiple domains can be added aside from subdomains and subdirectories.
 
 ## Request a WordPress Site Network
 Running a WordPress Site Network requires a special configuration that is only available to contract customers with Performance or Elite sites. Only Pantheon employees have the ability to create the sites and add you to the team. Existing WordPress sites cannot be converted to a network, however they can be [migrated](/migrate-wordpress-site-networks/).
