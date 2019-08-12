@@ -491,7 +491,7 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 
 **Issue:** Site suddenly shows a white screen of death.
 
-**Solution**: Due to random maintenance where binding path changes from time to time, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Do not forget to [clear the cache from Pantheon](/clear-caches/) and [flush the Redis cache](/redis/#clear-cache).
+**Solution**: Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches/) and [flush the Redis cache](/redis/#clear-cache).
 
 <hr />
 
