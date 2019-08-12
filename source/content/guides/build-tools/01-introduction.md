@@ -58,7 +58,7 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 4. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
 
       ```bash
-      terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;
+      terminus auth:login --machine-token=<machine-token>
       ```
 
 5. Create the `$HOME/.terminus/plugins` directory if it does not already exist:

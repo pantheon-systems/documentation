@@ -40,13 +40,13 @@ Using [Terminus](/terminus/) is our recommended way to install a WordPress Site 
 2. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
 
     ```bash
-    terminus auth:login --machine-token=&lsaquo;machine-token&rsaquo;
+    terminus auth:login --machine-token=<machine-token>
     ```
 
 3. Make sure the site's connection mode is set to SFTP:
 
     ```bash
-    terminus connection:set &lsaquo;site&rsaquo;.dev sftp
+    terminus connection:set <site>.dev sftp
     ```
 
 4. Use Terminus to execute the `wp core multisite-install` command ([full documentation](https://developer.wordpress.org/cli/commands/core/multisite-install/)):
@@ -58,7 +58,7 @@ Using [Terminus](/terminus/) is our recommended way to install a WordPress Site 
   </Alert>
 
   ```bash
-  terminus wp &lsaquo;site&rsaquo;.&lsaquo;env&rsaquo; -- core multisite-install --url=&lsaquo;url&rsaquo; --title=&lsaquo;site-title&rsaquo; --admin_user=&lsaquo;username&rsaquo; --admin_email=&lsaquo;email&rsaquo;
+  terminus wp <site>.<env> -- core multisite-install --url=<url> --title=<site-title> --admin_user=<username> --admin_email=<email>
   ```
 
   When you install a new WordPress Site Network, you should see a success notice similar to this:
