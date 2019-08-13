@@ -36,10 +36,17 @@ In the Connection Information section of the dashboard, we can see a pattern abo
 ```
 <env>.<site-uuid>@<type>.<env>.<site-uuid>.drush.in
 ```
-| Type        | Env           | Site UUID                                                |
-|:---------- |:-------------------------- |:------------------------------------------------------- |
-| `appserver`, <br> `dbserver`         |  `dev`, `test`, `live`, `<multidev-env>`                      | ex. `c5c75825-5cd4-418e-8cb0-fb9aa1a7f671`, as found in `https://dashboard.pantheon.io/sites/<site-uuid>` |
 
+<dl>
+
+<dt
+
+</dl>
+
+| Type         | Env                                     | Site UUID                                                                                                 |
+|:------------ |:--------------------------------------- |:--------------------------------------------------------------------------------------------------------- |
+| `appserver`  | `dev`, `test`, `live`, `<multidev-env>` | ex. `c5c75825-5cd4-418e-8cb0-fb9aa1a7f671`, as found in `https://dashboard.pantheon.io/sites/<site-uuid>` |
+| `dbserver`   |                                         |                                                                                                           |
 
 ## Downloading Logs
 
