@@ -546,6 +546,7 @@ span#changelog-rsaquo {
 	.guide-doc-body {
 		border-left: none !important;
 		padding-left: 10px !important;
+		max-width: 995px;
 	}
 }
 @media (min-width: 995px) {
@@ -2230,7 +2231,6 @@ input.gsc-search-button:focus {
 }
 .guide-doc-body {
 	padding-left: 30px;
-	max-width: 995px;
 }
 /* .manual-toc {
   padding: 0px;
