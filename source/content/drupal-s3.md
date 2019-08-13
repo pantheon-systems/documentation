@@ -17,7 +17,9 @@ Be sure that you have:
 - Set up an account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 
 <Alert title="Note" type="info">
+
 When creating an AWS account, you will have to enter credit card information. This is required, but you will not be charged unless you exceed the usage limits of their free tier.
+
 </Alert>
 
 ## Configure S3 within the AWS Console
@@ -27,27 +29,30 @@ Before integrating S3 with Drupal, you'll need to configure the service within y
 If you do not have an existing bucket for your Drupal site, create one:
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **S3**.
-2. Click **Create Bucket**.
-<ol start="3"><li>Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3.
+1. Click **Create Bucket**.
 
- <Alert title="Note" type="info">
- After you create a bucket, you cannot change its name. The bucket name is visible in the URL that points to the objects stored in the bucket. Ensure that the bucket name you choose is appropriate.
- </Alert></li></ol>
+   - Enter a bucket name. The bucket name you choose must be unique across all existing bucket names in Amazon S3.
 
-4. Select a region and click **Create**.
-5. Select **Permissions** within the bucket properties and click **Add more permissions**.
-6. Choose a user and tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Save**.
+    <Alert title="Note" type="info">
+
+    After you create a bucket, you cannot change its name. The bucket name is visible in the URL that points to the objects stored in the bucket. Ensure that the bucket name you choose is appropriate.
+
+    </Alert>
+
+1. Select a region and click **Create**.
+1. Select **Permissions** within the bucket properties and click **Add more permissions**.
+1. Choose a user and tick the boxes for **Read** and **Write** access for both **Objects** and **Permissions**, then click **Save**.
 
 ### Create an Identity and Access Management Policy
 [Identity and Access Management (IAM)](https://aws.amazon.com/iam/) allows you to manage all user access to AWS resources and services. Creating a policy allows you to explicitly set limited privileges on your specific bucket. This strategy offers long-term flexibility for organizing and managing users and their privileges.
 
 1. From your [AWS Console](https://console.aws.amazon.com), click the **IAM** link.
-2. Go to **Policies** and click **Create Policy**.
-3. Select **Create your Own Policy**.
-4. Give it a name and use the code example code provided in Amazon's [Policy Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
-5. Choose **Amazon S3** for the AWS Service and select **All Actions**. Provide the [Amazon Resource Name](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-s3) for your bucket, and click **Next Step**.
-6. Edit the policy name and description (optional).
-7. Click **Create Policy**.
+1. Go to **Policies** and click **Create Policy**.
+1. Select **Create your Own Policy**.
+1. Give it a name and use the code example code provided in Amazon's [Policy Documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
+1. Choose **Amazon S3** for the AWS Service and select **All Actions**. Provide the [Amazon Resource Name](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-s3) for your bucket, and click **Next Step**.
+1. Edit the policy name and description (optional).
+1. Click **Create Policy**.
 
 For details, see [Example Policies for Administering AWS Resources](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html#iam-policy-example-s3).
 
@@ -55,27 +60,30 @@ For details, see [Example Policies for Administering AWS Resources](https://docs
 We recommend that you do not access an S3 bucket using your AWS root user credentials. Instead, create an IAM group and user:
 
 1. From your [AWS Console](https://console.aws.amazon.com), click **Identity & Access Management**.
-2. Click **Groups**, then **Create New Group**.
-3. Enter a descriptive group name and click **Next Step**.
-4. Filter policies by **Customer Managed Policies** and select your recently created policy.
-5. Click **Next Step**, then **Create Group**.
-6. Go to **Users** and click **Create New Users**.
-<ol start="7"><li>Provide a user name and click **Create**, then view the new user security credentials by clicking **Show User Security Credentials**.
+1. Click **Groups**, then **Create New Group**.
+1. Enter a descriptive group name and click **Next Step**.
+1. Filter policies by **Customer Managed Policies** and select your recently created policy.
+1. Click **Next Step**, then **Create Group**.
+1. Go to **Users** and click **Create New Users**.
 
-<Alert title="Note" type="info">
-You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time. You will need the access keys when configuring the S3 File System module
-</Alert></li></ol>
+    - Provide a user name and click **Create**, then view the new user security credentials by clicking **Show User Security Credentials**.
 
-8. Click **Download Credentials**. Make sure you save the credentials in a secure location before leaving this page.
-9. Go to the group created in step 5 and select **Add Users to Group**.
-10. Select your newly created user and click **Add Users**.
+     <Alert title="Note" type="info">
+
+     You can only view or download a user's secret access key immediately after the user has been created. This information cannot be accessed at a later point in time. You will need the access keys when configuring the S3 File System module
+
+     </Alert>
+
+1. Click **Download Credentials**. Make sure you save the credentials in a secure location before leaving this page.
+1. Go to the group created in step 5 and select **Add Users to Group**.
+1. Select your newly created user and click **Add Users**.
 
 ## Integrate S3 with Drupal
 You will need to install the appropriate Drupal module(s) and the AWS SDK library.
 
 <TabList>
 
-<Tab title="Drupal 7" id="d8tab1">
+<Tab title="Drupal 7" id="d7tab1">
 
 The following instructions use [Terminus](/terminus), Pantheon's CLI which allows you to call Drush remotely without using a local installation.
 
@@ -91,8 +99,9 @@ Before you begin:
  terminus connection:set <site>.<env> sftp
  ```
 
-### Install Required and Recommended Modules {.info}
-#### S3 File System {.info}
+### Install Required and Recommended Modules
+
+#### S3 File System
 
 Install the [Libraries API](https://www.drupal.org/project/libraries) and [S3 File System](https://www.drupal.org/project/s3fs) modules:
 
@@ -109,7 +118,7 @@ terminus drush <site>.<env> -- make --no-core sites/all/modules/s3fs/s3fs.make c
 
 The above command will add the AWS SDK version 2.x library into the `sites/all/libraries/awssdk2` directory.
 
-#### S3 File System CORS {.info}
+#### S3 File System CORS
 Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module to enhance your Drupal media handling and interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
 
 Install s3fs_cors module using Drush:
@@ -120,13 +129,7 @@ terminus drush <site≥.<env> -- en jquery_update s3fs_cors -y
 
 </Tab>
 
-<Tab title="Drupal 8" id="d7tab1">
-
-<Alert title="Warning" type="danger">
-
-As of the latest update to this doc, the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module appears to be uninstallable. Refer to [this bug report](https://www.drupal.org/project/s3fs_cors/issues/2852333) for more information.
-
-</Alert>
+<Tab title="Drupal 8" id="d8tab1" active={true}>
 
 Before you begin:
 
@@ -138,8 +141,9 @@ Before you begin:
 
  - Create a local clone of your site code, and navigate to it in your terminal.
 
-## Install Required and Recommended Modules {.info}
-#### S3 File System {.info}
+### Install Required and Recommended Modules
+
+#### S3 File System
 
 Install the [S3 File System](https://www.drupal.org/project/s3fs) module and AWS SDK version 3.x library using Composer.
 
@@ -155,7 +159,8 @@ Install the [S3 File System](https://www.drupal.org/project/s3fs) module and AWS
     composer require drupal/s3fs --prefer-dist
     ```
 
-#### S3 File System CORS {.info}
+#### S3 File System CORS
+
 Use the [S3 File System CORS Upload](https://www.drupal.org/project/s3fs_cors) module to enhance your Drupal media handling and interface with your S3 bucket by having your file uploads go directly to your S3 bucket.
 
 Install s3fs_cors module using Composer:
@@ -188,7 +193,7 @@ From `/admin/config/media/s3fs/cors`, set **CORS Origin** to your domain. There'
 ## Synchronizing the S3 Bucket and Drupal Files
 Periodically, you'll need to run Actions provided by the S3 File System module either via the admin or Terminus to sync Drupal with your S3 bucket.
 
-###If you have files on S3 already that are not known to Drupal, refresh the files metadata cache:
+### If you have files on S3 already that are not known to Drupal, refresh the files metadata cache:
 
 ```
 terminus drush <site>.<env> -- s3fs-refresh-cache
