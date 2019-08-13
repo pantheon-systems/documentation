@@ -18,8 +18,8 @@ While many of these steps are followed through the normal course of an Agency-Cl
 
 <Partial file="transfer-ownership-billing-steps.md" />
 
-## Send an Invitation to Pay to Your Client
-The Agency should follow these steps:
+## Send an Invitation to Pay to Share Preferred Pricing
+In order to share Preferred Pricing with a new client or to maintain Preferred Pricing through a plan change, the Agency should follow these steps:
 
 <Partial file="invite-to-pay.md" />
 
