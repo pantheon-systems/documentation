@@ -77,5 +77,5 @@ We include several tools to test that new content doesn't break the documentatio
 
 ### Merge Conflicts
 
-To check for merge conflict messages accidentally committed into the docs, run `merge_conflicts.sh` from `scripts`:
+To check for merge conflict messages accidentally committed into the docs, run `merge_conflicts.sh` from `scripts`.
 
