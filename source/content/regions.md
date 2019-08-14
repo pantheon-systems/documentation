@@ -36,7 +36,7 @@ With this set of EU-specific resources, now you can run WordPress or Drupal site
 
 [Create a new Site](/sites/) from the Dashboard and select the Region:
 
-![Select a Region from the Create Your Pantheon Site screen](/sour../images/dashboard/create-pantheon-site.png "Select a Region from the Create Your Pantheon Site screen")
+![Select a Region from the Create Your Pantheon Site screen](../images/dashboard/create-pantheon-site.png)
 
 ### Create a New Site in a Specific Region using Terminus
 
@@ -116,8 +116,6 @@ The output should look something like:
 curl -Is https://dev-rachel-whitton-eu2.pantheonsite.io | grep x-served-by
 x-served-by: cache-ams21041-AMS, cache-jfk8127-JFK
 ```
-
-Time to celebrate. Your site is running in the EU!
 
 ## Coming Soon
 
