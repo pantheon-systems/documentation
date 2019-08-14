@@ -16,7 +16,19 @@ When creating issues, add a clear title and description. Issues should contain r
 
 **Example**:
 Title: Apache Solr doc - Terminus command is not working
-Description: The document currently suggests using `XYZ` commands, but I get the following error (insert error message). The fix is to use `ABC` commands.
+Description:
+
+```
+Re: [Awesome doc with an issue](https://pantheon.io/docs/)
+
+Priority: Medium
+
+## Issue Description
+The document currently suggests using `XYZ` commands, but I get the following error (insert error message).
+
+## Suggested Resolution
+The fix is to use `ABC` commands.
+```
 
 ## Edit and Test Locally
 See [Local Installation](<README.md#local-installation>) for details.
@@ -63,7 +75,7 @@ Create a contributor profile within your **first** contribution. Fill out the in
   bio: Technical Content Editor
 ```
 
-Please provide at least "name" and "bio".
+Please provide at least `name` and `bio`.
 
 ## Submit a Pull Request
 When you're done making changes, [submit a pull request](https://github.com/pantheon-systems/documentation/compare/).
@@ -76,7 +88,7 @@ Some things to follow to help increase the chance that your pull request will be
 
 
 ## Moderator Expectations
-Moderators will review and comment on pull requests. We may suggest changes, improvements, or alternatives in which case the original contributor will be tagged directly so follow-up instructions are clear. There may be times where moderators will make commits to your fork directly for clarity and/or alignment with our [style guide](https://pantheon.io/docs/style-guide/).
+Moderators will review and comment on pull requests. We may suggest changes, improvements, or alternatives, in which case the original contributor will be tagged directly so follow-up instructions are clear. There may be times where moderators will make commits to your fork directly for clarity and/or alignment with our [style guide](https://pantheon.io/docs/style-guide/).
 
 ## Additional Resources
 
