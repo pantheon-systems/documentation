@@ -59,7 +59,7 @@ For sites purchased before August 1, 2018, Preferred Pricing will be locked in a
 ### When will prices change for existing sites?
 During the month of August, 2018, sites on legacy plans were automatically switched to a new equivalent plan. All sites switched over should have retained Preferred Pricing for the new plan for as long as they remain on that plan.
 
-### What new plan did my existing site migrate to in August?
+### To what new plans are legacy plans automatically migrated?
 All existing sites will have Preferred Pricing locked in for the plan they migrate to, and will retain the preferred price as long as they stay on that plan.
 
 | Legacy Plan | New Plan            | Preferred Price  |
