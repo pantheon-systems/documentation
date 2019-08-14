@@ -48,6 +48,18 @@ git@github.com:pantheon-systems/documentation.git
 cd documentation/gatsby
 npm install
 ```
+#### GitHub Token
+We use the [gatsby-remark-emebed-snippet](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-embed-snippet) to use files from GitHub in our docs. Before you can build a local development site, you need to provide a GitHub token to the environment:
+
+1. Log in to GitHub and go to <https://github.com/settings/tokens>
+1. Click Generate new token
+1. Give it a name and click the public_repo checkbox, then the Generate Token button at the bottom
+1. Copy the token to your clipboard.
+1. Create or edit `gatsby/.env.development` add it in (replace $TOKENHASH ):
+
+   ```
+   GITHUB_API=$TOKENHASH
+   ```
 
 ### Run
 
