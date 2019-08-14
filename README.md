@@ -73,4 +73,9 @@ You can view the local environment at `localhost:8000/`. Updates to docs are aut
 
 ## Testing
 
-Tests are performed automatically by our continuous integration service.
+We include several tools to test that new content doesn't break the documentation. Most of these tests are performed automatically by our continuous integration service, but pull requests created from external contributors aren't included in CI tests. If you want to manually test your branch, you can execute the following tests within the Docker container.
+
+### Merge Conflicts
+
+To check for merge conflict messages accidentally committed into the docs, run `merge_conflicts.sh` from `scripts`:
+
