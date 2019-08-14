@@ -8,7 +8,7 @@ const Download = ({ file }) => {
       className="script-file-header"
     >
       {file}
-      <a href={downloadPath} 
+      <a href={`https://pantheon.io/docs/scripts/${downloadPath}`}
         download
       >
         <button
