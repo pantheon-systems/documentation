@@ -102,7 +102,7 @@ When creating a new preset, if the "Division by Zero" warning appears, add the [
 Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`.
 
 ## Troubleshooting and FAQs
-#### How do I request the addiiton of a new library or a newer version of an existing library?
+#### How do I request the addition of a new library or a newer version of an existing library?
 Please [contact support](/support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
 
 #### Will you setup and configure the module/plugin for me?
