@@ -8,7 +8,7 @@ const Download = ({ file }) => {
       className="script-file-header"
     >
       {file}
-      <a href={`/scripts/${downloadPath}`}
+      <a href={`/docs//scripts/${downloadPath}`}
         download
       >
         <button
