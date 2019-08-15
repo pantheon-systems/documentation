@@ -95,7 +95,7 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
       sleep 5
     else
       printf "Displaying adjusted Rsync log \n \n"
-      cat ./multidev-log.txt | egrep '<|>|deleting' || true
+      cat ./multidev-log.txt | egrep '<|>|deleting|s|+' || true
       printf "\n"
       echo "Success: Deployed to $url"
       break
