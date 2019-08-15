@@ -8,14 +8,7 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 ## Who has access to Multidev?
 
-Multidev is available to all **accounts with [Gold support](/support/#support-features-and-response-times) and above**. This includes:
-
- - Enterprise organizations
- - EDU organizations
- - Pantheon Partner Program agencies (at the level of Pantheon Partner and above)
- - Direct Online customers
-
-Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management/) for more information about roles and permissions.
+Multidev is available to all **accounts with [Gold support](/support/#support-features-and-response-times) and above**. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management/) for more information about roles and permissions.
 
 Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us).
 
