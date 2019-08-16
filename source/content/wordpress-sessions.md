@@ -23,7 +23,7 @@ Warning: session_start(): user session functions not defined
 ```
 Plugins with session-using code are relying on PHP's default session manager, which is temporary files on local disk. Pantheon does not support this because it will not work properly in our distributed environment.
 
-## Varnish or caching is not working when a specific plugin or theme that uses `$_SESSIONS` is enabled
+### Varnish or caching is not working when a plugin or theme that uses `$_SESSIONS` is enabled
 
 Due to how caching and sessions work, sessions need to be uncached to work properly, and it is impossible use cached content when there are sessions in place. It would be best to use a cookie based solution to avoid a performance hit from uncached session pages.
 
@@ -37,12 +37,11 @@ The best way to determine which plugin or theme is not allowing caching is to us
 
 1. To check your theme, use your default theme (twentynineteen for example), and check for the cookie.
 
-1. To see if a plugin is breaking the cache, disable the plugins one by one. Do not forget to clear the cache from the Pantheon dashboard every time that you disable a plugin. The first plugin disabled which makes the cache work again is most likely the culprit.
+1. To see if a plugin is breaking the cache, disable the plugins one by one. Do not forget to [clear the cache](/clear-caches/) from the Pantheon dashboard every time that you disable a plugin. The first plugin disabled which makes the cache work again is most likely the culprit.
 
   Note: If you have a local copy of your site, you can search it for plugins that uses `session_start()` or `$_SESSIONS`, and start turning them off first.
 
 1. To check if a 3rd party must-use plugin or drop-in plugin is breaking the cache, temporarily remove the 3rd party must-use plugins and leave only the `Pantheon` and `WP Native PHP Sessions`. There should be no drop-ins in place.
-
 
 ### Install WordPress Native PHP Sessions Plugin
 If `$_SESSIONs` are necessary for your application, install the [WordPress Native PHP Sessions](https://wordpress.org/plugins/wp-native-php-sessions) plugin:
