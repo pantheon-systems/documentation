@@ -2,14 +2,16 @@ import React from "react"
 import './style.css';
 
 const Download = ({ file }) => {
-  const downloadPath = `${file}`
+  const downloadPath = `https://raw.githubusercontent.com/pantheon-systems/documentation/master/source/scripts/${file}`
   return (
     <div
       className="script-file-header"
     >
       {file}
-      <a href={`/docs/scripts/${downloadPath}`}
+      <a href={downloadPath}
         download
+        download={file}
+        target="_blank"
       >
         <button
           className="btn btn-default btn-download"
@@ -19,7 +21,7 @@ const Download = ({ file }) => {
             aria-hidden="true"
           >
           </i>
-          Download Script
+          &nbsp; Download Script
         </button>
       </a>
     </div>
