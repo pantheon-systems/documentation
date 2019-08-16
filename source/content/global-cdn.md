@@ -22,7 +22,7 @@ Finally, the Global CDN includes interfaces to dynamically expire selected conte
 
 In early testing we saw multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US. International users will benefit even more:
 
-![Example before and after page load time](/assets/images/global-cdn-time-to-load.png)
+![Example before and after page load time](../images/global-cdn-time-to-load.png)
 
 ## Eligibility
 All sites are eligible. Upgrade to the Global CDN to reduce HTTPS costs and take advantage of its superior features and performance.
@@ -77,37 +77,41 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
 ### Upgrade Your Site
 
 1. From the Site Dashboard, click the **Start Upgrade** button in the <span class="glyphicons glyphicons-global"></span> Domains / HTTPS section of the <span class="glyphicons glyphicons-cardio"></span> Live tab.
-2. It can take up to an hour for the new certificate to deploy across the entire CDN. If you want to avoid any possible hiccoughs you can wait 60 minutes before updating DNS.
+1. It can take up to an hour for the new certificate to deploy across the entire CDN. If you want to avoid any possible hiccoughs you can wait 60 minutes before updating DNS.
 
   If you want to proceed without waiting, we strongly recommend testing locally before making the final DNS change:
 
-      1. Click the "Details" button next to your site's bare domain.
-      2. Copy the "A" record's IP address provided for the site's bare domain.
-      3. Add a line to your [local hosts file](/hosts-file/) with the IP address from the previous step followed by the domain name, for example:
+    1. Click the "Details" button next to your site's bare domain.
+    1. Copy the "A" record's IP address provided for the site's bare domain.
+    1. Add a line to your [local hosts file](/hosts-file/) with the IP address from the previous step followed by the domain name, for example:
 
-        ```
-        192.123.456.789 example.com
-        ```
+    ```
+    192.123.456.789 example.com
+    ```
 
-      4. Test HTTPS locally by entering your domain in the browser. If the site is accessible over HTTPS with a <span class="secure glyphicons glyphicons-lock"></span> [Secure status](https://support.google.com/chrome/answer/95617?hl=en), the test was successful. Remove the edits made to your hosts file once you have finished testing.
+  4. Test HTTPS locally by entering your domain in the browser. If the site is accessible over HTTPS with a <span class="secure glyphicons glyphicons-lock"></span> [Secure status](https://support.google.com/chrome/answer/95617?hl=en), the test was successful. Remove the edits made to your hosts file once you have finished testing.
 
 
 3. Click **Details** next to each custom domain to identify DNS values needed to point the domain to your site. Domains that are not yet configured will indicate action is required. You will need to configure your DNS host to use the provided values.
 
    **Terminology:** Terms you will see beside your domains and what they mean:
 
-      - **Upgrade to CDN** - This means the domain is routing to our legacy infrastructure. Click **Upgrade to CDN** or **Details** to check and update the DNS recommendations
-      - **Setup Required** - This can mean several things; click **Setup Required** or **Details** to get more details
-      - **Launched** - Your domain successfully routes to the Pantheon Platform, and you got your free Let's Encrypt SSL cert. You're good to go!
+    - **Upgrade to CDN**: This means the domain is routing to our legacy infrastructure. Click **Upgrade to CDN** or **Details** to check and update the DNS recommendations
+    - **Setup Required**: This can mean several things; click **Setup Required** or **Details** to get more details
+    - **Launched**: Your domain successfully routes to the Pantheon Platform, and you got your free Let's Encrypt SSL cert. You're good to go!
 
     <Alert title="Pro Tip" type="info">
-    Look up your DNS host with this free web tool: <a class="external" href="https://mxtoolbox.com/DNSLookup.aspx">https://mxtoolbox.com/DNSLookup.aspx</a>
+
+    Look up your DNS host with this free web tool: [https://mxtoolbox.com/DNSLookup.aspx](https://mxtoolbox.com/DNSLookup.aspx)
+
     </Alert>
 
   DNS records are cached across the internet and can take up to 72 hours to propagate, depending on the time to live (TTL) configured for the domain's DNS records. Most records update more quickly, and you can track the progress of DNS propagation.
 
-    <Alert tile="Pro Tip" type="info">
-    Check the current state of DNS propagation from different parts of the world using this free web tool <a class="external" href="https://www.whatsmydns.net/">https://www.whatsmydns.net/</a>
+    <Alert title="Pro Tip" type="info">
+
+    Check the current state of DNS propagation from different parts of the world using this free web tool [https://www.whatsmydns.net](https://www.whatsmydns.net)
+
     </Alert>
 
 4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/guides/launch/redirects/).
