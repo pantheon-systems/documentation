@@ -41,12 +41,20 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-transformer-remark`,
       options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destignationDir: f => `scripts/${f.name}`,
+            },
+          },
+        ],
+      },
         path: `${__dirname}/../source/scripts`,
         name: `scripts`,
       },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

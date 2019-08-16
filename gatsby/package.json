@@ -24,6 +24,7 @@
     "gatsby-plugin-react-helmet": "^3.0.9",
     "gatsby-plugin-sharp": "^2.2.6",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-remark-copy-linked-files": "^2.1.6",
     "gatsby-remark-embed-markdown": "0.0.4",
     "gatsby-remark-embed-video": "^1.7.1",
     "gatsby-remark-external-links": "0.0.4",
