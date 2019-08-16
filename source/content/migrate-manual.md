@@ -25,9 +25,9 @@ Site migrations are one of the services offered by our [Professional Services](/
 ## Before You Begin
 To ensure a successful migration, complete the following tasks on the source site before you start:
 
-- Read [Platform Considerations](/docs/platform-considerations/)
-- Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/docs/modules-plugins-known-issues/)
-- Make sure your code is compatible with PHP 7.2. If not, be prepared to [adjust PHP versions](/docs/php-versions/#configure-php-version)
+- Read [Platform Considerations](/platform-considerations/)
+- Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues/)
+- Make sure your code is compatible with PHP 7.2. If not, be prepared to [adjust PHP versions](/php-versions/#configure-php-version)
 - Upgrade to the latest version of WordPress or Drupal core
 - Clear all caches
 - Remove unneeded code, database tables, and files
@@ -267,53 +267,53 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 4. Click **Import** and add your archive accordingly (based on file size):
 
   <TabList>
-  
+
   <Tab title="Up to 100MBs" id="100mbs" active={true}>
-  
+
   If your archive is under 100MB, you can upload the file directly:
-  
+
    1. In the **MySQL database** field, click **File**, then **Choose File**.
 
    2. Select your local archive file, then press **Import**.
-  
+
      ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
-  
+
   </Tab>
-  
+
   <Tab title="Up to 500MBs" id="500mbs">
-  
+
   If your archive is less than 500MB, you can import it from URL:
-  
+
    1. In the **MySQL database** field, click **URL**.
 
    2. Paste a publicly accessible URL for the `.sql.gz` file, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
-  
+
       ![Import MySQL Database from URL](../images/dashboard/import-mysql-url.png)
-  
+
   </Tab>
-  
+
   <Tab title="Over 500MBs" id="500mbsplus">
-  
+
   The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Pro or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access/).
-  
+
    1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
-  
+
       ```
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
       ```
-  
+
    2. From your terminal, `cd` into the directory containing your `.sql` file. Paste the connection string and append it with: `< database.sql`. Your command will look like:
-  
+
       ```
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
       ```
-  
+
     If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
-  
+
    3. After you run the command, the `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
-  
+
   </Tab>
-  
+
   </TabList>
 
 ## Upload Your Files
