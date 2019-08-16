@@ -25,7 +25,7 @@ If you are also developing locally and need to configure WordPress for your desk
 
 <Accordion title="View Pantheon's WordPress Configuration" id="pantheon-wp-config-php" icon="wrench">
 
-GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php GITHUB-EMBED
+GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php php GITHUB-EMBED
 
 </Accordion>
 
