@@ -23,8 +23,11 @@ Site migrations are one of the services offered by our [Professional Services](/
 </Alert>
 
 ## Before You Begin
-To ensure a successful migration, complete the following tasks on the source site first:
+To ensure a successful migration, complete the following tasks on the source site before you start:
 
+- Read [Platform Considerations](/platform-considerations/)
+- Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues/)
+- Make sure your code is compatible with PHP 7.2. If not, be prepared to [adjust PHP versions](/php-versions/#configure-php-version)
 - Upgrade to the latest version of WordPress or Drupal core
 - Clear all caches
 - Remove unneeded code, database tables, and files
@@ -58,6 +61,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 3. Name your site and select an [Organization](/organizations/) (optional), then click **Create Site**:
 
     ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
+
 4.  Click the link to manually migrate your site then select **Yes** to confirm:
 
   <TabList>
@@ -95,13 +99,53 @@ Your **code** is all custom and contributed modules or plugins, themes, and libr
 
 ### Using an SFTP Client
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
-2. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
-3. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
+
+1. Click **<span class="glyphicons glyphicons-info-sign"></span> SFTP Connection Info** to access the credentials for connecting to your preferred SFTP client.
+
+1. Click **Open in your default SFTP client**, and enter your User Dashboard password when prompted.
 
   If you run into issues, please refer to [this documentation](/sftp/#sftp-connection-information).
 
-4. Upload your existing site's plugins, modules, and themes to the `code` directory. Do not overwrite WordPress or Drupal core files on your Pantheon site.
-5. Return to the Site Dashboard on Pantheon, and you should see quite a few files ready to be committed to version control. Write a commit message such as "Import existing codebase" then click **Commit**.
+1. Upload your existing site's plugins, modules, and themes to the `code` directory. Do not overwrite WordPress or Drupal core files on your Pantheon site.
+
+  <TabList>
+
+  <Tab title="WordPress" id="wp-code" active={true}>
+
+  Copy the following directories:
+
+   - `wp-content/themes`
+   - `wp-content/plugins`
+   - Any other folders under `wp-content` that are *not* `wp-content/uploads`.
+
+  </Tab>
+
+  <Tab title="Drupal 7" id="d7-code">
+
+  Copy all files and folders inside the `/sites` folder, *except* `/sites/default/files`.
+
+  Refer to the "Custom and contrib parts of your Drupal project" section of [Basic Directory Structure of a Drupal 7 Project](https://www.drupal.org/node/2621480) for more details.
+
+  </Tab>
+
+  <Tab title="Drupal 8" id="d8-code">
+
+  Copy the following directories:
+
+   - `/libraries`
+   - `/modules`
+   - `/profile`
+   - `/themes`
+   - `/vendor`
+   - `/sites`, excluding `sites/default/files`.
+
+  Refer to the "Base-Level Directories" section of [Drupal 8 Directory Structure](https://www.drupal.org/docs/8/understanding-drupal-8/directory-structure) for more details.
+
+  </Tab>
+
+  </TabList>
+
+1. Return to the Site Dashboard on Pantheon, and you should see quite a few files ready to be committed to version control. Write a commit message such as "Import existing codebase" then click **Commit**.
 
 ### From the Command Line with Git
 1. Navigate to your existing site's code directory in a local terminal. If your existing code is _not_ already version controlled with Git, create a repository and add an initial commit:
@@ -223,53 +267,53 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 4. Click **Import** and add your archive accordingly (based on file size):
 
   <TabList>
-  
+
   <Tab title="Up to 100MBs" id="100mbs" active={true}>
-  
+
   If your archive is under 100MB, you can upload the file directly:
-  
+
    1. In the **MySQL database** field, click **File**, then **Choose File**.
 
    2. Select your local archive file, then press **Import**.
-  
+
      ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
-  
+
   </Tab>
-  
+
   <Tab title="Up to 500MBs" id="500mbs">
-  
+
   If your archive is less than 500MB, you can import it from URL:
-  
+
    1. In the **MySQL database** field, click **URL**.
 
    2. Paste a publicly accessible URL for the `.sql.gz` file, and press **Import**. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your archive properly.
-  
+
       ![Import MySQL Database from URL](../images/dashboard/import-mysql-url.png)
-  
+
   </Tab>
-  
+
   <Tab title="Over 500MBs" id="500mbsplus">
-  
+
   The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Pro or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access/).
-  
+
    1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
-  
+
       ```
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon
       ```
-  
+
    2. From your terminal, `cd` into the directory containing your `.sql` file. Paste the connection string and append it with: `< database.sql`. Your command will look like:
-  
+
       ```
       mysql -u pantheon -p{random-password} -h dbserver.dev.{site-id}.drush.in -P {site-port} pantheon < database.sql
       ```
-  
+
     If you encounter a connection-related error, the DB server could be in sleep mode. To resolve this, load the site in your browser to wake it up, and try again. For more information, see [Troubleshooting MySQL Connections](/mysql-access/#troubleshooting-mysql-connections).
-  
+
    3. After you run the command, the `.sql` file is imported to the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment.
-  
+
   </Tab>
-  
+
   </TabList>
 
 ## Upload Your Files
