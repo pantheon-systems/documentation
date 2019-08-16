@@ -38,7 +38,8 @@ log-format %^ - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T ~h{," }
 ```
 
 ## Automate GoAccess Reports
-Download the following script to quickly pull a site's nginx log file and create an HTML report using GoAccess:
+
+Copy the following script to quickly pull a site's nginx log file and create an HTML report using GoAccess. You can use <i class="fa fa-code"> View Raw</i> to open the file in a new window or tab:
 
 <Download file="access_getlogs.sh" />
 

@@ -17,11 +17,11 @@ const Download = ({ file }) => {
           className="btn btn-default btn-download"
         >
           <i
-            className="fa fa-download"
+            className="fa fa-code"
             aria-hidden="true"
           >
           </i>
-          &nbsp; Download Script
+          &nbsp; View Raw
         </button>
       </a>
     </div>
