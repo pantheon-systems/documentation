@@ -31,17 +31,11 @@ When appservers are migrated as a regular part of platform maintenance, log file
 ## Access Logs Via SFTP
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
-In the Connection Information section of the dashboard, we can see a pattern about the hostnames: 
+In the Connection Information section of the dashboard, we can see a pattern about the hostnames:
 
 ```
 <env>.<site-uuid>@<type>.<env>.<site-uuid>.drush.in
 ```
-
-<dl>
-
-<dt
-
-</dl>
 
 | Type         | Env                                     | Site UUID                                                                                                 |
 |:------------ |:--------------------------------------- |:--------------------------------------------------------------------------------------------------------- |
@@ -85,15 +79,15 @@ You now have a local copy of the logs directory, which contains the following:
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
 3. Edit and execute the command by replacing `appserver` with `dbserver`:
 
-From:
-  ```
-   sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
-  ```
+ From:
+ ```
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
+ ```
 
-To:
-  ```
-   sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
-  ```
+ To:
+ ```
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
+ ```
 
 4. Run the following SFTP command in terminal:
 
