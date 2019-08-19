@@ -112,12 +112,12 @@ Bold is used for navigational elements within a given interface:
 
 <Example>
 
-Go to **Account** > **Secutiry** > **Personal Access Tokens**.
+Go to **Account** > **Security** > **Personal Access Tokens**.
 
 <hr className="source-code" />
 
 ```markdown
-Go to **Account** > **Secutiry** > **Personal Access Tokens**.
+Go to **Account** > **Security** > **Personal Access Tokens**.
 ```
 
 </Example>
