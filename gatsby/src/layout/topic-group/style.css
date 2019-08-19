@@ -1,0 +1,17 @@
+.topic-groups hr{
+  background: transparent;
+  border: none;
+  margin: 0;
+  width: 100%;
+  clear: both;
+}
+.topic-groups h3{
+  min-height: 30px;
+}
+.topic-groups > h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 28px;
+}
+.topic-groups > h2 {
+  font-family: "Open Sans", sans-serif;
+}

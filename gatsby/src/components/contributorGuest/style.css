@@ -1,0 +1,22 @@
+.guest-contributor {
+  margin: 20px 0px 20px 0px;
+  border: 1px solid #ddd;
+}
+.preview-info__img img {
+  margin: 20px;
+  border-radius: 50% !important;
+  height: auto;
+  border: none !important;
+  width: 150px;
+  padding: unset !important;
+}
+.media-body__featured {
+  padding: 15px;
+  display: table;
+  min-width: 250px;
+}
+.media-heading h3 a,
+.media-heading h3 {
+  font-weight: bold;
+  font-family: "TabletGothic";
+}

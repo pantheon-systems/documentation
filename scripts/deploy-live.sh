@@ -8,30 +8,30 @@
 
 
 # Migrate paginated files to avoid .html within the URLs
-for file in output_prod/docs/changelog/page/*html
-do
-  name="$(basename "$file" .html)"
-  mkdir -p output_prod/docs/changelog/page/"$name"
-  mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
-done
-# Don't index changelog backscroll
-for file in output_prod/docs/changelog/page/*/index.html
-do
-  sed -i '61i\'"        <meta name=\"robots\" content=\"noindex\">"'\' $file
-done
+##for file in output_prod/docs/changelog/page/*html
+#do
+#  name="$(basename "$file" .html)"
+#  mkdir -p output_prod/docs/changelog/page/"$name"
+#  mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
+#done
+## Don't index changelog backscroll
+#for file in output_prod/docs/changelog/page/*/index.html
+#do
+#  sed -i '61i\'"        <meta name=\"robots\" content=\"noindex\">"'\' $file
+#done
 
 #===============================================================#
 # Authenticate Terminus  and create json dump of help output    #
 #===============================================================#
-~/.composer/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
-~/.composer/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
-curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
+#~/.composer/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
+#~/.composer/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
+#curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
 
 #===============================================================#
 # Deploy modified files to production                           #
 #===============================================================#
 touch ./deployment-log.txt
-rsync --checksum --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=./deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
+rsync --checksum --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=./deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     printf "\n Displaying adjusted Rsync log: \n\n"

@@ -1,0 +1,14 @@
+.flex-panel-item-guides-landing {
+  flex: 1 48%;
+  margin: 0px 0px 15px 15px;
+  color: #333;
+}
+
+.flex-panel-body-pantheon-workflows {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.flex-panel-body-pantheon-workflows > a:hover {
+  text-decoration: none !important;
+}

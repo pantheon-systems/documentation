@@ -1,0 +1,68 @@
+
+WordPress sites with custom domains configured on multiple environments may see references to the wrong platform domain after cloning the database from one environment to another.
+
+The Site Dashboard runs `wp search-replace` during the cloning workflow to update environment URLs automatically. This operation, however, only runs once on a single set of URLs. If the target environment has a custom domain (e.g `test.example.com`), it's used to replace the source environment's custom domain (e.g. `www.example.com`). This can cause the target environment to have incorrect references to platform domains (e.g. `live-example.pantheonsite.io`).
+
+
+You can resolve this using one of two methods:
+
+
+<TabList>
+
+<Tab title="Terminus" id="terminus-replace-anchor" active={true}>
+
+Using [Terminus](/terminus), you can run an additional `wp search-replace` command on the target environment after cloning. Set or replace the variables `$site` and `$env` with your site name and the correct environment:
+
+
+```bash
+terminus remote:wp $site.$env -- search-replace "://live-example.pantheonsite.io" "://test.example.com" --all-tables --verbose
+```
+
+The following example also converts the URL from HTTP to HTTPS, for situations where you might have HTTPS in one environment and not another:
+
+
+```bash
+terminus remote:wp $site.$env -- search-replace "http://live-example.pantheonsite.io" "https://test.example.com" --all-tables --verbose
+```
+
+</Tab>
+
+<Tab title="Quicksilver" id="quicksilver-replace-anchor">
+
+For those using [Quicksilver](/quicksilver/) scripts, consider the following example. On each `passthru` line, replace `example#.pantheonsite.io` and `example.com` with the domains you want to find and replace, respectively:
+
+
+```php
+<?php
+echo "Replacing previous environment urls with new environment urls... \n";
+
+if ( ! empty( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  switch( $_ENV['PANTHEON_ENVIRONMENT'] ) {
+    case 'live':
+      passthru('wp search-replace "://test-example.pantheonsite.io" "://example.com" --all-tables ');
+      break;
+    case 'test':
+      passthru('wp search-replace "://example1.pantheonsite.io" "://test-examplesite.pantheonsite.io" --all-tables ');
+      passthru('wp search-replace "://example2.pantheonsite.io" "://test-examplesite.pantheonsite.io" --all-tables ');
+      passthru('wp search-replace "://example3.pantheonsite.io" "://test-examplesite.pantheonsite.io" --all-tables ');
+      break;
+  }
+}
+?&gt;
+```
+
+The example above replaces three URLs when cloning to the test environment with `test-examplesite.pantheonsite.io`, and replaces that domain with the example [custom domain](/domains/#custom-domains) `example.com` when cloning to the live environment.
+
+
+You can find this example and many others in the [Quicksilver Examples](https://github.com/pantheon-systems/quicksilver-examples) repo.
+
+
+</Tab>
+
+</TabList>
+
+<Alert title="Note" type="info">
+
+In addition to the style above, URLs may be stored in an encoded format. If the example above fails to resolve all issues, search for patterns like `%3A%2F%2Fexample.com` and `:\/\/example.com`.
+
+</Alert>

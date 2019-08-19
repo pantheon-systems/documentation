@@ -56,46 +56,46 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   fi
 
 
-  printf "Update redirect logic for the Multidev environment \n"
-  export avoid_redirect="window.location.hostname == '$hostname' ||"
-  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
-  sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
-
-  printf "Update CTA edit link so that the current branch is used \n"
-  sed -i '50s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
-  sed -i '52s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
-  sed -i '29s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/terminuspage.html
-  sed -i '31s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/terminuspage.html
-  sed -i '16s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/video.html
-  sed -i '32s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/guide.html
-  sed -i '34s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/guide.html
-
-
-  printf "Regenerate sculpin to reflect new redirect logic \n"
-  /documentation/bin/sculpin generate --env=prod --quiet
-
-  printf "Migrate paginated files to avoid .html within the URLs \n"
-  for file in output_prod/docs/changelog/page/*html
-  do
-    name="$(basename "$file" .html)"
-    mkdir -p output_prod/docs/changelog/page/"$name"
-    mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
-  done
-  printf "Create json dump of terminus help for docs/terminus/commands \n"
-  ~/.composer/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
-  curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
+#  printf "Update redirect logic for the Multidev environment \n"
+#  export avoid_redirect="window.location.hostname == '$hostname' ||"
+#  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
+#  sed -i '13i\'"      ${avoid_redirect}"'\' source/_views/contrib.html
+#
+#  printf "Update CTA edit link so that the current branch is used \n"
+#  sed -i '50s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
+#  sed -i '52s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/doc.html
+#  sed -i '29s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/terminuspage.html
+#  sed -i '31s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/terminuspage.html
+#  sed -i '16s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/video.html
+#  sed -i '32s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/guide.html
+#  sed -i '34s/master/'"$CIRCLE_BRANCH_SLUG"'/g' source/_views/guide.html
+#
+#
+#  printf "Regenerate sculpin to reflect new redirect logic \n"
+#  /documentation/bin/sculpin generate --env=prod --quiet
+#
+#  printf "Migrate paginated files to avoid .html within the URLs \n"
+#  for file in output_prod/docs/changelog/page/*html
+#  do
+#    name="$(basename "$file" .html)"
+#    mkdir -p output_prod/docs/changelog/page/"$name"
+#    mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
+#  done
+#  printf "Create json dump of terminus help for docs/terminus/commands \n"
+#  ~/.composer/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
+#  curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
   # rsync output_prod/* to Valhalla
 
   printf "Copy docs to multidev environment.. \n"
   touch ./multidev-log.txt
   while true
   do
-    if ! rsync -vvv --checksum --delete-after -rtlz --ipv4 --log-file=multidev-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
+    if ! rsync --checksum --delete-after -rtlz --ipv4 --log-file=multidev-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
       echo "Failed, retrying..."
       sleep 5
     else
       printf "Displaying adjusted Rsync log \n \n"
-      cat ./multidev-log.txt | egrep '<|>|deleting' || true
+      cat ./multidev-log.txt | egrep '<|>|deleting|' || true
       printf "\n"
       echo "Success: Deployed to $url"
       break
