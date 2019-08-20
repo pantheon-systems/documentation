@@ -126,7 +126,7 @@ Yes, but only if at least one other file (e.g. `settings.php`) is present within
 
 Depending on your use case, there are three possibilities:
 
- - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, or Live. See our [redirects](/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
+ - For web only actions, like redirects, check for the existence of `$_ENV['PANTHEON_ENVIRONMENT']`. If it exists, it will contain a string with the current environment (Dev, Test, Live, or Multidev environment names if they are present). See our [redirects](/domains/#redirect-to-https-and-the-primary-domain) guide for examples.
 
   <Alert title="Note" type="info">
   
