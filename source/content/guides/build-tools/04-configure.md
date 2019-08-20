@@ -2,21 +2,16 @@
 title: Build Tools
 subtitle: Manage Configuration
 description: In step four of the Build Tools guide, learn how to manage your site configuration.
-buildtools: true
 anchorid: configure
-generator: pagination
 layout: guide
-type: guide
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/configure/
 nexturl: guides/build-tools/extend/
 previousurl: guides/build-tools/new-pr/
 editpath: build-tools/04-configure.md
 image: buildToolsGuide-thumb
+contributors: [szipfel]
 ---
+
 In this lesson, we'll use the Configuration Management system within the Drupal Admin interface to set block placements for our example site. Continuing from the previous step, we'll be working in the feature branch environment, not Dev.
 
 <Accordion title="Configuration Management" id="understand-config" icon="lightbulb">
@@ -28,29 +23,35 @@ After making configuration changes in the Admin interface, settings are updated 
 
 </Accordion>
 
+1. As a site administrator, navigate to **Extend** and search for "Config Direct Save". Enable the module and save.
+
+  ![Install Module Config Direct Save](../../../images/pr-workflow/install-module.png)
+
+  This module is required for the following steps.
+
 1. As a site administrator, navigate to **Structure** > **Block layout**. Disable the **Tools** block and move the **Search** block to the header. Save your changes with the **Save blocks** button at the bottom of the page.
 
   ![Block placements](../../../images/pr-workflow/block-placements.png)
 
-2. Go to **Configuration** > **Development** > **Configuration Synchronization**:
+1. Go to **Configuration** > **Development** > **Configuration Synchronization**:
 
   ![Configuration synchronization](../../../images/pr-workflow/configuration-synchronize-warning.png)
 
   Note the warning displayed on this page about modified configuration. This means that your recent configuration changes would be erased if you synchronized your configuration at this time.
 
-3. Click **Update** and select the **sync** source, then click **Update configuration** to export configuration changes from the database to yaml files in your site's codebase:
+1. Click **Update** and select the **sync** source, then click **Update configuration** to export configuration changes from the database to yaml files in your site's codebase:
 
   ![Update configuration](../../../images/pr-workflow/update-configuration.png)
 
-4. Return to your open Pull Request in GitHub and use the link provided in the comment to open the associated Multidev environment on the Pantheon Site Dashboard:
+1. Return to your open Pull Request in GitHub and use the link provided in the comment to open the associated Multidev environment on the Pantheon Site Dashboard:
 
   ![Visit multidev environment](../../../images/pr-workflow/visit-multidev.png)
 
-5. The sync operation made changes to a number of configuration files that we now need to commit to version control. Enter a message describing the configuration change and click **Commit**:
+1. The sync operation made changes to a number of configuration files that we now need to commit to version control. Enter a message describing the configuration change and click **Commit**:
 
   ![Commit exported config](../../../images/pr-workflow/commit-export.png)
 
-6. Return to your open Pull Request in GitHub. Note that your commit has been added to this Pull Request, and the CircleCI status indicates that your tests are running:
+1. Return to your open Pull Request in GitHub. Note that your commit has been added to this Pull Request, and the CircleCI status indicates that your tests are running:
 
   ![Commit exported config](../../../images/pr-workflow/commit-added.png)
 
