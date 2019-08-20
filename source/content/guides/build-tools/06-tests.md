@@ -30,7 +30,7 @@ The following is an example of how to increase test coverage for your project by
     git pull origin slogan
     ```
 
-2.  Create the directory `tests/site-features` and add a new file called `slogan.feature` containing:
+2.  Create the directory `tests/behat/site-features` and add a new file called `slogan.feature` containing:
 
     ```bash
     Feature: Confirm that configuration was applied
