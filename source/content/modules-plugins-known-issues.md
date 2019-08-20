@@ -167,6 +167,11 @@ Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/
 3. Clear caches on the Dev environment. The first action to populate cache will take longer than subsequent requests.
 
 You can modify this patch according to your needs, such as performing an operation post upload and/or specifying a particular cache bin.
+<hr />
+
+### [JS](https://www.drupal.org/project/js)
+**Issue**: This module requires modification of the site's `.htaccess` or `nginx.conf` file, which cannot be modified on the platform. While using `settings.php` can sometimes be effective as a means of implementing redirects, because `POST` data needs to be preserved, it is not possible to implement redirects at the application layer in a way that would allow this module to function as intended.
+<hr />
 
 ### [LiveReload](https://www.drupal.org/project/livereload)
 **Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7 and Drupal 8.
