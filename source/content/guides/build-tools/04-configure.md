@@ -30,7 +30,7 @@ After making configuration changes in the Admin interface, settings are updated 
 
 1. As a site administrator, navigate to **Extend** and search for "Config Direct Save" and enable the module and save. This module is required for the following steps.
 
-  ![Install Module](../../../images/pr-workflow/install-module.png)
+  ![Install Module Config Direct Save](../../../images/pr-workflow/install-module.png)
 
 2. As a site administrator, navigate to **Structure** > **Block layout**. Disable the **Tools** block and move the **Search** block to the header. Save your changes with the **Save blocks** button at the bottom of the page.
 
