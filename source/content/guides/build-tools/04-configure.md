@@ -2,21 +2,16 @@
 title: Build Tools
 subtitle: Manage Configuration
 description: In step four of the Build Tools guide, learn how to manage your site configuration.
-buildtools: true
 anchorid: configure
-generator: pagination
 layout: guide
-type: guide
-pagination:
-    provider: data.buildtoolspages
-use:
-    - buildtoolspages
 permalink: docs/guides/build-tools/configure/
 nexturl: guides/build-tools/extend/
 previousurl: guides/build-tools/new-pr/
 editpath: build-tools/04-configure.md
 image: buildToolsGuide-thumb
+contributors: [szipfel
 ---
+
 In this lesson, we'll use the Configuration Management system within the Drupal Admin interface to set block placements for our example site. Continuing from the previous step, we'll be working in the feature branch environment, not Dev.
 
 <Accordion title="Configuration Management" id="understand-config" icon="lightbulb">
