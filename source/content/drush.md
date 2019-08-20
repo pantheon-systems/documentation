@@ -53,19 +53,31 @@ Once the Pantheon Drush aliases have been copied, verify that the site aliases a
 $ drush sa
 ```
 <Alert title="Note" type="info">
+
 You must be a [site team member](/team-management/#manage-site-team-members) of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/terminus) for sites in which you are not a direct site team member.
+
 </Alert>
+
 ## Execute a Drush Command on a Pantheon Site Environment
 Once you see the target site in the list of site aliases, you can execute a command on any remote site listed. The syntax is:  
+
 ```
 drush @pantheon.SITENAME.ENV COMMAND
 ```
 
 <Alert title="Warning" type="danger">
+
 **Do not use Drush to update Drupal core on Pantheon**. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. For more details, see [Core Updates](/core-updates).
+
 </Alert>
 
 ### Registry Rebuild
+
+<Alert title="Note"  type="info" >
+
+[Registry Rebuild ](https://www.drupal.org/project/registry_rebuild) is [deprecated](https://www.drupal.org/project/registry_rebuild/issues/1785672) for Drupal 8 and will only work on Drupal 7.
+
+</Alert>
 
 Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/terminus/).
 
