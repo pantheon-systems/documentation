@@ -28,33 +28,35 @@ After making configuration changes in the Admin interface, settings are updated 
 
 </Accordion>
 
-1. As a site administrator, navigate to **Extend** and search for "Config Direct Save" and enable the module and save. This module is required for the following steps.
+1. As a site administrator, navigate to **Extend** and search for "Config Direct Save". Enable the module and save.
 
   ![Install Module Config Direct Save](../../../images/pr-workflow/install-module.png)
 
-2. As a site administrator, navigate to **Structure** > **Block layout**. Disable the **Tools** block and move the **Search** block to the header. Save your changes with the **Save blocks** button at the bottom of the page.
+  This module is required for the following steps.
+
+1. As a site administrator, navigate to **Structure** > **Block layout**. Disable the **Tools** block and move the **Search** block to the header. Save your changes with the **Save blocks** button at the bottom of the page.
 
   ![Block placements](../../../images/pr-workflow/block-placements.png)
 
-3. Go to **Configuration** > **Development** > **Configuration Synchronization**:
+1. Go to **Configuration** > **Development** > **Configuration Synchronization**:
 
   ![Configuration synchronization](../../../images/pr-workflow/configuration-synchronize-warning.png)
 
   Note the warning displayed on this page about modified configuration. This means that your recent configuration changes would be erased if you synchronized your configuration at this time.
 
-4. Click **Update** and select the **sync** source, then click **Update configuration** to export configuration changes from the database to yaml files in your site's codebase:
+1. Click **Update** and select the **sync** source, then click **Update configuration** to export configuration changes from the database to yaml files in your site's codebase:
 
   ![Update configuration](../../../images/pr-workflow/update-configuration.png)
 
-5. Return to your open Pull Request in GitHub and use the link provided in the comment to open the associated Multidev environment on the Pantheon Site Dashboard:
+1. Return to your open Pull Request in GitHub and use the link provided in the comment to open the associated Multidev environment on the Pantheon Site Dashboard:
 
   ![Visit multidev environment](../../../images/pr-workflow/visit-multidev.png)
 
-6. The sync operation made changes to a number of configuration files that we now need to commit to version control. Enter a message describing the configuration change and click **Commit**:
+1. The sync operation made changes to a number of configuration files that we now need to commit to version control. Enter a message describing the configuration change and click **Commit**:
 
   ![Commit exported config](../../../images/pr-workflow/commit-export.png)
 
-7. Return to your open Pull Request in GitHub. Note that your commit has been added to this Pull Request, and the CircleCI status indicates that your tests are running:
+1. Return to your open Pull Request in GitHub. Note that your commit has been added to this Pull Request, and the CircleCI status indicates that your tests are running:
 
   ![Commit exported config](../../../images/pr-workflow/commit-added.png)
 
