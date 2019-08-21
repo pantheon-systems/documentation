@@ -4,7 +4,7 @@ description: Using SimpleSAMLphp to configure a single sign-on system for your D
 tags: [siteintegrations, security]
 categories: [automate]
 ---
-Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.16/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon with Drupal or WordPress.
+Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.17/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon with Drupal or WordPress.
 
 <Alert title="Note" type="info">
 
@@ -28,11 +28,11 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 
 <Alert title="Version Number" type="export">
 
-In the code examples below, replace `16.x` with the downloaded version of SimpleSAMLphp.
+In the code examples below, replace `17.x` with the downloaded version of SimpleSAMLphp.
 
 </Alert>
 
-1. Download [SimpleSAMLphp version 1.16.x](https://simplesamlphp.org/) and add it to your git repository as `/private/simplesamlphp-1.16.x`.
+1. Download [SimpleSAMLphp version 1.17.x](https://simplesamlphp.org/) and add it to your git repository as `/private/simplesamlphp-1.17.x`.
 
   ```bash
   wget https://simplesamlphp.org/download?latest -O simplesamlphp-latest.tar.gz
@@ -45,12 +45,12 @@ In the code examples below, replace `16.x` with the downloaded version of Simple
 2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.16.x/www`:
 
   ```bash
-  ln -s ./private/simplesamlphp-1.16.x/www ./simplesaml
+  ln -s ./private/simplesamlphp-1.17.x/www ./simplesaml
   git add simplesaml
   git commit -am "Adding SimpleSAML symlink"
   ```
 
-3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed, and add them to the repository in `private/simplesamlphp-1.16.x/cert`.
+3. [Generate or install certs](https://simplesamlphp.org/docs/1.9/simplesamlphp-sp#section_1_1) as needed, and add them to the repository in `private/simplesamlphp-1.17.x/cert`.
 
 </Tab>
 
@@ -177,13 +177,13 @@ Add the following lines to `settings.php` so that the Drupal module can locate S
 For Drupal 7 sites:
 ```php
 # Provide universal absolute path to the installation.
-$conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.15.x';
+$conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.17.x';
 ```
 
 For Drupal 8 sites:
 ```php
 # Provide universal absolute path to the installation.
-$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.15.x';
+$settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.17.x';
 ```
 
 You can now enable and configure the module. If SAML authentication fails because of a configuration error, look at the watchdog log to see why.
