@@ -31,6 +31,17 @@ When appservers are migrated as a regular part of platform maintenance, log file
 ## Access Logs Via SFTP
 Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
+In the Connection Information section of the dashboard, we can see a pattern about the hostnames:
+
+```
+<env>.<site-uuid>@<type>.<env>.<site-uuid>.drush.in
+```
+
+| Type         | Env                                     | Site UUID                                                                                                 |
+|:------------ |:--------------------------------------- |:--------------------------------------------------------------------------------------------------------- |
+| `appserver`  | `dev`, `test`, `live`, `<multidev-env>` | ex. `c5c75825-5cd4-418e-8cb0-fb9aa1a7f671`, as found in `https://dashboard.pantheon.io/sites/<site-uuid>` |
+| `dbserver`   |                                         |                                                                                                           |
+
 ## Downloading Logs
 
 <Accordion title="Watch: Download Appserver and Database Log Files" id="logs-video" icon="facetime-video">
@@ -68,8 +79,14 @@ You now have a local copy of the logs directory, which contains the following:
 2. Click **Connection Info** and copy the **SFTP Command Line** command.
 3. Edit and execute the command by replacing `appserver` with `dbserver`:
 
+ From:
  ```
- sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@appserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
+ ```
+
+ To:
+ ```
+ sftp -o Port=2222 dev.de305d54-75b4-431b-adb2-eb6b9e546014@dbserver.dev.de305d54-75b4-431b-adb2-eb6b9e546014.drush.in`
  ```
 
 4. Run the following SFTP command in terminal:
