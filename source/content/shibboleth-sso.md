@@ -164,7 +164,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 4. With configuration completed, commit the changes to your SimpleSAMLphp files:
 
   ```bash
-  git add private/simplesamlphp-1.15.x
+  git add private/simplesamlphp-1.17.x
   git commit -am "Adding SimpleSaml config files."
   ```
 
