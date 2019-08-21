@@ -1,6 +1,6 @@
 **DOCUMENTATION STYLE GUIDE**
 
-#About This Guide
+# About This Guide
 
 This style guide will help contributors who create technical content write in consistent voice, tone, and style.
 
@@ -82,7 +82,7 @@ Use headings in a logical manner. The system we use should generate these from t
 
 Use headings in a logical manner. The site will automatically generate anchor links for H2 and H3 tags, and place them in a Table of Contents in the right column. Generated links will be "pretty".
 
-#A-Z Usage  
+# A-Z Usage
 
 ## Accessibility
 
@@ -109,7 +109,7 @@ For more information regarding accessibility guidelines, see [W3C Web Content Ac
 
 See below for when to use title or sentence case. Never use all caps. If you need to make content prominent, use bold rather than all caps or italics.
 
-###Title Case
+### Title Case
 
 Use title case for all headers, buttons, tab names, and links, and when referring to these elements in technical documentation. However, do not use title case for the words button, link, page, tab. Only capitalize the name displayed on the element, not the type of element.
 
@@ -129,7 +129,7 @@ Click **Clear Caches**.
 
 Select the **Settings** tab.
 
-###Sentence Case
+### Sentence Case
 
 Use sentence case for body content and short phrases, even when the content is a link. Sentence case means you only capitalize the first letter of the sentence.
 
@@ -146,7 +146,7 @@ I use Git on my local machine.
 
 Run "`git add`".
 
-##Contrib Directory
+## Contrib Directory
 
 All Drupal sites used for generating documentation must install contributed modules to sites/all/modules/contrib.
 All references must be to:
@@ -154,7 +154,7 @@ All references must be to:
 sites/all/modules/contrib
 ```
 
-##Cross-Referencing Documents
+## Cross-Referencing Documents
 
 When linking to an article in a sentence, use the exact title of the article if possible. If using the exact title, display it in title case. The link should be blue with no other formatting (bold, italics, quotations).   **Example**:
 
@@ -246,7 +246,7 @@ When writing an outline for a guide or article, decide what the main topics are.
 ## Configuration
 The configuration topic may have a 1-3 paragraphs on its own, as well as several subtopics.
 
-###Stage and Commit Settings.php
+### Stage and Commit Settings.php
 This is a subtopic of Configuration. Specific information related to settings.php will be shown here.
 
 
@@ -262,11 +262,11 @@ If there are tasks a user needs to have completed before continuing on with the 
 
 **Example**:
 
-####Before You Begin
+#### Before You Begin
 
 You’ll need to enable the ApacheSolr module. Visit the [ApacheSolr](https://drupal.org/project/apachesolr "Drupal.org, apache solr project page") page on Drupal.org for more information.
 
-##Pantheon_Environment
+## Pantheon_Environment
 TBD: We should standardize on either using the constant PANTHEON_ENVIRONMENT or the superglobals `$_ENV['PANTHEON_ENVIRONMENT']` (always around) or `$_SERVER['PANTHEON_ENVIRONMENT']` (only around on web-originated requests).
 
 
@@ -292,7 +292,7 @@ For all numbers under 10, spell out the number. For 10 and above, use the numera
 
 **Incorrect**: Joe has 9 sites and needs to add twelve more.
 
-##Procedures
+## Procedures
 
 When writing about procedures, you can include an overview, prerequisites, a list of steps involved in the task, images, goals, and related procedures. The document may or may not include all of those items.
 
@@ -378,7 +378,7 @@ Best Practices:
 
 * Use for uncommon or difficult terms and concepts.
 
-##Referring to Tabs in the Platform
+## Referring to Tabs in the Platform
 
 There are two ways to display tab/page names, depending on usage. In either case, always use title case for the tab/page name.
 

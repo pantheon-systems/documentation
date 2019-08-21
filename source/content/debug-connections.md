@@ -36,10 +36,10 @@ dig @8.8.8.8 dig codeserver.dev.<xxx>.drush.in +short
 ```
 If an IP address is returned, [configure your network settings to use Google Public DNS](https://developers.google.com/speed/public-dns/docs/using#configure_your_network_settings_to_use_google_public_dns).
 
-###Port 2222 or Other Blocked Ports
+### Port 2222 or Other Blocked Ports
 Make sure the port number is not blocked by your internal firewall. For example, to test whether port 2222 is blocked visit [http://portquiz.net:2222/](http://portquiz.net:2222/)
 
 If you are not able to access port 2222, you can try our [workaround](/port-2222/).
 
-##Test Connection on the Command Line
+## Test Connection on the Command Line
 We recommend using the command line when troubleshooting connection issues as GUIs can hide underlying errors. From the site Dashboard, copy the provided connection command for the desired service and run it in terminal.

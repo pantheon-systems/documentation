@@ -95,7 +95,7 @@ Images of terminal output is frowned upon. When small changes are required to co
  - Only assume as much knowledge from the reader as specified in [Before You Begin](#before-you-begin). Otherwise explain everything.
  - Notice the `draft: true` line in this template's header? If keeps this page from being visible in the live site. Be sure to remove it from your doc.
 
-##See Also
+## See Also
 
 If you can, end your doc with links to external resources that can be used to improve the reader's comprehension, or to guides on logical next steps in a common development workflow.
 

@@ -9,14 +9,14 @@ Pantheon as a platform attempts to balance the tradeoff between high performance
 A traditional single server has a high risk of being impacted by any unexpected event because it is a single point of failure. If a single service becomes unavailable due to a webserver problem, database failure, network degradation, or even because of high traffic, the entire site goes down.
 
 
-##Benefits and Concerns
+## Benefits and Concerns
 As distributed web architecture has evolved, best practices for high availability have emerged: application containers can be put behind load balancers, database servers can be replicated, backups can be hosted at remote locations.
 
 Cloud-based file systems, such as our Valhalla cluster, also reduce the impact of even the most severe outages. This evolution has other advantages: our cloud-based distributed architecture allows for smooth scaling in seconds via software, rather than through adding servers.
 
 However, there are tradeoffs to the cloud. On a single server, where the database is sharing an operating system with the webserver, there is no communication latency executing a MySQL query during a page load. In a distributed scenario, this same transaction may take one or two milliseconds to traverse servers. While this does not seem like a prohibitively long time, loading a single page may execute hundreds of mysql queries. The aggregate result will be that moving to the cloud can slow an inefficient site down.
 
-##Solutions
+## Solutions
 
 There are a number of solutions for optimizing your site for the cloud. A site should be built with a clear idea of what an acceptable performance profile is for anonymous and logged in users. Establishing this first can drive the site architecture and caching strategy. Here are other important steps:
 
