@@ -214,10 +214,10 @@ if( strpos( $uri, $url_to_match ) === 0) {
 }
 ```
 
-### Wild Card Redirect ###
+### Wild Card Redirect
 The following will redirect all links back to the homepage.
 
-```
+```php
 if (($_SERVER['REQUEST_URI'] != '/') && (php_sapi_name() != "cli")) {
   header('HTTP/1.0 301 Moved Permanently');
   header('Location: https://'. $_SERVER['HTTP_HOST']);
