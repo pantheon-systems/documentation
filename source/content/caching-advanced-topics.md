@@ -163,8 +163,6 @@ Drupal’s `404_fast_*` configuration does not set caching headers. Some contrib
 ### WordPress Sites
 WordPress does not set cache headers by default, 404 or otherwise. If your site has a Permalinks option set other than default, WordPress will return your theme's 404 page. Unless a plugin sets cache friendly headers, your 404 page will not be cached.
 
-Plugins like [Cache Control](https://wordpress.org/plugins/cache-control/) can solve this issue.
-
 ## Environment Access Locked
 If you're using the [Security tool](/security/) within the Pantheon Site Dashboard to lock an environment, the Global CDN will not cache responses. Disable basic authentication by setting environment access to **Public**.
 
