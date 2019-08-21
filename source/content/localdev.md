@@ -20,7 +20,7 @@ Localdev is in active development, with new features and updates coming soon.
 
 If you have an older version of Localdev already installed on your machine, remove it to avoid potential compatibility issues. Newer versions of Localdev include support for automatic updates.
 
-1.  Download and install the [latest Localdev](https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg){.external} `.dmg`
+1.  Download and install the [latest Localdev](https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg) `.dmg`
 1.  Localdev checks the Docker installation. Once it's done, click **Continue installation**
 1.  Enter the machine token you created for Localdev.
     - Click **View your Pantheon machine tokens** to open a browser to the *Machine Tokens* tab of your account.

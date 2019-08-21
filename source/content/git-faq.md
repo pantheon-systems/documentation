@@ -262,9 +262,10 @@ This occurs when you have multiple SSH keys. For more information, see [Permissi
      Git Host   codeserver.dev.1887c5fa-...-8fe90727d85b.drush.in
     ```
 
-2.  Copy the URL.
+1.  Copy the URL.
 
-3.  Find out which SSH keys your Git client is using with the following command, replacing `codeserver.dev.<SITE_UUID>.drush.in` with the URL copied in step 2:
+1.  Find out which SSH keys your Git client is using with the following command, replacing `codeserver.dev.<SITE_UUID>.drush.in` with the URL copied in step 2:
+
     ```
     ssh -vT codeserver.dev.<SITE_UUID>.drush.in
     ```

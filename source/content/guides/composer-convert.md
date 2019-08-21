@@ -104,7 +104,7 @@ A Composer managed site should be able to include all custom code via Composer. 
 composer require drupal/module_name
 ```
 
-Where `module_name` is the machine name of the module in question. To specify a version of the module, view the syntax examples in the [Drupal.org Guide to Using Composer](https://www.drupal.org/docs/develop/using-composer/using-composer-to-install-drupal-and-manage-dependencies#specify-version){.external}.
+Where `module_name` is the machine name of the module in question. To specify a version of the module, view the syntax examples in the [Drupal.org Guide to Using Composer](https://www.drupal.org/docs/develop/using-composer/using-composer-to-install-drupal-and-manage-dependencies#specify-version).
 
 #### Themes
 Repeat the same process with themes, checking `/themes`, `/themes/contrib`, `/sites/all/themes`, and `/sites/all/themes/contrib`. Use Composer in the same way as above to require these.
