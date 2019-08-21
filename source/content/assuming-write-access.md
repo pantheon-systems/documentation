@@ -20,13 +20,13 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
     </Alert>
 
-2. From your terminal, `cd` to the site code repository:
+1. From your terminal, `cd` to the site code repository:
 
     ```bash
     cd ~/sites/myawesomesite/ #Change this to your project directory.
     ```
 
-3. Move the directory you want to replace with a symlink. This serves two purposes; backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
+1. Move the directory you want to replace with a symlink. This serves two purposes; backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
 
     ```bash
     mv ./wp-content/path/plugin-expects-write-to ~/backups/
@@ -34,32 +34,33 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
     The command above moves the directory to a folder named backups in your home directory. `~/`. Replace this with an existing backup location.
 
-4. Create a symlink for the standard files path:
+1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder you're command line prompt is currently in. Working from the location of the symlink allows for correct relative paths.
+
+   ```bash
+   cd wp-content/path/
+   ```
+
+
+1. Create a symlink for the standard files path:
 
     ```bash
     # The first path will be used as the new file destination instead of whatever path the plugin assumed write access to
-    ln -s ./wp-content/uploads/new-directory ./wp-content/path/plugin-expects-to-write-to
+    ln -s ../uploads/new-directory plugin-expects-to-write-to
     ```
 
-    <Alert title="Note" type="info">
-
-    The `ln` command is sensitive to the **working directory**, the folder your prompt is currently sitting in. The example above assumes you're in the main directory of your local git repository.
-
-    </Alert>
-
-5. Stage your changes
+1. Stage your changes
 
     ```bash
     git add .
     ```
 
-6. Run `git status` to review your current index, then commit your changes:
+1. Run `git status` to review your current index, then commit your changes:
 
     ```bash
     git commit -m "symlink non-standard files path to wp-content/uploads"
     ```
 
-7. Push the changes to Pantheon:
+1. Push the changes to Pantheon:
 
     ```bash
     git push origin master
