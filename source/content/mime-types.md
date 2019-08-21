@@ -6,7 +6,7 @@ categories: []
 ---
 Pantheon promotes and respects internet standards, and for MIME types, we treat the [IANA Media Type List](https://www.iana.org/assignments/media-types/media-types.xhtml) as the canonical source of what headers to serve for what file extensions. This article describes what to do if you have a file type that isn't handled by IANA, or require an alternative.
 
-##Add, Change, or Remove a File Extension to a MIME Type
+## Add, Change, or Remove a File Extension to a MIME Type
 
 #### We will consider:
 - Adding anything not present on Pantheon with the recommendation of IANA list
@@ -14,15 +14,15 @@ Pantheon promotes and respects internet standards, and for MIME types, we treat 
 - Changing any existing suffix that does not match the IANA MIME types
 - Adding a widely recognized MIME type to a suffix that does not exist in the IANA list (on a case-by-case basis)
 
-####We will not consider:
+#### We will not consider:
 - Adding anything that conflicts with the IANA list
 - Removing existing MIME types that are in IANA
 - Changing our default MIME type
 
-##Canonical Reference
+## Canonical Reference
 See the Internet Assigned Numbers Authority [Media Type List](https://www.iana.org/assignments/media-types/media-types.xhtml).
 
-##Workaround
+## Workaround
 Depending on the file type, you can write a small PHP wrapper to read the file, set the MIME type header, and send back the file with any MIME type you want. 
 
 The example below outputs a given file with a `hello/world` MIME type and includes browser caching headers (default of 3600 seconds) to reduce load on the server:
