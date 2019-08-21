@@ -3,7 +3,7 @@ import ExternalLink from "./externalLink"
 
 const Callout = ({ type, children, title, link }) => {
   return (
-    <div className="enablement">
+    <div className={`alert alert-${type}`}>
       <h4 className={type}>
         <ExternalLink text={title} link={link} />
       </h4>
