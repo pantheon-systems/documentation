@@ -64,7 +64,7 @@ $ terminus site:list
 
 ```
 
-###Update the Code
+### Update the Code
 
 Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal set ready to go for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
@@ -109,7 +109,7 @@ $ terminus env:list <site>
 ------ --------------------- ------------------------------------ ----------------- -------- -------------
 ```
 
-###Install Contrib Modules and Themes
+### Install Contrib Modules and Themes
 While the site's Dev environment is still in SFTP mode, we can use Drush to download and install some Drupal contrib modules, such as Views and Administration Menu.
 
 ```

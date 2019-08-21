@@ -57,7 +57,7 @@ Now check your Site Dashboard and you’ll see that the module’s code has been
 
 
 
-##Configuration
+## Configuration
 
 If you don’t have a settings.php file, copy the default.settings.php file.  You can copy the file however you like, but my preference is from the command line:
 ```
@@ -98,7 +98,7 @@ A few notes:
 For more about Reroute Email’s settings, see the README.txt that ships with the module.
 
 
-###Stage and Commit Settings.php
+### Stage and Commit Settings.php
 ```
 $ git add sites/default/settings.php
 $ git commit
@@ -139,11 +139,11 @@ If you don’t see what you’re expecting, review your settings.php and ensure 
 
 <Image alt="The dashboard showing the code was deployed to the Dev environment" src="dashboard/verify-reroute-email-dashboard-commits2.png" />
 
-##Go Forth and Test
+## Go Forth and Test
 
 That’s it! Now when Drupal sends out an email from any environment (except Live), it will get rerouted to the email address specified in settings.php. Our settings.php will make sure email is not rerouted on Live, so it’s business as usual. Make sure you’re using a [SMTP gateway](/email/#outgoing-email) on Live to ensure email deliverability.
 
-###See Reroute Email In Action
+### See Reroute Email In Action
 To see exactly what we did, I forked a new [MultiDev](/multidev/) Multidev environment called ```demo``` and requested a new account:
 
 <Image alt="Drupal site showing account requested and emails sent" src="reroute-email-account-requested.png" />
@@ -152,5 +152,5 @@ Requesting a new account fires off two emails: one to the requestor and another 
 
 <Image alt="Email showing the reroute was successful" src="reroute-email-confirmation.png" />
 
-##See Also
+## See Also
 [Manage Email Handling for Development or Testing](https://www.drupal.org/node/201981)
