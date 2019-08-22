@@ -42,38 +42,16 @@ protected_web_paths:
 
 HTTPS adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
 
-<Alert title="Note" type="info">
+Using the `pantheon.yml` file, you can set the use and duration of the HSTS header and its affect on subdomains. You can set a short (5 minute) duration header, or a long (366 day) duration, and choose whether to affect subdomains. Using the long duration setting will help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/).
 
-Before adjusting `enforce_https`, review and understand the configuration options and all considerations to avoid unintended consequences.
-
-</Alert>
-
-Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available, from least to most secure:
-
-- `off` - Does not enforce HTTPS. This is the default behavior.
-- `transitional` - Redirect to HTTPS with a 5-minute HSTS header
-- `transitional+subdomains` Redirect to HTTPS with a 5-minute HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
-- `full` - Redirect to HTTPS with a year-long HSTS header
-- `full+subdomains` - Redirect to HTTPS with a year-long HSTS header that will enforce HTTPS for subdomains, even those not on Pantheon.
-   - This is the recommended and most secure configuration.
-
-For example, to set `enforce_https` as `transitional`:
-
-```
-enforce_https: transitional
-```
-
-#### Considerations
-* Use of `full` or `full+subdomains` should be treated as a commitment. If your site is unable to serve HTTPS (e.g. by moving to a host that doesn't support HTTPS) after sending a long-duration HSTS header, visitors will be unable to access your site.
-* Any option with `+subdomains` should only be used if you want to enforce HTTPS for *all subdomains, even those not connected to Pantheon*.
-* To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/docs/http-to-https/) doc.
+<Partial file="hsts.md" />
 
 #### Test Your Site's HSTS Configuration for an A+ Rating
 
 [SSL Labs](https://www.ssllabs.com) provides a free, online service that you can use to test your Site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
 
 1. To test your configuration, select a short-duration HSTS header (`transitional` or `transitional+subdomains`), before committing to the long-duration HSTS header.
-2. When you're comfortable that HSTS works as expected in the Live environment, send the long-duration HSTS header by moving to `full` or `full+subdomains`.
+1. When you're comfortable that HSTS works as expected in the Live environment, send the long-duration HSTS header by moving to `full` or `full+subdomains`.
 
 ### Nested Docroot
 Nest your docroot one level beneath your code repository in a directory named `web`:

@@ -1,4 +1,10 @@
-Using the [`pantheon.yml`](/pantheon-yml/) file, you can set the use and duration of the HSTS header, and its affect on subdomains. You can set a short (5 minute) duration header, or a long (366 day) duration, and choose whether to affect subdomains. Using the long duration setting will help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/).
+<Alert title="Note" type="info">
+
+Before adjusting `enforce_https`, review and understand the configuration options and all considerations to avoid unintended consequences.
+
+</Alert>
+
+Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available, from least to most secure:
 
 Use of the HSTS header is defined by the `enforce_https` directive, and takes five possible values which are handled by Pantheon as shown below:
 
@@ -14,7 +20,11 @@ Use of the HSTS header is defined by the `enforce_https` directive, and takes fi
    - HSTS is enabled, `Strict-Transport-Security: max-age=31622400; includeSubDomains; preload` is set by Pantheon, HTTP **will** forcefully redirect to HTTPS
    - This is the recommended and most secure configuration.
 
-See [Pantheon YAML Configuration Files](/pantheon-yml/) for more information on how to configure this file.
+For example, to set `enforce_https` as `transitional`:
+
+```
+enforce_https: transitional
+```
 
 <Alert title="Warning" type="danger">
 
@@ -23,3 +33,8 @@ Once enabled, HSTS headers are cached by browsers for the duration of the max-ag
 If you are not sure that this is what you want, then you should select `enforce_https: transitional` instead, as this selection has no affect on subdomains, and has a limited (5 minute) HSTS duration.
 
 </Alert>
+
+**Considerations**
+- Use of `full` or `full+subdomains` should be treated as a commitment. If your site is unable to serve HTTPS (e.g. by moving to a host that doesn't support HTTPS) after sending a long-duration HSTS header, visitors will be unable to access your site.
+- Any option with `+subdomains` should only be used if you want to enforce HTTPS for *all subdomains, even those not connected to Pantheon*.
+- To prepare your site to serve all content via HTTPS, follow the [Switching Sites from HTTP to HTTPS](/docs/http-to-https/) doc.
