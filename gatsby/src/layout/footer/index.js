@@ -133,7 +133,7 @@ const Footer = ({ data }) => {
                             </Link>
                           </li>
                           <li className="leaf menu-mlid-1143">
-                            <Link to="/power-users/">
+                            <Link to="/pantheon-community/">
                               Community and Power Users Group
                             </Link>
                           </li>
