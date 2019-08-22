@@ -114,7 +114,7 @@ terminus drush <site>.<env> -- wd-show --type='cron'
 
 ### Can I add tasks to cron through Drupal?
 
-No. You can create a custom module that uses the [`hook_cron`](https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_cron/8.6.x) function, or schedule a drush command to be run via [Terminus](/source/docs/terminus/) from your local cron, or an external service like [cron-job.org](https://cron-job.org/).
+No. You can create a custom module that uses the [`hook_cron`](https://api.drupal.org/api/drupal/core%21core.api.php/function/hook_cron/8.6.x) function, or schedule a drush command to be run via [Terminus](/terminus/) from your local cron, or an external service like [cron-job.org](https://cron-job.org/).
 
 ## Resources
 
