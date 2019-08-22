@@ -1,3 +1,69 @@
+- id: alexfornuto
+  name: Alex Fornuto
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Alex%20Fornuto.jpg
+  github: //github.com/alexfornuto
+  twitter: https://twitter.com/AlexFornuto
+  bio: Senior Technical Content Editor for Pantheon
+- id: edwardangert
+  name: Edward Angert
+  twitter: https://twitter.com/edwardangert
+  bio: Technical Content Editor for Pantheon
+  github: //github.com/edwardangert
+  avatar: //avatars2.githubusercontent.com/u/17991901
+  linkedin: //www.linkedin.com/in/edward-angert/
+- id: rachelwhitton
+  name: Rachel Whitton
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/RachelNew.jpg
+  github: //github.com/rachelwhitton
+  twitter: https://twitter.com/rachwhitton
+  bio: Customer Success Manager
+- id: populist
+  name: Matt Cheney
+  avatar: //avatars1.githubusercontent.com/u/520521
+  twitter: https://twitter.com/populist
+  bio: Website developer extraordinaire
+- id: joshkoenig
+  name: Josh Koenig
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JoshNew.jpg
+  twitter: https://twitter.com/outlandishjosh
+  linkedin: //www.linkedin.com/in/joshkoenig
+  bio: Co-Founder & Head of Developer Experience
+- id: ari
+  name: Ari Gold
+  avatar: //secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg
+  twitter: https://twitter.com/AriAtPantheon
+  github: //github.com/ari-gold
+  drupal: //www.drupal.org/user/329006/
+  bio:  Product Manager
+- id: stevector
+  name: Steve Persch
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Steve%20Persch%20Headshot.jpg
+  url: //stevector.com/
+  twitter: https://twitter.com/stevector
+  github: //github.com/stevector
+  bio: Lead Developer Advocate
+- id: andrewmallis
+  name: Andrew Mallis
+  avatar: //avatars1.githubusercontent.com/u/249362?v=3&s=400
+  url: //www.kalamuna.com/about/#andrew-mallis
+  github: //github.com/andrewmallis
+  twitter: https://twitter.com/andrew_mallis
+  drupal: https://www.drupal.org/user/72871
+  bio: A Bay Area-based polymedia artist & technologist | Co-founder @kalamuna
+- id: ataylorme
+  name: Andrew Taylor
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Andrew%20Taylor.jpg
+  github: //github.com/ataylorme
+  twitter: https://twitter.com/ataylorme
+  url: //www.ataylor.me/
+  bio: Developer Programs Engineer
+- id: sarahg
+  name: Sarah German
+  twitter: https://twitter.com/hey_germano
+  bio: Senior Customer Success Engineer
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Sarah%20G.jpg
+  github: //github.com/sarahg
+  url: https://www.sarahgerman.com/
 - id: bmackinney
   name: Brian MacKinney
   url: //brianmackinney.com
@@ -16,13 +82,6 @@
   linkedin: //www.linkedin.com/in/calevans
   github: //github.com/calevans
   bio: Technical Manager, Training and Certification @zend
-- id: ari
-  name: Ari Gold
-  avatar: //secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg
-  twitter: https://twitter.com/AriAtPantheon
-  github: //github.com/ari-gold
-  drupal: //www.drupal.org/user/329006/
-  bio:  Product Manager
 - id: jessifischer
   name: Jessi Fischer
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JessiNew.jpg
@@ -36,17 +95,6 @@
   twitter: https://twitter.com/1gearnobrains
   linkedin: //www.linkedin.com/pub/erik-mathy/28/b51/627/en
   bio: Enterprise Onboarding Manager
-- id: populist
-  name: Matt Cheney
-  avatar: //avatars1.githubusercontent.com/u/520521
-  twitter: https://twitter.com/populist
-  bio: Website developer extraordinaire
-- id: joshkoenig
-  name: Josh Koenig
-  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JoshNew.jpg
-  twitter: https://twitter.com/outlandishjosh
-  linkedin: //www.linkedin.com/in/joshkoenig
-  bio: Co-Founder & Head of Developer Experience
 - id: kate
   name: Kate Kligman
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Kate_Kligman.jpg
@@ -127,28 +175,6 @@
   twitter: https://twitter.com/masonjames
   url: //www.valet.io/
   bio: CEO | Founder of WP Valet
-- id: stevector
-  name: Steve Persch
-  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Steve%20Persch%20Headshot.jpg
-  url: //stevector.com/
-  twitter: https://twitter.com/stevector
-  github: //github.com/stevector
-  bio: Lead Developer Advocate
-- id: andrewmallis
-  name: Andrew Mallis
-  avatar: //avatars1.githubusercontent.com/u/249362?v=3&s=400
-  url: //www.kalamuna.com/about/#andrew-mallis
-  github: //github.com/andrewmallis
-  twitter: https://twitter.com/andrew_mallis
-  drupal: https://www.drupal.org/user/72871
-  bio: A Bay Area-based polymedia artist & technologist | Co-founder @kalamuna
-- id: ataylorme
-  name: Andrew Taylor
-  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Andrew%20Taylor.jpg
-  github: //github.com/ataylorme
-  twitter: https://twitter.com/ataylorme
-  url: //www.ataylor.me/
-  bio: Developer Programs Engineer
 - id: cteitzel
   name: Chris Teitzel
   avatar: //avatars0.githubusercontent.com/u/1548058
@@ -166,12 +192,6 @@
   twitter: https://twitter.com/getbwood
   drupal: //www.drupal.org/u/bwood
   bio: Applications Programmer UC Berkeley, IST Web Platform Services
-- id: rachelwhitton
-  name: Rachel Whitton
-  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/RachelNew.jpg
-  github: //github.com/rachelwhitton
-  twitter: https://twitter.com/rachwhitton
-  bio: Customer Success Manager
 - id: peter-pantheon
   name: Peter Sawczynec
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Peter%20Sawczynec.jpg
@@ -233,12 +253,6 @@
   github: //github.com/eabquina
   avatar: //pbs.twimg.com/profile_images/1290706689/SAMPLE2_400x400.jpg
   linkedin: //ph.linkedin.com/in/eabquina
-- id: alexfornuto
-  name: Alex Fornuto
-  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Alex%20Fornuto.jpg
-  github: //github.com/alexfornuto
-  twitter: https://twitter.com/AlexFornuto
-  bio: Technical Content Editor
 - id: LukasRos
   name: Lukas Rosenstock
   twitter: https://twitter.com/LukasRosenstock
@@ -279,13 +293,6 @@
   avatar: //avatars2.githubusercontent.com/u/8883983
   twitter: https://twitter.com/wibcon
   github: //github.com/wbconnor
-- id: sarahg
-  name: Sarah German
-  twitter: https://twitter.com/hey_germano
-  bio: Senior Customer Success Engineer
-  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Sarah%20G.jpg
-  github: //github.com/sarahg
-  url: https://www.sarahgerman.com/
 - id: cityofoaksdesign
   name: Christopher Matthews
   url: //www.cityofoaksdesign.com
@@ -300,13 +307,6 @@
   github: //github.com/BFTrick
   linkedin: https://www.linkedin.com/learning/instructors/patrick-rauland?u=2125562
   url: https://www.speakinginbytes.com/
-- id: edwardangert
-  name: Edward Angert
-  twitter: https://twitter.com/edwardangert
-  bio: Technical Content Editor for Pantheon
-  github: //github.com/edwardangert
-  avatar: //avatars2.githubusercontent.com/u/17991901
-  linkedin: //www.linkedin.com/in/edward-angert/
 - id: ccjjmartin
   name: Chris Martin
   github: //github.com/ccjjmartin
