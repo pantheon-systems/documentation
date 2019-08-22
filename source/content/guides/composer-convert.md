@@ -1,6 +1,6 @@
 ---
 title: Convert a Standard Drupal 8 Site to a Composer Managed Site
-description: Drupal 8 sites often require the usage of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a divergance from the Pantheon managed upstream.
+description: Drupal 8 sites often require the usage of Composer to manage site dependencies. The need to begin using Composer for a site build can often surface after a site is in development, necessitating a divergence from the Pantheon managed upstream.
 type: guide
 permalink: docs/guides/:basename/
 tags: [moreguides, workflow, composer]
