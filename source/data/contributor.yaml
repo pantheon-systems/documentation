@@ -2,7 +2,7 @@
   name: Brian MacKinney
   url: //brianmackinney.com
   avatar: //www.gravatar.com/avatar/d942a7d4b38d10e4f4ebab9cb148d9f9.png
-  twitter: BrianMacKinney
+  twitter: https://twitter.com/BrianMacKinney
   github: //github.com/bmackinney
   drupal: //www.drupal.org/u/brian-mackinney
   wordpress: //profiles.wordpress.org/brian-mackinney
@@ -12,14 +12,14 @@
   name: Cal Evans
   url: //calevans.com
   avatar: //2.gravatar.com/avatar/d6d504bf40dea91cd33027e5bb85f7df
-  twitter: calevans
+  twitter: https://twitter.com/calevans
   linkedin: //www.linkedin.com/in/calevans
   github: //github.com/calevans
   bio: Technical Manager, Training and Certification @zend
 - id: ari
   name: Ari Gold
   avatar: //secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg
-  twitter: http://twitter.com/AriAtPantheon
+  twitter: https://twitter.com/AriAtPantheon
   github: //github.com/ari-gold
   drupal: //www.drupal.org/user/329006/
   bio:  Product Manager
@@ -33,31 +33,31 @@
 - id: erikmathy
   name: Erik Mathy
   avatar: //www.gravatar.com/avatar/0e9285db4e5bdbb3356306ddb55483d8.png
-  twitter: 1gearnobrains
+  twitter: https://twitter.com/1gearnobrains
   linkedin: //www.linkedin.com/pub/erik-mathy/28/b51/627/en
   bio: Enterprise Onboarding Manager
 - id: populist
   name: Matt Cheney
   avatar: //avatars1.githubusercontent.com/u/520521
-  twitter: populist
+  twitter: https://twitter.com/populist
   bio: Website developer extraordinaire
 - id: joshkoenig
   name: Josh Koenig
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/JoshNew.jpg
-  twitter: outlandishjosh
+  twitter: https://twitter.com/outlandishjosh
   linkedin: //www.linkedin.com/in/joshkoenig
   bio: Co-Founder & Head of Developer Experience
 - id: kate
   name: Kate Kligman
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Kate_Kligman.jpg
-  twitter: KateKligman
+  twitter: https://twitter.com/KateKligman
   linkedin: //www.linkedin.com/in/katekligman
   bio: Open source contributor, indie game developer, retro gamer
 - id: iameap
   name: Eric Peterson
   url: //www.eric.pe/terson
   avatar: //s.gravatar.com/avatar/0cd9fdc3a5e346d8fd7b74c527a93346?s=300
-  twitter: iamEAP
+  twitter: https://twitter.com/iamEAP
   gplus: //plus.google.com/+iamEAP
   github: //github.com/iamEAP
   linkedin: //www.linkedin.com/in/iamEAP
@@ -66,14 +66,14 @@
 - id: rvtraveller
   name: Brian Thompson
   avatar: //www.gravatar.com/avatar/7260ed8618de5108bb3ddc6e6dea88f2.png
-  twitter: rvtraveller26
+  twitter: https://twitter.com/rvtraveller26
   linkedin: //www.linkedin.com/in/1briant
   bio: Developer by day, techie and gamer by night, camper on the weekends
 - id: eeeschwartz
   name: Erik Schwartz
   url: //erikschwartz.net
   avatar: //s.gravatar.com/avatar/bd808f082e76f519e9dcfe6ae8a2e7ca?s=80
-  twitter: eeeschwartz
+  twitter: https://twitter.com/eeeschwartz
   github: //github.com/eeeschwartz/
   linkedin: //www.linkedin.com/in/eeeschwartz
   bio: Civic developer, human centered!
@@ -81,7 +81,7 @@
   name: Suzanne Aldrich
   url: //suzanne.link
   avatar: //s.gravatar.com/avatar/cca6b0cbfbc6ed1804e381d66d012f02?s=300
-  twitter: SuzanneAldrich
+  twitter: https://twitter.com/SuzanneAldrich
   github: //github.com/suzannealdrich
   linkedin: //www.linkedin.com/in/suzannealdrich
   drupal: //www.drupal.org/u/suzanne.aldrich
@@ -90,7 +90,7 @@
   name: Tom Kirkpatrick
   url: //www.systemseed.com
   avatar: //avatars2.githubusercontent.com/u/200251?v=3&s=400
-  twitter: mrfelton
+  twitter: https://twitter.com/mrfelton
   github: //github.com/mrfelton
   drupal: //www.drupal.org/u/mrfelton
   bio: After many years of developing custom web solutions and CMS systems I realised the error of my ways and decided to pool all of my efforts into making Drupal a better CMS platform. These days, I eat, sleep and breath Drupal.
@@ -98,21 +98,21 @@
   name: Andy Fragen
   avatar: //avatars3.githubusercontent.com/u/1296790?v=3&s=400
   url: //thefragens.com
-  twitter: andyfragen
+  twitter: https://twitter.com/andyfragen
   github: //github.com/afragen
   bio: I am a surgeon, husband and father and I try my best to juggle all while keeping perspective on what’s important. BTW, importance is listed in reverse order.
 - id: petersuhm
   name: Peter Suhm
   avatar: //avatars1.githubusercontent.com/u/1430546?v=3&s=400
   url: //petersuhm.com
-  twitter: petersuhm
+  twitter: https://twitter.com/petersuhm
   github: //github.com/petersuhm
   bio: Web Developer and Travel Addict | Taking the pain out of WordPress development with @WP_Pusher
 - id: mmenavas
   name: Maximo Mena
   avatar: //avatars0.githubusercontent.com/u/770699
   url: //mmenavas.github.io/
-  twitter: mmenavas
+  twitter: https://twitter.com/mmenavas
   github: //github.com/mmenavas
   bio: Maximo Mena was born in Lima, Peru. He moved to Phoenix, Arizona, in 2003 to attend Arizona State University (ASU), where he got a bachelor’s degree in Computer Systems Technology.
 - id: curmudgeon
@@ -124,14 +124,14 @@
   name: Mason James
   avatar: //avatars0.githubusercontent.com/u/297610?v=3&s=400
   github: //github.com/masonjames
-  twitter: masonjames
+  twitter: https://twitter.com/masonjames
   url: //www.valet.io/
   bio: CEO | Founder of WP Valet
 - id: stevector
   name: Steve Persch
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Steve%20Persch%20Headshot.jpg
   url: //stevector.com/
-  twitter: stevector
+  twitter: https://twitter.com/stevector
   github: //github.com/stevector
   bio: Lead Developer Advocate
 - id: andrewmallis
@@ -139,14 +139,14 @@
   avatar: //avatars1.githubusercontent.com/u/249362?v=3&s=400
   url: //www.kalamuna.com/about/#andrew-mallis
   github: //github.com/andrewmallis
-  twitter: andrew_mallis
+  twitter: https://twitter.com/andrew_mallis
   drupal: https://www.drupal.org/user/72871
   bio: A Bay Area-based polymedia artist & technologist | Co-founder @kalamuna
 - id: ataylorme
   name: Andrew Taylor
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Andrew%20Taylor.jpg
   github: //github.com/ataylorme
-  twitter: ataylorme
+  twitter: https://twitter.com/ataylorme
   url: //www.ataylor.me/
   bio: Developer Programs Engineer
 - id: cteitzel
@@ -154,7 +154,7 @@
   avatar: //avatars0.githubusercontent.com/u/1548058
   url: //lockr.io
   github: //github.com/cellar-door
-  twitter: technerdteitzel
+  twitter: https://twitter.com/technerdteitzel
   linkedin: //www.linkedin.com/in/christeitzel
   drupal: //www.drupal.org/user/658076
   wordpress: https://profiles.wordpress.org/cteitzel
@@ -163,14 +163,14 @@
   name: Brian Wood
   avatar: //avatars2.githubusercontent.com/u/185537
   github: //github.com/bwood
-  twitter: getbwood
+  twitter: https://twitter.com/getbwood
   drupal: //www.drupal.org/u/bwood
   bio: Applications Programmer UC Berkeley, IST Web Platform Services
 - id: rachelwhitton
   name: Rachel Whitton
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/RachelNew.jpg
   github: //github.com/rachelwhitton
-  twitter: rachwhitton
+  twitter: https://twitter.com/rachwhitton
   bio: Customer Success Manager
 - id: peter-pantheon
   name: Peter Sawczynec
@@ -181,7 +181,7 @@
   name: Greg Anderson
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Greg_Anderson.jpg
   bio: Open Source Contribution Engineer
-  twitter: greg_1_anderson
+  twitter: https://twitter.com/greg_1_anderson
   github: //github.com/greg-1-anderson
   drupal: //www.drupal.org/u/greg1anderson
 - id: scottmassey
@@ -190,13 +190,13 @@
   bio: Master of Customer Success
   linkedin: //www.linkedin.com/in/scottlmassey
   github: //github.com/sukottokun
-  twitter: astrocolossal
+  twitter: https://twitter.com/astrocolossal
   url: //www.astrocolossal.com
 - id: davidneedham
   name: David Needham
   bio: Developer Advocate
   linkedin: //www.linkedin.com/in/davidaneedham
-  twitter: davidneedham
+  twitter: https://twitter.com/davidneedham
   drupal: //www.drupal.org/u/davidneedham
   gplus: //plus.google.com/u/0/+DavidNeedham
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/David%20Needham.png
@@ -204,7 +204,7 @@
   name: Dwayne McDaniel
   url: //www.mcdwayne.com
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Dwayne%20McDaniel.jpg
-  twitter: mcdwayne
+  twitter: https://twitter.com/mcdwayne
   gplus: https://plus.google.com/u/0/116638905183908020634
   github: https://github.com/1dwaynemcdaniel/
   linkedin: https://www.linkedin.com/in/dwaynemcdaniel
@@ -215,21 +215,21 @@
   name: Albert Causing
   bio: Customer Success Engineer
   avatar: //avatars0.githubusercontent.com/u/17841145
-  twitter: acausing
+  twitter: https://twitter.com/acausing
   drupal: https://www.drupal.org/u/acausing
 - id: tessak22
   name: Tessa Kriesel
   bio: Developer Advocate
-  twitter: tessak22
+  twitter: https://twitter.com/tessak22
   drupal: https://www.drupal.org/u/tessak22
-  url: http://tessakriesel.com/
+  url: https://tessakriesel.com/
   github: https://github.com/tessak22
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/1Headshot_IMG_4173.JPG
-  linkedin: http://linkedin.com/in/tessak22
+  linkedin: https://linkedin.com/in/tessak22
 - id: eabquina
   name: Eladio Abquina
   bio: Customer Success Engineer
-  twitter: eabquina
+  twitter: https://twitter.com/eabquina
   github: //github.com/eabquina
   avatar: //pbs.twimg.com/profile_images/1290706689/SAMPLE2_400x400.jpg
   linkedin: //ph.linkedin.com/in/eabquina
@@ -237,30 +237,30 @@
   name: Alex Fornuto
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Alex%20Fornuto.jpg
   github: //github.com/alexfornuto
-  twitter: AlexFornuto
+  twitter: https://twitter.com/AlexFornuto
   bio: Technical Content Editor
 - id: LukasRos
   name: Lukas Rosenstock
-  twitter: LukasRosenstock
+  twitter: https://twitter.com/LukasRosenstock
   linkedin: //www.linkedin.com/in/lukasros
   bio: API, Cloud & Integration Expert
   avatar: //avatars3.githubusercontent.com/u/192050
   github: //github.com/LukasRos
 - id: dgorton
   name: Drew Gorton
-  twitter: dgorton
+  twitter: https://twitter.com/dgorton
   bio: Director of Developer Relations
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Drew.jpg
   github: //github.com/dgorton
 - id: dts
   name: David Strauss
-  twitter: DavidStrauss
+  twitter: https://twitter.com/DavidStrauss
   bio: CTO & Co-Founder
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/david_0.jpg
   github: //github.com/davidstrauss
 - id: danielbachhuber
   name: Daniel Bachhuber
-  twitter: danielbachhuber
+  twitter: https://twitter.com/danielbachhuber
   bio: Bachhuber is founder & principal at Hand Built. He specializes in code review, data migrations, and scaling WordPress.
   avatar: //avatars.githubusercontent.com/u/36432
   github: //github.com/danielbachhuber
@@ -268,7 +268,7 @@
   url: https://handbuilt.co/
 - id: dustinleblanc
   name: Dustin LeBlanc
-  twitter: DustinLeblanc
+  twitter: https://twitter.com/DustinLeblanc
   bio: Customer Success Engineer
   avatar: //drupal.org/files/styles/grid-2/public/user-pictures/picture-1731762-1472589456.png
   github: //github.com/dustinleblanc
@@ -277,11 +277,11 @@
 - id: wbconnor
   name: Brent Connor
   avatar: //avatars2.githubusercontent.com/u/8883983
-  twitter: wibcon
+  twitter: https://twitter.com/wibcon
   github: //github.com/wbconnor
 - id: sarahg
   name: Sarah German
-  twitter: hey_germano
+  twitter: https://twitter.com/hey_germano
   bio: Senior Customer Success Engineer
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Sarah%20G.jpg
   github: //github.com/sarahg
@@ -294,7 +294,7 @@
   avatar: //avatars.githubusercontent.com/u/48095658
 - id: BFTrick
   name: Patrick Rauland
-  twitter: BFTrick
+  twitter: https://twitter.com/BFTrick
   bio: Ecommerce consultant, LinkedIn Learning instructor, and content creator for Lynda.com. WooCommerce events planner with Automattic and others.
   avatar: //avatars.githubusercontent.com/u/1065372
   github: //github.com/BFTrick
@@ -302,7 +302,7 @@
   url: https://www.speakinginbytes.com/
 - id: edwardangert
   name: Edward Angert
-  twitter: edwardangert
+  twitter: https://twitter.com/edwardangert
   bio: Technical Content Editor for Pantheon
   github: //github.com/edwardangert
   avatar: //avatars2.githubusercontent.com/u/17991901
@@ -320,5 +320,5 @@
   name: Steve Zipfel
   avatar: //avatars2.githubusercontent.com/u/856298
   github: //github.com/szipfel
-  twitter: szipfel
+  twitter: https://twitter.com/szipfel
   bio: Technical Engagement Manager
