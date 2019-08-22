@@ -8,7 +8,7 @@
   cta_alt:
     title: 'Live Demo'
     subtitle: 'See how you can build amazing digital experiences on the fastest and most reliable WebOps platform.'
-    url: '/live-demo?docs'
+    url: 'https://pantheon.io/live-demo?docs'
   topics-groups:
     - title: 'Create Sandbox Site'
       subtitle: 'Spin up a Drupal or WordPress site for free in minutes.'
@@ -834,7 +834,7 @@
         - text: 'Billing in the Site Dashboard'
           url: '/site-billing/'
         - text: 'New Site Owner FAQs'
-          url: 'New Site Owner FAQs'
+          url: '/site-owner-faq/'
         - text: 'Manage Plans in the Site Dashboard'
           url: '/site-plan/'
         - text: 'Traffic Limits and Overages'
