@@ -12,8 +12,10 @@ const propTypes = {
 
 function CallToAction(props) {
 	const { url, title, subTitle, dark } = props;
-	return (
-		<Link to={url}>
+	if (/https?/.test(url)) {
+		return (
+			<>
+			<a href={url}>
 			<div
 				className={`call-to-action ${dark && 'call-to-action--dark'}`}
 				style={{ padding: '25px !important', display: 'block' }}
@@ -24,8 +26,24 @@ function CallToAction(props) {
 				</h1>
 				<p className="call-to-action__subtitle">{subTitle}</p>
 			</div>
-		</Link>
-	);
+			</a>
+			</>
+		)
+		}
+		return (
+			<Link to={url}>
+				<div
+					className={`call-to-action ${dark && 'call-to-action--dark'}`}
+					style={{ padding: '25px !important', display: 'block' }}
+				>
+					<h1 className="call-to-action__title">
+						{title}
+						<i className="fa fa-angle-right" style={{ color: '#EFD01B' }} />
+					</h1>
+					<p className="call-to-action__subtitle">{subTitle}</p>
+				</div>
+			</Link>
+		)
 }
 
 CallToAction.propTypes = propTypes;

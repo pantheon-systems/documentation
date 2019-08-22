@@ -27,7 +27,7 @@ Set price for new sites created after late October that aren’t purchased via a
 
 <dd>
 
-[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](http://pantheon.io/partner-program).
+[Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) is available to qualified agency partners. Learn more about the [Pantheon Partner Program](https://pantheon.io/partner-program).
 
 </dd>
 

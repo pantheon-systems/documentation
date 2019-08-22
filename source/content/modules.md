@@ -4,7 +4,7 @@ description: Details on specific Drupal modules developed and maintained for the
 contributors: [eabquina]
 tags: [siteintegrations, infrastructure, cacheedge]
 ---
-Pantheon maintains several modules to extend and integrate Drupal on the platform. For real time discussion of these modules, find Pantheon developers in our [Pantheon Community](/power-users/) Slack channel.
+Pantheon maintains several modules to extend and integrate Drupal on the platform. For real time discussion of these modules, find Pantheon developers in our [Pantheon Community](/pantheon-community/) Slack channel.
 
 <Alert title="Note" type="info">
 WordPress users, see [Pantheon Plugins](/plugins/) for details on WordPress plugins developed and maintained for the Pantheon workflow.
