@@ -99,8 +99,10 @@ This creates a new symlink to the filesystem at the specified location. Note tha
 Complete the following before deploying `filemount` (**required**):
 
 1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path), [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after), or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder) to use the new path
-2. Add path to the `.gitignore` file
-3. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
+
+1. Add path to the `.gitignore` file
+
+1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
 
 #### Considerations
 * Recommended usage limited to [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`
