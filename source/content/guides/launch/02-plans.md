@@ -22,15 +22,21 @@ image: getting-started-Largethumb
 In this lesson, we'll upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.
 
 ## Use Your Own Card
-If you plan to pay for the site or if you want to wait to transfer ownership, you can add your own payment method now:
+To upgrade and pay for the site now, add your payment method:
 
-1. From the Pantheon Site Dashboard, click **<span class="glyphicons glyphicons-cogwheel"></span> Settings**.
-2. Go to the **Billing** tab and select a payment method, then click **Update Payment Method**. You can add a new card or choose from cards already associated with your user account.
-3. Select the desired [plan](https://pantheon.io/pricing/) from the **Plan** tab, then click **Update Plan**.
+1. From the Pantheon Site Dashboard, click the **Upgrade** button next to the Site's name.
+1. Click the **Select** button under the [plan you choose](https://pantheon.io/pricing/).
+1. At the **Choose Billing** step, select the billing frequency: [**Pay Annually**](/annual-billing/) or **Pay Monthly**.
+   - If you've chosen a **Performance Plan**, choose the size and click **Continue**.
+   - If you've chosen a **Basic Plan**, click **Continue**.
+1. Click **+ Add New Card** and enter the credit card information, then click **Add Card** to save the card information.
+1. Click **Continue** and if everything looks right, click **Place Your Order** to confirm your purchase.
+   - [Contact Support](/support/) if you need any help.
 
 As the site owner, you’ll receive an email confirming the change to the site. After the site billing is processed, you’ll receive an updated invoice.
 
 ## Transfer Ownership and Billing for This Site
+
 <Partial file="transfer-ownership-billing-intro.md" />
 <Partial file="transfer-ownership-billing-steps.md" />
 
