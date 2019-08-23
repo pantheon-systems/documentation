@@ -38,6 +38,7 @@ As the site owner, you’ll receive an email confirming the change to the site. 
 ## Transfer Ownership and Billing for This Site
 
 <Partial file="transfer-ownership-billing-intro.md" />
+
 <Partial file="transfer-ownership-billing-steps.md" />
 
 <Accordion title="Level Up: Load and Performance Tests (Optional)" id="host-specific1" icon="graduation-cap">

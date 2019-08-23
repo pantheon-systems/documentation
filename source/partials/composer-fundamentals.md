@@ -7,7 +7,7 @@ Understanding how Composer can be used independent of Drupal or WordPress is a g
 
 <Callout title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
 
 </Callout>
 

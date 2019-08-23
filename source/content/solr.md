@@ -8,9 +8,9 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 <Partial file="solr-version.md" />
 
 
-<Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 

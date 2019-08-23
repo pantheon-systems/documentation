@@ -11,7 +11,7 @@ If you are a digital agency servicing clients, or a reseller of Pantheon as part
 
 <Enablement title="Accelerate Your Workflow" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Improve your agency's development efficiency with custom DevOps training from Pantheon experts.
+Improve your agency's development efficiency with custom WebOps training from Pantheon experts.
 
 </Enablement>
 

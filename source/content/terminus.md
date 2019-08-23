@@ -18,7 +18,7 @@ Our command line interface, Terminus, provides advanced interaction with Pantheo
 
 <Enablement title="Command Line Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 

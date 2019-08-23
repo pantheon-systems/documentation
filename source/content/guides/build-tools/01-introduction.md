@@ -25,7 +25,7 @@ This guide describes how to use build tools such as GitHub and CircleCI with Com
 
 <Enablement title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
