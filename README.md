@@ -49,7 +49,7 @@ cd documentation/gatsby
 npm install
 ```
 #### GitHub Token
-We use the [gatsby-remark-emebed-snippet](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-embed-snippet) to use files from GitHub in our docs. Before you can build a local development site, you need to provide a GitHub token to the environment:
+We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-embed-snippet) to use files from GitHub in our docs. Before you can build a local development site, you need to provide a GitHub token to the environment:
 
 1. Log in to GitHub and go to <https://github.com/settings/tokens>
 1. Click Generate new token

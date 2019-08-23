@@ -115,7 +115,7 @@ Use title case for all headers, buttons, tab names, and links, and when referrin
 
 Title case means that you capitalize every word except:
 
-* Articles (a, an, as, the)
+* Articles (a, an, the)
 
 * Coordinating conjunctions (and, or)
 
