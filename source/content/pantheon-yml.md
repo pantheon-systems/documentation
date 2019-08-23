@@ -12,11 +12,12 @@ Set up existing scripts and write your own with help from our experts. Pantheon 
 
 </Enablement>
 
-For reference implementations see  [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
+For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
 
 ## Advanced Site Configuration
 ### Include api_version
 Define the `api_version` property in order for `pantheon.yml` to be valid:
+
 ```yaml
 api_version: 1
 ```
@@ -36,6 +37,21 @@ protected_web_paths:
 * Limited to 24 protected paths
 * You may not be able to protect files or paths with special characters
 * Wait a few seconds for changes to take effect
+
+### Enforce HTTPS + HSTS
+
+HTTPS adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
+
+Using the `pantheon.yml` file, you can set the use and duration of the HSTS header and its affect on subdomains. You can set a short (5 minute) duration header, or a long (366 day) duration, and choose whether to affect subdomains. Using the long duration setting will help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/).
+
+<Partial file="hsts.md" />
+
+#### Test Your Site's HSTS Configuration for an A+ Rating
+
+[SSL Labs](https://www.ssllabs.com) provides a free, online service that you can use to test your Site's configuration. In order to obtain an A+ rating, a long-duration HSTS header using the `full` or `full+subdomains` value is required.
+
+1. To test your configuration, select a short-duration HSTS header (`transitional` or `transitional+subdomains`), before committing to the long-duration HSTS header.
+1. When you're comfortable that HSTS works as expected in the Live environment, send the long-duration HSTS header by moving to `full` or `full+subdomains`.
 
 ### Nested Docroot
 Nest your docroot one level beneath your code repository in a directory named `web`:
@@ -83,8 +99,10 @@ This creates a new symlink to the filesystem at the specified location. Note tha
 Complete the following before deploying `filemount` (**required**):
 
 1. Reconfigure [Drupal 8](https://www.drupal.org/upgrade/file_public_path), [Drupal 7](https://www.drupal.org/docs/7/distributions/drupal-commons/installing-drupal-commons/configuring-file-system-settings-after), or [WordPress](https://codex.wordpress.org/Editing_wp-config.php#Moving_uploads_folder) to use the new path
-2. Add path to the `.gitignore` file
-3. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
+
+1. Add path to the `.gitignore` file
+
+1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
 
 #### Considerations
 * Recommended usage limited to [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`
@@ -112,7 +130,8 @@ When the same configuration value is defined in both files, the value from `pant
 
 ### "Changes to pantheon.yml detected, but there was an error while processing it"
 
-We will reject a commit that includes a `pantheon.yml` error, with a message like:
+The Platform will automatically reject a commit that includes a `pantheon.yml` error. The error message will resemble:
+
 ```
 remote: PANTHEON ERROR:
 remote:
