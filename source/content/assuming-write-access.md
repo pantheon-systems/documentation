@@ -26,20 +26,19 @@ The best solution is to communicate with the maintainer of the module or plugin 
     cd ~/sites/myawesomesite/ #Change this to your project directory.
     ```
 
-1. Move the directory you want to replace with a symlink. This serves two purposes; backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
+1. Move the directory you want to replace with a symlink. This serves two purposes: backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
 
     ```bash
     mv ./wp-content/path/plugin-expects-write-to ~/backups/
     ```
 
-    The command above moves the directory to a folder named backups in your home directory. `~/`. Replace this with an existing backup location.
+    The command above moves the directory to a folder named `backups` in your home directory, `~/`. Replace this with an existing backup location.
 
-1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder you're command line prompt is currently in. Working from the location of the symlink allows for correct relative paths.
+1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths.
 
    ```bash
    cd wp-content/path/
    ```
-
 
 1. Create a symlink for the standard files path:
 
