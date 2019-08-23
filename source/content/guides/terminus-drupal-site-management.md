@@ -130,7 +130,7 @@ admin_menu_toolbar was enabled successfully.                                [ok]
 
 Not bad, eh? All this without a single GUI or web browser click! If you look at the site's Dashboard, the new code will be displayed there, waiting to be committed.
 
-![The dashboard showing the code was deployed to the Dev environment](/assets/images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![The dashboard showing the code was deployed to the Dev environment](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
 Let's commit it all into the Git repo with the `terminus env:commit` command:
 
