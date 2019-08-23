@@ -1,13 +1,13 @@
 ---
-title: Use the Pantheon Workflow
-description: Understand the Pantheon workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
+title: Use the Pantheon WebOps Workflow
+description: Understand the Pantheon WebOps workflow, and how to use separate Dev, Test, and Live environments for your Drupal or WordPress sites.
 tags: [workflow, dashboard]
 categories: []
 ---
 
 <Alert title="Note" type="info">
 
-This page offers a high level description of the intended usage of Pantheon's Dev, Test, and Live workflow. After familiarizing yourself with the concepts described here, follow our step-by-step [Quick Start Guide](/guides/quickstart) to practice the basics.
+This page offers a high level description of the intended usage of Pantheon's Dev, Test, and Live WebOps workflow. After familiarizing yourself with the concepts described here, follow our step-by-step [Quick Start Guide](/guides/quickstart) to practice the basics.
 
 </Alert>
 
@@ -15,12 +15,12 @@ Every Pantheon site comes with three environments: Dev, Test, and Live. Each env
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
+Optimize your dev team and streamline WebOps workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.
 
 </Enablement>
 
 ## Components of a Site
-One of the core concepts at the heart of the Pantheon workflow is the distinction between **code** and **content**.
+One of the core concepts at the heart of the Pantheon WebOps workflow is the distinction between **code** and **content**.
 ### Code
 Code refers to anything version controlled by Git which includes core, custom and contributed modules or plugins, themes, and libraries.
 
@@ -33,7 +33,7 @@ Content refers to your sites files and the database. In this context, files are 
 
 ![Dev Test and Live icon](../images/workflow.png)
 
-The main process of the Pantheon workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/files/) into our distributed filesystem, Valhalla, and [code](/code/) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
+The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/files/) into our distributed filesystem, Valhalla, and [code](/code/) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
 <Accordion title="Why does Pantheon do this?" id="why-tab" icon="question-sign">
 
@@ -45,7 +45,7 @@ Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/80205
 
 ### Commit Code in Dev
 
-Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the workflow model we've described. Update code in the Dev environment via [SFTP](/sftp/#sftp-mode) or [Git](/git/).
+Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via [SFTP](/sftp/#sftp-mode) or [Git](/git/).
 For more detailed information on developing directly in SFTP mode, please see the [guide](/sftp/).
 
 ### Combine Code from Dev and Content from Live in Test
