@@ -1,11 +1,15 @@
 import React from 'react';
 import SearchResults from '../components/searchResults';
 import Layout from '../layout/layout';
+import SEO from '../layout/seo';
 
 class Search extends React.Component {
 	render() {
 		return (
 			<Layout>
+				<SEO
+					title="Search"
+				/>
 				<div style={{ marginTop: '-20px' }} className="container">
 					<div className="row doc-content-well">
 						<div className="row">

@@ -13,7 +13,7 @@ class Index extends React.Component {
 		const { data: { homeYaml, allMdx } } = this.props;
 		return (
 			<Layout>
-        <SEO
+       			 <SEO
 					description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
 					image={"/assets/images/default-thumb-doc.png"}
 				/>
