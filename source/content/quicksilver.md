@@ -9,7 +9,7 @@ Hook into platform workflows to automate your Pantheon workflow. Tell us which s
 
 <Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Set up existing scripts and write your own with help from our experts. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.
+Set up existing scripts and write your own with help from our experts. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
 

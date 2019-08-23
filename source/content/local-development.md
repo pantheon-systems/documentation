@@ -6,9 +6,9 @@ categories: []
 ---
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern.
 
-<Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's DevOps training can accelerate your workflow.
+Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's WebOps training can accelerate your workflow.
 
 </Enablement>
 

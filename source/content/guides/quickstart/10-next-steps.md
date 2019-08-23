@@ -35,6 +35,6 @@ But this is just the tip of the iceberg. Ready to learn more? Here are just some
 >
 
 Accelerate your journey to workflow nirvana with help from the experts at
-Pantheon. Check out our [DevOps training program](https://pantheon.io/agencies/learn-pantheon?docs).
+Pantheon. Check out our [WebOps training program](https://pantheon.io/agencies/learn-pantheon?docs).
 
 </Callout>

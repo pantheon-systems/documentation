@@ -7,9 +7,9 @@ searchboost: 200
 
 Pantheon's new [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 60+ global POPs (points of presence) where site pages and assets are cached, plus [free managed HTTPS](/https) using [Let's Encrypt](https://letsencrypt.org).
 
-<Enablement title="Agency DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal DevOps.
+Get the most out of Global CDN with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 

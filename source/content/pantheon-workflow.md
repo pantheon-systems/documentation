@@ -13,9 +13,9 @@ This page offers a high level description of the intended usage of Pantheon's De
 
 Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the live site's availability to the world. Additional development environments are available with [Multidev](/multidev/).
 
-<Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal DevOps.
+Optimize your dev team and streamline internal workflows. Pantheon delivers custom workshops to help development teams master our platform and improve their internal WebOps.
 
 </Enablement>
 

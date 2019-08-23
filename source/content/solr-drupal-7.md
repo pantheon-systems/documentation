@@ -13,9 +13,9 @@ For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8]
 
 First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**. This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with Drupal.
 
-<Enablement title="Get DevOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal DevOps.
+Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
