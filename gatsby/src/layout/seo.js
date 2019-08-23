@@ -29,7 +29,15 @@ function SEO({ description, lang, meta, keywords, title, authors, image }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaImage = image || "/assets/images/default-thumb-doc.png"
   const authorList = authors ? Array.from(authors) : []
+
+  const titleProps = title ? {
+    title: `${title}`,
+    titleTemplate: `%s | ${site.siteMetadata.title}`
+  } : {
+    title: site.siteMetadata.title
+  }
 
   return (
     <Helmet
@@ -37,12 +45,7 @@ function SEO({ description, lang, meta, keywords, title, authors, image }) {
         lang,
       }}
 
-      {...title ? {
-        title: `${title}`,
-        titleTemplate: `%s | ${site.siteMetadata.title}`
-      } : {
-        title: site.siteMetadata.title
-      }}
+      {...titleProps}
 
       meta={[
         {
@@ -55,15 +58,15 @@ function SEO({ description, lang, meta, keywords, title, authors, image }) {
         },
         {
           name: `og:image`,
-          content: `${site.siteMetadata.siteUrl}${image}`,
+          content: `${site.siteMetadata.siteUrl}${metaImage}`,
         },
         {
           itemprop: `image`,
-          content: `${site.siteMetadata.siteUrl}${image}`,
+          content: `${site.siteMetadata.siteUrl}${metaImage}`,
         },
         {
           name: `twitter:image`,
-          content: `${site.siteMetadata.siteUrl}${image}`,
+          content: `${site.siteMetadata.siteUrl}${metaImage}`,
         },
         {
           itemprop: `description`,
