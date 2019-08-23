@@ -23,12 +23,7 @@ class Search extends React.Component {
 							<div className="container-fluid">
 								<div className="row">
 									<div className="col-md-8 search-results">
-
-
 									<SearchResults />
-
-
-
 									<script src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage"></script>
 									</div>
 								</div>
