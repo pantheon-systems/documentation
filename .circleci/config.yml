@@ -8,7 +8,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-always-
+            - v2-always-
             - npm-v2-{{ checksum "package-lock.json" }}
             - composer-v2-{{ checksum "composer.lock" }}
       - run:
@@ -81,7 +81,7 @@ jobs:
           paths:
             - ~/.composer/cache
       - save_cache:
-          key: v1-always-{{ epoch }}
+          key: v2-always-{{ epoch }}
           paths:
             - ~/build/gatsby/public
             - ~/build/gatsby/.cache
