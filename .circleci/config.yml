@@ -29,7 +29,11 @@ jobs:
           name: Gatsby Build
           command: |
             cd ~/build/gatsby
-            gatsby build --prefix-paths | cat
+            gatsby build --prefix-paths
+      - run:
+          name: Remove empty directories
+          command: |
+            find ~/build/gatsby/public -type d -empty -delete
       - run:
           name: Deploy Multidev environment
           command: |
