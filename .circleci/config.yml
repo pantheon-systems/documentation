@@ -33,7 +33,8 @@ jobs:
       - run:
           name: Remove empty directories
           command: |
-            find ./gatsby/public -type d -empty -print && print "\n Empty directories purged \n"
+            find ~/build/gatsby/public -type d -empty -delete;
+            print "\n Empty directories purged \n"
       - run:
           name: Deploy Multidev environment
           command: |
