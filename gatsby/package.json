@@ -65,8 +65,8 @@
   },
   "scripts": {
     "build": "gatsby build",
+    "postbuild" : "find ./gatsby/public -type d -empty -print",
     "develop": "gatsby develop",
-    "postbuild" : "../scripts/cleanup-dirs.sh",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
