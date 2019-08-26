@@ -29,7 +29,7 @@ jobs:
           name: Gatsby Build
           command: |
             cd ~/build/gatsby
-            gatsby build --prefix-paths | cat
+            gatsby build --prefix-paths
       - run:
           name: Deploy Multidev environment
           command: |
