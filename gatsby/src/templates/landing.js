@@ -16,11 +16,6 @@ class LandingTemplate extends Component {
 		const topic = landingsYaml;
 		return !topic ? null : (
 			<Layout>
-				<SEO
-					title={topic.title}
-					description={topic.title}
-					image={"/assets/images/default-thumb-doc.png"}
-				/>
 				<div style={{ marginTop: '-20px' }} className="container">
 					<div className="row doc-content-well">
 						<div className="row">

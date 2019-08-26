@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
 import SearchResults from '../components/searchResults';
-import ResultLayout from '../layout/resultLayout';
-import CallToAction from '../layout/call-to-action';
-import TopicsGrid from '../layout/topics-grid';
-import ThreeColumnList from '../layout/three-column-list';
-import ChangelogPreview from '../layout/changelog-preview';
+import Layout from '../layout/layout';
+import SEO from '../layout/seo';
 
-class Index extends React.Component {
+class Search extends React.Component {
 	render() {
 		return (
-			<ResultLayout>
+			<Layout>
+				<SEO
+					image={"/assets/images/default-thumb-doc.png"}
+					title="Search"
+				/>
 				<div style={{ marginTop: '-20px' }} className="container">
 					<div className="row doc-content-well">
 						<div className="row">
@@ -24,12 +24,7 @@ class Index extends React.Component {
 							<div className="container-fluid">
 								<div className="row">
 									<div className="col-md-8 search-results">
-
-
 									<SearchResults />
-
-
-
 									<script src="https://addsearch.com/js/?key=a7b957b7a8f57f4cc544c54f289611c6&type=resultpage"></script>
 									</div>
 								</div>
@@ -38,10 +33,10 @@ class Index extends React.Component {
 						</div>
 					</div>
 				</div>
-			</ResultLayout>
+			</Layout>
 		);
 	}
 }
 
-export default Index;
+export default Search;
 
