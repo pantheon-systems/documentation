@@ -31,6 +31,10 @@ jobs:
             cd ~/build/gatsby
             gatsby build --prefix-paths
       - run:
+          name: Remove empty directories
+          command: |
+            find ./gatsby/public -type d -empty -print && print "\n Empty directories purged \n"
+      - run:
           name: Deploy Multidev environment
           command: |
             bash ./scripts/deploy-multidev.sh
