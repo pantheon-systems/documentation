@@ -65,7 +65,7 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "postbuild" : "find ./gatsby/public -type d -empty -print",
+    "postbuild" : "find ./gatsby/public -type d -empty -print && print 'empty directories purged \n'",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
