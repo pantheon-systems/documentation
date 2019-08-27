@@ -46,7 +46,7 @@ sftp> put [your file or files]
 
 ## rsync
 
-rsync is also available, but it is a more advanced tool that requires experience with the command line.
+rsync is also available, but it is a more advanced tool that requires experience with the command line. You can also use the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) as a shortcut to rsync files to your Pantheon sites.
 
 <Alert title="Note" type="info">
 
