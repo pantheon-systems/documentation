@@ -9,7 +9,6 @@ searchboost: 90
 We've compiled some great tips for agencies working on Pantheon. They are loosely ordered from basic to advanced and cover a variety of topics. If you would like to see something added to this doc, please use the **Contribute** link at the top of this article.
 
 ## Become a Partner Agency / Join the Partner Program
-
 One of the easiest tips we can offer for immediate results. Pantheon Partner Agencies are eligible for additional support options and other exclusive features. Visit the [Partner Program Page](https://pantheon.io/agencies/partner-program) to learn more.
 
 
@@ -75,7 +74,6 @@ Quicksilver Platform Hooks allow you to automate actions in response to activity
 Use the `pantheon.yml` file to set up platform hooks and advanced site configurations such as PHP version, [nested docroot](/nested-docroot/) and more. For details, see [The pantheon.yml Configuration File](/pantheon-yml/).
 
 ### New Relic APM Pro
-
 New Relic APM Pro is an advanced tool for application monitoring and troubleshooting, provided to all sites on Pantheon for free. For details, see [New Relic APM Pro](/new-relic/). The following blog posts are also a great reference:
 
 - [Getting Started with New Relic APM Pro](https://pantheon.io/blog/getting-started-new-relic-apm-pro)
@@ -91,7 +89,6 @@ Pantheon does not provide a way to set custom scheduling for cron jobs. For deta
 In addition to the [frameworks offered by Pantheon during the site creation process](/start-state), Custom Upstreams add a private installation option for all team members of an organization. A Custom Upstream is a remotely hosted repository that your agency manages, and can include shared code used on many sites, such as a starter theme or plugins/modules, in addition to the WordPress or Drupal core. When an update is pushed to the upstream it will show up in the dashboard for all sites created from that upstream. For details, see [Introduction to Custom Upstreams](/custom-upstream/). You can see an example WordPress Upstream workflow in this [blog post](https://pantheon.io/blog/pantheon-custom-upstream-wordpress-workflow).
 
 ### Build Steps
-
 Pantheon currently does not support a code build step, which includes tasks such as installing dependencies with Composer or Git submodules, using JavaScript task runners such as Grunt or gulp, etc.
 
 If a project needs a build step the recommended method is a two repository model where you have an external Git repository hosted outside of Pantheon with an intermittent build step, then deploy the build artifact to Pantheon. Some samples are:
