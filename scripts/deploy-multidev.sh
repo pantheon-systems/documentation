@@ -136,12 +136,12 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   do
     if [[ $doc =~ $doc_file ]]
     then
-      export changelog_path="^(.*_changelogs.*)(.*\.md)"
-      export doc_path="^(.*_docs.*)(.*\.md)"
+      export changelog_path="^(.*changelogs.*)(.*\.md)"
+      export doc_path="^(.*content.*)(.*\.md)"
       if [[ $doc =~ $doc_path ]]
         then
         export guide=${doc:13: -3}
-        if ls -R source/_docs/guides | grep '^\<'"${guide##*/}"'\>.md$'
+        if ls -R source/content/guides | grep '^\<'"${guide##*/}"'\>.md$'
           then
             export guide_file=${guide##*/}
             if [[ ${guide_file:0:2}  == 01 ]]
