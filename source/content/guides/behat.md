@@ -10,7 +10,6 @@ contributors: [ataylorme]
 [Behat](https://behat.org) is a PHP framework for automated testing. In our [blog](https://pantheon.io/blog/behat-web-developers) we discuss the advantages of using Behat to continuously test your site. This guide demonstrates how to install Behat and [Mink](http://mink.behat.org/en/latest/), and how to write simple tests.
 
 ## Before You Begin
-
 This guide requires:
 
  - A local installation of [Composer](https://getcomposer.org/).
@@ -26,7 +25,6 @@ As a first troubleshooting step, try running `composer update` to bring `compose
 </Alert>
 
 ## Install Behat and Mink
-
 1. Behat and Mink are both written in PHP, so it makes sense that they are managed with Composer. That means installing them in a project is quick and easy:
 
    ```bash
@@ -48,7 +46,6 @@ As a first troubleshooting step, try running `composer update` to bring `compose
    ```
 
 ## Configure Behat
-
 1. Behat is configured with the file `behat.yml`. If you haven't used [**YAML**](https://yaml.org/) before, there is a good [YAML quickstart guide](https://yaml.org/start.html). Make the new file, and add contents below. Remember to replace `https://your-site-url/` with the actual URL to your site:
 
    ```yml
@@ -75,7 +72,6 @@ As a first troubleshooting step, try running `composer update` to bring `compose
    This command will return a list of available step definitions. Don't worry about parsing through the list now.
 
 ## Write and Run Tests
-
 Next, we can take some of the steps we listed above, most of which are provided by Mink, and write our first test. Behat tests have the `.feature` extension and are located in the `features` directory by default.
 
 1. Create a file named `visit-homepage.feature` inside the `features` directory, with the following contents:
@@ -108,7 +104,6 @@ Next, we can take some of the steps we listed above, most of which are provided 
     - `--format-settings='{"paths": false}'`: Stops Behat from printing file paths and line numbers next to each step in the test, which can get noisy. If tests are failing, this can be re-enabled to help debug.
 
 ## Next Steps
-
 Review the available step definitions again by running `./vendor/bin/behat -dl`, and create more tests by adding additional `.feature` files to the features directory.
 
 If you find you are repeating the same things over and over, such as logging into WordPress or Drupal, try framework extensions. Each one adds additional steps, specific to their corresponding framework:
