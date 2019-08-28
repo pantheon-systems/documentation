@@ -46,7 +46,7 @@ The following is an example of how to increase test coverage for your project by
 
     It's a relatively simple task to add new tests that exercise your site through its interface. For example, the figure below demonstrates testing that an administrator can create a new page on the site.
 
-2.  Create a new file called `content-ui.feature` within the `tests/site-features` directory containing:
+2.  Create a new file called `content-ui.feature` within the `tests/behat/site-features` directory containing:
 
     ```bash
     Feature: Create Content through Drupal Content UI
@@ -60,7 +60,7 @@ The following is an example of how to increase test coverage for your project by
         And I am on "/node/add/page"
         And I enter "Test Page" for "Title"
         And I press "Save"
-        Then I should see "Basic page Test Page has been created."
+        Then I should see "has been created."
     ```
     By following this pattern, you can add similar tests to confirm that the most important features of your site remain functional. To save time on test runs, remove the example tests that cover basic Drupal features, and only run tests on your core functionality.
 
