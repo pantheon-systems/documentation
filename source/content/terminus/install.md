@@ -32,9 +32,7 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>\$HOME</code> and install there:
 
 ```bash
-  curl -O
-  https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
-  && php installer.phar install
+  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 ```
 
 See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
