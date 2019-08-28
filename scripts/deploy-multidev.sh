@@ -136,12 +136,12 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   do
     if [[ $doc =~ $doc_file ]]
     then
-      export changelog_path="^(.*_changelogs.*)(.*\.md)"
-      export doc_path="^(.*_docs.*)(.*\.md)"
+      export changelog_path="^(.*changelogs.*)(.*\.md)"
+      export doc_path="^(.*content.*)(.*\.md)"
       if [[ $doc =~ $doc_path ]]
         then
-        export guide=${doc:13: -3}
-        if ls -R source/_docs/guides | grep '^\<'"${guide##*/}"'\>.md$'
+        export guide=${doc:15: -3}
+        if ls -R source/content/guides | grep '^\<'"${guide##*/}"'\>.md$'
           then
             export guide_file=${guide##*/}
             if [[ ${guide_file:0:2}  == 01 ]]
@@ -153,16 +153,16 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
               else
             grep -- '\<'"${guide##*/}"'\>' comment.txt || echo -n "-\u0020[/docs/"$guide"]("$url"/docs/"$guide")\n" >> comment.txt
             fi
-          elif ls -R source/_docs/dns-providers | grep '^\<'"${doc:27: -3}"'\>.md$'
+          elif ls -R source/content/dns-providers | grep '^\<'"${doc:29: -3}"'\>.md$'
             then
-              grep -- '\<'"${doc:27: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:27: -3}"]("$url"/docs/"${doc:27: -3}")\n" >> comment.txt
+              grep -- '\<'"${doc:29: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:29: -3}"]("$url"/docs/"${doc:29: -3}")\n" >> comment.txt
           else
-            grep -- '\<'"${doc:8: -3}"'\>' comment.txt || echo -n "-\u0020[/"${doc:8: -3}"]("$url"/"${doc:8: -3}")\n" >> comment.txt
+            grep -- '\<'"${doc:15: -3}"'\>' comment.txt || echo -n "-\u0020[/docs/"${doc:15: -3}"]("$url"/docs/"${doc:15: -3}")\n" >> comment.txt
         fi
     elif [[ $doc =~ $changelog_path ]]
     then
-      export changelog=docs/changelog/${doc:19: 4}/${doc:24: 2}
-      grep -- ''"${changelog}"'' comment.txt || echo -n "-\u0020["$changelog"]("$url"/"$changelog")\n" >> comment.txt
+      export changelog=docs/changelog/${doc:18: 4}/${doc:23: 2}
+      grep -- ''"${changelog}"'' comment.txt || echo -n "-\u0020[/"$changelog"]("$url"/"$changelog")\n" >> comment.txt
     else
       grep -- ''"${doc}"'' comment.txt || echo -n "-\u0020["${doc}"](https://github.com/pantheon-systems/documentation/commit/"$CIRCLE_SHA1"/"$doc")\n" >> comment.txt
     fi
