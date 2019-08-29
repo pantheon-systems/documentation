@@ -54,13 +54,17 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 ## Create Pantheon Site
 1. Navigate to your User Dashboard and click the **Migrate Existing Site** button:
 
-    ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
+   ![The Migrate Existing Site Button](../images/dashboard/migrate-existing-site.png)
+
 2. Enter your current website URL, choose your site type (Drupal 7, Drupal 8, or WordPress,), and click **Continue**:
 
-    ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
+   ![Choose the Starting State for your Migrated Site](../images/dashboard/migrate-step2.png)
+
+   Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
+
 3. Name your site and select an [Organization](/organizations/) (optional), then click **Create Site**:
 
-    ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
+   ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
 
 4.  Click the link to manually migrate your site then select **Yes** to confirm:
 
