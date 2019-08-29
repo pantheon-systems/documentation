@@ -18,7 +18,7 @@ Use of the HSTS header is defined by the `enforce_https` directive, and takes fi
 
 For example, to set `enforce_https` as `transitional`:
 
-```yml
+```yaml
 enforce_https: transitional
 ```
 
