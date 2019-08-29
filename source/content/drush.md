@@ -20,7 +20,7 @@ You can run all of the commands below from Terminus instead of using Drush alias
 For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/drush-versions).
 
 ## Download Drush Aliases Locally
-Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use Terminus to download your Drush aliases.
+Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use [Terminus](/terminus/) to download your Drush aliases.
 
 Authenticate Terminus with [machine tokens](/docs/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
@@ -36,14 +36,16 @@ $ terminus aliases --all
 
 If you add a site to your account, you will have to download a new copy of your Drush aliases. You do not need to update your Drush aliases when you add new mulitdev environments to your sites.
 
-<div class="alert alert-info">
-<h4 class="info">Note</h4>
-<p>You must use Drush 8.3.0 or 9.6.0 or later to use Drush aliases directly. Earlier versions are not compatible.
-</p></div>
+<Alert type="info" title="Note">
+
+You must use Drush 8.3.0 or 9.6.0 or later to use Drush aliases directly. Earlier versions are not compatible.
+
+</Alert>
 
 ### Structure of Site Aliases
 
 The form Pantheon Drush aliases take depends on the version of Drush being used. Drush 8 aliases are all written to a single file, `$HOME/.drush/pantheon.aliases.drushrc.php`. A single alias record looks something like the example below:
+
 ```
 $aliases['example.*'] = array(
   'uri' => '${env-name}-example.pantheonsite.io',
@@ -78,6 +80,7 @@ Pantheon also uses "policy files" to validate aliases before they are used. The 
 
 ### List Available Site Aliases
 Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
+
 ```
 $ drush sa
 ```

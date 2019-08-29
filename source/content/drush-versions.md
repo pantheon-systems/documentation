@@ -10,11 +10,9 @@ The Drush version is set when the site is created. Sites created before Nov 4, 2
 
 <Alert title="Note" type="info">
 
-<div class="alert alert-info" role="alert">
-<h4 class="info">Note</h4>
-<p markdown="1">
 When running Drush locally, we highly recommend running Drush version 8.3.0 or higher.
-</p></div>
+
+</Alert>
 
 ## Terminus Drush and Local Drush
 [Terminus](/terminus/) makes remote Drush calls on sites without using a local installation, eliminating compatibility issues between local and remote installs. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management/).

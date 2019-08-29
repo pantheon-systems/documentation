@@ -18,19 +18,19 @@ Pantheon supports the [Drupal 8 Configuration Management system](https://www.dru
 
 1.  With the Development environment in SFTP mode, export your configuration to code:
 
-        drush cex -y
+        drush config:export -y
 
 2.  Return to the Dashboard and commit the configuration changes.
 3.  Deploy the code to Test.
 4.  Import the configuration from code into the test environment database:
 
-        drush cim -y
+        drush config:import -y
 
 5.  Test the site.
 6.  Deploy the code to Live.
 7.  Import the configuration from code into the live environment database:
 
-        drush cim -y
+        drush config:import -y
 
 8.  Profit.
 
@@ -40,13 +40,13 @@ Using Terminus, you can complete the above process from the command line.
 
 In the commands below, replace `site` with your site name and the correct environment:
 
-1.  `terminus drush <site>.dev -- cex -y`
+1.  `terminus drush <site>.dev -- config:export -y`
 2.  `terminus env:commit <site>.dev --message="Export configuration to code"`
 3.  `terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"`
-4.  `terminus drush <site>.test -- cim -y`
+4.  `terminus drush <site>.test -- config:import -y`
 5.  `open https://test-mysite.pantheonsite.io`
 6.  `terminus env:deploy <site>.live --cc --note="Deploy configuration to live"`
-7.  `terminus drush <site>.live -- cim -y`
+7.  `terminus drush <site>.live -- config:import -y`
 8.  `open https://live-mysite.pantheonsite.io`
 
 ## Configuration Tools for Drupal 8
