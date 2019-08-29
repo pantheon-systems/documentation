@@ -19,21 +19,26 @@ When running Drush locally, we highly recommend running Drush version 8.3.0 or h
 
 ## Verify Current Drush Version
 Verify the current version of Drush running remotely on Pantheon using [Terminus](/terminus):
+
 ```bash
 terminus drush <site>.<env> -- status | grep "Drush version"
 ```
 
 ## Configure Drush Version
 You can change a site's Drush version via the [pantheon.yml file](/pantheon-yml):
+
 ```yaml
 api_version: 1
 
 drush_version: 8
 ```
+
 Now your site’s Drush version is managed via `pantheon.yml`, so it’s in version control and deployed along with the rest of your code.
 
 <Alert title="Note" type="info">
+
 If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.yml` file exists, please do not edit it. It is used by the upstream updates repository and will cause a merge conflict if modified.
+
 </Alert>
 
 ### Available Drush Versions
@@ -43,34 +48,14 @@ Always use Drush 8 with Drupal 7 and Drupal 6 sites, as Drush 9 only works on Dr
 
 #### PHP Requirements
 
-<table class="table  table-bordered table-responsive">
-    <thead>
-      <tr>
-        <th>Drush Version</th>
-        <th>Minimum PHP Version</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Drush 5</td>
-        <td>PHP 5.2.0+</td>
-      </tr>
-      <tr>
-        <td>Drush 7</td>
-        <td>PHP 5.3.0+</td>
-      </tr>
-      <tr>
-        <td>Drush 8</td>
-        <td>PHP 5.4.5+</td>
-      </tr>
-      <tr>
-        <td>Drush 9</td>
-        <td>PHP 5.6.0+</td>
-      </tr>
-    </tbody>
-</table>
+| Drush Version | Minimum PHP Version |
+|:------------- |:------------------- |
+| Drush 5       | PHP 5.2.0+          |
+| Drush 7       | PHP 5.3.0+          |
+| Drush 8       | PHP 5.4.5+          |
+| Drush 9       | PHP 5.6.0+          |
 
-See our guide on [Upgrading PHP Versions](/docs/php-versions/).
+See our guide on [Upgrading PHP Versions](/php-versions/).
 
 ## Troubleshooting
 
