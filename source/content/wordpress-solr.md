@@ -68,9 +68,11 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-
 
   ![Solr Widget](../images/add-solr-widget.png)
 
-2. In **Solr Power** > **Facet Options** tab, check **AJAX Facet Search Support** and enter the Div ID in **AJAX Div ID (displays search results)** eg. primary. This is where the search results will appear via AJAX.
+2. In **Solr Power** > **Facet Options** tab, check **AJAX Facet Search Support** and enter the Div ID in **AJAX Div ID (displays search results)** eg. primary.
 
   ![Solr Settings](../images/solr-widget-settings.png)
+
+   The **Div ID** is where the search results will appear. You can use an existing Div ID in the page template, or you can create your own blank element using a unique ID name.
 
 3. Check your desired Facets and save your settings, then test the search functionality before committing the changes.
 
