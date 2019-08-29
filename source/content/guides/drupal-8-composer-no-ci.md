@@ -169,13 +169,19 @@ Normally the next step would go through the standard Drupal installation. But si
 
 Now that the code for Drupal core exists on our Pantheon site, we need to actually install Drupal.
 
+1. Set the site connection mode to `sftp`:
+
+    ```bash
+    terminus connection:set $PANTHEON_SITE_NAME.dev sftp
+    ```
+  
 1. Use Terminus Drush to install Drupal:
 
    ```bash
    terminus drush $PANTHEON_SITE_NAME.dev -- site-install -y
    ```
 
-2. Log in to your new Drupal 8 site to verify it is working. You can get a one-time login link using Drush:
+1. Log in to your new Drupal 8 site to verify it is working. You can get a one-time login link using Drush:
 
    ```bash
    terminus drush $PANTHEON_SITE_NAME.dev -- uli
