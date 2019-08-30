@@ -4,12 +4,23 @@ WordPress sites with custom domains configured on multiple environments may see 
 The Site Dashboard runs `wp search-replace` during the cloning workflow to update environment URLs automatically. This operation, however, only runs once on a single set of URLs. If the target environment has a custom domain (e.g `test.example.com`), it's used to replace the source environment's custom domain (e.g. `www.example.com`). This can cause the target environment to have incorrect references to platform domains (e.g. `live-example.pantheonsite.io`).
 
 
-You can resolve this using one of two methods:
+You can resolve this using one of several methods:
 
 
 <TabList>
 
-<Tab title="Terminus" id="terminus-replace-anchor" active={true}>
+<Tab title="Plugins" id="plugin-replace" active={true}>
+
+There are several plugins with search and replace functionality. One reported by users to work well on our platform is [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/). Make sure you select the **Find & Replace** functionality:
+
+<Image alt="Enable Find & Replace" path="wp-migrate-db-setting.png" />
+
+Another popular search-replace plugin is [Better Search Replace](https://wordpress.org/plugins/better-search-replace/) but there is an additional filter that needs to be added for it to work in live, as outlined [here](/modules-plugins-known-issues/#better-search-and-replace).
+
+
+</Tab>
+
+<Tab title="Terminus" id="terminus-replace-anchor">
 
 Using [Terminus](/terminus), you can run an additional `wp search-replace` command on the target environment after cloning. Set or replace the variables `$site` and `$env` with your site name and the correct environment:
 
