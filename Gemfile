@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'html-proofer'
+gem 'bundler'
+gem 'rake'
+gem 'wraith'
