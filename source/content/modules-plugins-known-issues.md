@@ -173,6 +173,12 @@ You can modify this patch according to your needs, such as performing an operati
 **Issue**: This module requires modification of the site's `.htaccess` or `nginx.conf` file, which cannot be modified on the platform. While using `settings.php` can sometimes be effective as a means of implementing redirects, because `POST` data needs to be preserved, it is not possible to implement redirects at the application layer in a way that would allow this module to function as intended.
 <hr />
 
+### [Layout Builder](https://www.drupal.org/docs/8/core/modules/layout-builder)
+**Issue**: This core module returns an error when trying to be activated `Fatal error: require(): Failed opening required '/srv/bindings/bindingIDxxxxxxxxx/code/vendor/composer/../../web/core/lib/Drupal/Core/Layout/Icon/SvgIconBuilder.php'`. This is due to the .gitignore file that excludes this file `Icon/SvgIconBuilder.php`.
+
+ **Solution**: In the `.gitignore` file in your local install or build server, remove the `Icon` line so that file can be included in your push or deploys. 
+<hr />
+
 ### [LiveReload](https://www.drupal.org/project/livereload)
 **Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7 and Drupal 8.
 <hr />
