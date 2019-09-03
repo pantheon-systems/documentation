@@ -40,24 +40,28 @@ If you're generating a block, this will expose the block to Drupal's built-in bl
 
 ### Configure Views Caching
 
-1. Go to /admin/structure/views/
-2. Edit the View in question.
-3. Select the display and click **Advanced**.
-4. Click the option next to Caching.
-5. Choose **Time-Based Caching** and click **Apply**.
-  Rendered output: (something other than Never Cache)
-  Query results: (something other than Never Cache)
+1. Go to `/admin/structure/views/`
+1. Edit the View in question.
+1. Select the display and click **Advanced**.
+1. Click the option next to Caching.
+1. Choose **Time-Based Caching** and click **Apply**.
+
+   Rendered output: (something other than Never Cache)
+
+   Query results: (something other than Never Cache)
 
 ### Configure Views Block Caching
 
-1. Go to /admin/structure/views/
-2. Edit the View in question.
-3. Select the block display and click **Advanced**.
-4. Click the option next to Block Caching.
-5. Block Caching Type: Choose an option for Drupal's built-in block caching method.
+1. Go to `/admin/structure/views/`
+1. Edit the View in question.
+1. Select the block display and click **Advanced**.
+1. Click the option next to Block Caching.
+1. Block Caching Type: Choose an option for Drupal's built-in block caching method.
 
-## Views Caching Plugins
+## Views Caching Modules
 
-You can also force caching for all your views using a module like [Views cache bully](https://drupal.org/project/views_cache_bully).
+### Drupal 7
+You can force caching for all your views using a module like [Views cache bully](https://drupal.org/project/views_cache_bully).
 
-Views cache can also be aware of when the content itself changes with [Views content cache](https://drupal.org/project/views_content_cache).
+### Drupal 8
+You can replace the hard-coded cache tag with a form that allows developers to set different cache tags based on configuration of the view using a module like [Views Custom Cache Tags](https://www.drupal.org/project/views_custom_cache_tag).
