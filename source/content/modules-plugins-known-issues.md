@@ -174,9 +174,15 @@ You can modify this patch according to your needs, such as performing an operati
 <hr />
 
 ### [Layout Builder](https://www.drupal.org/docs/8/core/modules/layout-builder)
-**Issue**: This core module returns an error when trying to be activated `Fatal error: require(): Failed opening required '/srv/bindings/bindingIDxxxxxxxxx/code/vendor/composer/../../web/core/lib/Drupal/Core/Layout/Icon/SvgIconBuilder.php'`. This is due to the .gitignore file that excludes this file `Icon/SvgIconBuilder.php`.
+**Issue**: This core module returns an error when trying activate:
 
- **Solution**: In the `.gitignore` file in your local install or build server, remove the `Icon` line so that file can be included in your push or deploys. 
+```php
+Fatal error: require(): Failed opening required '/srv/bindings/bindingIDxxxxxxxxx/code/vendor/composer/../../web/core/lib/Drupal/Core/Layout/Icon/SvgIconBuilder.php'
+```
+
+This is due to the .gitignore file that excludes `Icon/SvgIconBuilder.php`.
+
+**Solution**: In the `.gitignore` file in your local install or build server, remove the `Icon` line so that file can be included in your push or deploys.
 <hr />
 
 ### [LiveReload](https://www.drupal.org/project/livereload)
