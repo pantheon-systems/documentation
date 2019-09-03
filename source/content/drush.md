@@ -89,7 +89,7 @@ terminus drush <site>.<env> -- rr
 
 ## Run SQL Queries Using Drush on Pantheon
 
-The `drush sql-cli` and `drush sql-connect` commands not supported on Pantheon. For security reasons, the SQL database is not directly accessible from your local machine.
+The `drush sql-cli` and `drush sql-connect` commands are not supported on Pantheon. For security reasons, the SQL database is not directly accessible from your local machine.
 
 You can, however, use Terminus as follows:
 
@@ -97,15 +97,20 @@ You can, however, use Terminus as follows:
 terminus drush SITENAME.ENV -- sql-query "SELECT * FROM users WHERE uid=1"
 ```
 
-Note that certain characters such as `;` cannot be used in the query. If you use an illegal character, you will get an error message "Command not supported as typed." Note that the trailing `;` in the SQL query is optional in this context.
+Note that certain characters such as `;` cannot be used in the query. If you use an illegal character, you will get an error message "Command not supported as typed."
+
+Note that the trailing `;` in the SQL query is optional in this context.
 
 ## Execute PHP Code Using Drush on Pantheon
 
 The `drush php-eval` command is not supported on Pantheon. You can run PHP commands after bootstrapping Drupal on Pantheon via the following workaround:
+
 ```bash
 echo 'print "hello world";' | drush @pantheon.SITENAME.ENV php-script -
 ```
+
 Also, the interactive PHP shell works as well:
+
 ```bash
 terminus drush <site>.<env> -- core-cli
 ```
@@ -119,12 +124,12 @@ Commands that alter site code, such as pm-download (dl), will only work on a Dev
 While we have the full spectrum of Drush core already available for your use, you may want to add a command that you regularly use; for instance, [Drush Search and Replace (sar)](https://www.drupal.org/project/sar).
 
 1. Put the site in Git mode.
-2. Clone locally.
-3. Create a Drush folder in the Drupal root.
-4. Add the “sar” Drush command to the Drush folder.
-5. Commit drush/sar.
-6. Push your code up to Pantheon.
-9. Clear your Drush cache on each environment. Example:
+1. Clone locally.
+1. Create a Drush folder in the Drupal root.
+1. Add the “sar” Drush command to the Drush folder.
+1. Commit drush/sar.
+1. Push your code up to Pantheon.
+1. Clear your Drush cache on each environment. Example:
 
  ```
  drush @pantheon.SITENAME.dev cc drush
@@ -134,6 +139,7 @@ While we have the full spectrum of Drush core already available for your use, yo
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
 If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download from the Dashboard. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option. To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.inc` to change the URI for your specific Pantheon site:
+
 ```
 function policy_drush_sitealias_alter(&$alias_record) {
   // Provide the correct 'uri' for a specific site
@@ -149,7 +155,7 @@ Replace `SITENAME` with your Pantheon site name, and `example.com` with the corr
 
 ### Reading the Pantheon Environment from Drush
 
-Since Drush does not run via the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, please see our documentation on [using the $_SERVER superglobal in custom code](/read-environment-config/#using-$_server).
+Since Drush does not run via the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, please see our documentation on [using the `$_SERVER` superglobal in custom code](/read-environment-config/#using-$_server).
 
 ### Terminus Drush Silent Failure
 The following silent failure occurs when executing `terminus drush` commands on environments that use redirect logic without checking to see if Drupal is running via the command line:
@@ -297,7 +303,9 @@ $ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; WHEN: Thu Aug 30 12:28:25 2012
 ;; MSG SIZE rcvd: 78
 ```
+
 As you can see in the output above, the status REFUSED suggests improper resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
+
 ```
 $ dig @8.8.8.8 appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; Truncated, retrying in TCP mode.
