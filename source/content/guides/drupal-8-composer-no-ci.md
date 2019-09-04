@@ -255,5 +255,5 @@ To maintain best practice, some of the steps in this section require access to t
 P.S. the [Pantheon Community](/pantheon-community/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
 
 ## See Also
-- [Composer Fundamentals and WebOps Workflows](/docs/composer)
-- [Pantheon YAML Configuration Files](/docs/pantheon-yml)
+- [Composer Fundamentals and WebOps Workflows](/composer)
+- [Pantheon YAML Configuration Files](/pantheon-yml)
