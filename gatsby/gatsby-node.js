@@ -195,7 +195,6 @@ exports.createPages = ({ graphql, actions }) => {
         component: path.resolve(`./src/templates/${template}.js`),
         context: {
           slug: doc.node.fields.slug,
-          editPath: `/source/content/guides`+doc.node.fileName,
         },
       })
     })
