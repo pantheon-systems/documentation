@@ -7,7 +7,7 @@ import Slack from "../slack"
 import ContributorGuest from "../contributorGuest"
 import './style.css';
 
-const HeaderBody = ({ title, subtitle, description, slug, contributors, featured }) => {
+const HeaderBody = ({ title, subtitle, description, slug, contributors, featured, editPath }) => {
   const contributor = contributors ? contributors[0] : null;
   return (
     <>
@@ -31,6 +31,7 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
         <Github
           pageTitle={title}
           path={slug}
+          editPath={editPath}
         />
         <Twitter
           pageTitle={title}

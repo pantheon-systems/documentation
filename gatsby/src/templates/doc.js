@@ -76,6 +76,7 @@ class DocTemplate extends React.Component {
                 slug={node.fields.slug}
                 contributors={node.frontmatter.contributors}
                 featured={node.frontmatter.featuredcontributor}
+                editPath={node.absoluteFilePath}
               />
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
