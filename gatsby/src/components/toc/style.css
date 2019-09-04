@@ -58,5 +58,5 @@
 }
 
 .toc-list.is-collapsible{
-  max-height: none;
+  max-height: 5000;
 }
