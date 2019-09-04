@@ -21,7 +21,7 @@ class Search extends React.Component {
 						</div>
 						<div className="row mb-70">
 							<div className="col-md-12">
-							<div className="container-fluid">
+							<div className="container">
 								<div className="row">
 									<div className="col-md-8 search-results">
 									<SearchResults />
