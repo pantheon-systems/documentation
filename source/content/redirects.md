@@ -169,6 +169,32 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
 }
 ```
 
+
+### Wildcard Redirect from one subfolder to another
+The following configuration will redirect requests from "example.com/old/whatever.html" will redirect to "example.com/new/whatever.html"
+"example.com/old/anotherurl.html" will redirect to "example.com/new/anotherurl.html"
+
+```php
+$uri = $_SERVER['REQUEST_URI'];
+$url_to_match = '/old';
+$subdirectory_toredirect = '/new';
+if( strpos( $uri, $url_to_match ) === 0) {
+
+  $redirect_uri = str_replace( $url_to_match , "", $uri );
+  if ( ( php_sapi_name() != "cli" ) ) {
+    header( 'HTTP/1.0 301 Moved Permanently');
+    header( 'Location: https://' . $_SERVER[ 'HTTP_HOST' ] . $subdirectory_toredirect . $redirect_uri );
+
+    if (extension_loaded('newrelic')) {
+      newrelic_name_transaction("redirect");
+    }
+
+    exit();
+  }
+
+}
+```
+
 ### Redirect Legacy UNIX-Style User Home Folder Paths
 When transitioning from a system that used a tilde to indicate a home directory, the syntax is slightly different. Here's how you can parse out the username and relative path that the request was made for:
 
