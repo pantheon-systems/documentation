@@ -1,7 +1,7 @@
 import React from "react"
 import './style.css';
 
-const Github = ({ pageTitle, path }) => {
+const Github = ({ pageTitle, path, editPath }) => {
   return (
     <div className="dropdown">
       <button

@@ -58,6 +58,23 @@ class DocTemplate extends React.Component {
   render() {
     const node = this.props.data.mdx
 
+    let editPath
+    let guideMatch = /\/source\/content\/guides\/[^/]+\/.*\.md$/.exec(node.fileAbsolutePath)
+    let subfolderMatch = /\/source\/content\/[^/]+\/.*\.md$/.exec(node.fileAbsolutePath)
+    let docMatch = /\/source\/content\/.*\.md$/.exec(node.fileAbsolutePath)
+    if (guideMatch) {
+      //It is a guide.
+      editPath = guideMatch[0]
+    } else if (subfolderMatch) {
+      //If it is a doc in another subfolder
+      editPath = subfolderMatch[0]
+    } else if (docMatch) {
+      // If it is a regular old guide
+      editPath = docMatch[0]
+    } else {
+      // HALP there is no edit path!
+    }
+    
     return (
       <Layout>
         <SEO
@@ -76,6 +93,7 @@ class DocTemplate extends React.Component {
                 slug={node.fields.slug}
                 contributors={node.frontmatter.contributors}
                 featured={node.frontmatter.featuredcontributor}
+                editPath={editPath}
               />
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
