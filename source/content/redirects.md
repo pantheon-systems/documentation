@@ -171,8 +171,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_ENV['PANTHEON_ENVIRONMENT'] === '
 
 
 ### Wildcard Redirect from one subfolder to another
-The following configuration will redirect requests from "example.com/old/whatever.html" will redirect to "example.com/new/whatever.html"
-"example.com/old/anotherurl.html" will redirect to "example.com/new/anotherurl.html"
+The following configuration will redirect requests pointed to any page in `example.com/old/` to the same page in `example.com/new/`. For example, `example.com/old/contributors.html` will redirect to `example.com/new/contributors.html`:
 
 ```php
 $uri = $_SERVER['REQUEST_URI'];
