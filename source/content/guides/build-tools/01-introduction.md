@@ -22,7 +22,7 @@ multidev: true
 
 <Alert type="danger" title="Warning">
 
-The current version of the Build Tools plugin is designed for Terminus 1.x, and is not yet comptaible with [current versions](/terminus/updates/) of Terminus. We'll update this guide when the plugin is officially updated, or you can try the beta release (unsupported) [here]().
+The current version of the Build Tools plugin is designed for Terminus 1.x, and is not yet comptaible with [current versions](/terminus/updates/) of Terminus. We are working on a new version of the Terminus Build Tools plugin with Terminus 2 support and will update this guide once it is released. In the meantime, you can test the [beta release](https://github.com/pantheon-systems/terminus-build-tools-plugin/releases/latest).
 
 </Alert>
 
