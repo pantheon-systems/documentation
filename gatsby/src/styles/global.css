@@ -280,7 +280,7 @@ pre code, pre code .hljs, .hljs {
   left: 10px;
 }
 
-table {
+.doc table {
   display: table;
   width: 100%;
   max-width: 100%;
@@ -293,13 +293,13 @@ table {
   box-sizing: border-box;
 }
 
-thread {
+.doc thread {
   display: table-header-group;
   vertical-align: middle;
   border-color: inherit;
 }
 
-th {
+.doc th {
   border: 1px solid #dee2e6;
   display: table-cell;
   vertical-align: bottom;
@@ -309,7 +309,7 @@ th {
   padding: 8px;
 }
 
-td {
+.doc td {
   border: 1px solid #dee2e6;
   display: table-cell;
   padding: 8px;
