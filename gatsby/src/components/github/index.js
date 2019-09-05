@@ -18,7 +18,7 @@ const Github = ({ pageTitle, path, editPath }) => {
       <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
         <li>
           <a
-            href={`https://github.com/pantheon-systems/documentation/edit/master/source/content/${path}.md`}
+            href={`https://github.com/pantheon-systems/documentation/edit/master/${editPath}`}
             target="blank"
           >
             Edit This Page

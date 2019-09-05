@@ -73,6 +73,24 @@ class GuideTemplate extends React.Component {
       }
     })
 
+    let editPath
+    let guideMatch = /\/source\/content\/terminus\/[^/]+\/.*\.md$/.exec(node.fileAbsolutePath)
+    let subfolderMatch = /\/source\/content\/[^/]+\/.*\.md$/.exec(node.fileAbsolutePath)
+    let docMatch = /\/source\/content\/.*\.md$/.exec(node.fileAbsolutePath)
+
+    if (guideMatch) {
+      //It is a guide.
+      editPath = guideMatch[0]
+    } else if (subfolderMatch) {
+      //If it is a doc in another subfolder
+      editPath = subfolderMatch[0]
+    } else if (docMatch) {
+      // If it is a regular old guide
+      editPath = docMatch[0]
+    } else {
+      // HALP there is no edit path!
+    }
+
     return (
       <Layout>
         <SEO
@@ -101,6 +119,7 @@ class GuideTemplate extends React.Component {
                       slug={node.fields.slug}
                       contributors={node.frontmatter.contributors}
                       featured={node.frontmatter.featuredcontributor}
+                      editPath={editPath}
                     />
                     <MDXProvider components={shortcodes}>
                       <MDXRenderer>{node.code.body}</MDXRenderer>

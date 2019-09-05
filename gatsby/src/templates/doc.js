@@ -62,6 +62,7 @@ class DocTemplate extends React.Component {
     let guideMatch = /\/source\/content\/guides\/[^/]+\/.*\.md$/.exec(node.fileAbsolutePath)
     let subfolderMatch = /\/source\/content\/[^/]+\/.*\.md$/.exec(node.fileAbsolutePath)
     let docMatch = /\/source\/content\/.*\.md$/.exec(node.fileAbsolutePath)
+
     if (guideMatch) {
       //It is a guide.
       editPath = guideMatch[0]
