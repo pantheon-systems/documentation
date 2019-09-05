@@ -55,7 +55,7 @@ We use the [gatsby-remark-embed-snippet](https://github.com/gatsbyjs/gatsby/tree
 1. Click Generate new token
 1. Give it a name and click the public_repo checkbox, then the Generate Token button at the bottom
 1. Copy the token to your clipboard.
-1. Create or edit `gatsby/.env.development` add it in (replace $TOKENHASH ):
+1. Create or edit `gatsby/.env.development`, and add (replacing $TOKENHASH ):
 
    ```
    GITHUB_API=$TOKENHASH
