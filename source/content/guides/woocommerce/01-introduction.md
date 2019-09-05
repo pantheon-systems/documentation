@@ -37,7 +37,7 @@ Before we get going it's important that you already have a [Pantheon account](ht
 ### Learn the Pantheon Workflow
 At Pantheon we believe in workflows and processes that make developer's (and site owner's) lives better. To help with that, every site on Pantheon has three environments: **<span class="glyphicons glyphicons-wrench"></span> Dev**, **<span class="glyphicons glyphicons-equalizer"></span> Test**, and **<span class="glyphicons glyphicons-cardio"></span> Live**.
 
-<Image alt="Pantheon workflow" src="guides/woocommerce/00-pantheon-workflow.png" />
+![Pantheon workflow](../../../images/guides/woocommerce/00-pantheon-workflow.png)
 
 <Image alt="Pantheon Workflow" path="guides/woocommerce/00-pantheon-workflow.png" />
 

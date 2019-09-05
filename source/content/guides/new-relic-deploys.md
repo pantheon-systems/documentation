@@ -45,28 +45,30 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
 5. Paste the following workflow into your `pantheon.yml` file to hook into the platform after code is synced on Dev/Multidev and deployed to Test/Live to fire off the New Relic integration script:
 
-          api_version: 1
+  ```yaml
+    api_version: 1
 
-          workflows:
-            # Log to New Relic when deploying to test or live.
-            deploy:
-              after:
-                - type: webphp
-                  description: Log to New Relic
-                  script: private/scripts/new_relic_deploy.php
-            # Also log sync_code so you can track new code going into dev/multidev.
-            sync_code:
-              after:
-                - type: webphp
-                  description: Log to New Relic
-                  script: private/scripts/new_relic_deploy.php
+    workflows:
+      # Log to New Relic when deploying to test or live.
+      deploy:
+        after:
+          - type: webphp
+            description: Log to New Relic
+            script: private/scripts/new_relic_deploy.php
+      # Also log sync_code so you can track new code going into dev/multidev.
+      sync_code:
+        after:
+          - type: webphp
+            description: Log to New Relic
+            script: private/scripts/new_relic_deploy.php
 
+  ```
 
-    <Alert title="Note" type="info">
+   <Alert title="Note" type="info">
 
-    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+   `api_version` should be set once in [`pantheon.yml`](/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
 
-    </Alert>
+   </Alert>
 
 6. [Add, commit and push](/git/#push-changes-to-pantheon) changes to the Dev environment:
 
@@ -76,11 +78,11 @@ In the commands below, replace `<site>` with your Pantheon site name.
 
     In the terminal, you should see that your `pantheon.yml` file is being applied. Even this initial code push should appear in your Dev environment's New Relic account, on the **Deployments** tab:
 
-    <Image alt="Deployment tab display" src="integrations/newrelic/deploy_tab.png" />
+    ![Deployment tab display](../../images/integrations/newrelic/deploy_tab.png)
 
     You can also view deployments from the Overview tab:
 
-    <Image alt="Deployment overview display" src="integrations/newrelic/deploy_marker.png" />
+    ![Deployment overview display](../../images/integrations/newrelic/deploy_marker.png)
 
 7. Once you've tested and confirmed there are no issues, deploy your new commit to Test and Live. From now on, your deploys will be recorded in New Relic.
 

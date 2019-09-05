@@ -20,15 +20,15 @@ Be sure that you:
 
 1. Open PhpStorm, and in the "Welcome to PhpStorm" screen, select **Check out from Version Control** > **Git**:
 
-   <Image alt="Welcome to PhpStorm" src="integrations/phpstorm/phpstorm-welcome.png" />
+   ![Welcome to PhpStorm](../../images/integrations/phpstorm/phpstorm-welcome.png)
 
 2. Open the GitHub project page for the site you created following the [Build Tools](/guides/build-tools/) guide. Copy the repository's SSH URL to your clipboard:
 
-    <Image alt="GitHub clone repo link" src="pr-workflow/clone.png" />
+    ![GitHub clone repo link](../../images/pr-workflow/clone.png)
 
 3. In PhpStorm, paste the repository's SSH URL in the **Git Repository URL** field (the **Directory Name** field will automatically populate after pasting the URL):
 
-   <Image alt="Clone repository" src="integrations/phpstorm/clone-dialogue.png" />
+   ![Clone repository](../../images/integrations/phpstorm/clone-dialogue.png)
 
 4. Click the **Clone** button and wait for PhpStorm to download your repository from GitHub.
 5. Reply **Yes** when PhpStorm asks whether you want to open the project.
@@ -36,40 +36,40 @@ Be sure that you:
 ## Initialize Composer
 1. After opening the project, check the event log by clicking the message icon from the lower right side of the window. Click **Initialize**:
 
-  <Image alt="Composer init PhpStorm" src="integrations/phpstorm/initcomposer-popup.png" />
+  ![Composer init PhpStorm](../../images/integrations/phpstorm/initcomposer-popup.png)
 
 2. PhpStorm should catch the settings correctly, so you can simply confirm with **OK**:
 
-  <Image alt="Composer" src="integrations/phpstorm/Composer.png" />
+  ![Composer](../../images/integrations/phpstorm/Composer.png)
 
 3. Open `composer.json` and select **Install** from the top right:
 
-  <Image alt="Composer install" src="integrations/phpstorm/composer-install.png" />
+  ![Composer install](../../images/integrations/phpstorm/composer-install.png)
 
   If this is the first time you use PhpStorm's Composer integration, you'll see the "Composer Settings" window in which you need to set or confirm your local Composer installation. PhpStorm needs to know where it can find this tool on your computer and you can point it either to the `composer` executable or a `composer.phar` archive. Confirm your local installation then click **OK**:
 
-  <Image alt="Composer Settings" src="integrations/phpstorm/composer-settings.png" />
+  ![Composer Settings](../../images/integrations/phpstorm/composer-settings.png)
 
 ## Enable Drupal Support
 1. After installing Drupal using Composer in the previous section, you should get a message to Enable Drupal Support. Click **Enable**:
 
-  <Image alt="Enable Drupal Support" src="integrations/phpstorm/enable-drupal-support.png" />
+  ![Enable Drupal Support](../../images/integrations/phpstorm/enable-drupal-support.png)
 
 2. Add a check to **Enable Drupal integration** then click the `...` button to browse your local filesystem:
 
-  <Image alt="Enable Drupal Support browse" src="integrations/phpstorm/drupal-support-popup.png" />
+  ![Enable Drupal Support browse](../../images/integrations/phpstorm/drupal-support-popup.png)
 
 3. Navigate to the project's installation path, then select the `web` subdirectory and click **Open**:
 
-  <Image alt="Enable Drupal Support select subdir" src="integrations/phpstorm/web-subdir.png" />
+  ![Enable Drupal Support select subdir](../../images/integrations/phpstorm/web-subdir.png)
 
 4. Select 8 for Drupal version, then click **Ok**:
 
-  <Image alt="Enable Drupal Support select version" src="integrations/phpstorm/version-8.png" />
+  ![Enable Drupal Support select version](../../images/integrations/phpstorm/version-8.png)
 
 5. After enabling Drupal Support, check your messages for a prompt to set Drupal-style formatting. Click **Set it**:
 
-  <Image alt="Set Drupal-style formatting" src="integrations/phpstorm/set-drupal-styling.png" />
+  ![Set Drupal-style formatting](../../images/integrations/phpstorm/set-drupal-styling.png)
 
 ## Install Dependencies via Composer
 PhpStorm's Composer integration has a search interface available at **Tools** > **Composer** > **Manage Dependencies ...**. You can type the name of any package hosted on the [PHP Package Repository](https://packagist.org/) in the search field.
@@ -89,19 +89,19 @@ This means that if your Composer extension is not on the PHP Package Repository,
 
 1. Click **Git:Master** from the bottom right corner, then click **+ New Branch**:
 
-  <Image alt="Checkout new branch" src="integrations/phpstorm/checkout-pathauto.png" />
+  ![Checkout new branch](../../images/integrations/phpstorm/checkout-pathauto.png)
 
 2. Checkout a new branch for your specific task, in this example we name it `pathauto` since that's the name of the module we're adding:
 
-  <Image alt="Checkout pathauto branch" src="integrations/phpstorm/new-branch-name.png" />
+  ![Checkout pathauto branch](../../images/integrations/phpstorm/new-branch-name.png)
 
 3. Determine the latest available stable version from the [Pathauto](https://www.drupal.org/project/pathauto) project page:
 
-   <Image alt="Drupal Pathauto" src="integrations/phpstorm/Pathauto___Drupal_org.png" />
+   ![Drupal Pathauto](../../images/integrations/phpstorm/Pathauto___Drupal_org.png)
 
 4. Add `drupal/panthauto` your `composer.json` file with a version constraint of `~1.0`, then click **Update** to start the download and installation process:
 
-   <Image alt="Composer with Pathauto" src="integrations/phpstorm/composer-pathauto.png" />
+   ![Composer with Pathauto](../../images/integrations/phpstorm/composer-pathauto.png)
 
    Composer package names always follow a "vendor/name" convention. All packages in the Drupal repositories have "drupal" as the vendor and the Drupal project name as their package name (e.g., `drupal/pathauto`).
 
@@ -115,19 +115,19 @@ For this example, that means we only care about changes made to the `composer.js
 1. Navigate to **VCS** > **Commit..** Note only two files are listed as changed:
 2. Disable default options to perform a code analysis and check TODOs. Enter a commit message and then select **Commit and Push..**:
 
-  <Image alt="Commit Changes Window" src="integrations/phpstorm/commit-change.png" />
+  ![Commit Changes Window](../../images/integrations/phpstorm/commit-change.png)
 
 3. Click **Push**:
 
-  <Image alt="Push Changes Window" src="integrations/phpstorm/push.png" />
+  ![Push Changes Window](../../images/integrations/phpstorm/push.png)
 
 4. Go to the project page on GitHub. Select **Compare & pull request**:
 
-  <Image alt="New branch pushed" src="integrations/phpstorm/compare-button.png" />
+  ![New branch pushed](../../images/integrations/phpstorm/compare-button.png)
 
 5. Open a Pull Request from the `pathauto` branch to `master`, suggesting edits to two files:
 
-  <Image alt="Open PR" src="integrations/phpstorm/open-pr.png" />
+  ![Open PR](../../images/integrations/phpstorm/open-pr.png)
 
 6. The commit will be built by CircleCI and deployed to a new Multidev environment on Pantheon. Check the PR for a new comment containing links to the Multidev environment and site.
 

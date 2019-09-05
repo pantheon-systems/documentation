@@ -23,25 +23,25 @@ Now that our **<span class="glyphicons glyphicons-equalizer"></span> Dev** site 
 
 1. In your site settings in Pantheon go to the **<span class="glyphicons glyphicons-equalizer"></span> Test** tab and click **Initialize Test Environment**:
 
-    <Image alt="Initializing the test environment" src="guides/woocommerce/17-Pantheon-dashboard-initialize-test-environment.png" />
+    ![Initializing the test environment](../../../images/guides/woocommerce/17-Pantheon-dashboard-initialize-test-environment.png)
 
     It should only take a minute or two. And you'll know you're done when you see a message in the deploy log:
 
-    <Image alt="Test environment deploy log" src="guides/woocommerce/18-Pantheon-dashboard-test-environment-deploy-log.png" />
+    ![Test environment deploy log](../../../images/guides/woocommerce/18-Pantheon-dashboard-test-environment-deploy-log.png)
 
     Now we can move the test site to live mode.
 
 2. We can repeat the process for Live by clicking on the **<span class="glyphicons glyphicons-cardio"></span> Live** tab, then **Initialize Live Environment**:
 
-    <Image alt="Initializing the live environment" src="guides/woocommerce/19-Pantheon-dashboard-initialize-live-environment.png" />
+    ![Initializing the live environment](../../../images/guides/woocommerce/19-Pantheon-dashboard-initialize-live-environment.png)
 
     As soon as it's done you'll see a message in the deploy log.
 
-    <Image alt="Visit live site button on the Pantheon dashboard" src="guides/woocommerce/20-Pantheon-dashboard-visit-live-site.png" />
+    ![Visit live site button on the Pantheon dashboard](../../../images/guides/woocommerce/20-Pantheon-dashboard-visit-live-site.png)
 
 3. Now is a great time to view the live site and make sure everything is up your standards.
 
-    <Image alt="WooCommerce site home page" src="guides/woocommerce/21-WooCommerce-front-page.png" />
+    ![WooCommerce site home page](../../../images/guides/woocommerce/21-WooCommerce-front-page.png)
 
 ## Create a Test Order
 
@@ -49,7 +49,7 @@ Our site is looking good and loading really fast! Now to show you the power of m
 
 1. When you install Storefront it prompts you to add demo products. If you don't have any dummy products you can manually create products:
 
-    <Image alt="WooCommerce demo products on the site front end" src="guides/woocommerce/22-WooCommerce-demo-products.png" />
+    ![WooCommerce demo products on the site front end](../../../images/guides/woocommerce/22-WooCommerce-demo-products.png)
 
     Add a product to the cart and proceed to checkout.
 
@@ -59,11 +59,11 @@ Our site is looking good and loading really fast! Now to show you the power of m
 
 2. Continue through the checkout process:
 
-    <Image alt="WooCommerce checkout" src="guides/woocommerce/23-WooCommerce-checkout.png" />
+    ![WooCommerce checkout](../../../images/guides/woocommerce/23-WooCommerce-checkout.png)
 
 3. We've placed our order. If you want you can login to your admin screen and see all of the details:
 
-    <Image alt="WooCommerce order received thank you message" src="guides/woocommerce/24-WooCommerce-order-received-thank-you-message.png" />
+    ![WooCommerce order received thank you message](../../../images/guides/woocommerce/24-WooCommerce-order-received-thank-you-message.png)
 
 ## Clone Content Down
 
@@ -77,8 +77,8 @@ Now let's bring these changes back to our test site:
 
 4. Finally click **Clone the Database from Live into the Test Environment**:
 
-  <Image alt="Cloning database and files on the Pantheon dashboard" src="guides/woocommerce/25-Pantheon-dashboard-clone-database-files.png" />
+  ![Cloning database and files on the Pantheon dashboard](../../../images/guides/woocommerce/25-Pantheon-dashboard-clone-database-files.png)
 
   If you login to WordPress you'll see the order in the **<span class="glyphicons glyphicons-equalizer"></span> Test** environment:
 
-  <Image alt="A test order in the WooCommerce dashboard" src="guides/woocommerce/26-WooCommerce-dashboard-test-order.png" />
+  ![A test order in the WooCommerce dashboard](../../../images/guides/woocommerce/26-WooCommerce-dashboard-test-order.png)

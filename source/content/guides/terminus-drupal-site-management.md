@@ -86,7 +86,7 @@ You should now be able to open a web browser and see your brand new Drupal site!
 open https://dev-terminus-cli-create.pantheon.io
 ```
 
-<Image alt="Dev environment in browser" src="terminus-cli-open-http.png" />
+![Dev environment in browser](../../images/terminus-cli-open-http.png)
 
 There is also the `terminus dashboard <site>.<env> --print` command if, at any point in time, you want to open the site's Pantheon Dashboard.
 
@@ -94,7 +94,7 @@ There is also the `terminus dashboard <site>.<env> --print` command if, at any p
 $ terminus dashboard <site>.<env>
 ```
 
-<Image alt="Dashboard in browser" src="dashboard/terminus-cli-open-dash.png" />
+![Dashboard in browser](../../images/dashboard/terminus-cli-open-dash.png)
 
 Also, the status of each of the environments within the site can be seen using a `terminus env:list` command.
 
@@ -130,7 +130,8 @@ admin_menu_toolbar was enabled successfully.                                [ok]
 
 Not bad, eh? All this without a single GUI or web browser click! If you look at the site's Dashboard, the new code will be displayed there, waiting to be committed.
 
-![The dashboard showing the code was deployed to the Dev environment](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+
+![The dashboard showing the code was deployed to the Dev environment](../../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
 Let's commit it all into the Git repo with the `terminus env:commit` command:
 
@@ -146,7 +147,7 @@ Success: Successfully committed.
 
 Open the Pantheon Dashboard, and you'll see the new files are shown in the Git commit log.
 
-<Image alt="The dashboard's showing the code was deployed to the Dev environment" src="dashboard/terminus-cli-code-committed-dashboard.png" />
+![The dashboard's showing the code was deployed to the Dev environment](../../images/dashboard/terminus-cli-code-committed-dashboard.png)
 
 To see what a commit message looks like, let's download Bootstrap and then commit it as well.
 
@@ -166,7 +167,7 @@ Success: Successfully commited.
 +---------------------+---------+-----------+------------------------------------------+-------------------+
 ```
 
-<Image alt="The dashboard's showing the code was deployed to the Dev environment" src="dashboard/terminus-commit-with-message.png" />
+![The dashboard's showing the code was deployed to the Dev environment](../../images/dashboard/terminus-commit-with-message.png)
 
 And finally, let's initialize the Test environment to move the code, files, and DB from Dev onward in the Pantheon workflow using a `terminus env:deploy` command:
 

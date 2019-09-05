@@ -165,7 +165,7 @@ You may have heard that some Drupal 8 developers are [using Composer](https://pa
   terminus drush $TERMINUS_SITE.dev -- user-login
   ```
 
-  <Image alt="The webprofiler toolbar" src="drupal8-commandline--webprofiler.png" />
+  ![The webprofiler toolbar](../../images/drupal8-commandline--webprofiler.png)
 
 1. Export the configuration in the Dev environment:
 

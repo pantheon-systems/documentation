@@ -33,4 +33,4 @@ To get started, you need to activate [New Relic APM Pro](/new-relic/) on Pantheo
 2. Click the **Activate New Relic Pro** button.
 3. Use the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Visit Live Site** and browse your site for a few minutes to generate data in New Relic:
 
-  <Image alt="New Relic Enable and Generate Data" src="pagerduty/new-relic-generate-data.png" />
+  ![New Relic Enable and Generate Data](../../../images/pagerduty/new-relic-generate-data.png)
