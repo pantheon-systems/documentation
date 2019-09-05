@@ -69,6 +69,14 @@ exports.onCreateWebpackConfig = ({ actions }) => {
   })
 }
 
+exports.createSchemaCustomization = ({ actions }) => {
+  actions.createTypes(`
+    type Mdx implements Node {
+      fileInfo: File @link(from: "parent")
+    }
+  `)
+}
+
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
@@ -296,8 +304,20 @@ exports.createPages = ({ graphql, actions }) => {
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNode, createNodeField } = actions
+
   // MDX content
   if (node.internal.type === `Mdx`) {
+    const sourceInstanceName = getNode(node.parent).sourceInstanceName;
+    if (sourceInstanceName === 'content') {
+      const editPath = `source/content/${getNode(node.parent).relativePath}`;
+       // Add editPath field
+      createNodeField({
+        name: `editPath`,
+        node,
+        value: editPath
+      })
+    }
+
     // Add slug field
     const slug = calculateSlug(node, getNode)
     createNodeField({

@@ -137,6 +137,7 @@ class TerminusTemplate extends React.Component {
                       slug={node.fields.slug}
                       contributors={node.frontmatter.contributors}
                       featured={node.frontmatter.featuredcontributor}
+                      editPath={node.fields.editPath}
                     />
                     <MDXProvider components={shortcodes}>
                       <MDXRenderer>{node.code.body}</MDXRenderer>
@@ -175,6 +176,7 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        editPath
       }
       frontmatter {
         title
