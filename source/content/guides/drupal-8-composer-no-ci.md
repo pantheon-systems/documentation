@@ -100,6 +100,7 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
             description: Push changes back to GitHub if needed
             script: private/scripts/quicksilver/quicksilver-pushback/push-back-to-github.php
     ```
+        
 
 ## Managing Drupal with Composer
 
@@ -252,3 +253,7 @@ To maintain best practice, some of the steps in this section require access to t
 #### Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
 
 P.S. the [Pantheon Community](/pantheon-community/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
+
+## See Also
+- [Composer Fundamentals and WebOps Workflows](/composer)
+- [Pantheon YAML Configuration Files](/pantheon-yml)
