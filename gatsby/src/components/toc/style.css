@@ -56,3 +56,10 @@
 .toc-link:hover::before {
   background-color: #ccc;
 }
+
+.toc-list.is-collapsible{
+  max-height: 5000px;
+}
+.toc-list.is-collapsible.is-collapsed{
+  max-height: 0;
+}
