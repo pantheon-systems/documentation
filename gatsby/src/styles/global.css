@@ -316,6 +316,44 @@ pre code, pre code .hljs, .hljs {
   line-height: 1.42857143;
   vertical-align: top;
 }
+
+.terminus table {
+	display: table;
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	border: 1px solid #dee2e6;
+	-ms-overflow-style: -ms-autohiding-scrollbar;
+	border-collapse: collapse;
+	min-height: 0.01%;
+	overflow-x: auto;
+	box-sizing: border-box;
+  }
+
+  .terminus thread {
+	display: table-header-group;
+	vertical-align: middle;
+	border-color: inherit;
+  }
+
+  .terminus th {
+	border: 1px solid #dee2e6;
+	display: table-cell;
+	vertical-align: bottom;
+	border-bottom: 2px solid #ddd;
+	font-weight: bold;
+	border-collapse: collapse;
+	padding: 8px;
+  }
+
+  .terminus td {
+	border: 1px solid #dee2e6;
+	display: table-cell;
+	padding: 8px;
+	line-height: 1.42857143;
+	vertical-align: top;
+  }
+
 .affix-top.pio-docs-sidebar {
 	top: 130px !important;
 	position: sticky;
