@@ -337,7 +337,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       }
     }
 
-    if (sourceInstanceName === 'changelogs') {
+    if (slug.includes("changelog/")) {
       const content = matter(node.internal.content, { excerpt: true, excerpt_separator: '<!-- excerpt -->' } );
       const excerpt = content.excerpt || "";
 
