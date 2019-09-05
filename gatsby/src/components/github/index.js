@@ -1,7 +1,7 @@
 import React from "react"
 import './style.css';
 
-const Github = ({ pageTitle, path }) => {
+const Github = ({ pageTitle, path, editPath }) => {
   return (
     <div className="dropdown">
       <button
@@ -18,7 +18,7 @@ const Github = ({ pageTitle, path }) => {
       <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
         <li>
           <a
-            href={`https://github.com/pantheon-systems/documentation/edit/master/${path}`}
+            href={`https://github.com/pantheon-systems/documentation/edit/master/${editPath}`}
             target="blank"
           >
             Edit This Page
