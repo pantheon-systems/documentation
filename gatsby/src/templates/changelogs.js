@@ -78,7 +78,7 @@ class ChangelogsTemplate extends React.Component {
                       <h2 id={changelog.node.fields.slug}>{changelog.node.frontmatter.title}</h2>
                     </Link>
                     <MDXProvider components={shortcodes}>
-                      <MDXRenderer>{changelog.node.code.body}</MDXRenderer>
+                      <MDXRenderer>{changelog.node.fields.markdownBody.childMdx.code.body}</MDXRenderer>
                     </MDXProvider>
                   </>
                 ))}
@@ -127,6 +127,13 @@ export const pageQuery = graphql`
             }
             fields {
               slug
+              markdownBody {
+                childMdx {
+                  code {
+                    body
+                  }
+                }
+              }
             }
           }
         }
