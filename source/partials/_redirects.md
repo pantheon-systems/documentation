@@ -16,9 +16,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     $primary_domain = $_SERVER['HTTP_HOST'];
   }
 
-  if ($_SERVER['HTTP_HOST'] != $primary_domain
-      || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
-      || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
+  if ($_SERVER['HTTP_HOST'] != $primary_domain) {
 
     // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
@@ -53,9 +51,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     $primary_domain = $_SERVER['HTTP_HOST'];
   }
 
-  if ($_SERVER['HTTP_HOST'] != $primary_domain
-      || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
-      || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
+  if ($_SERVER['HTTP_HOST'] != $primary_domain) {
 
     // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
@@ -93,9 +89,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     $primary_domain = $_SERVER['HTTP_HOST'];
   }
 
-  if ($_SERVER['HTTP_HOST'] != $primary_domain
-      || !isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
-      || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON' ) {
+  if ($_SERVER['HTTP_HOST'] != $primary_domain) {
 
     // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
