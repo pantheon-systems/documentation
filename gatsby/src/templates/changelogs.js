@@ -127,13 +127,6 @@ export const pageQuery = graphql`
             }
             fields {
               slug
-              markdownBody {
-                childMdx {
-                  code {
-                    body
-                  }
-                }
-              }
             }
           }
         }
