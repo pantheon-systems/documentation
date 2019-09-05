@@ -26,4 +26,4 @@ If you haven’t updated in a while, check out the [Terminus Changelog](https://
 ## Documentation
 
 ### New Articles/Guides
-[Developing Locally with Kalabox](https://pantheon.io/docs/kalabox/)
+[Developing Locally with Kalabox](/kalabox/)
