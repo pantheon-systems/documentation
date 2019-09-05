@@ -337,9 +337,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       }
     }
 
-    if (slug.includes("changelog/")) {
-      const content = matter(node.internal.content, { excerpt: true } );
-      const excerpt = content.excerpt || "---";
+    if (sourceInstanceName === 'changelogs') {
+      const content = matter(node.internal.content, { excerpt: true, excerpt_separator: '<!-- excerpt -->' } );
+      const excerpt = content.excerpt || "";
 
       createNodeField({
         name: `excerpt`,
