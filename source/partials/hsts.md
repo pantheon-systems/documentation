@@ -4,17 +4,13 @@ Before adjusting `enforce_https`, review and understand the configuration option
 
 </Alert>
 
-Ensure that your site will always use HTTPS to deliver content with `enforce_https`. Five values are available, from least to most secure:
-
-Use of the HSTS header is defined by the `enforce_https` directive, and takes five possible values which are handled by Pantheon as shown below:
-
-|       enforce_https:                                          | Redirect                           |   HSTS   | Strict-Transport-Security | includeSubdomains                  | preload                            |
+|       Value                                          | Redirect                           |   HSTS    | HSTS Duration | includeSubdomains                  | preload                            |
 |:-------------------------------------------------------------:|:----------------------------------:|:--------:|---------------------------|:----------------------------------:|:----------------------------------:|
-| `off` (default)                                               |     ❌                             | Disabled | Not set by Pantheon       |         ❌                         |    ❌                              |
-| `transitional`                                                | <span style="color:green">✔</span> | Enforced | `max-age=300`             |         ❌                         |    ❌                              |
-| `transitional+subdomains`                                     | <span style="color:green">✔</span> | Enforced | `max-age=300`             | <span style="color:green">✔</span> |    ❌                              |
-| `full` <Popover content="Needed for an A+ SSL Labs Rating" /> | <span style="color:green">✔</span> | Enforced | `max-age=31622400`        |         ❌                         | <span style="color:green">✔</span> <Popover content="HTTP will be forcefully redirected to HTTPS by the browser." /> |
-| `full+subdomains` <Popover content="This is the recommended and most secure configuration" /> | <span style="color:green">✔</span> | Enforced | `max-age=31622400` | <span style="color:green">✔</span> | <span style="color:green">✔</span> <Popover content="HTTP will be forcefully redirected to HTTPS by the browser." /> |
+| off                                               |     ❌                             |  ❌  | ❌       |         ❌                         |    ❌                              |
+| transitional                                                | <span style="color:green">✔</span> | <span style="color:green">✔</span> | 5 min             |         ❌                         |    ❌                              |
+| transitional+subdomains                                     | <span style="color:green">✔</span> | <span style="color:green">✔</span> | 5 min             | <span style="color:green">✔</span> |    ❌                              |
+| full <Popover content="Needed for an A+ SSL Labs Rating" /> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | > 1 yr        |         ❌                         | <span style="color:green">✔</span> <Popover content="HTTP will be forcefully redirected to HTTPS by the browser." /> |
+| `full+subdomains` <Popover content="This is the recommended and most secure configuration" /> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | > 1yr | <span style="color:green">✔</span> | <span style="color:green">✔</span> <Popover content="HTTP will be forcefully redirected to HTTPS by the browser." /> |
 
 For example, to set `enforce_https` as `transitional`:
 
