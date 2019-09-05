@@ -30,7 +30,7 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
 
         <Github
           pageTitle={title}
-          path={path}
+          path={slug}
           editPath={editPath}
         />
         <Twitter
