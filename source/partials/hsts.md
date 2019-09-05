@@ -8,21 +8,17 @@ Ensure that your site will always use HTTPS to deliver content with `enforce_htt
 
 Use of the HSTS header is defined by the `enforce_https` directive, and takes five possible values which are handled by Pantheon as shown below:
 
-- `enforce_https: off` - No redirect and no HSTS header (default)
-   - HSTS is disabled, `Strict-Transport-Security` header is not set by Pantheon, HTTP **will not** forcefully redirect to HTTPS
-- `enforce_https: transitional` - HTTPS redirect with a short HSTS duration (5 minutes), which does not apply to subdomains.
-   - HSTS is enabled, `Strict-Transport-Security: max-age=300` is set by Pantheon, HTTP **will** forcefully redirect to HTTPS
-- `enforce_https: transitional+subdomains` HTTPS redirect with a short HSTS duration (5 minutes), which also applies to subdomains, even those not on Pantheon.
-   - HSTS is enabled, `Strict-Transport-Security: max-age=300; includeSubDomains;` is set by Pantheon, HTTP **will** forcefully redirect to HTTPS
-- `enforce_https: full` - HTTPS redirect with a long HSTS duration (366 days, for an A+ SSL Labs rating), which does not apply to subdomains.
-   - HSTS is enabled, `Strict-Transport-Security: max-age=31622400; preload` is set by Pantheon, HTTP **will** forcefully redirect to HTTPS
-- `enforce_https: full+subdomains` - HTTPS redirect with a long HSTS duration (366 days, for an A+ SSL Labs rating), which also applies to subdomains, even those not on Pantheon.
-   - HSTS is enabled, `Strict-Transport-Security: max-age=31622400; includeSubDomains; preload` is set by Pantheon, HTTP **will** forcefully redirect to HTTPS
-   - This is the recommended and most secure configuration.
+|       enforce_https:                                          | Redirect                           |   HSTS   | Strict-Transport-Security | includeSubdomains                  | preload                            |
+|:-------------------------------------------------------------:|:----------------------------------:|:--------:|---------------------------|:----------------------------------:|:----------------------------------:|
+| `off` (default)                                               |     ❌                             | Disabled | Not set by Pantheon       |         ❌                         |    ❌                              |
+| `transitional`                                                | <span style="color:green">✔</span> | Enforced | `max-age=300`             |         ❌                         |    ❌                              |
+| `transitional+subdomains`                                     | <span style="color:green">✔</span> | Enforced | `max-age=300`             | <span style="color:green">✔</span> |    ❌                              |
+| `full` <Popover content="Needed for an A+ SSL Labs Rating" /> | <span style="color:green">✔</span> | Enforced | `max-age=31622400`        |         ❌                         | <span style="color:green">✔</span> <Popover content="HTTP will be forcefully redirected to HTTPS by the browser." /> |
+| `full+subdomains` <Popover content="This is the recommended and most secure configuration" /> | <span style="color:green">✔</span> | Enforced | `max-age=31622400` | <span style="color:green">✔</span> | <span style="color:green">✔</span> <Popover content="HTTP will be forcefully redirected to HTTPS by the browser." /> |
 
 For example, to set `enforce_https` as `transitional`:
 
-```
+```yaml
 enforce_https: transitional
 ```
 
