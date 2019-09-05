@@ -46,7 +46,7 @@ class ContributorTemplate extends React.Component {
         <div className="container mb-70">
           <div className="row">
             <title>{contributor.name}</title>
-            <div className="article container-fluid">
+            <div className="article container">
               <div className="media">
                 <div className="pull-left">
                   <div className="guest-info__img">

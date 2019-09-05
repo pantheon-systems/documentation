@@ -21,7 +21,7 @@ class Contributors extends React.Component {
 							<h1 className="title">Contributors</h1>
 						</div>
 						<div className="row mb-70">
-							<div className="col-md-12 container-fluid">
+							<div className="container">
 								<div className="flex-panel-group">
 										{allContributorYaml && allContributorYaml.edges.map(({ node }) => {
 											return (
