@@ -449,6 +449,9 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
   /*  */
   .navbar-toggle {
     display: block;
+    order: 1;
+    margin-top: 0 !important;
+    margin-left: auto;
   }
   .navbar-toggle .icon-bar {
     display: block;

@@ -343,6 +343,11 @@ a.cta:hover {
 	.collapse.in {
 		display: block !important;
 	}
+	.navbar-collapse {
+		order: 3;
+    width: 100%;
+    align-self: flex-end;
+	}
 	body {
 		padding-top: 100px !important;
 	}
@@ -541,11 +546,10 @@ span#changelog-rsaquo {
 	}
 	.guide-nav {
 		margin-top: 0px !important;
-		padding-left: 10px !important;
 	}
 	.guide-doc-body {
 		border-left: none !important;
-		padding-left: 10px !important;
+		padding-left: 15px !important;
 	}
 }
 @media (min-width: 995px) {

@@ -144,6 +144,18 @@ pre code, pre code .hljs, .hljs {
   color: #333;
 }
 
+@media screen and (max-width: 995px) {
+
+	.flex-panel-group {
+		width: 100%;
+    display: block;
+    margin-left: 0;
+	}
+	.preview-flex-panel-item {
+		margin-left: 0 !important;
+	}
+}
+
 .flex-panel-body {
   justify-content: space-between;
   background-color: #fff;
