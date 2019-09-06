@@ -77,7 +77,6 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   //   $requires_redirect = TRUE;
   // }
 
-
   if ($requires_redirect === TRUE) {
 
     // Name transaction "redirect" in New Relic for improved reporting (optional).
