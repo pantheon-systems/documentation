@@ -25,8 +25,17 @@ const Header = ({ data }) => (
             />
           </a>
         </div>
+        <button
+          type="button"
+          className="navbar-toggle search"
+          data-toggle="collapse"
+          data-target="#search-bar"
+        >
+          <span className="sr-only">Toggle search</span>
+          <i className="fa fa-search" />
+        </button>
       </div>
-      <div id="navbar" className="navbar-collapse collapse">
+      <div id="navbar" className="main-navbar navbar-collapse collapse">
         <ul className="nav navbar-nav">
           <li className="create-account">
             <a
@@ -139,6 +148,8 @@ const Header = ({ data }) => (
             </ul>
           </li>
         </ul>
+      </div>
+      <div id="search-bar" className="search-bar navbar-collapse collapse">
         <div className="navsearch-container">
           <div className="navsearch form-group has-feedback">
             <div className="container container-navsearch-box-guide">
