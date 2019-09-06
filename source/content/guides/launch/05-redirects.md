@@ -32,7 +32,11 @@ Make sure HTTPS has been successfully provisioned *before* adding any code (like
 
   If you run into issues, please refer to [this documentation](/sftp/#sftp-connection-information).
 
-4. Now open the `code` folder in your SFTP client, and download your site's `settings.php` (Drupal) or `wp-config.php` (WordPress) file.
+4. Open the `code` folder in your SFTP client.
+
+4. As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/pantheon-yml/#enforce-https--hsts). Download your site's `pantheon.yml` file and follow the recommendations for enforcing HTTPS on your site.
+
+4. Now download your site's `settings.php` (Drupal) or `wp-config.php` (WordPress) file.
 
 5. Edit your configuration file by adding the following snippet for the desired redirect (replace `example.com`):
 
