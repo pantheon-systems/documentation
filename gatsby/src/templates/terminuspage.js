@@ -117,8 +117,8 @@ class TerminusTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
         />
-        <div className="container">
-          <div className="row">
+        <div className="">
+          <div className="container">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
               <Navbar
                 title={node.frontmatter.title}

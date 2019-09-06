@@ -17,10 +17,10 @@ class Index extends React.Component {
 					description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
 					image={"/assets/images/default-thumb-doc.png"}
 				/>
-				<div style={{ marginTop: '-20px' }} className="container">
-					<div className="row doc-content-well">
+				<div style={{ marginTop: '-20px' }}>
+					<div className="container doc-content-well">
 						<div className="row">
-							<h1 className="title">{homeYaml.title}</h1>
+							<h1 className="title col-sm-12">{homeYaml.title}</h1>
 						</div>
 						<div className="row" style={{ marginBottom: '15px' }}>
 							<div className="col-md-12">

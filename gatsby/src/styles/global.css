@@ -144,6 +144,18 @@ pre code, pre code .hljs, .hljs {
   color: #333;
 }
 
+@media screen and (max-width: 995px) {
+
+	.flex-panel-group {
+		width: 100%;
+    display: block;
+    margin-left: 0;
+	}
+	.preview-flex-panel-item {
+		margin-left: 0 !important;
+	}
+}
+
 .flex-panel-body {
   justify-content: space-between;
   background-color: #fff;
@@ -526,15 +538,11 @@ h2 > .glyphicons {
 }
 
 @media screen and (max-width: 995px) {
-  .has-feedback .form-control-feedback {
-    margin-top: -5px;
-    font-size: 80%;
-    margin-left: -5px;
-  }
+  
 	input[type="search"],
 	input[type="search"]:focus {
-		padding: 0px 0px 0px 45px;
-		margin-bottom: 10px;
+		/* padding: 0px 0px 0px 45px; */
+		/* margin-bottom: 10px; */
 	}
 	div.col-md-9 {
 		width: 100% !important;

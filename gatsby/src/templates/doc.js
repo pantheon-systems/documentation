@@ -66,8 +66,8 @@ class DocTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/default-thumb-doc.png"}
         />
-        <div className="container">
-          <div className="row doc-content-well">
+        <div className="">
+          <div className="container doc-content-well">
             <div id="doc" className="doc article col-md-9 md-70">
               <HeaderBody
                 title={node.frontmatter.title}

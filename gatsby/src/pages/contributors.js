@@ -7,7 +7,6 @@ const previewFlexPanelItem = {
     flex: '1 46%',
     margin: '0px 0px 15px 15px',
     color: '#333',
-    minWidth: '450px',
 }
 
 class Contributors extends React.Component {
@@ -16,12 +15,12 @@ class Contributors extends React.Component {
 		return (
 			<Layout>
 				<div style={{ marginTop: '-20px' }} className="container">
-					<div className="row doc-content-well">
+					<div className="container doc-content-well">
 						<div className="row">
 							<h1 className="title">Contributors</h1>
 						</div>
 						<div className="row mb-70">
-							<div className="container">
+							<div className="">
 								<div className="flex-panel-group">
 										{allContributorYaml && allContributorYaml.edges.map(({ node }) => {
 											return (
@@ -29,7 +28,7 @@ class Contributors extends React.Component {
 													{/* @TODO Convert to a React Component */}
 													<div className="preview-flex-panel-item" style={previewFlexPanelItem}>
 														<div className="flex-panel-body">
-															<div className="media">
+															<div className="media row">
 																<div className="pull-left">
 																	<div className="preview-info__img">
 																		<Link to={`/contributors/${node.id}`} title={node.id}>

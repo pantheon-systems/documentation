@@ -62,8 +62,8 @@ class ChangelogsTemplate extends React.Component {
           description="Pantheon Changelog"
           image={"assets/images/default-thumb-doc.png"}
         />
-        <div className="container">
-          <div className="row doc-content-well">
+        <div className="">
+          <div className="container doc-content-well">
             <div id="doc" className="doc article col-md-9 md-70">
               <h1 className="toc-ignore">Pantheon Changelog</h1>
               <Callout title="Subscribe Now" link="https://learn.pantheon.io/Changelog-Opt-In.html" >

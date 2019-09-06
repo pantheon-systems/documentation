@@ -17,12 +17,12 @@ class LandingTemplate extends Component {
 		return !topic ? null : (
 			<Layout>
 				<div style={{ marginTop: '-20px' }} className="container">
-					<div className="row doc-content-well">
+					<div className="container doc-content-well">
 						<div className="row">
 							<h1 className="title">{topic.title}</h1>
 						</div>
 						<div className="row" style={{ marginBottom: '15px' }}>
-							<div className="col-md-12">
+							<div className="">
 								<div className="row call-to-action-section">
 									{topic.video_id && (
 										<div className="col-md-6 hero-video__video">

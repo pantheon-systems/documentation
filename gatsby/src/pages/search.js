@@ -12,15 +12,15 @@ class Search extends React.Component {
 					title="Search"
 				/>
 				<div style={{ marginTop: '-20px' }} className="container">
-					<div className="row doc-content-well">
-						<div className="row">
+					<div className=" doc-content-well">
+						<div className="">
 							<h1 className="title">Search Results</h1>
 						</div>
-						<div className="row" style={{ marginBottom: '15px' }}>
+						<div className="" style={{ marginBottom: '15px' }}>
 
 						</div>
-						<div className="row mb-70">
-							<div className="col-md-12">
+						<div className=" mb-70">
+							<div className="">
 							<div className="container">
 								<div className="row">
 									<div className="col-md-8 search-results">

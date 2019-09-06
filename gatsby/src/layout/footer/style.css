@@ -801,7 +801,7 @@ h4.block__title {
 @media (max-width: 1214px) {
   #footer .container-whole-footer {
     width: 100%;
-    padding: 0;
+    /* padding: 0; */
   }
   #social-links-wrapper {
     text-align: center;

@@ -1,18 +1,18 @@
-#navbar {
+.main-navbar {
 	height: 87px;
 	background: #181d21;
 	color: #fff;
 }
-#navbar > ul > li {
+.main-navbar > ul > li {
 	float: right;
 	padding: 25px 0;
 }
 
-#navbar .create-account a {
+.main-navbar .create-account a {
 	color: #efd01b;
 }
 
-#navbar .create-account::after {
+.main-navbar .create-account::after {
 	content: &rsaquo;
 }
 
@@ -78,7 +78,8 @@ a.cta.cta-yellow:after:hover {
 div.navsearch-container {
 	position: fixed;
 	width: 100%;
-	top: 87px;
+  top: 87px;
+  padding: 10px;
 }
 .container-navsearch-box {
 	position: relative;
@@ -256,18 +257,18 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 
 	border: 0px;
 
-	height: 87px;
+	height: 60px;
 	margin: 0;
 	border-radius: 0;
-	width: 87px;
-	background-color: #283239;
+	width: 60px;
+	background-color: transparent;
 	color: #fff;
-	line-height: 87px;
-	font-size: 30px;
+	line-height: 30px;
+	font-size: 26px;
 }
 .pio-docs-nav .navbar-toggle i {
-	color: #aaaca8;
-	font-size: 30px;
+	color: #fff;
+	font-size: 26px;
 	display: inline-block;
 	text-align: center;
 }
@@ -289,6 +290,9 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 .navbar-header .docs {
   padding: 0 0 0 5px;
   height: 87px;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 
 /* dropdown */
@@ -433,6 +437,7 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
     margin-left: 3px;
     margin-top: 8px;
   }
+
 }
 
 @media screen and (max-width: 995px) {
@@ -449,6 +454,8 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
   /*  */
   .navbar-toggle {
     display: block;
+    margin-top: 0 !important;
+    margin-left: auto;
   }
   .navbar-toggle .icon-bar {
     display: block;
@@ -485,7 +492,7 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 	/*  */
 	.navsearch-container {
 		z-index: 10001;
-		padding-top: 15px;
+		padding: 15px 0;
 	}
 	div.navsearch-container {
 		right: 0;
@@ -519,8 +526,11 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 	}
 	.navsearch-container {
 		z-index: 10001;
-		padding-top: 15px;
-	}
+		padding: 6px 0;
+  }
+  #searchform{
+    width: 100%;
+  }
 	div.navsearch-container {
 		right: 0;
 		left: 0;
@@ -575,7 +585,14 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 		/* background: #313945; */
 		color: #fff;
   }
-  /*  */
+  .navbar-header .docs{
+    height: 70px;
+    margin: 0 auto;
+  }
+  .navbar-header .docs img{
+    margin: 5px 0;
+    
+  }
   .navbar-collapse {
     border-top: 1px solid transparent;
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -588,8 +605,10 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
     margin-right: 0px;
   }
   .navbar-fixed-top .navbar-collapse {
-    max-height: 450px;
+    max-height: 80vh !important;
+    height: auto;
   }
+
   .navbar-collapse.in {
     overflow-y: visible;
   }
@@ -605,7 +624,9 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
   }
   .navbar-nav .dropdown .dropdown-menu {
     width: 100%;
-    top: 20px;
+    top: 9px;
+    display: block;
+    position: relative;
   }
   .nav .open > a,
   .nav .open > a:focus,
@@ -654,8 +675,42 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
   .navbar-nav .dropdown:hover .dropdown-menu {
     width: 100%;
     top: 20px;
+    position: relative;
   }
-  /*  */
+}
+
+@media (max-width: 995px) {
+	.navbar-header {
+    float: none;
+    display:flex;
+    align-items: center;
+	}
+	.navbar-left,
+	.navbar-right {
+		float: none !important;
+	}
+	.navbar-toggle.search{
+    margin-right: 0;
+    margin-left: 0;
+  }
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	/*  */
+	/*  */
+	/*  */
+	.collapse.in {
+		display: block !important;
+	}
+	body {
+		padding-top: 100px !important;
+	}
+  .container-navsearch-box-guide{
+    display:flex;
+    align-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 950px) {
@@ -693,4 +748,22 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
   .navbar-nav {
     margin-right: 20px;
   }
+}
+
+
+@media (max-width: 768px) {
+  .navbar-header{
+    float: none !important;
+  }
+  .pio-docs-nav .navbar-collapse.collapse{
+    display: none!important;
+  }
+  .pio-docs-nav .navbar-collapse.collapse.in{
+    display: block!important;
+  }
+  .navbar-header .navbar-toggle{
+    display: block;
+  }
+}
+@media (min-width: 768px) {
 }
