@@ -1,6 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from "gatsby"
-import MDXRenderer from "gatsby-mdx/mdx-renderer"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
 const Partial = (props) => (
@@ -15,9 +15,7 @@ const Partial = (props) => (
           sort: {fields: fileAbsolutePath}) {
           edges {
             node {
-              code {
-                body
-              }
+              body
               parent {
                 ... on File {
                   relativePath
@@ -43,7 +41,7 @@ const Partial = (props) => (
 
       return <>
           <MDXProvider>
-            <MDXRenderer>{mdx.node.code.body}</MDXRenderer>
+            <MDXRenderer>{mdx.node.body}</MDXRenderer>
           </MDXProvider>
         </>
     }}

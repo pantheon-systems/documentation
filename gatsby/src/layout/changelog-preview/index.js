@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from "gatsby"
-import MDXRenderer from "gatsby-mdx/mdx-renderer"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import './styles.css';
 
@@ -14,7 +14,7 @@ const ChangelogPreview = (props) => {
 				<div className="changelog-wrapper mb-70">
 					<h2 className="subtitle">{title}</h2>
 					<MDXProvider>
-          	<MDXRenderer>{current.node.fields.markdownBody.childMdx.code.body}</MDXRenderer>
+						<MDXRenderer>{current.node.fields.markdownBody.childMdx.body}</MDXRenderer>
 					</MDXProvider>
 					<Link
 						to={url}
