@@ -16,7 +16,20 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     $primary_domain = $_SERVER['HTTP_HOST'];
   }
 
+  $requires_redirect = false;
+  
+  // Ensure the site is being served from the primary domain.
   if ($_SERVER['HTTP_HOST'] != $primary_domain) {
+    $requires_redirect = true;
+  }
+
+  // If you're not using HSTS in the pantheon.yml file, uncomment this next block.
+  // if (!isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
+  //     || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON') {
+  //   $requires_redirect = true;
+  // }
+
+  if ($requires_redirect === true) {
 
     // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
@@ -51,7 +64,21 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     $primary_domain = $_SERVER['HTTP_HOST'];
   }
 
+  $requires_redirect = FALSE;
+
+  // Ensure the site is being served from the primary domain.
   if ($_SERVER['HTTP_HOST'] != $primary_domain) {
+    $requires_redirect = TRUE;
+  }
+
+  // If you're not using HSTS in the pantheon.yml file, uncomment this next block.
+  // if (!isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
+  //     || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON') {
+  //   $requires_redirect = TRUE;
+  // }
+
+
+  if ($requires_redirect === TRUE) {
 
     // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
@@ -89,7 +116,20 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
     $primary_domain = $_SERVER['HTTP_HOST'];
   }
 
+  $requires_redirect = false;
+  
+  // Ensure the site is being served from the primary domain.
   if ($_SERVER['HTTP_HOST'] != $primary_domain) {
+    $requires_redirect = true;
+  }
+
+  // If you're not using HSTS in the pantheon.yml file, uncomment this next block.
+  // if (!isset($_SERVER['HTTP_USER_AGENT_HTTPS'])
+  //     || $_SERVER['HTTP_USER_AGENT_HTTPS'] != 'ON') {
+  //   $requires_redirect = true;
+  // }
+
+  if ($requires_redirect === true) {
 
     // Name transaction "redirect" in New Relic for improved reporting (optional).
     if (extension_loaded('newrelic')) {
