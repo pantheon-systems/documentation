@@ -6,35 +6,38 @@ type: guide
 permalink: docs/guides/:basename/
 ---
 
-This guide will help you get up and running with [Lando](https://thinktandem.io/lando/){.external}, an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.
+This guide will help you get up and running with [Lando][1]{.external}, an Open Source development tool intended for developers who prefer a painless, easily customizable local server environment configuration they can track in their source control repositories.
 
 <div class="alert alert-info" role="alert" markdown="1">
+
 #### Note {.info}
-Lando does not currently provide a Graphical User Interface (GUI). Everything is managed from the command line. 
+
+Lando does not currently provide a Graphical User Interface (GUI). Everything is managed from the command line.
+
 </div>
 
 ## Before You Begin
 
 Be sure that you have:
 
-- An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create){.external} one.
+- An existing WordPress site on Pantheon, or [create][2]{.external} one.
 - Having a working knowledge of local server environments is helpful but not entirely necessary.
-- While you’re at it be sure to check out [Lando getting started guide](https://docs.devwithlando.io/dev/started.html){.external} and [Lando CLI usage](NEED-LINK).
+- While you’re at it be sure to check out [Lando getting started guide][3]{.external} and [Lando CLI usage][4].
 
-
-Installing Lando is straight forward. Be sure to check its [system requirements](https://docs.devwithlando.io/installation/system-requirements.html){.external} to ensure you can proceed.
+Installing Lando is straight forward. Be sure to check its [system requirements][5]{.external} to ensure you can proceed.
 
 ## Downloading and Install Lando
 
-- The latest release of Lando for your OS can be found [here](https://github.com/lando/lando/releases){.external}. Download the appropriate release for your Operating System.
+- The latest release of Lando for your OS can be found [here][6]{.external}. Download the appropriate release for your Operating System.
 - Click to open the installer package. The installer has a few pre-flight checks it runs before getting started.
 
-![Image of the Lando installer](/source/docs/assets/images/guides/lando/IMAGE.png "Lando Installer")
+![Image of the Lando installer][image-1]
 
 Once you finish following any system prompts, the Lando installation script will work its magic and install itself on your computer.
 
 ## Getting Started
-You’ll manage your Lando instances via the command line. A shortlist of useful Lando commands can be found [here](https://docs.devwithlando.io/cli/usage.html){.external}. If you ever need a refresher, simply pull up your terminal and type `lando --help` and you will find the default commands returned. The Lando command is installed globally so you can run it from anywhere within your terminal.
+
+You’ll manage your Lando instances via the command line. A shortlist of useful Lando commands can be found [here][7]{.external}. If you ever need a refresher, simply pull up your terminal and type `lando --help` and you will find the default commands returned. The Lando command is installed globally so you can run it from anywhere within your terminal.
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
@@ -50,26 +53,26 @@ Getting started with Lando can be disorienting at first. Fear not, mighty develo
 1. Open your terminal and get to the directory where you plan to run your fancy Lando WP site.
 1. While in your terminal simply type `lando init`.
 
-  ![alt text](https://lh4.googleusercontent.com/wSSyn5FZsxUY_03N-d5vszYVQPljZCBafwsk_kjWP4SJ62QzSvB-YaFrHwX9nZvXD3Lab5LHGEDMUt19JqgFOrBY-nU5UulHgcYYRMnJ "Install Lando to your working directory")
+![Terminal command for initialiting a new lando site install][image-2]
 
-
-	You may choose to start from your current directory or you can clone from Pantheon, Github, or another remote repository, or zip file. For this step, we’ll choose Current Working Directory.  
+	You may choose to start from your current directory or you can clone from Pantheon, Github, or another remote repository, or zip file. For this step, we’ll choose Current Working Directory. 
+	
 
 1. Next, you’ll choose WordPress as your starting recipe.
 
-  ![alt text](https://lh3.googleusercontent.com/9oaWMtWpGPftZ15xrjwB9mcPpFwXNgoS5yUeafZI_hoj57dWS2LLKi6Xfc4odz1yDBfLoatRLkcWEWviyvS0saQSEMJ_BffcolQ2kigA "Install Lando to your working directory")
+![Choose your Lando recipe to spin up a new website.][image-3]
 
 1.  For your webroot, you may press enter and Lando will spin up the site from your current directory.
 
-1. Enter the name of the site. Use something you’ll remember!
+1.  Enter the name of the site. Use something you’ll remember!
 
 Your local site has been created but your still not done! You still need to start the app, download WordPress and then install WordPress. Sure, it’s a few steps but the command line practice is good for bone growth and keyboard-punching-dexterity.
 
 1. In your terminal type `lando start`. This starts your lando app and gives you some basic information like your Appserver URLs to access the site in your local browser of choice.
 
-  ![alt text](https://lh6.googleusercontent.com/MDz4wDlDJZeEmuNwRKR7rZJStKPLvPQqUjn3kfK_oEk5c33UcO7tJxghP41IUyBnsaEudIUk5Zua5qb8QX06X5uzI86zXmJhorOXIMVS "Install Lando to your working directory")
+![alt text][image-4]
 
-  Then type `lando wp core download`.
+Then type `lando wp core download`. This will download the core files for your website. This step isn’t necessary if you started with a Git or Pantheon repository instead of the current working directory.
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
@@ -80,11 +83,11 @@ This is where we talk a little bit about WP-CLI, Lando, and You. To use WP-CLI c
 
 1. Your WP configuration file still needs to be created. You can actually do this from the command line. However, we’re going to go to do this the ol’ fashioned way through the browser.
 
-1. In your browser, enter in the URL given to you above: _http://yourappname.lndo.site_. You’ll notice WordPress’s _Famous Five Minute install_ screen. 
+1. In your browser, enter in the URL given to you above: _http://yourappname.lndo.site_. You’ll notice WordPress’s _Famous Five Minute install_ screen.
 
 1. Click next after choosing your preferred language and click Let’s Go on the following screen.
 
-1. In Lando, for a WordPress installation without Pantheon, the Database, Username, and Password are all `WordPress` and Database Host is `database` (the database host is case-sensitive). Enter your credentials and complete the installation process! Congrats! You now have Lando installed with WordPress! 
+1. In Lando, for a WordPress installation without Pantheon, the Database, Username, and Password are all `wordpress` and Database Host is `database` (the all values are case-sensitive). Enter your credentials and complete the installation process! Congrats! You now have Lando installed with WordPress!
 
 <div class="alert alert-info" role="alert" markdown="1">
 #### Note {.info}
@@ -103,20 +106,21 @@ To use this Lando recipe you must have an account with Pantheon, which you can r
 
 1. Choose your Pantheon account email from the following prompt and click/press Enter.
 
-   (img)
+   \(img)
 
 1. Next, choose the Pantheon site you want to pull from to create your local site.
 
   <div class="alert alert-info" role="alert" markdown="1">
-  #### Note {.info}
+  \#\### Note {.info}
   Lando creates your local environment, mirroring your dev environment closely, and the clones down the site’s codebase (this part of the process does not include media files in the uploads folder or the site’s database). This part will take a few minutes or so depending on the site’s size on Pantheon.
   </div>
 
 1. At this point, you should run `lando start`.
 
-  With your site started, you’ll have your local site URL so you can access it from your browser. But now you can also pull the code, media files, and the database from the site’s Pantheon environment.
- 
+With your site started, you’ll have your local site URL so you can access it from your browser. But now you can also pull the code, media files, and the database from the site’s Pantheon environment.
+
 ### Pushing and Pulling Your Changes
+
 Certainly, one of the most awesome benefits of using Lando with the Pantheon recipe is the ability to _push_ your changes from your local site to your various Pantheon environments (yes, including live and multi-dev instances).
 To initiate a push from your local environment simply type `lando push`; conversely, type `lando pull` to perform a pull. Either action will have Lando prompt you for which environments you wish to pull/push your codebase, files, and database from or to.
 
@@ -133,7 +137,7 @@ Your _database_ refers to your app's database. Your _code_ refers to your app’
 
 1. In the next prompt, again, choose _dev_ for files.
 
-Lando also runs a search and replace on the database  _siteurl_ and _sitename_ table fields and replaces Pantheon’s values with your local values. 
+Lando also runs a search and replace on the database _siteurl_ and _sitename_ table fields and replaces Pantheon’s values with your local values.
 
 <div class="alert alert-info" role="alert" markdown="1">
 ### Note {.info}
@@ -144,5 +148,18 @@ Sometimes, it’s just a good do your own search and replace on your local site 
 -OR-
 
 `terminus wp yourpantheonsitename.dev -- search-replace 'yourlocalapp.lndo.site' ‘yourpantheondevurl.com'`
+
 </div>
 
+[1]:	https://lando.dev/
+[2]:	https://dashboard.pantheon.io/sites/create
+[3]:	https://docs.devwithlando.io/dev/started.html
+[4]:	https://docs.lando.dev/basics/usage.html
+[5]:	https://docs.devwithlando.io/installation/system-requirements.html
+[6]:	https://github.com/lando/lando/releases
+[7]:	https://docs.devwithlando.io/cli/usage.html
+
+[image-1]:	/source/docs/assets/images/guides/lando/lando-installer.png "Lando Installer"
+[image-2]:	/source/docs/assets/images/guides/lando/lando-init.png "Install Lando to your working directory"
+[image-3]:	/source/docs/assets/images/guides/lando/lando-choose-recipe.png "Install Lando to your working directory"
+[image-4]:	/source/docs/assets/images/guides/lando/lando-start.png "Install Lando to your working directory"
