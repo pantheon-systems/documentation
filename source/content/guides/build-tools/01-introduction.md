@@ -77,19 +77,19 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 6. Install the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin):
 
     ```bash
-    composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1
+    composer create-project -n --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1
     ```
 
 7. Install the [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin):
 
     ```bash
-    composer create-project -n -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1
+    composer create-project -n --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1
     ```
 
 8. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin). Update the version number in this example from `2.0.0-beta12` to the current version:
 
     ```bash
-    composer create-project -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta12
+    composer create-project --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta12
     ```
 
   <Alert title="Note" type="info">
