@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10.16.0-browsers-legacy
+      - image: circleci/php:7.2-cli-node-browsers
     working_directory: ~/build
     steps:
       - checkout
@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Prep Environment
           command: |
-            sudo apt install -y rsync composer php-xml
+            sudo apt install -y rsync 
             composer global require pantheon-systems/terminus
             cd ~/build/gatsby
             sudo npm install -g gatsby
