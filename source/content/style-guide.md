@@ -486,12 +486,12 @@ Screenshots are used to reference GUI instructions:
 
 <Example>
 
-![Alt text describing the image](../../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
 <hr className="source-code" />
 
 ```markdown
-![Alt text describing the image](../../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
+![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 ```
 
 </Example>
@@ -501,12 +501,12 @@ Terminal screenshots should only be used to demonstrate intended output:
 
 <Example>
 
-![Alt text describing the image](../../images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
 
 <hr className="source-code" />
 
 ```markdown
-![Alt text describing the image](../../images/pr-workflow/composer-require-pathauto.png)
+![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
 ```
 
 </Example>
