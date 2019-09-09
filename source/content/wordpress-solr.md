@@ -62,13 +62,13 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-
 
 6. Deploy the plugin to the site's Test and Live environments after validation and testing.
 
-## Setup Front-end AJAX search bar
+## Set up Front-end AJAX Search Bar
 
 1. In **Appearance** > **Widgets**, add the Solr Search Widget in your desired widget position.
 
   ![Solr Widget](../images/add-solr-widget.png)
 
-2. In **Solr Power** > **Facet Options** tab, check **AJAX Facet Search Support** and enter the Div ID in **AJAX Div ID (displays search results)** eg. primary.
+2. In **Solr Power** > **Facet Options** tab, check **AJAX Facet Search Support** and enter the Div ID in **AJAX Div ID (displays search results)** eg. `primary`.
 
   ![Solr Settings](../images/solr-widget-settings.png)
 
