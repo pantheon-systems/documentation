@@ -7,10 +7,10 @@ Before adjusting `enforce_https`, review and understand the configuration option
 |       Value                                          | Redirect                           |   HSTS    | HSTS Duration | includeSubdomains                  | preload                            |
 |:-------------------------------------------------------------:|:----------------------------------:|:--------:|---------------------------|:----------------------------------:|:----------------------------------:|
 | off                                               |     ❌                             |  ❌  | ❌       |         ❌                         |    ❌                              |
-| transitional                                                | <span style="color:green">✔</span> | <span style="color:green">✔</span> | 5 min             |         ❌                         |    ❌                              |
-| transitional+subdomains                                     | <span style="color:green">✔</span> | <span style="color:green">✔</span> | 5 min             | <span style="color:green">✔</span> |    ❌                              |
-| full <Popover content="Needed for an A+ SSL Labs Rating" /> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | > 1 yr        |         ❌                         | <span style="color:green">✔</span> <Popover content="HTTP will be forcefully redirected to HTTPS by the browser." /> |
-| `full+subdomains` <Popover content="This is the recommended and most secure configuration" /> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | > 1yr | <span style="color:green">✔</span> | <span style="color:green">✔</span> <Popover content="HTTP will be forcefully redirected to HTTPS by the browser." /> |
+| `transitional`                                                | <span style="color:green">✔</span> | <span style="color:green">✔</span> | 5 min             |         ❌                         |    ❌                              |
+| `transitional+subdomains`                                     | <span style="color:green">✔</span> | <span style="color:green">✔</span> | 5 min             | <span style="color:green">✔</span> |    ❌                              |
+| `full` <Popover content="Needed for an A+ SSL Labs Rating" /> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | &gt; 1 yr            |         ❌          | ❌                                                |
+| `full+subdomains` <Popover content="This is the recommended and most secure configuration" /> | <span style="color:green">✔</span> | <span style="color:green">✔</span> | &gt; 1 yr | <span style="color:green">✔</span> | <span style="color:green">✔</span> <Popover content="Supports optional domain registration at hstspreload.org." /> |
 
 For example, to set `enforce_https` as `transitional`:
 
