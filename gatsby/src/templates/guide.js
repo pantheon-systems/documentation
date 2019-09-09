@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import MDXRenderer from "gatsby-mdx/mdx-renderer"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
@@ -104,7 +104,7 @@ class GuideTemplate extends React.Component {
                       editPath={node.fields.editPath}
                     />
                     <MDXProvider components={shortcodes}>
-                      <MDXRenderer>{node.code.body}</MDXRenderer>
+                      <MDXRenderer>{node.body}</MDXRenderer>
                     </MDXProvider>
                   </div>
                   {node.frontmatter.showtoc && (
@@ -146,9 +146,7 @@ export const pageQuery = graphql`
   query GuidePageBySlug($slug: String!, $guide_directory: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       id
-      code {
-        body
-      }
+      body
       fields {
         slug
         guide_directory

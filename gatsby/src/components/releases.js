@@ -1,6 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import MDXRenderer from "gatsby-mdx/mdx-renderer"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
 import { headline1, headline2, headline3 } from "./releaseHeadlines"
@@ -19,7 +19,7 @@ const Releases = ({ data }) => (
           <h3 className="toc-ignore">{release.node.tag_name}</h3>
           <MDXProvider components={shortcodes}>
             <MDXRenderer>
-              {release.node.fields.markdownBody.childMdx.code.body}
+              {release.node.fields.markdownBody.childMdx.body}
             </MDXRenderer>
           </MDXProvider>
           <hr />
@@ -45,9 +45,7 @@ export default props => (
               fields {
                 markdownBody {
                   childMdx {
-                    code {
-                      body
-                    }
+                    body
                   }
                 }
               }

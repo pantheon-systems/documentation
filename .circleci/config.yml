@@ -8,9 +8,9 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v2.1-always-
-            - npm-v2.1-{{ checksum "gatsby/package-lock.json" }}
-            - composer-v2.1-{{ checksum "~/.composer/composer.lock" }}
+            - v2.2-always-
+            - npm-v2.2-{{ checksum "gatsby/package-lock.json" }}
+            - composer-v2.2-{{ checksum "~/.composer/composer.lock" }}
       - run:
           name: Prep Environment
           command: |
@@ -77,15 +77,15 @@ jobs:
 #            mkdir ~/build/artifacts
 #            bash scripts/run-sitespeed-test.sh
       - save_cache:
-          key: npm-v2.1-{{ checksum "gatsby/package-lock.json" }}
+          key: npm-v2.2-{{ checksum "gatsby/package-lock.json" }}
           paths:
             - ~/build/gatsby/node_modules
       - save_cache:
-          key: composer-v2.1-{{ checksum "~/.composer/composer.lock" }}
+          key: composer-v2.2-{{ checksum "~/.composer/composer.lock" }}
           paths:
             - ~/.composer/cache
       - save_cache:
-          key: v2.1-always-{{ epoch }}
+          key: v2.2-always-{{ epoch }}
           paths:
             - ~/build/gatsby/public
             - ~/build/gatsby/.cache

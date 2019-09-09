@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import MDXRenderer from "gatsby-mdx/mdx-renderer"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
@@ -80,7 +80,7 @@ class DocTemplate extends React.Component {
               />
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
-                  <MDXRenderer>{node.code.body}</MDXRenderer>
+                  <MDXRenderer>{node.body}</MDXRenderer>
                 </MDXProvider>
               </div>
             </div>
@@ -114,9 +114,7 @@ export const pageQuery = graphql`
   query DocBySlug($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       id
-      code {
-        body
-      }
+      body
       fields {
         slug
         editPath

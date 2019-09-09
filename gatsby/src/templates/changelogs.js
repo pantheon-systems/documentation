@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import MDXRenderer from "gatsby-mdx/mdx-renderer"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 
 import Layout from "../layout/layout"
@@ -71,16 +71,16 @@ class ChangelogsTemplate extends React.Component {
               </Callout>
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 {changelogs.map((changelog)=>(
-                  <>
+                  <React.Fragment key={changelog.id}>
                     <Link
                       to={changelog.node.fields.slug}
                     >
                       <h2 id={changelog.node.fields.slug}>{changelog.node.frontmatter.title}</h2>
                     </Link>
                     <MDXProvider components={shortcodes}>
-                      <MDXRenderer>{changelog.node.code.body}</MDXRenderer>
+                      <MDXRenderer>{changelog.node.body}</MDXRenderer>
                     </MDXProvider>
-                  </>
+                  </React.Fragment>
                 ))}
               </div>
             </div>
@@ -119,9 +119,7 @@ export const pageQuery = graphql`
         edges {
           node {
             id
-            code {
-              body
-            }
+            body
             frontmatter {
               title
             }

@@ -89,7 +89,7 @@ module.exports = {
     `gatsby-transformer-yaml`,
     `gatsby-transformer-json`,
     {
-      resolve: `gatsby-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
