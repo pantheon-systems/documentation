@@ -9,7 +9,7 @@ searchboost: 150
 
 Pantheon’s database services use strong random passwords and TLS to encrypt communications by default. Customers seeking additional defense in depth can enable Secure Runtime Access (SRA).
 
-When SRA is enabled, the site's Pantheon MySQL databases will no longer listen for incoming connections over public internet ports, and developers will only be able to connect to those databases [via SSH tunnel](/ssh-tunnels/).
+When SRA is enabled, the the site's Pantheon MySQL databases will no longer listen for incoming connections over public internet ports, and developers will only be able to connect to those databases [via SSH tunnel](/ssh-tunnels/).
 
 In addition to defense in depth, this feature can be used to enforce roles and permissions by preventing developers from accessing a live database. It also guarantees that users who are removed from a site team or organization can no longer use a saved set of credentials.
 
