@@ -43,9 +43,11 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-
 
 4. Select **Indexing Options** from the navigation bar and configure desired indexing options for Solr. Click **Save Changes** after making modifications.
 
-    <Alert title="Note" type="info">
-    You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated) in the **Excludes Posts or Pages** field.
-    </Alert>
+   <Alert title="Note" type="info">
+
+   You can exclude pages or posts from being indexed by providing the numeric ID of the item (comma separated) in the **Excludes Posts or Pages** field.
+
+   </Alert>
 
 5. Index all publicly queryable post types by navigating to the **Actions** tab and clicking **Execute** next to **Index Searchable Post Types**, or via Terminus:
 
@@ -59,6 +61,20 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-
  ```
 
 6. Deploy the plugin to the site's Test and Live environments after validation and testing.
+
+## Set up Front-end AJAX Search Bar
+
+1. In **Appearance** > **Widgets**, add the Solr Search Widget in your desired widget position.
+
+  ![Solr Widget](../images/add-solr-widget.png)
+
+2. In **Solr Power** > **Facet Options** tab, check **AJAX Facet Search Support** and enter the Div ID in **AJAX Div ID (displays search results)** eg. `primary`.
+
+  ![Solr Settings](../images/solr-widget-settings.png)
+
+   The **Div ID** is where the search results will appear. You can use an existing Div ID in the page template, or you can create your own blank element using a unique ID name.
+
+3. Check your desired Facets and save your settings, then test the search functionality before committing the changes.
 
 ### Optimize Index
 
