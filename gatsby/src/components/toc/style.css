@@ -3,7 +3,7 @@
   Tocbot Library hack (used inTable of Contents component)
   this solves the scrolling overlap with the nav bar
 */
-@media (min-width: 500px) {
+@media (min-width: 769px) {
   #doc h1::before,
   #terminus h1::before,
   #doc h2::before,

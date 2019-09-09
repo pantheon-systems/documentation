@@ -52,6 +52,11 @@ pre code {
 	white-space: inherit;
 }
 
+@media screen and (max-width: 768px) {
+	.pantheon-docs{
+		padding-top: 3rem;
+	}
+}
 
 .pantheon-docs a:focus,
 .pantheon-docs a:hover {

@@ -440,7 +440,7 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 
 }
 
-@media screen and (max-width: 995px) {
+@media screen and (max-width: 768px) {
 	#navbar ul li {
 		float: none !important;
 	}
@@ -497,7 +497,7 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 	div.navsearch-container {
 		right: 0;
 		left: 0;
-		position: absolute !important;
+		position: relative !important;
 		top: inherit !important;
 	}
 	div.navsearch-container {
@@ -534,7 +534,7 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 	div.navsearch-container {
 		right: 0;
 		left: 0;
-		position: absolute !important;
+		position: relative !important;
 		top: inherit !important;
 	}
 	.pio-docs-nav .navbar-nav > li > a {
@@ -599,6 +599,8 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
   }
   .navbar-collapse.collapse {
     display: none !important;
+
+    width:100%;
   }
   .container > .navbar-collapse {
     margin-left: 0px !important;
@@ -679,7 +681,7 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
   }
 }
 
-@media (max-width: 995px) {
+@media (max-width: 768px) {
 	.navbar-header {
     float: none;
     display:flex;
@@ -754,6 +756,11 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 @media (max-width: 768px) {
   .navbar-header{
     float: none !important;
+  }
+  .pio-docs-nav .navbar-collapse{
+    padding-left: 0;
+    padding-right: 0;
+
   }
   .pio-docs-nav .navbar-collapse.collapse{
     display: none!important;
