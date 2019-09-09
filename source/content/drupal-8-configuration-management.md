@@ -16,23 +16,29 @@ Pantheon supports the [Drupal 8 Configuration Management system](https://www.dru
 
 ## Basic Workflow
 
-1.  With the Development environment in SFTP mode, export your configuration to code:
+1. With the Development environment in SFTP mode, export your configuration to code:
 
-        drush cex -y
+   ```bash
+   drush config:export -y
+   ```
 
-2.  Return to the Dashboard and commit the configuration changes.
-3.  Deploy the code to Test.
-4.  Import the configuration from code into the test environment database:
+1. Return to the Dashboard and commit the configuration changes.
+1. Deploy the code to Test.
+1. Import the configuration from code into the test environment database:
 
-        drush cim -y
+   ```bash
+   drush config:import -y
+   ```
 
-5.  Test the site.
-6.  Deploy the code to Live.
-7.  Import the configuration from code into the live environment database:
+1. Test the site.
+1. Deploy the code to Live.
+1. Import the configuration from code into the live environment database:
 
-        drush cim -y
+   ```bash
+   drush config:import -y
+   ```
 
-8.  Profit.
+1.  Profit.
 
 Using Terminus, you can complete the above process from the command line.
 
@@ -40,14 +46,21 @@ Using Terminus, you can complete the above process from the command line.
 
 In the commands below, replace `site` with your site name and the correct environment:
 
-1.  `terminus drush <site>.dev -- cex -y`
-2.  `terminus env:commit <site>.dev --message="Export configuration to code"`
-3.  `terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"`
-4.  `terminus drush <site>.test -- cim -y`
-5.  `open https://test-mysite.pantheonsite.io`
-6.  `terminus env:deploy <site>.live --cc --note="Deploy configuration to live"`
-7.  `terminus drush <site>.live -- cim -y`
-8.  `open https://live-mysite.pantheonsite.io`
+1.  `terminus drush <site>.dev -- config:export -y`
+
+1.  `terminus env:commit <site>.dev --message="Export configuration to code"`
+
+1.  `terminus env:deploy <site>.test --sync-content --cc --updatedb --note="Deploy configuration to test"`
+
+1.  `terminus drush <site>.test -- config:import -y`
+
+1.  `open https://test-mysite.pantheonsite.io`
+
+1.  `terminus env:deploy <site>.live --cc --note="Deploy configuration to live"`
+
+1.  `terminus drush <site>.live -- config:import -y`
+
+1.  `open https://live-mysite.pantheonsite.io`
 
 ## Configuration Tools for Drupal 8
 With [Drupal 8](https://pantheon.io/drupal-8), much more powerful tools promise to greatly improve this situation. The new configuration management system provides complete and consistent import and export of all configuration settings, and Git already provides facilities for managing parallel work on different branches. When conflicts occur, it is  possible to back out the conflicting changes, take just the version provided in the central repository, or use three-way merge tools such as `kdiff3` to examine and manually resolve each difference. A new Drush project, [config-extra](https://github.com/drush-ops/config-extra), includes a `config-merge` command that streamlines the use of these tools.
@@ -90,13 +103,15 @@ $config_directories = array(
 ```
 
 <Alert title="Note" type="info">
+
 Care should be taken to ensure that this code is added after the `settings.pantheon.php` is included; otherwise, the `CONFIG_SYNC_DIRECTORY` will be overwritten with the Pantheon default value. The configuration directory must exist before this variable is changed.
+
 </Alert>
 
 Relocate the configuration directory for the default location using `git mv`:
 
-```
-$ git mv web/sites/default/files/config .
+```bash
+git mv web/sites/default/files/config .
 ```
 
 For additional details, see [this blog post by Greg Anderson](https://pantheon.io/blog/relocating-drupal-8-configuration-outside-document-root).

@@ -20,48 +20,80 @@ You can run all of the commands below from Terminus instead of using Drush alias
 For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/drush-versions).
 
 ## Download Drush Aliases Locally
-Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments.
+Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use [Terminus](/terminus/) to download your Drush aliases.
 
-There are two ways to obtain the aliases, either with Terminus or through the Dashboard.
+Authenticate Terminus with [machine tokens](/docs/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
-### Download with Terminus, the Pantheon CLI
-Authenticate Terminus with [machine tokens](/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
-
-```
-$ terminus aliases
+```bash
+terminus aliases
 ```
 
-### Download Using the Dashboard
+This command will write both Drush 8 and Drush 9 aliases into the directory `$HOME/.drush` for your sites that you are a direct member of. To create aliases for all sites that you can use, including sites that you have access to via team membership, run:
 
-![Link to Pantheon Drush Aliases](../images/dashboard/drush-aliases.png)
-
-Download your Pantheon site aliases to manually update your local aliases file:
-
-1. From your Pantheon User Dashboard, click **Sites** > **Drush Aliases**
-2. Move the generated `pantheon.aliases.drushrc.php` into your local Drush site-aliases directory (e.g. `$HOME/.drush/site-aliases`).
-3. Clear Drush cache:
-
- ```
- drush cc drush
- ```
-
-If you add a site to your account, you will have to download a new copy of your Drush aliases.
-
-### List Available Site Aliases
-Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
+```bash
+terminus aliases --all
 ```
-$ drush sa
+
+If you add a site to your account, you will have to download a new copy of your Drush aliases. You do not need to update your Drush aliases when you add new mulitdev environments to your sites.
+
+<Alert type="info" title="Note">
+
+You must use Drush 8.3.0 or 9.6.0 or later to use Drush aliases directly. Earlier versions are not compatible.
+
+</Alert>
+
+### Structure of Site Aliases
+
+The form Pantheon Drush aliases take depends on the version of Drush being used. Drush 8 aliases are all written to a single file, `$HOME/.drush/pantheon.aliases.drushrc.php`. A single alias record looks something like the example below:
+
+```php
+$aliases['example.*'] = array(
+  'uri' => '${env-name}-example.pantheonsite.io',
+  'remote-host' => 'appserver.${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1.drush.in',
+  'remote-user' => '${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1',
+  'ssh-options' => '-p 2222 -o "AddressFamily inet"',
+  'path-aliases' => array(
+    '%files' => 'files',
+    '%drush-script' => 'drush',
+   ),
+);
 ```
-<Alert title="Note" type="info">
+
+Drush 9 aliases are written one file per site to the directory `$HOME/.drush/sites/pantheon`. The site name is used to generate the filename, e.g. `example.site.yml`. The contents of a Drush 9 alias file looks something like the following exampe:
+
+```yaml
+'*':
+  host: appserver.${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1.drush.in
+  paths:
+    files: files
+    drush-script: drush9
+  uri: ${env-name}-example.pantheonsite.io
+  user: ${env-name}.3eb7b5dd-8b90-4272-8a80-5474015c37f1
+  ssh:
+    options: '-p 2222 -o "AddressFamily inet"'
+    tty: false
+```
+
+<Alert type="info" title="Note">
 
 You must be a [site team member](/team-management/#manage-site-team-members) of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are site team members. The alternative is to execute Drush commands via [Terminus](/terminus) for sites in which you are not a direct site team member.
 
 </Alert>
 
+Note that these are both "wildcard" aliases. The same wildcard alias is used for every environment available for a given site. The variable `${env-name}` is replaced with the appropriate environment name when used.
+
+Pantheon also uses "policy files" to validate aliases before they are used. The policy files are written by the `terminus aliases` command; the Drush 8 policy file is written to `$HOME/.drush/pantheon/drush8/pantheon_policy.drush.inc`, and the Drush 9 policy file is written to `$HOME/.drush/pantheon/Commands/PantheonAliasPolicyCommands.php`. These files should not be deleted.
+
+### List Available Site Aliases
+Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
+
+```bash
+drush sa
+```
 ## Execute a Drush Command on a Pantheon Site Environment
 Once you see the target site in the list of site aliases, you can execute a command on any remote site listed. The syntax is:  
 
-```
+```bash
 drush @pantheon.SITENAME.ENV COMMAND
 ```
 
@@ -73,7 +105,7 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 ### Registry Rebuild
 
-<Alert title="Note"  type="info" >
+<Alert title="Note" type="info" >
 
 [Registry Rebuild ](https://www.drupal.org/project/registry_rebuild) is [deprecated](https://www.drupal.org/project/registry_rebuild/issues/1785672) for Drupal 8 and will only work on Drupal 7.
 
@@ -87,6 +119,8 @@ Drupal's list of PHP classes and files can get corrupted or out-of-date, typical
 terminus drush <site>.<env> -- rr
 ```
 
+Note that the Registry Rebuild command is only ever necessary on Drupal 7 and Drupal 6 sites. The command `drush cache:rebuild` for Drupal 8 serves the same function that `registry rebuild` does for older versions of Drupal.
+
 ## Run SQL Queries Using Drush on Pantheon
 
 The `drush sql-cli` and `drush sql-connect` commands are not supported on Pantheon. For security reasons, the SQL database is not directly accessible from your local machine.
@@ -94,7 +128,7 @@ The `drush sql-cli` and `drush sql-connect` commands are not supported on Panthe
 You can, however, use Terminus as follows:
 
 ```bash
-terminus drush SITENAME.ENV -- sql-query "SELECT * FROM users WHERE uid=1"
+echo 'SELECT * FROM users WHERE uid=1;' | terminus drush SITENAME.ENV sql:cli
 ```
 
 Note that certain characters such as `;` cannot be used in the query. If you use an illegal character, you will get an error message "Command not supported as typed."
@@ -125,15 +159,18 @@ While we have the full spectrum of Drush core already available for your use, yo
 
 1. Put the site in Git mode.
 1. Clone locally.
-1. Create a Drush folder in the Drupal root.
+1. Create a `drush` folder in the Drupal root.
 1. Add the “sar” Drush command to the Drush folder.
 1. Commit drush/sar.
 1. Push your code up to Pantheon.
 1. Clear your Drush cache on each environment. Example:
 
- ```
- drush @pantheon.SITENAME.dev cc drush
- ```
+   ```bash
+   drush @pantheon.SITENAME.dev cc drush
+   ```
+
+For Drupal 9, place Drush commands in `drush/Commands`.
+
 
 ## Drush Alias Strict Control
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
@@ -148,6 +185,7 @@ function policy_drush_sitealias_alter(&$alias_record) {
   }
 }
 ```
+
 Replace `SITENAME` with your Pantheon site name, and `example.com` with the correct URI for that site.
 
 
@@ -155,7 +193,7 @@ Replace `SITENAME` with your Pantheon site name, and `example.com` with the corr
 
 ### Reading the Pantheon Environment from Drush
 
-Since Drush does not run via the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, please see our documentation on [using the `$_SERVER` superglobal in custom code](/read-environment-config/#using-$_server).
+Since Drush does not run via the web server, reliance on the `$_SERVER` superglobal is problematic as some of the contents of that array will be missing, `['PANTHEON_ENVIRONMENT']` in particular. Drush commands and policy files should instead reference `$_ENV` when reading Pantheon environment information. For more information, please see our documentation on [using the `$_SERVER` superglobal in custom code](/read-environment-config/#using-_server).
 
 ### Terminus Drush Silent Failure
 The following silent failure occurs when executing `terminus drush` commands on environments that use redirect logic without checking to see if Drupal is running via the command line:
@@ -165,7 +203,7 @@ The following silent failure occurs when executing `terminus drush` commands on 
 [error]
 ```
 
-Redirects kill the PHP process before Drush is executed. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
+Redirects kill the PHP process before Drush execution is complete. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `settings.php`:
 
 ```php
 // Require HTTPS, www.
@@ -187,8 +225,8 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
 
 Some Drush 5 commands need to be executed from outside the context of a local Drupal installation, due to a [known issue with Drush 5](https://github.com/drush-ops/drush/issues/313). The output from a Drush 5 command run in this context looks like the following:
 
-```
-$ drush @pantheon.SITENAME.ENV status
+```bash
+drush @pantheon.SITENAME.ENV status
  PHP configuration : /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/php53.in
                         i
                         /srv/bindings/754cbef0a7b54a07ab07167ef8de7377/php53.in
@@ -200,19 +238,19 @@ $ drush @pantheon.SITENAME.ENV status
 
 To make your Drush 5 commands work on Pantheon aliases, change your directory to a context outside of a working local Drupal installation:
 
-```
-$ pwd
+```bash
+pwd
 /Users/USERNAME/Sites/SITENAME
 
 
-$ cd ..
+cd ..
 
 
-$ pwd
+pwd
 /Users/USERNAME/Sites/
 
 
-$ drush @pantheon.SITENAME.ENV status
+drush @pantheon.SITENAME.ENV status
  Drupal version : 7.26
  Site URI : ENV-SITENAME.pantheonsite.io
  Database driver : mysql
@@ -242,14 +280,16 @@ $ drush @pantheon.SITENAME.ENV status
 
 ### Drush Error: "Unknown option: --db-url"
 
-```
-$ drush @pantheon.SITENAME.ENV cc all
+```bash
+drush @pantheon.SITENAME.ENV cc all
 Unknown option: --db-url. See `drush help cache-clear` for available [error]
 options. To suppress this error, add the option --strict=0.
 ```
+
 To resolve this error, follow the suggestion and add the option `--strict=0`:
-```
-$ drush @pantheon.SITENAME.ENV cc all --strict=0
+
+```bash
+drush @pantheon.SITENAME.ENV cc all --strict=0
 'all' cache was cleared in [success]
 /srv/bindings/BINDINGID/code#ENV-SITENAME.pantheonsite.io
 ```
@@ -282,8 +322,8 @@ terminus env:wake SITENAME.ENV
 
 Some ISPs have issues resolving a drush.in hostname; if you're having trouble connecting to a drush.in hostname, you can use the `dig` command to investigate further.
 
-```
-$ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
+```bash
+dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; Truncated, retrying in TCP mode.
 
 
@@ -306,8 +346,8 @@ $ dig appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 
 As you can see in the output above, the status REFUSED suggests improper resolution. The next step is to run `dig` with a specified DNS server. We recommend using Google's DNS (8.8.8.8):
 
-```
-$ dig @8.8.8.8 appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
+```bash
+dig @8.8.8.8 appserver.live.38f2bd91-0000-46cb-9278-0000000000000.drush.in
 ;; Truncated, retrying in TCP mode.
 
 
@@ -366,7 +406,7 @@ This indicates that the vendor directory contains Drush binaries that should be 
  ```
  To resolve this error, conditionally set `$uri` based on the environment in `drushrc.php`, such as:
 
- ```
+ ```php
    if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
      ($_ENV['PANTHEON_ENVIRONMENT'] === 'live')) {
        $uri = 'https://www.example.com';
