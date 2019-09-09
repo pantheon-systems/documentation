@@ -25,7 +25,7 @@ If you redirect a request that contains `utm_` parameters, Pantheon's edge shoul
 You can see this for yourself by testing how Pantheon's own public facing website behaves. Try requesting the homepage over http with a `utm_campaign` parameter:
 
 ```
-curl -I https://pantheon.io/?utm_campaign=documentation_example
+curl -I http://pantheon.io/?utm_campaign=documentation_example
 HTTP/1.1 301 Moved Permanently
 Cache-Control: max-age=3600
 Content-Type: text/html
