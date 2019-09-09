@@ -83,7 +83,6 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 1.  Delete the following directories:
     - `scripts/github`
     - `scripts/gitlab`
-    - `.circleci`
     - `tests`
 
 1.  Modify `composer.json`:
