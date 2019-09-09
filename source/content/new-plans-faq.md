@@ -91,7 +91,7 @@ No action is required. Existing sites will automatically switch to the equivalen
 
 <TabList>
 
-<Tab title="Presonal" id="personal" active={true}>
+<Tab title="Personal" id="personal" active={true}>
 
 |                        | Personal (Legacy) | Basic (New)  |
 | ---------------------- | ----------------- | ------------ |
