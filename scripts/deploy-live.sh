@@ -7,31 +7,19 @@
 #=====================================================#
 
 
-# Migrate paginated files to avoid .html within the URLs
-##for file in output_prod/docs/changelog/page/*html
-#do
-#  name="$(basename "$file" .html)"
-#  mkdir -p output_prod/docs/changelog/page/"$name"
-#  mv "$file" "output_prod/docs/changelog/page/"$name"/index.html"
-#done
-## Don't index changelog backscroll
-#for file in output_prod/docs/changelog/page/*/index.html
-#do
-#  sed -i '61i\'"        <meta name=\"robots\" content=\"noindex\">"'\' $file
-#done
 
 #===============================================================#
 # Authenticate Terminus  and create json dump of help output    #
 #===============================================================#
-#~/.composer/vendor/pantheon-systems/terminus/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
-#~/.composer/vendor/pantheon-systems/terminus/bin/terminus list --format=json > ~/build/output_prod/docs/assets/terminus/commands.json
+terminus auth:login --machine-token $PANTHEON_TOKEN
+#terminus list --format=json > ~/gatsby/public/assets/terminus/commands.json
 #curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > ~/build/output_prod/docs/assets/terminus/releases.json
 
 #===============================================================#
 # Deploy modified files to production                           #
 #===============================================================#
 touch ./deployment-log.txt
-rsync --checksum --delete-after -rlzq --ipv4 --info=BACKUP,DEL --log-file=./deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
+rsync --delete-after -chrlz --ipv4 --info=BACKUP,DEL --log-file=./deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     printf "\n Displaying adjusted Rsync log: \n\n"
@@ -49,7 +37,7 @@ fi
 # Delete Multidev environment from static-docs site   #
 #=====================================================#
 # Identify existing environments for the static-docs site
-~/.composer/vendor/pantheon-systems/terminus/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
+terminus env:list --format list --field=ID static-docs > ./env_list.txt
 echo "Existing environments:" && cat env_list.txt
 # Create array of existing environments on Static Docs
 getExistingTerminusEnvs() {
@@ -84,7 +72,7 @@ getMergedBranchMultidevName "merged-branches-clean.txt"
 merged_branch=" ${merged_branch_multidev_names[*]} "
 for env in ${existing_terminus_envs[@]}; do
   if [[ $merged_branch =~ " $env " ]] && [ "$env" != "terminusma" ] ; then
-    ~/.composer/vendor/pantheon-systems/terminus/bin/terminus multidev:delete static-docs.$env --delete-branch --yes
+    terminus multidev:delete static-docs.$env --delete-branch --yes
   fi
 done
 

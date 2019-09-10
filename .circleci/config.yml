@@ -9,8 +9,7 @@ jobs:
       - restore_cache:
           keys:
             - v2.2-always-
-            - npm-v2.2-{{ checksum "gatsby/package-lock.json" }}
-            - composer-v2.2-{{ checksum "~/.composer/composer.lock" }}
+            - npm-v2.3-{{ checksum "gatsby/package-lock.json" }}
       - run:
           name: Install rsync
           command: |
@@ -47,13 +46,10 @@ jobs:
           command: |
             bash ./scripts/deploy-multidev.sh
       - save_cache:
-          key: npm-v2.2-{{ checksum "gatsby/package-lock.json" }}
+          key: npm-v2.3-{{ checksum "gatsby/package-lock.json" }}
           paths:
+            - ~/build/gatsby/package-lock.json
             - ~/build/gatsby/node_modules
-      - save_cache:
-          key: composer-v2.2-{{ checksum "~/.composer/composer.lock" }}
-          paths:
-            - ~/.composer/cache
       - save_cache:
           key: v2.2-always-{{ epoch }}
           paths:
