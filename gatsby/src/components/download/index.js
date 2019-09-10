@@ -2,29 +2,30 @@ import React from "react"
 import './style.css';
 
 const Download = ({ file }) => {
-  const downloadPath = `https://raw.githubusercontent.com/pantheon-systems/documentation/master/source/scripts/${file}`
+  const downloadPath = `/docs/scripts/${file}`
   return (
-    <div
-      className="script-file-header"
-    >
-      {file}
-      <a href={downloadPath}
-        download
-        download={file}
-        target="_blank"
+    <>
+      <div
+        className="script-file-header"
       >
-        <button
-          className="btn btn-default btn-download"
+        {file}
+
+        <a href={downloadPath}
+          download={file}
         >
-          <i
-            className="fa fa-code"
-            aria-hidden="true"
+          <button
+            className="btn btn-default btn-download"
           >
-          </i>
-          &nbsp; View Raw
-        </button>
-      </a>
-    </div>
+            <i
+              className="fa fa-download"
+              aria-hidden="true"
+            >
+            </i>
+            {` Download File`}
+          </button>
+        </a>
+      </div>
+    </>
   )
 }
 
