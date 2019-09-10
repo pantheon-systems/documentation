@@ -12,12 +12,18 @@ jobs:
             - npm-v2.2-{{ checksum "gatsby/package-lock.json" }}
             - composer-v2.2-{{ checksum "~/.composer/composer.lock" }}
       - run:
-          name: Prep Environment
+          name: Install rsync
           command: |
             sudo apt install -y rsync
+      - run:
+          name: Install Terminus
+          command: |
             cd ~/
             curl -O https://raw.githubusercontent.com/alexfornuto/terminus-installer/master/installer.php
             php installer.php
+      - run:
+          name: Install Gatsby
+          command: |
             cd ~/build/gatsby
             sudo npm install -g gatsby
             npm install
