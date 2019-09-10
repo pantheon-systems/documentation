@@ -14,8 +14,10 @@ jobs:
       - run:
           name: Prep Environment
           command: |
-            sudo apt install -y rsync 
-            composer global require pantheon-systems/terminus
+            sudo apt install -y rsync
+            cd ~/
+            curl -O https://raw.githubusercontent.com/alexfornuto/terminus-installer/master/installer.php
+            php installer.php
             cd ~/build/gatsby
             sudo npm install -g gatsby
             npm install
