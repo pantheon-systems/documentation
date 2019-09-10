@@ -30,41 +30,42 @@ const Commands = ({ data }) => {
           </div>
         </div>
       </div>
-
-      <table className="table table-commands table-responsive table-bordered table-striped">
-        <thead>
-          <tr>
-            <th>Command</th>
-            <th>Usage</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data.dataJson.commands
-            .filter(command => {
-              return command.name.indexOf(search) >= 0
-            })
-            .map((command, i) => {
-              return (
-                <tr key={i}>
-                  <td>
-                    <strong className="command-name">{command.name}</strong>
-                    <br />
-                    <small>{command.description}</small>
-                  </td>
-                  <td>
-                    <li className="terminus-usage">
-                      <span style={{ whiteSpace: "pre-line" }}>
-                        <small />
-                        <br />
-                        <small>{command.usage[0]}</small>
-                      </span>
-                    </li>
-                  </td>
-                </tr>
-              )
-            })}
-        </tbody>
-      </table>
+      <div className="table-responsive">
+        <table className="table table-commands table-bordered table-striped">
+          <thead>
+            <tr>
+              <th width="60%">Command</th>
+              <th>Usage</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.dataJson.commands
+              .filter(command => {
+                return command.name.indexOf(search) >= 0
+              })
+              .map((command, i) => {
+                return (
+                  <tr key={i}>
+                    <td>
+                      <strong className="command-name">{command.name}</strong>
+                      <br />
+                      <small>{command.description}</small>
+                    </td>
+                    <td>
+                      <li className="terminus-usage">
+                        <span style={{ whiteSpace: "pre-line" }}>
+                          <small />
+                          <br />
+                          <small>{command.usage[0]}</small>
+                        </span>
+                      </li>
+                    </td>
+                  </tr>
+                )
+              })}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }
