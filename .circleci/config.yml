@@ -9,7 +9,7 @@ jobs:
       - restore_cache:
           keys:
             - v2.2-always-
-            - npm-v2.3-{{ checksum "gatsby/package-lock.json" }}
+            - npm-v2.4-{{ checksum "gatsby/package-lock.json" }}
       - run:
           name: Install rsync
           command: |
@@ -24,7 +24,6 @@ jobs:
           name: Install Gatsby
           command: |
             cd ~/build/gatsby
-            sudo npm install -g gatsby
             npm install
       - run:
           name: Import GitHub Token
@@ -36,7 +35,7 @@ jobs:
           name: Gatsby Build
           command: |
             cd ~/build/gatsby
-            gatsby build --prefix-paths
+            ./node_modules/gatsby/node_modules/.bin/gatsby build --prefix-paths
       - run:
           name: Remove empty directories
           command: |
@@ -46,7 +45,7 @@ jobs:
           command: |
             bash ./scripts/deploy-multidev.sh
       - save_cache:
-          key: npm-v2.3-{{ checksum "gatsby/package-lock.json" }}
+          key: npm-v2.4-{{ checksum "gatsby/package-lock.json" }}
           paths:
             - ~/build/gatsby/package-lock.json
             - ~/build/gatsby/node_modules
