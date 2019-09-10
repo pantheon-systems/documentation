@@ -46,44 +46,6 @@ jobs:
           name: Deploy Multidev environment
           command: |
             bash ./scripts/deploy-multidev.sh
-#      - run:
-#          name: Start Ghost Driver
-#          command: phantomjs --webdriver=8643
-#          background: true
-#      - run:
-#          name: Start Gatsby
-#          command: |
-#            cd ~/build/gatsby
-#            gatsby serve --prefix-paths
-#          background: true
-#      - run:
-#          name: Wait for Gatsby
-#          command: dockerize -wait tcp://localhost:9000 -timeout 1m
-#      - run:
-#          name: Behat
-#          command: |
-#            cd ~/build
-#            npm install
-#            ~/build/bin/behat
-#      - run:
-#          name: a11y
-#          command: |
-#            /documentation/node_modules/.bin/grunt test
-#      - run:
-#          name: Merge Conflicts
-#          command: |
-#            scripts/merge_conflicts.sh
-#      - run:
-#          name: htmlProofer
-#          command: |
-#            htmlproofer --assume-extension  ./output_prod/ --disable-external true
-#      - run:
-#          name: Speedtest
-#          command: |
-#            echo
-#            # Run sitespeed.io performance testing.
-#            mkdir ~/build/artifacts
-#            bash scripts/run-sitespeed-test.sh
       - save_cache:
           key: npm-v2.2-{{ checksum "gatsby/package-lock.json" }}
           paths:
@@ -97,9 +59,6 @@ jobs:
           paths:
             - ~/build/gatsby/public
             - ~/build/gatsby/.cache
-#      - store_artifacts:
-#          path: ~/build/sitespeed-result
-
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
