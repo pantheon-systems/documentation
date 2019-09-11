@@ -12,7 +12,7 @@ There are three basic kinds of PHP errors:
 
 For more in-depth information, see [Error Handling and Logging](https://secure.php.net/manual/en/book.errorfunc.php).
 
-Each of the PHP errors are handled differently depending on the site environment. On Dev, they are shown directly to the user in the browser. On Test and Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if `db\_log` is enabled for Drupal. The PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled for WordPress to save errors to wp-content/debug.log. PHP errors are also logged on the application container at `logs/php-error.log`.
+Each of the PHP errors are handled differently depending on the site environment. On Dev, they are shown directly to the user in the browser. On Test and Live, PHP errors are not displayed to users, but they'll still be logged. Notices and warnings are logged in the database logs if `db_log` is enabled for Drupal. The PHP constants `WP_DEBUG` and `WP_DEBUG_LOG` can be enabled for WordPress to save errors to wp-content/debug.log. PHP errors are also logged on the application container at `logs/php-error.log`.
 
 Here's a breakdown of what errors are shown and where:
 
