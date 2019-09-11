@@ -43,7 +43,7 @@ Copy the following script to quickly pull a site's nginx log file and create an 
 
 <Download file="access_getlogs.sh" />
 
-GITHUB-EMBED https://github.com/pantheon-systems/documentation/tree/master/source/scripts/access_getlogs.sh bash GITHUB-EMBED
+GITHUB-EMBED https://github.com/pantheon-systems/documentation/tree/master/source/scripts/access_getlogs.sh.txt bash GITHUB-EMBED
 
 Make the script executable:
 

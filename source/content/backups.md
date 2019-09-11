@@ -62,7 +62,7 @@ Backups created on Pantheon are stored offsite on Google Cloud Storage instances
 
 <Download file="pantheon-backup-to-s3.sh" />
 
-GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/master/source/scripts/pantheon-backup-to-s3.sh bash GITHUB-EMBED
+GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/master/source/scripts/pantheon-backup-to-s3.sh.txt bash GITHUB-EMBED
 
 ### Via the Dashboard
 
