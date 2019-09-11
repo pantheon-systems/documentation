@@ -29,64 +29,64 @@ Here's a breakdown of what errors are shown and where:
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Dev</td>
 			<td align="left">notice</td>
-			<td align="left">**✓**</td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left">**✓**</td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left" style="border-bottom:1px solid black;">error</td>
-			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
-			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
+			<td align="left" style="border-bottom:1px solid black;"><span style="color:green">✔</span></td>
+			<td align="left" style="border-bottom:1px solid black;"> <span style="color:red">❌</span> </td>
+			<td align="left" style="border-bottom:1px solid black;"><span style="color:green">✔</span></td>
 		</tr>
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Test</td>
 			<td align="left">notice</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left" style="border-bottom:1px solid black;">error</td>
-			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
+			<td align="left" style="border-bottom:1px solid black;"> <span style="color:red">❌</span> </td>
+			<td align="left" style="border-bottom:1px solid black;"> <span style="color:red">❌</span> </td>
+			<td align="left" style="border-bottom:1px solid black;"><span style="color:green">✔</span></td>
 		</tr>
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle;">Live</td>
 			<td align="left">notice</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left">error</td>
-			<td align="left"> </td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
 		</tr>
 	</tbody>
 </table>
 
-To learn more about PHP error logs, see [Log Files on Pantheon](/logs).
+To learn more about PHP error logs, see [Log Files on Pantheon](/logs/).
 
 ## Performance Hits
 
@@ -154,4 +154,4 @@ To fix this error, look for the correct path to the file and update the require\
 
 ## Intermittent Notices
 
-If you are encountering intermittent notices that are not behaving as described on this page, see [Debug Intermittent PHP 7 Notices](/deprecated-constructor-notices) for additional information. This is not common.
+If you are encountering intermittent notices that are not behaving as described on this page, see [Debug Intermittent PHP 7 Notices](/deprecated-constructor-notices/) for additional information. This is not common.
