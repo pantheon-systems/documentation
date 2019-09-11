@@ -29,59 +29,59 @@ Here's a breakdown of what errors are shown and where:
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Dev</td>
 			<td align="left">notice</td>
-			<td align="left">**✓**</td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left">**✓**</td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left" style="border-bottom:1px solid black;">error</td>
-			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
-			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
+			<td align="left" style="border-bottom:1px solid black;"><span style="color:green">✔</span></td>
+			<td align="left" style="border-bottom:1px solid black;"> <span style="color:red">❌</span> </td>
+			<td align="left" style="border-bottom:1px solid black;"><span style="color:green">✔</span></td>
 		</tr>
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle; border-bottom:1px solid black">Test</td>
 			<td align="left">notice</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left" style="border-bottom:1px solid black;">error</td>
-			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;"> </td>
-			<td align="left" style="border-bottom:1px solid black;">**✓**</td>
+			<td align="left" style="border-bottom:1px solid black;"> <span style="color:red">❌</span> </td>
+			<td align="left" style="border-bottom:1px solid black;"> <span style="color:red">❌</span> </td>
+			<td align="left" style="border-bottom:1px solid black;"><span style="color:green">✔</span></td>
 		</tr>
 		<tr>
 			<td align="left" rowspan="3" style="vertical-align:middle;">Live</td>
 			<td align="left">notice</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left">warning</td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
-			<td align="left"> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
+			<td align="left"> <span style="color:red">❌</span> </td>
 		</tr>
 		<tr>
 			<td align="left">error</td>
-			<td align="left"> </td>
-			<td align="left"> </td>
-			<td align="left">**✓**</td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"> <span style="color:red">❌</span> </td>
+			<td align="left"><span style="color:green">✔</span></td>
 		</tr>
 	</tbody>
 </table>
