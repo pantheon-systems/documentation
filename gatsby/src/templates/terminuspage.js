@@ -14,6 +14,7 @@ import Popover from "../components/popover"
 import TabList from "../components/tabList"
 import Tab from "../components/tab"
 import TOC from "../components/toc"
+import GetFeedback from "../components/getFeedback"
 import Card from "../components/card"
 import CardGroup from "../components/cardGroup"
 import Navbar from "../components/navbar"
@@ -160,6 +161,10 @@ class TerminusTemplate extends React.Component {
             </div>
           </div>
         </div>
+        <GetFeedback
+            formId="tfYOGoE7"
+            page={"/" + node.fields.slug}
+          />
       </Layout>
     )
   }

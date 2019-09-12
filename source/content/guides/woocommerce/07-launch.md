@@ -17,6 +17,7 @@ previouspage: Continue Development
 editpath: woocommerce/07-launch.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 survey: true
+getfeedbackform: default
 ---
 In order to launch your store and add a custom domain you'll need a paid [Pantheon Plan](/site-plan/). Once you have upgraded to a paid Pantheon plan you can follow these instructions to [point your DNS and launch](/guides/launch/).
 

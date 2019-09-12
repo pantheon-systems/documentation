@@ -2,22 +2,28 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:10.16.0-browsers-legacy
+      - image: circleci/php:7.2-cli-node-browsers
     working_directory: ~/build
     steps:
       - checkout
       - restore_cache:
           keys:
             - v2.2-always-
-            - npm-v2.2-{{ checksum "gatsby/package-lock.json" }}
-            - composer-v2.2-{{ checksum "~/.composer/composer.lock" }}
+            - npm-v2.4-{{ checksum "gatsby/package-lock.json" }}
       - run:
-          name: Prep Environment
+          name: Install rsync
           command: |
-            sudo apt install -y rsync composer php-xml
-            composer global require pantheon-systems/terminus
+            sudo apt install -y rsync
+      - run:
+          name: Install Terminus
+          command: |
+            cd ~/
+            curl -O https://raw.githubusercontent.com/alexfornuto/terminus-installer/master/installer.php
+            php installer.php
+      - run:
+          name: Install Gatsby
+          command: |
             cd ~/build/gatsby
-            sudo npm install -g gatsby
             npm install
       - run:
           name: Import GitHub Token
@@ -29,7 +35,7 @@ jobs:
           name: Gatsby Build
           command: |
             cd ~/build/gatsby
-            gatsby build --prefix-paths
+            ./node_modules/gatsby/node_modules/.bin/gatsby build --prefix-paths
       - run:
           name: Remove empty directories
           command: |
@@ -38,60 +44,16 @@ jobs:
           name: Deploy Multidev environment
           command: |
             bash ./scripts/deploy-multidev.sh
-#      - run:
-#          name: Start Ghost Driver
-#          command: phantomjs --webdriver=8643
-#          background: true
-#      - run:
-#          name: Start Gatsby
-#          command: |
-#            cd ~/build/gatsby
-#            gatsby serve --prefix-paths
-#          background: true
-#      - run:
-#          name: Wait for Gatsby
-#          command: dockerize -wait tcp://localhost:9000 -timeout 1m
-#      - run:
-#          name: Behat
-#          command: |
-#            cd ~/build
-#            npm install
-#            ~/build/bin/behat
-#      - run:
-#          name: a11y
-#          command: |
-#            /documentation/node_modules/.bin/grunt test
-#      - run:
-#          name: Merge Conflicts
-#          command: |
-#            scripts/merge_conflicts.sh
-#      - run:
-#          name: htmlProofer
-#          command: |
-#            htmlproofer --assume-extension  ./output_prod/ --disable-external true
-#      - run:
-#          name: Speedtest
-#          command: |
-#            echo
-#            # Run sitespeed.io performance testing.
-#            mkdir ~/build/artifacts
-#            bash scripts/run-sitespeed-test.sh
       - save_cache:
-          key: npm-v2.2-{{ checksum "gatsby/package-lock.json" }}
+          key: npm-v2.4-{{ checksum "gatsby/package-lock.json" }}
           paths:
+            - ~/build/gatsby/package-lock.json
             - ~/build/gatsby/node_modules
-      - save_cache:
-          key: composer-v2.2-{{ checksum "~/.composer/composer.lock" }}
-          paths:
-            - ~/.composer/cache
       - save_cache:
           key: v2.2-always-{{ epoch }}
           paths:
             - ~/build/gatsby/public
             - ~/build/gatsby/.cache
-#      - store_artifacts:
-#          path: ~/build/sitespeed-result
-
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then

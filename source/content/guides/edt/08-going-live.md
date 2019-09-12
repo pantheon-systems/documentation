@@ -16,6 +16,7 @@ previousurl: guides/edt/performance/
 previouspage: Performance
 editpath: edt/08-going-live.md
 image: launchGuide-twitterLarge
+getfeedbackform: default
 ---
 
 In this lesson, we’re going to dive into launching your site on Pantheon.

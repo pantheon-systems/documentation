@@ -92,17 +92,10 @@ class DocTemplate extends React.Component {
             </div>
           </div>
         </div>
-        {node.frontmatter.getfeedbackform && (
           <GetFeedback
-            formId={
-              node.frontmatter.getfeedbackform === "default"
-                ? "12z1fMzn"
-                : node.frontmatter.getfeedbackform
-            }
+            formId="tfYOGoE7"
             page={"/" + node.fields.slug}
-            topic="addons"
           />
-        )}
       </Layout>
     )
   }
