@@ -15,6 +15,7 @@ permalink: docs/guides/multisite/debug/
 previousurl: guides/multisite/workflows/
 editpath: multisite/05-debug.md
 image: multisite
+getfeedbackform: default
 ---
 ## WP-CLI Tips and Tricks
 ### Managing Site Networks

@@ -16,6 +16,7 @@ permalink: docs/guides/wordpress-git/next-steps/
 previousurl: guides/wordpress-git/media/
 editpath: wordpress-git/06-next-steps.md
 image: git-sftp-wp-docs-guide
+getfeedbackform: default
 ---
 
 ## Deploy Code from Dev

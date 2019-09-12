@@ -17,6 +17,7 @@ previousurl: guides/launch/launch-check/
 previouspage: Final Launch Check
 editpath: launch/07-next-steps.md
 image: getting-started-Largethumb
+getfeedbackform: default
 ---
 Congrats!! You just launched a site on Pantheon. This is a big deal. Revel in your glory.
 

@@ -16,6 +16,7 @@ permalink: docs/guides/build-tools/update/
 previousurl: guides/build-tools/custom-theme/
 editpath: build-tools/09-update.md
 image: buildToolsGuide-thumb
+getfeedbackform: default
 ---
 In this lesson, we'll take a closer look at how to update dependencies in a Composer workflow.
 
