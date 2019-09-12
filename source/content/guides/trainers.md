@@ -1,6 +1,6 @@
 ---
 title: Using Pantheon as a Training Platform for WordPress and Drupal
-description: Best practices for training a group of student using Pantheon
+description: Best practices for training a group of students using Pantheon
 layout: doc
 permalink: docs/guides/:basename/
 tags: [moreguides]
