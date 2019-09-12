@@ -2,7 +2,7 @@ import React from "react"
 import './style.css';
 
 const Download = ({ file }) => {
-  const downloadPath = `/docs/scripts/${file}`
+  const downloadPath = `/docs/scripts/${file}.txt`
   return (
     <>
       <div
