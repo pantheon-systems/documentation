@@ -13,7 +13,7 @@ In this guide, you'll learn how to use Composer in small doses with WordPress an
 - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and [Git](https://git-scm.com/downloads) locally
 - Create a WordPress or Drupal 7 site on Pantheon
 
-  
+
 <Partial file="notes/partial-composer-adoption-warning.md" />
 
 
@@ -132,6 +132,8 @@ Anything you aren't managing with Composer is installed and maintained using the
 ## Require Dependencies
 Use the `require` command to add new dependencies to your project, such as libraries or themes. This command modifies your `composer.json` file by including the specified dependency and it's compatible version.
 
+Note that Panthen **does not** run `composer install` on the platform, so you need to install and commit the dependencies.
+
 <TabList>
 
 <Tab title="WordPress" id="wp-require-papc-id" active={true}>
@@ -148,7 +150,7 @@ Use the `require` command to add new dependencies to your project, such as libra
 
     Notice a missing dependency was also installed, `composer/installers`. This is package is needed to support the installation paths configured in the previous section.
 
-    If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing.
+    If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing. Note that you **do** need to track and commit the installed dependencies.
   3. Commit your work to version control with Git:
 
     ```bash
@@ -188,7 +190,7 @@ Use the `require` command to add new dependencies to your project, such as libra
 
     ![Require drupal/pantheon_advanced_page_cache output](../../images/guides/partial-composer/require-drush.png)
 
-    If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing.
+    If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing. Note that you **do** need to track and commit the installed dependencies.
   4. Commit your work to version control with Git:
 
     ```bash
