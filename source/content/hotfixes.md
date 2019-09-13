@@ -68,13 +68,19 @@ You are now ready to start work based on the state of the live site.
 
 ## Generate a New Hotfix Test Tag
 
-Make your hotfixes and commit them locally, then tag and push them to test by creating a _new_ test tag with a higher number value:
+Make your hotfixes and commit them locally. Once you're done, find out the latest tag deployed to test:
+
+ ```
+ git tag | grep pantheon_test_ | sort -k1.15n | tail -1
+ ```
+ 
+Then tag and push them to test by creating a _new_ test tag with a higher number value:
 
     git tag -a pantheon_test_5 -m "Preparing a hotfix"
     git push origin pantheon_test_5
 
 <Alert title="Note" type="info">
-Your tag numbers will vary. We are showing 5 because in the list of tags above the highest number was 4. Be sure you have the right number before pushing.
+Your tag numbers will vary. We are showing 5 because in the list of tags above the highest number was 4. Be sure you have the right number before pushing. The commands above should tell you the appropriate tag number.
 </Alert>
 
 ## Test and Deploy
