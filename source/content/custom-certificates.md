@@ -138,7 +138,6 @@ For the broadest client compatibility we recommend limiting the number of Subjec
 
 Private keys are just that, private, and not available for export. They are stored securely, server side, and it’s a security best practice to not share private keys among different deployments. If you manage multiple domains, with some on Pantheon, and some outside of Pantheon, then we recommend using separate certificates, and we are happy to provide you with a new Certificate Signing Request (CSR) so we can deploy a certificate on Pantheon that only has the domains served on Pantheon.
 
-
 ### What are the Global CDN IP addresses?
 
 The Global CDN currently has 4 offsets. After certificate deployment, we will provide DNS information so you can upgrade. In the examples below, `X` will be replaced with a value of `1`, `2`, `3`, or `4`:
@@ -150,7 +149,7 @@ AAAA record 2:  `2620:12a:8001::X`
 **Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
 
 ### What if my DNS manager doesn't support CAA DNS records?
-As [discussed above](#disable-lets-encrypt-with-caa-records-required), an empty CAA policy will suffice if you can't create one specifically disabling Let's Encrypt.  If your CA does not support CAA records at all, Let's Encrypt **will** provision a certificated for the site.  Professional Services can help.  Please inform your Engagement Manager if this is an issue.
+As [discussed above](#disable-lets-encrypt-with-caa-records-required), an empty CAA policy will suffice if you can't create one specifically disabling Let's Encrypt. If your CA does not support CAA records at all, Let's Encrypt *will* provision a certificate for the site. Please inform your Engagement Manager if this is an issue, as our [Professional Services](/professional-services) team can help.
 
 ## Caveats / Known Issues
 
