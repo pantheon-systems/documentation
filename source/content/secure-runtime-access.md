@@ -17,10 +17,10 @@ In addition to defense in depth, this feature can be used to enforce roles and p
 
 Secure Runtime Access is available to customers with an [Organizational](/organizations/) dashboard. [Contact Support](/support/) to request that SRA be enabled for your Site. Once it's enabled:
 
-1. Navigate to your Site’s Dashboard and click **Settings**
+1. Navigate to your Site’s Dashboard and click **Settings**.
    Secure Runtime Access will appear under **Available Add-Ons**.
-1. In the Add Ons tab, click **Secure Runtime Access Enabled**
-1. Click **Save Secure Runtime Access** to enable SRA for that site
+1. In the Add Ons tab, click **Secure Runtime Access Enabled**.
+1. Click **Save Secure Runtime Access** to enable SRA for that site.
    * Repeat this process for each site for which you want SRA enabled.
 
 ## How to Access Runtime Services when SRA is Enabled
