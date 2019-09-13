@@ -160,6 +160,12 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
       $settings['cache']['bins']['form']      = 'cache.backend.database';
     }
     ```
+    <Alert title="Note" type="info">
+
+    The above Redis cache configuration should be placed in `sites/default/settings.php` rather than `settings.pantheon.php` due to the likelyhood of causing Git conflicts in the future.
+
+    </Alert>    
+    
 4. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
 
 </Tab>
