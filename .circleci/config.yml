@@ -41,6 +41,10 @@ jobs:
           command: |
             find ~/build/gatsby/public -type d -empty -delete
       - run:
+          name: Check for merge conflicts
+          command: |
+            scripts/merge_conflicts.sh
+      - run:
           name: Deploy Multidev environment
           command: |
             bash ./scripts/deploy-multidev.sh
