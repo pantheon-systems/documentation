@@ -34,17 +34,20 @@ sftp> exit
 
 There are several different tools you can use to analyze a MySQL slow log:
 
-- [Percona Toolkit](https://www.percona.com/doc/percona-toolkit/3.0/index.html)<br />
-Recommended. Actively maintained and includes a number of database utilities, including a slow query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html). 
-- [MySQL Slow Query Log Filter](https://code.google.com/p/mysql-log-filter/)<br />
-Not updated since 2007. Still useful, but this will throw warnings with newer versions of PHP.
+- [Percona Toolkit](https://www.percona.com/doc/percona-toolkit/3.0/index.html)
+
+  Recommended. Actively maintained and includes a number of database utilities, including a slow query log analyzer, [pt-query-digest](https://www.percona.com/doc/percona-toolkit/3.0/pt-query-digest.html). 
+
+- [MySQL Slow Query Log Filter](https://code.google.com/p/mysql-log-filter/)
+
+  Not updated since 2007. Still useful, but this will throw warnings with newer versions of PHP.
 
 These tools provide summaries of the most commonly called, poor performing, SQL queries called by your website without manually going through the MySQL slow log. Refer to the documentation for the particulars of each of these programs. 
 
 ### Percona Toolkit's pt-query-digest
 In the example below, we generate a report using `pt-query-digest` from a MySQL slow log file. In this example, we have one query that meets the threshold for reporting as slow: a `SELECT COUNT` query on the node table that returns a total of results from a nested `SELECT` query on the node table. 
 
-```bash
+```sql
 $ pt-query-digest mysqld-slow-query.log
 
 # 530ms user time, 50ms system time, 41.72M rss, 147.91M vsz
@@ -136,8 +139,12 @@ With this output, you can copy the offending query and run it through `EXPLAIN` 
 Here is an example usage of MySQL Slow Query Log Filter, with a minimum execution time of 1 second, sorted by execution count and a no duplicates flag:
 
 ```php
-$ php mysql-log-filter-1.9/mysql_filter_slow_log.php -T=1 --sort-execution-count --no-duplicates mysqld-slow-query.log > site_name_slow_1s_noDupes.txt  
-$ vi site_name_slow_1s_noDupes.txt
+php mysql-log-filter-1.9/mysql_filter_slow_log.php -T=1 --sort-execution-count --no-duplicates mysqld-slow-query.log > site_name_slow_1s_noDupes.txt
+```
+
+Here is the contents of `site_name_slow-1s_noDupes.txt`:
+
+```sql
 # Execution count: 11 times on 1970-01-01 01:00:00.  
 # Column       :     avg |     max |       sum  
 # Query time   :       1 |       1 |        11  
@@ -150,24 +157,26 @@ $ vi site_name_slow_1s_noDupes.txt
 # User@Host: pantheon[pantheon] @  [10.223.192.139]  
 # User@Host: pantheon[pantheon] @  [10.223.192.68]  
 # User@Host: pantheon[pantheon] @  [10.223.192.87]  
-SET timestamp=1418627746;SELECT node.title AS node_title, node.nid AS nid, node_counter.totalcount AS node_counter_totalcount, ga_stats_count_pageviews_today.count AS ga_stats_count_pageviews_today_countFROM node nodeLEFT JOIN node_counter node_counter ON node.nid = node_counter.nidLEFT OUTER JOIN ga_stats_count ga_stats_count_pageviews_today ON node.nid = ga_stats_count_pageviews_today.nid AND (ga_stats_count_pageviews_today.metric='pageviews' AND ga_stats_count_pageviews_today.timeframe='today') WHERE (( (node.status = '1') AND (node.type IN  ('story')) )) ORDER BY ga_stats_count_pageviews_today_count DESC LIMIT 5 OFFSET 0;  
+SET timestamp=1418627746;SELECT node.title AS node_title, node.nid AS nid, node_counter.totalcount AS node_counter_totalcount, ga_stats_count_pageviews_today.count AS ga_stats_count_pageviews_today_countFROM node nodeLEFT JOIN node_counter node_counter ON node.nid = node_counter.nidLEFT OUTER JOIN ga_stats_count ga_stats_count_pageviews_today ON node.nid = ga_stats_count_pageviews_today.nid AND (ga_stats_count_pageviews_today.metric='pageviews' AND ga_stats_count_pageviews_today.timeframe='today') WHERE (( (node.status = '1') AND (node.type IN  ('story')) )) ORDER BY ga_stats_count_pageviews_today_count DESC LIMIT 5 OFFSET 0; 
 ```
 
 This particular query is, at its worst, examining 132,363 records to return 5, while taking a full second to do so. That would make it a fairly good candidate for refactoring, since most sites prefer queries to execute in milliseconds.
 
 ## Look at the slow queries by hour
 
-Another method is to look at slow queries by the hour to see if there are spikes in slow queries that correspond to site traffic patterns.
+Another method is to look at slow queries by the hour to see if there are spikes in slow queries that correspond to site traffic patterns:
 
-    grep Time  endpointas90kkud28a236-slow.log | cut -d: -f1,2 | sort | uniq -c  
+```bash
+grep Time  endpointas90kkud28a236-slow.log | cut -d: -f1,2 | sort | uniq -c  
 
-    70 # Time: 140708 10  
-    71 # Time: 140708 11  
-    49 # Time: 140708 12  
-    77 # Time: 140708 13  
-    77 # Time: 140708 14  
-    35 # Time: 140708 15  
-    76 # Time: 140708 16  
+70 # Time: 140708 10  
+71 # Time: 140708 11  
+49 # Time: 140708 12  
+77 # Time: 140708 13  
+77 # Time: 140708 14  
+35 # Time: 140708 15  
+76 # Time: 140708 16  
+```
 
 This means there were 70 slow queries between 10 and 11AM. That is roughly even distribution, which probably means there are a few slow queries that keep repeating.
 
