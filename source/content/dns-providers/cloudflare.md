@@ -18,14 +18,8 @@ Be sure that you have a:
 
 ## Locate Pantheon's DNS Values
 
-<Alert title="Note" type="info">
-
-The following recommendations differ from those shown in the Site Dashboard. This is because Cloudflare supports **CNAME Flattening**, which prevents association with a single IP address. Ignore the DNS values provided in the Site Dashboard for A/AAAA records.
-
-</Alert>
-
-1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio"></span> Live) then click **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS**.
-2. Click the **DNS Recommendations** button next to the `www` domain and copy the CNAME value (e.g. `live-example.pantheonsite.io`).
+1. Navigate to the Site Dashboard and select the target environment (typically <span class="glyphicons glyphicons-cardio" /> Live) then click **<span class="glyphicons glyphicons-global" /> Domains / HTTPS**.
+2. Click the **DNS Recommendations** button next to the `www` domain and copy the A and AAAA values (e.g. `23.185.0.2`, `2620:12a:8000::2`).
 3. Login to your [Cloudflare account](https://www.cloudflare.com/a/login) in a new tab before you continue.
 
 ## Configure DNS Records on Cloudflare
@@ -35,11 +29,11 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
 ![Example DNS only](../../images/cloudflare-dns-only.png)
 
-1. Select **DNS** from the Cloudflare menu bar.
-2. Select **CNAME** from the dropdown menu.
-3. Enter `www` in the **Name** field and paste the CNAME record value provided by Pantheon (e.g. `live-example.pantheonsite.io`) in the **Domain name** field.
-4. Create a **CNAME** record for the bare domain (e.g. `example.com`) using the value from the previous step (e.g. `live-example.pantheonsite.io`).
-5. Select desired Time to Live (TTL).
+1. Click on **DNS** from the Cloudflare menu bar.
+1. Click **+ Add record**.
+1. Select **A** from the dropdown menu.
+1. Enter `www` in the **Name** field and paste the IP address value provided by Pantheon (e.g. `23.185.0.2`) in the **IPv4** field.
+1. Select a desired Time to Live (TTL).
 
   <Accordion title="Learn More" id="ttl" icon="info-sign">
 
@@ -51,14 +45,16 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
   </Accordion>
 
-6. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
-7. Click **Add Record**.
-8. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Configure Redirects](/redirects/) for more information.
+1. Disable Cloudflare's CDN by clicking the cloud icon (should be gray, not orange).
+1. Click on **Save**.
+1. Cloudflare Page Rules will not work when Cloudflare is used for DNS only. Instead, redirects are handled by adding redirect logic to the WordPress `wp-config.php` file or the Drupal `settings.php` file. See [Configure Redirects](/redirects/) for more information.
+
+Repeat the steps above to create an **A** record for the bare domain, using `@` as the **Name** and the same IP address, then repeat again for the **AAAA** records.
 
 ### Option 2: Use Cloudflare's CDN stacked on top of Pantheon's Global CDN
 You can configure Cloudflare's CDN as an additional layer on Pantheon's Global CDN service:
 
-1. Select **Crypto** from the Cloudflare menu bar and set SSL mode to **Full (Strict)**.
+1. Select **SSL/TLS** from the Cloudflare menu bar and set SSL mode to **Full (Strict)**.
 
   ![Enable SSL](../../images/cloudflare-ssl.png)
 
@@ -72,8 +68,7 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
 1. Proceed with DNS configuration as describe in Option 1, but make sure the cloud is toggled orange, not gray:
 
-   ![Example DNS only](../../images/cloudflare-cnames.png)
-
+   ![Example DNS only](../../images/cloudflare-full.png)
 
 ## CAA Records (Optional)
 
@@ -115,5 +110,5 @@ If you're using Cloudflare's IP Geolocation feature, you will need to read the `
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+- [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
+- [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
