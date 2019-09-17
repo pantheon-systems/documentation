@@ -48,7 +48,9 @@ class Index extends React.Component {
           <Helmet
             title="Pantheon Docs"
             titleTemplate={`%s`}
-          />
+          >
+			<meta name="msvalidate.01" content="9A4A4920CF12D3347BFF74AD7E92D154" />
+		  </Helmet>
 					</div>
 				</div>
 			</Layout>
