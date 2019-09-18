@@ -92,13 +92,15 @@ Pantheon uses the term **primary domain** to refer to a single domain used to se
 Redirecting all traffic to a primary domain is a best practice for SEO since it avoids duplicate content. It also prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time, and it can make it easier to measure and monitor website traffic.
 
 <Alert title="Note" type="info">
+
 Redirects must be managed via PHP, since `.htaccess` is ignored. For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
+
 </Alert>
 
 ### Redirect to HTTPS and the Primary Domain
 It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in [`settings.php`](/settings-php/) or [`wp-config.php`](/wp-config-php/):
 
-{% include("redirects.twig")%}
+<Partial file="_redirects.md" />
 
 For more redirect scenarios, see [Configure Redirects](/redirects).
 
