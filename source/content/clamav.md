@@ -43,12 +43,6 @@ This doc uses the [ClamAV Module for Drupal 7 & 8](https://www.drupal.org/projec
 
 2. From the module's configuration page, ensure that the scan method is set to to daemon mode, with the hostname `localhost` and the port number `3310`:
 
-    <Alert title="Note" type="info">
-
-    You can safely ignore the notice message about `default_executable_version_string`.
-
-    </Alert>
-
     ![ClamAV Module Settings](../images/clamav-settings.png)
 
 When ClamAV detects a virus, it will display a warning:
