@@ -167,7 +167,7 @@ This particular query is, at its worst, examining 132,363 records to return 5, w
 Another method is to look at slow queries by the hour to see if there are spikes in slow queries that correspond to site traffic patterns:
 
 ```bash
-grep Time  endpointas90kkud28a236-slow.log | cut -d: -f1,2 | sort | uniq -c  
+grep Time mysqld-slow.log | cut -d: -f1,2 | sort | uniq -c
 
 70 # Time: 140708 10  
 71 # Time: 140708 11  
@@ -178,7 +178,7 @@ grep Time  endpointas90kkud28a236-slow.log | cut -d: -f1,2 | sort | uniq -c
 76 # Time: 140708 16  
 ```
 
-This means there were 70 slow queries between 10 and 11AM. That is roughly even distribution, which probably means there are a few slow queries that keep repeating.
+This means there were 70 slow queries between 10 and 11AM (UTC). That is roughly even distribution, which probably means there are a few slow queries that keep repeating.
 
 For an in-depth look at finding serious MySQL performance issues using New Relic Pro and MySQL slow logs, see [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic/).
 
