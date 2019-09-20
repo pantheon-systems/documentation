@@ -39,7 +39,7 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
  - [1&1 Domain Configuration](/1-and-1/)
  - [Cloudflare Domain Configuration](/cloudflare/)
- - [DNS Made Easy Domain Configurationi](/dns-made-easy/)
+ - [DNS Made Easy Domain Configuration](/dns-made-easy/)
  - [DreamHost Domain Configuration](/dreamhost/)
  - [Dyn Domain Configuration](/dyn/)
  - [eNom Domain Configuration](/enom/)
@@ -57,4 +57,3 @@ Click [here](/dns/#frequently-asked-questions) to learn more about DNS settings.
 <Partial file="enable-https.md" />
 
 <Partial file="https-requirements.md" />
-
