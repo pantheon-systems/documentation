@@ -146,7 +146,7 @@ To use this Lando recipe you must have:
   lando stop
   ```
 
-1. In your project directory, create a new directory for your WordPress + Pantheon integrated environment.
+1. In your project directory, create a new directory for your WordPress + Pantheon integrated environment, and `cd` to it.
 
 1. Initiate a new lando site, specifying Panthoen as the source:
 
@@ -176,33 +176,44 @@ With your site started, you’ll have your local site URL so you can access it f
 
 ### Pushing and Pulling Your Changes
 
-Certainly, one of the most awesome benefits of using Lando with the Pantheon recipe is the ability to _push_ your changes from your local site to your various Pantheon environments (yes, including live and multi-dev instances).
+Certainly, one of the most awesome benefits of using Lando with the Pantheon recipe is the ability to _push_ your changes from your local site to your various Pantheon environments (including live and multidev instances).
+
 To initiate a push from your local environment simply type `lando push`; conversely, type `lando pull` to perform a pull. Either action will have Lando prompt you for which environments you wish to pull/push your codebase, files, and database from or to.
 
 <Alert type="info" title="Note">
 
-Your _database_ refers to your app's database. Your _code_ refers to your app’s codebase. That is, any files that you would track within your site’s source control repository. Your _media_ refers to assets and files stored within the /uploads folder; generally speaking, it’s a good idea to NOT include your media files in your repository as your repo’s size can get out of hand quickly.
+Your **database** refers to your app's database. Your **code** refers to your app’s codebase. That is, any files that you would track within your site’s source control repository. Your **media** refers to assets and files stored within the /uploads folder; generally speaking, it’s a good idea to NOT include your media files in your repository as your repo’s size can get out of hand quickly.
 
 </Alert>
 
-1. In your terminal, type `lando pull`.
+From your terminal environment:
 
-1. For our purposes, you will choose dev but it’s important to note you CAN pull your files from any Pantheon environment, including multi-dev environments.
+1. Pull changes from Pantheon:
 
-1. For the next prompt, you’ll be asked where or if you want to pull the database. Again, choose _dev_.
+  ```bash
+  lando pull
+  ```
 
-1. In the next prompt, again, choose _dev_ for files.
+1. For our purposes, you will choose **dev** but it’s important to note you *can* pull your files from any Pantheon environment, including multi-dev environments.
 
-Lando also runs a search and replace on the database _siteurl_ and _sitename_ table fields and replaces Pantheon’s values with your local values.
+1. For the next prompt, you’ll be asked where or if you want to pull the database. Again, choose **dev**.
+
+1. In the next prompt, again, choose **dev** for files.
+
+Lando also runs a search and replace on the database **siteurl** and **sitename** table fields and replaces Pantheon’s values with your local values.
 
   <Alert type="info" title="Note">
 
-  Sometimes, it’s just a good do your own search and replace on your local site once a pull has finished. Also, it can be a good idea to run a search replace on a site on Pantheon you pushed to. Here’s how you can do both!
+  Sometimes, it’s a good idea to do your own search and replace on your local site once a pull has finished. Also, it can be a good idea to run a search replace on a site on Pantheon you pushed to. Here’s how you can do both!
 
-  `lando wp search-replace 'yourpantheondevurl.com' 'yourlocalapp.lndo.site'`
+  ```bash
+  lando wp search-replace 'yourpantheondevurl.com' 'yourlocalapp.lndo.site'
+  ```
 
-  -OR-
+  OR
 
-  `terminus wp yourpantheonsitename.dev -- search-replace 'yourlocalapp.lndo.site' ‘yourpantheondevurl.com'`
+  ```bash
+  terminus wp yourpantheonsitename.dev -- search-replace 'yourlocalapp.lndo.site' 'yourpantheondevurl.com'
+  ```
 
   </Alert>
