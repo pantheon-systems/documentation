@@ -58,6 +58,15 @@ After logging in, you can access your application code in the `/code` directory.
 Your file uploads (Drupal's `sites/default/files` and WordPress's `wp-content/uploads`) can be found in the `files` directory.  Your log files can be found in the `/logs` directory.
 
 ## Troubleshooting
+### File transfer failed on production environments
+Starting at the Performance Medium service level up to Elite plans, the Test and Live environments are provisioned with multiple application containers. When SFTP'ing into production environments, you may experience the following error:
+
+```
+/srv/bindings/1111111111111111111111111111111/files/somefile.ext: open for read: no such file or directory
+Error:            File transfer failed
+```
+
+Resolve instances of transfer failures by reconfiguring FileZilla to limit the number of simultaneous connections. Go to Site Manager Transfer Settings and set "Limit number of simultaneous connections" to 1. See also, [this FAQ on our related SFTP doc](/docs/sftp#i-am-receiving-errors-connecting-to-my-server-with-an-sftp-client).
 
 ### Uploading to the Files Directory
 FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/winscp) (Windows).
@@ -75,7 +84,7 @@ Double check settings and resolve typos to fix this issue.
 ### Site Manager
 Features offered in the FileZilla Site Manager (like [Synchronized Browsing](https://wiki.filezilla-project.org/Using#Synchronized_Browsing)) are not supported because the Pantheon platform sometimes migrates sites across appservers without warning and the non-static binding string will change. This means that while you can set up your site in the Site Manager, you will need to reconfigure the login information and file paths whenever the dev environment site binding changes.
 
-The value for **Default remote directory** in the Site Manager can be copied from the **Remote site** field in the main window, and you can append `code` to the path to synchronize with your local codebase. Remember that the site binding is subject to change. 
+The value for **Default remote directory** in the Site Manager can be copied from the **Remote site** field in the main window, and you can append `code` to the path to synchronize with your local codebase. Remember that the site binding is subject to change.
 
 ### Quickconnect is refusing to connect
 
