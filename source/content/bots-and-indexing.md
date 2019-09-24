@@ -64,7 +64,7 @@ To support pre-launch SEO testing, we allow the following bots access to platfor
  - [SEMrush](https://www.semrush.com/bot/)
  - [RogerBot](https://moz.com/help/guides/moz-procedures/what-is-rogerbot) by Moz
  - [Dotbot](https://moz.com/help/guides/moz-procedures/dotbot) by Moz
- - [PowerMapper](https://www.powermapper.com/products/mapper/) {external}
+ - [PowerMapper](https://www.powermapper.com/products/mapper/){external}
  - [Swiftbot](https://swiftype.com/documentation/site-search/crawler-configuration/robots-txt) by Swiftype
 
 If you’re testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by <a data-proofer-ignore href="/docs/support/#can-i-request-a-feature-be-added-to-the-platform">contacting support</a> to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
