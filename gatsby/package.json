@@ -11,6 +11,7 @@
     "@mdx-js/mdx": "^1.4.4",
     "@mdx-js/react": "^1.4.4",
     "bootstrap": "^3.4.1",
+    "broken-link-checker": "github:alexlouden/broken-link-checker",
     "date-fns": "^1.30.1",
     "dotenv": "^6.2.0",
     "font-awesome": "^4.7.0",

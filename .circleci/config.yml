@@ -11,10 +11,6 @@ jobs:
             - v2.2-always-
             - npm-v2.4-{{ checksum "gatsby/package-lock.json" }}
       - run:
-          name: Install rsync
-          command: |
-            sudo apt install -y rsync
-      - run:
           name: Install Terminus
           command: |
             cd ~/
@@ -36,6 +32,10 @@ jobs:
           command: |
             cd ~/build/gatsby
             ./node_modules/gatsby/node_modules/.bin/gatsby build --prefix-paths
+      - persist_to_workspace:
+          root: . 
+          paths:
+            - ./
       - run:
           name: Remove empty directories
           command: |
@@ -44,10 +44,6 @@ jobs:
           name: Check for merge conflicts
           command: |
             scripts/merge_conflicts.sh
-      - run:
-          name: Deploy Multidev environment
-          command: |
-            bash ./scripts/deploy-multidev.sh
       - save_cache:
           key: npm-v2.4-{{ checksum "gatsby/package-lock.json" }}
           paths:
@@ -58,11 +54,68 @@ jobs:
           paths:
             - ~/build/gatsby/public
             - ~/build/gatsby/.cache
+
+  test:
+    docker:
+      - image: circleci/php:7.2-cli-node-browsers
+    working_directory: ~/build
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Serve Gatsby
+          command: |
+            cd ~/build/gatsby
+            ./node_modules/gatsby/node_modules/.bin/gatsby serve --prefix-paths
+          background: true
+      - run:
+          name: Wait...
+          command: |
+            dockerize -wait tcp://localhost:9000
+      - run:
+          name: Test links
+          command: |
+            cd ~/build
+            bash ./scripts/link-checker.sh
+
+  deploy:
+    docker:
+      - image: circleci/php:7.2-cli-node-browsers
+    working_directory: ~/build
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Install rsync
+          command: |
+            sudo apt install -y rsync
+      - run:
+          name: Install Terminus
+          command: |
+            cd ~/
+            curl -O https://raw.githubusercontent.com/alexfornuto/terminus-installer/master/installer.php
+            php installer.php
+      - run:
+         name: Deploy Multidev environment
+         command: |
+           bash ./scripts/deploy-multidev.sh
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               scripts/deploy-live.sh
             fi
+
+workflows:
+  version: 2
+  build_test_and_deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
+      - deploy:
+          requires:
+            - build
 
 
 # Below is CircleCI 1.0 Config Syntax that is still supported on CircleCI 2.0
