@@ -58,14 +58,14 @@ Additionally, Pantheon's edge layer adds the [`X-Robots-Tag: noindex` HTTP heade
 
 The `pantheonsite.io` domains are intended for development use and cannot be used for production. While Drupal and WordPress both generate their own `robots.txt` file by default, a custom or CMS-standard `robots.txt` will only work on Live environments with a custom domain. Adding sub-domains (i.e. `dev.example.com`, `test.example.com`) for DEV or TEST  will remove the `X-Robots-Tag: noindex` header only, but still serve the Pantheon `robots.txt` from the platform domain.
 
-To support pre-launch SEO testing, we allow the following bots access to platform domains:
+To support pre-launch SEO and site search testing, we allow the following bots access to platform domains:
 
  - [Site Auditor](https://raven.zendesk.com/hc/en-us/articles/202346870) by Raven
  - [SEMrush](https://www.semrush.com/bot/)
  - [RogerBot](https://moz.com/help/guides/moz-procedures/what-is-rogerbot) by Moz
  - [Dotbot](https://moz.com/help/guides/moz-procedures/dotbot) by Moz
  - [PowerMapper](https://www.powermapper.com/products/mapper/){external}
- - [Swiftbot](https://swiftype.com/documentation/site-search/crawler-configuration/robots-txt) by Swiftype
+ - [Swiftbot](https://swiftype.com/swiftbot) by Swiftype
 
 If you’re testing links or SEO with other tools, you may request the addition of the tool to our `robots.txt` file by <a data-proofer-ignore href="/docs/support/#can-i-request-a-feature-be-added-to-the-platform">contacting support</a> to create a feature request. Otherwise, you can connect a custom domain (like `seo.example.com`) to the Live environment and test your links following the alternative domain.
 
