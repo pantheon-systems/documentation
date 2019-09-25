@@ -1,7 +1,7 @@
 ---
 title: Build Tools
 subtitle: Introduction
-description: Create a site that manages its files using Composer, and uses a GitHub PR workflow with Behat tests run via Circle CI.
+description: Describe the Build Tools project, it's purpose, and workflow
 tags: [automate, composer]
 contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton]
 layout: guide
@@ -20,26 +20,34 @@ image: buildToolsGuide-thumb
 multidev: true
 ---
 
-<Alert type="danger" title="Warning">
-
-The current version of the Build Tools plugin is designed for Terminus 1.x, and is not yet compatible with [current versions](/terminus/updates/) of Terminus. We are working on a new version of the Terminus Build Tools plugin with Terminus 2 support and will update this guide once it is released. In the meantime, you can test the [beta release](https://github.com/pantheon-systems/terminus-build-tools-plugin/releases/latest).
-
+<Alert type="export" title="Notice">
+Build Tools version <code class="language-sh">1.x</code> is only compatible with Terminus <code class="language-sh">1.x</code>, both of which are beyond end of life and no longer supported. If you are using Terminus Build Tools <code class="language-sh">1.x</code>, you should upgrade to version 2.
 </Alert>
 
-This guide describes how to use build tools such as GitHub and CircleCI with Composer to implement a collaborative, team-based Continuous Integration workflow using Pull Requests for Drupal 8 sites on Pantheon. While this guide demonstrates [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer), the same workflow can be applied to [WordPress](https://github.com/pantheon-systems/example-wordpress-composer) and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer) sites.
+Build Tools is a package encompassing multiple Pantheon maintained repositories that work together to connect the tools and automation necessary for an advanced [WebOps workflow](https://pantheon.io/webops) to Pantheon. The main purposes of the Build Tools are to:
+
+- **Ease the creation of new projects making use of an external Git provider, a Continuous Integration service, and Pantheon.**
+This is primarily done through the [`build:project:create` commands](#buildprojectcreate), which scaffolds new projects from a [template repository](#template-repositories) and performs one-time setup, such as configuring SSH keys and environment variables, needed to connect an external Git provider and Continuous Integration service with Pantheon. To use your own template repository see [Customization](#customization).
+
+- **Add additional commands to Terminus to make tasks common in an automated workflow easier.**
+See [Commands](#commands) and [Build Tools Command Examples](#build-tools-command-examples) for details.
+
+
+### A Build Tools Project's Components
+There are 3 main components to a project created with Build Tools
 
 <BuildTools />
 
 <Enablement title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
-Master Composer concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
+Master Composer, automated testing, and other advanced workflow concepts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
 
 ## Artifact Deployment
-Only files unique to the project are tracked as part of the project's main "source" repository on GitHub, which requires an abstraction layer to compile dependencies and deploy an entire "artifact" to the site repository on Pantheon. The abstraction layer is facilitated by CircleCI in the Pantheon maintained examples, but the principles are the same for other continuous integration service providers.
+Only files unique to the project are tracked as part of the project's main "source" repository outside on Pantheon, which requires an abstraction layer to compile dependencies and deploy an entire "artifact" to the site repository on Pantheon. The abstraction layer is facilitated by the CI service. Are examples don't cover every possible service but the principles are the same for most continuous integration service providers.
 
-Composer is used to fetch dependencies declared by the project as part of a CircleCI build step. This ensures that the final composed build results are installed on Pantheon:
+Composer is used to fetch dependencies declared by the project as part of a CI build step. This ensures that the final composed build results are installed on Pantheon. Below is a diagram visualizing this workflow with GitHub and CircleCI:
 
 ![Artifact Deployment](../../../images/artifact-deployment.png)
 
@@ -47,7 +55,7 @@ Composer is used to fetch dependencies declared by the project as part of a Circ
 
 One advantage of managing code this way is that it keeps the change sets (differences) for pull requests as small as possible. If a pull request upgrades several dependencies, only the dependency metadata file will change; the actual code changes in the upgraded dependencies themselves are not shown.
 
-GitHub pull requests (PRs) are a formalized way of reviewing and merging a proposed set of changes to the source repository. When one member of a development team makes changes to a project, all of the files modified to produce the feature are committed to a separate branch, and that branch becomes the basis for the pull request. GitHub allows other team members to review all of the differences between the new files and their original versions, before merging the PR to accept changes.
+Pull requests (PRs) are a formalized way of reviewing and merging a proposed set of changes to the source repository. When one member of a team makes changes to a project, all of the files modified to produce the feature are committed to a separate Git branch, and that branch becomes the basis for the pull request. Git providers allow other team members to review all of the differences between the new files and their original versions, before merging the PR to accept changes.
 
 </Accordion>
 
@@ -62,7 +70,7 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 
 3. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
-4. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
+4. [Generate a Pantheon machine token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
 
       ```bash
       terminus auth:login --machine-token=<machine-token>
@@ -86,19 +94,13 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
     composer create-project -n --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1
     ```
 
-8. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin). Update the version number in this example from `2.0.0-beta12` to the current version:
+8. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
 
     ```bash
-    composer create-project --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta12
+    composer create-project --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2
     ```
 
-  <Alert title="Note" type="info">
-
-  The Terminus Build Tools Plugin does not support private repositories.
-
-  </Alert>
-
-9. [Authorize CircleCI on GitHub](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb).
+9. Optionally, [authorize CircleCI on GitHub](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb) if you plan to use those services.
 
     If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.
 
@@ -106,18 +108,6 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 
 Pantheon's [support team](/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
 
-If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/) or posting in our [Pantheon Community Slack Channel](https://slackin.pantheon.io/).
+If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/) or posting in our [Pantheon Community Slack Instance](https://slackin.pantheon.io/) in the `#composer-workflow` channel.
 
 </Alert>
-
-
-### Access Tokens (Optional)
-
-The Build Tools plugin will prompt you to create access tokens for both [GitHub](https://github.com/settings/tokens) and [CircleCI](https://circleci.com/account/api), which are stored as environment variables. The GitHub token needs the **repo** (required) and **delete-repo** (optional) scopes. You may optionally generate these tokens ahead of time and manually export them to the local variables `GITHUB_TOKEN` and `CIRCLE_TOKEN`, respectively:
-
-```bash
-export GITHUB_TOKEN=yourGitHubToken
-export CIRCLE_TOKEN=yourCircleCIToken
-```
-
-If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app).
