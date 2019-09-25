@@ -24,6 +24,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
 ## Configure DNS Records on Route 53
 ### A Record
+
 1. Click **Hosted Zones** and select the domain you wish to configure.
 2. Click **Create Record Set** to add a new record, then select **A - IPv4 address** for the record type.
 3. Leave the **Name** field blank and enter the A record value provided by Pantheon in the **Value** field.
@@ -41,9 +42,10 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
 5. Click **Create**:
 
-  ![Route 53 A record](../docs/assets/images/route53-a-record.png)
+  ![Route 53 A record](../../images/route53-a-record.png)
 
 ### AAAA Records
+
 1. Click **Create Record Set** to add a new record, then select **AAAA - IPv6 address** for the record type.
 2. Leave the **Name** field blank and enter the _both_ AAAA record value provided by Pantheon in the **Value** field.
 3. Select desired Time to Live (TTL).
@@ -60,7 +62,7 @@ Keep this page open and login to your [Amazon Route 53 account](https://console.
 
 4. Click **Create**:
 
-  ![Route 53 AAAA records](../docs/assets/images/route53-aaaa-records.png)
+  ![Route 53 AAAA records](../../images/route53-aaaa-records.png)
 
 ### A Record for subdomain
 An A record is required to configure a subdomain (e.g., `www.example.com`).
@@ -72,5 +74,5 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+- [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
+- [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
