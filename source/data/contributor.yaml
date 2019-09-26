@@ -132,7 +132,7 @@
   bio: Civic developer, human centered!
 - id: suzannealdrich
   name: Suzanne Aldrich
-  url: //suzanne.link
+  url: https://suzanne.link
   avatar: //s.gravatar.com/avatar/cca6b0cbfbc6ed1804e381d66d012f02?s=300
   twitter: https://twitter.com/SuzanneAldrich
   github: //github.com/suzannealdrich
@@ -141,7 +141,7 @@
   bio: Web technologist specializing in security, performance, and usability.
 - id: mrfelton
   name: Tom Kirkpatrick
-  url: //www.systemseed.com
+  url: https://www.systemseed.com
   avatar: //avatars2.githubusercontent.com/u/200251?v=3&s=400
   twitter: https://twitter.com/mrfelton
   github: //github.com/mrfelton
@@ -150,22 +150,21 @@
 - id: afragen
   name: Andy Fragen
   avatar: //avatars3.githubusercontent.com/u/1296790?v=3&s=400
-  url: //thefragens.com
+  url: https://thefragens.com
   twitter: https://twitter.com/andyfragen
   github: //github.com/afragen
   bio: I am a surgeon, husband and father and I try my best to juggle all while keeping perspective on what’s important. BTW, importance is listed in reverse order.
 - id: petersuhm
   name: Peter Suhm
   avatar: //avatars1.githubusercontent.com/u/1430546?v=3&s=400
-  url: //petersuhm.com
+  url: https://petersuhm.com
   twitter: https://twitter.com/petersuhm
   github: //github.com/petersuhm
   bio: Web Developer and Travel Addict | Taking the pain out of WordPress development with @WP_Pusher
 - id: mmenavas
   name: Maximo Mena
   avatar: //avatars0.githubusercontent.com/u/770699
-  url: //mmenavas.github.io/
-  twitter: https://twitter.com/mmenavas
+  url: https://mmenavas.github.io/
   github: //github.com/mmenavas
   bio: Maximo Mena was born in Lima, Peru. He moved to Phoenix, Arizona, in 2003 to attend Arizona State University (ASU), where he got a bachelor’s degree in Computer Systems Technology.
 - id: curmudgeon
@@ -178,12 +177,12 @@
   avatar: //avatars0.githubusercontent.com/u/297610?v=3&s=400
   github: //github.com/masonjames
   twitter: https://twitter.com/masonjames
-  url: //www.valet.io/
+  url: https://www.valet.io/
   bio: CEO | Founder of WP Valet
 - id: cteitzel
   name: Chris Teitzel
   avatar: //avatars0.githubusercontent.com/u/1548058
-  url: //lockr.io
+  url: https://lockr.io
   github: //github.com/cellar-door
   twitter: https://twitter.com/technerdteitzel
   linkedin: //www.linkedin.com/in/christeitzel
@@ -216,7 +215,7 @@
   linkedin: //www.linkedin.com/in/scottlmassey
   github: //github.com/sukottokun
   twitter: https://twitter.com/astrocolossal
-  url: //www.astrocolossal.com
+  url: https://www.astrocolossal.com
 - id: davidneedham
   name: David Needham
   bio: Developer Advocate
@@ -227,11 +226,11 @@
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/David%20Needham.png
 - id: dwayne
   name: Dwayne McDaniel
-  url: //www.mcdwayne.com
+  url: https://www.mcdwayne.com
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Dwayne%20McDaniel.jpg
   twitter: https://twitter.com/mcdwayne
   gplus: https://plus.google.com/u/0/116638905183908020634
-  github: https://github.com/1dwaynemcdaniel/
+  github: https://github.com/mcdwayne/
   linkedin: https://www.linkedin.com/in/dwaynemcdaniel
   drupal: https://www.drupal.org/u/mcdwayne
   wordpress: https://profiles.wordpress.org/mcdwayne
@@ -289,7 +288,7 @@
   name: Dustin LeBlanc
   twitter: https://twitter.com/DustinLeblanc
   bio: Customer Success Engineer
-  avatar: //drupal.org/files/styles/grid-2/public/user-pictures/picture-1731762-1472589456.png
+  avatar: //avatars.githubusercontent.com/u/3948808
   github: //github.com/dustinleblanc
   linkedin: https://www.linkedin.com/in/dustinleblanc
   url: https://dustinleblanc.com/
@@ -300,7 +299,7 @@
   github: //github.com/wbconnor
 - id: cityofoaksdesign
   name: Christopher Matthews
-  url: //www.cityofoaksdesign.com
+  url: https://www.cityofoaksdesign.com
   github: //github.com/ChristopherMatthews
   drupal: //www.drupal.org/u/chris2
   avatar: //avatars.githubusercontent.com/u/48095658

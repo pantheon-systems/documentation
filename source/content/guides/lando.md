@@ -137,7 +137,7 @@ To use this Lando recipe you must have:
 
 - Pantheon hosted site ready to go. You can either use an existing Pantheon site or [spin up a new one](/guides/quickstart/create-new-site)
 
-- A unique Pantheon [machine token](machine-tokens)
+- A unique Pantheon [machine token](/machine-tokens)
 
 
 1. From the directory of the WordPress site created in the section above, stop the Lando instance (if still running):
