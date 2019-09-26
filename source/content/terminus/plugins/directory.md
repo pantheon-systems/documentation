@@ -78,7 +78,7 @@ Manage the <code>secrets.json</code> file for use with Quicksilver.
 
   </Card>
 
-  <Card title={"Site Clone"} isOfficial author={"Andrew Taylor"} authorLink={"https://github.comataylorme"} link={"https://github.com/pantheon-systems/terminus-site-clone-plugin"}>
+  <Card title={"Site Clone"} isOfficial author={"Andrew Taylor"} authorLink={"https://pantheon.io/team/andrew-taylor"} link={"https://github.com/pantheon-systems/terminus-site-clone-plugin"}>
 
 Copy the code, database and files from one Pantheon Site Dashboard to another.
 
