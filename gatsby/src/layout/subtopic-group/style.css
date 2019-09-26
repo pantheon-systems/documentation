@@ -20,6 +20,7 @@
   font-weight: 300;
   text-align: left;
   margin: 0px;
+  min-height: 21px;
 }
 .topic-info__description-well {
   margin-left: 25px;
