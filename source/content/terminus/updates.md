@@ -18,7 +18,7 @@ The latest release of Terminus is a major version upgrade, which may not be back
 
 </Alert>
 
-<TerminusVersion text={"Update to the Current Release"} />
+<TerminusVersion text={"Update to the Current Release 2.2.0"} />
 
 Navigate to the directory where Terminus was originally installed, then run:
 
