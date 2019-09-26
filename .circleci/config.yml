@@ -20,7 +20,7 @@ jobs:
           name: Install Gatsby
           command: |
             cd ~/build/gatsby
-            npm install
+            npm ci
       - run:
           name: Import GitHub Token
           command: |
