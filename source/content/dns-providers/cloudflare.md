@@ -31,7 +31,7 @@ This configuration routes traffic to Pantheon's Global CDN exclusively. Unless y
 
 1. Click on **DNS** from the Cloudflare menu bar.
 1. Click **+ Add record**.
-1. Select **A** from the dropdown menu.
+1. Select **A** from the **Type** drop-down menu.
 1. Enter `www` in the **Name** field and paste the IP address value provided by Pantheon (e.g. `23.185.0.2`) in the **IPv4** field.
 1. Select a desired Time to Live (TTL).
 
@@ -74,19 +74,15 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
 A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS certificates for a domain.
 
-1. Select **DNS** from the Cloudflare menu bar.
-2. Select **CAA** from the dropdown menu.
-3. Enter the bare domain (`example.com`) in the **Name** field then click to configure the record value:
-
-  ![caa click to configure](../../images/cf-caa.png)
-
-4. Select **Allow wildcards and specific hostnames** for the record's tag. If you are *not* stacking Cloudflare's CDN with the Pantheon Global CDN, enter `letsencrypt.org` as the value:
-
-  ![CAA configure](../../images/cf-caa-configure.png)
+1. Click on **DNS** from the Cloudflare menu bar.
+1. Click **+ Add record**.
+1. Select **CAA** from the **Type** drop-down menu.
+1. Enter the bare domain (`example.com`) in the **Name** field.
+1. Keep the **Only allow specific hostnames** tag selected. If you are *not* stacking Cloudflare's CDN with the Pantheon Global CDN, enter `letsencrypt.org` as the value:
 
   If you *are* using Cloudflare's CDN, they will [automatically add](https://support.cloudflare.com/hc/en-us/articles/115000310792-Configuring-CAA-Records-) CAA records for their CA providers when Universal SSL is enabled. Do *not* add a record for `letsencrypt.org` in this case.
 
-5. Select desired Time to Live (TTL).
+1. Select desired Time to Live (TTL).
 
   <Accordion title="Learn More" id="ttl2" icon="info-sign">
 
@@ -98,11 +94,11 @@ A **CAA Record** specifies which certificate authority (**CA**) can issue HTTPS 
 
   </Accordion>
 
-6. Click **Add Record**. Your record should look similar to the following once it has been created:
+1. Click **Add Record**. Your record should look similar to the following once it has been created:
 
   ![CAA record](../../images/cf-caa-final.png)
 
-7. Repeat this process for the `www` subdomain.
+1. Repeat this process for the `www` subdomain.
 
 ## Restrict Content Based on Geographic Location
 
