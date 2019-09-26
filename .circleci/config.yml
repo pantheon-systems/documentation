@@ -32,10 +32,6 @@ jobs:
           command: |
             cd ~/build/gatsby
             ./node_modules/gatsby/node_modules/.bin/gatsby build --prefix-paths
-      - persist_to_workspace:
-          root: . 
-          paths:
-            - ./
       - run:
           name: Remove empty directories
           command: |
@@ -54,6 +50,10 @@ jobs:
           paths:
             - ~/build/gatsby/public
             - ~/build/gatsby/.cache
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./
 
   test:
     docker:
@@ -83,6 +83,7 @@ jobs:
       - image: circleci/php:7.2-cli-node-browsers
     working_directory: ~/build
     steps:
+      - checkout
       - attach_workspace:
           at: .
       - run:
