@@ -1,0 +1,11 @@
+#build-project-create-command-generator {
+    margin: 2em 0;
+}
+
+#build-project-create-command-generator .form-check-input {
+    margin-right: 1em;
+}
+
+#build-project-create-command-generator label {
+    font-weight: normal;
+}
