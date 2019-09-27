@@ -642,3 +642,74 @@ This is the optimal place to provide links to external resources on the subject,
 ```
 
 </Example>
+
+## Switches
+
+Switches are styled checkbox inputs that have nice visuals and animation. They also track state. You must provide the following `props`:
+
+- `isOn`: a boolean (`true` or `false`) that determines whether the switch is switched "on"
+- `handleToggle`: a function that handles the state change when the switch is toggled
+- `slug`: a kebob-case slug, used for the input and label IDs
+- `text`: the text to display with the switch
+- `required`: a boolean (`true` or `false`) that determines if the `required` attribute is set on the input. Defaults to `true`
+
+<Example>
+
+<hr className="source-code" />
+
+```js
+import React, { useState } from 'react';
+const [isOn, setSwitchValue] = useState(false);
+<Switch
+    isOn={isOn}
+    handleToggle={() => setSwitchValue(!isOn)}
+    slug='example-switch'
+    text='Example Switch'
+/>
+```
+
+</Example>
+
+## Radio Input Groups
+
+Radio input groups are multiple radio inputs grouped together and pre-formatted for Bootstrap. They also track state and you must provide the following `props`:
+
+- `name`: the input name to give the field group
+- `value`: a variable with the current selected value
+- `slug`: a kebob-case slug, used in the ID of the `div` wrapping the group
+- `handleChange`: a function that handles the state change when a radio button is selected
+- `label`: The text to display above the group of options
+- `options`: an array of objects for the options, each one should have:
+  - `label`: The label next to the radio box
+  - `value`: The option value
+  - `id`: The CSS id for the option
+
+<Example>
+
+<hr className="source-code" />
+
+```js
+import React, { useState } from 'react';
+const [cms, setCMS] = useState('d8');
+<RadioInputGroup
+    name='cms'
+    value={cms}
+    slug='select-cms'
+    handleChange={(event) => setCMS(event.target.value)}
+    label='Which CMS will the project use?'
+    options={[
+        {
+            "label": "Drupal 8",
+            "value": "d8",
+            "id": "cmsD8"
+        },
+        {
+            "label": "WordPress",
+            "value": "wp",
+            "id": "cmsWP"
+        },
+    ]}
+/>
+```
+
+</Example>
