@@ -44,6 +44,7 @@
     "node-font-awesome": "^1.0.2",
     "prismjs": "^1.15.0",
     "react": "^16.8.4",
+    "react-bootstrap": "^1.0.0-beta.12",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.0.8",
