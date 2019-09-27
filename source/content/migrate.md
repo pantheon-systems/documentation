@@ -72,12 +72,6 @@ The recommended way to migrate Drupal sites from another host is to use `drush a
 
   ![Drupal create archive](../images/dashboard/drupal-guided-migrate.png)
 
-  <Alert title="Note" type="info">
-
-  `drush ard` is only available on Drush 8 and earlier.
-
-  </Alert>
-
   The Dashboard instructs you to put the archive on your existing website, but you can put the site archive on Dropbox, S3, or any number of other places. The important thing is that you have a site archive that can be downloaded via a publicly accessible URL.
 
 9. Paste a publicly accessible URL to a download of your site archive. Change the end of Dropbox URLs from `dl=0` to `dl=1` so we can import your site archive properly.
