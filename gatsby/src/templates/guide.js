@@ -30,6 +30,7 @@ import BuildTools from "../components/buildTools.js"
 import Partial from "../components/partial.js"
 import Image from "../layout/image"
 import ChecklistItem from "../components/checklistItem"
+import BuildProjectCreateCommandGenerator from "../components/build-project-create-command-generator"
 
 const shortcodes = {
   Callout,
@@ -51,6 +52,7 @@ const shortcodes = {
   Partial,
   ChecklistItem,
   Image,
+  BuildProjectCreateCommandGenerator,
 }
 
 class GuideTemplate extends React.Component {
