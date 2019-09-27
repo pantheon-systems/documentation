@@ -15,7 +15,7 @@ function BuildProjectCreateCommandGenerator() {
     const [gitProvider, setGitProvider] = useState('GitHub');
     const [cms, setCMS] = useState('d8');
     const [visibility, setVisibility] = useState('public');
-    const [projectName, setProjectName] = useState(`${gitProvider}-${cms}-${Math.floor(timestamp / 100000)}`);
+    const [projectName, setProjectName] = useState(`${gitProvider.toLowerCase()}-${cms}-${Math.floor(timestamp / 100000)}`);
     let projectCreateCommand = `terminus build:project:create \\\n${cms} \\\n${projectName}`;
     if ( gitProvider !== 'GitHub' ) {
         projectCreateCommand += ` \\\n--git=${gitProvider.toLowerCase()}`;
