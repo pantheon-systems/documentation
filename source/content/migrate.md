@@ -56,7 +56,7 @@ The <a class="external" href="https://wordpress.org/plugins/wp-native-php-sessio
 
 <Tab title="Drupal" id="tab-2-id">
 
-The recommended way to migrate Drupal sites from another host is to use `drush ard` to create an archive that can be easily imported.
+The recommended way to migrate Drupal sites from another host is to use `drush ard` (Drush 8 or earlier) to create an archive that can be easily imported.
 
 1. Navigate to your User Dashboard and click the **Migrate Existing Site** button.
 
@@ -100,6 +100,7 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately to help debug edge-cases that are not supported through guided migration.
+* **Using Drush 9 or later**: `drush ard` is only available on Drush 8 and earlier.
 
 For more details, see [Manually Migrate Sites to Pantheon](/migrate-manual/).
 
@@ -291,7 +292,7 @@ When asked for your current site URL, enter `https://example.com` and continue t
 
 <Tab title="Drupal" id="tab-2-id">
 
-Drupal users can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/) or [Google Drive](https://drive.google.com)) to continue the standard migration procedure. If the archive file size exceeds 500MB you must [manually migrate](/migrate-manual).
+Drupal users with access to Drush 8 or earlier can run the provided Drush command to generate an archive then upload it to a third party service (like [Dropbox](https://www.dropbox.com/) or [Google Drive](https://drive.google.com)) to continue the standard migration procedure. If Drush 8 is not available, or the archive file size exceeds 500MB you must [manually migrate](/migrate-manual).
 
 </Tab>
 
