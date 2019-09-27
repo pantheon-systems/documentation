@@ -17,7 +17,11 @@ previousurl: guides/build-tools/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 ---
-In this section we'll use the Terminus Build Tools Plugin to create a new Pantheon Site, a corresponding GitHub repository, and configure CircleCI to run tests.
+In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of an Git repository, a CI service, and a Pantheon site. Use the options below to configure your project, then run the generated `terminus build:project:create` command.
+
+**Note:** For all available command options, see [the Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#buildprojectcreate)
+
+<BuildProjectCreateCommandGenerator />
 
 1. Create a new project (replace `pantheon-d8-composer-project` with the name of your new site):
 
