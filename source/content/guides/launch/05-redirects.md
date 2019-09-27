@@ -1,6 +1,6 @@
 ---
 title: Launch Essentials
-subtitle: Redirect for SEO and Security
+subtitle: Choose a Primary Domain for SEO
 description: Part five of our Launch Essentials guide covers redirecting users to the proper domains and paths.
 launch: true
 anchorid: redirects
@@ -16,13 +16,20 @@ editpath: launch/05-redirects.md
 image: getting-started-Largethumb
 ---
 
-In this lesson, we'll redirect all traffic to a primary domain via HTTPS, which is a best practice for security and SEO. This means if you choose `www.example.com` as your primary domain, then if a visitor types in `example.com` into their browser (or any other domain you have connected to your site), they will end up on `https://www.example.com`.
+In this lesson, we'll redirect all traffic to a primary domain, which is a best practice for SEO. This means if you choose `www.example.com` as your primary domain, then if a visitor types in `example.com` into their browser (or any other domain you have connected to your site), they will end up on `https://www.example.com`.
 
-<Alert title="Note" type="info">
+9/30/2019 - This feature will be available in the dashboard soon. In the meantime, choose a primary domain via Terminus or using the PHP snippet method. The PHP snippet method will be depreacted when the feature is available on the dashboard.
 
-Make sure HTTPS has been successfully provisioned *before* adding any code (like the sample below) that will redirect traffic to HTTPS.
+## Option 1: Terminus
 
-</Alert>
+1. Install or upgrade to the latest version of Terminus. For detailed instructions see the [Terminus Manual](/docs/terminus).
+
+2. Run the following command, replacing "site" with your site name, "live" if you'd like to set it for a different environment, and www.example.com with the your primary domain:
+```bash
+terminus domain:primary:add my-site.live www.example.com```
+```
+
+## Option 2: PHP Snippet
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
@@ -58,8 +65,8 @@ Make sure HTTPS has been successfully provisioned *before* adding any code (like
 ## Ready to launch like the pros?
 Now that you're redirecting requests to a single, primary domain, it's the perfect time to setup a availability monitoring service to watch over it like an automated hawk.
 
-### [Send an HSTS Header for Increased Security](/pantheon-yml/#enforce-https-+-hsts)
-Install a plugin or module to prevent cookie hijacking and get an A+ rating from SSL Labs.
+### [Send a Long-Duration HSTS Header for Increased Security](/pantheon-yml/#enforce-https-+-hsts)
+Prevent cookie hijacking and get an A+ rating from SSL Labs.
 
 ### [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability)
 New Relic provides a free availability monitoring service that sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails.
