@@ -42,7 +42,7 @@ protected_web_paths:
 
 HTTPS adds a layer of encryption that prevents others from snooping on or tampering with traffic to your site. HTTP Strict Transport Security (**HSTS**) instructs browsers to only connect via HTTPS and helps protect websites against protocol downgrade attacks and cookie hijacking.
 
-Using the `pantheon.yml` file, you can set the use and duration of the HSTS header and its effect on subdomains. You can set a short (5 minute) duration header, or a long (366 day) duration, and choose whether to affect subdomains. Using the long duration setting will help you get an A+ SSL rating from [SSL Labs](https://www.ssllabs.com/ssltest/).
+Pantheon defaults to enforcing HTTPS via a redirect a a short, 5-minute duration, HSTS header. You can override the default with the `enforce_https` directive in a site-specific `pantheon.yml` file with one of several options.
 
 <Partial file="hsts.md" />
 
