@@ -1,3 +1,4 @@
+**Note:** Partial or incorrectly filled out issues may be deferred or closed.
 
 Re: <Add Doc title and/or link>
 
