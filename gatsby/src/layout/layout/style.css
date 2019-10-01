@@ -5,5 +5,5 @@
 @import '../../../../source/docs/assets/fonts/MyFontsWebfontsKit/MyFontsWebfontsKit.css';
 @import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../../styles/main.css';
-
+@import '../../styles/codeBlocks.css';
 
