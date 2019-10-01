@@ -28,6 +28,11 @@ jobs:
             touch .env.production
             echo "GITHUB_API=$GITHUB_TOKEN" > .env.production
       - run:
+          name: Update Terminus data files
+          command: |
+            cd ~/build
+            bash ./scripts/update-terminus-commands.sh
+      - run:
           name: Gatsby Build
           command: |
             cd ~/build/gatsby
