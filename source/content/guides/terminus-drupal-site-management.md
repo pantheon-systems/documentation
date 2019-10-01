@@ -72,7 +72,7 @@ terminus site:list
 ```
 
 ### Update the Code
-Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal set ready to go for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
+Now that the site is created, the next step is to run a Drush install command to get a fully functional Drupal site ready  for development. Terminus will run most available Drush commands by simply adding the word "drush" to the command directly afterward, along with the site's Pantheon machine name.
 
 ```bash{outputLines:2-7}
 terminus drush <site>.<env> -- site-install
