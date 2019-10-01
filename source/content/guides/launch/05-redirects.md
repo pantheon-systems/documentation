@@ -22,15 +22,12 @@ Choose one of the following two options to configure the primary domain.
 
 ## Set Primary Domain with Terminus
 
-1. Install or upgrade to the [latest version of Terminus](/terminus/install).
-
-2. Use Terminus to add the primary domain. In this example, replace `my-site` with your site name, and `live` if you'd like to set it for a different environment, and `www.example.com` with your primary domain:
-
-```bash
-terminus domain:primary:add my-site.live www.example.com
-```
+<Partial file="primary-domain.md" />
 
 ## Set Primary Domain with PHP Snippet
+If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects:
+
+<Accordion title="PHP Redirection" >
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close"></span> Code** in the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
@@ -60,7 +57,7 @@ terminus domain:primary:add my-site.live www.example.com
 
 1. Navigate to the **<span class="glyphicons glyphicons-cardio"></span> Live** environment and click **<span class="glyphicons glyphicons-new-window-alt"></span> Visit Live Site** to test the redirect logic.
 
-<Accordion title="Level Up: Configure Site Monitoring Services  (Optional)" id="host-specific1" icon="graduation-cap">
+</Accordion>
 
 ## Ready to launch like the pros?
 Now that you're redirecting requests to a single, primary domain, it's the perfect time to configure a long-duration HSTS header, or set up an availability monitoring service to watch over your site like an automated hawk.
@@ -68,7 +65,6 @@ Now that you're redirecting requests to a single, primary domain, it's the perfe
 ### [Send a Long-Duration HSTS Header for Increased Security](/pantheon-yml/#enforce-https--hsts)
 Prevent cookie hijacking and get an A+ rating from SSL Labs.
 
-### [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability)
+### [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability) (Optional)
 New Relic provides a free availability monitoring service that sends a request to designated URLs from configured locations at given intervals and alerts you via email if a response fails.
 
-</Accordion>

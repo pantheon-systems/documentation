@@ -93,14 +93,25 @@ Redirecting all traffic to a primary domain is a best practice for SEO since it 
 
 <Alert title="Note" type="info">
 
-Redirects must be managed via PHP, since `.htaccess` is ignored. For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
+Redirects cannot be managed via `.htaccess`, which is ignored on our platform. For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
 </Alert>
 
-### Redirect to HTTPS and the Primary Domain
-It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in [`settings.php`](/settings-php/) or [`wp-config.php`](/wp-config-php/):
+### Redirect to the Primary Domain
+
+<Partial file="primary-domain.md" />
+
+### Redirect to HTTPS
+It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in [pantheon.yml](/pantheon-yml#enforce-https--hsts)
+
+### Redirect with PHP
+If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects:
+
+<Accordion title="PHP Redirection" >
 
 <Partial file="_redirects.md" />
+
+</Accordion>
 
 For more redirect scenarios, see [Configure Redirects](/redirects).
 
