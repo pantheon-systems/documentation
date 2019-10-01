@@ -37,6 +37,7 @@ For installation instructions and additional details, see [Enabling Solr for Wor
 -  Drupal 7: When a Solr query is over 4000 characters and the method is changed from GET to POST, queries may fail. Known workarounds are to patch the module and set [`apachesolr_search_post_threshold` to a higher limit](https://github.com/pantheon-systems/drops-7/blob/master/modules/pantheon/pantheon_apachesolr/Pantheon_Apache_Solr_Service.php#L873) or to keep queries shorter.
 - The search terms `in` and `or` are ignored, regardless of casing.
 - Re-indexing may be required following any platform issue or event (server outage, service degradation). Check the [status page](https://status.pantheon.io) for current and past platform events.
+- Elite sites with the Pantheon Solr add-on cannot enable [Disaster Recovery](https://pantheon.io/docs/disaster-recovery) and will need to use an alternative.
 
 ## Alternatives to Pantheon's Solr Service
 
