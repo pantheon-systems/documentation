@@ -24,7 +24,7 @@ This redirect is considered best practice and recommended as part of the going l
 
 ### Set Primary Domain and HSTS with Pantheon.yml
 
-This is the preferred method of setting HTTPS, HSTS, and the primary domain for your site. For details, see [Launch Essentials](/guides/launch/redirects).
+This is the preferred method of setting HTTPS, HSTS, and the primary domain for your site.
 
 To set the primary domain:
 
