@@ -1,6 +1,12 @@
 // custom typefaces
 require("prismjs/themes/prism-okaidia.css")
 
+// Code block line numbering
+require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+
+// Code block shell prompt
+require("prismjs/plugins/command-line/prism-command-line.css")
+
 // Previous version scripts and styles
 // require("../source/docs/assets/js/main.js")
 
