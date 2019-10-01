@@ -27,7 +27,7 @@ terminus auth:login --email=<email> --machine-token=<machine_token>
  [notice] Logging in via machine token.
 ```
 
-Excellent! You've installed Terminus and logged into your Pantheon account. For a full list of commands, [refer to this page](https://github.com/pantheon-systems/cli/wiki/Available-Commands).
+Excellent! You've installed Terminus and logged into your Pantheon account. For a full list of commands, [refer to this page](/terminus/commands).
 
 ## Using Terminus
 
