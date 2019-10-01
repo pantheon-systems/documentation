@@ -149,7 +149,7 @@ AAAA record 2:  `2620:12a:8001::X`
 **Note:** `AAAA` records are not required, but recommended as a best practice for performance, especially for mobile devices. See [Introduction to Domain Name Services](/dns/#what-are-aaaa-records-and-do-i-need-them) for more information.
 
 ### What if my DNS manager doesn't support CAA DNS records?
-As [discussed above](#disable-lets-encrypt-with-caa-records-required), an empty CAA policy will suffice if you can't create one specifically disabling Let's Encrypt. If your CA does not support CAA records at all, Let's Encrypt *will* provision a certificate for the site. Please inform your Engagement Manager if this is an issue, as our [Professional Services](/professional-services) team can help.
+CAA records are required  to [prohibit Let's Encrypt from issuing certificates](#disable-lets-encrypt-with-caa-records-required). If your DNS provider does not support CAA records, consider one that does. If using a DNS provider that supports CAA records is not possible, please inform your Engagement Manager, as our [Professional Services](/professional-services) team can help.
 
 ## Caveats / Known Issues
 
