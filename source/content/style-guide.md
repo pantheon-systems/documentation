@@ -35,7 +35,7 @@ Meta data for a doc or guide is created in a section referred to as frontmatter.
 
 </p>
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```html
 ---
@@ -63,7 +63,7 @@ Be sure that you have:
 - An account with [Amazon Web Services (AWS)](https://aws.amazon.com/s3/). Amazon offers [free access](https://aws.amazon.com/free/) to most of their services for the first year.
 - [Terminus](/terminus) installed on your local computer.
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 ## Before You Begin
@@ -95,7 +95,7 @@ Be kind. If you're writing a guide that will use one or more example variables t
 
 #### Section not listed on TOC
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 # Page Title
@@ -114,7 +114,7 @@ Bold is used for navigational elements within a given interface:
 
 Go to **Account** > **Security** > **Personal Access Tokens**.
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 Go to **Account** > **Security** > **Personal Access Tokens**.
@@ -128,7 +128,7 @@ Bold is also used when defining new terms, in cases where the [Definition List](
 
 **Transport Layer Security** (TLS) refers to a set of cryptographic security protocols used to encrypt network traffic.
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 **Transport Layer Security** (TLS) refers to a set of cryptographic security protocols used to encrypt network traffic.
@@ -142,7 +142,7 @@ Bold is also used when defining new terms, in cases where the [Definition List](
 
 Emphasis should *always* be stressed with italics, and *never* with bold.
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 Emphasis should *always* be stressed with italics, and *never* with bold.
@@ -161,7 +161,7 @@ Emphasis should *always* be stressed with italics, and *never* with bold.
 <dd>Description of the new term.</dd>
 </dl>
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```html
 <dl>
@@ -189,7 +189,7 @@ Use relative paths when linking to other pages of the docs site.
 
 [Quick Start](/guides/quickstart/)
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 [Quick Start](/guides/quickstart/)
@@ -203,7 +203,7 @@ Use relative paths when linking to other pages of the docs site.
 
 [Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide)
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 [Wikipedia entry on Style guide](https://en.wikipedia.org/wiki/Style_guide)
@@ -219,7 +219,7 @@ Used for file names, variables, commands, and output, inline within paragraphs:
 
 Inline code styling using backticks, like `$EXAMPLE`.
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 Inline code styling using backticks, like `$EXAMPLE`.
@@ -244,14 +244,15 @@ if (!function_exists('install_drupal')) {
 }
 ```
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
-<pre><code className="php">
+````markdown
 ```php
 # This is a Windows-friendly symlink
 require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
 ```
-</code></pre>
+
+````
 
 </Example>
 
@@ -272,9 +273,10 @@ export env=dev
 
 </Alert>
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
-<pre><code className="html"><Alert title="Exports" type="export">
+````markdown
+<Alert title="Exports" type="export">
 
 This process uses [Terminus](/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 
@@ -283,7 +285,8 @@ export site=yoursitename
 export env=dev
 ```
 
-</Alert></code></pre>
+</Alert>
+````
 
 </Example>
 
@@ -300,7 +303,7 @@ Notes should identify important pieces of information the reader shouldn't miss.
 
 </Alert>
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```html
 <Alert title="Note"  type="info" >
@@ -322,7 +325,7 @@ Warnings cover information critical to the reader and highlight potential danger
 
 </Alert>
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```html
 <Alert title="Warning" type="danger" >
@@ -351,7 +354,7 @@ Success callouts are used infrequently, usually in guides with specific end resu
 
 </Alert>
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```html
 <Alert title="Incorrect DNS Configuration" type="danger" icon="remove">
@@ -424,7 +427,7 @@ Some code.
 
 </TabList>
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
     <TabList>
     
@@ -488,7 +491,7 @@ Screenshots are used to reference GUI instructions:
 
 ![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 ![Alt text describing the image](../images/dashboard/terminus-cli-code-to-commit-dashboard.png)
@@ -503,7 +506,7 @@ Terminal screenshots should only be used to demonstrate intended output:
 
 ![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 ![Alt text describing the image](../images/pr-workflow/composer-require-pathauto.png)
@@ -525,7 +528,7 @@ RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bi
 
 Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 ### RedisException: Redis server went away
@@ -554,7 +557,7 @@ This Panel contains additional context, or advanced instructions.
 
 </Accordion>
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```html
 <Accordion title="Panel Title" id="example-panel" icon="wrench">
@@ -583,7 +586,7 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 ## Enable Redis
@@ -612,7 +615,7 @@ Given two new sites with slugs <Popover title="Slugs" content="Generally, Slugs 
 * Subdirectories: `example.com/first-site` and `example.com/second-site`.
 * Subdomains: `first-site.example.com` and `second-site.example.com`.
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 Given two new sites with slugs <Popover title="Slugs" content="Generally, are URL friendly descriptions for a post or a page in WordPress. In the context of WordPress Site Networks, a slug is a URL friendly description for a network site." /> `first-site` and `second-site`, each configuration will result in the following URLs:
@@ -633,7 +636,7 @@ This is the optimal place to provide links to external resources on the subject,
 - [An internal link](/guides/)
 - [An external link](https://pantheon.io/blog/)
 
-<hr className="source-code" />
+<hr className="source-code" /> <br/>
 
 ```markdown
 ## See Also
