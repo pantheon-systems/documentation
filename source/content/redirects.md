@@ -45,7 +45,7 @@ If your site configuration prevents you from setting the primary domain from the
 ## Additional Redirects (Optional)
 Implement scenario specific redirects as required by the site. Depending on the needs of the site, you may only need one, some, or none of the following.
 
-Redirect logic should be added to `wp-config.php` for WordPress sites, and `settings.php` for Drupal sites.
+Redirect logic should be added to `wp-config.php` for WordPress sites, and `settings.php` for Drupal sites. Note that the platform-set primary domain will redirect all requests, not just the root domain
 
 ### Redirect to HTTPS
 The following configuration will redirect HTTP requests to HTTPS, such as `http://env-site-name.pantheonsite.io` to `https://env-site-name.pantheonsite.io` or `http://example.com` to `https://example.com`:
@@ -161,6 +161,13 @@ if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name()
 ```
 
 ### Redirect Multiple Subdomains
+
+<Alert type="info" title="Note">
+
+If you've configured your [primary domain at the platform level](#set-primary-domain-and-hsts-with-pantheonyml) and can [add these subdomains](/domains#custom-domains) to the same same environment, redirection will happen automatically.
+
+</Alert>
+
 The following configuration will redirect requests for `sub1.example.com`, `sub2.example.com`, `sub3.example.com`, and `sub4.example.com` to `https://new.example.com`:
 
 ```php
