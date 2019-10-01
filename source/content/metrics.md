@@ -46,7 +46,7 @@ Pantheon-identified bots are excluded from the Visits and Pages Served Metrics.
 Only requests with a 2xx status count as pages served, so 301 redirects will not be included in metrics.
 
 ### Can I see metrics for other environments?
-Yes! Metrics are now available for the entire site or by environment via the Terminus `metrics` command.
+Yes! Metrics are now available for the entire site or by environment via the [Terminus](/terminus) `metrics` command.
 
 ### Why don't I see any data, or why don't I see a full 12 months of data?
 Data is shown for dates after March 18, 2018. If your site is not yet on the Global CDN data will not be available. To upgrade, see [Pantheon Global CDN](/global-cdn/).
