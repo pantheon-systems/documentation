@@ -256,6 +256,52 @@ require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
 
 </Example>
 
+You can also define a single line code block as a command:
+
+<Example>
+
+```bash{promptUser: user}
+mkdir -p ~/repos/mdx-slug
+```
+
+<hr className="source-code" /> <br/>
+
+````markdown
+```bash{promptUser: user}
+mkdir -p ~/repos/mdx-slug
+```
+````
+
+</Example>
+
+Or define which lines are output:
+
+<Example>
+
+```bash{outputLines:2-6}
+ls  -1 ~/repos
+documentation
+i3lock-color
+i3lock-fancy
+j4-dmenu-desktop
+mdx-slug
+```
+
+<hr className="source-code" /> <br/>
+
+````markdown
+```bash{outputLines:2-6}
+ls  -1 ~/repos
+documentation
+i3lock-color
+i3lock-fancy
+j4-dmenu-desktop
+mdx-slug
+```
+````
+
+</Example>
+
 ### Variables
 
 When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
