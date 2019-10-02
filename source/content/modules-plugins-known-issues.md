@@ -507,6 +507,15 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 
 <hr />
 
+### [InfiniteWP](https://infinitewp.com)
+**Issue 1**: Installing the InfiniteWP admin panel in a Pantheon hosted site is not possible because they are hardcoding the DB creds and using custom port in the url due to platform limitations.
+
+**Issue 2**: Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
+
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream/) or [WP Site Network](/guides/multisite/) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
+
+<hr />
+
 ### [Instashow](https://elfsight.com/instagram-feed-instashow/)
 **Issue**: The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 
