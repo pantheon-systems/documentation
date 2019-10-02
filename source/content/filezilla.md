@@ -59,14 +59,26 @@ Your file uploads (Drupal's `sites/default/files` and WordPress's `wp-content/up
 
 ## Troubleshooting
 ### File transfer failed on production environments
-Starting at the Performance Medium service level up to Elite plans, the Test and Live environments are provisioned with multiple application containers. When SFTP'ing into production environments, you may experience the following error:
+Starting at the Performance Medium service level up to Elite plans, the Test and Live environments are provisioned with multiple application containers. When transferring files over SFTP into production environments, you may experience the following error:
 
 ```
-/srv/bindings/1111111111111111111111111111111/files/somefile.ext: open for read: no such file or directory
+/srv/bindings/SITE-BINDING/files/somefile.ext: open for read: no such file or directory
 Error:            File transfer failed
 ```
 
-Resolve instances of transfer failures by reconfiguring FileZilla to limit the number of simultaneous connections. Go to Site Manager Transfer Settings and set "Limit number of simultaneous connections" to 1. See also, [this FAQ on our related SFTP doc](/docs/sftp#i-am-receiving-errors-connecting-to-my-server-with-an-sftp-client).
+Resolve instances of transfer failures by reconfiguring FileZilla to limit the number of simultaneous connections:
+
+1. Under the **File** menu, click on **Site Manager**.
+
+1. Select your site profile, then the **Transfer Settings** tab.
+
+1. Check **Limit number of simultaneous connections**:
+
+  ![Limit simultaneous connections in Filezilla](../images/filezilla-limit-connections.png)
+
+1. Set the **Maximum number of connections** to `1`.
+
+See also, [this FAQ on our related SFTP doc](/sftp#i-am-receiving-errors-connecting-to-my-server-with-an-sftp-client).
 
 ### Uploading to the Files Directory
 FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/winscp) (Windows).
