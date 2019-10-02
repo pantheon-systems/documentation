@@ -105,11 +105,17 @@ jobs:
          name: Deploy Multidev environment
          command: |
            bash ./scripts/deploy-multidev.sh
+      - store_artifacts:
+         path: ~/build/multidev-log.txt
+         destination: multidev-log.txt
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               scripts/deploy-live.sh
             fi
+      - store_artifacts:
+         path: ~/build/deployment-log.txt
+         destination: deployment-log.txt
 
 workflows:
   version: 2
