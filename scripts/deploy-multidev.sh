@@ -61,8 +61,9 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
   # rsync output_prod/* to Valhalla
 
   printf "Copy docs to multidev environment.. \n"
-  touch ./multidev-log-a-m.txt
-  touch ./multidev-log-n-z.txt
+  mkdir logs
+  touch ./logs/multidev-log-a-m.txt
+  touch ./logs/multidev-log-n-z.txt
 
   printf "A-M: \n"
   while true

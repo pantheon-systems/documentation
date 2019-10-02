@@ -106,8 +106,8 @@ jobs:
          command: |
            bash ./scripts/deploy-multidev.sh
       - store_artifacts:
-         path: ~/build/multidev-log-a-m.txt
-         path: ~/build/multidev-log-n-z.txt
+         path: ~/build/logs/
+         destination: logs/
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
