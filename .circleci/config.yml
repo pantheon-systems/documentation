@@ -103,6 +103,11 @@ jobs:
             curl -O https://raw.githubusercontent.com/alexfornuto/terminus-installer/master/installer.php
             php installer.php
       - run:
+          name: Rebuild Gatsby
+          command: |
+            cd ~/build/gatsby
+            ./node_modules/gatsby/node_modules/.bin/gatsby build --prefix-paths
+      - run:
          name: Deploy Multidev environment
          command: |
            bash ./scripts/deploy-multidev.sh
