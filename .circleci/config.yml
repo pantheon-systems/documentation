@@ -105,6 +105,7 @@ jobs:
          name: Deploy Multidev environment
          command: |
            bash ./scripts/deploy-multidev.sh
+         no_output_timeout: 15m
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
