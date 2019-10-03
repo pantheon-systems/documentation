@@ -89,6 +89,18 @@ if [ "$CIRCLE_BRANCH_SLUG" != "master" ] && [ "$CIRCLE_BRANCH_SLUG" != "dev" ] &
     fi
   done
 
+  printf "Cache: \n"
+  while true
+  do
+    if ! rsync --delete-delay -chrlz --ipv4 --log-file=logs/multidev-log-a-m.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/.cache/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/; then
+    echo "Failed, retrying..."
+    sleep 5
+  else
+    break
+  fi
+  done
+
+
   printf "\n Commenting on GitHub... \n"
 
   #Get comment ID and comment body from last commit comment
