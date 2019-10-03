@@ -59,6 +59,7 @@ jobs:
           root: .
           paths:
             - ./
+            - ./gatsby/.cache
 
   test:
     docker:
