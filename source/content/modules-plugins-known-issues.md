@@ -508,11 +508,13 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 <hr />
 
 ### [InfiniteWP](https://infinitewp.com)
-**Issue 1**: Installing the InfiniteWP admin panel in a Pantheon hosted site is not possible because they are hardcoding the DB creds and using custom port in the url due to platform limitations.
+**Issue 1:** Installing the InfiniteWP admin panel on a Pantheon hosted site is not possible, because the plugin hardcodes the database credentials and uses a custom port in the URL. Our platform offers database credentials and offers them as an environment variable, and does not allow web access on ports other than `80` and `443`.
+
+**Solution 1:** You can run the admin panel on a local WordPress site, or host the admin panel elsewhere.
 
 **Issue 2**: Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream/) or [WP Site Network](/guides/multisite/) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
+**Solution 2:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream/) or [WP Site Network](/guides/multisite/) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
 
 <hr />
 
