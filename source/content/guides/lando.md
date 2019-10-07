@@ -148,7 +148,7 @@ To use this Lando recipe you must have:
 
 1. In your project directory, create a new directory for your WordPress + Pantheon integrated environment, and `cd` to it.
 
-1. Initiate a new Lando site, specifying Panthoen as the source:
+1. Initiate a new Lando site, specifying Pantheon as the source:
 
   ```bash
   lando init --source pantheon
