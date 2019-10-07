@@ -15,7 +15,6 @@ completiontime: 1 hour
 image: launchGuide-twitterLarge
 ---
 
-Welcome! This guide is designed to get you started on Pantheon.
 
 <Callout
   title="Getting Started Training"
