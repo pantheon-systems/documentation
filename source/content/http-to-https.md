@@ -3,20 +3,24 @@ title: Switching Sites from HTTP to HTTPS
 description: Best-practice HTTPS configurations for WordPress and Drupal to fix mixed-content browser warnings and excessive redirects.
 tags: [security]
 ---
-All new sites created on Pantheon are configured for HTTPS by default. HTTPS is available immediately for Platform domains like `multidev-example.pantheonsite.io`. When you upgrade to a paid plan you can connect a custom domain. For more information on HTTPS provisioning for custom domains see [Free and Automated HTTPS](/https/).
+All new sites created on Pantheon are configured for HTTPS by default. HTTPS is available immediately for Platform domains like `multidev-example.pantheonsite.io`.
+
+When you upgrade to a paid plan you can connect a custom domain. For more information on HTTPS provisioning for custom domains see [HTTPS on Pantheon's Global CDN](/https/).
 
 The following describes how to switch WordPress and Drupal sites over from HTTP to HTTPS.
 
 ## Before you begin
 Be sure that you have:
 
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live) with DNS properly configured.
+- A [Paid Pantheon plan](/guides/launch/plans/)
+- A [Custom Domain](/domains#custom-domains) connected to the target Pantheon environment (typically Live), set to the [primary domain](/domains#primary-domain), with DNS properly configured.
 - HTTPS provisioned, indicated by the following notice:
 
-    <blockquote class="block-success">
-    <h3 class="info">HTTPS</h3>
-    <span class="glyphicons glyphicons-ok text-success"></span> Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.</blockquote>
+  <Alert title="HTTPS" type="dash-success">
+
+  <span class="glyphicons glyphicons-ok text-success" color="#5CB85C"></span> Let’s Encrypt certificate deployed to Pantheon’s Global CDN. Certificate renews automatically with no additional cost.
+
+  </Alert>
 
 ## Test HTTPS availability and existing redirects
 Start by testing a simple HTML or Text file in your browser with HTTPS on your custom domain. The test is successful if the browser loads the file securely with no warnings:
@@ -115,11 +119,17 @@ At this point, all visitors to the site should be able to securely access all pa
 
 ## Redirect to HTTPS and the primary domain
 
-As part of best security practices, we suggest you [Require HTTPS with the HSTS Header](/pantheon-yml/#enforce-https--hsts), as well as a redirect.
+<Partial file="primary-domain.md" />
 
-If you need more control over your redirect and/or HSTS header, then you can manually configure redirects to the primary domain with HTTPS in `settings.php` or `wp-config.php` if a visitor arrives either (1) on a different domain or (2) without HTTPS.
+It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in [pantheon.yml](/pantheon-yml#enforce-https--hsts)
+
+If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects:
+
+<Accordion title="PHP Redirection" >
 
 <Partial file="_redirects.md" />
+
+</Accordion>
 
 Attempting to visit any page with HTTP or a non-primary domain should redirect to a page with the primary domain and a “Secure” label. For additional redirect scenarios, see [Domains and Redirects](/domains/#-see-more-redirect-scenarios).
 
@@ -149,5 +159,3 @@ You can use this [redirect mapper by Patrick Sexton](https://varvy.com/tools/red
 
 Check all configured services when looking for redirects to remove, like page rules on some external CDN.
 
-### HTTPS Strict Transport Security (optional)
-Send headers for HTTPS Strict Transport Security. This creates a long-term commitment to delivering the site with HTTPS and should raise the SSL Labs grade to A+ (if the site uses Global CDN). For details, see [Require HTTPS with the HSTS Header](/pantheon-yml/#enforce-https--hsts).

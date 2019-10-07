@@ -13,8 +13,8 @@ function TopicGroup(props) {
 	const { title, subTitle, docs } = props;
 	return (
 		<div className="col-md-6 topic-groups">
-			{title && <h3>{title}</h3>}
-			{subTitle && <p className="topic-info__description">{subTitle}</p>}
+			<h3>{title}</h3>
+			<p className="topic-info__description">{subTitle}</p>
 			<ul className="topic-docs">
 				{docs &&
 					docs.map((doc) => (

@@ -34,19 +34,23 @@ Sustained traffic is two consecutive months of being over the site plan limit.
 ### How can I change my Performance size plan if I need to scale up to handle more traffic?
 You can upgrade your plan in your dashboard at any time. You may not be able to downgrade to a smaller performance size plan based on your traffic history.
 
-### Why doesn't Pantheon's traffic match my analytics?
-There are some inherent limitations with using an analytics suite (e.g. Google Analytics) when measuring site traffic. The following traffic will be collected in our logs, but will not be present in most analytics:
+### Why doesn't Pantheon's traffic metrics match my other analytics?
+Analytics suites (e.g. Google Analytics) are measuring fundamentally different things vs Pantheon's request log. While analytics suites focus on measuring _visits_, our request log more comprehensively measures _traffic_.
+
+We track every single request to the platform, whereas analytics tools will typically only track complete "pageviews" where an HTML page including a tracking snippit is completely loaded by a browser and can fire off a subsequent request to the analytics platform.
+
+For example, the following traffic will be collected in our logs, but will not be present in most analytics:
 
  - API requests and AJAX requests.
- - Browsers/users that block cookies or javascript, including adblockers.
+ - Browsers/users that block cookies or javascript, including adblockers or private mode.
  - Users that close the browser before the tracking script loads.
- - Any page with a JavaScript error.
- - Content pre-fetching, by browsers or [apps](https://www.facebook.com/business/help/1514372351922333).
+ - A page where there is no tracking code, or where a javascript error prevents the tracking code from firing.
  - Automated traffic from bots or load testing.
+ - Content pre-fetching by browsers or [apps](https://www.facebook.com/business/help/1514372351922333).
 
-Finally, analytics implementations can be variable. It may be that your analytics solution isn't tracking all pages served for good reason. For example, you may exclude CMS administrators to give you a view of "visitors only". Misconfiguration may also play a factor.
+Analytics implementations can be variable. It may be that your analytics solution isn't tracking all pages served for good reason. For example, you may exclude CMS administrators to give you a view of "visitors only".
 
-Due to the fact that analytics doesn't measure _traffic_, it's not a suitable metric for determining platform use/abuse.
+Content pre-fetching increasingly plays a role in driving up traffic metrics without having the same impact on visitor-centric analytics. Speculatively loading pages in the background is a common tactic to improve the user experience on the web, which we support people using. However, this does generate more overall traffic from the perspective of the platform.
 
 ### What about static assets?
 Static requests (images PDFs, CSS, JS, etc) are not included in our normal traffic metrics. Under regular CMS use-cases, these supporting requests to render HTML pages for users with browsers are not a concern.

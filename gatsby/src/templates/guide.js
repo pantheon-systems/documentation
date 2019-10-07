@@ -78,7 +78,7 @@ class GuideTemplate extends React.Component {
     return (
       <Layout>
         <SEO
-          title={node.frontmatter.title}
+          title={node.frontmatter.subtitle + " | " + node.frontmatter.title}
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}

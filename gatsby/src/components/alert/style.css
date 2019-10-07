@@ -81,6 +81,28 @@
   font-size: 28px;
 }
 
+.alert-dash-success {
+  background-image: none !important;
+  border-color: #ddd;
+  border-left-color: #5CB85C;
+  border-top-left-radius: 4px;
+  border-left-width: 8px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-bottom-left-radius: 4px;
+  font-size: 18px;
+  line-height: 29px;
+  font-family: "Open Sans", sans-serif;
+}
+.alert-dash-success h4 {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 600;
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+}
+
 .alert-export {
   background-image: none !important;
   border-color: #efd01b;

@@ -37,7 +37,7 @@ Once you finish following any system prompts, the Lando installation script will
 
 ## Getting Started
 
-You’ll manage your Lando instances via the command line. A short list of useful Lando commands can be found [here](https://docs.devwithlando.io/cli/usage.html). If you ever need a refresher, simply pull up your terminal and type:
+You’ll manage your Lando instances via the command-line. A short list of useful Lando commands can be found [here](https://docs.devwithlando.io/cli/usage.html). If you ever need a refresher, simply pull up your terminal and type:
 
 ```bash
 lando --help
@@ -79,7 +79,7 @@ Getting started with Lando can be disorienting at first. Fear not, mighty develo
 
 1. Enter the name of the site. Use something you’ll remember!
 
-  Your local site has been created but your still not done! You still need to start the app, download WordPress and then install WordPress. Sure, it’s a few steps but the command line practice is good for bone growth and keyboard-punching-dexterity.
+  Your local site has been created but you're still not done! You still need to start the app, download WordPress and then install WordPress. Sure, it’s a few steps but the command-line practice is good for bone growth and keyboard-punching-dexterity.
 
 1. Start Lando:
 
@@ -87,7 +87,7 @@ Getting started with Lando can be disorienting at first. Fear not, mighty develo
   lando start
   ```
 
-  This starts your lando app and gives you some basic information like your Appserver URLs to access the site in your local browser of choice:
+  This starts your Lando app and gives you some basic information like your Appserver URLs to access the site in your local browser of choice:
 
   ![alt text](../../images/guides/lando/lando-start.png)
 
@@ -105,7 +105,7 @@ Getting started with Lando can be disorienting at first. Fear not, mighty develo
 
   </Alert>
 
-1. Your WP configuration file still needs to be created. You can actually do this from the command line. However, we’re going to go to do this the ol’ fashioned way through the browser.
+1. Your WP configuration file still needs to be created. You can actually do this from the command-line. However, we’re going to go to do this the ol’ fashioned way through the browser.
 
 1. In your browser, enter in the URL given to you above: `http://yourappname.lndo.site`. You’ll notice WordPress’s _Famous Five Minute install_ screen.
 
@@ -137,7 +137,7 @@ To use this Lando recipe you must have:
 
 - Pantheon hosted site ready to go. You can either use an existing Pantheon site or [spin up a new one](/guides/quickstart/create-new-site)
 
-- A unique Pantheon [machine token](machine-tokens)
+- A unique Pantheon [machine token](/machine-tokens)
 
 
 1. From the directory of the WordPress site created in the section above, stop the Lando instance (if still running):
@@ -148,7 +148,7 @@ To use this Lando recipe you must have:
 
 1. In your project directory, create a new directory for your WordPress + Pantheon integrated environment, and `cd` to it.
 
-1. Initiate a new lando site, specifying Panthoen as the source:
+1. Initiate a new Lando site, specifying Panthoen as the source:
 
   ```bash
   lando init --source pantheon

@@ -20,16 +20,33 @@ Using `.htaccess` is generally not recommended - even for sites running  [Apache
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All `if` conditional statements need to be in the correct order. For example, a wholesale redirect executed *prior* to redirects for specific pages would likely prevent the second statement from being evaluated.
 
 ## Redirect to HTTPS and the Primary Domain
-This redirect is considered best practice and recommended as part of the going live procedure. Configure this redirect after connecting a custom domain in the Site Dashboard when you're ready to launch the site. For details, see [Launch Essentials](/guides/launch/). 
+This redirect is considered best practice and recommended as part of the going live procedure. Configure this redirect after connecting a custom domain in the Site Dashboard when you're ready to launch the site.
 
-The following configuration will redirect HTTP to HTTPS _and_ enforce use of a primary domain, such as `http://live-site-name.pantheonsite.io` to `https://www.example.com` or `http://example.com` to `https://www.example.com`:
+### Set Primary Domain and HSTS with Pantheon.yml
+
+This is the preferred method of setting HTTPS, HSTS, and the primary domain for your site.
+
+To set the primary domain:
+
+<Partial file="primary-domain.md" />
+
+See [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts) in the Pantheon.yml doc to set the HSTS header and redirect all traffic to HTTPS.
+
+### Redirect with PHP
+
+If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects:
+
+<Accordion title="PHP Redirection" >
 
 <Partial file="_redirects.md" />
+
+</Accordion>
 
 ## Additional Redirects (Optional)
 Implement scenario specific redirects as required by the site. Depending on the needs of the site, you may only need one, some, or none of the following.
 
-As described [above](#redirect-to-https-and-the-primary-domain), redirect logic should be added to `wp-config.php` for WordPress sites, and `settings.php` for Drupal sites.
+Redirect logic should be added to `wp-config.php` for WordPress sites, and `settings.php` for Drupal sites. Note that the platform-set primary domain will redirect all requests, not just the root domain
+
 ### Redirect to HTTPS
 The following configuration will redirect HTTP requests to HTTPS, such as `http://env-site-name.pantheonsite.io` to `https://env-site-name.pantheonsite.io` or `http://example.com` to `https://example.com`:
 
@@ -144,6 +161,13 @@ if ( (isset($redirect_targets[ $_SERVER['REQUEST_URI'] ] ) ) && (php_sapi_name()
 ```
 
 ### Redirect Multiple Subdomains
+
+<Alert type="info" title="Note">
+
+If you've configured your [primary domain at the platform level](#set-primary-domain-and-hsts-with-pantheonyml) and can [add these subdomains](/domains#custom-domains) to the same same environment, redirection will happen automatically.
+
+</Alert>
+
 The following configuration will redirect requests for `sub1.example.com`, `sub2.example.com`, `sub3.example.com`, and `sub4.example.com` to `https://new.example.com`:
 
 ```php
