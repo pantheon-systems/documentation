@@ -1,7 +1,6 @@
 #!/bin/bash
 # Deploy branch to multidev on commit
 # Note: This script uses CircleCI environment variables https://circleci.com/docs/environment-variables
-# Note: PRs from forks not yet supported, see: https://circleci.com/docs/fork-pr-builds
 
 printf "Create a slug from $CIRCLE_BRANCH \n"
 CIRCLE_BRANCH_SLUG=$(echo "$CIRCLE_BRANCH" | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z)
