@@ -58,7 +58,7 @@ The supported Git provider and Continuous Integration service combinations are:
 - [<CustomIcon icon="gitlab" /> GitLab](https://about.gitlab.com) with [GitLabCI](https://about.gitlab.com/product/continuous-integration/)
 - [<CustomIcon icon="bitbucket" /> BitBucket](https://bitbucket.org/product/) with [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
 
-Build Tools projects also use [<CustomIcon icon="composer" /> Composer  <Popover title="CI Service" content="Composer is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a project." />](https://getcomposer.org) for PHP dependency management. If you haven't worked with Composer before, the [Pantheon Composer doc](/docs/composer) is a great place to get started.
+Build Tools projects also use [<CustomIcon icon="composer" /> Composer  <Popover title="CI Service" content="Composer is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a project." />](https://getcomposer.org) for PHP dependency management. If you haven't worked with Composer before, the [Pantheon Composer doc](/composer) is a great place to get started.
 
 <Enablement title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 Master Composer, automated testing, and other advanced workflow concepts with help from our experts. Pantheon delivers custom workshops to help teams master our platform and improve their [WebOps](https://pantheon.io/webops) workflow.
