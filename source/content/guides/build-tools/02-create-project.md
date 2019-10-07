@@ -17,6 +17,59 @@ previousurl: guides/build-tools/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 ---
+
+
+<Accordion title="Install Build Tools" id="install-build-tools" icon="lightbulb">
+
+### Steps to Install Build Tools
+
+1. Install [Composer](https://getcomposer.org).
+1. Install the most recent release of [Terminus](/terminus/):
+
+    ```bash
+    curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+    ```
+
+1. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+
+1. [Generate a Pantheon machine token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
+
+      ```bash
+      terminus auth:login --machine-token=<machine-token>
+      ```
+
+1. Create the `$HOME/.terminus/plugins` directory if it does not already exist:
+
+      ```bash
+      mkdir -p $HOME/.terminus/plugins
+      ```
+
+1. Install the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin):
+
+    ```bash
+    composer create-project -n --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1
+    ```
+
+1. Install the [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin):
+
+    ```bash
+    composer create-project -n --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1
+    ```
+
+1. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
+
+    ```bash
+    composer create-project --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2
+    ```
+
+1. Optionally, [authorize CircleCI on GitHub](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb) if you plan to use those services.
+
+    If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.
+
+</Accordion>
+
+## Create a Build Tools Project
+
 In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of an Git repository, a CI service, and a Pantheon site. Use the options below to configure your project, then run the generated `terminus build:project:create` command.
 
 **Note:** For all available command options, see [the Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#buildprojectcreate)
