@@ -12,15 +12,7 @@ image: terminus-thumbLarge
 searchboost: 200
 ---
 
-Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
 
-[Install Terminus](/terminus/install) on Mac OS X or Linux. For details on legacy versions of Terminus, see [Legacy Terminus Versions](/terminus/get-started/legacy).
-
-<Enablement title="Command Line Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-
-Increase your developers' confidence on Terminus and generate ideas for writing your own scripts with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
-
-</Enablement>
 
 ## Usage
 
