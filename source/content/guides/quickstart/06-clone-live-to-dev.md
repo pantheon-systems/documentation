@@ -20,7 +20,6 @@ editpath: quickstart/06-clone-live-to-dev.md
 image: launchGuide-twitterLarge
 ---
 
-In this lesson, we’ll explore your Live site and add an article or post to simulate working on a real production site. Then we’ll clone your Live site “down” to your Dev site.
 
 **Watch the video:**
 
