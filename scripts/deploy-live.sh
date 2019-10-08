@@ -19,7 +19,7 @@ terminus auth:login --machine-token $PANTHEON_TOKEN
 # Deploy modified files to production                           #
 #===============================================================#
 touch ./deployment-log.txt
-rsync --delete-after -chrlz --ipv4 --info=BACKUP,DEL --log-file=./deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
+rsync --delete-delay -chrltz --ipv4 --info=BACKUP,DEL --log-file=./deployment-log.txt -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ live.$PROD_UUID@appserver.live.$PROD_UUID.drush.in:files/docs/
 if [ "$?" -eq "0" ]
 then
     echo "Success: Deployed to https://pantheon.io/docs"
