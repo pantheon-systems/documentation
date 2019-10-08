@@ -2231,13 +2231,16 @@ input.gsc-search-button:focus {
 
 .gatsby-highlight-code-line {
   background-color: #efcf1b;
-  color: black;
   display: block;
   margin-right: -1em;
   margin-left: -1em;
   padding-right: 1em;
   padding-left: 0.75em;
   border-left: 0.25em solid #f99;
+}
+
+.gatsby-highlight-code-line, .gatsby-highlight-code-line .token {
+    color: #181D21 !important;
 }
 
 .gatsby-remark-code-title {
