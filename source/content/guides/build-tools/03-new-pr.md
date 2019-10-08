@@ -1,7 +1,7 @@
 ---
 title: Build Tools
 subtitle: Start a Pull Request
-description: In step three of the Build Tools guide, learn how to use GitHub as part of your workflow.
+description: In step three of the Build Tools guide, learn how to use pull requests as part of your workflow.
 buildtools: true
 anchorid: new-pr
 generator: pagination
@@ -17,21 +17,21 @@ previousurl: guides/build-tools/create-project/
 editpath: build-tools/03-new-pr.md
 image: buildToolsGuide-thumb
 ---
-This section demonstrates GitHub's Pull Request workflow for Pantheon by making a simple code change on a feature branch then opening a Pull Request to accept that change into master.
 
-The master branch is automatically built and deployed to the Dev environment. Feature branches are automatically built and deployed to individual Multidev environments:
+## Pull Request Introduction
+This section demonstrates the Build Tools project workflow by making a code change on a Git feature branch and opening a Pull Request to accept that change into the `master` branch.
+
+As a reminder, you will be working with the code repository hosted by your project's external Git provider (GitHub, GitLab or BitBucket). The Continuous Integration service (CircleCI, GitLab or BitBucket Pipelines) with then build the full site artifact and deploy it to the project's Pantheon site.
+
+Branches with an associated pull request are build and deployed to a [Pantheon multidev environment](https://pantheon.io/docs/multidev), with the pull request number being used to construct the multidev name. For example, pull request `12` will be deployed to a Pantheon multidev named `pr-12`.
+
+The `master` branch is automatically built and deployed to the Pantheon `dev` environment. This happens both when you commit code directly to the `master` branch and when a pull request is merged into the `master` branch.
 
 ![Continuous delivery diagram](../../../images/pr-workflow/github-circle-pantheon.png)
 
+Deployments to the `test` and `live` environments on Pantheon must still be done manually, either in the dashboard or via Terminus. For this reason, Continuous Delivery <Popover title="Continuous Delivery" content="Continuous Delivery (CD) is the practice of automatically deploying code all the way to production, without human intervention. This requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress." /> is not enabled.
 
-<Accordion title="Continuous Delivery" id="understand-cd" icon="lightbulb">
-
-Continuous delivery requires a consistently clear deployment pipeline from development to production. That is to say, an application must be able to deploy code to production at any given time regardless of current work in progress. Anything that keeps your application from deploying code to production is considered a blocker.
-
-Production code is tracked by the master branch on GitHub and it is assumed to be production ready. Development work is done on a feature branch first, then proposed to master in the form of a Pull Request so it can be tested and reviewed before it's accepted.
-
-</Accordion>
-
+## Create a Pull Request
 
 1. From your GitHub project page, click on the `config` directory. Select the file named `system.site.yml` and click <span class="glyphicon glyphicon-pencil"></span> to open an editor:
 
@@ -44,13 +44,6 @@ Production code is tracked by the master branch on GitHub and it is assumed to b
 3. Scroll down and enter a message describing this change in the **Commit changes** area. Then, click on the radio button to create a **new branch** and give it a short name, like `slogan`, then click **Propose file change**:
 
   ![Create slogan branch](../../../images/pr-workflow/create-slogan-branch.png)
-
-
-  <Accordion title="Branch Naming Conventions" id="understand-branch-names" icon="lightbulb">
-
-  Be sure to use unique branch names for each feature branch; the Multidev environment created on Pantheon is named after your branch. Since there is a limit to the number of characters that may be used in a Pantheon Multidev name, your environments may conflict if you always use the branch name that GitHub suggests. For details, see [Multidev](/multidev/#what-are-the-naming-conventions-for-branches)).
-
-  </Accordion>
 
 
 4. Click **Create Pull Request**:
