@@ -1,7 +1,7 @@
 ---
 title: Build Tools
 subtitle: Create a New Project
-description: In step two of the Build Tools guide, learn how to create your new project.
+description: In step two of the Build Tools guide, learn how to create a new Build Tools project.
 anchorid: create-project
 layout: guide
 type: guide
@@ -18,81 +18,35 @@ editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 ---
 
+In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of an Git repository, a CI service, and a Pantheon site.
 
-<Accordion title="Install Build Tools" id="install-build-tools" icon="lightbulb">
+Before beginning, make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. If you need help installing either, expand the installation instructions below.
 
-### Steps to Install Build Tools
-
-1. Install [Composer](https://getcomposer.org).
-1. Install the most recent release of [Terminus](/terminus/):
-
-    ```bash
-    curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-    ```
-
-1. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
-
-1. [Generate a Pantheon machine token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
-
-      ```bash
-      terminus auth:login --machine-token=<machine-token>
-      ```
-
-1. Create the `$HOME/.terminus/plugins` directory if it does not already exist:
-
-      ```bash
-      mkdir -p $HOME/.terminus/plugins
-      ```
-
-1. Install the [Terminus Composer Plugin](https://github.com/pantheon-systems/terminus-composer-plugin):
-
-    ```bash
-    composer create-project -n --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-composer-plugin:~1
-    ```
-
-1. Install the [Terminus Drupal Console Plugin](https://github.com/pantheon-systems/terminus-drupal-console-plugin):
-
-    ```bash
-    composer create-project -n --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1
-    ```
-
-1. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin):
-
-    ```bash
-    composer create-project --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2
-    ```
-
-1. Optionally, [authorize CircleCI on GitHub](https://github.com/login/oauth/authorize?client_id=78a2ba87f071c28e65bb) if you plan to use those services.
-
-    If you are redirected to the CircleCI homepage, you have already authorized the service for your GitHub account. Nice! Way to be ahead of the game.
-
-</Accordion>
+<InstallBuildTools />
 
 ## Create a Build Tools Project
 
-In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of an Git repository, a CI service, and a Pantheon site. Use the options below to configure your project, then run the generated `terminus build:project:create` command.
+<Alert title="Note" type="info">
+
+  The screenshots below show a Drupal 8 project. Pantheon maintains Composer based examples for both [WordPress](https://github.com/pantheon-systems/example-wordpress-composer) and [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer). The steps and workflow are the same for both frameworks.
+
+</Alert>
+
+Use the options below to configure your project, then run the generated `terminus build:project:create` command.
 
 **Note:** For all available command options, see [the Build Tools Project README](https://github.com/pantheon-systems/terminus-build-tools-plugin/blob/master/README.md#buildprojectcreate)
 
 <BuildProjectCreateCommandGenerator />
 
-1. Create a new project (replace `pantheon-d8-composer-project` with the name of your new site):
+1. Create a new project using the command generated above
 
-  ```bash
-  terminus build:project:create d8 pantheon-d8-composer-project
-  ```
-
-  <Alert title="Note" type="info">
-
-  Pantheon also maintains Composer based examples for [WordPress](https://github.com/pantheon-systems/example-wordpress-composer) and [Drupal 7](https://github.com/pantheon-systems/example-drops-7-composer) that are currently in alpha, requiring `--stability=alpha` in the command line options. While this guide demonstrates Drupal 8, the same workflow can be achieved on all frameworks.
-
-  </Alert>
-
-  Provide additional information as prompted, such as Organization (if any), and tokens for GitHub and CircleCI access:
+  Provide additional information as prompted, such as tokens/credentials for your chosen Git provider and CI service:
 
   ![Create Project Prompts](../../../images/pr-workflow/build-env-create-project-prompts.png)
 
-  This process will create a secure keypair, with the public key going to Pantheon and the private key stored in CircleCI. If you remove either key, you will need to [generate a new pair](/ssh-keys/) manually to fix the build process.
+  This process will create a secure SSH keypair, with the public key going to Pantheon and the private key stored in your CI service provider. If you remove either key, you will need to run `build:project:repair` to fix the build process. See `build:project:repair -h` for details.
+
+  The project creation process will also set the necessary environment variables, such as the UUID of your the Pantheon site, in your CI service provider.
 
   <Accordion title="Troubleshooting" id="troubleshoot-install" icon="wrench">
 
@@ -144,21 +98,12 @@ In this section, we will use the Terminus Build Tools Plugin to create a new pro
   Pantheon's composer based example repositories are maintained and supported on GitHub. After browsing existing issues, report errors in the appropriate repository's issue queue:
 
     * [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer/issues)
-    * [Drupal 7 (Alpha)](https://github.com/pantheon-systems/example-drops-7-composer/issues)
-    * [WordPress (Alpha)](https://github.com/pantheon-systems/example-wordpress-composer/issues)
+    * [WordPress](https://github.com/pantheon-systems/example-wordpress-composer/issues)
 
   </Accordion>
 
-2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on GitHub:
+2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on your chosen Git provider:
 
   ![Initial Project Page](../../../images/pr-workflow/initial-project-page.png)
 
-  The badges on your project page provide quick access to the different components used to manage your site:
-
-    - The CircleCI page for your project
-    - Your Pantheon dashboard
-    - Your test site
-
-  If you click on the CircleCI badge, you can watch your project's initial test run. Once your tests successfully complete, the orange CircleCI "no builds" badge will become a green "passing" badge:
-
-  ![Passing Project Page](../../../images/pr-workflow/passing-project-page.png)
+3. Congratulations! You now have a new Git repository and a new Pantheon site connected together with Continuous Integration. Read on to learn more about the Build Tools workflow in practice.

@@ -5,7 +5,6 @@ import composerlogo from "../../../source/images/composer-logo.svg"
 import pantheonlogo from "../../../source/images/official-plugin.svg"
 
 const BuildTools= ({ })  => {
-  const h4Style = `margin-top:10px;fontSize:larger`
   return (
     <>
     <div className="flex-panel-group">

@@ -23,11 +23,12 @@ const RadioInputGroup = ({
                 {
                     options.map(obj =>{ 
                         return (
-                            <Col sm={colSize}>
+                            <Col key={`${obj.id}-col`} sm={colSize}>
                                 <Form.Check
                                     type="radio"
                                     label={obj.label}
                                     value={obj.value}
+                                    key={`${obj.id}-input`}
                                     name={name}
                                     id={obj.id}
                                     checked={value === obj.value}
