@@ -2,6 +2,7 @@
 title: Configuring Visual Studio Code on Pantheon 
 description: Configure a local environment for development using Visual Studio Code.
 tags: [local, sftp]
+contributors: [sarahg, alexfornuto]
 ---
 
 ## Overview
@@ -55,29 +56,94 @@ VS Code includes Git integration and an integrated terminal, either of which can
 Make sure your site is in [Git mode](//guides/quickstart/connection-modes) before pushing code via Git.
 
 #### [Git Version Control in VS Code](https://code.visualstudio.com/docs/introvideos/versioncontrol)
-Open the Git menu (**Ctrl/Command + Shift + X** or **View** -> **Extensions**). From here you can review your outstanding changes, commit them with a message, switch branches and more. See the video for more information.
+Open the Git menu (**Ctrl/Command** + **Shift** + **G** or **View** -> **SCM**). From here you can review your outstanding changes, commit them with a message, switch branches and more. See the video for more information.
 
 #### [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal)
-Open the integrated terminal with **Ctrl + `** or **View** -> **Terminal**. Now you can interact with Git as you would normally, without leaving VS Code.
+Open the integrated terminal with **Ctrl** + **`** or **View** -> **Terminal**. Now you can interact with Git as you would normally, without leaving VS Code.
 
 ### Upload your changes with SFTP
 The SFTP extension for VS Code allows developers to upload code to your Pantheon Dev or Multidev environment directly from VS Code, as well as downloading files from the Pantheon servers.
 
-<Alert type="info" title="note">
+Make sure your site is in [SFTP mode](/sftp#sftp-mode) before uploading code via SFTP.
 
-Due to the structure of the Pantheon filesystem, you'll want to nest your site in a directory called "code" in order for code uploads and downloads to land in the right place on the remote server without hard-coding the full remote server path.
+<Alert type="info" title="Note">
+
+Due to the structure of the Pantheon filesystem, you'll want to nest your site in a directory named `code` in order for code uploads and downloads to land in the right place on the remote server without hard-coding the full remote server path:
+
+```bash{outputLines:4}
+cd ~/sites/mysite
+mkdir code
+mv ./* .git code
+mv: cannot move './code' to a subdirectory of itself, 'code/code'
+```
+
+Be aware, this configuration conflicts with using the Git method to push changes to Pantheon, unless you create a separate workspace inside `code` to use Git from.
 
 </Alert>
 
-\\@todo Add example screenshot and caption
-
 1. Install the VS Code [SFTP Extension](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp).
-2. Open the VS Code command palette (`Ctrl+Shift+P` on Windows/Linux or `Cmd+Shift+P` on Mac) and run `SFTP: config` to open the SFTP config file.
-3. @todo \\the config file
-4. @todo \\upload something
-5. Commit your files to Git using the Pantheon Dashboard.
+1. Open the VS Code command palette (**Ctrl/Command** + **Shift** + **P**) and run `SFTP: config` to open the SFTP config file:
 
-Make sure your site is in [SFTP mode](//guides/quickstart/connection-modes) before uploading code via SFTP.
+  ```json:title=sftp.json
+  {
+      "name": "My Server",
+      "host": "localhost",
+      "protocol": "sftp",
+      "port": 22,
+      "username": "username",
+      "remotePath": "/",
+      "uploadOnSave": true
+  }
+  ```
+
+1. Edit the file using the connection information from your Site Dashboard, under the **SFTP** section of the **Connection Info** button. Remove the `remotePath` line, as the path is subject to change and you'll be directed automatically to the correct location:
+
+  ```json:title=sftp.json
+  {
+      "name": "My Site",
+      "host": "appserver.dev.YOUR-SITE-UUID.drush.in",
+      "protocol": "sftp",
+      "port": 2222,
+      "username": "dev.LOGIN-UUID",
+      "uploadOnSave": true
+  }
+  ```
+
+1. If you have an [SSH Key](/ssh-keys) added to your Pantheon account, include the path to it:
+
+  ```json:title=sftp.json
+  {
+      "name": "My Site",
+      "host": "appserver.dev.YOUR-SITE-UUID.drush.in",
+      "protocol": "sftp",
+      "port": 2222,
+      "username": "dev.LOGIN-UUID",
+      "uploadOnSave": true,
+      //highlight-next-line
+      "privateKeyPath": "/Users/localUser/.ssh/id_rsa"
+
+  }
+  ```
+
+  If you aren't using a key, you'll be prompted to enter a password when using SFTP. See [Dashboard Credentials](/sftp#dashboard-credentials) for more information.
+
+  <Alert title="Warning" type="danger">
+
+  If, while using an RSA key, you get the error `Error while signing data with privateKey: error:06000066:public key routines:OPENSSL_internal:DECODE_ERROR`, you must convert your key to PEM format:
+
+  ```bash
+  ssh-keygen -p -m PEM -f ~/.ssh/id_rsa
+  ```
+
+  This may have unintended consequences if you're using this key to authenticate to other systems. We recommend making a new key specifically for this application to convert.
+
+  For more details, see [this issue](https://github.com/liximomo/vscode-sftp/issues/594) on the [vscode-sftp](https://github.com/liximomo/vscode-sftp) plugin GitHub repo.
+
+  </Alert>
+
+1. With `uploadOnSave` set to "true", the next time you save changes to a file it will automatically be pushed to Pantheon.
+1. [Commit your files to Git using the Pantheon Dashboard](/sftp#committing-sftp-changes).
+
 
 
 ## CMS-specific Extensions
