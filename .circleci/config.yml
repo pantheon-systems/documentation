@@ -13,9 +13,7 @@ jobs:
       - run:
           name: Install Terminus
           command: |
-            cd ~/
-            curl -O https://raw.githubusercontent.com/alexfornuto/terminus-installer/master/installer.php
-            php installer.php
+            php scripts/terminus-installer.php
       - run:
           name: Install Gatsby
           command: |
@@ -97,9 +95,7 @@ jobs:
       - run:
           name: Install Terminus
           command: |
-            cd ~/
-            curl -O https://raw.githubusercontent.com/alexfornuto/terminus-installer/master/installer.php
-            php installer.php
+            php scripts/terminus-installer.php
       - run:
          name: Deploy Multidev environment
          command: |
@@ -123,9 +119,7 @@ jobs:
       - run:
           name: Install Terminus
           command: |
-            cd ~/
-            curl -O https://raw.githubusercontent.com/alexfornuto/terminus-installer/master/installer.php
-            php installer.php
+            php scripts/terminus-installer.php
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
