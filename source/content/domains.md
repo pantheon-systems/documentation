@@ -97,8 +97,6 @@ Redirects cannot be managed via `.htaccess`, which is ignored on our platform. F
 
 </Alert>
 
-### Redirect to the Primary Domain
-
 <Partial file="primary-domain.md" />
 
 ### Redirect to HTTPS

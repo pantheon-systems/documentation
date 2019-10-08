@@ -20,16 +20,14 @@ In this lesson, we'll redirect all traffic to a primary domain, which is a best 
 
 Choose one of the following options to configure the primary domain.
 
-## Set Primary Domain
-
 <Partial file="primary-domain.md" />
 
-## Ready to launch like the pros?
+### Ready to launch like the pros?
 Now that you're redirecting requests to a single, primary domain, it's the perfect time to configure a long-duration HSTS header, or set up an availability monitoring service to watch over your site like an automated hawk.
 
-### [Send a Long-Duration HSTS Header for Increased Security](/pantheon-yml/#enforce-https--hsts)
+#### [Send a Long-Duration HSTS Header for Increased Security](/pantheon-yml/#enforce-https--hsts)
 Prevent cookie hijacking and get an A+ rating from SSL Labs.
 
-### [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability) (Optional)
+#### [Setup Availability Monitoring](/new-relic/#configure-ping-monitors-for-availability) (Optional)
 New Relic provides a free availability monitoring service that sends a request to designated URLs from configured locations at given intervals and alerts you via email if a response fails.
 
