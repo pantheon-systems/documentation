@@ -8,7 +8,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v2.2-always-
+            - v2.3-always-
             - npm-v2.4-{{ checksum "gatsby/package-lock.json" }}
       - run:
           name: Install Terminus
@@ -49,7 +49,7 @@ jobs:
             - ~/build/gatsby/package-lock.json
             - ~/build/gatsby/node_modules
       - save_cache:
-          key: v2.2-always-{{ epoch }}
+          key: v2.3-always-{{ epoch }}
           paths:
             - ~/build/gatsby/public
             - ~/build/gatsby/.cache
