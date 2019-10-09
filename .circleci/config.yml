@@ -125,6 +125,7 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               scripts/deploy-live.sh
             fi
+          no_output_timeout: 15m
       - store_artifacts:
          path: ~/build/deployment-log.txt
          destination: deployment-log.txt
