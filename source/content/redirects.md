@@ -22,11 +22,9 @@ When using multiple snippets, be sure to step through the logic. This is particu
 ## Redirect to HTTPS and the Primary Domain
 This redirect is considered best practice and recommended as part of the going live procedure. Configure this redirect after connecting a custom domain in the Site Dashboard when you're ready to launch the site.
 
-### Set Primary Domain and HSTS with Pantheon.yml
+### Set HSTS with Pantheon.yml
 
 This is the preferred method of setting HTTPS, HSTS, and the primary domain for your site.
-
-To set the primary domain:
 
 <Partial file="primary-domain.md" />
 

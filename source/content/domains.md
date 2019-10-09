@@ -68,7 +68,7 @@ Add all domains (example.com and www.example.com are different domains!) you wan
 
 1. From your site dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 
-2. If no domains have been added yet, click **Connect Live Domain**:
+1. If no domains have been added yet, click **Connect Live Domain**:
 
     ![Adding a first domain to the Site Dashboard](../images/dashboard/add-first-domain.png)
 
@@ -76,15 +76,19 @@ Add all domains (example.com and www.example.com are different domains!) you wan
 
     ![Adding an additional domain to the Site Dashboard](../images/dashboard/add-additional-domains.png)
 
-3. Enter the domain you'd like to add in the "Enter domain to connect" field, then click **Connect Domain**:
+1. Enter the domain you'd like to add in the "Enter domain to connect" field, then click **Connect Domain**:
 
     ![Adding a domain to the Site Dashboard](../images/dashboard/connect-custom-domain.png)
 
-4. After adding your domain, you'll be automatically taken to the domain's "Details" page where you will see both the current DNS records detected (the "Detected Values"), as well as the values to be added at your DNS host ("Required Values"):
+1. After adding your domain, you'll be automatically taken to the domain's "Details" page where you will see both the current DNS records detected (the "Detected Values"), as well as the values to be added at your DNS host ("Required Values"):
 
     ![Custom domain Details page](../images/dashboard/details-page.png)
 
-5. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/dns/).
+1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/dns/).
+
+1. You will also see an option to choose a primary domain:
+
+  ![Set the primary domain in the Site Dashboard](../images/dashboard/choose-primary-domain.png)
 
 ## Primary Domain
 Pantheon uses the term **primary domain** to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other domain connected to the environment) all get redirected to `www.example.com`. This assumes that you have added **both** `example.com` and `www.example.com` to the Site Dashboard.
@@ -96,8 +100,6 @@ Redirecting all traffic to a primary domain is a best practice for SEO since it 
 Redirects cannot be managed via `.htaccess`, which is ignored on our platform. For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
 </Alert>
-
-### Redirect to the Primary Domain
 
 <Partial file="primary-domain.md" />
 
