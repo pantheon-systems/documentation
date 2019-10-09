@@ -41,7 +41,7 @@
 
 
 /* @import must be at top of file, otherwise CSS will not work */
-@import url("/count/360074");
+@import url("//hello.myfonts.net/count/360074");
 
 
 @font-face {font-family: 'Adelle-Italic';src: url('../MyFontsWebfontsKit/webfonts/360074_0_0.eot');src: url('../MyFontsWebfontsKit/webfonts/360074_0_0.eot?#iefix') format('embedded-opentype'),url('../MyFontsWebfontsKit/webfonts/360074_0_0.woff2') format('woff2'),url('../MyFontsWebfontsKit/webfonts/360074_0_0.woff') format('woff'),url('../MyFontsWebfontsKit/webfonts/360074_0_0.ttf') format('truetype');}

@@ -16,7 +16,9 @@ class LandingTemplate extends Component {
 		const topic = landingsYaml;
 		return !topic ? null : (
 			<Layout>
-				<SEO />
+				<SEO
+					title={topic.title}
+				/>
 				<div style={{ marginTop: '-20px' }} className="container">
 					<div className="container doc-content-well">
 						<div className="row">
