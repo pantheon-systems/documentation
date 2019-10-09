@@ -110,6 +110,7 @@ jobs:
       - image: circleci/php:7.2-cli-node-browsers
     working_directory: ~/build
     steps:
+      - checkout
       - attach_workspace:
           at: .
       - run:
