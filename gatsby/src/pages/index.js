@@ -14,6 +14,7 @@ class Index extends React.Component {
 		return (
 			<Layout>
 				<SEO
+					title="Pantheon Docs"
 					description="Information for building, launching, and running dynamic sites on the Pantheon Website Management Platform"
 					image={"/assets/images/default-thumb-doc.png"}
 				/>
