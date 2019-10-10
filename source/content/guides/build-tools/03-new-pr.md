@@ -5,7 +5,7 @@ description: In step three of the Build Tools guide, learn how to use pull reque
 buildtools: true
 anchorid: new-pr
 generator: pagination
-layout: guide
+layout: guide-build-tools
 type: guide
 pagination:
     provider: data.buildtoolspages
@@ -17,6 +17,8 @@ previousurl: guides/build-tools/create-project/
 editpath: build-tools/03-new-pr.md
 image: buildToolsGuide-thumb
 ---
+
+<BuildToolsStackSelectToolbar />
 
 ## Pull Request Introduction
 This section demonstrates the Build Tools project workflow by making a code change on a Git feature branch and opening a Pull Request to accept that change into the `master` branch.

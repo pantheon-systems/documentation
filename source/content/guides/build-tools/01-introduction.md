@@ -4,7 +4,7 @@ subtitle: Introduction
 description: Describes the Build Tools project, its purpose, and workflow
 tags: [build-tools, automate, composer]
 contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton]
-layout: guide
+layout: guide-build-tools
 type: guide
 anchorid: build-tools
 buildtools: true
@@ -21,8 +21,10 @@ multidev: true
 ---
 
 <Alert type="export" title="Notice">
-<a href="/docs/terminus/install">Terminus version <code class="language-sh">2</code></a> and <a href="https://github.com/pantheon-systems/terminus-build-tools-plugin/releases">Build Tools version <code class="language-sh">2</code> beta</a> are available. If you are still using version <code class="language-sh">1.x</code> of either, you should upgrade as they beyond end of life and no longer supported.
+<a href="/docs/terminus/install">Terminus version <code className="language-sh">2</code></a> and <a href="https://github.com/pantheon-systems/terminus-build-tools-plugin/releases">Build Tools version <code className="language-sh">2</code> beta</a> are available. If you are still using version <code className="language-sh">1.x</code> of either, you should upgrade as they beyond end of life and no longer supported.
 </Alert>
+
+<BuildToolsStackSelectToolbar />
 
 ## What Is Build Tools?
 
@@ -33,7 +35,6 @@ This is primarily done through the [`build:project:create` commands](#buildproje
 
 - **Add additional commands to Terminus to make tasks common in an automated workflow easier.**
 See [Commands](#commands) and [Build Tools Command Examples](#build-tools-command-examples) for details.
-
 
 ### Pantheon Build Tools Repositories
 The repositories that are a part of the Build Tools project are:

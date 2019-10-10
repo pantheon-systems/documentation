@@ -5,17 +5,18 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import './index.css';
 import SwitchableTextInput from '../SwitchableTextInput';
+import { usePersistedState } from '../utils';
 
 function BuildProjectCreateCommandGenerator() {
     const timestamp = new Date().getTime();
-    const [hasPantheonOrg, setHasPantheonOrg] = useState(false);
-    const [pantheonOrgName, setPantheonOrgName] = useState('');
-    const [hasGitOrg, setHasGitOrg] = useState(false);
-    const [gitOrgName, setGitOrgName] = useState('');
-    const [gitProvider, setGitProvider] = useState('GitHub');
-    const [cms, setCMS] = useState('d8');
-    const [visibility, setVisibility] = useState('public');
-    const [projectName, setProjectName] = useState(`${gitProvider.toLowerCase()}-${cms}-${Math.floor(timestamp / 100000)}`);
+    const [hasPantheonOrg, setHasPantheonOrg] = usePersistedState('pantheonHasOrg',false);
+    const [pantheonOrgName, setPantheonOrgName] = usePersistedState('pantheonOrgName','');
+    const [hasGitOrg, setHasGitOrg] = usePersistedState('pantheonHasGitOrg',false);
+    const [gitOrgName, setGitOrgName] = usePersistedState('pantheonGitOrgName','');
+    const [gitProvider, setGitProvider] = usePersistedState('pantheonGitProvider', 'GitHub');
+    const [cms, setCMS] = usePersistedState('pantheonCMS', 'd8');
+    const [visibility, setVisibility] = usePersistedState('pantheonGitRepoVisibility','public');
+    const [projectName, setProjectName] = usePersistedState('pantheonBuildToolsProjectName',`${gitProvider.toLowerCase()}-${cms}-${Math.floor(timestamp / 100000)}`);
     let projectCreateCommand = `terminus build:project:create \\\n${cms} \\\n${projectName}`;
     if ( gitProvider !== 'GitHub' ) {
         projectCreateCommand += ` \\\n--git=${gitProvider.toLowerCase()}`;

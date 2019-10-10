@@ -3,7 +3,7 @@ title: Build Tools
 subtitle: Create a New Project
 description: In step two of the Build Tools guide, learn how to create a new Build Tools project.
 anchorid: create-project
-layout: guide
+layout: guide-build-tools
 type: guide
 buildtools: true
 generator: pagination
@@ -17,6 +17,8 @@ previousurl: guides/build-tools/
 editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 ---
+
+<BuildToolsStackSelectToolbar />
 
 In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of an Git repository, a CI service, and a Pantheon site.
 
