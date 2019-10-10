@@ -857,6 +857,29 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <hr />
 
+### [WPML - Automatic WPML registration using PHP for easy moves between development, test, and live environment](https://wpml.org/)
+**Issue**: Accessing /wp-admin/plugin-install.php?tab=commercial will throw `Sorry, you are not allowed to access this page`.
+
+**Solution**: Define WPML Site Key in wp-config.php 
+```php
+define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
+```
+
+To define it to a specific environment use 
+
+```php
+if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test' ) )  ) :
+   define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
+endif;
+
+if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) )  ) :
+   define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
+endif;
+```
+
+<hr />
+
+
 
 ### [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
 
