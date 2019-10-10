@@ -868,13 +868,13 @@ define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
 To define it to a specific environment use 
 
 ```php
-  if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test' ) )  ) :
-      define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
-    endif;
+if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test' ) )  ) :
+   define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
+endif;
 
-  if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) )  ) :
-      define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
-    endif;
+if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) )  ) :
+   define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
+endif;
 ```
 
 <hr />
