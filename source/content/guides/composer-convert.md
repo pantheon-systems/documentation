@@ -16,11 +16,8 @@ Converting to a Composer managed site *removes* the ability to [apply updates vi
 </Alert>
 
 ## Before You Begin
-{% include("content/composer-updating.html")%}
 
-As a first troubleshooting step, try running `composer update` to bring `composer.lock` up to date with the latest available packages (as constrained by the version requirements in `composer.json`).
-
-</Alert>
+<Partial file="composer-updating.html" />
 
  - Review our documentation on [Git](/git/), [Composer](/composer/), and [Terminus](/terminus/), and have them installed and configured on your local computer.
  - [Clone](/git#clone-your-site-codebase) your _current_ Pantheon site repository to a working directory on your local computer.
@@ -54,7 +51,7 @@ You're about to make some massive changes to the codebase. We recommend you to d
   You can replace `composify` with a branch name of your choosing, but all following steps assume this name.
 
 ## Setup a Multidev (optional)
-If your Pantheon account has access to [multidev](/docs/multidev/), create a multidev to push your new code to:
+If your Pantheon account has access to [multidev](/multidev/), create a multidev to push your new code to:
 
 ```bash
 git push origin composify && terminus env:create $site.dev composify
@@ -194,7 +191,7 @@ git commit -m "Convert to Composer based install"
 You should see a large amount of files committed to the new branch we created earlier.
 
 ## Deploy
-You've now committed the code to a branch. If your site has multidev, you can deploy that branch directly to a new multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on [our documentation on log collection](/docs/logs).
+You've now committed the code to a branch. If your site has multidev, you can deploy that branch directly to a new multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on [our documentation on log collection](/logs).
 
 Once you have confirmed the site is working, merge `composify` into `master`, and follow the standard workflow to QA a code change before going live.
 
@@ -221,4 +218,4 @@ composer install --no-dev
 Review and commit file changes, then push back to Pantheon.
 
 ## See Also
- - [Composer Fundamentals and Workflows](/docs/composer/)
+ - [Composer Fundamentals and Workflows](/composer/)
