@@ -6,8 +6,6 @@
 
 1. In the **Choose Primary Domain** section, select the domain to which traffic should be redirected, and click **Save Configuration**.
 
-   - You can track the task in **Workflows** <Icon icon="chevron-down" />.
-
 ### Set a Primary Domain with Terminus
 
 1. Install or upgrade to the [latest version of Terminus](/terminus/install).
