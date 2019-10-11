@@ -140,9 +140,15 @@ workflows:
           requires:
             - build
       - preview:
+          filters:
+            branches:
+              ignore: master
           requires:
             - build
       - deploy:
+          filters:
+            branches:
+              only: master
           requires:
             - test
 
