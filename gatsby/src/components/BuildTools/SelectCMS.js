@@ -1,10 +1,7 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
-import { usePersistedState } from '../utils';
 
-export default function SelectCMS() {
-
-    const [cms, setCMS] = usePersistedState('pantheonCMS', 'd8');
+export default function SelectCMS({cms, setCMS}) {
 
     const cmsOptions = [
         {

@@ -6,6 +6,10 @@ import Col from 'react-bootstrap/Col';
 import './index.css';
 import SwitchableTextInput from '../SwitchableTextInput';
 import { usePersistedState } from '../utils';
+import {
+    BuildToolsSelectCMS,
+    BuildToolsSelectGitandCI
+} from "../BuildTools"
 
 function BuildProjectCreateCommandGenerator() {
     const timestamp = new Date().getTime();
@@ -14,6 +18,7 @@ function BuildProjectCreateCommandGenerator() {
     const [hasGitOrg, setHasGitOrg] = usePersistedState('pantheonHasGitOrg',false);
     const [gitOrgName, setGitOrgName] = usePersistedState('pantheonGitOrgName','');
     const [gitProvider, setGitProvider] = usePersistedState('pantheonGitProvider', 'GitHub');
+    const [CIProvider, setCIProvider] = usePersistedState('pantheonCIProvider', 'CircleCI');
     const [cms, setCMS] = usePersistedState('pantheonCMS', 'd8');
     const [visibility, setVisibility] = usePersistedState('pantheonGitRepoVisibility','public');
     const [projectName, setProjectName] = usePersistedState('pantheonBuildToolsProjectName',`${gitProvider.toLowerCase()}-${cms}-${Math.floor(timestamp / 100000)}`);
@@ -67,49 +72,22 @@ function BuildProjectCreateCommandGenerator() {
                     inputLabel={`${gitProvider} Organization`}
                     inputChange={event => setGitOrgName(event.target.value)}
                 />
-                <RadioInputGroup
-                    name='cms'
-                    value={cms}
-                    slug='select-cms'
-                    handleChange={(event) => setCMS(event.target.value)}
-                    label='Which CMS will the project use?'
-                    options={[
-                        {
-                            "label": "Drupal 8",
-                            "value": "d8",
-                            "id": "cmsD8"
-                        },
-                        {
-                            "label": "WordPress",
-                            "value": "wp",
-                            "id": "cmsWP"
-                        },
-                    ]}
-                />
-                <RadioInputGroup
-                    name='gitProvider'
-                    value={gitProvider}
-                    slug='select-git-provider'
-                    handleChange={(event) => setGitProvider(event.target.value)}
-                    label='Which Git/CI provider will the project use?'
-                    options={[
-                        {
-                            "label": "GitHub and CircleCI",
-                            "value": "GitHub",
-                            "id": "gitProviderGitHub"
-                        },
-                        {
-                            "label": "GitLab",
-                            "value": "GitLab",
-                            "id": "gitProviderGitLab"
-                        },
-                        {
-                            "label": "BitBucket",
-                            "value": "BitBucket",
-                            "id": "gitProviderBitBucket"
-                        },
-                    ]}
-                />
+                <Row>
+                    <Col sm={12} md={6}>
+                        <BuildToolsSelectCMS
+                            cms={cms}
+                            setCMS={setCMS}
+                        />
+                    </Col>
+                    <Col sm={12} md={6}>
+                        <BuildToolsSelectGitandCI 
+                            gitProvider={gitProvider}
+                            setGitProvider={setGitProvider}
+                            CIProvider={CIProvider}
+                            setCIProvider={setCIProvider}
+                        />
+                    </Col>
+                </Row>
                 <RadioInputGroup
                     name='visibility'
                     value={visibility}

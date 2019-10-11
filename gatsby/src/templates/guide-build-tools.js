@@ -37,10 +37,13 @@ import {
   BuildToolsIntroduction,
   BuildToolsStackSelectToolbar,
   BuildToolsSelectCMS,
-  BuildToolsSelectGitandCI
+  BuildToolsSelectGitandCI,
+  CMS,
+  GitProvider,
+  CIProvider
 } from "../components/BuildTools"
 
-const shortcodes = {
+let shortcodes = {
   Callout,
   Alert,
   Accordion,
@@ -66,7 +69,10 @@ const shortcodes = {
   BuildToolsIntroduction,
   BuildToolsStackSelectToolbar,
   BuildToolsSelectCMS,
-  BuildToolsSelectGitandCI
+  BuildToolsSelectGitandCI,
+  CMS,
+  GitProvider,
+  CIProvider
 }
 
 class GuideTemplate extends React.Component {

@@ -1,11 +1,11 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
-import { usePersistedState } from '../utils';
 
-export default function SelectGitandCI() {
-
-    const [gitProvider, setGitProvider] = usePersistedState('pantheonGitProvider', 'GitHub');
-    const [CIProvider, setCIProvider] = usePersistedState('pantheonCIProvider', 'CircleCI');
+export default function SelectGitandCI({
+    gitProvider,
+    setGitProvider,
+    setCIProvider
+}) {
 
     const GitOptions = [
         {

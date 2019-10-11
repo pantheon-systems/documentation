@@ -18,21 +18,13 @@ editpath: build-tools/02-create-project.md
 image: buildToolsGuide-thumb
 ---
 
-<BuildToolsStackSelectToolbar />
-
-In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of an Git repository, a CI service, and a Pantheon site.
+In this section, we will use the Terminus Build Tools Plugin to create a new project consisting of a <GitProvider /> repository, <CIProvider />, and a Pantheon site.
 
 Before beginning, make sure you have the latest versions of Terminus and the Terminus Build Tools plugin installed. If you need help installing either, expand the installation instructions below.
 
 <InstallBuildTools />
 
 ## Create a Build Tools Project
-
-<Alert title="Note" type="info">
-
-  The screenshots below show a Drupal 8 project. Pantheon maintains Composer based examples for both [WordPress](https://github.com/pantheon-systems/example-wordpress-composer) and [Drupal 8](https://github.com/pantheon-systems/example-drops-8-composer). The steps and workflow are the same for both frameworks.
-
-</Alert>
 
 Use the options below to configure your project, then run the generated `terminus build:project:create` command.
 
@@ -42,13 +34,13 @@ Use the options below to configure your project, then run the generated `terminu
 
 1. Create a new project using the command generated above
 
-  Provide additional information as prompted, such as tokens/credentials for your chosen Git provider and CI service:
+  Provide additional information as prompted, such as tokens/credentials for <GitProvider /> and <CIProvider />:
 
   ![Create Project Prompts](../../../images/pr-workflow/build-env-create-project-prompts.png)
 
-  This process will create a secure SSH keypair, with the public key going to Pantheon and the private key stored in your CI service provider. If you remove either key, you will need to run `build:project:repair` to fix the build process. See `build:project:repair -h` for details.
+  This process will create a secure SSH keypair, with the public key going to Pantheon and the private key stored in <CIProvider />. If you remove either key, you will need to run `build:project:repair` to fix the build process. See `build:project:repair -h` for details.
 
-  The project creation process will also set the necessary environment variables, such as the UUID of your the Pantheon site, in your CI service provider.
+  The project creation process will also set the necessary environment variables, such as the UUID of your the Pantheon site, in <CIProvider />.
 
   <Accordion title="Troubleshooting" id="troubleshoot-install" icon="wrench">
 
@@ -80,7 +72,7 @@ Use the options below to configure your project, then run the generated `terminu
   This indicates a network level issue. We recommend contacting your Internet Service Provider (ISP) for support. One way to reduce connection woes is to use a non-standard channel with less activity/noise on wireless modems.
 
   ### Your requirements could not be resolved to an installable set of packages
-  Check the output for the recommended fix. For example, PHP 7.0 is required for WordPress. Once you have resolved the issues as suggested by Composer try the command again.
+  Check the output for the recommended fix. For example, PHP `7.0` is required for WordPress. Once you have resolved the issues as suggested by Composer try the command again.
 
   ### The site name is already taken on Pantheon
   The following error occurs when running `terminus build:project-create` before authenticating your session with Terminus:
@@ -104,8 +96,8 @@ Use the options below to configure your project, then run the generated `terminu
 
   </Accordion>
 
-2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on your chosen Git provider:
+2. Once your site is ready, the URL to your project page will be printed to your terminal window. Copy this address and paste it into a browser to visit your new project on <GitProvider />:
 
   ![Initial Project Page](../../../images/pr-workflow/initial-project-page.png)
 
-3. Congratulations! You now have a new Git repository and a new Pantheon site connected together with Continuous Integration. Read on to learn more about the Build Tools workflow in practice.
+3. Congratulations! You now have a new <GitProvider /> repository and a new Pantheon site connected together with <CIProvider />. Read on to learn more about the Build Tools workflow in practice.

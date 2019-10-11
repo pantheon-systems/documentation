@@ -24,8 +24,6 @@ multidev: true
 <a href="/docs/terminus/install">Terminus version <code className="language-sh">2</code></a> and <a href="https://github.com/pantheon-systems/terminus-build-tools-plugin/releases">Build Tools version <code className="language-sh">2</code> beta</a> are available. If you are still using version <code className="language-sh">1.x</code> of either, you should upgrade as they beyond end of life and no longer supported.
 </Alert>
 
-<BuildToolsStackSelectToolbar />
-
 ## What Is Build Tools?
 
 Build Tools is a project encompassing multiple Pantheon maintained repositories that work together to connect the tools and automation necessary for an advanced [WebOps workflow](https://pantheon.io/webops) to Pantheon. The main goals of the Build Tools project are:
@@ -62,7 +60,9 @@ The supported Git provider and Continuous Integration service combinations are:
 Build Tools projects also use [<CustomIcon icon="composer" /> Composer  <Popover title="CI Service" content="Composer is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a project." />](https://getcomposer.org) for PHP dependency management. If you haven't worked with Composer before, the [Pantheon Composer doc](/composer) is a great place to get started.
 
 <Enablement title="Automation Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+
 Master Composer, automated testing, and other advanced workflow concepts with help from our experts. Pantheon delivers custom workshops to help teams master our platform and improve their [WebOps](https://pantheon.io/webops) workflow.
+
 </Enablement>
 
 ## Build Tools Workflow
@@ -90,7 +90,15 @@ Build Tools project have many benefits. However, there is also added complexityÂ
 In general, Build Tools is a good fit for a project if the project needs are complex enough to require a more complex workflow and you/your team are comfortable with command-line tools and bash scripts and wish to use Continuous Integration to automate the build, deploy and test of the project workflow.
 
 <Alert title="Note" type="info">
+
 Pantheon's [support team](/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
 
 If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/) or posting in our [Pantheon Community Slack Instance](https://slackin.pantheon.io/) in the `#composer-workflow` channel.
+
 </Alert>
+
+### Ready To Create a Build Tools Project?
+
+The rest of this guide will change depending on which Content Management System and Git/Continuous Integration Provider you are using. Select from the options below, then click _"Continue"_ to move onto the next section, which will walk you through creating a Build Tools project.
+
+<BuildToolsStackSelectToolbar showText={false} />
