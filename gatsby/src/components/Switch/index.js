@@ -20,7 +20,7 @@ const Switch = ({
                 type="checkbox"
             />
             <label
-                style={{ background: isOn && onColor }}
+                style={isOn ? { background: onColor } : {}}
                 className="react-switch-label form-label"
                 htmlFor={slug}
             >
