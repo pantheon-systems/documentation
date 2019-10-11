@@ -6,7 +6,7 @@ anchorid: configure
 layout: guide
 permalink: docs/guides/build-tools/configure/
 nexturl: guides/build-tools/extend/
-previousurl: guides/build-tools/new-pr/
+previousurl: guides/build-tools/pr-workflow/
 editpath: build-tools/04-configure.md
 image: buildToolsGuide-thumb
 contributors: [szipfel]

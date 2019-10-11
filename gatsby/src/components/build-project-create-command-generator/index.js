@@ -77,6 +77,7 @@ function BuildProjectCreateCommandGenerator() {
                         <BuildToolsSelectCMS
                             cms={cms}
                             setCMS={setCMS}
+                            readOnly={true}
                         />
                     </Col>
                     <Col sm={12} md={6}>
@@ -85,6 +86,7 @@ function BuildProjectCreateCommandGenerator() {
                             setGitProvider={setGitProvider}
                             CIProvider={CIProvider}
                             setCIProvider={setCIProvider}
+                            readOnly={true}
                         />
                     </Col>
                 </Row>
