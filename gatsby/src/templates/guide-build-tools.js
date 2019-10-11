@@ -34,7 +34,6 @@ import Image from "../layout/image"
 import ChecklistItem from "../components/checklistItem"
 import BuildProjectCreateCommandGenerator from "../components/build-project-create-command-generator"
 import {
-  BuildToolsComponents,
   BuildToolsIntroduction,
   BuildToolsStackSelectToolbar,
   BuildToolsSelectCMS,
@@ -64,7 +63,6 @@ const shortcodes = {
   ChecklistItem,
   Image,
   BuildProjectCreateCommandGenerator,
-  BuildToolsComponents,
   BuildToolsIntroduction,
   BuildToolsStackSelectToolbar,
   BuildToolsSelectCMS,

@@ -37,7 +37,7 @@ function InstallBuildTools () {
         </li>
         <li key="step-2">
           <p>
-            Install the most recent release of <a href="/terminus/">Terminus</a>, version <code className="language-text">{terminusVersion}</code>:
+            Install the most recent release of <a href="/docs/terminus/">Terminus</a>, version <code className="language-text">{terminusVersion}</code>:
           </p>
           <div className="gatsby-highlight" data-language="bash"><pre className="language-bash"><code className="language-bash"><span className="token function">curl</span> -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar <span className="token operator">&amp;&amp;</span> php installer.phar <span className="token function">install</span></code></pre></div>
           <p>
@@ -46,7 +46,7 @@ function InstallBuildTools () {
         </li>
         <li key="step-3">
           <p>
-            <a href="/ssh-keys/">Add an SSH key</a> within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+            <a href="/docs/ssh-keys/">Add an SSH key</a> within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
       </p>
         </li>
         <li key="step-4">
