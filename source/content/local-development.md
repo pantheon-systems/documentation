@@ -4,6 +4,13 @@ description: Suggestions and solutions for working locally on your Pantheon Drup
 tags: [local]
 categories: []
 ---
+
+<Alert title="Pantheon Localdev" type="success" icon="star">
+
+Pantheon is working on a better way to develop locally. Before you continue reading this page check out [Localdev](/localdev/), currently in active development.
+
+</Alert>
+
 While Pantheon provides several options for on-server development, local development has a number of advantages, especially if continuous Internet access is a concern.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
