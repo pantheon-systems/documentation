@@ -308,7 +308,7 @@ You can highlight a specific line in a code block the reader should focus on wit
 
 <Example>
 
-```bash{outputLines: 2-18}
+```bash{outputLines: 2-20}
 curl -I dev.mysite.com
 HTTP/1.1 200 OK
 X-Pantheon-Styx-Hostname: styx1a
@@ -334,7 +334,7 @@ Vary: Accept-Encoding, Cookie
 <hr class="source-code" /> <br />
 
 ````none
-```bash{outputLines: 2-18}
+```bash{outputLines: 2-20}
 curl -I dev.mysite.com
 HTTP/1.1 200 OK
 X-Pantheon-Styx-Hostname: styx1a
