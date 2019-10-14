@@ -12,11 +12,6 @@ export const onRenderBody = ({ setPostBodyComponents }) => {
   ])
 }
 
-export const wrapPageElement = ({ element, props }) => {
-  const isBuildTools = props.path.includes('/guides/build-tools');
-  if ( isBuildTools ) {
-      return <BuildToolsContextProvider>{element}</BuildToolsContextProvider>
-  } else {
-      return <React.Fragment>{element}</React.Fragment>
-  }
+export const wrapPageElement = ({ element }) => {
+  return <BuildToolsContextProvider>{element}</BuildToolsContextProvider>
 }
