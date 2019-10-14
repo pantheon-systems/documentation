@@ -301,6 +301,21 @@ RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bi
 
 Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
 
+### RedisException: BUSY Redis is busy running a script.
+Usually when a high traffic Drupal site suddenly have php errors in the dashboard or php error logs:
+
+```php
+RedisException: BUSY Redis is busy running a script.
+```
+
+Adding a Redis permanence TTL of around 6hrs in the `settings.php` solves this issue
+
+```php
+$conf['redis_perm_ttl'] = 21600;
+```
+
+IMPORTANT: Redis cache needs to be flushed with "flushall" in redis terminal connection afterwards, in order for this to have any effect.
+
 ### No Keys Found
 When the Dashboard status check reports that Redis is enabled but doesn't have any data (0 keys found), you'll want to confirm the logic behind the check for PANTHEON_ENVIRONMENT in your `settings.php` Redis cache configuration. Depending on the kind of test you're performing, you’ll get different results.
 
