@@ -1,12 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Form from 'react-bootstrap/Form';
+import { BuildToolsStateContext, BuildToolsDispatchContext } from './BuildToolsContextProvider.js';
 
 export default function SelectGitandCI({
-    gitProvider,
-    setGitProvider,
-    setCIProvider,
     readOnly=false
 }) {
+
+    const BuildToolsState = useContext(BuildToolsStateContext);
+    const BuildToolsDispatch = useContext(BuildToolsDispatchContext);
 
     const GitOptions = [
         {
@@ -28,24 +29,10 @@ export default function SelectGitandCI({
             <Form.Label>Git/Continuous Integration Provider</Form.Label>
             <Form.Control
                 as="select"
-                value={gitProvider}
+                value={BuildToolsState.GitProvider}
                 disabled={readOnly}
-                onChange={function (event) {
-                    switch (event.target.value) {
-                        case 'BitBucket':
-                            setGitProvider('BitBucket');
-                            setCIProvider('BitBucket Pipelines');
-                            break;
-                        case 'GitLab':
-                            setGitProvider('GitLab');
-                            setCIProvider('GitLab CI/CD');
-                            break;
-                        default:
-                            setGitProvider('GitHub');
-                            setCIProvider('CircleCI');
-                            break;
-                }
-            }}>
+                onChange={(event) => BuildToolsDispatch({ type: event.target.value })}
+            >
                 {
                     GitOptions.map(function (GitOption) {
                         return <option key={GitOption.value} value={GitOption.value}>{GitOption.label}</option>

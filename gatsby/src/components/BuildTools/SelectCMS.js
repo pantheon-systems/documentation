@@ -1,20 +1,22 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Form from 'react-bootstrap/Form';
+import { BuildToolsStateContext, BuildToolsDispatchContext } from './BuildToolsContextProvider';
 
 export default function SelectCMS({
-    cms,
-    setCMS,
     readOnly=false
 }) {
+
+    const BuildToolsState = useContext(BuildToolsStateContext);
+    const BuildToolsDispatch = useContext(BuildToolsDispatchContext);
 
     const cmsOptions = [
         {
             label: "Drupal 8",
-            value: "d8"
+            value: "Drupal 8"
         },
         {
             label: "WordPress",
-            value: "wordpress"
+            value: "WordPress"
         }
     ];
 
@@ -23,8 +25,8 @@ export default function SelectCMS({
             <Form.Label>Content Management System</Form.Label>
             <Form.Control
                 as="select"
-                onChange={(event) => setCMS(event.target.value)} 
-                value={cms}
+                onChange={(event) => BuildToolsDispatch({ type: event.target.value })}
+                value={BuildToolsState.CMS}
                 disabled={readOnly}
             >
                 {

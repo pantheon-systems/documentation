@@ -1,3 +1,6 @@
+const React = require("react");
+const { BuildToolsContextProvider } = require('./src/components/BuildTools/BuildToolsContextProvider');
+
 // custom typefaces
 require("prismjs/themes/prism-okaidia.css")
 
@@ -15,3 +18,12 @@ require("tocbot/dist/tocbot.css")
 require("tocbot/dist/tocbot.min.js")
 
 require("./src/styles/global.css")
+
+exports.wrapPageElement = ({ element, props }) => {
+    const isBuildTools = props.path.includes('/guides/build-tools');
+    if ( isBuildTools ) {
+        return <BuildToolsContextProvider>{element}</BuildToolsContextProvider>
+    } else {
+        return <React.Fragment>{element}</React.Fragment>
+    }
+}

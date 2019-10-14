@@ -1,8 +1,7 @@
-import React from 'react';
-import {usePersistedState} from '../utils';
+import React, {useContext, Fragment} from 'react';
 
-import CreatePullRequest from './CreatePullRequest.js';
-export {CreatePullRequest as BuildToolsCreatePullRequest};
+import { BuildToolsStateContext, BuildToolsDispatchContext } from './BuildToolsContextProvider.js';
+export { BuildToolsStateContext, BuildToolsDispatchContext };
 
 import StackSelectToolbar from './StackSelectToolbar.js';
 export {StackSelectToolbar as BuildToolsStackSelectToolbar};
@@ -13,26 +12,23 @@ export {SelectCMS as BuildToolsSelectCMS};
 import SelectGitandCI from './SelectGitandCI.js';
 export {SelectGitandCI as BuildToolsSelectGitandCI};
 
-export const BuildToolsComponents =  {
-    CreatePullRequest,
-    StackSelectToolbar,
-    SelectCMS,
-    SelectGitandCI
-};
-
-export default BuildToolsComponents;
-
 export function CMS () {
-    const [cms] = usePersistedState('pantheonCMS', 'd8');
-    return (<>{cms}</>);
+    const BuildToolsState = useContext(BuildToolsStateContext);
+    return (
+        <Fragment>{BuildToolsState.CMS}</Fragment>
+    );
 }
 
 export function CIProvider () {
-    const [CIProvider] = usePersistedState('pantheonCIProvider', 'CircleCI');
-    return (<>{CIProvider}</>);
+    const BuildToolsState = useContext(BuildToolsStateContext);
+    return (
+        <Fragment>{BuildToolsState.CIProvider}</Fragment>
+    );
 }
 
 export function GitProvider () {
-    const [gitProvider] = usePersistedState('pantheonGitProvider', 'GitHub');
-    return (<>{gitProvider}</>);
+    const BuildToolsState = useContext(BuildToolsStateContext);
+    return (
+        <Fragment>{BuildToolsState.GitProvider}</Fragment>
+    );
 }

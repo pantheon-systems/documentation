@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, Fragment } from 'react';
 import RadioInputGroup from '../RadioInputGroup';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -6,28 +6,28 @@ import Col from 'react-bootstrap/Col';
 import './index.css';
 import SwitchableTextInput from '../SwitchableTextInput';
 import { usePersistedState } from '../utils';
-import {
-    BuildToolsSelectCMS,
-    BuildToolsSelectGitandCI
-} from "../BuildTools"
+import SelectCMS from '../BuildTools/SelectCMS';
+import SelectGitandCI from '../BuildTools/SelectGitandCI';
+import { BuildToolsStateContext } from '../BuildTools/BuildToolsContextProvider';
 
 function BuildProjectCreateCommandGenerator() {
+    // Global state
+    const BuildToolsState = useContext(BuildToolsStateContext);
     const timestamp = new Date().getTime();
+    // Local state
     const [hasPantheonOrg, setHasPantheonOrg] = usePersistedState('pantheonHasOrg',false);
     const [pantheonOrgName, setPantheonOrgName] = usePersistedState('pantheonOrgName','');
     const [hasGitOrg, setHasGitOrg] = usePersistedState('pantheonHasGitOrg',false);
     const [gitOrgName, setGitOrgName] = usePersistedState('pantheonGitOrgName','');
-    const [gitProvider, setGitProvider] = usePersistedState('pantheonGitProvider', 'GitHub');
-    const [CIProvider, setCIProvider] = usePersistedState('pantheonCIProvider', 'CircleCI');
-    const [cms, setCMS] = usePersistedState('pantheonCMS', 'd8');
     const [visibility, setVisibility] = usePersistedState('pantheonGitRepoVisibility','public');
-    const [projectName, setProjectName] = usePersistedState('pantheonBuildToolsProjectName',`${gitProvider.toLowerCase()}-${cms}-${Math.floor(timestamp / 100000)}`);
-    let projectCreateCommand = `terminus build:project:create \\\n${cms} \\\n${projectName}`;
-    if ( gitProvider !== 'GitHub' ) {
-        projectCreateCommand += ` \\\n--git=${gitProvider.toLowerCase()}`;
+
+    const [projectName, setProjectName] = usePersistedState('pantheonBuildToolsProjectName',`${BuildToolsState.GitProvider.toLowerCase()}-${BuildToolsState.CMS}-${Math.floor(timestamp / 100000)}`);
+    let projectCreateCommand = `terminus build:project:create \\\n${BuildToolsState.CMS} \\\n${projectName}`;
+    if ( BuildToolsState.GitProvider !== 'GitHub' ) {
+        projectCreateCommand += ` \\\n--git=${BuildToolsState.GitProvider.toLowerCase()}`;
     }
     if ( visibility === 'private' ) {
-        projectCreateCommand += ( gitProvider !== 'GitLab' ) ? ' \\\n--visibility=private' : ' \\\n--visibility=internal';
+        projectCreateCommand += ( BuildToolsState.GitProvider !== 'GitLab' ) ? ' \\\n--visibility=private' : ' \\\n--visibility=internal';
     }
     if (hasPantheonOrg && pantheonOrgName.length) {
         projectCreateCommand += ` \\\n--team=${pantheonOrgName}`;
@@ -61,33 +61,23 @@ function BuildProjectCreateCommandGenerator() {
                     inputValue={pantheonOrgName}
                     inputLabel='Pantheon Organization'
                     inputChange={event => setPantheonOrgName(event.target.value)}
-                    inputHelpText={(<>The organization machine name or UUID of the organization, which can be retrieved from Terminus with <code className="language-bash">terminus org:list</code></>)}
+                    inputHelpText={(<Fragment>The organization machine name or UUID of the organization, which can be retrieved from Terminus with <code className="language-bash">terminus org:list</code></Fragment>)}
                 />
                 <SwitchableTextInput
                     slug='git-org-switchable-input'
                     switchValue={hasGitOrg}
-                    switchLabel={`Will the project be associated with a ${gitProvider} organization?`}
+                    switchLabel={`Will the project be associated with a ${BuildToolsState.GitProvider} organization?`}
                     switchChange={() => setHasGitOrg(!hasGitOrg)}
                     inputValue={gitOrgName}
-                    inputLabel={`${gitProvider} Organization`}
+                    inputLabel={`${BuildToolsState.GitProvider} Organization`}
                     inputChange={event => setGitOrgName(event.target.value)}
                 />
                 <Row>
                     <Col sm={12} md={6}>
-                        <BuildToolsSelectCMS
-                            cms={cms}
-                            setCMS={setCMS}
-                            readOnly={true}
-                        />
+                        <SelectCMS />
                     </Col>
                     <Col sm={12} md={6}>
-                        <BuildToolsSelectGitandCI 
-                            gitProvider={gitProvider}
-                            setGitProvider={setGitProvider}
-                            CIProvider={CIProvider}
-                            setCIProvider={setCIProvider}
-                            readOnly={true}
-                        />
+                        <SelectGitandCI />
                     </Col>
                 </Row>
                 <RadioInputGroup
@@ -95,7 +85,7 @@ function BuildProjectCreateCommandGenerator() {
                     value={visibility}
                     slug='select-repo-visibility'
                     handleChange={(event) => setVisibility(event.target.value)}
-                    label={`Should the project be public or private on ${gitProvider}?`}
+                    label={`Should the project be public or private on ${BuildToolsState.GitProvider}?`}
                     options={[
                         {
                             "label": "Public",

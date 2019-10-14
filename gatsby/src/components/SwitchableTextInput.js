@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -25,7 +25,7 @@ const SwitchableTextInput = ({
             />
             {
             switchValue ? (
-                <>
+                <Fragment>
                     <Col sm={12}>
                         <Form.Label>
                             {inputLabel}
@@ -48,7 +48,7 @@ const SwitchableTextInput = ({
                             </Col>
                         ) : null
                     }
-                </>
+                </Fragment>
             ) : null
             }
         </Form.Group>
