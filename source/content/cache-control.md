@@ -150,25 +150,28 @@ Pantheon does not support manually editing and updating the VCL. We use a standa
 ## Test Pages Excluded from Cache
 To test whether or not a page is being served from Pantheon's edge caching layer, examine the headers output (`Age`, `Cache-Control`, `Set-Cookie`) via the following curl command:
 
-<pre><code class="http hljs">$ curl -I dev.mysite.com
+```bash{outputLines: 2-20}
+curl -I dev.mysite.com
 HTTP/1.1 200 OK
 X-Pantheon-Styx-Hostname: styx1a
 server: nginx/1.0.15
 content-type: text/html; charset=utf-8
 x-drupal-cache: MISS
+//highlight-start
 set-cookie: SESSf60876d132c0913e5fc728eec7f71e38=M1Sr0bxLbbgYmbg1EW7N8sGF4anrKP1np25EkYta-ZU; expires=Wed, 19-Dec-2012 22:04:58 GMT; path=/; domain=.dev.mysite.com; HttpOnly
-<b>Cache-Control: no-cache, must-revalidate, max-age=0</b>
+Cache-Control: no-cache, must-revalidate, max-age=0
+//highlight-end
 last-modified: Mon, 26 Nov 2012 18:31:30 +0000
 expires: Sun, 19 Nov 1978 05:00:00 GMT
 x-pantheon-endpoint: c18646dd-aa2b-4faa-a4e3-d71ec3a5ce43
 Date: Mon, 26 Nov 2012 18:31:38 GMT
 X-Varnish: 486741958
-<b>Age: 0</b>
+Age: 0 //highlight-line
 Via: 1.1 varnish
 Connection: keep-alive
 X-Pantheon-Edge-Server: 108.166.58.245
 Vary: Accept-Encoding, Cookie
-</code></pre>
+```
 
 The `Cache-Control` header in this example instructs Pantheon's edge caching layer (Varnish) not to cache the response for this request. If you run the command again, you should continue to see `Age: 0` for excluded pages. For more details, see [Testing Global CDN Caching](/test-global-cdn-caching/).
 
