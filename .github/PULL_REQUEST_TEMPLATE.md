@@ -17,4 +17,4 @@ PR includes the following changes:
 - [ ] Redirect `/docs/old-path/` => `/docs/new-path/` (if applicable)
 - [ ] Include/exclude pages ^ respectively within docs search service provider (if applicable)
 - [ ] Update Status Report
-- [ ] Archive from **Done** in [Main Project](https://github.com/pantheon-systems/documentation/projects/14)
+- [ ] Remove from the [project board](https://github.com/pantheon-systems/documentation/projects/14)
