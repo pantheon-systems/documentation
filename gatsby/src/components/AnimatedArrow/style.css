@@ -1,0 +1,36 @@
+.animated-arrow {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  margin: 1em 0;
+}
+
+.animated-arrow .arrow {
+  transition: opacity 0.25s ease-in-out;
+}
+
+@keyframes animatedArrowFadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animatedArrowFadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

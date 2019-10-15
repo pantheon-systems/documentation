@@ -54,8 +54,8 @@ There are 3 main components to a project created with Build Tools:
 
 The supported Git provider and Continuous Integration service combinations are:
 - [<CustomIcon icon="github" /> GitHub](https://github.com) and [<CustomIcon icon="circleci" /> CircleCI](https://circleci.com/)
-- [<CustomIcon icon="gitlab" /> GitLab](https://about.gitlab.com) with [GitLabCI](https://about.gitlab.com/product/continuous-integration/)
-- [<CustomIcon icon="bitbucket" /> BitBucket](https://bitbucket.org/product/) with [BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
+- [<CustomIcon icon="gitlab" /> GitLab](https://about.gitlab.com) with [<CustomIcon icon="gitlab ci/cd" /> GitLabCI](https://about.gitlab.com/product/continuous-integration/)
+- [<CustomIcon icon="bitbucket" /> BitBucket](https://bitbucket.org/product/) with [<CustomIcon icon="bitbucket pipelines" /> BitBucket Pipelines](https://bitbucket.org/product/features/pipelines)
 
 Build Tools projects also use [<CustomIcon icon="composer" /> Composer  <Popover title="CI Service" content="Composer is a PHP dependency manager that provides an alternative, more modern way to manage the external code used by a project." />](https://getcomposer.org) for PHP dependency management. If you haven't worked with Composer before, the [Pantheon Composer doc](/composer) is a great place to get started.
 
@@ -66,21 +66,15 @@ Master Composer, automated testing, and other advanced workflow concepts with he
 </Enablement>
 
 ## Build Tools Workflow
-Build Tools projects extend the [Pantheon workflow](https://pantheon.io/docs/pantheon-workflow) by adding an external Git provider and a CI service.
+Build Tools projects extend the [Pantheon workflow](https://pantheon.io/docs/pantheon-workflow) by adding an external Git provider and a Continuous Integration (CI) service.
 
-In this workflow, only files unique to the project are tracked as part of external Git repository. The CI service then builds a production artifact, deploys the fully-build site to Pantheon, and runs a suite of automated tests.
-
-A diagram visualizing this workflow with GitHub and CircleCI is below but the concepts are the same when working with other providers.
-
-![Artifact Deployment](../../../images/artifact-deployment.png)
-
-Third-party code, such as WordPress and Drupal core, is ignored in the external repository. During the build step, the CI service downloads the necessary project dependencies with Composer.
-
-The allows your team to use popular features of Git providers, such as issues and pull requests, that are not available in the Pantheon dashboard.
-
-It also means the external (non-Pantheon) repository is only version controlling the custom code for your project but the entire project is still deployed to Pantheon.
+In this workflow, only files unique to the project are tracked as part of the external Git repository. The CI service then builds a production artifact, deploys the fully-build site to Pantheon, and runs a suite of automated tests.
 
 This is quite different than working with the Pantheon-hosted Git repository for each site, where all code must be comitted.
+
+<BuildToolsStackSelectToolbar />
+
+<BuildToolsWorkflowDiagram />
 
 ## Is Build Tools The Right Tool?
 It is easy to create a Build Tools project but you must also understand what all of the components are doing and how they work together. This is not a "set it and forget it workflow", but rather an entry point for projects requiring automated workflows.
@@ -99,6 +93,4 @@ If you need help configuring external systems, consider joining the [Community F
 
 ### Ready To Create a Build Tools Project?
 
-The rest of this guide will change depending on which Content Management System and Git/Continuous Integration Provider you are using. Select from the options below, then click _"Continue"_ to move onto the next section, which will walk you through creating a Build Tools project.
-
-<BuildToolsStackSelectToolbar showText={false} />
+Click _"Continue"_ to move onto the next section, which will walk you through creating a Build Tools project.

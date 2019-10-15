@@ -6,8 +6,13 @@ import composerlogo from "../../../source/images/composer-logo.svg";
 import pantheonlogo from "../../../source/images/pantheon-logo.svg";
 import gitlablogo from "../../../source/images/gitlab-logo.svg";
 import bitbucketlogo from "../../../source/images/bitbucket-logo.svg";
+import behatLogo from "../../../source/images/behat-logo.svg";
+import gitlabRocket from "../../../source/images/gitlab-rocket-icon.svg";
+import gitlabStatusRunning from "../../../source/images/gitlab-status-running-icon.svg";
+import gitlabCICDLogo from "../../../source/images/gitlab-ci-cd-logo.png";
+import bitbucketPipelinesIcon from "../../../source/images/bitbucket-pipelines-icon.svg";
 
-const CustomIcon = ({ icon="", altText="", width="40px", height="40px" }) => {
+const CustomIcon = ({ icon="", altText="", width="50px", height="50px" }) => {
   let iconSrc;
   icon = icon.toLowerCase();
   switch(icon) {
@@ -28,9 +33,30 @@ const CustomIcon = ({ icon="", altText="", width="40px", height="40px" }) => {
       iconSrc = gitlablogo;
       altText = ( altText.length === 0 ) ? "GitLab Logo" : altText;
       break;
+    case "gitlab ci/cd":
+      iconSrc = gitlabCICDLogo;
+      altText = ( altText.length === 0 ) ? "GitLab CI/CD Logo" : altText;
+      break;
     case "bitbucket":
       iconSrc = bitbucketlogo;
       altText = ( altText.length === 0 ) ? "BitBucket Logo" : altText;
+      break;
+    case "pipelines":
+    case "bitbucket pipelines":
+      iconSrc = bitbucketPipelinesIcon;
+      altText = ( altText.length === 0 ) ? "BitBucket Pipelines Logo" : altText;
+      break;
+    case "gitlab-rocket":
+      iconSrc = gitlabRocket;
+      altText = ( altText.length === 0 ) ? "Rocket icon" : altText;
+      break;
+    case "gitlab-status-running":
+      iconSrc = gitlabStatusRunning;
+      altText = ( altText.length === 0 ) ? "Status running icon" : altText;
+      break;
+    case "behat":
+      iconSrc = behatLogo;
+      altText = ( altText.length === 0 ) ? "Behat Logo" : altText;
       break;
     default:
       iconSrc = pantheonlogo;

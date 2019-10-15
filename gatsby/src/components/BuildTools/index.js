@@ -6,6 +6,9 @@ export { BuildToolsStateContext, BuildToolsDispatchContext };
 import StackSelectToolbar from './StackSelectToolbar.js';
 export {StackSelectToolbar as BuildToolsStackSelectToolbar};
 
+import WorkflowDiagram from './WorkflowDiagram';
+export {WorkflowDiagram as BuildToolsWorkflowDiagram};
+
 import SelectCMS from './SelectCMS.js';
 export {SelectCMS as BuildToolsSelectCMS};
 

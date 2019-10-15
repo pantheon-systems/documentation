@@ -39,7 +39,8 @@ import {
   BuildToolsSelectGitandCI,
   CMS,
   GitProvider,
-  CIProvider
+  CIProvider,
+  BuildToolsWorkflowDiagram
 } from "../components/BuildTools"
 
 let shortcodes = {
@@ -68,6 +69,7 @@ let shortcodes = {
   BuildToolsStackSelectToolbar,
   BuildToolsSelectCMS,
   BuildToolsSelectGitandCI,
+  BuildToolsWorkflowDiagram,
   CMS,
   GitProvider,
   CIProvider
