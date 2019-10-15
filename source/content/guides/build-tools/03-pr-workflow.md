@@ -3,7 +3,7 @@ title: Build Tools
 subtitle: Pull Request Workflow
 description: In step three of the Build Tools guide, learn how to use pull requests as part of your workflow.
 buildtools: true
-anchorid: new-pr
+anchorid: pr-workflow
 generator: pagination
 layout: guide-build-tools
 type: guide
@@ -14,7 +14,7 @@ use:
 permalink: docs/guides/build-tools/pr-workflow/
 nexturl: guides/build-tools/configure/
 previousurl: guides/build-tools/create-project/
-editpath: build-tools/03-new-pr.md
+editpath: build-tools/03-pr-workflow.md
 image: buildToolsGuide-thumb
 ---
 
