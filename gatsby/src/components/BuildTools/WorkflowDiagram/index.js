@@ -11,9 +11,13 @@ import ExternalLink from '../../externalLink';
 
 const WorkflowDiagram = () => {
   const BuildToolsState = useContext(BuildToolsStateContext);
-  const {GitProvider, CIProvider, CMS} = BuildToolsState;
-  const pluginsOrModules = (CMS === 'WordPress' ? 'plugins' : 'modules');
-  const pullRequestOrMergeRequest = (GitProvider === 'GitLab' ? 'merge request' : 'pull request');
+  const {
+    GitProvider,
+    CIProvider,
+    CMS,
+    ContribLanguage,
+    PRLanguage
+  } = BuildToolsState;
   const CIIcon = CIProvider.toLowerCase();
   const gitIcon = GitProvider.toLowerCase();
   
@@ -23,8 +27,8 @@ const WorkflowDiagram = () => {
         <Col sm={12} md="auto">
           <CustomIcon icon={gitIcon} width="75px" height="75px" />
           <p>In this workflow, only files unique to the project are tracked on {GitProvider}.</p>
-          <p>Non-custom code, such as {CMS} core and third-party {pluginsOrModules}, are ignored.</p>
-          <p>The allows your team to use popular {GitProvider} features, such as issues and {pullRequestOrMergeRequest}s, that are not available in the Pantheon dashboard.</p>
+          <p>Non-custom code, such as {CMS} core and {ContribLanguage}, are ignored.</p>
+          <p>The allows your team to use popular {GitProvider} features, such as issues and {PRLanguage}s, that are not available in the Pantheon dashboard.</p>
         </Col>
       </Row>
       <Row>
@@ -43,7 +47,7 @@ const WorkflowDiagram = () => {
       <Row className="color">
         <Col sm={12}>
           <p>{CIProvider} then builds a production artifact and deploys the fully-built site to Pantheon.</p>
-          <p><ExternalLink text="Composer" link="https://getcomposer.org" /> is used to download PHP dependencies, such as {CMS} core and third-party {pluginsOrModules}.</p>
+          <p><ExternalLink text="Composer" link="https://getcomposer.org" /> is used to download PHP dependencies, such as {CMS} core and {ContribLanguage}.</p>
           <p>Other build steps, such as minifying production assets, also occurs at this stage.</p>
         </Col>
       </Row>
@@ -56,10 +60,10 @@ const WorkflowDiagram = () => {
         <Col sm={12} md="auto">
           <CustomIcon icon="pantheon" width="75px" height="75px" />
           <p>The Pantheon site contains all of the code needed for production.</p>
-          <p>This includes all items ignored on {GitProvider}, such as {CMS} core and third-party {pluginsOrModules}.</p>
+          <p>This includes all items ignored on {GitProvider}, such as {CMS} core and {ContribLanguage}.</p>
           <p>In this workflow, code should not be comitted directly to Pantheon. Instead, all code changes should be made on {GitProvider} and deployed to Pantheon via {CIProvider}</p>
           <p>Code changes made to the master branch of {GitProvider} will be deployed to the dev environment on Pantheon.</p>
-          <p>Code changes submitted as a {pullRequestOrMergeRequest} on {GitProvider} will be deployed to a Pantheon multidev environment.</p>
+          <p>Code changes submitted as a {PRLanguage} on {GitProvider} will be deployed to a Pantheon multidev environment.</p>
         </Col>
       </Row>
       <Row>
