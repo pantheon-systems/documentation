@@ -56,7 +56,7 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
 1. Select **SSL/TLS** from the Cloudflare menu bar and set SSL mode to **Full (Strict)**.
 
-  ![Enable SSL](../../images/cloudflare-ssl.png)
+  ![Enable SSL](../../images/cloudflare-ssl-strict.png)
 
 1. Navigate to the **Edge Certificates** page on the sub-menu and enable **Always Use HTTPS**
 
