@@ -496,7 +496,7 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 
 **Issue:** FacetWP [conflicts with New Relic](https://facetwp.com/new-relic-compatibility/).
 
-**Solution:** [Disable New Relic](new-relic#disable-new-relic-browser-monitoring-agent) when using FacetWP.
+**Solution:** [Disable New Relic](/new-relic#disable-new-relic-browser-monitoring-agent) when using FacetWP.
 
 <hr />
 
