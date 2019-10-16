@@ -1,5 +1,5 @@
 ---
-title: Configuring Visual Studio Code on Pantheon
+title: Configuring Visual Studio Code for Pantheon
 description: Develop your Pantheon site locally using Visual Studio Code to edit and sync code.
 tags: [local, sftp]
 contributors: [sarahg, alexfornuto]
@@ -14,6 +14,8 @@ This doc covers setting up a Pantheon site in VS Code and using the SFTP extensi
 1. [Create a site](/create-sites) on Pantheon, or browse to the Dev environment Dashboard of an existing site.
 1. Use [SFTP](/rsync-and-sftp#sftp), [rsync](/rsync-and-sftp#rsync) or [Git](/git#clone-your-site-codebase) to clone your site files on the Dev environment down to your local machine.
 1. Download and install [VS Code](https://code.visualstudio.com/).
+
+If you intend to upload code changes via SFTP, place your site code in a subdirectory called "code" in order for these files to sync to the correct location on the Pantheon filesystem (e.g, `~/sites/mysite/code`).
 
 ## Create a VS Code Workspace
 
@@ -57,31 +59,16 @@ VS Code includes Git integration and an integrated terminal, either of which can
 
 Make sure your site is in [Git mode](/guides/quickstart/connection-modes) before pushing code via Git.
 
-#### [Git Version Control in VS Code](https://code.visualstudio.com/docs/introvideos/versioncontrol)
+#### Git Version Control in VS Code
 Open the Git menu (**Ctrl** + **Shift** + **G** or **View** -> **SCM**). From here you can review your outstanding changes, commit them with a message, switch branches and more. See the [video on the VS Code docs](https://code.visualstudio.com/docs/introvideos/versioncontrol) for more information.
 
-#### [Integrated Terminal](https://code.visualstudio.com/docs/editor/integrated-terminal)
-Open the integrated terminal with **Ctrl** + **`** or **View** -> **Terminal**. Now you can interact with Git as you would normally, without leaving VS Code.
+#### Integrated Terminal
+Open the [integrated terminal](https://code.visualstudio.com/docs/editor/integrated-terminal) with **Ctrl** + **`** or **View** -> **Terminal**. Now you can interact with Git as you would normally, without leaving VS Code.
 
 ### Upload your changes with SFTP
 The SFTP extension for VS Code allows developers to upload code to the Pantheon Dev or Multidev environment directly from VS Code, as well as download files from the Pantheon servers.
 
 Make sure your site is in [SFTP mode](/sftp#sftp-mode) before uploading code via SFTP.
-
-<Alert type="info" title="Note">
-
-Due to the structure of the Pantheon filesystem, you'll want to nest your site in a directory named `code` in order for code uploads and downloads to land in the right place on the remote server without hard-coding the full remote server path:
-
-```bash{outputLines:4}
-cd ~/sites/mysite
-mkdir code
-mv ./* .git code
-mv: cannot move './code' to a subdirectory of itself, 'code/code'
-```
-
-Be aware, this configuration conflicts with using the Git method to push changes to Pantheon, unless you create a separate workspace inside `code` to use Git from.
-
-</Alert>
 
 1. Install the VS Code [SFTP Extension](https://marketplace.visualstudio.com/items?itemName=liximomo.sftp).
 1. Open the VS Code command palette (**Ctrl/Command** + **Shift** + **P**) and run `SFTP: config` to open the SFTP config file.
