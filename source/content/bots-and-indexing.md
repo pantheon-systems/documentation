@@ -123,7 +123,7 @@ add_filter('robots_txt', 'custom_robots_txt', 10,  2);
 
 function custom_robots_txt($output, $public) {
 
-    $robots_txt =  "User Agent: * \n";
+    $robots_txt =  "User-agent: * \n";
     $robots_txt .=  "Sitemap: https://www.example.com/sitemap_index.xml \n";
     $robots_txt .=  "Disallow: /secure/ ";
     // add more $robots_txt .= for each line
