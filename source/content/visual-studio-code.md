@@ -13,9 +13,11 @@ This doc covers setting up a Pantheon site in VS Code and using the SFTP extensi
 ## Before You Begin
 1. [Create a site](/create-sites) on Pantheon, or browse to the Dev environment Dashboard of an existing site.
 1. Use [SFTP](/rsync-and-sftp#sftp), [rsync](/rsync-and-sftp#rsync) or [Git](/git#clone-your-site-codebase) to clone your site files on the Dev environment down to your local machine.
+
+  If you intend to upload code changes via SFTP, place your site code in a subdirectory called "code" (e.g, `~/sites/mysite/code`). This aligns with the file structure on the platform when using [SFTP mode](/sftp/).
+
 1. Download and install [VS Code](https://code.visualstudio.com/).
 
-If you intend to upload code changes via SFTP, place your site code in a subdirectory called "code" in order for these files to sync to the correct location on the Pantheon filesystem (e.g, `~/sites/mysite/code`).
 
 ## Create a VS Code Workspace
 
@@ -25,9 +27,9 @@ In VS Code, a Workspace contains settings for your project, including recommende
 
   ![The Open folder option from the Visual Studio Code Start screen](../images/vscode-open-folder.png)
 
-   - If you have already closed the Welcome screen, click **Open...** in the **File** menu.
+  If you have already closed the Welcome screen, click **Open...** in the **File** menu.
 
-1. Navigate your filesystem and select the directory containing your site code (e.g, `~/sites/mysite`).
+1. Navigate your filesystem and select the directory containing your site code (e.g, `~/sites/mysite/code`).
 1. Save this as a Workspace by selecting **Save Workspace As...** from the **File** menu.
 
 Workspace settings are stored in a file called `.code-workspace` at the root of your project. It is recommended to keep this file out of Git by adding it to your `.gitignore` file at either the site or global level:
