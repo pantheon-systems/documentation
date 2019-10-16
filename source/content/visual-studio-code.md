@@ -29,7 +29,7 @@ In VS Code, a Workspace contains settings for your project, including recommende
 
   If you have already closed the Welcome screen, click **Open...** in the **File** menu.
 
-1. Navigate your filesystem and select the directory containing your site code (e.g, `~/sites/mysite/code`).
+1. Navigate your filesystem and select the directory containing your site (e.g, `~/sites/mysite`).
 1. Save this as a Workspace by selecting **Save Workspace As...** from the **File** menu.
 
 Workspace settings are stored in a file called `.code-workspace` at the root of your project. It is recommended to keep this file out of Git by adding it to your `.gitignore` file at either the site or global level:
