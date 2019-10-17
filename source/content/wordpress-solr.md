@@ -39,7 +39,7 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-
  terminus wp <site>.<env> -- plugin install --activate --network solr-power
  ```
 
-3. From the WordPress Dashboard, navigate to **Solr Options** (previously under **Settings**). You should see your site's Solr Server details within the **Info** tab.
+3. From the WordPress Dashboard, navigate to **Solr Power** (previously under **Settings**). You should see your site's Solr Server details within the **Info** tab.
 
 4. Select **Indexing Options** from the navigation bar and configure desired indexing options for Solr. Click **Save Changes** after making modifications.
 
@@ -49,7 +49,7 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-
 
    </Alert>
 
-5. Index all publicly queryable post types by navigating to the **Actions** tab and clicking **Execute** next to **Index Searchable Post Types**, or via Terminus:
+5. Index all publicly queryable post types by navigating to the **Actions** tab and clicking **Start Index** next to **Index Searchable Post Types**, or via Terminus:
 
  ```bash
  terminus wp <site>.<env> -- solr index
@@ -95,7 +95,7 @@ Custom `schema.xml` files exist outside of version control, and must be uploaded
 This plugin is under active development on [GitHub](https://github.com/pantheon-systems/solr-power). Use the issue queue for status updates and support. Pull requests are also welcome!
 
 ### Re-Indexing
-New, deleted, and modified posts and pages are automatically added to the Solr index. However, if you modify the indexing options within **Settings** > **Solr Options** > **Indexing**, you must manually re-index the site on the **Actions** tab.
+New, deleted, and modified posts and pages are automatically added to the Solr index. However, if you modify the indexing options within **Solr Power**, you must manually re-index the site on the **Actions** tab.
 
 ### Enable Solr for AJAX and WordPress Dashboard
 Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to work with AJAX and within the WordPress Dashboard.
