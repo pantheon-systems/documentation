@@ -4,10 +4,6 @@ html {
 	min-height: 100%;
 }
 
-h1 {
-	font-family: ;
-}
-
 p,
 h2,
 h3,
@@ -331,7 +327,11 @@ pre code, pre code .hljs, .hljs {
   display: table-cell;
   padding: 8px;
   line-height: 1.42857143;
-  vertical-align: top;
+  vertical-align: middle;
+}
+
+.doc td[rowspan]:not([rowspan="1"]) {
+  border-bottom:1px solid black !important;
 }
 
 .terminus table {
