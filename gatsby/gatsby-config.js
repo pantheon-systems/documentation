@@ -26,6 +26,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-remark`,
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -93,6 +94,9 @@ module.exports = {
       options: {
         extensions: [".mdx", ".md"],
         gatsbyRemarkPlugins: [
+          {
+            resolve: "gatsby-remark-grid-tables",
+          },
           {
             resolve: "gatsby-remark-github",
             options: {

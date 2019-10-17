@@ -14,4 +14,4 @@ require("prismjs/plugins/command-line/prism-command-line.css")
 require("tocbot/dist/tocbot.css")
 require("tocbot/dist/tocbot.min.js")
 
-require("./src/styles/global.css")
+require("./src/styles/global.scss")
