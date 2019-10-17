@@ -56,7 +56,7 @@ const Commands = ({ data }) => {
                         <span style={{ whiteSpace: "pre-line" }}>
                           <small />
                           <br />
-                          <small>{command.usage[0]}</small>
+                          <small>{command.usage[0].replace(/\[|\]/g, '')}</small>
                         </span>
                       </li>
                     </td>
