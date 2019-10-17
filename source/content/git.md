@@ -16,9 +16,9 @@ Dev/Test/Live, parallel feature development with Multidev, hotfix workflows, and
 
 Select your operating system and the download will automatically begin:
 
-[Mac OS](https://git-scm.com/download/mac)
-[Windows](https://git-scm.com/download/win)
-[Linux](https://git-scm.com/download/linux)
+ - [Mac OS](https://git-scm.com/download/mac)
+ - [Windows](https://git-scm.com/download/win)
+ - [Linux](https://git-scm.com/download/linux)
 
 ## Clone Your Site Codebase
 

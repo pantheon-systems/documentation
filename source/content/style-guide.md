@@ -256,6 +256,7 @@ require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
 
 </Example>
 
+#### Shell Prompts
 You can also define a single line code block as a command:
 
 <Example>
@@ -302,7 +303,98 @@ mdx-slug
 
 </Example>
 
-### Variables
+#### Line Highlighting
+You can highlight a specific line in a code block the reader should focus on with `//highlight-line`, or a group with `//highlight-start` and `//highlight-end`:
+
+<Example>
+
+```bash{outputLines: 2-20}
+curl -I dev.mysite.com
+HTTP/1.1 200 OK
+X-Pantheon-Styx-Hostname: styx1a
+server: nginx/1.0.15
+content-type: text/html; charset=utf-8
+x-drupal-cache: MISS
+//highlight-start
+set-cookie: SESSf60876d132c0913e5fc728eec7f71e38=M1Sr0bxLbbgYmbg1EW7N8sGF4anrKP1np25EkYta-ZU; expires=Wed, 19-Dec-2012 22:04:58 GMT; path=/; domain=.dev.mysite.com; HttpOnly
+Cache-Control: no-cache, must-revalidate, max-age=0
+//highlight-end
+last-modified: Mon, 26 Nov 2012 18:31:30 +0000
+expires: Sun, 19 Nov 1978 05:00:00 GMT
+x-pantheon-endpoint: c18646dd-aa2b-4faa-a4e3-d71ec3a5ce43
+Date: Mon, 26 Nov 2012 18:31:38 GMT
+X-Varnish: 486741958
+Age: 0 //highlight-line
+Via: 1.1 varnish
+Connection: keep-alive
+X-Pantheon-Edge-Server: 108.166.58.245
+Vary: Accept-Encoding, Cookie
+```
+
+<hr class="source-code" /> <br />
+
+````none
+```bash{outputLines: 2-20}
+curl -I dev.mysite.com
+HTTP/1.1 200 OK
+X-Pantheon-Styx-Hostname: styx1a
+server: nginx/1.0.15
+content-type: text/html; charset=utf-8
+x-drupal-cache: MISS
+//highlight-start
+set-cookie: SESSf60876d132c0913e5fc728eec7f71e38=M1Sr0bxLbbgYmbg1EW7N8sGF4anrKP1np25EkYta-ZU; expires=Wed, 19-Dec-2012 22:04:58 GMT; path=/; domain=.dev.mysite.com; HttpOnly
+Cache-Control: no-cache, must-revalidate, max-age=0
+//highlight-end
+last-modified: Mon, 26 Nov 2012 18:31:30 +0000
+expires: Sun, 19 Nov 1978 05:00:00 GMT
+x-pantheon-endpoint: c18646dd-aa2b-4faa-a4e3-d71ec3a5ce43
+Date: Mon, 26 Nov 2012 18:31:38 GMT
+X-Varnish: 486741958
+Age: 0 //highlight-line
+Via: 1.1 varnish
+Connection: keep-alive
+X-Pantheon-Edge-Server: 108.166.58.245
+Vary: Accept-Encoding, Cookie
+```
+````
+
+
+</Example>
+
+## File Excerpts
+
+File excerpts are [code blocks](#blocks) with a file name specified after the syntax as `:title=FILENAME`:
+
+<Example>
+
+```git:title=.gitignore
+# WordPress #
+############
+wp-config-local.php
+wp-cli.local.yml
+wp-content/uploads
+wp-content/blogs.dir/
+wp-content/upgrade/
+```
+
+
+<hr class="source-code" /> <br />
+
+````markdown
+```git:title=.gitignore
+# WordPress #
+############
+wp-config-local.php
+wp-cli.local.yml
+wp-content/uploads
+wp-content/blogs.dir/
+wp-content/upgrade/
+```
+````
+
+</Example>
+
+## Variables
 
 When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
 

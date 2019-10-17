@@ -127,6 +127,12 @@ module.exports = {
               linkImagesToOriginal: false,
             },
           },
+          {
+            resolve: `gatsby-remark-code-titles`,
+            options: {
+              className: `gatsby-remark-code-title`,
+            },
+          },
           `gatsby-remark-static-images`,
           {
             resolve: `gatsby-remark-prismjs`,

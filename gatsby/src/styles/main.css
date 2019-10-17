@@ -2225,10 +2225,6 @@ input.gsc-search-button:focus {
 	overflow: overlay;
 }
 
-.highlight {
-	background: yellow;
-}
-
 .devbar {
 	background-color: #0a6bb5;
 	border-radius: 0px;
