@@ -99,7 +99,7 @@ Once you have downloaded and enabled the Imagemagick module, you'll need to conf
 
 When creating a new preset, if the "Division by Zero" warning appears, add the [`image_allow_insecure_derivatives`](https://www.drupal.org/project/image_allow_insecure_derivatives) conf variable to your `settings.php` file.
 
-Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`.
+Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`. [ImageAPI Optimize's support for 3rd party services (like advpng and OptiPNG)](https://www.drupal.org/node/773342) are not available at this time.
 
 ## Troubleshooting and FAQs
 #### How do I request the addition of a new library or a newer version of an existing library?
