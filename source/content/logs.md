@@ -151,13 +151,13 @@ You can now access the logs from within the `site-log` directory. More than one 
 
 See [Parsing nginx Access Logs with GoAccess](/nginx-access-log) for details.
 
-### Why do I see requests coming from 10.x.x.x IPs in nginx-access.log?
+### What is the first line in nginx-access.log?
 The first entry reflects an internal IP address of Pantheon's routing layer. The last entry provides a list of IPs used to serve the request, starting with the client IP and ending with internal IPs from the routing layer. For environments with HTTPS enabled, the loadbalancer IP address will be listed second, after the client IP.
 
-The client IP for the following example is `122.248.101.126`:
+The client IP for the following example is `203.0.113.56`:
 
 ```nginx
-10.x.x.x - - [19/Feb/2016:02:00:00 +0000]  "GET /edu HTTP/1.1" 200 13142 "https://pantheon.io/agencies/pantheon-for-agencies" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0" 0.399 "122.248.101.126, 50.57.202.75, 10.x.x.x, 10.x.x.x"
+203.0.113.56 - - [19/Feb/2016:02:00:00 +0000]  "GET /edu HTTP/1.1" 200 13142 "https://pantheon.io/agencies/pantheon-for-agencies" "Mozilla/5.0 (Windows NT 6.3; WOW64; rv:43.0) Gecko/20100101 Firefox/43.0" 0.399 "122.248.101.126, 50.57.202.75, 10.x.x.x, 10.x.x.x"
 ```
 
 ### Can I log to the system logger and access syslog?
