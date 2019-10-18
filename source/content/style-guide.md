@@ -87,18 +87,21 @@ Be kind. If you're writing a guide that will use one or more example variables t
 
 <Example>
 
-# Page Title
+<h1 class="toc-ignore">Page Title</h1>
 
-## Header
+<h2 class="toc-ignore">Header</h2>
 
-### Sub Header
+<h3 class="toc-ignore">Sub Header</h3>
 
-#### Section not listed on TOC
+<h4 class="toc-ignore">Section not listed on TOC</h4>
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-# Page Title
+---
+title: Page Title
+---
+
 ## Header
 ### Sub Header
 #### Section not listed on TOC
@@ -742,6 +745,64 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 
 Use ✓ to indicate yes and `❌` to indicate no.
 
+<Accordion title="Advanced Tables">
+
+Standard markdown tables don't allow for cells to span multiple rows or columns, but by using the [gatsby-remark-grid-tables](https://www.gatsbyjs.org/packages/gatsby-remark-grid-tables/) plugin, we can overcome this limitation:
+
+<Example>
+
++-----------------+--------------+-------------+--------------+------------------------+
+| **Environment** | **Severity** | **Browser** | **Watchdog** | **logs/php-error.log** |
++-----------------+--------------+-------------+--------------+------------------------+
+|                 | notice       | **✓**       | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+| Dev             | warning      | **✓**       | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+|                 | error        | **✓**       |              |  **✓**                 |
++-----------------+--------------+-------------+--------------+------------------------+
+|                 | notice       |             | **✓**        |                        |
++                 +--------------+-------------+--------------+------------------------+
+| Test            | warning      |             | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+|                 | error        | **✓**       |              |  **✓**                 |
++-----------------+--------------+-------------+--------------+------------------------+
+|                 | notice       |             | **✓**        |                        |
++                 +--------------+-------------+--------------+------------------------+
+| Live            | warning      |             | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+|                 | error        |             |              |  **✓**                 |
++-----------------+--------------+-------------+--------------+------------------------+
+
+<hr className="source-code" /> <br/>
+
+````markdown
++-----------------+--------------+-------------+--------------+------------------------+
+| **Environment** | **Severity** | **Browser** | **Watchdog** | **logs/php-error.log** |
++-----------------+--------------+-------------+--------------+------------------------+
+|                 | notice       | **✓**       | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+| Dev             | warning      | **✓**       | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+|                 | error        | **✓**       |              |  **✓**                 |
++-----------------+--------------+-------------+--------------+------------------------+
+|                 | notice       |             | **✓**        |                        |
++                 +--------------+-------------+--------------+------------------------+
+| Test            | warning      |             | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+|                 | error        | **✓**       |              |  **✓**                 |
++-----------------+--------------+-------------+--------------+------------------------+
+|                 | notice       |             | **✓**        |                        |
++                 +--------------+-------------+--------------+------------------------+
+| Live            | warning      |             | **✓**        |                        |
+|                 +--------------+-------------+--------------+------------------------+
+|                 | error        |             |              |  **✓**                 |
++-----------------+--------------+-------------+--------------+------------------------+
+````
+
+</Example>
+
+</Accordion>
+
 ## Tooltips
 
 Tooltips are a great way to add additional information without cluttering up a section. For example, you can define jargon and even link out to an external resource without being distracting to the reader:
@@ -770,7 +831,8 @@ This is the optimal place to provide links to external resources on the subject,
 
 <Example>
 
-## See Also 
+<h2 className="toc-ignore"> See Also</h2>
+
 - [An internal link](/guides/)
 - [An external link](https://pantheon.io/blog/)
 
