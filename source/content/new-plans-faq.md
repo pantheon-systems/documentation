@@ -101,10 +101,10 @@ No action is required. Existing sites will automatically switch to the equivalen
 | Storage                |       5GB	       |     20GB     |
 | Custom Domain Limit (per site) <Popover content="For details, see <a href='/docs/domains/#custom-domains'>Domains and Redirects</a>." />   | 5 | 5 |
 | Free and managed HTTPS <Popover content="For details, see <a href='/docs/https/'>HTTPS on Pantheon's Global CDN</a>." />                   | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." />                                         | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
-| Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." />                           | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
-| Solr <Popover content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>." />                                             | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
-| Multidev <Popover content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support." /> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+| New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." />                                         | <span style="color:green">✔</span> | ❌ |
+| Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." />                           | ❌ | ❌ |
+| Solr <Popover content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>." />                                             | ❌ | ❌ |
+| Multidev <Popover content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support." /> | ❌ | ❌ |
 
 </Tab>
 
@@ -121,7 +121,7 @@ No action is required. Existing sites will automatically switch to the equivalen
 | New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." />                                      | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
 | Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." />                        | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
 | Solr <Popover content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>." />                                          | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| Multidev <Popover content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support." /> | <span style="color:red">❌</span> | <span style="color:red">❌</span> |
+| Multidev <Popover content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support." /> | ❌ | ❌ |
 
 </Tab>
 
@@ -138,7 +138,7 @@ No action is required. Existing sites will automatically switch to the equivalen
 | New Relic <Popover content="For details, see <a href='/docs/new-relic/'>New Relic APM Pro</a>." />                                      | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
 | Redis <Popover content="For details, see <a href='/docs/redis/'>Installing Redis on Drupal or WordPress</a>." />                        | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
 | Solr <Popover content="For details, see <a href='/docs/solr/'>Apache Solr on Pantheon</a>." />                                          | <span style="color:green">✔</span> | <span style="color:green">✔</span> |
-| Multidev <Popover content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support." /> | <span style="color:green">✔</span> | <span style="color:red">❌</span> |
+| Multidev <Popover content="<a href='/docs/multidev/'>Multidev</a> is available to all Enterprise organizations, EDU organizations, Pantheon Partners, and Direct Online customers with Gold support." /> | <span style="color:green">✔</span> | ❌ |
 
 </Tab>
 
