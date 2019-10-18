@@ -8,7 +8,7 @@ categories: []
 ![Screenshot of the Support Tab](../images/dashboard/support-tab.png)
 
 ## Support Features and Response Times
-Pantheon offers a range of support packages that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Package.
+Pantheon offers a [range of support packages](https://pantheon.io/resources/pantheon-support-overview-datasheet) that extend to include all the features required for mission critical sites, such as 24x7x365 emergency on-call, debugging assistance and even bundled Professional Services with our Diamond Package.
 
 | Support Package                                           | Silver                            | Gold                              | Platinum               | Diamond            |
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
@@ -59,7 +59,7 @@ Some in-browser ad or tracking blockers can interfere with the **Launch Chat** b
 </Alert>
 
 ## Ticket Support
-The ticket support feature is available to certain support packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
+The ticket support feature is available to certain support packages and account types. For details, refer to the [support feature table above](#support-features-and-response-times) and the [support overview datasheet](https://pantheon.io/resources/pantheon-support-overview-datasheet). Tickets are associated with the site from which the ticket is opened. Please be sure that if you maintain several sites, that you open the ticket from the correct site's dashboard.
 
 1. Create a support ticket from within the site's Dashboard by clicking **Support** > **Open Ticket**. This will automatically include the site and user information.
 2. Choose the **ticket type**.
