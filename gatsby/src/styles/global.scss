@@ -306,7 +306,11 @@ pre code, pre code .hljs, .hljs {
   box-sizing: border-box;
 }
 
-.doc thread {
+.doc thead th p {
+	font-weight: bold;
+}
+
+.doc thead {
   display: table-header-group;
   vertical-align: middle;
   border-color: inherit;
@@ -328,6 +332,7 @@ pre code, pre code .hljs, .hljs {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: middle;
+  padding-left: 10px;
 }
 
 .doc td[rowspan]:not([rowspan="1"]) {

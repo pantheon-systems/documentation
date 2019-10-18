@@ -9,23 +9,11 @@ This page is used to keep track of common platform considerations, mostly derive
 ## Browser Support for Pantheon's Dashboard
 In order to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
-<table class="table  table-bordered table-responsive">
-  <thead>
-    <tr>
-      <th></th>
-      <th>Chrome</th>
-      <th>Firefox</th>
-      <th>Opera</th>
-      <th>Edge</th>
-      <th>Safari</th>
-    </tr>
-    <tr>
-      <th>Versions Supported</th>
-      <td colspan="4">Evergreen Browsers - Last 4</td>
-      <td>Current + Last Year</td>
-    </tr>
-  </thead>
-</table>
++------------------------+--------+---------+-------+------+---------------------+
+|                        | Chrome | Firefox | Opera | Edge | Safari              |
++========================+========+=========+=======+======+=====================+
+| **Versions Supported** | Evergreen Browsers - Last 4     | Current + Last Year |
++------------------------+---------------------------------+---------------------+
 
 ## Batch Uploads
 
@@ -115,7 +103,6 @@ terminus drush <site>.<env> -- utf8mb4-convert-databases
 This will convert the database tables in the existing installation to the proper encoding to support emoji characters. After making the conversion, test it out by placing an emoji in the site text.
 
 ## General PHP Framework Support
-
 Pantheon does not currently support any PHP frameworks outside of Drupal and WordPress. The platform is only optimized for Drupal or WordPress and no others. Although PHP will run, we can not assist you in getting the non-approved frameworks running in any way.
 
 ## Highly Populated Directories
@@ -125,8 +112,15 @@ Drupal itself is capable of managing uploaded content into different directories
 
 Consider the [File (field) Paths](https://www.drupal.org/project/filefield_paths) module to help resolve issues with highly populated directories.
 
-## Image Optimization Tools
+## .htaccess
+Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 
+For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
+
+### Drupal False Positive
+Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
+
+## Image Optimization Tools
 Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules and Plugins with Known Issues.](/modules-plugins-known-issues#imageapi-optimize)
 
 ## Inactive Site Freezing
@@ -134,8 +128,15 @@ Sandbox sites that are over four months old that have not had code commits or ot
 
 You can easily reactivate a site by visiting your Pantheon User Dashboard, select the frozen site there, then click **Unfreeze site**. Within a few minutes, the site will be ready for development again. If you experience any issues, a backup of the site is available and can be restored via the Site Dashboard. Please note that only files that have been committed will be available after unfreezing.
 
-## Large Files
+## IP-Address Based Security Schemes
+IP-based security is not recommended on Pantheon - or any cloud platform because the actual IP address where code executes from can change as application containers are migrated throughout the infrastructure.
 
+For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
+
+## Large Code Repository
+When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs.
+
+## Large Files
 Due to the configuration of the [Pantheon Filesystem](/files/), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp/). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
 
 | File Size       | Platform Compatibility          | Notes                               |
@@ -152,6 +153,14 @@ If you are distributing large binaries or hosting big media files, we recommend 
 Be aware, even when using an external CDN to host files, you cannot upload files over 100MB through the CMS. Upload these files directly to the CDN (here's Amazon's documentation for [uploading to an S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/upload-objects.html)).
 
 See our documentation for [Drupal](/drupal-s3) and [WordPress](/wordpress-s3/) for more information about integrating S3 with your Pantheon site.
+
+## Large (>100GB) File Backups
+Large backups take longer, use more resources, and have a higher likelihood of failing.  Additionally, a 100GB compressed tarball is in itself not particularly convenient for anyone.  For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal).  Despite the lack of backups, file content is highly durable and stored on multiple servers.
+
+## Maintenance Mode
+Pantheon may send a [generic Maintenance Mode message](/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
+
+Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
 
 ## Modules and Plugins with Known Issues
 See [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for a list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.
@@ -184,6 +193,28 @@ Domain masking is available to contract customers as an add-on. If you require d
 ### Additional Databases
 While you are able to import an additional database to an environment, only the Pantheon database will be preserved when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.
 
+## Oracle Database Drivers
+Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Secure Integration](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
+
+## PHP Configuration
+`php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/phpinfo/) for more information on PHP configuration.
+
+## PHP/Java Bridge
+Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge.sourceforge.net/pjb/).
+
+## PHP Short Tags
+PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](https://secure.php.net/manual/en/language.basic-syntax.phpmode.php) recommends not utilizing short tags because they are not supported on every server. Additionally, using short tags can interfere with embedding PHP in XML. Avoiding their use leads to more portable, re-distributable code.
+
+## Rename/Move Files or Directories
+### Files
+Like file directories, files on Pantheon cannot be renamed or moved. Our SFTP mode doesn’t support the `mv` command, which is what most apps use when renaming or moving files. The workaround is to delete the old file and upload the new file.
+
+### Directories
+File directories on Pantheon's file serving infrastructure cannot be moved or renamed. The workaround is to create a new directory, move all the files from inside the old directory into the new one, and delete the old directory.
+
+## Server Side Includes (SSI)
+Pantheon does not and will not support Server Side Includes. We recommend converting those to use PHP includes.
+
 ## Streaming Media
 Because Pantheon does not provide [transcoding](https://en.wikipedia.org/wiki/Transcoding#Re-encoding.2Frecoding), bandwidth-adaptive media delivery, or support for large files (see below), [streaming media](https://en.wikipedia.org/wiki/Streaming_media) is not possible directly from the platform.
 
@@ -194,72 +225,12 @@ It is also possible to deliver smaller media files from Pantheon using [progress
 ### Upload Speed
 Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
 
-## Large Code Repository
-
-When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs.
-
-## Rename/Move Files or Directories
-
-### Files
-
-Like file directories, files on Pantheon cannot be renamed or moved. Our SFTP mode doesn’t support the `mv` command, which is what most apps use when renaming or moving files. The workaround is to delete the old file and upload the new file.
-
-### Directories
-File directories on Pantheon's file serving infrastructure cannot be moved or renamed. The workaround is to create a new directory, move all the files from inside the old directory into the new one, and delete the old directory.
-
-
-## IP-Address Based Security Schemes
-IP-based security is not recommended on Pantheon - or any cloud platform because the actual IP address where code executes from can change as application containers are migrated throughout the infrastructure.
-
-For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
-
-## Maintenance Mode
-
-Pantheon may send a [generic Maintenance Mode message](/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
-
-Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
-
-## Server Side Includes (SSI)
-
-Pantheon does not and will not support Server Side Includes. We recommend converting those to use PHP includes.
-
-## PHP Short Tags
-
-PHP short tags (`<? ... ?>`) are not supported on Pantheon. The [PHP Manual](https://secure.php.net/manual/en/language.basic-syntax.phpmode.php) recommends not utilizing short tags because they are not supported on every server. Additionally, using short tags can interfere with embedding PHP in XML. Avoiding their use leads to more portable, re-distributable code.
-
-## Large (>100GB) File Backups
-
-Large backups take longer, use more resources, and have a higher likelihood of failing.  Additionally, a 100GB compressed tarball is in itself not particularly convenient for anyone.  For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal).  Despite the lack of backups, file content is highly durable and stored on multiple servers.
-
-## .htaccess
-Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ignores distributed configuration files such as `.htaccess` for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
-
-For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
-
-### Drupal False Positive
-
-Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
-
-## Oracle Database Drivers
-
-Pantheon does not currently support directly connecting to Oracle databases. Customers have successfully used the [Pantheon Secure Integration](https://pantheon.io/features/secure-integration) to connect to an external API on top of their Oracle databases.
-
-
-## PHP/Java Bridge
-
-Pantheon does not currently support the [PHP/Java Bridge](http://php-java-bridge.sourceforge.net/pjb/).
-
-## PHP Configuration
-`php.ini` cannot be customized or overridden on the Platform. See [Securely Working with phpinfo](/phpinfo/) for more information on PHP configuration.
-
 ## Terminus Support
-
 [Terminus](/terminus), our command-line tool for power users, is designed for 'nix-type operating systems like MacOS and Linux. While some people have installed Terminus on Windows using the [Git BASH on Git for Windows](https://git-for-windows.github.io/) or [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) shells, this is not officially supported.
 
 If you're a Windows user, consider using a virtualization tool like [VirtualBox](https://www.virtualbox.org/) to run a virtualized 'nix-type environment for tools like Terminus.
 
 ## Write Access on Environments
-
 For Dev environments in SFTP mode, the entire codebase is writable. However the platform is designed to keep only the codebase under version control.  This means that the only writable paths are `sites/default/files` for Drupal sites and `wp-content/uploads` for WordPress sites.
 
 Any modules for Drupal or plugins for WordPress that need to write to the codebase (and assume write access) need a symlink added so that they will instead write to the file system. For more information, read [Using Extensions That Assume Write Access](/assuming-write-access/).
