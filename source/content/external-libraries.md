@@ -99,11 +99,13 @@ Once you have downloaded and enabled the Imagemagick module, you'll need to conf
 
 When creating a new preset, if the "Division by Zero" warning appears, add the [`image_allow_insecure_derivatives`](https://www.drupal.org/project/image_allow_insecure_derivatives) conf variable to your `settings.php` file.
 
-Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`. [ImageAPI Optimize's support for 3rd party services (like advpng and OptiPNG)](https://www.drupal.org/node/773342) are not available at this time.
+Some modules (like [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)) require the explicit path to the ImageMagick library. Use the path `/usr/bin/convert`.
+
+ImageAPI Optimize's [support for 3rd party services](https://www.drupal.org/node/773342) (like advpng and OptiPNG) are not available at this time.
 
 ## Troubleshooting and FAQs
-#### How do I request the addition of a new library or a newer version of an existing library?
+### How do I request the addition of a new library or a newer version of an existing library?
 Please [contact support](/support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
 
-#### Will you setup and configure the module/plugin for me?
+### Will you setup and configure the module/plugin for me?
 No. This is not within our [scope of support](/support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.

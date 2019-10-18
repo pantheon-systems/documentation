@@ -259,7 +259,7 @@ This will convert the database tables in the existing installation to the proper
 
 ## Image Optimization Tools
 
-Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules and Plugins with Known Issues.](https://pantheon.io/docs/modules-plugins-known-issues#imageapi-optimization)
+Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules and Plugins with Known Issues.](/modules-plugins-known-issues#imageapi-optimize)
 
 ## Terminus Support
 

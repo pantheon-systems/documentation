@@ -139,7 +139,7 @@ Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/
 ### [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)
 **Issue**: ImageAPI Optimize supports 3rd party libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim. These libraries have to be installed on the server. At this time, they are not supported.
 
-**Solution**: [Use a 3rd-party module like reSmush.It](https://www.drupal.org/project/resmushit) or [a local application like ImageOptim.](https://imageoptim.com)
+**Solution**: Use a 3rd-party module like [reSmush.It](https://www.drupal.org/project/resmushit) or a local application like [ImageOptim.](https://imageoptim.com) or [OptiPNG](http://optipng.sourceforge.net/).
 
 <hr />
 
