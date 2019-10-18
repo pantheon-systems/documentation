@@ -56,7 +56,7 @@ Most plugins are published online as a Git repository. You can install the plugi
 Then in a terminal window on your computer, use the following commands:
 
 ```bash
-  cd $HOME/.terminus/plugins git clone
+  cd $HOME/.terminus/plugins && git clone
   https://github.com/pantheon-systems/terminus-plugin-example.git
 ```
 
