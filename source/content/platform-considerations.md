@@ -257,6 +257,9 @@ terminus drush <site>.<env> -- utf8mb4-convert-databases
 
 This will convert the database tables in the existing installation to the proper encoding to support emoji characters. After making the conversion, test it out by placing an emoji in the site text.
 
+## Image Optimization Tools
+
+Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules and Plugins with Known Issues.](/modules-plugins-known-issues#imageapi-optimize)
 
 ## Terminus Support
 
