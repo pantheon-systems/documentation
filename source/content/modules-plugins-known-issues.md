@@ -842,6 +842,14 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Solution**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
 
+**Issue 3**: Upload count do not match the import file.
+
+**Solution**: Under WP All Import Settings, you can try:
+
+- Clean up Temp files
+- Lowering the Chunk size to less than 1000
+- Check the Enable Stream Reader
+
 <hr />
 
 
