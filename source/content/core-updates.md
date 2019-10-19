@@ -317,3 +317,35 @@ There are multiple reasons that 503 errors might occur when updating:
 - PHP segfault: These are tricky to troubleshoot because very little debugging information is present. A temporary fix is available. Contact Pantheon Customer Support if you think you have been affected.
 
 - Timeouts are another cause of 503 errors, though they are much less likely to occur if you are using the Pantheon domains. If the operation takes more than 60 seconds, you might see a timeout occur.
+
+### Getting error updating: CONFLICT (modify/delete): pantheon.upstream.yml deleted in HEAD and modified in upstream/master. Version upstream/master of pantheon.upstream.yml left in tree
+
+This issue happens with a very outdated core update from the dashboard. This process will fix this issue:
+
+1) Switch back to SFTP mode
+2) Modify .gitignore and add # before the pantheon.upstream.yml line
+
+<TabList>
+
+  <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
+
+3) Reupload the pantheon.upstream.yml file if missing (https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
+
+  </Tab>
+
+  <Tab title="Drupal 8" id="d8-2conflict-merge">
+
+3) Reupload the pantheon.upstream.yml file if missing (https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
+  </Tab>
+
+  <Tab title="Drupal 7" id="d7-2conflict-merge">
+
+3) Reupload the pantheon.upstream.yml file if missing (https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+
+  </Tab>
+
+  </TabList>
+
+4) Commit in dashboard (pantheon.upstream.yml can be now committed)
+5) Switch back to git and reapply updates
+6) Modify .gitignore and remove the # before the pantheon.upstream.yml line to be .gitignored again
