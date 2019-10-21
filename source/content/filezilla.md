@@ -91,7 +91,16 @@ Error:            ssh_init: nodename nor servname provided, or not known
 Error:            Could not connect to server
 ```
 
-Double check settings and resolve typos to fix this issue.
+### Cannot sftp to environment with multiple appservers
+Previously can access sftp in test and live but now getting `Error: Directory /srv/bindings/c1f103b56xxxxxxxxxxxx/files: no such file or directory` error. Symptoms include users able to connect in dev or multidevs with single appserver.
+
+Getting any of the equivalent IP of the host appserver by using a `dig` command to replace the hostname lets you connect again by:
+
+```bash
+dig +short appserver.live.120330a1-xxxxxxxxxxxxxxxxx.drush.
+35.194.x.x
+35.222.x.x 
+```
 
 ### Site Manager
 Features offered in the FileZilla Site Manager (like [Synchronized Browsing](https://wiki.filezilla-project.org/Using#Synchronized_Browsing)) are not supported because the Pantheon platform sometimes migrates sites across appservers without warning and the non-static binding string will change. This means that while you can set up your site in the Site Manager, you will need to reconfigure the login information and file paths whenever the dev environment site binding changes.
