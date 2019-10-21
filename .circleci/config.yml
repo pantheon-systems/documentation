@@ -9,7 +9,7 @@ jobs:
       - restore_cache:
           keys:
             - v2.4-always-
-            - npm-v2.6-{{ checksum "gatsby/package-lock.json" }}
+            - npm-v2.5-{{ checksum "gatsby/package-lock.json" }}
       - run:
           name: Install Terminus
           command: |
@@ -44,7 +44,7 @@ jobs:
           command: |
             scripts/merge_conflicts.sh
       - save_cache:
-          key: npm-v2.6-{{ checksum "gatsby/package-lock.json" }}
+          key: npm-v2.5-{{ checksum "gatsby/package-lock.json" }}
           paths:
             - ~/build/gatsby/package-lock.json
             - ~/build/gatsby/node_modules
