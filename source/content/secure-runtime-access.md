@@ -9,7 +9,7 @@ searchboost: 150
 
 Pantheon’s database services use strong random passwords and TLS to encrypt communications by default. Customers seeking additional defense in depth can enable Secure Runtime Access (SRA).
 
-When SRA is enabled, the site's Pantheon MySQL databases will reject logins unless the connection comes through the appropriate [SSH tunnel](/ssh-tunnels/).
+SRA creates an early discard of attempts to connect to persistence instances like MySQL or Redis. When SRA is enabled, the site's Pantheon MySQL databases will reject logins unless the connection comes through the appropriate [SSH tunnel](/ssh-tunnels/).
 
 In addition to defense in depth, this feature can be used to enforce role-based permissions by preventing users with a developer role from accessing a live database. It also guarantees that users who are removed from a site team or organization can no longer use a saved set of credentials.
 
@@ -19,8 +19,8 @@ Secure Runtime Access is available to customers with an [Organizational](/organi
 
 1. Navigate to your Site’s Dashboard and click **Settings**.
    Secure Runtime Access will appear under **Available Add-Ons**.
-1. In the Add Ons tab, click **Secure Runtime Access Enabled**.
-1. Click **Save Secure Runtime Access** to enable SRA for that site.
+2. In the Add Ons tab, click **Secure Runtime Access Enabled**.
+3. Click **Save Secure Runtime Access** to enable SRA for that site.
    * Repeat this process for each site for which you want SRA enabled.
 
 ## How to Access Runtime Services when SRA is Enabled
