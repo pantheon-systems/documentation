@@ -37,7 +37,7 @@ The main process of the Pantheon WebOps workflow is to move code up from Dev to 
 
 #### Why does Pantheon do this?
 
-Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software)". Specifically, we're of the opinion that it makes sense to separate the code and content because there is some level of separate between the people changing each. Generally speaking, the team members editing content expect to sign into a live site, make changes, and immediately see the changes on a public site. Developers and designers changing code often prefer to make their changes on a non-live environment because the risk of breaking the site is too great. Changing code directly on a Live site is a practice we call "[Cowboy Coding](https://pantheon.io/blog/cowboy-coding-nostalgia)" and we greatly discourage it.
+Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software)". Specifically, we're of the opinion that it makes sense to separate the code and content because there is some level of separate between the people changing each. Generally speaking, the team members editing content expect to sign into a live environment, make changes, and immediately see the changes on that public site. Developers and designers changing code often prefer to make their changes on a non-live environment because the risk of breaking the site is too great. Changing code directly on a production environment is a practice we call "[Cowboy Coding](https://pantheon.io/blog/cowboy-coding-nostalgia)" and we greatly discourage it.
 
 </Accordion>
 
@@ -64,7 +64,7 @@ Once changes are pushed to Dev, the Deploys panel in the Test tab will prompt yo
 
  - Check the **Pull files and the database from the Live environment?** checkbox to pull the content from your Live environment to the Test environment.
 
- - Drupal site deploys can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for databse changes.
+ - Drupal site deployments can also run `update.php` which executes [update hooks](https://www.drupal.org/docs/8/api/update-api/introduction-to-update-api-for-drupal-8) for databse changes.
 
    On WordPress site dashboards, cloning the content will expose an option to convert URLs from the Live environment's pattern to the Test environment's, including the protocol from HTTPS to HTTP for encrypted live environments.
 
@@ -111,7 +111,7 @@ By design, code changes via SFTP are prevented in Test and Live. All code change
 
 1. **Use the Workflow** (Recommended): Deploy code from Dev to Test to Live via the Site Dashboard or Terminus as outlined above.
 
-2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm.  Pushing a [hotfix via Git tags](/hotfixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
+2. **Hotfixes**: Hotfixes is not a best practice and should be the exception, not the norm. Pushing a [hotfix via Git tags](/hotfixes) is the only way to push code changes directly to Live without deploying through Dev and Test.
 
 ## Managing Database and Files: Clone, Import, Export, Wipe
 
@@ -135,7 +135,7 @@ The [database clone operation](/sites/#database--files) excludes some tables by 
 * `accesslog`
 * `watchdog`
 
-You can clone databases from one environment to another at any point.  It does not need to only be within the deployment process.
+You can clone databases from one environment to another at any point. It does not need to only be within the deployment process.
 
 <Alert title="Note" type="info">
 
@@ -145,7 +145,7 @@ The **Export** tool does not include a copy of the site's codebase and cannot be
 
 ## Uncommon Workflows
 
-Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the content "up", which is the opposite of the normal content workflow. In this case, you may move the database and files (e.g. images) from Dev or Test to Live via the  **Database/Files** > **Clone** area of the Dashboard.
+Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the content "up", which is the opposite of the normal content workflow. In this case, you may move the database and files (e.g. images) from Dev or Test to Live via the **Database/Files** > **Clone** area of the Dashboard.
 
 Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made in Live like comments or ecommerce orders from the public. Also note that overwriting the database of a Live environment may cause downtime.
 
