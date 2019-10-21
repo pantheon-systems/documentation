@@ -44,8 +44,17 @@ You can also [connect to your Redis instance](/redis/#use-the-redis-command-line
 
 If you rely on the Redis cache for locks (mutexes) or storing other long-term data, you must move them out of Redis and into the database to avoid any issues when the Redis cache is dropped during failover.
 
-## Limitations
-Solr is not currently supported on DR-enabled sites. See our documentation on how to safely remove Solr for [Drupal 8](/solr-drupal-8/#safely-remove-solr), [Drupal 7](/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
+## Solr and Disaster Recovery
+
+Solr requires additional considerations when used on sites with Disaster Recovery. In its default state, if a site with Solr and Disaster Recovery fails over to the backup, Solr will not automatically rebuild the search index.
+
+To use Solr on a site with Disaster Recovery, use one of the three following options:
+
+1. Rebuild the Solr index on the backup, after the site has failed over.
+1. An [Alternative Solr Service](/solr#alternatives-to-pantheons-solr-service)
+1. For Drupal: Configure the built-in search as a fallback.
+
+If neither of these options work for your site's needs, see our documentation on how to safely remove Solr for [Drupal 8](/solr-drupal-8/#safely-remove-solr), [Drupal 7](/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
 
 ## See also
 - [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar)
