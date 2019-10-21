@@ -54,7 +54,7 @@ To use Solr on a site with Disaster Recovery, use one of the three following opt
 1. An [Alternative Solr Service](/solr#alternatives-to-pantheons-solr-service)
 1. For Drupal: Configure the built-in search as a fallback.
 
-If neither of these options work for your site's needs, see our documentation on how to safely remove Solr for [Drupal 8](/solr-drupal-8/#safely-remove-solr), [Drupal 7](/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
+If none of these options work for your site's needs, see our documentation on how to safely remove Solr for [Drupal 8](/solr-drupal-8/#safely-remove-solr), [Drupal 7](/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
 
 ## See also
 - [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar)
