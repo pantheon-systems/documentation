@@ -24,7 +24,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 | Plans         | Redis Support <Popover content="Available across all environments, including Multidevs."/> |
 | ------------- | -------------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
-| Basic         | <span style="color:red">❌</span>  |
+| Basic         | ❌                                 |
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 
@@ -37,18 +37,18 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 2. Install the [WP Redis](https://wordpress.org/plugins/wp-redis/) plugin via SFTP or Git. To install via [Terminus](/terminus), [set the connection mode to SFTP](/sftp) then run:
 
-    ```
-    terminus wp <site>.<env> -- plugin install wp-redis
-    ```
+   ```bash{promptUser: user}
+   terminus wp <site>.<env> -- plugin install wp-redis
+   ```
 
-    For site networks, you will need to specify the site URL by adding that to the command:
+   For site networks, you will need to specify the site URL by adding that to the command:
 
-    ```
-    terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
-    ```
+   ```bash{promptUser: user}
+   terminus wp <site>.<env> -- plugin install wp-redis --url=<url>
+   ```
 3. Create a new file named `wp-content/object-cache.php` that contains the following:
 
-    ```php
+    ```php:title="object-cache.php"
     <?php
     # This is a Windows-friendly symlink
     require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
@@ -62,7 +62,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
     When a new version of the WP Redis plugin is released, you can upgrade by the normal Plugin update mechanism in WordPress or via Terminus:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus wp <site>.<env> -- plugin update wp-redis
     ```
 
@@ -77,13 +77,13 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 #### Install via Composer
 1. Set the Dev environment's connection mode to Git from within the Site Dashboard or via Terminus:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus connection:set <site>.<env> git
     ```
 1. [Clone the site's codebase](/git/#clone-your-site-codebase) if you have not done so already.
 1. Use the following within `composer.json` to install the WP Redis plugin as a drop-in via Composer using [koodimonni/composer-dropin-installer](https://github.com/Koodimonni/Composer-Dropin-Installer):
 
-    ```json
+    ```json:title=composer.json
     "repositories": {
       "wpackagist": {
         "type": "composer",
@@ -110,7 +110,7 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
 1. Use git status to verify your local state, then commit and push your code to Pantheon:
 
-    ```bash
+    ```bash{promptUser: user}
     git status
     git commit --all -m "Initiate composer, require custom code"
     git push origin master
@@ -133,38 +133,38 @@ All plans except for the Basic plan can use Redis. Sandbox site plans can enable
 
     You can install and enable the module from the command line using [Terminus](/terminus):
 
-    ```bash
+    ```bash{promptUser: user}
     terminus remote:drush <site>.<env> -- en redis -y
     ```
 
 3. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
 
-    ```php
-    // Configure Redis
+   ```php:title=settings.php
+   // Configure Redis
 
-    if (defined('PANTHEON_ENVIRONMENT')) {
-      // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
-      $settings['container_yamls'][] = 'modules/redis/example.services.yml';
+   if (defined('PANTHEON_ENVIRONMENT')) {
+     // Include the Redis services.yml file. Adjust the path if you installed to a contrib or other subdirectory.
+     $settings['container_yamls'][] = 'modules/redis/example.services.yml';
 
-      //phpredis is built into the Pantheon application container.
-      $settings['redis.connection']['interface'] = 'PhpRedis';
-      // These are dynamic variables handled by Pantheon.
-      $settings['redis.connection']['host']      = $_ENV['CACHE_HOST'];
-      $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
-      $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
+     //phpredis is built into the Pantheon application container.
+     $settings['redis.connection']['interface'] = 'PhpRedis';
+     // These are dynamic variables handled by Pantheon.
+     $settings['redis.connection']['host']      = $_ENV['CACHE_HOST'];
+     $settings['redis.connection']['port']      = $_ENV['CACHE_PORT'];
+     $settings['redis.connection']['password']  = $_ENV['CACHE_PASSWORD'];
 
-      $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
-      $settings['cache_prefix']['default'] = 'pantheon-redis';
+     $settings['cache']['default'] = 'cache.backend.redis'; // Use Redis as the default cache.
+     $settings['cache_prefix']['default'] = 'pantheon-redis';
 
-      // Set Redis to not get the cache_form (no performance difference).
-      $settings['cache']['bins']['form']      = 'cache.backend.database';
-    }
-    ```
-    <Alert title="Note" type="info">
+     // Set Redis to not get the cache_form (no performance difference).
+     $settings['cache']['bins']['form']      = 'cache.backend.database';
+   }
+   ```
+   <Alert title="Note" type="info">
 
-    The above Redis cache configuration should be placed in `sites/default/settings.php` rather than `settings.pantheon.php` to avoid conflicts with future upstream updates.
+   The above Redis cache configuration should be placed in `sites/default/settings.php` rather than `settings.pantheon.php` to avoid conflicts with future upstream updates.
 
-    </Alert>    
+   </Alert>
     
 4. On your dev site, navigate to `/admin/reports/status` and confirm that the **REDIS** line says "Connected, using the PhpRedis client."
 
@@ -181,7 +181,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
 1. Enable the Redis cache server from your Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add**. It may take a couple minutes for the Redis server to come online.
 2. Add the [Redis](https://www.drupal.org/project/redis) module from Drupal.org. You can install and enable the module from the command line using [Terminus](/terminus):
 
-    ```bash
+    ```bash{promptUser: user}
     terminus remote:drush <site>.<env> -- en redis -y
     ```
 
@@ -191,7 +191,7 @@ This configuration uses the `Redis_CacheCompressed` class for better performance
     - `redis_client_password`
 4. Edit `sites/default/settings.php` to add the Redis cache configuration. These are the **mandatory**, required Redis configurations for every site.
 
-    ```php
+    ```php:title=settings.php
     // All Pantheon Environments.
     if (defined('PANTHEON_ENVIRONMENT')) {
       // Use Redis for caching.
@@ -301,13 +301,32 @@ RedisException: Redis server went away in Redis->setOption() (line 28 of /srv/bi
 
 Enable Redis via the Pantheon Site Dashboard by going to **Settings** > **Add Ons** > **Add** > **Redis**. It may take a few minutes to provision the service.
 
+### RedisException: Redis is busy running a script.
+This usually occurs on higher traffic Drupal sites. In the PHP logs:
+
+```php
+RedisException: BUSY Redis is busy running a script.
+```
+
+To resolve, set or increase the `redis_perm_ttl` value in `settings.php`. This example is set to six hours:
+
+```php:title=settings.php
+$conf['redis_perm_ttl'] = 21600;
+```
+
+<Alert title="Warning" type="danger">
+
+The Redis cache needs to be flushed with 'flushall' in the Redis terminal connection afterwards, in order for this to have any effect.
+
+</Alert>
+
 ### No Keys Found
 When the Dashboard status check reports that Redis is enabled but doesn't have any data (0 keys found), you'll want to confirm the logic behind the check for PANTHEON_ENVIRONMENT in your `settings.php` Redis cache configuration. Depending on the kind of test you're performing, you’ll get different results.
 
 Example of a block that will result in an **incorrectly configured cache backend**:
 
 
-```php
+```php:title=settings.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
   $_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     // Use Redis for caching.
@@ -326,7 +345,7 @@ The preceding conditional will only evaluate as true if the application in the L
 
 To resolve this inconsistency, all Redis cache configuration should be enclosed in a conditional like this:
 
-```php
+```php:title=settings.php
 if (defined('PANTHEON_ENVIRONMENT')) {
   // Use Redis for caching.
 }
@@ -373,7 +392,7 @@ File not found:
 
 You skipped a step; `settings.php` must include the cache\_backport files. Add the following to `settings.php` before the Redis configuration:
 
-```php
+```php:title=settings.php
 $conf['cache_inc'] = 'sites/all/modules/cache_backport/cache.inc';
 ```
 
@@ -412,7 +431,7 @@ On Pantheon, the maxmemory policy is `allkeys-lru`: evict keys by trying to remo
 ### How is Redis configured on the platform?
 Your `redis.conf` file can be retrieved via SFTP similarly to how you can download Redis log files (see below), or you can review it here:
 
-```
+```batch:title=redis.conf
 port xxxxx
 timeout 300
 loglevel notice
@@ -444,8 +463,8 @@ Yes. There is a `redis.log` file that is available on the Redis container for ea
 
 To access the Redis container, copy the SFTP command line string from the **Connection Info** button, and replace `appserver` with `cacheserver`. You can see where the log files and configuration reside:
 
-```
-$ sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in
+```bash{outputLines:2-7}
+sftp -o Port=2222 live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg@cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in
 Connected to cacheserver.live.81fd3bea-d11b-401a-85e0-07ca0f4ce7cg.drush.in.
 sftp> ls
 certs          chef.stamp     data           lock           logs           metadata.json  redis.conf     tmp
