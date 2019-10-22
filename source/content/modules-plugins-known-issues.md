@@ -838,9 +838,21 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
  - Splitting the import or export into smaller parts
  - Set the plugin to only process 1 or 2 records per iteration
 
+<br />
+
 **Issue 2**: Uploading large import files hits the 59 second [timeout](/timeouts/), or you're getting invalid file paths.
 
 **Solution**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
+
+<br />
+
+**Issue 3**: Upload count does not match the import file.
+
+**Solution**: Under WP All Import Settings, you can:
+
+- Clean up temporary files
+- Lower the chunk size to less than 1000
+- Check the Enable Stream Reader
 
 <hr />
 
