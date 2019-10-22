@@ -21,7 +21,7 @@ All plans except for a Basic plan can use Solr. Solr is available to Sandbox sit
 | Plans         | Solr Support <Popover content="Available across all environments, including Multidevs." /> |
 | ------------- | ---------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
-| Basic         | <span style="color:red">❌</span>  |
+| Basic         | ❌  |
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 

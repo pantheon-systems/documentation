@@ -257,6 +257,22 @@ tr:nth-child(even) {
 	background-color: #d2d9dd;
 }
 
+
+thead tr {
+	padding-left: 10px;
+	background-color: #d2d9dd;
+}
+
+
+thead th:not(:last-child) {
+	border-right: 1px solid #ffffff !important;
+}
+
+
+tr:nth-child(even) td:not(:last-child) {
+	border-right: 1px solid #ffffff !important;
+}
+
 /* Pantheon "B" icon */
 .pio-docs-booticon {
 	display: block;

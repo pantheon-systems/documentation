@@ -490,7 +490,7 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 | Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
 | ------------- | -------------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
-| Basic         | <span style="color:red">❌</span>  |
+| Basic         | ❌  |
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 <hr class="source-code">
@@ -501,7 +501,7 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 | Plans         | Redis Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
 | ------------- | -------------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
-| Basic         | <span style="color:red">❌</span>  |
+| Basic         | ❌  |
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 ```

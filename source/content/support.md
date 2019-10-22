@@ -14,9 +14,9 @@ Pantheon offers a [range of support packages](https://pantheon.io/resources/pant
 |-----------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------|--------------------|
 | **Scope**                                                 | Platform <Popover title=" Scope of Support" content="Dashboard, Dev/Test/Live Workflow, Git/SFTP Mode, Docs" /> | Technical <Popover title="Scope of Support" content="Drupal & WordPress, Modules & Plugins, Application/Site, DNS, Multidev , Basic CDN, Basic Terminus" /> | Performance <Popover title="Scope of Support" content="New Relic, Caching, Cloud Integrations, Custom Upstreams, Advanced workflows, Advanced CDN, Advanced Terminus" /> | Dedicated <Popover title="Scope of Support" content="Bespoke site debugging" /> |
 | [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
-| [**Tickets**](#ticket-support)                            | <span style="color:red">❌</span> | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
-| [**Emergency On-Call**](#pantheon-on-call)                | <span style="color:red">❌</span> | <span style="color:red">❌</span> | 24x7: 1 Hour           | 24x7: 15 Minutes   |
-| [**Professional Services**](/professional-services/) | <span style="color:red">❌</span> | Available for Purchase            | Available for Purchase | Bundle Included    |
+| [**Tickets**](#ticket-support)                            | ❌ | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
+| [**Emergency On-Call**](#pantheon-on-call)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
+| [**Professional Services**](/professional-services/) | ❌ | Available for Purchase            | Available for Purchase | Bundle Included    |
 
 ## Best Practices
 
