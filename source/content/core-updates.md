@@ -318,34 +318,35 @@ There are multiple reasons that 503 errors might occur when updating:
 
 - Timeouts are another cause of 503 errors, though they are much less likely to occur if you are using the Pantheon domains. If the operation takes more than 60 seconds, you might see a timeout occur.
 
-### Getting error updating: CONFLICT (modify/delete): pantheon.upstream.yml deleted in HEAD and modified in upstream/master. Version upstream/master of pantheon.upstream.yml left in tree
+### Error updating: CONFLICT (modify/delete): pantheon.upstream.yml deleted in HEAD and modified in upstream/master. Version upstream/master of pantheon.upstream.yml left in tree
 
-This issue happens with a very outdated core update from the dashboard. This process will fix this issue:
+This issue happens when you attempt to update very outdated core files from the Dashboard. Perform the following to resolve:
 
-1) Switch back to SFTP mode
-2) Modify .gitignore and add # before the pantheon.upstream.yml line
+1. Modify `.gitignore` and add a `#` at the beginning of the `pantheon.upstream.yml` line to comment it out
+1. Set the Site Connection Mode to SFTP
+1. Reupload the `pantheon.upstream.yml` file if missing:
 
-<TabList>
+ <TabList>
 
-  <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
+ <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
 
-3) Reupload the pantheon.upstream.yml file if missing (https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
+ [pantheon.upstream.yml for WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
-  </Tab>
+ </Tab>
 
-  <Tab title="Drupal 8" id="d8-2conflict-merge">
+ <Tab title="Drupal 8" id="d8-2conflict-merge">
 
-3) Reupload the pantheon.upstream.yml file if missing (https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
-  </Tab>
+ [pantheon.upstream.yml for Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
+ </Tab>
 
-  <Tab title="Drupal 7" id="d7-2conflict-merge">
+ <Tab title="Drupal 7" id="d7-2conflict-merge">
 
-3) Reupload the pantheon.upstream.yml file if missing (https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+ [pantheon.upstream.yml for Drupal 7](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 
-  </Tab>
+ </Tab>
 
-  </TabList>
+ </TabList>
 
-4) Commit in dashboard (pantheon.upstream.yml can be now committed)
-5) Switch back to git and reapply updates
-6) Modify .gitignore and remove the # before the pantheon.upstream.yml line to be .gitignored again
+1. Return to the Commit in dashboard, and note that `pantheon.upstream.yml` can now be committed
+1. Set the Site Connection Mode to Git and reapply updates
+1. Modify `.gitignore` and remove the `#` before the `pantheon.upstream.yml` line to instruct Git to ignore the file again
