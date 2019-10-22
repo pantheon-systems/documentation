@@ -866,11 +866,18 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
-**Issue**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
+**Issue 1:** Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/security).
 
+**Issue 2:** When registering the plugin, accessing `/wp-admin/plugin-install.php?tab=commercial` returns "Sorry, you are not allowed to access this page".
+
+**Solution:** Activate the plugin individually for each environment you want to use the plugin with, as it requires a separate key for each domain. Instead of clicking on **Purchase a subscription or enter an existing site key**, use the **Configure WMPL** button:
+
+![The Configure WMPL Button](../images/wpml-configure.png)
+
 <hr />
+
 
 
 ### [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
