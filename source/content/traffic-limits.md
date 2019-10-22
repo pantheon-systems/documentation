@@ -37,7 +37,7 @@ You can upgrade your plan in your dashboard at any time. You may not be able to 
 ### Why doesn't Pantheon's traffic metrics match my other analytics?
 Analytics suites (e.g. Google Analytics) are measuring fundamentally different things vs Pantheon's request log. While analytics suites focus on measuring _visits_, our request log more comprehensively measures _traffic_.
 
-We track every single request to the platform, whereas analytics tools will typically only track complete "pageviews" where an HTML page including a tracking snippit is completely loaded by a browser and can fire off a subsequent request to the analytics platform.
+We track every single request to the platform, whereas analytics tools will typically only track complete "pageviews" where an HTML page including a tracking snippet is completely loaded by a browser and can fire off a subsequent request to the analytics platform.
 
 For example, the following traffic will be collected in our logs, but will not be present in most analytics:
 
