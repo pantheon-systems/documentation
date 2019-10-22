@@ -499,6 +499,14 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 
 <hr />
 
+### [FacetWP](https://facetwp.com)
+
+**Issue:** FacetWP [conflicts with New Relic](https://facetwp.com/new-relic-compatibility/).
+
+**Solution:** [Disable New Relic](/new-relic#disable-new-relic-browser-monitoring-agent) when using FacetWP.
+
+<hr />
+
 ### [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/)
 
 **Issue:** Site suddenly shows a white screen of death.
