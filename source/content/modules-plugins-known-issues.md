@@ -851,31 +851,15 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
-**Issue**: Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
+**Issue 1:** Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/security).
 
-<hr />
+**Issue 2:** When registering the plugin, accessing `/wp-admin/plugin-install.php?tab=commercial` returns "Sorry, you are not allowed to access this page".
 
-### [WPML - Automatic WPML registration using PHP for easy moves between development, test, and live environment](https://wpml.org/)
-**Issue**: Accessing /wp-admin/plugin-install.php?tab=commercial will throw `Sorry, you are not allowed to access this page`.
+**Solution:** Activate the plugin individually for each environment you want to use the plugin with, as it requires a separate key for each domain. Instead of clicking on **Purchase a subscription or enter an existing site key**, use the **Configure WMPL** button:
 
-**Solution**: Define WPML Site Key in wp-config.php 
-```php
-define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
-```
-
-To define it to a specific environment use 
-
-```php
-if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'test' ) )  ) :
-   define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
-endif;
-
-if ( in_array( $_ENV['PANTHEON_ENVIRONMENT'], array( 'live' ) )  ) :
-   define( 'OTGS_INSTALLER_SITE_KEY_WPML', 'your-site-key' );
-endif;
-```
+![The Configure WMPL Button](../images/wpml-configure.png)
 
 <hr />
 
