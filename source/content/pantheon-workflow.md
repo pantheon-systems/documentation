@@ -21,6 +21,7 @@ Optimize your dev team and streamline WebOps workflows. Pantheon delivers custom
 
 ## Components of a Site
 One of the core concepts at the heart of the Pantheon WebOps workflow is the distinction between **code** and **content**.
+
 ### Code
 Code refers to anything version controlled by Git which includes core, custom and contributed modules or plugins, themes, and libraries.
 
@@ -37,7 +38,7 @@ The main process of the Pantheon WebOps workflow is to move code up from Dev to 
 
 #### Why does Pantheon do this?
 
-Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software)". Specifically, we're of the opinion that it makes sense to separate the code and content because there is some level of separate between the people changing each. Generally speaking, the team members editing content expect to sign into a live environment, make changes, and immediately see the changes on that public site. Developers and designers changing code often prefer to make their changes on a non-live environment because the risk of breaking the site is too great. Changing code directly on a production environment is a practice we call "[Cowboy Coding](https://pantheon.io/blog/cowboy-coding-nostalgia)" and we greatly discourage it.
+Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/802050/what-is-opinionated-software)". Specifically, we're of the opinion that it makes sense to separate the code and content because there is some level of separation between the people changing each. Generally speaking, the team members editing content expect to sign into a live environment, make changes, and immediately see the changes on that public site. Developers and designers changing code often prefer to make their changes on a non-live environment because the risk of breaking the site is too great. Changing code directly on a production environment is a practice we call "[Cowboy Coding](https://pantheon.io/blog/cowboy-coding-nostalgia)" and we greatly discourage it.
 
 </Accordion>
 
@@ -79,7 +80,7 @@ It's also a good idea to review the Status tab and run **Launch Check**, and mak
 - [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check/)
 - [Launch Check - WordPress Performance and Configuration Analysis](/wordpress-launch-check/)
 
-Many teams have a standardized review procedure that they execute in the Test environment. That might mean manually checking important pages on the site or walking through content creation forms. If you have automated tests, you can trigger them upon deployment with our [platform hook system](/quicksilver).
+Many teams have a standardized review procedure that they execute in the Test environment. That might mean manually checking important pages on the site or walking through content creation forms. If you have automated tests, you can trigger them upon deployment with our [platform hook system](/quicksilver/).
 
 This entire process is designed around making sure that the Live environment is always stable and never at risk due to code updates.
 
@@ -147,7 +148,7 @@ The **Export** tool does not include a copy of the site's codebase and cannot be
 
 Typically, you'll create content in the Live environment. However, when deploying a newly-built site for the very first time, it is often necessary to push the content "up", which is the opposite of the normal content workflow. In this case, you may move the database and files (e.g. images) from Dev or Test to Live via the **Database/Files** > **Clone** area of the Dashboard.
 
-Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made in Live like comments or ecommerce orders from the public. Also note that overwriting the database of a Live environment may cause downtime.
+Moving content up to Live should almost never be done on a launched site. The only exception is if that site is 100% read-only, as pushing the database and files will overwrite all changes made in Live, like comments or ecommerce orders from the public. Also note that overwriting the database of a Live environment may cause downtime.
 
 If there are other workflows you would like to see, contact us. We're always looking for ways to improve the platform.
 
