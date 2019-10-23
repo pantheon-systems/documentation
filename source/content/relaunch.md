@@ -96,6 +96,10 @@ Also, having a long TTL on the DNS records that are changing can cause you to ge
 
 Finally, steps 2-6 should be done in the same time period. Once you complete steps 2-3, the old site's HTTPS certificate will be removed within a few hours and the new site's HTTPS certificate will be available within an hour. As soon as that is done, to minimize invalid HTTPS certificates, you should immediately change the DNS as described in step 5.
 
+### When do I actually switch the site from the old site to the new one?
+
+As soon as you complete Step 3, visitors to your domain will see the new site. But technically, until Step 5 is complete and DNS is fully propogated, your visitors may still be seeing the new site with the old site's HTTPS certificate that will be going offline shortly.
+
 ## See Also
 - [Launch Essentials](/guides/launch/)
 - [Manage Plans in the Site Dashboard](/site-plan/)
