@@ -1,5 +1,5 @@
 ---
-title: '[Migrate to Pantheon: WordPress Site Networks]'
+title: 'Migrate to Pantheon: WordPress Site Networks'
 description: Learn how to import a WordPress Site Network into Pantheon.
 tags: [migratemanual]
 categories: [wordpress]
