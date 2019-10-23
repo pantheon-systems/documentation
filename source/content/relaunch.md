@@ -82,6 +82,20 @@ In order to retain Preferred Pricing an updated [invitation to pay](/add-client-
 9. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/site-plan/#cancel-current-plan).
 10. In the old Site Dashboard, [remove the existing card as a payment method for the site](/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
 
+## Relaunch Frequently Asked Questions
+
+### Why is this special Relaunch process needed?
+
+You can just do steps 2 and 3 above and then immediately change DNS, but then the new site will not immediately have an HTTPS Certificate that is valid for the site. The relaunch procedure temporarily uses the old site's already-provisioned HTTPS Certificate until the new site has its certificate provisioned and fully ready for use.
+
+### During this process, is there any downtime my site will experience?
+
+Once you complete step 2, the domain is unreachable until you add it to a new site in step 3. We recommend copying and pasting the domain name and opening up the sites in a few different tabs in your browser for a quick transition. (Or use Terminus commands.)
+
+Also, having a long TTL on the DNS records that are changing can cause you to get HTTPS Certificate errors during this process. The TTL (Time To Live) value of a DNS record is how long a DNS record can be cached around the Internet. During a relaunch, it would be ideal to have it be 600 seconds or so (only 10 minutes). When not launching a site, DNS lookups for your viistors will go faster if you have a large TTL, for example 86400 seconds (1 day). But during a Relaunch, this becomes a problem, as for the next 86400 seconds after you make a DNS change, some visitors will be getting the old record and some new. So, well before the launch, lower the TTL to a short amount of time like 600 seconds. Update the TTL on the DNS records and then wait longer than the previous TTL time before launching.
+
+Finally, steps 2-6 should be done in the same time period. Once you complete steps 2-3, the old site's HTTPS certificate will be removed within a few hours and the new site's HTTPS certificate will be available within an hour. As soon as that is done, to minimize invalid HTTPS certificates, you should immediately change the DNS as described in step 5.
+
 ## See Also
 - [Launch Essentials](/guides/launch/)
 - [Manage Plans in the Site Dashboard](/site-plan/)
