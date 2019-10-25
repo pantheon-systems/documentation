@@ -82,23 +82,28 @@ In order to retain Preferred Pricing an updated [invitation to pay](/add-client-
 9. In the old Site Dashboard, [downgrade the site from a paid plan to Sandbox](/site-plan/#cancel-current-plan).
 10. In the old Site Dashboard, [remove the existing card as a payment method for the site](/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
 
-## Relaunch Frequently Asked Questions
+## Frequently Asked Questions
+### Why is this process needed?
+While you can simply remove domains from an old site and then add them to a new one, HTTPS certificates will not be immediately available for the new site. This can cause security warnings for client browsers, and potentially affect processes that require a secure connection (like commerce transactions).
 
-### Why is this special Relaunch process needed?
+This procedure temporarily uses the existing HTTPS certificate until the new one is generated and ready for use.
 
-You can just do steps 2 and 3 above and then immediately change DNS, but then the new site will not immediately have an HTTPS Certificate that is valid for the site. The relaunch procedure temporarily uses the old site's already-provisioned HTTPS Certificate until the new site has its certificate provisioned and fully ready for use.
+### Will my site experience downtime?
+Once you complete step 2, the domain is unreachable until you add it to a new site in step 3. We recommend copying and pasting the domain name and opening up the sites in a few different tabs in your browser for a quick transition. You can also use [Terminus](/terminus/) to run the two commands in immediate succession.
 
-### During this process, is there any downtime my site will experience?
+Also, having a long [TTL](/dns#dns-terminology) on the changing DNS records increases the chance of HTTPS Certificate errors during this process. During a relaunch, it's recommended to have a TTL as low as possible (most DNS providers set a lower limit of 300 seconds, or 5 minutes).
 
-Once you complete step 2, the domain is unreachable until you add it to a new site in step 3. We recommend copying and pasting the domain name and opening up the sites in a few different tabs in your browser for a quick transition. (Or use Terminus commands.)
+Finally, the relaunch procedure should be done as a single process, as quickly as possible. Once you remove a domain from a site, the existing HTTPS certificate will be removed within a few hours and the new site's HTTPS certificate will be available within an hour. Be ready to update your DNS records as soon as the new certificate is available to minimize the chance of visitors encountering an invalid HTTPS certificate.
 
-Also, having a long TTL on the DNS records that are changing can cause you to get HTTPS Certificate errors during this process. The TTL (Time To Live) value of a DNS record is how long a DNS record can be cached around the Internet. During a relaunch, it would be ideal to have it be 600 seconds or so (only 10 minutes). When not launching a site, DNS lookups for your viistors will go faster if you have a large TTL, for example 86400 seconds (1 day). But during a Relaunch, this becomes a problem, as for the next 86400 seconds after you make a DNS change, some visitors will be getting the old record and some new. So, well before the launch, lower the TTL to a short amount of time like 600 seconds. Update the TTL on the DNS records and then wait longer than the previous TTL time before launching.
 
-Finally, steps 2-6 should be done in the same time period. Once you complete steps 2-3, the old site's HTTPS certificate will be removed within a few hours and the new site's HTTPS certificate will be available within an hour. As soon as that is done, to minimize invalid HTTPS certificates, you should immediately change the DNS as described in step 5.
+### Why do I need to lower my DNS TTL?
+When not launching a site, best practices usually suggest DNS a longer TTL (for example, 86400 seconds or one day), to reduce the amount of DNS lookups visitor browsers need to perform. But during site relaunch a long TTL can extend the time frame where visitors are pointed to the old site, while new visitors are pointed to the new site.
+
+It's recommended to lower the TTL well before a site relaunch. Remember that DNS records propagate across many different servers, and aren't refreshed until the record on *each server* up the tree expires. This means that a record with a 1-day TTL can take several days to be updated across DNS servers globally.
 
 ### When do I actually switch the site from the old site to the new one?
 
-As soon as you complete Step 3, visitors to your domain will see the new site. But technically, until Step 5 is complete and DNS is fully propogated, your visitors may still be seeing the new site with the old site's HTTPS certificate that will be going offline shortly.
+As soon as you complete step 3, visitors to your domain will see the new site. But technically, until step 5 is complete and DNS is fully propagated, your visitors may still be seeing the new site with the old site's HTTPS certificate that will be going offline shortly.
 
 ## See Also
 - [Launch Essentials](/guides/launch/)
