@@ -102,7 +102,6 @@ When not launching a site, best practices usually suggest DNS a longer TTL (for 
 It's recommended to lower the TTL well before a site relaunch. Remember that DNS records propagate across many different servers, and aren't refreshed until the record on *each server* up the tree expires. This means that a record with a 1-day TTL can take several days to be updated across DNS servers globally.
 
 ### When do I actually switch the site from the old site to the new one?
-
 As soon as you complete step 3, visitors to your domain will see the new site. But technically, until step 5 is complete and DNS is fully propagated, your visitors may still be seeing the new site with the old site's HTTPS certificate that will be going offline shortly.
 
 ## See Also
