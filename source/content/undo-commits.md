@@ -12,6 +12,8 @@ Using `git revert` to revert an upstream update will result in the dashboard bei
 
 ## Getting Started
 
+The following assumes you have set up a [local development environment](/local-development) with [Git version control](/git).  
+
 Before you start making any changes to the Git repository. Be sure to have a working clone as a backup, if you overwrite the core and re-write the Git log the changes will be permanent.
 
 In order to get back to a version of core, you can run a Git log on a core file. In this example, we take a look at `/includes/bootstrap.inc` on a Drupal 7 site - as this file has some references to when core was overwritten.
