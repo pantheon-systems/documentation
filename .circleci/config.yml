@@ -20,11 +20,12 @@ jobs:
             cd ~/build/gatsby
             npm ci
       - run:
-          name: Import GitHub Token
+          name: Import Tokens
           command: |
             cd ~/build/gatsby
             touch .env.production
             echo "GITHUB_API=$GITHUB_TOKEN" > .env.production
+            echo "SEGMENT_KEY=$SEGMENT_KEY" > .env.production
       - run:
           name: Update Terminus data files
           command: |
