@@ -30,7 +30,7 @@
   bio: Co-Founder & Head of Developer Experience
 - id: ari
   name: Ari Gold
-  avatar: //secure.gravatar.com/avatar/cde9ea6c0c1cd26527feaa8b4291a85d.jpg
+  avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/AriNew.jpg
   twitter: https://twitter.com/AriAtPantheon
   github: //github.com/ari-gold
   drupal: //www.drupal.org/user/329006/
@@ -40,8 +40,11 @@
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Steve%20Persch%20Headshot.jpg
   url: //stevector.com/
   twitter: https://twitter.com/stevector
+  linkedin: //www.linkedin.com/in/stevepersch
   github: //github.com/stevector
-  bio: Lead Developer Advocate
+  drupal: https://www.drupal.org/user/179805
+  wordpress: //profiles.wordpress.org/stevector
+  bio: Technical Product Marketing Manager
 - id: andrewmallis
   name: Andrew Mallis
   avatar: //avatars1.githubusercontent.com/u/249362?v=3&s=400
