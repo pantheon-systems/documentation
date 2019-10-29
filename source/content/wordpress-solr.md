@@ -7,13 +7,21 @@ contributors: [cityofoaksdesign]
 ---
 [Apache Solr](/solr) is a system for indexing and searching site content. Currently, all plans except for a Basic plan can use Solr. <Partial file="solr-version.md" />
 
-First, you will need to add the Index Server to your site. From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**. This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
-
 <Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
 Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
 
 </Enablement>
+
+## Enable Solr from the Site Dashboard
+Before you can start using Solr on WordPress, you need to add the Index Server to your site:
+
+From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**:
+
+![Enable Solr from The Site Dashboard](../images/dashboard/settings-addons-solr.png)
+
+This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
+
 
 ## Solr Search for WordPress
 Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/).  This plugin replaces the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) within WordPress while preserving the familiar integration methods within themes and widgets.
@@ -23,18 +31,20 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-
 
 ## Install and Configure Plugin
 
-1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus/):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard, or with [Terminus](/terminus/):
+
  ```bash
  terminus connection:set <site>.<env> sftp
  ```
 
-2. Install and activate the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin on the Dev or Multidev environment using the WordPress Dashboard or with Terminus:
+2. Install and activate the [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/) plugin on the Dev or Multidev environment using the WordPress Dashboard, or with Terminus:
 
  ```bash
  terminus wp <site>.<env> -- plugin install --activate solr-power
  ```
 
  Or for WP Site Networks:
+
  ```bash
  terminus wp <site>.<env> -- plugin install --activate --network solr-power
  ```
