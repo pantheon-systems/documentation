@@ -80,10 +80,15 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 
 `example-drops-8-composer` was designed to run automated tests on a continuous integration server. Unless you plan on running automated tests it is safe to completely remove the automated testing functionality.
 
-1.  Delete the following directories:
+1.  Delete the following directories and files:
     - `scripts/github`
     - `scripts/gitlab`
+    - `.circleci`
+    - `.ci`
     - `tests`
+    - `bitbucket-pipelines.yml`
+    - `build-providers.json`
+    - `gitlab-ci.yml`
 
 1.  Modify `composer.json`:
     - Remove all dependencies in the `require-dev` section.
