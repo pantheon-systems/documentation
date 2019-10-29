@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Layout from '../layout/layout';
+import SEO from "../layout/seo";
 
 {/* @TODO Convert to a React Component */}
 const previewFlexPanelItem = {
@@ -13,6 +14,10 @@ class Contributors extends React.Component {
 	render() {
 		const { data: { allContributorYaml } } = this.props;
 		return (
+      <>
+      <SEO
+        title="Contributors"
+      />
 			<Layout>
 				<div style={{ marginTop: '-20px' }} className="container">
 					<div className="container doc-content-well">
@@ -64,6 +69,7 @@ class Contributors extends React.Component {
 					</div>
 				</div>
 			</Layout>
+      </>
 		);
 	}
 }
