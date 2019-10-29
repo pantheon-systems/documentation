@@ -124,3 +124,6 @@ If the API expects `&` as an argument separator but receives `&amp;` (for exampl
 ```php
 ini_set('arg_separator.output', '&');
 ```
+
+### Actions and Filters in `wp-config.php`
+Actions or filters that require CLI tools like WP-CLI may fail from `wp-config.php`, because the functions required are not yet accessible. To resolve, put these directives in an [MU Plugin](/mu-plugin).
