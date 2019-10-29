@@ -6,7 +6,6 @@ categories: [wordpress]
 contributors: [masonjames]
 ---
 ## Overview
-
 WordPress configuration is set in wp-config.php, located within your WordPress site root. When you install a WordPress site, we automatically include this file for you with all the boilerplate you need to get started. Most users will not need to customize this file.
 
 Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes, and caching.
@@ -18,7 +17,6 @@ You should NEVER put the database connection information for a Pantheon database
 </Alert>
 
 ## Local Database Configuration for Development
-
 If you are also developing locally and need to configure WordPress for your desktop environment, we recommend you create a wp-config-local.php file. This will be ignored by Pantheon and should not be tracked by version control by default since it's in the .gitignore file.
 
 ## Pantheon's WordPress Config
@@ -39,12 +37,11 @@ GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config
 
 ## Frequently Asked Questions
 ### How can I write logic based on the Pantheon server environment?
-
 Depending on your use case, there are two possibilities:
 
 1. For web only actions, like [redirects](/domains/#primary-domain), check if `$_ENV['PANTHEON_ENVIRONMENT']` exists. If it does, it will contain a string with the current environment (Dev, Test, or Live):
 
- ```php
+ ```php:title=wp-config.php
  // Pantheon - web only.
  if (isset($_SERVER['PANTHEON_ENVIRONMENT'])) {
       // Only on dev web environment.
@@ -56,7 +53,7 @@ Depending on your use case, there are two possibilities:
 
 2. For actions that should take place on both web requests _and_ wp-cli commands (e.g. Redis cache configuration), use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live:
 
- ```php
+ ```php:title=wp-config.php
  // Pantheon - all (web and CLI) operations.
  if (defined('PANTHEON_ENVIRONMENT')) {
       // Only on dev environment.
@@ -85,30 +82,27 @@ WordPress has an option to [write logging information to a file](/logs/#how-do-i
 
 WP version 5.0.x and older versions
 
-```php
+```php:title=wp-config.php
 ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
 ```
 
 As of WP version 5.1 and newers
 
-```php
+```php:title=wp-config.php
 define( 'WP_DEBUG_LOG', __DIR__ . 'wp-content/uploads/debug.log'
 ```
 
 ### Where do I specify database credentials?
-
 You don't have to! Pantheon automatically injects database credentials into the site environment; if you hard code database credentials, you will break the Pantheon workflow.
 
 ### Where can I get a copy of a default wp-config.php for Pantheon?
-
 - [Pantheon WordPress](https://github.com/pantheon-systems/WordPress/blob/master/wp-config.php)
 - [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
 
 ### How do I enable IonCube Decoder support?
-
 If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions/) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `wp-config.php`:
 
-```php
+```php:title=wp-config.php
 ini_set('ioncube.loader.encoded_paths', '/');
 ```
 
@@ -116,12 +110,11 @@ ini_set('ioncube.loader.encoded_paths', '/');
 
 ## Troubleshooting
 ### Request to a Remote API Does Not Return Expected Response
-
 The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
 If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.ouput value by adding the following line to `wp-config.php`:
 
-```php
+```php:title=wp-config.php
 ini_set('arg_separator.output', '&');
 ```
 
