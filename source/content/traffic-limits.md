@@ -28,6 +28,18 @@ For sites on Performance plans, we will notify you if your site exceeds the limi
 ### How will Pantheon let me know my site will automatically be bumped to the next level?
 You will receive a communication that you are over on month one, and again on month two when the plan level is changed.
 
+### What if my site's metrics exceed the limit of the Performance Extra Large Plan?
+The Performance Extra Large Plan allows for 300,000 monthly visits and 1.5 million monthly page views. High traffic sites should be moved to an Elite plan. To learn about moving to an Elite Plan, please [contact us](https://pantheon.io/contact-us).
+
+If you need time or are unable to commit to an annual contract, sites that exceed the Performance Extra Large limits will be upgraded to a Performance 2X Large Plan, which has a limit of 600,000 monthly visits and 3 million monthly page views. The 2X Large plan is not available for purchase via our dashboard, but can be applied by our Support team. Prices for the 2X Large plan are as follows:
+
+| Payment Type      |  Price   |
+|:----------------- |:-------- |
+| Preferred Monthly |  $1,100  |
+| Preferred Annual  |  $12,000 |
+| List Monthly      |  $1,500  |
+| List Annual       |  $16,500 |
+
 ### What is “sustained traffic”?
 Sustained traffic is two consecutive months of being over the site plan limit.
 
