@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../layout/layout"
+import SEO from "../layout/seo"
 import ContributorLink from "../components/contributorLink"
 
 const links = [
@@ -37,12 +38,9 @@ class ContributorTemplate extends React.Component {
       this.props.data.allDocs != null ? this.props.data.allDocs.edges : []
     return (
       <Layout>
-        {/* <SEO
-          title={node.frontmatter.title}
-          description={node.frontmatter.description || node.excerpt}
-          authors={node.frontmatter.contributors}
-          image={"docs/assets/images/default-thumb-doc.png"}
-        /> */}
+        <SEO
+          title={contributor.name}
+        />
         <div className="container mb-70">
           <div className="row">
             <title>{contributor.name}</title>
