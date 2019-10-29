@@ -5,7 +5,7 @@ tags: [addons]
 categories: [wordpress]
 contributors: [cityofoaksdesign]
 ---
-[Apache Solr](/solr) is a system for indexing and searching site content. Currently, all plans except for a Basic plan can use Solr. <Partial file="solr-version.md" />
+[Apache Solr](/solr) is a system for indexing and searching site content. All plans except for a Basic plan can use Solr. <Partial file="solr-version.md" />
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
