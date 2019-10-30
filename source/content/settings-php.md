@@ -228,5 +228,7 @@ To resolve, add a default or empty `sites/default/settings.php` to your site's c
 
 This error comes from a feature in Drupal 8 designed to protect against [HTTP HOST Header attacks](https://www.drupal.org/node/1992030). Drupal 8 allows you to specify "trusted host patterns," which specify a set of domains that incoming requests must match.
 
-If you see this error, you need to update your [trusted host patterns](#trusted-host-setting) in `settings.php` and add your new domain(s) to the `$settings['trusted_host_patterns']` array.
+If you see this error, you need to update your [trusted host patterns](#trusted-host-setting) in `settings.php` and add your new domain(s) to the `$settings['trusted_host_patterns']` array. By default, Pantheon is configured in the backend to not allow any non-trusted hosts. You should typically have this snippet in your `settings.pantheon.php` file: [see here](https://github.com/pantheon-systems/drops-8/blob/default/sites/default/settings.pantheon.php#L184), which allows 
+
+
 
