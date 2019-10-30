@@ -10,7 +10,11 @@ Repositories that exceed 2GB may experience failures or degraded performance whe
 
 
 <Alert title="Note" type="info">
+
 Due to the use of Perl and the Bash shell, the following process is supported on Linux and Mac machines only. Windows users should work within a virtual machine.
+
+If your default shell is something other than Bash (Zsh, for example), switch to a Bash environment before you continue.
+
 </Alert>
 
 ## Determine Repository File Size
@@ -18,23 +22,31 @@ You can output the size of your repository by running [`git count-objects -vH`](
 
 ## Prune and Optimize Large Repositories
 
-1. [Clone the site's codebase](/git/#clone-your-site-codebase), if you haven't already.
-2. Navigate to the root directory of your site's codebase (e.g. `cd site-name`).
-3. Create local copies of all remote branches:
+1. [Clone the site's codebase](/git#clone-your-site-codebase), if you haven't already.
 
- ```
+1. Set the connection mode for each environment (excluding Test and Live) to git. You can do this with Terminus:
+
+  ```bash
+  for i in $(terminus env:list $SITENAME --format=list | grep -v 'test|live'); do terminus connection:set $SITENAME.$i git; done
+  ```
+
+1. Navigate to the root directory of your site's codebase (e.g. `cd site-name`).
+
+1. Create local copies of all remote branches:
+
+ ```bash{promptUser: user}
  for BRANCH in `git branch -r | grep -vE "HEAD|master"`; do git branch --track ${BRANCH#origin/} $BRANCH; done
  ```
 
-4. Write all local branch names to the `$BRANCHES` variable, to be used in later steps:
+1. Write all local branch names to the `$BRANCHES` variable, to be used in later steps:
 
- ```
+ ```bash{promptUser: user}
  BRANCHES=$(for BRANCH in $(git branch --list | grep -v master); do echo "${BRANCH}"; done; echo master)
  ```
 
-5. Generate a list of large files existing on any branch, then write output to `../large_files.txt`:
+1. Generate a list of large files existing on any branch, then write output to `../large_files.txt`:
 
- ```
+ ```bash{outputLines:2-8}
  git rev-list $BRANCHES -- | while read rev; do git ls-tree -lr $rev | cut -c54- | grep -v '^ '; done | sort -u | perl -e '
  while (<>) {
    chomp;
@@ -47,32 +59,40 @@ You can output the size of your repository by running [`git count-objects -vH`](
 
  This may take several minutes to complete.
 
-6. Review patterns that occur within `large_files.txt` and determine what should be excluded. Patterns may be a path to a single file, the path of a directory by name, or an expandable path.
+1. Review patterns that occur within `large_files.txt` and determine what should be excluded. Patterns may be a path to a single file, the path of a directory by name, or an expandable path.
 
- **Example Patterns**:
- - Single file name: `myfile.txt`
- - Directory. This will also match on all files under that directory: `my_directory`
- - Expandable path pattern that matches all SQL files within `my_directory`: `my_directory\/*.sql`
+  **Example Patterns**:
+   - Single file name: `myfile.txt`
+   - Directory. This will also match on all files under that directory: `my_directory`
+   - Expandable path pattern that matches all SQL files within `my_directory`: `my_directory\/*.sql`
 
-7. Filter out files and directories according to problematic patterns:
+1. Filter out files and directories according to problematic patterns. In the example below, replace `my_directory\/*.sql myfile.txt` with the patterns you want to filter for:
 
- ```
+ ```bash{promptUser: user}
  git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch my_directory\/*.sql myfile.txt' --prune-empty --tag-name-filter cat -- --all
  ```
 
  This may take hours to complete.
 
-8. Push your local changes to Pantheon:
+1. Push your local changes to Pantheon:
 
- ```
- git push origin --force --all
- git push origin --force --tags
- ```
+  ```bash{promptUser: user}
+  git push origin --force --all
+  git push origin --force --tags
+  ```
 
- In some scenarios, `git push origin --force --tags` may throw an error. The current workaround is to delete the tags remotely using `git push origin :refs/tags/[tag]`
+  In some scenarios, `git push origin --force --tags` may throw an error. Note that the following type of message is *not* an error:
 
+  ```
+  remote: PANTHEON NOTICE:
+  remote: 
+  remote: The creation of tag "pantheon_test_9" has triggered a deployment of code on test.
+  remote: 
+  ```
 
-9. Recover local disk space and optimize your local repository with the following:
+  The current workaround is to delete the tags remotely using `git push origin :refs/tags/[tag]`
+
+1. Recover local disk space and optimize your local repository with the following:
  ```
  git for-each-ref --format='delete %(refname)' refs/original | git update-ref --stdin
  git reflog expire --expire=now --all
