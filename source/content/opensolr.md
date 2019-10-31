@@ -118,19 +118,11 @@ On the resulting Search API server configuration page, you should see messages i
 
 ## Add Search API Solr Configuration Files to OpenSolr
 
-Your OpenSolr server now needs the schema.xml and other configuration files. 
+Your OpenSolr server now needs the Search API Solr schema.xml and other configuration files. These are located in the search_api_solr/solr_conf, in a sub-directory according to the Solr version you are using on OpenSolr. 
+1. Create a zip archive of the files in your Solr version's directory.
+2. Go to the OpenSolr instance, and click on the "Configuration" tab.
+3. Upload the zip archive.
 
-sNavigate to the Search API Solr module's solr-conf directory to locate the folder containing configuration files for the Solr version you chose when setting up your OpenSolr index.
-Create a zip archive of the files.
-Go to the opensolr instnce, click on the "config files uploader" tab.
-Upload the zip archive.
-
-
-<Alert title="Warning" type="danger">
-
-A schema must be pushed in each environment (Dev/Test/Live).
-
-</Alert>
 
 ## Add Search Index and Fields
 
