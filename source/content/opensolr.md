@@ -1,8 +1,8 @@
 ---
 title: Using OpenSolr With Pantheon Sites
-description: Learn how to create and configure IndexDepot with Solr for advanced indexing features for your Drupal or WordPress sites.
-tags: [siteintegrations]
-categories: []
+description: Learn how to create and configure OpenSolr with Solr for advanced search indexing features for your Drupal or WordPress sites.
+tags: [solr,opensolr,search,Drupal,WordPress]
+categories: [integration]
 ---
 ## Overview
 
@@ -19,6 +19,8 @@ The [OpenSolr](https://www.opensolr.com/) service offers a number of features 
 - JTS Polygonal geo-spatial search
 - REST-like API
 
+This article covers OpenSolr configuration for Drupal sites. For WordPress-OpenSolr integration, see the [WPSolr Integration](https://opensolr.com/faq/view/wpsolr) tutorial.
+
 <Alert title="Note" type="info">
 
 This article assumes that you have already enabled:
@@ -29,12 +31,17 @@ This article assumes that you have already enabled:
 
 ## Create a New Index
 
-1. After you have signed up at opensolr.com, log in and click **My Indexes**.
-2. Click **Add New**.
+After you have signed up at [OpenSolr.com](https://www.opensolr.com/), log in and click **My Indexes**, then click **Add New**.
+
+![Add new OpenSolr index](../images/opensolr-index-add.png)
 
 ## Set Up the Index
 
-To create your index, you’ll need to select the environment's SOLR version and Region, then choose an index name for your index. 
+To create your index, 
+
+1. select the environment's SOLR version (Search API Solr module supports Solr 4.x, 5.x, and 6.x)
+2. select your preferred region, then 
+3. choose a name for your index. 
 
 After filling out the appropriate fields, click **Add Index** to create your index. You will then see a card on your dashboard for your index. Click on the index name to go to the overview page for your index. From this page, copy the following information before moving forward:
 
@@ -52,8 +59,9 @@ If you are using Drupal 8 and the Search API module, you will need to next setup
 3. To remove HTTP Auth, Click **Remove HTTP Auth**
 
 
-<tablist>
-<Tab title="Drupal 7" id="d7-3">
+<TabList>
+
+<Tab title="Drupal 7" id="d7-3" active={true}>
 
 ## Configure Drupal’s ApacheSolr Module
 
@@ -64,8 +72,9 @@ admin/config/search/apachesolr/settings/solr/edit?destination=admin/config/searc
 ```
 
 Provide two items to the ApacheSolr configuration:
-**ServerURL:** Paste the Connection URL from OpenSolr here.
-**Description:** Briefly describe your index here.
+
+1. **ServerURL:** Paste the Connection URL from OpenSolr here.
+2. **Description:** Briefly describe your index here.
 
 When you’ve finished, click **Save**.
 
@@ -84,7 +93,7 @@ Go to `admin/config/search/apachesolr/settings` and click on your index.
 To test the connection, simply click **Test Connection**.
 
 If Drupal returns a success message like **“Your site has contacted the Apache Solr server”**, you have successfully set up your Index. If not, go back and complete the configuration steps above.
-</tab>
+</Tab>
 
 <Tab title="Drupal 8" id="d8-2">
 
@@ -97,13 +106,14 @@ admin/config/search/search-api/add-server?destination=admin/config/search/search
 ```
 
 Provide these items to the Search API Search configuration:
-**Server Name:** Enter the name for the server; including the name OpenSolr is a helpful hint here.
-**Solr Connector:** If you enabled HTTP Auth in OpenSolr, choose Basic Auth. If you disabled it, choose Standard.
-**HTTP protocol:** HTTPS
-**Solr host:** Hostname from your OpenSolr connection info page.
-**Solr port:** Port copied from your OpenSolr connection info page.
-**Solr path:** /solr
-**Solr core:** The name you gave your Solr core on the OpenSolr connection info page.
+
+1. **Server Name:** Enter the name for the server; including the name OpenSolr is a helpful hint here.
+2. **Solr Connector:** If you enabled HTTP Auth in OpenSolr, choose Basic Auth. If you disabled it, choose Standard.
+3. **HTTP protocol:** HTTPS
+4. **Solr host:** Hostname from your OpenSolr connection info page.
+5. **Solr port:** Port copied from your OpenSolr connection info page.
+6. **Solr path:** /solr
+7. **Solr core:** The name you gave your Solr core on the OpenSolr connection info page.
 
 <Alert title="Note" type="info">
 
@@ -119,26 +129,26 @@ On the resulting Search API server configuration page, you should see messages i
 ## Add Search API Solr Configuration Files to OpenSolr
 
 Your OpenSolr server now needs the Search API Solr schema.xml and other configuration files. These are located in the search_api_solr/solr_conf, in a sub-directory according to the Solr version you are using on OpenSolr. 
+
 1. Create a zip archive of the files in your Solr version's directory.
 2. Go to the OpenSolr instance, and click on the "Configuration" tab.
 3. Upload the zip archive.
 
-If all goes well you should see success messages for **Server Connection** and **Core Connection** on your Drupal site's OpenSolr server configuration page at `admin/config/search/search-api/server/[your-servername]`.
-
 ## Add Search Index and Fields
 
 Now that you created the server connection, add an index by visiting `admin/config/search/search-api` and clicking on the **Add index** button and providing information about your index:
-**Index name**: The displayed name you wish to give the index.
-**Datasources**: In this section, check the boxes corresponding to the entities you want indexed and available for searching. Configure each Datasource selected to indicate which items should be included in the index.
-**Server**: Select the OpenSolr server you just configured.
+
+1. **Index name**: The displayed name you wish to give the index.
+2. **Datasources**: In this section, check the boxes corresponding to the entities you want indexed and available for searching. Configure each Datasource selected to indicate which items should be included in the index.
+3. **Server**: Select the OpenSolr server you just configured.
 
 When you have finished, click **Save**.
 
 Next, add the fields your index should include for indexing. Click on the **Fields** tab for your search index, and then click the **Add fields** button. Select the fields to include in your index. When you have finished, be sure to click **Save changes**.
 
+</Tab>
 
-</tab>
-</tablist>
+</TabList>
 
 ## Customize Your Configuration
 
