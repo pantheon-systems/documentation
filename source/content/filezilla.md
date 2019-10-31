@@ -66,6 +66,8 @@ Starting at the Performance Medium service level up to Elite plans, the Test and
 Error:            File transfer failed
 ```
 
+This error can also occur when the application container has been migrated, so first confirm the [host path](/sftp#sftp-connection-information).
+
 Resolve instances of transfer failures by reconfiguring FileZilla to limit the number of simultaneous connections:
 
 1. Under the **File** menu, click on **Site Manager**.
@@ -80,6 +82,15 @@ Resolve instances of transfer failures by reconfiguring FileZilla to limit the n
 
 See also, [this FAQ on our related SFTP doc](/sftp#i-am-receiving-errors-connecting-to-my-server-with-an-sftp-client).
 
+#### Fallback Solution
+If all else fails, you can connect directly to an application container via the IP address. Use Dig to find the IP address:
+
+```bash{outputLines:2-3}
+dig +short appserver.live.120330a1-xxxxxxxxxxxxxxxxx.drush.
+35.194.x.x
+35.222.x.x
+```
+
 ### Uploading to the Files Directory
 FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/winscp) (Windows).
 
@@ -89,17 +100,6 @@ The following error is caused by an invalid hostname, most often the result of a
 ```bash
 Error:            ssh_init: nodename nor servname provided, or not known
 Error:            Could not connect to server
-```
-
-### Cannot sftp to environment with multiple appservers
-Previously can access sftp in test and live but now getting `Error: Directory /srv/bindings/c1f103b56xxxxxxxxxxxx/files: no such file or directory` error. Symptoms include users able to connect in dev or multidevs with single appserver.
-
-Getting any of the equivalent IP of the host appserver by using a `dig` command to replace the hostname lets you connect again by:
-
-```bash
-dig +short appserver.live.120330a1-xxxxxxxxxxxxxxxxx.drush.
-35.194.x.x
-35.222.x.x 
 ```
 
 ### Site Manager
