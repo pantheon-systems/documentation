@@ -114,7 +114,7 @@ If you chose **Basic Auth**, you will see a section for HTTP Basic Authenticatio
 Leave everything else with default values provided and click **Save**.
 On the resulting Search API server configuration page, you should see messages indicating the Server and Core connections were successful:
 
-<img src="msg-config-success.png" alt="Solr and Core connections success message for Drupal 8" \>
+![Solr and Core connections success message for Drupal 8](../images/msg-config-success.png)
 
 ## Add Search API Solr Configuration Files to OpenSolr
 
@@ -123,10 +123,11 @@ Your OpenSolr server now needs the Search API Solr schema.xml and other configur
 2. Go to the OpenSolr instance, and click on the "Configuration" tab.
 3. Upload the zip archive.
 
+If all goes well you should see success messages for **Server Connection** and **Core Connection** on your Drupal site's OpenSolr server configuration page at `admin/config/search/search-api/server/[your-servername]`.
 
 ## Add Search Index and Fields
 
-Now that you created the server connection, add an index by visiting admin/config/search/search-api and clicking on the **Add index** button and providing information about your index:
+Now that you created the server connection, add an index by visiting `admin/config/search/search-api` and clicking on the **Add index** button and providing information about your index:
 **Index name**: The displayed name you wish to give the index.
 **Datasources**: In this section, check the boxes corresponding to the entities you want indexed and available for searching. Configure each Datasource selected to indicate which items should be included in the index.
 **Server**: Select the OpenSolr server you just configured.
@@ -141,7 +142,9 @@ Next, add the fields your index should include for indexing. Click on the **Fiel
 
 ## Customize Your Configuration
 
-If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you can do so by clicking on the **Edit Configuration Files** icon on the Search Indexes page.
+If you'd like to create custom configurations or manually edit your index, synonyms list, stopwords, etc., you can do so by clicking on the **Configuration** icon on your OpenSolr Search Index's Tools page, then selecting the configuration file you wish to edit.
+
+![OpenSolr configuration file editor page](../images/opensolr-config-files-editor.png)
 
 ## Resources
 
