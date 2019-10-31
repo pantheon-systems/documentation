@@ -6,6 +6,17 @@ categories: [develop, git]
 draft: true
 contributors: [curmudgeon]
 ---
+
+<Alert type="danger" title="Caution">
+
+The content in this guide is advanced, and may not work in every case. For issues with cloning large repositories, you can simply clone the latest commit only using the `depth` flag:
+
+```bash{promptUser: user}
+git clone --depth 1 ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
+```
+
+</Alert>
+
 Repositories that exceed 2GB may experience failures or degraded performance when interacting with code via Git on Pantheon. We recommend reducing the repository size by removing objects that are no longer referenced using [`git prune`](https://git-scm.com/docs/git-prune) in addition to optimizing via [`git gc`](https://git-scm.com/docs/git-gc). You may also want to review the repository for large files, then exclude them as needed.
 
 
