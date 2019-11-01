@@ -33,12 +33,14 @@ The Performance Extra Large Plan allows for 300,000 monthly visits and 1.5 milli
 
 If you need time or are unable to commit to an annual contract, sites that exceed the Performance Extra Large limits will be upgraded to a Performance 2X Large Plan, which has a limit of 600,000 monthly visits and 3 million monthly page views. The 2X Large plan is not available for purchase via our dashboard, but can be applied by our Support team. Prices for the 2X Large plan are as follows:
 
-| Payment Type      | Price Per Month  |
+| Payment Type      | Price            |
 |:----------------- |:---------------- |
 | Preferred Monthly |  $1,100          |
-| Preferred Annual  |  $1,000          |
+| Preferred Annual  |  $12,000         |
 | List Monthly      |  $1,500          |
-| List Annual       |  $1,375          |
+| List Annual       |  $16,500         |
+
+Note that the annual plan prices are list as annual cost.
 
 ### What is “sustained traffic”?
 Sustained traffic is two consecutive months of being over the site plan limit.
