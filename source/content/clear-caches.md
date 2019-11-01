@@ -87,9 +87,9 @@ Some good troubleshooting first steps include:
 
  - Resolve any fatal PHP errors.
  
- - Try to isolate which plugin/module is problematic by turning them off and turning on one by one.
+ - Isolate which plugin or module may be causing the issue by turning them all off, then turning on one by one.
  
- - Try to check if the issue is theme related by using an unmodified default theme like Bartik or Twentynineteen 
+ - Check if the issue is theme related by using an unmodified default theme like [Bartik](https://www.drupal.org/project/bartik) or [Twenty Nineteen](https://wordpress.org/themes/twentynineteen/).
 
-### Already Cleared Cache from Dashboard and from Application but my new changes are still not refecting 
-Usually happens when you are using 3rd Party CDN on top of Pantheon like Cloudflare, Stackpath, etc. Try clearing the cache from their dashboard.
+### Cache Is Cleared from Dashboard and Application but New Changes Are Not Visible
+This usually happens when using a 3rd Party CDN on top of Pantheon like Cloudflare, Stackpath, etc. Try clearing the cache from the 3rd-party CDN's dashboard.
