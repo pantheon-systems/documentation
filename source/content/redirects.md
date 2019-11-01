@@ -24,11 +24,9 @@ This redirect is considered best practice and recommended as part of the going l
 
 ### Set HSTS with Pantheon.yml
 
-This is the preferred method of setting HTTPS, HSTS, and the primary domain for your site.
+This is the preferred method of setting HTTPS, HSTS, and the primary domain for your site. See [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts) in the Pantheon.yml doc to set the HSTS header and redirect all traffic to HTTPS.
 
 <Partial file="primary-domain.md" />
-
-See [Enforce HTTPS + HSTS](/pantheon-yml#enforce-https--hsts) in the Pantheon.yml doc to set the HSTS header and redirect all traffic to HTTPS.
 
 ### Redirect with PHP
 

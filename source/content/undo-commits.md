@@ -7,13 +7,17 @@ categories: []
 We all make mistakes, and Git does a fantastic job of keeping track of them for us. For example, a common problem is overwriting Drupal or WordPress core. We try our [best to warn you ](/core-updates) but it is still possible to overwrite core on a local environment and push to Pantheon. Fortunately, this is reversible, but will require a little work.
 
 <Alert title="Warning" type="danger">
+
 Using `git revert` to revert an upstream update will result in the dashboard being unable to pull upstream updates. If an upstream update introduces a regression or bug, you should use `git reset --hard COMMIT_BEFORE_MERGE` so that the dashboard can accurately judge the state of your site repository and whether it is behind the upstream.
+
 </Alert>
 
-## Getting Started
+## Before You Begin
+The following assumes you have set up a [local development environment](/local-development/) with [Git version control](/git/).
 
 Before you start making any changes to the Git repository. Be sure to have a working clone as a backup, if you overwrite the core and re-write the Git log the changes will be permanent.
 
+## Restore Core to Upstream
 In order to get back to a version of core, you can run a Git log on a core file. In this example, we take a look at `/includes/bootstrap.inc` on a Drupal 7 site - as this file has some references to when core was overwritten.
 
 ```
