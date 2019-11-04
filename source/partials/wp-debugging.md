@@ -1,4 +1,4 @@
-```php
+```php:title=wp-config.php
 // All Pantheon Environments.
 if (defined('PANTHEON_ENVIRONMENT')) {
   // Turns on WordPress debug settings in development and multidev environments, and disables in test and live.
