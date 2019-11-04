@@ -66,7 +66,7 @@ Starting at the Performance Medium service level up to Elite plans, the Test and
 Error:            File transfer failed
 ```
 
-This error can also occur when the application container has been migrated, so first confirm the [host path](/sftp#sftp-connection-information).
+This error can also occur when the application container has been migrated. Confirm that the [host path](/sftp#sftp-connection-information) is correct before continuing.
 
 Resolve instances of transfer failures by reconfiguring FileZilla to limit the number of simultaneous connections:
 
@@ -82,7 +82,7 @@ Resolve instances of transfer failures by reconfiguring FileZilla to limit the n
 
 See also, [this FAQ on our related SFTP doc](/sftp#i-am-receiving-errors-connecting-to-my-server-with-an-sftp-client).
 
-#### Fallback Solution
+#### Fallback solution when file transfer fails
 If all else fails, you can connect directly to an application container via the IP address. Use Dig to find the IP address:
 
 ```bash{outputLines:2-3}
