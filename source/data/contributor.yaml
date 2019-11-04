@@ -63,10 +63,13 @@
 - id: sarahg
   name: Sarah German
   twitter: https://twitter.com/hey_germano
-  bio: Senior Customer Success Engineer
+  bio: Support Manager
   avatar: //pantheon.io/sites/default/files/styles/540x540_top/public/Sarah%20G.jpg
   github: //github.com/sarahg
-  url: https://www.sarahgerman.com/
+  drupal: //www.drupal.org/user/562544
+  wordpress: //profiles.wordpress.org/sarahgerman
+  linkedin: //www.linkedin.com/in/sarahgerman
+  url: //www.sarahgerman.com/
 - id: digisavvy
   name: Alex Vasquez
   url: //digisavvy.com
