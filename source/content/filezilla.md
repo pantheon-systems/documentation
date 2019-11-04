@@ -66,6 +66,8 @@ Starting at the Performance Medium service level up to Elite plans, the Test and
 Error:            File transfer failed
 ```
 
+This error can also occur when the application container has been migrated. Confirm that the [host path](/sftp#sftp-connection-information) is correct before continuing.
+
 Resolve instances of transfer failures by reconfiguring FileZilla to limit the number of simultaneous connections:
 
 1. Under the **File** menu, click on **Site Manager**.
@@ -80,6 +82,15 @@ Resolve instances of transfer failures by reconfiguring FileZilla to limit the n
 
 See also, [this FAQ on our related SFTP doc](/sftp#i-am-receiving-errors-connecting-to-my-server-with-an-sftp-client).
 
+#### Fallback Solution If File Transfer Fails
+If all else fails, you can connect directly to an application container via the IP address. Use Dig to find the IP address:
+
+```bash{outputLines:2-3}
+dig +short appserver.live.120330a1-xxxxxxxxxxxxxxxxx.drush.
+203.0.113.5
+203.0.113.47
+```
+
 ### Uploading to the Files Directory
 FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/winscp) (Windows).
 
@@ -90,8 +101,6 @@ The following error is caused by an invalid hostname, most often the result of a
 Error:            ssh_init: nodename nor servname provided, or not known
 Error:            Could not connect to server
 ```
-
-Double check settings and resolve typos to fix this issue.
 
 ### Site Manager
 Features offered in the FileZilla Site Manager (like [Synchronized Browsing](https://wiki.filezilla-project.org/Using#Synchronized_Browsing)) are not supported because the Pantheon platform sometimes migrates sites across appservers without warning and the non-static binding string will change. This means that while you can set up your site in the Site Manager, you will need to reconfigure the login information and file paths whenever the dev environment site binding changes.
