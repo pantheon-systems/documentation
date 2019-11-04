@@ -6,6 +6,7 @@ contributors: [alexfornuto, rachelwhitton]
 
 All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide). This document serves to define and detail the style conventions used in Pantheon's Documentation.
 
+You can also reference the [Pantheon Documentation Template](/doc-template/) to see the common structure of our docs, or copy it to begin a new content piece.
 
 ## Content Types
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are generally paginated and designed to walk the reader through a specific concept or task.
