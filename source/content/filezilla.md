@@ -87,8 +87,8 @@ If all else fails, you can connect directly to an application container via the 
 
 ```bash{outputLines:2-3}
 dig +short appserver.live.120330a1-xxxxxxxxxxxxxxxxx.drush.
-35.194.x.x
-35.222.x.x
+203.0.113.5
+203.0.113.47
 ```
 
 ### Uploading to the Files Directory
