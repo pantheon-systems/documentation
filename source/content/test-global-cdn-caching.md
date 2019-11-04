@@ -47,10 +47,10 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 ### Test CDN Caching with curl
 
 1. Open a terminal.
-2. Enter the following command with your full Pantheon domain URL. Using the `-I` (uppercase i) flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
+1. Enter the following command with your full Pantheon domain URL. Using the `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
 
-  ```
-  $ curl -I https://scalewp.io
+  ```bash{outputLines:2-20}
+  curl -I https://scalewp.io
   HTTP/2 200
   cache-control: public, max-age=86400
   content-type: text/html; charset=UTF-8
@@ -74,15 +74,15 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
   To view the `Surrogate-Key-Raw` header, add the `Pantheon-Debug: 1` header to your request:
 
-  ```bash
-  $ curl -IsH "Pantheon-Debug:1" https://scalewp.io
+  ```bash{outputLines:2-21}
+  curl -IsH "Pantheon-Debug:1" https://scalewp.io
   HTTP/2 200
   cache-control: public, max-age=86400
   content-type: text/html; charset=UTF-8
   link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
   link: <https://scalewp.io/>; rel=shortlink
   server: nginx
-  surrogate-key-raw: front post-7 post-user-6 single
+  surrogate-key-raw: front post-7 post-user-6 single //highlight-line
   x-pantheon-styx-hostname: styx-fe3-a-906849904-7zhv4
   x-styx-req-id: styx-460041beb0cbd966edfdeac5f09e8c50
   via: 1.1 varnish
@@ -101,21 +101,21 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 ### Test Global CDN with Chrome
 
 1. Open [DevTools](https://developers.google.com/web/tools/chrome-devtools) and click on the **Network** tab.
-2. Load a page on your site.
-3. Click on the URL of the request, under the **Name** column of the Requests table.
-4. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers) tab.
+1. Load a page on your site.
+1. Click on the URL of the request, under the **Name** column of the Requests table.
+1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developers.google.com/web/tools/chrome-devtools/network-performance/reference#headers) tab.
 
 ### Test Global CDN with Firefox
 
 1. Open the [Network Monitor](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor).
-2. Load a page on your site.
-3. In the Network Monitor window, click on the URL of the request, under the **File** column of the Requests table.
-4. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
+1. Load a page on your site.
+1. In the Network Monitor window, click on the URL of the request, under the **File** column of the Requests table.
+1. View HTTP response headers for this request on the right side of the window under the [**Headers**](https://developer.mozilla.org/en-US/docs/Tools/Network_Monitor#Headers) tab.
 
 ### Test Global CDN with Internet Explorer
 
 1. Use the developer tools by pressing **F12** or by clicking **Settings**, then **Developer Tools**.
-2. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
+1. Click the **Start Capturing** button to begin reading the headers from the HTTP request. If headers aren't displaying, refresh the page.
 
 
 ## See Also
