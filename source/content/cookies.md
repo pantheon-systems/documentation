@@ -115,10 +115,10 @@ Note that too many `set-cookie` headers in the response can also create issues.
 It's important to note that for the response to be cached by Pantheon's edge, the cookie name must match the `STYXKEY[a-zA-Z0-9_-]+` convention.
 
 ### My site is not being cached when I used `X` plugin/module that uses this cookie
-The best way to utilize cookies on Pantheon is by having the cookie name match the `STYXKEY[a-zA-Z0-9_-]+` naming convention, and loading them in the first load, not on every page load like. Refer to the sample code outlined [here](#cache-varying-cookies)
+The best way to utilize cookies on Pantheon is by having the cookie name match the `STYXKEY[a-zA-Z0-9_-]+` naming convention, and loading them in the first load, not on every page load. Refer to the sample code outlined [here](#cache-varying-cookies)
 
 ### A plugin/module is using `cookie_name`, can I request it be added to the [Cache-Busting Cookies List](/cookies/#cache-busting-cookies)?
-No, the vcl cookie pattern is a platform wide setting and cannot be overriden. You will need to modify your cache to have the cookie name prefix as `STXKEY_` and follow the sampe code [here](#cache-varying-cookies) in order for your site to be properly cached.
+No, the vcl cookie pattern is a platform wide setting and cannot be overriden. You will need to modify your code to have the cookie name prefix as `STYXKEY_` and follow the sample code [here](#cache-varying-cookies) in order for your site to be properly cached.
 
 ## See Also
 * [Clearing Caches for Drupal and WordPress](/clear-caches/)
