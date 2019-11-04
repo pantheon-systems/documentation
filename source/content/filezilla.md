@@ -82,7 +82,7 @@ Resolve instances of transfer failures by reconfiguring FileZilla to limit the n
 
 See also, [this FAQ on our related SFTP doc](/sftp#i-am-receiving-errors-connecting-to-my-server-with-an-sftp-client).
 
-#### Fallback solution when file transfer fails
+#### Fallback Solution if File Transfer Fails
 If all else fails, you can connect directly to an application container via the IP address. Use Dig to find the IP address:
 
 ```bash{outputLines:2-3}
