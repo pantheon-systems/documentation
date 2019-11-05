@@ -30,7 +30,7 @@ This doc assumes that you have already enabled:
 
 <Alert title="Note" type="info">
 
-To get started managing Drupal 8 using Composer, see the **Drupal 8 and Composer** (site building)[/guides/drupal-8-composer-no-ci] and (site conversion)[/guides/drupal-8-composer-convert] guides.
+To get started managing Drupal 8 using Composer, see the **Drupal 8 and Composer** [site building](/guides/drupal-8-composer-no-ci) and [site conversion](/guides/drupal-8-composer-convert) guides.
 
 </Alert>
 
