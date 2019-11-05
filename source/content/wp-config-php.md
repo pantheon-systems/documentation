@@ -80,13 +80,13 @@ See [Configure Redirects](/redirects/).
 
 WordPress has an option to [write logging information to a file](/logs/#how-do-i-enable-error-logging-for-wordpress). When enabled, the file is located in the `/wp-content` folder, which is not writable on all environments in Pantheon. You can change the location of this file to the uploads folder by adding the following to `wp-config.php`:
 
-WP version 5.0.x and older versions
+WP version 5.0.x and older versions:
 
 ```php:title=wp-config.php
 ini_set( 'error_log', WP_CONTENT_DIR . '/uploads/debug.log' );
 ```
 
-As of WP version 5.1 and newers
+As of WP version 5.1 and newer:
 
 ```php:title=wp-config.php
 define( 'WP_DEBUG_LOG', __DIR__ . 'wp-content/uploads/debug.log'
@@ -112,7 +112,7 @@ ini_set('ioncube.loader.encoded_paths', '/');
 ### Request to a Remote API Does Not Return Expected Response
 The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 
-If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.ouput value by adding the following line to `wp-config.php`:
+If the API expects `&` as an argument separator but receives `&amp;` (for example, when using http_build_query), you can override the default arg_separator.output value by adding the following line to `wp-config.php`:
 
 ```php:title=wp-config.php
 ini_set('arg_separator.output', '&');
