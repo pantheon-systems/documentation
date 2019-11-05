@@ -121,6 +121,8 @@ At this point, all visitors to the site should be able to securely access all pa
 
 <Partial file="primary-domain.md" />
 
+<Partial file="remove-primary-domain.md" />
+
 It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in [pantheon.yml](/pantheon-yml#enforce-https--hsts)
 
 If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects:

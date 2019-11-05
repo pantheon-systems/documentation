@@ -28,6 +28,8 @@ This is the preferred method of setting HTTPS, HSTS, and the primary domain for 
 
 <Partial file="primary-domain.md" />
 
+<Partial file="remove-primary-domain.md" />
+
 ### Redirect with PHP
 
 If your site configuration prevents you from setting the primary domain from the platform level, you can use PHP redirects:

@@ -70,19 +70,19 @@ Add all domains (example.com and www.example.com are different domains!) you wan
 
 1. If no domains have been added yet, click **Connect Live Domain**:
 
-    ![Adding a first domain to the Site Dashboard](../images/dashboard/add-first-domain.png)
+  ![Adding a first domain to the Site Dashboard](../images/dashboard/add-first-domain.png)
 
-   If one (or more) domains have already been added, click **Connect Domain**:
+  If one (or more) domains have already been added, click **Connect Domain**:
 
-    ![Adding an additional domain to the Site Dashboard](../images/dashboard/add-additional-domains.png)
+  ![Adding an additional domain to the Site Dashboard](../images/dashboard/add-additional-domains.png)
 
 1. Enter the domain you'd like to add in the "Enter domain to connect" field, then click **Connect Domain**:
 
-    ![Adding a domain to the Site Dashboard](../images/dashboard/connect-custom-domain.png)
+  ![Adding a domain to the Site Dashboard](../images/dashboard/connect-custom-domain.png)
 
 1. After adding your domain, you'll be automatically taken to the domain's "Details" page where you will see both the current DNS records detected (the "Detected Values"), as well as the values to be added at your DNS host ("Required Values"):
 
-    ![Custom domain Details page](../images/dashboard/details-page.png)
+   ![Custom domain Details page](../images/dashboard/details-page.png)
 
 1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/dns/).
 
@@ -90,7 +90,7 @@ Add all domains (example.com and www.example.com are different domains!) you wan
 
   ![Set the primary domain in the Site Dashboard](../images/dashboard/choose-primary-domain.png)
 
-## Primary Domain
+## Choose Primary Domain
 Pantheon uses the term **primary domain** to refer to a single domain used to serve all traffic from a site. For example, configuring `www.example.com` as the primary domain means that requests to `example.com` (or any other domain connected to the environment) all get redirected to `www.example.com`. This assumes that you have added **both** `example.com` and `www.example.com` to the Site Dashboard.
 
 Redirecting all traffic to a primary domain is a best practice for SEO since it avoids duplicate content. It also prevents session strangeness, where a user can be logged in to one domain but logged out of other domains at the same time, and it can make it easier to measure and monitor website traffic.
@@ -102,6 +102,8 @@ Redirects cannot be managed via `.htaccess`, which is ignored on our platform. F
 </Alert>
 
 <Partial file="primary-domain.md" />
+
+<Partial file="remove-primary-domain.md" />
 
 ### Redirect to HTTPS
 It's a best practice for SEO and security to standardize all traffic on HTTPS and choose a primary domain. Configure redirects to the primary domain with HTTPS in [pantheon.yml](/pantheon-yml#enforce-https--hsts)
