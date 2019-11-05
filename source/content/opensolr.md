@@ -24,9 +24,15 @@ The [OpenSolr](https://www.opensolr.com/) service offers a number of features 
 This doc covers OpenSolr configuration for Drupal sites. For WordPress-OpenSolr integration, see OpenSolr's [WPSolr Integration](https://opensolr.com/faq/view/wpsolr) tutorial.
 
 ## Before You Begin
-This article assumes that you have already enabled:
+This doc assumes that you have already enabled:
 - **Drupal 7** the [ApacheSolr](https://www.drupal.org/project/apachesolr) module
-- **Drupal 8** the [Search API Solr](https://www.drupal.org/project/search_api_solr) module
+- **Drupal 8** the [Search API Solr](https://www.drupal.org/project/search_api_solr) module using Composer (required by Search API Solr to manage dependencies). 
+
+<Alert title="Note" type="info">
+
+To get started managing Drupal 8 using Composer, see the **Drupal 8 and Composer** (site building)[/guides/drupal-8-composer-no-ci] and (site conversion)[/guides/drupal-8-composer-convert] guides.
+
+</Alert>
 
 ## Create a New Index
 
@@ -38,7 +44,7 @@ After you have signed up at [OpenSolr.com](https://www.opensolr.com/), log in an
 
 To create your index:
 
-1. Select the environment's SOLR version (Search API Solr module supports Solr 4.x, 5.x, and 6.x)
+1. Select the environment's SOLR version
 1. Select your preferred region
 1. Choose a name for your index
 
@@ -113,7 +119,7 @@ Provide these items to the Search API Search configuration:
 1. **HTTP protocol:** HTTPS
 1. **Solr host:** Hostname from your OpenSolr connection info page.
 1. **Solr port:** Port copied from your OpenSolr connection info page.
-1. **Solr path:** `/solr`
+1. **Solr path:** `/solr` (if using search_api_solr 8.x-1.x). Newer branches of search_api_solr supply this.
 1. **Solr core:** The name you gave your Solr core on the OpenSolr connection info page.
 
 <Alert title="Note" type="info">
