@@ -88,7 +88,7 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
     - `tests`
     - `bitbucket-pipelines.yml`
     - `build-providers.json`
-    - `gitlab-ci.yml`
+    - `.gitlab-ci.yml`
 
 1.  Modify `composer.json`:
     - Remove all dependencies in the `require-dev` section.
