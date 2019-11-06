@@ -42,7 +42,7 @@ In the code examples below, replace `17.x` with the downloaded version of Simple
   git commit -am "Adding SimpleSAML"
   ```
 
-2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.16.x/www`:
+2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.17.x/www`:
 
   ```bash
   ln -s ./private/simplesamlphp-1.17.x/www ./simplesaml
