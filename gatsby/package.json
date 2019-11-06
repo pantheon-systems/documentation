@@ -24,7 +24,6 @@
     "gatsby-plugin-mdx": "^1.0.52",
     "gatsby-plugin-react-helmet": "^3.1.13",
     "gatsby-plugin-sass": "^2.1.20",
-    "gatsby-plugin-segment-js": "^3.0.1",
     "gatsby-plugin-sharp": "^2.2.32",
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-plugin-web-font-loader": "^1.0.4",

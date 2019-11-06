@@ -109,14 +109,6 @@ module.exports = {
             }
           },
           {
-            resolve: "gatsby-plugin-segment-js",
-            options: {
-              prodKey: process.env.SEGMENT_KEY,
-              devKey: process.env.SEGMENT_KEY,
-              trackPage: true,
-            },
-          },
-          {
             resolve: "gatsby-remark-embed-video",
             options: {
               width: 800,
