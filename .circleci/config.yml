@@ -7,6 +7,9 @@ jobs:
       - image: circleci/php:7.2-cli-node-browsers
     working_directory: ~/build
     steps:
+      - queue/until_front_of_line:
+          time: '15'
+      - run: echo "Waiting for other deployments to master to complete"
       - checkout
       - restore_cache:
           keys:
@@ -135,7 +138,7 @@ jobs:
          destination: deployment-log.txt
 
 workflows:
-  version: 2
+  version: 2.1
   build-test-preview-and-deploy:
     jobs:
       - build
@@ -149,10 +152,6 @@ workflows:
           requires:
             - build
       - deploy:
-          steps:
-            - queue/until_front_of_line:
-                time: '15'
-            - run: echo "Waiting for other deployments to master to complete"
           filters:
             branches:
               only: master
