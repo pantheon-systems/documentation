@@ -38,7 +38,16 @@ Your Engagement Manager monitors the process and works with you to ensure that u
 [Contact us](https://pantheon.io/professional-services) for details.
 
 ## Advanced CDN
-Implement additional services like extended WAF, Image Optimization, and Domain Masking using our advanced CDN implementation. [Contact us](https://pantheon.io/professional-services) for details.
+
+Implement additional services like IP-based geolocation, extended WAF, Image Optimization, and Domain Masking using our advanced CDN implementation. [Contact us](https://pantheon.io/professional-services) for details.
+
+### Advanced CDN process overview
+
+- **Qualification**: A member of the PS team will talk with your technical team to assess your needs and determine if your business requirements can be served with Advanced CDN.
+- **Scoping**: PS will work with your team to determine areas of responsibility for both PS and your team and to set timelines for the start and completion of work.
+- **Configuration**: PS will set up your site(s) and configure both the Advanced CDN service and your CMS.
+- **Launch**: PS will provide you with the information you will need to launch or re-launch your site on Advanced CDN.
+- **Post-Launch**: PS provides up to 4 hours per quarter to address requests and changes to the Advanced CDN service throughout the lifetime of the contract.
 
 ## Pantheon Secure Integration
 Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about Secure Integration](/secure-integration/) or [contact us](https://pantheon.io/professional-services) for details.
@@ -57,10 +66,14 @@ Performance tests expose the root cause of performance bottlenecks and allow us 
 ## Custom Application Services
 Ad hoc solutions to ensure the success of your application on Pantheon. Typically scoped on an hourly basis and provided by our Engagement Managers at Pantheon. [Contact us](https://pantheon.io/professional-services) for details.
 
-## Customer Success Management
+## Additional Services
+
+The following services are not fulfilled by the Professional Services team but are additional services that Pantheon provides to help you succeed on the Pantheon platform.
+
+### Customer Success Management
 Agile website operations teams iterate constantly to move in lockstep with organizational needs and deliver on business goals.
 
 Pantheon Customer Success Managers (**CSMs**) work proactively with you, helping you build agile website operations, achieve business goals, adopt best practices, and stay ahead of the competition. A dedicated CSM is included with all Diamond support plans and is available for Gold and Platinum plans. Your dedicated CSM meets with you regularly to provide site performance audits, review team usage of the platform, extend early access to new features, and ensure that you are getting the most value possible from the platform. [Contact us](https://pantheon.io/contact-us) for details.
 
-## Expert Training
+### Expert Training
 We provide highly customized, one-on-one training from Pantheon experts to help your development team apply custom workflows to active Pantheon projects. Tailored WebOps training for your entire team is also available. We review your current projects and workflow to deliver trainings designed specifically to improve website operations for your team. These trainings can be delivered remotely, on-site or online for multiple offices. [Contact us](https://pantheon.io/agencies/learn-pantheon) for details.
