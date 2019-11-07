@@ -46,6 +46,8 @@ If you need to assume site and billing ownership, the current Site Owner must [t
 
 To retain Preferred Pricing an updated [invitation to pay](/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
 
+The new Site Plan will be billed immediately.
+
 </Alert>
 
 ## Relaunch Procedure
