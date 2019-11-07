@@ -254,9 +254,11 @@ This will move the temporary upload destination from the individual server mount
 
 **Solution:** Override the default arg_separator.output value in `settings.php` by adding the following line:
 
-```
+```php:title=settings.php
 ini_set('arg_separator.output', '&');
 ```
+
+<br />
 
 **Issue 2:** On non-live environments, reCAPTCHA returns the error, "ERROR for site owner: Invalid domain for site key."
 
@@ -264,9 +266,8 @@ ini_set('arg_separator.output', '&');
 
 **Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal 7, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
 
-```
-// Deactivate reCAPTCHA if we're not running on the live site - it doesn't work if the domain name is invalid. Message "ERROR for site owner: Invalid domain for site key" is displayed.
-// This is needed because otherwise it's impossible to log in or submit any protected form.
+```php:title=settings.php
+// Deactivate reCAPTCHA not running on the live site.
 if (defined('PANTHEON_ENVIRONMENT') && $_ENV['PANTHEON_ENVIRONMENT'] != 'live') {
   $conf['recaptcha_site_key'] = NULL;
 }
