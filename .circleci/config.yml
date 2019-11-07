@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  queue: eddiewebb/queue@volatile
 jobs:
   build:
     docker:
@@ -147,6 +149,10 @@ workflows:
           requires:
             - build
       - deploy:
+          steps:
+            - queue/until_front_of_line:
+                time: '15'
+            - run: echo "Waiting for other deployments to master to complete"
           filters:
             branches:
               only: master
