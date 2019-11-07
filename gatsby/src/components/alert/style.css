@@ -103,6 +103,29 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.alert-dash-warning {
+  background-image: none !important;
+  border-color: #ddd;
+  background-color: white !important;
+  border-left-color: #d83f48;
+  border-top-left-radius: 4px;
+  border-left-width: 8px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-bottom-left-radius: 4px;
+  font-size: 18px;
+  line-height: 29px;
+  font-family: "Open Sans", sans-serif;
+}
+.alert-dash-warning h4 {
+  font-size: 16px;
+  color: #000000;
+  font-weight: 600;
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+}
+
 .alert-export {
   background-image: none !important;
   border-color: #efd01b;
