@@ -6,6 +6,8 @@ categories: []
 ---
 This page is used to keep track of common platform considerations, mostly derived from Pantheon's distributed nature. Check back often, as we are keeping it up to date as we make improvements to address these limitations.
 
+<Partial file="auth.md" />
+
 ## Browser Support for Pantheon's Dashboard
 In order to focus internal development and engineering work, the Pantheon Dashboard supports the following browsers:
 
