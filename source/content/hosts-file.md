@@ -10,11 +10,9 @@ The `hosts` file exists on all major operating systems. It's a list of IP addres
 
 <Partial file="_hosts-file.md" />
 
-### How to get the IP equivalent of your Pantheon environment that you can use in your hosts file
+To get the IP address of your Pantheon environment to use in your hosts file. You can use dig. Replace `dev-example.pantheonsite.io` with your site's domain:
 
-In your Terminal, do (replace dev-example.pantheonsite.io with yuour site's url):
-
-```bash
+```bash{outputLines:2}
 dig +short dev-example.pantheonsite.io
-93.184.216.XX
+203.0.113.42
 ```
