@@ -25,7 +25,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   </Alert>
 
-- Lower the TTL of existing DNS records to minimize impact of upcoming DNS changes
+- Lower the TTL of existing DNS records to minimize the impact of upcoming DNS changes
 
   <Accordion title="Learn More" id="ttl" icon="info-sign">
 
@@ -44,7 +44,7 @@ The permission to manage billing and plans is granted only to the role of **Site
 
 If you need to assume site and billing ownership, the current Site Owner must [transfer it to you directly](/site-billing#transfer-ownership-and-billing-for-this-site).
 
-In order to retain Preferred Pricing an updated [invitation to pay](/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
+To retain Preferred Pricing an updated [invitation to pay](/add-client-site/#send-an-invitation-to-pay-to-your-client) must be sent from the Supporting Organization for the new site.
 
 </Alert>
 
@@ -86,12 +86,12 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
 ## Frequently Asked Questions
 ### Why is this process needed?
-HTTPS certificates will not be immediately available for the new site if, instead of following the steps above, you remove domains from the old site and add them to the new site. This can cause security warnings for client browsers, and potentially affect processes that require a secure connection (like commerce transactions).
+If you remove domains from the old site and add them to the new site, HTTPS certificates will not be immediately available for the new site. This can cause security warnings for client browsers, and potentially affect processes that require a secure connection (like commerce transactions).
 
 This procedure temporarily uses the existing HTTPS certificate until the new one is generated and ready for use.
 
 ### Will my site experience downtime?
-If you follow the process outlined above, downtime will be minimal, and depends on the [TTL](/dns#dns-terminology) configuration.
+If you follow the process outlined above, downtime will be minimal and depends on the [TTL](/dns#dns-terminology) configuration.
 
 Once you complete step 2 above, the domain is unreachable until you add it to a new site in step 3. We recommend that you open the new site's Dashboard in another browser tab, then copy and paste the domain name from the old site to the new for a quick transition. You can also use [Terminus](/terminus/) to run the two commands in immediate succession.
 
@@ -102,9 +102,9 @@ Finally, the relaunch procedure should be done as a single process, as quickly a
 ### Why do I need to lower my DNS TTL?
 DNS records propagate across many different servers and aren't refreshed until the record on *each server* up the tree expires. This means that a record with a 24 hour TTL can take several days to be updated across DNS servers globally. That's why we recommend lowering the TTL well before a site relaunch.
 
-Best practice during normal operation (e.g. not during a site relaunch) suggest a longer TTL (for example, 86400 seconds, or one day) because a long TTL helps reduce the number of DNS lookups that visitors' browsers need to perform. During a site relaunch, a long TTL can extend the time frame that return visitors are pointed to the old site, while new visitors are pointed to the new site.
+Best practices during normal operation (e.g. not during a site relaunch) suggest a longer TTL (for example, 86400 seconds, or one day) because a long TTL helps reduce the number of DNS lookups that visitors' browsers need to perform. During a site relaunch, a long TTL can extend the time frame that return visitors are pointed to the old site, while new visitors are pointed to the new site.
 
-### When do I actually switch the site from the old site to the new one?
+### When do I switch the site from the old site to the new one?
 As soon as you complete step 3, visitors to your domain will see the new site. But technically, until step 5 is complete and DNS is fully propagated, your visitors may still see the new site with the old site's HTTPS certificate that will be going offline shortly.
 
 ## See Also
