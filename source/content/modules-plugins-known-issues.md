@@ -119,6 +119,12 @@ Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/
 
 <hr />
 
+### [H5P](https://www.drupal.org/project/h5p)
+
+<Partial file="h5p-known-issues.md" />
+
+<hr />
+
 ### [Honeypot http:BL](https://www.drupal.org/project/httpbl)
 **Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx webservers and Apache modules are not compatible with the Platform.
 
@@ -519,6 +525,12 @@ The solutions [outlined in the EWWW documentation](https://docs.ewww.io/article/
 **Issue**: This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
 **Solution**: See [Set SERVER_PORT Correctly](https://pantheon.io/docs/server_name-and-server_port/#set-server_port-correctly).
+
+<hr />
+
+### [H5P](https://wordpress.org/plugins/h5p/)
+
+<Partial file="h5p-known-issues.md" />
 
 <hr />
 
