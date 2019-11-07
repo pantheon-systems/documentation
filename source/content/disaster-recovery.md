@@ -46,13 +46,23 @@ If you rely on the Redis cache for locks (mutexes) or storing other long-term da
 
 ## Solr and Disaster Recovery
 
-Solr requires additional considerations when used on sites with Disaster Recovery. In its default state, if a site with Pantheon Solr and Disaster Recovery fails over to the backup, Solr will not automatically rebuild the search index.
+### Considerations for Sites Requiring Highly Available Solr Service
 
-To use Pantheon Solr on a site with Disaster Recovery, use one of the three following options:
+While Solr can be enabled on a site with Disaster Recovery, Pantheon's Solr service is not highly available, nor does it include failover for Solr. The RTO and RPO do not apply to Pantheon's Solr Service.
 
-1. Rebuild the Pantheon Solr index on the backup, after the site has failed over.
-1. An [Alternative Solr Service](/solr#alternatives-to-pantheons-solr-service)
-1. For Drupal: Configure search to write to both Pantheon Solr and another index (either Drupal core search or an external Solr service) as a fallback.
+If your site requires Solr for basic functionality, do not use Pantheon's Solr service. If you require a highly available Solr service, please consider an [alternative Solr service](/solr#alternatives-to-pantheons-solr-service).
+
+### Using Pantheon Solr Service on Sites With Disaster Recovery
+
+Pantheon Solr requires additional considerations when used on sites with Disaster Recovery. In its default state, if a site with Pantheon Solr and Disaster Recovery fails over to the backup, Solr will not automatically rebuild the search index. In that case, 
+
+1. Pantheon will need to manually re-provision your Solr instance and 
+1. you will need to manually re-index Solr after failover.
+
+You may also consider one of the two following options:
+
+1. Use an [Alternative Solr Service](/solr#alternatives-to-pantheons-solr-service)
+1. **For Drupal:** Configure search to write to both Pantheon Solr and another index (either Drupal core search or an external Solr service) as a fallback. In the event the site must be recovered after a disaster, search forms can then be manually re-pointed at the fallback index until your Pantheon Solr instance has been rebuilt and re-indexed.
 
 If none of these options work for your site's needs, see our documentation on how to safely remove Solr for [Drupal 8](/solr-drupal-8/#safely-remove-solr), [Drupal 7](/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
 
