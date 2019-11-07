@@ -50,7 +50,7 @@ If you rely on the Redis cache for locks (mutexes) or storing other long-term da
 
 While Solr can be enabled on a site with Disaster Recovery, Pantheon's Solr service is not highly available, nor does it include failover for Solr. The RTO and RPO do not apply to Pantheon's Solr Service.
 
-If your site requires Solr for basic functionality, do not use Pantheon's Solr service. If you require a highly available Solr service, please consider an [alternative Solr service](/solr#alternatives-to-pantheons-solr-service).
+If your site requires Solr, do not use Pantheon's Solr service. If you require a highly available Solr service, please consider an [alternative Solr service](/solr#alternatives-to-pantheons-solr-service).
 
 ### Using Pantheon Solr Service on Sites With Disaster Recovery
 
