@@ -604,6 +604,8 @@
           url: '/drupal-cloudfront/'
         - text: 'Using IndexDepot With Pantheon Sites'
           url: '/indexdepot/'
+        - text: 'Using OpenSolr With Pantheon Sites'
+          url: '/opensolr/'
         - text: 'Creating and Revoking Machine Tokens'
           url: '/machine-tokens/'
         - text: 'Pantheon Modules'

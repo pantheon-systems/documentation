@@ -97,16 +97,19 @@ The Test and Live environments do not have write access to code outside of the d
 
 </Alert>
 
-## Development
+## Develop
 Get started by learning more about the [Pantheon workflow](/pantheon-workflow/) and [environment configuration](/read-environment-config/). Then, dive in to [developing directly with SFTP mode](/sftp/) and [explore more ways](/cms-admin/) of utilizing built-in admin tools.
 
 ### .gitignore
 Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
 
-## Performance
+## Optimize Performance
 There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance/) and utilizing the [PHP slow log](/php-slow-log/).
 
-Learn how to use [bots and indexing](/bots-and-indexing/) in a way that does not negatively impact performance. You can also incorporate external Solr services with [IndexDepot](/indexdepot/).
+Learn how to use [bots and indexing](/bots-and-indexing/) in a way that does not negatively impact performance. 
+
+## Integrate 
+You can also integrate with external Solr search indexes with services like [OpenSolr](/opensolr/) and [IndexDepot](/indexdepot/).
 
 ## See Also
 - [Hot Fixes](/hotfixes/)

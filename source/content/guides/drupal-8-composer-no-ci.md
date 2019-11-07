@@ -26,7 +26,7 @@ To begin, we’ll want to start a brand new Drupal 8 site on Pantheon from our e
 
 Before we begin choose a machine-friendly site name. It should be all lower case with dashes instead of spaces. I'll use `d8-composer-no-ci` but choose your own. Once you have a site name export it to a variable for re-use.
 
-```bash
+```bash{promptUser: user}
 export PANTHEON_SITE_NAME="d8-composer-no-ci"
 ```
 
@@ -34,7 +34,7 @@ You should also be authenticated with Terminus. See the [Authenticate into Termi
 
 Create a new Pantheon site with an empty upstream.
 
-```bash
+```bash{promptUser: user}
 terminus site:create $PANTHEON_SITE_NAME 'My D8 Composer Site' empty
 ```
 
@@ -46,19 +46,19 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 
 1. Clone the `example-drops-8-composer` repository locally:
 
-  ```bash
+  ```bash{promptUser: user}
   git clone git@github.com:pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
   ```
 
    This command assumes you have [SSH keys](/ssh-keys/) added to your GitHub account. If you don't, you can clone the repository over HTTPS:
 
-  ```bash
+  ```bash{promptUser: user}
   git clone https://github.com/pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
   ```
 
-2. `cd` into the cloned directory:
+1. `cd` into the cloned directory:
 
-  ```bash
+  ```bash{promptUser: user}
   cd $PANTHEON_SITE_NAME
   ```
 
@@ -66,13 +66,13 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 
 1. Store the Git URL for the Pantheon site created earlier in a variable:
 
-  ```bash
+  ```bash{promptUser: user}
   export PANTHEON_SITE_GIT_URL="$(terminus connection:info $PANTHEON_SITE_NAME.dev --field=git_url)"
   ```
 
-2. Update the Git remote to use the Pantheon site Git URL returned rather than the `example-drops-8-composer` GitHub URL:
+1. Update the Git remote to use the Pantheon site Git URL returned rather than the `example-drops-8-composer` GitHub URL:
 
-  ```bash
+  ```bash{promptUser: user}
   git remote set-url origin $PANTHEON_SITE_GIT_URL
   ```
 
@@ -96,7 +96,7 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
 
 1.  Remove the following section from `pantheon.yml`:
 
-    ```yml
+    ```yml:title=pantheon.yml
     workflows:
       sync_code:
         after:
@@ -120,7 +120,7 @@ Normally the next step would go through the standard Drupal installation. But si
 
 1. Since we modified `composer.json` we will need to update Composer. This will also download the defined dependencies:
 
-    ```bash
+    ```bash{promptUser: user}
     composer update
     ```
 
@@ -128,41 +128,41 @@ Normally the next step would go through the standard Drupal installation. But si
 
     ![image of terminal running a composer install](../../images/guides/drupal-8-composer-no-ci/drops-8-composer-update.png)
 
-2. And now we need to install:
+1. And now we need to install:
 
-    ```bash
+    ```bash{promptUser: user}
     composer install
     ```
 
-3. Let's take a look at the changes:
+1. Let's take a look at the changes:
 
-    ```bash
+    ```bash{promptUser: user}
    git status
    ```
 
    It appears that our web directory isn't being committed. This is because the `example-drops-8-composer` `.gitignore` file assumes that you’re using a build step with continuous integration.
 
-4. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the `:: cut ::` section.
+1. To make it compatible with this manual method, you need to edit the `.gitignore` file and remove everything above the `:: cut ::` section.
 
    **Important:** Without this modification, critical components such as Drupal core and contrib modules will be ignored and not pushed to Pantheon.
 
-5. Now let’s run `git status` again to make sure everything is included:
+1. Now let’s run `git status` again to make sure everything is included:
 
-   ```bash
+   ```bash{promptUser: user}
    git status
    ```
 
    ![Image of git status showing the changed files in red](../../images/guides/drupal-8-composer-no-ci/drops-8-composer-git-status-after-installing-d8.png)
 
-6. Set the site to `git` mode:
+1. Set the site to `git` mode:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus connection:set $PANTHEON_SITE_NAME.dev git
    ```
 
-7. Add and commit the code files. A Git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
+1. Add and commit the code files. A Git force push is necessary because we are writing over the empty repository on Pantheon with our new history that was started on the local machine. Subsequent pushes after this initial one should not use `--force`:
 
-   ```bash
+   ```bash{promptUser: user}
    git add .
    git commit -m 'Drupal 8 and dependencies'
    git push --force
@@ -176,19 +176,19 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 
 1. Set the site connection mode to `sftp`:
 
-    ```bash
+    ```bash{promptUser: user}
     terminus connection:set $PANTHEON_SITE_NAME.dev sftp
     ```
   
 1. Use Terminus Drush to install Drupal:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush $PANTHEON_SITE_NAME.dev -- site-install -y
    ```
 
 1. Log in to your new Drupal 8 site to verify it is working. You can get a one-time login link using Drush:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush $PANTHEON_SITE_NAME.dev -- uli
    ```
 
@@ -202,29 +202,29 @@ To maintain best practice, some of the steps in this section require access to t
 
 1. Next, let’s add a new module to our site. For this example, we’ll add the address module. We advocate working in feature branches on Pantheon, so let's create a Git branch and spin up a Multidev environment:
 
-   ```bash
+   ```bash{promptUser: user}
    git checkout -b addr-module
    composer require "drupal/address ~1.0"
    ```
 
-2. Now that Composer is aware of our new module requirement we need to update our dependencies. Then, we can commit them and push to Pantheon:
+1. Now that Composer is aware of our new module requirement we need to update our dependencies. Then, we can commit them and push to Pantheon:
 
-   ```bash
+   ```bash{promptUser: user}
    composer update
    git add .
    git commit -m "Adding the address module with Composer"
    git push -u origin addr-module
    ```
 
-3. Spin up a Multidev environment from the Git branch we just pushed up to Pantheon:
+1. Spin up a Multidev environment from the Git branch we just pushed up to Pantheon:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus multidev:create $PANTHEON_SITE_NAME.dev addr-module
    ```
 
-4. Log in to your new environment and verify that the address module exists:
+1. Log in to your new environment and verify that the address module exists:
 
-   ```bash
+   ```bash{promptUser: user}
    terminus drush $PANTHEON_SITE_NAME.addr-module -- uli
    ```
 
@@ -234,23 +234,23 @@ To maintain best practice, some of the steps in this section require access to t
 
 1. From a local copy of your site's codebase, run:
 
-    ```bash
+    ```bash{promptUser: user}
     composer update
     ```
 
-2. After Composer updates successfully, push the code back to Pantheon via Git or SFTP.
+1. After Composer updates successfully, push the code back to Pantheon via Git or SFTP.
 
 ### Update only Drupal Core
 
 1. From a local copy of your site's codebase run:
 
-    ```bash
+    ```bash{promptUser: user}
     composer update drupal/core --with-dependencies
     ```
 
   `--with-dependencies` is necessary when explicitly updating only Drupal core in order to download all of Drupal core's dependencies, such as Symfony.
 
-2. After Composer updates successfully, push the code back to Pantheon via Git or SFTP.
+1. After Composer updates successfully, push the code back to Pantheon via Git or SFTP.
 
    Note that `composer update` is based on the values specified in `composer.json.` So, for example, if `composer.json` specifies `drupal/core` at `^8` then Composer will update Drupal core to the latest version of `8` but not update to `9.x`. You can read more about version constraints in [Composer's version constraints documentation](https://getcomposer.org/doc/articles/versions.md#caret-version-range-).
 
