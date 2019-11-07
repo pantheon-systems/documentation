@@ -57,10 +57,13 @@ Static requests (images PDFs, CSS, JS, etc) are not included in our normal traff
 
 However we do reserve the right to review individual sites that are excessive bandwidth consumers. If sites are serving static assets at an excessive rate, this can be considered plan abuse.
 
+### What about 404s and other "client errors?"
+Pantheon only counts pages returned, considered [`200` level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success), in traffic metrics. The Platform does not count "client errors," which are returned as [`400` level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors), as part of plan traffic limits.
+
 ### What about bots?
 Although it places load on the platform, Pantheon excludes automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. We do this by examining the user-agent of traffic, as well as the source IP address.
 
-Having high performance responses to crawlers is _beneficial_ to SEO, which is one reson people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible.
+Having high performance responses to crawlers is _beneficial_ to SEO, which is one reason people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible.
 
 ### What about load tests or penetration tests?
 We encourage customers to load test prior to releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
