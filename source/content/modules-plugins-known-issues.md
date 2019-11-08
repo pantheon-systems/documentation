@@ -854,7 +854,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 **Issue 2**: Uploading large import files hits the 59 second [timeout](/timeouts/), or you're getting invalid file paths.
 
-**Solution**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
+**Solution**: You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option . There have been some cases where turning off the "Random folder name" option has resolved issues exporting large files.
 
 <br />
 
