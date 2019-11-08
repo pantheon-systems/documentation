@@ -63,7 +63,7 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
   accept-ranges: bytes
   date: Mon, 16 Apr 2018 16:30:18 GMT
   via: 1.1 varnish
-  age: 44742
+  age: 44742 //highlight-line
   x-served-by: cache-mdw17344-MDW, cache-jfk8146-JFK
   x-cache: HIT, HIT
   x-cache-hits: 1, 1
