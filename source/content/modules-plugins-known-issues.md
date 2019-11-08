@@ -11,6 +11,7 @@ We do not prevent you from installing and using these plugins/modules. However, 
 **Plugin & Module Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fpantheon.io/docs/modules-plugins-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content). We're happy to help provide information that can lead to conflict resolutions between your code and the platform. If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/master/source/_docs/modules-plugins-known-issues.md).
 
 ## Drupal Modules
+
 <hr />
 
 ### [APC - Alternative PHP Cache](https://www.drupal.org/project/apc)
@@ -915,14 +916,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 ## WordPress Themes
 
-### [Jupiter](https://themes.artbees.net/pages/jupiter-wordpress-theme-create-wordpress-websites/)
+### Self-Updating Themes
+Several WordPress themes, including [Jupiter](https://themes.artbees.net/pages/jupiter-wordpress-theme-create-wordpress-websites/), [Nanosoft](https://themeforest.net/item/nanosoft-wp-theme-for-it-solutions-and-services-company/22064051), and [Uncode](https://undsgn.com/uncode/), present a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
 
-**Issue**: This theme presents a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
+The form can be disabled by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
 
-**Solution**: The form can be disabled by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-/** Changes to disable Jupiter theme FTP form */
+```php:title=wp-config.php
+/** Disable theme FTP form */
 define('FS_METHOD', 'direct');
 define('FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
 define('FS_CHMOD_FILE', ( 0755 & ~ umask() ) );
@@ -934,24 +934,7 @@ define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
 <hr />
 
 ### [Uncode](https://undsgn.com/uncode/)
-
-**Issue 1**: This theme presents a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
-
-**Solution**: The form can be disabled by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-/** Changes to disable Uncode theme FTP form */
-define('FS_METHOD', 'direct');
-define('FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
-define('FS_CHMOD_FILE', ( 0755 & ~ umask() ) );
-define('FTP_BASE', __DIR__);
-define('FTP_CONTENT_DIR', __DIR__ .'/wp-content/');
-define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
-```
-
-<br />
-
-**Issue 2**: This theme throws a PHP Fatal error in its settings page for Dev's and Multidev's Git mode, Test and Live.
+**Issue**: This theme throws a PHP Fatal error in its settings page for Dev's and Multidev's Git mode, Test and Live.
 
 **Solution**: This theme assumes write access to theme folders `wp-content\themes\uncode\core\assets\css` and `wp-content\themes\uncode\library\css` for it to work properly in git mode. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access/#uncodetheme).
 
