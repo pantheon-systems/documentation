@@ -8,13 +8,15 @@ If you have more than 500 MB of content to be transferred to your `/files` direc
 
 This allows you to transfer unlimited data "server-to-server", which is much faster than transferring from your workstation. Files can be transferred to and from any Pantheon site environment (Dev, Test, and Live).
 
-There are two mechanisms for transferring files: SFTP and rsync.
+<Alert title="Notes" type="info">
 
-<Alert title="Note" type="info">
+ - This document covers copying [files](/files/), excluding database files. You cannot directly access the database files. See [Use the Pantheon WebOps Workflow](/pantheon-workflow/) for more information on how code moves up and content moves down.
 
-You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
+ - You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
 
 </Alert>
+
+There are two mechanisms for transferring files: SFTP and rsync.
 
 <Partial file="auth.md" />
 
