@@ -37,7 +37,6 @@ This article provides suggestions, tips, and best practices for developing and m
   <?php get_template_part('content', 'sidebar'); ?>
   <?php include('content-sidebar.php'); ?>
   ```
-
 ## Testing
 
 * Run [Launch Check](/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
@@ -51,3 +50,38 @@ This article provides suggestions, tips, and best practices for developing and m
 * Verify [Global CDN caching](/test-global-cdn-caching/) is working on your site.
 
 * Follow our [Frontend Performance](/guides/frontend-performance/) guide to tune your WordPress site.
+
+## Avoid XML-RPC Attacks
+There is a common attack vector for WordPress sites which involves bad actors attempting to brute force the `/xmlrpc.php` and `/wp-login.php` paths.
+
+This can be surfaced by reviewing your site's nginx-access.log for the Live environment and if you leverage [GoAccess](/docs/nginx-access-log), you might see something similar to the following:
+```
+2 - Top requests (URLs)                                                                                                                       Total: 366/254431
+
+Hits Vis.     %   Bandwidth Avg. T.S. Cum. T.S. Max. T.S. Data
+---- ---- ----- ----------- --------- --------- --------- ----
+2026   48 0.77%   34.15 KiB   1.27  s  42.74 mn  38.01  s /xmlrpc.php
+566   225 0.21%   12.81 MiB   4.08  s  38.45 mn  59.61  s /
+262    79 0.10%  993.71 KiB   2.32  s  10.14 mn  59.03  s /wp-login.php
+```
+Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronger and more secure method for interacting with WordPress via some external service.
+
+### Disable XML-RPC via PHP
+1. If you have not already created a child theme you can do so now with [Terminus](/docs/terminus/) and WP-CLI, for example:
+  ```bash
+  terminus wp my-site.dev -- scaffold child-theme mytheme-child --parent_theme=mytheme
+  ```
+
+1. Next, add the following line to the end of `wp-content/themes/mytheme-child/functions.php`:
+  ```php
+  # Disable /xmlrpc.php
+  add_filter('xmlrpc_enabled', '__return_false');
+  ```
+### Disable XML-RPC via Pantheon.yml
+1. Add the following to advanced configuration to your `pantheon.yml` file:
+  ```yml
+  protected_web_paths:
+    - /xmlrpc.php
+  ```
+
+This method is perhaps more performant than disabling via PHP since this won't involve bootstrapping the application.
