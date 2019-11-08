@@ -78,6 +78,20 @@ To help generate CAA records, please see the free online tool: <https://sslmate.
 CAA records configured for the root domain (e.g., `example.com`) are inherited by subdomains (e.g., `www.example.com`, `blog.example.com`, etc.). Disabling Let's Encrypt for the root domain will disable subdomains.
 
 
+<Alert title="note" type="info">
+
+After Disabling Let's Encrypt, the **Domains / HTTPS** page will give the following error.
+
+  <Alert title="HTTPS" type="dash-warning">
+
+  Unable to provision HTTPS. Authorization failed for this domain. Please contact Pantheon support with error code 008.
+
+  </Alert>
+
+The platform will also issue a proactive ticket with the subject **Action Required**. Custom certificate users can ignore both the warning and ticket.
+
+</Alert>
+
 ## Technical Specifications
 
 |                                                                       | Legacy                    | Global CDN with Let's Encrypt   | Global CDN with a Custom Certificate  |
