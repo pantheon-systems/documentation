@@ -17,6 +17,12 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 <Partial file="configure-dns.md" />
 
+<Alert type="info" title="Note">
+
+When adding the domain to your environment, you may be presented with the option to **Verify your domain to provision HTTPS**. If you're using a manually managed [custom certificate](/custom-certificates#option-2-manually-managed-custom-certificates), skip this step by clicking **Skip to updating DNS**.
+
+</Alert>
+
 For more detailed instructions pertaining to your specific DNS host, click below:
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">

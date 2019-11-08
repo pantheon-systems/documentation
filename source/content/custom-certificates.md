@@ -43,10 +43,17 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 3. Once you have a set of certificates from the CA, send us:
 
-    - The end-client certificate
-    - Any intermediate certificates provided by the CA.<br /><br />
 
-    Be sure to send these as separate files, not a "chained cert".
+   - The end-client certificate
+   - Any intermediate certificates provided by the CA.
+
+  Be sure to send these as separate files, not a "chained cert".
+
+  <Alert type="info" title="Note">
+
+  When adding the domain to your environment, you may be presented with the option to **Verify your domain to provision HTTPS**. You can skip this step by clicking **Skip to updating DNS**.
+
+  </Alert>
 
 4. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
 
