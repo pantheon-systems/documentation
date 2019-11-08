@@ -24,8 +24,6 @@
           icon: 'fa fa-book'
         - text: 'Creating Sites'
           url: '/create-sites/'
-        - text: 'Launching a WordPress Site'
-          url: '/launch-wordpress/'
         - text: 'Pantheon Site Regions and Data Residency'
           url: '/regions/'
         - text: 'Choosing Your Start State'
