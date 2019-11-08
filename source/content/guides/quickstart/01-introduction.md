@@ -2,7 +2,7 @@
 title: Quick Start
 subtitle: Introduction
 description: The Quick Start guide is designed to get you started on Pantheon.
-tags: [getstarted]
+tags: [getstarted, drupal, wordpress]
 layout: guide
 type: guide
 anchorid: quickstart
@@ -28,6 +28,7 @@ Welcome! This guide is designed to get you started on Pantheon.
 In this guide, you'll learn how to:
 
 - Create a Sandbox site on Pantheon
+- Deploy Drupal or WordPress to the site
 - Use separate Dev, Test, and Live environments in a best-practice development workflow
 - Perform on-server development via our SFTP Connection Mode
 
