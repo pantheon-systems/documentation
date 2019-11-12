@@ -64,7 +64,7 @@ You can configure Cloudflare's CDN as an additional layer on Pantheon's Global C
 
 1. Scroll down and enable **Automatic HTTPS Rewrites**
 
-1. Remove existing redirects configured via PHP in `settings.php` or `wp-config.php`.
+1. Remove existing redirects configured via PHP in `settings.php` or `wp-config.php` that you no longer need, and update any still required to point to the domain managed by Cloudflare. You can also set the [Primary Domain](/domains#choose-primary-domain) from the Site Dashboard.
 
 1. Proceed with DNS configuration as described in Option 1, but make sure the cloud is toggled orange, not gray:
 
