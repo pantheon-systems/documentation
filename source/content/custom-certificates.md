@@ -15,7 +15,7 @@ If your site uses Legacy SSL, it's also on an outdated TLS configuration. The Gl
 If you just haven’t gotten around to upgrading, consider using our managed HTTPS, which includes automated certificate management, leveraging Let’s Encrypt certificates. As a convenience, when you upgrade to managed HTTPS you’ll never have to worry about an expired certificate again. As long as your domain is pointed to Pantheon, we will automatically renew the certificates required to keep your site secure. [Upgrade](/https/) to get best-in-class encryption and an A+ grade from SSL Labs.
 
 ### Option 2: Manually Managed Custom Certificates
-If you require a custom, dedicated certificate, you can now bring it the Global CDN. This is a paid service that our Sales Team can help you with. 
+If you require a custom, dedicated certificate, you can now bring it to the Global CDN. This is a paid service that our Sales Team can help you with. 
 
 1. Please [contact sales](https://pantheon.io/contact-us) if you are not a contract customer.
 
