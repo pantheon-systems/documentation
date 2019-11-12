@@ -1,16 +1,34 @@
 ---
 title: Visualize Deploys with the WebOps Dashboard
-description: Learn how to add a client to your Partner Agency to share special features and pricing.
+description: Gain valuable insight to your site's development and collaboration with Pantheon's WebOps Dashboard.
 tags: [dashboard]
 categories: []
 contributors: [edwardangert]
 searchboost: 150
 ---
 
-Pantheon's [WebOps](https://pantheon.io/webops) Dashboard combines metrics and data in one easy to understand visualization of site development.
+Pantheon's [WebOps](https://pantheon.io/webops) Dashboard combines metrics and data in one page of easy to understand visualization of site development.
+
+## How to Access the WebOps Dashboard
+
+From the User or Org Dashboard, any Site that is not [Sandbox](/create-sites#sandbox-sites) or [Frozen](/platform-considerations#inactive-site-freezing) has a **Track WebOps** button:
+
+![Screenshot of a User Dashboard with a Site showing the Track WebOps button](../images/dashboard/user-dash-track-webops.png)
+
+## What Does the WebOps Dashboard Show?
 
 ![Screenshot of the WebOps Dashboard](../images/dashboard/webops-dashboard.png)
 
-## What does the WebOps Dashboard Show?
+The WebOps Dashboard shows site activity as measured by code deployed from the Test to Live environment.
 
-### What counts as a deploy?
+The graph shows the frequency of activity over the time period selected in the dropdown (**Last 7 Days** in the screenshot above). The **Site Activity** section lists the most recent deploys by the user's email.
+
+To view the Site Activity for another site, use the **Select Another Website** dropdown.
+
+### What Counts As a Deploy?
+
+Merges from Test to Live are considered Deploys.
+
+### Can I make a suggestion?
+
+Yes! Click the **Leave Feedback** button from the WebOps Dashboard or let our team know in [chat](/support#real-time-chat-support).
