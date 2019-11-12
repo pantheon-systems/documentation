@@ -19,29 +19,11 @@ If you just haven’t gotten around to upgrading, consider using our managed HTT
 
 ### Option 2: Manually Managed Custom Certificates
 
-If you require a custom, dedicated certificate, you can now bring it the Global CDN. This is a paid service that our Sales Team can help you with. Please [contact sales](https://pantheon.io/contact-us) prior to going through the following steps if you are not a contract customer.
+If you require a custom, dedicated certificate, you can now bring it the Global CDN. This is a paid service that our Sales Team can help you with. 
 
-1. [Open a support ticket](/support/#ticket-support) with the certificate details required to request a **Certificate Signing Request** (CSR) from Pantheon. Use as few certificates as possible. Domains from multiple environments and sites can be combined, with up to 100 [**Subject Alternative Names**](https://en.wikipedia.org/wiki/Subject_Alternative_Name) (SANs) per certificate.
+1. Please [contact sales](https://pantheon.io/contact-us) if you are not a contract customer.
 
-    When requesting a CSR file, you must provide Pantheon Support with the following information:
-
-     - Common name (e.g. `example.com`)
-     - DNS names (e.g. `example.com`:`www.example.com`:`blog.example.com`:`dev.example.com`)
-     - Email addresses \[optional\] (e.g. `someone@example.com`:`admin@example.com`)
-     - Organization (e.g. `ACME, Inc.`)
-     - Organizational unit \[optional\] (e.g. `Engineering`)
-     - Country (e.g. `US`)
-     - Locality (e.g. `San Francisco`)
-     - State / Province (e.g. `California`)
-     - Technical contact email
-     - Technical contact first name
-     - Technical contact last name
-
-<br />
-
-2. Pantheon Support will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). See [CA Limitations](#ca-limitations) below for more information.
-
-3. Once you have a set of certificates from the CA, send us:
+1. After a closed contract, Pantheon Professional Services will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). See [CA Limitations](#ca-limitations) below for more information.
 
 
    - The end-client certificate
@@ -57,11 +39,11 @@ If you require a custom, dedicated certificate, you can now bring it the Global 
 
 4. Once the certificate is in place, you will see under **Details** for your domain(s) the following:
 
-    ![Custom Certificate Confirmation](../images/dashboard/custom-cert-confirm.png)
+  ![Custom Certificate Confirmation](../images/dashboard/custom-cert-confirm.png)
 
 5. [Test Before Going Live](#test-before-going-live) (optional, recommended)
 
-6.  [Disable Let's Encrypt by adding CAA DNS records](#disable-lets-encrypt-with-caa-records-required).
+1. [Disable Let's Encrypt by adding CAA DNS records](#disable-lets-encrypt-with-caa-records-required).
 
 7. Update `A` and `AAAA` records provided by Pantheon Support. Note that even for subdomains, `A` and `AAAA` records are required. Do not use a `CNAME` record.
 
