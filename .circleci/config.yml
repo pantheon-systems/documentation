@@ -46,16 +46,6 @@ jobs:
           name: Check for merge conflicts
           command: |
             scripts/merge_conflicts.sh
-      - save_cache:
-          key: npm-v2.7-{{ checksum "gatsby/package-lock.json" }}
-          paths:
-            - ~/build/gatsby/package-lock.json
-            - ~/build/gatsby/node_modules
-      - save_cache:
-          key: v2.4-always-{{ epoch }}
-          paths:
-            - ~/build/gatsby/public
-            - ~/build/gatsby/.cache
       - persist_to_workspace:
           root: .
           paths:
@@ -83,6 +73,16 @@ jobs:
           command: |
             cd ~/build
             bash ./scripts/link-checker.sh
+      - save_cache:
+          key: npm-v2.7-{{ checksum "gatsby/package-lock.json" }}
+          paths:
+            - ~/build/gatsby/package-lock.json
+            - ~/build/gatsby/node_modules
+      - save_cache:
+          key: v2.4-always-{{ epoch }}
+          paths:
+            - ~/build/gatsby/public
+            - ~/build/gatsby/.cache
 
   preview:
     docker:
