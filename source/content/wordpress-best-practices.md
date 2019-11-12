@@ -54,7 +54,7 @@ This article provides suggestions, tips, and best practices for developing and m
 ## Avoid XML-RPC Attacks
 There is a common attack vector for WordPress sites which involves bad actors attempting to brute force the `/xmlrpc.php` and `/wp-login.php` paths.
 
-This can be surfaced by reviewing your site's nginx-access.log for the Live environment and if you leverage [GoAccess](/docs/nginx-access-log), you might see something similar to the following:
+This can be surfaced by reviewing your site's nginx-access.log for the Live environment and if you leverage [GoAccess](/nginx-access-log/), you might see something similar to the following:
 ```
 2 - Top requests (URLs)                                                                                                                       Total: 366/254431
 
@@ -67,7 +67,7 @@ Hits Vis.     %   Bandwidth Avg. T.S. Cum. T.S. Max. T.S. Data
 Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronger and more secure method for interacting with WordPress via some external service.
 
 ### Disable XML-RPC via PHP
-1. If you have not already created a child theme you can do so now with [Terminus](/docs/terminus/) and WP-CLI, for example:
+1. If you have not already created a child theme you can do so now with [Terminus](/terminus/) and WP-CLI, for example:
   ```bash
   terminus wp my-site.dev -- scaffold child-theme mytheme-child --parent_theme=mytheme
   ```
