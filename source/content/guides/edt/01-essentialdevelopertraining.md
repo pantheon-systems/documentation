@@ -17,7 +17,7 @@ image: launchGuide-twitterLarge
 
 Welcome! This guide is an online version of our [Essential Developer Training](https://pantheon.io/essential-developer-training).
 
-<Enablement title="Getting Essential Developer Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Enablement title="Get Instructor-Led Essential Developer Training" link="https://pantheon.io/learn-pantheon?docs">
 
 Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
 
