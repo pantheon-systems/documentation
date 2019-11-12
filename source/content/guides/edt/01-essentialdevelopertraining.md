@@ -17,9 +17,9 @@ image: launchGuide-twitterLarge
 
 Welcome! This guide is an online version of our [Essential Developer Training](https://pantheon.io/essential-developer-training).
 
-<Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs">
+<Enablement title="Get Instructor-Led Essential Developer Training" link="https://pantheon.io/learn-pantheon?docs">
 
-How mature is your web team? Take our Web Team Agility Assessment to find out.
+Ramp up faster with an instructor-led version of this material, delivered by Pantheon's Developer Relations team.
 
 </Enablement>
 
