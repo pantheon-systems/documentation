@@ -21,6 +21,8 @@ If you require a custom, dedicated certificate, you can now bring it to the Glob
 
 1. After a closed contract, Pantheon Professional Services will provide you with the CSR file, to pass on to your **Certificate Authority** (CA). See [CA Limitations](#ca-limitations) below for more information.
 
+1. Once you have a set of certificates from the CA, send us:
+
    - The end-client certificate
    - Any intermediate certificates provided by the CA.
 
