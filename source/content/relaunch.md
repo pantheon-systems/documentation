@@ -13,7 +13,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 </Alert>
 
 ## Before You Begin
-- Log in to the new Site Dashboard on Pantheon
+- Log in to the new Site Dashboard on Pantheon as an Admin, Team Member, or [Privileged User](/change-management#roles-and-permissions)
 - Open a second tab for the old Site Dashboard on Pantheon
 - In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
 - Examine existing records pointing to Pantheon
