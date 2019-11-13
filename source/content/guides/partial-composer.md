@@ -132,7 +132,7 @@ Anything you aren't managing with Composer is installed and maintained using the
 ## Require Dependencies
 Use the `require` command to add new dependencies to your project, such as libraries or themes. This command modifies your `composer.json` file by including the specified dependency and it's compatible version.
 
-Note that Panthen **does not** run `composer install` on the platform, so you need to install and commit the dependencies.
+Note that Pantheon does not run `composer install` on the platform, so you need to install and commit the dependencies.
 
 <TabList>
 
@@ -148,9 +148,8 @@ Note that Panthen **does not** run `composer install` on the platform, so you ne
 
     ![Require wpackagist-plugin/pantheon-advanced-page-cache output](../../images/guides/partial-composer/require-papc-plugin.png)
 
-    Notice a missing dependency was also installed, `composer/installers`. This is package is needed to support the installation paths configured in the previous section.
+    Notice a missing dependency was also installed, `composer/installers`. This package is needed to support the installation paths configured in the previous section, and needs to be tracked in version control.
 
-    If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing. Note that you **do** need to track and commit the installed dependencies.
   3. Commit your work to version control with Git:
 
     ```bash
@@ -190,7 +189,6 @@ Note that Panthen **does not** run `composer install` on the platform, so you ne
 
     ![Require drupal/pantheon_advanced_page_cache output](../../images/guides/partial-composer/require-drush.png)
 
-    If you don't want to track the `vendor` directory with Git, add it to your site's `.gitignore` file before continuing. Note that you **do** need to track and commit the installed dependencies.
   4. Commit your work to version control with Git:
 
     ```bash
