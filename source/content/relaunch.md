@@ -12,11 +12,11 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
 </Alert>
 
-## Before You Begin
-- Log in to the new Pantheon Site Dashboard
-- Open a second tab for the old Pantheon Site Dashboard
-- In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
-- Examine existing records pointing to Pantheon
+## Prepare for Relaunch
+1. Log in to the new Pantheon Site Dashboard
+1. Open a second tab for the old Pantheon Site Dashboard
+1. In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
+1. Examine existing records pointing to Pantheon
   <Partial file="standard-dns-config.md" />
 
   <Alert title="Note" type="info">
@@ -25,7 +25,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   </Alert>
 
-- Lower the TTL of existing DNS records to minimize the impact of upcoming DNS changes
+1. Lower the TTL of existing DNS records to minimize the impact of upcoming DNS changes
 
   <Accordion title="Learn More" id="ttl" icon="info-sign">
 
@@ -37,7 +37,7 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   </Accordion>
 
-- Use the terminal's `dig` command to obtain the new site's A and AAAA records:
+1. Use the terminal's `dig` command to obtain the new site's A and AAAA records:
 
   ```bash
   dig +short live-site-name.pantheonsite.io
