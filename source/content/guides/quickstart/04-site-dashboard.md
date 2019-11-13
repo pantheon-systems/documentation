@@ -50,7 +50,7 @@ After passing review, you push your new code “up” from the Test environment 
 
 **Watch the video:**
 
-`youtube: https://www.youtube.com/watch?v=NBL2Ejh8TI4`
+`youtube: https://www.youtube.com/watch?v=CZaog5_Sxmg`
 
 <Accordion id={"site-dashboard-tour"} title={"Site Dashboard Glossary (Optional)"} icon={"lightbulb"}>
 
