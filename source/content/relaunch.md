@@ -13,8 +13,8 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 </Alert>
 
 ## Before You Begin
-- Log in to the new Site Dashboard on Pantheon
-- Open a second tab for the old Site Dashboard on Pantheon
+- Log in to the new Pantheon Site Dashboard
+- Open a second tab for the old Pantheon Site Dashboard
 - In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
 - Examine existing records pointing to Pantheon
   <Partial file="standard-dns-config.md" />
@@ -36,6 +36,13 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
   When you make a change to the TTL of an existing record, you need to wait for the old TTL time to pass - that is, if it had been set to 86400, you would need to wait a full 24 hours for the new setting to begin propagating everywhere.
 
   </Accordion>
+
+- Use the terminal's `dig` command to obtain the new site's A and AAAA records:
+
+  ```bash
+  dig +short live-site-name.pantheonsite.io
+  dig +short AAAA live-site-name.pantheonsite.io
+  ```
 
 ### Roles & Permissions
 The permission to manage billing and plans is granted only to the role of **Site Owner** / **Organization Administrators**. Other roles do not have access as described on this page.
