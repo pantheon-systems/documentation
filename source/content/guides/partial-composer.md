@@ -35,52 +35,52 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
-      ```bash
-      SITE=<site_name>
-      `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
-      cd $SITE
-      ```
-2. Initialize composer to create a `composer.json` file with the WordPress package repository:
+  ```bash
+  SITE=<site_name>
+  `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
+  cd $SITE
+  ```
+1. Initialize composer to create a `composer.json` file with the WordPress package repository:
 
-     ```bash
-     composer init --repository=https://wpackagist.org --no-interaction
-     ```
-3. Edit the `composer.json` to add extra configuration that specifies installation paths for WordPress plugins and themes.
+  ```bash
+  composer init --repository=https://wpackagist.org --no-interaction
+  ```
+1. Edit the `composer.json` to add extra configuration that specifies installation paths for WordPress plugins and themes.
 
-    <Alert title="Note" type="info">
+  <Alert title="Note" type="info">
 
-    Since Pantheon does not support Git submodules <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Git submodules" data-content="Some Composer packages are added as Git submodules, which place a Git repository within a subdirectory of your site’s repository."><em class="fa fa-info-circle"></em></a>, we recommend using the provided script `remove-git-submodules` to remove any `.git` directories upon install and update.
+  Since Pantheon does not support Git submodules <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Git submodules" data-content="Some Composer packages are added as Git submodules, which place a Git repository within a subdirectory of your site’s repository."><em class="fa fa-info-circle"></em></a>, we recommend using the provided script `remove-git-submodules` to remove any `.git` directories upon install and update.
 
-    </Alert>
+  </Alert>
 
-    ```json
-    {
-      "repositories": [
-        {
-          "type": "composer",
-          "url": "https://wpackagist.org"
-        }
-      ],
-      "require": {},
-      "extra": {
-        "installer-paths": {
-          "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-          "wp-content/themes/{$name}/": ["type:wordpress-theme"]
-        }
-      },
-      "scripts": {
-        "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf",
-        "post-install-cmd": [
-          "@remove-git-submodules"
-        ],
-        "post-update-cmd": [
-          "@remove-git-submodules"
-        ]
+  ```json
+  {
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://wpackagist.org"
       }
+    ],
+    "require": {},
+    "extra": {
+      "installer-paths": {
+        "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+        "wp-content/themes/{$name}/": ["type:wordpress-theme"]
+      }
+    },
+    "scripts": {
+      "remove-git-submodules": "find . -mindepth 2 -type d -name .git | xargs rm -rf",
+      "post-install-cmd": [
+        "@remove-git-submodules"
+      ],
+      "post-update-cmd": [
+        "@remove-git-submodules"
+      ]
     }
-    ```
+  }
+  ```
 
-4. Commit the `composer.json` file to version control with Git:
+1. Commit the `composer.json` file to version control with Git:
 
      ```bash
      git add composer.json
@@ -90,7 +90,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
      git commit -m "Create composer.json with WP repo and install paths"
      ```
 
-5. Push your new file to Pantheon:
+1. Push your new file to Pantheon:
 
      ```bash
      git push origin master
@@ -102,26 +102,26 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
 1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
-    ```bash
-    SITE=<site_name>
-    `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
-    cd $SITE
-    ```
+  ```bash
+  SITE=<site_name>
+  `terminus connection:info $SITE.dev --fields='Git Command' --format=string`
+  cd $SITE
+  ```
 <Partial file="d7-composer-init.md" />
-4. Commit the `composer.json` file to version control with Git:
+1. Commit the `composer.json` file to version control with Git:
 
-    ```bash
-    git add composer.json
-    ```
+  ```bash
+  git add composer.json
+  ```
 
-    ```bash
-    git commit -m "Create composer.json with D7 repo and install paths"
-    ```
-5. Push your new file to Pantheon:
+  ```bash
+  git commit -m "Create composer.json with D7 repo and install paths"
+  ```
+1. Push your new file to Pantheon:
 
-    ```bash
-    git push origin master
-    ```
+  ```bash
+  git push origin master
+  ```
 
 </Tab>
 
