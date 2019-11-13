@@ -12,8 +12,11 @@ To take full advantage of Pantheon, you should load your public SSH key into you
 
 </Accordion>
 
+<Alert title="Note" type="info">
 
-Pantheon does not support the SSH protocol. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
+Pantheon does not provide access to a shell environment over SSH. These directions allow you to have passwordless access if you configure Git, SFTP, or Drush to use SSH keys.
+
+</Alert>
 
 ## Generate SSH Key
 
