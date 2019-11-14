@@ -28,11 +28,15 @@ fi
 
 # Export Variables
 echo "export MULTIDEV_NAME=$MULTIDEV_NAME" >> $BASH_ENV
-echo "export MULTIDEV_SITE_URL='https://${MULTIDEV_NAME}-static-docs.pantheonsite.io'" >> $BASH_ENV
+echo "export MULTIDEV_SITE_URL='https://${MULTIDEV_NAME}-static-docs.pantheonsite.io/docs/'" >> $BASH_ENV
 echo "export CI_BUILD_URL='${CIRCLE_BUILD_URL}'" >> $BASH_ENV
+echo "export PR_NUMBER='${CIRCLE_PULL_REQUEST##*/}'" >> $BASH_ENV
+echo "export CI_PROJECT_USERNAME='${CIRCLE_PROJECT_USERNAME}'" >> $BASH_ENV
+echo "export CI_PROJECT_REPONAME='${CIRCLE_PROJECT_REPONAME}'" >> $BASH_ENV
 echo "export CI_NODE_INDEX='${CIRCLE_NODE_INDEX}'" >> $BASH_ENV
 echo "export CI_REPOSITORY_URL='${CIRCLE_REPOSITORY_URL}'" >> $BASH_ENV
-echo "export ARTIFACTS_DIR_URL='${CIRCLE_BUILD_URL}/artifacts/${CIRCLE_NODE_INDEX}/artifacts'" >> $BASH_ENV
+echo "export ARTIFACTS_DIR_URL='${CIRCLE_BUILD_URL}/artifacts/${CIRCLE_NODE_INDEX}/'" >> $BASH_ENV
+echo "export ARTIFACTS_FULL_DIR='${BUILD_PATH}/artifacts'" >> $BASH_ENV
 
 # Export functions
 echo "source $BUILD_PATH/.circleci/scripts/functions.sh" >> $BASH_ENV

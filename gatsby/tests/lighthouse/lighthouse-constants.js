@@ -13,19 +13,13 @@ module.exports = {
 
     getDevURL: () => {
         let devURL;
-
-        if (process.env.CI_BRANCH == "master") {
-            devURL = process.env.DEV_SITE_URL.replace(/\/$/, "");
-        } else {
-            devURL = process.env.MULTIDEV_SITE_URL.replace(/\/$/, "");
-        }
-
+        devURL = process.env.MULTIDEV_SITE_URL.replace(/\/$/, "");
         return devURL;
     },
 
     getReferenceURL: () => {
         let referenceURL;
-        referenceURL = "https://pantheon.io/docs";
+        referenceURL = "https://pantheon.io/docs/";
         return referenceURL;
     },
 
