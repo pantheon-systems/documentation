@@ -16,6 +16,3 @@ require("tocbot/dist/tocbot.min.js")
 
 require("./src/styles/global.scss")
 
-exports.onRouteUpdate = () => {
-    window.analytics
-}

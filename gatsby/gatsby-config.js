@@ -33,6 +33,13 @@ module.exports = {
         id: process.env.GTM_ID,
         includeInDevelopment: false,
         defaultDataLayer: { },
+    },
+    {
+      resolve: "gatsby-plugin-segment-js",
+      options: {
+        prodKey: process.env.SEGMENT_KEY,
+        devKey: process.env.SEGMENT_KEY,
+        trackPage: false,
       },
     },
     {
@@ -127,14 +134,6 @@ module.exports = {
               cacheKey: 'gatsby-remark-github-v1',
               token: process.env.GITHUB_API,
             }
-          },
-          {
-            resolve: "gatsby-plugin-segment-js",
-            options: {
-              prodKey: process.env.SEGMENT_KEY,
-              devKey: process.env.SEGMENT_KEY,
-              trackPage: true,
-            },
           },
           {
             resolve: "gatsby-remark-embed-video",
