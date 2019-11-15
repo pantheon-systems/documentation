@@ -34,5 +34,7 @@ Welcome! This guide will help you take a site live on Pantheon.
 To get started, you need to [create your Live environment](/guides/quickstart/create-test-live/) and have a registered domain name where you can control DNS settings.
 
 <Alert title="Note" type="info">
+
 Pantheon is not a domain registrar, and we do not offer DNS management as a service. To connect a custom domain to Pantheon, you need to register one with a third-party provider.
+
 </Alert>
