@@ -5,7 +5,6 @@ const Enablement = ({ title, link, campaign, children }) => {
 
   function _handleClick() {
     if (window.analytics){
-      alert ({campaign}, "Campaign")
       window.analytics.track("Docs Enablement Clicked", {
           campaign: {campaign},
       });
