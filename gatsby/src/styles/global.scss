@@ -34,9 +34,10 @@ ul {
 	color: #44525e;
 	font-size: 18px;
 	line-height: 29px;
-}
-ul:not(.nav.toc-list.nav-list) {
 	padding-bottom: 1em;
+}
+ul.nav, ul.toc-list, ul.nav-list {
+	padding-bottom: 0;
 }
 p {
 	margin: 0 0 20px;
