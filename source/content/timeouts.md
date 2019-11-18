@@ -43,26 +43,23 @@ As [recommended in the Migrate module documentation](https://www.drupal.org/node
 
 If you're migrating to a Drupal 7 site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
 
-```
+```php
 $conf['migrate_drush_path'] = $_ENV['HOME'] . '/bin/drush';
 ```
 
 ### Can Pantheon change the non-configurable timeouts for my site?
-
 No, these settings apply to every site on Pantheon. One of the ways Pantheon scales so well is by avoiding one-off configurations. We run a highly tuned universal configuration for optimized performance.
 
-
 ### How do I change the Solr timeout on Drupal?
-
-Do not edit the `pantheon_apachesolr` module within your Drupal site installation, it will void your warranty and we can't support user modifications. Instad, reduce the batch size and avoid indexing large binary files.
+Do not edit the `pantheon_apachesolr` module within your Drupal site installation, it will void your warranty and we can't support user modifications. Instead, reduce the batch size and avoid indexing large binary files.
 
 ### How do I install a theme or plugin that keeps timing out?
-
 If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/rsync-and-sftp/).
 
 Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/custom-upstream/).
 
 ## See Also
+
 - [Platform Considerations](/platform-considerations/)
 - [Errors and Server Responses](/errors-and-server-responses/)
 - [Modules and Plugins With Known Issues](/modules-plugins-known-issues/)
