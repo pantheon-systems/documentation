@@ -28,8 +28,7 @@ Instead, we suggest that you use an alternate form of verification like API keys
 For more information, see [Secure Integration](/secure-integration/).
 
 ## Outbound Mail Service
-
-See [Email on Pantheon](/mail/) for information on working with dynamic IPs using SMTP and REST API configurations for outbound email service. 
+See [Email on Pantheon](/email/) for information on working with dynamic IPs using SMTP and REST API configurations for outbound email service.
 
 ## Compatible Payment Gateways
 The following payment gateways are known to work in cloud-based infrastructures such as ours:
