@@ -13,10 +13,11 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 </Alert>
 
 ## Prepare for Relaunch
-1. Log in to the new Pantheon Site Dashboard
-1. Open a second tab for the old Pantheon Site Dashboard
-1. In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.)
-1. Examine existing records pointing to Pantheon
+1. Log in to the new Pantheon Site Dashboard.
+1. Open a second tab for the old Pantheon Site Dashboard.
+1. In a third tab, log in to the domain's DNS service provider (e.g., Cloudflare, Amazon Route 53, etc.).
+1. Examine existing records pointing to Pantheon.
+
   <Partial file="standard-dns-config.md" />
 
   <Alert title="Note" type="info">
@@ -37,12 +38,14 @@ The relaunch process applies exclusively to live sites already hosted on Pantheo
 
   </Accordion>
 
-1. Use the terminal's `dig` command to obtain the new site's A and AAAA records:
+1. Use [`dig`](https://en.wikipedia.org/wiki/Dig_(command)) from your terminal to obtain the new site's A and AAAA records:
 
-  ```bash
+  ```bash{promptUser: user}
   dig +short live-site-name.pantheonsite.io
   dig +short AAAA live-site-name.pantheonsite.io
   ```
+
+  You can also use Google's [web implementstion](https://toolbox.googleapps.com/apps/dig/) of dig.
 
 ### Roles & Permissions
 The permission to manage billing and plans is granted only to the role of **Site Owner** / **Organization Administrators**. Other roles do not have access as described on this page.
