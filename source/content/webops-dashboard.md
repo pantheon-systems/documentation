@@ -11,7 +11,7 @@ Pantheon's [WebOps](https://pantheon.io/webops) Dashboard combines metrics and d
 
 ## How to Access the WebOps Dashboard
 
-From the User or Org Dashboard, any Site that is not [Sandbox](/create-sites#sandbox-sites) or [Frozen](/platform-considerations#inactive-site-freezing) has a **Track WebOps** button:
+From the [User](https://dashboard.pantheon.io) or Org Dashboard, any Site that is not [Sandbox](/create-sites#sandbox-sites) or [Frozen](/platform-considerations#inactive-site-freezing) has a **Track WebOps** button:
 
 ![Screenshot of a User Dashboard with a Site showing the Track WebOps button](../images/dashboard/user-dash-track-webops.png)
 
@@ -21,7 +21,7 @@ From the User or Org Dashboard, any Site that is not [Sandbox](/create-sites#san
 
 The WebOps Dashboard shows site activity as measured by code deployed from the Test to Live environment.
 
-The graph shows the frequency of activity over the time period selected in the dropdown (**Last 7 Days** in the screenshot above). The **Site Activity** section lists the most recent deploys by the user's email.
+The graph shows the frequency of activity over the time period selected in the dropdown (**Last 30 Days** in the screenshot above). The **Site Activity** section lists the most recent deploys by the user's email.
 
 To view the Site Activity for another site, use the **Select Another Website** dropdown.
 
