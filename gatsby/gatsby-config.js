@@ -87,6 +87,18 @@ module.exports = {
         ]
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Pantheon Documentation`,
+        short_name: `Docs`,
+        start_url: `/docs/`,
+        background_color: `#FFFFFF`,
+        theme_color: `#EFD01B`,
+        display: `standalone`,
+        icon: `src/layout/favicon.ico`,
+      },
+    },
     `gatsby-transformer-yaml`,
     `gatsby-transformer-json`,
     {
