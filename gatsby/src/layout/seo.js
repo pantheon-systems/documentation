@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import favicon from "../../../source/images/favicon45.ico"
 
 function SEO({ description, lang, meta, keywords, title, authors, image }) {
   const { site } = useStaticQuery(
@@ -46,6 +47,10 @@ function SEO({ description, lang, meta, keywords, title, authors, image }) {
       }}
 
       {...titleProps}
+
+      link={[
+        {rel: 'shortcut icon', type: 'image/x-icon', href: `${favicon}`},
+      ]}
 
       meta={[
         {
