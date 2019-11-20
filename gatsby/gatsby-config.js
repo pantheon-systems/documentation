@@ -32,8 +32,7 @@ module.exports = {
       options: {
         id: process.env.GTM_ID,
         includeInDevelopment: true,
-        defaultDataLayer: { platform: "gatsby"},
-        dataLayerName: "Docs",
+        defaultDataLayer: { },
       },
     },
     {
