@@ -9,7 +9,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 ## Development
 
-*  We recommend using an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), or [Brackets](https://github.com/adobe/brackets/).
+* We recommend using an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), or [Brackets](https://github.com/adobe/brackets/).
 
 * Do not modify core WordPress files as it can cause unintended consequences, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts). If you need to modify any WP functionality, do it as a custom or [Must Use](/mu-plugin) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/).
 
@@ -37,6 +37,7 @@ This article provides suggestions, tips, and best practices for developing and m
   <?php get_template_part('content', 'sidebar'); ?>
   <?php include('content-sidebar.php'); ?>
   ```
+
 ## Testing
 
 * Run [Launch Check](/wordpress-launch-check) to review errors and get recommendations on your site's configurations.
@@ -54,9 +55,10 @@ This article provides suggestions, tips, and best practices for developing and m
 ## Avoid XML-RPC Attacks
 There is a common attack vector for WordPress sites which involves bad actors attempting to brute force the `/xmlrpc.php` and `/wp-login.php` paths.
 
-This can be surfaced by reviewing your site's nginx-access.log for the Live environment and if you leverage [GoAccess](/nginx-access-log/), you might see something similar to the following:
-```
-2 - Top requests (URLs)                                                                                                                       Total: 366/254431
+This can be surfaced by reviewing your site's `nginx-access.log` for the Live environment. If you leverage [GoAccess](/nginx-access-log/), you might see something similar to the following:
+
+```none
+2 - Top requests (URLs)                                  Total: 366/254431
 
 Hits Vis.     %   Bandwidth Avg. T.S. Cum. T.S. Max. T.S. Data
 ---- ---- ----- ----------- --------- --------- --------- ----
@@ -64,21 +66,28 @@ Hits Vis.     %   Bandwidth Avg. T.S. Cum. T.S. Max. T.S. Data
 566   225 0.21%   12.81 MiB   4.08  s  38.45 mn  59.61  s /
 262    79 0.10%  993.71 KiB   2.32  s  10.14 mn  59.03  s /wp-login.php
 ```
+
 Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronger and more secure method for interacting with WordPress via some external service.
 
 ### Disable XML-RPC via PHP
+
 1. If you have not already created a child theme you can do so now with [Terminus](/terminus/) and WP-CLI, for example:
-  ```bash
+
+  ```bash{promptUser: user}
   terminus wp my-site.dev -- scaffold child-theme mytheme-child --parent_theme=mytheme
   ```
 
 1. Next, add the following line to the end of `wp-content/themes/mytheme-child/functions.php`:
+
   ```php
   # Disable /xmlrpc.php
   add_filter('xmlrpc_enabled', '__return_false');
   ```
+
 ### Disable XML-RPC via Pantheon.yml
-1. Add the following to advanced configuration to your `pantheon.yml` file:
+
+Add the following to advanced configuration to your `pantheon.yml` file:
+
   ```yml
   protected_web_paths:
     - /xmlrpc.php
