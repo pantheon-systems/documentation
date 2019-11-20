@@ -6,6 +6,12 @@
 # Import Functions
 source $BUILD_PATH/.circleci/scripts/functions.sh
 
+# Skip deploying if indicated in the last commit message
+if skip-preview
+then
+    exit 0
+fi
+
 # Deploy any branch except master, dev, test, or live
 protected-branches
 
