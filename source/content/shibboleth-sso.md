@@ -154,7 +154,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
        'store.sql.username' => $db['username'],
        'store.sql.password' => $db['password'],
   ```
-  For persistent and centralised logging, a custom [`SimpleSAML/Logger/LoggingHandlerInterface`](https://github.com/pantheon-systems/documentation/issues/SimpleSAML/Logger/LoggingHandlerInterface) implementation is required.
+  For persistent and centralised logging, a custom [`SimpleSAML/Logger/LoggingHandlerInterface`](https://github.com/simplesamlphp/simplesamlphp/blob/master/lib/SimpleSAML/Logger.php) implementation is required.
 
   <Alert title="Note" type="info">
 
