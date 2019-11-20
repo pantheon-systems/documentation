@@ -54,3 +54,12 @@ getMergedBranchMultidevName() {
         merged_branch_multidev_names+=( "$multidev_name" ) # Append to the array
     done < "$1"
 }
+
+skip-preview() {
+    if git --no-pager log --oneline -1 | grep "SKIP_PREVIEW"
+    then
+        return 0
+    else
+        return 1
+    fi
+}
