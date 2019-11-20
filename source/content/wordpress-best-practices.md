@@ -53,7 +53,7 @@ This article provides suggestions, tips, and best practices for developing and m
 * Follow our [Frontend Performance](/guides/frontend-performance/) guide to tune your WordPress site.
 
 ## Avoid XML-RPC Attacks
-There is a common attack vector for WordPress sites which involves bad actors attempting to brute force the `/xmlrpc.php` and `/wp-login.php` paths.
+The `/xml-rpc.php` is a potential security risk for WordPress sites. It can be used by bad actors to brute force administrative usernames and passwords. All calls made to this file must supply a plain text username and password. If a valid combination is found,  a success message is returned letting the bad actor know they can log in via the standard `/wp-login.php` method. 
 
 This can be surfaced by reviewing your site's `nginx-access.log` for the Live environment. If you leverage [GoAccess](/nginx-access-log/), you might see something similar to the following:
 
