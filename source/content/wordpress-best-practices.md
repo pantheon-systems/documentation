@@ -11,7 +11,7 @@ This article provides suggestions, tips, and best practices for developing and m
 
 * We recommend using an [IDE](https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments#PHP), or a text editor designed for development like [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/), or [Brackets](https://github.com/adobe/brackets/).
 
-* Do not modify core WordPress files as it can cause unintended consequences, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts). If you need to modify any WP functionality, do it as a custom or [Must Use](/mu-plugin) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/).
+* Do not modify core WordPress files as it can cause unintended consequences, and can [prevent you from updating your site regularly](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts). If you need to modify any WP functionality, do it as a custom or [Must Use](/mu-plugin/) plugin, which adheres to the [WP.org Plugin best practices](https://developer.wordpress.org/plugins/the-basics/best-practices/).
 
 * Use [Redis](/redis/). Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your WordPress site. Pantheon makes it super simple and you'll be able to catch a lot of database queries in WordPress.
 
@@ -69,28 +69,26 @@ Hits Vis.     %   Bandwidth Avg. T.S. Cum. T.S. Max. T.S. Data
 
 Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronger and more secure method for interacting with WordPress via some external service.
 
-### Disable XML-RPC via PHP
-
-1. If you have not already created a child theme you can do so now with [Terminus](/terminus/) and WP-CLI, for example:
-
-  ```bash{promptUser: user}
-  terminus wp my-site.dev -- scaffold child-theme mytheme-child --parent_theme=mytheme
-  ```
-
-1. Next, add the following line to the end of `wp-content/themes/mytheme-child/functions.php`:
-
-  ```php
-  # Disable /xmlrpc.php
-  add_filter('xmlrpc_enabled', '__return_false');
-  ```
-
 ### Disable XML-RPC via Pantheon.yml
 
-Add the following to advanced configuration to your `pantheon.yml` file:
+Add the following configuration to your [`pantheon.yml`](/pantheon-yml/) file:
 
   ```yml
   protected_web_paths:
     - /xmlrpc.php
   ```
 
-This method is perhaps more performant than disabling via PHP since this won't involve bootstrapping the application.
+This method is more performant than disabling via PHP since this won't involve bootstrapping the application.
+
+### Disable XML-RPC via PHP
+
+This method has the advantage of being toggleable without deploying code, by activating or deactivating a custom MU Plugin.
+
+1. If you have not already created an **MU Plugin** (Must Use Plugin) to maintain custom code, review [Create a WordPress MU Plugin for Actions and Filters](/mu-plugin/).
+
+1. Add the following lines your MU plugin:
+
+  ```php
+  # Disable /xmlrpc.php
+  add_filter('xmlrpc_enabled', '__return_false');
+  ```
