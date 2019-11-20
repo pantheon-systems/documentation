@@ -144,7 +144,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
   $config = array (
        'baseurlpath' => 'https://'. $host .':443/simplesaml/', // SAML should always connect via 443
        'certdir' => 'cert/',
-       'loggingdir' => $_ENV['HOME'] . '/files/private/log/',
+       'logging.handler' => 'errorlog',
        'datadir' => 'data/',
        'tempdir' => $_ENV['HOME'] . '/tmp/simplesaml',
        Your $config array continues for a while...
@@ -154,6 +154,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
        'store.sql.username' => $db['username'],
        'store.sql.password' => $db['password'],
   ```
+  For persistent and centralised logging, a custom [`SimpleSAML/Logger/LoggingHandlerInterface`](https://github.com/pantheon-systems/documentation/issues/SimpleSAML/Logger/LoggingHandlerInterface) implementation is required.
 
   <Alert title="Note" type="info">
 
