@@ -15,7 +15,7 @@ From the [User](https://dashboard.pantheon.io) or Org Dashboard, any Site that i
 
 ![Screenshot of a User Dashboard with a Site showing the Track WebOps button](../images/dashboard/user-dash-track-webops.png)
 
-## What Does the WebOps Dashboard Show?
+## What the WebOps Dashboard Shows
 
 ![Screenshot of the WebOps Dashboard](../images/dashboard/webops-dashboard.png)
 
@@ -25,10 +25,10 @@ The graph shows the frequency of activity over the time period selected in the d
 
 To view the Site Activity for another site, use the **Select Another Website** dropdown.
 
-### What Counts As a Deploy?
+### What Counts As a Deploy
 
 Merges from Test to Live are considered Deploys.
 
-### Can I make a suggestion?
+### How to Request a Feature
 
 Yes! Click the **Leave Feedback** button from the WebOps Dashboard or let our team know in [chat](/support#real-time-chat-support).
