@@ -13,8 +13,27 @@ There are some scenarios when an external library is required. Pantheon has inst
 
 WKHTMLtoPDF can be found on your application container at `/srv/bin/wkhtmltopdf`.
 
-### Drupal
-Download and enable the print module and extensions via drush:
+<TabList>
+
+<Tab title="WordPress" id="wp-example" active={true}>
+
+Download and enable the [Save Page to PDF plugin](https://wordpress.org/plugins/save-page-to-pdf/).
+
+</Tab>
+
+<Tab title="Drupal 8" id="d8-example">
+
+Download and enable the [wkhtmltopdf module](https://www.drupal.org/project/wkhtmltopdf).
+
+```bash
+composer require drupal/wkhtmltopdf
+```
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7-example">
+
+Download and enable the [Print module](https://www.drupal.org/project/print) via Drush:
 
 ```bash
 drush @pantheon.{sitename}.{env} en print --y
@@ -30,8 +49,9 @@ git commit -m "Added WKHTMLtoPDF library"
 git push
 ```
 
-### WordPress
-Currently, there are no known plugins that implement WKHTMLtoPDF directly. However, you can use the converter by creating a custom plugin or by placing the code within your theme's `functions.php` file.
+</Tab>
+
+</TabList>
 
 ## PhantomJS
 In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
