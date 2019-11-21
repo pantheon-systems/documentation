@@ -87,7 +87,7 @@ This method has the advantage of being toggleable without deploying code, by act
 
 1. [Set the connection mode to SFTP](/sftp) for the Dev or target Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
-  ```bash{pomptUser: user}
+  ```bash{promptUser: user}
   terminus connection:set <site>.<env> sftp
   ```
 
@@ -95,7 +95,7 @@ This method has the advantage of being toggleable without deploying code, by act
 
   In the following example, replace `my-site` with your Pantheon site name, and `disable-xmlrpc` with your preferred name for this new plugin:
 
-  ```bash{pomptUser: user}
+  ```bash{promptUser: user}
   terminus wp my-site.dev -- scaffold plugin disable-xmlrpc
   ```
 
@@ -110,7 +110,7 @@ This method has the advantage of being toggleable without deploying code, by act
 
 1. Activate the new plugin from within the WordPress admin dashboard, or via Terminus and WP-CLI:
 
-  ```bash{pomptUser: user}
+  ```bash{promptUser: user}
   terminus wp my-site.dev -- plugin activate disable-xmlrpc
   ```
 
