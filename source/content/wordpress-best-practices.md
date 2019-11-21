@@ -82,11 +82,17 @@ This method is more performant than disabling via PHP since this won't involve b
 
 ### Disable XML-RPC via PHP
 
-This method has the advantage of being toggleable without deploying code, by activating or deactivating a custom MU Plugin.
+This method has the advantage of being toggleable without deploying code, by activating or deactivating a custom Plugin.
 
-1. If you have not already created an **MU Plugin** (Must Use Plugin) to maintain custom code, review [Create a WordPress MU Plugin for Actions and Filters](/mu-plugin/).
+1. Create a custom plugin. You can start a new plugin with WP-CLI through [Terminus](/terminus/).
 
-1. Add the following lines your MU plugin:
+  In the following example, replace `my-site` with your Pantheon site name, and `disable-xml` with your preferred name for the new plugin:
+
+  ```bash{pomptUser: user}
+  terminus wp my-site.dev -- scaffold plugin disable-xml
+  ```
+
+1. Add the following lines your new plugin:
 
   ```php
   # Disable /xmlrpc.php
