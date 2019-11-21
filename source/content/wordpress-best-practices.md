@@ -53,9 +53,7 @@ This article provides suggestions, tips, and best practices for developing and m
 * Follow our [Frontend Performance](/guides/frontend-performance/) guide to tune your WordPress site.
 
 ## Avoid XML-RPC Attacks
-The `/xmlrpc.php` script is a potential security risk for WordPress sites. It can be used by bad actors to brute force administrative usernames and passwords. All calls made to this file must supply a plain text username and password. If a valid combination is found, a success message is returned letting the bad actor know they can log in via the standard `/wp-login.php` method.
-
-This can be surfaced by reviewing your site's `nginx-access.log` for the Live environment. If you leverage [GoAccess](/nginx-access-log/), you might see something similar to the following:
+The `/xmlrpc.php` script is a potential security risk for WordPress sites. It can be used by bad actors to brute force administrative usernames and passwords. This can be surfaced by reviewing your site's `nginx-access.log` for the Live environment. If you leverage [GoAccess](/nginx-access-log/), you might see something similar to the following:
 
 ```none
 2 - Top requests (URLs)                                  Total: 366/254431
@@ -91,7 +89,7 @@ This method has the advantage of being toggleable without deploying code, by act
   terminus connection:set <site>.<env> sftp
   ```
 
-1. Use [Terminus](/terminus/) and [WP-CLI's `scaffold plugin`](https://developer.wordpress.org/cli/commands/scaffold/plugin/) command to create  a new custom plugin, for example:
+1. Use [Terminus](/terminus/) and [WP-CLI's `scaffold plugin`](https://developer.wordpress.org/cli/commands/scaffold/plugin/) command to create  a new custom plugin.
 
   In the following example, replace `my-site` with your Pantheon site name, and `disable-xmlrpc` with your preferred name for this new plugin:
 
