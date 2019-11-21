@@ -1,15 +1,15 @@
 ---
 title: FileZilla on Pantheon
 description: Information about using the FileZilla FTP client for your Pantheon Drupal or WordPress site.
-tags: [sftpfiles]
-categories: []
+tags: [sftp, filezilla]
+categories: [develop]
 ---
 
 [FileZilla](https://FileZilla-project.org/) is a free open source FTP client that is available for Windows, Mac OS X, and Linux.
 
 ## Getting Started
 
-Make sure you have your SFTP credentials on hand, you will need this later to connect to Pantheon using FileZilla. See [how to find the SFTP credentials](/sftp#sftp-connection-information) for your site.
+Make sure you have your [Pantheon SFTP credentials](/sftp#sftp-connection-information) on hand; you will need this later to connect to Pantheon using FileZilla. 
 
 ## Download FileZilla
 
@@ -20,6 +20,8 @@ If you do not have FileZilla installed, [download the latest version](https://Fi
 Open FileZilla  and launch the Site Manager by clicking the first icon in the menu bar, or by going to the **File Menu > Site Manager** option. From the Site Manager screen, click the **New Site** button.
 
 Enter your SFTP connection details:
+
+For **Host**, enter the host string from your Pantheon environment's **Connect With SFTP** dialog box.
 
 ![Adding a new site to the Site Manager](../images/filezilla-new-site.png)
 
@@ -35,17 +37,21 @@ Under the **Advanced** Tab, leave the Remote Directory blank.
 
 Select from one of the following **Logon Type:** options in the General tab:
 
- - For **SSH Key-Based** authentication set the **Logon Type:** dropdown to "Key file". In the **Key file:** box enter the path to or browse and select your private SSH key (usually named `id_rsa`) associated with the public key loaded into your User Dashboard.
+- For **SSH Key-Based** authentication set the **Logon Type:** dropdown to "Key file". In the **Key file:** box enter the path to or browse and select your private SSH key (usually named `id_rsa`) associated with the public key loaded into your User Dashboard.
 
-    <Alert title="Note" type="info">
+  <Accordion title="Working With Hidden Directories" id="hidden-dirs" icon="info-sign">
 
-    The "Browse..." button may not show hidden files or directories, which can make it difficult to navigate to your `.ssh` directory. If you cannot navigate to your `.ssh` folder you can enter the full path to the file in the **Key file:** box.
+  The "Browse..." button may not show hidden files or directories, which can make it difficult to navigate to your `.ssh` directory. If you cannot navigate to your `.ssh` folder you can enter the full path to the file in the **Key file:** box.
 
-    On MacOS, you can make hidden files and folders visible in the Open File window with the command **⌘ CMD + ⇧ SHIFT + . (period)** .
+  On MacOS, you can make hidden files and folders visible in the Open File window with the command **⌘ CMD + ⇧ SHIFT + . (period)** .
 
-    </Alert>
+  </Accordion>
 
- - For **Password-Based** authentication set the **Logon Type:** dropdown to "Normal" and then enter your Pantheon account email address and your password. You can also select the "Ask for password" type if you don't want to save the password and instead be prompted for it every time you can connect.
+- For **Password-Based** authentication:
+
+  1. Set the **Logon Type:** dropdown to "Normal"
+  1. For **User** enter the Pantheon environment account name from your Pantheon environment's [Connect With SFTP](/sftp#sftp-connection-information) dialog box.
+  1. For **Password**, enter your dashboard password. You can also select the "Ask for password" type if you don't want to save the password and instead be prompted for it every time you can connect.
 
 ### Connection Prompt
 
@@ -92,7 +98,7 @@ dig +short appserver.live.120330a1-xxxxxxxxxxxxxxxxx.drush.
 ```
 
 ### Uploading to the Files Directory
-FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files`, which is a symlink to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/winscp) (Windows).
+FileZilla does not correctly upload files when the target directory on Pantheon is `files`. We recommend setting the target directory to `code/sites/default/files` (for Drupal 7) or `code/web/sites/default/files` (for Drupal 8), which are symlinks to `files` on Pantheon. If you experience issues using FileZilla, try the task using an alternate program such as [Transmit](https://panic.com/transmit/) (Mac OS) or [WinSCP](/winscp) (Windows).
 
 ### nodename nor servname provided, or not known
 The following error is caused by an invalid hostname, most often the result of a typo:
