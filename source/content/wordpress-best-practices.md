@@ -73,7 +73,7 @@ This method is more performant than disabling via a plugin since this won't invo
 
 Add the following configuration to your [`pantheon.yml`](/pantheon-yml/) file:
 
-  ```yml
+  ```yml:title=pantheon.yml
   protected_web_paths:
     - /xmlrpc.php
   ```
@@ -97,9 +97,9 @@ This method has the advantage of being toggleable without deploying code, by act
   terminus wp my-site.dev -- scaffold plugin disable-xmlrpc
   ```
 
-1. Add the following lines to the main PHP plugin file, for example `wp-content/plugins/disable-xmlrpc/disable-xmlrpc.php`:
+1. Add the following lines to the main PHP plugin file:
 
-  ```php
+  ```php:title=wp-content/plugins/disable-xmlrpc/disable-xmlrpc.php
   # Disable /xmlrpc.php
   add_filter('xmlrpc_methods', function () {
     return [];
