@@ -170,7 +170,7 @@ module.exports = {
             resolve: "gatsby-remark-external-links",
             options: {
               target: null,
-              rel: "nofollow noopener noreferrer external",
+              rel: "nofollow noopener external",
             },
           },
           `gatsby-remark-heading-slug`,
