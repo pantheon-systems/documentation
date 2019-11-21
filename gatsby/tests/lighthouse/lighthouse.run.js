@@ -25,7 +25,7 @@ const launchChromeAndRunLighthouse = (
       extends: 'lighthouse:default',
       settings: {
         output: ['html'],
-        emulatedFormFactor: 'desktop',
+        emulatedFormFactor: 'mobile',
         skipAudits: ['is-crawlable'],
         throttling: {
           // Using a "broadband" connection type
