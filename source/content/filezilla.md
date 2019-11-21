@@ -37,20 +37,21 @@ Under the **Advanced** Tab, leave the Remote Directory blank.
 
 Select from one of the following **Logon Type:** options in the General tab:
 
- - For **SSH Key-Based** authentication set the **Logon Type:** dropdown to "Key file". In the **Key file:** box enter the path to or browse and select your private SSH key (usually named `id_rsa`) associated with the public key loaded into your User Dashboard.
+- For **SSH Key-Based** authentication set the **Logon Type:** dropdown to "Key file". In the **Key file:** box enter the path to or browse and select your private SSH key (usually named `id_rsa`) associated with the public key loaded into your User Dashboard.
 
-   <Accordion title="Working With Hidden Directories" id="hidden-dirs" icon="info-sign"> 
+  <Accordion title="Working With Hidden Directories" id="hidden-dirs" icon="info-sign">
 
-    The "Browse..." button may not show hidden files or directories, which can make it difficult to navigate to your `.ssh` directory. If you cannot navigate to your `.ssh` folder you can enter the full path to the file in the **Key file:** box.
+  The "Browse..." button may not show hidden files or directories, which can make it difficult to navigate to your `.ssh` directory. If you cannot navigate to your `.ssh` folder you can enter the full path to the file in the **Key file:** box.
 
-    On MacOS, you can make hidden files and folders visible in the Open File window with the command **⌘ CMD + ⇧ SHIFT + . (period)** .
+  On MacOS, you can make hidden files and folders visible in the Open File window with the command **⌘ CMD + ⇧ SHIFT + . (period)** .
 
-   </Accordion>
+  </Accordion>
 
- - For **Password-Based** authentication:
- 1. Set the **Logon Type:** dropdown to "Normal"
- 1. For **User** enter the Pantheon environment account name from your Pantheon environment's [Connect With SFTP](/sftp#sftp-connection-information) dialog box. 
- 1. For **Password**, enter your dashboard password. You can also select the "Ask for password" type if you don't want to save the password and instead be prompted for it every time you can connect.
+- For **Password-Based** authentication:
+
+  1. Set the **Logon Type:** dropdown to "Normal"
+  1. For **User** enter the Pantheon environment account name from your Pantheon environment's [Connect With SFTP](/sftp#sftp-connection-information) dialog box.
+  1. For **Password**, enter your dashboard password. You can also select the "Ask for password" type if you don't want to save the password and instead be prompted for it every time you can connect.
 
 ### Connection Prompt
 
