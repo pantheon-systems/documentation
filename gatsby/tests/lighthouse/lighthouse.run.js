@@ -16,6 +16,19 @@ if (!fs.existsSync(lighthouseConstants.lighthouseDataDir)) {
 const devURL = lighthouseConstants.getDevURL();
 const referenceURL = lighthouseConstants.getReferenceURL();
 
+const throttling = {
+  DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
+  DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+  mobile3G: {
+    rttMs: 150,
+    throughputKbps: 1.6 * 1024,
+    requestLatencyMs: 150 * DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
+    downloadThroughputKbps: 1.6 * 1024 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+    uploadThroughputKbps: 750 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+    cpuSlowdownMultiplier: 4,
+  },
+};
+
 const launchChromeAndRunLighthouse = (
     url,
     opts = {
