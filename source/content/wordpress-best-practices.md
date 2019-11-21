@@ -83,7 +83,7 @@ Add the following configuration to your [`pantheon.yml`](/pantheon-yml/) file:
 
 ### Disable XML-RPC via a Custom Plugin
 
-This method has the advantage of being toggleable without deploying code, by activating or deactivating a custom Plugin. The result of creating and activating this plugin is that requests to `/xmlrpc.php` will return a 405 status code.
+This method has the advantage of being toggleable without deploying code, by activating or deactivating a custom plugin. The result of creating and activating this plugin is that exploitable XMLRPC methods will no longer be available via POST requests.
 
 1. [Set the connection mode to SFTP](/sftp) for the Dev or target Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
@@ -103,7 +103,9 @@ This method has the advantage of being toggleable without deploying code, by act
 
   ```php
   # Disable /xmlrpc.php
-  add_filter('xmlrpc_enabled', '__return_false');
+  add_filter('xmlrpc_methods', function () {
+    return [];
+  }, PHP_INT_MAX);
   ```
 
 1. Activate the new plugin from within the WordPress admin dashboard, or via Terminus and WP-CLI:
