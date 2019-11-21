@@ -106,7 +106,7 @@ This method has the advantage of being toggleable without deploying code, by act
   add_filter('xmlrpc_enabled', '__return_false');
   ```
 
-1. Active the new plugin from within the WordPress admin dashboard, or via Terminus and WP-CLI:
+1. Activate the new plugin from within the WordPress admin dashboard, or via Terminus and WP-CLI:
 
   ```bash{pomptUser: user}
   terminus wp my-site.dev -- plugin activate disable-xmlrpc
