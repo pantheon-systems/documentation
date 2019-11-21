@@ -16,6 +16,8 @@ if (!fs.existsSync(lighthouseConstants.lighthouseDataDir)) {
 const devURL = lighthouseConstants.getDevURL();
 const referenceURL = lighthouseConstants.getReferenceURL();
 
+const DEVTOOLS_RTT_ADJUSTMENT_FACTOR = 3.75;
+const DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR = 0.9;
 const throttling = {
   DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
   DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
