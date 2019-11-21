@@ -27,11 +27,7 @@ const launchChromeAndRunLighthouse = (
         output: ['html'],
         emulatedFormFactor: 'mobile',
         skipAudits: ['is-crawlable'],
-        throttling: {
-          rttMs: 150,
-          throughputKbps: 1 * 1024,
-          cpuSlowdownMultiplier: 2,
-        },
+        throttling: throttling.mobile3G,
         onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo']
       },
     }
