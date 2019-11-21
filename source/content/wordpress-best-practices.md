@@ -67,9 +67,11 @@ Hits Vis.     %   Bandwidth Avg. T.S. Cum. T.S. Max. T.S. Data
 262    79 0.10%  993.71 KiB   2.32  s  10.14 mn  59.03  s /wp-login.php
 ```
 
-Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronger and more secure method for interacting with WordPress via some external service.
+Pantheon recommends disabling XML-RPC, given the WordPress Rest API is a stronger and more secure method for interacting with WordPress via external services.
 
 ### Disable XML-RPC via Pantheon.yml
+
+This method is more performant than disabling via a plugin since this won't involve bootstrapping WordPress. The result of this configuration is that requests to `/xmlrpc.php` will return a 403 status code.
 
 Add the following configuration to your [`pantheon.yml`](/pantheon-yml/) file:
 
@@ -78,21 +80,26 @@ Add the following configuration to your [`pantheon.yml`](/pantheon-yml/) file:
     - /xmlrpc.php
   ```
 
-This method is more performant than disabling via PHP since this won't involve bootstrapping the application.
 
-### Disable XML-RPC via PHP
+### Disable XML-RPC via a Custom Plugin
 
-This method has the advantage of being toggleable without deploying code, by activating or deactivating a custom Plugin.
+This method has the advantage of being toggleable without deploying code, by activating or deactivating a custom Plugin. The result of creating and activating this plugin is that requests to `/xmlrpc.php` will return a 405 status code.
 
-1. Create a custom plugin. You can start a new plugin with WP-CLI through [Terminus](/terminus/).
+1. [Set the connection mode to SFTP](/sftp) for the Dev or target Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
-  In the following example, replace `my-site` with your Pantheon site name, and `disable-xml` with your preferred name for the new plugin:
+ ```
+ terminus connection:set <site>.<env> sftp
+ ```
+
+1. Use [Terminus](/terminus/) and [WP-CLI's `scaffold plugin`](https://developer.wordpress.org/cli/commands/scaffold/plugin/) command to create  a new custom plugin, for example:
+
+  In the following example, replace `my-site` with your Pantheon site name, and `disable-xmlrpc` with your preferred name for this new plugin:
 
   ```bash{pomptUser: user}
-  terminus wp my-site.dev -- scaffold plugin disable-xml
+  terminus wp my-site.dev -- scaffold plugin disable-xmlrpc
   ```
 
-1. Add the following lines your new plugin:
+1. Add the following lines to the main PHP plugin file, for example `wp-content/plugins/disable-xmlrpc/disable-xmlrpc.php`:
 
   ```php
   # Disable /xmlrpc.php
