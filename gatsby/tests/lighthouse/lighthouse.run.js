@@ -16,6 +16,21 @@ if (!fs.existsSync(lighthouseConstants.lighthouseDataDir)) {
 const devURL = lighthouseConstants.getDevURL();
 const referenceURL = lighthouseConstants.getReferenceURL();
 
+const DEVTOOLS_RTT_ADJUSTMENT_FACTOR = 3.75;
+const DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR = 0.9;
+const throttling = {
+  DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
+  DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+  mobile3G: {
+    rttMs: 150,
+    throughputKbps: 1.6 * 1024,
+    requestLatencyMs: 150 * DEVTOOLS_RTT_ADJUSTMENT_FACTOR,
+    downloadThroughputKbps: 1.6 * 1024 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+    uploadThroughputKbps: 750 * DEVTOOLS_THROUGHPUT_ADJUSTMENT_FACTOR,
+    cpuSlowdownMultiplier: 4,
+  },
+};
+
 const launchChromeAndRunLighthouse = (
     url,
     opts = {
@@ -25,15 +40,9 @@ const launchChromeAndRunLighthouse = (
       extends: 'lighthouse:default',
       settings: {
         output: ['html'],
-        emulatedFormFactor: 'desktop',
+        emulatedFormFactor: 'mobile',
         skipAudits: ['is-crawlable'],
-        throttling: {
-          // Using a "broadband" connection type
-          // Corresponds to "Dense 4G 25th percentile" in https://docs.google.com/document/d/1Ft1Bnq9-t4jK5egLSOc28IL4TvR-Tt0se_1faTA4KTY/edit#heading=h.bb7nfy2x9e5v
-          rttMs: 40,
-          throughputKbps: 10 * 1024,
-          cpuSlowdownMultiplier: 1,
-        },
+        throttling: throttling.mobile3G,
         onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo']
       },
     }
