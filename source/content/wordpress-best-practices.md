@@ -53,7 +53,7 @@ This article provides suggestions, tips, and best practices for developing and m
 * Follow our [Frontend Performance](/guides/frontend-performance/) guide to tune your WordPress site.
 
 ## Avoid XML-RPC Attacks
-The `/xmlrpc.php` script is a potential security risk for WordPress sites. It can be used by bad actors to brute force administrative usernames and passwords. This can be surfaced by reviewing your site's `nginx-access.log` for the Live environment. If you leverage [GoAccess](/nginx-access-log/), you might see something similar to the following:
+The `/xmlrpc.php` script is a potential security risk for WordPress sites. It can be used by bad actors to brute force administrative usernames and passwords, for example. This can be surfaced by reviewing your site's `nginx-access.log` for the Live environment. If you leverage [GoAccess](/nginx-access-log/), you might see something similar to the following:
 
 ```none
 2 - Top requests (URLs)                                  Total: 366/254431
