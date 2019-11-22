@@ -1,7 +1,7 @@
 ---
 title: Introduction to Custom Upstreams
 description: Learn how to use Custom Upstreams to free up developer time.
-tags: [tools, workflow]
+tags: [tools, workflow, upstreams]
 categories: [platform]
 ---
 
@@ -9,7 +9,7 @@ categories: [platform]
 
 If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the [Partner Program Page](https://pantheon.io/agencies/partner-program) to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 
-<Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs">
+<Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs" campaign="docs-agility">
 
 How mature is your web team? Take our Web Team Agility Assessment to find out.
 

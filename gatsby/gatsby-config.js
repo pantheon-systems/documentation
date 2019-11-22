@@ -28,6 +28,14 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     {
+      resolve: "gatsby-plugin-segment-js",
+      options: {
+        prodKey: process.env.SEGMENT_KEY,
+        devKey: process.env.SEGMENT_KEY,
+        trackPage: false,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/../source/partials`,
@@ -119,14 +127,6 @@ module.exports = {
               cacheKey: 'gatsby-remark-github-v1',
               token: process.env.GITHUB_API,
             }
-          },
-          {
-            resolve: "gatsby-plugin-segment-js",
-            options: {
-              prodKey: process.env.SEGMENT_KEY,
-              devKey: process.env.SEGMENT_KEY,
-              trackPage: true,
-            },
           },
           {
             resolve: "gatsby-remark-embed-video",
