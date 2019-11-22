@@ -914,6 +914,18 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <hr />
 
+### [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
+
+**Issue**: The plugin asks for SFTP credentials after installation.
+
+**Solution**: This plugin is checking the `FS_METHOD` value. Add the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
+
+```php
+define('FS_METHOD', 'direct');
+```
+
+<hr />
+
 
 ## WordPress Themes
 
