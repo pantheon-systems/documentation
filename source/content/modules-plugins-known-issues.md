@@ -452,6 +452,7 @@ For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and
 **Issue**: The Constant Contact Forms plugin adds dependencies using Composer and provides a .gitignore file which prevents these dependencies from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
 
 **Solution**: Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
+
 <hr />
 
 ### [Disable REST API and Require JWT / OAuth Authentication](https://wordpress.org/plugins/disable-rest-api-and-require-jwt-oauth-authentication/)
@@ -480,6 +481,21 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
     $allowed_endpoints = apply_filters( 'reqauth/allowed_endpoints', $allowed_endpoints );
 
 ```
+
+<hr />
+
+### [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
+
+**Issue:** Divi Themes Visual Page Builder may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root.
+
+```
+.../data/Utils.php:758  ET_Core_Data_Utils::WPFS():
+[ERROR]: Unable to write to filesystem. Please ensure that the web server process has write access to the WordPress directory.
+```
+
+**Solution:**  The most reliable solution is to access the Divi Theme Options > Builder > Advanced section and disable Static CSS File Generation.
+
+Alternatively, you can symlink the main `et-cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/assuming-write-access/). Then, you will also need to SFTP into each environment (as well as new environments in the future) and create the `wp-content/uploads/et-cache` directory and any necessary subfolders. (This appears to be `et-cache/global/en-US`, possibly others.)
 
 <hr />
 
