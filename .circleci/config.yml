@@ -189,8 +189,6 @@ workflows:
               only: master
           requires:
             - test
-            - lighthouse
-
 
 # Below is CircleCI 1.0 Config Syntax that is still supported on CircleCI 2.0
 experimental:
