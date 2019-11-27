@@ -134,6 +134,8 @@ jobs:
   deploy:
     docker:
       - image: circleci/php:7.2-cli-node
+        environment:
+          BUILD_PATH: /home/circleci/build
     working_directory: ~/build
     steps:
       - queue/until_front_of_line:
