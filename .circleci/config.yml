@@ -144,9 +144,7 @@ jobs:
           at: .
       - run:
           name: Import Functions and Variables
-          command: |
-            source .circleci/scripts/set-env.sh
-            source .circleci/scripts/functions.sh
+          command: .circleci/scripts/set-env.sh && source $BASH_ENV
       - run:
           name: Install rsync
           command: sudo apt-get udpate && sudo apt-get install -y rsync
