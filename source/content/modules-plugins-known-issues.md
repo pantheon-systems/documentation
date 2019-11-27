@@ -359,6 +359,7 @@ Plugins and Themes with issues resolved by this include:
 - [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
 - [Visual Composer: Website Builder](https://visualcomposer.io/)
 - [WPBakery: Page Builder](https://wpbakery.com/)
+- [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
 **Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
@@ -910,6 +911,13 @@ if (defined( "PANTHEON_BINDING" )) {
 
 <hr />
 
+### [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
+
+**Issue**: The plugin asks for SFTP credentials after installation.
+
+**Solution**: [Define `FS_METHOD`](#define-fs_method)
+
+<hr />
 
 ## WordPress Themes
 
