@@ -1,8 +1,8 @@
 ---
 title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
-tags: [local]
-categories: []
+tags: [local development, sftp, Lando, workflow]
+categories: [develop]
 ---
 
 <Alert title="Pantheon Localdev" type="success" icon="star">
@@ -115,6 +115,10 @@ terminus backup:create <site>.<env> --element=files
 terminus backup:get <site>.<env> --element=files
 ```
 This will create and get a backup of the site's files.
+
+Move the resulting backup to the proper directory on your local file system:
+    - **Drupal**: `sites/default/files`
+    - **WordPress**: `wp-content/uploads`
 
 ### Via SFTP CLI
 
