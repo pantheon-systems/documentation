@@ -3,6 +3,8 @@ set -e
 
 # This script is designed to run as part of the CircleCI build process. To run it locally, you must first have $GITHUB_TOKEN defined in your session, and run it from the project root.
 
+cd $BUILD_PATH
+
 echo "Generate a new Terminus commands.json file"
 terminus list --format=json > source/data/commands.json
 

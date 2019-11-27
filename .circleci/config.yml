@@ -4,10 +4,15 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/php:7.2-cli-node-browsers
+      - image: circleci/php:7.2-cli-node
+        environment:
+          BUILD_PATH: /home/circleci/build
     working_directory: ~/build
     steps:
       - checkout
+      - run:
+          name: Import Functions and Variables
+          command: .circleci/scripts/set-env.sh && source $BASH_ENV
       - restore_cache:
           keys:
             - v2.5-always-
@@ -15,28 +20,23 @@ jobs:
       - run:
           name: Install Terminus
           command: |
-            php scripts/terminus-installer.php
+            php .circleci/scripts/terminus-installer.php
       - run:
           name: Install Gatsby
           command: |
-            cd ~/build/gatsby
+            cd gatsby
             npm ci
       - run:
-          name: Import Tokens
-          command: |
-            cd ~/build/gatsby
-            touch .env.production
-            echo "GITHUB_API=$GITHUB_TOKEN" >> .env.production
-            echo "SEGMENT_KEY=$SEGMENT_KEY" >> .env.production
+          name: Import Gatsby Tokens
+          command: gatsby-tokens
       - run:
           name: Update Terminus data files
           command: |
-            cd ~/build
-            bash ./scripts/update-terminus-commands.sh
+            bash .circleci/scripts/update-terminus-commands.sh
       - run:
           name: Gatsby Build
           command: |
-            cd ~/build/gatsby
+            cd gatsby
             ./node_modules/gatsby/node_modules/.bin/gatsby build --prefix-paths
       - run:
           name: Remove empty directories
@@ -44,8 +44,7 @@ jobs:
             find ~/build/gatsby/public -type d -empty -delete
       - run:
           name: Check for merge conflicts
-          command: |
-            scripts/merge_conflicts.sh
+          command: .circleci/scripts/merge_conflicts.sh
       - persist_to_workspace:
           root: .
           paths:
@@ -54,14 +53,19 @@ jobs:
   test:
     docker:
       - image: circleci/php:7.2-cli-node-browsers
+        environment:
+          BUILD_PATH: /home/circleci/build
     working_directory: ~/build
     steps:
       - attach_workspace:
           at: .
       - run:
+          name: Import Functions and Variables
+          command: .circleci/scripts/set-env.sh && source $BASH_ENV
+      - run:
           name: Serve Gatsby
           command: |
-            cd ~/build/gatsby
+            cd gatsby
             ./node_modules/gatsby/node_modules/.bin/gatsby serve --prefix-paths
           background: true
       - run:
@@ -70,9 +74,7 @@ jobs:
             dockerize -wait tcp://localhost:9000
       - run:
           name: Test links
-          command: |
-            cd ~/build
-            bash ./scripts/link-checker.sh
+          command: .circleci/tests/link-checker.sh
       - save_cache:
           key: npm-v2.7-{{ checksum "gatsby/package-lock.json" }}
           paths:
@@ -86,31 +88,52 @@ jobs:
 
   preview:
     docker:
-      - image: circleci/php:7.2-cli-node-browsers
+      - image: circleci/php:7.2-cli-node
+        environment:
+          BUILD_PATH: /home/circleci/build
     working_directory: ~/build
     steps:
       - attach_workspace:
           at: .
       - run:
+          name: Import Functions and Variables
+          command: .circleci/scripts/set-env.sh && source $BASH_ENV
+      - run:
           name: Install rsync
-          command: |
-            sudo apt install -y rsync
+          command: sudo apt-get update && sudo apt-get install -y rsync
       - run:
           name: Install Terminus
-          command: |
-            php scripts/terminus-installer.php
+          command: php .circleci/scripts/terminus-installer.php
       - run:
          name: Deploy Multidev environment
-         command: |
-           bash ./scripts/deploy-multidev.sh
+         command: bash .circleci/scripts/deploy-multidev.sh
          no_output_timeout: 15m
       - store_artifacts:
-         path: ~/build/multidev-log.txt
+         path: multidev-log.txt
          destination: multidev-log.txt
+
+  lighthouse:
+    docker:
+      - image: circleci/php:7.2-cli-node-browsers
+        environment:
+          BUILD_PATH: /home/circleci/build
+    working_directory: ~/build/
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Import Functions and Variables
+          command: .circleci/scripts/set-env.sh && source $BASH_ENV
+      - run:
+          name: Lighthouse Audit
+          command: .circleci/tests/lighthouse/run
+      - store_artifacts:
+          path: gatsby/lighthouse_data/
+          destination: lighthouse_data/
 
   deploy:
     docker:
-      - image: circleci/php:7.2-cli-node-browsers
+      - image: circleci/php:7.2-cli-node
     working_directory: ~/build
     steps:
       - queue/until_front_of_line:
@@ -120,21 +143,24 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          name: Install rsync
+          name: Import Functions and Variables
           command: |
-            sudo apt install -y rsync
+            source .circleci/scripts/set-env.sh
+            source .circleci/scripts/functions.sh
+      - run:
+          name: Install rsync
+          command: sudo apt-get udpate && sudo apt-get install -y rsync
       - run:
           name: Install Terminus
-          command: |
-            php scripts/terminus-installer.php
+          command: php .circleci/scripts/terminus-installer.php
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              scripts/deploy-live.sh
+              .circleci/scripts/deploy-live.sh
             fi
           no_output_timeout: 15m
       - store_artifacts:
-         path: ~/build/deployment-log.txt
+         path: deployment-log.txt
          destination: deployment-log.txt
 
 workflows:
@@ -151,13 +177,18 @@ workflows:
               ignore: master
           requires:
             - build
+      - lighthouse:
+          filters:
+            branches:
+              ignore: master
+          requires:
+            - preview
       - deploy:
           filters:
             branches:
               only: master
           requires:
             - test
-
 
 # Below is CircleCI 1.0 Config Syntax that is still supported on CircleCI 2.0
 experimental:

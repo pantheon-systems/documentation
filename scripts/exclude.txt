@@ -1,5 +1,0 @@
-linkedin.com
-github.com/pantheon-systems/documentation/issues/new
-github.com/pantheon-systems/documentation/edit/master/undefined
-drupal.org/
-getfeedback.com
