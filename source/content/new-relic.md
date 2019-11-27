@@ -1,16 +1,10 @@
 ---
 title: New Relic APM Pro
-description: Learn how to enable and use New Relic performance metrics and reports for your Drupal or WordPress site.
-tags: [newrelic, addons]
+description: Learn how to enable and use New Relic performance metrics and reports for your Drupal or WordPress site on Pantheon.
+tags: [New Relic, performance, analytics]
 categories: [performance,go-live,develop]
 ---
 [New Relic APM Pro](https://newrelic.com/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
-
-<Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
-
-Get the most out of New Relic with help from the experts at Pantheon. We deliver custom workshops to help development teams master the platform and improve internal WebOps.
-
-</Enablement>
 
 ## Supported Site Plans
 All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro is available to Sandbox site plans for developmental purposes, but New Relic APM Pro will not be available going live on a Basic plan.
@@ -26,6 +20,48 @@ All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro i
 Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
 New Relic is automatically enabled for all application containers added to the site, including Multidev environments.
+
+## New Relic Access
+Go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
+
+### Who is the New Relic account associated with?
+- If the site owner is a **user**, the site owner's name and email address is used to create the New Relic account.
+- If the site owner is an **organization**, the name and email address of the organization's Pantheon user who activates New Relic is used to create the New Relic account. 
+
+- Your New Relic **password** is unique to your New Relic account. If you have forgotten or don't yet have a New Relic password, use your Pantheon account email to request a [password reset](https://login.newrelic.com/passwords/forgot). 
+
+### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
+1. From the New Relic Dashboard, click on the User Account to the right.
+2. From the Dropdown, click **Log Out**.
+3. Back on the Pantheon Site Dashboard, click the **Go to New Relic** button.
+
+### If you click the Go to New Relic button and are instead sent to a log in screen
+
+To troubleshoot this issue, try logging into the Pantheon Dashboard in an [Incognito](https://support.google.com/chrome/answer/95464) or [Private](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) window. The New Relic accounts are shared via SSO, so loading the page in a private window will force new sign-in credentials. If you can sign in this way, use the following steps to resolve access for your main browser session:
+
+1. Close all of your open New Relic tabs.
+2. Delete all of the New Relic cookies from your browser (support articles for [Chrome](https://support.google.com/chrome/answer/95647) or [Firefox](https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored#w_delete-cookies-for-a-single-site)).
+3. Reload your Pantheon Dashboard.
+4. Click the **Go to New Relic** button.
+
+### If you are prompted to Set Up New Relic
+If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic.
+
+1. Visit one of your site pages.
+2. Close the tab, wait a few minutes.
+3. Click the **Go to New Relic** button.
+
+### If you see "We're sorry, you haven't verified your email address yet."
+After activating New Relic, a confirmation email will be sent to the site owner to complete the setup process. The account will need to be verified first before members of the site can access New Relic dashboard.
+
+If the New Relic account holder, i.e. the site owner or user who activated the New Relic account for the site, did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
+
+1. On New Relic's login page, click **Forgot your password?**.
+2. Enter the email address of the site owner.
+3. Click **Send my reset link**.
+4. Open the email you will receive, click the reset link, and follow the prompts to access your account.
+
+Contact Support if you are unsure what user the New Relic account is associated with and unable to identify where the password reset email has been sent.
 
 ## Configure Ping Monitors for Availability
 New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring check sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails. To configure this service:
@@ -106,48 +142,6 @@ if (function_exists('newrelic_ignore_transaction')) {
 ```
 
 <Partial file="monitor-alerts.md" />
-
-
-## New Relic Access
-
-Your first visit to New Relic must be via the **Go to New Relic** button. Once you have successfully accessed the New Relic Dashboard, you may use the environment links to go directly to their corresponding New Relic page.
-
-### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
-1. From the New Relic Dashboard, click on the User Account to the right.
-2. From the Dropdown, click **Log Out**.
-3. Back on the Pantheon Site Dashboard, click the **Go to New Relic** button.
-
-### If you click the Go to New Relic button and are instead sent to a log in screen
-
-To troubleshoot this issue, try logging into the Pantheon Dashboard in an [Incognito](https://support.google.com/chrome/answer/95464) or [Private](https://support.mozilla.org/en-US/kb/private-browsing-use-firefox-without-history) window. The New Relic accounts are shared via SSO, so loading the page in a private window will force new sign-in credentials. If you can sign in this way, use the following steps to resolve access for your main browser session:
-
-1. Close all of your open New Relic tabs.
-2. Delete all of the New Relic cookies from your browser (support articles for [Chrome](https://support.google.com/chrome/answer/95647) or [Firefox](https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored#w_delete-cookies-for-a-single-site)).
-3. Reload your Pantheon Dashboard.
-4. Click the **Go to New Relic** button.
-
-### If you are prompted to Set Up New Relic
-If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic.
-
-1. Visit one of your site pages.
-2. Close the tab, wait a few minutes.
-3. Click the **Go to New Relic** button.
-
-### Who is the New Relic account associated with?
-- If the site owner is a user, the site owner's name and email address is used to create the New Relic account.
-- If the site owner is an organization, the name and email address of the Pantheon user who activates New Relic is used to create the New Relic account. This user must be a member of the organization.
-
-### If you see "We're sorry, you haven't verified your email address yet."
-After activating New Relic, a confirmation email will be sent to the site owner to complete the setup process. The account will need to be verified first before members of the site can access New Relic dashboard.
-
-If the New Relic account holder, i.e. the site owner or user who activated the New Relic account for the site, did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
-
-1. On New Relic's login page, click **Forgot your password?**.
-2. Enter the email address of the site owner.
-3. Click **Send my reset link**.
-4. Open the email you will receive, click the reset link, and follow the prompts to access your account.
-
-Contact Support if you are unsure what user the New Relic account is associated with and unable to identify where the password reset email has been sent.
 
 
 ## Troubleshooting
