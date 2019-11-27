@@ -382,8 +382,9 @@ You can adjust your local settings to use Google's DNS (8.8.8.8 and 8.8.4.4) ins
 
 Long-running Drush commands that produce no output will cause the SSH gateway to timeout. Pantheon's timeouts for SSH based commands are outlined in our [documentation on timeouts](https://pantheon.io/docs/timeouts/). To avoid a timeout related to a lack of output, be sure your commands return output to the terminal session in under 10 minutes.
 
-For example, using the `--feedback` flag.
-```bash
+For example, using the `--feedback` flag:
+
+```bash{promptUser: user}
 drush migate-import migration --feedback="1000 lines processed"
 ```
 
