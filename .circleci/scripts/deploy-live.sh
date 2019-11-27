@@ -52,7 +52,7 @@ for env in ${existing_terminus_envs[@]}; do
   fi
 done
 
-getMergedBranch "merged-branches-clean.txt"
+getMergedBranchMultidevName "merged-branches-clean.txt"
 
 # Delete merged branches from GH Repo
   for branch in ${merged_branch_array[@]}; do
