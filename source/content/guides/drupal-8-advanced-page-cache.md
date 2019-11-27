@@ -274,61 +274,61 @@ Now we're going to add a custom module that uses a hook to clear the cache tag f
 
 4. Create a new file named `custom_cache_tags.module` and add the following:
 
-  ```php
-  <?php
-  /**
-  * @file
-  * Contains custom_cache_tags.module.
-  */
+    ```php
+    <?php
+    /**
+    * @file
+    * Contains custom_cache_tags.module.
+    */
 
-  use Drupal\Core\Cache\Cache;
-  use Drupal\node\NodeInterface;
+    use Drupal\Core\Cache\Cache;
+    use Drupal\node\NodeInterface;
 
-  /**
-  * Implements hook_node_insert().
-  */
-  function custom_cache_tags_node_insert(NodeInterface $node) {
-    custom_cache_tags_invalidate_all_terms_referenced_by_node($node);
-  }
+    /**
+    * Implements hook_node_insert().
+    */
+    function custom_cache_tags_node_insert(NodeInterface $node) {
+      custom_cache_tags_invalidate_all_terms_referenced_by_node($node);
+    }
 
-  /**
-   * Invalidate the cache for all taxonomy terms referenced by a node.
-   *
-   *
-   */
-  function custom_cache_tags_invalidate_all_terms_referenced_by_node(NodeInterface $node) {
+    /**
+    * Invalidate the cache for all taxonomy terms referenced by a node.
+    *
+    *
+    */
+    function custom_cache_tags_invalidate_all_terms_referenced_by_node(NodeInterface $node) {
 
-    // This code is copied and adapted from taxonomy_build_node_index().
-    // Only act upon published nodes where this revision is the default
-    // Because only such nodes would appear in the taxonomy listing.
-    if ($node->isPublished() && $node->isDefaultRevision()) {
-      // Collect a unique list of all the term IDs from all node fields.
-      $tid_all = [];
-      $entity_reference_class = 'Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem';
-      foreach ($node->getFieldDefinitions() as $field) {
-        $field_name = $field->getName();
-        $class = $field->getItemDefinition()->getClass();
-        $is_entity_reference_class = ($class === $entity_reference_class) || is_subclass_of($class, $entity_reference_class);
-        if ($is_entity_reference_class && $field->getSetting('target_type') == 'taxonomy_term') {
-          foreach ($node->getTranslationLanguages() as $language) {
-            foreach ($node->getTranslation($language->getId())->$field_name as $item) {
-              if (!$item->isEmpty()) {
-                $tid_all[$item->target_id] = $item->target_id;
+      // This code is copied and adapted from taxonomy_build_node_index().
+      // Only act upon published nodes where this revision is the default
+      // Because only such nodes would appear in the taxonomy listing.
+      if ($node->isPublished() && $node->isDefaultRevision()) {
+        // Collect a unique list of all the term IDs from all node fields.
+        $tid_all = [];
+        $entity_reference_class = 'Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem';
+        foreach ($node->getFieldDefinitions() as $field) {
+          $field_name = $field->getName();
+          $class = $field->getItemDefinition()->getClass();
+          $is_entity_reference_class = ($class === $entity_reference_class) || is_subclass_of($class, $entity_reference_class);
+          if ($is_entity_reference_class && $field->getSetting('target_type') == 'taxonomy_term') {
+            foreach ($node->getTranslationLanguages() as $language) {
+              foreach ($node->getTranslation($language->getId())->$field_name as $item) {
+                if (!$item->isEmpty()) {
+                  $tid_all[$item->target_id] = $item->target_id;
+                }
               }
             }
           }
         }
-      }
-      // Insert index entries for all the node's terms.
-      if (!empty($tid_all)) {
-        foreach ($tid_all as $tid) {
-          $cache_tag = 'taxonomy_term:' . $tid;
-          Cache::invalidateTags(array($cache_tag));
+        // Insert index entries for all the node's terms.
+        if (!empty($tid_all)) {
+          foreach ($tid_all as $tid) {
+            $cache_tag = 'taxonomy_term:' . $tid;
+            Cache::invalidateTags(array($cache_tag));
+          }
         }
       }
     }
-  }
-  ```
+    ```
 
   This code clears all references to every taxonomy term referenced by a new published node.
 
