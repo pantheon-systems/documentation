@@ -6,7 +6,7 @@
 auth-terminus
 
 # Change to working directory
-cd $CIRCLE_WORKING_DIRECTORY
+cd $BUILD_PATH
 
 # Deploy modified files to production
 touch ./deployment-log.txt
