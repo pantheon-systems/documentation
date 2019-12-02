@@ -180,7 +180,7 @@ When you imported your database, all of the URLs remained active at the previous
 **Pro Tip**: Include the `--dry-run` flag to get a preview of the changes without destructively transforming the database and use `--verbose` to receive additional details in the output (optional).
 
 ```bash{promptUser: user}
-terminus wp <site>.<env> -- search-replace example.com dev-example-network.pantheonsite.io --url=example.com --network --all-tables
+terminus wp <site>.<env> -- search-replace example.com dev-example-network.pantheonsite.io --url=example.com --all-tables
 ```
 
 Visit the Development environment and confirm your site was imported correctly!
