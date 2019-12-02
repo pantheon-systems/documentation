@@ -5,6 +5,7 @@ tags: [integration]
 categories: [wordpress, solr,develop]
 contributors: [cityofoaksdesign]
 ---
+
 [Apache Solr](/solr) is a system for indexing and searching site content. All plans except for a Basic plan can use Pantheon Solr. <Partial file="solr-version.md" />
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
@@ -22,12 +23,10 @@ From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Serv
 
 This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
 
-
 ## Solr Search for WordPress
 Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/).  This plugin replaces the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) within WordPress while preserving the familiar integration methods within themes and widgets.
 
 This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-versions/) for more information on switching PHP versions.
-
 
 ## Install and Configure Plugin
 1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard, or with [Terminus](/terminus/):
@@ -65,6 +64,7 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-
  ```
 
  For WP Site Networks, you will need to index all your subsites individually:
+
  ```bash
  terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
  ```
