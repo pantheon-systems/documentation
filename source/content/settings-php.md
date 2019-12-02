@@ -208,6 +208,7 @@ ini_set('ioncube.loader.encoded_paths', '/');
 *(More information can be found in our [PHP 7.1 & IonCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
 
 ## Troubleshooting
+
 ### Request to a Remote API Does Not Return Expected Response
 
 The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.

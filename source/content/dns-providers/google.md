@@ -23,6 +23,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [Google Domains account](https://domains.google.com/registrar) in a new tab before you continue.
 
 ## Configure DNS Records on Google Domains
+
 ### A Record
 1. Select the **Configure DNS** icon within the Google Domains interface:
 

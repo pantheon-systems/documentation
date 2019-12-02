@@ -18,6 +18,7 @@ image: multisite
 getfeedbackform: default
 ---
 ## WP-CLI Tips and Tricks
+
 ### Managing Site Networks
 The `wp site *` class of WP-CLI commands ([full documentation](https://developer.wordpress.org/cli/commands/site/)) for managing the sites installed on your network. Here are some helpful ones:
 
@@ -34,6 +35,7 @@ WordPress sometimes includes database schema changes in releases. When you updat
 Use `wp super-admin list` to list current super admins, and `wp super-admin add` or `wp super-admin remove` to add or remove them, respectively.
 
 ## Troubleshooting
+
 ### Error: "Error establishing a database connection"
 You may see this error when moving a WordPress Site Network database between environments. The most common cause is either using `wp search-replace` incorrectly (or having forgotten to use it at all).
 

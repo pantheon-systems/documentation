@@ -78,6 +78,7 @@ Let's say I use [Composer](/composer/) to manage my WordPress site's plugin and 
 ```
 
 ## Deploy GitHub to Pantheon with DeployBot
+
 ### Connect Your GitHub Repository
 1. After creating a new DeployBot account or logging in to your existing DeployBot account, click **Connect a repository**.
 2. Select the desired repository using the the drop-down menu. If this is your first time connecting, you'll need to authorize access to your repositories.

@@ -129,6 +129,7 @@ While not a REST API service by itself, you can create a JSON view using the [Vi
 </TabList>
 
 ## Frequently Asked Questions
+
 ### Can I use other frameworks or distributions?
 You can use [custom upstreams](/custom-upstream/), [make your own build](/guides/build-tools/) or [install distributions](/start-state/#public-distributions) that may serve as a backend API. For example, [Contenta](http://www.contentacms.org/) (Drupal 8 API distribution) can be used on the platform.
 

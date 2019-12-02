@@ -289,6 +289,7 @@ redis> DBSIZE
 ```
 
 ## Troubleshooting
+
 ### Cannot Activate the Redis Plugin for WordPress
 WP Redis is a drop-in plugin that should only be loaded using the installation methods above. No activation is required.
 

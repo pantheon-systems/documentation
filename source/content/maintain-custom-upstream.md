@@ -158,6 +158,7 @@ An Upstream cannot be deleted if there are sites using it.
   ![Delete Upstream Button](../images/dashboard/delete-upstream.png)
 
 ## Tips and Tricks
+
 ### Use the Pantheon Workflow
 To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow/) to push up to your Test and Live environments. Checkout [our guide](/guides/drupal8-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
@@ -169,6 +170,7 @@ Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set d
 
 
 ## Troubleshoot
+
 ### Resolve Conflicts
 #### Automatically Resolve from the Command Line
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).

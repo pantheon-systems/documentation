@@ -98,6 +98,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 1. In the old Site Dashboard, [remove the existing card as a payment method for the site](/site-billing/#do-not-bill-this-site-to-a-card). If you're a contract customer, you can skip this step.
 
 ## Frequently Asked Questions
+
 ### Why is this process needed?
 If you remove domains from the old site and add them to the new site, HTTPS certificates will not be immediately available for the new site. This can cause security warnings for client browsers, and potentially affect processes that require a secure connection (like commerce transactions).
 

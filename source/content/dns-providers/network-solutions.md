@@ -30,6 +30,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [Network Solutions account](https://www.networksolutions.com) in a new tab before you continue.
 
 ## Configure DNS Records on Network Solutions
+
 ### A Record
 1. Navigate to **Account Manager** > **My Domain Names**
 2. Select the domain you want to point to Pantheon, then click **Manage**.

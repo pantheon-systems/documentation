@@ -21,6 +21,7 @@ Be sure that you have a:
 - [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Configure DNS Records on 1&1
+
 ### A/AAAA Records
 
 1. Click **Domain Center** from the Domains panel.

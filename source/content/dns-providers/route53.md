@@ -23,6 +23,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [Amazon Route 53 account](https://console.aws.amazon.com/route53/) in a new tab before you continue.
 
 ## Configure DNS Records on Route 53
+
 ### A Record
 
 1. Click **Hosted Zones** and select the domain you wish to configure.

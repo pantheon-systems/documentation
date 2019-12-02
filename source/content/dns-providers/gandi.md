@@ -24,6 +24,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [Gandi account](https://id.gandi.net/en/login) in a new tab before you continue.
 
 ## Configure DNS Records on Gandi
+
 ### A Record
 1. Navigate to the domain's management page and click **Edit the zone**.
 2. Click the **Add** button and select **A** from the type dropdown menu.

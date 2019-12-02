@@ -18,6 +18,7 @@ Imagine two visitors go to `example.com`. The first visitor exits from the home 
 
 _Visits_ and _visitors_ have different meanings. If one of the visitors returns again the next day, it would be counted as 3 Visits, but there'd be only 2 visitors.
 ## Frequently Asked Questions
+
 ### How often is data collected?
 Data is updated daily, shortly after midnight UTC, with data for the previous day.
 

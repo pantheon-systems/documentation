@@ -23,6 +23,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [DNS Made Easy account](https://cp.dnsmadeeasy.com/) in a new tab before you continue.
 
 ## Configure DNS Records on DNS Made Easy
+
 ### A Record
 1. Click **DNS** in the menu bar and select the domain you wish to configure.
 2. Within the **A** table, click <span class="glyphicon glyphicon-plus"></span> to add a new record.

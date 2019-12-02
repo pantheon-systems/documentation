@@ -170,6 +170,7 @@ For an organization-wide solution, there are many different [Drupal modules for 
 </TabList>
 
 ## Pantheon Platform TFA
+
 ### Log in with Google
 The Pantheon Dashboard offers social login with Google, which can be configured to use [Google TFA](https://www.google.com/landing/2step/):
 

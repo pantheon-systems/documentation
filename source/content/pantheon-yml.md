@@ -15,6 +15,7 @@ Set up existing scripts and write your own with help from our experts. Pantheon 
 For reference implementations see [example.pantheon.yml](https://github.com/pantheon-systems/quicksilver-examples/blob/master/example.pantheon.yml) and [Quicksilver Example Scripts](https://github.com/pantheon-systems/quicksilver-examples).
 
 ## Advanced Site Configuration
+
 ### Include api_version
 Define the `api_version` property in order for `pantheon.yml` to be valid:
 

@@ -111,6 +111,7 @@ Knowing this, you can choose to configure your code to listen for this header an
 Note that too many `set-cookie` headers in the response can also create issues.
 
 ## FAQ
+
 ### Why isn't my cookie being saved/retrieved?
 It's important to note that for the response to be cached by Pantheon's edge, the cookie name must match the `STYXKEY[a-zA-Z0-9_-]+` convention.
 

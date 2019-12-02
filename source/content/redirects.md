@@ -7,6 +7,7 @@ categories: [go-live,develop]
 Configure redirects within `settings.php` (Drupal) or `wp-config.php` (WordPress), adjusting placeholder values within snippets as needed (e.g., `example.com`).
 
 ## Considerations
+
 ### PHP vs htaccess
 Pantheon does not support managing redirects in `.htaccess` files, since they are ignored by [NGINX](https://www.nginx.com/resources/wiki/#) for reduced resource consumption and increased efficiency. This configuration is standard across all Pantheon sites, and modifications to the `nginx.conf` file are not supported.
 

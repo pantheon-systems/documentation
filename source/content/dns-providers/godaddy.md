@@ -23,6 +23,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [GoDaddy account](https://godaddy.com/) in a new tab before you continue.
 
 ## Configure DNS Records on GoDaddy
+
 ### A Record
 
 ![Example A record](../../images/godaddy-dns-a-record.png)

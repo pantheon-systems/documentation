@@ -15,6 +15,7 @@ Be sure that you have a:
 - [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Configure DNS Records on eNom
+
 ### A Record
 1. Navigate to **Domains** > **My Domains**.
 2. Click on the domain you want to point to Pantheon.

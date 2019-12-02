@@ -48,6 +48,7 @@ Here you can select or change your plan and payment method. For more information
 If you need assistance, our expert Customer Support team is here to help make building and managing your sites easier. You can [contact support](/support) from your Dashboard.
 
 ## Environment Specific Options
+
 ### Connection Information
 Here you can find the [SSH clone URL](/git/), [Database Connection Information](/mysql-access/), and [SFTP](/sftp/) connection information.
 

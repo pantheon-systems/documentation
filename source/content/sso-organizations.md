@@ -58,6 +58,7 @@ You will need to enter the following:
 4. **Date/time to enable**: A time you'd like Pantheon to enable SSO, when you can test and ensure everything works.
 
 ## Troubleshooting
+
 ### Cannot Authenticate with Username/Password When Creating a New Machine Token
 If you are a member of a SAML-enabled organization, and the password field does not disappear after you enter your username and password, you'll need to log out of your active session, log back in, and try again. This can occur if you have two accounts with different email addresses and have not logged out of an active session.
 

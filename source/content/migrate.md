@@ -252,6 +252,7 @@ Go the to files directory of your existing site and check if the site archive wa
 
 
 ## Frequently Asked Questions (FAQs)
+
 ### How do I clone an existing Pantheon site?
 You can make a copy of a WordPress site on Pantheon by following the [standard migration procedure](#migrate-existing-sites) described above. The procedure does not deviate for WordPress sites already hosted on Pantheon and is preferred since it's built into the Site Dashboard.
 
