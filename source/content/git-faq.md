@@ -302,7 +302,7 @@ Merge the remote changes (e.g. 'git pull') before pushing again. See the
 
 ### I have a Git conflict; can you fix it for me?
 
-No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/git-faq/#how-do-i-import-a-site-with-existing-git-history%3F), [Git issues performing core updates](/git-faq/#can-i-use-.gitignore-on-pantheon%3F), and [resetting your code to a specific commit](/git-faq/#how-do-i-revert-or-undo-changes%3F).
+No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](#how-do-i-import-a-site-with-existing-git-history%3F), [Git issues performing core updates](#can-i-use-.gitignore-on-pantheon%3F), and [resetting your code to a specific commit](#how-do-i-revert-or-undo-changes%3F).
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 
