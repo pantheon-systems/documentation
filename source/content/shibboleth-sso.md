@@ -20,11 +20,9 @@ This is only for advanced users working on integrating a Shibboleth single sign-
 
 </Alert>
 
-
 <TabList>
 
 <Tab title="Download Method" id="tab-1-id" active={true}>
-
 
 <Alert title="Version Number" type="export">
 
@@ -34,7 +32,7 @@ In the code examples below, replace `17.x` with the downloaded version of Simple
 
 1. Download [SimpleSAMLphp version 1.17.x](https://simplesamlphp.org/) and add it to your git repository as `/private/simplesamlphp-1.17.x`.
 
-  ```bash
+  ```bash{promptUser: user}
   wget https://simplesamlphp.org/download?latest -O simplesamlphp-latest.tar.gz
   mkdir private
   tar -zxvf simplesamlphp-latest.tar.gz -C private
@@ -44,7 +42,7 @@ In the code examples below, replace `17.x` with the downloaded version of Simple
 
 2. Add a symlink to your repository from `/simplesaml` to `/private/simplesamlphp-1.17.x/www`:
 
-  ```bash
+  ```bash{promptUser: user}
   ln -s ./private/simplesamlphp-1.17.x/www ./simplesaml
   git add simplesaml
   git commit -am "Adding SimpleSAML symlink"
@@ -62,19 +60,19 @@ Commands below require a [nested docroot](/nested-docroot/) structure and should
 
 1. Add the SimpleSAMLphp library:
 
- ```bash
+ ```bash{promptUser: user}
  composer require simplesamlphp/simplesamlphp
  ```
 
 2. Add a symlink from `web/simplesaml` to `vendor/simplesamlphp/simplesamlphp/www`:
 
- ```bash
+ ```bash{promptUser: user}
  ln -s ../vendor/simplesamlphp/simplesamlphp/www ./web/simplesaml
  ```
 
 3. Create your site-specific config file:
 
- ```bash
+ ```bash{promptUser: user}
  mkdir private
  cp vendor/simplesamlphp/simplesamlphp/config-templates/config.php private/simplesaml-config.php
  ```
@@ -83,13 +81,13 @@ Commands below require a [nested docroot](/nested-docroot/) structure and should
 
 5. Add a symlink from SimpleSAMLphp's default config file over to your customized config, stored outside the vendor directory:
 
- ```bash
+ ```bash{promptUser: user}
  ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php
  ```
 
 6. Add this symlink as a post-update script to `composer.json`. This allows the symlink to be recreated if we update or re-install SimpleSAMLphp using Composer:
 
- ```json
+ ```json:title=composer.json
    "scripts": {
        "post-install-cmd": [
            "ln -s ../../../../private/simplesaml-config.php ./vendor/simplesamlphp/simplesamlphp/config/config.php"
@@ -106,12 +104,11 @@ Commands below require a [nested docroot](/nested-docroot/) structure and should
 </TabList>
 
 ## Configure SimpleSAMLphp
-
 Set up your SimpleSAMLphp `config.php` as follows:
 
 1. Enable local sessions to ensure that SimpleSAMLphp can keep a session when used in standalone mode:
 
-  ```php
+  ```php:title=config.php
   if (!ini_get('session.save_handler')) {
       ini_set('session.save_handler', 'file');
   }
@@ -119,7 +116,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 
 2. Load necessary environmental data. For a Drupal site, you can access `$_SERVER['PRESSFLOW_SETTINGS']`:
 
-  ```php
+  ```php:title=config.php
   $ps = json_decode($_SERVER['PRESSFLOW_SETTINGS'], TRUE);
   $host = $_SERVER['HTTP_HOST'];
   $db = $ps['databases']['default']['default'];
@@ -127,7 +124,7 @@ Set up your SimpleSAMLphp `config.php` as follows:
 
   For a WordPress site, you can access the Pantheon environment variables:
 
-  ```php
+  ```php:title=config.php
   $host = $_SERVER['HTTP_HOST'];
   $db = array(
       'host'      => $_ENV['DB_HOST'],
@@ -140,20 +137,21 @@ Set up your SimpleSAMLphp `config.php` as follows:
 
 3. With the basic variables defined, set up base config:
 
-  ```php
+  ```php:title=config.php
   $config = array (
        'baseurlpath' => 'https://'. $host .':443/simplesaml/', // SAML should always connect via 443
        'certdir' => 'cert/',
        'logging.handler' => 'errorlog',
        'datadir' => 'data/',
        'tempdir' => $_ENV['HOME'] . '/tmp/simplesaml',
-       Your $config array continues for a while...
-       until we get to the "store.type" value, where we put in DB config...
+       //Your $config array continues for a while...
+       //until we get to the "store.type" value, where we put in DB config...
        'store.type' => 'sql',
        'store.sql.dsn' => 'mysql:host='. $db['host'] .';port='. $db['port'] .';dbname='. $db['database'],
        'store.sql.username' => $db['username'],
        'store.sql.password' => $db['password'],
   ```
+
   For persistent and centralised logging, a custom [`SimpleSAML/Logger/LoggingHandlerInterface`](https://github.com/simplesamlphp/simplesamlphp/blob/master/lib/SimpleSAML/Logger.php) implementation is required.
 
   <Alert title="Note" type="info">
@@ -172,17 +170,18 @@ Set up your SimpleSAMLphp `config.php` as follows:
 You can now visit the subdirectory `/simplesaml` on your development site and complete your metadata configuration.
 
 ## Drupal Configuration
-
 Add the following lines to `settings.php` so that the Drupal module can locate SimpleSAMLphp:
 
 For Drupal 7 sites:
-```php
+
+```php:title=settings.php
 # Provide universal absolute path to the installation.
 $conf['simplesamlphp_auth_installdir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.17.x';
 ```
 
 For Drupal 8 sites:
-```php
+
+```php:title=settings.php
 # Provide universal absolute path to the installation.
 $settings['simplesamlphp_dir'] = $_ENV['HOME'] .'/code/private/simplesamlphp-1.17.x';
 ```
@@ -192,7 +191,7 @@ You can now enable and configure the module. If SAML authentication fails becaus
 ## WordPress Multisite Issues
 WordPress Multisite users have reported a possible solution to enable SSO on their site networks; modify `inc/class-wp-saml-auth.php` to include:
 
-```php
+```php:title=class-wp-saml-auth.php
 //$redirect_to = filter_input( INPUT_GET, 'redirect_to', FILTER_SANITIZE_URL );
 //$redirect_to = $redirect_to ? : $_SERVER['REQUEST_URI'];
 // added to resolve multisite SSO issues
@@ -201,6 +200,7 @@ $this->provider->login( $redirect_to );
 ```
 
 ## Troubleshooting
+
 ### Varnish Not Working/Cookie Being Set for Anonymous Users
 
 The current version of the SimpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) looks to be the best solution until the fix is accepted into an official project release.
