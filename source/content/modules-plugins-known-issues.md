@@ -355,12 +355,12 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 Plugins and Themes with issues resolved by this include:
 
+- [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
 - [Event Espresso](https://eventespresso.com/)
 - [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
 - [Visual Composer: Website Builder](https://visualcomposer.io/)
 - [WPBakery: Page Builder](https://wpbakery.com/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
-- [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
 
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
 **Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
@@ -503,7 +503,7 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
 
 ### [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
 
-**Issue:** Divi Themes Visual Page Builder may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root.
+**Issue:** Divi Themes Visual Page Builder may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root:
 
 ```php
 .../data/Utils.php:758  ET_Core_Data_Utils::WPFS():
