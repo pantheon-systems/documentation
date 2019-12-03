@@ -183,6 +183,8 @@ When you imported your database, all of the URLs remained active at the previous
 terminus wp <site>.<env> -- search-replace example.com dev-example-network.pantheonsite.io --url=example.com --all-tables
 ```
 
+Note that we replaced the usual `--network` flag with `--all-tables`. After the migration is complete, use `--network` for subsequent commands.
+
 Visit the Development environment and confirm your site was imported correctly!
 
 When you re-import the database with current content (prior to going live on Pantheon) you will need to run `wp search-replace` again.
