@@ -2,9 +2,6 @@
 // Node CLI for Lighthouse https://www.npmjs.com/package/lighthouse#using-the-node-cli
 const lighthouse = require("lighthouse");
 
-// Configuration defined in lighthouse-config.js
-const config = require("./lighthouse-config.js")
-
 // Launch Chrome from node
 const chromeLauncher = require("chrome-launcher");
 
@@ -24,8 +21,24 @@ const devURL = lighthouseConstants.getDevURL();
 const referenceURL = lighthouseConstants.getReferenceURL();
 
 // Define Process of launching Chrome and running Lighthouse
-const launchChromeAndRunLighthouse = ( url, opts = {}, config ) =>
-  chromeLauncher.launch().then(chrome => {
+const launchChromeAndRunLighthouse = (
+    url,
+    opts = {
+      //chromeFlags: ['--headless'],
+    },
+    config = {
+      extends: 'lighthouse:default',
+      settings: {
+        output: ['html'],
+        emulatedFormFactor: 'mobile',
+        skipAudits: ['is-crawlable'],
+        onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo']
+      },
+    },
+  ) =>
+  chromeLauncher.launch({
+    chromeFlags: opts.chromeFlags
+  }).then(chrome => {
     opts.port = chrome.port;
     return lighthouse(url, opts, config).then(results =>
       chrome.kill().then(() => results)
