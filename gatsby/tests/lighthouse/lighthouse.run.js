@@ -35,17 +35,6 @@ const launchChromeAndRunLighthouse = (
         onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo']
       },
     },
-    passes: [
-      {
-        passName: `firstPass`,
-      },
-      {
-        passName: `secondPass`,
-      },
-      {
-        passName: `thirdPass`,
-      },
-    ]
   ) =>
   chromeLauncher.launch({
     chromeFlags: opts.chromeFlags
