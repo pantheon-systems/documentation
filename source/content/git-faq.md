@@ -166,9 +166,6 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
    git push origin master
    ```
 
-#### Creating a Multidev Failed - Specified Key Was Too Long
-Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/myisam-to-innodb/).
-
 ## General Git Questions
 ### Does Pantheon support Git submodules?
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
