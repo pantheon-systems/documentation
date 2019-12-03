@@ -2,9 +2,6 @@
 // Node CLI for Lighthouse https://www.npmjs.com/package/lighthouse#using-the-node-cli
 const lighthouse = require("lighthouse");
 
-// Configuration defined in lighthouse-config.js
-//const config = require("./lighthouse-config.js")
-
 // Launch Chrome from node
 const chromeLauncher = require("chrome-launcher");
 
@@ -35,7 +32,6 @@ const launchChromeAndRunLighthouse = (
         output: ['html'],
         emulatedFormFactor: 'mobile',
         skipAudits: ['is-crawlable'],
-        throttling: throttling.mobile3G,
         onlyCategories: ['performance', 'accessibility', 'best-practices', 'seo']
       },
     }
