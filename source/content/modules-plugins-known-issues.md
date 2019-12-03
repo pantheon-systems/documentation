@@ -344,6 +344,24 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 
 ## WordPress Plugins
 
+### Define FS_METHOD
+There are several plugins and themes that have issues on Pantheon due to the way they access files. By defining the `FS_METHOD` as `direct` in `wp-config.php` above the line `/* That's all, stop editing! Happy Pressing. */`, we can easily avoid these issues:
+
+```php:title=wp-config.php
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    define('FS_METHOD', 'direct');
+}
+```
+
+Plugins and Themes with issues resolved by this include:
+
+- [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
+- [Event Espresso](https://eventespresso.com/)
+- [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
+- [Visual Composer: Website Builder](https://visualcomposer.io/)
+- [WPBakery: Page Builder](https://wpbakery.com/)
+- [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
+
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
 **Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
 
@@ -483,15 +501,30 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
 
 <hr />
 
+### [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
+
+**Issue:** Divi Themes Visual Page Builder may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root:
+
+```php
+.../data/Utils.php:758  ET_Core_Data_Utils::WPFS():
+[ERROR]: Unable to write to filesystem. Please ensure that the web server process has write access to the WordPress directory.
+```
+
+**Solution 1:**  The most reliable solution is to access the Divi Theme Options > Builder > Advanced section and disable Static CSS File Generation.
+
+**Solution 2:**
+
+1. Symlink the main `et-cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/assuming-write-access/).
+1. SFTP into each environment (as well as new environments in the future) and create the directory `wp-content/uploads/et-cache` and any necessary subfolders (`et-cache/global/en-US`, for example).
+1. [Define `FS_METHOD`](#define-fs_method).
+
+<hr />
+
 ### [Event Espresso](https://eventespresso.com/)
 
 **Issue:** Event Espresso shows the error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
 
-**Solution**: This plugin is checking the `FS_METHOD` value. Add the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-define('FS_METHOD', 'direct');
-```
+**Solution**: [Define `FS_METHOD`](#define-fs_method).
 
 <hr />
 
@@ -664,11 +697,7 @@ This workaround may potentially break again with the next plugin update, and you
 ### [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
 **Issue:** The sitemap URL linked by the plugin produces a `500 Internal Server Error` on Test and Live environments. This results in a PHP error: `class not found WP_Filesystem_Direct`. See more [details about the issue](https://premium.wpmudev.org/forums/topic/smartcrawl-pro-class-wp_filesystem_direct-not-found).
 
-**Solution:** The plugin fails to implement a direct `FS_METHOD` in Test and Live environments. Add the following to `wp-config.php`, before the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-define('FS_METHOD', 'direct');
-```
+**Solution:** [Define `FS_METHOD`](#define-fs_method).
 
 Alternative plugins that have an XML sitemap feature that works well on the platform include:
 
@@ -736,12 +765,7 @@ Brizy
 
 **Solution 1: New sites, without existing Test and Live environments**: If this plugin is installed and activated on a new site _before_ the Test and Live environments are created, it will properly transfer all assets and database settings to the additional environments.
 
-**Solution 2: Sites with existing Test and Live environments**: To activate the plugin on sites with existing Test and Live environments, add the following code block to `wp-config.php`:
-```
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    define('FS_METHOD', 'direct');
-}
-```
+**Solution 2: Sites with existing Test and Live environments**: To activate the plugin on sites with existing Test and Live environments, [define `FS_METHOD`](#define-fs_method).
 
 <hr />
 
@@ -832,16 +856,9 @@ if (defined( "PANTHEON_BINDING" )) {
 ### [WPBakery: Page Builder](https://wpbakery.com/)
 **Issue**: The Custom CSS and Design Options pages of the plugin (`?page=vc-custom_css`, `?page=vc-color`) try to create new files when saved. Due to problems related to incorrect `FS_METHOD`, files are not created or saved in the expected folder, `wp-content/uploads/js_composer`.
 
-**Solution**: In `wp-config.php`, place this block of code:
-
-```
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    define('FS_METHOD', 'direct');
-}
-```
+**Solution**: [Define `FS_METHOD`](#define-fs_method).
 
 <hr />
-
 
 ### [WP All Import / Export](http://www.wpallimport.com/)
 
@@ -914,6 +931,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <hr />
 
+### [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
+
+**Issue**: The plugin asks for SFTP credentials after installation.
+
+**Solution**: [Define `FS_METHOD`](#define-fs_method).
+
+<hr />
 
 ## WordPress Themes
 
