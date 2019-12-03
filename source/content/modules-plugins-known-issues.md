@@ -921,7 +921,46 @@ if (defined( "PANTHEON_BINDING" )) {
 
 <hr />
 
+### [WPML - Unable To Generate .mo Files]
+**Issue:** 
 
+Upon activating WPML String Translation plugin you'll see this error.
+
+> WPML String Translation is attempting to write .mo files with translations to folder:
+
+> /srv/bindings/*******/code/wp-content/languages
+
+> This folder appears to be not writable. This is blocking translation for strings from appearing on the site.
+> To resolve this, please contact your hosting company and request that they make that folder writable.
+> For more details, see WPML's documentation on troubleshooting .mo files generation.
+
+**Solution #1:**
+
+**Step 1**
+
+Add define
+
+`( 'WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages' );` 
+
+after 
+
+`/** Define appropriate location for default tmp directory on Pantheon */
+define('WP_TEMP_DIR', $_SERVER['HOME'] .'/tmp');`
+
+to the wp-config.php file
+
+**Step 2**
+
+SFTP to the environment and create the **languages** directory inside /files
+
+**Solution #2:**
+
+Create a symlink for wp-content/languages -> wp-content/uploads/languages
+
+From the site root directory
+`ln -s ./wp-content/uploads/languages ./wp-content/languages`
+
+<hr />
 
 ### [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
 
