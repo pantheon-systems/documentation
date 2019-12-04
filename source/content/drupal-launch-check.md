@@ -36,6 +36,13 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 
 ## Frequently Asked Questions
 
+### Temporary Directory Deprecated Configuration Warning
+The Drupal 8.8.0 release on December 4, 2019 includes a change that surfaces a warning:
+```
+"You are using a deprecated configuration for the temporary file path. Remove the configuration and add the following line to settings.php. $settings['file_temp_path'] = /srv/bindings/.../tmp"
+```
+You can safely ignore this warning. A subsequent release will include a change to fix this warning. 
+
 ### Trusted Host Setting for Drupal 8
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/settings-php/#trusted-host-setting).
 
