@@ -28,16 +28,6 @@ Make sure that you have:
     > sftp> cd logs  
     > sftp> ls -l  
     > -rw-r--r--    1 16193    16193      153146 Dec 15 22:34 newrelic.log  
-    > -rw-r--r--    1 16193    16193    55123460 Dec 15 22:59 nginx-access.log  
-    > -rw-r--r--    1 16193    16193     3479688 Dec 09 08:07 nginx-access.log-20141209.gz  
-    > -rw-r--r--    1 16193    16193     5524355 Dec 10 08:07 nginx-access.log-20141210.gz  
-    > -rw-r--r--    1 16193    16193     5602638 Dec 11 08:06 nginx-access.log-20141211.gz  
-    > -rw-r--r--    1 16193    16193     6033991 Dec 12 08:07 nginx-access.log-20141212.gz  
-    > -rw-r--r--    1 16193    16193     5793730 Dec 13 08:07 nginx-access.log-20141213.gz  
-    > -rw-r--r--    1 16193    16193     4688934 Dec 14 08:07 nginx-access.log-20141214.gz  
-    > -rw-r--r--    1 16193    16193     5867636 Dec 15 08:07 nginx-access.log-20141215.gz  
-    > -rw-r--r--    1 16193    16193        3499 Dec 15 22:46 nginx-error.log  
-    > -rw-r--r--    1 16193    16193     1126685 Dec 14 08:07 nginx-error.log-20141214  
     > -rw-r--r--    1 16193    16193        5017 Dec 15 11:52 php-error.log  
     > -rw-------    1 16193    16193      642388 Dec 15 22:55 php-fpm-error.log  
     > -rw-------    1 16193    16193     1067358 Dec 12 20:07 php-fpm-error.log-20141212  
@@ -54,7 +44,7 @@ Make sure that you have:
 
 ## Analyze the PHP Slow Log
 
-Look for custom modules or theme files (template.php file, &ast;.tpl.php files, etc.). This trace has both a custom Feature module (/sites/all/modules/features/tdm_community.module, field_get_items() function) and a .tpl file (/sites/all/themes/themename/templates/page.tpl.php, render() function).
+Look for custom modules or theme files (template.php file, &ast;.tpl.php files, etc.). This trace has both a custom Feature module (/sites/all/modules/features/tdm_community.module, field_get_items() function) and a .tpl file (/sites/all/themes/themename/templates/page.tpl.php, render() function). You may also see the location of the script be `/code/index.php`.
 
 ```php
 > 08-Dec-2014 19:04:01]  [pool www] pid 47289  
