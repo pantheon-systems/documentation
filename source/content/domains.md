@@ -52,13 +52,11 @@ If you don't already own a domain name, register one with a third-party provider
 
 Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/https/).
 
-
 <Partial file="tables/custom-domains-limit.md" />
-
 
 <Alert title="Note" type="info">
 
-Add all domains (example.com and www.example.com are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/guides/launch/). Automatic resolution of domains and wildcards are not supported.
+Add all domains (`example.com` and `www.example.com` are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/guides/launch/). Automatic resolution of domains and wildcards are not supported.
 
 </Alert>
 
@@ -66,7 +64,9 @@ Add all domains (example.com and www.example.com are different domains!) you wan
 
 <Partial file="secure-only-tlds.md" />
 
-1. From your site dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
+1. Log in as an [Admin, Team Member, or Privileged User](/change-management#roles-and-permissions).
+
+1. From the Site Dashboard, for the environment you want the domain to point to (usually Live), click on the <em class="fa fa-home"></em>**Domains / HTTPS** tab.
 
 1. If no domains have been added yet, click **Connect Live Domain**:
 
