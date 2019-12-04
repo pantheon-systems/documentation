@@ -39,7 +39,7 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 ### Temporary Directory Deprecated Configuration Warning
 The Drupal 8.8.0 release on December 4, 2019 includes a change that surfaces a warning:
 ```
-"You are using a deprecated configuration for the temporary file path. Remove the configuration and add the following line to settings.php. $settings['file_temp_path'] = /srv/bindings/.../tmp"
+You are using deprecated configuration for the temporary files path. Remove the configuration and add the following to settings.php. $settings["file_temp_path"] = "/srv/bindings/.../tmp"
 ```
 You can safely ignore this warning. A subsequent release will include a change to fix this warning. 
 
