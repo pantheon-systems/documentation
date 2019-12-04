@@ -15,7 +15,7 @@ We do not recommend directly restoring a Live environment from a backup; instead
 
 If you need to restore your site to before the latest deployment, we recommend [undoing your last commit or deploy](/undo-commits) **before** attempting a site restore.
 
-If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/rsync-and-sftp)
+If you need to restore your database or file uploads, we recommend using the [Dashboard Import tool](/restore-environment-backup/#restore-database-and-files), using the URL from the appropriate backup. If your backup files are larger than 500MB, you will need to need to save them locally and [manually import the database](/migrate-manual/#add-your-database) or [sftp/rsync your file uploads](/rsync-and-sftp).
 
 ## Before you Begin the Restore Process
 It is important that you and your team know that this is a **destructive** process that will **wipe** your database and files, and restore them from the backup. It will also restore the codebase to the state the environment was in when backed up.

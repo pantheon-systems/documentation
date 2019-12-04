@@ -2,7 +2,7 @@
 title: Dynamic Outgoing IP Addresses
 description: Understand how outgoing requests are made for WordPress and Drupal sites on Pantheon.
 tags: [infrastructure]
-categories: []
+categories: [platform]
 ---
 Outgoing requests sent by Drupal and WordPress applications facilitate tasks between your site and external services, such as authentication and payment gateways.
 
@@ -26,6 +26,9 @@ We do not provide IP ranges for outgoing requests for application containers and
 Instead, we suggest that you use an alternate form of verification like API keys or similar, if possible. We also offer an Elite level product called a Secure Integration that will provide variables to each of your environments in order to establish a direct route to your sites.
 
 For more information, see [Secure Integration](/secure-integration/).
+
+## Outbound Mail Service
+See [Email on Pantheon](/email/) for information on working with dynamic IPs using SMTP and REST API configurations for outbound email service.
 
 ## Compatible Payment Gateways
 The following payment gateways are known to work in cloud-based infrastructures such as ours:

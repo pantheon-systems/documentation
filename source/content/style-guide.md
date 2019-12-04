@@ -56,7 +56,8 @@ Of particular note, any documentation that uses Terminus should reference it in 
 
 <Example>
 
-## Before You Begin
+<h2 class="toc-ignore">Before You Begin</h2>
+
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.

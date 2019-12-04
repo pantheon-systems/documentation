@@ -192,7 +192,7 @@ Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a hig
 
 ### How do I revert or undo changes?
 
-See [Undo Git commits like overwriting Drupal core](/undo-commits).
+See [Undo Git commits like overwriting Drupal core](/undo-commits/).
 
 ### How do I apply a patch from Drupal.org on Pantheon?
 
@@ -205,7 +205,7 @@ From your local clone, run the `git apply` command as per Drupal.org, commit you
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](https://www.drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
-For detailed instructions, see [Manually Migrate Sites to Pantheon](/migrate-manual).
+For detailed instructions, see [Manually Migrate Sites to Pantheon](/migrate-manual/).
 
 ### Can I use Git with SFTP mode?
 
@@ -302,7 +302,7 @@ Merge the remote changes (e.g. 'git pull') before pushing again. See the
 
 ### I have a Git conflict; can you fix it for me?
 
-No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](/git-faq/#how-do-i-import-a-site-with-existing-git-history%3F), [Git issues performing core updates](/git-faq/#can-i-use-.gitignore-on-pantheon%3F), and [resetting your code to a specific commit](/git-faq/#how-do-i-revert-or-undo-changes%3F).
+No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](#how-do-i-import-a-site-with-existing-git-history), [Git issues performing core updates](#can-i-use-.gitignore-on-pantheon), and [resetting your code to a specific commit](#how-do-i-revert-or-undo-changes).
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 
@@ -348,4 +348,13 @@ git log --graph
 
 ### Can I use .gitignore on Pantheon?
 
-Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. The `.gitignore` files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local .gitignore to allow caches and push the changed .gitignore to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.
+Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. The `.gitignore` files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local `.gitignore` to allow caches and push the changed `.gitignore` to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.
+
+### Troubleshoot Commit Issues
+
+If you encounter an error when trying to commit, check the following:
+
+- Commit Size: If the commit is too large, it will be rejected.
+  - Check the commit for non-codebase files that have been added to the site.
+  - Does the commit contain a full overwrite of the entire site? Rather than overwrite the site in place, we suggest migrating to a new site to avoid downtime and potential conflicts. See [Relaunch Existing Pantheon Site](/relaunch/) for more information.
+- Confirm that the file isn't listed in `.gitignore`

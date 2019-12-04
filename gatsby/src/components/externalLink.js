@@ -4,7 +4,7 @@ const ExternalLink = ({ text, link }) => {
   return (
     <a
       target="_blank"
-      rel="nofollow noopener noreferrer external"
+      rel="nofollow noopener external"
       href={link}
       title={text}
       className="external"

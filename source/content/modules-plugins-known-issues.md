@@ -11,6 +11,7 @@ We do not prevent you from installing and using these plugins/modules. However, 
 **Plugin & Module Maintainers:** If your work is listed here, please [reach out to us](https://github.com/pantheon-systems/documentation/issues/new?title=Modules%20and%20Plugins%20with%20Known%20Issues%20Doc%20Update%20&body=Re%3A%20%5BModules%20and%20Plugins%20with%20Known%20Issues%5D(https%3A%2F%2Fpantheon.io/docs/modules-plugins-known-issues/)%0A%0APriority%20(Low%E2%80%9A%20Medium%E2%80%9A%20High)%3A%0A%0A%23%23%20Issue%20Description%3A%0A%0A%23%23%20Suggested%20Resolution%20&labels=fix%20content). We're happy to help provide information that can lead to conflict resolutions between your code and the platform. If your work is already updated but still listed here, let us know so we can remove it, or [submit a pull request](https://github.com/pantheon-systems/documentation/edit/master/source/_docs/modules-plugins-known-issues.md).
 
 ## Drupal Modules
+
 <hr />
 
 ### [APC - Alternative PHP Cache](https://www.drupal.org/project/apc)
@@ -254,9 +255,11 @@ This will move the temporary upload destination from the individual server mount
 
 **Solution:** Override the default arg_separator.output value in `settings.php` by adding the following line:
 
-```
+```php:title=settings.php
 ini_set('arg_separator.output', '&');
 ```
+
+<br />
 
 **Issue 2:** On non-live environments, reCAPTCHA returns the error, "ERROR for site owner: Invalid domain for site key."
 
@@ -264,9 +267,8 @@ ini_set('arg_separator.output', '&');
 
 **Solution 2:** Disable the reCAPTCHA on non-live environments. In Drupal 7, you can set the configuration key to be `NULL` in your `settings.php` file as follows:
 
-```
-// Deactivate reCAPTCHA if we're not running on the live site - it doesn't work if the domain name is invalid. Message "ERROR for site owner: Invalid domain for site key" is displayed.
-// This is needed because otherwise it's impossible to log in or submit any protected form.
+```php:title=settings.php
+// Deactivate reCAPTCHA not running on the live site.
 if (defined('PANTHEON_ENVIRONMENT') && $_ENV['PANTHEON_ENVIRONMENT'] != 'live') {
   $conf['recaptcha_site_key'] = NULL;
 }
@@ -341,6 +343,24 @@ Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](htt
 
 
 ## WordPress Plugins
+
+### Define FS_METHOD
+There are several plugins and themes that have issues on Pantheon due to the way they access files. By defining the `FS_METHOD` as `direct` in `wp-config.php` above the line `/* That's all, stop editing! Happy Pressing. */`, we can easily avoid these issues:
+
+```php:title=wp-config.php
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+    define('FS_METHOD', 'direct');
+}
+```
+
+Plugins and Themes with issues resolved by this include:
+
+- [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
+- [Event Espresso](https://eventespresso.com/)
+- [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
+- [Visual Composer: Website Builder](https://visualcomposer.io/)
+- [WPBakery: Page Builder](https://wpbakery.com/)
+- [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
 **Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
@@ -481,15 +501,30 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
 
 <hr />
 
+### [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
+
+**Issue:** Divi Themes Visual Page Builder may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root:
+
+```php
+.../data/Utils.php:758  ET_Core_Data_Utils::WPFS():
+[ERROR]: Unable to write to filesystem. Please ensure that the web server process has write access to the WordPress directory.
+```
+
+**Solution 1:**  The most reliable solution is to access the Divi Theme Options > Builder > Advanced section and disable Static CSS File Generation.
+
+**Solution 2:**
+
+1. Symlink the main `et-cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/assuming-write-access/).
+1. SFTP into each environment (as well as new environments in the future) and create the directory `wp-content/uploads/et-cache` and any necessary subfolders (`et-cache/global/en-US`, for example).
+1. [Define `FS_METHOD`](#define-fs_method).
+
+<hr />
+
 ### [Event Espresso](https://eventespresso.com/)
 
 **Issue:** Event Espresso shows the error `PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file on the server could not be completed due to a lack of sufficient credentials.`
 
-**Solution**: This plugin is checking the `FS_METHOD` value. Add the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-define('FS_METHOD', 'direct');
-```
+**Solution**: [Define `FS_METHOD`](#define-fs_method).
 
 <hr />
 
@@ -662,11 +697,7 @@ This workaround may potentially break again with the next plugin update, and you
 ### [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
 **Issue:** The sitemap URL linked by the plugin produces a `500 Internal Server Error` on Test and Live environments. This results in a PHP error: `class not found WP_Filesystem_Direct`. See more [details about the issue](https://premium.wpmudev.org/forums/topic/smartcrawl-pro-class-wp_filesystem_direct-not-found).
 
-**Solution:** The plugin fails to implement a direct `FS_METHOD` in Test and Live environments. Add the following to `wp-config.php`, before the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-define('FS_METHOD', 'direct');
-```
+**Solution:** [Define `FS_METHOD`](#define-fs_method).
 
 Alternative plugins that have an XML sitemap feature that works well on the platform include:
 
@@ -734,12 +765,7 @@ Brizy
 
 **Solution 1: New sites, without existing Test and Live environments**: If this plugin is installed and activated on a new site _before_ the Test and Live environments are created, it will properly transfer all assets and database settings to the additional environments.
 
-**Solution 2: Sites with existing Test and Live environments**: To activate the plugin on sites with existing Test and Live environments, add the following code block to `wp-config.php`:
-```
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    define('FS_METHOD', 'direct');
-}
-```
+**Solution 2: Sites with existing Test and Live environments**: To activate the plugin on sites with existing Test and Live environments, [define `FS_METHOD`](#define-fs_method).
 
 <hr />
 
@@ -830,16 +856,9 @@ if (defined( "PANTHEON_BINDING" )) {
 ### [WPBakery: Page Builder](https://wpbakery.com/)
 **Issue**: The Custom CSS and Design Options pages of the plugin (`?page=vc-custom_css`, `?page=vc-color`) try to create new files when saved. Due to problems related to incorrect `FS_METHOD`, files are not created or saved in the expected folder, `wp-content/uploads/js_composer`.
 
-**Solution**: In `wp-config.php`, place this block of code:
-
-```
-if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-    define('FS_METHOD', 'direct');
-}
-```
+**Solution**: [Define `FS_METHOD`](#define-fs_method).
 
 <hr />
-
 
 ### [WP All Import / Export](http://www.wpallimport.com/)
 
@@ -912,17 +931,23 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 <hr />
 
+### [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
+
+**Issue**: The plugin asks for SFTP credentials after installation.
+
+**Solution**: [Define `FS_METHOD`](#define-fs_method).
+
+<hr />
 
 ## WordPress Themes
 
-### [Jupiter](https://themes.artbees.net/pages/jupiter-wordpress-theme-create-wordpress-websites/)
+### Self-Updating Themes
+Several WordPress themes, including [Jupiter](https://themes.artbees.net/pages/jupiter-wordpress-theme-create-wordpress-websites/), [Nanosoft](https://themeforest.net/item/nanosoft-wp-theme-for-it-solutions-and-services-company/22064051), and [Uncode](https://undsgn.com/uncode/), present a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
 
-**Issue**: This theme presents a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
+The form can be disabled by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
 
-**Solution**: The form can be disabled by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-/** Changes to disable Jupiter theme FTP form */
+```php:title=wp-config.php
+/** Disable theme FTP form */
 define('FS_METHOD', 'direct');
 define('FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
 define('FS_CHMOD_FILE', ( 0755 & ~ umask() ) );
@@ -934,24 +959,7 @@ define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
 <hr />
 
 ### [Uncode](https://undsgn.com/uncode/)
-
-**Issue 1**: This theme presents a form requesting FTP credentials in order to automatically update its components. This will appear on Dev, Test and Live environments and can be hidden with CSS, but is still present.
-
-**Solution**: The form can be disabled by adding the following to `wp-config.php`, above the line `/* That's all, stop editing! Happy Pressing. */`:
-
-```php
-/** Changes to disable Uncode theme FTP form */
-define('FS_METHOD', 'direct');
-define('FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
-define('FS_CHMOD_FILE', ( 0755 & ~ umask() ) );
-define('FTP_BASE', __DIR__);
-define('FTP_CONTENT_DIR', __DIR__ .'/wp-content/');
-define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
-```
-
-<br />
-
-**Issue 2**: This theme throws a PHP Fatal error in its settings page for Dev's and Multidev's Git mode, Test and Live.
+**Issue**: This theme throws a PHP Fatal error in its settings page for Dev's and Multidev's Git mode, Test and Live.
 
 **Solution**: This theme assumes write access to theme folders `wp-content\themes\uncode\core\assets\css` and `wp-content\themes\uncode\library\css` for it to work properly in git mode. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access/#uncodetheme).
 

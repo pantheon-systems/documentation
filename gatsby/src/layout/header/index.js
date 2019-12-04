@@ -41,7 +41,7 @@ const Header = ({ data }) => (
             <a
               href="https://pantheon.io/register"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
               className="cta cta-yellow"
             >
               Get Free Account
@@ -51,7 +51,7 @@ const Header = ({ data }) => (
             <a
               href="https://dashboard.pantheon.io"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
             >
               Log In
             </a>
@@ -60,7 +60,7 @@ const Header = ({ data }) => (
             <a
               href="https://dashboard.pantheon.io/#support/support/all"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener"
             >
               Support
             </a>

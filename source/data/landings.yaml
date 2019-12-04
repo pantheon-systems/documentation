@@ -49,6 +49,8 @@
           url: '/support/'
         - text: 'User Dashboard and Account'
           url: '/user-dashboard/'
+        - text: 'Visualize Site Activity with the WebOps Dashboard'
+          url: '/webops-dashboard/'
   subtopics:
     - title: 'Migrate your Sites to Pantheon'
       subtitle: 'Import existing sites using our guided migration tool, or migrate manually to preserve existing commit history.'

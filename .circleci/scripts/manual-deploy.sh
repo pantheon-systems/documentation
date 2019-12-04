@@ -1,6 +1,6 @@
 #!/bin/bash
 # Manual deploys
-# This script requires running the docs site locally with Gatsby. See https://github.com/pantheon-systems/documentation/blob/master/README.md
+# This script must be run from the project root, and requires a local Gatsby setup. See https://github.com/pantheon-systems/documentation/blob/master/README.md
 # User defines ENV, SITE_NAME, and SITE_UUID
 
 echo Provide the target environment for manual deploy, then press [ENTER]:

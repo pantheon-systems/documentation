@@ -17,10 +17,10 @@ const ChangelogPreview = (props) => {
 						<MDXRenderer>{current.node.fields.markdownBody.childMdx.body}</MDXRenderer>
 					</MDXProvider>
 					<Link
-						to={url}
+						to={`${url}/`}
 						className="cta"
 					>
-						More
+						Read More
 					</Link>
 				</div>
 			</div>

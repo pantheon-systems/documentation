@@ -8,7 +8,7 @@ permalink: docs/guides/:basename/
 contributors: [jessifischer]
 date: 2/25/2015
 ---
-Your site is loaded with content and is almost ready to go live. You know what it can do, but how will it perform in the wild? Load testing will expose slow page loads, heavy transactions, PHP errors, and database errors. At Pantheon, we make sure every Elite site is load tested before going live, and [BlazeMeter](https://www.blazemeter.com/) is one of the services we use to run the tests. This guide will explain why we load test, show you how we do it, and give advice for recognizing and resolving errors you may experience.
+Your site is loaded with content and is almost ready to go live. You know what it can do, but how will it perform in the wild? Load testing will expose slow page loads, heavy transactions, PHP errors, and database errors. [BlazeMeter](https://www.blazemeter.com/) is one of the services we recommend to use to run load tests. This guide will explain why to load test, show you how to do it, and give advice for recognizing and resolving errors you may experience.
 
 ## The Importance of Identifying Performance Hits
 

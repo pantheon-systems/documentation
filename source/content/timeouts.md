@@ -1,10 +1,10 @@
 ---
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors on your site.
-tags: [debugcode, services]
-categories: []
+tags: [debugging, timeouts, drush, terminus, drupal, wordpress, solr]
+categories: [troubleshoot]
 ---
-Rules are for the good of the group, and timeouts are no exception. We've configured timeouts to fit normal program execution. Sometimes timeouts can be reached when working with a particularly inefficient bit of code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus/).
+Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. Sometimes timeouts can be reached when working with inefficient code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus/).
 
 
 ## User-Configurable Timeouts
@@ -35,7 +35,7 @@ Rules are for the good of the group, and timeouts are no exception. We've config
 
 ### Can I manually run Drupal cron for longer than the Pantheon executed Drupal cron?
 
-Yes, just use `terminus drush <site>.<env> -- cron` using [Terminus](/terminus/). With that said, most slow cron executions are due to PHP errors or a slow external service. Rather than throwing more resources at an inefficient process, determine why it's slow and fix the root cause.
+Yes, just use `terminus drush <site>.<env> -- cron` using [Terminus](/terminus/). With that said, most slow cron executions are due to PHP errors or a slow external service; best practice is to identify and fix the root cause. Check [log files](/logs/) and review [PHP errors and exceptions](/php-errors/) for clues.
 
 ### What if I run into a timeout when using the Drupal Migrate UI?
 
@@ -43,21 +43,24 @@ As [recommended in the Migrate module documentation](https://www.drupal.org/node
 
 If you're migrating to a Drupal 7 site, you can also configure Migrate to [trigger Drush imports from the UI](https://www.drupal.org/node/1958170) by configuring the `migrate_drush_path` variable to:
 
-```
+```php
 $conf['migrate_drush_path'] = $_ENV['HOME'] . '/bin/drush';
 ```
 
 ### Can Pantheon change the non-configurable timeouts for my site?
-
 No, these settings apply to every site on Pantheon. One of the ways Pantheon scales so well is by avoiding one-off configurations. We run a highly tuned universal configuration for optimized performance.
 
-
 ### How do I change the Solr timeout on Drupal?
-
-Edit the `pantheon_apachesolr` module within your Drupal site installation and enjoy your voided warranty (we can't support user modifications). Seriously, this treats a symptom and not the problem; you should reduce the batch size instead and avoid indexing large binary files.
+Do not edit the `pantheon_apachesolr` module within your Drupal site installation, it will void your warranty and we can't support user modifications. Instead, reduce the batch size and avoid indexing large binary files.
 
 ### How do I install a theme or plugin that keeps timing out?
-
 If you receive a `The application did not respond in time` error when trying to install a theme or plugin, your experience may be affected by a combination of large files and a poor internet connection. Extract the files locally and upload them [via SFTP](/rsync-and-sftp/).
 
 Agencies that frequently deploy sites using a common set of themes and plugins should consider creating a [custom upstream](/custom-upstream/).
+
+## See Also
+
+- [Platform Considerations](/platform-considerations/)
+- [Errors and Server Responses](/errors-and-server-responses/)
+- [Modules and Plugins With Known Issues](/modules-plugins-known-issues/)
+- [Database Connection Errors](/database-connection-errors/)

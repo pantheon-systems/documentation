@@ -74,3 +74,6 @@ Yes, you can backup and restore a branch environment. However, if you restore an
 ## Will I lose access to Multidevs if the organization downgrades the plan?
 
 If the organization changes to a plan that doesn't feature Multidev, you will still be able to access existing Multidev environments, but will not be able to create new ones.
+
+## Creating a Multidev Failed - Specified Key Was Too Long
+Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/myisam-to-innodb/).

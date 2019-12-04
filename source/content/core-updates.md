@@ -19,11 +19,11 @@ Sites managing core with Composer are not compatible with Pantheon's One-click u
 
   ![upstream updates](../images/dashboard/updates-available.png)
 
-2. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to **Git**.
-3. Select whether you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied.
-4. Click **Apply Updates**.
-5. Click **Visit Development Site** in the Development Environment to test and QA the site.
-5. Follow the standard [Pantheon Workflow](/pantheon-workflow/#combine-code-from-dev-and-content-from-live-in-test) to deploy changes up to Test and on to Live.
+1. If you have SFTP changes you want to commit and deploy, do so now. Then set the site's connection mode to **Git**.
+1. Select whether you want to automatically resolve conflicts. Drupal users can opt to run `update.php` after updates are applied.
+1. Click **Apply Updates**.
+1. Click **Visit Development Site** in the Development Environment to test and QA the site.
+1. Follow the standard [Pantheon Workflow](/pantheon-workflow/#combine-code-from-dev-and-content-from-live-in-test) to deploy changes up to Test and on to Live.
 
 ### Auto-Resolve Conflicts
 
@@ -38,7 +38,7 @@ If you prefer using the command line, you can apply updates with [Terminus](/ter
 
 ### Update a Specific Site
 
-```bash
+```bash{promptUser: user}
 terminus upstream:updates:apply site.env --updatedb
 ```
 
@@ -46,7 +46,7 @@ Replace `site` and `env` with your site name and the correct environment. Learn 
 
 ### Update Multiple Sites
 
-```
+```bash{promptUser: user}
 terminus sites:mass-update:apply
 ```
 
@@ -69,7 +69,7 @@ This process can potentially cause loss of data. Be sure you have no custom code
 
 <Tab title="Drupal 8" id="d8" active={true}>
 
-```bash
+```bash{promptUser: user}
 git pull -Xtheirs git://github.com/pantheon-systems/drops-8.git master
 # resolve conflicts
 git push origin master
@@ -79,7 +79,7 @@ git push origin master
 
 <Tab title="Drupal 7" id="d7">
 
-```bash
+```bash{promptUser: user}
 git pull -Xtheirs git://github.com/pantheon-systems/drops-7.git master
 # resolve conflicts
 git push origin master
@@ -89,7 +89,7 @@ git push origin master
 
 <Tab title="Drupal 6" id="d6">
 
-```bash
+```bash{promptUser: user}
 git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
 # resolve conflicts
 git push origin master
@@ -99,7 +99,7 @@ git push origin master
 
 <Tab title="WordPress" id="wp">
 
-```bash
+```bash{promptUser: user}
 git pull -Xtheirs git://github.com/pantheon-systems/WordPress.git master
 # resolve conflicts
 git push origin master
@@ -161,7 +161,6 @@ This process lets you manually resolve the conflict using the command line and a
 
 1. Navigate to a [local clone of your site repository](/git/#clone-your-site-codebase) using the command line, then add the applicable upstream as a [remote](https://git-scm.com/docs/git-remote) if you haven't done so already:
 
-
   <TabList>
 
   <Tab title="WordPress" id="wp-1conflict" active={true}>
@@ -200,7 +199,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   </TabList>
 
-2. Pull down changes from the appropriate upstream:
+1. Pull down changes from the appropriate upstream:
 
   <TabList>
 
@@ -244,7 +243,7 @@ This process lets you manually resolve the conflict using the command line and a
 
   </TabList>
 
-3. If a conflict is introduced, use the output provided to resolve. For example:
+1. If a conflict is introduced, use the output provided to resolve. For example:
 
   ```bash
   git rebase pantheon-wordpress/master
@@ -277,7 +276,7 @@ This process lets you manually resolve the conflict using the command line and a
   git rebase --continue
   ```
 
-4. Push updates to the Site Dashboard on Pantheon:
+1. Push updates to the Site Dashboard on Pantheon:
 
   ```
   git push origin master
@@ -330,18 +329,25 @@ This issue happens when you attempt to update very outdated core files from the 
 
  <Tab title="WordPress" id="wp-2conflict-merge" active={true}>
 
- [pantheon.upstream.yml for WordPress](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
+ GITHUB-EMBED https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+
+  [View on GitHub](https://github.com/pantheon-systems/WordPress/blob/default/pantheon.upstream.yml)
 
  </Tab>
 
  <Tab title="Drupal 8" id="d8-2conflict-merge">
 
- [pantheon.upstream.yml for Drupal 8](https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
+  GITHUB-EMBED https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+
+ [View on GitHub](https://github.com/pantheon-systems/drops-8/blob/default/pantheon.upstream.yml)
+
  </Tab>
 
  <Tab title="Drupal 7" id="d7-2conflict-merge">
 
- [pantheon.upstream.yml for Drupal 7](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
+ GITHUB-EMBED https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml yaml:title=pantheon.upstream.yml GITHUB-EMBED
+
+  [View on GitHub](https://github.com/pantheon-systems/drops-7/blob/default/pantheon.upstream.yml)
 
  </Tab>
 
