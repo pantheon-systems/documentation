@@ -19,15 +19,15 @@ Converting to a Composer managed site *removes* the ability to [apply updates vi
 
 <Partial file="composer-updating.html" />
 
- - Review our documentation on [Git](/git/), [Composer](/composer/), and [Terminus](/terminus/), and have them installed and configured on your local computer.
- - [Clone](/git#clone-your-site-codebase) your _current_ Pantheon site repository to a working directory on your local computer.
- - Review [Serving Sites from the Web Subdirectory](/nested-docroot/)
+- Review our documentation on [Git](/git/), [Composer](/composer/), and [Terminus](/terminus/), and have them installed and configured on your local computer.
+- [Clone](/git#clone-your-site-codebase) your _current_ Pantheon site repository to a working directory on your local computer.
+- Review [Serving Sites from the Web Subdirectory](/nested-docroot/)
 
 <Alert title="Exports" type="export">
 
 This guide uses the local command line environment, and there are several commands dependent on your specific site. Before we begin, set the variable `$site` in your terminal session to match your site name:
 
-```bash
+```bash{promptUser:user}
 export site=yoursitename
 ```
 
@@ -38,13 +38,13 @@ You're about to make some massive changes to the codebase. We recommend you to d
 
 1. In your local terminal, change directories to your site project. For example, if you keep your projects in a folder called `projects` in the home directory:
 
-  ```bash
+  ```bash{promptUser:user}
   cd ~/projects/$site/
   ```
 
 2. Create the new branch:
 
-  ```bash
+  ```bash{promptUser:user}
   git checkout -b composify
   ```
 
@@ -53,23 +53,25 @@ You're about to make some massive changes to the codebase. We recommend you to d
 ## Setup a Multidev (optional)
 If your Pantheon account has access to [multidev](/multidev/), create a multidev to push your new code to:
 
-```bash
+```bash{promptUser:user}
 git push origin composify && terminus env:create $site.dev composify
 ```
 
 This will setup the multidev environment to receive and demo our changed code.
 
 ## Create a New Composer Project
+
 1. In your local terminal, from the repository root of your Pantheon site, move a directory up:
 
-  ```bash
+  ```bash{promptUser:user}
   cd ..
   ```
 
 2. Use Composer to create a new project, using the [Pantheon Drupal 8 Composer](https://github.com/pantheon-systems/example-drops-8-composer) repository:
 
-    ```bash
+    ```bash{promptUser:user}
     composer create-project pantheon-systems/example-drops-8-composer $site-composer
+    cd $site-composer
     ```
 
 This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in the `$site-composer` directory.
@@ -77,7 +79,7 @@ This will create a new directory based on the example project [pantheon-systems/
 ### Copy pantheon.upstream.yml
 Since the drops-8 upstream has a `pantheon.upstream.yml` and the example-drops-8-composer upstream does not, copy over our old file for the platform to properly load the site. From the `$site-composer` directory, run:
 
-```bash
+```bash{promptUser:user}
 cp ../$site/pantheon.upstream.yml .
 ```
 
@@ -91,7 +93,8 @@ What makes your site code unique is your selection of contributed modules and th
 A Composer-managed site should be able to include all custom code via Composer. Begin by reviewing your existing site's code. Check for contributed modules in `/modules`, `/modules/contrib`, `/sites/all/modules`, and `/sites/all/modules/contrib`.
 
 When reviewing your site, take stock of exactly what versions of modules you depend on. One way to do this is to use a command like the following from within a contributed modules folder (e.g. `/modules`, etc):
-```bash
+
+```bash{outputLines:2-4}
 find . -maxdepth 2 -name '*.info.yml' \
   -exec basename '{}' '.info.yml' ';' \
   -exec grep -e '^version' '{}' ';' \
@@ -100,19 +103,22 @@ find . -maxdepth 2 -name '*.info.yml' \
 
 This will list each module followed by the version of that module that is installed.
 
-You can add these modules to your new codebase using Composer by running the following for each module in the `my-site-composer` directory:
+You can add these modules to your new codebase using Composer by running the following for each module in the `$site-composer` directory:
 
-```bash
+```{promptUser:user}
 composer require drupal/MODULE_NAME:^VERSION
 ```
 
 Where `MODULE_NAME` is the machine name of the module in question, and `VERSION` is the version of that module your site is currently using. Composer may pull in a newer version than what you specify, depending upon what versions are available. You can read more about the caret (`^`) [in the documentation for Composer](https://getcomposer.org/doc/articles/versions.md#caret-version-range-) itself.
 
-If you get an error like this:
-> [InvalidArgumentException]  
-  Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
+If you get the following error:
 
-...it means that one of the modules you are using -- or its dependencies -- are not stable. If there is not a stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` [in the documentation for Composer](https://getcomposer.org/doc/04-schema.md#minimum-stability) itself.
+```none
+[InvalidArgumentException]
+Could not find a version of package drupal/MODULE_NAME matching your minimum-stability (stable). Require it with an explicit version constraint allowing its desired stability.
+```
+
+It means that one of the modules you are using (or its dependencies) are not stable. If there is not a stable version you can switch to, you may need to adjust the `minimum-stability` setting of `composer.json` to a more relaxed value, such as `beta`, `alpha`, or even `dev`. You can read more about `minimum-stability` [in the documentation for Composer](https://getcomposer.org/doc/04-schema.md#minimum-stability) itself.
 
 #### Themes
 Repeat the same process with themes, checking `/themes`, `/themes/contrib`, `/sites/all/themes`, and `/sites/all/themes/contrib`. Use Composer in the same way as above to require these.
@@ -126,13 +132,13 @@ Custom code should be manually copied from the existing site repository to the C
 
 Modules:
 
-```bash
+```bash{promptUser:user}
 cp -r /modules/custom/awesome_module ../$site-composer/web/modules/custom
 ```
 
 Themes:
 
-```bash
+```bash{promptUser:user}
 cp -r /themes/custom/great_theme ../$site-composer/web/themes/custom
 ```
 
@@ -147,8 +153,9 @@ The resulting `settings.php` should have no `$databases` array.
 
 #### Configuration
 If you are using an exported config, you will need to move the configuration files to a new location. The preferred (and assumed) location of the configuration directories when using a nested docroot and Composer is at the root of the repository next to the web directory:
-```
-my-site-composer
+
+```none
+ site-composer
 |-web
 |-config    <--Here!
 |-vendor
@@ -160,7 +167,8 @@ Locate the configuration files in your existing site and move them here. If they
 
 ## Update to Latest Drupal Core
 The Pantheon Drupal 8 Composer repository may not depend on the latest secure release of Drupal Core. To keep your site safe, it's a good idea to pull the latest version in now -- before moving on -- by running:
-```bash
+
+```bash{promptUser:user}
 composer update drupal/core --with-dependencies
 ```
 
@@ -171,7 +179,7 @@ If you do plan on using a CI solution, refer to our [Build Tools](/guides/build-
 
 From the `$site-composer` directory, run the following:
 
-```bash
+```bash{promptUser:user}
 composer prepare-for-pantheon
 composer install --no-dev
 ```
@@ -181,7 +189,7 @@ This should modify the `.gitignore` file and cleanup any errant `.git` directori
 ## Commit
 Commit your work to the git repo. From the `$site` directory, run the following:
 
-```bash
+```bash{promptUser:user}
 cp -r .git ../$site-composer/
 cd ../$site-composer
 git add .
@@ -191,24 +199,23 @@ git commit -m "Convert to Composer based install"
 You should see a large amount of files committed to the new branch we created earlier.
 
 ## Deploy
-You've now committed the code to a branch. If your site has multidev, you can deploy that branch directly to a new multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on [our documentation on log collection](/logs).
+You've now committed the code to a branch. If your site has multidev, you can deploy that branch directly to a new multidev and test the site in the browser. If the site doesn't load properly, clear the cache. If there are any issues, utilize your site's logs via `terminus drush $site.composify -- wd-show` to inspect the watchdog logs, or follow the directions on [our documentation on log collection](/logs/).
 
 Once you have confirmed the site is working, merge `composify` into `master`, and follow the standard workflow to QA a code change before going live.
 
 If your plan does not include multidev, you will have to merge to master before deploying, then follow the rest of the steps above. If you have a local development solution, consider testing your `composify` branch locally before merging.
 
-
 ## Change Upstreams
 Your Pantheon site is no longer compatible with traditional upstream updates. Avoid confusion by moving your site to an empty upstream:
 
-```bash
+```bash{promptUser:user}
 terminus site:upstream:set $site empty
 ```
 
 ## Ongoing Core Updates
 Core updates are carried out via Composer:
 
-```bash
+```bash{promptUser:user}
 git pull origin master
 composer update drupal/core --with-dependencies
 composer prepare-for-pantheon
@@ -218,4 +225,5 @@ composer install --no-dev
 Review and commit file changes, then push back to Pantheon.
 
 ## See Also
- - [Composer Fundamentals and Workflows](/composer/)
+
+- [Composer Fundamentals and Workflows](/composer/)
