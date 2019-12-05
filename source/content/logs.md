@@ -20,7 +20,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 | **mysqld-slow-query.log** | 10MB of log data      | Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory. |
 | **mysqld.log**            | 1MB of log data       | Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory. |
 
-Rotated log files are archived within the `/logs` directory on application containers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
+Rotated log files are archived within the `/logs` directory on application containers and database servers (e.g. `/logs/php-error.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`). NGINX logs may be found at `/nginx-logs` if they are not found at `/logs` (e.g. /nginx-logs/nginx-access.log-20160617.gz)
 
 <Alert title="Note" type="info">
 
@@ -70,9 +70,17 @@ You now have a local copy of the logs directory, which contains the following:
     └──php-error.log
     └──php-fpm-error.log
     └──php-slow.log
-    └──pyinotify.log
-    └──watcher.log
 ```
+
+if you are missing the nginx access logs after running this command you will need to run an additional command:
+    ```
+    get -r nginx-logs
+    ```
+   
+This will give you a local copy of the nginx access and error logs.
+├── nginx-logs
+    └──nginx-access.log
+    └──nginx-error.log
 
 ### Database Log Files
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
@@ -122,7 +130,11 @@ SITE_UUID=xxxxxxxxxxx
 ENV=live
 for app_server in `dig +short appserver.$ENV.$SITE_UUID.drush.in`;
 do
-  rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:logs/* app_server_$app_server
+  if [ -d "/nginx-logs" ]; then
+      rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:/nginx-logs/* app_server_$app_server
+  else
+      rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITE_UUID@appserver.$ENV.$SITE_UUID.drush.in:logs/* app_server_$app_server
+  fi
 done
 
 # Include MySQL logs
@@ -229,6 +241,12 @@ sftp -o Port=2222 live.$SITE_UUID@$app_server << !
   cd logs
   lcd $app_server
   mget *.log
+  
+  if [ -d "/nginx-logs"]; then
+      cd /nginx-logs
+      lcd $app_server
+      mget *.log
+  fi
 !
 done
 ```
