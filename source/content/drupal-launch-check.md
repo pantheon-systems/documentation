@@ -36,12 +36,14 @@ To generate the reports, Pantheon uses [Site Audit](https://drupal.org/project/
 
 ## Frequently Asked Questions
 
-### Temporary Directory Deprecated Configuration Warning
-The Drupal 8.8.0 release on December 4, 2019 includes a change that surfaces a warning:
+### Deprecated Configuration for the Temporary Files Path Warning on Drupal 8.8.0
+The release of Drupal 8.8.0 introduced a change in the temporary files path, which prompts the following warning:
+
 ```
 You are using deprecated configuration for the temporary files path. Remove the configuration and add the following to settings.php. $settings["file_temp_path"] = "/srv/bindings/.../tmp"
 ```
-You can safely ignore this warning. A subsequent release will include a change to fix this warning. 
+
+You can safely ignore this warning.
 
 ### Trusted Host Setting for Drupal 8
 A warning within `/admin/reports/status` will appear when the `trusted_host_patterns` setting is not configured. This setting protects sites from HTTP Host header attacks. However, sites running on Pantheon are not vulnerable to this specific attack and the warning can be safely ignored. For more details, see [Configuring settings.php](/settings-php/#trusted-host-setting).
@@ -52,7 +54,7 @@ The Dashboard integration is intended to provide developers with the most action
 
 ### How can I manually run site audit on my site?
 
-You can also execute a full report encoded in json format to your terminal:
+You can also execute a full report encoded in JSON format to your terminal:
 
 ```bash
 terminus remote:drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon
@@ -88,7 +90,7 @@ Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) t
 
 ## Troubleshooting
 
-### Site Audit isn't running on my site.
+### Site Audit Isn't Running on My Site
 
 If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/terminus/) command to execute Site Audit directly on your Pantheon site:
 
