@@ -125,13 +125,7 @@ jobs:
           name: Import Functions and Variables
           command: .circleci/scripts/set-env.sh && source $BASH_ENV
       - run:
-          name: Lighthouse Audit First Pass
-          command: .circleci/tests/lighthouse/run
-      - run:
-          name: Lighthouse Audit Second Pass
-          command: .circleci/tests/lighthouse/run
-      - run:
-          name: Lighthouse Audit Third Pass
+          name: Lighthouse Audit
           command: .circleci/tests/lighthouse/run
       - store_artifacts:
           path: gatsby/lighthouse_data/
