@@ -362,6 +362,11 @@ Plugins and Themes with issues resolved by this include:
 - [WPBakery: Page Builder](https://wpbakery.com/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 
+### [AMP for WP – Accelerated Mobile Pages](https://wordpress.org/plugins/accelerated-mobile-pages/)
+**Issue**: Enabling the Mobile Redirection feature within AMP for WP sends a session cookie which conflicts with platform-level page caching.
+
+**Solution**: Disable the option for Mobile Redirection within the AMP for WP options page. See the  [WordPress support forum](https://wordpress.org/support/topic/varnish-compatibility-issue-with-session-keys/) for details.
+
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
 **Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
 
