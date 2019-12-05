@@ -29,6 +29,7 @@ This guide uses the local command line environment, and there are several comman
 
 ```bash
 export site=yoursitename
+export site-composer=my-site-composer
 ```
 
 </Alert>
@@ -70,6 +71,7 @@ This will setup the multidev environment to receive and demo our changed code.
 
     ```bash
     composer create-project pantheon-systems/example-drops-8-composer $site-composer
+    cd $site-composer
     ```
 
 This will create a new directory based on the example project [pantheon-systems/example-drops-8-composer](https://github.com/pantheon-systems/example-drops-8-composer) in the `$site-composer` directory.
