@@ -21,6 +21,8 @@ image: getting-started-Largethumb
 ---
 In this lesson, we'll upgrade from a free account to a paid plan by adding billing information or inviting a business owner to pay.
 
+Contract customers should contact their account manager when they're ready to upgrade their site plan.
+
 ## Use Your Own Card
 To upgrade and pay for the site now, add your payment method:
 
