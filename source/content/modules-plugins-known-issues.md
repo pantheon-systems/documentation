@@ -276,28 +276,34 @@ if (defined('PANTHEON_ENVIRONMENT') && $_ENV['PANTHEON_ENVIRONMENT'] != 'live') 
 
 <hr />
 
-
 ### [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)
 This is built into the platform. See [Drupal Drush Command-Line Utility](/drush#registry-rebuild) for details on how to use Registry Rebuild on Pantheon.
+
 <hr />
 
+### [S3 File System](https://www.drupal.org/project/s3fs)
+**Issue 1:** When the module is configured to take over the public file system, Drupal's CSS/JS aggregation will not work, unless you also upload Drupal Core and contrib modules to S3. See [this module issue](https://www.drupal.org/project/s3fs/issues/2511090) for more information.
+
+**Issue 2:** Uploading files over 100MB through the Drupal file fields are still limited by the platform [upload limitations](/platform-considerations#large-files).
+
+<hr />
 
 ### [Schema](https://www.drupal.org/project/schema)
 **Issue**: The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a [known bug](https://drupal.org/node/468644) in the schema module.
 
 **Solution**: Set a variable to suppress the error, [shown here](http://drupalcode.org/project/schema.git/blob/08b02458694d186f8ab3bd0b24fbc738f9271108:/schema.module#l372). Setting the variable `schema_suppress_type_warnings` to **true** will do it. You can achieve that by adding the following line to `settings.php`:
-```
+
+```php
 $conf[‘schema_suppress_type_warnings’] = TRUE;
 ```
-<hr />
 
+<hr />
 
 ### [Simple OAuth / OAuth 2.0](https://www.drupal.org/project/simple_oauth)
 **Issue**: The module requires a very specific set of permissions for the folder and the keys to be uploaded. Using Private or non-standard filepaths won't work. It is not possible to change these in LIVE or TEST environment.
 
 **Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
 <hr />
-
 
 ### [Taxonomy CSV](https://www.drupal.org/project/taxonomy_csv)
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/modules-plugins-known-issues/#using-the-tmp-directory) section below.
