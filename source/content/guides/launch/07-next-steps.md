@@ -44,6 +44,8 @@ When you're ready to launch another site, use this best-practice checklist to es
 
 <ChecklistItem title="Set Up Outgoing Email" link="/email/" />
 
+<ChecklistItem title="Disable XML-RPC For WordPress" link="wordpress-best-practices#avoid-xml-rpc-attacks" />
+
 <ChecklistItem title="WordPress Launch Check" link="/wordpress-launch-check/" />
 
  **OR** 
