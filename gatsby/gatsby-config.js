@@ -33,6 +33,7 @@ module.exports = {
         id: process.env.GTM_ID,
         includeInDevelopment: false,
         defaultDataLayer: { },
+      }
     },
     {
       resolve: "gatsby-plugin-segment-js",
