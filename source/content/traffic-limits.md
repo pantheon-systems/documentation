@@ -11,14 +11,31 @@ All Performance plans include **Overage Protection** to prevent one-time traffic
 
 Basic plan sites do not have this protective feature and would see a change to their bill in the applicable billing period. The overage charge is $2.50 per 1,000 visits (no proration).
 
-## Frequently Asked Questions
-### How does Pantheon calculate monthly visits?
+## Traffic Metrics
 <Partial file="traffic-dl.md" />
 
 For details, see [Metrics in the Site Dashboard](/metrics/).
 
-### What is a traffic spike?
+### Traffic Spikes
 A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable. For details, see [Pricing Comparison](https://pantheon.io/plans/pricing-comparison).
+
+### Sustained Traffic
+Sustained traffic is two consecutive months of being over the site plan limit.
+
+### Static Assets
+Static requests (images PDFs, CSS, JS, etc) are not included in our normal traffic metrics. Under regular CMS use-cases, these supporting requests to render HTML pages for users with browsers are not a concern.
+
+However we do reserve the right to review individual sites that are excessive bandwidth consumers. If sites are serving static assets at an excessive rate, this can be considered plan abuse.
+
+### 404s and Other Client Errors
+Pantheon only counts pages returned, considered [`200` level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success), in traffic metrics. The Platform does not count "client errors," which are returned as [`400` level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors), as part of plan traffic limits.
+
+### Bots and Crawlers
+Although it places load on the platform, Pantheon excludes automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. We do this by examining the user-agent of traffic, as well as the source IP address.
+
+Having high performance responses to crawlers is _beneficial_ to SEO, which is one reason people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible.
+
+## Frequently Asked Questions
 
 ### How will Pantheon reach out to me if my site has an overage?
 For sites on the Basic plan, overages are charged at the end of the month.
@@ -42,9 +59,6 @@ If you need time or are unable to commit to an annual contract, sites that excee
 
 Note that the annual plan prices are list as annual cost.
 
-### What is “sustained traffic”?
-Sustained traffic is two consecutive months of being over the site plan limit.
-
 ### How can I change my Performance size plan if I need to scale up to handle more traffic?
 You can upgrade your plan in your dashboard at any time. You may not be able to downgrade to a smaller performance size plan based on your traffic history.
 
@@ -55,29 +69,16 @@ We track every single request to the platform, whereas analytics tools will typi
 
 For example, the following traffic will be collected in our logs, but will not be present in most analytics:
 
- - API requests and AJAX requests.
- - Browsers/users that block cookies or javascript, including adblockers or private mode.
- - Users that close the browser before the tracking script loads.
- - A page where there is no tracking code, or where a javascript error prevents the tracking code from firing.
- - Automated traffic from bots or load testing.
- - Content pre-fetching by browsers or [apps](https://www.facebook.com/business/help/1514372351922333).
+- API requests (e.g. XML-RPC, which can be [disabled in WordPress](/wordpress-best-practices#avoid-xml-rpc-attacks) and was removed from Drupal 8 core) and AJAX requests.
+- Browsers/users that block cookies or javascript, including adblockers or private mode.
+- Users that close the browser before the tracking script loads.
+- A page where there is no tracking code, or where a javascript error prevents the tracking code from firing.
+- Automated traffic from bots or load testing.
+- Content pre-fetching by browsers or [apps](https://www.facebook.com/business/help/1514372351922333).
 
 Analytics implementations can be variable. It may be that your analytics solution isn't tracking all pages served for good reason. For example, you may exclude CMS administrators to give you a view of "visitors only".
 
 Content pre-fetching increasingly plays a role in driving up traffic metrics without having the same impact on visitor-centric analytics. Speculatively loading pages in the background is a common tactic to improve the user experience on the web, which we support people using. However, this does generate more overall traffic from the perspective of the platform.
-
-### What about static assets?
-Static requests (images PDFs, CSS, JS, etc) are not included in our normal traffic metrics. Under regular CMS use-cases, these supporting requests to render HTML pages for users with browsers are not a concern.
-
-However we do reserve the right to review individual sites that are excessive bandwidth consumers. If sites are serving static assets at an excessive rate, this can be considered plan abuse.
-
-### What about 404s and other "client errors?"
-Pantheon only counts pages returned, considered [`200` level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#2xx_Success), in traffic metrics. The Platform does not count "client errors," which are returned as [`400` level](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#4xx_Client_errors), as part of plan traffic limits.
-
-### What about bots?
-Although it places load on the platform, Pantheon excludes automated traffic from legitimate crawlers and bots that would otherwise count towards your website's total traffic. We do this by examining the user-agent of traffic, as well as the source IP address.
-
-Having high performance responses to crawlers is _beneficial_ to SEO, which is one reason people choose Pantheon, but we respect that you cannot control this kind of traffic. We are continually refining our model to ensure our traffic reports are as accurate as possible.
 
 ### What about load tests or penetration tests?
 We encourage customers to load test prior to releasing a big update. We also fully support customers who want to penetration test their site, which can result in significant spikes in traffic.
@@ -97,7 +98,9 @@ We are well aware that malicious actors can create a ton of traffic out of nowhe
 As above, in cases where these events are regular or sustained, we reserve the right to right-size a site plan. If a site's real load on the platform is consistently higher than what appears in end-user analytics, fairness demands that the site plan fit its usage.
 
 ## See Also
+
 - [New Site Plans FAQs](/new-plans-faq/)
 - [Manage Plans in the Site Dashboard](/site-plan/)
 - [Billing in the Site Dashboard](/site-billing/)
 - [Metrics in the Site Dashboard](/metrics/)
+- [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site
