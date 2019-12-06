@@ -69,7 +69,7 @@ We track every single request to the platform, whereas analytics tools will typi
 
 For example, the following traffic will be collected in our logs, but will not be present in most analytics:
 
-- API requests and AJAX requests.
+- API requests (e.g. XML-RPC, which can be [disabled in WordPress](/wordpress-best-practices#avoid-xml-rpc-attacks) and was removed from Drupal 8 core) and AJAX requests.
 - Browsers/users that block cookies or javascript, including adblockers or private mode.
 - Users that close the browser before the tracking script loads.
 - A page where there is no tracking code, or where a javascript error prevents the tracking code from firing.
