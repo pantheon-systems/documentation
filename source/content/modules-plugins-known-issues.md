@@ -396,8 +396,8 @@ function is_mobile() {
           $is_mobile = false;
   }
   return $is_mobile;
-}```
-
+}
+```
 
 ### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
 **Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
