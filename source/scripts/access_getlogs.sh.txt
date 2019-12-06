@@ -64,7 +64,11 @@ echo "[+] SAVING LOGS TO: ${TARGET}"
 
 for app_server in `dig +short appserver.$ENV.$SITEID.drush.in`;
 do
-    rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITEID@appserver.$ENV.$SITEID.drush.in:logs/nginx-access* $TARGET/as_$app_server/
+    if [ -d "/logs/nginx/" ]; then
+      rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITEID@appserver.$ENV.$SITEID.drush.in:/logs/nginx/nginx-access* $TARGET/as_$app_server/
+    else
+      rsync -rlvz --size-only --ipv4 --progress -e 'ssh -p 2222' $ENV.$SITEID@appserver.$ENV.$SITEID.drush.in:logs/nginx-access* $TARGET/as_$app_server/
+    fi
 done
 
 echo "[+] DECOMPRESS GZ FILES"

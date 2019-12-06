@@ -20,7 +20,7 @@ The server timezone and all log timestamps are in UTC (Coordinated Universal Tim
 | **mysqld-slow-query.log** | 10MB of log data      | Log of MySQL queries that took more than 120 seconds to execute. Located in the database's `logs/` directory. |
 | **mysqld.log**            | 1MB of log data       | Log of established MySQL client connections and statements received from clients. Also Located in the database's `logs/` directory. |
 
-Rotated log files are archived within the `/logs` directory on application containers and database servers (e.g. `/logs/nginx-access.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
+Rotated log files are archived within the `/logs` directory on application containers and database servers. You may find this directory contains sub-directories for each service that runs (ie NGINX and php) (e.g. `/logs/nginx/nginx-access.log-20160617.gz` or `/logs/php/php-error.log-20160617.gz` or `/logs/mysqld-slow-query.log-20160606`).
 
 <Alert title="Note" type="info">
 
@@ -64,14 +64,26 @@ In the Connection Information section of the dashboard, we can see a pattern abo
 You now have a local copy of the logs directory, which contains the following:
 ```
 ├── logs
+    └──php
+        └──newrelic.log
+        └──php-error.log
+        └──php-fpm-error.log
+        └──php-slow.log
+    └──nginx
+        └──nginx-access.log
+        └──nginx-error.log
+```
+
+You may still see the logs in this structure as well:
+
+```
+├── logs
     └──newrelic.log
     └──nginx-access.log
     └──nginx-error.log
     └──php-error.log
     └──php-fpm-error.log
     └──php-slow.log
-    └──pyinotify.log
-    └──watcher.log
 ```
 
 ### Database Log Files
