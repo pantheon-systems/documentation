@@ -646,6 +646,13 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 An alternative solution is to [create a symbolic link](/assuming-write-access/#create-a-symbolic-link).
 <hr />
 
+### [Popup Builder – Responsive WordPress Pop up – Subscription & Newsletter](https://wordpress.org/plugins/popup-builder/)
+
+**Issue:** This plugin stores full file paths to the options table, which breaks across multiple application containers.
+
+**Solution:** A [user patch](https://gist.github.com/kshaner/7fcbc7e3e967c5694fd38638bff1cc17/revisions) has been [submitted](https://wordpress.org/support/topic/absolute-path-causes-issues-on-environments-with-multiple-containers/) to the plugin maintainers.
+
+<hr />
 
 ### [Query Monitor](https://wordpress.org/plugins/query-monitor/)
 **Issue**: Creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments.
