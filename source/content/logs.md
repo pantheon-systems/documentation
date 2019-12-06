@@ -44,12 +44,6 @@ In the Connection Information section of the dashboard, we can see a pattern abo
 
 ## Downloading Logs
 
-<Accordion title="Watch: Download Appserver and Database Log Files" id="logs-video" icon="facetime-video">
-
-`youtube: https://youtu.be/t3cyL5h5vTI`
-
-</Accordion>
-
 ### Application Log Files
 
 1. Access the Site Dashboard and desired environment (Multidev, Dev, Test, or Live).
