@@ -28,6 +28,14 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: process.env.GTM_ID,
+        includeInDevelopment: false,
+        defaultDataLayer: { },
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/../source/partials`,
@@ -185,13 +193,6 @@ module.exports = {
         google: {
           families: ["Open Sans"],
         },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-20272439-10",
-        head: true,
       },
     },
     `gatsby-plugin-react-helmet`,
