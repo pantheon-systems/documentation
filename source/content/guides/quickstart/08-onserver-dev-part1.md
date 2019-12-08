@@ -28,7 +28,7 @@ In this lesson, we’re going to work directly on the server. We’ll make chang
 
 **Try it yourself:**
 
-1. Navigate to <Icon icon={"embed-close"} text={"Code"}/> in the <Icon icon={"wrench"} text={"Dev"} tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
+1. Navigate to <Icon icon={"embed-close"} text={"Code"}/> in the <Icon icon={"wrench"} text={"Dev"}/> tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
 
 2. Now log in to your Dev site by clicking the <Icon icon={"new-window-alt"} text={"Site Admin"}/> button.
 
