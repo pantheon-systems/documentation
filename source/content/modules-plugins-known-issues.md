@@ -907,11 +907,12 @@ if (defined( "PANTHEON_BINDING" )) {
 
 <hr />
 
-
 ### [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
 **Issue 1:** Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
 **Solution**: Make the environment public within the Site Dashboard. For details, see [Security on the Pantheon Dashboard](/security).
+
+<hr />
 
 **Issue 2:** When registering the plugin, accessing `/wp-admin/plugin-install.php?tab=commercial` returns "Sorry, you are not allowed to access this page".
 
@@ -921,7 +922,33 @@ if (defined( "PANTHEON_BINDING" )) {
 
 <hr />
 
+**Issue 3:** Upon activating WPML String Translation plugin, you may see this error:
 
+```none
+WPML String Translation is attempting to write .mo files with translations to folder:
+
+/srv/bindings/*******/code/wp-content/languages
+
+This folder appears to be not writable. This is blocking translation for strings from appearing on the site.
+To resolve this, please contact your hosting company and request that they make that folder writable.
+For more details, see WPML's documentation on troubleshooting .mo files generation.
+```
+
+**Solution 1:**
+
+1. In `wp-config.php`, add the following after the `define('WP_TEMP_DIR', $_SERVER['HOME'] .'/tmp');` line:
+
+  ```php:title=wp-config.php
+  ( 'WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages' );
+  ```
+
+2. Create the `languages` directory inside `/files` for each environment.
+
+**Solution 2:**
+
+Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/assuming-write-access/) for more information.
+
+<hr />
 
 ### [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
 
