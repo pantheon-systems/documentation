@@ -3,11 +3,12 @@ import Header from "../header"
 import Footer from "../footer"
 import './style.css'
 
-const Layout = ({ children }) => {
+const Layout = (props) => {
+  const pageType = props.type ? props.type : "default"
   return (
     <div className="pantheon-docs">
-      <Header />
-      {children}
+      <Header page={pageType}/>
+      {props.children}
       <Footer />
     </div>
   )

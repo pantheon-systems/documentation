@@ -47,6 +47,21 @@
       icon: 'i-monitoring.svg'
       url: '/guides/'
       secondary: true
+  fourohfourlinks:
+    title: 'Popular Documentation'
+    links:
+      - text: 'Terminus Manual'
+        url: '/terminus/'
+      - text: 'Quick Start Guide'
+        url: '/guides/quickstart/'
+      - text: 'Using the Pantheon Workflow'
+        url: '/pantheon-workflow/'
+      - text: 'Domains and Redirects'
+        url: '/domains/'
+      - text: 'Git FAQs'
+        url: '/git-faq/'
+      - text: 'Generating and Adding SSH Keys'
+        url: '/ssh-keys/'
   three-column-links:
     title: 'Popular Documentation'
     links: 
