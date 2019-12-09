@@ -363,6 +363,15 @@ Plugins and Themes with issues resolved by this include:
 - [WPBakery: Page Builder](https://wpbakery.com/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
 
+### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
+**Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
+
+The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migration/storage`, which is not permitted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
+
+**Solution**: You can create and download full backups from your [Dashboard](/backups/).
+
+<hr />
+
 ### [AMP for WP – Accelerated Mobile Pages](https://wordpress.org/plugins/accelerated-mobile-pages/)
 **Issue**: Enabling the Mobile Redirection feature within AMP for WP sends a session cookie which conflicts with platform-level page caching. See the  [WordPress support forum](https://wordpress.org/support/topic/varnish-compatibility-issue-with-session-keys/) for details.
 
@@ -399,15 +408,7 @@ function is_mobile() {
 }
 ```
 
-### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
-**Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
-
-The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migration/storage`, which is not permitted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
-
-**Solution**: You can create and download full backups from your [Dashboard](/backups/).
-
 <hr />
-
 
 ### [Autoptimize](https://wordpress.org/plugins/autoptimize/)
 **Issue**: Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
