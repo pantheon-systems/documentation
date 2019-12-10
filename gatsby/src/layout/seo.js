@@ -39,6 +39,15 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
     title: site.siteMetadata.title
   }
 
+  const tagValues = tags.length ?         {
+    property: `og:article:tags`,
+    content: `${tags}`
+  } : {
+    property: `og:article:tags`,
+    tags: `${category}`
+  }
+
+
   return (
     <Helmet
       htmlAttributes={{
@@ -48,6 +57,7 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
       {...titleProps}
 
       meta={[
+        {...tagValues},
         {
           itemprop: `name`,
           content: `${title} | ${site.siteMetadata.title}`,
@@ -87,10 +97,6 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
         {
           property: `og:article:section`,
           content: `${category}`
-        },
-        {
-          property: `og:article:tags`,
-          content: `${tags}`
         },
         {
           name: `twitter:site`,
