@@ -47,12 +47,15 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 ### Test CDN Caching with curl
 
 1. Open a terminal.
-1. Enter the following command with your full Pantheon domain URL. Using the `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
+1. Enter the following command with your full Pantheon domain URL.
+    - The `-I` flag sends a HEAD request to fetch only the HTTP headers for the specified URL.
+    - The `-H 'accept-encoding: gzip, deflate, br'` flag and header forces curl to more closely simulate a typical browser request, resulting in typical cache behavior.
 
   ```bash{outputLines:2-20}
-  curl -I https://scalewp.io
+  curl -I -H "accept-encoding: gzip, deflate, br" https://scalewp.io
   HTTP/2 200
   cache-control: public, max-age=86400
+  content-encoding: gzip
   content-type: text/html; charset=UTF-8
   link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
   link: <https://scalewp.io/>; rel=shortlink
@@ -75,9 +78,10 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
   To view the `Surrogate-Key-Raw` header, add the `Pantheon-Debug: 1` header to your request:
 
   ```bash{outputLines:2-21}
-  curl -IsH "Pantheon-Debug:1" https://scalewp.io
+  curl -Is -H "accept-encoding: gzip, deflate, br" -H "Pantheon-Debug:1" https://scalewp.io
   HTTP/2 200
   cache-control: public, max-age=86400
+  content-encoding: gzip
   content-type: text/html; charset=UTF-8
   link: <https://scalewp.io/wp-json/>; rel="https://api.w.org/"
   link: <https://scalewp.io/>; rel=shortlink
