@@ -2,7 +2,7 @@
 title: Launch Check - Drupal Performance and Configuration Analysis
 description: Detailed information on Launch Check, Drupal Performance and Configuration Analysis.
 tags: [status]
-category: [drupal7]
+categories: [drupal7]
 ---
 Pantheon provides static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the **Status** tab and are accessible by site team members.
 

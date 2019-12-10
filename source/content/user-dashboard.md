@@ -2,7 +2,7 @@
 title: User Dashboard and Account
 description: The Pantheon user entity and its relationship to Drupal or WordPress sites, teams, and organizations.
 tags: [dashboard]
-category: []
+categories: []
 ---
 
 Access all of your sites and manage your account information from the User Dashboard.

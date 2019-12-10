@@ -4,7 +4,7 @@ description: Learn how to migrate existing WordPress sites using the migration p
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [migrateguided]
-category: [develop, cli]
+categories: [get-started,develop, cli]
 layout: video
 searchboost: 50
 ---

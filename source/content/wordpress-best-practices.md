@@ -2,7 +2,7 @@
 title: WordPress Best Practices
 description: A list of suggestions for developing WordPress sites on Pantheon.
 tags: [workflow]
-category: [wordpress]
+categories: [wordpress]
 ---
 
 This article provides suggestions, tips, and best practices for developing and managing WordPress sites on the Pantheon platform.

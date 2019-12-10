@@ -4,7 +4,7 @@ description: Interact with WordPress from a command line interface.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [devwpcli]
-category: [wordpress]
+categories: [wordpress]
 layout: video
 searchboost: 50
 ---

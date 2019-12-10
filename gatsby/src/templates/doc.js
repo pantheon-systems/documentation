@@ -65,7 +65,7 @@ class DocTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/assets/images/default-thumb-doc.png"}
-          category={node.frontmatter.category}
+          categories={node.frontmatter.categories}
           tags={node.frontmatter.tags}
         />
         <div className="">
@@ -118,7 +118,7 @@ export const pageQuery = graphql`
         title
         description
         getfeedbackform
-        category
+        categories
         contributors {
           id
           name
