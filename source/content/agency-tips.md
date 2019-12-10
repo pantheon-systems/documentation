@@ -2,7 +2,7 @@
 title: Pantheon Agency Tips
 description: Tips for agencies working on Pantheon.
 tags: [tools]
-category: []
+categories: []
 contributors: [davidneedham]
 searchboost: 90
 ---

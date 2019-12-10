@@ -4,7 +4,7 @@ description: Interact with Drupal from the command line.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [devdrush]
-category: [drupal]
+categories: [drupal]
 layout: video
 searchboost: 50
 ---

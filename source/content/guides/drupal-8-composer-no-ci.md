@@ -2,7 +2,7 @@
 title: Drupal 8 and Composer on Pantheon Without Continuous Integration
 description: Learn how to manage Drupal 8 using Composer with Pantheon.
 tags: [moreguides, composer]
-category: [guides]
+categories: [guides]
 layout: doc
 permalink: docs/guides/:basename/
 contributors: [ataylorme, dwayne, davidneedham]

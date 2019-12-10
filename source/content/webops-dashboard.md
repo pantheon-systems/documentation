@@ -2,7 +2,7 @@
 title: Visualize Site Activity with the WebOps Dashboard
 description: Gain valuable insight to your site's development and collaboration with Pantheon's WebOps Dashboard.
 tags: [dashboard, webops, analytics]
-category: [platform]
+categories: [platform]
 contributors: [edwardangert]
 searchboost: 150
 ---

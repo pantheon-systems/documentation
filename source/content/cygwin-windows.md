@@ -2,7 +2,7 @@
 title: Install Cygwin on Windows
 description: Learn how to install and configure Cygwin on Windows computers for Pantheon sites.
 tags: [local]
-category: []
+categories: []
 deprecated: true
 deprecatednote: Terminus is no longer supported on Windows, and this document is unmaintained. See the [Terminus Support](/platform-considerations/#terminus-support) section of Platform Considerations for more information.
 ---

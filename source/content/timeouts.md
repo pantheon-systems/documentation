@@ -2,7 +2,7 @@
 title: Timeouts on Pantheon
 description: Detailed information about timeout errors on your site.
 tags: [debugging, timeouts, drush, terminus, drupal, wordpress, solr]
-category: [troubleshoot]
+categories: [troubleshoot]
 ---
 Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. Sometimes timeouts can be reached when working with inefficient code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus/).
 

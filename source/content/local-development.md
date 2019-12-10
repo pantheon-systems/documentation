@@ -2,7 +2,7 @@
 title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
 tags: [local development, sftp, Lando, workflow]
-category: [develop]
+categories: [develop]
 ---
 
 <Alert title="Pantheon Localdev" type="success" icon="star">

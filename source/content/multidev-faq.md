@@ -2,7 +2,7 @@
 title: Multidev FAQ
 description: A quick reference to answer some of the most frequently asked questions about Multidev.
 tags: [tools, workflow]
-category: []
+categories: []
 ---
 For information about what Multidev is and how to use it, see our full guide on [Multidev](/multidev/).
 
