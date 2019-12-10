@@ -2,7 +2,7 @@
 title: AWS S3 Setup for WordPress
 description: Add the ability to integrate with AWS S3 to a WordPress site on Pantheon
 tags: [siteintegrations]
-categories: [wordpress]
+category: [wordpress]
 contributors: [sarahg]
 date: 6/4/2018
 ---

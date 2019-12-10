@@ -2,7 +2,7 @@
 title: Pantheon Site Regions and Data Residency
 description: Learn how to launch sites in Australia, Canada, or the European Union.
 tags: [create, regions]
-categories: []
+category: []
 contributors: [edwardangert, rachelwhitton, ari]
 searchboost: 150
 ---

@@ -2,7 +2,7 @@
 title: Email on Pantheon
 description: Detailed information on outgoing mail and email hosting for your Pantheon Drupal or WordPress site.
 tags: [services]
-categories: []
+category: []
 ---
 ## Incoming Email
 
