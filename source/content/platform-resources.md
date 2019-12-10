@@ -2,7 +2,7 @@
 title: Platform Resources for Legacy Plans
 description: Get detailed information about platform resources for your Drupal or WordPress site.
 tags: [services]
-categories: []
+category: []
 ---
 
 This page reflects resources for legacy site plans. Sites that have been upgraded or launched to our new plans should refer to <a data-proofer-ignore href="/docs/new-plans-faq/#what-are-the-resource-comparisons-between-new-and-legacy-plans" class="external">New Site Plans FAQs</a> for a comparison on resources by plan.

@@ -2,7 +2,7 @@
 title: Using IndexDepot With Pantheon Sites
 description: Learn how to create and configure IndexDepot with Solr for advanced search indexing features for your Drupal or WordPress sites.
 tags: [solr,indexdepot,search]
-categories: [integration]
+category: [integration]
 ---
 ## Overview
 

@@ -2,7 +2,7 @@
 title: Configure Redirects
 description: Review considerations and recommendations on how to handle redirect logic via PHP within your site's configuration file.
 tags: [redirects, variables, dns]
-categories: []
+category: []
 ---
 Configure redirects within `settings.php` (Drupal) or `wp-config.php` (WordPress), adjusting placeholder values within snippets as needed (e.g., `example.com`).
 

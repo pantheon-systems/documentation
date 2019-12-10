@@ -4,7 +4,7 @@ description: Understand frontend and backend caching on our platform.
 contributors:  [dwayne]
 permalink:  docs/videos/:basename/
 tags: [cacheedge]
-categories: [develop, cli]
+category: [develop, cli]
 layout: video
 searchboost: 50
 ---

@@ -2,7 +2,7 @@
 title: Automating and Integrating your Pantheon WebOps Workflow with Quicksilver Platform Hooks
 description: Learn how to use Quicksilver to automate your WebOps workflow.
 tags: [pantheonyml, infrastructure]
-categories: []
+category: []
 ---
 
 Hook into platform workflows to automate your Pantheon WebOps workflow. Tell us which script you want to run, and we'll run it automatically every time you or another team member triggers the corresponding workflow. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
