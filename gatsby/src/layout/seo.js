@@ -43,8 +43,6 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
     property: `og:article:tags`,
     content: `${tags}`
   } : {
-    property: `og:article:tags`,
-    tags: `${category}`
   }
 
 
