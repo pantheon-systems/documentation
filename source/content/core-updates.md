@@ -1,6 +1,7 @@
 ---
 title: WordPress and Drupal Core Updates
 description: Detailed information on applying and debugging upstream updates from Pantheon or a Custom Upstream.
+categories: [get-started]
 tags: [dashboard, devterminus, git]
 contributors: [cityofoaksdesign, rachelwhitton, alexfornuto]
 ---
