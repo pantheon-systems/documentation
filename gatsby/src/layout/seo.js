@@ -39,7 +39,7 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
     title: site.siteMetadata.title
   }
 
-  const tagValues = tags.length ?         {
+  const tagValues = tags && tags.length ?         {
     property: `og:article:tags`,
     content: `${tags}`
   } : {
