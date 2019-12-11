@@ -108,7 +108,7 @@ Alternately, consider restoring only the code and database from backups, and mov
 
 ### Restore Large Site with Terminus and Rsync
 
-Using [Terminus](/terminus/), you can restore all or part of a site from the commandline. This is useful if you need to only restory one part of the site (code, database, files), or want to script a restoration process.
+Using [Terminus](/terminus/), you can restore all or part of a site from the command line. This is useful if you need to only restore one part of the site (code, database, files), or want to script a restoration process.
 
 <Alert title ="Variables" type="export">
 
@@ -116,18 +116,18 @@ The commands below assume environment variables for `SITE` which is equal to you
 
 ```bash{promptUser:user}
 export SITE=yourSiteName
-export ENV=dev #or different environment name
+export ENV=dev # or different environment name
 ```
 
 </Alert>
 
-1. Download the **Files** backups using the link providede in the Site Dasboard <span class="glyphicons glyphicons-download-alt"></span> **Backups** Tab:
+1. Download the **Files** backups using the link provided in the Site Dasboard <span class="glyphicons glyphicons-download-alt"></span> **Backups** Tab:
 
   ```bash{promptUser:user}
   wget https://storage.googleapis.com/gcs-pantheon-backups/... -O file-backup.tar.gz
   ```
 
-1. Restore Code and Database backups:
+1. Restore Code and/or Database backups:
 
   ```bash{promptUser:user}
   terminus backup:restore $SITE.$ENV --element=code
@@ -145,6 +145,7 @@ export ENV=dev #or different environment name
   ```bash{promptUser:user}
   cd files_$ENV
   rsync -rvlz --progress -e'ssh -p 2222' ./ --temp-dir=~/tmp/ $ENV.$SITE@appserver.$ENV.$SITE.drush.in:files/
+  ```
 
 See [rsync and SFTP](/rsync-and-sftp/#rsync) for more information on constructing your rsync command.
 
