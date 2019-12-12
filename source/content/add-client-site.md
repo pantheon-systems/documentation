@@ -2,7 +2,7 @@
 title: Add a Client Site to Your Organization Dashboard
 description: Learn how to add a client to your Partner Agency to share special features and pricing.
 tags: [manage, billing]
-categories: []
+categories: [manage]
 contributors: [edwardangert]
 searchboost: 150
 ---
