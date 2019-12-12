@@ -2,7 +2,7 @@
 title: Testing Global CDN Caching
 description: Detailed information on how to determine if CDN caching is working on your site.
 tags: [cacheedge]
-categories: []
+categories: [performance]
 ---
 ## Verify the Global CDN is Working on Your Pantheon Site
 
