@@ -2,7 +2,7 @@
 title: PHP Errors and Exceptions
 description: Detailed information about basic PHP errors on your Pantheon Drupal or WordPress site.
 tags: [debugcode]
-categories: []
+categories: [troubleshoot]
 ---
 There are three basic kinds of PHP errors:
 
