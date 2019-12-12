@@ -2,7 +2,7 @@
 title: New Site Plans FAQs
 description: Find answers to common questions related to Pantheon's new site plans and pricing changes.
 tags: [billing]
-categories: []
+categories: [manage]
 searchboost: 70
 ---
 ## Impacted Sites

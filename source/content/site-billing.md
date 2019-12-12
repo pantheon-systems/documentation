@@ -2,7 +2,7 @@
 title: Billing in the Site Dashboard
 description: Add a new credit card, remove the current card or transfer billing to a new site owner within the Billing tab of the Settings tool in the Site Dashboard.
 tags: [billing]
-categories: []
+categories: [manage]
 ---
 
 <Alert title="Note" type="info">
