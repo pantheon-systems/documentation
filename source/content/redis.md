@@ -2,7 +2,7 @@
 title: Installing Redis on Drupal or WordPress
 description: Understand how to use Redis as a caching mechanism for your Pantheon site.
 tags: [cacheapp, addons]
-categories: [performance]
+categories: [performance,develop]
 contributors: [cityofoaksdesign]
 ---
 Redis is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.

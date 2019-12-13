@@ -2,7 +2,7 @@
 title: Using Terminus to Create and Update Drupal Sites on Pantheon
 description: Detailed information on creating and updating new Pantheon Drupal sites using Terminus and the command line.
 tags: [devterminus, create, moreguides]
-categories: [get-started, workflow]
+categories: [get-started, workflow,develop]
 type: guide
 permalink: docs/guides/:basename/
 contributors: [erikmathy]

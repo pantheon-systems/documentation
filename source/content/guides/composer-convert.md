@@ -4,6 +4,7 @@ description: Drupal 8 sites often require the usage of Composer to manage site d
 type: guide
 permalink: docs/guides/:basename/
 tags: [moreguides, workflow, composer]
+categories: [develop]
 contributors: [dustinleblanc]
 ---
 

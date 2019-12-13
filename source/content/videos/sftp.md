@@ -4,6 +4,7 @@ description: Develop on Pantheon directly via SFTP.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [admin, sftpfiles]
+categories: [develop]
 searchboost: 50
 layout: video
 ---

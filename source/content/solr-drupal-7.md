@@ -2,7 +2,7 @@
 title: Enabling Solr with Drupal 7
 description: Detailed information on using Apache Solr with Drupal 7.
 tags: [siteintegrations, addons, search index, solr]
-categories: [drupal,integrate]
+categories: [drupal,integrate,develop]
 contributors: [cityofoaksdesign]
 ---
 [Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
