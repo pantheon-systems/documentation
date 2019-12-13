@@ -2,7 +2,7 @@
 title: Using Opensolr With Pantheon Sites
 description: Learn how to create and configure Opensolr with Solr for advanced search indexing features for your Drupal sites.
 tags: [solr,opensolr,search,Drupal,]
-categories: [integration]
+categories: [integrate]
 contributors: [carolynshannon]
 ---
 
