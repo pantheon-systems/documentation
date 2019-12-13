@@ -4,6 +4,7 @@ subtitle: Merge Your Work
 description: In step seven of the Build Tools guide, learn how to merge your branches into the master branch.
 buildtools: true
 anchorid: merge
+categories: [develop]
 generator: pagination
 layout: guide
 type: guide
