@@ -126,7 +126,7 @@ function SEO({ description, lang, meta, keywords, title, authors, image }) {
         )
         .concat(meta)}
     >
-      <script>
+      <script
         dangerouslySetInnerHTML={{
           __html: `
               window.ATP = window.ATP || [];
@@ -153,7 +153,7 @@ function SEO({ description, lang, meta, keywords, title, authors, image }) {
               });
           `
         }}
-      </script>
+      />
   </Helmet>
   )
 }
