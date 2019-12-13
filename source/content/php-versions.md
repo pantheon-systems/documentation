@@ -2,7 +2,7 @@
 title: Upgrade PHP Versions
 description: Learn how to upgrade PHP versions to resolve  compatibility issues.
 tags: [pantheonyml, services]
-categories: []
+categories: [workflow]
 ---
 Upgrading your site's PHP version will improve the security, performance, and supportability of your site. See our blog post for an [example of 62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
