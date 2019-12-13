@@ -3,6 +3,7 @@ title: Build Tools
 subtitle: Manage Configuration
 description: In step four of the Build Tools guide, learn how to manage your site configuration.
 anchorid: configure
+categories: [develop]
 layout: guide
 permalink: docs/guides/build-tools/configure/
 nexturl: guides/build-tools/extend/
