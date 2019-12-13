@@ -4,7 +4,7 @@ description: Understand and use Git with Pantheon.
 contributors:  [scottmassey]
 permalink:  docs/videos/:basename/
 tags: [git]
-categories: [develop, cli]
+categories: [develop, cli,develop]
 layout: video
 searchboost: 50
 ---

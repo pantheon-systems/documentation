@@ -2,7 +2,7 @@
 title: Using WP-CLI On The Pantheon Platform
 description: Administer and maintain your WordPress site on Pantheon using the command-line.
 tags: [devwpcli]
-categories: [wordpress,workflow]
+categories: [wordpress,workflow,develop]
 ---
 
 [WP-CLI](https://make.wordpress.org/cli/handbook/) is a command-line interface to WordPress. It provides a [wide range of utilities](https://developer.wordpress.org/cli/commands/) for managing your WordPress site. Virtually any action you can perform through the WordPress admin, you can also do with WP-CLI.

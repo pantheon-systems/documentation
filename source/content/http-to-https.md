@@ -2,6 +2,7 @@
 title: Switching Sites from HTTP to HTTPS
 description: Best-practice HTTPS configurations for WordPress and Drupal to fix mixed-content browser warnings and excessive redirects.
 tags: [security]
+categories: [develop]
 ---
 All new sites created on Pantheon are configured for HTTPS by default. HTTPS is available immediately for Platform domains like `multidev-example.pantheonsite.io`.
 
