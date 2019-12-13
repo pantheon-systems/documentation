@@ -2,7 +2,7 @@
 title: Pantheon Filesystem
 description: Detailed information on how to access and optimize the Pantheon filesystem.
 tags: [infrastructure, sftpfiles]
-categories: []
+categories: [platform]
 ---
 Files are user uploads, usually images or documents. They are excluded from version control via Pantheon's .gitignore files <Popover content="The [.gitignore file](https://git-scm.com/docs/gitignore) is located at the root of the site's codebase and instructs Git which paths should be ignored." />:
 
