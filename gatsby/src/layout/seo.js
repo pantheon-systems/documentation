@@ -137,7 +137,36 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
           })
         )
         .concat(meta)}
-    />
+    >
+          <script>
+    dangerouslySetInnerHTML={{
+        __html: `
+            window.ATP = window.ATP || [];
+            window.ATP.push(function(ATP){
+              ATP.init({
+                debug: true,
+                ctaSelector: '.btn, .cta',
+
+                visibleElements: {
+                  'Form': 'form'
+                },
+                nav: {
+                  'Header Nav': 'header ul li *',
+                  'Footer Nav': 'footer ul li *',
+                  'Side Nav': '#sideNav',
+                  'Misc Nav': 'nav'
+                },
+                visibleElements: {
+                  'Form': 'form',
+                  'CTA': '.btn',
+                  'Footer': '#footer',
+                },
+              });
+            });
+        `
+      }}
+    </script>
+  </Helmet>
   )
 }
 
