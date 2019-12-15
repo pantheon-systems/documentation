@@ -977,7 +977,7 @@ For more details, see WPML's documentation on troubleshooting .mo files generati
 1. In `wp-config.php`, add the following after the `define('WP_TEMP_DIR', $_SERVER['HOME'] .'/tmp');` line:
 
   ```php:title=wp-config.php
-  ( 'WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages' );
+  define('WP_LANG_DIR', $_SERVER['HOME'] .'/files/languages');
   ```
 
 2. Create the `languages` directory inside `/files` for each environment.
