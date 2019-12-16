@@ -3,6 +3,7 @@ title: Pantheon Modules
 description: Details on specific Drupal modules developed and maintained for the Pantheon Website Management Platform workflow.
 contributors: [eabquina]
 tags: [siteintegrations, infrastructure, cacheedge]
+categories: [performance,integrate,platform]
 ---
 Pantheon maintains several modules to extend and integrate Drupal on the platform. For real time discussion of these modules, find Pantheon developers in our [Pantheon Community](/pantheon-community/) Slack channel.
 

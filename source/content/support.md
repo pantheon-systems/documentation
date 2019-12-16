@@ -2,7 +2,7 @@
 title: Get Support
 description: Learn how to access Pantheon's expert team and what your support package includes.
 tags: [dashboard]
-categories: []
+categories: [get-started]
 ---
 
 ![Screenshot of the Support Tab](../images/dashboard/support-tab.png)

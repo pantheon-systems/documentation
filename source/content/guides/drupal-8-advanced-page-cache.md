@@ -2,7 +2,7 @@
 title: Setting and Clearing Custom Cache Tags in Drupal 8
 description: Learn how to use Views Cache Tags module along with custom code to control Pantheon Advanced Page Cache.
 tags: [moreguides]
-categories: [drupal]
+categories: []
 type: guide
 permalink: docs/guides/:basename/
 contributors: [stevector, dwayne, davidneedham]

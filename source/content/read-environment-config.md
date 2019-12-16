@@ -2,7 +2,7 @@
 title: Reading Pantheon Environment Configuration
 description: Learn about the separation of configuration and code for your Drupal or WordPress site within the Pantheon's runtime container environment.
 tags: [variables, infrastructure]
-categories: []
+categories: [platform,develop]
 ---
 Pantheon promotes the separation of configuration and code, especially where security is a concern. You should never copy/paste credentials from your Dashboard into any of your site's code.
 

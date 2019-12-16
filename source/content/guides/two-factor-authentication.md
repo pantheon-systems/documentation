@@ -2,7 +2,7 @@
 title: Secure Your Site with Two-Factor Authentication
 description: Set up two-factor authentication on your Pantheon Drupal or WordPress site as an added security measure.
 tags: [siteintegrations, security, moreguides]
-categories: []
+categories: [drupal,integrate,develop]
 type: guide
 permalink: docs/guides/:basename/
 contributors: [populist]

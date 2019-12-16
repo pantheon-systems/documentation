@@ -4,7 +4,7 @@ description: Configure our platform for your needs.
 contributors:  [davidneedham]
 permalink:  docs/videos/:basename/
 tags: [pantheonyml]
-categories: [develop, cli]
+categories: [develop, cli, workflow,platform]
 layout: video
 searchboost: 50
 ---

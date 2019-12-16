@@ -5,6 +5,7 @@ description: In step nine of the Build Tools guide, learn how to update your sit
 buildtools: true
 anchorid: update
 generator: pagination
+categories: [develop]
 survey: true
 layout: guide
 type: guide

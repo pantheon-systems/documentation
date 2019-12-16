@@ -2,7 +2,7 @@
 title: Managing Drush Versions on Pantheon
 description: Learn about Pantheon's default Drush version and how to implement site-local usage.
 tags: [devdrush, services, pantheonyml]
-categories: [drupal]
+categories: [drupal,workflow,platform,develop]
 ---
 By default, Pantheon runs Drush 8 on newly created Drupal sites. Drush 8 is compatible with Drupal 6, 7, and 8.
 

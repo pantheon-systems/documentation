@@ -2,6 +2,7 @@
 title: "HTTPS on Pantheon's Global CDN"
 description: "Learn the specifics of Pantheon's Free and Automated HTTPS, powered by Let's Encrypt"
 tags: [dns, security]
+categories: [go-live,develop]
 layout: doc
 permalink: docs/:basename/
 searchboost: 200

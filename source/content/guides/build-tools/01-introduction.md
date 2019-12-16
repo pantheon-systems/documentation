@@ -3,6 +3,7 @@ title: Build Tools
 subtitle: Introduction
 description: Create a site that manages its files using Composer, and uses a GitHub PR workflow with Behat tests run via Circle CI.
 tags: [automate, composer]
+categories: [develop]
 contributors: [greg-1-anderson, stevector, ataylorme, rachelwhitton]
 layout: guide
 type: guide

@@ -65,6 +65,8 @@ class DocTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/assets/images/default-thumb-doc.png"}
+          categories={node.frontmatter.categories}
+          tags={node.frontmatter.tags}
         />
         <div className="">
           <div className="container doc-content-well">
@@ -116,6 +118,7 @@ export const pageQuery = graphql`
         title
         description
         getfeedbackform
+        categories
         contributors {
           id
           name
@@ -125,6 +128,7 @@ export const pageQuery = graphql`
           url
         }
         featuredcontributor
+        tags
       }
       fileAbsolutePath
     }

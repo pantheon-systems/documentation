@@ -6,6 +6,7 @@ description: Manual for our command line interface, Terminus, for advanced inter
 type: terminuspage
 layout: terminuspage
 tags: [devterminus]
+categories: [workflow,develop]
 permalink: docs/:basename/
 nexturl: terminus/install/
 image: terminus-thumbLarge

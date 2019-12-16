@@ -1,7 +1,7 @@
 ---
 title: Debug Intermittent PHP 7 Notices
 description: Debug and fix "Deprecated Constructor" notices in your Pantheon site.
-categories: []
+categories: [troubleshoot]
 tags: [debugcode]
 contributors: [greg-1-anderson]
 ---
