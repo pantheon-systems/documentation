@@ -36,14 +36,6 @@ module.exports = {
       }
     },
     {
-      resolve: "gatsby-plugin-segment-js",
-      options: {
-        prodKey: process.env.SEGMENT_KEY,
-        devKey: process.env.SEGMENT_KEY,
-        trackPage: false,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/../source/partials`,
