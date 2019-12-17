@@ -168,7 +168,7 @@ Normally the next step would go through the standard Drupal installation. But si
    git push --force
    ```
 
-   **Note:** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our Build Tools guide](/guides/build-tools/) for documentation on the more advanced automated workflow with a build step.
+   **Note:** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our Build Tools guide](/guides/build-tools/) for documentation on the more advanced automated workflow with a build step. With Build Tools, you can also use `terminus build:env:push` for this step. 
 
 ### Installing Drupal
 
