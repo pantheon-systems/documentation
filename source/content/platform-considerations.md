@@ -247,7 +247,7 @@ For Dev environments in SFTP mode, the entire codebase is writable. However the 
 
 Any modules for Drupal or plugins for WordPress that need to write to the codebase (and assume write access) need a symlink added so that they will instead write to the file system. For more information, read [Using Extensions That Assume Write Access](/assuming-write-access/).
 
-## Outbound UDP
+## UDP
 
 Pantheon's platform security controls for [boundary defense](https://www.cisecurity.org/controls/boundary-defense/) include blocking most [UDP traffic](https://en.wikipedia.org/wiki/User_Datagram_Protocol) originating from website containers, in order to prevent platform abuse.
 
