@@ -79,6 +79,7 @@ class DocTemplate extends React.Component {
                 contributors={node.frontmatter.contributors}
                 featured={node.frontmatter.featuredcontributor}
                 editPath={node.fields.editPath}
+                reviewDate={node.frontmatter.reviewed}
               />
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
@@ -128,6 +129,7 @@ export const pageQuery = graphql`
           url
         }
         featuredcontributor
+        reviewed(formatString: "MMMM DD, YYYY")
         tags
       }
       fileAbsolutePath

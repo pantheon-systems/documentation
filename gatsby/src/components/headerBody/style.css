@@ -12,3 +12,7 @@
   letter-spacing: -0.2px;
   line-height: 1.5em;
 }
+.review-date {
+  font-family: "Open Sans", "sans-serif";
+  color: #8f9192;
+}

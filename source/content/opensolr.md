@@ -4,6 +4,7 @@ description: Learn how to create and configure Opensolr with Solr for advanced s
 tags: [solr,opensolr,search,Drupal,]
 categories: [integrate]
 contributors: [carolynshannon]
+reviewed: "2019-11-06"
 ---
 
 ## Overview

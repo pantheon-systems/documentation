@@ -7,8 +7,9 @@ import Slack from "../slack"
 import ContributorGuest from "../contributorGuest"
 import './style.css';
 
-const HeaderBody = ({ title, subtitle, description, slug, contributors, featured, editPath }) => {
+const HeaderBody = ({ title, subtitle, description, slug, contributors, featured, editPath, reviewDate }) => {
   const contributor = contributors ? contributors[0] : null;
+  const lastReviewed = reviewDate ? "Last Reviewed: " + reviewDate : null;
   return (
     <>
       <header className="buttons">
@@ -25,7 +26,9 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
         <p className="article-subhead">
           {description}
         </p>
-
+        <p className="review-date">
+          {lastReviewed}
+        </p>
         {!featured && <Contributors contributors={contributors} />}
 
         <Github
