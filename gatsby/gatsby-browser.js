@@ -15,8 +15,3 @@ require("tocbot/dist/tocbot.css")
 require("tocbot/dist/tocbot.min.js")
 
 require("./src/styles/global.scss")
-
-//Segment
-exports.onRouteUpdate = () => {
-    window.analytics && window.analytics.page({url: window.location.href});
-};
