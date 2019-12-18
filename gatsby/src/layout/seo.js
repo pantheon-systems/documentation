@@ -151,8 +151,8 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
                     'Form': 'form'
                   },
                   nav: {
-                    'Header Nav': 'header ul li *',
-                    'Footer Nav': 'footer ul li *',
+                    'Header Nav': '#header ul li *',
+                    'Footer Nav': '#footer ul li *',
                     'Side Nav': '#sideNav',
                     'Misc Nav': 'nav'
                   },

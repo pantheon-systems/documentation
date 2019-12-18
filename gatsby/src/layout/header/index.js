@@ -5,7 +5,7 @@ import AddSearch from "../../components/addSearch"
 
 const Header = ({ data }) => (
   <>
-    <div className="navbar navbar-fixed-top pio-docs-nav" role="navigation">
+    <div className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
       <div className="navbar-header">
         <button
           type="button"
