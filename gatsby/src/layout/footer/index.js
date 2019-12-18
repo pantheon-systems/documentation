@@ -101,10 +101,10 @@ const Footer = ({ data }) => {
                       <h4 className="block__title">Help</h4>
                       <ul className="menu">
                         <li className="first leaf menu-mlid-1151">
-                          <a href="https://pantheon.io/contact-us" class=".cta .docs-cta">Contact</a>
+                          <a href="https://pantheon.io/contact-us" class="cta docs-cta">Contact</a>
                         </li>
                         <li className="leaf menu-mlid-1152">
-                          <a href="https://pantheon.io/agencies/agency-match" class=".cta .docs-cta">
+                          <a href="https://pantheon.io/agencies/agency-match" class="cta docs-cta">
                             Hire an Agency
                           </a>
                         </li>
