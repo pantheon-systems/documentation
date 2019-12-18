@@ -78,6 +78,50 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 ## Examples
 
+### Divi theme version 4.0.6 and above
+
+As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues#divi-wordpress-theme--visual-page-builder), [Divi WordPress Theme & Visual Page Builder version 4.0.6 and above](https://www.elegantthemes.com/gallery/divi/) is assumes write access to the code base where the `et-cache` folder is located.
+
+<Alert  title="Note" type="info">
+
+You must manually create the target folders `wp-content\et-cache` for Dev, Test, Live, and any Multidev environments.
+
+</Alert>
+
+#### For MacOS & Linux:
+From the `wp-content` directory:
+
+```bash
+ln -s ./uploads/et-cache ./et-cache
+```
+
+
+To verify, use `ls -al`:
+
+```
+et-cache -> ./uploads/et-cache
+```
+
+#### For Windows:
+Note that the syntax for Window's Command Prompt is opposite from MacOS and Linux, requiring the symlink path *before* the target:
+
+```bash
+mklink /d .\wp-content\et-cache .\uploads\et-cache
+```
+
+Each command will return the following upon success:
+
+```
+symbolic link created for .\wp-content\et-cache <<===>> .\uploads\et-cache
+```
+
+To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
+You can also verify success using `dir`:
+
+```
+<SYMLINKD>        et-cache [.\uploads\et-cache]
+```
+
 ### WP-Rocket
 
 As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/) assumes write access to the code base.
