@@ -18,7 +18,7 @@ const ChangelogPreview = (props) => {
 					</MDXProvider>
 					<Link
 						to={`${url}/`}
-						className="cta"
+						className="ctaBtn cta"
 					>
 						Read More
 					</Link>
