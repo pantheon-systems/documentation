@@ -103,7 +103,7 @@ et-cache -> ./uploads/et-cache
 ```
 
 #### For Windows:
-Note that the syntax for Window's Command Prompt is opposite from MacOS and Linux, requiring the symlink path *before* the target:
+Note that the syntax for Window's Command Prompt is opposite from MacOS and Linux, requiring the symlink path *before* the target, from the root of your installation run as and admin these commands:
 
 ```bash
 mklink /d .\wp-content\et-cache .\uploads\et-cache
