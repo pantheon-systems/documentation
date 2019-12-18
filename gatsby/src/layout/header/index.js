@@ -42,7 +42,7 @@ const Header = ({ data }) => (
               href="https://pantheon.io/register"
               target="_blank"
               rel="noopener"
-              className="cta cta-yellow"
+              className="cta cta-yellow docs-cta"
             >
               Get Free Account
             </a>
