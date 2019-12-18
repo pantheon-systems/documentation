@@ -24,17 +24,17 @@ li.create-account {
 	padding-left: 20px !important;
 	padding-bottom: 24px !important;
 }
-a.cta.cta-yellow:hover {
+a.ctaBtn.cta-yellow:hover {
   background-color: #fff !important;
   color: #000 !important;
   box-shadow: none !important;
 }
-a.cta.cta-yellow {
+a.ctaBtn.cta-yellow {
   background: #efd01b !important;
   color: #000 !important;
 }
-a.cta.cta-yellow:hover,
-a.cta.cta-yellow:after:hover {
+a.ctaBtn.cta-yellow:hover,
+a.ctaBtn.cta-yellow:after:hover {
   background: white !important;
   box-shadow: none !important;
 }
@@ -521,7 +521,7 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 	.pio-docs-nav .navbar-nav > .active > a:hover {
 		padding-bottom: 20px;
 	}
-	.pio-docs-nav li.create-account a.cta.cta-yellow {
+	.pio-docs-nav li.create-account a.ctaBtn.cta-yellow {
 		padding-left: 30px !important;
 	}
 	.navsearch-container {
@@ -545,14 +545,14 @@ i.landing-search.form-control-feedback.glyphicon.glyphicon-search {
 		padding: 0 !important;
 	}
 
-	.pio-docs-nav li.create-account a.cta.cta-yellow {
+	.pio-docs-nav li.create-account a.ctaBtn.cta-yellow {
 		background: none !important;
 		color: #fff !important;
 		font-size: 13px !important;
 		padding-left: 40px;
 		padding-bottom: 0px !important;
 	}
-	.pio-docs-nav li.create-account a.cta.cta-yellow:hover {
+	.pio-docs-nav li.create-account a.ctaBtn.cta-yellow:hover {
 		color: #efd01b !important;
 	}
 	.pio-docs-nav .navbar-nav > li > a:hover,
