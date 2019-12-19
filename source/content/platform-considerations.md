@@ -249,7 +249,7 @@ Any modules for Drupal or plugins for WordPress that need to write to the codeba
 
 ## UDP
 
-Pantheon's platform security controls for [boundary defense](https://www.cisecurity.org/controls/boundary-defense/) include blocking most [UDP traffic](https://en.wikipedia.org/wiki/User_Datagram_Protocol) originating from website containers, in order to prevent platform abuse.
+Pantheon's platform security controls include blocking most [UDP traffic](https://en.wikipedia.org/wiki/User_Datagram_Protocol) originating from website containers, in order to prevent platform abuse.
 
 ## XML-RPC
 
