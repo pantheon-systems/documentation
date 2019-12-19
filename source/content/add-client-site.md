@@ -6,7 +6,7 @@ categories: [manage,go-live]
 contributors: [edwardangert]
 searchboost: 150
 ---
-[Partner Agencies](https://pantheon.io/plans/partner-program) on Pantheon receive additional levels of support and [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) for themselves and their clients. This doc explains how to share those benefits by adding a client's site to your Agency.
+<ExternalLink text="Partner Agencies" link="https://pantheon.io/plans/partner-program"/> on Pantheon receive additional levels of support and [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) for themselves and their clients. This doc explains how to share those benefits by adding a client's site to your Agency.
 
 While many of these steps are followed through the normal course of an Agency-Client relationship. We've collected them here as a quick reference.
 
@@ -24,6 +24,7 @@ In order to share Preferred Pricing with a new client or to maintain Preferred P
 <Partial file="invite-to-pay.md" />
 
 ## Accepting an Invitation to Pay
+
 1. When a supporting organization is ready to transfer ownership of the site to you, you'll receive an email inviting you to pay for the site:
 
    ![Emailed invitation to pay](../images/dashboard/invitation-to-pay.png)

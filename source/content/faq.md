@@ -63,7 +63,7 @@ Yes. Pantheon sites run on a highly available clustered infrastructure.
 
 Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools/), or by syncing your code to [multiple remotes](/guides/collaborative-development).
 
-[Partner Agencies](https://pantheon.io/agencies/partner-program), [Enterprise](https://pantheon.io/pantheon-enterprise), and [EDU](https://pantheon.io/edu) accounts can also set up a [custom upstream](/custom-upstream/).
+<ExternalLink link="https://pantheon.io/agencies/partner-program" text="Partner Agencies"/>, <ExternalLink text="Enterprise" link="https://pantheon.io/plans/elite" />, and <ExternalLink text="EDU" link="https://pantheon.io/edu"/> accounts can also set up a [custom upstream](/custom-upstream/).
 
 ### Does Pantheon support Drupal Multisite?
 
