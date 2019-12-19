@@ -11,11 +11,7 @@ Drupal 8 sites on Pantheon run an unmodified version of core, bundled with a cus
 
 For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server to automatically specify configuration settings, such as the database configuration without editing `settings.php`. Permissions are handled automatically by Pantheon, so you can customize `settings.php` like any other site code.
 
-<Alert title="Warning" type="danger">
-
-You should never put the database connection information for a Pantheon database within your `settings.php` file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.
-
-</Alert>
+<Partial file="drupal-8-8-warning.md" />
 
 ## Pantheon Articles on settings.php
 
@@ -28,6 +24,12 @@ The following articles include techniques and configurations for `settings.php` 
 - [SSO and Identity Federation](/sso) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development
+
+<Alert title="Warning" type="danger">
+
+You should never put the database connection information for a Pantheon database within your `settings.php` file. These credentials will change. If you are having connection errors, make sure you are running Pressflow core. This is a requirement.
+
+</Alert>
 
 Use these configuration snippets to specify a local configuration that will be ignored by Pantheon, such as database credentials.
 
