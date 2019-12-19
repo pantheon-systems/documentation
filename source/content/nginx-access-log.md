@@ -6,11 +6,11 @@ categories: [performance]
 goaccess: true
 contributors: [albertcausing]
 ---
-Pantheon runs NGINX web servers for optimal performance. Your site's NGINX access logs record web server events and activities that can help you identify potential issues and gather information about users.
+Pantheon runs nginx web servers for optimal performance. Your site's nginx access logs record web server events and activities that can help you identify potential issues and gather information about users.
 
 <Alert title="Note" type="info">
 
-Requests served by the [Pantheon Global CDN](/global-cdn) will not hit the NGINX webserver and will not be logged in `nginx-access.log`.
+Requests served by the [Pantheon Global CDN](/global-cdn) will not hit the nginx webserver and will not be logged in `nginx-access.log`.
 
 </Alert>
 
@@ -43,7 +43,7 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
 
 ## Create a report
 
-1. [Download your NGINX log files](/logs) from Pantheon via SFTP.
+1. [Download your nginx log files](/logs) from Pantheon via SFTP.
 2. From the directory containing your `nginx-access.log` file, run GoAccess:
 
 ```bash
@@ -70,30 +70,17 @@ open report.html
 
 ## Automate GoAccess Reports
 
-Copy the following script to quickly pull a site's nginx log file and create an HTML report using GoAccess. You can use <i class="fa fa-code"> View Raw</i> to open the file in a new window or tab:
+1. Copy the general log retrieval script from [Automate Downloading Logs](logs#automate-downloading-logs), and use this to download logs from all application containers on the desired environment.
 
-<Download file="access_getlogs.sh" />
-
-GITHUB-EMBED https://github.com/pantheon-systems/documentation/tree/master/source/scripts/access_getlogs.sh.txt bash GITHUB-EMBED
-
-Make the script executable:
+2. Add the following to either `collect-logs.sh` or a separate file:
 
 ```bash
-chmod +x ~/Downloads/access_getlogs.sh
+# Unpack archived log files (optional).
+gunzip */nginx-access.log-*
+
+# Create a GoAccess report and open it in a browser.
+goaccess */nginx-access.log* > goaccess.html && open goaccess.html
 ```
-
-Move the script to `/usr/local/bin/`:
-
-```bash
-sudo mv ~/Downloads/access_getlogs.sh /usr/local/bin/access_getlogs
-```
-
-Generate a report for a given site and environment:
-
-```bash
-access_getlogs --site=<site> --env=<env>
-```
-
 
 
 ## See Also
