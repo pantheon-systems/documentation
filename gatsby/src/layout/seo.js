@@ -151,10 +151,10 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
                     'Form': 'form'
                   },
                   nav: {
-                    'Header Nav': '#header ul li *',
+                    'Header Nav': 'pio-docs-nav ul li *',
                     'Footer Nav': '#footer ul li *',
-                    'Side Nav': '#sideNav',
-                    'Misc Nav': 'nav'
+                    'Side Nav': 'manual-guide-toc',
+                    'Misc Nav': '#toc'
                   },
                   visibleElements: {
                     'Form': 'form',
