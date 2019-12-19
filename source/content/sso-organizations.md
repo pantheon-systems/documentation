@@ -6,7 +6,7 @@ categories: [manage,develop]
 ---
 Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/sso/).
 
-SAML SSO is included for customers with Diamond Support, and is available for purchase for Pantheon Organizations with Platinum or below. SAML is an organization-wide feature only and is not available on a per site or per environment basis. If you'd like to upgrade to an eligible support package, please contact [Sales](https://pantheon.io/why-pantheon-enterprise). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/agencies/partner-program) to qualify.
+SAML SSO is included for customers with Diamond Support, and is available for purchase for Pantheon Organizations with Platinum or below. SAML is an organization-wide feature only and is not available on a per site or per environment basis. If you'd like to upgrade to an eligible support package, please contact <ExternalLink text="Sales" link="https://pantheon.io/plans/elite" />. Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the <ExternalLink text="Pantheon Partner Program" link="https://pantheon.io/agencies/partner-program" /> to qualify.
 
 ## User Experience
 * User submits the Pantheon login form with their email address.
@@ -30,13 +30,13 @@ Refer to your IdP for general SAML 2.0 setup instructions. Pantheon will supply 
 
 You will need to enter the following:
 
-1.  **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Pantheon-SSO-Connection-Name`
+1. **Single sign-on URL**: `https://pantheon.auth0.com/login/callback?connection=Pantheon-SSO-Connection-Name`
 
-2.  **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
+2. **Audience URI (SP Entity ID)**: `urn:auth0:pantheon:Pantheon-SSO-Connection-Name`
 
-3.  **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), map the attributes `mail` to `user.email` and `user_name` to `user.email`.
+3. **Add an Attribute Statement** to map `mail` to `email`. If using [Okta](https://www.okta.com/), map the attributes `mail` to `user.email` and `user_name` to `user.email`.
 
-4.  **Additional configuration details:**
+4. **Additional configuration details:**
     * The post-back URL (also called Assertion Consumer Service URL) is: `https://pantheon.auth0.com/login/callback`
     * The SAML Request Binding (sent to the IdP from Auth0): `HTTP-Redirect`
     * The SAML Response Binding (how the SAML token is received by Auth0 from IdP): `HTTP-Post`

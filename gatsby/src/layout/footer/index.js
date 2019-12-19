@@ -18,12 +18,12 @@ const Footer = ({ data }) => {
         <div id="office-hours" className="office-hours">
           <p>Got questions? We've got answers!</p>
           <p>
-            <a href="https://pantheon.io/live-demo?docs" className="demo-cta">
+            <a href="https://pantheon.io/live-demo?docs" className="demo-cta cta docs-cta">
               Live Weekly Demo
             </a>{" "}
             <a
               href="https://pantheon.io/developers/office-hours?docs"
-              className="offhour-cta"
+              className="offhour-cta cta docs-cta"
             >
               Office Hours
             </a>
@@ -101,10 +101,10 @@ const Footer = ({ data }) => {
                       <h4 className="block__title">Help</h4>
                       <ul className="menu">
                         <li className="first leaf menu-mlid-1151">
-                          <a href="https://pantheon.io/contact-us">Contact</a>
+                          <a href="https://pantheon.io/contact-us" class="cta docs-cta">Contact</a>
                         </li>
                         <li className="leaf menu-mlid-1152">
-                          <a href="https://pantheon.io/agencies/agency-match">
+                          <a href="https://pantheon.io/agencies/agency-match" class="cta docs-cta">
                             Hire an Agency
                           </a>
                         </li>

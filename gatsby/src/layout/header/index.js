@@ -5,7 +5,7 @@ import AddSearch from "../../components/addSearch"
 
 const Header = ({ data }) => (
   <>
-    <div className="navbar navbar-fixed-top pio-docs-nav" role="navigation">
+    <div className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
       <div className="navbar-header">
         <button
           type="button"
@@ -42,7 +42,7 @@ const Header = ({ data }) => (
               href="https://pantheon.io/register"
               target="_blank"
               rel="noopener"
-              className="cta cta-yellow"
+              className="ctaBtn cta cta-yellow docs-cta"
             >
               Get Free Account
             </a>

@@ -15,7 +15,7 @@ completiontime: 2 hours
 image: launchGuide-twitterLarge
 ---
 
-Welcome! This guide is an online version of our [Essential Developer Training](https://pantheon.io/essential-developer-training).
+Welcome! This guide is an online version of our <ExternalLink text="Essential Developer Training" link="https://pantheon.io/essential-developer-training" />.
 
 <Enablement title="Get Instructor-Led Essential Developer Training" link="https://pantheon.io/learn-pantheon?docs">
 
@@ -32,11 +32,11 @@ In this guide, you'll learn:
 - [External Integrations - Quicksilver](/guides/edt/external-integrations)
 - [Performance](/guides/edt/performance)
 
-All you need before you begin is a Pantheon account. If you don't have one, [sign up now for free](https://pantheon.io/register).
+All you need before you begin is a Pantheon account. If you don't have one, <ExternalLink text="sign up now for free" link="https://pantheon.io/register"/>.
 
 <Alert title="Note" type="info">
 
-Are you an agency? Do you build sites for others? If so, check **Are you an agency?** on the [signup form](https://pantheon.io/register) to get more free features and really make the most of this guide. Size doesn't matter; you can sign up if you're an agency of one or one-thousand.
+Are you an agency? Do you build sites for others? If so, check **Are you an agency?** on the <ExternalLink text="signup form" link="https://pantheon.io/register"/> to get more free features and really make the most of this guide. Size doesn't matter; you can sign up if you're an agency of one or one-thousand.
 
 </Alert>
 

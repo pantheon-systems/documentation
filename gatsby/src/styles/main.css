@@ -67,7 +67,7 @@
 	text-align: left;
 } */
 /* shared */
-.cta {
+.ctaBtn {
 	display: block;
 }
 .mb-20 {
@@ -313,7 +313,7 @@ tr:nth-child(even) td:not(:last-child) {
 /* .docs svg {
 } */
 
-a.cta:hover {
+a.ctaBtn:hover {
 	color: #000 !important;
 	background-color: #fff !important;
 	border: 2px solid #000;
@@ -2304,7 +2304,7 @@ p.depbar > a:hover {
 /*  */
 /*  */
 /*  */
-.cta a:hover {
+.ctaBtn a:hover {
 	text-decoration: underline;
 }
 /* .oh-description {
@@ -2337,7 +2337,7 @@ p.depbar > a:hover {
 /* CTA */
 /* CTA Standard */
 /* To be used on white background */
-a.cta {
+a.ctaBtn {
 	font-size: 14px;
 	line-height: 1;
 	white-space: nowrap;
@@ -2354,7 +2354,7 @@ a.cta {
 	letter-spacing: 1px !important;
 	display: inline-block;
 }
-a.cta:after {
+a.ctaBtn:after {
 	font-family: "FontAwesome" !important;
 	content: "\f105";
 	margin: 0 !important;
@@ -2363,8 +2363,8 @@ a.cta:after {
 	background: none;
 	height: 100%;
 }
-a.cta:hover,
-a.cta:after:hover {
+a.ctaBtn:hover,
+a.ctaBtn:after:hover {
 	background: #efd01b !important;
 	box-shadow: none !important;
 	color: #000 !important;
@@ -2377,16 +2377,16 @@ a.cta:after:hover {
 
 /* CTA Black on Yellow */
 /* To be used on yellow backgrounds */
-a.cta.cta-black-on-yellow:hover,
-a.cta.cta-black-on-yellow:after:hover {
+a.ctaBtn.cta-black-on-yellow:hover,
+a.ctaBtn.cta-black-on-yellow:after:hover {
 	background: white !important;
 	box-shadow: none !important;
 }
 
 /* CTA Black on Yellow */
 /* To be used on yellow backgrounds */
-a.cta.cta-black-on-yellow:hover,
-a.cta.cta-black-on-yellow:after:hover {
+a.ctaBtn.cta-black-on-yellow:hover,
+a.ctaBtn.cta-black-on-yellow:after:hover {
 	background: white !important;
 	box-shadow: none !important;
 }
