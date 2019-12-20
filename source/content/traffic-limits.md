@@ -52,10 +52,8 @@ If you need time or are unable to commit to an annual contract, sites that excee
 
 | Payment Type      | Price            |
 |:----------------- |:---------------- |
-| Preferred Monthly |  $1,100          |
-| Preferred Annual  |  $12,000         |
-| List Monthly      |  $1,500          |
-| List Annual       |  $16,500         |
+| List Monthly      |  $2,000          |
+| List Annual       |  $22,000         |
 
 Note that the annual plan prices are list as annual cost.
 
