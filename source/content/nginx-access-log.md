@@ -48,11 +48,6 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
 ```bash
 goaccess nginx-access.log
 ```
-
-This should return a report that looks something like this:
-
-(insert screenshot)
-
 You can use the arrow keys on your keyboard to scroll down to view more of the report, or hit `q` to exit.
 
 Alternatively, you can generate an HTML report with this command:
@@ -84,8 +79,5 @@ goaccess */nginx-access.log* > goaccess.html && open goaccess.html
 
 ## See Also
 - [Log Files on Pantheon](/logs)
-- [MySQL Slow Log](/mysql-slow-log/)
-- [PHP Slow Log](/php-slow-log/)
-- [PHP Errors and Exceptions](/php-errors/)
 - [Bots and Indexing](/bots-and-indexing/)
 - [Traffic Limits and Overages](/traffic-limits/)
