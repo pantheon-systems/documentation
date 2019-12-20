@@ -144,6 +144,7 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
               window.ATP = window.ATP || [];
               window.ATP.push(function(ATP){
                 ATP.init({
+                  debug: window.location !== “https://pantheon.io”, // Debug true when not on on prod
                   nav: {
                     'Header Nav': 'pio-docs-nav ul li *',
                     'Side Nav': 'manual-guide-toc',
