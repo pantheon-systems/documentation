@@ -1,10 +1,9 @@
 ---
-title: Parsing NGINX Access Logs with GoAccess
+title: Parsing Nginx Access Logs with GoAccess
 description: Learn how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.
 tags: [logs]
 categories: [performance]
-goaccess: true
-contributors: [albertcausing]
+contributors: [albertcausing, sarahg]
 ---
 Pantheon runs nginx web servers for optimal performance. Your site's nginx access logs record web server events and activities that can help you identify potential issues and gather information about users.
 
@@ -25,13 +24,13 @@ Be sure that you have:
   * **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
   * **Windows**: Use [Cygwin](https://cygwin.com/install.html)
   
-This guide is written for the latest stable release of GoAccess as of this writing, which is 1.3 ([release notes](https://goaccess.io/release-notes#release-1.3)).
+This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.3 ([release notes](https://goaccess.io/release-notes#release-1.3)).
 
 ## Edit GoAccess Configuration
 
 To parse your `nginx-access.log` files with GoAccess, you'll need to configure GoAccess to read Pantheon's log formats.
 
-The configuration file is located under `~/.goaccessrc` or `%sysconfdir%/goaccess.conf` where `%sysconfdir%` is either `/etc/`, `/usr/etc/` or `/usr/local/etc/` [read more](https://goaccess.io/faq#configuration).
+The configuration file is located under `~/.goaccessrc` or `%sysconfdir%/goaccess.conf` where `%sysconfdir%` is either `/etc/`, `/usr/etc/` or `/usr/local/etc/` ([read more](https://goaccess.io/faq#configuration)).
 
 Add the following lines to the `goaccess.conf` file, located in either `/etc/`, `/usr/etc/` or `/usr/local/etc/` depending on your installation method. You can also read from a `goaccess.conf` file in your home directory.
 
@@ -62,7 +61,7 @@ Alternatively, you can generate an HTML report with this command:
 goaccess nginx-access.log > report.html
 ```
 
-Then view that report in your browser:
+View that report in your browser:
 
 ```bash
 open report.html
@@ -89,3 +88,4 @@ goaccess */nginx-access.log* > goaccess.html && open goaccess.html
 - [PHP Slow Log](/php-slow-log/)
 - [PHP Errors and Exceptions](/php-errors/)
 - [Bots and Indexing](/bots-and-indexing/)
+- [Traffic Limits and Overages](/traffic-limits/)
