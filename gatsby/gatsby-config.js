@@ -26,6 +26,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-transformer-remark`,
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-tagmanager`,
