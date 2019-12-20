@@ -286,6 +286,8 @@ This process lets you manually resolve the conflict using the command line and a
 ## Core Release Updates
 Whenever there's a new release of WordPress or Drupal core, updates will be available within 72 hours of upstream availability. Security related updates will be made available within 24 hours.
 
+<Partial file="drupal-8-8-warning.md" />
+
 ## Troubleshooting
 
 ### One-Click Updates Do Not Appear After Rewriting Git History
