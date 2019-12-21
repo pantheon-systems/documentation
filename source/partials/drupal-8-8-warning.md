@@ -1,6 +1,16 @@
 <Alert title="Warning" type="danger">
 
-Drupal 8.7.x sites that have modified the following the `config_sync_directory` value in `settings.php` must update as follows before upgrading to Drupal 8.8.x:
+Drupal 8.7.x sites that have modified the `config_sync_directory` value in `settings.php` may see this error when upgrading to Drupal 8.8.x:
+
+<br/>
+
+**`CONFIGURATION SYNC DIRECTORY`**
+
+The directory *sites/default/config* does not exist.
+
+<br/>
+
+To resolve (or avoid before upgrading), update the modified code as follows:
 
 1. Locate:
 
