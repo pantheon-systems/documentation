@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title, authors, image, categories, tags }) {
+function SEO({ description, lang, meta, keywords, title, authors, image, categories, tags, reviewed}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -45,6 +45,10 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
   } : {
   }
 
+  const reviewtag = reviewed ? {
+    property: `og:article:modified_time`,
+    content: `${reviewed}`
+  } : { }
 
   return (
     <Helmet
@@ -96,6 +100,7 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
           property: `og:article:section`,
           content: `${categories}`
         },
+        {...reviewtag},
         {
           name: `twitter:site`,
           content: `@${site.siteMetadata.social.twitter}`,

@@ -56,7 +56,8 @@ class DocTemplate extends React.Component {
   }
 
   render() {
-    const node = this.props.data.mdx
+    const node = this.props.data.doc
+    const isoDate = this.props.data.date
 
     return (
       <Layout>
@@ -67,6 +68,7 @@ class DocTemplate extends React.Component {
           image={"/assets/images/default-thumb-doc.png"}
           categories={node.frontmatter.categories}
           tags={node.frontmatter.tags}
+          reviewed={isoDate.frontmatter.reviewed}
         />
         <div className="">
           <div className="container doc-content-well">
@@ -108,7 +110,7 @@ export default DocTemplate
 
 export const pageQuery = graphql`
   query DocBySlug($slug: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+    doc: mdx(fields: { slug: { eq: $slug } }) {
       id
       body
       fields {
@@ -133,6 +135,11 @@ export const pageQuery = graphql`
         tags
       }
       fileAbsolutePath
+    }
+    date: mdx(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        reviewed
+      }
     }
   }
 `
