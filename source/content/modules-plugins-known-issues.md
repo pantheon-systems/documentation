@@ -824,6 +824,10 @@ Brizy
 
 There is a feature request on [WooCommerce's GitHub page](https://github.com/woocommerce/woocommerce/issues/21624) for a WP-CLI import command which would be less prone to timeouts. To express your interest to the developers, click the thumbs up on the feature request.
 
+**Issue**: A change introduced in WooCommerce 3.6.0 breaks template loading when on Pantheon's higher plan environments that mutliple application containers with requests split between them.
+
+**Solution**: The issue and a few workarounds that can be implemented are described in the WooCommerce Issue Queue: https://github.com/woocommerce/woocommerce/issues/23751 We hope this issue will result in future code changes to WooCommerce so mitigations are not needed.
+
 <hr />
 
 ### [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
