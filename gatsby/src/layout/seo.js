@@ -144,22 +144,11 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
               window.ATP = window.ATP || [];
               window.ATP.push(function(ATP){
                 ATP.init({
-                  debug: true,
-                  ctaSelector: '.btn, .cta',
-
-                  visibleElements: {
-                    'Form': 'form'
-                  },
+                  debug: window.location !== “https://pantheon.io”, // Debug true when not on on prod
                   nav: {
                     'Header Nav': 'pio-docs-nav ul li *',
-                    'Footer Nav': '#footer ul li *',
                     'Side Nav': 'manual-guide-toc',
                     'Misc Nav': '#toc'
-                  },
-                  visibleElements: {
-                    'Form': 'form',
-                    'CTA': '.btn',
-                    'Footer': '#footer',
                   },
                 });
               });
