@@ -26,9 +26,9 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
         <p className="article-subhead">
           {description}
         </p>
-        <p className="review-date">
+        <time className="review-date" datetime={lastReviewed} pubdate="pubdate">
           {lastReviewed}
-        </p>
+        </time>
         {!featured && <Contributors contributors={contributors} />}
 
         <Github
