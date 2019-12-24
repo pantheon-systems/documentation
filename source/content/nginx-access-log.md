@@ -22,7 +22,7 @@ Be sure that you have:
 * [Terminus](/terminus)
 * [GoAccess](https://goaccess.io/download)
   * **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
-  * **Windows**: Use [Cygwin](https://cygwin.com/install.html)
+  * **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
   
 This guide is written for the latest stable release of GoAccess as of this writing, which is version 1.3 ([release notes](https://goaccess.io/release-notes#release-1.3)).
 
@@ -32,9 +32,9 @@ To parse your `nginx-access.log` files with GoAccess, you'll need to configure G
 
 The configuration file is located under `~/.goaccessrc` or `%sysconfdir%/goaccess.conf` where `%sysconfdir%` is either `/etc/`, `/usr/etc/` or `/usr/local/etc/` ([read more](https://goaccess.io/faq#configuration)).
 
-Add the following lines to the `goaccess.conf` file, located in either `/etc/`, `/usr/etc/` or `/usr/local/etc/` depending on your installation method. You can also read from a `goaccess.conf` file in your home directory.
+Add the following lines to the `goaccess.conf` file:
 
-```
+```conf:title=goaccess.conf
 time-format %T
 date-format %d/%b/%Y
 log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
@@ -43,41 +43,52 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
 ## Create a report
 
 1. [Download your nginx log files](/logs) from Pantheon via SFTP.
-2. From the directory containing your `nginx-access.log` file, run GoAccess:
+1. From the directory containing your `nginx-access.log` file, run GoAccess:
 
-```bash
-goaccess nginx-access.log
-```
-You can use the arrow keys on your keyboard to scroll down to view more of the report, or hit `q` to exit.
+  ```bash{promptUser: user}
+  goaccess nginx-access.log
+  ```
 
-Alternatively, you can generate an HTML report with this command:
+  You can use the arrow keys on your keyboard to scroll down to view more of the report, or hit `q` to exit.
 
-```bash
-goaccess nginx-access.log > report.html
-```
+  Alternatively, you can generate an HTML report:
 
-View that report in your browser:
+  ```bash{promptUser: user}
+  goaccess nginx-access.log > report.html
+  ```
 
-```bash
-open report.html
-```
+1. View the report in your browser by opening `report.html`. For MacOS:
+
+  ```bash{promptUser: user}
+  open report.html
+  ```
+
+  For Linux:
+
+  ```bash{promptUser: user}
+  xdg-open report.html
+  ```
 
 ## Automate GoAccess Reports
 
-1. Copy the general log retrieval script from [Automate Downloading Logs](logs#automate-downloading-logs), and use this to download logs from all application containers on the desired environment.
+1. Copy the general log retrieval script from [Automate Downloading Logs](/logs#automate-downloading-logs), and use this to download logs from all application containers on the desired environment.
 
 2. Add the following to either `collect-logs.sh` or a separate file:
 
-```bash
-# Unpack archived log files (optional).
-gunzip */nginx-access.log-*
+  ```bash
+  # Unpack archived log files (optional).
+  gunzip */nginx-access.log-*
 
-# Create a GoAccess report and open it in a browser.
-goaccess */nginx-access.log* > goaccess.html && open goaccess.html
-```
+  # Create a GoAccess report and open it in a browser.
+  goaccess */nginx-access.log* > goaccess.html && open goaccess.html # Or xdg-open for Linux
+  ```
 
+## Troubleshooting
+### goaccess.conf Not Found
+In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goaccess.conf` is not found when running `goaccess` commands. (Display the path of the default config file by typing `goaccess -dcf`.)
 
 ## See Also
-- [Log Files on Pantheon](/logs)
-- [Bots and Indexing](/bots-and-indexing/)
-- [Traffic Limits and Overages](/traffic-limits/)
+
+* [Log Files on Pantheon](/logs)
+* [Bots and Indexing](/bots-and-indexing/)
+* [Traffic Limits and Overages](/traffic-limits/)
