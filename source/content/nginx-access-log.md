@@ -1,7 +1,7 @@
 ---
 title: Parsing Nginx Access Logs with GoAccess
 description: Learn how to parse the nginx-access.log file with GoAccess to gather information on your visitors and referral traffic.
-tags: [logs]
+tags: [logs, nginx, goacess]
 categories: [performance]
 contributors: [albertcausing, sarahg]
 ---
@@ -86,6 +86,8 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
 ## Troubleshooting
 ### goaccess.conf Not Found
 In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goaccess.conf` is not found when running `goaccess` commands. (Display the path of the default config file by typing `goaccess -dcf`.)
+
+Moving `goaccess.conf` from `\Cellar\goaccess\[version]\conf\etc\goaccess` into `\Cellar\goaccess\[version]\conf\etc` resolves the issue. 
 
 ## See Also
 
