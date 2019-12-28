@@ -27,7 +27,7 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
           {description}
         </p>
         <p className="review-date">
-          <time datetime={lastReviewed} pubdate="pubdate">{lastReviewed}</time>
+          <time datetime={reviewDate} pubdate="pubdate">{lastReviewed}</time>
         </p>
         {!featured && <Contributors contributors={contributors} />}
 
