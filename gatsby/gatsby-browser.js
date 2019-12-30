@@ -15,17 +15,8 @@ require("tocbot/dist/tocbot.css")
 require("tocbot/dist/tocbot.min.js")
 
 require("./src/styles/global.scss")
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 //Segment
 exports.onRouteUpdate = () => {
     window.analytics && window.analytics.page({url: window.location.href});
-=======
-// track pageview onRouteUpdate
-exports.onRouteUpdate = () => {
-    window.analytics && window.analytics.page();
->>>>>>> add track pageivew on routeupdate
 };
-=======
->>>>>>> Revert "add track pageivew on routeupdate"

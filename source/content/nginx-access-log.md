@@ -4,6 +4,7 @@ description: Learn how to parse the nginx-access.log file with GoAccess to gathe
 tags: [logs, nginx, goacess]
 categories: [performance]
 contributors: [albertcausing, sarahg]
+reviewed: "2019-12-30"
 ---
 Pantheon runs nginx web servers for optimal performance. Your site's nginx access logs record web server events and activities that can help you identify potential issues and gather information about users.
 
