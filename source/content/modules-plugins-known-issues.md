@@ -825,7 +825,7 @@ There is a feature request on [WooCommerce's GitHub page](https://github.com/woo
 
 <hr/>
 
-**Issue 2**: A change introduced in WooCommerce 3.6.0 breaks template loading when on a site plan with mutliple application containers.
+**Issue 2**: A change introduced in WooCommerce 3.6.0 breaks template loading in environments with [multiple application containers](/application-containers#multiple-application-containers).
 
 **Solution**: The issue and a few workarounds possible are described in this [WooCommerce Issue](https://github.com/woocommerce/woocommerce/issues/23751) We hope this issue will result in future code changes to WooCommerce so mitigations are not needed.
 
@@ -855,7 +855,6 @@ There is a feature request on [WooCommerce's GitHub page](https://github.com/woo
 
 **Issue 3**: The Wordfence firewall installs a file called `.user.ini` that includes `wordfence-waf.php` from the absolute path which uses the application container's ID. These paths will change from time to time due to routine platform maintenance. When a container is migrated and when this plugin is deployed to another environment the absolute path is no longer valid resulting in a WSOD. This has been [reported as an issue](https://wordpress.org/support/topic/set-auto_prepend_file-path-relatively/) within the plugin support forum.
 <hr />
-
 
 ### [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/)
 
