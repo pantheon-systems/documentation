@@ -82,6 +82,7 @@ class DocTemplate extends React.Component {
                 featured={node.frontmatter.featuredcontributor}
                 editPath={node.fields.editPath}
                 reviewDate={node.frontmatter.reviewed}
+                isoDate={isoDate.frontmatter.reviewed}
               />
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>

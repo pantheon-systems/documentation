@@ -7,7 +7,7 @@ import Slack from "../slack"
 import ContributorGuest from "../contributorGuest"
 import './style.css';
 
-const HeaderBody = ({ title, subtitle, description, slug, contributors, featured, editPath, reviewDate }) => {
+const HeaderBody = ({ title, subtitle, description, slug, contributors, featured, editPath, reviewDate, isoDate }) => {
   const contributor = contributors ? contributors[0] : null;
   const lastReviewed = reviewDate ? "Last Reviewed: " + reviewDate : null;
   return (
@@ -27,7 +27,7 @@ const HeaderBody = ({ title, subtitle, description, slug, contributors, featured
           {description}
         </p>
         <p className="review-date">
-          <time datetime={reviewDate} pubdate="pubdate">{lastReviewed}</time>
+          <time datetime={isoDate} pubdate="pubdate">{lastReviewed}</time>
         </p>
         {!featured && <Contributors contributors={contributors} />}
 
