@@ -812,7 +812,6 @@ Brizy
 **Issue**: This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 <hr />
 
-
 ### [WooCommerce](https://wordpress.org/plugins/woocommerce/)
 **Issue**: The "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
 
@@ -824,9 +823,11 @@ Brizy
 
 There is a feature request on [WooCommerce's GitHub page](https://github.com/woocommerce/woocommerce/issues/21624) for a WP-CLI import command which would be less prone to timeouts. To express your interest to the developers, click the thumbs up on the feature request.
 
-**Issue**: A change introduced in WooCommerce 3.6.0 breaks template loading when on Pantheon's higher plan environments that mutliple application containers with requests split between them.
+<hr/>
 
-**Solution**: The issue and a few workarounds that can be implemented are described in the WooCommerce Issue Queue: https://github.com/woocommerce/woocommerce/issues/23751 We hope this issue will result in future code changes to WooCommerce so mitigations are not needed.
+**Issue 2**: A change introduced in WooCommerce 3.6.0 breaks template loading when on a site plan with mutliple application containers.
+
+**Solution**: The issue and a few workarounds possible are described in this [WooCommerce Issue](https://github.com/woocommerce/woocommerce/issues/23751) We hope this issue will result in future code changes to WooCommerce so mitigations are not needed.
 
 <hr />
 
