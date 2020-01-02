@@ -6,7 +6,7 @@ categories: [manage,go-live]
 contributors: [edwardangert]
 searchboost: 150
 ---
-<ExternalLink text="Partner Agencies" link="https://pantheon.io/plans/partner-program"/> on Pantheon receive additional levels of support and <ExternalLink text="Preferred Pricing" link="https://pantheon.io/plans/agency-preferred-pricing"/> for themselves and their clients. This doc explains how to share those benefits by adding a client's site to your Agency.
+[Partner Agencies](https://pantheon.io/plans/partner-program?docs) on Pantheon receive additional levels of support and [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing) for themselves and their clients. This doc explains how to share those benefits by adding a client's site to your Agency.
 
 While many of these steps are followed through the normal course of an Agency-Client relationship. We've collected them here as a quick reference.
 

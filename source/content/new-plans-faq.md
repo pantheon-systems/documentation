@@ -26,7 +26,7 @@ Set price for new sites created after November 15, 2018 that aren’t purchased 
 
 <dd>
 
-Introductory price available to the general public until November 15, 2018, after which it will be exclusively available via qualified <ExternalLink link="https://pantheon.io/plans/partner-program" text="Agency Partners"/>. Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information.
+Introductory price available to the general public until November 15, 2018, after which it will be exclusively available via qualified [Agency Partners](https://pantheon.io/plans/partner-program?docs). Visit our [Preferred Pricing page](https://pantheon.io/plans/agency-preferred-pricing) for more information.
 
 </dd>
 
