@@ -693,14 +693,15 @@ An alternative solution is to [create a symbolic link](/assuming-write-access/#c
 <hr/>
 
 ### [PolyLang](https://wordpress.org/plugins/nextgen-gallery/)
-**Issue**: The plugin adds a cache-busting cookie (ex. pll_language=en ) for each request. 
+**Issue**: The plugin adds a cache-busting cookie (ex. `pll_language=en` ) for each request.
 
+**Solution**: A constant setting is available in `wp-config.php` to remove or rename the cookie:
 
-**Solution**: A constant setting is available to remove or rename the cookie. Set this in wp-config.php:
+```php:title=wp-config.php
+define('PLL_COOKIE', false)
+```
 
-```define('PLL_COOKIE', false)```
-
-```Option : PLL_COOKIEDefaults to 'pll_polylang'.Defines the name of the cookie used by Polylang to store the visitor's language.When PLL_COOKIE is set to false, Polylang does not set any cookie. Be aware that in this case, not everything will work correctly. For example, the login page will not translate.```
+The option `PLL_COOKIE` defaults to `pll_polylang`. This defines the name of the cookie used by Polylang to store the visitor's language. When `PLL_COOKIE` is set to false, Polylang does not set any cookie. Be aware that in this case, not everything will work correctly. For example, the login page will not translate.
 
 <hr />
 
