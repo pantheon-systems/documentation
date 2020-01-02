@@ -152,5 +152,5 @@ No. Initiate chats via the Pantheon User or Site Dashboards.
 ### Can I respond to an existing chat message via email?
 Yes. Reply directly to the email thread to continue an existing chat session and update the chat history on the Dashboard.
 
-### Who do I talk to about my billing questions?
+### Who do I talk to about billing questions?
 The best way to get help with your billing questions is to contact our support team [via chat](#real-time-chat-support) or through a [ticket](#ticket-support).
