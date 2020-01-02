@@ -65,11 +65,11 @@ The ticket support feature is available to certain support packages and account 
 2. Choose the **ticket type**.
 3. Enter a subject (summary of your issue).
 4. Provide a detailed summary of your support request, such as:
-  - Steps to reproduce the issue (including URLs or paths to files).
-  - Environments affected (Multidev/Dev/Test/Live), if applicable.
-  - When the issue began.
-  - Error messages received, if applicable.
-  - Links to screenshots or screencasts of the behavior, if necessary.
+   - Steps to reproduce the issue (including URLs or paths to files).
+   - Environments affected (Multidev/Dev/Test/Live), if applicable.
+   - When the issue began.
+   - Error messages received, if applicable.
+   - Links to screenshots or screencasts of the behavior, if necessary.
 5. Click **Open Ticket**
 
 Once a ticket is submitted, you can view details for your support requests. If are you are part of an organization, your support tickets are visible to all members except Unprivileged users.
@@ -151,3 +151,6 @@ No. Initiate chats via the Pantheon User or Site Dashboards.
 
 ### Can I respond to an existing chat message via email?
 Yes. Reply directly to the email thread to continue an existing chat session and update the chat history on the Dashboard.
+
+### Who do I talk to about billing questions?
+The best way to get help with your billing questions is to contact our support team [via chat](#real-time-chat-support) or through a [ticket](#ticket-support).
