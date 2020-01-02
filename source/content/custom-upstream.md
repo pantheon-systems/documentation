@@ -7,7 +7,7 @@ categories: [platform,manage,develop]
 
 `youtube: https://youtu.be/b1lNrZL0xxM`
 
-If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the <ExternalLink link="https://pantheon.io/agencies/partner-program" text="Partner Program Page"/> to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
+If you are a digital agency servicing clients, or a reseller of Pantheon as part of a managed solution, visit the <ExternalLink link="https://pantheon.io/plans/partner-program" text="Partner Program Page"/> to learn more about getting Custom Upstreams and some of the other benefits of becoming a Pantheon Partner.
 
 <Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs" campaign="docs-agility">
 
