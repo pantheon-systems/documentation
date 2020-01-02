@@ -158,6 +158,7 @@ An Upstream cannot be deleted if there are sites using it.
   ![Delete Upstream Button](../images/dashboard/delete-upstream.png)
 
 ## Tips and Tricks
+
 ### Use the Pantheon Workflow
 To fully test core updates, create content on your test site and use the standard [Pantheon workflow](/pantheon-workflow/) to push up to your Test and Live environments. Checkout [our guide](/guides/drupal8-commandline/#managing-content-configuration-and-code-across-environments) for an example of generating content from the command line.
 
@@ -167,10 +168,25 @@ For agencies that manage large portfolios, we suggest picking a few sample sites
 ### Upstream Configuration File
 Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. For details, see [Pantheon YAML Configuration Files](/pantheon-yml/).
 
+### Redirects
+We normally suggest [PHP redirects](/redirects/) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. Since this file is shared on all environments, including multidevs, you can use a `require_once` statement to point to an external file that loads all the redirects.
+
+```php
+if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
+  require_once( dirname( __FILE__ ) . '/redirects.php' );
+}
+```
+
+Remember that this file is not included in the custom upstream and needs to exists uniquely on each site. You can then expand the conditional to load on specific environments using this [guide](/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
+
+For WordPress sites, another option is to store redirects in an [MU-Plugin](/mu-plugin/).
 
 ## Troubleshoot
+
 ### Resolve Conflicts
+
 #### Automatically Resolve from the Command Line
+
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
 1. Navigate to the Custom Upstream's root directory using the command line and add Pantheon's Upstream as a [remote](https://git-scm.com/docs/git-remote), if you haven't done so already:
