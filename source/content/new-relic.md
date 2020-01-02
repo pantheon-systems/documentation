@@ -28,7 +28,6 @@ Go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
 * If the site owner is a **user**, the site owner's name and email address is used to create the New Relic account.
 * If the site owner is an **organization**, the name and email address of the organization's Pantheon user who activates New Relic is used to create the New Relic account.
-* Your New Relic **password** is unique to your New Relic account. If you have forgotten or don't yet have a New Relic password, use your Pantheon account email to request a [password reset](https://login.newrelic.com/passwords/forgot).
 
 ### If you go to the New Relic Dashboard and see "You do not have permission to view this account"
 
