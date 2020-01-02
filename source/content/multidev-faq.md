@@ -10,13 +10,13 @@ For information about what Multidev is and how to use it, see our full guide on 
 
 Multidev is available to all **accounts with [Gold support](/support/#support-features-and-response-times) and above**. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management/) for more information about roles and permissions.
 
-Visit the <ExternalLink link="https://pantheon.io/plans/partner-program" text="Partner Program Page"/> to learn more about the benefits of becoming a Pantheon Partner Agency, or <ExternalLink link="https://pantheon.io/contact-us" text="contact us"/>.
+Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
 ### Should I have access to Multidev?
 
 Multidev is available if you:
 
- - Have been assigned a role as a member of an Organization that has the Multidev Feature (like a <ExternalLink link="https://pantheon.io/plans/partner-program" text="Pantheon Preferred Partner"/>).
+ - Have been assigned a role as a member of an Organization that has the Multidev Feature (like a [Pantheon Preferred Partner](https://pantheon.io/plans/partner-program?docs)).
  - Are a Direct Online customer with Gold support or above.
 
 If you fully meet either of these conditions and still don't have access to Multidev, please [contact support](https://dashboard.pantheon.io/#support).

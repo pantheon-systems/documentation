@@ -119,7 +119,7 @@ Pantheon sites use NGINX to concurrently serve requests. The NGINX web server ig
 
 For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
-If your site contains rules in `.htaccess` that cannot be migrated to PHP, Pantheon offers a service called Advanced CDN available as a [Professional Services](/professional-services#advanced-cdn) engagement. Custom `.htaccess` rules often can be converted to run on a custom Varnish layer provided by Advanced CDN. Please contact your Customer Success Manager (CSM) or <ExternalLink link="https://pantheon.io/contact-us" text="contact us"/> for more information.
+If your site contains rules in `.htaccess` that cannot be migrated to PHP, Pantheon offers a service called Advanced CDN available as a [Professional Services](/professional-services#advanced-cdn) engagement. Custom `.htaccess` rules often can be converted to run on a custom Varnish layer provided by Advanced CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ### Drupal False Positive
 Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
@@ -127,7 +127,7 @@ Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a 
 ## Image Optimization Tools
 Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules and Plugins with Known Issues.](/modules-plugins-known-issues#imageapi-optimize)
 
-Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional Services](/professional-services#advanced-cdn) engagement). Please contact your Customer Success Manager (CSM) or <ExternalLink link="https://pantheon.io/contact-us" text="contact us"/> for more information.
+Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional Services](/professional-services#advanced-cdn) engagement). Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Inactive Site Freezing
 Sandbox sites that are over four months old that have not had code commits or other Git activity for three months are "frozen". All requests to a frozen site will return a `530 Site Frozen` error code, and the site's Dashboard will be unavailable.
@@ -141,7 +141,7 @@ IP-based security is not recommended on Pantheon - or any cloud platform because
 
 For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
 
-If you require this behavior, [Advanced CDN](/professional-services#advanced-cdn) can provide IP-based whitelist/blacklist features, as well as IP-based routing. Please contact your Customer Success Manager (CSM) or <ExternalLink link="https://pantheon.io/contact-us" text="contact us"/> for more information.
+If you require this behavior, [Advanced CDN](/professional-services#advanced-cdn) can provide IP-based whitelist/blacklist features, as well as IP-based routing. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Large Code Repository
 When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs.
@@ -190,7 +190,7 @@ Pantheon does not currently support modifying the nginx.conf per site, as we run
 
 If your site uses `nginx.conf` rules for redirects, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
-If your site contains rules in `nginx.conf` that cannot be migrated to PHP, Pantheon offers a service called Advanced CDN available as a [Professional Services](/professional-services#advanced-cdn) engagement. Custom `nginx.conf` rules often can be converted to run on a custom Varnish layer provided by Advanced CDN. Please contact your Customer Success Manager (CSM) or <ExternalLink link="https://pantheon.io/contact-us" text="contact us"/> for more information.
+If your site contains rules in `nginx.conf` that cannot be migrated to PHP, Pantheon offers a service called Advanced CDN available as a [Professional Services](/professional-services#advanced-cdn) engagement. Custom `nginx.conf` rules often can be converted to run on a custom Varnish layer provided by Advanced CDN. Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
 ## Node.js
 Node.js is not available in the platform. If running node.js services is a hard requirement for your Drupal or WordPress application, the node.js service must to be hosted on a different remote server outside of Pantheon.
@@ -205,7 +205,7 @@ Domain masking allows you to serve two entirely different and separate sites ove
 * Main Site: `https://www.example-site.com/`
 * Blog: `https://www.example-site.com/blog/`
 
-Domain masking is available to contract customers as [an add-on](/professional-services#advanced-cdn). If you require domain masking, ask your Customer Success Manager (CSM) or <ExternalLink link="https://pantheon.io/contact-us" text="contact us"/>. Customers may also set up domain masking using a third-party CDN service, but please note that third-party services are outside [Pantheon's scope of support](/support/#scope-of-support).
+Domain masking is available to contract customers as [an add-on](/professional-services#advanced-cdn). If you require domain masking, ask your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs). Customers may also set up domain masking using a third-party CDN service, but please note that third-party services are outside [Pantheon's scope of support](/support/#scope-of-support).
 
 ### Additional Databases
 While you are able to import an additional database to an environment, only the Pantheon database will be preserved when the application container is updated. This means you can use an additional database for running migration scripts, but should not rely on it nor write any new data to it.

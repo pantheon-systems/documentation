@@ -16,7 +16,7 @@ Creating a Multidev environment creates an application container with a database
 
 ### How can my Organization get Multidev and how much does it cost?
 
-Multidev is one of the highlight features of the Pantheon Partner Program. Visit the [Partner Program Page](https://pantheon.io/plans/partner-program) to learn more about the benefits of becoming a Pantheon Partner Agency, or <ExternalLink link="https://pantheon.io/contact-us" text="contact us"/>.
+Multidev is one of the highlight features of the Pantheon Partner Program. Visit the [Partner Program Page](https://pantheon.io/plans/partner-program) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
 ## Change Management
 
