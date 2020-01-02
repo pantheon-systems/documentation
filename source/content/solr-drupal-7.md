@@ -24,6 +24,7 @@ This guide uses Pantheon's Solr module, which is designed to work specifically w
 </Alert>
 
 ## Install Solr for Drupal
+
 ### Apply Upstream Updates
 Use [one-click updates](/core-updates) to make sure you are running the latest version of Drupal core.
 

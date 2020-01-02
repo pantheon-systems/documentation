@@ -23,6 +23,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [Namecheap account](https://www.namecheap.com/myaccount/login.aspx) in a new tab before you continue.
 
 ## Configure DNS Records on Namecheap
+
 ### A Record
 2. Select **Domain List** then click the **Manage** button next to the domain you want to point to Pantheon.
 3. Navigate to **Advanced DNS** and click the **Add New Record** button.

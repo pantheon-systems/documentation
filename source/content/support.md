@@ -131,6 +131,7 @@ Our team is experienced with using New Relic to diagnose whether an issue is pla
 Diamond support is intended to help developers succeed on Pantheon, not to provide development services. If you need a professional to provide development services for your site, start by [getting a personalized quote](https://pantheon.io/agencies/agency-match) from Pantheon’s network of trusted partners.
 
 ## FAQs
+
 ### Can I request a feature be added to the platform?
 Yes. For more details, talk to your Customer Success Manager or [contact sales](https://pantheon.io/contact-us).
 

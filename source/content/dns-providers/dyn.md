@@ -28,6 +28,7 @@ Identify DNS values to point your domain to Pantheon:
 Keep this page open and login to your [Dyn DNS account](https://portal.dynect.net/login/) in a new tab before you continue.
 
 ## Configure DNS Records on Dyn
+
 ### A Record
 1. Click **Overview** then **Manage** from the far right menu.
 1. Navigate to **Simple Editor** > **Records**.

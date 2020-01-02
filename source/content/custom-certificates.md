@@ -78,6 +78,7 @@ CAA records configured for the root domain (e.g., `example.com`) are inherited b
 \* The browser compatibility and SSL Labs scores are guaranteed for shared Let’s Encrypt certificates. The same results are typical for a custom certificate from a mainstream CA with mainstream attributes, but not guaranteed.  For custom certificates, compatibility and SSL Labs score depends on attributes of that certificate, such as number of SAN entries, CA and signing algorithm.
 
 ## Frequently Asked Questions
+
 ### Do I need a separate certificate for each site in my organization?
 Nope! You can use the a single certificate to cover multiple domains spread across various environments or sites. This capability is enabled because the Global CDN uses a technology called Server Name Indication (SNI), which automatically matches inbound requests with an appropriate certificate, including custom certificates.
 
@@ -123,6 +124,7 @@ AAAA record 2:  `2620:12a:8001::X`
 CAA records are required  to [prohibit Let's Encrypt from issuing certificates](#disable-lets-encrypt-with-caa-records-required). If your DNS provider does not support CAA records, consider one that does. If using a DNS provider that supports CAA records is not possible, please inform your Engagement Manager, as our [Professional Services](/professional-services) team can help.
 
 ## Caveats / Known Issues
+
 ### Let's Encrypt Certificate Served Instead of Custom Certificate
 If a Let's Encrypt certificate was deployed to the Global CDN before adding CAA records to prevent Let's Encrypt from issuing certificates, then it will take 10 days for Pantheon to automatically remove the domain from the Let's Encrypt certificate.
 

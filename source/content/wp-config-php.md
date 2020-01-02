@@ -36,6 +36,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config
 
 
 ## Frequently Asked Questions
+
 ### How can I write logic based on the Pantheon server environment?
 Depending on your use case, there are two possibilities:
 
@@ -109,6 +110,7 @@ ini_set('ioncube.loader.encoded_paths', '/');
 *(More information can be found in our [PHP 7.1 & IonCube Decoder Now Available for All Sites on Pantheon](https://pantheon.io/blog/php-71-ioncube-decoder-now-available-all-sites-pantheon) blog post.)*
 
 ## Troubleshooting
+
 ### Request to a Remote API Does Not Return Expected Response
 The PHP 5.5 default is `&` and the PHP 5.3 default is `&amp;`.
 

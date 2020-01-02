@@ -56,6 +56,7 @@ $externalconnection = “http://127.0.0.1:” . PANTHEON_SOIP_EXAMPLE;
 See also: [FAQ and Troubleshooting for LDAP](/ldap-and-ldaps/#frequently-asked-questions)
 
 ## Considerations
+
 ### Set Reasonable Timeouts
 
 <Alert title="Note" type="info" >

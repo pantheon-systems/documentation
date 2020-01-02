@@ -50,6 +50,7 @@ If you need to assume site and billing ownership, the current Site Owner must tr
 This process will add a new credit card profile in **<span class="glyphicons glyphicons-cogwheel"></span> Account** > **Billing** of your User Dashboard. Once you have added the card, set it as the new payment method for the site as described in the [next section](#bill-this-site-to-a-new-card).
 
 ## Your Credit Cards
+
 ### Bill This Site to a New Card
 Select the card you want the site to use as the new payment method _after_ it has been added as described in the [previous section](#add-new-credit-card).
 

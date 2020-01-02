@@ -85,6 +85,7 @@ Be kind. If you're writing a guide that will use one or more example variables t
 
 
 ## Typography
+
 ### Headings
 
 <Example>
@@ -105,6 +106,7 @@ title: Page Title
 ---
 
 ## Header
+
 ### Sub Header
 #### Section not listed on TOC
 ```
@@ -217,6 +219,7 @@ Use relative paths when linking to other pages of the docs site.
 </Example>
 
 ## Code
+
 ### Inline
 Used for file names, variables, commands, and output, inline within paragraphs:
 

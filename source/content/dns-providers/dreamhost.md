@@ -16,6 +16,7 @@ Be sure that you have a:
 - [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
 
 ## Configure DNS Records on DreamHost
+
 ### A Record
 1. Navigate to **Panel** > **Domains** > **Manage Domains** and click **DNS**.
 2. Leave the **Name** field blank, select A from the Type dropdown menu, and enter the A record value provided by Pantheon in the **Value** field.

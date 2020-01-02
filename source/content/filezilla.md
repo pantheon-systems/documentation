@@ -64,6 +64,7 @@ After logging in, you can access your application code in the `/code` directory.
 Your file uploads (Drupal's `sites/default/files` and WordPress's `wp-content/uploads`) can be found in the `files` directory.  Your log files can be found in the `/logs` directory.
 
 ## Troubleshooting
+
 ### File transfer failed on production environments
 Starting at the Performance Medium service level up to Elite plans, the Test and Live environments are provisioned with multiple application containers. When transferring files over SFTP into production environments, you may experience the following error:
 

@@ -151,6 +151,7 @@ If you encounter rate limits, we recommend the following approaches:
 <Partial file="cname-workaround.md" />
 
 ## Glossary
+
 ### HTTPS
 HTTPS encrypts and decrypts requests. For more information, see [this Google resource](https://support.google.com/webmasters/answer/6073543?hl=en).
 
