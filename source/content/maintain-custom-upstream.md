@@ -169,7 +169,9 @@ For agencies that manage large portfolios, we suggest picking a few sample sites
 Use the `pantheon.upstream.yml` file when working with Custom Upstreams to set default values for advanced site configurations to be used downstream. For details, see [Pantheon YAML Configuration Files](/pantheon-yml/).
 
 ### Redirects
-We normally suggest [PHP redirects](/redirects/) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. Since this file is shared on all environments, including multidevs, you can use a `require_once` statement to point to an external file that loads all the redirects.
+We normally suggest [PHP redirects](/redirects/) be placed into `wp-config.php` for WordPress and `settings.php` for Drupal. If you are using a Custom Upstream, any customizations to these files will be lost with each update. It will also be hard to implement site-specific configurations added on these files.
+
+Since this file is shared on all environments, including Multidevs, you can use a `require_once` statement to point to an external file, separate from the Custom Upstream and unique to each site, that loads all the redirects or customizations:
 
 ```php
 if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANTHEON_ENVIRONMENT'] ) ) {
@@ -177,7 +179,7 @@ if ( file_exists( dirname( __FILE__ ) . '/redirects.php' ) && isset( $_ENV['PANT
 }
 ```
 
-Remember that this file is not included in the custom upstream and needs to exists uniquely on each site. You can then expand the conditional to load on specific environments using this [guide](/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
+Remember that this file is not included in the Custom Upstream and needs to exist uniquely on each site. You can then expand the conditional statement to load on specific environments using the FAQ section in the [wp-config-php doc](/wp-config-php#how-can-i-write-logic-based-on-the-pantheon-server-environment).
 
 For WordPress sites, another option is to store redirects in an [MU-Plugin](/mu-plugin/).
 
