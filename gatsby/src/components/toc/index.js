@@ -29,10 +29,12 @@ const TOC = ({ title }) => {
   })
 
   return (
+    <nav>
     <div id="toc" className="tocbot">
       <h4>{title || "Table of Contents"}</h4>
       <div className="toc-placeholder" />
     </div>
+    </nav>
   )
 }
 

@@ -155,6 +155,7 @@ module.exports = {
             options: {
               maxWidth: 1035,
               // sizeByPixelDensity: true,
+              markdownCaptions: true,
               showCaptions: true,
               linkImagesToOriginal: false,
             },

@@ -5,6 +5,7 @@ import './style.css';
 const Navbar = ({ title, items, activePage }) => {
   return (
     <div className="col-md-3 manual-guide-toc" role="navigation">
+      <nav>
       <button
         type="button"
         className="navbar-toggle"
@@ -33,6 +34,7 @@ const Navbar = ({ title, items, activePage }) => {
           </ul>
         )}
       </div>
+      </nav>
     </div>
   )
 }
