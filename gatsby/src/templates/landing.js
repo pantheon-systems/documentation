@@ -70,7 +70,7 @@ class LandingTemplate extends Component {
 									</div>
 								</React.Fragment>
 							))}
-						<div class="row mt-70">
+						<div className="row mt-70">
 							{topic.subtopics &&
 								topic.subtopics.map((subtopic) => (
 									<SubTopicGroup
