@@ -107,13 +107,13 @@ Updates](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-
 List available upstream updates:
 
 ```bash
-  terminus upstream:updates:list my-site
+terminus upstream:updates:list my-site
 ```
 
 If the environment's connection mode is currently set to SFTP with uncommitted work you want to keep, commit now before proceeding:
 
 ```bash
-  terminus env:commit my-site.dev --message="My code changes"
+terminus env:commit my-site.dev --message="My code changes"
 ```
 
 <Alert title={"Warning"} type={"danger"}>
@@ -125,13 +125,13 @@ The following command will permanently delete all uncommitted SFTP changes. If y
 Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:
 
 ```bash
-  terminus connection:set my-site.dev git
+terminus connection:set my-site.dev git
 ```
 
 Apply available upstream updates for WordPress and Drupal core from the command line with Terminus:
 
 ```bash
-  terminus upstream:updates:apply my-site
+terminus upstream:updates:apply my-site
 ```
 
 ### Module, Theme, and Plugin Updates
@@ -157,7 +157,7 @@ terminus drush my-site.dev -- pm-updatecode --no-core
 Commit contrib updates to the Dev environment:
 
 ```bash
-  terminus env:commit my-site.dev --message="Update all contrib projects"
+terminus env:commit my-site.dev --message="Update all contrib projects"
 ```
 
 </Tab>
@@ -205,12 +205,12 @@ terminus site:list --format=list | terminus site:mass-update:apply --accept-upst
 The output should be similar to this:
 
 ```bash
- [notice] Found 3 sites.
- [notice] Fetching the list of available updates for each site...
- [notice] 3 sites need updates.
- [warning] Cannot apply updates to novasoft-drupal because the dev environment is not in git mode.
- [DRY RUN] Applying 2 updates to jessiem-drupal7
- [DRY RUN] Applying 10 updates to superb-central
+[notice] Found 3 sites.
+[notice] Fetching the list of available updates for each site...
+[notice] 3 sites need updates.
+[warning] Cannot apply updates to novasoft-drupal because the dev environment is not in git mode.
+[DRY RUN] Applying 2 updates to jessiem-drupal7
+[DRY RUN] Applying 10 updates to superb-central
 ```
 
 Resolve warning messages shown in the `--dry-run` output by setting the connection mode to Git for each applicable site:
@@ -260,7 +260,7 @@ There are a few scenarios where it may be useful to reset your Dev environment (
 Start by cloning the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):
 
 ```bash
-`terminus connection:info awesome-site.dev --fields='Git Command' --format=string`
+terminus connection:info awesome-site.dev --fields='Git Command' --format=string
 ```
 
 Then automate the procedure for resetting Dev to Live by downloading the following bash script:
@@ -275,20 +275,20 @@ Then automate the procedure for resetting Dev to Live by downloading the followi
 </div>
 
 ```bash
-    #!/bin/bash #Authenticate Terminus terminus auth:login #Provide the target
-    site name (e.g. your-awesome-site) echo 'Provide the site name (e.g.
-    your-awesome-site), then press [ENTER] to reset the Dev environment to
-    Live:'; read SITE; #Set the Dev environment's connection mode to Git echo
-    "Making sure the environment's connection mode is set to Git..."; terminus
-    connection:set \$SITE.dev git #Identify the most recent commit deployed to
-    Live and overwrite history on Dev's codebase to reflect Live echo "Rewriting
-    history on the Dev environment's codebase..."; git reset --hard `terminus
-    env:code-log $SITE.live --format=string | grep -m1 'live' | cut -f 4` #Force
-    push to Pantheon to rewrite history on Dev and reset codebase to Live git
-    push origin master -f #Clone database and files from Live into Dev echo
-    "Importing database and files from Live into Dev..."; terminus
-    env:clone-content \$SITE.live dev #Open the Dev environment on the Site
-    Dashboard terminus dashboard:view \$SITE.dev
+#!/bin/bash #Authenticate Terminus terminus auth:login #Provide the target
+site name (e.g. your-awesome-site) echo 'Provide the site name (e.g.
+your-awesome-site), then press [ENTER] to reset the Dev environment to
+Live:'; read SITE; #Set the Dev environment's connection mode to Git echo
+"Making sure the environment's connection mode is set to Git..."; terminus
+connection:set \$SITE.dev git #Identify the most recent commit deployed to
+Live and overwrite history on Dev's codebase to reflect Live echo "Rewriting
+history on the Dev environment's codebase..."; git reset --hard `terminus
+env:code-log $SITE.live --format=string | grep -m1 'live' | cut -f 4` #Force
+push to Pantheon to rewrite history on Dev and reset codebase to Live git
+push origin master -f #Clone database and files from Live into Dev echo
+"Importing database and files from Live into Dev..."; terminus
+env:clone-content \$SITE.live dev #Open the Dev environment on the Site
+Dashboard terminus dashboard:view \$SITE.dev
 ```
 
 Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:

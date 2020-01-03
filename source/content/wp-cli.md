@@ -3,6 +3,7 @@ title: Using WP-CLI On The Pantheon Platform
 description: Administer and maintain your WordPress site on Pantheon using the command-line.
 tags: [devwpcli]
 categories: [wordpress,workflow,develop]
+reviewed: "2020-01-03"
 ---
 
 [WP-CLI](https://make.wordpress.org/cli/handbook/) is a command-line interface to WordPress. It provides a [wide range of utilities](https://developer.wordpress.org/cli/commands/) for managing your WordPress site. Virtually any action you can perform through the WordPress admin, you can also do with WP-CLI.
@@ -10,6 +11,8 @@ categories: [wordpress,workflow,develop]
 To use WP-CLI on the Pantheon Platform, you'll first need to install [Terminus](/terminus/) on your local machine. Terminus is a command-line interface for managing your Pantheon sites, and is used to proxy commands from your local machine to your Pantheon environment.
 
 Once you've installed Terminus locally, and verified it's working correctly, you're ready to use WP-CLI. However, if you haven't already, you may want to consider [installing WP-CLI locally](https://make.wordpress.org/cli/handbook/installing/) for use in your local environment.
+
+If you have a [Composer-based site](/composer/), Terminus will use the version of WP-CLI that it finds locally in `vendor/wp-cli`.
 
 ## Getting Started With WP-CLI
 
@@ -25,13 +28,15 @@ Each of these global parameters define the **context** under which the command i
 
 Now that we've covered the most important basics, let's run a command:
 
-    $ terminus wp pantheon-demo.dev -- option get home
-    [2015-11-25 02:42:12] [info] Running wp option get home  on pantheon-demo
-        cmd: 'option get home'
-        flags: ''
-        site: 'pantheon-demo'
-        env: 'dev'
-    https://pantheon-demo.pantheonsite.io
+```bash{outputLines:2-7}
+terminus wp pantheon-demo.dev -- option get home
+  [2015-11-25 02:42:12] [info] Running wp option get home  on pantheon-demo
+      cmd: 'option get home'
+      flags: ''
+      site: 'pantheon-demo'
+      env: 'dev'
+  https://pantheon-demo.pantheonsite.io
+```
 
 From the example above:
 
@@ -39,9 +44,9 @@ From the example above:
 * `option get` is the command itself ([docs](https://developer.wordpress.org/cli/commands/option/get/)). `home` is the key for the option we're requesting.
 * `<site>` and `<env>` tell Terminus which site and environment to run the command in, respectively. These arguments can be provided automatically if you execute Terminus commands from a directory containing a [`.env`](https://github.com/pantheon-systems/cli/blob/master/.env.example) file.
 
-The first part of the output is Terminus telling you which command it's running, and where. The last line, "https://pantheon-demo.pantheonsite.io", is the response of `wp option get`.
+The first part of the output is Terminus telling you which command it's running, and where. The last line, `https://pantheon-demo.pantheonsite.io`, is the response of `wp option get`.
 
-Feeling comfortable with WP-CLI? Here are a [few of many commands](https://developer.wordpress.org/cli/commands/) you may find helpful in your journeys:
+Feeling comfortable with WP-CLI? Here are a [few of the many commands](https://developer.wordpress.org/cli/commands/) you may find helpful in your journeys:
 
 * `wp search-replace` - Search for and replace specific strings in the database. Commonly used to correct references to [platform domains](/database-workflow/#troubleshooting). Use `--dry-run` to perform a test run of the operation, and see how it will affect your database ([developer docs](https://developer.wordpress.org/cli/commands/search-replace/)).
 * `wp media regenerate` - Regenerate image thumbnails for one or more attachments ([developer docs](https://developer.wordpress.org/cli/commands/media/regenerate/)).

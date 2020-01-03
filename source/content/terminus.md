@@ -25,14 +25,14 @@ Increase your developers' confidence on Terminus and generate ideas for writing 
 
 ## Usage
 
-Use Terminus to perform these and other operations:
+Use Terminus to perform these and [other operations](/terminus/commands/):
 
 - Create a new site
 - Create and delete Multidev environments
 - Clone one environment to another
 - Check for and apply upstream updates
 - Deploy code from one environment to another
-- Run Drush and WP-CLI commands
+- Run [Drush](/drush/) and [WP-CLI](/wp-cli/) commands
 
 ## Contribute
 
