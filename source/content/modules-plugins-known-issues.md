@@ -345,11 +345,31 @@ drush vset views_data_export_directory 'public://'
 ```
 
 Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733).
+
 <hr />
 
-
-
 ## WordPress Plugins
+
+### Assumed Write Access
+Some plugins and themes are built on the assumption that the CMS has write access to the entire filesystem. While this is usually true of standard LAMP/LEMP stack server configuration, Pantheon and other specialized platforms do not. This can result in runtime errors when the software can't write to locations in the code base in Test and Live environments.
+
+See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
+
+The solution to these issues is usually to create a symlink from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). This process is detailed in [Using Extensions That Assume Write Access](/assuming-write-access).
+
+The following is a list of plugins that assumes write access, and the specific file or folder that needs to be symlinked to resolve:
+
++-------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------------+
+| Plugin                                                                                    | Assumed Write Path                                    | Notes                                                                  |
++-------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------------+
+|                                                                                           | wp-content/ai1vm-backups                              | The platform is not designed for large backup files. You can download  |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)         +-------------------------------------------------------+ full backups [from the Site Dashboard](/backups).                      |
+|                                                                                           | wp-content/plugins/all-in-one-wp-migrations/storage   |                                                                        |
++-------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------------+
+| [Autoptimize](https://wordpress.org/plugins/autoptimize/)                                 | wp-content/resources                                  | See the [Autoptimize](#autoptimize) section below for other solutions. |
++-------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------------+
+|                                                                                           | wp
+| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) |
 
 ### Define FS_METHOD
 There are several plugins and themes that have issues on Pantheon due to the way they access files. By defining the `FS_METHOD` as `direct` in `wp-config.php` above the line `/* That's all, stop editing! Happy Pressing. */`, we can easily avoid these issues:
@@ -368,15 +388,6 @@ Plugins and Themes with issues resolved by this include:
 - [Visual Composer: Website Builder](https://visualcomposer.io/)
 - [WPBakery: Page Builder](https://wpbakery.com/)
 - [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
-
-### [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)
-**Issue**: Full site backups are exported to the `wp-content/ai1wm-backups` directory, which is tracked in Git. Large backup files tracked in Git can cause problems with platform backups, deploys and other workflows.
-
-The plugin also requires write access to `wp-content/plugins/all-in-one-wp-migration/storage`, which is not permitted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
-
-**Solution**: You can create and download full backups from your [Dashboard](/backups/).
-
-<hr />
 
 ### [AMP for WP – Accelerated Mobile Pages](https://wordpress.org/plugins/accelerated-mobile-pages/)
 **Issue**: Enabling the Mobile Redirection feature within AMP for WP sends a session cookie which conflicts with platform-level page caching. See the  [WordPress support forum](https://wordpress.org/support/topic/varnish-compatibility-issue-with-session-keys/) for details.
@@ -417,18 +428,19 @@ function is_mobile() {
 <hr />
 
 ### [Autoptimize](https://wordpress.org/plugins/autoptimize/)
+
 **Issue**: Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
 
 **Solution**: Configure Autoptimize to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`) by adding the following to `wp-config.php`:
 
-```php
+```php:title=wp-config.php
 /** Changes location where Autoptimize stores optimized files */
 define('AUTOPTIMIZE_CACHE_CHILD_DIR','/uploads/autoptimize/');
 ```
 
 Be sure to add this configuration _above_ the comment to stop editing:
 
-![Autoptimize configuration](../images/autoptimize-config.png)
+![Example of Autoptimize configuration above the stop editing comment](../images/autoptimize-config.png)
 
 For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/assuming-write-access/#create-a-symbolic-link).
 
