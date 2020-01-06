@@ -968,6 +968,35 @@ span#changelog-rsaquo {
 .guide-content-well {
 	/*border-bottom: .1em solid #eef2f3;*/
 }
+
+@media (min-width: 1300px) {
+	.doc-content-well {
+		width: 1270px;
+		padding-right: 0px;
+	}
+}
+
+@media (min-width: 1400px) {
+	.doc-content-well {
+		width: 1380px;
+		padding-right: 0px;
+	}
+}
+
+@media (min-width: 1700px) {
+	.doc-content-well {
+		width: 1680px;
+		padding-right: 0px;
+	}
+}
+
+@media (min-width: 2000px) {
+	.doc-content-well {
+		width: 1980px;
+		padding-right: 0px;
+	}
+}
+
 .doc-content-well {
 	padding-bottom: 50px;
 }
