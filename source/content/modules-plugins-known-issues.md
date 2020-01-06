@@ -5,6 +5,7 @@ tags: [debugcode, siteintegrations]
 categories: [troubleshoot, integrate]
 contributors: [aleksandrkorolyov]
 ---
+
 This page lists modules and plugins that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/support/).
 
 We do not prevent you from installing and using these plugins/modules. However, we cannot provide support for incompatible plugins and modules or if they are used against the guidance provided here.
@@ -359,17 +360,34 @@ The solution to these issues is usually to create a symlink from the plugin's ex
 
 The following is a list of plugins that assumes write access, and the specific file or folder that needs to be symlinked to resolve:
 
-+-------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------------+
-| Plugin                                                                                    | Assumed Write Path                                    | Notes                                                                  |
-+-------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------------+
-|                                                                                           | wp-content/ai1vm-backups                              | The platform is not designed for large backup files. You can download  |
-| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)         +-------------------------------------------------------+ full backups [from the Site Dashboard](/backups).                      |
-|                                                                                           | wp-content/plugins/all-in-one-wp-migrations/storage   |                                                                        |
-+-------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------------+
-| [Autoptimize](https://wordpress.org/plugins/autoptimize/)                                 | wp-content/resources                                  | See the [Autoptimize](#autoptimize) section below for other solutions. |
-+-------------------------------------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------------+
-|                                                                                           | wp
-| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/) |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
+| Plugin                                                                                        | Assumed Write Path                                    | Notes                                                                           |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
+|                                                                                               | wp-content/ai1vm-backups                              | The platform is not designed for large backup files. You can download           |
+| [All-in-One WP Migration](https://wordpress.org/plugins/all-in-one-wp-migration/)             +-------------------------------------------------------+ full backups [from the Site Dashboard](/backups). See [below](#autoptimize)     |
+|                                                                                               | wp-content/plugins/all-in-one-wp-migrations/storage   | for additional options.                                                         |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
+| [Autoptimize](https://wordpress.org/plugins/autoptimize/)                                     | wp-content/resources                                  | See the [Autoptimize](#autoptimize) section below for other solutions.          |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
+|                                                                                               | wp-content/et-cache                                   | Remember to repeat this process for each environment,                           |
+| [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)     |                                                       | including multidevs.                                                            |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
+|                                                                                               |                                                       | You can override this path on the plugin configuration page                     |
+| [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)                             | wp-content/gallery                                    | (`/wp-admin/admin.php?page=ngg_other_options`) to use                           |
+|                                                                                               |                                                       | wp-content/uploads/gallery/ instead of creating a symlink.                      |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
+| [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503) | wp-content/plugins/woozone/cache                                                                                                        |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
+| [WP-Rocket](https://wp-rocket.me/)                                                            | wp-content/wp-rocket-config                                                                                                             |
+|                                                                                               +-----------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                                               | wp-content/cache                                                                                                                        |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
+| [WPML - The WordPress Multilingual Plugin](https://wpml.org/)                                 | wp-content/languages                                  | [See below](#wpml---the-wordpress-multilingual-plugin) For alternate solutions. |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
+| [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)                           | wp-content/cache                                      | This plugin uses `is_dir` to verfiy the target directory, which will return     |
+|                                                                                               |                                                       |false if the directory is a symlink. This causes a permissions error when        |
+|                                                                                               |                                                       |  deleting cache files.                                                          |
++-----------------------------------------------------------------------------------------------+-------------------------------------------------------+---------------------------------------------------------------------------------+
 
 ### Define FS_METHOD
 There are several plugins and themes that have issues on Pantheon due to the way they access files. By defining the `FS_METHOD` as `direct` in `wp-config.php` above the line `/* That's all, stop editing! Happy Pressing. */`, we can easily avoid these issues:
@@ -570,9 +588,7 @@ For WooCommerce, the CLI runner needs some of the REST endpoints for it to funct
 
 **Solution 2:**
 
-1. Symlink the main `et-cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/assuming-write-access/).
-1. SFTP into each environment (as well as new environments in the future) and create the directory `wp-content/uploads/et-cache` and any necessary subfolders (`et-cache/global/en-US`, for example).
-1. [Define `FS_METHOD`](#define-fs_method).
+Create a [symlink](#assumed-write-access).
 
 <hr />
 
@@ -691,15 +707,6 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 ### [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/)
 **Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/new-relic/) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver/).
-<hr />
-
-
-### [NextGEN Gallery](https://wordpress.org/plugins/nextgen-gallery/)
-**Issue**: NextGEN Gallery assumes write access to the site's codebase within the `wp-content/gallery` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
-
-**Solution**: This can be overridden from the plugin's configuration page (`/wp-admin/admin.php?page=ngg_other_options`) to use `wp-content/uploads/gallery/`.
-
-An alternative solution is to [create a symbolic link](/assuming-write-access/#create-a-symbolic-link).
 <hr />
 
 ### [Popup Builder – Responsive WordPress Pop up – Subscription & Newsletter](https://wordpress.org/plugins/popup-builder/)
@@ -879,11 +886,9 @@ There is a feature request on [WooCommerce's GitHub page](https://github.com/woo
 
 **Solution**: Add the following line to `wp-config.php`:
 
-    define('WP_MEMORY_LIMIT', '256M');
-
-**Issue 2**: WooZone writes to a cache folder in `wp-content/plugins/woozone/`, which is not editable in Test and Live
-
-**Solution**: Symlink `wp-content/plugins/woozone/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/assuming-write-access/).
+```php:title=wp-config.php
+  define('WP_MEMORY_LIMIT', '256M');
+```
 
 <hr />
 
@@ -915,7 +920,6 @@ if (defined( "PANTHEON_BINDING" )) {
 
 <hr />
 
-
 ### [WP-Rocket](https://wp-rocket.me/)
 **Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
 
@@ -931,7 +935,7 @@ if (defined( "PANTHEON_BINDING" )) {
 
 **Issue 2:** WP-rocket [assumes write access](/assuming-write-access) to read-only file paths in Pantheon.
 
-**Solution:** [Create symlinks](/assuming-write-access/#create-a-symbolic-link) for the paths `wp-content/wp-rocket-config` and `wp-content/cache` to a writable path.
+**Solution:** [Create symlinks](#assumed-write-access) as noted above.
 
 <hr />
 
@@ -969,18 +973,6 @@ if (defined( "PANTHEON_BINDING" )) {
 - Check the Enable Stream Reader
 
 <hr />
-
-
-### [WP Fastest Cache](https://wordpress.org/plugins/wp-fastest-cache/)
-
-**Issue 1**: This plugin requires write access to a cache folder in `wp-content/cache`, which is not granted on Test and Live environments by design.
-
-**Solution**: Symlink `wp-content/cache` to a folder in `wp-content/uploads/`. For details, see [Using Extensions That Assume Write Access](/assuming-write-access)
-
-**Issue 2**: This plugin uses `is_dir` to verfiy the target directory, which will return false if the directory is a symlink. This causes a permissions error when deleting cache files.
-
-<hr />
-
 
 ### [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/)
 
