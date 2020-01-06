@@ -14,6 +14,8 @@ Currently, there are two services on Pantheon that support SSH tunneling:
 - [MySQL database](/mysql-access/) (dbserver)
 - [Redis cache](/redis/)
 
+To restrict access to these services to SSH tunnels only, consider [Secure Runtime Access](/secure-runtime-access/).
+
 ## Prerequisites
 
 - Local installation of a MySQL client
