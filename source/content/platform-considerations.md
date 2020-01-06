@@ -146,7 +146,7 @@ If you require this behavior, [Advanced CDN](/professional-services#advanced-cdn
 ## Large Code Repository
 When a code repo is larger than 2GB, it increases the possibility of Git errors when committing code on Pantheon. We suggest keeping multimedia assets out of the repo by moving them to a media file storage service such as [Amazon S3](https://aws.amazon.com/s3/), and using version control to track URLs. 
 
-If your repository has grown over 2GB and is causing problems (such as errors when cloning), consider [pruning and optimizing the repo](reducing-large-repos).
+If your repository has grown over 2GB and is causing problems (such as errors when cloning), consider [pruning and optimizing the repo](/reducing-large-repos/).
 
 ## Large Files
 Due to the configuration of the [Pantheon Filesystem](/files/), Pantheon's file serving infrastructure is not optimized to store and deliver very large files. Files over 100MB cannot be uploaded through WordPress or Drupal, and must be added by [SFTP or rsync](/rsync-and-sftp/). Files over 256MB will fail no matter how they are uploaded. Transfers with files over 50MB will experience noticeable degradation in performance.
