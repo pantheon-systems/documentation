@@ -18,19 +18,19 @@ searchboost: 100
 
 The basic format of a Terminus command is:
 
-```bash
+```bash{promptUser: user}
 terminus command:subcommand <site>.<env>
 ```
 
 For more information on any command you can run:
 
-```bash
+```bash{promptUser: user}
 terminus command:subcommand -h
 ```
 
 Or for a list of all available commands:
 
-```bash
+```bash{promptUser: user}
 terminus list
 ```
 
@@ -106,13 +106,13 @@ Updates](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-
 
 List available upstream updates:
 
-```bash
+```bash{promptUser: user}
 terminus upstream:updates:list my-site
 ```
 
 If the environment's connection mode is currently set to SFTP with uncommitted work you want to keep, commit now before proceeding:
 
-```bash
+```bash{promptUser: user}
 terminus env:commit my-site.dev --message="My code changes"
 ```
 
@@ -124,13 +124,13 @@ The following command will permanently delete all uncommitted SFTP changes. If y
 
 Set the environment's connection mode to Git so updates can be pulled into the site from Pantheon's upstream:
 
-```bash
+```bash{promptUser: user}
 terminus connection:set my-site.dev git
 ```
 
 Apply available upstream updates for WordPress and Drupal core from the command line with Terminus:
 
-```bash
+```bash{promptUser: user}
 terminus upstream:updates:apply my-site
 ```
 
@@ -140,51 +140,51 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 
 <TabList>
 
-<Tab title={"Drupal"} id={"wptab"} active={true}>
+<Tab title="Drupal" id="drupaltab" active={true}>
 
 First, set the Dev environment's connection mode to SFTP:
 
-```bash
+```bash{promptUser: user}
 terminus connection:set my-site.dev sftp
 ```
 
 Apply updates to all contrib projects:
 
-```bash
+```bash{promptUser: user}
 terminus drush my-site.dev -- pm-updatecode --no-core
 ```
 
 Commit contrib updates to the Dev environment:
 
-```bash
+```bash{promptUser: user}
 terminus env:commit my-site.dev --message="Update all contrib projects"
 ```
 
 </Tab>
 
-<Tab title={"WordPress"} id={"drupaltab"}>
+<Tab title="WordPress" id="wptab">
 
 First, set the Dev environment's connection mode to SFTP:
 
-```bash
+```bash{promptUser: user}
 terminus connection:set my-site.dev sftp
 ```
 
 Apply updates to all plugins:
 
-```bash
+```bash{promptUser: user}
 terminus wp my-site.dev -- plugin update --all
 ```
 
 Apply updates to all themes:
 
-```bash
+```bash{promptUser: user}
 terminus wp my-site.dev -- theme update --all
 ```
 
 Commit plugin and theme updates to the Dev environment:
 
-```bash
+```bash{promptUser: user}
 terminus env:commit my-site.dev --message="Update all plugins and themes"
 ```
 
@@ -198,7 +198,7 @@ Terminus supports third-party plugins that extend it's functionality by adding n
 
 Install the [Mass Update](https://github.com/pantheon-systems/terminus-mass-update) plugin, then use the `--dry-run` option to review available upstream updates without applying them:
 
-```bash
+```bash{promptUser: user}
 terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb --dry-run
 ```
 
@@ -221,13 +221,13 @@ The following command will permanently delete all uncommitted SFTP changes. If y
 
 </Alert>
 
-```bash
+```bash{promptUser: user}
 terminus connection:set my-site.dev git
 ```
 
 Review output then apply the mass update by removing the `--dry-run` option:
 
-```bash
+```bash{promptUser: user}
 terminus site:list --format=list | terminus site:mass-update:apply --accept-upstream --updatedb
 ```
 
@@ -235,13 +235,13 @@ terminus site:list --format=list | terminus site:mass-update:apply --accept-upst
 
 When you're ready to test a new set of changes, use Terminus to deploy code from development environments up to the Test environment while pulling the database and files down from Live:
 
-```bash
+```bash{promptUser: user}
 terminus env:deploy my-site.test --sync-content --note="Deploy core and contrib updates" --cc
 ```
 
 After testing changes, use Terminus to deploy code from Test up to Live:
 
-```bash
+```bash{promptUser: user}
 terminus env:deploy my-site.live --note="Deploy core and contrib updates" --cc
 ```
 
@@ -259,41 +259,19 @@ There are a few scenarios where it may be useful to reset your Dev environment (
 
 Start by cloning the site's codebase to your local machine if you have not done so already (replace <code>awesome-site</code> with your site name):
 
-```bash
+```bash{promptUser: user}
 terminus connection:info awesome-site.dev --fields='Git Command' --format=string
 ```
 
 Then automate the procedure for resetting Dev to Live by downloading the following bash script:
 
-<div class="script-file-header">
-  reset-dev-to-live.sh
-  <a id="downloadLink">
-    <button class="btn btn-default btn-download">
-      <i class="fa fa-download" aria-hidden="true" /> Download Script
-    </button>
-  </a>
-</div>
+<Download file="reset-dev-to-live.sh" />
 
-```bash
-#!/bin/bash #Authenticate Terminus terminus auth:login #Provide the target
-site name (e.g. your-awesome-site) echo 'Provide the site name (e.g.
-your-awesome-site), then press [ENTER] to reset the Dev environment to
-Live:'; read SITE; #Set the Dev environment's connection mode to Git echo
-"Making sure the environment's connection mode is set to Git..."; terminus
-connection:set \$SITE.dev git #Identify the most recent commit deployed to
-Live and overwrite history on Dev's codebase to reflect Live echo "Rewriting
-history on the Dev environment's codebase..."; git reset --hard `terminus
-env:code-log $SITE.live --format=string | grep -m1 'live' | cut -f 4` #Force
-push to Pantheon to rewrite history on Dev and reset codebase to Live git
-push origin master -f #Clone database and files from Live into Dev echo
-"Importing database and files from Live into Dev..."; terminus
-env:clone-content \$SITE.live dev #Open the Dev environment on the Site
-Dashboard terminus dashboard:view \$SITE.dev
-```
+GITHUB-EMBED https://github.com/pantheon-systems/documentation/blob/master/source/scripts/reset-dev-to-live.sh.txt bash GITHUB-EMBED
 
 Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
 
-```bash
+```bash{promptUser: user}
 sh /PATH/TO/SCRIPT/reset-dev-to-live.sh
 ```
 
@@ -311,13 +289,13 @@ Every site has an upstream assigned in order to deliver [one-click updates](/cor
 
 To see all available upstreams, run:
 
-```bash
+```bash{promptUser: user}
 terminus upstream:list
 ```
 
 If your organization has a [Custom Upstream](/custom-upstream/), you can use Terminus to switch existing sites over to the common codebase:
 
-```bash
+```bash{promptUser: user}
 terminus site:upstream:set my-site "My Custom Upstream"
 ```
 

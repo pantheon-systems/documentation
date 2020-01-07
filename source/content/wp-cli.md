@@ -12,7 +12,7 @@ To use WP-CLI on the Pantheon Platform, you'll first need to install [Terminus](
 
 Once you've installed Terminus locally, and verified it's working correctly, you're ready to use WP-CLI. However, if you haven't already, you may want to consider [installing WP-CLI locally](https://make.wordpress.org/cli/handbook/installing/) for use in your local environment.
 
-If you have a [Composer-based site](/composer/), Terminus will use the version of WP-CLI that it finds locally in `vendor/wp-cli`.
+If you have a [Composer-based site](/composer/), Terminus will use the version of WP-CLI that it finds in `vendor/wp-cli` when running WP-CLI commands on the platform.
 
 ## Getting Started With WP-CLI
 
@@ -56,7 +56,7 @@ Feeling comfortable with WP-CLI? Here are a [few of the many commands](https://d
 
 Use the `wp db query` command via [Terminus](/terminus/) to run SQL queries against the database on Pantheon:
 
-```bash
+```bash{promptUser: user}
 terminus wp <site>.<env> -- db query "SELECT * FROM wp_users WHERE ID=1"
 ```
 
@@ -77,7 +77,7 @@ The following silent failure occurs when executing `terminus remote:wp` commands
 
 Redirects kill the PHP process before WP-CLI is executed. You can resolve this error by adding `php_sapi_name() != "cli"` as a conditional statement to all redirect logic within `wp-config.php`:
 
-```php
+```php:title=wp-config.php
 // Require HTTPS, www.
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) &&
   ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') &&

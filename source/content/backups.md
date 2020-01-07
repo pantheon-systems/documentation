@@ -55,7 +55,6 @@ Daily backups are scheduled automatically.
 
 **All sites:** You can run manual backups for free, and choose to keep them for one month or six months.
 
-
 ## Access Backups
 
 Backups created on Pantheon are stored offsite on Google Cloud Storage instances, however a full-fledged backup solution is strongly recommended for retention. For example, the following script can be executed from an external cron job to send backups to your own Amazon S3 instance:
