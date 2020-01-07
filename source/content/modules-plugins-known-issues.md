@@ -696,6 +696,22 @@ An alternative solution is to [create a symbolic link](/assuming-write-access/#c
 
 **Solution:** A [user patch](https://gist.github.com/kshaner/7fcbc7e3e967c5694fd38638bff1cc17/revisions) has been [submitted](https://wordpress.org/support/topic/absolute-path-causes-issues-on-environments-with-multiple-containers/) to the plugin maintainers.
 
+<hr/>
+
+### [PolyLang](https://wordpress.org/plugins/polylang/)
+
+**Issue:** This plugin adds a cache-busting cookie (ex. `pll_language=en`) for each request.
+
+**Solution:** Define the constant `PLL_COOKIE` to false in `wp-config.php` to remove the cookie:
+
+```php:title=wp-config.php
+define('PLL_COOKIE', false)
+```
+
+The value of `PLL_COOKIE` defaults to `pll_polylang`. This defines the name of the cookie used by Polylang to store the visitor's language. When `PLL_COOKIE` is set to false, Polylang does not set any cookie. Be aware that in this case some features of the plugin may not work completely. For example, the login page will not be translated.
+
+See the [plugin documentation](https://polylang.pro/doc/php-constants/) for more information on its PHP constants.
+
 <hr />
 
 ### [Query Monitor](https://wordpress.org/plugins/query-monitor/)
