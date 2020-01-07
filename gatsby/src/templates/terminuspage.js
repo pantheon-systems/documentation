@@ -22,6 +22,7 @@ import NavButtons from "../components/navButtons"
 import SEO from "../layout/seo"
 import Releases from "../components/releases"
 import TerminusVersion from "../components/terminusVersion"
+import Download from "../components/download"
 import Commands from "../components/commands"
 
 const shortcodes = {
@@ -37,6 +38,7 @@ const shortcodes = {
   CardGroup,
   Releases,
   TerminusVersion,
+  Download,
   Commands,
 }
 
