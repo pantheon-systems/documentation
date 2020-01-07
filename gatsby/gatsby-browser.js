@@ -1,22 +1,32 @@
+import React from "react"
+import { location, globalHistory } from "@reach/router"
+
+
 // custom typefaces
-require("prismjs/themes/prism-okaidia.css")
+import "prismjs/themes/prism-okaidia.css"
 
 // Code block line numbering
-require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+import "prismjs/plugins/line-numbers/prism-line-numbers.css"
 
 // Code block shell prompt
-require("prismjs/plugins/command-line/prism-command-line.css")
+import "prismjs/plugins/command-line/prism-command-line.css"
 
 // Previous version scripts and styles
 // require("../source/docs/assets/js/main.js")
 
 // // TOC generator
-require("tocbot/dist/tocbot.css")
-require("tocbot/dist/tocbot.min.js")
+import "tocbot/dist/tocbot.css"
+import "tocbot/dist/tocbot.min.js"
 
-require("./src/styles/global.scss")
+import "./src/styles/global.scss"
 
 //Segment
-exports.onRouteUpdate = () => {
-    window.analytics && window.analytics.page({url: window.location.href});
-};
+export const onRouteUpdate = () => {
+  window.locations = window.locations || [document.referrer];
+  locations.push(window.location.href);
+  window.previousPath = locations[locations.length - 2];
+  window.analytics && window.analytics.page({
+    url: window.location.href,
+    referrer: window.previousPath
+  })
+}
