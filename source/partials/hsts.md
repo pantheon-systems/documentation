@@ -2,6 +2,8 @@
 
 Before adjusting `enforce_https`, review and understand the configuration options and all considerations to avoid unintended consequences.
 
+If you decide to use a plugin or module to set your HSTS header, you _must_ disable `enforce_https` in `pantheon.yml` to avoid duplicate headers, which creates an invalid policy.
+
 </Alert>
 
 Use of the HSTS header is defined by the `enforce_https` directive, and takes five possible values which are handled by Pantheon as shown below:
