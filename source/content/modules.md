@@ -8,12 +8,13 @@ categories: [performance,integrate,platform]
 Pantheon maintains several modules to extend and integrate Drupal on the platform. For real time discussion of these modules, find Pantheon developers in our [Pantheon Community](/pantheon-community/) Slack channel.
 
 <Alert title="Note" type="info">
+
 WordPress users, see [Pantheon Plugins](/plugins/) for details on WordPress plugins developed and maintained for the Pantheon workflow.
+
 </Alert>
 
 ## [Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
 The Advanced Page Cache module attaches [Drupal's cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) to a response so that Pantheon's [Global CDN](/global-cdn/) edge service can granularly clear new content as it is saved. The Global CDN can detect when underlying data changes, such as nodes and taxonomy terms, then clear pages containing that entity. For details, see [this blog post](https://pantheon.io/blog/pantheon-advanced-page-cache-drupal-cache-metadata-global-cdn).
-
 
 ## [LCache](https://www.drupal.org/project/lcache)
 LCache is a module that applies the tiered caching model of multi-core processors (with local L1 and central L2 caches) to web applications. This allows scaling cache read access independently of network throughput. The current production implementation uses APCu as L1 and the database as L2.
