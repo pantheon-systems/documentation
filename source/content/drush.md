@@ -3,6 +3,7 @@ title: Drupal Drush Command-Line Utility
 description: Administer and maintain your Pantheon site from your local Drupal Drush installation.
 tags: [devdrush]
 categories: [drupal,workflow]
+reviewed: "2020-01-03"
 ---
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
@@ -12,6 +13,8 @@ Drush commands require a `settings.php` file, and it's a best practice to have o
 Refer to Drush's [install documentation](http://docs.drush.org/en/master/install/) for details on installing Drush locally.
 
 Drush-savvy developers should also install and utilize [Terminus](/terminus/), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
+
+If you have a [Composer-based site](/composer/), Terminus will use the version of Drush it finds in `vendor/bin/drush` when running Drush commands on the platform.
 
 You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management/). For example, you can run `terminus drush <site>.<env> -- cc drush` instead of `drush @pantheon.SITENAME.dev cc drush`.
 
@@ -33,7 +36,7 @@ This command will write both Drush 8 and Drush 9 aliases into the directory `$HO
 terminus aliases --all
 ```
 
-If you add a site to your account, you will have to download a new copy of your Drush aliases. You do not need to update your Drush aliases when you add new mulitdev environments to your sites.
+If you add a site to your account, you will have to download a new copy of your Drush aliases. You do not need to update your Drush aliases when you add new Mulitdev environments to your sites.
 
 <Alert type="info" title="Note">
 
