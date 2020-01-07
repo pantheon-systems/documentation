@@ -31,6 +31,9 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
   const metaDescription = description || site.siteMetadata.description
   const metaImage = image || "/assets/images/default-thumb-doc.png"
   const authorList = authors ? Array.from(authors) : []
+  const addSearchCategories = categories ? categories.map((value) =>
+    `category=${value}`
+  ).join(";") : `category=other`
 
   const titleProps = title ? {
     title: `${title}`,
@@ -39,7 +42,7 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
     title: site.siteMetadata.title
   }
 
-  const tagValues = tags && tags.length ?         {
+  const tagValues = tags && tags.length ? {
     property: `og:article:tags`,
     content: `${tags}`
   } : {
@@ -60,6 +63,10 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
 
       meta={[
         {...tagValues},
+        {
+          name: `addsearch-custom-field`,
+          content: addSearchCategories
+        },
         {
           itemprop: `name`,
           content: `${title} | ${site.siteMetadata.title}`,
