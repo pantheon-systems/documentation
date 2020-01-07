@@ -205,3 +205,16 @@ $this->provider->login( $redirect_to );
 
 The current version of the SimpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) looks to be the best solution until the fix is accepted into an official project release.
 
+## Alternative approach
+
+### SAML SP 2.0 Single Sign On (SSO) - SAML Service Provider
+
+#### Drupal
+
+The Drupal module https://www.drupal.org/project/miniorange_saml provides a simple drop-in alternative way to configure SAML with a variety of IdPs. 
+
+The Support team has tested this on Pantheon using Drupal 8 and Okta with no issues.
+
+#### WordPress
+
+There is also a WordPress version available https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/ which works in exactly the same way.
