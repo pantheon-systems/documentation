@@ -4,6 +4,9 @@ description: Using SimpleSAMLphp to configure a single sign-on system for your D
 tags: [siteintegrations, security]
 categories: [integrate,develop]
 ---
+
+This doc covers the installation and configuration of [SimpleSAMLphp](https://simplesamlphp.org/) for Pantheon sites. For a simpler SSO service provider solution, jump to [Alternatives](#alternatives).
+
 Start by following the SimpleSAMLphp's [service provider quickstart instructions](https://simplesamlphp.org/docs/1.17/simplesamlphp-sp). This documentation contains only the necessary extra steps to get it working on Pantheon with Drupal or WordPress.
 
 <Alert title="Note" type="info">
@@ -205,3 +208,14 @@ $this->provider->login( $redirect_to );
 
 The current version of the SimpleSAMLphp Authentication module attempts to load a session on every page, as reported in [https://drupal.org/node/2020009](https://drupal.org/node/2020009) in the official issue queue. There are two patches; at this time, [https://drupal.org/node/2020009#comment-7845537](https://drupal.org/node/2020009#comment-7845537) looks to be the best solution until the fix is accepted into an official project release.
 
+## Alternatives
+
+Other plugins and modules can provide SSO provider services with less configuration. Note that Pantheon does not officially endorse any third party plugins or modules.
+
+### SAML SP 2.0 Single Sign On (SSO) - SAML Service Provider
+
+**Drupal:** The module [SAML SP 2.0 Single Sign On (SSO) - SAML Service Provider](https://www.drupal.org/project/miniorange_saml) provides a simple drop-in alternative way to configure SAML with a variety of IdPs.
+
+The Support team has tested this module on Pantheon using Drupal 8 and Okta.
+
+**WordPress:** The WordPress version of [SAML SP Single Sign On – SSO login](https://wordpress.org/plugins/miniorange-saml-20-single-sign-on/) works in exactly the same way as the Drupal module, but has not been tested by Pantheon Support.
