@@ -161,7 +161,13 @@ ___
 
 ___
 
-### Caching Plugins (e.g. [Batcache](https://wordpress.org/plugins/batcache/), [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/), or [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/))
+## Caching Plugins
+
+This includes but is not limited to:
+
+- [Batcache](https://wordpress.org/plugins/batcache/)
+- [W3 Total Cache](https://wordpress.org/plugins/w3-total-cache/)
+- [WP Super Cache](https://wordpress.org/plugins/wp-super-cache/).
 
 **Issue:** Conflicts with platform-level page caching.
 
