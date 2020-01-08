@@ -18,7 +18,7 @@ Other considerations when working with third-party code are listed below.
 
 ## PHP Libraries
 
-Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform.
+Due to the cloud-based infrastructure of the Pantheon platform, certain PHP libraries are not available on the platform. See [External Libraries on Pantheon](/external-libraries) for all libraries available.
 
 ### MSSQL
 
