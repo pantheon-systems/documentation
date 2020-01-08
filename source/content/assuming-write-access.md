@@ -132,7 +132,7 @@ You can also verify success using `dir`:
 
 <Accordion title="WP-Rocket" id="wp-rocket-panel" icon="wrench">
 
-As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/) assumes write access to the code base.
+As discussed in [WordPressPlugins and Themes with Known Issues](/plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/) assumes write access to the code base.
 
 <Alert  title="Note" type="info">
 
@@ -183,7 +183,7 @@ You can also verify success using `dir`:
 
 <Accordion title="Uncode Theme" id="uncode-panel" icon="wrench">
 
-As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the code base.
+As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the code base.
 
 1. Manually move the target folders:
 

@@ -8,7 +8,7 @@ categories: [wordpress,troubleshoot]
 Whether by accident or by virtue of "web rot", links in your content may eventually stop working. This happens when links are placed into your site's code that use an IP address instead of your actual domain name. These links will eventually break when your application container’s IP address changes due to the nature of Pantheon’s cloud-based infrastructure.
 
 ## Links constructed using SERVER_NAME or SERVER_PORT
-Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs. This doesn't work well on Pantheon because this environmental data will be for ephemeral container data, which can lead to broken links. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) and [Modules and Plugins with Known Issues](/modules-plugins-known-issues).
+Some code relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']` to construct URLs. This doesn't work well on Pantheon because this environmental data will be for ephemeral container data, which can lead to broken links. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port) and [WordPress Plugins and Themes with Known Issues](/plugins-known-issues).
 
 ## There's a Plugin For That
 As with most common problems WordPress site owners face, there's a plugin to help. Actually, there are many. If you go to WordPress.org and search for [broken link](https://wordpress.org/plugins/search.php?q=broken+link), you'll find over 700 plugins to evaluate. The [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/) plugin is the most popular and is active on more than 400,000 WordPress sites.

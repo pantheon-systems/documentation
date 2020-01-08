@@ -28,8 +28,4 @@ The MSSQL PHP library used to interface with Microsoft SQL Server databases is n
 
 Due to the cloud-based infrastructure of the Pantheon platform, outbound requests are served by dynamic IP addresses. If your site relies on a static IP address for outgoing requests, the recommended solution is [Secure Integration](/secure-integration/). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative to accomplish the request. For more information, see [Dynamic Outgoing IP Addresses](/outgoing-ips).
 
-## Using the tmp Directory
-
-**Issue:** Extensions that require the use of the `/tmp` directory are not supported. With multiple application containers, as exists on Live environments, it's assumed the `/tmp` directory will be on the same application container. However, as we run a distributed application container matrix, the `/tmp` directory is not shared.
-
-**Solution:** For more details, see [Temporary File Management](/tmp/).
+<Partial file="tmp-directory.md" />

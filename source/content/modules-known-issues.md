@@ -226,7 +226,7 @@ ___
 
 ## [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus)
 
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/modules-plugins-known-issues/#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 
 ___
 
@@ -237,7 +237,7 @@ ___
 
 ## [Node export webforms](https://www.drupal.org/project/node_export_webforms)
 
-**Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](/modules-plugins-known-issues/#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 
 **Solution**: Use [drush](https://drushcommands.com/drush-8x/webform/webform-export/), as this uses a single application container to process the export. The relevant drush command is `webform-export` (alias wfx).
 
@@ -266,7 +266,7 @@ ___
 
 ## [Plupload](https://www.drupal.org/project/plupload)
 
-**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/modules-plugins-known-issues/#using-the-tmp-directory) section below.
+**Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 
 **Solution**: A possible solution is to set the `plupload_temporary_uri` variable in `settings.php`. Example:
 
@@ -343,7 +343,7 @@ ___
 
 ## [Taxonomy CSV](https://www.drupal.org/project/taxonomy_csv)
 
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](/modules-plugins-known-issues/#using-the-tmp-directory) section below.
+**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 ___
 
 ## [Twig Extensions](https://www.drupal.org/project/twig_extensions)
@@ -383,6 +383,8 @@ drush vset views_data_export_directory 'public://'
 Also see [Multiple Servers + Batch Database Stream Wrapper (sandbox module)](https://www.drupal.org/sandbox/jim/2352733).
 
 ___
+
+<Partial file="tmp-directory.md" />
 
 ## Other Issues
 

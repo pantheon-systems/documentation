@@ -48,7 +48,7 @@ For CSS or JavaScript changes, Drupal and WordPress each offer methods to ensure
 
 - **Drupal:** use the built-in option found in the Drupal dashboard at `/admin/config/development/performance`.
 
-- **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/modules-plugins-known-issues#autoptimize) to write files within the standard `wp-content/uploads` path.
+- **WordPress:** install a plugin like [Autoptimize](https://wordpress.org/plugins/autoptimize/) to add a similar option in the WordPress admin dashboard. Be aware, Autoptimize requires [additional configuration](/plugins-known-issues/#autoptimize) to write files within the standard `wp-content/uploads` path.
 
 ## Using Your Own Session-Style Cookies
 

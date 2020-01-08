@@ -125,7 +125,7 @@ If your site contains rules in `.htaccess` that cannot be migrated to PHP, Panth
 Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
 
 ## Image Optimization Tools
-Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules and Plugins with Known Issues.](/modules-plugins-known-issues#imageapi-optimize)
+Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules with Known Issues.](/modules-known-issues#imageapi-optimize)
 
 Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional Services](/professional-services#advanced-cdn) engagement). Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 

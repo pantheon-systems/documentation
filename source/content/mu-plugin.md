@@ -268,4 +268,4 @@ This page intends to introduce the concept of using an MU-plugin for applying ac
 
  - [Configuring wp-config.php](/wp-config-php/)
  - [Environment-Specific Configuration for WordPress Sites](/environment-specific-config/)
- - [Plugins with Known Issues](/modules-plugins-known-issues/#wordpress-plugins)
+ - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues/)

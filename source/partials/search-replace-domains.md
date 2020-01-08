@@ -15,7 +15,7 @@ There are several plugins with search and replace functionality. One reported by
 
 <Image alt="Enable Find & Replace" path="wp-migrate-db-setting.png" />
 
-Another popular search-replace plugin is [Better Search Replace](https://wordpress.org/plugins/better-search-replace/) but there is an additional filter that needs to be added for it to work in live, as outlined [here](/modules-plugins-known-issues/#better-search-and-replace).
+Another popular search-replace plugin is [Better Search Replace](https://wordpress.org/plugins/better-search-replace/) but there is an additional filter that needs to be added for it to work in live, as outlined [here](/plugins-known-issues/#better-search-and-replace).
 
 
 </Tab>
