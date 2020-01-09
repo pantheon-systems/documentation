@@ -80,6 +80,8 @@ In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goacce
   mv /usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess /usr/local/Cellar/goaccess/[VERSION]/conf/etc
   ```
 
+An [issue has been filed](https://github.com/allinurl/goaccess/issues/1640) on the GoAccess repo.
+
 ## Automate GoAccess Reports
 
 1. Copy the general log retrieval script from [Automate Downloading Logs](/logs#automate-downloading-logs), and use this to download logs from all application containers on the desired environment.
