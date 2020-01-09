@@ -83,7 +83,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 ## Examples
 
-### Divi theme version 4.0.6 and above
+<Accordion title="Divi theme version 4.0.6 and above" id="divi-panel" icon="wrench">
 
 As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues#divi-wordpress-theme--visual-page-builder), [Divi WordPress Theme & Visual Page Builder version 4.0.6 and above](https://www.elegantthemes.com/gallery/divi/) is assumes write access to the code base where the `et-cache` folder is located.
 
@@ -128,7 +128,9 @@ You can also verify success using `dir`:
 <SYMLINKD>        et-cache [.\uploads\et-cache]
 ```
 
-### WP-Rocket
+</Accordion>
+
+<Accordion title="WP-Rocket" id="wp-rocket-panel" icon="wrench">
 
 As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues/), [WP-Rocket](https://wp-rocket.me/) assumes write access to the code base.
 
@@ -177,7 +179,9 @@ You can also verify success using `dir`:
 <SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
 ```
 
-### Uncode Theme
+</Accordion>
+
+<Accordion title="Uncode Theme" id="uncode-panel" icon="wrench">
 
 As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues/), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the code base.
 
@@ -252,6 +256,8 @@ And in the `themes\uncode\library` directory:
 ```powershell
 <SYMLINKD>        css [..\..\..\uploads\uncode\library\css]
 ```
+
+</Accordion>
 
 ## Troubleshooting
 
