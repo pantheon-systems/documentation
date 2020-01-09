@@ -4,7 +4,6 @@ subtitle: Add a New Module
 description: In step five of the Build Tools guide, learn how to add new modules to your site.
 buildtools: true
 anchorid: extend
-categories: [develop]
 generator: pagination
 layout: guide
 type: guide
