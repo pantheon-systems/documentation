@@ -115,8 +115,6 @@ ___
 
 ## [Autoptimize](https://wordpress.org/plugins/autoptimize/)
 
-<ReviewDate date="2016-06-06" />
-
 **Issue:** Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
 
 **Solution:** Configure Autoptimize to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`) by adding the following to `wp-config.php`:
@@ -155,15 +153,11 @@ ___
 
 ## [Bookly](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/)
 
-<ReviewDate date="2017-06-16" />
-
 **Issue:** Sessions are implemented in a way that will not allow it to function with the WP Native Sessions plugin, either installed as a regular plugin or an mu-plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/incompatibility-with-wp-native-sessions/).
 
 ___
 
 ## [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/)
-
-<ReviewDate date="2017-07-25" />
 
 **Issue:** A low value set for "Check link every X hours" can consume a large amount of server resources.
 
@@ -364,8 +358,6 @@ ___
 
 ## [Instashow](https://elfsight.com/instagram-feed-instashow/)
 
-<ReviewDate date="2016-05-02" />
-
 **Issue:** The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 
 ___
@@ -385,8 +377,6 @@ ___
 ___
 
 ## [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
-
-<ReviewDate date="2017-07-18" />
 
 **Issue:** Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
 
@@ -416,8 +406,6 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 ___
 
 ## [Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/)
-
-<ReviewDate date="2016-03-03" />
 
 **Issue:** Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 
@@ -461,8 +449,6 @@ ___
 
 ## [Query Monitor](https://wordpress.org/plugins/query-monitor/)
 
-<ReviewDate date="2017-08-15" />
-
 **Issue:** Creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments.
 
 **Alternatives:** Pantheon has tools in place to monitor database queries:
@@ -493,8 +479,6 @@ ___
 ___
 
 ## [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/)
-
-<ReviewDate date="2016-02-08" />
 
 **Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. See [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port/).
 
@@ -537,15 +521,11 @@ ___
 
 ## [Timthumb](https://code.google.com/p/timthumb/)
 
-<ReviewDate date="2016-09-13" />
-
 **Issue:** TimThumb is no longer supported or maintained.
 
 ___
 
 ## [TubePress Pro](https://tubepress.com/)
-
-<ReviewDate date="2017-01-23" />
 
 **Issue:** Sites running PHP version 5.3 produce a WSOD after activating this plugin.
 
@@ -620,8 +600,6 @@ ___
 
 ## [Weather Station](https://wordpress.org/plugins/live-weather-station/)
 
-<ReviewDate date="2017-10-24" />
-
 **Issue:** This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 
 ___
@@ -650,8 +628,6 @@ ___
 
 ## [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
 
-<ReviewDate date="2017-08-25" />
-
 **Issue 1:** This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
 ![WooZone WP_MEMORY_LIMIT Error](../images/woocommerce/woozone-error.png)
@@ -666,8 +642,6 @@ ___
 
 ## [Wordfence](https://wordpress.org/plugins/wordfence/)
 
-<ReviewDate date="2017-02-22" />
-
 **Issue 1:** Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with platform-level page caching.
 
 **Solution:** Disable Wordfence-generated cookies by disabling Live Traffic within the Wordfence options page. See the  [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
@@ -679,8 +653,6 @@ ___
 ___
 
 ## [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/)
-
-<ReviewDate date="2017-05-03" />
 
 **Issue 1:** This plugin attempts to access PHP native sessions [before WordPress has been bootstrapped](https://wordpress.org/support/topic/plugin-starts-before-wordpress/), which prevents the Pantheon PHP native sessions plugin from being called. This leads to a 500 error when authenticating with external services.
 
