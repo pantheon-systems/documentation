@@ -155,11 +155,15 @@ ___
 
 ## [Bookly](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/)
 
+<ReviewDate date="2017-06-16" />
+
 **Issue:** Sessions are implemented in a way that will not allow it to function with the WP Native Sessions plugin, either installed as a regular plugin or an mu-plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/incompatibility-with-wp-native-sessions/).
 
 ___
 
 ## [Broken Link Checker](https://wordpress.org/plugins/broken-link-checker/)
+
+<ReviewDate date="2017-07-25" />
 
 **Issue:** A low value set for "Check link every X hours" can consume a large amount of server resources.
 
@@ -183,6 +187,8 @@ ___
 
 ## [Coming Soon](https://wordpress.org/plugins/coming-soon/)
 
+<ReviewDate date="2018-10-03" />
+
 **Issue:** `Maintenance mode` gives the `ERR_TOO_MANY_REDIRECTS` error in the frontend. This plugin uses `503 Header status - Service Temporarily Unavailable` which creates a redirect loop. Please see [this issue](https://wordpress.org/support/topic/plugin-give-err_too_many_redirects-in-pantheon-hosting/) for more details regarding the error.
 
 **Solution:** This plugin only works in the `Coming Soon Mode` on Pantheon, and you need to put content into the **Page Settings** > **Message** so the Coming Soon page won't appear as a blank white page.
@@ -192,6 +198,8 @@ Alternatively, if you don't want your site to be crawled by search engines, you 
 ___
 
 ## [Contact Form 7](https://wordpress.org/plugins/contact-form-7/)
+
+<ReviewDate date="2019-02-21" />
 
 **Issue 1:** This plugin relies on `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`, which pass static values subject to change over time during routine platform maintenance.
 
@@ -220,6 +228,8 @@ ___
 
 ## [Constant Contact Forms](https://wordpress.org/plugins/constant-contact-forms/)
 
+<ReviewDate date="2018-08-24" />
+
 **Issue:** The Constant Contact Forms plugin adds dependencies using Composer and provides a .gitignore file which prevents these dependencies from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
 
 **Solution:** Remove .gitignore files from the `constant-contact-forms` and `constant-contact-forms/vendor/psr/log` directories.
@@ -227,6 +237,8 @@ ___
 ___
 
 ## [Disable REST API and Require JWT / OAuth Authentication](https://wordpress.org/plugins/disable-rest-api-and-require-jwt-oauth-authentication/)
+
+<ReviewDate date="2019-04-01" />
 
 **Issue:** When this plugin is enabled along with WooCommerce, WP-CLI and Pantheon dashboard workflows like **Cache Clear** can fail. This issue may not happen for environments where WP-CLI is not installed (local machine, other platforms, etc):
 
@@ -257,6 +269,8 @@ ___
 
 ## [Divi WordPress Theme & Visual Page Builder](https://www.elegantthemes.com/gallery/divi/)
 
+<ReviewDate date="2019-11-27" />
+
 **Issue:** Divi Themes Visual Page Builder may produce the following error when attempting to edit pages because the page builder is attempting to write to three different nested folders in the web root:
 
 ```php
@@ -274,6 +288,8 @@ ___
 
 ## [Event Espresso](https://eventespresso.com/)
 
+<ReviewDate date="2018-11-15" />
+
 **Issue:** Event Espresso shows the error:
 
 ```none
@@ -285,6 +301,8 @@ PHP Fatal error: Uncaught EE_Error: An attempt to access and/or write to a file 
 ___
 
 ## [EWWW Image Optimizer](https://wordpress.org/plugins/ewww-image-optimizer/)
+
+<ReviewDate date="2018-10-16" />
 
 **Issue:** EWWW Image Optimizer attempts to install and execute third party binary tools to perform image optimization, which is restricted on our platform. The error message is:
 
@@ -298,6 +316,8 @@ ___
 
 ## [FacetWP](https://facetwp.com)
 
+<ReviewDate date="2019-10-15" />
+
 **Issue:** FacetWP [conflicts with New Relic](https://facetwp.com/new-relic-compatibility/).
 
 **Solution:** [Disable New Relic](/new-relic#disable-new-relic-browser-monitoring-agent) when using FacetWP.
@@ -306,6 +326,8 @@ ___
 
 ## [Fast Velocity Minify](https://wordpress.org/plugins/fast-velocity-minify/)
 
+<ReviewDate date="2019-10-12" />
+
 **Issue:** Site suddenly shows a white screen of death.
 
 **Solution:** Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches/) and [flush the Redis cache](/redis/#clear-cache).
@@ -313,6 +335,8 @@ ___
 ___
 
 ## [Force Login](https://wordpress.org/plugins/wp-force-login/)
+
+<ReviewDate date="2018-07-26" />
 
 **Issue:** This plugin appends a port number using `$_SERVER['SERVER_PORT']` at the end of the URL when the user logs in to the site.
 
@@ -328,6 +352,8 @@ ___
 
 ## [InfiniteWP](https://infinitewp.com)
 
+<ReviewDate date="2019-10-01" />
+
 **Issue 1:** Installing the InfiniteWP admin panel on a Pantheon hosted site is not possible, because the plugin hardcodes the database credentials and uses a custom port in the URL. Our platform offers database credentials and offers them as an environment variable, and does not allow web access on ports other than `80` and `443`.
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
@@ -338,11 +364,15 @@ ___
 
 ## [Instashow](https://elfsight.com/instagram-feed-instashow/)
 
+<ReviewDate date="2016-05-02" />
+
 **Issue:** The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 
 ___
 
 ## [iThemes Security](https://wordpress.org/plugins/better-wp-security/)
+
+<ReviewDate date="2019-01-01" />
 
 **Issue 1:** The "File Change Detection" check in iThemes Security warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
 
@@ -356,12 +386,16 @@ ___
 
 ## [Maintenance Mode](https://wordpress.org/plugins/lj-maintenance-mode/)
 
+<ReviewDate date="2017-07-18" />
+
 **Issue:** Maintenance Mode causes a redirect loop on all pages for logged out users when the maintenance mode option is checked.
 
 **Solution:** If you are locked out of your site, wp-login.php will still function and you can login to disable the maintenance mode plugin.
 ___
 
 ## [ManageWP worker](https://wordpress.org/plugins/worker/)
+
+<ReviewDate date="2018-10-12" />
 
 **Issue 1:** Error when adding a site in the ManageWP dashboard:
 
@@ -383,11 +417,15 @@ ___
 
 ## [Monarch Social Sharing](https://www.elegantthemes.com/plugins/monarch/)
 
+<ReviewDate date="2016-03-03" />
+
 **Issue:** Seems to break WP-CLI, which is used by many of our workflows (clone, clear cache).
 
 ___
 
 ## [New Relic Reporting for WordPress](https://wordpress.org/plugins/wp-newrelic/)
+
+<ReviewDate date="2019-05-08" />
 
 **Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/new-relic/) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver/).
 
@@ -395,13 +433,17 @@ ___
 
 ## [Popup Builder – Responsive WordPress Pop up – Subscription & Newsletter](https://wordpress.org/plugins/popup-builder/)
 
+<ReviewDate date="2019-12-06" />
+
 **Issue:** This plugin stores full file paths to the options table, which breaks across multiple application containers.
 
 **Solution:** A [user patch](https://gist.github.com/kshaner/7fcbc7e3e967c5694fd38638bff1cc17/revisions) has been [submitted](https://wordpress.org/support/topic/absolute-path-causes-issues-on-environments-with-multiple-containers/) to the plugin maintainers.
 
-<hr/>
+___
 
 ## [PolyLang](https://wordpress.org/plugins/polylang/)
+
+<ReviewDate date="2019-12-19" />
 
 **Issue:** This plugin adds a cache-busting cookie (ex. `pll_language=en`) for each request.
 
@@ -419,6 +461,8 @@ ___
 
 ## [Query Monitor](https://wordpress.org/plugins/query-monitor/)
 
+<ReviewDate date="2017-08-15" />
+
 **Issue:** Creates a symlink with an absolute path, which will only work on the appserver where the plugin was installed. The plugin is not fully designed for cloud or multi server environments.
 
 **Alternatives:** Pantheon has tools in place to monitor database queries:
@@ -430,6 +474,8 @@ ___
 
 ## [Object Sync for Salesforce](https://wordpress.org/plugins/object-sync-for-salesforce/)
 
+<ReviewDate date="2018-08-24" />
+
 **Issue:** The Object Sync for Salesforce plugin adds dependencies using Composer, and one of these dependencies provides a .gitignore file which prevents files from being picked up by Git. This leads to problematic deployments as not all code moves forward to Test and Live.
 
 **Solution:** Remove the `.gitignore` file from the `object-sync-for-salesforce/vendor/pippinsplugins/wp-logging` directory.
@@ -437,6 +483,8 @@ ___
 ___
 
 ## [Redirection](https://wordpress.org/plugins/redirection/)
+
+<ReviewDate date="2019-01-17" />
 
 **Issue:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
@@ -446,11 +494,15 @@ ___
 
 ## [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/)
 
+<ReviewDate date="2016-02-08" />
+
 **Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. See [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port/).
 
 ___
 
 ## [SendGrid Subscription Widget](https://wordpress.org/plugins/sendgrid-email-delivery-simplified/)
+
+<ReviewDate date="2018-10-13" />
 
 **Issue:** The email confirmation link sent from the Subscription Widget goes to a redirect loop (see the [open issue on wp.org](https://wordpress.org/support/topic/email-sent-from-the-subscription-widget-goes-to-a-redirect-loop-in-pantheon)). The link created uses a URL `GET` parameter `__sg_api`, which has double underscores. The platform strips this type of parameter to improve [caching performance](/pantheon_stripped/#which-query-parameters-are-optimized).
 
@@ -470,6 +522,8 @@ ___
 
 ## [SmartCrawl Pro](https://premium.wpmudev.org/project/smartcrawl-wordpress-seo/)
 
+<ReviewDate date="2018-10-17" />
+
 **Issue:** The sitemap URL linked by the plugin produces a `500 Internal Server Error` on Test and Live environments. This results in a PHP error: `class not found WP_Filesystem_Direct`. See more [details about the issue](https://premium.wpmudev.org/forums/topic/smartcrawl-pro-class-wp_filesystem_direct-not-found).
 
 **Solution:** [Define `FS_METHOD`](#define-fs_method).
@@ -483,11 +537,15 @@ ___
 
 ## [Timthumb](https://code.google.com/p/timthumb/)
 
+<ReviewDate date="2016-09-13" />
+
 **Issue:** TimThumb is no longer supported or maintained.
 
 ___
 
 ## [TubePress Pro](https://tubepress.com/)
+
+<ReviewDate date="2017-01-23" />
 
 **Issue:** Sites running PHP version 5.3 produce a WSOD after activating this plugin.
 
@@ -497,6 +555,8 @@ ___
 
 ## [Unbounce Landing Pages](https://wordpress.org/plugins/unbounce/)
 
+<ReviewDate date="2019-02-13" />
+
 **Issue:** Click to call conversions aren't tracking even if the pages are not cached because the cookies are being stripped.
 
  **Solution:** Usually these type of issues can be solved if the cookie name can be renamed with a prefix starting with `STXKEY_`, but it is inadvisable to modify the plugin directly. It is suggested by the Unbounce team to separate your Pantheon site domain (eg. example.com) and the Unbounce landing page in a subdomain (e.g., unbounce.example.com), because your Unbounce landing pages can't live at exactly the same URL as your homepage. See the outlined solution [here](https://documentation.unbounce.com/hc/en-us/articles/203661044-Connecting-Your-Domain-to-Unbounce) or get in touch with Unbounce support for more help.
@@ -504,6 +564,8 @@ ___
 ___
 
 ## [UNLOQ Two Factor Authentication (2FA)](https://wordpress.org/plugins/unloq/)
+
+<ReviewDate date="2018-10-08" />
 
 **Issue:** `This widget does not work on this domain` error message shown after deploying plugin across environments on Pantheon. This is because the API credentials used on the original environment are being used on a new environment URL, which is not allowed by the plugin. This is by design.
 
@@ -514,6 +576,8 @@ For an alternative 2FA plugin, see [Secure Your Site with Two-Factor Authenticat
 ___
 
 ## [Unyson Theme Framework](https://wordpress.org/plugins/unyson/)
+
+<ReviewDate date="2018-10-05" />
 
 **Issue:** This plugin has an internal extension system which installs additional files aside from the plugin itself. Some of those extensions have an additional `.gitignore` file that prevents it from being deployed to Test and Live environment. See [this GitHub issue](https://github.com/ThemeFuse/Unyson/issues/3615) for more information.
 
@@ -544,6 +608,8 @@ ___
 
 ## [Visual Composer: Website Builder](https://visualcomposer.io/)
 
+<ReviewDate date="2018-08-27" />
+
 **Issue:** This plugin fails to download additional assets during the internal plugin activation procedure on Test and Live environments.
 
 **Solution 1: New sites, without existing Test and Live environments:** If this plugin is installed and activated on a new site _before_ the Test and Live environments are created, it will properly transfer all assets and database settings to the additional environments.
@@ -554,11 +620,15 @@ ___
 
 ## [Weather Station](https://wordpress.org/plugins/live-weather-station/)
 
+<ReviewDate date="2017-10-24" />
+
 **Issue:** This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 
 ___
 
 ## [WooCommerce](https://wordpress.org/plugins/woocommerce/)
+
+<ReviewDate date="2018-01-10" />
 
 **Issue:** The "batch upload" process can fail during large uploads. The platform has a 120 second timeout limit for scripts, and large upload processes can hit this limit.
 
@@ -570,7 +640,7 @@ ___
 
 There is a feature request on [WooCommerce's GitHub page](https://github.com/woocommerce/woocommerce/issues/21624) for a WP-CLI import command which would be less prone to timeouts. To express your interest to the developers, click the thumbs up on the feature request.
 
-<hr/>
+___
 
 **Issue 2:** A change introduced in WooCommerce 3.6.0 breaks template loading in environments with [multiple application containers](/application-containers#multiple-application-containers).
 
@@ -579,6 +649,8 @@ There is a feature request on [WooCommerce's GitHub page](https://github.com/woo
 ___
 
 ## [WooZone](https://codecanyon.net/item/woocommerce-amazon-affiliates-wordpress-plugin/3057503)
+
+<ReviewDate date="2017-08-25" />
 
 **Issue 1:** This plugin checks `WP_MEMORY_LIMIT`, which defaults to 40MB, instead of `ini_get('memory_limit')`, creating this notice:
 
@@ -594,6 +666,8 @@ ___
 
 ## [Wordfence](https://wordpress.org/plugins/wordfence/)
 
+<ReviewDate date="2017-02-22" />
+
 **Issue 1:** Enabling the Live Traffic tracking feature within Wordfence sends cookies which conflict with platform-level page caching.
 
 **Solution:** Disable Wordfence-generated cookies by disabling Live Traffic within the Wordfence options page. See the  [WordPress support forum](https://wordpress.org/support/topic/wfvt-cookie?replies=5) for details.
@@ -605,6 +679,8 @@ ___
 ___
 
 ## [WordPress Social Login](https://wordpress.org/plugins/wordpress-social-login/)
+
+<ReviewDate date="2017-05-03" />
 
 **Issue 1:** This plugin attempts to access PHP native sessions [before WordPress has been bootstrapped](https://wordpress.org/support/topic/plugin-starts-before-wordpress/), which prevents the Pantheon PHP native sessions plugin from being called. This leads to a 500 error when authenticating with external services.
 
@@ -623,6 +699,8 @@ if (defined( "PANTHEON_BINDING" )) {
 ___
 
 ## [WP-Rocket](https://wp-rocket.me/)
+
+<ReviewDate date="2019-02-25" />
 
 **Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
 
@@ -644,6 +722,8 @@ ___
 
 ## [WPBakery: Page Builder](https://wpbakery.com/)
 
+<ReviewDate date="2018-09-14" />
+
 **Issue:** The Custom CSS and Design Options pages of the plugin (`?page=vc-custom_css`, `?page=vc-color`) try to create new files when saved. Due to problems related to incorrect `FS_METHOD`, files are not created or saved in the expected folder, `wp-content/uploads/js_composer`.
 
 **Solution:** [Define `FS_METHOD`](#define-fs_method).
@@ -651,6 +731,8 @@ ___
 ___
 
 ## [WP All Import / Export](http://www.wpallimport.com/)
+
+<ReviewDate date="2018-10-30" />
 
 **Issue 1:** Large batch processes can fail if they take longer than the platform will allow. See [Timeouts on Pantheon](/timeouts) for more information.
 
@@ -675,6 +757,8 @@ ___
 
 ## [WP Migrate DB](https://wordpress.org/plugins/wp-migrate-db/)
 
+<ReviewDate date="2018-10-17" />
+
 **Issue:** On Test and Live environments, the **Compatibility** settings cannot be configured because this feature requires write access to `wp-content/mu-plugins`. This issue prevents plugins from being included in DB exports and search-and-replace tasks.
 
 **Solution:** The normal search-and-replace and DB export functions of this plugin work, but will leave all plugins disabled while in operation. If a specific plugin is required to remain active during the DB export and search-and-replace operations, add a filter for it as described in the [plugin's debugging page](https://deliciousbrains.com/wp-migrate-db-pro/doc/compatibility-mode/).
@@ -682,6 +766,8 @@ ___
 ___
 
 ## [WPML - The WordPress Multilingual Plugin](https://wpml.org/)
+
+<ReviewDate date="2019-10-22" />
 
 **Issue 1:** Locking an environment prevents WPML from operating and returns the following error:  `It looks like languages per directories will not function`.
 
@@ -725,6 +811,8 @@ ___
 
 ## [Yoast SEO](https://wordpress.org/plugins/wordpress-seo/)
 
+<ReviewDate date="2018-06-12" />
+
 **Issue:** The redirects for Yoast SEO setting will detect two options for redirect methods, "PHP", and "Web Server". The Web Server option expects write access to the `nginx.conf` file, which is not writable on Pantheon.
 
 **Solution:** Only use the "PHP" redirect method.
@@ -732,6 +820,8 @@ ___
 ___
 
 ## [YotuWP Easy YouTube Embed](https://wordpress.org/plugins/yotuwp-easy-youtube-embed/)
+
+<ReviewDate date="2019-11-27" />
 
 **Issue:** The plugin asks for SFTP credentials after installation.
 
@@ -760,6 +850,8 @@ define('FTP_PLUGIN_DIR', __DIR__ .'/wp-content/plugins/');
 ___
 
 ### [Uncode](https://undsgn.com/uncode/)
+
+<ReviewDate date="2019-06-19" />
 
 **Issue:** This theme throws a PHP Fatal error in its settings page for Dev's and Multidev's Git mode, Test and Live.
 
