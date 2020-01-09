@@ -464,8 +464,6 @@ ___
 
 ## Other Issues
 
-<ReviewDate date="20" />
-
 Modules will not work on Pantheon if they:
 
 - Require Apache.
