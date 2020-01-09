@@ -74,6 +74,8 @@ Plugins and Themes with issues resolved by this include:
 
 ## [AMP for WP – Accelerated Mobile Pages](https://wordpress.org/plugins/accelerated-mobile-pages/)
 
+<ReviewDate date="2019-12-5" />
+
 **Issue:** Enabling the Mobile Redirection feature within AMP for WP sends a session cookie which conflicts with platform-level page caching. See the  [WordPress support forum](https://wordpress.org/support/topic/varnish-compatibility-issue-with-session-keys/) for details.
 
 **Solution:** Disable the option for Mobile Redirection within the AMP for WP options page. Then handle mobile redirection via PHP within `wp-config.php`, for example:
@@ -113,6 +115,8 @@ ___
 
 ## [Autoptimize](https://wordpress.org/plugins/autoptimize/)
 
+<ReviewDate date="2016-06-06" />
+
 **Issue:** Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
 
 **Solution:** Configure Autoptimize to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`) by adding the following to `wp-config.php`:
@@ -131,6 +135,8 @@ For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/
 ___
 
 ## [Better Search And Replace](https://wordpress.org/plugins/better-search-replace/)
+
+<ReviewDate date="2019-09-27" />
 
 **Issue:** Plugin is not accessible in Test or Live (read-only environments in Pantheon) due to the `install_plugins` capability check of the plugin. [Follow this issue on the WordPress support forum](https://wordpress.org/support/topic/not-appearing-on-test-and-live-environments-in-pantheon/).
 
