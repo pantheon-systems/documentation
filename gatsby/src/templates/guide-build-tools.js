@@ -27,12 +27,23 @@ import GetFeedback from "../components/getFeedback"
 import Enablement from "../components/enablement"
 import Color from "../components/color.js"
 import Download from "../components/download"
-import BuildTools from "../components/buildToolsOld.js"
+import BuildToolsOld from "../components/buildToolsOld.js"
+import InstallBuildTools from "../components/InstallBuildTools.js"
 import Partial from "../components/partial.js"
 import Image from "../layout/image"
 import ChecklistItem from "../components/checklistItem"
+import BuildProjectCreateCommandGenerator from "../components/build-project-create-command-generator"
+import {
+  BuildToolsStackSelectToolbar,
+  BuildToolsSelectCMS,
+  BuildToolsSelectGitandCI,
+  CMS,
+  GitProvider,
+  CIProvider,
+  BuildToolsWorkflowDiagram
+} from "../components/BuildTools"
 
-const shortcodes = {
+let shortcodes = {
   Callout,
   Alert,
   Accordion,
@@ -49,10 +60,19 @@ const shortcodes = {
   Commands,
   Enablement,
   Download,
-  BuildTools,
+  BuildToolsOld,
+  InstallBuildTools,
   Partial,
   ChecklistItem,
-  Image
+  Image,
+  BuildProjectCreateCommandGenerator,
+  BuildToolsStackSelectToolbar,
+  BuildToolsSelectCMS,
+  BuildToolsSelectGitandCI,
+  BuildToolsWorkflowDiagram,
+  CMS,
+  GitProvider,
+  CIProvider
 }
 
 class GuideTemplate extends React.Component {
@@ -83,7 +103,7 @@ class GuideTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
         />
-        <div className="">
+        <div>
           <div className="container">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
               <Navbar
@@ -145,8 +165,11 @@ class GuideTemplate extends React.Component {
 export default GuideTemplate
 
 export const pageQuery = graphql`
-  query GuidePageBySlug($slug: String!, $guide_directory: String!) {
-    mdx(fields: { slug: { eq: $slug } }) {
+  query BuildToolsGuidePageBySlug($slug: String!, $guide_directory: String!) {
+    mdx(
+        fields: { slug: { eq: $slug } }
+        frontmatter: {layout: {eq: "guide-build-tools"}}
+      ) {
       id
       body
       fields {

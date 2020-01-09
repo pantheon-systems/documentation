@@ -6,7 +6,6 @@ contributors: [alexfornuto, rachelwhitton]
 
 All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide). This document serves to define and detail the style conventions used in Pantheon's Documentation.
 
-You can also reference the [Pantheon Documentation Template](/doc-template/) to see the common structure of our docs, or copy it to begin a new content piece.
 
 ## Content Types
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are generally paginated and designed to walk the reader through a specific concept or task.
@@ -56,8 +55,7 @@ Of particular note, any documentation that uses Terminus should reference it in 
 
 <Example>
 
-<h2 class="toc-ignore">Before You Begin</h2>
-
+## Before You Begin
 Be sure that you have:
 
 - An existing WordPress site on Pantheon, or [create](https://dashboard.pantheon.io/sites/create) one.
@@ -85,28 +83,23 @@ Be kind. If you're writing a guide that will use one or more example variables t
 
 
 ## Typography
-
 ### Headings
 
 <Example>
 
-<h1 class="toc-ignore">Page Title</h1>
+# Page Title
 
-<h2 class="toc-ignore">Header</h2>
+## Header
 
-<h3 class="toc-ignore">Sub Header</h3>
+### Sub Header
 
-<h4 class="toc-ignore">Section not listed on TOC</h4>
+#### Section not listed on TOC
 
 <hr className="source-code" /> <br/>
 
 ```markdown
----
-title: Page Title
----
-
+# Page Title
 ## Header
-
 ### Sub Header
 #### Section not listed on TOC
 ```
@@ -219,7 +212,6 @@ Use relative paths when linking to other pages of the docs site.
 </Example>
 
 ## Code
-
 ### Inline
 Used for file names, variables, commands, and output, inline within paragraphs:
 
@@ -264,7 +256,6 @@ require_once WP_CONTENT_DIR . '/plugins/wp-redis/object-cache.php';
 
 </Example>
 
-#### Shell Prompts
 You can also define a single line code block as a command:
 
 <Example>
@@ -311,98 +302,7 @@ mdx-slug
 
 </Example>
 
-#### Line Highlighting
-You can highlight a specific line in a code block the reader should focus on with `//highlight-line`, or a group with `//highlight-start` and `//highlight-end`:
-
-<Example>
-
-```bash{outputLines: 2-20}
-curl -I dev.mysite.com
-HTTP/1.1 200 OK
-X-Pantheon-Styx-Hostname: styx1a
-server: nginx/1.0.15
-content-type: text/html; charset=utf-8
-x-drupal-cache: MISS
-//highlight-start
-set-cookie: SESSf60876d132c0913e5fc728eec7f71e38=M1Sr0bxLbbgYmbg1EW7N8sGF4anrKP1np25EkYta-ZU; expires=Wed, 19-Dec-2012 22:04:58 GMT; path=/; domain=.dev.mysite.com; HttpOnly
-Cache-Control: no-cache, must-revalidate, max-age=0
-//highlight-end
-last-modified: Mon, 26 Nov 2012 18:31:30 +0000
-expires: Sun, 19 Nov 1978 05:00:00 GMT
-x-pantheon-endpoint: c18646dd-aa2b-4faa-a4e3-d71ec3a5ce43
-Date: Mon, 26 Nov 2012 18:31:38 GMT
-X-Varnish: 486741958
-Age: 0 //highlight-line
-Via: 1.1 varnish
-Connection: keep-alive
-X-Pantheon-Edge-Server: 108.166.58.245
-Vary: Accept-Encoding, Cookie
-```
-
-<hr class="source-code" /> <br />
-
-````none
-```bash{outputLines: 2-20}
-curl -I dev.mysite.com
-HTTP/1.1 200 OK
-X-Pantheon-Styx-Hostname: styx1a
-server: nginx/1.0.15
-content-type: text/html; charset=utf-8
-x-drupal-cache: MISS
-//highlight-start
-set-cookie: SESSf60876d132c0913e5fc728eec7f71e38=M1Sr0bxLbbgYmbg1EW7N8sGF4anrKP1np25EkYta-ZU; expires=Wed, 19-Dec-2012 22:04:58 GMT; path=/; domain=.dev.mysite.com; HttpOnly
-Cache-Control: no-cache, must-revalidate, max-age=0
-//highlight-end
-last-modified: Mon, 26 Nov 2012 18:31:30 +0000
-expires: Sun, 19 Nov 1978 05:00:00 GMT
-x-pantheon-endpoint: c18646dd-aa2b-4faa-a4e3-d71ec3a5ce43
-Date: Mon, 26 Nov 2012 18:31:38 GMT
-X-Varnish: 486741958
-Age: 0 //highlight-line
-Via: 1.1 varnish
-Connection: keep-alive
-X-Pantheon-Edge-Server: 108.166.58.245
-Vary: Accept-Encoding, Cookie
-```
-````
-
-
-</Example>
-
-## File Excerpts
-
-File excerpts are [code blocks](#blocks) with a file name specified after the syntax as `:title=FILENAME`:
-
-<Example>
-
-```git:title=.gitignore
-# WordPress #
-############
-wp-config-local.php
-wp-cli.local.yml
-wp-content/uploads
-wp-content/blogs.dir/
-wp-content/upgrade/
-```
-
-
-<hr class="source-code" /> <br />
-
-````markdown
-```git:title=.gitignore
-# WordPress #
-############
-wp-config-local.php
-wp-cli.local.yml
-wp-content/uploads
-wp-content/blogs.dir/
-wp-content/upgrade/
-```
-````
-
-</Example>
-
-## Variables
+### Variables
 
 When writing multi-step processes, repeated variables and constants should be defined before providing the first set of commands. If the doc has a "Before You Begin" section, define varables here. Provide them using the callout below, and follow common conventions (lowercase for variables, uppercase for constants).
 
@@ -728,7 +628,7 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 | Plans         | Redis Support <Popover content="Available across all environments, including Multidevs." /> |
 | ------------- | -------------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
-| Basic         | ❌  |
+| Basic         | <span style="color:red">❌</span>  |
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 
@@ -741,7 +641,7 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 | Plans         | Redis Support <Popover content="Available across all environments, including Multidevs." /> |
 | ------------- | -------------------------------------- |
 | Sandbox       | <span style="color:green">✔</span> |
-| Basic         | ❌  |
+| Basic         | <span style="color:red">❌</span>  |
 | Performance   | <span style="color:green">✔</span> |
 | Elite         | <span style="color:green">✔</span> |
 ```
@@ -749,64 +649,6 @@ All plans except for a Basic plan can use Redis. Redis is available to Sandbox s
 </Example>
 
 Use ✓ to indicate yes and `❌` to indicate no.
-
-<Accordion title="Advanced Tables">
-
-Standard markdown tables don't allow for cells to span multiple rows or columns, but by using the [gatsby-remark-grid-tables](https://www.gatsbyjs.org/packages/gatsby-remark-grid-tables/) plugin, we can overcome this limitation:
-
-<Example>
-
-+-----------------+--------------+-------------+--------------+------------------------+
-| **Environment** | **Severity** | **Browser** | **Watchdog** | **logs/php-error.log** |
-+-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       | **✓**       | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-| Dev             | warning      | **✓**       | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
-| Test            | warning      |             | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
-| Live            | warning      |             | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        |             |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
-
-<hr className="source-code" /> <br/>
-
-````markdown
-+-----------------+--------------+-------------+--------------+------------------------+
-| **Environment** | **Severity** | **Browser** | **Watchdog** | **logs/php-error.log** |
-+-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       | **✓**       | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-| Dev             | warning      | **✓**       | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
-| Test            | warning      |             | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        | **✓**       |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
-|                 | notice       |             | **✓**        |                        |
-+                 +--------------+-------------+--------------+------------------------+
-| Live            | warning      |             | **✓**        |                        |
-|                 +--------------+-------------+--------------+------------------------+
-|                 | error        |             |              |  **✓**                 |
-+-----------------+--------------+-------------+--------------+------------------------+
-````
-
-</Example>
-
-</Accordion>
 
 ## Tooltips
 
@@ -836,8 +678,7 @@ This is the optimal place to provide links to external resources on the subject,
 
 <Example>
 
-<h2 className="toc-ignore"> See Also</h2>
-
+## See Also 
 - [An internal link](/guides/)
 - [An external link](https://pantheon.io/blog/)
 
@@ -847,6 +688,77 @@ This is the optimal place to provide links to external resources on the subject,
 ## See Also
 - [An internal link](/guides/)
 - [An external link](https://pantheon.io/blog/)
+```
+
+</Example>
+
+## Switches
+
+Switches are styled checkbox inputs that have nice visuals and animation. They also track state. You must provide the following `props`:
+
+- `isOn`: a boolean (`true` or `false`) that determines whether the switch is switched "on"
+- `handleToggle`: a function that handles the state change when the switch is toggled
+- `slug`: a kebob-case slug, used for the input and label IDs
+- `text`: the text to display with the switch
+- `required`: a boolean (`true` or `false`) that determines if the `required` attribute is set on the input. Defaults to `true`
+
+<Example>
+
+<hr className="source-code" />
+
+```js
+import React, { useState } from 'react';
+const [isOn, setSwitchValue] = useState(false);
+<Switch
+    isOn={isOn}
+    handleToggle={() => setSwitchValue(!isOn)}
+    slug='example-switch'
+    text='Example Switch'
+/>
+```
+
+</Example>
+
+## Radio Input Groups
+
+Radio input groups are multiple radio inputs grouped together and pre-formatted for Bootstrap. They also track state and you must provide the following `props`:
+
+- `name`: the input name to give the field group
+- `value`: a variable with the current selected value
+- `slug`: a kebob-case slug, used in the ID of the `div` wrapping the group
+- `handleChange`: a function that handles the state change when a radio button is selected
+- `label`: The text to display above the group of options
+- `options`: an array of objects for the options, each one should have:
+  - `label`: The label next to the radio box
+  - `value`: The option value
+  - `id`: The CSS id for the option
+
+<Example>
+
+<hr className="source-code" />
+
+```js
+import React, { useState } from 'react';
+const [cms, setCMS] = useState('d8');
+<RadioInputGroup
+    name='cms'
+    value={cms}
+    slug='select-cms'
+    handleChange={(event) => setCMS(event.target.value)}
+    label='Which CMS will the project use?'
+    options={[
+        {
+            "label": "Drupal 8",
+            "value": "d8",
+            "id": "cmsD8"
+        },
+        {
+            "label": "WordPress",
+            "value": "wp",
+            "id": "cmsWP"
+        },
+    ]}
+/>
 ```
 
 </Example>

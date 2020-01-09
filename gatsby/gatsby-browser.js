@@ -1,32 +1,29 @@
-import React from "react"
-import { location, globalHistory } from "@reach/router"
-
+const React = require("react");
+const { BuildToolsContextProvider } = require('./src/components/BuildTools/BuildToolsContextProvider');
 
 // custom typefaces
-import "prismjs/themes/prism-okaidia.css"
+require("prismjs/themes/prism-okaidia.css")
 
 // Code block line numbering
-import "prismjs/plugins/line-numbers/prism-line-numbers.css"
+require("prismjs/plugins/line-numbers/prism-line-numbers.css")
 
 // Code block shell prompt
-import "prismjs/plugins/command-line/prism-command-line.css"
+require("prismjs/plugins/command-line/prism-command-line.css")
 
 // Previous version scripts and styles
 // require("../source/docs/assets/js/main.js")
 
 // // TOC generator
-import "tocbot/dist/tocbot.css"
-import "tocbot/dist/tocbot.min.js"
+require("tocbot/dist/tocbot.css")
+require("tocbot/dist/tocbot.min.js")
 
-import "./src/styles/global.scss"
+require("./src/styles/global.css")
 
-//Segment
-export const onRouteUpdate = () => {
-  window.locations = window.locations || [document.referrer];
-  locations.push(window.location.href);
-  window.previousPath = locations[locations.length - 2];
-  window.analytics && window.analytics.page({
-    url: window.location.href,
-    referrer: window.previousPath
-  })
+exports.wrapPageElement = ({ element, props }) => {
+    const isBuildTools = props.path.includes('/guides/build-tools');
+    if ( isBuildTools ) {
+        return <BuildToolsContextProvider>{element}</BuildToolsContextProvider>
+    } else {
+        return <React.Fragment>{element}</React.Fragment>
+    }
 }
