@@ -29,13 +29,13 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     cd ~/sites/myawesomesite/ #Change this to your project directory.
     ```
 
-1. Move the directory you want to replace with a symlink. This serves two purposes: backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
+1. Move the directory you want to replace with a symlink. This serves two purposes; backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
 
     ```bash
     mv ./wp-content/path/plugin-expects-write-to ~/backups/
     ```
 
-    The command above moves the directory to a folder named `backups` in your home directory, `~/`. Replace this with an existing backup location.
+    The command above moves the directory to a folder named `backups` in your home directory, `~/`. Replace this with your preferred backup location.
 
 1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths.
 
@@ -47,7 +47,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
     ```bash
     # The first path will be used as the new file destination instead of whatever path the plugin assumed write access to
-    ln -s ../uploads/new-directory plugin-expects-to-write-to
+    ln -s ../uploads/new-directory #The last nested directory should mirror the directory name the plugin expects to write to
     ```
 
 1. Stage your changes
@@ -68,11 +68,13 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     git push origin master
     ```
 
- Your commit can be seen in the Dev environments commit history. The plugin will now successfully write files within any environment, even when the Dev environment's connection mode is set to Git. In your previous configuration, the plugin would fail while in Git mode. You should not see the newly created files in the Dashboard as "ready to commit", as files are not version controlled.
+ Your commit can be seen in the Dev environments commit history. Once this commit is synced to all environments, the plugin will now successfully write files within any environment, even when the Dev environment's connection mode is set to Git. 
+ 
+ You should not see the newly created files in the Dashboard as "ready to commit", as files are not version controlled. Only the symlink to the new path is in the code base.
 
   <Alert title="Note" type="info">
 
-  In our example, we created the target directory of the symlink as `./wp-content/uploads/new-directory`. Make sure this directory is created via SFTP if it does not exist yet.
+  In our example, we set the target directory of the symlink as `./wp-content/uploads/new-directory`. Make sure this directory is created via SFTP if it does not exist yet.
 
   </Alert>
 
@@ -91,21 +93,22 @@ You must manually create the target folders `wp-content\et-cache` for Dev, Test,
 
 </Alert>
 
-#### For MacOS & Linux:
+#### For MacOS & Linux
+
 From the `wp-content` directory:
 
 ```bash
 ln -s ./uploads/et-cache ./et-cache
 ```
 
-
 To verify, use `ls -al`:
 
-```
+```none
 et-cache -> ./uploads/et-cache
 ```
 
-#### For Windows:
+#### For Windows
+
 Note that the syntax for Window's Command Prompt is opposite from MacOS and Linux, requiring the symlink path *before* the target, from the root of your installation run as and admin these commands:
 
 ```bash
@@ -114,14 +117,14 @@ mklink /d .\wp-content\et-cache .\uploads\et-cache
 
 Each command will return the following upon success:
 
-```
+```none
 symbolic link created for .\wp-content\et-cache <<===>> .\uploads\et-cache
 ```
 
 To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
 You can also verify success using `dir`:
 
-```
+```powershell
 <SYMLINKD>        et-cache [.\uploads\et-cache]
 ```
 
@@ -135,7 +138,8 @@ You must manually create the target folders `wp-content\uploads\cache` and `wp-c
 
 </Alert>
 
-#### For MacOS & Linux:
+#### For MacOS & Linux
+
 From the `wp-content` directory:
 
 ```bash
@@ -143,15 +147,14 @@ ln -s ./uploads/cache ./cache
 ln -s ./uploads/wp-rocket-config ./wp-rocket-config
 ```
 
-
 To verify, use `ls -al`:
 
-```
+```none
 cache -> ./uploads/cache
 wp-rocket-config -> ./uploads/wp-rocket-config
 ```
 
-#### For Windows:
+#### For Windows
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
 ```bash
@@ -161,7 +164,7 @@ mklink /d .\wp-content\wp-rocket-config .\uploads\wp-rocket-config
 
 Each command will return the following upon success:
 
-```
+```none
 symbolic link created for .\wp-content\cache <<===>> .\uploads\cache
 symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-rocket-config
 ```
@@ -169,7 +172,7 @@ symbolic link created for .\wp-content\wp-rocket-config <<===>> .\uploads\wp-roc
 To verify that you have done it correctly, you should have these when you list your folders in `wp-content` directory:
 You can also verify success using `dir`:
 
-```
+```powershell
 <SYMLINKD>        cache [.\uploads\cache]
 <SYMLINKD>        wp-rocket-config [.\uploads\wp-rocket-config]
 ```
@@ -200,7 +203,8 @@ As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-i
 
   In Test, Live, and any Multidev environments after deploying codes for the theme to take effect in different environments.
 
-#### For MacOS & Linux:
+#### For MacOS & Linux
+
 From the `wp-content` directory:
 
 ```bash
@@ -210,17 +214,18 @@ ln -s ../../../uploads/uncode/library/css ./themes/uncode/library
 
 To verify, use `ls -al` in the `wp-content/themes/uncode/core/assets` folder:
 
-```
+```none
 css -> ../../../../uploads/uncode/assets/css
 ```
 
 As well as in the `wp-content/themes/uncode/library` folder :
 
-```
+```none
 css -> ../../../uploads/uncode/library/css
 ```
 
-#### For Windows:
+#### For Windows
+
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target and backslash is used to denote folders. In the `wp-content` folder create the symlinks by:
 
 ```bash
@@ -230,7 +235,7 @@ mklink /d .\themes\uncode\library ..\..\..\uploads\uncode\library\css
 
 Each command will return the following upon success:
 
-```
+```none
 symbolic link created for .\themes\uncode\core\assets <<===>> ..\..\..\..\uploads\uncode\assets\css
 symbolic link created for .\themes\uncode\library <<===>> ..\..\..\uploads\uncode\library\css
 ```
@@ -238,13 +243,13 @@ symbolic link created for .\themes\uncode\library <<===>> ..\..\..\uploads\uncod
 To verify that you have done it correctly, you should have these when you list your folders in `wp-content\themes\uncode\core\assets` directory:
 You can also verify success using `dir`:
 
-```
+```powershell
 <SYMLINKD>        css [..\..\..\..\uploads\uncode\assets\css]
 ```
 
 And in the `themes\uncode\library` directory:
 
-```
+```powershell
 <SYMLINKD>        css [..\..\..\uploads\uncode\library\css]
 ```
 
