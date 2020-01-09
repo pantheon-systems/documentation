@@ -25,13 +25,13 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 1. From your terminal, `cd` to the site code repository:
 
-    ```bash
+    ```bash{promptUser: user}
     cd ~/sites/myawesomesite/ #Change this to your project directory.
     ```
 
 1. Move the directory you want to replace with a symlink. This serves two purposes; backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
 
-    ```bash
+    ```bash{promptUser: user}
     mv ./wp-content/path/plugin-expects-write-to ~/backups/
     ```
 
@@ -39,32 +39,32 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 1. `cd` to the location where you want to place the symlink. The symlink command (`ln`) is sensitive to the **working directory**, the folder your command line prompt is currently in. Working from the location of the symlink allows for correct relative paths.
 
-   ```bash
+   ```bash{promptUser: user}
    cd wp-content/path/
    ```
 
 1. Create a symlink for the standard files path:
 
-    ```bash
+    ```bash{promptUser: user}
     # The first path will be used as the new file destination instead of whatever path the plugin assumed write access to
     ln -s ../uploads/new-directory #The last nested directory should mirror the directory name the plugin expects to write to
     ```
 
 1. Stage your changes
 
-    ```bash
+    ```bash{promptUser: user}
     git add .
     ```
 
 1. Run `git status` to review your current index, then commit your changes:
 
-    ```bash
+    ```bash{promptUser: user}
     git commit -m "symlink non-standard files path to wp-content/uploads"
     ```
 
 1. Push the changes to Pantheon:
 
-    ```bash
+    ```bash{promptUser: user}
     git push origin master
     ```
 
@@ -97,13 +97,13 @@ You must manually create the target folders `wp-content\et-cache` for Dev, Test,
 
 From the `wp-content` directory:
 
-```bash
+```bash{promptUser: user}
 ln -s ./uploads/et-cache ./et-cache
 ```
 
 To verify, use `ls -al`:
 
-```none
+```none{promptUser: user}
 et-cache -> ./uploads/et-cache
 ```
 
@@ -111,7 +111,7 @@ et-cache -> ./uploads/et-cache
 
 Note that the syntax for Window's Command Prompt is opposite from MacOS and Linux, requiring the symlink path *before* the target, from the root of your installation run as and admin these commands:
 
-```bash
+```bash{promptUser: winshell}
 mklink /d .\wp-content\et-cache .\uploads\et-cache
 ```
 
@@ -144,7 +144,7 @@ You must manually create the target folders `wp-content\uploads\cache` and `wp-c
 
 From the `wp-content` directory:
 
-```bash
+```bash{promptUser: user}
 ln -s ./uploads/cache ./cache
 ln -s ./uploads/wp-rocket-config ./wp-rocket-config
 ```
@@ -159,7 +159,7 @@ wp-rocket-config -> ./uploads/wp-rocket-config
 #### For Windows
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target:
 
-```bash
+```bash{promptUser: winshell}
 mklink /d .\wp-content\cache .\uploads\cache
 mklink /d .\wp-content\wp-rocket-config .\uploads\wp-rocket-config
 ```
@@ -211,7 +211,7 @@ As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-i
 
 From the `wp-content` directory:
 
-```bash
+```bash{promptUser: bash}
 ln -s ../../../../uploads/uncode/assets/css ./themes/uncode/core/assets
 ln -s ../../../uploads/uncode/library/css ./themes/uncode/library
 ```
@@ -232,7 +232,7 @@ css -> ../../../uploads/uncode/library/css
 
 Note that the syntax for Windows is opposite from MacOS and Linux, requiring the symlink path *before* the target and backslash is used to denote folders. In the `wp-content` folder create the symlinks by:
 
-```bash
+```bash{promptUser: winshell}
 mklink /d .\themes\uncode\core\assets ..\..\..\..\uploads\uncode\assets\css
 mklink /d .\themes\uncode\library ..\..\..\uploads\uncode\library\css
 ```
@@ -273,8 +273,8 @@ Some modules and plugins verify that the target directory exists using `is_dir()
 
 If a symlinked folder doesn't show the proper contents, doublecheck that the path is correct. In Bash, `ls -l` will show symlinks paths:
 
-```bash
-$ ls -l
+```bash{outputLines:2-3}
+ls -l
 
 lrwxr-xr-x  1 user  group     39 Sep 13 14:29 images -> ../plugins/some-plugin/images/
 ```
