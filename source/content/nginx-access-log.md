@@ -74,10 +74,10 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
 In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goaccess.conf` is not found when running `goaccess` commands.
 
 1. Display the path of the default config file by typing `goaccess --dcf`.
-1. Move `goaccess.conf` from `\Cellar\goaccess\[version]\conf\etc\goaccess` to `\Cellar\goaccess\[version]\conf\etc`:
+1. Move `goaccess.conf` from `/usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess` to `/usr/local/Cellar/goaccess/[VERSION]/conf/etc`:
 
   ```bash{promptUser: user}
-  mv /Cellar/goaccess/[version]/conf/etc/goaccess /Cellar/goaccess/[version]/conf/etc
+  mv /usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess /usr/local/Cellar/goaccess/[VERSION]/conf/etc
   ```
 
 ## Automate GoAccess Reports
