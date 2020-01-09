@@ -7,7 +7,7 @@ contributors: [alexfornuto]
 reviewed: "2020-01-08"
 ---
 
-Pantheon is a custom [WebOps](/pantheon-workflow/) platform. Not all code is designed to work on such a platform. Many are built around the traditional LAMP or LEMP stack architecture.
+Pantheon is a high-performance [WebOps](/pantheon-workflow/) platform. Not all modules and plugins are optimized to work on such a platform. Many are built around the traditional LAMP or LEMP stack architecture.
 
 These pages lists modules and plugins that may not function as expected or are currently problematic on the Pantheon platform:
 
