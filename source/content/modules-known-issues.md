@@ -17,6 +17,8 @@ ___
 
 ## [APC - Alternative PHP Cache](https://www.drupal.org/project/apc)
 
+<ReviewDate date="2015-07-13" />
+
 **Issue**: APC is in-memory and limited to a single instance. It cannot span multiple server environments.
 
 **Solution**: Pantheon recommends Redis as a caching backend, which has better performance.
@@ -24,10 +26,14 @@ ___
 
 ## [Adaptive Image Styles](https://www.drupal.org/project/ais)
 
+<ReviewDate date="2015-07-13" />
+
 **Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
 ___
 
 ## [Apache Solr Multilingual](https://www.drupal.org/project/apachesolr_multilingual)
+
+<ReviewDate date="2016-05-05" />
 
 **Issue**: When the Apache Solr Multilingual module is enabled, the default class variable set by the Pantheon Apache Solr module is changed, and the site will be unable to connect to the Solr server.
 
@@ -36,6 +42,8 @@ ___
 
 ## [Acquia Search](https://www.drupal.org/project/acquia_search)
 
+<ReviewDate date="2015-07-13" />
+
 **Issue**: If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.
 
 **Solution**: Delete the Acquia Solr modules from the codebase and then disable and re-enable the Pantheon Apache Solr module.
@@ -43,11 +51,15 @@ ___
 
 ## [Background Process](https://www.drupal.org/project/background_process)
 
+<ReviewDate date="2015-07-13" />
+
 **Issue**: The module allows for Drupal to perform "parallel" (asynchronous non-blocking mode) requests. However, there are a number of limitations working in a distributed environment and function correctly on the platform. See [https://www.drupal.org/node/2233843](https://www.drupal.org/node/2233843).
 
 ___
 
 ## [Backup and Migrate](https://www.drupal.org/project/backup_migrate)
+
+<ReviewDate date="2017-09-14" />
 
 **Issue**: The Backup and Migrate module can create large archives and cause issues with the tools in the Database / Files tab of the Dashboard. See [Backup Creation](/backups/#why-is-the-drupal-module-backup-%26-migrate-not-recommended-on-pantheon%3F).
 
@@ -57,6 +69,8 @@ ___
 
 ## [Basic HTTP Authentication](https://www.drupal.org/project/basic_auth) - Drupal 7 only
 
+<ReviewDate date="2017-09-14" />
+
 **Issue**: This contrib module conflicts with [Pantheon's Security tool](/security/#password-protect-your-site%27s-environments) when both are enabled on Drupal 7 sites, resulting in 403 errors.
 
 **Solution**: Lock the environment via Pantheon's Security tool or via the module, not both. For details, see [Security on the Pantheon Dashboard](/security/#troubleshoot).
@@ -65,17 +79,23 @@ ___
 
 ## [BigPipe](https://www.drupal.org/documentation/modules/big_pipe)
 
+<ReviewDate date="2018-04-22" />
+
 **Issue**: The Pantheon Edge layer buffers text output, and BigPipe depends on being able to stream text output. Since BigPipe provides no benefit on Pantheon sites, we recommend disabling it.
 
 ___
 
 ## [Boost](https://www.drupal.org/project/boost)
 
+<ReviewDate date="2015-07-13" />
+
 **Issue**: Boost is an unnecessary caching layer that may cause issues. Every site on Pantheon can leverage our robust page caching infrastructure that returns pages for anonymous visitors at the highest possible performance. See [Pantheon's Global CDN](/global-cdn).
 
 ___
 
 ## [Cache Expiration](https://www.drupal.org/project/expire)
+
+<ReviewDate date="2016-05-11" />
 
 **Issue**: This module doesn't support Pantheon's granular cache clearing and header system.
 
@@ -84,6 +104,8 @@ ___
 ___
 
 ## [CKFinder](https://www.drupal.org/project/wysiwyg_ckfinder)
+
+<ReviewDate date="2015-12-04" />
 
 **Issue**:  If you follow the installation instructions for CKFinder, the `$baseUrl` path is not correctly set and will not recognize any path set via CKFinder.  See this [Drupal.org issue](https://www.drupal.org/node/2629000).
 
@@ -96,6 +118,8 @@ $baseUrl = '/ckfinder/userfiles/';
 ___
 
 ## [Composer Manager](https://www.drupal.org/project/composer_manager)
+
+<ReviewDate date="2017-02-22" />
 
 This module has been deprecated by its authors. The suggestions made below are not guaranteed to be successful in all use cases.
 
@@ -122,6 +146,8 @@ ___
 
 ## [Fast 404](https://www.drupal.org/project/fast_404)
 
+<ReviewDate date="2018-06-22" />
+
 **Issue**: Database connection credentials are needed before Drupal bootstrap is invoked and standard MySQL is port hard-coded.
 
 **Solution**: Pressflow settings can be [decoded in settings.php](/read-environment-config/) to provide database credentials, but the module needs to be modified manually to use `$_ENV(["DB_PORT"])`.
@@ -131,6 +157,8 @@ Alternatively, [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/7.59/
 ___
 
 ## [Front](https://www.drupal.org/project/front)
+
+<ReviewDate date="2018-01-03" />
 
 **Issue**: The Drupal 7 version of the module disables caching for the front page.
 
@@ -146,11 +174,15 @@ ___
 
 ## [Honeypot http:BL](https://www.drupal.org/project/httpbl)
 
+<ReviewDate date="2019-07-10" />
+
 **Issue**: http:BL only has a module to take advantage of the service for Apache. Pantheon runs on nginx webservers and Apache modules are not compatible with the Platform.
 
 ___
 
 ## [HTTP Basic Authentication](https://www.drupal.org/docs/8/core/modules/basic_auth) - Drupal 8 (core)
+
+<ReviewDate date="2016-11-17" />
 
  **Issue**: This Drupal 8 core module conflicts with [Pantheon's Security tool](/security/#password-protect-your-site%27s-environments) when both are enabled, resulting in 403 errors.
 
@@ -160,11 +192,15 @@ ___
 
 ## [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)
 
+<ReviewDate date="2015-07-13" />
+
 **Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
 
 ___
 
 ## [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)
+
+<ReviewDate date="2019-10-17" />
 
 **Issue**: ImageAPI Optimize supports 3rd party libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim. These libraries have to be installed on the server. At this time, they are not supported.
 
@@ -173,6 +209,8 @@ ___
 ___
 
 ## [IMCE 6.x](https://www.drupal.org/node/251024) and [IMCE 7.x](https://www.drupal.org/project/imce/releases/7.x-1.11)
+
+<ReviewDate date="2016-02-23" />
 
 **Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
 
@@ -209,10 +247,14 @@ ___
 
 ## [JS](https://www.drupal.org/project/js)
 
+<ReviewDate date="2019-07-24" />
+
 **Issue**: This module requires modification of the site's `.htaccess` or `nginx.conf` file, which cannot be modified on the platform. While using `settings.php` can sometimes be effective as a means of implementing redirects, because `POST` data needs to be preserved, it is not possible to implement redirects at the application layer in a way that would allow this module to function as intended.
 ___
 
 ## [LiveReload](https://www.drupal.org/project/livereload)
+
+<ReviewDate date="2017-08-07" />
 
 **Issue**: This module triggers heavy load on the application container as soon as it is enabled and causes pages to time out for anonymous users for Drupal 7 and Drupal 8.
 
@@ -220,11 +262,15 @@ ___
 
 ## [Live CSS](https://www.drupal.org/project/live_css)
 
+<ReviewDate date="2016-04-07" />
+
 **Issue**: This module requires write access to the site's codebase for editing CSS files, which is not granted on Test and Live environments by design.
 
 ___
 
 ## [Media: Browser Plus](https://www.drupal.org/project/media_browser_plus)
+
+<ReviewDate date="2015-07-13" />
 
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 
@@ -232,10 +278,14 @@ ___
 
 ## [Mobile Tools](https://www.drupal.org/project/mobile_tools)
 
+<ReviewDate date="2016-09-13" />
+
 **Issue**: Conflicts with platform page caches. See [this thread](https://www.drupal.org/node/1976162#comment-7411366) for details.
 ___
 
 ## [Node export webforms](https://www.drupal.org/project/node_export_webforms)
+
+<ReviewDate date="2015-07-13" />
 
 **Issue**:  This module requires the use of the `tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 
@@ -246,10 +296,14 @@ ___
 
 ## [Node Gallery](https://www.drupal.org/project/node_gallery)
 
+<ReviewDate date="2016-07-18" />
+
 **Issue**: Using Node Gallery with Plupload attaches cookies to image uploads for authentication purposes. This conflicts with our page cache configuration as we strip all cookies for images, CSS, and JS files to improve performance.
 ___
 
 ## [Pathologic](https://www.drupal.org/project/pathologic)
+
+<ReviewDate date="2015-07-13" />
 
  **Issue**: The path of the base URL is changed and cached by the module itself.
 
@@ -259,12 +313,16 @@ ___
 
 ## [Persistent Login](https://www.drupal.org/project/persistent_login)
 
+<ReviewDate date="2016-10-31" />
+
 **Issue**: This module attaches per-user cookies that conflict with our page cache configuration.
 
 **Solution**: Follow the remedy provided within the [module's documentation of the issue on Drupal.org](https://www.drupal.org/node/1306214), which is to alter the code to prefix the cookie name with `SESS`.
  ___
 
 ## [Plupload](https://www.drupal.org/project/plupload)
+
+<ReviewDate date="2016-01-05" />
 
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 
@@ -284,6 +342,8 @@ This will move the temporary upload destination from the individual server mount
 ___
 
 ## [reCAPTCHA](https://www.drupal.org/project/recaptcha)
+
+<ReviewDate date="2016-05-02" />
 
 **Issue 1:** If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
 
@@ -311,10 +371,14 @@ ___
 
 ## [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)
 
+<ReviewDate date="2015-07-03" />
+
 This is built into the platform. See [Drupal Drush Command-Line Utility](/drush#registry-rebuild) for details on how to use Registry Rebuild on Pantheon.
 ___
 
 ## [S3 File System](https://www.drupal.org/project/s3fs)
+
+<ReviewDate date="2019-12-06" />
 
 **Issue 1:** When the module is configured to take over the public file system, Drupal's CSS/JS aggregation will not work unless you also upload Drupal Core and contrib modules to S3. See [Drupal Issue 2511090](https://www.drupal.org/project/s3fs/issues/2511090) for more information.
 
@@ -323,6 +387,8 @@ ___
 ___
 
 ## [Schema](https://www.drupal.org/project/schema)
+
+<ReviewDate date="2015-07-13" />
 
 **Issue**: The module doesn't work with the MySQL TIMESTAMP column type in our heartbeat table, which is part of how we maintain status around whether or not a site and its database is active. This is a [known bug](https://drupal.org/node/468644) in the schema module.
 
@@ -336,6 +402,8 @@ ___
 
 ## [Simple OAuth / OAuth 2.0](https://www.drupal.org/project/simple_oauth)
 
+<ReviewDate date="2017-10-02" />
+
 **Issue**: The module requires a very specific set of permissions for the folder and the keys to be uploaded. Using Private or non-standard filepaths won't work. It is not possible to change these in LIVE or TEST environment.
 
 **Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
@@ -343,15 +411,21 @@ ___
 
 ## [Taxonomy CSV](https://www.drupal.org/project/taxonomy_csv)
 
+<ReviewDate date="2015-09-23" />
+
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 ___
 
 ## [Twig Extensions](https://www.drupal.org/project/twig_extensions)
 
+<ReviewDate date="2017-02-02" />
+
 **Issue**:  This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 ___
 
 ## [Varnish](https://www.drupal.org/project/varnish)
+
+<ReviewDate date="2015-06-26" />
 
 **Issue**: Conflicts with the existing platform configuration.
 
@@ -359,6 +433,8 @@ ___
 ___
 
 ## [Views data export](https://www.drupal.org/project/views_data_export)
+
+<ReviewDate date="2015-12-08" />
 
 **Issue**: This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) below for more information.
 
@@ -387,6 +463,8 @@ ___
 <Partial file="tmp-directory.md" />
 
 ## Other Issues
+
+<ReviewDate date="20" />
 
 Modules will not work on Pantheon if they:
 
