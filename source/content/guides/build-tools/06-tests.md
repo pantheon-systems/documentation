@@ -4,7 +4,6 @@ subtitle: Write a New Test
 description: In step six of the Build Tools guide, learn how to use the pre-conifgured site tests, or customize your own.
 buildtools: true
 anchorid: behat
-categories: [develop]
 generator: pagination
 layout: guide
 type: guide
