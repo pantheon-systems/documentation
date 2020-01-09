@@ -6,9 +6,9 @@ const reviewDate = ({ date }) => {
   var formattedDate = new Date(date)
   return (
     <>
-      <h3 className="review-date toc-ignore" >
+      <h4 className="review-date toc-ignore" >
         Last reviewed: {formattedDate.toDateString().replace(/^\S+\s/,'')}
-      </h3>
+      </h4>
     </>
   )
 }
