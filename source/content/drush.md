@@ -381,7 +381,7 @@ Long-running Drush commands that produce no output will cause the SSH gateway to
 For example, using the `--feedback` flag:
 
 ```bash{promptUser: user}
-drush migate-import migration --feedback="1000 lines processed"
+drush migrate-import migration --feedback="1000 lines processed"
 ```
 
 ### Drush error: Failed opening required .../vendor/bin/includes/preflight.inc
