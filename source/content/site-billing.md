@@ -3,6 +3,7 @@ title: Billing in the Site Dashboard
 description: Add a new credit card, remove the current card or transfer billing to a new site owner within the Billing tab of the Settings tool in the Site Dashboard.
 tags: [billing]
 categories: [manage,go-live]
+reviewed: "2020-01-10"
 ---
 
 <Alert title="Note" type="info">
@@ -61,7 +62,9 @@ Select the card you want the site to use as the new payment method _after_ it ha
  You should get a message saying "Your billing information has been updated!"
 
 ### Do Not Bill This Site to a Card
-After [downgrading from a paid plan to Sandbox](/site-plan/#cancel-current-plan), remove the card as a payment method for the site:
+A credit card can only be removed from a site when that site is set to [bill another card](#bill-this-site-to-a-new-card) or when the site is [downgraded to Sandbox](/site-plan/#cancel-current-plan).
+
+After downgrading from a paid plan to Sandbox, remove the card as a payment method for the site:
 
 1. Go to the Site Dashboard and click the **Billing** tab.
 1. Find your card under BILLING INFORMATION and click **Remove Card**.
