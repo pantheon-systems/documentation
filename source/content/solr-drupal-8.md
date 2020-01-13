@@ -7,11 +7,14 @@ contributors: [peter-pantheon, cityofoaksdesign]
 ---
 [Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Alert title="Important Note" type="info" icon="lightbulb">
 
-Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
+**Pantheon Search** uses a special Pantheon Solr service; the version of Solr on Pantheon is Apache Solr v3.6. If your site's search needs are limited to full text content searching and indexing, in one language, without emojis, Pantheon Search is a solid choice for you.
 
-</Enablement>
+[Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr) should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
+
+For specific features of Solr beyond these (e.g. multilingual, emojis, geospacial search), an alternative solution like [OpenSolr](/opensolr/), may be a better fit.
+</Alert>
 
 ## Before You Begin
 Be sure that you:
