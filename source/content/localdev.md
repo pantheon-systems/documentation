@@ -1,12 +1,12 @@
 ---
 title: Use Pantheon Localdev to Develop Sites Locally
 description: Localdev makes it easy to develop your sites locally with the Pantheon workflow.
-tags: [manage, tools, workflow]
-categories: [manage,develop]
+tags: [Localdev, tools, workflow]
+categories: [develop]
 earlyaccess: true
 earlynote: The documentation on this page discusses features and options that are still in production. Pantheon Support for Localdev may be limited.
 contributors: [edwardangert]
-reviewed: "2020-01-07"
+reviewed: "2020-01-13"
 ---
 
 Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes/). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/pantheon-workflow/).
@@ -116,35 +116,39 @@ The steps in this section should only be used as a last resort. This resets Loca
 Localdev does not connect to [Multidev](/multidev/) environments or allow direct database access.
 
 ## Changelog
+See the [Localdev Changelog file](https://pantheon-localdev.s3.amazonaws.com/changelog.yml) for the full version history.
 
-### 0.6.0-beta9
-Dec. 4, 2019
+### version: 0.7.0
+date: 2019-01-14
 
-#### New features
-- Added macOS Catalina Support!
-- Added a `beta` release channel
-- Added ability to toggle `edge` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
-- Added ability to rebuild a given app
-- Added basic online/offline detection
-- Added support for `phpmyadmin` as toggleable service
-- Added surfacing of release notes
-- Added option to automatically quit Docker on Localdev quit
-- Improvements
-- Improved cancellation of app initialization
-- Improved application state detection
-- Improved shutdown and quit
-- Improved process handling and management
-- Improved revoked token detection and mitigation
-- Improved application destruction UX
-- Improved Docker state management
-- Improved error handling and logging
-- Improved "botched state" cleanup
-- Improved progress indicators
-
-#### Bug fixes
-- Fixed various initialization bugs
-- Fixed various "app is stuck" bugs
-- Fixed bug causing pre-0.6.0 installs to not be detected
-
-#### Notes
-- Going forward Localdev will manage its own Lando configuration
+  #### New features
+    * Added macOS Catalina Support!
+    * Added a `beta` release channel
+    * Added ability to toggle `cache` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
+    * Added ability to toggle `edge` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
+    * Added ability to toggle `index` service [#24](https://github.com/pantheon-systems/localdev-issues/issues/24)
+    * Added ability to rebuild a given app
+    * Added basic online/offline detection
+    * Added support for `phpmyadmin` as toggleable service
+    * Added surfacing of release notes
+    * Added option to automatically quit Docker on Localdev quit
+  #### Improvements
+    * Improved cancellation of app initialization
+    * Improved application state detection
+    * Improved handling when port `2222` is blocked
+    * Improved shutdown and quit
+    * Improved process handling and management
+    * Improved revoked token detection and mitigation
+    * Improved application destruction UX
+    * Improved Docker state management
+    * Improved error handling and logging
+    * Improved "botched state" cleanup
+    * Improved progress indicators
+    * Improved UX on `phpmyadmin` selection
+  #### Bug fixes
+    * Fixed bug in 0.6.0 causing develop screen to not show if user did not have `pma` installed
+    * Fixed various initialization bugs
+    * Fixed various "app is stuck" bugs
+    * Fixed bug causing pre-0.6.0 installs to not be detected
+  #### Notes
+    * Going forward Localdev will manage its own Lando configuration [#18](https://github.com/pantheon-systems/localdev-issues/issues/18)
