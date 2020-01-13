@@ -21,24 +21,28 @@ Localdev is in active development, with new features and updates coming soon.
 
 If you have an older version of Localdev already installed on your machine, remove it to avoid potential compatibility issues. Newer versions of Localdev include support for automatic updates.
 
-1.  Download and install the [latest Localdev](https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg) `.dmg`
-1.  Localdev checks the Docker installation. Once it's done, click **Continue installation**
-1.  Enter the machine token you created for Localdev.
-    - Click **View your Pantheon machine tokens** to open a browser to the *Machine Tokens* tab of your account.
-1.  Click **Submit Token** and wait for it to connect
-1.  Click **Begin sync** to synchronize Localdev with your account
+1. Download and install the [latest Localdev](https://pantheon-localdev.s3.amazonaws.com/localdev-stable.dmg) `.dmg`
+1. Localdev checks the Docker installation. Once it's done, click **Continue installation**
+1. Enter the machine token you created for Localdev.
+   - Click **View your Pantheon machine tokens** to open a browser to the *Machine Tokens* tab of your account.
+1. Click **Submit Token** and wait for it to connect
+1. Click **Begin sync** to synchronize Localdev with your account
 
 Once Localdev is installed, a list of your sites is displayed in a column on the left.
 
 ## Download and Test Beta Versions
-Download Edge versions to get the latest features, bug fixes, and instructions, and help test Localdev. From within your Localdev installation:
+Download Edge versions to get the latest features, bug fixes, instructions, and help test Localdev.
 
-1. Select Settings on left menu
-1. In the Current Version section, click on `switch to edge`.
+1. From within your Localdev installation, select Settings on left menu.
+1. In the Current Version section, click on `switch to edge`:
 
-![Switch to edge version](../images/localdev/localdev-switch-to-edge.png)
+  ![Switch to edge version](../images/localdev/localdev-switch-to-edge.png)
 
-Help improve Localdev by sharing bug reports and feedback on the [Localdev Slack channel](https://pantheon-community.slack.com/messages/CB2H8065D) and the [issue queue](https://github.com/pantheon-systems/localdev-issues).
+<Alert type="info" title="Note">
+
+Help improve Localdev by sharing bug reports and feedback on the [Localdev Slack channel](https://pantheon-community.slack.com/messages/CB2H8065D) or [GitHub issue queue](https://github.com/pantheon-systems/localdev-issues).
+
+</Alert>
 
 ## Connect and Clone your Site Locally
 
