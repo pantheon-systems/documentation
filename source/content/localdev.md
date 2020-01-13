@@ -30,6 +30,16 @@ If you have an older version of Localdev already installed on your machine, remo
 
 Once Localdev is installed, a list of your sites is displayed in a column on the left.
 
+## Download and Test Beta Versions
+Download Edge versions to get the latest features, bug fixes, and instructions, and help test Localdev. From within your Localdev installation:
+
+1. Select Settings on left menu
+1. In the Current Version section, click on `switch to edge`.
+
+![Switch to edge version](../images/localdev/localdev-switch-to-edge.png)
+
+Help improve Localdev by sharing bug reports and feedback on the [Localdev Slack channel](https://pantheon-community.slack.com/messages/CB2H8065D) and the [issue queue](https://github.com/pantheon-systems/localdev-issues).
+
 ## Connect and Clone your Site Locally
 
 Select a site and click **Pull for local development** to clone the site locally and boot the local environment.
