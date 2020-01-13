@@ -76,7 +76,7 @@ Make sure that you have:
   [0x000000000327a240] render() /code/sites/all/themes/themename/templates/page.tpl.php:113
   ```
 
-2. Next, search for contributed modules or plug-ins that may be detrimental to the site. stream_wrappers.inc is showing twice at the exact same timestamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
+1. Next, search for contributed modules or plug-ins that may be detrimental to the site. stream_wrappers.inc is showing twice at the exact same timestamp (08-Dec-2014 16:56:48) and is used to bring in external streaming media. This is often the cause of significant performance issues on sites.
 
   ```php
   [08-Dec-2014 16:56:48]  [pool www] pid 3863
@@ -114,7 +114,7 @@ Make sure that you have:
   [0x00000000027b1040] menu_execute_active_handler() /code/index.php:21
   ```
 
-3. To get a count of how many times any given file is called in a PHP slow log, use a `grep` command. Examples:
+1. To get a count of how many times any given file is called in a PHP slow log, use a `grep` command. Examples:
 
   ```bash{outputLines:2}
   grep -o 'stream_wrappers.inc' php-slow.log | wc -l
