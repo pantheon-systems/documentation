@@ -16,7 +16,7 @@
     "dotenv": "^6.2.0",
     "font-awesome": "^4.7.0",
     "fs": "0.0.1-security",
-    "gatsby": "^2.18.11",
+    "gatsby": "^2.18.22",
     "gatsby-image": "^2.2.36",
     "gatsby-plugin-feed": "^2.3.25",
     "gatsby-plugin-google-tagmanager": "^2.1.20",
