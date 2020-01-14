@@ -1,8 +1,8 @@
 ---
 title: Configuration Workflow for Drupal 8 Sites
 description: Commit your Drupal configuration to version control.
-tags: [devdrush, workflow]
-categories: [drupal8,develop,workflow]
+tags: [Drupal8, configuration management, workflow]
+categories: [develop]
 ---
 Managing configuration is an extremely important part of any team website project, but in many cases, this area of the project does not receive as much attention as it deserves. The tools for Drupal 7 do not provide complete coverage of all configuration settings, leading to inconsistencies in configuration handling and inconvenient workarounds. This has led to configuration management becoming a real thorn in the side for many projects.
 
@@ -97,10 +97,11 @@ After implementing a nested docroot, set a new path (`/config`) for configuratio
 /**
  * Place the config directory outside of the Drupal root.
  */
-$config_directories = array(
+$settings['config_sync_directory'] = array(
   CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
 );
 ```
+**Note**, as of [Drupal 8.8.0](https://www.drupal.org/docs/8/configuration-management/changing-the-storage-location-of-the-sync-directory#s-syntax-changes-in-drupal-880) the sync directory is defined in `$settings` and not `$config_directories`. 
 
 <Alert title="Note" type="info">
 
