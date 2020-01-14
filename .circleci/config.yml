@@ -15,8 +15,8 @@ jobs:
           command: .circleci/scripts/set-env.sh && source $BASH_ENV
       - restore_cache:
           keys:
-            - v2.5.1-always-
-            - npm-v2.7-{{ checksum "gatsby/package-lock.json" }}
+            - v2.5.3-always-
+            - npm-v2.8.1-{{ checksum "gatsby/package-lock.json" }}
       - run:
           name: Install Terminus
           command: |
@@ -33,6 +33,9 @@ jobs:
           name: Update Terminus data files
           command: |
             bash .circleci/scripts/update-terminus-commands.sh
+      - run:
+          name: Update Localdev changelog
+          command: bash .circleci/scripts/update-localdev-changelog.sh
       - run:
           name: Gatsby Build
           command: |
@@ -76,12 +79,12 @@ jobs:
           name: Test links
           command: .circleci/tests/link-checker.sh
       - save_cache:
-          key: npm-v2.7-{{ checksum "gatsby/package-lock.json" }}
+          key: npm-v2.8.1-{{ checksum "gatsby/package-lock.json" }}
           paths:
             - ~/build/gatsby/package-lock.json
             - ~/build/gatsby/node_modules
       - save_cache:
-          key: v2.5.1-always-{{ epoch }}
+          key: v2.5.3-always-{{ epoch }}
           paths:
             - ~/build/gatsby/public
             - ~/build/gatsby/.cache
