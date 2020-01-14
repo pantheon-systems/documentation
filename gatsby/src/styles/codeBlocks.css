@@ -20,8 +20,13 @@
     padding-right: 0.8em;
   }
   
-  .command-line-prompt > span[data-user]:before {
+.command-line-prompt > span[data-user]:before {
 	content: "$";
+}
+
+.command-line-prompt > span[data-user="winshell"]::before {
+  color: #efcf1b;
+  content: "PC C:\\Users\\user>";
 }
 
 .highlight {
