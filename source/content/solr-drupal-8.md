@@ -5,15 +5,15 @@ tags: [addons, siteintegrations]
 categories: [drupal8,integrate,develop]
 contributors: [peter-pantheon, cityofoaksdesign]
 ---
-[Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
+[Apache Solr](/solr/) is a system for indexing and searching site content.
 
 <Alert title="Important Note" type="info" icon="lightbulb">
 
-**Pantheon Search** uses a special Pantheon Solr service. The version of Solr on Pantheon is Apache Solr v3.6.
+**Pantheon Search** uses a special Pantheon Solr service. <Partial file="solr-version.md" />
 
 Pantheon's Solr can perform full text content searching in a single language.
 
-If your search needs include geospacial search, emojis, or multilingual search, consider [OpenSolr](/opensolr/) or another alternative search.
+If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr/) or another alternative search.
 
 [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr) should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
 
