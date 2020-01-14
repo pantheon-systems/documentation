@@ -93,7 +93,7 @@ Configuration files can contain sensitive information. Drupal takes some measure
 ### Configure and Relocate
 After implementing a nested docroot, set a new path (`/config`) for configuration directories by adding the following to `settings.php`:
 
-```php
+```php:title=settings.php
 /**
  * Place the config directory outside of the Drupal root.
  */
