@@ -9,11 +9,14 @@ contributors: [peter-pantheon, cityofoaksdesign]
 
 <Alert title="Important Note" type="info" icon="lightbulb">
 
-**Pantheon Search** uses a special Pantheon Solr service; the version of Solr on Pantheon is Apache Solr v3.6. If your site's search needs are limited to full text content searching and indexing, in one language, without emojis, Pantheon Search is a solid choice for you.
+**Pantheon Search** uses a special Pantheon Solr service. The version of Solr on Pantheon is Apache Solr v3.6.
+
+Pantheon's Solr can perform full text content searching in a single language.
+
+If your search needs include geospacial search, emojis, or multilingual search, consider [OpenSolr](/opensolr/) or another alternative search.
 
 [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr) should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
 
-For specific features of Solr beyond these (e.g. multilingual, emojis, geospacial search), an alternative solution like [OpenSolr](/opensolr/), may be a better fit.
 </Alert>
 
 ## Before You Begin
