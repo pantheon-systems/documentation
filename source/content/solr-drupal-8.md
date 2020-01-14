@@ -7,9 +7,11 @@ contributors: [peter-pantheon, cityofoaksdesign]
 ---
 [Apache Solr](/solr/) is a system for indexing and searching site content.
 
-<Alert title="Important Note" type="info" icon="lightbulb">
+<Alert title="Important Note" type="info">
 
-**Pantheon Search** derives from Solr and can perform full-text content searching in a single language. <Partial file="solr-version.md" />
+**Pantheon Search** derives from Solr and can perform full-text content searching in a single language. 
+
+<Partial file="solr-version.md" />
 
 If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr/) or another alternative search.
 
