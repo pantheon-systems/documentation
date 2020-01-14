@@ -15,7 +15,7 @@ The best solution is to communicate with the maintainer of the module or plugin 
 
 <Alert title="Note" type="info">
 
-We do not recommend creating symlinks over SFTP due to inconsistencies amongst clients.
+We do not recommend creating symlinks over SFTP due to inconsistencies between clients.
 
 The following is for Mac and Linux only. Windows users may refer to Microsoft documentation for opening [Command Prompt as an Administrator](https://technet.microsoft.com/en-us/library/cc947813(v=ws.10).aspx) and [creating symlinks using mklink](https://technet.microsoft.com/en-us/library/cc753194.aspx) or create symlinks within a virtual machine.
 
@@ -29,7 +29,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     cd ~/sites/myawesomesite/ #Change this to your project directory.
     ```
 
-1. Move the directory you want to replace with a symlink. This serves two purposes; backing up any data that may otherwise be lost, and preventing the symlink from being nested inside the existing directory:
+1. Move the directory you want to replace with a symlink. This serves to both back up any data that may otherwise be lost, and to prevent the symlink from being nested inside the existing directory:
 
     ```bash{promptUser: user}
     mv ./wp-content/path/plugin-expects-write-to ~/backups/
@@ -68,9 +68,9 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
     git push origin master
     ```
 
- Your commit can be seen in the Dev environments commit history. Once this commit is synced to all environments, the plugin will now successfully write files within any environment, even when the Dev environment's connection mode is set to Git. 
+ Your commit can be seen in the Dev environment's commit history. Once this commit is synced to all environments, the plugin will successfully write files within any environment, even when the Dev environment's connection mode is set to Git.
  
- You should not see the newly created files in the Dashboard as "ready to commit", as files are not version controlled. Only the symlink to the new path is in the code base.
+ You should not see the newly created files in the Dashboard as "ready to commit," as files are not version controlled. Only the symlink to the new path is in the code base.
 
   <Alert title="Note" type="info">
 
@@ -78,8 +78,8 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
   </Alert>
 
-7. Deploy to Test and confirm results.
-8. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
+1. Deploy to Test and confirm results.
+1. Deploy to Live and perform the plugin operation that creates the desired files, then confirm results.
 
 ## Examples
 
@@ -109,7 +109,7 @@ et-cache -> ./uploads/et-cache
 
 #### For Windows
 
-Note that the syntax for Window's Command Prompt is opposite from MacOS and Linux, requiring the symlink path *before* the target, from the root of your installation run as and admin these commands:
+Note that the syntax for Windows Command Prompt is opposite from MacOS and Linux, requiring the symlink path *before* the target. From the root of your installation, run `mklink` as an admin:
 
 ```bash{promptUser: winshell}
 mklink /d .\wp-content\et-cache .\uploads\et-cache
