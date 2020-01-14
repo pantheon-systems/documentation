@@ -26,6 +26,7 @@ import Partial from "../components/partial"
 import Image from "../layout/image"
 import ChecklistItem from "../components/checklistItem"
 import Example from "../components/styleExample"
+import LocaldevChangelog from "../components/localdevChangelog"
 
 const shortcodes = {
   Callout,
@@ -45,6 +46,7 @@ const shortcodes = {
   ChecklistItem,
   Image,
   Example,
+  LocaldevChangelog,
 }
 
 class DocTemplate extends React.Component {

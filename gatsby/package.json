@@ -45,6 +45,8 @@
     "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.3.9",
     "gatsby-transformer-yaml": "^2.2.20",
+    "gatsby-transformer-yaml-full": "^0.2.0",
+    "gatsby-yaml-full-markdown": "^0.2.0",
     "highlight.js": "^9.17.1",
     "jest": "^24.9.0",
     "node-font-awesome": "^1.0.2",
