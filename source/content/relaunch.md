@@ -69,6 +69,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 1. In the old Site Dashboard, remove the custom domain affected by the relaunch:
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Details** > **Remove Domain**
+
 1. In the new Site Dashboard, connect the custom domain affected by the relaunch:
 
   **<span class="glyphicons glyphicons-cardio"></span> Live** > **<span class="glyphicons glyphicons-global"></span> Domains / HTTPS** > **Connect Domain**
@@ -76,6 +77,8 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
   <Alert title="Warning" type="danger">
 
   Do **not** update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 5 below.
+
+  Until you update the DNS records (and they propogate), traffic will still be directed to the old site.
 
   </Alert>
 
