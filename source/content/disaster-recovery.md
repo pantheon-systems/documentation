@@ -19,7 +19,7 @@ Recovery Point Objective (**RPO**) is a baseline of reasonably acceptable data l
 Recovery Time Objective (**RTO**) is the target amount of time within which a business process must be restored after a disaster in order to avoid unacceptable consequences from a break in business continuity. In short, think “time down.” For sites with DR enabled, Pantheon’s RTO is 15 minutes.
 
 ## Access
-Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us).
+Site Disaster Recovery is available for purchase as an add-on to all Elite site plans. For more information, please [contact Sales](https://pantheon.io/contact-us).
 
 ![Pantheon Site Disaster Recovery Architecture Diagram](../images/site-dr-diagram.png)
 
