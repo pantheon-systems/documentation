@@ -1,17 +1,23 @@
 ---
 title: Enabling Solr on Drupal 8
 description: Detailed information on using Apache Solr with Drupal 8.
-tags: [addons, siteintegrations]
-categories: [drupal8,integrate,develop]
+tags: [Drupal8,Solr,search]
+categories: [integrate]
 contributors: [peter-pantheon, cityofoaksdesign]
 ---
-[Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
+[Apache Solr](/solr/) is a system for indexing and searching site content.
 
-<Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
+<Alert title="Important Note" type="info">
 
-Learn how to configure Solr with help from our experts. Pantheon delivers custom workshops to help development teams master the platform and improve internal WebOps.
+**Pantheon Search** derives from Solr and can perform full-text content searching in a single language. 
 
-</Enablement>
+<Partial file="solr-version.md" />
+
+If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr/) or another alternative search.
+
+Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which is currently unsupported by Solr. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
+
+</Alert>
 
 ## Before You Begin
 Be sure that you:
