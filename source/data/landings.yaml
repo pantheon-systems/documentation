@@ -601,7 +601,7 @@
           url: '/guides/two-factor-authentication/'
           icons: 'fa fa-book'
         - text: 'Setting Up CloudFront CDN with Drupal'
-          url: '/drupal-cloudfront/'/'
+          url: '/drupal-cloudfront/'
         - text: 'Using OpenSolr With Pantheon Sites'
           url: '/opensolr/'
         - text: 'Creating and Revoking Machine Tokens'
