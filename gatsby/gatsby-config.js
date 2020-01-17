@@ -25,14 +25,6 @@ module.exports = {
     "Mdx.frontmatter.contributors": "ContributorYaml",
   },
   plugins: [
-    {
-      resolve: `gatsby-transformer-yaml-full`,
-      options: {
-        plugins: [
-          `gatsby-yaml-full-markdown`,
-        ],
-      },
-    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     {
@@ -123,6 +115,7 @@ module.exports = {
         icon: `src/layout/favicon.ico`,
       },
     },
+    `gatsby-transformer-yaml`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-mdx`,
