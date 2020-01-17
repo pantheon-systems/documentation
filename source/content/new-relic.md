@@ -9,7 +9,7 @@ categories: [performance,go-live,develop]
 ## Supported Site Plans
 All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro is available to Sandbox site plans for developmental purposes, but New Relic APM Pro will not be available going live on a Basic plan.
 
-| Plans         | New Relic APM Pro Support <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Available across all environments, including Multidevs."><em class="fa fa-info-circle"></em></a> |
+| Plans         | New Relic APM Pro Support <Popover content="Available across all environments, including Multidevs." /> |
 | ------------- | ------- |
 | Sandbox       | ✓       |
 | Basic         |         |

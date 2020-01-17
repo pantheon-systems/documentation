@@ -10,11 +10,11 @@ The site's framework is selected during the creation process. Pantheon Upstreams
 We base our Drupal 7 repository on the canonical source from drupal.org, and then extend it with [Pressflow](http://pressflow.org/) modifications and additional features to take advantage of the Pantheon runtime environment. The WordPress repository includes platform integration plugins and a pre-configured `wp-config.php`.
 
 - [WordPress](https://dashboard.pantheon.io/sites/create?upstream_id=e8fe8550-1ab9-4964-8838-2b9abdccf4bf)
-- [Drupal 8](https://dashboard.pantheon.io/sites/create?upstream_id=8a129104-9d37-4082-aaf8-e6f31154644e) <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-content="Install Requires SFTP Mode"><em class="fa fa-info-circle"></em></a>
+- [Drupal 8](https://dashboard.pantheon.io/sites/create?upstream_id=8a129104-9d37-4082-aaf8-e6f31154644e) <Popover content="Install Requires SFTP Mode" />
 - [Drupal 7](https://dashboard.pantheon.io/sites/create?upstream_id=21e1fada-199c-492b-97bd-0b36b53a9da0)
 
 ## Public Distributions
-We include a growing number of "Drupal products" as available upstreams on Pantheon. These are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.		
+We include a growing number of "Drupal products" as available upstreams on Pantheon. These are also known as installation profiles or distributions and contain much more functionality than a Drupal core installation.
 
 <Alert title="Note" type="info">
 
