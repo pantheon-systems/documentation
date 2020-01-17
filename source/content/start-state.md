@@ -28,7 +28,7 @@ Use the following direct links to create a new site on Pantheon from a public di
 - [DKAN](https://dashboard.pantheon.io/sites/create?upstream_id=d7370d7e-46fb-4b10-b79f-942b5abf51de) [<i class="ml-5 fa fa-github"></i>](https://github.com/NuCivic/dkan-drops-7)
 - [Commerce Kickstart](https://dashboard.pantheon.io/sites/create?upstream_id=8a662dde-53d6-4fdb-8eac-eea9f5848d00) [<i class="ml-5 fa fa-github"></i>](https://github.com/commerceguys/kickstart-drops-7)
 - [OpenAid](https://dashboard.pantheon.io/sites/create?upstream_id=2adff196-4672-44c9-af2a-4590963b90d8) [<i class="ml-5 fa fa-github"></i>](https://bitbucket.org/joelsteidl/openaid-drops-7)
-- [Atrium](https://dashboard.pantheon.io/sites/create?upstream_id=31bc4254-be20-4e8d-afe6-6c585e58435a) [<i class="ml-5 fa fa-github"></i>](https://github.com/phase2/openatrium-drops-6)
+- [Atrium](https://dashboard.pantheon.io/sites/create?upstream_id=31bc4254-be20-4e8d-afe6-6c585e58435a) [<i class="ml-5 fa fa-github"></i>](https://github.com/phase2/openatrium-drops-7)
 - [OpenIdeaL](https://dashboard.pantheon.io/sites/create?upstream_id=86112161-4cb2-410f-8bb1-8a1fb4f56dae) [<i class="ml-5 fa fa-github"></i>](https://github.com/linnovate/openideal-on-drops-7)
 - [Open Outreach](https://dashboard.pantheon.io/sites/create?upstream_id=4c17f505-05d0-4b79-b38a-0bc548405a10) [<i class="ml-5 fa fa-github"></i>](https://github.com/nedjo/openoutreach-drops-7)
 - [OpenPublic](https://dashboard.pantheon.io/sites/create?upstream_id=b459145b-8771-4597-8b84-684a3d93dce0) [<i class="ml-5 fa fa-github"></i>](https://github.com/phase2/openpublic-drops-7)
