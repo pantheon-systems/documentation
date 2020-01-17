@@ -46,7 +46,6 @@ While Pantheon provides a stable, reliable, and basic Solr service, your individ
 
 Some customers have reported success using external Solr service providers for their Solr indexing:
 
- - [IndexDepot](https://www.indexdepot.com/en/). For more information, see [Using IndexDepot With Pantheon Sites](/indexdepot/).
  - [OpenSolr](https://opensolr.com/) For more information, see [Using OpenSolr With Pantheon Sites](/opensolr/).
  - [WebSolr](https://websolr.com/)
 
