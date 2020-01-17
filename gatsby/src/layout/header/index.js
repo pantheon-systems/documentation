@@ -158,6 +158,7 @@ const Header = ({ data }) => (
                 action="/docs/search"
                 acceptCharset="UTF-8"
                 encType="application/x-www-form-urlencoded"
+                title="Search Pantheon Documentation"
               >
                 <input
                   type="search"
