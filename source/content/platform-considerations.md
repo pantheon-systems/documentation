@@ -125,7 +125,7 @@ If your site contains rules in `.htaccess` that cannot be migrated to PHP, Panth
 Drupal 7 and 8 checks for arbitratry code execution prevention by looking for a specific string in the `.htaccess` file. Since Pantheon uses NGINX as described above, this message can be safely ignored. For more details, see [this Drupal.org issue](https://www.drupal.org/project/drupal/issues/2150399) on `SA-CORE-2013-003`.
 
 ## Image Optimization Tools
-Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules with Known Issues.](/modules-known-issues#imageapi-optimize)
+Image optimization libraries such as advpng, OptiPNG, PNGCRUSH, jpegtran, jfifremove, advdef, pngout, jpegoptim have to be installed on the server. At this time, they are not supported. For more information see [Modules with Known Issues.](/modules-known-issues/#imageapi-optimize)
 
 Pantheon also offers Image Optimization as part of Advanced CDN (a [Professional Services](/professional-services#advanced-cdn) engagement). Please contact your Customer Success Manager (CSM) or [contact us](https://pantheon.io/contact-us?docs) for more information.
 
@@ -170,7 +170,7 @@ See our documentation for [Drupal](/drupal-s3) and [WordPress](/wordpress-s3/) f
 Uploading large files over a slow local internet connection can cause the process to hit our [Connection Timeout](/timeouts/#timeouts-that-are-not-configurable) of 59 seconds. For example, a 10MB file uploaded on a 2Mbps connection may take too long and fail. You can use an upload time calculator like [this one](https://downloadtimecalculator.com/Upload-Time-Calculator.html) to help determine if your local internet connection is impeding file uploads to Pantheon.
 
 ## Large (>100GB) File Backups
-Large backups take longer, use more resources, and have a higher likelihood of failing.  Additionally, a 100GB compressed tarball is in itself not particularly convenient for anyone.  For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal).  Despite the lack of backups, file content is highly durable and stored on multiple servers.
+Large backups take longer, use more resources, and have a higher likelihood of failing. Additionally, a 100GB compressed tarball is in itself not particularly convenient for anyone. For this reason, scheduled backups do not backup files for sites with footprints over 200GB (although code and database are backed-up as normal). Despite the lack of backups, file content is highly durable and stored on multiple servers.
 
 ## Maintenance Mode
 Pantheon may send a [generic Maintenance Mode message](/errors-and-server-responses#pantheon-503-target-in-maintenance) during platform problems; this message cannot be customized.
@@ -178,11 +178,11 @@ Pantheon may send a [generic Maintenance Mode message](/errors-and-server-respon
 Built-in Maintenance Mode for both Drupal and WordPress sites can be customized; clear caches when toggling.
 
 ## Modules and Plugins with Known Issues
-See [Modules and Plugins with Known Issues](/modules-plugins-known-issues) for a list of Drupal modules and WordPress plugins that are not supported and/or require workarounds.
+See [Modules and Plugins with Known Issues](/modules-plugins-known-issues/) for information about [Drupal modules](/modules-known-issues/) and [WordPress plugins](/plugins-known-issues/) that are not supported and/or require workarounds.
 
 ## Multisite
 
-Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite) created by WordPress' Multisite feature.
+Pantheon supports designated use cases for [WordPress Site Networks](/guides/multisite/) created by WordPress' Multisite feature.
 
 We do not support [Drupal Multisite](https://www.drupal.org/docs/7/multisite-drupal/multi-site-sharing-the-same-code-base). See blog posts: [Why Drupal Multisite is not Enterprise Grade](https://pantheon.io/blog/why-drupal-multisite-not-enterprise-grade) and [Much Ado About Drupal Multisite](https://pantheon.io/blog/much-ado-about-drupal-multisite).
 
