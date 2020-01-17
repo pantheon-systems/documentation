@@ -109,7 +109,7 @@ There are a lot of tools at your disposal when it comes to fine tuning dynamic s
 Learn how to use [bots and indexing](/bots-and-indexing/) in a way that does not negatively impact performance. 
 
 ## Integrate 
-You can also integrate with external Solr search indexes with services like [OpenSolr](/opensolr/) and [IndexDepot](/indexdepot/).
+You can also integrate with external Solr search indexes with services like [OpenSolr](/opensolr/).
 
 ## See Also
 - [Hot Fixes](/hotfixes/)
