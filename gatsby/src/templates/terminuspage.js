@@ -102,8 +102,8 @@ const items = [
 
 class TerminusTemplate extends React.Component {
   componentDidMount() {
-    window.jQuery('[data-toggle="tooltip"]').popover({
-      trigger: "hover",
+    window.jQuery('[data-toggle="popover"]').popover({
+      trigger: "click",
       placement: "right",
     })
   }

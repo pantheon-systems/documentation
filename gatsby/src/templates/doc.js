@@ -53,8 +53,8 @@ const shortcodes = {
 
 class DocTemplate extends React.Component {
   componentDidMount() {
-    window.jQuery('[data-toggle="tooltip"]').popover({
-      trigger: "hover",
+    window.jQuery('[data-toggle="popover"]').popover({
+      trigger: "click",
       placement: "right",
     })
   }
