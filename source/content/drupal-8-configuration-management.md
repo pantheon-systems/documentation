@@ -91,7 +91,7 @@ Configuration files can contain sensitive information. Drupal takes some measure
 - Refer to [Serving Sites from the Web Subdirectory](/nested-docroot/) to enable nested docroot on a new or existing Drupal 8 site.
 
 ### Configure and Relocate
-After implementing a nested docroot, set a new path (`/config`) for configuration directories by adding the following to `settings.php`<Popover title="Syntax note" content="As of Drupal 8.8.0 (https://www.drupal.org/docs/8/configuration-management/changing-the-storage-location-of-the-sync-directory#s-syntax-changes-in-drupal-880) the sync directory is defined in $settings and not $config_directories. " />:
+After implementing a nested docroot, set a new path (`/config`) for configuration directories by adding the following to `settings.php`<Popover title="Syntax note" content="As of <a class='external' href='https://www.drupal.org/docs/8/configuration-management/changing-the-storage-location-of-the-sync-directory#s-syntax-changes-in-drupal-880'>Drupal 8.8.0</a> the sync directory is defined in $settings and not $config_directories. " />:
 
 ```php:title=settings.php
 /**

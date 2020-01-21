@@ -83,7 +83,7 @@ The top level repository will be one of Pantheon's core upstreams (either [WordP
 
 The second level repository is a Custom Upstream, where core updates from Pantheon are pulled in and modifications to your common codebase are distributed (e.g. parent theme and plugin/module version updates).
 
-The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/) <a rel="popover" data-proofer-ignore data-toggle="tooltip" data-html="true" data-title="" data-content="Contact support to create a GitLab based custom upstream."><em class="fa fa-info-circle"></em></a>. It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
+The Custom Upstream repository is hosted outside of Pantheon using a provider like [GitHub](https://github.com/), [Bitbucket](https://bitbucket.org/) or [GitLab](https://about.gitlab.com/) <Popover content="Contact support to create a GitLab based custom upstream." />. It's connected to Pantheon and associated with your organization, allowing fellow team members the option to select this repository as a starting point when creating new sites.
 
 </div>
 </div>

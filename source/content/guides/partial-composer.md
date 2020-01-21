@@ -50,7 +50,7 @@ Use the `init` command to create a `composer.json` file that includes the approp
 
   <Alert title="Note" type="info">
 
-  Since Pantheon does not support Git submodules <a class="pop" rel="popover" data-proofer-ignore data-toggle="popover" data-html="true" data-title="Git submodules" data-content="Some Composer packages are added as Git submodules, which place a Git repository within a subdirectory of your site’s repository."><em class="fa fa-info-circle"></em></a>, we recommend using the provided script `remove-git-submodules` to remove any `.git` directories upon install and update.
+  Since Pantheon does not support Git submodules <Popover title="Git submodules" content="Some Composer packages are added as Git submodules, which place a Git repository within a subdirectory of your site’s repository." />, we recommend using the provided script `remove-git-submodules` to remove any `.git` directories upon install and update.
 
   </Alert>
 
