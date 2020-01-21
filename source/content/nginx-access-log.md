@@ -71,9 +71,14 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
   ```
 
 ### Troubleshooting "goaccess.conf Not Found"
-In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goaccess.conf` is not found when running `goaccess` commands.
+In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goaccess.conf` is not found by the binary. To resolve:
 
-1. Display the path of the default config file by typing `goaccess --dcf`.
+1. Display the default config path:
+
+  ```bash{promptUser: user}
+  goaccess --dcf
+  ```
+
 1. Move `goaccess.conf` from `/usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess` to `/usr/local/Cellar/goaccess/[VERSION]/conf/etc`:
 
   ```bash{promptUser: user}
