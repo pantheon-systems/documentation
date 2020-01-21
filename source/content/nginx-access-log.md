@@ -4,7 +4,7 @@ description: Learn how to parse the nginx-access.log file with GoAccess to gathe
 tags: [logs, nginx, goacess]
 categories: [performance]
 contributors: [albertcausing, sarahg]
-reviewed: "2019-12-30"
+reviewed: "2020-01-09"
 ---
 Pantheon runs nginx web servers for optimal performance. Your site's nginx access logs record web server events and activities that can help you identify potential issues and gather information about users.
 
@@ -43,7 +43,7 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
 
 ## Create a report
 
-1. [Download your nginx log files](/logs) from Pantheon via SFTP.
+1. [Download your nginx log files](/logs/) from Pantheon via SFTP.
 1. From the directory containing your `nginx-access.log` file, run GoAccess:
 
   ```bash{promptUser: user}
@@ -70,6 +70,23 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
   xdg-open report.html
   ```
 
+### Troubleshooting "goaccess.conf Not Found"
+In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goaccess.conf` is not found by the binary. To resolve:
+
+1. Display the default config path:
+
+  ```bash{promptUser: user}
+  goaccess --dcf
+  ```
+
+1. Move `goaccess.conf` from `/usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess` to `/usr/local/Cellar/goaccess/[VERSION]/conf/etc`:
+
+  ```bash{promptUser: user}
+  mv /usr/local/Cellar/goaccess/[VERSION]/conf/etc/goaccess /usr/local/Cellar/goaccess/[VERSION]/conf/etc
+  ```
+
+An [issue has been filed](https://github.com/allinurl/goaccess/issues/1640) on the GoAccess repo.
+
 ## Automate GoAccess Reports
 
 1. Copy the general log retrieval script from [Automate Downloading Logs](/logs#automate-downloading-logs), and use this to download logs from all application containers on the desired environment.
@@ -83,12 +100,6 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
   # Create a GoAccess report and open it in a browser.
   goaccess */nginx-access.log* > goaccess.html && open goaccess.html # Or xdg-open for Linux
   ```
-
-## Troubleshooting
-### goaccess.conf Not Found
-In certain MacOS [Homebrew](https://brew.sh/) installations of GoAccess, `goaccess.conf` is not found when running `goaccess` commands. (Display the path of the default config file by typing `goaccess --dcf`.)
-
-Moving `goaccess.conf` from `\Cellar\goaccess\[version]\conf\etc\goaccess` into `\Cellar\goaccess\[version]\conf\etc` resolves the issue. 
 
 ## See Also
 
