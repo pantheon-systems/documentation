@@ -85,18 +85,6 @@ ___
 
 ___
 
-## [CKFinder](https://www.drupal.org/project/wysiwyg_ckfinder)
-
-**Issue**:  If you follow the installation instructions for CKFinder, the `$baseUrl` path is not correctly set and will not recognize any path set via CKFinder.  See this [Drupal.org issue](https://www.drupal.org/node/2629000).
-
-**Solution**:  Manually edit the `ckfinder/config.php` file and edit the following line to the desired path:
-
-```php:title=ckfinder/config.php
-$baseUrl = '/ckfinder/userfiles/';
-```
-
-___
-
 ## [Composer Manager](https://www.drupal.org/project/composer_manager)
 
 This module has been deprecated by its authors. The suggestions made below are not guaranteed to be successful in all use cases.
@@ -182,41 +170,6 @@ ___
 
 ___
 
-## [IMCE 6.x](https://www.drupal.org/node/251024) and [IMCE 7.x](https://www.drupal.org/project/imce/releases/7.x-1.11)
-
-**Issue**: Operations on directories containing an inordinate amount of files will likely hit the load balancer timeout threshold (30 seconds).
-
-**Solution**: One solution is to break up the files into smaller groups so that directories are less populated. Another option is to rewrite `imce_image_info()` so that your site's caching backend (Database or Redis) is used for operations on highly populated directories:
-
-1. [Enable Redis](/redis/), otherwise the database cache is utilized. (Depending on your site's configuration, you may not need to enable Redis.)
-2. Edit `imce/inc/imce.page.inc` and replace the contents of `imce_image_info()` with:
-
- ```php:title=imce.page.inc
- $cache_key = 'imce-' . $file;
- $cache = cache_get($cache_key);
- if ($cache) {
-  return $cache->data;
- }
- if
- (is_file($file) && ($dot = strrpos($file, '.')) &&
- in_array(strtolower(substr($file, $dot+1)), array('jpg', 'jpeg',
- 'gif','png')) && ($info = @getimagesize($file)) &&
- in_array($info[2], array(IMAGETYPE_JPEG, IMAGETYPE_GIF, IMAGETYPE_PNG)) )
- {
-   $result = array('width' => $info[0], 'height' => $info[1], 'type' => $info[2], 'mime' => $info['mime']);
-   cache_set($cache_key, $result);
-   return $result;
- }
- return FALSE;
- }
- ```
-
-3. Clear caches on the Dev environment. The first action to populate cache will take longer than subsequent requests.
-
-You can modify this patch according to your needs, such as performing an operation post upload and/or specifying a particular cache bin.
-
-___
-
 ## [JS](https://www.drupal.org/project/js)
 
 <ReviewDate date="2019-07-24" />
@@ -240,11 +193,6 @@ ___
 
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
 
-___
-
-## [Mobile Tools](https://www.drupal.org/project/mobile_tools)
-
-**Issue**: Conflicts with platform page caches. See [this thread](https://www.drupal.org/node/1976162#comment-7411366) for details.
 ___
 
 ## [Node export webforms](https://www.drupal.org/project/node_export_webforms)
@@ -319,11 +267,6 @@ if (defined('PANTHEON_ENVIRONMENT') && $_ENV['PANTHEON_ENVIRONMENT'] != 'live') 
   $conf['recaptcha_site_key'] = NULL;
 }
 ```
-___
-
-## [Registry Rebuild](https://www.drupal.org/project/registry_rebuild)
-
-This is built into the platform. See [Drupal Drush Command-Line Utility](/drush#registry-rebuild) for details on how to use Registry Rebuild on Pantheon.
 ___
 
 ## [S3 File System](https://www.drupal.org/project/s3fs)
