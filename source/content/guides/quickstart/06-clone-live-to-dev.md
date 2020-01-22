@@ -1,7 +1,7 @@
 ---
 title: Quick Start
 subtitle: Clone Live to Dev
-description: In six two of our Quick Start guide, lern how to clone your content from Live to Dev.
+description: In six two of our Quick Start guide, learn how to clone your content from Live to Dev.
 quickstart: true
 anchorid: clone-live-to-dev
 generator: pagination
