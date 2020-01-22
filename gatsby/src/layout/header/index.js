@@ -158,12 +158,13 @@ const Header = ({ data }) => (
                 action="/docs/search"
                 acceptCharset="UTF-8"
                 encType="application/x-www-form-urlencoded"
-                title="Search Pantheon Documentation"
+                title="Search Pantheon Documentation form"
               >
                 <input
                   type="search"
                   className="addsearch"
                   placeholder="Search Pantheon Documentation"
+                  aria-label="Search through documentation"
                 />
                 <AddSearch />
               </form>
