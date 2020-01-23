@@ -199,6 +199,7 @@ const Footer = ({ data }) => {
                               title="Follow Pantheon on Facebook"
                             >
                               <i className="fa fa-facebook" aria-label="Facebook" role="img" focusable="false"/>
+                              <span class="sr-only">Facebook</span>
                             </a>
                           </li>
                           <li>
@@ -208,6 +209,7 @@ const Footer = ({ data }) => {
                               title="Pantheon on Twitter"
                             >
                               <i className="fa fa-twitter" aria-label="Twitter" role="img" focusable="false" />
+                              <span class="sr-only">Twitter</span>
                             </a>
                           </li>
                           <li>
@@ -217,6 +219,7 @@ const Footer = ({ data }) => {
                               title="Pantheon on LinkedIn"
                             >
                               <i className="fa fa-linkedin" aria-label="LinkedIn" role="img" focusable="false" />
+                              <span class="sr-only">LinkedIn</span>
                             </a>
                           </li>
                           <li>
@@ -225,7 +228,8 @@ const Footer = ({ data }) => {
                               href="https://www.youtube.com/user/GetPantheon"
                               title="Pantheon on YouTube"
                             >
-                              <i className="fa fa-youtube-play" />
+                              <i className="fa fa-youtube-play"  aria-label="YouTube" role="img" focusable="false" />
+                              <span class="sr-only">YouTube</span>
                             </a>
                           </li>
                           <li className="blog-link-li">
