@@ -103,7 +103,7 @@ div.manual-guide-toc.active-trail li > a:hover {
   padding: 10px 10px 10px 50px !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 994px) {
   div.col-md-3.manual-guide-toc {
     width: 100% !important;
     position: relative !important;

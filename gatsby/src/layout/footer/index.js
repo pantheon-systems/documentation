@@ -196,30 +196,34 @@ const Footer = ({ data }) => {
                             <a
                               className="social-link"
                               href="https://www.facebook.com/getpantheon"
+                              title="Follow Pantheon on Facebook"
                             >
-                              <i className="fa fa-facebook" />
+                              <i className="fa fa-facebook" aria-label="Facebook" role="img" focusable="false"/>
                             </a>
                           </li>
                           <li>
                             <a
                               className="social-link"
                               href="https://twitter.com/getpantheon"
+                              title="Pantheon on Twitter"
                             >
-                              <i className="fa fa-twitter" />
+                              <i className="fa fa-twitter" aria-label="Twitter" role="img" focusable="false" />
                             </a>
                           </li>
                           <li>
                             <a
                               className="social-link"
                               href="https://www.linkedin.com/company/pantheon-systems-inc"
+                              title="Pantheon on LinkedIn"
                             >
-                              <i className="fa fa-linkedin" />
+                              <i className="fa fa-linkedin" aria-label="LinkedIn" role="img" focusable="false" />
                             </a>
                           </li>
                           <li>
                             <a
                               className="social-link"
                               href="https://www.youtube.com/user/GetPantheon"
+                              title="Pantheon on YouTube"
                             >
                               <i className="fa fa-youtube-play" />
                             </a>
@@ -228,6 +232,7 @@ const Footer = ({ data }) => {
                             <a
                               className="blog-link"
                               href="https://pantheon.io/blog"
+                              title="Pantheon Blog"
                             >
                               Pantheon Blog
                               <i className="fa fa-angle-right" />
