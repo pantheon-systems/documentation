@@ -19,9 +19,11 @@ If you have a [Composer-based site](/composer/), Terminus will use the version o
 You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management/). For example, you can run `terminus drush <site>.<env> -- cc drush` instead of `drush @pantheon.SITENAME.dev cc drush`.
 
 ## Drush Versions
+
 For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/drush-versions).
 
 ## Download Drush Aliases Locally
+
 Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use [Terminus](/terminus/) to download your Drush aliases.
 
 Authenticate Terminus with [machine tokens](/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
@@ -45,6 +47,7 @@ You must use Drush 8.3.0 or 9.6.0 or later to use Drush aliases directly. Earlie
 </Alert>
 
 ### Structure of Site Aliases
+
 The form Pantheon Drush aliases take depends on the version of Drush being used. Drush 8 aliases are all written to a single file, `$HOME/.drush/pantheon.aliases.drushrc.php`. A single alias record looks something like the example below:
 
 ```php:title=pantheon.aliases.drushrc.php
@@ -86,6 +89,7 @@ Note that these are both "wildcard" aliases. The same wildcard alias is used for
 Pantheon also uses "policy files" to validate aliases before they are used. The policy files are written by the `terminus aliases` command; the Drush 8 policy file is written to `$HOME/.drush/pantheon/drush8/pantheon_policy.drush.inc`, and the Drush 9 policy file is written to `$HOME/.drush/pantheon/Commands/PantheonAliasPolicyCommands.php`. These files should not be deleted.
 
 ### List Available Site Aliases
+
 Once the Pantheon Drush aliases have been copied, verify that the site aliases are available by listing every site alias known to Drush:
 
 ```bash{promptUser: user}
@@ -93,6 +97,7 @@ drush sa
 ```
 
 ## Execute a Drush Command on a Pantheon Site Environment
+
 Once you see the target site in the list of site aliases, you can execute a command on any remote site listed. The syntax is:  
 
 ```bash{promptUser: user}
@@ -109,7 +114,7 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 <Alert title="Note" type="info" >
 
-[Registry Rebuild ](https://www.drupal.org/project/registry_rebuild) is [deprecated](https://www.drupal.org/project/registry_rebuild/issues/1785672) for Drupal 8 and will only work on Drupal 7.
+[Registry Rebuild](https://www.drupal.org/project/registry_rebuild) is [deprecated](https://www.drupal.org/project/registry_rebuild/issues/1785672) for Drupal 8 and will only work on Drupal 7.
 
 </Alert>
 
@@ -236,18 +241,12 @@ drush @pantheon.SITENAME.ENV status
 
 To make your Drush 5 commands work on Pantheon aliases, change your directory to a context outside of a working local Drupal installation:
 
-```bash
+```bash{outputLines:2, 5, 6-31}
 pwd
 /Users/USERNAME/Sites/SITENAME
-
-
 cd ..
-
-
 pwd
 /Users/USERNAME/Sites/
-
-
 drush @pantheon.SITENAME.ENV status
  Drupal version : 7.26
  Site URI : ENV-SITENAME.pantheonsite.io
