@@ -16,7 +16,7 @@ searchboost: 100
 
 Terminus is available for Mac OS X and Linux.
 
-Some Windows users have installed Terminus using [Git BASH on Git for Windows](https://git-for-windows.github.io/), or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), but this is unsupported.
+Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then install Terminus in the Linux shell.
 
 Because some Terminus commands use SSH authentication, consider [generating and adding SSH keys](/ssh-keys) to your account before you continue.
 
@@ -29,10 +29,10 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 
 ## Install
 
-Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>\$HOME</code> and install there:
+Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a `terminus` directory in your `$HOME` and install there:
 
-```bash
-  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+```bash{promptUser: user}
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 ```
 
 See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
@@ -47,12 +47,12 @@ First, [create a Machine Token](https://dashboard.pantheon.io/login?destination=
 
 Once the token has been created, use it to authenticate Terminus by running the following command:
 
-```bash
-  terminus auth:login --machine-token=‹machine-token›
+```bash{promptUser: user}
+terminus auth:login --machine-token=‹machine-token›
 ```
 
-```bash
-  terminus auth:login --email=dev@example.com
+```bash{promptUser: user}
+terminus auth:login --email=dev@example.com
 ```
 
 ### SSH Authentication
@@ -82,9 +82,9 @@ curl: (23) Failed writing body (0 != 1928)
 
 You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` diretory in your `$HOME` and go there:
 
-```bash
-  cd $HOME/terminus
-  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+```bash{promptUser: user}
+cd $HOME/terminus
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 ```
 
 ### PHP Fatal error: Uncaught exception 'ReflectionException'
@@ -109,38 +109,25 @@ To resolve, save a copy of the [latest CA certificate](https://curl.haxx.se/docs
 
 ### Windows 10 Installation issues
 
-**Problem:** PHP is not installed.
+#### Prerequisites are not installed
 
-**Solution:** Install PHP. Consider using a package such as [XAMMP](https://www.apachefriends.org/index.html), which provides a simple installation process.
+The default Linux environment installed by the WSL may not have all of the requirements for Terminus installed. Using your distribution's package manager, install:
 
-**Problem:** Composer is not installed.
+- PHP (includeing `php-cli`, `php-curl`, and `php-xml`)
+- Curl (to download the installer)
 
-**Solution:** Install composer using the [.exe installer](https://getcomposer.org/doc/00-intro.md#installation-windows)
-
-**Problem:** `curl: command not found`
-
-Installation fails because curl cannot be found:
-
-```bash
-User1@DESKTOP-UBJ92JO  /usr/bin
-$ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-bash: curl: command not found
-```
-
-**Solution:** [Install curl](https://stackoverflow.com/questions/9507353/how-do-i-install-set-up-and-use-curl-on-windows)
-
-**Problem:** The Terminus install was successful, but the path was not set.
+#### The Terminus install was successful, but the path was not set
 
 Terminus was installed, but the installer was not able to write to your bin dir.
 
 **Solution:** To enable the `terminus` command, add this alias to your [`.bash_profile` file](https://askubuntu.com/questions/969632/where-is-bash-profile-located-in-windows-subsystem-for-linux):
 
-```bash
-alias terminus=terminus=/c/Users/User1/vendor/bin/terminus
+```bash{promptUser:user}
+alias terminus='terminus=/c/Users/User1/vendor/bin/terminus'
 ```
 
 Or you can enable it by adding the directory the executable file is in to your path:
 
-```bash
+```bash:title=.bashrc
 PATH="C:\Users\User1\vendor\bin:$PATH"
 ```
