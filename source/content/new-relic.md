@@ -146,7 +146,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 ## Troubleshooting
 
 ### Removing Multidev Environments in New Relic
-After deleting a Multidev environment from your site, you'll need to manually [remove them in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).
+After deleting a Multidev environment from your site, you'll need to manually [remove it in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).
 
 1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.
 1. From the New Relic menu bar, select **APM** > **Applications**.
@@ -203,7 +203,7 @@ App server response time measures how the page was built on Pantheon, including 
 
 ### Can I use my existing New Relic license with my Pantheon site?
 
-New Relic Pro is automatically provisioned for your site. Unfortunately, you cannot use your existing license.
+Yes! If you have a [Supported Site Plan](#supported-site-plans), you can bring your own New Relic Pro license. [Activate New Relic](#activate-new-relic-apm-pro) for your site, then [contact support](/support/) with the Site ID, your New Relic [License Key](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key#finding), and New Relic [Account ID](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/account-id#finding).
 
 ### Why are servers listed in New Relic with no data?
 
