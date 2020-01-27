@@ -203,7 +203,11 @@ App server response time measures how the page was built on Pantheon, including 
 
 ### Can I use my existing New Relic license with my Pantheon site?
 
-Yes! If you have a [Supported Site Plan](#supported-site-plans), you can bring your own New Relic Pro license. [Activate New Relic](#activate-new-relic-apm-pro) for your site, then [contact support](/support/) with the Site ID, your New Relic [License Key](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key#finding), and New Relic [Account ID](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/account-id#finding).
+Yes! If you have a [Supported Site Plan](#supported-site-plans), you can bring your own New Relic Pro license. [Activate New Relic](#activate-new-relic-apm-pro) for your site, then [contact support](/support/). Be sure to provide:
+
+* The Site ID
+* Your New Relic [License Key](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/license-key#finding)
+* Your New Relic [Account ID](https://docs.newrelic.com/docs/accounts/install-new-relic/account-setup/account-id#finding)
 
 ### Why are servers listed in New Relic with no data?
 
