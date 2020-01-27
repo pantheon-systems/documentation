@@ -1,9 +1,8 @@
 .command-line-prompt {
-	border-right: 0px solid #999;
 	display: block;
 	float: left;
 	font-size: 100%;
-	letter-spacing: -1px;
+	letter-spacing: -10px;
 	margin-right: 0em;
 	pointer-events: none;
 
@@ -14,19 +13,27 @@
 }
 
 .command-line-prompt > span:before {
-    color: #999;
-    content: "";
-    display: block;
-    padding-right: 0.8em;
-  }
-  
+	color: #999;
+	content: ' ';
+	display: block;
+	padding-right: 0.8em;
+}
+
 .command-line-prompt > span[data-user]:before {
 	content: "$";
+}
+
+.command-line-prompt > span[data-user="root"]:before {
+	content: "#";
 }
 
 .command-line-prompt > span[data-user="winshell"]::before {
   color: #efcf1b;
   content: "PC C:\\Users\\user>";
+}
+
+.command-line-prompt > span[data-prompt]:before {
+	content: attr(data-prompt);
 }
 
 .highlight {
