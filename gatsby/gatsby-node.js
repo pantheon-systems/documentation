@@ -57,10 +57,16 @@ const calculateNext = (guide) => {
 }
 
 const digest = str =>
-  crypto
-    .createHash("md5")
-    .update(str)
-    .digest("hex")
+  (str != null) ?
+    crypto
+      .createHash("md5")
+      .update(str)
+      .digest("hex")
+  :
+    crypto
+      .createHash("md5")
+      .update(" ")
+      .digest("hex")
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -387,7 +393,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       internal: {
         type: `${node.internal.type}MarkdownBody`,
         mediaType: "text/markdown",
-        content: node.body,
+        content: node.body || "",
         contentDigest: digest(node.body),
       },
     }
