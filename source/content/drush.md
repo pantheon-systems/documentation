@@ -424,3 +424,8 @@ This indicates that the vendor directory contains Drush binaries that should be 
  __ROOT__/../drush/drushrc.php
  __ROOT__/sites/default/drushrc.php
  ```
+
+
+## Changelog
+
+<DrushChangelog />

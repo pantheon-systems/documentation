@@ -37,6 +37,9 @@ jobs:
           name: Update Localdev changelog
           command: bash .circleci/scripts/update-localdev-changelog.sh
       - run:
+          name: Update Drush changelog
+          command: bash .circleci/scripts/update-drush-changelog.sh
+      - run:
           name: Gatsby Build
           command: |
             cd gatsby
