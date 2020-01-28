@@ -5,13 +5,14 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const DrushChangelog = ({ data }) => (
   <>
-    {data.allDrushChangelogJson.edges.map((drush, i) => {
+    {data.allDrushJson.edges.map((drush, i) => {
+      Object.keys(drush).forEach((key) => (data[key] == null) && delete data[key]);
       return (
         <div key={i}>
           <h3 className="toc-ignore">{drush.node.name}</h3>
           <MDXProvider>
             <MDXRenderer>
-                {drush.node.fields.markdownBody.childMdx.body}
+                {drush.node.fields.markdownBody.childMdx.body.replace(/h1/g, 'h4')}
             </MDXRenderer>
           </MDXProvider>
           <hr />
@@ -25,9 +26,9 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        allDrushChangelogJson(
-            sort: {fields: id, order: DESC}
-            ) {
+        allDrushJson(
+          filter: {body: {ne: null}}
+        ) {
             edges {
                 node {
                     id

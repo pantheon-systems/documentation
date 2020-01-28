@@ -463,7 +463,10 @@ This indicates that the vendor directory contains Drush binaries that should be 
  __ROOT__/sites/default/drushrc.php
  ```
 
-
 ## Changelog
 
+<Accordion title="Drush Changelog" id="drush-changelog" icon="newspaper">
+
 <DrushChangelog />
+
+</Accordion>
