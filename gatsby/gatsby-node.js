@@ -370,8 +370,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
   }
 
-  // Releases Content
-  if (node.internal.type === `ReleasesJson`) {
+  // Releases and Changelog Content
+  if (node.internal.type === `ReleasesJson` || node.internal.type === `DrushChangelogJson`) {
     // Add original_id as int to filter using GraphQL
     createNodeField({
       name: `original_id`,
@@ -379,7 +379,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: parseInt(node.id),
     })
 
-    // Add text/markdown node children to Release node
+    // Add text/markdown node children to Release and Changelog nodes
     const textNode = {
       id: `${node.id}-MarkdownBody`,
       parent: node.id,
