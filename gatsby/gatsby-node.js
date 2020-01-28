@@ -371,7 +371,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 
   // Releases and Changelog Content
-  if (node.internal.type === `ReleasesJson` || node.internal.type === `DrushChangelogJson`) {
+  if (node.internal.type === `ReleasesJson` || node.internal.type === `DrushJson`) {
     // Add original_id as int to filter using GraphQL
     createNodeField({
       name: `original_id`,
