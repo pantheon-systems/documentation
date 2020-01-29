@@ -86,7 +86,8 @@ Add `drush_version` to the top level of the `pantheon.yml` file to configure the
 ```yaml
 drush_version: 8
 ```
-For more information, see [Managing Drush Versions on Pantheon](/drush-versions/).
+
+For more information and compatibility requirements, see [Managing Drush Versions on Pantheon](/drush-versions/).
 
 ### Filemount Path
 Pantheon provides a [cloud-based filesystem](/files/) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `/sites/default/files` (Drupal) or `/wp-content/uploads` (WordPress), but you can change the location with the `filemount` variable:
