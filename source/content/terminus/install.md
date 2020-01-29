@@ -84,7 +84,7 @@ You should relocate your installation to a directory where you have permission t
 
 ```bash
   cd $HOME/terminus
-  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 ```
 
 ### PHP Fatal error: Uncaught exception 'ReflectionException'
