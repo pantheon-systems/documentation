@@ -10,6 +10,6 @@ curl https://api.github.com/repos/drush-ops/drush/releases -o ./source/data/drus
 
 echo "Convert local Issue and Pull references to Markdown links"
 sed -i -E "s/(#)([0-9][0-9][0-9][0-9])/\[#\2\]\(https:\/\/github.com\/drush-ops\/drush\/issues\/\2)/g" ./source/data/drush.json
-sleep 1
 echo "Convert local commit refs to links"
-sed -i -E "s/(body\"\:.*)([a-fA-F0-9]{7})\ /\1\[\2\]\(https:\/\/github.com\/drush-ops\/drush\/commit\/\2\)/g" ./source/data/drush.json
+sed -i -E "s/\ ([a-fA-F0-9]{7})([^0-9,])/\ \[\1\]\(https:\/\/github.com\/drush-ops\/drush\/commit\/\1\)\2/g" ./source/data/drush.json
+
