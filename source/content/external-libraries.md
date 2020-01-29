@@ -11,43 +11,55 @@ There are some scenarios when an external library is required. Pantheon has inst
 
 [WebKit HTML](https://wkhtmltopdf.org/) allows you to create a snapshot or capture the content of a web page easily in a PDF.
 
-WKHTMLtoPDF can be found on your application container at `/srv/bin/wkhtmltopdf`.
+WKHTMLtoPDF can be found on your application container at `/srv/bin/wkhtmltopdf`. To use it, install or create a compatible plugin or module:
 
 <TabList>
 
-<Tab title="WordPress" id="wp-example" active={true}>
+<Tab title="Drupal 8" id="d8-example" active={true}>
 
-Download and enable the [Save Page to PDF plugin](https://wordpress.org/plugins/save-page-to-pdf/).
+Download and enable the [wkhtmltopdf module](https://www.drupal.org/project/wkhtmltopdf) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
 
-</Tab>
-
-<Tab title="Drupal 8" id="d8-example">
-
-Download and enable the [wkhtmltopdf module](https://www.drupal.org/project/wkhtmltopdf).
-
-```bash
-composer require drupal/wkhtmltopdf
-```
-
-</Tab>
-
-<Tab title="Drupal 7" id="d7-example">
-
-Download and enable the [Print module](https://www.drupal.org/project/print) via Drush:
-
-```bash
-drush @pantheon.{sitename}.{env} en print --y
+```bash{promptUser: user}
+terminus drush <site>.<env> -- en wkhtmltopdf --y
 ```
 
 Create a symlink to the hosted library and your site's libraries directory [via Git](/git/#clone-your-site-codebase):
 
-```bash
+```bash{promptUser: user}
 mkdir -p sites/all/libraries/wkhtmltopdf
 ln -s /srv/bin/wkhtmltopdf sites/all/libraries/wkhtmltopdf/wkhtmltopdf
 git add .
 git commit -m "Added WKHTMLtoPDF library"
 git push
 ```
+
+</Tab>
+
+<Tab title="Drupal 7" id="d7-example">
+
+Download and enable the [Print module](https://www.drupal.org/project/print) from the Drupal Dashboard, or using Drush via [Terminus](/terminus/):
+
+```bash{promptUser: user}
+terminus drush <site>.<env> -- en print --y
+```
+
+Create a symlink to the hosted library and your site's libraries directory [via Git](/git/#clone-your-site-codebase):
+
+```bash{promptUser: user}
+mkdir -p sites/all/libraries/wkhtmltopdf
+ln -s /srv/bin/wkhtmltopdf sites/all/libraries/wkhtmltopdf/wkhtmltopdf
+git add .
+git commit -m "Added WKHTMLtoPDF library"
+git push
+```
+
+</Tab>
+
+<Tab title="WordPress" id="wp-example">
+
+Currently, there are no known plugins that implement WKHTMLtoPDF directly. However, you can use the converter by creating a custom plugin or by placing the code within your theme's `functions.php` file.
+
+If your WordPress site uses Composer, consider the [PHP WkHtmlToPdf](https://github.com/mikehaertl/phpwkhtmltopdf) PHP wrapper.
 
 </Tab>
 
