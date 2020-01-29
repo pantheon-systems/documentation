@@ -19,32 +19,34 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 ## Create a New PhpStorm Project
 
 1. Open PhpStorm and create a new project from existing files.
-2. Choose the [project directory](https://www.jetbrains.com/help/phpstorm/create-new-project-choose-project-directory.html).
-3. Select the parent folder for all the project sources and click the icon, or choose **Project Root** on the menu.
-4. Click **Finish**.
+2. From the Create New Project: Choose Your Scenario window select "Source files are in a local directory, no Web server is yet configured" and click **next**
+3. Choose the [project directory](https://www.jetbrains.com/help/phpstorm/create-new-project-choose-project-directory.html).
+4. Select the parent folder for all the project sources and click the **Project Root** icon, or choose **Project Root** on the menu.
+5. Click **Finish**.
 
 ## Configure a PhpStorm Project
 
-1. Ensure that PhpStorm uses [Drupal settings](https://www.jetbrains.com/help/phpstorm/drupal.html) by going to Preferences > Drupal.
+1. Ensure that PhpStorm uses [Drupal settings](https://www.jetbrains.com/help/phpstorm/drupal.html) by going to Preferences > Languages & Frameworks > PHP.
+2. Expand the Drupal dropdown.
 2. Enable Drupal integration and select the Drupal installation path.
 4. Set up PHP/Include Paths.
 5. Choose the Drupal major version.
-6. Configure the correct version of PHP by going to Preferences > [PHP](https://www.jetbrains.com/help/phpstorm/php.html), and choose PHP Language Level 5.3.
+6. Configure the correct version of PHP by going to Preferences  > Languages & Frameworks > [PHP](https://www.jetbrains.com/help/phpstorm/php.html), and choose PHP Language Level 5.3.
 
 #### Drush Support
   We recommend [enabling Drush support](https://confluence.jetbrains.com/display/PhpStorm/Drupal+Development+using+PhpStorm#DrupalDevelopmentusingPhpStorm-DrupalCommandLineToolDrushIntegration).
 
-1. From Preferences > [Command Line Tool Support](https://www.jetbrains.com/help/phpstorm/command-line-tool-support.html), click **Plus**.
+1. From Preferences > Tools > [Command Line Tool Support](https://www.jetbrains.com/help/phpstorm/command-line-tool-support.html), click **Plus**.
 2. Choose Tool > Drush, and specify the path.
 
 ## Configure On-Server Development
 
 1. Put your [Dev environment into SFTP mode](/sftp/), and click **Connection Info** to see the connection settings.
-2. Within PhpStorm, go to Tools > Deployment > Configuration.
+2. Within PhpStorm, go to Build, Execution, Deployment > Deployment.
 3. Click **plus** for the [add server dialog](https://www.jetbrains.com/help/phpstorm/add-server-dialog.html).
-4. Enter the Pantheon site name followed by a dash and the environment.<br />
+4. Choose SFTP
+5. Enter the Pantheon site name followed by a dash and the environment.<br />
 **Example**: Yoursite-dev.
-5. Type SFTP and click **OK**.
 
 #### Connection Tab
   [Configure the server](https://www.jetbrains.com/help/phpstorm/deployment-connection-tab.html) connection tab in the following order:
