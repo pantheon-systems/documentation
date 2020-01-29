@@ -54,12 +54,14 @@ git push
 </TabList>
 
 ## PhantomJS
+
 In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
 
 - PhantomJS (1.7.0) is located at `/srv/bin/phantomjs` on your application container.
 - PhantomJS (2.1.1) is located at `/srv/bin/phantomjs-2.1.1` on your application container.
 
 ### Drupal PhantomJS Configuration
+
 Once you have downloaded and enabled the PhantomJS Capture module, you'll need to configure the image toolkit settings. Go to the image toolkit settings page at: `/admin/config/user-interface/phantomjs_capture` to specify the library path.
 
 ## Apache Tika
@@ -74,11 +76,11 @@ Once you have downloaded and installed the ApacheSolr Attachments module ([apach
 
 1. Go to the Tika settings page at: `/admin/config/search/apachesolr/attachments` and enter the following fields:
 
-   * **Extract Using:** Tika (local java application)
-   * **Tika Directory Path:** `/srv/bin`
-   * **Tika jar file:** `tika-app-1.18.jar`
+    - **Extract Using:** Tika (local java application)
+    - **Tika Directory Path:** `/srv/bin`
+    - **Tika jar file:** `tika-app-1.18.jar`
 
-2. Verify that your site is able to extract text from documents. Click **Test your Tika Attachments** under the Actions section.
+1. Verify that your site is able to extract text from documents. Click **Test your Tika Attachments** under the Actions section.
 
 If everything is working correctly, you will see the success message "Text can be successfully extracted".
 
@@ -88,22 +90,23 @@ Download and install the Search API Attachments module ([search_api_attachments]
 
 1. Go to the Search API Attachments settings page at: `/admin/config/search/search_api_attachments` and enter the following fields:
 
-   * **Extraction method:** Tika Extractor
-   * **Path to java executable:** `java`
-   * **Path to Tika .jar file:** `/srv/bin/tika-app-1.18.jar`
+   - **Extraction method:** Tika Extractor
+   - **Path to java executable:** `java`
+   - **Path to Tika .jar file:** `/srv/bin/tika-app-1.18.jar`
 
-2. Verify that your site is able to extract text from documents. Click **Submit and test extraction**.
+1. Verify that your site is able to extract text from documents. Click **Submit and test extraction**.
 
 If everything is working correctly, you will see the success message "Extracted data: Congratulations! The extraction seems working! Yay!".
 
 ### WordPress Tika Configuration
+
 There are no known plugins in the WordPress.org repository that will enable the use of Tika.
 
 ### Older Versions
 
 Pantheon also supplies the following older version of Tika:
 
- * `/srv/bin/tika-app-1.1.jar`
+- `/srv/bin/tika-app-1.1.jar`
 
 Sites that are using an old version of Tika should be upgraded to the supported path as soon as possible.
 
@@ -126,7 +129,9 @@ ImageAPI Optimize's [support for 3rd party services](https://www.drupal.org/node
 ## Troubleshooting and FAQs
 
 ### How do I request the addition of a new library or a newer version of an existing library?
-Please [contact support](/support) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
+
+Please [contact support](/support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
 
 ### Will you setup and configure the module/plugin for me?
+
 No. This is not within our [scope of support](/support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.
