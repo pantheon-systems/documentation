@@ -186,7 +186,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4890093,
-        "download_count": 4040,
+        "download_count": 4297,
         "created_at": "2019-11-26T23:01:59Z",
         "updated_at": "2019-11-26T23:01:59Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.2/drush.phar"
@@ -465,7 +465,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4797229,
-        "download_count": 2738,
+        "download_count": 2795,
         "created_at": "2019-10-24T23:40:53Z",
         "updated_at": "2019-10-24T23:40:54Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.1/drush.phar"
@@ -744,7 +744,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4789623,
-        "download_count": 24636,
+        "download_count": 25129,
         "created_at": "2019-07-09T22:16:46Z",
         "updated_at": "2019-07-09T22:16:46Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.3.0/drush.phar"
@@ -941,7 +941,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4785800,
-        "download_count": 149633,
+        "download_count": 151578,
         "created_at": "2019-04-03T04:45:20Z",
         "updated_at": "2019-04-03T04:45:20Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.2.3/drush.phar"
@@ -1015,7 +1015,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4785800,
-        "download_count": 2606,
+        "download_count": 2609,
         "created_at": "2019-03-26T16:29:33Z",
         "updated_at": "2019-03-26T16:29:33Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.2.2/drush.phar"
@@ -1171,7 +1171,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4784997,
-        "download_count": 3297,
+        "download_count": 3311,
         "created_at": "2019-03-14T04:20:03Z",
         "updated_at": "2019-03-14T04:20:04Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.2.1/drush.phar"
@@ -1327,7 +1327,7 @@
         "content_type": "application/octet-stream",
         "state": "uploaded",
         "size": 4783483,
-        "download_count": 1466,
+        "download_count": 1473,
         "created_at": "2019-03-11T05:23:06Z",
         "updated_at": "2019-03-11T05:23:06Z",
         "browser_download_url": "https://github.com/drush-ops/drush/releases/download/8.2.0/drush.phar"
