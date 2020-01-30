@@ -4,11 +4,12 @@ description: Learn about Pantheon's default Drush version and how to implement s
 tags: [devdrush, services, pantheonyml]
 categories: [drupal,workflow,platform,develop]
 ---
-By default, Pantheon runs Drush 8 on newly created Drupal sites. Drush 8 is compatible with Drupal 6, 7, and 8.
 
-The Drush version is set when the site is created. Sites created before Nov 4, 2015 (and Drupal 8 sites created before Sep 3, 2015) use an older version of Drush that is incompatible with later versions of PHP. You can [check your current Drush version via Terminus](#verify-current-drush-version). Updating Drush can be accomplished by [a simple addition to your pantheon.yml file](#configure-drush-version) below.
+The Drush version is set to the default Pantheon Platform version of Drush at the time the site was created. By default, Pantheon runs Drush 8 on newly created Drupal sites. You can [check your current Drush version via Terminus](#verify-current-drush-version).
 
-Drush 10 is available for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or newer, [Composer](/composer/), and PHP 7.1 or newer.
+Drush 8 is compatible with Drupal 6, 7, and 8.
+
+Drush 10 is available with the [simple addition to your pantheon.yml file](#configure-drush-version) shown below or for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or newer, [Composer](/composer/), and PHP 7.1 or newer.
 
 <Alert title="Note" type="info">
 
