@@ -1,7 +1,7 @@
 ---
 title: Frequently Asked Questions
 description: Frequently asked questions about Drupal or WordPress sites on Pantheon.
-tags: [services]
+tags: [Drupal, WordPress, FAQ]
 categories: [platform]
 ---
 ## Getting Started
@@ -63,7 +63,7 @@ Yes. Pantheon sites run on a highly available clustered infrastructure.
 
 Yes. While your Pantheon site will only run from code in your Pantheon Git repository, this can be mirrored from an external repository by setting up a [continuous integration workflow](/guides/build-tools/), or by syncing your code to [multiple remotes](/guides/collaborative-development).
 
-[Partner Agencies](https://pantheon.io/plans/partner-program?docs), [Enterprise](https://pantheon.io/plans/elite" />, and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/custom-upstream/).
+[Partner Agencies](https://pantheon.io/plans/partner-program?docs), [Enterprise](https://pantheon.io/plans/elite?docs), and [EDU](https://pantheon.io/edu?docs) accounts can also set up a [custom upstream](/custom-upstream/).
 
 ### Does Pantheon support Drupal Multisite?
 
@@ -80,7 +80,7 @@ Yes, Pantheon supports the following use cases of [WordPress Site Networks](/gui
 
 ### Does Pantheon support Drush?
 
-Yes. Pantheon comes with Drush pre-integrated with `@alias` files. For more details, see [Drupal Drush Command-Line Utility](/drush).
+Yes. Pantheon comes with Drush pre-integrated with `@alias` files. For more details, see [Drupal Drush Command-Line Utility](/drush). You can invoke Drush commands on Pantheon sites using [Terminus](/terminus/), the Pantheon CLI.
 
 ### Does Pantheon support WP-CLI?
 
