@@ -3,6 +3,7 @@ title: Managing Drush Versions on Pantheon
 description: Learn about Pantheon's default Drush version and how to implement site-local usage.
 tags: [devdrush, services, pantheonyml]
 categories: [drupal,workflow,platform,develop]
+reviewed: "2020-01-31"
 ---
 
 By default, Pantheon runs Drush 8 on newly created Drupal sites.
