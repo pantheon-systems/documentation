@@ -122,3 +122,9 @@ export CIRCLE_TOKEN=yourCircleCIToken
 ```
 
 If you need to replace a token, navigate to your [project settings page in CircleCI](https://circleci.com/docs/2.0/env-vars/#adding-environment-variables-in-the-app).
+
+<Accordion title="Build Tools Changelog" id="changelog" icon="newspaper">
+
+<BuildToolsChangelog />
+
+</Accordion>
