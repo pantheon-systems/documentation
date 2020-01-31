@@ -34,9 +34,9 @@ This module provides general methods your site needs to access aspects of the in
 The code for the API module is available within our upstream repositories, in the `modules/pantheon` directory. The functionality of this module is provided in three parts: Apache Solr, Pantheon Platform API, and Login.
 
 ### [Pantheon Platform API](https://github.com/pantheon-systems/drops-7/blob/master/modules/pantheon/pantheon_api/pantheon_api.info)
-This module provides general methods your site needs to access aspects of the internal Pantheon API. This is necessary for clearing caches and other common workflows on the platform.
+This module provides general methods your site needs to access aspects of the internal Pantheon API. This is necessary for clearing caches and other common workflows on the platform. Currently, there is no API module necessary for Drupal 8.
 
-Note: Currently, there is no API module available for Drupal 8.
+Note: It is not necessary to use the API module directly. Use [Terminus](/terminus/) to interact with your Pantheon site.
 
 ### [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
 This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Apache Solr on Pantheon](/solr/).
