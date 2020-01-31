@@ -377,7 +377,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 
   // Releases and Changelog Content
-  if (node.internal.type === `ReleasesJson` || node.internal.type === `DrushJson`) {
+  var nodeString = node.internal.type.toString()
+  var isReleaseJson = nodeString.includes("ReleasesJson")
+  if (isReleaseJson && !nodeString.includes("MarkdownBody")) {
+    //console.log("Creating markdownBody for ", node.internal.type.toString()) // For debugging
     // Add original_id as int to filter using GraphQL
     createNodeField({
       name: `original_id`,

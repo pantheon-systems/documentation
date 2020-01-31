@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 
 const DrushChangelog = ({ data }) => (
   <>
-    {data.allDrushJson.edges.map((drush, i) => {
+    {data.allDrushReleasesJson.edges.map((drush, i) => {
       Object.keys(drush).forEach((key) => (data[key] == null) && delete data[key]);
       return (
         <div key={i}>
@@ -26,7 +26,7 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        allDrushJson(
+        allDrushReleasesJson(
           filter: {body: {ne: null}}
         ) {
             edges {
