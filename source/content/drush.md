@@ -151,6 +151,29 @@ Also, the interactive PHP shell works as well:
 terminus drush <site>.<env> -- core-cli
 ```
 
+## Filter Drush Responses
+
+Use the `--filter` command to extract relevant information from `terminus drush` responses.
+
+For example, to get the line containing information about your installed version of PHP from the Drupal status report page:
+
+```bash{outputLines:2-7}
+terminus drush mysite.env -- core:requirements --filter='title=php'
++-------+----------+--------------------------------------------------+
+| Title | Severity | Summary                                          |
++-------+----------+--------------------------------------------------+
+| PHP   | Info     | 7.3.14 (<a href="/admin/reports/status/php">more |
+|       |          | information</a>)                                 |
++-------+----------+--------------------------------------------------+
+```
+
+To extract just the `Summary` field without any of the table formatting, add `--field=Summary` to the end of the command, and the result would be a simple string:
+
+```bash{outputLines:2}
+terminus drush <site>.<env> -- core-cli
+7.3.14 (<a href="/admin/reports/status/php">more information</a>)
+```
+
 ## Drush Commands That Alter Site Code
 
 Commands that alter site code, such as pm-download (dl), will only work on a Dev environment that has been set to [SFTP mode](/sftp/) from the Pantheon Dashboard.
@@ -162,7 +185,7 @@ While we have the full spectrum of Drush core already available for your use, yo
 1. Put the site in Git mode.
 1. Clone locally.
 1. Create a `drush` folder in the Drupal root.
-1. Add the “sar” Drush command to the Drush folder.
+1. Add the `sar` Drush command to the Drush folder.
 1. Commit drush/sar.
 1. Push your code up to Pantheon.
 1. Clear your Drush cache on each environment. Example:
@@ -174,7 +197,7 @@ While we have the full spectrum of Drush core already available for your use, yo
 For Drupal 9, place Drush commands in `drush/Commands`.
 
 ## Drush Alias Strict Control
-Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory.  You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
+Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory. You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
 If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download from the Dashboard. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option. To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.inc` to change the URI for your specific Pantheon site:
 
