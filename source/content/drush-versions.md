@@ -71,6 +71,10 @@ When running Drush locally, we highly recommend running Drush version 8.3.0 or h
 
 See our guide on [Upgrading PHP Versions](/php-versions/).
 
+#### Symfony, Drush, and Drupal
+
+
+
 ## Troubleshooting
 
 Sometimes even after updating the Drush version in `pantheon.yml`, the correct version of Drush is not called.
