@@ -16,7 +16,7 @@ const Releases = ({ data }) => (
     {data.allReleasesJson.edges.map((release, i) => {
       return (
         <div key={i}>
-          <h3 className="toc-ignore">{release.node.tag_name}</h3>
+          <h3 className="toc-ignore" id={release.node.tag_name}>{release.node.tag_name}</h3>
           <MDXProvider components={shortcodes}>
             <MDXRenderer>
               {release.node.fields.markdownBody.childMdx.body}
