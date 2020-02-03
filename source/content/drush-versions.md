@@ -8,8 +8,6 @@ reviewed: "2020-01-31"
 
 By default, Pantheon runs Drush 8 on newly created Drupal sites.
 
-The Drush version is set to the default Pantheon Platform version of Drush at the time the site is created.
-
 ## Terminus Drush and Local Drush
 [Terminus](/terminus/) makes remote Drush calls on sites without using a local installation, eliminating compatibility issues between local and remote installs. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management/).
 
