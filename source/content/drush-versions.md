@@ -53,7 +53,7 @@ Drush 10 is available with the [simple addition to your pantheon.yml file](#conf
 
 <Alert title="Note" type="info">
 
-When running Drush locally, we highly recommend running Drush version 8.3.0 or higher.
+When running Drush locally, we highly recommend running Drush version 8.3.2 or higher.
 
 </Alert>
 
@@ -81,11 +81,11 @@ The Pantheon platform always prefers the site-local Drush or other local setting
 
 ### Site-local Drush Usage
 
-Do not select any major version of Drush lower than 8.3.2 or 9.7.1.
-
 If you need to specify a minor version or a version not available on the platform, you can add a site-local installation of Drush to your repository.
 
 In general, you will usually be better off not including a site-local Drush in your Pantheon site, as using the Pantheon-provided Drush ensures that you are using the recommended and most-tested version for the Pantheon platform. Occasionally, using a site-local Drush may be necessary in order to avoid conflicts with your site's dependencies.
+
+Do not select any major version of Drush lower than `8.3.2`, `9.7.1`, or `10.2.0`.
 
 For more information, see [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush).
 
