@@ -78,7 +78,7 @@ For a fast, smooth relaunch, consider having two browser tabs open, one with the
 
   Do **not** update DNS yet. The Site Dashboard instructs you to configure DNS after connecting the domain, however for this relaunch procedure you should not change record values until instructed in step 5 below.
 
-  Until you update the DNS records (and they propogate), traffic will still be directed to the old site.
+  Once you make this change, traffic will be routed to the new site. However, if you do not complete the rest of the steps as outlined here, you may run into cases where the new site has an invalid HTTPS certificate.
 
   </Alert>
 
