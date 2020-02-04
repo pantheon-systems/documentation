@@ -10,7 +10,7 @@ contributors: [ataylorme, dwayne, davidneedham]
 
 In this guide, we’re going to run through the bare necessities to use [Composer](https://getcomposer.org/) for managing a Drupal 8 site on your local machine and pushing to Pantheon.
 
-Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/core-updates/).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
+Using a Composer managed site **removes** the ability to [apply Drupal core updates via the site dashboard](/core-updates).  This is for advanced users who are comfortable taking complete responsibility for the management of site updates with Composer.
 
 <Alert title="Note" type="info">
 
@@ -50,7 +50,7 @@ Instead of setting up `composer.json` manually, it is easier to start with the [
   git clone git@github.com:pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
   ```
 
-   This command assumes you have [SSH keys](/ssh-keys/) added to your GitHub account. If you don't, you can clone the repository over HTTPS:
+   This command assumes you have [SSH keys](/ssh-keys) added to your GitHub account. If you don't, you can clone the repository over HTTPS:
 
   ```bash{promptUser: user}
   git clone https://github.com/pantheon-systems/example-drops-8-composer.git $PANTHEON_SITE_NAME
@@ -168,7 +168,7 @@ Normally the next step would go through the standard Drupal installation. But si
    git push --force
    ```
 
-   **Note:** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our Build Tools guide](/guides/build-tools/) for documentation on the more advanced automated workflow with a build step.
+   **Note:** the `vendor` directory is being committed to Pantheon. This is because Pantheon needs the full site artifact. If you prefer to ignore the `vendor` directory then take a look at [our Build Tools guide](/guides/build-tools) for documentation on the more advanced automated workflow with a build step.
 
 ### Installing Drupal
 
@@ -196,7 +196,7 @@ Now that the code for Drupal core exists on our Pantheon site, we need to actual
 
 <Alert title="Note" type="info">
 
-To maintain best practice, some of the steps in this section require access to the [Multidev](/multidev/) feature. Those steps can be skipped, but it isn't recommended.
+To maintain best practice, some of the steps in this section require access to the [Multidev](/multidev) feature. Those steps can be skipped, but it isn't recommended.
 
 </Alert>
 
@@ -256,7 +256,7 @@ To maintain best practice, some of the steps in this section require access to t
 
 #### Congratulations! You now have a Drupal 8 site on Pantheon that is managed by Composer.
 
-P.S. the [Pantheon Community](/pantheon-community/) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
+P.S. the [Pantheon Community](/pantheon-community) Slack instance _#composer-workflow_ channel or [Pantheon Office Hours](https://pantheon.io/developers/office-hours) are great places to ask questions and chat about Composer.
 
 ## See Also
 - [Composer Fundamentals and WebOps Workflows](/composer)

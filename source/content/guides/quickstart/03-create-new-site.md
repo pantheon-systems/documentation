@@ -42,7 +42,7 @@ In this lesson, we’re going to create and configure a new WordPress or Drupal 
 
    <Alert title="Note" type="info">
 
-   Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/custom-upstream/), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
+   Eligible Organizations can add their own sites to this list! We call these [Custom Upstreams](/custom-upstream), and they function as common start states. Organizations use them to spin up multiple sites with the same codebase, modules, plugins, themes, etc., and to make quick updates to these sites en masse.
 
    </Alert>
 

@@ -19,7 +19,7 @@ previouspage: Introduction
 editpath: woocommerce/02-store-setup.md
 image: guides/woocommerce/WooCommerce-logo-400-200
 ---
-I've already gone ahead and [created a new site on Pantheon](/guides/quickstart/create-new-site/).
+I've already gone ahead and [created a new site on Pantheon](/guides/quickstart/create-new-site).
 
 ![New Pantheon Site Dashboard](../../../images/guides/woocommerce/01-new-pantheon-site.png)
 

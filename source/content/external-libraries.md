@@ -106,7 +106,7 @@ ImageAPI Optimize's [support for 3rd party services](https://www.drupal.org/node
 ## Troubleshooting and FAQs
 
 ### How do I request the addition of a new library or a newer version of an existing library?
-Please [contact support](/support/) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
+Please [contact support](/support) with a description of your use case and a link to the library's webpage. We welcome new requests, but please bear in mind they are not guaranteed and it is possible the feature request may be denied. As a result, we recommend you set aside enough time for alternative solutions.
 
 ### Will you setup and configure the module/plugin for me?
 No. This is not within our [scope of support](/support/#scope-of-support). It is important to be aware of how a Drupal module or WordPress plugin is setup and how it functions. This will prove invaluable in cases where you need to plan and build your site.

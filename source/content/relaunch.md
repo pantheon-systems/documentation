@@ -8,7 +8,7 @@ Sites are considered launched on Pantheon once traffic is routed through custom 
 
 <Alert title="Note" type="info">
 
-The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/guides/launch/).
+The relaunch process applies exclusively to live sites already hosted on Pantheon. Otherwise, refer to [Launch Essentials](/guides/launch).
 
 </Alert>
 
@@ -110,7 +110,7 @@ This procedure temporarily uses the existing HTTPS certificate until the new one
 ### Will my site experience downtime?
 If you follow the process outlined above, downtime will be minimal and depends on the [TTL](/dns#dns-terminology) configuration.
 
-Once you complete step 2 above, the domain is unreachable until you add it to a new site in step 3. We recommend that you open the new site's Dashboard in another browser tab, then copy and paste the domain name from the old site to the new for a quick transition. You can also use [Terminus](/terminus/) to run the two commands in immediate succession.
+Once you complete step 2 above, the domain is unreachable until you add it to a new site in step 3. We recommend that you open the new site's Dashboard in another browser tab, then copy and paste the domain name from the old site to the new for a quick transition. You can also use [Terminus](/terminus) to run the two commands in immediate succession.
 
 To minimize the chance to HTTPS certificate errors, set the TTL as low as possible (most DNS providers set a lower limit of 300 seconds, or 5 minutes). Having a long TTL on the changing DNS records increases the chance of HTTPS Certificate errors during the transition.
 
@@ -125,6 +125,6 @@ Best practices during normal operation (e.g. not during a site relaunch) suggest
 As soon as you complete step 3, visitors to your domain will see the new site. But technically, until step 5 is complete and DNS is fully propagated, your visitors may still see the new site with the old site's HTTPS certificate that will be going offline shortly.
 
 ## See Also
-- [Launch Essentials](/guides/launch/)
-- [Manage Plans in the Site Dashboard](/site-plan/)
-- [Billing in the Site Dashboard](/site-billing/)
+- [Launch Essentials](/guides/launch)
+- [Manage Plans in the Site Dashboard](/site-plan)
+- [Billing in the Site Dashboard](/site-billing)

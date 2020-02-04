@@ -42,7 +42,7 @@ We recommend disabling Basic Auth to see if it works, and then re-enabling it. H
 "Page Could Not Be Loaded. The request could not be completed due to a networking failure. Contact support if this issue persists." This means an internal networking issue has occurred with Styx, Pantheon's routing mesh.
 
 ### 503 First Byte Timeout
-"Page Could Not Be Loaded. We're very sorry, but the page could not be loaded properly. This should be fixed very soon, and we apologize for any inconvenience." This error message will be accompanied by a page title of "503 First Byte Timeout". This means that the request has exceeded the platform web request timeout of 60 seconds (see our [timeouts documentation](/timeouts/) for more information). See our [documentation on debugging](/debug-slow-performance/) for some helpful insights on how to handle these cases.
+"Page Could Not Be Loaded. We're very sorry, but the page could not be loaded properly. This should be fixed very soon, and we apologize for any inconvenience." This error message will be accompanied by a page title of "503 First Byte Timeout". This means that the request has exceeded the platform web request timeout of 60 seconds (see our [timeouts documentation](/timeouts) for more information). See our [documentation on debugging](/debug-slow-performance) for some helpful insights on how to handle these cases.
 
 ### 503 Header Overflow
 "Header overflow" The new Pantheon Global Edge size limit for cookies (as sent in the request `"Cookie: .."` header) is 10K. If more than that is sent, all cookies will be dropped and the request will continue to be processed as if no cookies had been sent at all. The header `"X-Cookies-Dropped: 1"` will be added to the request and response indicating that these have been truncated. You can either ignore this scenario in your PHP code or handle it (perhaps by displaying a custom error page).
@@ -56,17 +56,17 @@ This response can also occur on Drupal 8 sites using the cacheability debug serv
 "The web page you were looking for could not be delivered." The MySQL database is not responding, possibly from being suspended and not resuming.
 
 ### Error 503 Service Unavailable
-This error generally occurs when a request timeouts. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/timeouts/).
+This error generally occurs when a request timeouts. If end user pages take longer than this threshold, there is a performance issue with the site. Learn more about [Timeouts on Pantheon](/timeouts).
 
 If you get a generic Service Unavailable and you're using AJAX when HTTP Basic Auth is enabled (the security username/password), then that's a misleading message. The best workaround is to disable the security option for the environment for testing.
 
 ### Pantheon 504 Target Not Responding
 "The web page you were looking for could not be delivered." No php workers are available to handle the request. These errors occur when PHP processing resources for your site are exhausted. Each application container has a fixed limit of requests it can concurrently process. When this limit gets hit, nginx will queue up to 100 requests in the hope that PHP workers will free up to serve these requests. Once nginx's queue fills up, the application container cannot accept any more requests. We could increase the nginx queue above 100, but it would only mask the problem. It would be like a retail store with a grand opening line longer than it can serve in the business hours of a single day. At some point, it's better to turn away further people and serve those already in line. For more information, jump to [Overloaded Workers](#overloaded-workers).
 
-This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/site-plan/).
+This error can be caused by sustained spikes in traffic (often caused by search engine crawlers) and by having PHP processes that run too slowly or have long waiting times for external resources which occupy the application container for long periods. If you have too much traffic for your site's resources, consider [upgrading your site plan](/site-plan).
 
 ### Pantheon 504 Gateway Timeout
-"The application did not respond in time." There are two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other option is that there was an application problem, resulting in php-fpm or MySQL timing out. See [Timeouts on Pantheon](/timeouts/) for more information.
+"The application did not respond in time." There are two possibilities. Pantheon's routing and caching layer can only sustain open HTTP requests for so long. We do our best, but you may encounter this message if your application takes awhile to respond. The other option is that there was an application problem, resulting in php-fpm or MySQL timing out. See [Timeouts on Pantheon](/timeouts) for more information.
 
 Typically the request timeout is much shorter than the hard timeout for PHP. While you may be able to let an operation run for several minutes in your local development environment, this isn't possible on Pantheon. Luckily there are ways to solve the problem.
 
@@ -140,7 +140,7 @@ If you are seeing timeouts in unexpected places, debugging with New Relic Pro or
 
 In the best of all possible worlds, there are no slow queries, all external calls are fast, and the application is a finely-tuned highly-optimized cheetah of the web. In reality, sometimes we just need to get around a pesky timeout in order to get the job done.
 
-[Terminus](/terminus/) is a great workaround for many administrative bottlenecks. There are no time limits because it runs via the PHP command-line. Enabling/disabling modules or plugins, running update.php for Drupal, clearing caches, are all actions supported by Terminus for both WordPress and Drupal.
+[Terminus](/terminus) is a great workaround for many administrative bottlenecks. There are no time limits because it runs via the PHP command-line. Enabling/disabling modules or plugins, running update.php for Drupal, clearing caches, are all actions supported by Terminus for both WordPress and Drupal.
 
 ## Handle More Traffic
 

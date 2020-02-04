@@ -5,13 +5,13 @@ categories: [get-started, workflow,develop]
 tags: [dashboard, devterminus, git]
 contributors: [cityofoaksdesign, rachelwhitton, alexfornuto]
 ---
-Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream/), become available downstream as a one-click update.
+Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream), become available downstream as a one-click update.
 
 Apply one-click updates to individual sites repositories using the Site Dashboard on Pantheon, via [Terminus](/terminus), or manually from the command line. Do not update core using the WordPress Dashboard, Drush, or WP-CLI; you will overwrite your core. For additional details, see [Scope of Support](/support/#scope-of-support).
 
 <Alert title="Note" type="info">
 
-Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
+Sites managing core with Composer are not compatible with Pantheon's One-click updates and must update core using Composer exclusively. For instructions, see [Build Tools](/guides/build-tools/update) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/#update-only-drupal-core).
 
 </Alert>
 
@@ -35,7 +35,7 @@ If the "Auto-Resolve Conflicts" option fails, the next step is to manually pull 
 
 ## Apply Upstream Updates via Terminus
 
-If you prefer using the command line, you can apply updates with [Terminus](/terminus/).
+If you prefer using the command line, you can apply updates with [Terminus](/terminus).
 
 ### Update a Specific Site
 
@@ -116,7 +116,7 @@ If this procedure fails with the message `Already up to date.` refer to [this tr
 
 #### Overwrite WordPress Core Via SFTP
 
-In the case where you're unable to use Git, you can use [SFTP](/sftp/) to overwrite core files.
+In the case where you're unable to use Git, you can use [SFTP](/sftp) to overwrite core files.
 
 1. Confirm that the Site Connection Mode is set to SFTP. Then, via SFTP, delete these files and folders:
 

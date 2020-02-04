@@ -16,13 +16,13 @@ Pantheon offers a [range of support packages](https://pantheon.io/resources/pant
 | [**Chat**](#real-time-chat-support)                       | 24x5                              | 24x7                              | 24x7: Priority         | 24x7: Top Priority |
 | [**Tickets**](#ticket-support)                            | ❌ | 24x5: 8 Hours                     | 24x7: 2 Hours          | 24x7: 1 Hour       |
 | [**Emergency On-Call**](#pantheon-on-call)                | ❌ | ❌ | 24x7: 1 Hour           | 24x7: 15 Minutes   |
-| [**Professional Services**](/professional-services/) | ❌ | Available for Purchase            | Available for Purchase | Bundle Included    |
+| [**Professional Services**](/professional-services) | ❌ | Available for Purchase            | Available for Purchase | Bundle Included    |
 
 ## Best Practices
 
 Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
 
- - **Open the Ticket in the Right Place:** If you are a member of an [Organization](/organizations/), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
+ - **Open the Ticket in the Right Place:** If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
 
  - **One ticket per issue:** Opening multiple tickets on the same issue will only impede our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
 
@@ -86,12 +86,12 @@ We love helping developers succeed! Our support packages range from basic platfo
 Your site code belongs to you. We can offer Diamond support customers advice on best practices and debugging assistance, but our support team does not change customer code. Pantheon provides updates to the upstream for the site, which only affect core files and Pantheon-specific additions. It is your responsibility to ensure the upstream is not overwritten. If it is, updates initiated from the Dashboard will cause conflicts that you must [resolve manually](/core-updates#apply-upstream-updates-manually-from-the-command-line-to-resolve-merge-conflicts) using Git.
 
 ### Outdated Core
-Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/maintain-custom-upstream/) by the upstream maintainer each time the project releases a new version.
+Outdated versions of core are not supported on the platform. This includes importing a site, then manually downgrading to an older version of core. Sites utilizing a [Custom Upstream must be updated](/maintain-custom-upstream) by the upstream maintainer each time the project releases a new version.
 
 ### Custom Upstreams
 If you choose to use a Custom Upstream, please be aware that the scope of support is limited to verification that the externally hosted upstream repository is properly connected to the platform.
 
-We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [properly maintaining the Custom Upstream](/maintain-custom-upstream/), and fixing any issues related to the upstream falls outside of the scope of support.
+We are unable to debug issues with the content or structure of the Custom Upstream. While we encourage you to explore this great way to unify multiple sites, please be aware that the responsibility of testing, [properly maintaining the Custom Upstream](/maintain-custom-upstream), and fixing any issues related to the upstream falls outside of the scope of support.
 
 ### Public Distributions
 If you choose to use a [public distribution](/start-state/#public-distributions) (a.k.a. installation profile or distribution) in lieu of a [Pantheon provided upstream](/start-state/#pantheon-upstreams) (i.e. WordPress, Drupal 8, Drupal 7), it is your responsibility to ensure it is not behind on core releases or any of its included modules, and, if it is behind, to contact the maintainer through [Drupal.org](https://www.drupal.org) or the distribution's GitHub issue queue.
@@ -100,13 +100,13 @@ If you choose to use a [public distribution](/start-state/#public-distributions)
 We don’t maintain the integrity of your site. We provide the platform on which any code can be deployed. We fully stand behind the platform and support that, but we aren't responsible for the code and configuration that gets deployed or any files uploaded to the site. We strongly encourage all developers and site owners to follow best security practices and keep core code and contributed modules and plugins up-to-date, especially with security-related releases.
 
 ### Debugging
-Code-level debugging and site architecture recommendations are available to Diamond support packages. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/troubleshoot/) to get you started.
+Code-level debugging and site architecture recommendations are available to Diamond support packages. New Relic is also included for most site plans and will help you get to the bottom of most issues. We also have a [comprehensive list of docs](/troubleshoot) to get you started.
 
 ### Performance
 If your site is slow or modules aren't working, please see our [performance articles](/code/#performance). Issues with the platform are posted on our [status page](https://status.pantheon.io). If there are no platform events, the solution is probably within the site's code.
 
 ### Intermittent Issues
-Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/errors-and-server-responses/) in your Development environment. If you [contact support](/support), include your findings and attach screenshots whenever possible.
+Pantheon can only assist if we can replicate the problem. Intermittent issues and server errors are rarely random, rather, they are issues with a yet undefined trigger. Please try to replicate and debug [site errors](/errors-and-server-responses) in your Development environment. If you [contact support](/support), include your findings and attach screenshots whenever possible.
 
 ### Local Development
 We recommend development on the platform, rather than on a local environment. Unexpected behavior, not apparent on local instances such as MAMP or shared hosting, can be due to different versions of PHP, different levels of error reporting, Apache vs NGINX, or server configuration. Pantheon is not responsible for resolving such issues.

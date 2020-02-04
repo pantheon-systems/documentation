@@ -88,7 +88,7 @@ If you would like to try out any of the example scenarios presented in the repos
 ## Relocated Configuration Directory
 Configuration files can contain sensitive information. Drupal takes some measures to protect the default configuration directory, but the conventional way to secure these files is to locate them outside of the document root so they are not web accessible. Following this convention may help make site configuration easier to manage.
 ### Before you Begin
-- Refer to [Serving Sites from the Web Subdirectory](/nested-docroot/) to enable nested docroot on a new or existing Drupal 8 site.
+- Refer to [Serving Sites from the Web Subdirectory](/nested-docroot) to enable nested docroot on a new or existing Drupal 8 site.
 
 ### Configure and Relocate
 After implementing a nested docroot, set a new path (`/config`) for configuration directories by adding the following to `settings.php`<Popover title="Syntax note" content="As of <a class='external' href='https://www.drupal.org/docs/8/configuration-management/changing-the-storage-location-of-the-sync-directory#s-syntax-changes-in-drupal-880'>Drupal 8.8.0</a> the sync directory is defined in $settings and not $config_directories. " />:

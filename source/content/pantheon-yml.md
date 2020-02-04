@@ -63,7 +63,7 @@ web_docroot: true
 
 The name of the nested directory is not configurable.
 
-For more information, see [Serving Sites from the Web Subdirectory](/nested-docroot/).
+For more information, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
 ### PHP Version
 Override the upstream's default PHP version with the `php_version` property. PHP version is managed in version control and deployed along with the rest of your site's code to encourage testing before making a change on your Live site.
@@ -75,7 +75,7 @@ php_version: 7.0
 ```
 
 #### Considerations
-* [Upgrading PHP Versions](/php-versions/) may require you to resolve compatibility issues with your site's codebase.
+* [Upgrading PHP Versions](/php-versions) may require you to resolve compatibility issues with your site's codebase.
 * Drupal and PHP 7 require [Drush 7 or greater](/drush-versions/#configure-drush-version).
 * From time to time, we will roll out a new default version of PHP, which will be available to apply as One-click update in the Dashboard. If you are overriding the default, make sure to remove `php_version` from `pantheon.yml` as soon as possible to ensure you don't miss the latest recommended PHP version.
 * You'll always be able to test new default PHP version in Dev and Test before deploying Live.
@@ -86,16 +86,16 @@ Add `drush_version` to the top level of the `pantheon.yml` file to configure the
 ```yaml
 drush_version: 8
 ```
-For more information, see [Managing Drush Versions on Pantheon](/drush-versions/).
+For more information, see [Managing Drush Versions on Pantheon](/drush-versions).
 
 ### Filemount Path
-Pantheon provides a [cloud-based filesystem](/files/) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `/sites/default/files` (Drupal) or `/wp-content/uploads` (WordPress), but you can change the location with the `filemount` variable:
+Pantheon provides a [cloud-based filesystem](/files) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `/sites/default/files` (Drupal) or `/wp-content/uploads` (WordPress), but you can change the location with the `filemount` variable:
 
 ```yaml
 filemount: /files
 ```
 
-This creates a new symlink to the filesystem at the specified location. Note that this setting is only recommended when creating a custom upstream. Instead, consider using a symlink as described in [Non-Standard Files Locations](/non-standard-file-paths/).
+This creates a new symlink to the filesystem at the specified location. Note that this setting is only recommended when creating a custom upstream. Instead, consider using a symlink as described in [Non-Standard Files Locations](/non-standard-file-paths).
 
 Complete the following before deploying `filemount` (**required**):
 
@@ -116,10 +116,10 @@ Complete the following before deploying `filemount` (**required**):
 ## Quicksilver Platform Integration Hooks
 Use the `pantheon.yml` file to define scripts you want executed automatically when a particular workflow is triggered on Pantheon by you or a teammate. For example, you can write a script to post a message to Slack whenever code is pushed to the Site Dashboard.
 
-For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/quicksilver/) and check our growing set of [Platform Integration guides](/guides/) demonstrating Quicksilver hooks.
+For more information, see [Automate your Workflow with Quicksilver Platform Integration Hooks](/quicksilver) and check our growing set of [Platform Integration guides](/guides) demonstrating Quicksilver hooks.
 
 ## Custom Upstream Configurations
-Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/custom-upstream/) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver/#hooks) here; however other Quicksilver workflows are not supported.
+Add a `pantheon.upstream.yml` file to your organization's [Custom Upstream](/custom-upstream) to set default configurations for all downstream sites. The same [properties described above](#advanced-site-configuration) can be used in this file. In addition, it is also possible to define a [`deploy_product` Quicksilver hook](/quicksilver/#hooks) here; however other Quicksilver workflows are not supported.
 
 This file should only be edited in the Custom Upstream repository where it is defined. Similarly, the Custom Upstream repository should not define a `pantheon.yml` file; it should place all configuration settings in the upstream file instead.
 
@@ -160,8 +160,8 @@ remote:
 ```
 
 ### Deploying Hotfixes
-Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes/). As a workaround, make a modification to your `pantheon.yml` file in a development environment (e.g, add a code comment), then deploy up to production using the standard Pantheon workflow.
+Changes made to `pantheon.yml` **are not** detected when deployed as a [hotfix](/hotfixes). As a workaround, make a modification to your `pantheon.yml` file in a development environment (e.g, add a code comment), then deploy up to production using the standard Pantheon workflow.
 
 ## See Also
-- [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver/)
-- [Upgrade PHP Versions](/php-versions/)
+- [Automating and Integrating your Pantheon Workflow with Quicksilver Platform Hooks](/quicksilver)
+- [Upgrade PHP Versions](/php-versions)

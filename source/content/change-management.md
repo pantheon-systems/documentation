@@ -4,7 +4,7 @@ description: Features and benefits of role-based permissions for Pantheon Drupal
 tags: [tools]
 categories: [manage]
 ---
-Change Management is an [Organization](/organizations/) feature that enables role-based permissions for users in the organization. It is automatically enabled for all Organizations.
+Change Management is an [Organization](/organizations) feature that enables role-based permissions for users in the organization. It is automatically enabled for all Organizations.
 
 Users added to the organization can access all sites associated with the organization, with access restricted based on the user's role in that organization. These roles exist to restrict who can deploy code on sites, and manage other users in the organization or sites it works on.
 
@@ -14,7 +14,7 @@ These tables detail the actions each role can execute on each Dashboard.
 
 In some Dashboards, you may notice the "User in Charge" label applied to a user. This helps distinguish who created a site for Enterprise and EDU Organizations where members are allowed to spin up new Sandbox sites at will. However, in these organizations the "User in Charge"  cannot adjust the site service level — e.g. to take a site live. Because this may affect the overall bill for the organization, only organization admins are allowed to change service levels.
 
-If you are an administrator for a Pantheon organization, [contact support](/support/) to have the User in Charge changed.
+If you are an administrator for a Pantheon organization, [contact support](/support) to have the User in Charge changed.
 
 ### Organizations: Roles and Permissions
 
@@ -101,4 +101,4 @@ The Developer role can only deploy to Development and Multidev environments. If 
 Enterprise Administrators can add site Team Members or Supporting Organizations to **sites** owned by the organization, with the Developer or organizational Team Member roles. Partner Organizations can assign users the role of an Administrator, Team Member, or Developer at the organization level.
 
 #### How do I recover an account after a site owner leaves?
-See the steps in our [Site Access](/site-access/) doc for recovery instructions.
+See the steps in our [Site Access](/site-access) doc for recovery instructions.

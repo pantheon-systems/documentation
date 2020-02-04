@@ -123,5 +123,5 @@ Two of the headers listed above are Drupal-specific. By default, WordPress does 
 
 
 ## See Also
-- [Drupal Performance and Caching Settings](/drupal-cache/)
-- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin/)
+- [Drupal Performance and Caching Settings](/drupal-cache)
+- [WordPress Pantheon Cache Plugin Configuration](/wordpress-cache-plugin)

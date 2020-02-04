@@ -16,7 +16,7 @@ After you've [created your site on Pantheon](/create-sites), you'll need to set 
 
 ### Clone the Code Repository
 
-Make sure your Dev environment is in Git mode, then [clone your Git repository](/git/) to your local workstation.
+Make sure your Dev environment is in Git mode, then [clone your Git repository](/git) to your local workstation.
 
 ### Create a New PhpStorm Project
 
@@ -58,7 +58,7 @@ Make sure your Dev environment is in Git mode, then [clone your Git repository](
 
 ## Configure On-Server Development
 
-1. Put your [Dev environment into SFTP mode](/sftp/), and click **Connection Info** to see the connection settings.
+1. Put your [Dev environment into SFTP mode](/sftp), and click **Connection Info** to see the connection settings.
 
 1. Within PhpStorm, go to Build, Execution, Deployment > Deployment.
 

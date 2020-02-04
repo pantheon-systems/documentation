@@ -18,7 +18,7 @@ previousurl: guides/build-tools/configure/
 editpath: build-tools/05-extend.md
 image: buildToolsGuide-thumb
 ---
-Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/new-pr/).
+Next, we'll add a module to our existing `slogan` branch using Composer. You should already have a Pull Request open for this branch in GitHub, [created in a previous lesson](/guides/build-tools/new-pr).
 
 ## Local Setup
 This section will be performed from the command line, to prepare your local system.
@@ -80,7 +80,7 @@ This section will be performed from the command line, to prepare your local syst
     terminus drush $SITE.$ENV -- pm-enable pathauto --yes
     ```
 
-4. You can use the [method described in an earlier lesson](/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
+4. You can use the [method described in an earlier lesson](/guides/build-tools/configure) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
     ```bash
     terminus drush $SITE.$ENV -- config-export --yes

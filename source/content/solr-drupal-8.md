@@ -5,7 +5,7 @@ tags: [Drupal8,Solr,search]
 categories: [integrate]
 contributors: [peter-pantheon, cityofoaksdesign]
 ---
-[Apache Solr](/solr/) is a system for indexing and searching site content.
+[Apache Solr](/solr) is a system for indexing and searching site content.
 
 <Alert title="Important Note" type="info">
 
@@ -13,7 +13,7 @@ contributors: [peter-pantheon, cityofoaksdesign]
 
 <Partial file="solr-version.md" />
 
-If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr/) or another alternative search.
+If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search.
 
 Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which is currently unsupported by Solr. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
 
@@ -24,11 +24,11 @@ Be sure that you:
 
 * Enable Solr in the Pantheon Site Dashboard: **Settings** > **Add Ons** > **Apache Solr Index Server: Add**.
 * Install [Composer](https://getcomposer.org/)
-* Create a Composer managed site on Pantheon following the [Build Tools](/guides/build-tools/) guide, or the [Composer without CI](/guides/drupal-8-composer-no-ci/) guide.
+* Create a Composer managed site on Pantheon following the [Build Tools](/guides/build-tools) guide, or the [Composer without CI](/guides/drupal-8-composer-no-ci) guide.
 
 <Alert title="Warning" type="danger">
 
-Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/guides/build-tools/) and [Composer without CI](/guides/drupal-8-composer-no-ci/) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
+Solr on Drupal 8 requires a Composer managed workflow, as described in our [Build Tools](/guides/build-tools) and [Composer without CI](/guides/drupal-8-composer-no-ci) guides. Since one module relies on [Solarium](http://www.solarium-project.org/), an external library, in addition to Composer's autoloader, we cannot support non-Composer workflows for Solr on Drupal 8. For details, see [this Drupal.org issue](https://www.drupal.org/node/2858750).
 
 </Alert>
 
@@ -36,7 +36,7 @@ Solr on Drupal 8 requires a Composer managed workflow, as described in our [Buil
 
 ### Install the Search API Pantheon Module
 
-1. Navigate to the project's root directory on your local computer. If you have access to [Multidev](/multidev/), checkout a new branch from master:
+1. Navigate to the project's root directory on your local computer. If you have access to [Multidev](/multidev), checkout a new branch from master:
 
     ```
     git checkout -b solr master

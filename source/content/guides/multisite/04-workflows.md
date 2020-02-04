@@ -82,7 +82,7 @@ The Terminus command to clear all caches for an environment is:
 terminus env:clear-cache <site>.<env>
 ```
 
-Running into “Error: Site Not Found”? See [Troubleshoot](/guides/multisite/debug/) for the cause and resolution.
+Running into “Error: Site Not Found”? See [Troubleshoot](/guides/multisite/debug) for the cause and resolution.
 
 
 <Alert title="Note" type="info">

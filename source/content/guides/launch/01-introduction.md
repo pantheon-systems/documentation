@@ -31,7 +31,7 @@ Welcome! This guide will help you take a site live on Pantheon.
 * Review status reports
 * Optimize performance
 
-To get started, you need to [create your Live environment](/guides/quickstart/create-test-live/) and have a registered domain name where you can control DNS settings.
+To get started, you need to [create your Live environment](/guides/quickstart/create-test-live) and have a registered domain name where you can control DNS settings.
 
 <Alert title="Note" type="info">
 

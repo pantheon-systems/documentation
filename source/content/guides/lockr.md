@@ -19,7 +19,7 @@ By combining a simple-to-use developer interface with a managed scalable cloud k
 
 ## Install Lockr via the Lockr Terminus Plugin
 
-[The Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) allows you to install all necessary components, register the site with Lockr, and patch all relevant plugins/modules running on your site with a single [Terminus](/terminus/) command. To enable the Terminus plugin, complete these steps in your local environment:
+[The Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) allows you to install all necessary components, register the site with Lockr, and patch all relevant plugins/modules running on your site with a single [Terminus](/terminus) command. To enable the Terminus plugin, complete these steps in your local environment:
 
 1. Clone [the Lockr Terminus plugin](https://github.com/lockr/lockr-terminus) into the `~/terminus/plugins` directory on your local environment.
 2. Log in with Terminus.
@@ -105,7 +105,7 @@ Pairing together the [Lockr](https://www.drupal.org/project/lockr), [Encrypt](ht
 
 Lockr is currently available for Drupal 7 and Drupal 8 (development release). See the project's [GitHub page](https://github.com/lockr/lockr-patches/tree/drupal7) for a list of modules that can be automatically patched.
 
-1. [Set the connection mode to SFTP](/sftp/) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
+1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard or with [Terminus](/terminus):
 
  ```
  terminus connection:set <site>.<env> sftp

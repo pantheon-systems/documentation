@@ -17,8 +17,8 @@ editpath: dns-providers/1-and-1.md/
 Be sure that you have a:
 
 - Registered domain name using 1&1 to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
 ## Configure DNS Records on 1&1
 
@@ -50,5 +50,5 @@ An A record is required to configure a subdomain (e.g., `www.example.com`).
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

@@ -45,6 +45,6 @@ Copy the provided query in the output and run as instructed.
 ## See Also
 - [Access MySQL Databases](/mysql-access)
 - [Database Connection Errors](/database-connection-errors)
-- [MySQL Slow Log](/mysql-slow-log/)
-- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic/)
-- [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb/)
+- [MySQL Slow Log](/mysql-slow-log)
+- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
+- [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb)

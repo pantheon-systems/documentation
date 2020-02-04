@@ -87,7 +87,7 @@ Start with the [basic command structure described above](#command-structure). Th
 
 ![terminus remote:wp your-awesome-site.dev --plugin activate debug-bar](../../images/terminus-wp-cli-example.png)
 
-For more information, see [Drupal Drush Command-Line Utility](/drush/) and [Using WP-CLI On The Pantheon Platform](/wp-cli/).
+For more information, see [Drupal Drush Command-Line Utility](/drush) and [Using WP-CLI On The Pantheon Platform](/wp-cli).
 
 ## Applying Updates
 
@@ -279,9 +279,9 @@ The Site Dashboard will open once the reset procedure has completed.
 
 ## Switch Upstreams
 
-Every site has an upstream assigned in order to deliver [one-click updates](/core-updates/) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
+Every site has an upstream assigned in order to deliver [one-click updates](/core-updates) in the Pantheon Site Dashboard. Terminus can be used to manage this site level configuration. There are a few scenarios where it may be useful to change a site's upstream:
 
-- Convert existing sites from a default framework to a [Custom Upstream](/custom-upstream/).
+- Convert existing sites from a default framework to a [Custom Upstream](/custom-upstream).
 - Convert existing sites from one Custom Upstream to another, for reasons like:
   - Repository has been migrated from Bitbucket to Github, or vice versa.
   - Code has been refactored and moved to a new repository.
@@ -293,7 +293,7 @@ To see all available upstreams, run:
 terminus upstream:list
 ```
 
-If your organization has a [Custom Upstream](/custom-upstream/), you can use Terminus to switch existing sites over to the common codebase:
+If your organization has a [Custom Upstream](/custom-upstream), you can use Terminus to switch existing sites over to the common codebase:
 
 ```bash{promptUser: user}
 terminus site:upstream:set my-site "My Custom Upstream"

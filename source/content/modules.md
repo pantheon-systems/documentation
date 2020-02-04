@@ -6,22 +6,28 @@ tags: [siteintegrations, infrastructure, cacheedge]
 categories: [performance,integrate,platform]
 reviewdate: "2020-02-04"
 ---
-
-Pantheon maintains several modules to extend and integrate Drupal on the platform. For real time discussion of these modules, find Pantheon developers in our [Pantheon Community](/pantheon-community/) Slack channel.
+Pantheon maintains several modules to extend and integrate Drupal on the platform. For real time discussion of these modules, find Pantheon developers in our [Pantheon Community](/pantheon-community) Slack channel.
 
 <Alert title="Note" type="info">
 
-WordPress users, see [Pantheon Plugins](/plugins/) for details on WordPress plugins developed and maintained for the Pantheon workflow.
+WordPress users, see [Pantheon Plugins](/plugins) for details on WordPress plugins developed and maintained for the Pantheon workflow.
 
 </Alert>
 
 ## [Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache)
+<<<<<<< HEAD
 
 The Advanced Page Cache module attaches [Drupal's cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) to a response so that Pantheon's [Global CDN](/global-cdn/) edge service can granularly clear new content as it is saved. The Global CDN can detect when underlying data changes, such as nodes and taxonomy terms, then clear pages containing that entity. For details, see [this blog post](https://pantheon.io/blog/pantheon-advanced-page-cache-drupal-cache-metadata-global-cdn).
 
 ## [Site Audit](https://www.drupal.org/project/site_audit)
 
 Static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members. For more details, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check/).
+=======
+The Advanced Page Cache module attaches [Drupal's cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) to a response so that Pantheon's [Global CDN](/global-cdn) edge service can granularly clear new content as it is saved. The Global CDN can detect when underlying data changes, such as nodes and taxonomy terms, then clear pages containing that entity. For details, see [this blog post](https://pantheon.io/blog/pantheon-advanced-page-cache-drupal-cache-metadata-global-cdn).
+
+## [Site Audit](https://www.drupal.org/project/site_audit)
+Static site analysis as a service for Drupal sites to make best practice recommendations on site configurations. These reports are found in the Site Dashboard under the Status tab and are accessible by site team members. For more details, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check).
+>>>>>>> remove trailing slash from local links
 
 ## [Search API Pantheon (Drupal 8)](https://www.drupal.org/project/search_api_pantheon)
 
@@ -51,7 +57,12 @@ The API module is not needed for Drupal 8.
 
 ## [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
 
+<<<<<<< HEAD
 This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Apache Solr on Pantheon](/solr/).
+=======
+### [Apache Solr](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_apachesolr)
+This module facilitates and debugs communication between Drupal and Pantheon's Apache Solr service, indexing and searching site content. For more details, see [Apache Solr on Pantheon](/solr).
+>>>>>>> remove trailing slash from local links
 
 ## [Login](https://github.com/pantheon-systems/drops-7/tree/master/modules/pantheon/pantheon_login)
 

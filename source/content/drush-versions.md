@@ -15,7 +15,7 @@ When running Drush locally, we highly recommend running Drush version 8.3.0 or h
 </Alert>
 
 ## Terminus Drush and Local Drush
-[Terminus](/terminus/) makes remote Drush calls on sites without using a local installation, eliminating compatibility issues between local and remote installs. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management/).
+[Terminus](/terminus) makes remote Drush calls on sites without using a local installation, eliminating compatibility issues between local and remote installs. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management).
 
 ## Verify Current Drush Version
 Verify the current version of Drush running remotely on Pantheon using [Terminus](/terminus):
@@ -55,7 +55,7 @@ Always use Drush 8 with Drupal 7 and Drupal 6 sites, as Drush 9 only works on Dr
 | Drush 8       | PHP 5.4.5+          |
 | Drush 9       | PHP 5.6.0+          |
 
-See our guide on [Upgrading PHP Versions](/php-versions/).
+See our guide on [Upgrading PHP Versions](/php-versions).
 
 ## Troubleshooting
 

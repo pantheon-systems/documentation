@@ -8,7 +8,7 @@ permalink: docs/guides/:basename/
 contributors: [stevector, dwayne, davidneedham]
 ---
 
-[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) and the [Pantheon Global CDN](/global-cdn/).
+[Pantheon Advanced Page Cache module](https://www.drupal.org/project/pantheon_advanced_page_cache) is a bridge between [Drupal cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) and the [Pantheon Global CDN](/global-cdn).
 
 When you turn on this module your Drupal site will start emitting the HTTP headers necessary to make the Pantheon Global CDN aware of data underlying the response. Then, when the underlying data changes (nodes and taxonomy terms are updated, user permissions changed), this module will clear only the relevant pages from the edge cache.
 
@@ -257,7 +257,7 @@ What if we added a new node that used taxonomy term 1? We would want the listing
 
 Now we're going to add a custom module that uses a hook to clear the cache tag for all taxonomy terms.
 
-1. To start, connect to your Dev environment via [SFTP](/sftp/).
+1. To start, connect to your Dev environment via [SFTP](/sftp).
 
 2. Open `code/modules` and create a new directory called `custom_cache_tags`. Open that folder:
 

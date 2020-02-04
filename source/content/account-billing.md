@@ -10,7 +10,7 @@ categories: [manage,go-live]
 
 ![Access account billing through the User Dashboard](../images/dashboard/dashboard-account-billing.gif)
 
-Review **credit card profiles** for the sites you pay for and own on Pantheon. Each credit card profile shows billing history (invoices and transactions) for any site(s) using the card as the payment method, as set in the Site Dashboard. To add a new card to your account, refer to [Manage Site Billing in the Site Dashboard](/site-billing/).
+Review **credit card profiles** for the sites you pay for and own on Pantheon. Each credit card profile shows billing history (invoices and transactions) for any site(s) using the card as the payment method, as set in the Site Dashboard. To add a new card to your account, refer to [Manage Site Billing in the Site Dashboard](/site-billing).
 
 ### Roles & Permissions
 The permission to update credit cards and view history is granted only to the role of **Site Owner**. You can see who is assigned this role by clicking **<span class="glyphicons glyphicons-group"></span> Team** in the Site Dashboard. Other roles do not have access to billing as described on this page.
@@ -58,6 +58,6 @@ Deleting a card profile from your account will also delete it's associated billi
 4. Check the box next to **Yes, delete my card.** and click **Delete Card**.
 
 ## See Also
-- [Billing in the Site Dashboard](/site-billing/)
-- [New Site Owner FAQs](/site-owner-faq/)
-- [Manage Plans in the Site Dashboard](/site-plan/)
+- [Billing in the Site Dashboard](/site-billing)
+- [New Site Owner FAQs](/site-owner-faq)
+- [Manage Plans in the Site Dashboard](/site-plan)

@@ -6,14 +6,14 @@ categories: [develop]
 ---
 All new sites created on Pantheon are configured for HTTPS by default. HTTPS is available immediately for Platform domains like `multidev-example.pantheonsite.io`.
 
-When you upgrade to a paid plan you can connect a custom domain. For more information on HTTPS provisioning for custom domains see [HTTPS on Pantheon's Global CDN](/https/).
+When you upgrade to a paid plan you can connect a custom domain. For more information on HTTPS provisioning for custom domains see [HTTPS on Pantheon's Global CDN](/https).
 
 The following describes how to switch WordPress and Drupal sites over from HTTP to HTTPS.
 
 ## Before you begin
 Be sure that you have:
 
-- A [Paid Pantheon plan](/guides/launch/plans/)
+- A [Paid Pantheon plan](/guides/launch/plans)
 - A [Custom Domain](/domains#custom-domains) connected to the target Pantheon environment (typically Live), set to the [primary domain](/domains#primary-domain), with DNS properly configured.
 - HTTPS provisioned, indicated by the following notice:
 

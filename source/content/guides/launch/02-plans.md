@@ -28,12 +28,12 @@ To upgrade and pay for the site now, add your payment method:
 
 1. From the Pantheon Site Dashboard, click the **Upgrade** button next to the Site's name.
 1. Click the **Select** button under the [plan you choose](https://pantheon.io/pricing/).
-1. At the **Choose Billing** step, select the billing frequency: [**Pay Annually**](/annual-billing/) or **Pay Monthly**.
+1. At the **Choose Billing** step, select the billing frequency: [**Pay Annually**](/annual-billing) or **Pay Monthly**.
    - If you've chosen a **Performance Plan**, choose the size and click **Continue**.
    - If you've chosen a **Basic Plan**, click **Continue**.
 1. Click **+ Add New Card** and enter the credit card information, then click **Add Card** to save the card information.
 1. Click **Continue** and if everything looks right, click **Place Your Order** to confirm your purchase.
-   - [Contact Support](/support/) if you need any help.
+   - [Contact Support](/support) if you need any help.
 
 As the site owner, you’ll receive an email confirming the change to the site. After the site billing is processed, you’ll receive an updated invoice.
 
