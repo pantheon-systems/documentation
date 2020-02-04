@@ -37,6 +37,21 @@ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/ma
 
 See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
 
+### Windows: Enable the terminus command
+
+If you encounter the following error after installation completes:
+
+```bash
+Terminus was installed, but the installer was not able to write to your bin dir. To enable the
+`terminus` command, add this alias to your .bash_profile (Mac) or .bashrc (Linux) file:
+```
+
+Use `alias` to have the `terminus` command call the application:
+
+```bash{promptUser: user}
+alias terminus=~/vendor/bin/terminus
+```
+
 ## Authenticate
 
 ### Machine Token
@@ -66,8 +81,8 @@ Commands that execute remote instructions to tools like Drush or WP-CLI require 
 If the installer throws an IOException at the end:
 
 ```bash
-  [Symfony\Component\Filesystem\Exception\IOException]
-  Failed to create symbolic link from "/path/to/current/dir/vendor/bin/terminus" to "/usr/local/bin/terminus".
+[Symfony\Component\Filesystem\Exception\IOException]
+Failed to create symbolic link from "/path/to/current/dir/vendor/bin/terminus" to "/usr/local/bin/terminus".
 ```
 
 You may need to remove an old installation from terminus from `/usr/local/bin/terminus`.
@@ -113,21 +128,12 @@ To resolve, save a copy of the [latest CA certificate](https://curl.haxx.se/docs
 
 The default Linux environment installed by the WSL may not have all of the requirements for Terminus installed. Using your distribution's package manager, install:
 
-- PHP (includeing `php-cli`, `php-curl`, and `php-xml`)
+- PHP (including `php-cli`, `php-curl`, and `php-xml`)
 - Curl (to download the installer)
 
-#### The Terminus install was successful, but the path was not set
-
-Terminus was installed, but the installer was not able to write to your bin dir.
-
-**Solution:** To enable the `terminus` command, add this alias to your [`.bash_profile` file](https://askubuntu.com/questions/969632/where-is-bash-profile-located-in-windows-subsystem-for-linux):
+On a subsystem with Ubuntu 18.04, since Curl is already installed, the commands to run all updates and install the PHP package look like this:
 
 ```bash{promptUser:user}
-alias terminus='terminus=/c/Users/User1/vendor/bin/terminus'
-```
-
-Or you can enable it by adding the directory the executable file is in to your path:
-
-```bash:title=.bashrc
-PATH="C:\Users\User1\vendor\bin:$PATH"
+sudo apt update && sudo apt upgrade -y
+sudo apt install php7.2-cli
 ```
