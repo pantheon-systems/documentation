@@ -15,7 +15,7 @@ searchboost: 200
 
 Our command line interface, Terminus, provides advanced interaction with Pantheon. Terminus enables you to do almost everything in a terminal that you can do in the Dashboard, and much more.
 
-[Install Terminus](/terminus/install) on Mac OS X or Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then follow the instructions in the [Terminus Manual](/terminus/install/). For details on legacy versions of Terminus, see [Legacy Terminus Versions](/terminus/get-started/legacy/).
+[Install Terminus](/terminus/install) on Mac OS X or Linux. Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). For details on legacy versions of Terminus, see [Legacy Terminus Versions](/terminus/get-started/legacy/).
 
 <Enablement title="Command Line Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -45,6 +45,7 @@ If you are a plugin author, you will need to update your plugin for Terminus 2. 
 Terminus is open source! View the project on [GitHub](https://github.com/pantheon-systems/terminus) to contribute, file issues, and submit feature requests.
 
 ## Support
+
 Terminus is open source. Community submitted bugs and feature requests can be found [in the Terminus GitHub issues queue](https://github.com/pantheon-systems/terminus/issues). Don't see your bug or feedback listed? Create an issue on [Terminus' GitHub page](https://github.com/pantheon-systems/terminus/issues/new).
 
 Need help with Terminus? [Contact Support](https://dashboard.pantheon.io/#support/support/all).
