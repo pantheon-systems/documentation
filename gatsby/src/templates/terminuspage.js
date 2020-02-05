@@ -144,8 +144,8 @@ class TerminusTemplate extends React.Component {
           reviewed={isoDate.frontmatter.reviewed}
         />
         <div className="">
-          <div className="container">
-            <div className="row col-md-12 guide-nav manual-guide-toc-well">
+          <div className="container-fluid">
+            <div className="row col-md-10 guide-nav manual-guide-toc-well">
               <Navbar
                 title={node.frontmatter.title}
                 items={items}
