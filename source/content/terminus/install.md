@@ -27,7 +27,40 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 - [PHP-CURL](https://secure.php.net/manual/en/curl.setup.php)
 - [Composer](https://getcomposer.org/download/)
 
-## Install
+## Install Terminus
+
+There are several ways to install Terminus, depending on your use case:
+
+- For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus).
+- For a composer-managed version of Terminus that is _not_ part of your other composer-managed project(s) and doesn't utilize global composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
+- If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
+- To add Terminus as a dependency of your composer-based project, [install with Composer](#install-terminus-as-a-project-dependency).
+
+### Standalone Terminus
+
+1. Download the latest `terminus.phar` from the [Releases](https://github.com/pantheon-systems/terminus/releases) page. In the example below, we're directing the file to `$HOME/bin/` and renaming the file to `terminus`:
+
+  ```bash{promptUser: user}
+  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O ~/.bin/terminus
+  ```
+
+  Remember to get the latest version of Terminus from the [Releases](https://github.com/pantheon-systems/terminus/releases) page, don't copy the command above vermatim.
+
+  Your installation directory must be in or added to your `$PATH` environment variable in order to call `terminus` from any working directory.
+
+1. Make the Terminus file exectable. The example below assumes the same installation path as above:
+
+  ```bash{promptUser: user}
+  chmod +X ~/.bin/terminus
+  ```
+
+<Alert type="info" title="Note">
+
+There is an unofficial third party installer script which will download `terminus.phar` and attempt to update the appropriate rc files, available [here](https://github.com/alexfornuto/terminus-installer). Note that this script is *not* supported directly by Pantheon.
+
+</Alert>
+
+### Terminus Installer PHAR
 
 Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a `terminus` directory in your `$HOME` and install there:
 
@@ -37,19 +70,12 @@ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/ma
 
 See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
 
-### Windows: Enable the terminus command
+### Install Terminus as a Project Dependency
 
-If you encounter the following error after installation completes:
-
-```bash
-Terminus was installed, but the installer was not able to write to your bin dir. To enable the
-`terminus` command, add this alias to your .bash_profile (Mac) or .bashrc (Linux) file:
-```
-
-Use `alias` to have the `terminus` command call the application:
+To add Terminus to a composer-managed project:
 
 ```bash{promptUser: user}
-alias terminus=~/vendor/bin/terminus
+composer install pantheon-systems/terminus
 ```
 
 ## Authenticate
@@ -121,6 +147,21 @@ curl: (60) SSL certificate problem: unable to get local issuer certificate
 ```
 
 To resolve, save a copy of the [latest CA certificate](https://curl.haxx.se/docs/caextract.html) to a new file named `cacert.pem` then add `curl.cainfo = "[path_to_file]\cacert.pem"` to your `php.ini` file. If you're running XAMPP, you can add the `cacert.pem` file within the `xampp\php\extras\ssl` directory.
+
+### Enable the terminus command
+
+If you encounter the following error after installation completes:
+
+```bash
+Terminus was installed, but the installer was not able to write to your bin dir. To enable the
+`terminus` command, add this alias to your .bash_profile (Mac) or .bashrc (Linux) file:
+```
+
+Use `alias` to have the `terminus` command call the application:
+
+```bash{promptUser: user}
+alias terminus=~/vendor/bin/terminus
+```
 
 ### Windows 10 Installation issues
 
