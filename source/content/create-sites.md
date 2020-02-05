@@ -19,7 +19,7 @@ The Pantheon Dashboard provides a quick "click to install" method of creating ne
 
 1. If applicable, affiliate the site with an [organization](/organization-dashboard/#new-sites).
 1. Click **Create Site**.
-1. Choose a [Region](/regions/) for the Site.
+1. Choose a [Region](/regions) for the Site.
 1. Click **Continue** and wait a few moments for the Site to be created:
 
   ![Select a Region from the Create Your Pantheon Site screen](../images/dashboard/create-pantheon-site.png)
@@ -47,5 +47,5 @@ No. Site names and Platform URLs are permanent and cannot be changed. As a worka
 Site names must be unique across all Pantheon sites, including [frozen](/platform-considerations/#inactive-site-freezing) sites. Choose another site name, and remember that the name you choose in the Pantheon Dashboard is only visible to the public in your [platform domain](/domains/#platform-domains).
 
 ## Next Steps
- - [Developing Directly with SFTP](/sftp/)
- - [Starting with Git](/git/)
+ - [Developing Directly with SFTP](/sftp)
+ - [Starting with Git](/git)

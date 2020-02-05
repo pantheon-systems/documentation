@@ -114,7 +114,7 @@ If they are added below the `require_once ABSPATH . 'wp-settings.php';` statemen
 Listed below are different plugins, themes, or use cases where creating a custom MU plugin with actions and filters resolves the issue they encounter.
 
 ### Redirects
-In addition to [PHP redirects](/redirects/), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
+In addition to [PHP redirects](/redirects), it's possible to add custom redirects, like path or domain specific redirects, in an MU-plugin.
 
 ```php
 // 301 Redirect from /old to /new
@@ -266,6 +266,6 @@ else{
 ## See Also
 This page intends to introduce the concept of using an MU-plugin for applying actions or filters for a site. For Site-specific or Environment-specific context, see these other documentation pages:
 
- - [Configuring wp-config.php](/wp-config-php/)
- - [Environment-Specific Configuration for WordPress Sites](/environment-specific-config/)
- - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues/)
+ - [Configuring wp-config.php](/wp-config-php)
+ - [Environment-Specific Configuration for WordPress Sites](/environment-specific-config)
+ - [WordPress Plugins and Themes with Known Issues](/plugins-known-issues)

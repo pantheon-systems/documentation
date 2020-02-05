@@ -11,7 +11,7 @@ This page offers a high level description of the intended usage of Pantheon's De
 
 </Alert>
 
-Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/multidev/).
+Every Pantheon site comes with three environments: Dev, Test, and Live. Each environment runs a version of the site on its own container. Separate Dev, Test, and Live environments allow you to develop and test your site without impacting the Live environment's availability to the world. Additional development environments are available with [Multidev](/multidev).
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -32,7 +32,7 @@ Content refers to your site's files and the database. In this context, files are
 
 ![Dev Test and Live icon](../images/workflow.png)
 
-The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/files/) into our distributed filesystem, Valhalla, and [code](/code/) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
+The main process of the Pantheon WebOps workflow is to move code up from Dev to Test to Live and content down from Live to Test to Dev. To facilitate this, we put [files](/files) into our distributed filesystem, Valhalla, and [code](/code) on to the application containers. When you build or migrate your site to Pantheon, configuring the correct paths initially will avoid complications down the road.
 
 <Accordion title="Why does Pantheon do this?" id="why-tab" icon="question-sign">
 
@@ -44,8 +44,8 @@ Pantheon is an "[opinionated platform](https://stackoverflow.com/questions/80205
 
 ### Commit Code in Dev
 
-Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via [SFTP](/sftp/#sftp-mode) or [Git](/git/).
-For more detailed information on developing directly in SFTP mode, please see the [guide](/sftp/).
+Code is writable in the Dev (or a Multidev) environment, but is locked in Test and Live. This is intentional, and supports the WebOps workflow model we've described. Update code in the Dev environment via [SFTP](/sftp/#sftp-mode) or [Git](/git).
+For more detailed information on developing directly in SFTP mode, please see the [guide](/sftp).
 
 ### Combine Code from Dev and Content from Live in Test
 
@@ -53,7 +53,7 @@ When you're ready to test a new set of changes, deploy your code from Dev to Tes
 
 <Alert title="Note" type="info">
 
-While you are able to update the Dev environment via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/terminus/).
+While you are able to update the Dev environment via Git, if you would like to deploy your changes to Test or Live from the command line, you'll need to use [Terminus](/terminus).
 
 </Alert>
 
@@ -77,16 +77,16 @@ After running this operation, be sure that:
 
 It's also a good idea to review the Status tab and run **Launch Check**, and make sure everything looks good. For details, see the following:
 
-- [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check/)
-- [Launch Check - WordPress Performance and Configuration Analysis](/wordpress-launch-check/)
+- [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check)
+- [Launch Check - WordPress Performance and Configuration Analysis](/wordpress-launch-check)
 
-Many teams have a standardized review procedure that they execute in the Test environment. That might mean manually checking important pages on the site or walking through content creation forms. If you have automated tests, you can trigger them upon deployment with our [platform hook system](/quicksilver/).
+Many teams have a standardized review procedure that they execute in the Test environment. That might mean manually checking important pages on the site or walking through content creation forms. If you have automated tests, you can trigger them upon deployment with our [platform hook system](/quicksilver).
 
 This entire process is designed around making sure that the Live environment is always stable and never at risk due to code updates.
 
 ### Deploy Code to Live
 
-After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website; however, static assets such as images and CSS may still be outdated. To refresh them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches/).
+After testing your changes in the Test environment you can move them to the Live environment. Deploying code from Test to Live will immediately update your public website; however, static assets such as images and CSS may still be outdated. To refresh them, check the **Clear Caches** option when deploying changes to your Live environment. For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ![Site dashboard, live environment, workflow section](../images/dashboard/deploy-live.png)
 
@@ -104,7 +104,7 @@ Dealing with changes to your site's configuration, stored in the database, can b
 
 * [hook\_update\_N()](https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_update_N/7.x): Encapsulate changes into a custom module and apply them by running `update.php`. Here is a great example of this approach: [Automate Drupal site updates with a deployment module](http://befused.com/drupal/site-deployment-module).
 * [Features](https://www.drupal.org/project/features) module: Export sets of configuration like content types and fields to code as modules. 
-* Drupal 8 tackles configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/drupal-8-configuration-management/).
+* Drupal 8 tackles configuration management head on. For more information, see [Configuration Workflow for Drupal 8 Sites](/drupal-8-configuration-management).
 
 ## Understanding Write Permissions in Test and Live
 
@@ -166,5 +166,5 @@ MySQL imports tables sequentially, in alphabetical order from A to Z. If you acc
 
 ## See Also
  - [Infographic: The Pantheon Development Cycle Workflow](https://pantheon.io/blog/infographic-pantheon-development-cycle-workflow)
- - [Your Site Code on Pantheon](/code/)
- - [Pantheon Filesystem](/files/)
+ - [Your Site Code on Pantheon](/code)
+ - [Pantheon Filesystem](/files)

@@ -124,7 +124,7 @@ Next we'll add Pantheon's example [Quicksilver](/quicksilver) integration script
 
     <Alert title="Note" type="info">
 
-    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+    `api_version` should be set once in [`pantheon.yml`](/pantheon-yml). If you have an existing `pantheon.yml` with this line, don't add it again.
 
     </Alert>
 

@@ -35,28 +35,28 @@ If you don't already own a domain name, register one with a third-party provider
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
- - [1&1 Domain Configuration](/1-and-1/)
- - [Cloudflare Domain Configuration](/cloudflare/)
- - [DNS Made Easy Domain Configurationi](/dns-made-easy/)
- - [DreamHost Domain Configuration](/dreamhost/)
- - [Dyn Domain Configuration](/dyn/)
- - [eNom Domain Configuration](/enom/)
- - [Gandi Domain Configuration](/gandi/)
- - [GoDaddy Domain Configuration](/godaddy/)
- - [Google Domain Configuration](/google/)
- - [Namecheap Domain Configuration](/namecheap/)
- - [Network Solutions Domain Configuration](/network-solutions/)
- - [Amazon Route 53 Domain Configuration](/route53/)
+ - [1&1 Domain Configuration](/1-and-1)
+ - [Cloudflare Domain Configuration](/cloudflare)
+ - [DNS Made Easy Domain Configurationi](/dns-made-easy)
+ - [DreamHost Domain Configuration](/dreamhost)
+ - [Dyn Domain Configuration](/dyn)
+ - [eNom Domain Configuration](/enom)
+ - [Gandi Domain Configuration](/gandi)
+ - [GoDaddy Domain Configuration](/godaddy)
+ - [Google Domain Configuration](/google)
+ - [Namecheap Domain Configuration](/namecheap)
+ - [Network Solutions Domain Configuration](/network-solutions)
+ - [Amazon Route 53 Domain Configuration](/route53)
 
 </Accordion>
 
-Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/https/).
+Connect your custom domain on the Site Dashboard, and point DNS at Pantheon to trigger [automated HTTPS provisioning](/https).
 
 <Partial file="tables/custom-domains-limit.md" />
 
 <Alert title="Note" type="info">
 
-Add all domains (`example.com` and `www.example.com` are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/guides/launch/). Automatic resolution of domains and wildcards are not supported.
+Add all domains (`example.com` and `www.example.com` are different domains!) you want to resolve to Pantheon within the Site Dashboard, for each respective environment, as described in [Launch Essentials](/guides/launch). Automatic resolution of domains and wildcards are not supported.
 
 </Alert>
 
@@ -84,7 +84,7 @@ Add all domains (`example.com` and `www.example.com` are different domains!) you
 
    ![Custom domain Details page](../images/dashboard/details-page.png)
 
-1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/dns/).
+1. Add the values to your DNS management service. For more details, see [Introduction to Domain Name Services](/dns).
 
 1. You will also see an option to choose a primary domain:
 
@@ -122,7 +122,7 @@ For more redirect scenarios, see [Configure Redirects](/redirects).
 ## Vanity Domains for Organizations
 Pantheon Partners, Strategic Partners, Enterprise accounts, Resellers, and OEM Partners have the ability to provision a custom vanity domain for each environment on every site running on the platform, in addition to the default platform domain (`pantheonsite.io`).
 
-For details, see [Vanity Domains](/vanity-domains/).
+For details, see [Vanity Domains](/vanity-domains).
 
 ## Troubleshooting
 
@@ -163,5 +163,5 @@ You can modify your local `hosts` file to validate domain-specific settings befo
 
 ## See Also
 - [Configure Redirects](/redirects)
-- [Launch Essentials](/guides/launch/)
-- [Relaunch Existing Pantheon Site](/relaunch/)
+- [Launch Essentials](/guides/launch)
+- [Relaunch Existing Pantheon Site](/relaunch)

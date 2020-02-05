@@ -24,7 +24,7 @@ Next, we'll use Pantheon's Quicksilver hooks to run our example [New Relic scrip
 
 <Alert title="Variables" type="export">
 
-This process uses [Terminus](/terminus/) commands that require your site name. Before we begin, set the variable `$site` in your terminal session to match your site name:
+This process uses [Terminus](/terminus) commands that require your site name. Before we begin, set the variable `$site` in your terminal session to match your site name:
 
 ```bash{promptUser: user}
 export site=yoursitename
@@ -76,7 +76,7 @@ export site=yoursitename
 
    <Alert title="Note" type="info">
 
-   `api_version` should be set once in [`pantheon.yml`](/pantheon-yml/). If you have an existing `pantheon.yml` with this line, don't add it again.
+   `api_version` should be set once in [`pantheon.yml`](/pantheon-yml). If you have an existing `pantheon.yml` with this line, don't add it again.
 
    </Alert>
 

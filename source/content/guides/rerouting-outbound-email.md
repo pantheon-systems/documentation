@@ -12,15 +12,15 @@ If your Drupal site sends outbound email, you don't want to accidentally spam yo
 
 Pantheon makes it easy to pull the Live database to other environments with the push of a button. However, if you mistakenly forget to manually change a setting stored in the database—you guessed it—you could accidentally spam folks during debugging or quality assurance testing.
 
-Fortunately, Reroute Email is easy to setup so settings persist per environment, even when moving the database between environments. Install and enable it in all environments, configure it via [settings.php](/settings-php/) with [environmental variables](/read-environment-config/), and never worry about spamming users during debugging or testing again.
+Fortunately, Reroute Email is easy to setup so settings persist per environment, even when moving the database between environments. Install and enable it in all environments, configure it via [settings.php](/settings-php) with [environmental variables](/read-environment-config), and never worry about spamming users during debugging or testing again.
 
 As an added bonus, you’ll be able to funnel all dev and testing emails to a single inbox—no more logging in to a bunch of email accounts just to test your business expectations.
 
 ## Installation
 
-Download and install as usual. You can use [SFTP](/sftp/) on Pantheon or the [Drupal UI](/cms-admin/#drupal-admin-interface) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
+Download and install as usual. You can use [SFTP](/sftp) on Pantheon or the [Drupal UI](/cms-admin/#drupal-admin-interface) to install a module, but my preference is to stay in Git mode, keep those automated backups running on Dev, and stay on the command line whenever possible.
 
-I chose [Drupal 7 as a start state](/start-state/#importing-an-existing-site) and performed a [git clone](/git/) of my Pantheon site.
+I chose [Drupal 7 as a start state](/start-state/#importing-an-existing-site) and performed a [git clone](/git) of my Pantheon site.
 ```
 $ cd sites
 $ git clone [pantheon git clone ssh connection string]
@@ -144,7 +144,7 @@ If you don’t see what you’re expecting, review your settings.php and ensure 
 That’s it! Now when Drupal sends out an email from any environment (except Live), it will get rerouted to the email address specified in settings.php. Our settings.php will make sure email is not rerouted on Live, so it’s business as usual. Make sure you’re using a [SMTP gateway](/email/#outgoing-email) on Live to ensure email deliverability.
 
 ### See Reroute Email In Action
-To see exactly what we did, I forked a new [MultiDev](/multidev/) Multidev environment called ```demo``` and requested a new account:
+To see exactly what we did, I forked a new [MultiDev](/multidev) Multidev environment called ```demo``` and requested a new account:
 
 ![Drupal site showing account requested and emails sent](../../images/reroute-email-account-requested.png)
 

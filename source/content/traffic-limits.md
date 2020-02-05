@@ -15,7 +15,7 @@ Basic plan sites do not have this protective feature and would see a change to t
 
 <Partial file="traffic-dl.md" />
 
-For details, see [Metrics in the Site Dashboard](/metrics/).
+For details, see [Metrics in the Site Dashboard](/metrics).
 
 ### Traffic Spikes
 A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable. For details, see [Pricing Comparison](https://pantheon.io/plans/pricing-comparison).
@@ -98,8 +98,8 @@ As above, in cases where these events are regular or sustained, we reserve the r
 
 ## See Also
 
-- [New Site Plans FAQs](/new-plans-faq/)
-- [Manage Plans in the Site Dashboard](/site-plan/)
-- [Billing in the Site Dashboard](/site-billing/)
-- [Metrics in the Site Dashboard](/metrics/)
+- [New Site Plans FAQs](/new-plans-faq)
+- [Manage Plans in the Site Dashboard](/site-plan)
+- [Billing in the Site Dashboard](/site-billing)
+- [Metrics in the Site Dashboard](/metrics)
 - [WordPress Best Practices](/wordpress-best-practices/#avoid-xml-rpc-attacks) to disable XML-RPC traffic to your WordPress site

@@ -7,7 +7,7 @@ categories: [develop]
 
 <Alert title="Pantheon Localdev" type="success" icon="star">
 
-Pantheon is working on a better way to develop locally. Before you continue reading this page check out [Localdev](/localdev/), currently in active development.
+Pantheon is working on a better way to develop locally. Before you continue reading this page check out [Localdev](/localdev), currently in active development.
 
 </Alert>
 
@@ -19,17 +19,17 @@ Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's WebOp
 
 </Enablement>
 
-Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev/) instead of local development.
+Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev) instead of local development.
 
 ## Before You Begin
 Be sure you have:
 
 - A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
-  - Pantheon uses a [particular architecture to maximize performance and availability](/application-containers/), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
+  - Pantheon uses a [particular architecture to maximize performance and availability](/application-containers), but it's possible to run the same code on a variety of different configurations. As long as the solution supports a minimum of PHP 5.3 and MySQL, you should be fine.
   - Ensure that your local stack's PHP version matches the [PHP version set for the target site on Pantheon](/php-versions/#verify-current-php-versions).
 - Git client for tracking code changes
 - SFTP client, such as [FileZilla](https://filezilla-project.org/ "FileZilla, a Cross-platform GUI SFTP client."), for transferring files OR rsync
-- [Terminus](/terminus/)
+- [Terminus](/terminus)
 - [Drush](/drush) (optional)
 
 To save time, clear the target site environment's cache. This can be done from the Pantheon Dashboard, from the application itself, or by running the following Terminus command:
@@ -66,7 +66,7 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
     ![Git Clone During](../images/git_clone.png)
 
-    If you run into permission problems, check your [SSH key](/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+    If you run into permission problems, check your [SSH key](/ssh-keys) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Get the Database
 
@@ -106,7 +106,7 @@ From within the Site Dashboard:
 
 ## Get the Files
 
-For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsync-and-sftp/).
+For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsync-and-sftp).
 
 ### Via Terminus
 Run the following Terminus commands:

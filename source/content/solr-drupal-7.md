@@ -154,7 +154,7 @@ Keep in mind that newly indexed items have a 2-minute delay until cron has been 
 <Partial file="solr-commit-changes.md" />
 
 #### apachesolr.module
-If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/terminus/):
+If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/terminus):
 ```bash
 terminus drush <site>.<env> -- vget apachesolr_service_class
 ```

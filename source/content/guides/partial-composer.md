@@ -10,7 +10,7 @@ permalink: docs/guides/:basename/
 In this guide, you'll learn how to use Composer in small doses with WordPress and Drupal 7 so you can work towards best practices achieved by more advanced implementations. This allows you to continue using Pantheon's one-click core updates in the Site Dashboard while managing non-core dependencies with Composer.
 
 ## Before You Begin
-- Read [Composer Fundamentals and Workflows](/composer/)
+- Read [Composer Fundamentals and Workflows](/composer)
 - Install [Composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and [Git](https://git-scm.com/downloads) locally
 - Create a WordPress or Drupal 7 site on Pantheon
 
@@ -212,4 +212,4 @@ Note that Pantheon does not run `composer install` on the platform, so you need 
 ## Next Steps
 If your use case doesn't require the more advanced Build Tools method, continue using Composer to manage any number of your non-core dependencies while preserving Pantheon's one-click core updates. This is only supported for Drupal 7 and WordPress. This is not supported on Drupal 8 as it will break one-click updates due to excessive conflicts.
 
-If you're ready to learn best practices for Composer on Pantheon, follow the [Build Tools](/guides/build-tools/) guide.
+If you're ready to learn best practices for Composer on Pantheon, follow the [Build Tools](/guides/build-tools) guide.

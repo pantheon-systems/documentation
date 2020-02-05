@@ -36,7 +36,7 @@ In this section we'll use the Terminus Build Tools Plugin to create a new Panthe
 
   ![Create Project Prompts](../../../images/pr-workflow/build-env-create-project-prompts.png)
 
-  This process will create a secure keypair, with the public key going to Pantheon and the private key stored in CircleCI. If you remove either key, you will need to [generate a new pair](/ssh-keys/) manually to fix the build process.
+  This process will create a secure keypair, with the public key going to Pantheon and the private key stored in CircleCI. If you remove either key, you will need to [generate a new pair](/ssh-keys) manually to fix the build process.
 
   <Accordion title="Troubleshooting" id="troubleshoot-install" icon="wrench">
 

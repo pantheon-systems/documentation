@@ -7,7 +7,7 @@ contributors: [sarahg]
 date: 6/4/2018
 ---
 
-Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distrubution through the [Global CDN](/global-cdn/), but S3 is a good option for addressing issues with [highly populated directories](/platform-considerations/#highly-populated-directories) or [serving large files](/platform-considerations/#large-files).
+Amazon Web Services (AWS) offers Simple Storage Service (S3) for scalable storage and content distribution, which can be integrated with sites running on Pantheon. Pantheon already offers content distrubution through the [Global CDN](/global-cdn), but S3 is a good option for addressing issues with [highly populated directories](/platform-considerations/#highly-populated-directories) or [serving large files](/platform-considerations/#large-files).
 
 ## Before You Begin
 
@@ -24,7 +24,7 @@ When creating an AWS account, you will have to enter credit card information. Th
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus/) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
+This process uses [Terminus](/terminus) commands. Before we begin, set the variable `$site` in your terminal session to match your site name:
 
 ```bash
 export site=yoursitename
@@ -88,7 +88,7 @@ This plugin has known [multisite issues](https://github.com/humanmade/S3-Uploads
 
    </Alert>
 
-4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommended a service like [Lockr](/guides/lockr/) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
+4. Add the credentials to `wp-config.php`, as described in the plugin's [README](https://github.com/humanmade/S3-Uploads#getting-set-up) file. For security, we recommended a service like [Lockr](/guides/lockr) or the [Terminus Secrets plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to store and retrieve these credentials securely.
 
 5. Commit and push the new plugin and your `wp-config.php` updates to the Dev environment, then  switch to SFTP mode and activate the plugin:
 

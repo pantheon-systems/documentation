@@ -28,9 +28,9 @@ Pantheon eliminates these risks entirely by running sites on a web-scale infrast
 
 ## Container Architecture
 
-Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Redis](/redis/) and/or [Apache Solr](/solr).
+Pantheon's infrastructure is based on a grid model. Each application container is created with an optimized PHP stack and isolated NGINX, APC cache, and PHP worker agents. Containers automatically bind your site's codebase with a dedicated MySQL container, networked filesystem, and any enabled addon services such as [Redis](/redis) and/or [Apache Solr](/solr).
 
-For more information on containers, see [All About Application Containers](/application-containers/).
+For more information on containers, see [All About Application Containers](/application-containers).
 
 ## Add and Remove Application Containers
 Add containers by upgrading the site's plan within the Site Dashboard to a Performance Medium plan or higher. If the additional container(s) are no longer needed, simply downgrade the plan within the Site Dashboard to remove.
@@ -47,7 +47,7 @@ On Pantheon, all Performance plans include Overage Protection to prevent one-tim
 
 Basic plan sites do not have this protective feature and are charged for traffic exceeding their allotment. The overage charge is $2.50 per 1,000 visits (no proration).
 
-For more information, see [Traffic Limits and Overages](/traffic-limits/).
+For more information, see [Traffic Limits and Overages](/traffic-limits).
 
 ### Elite or Contract Plans
 We allow an increase in application containers for campaigns or peak traffic. A request can be sent to Pantheon Support with the following information:
@@ -75,4 +75,4 @@ Consider enabling New Relic Pro for your site. You'll get access to a wide array
 For more information, see [New Relic Pro](/new-relic).
 
 ## Managing Temporary Files
-The `/tmp` directory is not shared across application containers, making temporary files created by your site's framework inaccessible for requests served by another container. A plan for managing these files should be implemented prior to scaling the site out. For more details, see [Temporary File Management](/tmp/).
+The `/tmp` directory is not shared across application containers, making temporary files created by your site's framework inaccessible for requests served by another container. A plan for managing these files should be implemented prior to scaling the site out. For more details, see [Temporary File Management](/tmp).

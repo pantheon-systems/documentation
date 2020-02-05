@@ -30,4 +30,4 @@ Join the:
 
 ## Code of Conduct
 
-Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/code-of-conduct/) for details, including how to report abuse.
+Pantheon is dedicated to a positive and harassment-free community experience for everyone. [See our full code of conduct](/code-of-conduct) for details, including how to report abuse.

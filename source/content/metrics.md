@@ -50,15 +50,15 @@ Only requests with a 2xx status count as pages served, so 301 redirects will not
 Yes! Metrics are now available for the entire site or by environment via the [Terminus](/terminus) `metrics` command.
 
 ### Why don't I see any data, or why don't I see a full 12 months of data?
-Data is shown for dates after March 18, 2018. If your site is not yet on the Global CDN data will not be available. To upgrade, see [Pantheon Global CDN](/global-cdn/).
+Data is shown for dates after March 18, 2018. If your site is not yet on the Global CDN data will not be available. To upgrade, see [Pantheon Global CDN](/global-cdn).
 
 ### Are multiple user agents on the same originating IP address counted separately?
 Yes. For example, multiple devices on the same home network visiting your site would each be considered a unique visitor.
 
 ### Can I check metrics from the command line with Terminus?
-Yes! Access to metrics via the Terminus `metrics` command. [Install Terminus](/terminus/install/) or update to the [current release](/terminus/updates#updates) for access to the `metrics` command.
+Yes! Access to metrics via the Terminus `metrics` command. [Install Terminus](/terminus/install) or update to the [current release](/terminus/updates#updates) for access to the `metrics` command.
 
 ## See Also
-- [Traffic Limits and Overages](/traffic-limits/)
-- [Manage Plans in the Site Dashboard](/site-plan/)
-- [New Site Plans FAQs](/new-plans-faq/)
+- [Traffic Limits and Overages](/traffic-limits)
+- [Manage Plans in the Site Dashboard](/site-plan)
+- [New Site Plans FAQs](/new-plans-faq)

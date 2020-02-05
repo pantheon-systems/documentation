@@ -9,7 +9,7 @@ contributors: [edwardangert]
 reviewed: "2020-01-13"
 ---
 
-Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes/). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/pantheon-workflow/).
+Pantheon offers a number of [ways to connect to your site](/guides/quickstart/connection-modes). In addition to Git and SFTP modes, [Pantheon Localdev](https://pantheon.io/localdev) gives you a graphical interface to your Pantheon sites, complete with a containerized local environment that makes it easy to develop and preview your site locally while still maintaining the [Pantheon Workflow](/pantheon-workflow).
 
 Localdev lets you [use an integrated development environment (**IDE**)](#use-a-local-ide-to-develop-your-pantheon-site) to edit files and code, and push changes to Pantheon right from your desktop. Use it if you want to avoid the command line, or to develop sites with a fully functional local preview, even when you don't have an internet connection.
 
@@ -94,7 +94,7 @@ After you make changes to your site:
 
 ## Advanced Steps
 
-For users looking to be more hands on and willing to use the terminal, try [Terminus](/terminus/) and [Lando](https://docs.devwithlando.io/started.html). The [Local Development](/local-development/) doc can help you get started.
+For users looking to be more hands on and willing to use the terminal, try [Terminus](/terminus) and [Lando](https://docs.devwithlando.io/started.html). The [Local Development](/local-development) doc can help you get started.
 
 ## FAQ, Troubleshooting, and Support
 
@@ -127,7 +127,7 @@ The steps in this section should only be used as a last resort. This resets Loca
 
 ## Limitations
 
-Localdev does not connect to [Multidev](/multidev/) environments or allow direct database access.
+Localdev does not connect to [Multidev](/multidev) environments or allow direct database access.
 
 ## Changelog
 

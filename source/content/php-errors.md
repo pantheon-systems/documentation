@@ -67,11 +67,11 @@ Use the following debugging techniques to investigate undefined function error m
 
 - Search for the offending function elsewhere in the codebase to make sure it's defined somewhere in the project.
 - Check the reported PHP file at full bootstrap. Rather than accessing the reported PHP file directly (e.g., `https://example.com/path/to/phpfile.php`), browse to a page that includes the file (e.g., `https://example.com/some-page/`) to see if the same error occurs with the site fully bootstrapped.
-- Review [`nginx-access.log`](/logs/) for requests to the reported PHP file.
+- Review [`nginx-access.log`](/logs) for requests to the reported PHP file.
 
 If you see direct requests to PHP files causing fatal undefined function errors (often caused by bot traffic), use the `pantheon.yml` configuration file to set protected web paths. For details, see [Pantheon YAML Configuration Files](/pantheon-yml/#protected-web-paths). This stops the file from being web accessible while keeping the file available to PHP during bootstrap. When accessed directly, protected paths and files return a 403 Access Denied server response.
 
-We also recommend submitting a sitemap and instructing bots to only crawl designated paths set in `robots.txt`. For details, see [Bots and Indexing on Pantheon](/bots-and-indexing/).
+We also recommend submitting a sitemap and instructing bots to only crawl designated paths set in `robots.txt`. For details, see [Bots and Indexing on Pantheon](/bots-and-indexing).
 
 ## Undefined Index Notices
 

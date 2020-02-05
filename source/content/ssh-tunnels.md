@@ -11,10 +11,10 @@ This technique configures an SSH client to forward a local port to a port on Pan
 
 Currently, there are two services on Pantheon that support SSH tunneling:
 
-- [MySQL database](/mysql-access/) (dbserver)
-- [Redis cache](/redis/)
+- [MySQL database](/mysql-access) (dbserver)
+- [Redis cache](/redis)
 
-To restrict access to these services to SSH tunnels only, consider [Secure Runtime Access](/secure-runtime-access/).
+To restrict access to these services to SSH tunnels only, consider [Secure Runtime Access](/secure-runtime-access).
 
 ## Prerequisites
 
@@ -114,4 +114,4 @@ If port 2222 is blocked on your network you will see an error similar to the fol
 SSH: connect to host codeserver.dev.<site UUID>.drush.in port 2222: No route to host
 Fatal: Could not read from remote repository.
 ```
-See [Port 2222 Blocked Workaround](/port-2222/) for more information.
+See [Port 2222 Blocked Workaround](/port-2222) for more information.

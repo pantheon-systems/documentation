@@ -18,9 +18,9 @@ For Drupal 6/7, Pantheon uses a variant of Pressflow Drupal to allow the server 
 The following articles include techniques and configurations for `settings.php` on Pantheon:
 
 - [Reading Pantheon Environment Configuration](/read-environment-config) (including domain_access)
-- [Installing Redis on Drupal or WordPress](/redis/)
-- [Platform and Custom Domains](/domains/)
-- [Configure Redirects](/redirects/)
+- [Installing Redis on Drupal or WordPress](/redis)
+- [Platform and Custom Domains](/domains)
+- [Configure Redirects](/redirects)
 - [SSO and Identity Federation](/sso) (LDAP TLS certificate configuration)
 
 ## Local Database Configuration for Development
@@ -132,13 +132,13 @@ Depending on your use case, there are three possibilities:
 
   <Alert title="Note" type="info">
   
-  `$_SERVER` is not generally available from the command line so [logic should check for that when used](/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/server_name-and-server_port/).
+  `$_SERVER` is not generally available from the command line so [logic should check for that when used](/domains/#troubleshooting), and [avoid using `$_SERVER['SERVER_NAME']` and `$_SERVER['SERVER_PORT']`](/server_name-and-server_port).
   
   </Alert>
 
- - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/redis/) guide for examples.
+ - For actions that should take place on every environment, such as Redis caching, use the constant `PANTHEON_ENVIRONMENT`. Again, it will contain Dev, Test, or Live. See our [Redis](/redis) guide for examples.
 
- - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config/) for more information, or see our [Redis](/redis/) guide for examples.
+ - For Actions that require access to protected services like Redis or the site database, you can use the `$_ENV` superglobal. Please review our guide on [Reading Pantheon Environment Configuration](/read-environment-config) for more information, or see our [Redis](/redis) guide for examples.
 
 ### Why does Drupal report that `settings.php` is not protected? I can't change the permissions on `settings.php`.
 
@@ -192,14 +192,14 @@ You can technically use database prefixes, but Pantheon will not support databas
 
 Drupal 7 doesn't ship with a `settings.php` in place; as the error suggests, you should make a copy of the `default.settings.php` and rename it `settings.php`. Once you have created a `settings.php` file, the `settings.php` area of the report should change to green.
 
-Drupal 7 sites that plan to use [Drush](/drush/) should have a `settings.php` file.
+Drupal 7 sites that plan to use [Drush](/drush) should have a `settings.php` file.
 
 ### Can I edit settings.pantheon.php?
 No; `settings.pantheon.php` is for Pantheon's use only and you should only modify the `settings.php` file. The `settings.pantheon.php` file may change in future updates, and modifying it would cause conflicts.
 
 ### How do I enable IonCube Decoder support?
 
-If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions/) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `settings.php`:
+If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `settings.php`:
 
 ```php
 ini_set('ioncube.loader.encoded_paths', '/');

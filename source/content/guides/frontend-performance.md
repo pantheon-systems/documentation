@@ -229,15 +229,15 @@ The Drupal 8 default setting is 10 minutes. You can set much higher cache max ag
 Improve performance on longer trips to and from the browser for instances you _want_ to bypass cache and go straight to the application:
 
 #### Upgrade to PHP7
-If you haven't done so already, [make the switch to PHP7](/php-versions/). Upgrading your site's PHP version will improve the security, performance, and supportability of your site.
+If you haven't done so already, [make the switch to PHP7](/php-versions). Upgrading your site's PHP version will improve the security, performance, and supportability of your site.
 
 See our blog post for an example of [62% performance gains after upgrading](https://pantheon.io/blog/php-7-now-available-all-sites-pantheon).
 
 #### Enable Redis Object Caching
-Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Installing Redis on Drupal or WordPress](/redis/).
+Sites loading a lot of content can benefit from an object cache like Redis. For details, see [Installing Redis on Drupal or WordPress](/redis).
 
 #### Monitor Performance with New Relic
-If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/new-relic/) for help identifying bottlenecks.
+If your site doesn't seem to be able to send uncached content fast enough, enable monitoring services for free with [New Relic](/new-relic) for help identifying bottlenecks.
 
 #### Helper Tools
 There are toolbars for both Drupal and WordPress that provide stats like the number of queries, amount of memory, and response time. These can be helpful for real time debugging.
@@ -452,13 +452,13 @@ The new filename will cause clients to get the new file, even if they have a cac
 
 
 ## Avoid Redirects
-A redirect will add at least one extra HTTP request-response cycle. As a result, eliminating extraneous redirects can make your website more snappy. Despite your best efforts it still may be necessary to include the occasional [redirect to a primary domain](/guides/launch/redirects/) using HTTPS with or without the WWW.
+A redirect will add at least one extra HTTP request-response cycle. As a result, eliminating extraneous redirects can make your website more snappy. Despite your best efforts it still may be necessary to include the occasional [redirect to a primary domain](/guides/launch/redirects) using HTTPS with or without the WWW.
 
 Other considerations:
 
 - Avoid mobile-specific subdomains and use responsive web design techniques.
 - A DNS service provider such as [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL-) may allow speedier redirects in some circumstances, but it’s still faster not to redirect at all.
-- Avoid several chained redirects that make small changes such as redirecting to HTTPS, adding or removing WWW, or adding a trailing slash. Instead, [redirect to a primary domain](/guides/launch/redirects/) that has all of these standardized.
+- Avoid several chained redirects that make small changes such as redirecting to HTTPS, adding or removing WWW, or adding a trailing slash. Instead, [redirect to a primary domain](/guides/launch/redirects) that has all of these standardized.
 - Pantheon doesn’t read changes to the `.htaccess` file or support NGINX customization, so redirections via those methods will not work. For details, see [Configure Redirects](/redirects/#php-vs-htaccess).
 
 ## GZIP Compression
