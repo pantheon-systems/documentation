@@ -301,11 +301,7 @@ ___
 ## [Taxonomy CSV](https://www.drupal.org/project/taxonomy_csv)
 
 **Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
-___
 
-## [Twig Extensions](https://www.drupal.org/project/twig_extensions)
-
-**Issue**:  This module uses [`php-intl`]( https://secure.php.net/manual/en/intro.intl.php), which is not currently supported by Pantheon.
 ___
 
 ## [Varnish](https://www.drupal.org/project/varnish)
