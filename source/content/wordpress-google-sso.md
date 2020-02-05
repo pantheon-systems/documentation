@@ -98,7 +98,7 @@ add_filter( 'wp_saml_auth_option', function( $value, $option_name ) {
   }
 
   return $value;
-});
+}, 10, 2);
 ```
 
 See WP SAML Auth's [annotated installation instructions](https://github.com/pantheon-systems/wp-saml-auth#installation) for explanation of all potential configuration options.
