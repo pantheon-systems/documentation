@@ -4,6 +4,7 @@ description: Detailed information on applying and debugging upstream updates fro
 categories: [get-started, workflow,develop]
 tags: [dashboard, devterminus, git]
 contributors: [cityofoaksdesign, rachelwhitton, alexfornuto]
+reviewed: "2020-02-06"
 ---
 Pantheon maintains core upstream repositories for [WordPress](https://github.com/pantheon-systems/wordpress), [Drupal 8](https://github.com/pantheon-systems/drops-8), and [Drupal 7](https://github.com/pantheon-systems/drops-7) which act as a parent repository to site repositories. Updates made by Pantheon in the core upstream repository, in addition to [updates made by maintainers of Custom Upstreams](/maintain-custom-upstream), become available downstream as a one-click update.
 
@@ -46,6 +47,8 @@ terminus upstream:updates:apply site.env --updatedb
 Replace `site` and `env` with your site name and the correct environment. Learn more about this command by running `terminus help upstream:updates:apply`.
 
 ### Update Multiple Sites
+
+The Terminus Mass Update Plugin can apply core updates to multiple sites at once:
 
 ```bash{promptUser: user}
 terminus sites:mass-update:apply
