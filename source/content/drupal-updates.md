@@ -6,7 +6,7 @@ categories: [get-started,drupal]
 ---
 To upgrade Drupal to a new major version (e.g. version 6 to version 7) you must create a new site. Do not perform a major version upgrade from within the original site. If you have a Drupal 6 site that you want to upgrade to Drupal 7, create a new Drupal 7 site and add content, files and modules into the new site. If you are upgrading from Drupal 6 or Drupal 7 to Drupal 8, create a new Drupal 8 site and add content, files and modules from the old site there.
 
-Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates/) once the upgrade is complete.
+Migrating to a new site on the platform will provide you with the QA and deployment processes you need to test your upgrade and ensure everything works properly. It also ensures that your site will receive [upstream updates](/core-updates) once the upgrade is complete.
 
 <Alert title="Warning" type="danger">
 If you have already created a site and want to upgrade it to a new major version, you must start by creating a new site with the new Drupal version you want to use. We do not support upgrading to a new major version from within an existing site.
@@ -37,7 +37,7 @@ The details of executing an upgrade/migration to Drupal 8 have continued to shif
 
 ### Content and configuration
 
-Drupal 8 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 8 site](/drupal-8-configuration-management/)).
+Drupal 8 migrations automatically create the needed content types and establish the mappings between the old and new fields by default. You should review the configuration produced by these migrations by exporting your configuration to `yml` files ([a best practice for any Drupal 8 site](/drupal-8-configuration-management)).
 
 ### Customizing migrations
 
@@ -69,7 +69,7 @@ terminus drush my-drupal-8-site.dev -- migrate-import --all
 
 ## Updating DNS
 
-If your source site is on Pantheon and has your domain name pointing to it, you will need to follow special steps to move the domain name to the new site. For details, see [Relaunch Existing Pantheon Site](/relaunch/). Otherwise, follow instructions within the Site Dashboard when [adding a domain](/guides/launch/domains/).
+If your source site is on Pantheon and has your domain name pointing to it, you will need to follow special steps to move the domain name to the new site. For details, see [Relaunch Existing Pantheon Site](/relaunch). Otherwise, follow instructions within the Site Dashboard when [adding a domain](/guides/launch/domains).
 
 
 ## Troubleshooting

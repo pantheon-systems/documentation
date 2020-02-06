@@ -43,7 +43,7 @@ For a single site, there are many different [WordPress plugins for two-factor au
 Duo configuration settings and keys are stored in the database. To avoid setting up new keys for each environment you can:
 
   - synchronize and import your database
-  - use a tool like [WP-CFM](/wp-cfm/)
+  - use a tool like [WP-CFM](/wp-cfm)
   - keep the new application page from the Duo Admin panel open, and reenter the values for each environment.
 
 </Alert>
@@ -183,7 +183,7 @@ We recommend adding an [SSH Key](/ssh-keys) to authenticate yourself on Pantheon
 </Alert>
 
 ### Single Sign-On for Orgs
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/sso-organizations/).
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [Single Sign-On for Pantheon Organizations](/sso-organizations).
 
 ## See Also
 - [Security on Pantheon](https://pantheon.io/security)

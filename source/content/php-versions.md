@@ -9,8 +9,8 @@ Upgrading your site's PHP version will improve the security, performance, and su
 ## Before You Begin
 Older software is more likely to contain code that is incompatible with recent PHP versions. Before you change your PHP version:
 
-- Update core to the latest release. For details, see [WordPress and Drupal Core Updates](/core-updates/).
-- Update themes, plugins, and modules. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin/).
+- Update core to the latest release. For details, see [WordPress and Drupal Core Updates](/core-updates).
+- Update themes, plugins, and modules. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
 
 ## Verify Current PHP Versions
 Verify current PHP settings from the Site Dashboard by clicking **Settings** > **PHP version**.
@@ -122,8 +122,8 @@ If you see errors on the Pantheon Dashboard when trying to auto-run `update.php`
 * [PHP Supported Versions](https://secure.php.net/supported-versions.php)
 * [Drupal specific version notes on PHP requirements](https://www.drupal.org/requirements/php#drupalversions) and [WordPress Requirements](https://wordpress.org/about/requirements/)
 * [Log Files on Pantheon](/logs)
-* [PHP Errors and Exceptions](/php-errors/)
-* [The pantheon.yml Configuration File](/pantheon-yml/)
-* [Securely Working with phpinfo](/phpinfo/)
+* [PHP Errors and Exceptions](/php-errors)
+* [The pantheon.yml Configuration File](/pantheon-yml)
+* [Securely Working with phpinfo](/phpinfo)
 * [php.net - Backward Incompatible Changes](https://secure.php.net/manual/en/migration70.incompatible.php)
 * [Debug Intermittent PHP 7 Notices](/deprecated-constructor-notices)

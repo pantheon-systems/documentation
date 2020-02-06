@@ -16,7 +16,7 @@ The Site Team generally consists of one Site Owner and any necessary Team Member
 | Connect to the site's database via MySQL          | ✓         | ✓               |
 | Clone Database/Files between all environments     | ✓         | ✓               |
 | Deploy changes to Test and Live                   | ✓         | ✓               |
-| Access [Pantheon Support](/support/) | ✓         | ✓               |
+| Access [Pantheon Support](/support) | ✓         | ✓               |
 | Enable New Relic                                  | ✓         | ✓               |
 | Add/remove team members                           | ✓         |                 |
 | Transfer Ownership                                | ✓         |                 |
@@ -24,7 +24,7 @@ The Site Team generally consists of one Site Owner and any necessary Team Member
 | Add Solr or Redis                                 | ✓         |                 |
 | Manage a site's plan                              | ✓         |                 |
 
-Once a site has been associated with an [organization](/organizations/), either through ownership or a relationship with a supporting organization, [Role-Based Permissions & Change Management](/change-management) permissions are available.
+Once a site has been associated with an [organization](/organizations), either through ownership or a relationship with a supporting organization, [Role-Based Permissions & Change Management](/change-management) permissions are available.
 <Alert title="Note" type="info">
 For Sites associated with an Organization, the Developers and Team-members from the Organization may manage Multidev Environments, while members of the Site Team will not be able to Create, Delete, or Merge commits from Multidevs.
 </Alert>

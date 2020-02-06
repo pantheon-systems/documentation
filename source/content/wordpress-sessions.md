@@ -37,7 +37,7 @@ The best way to determine which plugin or theme is not allowing caching is to us
 
 1. To check your theme, use your default theme (twentynineteen for example), and check for the cookie.
 
-1. To see if a plugin is breaking the cache, disable the plugins one by one. Do not forget to [clear the cache](/clear-caches/) from the Pantheon dashboard every time that you disable a plugin. The first plugin disabled which makes the cache work again is most likely the culprit.
+1. To see if a plugin is breaking the cache, disable the plugins one by one. Do not forget to [clear the cache](/clear-caches) from the Pantheon dashboard every time that you disable a plugin. The first plugin disabled which makes the cache work again is most likely the culprit.
 
   Note: If you have a local copy of your site, you can search it for plugins that uses `session_start()` or `$_SESSIONS`, and start turning them off first.
 

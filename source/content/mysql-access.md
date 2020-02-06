@@ -27,7 +27,7 @@ As each database server is in the cloud, the credentials will occasionally be up
 There's a wide array of MySQL clients that can be used, including [MySQL Workbench](https://dev.mysql.com/downloads/workbench/), [Sequel Pro](https://www.sequelpro.com/download), [Navicat](https://www.navicat.com/download), [PHPMyAdmin](https://www.phpmyadmin.net/), and others. See the instruction manual or issue queue of your software to learn more about how to configure a connection.
 
 ### Open Sequel Pro Database Connection
-Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Pro via [Terminus](/terminus/) and [Drush](/drush):
+Drupal users can create [`spf-template.spf`](https://gist.github.com/aaronbauman/f50cc691eb3ed60a358c#file-spf-template-spf) and use the following script to establish a database connection in Sequel Pro via [Terminus](/terminus) and [Drush](/drush):
 
 ```bash
 #!/bin/sh
@@ -91,7 +91,7 @@ mysql> SHOW STATUS LIKE "Ssl_cipher";
 +---------------+---------------------------+
 ```
 
-Developers can use SSH tunnels to add additional layers of encryption to remote MySQL connections, or tunnel the connection across non-standard ports. For more information on how to set up tunnels for databases, see [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/ssh-tunnels/).
+Developers can use SSH tunnels to add additional layers of encryption to remote MySQL connections, or tunnel the connection across non-standard ports. For more information on how to set up tunnels for databases, see [Secure Connections to Pantheon Services via TLS or SSH Tunnels](/ssh-tunnels).
 
 ## Troubleshooting MySQL Connections
 
@@ -110,7 +110,7 @@ This error occurs when a request is sent to a database server that is in sleep m
 terminus env:wake <site>.<env>
 ```
 ### Can't Connect to Local MySQL Server Through Socket
-See [Database Connection Errors](/database-connection-errors/) to troubleshoot
+See [Database Connection Errors](/database-connection-errors) to troubleshoot
  connection errors like the following:<br />
 ```sql
 Can’t connect to local MySQL server through socket '/var/lib/mysql/mysql.sock'...).

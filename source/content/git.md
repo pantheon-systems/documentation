@@ -45,7 +45,7 @@ If everything worked correctly you will see Git fetching the data:
 
 ![Git Clone During](../images/git_clone.png)
 
-If you run into permission problems, check your [SSH key](/ssh-keys/) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+If you run into permission problems, check your [SSH key](/ssh-keys) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Make a Change
 
@@ -177,7 +177,7 @@ ssh: connect to host codeserver.dev.xxx.drush.in port 2222: Operation timed out
 fatal: Could not read from remote repository.
 ```
 
-To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround](/port-2222/).
+To clear this up, you may need to work with your network administrators to unblock this port. If this isn't an option, you may need to try a [Port 2222 Blocked Workaround](/port-2222).
 
 ## Additional Resources
 
@@ -198,5 +198,5 @@ For further learning, we recommend the following resources:
 
 For Pantheon-specific Git questions, see the following:
 
-- [Git FAQs](/git-faq/)
-- [Undo Git Commits](/undo-commits/)
+- [Git FAQs](/git-faq)
+- [Undo Git Commits](/undo-commits)

@@ -20,7 +20,7 @@ Requests served by the [Pantheon Global CDN](/global-cdn) will not hit the nginx
 
 Be sure that you have:
 
-* [Terminus](/terminus/)
+* [Terminus](/terminus)
 * [GoAccess](https://goaccess.io/download)
   * **Mac OS X**: Install via [Homebrew](https://brew.sh/) (`brew install goaccess`)
   * **Windows**: Use [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
@@ -43,7 +43,7 @@ log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
 
 ## Create a report
 
-1. [Download your nginx log files](/logs/) from Pantheon via SFTP.
+1. [Download your nginx log files](/logs) from Pantheon via SFTP.
 1. From the directory containing your `nginx-access.log` file, run GoAccess:
 
   ```bash{promptUser: user}
@@ -104,5 +104,5 @@ An [issue has been filed](https://github.com/allinurl/goaccess/issues/1640) on t
 ## See Also
 
 * [Log Files on Pantheon](/logs)
-* [Bots and Indexing](/bots-and-indexing/)
-* [Traffic Limits and Overages](/traffic-limits/)
+* [Bots and Indexing](/bots-and-indexing)
+* [Traffic Limits and Overages](/traffic-limits)

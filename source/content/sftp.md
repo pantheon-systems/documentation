@@ -12,7 +12,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 
 </Enablement>
 
-SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin/).
+SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
 
 <Alert tile="SFTP Mode Considerations" type="danger">
 
@@ -95,9 +95,9 @@ This can be useful when you have many changes you wish to undo or if it would ot
 SFTP mode works with any standards-compliant SFTP client, including many GUI tools and IDEs. We have specific guides to some:
 
 - PHPStorm with [WordPress](/wordpress-phpstorm) and [Drupal](/drupal-phpstorm)
-- [FileZilla](/filezilla/)
-- [WinSCP](/winscp/)
-- [Visual Studio Code](/visual-studio-code/)
+- [FileZilla](/filezilla)
+- [WinSCP](/winscp)
+- [Visual Studio Code](/visual-studio-code)
 
 ## Troubleshooting
 
@@ -111,12 +111,12 @@ A simple way to test for outbound network restrictions is to load a special web 
 
 * [http://portquiz.net:2222/](http://portquiz.net:2222/)
 
-If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port `2222` outbound. Contact your network administrators to allow outbound access on port `2222`. Advanced users may also be comfortable [establishing an SSH tunnel through another server](/port-2222/) instead.
+If you **cannot** access that web page then your network or firewall is likely preventing you from accessing port `2222` outbound. Contact your network administrators to allow outbound access on port `2222`. Advanced users may also be comfortable [establishing an SSH tunnel through another server](/port-2222) instead.
 
 If you **can** access that web page on port `2222` then your issue does not appear to be network or firewall related.  Be sure to double-check or re-enter your [SFTP settings](/sftp/#sftp-connection-information), including SFTP mode and port `2222`. Contact Pantheon Support if you still have trouble.
 
 ### I registered my Pantheon account via Google. How do I connect to SFTP?
-We recommend [adding an SSH Key](/ssh-keys/), which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
+We recommend [adding an SSH Key](/ssh-keys), which allows more security than a simple password. If you've registered via social login (Connect with Google) and you'd still like to add a password to your account, logout and visit [https://dashboard.pantheon.io/reset-password](https://dashboard.pantheon.io/reset-password)
 
 ### I can't write to my codebase on Test or Live.
 

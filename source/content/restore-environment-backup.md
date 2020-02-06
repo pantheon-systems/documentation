@@ -95,8 +95,8 @@ The restore process removes any recent content or changes applied to your site s
 
 If you still want to restore a backup to the Live environment, we recommend the following steps:
 
-- [Lock the environment first](/security/)
-- [Run a backup](/backups/) of LIVE, in order to have a copy of files and the database that will be overwritten
+- [Lock the environment first](/security)
+- [Run a backup](/backups) of LIVE, in order to have a copy of files and the database that will be overwritten
 - Run the restore while the site is still locked
 
 These steps allow you to recreate any new content manually after the process is complete. It also restricts access while the restore process is still running, which is a good practice to avoid conflicts or data corruption.
@@ -108,7 +108,7 @@ Alternately, consider restoring only the code and database from backups, and mov
 
 ### Restore Large Site with Terminus and Rsync
 
-Using [Terminus](/terminus/), you can restore all or part of a site from the command line. This is useful if you need to only restore one part of the site (code, database, files), or want to script a restoration process.
+Using [Terminus](/terminus), you can restore all or part of a site from the command line. This is useful if you need to only restore one part of the site (code, database, files), or want to script a restoration process.
 
 <Alert title ="Variables" type="export">
 

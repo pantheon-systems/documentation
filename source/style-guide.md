@@ -60,7 +60,7 @@ earlynote: The documentation on this page discusses features and options that ar
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
-Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus/).
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus).
 
 <div class="style-example" >
 ## Before You Begin {.info}
@@ -159,10 +159,10 @@ Do not specify a target tab or window for external, or any other links, leaving 
 #### Internal Links
 Use relative paths when linking to other pages of the docs site.
 <div class="style-example" >
-[Quick Start](/guides/quickstart/)
+[Quick Start](/guides/quickstart)
 <hr class="source-code">
 ```markdown
-[Quick Start](/guides/quickstart/)
+[Quick Start](/guides/quickstart)
 ```
 </div>
 
@@ -242,7 +242,7 @@ When writing multi-step processes, repeated variables and constants should be de
 <div class="style-example" >
 
 <Alert title="Exports" type="export">
-This process uses [Terminus](/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
@@ -253,7 +253,7 @@ export env=dev
 
 ```html
 <Alert title="Exports" type="export">
-This process uses [Terminus](/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 <pre>
 <code class="bash">export site=yoursitename
 export env=dev
@@ -534,12 +534,12 @@ This is the optimal place to provide links to external resources on the subject,
 
 <div class="style-example" >
 ## See Also {.info}
-- [An internal link](/guides/)
+- [An internal link](/guides)
 - [An external link](https://pantheon.io/blog/)
 <hr class="source-code">
 ```markdown
 ## See Also
-- [An internal link](/guides/)
+- [An internal link](/guides)
 - [An external link](https://pantheon.io/blog/)
 ```
 </div>

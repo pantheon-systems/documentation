@@ -8,7 +8,7 @@ categories: [troubleshoot]
 
 ## Get Started
 
-Start by getting the MySQL connection for the environment you want to access. To get the database credentials, copy them from the Connection Information widget available on the site's Dashboard. For detailed information, see [Accessing MySQL database](/mysql-access/).
+Start by getting the MySQL connection for the environment you want to access. To get the database credentials, copy them from the Connection Information widget available on the site's Dashboard. For detailed information, see [Accessing MySQL database](/mysql-access).
 
 ## Create a New MySQL Connection
 

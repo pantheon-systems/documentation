@@ -4,7 +4,7 @@ description: Optimize Drupal and Global CDN caching to maximize your site's perf
 tags: [drupal, caching, CDN]
 categories: [performance]
 ---
-To maximize your site's performance on Pantheon and to take advantage of our [Global CDN caching](/global-cdn-caching/), you'll need to configure your site's performance settings.
+To maximize your site's performance on Pantheon and to take advantage of our [Global CDN caching](/global-cdn-caching), you'll need to configure your site's performance settings.
 
 <Enablement title="Agency WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs" campaign="docs-webops">
 
@@ -33,7 +33,7 @@ On the Live environment, make sure to enable "Aggregate and compress CSS files" 
 ### Cache Tags
 Drupal 8 introduced a [cache metadata](https://www.drupal.org/docs/8/api/cache-api/cache-api) system that allows internal and external caches to be cleared in very granular fashion as data is changed. For instance, if `node 123` were resaved, caches that depends upon that node, like the full page cache of the page `mysite.com/node/123`, should be cleared.
 
-This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal 8's cache metadata to communicate with the [Pantheon Global CDN](/global-cdn/). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
+This functionality can be added via the [Pantheon Advanced Page Cache](https://www.drupal.org/project/pantheon_advanced_page_cache) module, which uses Drupal 8's cache metadata to communicate with the [Pantheon Global CDN](/global-cdn). The Drupal 7 version of the module depends upon the [Drupal 8 Cache Backport module](https://www.drupal.org/project/d8cache).
 
 ## Drupal 7 Performance Configuration
 
@@ -103,4 +103,4 @@ This setting controls whether or not to compile and cache your CSS and JavaScri
 Contributed modules like `views.module` and `panels.module` contain their own caching options, which are much more fine-grained than the basic Drupal cache settings. If you use these modules, you should definitely look at implementing their cache settings to provide a good logged-in user experience.
 
 ## See Also
-- [Global CDN Caching for High Performance](/global-cdn-caching/)
+- [Global CDN Caching for High Performance](/global-cdn-caching)

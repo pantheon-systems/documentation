@@ -18,4 +18,4 @@ There are some hosting providers that block complete site exports from cPanel, m
 8. Create a local site using [MAMP](https://www.mamp.info/en/) or a similar tool.
 9. Import the database.
 10. Test the site.
-11. Now that you have the site exported and running locally, you can [migrate to Pantheon](/migrate/).
+11. Now that you have the site exported and running locally, you can [migrate to Pantheon](/migrate).

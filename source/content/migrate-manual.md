@@ -9,12 +9,12 @@ Manually migrate your site to Pantheon when any of the following apply:
 * **Large Drupal Site Archive**: Site archive exceeds the import file size limit of 500MB.
 * **Large WordPress Site**: WordPress site exceeds 500MB.
 * **Preserve Git History**: You'd like to preserve your site's existing Git commit history.
-* **[WordPress Site Networks](/guides/multisite/)**
+* **[WordPress Site Networks](/guides/multisite)**
 * **Plugin install unavailable on existing WordPress site**: For example, if your existing site is hosted on WordPress.com, you'll be unable to install the Pantheon Migrations plugin.
 * **Local WordPress Site**: If your WordPress site is only on your local machine and not yet live.
 * **Debug Failed Migration**: It can be helpful to migrate your code, database, and files separately if the standard migration procedure failed.
 
-If none of the above apply to your project, use the [standard migration procedure](/migrate/).
+If none of the above apply to your project, use the [standard migration procedure](/migrate).
 
 <Alert title="Note" type="info" >
 
@@ -25,8 +25,8 @@ Site migrations are one of the services offered by our [Professional Services](/
 ## Before You Begin
 To ensure a successful migration, complete the following tasks on the source site before you start:
 
-- Read [Platform Considerations](/platform-considerations/)
-- Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues/)
+- Read [Platform Considerations](/platform-considerations)
+- Reference your plugins and/or modules against [Modules and Plugins with Known Issues](/modules-plugins-known-issues)
 - Make sure your code is compatible with PHP 7.2. If not, be prepared to [adjust PHP versions](/php-versions/#configure-php-version)
 - Upgrade to the latest version of WordPress or Drupal core
 - Clear all caches
@@ -62,7 +62,7 @@ Drupal 8 sites running on Pantheon come with a bundled `settings.php` that inclu
 
    Note: It is possible to upload a site running locally by putting in the local url. For example, (`http://localhost`).
 
-3. Name your site and select an [Organization](/organizations/) (optional), then click **Create Site**:
+3. Name your site and select an [Organization](/organizations) (optional), then click **Create Site**:
 
    ![Name the Migrated Site and Optionally Choose an Organization](../images/dashboard/migrate-step3.png)
 
@@ -298,7 +298,7 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
   <Tab title="Over 500MBs" id="500mbsplus">
 
-  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Pro or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access/).
+  The following instructions will allow you to add database archives larger than 500MBs using the command line MySQL client, but you can also use a GUI client like Sequel Pro or Navicat. For more information, see [Accessing MySQL Databases](/mysql-access).
 
    1. From the **<span class="glyphicons glyphicons-wrench"></span> Dev** environment on the Pantheon Site Dashboard, click **Connection Info** and copy the Database connection string. It will look similar to this:
 

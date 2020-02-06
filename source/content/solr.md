@@ -14,7 +14,7 @@ Apache Solr is a system for indexing and searching site content. Pantheon provid
 
 <Partial file="solr-version.md" />
 
-If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr/) or another alternative search.
+If your search needs include geospatial search, emojis, or multilingual search, consider [OpenSolr](/opensolr) or another alternative search.
 
 Pantheon Search supports [Search API Solr 8.x-1.x](https://www.drupal.org/project/search_api_solr), which is currently unsupported by Solr. Search API Solr 8.x-1.x should continue to work as long as the Search API Pantheon module is also being used, following the installation directions below.
 
@@ -52,7 +52,7 @@ While Pantheon provides a stable, reliable, and basic Solr service, your individ
 
 Some customers have reported success using external Solr service providers for their Solr indexing:
 
- - [OpenSolr](https://opensolr.com/) For more information, see [Using OpenSolr With Pantheon Sites](/opensolr/).
+ - [OpenSolr](https://opensolr.com/) For more information, see [Using OpenSolr With Pantheon Sites](/opensolr).
  - [WebSolr](https://websolr.com/)
 
 ## Apache Solr Vocabulary

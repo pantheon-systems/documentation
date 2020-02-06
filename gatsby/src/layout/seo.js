@@ -61,6 +61,8 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
 
       {...titleProps}
 
+      defer={false}
+
       meta={[
         {...tagValues},
         {

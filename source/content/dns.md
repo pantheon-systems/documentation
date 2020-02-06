@@ -18,18 +18,18 @@ While Pantheon does not offer DNS management services, we can help you to unders
 We offer DNS provider-specific instructions for several common DNS hosts:
 
 
- - [1&1 Domain Configuration](/1-and-1/)
- - [Cloudflare Domain Configuration](/cloudflare/)
- - [DNS Made Easy Domain Configurationi](/dns-made-easy/)
- - [DreamHost Domain Configuration](/dreamhost/)
- - [Dyn Domain Configuration](/dyn/)
- - [eNom Domain Configuration](/enom/)
- - [Gandi Domain Configuration](/gandi/)
- - [GoDaddy Domain Configuration](/godaddy/)
- - [Google Domain Configuration](/google/)
- - [Namecheap Domain Configuration](/namecheap/)
- - [Network Solutions Domain Configuration](/network-solutions/)
- - [Amazon Route 53 Domain Configuration](/route53/)
+ - [1&1 Domain Configuration](/1-and-1)
+ - [Cloudflare Domain Configuration](/cloudflare)
+ - [DNS Made Easy Domain Configurationi](/dns-made-easy)
+ - [DreamHost Domain Configuration](/dreamhost)
+ - [Dyn Domain Configuration](/dyn)
+ - [eNom Domain Configuration](/enom)
+ - [Gandi Domain Configuration](/gandi)
+ - [GoDaddy Domain Configuration](/godaddy)
+ - [Google Domain Configuration](/google)
+ - [Namecheap Domain Configuration](/namecheap)
+ - [Network Solutions Domain Configuration](/network-solutions)
+ - [Amazon Route 53 Domain Configuration](/route53)
 
 ## DNS Terminology
 
@@ -215,6 +215,6 @@ Yes! You can modify your local `hosts` file, which takes precedence over DNS:
 
 ## See Also
 
- - [Launch Essentials](/guides/launch/)
- - [Platform and Custom Domains](/domains/)
- - [Configure Redirects](/redirects/)
+ - [Launch Essentials](/guides/launch)
+ - [Platform and Custom Domains](/domains)
+ - [Configure Redirects](/redirects)

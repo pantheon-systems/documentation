@@ -23,7 +23,7 @@ The Pantheon example projects include some basic tests to validate basic capabil
 The [`behat-pantheon.yml`](https://github.com/pantheon-systems/example-drops-8-composer/blob/master/tests/behat-pantheon.yml) file sets the path for a project's collection of Behat tests. Any file with a `.feature` suffix in a listed directory will be executed as part of the standard test run on CircleCI.
 
 ## Extending the Example Test Suite
-The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/guides/build-tools/new-pr/) has been applied to the associated Multidev environment:
+The following is an example of how to increase test coverage for your project by validating site configuration. This test will confirm the [site slogan implemented in a previous lesson](/guides/build-tools/new-pr) has been applied to the associated Multidev environment:
 
 1. Pull down commits added to the `slogan` branch from the previous lesson:
 

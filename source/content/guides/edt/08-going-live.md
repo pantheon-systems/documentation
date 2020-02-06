@@ -31,25 +31,25 @@ All links from the video are provided below.
 **Resource Links From Video**
 
  - [Pricing Comparison](https://pantheon.io/plans/pricing-comparison)
- - [Performance and load testing](/load-and-performance-testing/)
+ - [Performance and load testing](/load-and-performance-testing)
  - [Varnish Checker](https://varnishcheck.pantheon.io/)
- - [Performance guide](/guides/frontend-performance/)
+ - [Performance guide](/guides/frontend-performance)
  - [Google Page Speed](https://developers.google.com/speed/pagespeed/insights/)
  - [Webpagetest.org](https://www.webpagetest.org)
  - [SiteSpeed](https://www.sitespeed.io/)
- - [Launch Essentials](/guides/launch/)
- - [Domains and DNS](/domains/)
- - [Manage Plans in the Site Dashboard](/site-plan/)
- - [Pantheon's Global CDN](/global-cdn/)
- - [HTTPS on Pantheon's Global CDN](/https/)
+ - [Launch Essentials](/guides/launch)
+ - [Domains and DNS](/domains)
+ - [Manage Plans in the Site Dashboard](/site-plan)
+ - [Pantheon's Global CDN](/global-cdn)
+ - [HTTPS on Pantheon's Global CDN](/https)
  - [Redirect to a Primary Domain](/redirects/#redirect-to-https)
  - [Require HTTPS with the HSTS Header](/pantheon-yml/#enforce-https-+-hsts)
 
 
 <Callout title="Need more help? Get in touch:">
 
- - [Pantheon Community](/pantheon-community/)
- - [Pantheon Support](/support/)
+ - [Pantheon Community](/pantheon-community)
+ - [Pantheon Support](/support)
  - [Office Hours](https://pantheon.io/agencies/office-hours)
 
 </Callout>

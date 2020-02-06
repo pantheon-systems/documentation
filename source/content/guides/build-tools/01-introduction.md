@@ -23,7 +23,7 @@ multidev: true
 
 <Alert type="danger" title="Warning">
 
-The current version of the Build Tools plugin is designed for Terminus 1.x, and is not yet compatible with [current versions](/terminus/updates/) of Terminus. We are working on a new version of the Terminus Build Tools plugin with Terminus 2 support and will update this guide once it is released. In the meantime, you can test the [beta release](https://github.com/pantheon-systems/terminus-build-tools-plugin/releases/latest).
+The current version of the Build Tools plugin is designed for Terminus 1.x, and is not yet compatible with [current versions](/terminus/updates) of Terminus. We are working on a new version of the Terminus Build Tools plugin with Terminus 2 support and will update this guide once it is released. In the meantime, you can test the [beta release](https://github.com/pantheon-systems/terminus-build-tools-plugin/releases/latest).
 
 </Alert>
 
@@ -55,13 +55,13 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 ## Before You Begin
 
 1. Install [Composer](https://getcomposer.org).
-2. Install the most recent release of [Terminus](/terminus/):
+2. Install the most recent release of [Terminus](/terminus):
 
     ```bash
     curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
     ```
 
-3. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+3. [Add an SSH key](/ssh-keys) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 4. [Generate a Machine Token](https://dashboard.pantheon.io/machine-token/create), then authenticate Terminus:
 
@@ -105,7 +105,7 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
 
 <Alert title="Note" type="info">
 
-Pantheon's [support team](/support/) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
+Pantheon's [support team](/support) cannot troubleshoot issues with third-party services like GitHub or CircleCI.
 
 If you need help configuring external systems, consider joining the [Community Forum](https://discuss.pantheon.io/) or posting in our [Pantheon Community Slack Channel](https://slackin.pantheon.io/).
 

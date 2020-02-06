@@ -8,7 +8,7 @@ reviewed: "2020-01-10"
 
 <Alert title="Note" type="info">
 
-Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/annual-billing/) for more information.
+Did you know Pantheon offers savings for sites purchased with annual billing plans? See [Pantheon Annual Billing](/annual-billing) for more information.
 
 </Alert>
 
@@ -18,7 +18,7 @@ Did you know Pantheon offers savings for sites purchased with annual billing pla
 
 <Alert title="Note" type="info">
 
-Changing your site billing is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch/).
+Changing your site billing is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
 
 </Alert>
 
@@ -93,7 +93,7 @@ Billing emails are only sent to the billing contact email, set by the [Site Owne
 If you are the billing contact for an online site plan, check your spam folder, and try adding `cse-billing@pantheon.io` and `noreply@getpantheon.com` to your contacts. You can also reach out to your IT department to see if the emails are in quarantine.
 
 ## See Also
-- [Account Billing in the User Dashboard](/account-billing/)
-- [Manage Plans in the Site Dashboard](/site-plan/)
-- [Traffic Limits and Overages](/traffic-limits/)
-- [New Site Plans FAQs](/new-plans-faq/)
+- [Account Billing in the User Dashboard](/account-billing)
+- [Manage Plans in the Site Dashboard](/site-plan)
+- [Traffic Limits and Overages](/traffic-limits)
+- [New Site Plans FAQs](/new-plans-faq)

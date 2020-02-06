@@ -8,7 +8,7 @@ categories: [manage]
 
 ### What is the benefit of Multidev?
 
-[Multidev](/multidev/) environments allow you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
+[Multidev](/multidev) environments allow you to seamlessly collaborate on your website development projects, without coordinating local environments or trying to achieve parity with everyone’s local vagrant instance and the production server.
 
 ### How does Multidev work?
 
@@ -20,7 +20,7 @@ Multidev is one of the highlight features of the Pantheon Partner Program. Visit
 
 ## Change Management
 
-From within the [Organization Dashboard](/organization-dashboard/), you can assign [organization](/organizations/) members one of three roles: Administrator, Team Member, and Developer. Developers in an organization can commit code to Multidev and Development environments, but cannot deploy code or clone databases and files into Test or Live environments.
+From within the [Organization Dashboard](/organization-dashboard), you can assign [organization](/organizations) members one of three roles: Administrator, Team Member, and Developer. Developers in an organization can commit code to Multidev and Development environments, but cannot deploy code or clone databases and files into Test or Live environments.
 
 ### Can I Restrict Access to a Specific Site with the Developer Role?
 Only sites owned by Enterprise and EDU+ can assign the developer role to specific users. Partner Organizations cannot specify which members have access to specific sites.
@@ -30,7 +30,7 @@ The person who creates the site owns it until someone else starts paying for it.
 
 ### Where can I learn more about these roles?
 
-See [Role-Based Permissions & Change Management](/change-management/) for details.
+See [Role-Based Permissions & Change Management](/change-management) for details.
 
 ### How do we add new sites to an Organization?
 

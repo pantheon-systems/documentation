@@ -83,4 +83,4 @@ For SEO and to prevent duplicate content, the `robots.txt` file attached to the 
 User-agent: *
 Disallow: /
 ```
-To present an alternate `robots.txt` file from within the source code, a custom domain needs to be [added to the site's Dashboard](/guides/launch/domains/) and the appropriate DNS record created.
+To present an alternate `robots.txt` file from within the source code, a custom domain needs to be [added to the site's Dashboard](/guides/launch/domains) and the appropriate DNS record created.

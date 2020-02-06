@@ -7,15 +7,15 @@ categories: [get-started,wordpress]
 
 <Alert title="Note" type="info">
 
-Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/guides/multisite/) for you.
+Before you can migrate a WordPress Site Network, you must be a contract customer, and a Pantheon employee must create a [WordPress Site Network](/guides/multisite) for you.
 
 </Alert>
 
 ## Requirements
 
-* [Download](https://git-scm.com/downloads) and install [Git](/git/)
-* [Rsync or SFTP Client](/rsync-and-sftp/)
-* [MySQL Client](/mysql-access/)
+* [Download](https://git-scm.com/downloads) and install [Git](/git)
+* [Rsync or SFTP Client](/rsync-and-sftp)
+* [MySQL Client](/mysql-access)
 
 ## Import the Codebase
 **Codebase** - all executable code, including core, plugins, themes, and libraries; stored in the `~/code` directory.

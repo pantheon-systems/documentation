@@ -102,7 +102,7 @@ For more information, see [configuring wp-config.php](/wp-config-php).
 ## Using $_SERVER
 When incorporating custom configurations on Pantheon, use `$_ENV` instead of `$_SERVER` wherever possible. `$_SERVER` is generally unavailable when executing code via the command line (e.g. [Terminus](/terminus), Drush, or WP-CLI), which can cause failures for things like clearing cache. The few exceptions include `HTTP_HOST` and `REMOTE_ADDR`, or things pertaining directly to the web request in progress such as [redirects](/domains/#primary-domain).
 
-For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/server_name-and-server_port/).
+For debugging modules or plugins, it may be beneficial to review the values within the `$_SERVER` variable versus the value used by the plugin/module code.  If `$_SERVER` variables are used, there may be instances where you need to alter the variable assignments to get a module or plugin to work properly as outlined in [Server Name and Server Port](/server_name-and-server_port).
 
 <Alert title="Note" type="info">
 
@@ -164,4 +164,4 @@ This is a partial example from a WordPress site homepage:
 ## FAQ
 
 ### Can I Set My Own Environment Variables?
-No, it is not possible to set environment variables on Pantheon. A common solution for this is to use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private filesystem, or use [Lockr](/guides/lockr/) for maximum security.
+No, it is not possible to set environment variables on Pantheon. A common solution for this is to use the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) to write the secrets to a JSON file in the private filesystem, or use [Lockr](/guides/lockr) for maximum security.
