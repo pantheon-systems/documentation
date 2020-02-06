@@ -11,7 +11,7 @@ Due to Pantheon's cloud-based infrastructure, these outbound requests are sent v
 </Alert>
 
 ## Pantheon Secure Integration
-If your site relies on a static IP address for outgoing requests, and your site is within an Enterprise or EDU+ organizations, then the recommended solution is [Secure Integration](/secure-integration/). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative service to accomplish the request.
+If your site relies on a static IP address for outgoing requests, and your site is within an Enterprise or EDU+ organizations, then the recommended solution is [Secure Integration](/secure-integration). This is the only way to guarantee compatibility with extensions or services that require a known outgoing IP. Otherwise, you will need to find an alternative service to accomplish the request.
 
 ## IP Address Based Security Schemes
 Each application container worker uses a distinct application container, each with a different hostname (which will not resolve externally) and datacenter assigned IP. Application servers are regularly seamlessly reconfigured, which may change both the hostname and IP.
@@ -25,10 +25,10 @@ We do not provide IP ranges for outgoing requests for application containers and
 
 Instead, we suggest that you use an alternate form of verification like API keys or similar, if possible. We also offer an Elite level product called a Secure Integration that will provide variables to each of your environments in order to establish a direct route to your sites.
 
-For more information, see [Secure Integration](/secure-integration/).
+For more information, see [Secure Integration](/secure-integration).
 
 ## Outbound Mail Service
-See [Email on Pantheon](/email/) for information on working with dynamic IPs using SMTP and REST API configurations for outbound email service.
+See [Email on Pantheon](/email) for information on working with dynamic IPs using SMTP and REST API configurations for outbound email service.
 
 ## Compatible Payment Gateways
 The following payment gateways are known to work in cloud-based infrastructures such as ours:
@@ -42,7 +42,7 @@ The following payment gateways are known to work in cloud-based infrastructures 
 
 
 ## Known Problematic Services
-The following services are known to be problematic without using [Secure Integration](/secure-integration/):
+The following services are known to be problematic without using [Secure Integration](/secure-integration):
 
 - LDAP
 - FirstData

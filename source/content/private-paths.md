@@ -20,7 +20,7 @@ If you have not already created these directories, you will need to do that firs
 </Alert>
 
 ## Private Path for Code
-Store data that should be version controlled, such as [Quicksilver](/quicksilver/) scripts, within the `private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `private`. If you're connecting via Git, use the `private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
+Store data that should be version controlled, such as [Quicksilver](/quicksilver) scripts, within the `private` directory at the root level of your site's codebase (same level as `index.php`). If you're connecting via SFTP, navigate into the `code` directory and upload files to `private`. If you're connecting via Git, use the `private` directory at the root level of your cloned repository. The private path for code is the same for both Drupal and WordPress sites.
 
 ## Private Path for Files
 When it comes to keeping production keys secure, the best solution is to use a key management service like [Lockr](https://lockr.io/) to automatically encrypt and secure keys on distributed platforms such as Pantheon. You can integrate this service using the [Lockr plugin](https://wordpress.org/plugins/lockr/) for WordPress and the [Lockr module](https://www.drupal.org/project/lockr) for Drupal. For more details, see this [related blog post](https://pantheon.io/blog/key-drupal-security).

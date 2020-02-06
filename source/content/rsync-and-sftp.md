@@ -10,7 +10,7 @@ This allows you to transfer unlimited data "server-to-server", which is much fas
 
 <Alert title="Notes" type="info">
 
- - This document covers copying [files](/files/), excluding database files. You cannot directly access the database files. See [Use the Pantheon WebOps Workflow](/pantheon-workflow/) for more information on how code moves up and content moves down.
+ - This document covers copying [files](/files), excluding database files. You cannot directly access the database files. See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how code moves up and content moves down.
 
  - You will not be able to use SFTP or rsync to add any file or directory listed in a `.gitignore` file to your Git repository. Any file uploaded in this way cannot be committed and will not be available for deployment.
 
@@ -83,7 +83,7 @@ Rsync is highly customizable. See the [man page](https://linux.die.net/man/1/rsy
 
 <Alert title="Note" type="info">
 
-Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/nested-docroot/).
+Regardless of framework, WordPress or Drupal, your files need to be in the `/files` directory. This directory maps to `sites/default/files` for Drupal and `wp-content/uploads` for WordPress. Adjust paths as needed to include `web` (e.g., `web/wp-content/uploads`) for [sites configured to use a nested docroot](/nested-docroot).
 
 </Alert>
 

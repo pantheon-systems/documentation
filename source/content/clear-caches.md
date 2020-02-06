@@ -4,7 +4,7 @@ description: Learn how to clear cache for Drupal and WordPress sites on Pantheon
 tags: [cacheapp]
 categories: [performance]
 ---
-Pantheon extends the core functionality of caching mechanisms within WordPress and Drupal so that caches are cleared within the site's frame and from our [Global CDN](/global-cdn/) service.
+Pantheon extends the core functionality of caching mechanisms within WordPress and Drupal so that caches are cleared within the site's frame and from our [Global CDN](/global-cdn) service.
 
 ## Granular Cache Clearing
 Use the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) to automatically clear caches for related pages as content is updated. No configuration needed, simply install and enable to take advantage of the granular cache clearing capabilities of the Global CDN.
@@ -12,7 +12,7 @@ Use the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pant
 Lower-level documentation for custom implementation of caching strategies is also coming soon. Please [contact our enablement team](https://pantheon.io/agencies/learn-pantheon?docs) if you are interested in implementing a custom cache strategy.
 
 ## Full Cache Clearing
-We refer to this as "full cache clearing" because the operation removes all pages from cache at once. There are three methods you can use to clear all caches for a given [environment](/pantheon-workflow/) of a site:
+We refer to this as "full cache clearing" because the operation removes all pages from cache at once. There are three methods you can use to clear all caches for a given [environment](/pantheon-workflow) of a site:
 
 - Pantheon Dashboard
 - Site Admin
@@ -69,7 +69,7 @@ We refer to this as "full cache clearing" because the operation removes all page
 
 
 ### Command Line
-If you're working from a terminal prompt or looking to automate parts of your workflow, use [Terminus](/terminus/) to clear caches from the command line:
+If you're working from a terminal prompt or looking to automate parts of your workflow, use [Terminus](/terminus) to clear caches from the command line:
 
 ```bash
 terminus env:clear-cache site.env
@@ -80,7 +80,7 @@ Replace `site` and `env` with your site name and the correct environment.
 ## Troubleshooting
 
 ### Clear Cache Fails in Dashboard or Terminus
-If you see a notification on the Dashboard indicating a failure to clear cache, this is usually due to a PHP error, redirect, or other code-related issue. While the Dashboard notification may not help much to debug, running the same command via [Terminus](/terminus/) will likely provide actionable information.
+If you see a notification on the Dashboard indicating a failure to clear cache, this is usually due to a PHP error, redirect, or other code-related issue. While the Dashboard notification may not help much to debug, running the same command via [Terminus](/terminus) will likely provide actionable information.
 
 Some good troubleshooting first steps include:
 

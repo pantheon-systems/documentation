@@ -7,7 +7,7 @@ categories: [troubleshoot,platform]
 
 <Alert title="Exports" type="export">
 
-This doc uses [Terminus](/terminus/) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
+This doc uses [Terminus](/terminus) commands. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the correct environment:
 
 ```bash
 export env=dev
@@ -46,7 +46,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   define('SOME_TMP_SETTING', $_SERVER['HOME'] . '/tmp');
 }
 ```
-Verify the setting by using [Terminus](/terminus/) to run `wp config get`:
+Verify the setting by using [Terminus](/terminus) to run `wp config get`:
 
 ```bash
 terminus wp $site.$env -- config get SOME_TMP_SETTING
@@ -72,7 +72,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
   $conf['some_tmp_setting'] = $_SERVER['HOME'] . '/tmp';
 }
 ```
-Verify the setting by using [Terminus](/terminus/) to run `drush variable-get`:
+Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
 
 ```bash
 terminus drush $site.$env -- variable-get some_tmp_setting
@@ -99,7 +99,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-Verify the setting by using [Terminus](/terminus/) to run `drush config-get` with `--include-overridden`:
+Verify the setting by using [Terminus](/terminus) to run `drush config-get` with `--include-overridden`:
 
 ```bash
 terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden
@@ -152,7 +152,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-Verify the setting by using [Terminus](/terminus/) to run `wp config get`:
+Verify the setting by using [Terminus](/terminus) to run `wp config get`:
 
 ```bash
 terminus wp $site.$env -- config get SOME_TMP_SETTING
@@ -180,7 +180,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-Verify the setting by using [Terminus](/terminus/) to run `drush variable-get`:
+Verify the setting by using [Terminus](/terminus) to run `drush variable-get`:
 
 ```bash
 terminus drush $site.$env -- variable-get some_tmp_setting
@@ -208,7 +208,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 ```
 The `private` and `tmp` directories do not exist by default; you must create the folders via SFTP if you have not done so already. We do not recommend using a public path since core treats the temporary path as non-web-accessible by default.
 
-Verify the setting by using [Terminus](/terminus/) to run `drush config-get` with `--include-overridden`:
+Verify the setting by using [Terminus](/terminus) to run `drush config-get` with `--include-overridden`:
 
 ```bash
 terminus drush $site.$env -- config-get some_module.settings some_tmp_setting --include-overridden

@@ -15,7 +15,7 @@ Using `.htaccess` is generally not recommended - even for sites running  [Apache
 
 - Logic and decisions can be made that a web server would have no context for, as it's executable code with application state awareness. Conditional logic, regular expressions, and much more are possible.
 - Configuration tends to be more maintainable as Drupal and WordPress developers are typically more familiar with PHP than Apache rewrite rules.
-- Since `settings.php` and `wp-config.php` are parsed very early in the bootstrap process, redirects like this are "cheap" with low overhead. If you use a 301 redirect, the [Pantheon Global CDN](/global-cdn/) will cache it as well.
+- Since `settings.php` and `wp-config.php` are parsed very early in the bootstrap process, redirects like this are "cheap" with low overhead. If you use a 301 redirect, the [Pantheon Global CDN](/global-cdn) will cache it as well.
 
 ### Avoid Excessive Redirects
 When using multiple snippets, be sure to step through the logic. This is particularly important when redirecting to a common domain while also incorporating redirects for specific pages. All `if` conditional statements need to be in the correct order. For example, a wholesale redirect executed *prior* to redirects for specific pages would likely prevent the second statement from being evaluated.
@@ -255,13 +255,13 @@ Drupal sites can force lowercase letters using the following:
 </TabList>
 
 ### Redirect Files
-Because Drupal or WordPress aren't bootstrapped when static assets (e.g, images, PDFs, HTML files) are served, the PHP redirects used above will not work when these files are requested directly. You can use [CloudFlare](/cloudflare/) or another stacked CDN to handle file redirects.
+Because Drupal or WordPress aren't bootstrapped when static assets (e.g, images, PDFs, HTML files) are served, the PHP redirects used above will not work when these files are requested directly. You can use [CloudFlare](/cloudflare) or another stacked CDN to handle file redirects.
 
 Alternatively, you can remove the file entirely from the old location. In this case, the request will run through Drupal or WordPress. You can let the CMS serve a 404, or you can utilize a redirect in `wp-config.php` or `settings.php` as shown in the examples above.
 
 ## See Also
-- [Configuring Settings.php](/settings-php/)
-- [Configuring wp-config.php](/wp-config-php/)
-- [Platform and Custom Domains](/domains/)
-- [Launch Essentials](/guides/launch/)
-- [Relaunch Existing Pantheon Site](/relaunch/)
+- [Configuring Settings.php](/settings-php)
+- [Configuring wp-config.php](/wp-config-php)
+- [Platform and Custom Domains](/domains)
+- [Launch Essentials](/guides/launch)
+- [Relaunch Existing Pantheon Site](/relaunch)

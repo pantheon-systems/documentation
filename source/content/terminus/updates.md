@@ -14,7 +14,7 @@ searchboost: 100
 
 <Alert title="Warning" type="danger">
 
-The recent 2.x releases of Terminus signify a major version upgrade, which may not be backwards-compatible with scripts written for Terminus `1.x`. For more information, see [Terminus 2.0](/terminus-2-0/).
+The recent 2.x releases of Terminus signify a major version upgrade, which may not be backwards-compatible with scripts written for Terminus `1.x`. For more information, see [Terminus 2.0](/terminus-2-0).
 
 </Alert>
 
@@ -52,15 +52,15 @@ Each major and minor version of Terminus is fully supported for one year from th
 
 After this period, the version will reach End Of Life (**EOL**), and will no longer be supported. We strongly encourage you to update Terminus well ahead of the EOL schedule, so that regressions in new versions can be reported and patched in time.
 
-| Version          | EOL Date  |
-| ---------------- | --------- |
-| 2.2.3            | TBD       |
-| 2.2.0            | 1/11/2021 |
-| 2.1.0            | 9/26/2020 |
-| 2.0.0            | 9/03/2020 |
-| 1.9.0            | 2/20/2020 |
-| 1.8.1            | 9/11/2019 |
-| 1.8.0 or earlier | 8/26/2019 |
+| Version           | EOL Date  |
+| ----------------- | --------- |
+| 2.3.0             | TBD       |
+| 2.2.0             | 1/11/2021 |
+| 2.1.0             | 9/26/2020 |
+| 2.0.0             | 9/03/2020 |
+| 1.9.0             | 2/20/2020 |
+| 1.8.1             | 9/11/2019 |
+| 1.8.0  or earlier | 8/26/2019 |
 
 ## Changelog
 

@@ -86,7 +86,7 @@ You can index your site under your production domain once it's added to the Live
 Google's search engine now [crawls the HTTPS equivalents of HTTP pages](https://webmasters.googleblog.com/2015/12/indexing-https-pages-by-default.html). Since Pantheon provides a shared certificate for platform domains (`*.pantheonsite.io`), this change in indexing behavior may result in mismatch security warnings within Google search results. To resolve this issue, do one of the following:
 
 - Create a sitemap that contains only HTTP links.
-- Follow our [Launch Essentials](/guides/launch/) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
+- Follow our [Launch Essentials](/guides/launch) guide to automatically provision HTTPS for free using [Let's Encrypt](https://letsencrypt.org).
 - Add the `X-Robots-Tag: noindex` header to responses resulting from HTTPS requests. Note that this will not fix existing indexed results from Google, and is a preventative solution rather than a reactionary, for users who don't want to serve over HTTPS.
 
 ### Sitemaps Produce a White Screen of Death (WSOD)
@@ -113,7 +113,7 @@ if (($_SERVER['REQUEST_URI'] == '/sitemap.xml') &&
 }
 ```
 
-For more examples of redirecting via PHP, see [Configure Redirects](/redirects/).
+For more examples of redirecting via PHP, see [Configure Redirects](/redirects).
 
 ### Incorrect robots.txt Output in WordPress
 

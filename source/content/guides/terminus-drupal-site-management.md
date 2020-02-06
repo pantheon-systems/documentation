@@ -9,16 +9,16 @@ contributors: [erikmathy]
 date: 2/25/2015
 ---
 ## Create Sites Faster and More Efficiently
-The latest version of Pantheon's CLI, [Terminus](/terminus/), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
+The latest version of Pantheon's CLI, [Terminus](/terminus), incorporates not only Drush and WP-CLI, but also the vast majority of tasks available to you within the Pantheon Dashboard. You can create new sites, clone one environment to another, create branches, check for upstream updates, and more. By using Terminus, a site administrator can massively reduce the time spent on relatively simple tasks. In this guide, we will walk through the basics of creating a completely new Drupal site on Pantheon, installing some contrib modules, committing code, and cloning from one site environment to another&mdash;all through the Terminus CLI.
 
 <Alert title="Note" type="info">
 
-The following does **not** pertain to Composer managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/guides/build-tools/).
+The following does **not** pertain to Composer managed sites. For information about using Composer to manage Drupal 8 sites, see [Build Tools Guide](/guides/build-tools).
 
 </Alert>
 
 ## Installing Terminus
-Installing Terminus is a fairly straight forward process. Just follow [these instructions](/terminus/install/).
+Installing Terminus is a fairly straight forward process. Just follow [these instructions](/terminus/install).
 
 After you install Terminus, do a quick status check to make sure it works. Depending on your OS, the output may vary, but here's a sample:
 
@@ -84,7 +84,7 @@ Starting Drupal installation. This takes a few seconds ...                  [ok]
 Installation complete.  User name: admin  User password: ********         [ok]
 ```
 
-If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/settings-php/) file.
+If the command above fails with `exception 'Drush\Sql\SqlException' with message 'Unable to find a matching SQL Class. Drush cannot find your database connection details.'`, you must first create a [`settings.php`](/settings-php) file.
 
 You should now be able to open a web browser and see your brand new Drupal site! On Mac, try using the `open` command to see an environment in your default browser:
 
@@ -184,6 +184,6 @@ terminus env:deploy <site>.test --sync-content --cc --updatedb
 You just created a brand new Drupal site on Pantheon! You added modules, committed code, and moved it all from Dev to Test without using a single checkbox, radio button, or colored Ajax slider. To top it off, by using Terminus, it all happened in a third of the time. There is a whole new world of possibility open to you. Now go forth and CLI!
 
 ##  Next Steps
-- Learn more about [Drush](/drush/).
+- Learn more about [Drush](/drush).
 
 - After you've mastered Terminus, take it a step further with [Continuous Integration](/continuous-integration).

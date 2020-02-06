@@ -17,7 +17,7 @@ WP-CLI is a set of command line tools for managing WordPress installations. Let�
 
 WP-CLI can be installed locally in various ways. You can find instructions at [wp-cli.org](https://make.wordpress.org/cli/handbook/installing/).
 
-If you install Pantheon’s command line tool, [Terminus](/terminus/install/), you can run WP-CLI commands from your local computer on your Pantheon sites. I’ll be using Terminus in this video.
+If you install Pantheon’s command line tool, [Terminus](/terminus/install), you can run WP-CLI commands from your local computer on your Pantheon sites. I’ll be using Terminus in this video.
 
 If you don’t already have a local environment configured, try installing [Kalabox](http://www.kalabox.io/). It comes pre-installed with Terminus and WP-CLI.
 

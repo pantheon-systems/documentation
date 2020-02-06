@@ -29,7 +29,7 @@ GITHUB-EMBED https://github.com/pantheon-systems/wordpress/blob/master/wp-config
 
 <Alert tile="Note" type="info">
 
-`$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port/).
+`$_SERVER['SERVER_NAME']` should *not* be used to set `WP_HOME` or `WP_SITEURL`. For more information, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
 
 </Alert>
 
@@ -71,11 +71,11 @@ The following example shows how to hard-code your WordPress debug configuration 
 
 ### How can I read the Pantheon environmental configuration, like database credentials?
 
-See [Reading the Pantheon Environment Configuration](/read-environment-config/).
+See [Reading the Pantheon Environment Configuration](/read-environment-config).
 
 ### How do I perform redirection?
 
-See [Configure Redirects](/redirects/).
+See [Configure Redirects](/redirects).
 
 ### How do I change the default debug.log location?
 
@@ -101,7 +101,7 @@ You don't have to! Pantheon automatically injects database credentials into the
 - [WordPress Core](https://github.com/WordPress/WordPress/blob/master/wp-config-sample.php)
 
 ### How do I enable IonCube Decoder support?
-If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions/) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `wp-config.php`:
+If you are using a licensed plugin that requires IonCube Decoder support, first ensure you are running [PHP 7.1](/php-versions) or later. Then, enable IonCube Decoder support site-wide by adding a single line to `wp-config.php`:
 
 ```php:title=wp-config.php
 ini_set('ioncube.loader.encoded_paths', '/');

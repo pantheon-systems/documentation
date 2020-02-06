@@ -12,7 +12,7 @@ If your site is using our Legacy SSL service, it's on deprecated legacy infrastr
 If your site uses Legacy SSL, it's also on an outdated TLS configuration. The Global CDN is configured to only use TLS 1.2 and no weak 3DES cipher. On the legacy infrastructure, your site isn't as fast, secure, or as resilient as it could be.
 
 ### Option 1: Automated Certificate Management via Let's Encrypt
-If you just haven’t gotten around to upgrading, consider using our managed HTTPS, which includes automated certificate management, leveraging Let’s Encrypt certificates. As a convenience, when you upgrade to managed HTTPS you’ll never have to worry about an expired certificate again. As long as your domain is pointed to Pantheon, we will automatically renew the certificates required to keep your site secure. [Upgrade](/https/) to get best-in-class encryption and an A+ grade from SSL Labs.
+If you just haven’t gotten around to upgrading, consider using our managed HTTPS, which includes automated certificate management, leveraging Let’s Encrypt certificates. As a convenience, when you upgrade to managed HTTPS you’ll never have to worry about an expired certificate again. As long as your domain is pointed to Pantheon, we will automatically renew the certificates required to keep your site secure. [Upgrade](/https) to get best-in-class encryption and an A+ grade from SSL Labs.
 
 ### Option 2: Manually Managed Custom Certificates
 If you require a custom, dedicated certificate, you can now bring it to the Global CDN. This is a paid service that our Sales Team can help you with. 
@@ -88,7 +88,7 @@ Please allow two business days to get a CSR and load the certificate.
 ### How do I renew or replace my custom certificate?
 45 days before your custom certificate expires, Pantheon will open a ticket with your team with a new CSR. You can send that CSR to the Certificate Authority to generate new certificates (as described above for [bringing a custom certificate](#option-2-manually-managed-custom-certificates)).
 
-To update a certificate with additional domains, [contact support](/support/) with the following details:
+To update a certificate with additional domains, [contact support](/support) with the following details:
 
  - The current common name (CN) and any SANs
  - A colon-separated list of domains the certificate is valid for
@@ -132,9 +132,9 @@ If a Let's Encrypt certificate was deployed to the Global CDN before adding CAA 
 Your CA must accept the CSR Pantheon provides. If your CA fails to accept our CSR, you will not be able to use it to generate a certificate. The CA GlobalSign does not currently meet this requirement. The workaround is to simply use another CA.
 
 ### Downgrading a Site that uses a Custom Certificate
-Since all sites require an encryption certificate, to downgrade a site that uses a custom certificate, use Pantheon’s [Global CDN](/https/) to enable Let’s Encrypt. Alternatively, you can use another CDN like [Cloudflare](/cloudflare/).
+Since all sites require an encryption certificate, to downgrade a site that uses a custom certificate, use Pantheon’s [Global CDN](/https) to enable Let’s Encrypt. Alternatively, you can use another CDN like [Cloudflare](/cloudflare).
 
 ## See also
 - [Pantheon Global CDN](/global-cdn)
-- [HTTPS on Pantheon's Global CDN](/https/)
-- [Introduction to Domain Name Services](/dns/)
+- [HTTPS on Pantheon's Global CDN](/https)
+- [Introduction to Domain Name Services](/dns)

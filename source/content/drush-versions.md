@@ -67,7 +67,7 @@ When running Drush locally, we highly recommend running Drush version 8.3.2 or h
 | Drush 9       | PHP 5.6.0+          |
 | Drush 10      | PHP 7.1.+           |
 
-See our guide on [Upgrading PHP Versions](/php-versions/).
+See our guide on [Upgrading PHP Versions](/php-versions).
 
 #### Symfony, Drush, and Drupal
 

@@ -61,13 +61,13 @@ Two methods can be used to integrate SendGrid with your Drupal 8 site: API or SM
 
 #### Considerations
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
-- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/composer/).
+- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/composer).
 
 ### SendGrid API Integration
 
 <Alert title="Warning" type="danger" >
 
-The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow as described in our [Build Tools](/guides/build-tools/) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
+The SendGrid API Integration Module for Drupal 8 requires a Composer managed workflow as described in our [Build Tools](/guides/build-tools) or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci) guides. We cannot support non-Composer workflows using this module. For details, see [the module readme](http://cgit.drupalcode.org/sendgrid_integration/tree/README.md?id=185c4ea) file.
 
 </Alert>
 
@@ -102,7 +102,7 @@ A stable release for Drupal 8 is not yet available for the [SMTP Authentication 
   **Use encrypted protocol**: We strongly recommend selecting **TLS**
 
     <Alert title="Note" type="info">
-    Configuring mail to use port 25, 465 or 587 is strongly discouraged because these ports attract SPAM activities. For details, see [Email on Pantheon](/email/)
+    Configuring mail to use port 25, 465 or 587 is strongly discouraged because these ports attract SPAM activities. For details, see [Email on Pantheon](/email)
     </Alert>
 
 5.  Provide your site-specific SendGrid credentials and click **Save configuration**.
@@ -118,10 +118,10 @@ Two methods can be used to integrate SendGrid with your Drupal 7 site: API or SM
 
 #### Considerations
 - SMTP requests are associated with dynamic outgoing IPs, which can have a negative impact on deliverability.
-- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/composer/). For Drupal 7 we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
+- API integration using the [SendGrid Integration](https://www.drupal.org/project/sendgrid_integration) module is recommended; however, installation of this module is slightly more complicated, as it requires the use of [Composer](/composer). For Drupal 7 we can utilize the dev release of this module and use Composer in a non-invasive manner that is compatible with upstream updates.
 
 ### SendGrid API Integration
-1. Install [Composer](https://getcomposer.org), then install and authenticate [Terminus](/terminus/install/).
+1. Install [Composer](https://getcomposer.org), then install and authenticate [Terminus](/terminus/install).
 
 1. If you haven't done so already, [clone your Pantheon site repository](/git/#clone-your-site-codebase) and navigate to the project's root directory. Replace `<site_name>` with your site's name (e.g., `your-awesome-site`):
 
@@ -220,7 +220,7 @@ Then commit and push the symlink to Pantheon.
 
        <Alert title="Note" type="info">
 
-       Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/email/)
+       Configuring mail to use port 25, 465 or 587 is strongly discouraged because they attract SPAM activities. For details, see [Email on Pantheon](/email)
 
        </Alert>
 

@@ -59,7 +59,7 @@ In the code examples below, replace `17.x` with the downloaded version of Simple
 
 When using Composer to manage the SimpleSAMLphp library, you'll need to store your config files outside of the vendor directory in order to prevent those from being overwritten when you apply updates. We can use a symlink to allow SimpleSAMLphp to utilize the config files stored in the non-standard location.
 
-Commands below require a [nested docroot](/nested-docroot/) structure and should all be run from the site root (not the nested docroot `web` directory).
+Commands below require a [nested docroot](/nested-docroot) structure and should all be run from the site root (not the nested docroot `web` directory).
 
 1. Add the SimpleSAMLphp library:
 

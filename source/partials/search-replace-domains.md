@@ -37,7 +37,7 @@ terminus remote:wp $site.$env -- search-replace "http://live-example.pantheonsit
 
 <Tab title="Quicksilver" id="quicksilver-replace-anchor">
 
-For those using [Quicksilver](/quicksilver/) scripts, consider the following example. On each `passthru` line, replace `example#.pantheonsite.io` and `example.com` with the domains you want to find and replace, respectively:
+For those using [Quicksilver](/quicksilver) scripts, consider the following example. On each `passthru` line, replace `example#.pantheonsite.io` and `example.com` with the domains you want to find and replace, respectively:
 
 
 ```php

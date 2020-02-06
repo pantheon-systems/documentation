@@ -7,24 +7,24 @@ reviewed: "2020-01-31"
 ---
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
-Drush commands require a `settings.php` file, and it's a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/git) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/settings-php/).
+Drush commands require a `settings.php` file, and it's a best practice to have one. Drupal 8 sites come with a bundled `settings.php` file out of the box. Drupal 6 and 7 sites do not contain a `settings.php` file; however, you can simply copy the `sites/default/default.settings.php` to `sites/default/settings.php` via [SFTP](/sftp) or [Git](/git) for Drush to work on older Drupal versions. For more details, see [Configuring Settings.php](/settings-php).
 
 ## Terminus Drush and Local Drush
 Refer to Drush's [install documentation](http://docs.drush.org/en/master/install/) for details on installing Drush locally.
 
-Drush-savvy developers should also install and utilize [Terminus](/terminus/), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
+Drush-savvy developers should also install and utilize [Terminus](/terminus), a command-line interface that allows you to control your Pantheon account and sites. Virtually anything you can do in the Dashboard, you can script with Terminus. It can also make remote Drush calls on your environments without having Drush installed locally, eliminating incompatibility issues between locally and remotely installed versions of Drush.
 
-If you have a [Composer-based site](/composer/), Terminus will use the version of Drush it finds in `vendor/bin/drush` when running Drush commands on the platform.
+If you have a [Composer-based site](/composer), Terminus will use the version of Drush it finds in `vendor/bin/drush` when running Drush commands on the platform.
 
-You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management/). For example, you can run `terminus drush <site>.<env> -- cc drush` instead of `drush @pantheon.SITENAME.dev cc drush`.
+You can run all of the commands below from Terminus instead of using Drush aliases. For more information, see [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management). For example, you can run `terminus drush <site>.<env> -- cc drush` instead of `drush @pantheon.SITENAME.dev cc drush`.
 
 ## Drush Versions
 For details on managing remote and local Drush versions, see [Managing Drush Versions on Pantheon](/drush-versions).
 
 ## Download Drush Aliases Locally
-Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use [Terminus](/terminus/) to download your Drush aliases.
+Downloading the Pantheon aliases to your local Drush aliases file allows you to run Drush calls against your Pantheon site environments. Use [Terminus](/terminus) to download your Drush aliases.
 
-Authenticate Terminus with [machine tokens](/machine-tokens/) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
+Authenticate Terminus with [machine tokens](/machine-tokens) or your Pantheon Dashboard credentials, then update your local aliases file in a single step:
 
 ```bash{promptUser: user}
 terminus aliases
@@ -113,7 +113,7 @@ drush @pantheon.SITENAME.ENV COMMAND
 
 </Alert>
 
-Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/terminus/).
+Drupal's list of PHP classes and files can get corrupted or out-of-date, typically when moving code. If clearing the cache doesn't resolve the issue due to a required class during bootstrap, the registry may need to be rebuilt. To facilitate this, Pantheon has installed [`registry_rebuild`](https://drupal.org/project/registry_rebuild) as an available Drush command on every site, which can be executed via [Terminus](/terminus).
 
 **Do not attempt to install the module on your site.** This command is provided as-is, without warranty, so make a backup first.  
 
@@ -176,7 +176,7 @@ terminus drush <site>.<env> -- core-cli
 
 ## Drush Commands That Alter Site Code
 
-Commands that alter site code, such as pm-download (dl), will only work on a Dev environment that has been set to [SFTP mode](/sftp/) from the Pantheon Dashboard.
+Commands that alter site code, such as pm-download (dl), will only work on a Dev environment that has been set to [SFTP mode](/sftp) from the Pantheon Dashboard.
 
 ## Add Custom Drush Commands
 

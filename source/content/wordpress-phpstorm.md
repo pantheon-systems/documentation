@@ -12,7 +12,7 @@ For detailed information, see [WordPress Development using PhpStorm](https://con
 
 ## Create a WordPress site
 
-If you do not already have one, [create a new WordPress site](/guides/quickstart/) on Pantheon. This will be your empty site, in which to develop your new plugin or theme.
+If you do not already have one, [create a new WordPress site](/guides/quickstart) on Pantheon. This will be your empty site, in which to develop your new plugin or theme.
 
 ## Clone the Code Repository
 

@@ -51,10 +51,10 @@ Implement additional services like IP-based geolocation, extended WAF, Image Opt
 - **Post-Launch**: PS provides up to 4 hours per quarter to address requests and changes to the Advanced CDN service throughout the lifetime of the contract.
 
 ## Pantheon Secure Integration
-Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about Secure Integration](/secure-integration/) or [contact us](https://pantheon.io/professional-services) for details.
+Provides a static outgoing IP address for use in IP whitelisting connections to external services. [Learn more about Secure Integration](/secure-integration) or [contact us](https://pantheon.io/professional-services) for details.
 
 ## SSO/SAML
-Single Sign-on to the Pantheon Dashboard. [Learn more about SSO for Organizations](/sso-organizations/) or [contact us](https://pantheon.io/professional-services) for details.
+Single Sign-on to the Pantheon Dashboard. [Learn more about SSO for Organizations](/sso-organizations) or [contact us](https://pantheon.io/professional-services) for details.
 
 ## Pre-launch Load Testing
 Load tests can be critical steps in ensuring a successful launch. Using proprietary tools developed by the PS team we generate traffic to your Live site, simulating complex user interactions if needed. There is no better way to expose and identify potential performance bottlenecks before you’ve launched your site.

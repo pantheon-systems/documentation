@@ -8,7 +8,7 @@ reviewed: "2019-11-06"
 ---
 
 ## Overview
-Apache Solr is a system for indexing and searching site content. Pantheon provides [Apache Solr](/solr/) as a service that works well for the majority of sites on the platform. No permission or action is required from Pantheon to use Solr.
+Apache Solr is a system for indexing and searching site content. Pantheon provides [Apache Solr](/solr) as a service that works well for the majority of sites on the platform. No permission or action is required from Pantheon to use Solr.
 <Partial file="solr-version.md" />
 
 However, If you are looking for additional features for more advanced use cases, you may want to consider an external Solr service.
@@ -31,7 +31,7 @@ This doc assumes that you have already enabled:
 
 <Alert title="Note" type="info">
 
-To get started managing Drupal 8 using Composer, see the **Drupal 8 and Composer** [site building](/guides/drupal-8-composer-no-ci/) and [site conversion](/guides/composer-convert/) guides.
+To get started managing Drupal 8 using Composer, see the **Drupal 8 and Composer** [site building](/guides/drupal-8-composer-no-ci) and [site conversion](/guides/composer-convert) guides.
 
 </Alert>
 
@@ -144,7 +144,7 @@ On the resulting Search API server configuration page, you should see messages i
 
 ### Add Search API Solr Configuration Files to Opensolr
 
-Your Opensolr server now needs the Search API Solr `schema.xml` and other configuration files. These are located in [your site code](/code/) under `module/contrib/search_api_solr/solr_conf`, in a sub-directory according to the Solr version you are using on Opensolr.
+Your Opensolr server now needs the Search API Solr `schema.xml` and other configuration files. These are located in [your site code](/code) under `module/contrib/search_api_solr/solr_conf`, in a sub-directory according to the Solr version you are using on Opensolr.
 
 1. Create a zip archive of the files in your Solr version's directory. To do this from the CLI:
 
@@ -190,4 +190,4 @@ If you'd like to create custom configurations or manually edit your index, synon
 - [WPSolr Integration](https://opensolr.com/faq/view/wpsolr)
 - [Opensolr](https://www.opensolr.com/)
 - [Opensolr Support](https://www.opensolr.com/faq)
-- [FAQ](/faq/)
+- [FAQ](/faq)

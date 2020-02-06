@@ -22,7 +22,7 @@ image: getting-started-Largethumb
 ---
 In this lesson we'll connect a bare domain and `www` domain to Pantheon's Live environment.
 
-The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are migrating a site already on Pantheon, follow the steps for [relaunching an existing Pantheon site](/relaunch/).
+The steps below will guide you through the process of migrating a site onto Pantheon for the first time. If you are migrating a site already on Pantheon, follow the steps for [relaunching an existing Pantheon site](/relaunch).
 
 ## Connect Domain
 1. Access the **<span class="glyphicons glyphicons-cardio"></span> Live** environment in your Pantheon Site Dashboard.
@@ -93,4 +93,4 @@ When a certificate is ready you can switch DNS destinations from your existing s
 </Accordion>
 
 ### Maintenance Window
-If you are unable to prove domain ownership (e.g. WP Engine blocks serving the required challenge file) you will not be able to pre-provision HTTPS to prevent service interruption. In these cases, we recommend completing the next section ([Configure DNS](/guides/launch/configure-dns/)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.
+If you are unable to prove domain ownership (e.g. WP Engine blocks serving the required challenge file) you will not be able to pre-provision HTTPS to prevent service interruption. In these cases, we recommend completing the next section ([Configure DNS](/guides/launch/configure-dns)) during a planned maintenance window lasting up to one hour. HTTPS will be available for the domain within an hour of pointing DNS to Pantheon.

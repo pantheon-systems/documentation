@@ -82,7 +82,7 @@ $config['site_audit']['opt_out']['ExtensionsDev'] = TRUE;
 
 The specific key you'll use in the `$conf` or `$config` array is a combination of the report and the check. You can find a list of checks for the report here: [Site Audit Checks D7](http://cgit.drupalcode.org/site_audit/tree/Check?h=7.x-1.x) | [Site Audit Checks D8](http://cgit.drupalcode.org/site_audit/tree/Check?h=8.x-2.x).
 
-Keep in mind that the site audit is executed via Drush so it's best to use the [`$_ENV` superglobal](/read-environment-config/) for doing things like limiting the exclusions to one environment.
+Keep in mind that the site audit is executed via Drush so it's best to use the [`$_ENV` superglobal](/read-environment-config) for doing things like limiting the exclusions to one environment.
 
 ### I want to contribute/I found a mistake. How should I proceed?
 
@@ -92,7 +92,7 @@ Use the [Site Audit Issue Queue](https://drupal.org/project/issues/site_audit) t
 
 ### Site Audit Isn't Running on My Site
 
-If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/terminus/) command to execute Site Audit directly on your Pantheon site:
+If your site's Launch Check is showing recent update information about Database or Redis usage, but older information for the Site Audit checks, and clicking "run the checks now" doesn't update the status, there may be an application error interrupting its complete operation. In order to debug what might be causing an error, you can run the [Terminus](/terminus) command to execute Site Audit directly on your Pantheon site:
 
 ```bash
 terminus drush <site>.<env> -- aa --skip=insights --detail --vendor=pantheon --strict=0

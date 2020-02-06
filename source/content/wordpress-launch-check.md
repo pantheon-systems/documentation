@@ -44,7 +44,7 @@ This check will display a list of exploited patterns in code, the file name that
 ### Object Cache
 This tells you if Object Caching and Redis are enabled.
 
-If you receive an error similar to the following, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Installing Redis on Drupal or WordPress](/redis/).
+If you receive an error similar to the following, you'll need to move the `object-cache.php` from the plugin directory to `wp-content/object-cache.php`. For more information, see [Installing Redis on Drupal or WordPress](/redis).
 
 ```
 Cannot redeclare class WP_Object_Cache in
@@ -69,4 +69,4 @@ Displays the files that references sessions. If any are found, you'll be prompte
 If you have a feature request, message enhancements, or found a bug, please look at the [project's issues](https://github.com/pantheon-systems/wp_launch_check/issues) and submit a new issue if someone else has not already posted it. Pull requests are always welcome!
 
 ## See Also
-If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check/).
+If you have a Drupal site, see [Launch Check - Drupal Performance and Configuration Analysis](/drupal-launch-check).

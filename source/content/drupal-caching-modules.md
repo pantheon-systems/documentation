@@ -4,7 +4,7 @@ description: Configure your Drupal site's performance and caching settings to ma
 tags: [cacheapp]
 categories: [drupal,performance]
 ---
-While configuring [Drupal's performance and caching settings](/drupal-cache) and using [Redis as a Drupal caching backend](/redis/) will make a significant performance difference, not every module uses Drupal's caching out of the box.
+While configuring [Drupal's performance and caching settings](/drupal-cache) and using [Redis as a Drupal caching backend](/redis) will make a significant performance difference, not every module uses Drupal's caching out of the box.
 
 ## Views
 

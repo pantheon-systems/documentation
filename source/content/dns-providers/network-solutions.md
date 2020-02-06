@@ -18,8 +18,8 @@ Network Solutions does not support AAAA records for IPv6 traffic which can negat
 Be sure that you have a:
 
 - Registered domain name using Network Solutions to host DNS
-- [Paid Pantheon plan](/guides/launch/plans/)
-- [Domain connected](/guides/launch/domains/) to the target Pantheon environment (typically Live)
+- [Paid Pantheon plan](/guides/launch/plans)
+- [Domain connected](/guides/launch/domains) to the target Pantheon environment (typically Live)
 
 ## Locate Pantheon's DNS Values
 Identify DNS values to point your domain to Pantheon:
@@ -73,5 +73,5 @@ AAAA records can be set via the [Adding an IPv6 record](http://www.networksoluti
 
 ## Next Steps
 
-* [Launch Essentials: Domains & HTTPS](/guides/launch/domains/)
-* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects/)
+* [Launch Essentials: Domains & HTTPS](/guides/launch/domains)
+* [Launch Essentials: Redirect to a Primary Domain](/guides/launch/redirects)

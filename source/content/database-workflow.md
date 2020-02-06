@@ -11,7 +11,7 @@ Using the tools in the Database / Files tab, you can overwrite the databases on 
 
 <Alert title="Warning" type="danger">
 
-Pushing content up to Live should almost never be done to a launched site, as it can overwrite the environment configurations. See [Using the Pantheon Workflow](/pantheon-workflow/). 
+Pushing content up to Live should almost never be done to a launched site, as it can overwrite the environment configurations. See [Using the Pantheon Workflow](/pantheon-workflow). 
 
 </Alert>
 
@@ -20,12 +20,12 @@ You can use any number of MySQL clients such as [MySQL Workbench](https://dev.my
 and [manage configurations](/pantheon-workflow/#configuration-management) as needed.
 
 ## Cloning the Database
-Cloning relies on mysqldump, which needs a point-in-time snapshot. We recommend using the `--single-transaction` flag, which will use transactions to get a point-in-time snapshot without locking the DB. However, only the InnoDB database engine supports transactions. On MyISAM, the table needs to be locked. On small DBs this is not an issue, but could be for larger DBs. We also use the `--quick option`, which reduces the time it would take for large tables. For more information, see [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb/) and [Run MySQL Dump Without Locking Tables](https://stackoverflow.com/questions/104612/run-mysqldump-without-locking-tables).
+Cloning relies on mysqldump, which needs a point-in-time snapshot. We recommend using the `--single-transaction` flag, which will use transactions to get a point-in-time snapshot without locking the DB. However, only the InnoDB database engine supports transactions. On MyISAM, the table needs to be locked. On small DBs this is not an issue, but could be for larger DBs. We also use the `--quick option`, which reduces the time it would take for large tables. For more information, see [Converting MySQL Tables From MyISAM to InnoDB](/myisam-to-innodb) and [Run MySQL Dump Without Locking Tables](https://stackoverflow.com/questions/104612/run-mysqldump-without-locking-tables).
 
 ## Wipe Database and Files
 Use this tool if you need to completely wipe your database and files for a single environment. Wiping completely resets the database and files, and you will lose all content for that specific environment. For example, if you wipe the Dev environment, Test and Live are not affected. You will then need to import the database and files from a backup, clone them from another environment, or re-install Drupal or WordPress for that environment.
 
-Learn more about the [Pantheon Workflow](/pantheon-workflow/).
+Learn more about the [Pantheon Workflow](/pantheon-workflow).
 
 ## Troubleshooting
 
@@ -69,7 +69,7 @@ Host *.drush.in
 ```
 
 ## See Also
-- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic/)
-- [MySQL Slow Log](/mysql-slow-log/)
-- [Converting MySQL Tables from MyISAM to InnoDB](/myisam-to-innodb/)
-- [Database Connection Errors](/database-connection-errors/)
+- [MySQL Troubleshooting with New Relic Pro](/debug-mysql-new-relic)
+- [MySQL Slow Log](/mysql-slow-log)
+- [Converting MySQL Tables from MyISAM to InnoDB](/myisam-to-innodb)
+- [Database Connection Errors](/database-connection-errors)

@@ -28,18 +28,18 @@ For more detailed instructions pertaining to your specific DNS host, click below
 
 <Accordion title="DNS Host-Specific Instructions" id="host-specific2" icon="info-sign">
 
- - [1&1 Domain Configuration](/1-and-1/)
- - [Cloudflare Domain Configuration](/cloudflare/)
- - [DNS Made Easy Domain Configurationi](/dns-made-easy/)
- - [DreamHost Domain Configuration](/dreamhost/)
- - [Dyn Domain Configuration](/dyn/)
- - [eNom Domain Configuration](/enom/)
- - [Gandi Domain Configuration](/gandi/)
- - [GoDaddy Domain Configuration](/godaddy/)
- - [Google Domain Configuration](/google/)
- - [Namecheap Domain Configuration](/namecheap/)
- - [Network Solutions Domain Configuration](/network-solutions/)
- - [Amazon Route 53 Domain Configuration](/route53/)
+ - [1&1 Domain Configuration](/1-and-1)
+ - [Cloudflare Domain Configuration](/cloudflare)
+ - [DNS Made Easy Domain Configurationi](/dns-made-easy)
+ - [DreamHost Domain Configuration](/dreamhost)
+ - [Dyn Domain Configuration](/dyn)
+ - [eNom Domain Configuration](/enom)
+ - [Gandi Domain Configuration](/gandi)
+ - [GoDaddy Domain Configuration](/godaddy)
+ - [Google Domain Configuration](/google)
+ - [Namecheap Domain Configuration](/namecheap)
+ - [Network Solutions Domain Configuration](/network-solutions)
+ - [Amazon Route 53 Domain Configuration](/route53)
 
 </Accordion>
 
@@ -68,7 +68,7 @@ For more detailed instructions pertaining to your specific DNS host, click below
 ## Frequently Asked Questions
 
 ### How do I switch my site over to HTTPS from HTTP?
-To avoid mixed-content browser warnings and excessive redirects, follow the process described in [Switching Sites from HTTP to HTTPS](/http-to-https/).
+To avoid mixed-content browser warnings and excessive redirects, follow the process described in [Switching Sites from HTTP to HTTPS](/http-to-https).
 
 ### How do I upgrade my existing Pantheon site?
 Make the switch on an existing Pantheon site by updating DNS for your domains. If your site doesn't have the new combined "Domains/HTTPS" tab, open a support chat to get the upgrade enabled
@@ -115,7 +115,7 @@ If you do not already have HTTPS, there's _no need_ to pre-provision.
 All modern browsers and operating systems are supported. For details, see the **Handshake Simulation** portion of this [report](https://www.ssllabs.com/ssltest/analyze.html?d=pantheon.io).
 
 ### What about Cloudflare?
-Refer to [Cloudflare Domain Configuration](/cloudflare/).
+Refer to [Cloudflare Domain Configuration](/cloudflare).
 
 ### For how long are Let's Encrypt certificates valid and what happens when they expire?
 Let's Encrypt certificates are valid for 90 days and are automatically updated on the platform before they expire.

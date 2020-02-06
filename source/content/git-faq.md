@@ -182,7 +182,7 @@ Savvy Git users may wonder, "If I create my own `pantheon_test_N` tag with a hig
 
 ### How do I revert or undo changes?
 
-See [Undo Git commits like overwriting Drupal core](/undo-commits/).
+See [Undo Git commits like overwriting Drupal core](/undo-commits).
 
 ### How do I apply a patch from Drupal.org on Pantheon?
 
@@ -195,7 +195,7 @@ From your local clone, run the `git apply` command as per Drupal.org, commit you
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](https://www.drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
-For detailed instructions, see [Manually Migrate Sites to Pantheon](/migrate-manual/).
+For detailed instructions, see [Manually Migrate Sites to Pantheon](/migrate-manual).
 
 ### Can I use Git with SFTP mode?
 
@@ -313,7 +313,7 @@ A simple option is to configure Git with a multi-remote origin within `.git/conf
   url = git@github.com:systemseed/example.git
 ```
 
-Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/pantheon-community/).
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/pantheon-community).
 
 ### Why are some merged commits hidden?
 Pantheon uses the following command to display commits in the Dashboard:
@@ -340,5 +340,5 @@ If you encounter an error when trying to commit, check the following:
 
 - Commit Size: If the commit is too large, it will be rejected.
   - Check the commit for non-codebase files that have been added to the site.
-  - Does the commit contain a full overwrite of the entire site? Rather than overwrite the site in place, we suggest migrating to a new site to avoid downtime and potential conflicts. See [Relaunch Existing Pantheon Site](/relaunch/) for more information.
+  - Does the commit contain a full overwrite of the entire site? Rather than overwrite the site in place, we suggest migrating to a new site to avoid downtime and potential conflicts. See [Relaunch Existing Pantheon Site](/relaunch) for more information.
 - Confirm that the file isn't listed in `.gitignore`

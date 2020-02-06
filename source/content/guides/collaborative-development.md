@@ -80,7 +80,7 @@ Another option is to add another push URL for origin within `.git/config`:
 	url = git@github.com:systemseed/example.git
 ```
 
-Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/pantheon-community/).
+Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/pantheon-community).
 
 ### Push the Pantheon Site's Codebase to GitHub
 
@@ -106,7 +106,7 @@ At our [site creation page](https://dashboard.pantheon.io/sites/create/ "Pantheo
 
 ### Pull in Pantheon's Upstream
 
-As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickstart, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with your commit history intact, while also preserving Pantheon's [upstream update](/core-updates/) function.
+As long as you've chosen the same codebase (Drupal 7, WordPress, Commerce Kickstart, etc.) as the starting point of your Pantheon site, you can use Git to import your existing code with your commit history intact, while also preserving Pantheon's [upstream update](/core-updates) function.
 
 1. From your Site Dashboard, go to the Dev environment.
 2. Click **Settings**, then select **About Site**.
@@ -368,6 +368,6 @@ These tools will allow your team to fully implement continuous delivery with aut
 
 ## Additional Resources
 
-[Starting with Git](/git/)
+[Starting with Git](/git)
 
-[Git FAQs](/git-faq/)
+[Git FAQs](/git-faq)

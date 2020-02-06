@@ -10,12 +10,12 @@ Files are user uploads, usually images or documents. They are excluded from vers
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
 - [WordPress](https://github.com/pantheon-systems/WordPress/blob/master/.gitignore)
 
-The Pantheon architecture comprises highly available [application containers](/application-containers/) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
+The Pantheon architecture comprises highly available [application containers](/application-containers) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
-Valhalla symbolically links the `wp-content/uploads` directory for WordPress and the `sites/default/files` directory for Drupal to the Valhalla files directory mount point, `/files` if viewed via an SFTP client. It is important to note that this directory is not part of the document root and is not directly web-accessible. Should you wish to make this accessible, you will need to create an additional symbolic link from within the document root.  Any [non-standard file locations](/non-standard-file-paths/) should be symbolically linked to `/files` or moved manually.
+Valhalla symbolically links the `wp-content/uploads` directory for WordPress and the `sites/default/files` directory for Drupal to the Valhalla files directory mount point, `/files` if viewed via an SFTP client. It is important to note that this directory is not part of the document root and is not directly web-accessible. Should you wish to make this accessible, you will need to create an additional symbolic link from within the document root.  Any [non-standard file locations](/non-standard-file-paths) should be symbolically linked to `/files` or moved manually.
 
 ## Access via SFTP
-You can connect directly to the filesystem by copying your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [Filezilla](/filezilla/) and navigating to the `/files` directory.
+You can connect directly to the filesystem by copying your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [Filezilla](/filezilla) and navigating to the `/files` directory.
 
 ## Pantheon-Related Files
 When you are logged in to your application container, you may notice some files that you don't recognize. Don't worry—we put them there, and here's why:

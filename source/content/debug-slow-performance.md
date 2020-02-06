@@ -8,7 +8,7 @@ This article covers the most common causes for performance problems, demonstrate
 
 ## PHP Errors Slow Execution
 
-An often ignored cause of bad performance is [PHP errors within site code](/php-errors/), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.
+An often ignored cause of bad performance is [PHP errors within site code](/php-errors), as every single PHP error will slow your site down, including both notices and warnings that don’t crash your site.
 
 Here's an example of how PHP errors can slow down a site. This benchmark was performed with Drupal's [Generate Errors](https://drupal.org/project/generate_errors), with a TRUNCATE of the `watchdog` table before each test to avoid tainting results from the aggregate. The results are equally applicable to WordPress or any PHP-based project.
 
@@ -55,9 +55,9 @@ Non-optimized caching also is a huge problem. If you're not caching anonymous pa
 If the cache lifetime is set to something that doesn't make sense for your traffic pattern (e.g. it only gets one hit per hour yet it's set to have a 5 minute cache), that's not enough to help.
 
 ### Drupal Note
-See our [guidelines on Drupal's performance settings](/drupal-cache/) for more details.
+See our [guidelines on Drupal's performance settings](/drupal-cache) for more details.
 
-Other caching systems that aren't on by default that should be enabled include [block caching](/drupal-cache/), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
+Other caching systems that aren't on by default that should be enabled include [block caching](/drupal-cache), [Views](https://drupal.org/project/views) result and query caching, and [Panels](https://drupal.org/project/panels) caching.
 
 ### Using the Database to Cache in Drupal
 By default, Drupal uses the database as a caching backend. This is an example of a fairly high traffic site, and as you can see, database cache hits are the vast majority of the slow queries.
@@ -66,7 +66,7 @@ By default, Drupal uses the database as a caching backend. This is an example of
 
 Also note the impact of watchdog INSERTs; this is why you should fix your PHP errors.
 
-One of the services Pantheon offers is [Redis as a caching backend](/redis/), which is a key-value store and is optimized for this type of work. For a real world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.pantheon.io/blog/why-we-recommend-redis-caching-backend).​
+One of the services Pantheon offers is [Redis as a caching backend](/redis), which is a key-value store and is optimized for this type of work. For a real world use-case, see [why we recommend Redis as a Drupal caching backend](https://www.pantheon.io/blog/why-we-recommend-redis-caching-backend).​
 
 ### WordPress Caching Note
 There is no built-in caching in WordPress. Pantheon offers Varnish in front of all sites - WordPress and Drupal - to cache content and improve performance. The [pantheon-cache plugin](https://github.com/pantheon-systems/WordPress/tree/master/wp-content/mu-plugins/pantheon#edge-cache) is included within the `mu-plugins` directory of our repository, which helps the edge cache (Varnish) communicate with WordPress. Most WordPress caching plugins will be ineffective on the Pantheon platform. They should not cause any problems, but they will most likely not speed up the site and may even slow it down.
@@ -78,24 +78,24 @@ Cache misses are by nature slow - if something needs to be cached it's performed
 
 There are a large number of caches involved in every single request, including:
 
-- [Pantheon Global CDN](/global-cdn-caching/) - Spread out across multiple servers, and the cache is not shared between servers.
-- [APC](/alternative-php-cache/) - PHP has its own opcode cache, which is not shared between application containers.
-- [Drupal](https://drupal.org/node/326504) and [Redis](/redis/) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
+- [Pantheon Global CDN](/global-cdn-caching) - Spread out across multiple servers, and the cache is not shared between servers.
+- [APC](/alternative-php-cache) - PHP has its own opcode cache, which is not shared between application containers.
+- [Drupal](https://drupal.org/node/326504) and [Redis](/redis) - Shared between your servers, but caches do expire and will need to be regenerated. Therefore, more traffic means more cache hits and faster performance, given the number of components involved.
 
 ## Too Much Traffic
 Of course, too much site traffic can be a problem if you just don't have enough resources.
 
 If your site is already optimized to the best of your knowledge, including eliminating PHP errors, leveraging caching like Redis and caching things like blocks and views, and your database response time is responding quickly to a reasonable amount of queries, then you might be a victim of your own success.
 
-If you've reached this point, it's probably time to consider [upgrading your site's plan](/site-plan/). We have a number of self-service options for scaling to your needs, but if you've already maxed out a self-service plan, then [Elite](https://pantheon.io/pricing#elite) is a good option.
+If you've reached this point, it's probably time to consider [upgrading your site's plan](/site-plan). We have a number of self-service options for scaling to your needs, but if you've already maxed out a self-service plan, then [Elite](https://pantheon.io/pricing#elite) is a good option.
 
 ## Running Cron Over Web Traffic
 
 Both Drupal and WordPress rely on running regular maintenance tasks via a cron system that usually gets executed at the end of a request. The user is thus forced to wait for the cron to finish before they can actually see the page. Depending on what the cron is doing, this can be a short or extremely long wait (e.g. if the cron is calling external services to import content). As you can imagine, this is not desirable.
 
-For Drupal sites, Pantheon executes the cron every hour via Drush regardless of the site's cron settings. There are various other configuration schemes you can use, as described in [Cron for Drupal](/drupal-cron/).
+For Drupal sites, Pantheon executes the cron every hour via Drush regardless of the site's cron settings. There are various other configuration schemes you can use, as described in [Cron for Drupal](/drupal-cron).
 
-This functionality doesn't exist for WordPress sites, but there are a multitude of different configuration options available that allow for more flexibility when configuring cron. The entire list of options can be found in [Cron for WordPress](/wordpress-cron/).
+This functionality doesn't exist for WordPress sites, but there are a multitude of different configuration options available that allow for more flexibility when configuring cron. The entire list of options can be found in [Cron for WordPress](/wordpress-cron).
 
 ## External Call Timeouts
 
@@ -110,8 +110,8 @@ Debugging memory issues can be challenging. Here are some things to consider whe
 
 - Look at the stacktrace provided along with the error to see if there's a module or plugin that is identified
 - Debug code locally using a PHP extension (like [Xdebug](https://xdebug.org/) or [XHProf](http://php.net/manual/en/book.xhprof.php)) or to help refactor code that could be leaking memory
-- Enabling [Redis](/redis/) could boost site performance by providing an in-memory backend caching
-- [Update PHP version](/php-versions/)
+- Enabling [Redis](/redis) could boost site performance by providing an in-memory backend caching
+- [Update PHP version](/php-versions)
 - In case the source of the high memory usage is unclear, it might be helpful to use using a memory profiling module / plugin on the production site temporarily. Note that memory profiling most often has a performance overhead, so keep a close eye on the site while profiling. Usually a few hours will provide enough data.
 
 Please note that memory issues caused by custom code fall outside our [scope of support](/support/#scope-of-support).

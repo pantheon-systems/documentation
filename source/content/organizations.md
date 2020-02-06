@@ -42,7 +42,7 @@ Agency organizations will show "Site Owners" instead of "Users in Charge"
 A **<span class="glyphicons glyphicons-snowflake" style="color:#0a6bb5"></span>** icon in the site's status column indicates that a site is [frozen due to inactivity](/platform-considerations/#inactive-site-freezing).
 
 For more details on the Sites tab, see
-[Managing Sites and Teams with the Pantheon Organization Dashboard](/organization-dashboard/).
+[Managing Sites and Teams with the Pantheon Organization Dashboard](/organization-dashboard).
 
 ### People
 
@@ -89,7 +89,7 @@ Every entity (user, organization, product and site) is assigned a UUID which is 
 de305d54-75b4-431b-adb2-eb6b9e546014
 ```
 
-You can also use [Terminus](/terminus/) to find the UUID of your organizations:
+You can also use [Terminus](/terminus) to find the UUID of your organizations:
 
 ```
 $ terminus org:list
