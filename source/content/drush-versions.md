@@ -9,6 +9,7 @@ reviewed: "2020-01-31"
 By default, Pantheon runs Drush 8 on newly created Drupal sites.
 
 ## Terminus Drush and Local Drush
+
 [Terminus](/terminus/) makes remote Drush calls on sites without using a local installation, eliminating compatibility issues between local and remote installs. For more information, see our guide on [Managing Drupal Sites with Terminus and Drush](/guides/terminus-drupal-site-management/).
 
 ## Available Drush Versions
@@ -18,6 +19,7 @@ Pantheon currently supports Drush 8, Drush 9, and Drush 10.
 Drush 8 is the preferred version of Drush to use with Drupal 8 sites that are managed by Composer. See [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/) and the [Build Tools Workflow](/guides/build-tools/) for information on how to use Composer to manage Drupal sites on Pantheon. Drush 8 should be used for Drupal 8 sites that are not managed by Composer, or that use modules that provide additional Drush 8 commands.
 
 ## Verify Current Drush Version
+
 Verify the current version of Drush running remotely on Pantheon using [Terminus](/terminus/):
 
 ```bash
@@ -25,6 +27,7 @@ terminus drush <site>.<env> -- status | grep "Drush version"
 ```
 
 ## Configure Drush Version
+
 Before you modify a site's Drush version, remember that not all versions of Drush are compatible with all versions of Drupal. See [Available Drush Versions](#available-drush-versions) and the [requirements below](#compatibility-and-requirements).
 
 Change a site's Drush version via the [pantheon.yml file](/pantheon-yml/):
@@ -86,6 +89,7 @@ Do not select any major version of Drush lower than `8.3.2`, `9.7.1`, or `10.2.0
 For more information, see [Avoiding “Dependency Hell” with Site-Local Drush](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush).
 
 ## See Also
+
 - [Avoiding “Dependency Hell” with Site-Local Drush (Blog)](https://pantheon.io/blog/avoiding-dependency-hell-site-local-drush)
 - [Fix Up Drush Site Aliases with a Policy File (Blog)](https://pantheon.io/blog/fix-drush-site-aliases-policy-file)
 - [Expand Your Use of Drush on Pantheon with More Commands (Blog)](https://pantheon.io/blog/expand-use-drush-pantheon-more-commands)
