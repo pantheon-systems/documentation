@@ -88,8 +88,11 @@ Learn more about the [Pantheon Workflow](/pantheon-workflow).
 
 ### Errors
 All fatal PHP errors are shown on this tab. If any are found, recommendations are made. Learn more about [PHP Errors and Exceptions](/php-errors).
+
 <Alert title="Note" type="info">
+  
 This is not intended to replace reviewing your error logs. Learn more about [accessing all your server logs](/logs).
+
 </Alert>
 
 ### Domains / HTTPS
