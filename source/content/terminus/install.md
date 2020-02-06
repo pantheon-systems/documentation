@@ -11,6 +11,7 @@ permalink: docs/terminus/:basename/
 nexturl: terminus/examples/
 previousurl: terminus/
 image: terminus-thumbLarge
+reviewed: "2020-02-05"
 searchboost: 100
 ---
 

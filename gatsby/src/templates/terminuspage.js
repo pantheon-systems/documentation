@@ -24,6 +24,7 @@ import Releases from "../components/releases"
 import TerminusVersion from "../components/terminusVersion"
 import Download from "../components/download"
 import Commands from "../components/commands"
+import ReviewDate from "../components/reviewDate"
 
 const shortcodes = {
   Callout,
@@ -40,6 +41,7 @@ const shortcodes = {
   TerminusVersion,
   Download,
   Commands,
+  ReviewDate
 }
 
 // @TODO relocate this list
@@ -128,6 +130,7 @@ class TerminusTemplate extends React.Component {
   render() {
     const node = this.props.data.mdx
     const contentCols = node.frontmatter.showtoc ? 9 : 12
+    const isoDate = this.props.data.date
 
     return (
       <Layout>
@@ -136,6 +139,7 @@ class TerminusTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
+          reviewed={isoDate.frontmatter.reviewed}
         />
         <div className="">
           <div className="container">
@@ -158,6 +162,8 @@ class TerminusTemplate extends React.Component {
                       contributors={node.frontmatter.contributors}
                       featured={node.frontmatter.featuredcontributor}
                       editPath={node.fields.editPath}
+                      reviewDate={node.frontmatter.reviewed}
+                      isoDate={isoDate.frontmatter.reviewed}
                     />
                     <MDXProvider components={shortcodes}>
                       <MDXRenderer>{node.body}</MDXRenderer>
@@ -212,8 +218,14 @@ export const pageQuery = graphql`
           name
           twitter
         }
+        reviewed(formatString: "MMMM DD, YYYY")
       }
       fileAbsolutePath
+    }
+    date: mdx(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        reviewed
+      }
     }
   }
 `

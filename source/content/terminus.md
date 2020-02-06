@@ -10,6 +10,7 @@ categories: [workflow,develop]
 permalink: docs/:basename/
 nexturl: terminus/install/
 image: terminus-thumbLarge
+reviewed: "2020-02-05"
 searchboost: 200
 ---
 
