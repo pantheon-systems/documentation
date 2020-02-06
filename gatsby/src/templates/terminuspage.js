@@ -133,6 +133,8 @@ class TerminusTemplate extends React.Component {
     const node = this.props.data.mdx
     const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
+    const ifCommandsDate = node.fields.slug == "/terminus/commands" ? this.props.data.releasesJson.published_at : node.frontmatter.reviewed
+    const ifCommandsISO = node.fields.slug == "/terminus/commands" ? this.props.data.jsonISO.published_at : isoDate.frontmatter.reviewed
 
     return (
       <Layout>
@@ -141,7 +143,7 @@ class TerminusTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
-          reviewed={isoDate.frontmatter.reviewed}
+          reviewed={ifCommandsISO}   
         />
         <div className="">
           <div className="container-fluid">
@@ -164,8 +166,8 @@ class TerminusTemplate extends React.Component {
                       contributors={node.frontmatter.contributors}
                       featured={node.frontmatter.featuredcontributor}
                       editPath={node.fields.editPath}
-                      reviewDate={node.frontmatter.reviewed}
-                      isoDate={isoDate.frontmatter.reviewed}
+                      reviewDate={ifCommandsDate}
+                      isoDate={ifCommandsISO}
                     />
                     <MDXProvider components={shortcodes}>
                       <MDXRenderer>{node.body}</MDXRenderer>
@@ -225,6 +227,12 @@ export const pageQuery = graphql`
       frontmatter {
         reviewed
       }
+    }
+    releasesJson {
+      published_at(formatString: "MMMM DD, YYYY")
+    }
+    jsonISO: releasesJson {
+      published_at(formatString: "YYYY-MM-DD")
     }
   }
 `
