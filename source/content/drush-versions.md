@@ -82,6 +82,8 @@ Sometimes, even after updating the Drush version in `pantheon.yml`, the correct 
 
 The Pantheon platform always prefers the site-local Drush or other local settings over the setting in `pantheon.yml`. Check for an outdated configuration file, `policy.drush.inc`, in your local `~/.drush` directory. Remove the file, or comment out its contents to resolve.
 
+Executing Drush on the platform via a `terminus drush` command will use the version of Drush specified in `pantheon.yml`, unless a site-local version is present.
+
 ### Site-local Drush Usage
 
 If you need to specify a minor version or a version not available on the platform, you can add a site-local installation of Drush to your repository.
