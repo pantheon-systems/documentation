@@ -3,7 +3,7 @@ title: Drupal Drush Command-Line Utility
 description: Administer and maintain your Pantheon site from your local Drupal Drush installation.
 tags: [devdrush]
 categories: [drupal,workflow]
-reviewed: "2020-01-31"
+reviewed: "2020-02-06"
 ---
 [Drush](https://github.com/drush-ops/drush) is a command-line interface for Drupal that provides a wide set of utilities for administering and maintaining your site.
 
@@ -192,7 +192,7 @@ While we have the full spectrum of Drush core already available for your use, yo
 1. Clone locally.
 1. Create a `drush` folder in the Drupal root.
 1. Add the `sar` Drush command to the Drush folder.
-1. Commit drush/sar.
+1. Commit `drush/sar`.
 1. Push your code up to Pantheon.
 1. Clear your Drush cache on each environment. Example:
 
@@ -206,7 +206,9 @@ For Drupal 9, place Drush commands in `drush/Commands`.
 
 Create a file called `policy.drush.inc`, and place in in the `.drush` folder of your home directory. You can create a new file or use the example policy file in Drush’s `examples` folder to get started.
 
-If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download from the Dashboard. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option. To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.inc` to change the URI for your specific Pantheon site:
+If your live site is associated with multiple domains, Pantheon will select an arbitrary one to include in the alias file that you download with Terminus. In some instances, it can cause problems in Drupal if the wrong URI is used, and Drush will not allow you to override the URI value in the alias with a command line `--uri` option.
+
+To avoid editing the generated Pantheon aliases file every time it is downloaded, use a `hook_drush_sitealias_alter` function in `policy.drush.inc` to change the URI for your specific Pantheon site:
 
 ```php:title=policy.drush.inc
 function policy_drush_sitealias_alter(&$alias_record) {

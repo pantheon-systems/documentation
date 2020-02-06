@@ -3,7 +3,7 @@ title: Managing Drush Versions on Pantheon
 description: Learn about Pantheon's default Drush version and how to implement site-local usage.
 tags: [devdrush, services, pantheonyml]
 categories: [drupal,workflow,platform,develop]
-reviewed: "2020-01-31"
+reviewed: "2020-02-06"
 ---
 
 By default, Pantheon runs Drush 8 on newly created Drupal sites.
@@ -14,15 +14,17 @@ By default, Pantheon runs Drush 8 on newly created Drupal sites.
 
 ## Available Drush Versions
 
-Pantheon currently supports Drush 8, Drush 9, and Drush 10.
+Pantheon currently supports Drush versions 8, 9, and 10.
 
-Drush 8 is the preferred version of Drush to use with Drupal 8 sites that are managed by Composer. See [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/) and the [Build Tools Workflow](/guides/build-tools/) for information on how to use Composer to manage Drupal sites on Pantheon. Drush 8 should be used for Drupal 8 sites that are not managed by Composer, or that use modules that provide additional Drush 8 commands.
+Drush 8 is the preferred version of Drush to use with Drupal 8 sites that are managed by Composer. See [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/) and the [Build Tools Workflow](/guides/build-tools/) for information on how to use Composer to manage Drupal sites on Pantheon.
+
+Drush 8 should also be used for Drupal 8 sites that are not managed by Composer, or that use modules that provide additional Drush 8 commands.
 
 ## Verify Current Drush Version
 
-Verify the current version of Drush running remotely on Pantheon using [Terminus](/terminus/):
+Verify the current version of Drush running on Pantheon using [Terminus](/terminus/):
 
-```bash
+```bash{promptUser: user}
 terminus drush <site>.<env> -- status | grep "Drush version"
 ```
 
@@ -32,7 +34,7 @@ Before you modify a site's Drush version, remember that not all versions of Drus
 
 Change a site's Drush version via the [pantheon.yml file](/pantheon-yml/):
 
-```yaml
+```yaml:title=pantheon.yml
 api_version: 1
 
 drush_version: 8
@@ -50,9 +52,11 @@ If the `pantheon.yml` file does not exist, create it. If a `pantheon.upstream.ym
 
 Drush 8 is compatible with Drupal 6, 7, and 8.
 
-Always use Drush 8 with Drupal 7 and Drupal 6 sites, as Drush 9 and Drush 10 only work on Drupal 8.4 and later. While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](http://docs.drush.org/en/master/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
+Always use Drush 8 with Drupal 7 and Drupal 6 sites, as Drush 9 and Drush 10 only work on Drupal 8.4 and later.
 
-Drush 10 is available with the [simple addition to your pantheon.yml file](#configure-drush-version) shown below or for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or newer, [Composer](/composer/), and PHP 7.1 or newer.
+While Drush 5 and Drush 7 are available on Pantheon if needed, they are listed as [unsupported](http://docs.drush.org/en/master/install/#drupal-compatibility) by the Drush maintainers, and should be avoided unless absolutely necessary.
+
+Drush 10 is available with the [addition to your pantheon.yml file](#configure-drush-version) shown above, or for [site-local installation](#site-local-drush-usage). It requires Drupal 8 or higher, [Composer](/composer/), and PHP 7.1 or higher.
 
 <Alert title="Note" type="info">
 
@@ -74,7 +78,7 @@ See our guide on [Upgrading PHP Versions](/php-versions).
 
 ## Troubleshooting
 
-Sometimes even after updating the Drush version in `pantheon.yml`, the correct version of Drush is not called.
+Sometimes, even after updating the Drush version in `pantheon.yml`, the correct version of Drush is not called.
 
 The Pantheon platform always prefers the site-local Drush or other local settings over the setting in `pantheon.yml`. Check for an outdated configuration file, `policy.drush.inc`, in your local `~/.drush` directory. Remove the file, or comment out its contents to resolve.
 
