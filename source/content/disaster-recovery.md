@@ -57,8 +57,22 @@ If your site requires Solr, do not use Pantheon's Solr service. If you require a
 
 Pantheon Solr requires additional considerations when used on sites with Disaster Recovery. In its default state, if a site with Pantheon Solr and Disaster Recovery fails over to the backup, Solr will not automatically rebuild the search index. In that case, 
 
-1. Pantheon will need to manually re-provision your Solr instance and 
-1. you will need to manually re-index Solr after failover.
+1. Pantheon will need to manually re-provision your Solr instance. In the case of failover, the support engineers will be notified via a notification ticket and they will re-provision Solr for you. 
+1. This notification will also be sent to all users with access to the live environment, and once Solr has been re-provisioned you will be notified via this support ticket.
+1. You will need to manually re-index Solr after failover. 
+
+The reindexing process is application-side, and depending on your site the process may be different.
+
+#### Drupal 8, using the search_api_pantheon module
+1. As a site administrator, navigate to https://live-some-site.pantheonsite.io/admin/config/search/search-api/server/pantheon
+1. Click “Delete all indexed data on this server” to queue all content for re-indexing.
+1. Run Drupal Cron manually until all items have been indexed. You can determine that all items are indexed when search_api stops logging to watchdog on the cron runs.
+
+#### Drupal 7 (needs to be written)
+
+#### Wordpress (needs to be written)
+
+### Mitigating Solr/DR issues
 
 You may also consider one of the two following options:
 
