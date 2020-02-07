@@ -73,6 +73,8 @@ If you have active sites and no keys remaining, you can still access the sites. 
 
 ## Troubleshooting
 
+<Partial file="host-keys.md" />
+
 ### Control Path Error
 
 You may receive the following error:
