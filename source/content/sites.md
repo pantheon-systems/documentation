@@ -3,6 +3,7 @@ title: The Site Dashboard
 description: Learn how to use the Pantheon Site Dashboard to build and manage your Drupal or WordPress sites.
 tags: [dashboard]
 categories: [getstarted]
+reviewed: "2020-02-07"
 ---
 The Site Dashboard is where you can find all the tools you need to successfully build, launch, and manage your site.
 
@@ -56,7 +57,7 @@ If you need assistance, our expert Customer Support team is here to help make bu
 
 ## Environment Specific Options
 
-### Connection Information
+### Connection Info
 
 Here you can find the [SSH clone URL](/git), [Database Connection Information](/mysql-access), and [SFTP](/sftp) connection information.
 
@@ -134,7 +135,7 @@ de305d54-75b4-431b-adb2-eb6b9e546014
 
 You can also use Terminus to find the UUID of any site on your user Dashboard:
 
-```bash
+```bash{promptUser: user}
 terminus site:list
 ```
 
