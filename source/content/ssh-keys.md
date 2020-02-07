@@ -3,8 +3,9 @@ title: Generate and Add SSH Keys
 description: Understand how to generate SSH keys to configure Git, SFTP, or Drupal Drush.
 tags: [security, dashboard]
 categories: [get-started,develop]
+reviewed: "2020-02-07"
 ---
-To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once, no matter how many sites you work on.
+To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once per work environment (laptop, desktop, etc), no matter how many sites you work on.
 
 <Accordion title="Watch: Generate a SSH Key and Add it to Your Dashboard" id="ssh-video" icon="facetime-video">
 
@@ -22,9 +23,10 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
 1. Open your terminal and enter the following command to generate a key:
 
-   ```bash
+   ```bash{promptUser: user}
    ssh-keygen
    ```
+
   This command works on Linux, MacOS, and Windows 10.
 
 1. Unless you have reason to change it, leave the default location of `~/.ssh/id_rsa`. If the command says the key already exists, you can either overwrite it or continue onto the next step with your existing key.
@@ -35,77 +37,81 @@ Pantheon does not provide access to a shell environment over SSH. These directio
 
    Linux and Mac users can `cat`the file to the terminal and copy the output:
 
-   ```bash
+   ```bash{promptUser: user}
    cat ~/.ssh/id_rsa.pub
    ```
 
    Windows users can achieve the same result with `type`:
 
-   ```bash
+   ```bash{promptUser: winshell}
    type .ssh\id_rsa.pub
    ```
 
 ## Add Your SSH Key to Pantheon
 
-1. Log in to Pantheon and go to the **Account** page.
-2. Click **SSH Keys**.
-3. Paste the copied public key into the box, and click **Add Key**.  
-![Adding SSH Keys](../images/dashboard/add-ssh-key-dashboard.png)
-  Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on your Pantheon Account page.
-4. Open the Git bash client, and put in the command to clone your Pantheon site. This is found in the Dev environment of your site above the Git code log.
-5. If prompted, enter the password.
+1. Log in to Pantheon and go to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab in your User Dashboard.
 
-<Alert title="Note" type="info">
+1. Click **SSH Keys**.
 
-Generating SSH keys may add your username or the computer's hostname as a comment at the end of the file, making the key invalid on Pantheon. If you have any trouble using your SSH key take a look at the [Troubleshooting](#troubleshooting) at the end of the document.
+1. Paste the copied public key into the box, and click **Add Key**.
 
-</Alert>
+  ![Adding SSH Keys](../images/dashboard/add-ssh-key-dashboard.png)
+
+  Your computer is now set up to securely connect to the Pantheon Git server. You can view a list of available keys on the same page.
+
+1. In your Terminal environment, copy the **SSH clone URL** from the **Connection Info** of any site's Dev environment to clone your site code to your workstation.
+
+1. If prompted, enter the passphrase you set above.
 
 ## Delete a Key from Pantheon
-To delete a key, go to the **Account** page and click **SSH Keys**. Simply click the **Remove** button next to the key you want to delete.
+
+To delete a key, go to the **<span class="glyphicons glyphicons-cogwheel"></span> Account** tab of your User Dashboard and click **SSH Keys**. Click the **Remove** button next to the key you want to delete:
+
 ![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
 
-If you have no keys remaining but still have active sites, you will still have access to them and can make edits via SFTP and Git using your account password to authenticate.
+If you have active sites and no keys remaining, you can still access the sites. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one [here](https://dashboard.pantheon.io/reset-password).
 
 ## Troubleshooting
 
-#### Invalid SSH Keys
-Spaces or non-standard alphanumeric characters in the SSH key's comments (such as your user or system hostname) may cause the SSH key to not be accepted on Pantheon. To fix this, simply edit the user or hostname and remove spaces and any non-standard characters. This will not affect the key itself as the user and hostname are simply appended as a comment for reference.
-
-#### Control Path Error
+### Control Path Error
 
 You may receive the following error:
-```
+
+```bash
 ControlPath too long fatal: Could not read from remote repository.
 ```
+
 Check your SSH config files (by default, `$HOME/.ssh/config and /etc/ssh/ssh_config`) for a declaration like this:
-```bash
+
+```conf:title=ssh_config
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/control-%l.%r@%h:%p
 ```
 
 There are two ways to fix this. First, try adjusting the `Controlpath` line as shown below:
-```bash
+
+```conf:title=ssh_config
 Host *
 ControlMaster auto
 ControlPath ~/.ssh/control-%r
 ```
 
-If this doesn't fix the issue try creating an entry in your SSH configuration for your site specifically by its hostname.  Also, don't use the `ControlMaster` option but do use the `ControlPath` line as shown below, replacing `SITE_UUID` with your [site's UUID](/sites/#site-uuid):
+If this doesn't fix the issue, try creating an entry in your SSH configuration for your site specifically by its hostname. Don't use the `ControlMaster` option, instead use the `ControlPath` line as shown below, replacing `SITE_UUID` with your [site's UUID](/sites/#site-uuid):
 
-```bash
+```conf:title=ssh_config
 Host *.SITE_UUID.drush.in
 ControlPath ~/.ssh/control-%r
 ```
-#### Server Refused to Allocate pty
+
+### Server Refused to Allocate pty
 
 This error occurs when a user is attempting to make a direct connection to Pantheon via SSH. Pantheon does not support [direct SSH connections](/faq/#does-pantheon-have-ftp-or-shell-access?).
 
-#### Authentication Prompts
+### Authentication Prompts
 
 Password requests may still occur after adding an SSH key to your Pantheon account if the corresponding key is not found by your local ssh-agent. To resolve, add your SSH key to the ssh-agent using the following command, replacing `id_rsa` with the name of your private key, if different:
 
-```bash
+```bash{promptUser: user}
 ssh-add ~/.ssh/id_rsa
 ```
