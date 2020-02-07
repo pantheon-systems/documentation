@@ -3,6 +3,7 @@ title: Local Development
 description: Suggestions and solutions for working locally on your Pantheon Drupal or WordPress site.
 tags: [local development, sftp, Lando, workflow]
 categories: [develop]
+reviewed: "2019-11-27"
 ---
 
 <Alert title="Pantheon Localdev" type="success" icon="star">
@@ -22,6 +23,7 @@ Dev/Test/Live, Multidev, local development, and more! Learn how Pantheon's WebOp
 Pantheon cannot troubleshoot or support local development solutions; however, we can provide some suggestions and known working solutions. For large teams/sites, we recommend using [Multidev](/multidev) instead of local development.
 
 ## Before You Begin
+
 Be sure you have:
 
 - A local stack capable of running Drupal or WordPress. [Lando](https://github.com/lando/lando) integrates with the Pantheon platform. Tools such as [MAMP](https://www.mamp.info/en/), [WAMP](http://www.wampserver.com/), and [XAMPP](https://www.apachefriends.org/index.html) all work.
@@ -41,7 +43,9 @@ terminus env:clear-cache <site>.<env>
 There are three parts to any dynamic website:
 
 1. Code (The application, modules or plugins, and themes)
+
 1. Database (content)
+
 1. Files (user uploaded or application generated)
 
 You will need to transfer each one from Pantheon to your local environment.
@@ -64,13 +68,25 @@ The first step is to get a `git clone` of your code from Pantheon to your local 
 
     If everything worked correctly, you will see Git fetching the data:
 
-    ![Git Clone During](../images/git_clone.png)
+    ```bash
+    Cloning into 'anita-wordpress'...
+    The authenticity of host '[codeserver.dev.....drush.in]:2222 ([173.255.119.72]:2222)' can't be established.
+    RSA key fingerprint is SHA256:yPEkh1Amd9WFBSP5syXD5rhUByTjaKBxQnlb5CahZZE.
+    Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+    Warning: Permanently added '[codeserver.dev.....drush.in]:2222,[173.255.119.72]:2222' (RSA) to the list of known hosts.
+    remote: Counting objects: 20503, done.
+    remote: Compressing objects: 100% (8184/8184), done.
+    remote: Total 20503 (delta 12802), reused 19671 (delta 11982)
+    Receiving objects: 100% (20503/20503), 46.65 MiB | 15.16 MiB/s, done.
+    Resolving deltas: 100% (12802/12802), done.
+    ```
 
     If you run into permission problems, check your [SSH key](/ssh-keys) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
 
 ## Get the Database
 
 ### Via Dashboard
+
 From within the Site Dashboard:
 
 1. Create an on-demand backup by selecting **Database / Files** > **Export** > **Export Database**.
@@ -109,6 +125,7 @@ From within the Site Dashboard:
 For an overview of ways to transfer files, see [SFTP and rsync on Pantheon](/rsync-and-sftp).
 
 ### Via Terminus
+
 Run the following Terminus commands:
 
 ```bash{promptUser: user}
@@ -248,7 +265,7 @@ define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST']);
     }
     ```
 
-2. You will also need to exclude the local configuration file from git, by adding the following to `.gitignore`:
+1. You will also need to exclude the local configuration file from git, by adding the following to `.gitignore`:
 
     ```git:title=.gitignore
     sites/*/settings.local.php
