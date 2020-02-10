@@ -43,6 +43,8 @@ If you are part of an Organization with an enhanced support package, navigate to
 ## Real Time Chat Support
 Start a chat with our Support Team to ask questions or request assistance on issues within our [scope of support](#scope-of-support). This support feature is available to all users and sites across all plans, including Sandbox.
 
+To receive the highest level of support available to your site or organization, remember to access the chat from the Organization Dashboard if available.
+
 1. From your Site or User Dashboard, click **Support**.
 2. Click **Launch Chat**, then click **New Conversation**.
 3. Provide a detailed summary of your support request, such as:
