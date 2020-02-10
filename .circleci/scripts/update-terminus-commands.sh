@@ -14,4 +14,4 @@ sed -i 's/drush_command/command/g' source/data/commands.json
 sed -i 's/wp_command/command/g' source/data/commands.json
 
 echo "Update releases"
-curl -v -H "Authorization: token $GITHUB_TOKEN" https://api.github.com/repos/pantheon-systems/terminus/releases > source/data/releases.json
+curl -v -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/terminus/releases > source/data/releases.json
