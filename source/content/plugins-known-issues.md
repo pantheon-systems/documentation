@@ -115,6 +115,8 @@ ___
 
 ## [Autoptimize](https://wordpress.org/plugins/autoptimize/)
 
+<ReviewDate date="2020-02-10" />
+
 **Issue:** Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
 
 **Solution:** Configure Autoptimize to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`) by adding the following to `wp-config.php`:
@@ -364,7 +366,7 @@ ___
 
 ## [iThemes Security](https://wordpress.org/plugins/better-wp-security/)
 
-<ReviewDate date="2019-01-01" />
+<ReviewDate date="2020-02-10" />
 
 **Issue 1:** The "File Change Detection" check in iThemes Security warns site admins when files are modified. On Pantheon, automated backups will trigger this warning.
 

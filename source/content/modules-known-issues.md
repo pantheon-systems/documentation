@@ -24,6 +24,8 @@ ___
 
 ## [Adaptive Image Styles](https://www.drupal.org/project/ais)
 
+<ReviewDate date="2020-02-10" />
+
 **Issue**: This module requires edits to the `nginx.conf` which is not currently supported on the platform. See [Platform Considerations](/platform-considerations/#nginx.conf) and [https://www.drupal.org/node/1669182](https://www.drupal.org/node/1669182).
 ___
 
@@ -32,13 +34,6 @@ ___
 **Issue**: When the Apache Solr Multilingual module is enabled, the default class variable set by the Pantheon Apache Solr module is changed, and the site will be unable to connect to the Solr server.
 
 If you have already enabled the Apache Solr Multilingual module and found that your site can no longer connect to the Solr server, you will need to first disable and uninstall the module. Next, disable and re-enable the Pantheon Apache Solr module. This will add the class variable back so your site can connect to the Solr server again.
-___
-
-## [Acquia Search](https://www.drupal.org/project/acquia_search)
-
-**Issue**: If Acquia Solr modules are present in the site codebase (even if disabled) and Pantheon Apache Solr is enabled, the site will be unable to connect to Solr server.
-
-**Solution**: Delete the Acquia Solr modules from the codebase and then disable and re-enable the Pantheon Apache Solr module.
 ___
 
 ## [Background Process](https://www.drupal.org/project/background_process)
@@ -87,7 +82,11 @@ ___
 
 ## [Composer Manager](https://www.drupal.org/project/composer_manager)
 
-This module has been deprecated by its authors. The suggestions made below are not guaranteed to be successful in all use cases.
+<ReviewDate date="2020-02-10" />
+
+This module has been deprecated by its authors for Drupal 8 and above. The suggestions made below are for Drupal 7 users, and are not guaranteed to be successful in all use cases.
+
+If you're creating a new site that needs composer-managed libraries, we strongly reccomend using Drupal 8.1 or newer.
 
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
@@ -154,12 +153,6 @@ ___
 
 ___
 
-## [HTTPRL - HTTP Parallel Request & Threading Library](https://www.drupal.org/project/httprl)
-
-**Issue**: This module can severely impact performance. This may be the result of module code or its configuration on the platform that results in the spikes.
-
-___
-
 ## [ImageAPI Optimize](https://www.drupal.org/project/imageapi_optimize)
 
 <ReviewDate date="2019-10-17" />
@@ -172,7 +165,7 @@ ___
 
 ## [JS](https://www.drupal.org/project/js)
 
-<ReviewDate date="2019-07-24" />
+<ReviewDate date="2020-02-10" />
 
 **Issue**: This module requires modification of the site's `.htaccess` or `nginx.conf` file, which cannot be modified on the platform. While using `settings.php` can sometimes be effective as a means of implementing redirects, because `POST` data needs to be preserved, it is not possible to implement redirects at the application layer in a way that would allow this module to function as intended.
 ___
@@ -184,6 +177,8 @@ ___
 ___
 
 ## [Live CSS](https://www.drupal.org/project/live_css)
+
+<ReviewDate date="2020-02-10" />
 
 **Issue**: This module requires write access to the site's codebase for editing CSS files, which is not granted on Test and Live environments by design.
 
@@ -210,6 +205,8 @@ ___
 ___
 
 ## [Pathologic](https://www.drupal.org/project/pathologic)
+
+<ReviewDate date="2020-02-10" />
 
  **Issue**: The path of the base URL is changed and cached by the module itself.
 
@@ -244,6 +241,8 @@ This will move the temporary upload destination from the individual server mount
 ___
 
 ## [reCAPTCHA](https://www.drupal.org/project/recaptcha)
+
+<ReviewDate date="2020-02-10" />
 
 **Issue 1:** If your site is running PHP 5.3, form submissions that use the reCAPTCHA module might continually fail and display the error: `The answer you entered for the CAPTCHA was not correct`. This is because the default arg_separator.output for PHP 5.3 is `&amp;` while for PHP 5.5 it is `&`.
 
@@ -296,12 +295,6 @@ ___
 **Issue**: The module requires a very specific set of permissions for the folder and the keys to be uploaded. Using Private or non-standard filepaths won't work. It is not possible to change these in LIVE or TEST environment.
 
 **Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
-___
-
-## [Taxonomy CSV](https://www.drupal.org/project/taxonomy_csv)
-
-**Issue**:  This module requires the use of the `/tmp` directory. See [Using the tmp Directory](#using-the-tmp-directory) section below.
-
 ___
 
 ## [Varnish](https://www.drupal.org/project/varnish)
