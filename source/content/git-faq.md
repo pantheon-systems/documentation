@@ -1,9 +1,10 @@
 ---
 title: Git FAQs
-description: Answers to commonly asked questions about Git, Drupal, WordPress and Pantheon.
+description: Answers to common questions about Git, Drupal, WordPress and Pantheon.
 tags: [git]
 categories: [develop]
 contributors: [mrfelton]
+reviewed: "2020-02-11"
 ---
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
@@ -17,11 +18,15 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 
 Conflicts can occur when modified file(s) within your site's codebase do not align with changes made to the same file(s) in the site's upstream.
 
-> When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)
+> When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge.
+>
+> \- [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)
 
-### How do I resolve conflicts when updating Core?
+### Resolve Conflicts When Updating Core
 
-If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
+If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes.
+
+This is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
 <TabList>
 
@@ -69,15 +74,21 @@ If you receive the error that you have conflicts while updating core, the fastes
 
 Double-check the files before going forward to make sure no bugs were introduced.
 
-### Where can I find a site's upstream URL?
+If you modify core CMS files, the `-Xtheirs` flag will drop your changes. In that case you should [manually resolve conflicts](#manually-resolve-conflicts).
 
-The upstream URL is provided within the Site Dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/terminus):
+### Find a Site's Upstream URL
+
+The upstream URL is provided within the Site Dashboard, under **<span class="glyphicons glyphicons-cogwheel"></span> Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/terminus):
 
 ```bash{promptUser: user}
 terminus site:info <site> --field=upstream
 ```
 
-### How can I manually resolve conflicts?
+## Manually Resolve Conflicts
+
+How you resolve a merge conflict depends on what type of conflict you're faced with.
+
+### Resolve delete/modify Conflicts
 
 To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
 For example, the Git log may contain an entry similar to the following:
@@ -124,7 +135,32 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 
 For more details, see [WordPress and Drupal Core Updates](/core-updates).
 
-### How can I resolve conflicts from Multidevs?
+### Resolve Content Conflicts
+
+When two commits both modify the same line(s) of a file, without one having the other in its history, a merge conflict is created. For example:
+
+```none
+CONFLICT (content): Merge conflict in wp-admin/about.php
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+To resolve:
+
+1. Open the conflicting file in your text editor or IDE. Note that the conflicting lines are enclosed with `<<<<<<< HEAD` at the top, and `>>>>>>> <commit-id>` at the bottom, with `=======` delineating the two versions. Some IDEs, like Visual Studio Code for example, will highlight the conflicting section:
+
+  ![An example of Visual Studio Code highlighting a merge conflict](../images/vscode-merge-conflict.png)
+
+1. Edit the conflict by either choose one of the two versions of the conflicting line(s), or editing a version containing both updates. Be sure to remove all the delineators notes above from the file.
+
+1. Once you've saved your changes, commit and push:
+
+  ```bash{promptUser: user}
+  git add wp-admin/about.php
+  git commit -m "Merge conflict resolution"
+  git push origin master
+  ```
+
+### Resolve Conflicts from Multidevs
 
 If a merge conflict is preventing you from merging a Multidev environment, follow these steps to resolve.
 
@@ -143,21 +179,7 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
   git pull origin multidev
   ```
 
-1. Git will tell you which files are in conflict. Open them, and search for the conflicting sections.
-
-  The version from the master branch will be delineated with `<<<<<<< HEAD`, and the version from the Multidev environment will end with `>>>>>>> Commit Message`, with `=======` in between.
-
-1. After you resolve the conflict, add the modified file and commit the results:
-
-  ```bash{promptUser: user}
-  git commit -am "Resolve merge conflict"
-  ```
-
-1. Push the resolved master branch back to Pantheon:
-
-  ```bash{promptUser: user}
-  git push origin master
-  ```
+1. Git will tell you which files are in conflict. [Resolve the conflicts](#manually-resolve-conflicts) using the steps above.
 
 ## General Git Questions
 
