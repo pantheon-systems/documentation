@@ -20,6 +20,7 @@ Conflicts can occur when modified file(s) within your site's codebase do not ali
 > When a merge isn’t resolved automatically, Git leaves the index and the working tree in a special state that gives you all the information you need to help resolve the merge. - [Git Manual](https://www.kernel.org/pub/software/scm/git/docs/)
 
 ### How do I resolve conflicts when updating Core?
+
 If you receive the error that you have conflicts while updating core, the fastest resolution is often the `-Xtheirs` flag. This will attempt to automatically resolve the conflicts with a preference for upstream changes and is safe to run if you don't have your own changes in any of the conflicting files (e.g. problems with `.gitignore`).
 
 <TabList>
@@ -69,6 +70,7 @@ If you receive the error that you have conflicts while updating core, the fastes
 Double-check the files before going forward to make sure no bugs were introduced.
 
 ### Where can I find a site's upstream URL?
+
 The upstream URL is provided within the Site Dashboard on **Settings** > **About site**. Upstream URLs can also be identified via [Terminus](/terminus):
 
 ```bash{promptUser: user}
@@ -76,6 +78,7 @@ terminus site:info <site> --field=upstream
 ```
 
 ### How can I manually resolve conflicts?
+
 To manually delete merge conflicts from the terminal, use the following commands in sequence. Start by identifying the file that is generating a delete error.
 For example, the Git log may contain an entry similar to the following:
 
@@ -95,7 +98,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 
   </Alert>
 
-2. Run `git status` and verify that there is a new file to add to the repository:
+1. Run `git status` and verify that there is a new file to add to the repository:
 
  ```bash{outputLines:2-5}
   git status
@@ -105,7 +108,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
   new file: README.txt
   ```
 
-4. Stage and commit:
+1. Stage and commit:
 
  ```bash{promptUser: user}
  git commit -am "verifying missing README.txt"
@@ -113,7 +116,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 
  You will receive confirmation from Git that the file has been committed.
 
-5. Run the Git push command:
+1. Run the Git push command:
 
  ```bash{promptUser: user}
  git push origin master
@@ -122,6 +125,7 @@ CONFLICT (delete/modify): scripts/run-tests.sh deleted in HEAD and modified in 7
 For more details, see [WordPress and Drupal Core Updates](/core-updates).
 
 ### How can I resolve conflicts from Multidevs?
+
 If a merge conflict is preventing you from merging a Multidev environment, follow these steps to resolve.
 
 1. Set the Dev environment to Git mode:
@@ -158,6 +162,7 @@ If a merge conflict is preventing you from merging a Multidev environment, follo
 ## General Git Questions
 
 ### Does Pantheon support Git submodules?
+
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
 
 ### What are the Git tags?
@@ -195,6 +200,7 @@ From your local clone, run the `git apply` command as per Drupal.org, commit you
 Drupal.org also has instructions if you're looking to give back by [creating patches for Drupal](https://www.drupal.org/node/707484).
 
 ### How do I import a site with existing Git history?
+
 For detailed instructions, see [Manually Migrate Sites to Pantheon](/migrate-manual).
 
 ### Can I use Git with SFTP mode?
@@ -208,6 +214,7 @@ When you switch to On Server Development (SFTP), you cannot interact with your c
 We are currently running Git 2.4.x.
 
 ### Why were pushes denied because of changes in sites/default/files?
+
 If you find that you're running into issues with commits that reference `sites/default/files`, use the filter-branch command to rewrite those references out of your repository. The engineers at GitHub have [documented this technique](https://help.github.com/articles/removing-sensitive-data-from-a-repository/).
 
 From within the Drupal root of your site:
@@ -233,9 +240,11 @@ git remote set-url origin ssh://codeserver.dev.SITE_UUID@codeserver.dev.SITE_UUI
 By default your remote will be named origin. If you have renamed your Pantheon site's upstream, you will have to change origin in the command above.
 
 ### Why can't I connect to Git?
+
 If you're having problems cloning your Git repository, verify your SSH key in your User Dashboard is enabled. For more information, see [Generating SSH Keys](/ssh-keys).
 
 ### Why am I being prompted for my password after adding the public key?
+
 This occurs when you have multiple SSH keys. For more information, see [Permission Denied](https://help.github.com/articles/error-permission-denied-publickey/).
 
 1. Use [Terminus](/terminus) to identify the Git host:
@@ -260,7 +269,7 @@ This occurs when you have multiple SSH keys. For more information, see [Permissi
 
   The output should be similar to this:
 
-  ```none
+  ```none{numberLines: true}
   OpenSSH_7.3p1, LibreSSL 2.4.1
   debug1: Reading configuration data /etc/ssh/ssh_config
   debug1: /etc/ssh/ssh_config line 20: Applying options for *
@@ -275,6 +284,7 @@ This occurs when you have multiple SSH keys. For more information, see [Permissi
   Line six in our example output (`Offering RSA public key...`) is the information we're looking for. This is the RSA key being used to initiate the connection. You should now be able to configure Git with the matching SSH public key, and clone your repository.
 
 ### How do I fix fast forward errors?
+
 If you're getting errors after committing your reverted changes, make sure you have included the `-f` option, as you will be forcing a fast-forward update. Without this, you will receive an error similar to the one below:
 
 ```bash{outputLines:2-7}
@@ -296,6 +306,7 @@ There are a number of patterns and strategies of Git code management for single 
 As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
 
 ### How do I delete a remote branch?
+
 Use the `--delete` option:
 
 ```bash{promptUser: user}
@@ -305,9 +316,10 @@ git push origin --delete branchname
 Alternatively, you can prefix the branch with a colon.
 
 ### How do I keep multiple remote repositories in sync?
+
 A simple option is to configure Git with a multi-remote origin within `.git/config`, such as:
 
-```none
+```none:title=.git/config
 [remote "origin"]
   url = ssh://codeserver.dev.<SITE_UUID>@codeserver.dev.<SITE_UUID>.drush.in:2222/~/repository.git
   url = git@github.com:systemseed/example.git
@@ -316,9 +328,10 @@ A simple option is to configure Git with a multi-remote origin within `.git/conf
 Commits will be pushed to both remote destinations automatically on `git push origin`. Enforce this configuration with all team members when working collaboratively. Props to [Tom Kirkpatrick](/contributors/mrfelton) for contributing this tip in the [Pantheon Community](/pantheon-community).
 
 ### Why are some merged commits hidden?
+
 Pantheon uses the following command to display commits in the Dashboard:
 
-```bash
+```bash{promptUser: user}
 git log --first-parent
 ```
 
@@ -333,9 +346,11 @@ git log --graph
 ```
 
 ### Can I use .gitignore on Pantheon?
+
 Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. The `.gitignore` files can be modified locally and committed, but changes to them that will allow additional files will not be respected on Pantheon's servers. For example, if you modify your local `.gitignore` to allow caches and push the changed `.gitignore` to Pantheon, you will not be able to commit generated caches using the Pantheon Dashboard.
 
 ### Troubleshoot Commit Issues
+
 If you encounter an error when trying to commit, check the following:
 
 - Commit Size: If the commit is too large, it will be rejected.
