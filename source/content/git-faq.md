@@ -3,7 +3,7 @@ title: Git FAQs
 description: Answers to common questions about Git, Drupal, WordPress and Pantheon.
 tags: [git]
 categories: [develop]
-contributors: [mrfelton]
+contributors: [mrfelton, alexfornuto]
 reviewed: "2020-02-11"
 ---
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
@@ -78,21 +78,9 @@ From within the Drupal root of your site:
 git filter-branch -f --index-filter 'git rm -rf --cached --ignore-unmatch sites/default/files' --prune-empty -- f4160148..HEAD
 ```
 
-The commit `f4160148` is one from pretty far back in the Drupal 7 history, guaranteed to pre-date the start of the specific site project. Using the range between that and HEAD prevents filtering the entire Drupal project history, which can take a while. If you're on Drupal 6, you'll need to find your starting point by looking at the Git log. You might also pick a more recent starting point for Drupal 7 if you're in a hurry.
+The commit `f4160148` is one from pretty far back in the Drupal 7 history, guaranteed to pre-date the start of the specific site project. Using the range between that and HEAD prevents filtering the entire Drupal project history, which can take a while. You might also pick a more recent starting point for Drupal 7 if you're in a hurry.
 
-## Why are pushes denied because the remote upstream URL changed?
-
-We are updating our infrastructure so that code repositories do not have a single point of failure. To do this, we are moving to a more distributed code server binding model.
-
-As a result, the Git connection string format will change. This will start as a feature flag that you can optionally enable on a per-site basis, so you can opt in to evaluate the settings.
-
-If you have created a local clone of your site, you will need to update the default remote origin with the new format for connection strings, replacing `SITE_UUID` with your [site's UUID](/sites/#site-uuid):
-
-```bash{promptUser: user}
-git remote set-url origin ssh://codeserver.dev.SITE_UUID@codeserver.dev.SITE_UUID.drush.in:2222/~/repository.git
-```
-
-By default your remote will be named origin. If you have renamed your Pantheon site's upstream, you will have to change origin in the command above.
+If you're on Drupal 8 or WordPress, you'll need to find your starting point by looking at the Git log.
 
 ## Why can't I connect to Git?
 
@@ -154,11 +142,11 @@ Merge the remote changes (e.g. 'git pull') before pushing again. See the
 
 ## I have a Git conflict; can you fix it for me?
 
-No. Git is a powerful and useful tool, but it does take some time working with it to effectively use it. We do provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](#how-do-i-import-a-site-with-existing-git-history), [Git issues performing core updates](#can-i-use-.gitignore-on-pantheon), and [resetting your code to a specific commit](#how-do-i-revert-or-undo-changes).
+No. Git is a powerful and useful tool, but it does take some practice to effectively use it. We provide a number of resources and documentation to address various issues such as, [importing a site and keeping the Git history](#how-do-i-import-a-site-with-existing-git-history), [Git issues performing core updates](#can-i-use-.gitignore-on-pantheon), and [resetting your code to a specific commit](#how-do-i-revert-or-undo-changes).
 
 There are a number of patterns and strategies of Git code management for single users to large teams, and each has its own merits, drawbacks, and nuances.
 
-As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow.
+As a result of the varying techniques and to prevent code from being accidentally overwritten, it is up to the developer to address these when they occur as Git conflict resolution is a critical and important part of your workflow. See [Resolve Git Merge Conflicts](/git-resolve-merge-conflicts) for more information.
 
 ## How do I delete a remote branch?
 
