@@ -24,17 +24,29 @@ Pantheon offers a [range of support packages](https://pantheon.io/resources/pant
 
 Keep these tips in mind when opening a new support ticket or chat, to help us more quickly resolve your issue:
 
-- **Open the Ticket in the Right Place:** If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
+### Open the Ticket in the Right Place
 
-- **One ticket per issue:** Opening multiple tickets on the same issue will only impede our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
+If you are a member of an [Organization](/organizations), use the Organization's Dashboard to visit the support tab. Contacting Support from your User Dashboard will not provide the same support level as a Site Dashboard owned by an Organization with a higher support package. For a visual, check out the [Support Tab from the Organization Dashboard](#support-tab-from-the-organization-dashboard).
 
-- **Replication Steps:** One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
+### One ticket per issue
 
-- **Specifics:** Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
+Opening multiple tickets on the same issue will only impede our ability to provide timely support. When opening a chat conversation to follow up on a discussion from a ticket, please let us know about the ticket so we can read up on what's already been discussed and attempted.
 
-- **Custom Access:** If your site uses nonstandard admin URLs, custom logins, etc., please let us know.
+### Replication Steps
 
-- **Clarification:** We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
+One of the first steps in troubleshooting is almost always to recreate the problem. Please provide us with the exact steps to replicate the issue. If we can't see it, we can't debug it.
+
+### Specifics
+
+Ambiguity is the kryptonite of good support. When discussing an issue, give us timestamps, error messages (in full), screenshots, URLs, and any other specific information that can help to identify problems.
+
+### Custom Access
+
+If your site uses nonstandard admin URLs, custom logins, etc., please let us know.
+
+### Clarification
+
+We're all only human. We always try our best to understand the situation, but we may not always get it right the first time. At the same time, our explanations or solutions might not always make sense to you. Don't be afraid to correct us, or to ask for clarification if we don't seem to understand the issue.
 
 ### The Support Tab from the Organization Dashboard
 
