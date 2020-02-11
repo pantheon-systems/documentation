@@ -70,7 +70,7 @@ export previous_commit=($(git log --format="%H" -n 2))
 export previous_commit="${previous_commit[1]}"
 
 #Save the body of previous comment for reuse
-curl https://api.github.com/repos/pantheon-systems/documentation/commits/$previous_commit/comments?access_token=$GITHUB_TOKEN  > comment.json;
+curl -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/commits/$previous_commit/comments  > comment.json;
 export last_comment_id=`cat comment.json | jq ".[0].id"`
 export existing_comment_body=`cat comment.json | jq ".[0].body"`
 export null="null"
@@ -89,7 +89,7 @@ else
     export comment=`cat comment.txt`
 
     #Delete first comment so the PR isn't overpopulated with bot comments
-    curl -X DELETE https://api.github.com/repos/pantheon-systems/documentation/comments/$last_comment_id?access_token=$GITHUB_TOKEN
+    curl -X DELETE -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/comments/$last_comment_id
 fi
 
 #Identify modified files from new commit
@@ -140,7 +140,7 @@ done < modified_files.txt
 
 #Create new comment on new commit, so when PR is open only one comment is present
 export comment=`cat comment.txt`
-curl -d '{ "body": "'$comment'" }' -X POST https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments?access_token=$GITHUB_TOKEN
+curl -d '{ "body": "'$comment'" }' -X POST -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
 
 printf "Clear cache on multidev env. \n"
 terminus env:cc static-docs.$MULTIDEV_NAME
