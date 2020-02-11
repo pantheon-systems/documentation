@@ -42,16 +42,6 @@ This is safe to run if you don't have your own changes in any of the conflicting
 
 </Tab>
 
-<Tab title="Drupal 6" id="d6">
-
-  ```bash{promptUser: user}
-  git pull -Xtheirs git://github.com/pantheon-systems/drops-6.git master
-  # resolve conflicts
-  git push origin master
-  ```
-
-</Tab>
-
 <Tab title="WordPress" id="wp">
 
   ```bash{promptUser: user}
