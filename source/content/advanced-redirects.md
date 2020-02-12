@@ -330,3 +330,5 @@ function ip_in_list($ips) {
 </Tab>
 
 </TabList>
+
+For more advanced security and optimization, consider the [Advanced CDN](/professional-services#advanced-cdn) service from our Professional Services team.
