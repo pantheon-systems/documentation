@@ -235,3 +235,98 @@ Drupal sites can force lowercase letters using the following:
 Because Drupal or WordPress aren't bootstrapped when static assets (e.g, images, PDFs, HTML files) are served, the PHP redirects used above will not work when these files are requested directly. You can use [CloudFlare](/cloudflare) or another stacked CDN to handle file redirects.
 
 Alternatively, you can remove the file entirely from the old location. In this case, the request will run through Drupal or WordPress. You can let the CMS serve a 404, or you can utilize a redirect in `wp-config.php` or `settings.php` as shown in the examples above.
+
+## Restrict File Access Based on IP
+
+If you want to restrict access to files based on the source IP address of the request, you can do so with PHP.
+
+<TabList>
+
+<Tab title="WordPress" active={true} id="restrict-wp">
+
+The following example restricts access to `/wp-admin/` and `/wp-login.php` based on the IP addresses listed in the `trusted_ips` array:
+
+```php:title=wp-config.php
+function ip_in_list($ips) {
+    foreach(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']) as $check_ip) {
+        foreach($ips as $ip) {
+          if(FALSE !== strpos($check_ip, $ip)) {
+            return true;
+          }
+        }
+    }
+    return false;
+  }
+function is_from_trusted_ip() {
+   $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
+   return ip_in_list($trusted_ips);
+ }
+ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && !is_from_trusted_ip() ) {
+   // Check if the path should be locked down
+   $to_lockdown = false;
+   $clean_request_uri = rtrim(mb_strtolower(strtok($_SERVER["REQUEST_URI"],'?')), '/');
+ if ( substr($clean_request_uri, 0, 13) == '/wp-login.php' ) {
+     // user login page
+     $to_lockdown = true;
+   } elseif ( substr($clean_request_uri, 0, 9) == '/wp-admin' ) {
+     // admin pages
+     $to_lockdown = true;
+   }
+   if($to_lockdown && (php_sapi_name() != "cli")){
+     header('HTTP/1.0 403 Forbidden');
+     echo 'Access denied.';
+   exit();
+   }
+ }
+ ```
+
+</Tab>
+
+<Tab title="Drupal" id="restrict-drupal">
+
+The following example restricts access to `/user/`, `/admin/`, and `/node/` based on the IP addresses listed in the `trusted_ips` array:
+
+```php:title=settings.php
+function ip_in_list($ips) {
+    foreach(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']) as $check_ip) {
+        foreach($ips as $ip) {
+          if(FALSE !== strpos($check_ip, $ip)) {
+            return true;
+          }
+        }
+    }
+    return false;
+  }
+
+  function is_from_trusted_ip() {
+    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
+    return ip_in_list($trusted_ips);
+  }
+  if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && !is_from_trusted_ip() ) {
+    // Check if the path should be locked down
+    $to_lockdown = false;
+    $clean_request_uri = rtrim( mb_strtolower(strtok($_SERVER["REQUEST_URI"],'?')), '/' );
+    if ( $_GET['q'] == 'admin') {
+      // admin pages
+      $to_lockdown = true;
+    } elseif ( substr($clean_request_uri, 0, 5) == '/user' ) {
+      // user login page
+      $to_lockdown = true;
+    } elseif ( substr($clean_request_uri, 0, 6) == '/admin' ) {
+      // admin pages
+      $to_lockdown = true;
+    } elseif ( substr($clean_request_uri, 0, 6) == '/node/' && substr($clean_request_uri, -4) == 'edit' ) {
+      // node edit pages
+      $to_lockdown = true;
+    }
+    if($to_lockdown && (php_sapi_name() != "cli")){
+      header('HTTP/1.0 403 Forbidden');
+      echo 'Access denied.';
+    exit();
+    }
+  }
+  ```
+
+</Tab>
+
+</TabList>
