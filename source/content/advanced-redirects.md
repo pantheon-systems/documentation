@@ -45,7 +45,7 @@ When using this type of redirect, you must first [remove the primary domain](/re
 // Redirect subdomain to a specific path.
 // Check if Drupal or WordPress is running via command line
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && ($_SERVER['HTTP_HOST'] == 'subdomain.example.com') && (php_sapi_name() != "cli")) {
-  $newurl = 'https://www.example.com/subdirectory/'. $_SERVER['REQUEST_URI'];
+  $newurl = 'https://www.example.com/subdirectory'. $_SERVER['REQUEST_URI'];
   header('HTTP/1.0 301 Moved Permanently');
   header("Location: $newurl");
 
