@@ -236,7 +236,7 @@ Because Drupal or WordPress aren't bootstrapped when static assets (e.g, images,
 
 Alternatively, you can remove the file entirely from the old location. In this case, the request will run through Drupal or WordPress. You can let the CMS serve a 404, or you can utilize a redirect in `wp-config.php` or `settings.php` as shown in the examples above.
 
-## Restrict File Access Based on IP
+## Restrict Access to Paths Based on IP
 
 If you want to restrict access to files based on the source IP address of the request, you can do so with PHP.
 
