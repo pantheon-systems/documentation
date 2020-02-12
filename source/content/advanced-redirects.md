@@ -6,9 +6,15 @@ categories: [go-live,develop]
 reviewed: "2020-02-12"
 ---
 
-Basic domain and HTTPS redirection can be handled by the [Primary Domain]() feature. PHP redicts can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may only need one, some, or none of the following.
+Basic domain and HTTPS redirection can be handled by the [Primary Domain](/redirects#set-the-primary-domain) feature. PHP redicts can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may only need one, some, or none of the following.
 
-Redirect logic should be added to `wp-config.php` for WordPress sites, and `settings.php` for Drupal sites. Note that the platform-set primary domain will redirect all requests, not just the root domain.
+Redirect logic should be added to `wp-config.php` for WordPress sites, and `settings.php` for Drupal sites.
+
+<Alert type="info" title="Note">
+
+With a Primary Domain set at the platform level, all other domains will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set or [remove](/redirects#update-or-remove-primary-domain) the Primary Domain.
+
+</Alert>
 
 ## Redirect to HTTPS
 
@@ -244,7 +250,7 @@ If you want to restrict access to files based on the source IP address of the re
 
 <Tab title="WordPress" active={true} id="restrict-wp">
 
-The following example restricts access to `/wp-admin/` and `/wp-login.php` based on the IP addresses listed in the `trusted_ips` array:
+The following example restricts access to `/wp-admin/` and `/wp-login.php` based on the IP addresses listed in the `$trusted_ips` array:
 
 ```php:title=wp-config.php
 function ip_in_list($ips) {
@@ -258,6 +264,7 @@ function ip_in_list($ips) {
     return false;
   }
 function is_from_trusted_ip() {
+   //Replace the IPs in this array with those you want to restrict access to
    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
    return ip_in_list($trusted_ips);
  }
@@ -284,7 +291,7 @@ function is_from_trusted_ip() {
 
 <Tab title="Drupal" id="restrict-drupal">
 
-The following example restricts access to `/user/`, `/admin/`, and `/node/` based on the IP addresses listed in the `trusted_ips` array:
+The following example restricts access to `/user/`, `/admin/`, and `/node/` based on the IP addresses listed in the `$trusted_ips` array:
 
 ```php:title=settings.php
 function ip_in_list($ips) {
@@ -299,6 +306,7 @@ function ip_in_list($ips) {
   }
 
   function is_from_trusted_ip() {
+    //Replace the IPs in this array with those you want to restrict access to
     $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
     return ip_in_list($trusted_ips);
   }
