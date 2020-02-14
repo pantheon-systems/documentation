@@ -290,6 +290,17 @@ $conf[‘schema_suppress_type_warnings’] = TRUE;
 
 ___
 
+## [Search Api Solr Date Sort](https://www.drupal.org/project/search_api_solr_date_sort)
+
+**Issue**: The module overrides a class from the [Pantheon Apache Solr module](https://pantheon.io/docs/solr-drupal-7) that is responsible for a correct connection to the Pantheon's Apache Solr service. As a result a Solr connection is lost.
+
+**Solution**: It's not required to patch the module. You can try to fix it in a custom module:
+
+- define a new class that inherits from the `PantheonApachesolrSearchApiSolrService` and contains logic from the `SearchApiSolrDateSortSolrService` (or vice a versa)
+- implement a `hook_search_api_service_info_alter()` (with a highest weight) and add your class into a configuration array
+
+___
+
 ## [Simple OAuth / OAuth 2.0](https://www.drupal.org/project/simple_oauth)
 
 **Issue**: The module requires a very specific set of permissions for the folder and the keys to be uploaded. Using Private or non-standard filepaths won't work. It is not possible to change these in LIVE or TEST environment.
