@@ -36,6 +36,6 @@ Terminus can help you access extra data and functionality that isn’t available
 In this example, I am switching the connection mode from SFTP to Git. And now I’m running a backup from the dashboard.
 
 
-You can also add commands to Terminus by [installing plugins](/terminus/plugins/). [Official Pantheon plugins](/terminus/plugins/directory/) can be downloaded from our website or you can [write your own](/terminus/plugins/create/).
+You can also add commands to Terminus by [installing plugins](/terminus/plugins). [Official Pantheon plugins](/terminus/plugins/directory) can be downloaded from our website or you can [write your own](/terminus/plugins/create).
 
 That was a quick introduction to our command line tool, Terminus. Use it to script repetitive tasks or just use it to develop faster without touching your mouse.

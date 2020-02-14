@@ -36,4 +36,4 @@ In this lesson, we'll demonstrate how media files are handled on Pantheon. Media
 
   ![WP-Uploads file directory](../../../images/guides/git-wordpress/uploads.png)
 
-  For more information on managing files across environments, see [Use the Pantheon Workflow](/pantheon-workflow/).
+  For more information on managing files across environments, see [Use the Pantheon Workflow](/pantheon-workflow).

@@ -18,7 +18,7 @@ Changing the settings of the `web_docroot` property will prevent you from updati
 ## Advantages and Use Cases
 While URLs are limited to the web docroot, PHP is not. Using a nested docroot allows you to put PHP files for use in your web application one level above the web docroot so they are accessible via PHP but not from the web.
 
-This is especially useful for third party dependencies, such as those installed and managed via [Composer](/composer/).
+This is especially useful for third party dependencies, such as those installed and managed via [Composer](/composer).
 
 ## Disable One-click Updates
 If you wish to stop using One-click Dashboard updates on a particular site, and instead intend to update your site with Composer, switch the site's upstream to an empty repository using [Terminus](/terminus):
@@ -73,7 +73,7 @@ Enable nested docroot by adjusting your site's `pantheon.yml` file. Below we rec
 6. Follow the instructions in either [Create a New Site with a Nested Docroot](#create-a-new-site) or [Convert an Existing Site to Use a Nested Docroot](#convert-an-existing-site) below.
 
 ### Create a New Site
-If your site utilizes a [Custom Upstream](/custom-upstream/) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
+If your site utilizes a [Custom Upstream](/custom-upstream) with a `pantheon.upstream.yml` file that enables nested docroot and the CMS code is in a web subdirectory, you are good to go! Otherwise, create a new site and follow the steps below.
 
 ### Convert an Existing Site
 You'll need to move the CMS code into the `web` subdirectory, either manually or by using one of the commands below.

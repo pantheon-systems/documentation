@@ -6,7 +6,7 @@ categories: [troubleshoot, integrate]
 contributors: [aleksandrkorolyov]
 ---
 
-This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/support/).
+This page lists WordPress plugins, themes, and functions that may not function as expected or are currently problematic on the Pantheon platform. This is not a comprehensive list (see [other issues](#other-issues)). We continually update it as problems are reported and/or solved. If you are aware of any modules or plugins that do not work as expected, please [contact support](/support).
 
 We do not prevent you from installing and using these plugins or themes. However, we cannot provide support for incompatible plugins and themes, or if they are used against the guidance provided here.
 
@@ -175,7 +175,7 @@ This includes but is not limited to:
 
 **Issue:** Conflicts with platform-level page caching.
 
-**Solution:** See [Caching: Advanced Topics](/caching-advanced-topics/) for details on how to bypass the platform page cache.
+**Solution:** See [Caching: Advanced Topics](/caching-advanced-topics) for details on how to bypass the platform page cache.
 
 ___
 
@@ -212,7 +212,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 }
 ```
 
-For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port/).
+For more details, see [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
 
 **Issue 2:** Local file attachments set in the admin panel cannot come from the `uploads` folder. As described in [this plugin issue](https://wordpress.org/support/topic/local-file-attachments-do-not-work-in-pantheon-hosting/), the plugin code fails for upload directories that are symlinks.
 
@@ -324,7 +324,7 @@ ___
 
 **Issue:** Site suddenly shows a white screen of death.
 
-**Solution:** Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches/) and [flush the Redis cache](/redis/#clear-cache).
+**Solution:** Because the binding path can change on our Platform, the cache folder path may change. To manually reconfigure the cache path, go to Fast Velocity Minify's Settings tab, and click **Cache Location**. Remember to [clear the cache from Pantheon](/clear-caches) and [flush the Redis cache](/redis/#clear-cache).
 
 ___
 
@@ -352,13 +352,13 @@ ___
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream/) or [WP Site Network](/guides/multisite/) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted on Pantheon.
 
 ___
 
 ## [Instashow](https://elfsight.com/instagram-feed-instashow/)
 
-**Issue:** The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](/pantheon_stripped/) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
+**Issue:** The Instashow plugin relies on query parameters that are not compatible with Pantheon's Edge Cache. See [PANTHEON_STRIPPED](/pantheon_stripped) for more information. This inhibits the ability to set the authorization token required to make the plugin function.
 
 ___
 
@@ -397,7 +397,7 @@ This error sometimes leads users to believe that ManageWP's IP addresses need to
 
 **Issue 2:** Cannot remotely update core, or install/update themes and plugins in the Test and Live environments.
 
-**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream/) or [WP Site Network](/guides/multisite/) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
+**Solution:** Due to the [read only nature of Test and Live environments](/pantheon-workflow/#understanding-write-permissions-in-test-and-live), remote updates can only be done in Dev, then deployed to Test and Live environment. Consider using a [Custom Upstream](/custom-upstream) or [WP Site Network](/guides/multisite) instead if you are deploying similar codebase, theme and plugins for a group of sites hosted in Pantheon.
 
 **Issue 3:** Cannot remotely update core, or install/update theme and plugins in the Dev environment.
 
@@ -415,7 +415,7 @@ ___
 
 <ReviewDate date="2019-05-08" />
 
-**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/new-relic/) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver/).
+**Issue:** This plugin sets up redundant configurations (`appname` and `framework`) with the [Pantheon New Relic](/new-relic) configuration, resulting in new applications in New Relic. This behavior may break compatibility with New Relic integrations such as [QuickSilver scripts](/quicksilver).
 
 ___
 
@@ -474,13 +474,13 @@ ___
 
 **Issue:** Customers have reported issues with 404 logging creating large database tables, reducing site performance.
 
-**Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/redirects/) for more information.
+**Solution:** Consider using PHP code to set up your redirects. See [Configure Redirects](/redirects) for more information.
 
 ___
 
 ## [Revive Old Post](https://wordpress.org/plugins/tweet-old-post/)
 
-**Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. See [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port/).
+**Issue:** Revive Old Post does not set a proper callback via OAuth and the Twitter module.  It attempts to use `["SERVER_NAME"]` instead of the recommended `["HTTP_HOST"]`. See [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port).
 
 ___
 
@@ -713,7 +713,7 @@ ___
 - Splitting the import or export into smaller parts
 - Set the plugin to only process 1 or 2 records per iteration
 
-**Issue 2:** Uploading large import files hits the 59 second [timeout](/timeouts/), or you're getting invalid file paths.
+**Issue 2:** Uploading large import files hits the 59 second [timeout](/timeouts), or you're getting invalid file paths.
 
 **Solution:** You can upload the import file directly to the plugin's designated writable path `wp-content/uploads/wpallimport/files/`. When creating a new import using `existing file`, the file uploaded should appear there as an option .
 
@@ -777,7 +777,7 @@ ___
 
 **Solution 2:**
 
-Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/assuming-write-access/) for more information.
+Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/assuming-write-access) for more information.
 
 ___
 

@@ -4,7 +4,7 @@ description: Detailed information to enable SAML single sign-on for your organiz
 tags: [security, tools]
 categories: [manage,develop]
 ---
-Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/sso/).
+Single sign-on (SSO) allows users to authenticate against your Identity Provider (IdP) when logging into the Pantheon Dashboard. For more information, see [SSO and Identity Federation on Pantheon](/sso).
 
 SAML SSO is included for customers with Diamond Support, and is available for purchase for Pantheon Organizations with Platinum or below. SAML is an organization-wide feature only and is not available on a per site or per environment basis. If you'd like to upgrade to an eligible support package, please contact [Sales](https://pantheon.io/plans/elite?docs). Agencies interested in SAML SSO should reach out to their Partner Manager to see if they qualify. You must be part of the [Pantheon Partner Program](https://pantheon.io/plans/partner-program?docs) to qualify.
 
@@ -14,11 +14,11 @@ SAML SSO is included for customers with Diamond Support, and is available for pu
 * After the IdP authenticates the user, they are redirected to their Pantheon Dashboard.
 
 ## Terminus Authentication
-Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/terminus/) by using [machine tokens](/machine-tokens/).
+Users in a SAML-enabled Pantheon organization can authenticate via [Terminus](/terminus) by using [machine tokens](/machine-tokens).
 
 ## Managing Users
 
-Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/organization-dashboard/). Automated user provisioning isn't available.
+Pantheon organization administrators can [manage sites and teams with the Organization Dashboard](/organization-dashboard). Automated user provisioning isn't available.
 
 ### External Members
 

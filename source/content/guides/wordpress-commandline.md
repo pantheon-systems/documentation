@@ -21,7 +21,7 @@ Be sure that you:
 - Have created a [Pantheon account](https://dashboard.pantheon.io/register). Pantheon accounts are always free for development.
 
 ## Install and Authenticate Terminus
-Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/terminus/).
+Terminus provides advanced interaction with the platform and allows us to run WP-CLI commands remotely. Terminus also opens the door to automating parts of your workflow by combining multiple operations. For more information about Terminus itself, see our [Terminus Manual](/terminus).
 
 1. Install Terminus within the `$HOME/terminus` directory:
 
@@ -37,7 +37,7 @@ Terminus provides advanced interaction with the platform and allows us to run WP
   terminus auth:login --machine-token=‹machine-token›
   ```
 
-  For details, see [Terminus Manual: Install](/terminus/install/).
+  For details, see [Terminus Manual: Install](/terminus/install).
 
 3. Once installed, verify your session:
 
@@ -257,6 +257,6 @@ If you're a developer who lives in the command line, you now see the power of Te
 
 Here are some suggestions on where to go from here:
 
- - [Use the Pantheon Workflow](/pantheon-workflow/)
- - [WordPress Configuration Management (WP-CFM)](/wp-cfm/)
- - [The Terminus Manual](/terminus/)
+ - [Use the Pantheon Workflow](/pantheon-workflow)
+ - [WordPress Configuration Management (WP-CFM)](/wp-cfm)
+ - [The Terminus Manual](/terminus)

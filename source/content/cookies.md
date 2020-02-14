@@ -122,7 +122,7 @@ The best way to utilize cookies on Pantheon is by having the cookie name match t
 No, the vcl cookie pattern is a platform wide setting and cannot be overriden. You will need to modify your code to have the cookie name prefix as `STYXKEY_` and follow the sample code [here](#cache-varying-cookies) in order for your site to be properly cached.
 
 ## See Also
-* [Clearing Caches for Drupal and WordPress](/clear-caches/)
+* [Clearing Caches for Drupal and WordPress](/clear-caches)
 * [Bypassing Cache with HTTP Headers](/cache-control)
-* [Testing Global CDN Caching](/test-global-cdn-caching/)
-* [Caching: Advanced Topics](/caching-advanced-topics/)
+* [Testing Global CDN Caching](/test-global-cdn-caching)
+* [Caching: Advanced Topics](/caching-advanced-topics)

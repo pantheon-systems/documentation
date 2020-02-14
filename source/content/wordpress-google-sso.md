@@ -37,7 +37,7 @@ To use WP SAML Auth with Google Apps, you’ll need to first [create a custom SA
 
     * **SSO URL** - URL for WordPress to redirect to when initiating the SSO process. In the configuration snippet below, this URL will go in the `$value['idp']['singleSignOnService']['url']` variable.
     * **Entity ID** - How WordPress knows to recognize Google Apps. In the configuration snippet below, this value will go in the `$value['idp']['entityId']` variable.
-    * **Certificate** - How Google Apps knows to trust a request coming from WordPress. Download and commmit this file to your `private` directory so it's inaccessible from the web. In the configuration snippet below, make sure to `file_get_contents()` this file into the `$value['idp']['x509cert']` variable.
+    * **Certificate** - How Google Apps knows to trust a request coming from WordPress. Download and commit this file to your `private` directory so it's inaccessible from the web. In the configuration snippet below, make sure to `file_get_contents()` this file into the `$value['idp']['x509cert']` variable.
 
     ![Google IdP Information](../images/wordpress-google-sso/google-idp-information.png)
 

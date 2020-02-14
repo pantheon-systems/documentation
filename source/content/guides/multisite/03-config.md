@@ -19,7 +19,7 @@ image: multisite
 ---
 You're just about to configure your WordPress Site Network.
 
-Our expectation at this point is that you have a new WordPress Site Network created for you by a Pantheon employee. If you do not yet have a WordPress Site Network, refer to the [introduction](/guides/multisite/) page of this guide. When you visit the Dev environment's site URL, you should be redirected to WordPress' web-based installer.
+Our expectation at this point is that you have a new WordPress Site Network created for you by a Pantheon employee. If you do not yet have a WordPress Site Network, refer to the [introduction](/guides/multisite) page of this guide. When you visit the Dev environment's site URL, you should be redirected to WordPress' web-based installer.
 
 <Alert title="Note" type="info">
 
@@ -29,7 +29,7 @@ Adjust placeholders in code snippets as needed throughout this guide. This inclu
 
 ## Install the WordPress Site Network
 
-Using [Terminus](/terminus/) is our recommended way to install a WordPress Site Network.
+Using [Terminus](/terminus) is our recommended way to install a WordPress Site Network.
 
 1. Install the most recent release of Terminus:
 

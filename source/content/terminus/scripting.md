@@ -29,7 +29,7 @@ Terminus needs to be authenticated in order to execute most commands. Before run
 
 - The [Pantheon Example Terminus Auto Update Script](https://github.com/pantheon-systems/example-terminus-auto-update-script) demonstrates how you can use Terminus to automate plugin and theme updating for multiple sites.
 
-* The [Example WordPress Composer](https://github.com/pantheon-systems/example-wordpress-composer) repository (used by our [Build Tools](/guides/build-tools/) guide) uses Terminus to [deploy staged changes](https://github.com/pantheon-systems/example-wordpress-composer/blob/46ff34e2b9f421a1c0eae72ade80376e8dd42f31/.circleci/deploy-to-pantheon.sh) to multidev environments.
+* The [Example WordPress Composer](https://github.com/pantheon-systems/example-wordpress-composer) repository (used by our [Build Tools](/guides/build-tools) guide) uses Terminus to [deploy staged changes](https://github.com/pantheon-systems/example-wordpress-composer/blob/46ff34e2b9f421a1c0eae72ade80376e8dd42f31/.circleci/deploy-to-pantheon.sh) to multidev environments.
 
 ## Bash Variables
 

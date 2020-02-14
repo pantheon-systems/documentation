@@ -68,7 +68,7 @@ All sites are eligible. Upgrade to the Global CDN to reduce HTTPS costs and take
 ## Cache Clearing
 We recommend installing the Pantheon Advanced Page Cache [plugin](https://wordpress.org/plugins/pantheon-advanced-page-cache/) or [module](https://www.drupal.org/project/pantheon_advanced_page_cache) to take advantage of the granular cache clearing capabilities of the Global CDN. Additionally, you can remove all pages from cache at once from the Site Dashboard, within the Site Admin, and even from the command line.
 
-For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches/).
+For more details, see [Clearing Caches for Drupal and WordPress](/clear-caches).
 
 ## Enabling the Global CDN
 
@@ -83,7 +83,7 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
 
     1. Click the "Details" button next to your site's bare domain.
     1. Copy the "A" record's IP address provided for the site's bare domain.
-    1. Add a line to your [local hosts file](/hosts-file/) with the IP address from the previous step followed by the domain name, for example:
+    1. Add a line to your [local hosts file](/hosts-file) with the IP address from the previous step followed by the domain name, for example:
 
     ```
     192.123.456.789 example.com
@@ -114,7 +114,7 @@ If you don't see action required in your Domains / HTTPS tool, please [contact s
 
     </Alert>
 
-4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/guides/launch/redirects/).
+4. If your site relied on the www-redirector provided on our Legacy service, you will need to [redirect incoming requests within `wp-config.php` or `settings.php`](/guides/launch/redirects).
 
 For more details, see [HTTPS on Pantheon's Global CDN](/https).
 
@@ -134,19 +134,19 @@ Pantheon's Global CDN has some advantages over solutions some customers may alre
 Even if you want to retain your existing CDN because of specific features they provide, the upgrade will improve your end-user experience, as your custom CDN will be able to pull pages and assets from a nearby Pantheon Global CDN location, rather than the origin datacenter.
 
 ### Is the www-redirector service still available?
-No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/guides/launch/redirects/) to your site's configuration file (wp-config.php or settings.php).
+No, the www-redirector service is part of the legacy infrastructure. You can choose your primary domain and redirect all traffic to HTTPS by adding [301 redirects](/guides/launch/redirects) to your site's configuration file (wp-config.php or settings.php).
 
 ### Are vanity domains supported?
-You can upgrade a site to Global CDN that is using [vanity domains](/vanity-domains/), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
+You can upgrade a site to Global CDN that is using [vanity domains](/vanity-domains), but HTTPS will not be provisioned for the vanity domains. Only custom domains will have HTTPS provisioned.
 
 ### What about Cloudflare?
-See [Cloudflare Domain Configuration](/cloudflare/).
+See [Cloudflare Domain Configuration](/cloudflare).
 
 ### Is the CDN configurable?
 No, we pre-configured the CDN so you don’t have to hassle with configuration, and we can guarantee performance and uptime. The Global CDN's behavior is the same as our legacy cache which is heavily optimized for Drupal and WordPress sites, and serves billions of pages monthly, except it's globally distributed.
 
 ### Do I get access to hit rates or other statistics?
-Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/metrics/).
+Hit rates are not currently available, but you can measure traffic for the Live environment. For details, see [Metrics in the Site Dashboard](/metrics).
 
 ### Can I use other CDNs with the Pantheon Global CDN?
 Yes, but because it adds additional complexity, we suggest you only do so if you identify a need that the Pantheon Global CDN doesn't address. We recommend that you ensure you are enforcing HTTPS only at the outer CDN and are assuming HTTPS in the application. Check your CDN for how to redirect all traffic to HTTPS.

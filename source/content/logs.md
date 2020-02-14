@@ -32,7 +32,7 @@ When appservers are migrated as a regular part of platform maintenance, log file
 </Alert>
 
 ## Access Logs Via SFTP
-Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/ssh-keys/) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
+Logs are stored within application containers that house your site's codebase and files. [Add an SSH key](/ssh-keys) within your User Dashboard to enable passwordless access and avoid authentication prompts. Otherwise, provide your Pantheon Dashboard credentials when prompted.
 
 In the Connection Information section of the dashboard, we can see a pattern about the hostnames:
 
@@ -207,7 +207,7 @@ By default, the WordPress debug log path is set to `/wp-content/` and is not wri
 By default, Drupal logs events using the Database Logging module (dblog). PHP fatal errors can sometimes be found in these logs, depending on how much Drupal bootstrapped. You can access the event logs in a couple ways:
 
 * Visit `/admin/reports/dblog` once you've logged in as administrator.
-* Using [Terminus](/terminus/):
+* Using [Terminus](/terminus):
 
  ```bash
  terminus drush <site>.<env> -- watchdog-show
@@ -247,7 +247,7 @@ done
 
 Not directly. You can download your logs locally using [SFTP](#access-logs-via-sftp) then review them with any tool on your workstation.
 
-You can also create the `logwatcher.sh` script below, which uses [Terminus](/terminus/) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
+You can also create the `logwatcher.sh` script below, which uses [Terminus](/terminus) and the [Terminus Rsync Plugin](https://github.com/pantheon-systems/terminus-rsync-plugin) to download log files and display the last several lines.
 
 1. If you're working on multiple projects locally, create a `logs` directory in the local Git repository for each one you want to watch logs for.
 
@@ -291,8 +291,8 @@ You can also create the `logwatcher.sh` script below, which uses [Terminus](/ter
    Stop the process with **CTRL-C**.
 
 ## See Also
-- [MySQL Slow Log](/mysql-slow-log/)
-- [PHP Slow Log](/php-slow-log/)
-- [PHP Errors and Exceptions](/php-errors/)
-- [Bots and Indexing](/bots-and-indexing/)
+- [MySQL Slow Log](/mysql-slow-log)
+- [PHP Slow Log](/php-slow-log)
+- [PHP Errors and Exceptions](/php-errors)
+- [Bots and Indexing](/bots-and-indexing)
 - [New Relic](/new-relic)

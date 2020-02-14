@@ -31,7 +31,7 @@ In the Team modal, click the X next to the user you want to delete.
 
 When you delete a user from a site, they lose the ability to perform any operations on that site.
 
-For more information on managing teams, see the [Team Management article](/team-management/).
+For more information on managing teams, see the [Team Management article](/team-management).
 
 
 ### How do I add a Supporting Agency?
@@ -41,11 +41,11 @@ One of the best things about Pantheon is the ability to collaborate with agencie
 
 ### What add-ons are available for my site?
 
- - [Apache Solr](/solr/) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
- - [Redis](/redis/) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
+ - [Apache Solr](/solr) is a system for indexing and searching site content. Pantheon provides Apache Solr v3.6 as a service for most plans including the Sandbox site plan.
+ - [Redis](/redis) is an open-source, networked, in-memory, key-value data store that can be used as a drop-in caching backend for your Drupal or WordPress website.
 
 
-Pantheon also offers [New Relic Pro](/new-relic/) to our customers, built into the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
+Pantheon also offers [New Relic Pro](/new-relic) to our customers, built into the Site Dashboard. New Relic offers a wide array of metrics that provide a nearly real-time look into the performance of a web application.
 
 ### How do I enable add-ons?
 From your Site Dashboard, click **Settings**, then click **Add Ons**. You will see all the available add-ons for your site.
@@ -57,7 +57,7 @@ You can access New Relic Pro directly from the Site Dashboard, by clicking on **
 Yes. However, if you have Solr and/or Redis add ons enabled, they will break when you go down to Basic plan level. For more information, see [Manage Plans in the Site Dashboard](/site-plan/#basic-plan).
 
 ## How do I recover an account after a site owner leaves?
-See the steps in our [Site Access](/site-access/) doc for recovery instructions.
+See the steps in our [Site Access](/site-access) doc for recovery instructions.
 
 ## Billing Tasks
 
@@ -66,10 +66,10 @@ See the steps in our [Site Access](/site-access/) doc for recovery instructions.
 From your Site Dashboard, click **Settings**. Select a plan, and click **Update Plan**. Next, enter the payment information or invite someone to pay for the site, and click **Purchase Plan**.
 
 ### Can I update or change the payment method?
-You can update the payment method in the **Settings** page. For detailed instructions, see [Account Billing in the User Dashboard](/account-billing/).
+You can update the payment method in the **Settings** page. For detailed instructions, see [Account Billing in the User Dashboard](/account-billing).
 
 ### Can I pay for my site on an annual or quarterly basis instead of monthly?
-Self-serve sites are billable via recurring monthly or [annual](/annual-billing/) billing. Sites that are owned by a Reseller, Edu+, or Enterprise organization are invoiced to the organization.
+Self-serve sites are billable via recurring monthly or [annual](/annual-billing) billing. Sites that are owned by a Reseller, Edu+, or Enterprise organization are invoiced to the organization.
 
 ### Can I transfer ownership of a site to someone else?
 <Partial file="transfer-ownership-billing-intro.md" />
@@ -77,7 +77,7 @@ Self-serve sites are billable via recurring monthly or [annual](/annual-billing/
 
 ## See Also
 
-- [Billing in the Site Dashboard](/site-billing/)
-- [Account Billing in the User Dashboard](/account-billing/)
-- [Team Management](/team-management/)
-- [Add a Client Site to your Organization Dashboard](/add-client-site/)
+- [Billing in the Site Dashboard](/site-billing)
+- [Account Billing in the User Dashboard](/account-billing)
+- [Team Management](/team-management)
+- [Add a Client Site to your Organization Dashboard](/add-client-site)

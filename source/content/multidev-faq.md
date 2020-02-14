@@ -4,11 +4,11 @@ description: A quick reference to answer some of the most frequently asked quest
 tags: [tools, workflow]
 categories: [manage,develop]
 ---
-For information about what Multidev is and how to use it, see our full guide on [Multidev](/multidev/).
+For information about what Multidev is and how to use it, see our full guide on [Multidev](/multidev).
 
 ## Who has access to Multidev?
 
-Multidev is available to all **accounts with [Gold support](/support/#support-features-and-response-times) and above**. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management/) for more information about roles and permissions.
+Multidev is available to all **accounts with [Gold support](/support/#support-features-and-response-times) and above**. Organizations with Multidev can assign unprivileged users who can access Multidev environments. See [Change Management](/change-management) for more information about roles and permissions.
 
 Visit the [Partner Program Page](https://pantheon.io/plans/partner-program?docs) to learn more about the benefits of becoming a Pantheon Partner Agency, or [contact us](https://pantheon.io/contact-us?docs).
 
@@ -27,7 +27,7 @@ Each site has a limit of 10 Multidev environments.
 
 ## Can I buy additional Multidev environments?
 
-Elite sites can request additional Multidev environments [from support](/support/) as needed.
+Elite sites can request additional Multidev environments [from support](/support) as needed.
 
 ## If I use SFTP mode on a branch environment, do all environments have to be in SFTP mode?
 
@@ -76,4 +76,4 @@ Yes, you can backup and restore a branch environment. However, if you restore an
 If the organization changes to a plan that doesn't feature Multidev, you will still be able to access existing Multidev environments, but will not be able to create new ones.
 
 ## Creating a Multidev Failed - Specified Key Was Too Long
-Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/myisam-to-innodb/).
+Users encounter this error with sites that use the MyISAM engine with a varchar index that exceeds 767 bytes. To resolve, [convert MyISAM tables to InnoDB](/myisam-to-innodb).

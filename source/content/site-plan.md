@@ -6,7 +6,7 @@ categories: [manage,go-live]
 contributors: [cityofoaksdesign]
 ---
 
-Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch/).
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
 
 If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-preferred-pricing), contact your Supporting Organization for assistance, in order to retain your special pricing rate.
 
@@ -19,7 +19,7 @@ If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-
 
 <Alert title="Note" type="info">
 
-Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch/).
+Changing your site plan is typically done at launch time. For a comprehensive step-by-step guide to going live, refer to [Launch Essentials](/guides/launch).
 
 </Alert>
 
@@ -36,7 +36,7 @@ If your site benefits from [Preferred Pricing](https://pantheon.io/plans/agency-
 ### Downgrade to Sandbox
 [Custom domains](/domains/#custom-domains) are not available to Sandbox sites. Downgrading to a Sandbox site will **automatically delete** existing custom domains across all environments of the site. If you decide to return to a paid plan in the future, you will need to add the domains again.
 
-Downgrading to a Sandbox site will disable automatic backups. You will still be able to create backups manually. For details, see [Backups Tool](/backups/).
+Downgrading to a Sandbox site will disable automatic backups. You will still be able to create backups manually. For details, see [Backups Tool](/backups).
 
 ## Roles & Permissions
 The permission to manage a site's plan is granted only to the roles of **Site Owner** / **Organization Administrator**. Other roles do not have access to change the site plan as described on this page. For details, see [Role-Based Permissions & Change Management](/change-management/#site-level-roles-and-permissions).
@@ -51,7 +51,7 @@ If you need to assume site and billing ownership, the current Site Owner must [t
 Consider the following changes to feature access _before_ upgrading or downgrading the site's plan. Certain scenarios require code changes in order to safely change the site plan.
 
 ### Basic Plan
-[New Relic](/new-relic/), [Redis](/redis/), and [Solr](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
+[New Relic](/new-relic), [Redis](/redis), and [Solr](/solr) are not available for Basic sites. These features must be disabled in order to select Basic as the new site plan when upgrading or downgrading plans.
 
 For Redis and Solr, the following code changes are required before the feature can be safely disabled:
 
@@ -110,7 +110,7 @@ This section covers purchasing a new plan. Review the [previous section](#basic-
 
 <Alert title="Note" type="info">
 
-Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/annual-billing/) for more information.
+Did you know Pantheon offers savings for sites purchased with annual billing? See [Pantheon Annual Billing](/annual-billing) for more information.
 
 </Alert>
 
@@ -185,10 +185,10 @@ While all site plans downgrades will be effective immediately, no partial refund
 5. Make sure the change details are correct, then click **Submit**.
 6. Remove the existing card as a payment method for the site. For details, see [Billing in the Site Dashboard](/site-billing/#do-not-bill-this-site-to-a-card).
 
-Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site/).
+Optionally, you can remove the Sandbox site after downgrading. For details, see [Deleting a Site on Pantheon](/delete-site).
 
 ## See Also
-- [Billing in the Site Dashboard](/site-billing/)
-- [Account Billing in the User Dashboard](/account-billing/)
-- [Traffic Limits and Overages](/traffic-limits/)
-- [New Site Plans FAQs](/new-plans-faq/)
+- [Billing in the Site Dashboard](/site-billing)
+- [Account Billing in the User Dashboard](/account-billing)
+- [Traffic Limits and Overages](/traffic-limits)
+- [New Site Plans FAQs](/new-plans-faq)

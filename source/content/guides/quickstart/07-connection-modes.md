@@ -29,7 +29,7 @@ In this lesson, we’ll learn how to connect to your Dev environment and change 
      so it’s the only place you can access and change your Connection Mode.
    </Alert>
 
-   On Pantheon, you can connect and work via [Git](/git/), or you can connect and work via [SFTP](/sftp/):
+   On Pantheon, you can connect and work via [Git](/git), or you can connect and work via [SFTP](/sftp):
 
    ![Connection Modes](../../../images/dashboard/connection-mode-sftp.png)
 

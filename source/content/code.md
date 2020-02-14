@@ -72,7 +72,7 @@ The `wp-content/uploads` directory is represented in your code repository as a s
 Permissions should be managed in the Dev environment via SFTP exclusively, as [Git only pays attention to the executable bit](https://git-scm.com/docs/user-manual.html).
 
 ## Navigate the Code Tool
-You can set the site's connection mode to [git](/git/) or [SFTP](/sftp/) and access [connection information](/sftp#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
+You can set the site's connection mode to [git](/git) or [SFTP](/sftp) and access [connection information](/sftp#sftp-connection-information) from within the Dev environment's Code tool. This is also where all changes to the site's codebase (located in the `/code` directory) are committed.
 ![Code Workflow Dev SFTP Commit](../images/dashboard/interface-dev-code-sftp-commit.png)
 
 You can also view the diff output for each individual file:
@@ -80,7 +80,7 @@ You can also view the diff output for each individual file:
 ![Diff output](../images/dashboard/diff-screen.png)
 
 ### Upstream Updates
-The Dev environment provides [one-click updates](/core-updates/) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
+The Dev environment provides [one-click updates](/core-updates) for your site's upstream. Updates will appear in the Code tool once they are committed to the upstream repository.
 
   <dl>
   <Definition title="Upstream">
@@ -98,25 +98,25 @@ The Test and Live environments do not have write access to code outside of the d
 </Alert>
 
 ## Develop
-Get started by learning more about the [Pantheon workflow](/pantheon-workflow/) and [environment configuration](/read-environment-config/). Then, dive in to [developing directly with SFTP mode](/sftp/) and [explore more ways](/cms-admin/) of utilizing built-in admin tools.
+Get started by learning more about the [Pantheon workflow](/pantheon-workflow) and [environment configuration](/read-environment-config). Then, dive in to [developing directly with SFTP mode](/sftp) and [explore more ways](/cms-admin) of utilizing built-in admin tools.
 
 ### .gitignore
 Pantheon provides default `.gitignore` files in the base of each site's code repository. It includes the path `sites/default/files` for Drupal sites, and `wp-contents/uploads` for WordPress sites. You can use this file to exclude directories from version control and backups.
 
 ## Optimize Performance
-There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance/) and utilizing the [PHP slow log](/php-slow-log/).
+There are a lot of tools at your disposal when it comes to fine tuning dynamic sites. Resolve issues by [debugging slow performance](/debug-slow-performance) and utilizing the [PHP slow log](/php-slow-log).
 
-Learn how to use [bots and indexing](/bots-and-indexing/) in a way that does not negatively impact performance. 
+Learn how to use [bots and indexing](/bots-and-indexing) in a way that does not negatively impact performance. 
 
 ## Integrate 
-You can also integrate with external Solr search indexes with services like [OpenSolr](/opensolr/).
+You can also integrate with external Solr search indexes with services like [OpenSolr](/opensolr).
 
 ## See Also
-- [Hot Fixes](/hotfixes/)
+- [Hot Fixes](/hotfixes)
 - [What is the "pantheon_api.module"](/modules#pantheon-module-drupal-7)
-- [Email on Pantheon](/email/)
-- [Platform and Custom Domains](/domains/)
-- [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port/)
-- [LDAP and LDAPS](/ldap-and-ldaps/)
-- [Secure Integration](/secure-integration/)
-- [SSO and Identity Federation on Pantheon](/sso/)
+- [Email on Pantheon](/email)
+- [Platform and Custom Domains](/domains)
+- [SERVER_NAME and SERVER_PORT on Pantheon](/server_name-and-server_port)
+- [LDAP and LDAPS](/ldap-and-ldaps)
+- [Secure Integration](/secure-integration)
+- [SSO and Identity Federation on Pantheon](/sso)

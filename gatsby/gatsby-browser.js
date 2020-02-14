@@ -27,6 +27,8 @@ export const onRouteUpdate = () => {
   window.previousPath = locations[locations.length - 2];
   window.analytics && window.analytics.page({
     url: window.location.href,
-    referrer: window.previousPath
+    referrer: window.previousPath,
+    title: document.title
   })
+  //console.log("Title: ", document.title) //For debugging
 }

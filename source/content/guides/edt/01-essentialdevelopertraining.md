@@ -26,8 +26,8 @@ Ramp up faster with an instructor-led version of this material, delivered by Pan
 In this guide, you'll learn:
 
 - [Architecture](/guides/edt/introduction-and-architecture)
-- [Developer Workflow](/guides/edt/developer-workflow/)
-- [Multidev](/guides/edt/multidev/)
+- [Developer Workflow](/guides/edt/developer-workflow)
+- [Multidev](/guides/edt/multidev)
 - [Command Line Interface - Terminus](/guides/edt/terminus-cli)
 - [External Integrations - Quicksilver](/guides/edt/external-integrations)
 - [Performance](/guides/edt/performance)

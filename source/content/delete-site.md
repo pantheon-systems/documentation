@@ -10,7 +10,7 @@ At some point, you may need or want to delete one of your sites on Pantheon. The
 
 This action is permanent and irreversible. Export any needed content, code, or files from the site before starting this operation.
 
-Before deleting a site, you must downgrade the site plan to Sandbox level. See [Manage Site Plans](/site-plan/) for more information.
+Before deleting a site, you must downgrade the site plan to Sandbox level. See [Manage Site Plans](/site-plan) for more information.
 
 </Alert>
 
@@ -39,7 +39,7 @@ Before deleting a site, you must downgrade the site plan to Sandbox level. See [
 
 
 ## Delete a Site with Terminus
-Run the following [Terminus](/terminus/) command:
+Run the following [Terminus](/terminus) command:
 
 ```bash
 terminus site:delete <site>

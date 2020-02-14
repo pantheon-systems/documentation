@@ -6,7 +6,7 @@ contributors: [alexfornuto, rachelwhitton]
 
 All documentation repositories should adhere to a [style guide](https://en.wikipedia.org/wiki/Style_guide). This document serves to define and detail the style conventions used in Pantheon's Documentation.
 
-You can also reference the [Pantheon Documentation Template](/doc-template/) to see the common structure of our docs, or copy it to begin a new content piece.
+You can also reference the [Pantheon Documentation Template](/doc-template) to see the common structure of our docs, or copy it to begin a new content piece.
 
 ## Content Types
 The site features two distinct content types; **docs** and **guides**. We define docs as reference materials used to explain the behavior and intended use of Pantheon's platform features and service offerings. Guides are generally paginated and designed to walk the reader through a specific concept or task.
@@ -52,7 +52,7 @@ contributors: [alexfornuto, rachelwhitton]
 
 This section should outline any steps or services required before starting those in the doc. If there are other docs that should be completed first, list them here.
 
-Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus/).
+Of particular note, any documentation that uses Terminus should reference it in this section, and link to the [Terminus Manual](/terminus).
 
 <Example>
 
@@ -194,12 +194,12 @@ Use relative paths when linking to other pages of the docs site.
 
 <Example>
 
-[Quick Start](/guides/quickstart/)
+[Quick Start](/guides/quickstart)
 
 <hr className="source-code" /> <br/>
 
 ```markdown
-[Quick Start](/guides/quickstart/)
+[Quick Start](/guides/quickstart)
 ```
 
 </Example>
@@ -410,7 +410,7 @@ When writing multi-step processes, repeated variables and constants should be de
 
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 
 ```bash
 export site=yoursitename
@@ -424,7 +424,7 @@ export env=dev
 ````markdown
 <Alert title="Exports" type="export">
 
-This process uses [Terminus](/terminus/) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
+This process uses [Terminus](/terminus) extensively. Before we begin, set the variables `$site` and `$env` in your terminal session to match your site name and the Dev environment:
 
 ```bash
 export site=yoursitename
@@ -838,14 +838,14 @@ This is the optimal place to provide links to external resources on the subject,
 
 <h2 className="toc-ignore"> See Also</h2>
 
-- [An internal link](/guides/)
+- [An internal link](/guides)
 - [An external link](https://pantheon.io/blog/)
 
 <hr className="source-code" /> <br/>
 
 ```markdown
 ## See Also
-- [An internal link](/guides/)
+- [An internal link](/guides)
 - [An external link](https://pantheon.io/blog/)
 ```
 

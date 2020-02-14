@@ -31,10 +31,10 @@ Composer looks within [The PHP Package Repository](https://packagist.org/) for d
 ## Managing Core as a Project Dependency
 Sites managed with Composer should use the nested docroot feature, which allows core to be installed within the `web` subdirectory instead of the default root directory of the site's codebase. A nested docroot is the simplest path towards reliable core updates in a Composer workflow.
 
-This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml` file. For details, see [Serving Sites from the Web Subdirectory](/nested-docroot/).
+This is possible on Pantheon by specifying `web_docroot: true` in `pantheon.yml` file. For details, see [Serving Sites from the Web Subdirectory](/nested-docroot).
 
 ## Pull Request Workflow
-In this WebOps workflow, a [Multidev](/multidev/) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
+In this WebOps workflow, a [Multidev](/multidev) environment is created on Pantheon for each pull request branch on GitHub. Work in these environments can also be committed back to the same branch for review on GitHub. When a pull request is merged into the default branch on GitHub, the result is deployed to the Dev environment on Pantheon:
 
 ![Multidev PR workflow](../images/pr-workflow/github-circle-pantheon.png)
 
@@ -45,7 +45,7 @@ However, this method does not support One-click updates in the Site Dashboard. A
 
 
 ## Custom Upstream Workflow
-It is possible to preserve the functionality of Pantheon's One-click updates in the Site Dashboard for Composer managed sites created from a [Custom Upstream](/custom-upstream/), however its use case is quite narrow.
+It is possible to preserve the functionality of Pantheon's One-click updates in the Site Dashboard for Composer managed sites created from a [Custom Upstream](/custom-upstream), however its use case is quite narrow.
 
 A Custom Upstream based off Pantheon's example repositories would need to commit all dependencies. Updates via Composer would only happen at the Custom Upstream repository level by a single repository maintainer. Those updates would then trickle down to sites created from the Custom Upstream as One-click updates in the Pantheon Site Dashboard.
 
@@ -54,15 +54,15 @@ This workflow has one very serious shortcoming, that is site-specific dependenci
 You can also prevent upstream updates by [setting an empty upstream](/guides/composer-convert/#change-upstreams). This action is available to Site Owner, Organization Administrator, and Users in Charge roles.
 
 ## Next Steps
-Follow the [Build Tools Guide](/guides/build-tools/) to learn best practices for Composer on Pantheon, or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci/) if you don't want to use CI tools in your development process.
+Follow the [Build Tools Guide](/guides/build-tools) to learn best practices for Composer on Pantheon, or [Drupal 8 and Composer on Pantheon Without Continuous Integration](/guides/drupal-8-composer-no-ci) if you don't want to use CI tools in your development process.
 
-If you already have a Drupal 8 site that you need to convert to a Composer-managed workflow, check out [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert/).
+If you already have a Drupal 8 site that you need to convert to a Composer-managed workflow, check out [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert).
 
 ### Partial Adoption
-If you're not ready to go all in with a Composer workflow and you want to see how it works on a smaller scale, follow the [Manage Some Dependencies with Composer](/guides/partial-composer/) guide to get started.
+If you're not ready to go all in with a Composer workflow and you want to see how it works on a smaller scale, follow the [Manage Some Dependencies with Composer](/guides/partial-composer) guide to get started.
 
 <Partial file="notes/partial-composer-adoption-warning.md" />
 
 ## See Also
 
- - [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert/)
+ - [Convert a Standard Drupal 8 Site to a Composer Managed Site](/guides/composer-convert)

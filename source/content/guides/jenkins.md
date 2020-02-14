@@ -49,7 +49,7 @@ You will need:
 
 - The following Jenkins plugins should be enabled: [Git](https://wiki.jenkins-ci.org/display/JENKINS/Github+Plugin) , [Github](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin), [Github Pull Request Builder](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+pull+request+builder+plugin), [Environment Injector](https://wiki.jenkins-ci.org/display/JENKINS/EnvInject+Plugin), [Conditional Build Step](https://wiki.jenkins-ci.org/display/JENKINS/Conditional+BuildStep+Plugin), [Run Condition](https://wiki.jenkins-ci.org/display/JENKINS/Run+Condition+Plugin), and [Rebuild](https://wiki.jenkins.io/display/JENKINS/Rebuild+Plugin).
 - We recommended using matrix-based security when using Jenkins. Anonymous users should have read access to Jenkins projects.
-- Ability to create a Drupal site on Pantheon, with [Multidev](/multidev/) enabled.
+- Ability to create a Drupal site on Pantheon, with [Multidev](/multidev) enabled.
 - A [GitHub](https://github.com) account.
 
 ## Create A New Site

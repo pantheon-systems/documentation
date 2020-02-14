@@ -13,7 +13,7 @@ Using `git revert` to revert an upstream update will result in the dashboard bei
 </Alert>
 
 ## Before You Begin
-The following assumes you have set up a [local development environment](/local-development/) with [Git version control](/git/).
+The following assumes you have set up a [local development environment](/local-development) with [Git version control](/git).
 
 Before you start making any changes to the Git repository. Be sure to have a working clone as a backup, if you overwrite the core and re-write the Git log the changes will be permanent.
 

@@ -63,7 +63,7 @@ In this lesson, we’ll explore your Live site and add an article or post to sim
 
     As intended, this action will overwrite your Dev database and files. If you skipped the backup task you will be unable to recover this data hereafter.
 
-    The Clone operation only copies the [files](/files/) folder (`wp-content/uploads` or `sites/default/files`) and does not include core, theme, plugins or modules.
+    The Clone operation only copies the [files](/files) folder (`wp-content/uploads` or `sites/default/files`) and does not include core, theme, plugins or modules.
 
     </Alert>
 

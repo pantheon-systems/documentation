@@ -118,7 +118,7 @@ This lesson demonstrates how to create a custom theme from the default [Bartik](
 
     ![Modified css](../../../images/pr-workflow/modified-css.png)
 
-12. You can use the [method described in an earlier lesson](/guides/build-tools/configure/) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
+12. You can use the [method described in an earlier lesson](/guides/build-tools/configure) to export configuration changes made in the last step or you can do it from the command line using Terminus and Drush:
 
     ```bash
     terminus drush $SITE.$ENV -- config-export --yes
