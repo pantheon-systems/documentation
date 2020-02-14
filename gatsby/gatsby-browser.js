@@ -9,7 +9,7 @@ import "prismjs/themes/prism-okaidia.css"
 import "prismjs/plugins/line-numbers/prism-line-numbers.css"
 
 // Code block shell prompt
-import "prismjs/plugins/command-line/prism-command-line.css"
+import './src/styles/codeBlocks.css'
 
 // Previous version scripts and styles
 // require("../source/docs/assets/js/main.js")

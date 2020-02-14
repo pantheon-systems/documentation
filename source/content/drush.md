@@ -271,18 +271,12 @@ drush @pantheon.SITENAME.ENV status
 
 To make your Drush 5 commands work on Pantheon aliases, change your directory to a context outside of a working local Drupal installation:
 
-```bash
+```bash{outputLines:2, 5, 6-31}
 pwd
 /Users/USERNAME/Sites/SITENAME
-
-
 cd ..
-
-
 pwd
 /Users/USERNAME/Sites/
-
-
 drush @pantheon.SITENAME.ENV status
  Drupal version : 7.26
  Site URI : ENV-SITENAME.pantheonsite.io

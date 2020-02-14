@@ -106,6 +106,10 @@ module.exports = {
               classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
+              prompt: {
+                user: "user",
+                host: "localhost",
+              },
             },
           },
         ]
@@ -180,6 +184,10 @@ module.exports = {
               classPrefix: "language-",
               inlineCodeMarker: null,
               aliases: {},
+              prompt: {
+                user: "user",
+                host: "localhost",
+              },
             },
           },
           {
