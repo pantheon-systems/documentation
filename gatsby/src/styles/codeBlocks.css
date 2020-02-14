@@ -76,3 +76,8 @@
 div.gatsby-remark-code-title::before {
     content: "File: ";
 }
+
+span.line-numbers-rows {
+  padding-top: 1em;
+  padding-left: 1em;
+}
