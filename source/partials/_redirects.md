@@ -4,7 +4,7 @@
 
 Add the following to `wp-config.php`, usually placed above `/* That's all, stop editing! Happy Pressing. */`. Don't forget to replace `www.example.com`:
 
-```php
+```php:title=wp-config.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
@@ -49,10 +49,9 @@ WordPress users should also run a [search and replace](/wordpress-broken-links/#
 
 <Tab title="Drupal 8" id="d8redirects">
 
-
 Add the following to the end of your `settings.php` file (replace `www.example.com`):
 
-```php
+```php:title=settings.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
@@ -99,11 +98,9 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
 
 <Tab title="Drupal 7" id="d7redirects">
 
-
 Add the following to the end of your `settings.php` file (replace `www.example.com`):
 
-
-```php
+```php:title=settings.php
 if (isset($_ENV['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
   // Redirect to https://$primary_domain in the Live environment
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
