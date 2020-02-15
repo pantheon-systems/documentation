@@ -6,7 +6,7 @@ categories: [go-live,develop]
 reviewed: "2020-02-12"
 ---
 
-This page described how to configure domain redirects with the Primary Domain setting, and page-level redirects within `settings.php` (Drupal) or `wp-config.php` (WordPress), adjusting placeholder values within snippets as needed (e.g., `example.com`).
+This page describes how to configure domain redirects with the Primary Domain setting, and page-level redirects within `settings.php` ([Drupal](/settings-php)) or `wp-config.php` ([WordPress](/wp-config-php)), adjusting placeholder values within snippets as needed (e.g., `example.com`).
 
 ## Considerations
 
@@ -52,7 +52,7 @@ If your site configuration prevents you from setting the primary domain from the
 
 ## Additional Redirects
 
-For additional redirect examples to fit the custom requirements of your site, see [Advanced Redirects](/advanced-redirects)
+For additional redirect examples to fit the custom requirements of your site, see [Advanced Redirects](/advanced-redirects).
 
 ## See Also
 
