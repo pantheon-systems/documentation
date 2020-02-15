@@ -6,9 +6,9 @@ categories: [go-live,develop]
 reviewed: "2020-02-12"
 ---
 
-Basic domain and HTTPS redirection can be handled by the [Primary Domain](/redirects#set-the-primary-domain) feature. PHP redicts can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may only need one, some, or none of the following.
+Basic domain and HTTPS redirection can be handled by the [Primary Domain](/redirects#set-the-primary-domain) feature. PHP redirects can be used if these configurations are not an option, or when you need specific redirect logic. Depending on the needs of the site, you may need none, only one, or several of the following configurations.
 
-Redirect logic should be added to `wp-config.php` for WordPress sites, and `settings.php` for Drupal sites.
+Redirect logic should be added to `wp-config.php` for [WordPress](/wp-config-php) sites, and `settings.php` for [Drupal](/settings-php) sites.
 
 <Alert type="info" title="Note">
 
