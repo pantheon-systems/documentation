@@ -30,12 +30,9 @@ jobs:
           name: Import Gatsby Tokens
           command: gatsby-tokens
       - run:
-          name: Update Terminus data files
+          name: Update external data files
           command: |
-            bash .circleci/scripts/update-terminus-commands.sh
-      - run:
-          name: Update Localdev changelog
-          command: bash .circleci/scripts/update-localdev-changelog.sh
+            bash .circleci/scripts/import-external-data.sh
       - run:
           name: Gatsby Build
           command: |

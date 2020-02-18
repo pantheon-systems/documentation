@@ -57,10 +57,16 @@ const calculateNext = (guide) => {
 }
 
 const digest = str =>
-  crypto
-    .createHash("md5")
-    .update(str)
-    .digest("hex")
+  (str != null) ?
+    crypto
+      .createHash("md5")
+      .update(str)
+      .digest("hex")
+  :
+    crypto
+      .createHash("md5")
+      .update(" ")
+      .digest("hex")
 
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
@@ -370,8 +376,11 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
   }
 
-  // Releases Content
-  if (node.internal.type === `ReleasesJson`) {
+  // Releases and Changelog Content
+  var nodeString = node.internal.type.toString()
+  var isReleaseJson = nodeString.includes("ReleasesJson")
+  if (isReleaseJson && !nodeString.includes("MarkdownBody")) {
+    //console.log("Creating markdownBody for ", node.internal.type.toString()) // For debugging
     // Add original_id as int to filter using GraphQL
     createNodeField({
       name: `original_id`,
@@ -379,7 +388,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: parseInt(node.id),
     })
 
-    // Add text/markdown node children to Release node
+    // Add text/markdown node children to Release and Changelog nodes
     const textNode = {
       id: `${node.id}-MarkdownBody`,
       parent: node.id,
@@ -387,7 +396,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       internal: {
         type: `${node.internal.type}MarkdownBody`,
         mediaType: "text/markdown",
-        content: node.body,
+        content: node.body || "",
         contentDigest: digest(node.body),
       },
     }
