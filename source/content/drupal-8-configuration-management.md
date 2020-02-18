@@ -97,9 +97,7 @@ After implementing a nested docroot, set a new path (`/config`) for configuratio
 /**
  * Place the config directory outside of the Drupal root.
  */
-$settings['config_sync_directory'] = array(
-  CONFIG_SYNC_DIRECTORY => dirname(DRUPAL_ROOT) . '/config',
-);
+$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
 ```
 
 <Alert title="Note" type="info">
