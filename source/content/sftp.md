@@ -5,7 +5,6 @@ tags: [admin]
 categories: [develop]
 reviewed: "2020-02-18"
 ---
-In some cases, working via Git is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -13,16 +12,20 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 
 </Enablement>
 
-SFTP mode allows you to develop directly on Pantheon and can be a major time-saver. If you want to use the WordPress Dashboard and Drupal Admin Interface (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
+In some cases, working via Git is not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a specific problem that only occurs on the Pantheon platform.
+
+SFTP mode allows you to develop directly on Pantheon. If you want to use the WordPress or Drupal Dashboard (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP mode first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
 
 <Alert tile="SFTP Mode Considerations" type="danger">
 
-#### Commit frequently and keep in mind:
+#### Commit Frequently
+
+Keep in mind:
 
 - SFTP changes to code that have not been committed will *not be saved in backups and not included in deployments* as they are not part of your code repository yet.
 - Changing your site's connection mode from SFTP to Git will discard all uncommitted file changes. If you want to keep work in progress, commit before toggling the connection mode.
 - Containers are migrated as a regular part of maintenance.  This can delete uncommitted changes.
-- You won't be able to save anything that's being excluded from version control via `.gitignore`.
+- You won't be able to save anything that's been excluded from version control via `.gitignore`.
 
 </Alert>
 
@@ -30,7 +33,7 @@ SFTP mode allows you to develop directly on Pantheon and can be a major time-sav
 
 Every Development environment has a toggle to switch between SFTP and Git modes. This is to prevent you from accidentally overwriting changes from a different source. To enable SFTP mode, click the **SFTP** button next to Development Mode.
 
-When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase, the Dashboard will track your changes and you'll see all the pending changes. You can then commit them to version control once you are happy with the results without having to ever use Git.
+When in SFTP mode, there's comment box above the commit log. As you make changes to the codebase, the Dashboard will track your pending changes for you to see. You can then commit them to version control once you are happy with the results without having to ever use Git directly.
 
  ![Enable SFTP mode](../images/dashboard/sftp-enabled.png)
 
@@ -38,9 +41,9 @@ When in SFTP mode, there's comment box above the commit log. As you make changes
 
 To get your SFTP login credentials, click **Connect with SFTP**. You will see your connection credentials and a button to connect directly with your preferred client.
 
- ![SFTP Connection Data](../images/dashboard/sftp-connection-info.png)<br />
+ ![SFTP Connection Data](../images/dashboard/sftp-connection-info.png)
 
-The connection information is a bit different than what you might be used to, and it's based on your unique "Site ID". This is the long string at the end of your Dashboard URL.
+The connection information is a bit different than what you might be used to. It's based on your unique "Site ID". This is the long string at the end of your Dashboard URL.
 
 Your connection data is as follows:
 
@@ -52,43 +55,43 @@ Your connection data is as follows:
 
 <Alert title="Note" type="info">
 
-When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.
+When you set up your SFTP client, remember to specify the SFTP protocol and connect to your environment using port 2222.
 
 </Alert>
 
-It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
+You can connect to an environment over SFTP using the terminal. The command is easily accessible from the Connection Information widget.
 
-There is also a one-click option so you can connect with a GUI client. The main directory listing includes Pantheon, logs, environment data and configuration. Your website is in the `code` directory. For instance, in Mac OS Cyberduck:
+There is also a one-click option so you can connect with a GUI client. The main directory listing includes Pantheon, logs, environment data and configuration. Your website is in the `code` directory. For instance, in Cyberduck on MacOS :
 
 ![Cyberduck Example](../images/cyberduck-example.png)
 
-Get the instructions for other [SFTP clients](/sftp#sftp-clients).
+For instructions for other client, jump down to [SFTP clients](#sftp-clients).
 
 <Partial file="auth.md" />
 
 ## Committing SFTP Changes
 
-Even though you are unable to use Git to push remotely with SFTP mode enabled, you still need to commit your changes to save them, or push them to Test/Live. **Commit early and commit often**. Large sets of code changes taking longer than two minutes to commit may result in failure due to timeouts. In those cases, temporarily remove some of your code changes (new modules or plugins), then try again.
+Even though you are unable to use Git to push remotely with SFTP mode enabled, you still need to commit your changes to save them, or push them to Test/Live. **Commit early and commit often**.
 
-After you have made a change to your code, you will see a message on the Dashboard that appears below the comment box to let you know you have uncommitted changes that are not yet in your repository. Clicking the notification message expands the listing of the pending changes.
+Large sets of code changes taking longer than two minutes to commit may timeout and fail to commit. In those cases, temporarily remove some of your code changes (new modules or plugins), then try again.
 
-![Uncommitted changes](../images/dashboard/pantheon-dashboard-uncommitted-changes.png)
+After making a change to your code, you will see a message on the Dashboard, below the comment box, letting you know you have uncommitted changes. Click the notification message to expand the listing of pending changes.
 
-Write a helpful commit message to go with your changes. This will make maintaining your code a saner process, and make it easier for any other developers who pull your changes down to understand what you've done.
+![A snapshot of a Pantheon Site Dashboard showing 119 uncommitted changes to the code](../images/dashboard/pantheon-dashboard-uncommitted-changes.png)
+
+Write a helpful commit message to go with your changes. This make maintaining your code a saner process, and make it easier for any other developers to understand what you've done.
 
 Once your message is ready, click **Commit**.
 
 <Alert title="Note" type="info">
 
-Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. `wp-content/uploads` or `sites/default/files/`) since these are not tracked in version control.
+Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. `wp-content/uploads` or `sites/default/files/`) since these are not tracked in version control. For more information, see [Use the Pantheon WebOps Workflow](/pantheon-workflow).
 
 </Alert>
 
 ## Discard & Abandon SFTP Changes
 
-Toggle the **Connection Mode** from **SFTP** to **Git** to *permanently* discard all SFTP changes that have not been committed, such as the 119 file changes shown here:
-
-![SFTP changes ready to commit](../images/dashboard/sftp-enabled.png)
+Toggle the **Connection Mode** from **SFTP** to **Git** to *permanently* discard all SFTP changes that have not been committed, such as the 119 file changes shown above.
 
 This can be useful when you have many changes you wish to undo or if it would otherwise be difficult to manually revert all the changes. Toggle back to **SFTP** mode when you're ready to resume SFTP development.
 
@@ -103,7 +106,7 @@ SFTP mode works with any standards-compliant SFTP client, including many GUI too
 
 ## Troubleshooting
 
-### I can't connect via SFTP to the site.
+### I can't connect via SFTP to the site
 
 Make sure your site has not [spun down after being idle](/application-containers/#idle-containers). Visit the site in your web browser and let it fully load then try connecting again.
 
