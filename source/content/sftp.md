@@ -132,7 +132,7 @@ This is by design. Please see [Using the Pantheon Workflow](/pantheon-workflow#u
 
 Uncommitted SFTP changes may not be recognized by the Dev environment when the Site Dashboard is open in multiple tabs or windows. Close all windows and tabs then access the Site Dashboard in a single tab to resolve.
 
-### How do I find my site's Binding path?
+### How do I find my site's remote path?
 
 <Alert title="Note" type="info">
 
@@ -140,7 +140,7 @@ You should *not* manually set the "Remote Path" in your SFTP client's settings, 
 
 </Alert>
 
-You can find the Remote Path after [connecting to SFTP](#sftp-connection-information) via command line, using the `pwd` command:
+You can find the Remote Path, also known as the **binding path**, after [connecting to SFTP](#sftp-connection-information) via command line, using the `pwd` (print working directory) command:
 
 ```bash
 sftp> pwd
