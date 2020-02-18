@@ -49,27 +49,29 @@ const shortcodes = {
 
 class VideoTemplate extends React.Component {
   componentDidMount() {
-
     $("[data-toggle=popover]").popover({
       trigger: "click",
-    });
-        
-    $('body').on('click', function (e) {
-        $('[data-toggle="popover"]').each(function () {
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
+    })
+
+    $("body").on("click", function(e) {
+      $('[data-toggle="popover"]').each(function() {
+        if (
+          !$(this).is(e.target) &&
+          $(this).has(e.target).length === 0 &&
+          $(".popover").has(e.target).length === 0
+        ) {
+          $(this).popover("hide")
         }
-        });
-    });
+      })
+    })
 
-    $('body').keyup(function (e) {
-      $('[data-toggle="popover"]').each(function () {
-      if (event.which === 27) {
-          $(this).popover('hide');
-      }
-      });
-    });
-
+    $("body").keyup(function(e) {
+      $('[data-toggle="popover"]').each(function() {
+        if (event.which === 27) {
+          $(this).popover("hide")
+        }
+      })
+    })
   }
 
   render() {
@@ -103,11 +105,7 @@ class VideoTemplate extends React.Component {
             <div
               className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
               role="complementary"
-            >
-
-            
-
-            </div>
+            ></div>
           </div>
         </div>
         {node.frontmatter.getfeedbackform && (

@@ -38,9 +38,7 @@ class ContributorTemplate extends React.Component {
       this.props.data.allDocs != null ? this.props.data.allDocs.edges : []
     return (
       <Layout>
-        <SEO
-          title={contributor.name}
-        />
+        <SEO title={contributor.name} />
         <div className="container mb-70">
           <div className="row">
             <title>{contributor.name}</title>

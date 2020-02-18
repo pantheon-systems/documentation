@@ -37,32 +37,34 @@ const shortcodes = {
   CardGroup,
   Enablement,
   Color,
-  Download
+  Download,
 }
 
 class ChangelogTemplate extends React.Component {
   componentDidMount() {
-
     $("[data-toggle=popover]").popover({
       trigger: "click",
-    });
-        
-    $('body').on('click', function (e) {
-        $('[data-toggle="popover"]').each(function () {
-        if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
-            $(this).popover('hide');
+    })
+
+    $("body").on("click", function(e) {
+      $('[data-toggle="popover"]').each(function() {
+        if (
+          !$(this).is(e.target) &&
+          $(this).has(e.target).length === 0 &&
+          $(".popover").has(e.target).length === 0
+        ) {
+          $(this).popover("hide")
         }
-        });
-    });
+      })
+    })
 
-    $('body').keyup(function (e) {
-      $('[data-toggle="popover"]').each(function () {
-      if (event.which === 27) {
-          $(this).popover('hide');
-      }
-      });
-    });
-
+    $("body").keyup(function(e) {
+      $('[data-toggle="popover"]').each(function() {
+        if (event.which === 27) {
+          $(this).popover("hide")
+        }
+      })
+    })
   }
 
   render() {
@@ -81,8 +83,12 @@ class ChangelogTemplate extends React.Component {
             <div id="doc" className="doc article col-md-9 md-70">
               <h1 className="toc-ignore">Pantheon Changelog</h1>
               <h2 className="toc-ignore">{node.frontmatter.title}</h2>
-              <Callout title="Subscribe Now" link="https://learn.pantheon.io/Changelog-Opt-In.html" >
-                Sign up for the Pantheon Changelog Newsletter to receive a monthly email on what's new and improved across the platform.
+              <Callout
+                title="Subscribe Now"
+                link="https://learn.pantheon.io/Changelog-Opt-In.html"
+              >
+                Sign up for the Pantheon Changelog Newsletter to receive a
+                monthly email on what's new and improved across the platform.
               </Callout>
               <div style={{ marginTop: "15px", marginBottom: "45px" }}>
                 <MDXProvider components={shortcodes}>
@@ -98,10 +104,10 @@ class ChangelogTemplate extends React.Component {
             </div>
           </div>
           <NavButtons
-              prev={this.props.pageContext.previous}
-              next={this.props.pageContext.next}
-              prevTitle="Older"
-              nextTitle="Newer"
+            prev={this.props.pageContext.previous}
+            next={this.props.pageContext.next}
+            prevTitle="Older"
+            nextTitle="Newer"
           />
         </div>
       </Layout>

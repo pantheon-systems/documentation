@@ -6,13 +6,18 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 const BuildToolsChangelog = ({ data }) => (
   <>
     {data.allBuildToolsReleasesJson.edges.map((buildtools, i) => {
-      Object.keys(buildtools).forEach((key) => (data[key] == null) && delete data[key]);
+      Object.keys(buildtools).forEach(
+        key => data[key] == null && delete data[key]
+      )
       return (
         <div key={i}>
           <h3 className="toc-ignore">{buildtools.node.name}</h3>
           <MDXProvider>
             <MDXRenderer>
-                {buildtools.node.fields.markdownBody.childMdx.body.replace(/h1/g, 'h4')}
+              {buildtools.node.fields.markdownBody.childMdx.body.replace(
+                /h1/g,
+                "h4"
+              )}
             </MDXRenderer>
           </MDXProvider>
           <hr />
@@ -26,24 +31,22 @@ export default props => (
   <StaticQuery
     query={graphql`
       query {
-        allBuildToolsReleasesJson(
-          filter: {body: {ne: null}}
-        ) {
-            edges {
-                node {
-                    id
-                    name
+        allBuildToolsReleasesJson(filter: { body: { ne: null } }) {
+          edges {
+            node {
+              id
+              name
+              body
+              fields {
+                markdownBody {
+                  childMdx {
                     body
-                    fields {
-                      markdownBody {
-                        childMdx {
-                          body
-                        }
-                      }
-                    }
-                    tag_name
+                  }
                 }
+              }
+              tag_name
             }
+          }
         }
       }
     `}

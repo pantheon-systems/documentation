@@ -1,7 +1,6 @@
 import React from "react"
 
 const Popover = ({ icon, title, content }) => {
-
   return (
     <>
       <span

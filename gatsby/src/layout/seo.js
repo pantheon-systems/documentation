@@ -10,7 +10,18 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title, authors, image, categories, tags, reviewed}) {
+function SEO({
+  description,
+  lang,
+  meta,
+  keywords,
+  title,
+  authors,
+  image,
+  categories,
+  tags,
+  reviewed,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -31,43 +42,46 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
   const metaDescription = description || site.siteMetadata.description
   const metaImage = image || "/assets/images/default-thumb-doc.png"
   const authorList = authors ? Array.from(authors) : []
-  const addSearchCategories = categories ? categories.map((value) =>
-    `category=${value}`
-  ).join(";") : `category=other`
+  const addSearchCategories = categories
+    ? categories.map(value => `category=${value}`).join(";")
+    : `category=other`
 
-  const titleProps = title ? {
-    title: `${title}`,
-    titleTemplate: `%s | ${site.siteMetadata.title}`
-  } : {
-    title: site.siteMetadata.title
-  }
+  const titleProps = title
+    ? {
+        title: `${title}`,
+        titleTemplate: `%s | ${site.siteMetadata.title}`,
+      }
+    : {
+        title: site.siteMetadata.title,
+      }
 
-  const tagValues = tags && tags.length ? {
-    property: `og:article:tags`,
-    content: `${tags}`
-  } : {
-  }
+  const tagValues =
+    tags && tags.length
+      ? {
+          property: `og:article:tags`,
+          content: `${tags}`,
+        }
+      : {}
 
-  const reviewtag = reviewed ? {
-    property: `og:article:modified_time`,
-    content: `${reviewed}`
-  } : { }
+  const reviewtag = reviewed
+    ? {
+        property: `og:article:modified_time`,
+        content: `${reviewed}`,
+      }
+    : {}
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-
       {...titleProps}
-
       defer={false}
-
       meta={[
-        {...tagValues},
+        { ...tagValues },
         {
           name: `addsearch-custom-field`,
-          content: addSearchCategories
+          content: addSearchCategories,
         },
         {
           itemprop: `name`,
@@ -107,9 +121,9 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
         },
         {
           property: `og:article:section`,
-          content: `${categories}`
+          content: `${categories}`,
         },
-        {...reviewtag},
+        { ...reviewtag },
         {
           name: `twitter:site`,
           content: `@${site.siteMetadata.social.twitter}`,
@@ -166,10 +180,10 @@ function SEO({ description, lang, meta, keywords, title, authors, image, categor
                   },
                 });
               });
-          `
+          `,
         }}
       />
-  </Helmet>
+    </Helmet>
   )
 }
 

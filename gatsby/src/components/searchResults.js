@@ -1,15 +1,14 @@
-import React from 'react';
-import {Helmet} from "react-helmet";
+import React from "react"
+import { Helmet } from "react-helmet"
 
 class SearchResults extends React.Component {
-
-    render () {
-        return (
-            <div className="addsearch-container">
-                <Helmet>
-                <script
-                dangerouslySetInnerHTML={{
-                    __html: `
+  render() {
+    return (
+      <div className="addsearch-container">
+        <Helmet>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
                         function parseParamsFromUrl() {
                         var queryString = window.location.search;
                             queryString = queryString.substring(11);
@@ -18,17 +17,16 @@ class SearchResults extends React.Component {
                         }
                         var urlParams = parseParamsFromUrl();
                         document.getElementById('piodocsearch').setAttribute('value', urlParams);
-                    `
-                }}
-                />
+                    `,
+            }}
+          />
+        </Helmet>
 
-                </Helmet>
+        <div id="addsearch-results"></div>
 
-                <div id="addsearch-results"></div>
-
-                <script
-                dangerouslySetInnerHTML={{
-                    __html: `
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
                     window.addsearch_settings = {
                         display_url: true,
                         display_resultscount: true,
@@ -36,16 +34,12 @@ class SearchResults extends React.Component {
                         display_sortby: true,
                         display_category: true
                     }
-                    `
-                }}
-                />
-            </div>
-        );
-      }
-
+                    `,
+          }}
+        />
+      </div>
+    )
+  }
 }
 
-export default SearchResults;
-
-
-                
+export default SearchResults
