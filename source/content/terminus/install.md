@@ -15,11 +15,11 @@ reviewed: "2020-02-05"
 searchboost: 100
 ---
 
-Terminus is available for Mac OS X and Linux.
+Terminus is available for macOS and Linux.
 
 Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then install Terminus in the Linux shell.
 
-Because some Terminus commands use SSH authentication, consider [generating and adding SSH keys](/ssh-keys) to your account before you continue.
+Because some Terminus commands use SSH authentication, consider [generating and adding SSH keys](/ssh-keys/) to your account before you continue.
 
 ## Requirements
 
@@ -45,11 +45,11 @@ There are several ways to install Terminus, depending on your use case:
   wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O ~/.bin/terminus
   ```
 
-  Remember to get the latest version of Terminus from the [Releases](https://github.com/pantheon-systems/terminus/releases) page, don't copy the command above vermatim.
+  Remember to get the latest version of Terminus from the [Releases](https://github.com/pantheon-systems/terminus/releases) page, don't copy the command above verbatim.
 
   Your installation directory must be in or added to your `$PATH` environment variable in order to call `terminus` from any working directory.
 
-1. Make the Terminus file exectable. The example below assumes the same installation path as above:
+1. Make the Terminus file executable. The example below assumes the same installation path as above:
 
   ```bash{promptUser: user}
   chmod +X ~/.bin/terminus
@@ -57,7 +57,7 @@ There are several ways to install Terminus, depending on your use case:
 
 <Alert type="info" title="Note">
 
-There is an unofficial third party installer script which will download `terminus.phar` and attempt to update the appropriate rc files, available [here](https://github.com/alexfornuto/terminus-installer). Note that this script is *not* supported directly by Pantheon.
+There is an unofficial third-party installer script which will download `terminus.phar` and attempt to update the appropriate `rc` files, available [on GitHub](https://github.com/alexfornuto/terminus-installer). Note that this script is *not* supported directly by Pantheon.
 
 </Alert>
 
@@ -83,7 +83,7 @@ composer install pantheon-systems/terminus
 
 ### Machine Token
 
-Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/machine-tokens).
+Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/machine-tokens/).
 
 First, [create a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from **User Dashboard** > **Account** > **Machine Tokens**.
 
@@ -99,7 +99,7 @@ terminus auth:login --email=dev@example.com
 
 ### SSH Authentication
 
-Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys) to prevent password requests when executing these commands.
+Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
 
 ## Troubleshooting
 
@@ -122,7 +122,7 @@ file installer.phar: Permission denied
 curl: (23) Failed writing body (0 != 1928)
 ```
 
-You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` diretory in your `$HOME` and go there:
+You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` directory in your `$HOME` and go there:
 
 ```bash{promptUser: user}
 cd $HOME/terminus
@@ -149,7 +149,7 @@ curl: (60) SSL certificate problem: unable to get local issuer certificate
 
 To resolve, save a copy of the [latest CA certificate](https://curl.haxx.se/docs/caextract.html) to a new file named `cacert.pem` then add `curl.cainfo = "[path_to_file]\cacert.pem"` to your `php.ini` file. If you're running XAMPP, you can add the `cacert.pem` file within the `xampp\php\extras\ssl` directory.
 
-### Enable the terminus command
+### Enable the terminus Command
 
 If you encounter the following error after installation completes:
 
@@ -158,13 +158,13 @@ Terminus was installed, but the installer was not able to write to your bin dir.
 `terminus` command, add this alias to your .bash_profile (Mac) or .bashrc (Linux) file:
 ```
 
-Use `alias` to have the `terminus` command call the application:
+Use this command to create a `terminus` alias that calls the application:
 
 ```bash{promptUser: user}
-alias terminus=~/vendor/bin/terminus
+echo "alias terminus=~/vendor/bin/terminus" >> ~/.bashrc
 ```
 
-### Windows 10 Installation issues
+### Windows 10 Installation Issues
 
 #### Prerequisites are not installed
 
