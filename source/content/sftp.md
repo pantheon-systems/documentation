@@ -12,7 +12,7 @@ Optimize your dev team and streamline internal workflows. Pantheon delivers cust
 
 </Enablement>
 
-In some cases, working via Git may not the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a platform-specific problem.
+In some cases, working via Git may not be the best option. You may not like local development, or you may want to show work to a remote collaborator (or client) immediately, or need to debug a platform-specific problem.
 
 SFTP mode allows you to develop directly on Pantheon. If you want to use the WordPress or Drupal Dashboard (e.g. the `apps.module` in Drupal, or the plugin/theme manager in WordPress), enable SFTP mode first. For details, see [Working in the WordPress Dashboard and Drupal Admin Interface](/cms-admin).
 
