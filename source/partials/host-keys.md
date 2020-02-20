@@ -20,7 +20,7 @@ You can, however, easily tell your machine to automatically trust all Pantheon `
 
 <Alert title="Warning" type="danger">
 
-Be aware that you're disabling a security feature, and trusting your DNS system to always point you to the right IP addresses.
+Be aware that this disables a security feature and trusts your DNS system to always point you to the right IP addresses.
 
 </Alert>
 

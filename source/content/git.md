@@ -24,7 +24,7 @@ This page assumes that you've:
 
 Download and install Git for your operating system:
 
-- [Mac OS](https://git-scm.com/download/mac)
+- [macOS](https://git-scm.com/download/mac)
 - [Windows](https://git-scm.com/download/win)
 - [Linux](https://git-scm.com/download/linux)
 
@@ -137,9 +137,9 @@ Sending code to Pantheon is a two step process with Git. First, you need to comm
 
   </Alert>
 
-  If you don't specify a message on the command line, Git will open your default text editor and prompt you to create one. Exiting without making a message will abort the commit. If the commit worked you will see something like this:
+  If you don't specify a message through the command line, Git will open your default text editor and prompt you to create one. If you exit without providing a commit message, Git will abort the commit. If the commit worked you will see something like this:
 
-  ```git{promptUser: user}
+  ```git
   [master d2fce4ea] Add a great new plugin to increase awesomesauce level of my WordPress site.
   2 files changed, 3 insertions(+)
   ```
@@ -193,9 +193,9 @@ To configure this URL in SourceTree simply remove the `git clone` and the traili
 
 ![SourceTree git Configuration](../images/sourcetree-config.png)
 
-Alternatively, you can simply clone the repository using the `git clone` and then use the "Add Existing Local Repository" option in SourceTree to point to the checked out directory.
+Alternatively, you can simply clone the repository using `git clone` and then use the "Add Existing Local Repository" option in SourceTree to point to the checked out directory.
 
-### Blocked port
+### Blocked Port
 
 If your local network is blocking port 2222, you'll see an error like this when attempting to run `git clone`, `git push`, or `git pull`:
 

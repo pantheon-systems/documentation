@@ -5,7 +5,8 @@ tags: [security, dashboard]
 categories: [get-started,develop]
 reviewed: "2020-02-07"
 ---
-To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once per work environment (laptop, desktop, etc), no matter how many sites you work on.
+
+To take full advantage of Pantheon, you should load your public SSH key into your account. SSH keys are a best practice for authentication, allowing you more security than a simple password. You will only need to do this once for each work environment (laptop, desktop, etc.), no matter how many sites you work on.
 
 <Accordion title="Watch: Generate a SSH Key and Add it to Your Dashboard" id="ssh-video" icon="facetime-video">
 
@@ -69,7 +70,7 @@ To delete a key, go to the **<span class="glyphicons glyphicons-cogwheel"></span
 
 ![Delete SSH Key](../images/dashboard/remove-ssh-key.png)
 
-If you have active sites and no keys remaining, you can still access the sites. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one [here](https://dashboard.pantheon.io/reset-password).
+If you have active sites and no keys remaining, you can still access the sites. Make site changes via SFTP or Git using your account password to authenticate. If you sign in through Google and haven't defined a password, you can set one on the [Reset Password](https://dashboard.pantheon.io/reset-password) page.
 
 ## Troubleshooting
 
