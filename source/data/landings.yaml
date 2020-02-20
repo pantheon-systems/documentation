@@ -354,7 +354,8 @@
         - text: 'SSO and Identity Federation on Pantheon'
           url: '/sso/'
         - text: 'Using WP SAML Auth with Google Apps'
-          url: '/wordpress-google-sso/'
+          url: '/guides/wordpress-google-sso/'
+          icon: 'fa fa-book'
 - title: 'Go Live'
   path: 'go-live'
   video_id: 'nZvf2CrLh9o'
@@ -577,7 +578,8 @@
         - text: 'Enabling Solr with Drupal 7'
           url: '/solr-drupal-7/'
         - text: 'Using WP SAML Auth with Google Apps'
-          url: '/wordpress-google-sso/'
+          url: '/guides/wordpress-google-sso/'
+          icon: 'fa fa-book'
     - title: ''
       subtitle: ''
       links:
@@ -979,6 +981,8 @@
           url: '/guides/trainers/'
         - text: 'Using Terminus to Create and Update Drupal Sites on Pantheon'
           url: '/guides/terminus-drupal-site-management/'
+        - text: 'Using WP SAML Auth with Google Apps'
+          url: '/guides/wordpress-google-sso/'
     - title: ' '
       links:
         - text: 'Collaborative Development Using GitHub and Pantheon'
