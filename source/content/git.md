@@ -2,10 +2,10 @@
 title: Starting With Git
 description: Use Git version control to deploy code to your Drupal or WordPress site's development environment.
 categories: [develop]
-tags: [git]
+tags: [git,webops]
 reviewed: "2020-02-07"
 ---
-Git is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
+Git is the version control tool at the heart of the Pantheon WebOps<Popover title="WebOps" content="WebOps is a set of practices that facilitates collaboration and automates processes to improve web team productivity." /> workflow. If you like to [develop locally](/local-development), it's a good way to streamline your website operations: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
 <Enablement title="Web Team Agility Assessment" link="https://pantheon.io/web-team-agility-assessment?docs">
 
@@ -30,7 +30,7 @@ Download and install Git for your operating system:
 
 ## Configure Git
 
-Before you can commit your code in Git, you must provide a name and email to associate the commits with:
+Before you can commit your code in Git, you must provide a name and email with which your commits will be associated:
 
 ```bash{promptUser: user}
 git config --global user.name "Anita Pantheon"
@@ -49,7 +49,7 @@ Replace `nano` with your preferred text editor or IDE. For example, `atom` or `c
 
 ## Clone Your Site Codebase
 
-Begin by creating a local copy of your codebase with `git clone`.
+Begin by creating a local copy of your [codebase](/code#pantheon-git-repository "About your site's code repository on Pantheon") with `git clone`.
 
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
@@ -82,7 +82,7 @@ Begin by creating a local copy of your codebase with `git clone`.
 
 ## Make Changes
 
-You can now edit your site code using [any](https://xkcd.com/378/) text editor or IDE you prefer.
+You can now edit your site code using your [preferred](https://xkcd.com/378/ "XKCD comic about text editors") text editor or IDE.
 
 If you want to add a new file to your codebase, you will need to tell Git about it. Otherwise, Git will not track the file.
 
@@ -165,7 +165,7 @@ Sending code to Pantheon is a two step process with Git. First, you need to comm
     27bf0fca..d2fce4ea  master -> master
   ```
 
-There is a handy list of Git commands (along with a lot of other documentation) [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf).
+There is a handy list of Git commands (along with a lot of other documentation) [on GitHub](https://github.com/AlexZeitler/gitcheatsheet/blob/master/gitcheatsheet.pdf "Alex Zeitler's Git cheat sheet PDF").
 
 ### View the Changes on Pantheon
 
