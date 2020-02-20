@@ -344,14 +344,16 @@ ___
 
 **Issue:** This plugin sends two `set-cookie` headers in each response, which breaks caching on Pantheon's Global CDN. For example:
 
-```
-$ curl -I https://www.example.com
+```bash{outputLines: 2-20}
+curl -I https://www.example.com
 HTTP/2 200
 cache-control: public, max-age=600
 content-type: text/html; charset=UTF-8
 server: nginx
+//highlight-start
 set-cookie: cookielawinfo-checkbox-necessary=yes; expires=Thu, 20-Feb-2020 17:31:51 GMT; Max-Age=3600; path=/
 set-cookie: cookielawinfo-checkbox-non-necessary=yes; expires=Thu, 20-Feb-2020 17:31:51 GMT; Max-Age=3600; path=/
+//highlight-end
 x-pantheon-styx-hostname: styx-fe1-a-789d66bff9-tztp6
 x-styx-req-id: 7f93c166-53fe-11ea-803e-b26d7703e33f
 date: Thu, 20 Feb 2020 16:31:51 GMT
