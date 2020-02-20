@@ -51,13 +51,15 @@ Replace `nano` with your preferred text editor or IDE. For example, `atom` or `c
 
 Begin by creating a local copy of your [codebase](/code#pantheon-git-repository "About your site's code repository on Pantheon") with `git clone`.
 
+1. In your terminal, navigate to the directory where you keep your projects.
+
 1. Log in to Pantheon and load the Site Dashboard for the site you want to work on.
 
 1. In the **<span class="glyphicons glyphicons-wrench"></span> Dev** tab, at the top of the **<span class="glyphicons glyphicons-embed-close"></span> Code** panel, click on **Clone with Git**:
 
-  ![Copy Past Git Clone](../images/dashboard/git-string.png)
+  ![Copy Git Clone Command](../images/dashboard/git-string.png)
 
-1. Copy the `git clone` command and paste it in your terminal, in the directory where you keep your projects. Git will create a directory as part of the clone, so you don't need to create one:
+1. Copy the `git clone` command and paste it into your terminal. Git will create a directory as part of the clone, so you don't need to create one:
 
   ```bash{promptUser: user}
   git clone ssh://codeserver.dev.xxx@codeserver.dev.xxx.drush.in:2222/~/repository.git my-site
@@ -78,7 +80,7 @@ Begin by creating a local copy of your [codebase](/code#pantheon-git-repository 
   Resolving deltas: 100% (12802/12802), done.
   ```
   
-  If you run into permission problems, check your [SSH key](/ssh-keys) setup. If the clone starts but can't complete, check your network to see if you have a current version of Git.
+  If you run into permission problems, check your [SSH key](/ssh-keys) setup. If the clone starts but can't complete, confirm that you have a current version of Git.
 
 ## Make Changes
 
