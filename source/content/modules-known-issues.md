@@ -86,7 +86,7 @@ ___
 
 This module has been deprecated by its authors for Drupal 8 and above. The suggestions made below are for Drupal 7 users, and are not guaranteed to be successful in all use cases.
 
-If you're creating a new site that needs composer-managed libraries, we strongly reccomend using Drupal 8.1 or newer.
+If you're creating a new site that needs Composer-managed libraries, we strongly reccomend using Drupal 8.1 or newer.
 
 **Issue**: Composer Manager expects write access to the site's codebase via SFTP, which is prevented in Test and Live environments on Pantheon by design.
 
