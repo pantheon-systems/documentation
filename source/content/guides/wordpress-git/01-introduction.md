@@ -41,13 +41,16 @@ Make sure that you have a:
 * WordPress site on Pantheon
 * SFTP client and text editor on your local computer, such as:
 
-|             **SFTP Client**                 |              **Text Editor**            |
-|:--------------------------------------------|:--------------------------------------- |
-| [Transmit](https://panic.com/transmit/)     | [Atom](https://atom.io/)                |
-| [Cyberduck](https://cyberduck.io/)          | [Sublime](https://www.sublimetext.com/) |
-| [Filezilla](https://filezilla-project.org/) | [TextMate](https://macromates.com/)     |
+ |                 SFTP Client                 |                      Text Editor                     |
+ |:--------------------------------------------|:-----------------------------------------------------|
+ | [Transmit](https://panic.com/transmit/)     | [Atom](https://atom.io/)                             |
+ | [Cyberduck](https://cyberduck.io/)          |        [Sublime](https://www.sublimetext.com/)       |
+ | [Filezilla](https://filezilla-project.org/) | [TextMate](https://macromates.com/)                  |
+ |                                             | [Visual Studio Code](https://code.visualstudio.com/) |
 
 Demonstrations throughout this guide use Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/ssh-keys). Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon account password to sign in, when prompted.
+
+Visit our guide to [Configure Visual Studio Code](/visual-studio-code) to edit and sync code from within the text editor.
 
 ## Cloud Development Environment
 >Ok, yay, let’s do this. Let me fire up and configure my local development environment, give me one to three hours. -- You, probably.
