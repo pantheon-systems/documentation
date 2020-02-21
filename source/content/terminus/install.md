@@ -11,14 +11,15 @@ permalink: docs/terminus/:basename/
 nexturl: terminus/examples/
 previousurl: terminus/
 image: terminus-thumbLarge
+reviewed: "2020-02-05"
 searchboost: 100
 ---
 
-Terminus is available for Mac OS X and Linux.
+Terminus is available for macOS and Linux.
 
-Some Windows users have installed Terminus using [Git BASH on Git for Windows](https://git-for-windows.github.io/), or the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), but this is unsupported.
+Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10), then install Terminus in the Linux shell.
 
-Because some Terminus commands use SSH authentication, consider [generating and adding SSH keys](/ssh-keys) to your account before you continue.
+Because some Terminus commands use SSH authentication, consider [generating and adding SSH keys](/ssh-keys/) to your account before you continue.
 
 ## Requirements
 
@@ -27,37 +28,78 @@ Because some Terminus commands use SSH authentication, consider [generating and 
 - [PHP-CURL](https://secure.php.net/manual/en/curl.setup.php)
 - [Composer](https://getcomposer.org/download/)
 
-## Install
+## Install Terminus
 
-Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a <code>terminus</code> directory in your <code>\$HOME</code> and install there:
+There are several ways to install Terminus, depending on your use case:
 
-```bash
-  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
+- For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus).
+- For a composer-managed version of Terminus that is _not_ part of your other composer-managed project(s) and doesn't utilize global composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
+- If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
+- To add Terminus as a dependency of your composer-based project, [install with Composer](#install-terminus-as-a-project-dependency).
+
+### Standalone Terminus
+
+1. Download the latest `terminus.phar` from the [Releases](https://github.com/pantheon-systems/terminus/releases) page. In the example below, we're directing the file to `$HOME/bin/` and renaming the file to `terminus`:
+
+  ```bash{promptUser: user}
+  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O ~/.bin/terminus
+  ```
+
+  Remember to get the latest version of Terminus from the [Releases](https://github.com/pantheon-systems/terminus/releases) page, don't copy the command above verbatim.
+
+  Your installation directory must be in or added to your `$PATH` environment variable in order to call `terminus` from any working directory.
+
+1. Make the Terminus file executable. The example below assumes the same installation path as above:
+
+  ```bash{promptUser: user}
+  chmod +X ~/.bin/terminus
+  ```
+
+<Alert type="info" title="Note">
+
+There is an unofficial third-party installer script which will download `terminus.phar` and attempt to update the appropriate `rc` files, available [on GitHub](https://github.com/alexfornuto/terminus-installer). Note that this script is *not* supported directly by Pantheon.
+
+</Alert>
+
+### Terminus Installer PHAR
+
+Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a `terminus` directory in your `$HOME` and install there:
+
+```bash{promptUser: user}
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 ```
 
 See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
+
+### Install Terminus as a Project Dependency
+
+To add Terminus to a composer-managed project:
+
+```bash{promptUser: user}
+composer install pantheon-systems/terminus
+```
 
 ## Authenticate
 
 ### Machine Token
 
-Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/machine-tokens).
+Once Terminus is installed, login with a machine token, which is used to securely authenticate your machine. Machine tokens provide the same access as your username and password, and do not expire. For more information, see [Machine Tokens](/machine-tokens/).
 
 First, [create a Machine Token](https://dashboard.pantheon.io/login?destination=%2Fuser#account/tokens/create/terminus/) from **User Dashboard** > **Account** > **Machine Tokens**.
 
 Once the token has been created, use it to authenticate Terminus by running the following command:
 
-```bash
-  terminus auth:login --machine-token=‹machine-token›
+```bash{promptUser: user}
+terminus auth:login --machine-token=‹machine-token›
 ```
 
-```bash
-  terminus auth:login --email=dev@example.com
+```bash{promptUser: user}
+terminus auth:login --email=dev@example.com
 ```
 
 ### SSH Authentication
 
-Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys) to prevent password requests when executing these commands.
+Commands that execute remote instructions to tools like Drush or WP-CLI require SSH authentication. See [Generate and Add SSH Keys](/ssh-keys/) to prevent password requests when executing these commands.
 
 ## Troubleshooting
 
@@ -66,8 +108,8 @@ Commands that execute remote instructions to tools like Drush or WP-CLI require 
 If the installer throws an IOException at the end:
 
 ```bash
-  [Symfony\Component\Filesystem\Exception\IOException]
-  Failed to create symbolic link from "/path/to/current/dir/vendor/bin/terminus" to "/usr/local/bin/terminus".
+[Symfony\Component\Filesystem\Exception\IOException]
+Failed to create symbolic link from "/path/to/current/dir/vendor/bin/terminus" to "/usr/local/bin/terminus".
 ```
 
 You may need to remove an old installation from terminus from `/usr/local/bin/terminus`.
@@ -80,11 +122,11 @@ file installer.phar: Permission denied
 curl: (23) Failed writing body (0 != 1928)
 ```
 
-You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` diretory in your `$HOME` and go there:
+You should relocate your installation to a directory where you have permission to write files. If in doubt, you can create a `terminus` directory in your `$HOME` and go there:
 
-```bash
-  cd $HOME/terminus
-  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install</code></pre></figure>
+```bash{promptUser: user}
+cd $HOME/terminus
+curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 ```
 
 ### PHP Fatal error: Uncaught exception 'ReflectionException'
@@ -107,40 +149,33 @@ curl: (60) SSL certificate problem: unable to get local issuer certificate
 
 To resolve, save a copy of the [latest CA certificate](https://curl.haxx.se/docs/caextract.html) to a new file named `cacert.pem` then add `curl.cainfo = "[path_to_file]\cacert.pem"` to your `php.ini` file. If you're running XAMPP, you can add the `cacert.pem` file within the `xampp\php\extras\ssl` directory.
 
-### Windows 10 Installation issues
+### Enable the terminus Command
 
-**Problem:** PHP is not installed.
-
-**Solution:** Install PHP. Consider using a package such as [XAMMP](https://www.apachefriends.org/index.html), which provides a simple installation process.
-
-**Problem:** Composer is not installed.
-
-**Solution:** Install composer using the [.exe installer](https://getcomposer.org/doc/00-intro.md#installation-windows)
-
-**Problem:** `curl: command not found`
-
-Installation fails because curl cannot be found:
+If you encounter the following error after installation completes:
 
 ```bash
-User1@DESKTOP-UBJ92JO  /usr/bin
-$ curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
-bash: curl: command not found
+Terminus was installed, but the installer was not able to write to your bin dir. To enable the
+`terminus` command, add this alias to your .bash_profile (Mac) or .bashrc (Linux) file:
 ```
 
-**Solution:** [Install curl](https://stackoverflow.com/questions/9507353/how-do-i-install-set-up-and-use-curl-on-windows)
+Use this command to create a `terminus` alias that calls the application:
 
-**Problem:** The Terminus install was successful, but the path was not set.
-
-Terminus was installed, but the installer was not able to write to your bin dir.
-
-**Solution:** To enable the `terminus` command, add this alias to your [`.bash_profile` file](https://askubuntu.com/questions/969632/where-is-bash-profile-located-in-windows-subsystem-for-linux):
-
-```bash
-alias terminus=terminus=/c/Users/User1/vendor/bin/terminus
+```bash{promptUser: user}
+echo "alias terminus=~/vendor/bin/terminus" >> ~/.bashrc
 ```
 
-Or you can enable it by adding the directory the executable file is in to your path:
+### Windows 10 Installation Issues
 
-```bash
-PATH="C:\Users\User1\vendor\bin:$PATH"
+#### Prerequisites are not installed
+
+The default Linux environment installed by the WSL may not have all of the requirements for Terminus installed. Using your distribution's package manager, install:
+
+- PHP (including `php-cli`, `php-curl`, and `php-xml`)
+- Curl (to download the installer)
+
+On a subsystem with Ubuntu 18.04, since Curl is already installed, the commands to run all updates and install the PHP package look like this:
+
+```bash{promptUser:user}
+sudo apt update && sudo apt upgrade -y
+sudo apt install php7.2-cli
 ```
