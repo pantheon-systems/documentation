@@ -11,7 +11,10 @@ const WordPressAPIRef = (props) => {
         <>
         <ul>
             {Object.values(getArgs.args).map((arg, index) => (
-                <li id={keys[index]}>
+                <li
+                    key={keys.indexOf(keys[index])}
+                    id={keys[index]}
+                >
                     {keys[index]} - {arg.description}
                 </li>
                 ))
