@@ -1,32 +1,24 @@
 import React from 'react'
 import WPPostData from '../../../source/data/wp/posts.json'
-import { First, Get, Map } from 'react-lodash'
 
 const WordPressAPIRef = (props) => {
     const getArgs = WPPostData.endpoints[0]
-    //console.log("All getArg entries: ", Object.entries(getArgs.args))
-    //const argNames = Object.entries(getArgs.args)
-    //console.log("ArgNames: ", argNames)
-
+    //const postArgs = WPPostData.endpoints[1]
     const keys = Object.keys(getArgs.args)
-    console.log("keys: ", keys)
-    const iteratee = (item, index) => <li key={index}>{keys[index]} - {item.description} </li>
-    console.log("iteratee = ", iteratee)
+    console.log("keys: ", keys) // For Debugging
 
     return (
         <>
         <ul>
-        {Object.values(getArgs.args).map((item, index) => (
-                <li key={index}>
-                    {keys[index]} - {item.description}
+            {Object.values(getArgs.args).map((arg, index) => (
+                <li id={keys[index]}>
+                    {keys[index]} - {arg.description}
                 </li>
-        ))
-        }
+                ))
+            }
         </ul>
     </>
     )
 }
-
-
 
 export default WordPressAPIRef
