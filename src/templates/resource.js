@@ -30,6 +30,7 @@ import LocaldevChangelog from "../components/localdevChangelog"
 import DrushChangelog from "../components/drushChangelog"
 import ReviewDate from "../components/reviewDate"
 import ResourceSelector from "../components/resourceSelector"
+import WordPressAPIRef from "../components/WPApi.js"
 
 const shortcodes = {
   Callout,
@@ -53,6 +54,7 @@ const shortcodes = {
   DrushChangelog,
   ReviewDate,
   ResourceSelector,
+  WordPressAPIRef
 }
 
 class ResourceTemplate extends React.Component {
