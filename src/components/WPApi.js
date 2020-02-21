@@ -4,14 +4,29 @@ import { First, Get, Map } from 'react-lodash'
 
 const WordPressAPIRef = (props) => {
     const getArgs = WPPostData.endpoints[0]
-    console.log(Object.entries(getArgs.args))
+    //console.log("All getArg entries: ", Object.entries(getArgs.args))
+    //const argNames = Object.entries(getArgs.args)
+    //console.log("ArgNames: ", argNames)
+
+    const keys = Object.keys(getArgs.args)
+    console.log("keys: ", keys)
+    const iteratee = (item, index) => <li key={index}>{keys[index]} - {item.description} </li>
+    console.log("iteratee = ", iteratee)
+
     return (
         <>
         <ul>
-            <Map collection={getArgs.args} iteratee={i => <li key={i.key}> {i.name} - {i.description} </li>} />
+        {Object.values(getArgs.args).map((item, index) => (
+                <li key={index}>
+                    {keys[index]} - {item.description}
+                </li>
+        ))
+        }
         </ul>
     </>
     )
 }
+
+
 
 export default WordPressAPIRef
