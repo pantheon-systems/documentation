@@ -39,30 +39,13 @@ Using Git is a big step away from the bad habits of Cowboy Coding <Popover title
 Make sure that you have a:
 
 * WordPress site on Pantheon
-* Text editor and SFTP client on your local computer, such as:
+* SFTP client and text editor on your local computer, such as:
 
-    <table class="table  table-bordered table-responsive">
-      <thead>
-        <tr>
-          <th>SFTP Client</th>
-          <th>Text Editor</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr >
-          <td>[Transmit](https://panic.com/transmit/)</td>
-          <td>[Atom](https://atom.io/)</td>
-        </tr>
-        <tr >
-          <td>[Cyberduck](https://cyberduck.io/)</td>
-          <td>[Sublime](https://www.sublimetext.com/)</td>
-        </tr>
-        <tr >
-          <td>[Filezilla](https://filezilla-project.org/)</td>
-          <td>[TextMate](https://macromates.com/)</td>
-        </tr>
-      </tbody>
-    </table>
+|             **SFTP Client**                 |              **Text Editor**            |
+|:--------------------------------------------|:--------------------------------------- |
+| [Transmit](https://panic.com/transmit/)     | [Atom](https://atom.io/)                |
+| [Cyberduck](https://cyberduck.io/)          | [Sublime](https://www.sublimetext.com/) |
+| [Filezilla](https://filezilla-project.org/) | [TextMate](https://macromates.com/)     |
 
 Demonstrations throughout this guide use Atom and Transmit. For fastest development, choose an SFTP client that uploads on save, and allows you to authenticate with an [SSH key](/ssh-keys). Creating a key takes a few minutes and handles the server authentication for you. Alternatively, you can use your Pantheon account password to sign in, when prompted.
 
