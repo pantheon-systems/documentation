@@ -2,12 +2,12 @@
 title: Using Git with SFTP & WordPress
 subtitle: Manage Themes
 description: Beginners guide on how to use the WordPress Dashboard, an SFTP client, and your text editor of choice to work quickly, safely and easily on Pantheon's Git-based platform.
-gitwordpress: true
 anchorid: themes
-guidetoc: true
-generator: pagination
 layout: guide
 type: guide
+gitwordpress: true
+generator: pagination
+guidetoc: true
 pagination:
     provider: data.gitwordpresspages
 use:
@@ -37,21 +37,21 @@ This lesson demonstrates how to utilize Git while developing over SFTP with a lo
 
  <Accordion title="Troubleshooting" id="unique-anchor" icon="wrench">
 
-  ### Manually Connect via SFTP
+   ### Manually Connect via SFTP
 
-  If for some reason your client does not establish a connection to Pantheon by clicking the handy default link, use the provided values from the Site Dashboard's **SFTP Connection Info** to open a connection.
+   If for some reason your client does not establish a connection to Pantheon by clicking the handy default link, use the provided values from the Site Dashboard's **SFTP Connection Info** to open a connection.
 
-  1. The default window when opening the Transmit application provides a dialog titled **Quick Connect** where you can **Connect via SFTP**:
+   1. The default window when opening the Transmit application provides a dialog titled **Quick Connect** where you can **Connect via SFTP**:
 
-    ![New Transmit Site](../../../images/guides/git-wordpress/transmit-quick-connect-dialog.png)
+     ![New Transmit Site](../../../images/guides/git-wordpress/transmit-quick-connect-dialog.png)
 
-  1. Copy the value provided by Pantheon for **Host** and paste into Transmit's **Address** field. Do the same for **Port** and **Username**.
+   1. Copy the value provided by Pantheon for **Host** and paste into Transmit's **Address** field. Do the same for **Port** and **Username**.
 
-  1. Click the key icon next to the **Password** field to add your private SSH key, or authenticate using your Pantheon Dashboard password.
+   1. Click the key icon next to the **Password** field to add your private SSH key, or authenticate using your Pantheon Dashboard password.
 
-  1. Click **Connect**:
+   1. Click **Connect**:
 
-    ![New Transmit Site](../../../images/guides/git-wordpress/transmit-quick-connect-dialog-populated.png)
+     ![New Transmit Site](../../../images/guides/git-wordpress/transmit-quick-connect-dialog-populated.png)
 
  </Accordion>
 
