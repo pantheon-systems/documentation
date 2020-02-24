@@ -45,4 +45,4 @@ sed -i -E "s/(#)([0-9]{3})/\[#\2\]\(https:\/\/github.com\/pantheon-systems\/term
 
 
 # Build the WordPress API reference JSON
-./constructWPApiRef.sh
+.circleci/scripts/constructWPApiRef.sh
