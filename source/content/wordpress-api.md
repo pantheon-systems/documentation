@@ -5,10 +5,6 @@ draft: true
 contributors: [alexfornuto]
 ---
 
-This self-referencing document can be used as a starting point to write your own new doc for Pantheon. Start with an overview of the topic, which may include a summary of what will be accomplished after following the instructions. 
-
-<WordPressAPIRef />
-
 See our [Style Guide](/style-guide) for reference on our usage of Markdown and custom JSX components.
 
 <Alert title="Note" type="info">
@@ -26,8 +22,15 @@ Here's a list of prerequisites or technical requirements a user must have or und
 
 The steps of your guide should be broken into sections. Particularly long sections should be broken further into subsections. Read on for examples.
 
-## First Major Step
-Because this section will have its own subsections, a line or two to briefly describe the goal of this main section should go here.
+## WordPress API Objects
+
+<WordPressAPIRef object="posts"/>
+
+<WordPressAPIRef object="blocks"/>
+
+<WordPressAPIRef object="categories"/>
+
+<WordPressAPIRef object="tags"/>
 
 ### First Subsection Step
 1. You shouldn't need to drill down any further than this. You'll also notice no need to preface the section, we can begin with instructions.
