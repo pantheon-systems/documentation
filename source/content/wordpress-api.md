@@ -1,100 +1,79 @@
 ---
-title: Pantheon Documentation Template.
-description: A short description of the doc.
-draft: true
+title: The WordPress API
+description: Unlock the power of your WordPress site with the built-in REST API
 contributors: [alexfornuto]
 ---
 
-See our [Style Guide](/style-guide) for reference on our usage of Markdown and custom JSX components.
+The [WordPress REST API](https://developer.wordpress.org/rest-api/) is built in to every WordPress site. It allows you to build new ways of interacting with your Site, from external tools to custom front-ends. For some users, this may be the first API they've interacted with.
 
-<Alert title="Note" type="info">
+This doc is written with the new API user in mind. It covers the tools and functions made available by the API, and includes some example API requests.
 
-For optimal use of this document, consider viewing the markdown file and rendered page in Gatsby side-by-side. Any important points the customer needs to be made aware of can be put in a note like this.
+## Before You Begin
+
+For this docs we assume you have:
+
+- [A WordPress site](/create-sites)
+- A 'nix-like terminal environment for testing. MacOS users can use the Terminal app, and Windows 10 users can install the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+- [curl](https://curl.haxx.se/) and [Python](https://www.python.org/)
+
+<Alert title="Exports" type="export">
+
+This doc uses several command line example commands. So that you can copy and paste these commands to work for your use case, set the environment variable `site` in your terminal environment:
+
+```{promptUsers: user}
+export site="https://myawesomesite.io"
+```
 
 </Alert>
 
-## Before You Begin
-Here's a list of prerequisites or technical requirements a user must have or understand before starting the task. This is a good place to use:
+## How to Use an API
 
- - A bulleted list
- - Links to local software needed first
- - Links to any Pantheon docs readers should read or comprehend the concepts of before starting this one.
+If you've never used an **API** (**A**pplication **P**rogramming **I**nterface) before, the idea can seem daunting. Most API reference documentation assumes a working knowledge of how to interact with an API, and only provides reference data on the functions of that particular API.
 
-The steps of your guide should be broken into sections. Particularly long sections should be broken further into subsections. Read on for examples.
+The WordPress API is a [REST](https://restfulapi.net/) API, which refers to the architectural style it's built with. We'll be interacting with the API by making calls to it over HTTP(S), using the CLI tools [curl](https://curl.haxx.se/) and the [Python JSON encoder](https://docs.python.org/3/library/json.html)
+
+## Your First API Call
+
+To begin, let's take a look at the data we can get from our WordPress API.
+
+1. In your terminal environment, use `curl` to get the posts from your site:
+
+   ```{promptUsers: user}
+   curl $site/wp-json/wp/v2/posts
+   ```
+
+   What was returned returned looks like a huge wall of data. Because the API expects to be used by other programs and not humans, it doesn't format the data to be human-readable. That's where the Python JSON tool comes in.
+
+1. Run the API call again, but this time pass it through the Python JSON tool:
+
+   ```{promptUsers: user}
+   curl $site/wp-json/wp/v2/posts | python -m json.tool
+   ```
+
+   It's still a huge amount of data, but this time it should at least be formatted for human eyes. Still, the terminal environment is not the best way to look at JSON data.
+
+1. This time, pipe the reponse from the API into a new file:
+
+   ```{promptUsers: user}
+   curl $site/wp-json/wp/v2/posts > postsData.json
+   ```
+
+1. If you open that file in your favorite text editor, it's still a wall of text. But if you copy it into a JSON viewer (like [jsonlint.com](https://jsonlint.com/)), you can start to look at the data available to use.
 
 ## WordPress API Objects
 
 <WordPressAPIRef object="posts"/>
 
+### Example
+
 <WordPressAPIRef object="blocks"/>
+
+### Example
 
 <WordPressAPIRef object="categories"/>
 
+### Example
+
 <WordPressAPIRef object="tags"/>
 
-### First Subsection Step
-1. You shouldn't need to drill down any further than this. You'll also notice no need to preface the section, we can begin with instructions.
-
-1. For sections with several steps, be sure to use numbered lists. Each step should be prefixed with `1. `. Gatsby will number the steps, making it easier to add or remove steps later.
-
-1. To show you how we're spacing ordered steps, here's the previous two steps in code block form.
-
-   ```markdown
-   1. You shouldn't need to drill down any further than this. You'll also notice no need to preface the section, we can begin with instructions.
-
-   1. For sections with several steps, be sure to use numbered lists. Each step should be prefixed with `1. `. Gatsby will number the steps, making it easier to add or remove steps later.
-   ```
-
-  The codeblock above was created using a code fence. While Markdown support indentation to create code blocks, we avoid this when we can to better nest content.
-
-### Our Second Subsection
-1. This section may reference concepts already described above easily in each step with `in-line code snippets`.
-
-1. If new concepts or ideas are introduced, we'll use **bold** to emphasize it.
-
-1. Finally, let's some code block examples, with a more interesting syntax to highlight.
-
-   ```bash{outputLines: 2-7}
-   git clone --depth 1 git@github.com:pantheon-systems/documentation.git
-   Cloning into 'documentation'...
-   remote: Counting objects: 41601, done.
-   remote: Compressing objects: 100% (137/137), done.
-   remote: Total 41601 (delta 83), reused 0 (delta 0), pack-reused 41463
-   Receiving objects: 100% (41601/41601), 112.21 MiB | 5.91 MiB/s, done.
-   Resolving deltas: 100% (31995/31995), done.
-   ```
-
-   ```bash{outputLines:3}
-   cd documentation/
-   git checkout -b update-template
-   Switched to a new branch 'update-template'
-   ```
-
-Notice that in this example we've used `{outputLines}` to specify which lines are output. Doing so adds a prompt symbol (`$`) to the remaining lines, without making it part of out actual code block. This symbol won't be copied with the command itself on click-and-drag.
-
-## Second Major Step
-If you're looking at this document as generated by Gatsby, you'll notice by now that the table of contents (**TOC**) has expanded to show all the previous subtopics. As we move further down it will retract the sections of [First Major Step](#first-major-step), and highlight the current section. If you need to refer the reader to another section in the guide you can use an **anchor link** as we just did.
-
-Now let's look at some of the commonly used Markdown syntax in the docs.
-
-## Images
-Images are a great way to show what the user should be seeing in a graphic user interface (**GUI**) environment, like the WordPress Admin Dashboard:
-
-![This is the alternate text, important for screen readers.](../images/WordPress_Pantheon-Cache-Settings.png)
-
-<Alert title="Warning" type="danger">
-
-Images of terminal output is frowned upon. When small changes are required to comply with software updates, replacing a few characters is much easier than generating a new screenshot.
-
-</Alert>
-
-## Other considerations
- - [Avoid be verbs](http://writing.rocks/to-be-or-not-to-be/)
- - Avoid colloquialisms and personal opinions, feelings, or anecdotes.
- - Only assume as much knowledge from the reader as specified in [Before You Begin](#before-you-begin). Otherwise explain everything.
-
-## See Also
-If you can, end your doc with links to external resources that can be used to improve the reader's comprehension, or to guides on logical next steps in a common development workflow.
-
- - [An internal guide with a relative link](/get-started)  
- - [An external guide with a full URL](http://writing.rocks/)
+### Example

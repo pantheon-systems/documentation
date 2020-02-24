@@ -1,5 +1,4 @@
 import React from 'react'
-import WPPostData from '../../../source/data/wp/posts.json'
 import WPapiRef from '../../../source/data/wpApiRef.json'
 import Accordion from './accordion/'
 import './commands/style.css'

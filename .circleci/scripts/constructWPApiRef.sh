@@ -27,5 +27,4 @@ do
     sleep 1
 done
 ## Close parent arra
-#printf "}" >> source/data/wpApiRef.json
 sed -i -r 's/(.*)\,/\1\}/' source/data/wpApiRef.json 
