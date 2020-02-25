@@ -219,7 +219,7 @@ We don't recommend turning off New Relic for any one environment as it makes tro
 
 ### Can I use the New Relic One Logs feature?
 
-New Relic Logs are available through `newrelic.log`. The New Relic provided with your Pantheon account does not include the new **Logs** feature found in the **Events** section of New Relic's leftside menu.
+New Relic Logs [are available](/logs#available-logs) through `newrelic.log`. The New Relic provided with your Pantheon account does not include the new **Logs** feature found in the **Events** section of New Relic's leftside menu.
 
 ## See Also
 
