@@ -217,6 +217,10 @@ Because Pantheon's runtime matrix runs your application across many containers s
 
 We don't recommend turning off New Relic for any one environment as it makes troubleshooting errors and performance issues more difficult. However, you can [disable the New Relic Browser agent](#disable-new-relic-browser-monitoring-agent) if you encounter a situation where it is interfering with other systems, and you can also [write logic based on the environment](/wp-config-php/#how-can-i-write-logic-based-on-the-pantheon-server-environment).
 
+### Can I use the New Relic One Logs feature?
+
+New Relic Logs are available through `newrelic.log`. The New Relic provided with your Pantheon account does not include the new **Logs** feature found in the **Events** section of New Relic's leftside menu.
+
 ## See Also
 
 * [MySQL Troubleshooting With New Relic Pro](/debug-mysql-new-relic)
