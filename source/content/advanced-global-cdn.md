@@ -37,7 +37,11 @@ Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
   - **Whitelist** - only allow users with specific IPs or in IP ranges to access your site, blocking everyone else.
 - **Token Authentication / JWT (JSON Web Token)**
 
-  Use the AGCDN Edge to generate JSON Web Tokens to help build your custom API. -->
+  Use the AGCDN Edge to generate JSON Web Tokens to help build your custom API.
+
+  [Click Here](https://pantheon.io/advanced-global-cdn#pricing-matrix-wrapper) for a full breakdown of the features offered by our CDN services.
+
+  -->
 
 ## Feature Comparison
 
