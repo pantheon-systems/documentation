@@ -22,7 +22,7 @@ Advanced Global CDN is supported by Pantheon’s highly experienced professional
 Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique needs of your team. While we don’t currently give you direct access to the Fastly configuration file, our professional services team can implement the custom settings that you require.
 
 
-<!-- ## Features
+## Features
 
 - **Full-Page & Asset Caching**
 
@@ -38,14 +38,41 @@ Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 - **Token Authentication / JWT (JSON Web Token)**
 
   Use the AGCDN Edge to generate JSON Web Tokens to help build your custom API.
+- **Custom Error & Maintenance page rules**
+- **Geolocation based edge control**
 
-  [Click Here](https://pantheon.io/advanced-global-cdn#pricing-matrix-wrapper) for a full breakdown of the features offered by our CDN services.
+  Take action on the edge based on the physical location of the user (eg. blocking or redirecting based on country) or send back location information to your application for more custom control.
+- **Device detection and edge control**
+- **Persistent Presence for continual uptime**
 
-  -->
+  Adjusts the 'serve stale content setting '
+- Full CDN edge logs
+
+  See every request to your website, whether or not the content was cached. Full CDN edge logs combine the server logs with logs from the edge to provide a complete picture of your traffic.
+- **Modify headers at the edge**
+
+  Change request and response headers before your application starts up to create, add, delete, or update parts of your request.
+- **Edge Redirects**
+
+  Reduce requests on your CMS by moving page redirects to the edge.
+- **Domain Masking and Reverse Proxy**
+  - Domain Masking: run multiple Pantheon or non-Pantheon applications behind a single domain, using different URL paths
+  - Reverse Proxy: serve content from another service (eg. S3) seamlessly from your application.
+- **Enterprise Blue/Green support**
+
+### Additional Features from WAF/IO
+
+- **Efficient Image Optimization (IO) at the edge**
+- **Layer 7/Enterprise DDoS Protection & Mitigation**
+- **OWASP & WAF Rules for Drupal/WordPress**
+- **Custom/Comprehensive WAF Services**
+- **Advanced Bot Detection & Mitigation** (Available as an add-on)
+
+[Click Here](https://pantheon.io/advanced-global-cdn#pricing-matrix-wrapper) for a full breakdown of the features offered by our CDN services.
 
 ## Feature Comparison
 
-|**Service / Feature**|**Description**|**Global CDN**|**Advanced Global CDN**|**Advanced Global CDN + WAF/IO**|
+|**Service / Feature**|**Description**|**Global CDN**|**Advanced Global CDN**|**Advanced Global CDN + WAF/IO<Popover content="Web Application Firewall / Image Optimization" />**|
 |--- |--- |--- |--- |--- |
 |Price|N/A|Included|Contact Sales|Contact Sales|
 |Full-page & Asset Caching|Unlike most CDNs that only handle images and other static assets, full-page technology lets you cache entire pages and assets at the edge.|Yes|Yes|Yes|
