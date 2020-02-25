@@ -3,6 +3,7 @@ title: Advaned Global CDN
 description: Pantheon Professional Services can help you uniquely optimize our Global CDN
 categories: [develop]
 tags: []
+contributors: [tmountjr]
 ---
 
 Advanced Global CDN takes our CDN offering a step forward for customers that have unique optimizations required for digital delivery at scale. It includes a wide range of benefits including letting teams individually manage their own sites, drive growth through site iteration, calibrate control over branding, and extend enterprise-grade security.
