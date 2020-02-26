@@ -167,7 +167,7 @@ module.exports = {
               maxWidth: 1035,
               // sizeByPixelDensity: true,
               markdownCaptions: true,
-              showCaptions: true,
+              showCaptions: false,
               linkImagesToOriginal: false,
             },
           },
