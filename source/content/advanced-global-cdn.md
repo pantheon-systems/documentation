@@ -2,7 +2,8 @@
 title: Advaned Global CDN
 description: Pantheon Professional Services can help you uniquely optimize our Global CDN
 categories: [develop]
-tags: []
+tags: [CDN, security]
+reviewed: "2020-02-27"
 contributors: [tmountjr]
 ---
 
