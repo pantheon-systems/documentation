@@ -41,7 +41,7 @@ There are several ways to install Terminus, depending on your use case:
 1. Download the latest `terminus.phar` from the [Releases](https://github.com/pantheon-systems/terminus/releases) page. In the example below, we're directing the file to `$HOME/.bin/` and renaming the file to `terminus`:
 
   ```bash{promptUser: user}
-  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O $HOME/.bin/
+  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O $HOME/bin/
   ```
 
   Remember to get the latest version of Terminus from the [Releases](https://github.com/pantheon-systems/terminus/releases) page, don't copy the command above verbatim.
@@ -51,7 +51,7 @@ There are several ways to install Terminus, depending on your use case:
 1. Make the Terminus file executable. The example below assumes the same installation path as above:
 
   ```bash{promptUser: user}
-  chmod +x ~/.bin/terminus
+  chmod +x ~/bin/terminus
   ```
 
 <Alert type="info" title="Note">
