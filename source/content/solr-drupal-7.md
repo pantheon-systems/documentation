@@ -8,7 +8,7 @@ reviewed: "2020-02-26"
 ---
 [Apache Solr](/solr) is a system for indexing and searching site content. <Partial file="solr-version.md" />
 
-This guide provides information on using **Pantheon's Solr Service** with Drupal 7. 
+This guide provides information on using **Pantheon's Solr Service** with Drupal 7.
 
 If you are looking for additional search features for more advanced use cases, you may want to consider [alternative Solr service](/solr#alternatives-to-pantheons-solr-service) for your site. See the [Opensolr](/opensolr) guide for one example.
 
@@ -16,9 +16,13 @@ For instructions on how to run Solr on Drupal 8, see [Enabling Solr on Drupal 8]
 
 ## Before You Begin
 
-1. Use [one-click updates](/core-updates) to make sure you are running the latest version of Drupal 7 core.
-1. Add the Solr Index Server to your site. 
-From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**. This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with Drupal.
+1. Use [one-click updates](/core-updates#apply-upstream-updates-via-the-site-dashboard) to make sure you are running the latest version of Drupal 7 core.
+
+1. Add the Solr Index Server to your site.
+
+  From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**. This will provision Apache Solr containers for every environment for your site.
+
+You are now ready to begin integrating with Drupal.
 
 <Enablement title="Get WebOps Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -29,7 +33,9 @@ Learn how to configure Solr with help from our experts. Pantheon delivers custom
 ## Install Solr for Drupal
 
 <Alert title="Warning" type="danger">
+
 This guide describes how to implement Solr search using Pantheon's Solr module, which is designed to work specifically with the Solr service provided by Pantheon. Using a non-Pantheon Solr service with this module is not supported, and may result in unexpected behavior.
+
 </Alert>
 
 ### Add Either the Apache Solr Search or Search API Solr Search Module
@@ -158,19 +164,25 @@ Keep in mind that newly indexed items have a 2-minute delay until cron has been 
 <Partial file="solr-commit-changes.md" />
 
 #### apachesolr.module
+
 If you're using the Apache Solr module, you can check for the existence of this variable using [Terminus](/terminus):
-```bash
+
+```bash{promptUser: user}
 terminus drush <site>.<env> -- vget apachesolr_service_class
 ```
+
 #### search_api_solr.module
+
 If you are using search_api_solr.module, you can check it with the command:
-```bash
+
+```bash{promptUser: user}
 terminus drush <site>.<env> -- vget search_api_solr_connection_class
 ```
 
 ### Error During Search API Solr Installation
 
 If you receive the following error, be sure that you have followed all of the instructions as described in the INSTALL.txt. We can not resolve this for you as it is part of the module setup:
+
 ```php
 Exception: SolrPhpClient library not found! Please follow the instructions in search_api_solr/INSTALL.txt for installing the Solr search module. in _search_api_solr_solrphpclient_path()
 ```
@@ -188,10 +200,12 @@ This needs to be done for Dev, Test, and Live individually. You can do this at `
 **Search API Solr module:** Navigate to your Search Index list page at `admin/config/search/search_api` and click the index you need to rebuild. On the index view page, you can either queue all items for reindexing or clear your existing index and re-index in batches.
 
 ## Safely Remove Solr
+
 The following code changes are required before Solr can be safely uninstalled and disabled:
 
 <Partial file="remove-addons/d7-solr.md" />
 
 ## See Also
+
 [Apache Solr on Pantheon](/solr)
 [Using OpenSolr with Pantheon](/opensolr)
