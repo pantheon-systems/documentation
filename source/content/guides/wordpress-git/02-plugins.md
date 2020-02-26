@@ -5,47 +5,43 @@ description: Beginners guide on how to use the WordPress Dashboard, an SFTP clie
 anchorid: plugins
 layout: guide
 type: guide
-gitwordpress: true
-generator: pagination
-pagination:
-    provider: data.gitwordpresspages
-use:
-    - gitwordpresspages
 permalink: docs/guides/wordpress-git/plugins/
-nexturl: guides/wordpress-git/themes/
-previousurl: guides/wordpress-git/
 editpath: wordpress-git/02-plugins.md
 image: git-sftp-wp-docs-guide
+reviewed: "2020-02-26"
 ---
+
 This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mode. We'll install a few plugins and submit each one to version control as individual commits.
 
 1. Navigate to **<span class="glyphicons glyphicons-embed-close" aria-hidden="true"></span> Code** in the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** tab of your Site Dashboard. Confirm your Connection Mode is set to **SFTP**.
+
 1. Now log in to your Dev site by clicking the **<span class="glyphicons glyphicons-new-window-alt" aria-hidden="true"></span> Site Admin** button.
 
- ![Add new plugin](../../../images/guides/git-wordpress/sftp-mode.png)
+  ![Add new plugin](../../../images/guides/git-wordpress/sftp-mode.png)
 
 1. On the left admin menu, select **Plugins**, then **Add New**.
+
 1. Search for the **Yoast** plugin, then click **Install Now**:
 
- ![Install Pantheon Advanced Page Cache plugin](../../../images/guides/git-wordpress/install-yoast.png)
+  ![Install Pantheon Advanced Page Cache plugin](../../../images/guides/git-wordpress/install-yoast.png)
 
- If you encounter a prompt for FTP credentials, you're either working on the wrong environment or you're using the wrong connection mode. Don't try to authenticate FTP prompts within the WordPress Dashboard, it won't work (by design). Using the WordPress Dashboard to add or modify code is only allowed using the **SFTP** connection mode on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment.
+  If you encounter a prompt for FTP credentials, you're either working on the wrong environment or you're using the wrong connection mode. Don't try to authenticate FTP prompts within the WordPress Dashboard, it won't work (by design). Using the WordPress Dashboard to add or modify code is only allowed using the **SFTP** connection mode on the **<span class="glyphicons glyphicons-wrench" aria-hidden="true"></span> Dev** environment.
 
 1. Return to the Pantheon Site Dashboard and click the yellow notification to review file changes as a result of our actions in the WordPress Dashboard:
 
- ![View file changes prompt](../../../images/guides/git-wordpress/file-changes.png)
+  ![View file changes prompt](../../../images/guides/git-wordpress/file-changes.png)
 
- You should see the following files for our recently installed plugin:
+  You should see the following files for our recently installed plugin:
 
- ![View advanced page cache plugin files](../../../images/guides/git-wordpress/view-yoast.png)
+  ![View advanced page cache plugin files](../../../images/guides/git-wordpress/view-yoast.png)
 
 1. Rather than piling a bunch of changes on top of this plugin, get into the habit of saving code in small incremental amounts with meaningful commit messages.
 
- Write a message that summarizes your work to let your team (and your future self) know what these changes do and which feature(s) they pertain to. For example, _Add Yoast plugin Version: 5.7_ is much better than _New plugin_ or _asdfasdf_.
+  Write a message that summarizes your work to let your team (and your future self) know what these changes do and which feature(s) they pertain to. For example, _Add Yoast plugin Version: 5.7_ is much better than _New plugin_ or _asdfasdf_.
 
  Click **Commit** to submit work from the WordPress Dashboard to Git in the Site Dashboard:
 
- ![Commit advanced page cache plugin files](../../../images/guides/git-wordpress/commit-yoast.png)
+  ![Commit advanced page cache plugin files](../../../images/guides/git-wordpress/commit-yoast.png)
 
 1. For practice, add these plugins next, each with their own commit message. These plugins allow your site to take advantage of some of Pantheon's performance optimizations:
 
@@ -53,9 +49,9 @@ This lesson demonstrates how to develop using the WordPress Dashboard in SFTP mo
    - WordPress Native PHP Sessions
    - Pantheon HUD
 
- The commit log within the Pantheon Site Dashboard should look something like this:
+  The commit log within the Pantheon Site Dashboard should look something like this:
 
- ![Several Plugins Added](../../../images/guides/git-wordpress/several-plugins-added.png)
+  ![Several Plugins Added](../../../images/guides/git-wordpress/several-plugins-added.png)
 
  <Accordion title="Learn more about these plugins" id="unique-anchor2" icon="lightbulb">
 
