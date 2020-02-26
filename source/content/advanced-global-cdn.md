@@ -34,9 +34,6 @@ Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
   Unlike most CDNs that only handle images and other static assets, full-page technology lets you cache entire pages and assets at the edge.
 - **Layer 3 & 4 DDOS protection & mitigation**
 - **SOC1 & SOC2 compliance**
-- **Origin shielding**
-
-  Eliminates the ability of attackers to identify IP addresses of origin servers. Value: If the attacker is able to find the IP address, they can bypass traditional CDN protection capabilities. Origin Cloaking prevents these kinds of attacks by hiding your origin from attackers.
 - **IP whitelisting & blacklisting**
   - **Blacklist** - prevent users with specific IPs or in IP ranges from accessing your site.
   - **Whitelist** - only allow users with specific IPs or in IP ranges to access your site, blocking everyone else.
