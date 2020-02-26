@@ -35,14 +35,13 @@ There are several ways to install Terminus, depending on your use case:
 - For a self-contained Terminus executable, [install terminus.phar](#standalone-terminus).
 - For a composer-managed version of Terminus that is _not_ part of your other composer-managed project(s) and doesn't utilize global composer installations, use the [Terminus installer PHAR](#terminus-installer-phar).
 - If you want to contribute to the Terminus project, [download and install](https://github.com/pantheon-systems/terminus#installing-with-git) from the git repository.
-- To add Terminus as a dependency of your composer-based project, [install with Composer](#install-terminus-as-a-project-dependency).
 
 ### Standalone Terminus
 
-1. Download the latest `terminus.phar` from the [Releases](https://github.com/pantheon-systems/terminus/releases) page. In the example below, we're directing the file to `$HOME/bin/` and renaming the file to `terminus`:
+1. Download the latest `terminus.phar` from the [Releases](https://github.com/pantheon-systems/terminus/releases) page. In the example below, we're directing the file to `$HOME/.bin/` and renaming the file to `terminus`:
 
   ```bash{promptUser: user}
-  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O ~/.bin/terminus
+  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O $HOME/bin/
   ```
 
   Remember to get the latest version of Terminus from the [Releases](https://github.com/pantheon-systems/terminus/releases) page, don't copy the command above verbatim.
@@ -52,7 +51,7 @@ There are several ways to install Terminus, depending on your use case:
 1. Make the Terminus file executable. The example below assumes the same installation path as above:
 
   ```bash{promptUser: user}
-  chmod +X ~/.bin/terminus
+  chmod +x ~/bin/terminus
   ```
 
 <Alert type="info" title="Note">
@@ -63,21 +62,14 @@ There is an unofficial third-party installer script which will download `terminu
 
 ### Terminus Installer PHAR
 
-Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a `terminus` directory in your `$HOME` and install there:
+Use the following command to install the most recent release of Terminus. In the example below, we're creating a `terminus` directory in `$HOME` to install in.
 
 ```bash{promptUser: user}
+mkdir ~/terminus && cd ~/terminus
 curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 ```
 
 See [Troubleshooting](#troubleshooting) if your installation fails, or the [Installation](https://github.com/pantheon-systems/terminus#installation) section of the Terminus README file on GitHub for advanced installation methods.
-
-### Install Terminus as a Project Dependency
-
-To add Terminus to a composer-managed project:
-
-```bash{promptUser: user}
-composer install pantheon-systems/terminus
-```
 
 ## Authenticate
 
