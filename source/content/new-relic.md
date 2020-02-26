@@ -7,6 +7,7 @@ categories: [performance,go-live,develop]
 [New Relic APM Pro](https://newrelic.com/) offers a wide array of metrics that provide a nearly real-time look into the performance of a web application. Using New Relic not only makes it easy for you to monitor your performance, but it can also speed up the support process by helping our support team visualize corresponding performance and symptoms.
 
 ## Supported Site Plans
+
 All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro is available to Sandbox site plans for developmental purposes, but New Relic APM Pro will not be available going live on a Basic plan.
 
 | Plans         | New Relic APM Pro Support <Popover content="Available across all environments, including Multidevs." /> |
@@ -17,11 +18,13 @@ All plans except for a Basic plan can use New Relic APM Pro. New Relic APM Pro i
 | Elite         | ✓       |
 
 ## Activate New Relic APM Pro
+
 Select the **New Relic** tab on your Site Dashboard, and click **Activate New Relic Pro**. Visit your site in the browser a couple of times to generate data in New Relic. After a few minutes pass, go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
 New Relic is automatically enabled for all application containers added to the site, including Multidev environments.
 
 ## New Relic Access
+
 Go to the New Relic workspace on your Dashboard, and click **Go to New Relic**.
 
 ### Who is the New Relic account associated with?
@@ -45,6 +48,7 @@ To troubleshoot this issue, try logging into the Pantheon Dashboard in an [Incog
 1. Click the **Go to New Relic** button.
 
 ### If you are prompted to Set Up New Relic
+
 If you try to access New Relic prior to any traffic reaching an environment, you will be prompted to set up New Relic.
 
 1. Visit one of your site pages.
@@ -52,6 +56,7 @@ If you try to access New Relic prior to any traffic reaching an environment, you
 1. Click the **Go to New Relic** button.
 
 ### If you see "We're sorry, you haven't verified your email address yet."
+
 After activating New Relic, a confirmation email will be sent to the site owner to complete the setup process. The account will need to be verified first before members of the site can access New Relic dashboard.
 
 If the New Relic account holder, i.e. the site owner or user who activated the New Relic account for the site, did not receive the confirmation email, you can re-send the link by clicking "Forgot your password":
@@ -64,6 +69,7 @@ If the New Relic account holder, i.e. the site owner or user who activated the N
 Contact Support if you are unsure what user the New Relic account is associated with and unable to identify where the password reset email has been sent.
 
 ## Configure Ping Monitors for Availability
+
 New Relic provides a free availability monitoring service within their Synthetics tool suite at the Lite service level. This basic monitoring check sends a request to designated URLs from configured locations at given intervals and alerts you via email when a response fails. To configure this service:
 
 1. Click **New Relic** > **Go to New Relic**  from the target environment within the Site Dashboard on Pantheon.
@@ -98,9 +104,10 @@ For more information on using New Relic's features, we encourage you to read  th
 If your site consists of mostly authenticated traffic, it can be useful to exclude anonymous users who are using your site's page cache. This technique will still capture form submissions, including logins and contact pages. Similar logic can be used to disable New Relic on certain paths, such as `/admin` in Drupal or `/wp-admin` in WordPress.
 
 ### Drupal
+
 To disable New Relic for anonymous traffic on Drupal-based sites, add the following to your `sites/default/settings.php`:
 
-```php
+```php:title=settings.php
 // Disable New Relic for anonymous users.
 if (function_exists('newrelic_ignore_transaction')) {
   $skip_new_relic = TRUE;
@@ -122,9 +129,10 @@ if (function_exists('newrelic_ignore_transaction')) {
 ```
 
 ### WordPress
+
 To disable New Relic for anonymous traffic on WordPress sites, add the following to your `templates/<your_template>/functions.php`:
 
-```php
+```php:title=functions.php
 // Disable New Relic for anonymous users.
 if (function_exists('newrelic_ignore_transaction')) {
     $skip_new_relic = !is_user_logged_in();
@@ -146,6 +154,7 @@ if (function_exists('newrelic_ignore_transaction')) {
 ## Troubleshooting
 
 ### Removing Multidev Environments in New Relic
+
 After deleting a Multidev environment from your site, you'll need to manually [remove it in New Relic](https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/remove-applications-servers).
 
 1. From your Dashboard, select the **New Relic** tab, and **Open New Relic**.
@@ -154,6 +163,7 @@ After deleting a Multidev environment from your site, you'll need to manually [r
 1. Select **Delete app**, and click the confirmation button.
 
 ### Disable New Relic Browser Monitoring Agent
+
 You may encounter situations where New Relic's Browser agent may interfere with other systems. For example, the JavaScript tag may cause [Google AMP validator](https://www.ampproject.org/docs/guides/validate.html) failures, such as `The tag 'script' is disallowed except in specific forms`. You can resolve many errors by disabling New Relic's Browser monitoring agent.
 
 In this example we'll disable it on all AMP pages:
