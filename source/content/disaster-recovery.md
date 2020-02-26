@@ -24,7 +24,7 @@ Recovery Time Objective (**RTO**) is the target amount of time within which a bu
 
 Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us?docs).
 
-![Pantheon Site Disaster Recovery Architecture Diagram](../images/site-dr-diagram.png "Chart showing Pantheon's zone-based disaster recovery architecture")
+![Chart showing Pantheon's zone-based disaster recovery architecture](../images/site-dr-diagram.png)
 
 ## Features
 
@@ -73,54 +73,70 @@ Pantheon Solr requires additional considerations when used on sites with Disaste
 
 The reindexing process is application-side, and depending on your site the process may be different.
 
-#### Drupal 8, using the search_api_pantheon module
+<TabList>
 
-1. As a site administrator, navigate to https://live-some-site.pantheonsite.io/admin/config/search/search-api/server/pantheon
+<Tab title="Drupal 8" id="solr-d8" active={true}>
+
+#### Using the search_api_pantheon module
+
+1. As a site administrator, navigate to `/admin/config/search/search-api/server/pantheon`.
 
 1. Click “Delete all indexed data on this server” to queue all content for re-indexing.
 
 1. Run Drupal Cron manually until all items have been indexed. You can determine that all items are indexed when search_api stops logging to watchdog on the cron runs.
 
-#### Drupal 7
+</Tab>
 
-**ApacheSolr module:** You can do this at `admin/config/search/apachesolr`. Click **Queue all content for reindexing** to initiate. This will add content that has not yet been indexed to the Solr indexing queue (following the configured items-per-cron-event setting).
+<Tab title="Drupal 7" id="solr-d7">
+
+#### ApacheSolr module
+
+You can do this at `admin/config/search/apachesolr`. Click **Queue all content for reindexing** to initiate. This will add content that has not yet been indexed to the Solr indexing queue (following the configured items-per-cron-event setting).
 
 ![ApacheSolr Indexing](../images/d7-solr-reindex.png)
 
-**Search API Solr module:** Navigate to your Search Index list page at `admin/config/search/search_api` and click the index you need to rebuild. On the index view page, you can either queue all items for reindexing or clear your existing index and re-index in batches.
+#### Search API Solr module
 
-#### WordPress
+Navigate to your Search Index list page at `admin/config/search/search_api` and click the index you need to rebuild. On the index view page, you can either queue all items for reindexing or clear your existing index and re-index in batches.
+
+</Tab>
+
+<Tab title="WordPress" id="solr-wp">
 
 You can initiate the reindexing process from the WordPress dashboard or via Terminus.
 
-1. To reindex from the WordPress Dashboard, navigate to `/wp-admin/admin.php?page=solr-power#top#solr_action` and click **Start Index**.
+To reindex from the WordPress Dashboard, navigate to `/wp-admin/admin.php?page=solr-power#top#solr_action` and click **Start Index**.
 
-  ![WordPress Solr Power indexing](../images/solr-power-index.png)
+![WordPress Solr Power indexing](../images/solr-power-index.png)
 
-1. Via Terminus:
+You can also do this via Terminus:
 
- ```bash{promptUser: user}
- terminus wp <site>.<env> -- solr index
- ```
+```bash{promptUser: user}
+terminus wp <site>.<env> -- solr index
+```
 
- For WP Site Networks, you will need to index all your subsites individually:
+For WP Site Networks, you will need to index all your subsites individually:
 
- ```bash{promptUser: user
- terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
- ```
+```bash{promptUser: user
+terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
+```
 
 Read more about configuring and optimizing Solr Power in the [Solr Search for WordPress](/wordpress-solr) documentation.
 
+</Tab>
+
+</TabList>
+
 ### Mitigating Solr/DR issues
 
-You may also consider one of the two following options:
+You may also consider one of the following options:
 
-1. Use an [Alternative Solr Service](/solr#alternatives-to-pantheons-solr-service)
+- Use an [Alternative Solr Service](/solr#alternatives-to-pantheons-solr-service)
 
-1. **For Drupal:** Configure search to write to both Pantheon Solr and another index (either Drupal core search or an external Solr service) as a fallback. In the event the site must be recovered after a disaster, search forms can then be manually re-pointed at the fallback index until your Pantheon Solr instance has been rebuilt and re-indexed.
+- **For Drupal:** Configure search to write to both Pantheon Solr and another index (either Drupal core search or an external Solr service) as a fallback. In the event the site must be recovered after a disaster, search forms can then be manually re-pointed at the fallback index until your Pantheon Solr instance has been rebuilt and re-indexed.
 
 If none of these options work for your site's needs, see our documentation on how to safely remove Solr for [Drupal 8](/solr-drupal-8/#safely-remove-solr), [Drupal 7](/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
 
 ## See also
 
-- [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar)
+- [Disaster Recovery Webinar - 11/8/2018](https://pantheon.io/resources/disaster-recovery-webinar)
