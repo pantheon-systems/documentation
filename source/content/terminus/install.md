@@ -38,10 +38,10 @@ There are several ways to install Terminus, depending on your use case:
 
 ### Standalone Terminus
 
-1. Download the latest `terminus.phar` from the [Releases](https://github.com/pantheon-systems/terminus/releases) page. In the example below, we're directing the file to `$HOME/bin/` and renaming the file to `terminus`:
+1. Download the latest `terminus.phar` from the [Releases](https://github.com/pantheon-systems/terminus/releases) page. In the example below, we're directing the file to `$HOME/.bin/` and renaming the file to `terminus`:
 
   ```bash{promptUser: user}
-  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O ~/.bin/terminus
+  wget https://github.com/pantheon-systems/terminus/releases/download/2.3.0/terminus.phar -O $HOME/.bin/
   ```
 
   Remember to get the latest version of Terminus from the [Releases](https://github.com/pantheon-systems/terminus/releases) page, don't copy the command above verbatim.
@@ -62,9 +62,10 @@ There is an unofficial third-party installer script which will download `terminu
 
 ### Terminus Installer PHAR
 
-Install the most recent release of Terminus with the following command within a directory where you have permission to write files. If in doubt, you can create a `terminus` directory in your `$HOME` and install there:
+Use the following command to install the most recent release of Terminus. In the example below, we're creating a `terminus` directory in `$HOME` to install in.
 
 ```bash{promptUser: user}
+mkdir ~/terminus && cd ~/terminus
 curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install
 ```
 
