@@ -31,6 +31,7 @@ import BuildToolsChangelog from "../components/buildToolsChangelog.js"
 import Partial from "../components/partial.js"
 import Image from "../layout/image"
 import ChecklistItem from "../components/checklistItem"
+import ReviewDate from "../components/reviewDate"
 
 const shortcodes = {
   Callout,
@@ -53,6 +54,7 @@ const shortcodes = {
   Partial,
   ChecklistItem,
   Image,
+  ReviewDate,
 }
 
 class GuideTemplate extends React.Component {
@@ -83,7 +85,7 @@ class GuideTemplate extends React.Component {
   render() {
     const node = this.props.data.mdx
     const contentCols = node.frontmatter.showtoc ? 9 : 12
-
+    const isoDate = this.props.data.date
     const items = this.props.data.allMdx.edges.map(item => {
       return {
         id: item.node.id,
@@ -99,6 +101,7 @@ class GuideTemplate extends React.Component {
           description={node.frontmatter.description || node.excerpt}
           authors={node.frontmatter.contributors}
           image={"/assets/images/terminus-thumbLarge.png"}
+          reviewed={isoDate.frontmatter.reviewed}
         />
         <div className="">
           <div className="container">
@@ -121,6 +124,8 @@ class GuideTemplate extends React.Component {
                       contributors={node.frontmatter.contributors}
                       featured={node.frontmatter.featuredcontributor}
                       editPath={node.fields.editPath}
+                      reviewDate={node.frontmatter.reviewed}
+                      isoDate={isoDate.frontmatter.reviewed}
                     />
                     <MDXProvider components={shortcodes}>
                       <MDXRenderer>{node.body}</MDXRenderer>
@@ -186,11 +191,16 @@ export const pageQuery = graphql`
           url
         }
         featuredcontributor
+        reviewed(formatString: "MMMM DD, YYYY")
         getfeedbackform
       }
       fileAbsolutePath
     }
-
+    date: mdx(fields: { slug: { eq: $slug } }) {
+      frontmatter {
+        reviewed
+      }
+    }
     allMdx(
       filter: {
         fileAbsolutePath: { ne: null }
