@@ -7,6 +7,7 @@ reviewed: "2020-02-26"
 ---
 
 ## Overview
+
 Pantheon's [Site Disaster Recovery](https://pantheon.io/features/disaster-recovery) (**DR**) service is designed for mission-critical websites that need to ensure business continuity during the unlikely event of a zone failure. While Pantheon can’t prevent disasters from happening, we have architected a multi-zone, high availability (**HA**) solution with intelligent failover at the Global CDN layer that can help minimize the effects of an incident.
 
 Disaster Recovery is more than just a combination of technology. It includes 24/7 support and a guaranteed 99.99% uptime Service Level Agreement (**SLA**) to keep sites from going down, and to actively respond to any incident that might occur.
@@ -20,6 +21,7 @@ Recovery Point Objective (**RPO**) is a baseline of reasonably acceptable data l
 Recovery Time Objective (**RTO**) is the target amount of time within which a business process must be restored after a disaster in order to avoid unacceptable consequences from a break in business continuity. In short, think “time down.” For sites with DR enabled, Pantheon’s RTO is 15 minutes.
 
 ## Access
+
 Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us?docs).
 
 ![Pantheon Site Disaster Recovery Architecture Diagram](../images/site-dr-diagram.png "Chart showing Pantheon's zone-based disaster recovery architecture")
@@ -27,18 +29,23 @@ Site Disaster Recovery is available for purchase as an add-on to all Elite site 
 ## Features
 
 ### High Availability
+
 The Pantheon Platform has redundancy built-in throughout our containerized infrastructure. In addition, sites with Disaster Recovery get a replicated database in an alternative availability zone for even higher availability.
 
 ### Intelligent Failover
+
 Pantheon is constantly running infrastructure checks to ensure all systems are running smoothly. If we ever detect elevated error rates in any of our zones, we failover to a backup zone.
 
 ### Persistent Zone Coverage
+
 In the event of a zone failure we reroute your site to the backup zone and provision a new replica in a healthy zone.
 
 ### Real-time Failover Support
+
 Pantheon’s disaster response team will proactively notify you of a zone failure event and its impact to your site. Your dedicated team will keep clear and transparent lines of communication on any action taken to keep your site online, and is available 24/7 for all of your questions.
 
 ## Redis & Disaster Recovery Best Practices
+
 Redis cache is not preserved after a site failover. This means you must ensure that the site can handle having its cache dropped under regular visitor traffic in order for the site to operate as expected in a failover scenario.
 
 To test in a Test Environment, click the **Clear Caches** button in the upper right hand corner of the Site Dashboard.
@@ -59,17 +66,22 @@ If your site requires Solr, do not use Pantheon's Solr service. If you require a
 Pantheon Solr requires additional considerations when used on sites with Disaster Recovery. In its default state, if a site with Pantheon Solr and Disaster Recovery fails over to the backup, Solr will not automatically rebuild the search index. In that case, 
 
 1. Pantheon will need to manually re-provision your Solr instance. In the case of failover, the support engineers will be notified via a notification ticket and they will re-provision Solr for you. 
+
 1. This notification will also be sent to all users with access to the live environment, and once Solr has been re-provisioned you will be notified via this support ticket.
+
 1. You will need to manually re-index Solr after failover. 
 
 The reindexing process is application-side, and depending on your site the process may be different.
 
 #### Drupal 8, using the search_api_pantheon module
+
 1. As a site administrator, navigate to https://live-some-site.pantheonsite.io/admin/config/search/search-api/server/pantheon
+
 1. Click “Delete all indexed data on this server” to queue all content for re-indexing.
+
 1. Run Drupal Cron manually until all items have been indexed. You can determine that all items are indexed when search_api stops logging to watchdog on the cron runs.
 
-#### Drupal 7 
+#### Drupal 7
 
 **ApacheSolr module:** You can do this at `admin/config/search/apachesolr`. Click **Queue all content for reindexing** to initiate. This will add content that has not yet been indexed to the Solr indexing queue (following the configured items-per-cron-event setting).
 
@@ -77,26 +89,26 @@ The reindexing process is application-side, and depending on your site the proce
 
 **Search API Solr module:** Navigate to your Search Index list page at `admin/config/search/search_api` and click the index you need to rebuild. On the index view page, you can either queue all items for reindexing or clear your existing index and re-index in batches.
 
-
 #### WordPress
 
 You can initiate the reindexing process from the WordPress dashboard or via Terminus.
+
 1. To reindex from the WordPress Dashboard, navigate to `/wp-admin/admin.php?page=solr-power#top#solr_action` and click **Start Index**.
 
-![WordPress Solr Power indexing](../images/solr-power-index.png)
-
+  ![WordPress Solr Power indexing](../images/solr-power-index.png)
 
 1. Via Terminus:
 
- ```bash
+ ```bash{promptUser: user}
  terminus wp <site>.<env> -- solr index
  ```
 
  For WP Site Networks, you will need to index all your subsites individually:
 
- ```bash
+ ```bash{promptUser: user
  terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
  ```
+
 Read more about configuring and optimizing Solr Power in the [Solr Search for WordPress](/wordpress-solr) documentation.
 
 ### Mitigating Solr/DR issues
@@ -104,9 +116,11 @@ Read more about configuring and optimizing Solr Power in the [Solr Search for Wo
 You may also consider one of the two following options:
 
 1. Use an [Alternative Solr Service](/solr#alternatives-to-pantheons-solr-service)
+
 1. **For Drupal:** Configure search to write to both Pantheon Solr and another index (either Drupal core search or an external Solr service) as a fallback. In the event the site must be recovered after a disaster, search forms can then be manually re-pointed at the fallback index until your Pantheon Solr instance has been rebuilt and re-indexed.
 
 If none of these options work for your site's needs, see our documentation on how to safely remove Solr for [Drupal 8](/solr-drupal-8/#safely-remove-solr), [Drupal 7](/solr-drupal-7/#safely-remove-solr), and [WordPress](/wordpress-solr/#safely-remove-solr).
 
 ## See also
+
 - [Disaster Recovery Webinar - 11/8/2018 ](https://pantheon.io/resources/disaster-recovery-webinar)
