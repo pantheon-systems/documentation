@@ -15,6 +15,7 @@ Learn how to configure Solr with help from our experts. Pantheon delivers custom
 </Enablement>
 
 ## Enable Solr from the Site Dashboard
+
 Before you can start using Solr on WordPress, you need to add the Index Server to your site:
 
 From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Server: Add**:
@@ -24,11 +25,13 @@ From your Dashboard, go to **Settings** > **Add Ons** > **Apache Solr Index Serv
 This will provision Apache Solr containers for every environment for your site. You are now ready to begin integrating with WordPress.
 
 ## Solr Search for WordPress
+
 Pantheon supports and maintains [Solr Search for WordPress (Solr Power)](https://wordpress.org/plugins/solr-power/).  This plugin replaces the [default search mechanism](https://codex.wordpress.org/Class_Reference/WP_Query#Search_Parameter) within WordPress while preserving the familiar integration methods within themes and widgets.
 
 This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-versions) for more information on switching PHP versions.
 
 ## Install and Configure Plugin
+
 1. [Set the connection mode to SFTP](/sftp) for the Dev or Multidev environment via the Pantheon Dashboard, or with [Terminus](/terminus):
 
  ```bash
@@ -86,6 +89,7 @@ This plugin requires PHP version 7.1 or higher. See [Upgrade PHP versions](/php-
 1. Check your desired Facets and save your settings, then test the search functionality before committing the changes.
 
 ### Optimize Index
+
 For details, see the [Optimize command](https://solarium.readthedocs.io/en/stable/queries/update-query/building-an-update-query/optimize-command/) document.
 
 ### Schema.xml
@@ -101,15 +105,19 @@ Upon activation of the plugin on the Dev or Multidev environment, a default [`sc
 You can set a custom `schema.xml` by uploading it to the `/wp-content/uploads/solr-for-wordpress-on-pantheon/` directory using SFTP. Then, from the plugin's **Actions** tab, look for **Repost schema.xml** and click on **Execute**.
 
 ## Known Issues/Limitations
+
 This plugin is under active development on [GitHub](https://github.com/pantheon-systems/solr-power). Use the issue queue for status updates and support. Pull requests are also welcome!
 
 ### Re-Indexing
+
 New, deleted, and modified posts and pages are automatically added to the Solr index. However, if you modify the indexing options within **Solr Power**, you must manually re-index the site on the **Actions** tab.
 
 ### Enable Solr for AJAX and WordPress Dashboard
+
 Use the `solr_allow_ajax` and the `solr_allow_admin` filters to allow Solr to work with AJAX and within the WordPress Dashboard.
 
 ## Safely Remove Solr
+
 The following code changes are required before Solr can be safely uninstalled and disabled:
 
 <Partial file="remove-addons/wp-solr.md" />

@@ -3,6 +3,7 @@ title: Site Disaster Recovery
 description: Learn how mission-critical websites can stay online in the event of a total zone failure
 tags: [services,disaster recovery]
 categories: [platform]
+reviewed: "2020-02-26"
 ---
 
 ## Overview
@@ -19,9 +20,9 @@ Recovery Point Objective (**RPO**) is a baseline of reasonably acceptable data l
 Recovery Time Objective (**RTO**) is the target amount of time within which a business process must be restored after a disaster in order to avoid unacceptable consequences from a break in business continuity. In short, think “time down.” For sites with DR enabled, Pantheon’s RTO is 15 minutes.
 
 ## Access
-Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us).
+Site Disaster Recovery is available for purchase as an add-on to all Elite site plans except Elite Starter. For more information, please [contact Sales](https://pantheon.io/contact-us?docs).
 
-![Pantheon Site Disaster Recovery Architecture Diagram](../images/site-dr-diagram.png)
+![Pantheon Site Disaster Recovery Architecture Diagram](../images/site-dr-diagram.png "Chart showing Pantheon's zone-based disaster recovery architecture")
 
 ## Features
 
@@ -45,11 +46,11 @@ You can also [connect to your Redis instance](/redis/#use-the-redis-command-line
 
 If you rely on the Redis cache for locks (mutexes) or storing other long-term data, you must move them out of Redis and into the database to avoid any issues when the Redis cache is dropped during failover.
 
-## Solr and Disaster Recovery
+## Solr Search and Disaster Recovery
 
 ### Considerations for Sites Requiring Highly Available Solr Service
 
-While Solr can be enabled on a site with Disaster Recovery, Pantheon's Solr service is not highly available, nor does it include failover for Solr. The RTO and RPO do not apply to Pantheon's Solr Service.
+While [Solr](/solr) can be enabled on a site with Disaster Recovery, Pantheon's Solr service is not highly available, nor does it include failover for Solr. The RTO and RPO do not apply to Pantheon's Solr Service.
 
 If your site requires Solr, do not use Pantheon's Solr service. If you require a highly available Solr service, please consider an [alternative Solr service](/solr#alternatives-to-pantheons-solr-service).
 
@@ -68,9 +69,35 @@ The reindexing process is application-side, and depending on your site the proce
 1. Click “Delete all indexed data on this server” to queue all content for re-indexing.
 1. Run Drupal Cron manually until all items have been indexed. You can determine that all items are indexed when search_api stops logging to watchdog on the cron runs.
 
-#### Drupal 7 (needs to be written)
+#### Drupal 7 
 
-#### Wordpress (needs to be written)
+**ApacheSolr module:** You can do this at `admin/config/search/apachesolr`. Click **Queue all content for reindexing** to initiate. This will add content that has not yet been indexed to the Solr indexing queue (following the configured items-per-cron-event setting).
+
+![ApacheSolr Indexing](../images/d7-solr-reindex.png)
+
+**Search API Solr module:** Navigate to your Search Index list page at `admin/config/search/search_api` and click the index you need to rebuild. On the index view page, you can either queue all items for reindexing or clear your existing index and re-index in batches.
+
+
+#### WordPress
+
+You can initiate the reindexing process from the WordPress dashboard or via Terminus.
+1. To reindex from the WordPress Dashboard, navigate to `/wp-admin/admin.php?page=solr-power#top#solr_action` and click **Start Index**.
+
+![WordPress Solr Power indexing](../images/solr-power-index.png)
+
+
+1. Via Terminus:
+
+ ```bash
+ terminus wp <site>.<env> -- solr index
+ ```
+
+ For WP Site Networks, you will need to index all your subsites individually:
+
+ ```bash
+ terminus wp <site>.<env> -- url=example.pantheonsite.io/subsite solr index
+ ```
+Read more about configuring and optimizing Solr Power in the [Solr Search for WordPress](/wordpress-solr) documentation.
 
 ### Mitigating Solr/DR issues
 
