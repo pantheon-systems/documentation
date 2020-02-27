@@ -1,9 +1,9 @@
 ---
 title: Pantheon Global CDN
-description: Improve Site Performance and Security
-earlynote: The documentation on this page discusses features and options that are not available across the entire platform.
-searchboost: "200"
-reviewed: "2020-02-26"
+description: Improve Site Performance and Security with Pantheon's Global CDN.
+reviewed: "2020-02-27"
+tags: [CDN,security]
+categories: [develop]
 ---
 
 Pantheon's [Global CDN](https://pantheon.io/global-cdn) is a core platform offering, with improved performance and security for customer sites. Content is served from 70+ global **POP**s (Points Of Presence) where site pages and assets are cached, and [HTTPS](/https) certificates are fully managed using [Let's Encrypt](https://letsencrypt.org).
@@ -16,13 +16,13 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 ## How Does It Work?
 
-- This service takes Pantheon's traditional high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
+Global CDN takes Pantheon's high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
 
 - The Global CDN cache strategy eliminates "cache sharding" which meant that the same content needed to be cached in separate edge cache instances. This means higher cache hit rates.
 
 - Global CDN includes interfaces to dynamically expire selected content from the cache, rather than doing a full cache flush. There are basic implementations available as Drupal modules and WordPress plugins, as well as a developer API for implementing custom cache tagging/clearing behavior.
 
-When we first turned on the GLobal CDN, we saw multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US. International users will benefit even more:
+When we first turned on the Global CDN, we saw multi-second speedups in Visual Progress <Popover title="Visual Progress" content="The pace at which content renders on the visible page" /> even within the continental US. International users will benefit even more:
 
 ![Example before and after page load time](../images/global-cdn-time-to-load.png)
 
