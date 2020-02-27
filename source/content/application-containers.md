@@ -10,12 +10,12 @@ Pantheon's infrastructure includes a number of layers. Our edge layer provides r
 
 Pantheon's infrastructure is based on a grid model. We serve our customers by provisioning isolated linux containers with an optimized PHP stack in place. Each container includes its own Nginx, APC cache, and PHP worker agent. They are deployed with a checkout of your codebase and service-bindings to use a dedicated MySQL container, networked file filesystem, and optionally Redis object cache and Apache Solr search indexing. See our [interactive diagram](https://pantheon.io/features/elastic-hosting) to learn more about Pantheon's infrastructure.
 
-Every environment for your site (Dev, Test, Live) runs on its own container. In the case of a Live site, at the Performance Medium level and above you can have [multiple containers](#multiple-application-containers) serving your site.
+Every environment for your site (Dev, Test, Live) runs on its own container. At the Performance Medium level and above, the Test and Live environments have [multiple containers](#multiple-application-containers) serving your site.
 
 ### Idle Containers
 Pantheon containers spin down (sleep) after ~1 hour of idle time. Live environments on a paid plan will spin down after 12 hours of idle time. Upon receiving a web request, the environments are spun up, usually within 30 seconds.
 
-Attempts to remotely access services, such as MySQL or SFTP connections, will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/terminus) command:
+Attempts to remotely access services (such as MySQL or SFTP connections) will fail on idle containers. Wake the environment and resolve connection errors by loading the home page in your browser or with the following [Terminus](/terminus) command:
 
 ```bash
 terminus env:wake <site>.<env>
@@ -62,7 +62,7 @@ Typically, the best practice is to optimize for performance first and then begin
 Because Pantheon does not restrict or limit Sandbox sites or dev instances, you should be able to get a good sense of your sites live performance as you develop. We also provide [New Relic APM Pro](/new-relic) to give you insights about your site's performance.
 
 ## Multiple Application Containers
-Live environments on sites with a service level of Performance Medium and above can have multiple application containers serving the site for [smooth scaling](https://pantheon.io/features/smooth-scaling). If a site has multiple application containers, the load will be distributed among them.
+For plans starting at Performance Medium and higher, all Test and Live environments have at least two application containers serving the site for [smooth scaling](https://pantheon.io/features/smooth-scaling). When a site has multiple application containers, the load will be distributed among the containers.
 
 ### Expected Behavior
 Requests can be served from any of the available containers on Live. As a result, you may notice different log files for each container; this is expected. For instructions on downloading logs from multiple application containers, see [Automate Downloading Logs from the Live Environment](/logs#automate-downloading-logs).
