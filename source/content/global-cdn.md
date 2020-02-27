@@ -18,7 +18,7 @@ Get the most out of Global CDN with help from the experts at Pantheon. We delive
 
 Global CDN takes Pantheon's high-performance page and asset caching system (Varnish) and pushes it out globally. Rather than requests coming all the way to our primary datacenter, we terminate HTTPS and serve pages from a location much closer to the end-user. This speeds up the time to render a web-page significantly.
 
-- The Global CDN cache strategy eliminates "cache sharding" which meant that the same content needed to be cached in separate edge cache instances. This means higher cache hit rates.
+- The Global CDN cache strategy eliminates "cache sharding," in which the same content needs to be cached in separate edge cache instances. This results in higher cache hit rates.
 
 - Global CDN includes interfaces to dynamically expire selected content from the cache, rather than doing a full cache flush. There are basic implementations available as Drupal modules and WordPress plugins, as well as a developer API for implementing custom cache tagging/clearing behavior.
 
