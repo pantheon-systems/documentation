@@ -96,4 +96,4 @@ To prevent issues with Twitter card validation and to reduce the overall time to
 
 ## Advanced Global CDN
 
-For custome solutions addressing the unique challenges your site build presents, see our [Advanced Global CDN](/advanced-global-cdn) service.
+For custom solutions addressing the unique challenges your site build presents, see our [Advanced Global CDN](/advanced-global-cdn) service.
