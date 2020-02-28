@@ -20,7 +20,7 @@ Advanced Global CDN is supported by Pantheon’s highly experienced [Professiona
 
 ### Is the CDN configurable?
 
-Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique needs of your team. While we don’t currently give you direct access to the Fastly configuration file, our professional services team can implement the custom settings that you require.
+Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique needs of your team. While we don’t currently give you direct access to the Fastly configuration file, our Professional Services team can implement the custom settings that you require.
 
 ### How do I get Advanced Global CDN?
 
