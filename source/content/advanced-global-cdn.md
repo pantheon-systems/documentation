@@ -46,7 +46,7 @@ Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 - **Device detection and edge control**
 - **Persistent presence for continual uptime**
 
-  Adjusts the `serve stale content` setting
+  Adjusts the serve stale content setting.
 - **Full CDN edge logs**
 
   See every request to your website, whether or not the content was cached. Full CDN edge logs combine the server logs with logs from the edge to provide a complete picture of your traffic.
