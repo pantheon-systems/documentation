@@ -52,7 +52,7 @@ printf "Copying docs to $docs_url \n"
 touch ./multidev-log.txt
 while true
 do
-    if ! rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ $MULTIDEV_NAME.$STATIC_DOCS_UUID@appserver.$MULTIDEV_NAME.$STATIC_DOCS_UUID.drush.in:files/docs/ | tee multidev-log.txt;
+    if ! rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ $MULTIDEV_NAME.$DOCS_PREVIEW_UUID@appserver.$MULTIDEV_NAME.$DOCS_PREVIEW_UUID.drush.in:files/docs/ | tee multidev-log.txt;
     then
         echo "Failed, retrying..."
         sleep 5
