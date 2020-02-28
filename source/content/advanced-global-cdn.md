@@ -32,7 +32,7 @@ Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 
   Unlike most CDNs that only handle images and other static assets, full-page technology lets you cache entire pages and assets at the edge.
 - **Layer 3 & 4 DDOS protection & mitigation**
-- **SOC1 & SOC2 compliance**
+- **SOC2 compliance**
 - **IP whitelisting & blacklisting**
   - **Blacklist** - prevent users with specific IPs or in IP ranges from accessing your site.
   - **Whitelist** - only allow users with specific IPs or in IP ranges to access your site, blocking everyone else.
