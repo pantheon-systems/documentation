@@ -20,24 +20,24 @@ auth-terminus
 
 # Find existing environments.
 printf "Write existing environments for the static docs site to a text file \n"
-terminus env:list --format list --field=ID static-docs > ./env_list.txt
+terminus env:list --format list --field=ID docs-preview > ./env_list.txt
 
 # Creating a new one if one doesn't exist for this branch.
 printf "Check env_list.txt, create environment if one does not already exist \n"
 if grep -Fxq "$MULTIDEV_NAME" ./env_list.txt; then
     echo "Existing environment found for $MULTIDEV_NAME"
     # Get the environment hostname and URL
-    export url=`terminus env:view static-docs.$MULTIDEV_NAME --print`
+    export url=`terminus env:view docs-preview.$MULTIDEV_NAME --print`
     export url=https://${url:7: -1}
     export hostname=${url:8: -1}
     export docs_url=${url}/docs
 else
     printf "Creating multidev environment... \n"
-    terminus multidev:create static-docs.dev $MULTIDEV_NAME
+    terminus multidev:create docs-preview.dev $MULTIDEV_NAME
 
     # Get the environment hostname and identify deployment URL
     printf "Identifying environment hostname... \n"
-    export url=`terminus env:view static-docs.$MULTIDEV_NAME --print`
+    export url=`terminus env:view docs-preview.$MULTIDEV_NAME --print`
     export url=https://${url:7: -1}
     export hostname=${url:8}
     export docs_url=${url}/docs
