@@ -6,7 +6,7 @@ tags: [CDN, security]
 reviewed: "2020-02-27"
 ---
 
-Advanced Global CDN takes our CDN offering a step forward for customers that have unique optimizations required for digital delivery at scale. It includes a wide range of benefits including letting teams individually manage their own sites, drive growth through site iteration, calibrate control over branding, and extend enterprise-grade security.
+[Advanced Global CDN](https://pantheon.io/product/advanced-global-cdn) takes our CDN offering a step forward for customers that have unique optimizations required for digital delivery at scale. It includes a wide range of benefits including letting teams individually manage their own sites, drive growth through site iteration, calibrate control over branding, and extend enterprise-grade security.
 
 ## Frequently Asked Questions
 
