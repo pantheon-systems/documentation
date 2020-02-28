@@ -143,4 +143,4 @@ export comment=`cat comment.txt`
 curl -d '{ "body": "'$comment'" }' -X POST -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
 
 printf "Clear cache on multidev env. \n"
-terminus env:cc static-docs.$MULTIDEV_NAME
+terminus env:cc docs-preview.$MULTIDEV_NAME
