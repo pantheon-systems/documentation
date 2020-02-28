@@ -20,24 +20,24 @@ auth-terminus
 
 # Find existing environments.
 printf "Write existing environments for the static docs site to a text file \n"
-terminus env:list --format list --field=ID static-docs > ./env_list.txt
+terminus env:list --format list --field=ID docs-preview > ./env_list.txt
 
 # Creating a new one if one doesn't exist for this branch.
 printf "Check env_list.txt, create environment if one does not already exist \n"
 if grep -Fxq "$MULTIDEV_NAME" ./env_list.txt; then
     echo "Existing environment found for $MULTIDEV_NAME"
     # Get the environment hostname and URL
-    export url=`terminus env:view static-docs.$MULTIDEV_NAME --print`
+    export url=`terminus env:view docs-preview.$MULTIDEV_NAME --print`
     export url=https://${url:7: -1}
     export hostname=${url:8: -1}
     export docs_url=${url}/docs
 else
     printf "Creating multidev environment... \n"
-    terminus multidev:create static-docs.dev $MULTIDEV_NAME
+    terminus multidev:create docs-preview.dev $MULTIDEV_NAME
 
     # Get the environment hostname and identify deployment URL
     printf "Identifying environment hostname... \n"
-    export url=`terminus env:view static-docs.$MULTIDEV_NAME --print`
+    export url=`terminus env:view docs-preview.$MULTIDEV_NAME --print`
     export url=https://${url:7: -1}
     export hostname=${url:8}
     export docs_url=${url}/docs
@@ -52,7 +52,7 @@ printf "Copying docs to $docs_url \n"
 touch ./multidev-log.txt
 while true
 do
-    if ! rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ $MULTIDEV_NAME.$STATIC_DOCS_UUID@appserver.$MULTIDEV_NAME.$STATIC_DOCS_UUID.drush.in:files/docs/ | tee multidev-log.txt;
+    if ! rsync --delete-delay -chrltzv --ipv4 -e 'ssh -p 2222 -oStrictHostKeyChecking=no' gatsby/public/ --temp-dir=../../tmp/ $MULTIDEV_NAME.$DOCS_PREVIEW_UUID@appserver.$MULTIDEV_NAME.$DOCS_PREVIEW_UUID.drush.in:files/docs/ | tee multidev-log.txt;
     then
         echo "Failed, retrying..."
         sleep 5
@@ -143,4 +143,4 @@ export comment=`cat comment.txt`
 curl -d '{ "body": "'$comment'" }' -X POST -u pantheondocs:$GITHUB_TOKEN https://api.github.com/repos/pantheon-systems/documentation/commits/$CIRCLE_SHA1/comments
 
 printf "Clear cache on multidev env. \n"
-terminus env:cc static-docs.$MULTIDEV_NAME
+terminus env:cc docs-preview.$MULTIDEV_NAME
