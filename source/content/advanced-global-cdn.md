@@ -20,11 +20,11 @@ Advanced Global CDN is supported by Pantheon’s highly experienced [Professiona
 
 ### Is the CDN configurable?
 
-Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique needs of your team. While we don’t currently give you direct access to the Fastly configuration file, our professional services team can implement the custom settings that you require.
+Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique needs of your team. While we don’t currently give you direct access to the Fastly configuration file, our Professional Services team can implement the custom settings that you require.
 
 ### How do I get Advanced Global CDN?
 
-[Contact us](https://pantheon.io/contact) to let us know when you're ready to unlock the full potential of the Pantheon Global CDN. Our Professional Services team talk through your needs with you, and help determine the best configuration for you.
+[Contact us](https://pantheon.io/contact?docs) to let us know when you're ready to unlock the full potential of the Pantheon Global CDN. Our Professional Services team will talk through your needs and help determine the best configuration for you.
 
 ## Features
 
@@ -33,12 +33,12 @@ Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
   Unlike most CDNs that only handle images and other static assets, full-page technology lets you cache entire pages and assets at the edge.
 - **Layer 3 & 4 DDOS protection & mitigation**
 - **SOC2 compliance**
-- **IP whitelisting & blacklisting**
-  - **Blacklist** - prevent users with specific IPs or in IP ranges from accessing your site.
-  - **Whitelist** - only allow users with specific IPs or in IP ranges to access your site, blocking everyone else.
+- **IP allowlisting & blocklisting**
+  - **Blocklist** - prevent users with specific IPs or in IP ranges from accessing your site.
+  - **Allowlist** - only allow users with specific IPs or in IP ranges to access your site, blocking everyone else.
 - **Token authentication / JWT (JSON Web Token)**
 
-  Use the AGCDN Edge to generate JSON Web Tokens to help build your custom API.
+  Use the AGCDN Edge to generate JSON Web Tokens<Popover title="JSON Web Tokens" content="A JSON Web Tokens is an Internet standard for creating compact, encrypted JSON-based access tokens that assert some number of claims, such as 'logged in as admin'." /> to help build your custom API.
 - **Custom error & maintenance page rules**
 - **Geolocation based edge control**
 
@@ -46,7 +46,7 @@ Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 - **Device detection and edge control**
 - **Persistent presence for continual uptime**
 
-  Adjusts the 'serve stale content setting '
+  Adjusts the serve stale content setting.
 - **Full CDN edge logs**
 
   See every request to your website, whether or not the content was cached. Full CDN edge logs combine the server logs with logs from the edge to provide a complete picture of your traffic.
@@ -63,13 +63,13 @@ Yes! Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 
 ### Additional Features from WAF/IO
 
-- **Efficient image optimization (IO) at the edge**
-- **Layer 7/Enterprise DDoS protection & mitigation**
-- **OWASP & WAF rules for Drupal/WordPress**
-- **Custom/Comprehensive WAF services**
-- **Advanced bot detection & mitigation** (Available as an add-on)
+- Efficient image optimization (IO) at the edge
+- Layer 7/Enterprise DDoS protection & mitigation
+- OWASP & WAF rules for Drupal/WordPress
+- Custom/Comprehensive WAF services
+- Advanced bot detection & mitigation (Available as an add-on)
 
-[Click Here](https://pantheon.io/advanced-global-cdn#pricing-matrix-wrapper) for a full breakdown of the features offered by our CDN services.
+[Get a full breakdown of the features](https://pantheon.io/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
 
 ## See Also
 
