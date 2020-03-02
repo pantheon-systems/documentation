@@ -16,7 +16,7 @@ Every HTTP response served by Pantheon is accompanied by a number of headers. T
   - Set from Drupal's performance settings.
   - max-age is the number of seconds that content can remain in cache; if set to 0, content will not be cached.
   - If "no-cache, must-revalidate, post-check=0, pre-check=0"; this is Drupal's default header and typically indicates that there is a conflict.
-  - **All static assets** (images, etc) on the Live environment are set with a max-age of 366 days; we recommend using new file names or appending a changable query string if content needs to change earlier. Development environments (Dev and Multidevs) intentionally do not cache static assets.
+  - **All static assets** (images, etc) on production environments (Test and Live) are set with a max-age of 366 days; we recommend using new file names or appending a changable query string if content needs to change earlier. Development environments (Dev and Multidevs) intentionally do not cache static assets.
 
 - **X-Pantheon-Styx-Hostname**
   - Hostname of the Pantheon load balancing server at the origin datacenter. There are a number of these servers, and each request may be served by a different server.
