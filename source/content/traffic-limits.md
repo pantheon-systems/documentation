@@ -18,6 +18,8 @@ Basic plan sites do not have this protective feature and would see a change to t
 
 For details, see [Metrics in the Site Dashboard](/metrics).
 
+Visit our doc on how to [investigate traffic incidents](/optimize-site-traffic) for suggestions on how to identify traffic issues and implement a solution.
+
 ### Traffic Spikes
 A traffic spike is a pattern of traffic that exceeds the site plan limit and lasts in duration up to the limit defined by plan's Overage Protection, if applicable. For details, see [Pricing Comparison](https://pantheon.io/plans/pricing-comparison).
 
