@@ -22,16 +22,25 @@ Consult our doc for a list of [WordPress best practices](/wordpress-best-practic
 
 In addition to your other WordPress security practices, help thwart brute force attacks that attempt to access your `wp-admin` dashboard and hyperinflate traffic to your site in the process. Create a separate administrator account with a strong password, then remove the `admin` account, and use a plugin to [limit login attempts](https://wordpress.org/plugins/search/limit+login+attempts/).
 
-## DDoS Mitigation
+## Configure Favicon.ico to Serve a Static Image
 
-Often, Distributed Denial of Service (DDoS) attacks are short-lived and unlikely to be a prolonged issue. Our [Customer Success](https://pantheon.io/docs/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
+The CMS tries to serve the favicon file, but if it can’t find one in the defined path, it will attempt to generate one through PHP. While Pantheon does not count static assets against your traffic limit, generating an asset on each request the way favicon is in this case, does. In addition, since Pantheon locks down all directories except the file upload directories (`wp-contents/upload` on WordPress, or `sites/default/files` on Drupal), the CMS can’t save the file back to the path it’s generating.
 
-## Favicon.ico Generates Page Visits
+This issue affects both WordPress and Drupal sites, but the request path will vary between the two platforms. On WordPress, it often appears as a `favicon.ico` file in the root directory. In Drupal (specifically Drupal 8), it shows up as a system path.
+
+|  **CMS**  |          **Path**         |
+|:---------:|:-------------------------:|
+| WordPress | /favicon.ico              |
+| Drupal    | /system/files/favicon.ico |
+
+**Solution**: Often the fix is to add and commit a static `favicon.ico` into the path that is being requested. What is usually the actual culprit is adding a custom favicon through the active theme for the site through some kind of upload button, and then the icon is deleted or some other kind of issue which causes the CMS to look for an alternative favicon.
 
 ## Admin-ajax.php Generates Pages Served
 
 
-[Secure Your Site with Two-Factor Authentication](/guides/two-factor-authentication)
+## DDoS Mitigation
+
+Distributed Denial of Service (DDoS) attacks are often short-lived and unlikely to be a prolonged issue. Our [Customer Success](https://pantheon.io/docs/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
 
 ## Advanced Global CDN
 [Advanced Global CDN](/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DDoS attempts.
