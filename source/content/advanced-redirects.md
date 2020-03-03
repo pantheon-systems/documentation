@@ -272,10 +272,11 @@ function is_from_trusted_ip() {
    // Check if the path should be locked down
    $to_lockdown = false;
    $clean_request_uri = rtrim(mb_strtolower(strtok($_SERVER["REQUEST_URI"],'?')), '/');
- if ( substr($clean_request_uri, 0, 13) == '/wp-login.php' ) {
+   $slashes_removed_uri = str_replace( array('/', '%2f'), '', $clean_request_uri );
+ if ( substr($slashes_removed_uri, 0, 12) == 'wp-login.php' ) {
      // user login page
      $to_lockdown = true;
-   } elseif ( substr($clean_request_uri, 0, 9) == '/wp-admin' ) {
+   } elseif ( substr($slashes_removed_uri, 0, 8) == 'wp-admin' ) {
      // admin pages
      $to_lockdown = true;
    }
