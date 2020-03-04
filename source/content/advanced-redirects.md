@@ -290,7 +290,7 @@ function is_from_trusted_ip() {
 
 </Tab>
 
-<Tab title="Drupal" id="restrict-drupal">
+<Tab title="Drupal 8" id="restrict-drupal-8">
 
 The following example restricts access to `/user/`, `/admin/`, and `/node/` based on the IP addresses listed in the `$trusted_ips` array:
 
@@ -335,6 +335,55 @@ function ip_in_list($ips) {
     }
   }
   ```
+
+</Tab>
+
+<Tab title="Drupal 7" id="restrict-drupal-7">
+
+The following example restricts access to `/user/`, `/admin/`, and `/node/` based on the IP addresses listed in the `$trusted_ips` array:
+
+```php:title=settings.php
+function ip_in_list($ips) {
+    foreach(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']) as $check_ip) {
+        foreach($ips as $ip) {
+          if(FALSE !== strpos($check_ip, $ip)) {
+            return true;
+          }
+        }
+    }
+    return false;
+  }
+
+  function is_from_trusted_ip() {
+    //Replace the IPs in this array with those you want to restrict access to
+    $trusted_ips = array('192.0.2.38','198.51.100.12','208.0.113.159','2001:DB8:1C93');
+    return ip_in_list($trusted_ips);
+  }
+  if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && !is_from_trusted_ip() ) {
+    // Check if the path should be locked down
+    $to_lockdown = false;
+    $clean_request_uri = rtrim( mb_strtolower(strtok($_SERVER["REQUEST_URI"],'?')), '/' );
+    $slashes_removed_uri = str_replace( array('/', '%2f'), '', $clean_request_uri );
+    if ( $_GET['q'] == 'admin') {
+      // admin pages
+      $to_lockdown = true;
+    } elseif ( substr($slashes_removed_uri, 0, 4) == 'user' ) {
+      // user login page
+      $to_lockdown = true;
+    } elseif ( substr($slashes_removed_uri, 0, 5) == 'admin' ) {
+      // admin pages
+      $to_lockdown = true;
+    } elseif ( substr($slashes_removed_uri, 0, 4) == 'node' && substr($slashes_removed_uri, -4) == 'edit' ) {
+      // node edit pages
+      $to_lockdown = true;
+    }
+    if($to_lockdown && (php_sapi_name() != "cli")){
+      header('HTTP/1.0 403 Forbidden');
+      echo 'Access denied.';
+    exit();
+    }
+  }
+```
 
 </Tab>
 
