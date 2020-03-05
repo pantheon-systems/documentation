@@ -8,9 +8,7 @@ searchboost: 150
 reviewed: "2020-03-03"
 ---
 
-When the [Metrics](/metrics) on the Pantheon Dashboard show actual traffic as measured by the Platform
-[Traffic Limits and Overages](/traffic-limits)
-Pantheon offers a number of options to help determine the cause of traffic incidents, to find if they're intentional, and to help remedy them if they're not.
+The [Traffic Limits and Overages](/traffic-limits) doc explains what Pantheon considers billable traffic as shown in the [Dashboard Metrics](/metrics). This doc introduces some of the methods Pantheon offers to help determine the cause of traffic incidents, to find out if they're intentional, and to help remedy them if they're not.
 
 ## Review the nginx Access Log
 
