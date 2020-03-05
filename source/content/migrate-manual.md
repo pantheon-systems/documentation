@@ -282,6 +282,8 @@ The **Database** import requires a single `.sql` dump that contains the site's c
 
      ![Import MySQL database from file](../images/dashboard/import-mysql-file.png)
 
+  Note: if you recently imported and then wiped before wanting to re-import, make sure to toggle the URL/File option, refresh the page,
+  toggle back, and re-upload the database dump with a new file name.
   </Tab>
 
   <Tab title="Up to 500MBs" id="500mbs">
