@@ -31,7 +31,10 @@ The recommended PHP versions available on Pantheon are:
 Click on the links above to see the complete PHP info for each version, including the list of supported PHP extensions.
 
 ### EOL PHP Versions
-Pantheon also makes PHP [7.1](https://v71-php-info.pantheonsite.io/), [7.0](https://v70-php-info.pantheonsite.io/), [5.6](https://v56-php-info.pantheonsite.io/), [5.5](https://v55-php-info.pantheonsite.io/), and [5.3](https://v53-php-info.pantheonsite.io/) available on the platform, although these are end-of-life (**EOL**), and should not be used unless absolutely necessary.
+Pantheon also makes PHP [7.1](https://v71-php-info.pantheonsite.io/), PHP [7.0](https://v70-php-info.pantheonsite.io/), [5.6](https://v56-php-info.pantheonsite.io/), and [5.5](https://v55-php-info.pantheonsite.io/) available on the platform, although these are end-of-life (**EOL**), and should not be used unless absolutely necessary. 
+
+### PHP Versions Being Retired
+PHP [5.3](https://v53-php-info.pantheonsite.io/) is being retired from the platform. Sites using PHP 5.3 will continue to serve pages, but new development cannot be done. To resume development on a site using a retired version of PHP, first upgrade the PHP version on the development site.
 
 <Alert title="Note" type="info">
 
