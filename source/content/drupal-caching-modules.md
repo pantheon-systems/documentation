@@ -1,5 +1,5 @@
 ---
-title: Caching in Drupal Modules
+title: Caching in Drupal Views
 description: Configure your Drupal site's performance and caching settings to make significant improvements.
 tags: [cacheapp]
 categories: [drupal,performance]
