@@ -1,19 +1,28 @@
 **Note:** Please fill out the PR Template to ensure proper processing.
 
-Closes #
+Closes: #
+
+## Summary
+
+**[Doc Title](https://pantheon.io/docs/doc-title)** - A one sentence summation of the the pertinent changes (including not-yet-completed work) provided by this PR.
 
 ## Effect
-PR includes the following changes:
+
+The following changes are already commited:
+
 -
 -
 
 ## Remaining Work
+
+The following changes still need to be completed:
+
 - [ ] List any outstanding work here
-- [ ] Technical review
-- [ ] Copy Review
 
 ## Post Launch
+
 **Do not remove** - To be completed by the docs team upon merge:
+
 - [ ] Redirect `/docs/old-path/` => `/docs/new-path/` (if applicable)
 - [ ] Include/exclude pages ^ respectively within docs search service provider (if applicable)
 - [ ] Update Status Report
