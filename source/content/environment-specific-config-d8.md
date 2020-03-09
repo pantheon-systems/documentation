@@ -144,9 +144,9 @@ This issue can be caused by a number of scenarios related to cache tags, such as
 3. Verify overridden configurations for each config.name on the Dev environment within the Drupal UI using the Configuration Manager core module (`/admin/config/development/configuration/single/export`) or via [Terminus](/terminus):
 
    ```bash
-   terminus drush <site>.<env> -- config-get system.performance --include-overidden
-   terminus drush <site>.<env> -- config-get system.logging --include-overidden
-   terminus drush <site>.<env> -- config-get views.settings --include-overidden
+   terminus drush <site>.<env> -- config-get system.performance --include-overridden
+   terminus drush <site>.<env> -- config-get system.logging --include-overridden
+   terminus drush <site>.<env> -- config-get views.settings --include-overridden
    ```
 
    <Alert title="Note" type="info">
