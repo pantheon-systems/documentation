@@ -292,12 +292,15 @@ ___
 
 ## [Search Api Solr Date Sort](https://www.drupal.org/project/search_api_solr_date_sort)
 
+<ReviewDate date="2020-02-14" />
+
 **Issue**: The module overrides a class from the [Pantheon Apache Solr module](https://pantheon.io/docs/solr-drupal-7) that is responsible for a correct connection to the Pantheon's Apache Solr service. As a result a Solr connection is lost.
 
-**Solution**: It's not required to patch the module. You can try to fix it in a custom module:
+**Solution**: Instead of patching the module, you can fix the issue with a custom module:
 
-- define a new class that inherits from the `PantheonApachesolrSearchApiSolrService` and contains logic from the `SearchApiSolrDateSortSolrService` (or vice a versa)
-- implement a `hook_search_api_service_info_alter()` (with a highest weight) and add your class into a configuration array
+1. Define a new class that inherits from the `PantheonApachesolrSearchApiSolrService` and contains logic from the `SearchApiSolrDateSortSolrService` (or vice a versa).
+
+1. Implement a `hook_search_api_service_info_alter()` (with a highest weight) and add your class into a configuration array.
 
 ___
 
