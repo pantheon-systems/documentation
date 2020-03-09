@@ -279,7 +279,8 @@ ___
 **Solution 2:**
 
 1. Create a [symlink](#assumed-write-access).
-2. Define the [FS_METHOD in the wp-config](#define-fs_method).
+
+1. Define the [FS_METHOD in the wp-config](#define-fs_method).
 
 ___
 
