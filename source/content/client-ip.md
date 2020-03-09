@@ -6,6 +6,14 @@ categories: [drupal,develop]
 reviewed: "2020-03-09"
 ---
 
+<Alert title="Warning" type="danger">
+
+This page was written before the [Pantheon Global CDN](/global-cdn) was launched for all customers. Now that all traffic runs through a CDN endpoint and is cached when possible, the methods below are now longer an accurate way to geolocate your traffic.
+
+If geolocation is a requirement for your site, consider an [Advanced Global CDN](/advanced-global-cdn) configuration, or a third party geo-aware edge, like Cloudflare
+
+</Alert>
+
 There are two ways to get the client IP address if you are running Drupal on Pantheon:
 
 1. Use the system environment variable `$_SERVER["REMOTE_ADDR"]`. One benefit is that on Pantheon this takes into account if the `X-Forwarded-For` header is sent in cases when a request is filtered by a proxy.
