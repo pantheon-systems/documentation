@@ -18,9 +18,16 @@ protected-branches
 # Authenticate with Terminus
 auth-terminus
 
+terminus auth:whoami #DEBUG
+
 # Find existing environments.
-printf "Write existing environments for the static docs site to a text file \n"
-terminus env:list --format list --field=ID docs-preview > ./env_list.txt
+
+#printf "Write existing environments for the static docs site to a text file \n"
+#terminus env:list --format list --field=ID docs-preview > ./env_list.txt
+
+printf "Write existing Multidev environments for the docs preview site to a text file \n"
+terminus multidev:list docs-preview --format list --field=id #DEBUG
+terminus multidev:list docs-preview --format list --field=id > ./env_list.txt
 
 # Creating a new one if one doesn't exist for this branch.
 printf "Check env_list.txt, create environment if one does not already exist \n"
