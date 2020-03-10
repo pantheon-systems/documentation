@@ -7,11 +7,19 @@ const LocaldevChangelog = ({ data }) => (
     {data.localdevYaml.releases.map((localdev, i) => {
       return (
         <div key={i}>
-          <h3 className="toc-ignore" id={localdev.version}>{localdev.version}</h3>
+          <h3 className="toc-ignore" id={localdev.version}>
+            {localdev.version}
+          </h3>
           <MDXProvider>
-
-              <div className="toc-ignore" dangerouslySetInnerHTML={{__html: localdev.changelog.replace(/h3/g, 'h3 class=\"toc-ignore\"')}} />
-
+            <div
+              className="toc-ignore"
+              dangerouslySetInnerHTML={{
+                __html: localdev.changelog.replace(
+                  /h3/g,
+                  'h3 class="toc-ignore"'
+                ),
+              }}
+            />
           </MDXProvider>
           <hr />
         </div>
@@ -25,10 +33,10 @@ export default props => (
     query={graphql`
       query {
         localdevYaml {
-            releases {
-                version
-                changelog
-            }
+          releases {
+            version
+            changelog
+          }
         }
       }
     `}
