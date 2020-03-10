@@ -33,21 +33,25 @@ echo "Existing environments:" && cat env_list.txt
 getExistingTerminusEnvs "env_list.txt"
 
 # Update vm with current remote branches
+echo "running `git remote update origin --prune`" #DEBUG
 git remote update origin --prune
 
 # Identify merged remote branches, ignoring Pantheon defaults and master
+echo "Identifying merged branches" #DEBUG
 git branch -r --merged master | awk -F'/' '/^ *origin/{if(!match($0, /(>|master)/) && (!match($0, /(>|dev)/)) && (!match($0, /(>|test)/)) && (!match($0, /(>|live)/))){print $2}}' | xargs -0 > merged-branches.txt
 
 # Delete empty line at the end of txt file produced by awk
 sed '/^$/d' merged-branches.txt > merged-branches-clean.txt
 
 # Create an array of remote branches merged into master
+echo "running function getMergedBranchMultidevName" #DEBUG
 getMergedBranchMultidevName "merged-branches-clean.txt"
 
 # Compare existing environments and merged branches, delete only if the environment exists
 merged_branch=" ${merged_branch_multidev_names[*]} "
 for env in ${existing_terminus_envs[@]}; do
   if [[ $merged_branch =~ " $env " ]] && [ "$env" != "sculpin" ] ; then
+    echo "deleting Multidev environment $env" #DEBUG
     terminus multidev:delete docs-preview.$env --delete-branch --yes
   fi
 done
