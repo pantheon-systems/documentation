@@ -27,13 +27,13 @@ In this step, we'll create a custom Google Apps SAML application. This will be t
 
 1. The **Google IdP Information** modal provides values and a certificate to pass back to the WP SAML Auth plugin. The key details are in the Option 1 section:
 
-  ![Google IdP Information](../../../images/guides/wordpress-google-sso/google-idp-information.png)
+   ![Google IdP Information](../../../images/guides/wordpress-google-sso/google-idp-information.png)
 
-    - **SSO URL**: URL for WordPress to redirect to when initiating the SSO process.
+   - **SSO URL**: URL for WordPress to redirect to when initiating the SSO process.
 
-    - **Entity ID**: How WordPress knows to recognize Google Apps.
+   - **Entity ID**: How WordPress knows to recognize Google Apps.
 
-    - **Certificate** - How Google Apps knows to trust a request coming from WordPress.
+   - **Certificate** - How Google Apps knows to trust a request coming from WordPress.
 
 1. Copy the **SSO URL** and **Entity ID** values and paste them into the corresponding fields under **Identity Provider Settings** on the plugin settings page:
 
@@ -93,13 +93,13 @@ In this step, we'll create a custom Google Apps SAML application. This will be t
 
 1. On the Attribute Mapping page, you'll need to specify any attributes you'd like Google Apps to return in the SAML response, and then keys you'd like to use for those attributes.
 
-  Without any additional configuration, WP SAML Auth understands this attribute mapping:
+   Without any additional configuration, WP SAML Auth understands this attribute mapping:
 
-    - SAML IdP (Google Apps) -> WordPress
-    - `email` -> `user_email`
-    - `uid` -> `user_login`
-    - `first_name` -> `first_name`
-    - `last_name` -> `last_name`
+   - SAML IdP (Google Apps) -> WordPress
+   - `email` -> `user_email`
+   - `uid` -> `user_login`
+   - `first_name` -> `first_name`
+   - `last_name` -> `last_name`
 
   Click **ADD NEW MAPPING**, and map at least one identifying attribute. Using `email` as an example:
 
