@@ -40,7 +40,7 @@ if grep -Fxq "$MULTIDEV_NAME" ./env_list.txt; then
     export docs_url=${url}/docs
 else
     printf "Creating multidev environment... \n"
-    terminus multidev:create docs-preview.dev $MULTIDEV_NAME
+    terminus multidev:create docs-preview.dev $MULTIDEV_NAME --no-ansi -n -y
 
     # Get the environment hostname and identify deployment URL
     printf "Identifying environment hostname... \n"
