@@ -27,6 +27,3 @@ All links from the video are provided below.
 **Resource Links From Video**
 
 [Explore Platform Architecture](https://pantheon.io/docs/platform/)
-
-
-<ResourceSelector id="architecture" />
