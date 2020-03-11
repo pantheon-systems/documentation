@@ -8,9 +8,11 @@ const ResourceSelector = ({ search }) => {
 
   return (
     <>
-      {Object.values(search).map((value, key) => {
+      {search[0] ? Object.values(search).map((value, key) => {
         return <Partial key={key} file={`additionalResources/${value}.md`} />
-      })}
+      }) :
+        <Partial file={`additionalResources/null.md`} />
+      }
     </>
   )
 }
