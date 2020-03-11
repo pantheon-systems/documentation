@@ -10,7 +10,7 @@ Sites that don't use InnoDB are missing out on performance and stability gains. 
 
 <Alert title="Warning" type="danger">
 
-This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.
+This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script. Always make sure to delete the file/script once you are successful converting your database.
 
 </Alert>
 
