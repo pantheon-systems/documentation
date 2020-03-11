@@ -1,19 +1,10 @@
 import React from "react"
 import Partial from "./partial"
+import { Location } from "@reach/router"
+import queryString from "query-string"
 
 const ResourceSelector = () => {
-  /* DEBUGGING
-    console.log ("location Array = ", window.location)
-    console.log ("location.search value = ", window.location.search)
-    */
-
-  const params = (
-    window.location.search.match(new RegExp("([^?=&]+)(=([^&]*))?", "g")) || []
-  ).reduce(function(result, each, n, every) {
-    let [key, value] = each.split("=")
-    result[key] = value
-    return result
-  }, {})
+  const params = location.search ? queryString.parse(location.search) : {}
 
   //console.log("Params = ", params) //DEBUGGING
   //console.log("Params Object Keys: ", Object.keys(params)) //DEBUGGING
