@@ -29,4 +29,4 @@ All links from the video are provided below.
 [Explore Platform Architecture](https://pantheon.io/docs/platform/)
 
 
-
+<ResourceSelector id="architecture" />
