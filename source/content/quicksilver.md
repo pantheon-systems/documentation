@@ -46,7 +46,6 @@ Quicksilver currently supports `webphp` scripting, which runs a PHP script via t
 We recommend setting up a dedicated directory in the docroot (e.g. `private/scripts`) for tracking these files. If your site uses a [nested docroot](/nested-docroot), the scripts directory needs to be located in the  `web` subdirectory of your site's code repository (e.g. `web/private/scripts`).
 
 ## Hooks
-
 You can hook into the following workflows:
 
 | Workflow                               | Description                                                         | Location of webphp runtime | Notes                                       |
@@ -60,9 +59,11 @@ You can hook into the following workflows:
 
 ## Secrets
 
-Your script may require tokens, passwords, or other information that should be protected. These values should be stored in `secrets.json`, which you can create and store in your site's [private files path](/private-paths#private-path-for-files).
+Your script may require tokens, passwords, or other information that should be protected. These values should be stored in securely. Some methods for secure storage include:
 
-You can also streamline the process of working with `secrets.json` with the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).
+- A key management service like [Lockr](/guides/lockr),
+- A storage solution in your site's [private files path](/private-paths#private-path-for-files),
+- A secrets file managed by the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).
 
 ## Debugging via Terminus
 
