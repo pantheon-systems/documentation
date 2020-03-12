@@ -407,6 +407,16 @@ You have requested a non-existent service "cache.backend.redis".
 
 Install and enable the module to resolve.
 
+### Heavy Redis transactions tracing back to a specific plugin (WordPress)
+
+A page load with 2,000 Redis calls can be 2 full seonds of object cache transactions. If a plugin you're using is erroneously creating a huge number of cache keys, you might be able to mitigate the problem by disabling cache persistency for the plugin's group in your theme's `function.php` file, or an [MU-plugin](/mu-plugin):
+
+```php
+wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
+```
+
+This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `wp_cache_get( 'foo', 'bad-actor' );` will not use Redis, and instead fall back to WordPress' default runtime object cache.
+
 ## Frequently Asked Questions
 
 ### How much Redis cache is available for each plan level?
