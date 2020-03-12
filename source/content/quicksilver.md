@@ -59,11 +59,15 @@ You can hook into the following workflows:
 
 ## Secrets
 
-Your script may require tokens, passwords, or other information that should be protected. These values should be stored in securely. Some methods for secure storage include:
+Your script may require tokens, passwords, or other information that should be protected. These values should be stored in securely. You can do thid with a third party key management service like [Lockr](/guides/lockr), or use a storage solution in your site's [private files path](/private-paths#private-path-for-files).
 
-- A key management service like [Lockr](/guides/lockr),
-- A storage solution in your site's [private files path](/private-paths#private-path-for-files),
-- A secrets file managed by the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin).
+For the latter, the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) provides a convenient way to manage secret data in json files in your site's private files path.
+
+<Alert type="info" title="Note">
+
+When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environemnt to another will also overwrite the private files path.
+
+</Alert>
 
 ## Debugging via Terminus
 
