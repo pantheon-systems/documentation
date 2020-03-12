@@ -5,14 +5,16 @@ import withLocation from "./withLocation"
 
 const ResourceSelector = ({ search }) => {
   //console.log("Search = ", search) //DEBUGGING
-
+  const searchValues = Object.values(search)
   return (
     <>
-      {search[0] ? Object.values(search).map((value, key) => {
-        return <Partial key={key} file={`additionalResources/${value}.md`} />
-      }) :
+      {searchValues.length ? (
+        searchValues.map((value, key) => {
+          return <Partial key={key} file={`additionalResources/${value}.md`} />
+        })
+      ) : (
         <Partial file={`additionalResources/null.md`} />
-      }
+      )}
     </>
   )
 }
