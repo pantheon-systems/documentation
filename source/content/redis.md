@@ -415,7 +415,7 @@ A page load with 2,000 Redis calls can be 2 full seonds of object cache transact
 wp_cache_add_non_persistent_groups( array( 'bad-actor' ) );
 ```
 
-This declaration means use of wp_cache_set( 'foo', 'bar', 'bad-actor' ); and wp_cache_get( 'foo', 'bad-actor' ); will not use Redis, and instead fall back to WordPress' default runtime object cache.
+This declaration means use of `wp_cache_set( 'foo', 'bar', 'bad-actor' );` and `wp_cache_get( 'foo', 'bad-actor' );` will not use Redis, and instead fall back to WordPress' default runtime object cache.
 
 ## Frequently Asked Questions
 
