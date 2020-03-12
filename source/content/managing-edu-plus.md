@@ -1,14 +1,12 @@
 ---
-title: Managing Site Plan Changes and Chargeback for EDU+ Sites
-description: Learn how to manage site plan changes and chargebacks for Pantheon EDU+ sites.
+title: Managing Site Plan Changes for EDU+ Sites
+description: Learn how to manage site plan changes for Pantheon EDU+ sites.
 tags: [manage]
 categories: [manage]
 reviewed: "2020-03-11"
 ---
 
-Pantheon for EDU+ allows Organization Administrators to manage who can change service level [plans](https://pantheon.io/pricing) for sites within their [organization](/organizations). When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can change a site's plan.
-
-When a site is not associated with an organization, you can add a credit card to change the site's plan.
+Pantheon for EDU+ allows Organization Administrators to manage who can change service level [plans](https://pantheon.io/pricing) for sites within their [organization](/organizations). When a site is associated with an EDU+ Organization, billing is managed through a contract with Pantheon, and only Organization Administrators can confirm a site plan change.
 
 If you have a free Pantheon for EDU account and would like to upgrade to Pantheon for EDU+, [complete this form](https://pantheon.io/pantheon-edu-plus) to contact our Sales team.
 
@@ -46,8 +44,16 @@ This allows you to collect the site name, site UUID, site owner, and site owner'
 
 ## Change the Service Level (Team Member)
 
-1. From your Site Dashboard, select **Settings**.
-2. Your organization has specific information you'll need to complete. Click **Read Instructions** to continue.  
-![Service Level Instructions](../images/dashboard/edu-read-instructions.png)
-3. Enter the required site and plan information in your organization's form. Below is an example form; however, each organization will have its own custom form.
-![EDU+ Organization Payment Form](../images/edu-payment-form.png)
+1. From the Site Dashboard, click the **Upgrade** button:
+
+ ![Upgrade plan button shown on Sandbox sites](../images/dashboard/upgrade-plan.png)
+
+ Otherwise, click the **current plan** next to the site name:
+
+ ![Screenshot of a site Dashboard on a Performance Medium plan](../images/dashboard/change-plan.png)
+
+1. Your organization has specific information you'll need to complete. Click **Read Instructions** to continue.
+
+1. Enter the required site and plan information in your organization's form. Below is an example form; however, each organization will have its own custom form.
+
+  ![Example EDU+ Organization Payment Form](../images/edu-payment-form.png)
