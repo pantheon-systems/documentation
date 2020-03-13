@@ -55,4 +55,4 @@ Clear cache after deploying this code change. All cached IP:PORT references will
 
 [Private Paths](/private-paths)
 
-[Symlinks and Assumed Write Access](/assuming-write-access)
+[Symlinks and Assumed Write Access](/symlinks-assumed-write-access)

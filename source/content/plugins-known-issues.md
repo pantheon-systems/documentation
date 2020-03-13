@@ -20,7 +20,7 @@ Some plugins and themes are built on the assumption that the CMS has write acces
 
 See [Use the Pantheon WebOps Workflow](/pantheon-workflow) for more information on how Pantheon differentiates "code" from "files".
 
-The solution to these issues is usually to create a symlink from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). This process is detailed in [Using Extensions That Assume Write Access](/assuming-write-access).
+The solution to these issues is usually to create a symlink from the plugin's expected write location to a location in the writable filesystem (`/sites/default/files` for Drupal, `wp-content/uploads` for WordPress). This process is detailed in [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
 The following is a list of plugins that assumes write access, and the specific file or folder that needs to be symlinked to resolve:
 
@@ -117,7 +117,7 @@ ___
 
 <ReviewDate date="2020-02-10" />
 
-**Issue:** Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access).
+**Issue:** Autoptimize assumes write access to the site's codebase within the `wp-content/resources` directory, which is not granted on Test and Live environments on Pantheon by design. For additional details, see [Using Extensions That Assume Write Access](/symlinks-assumed-write-access).
 
 **Solution:** Configure Autoptimize to write files within the standard `wp-content/uploads` path for WordPress (`wp-content/uploads/autoptimize`) by adding the following to `wp-config.php`:
 
@@ -130,7 +130,7 @@ Be sure to add this configuration _above_ the comment to stop editing:
 
 ![Example of Autoptimize configuration above the stop editing comment](../images/autoptimize-config.png)
 
-For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/assuming-write-access/#create-a-symbolic-link).
+For additional details, see the [Autoptimize FAQ](https://wordpress.org/plugins/autoptimize/faq). An alternative solution is to [create a symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link).
 
 ___
 
@@ -723,7 +723,7 @@ ___
    define('WP_CACHE', false);
    ```
 
-**Issue 2:** WP-rocket [assumes write access](/assuming-write-access) to read-only file paths in Pantheon.
+**Issue 2:** WP-rocket [assumes write access](/symlinks-assumed-write-access) to read-only file paths in Pantheon.
 
 **Solution:** [Create symlinks](#assumed-write-access) as noted above.
 
@@ -814,7 +814,7 @@ ___
 
 **Solution 2:**
 
-Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/assuming-write-access) for more information.
+Create a symlink for `wp-content/languages` pointing to `wp-content/uploads/languages`. See [Using Extensions That Assume Write Access](/symlinks-assumed-write-access) for more information.
 
 ___
 
@@ -864,7 +864,7 @@ ___
 
 **Issue:** This theme throws a PHP Fatal error in its settings page for Dev's and Multidev's Git mode, Test and Live.
 
-**Solution:** This theme assumes write access to theme folders `wp-content\themes\uncode\core\assets\css` and `wp-content\themes\uncode\library\css` for it to work properly in git mode. For additional details, see [Using Extensions That Assume Write Access](/assuming-write-access/#uncodetheme).
+**Solution:** This theme assumes write access to theme folders `wp-content\themes\uncode\core\assets\css` and `wp-content\themes\uncode\library\css` for it to work properly in git mode. For additional details, see [Using Extensions That Assume Write Access](/symlinks-assumed-write-access#uncodetheme).
 
 ___
 

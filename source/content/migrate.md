@@ -206,7 +206,7 @@ Archives for WordPress sites should include `index.php` at the code root level, 
 ### Multiple file directories found within the import archive.
 **Cause:** The migration tool found more than one potential location for files within the archive. This error also occurs if Drupal's private files directory is not placed within the public directory (`sites/default/files/private`).
 
-**Solution:** All files must be moved into the standard location for your site's CMS (`/sites/default/files` for Drupal, and `/wp-content/uploads` for WordPress). For more details, see [Files](/files) and [Symlinks and Assumed Write Access](/assuming-write-access).
+**Solution:** All files must be moved into the standard location for your site's CMS (`/sites/default/files` for Drupal, and `/wp-content/uploads` for WordPress). For more details, see [Files](/files) and [Symlinks and Assumed Write Access](/symlinks-assumed-write-access).
 
 ### Multiple site directories found within the import archive.
 **Cause:** The migration tool found a multisite installation, which is not supported on the platform.

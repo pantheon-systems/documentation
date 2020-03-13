@@ -103,7 +103,7 @@ Pantheon provides a [cloud-based filesystem](/files) to store user-generated con
 
 <Alert title="Warning" type="danger">
 
-We recommend *only* changing this setting when needed for [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`. For most cases, you can [create an additional symlink](/assuming-write-access) in your code base.
+We recommend *only* changing this setting when needed for [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`. For most cases, you can [create an additional symlink](/symlinks-assumed-write-access) in your code base.
 
 </Alert>
 

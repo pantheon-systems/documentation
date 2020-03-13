@@ -904,8 +904,8 @@
     - title: 'Filesystem'
       subtitle: 'Debug issues with write access and unexpected permissions.'
       links:
-        - text: 'Using Extensions That Assume Write Access'
-          url: '/assuming-write-access'
+        - text: 'Symlinks and Assumed Write Access'
+          url: '/symlinks-assumed-write-access'
         - text: 'Debugging Connectivity Issues'
           url: '/debug-connections'
         - text: 'Restoring an Environment from a Backup'
