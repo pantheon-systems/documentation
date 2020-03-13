@@ -99,13 +99,19 @@ For more information and compatibility requirements, see [Managing Drush Version
 
 ### Filemount Path
 
-Pantheon provides a [cloud-based filesystem](/files) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `/sites/default/files` (Drupal) or `/wp-content/uploads` (WordPress), but you can change the location with the `filemount` variable:
+Pantheon provides a [cloud-based filesystem](/files) to store user-generated content and other website files. By default, we create a symlink to this filesystem at `sites/default/files` (Drupal) or `wp-content/uploads` (WordPress), but you can change the location with the `filemount` variable.
+
+<Alert title="Warning" type="danger">
+
+We recommend *only* changing this setting when needed for [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`. For most cases, you can [create an additional symlink](/assuming-write-access) in your code base.
+
+</Alert>
+
+The only valid filemount path other than the default paths for each CMS is `/files` relative to your docroot:
 
 ```yaml
 filemount: /files
 ```
-
-This creates a new symlink to the filesystem at the specified location. Note that this setting is only recommended when creating a custom upstream. Instead, consider using a symlink as described in [Non-Standard Files Locations](/non-standard-file-paths).
 
 Complete the following before deploying `filemount` (**required**):
 
@@ -114,15 +120,6 @@ Complete the following before deploying `filemount` (**required**):
 1. Add path to the `.gitignore` file
 
 1. Configure a `private` subdirectory of the new path within [`protected_web_paths`](#protected-web-paths)
-
-#### Considerations
-
-* Recommended usage limited to [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`
-* Path must be relative to the site's docroot
-* Specify the exact path; limited selection of valid paths:
-  * `/files`
-  * `/sites/default/files`
-  * `/wp-content/uploads`
 
 ## Quicksilver Platform Integration Hooks
 
