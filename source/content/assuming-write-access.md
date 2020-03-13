@@ -1,15 +1,26 @@
 ---
-title: Using Extensions That Assume Write Access
+title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
 tags: [debugfiles]
 categories: [troubleshoot]
+reviewed: "2020-03-13"
 ---
 
-Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon. WordPress stores files within `wp-content/uploads` and Drupal uses `/sites/default/files`. These directories are symbolically linked to Pantheon's cloud-based filesystem, Valhalla, which is writeable on all environments.
+Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon.
+
+## Standard File Path
+
+Pantheon provides one location for files that are part of your sites content, like those that are managed through Drupal upload forms, e.g. user profile pictures: `/sites/default/files`. For Drupal sites, this is the only location you can use for files that are uploaded as part of your application.
+
+For WordPress sites, `/wp-content/uploads` is the only acceptable location for files. All other locations are considered part of your codebase, and under version control.
+
+These directories are symbolically linked to Pantheon's cloud-based filesystem, Valhalla, which is writeable on all environments.
 
 Extensions that create files within the codebase (e.g. `wp-content/plugins/plugin-name/some-other-directory` or `/sites/all/modules/module-name/some-other-directory`) incorrectly assume write access that is not granted on the Live and Test environments.
 
-The best solution is to communicate with the maintainer of the module or plugin and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround to avoid failures on Test and Live.
+Custom configurations that use non-standard file paths (e.g. `sites/default/blogfiles`) are also incompatible with Pantheon.
+
+The best solution is to communicate with the maintainer of the module, plugin, or custom code/configuration and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround to avoid failures on Test and Live.
 
 ## Create a Symbolic Link
 
