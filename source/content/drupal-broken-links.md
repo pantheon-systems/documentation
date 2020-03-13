@@ -55,4 +55,4 @@ Clear cache after deploying this code change. All cached IP:PORT references will
 
 [Private Paths](/private-paths)
 
-[Non-Standard File Paths](/non-standard-file-paths)
+[Symlinks and Assumed Write Access](/assuming-write-access)

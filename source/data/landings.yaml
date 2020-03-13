@@ -908,8 +908,6 @@
           url: '/assuming-write-access'
         - text: 'Debugging Connectivity Issues'
           url: '/debug-connections'
-        - text: 'Non-Standard Files Locations'
-          url: '/non-standard-file-paths'
         - text: 'Restoring an Environment from a Backup'
           url: '/restore-environment-backup'
 - title: 'Guides'
