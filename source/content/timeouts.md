@@ -6,7 +6,6 @@ categories: [troubleshoot,platform]
 ---
 Rules are for the good of the group, and timeouts are no exception. Timeouts are configured to fit normal program execution. Sometimes timeouts can be reached when working with inefficient code or when attempting to execute a long-running job that would be better suited for [Terminus](/terminus).
 
-
 ## User-Configurable Timeouts
 
 | Name              | Timeout   | Description |
@@ -24,7 +23,7 @@ Rules are for the good of the group, and timeouts are no exception. Timeouts are
 | Pantheon executed Drupal cron                                                                                                | 180 seconds | Only applies to Pantheon's automatic hourly execution of drush cron |
 | [PHP set_time_limit](https://secure.php.net/manual/en/function.set-time-limit.php)                                           | 120 seconds | Number of seconds a script can run. If reached, the script returns a fatal error. |
 | Load Balancer                                                                                                                | 120 seconds | Applies to HTTPS requests and requests to a DNS A record. Requests using the Pantheon CNAME for HTTP requests are *not* limited |
-| SSH                                                                                                                          | 10 minutes with no communication <br /> 60 minutes hard limit | Applies to remote Drush and WP-CLI commands, SSH tunneling, SFTP, rsync |
+| SSH                                                                                                                          | 5 minutes with no communication; <br /> 60 minute hard limit | Applies to remote Drush and WP-CLI commands, SSH tunneling, SFTP, rsync  |
 | [MySQL net_write_timeout](https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_write_timeout)     | 90 seconds  | Number of seconds to wait for a block to be written to a connection before aborting the write. |
 | [MySQL net_read_timeout](https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_net_read_timeout)       | 90 seconds  | Number of seconds to wait for more data from a connection before aborting the read. |
 | [MySQL wait_timeout](https://dev.mysql.com/doc/refman/5.5/en/server-system-variables.html#sysvar_wait_timeout)               | 420 seconds | Number of seconds the server waits for activity on a noninteractive connection before closing it. |
