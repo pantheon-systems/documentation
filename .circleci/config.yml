@@ -15,7 +15,7 @@ jobs:
           command: .circleci/scripts/set-env.sh && source $BASH_ENV
       - restore_cache:
           keys:
-            - v2.5.4-always-
+            - v2.5.5-always-
             - npm-v2.8.2-{{ checksum "gatsby/package-lock.json" }}
       - run:
           name: Install Terminus
@@ -81,7 +81,7 @@ jobs:
             - ~/build/gatsby/package-lock.json
             - ~/build/gatsby/node_modules
       - save_cache:
-          key: v2.5.4-always-{{ epoch }}
+          key: v2.5.5-always-{{ epoch }}
           paths:
             - ~/build/gatsby/public
             - ~/build/gatsby/.cache
