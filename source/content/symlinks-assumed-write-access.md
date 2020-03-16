@@ -10,9 +10,9 @@ Some modules and plugins create files within hard-coded paths outside of the sta
 
 ## Standard File Path
 
-Pantheon provides one location for files that are part of your sites content, like those that are managed through Drupal upload forms, e.g. user profile pictures: `/sites/default/files`. For Drupal sites, this is the only location you can use for files that are uploaded as part of your application.
+Pantheon provides one location for files that are part of your sites content, like those that are managed through Drupal upload forms, e.g. user profile pictures: `/sites/default/files`. For Drupal sites, this is the default location for files that are uploaded as part of your application.
 
-For WordPress sites, `/wp-content/uploads` is the only acceptable location for files. All other locations are considered part of your codebase, and under version control.
+For WordPress sites, `/wp-content/uploads` is the default location for files. All other locations are considered part of your codebase, and under version control.
 
 These directories are symbolically linked to Pantheon's cloud-based filesystem, Valhalla, which is writeable on all environments.
 
