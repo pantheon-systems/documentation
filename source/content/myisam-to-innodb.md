@@ -3,6 +3,7 @@ title: Converting MySQL Tables From MyISAM to InnoDB
 description: Improve the reliability and performance of your MySQL database by moving to InnoDB.
 tags: [status]
 categories: [performance,go-live]
+reviewed: "2020-03-16"
 ---
 Before [InnoDB](https://dev.mysql.com/doc/refman/5.5/en/innodb-storage-engine.html), indexes would get corrupted, updates meant table locks—not just row locks, and there was no support for transactions. Since the advent of InnoDB we've come a long way.
 
@@ -12,13 +13,15 @@ Sites that don't use InnoDB are missing out on performance and stability gains. 
 
 This is an unofficial script and is not supported by Pantheon. We highly recommend making a backup of your database before running this script.
 
+Always make sure to delete the script after successfully converting your database.
+
 </Alert>
 
 ## MySQL Command
 
 Run this from the MySQL command prompt to convert a table from MyISAM to InnoDB:
 
-```
+```sql
 ALTER TABLE table_name ENGINE=InnoDB;
 ```
 
@@ -26,26 +29,27 @@ ALTER TABLE table_name ENGINE=InnoDB;
 
 <Alert title="Note" type="info">
 
-You must be a Pantheon customer to use this script.
+This script is designed specifically for sites running on the Pantheon platform, and will not work for other databases.
 
 </Alert>
 
 1. Save the code in a file with the extension `.php` and add it to your site root.
-2. Upload the new PHP file to your site via SFTP or Git.
-3. Point a browser to your newly created script that's located in the root directory of your Dev environment:
+1. Upload the new PHP file to your site via SFTP or Git.
+1. Point a browser to your newly created script that's located in the root directory of your Dev environment:
 
-        https://dev-yoursite.pantheonsite.io/filename.php
+  ```none
+  https://dev-yoursite.pantheonsite.io/filename.php
+  ```
 
 That's all there is to it — the script will do all the work.
 
 Here's the browser version of the script:
 
-
 <TabList>
 
-<Tab title="PHP 5" id="php5" active={true}>
+<Tab title="PHP 5" id="php5">
 
-```php
+```php:title=myisam-to-innodb.php
 <h1>Pantheon MyISAM to InnoDB engine converter</h1>
 
 <?php
@@ -86,10 +90,9 @@ die(0);
 
 </Tab>
 
-<Tab title="PHP 7" id="php7">
+<Tab title="PHP 7" id="php7" active={true}>
 
-```php
-
+```php:title=myisam-to-innodb.php
 <h1>Pantheon MyISAM to InnoDB engine converter</h1>
 
 <?php
@@ -141,12 +144,10 @@ If you want to run the script from the command line instead of adding it to your
 Make sure you have:
 
 - PHP installed on your computer
-- Your database connection info for your Dev environment from your Site's Dashboard
+- Your [database connection info](/mysql-access) for your Dev environment from your [Site Dashboard](/sites)
 - Copy the script below and save it in a file with a `.php` extension in your home directory.
 
-Here is the command line script:
-
-```
+```php:title=myisam-to-innbodb.php
 <?php
 /*
  * Use this version if you are NOT a Pantheon customer.
@@ -239,7 +240,7 @@ This is the name of the database that contains the tables. If you are a pantheon
 
 </dl>
 
-Now, save the file. Execute the program from a command window.
+Save the file, set it as executable, then execute the program from a command window.
 
 The script will alert you to everything it's doing. It has safeties built in to keep it from changing anything but MyISAM tables. It will look at every table in your database, and if the engine is MyISAM, it will change it to an InnoDB.
 
