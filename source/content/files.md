@@ -18,9 +18,11 @@ Valhalla creates a symbolic link (**symlink**), to the `files` directory at the 
 It is important to note that the `files` directory in your site root is not part of the document root and is not directly web-accessible. If you need to make a path in `files` accessible from the docroot, you need to [create an additional symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link) from within the document root.  Any non-standard file locations should be symbolically linked to `/files` or moved manually.
 
 ## Access via SFTP
+
 You can connect directly to the filesystem by copying your [connection information](/sftp#sftp-connection-information) into popular SFTP clients such as [Filezilla](/filezilla) and navigating to the `/files` directory.
 
 ## Pantheon-Related Files
+
 When you are logged in to your application container, you may notice some files that you don't recognize. Don't worry—we put them there, and here's why:
 
 **fusedav_version**: shows the version of fusedav being used.
@@ -28,7 +30,6 @@ When you are logged in to your application container, you may notice some files 
 **fusedav.conf**: is the client configuration file for fusedav. fusedav is software used to mount shared storage (the folder */files*) to the application container. This folder is where your content-related files (images, attachments, and other things not stored in version control) are kept. For Drupal sites, there is a symlink to it from `sites/default/files`. For WordPress sites, there is a symlink from `wp-content/uploads`.
 
 **htpasswd**: is used when you want to lock your environment with a username and password. There is a Public button on each environment Dashboard that you can click to add a username and password to your site. This will keep your site hidden while you're working on it.
-
 
 ## Troubleshooting
 
