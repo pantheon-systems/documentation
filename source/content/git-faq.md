@@ -4,7 +4,7 @@ description: Answers to common questions about Git, Drupal, WordPress and Panthe
 tags: [git]
 categories: [develop]
 contributors: [mrfelton, alexfornuto]
-reviewed: "2020-02-11"
+reviewed: "2020-03-16"
 ---
 [Git](https://git-scm.com/) is the version control tool at the heart of the Pantheon workflow. If you're a developer who likes to use [local development](), it's a good way to work with the Pantheon platform: develop locally, commit, and push to master to deploy code into your Pantheon Development environment.
 
@@ -19,6 +19,14 @@ This doc answers many common Git questions. If you're encountering merge conflic
 ## Does Pantheon support Git submodules?
 
 No, Git submodules are not supported at this time. We recommend maintaining custom modules, themes, and/or plugins within separate repositories.
+
+You can remove submodules with `git rm`:
+
+```bash{promptUser: user}
+git rm ./submodule_directory/
+```
+
+Then commit and push your changes.
 
 ## What are the Git tags?
 
