@@ -69,7 +69,7 @@ Yes. Unlike Global CDN, Advanced Global CDN can be configured to meet the unique
 - Custom/Comprehensive WAF services
 - Advanced bot detection & mitigation (Available as an add-on)
 
-[Get a full breakdown of the features](https://pantheon.io/advanced-global-cdn#pricing-matrix-wrapper) offered by our CDN services.
+[Get a full breakdown of the features](https://pantheon.io/product/advanced-global-cdn) offered by our CDN services.
 
 ## See Also
 
