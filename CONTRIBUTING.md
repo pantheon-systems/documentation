@@ -1,6 +1,8 @@
 # Contributing
 Help us create relevant and useful content for developers like yourself. See something you'd like to add or change? We love pull requests!
 
+I'm an arbitrary change, I shouldn't be merged, oh no.
+
 **NOTE**: All contributions must be licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/). Code snippet contributions must additionally be licensed under [The MIT License](http://opensource.org/licenses/MIT). You must have permission to contribute your work under these terms.
 
 If you're looking for a place to start, try copying our [Doc Template](/source/content/doc-template.md) file and using it to outline your new doc.
