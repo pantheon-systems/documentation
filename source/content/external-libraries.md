@@ -66,6 +66,14 @@ If your WordPress site uses Composer, consider the [PHP WkHtmlToPdf](https://git
 
 </TabList>
 
+### Unable to Generate PDF File
+
+Due to a [known issue in wkhtmltopdf](https://github.com/wkhtmltopdf/wkhtmltopdf/issues/4242) and sites that use the CSS `quotes` property, some users may have issues with downloading a PDF created by wkhtmltopdf. In Live environments, creating a PDF fails silently. On Dev, you'll encounter the error `Unable to generate PDF file`.
+
+To confirm the source of the error, log in to the Drupal Admin and click **Reports** in the menu, then **Recent Log Messages** and look for `print_pdf` or `(returned 127): No stderr output available`.
+
+If you encounter this error, remove the offending `quotes` property from the CSS.
+
 ## PhantomJS
 
 In its own words, [PhantomJS](https://github.com/ariya/phantomjs/) is a headless WebKit with JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.
