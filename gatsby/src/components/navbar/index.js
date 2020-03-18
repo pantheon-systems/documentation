@@ -4,8 +4,7 @@ import './style.css';
 
 const Navbar = ({ title, items, activePage }) => {
   return (
-    <div className="col-md-3 manual-guide-toc" role="navigation">
-      <nav>
+      <nav className="col-md-3 manual-guide-toc" aria-labelledby="guide-nav">
       <button
         type="button"
         className="navbar-toggle"
@@ -18,7 +17,7 @@ const Navbar = ({ title, items, activePage }) => {
         <span className="sr-only">Toggle navigation</span>
         <i className="fa fa-bars" />
       </button>
-      <h3>{title}</h3>
+      <h3 id="guide-nav">{title}</h3>
       <div className="collapse navbar-collapse" id="guide-collapse">
         {items && (
           <ul id="manual-guide-toc" className="manual-guide-toc">
@@ -35,7 +34,6 @@ const Navbar = ({ title, items, activePage }) => {
         )}
       </div>
       </nav>
-    </div>
   )
 }
 

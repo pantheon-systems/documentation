@@ -29,9 +29,9 @@ const TOC = ({ title }) => {
   })
 
   return (
-    <nav>
+    <nav aria-labelledby="toc-nav" className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
     <div id="toc" className="tocbot">
-      <h4>{title || "Table of Contents"}</h4>
+      <h4 id="toc-nav">{title || "Table of Contents"}</h4>
       <div className="toc-placeholder" />
     </div>
     </nav>

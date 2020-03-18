@@ -98,7 +98,7 @@ class DocTemplate extends React.Component {
         />
         <div className="">
           <div className="container doc-content-well">
-            <div id="doc" className="doc article col-md-9 md-70">
+            <article id="doc" className="doc article col-md-9 md-70">
               <HeaderBody
                 title={node.frontmatter.title}
                 subtitle={node.frontmatter.subtitle}
@@ -115,13 +115,8 @@ class DocTemplate extends React.Component {
                   <MDXRenderer>{node.body}</MDXRenderer>
                 </MDXProvider>
               </div>
-            </div>
-            <div
-              className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
-              role="complementary"
-            >
-              <TOC title="Contents" />
-            </div>
+            </article>
+            <TOC title="Contents" />
           </div>
         </div>
         <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} />
