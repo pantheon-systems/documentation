@@ -112,10 +112,10 @@ class GuideTemplate extends React.Component {
                 activePage={node.fields.slug}
                 items={items}
               />
-              <div className="col-md-9 guide-doc-body">
+              <main id="doc" className="col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <article
-                    id="doc" className={`col-xs-${contentCols} col-md-${contentCols}`}
+                    className={`col-xs-${contentCols} col-md-${contentCols}`}
                   >
                     <HeaderBody
                       title={node.frontmatter.title}
@@ -156,7 +156,7 @@ class GuideTemplate extends React.Component {
                   prev={this.props.pageContext.previous}
                   next={this.props.pageContext.next}
                 />
-              </div>
+              </main>
             </div>
           </div>
       </Layout>

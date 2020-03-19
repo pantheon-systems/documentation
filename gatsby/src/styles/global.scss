@@ -62,7 +62,10 @@ pre code {
 .pantheon-docs a:hover {
 	text-decoration: none;
 }
-
+.pantheon-docs a:focus {
+	outline: 5px auto #0a6bb5;
+	outline-offset: 0;
+}
 .pantheon-docs h1 {
 	margin-top: 35px;
 	font-family: "TabletGothic";

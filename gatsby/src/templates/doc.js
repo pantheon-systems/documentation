@@ -96,9 +96,9 @@ class DocTemplate extends React.Component {
           tags={node.frontmatter.tags}
           reviewed={isoDate.frontmatter.reviewed}
         />
-        <div className="">
+        <main id="doc">
           <div className="container doc-content-well">
-            <article id="doc" className="doc article col-md-9 md-70">
+            <article className="doc article col-md-9 md-70">
               <HeaderBody
                 title={node.frontmatter.title}
                 subtitle={node.frontmatter.subtitle}
@@ -118,8 +118,11 @@ class DocTemplate extends React.Component {
             </article>
             <TOC title="Contents" />
           </div>
-        </div>
-        <GetFeedback formId="tfYOGoE7" page={"/" + node.fields.slug} />
+        </main>
+          <GetFeedback
+            formId="tfYOGoE7"
+            page={"/" + node.fields.slug}
+          />
       </Layout>
     )
   }
