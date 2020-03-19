@@ -6,7 +6,7 @@ categories: [automate,platform]
 reviewed: "2020-03-10"
 ---
 
-Hook into platform workflows to automate your Pantheon WebOps workflow. Tell us which script you want to run, and we'll run it automatically every time you or another team member triggers the corresponding workflow. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
+Hook into platform workflows to automate your Pantheon WebOps workflow. Tell Pantheon which script you want to run, and the platform will run it automatically every time you or another team member triggers the corresponding workflow. View (and contribute) to a [growing set of example scripts](https://github.com/pantheon-systems/quicksilver-examples/). Find examples to enable functionality like chat-ops, database sanitization, deployment logging, and automated testing operations with a CI server.
 
 <Enablement title="Quicksilver Cloud Hooks Training" link="https://pantheon.io/agencies/learn-pantheon?docs">
 
@@ -27,7 +27,7 @@ workflows:
         script: private/scripts/slack_deploy_notification.php
 ```
 
-If you add the following after the previous snippet, we'll also run that script to automatically log the deployment to New Relic:
+Add the following after the previous snippet to have it automatically log the deployment to New Relic:
 
 ```yaml:title=pantheon.yml
       - type: webphp
@@ -37,15 +37,16 @@ If you add the following after the previous snippet, we'll also run that script 
 
 ## WebOps Workflow and Stage
 
-Specify the workflows you want to hook into (e.g. `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to root of your site's docroot.
+Specify the workflows you want to [hook](#hooks) into (e.g., `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to the root of your site's docroot.
 
 ## Script Type and Location
 
 Quicksilver currently supports `webphp` scripting, which runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/timeouts), and cannot be batched. In the future we may add additional types.
 
-We recommend setting up a dedicated directory in the docroot (e.g. `private/scripts`) for tracking these files. If your site uses a [nested docroot](/nested-docroot), the scripts directory needs to be located in the  `web` subdirectory of your site's code repository (e.g. `web/private/scripts`).
+We recommend setting up a dedicated directory in the docroot (e.g., `private/scripts`) for tracking these files. If your site uses a [nested docroot](/nested-docroot), the scripts directory needs to be located in the `web` subdirectory of your site's code repository (e.g., `web/private/scripts`).
 
 ## Hooks
+
 You can hook into the following workflows:
 
 | Workflow                               | Description                                                         | Location of webphp runtime | Notes                                       |
@@ -59,13 +60,13 @@ You can hook into the following workflows:
 
 ## Secrets
 
-Your script may require tokens, passwords, or other information that should be protected. These values should be stored in securely. You can do thid with a third party key management service like [Lockr](/guides/lockr), or use a storage solution in your site's [private files path](/private-paths#private-path-for-files).
+Your script may require tokens, passwords, or other information that should be protected. These values should be stored securely. You can do this with a third-party key management service like [Lockr](/guides/lockr), or with a storage solution in your site's [private files path](/private-paths#private-path-for-files).
 
-For the latter, the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) provides a convenient way to manage secret data in json files in your site's private files path.
+For the latter, the [Terminus Secrets Plugin](https://github.com/pantheon-systems/terminus-secrets-plugin) provides a convenient way to manage secret data in JSON files in your site's private files path.
 
 <Alert type="info" title="Note">
 
-When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environemnt to another will also overwrite the private files path.
+When storing keys for Quicksilver scripts in the private files path, be aware that the Site Dashboard function to copy files from one environment to another will also overwrite the private files path.
 
 </Alert>
 
