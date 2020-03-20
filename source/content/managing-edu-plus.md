@@ -12,7 +12,7 @@ If you have a free Pantheon for EDU account and would like to upgrade to Pantheo
 
 ## Change the Service Level
 
-1. As an org admin, from the Site Dashboard, click the **Upgrade** button:
+1. As an [organization administrator](/change-management#roles-and-permissions), from the Site Dashboard, click the **Upgrade** button:
 
  ![Upgrade plan button shown on Sandbox sites](../images/dashboard/upgrade-plan.png)
 
@@ -22,8 +22,10 @@ If you have a free Pantheon for EDU account and would like to upgrade to Pantheo
 
 1. Click **Select** below the plan you choose, and select the Plan Size if it's a Performance plan.
 
+  ![Screenshot of the plan options for a site](../images/dashboard/select-plan.png)
+
 1. Review the new plan on the **Confirm Purchase** page, and click **Place Your Order**.
 
   Because billing is handled by the organization, the plan change is immediate, and you'll be returned to the Site Dashboard.
 
-   - If the site plan isn't shown on the Dashboard immediately, refresh the page or click the **Workflows** button for status.
+    - If the site plan isn't shown on the Dashboard immediately, refresh the page or click the **Workflows** button for status.
