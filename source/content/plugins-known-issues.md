@@ -722,6 +722,7 @@ ___
    ```php:title=wp-config.php
    define('WP_CACHE', false);
    ```
+1. (Optional on writable environments) The WP-Rocket plugin has checks that it automatically sets `WP_CACHE` to `true` in the `wp-config.php` if it is writable. To prevent it, you can optionally add this plugin https://docs.wp-rocket.me/article/61-disable-page-caching  
 
 **Issue 2:** WP-rocket [assumes write access](/assuming-write-access) to read-only file paths in Pantheon.
 
