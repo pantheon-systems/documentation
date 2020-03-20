@@ -709,7 +709,7 @@ ___
 
 ## [WP-Rocket](https://wp-rocket.me/)
 
-<ReviewDate date="2019-02-25" />
+<ReviewDate date="2020-03-20" />
 
 **Issue 1:** As with other caching plugins, this conflicts with [Pantheon's Advanced Page Cache](https://wordpress.org/plugins/pantheon-advanced-page-cache/). The caching feature can be disabled so other features like file optimization, media, etc. can be used side-by-side.
 
@@ -722,7 +722,7 @@ ___
    ```php:title=wp-config.php
    define('WP_CACHE', false);
    ```
-1. (Optional on writable environments) The WP-Rocket plugin has checks that it automatically sets `WP_CACHE` to `true` in the `wp-config.php` if it is writable. To prevent it, you can optionally add this plugin https://docs.wp-rocket.me/article/61-disable-page-caching  
+1. **Optional on writable environments:** The WP-Rocket plugin automatically tries to set `WP_CACHE` to `true` in `wp-config.php`, if it is writable. To prevent this behavior on Dev and Multidev environments, you can optionally add this plugin [helper plugin](https://docs.wp-rocket.me/article/61-disable-page-caching), which disables the attempted write.
 
 **Issue 2:** WP-rocket [assumes write access](/assuming-write-access) to read-only file paths in Pantheon.
 
