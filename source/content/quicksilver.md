@@ -39,6 +39,8 @@ Add the following after the previous snippet to have it automatically log the de
 
 Specify the workflows you want to [hook](#hooks) into (e.g., `deploy` or `sync_code`), the workflow stage (`before` or `after`) and the location of the script relative to the root of your site's docroot.
 
+If you want to hook into deploy workflows, you'll need to deploy your `pantheon.yml` into an environment first. Likewise, if you are adding new operations or changing the script an operation will target, the deploy containing those adjustments to `pantheon.yml` will not self-referentially exhibit the new behavior. Only subsequent deploys will be affected.
+
 ## Script Type and Location
 
 Quicksilver currently supports `webphp` scripting, which runs a PHP script via the same runtime environment as the website itself. PHP scripts are subject to the same limits as any code on the platform, like [timeouts](/timeouts), and cannot be batched. In the future we may add additional types.
@@ -88,8 +90,6 @@ List and show previous workflows and their corresponding Quicksilver operations 
 - `terminus workflow:info:status <site> --id=<workflow>`
 
 ## Troubleshooting
-
-If you want to hook into deploy workflows, you'll need to deploy your `pantheon.yml` into an environment first. Likewise, if you are adding new operations or changing the script an operation will target, the deploy containing those adjustments to `pantheon.yml` will not self-referentially exhibit the new behavior. Only subsequent deploys will be affected.
 
 ### MultiDev Creation Hook Does Not Run When Expected
 
