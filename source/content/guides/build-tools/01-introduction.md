@@ -23,7 +23,7 @@ multidev: true
 
 <Alert type="danger" title="Warning">
 
-The current version of the Build Tools plugin is designed for Terminus 1.x, and is not yet compatible with [current versions](/terminus/updates) of Terminus. We are working on a new version of the Terminus Build Tools plugin with Terminus 2 support and will update this guide once it is released. In the meantime, you can test the [beta release](https://github.com/pantheon-systems/terminus-build-tools-plugin/releases/latest).
+We are working on a new 2.x version of the Terminus Build Tools plugin with Terminus 2 support. In the meantime, you can test the beta release following the instructions below. If you have an issue with the plugin, review the [issue queue](https://github.com/pantheon-systems/terminus-build-tools-plugin/issues). If you need to update to the latest version, see [updating plugin docs](https://pantheon.io/docs/terminus/plugins#update-plugins).
 
 </Alert>
 
@@ -87,10 +87,10 @@ GitHub pull requests (PRs) are a formalized way of reviewing and merging a propo
     composer create-project -n --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-drupal-console-plugin:~1
     ```
 
-8. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin). Update the version number in this example from `2.0.0-beta12` to the current version:
+8. Install the [Terminus Build Tools Plugin](https://github.com/pantheon-systems/terminus-build-tools-plugin). Update the version number in this example from 2.0.0-beta18 to the current version:
 
     ```bash
-    composer create-project --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta12
+    composer create-project --no-dev -d $HOME/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^2.0.0-beta18
     ```
 
   <Alert title="Note" type="info">
