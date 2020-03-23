@@ -38,7 +38,12 @@ We offer various methods for you to interact with your Pantheon site, so it is i
 
 ### Cloudflare
 
-When using Cloudflare as a stacked CDN or proxy, use the variable `$_SERVER["HTTP_CF_CONNECTING_IP"]` instead of `$_SERVER["REMOTE_ADDR"]`.
+When using Cloudflare as a stacked CDN or proxy, use the variable `$_SERVER["HTTP_CF_CONNECTING_IP"]` instead of `$_SERVER["REMOTE_ADDR"]`. 
+
+### Geolocation with Cloudflare
+For geolocation, [enable geolocation](https://support.cloudflare.com/hc/en-us/articles/200168236-Configuring-Cloudflare-IP-Geolocation) on the Cloudflare dashboard. The country code value is passed along in the `CF-IPCountry` request header to the origin web server.
+
+Any PhP reading `CF-IPCountry` values should also add `Vary: CF-IPCountry` to responses to ensure Pantheon's Global CDN properly personalizes cache hits. This will ensure cache behavior is both correct (content returned for the user agent's actual location) and efficient (cache can hit for other requests coming from the same country)
 
 #### Drupal 7 Domain Access module with Cloudflare
 
