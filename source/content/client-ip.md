@@ -1,16 +1,16 @@
 ---
 title: Getting the Client IP Address
 description: Getting the client IP address to set up geolocation capabilities on your Pantheon site.
-tags: [variables]
-categories: [drupal,develop]
+tags: [Drupal, geolocation]
+categories: [develop]
 reviewed: "2020-03-09"
 ---
 
 <Alert title="Warning" type="danger">
 
-This page was written before the [Pantheon Global CDN](/global-cdn) was launched for all customers. Now that all traffic runs through a CDN endpoint and is cached when possible, the methods below are now longer an accurate way to geolocate your traffic.
+This page was written before the [Pantheon Global CDN](/global-cdn) was launched for all customers. Now that all traffic runs through a CDN endpoint and is cached when possible, the methods below are no longer an accurate way to geolocate your traffic.
 
-If geolocation is a requirement for your site, consider an [Advanced Global CDN](/advanced-global-cdn) configuration, or a third party geo-aware edge, like Cloudflare
+If geolocation is a requirement for your site, consider an [Advanced Global CDN](/advanced-global-cdn) configuration, or a third party geo-aware edge, like Cloudflare.
 
 </Alert>
 
