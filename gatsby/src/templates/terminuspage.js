@@ -133,7 +133,7 @@ class TerminusTemplate extends React.Component {
     const node = this.props.data.mdx
     const contentCols = node.frontmatter.showtoc ? 9 : 12
     const isoDate = this.props.data.date
-    const ifCommandsDate = node.fields.slug == "/terminus/commands" ? this.props.data.releasesJson.published_at : node.frontmatter.reviewed
+    const ifCommandsDate = node.fields.slug == "/terminus/commands" ? this.props.data.terminusReleasesJson.published_at : node.frontmatter.reviewed
     const ifCommandsISO = node.fields.slug == "/terminus/commands" ? this.props.data.jsonISO.published_at : isoDate.frontmatter.reviewed
 
     return (
@@ -228,10 +228,10 @@ export const pageQuery = graphql`
         reviewed
       }
     }
-    releasesJson {
+    terminusReleasesJson {
       published_at(formatString: "MMMM DD, YYYY")
     }
-    jsonISO: releasesJson {
+    jsonISO: terminusReleasesJson {
       published_at(formatString: "YYYY-MM-DD")
     }
   }
