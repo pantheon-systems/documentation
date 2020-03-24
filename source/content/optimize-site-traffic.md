@@ -60,5 +60,62 @@ Click the Preview tab for the response, which is a list of images if available. 
 
 Pantheon doesn't count DDoS towards site traffic and our [Customer Success](https://pantheon.io/docs/support) team is available to assist with identifying a DDoS attempt, and take steps to mitigate it for your site.
 
+### Block IPs in Drupal or WordPress
+
+IPs can be blocked with a PHP snippet in `settings.php` or `wp-config.php` or via Drupal module or WordPress plugin.
+
+#### Use a PHP Snippet to Block IPs
+
+Using a PHP snippet to block IPs offers a key advantage over using a module or plugin: the platform denies the IP before any connections, databases, or most importantly, the CMS are loaded. Additionally, if the site is under an ongoing DDoS attack, PHP can be added to the configuration file even while site performance is being affected.
+
+To block an IP, add the following to `settings.php` or `wp-config.php`. Remember to replace the example IP (`192.0.2.38`):
+
+```php:title=wp-config.php%20or%20settings.php
+if ($_SERVER['REMOTE_ADDR'] == '192.0.2.38') {
+  exit;
+}
+```
+
+#### Use a Drupal Module or WordPress Plugin to Block IPs
+
+<TabList>
+
+<Tab title="Drupal 7" id="d7tab" active={true}>
+
+Navigate to the site's `/admin/config/people/ip-blocking` and enter the IP address to block.
+
+If the site is slow or unavailable, run the MySQL query below, replacing `192.0.2.38` with the IP to block:
+
+```sql
+mysql> INSERT INTO blocked_ips (ip) VALUES ('192.0.2.38');
+```
+
+</Tab>
+
+<Tab title="Drupal 8" id="d8tab">
+
+In Drupal 8, the [Ban](https://www.drupal.org/docs/8/core/modules/ban/overview) module is not enabled by default in the Standard install profile, but it does come with core.
+
+Enable the module, then navigate to the site's `/admin/config/people/ban` to enter the IP address (for example, `192.0.2.38`).
+
+If the site is slow or unavailable, run the MySQL query below, replacing `192.0.2.38` with the IP to block:
+
+```sql
+mysql> INSERT INTO ban_ip (ip) VALUES ('192.0.2.38');
+```
+
+</Tab>
+
+<Tab title="WordPress" id="wptab">
+
+Install and use one of the following WordPress plugins:
+
+- [IP Ban](https://wordpress.org/plugins/simple-ip-ban/)
+- [WP-Ban](https://wordpress.org/plugins/wp-ban/)
+
+</Tab>
+
+</TabList>
+
 ## Advanced Global CDN
 [Advanced Global CDN](/advanced-global-cdn) is a custom-configured upgrade to [Pantheon Global CDN](/global-cdn-caching), available through [Pantheon Professional Services](https://pantheon.io/professional-services). Once configured, Advanced Global CDN can serve entire pages and assets from cache, and provide an additional layer of protection against DDoS attempts.
