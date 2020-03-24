@@ -17,6 +17,9 @@ const LocaldevChangelog = ({ data }) => (
                 __html: localdev.changelog.replace(
                   /h3/g,
                   'h3 class="toc-ignore"'
+                ).replace(
+                  /h2/g,
+                  'h2 class="toc-ignore"'
                 ),
               }}
             />
