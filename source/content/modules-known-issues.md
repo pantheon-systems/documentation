@@ -301,7 +301,7 @@ ___
 
 1. Define a new class that inherits from the `PantheonApachesolrSearchApiSolrService` and contains logic from the `SearchApiSolrDateSortSolrService` (or vice a versa). See the [module source code](https://git.drupalcode.org/project/search_api_solr_date_sort/-/blob/7.x-1.x/includes/service.inc) for examples.
 
-1. Implement a the `hook_search_api_service_info_alter()` function and add your class into a configuration array. Ensure that your [module's weight](https://www.drupal.org/docs/7/creating-custom-modules/howtos/how-to-update-a-modules-weight) is gereater than that of `search_api_solr_date` and `pantheon_apachesolr`.
+1. Implement the `hook_search_api_service_info_alter()` function in your custom module's `.module` file and add your class into a configuration array. See the [developer documentation](https://www.drupal.org/node/1999396) for details. Ensure that your [module's weight](https://www.drupal.org/docs/7/creating-custom-modules/howtos/how-to-update-a-modules-weight) is gereater than that of `search_api_solr_date` and `pantheon_apachesolr`.
 
 ___
 
