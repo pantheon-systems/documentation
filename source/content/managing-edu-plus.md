@@ -22,7 +22,7 @@ If you have a free Pantheon for EDU account and would like to upgrade to Pantheo
 
 1. Click **Select** below the plan you choose, and select the Plan Size if it's a Performance plan.
 
-  ![Screenshot of the plan options for a site](../images/dashboard/select-plan.png)
+  ![Screenshot of the plan options for a site](../images/dashboard/yourawesomeedu-select-plan.png)
 
 1. Review the new plan on the **Confirm Purchase** page, and click **Place Your Order**.
 
