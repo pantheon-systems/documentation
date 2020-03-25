@@ -23,7 +23,10 @@ The table below illustrates which services file is used in which Pantheon enviro
 
 ## Create and Modify services.yml
 1.  Before you begin, make sure that you have updated your Drupal site to version 8.2.0 or greater.
-2.  From within the `sites/default` directory, create a new `services` file. Name it based on which environment you wish to configure settings for:
+2.  If Drupal has already been installed, permissions on the `sites/default` directory may need to be temporarily changed to allow write access.
+      * [`How to change directory permissions`](https://www.pluralsight.com/blog/it-ops/linux-file-permissions)
+      * Once the .yml has been created and edited, __change permissions__ back to lock down the `sites/default` directory.
+3.  From within the `sites/default` directory, create a new `services` file. Name it based on which environment you wish to configure settings for:
 
     - **All environments:** `services.yml`
     - **Production environment:** `services.pantheon.production.yml`
