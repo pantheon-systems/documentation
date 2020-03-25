@@ -1,8 +1,8 @@
 ---
 title: 'Migrate to Pantheon: WordPress Site Networks'
 description: Learn how to import a WordPress Site Network into Pantheon.
-tags: [migratemanual]
-categories: [get-started,wordpress]
+tags: [wordpress, migration, Site Network]
+categories: [get-started]
 ---
 
 <Alert title="Note" type="info">
@@ -191,4 +191,6 @@ When you re-import the database with current content (prior to going live on Pan
 
 ## See Also
 
-* [The Quickstart Guide to Migrating a WordPress Site](https://pantheon.io/resources/quickstart-guide-migrating-wordpress-site)
+* [Migrate Sites to Pantheon](/migrate)
+* [Guided WordPress Migrations (video)](/videos/migrate-wordpress)
+* [WordPress Launch Check](/wordpress-launch-check)
