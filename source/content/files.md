@@ -5,7 +5,7 @@ tags: [infrastructure, sftpfiles]
 categories: [platform,develop]
 ---
 
-Files are large pieces of static content not stored in your database, usually images or documents, often user uploads. Because they are distinct from your site's [code](/code), they are excluded from version control via Pantheon's .gitignore files <Popover content="The [.gitignore file](https://git-scm.com/docs/gitignore) is located at the root of the site's codebase and instructs Git which paths should be ignored." />:
+Files are large pieces of static content not stored in your database, usually images, documents, or user uploads. Because they are distinct from your site's [code](/code), they are excluded from version control via Pantheon's `.gitignore` files <Popover content="The [.gitignore file](https://git-scm.com/docs/gitignore) is located at the root of the site's codebase and instructs Git on which paths to ignore." />:
 
 - [Drupal 8](https://github.com/pantheon-systems/drops-8/blob/master/.gitignore)
 - [Drupal 7](https://github.com/pantheon-systems/drops-7/blob/master/.gitignore)
@@ -13,9 +13,9 @@ Files are large pieces of static content not stored in your database, usually im
 
 The Pantheon architecture comprises highly available [application containers](/application-containers) that are seamlessly integrated with Valhalla, our cloud-based filesystem. This means that your files are not local to the application containers running your site's codebase.
 
-Valhalla creates a symbolic link (**symlink**), to the `files` directory at the appropriate location in your docroot (`wp-content/uploads` for WordPress and `sites/default/files` for Drupal).
+Valhalla creates a symbolic link (**symlink**), to the `files` directory in the appropriate location of your docroot (`wp-content/uploads` for WordPress and `sites/default/files` for Drupal).
 
-It is important to note that the `files` directory in your site root is not part of the document root and is not directly web-accessible. If you need to make a path in `files` accessible from the docroot, you need to [create an additional symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link) from within the document root.  Any non-standard file locations should be symbolically linked to `/files` or moved manually.
+It is important to note that the `files` directory in your site root is not part of the document root and is not directly web-accessible. If you need to make a path in `files` accessible from the docroot, you need to [create an additional symbolic link](/symlinks-assumed-write-access#create-a-symbolic-link) from within the document root. Any non-standard file locations should be symbolically linked to `/files` or moved manually.
 
 ## Access via SFTP
 
@@ -39,7 +39,7 @@ The [Pantheon WordPress upstream](https://github.com/pantheon-systems/WordPress)
 
 ### Simultaneous SFTP Connections
 
-Pantheon does not support simultaneous SFTP connections. To avoid errors, set your SFTP client to use no more than 1 simultaneous conection.
+Pantheon does not support simultaneous SFTP connections. To avoid errors, set your SFTP client to use no more than 1 simultaneous connection.
 
 ### Unable to create directory `path-to-folder`. Is the parent directory writable by the server?
 

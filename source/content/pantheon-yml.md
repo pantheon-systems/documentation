@@ -103,11 +103,11 @@ Pantheon provides a [cloud-based filesystem](/files) to store user-generated con
 
 <Alert title="Warning" type="danger">
 
-We recommend *only* changing this setting when needed for [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`. For most cases, you can [create an additional symlink](/symlinks-assumed-write-access) in your code base.
+We recommend *only* changing this setting when needed for [Custom Upstream Configurations](#custom-upstream-configurations) in `pantheon.upstream.yml`. For most cases, you can [create an additional symlink](/symlinks-assumed-write-access) in your codebase.
 
 </Alert>
 
-The only valid filemount path other than the default paths for each CMS is `/files` relative to your docroot:
+The only valid filemount path other than the default path for each CMS is `/files` relative to your docroot:
 
 ```yaml
 filemount: /files
