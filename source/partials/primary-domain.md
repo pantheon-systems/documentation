@@ -2,7 +2,7 @@
 
 <Alert type="danger" title="Warning">
 
-With a Primary Domain set at the platform level, all other domains (except the platform domain) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain. Instead use [PHP redirects](/redirects/#redirect-with-php).
+With a Primary Domain set at the platform level, all other domains (except the [platform domain](/domains#platform-domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain. Instead use [PHP redirects](/redirects/#redirect-with-php).
 
 </Alert>
 
