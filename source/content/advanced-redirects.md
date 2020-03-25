@@ -1,7 +1,7 @@
 ---
 title: Advanced Redirects and Restrictions
 description: Configure custom redirect logic for specific scenarios
-tags: [redirects, variables, dns]
+tags: [redirects, variables, dns, domains]
 categories: [go-live,develop]
 reviewed: "2020-02-12"
 ---
@@ -12,7 +12,7 @@ Redirect logic should be added to `wp-config.php` for [WordPress](/wp-config-php
 
 <Alert type="danger" title="Warning">
 
-With a Primary Domain set at the platform level, all other domains (except the platform domain) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/redirects#update-or-remove-primary-domain) the Primary Domain).
+With a Primary Domain set at the platform level, all other domains (except the [platform domain](/domains#platform-domains)) will be pointed to your Primary domain _at the root level_. If you want to redirect secondary domains to specific pages on your site (for example, `olddomain.com` to `newdomain.com/old-landing-page`), do not set a Primary Domain (or if set, [remove](/redirects#update-or-remove-primary-domain) the Primary Domain).
 
 </Alert>
 
