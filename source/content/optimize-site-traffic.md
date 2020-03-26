@@ -72,6 +72,7 @@ To block an IP, add the following to `settings.php` or `wp-config.php`. Remember
 
 ```php:title=wp-config.php%20or%20settings.php
 if ($_SERVER['REMOTE_ADDR'] == '192.0.2.38') {
+  header('HTTP/1.0 403 Forbidden');
   exit;
 }
 ```
@@ -112,6 +113,7 @@ To block an IP range, add the following to `settings.php` or `wp-config.php`. Re
   }
 
   if ($request_ip_forbidden) {
+    header('HTTP/1.0 403 Forbidden');
     exit;
   }
 ```
