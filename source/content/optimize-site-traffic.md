@@ -80,42 +80,37 @@ if ($_SERVER['REMOTE_ADDR'] == '192.0.2.38') {
 To block an IP range, add the following to `settings.php` or `wp-config.php`. Remember to replace the example IP (`192.0.2.38` and others):
 
 ```php:title=wp-config.php%20or%20settings.php
-  // IPv4: Single IPs and CIDR. 
-  // See https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
-  $request_ip_blacklist = [
-    '192.0.2.38',
-    '192.0.3.125',
-    '192.0.67.0/30',
-    '192.0.78.0/24',
-  ];
+// IPv4: Single IPs and CIDR.
+// See https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing
+$request_ip_blacklist = [
+  '192.0.2.38',
+  '192.0.3.125',
+  '192.0.67.0/30',
+  '192.0.78.0/24',
+];
 
-  $request_remote_addr = $_SERVER['REMOTE_ADDR'];
-  // Check if this IP is in black list
-  if (!$request_ip_forbidden = in_array($request_remote_addr, $request_ip_blacklist)) {
-    // Check if this IP is in CIDR black list
-    foreach ($request_ip_blacklist as $_cidr) {
-      if (strpos($_cidr, '/') !== FALSE) {
-        $_ip = $request_remote_addr;
+$request_remote_addr = $_SERVER['REMOTE_ADDR'];
+// Check if this IP is in black list.
+if (!$request_ip_forbidden = in_array($request_remote_addr, $request_ip_blacklist)) {
+  // Check if this IP is in CIDR black list.
+  foreach ($request_ip_blacklist as $_cidr) {
+    if (strpos($_cidr, '/') !== FALSE) {
+      $_ip = ip2long($request_remote_addr);
+      list ($_net, $_mask) = explode('/', $_cidr, 2);
+      $_ip_net = ip2long($_net);
+      $_ip_mask = ~((1 << (32 - $_mask)) - 1);
 
-        // See http://php.net/manual/en/ref.network.php#121090
-        list ($_net, $_mask) = explode("/", $_cidr, 2);
-
-        $_ip_net = ip2long($_net);
-        $_ip_mask = ~((1 << (32 - $_mask)) - 1);
-
-        $_ip_ip = ip2long ($_ip);
-
-        if ($request_ip_forbidden = ($ip_ip & $ip_mask) == ($ip_net & $ip_mask)) {
-          break;
-        }
+      if ($request_ip_forbidden = ($_ip & $_ip_mask) == ($_ip_net & $_ip_mask)) {
+        break;
       }
     }
   }
+}
 
-  if ($request_ip_forbidden) {
-    header('HTTP/1.0 403 Forbidden');
-    exit;
-  }
+if ($request_ip_forbidden) {
+  header('HTTP/1.0 403 Forbidden');
+  exit;
+}
 ```
 
 #### Use a Drupal Module or WordPress Plugin to Block IPs
