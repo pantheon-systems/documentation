@@ -316,6 +316,8 @@ ___
 **Issue**: Sometimes, after a fresh system install, the "+ Install new module" and "+ Install new themes" buttons are missing.
 
 **Solution**: Navigate to the "Extend" page (/admin/modules) and click the "Uninstall" tab. Uninstall the Update Manager module. Then, click the "List" tab and re-install the Update Manager. Rebuild the cache. The buttons to install new modules and themes should appear.
+
+This is a known bug in Drupal 8. See [#3033480](https://www.drupal.org/project/drupal/issues/3033480) for more information.
 ___
 
 ## [Varnish](https://www.drupal.org/project/varnish)
