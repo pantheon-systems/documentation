@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Variables
+BUILD_DIR=$(pwd)
+GITHUB_API_URL="https://api.github.com/repos/pantheon-systems/documentation"
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+BUILD_PATH=$(pwd) #If you're not running this from the project root, you're gonna have a bad time.
+ARTIFACTS_FULL_DIR="./gatsby"
+
+#source $BASH_ENV
+
+# exit when any command fails
+set -e
+
+# Check if we are NOT on the master branch and this is a PR
+#if [[ ${CIRCLE_BRANCH} != "master" && -z ${CI_PULL_REQUEST} ]];
+#then
+#  echo -e "\nLighthouse audits will only run if we are not on the master branch and making a pull request"
+#  exit 0;
+#fi
+echo "WARNING: This version of the script is for testing purposes, and bypasses several checks. Only run if you know what you're doing."
+echo "Press ENTER to continue, or Control+C to quit now, before you break something..."
+read -s
+
+echo -e "\nProcessing branch $BRANCH"
+
+echo "PR to comment on?"
+read issue_number
+
+# Lighthouse audits
+echo -e "\nRunning lighthouse audits..."
+cd $BUILD_PATH/gatsby
+npm run lighthouse-run-local
+
+# Create the artifacts directory if needed
+if [ ! -d "$ARTIFACTS_FULL_DIR" ]; then
+  mkdir -p $ARTIFACTS_FULL_DIR
+fi
+
+# Copy lighthouse files to ARTIFACTS_FULL_DIR
+echo -e "\nCopying lighthouse_data files to $ARTIFACTS_FULL_DIR..."
+rm -rf $ARTIFACTS_FULL_DIR/lighthouse_data
+cp -r lighthouse_data $ARTIFACTS_FULL_DIR/
+
+DEV_HTML_REPORT="$ARTIFACTS_FULL_DIR/lighthouse_data/lighthouse-audit-dev.html"
+
+if [ ! -f $DEV_HTML_REPORT ]; then
+	echo -e "\nDev HTML report file $DEV_HTML_REPORT not found!"
+	exit 1
+fi
+
+REFERENCE_HTML_REPORT="$ARTIFACTS_FULL_DIR/lighthouse_data/lighthouse-audit-reference.html"
+
+if [ ! -f $REFERENCE_HTML_REPORT ]; then
+	echo -e "\nReference HTML report file $REFERENCE_HTML_REPORT not found!"
+	exit 1
+fi
+
+DEV_HTML_REPORT_URL="$ARTIFACTS_DIR_URL/lighthouse_data/lighthouse-audit-dev.html"
+REFERENCE_HTML_REPORT_URL="$ARTIFACTS_DIR_URL/lighthouse_data/lighthouse-audit-reference.html"
+
+PR_MESSAGE="Lighthouse audit results:\n- [Dev HTML Report]($DEV_HTML_REPORT_URL)\n- [Reference HTML Report]($REFERENCE_HTML_REPORT_URL)"
+
+# Post the results back to the pull request on GitHub
+# if not on the master branch
+if [[ ${CI_BRANCH} != "master" ]];
+then
+  npm run lighthouse-pr-comment
+fi
+
+# Test Lighthouse results
+echo -e "\nTesting Lighthouse results..."
+npm run lighthouse-test
