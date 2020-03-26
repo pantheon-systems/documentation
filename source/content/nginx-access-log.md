@@ -35,7 +35,7 @@ The configuration file is located under `~/.goaccessrc` or `%sysconfdir%/goacces
 
 Add the following lines to the `goaccess.conf` file:
 
-```conf:title=goaccess.conf
+```none:title=goaccess.conf
 time-format %T
 date-format %d/%b/%Y
 log-format %h - %^ [%d:%t %^]  "%r" %s %b "%R" "%u" %T "%^"
