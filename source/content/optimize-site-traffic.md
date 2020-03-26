@@ -90,7 +90,7 @@ $request_ip_blacklist = [
 ];
 
 $request_remote_addr = $_SERVER['REMOTE_ADDR'];
-// Check if this IP is in black list.
+// Check if this IP is in blacklist.
 if (!$request_ip_forbidden = in_array($request_remote_addr, $request_ip_blacklist)) {
   // Check if this IP is in CIDR black list.
   foreach ($request_ip_blacklist as $_cidr) {
