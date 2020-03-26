@@ -326,8 +326,6 @@ This is a known bug in Drupal 8. See [#3033480](https://www.drupal.org/project/d
 1. Click the **List** tab and re-install the Update Manager. 
 1. [Rebuild the cache](/clear-caches). 
 
-The buttons to install new modules and themes should appear.
-
 ___
 
 ## [Varnish](https://www.drupal.org/project/varnish)
