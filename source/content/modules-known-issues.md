@@ -311,6 +311,13 @@ ___
 **Solution**: You can try to patch the [permission check in the module](https://github.com/thephpleague/oauth2-server/blob/e184691ded987c00966e341ac09c46ceeae0b27f/src/CryptKey.php#L51). The alternative is to use off-site key management tools like [Lockr](https://www.drupal.org/project/lockr)
 ___
 
+## [Update Manager](https://www.drupal.org/docs/8/core/modules/update-manager) - Drupal 8 (core)
+
+**Issue**: Sometimes, after a fresh system install, the "+ Install new module" and "+ Install new themes" buttons are missing.
+
+**Solution**: Navigate to the "Extend" page (/admin/modules) and click the "Uninstall" tab. Uninstall the Update Manager module. Then, click the "List" tab and re-install the Update Manager. Rebuild the cache. The buttons to install new modules and themes should appear.
+___
+
 ## [Varnish](https://www.drupal.org/project/varnish)
 
 **Issue**: Conflicts with the existing platform configuration.
