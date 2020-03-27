@@ -95,13 +95,6 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
 
     ![Installing a module on Drupal 8](../images/drupal-8-install-module.png)
 
-    <Alert title="Note" type="info">
-
-    There is a known bug in Drupal 8 impacting the **+ Install new module** and **+ Install new theme** buttons. See [Modules With Known Issues](/modules-known-issues#update-manager) for details.
-
-    </Alert>
-
-
 </Tab>
 
 <Tab title="Drupal 7" id="d7-2">
@@ -232,3 +225,7 @@ define('FS_CHMOD_FILE', 644);
 Remove these lines to resolve.
 
 A `wp-content/upgrade` folder with read-only access can also cause this error. You can remove this folder or change the file permission to `755` to make it writable. WordPress stores temporary files to the `wp-content/upgrade` folder when updating plugins or themes.
+
+### Unable to Install Drupal Module or Theme
+
+There is a known bug in Drupal 8 impacting the **+ Install new module** and **+ Install new theme** buttons. See [Modules With Known Issues](/modules-known-issues#update-manager) for details.

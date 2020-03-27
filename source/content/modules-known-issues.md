@@ -324,7 +324,7 @@ This is a known bug in Drupal 8. See [#3033480](https://www.drupal.org/project/d
 1. Navigate to the **Manage** > **Extend** page at `/admin/modules`.  
 1. Click the **Uninstall** tab, and uninstall the Update Manager module. 
 1. Click the **List** tab and re-install the Update Manager. 
-1. [Rebuild the cache](/clear-caches). 
+1. [Clear the cache](/clear-caches). 
 
 ___
 
