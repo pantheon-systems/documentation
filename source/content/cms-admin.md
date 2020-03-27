@@ -86,19 +86,14 @@ Do not update core using the Drupal Admin interface or Drush. Apply one-click up
    ![Drupal.org views module](../images/drupal-copy-module-link.png)
 
 
-    <Alert title="Note" type="info">
-
     Make sure the module has a version marked `8.x-*` before installing it on a Drupal 8 site.
-    </Alert>
 
 1. From the <span style="line-height:.9" class="glyphicons glyphicons-wrench"></span> **Dev** tab of your Pantheon Site Dashboard, click **Visit Development Site**. Sign in with your admin credentials.
 
 
-
-1. Under the **Manage** menu, click on **Extend**, then **+ Install new module**. Paste the URL from Step 1. You can also upload a tarball or zip file from your desktop:
+1. Under the **Manage** menu, click on **Extend**, then **+ Install new module**. Paste the URL from Step 1. You can also upload a `tarball` or `zip` file from your desktop:
 
     ![Installing a module on Drupal 8](../images/drupal-8-install-module.png)
-
 
 </Tab>
 
@@ -230,3 +225,7 @@ define('FS_CHMOD_FILE', 644);
 Remove these lines to resolve.
 
 A `wp-content/upgrade` folder with read-only access can also cause this error. You can remove this folder or change the file permission to `755` to make it writable. WordPress stores temporary files to the `wp-content/upgrade` folder when updating plugins or themes.
+
+### Unable to Install Drupal Module or Theme
+
+There is a known bug in Drupal 8 impacting the **+ Install new module** and **+ Install new theme** buttons. See [Modules With Known Issues](/modules-known-issues#update-manager) for details.
