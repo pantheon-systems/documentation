@@ -62,7 +62,10 @@ pre code {
 .pantheon-docs a:hover {
 	text-decoration: none;
 }
-
+.pantheon-docs a:focus {
+	outline: 5px auto #0a6bb5;
+	outline-offset: 0;
+}
 .pantheon-docs h1 {
 	margin-top: 35px;
 	font-family: "TabletGothic";
@@ -383,7 +386,6 @@ pre code, pre code .hljs, .hljs {
 .affix-top.pio-docs-sidebar {
 	top: 130px !important;
 	position: sticky;
-	position: -webkit-sticky;
 	position: -moz-sticky;
 	position: -ms-sticky;
 	position: -o-sticky;
@@ -577,70 +579,9 @@ h2 > .glyphicons {
 	}
 }
 
-/* Show and affix the side nav when space allows it */
-@media (min-width: 1500px) {
-	.pio-docs-sidebar.affix-bottom {
-		/*width: 250px !important;*/
-		/*margin-left: 50px;*/
-	}
-	.pio-docs-sidebar.affix-top {
-		/*width: 250px !important;*/
-		/*margin-left: 50px;*/
-	}
-	.pio-docs-sidebar.affix {
-		/*width: 250px !important;*/
-		/*margin-left: 50px;*/
-	}
-}
-
-@media (min-width: 1202px) and (max-width: 1499px) {
-	.pio-docs-sidebar.affix-bottom {
-		/*width: 250px !important;*/
-		/*margin-left: 40px;*/
-	}
-	.pio-docs-sidebar.affix-top {
-		/*width: 250px !important;*/
-		/*margin-left: 40px;*/
-	}
-	.pio-docs-sidebar.affix {
-		/*width: 250px !important;*/
-		/*margin-left: 40px;*/
-	}
-}
-@media (min-width: 992px) and (max-width: 1201px) {
-	.pio-docs-sidebar.affix-bottom {
-		/*width: 250px !important;*/
-	}
-	.pio-docs-sidebar.affix-top {
-		/*width: 250px !important;*/
-	}
-	.pio-docs-sidebar.affix {
-		/*width: 250px !important;*/
-	}
-}
-
 @media (max-width: 1200px) {
 	.container {
 	}
-}
-/* Widen the fixed sidebar */
-.pio-docs-sidebar.affix,
-.pio-docs-sidebar.affix-bottom {
-}
-.pio-docs-sidebar.affix {
-}
-.pio-docs-sidebar.affix-bottom {
-}
-.pio-docs-sidebar.affix {
-	/*position: fixed; /* Undo the static from mobile first approach */
-}
-.pio-docs-sidebar.affix-top {
-	/*width: 250px !important;*/
-}
-.pio-docs-sidebar.affix-bottom {
-}
-.pio-docs-sidebar.affix-bottom .pio-docs-sidenav,
-.pio-docs-sidebar.affix .pio-docs-sidenav {
 }
 
 @supports (-ms-ime-align: auto) {

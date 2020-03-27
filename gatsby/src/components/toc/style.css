@@ -23,7 +23,7 @@
 #terminus h2,
 #doc h3,
 #terminus h3 {
-  outline: none;
+  outline: darkred;
 }
 .tocify-item ul {
   display: none;

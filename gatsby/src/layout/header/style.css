@@ -19,6 +19,30 @@
 .pio-docs-nav .navbar-nav {
   float: right;
 }
+#skiptocontent a {
+	padding:6px;
+	position: absolute;
+	top:-40px;
+	left:0px;
+	color:white;
+	border-right:1px solid white;
+	border-bottom:1px solid white;
+	border-bottom-right-radius:8px;
+	background:#BF1722;
+	-webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 100;
+}
+
+#skiptocontent a:focus {
+	position:absolute;
+	left:0px;
+	top:0px;
+	outline-color:transparent;	
+	-webkit-transition: top .1s ease-in;
+    transition: top .1s ease-in;
+}
+
 li.create-account {
 	padding-right: 20px !important;
 	padding-left: 20px !important;

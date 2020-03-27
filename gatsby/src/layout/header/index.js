@@ -5,7 +5,8 @@ import AddSearch from "../../components/addSearch"
 
 const Header = ({ data }) => (
   <>
-    <div className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
+    <nav className="navbar navbar-fixed-top pio-docs-nav" role="navigation" id="header">
+    <div id="skiptocontent"><a href="#doc">skip to main content</a></div>
       <div className="navbar-header">
         <button
           type="button"
@@ -156,6 +157,7 @@ const Header = ({ data }) => (
               <form
                 id="searchform"
                 action="/docs/search"
+                role="search"
                 acceptCharset="UTF-8"
                 encType="application/x-www-form-urlencoded"
                 title="Search Pantheon Documentation form"
@@ -177,7 +179,7 @@ const Header = ({ data }) => (
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   </>
 )
 

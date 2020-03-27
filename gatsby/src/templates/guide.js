@@ -105,7 +105,6 @@ class GuideTemplate extends React.Component {
           image={"/assets/images/terminus-thumbLarge.png"}
           reviewed={isoDate.frontmatter.reviewed}
         />
-        <div className="">
           <div className="container">
             <div className="row col-md-12 guide-nav manual-guide-toc-well">
               <Navbar
@@ -113,9 +112,9 @@ class GuideTemplate extends React.Component {
                 activePage={node.fields.slug}
                 items={items}
               />
-              <div id="terminus" className="terminus col-md-9 guide-doc-body">
+              <main id="doc" className="col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
-                  <div
+                  <article
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
                   >
                     <HeaderBody
@@ -132,7 +131,7 @@ class GuideTemplate extends React.Component {
                     <MDXProvider components={shortcodes}>
                       <MDXRenderer>{node.body}</MDXRenderer>
                     </MDXProvider>
-                  </div>
+                  </article>
                   {node.frontmatter.showtoc && (
                     <div
                       className="col-md-3 pio-docs-sidebar hidden-print hidden-xs hidden-sm affix-top"
@@ -157,10 +156,9 @@ class GuideTemplate extends React.Component {
                   prev={this.props.pageContext.previous}
                   next={this.props.pageContext.next}
                 />
-              </div>
+              </main>
             </div>
           </div>
-        </div>
       </Layout>
     )
   }

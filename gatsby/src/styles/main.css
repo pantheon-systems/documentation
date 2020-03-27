@@ -2631,8 +2631,6 @@ a.ctaBtn.cta-black-on-yellow:after:hover {
 	display: -webkit-box !important;
 }
 a:focus {
-	outline: none;
-	outline-offset: inherit;
 	text-decoration: none;
 }
 
