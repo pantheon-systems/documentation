@@ -1,15 +1,26 @@
 ---
-title: Using Extensions That Assume Write Access
+title: Symlinks and Assumed Write Access
 description: Learn how to create symbolic links from the code directory to a file.
 tags: [debugfiles]
 categories: [troubleshoot]
+reviewed: "2020-03-13"
 ---
 
-Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon. WordPress stores files within `wp-content/uploads` and Drupal uses `/sites/default/files`. These directories are symbolically linked to Pantheon's cloud-based filesystem, Valhalla, which is writeable on all environments.
+Some modules and plugins create files within hard-coded paths outside of the standard path for the given framework, which can be problematic on Pantheon.
 
-Extensions that create files within the codebase (e.g. `wp-content/plugins/plugin-name/some-other-directory` or `/sites/all/modules/module-name/some-other-directory`) incorrectly assume write access that is not granted on the Live and Test environments.
+## Standard File Path
 
-The best solution is to communicate with the maintainer of the module or plugin and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround to avoid failures on Test and Live.
+Pantheon provides one location for files that are part of your site's content, like those that are managed through Drupal upload forms, e.g., user profile pictures: `/sites/default/files`. For Drupal sites, this is the default location for files that are uploaded as part of your application.
+
+For WordPress sites, `/wp-content/uploads` is the default location for files. All other locations are considered part of your codebase, and under version control.
+
+These directories are symbolically linked to Pantheon's cloud-based filesystem, Valhalla, which is writeable on all environments.
+
+Extensions that create files within the codebase (e.g.,`wp-content/plugins/plugin-name/some-other-directory`, or `/sites/all/modules/module-name/some-other-directory`) incorrectly assume write access that is not granted on the Live and Test environments.
+
+Custom configurations that use non-standard file paths (e.g.,`sites/default/blogfiles`) are also incompatible with Pantheon.
+
+The best solution is to communicate with the maintainer of the module, plugin, or custom code/configuration and request that hard-coded, nonstandard paths be fixed. Alternatively, you can create a symbolic link as a workaround to avoid failures on Test and Live.
 
 ## Create a Symbolic Link
 
@@ -70,7 +81,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
  Your commit can be seen in the Dev environment's commit history. Once this commit is synced to all environments, the plugin will successfully write files within any environment, even when the Dev environment's connection mode is set to Git.
  
- You should not see the newly created files in the Dashboard as "ready to commit," as files are not version controlled. Only the symlink to the new path is in the code base.
+ You should not see the newly created files in the Dashboard as "ready to commit," as files are not version controlled. Only the symlink to the new path is in the codebase.
 
   <Alert title="Note" type="info">
 
@@ -85,7 +96,7 @@ The following is for Mac and Linux only. Windows users may refer to Microsoft do
 
 <Accordion title="Divi theme version 4.0.6 and above" id="divi-panel" icon="wrench">
 
-As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues#divi-wordpress-theme--visual-page-builder), [Divi WordPress Theme & Visual Page Builder version 4.0.6 and above](https://www.elegantthemes.com/gallery/divi) is assumes write access to the code base where the `et-cache` folder is located.
+As discussed in [Modules and Plugins with Known Issues](/modules-plugins-known-issues#divi-wordpress-theme--visual-page-builder), [Divi WordPress Theme & Visual Page Builder version 4.0.6 and above](https://www.elegantthemes.com/gallery/divi) is assumes write access to the codebase where the `et-cache` folder is located.
 
 <Alert  title="Note" type="info">
 
@@ -132,7 +143,7 @@ You can also verify success using `dir`:
 
 <Accordion title="WP-Rocket" id="wp-rocket-panel" icon="wrench">
 
-As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [WP-Rocket](https://wp-rocket.me/) assumes write access to the code base.
+As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [WP-Rocket](https://wp-rocket.me/) assumes write access to the codebase.
 
 <Alert  title="Note" type="info">
 
@@ -183,7 +194,7 @@ You can also verify success using `dir`:
 
 <Accordion title="Uncode Theme" id="uncode-panel" icon="wrench">
 
-As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the code base.
+As discussed in [WordPress Plugins and Themes with Known Issues](/plugins-known-issues), [Uncode theme](https://undsgn.com/uncode/) assumes write access to its CSS files and the codebase.
 
 1. Manually move the target folders:
 
