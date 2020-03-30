@@ -22,7 +22,7 @@ array(13) {
   string(44) "xCoEVpEAOYv0OhG6QIpr+Z+oDIV+qwGcz79AAGssLlA="
   ["DB_HOST"]=>
   string(9) "XXX.XXX.XXX.XXX"
-...
+  etc...
 ```
 
 If you are using a common CMS framework, the code you need to load this configuration and boot your app should already be pre-configured. However, if you need to do something custom, you can work with environmental configuration directly.
