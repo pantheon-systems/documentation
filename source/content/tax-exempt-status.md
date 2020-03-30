@@ -8,7 +8,7 @@ searchboost: 150
 reviewed: "2020-03-24"
 ---
 
-To make it easy for our team to confirm your tax exempt status and have it reflected on your bill quickly, [contact Support](/support) with the following information:
+To make it easy for our team to confirm your tax-exempt status and have it reflected on your bill quickly, [contact Support](/support) with the following information:
 
 - Copy of tax exemption determination letter
 - Email address of Site Owner
