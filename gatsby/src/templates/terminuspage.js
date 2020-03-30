@@ -153,7 +153,7 @@ class TerminusTemplate extends React.Component {
                 items={items}
                 activePage={node.fields.slug}
               />
-              <div id="terminus" className="terminus col-md-9 guide-doc-body">
+              <div id="doc" className="terminus col-md-9 guide-doc-body">
                 <div className="row guide-content-well">
                   <div
                     className={`col-xs-${contentCols} col-md-${contentCols}`}
