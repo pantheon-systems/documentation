@@ -14,3 +14,9 @@ We sincerely want this training to be useful. Please help us improve by [sharing
 - DOCS: [Platform Considerations](https://pantheon.io/docs/platform-considerations/)
 - DOCS: [Pantheon YAML Configuration Files](https://pantheon.io/docs/pantheon-yml)
 - GUIDE: [Quick Start Guide](https://pantheon.io/docs/guides/quickstart/)
+
+#### Keep Learning After Today
+- [Pantheon Community (Slack + forum)](https://pantheon.io/docs/pantheon-community/)
+- [Pantheon Support](https://pantheon.io/docs/support/)
+- [Pantheon Office Hours](https://pantheon.io/agencies/office-hours)
+- [More Pantheon Training Resources](https://pantheon.io/learn-pantheon)
