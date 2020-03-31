@@ -109,6 +109,10 @@ async function deleteCommentOnPullRequest(commentID) {
 (async () => {
   const lighthouseComments = await getPullRequestLighthouseComments();
 
+  //console.log("lighthouseComments: ", lighthouseComments[0].id) //debugging
+
+  await deleteCommentOnPullRequest(lighthouseComments[0].id);
+
   await octokit.issues.createComment({
     owner: process.env.CI_PROJECT_USERNAME,
     repo: process.env.CI_PROJECT_REPONAME,
