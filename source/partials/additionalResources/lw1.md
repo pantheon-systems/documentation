@@ -1,15 +1,16 @@
-Congratulations on completing the Live Workshop #1: Getting Started with Pantheon. Here are some links to help you continue your journey:
+### Congratulations on completing Getting Started with Pantheon! 🎉 
 
-### Your Feedback Helps
+Keep a good thing going! Sign up for workshop #2: [Command Line Interface with Terminus](https://pantheon.io/live-workshops/command-line-interface-terminus). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
 
-We sincerely want this training to be useful. Please help us make this training better by sharing your feedback.
+#### Your Feedback Helps
 
-[Survey](https://www.getfeedback.com/r/FHnfj1n8?gf_q[8821859]=17495037)
+We sincerely want this training to be useful. Please help us improve by [sharing your feedback](https://www.getfeedback.com/r/FHnfj1n8?gf_q[8821859]=17495037). It only takes you a moment but it makes a big difference for us. 
 
-### Sign up for the Next Module
-
-Keep a good thing going! Sign up for the next Live Workshop: [Command Line Interface with Terminus](https://pantheon.io/edt/signup-link).
-
-### Additional Resources
-
-- [Explore Platform Architecture](https://pantheon.io/docs/platform/)
+#### Resources from this Workshop
+- BLOG POST: [Pantheon Speeds Up WordPress By 3x](https://pantheon.io/blog/pantheon-speeds-wordpress-3x)
+- [Pantheon Status](https://status.pantheon.io/)
+- CASE STUDY: [The ACLU Rises to Every Occasion with a Website that Doesn’t Fail](https://pantheon.io/resources/aclu-rises-every-occasion-website-doesnt-fail-drupal-case-study)
+- CASE STUDY: [API Management Company Apigee Creates True Multitenancy with Pantheon](https://pantheon.io/resources/api-management-company-apigee-creates-true-multitenancy-drupal-case-study)
+- DOCS: [Platform Considerations](https://pantheon.io/docs/platform-considerations/)
+- DOCS: [Pantheon YAML Configuration Files](https://pantheon.io/docs/pantheon-yml)
+- GUIDE: [Quick Start Guide](https://pantheon.io/docs/guides/quickstart/)
