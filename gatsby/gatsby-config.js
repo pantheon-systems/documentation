@@ -115,6 +115,13 @@ module.exports = {
         ]
       },
     },
+    ...(process.env.NODE_ENV === 'development' ? [
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/reports`,
+      },
+    }, ] : []),
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
