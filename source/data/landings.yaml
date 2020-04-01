@@ -87,7 +87,7 @@
     url: '/guides/quickstart'
   cta_alt:
     title: 'Command Line Interface with Terminus'
-    subtitle: 'An introduction to Terminus: Pantheon's command line interface.'
+    subtitle: "An introduction to Terminus: Pantheon's command line interface."
     url: 'https://pantheon.io/live-workshops/command-line-interface-terminus?docs'
   subtopics:
     - title: 'Command Line Interface'
@@ -550,7 +550,7 @@
     url: '/terminus'
   cta_alt:
     title: 'Integrate and Automate with Quicksilver'
-    subtitle: 'An introduction to Quicksilver: Pantheon's tool for integrating and automating with anything.'
+    subtitle: "An introduction to Quicksilver: Pantheon's tool for integrating and automating with anything."
     url: 'https://pantheon.io/live-workshops/integrate-and-automate-quicksilver?docs'
   topics-groups:
     - title: ''
@@ -701,7 +701,7 @@
     url: '/guides/frontend-performance'
   cta_alt:
     title: 'Website Performance with Varnish, Redis, and New Relic'
-    subtitle: 'How does Pantheon help your website be faster than other platforms?'
+    subtitle: 'How does Pantheon help your website run faster than other platforms?'
     url: 'https://pantheon.io/live-workshops/website-performance-varnish-redis-and-new-relic?docs'
   topics-groups:
     - title: 'New Relic'
