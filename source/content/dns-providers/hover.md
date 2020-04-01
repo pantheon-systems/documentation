@@ -4,7 +4,6 @@ provider: Hover
 dnsprovider: true
 description: Learn how to point your Hover domain to a Pantheon site.
 tags: [providers]
-draft: true
 permalink: docs/:basename/
 editpath: dns-providers/hover.md/
 ---
