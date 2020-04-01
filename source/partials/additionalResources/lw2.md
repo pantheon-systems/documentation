@@ -1,6 +1,6 @@
 ### Congratulations on completing Command Line Interface with Terminus! 🎉 
 
-Keep a good thing going! Sign up for workshop #3: [Integrate and Automate with Quicksilver](https://pantheon.io/live-workshops/integrate-and-automate-quicksilver). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
+You're on a roll! Sign up for workshop #3: [Integrate and Automate with Quicksilver](https://pantheon.io/live-workshops/integrate-and-automate-quicksilver). Or you could pick one of our other [Live Workshops](https://pantheon.io/live-workshops) happening every Thursday.
 
 #### Your Feedback Helps
 
