@@ -78,8 +78,7 @@ class ChangelogTemplate extends React.Component {
           authors={node.frontmatter.contributors}
           image={"/assets/images/default-thumb-doc.png"}
         />
-        <div className="">
-          <div className="container doc-content-well">
+        <div className="container doc-content-well">
           <article className="doc article col-md-9 md-70">
             <div id="doc" className="doc article col-md-9 md-70">
               <h1 className="toc-ignore">Pantheon Changelog</h1>
@@ -97,16 +96,15 @@ class ChangelogTemplate extends React.Component {
                 </MDXProvider>
               </div>
             </div>
-            </article>
-            <TOC title="Contents" />
-          </div>
-          <NavButtons
-            prev={this.props.pageContext.previous}
-            next={this.props.pageContext.next}
-            prevTitle="Older"
-            nextTitle="Newer"
-          />
+          </article>
+          <TOC title="Contents" />
         </div>
+        <NavButtons
+          prev={this.props.pageContext.previous}
+          next={this.props.pageContext.next}
+          prevTitle="Older"
+          nextTitle="Newer"
+        />
       </Layout>
     )
   }
